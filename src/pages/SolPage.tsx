@@ -48,8 +48,8 @@ export default function SolPage() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/sol-hero.jpg" alt="Villa chef on terrace" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[#2C2419]/40" />
+          <img src="/generated/sol-hero-v2.jpg" alt="Villa chef on terrace" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="sol-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>

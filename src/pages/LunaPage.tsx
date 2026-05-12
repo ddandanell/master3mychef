@@ -46,8 +46,8 @@ export default function LunaPage() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/luna-hero.jpg" alt="Fine dining in Balinese village" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/55" />
+          <img src="/generated/luna-hero-v2.jpg" alt="Fine dining in Balinese village" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="luna-hero-label text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>

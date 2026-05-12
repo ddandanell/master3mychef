@@ -47,8 +47,8 @@ export default function AuraPage() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/aura-hero.jpg" alt="Event setup" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[#1A1A1A]/45" />
+          <img src="/generated/aura-hero-v2.jpg" alt="Event setup" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="aura-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>

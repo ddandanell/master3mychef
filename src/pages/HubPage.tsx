@@ -14,7 +14,7 @@ const PORTALS = [
     subtitle: 'Italian fine dining. Outdoors in a Balinese village. Up to 11 courses.',
     price: 'From IDR 2.2M per guest',
     path: '/fine-dining',
-    image: '/generated/hub-hero.jpg',
+    image: '/generated/hub-hero-v2.jpg',
     accent: '#D4AF37',
   },
   {
@@ -24,7 +24,7 @@ const PORTALS = [
     subtitle: 'Breakfast, lunch, dinner. No planning. No grocery runs. No cleanup.',
     price: 'From IDR 600K per hour',
     path: '/villa-chef',
-    image: '/generated/sol-hero.jpg',
+    image: '/generated/sol-hero-v2.jpg',
     accent: '#6B8E5A',
   },
   {
@@ -34,7 +34,7 @@ const PORTALS = [
     subtitle: 'Weddings, retreats, celebrations. Every detail handled.',
     price: 'Custom quote',
     path: '/events',
-    image: '/generated/aura-hero.jpg',
+    image: '/generated/aura-hero-v2.jpg',
     accent: '#2C5F7C',
   },
 ]
@@ -82,12 +82,12 @@ export default function HubPage() {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hub-hero.jpg"
+            src="/generated/hub-hero-v2.jpg"
             alt="Luxury Bali villa"
             className="w-full h-full object-cover"
             onError={(e) => { (e.target as HTMLImageElement).src = '/hero-home.jpg' }}
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/65" />
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">

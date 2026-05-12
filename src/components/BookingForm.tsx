@@ -14,7 +14,7 @@ const CONFIG = {
       { name: 'date', label: 'Preferred Date', type: 'date', icon: Calendar },
       { name: 'guests', label: 'Number of Guests', type: 'number', icon: Users, placeholder: 'e.g. 8' },
       { name: 'villa', label: 'Villa Location', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu, Ubud...' },
-      { name: 'courses', label: 'Course Preference', type: 'select', icon: Utensils, options: ['5-Course Journey', '7-Course Experience', '11-Course Tasting', 'Bespoke Menu'] },
+      { name: 'menu', label: 'Menu Experience', type: 'select', icon: Utensils, options: ['Mediterranean Sea Experience (IDR 2.2M++ pp)', 'Wagyu Experience (IDR 2.4M++ pp)'] },
     ],
     whatsappName: 'Sofia',
     whatsappNumber: '6281234567890',

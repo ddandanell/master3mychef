@@ -1,24 +1,69 @@
 import { useEffect, useRef } from 'react'
-import { Flame, Wine, Clock, Users, Star, Check } from 'lucide-react'
+import { Flame, Wine, Clock, Users, Star, Check, ChevronRight } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const MENU_COURSES = [
-  { num: '01', name: 'Amuse-Bouche', desc: 'Compressed watermelon, aged balsamic, edible flowers' },
-  { num: '02', name: 'Crudo', desc: 'Line-caught tuna, Sicilian olive oil, finger lime' },
-  { num: '03', name: 'Pasta', desc: 'Hand-rolled tagliolini, white truffle, Parmigiano Reggiano' },
-  { num: '04', name: 'Risotto', desc: 'Carnaroli rice, saffron, bone marrow' },
-  { num: '05', name: 'Pesce', desc: 'Mediterranean sea bass, fennel, citrus beurre blanc' },
-  { num: '06', name: 'Carne', desc: 'Wagyu beef tenderloin, Barolo reduction, celeriac' },
-  { num: '07', name: 'Formaggio', desc: 'Artisanal Italian cheeses, truffle honey, walnut bread' },
-  { num: '08', name: 'Dolce', desc: 'Dark chocolate sphere, gold leaf, berry coulis' },
+const MENUS = [
+  {
+    id: 'mediterranean',
+    name: 'Mediterranean Sea Experience',
+    price: 'IDR 2,200,000++',
+    duration: '2.5 – 3 hours',
+    desc: 'A refined Mediterranean tasting experience inspired by the southern coast of Italy. Delicate seafood, handmade pasta, citrus notes, basil, olive oil, and premium seasonal ingredients — light, sophisticated, and deeply connected to Mediterranean hospitality.',
+    perfectFor: ['Private villa dinners', 'Celebrations', 'Romantic evenings', 'Luxury gatherings'],
+    courses: {
+      starter: [
+        { name: 'Passione di Dentice', desc: 'Red snapper carpaccio, passion fruit sauce, basil gelato' },
+        { name: 'Burrata', desc: 'Burrata cheese stuffed with prawn mousse, giardiniera' },
+      ],
+      main: [
+        { name: 'Lobster', desc: 'Home-made tagliatelle pasta with lobster sauce, cherry tomatoes, fresh basil' },
+        { name: 'Barramundi and the Sea', desc: 'Barramundi roll, clams, Mediterranean sauce, green beans' },
+      ],
+      dessert: [
+        { name: 'Tiramisu', desc: 'Home-made lady finger, mascarpone cream, espresso coffee' },
+      ],
+    },
+    wine: {
+      white: 'Etna Bianco, Vermentino di Sardegna, or Sauvignon Blanc',
+      red: 'Light Pinot Noir or elegant Nero d\'Avola',
+      sparkling: 'Franciacorta or dry Prosecco for aperitif service',
+    },
+    accent: '#2C5F7C',
+  },
+  {
+    id: 'wagyu',
+    name: 'Wagyu Experience',
+    price: 'IDR 2,400,000++',
+    duration: '~3 hours',
+    desc: 'A rich and elegant tasting experience centered around premium Wagyu Tokusen beef. Deep flavors, handmade elements, luxurious textures, and refined presentation. Every course balances richness, acidity, texture, and warmth.',
+    perfectFor: ['Luxury celebrations', 'Executive dinners', 'Premium villa experiences', 'Wine-focused evenings'],
+    courses: {
+      starter: [
+        { name: 'My Beef Tartare', desc: 'Wagyu Tokusen chuck tender tartare, polenta chips, cured egg, rocket salad, basil oil' },
+        { name: 'Ravioli di Coda', desc: 'Wagyu Tokusen oxtail ragout stuffed ravioli, Grana Padano cheese sauce, kale foam' },
+      ],
+      main: [
+        { name: 'Ribeye', desc: 'Grilled Wagyu Tokusen ribeye, topinambur cream, blue cheese sauce, walnuts' },
+      ],
+      dessert: [
+        { name: 'Tenerina Cake', desc: 'Dark chocolate Callebaut 56% cake, salted caramel gelato' },
+      ],
+    },
+    wine: {
+      red: 'Barolo, Brunello di Montalcino, Amarone della Valpolicella, or Super Tuscan blends',
+      white: 'Oaked Chardonnay for guests preferring white wine with richer dishes',
+      sparkling: 'Franciacorta Rosé for aperitif and starter pairing',
+    },
+    accent: '#8B4513',
+  },
 ]
 
 const TESTIMONIALS = [
-  { name: 'James & Sarah', location: 'London', text: 'We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the 11 courses — pure magic.' },
+  { name: 'James & Sarah', location: 'London', text: 'We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the courses — pure magic.' },
   { name: 'The Harrisons', location: 'Sydney', text: 'Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.' },
 ]
 
@@ -47,7 +92,7 @@ export default function LunaPage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src="/generated/luna-hero-v2.jpg" alt="Fine dining in Balinese village" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/55" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="luna-hero-label text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -58,14 +103,14 @@ export default function LunaPage() {
             <span className="italic">Evening</span>
           </h1>
           <p className="luna-hero-sub text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-            Italian fine dining, outdoors in a traditional Balinese village. White-clad professionals. Up to 11 courses.
+            Italian fine dining, outdoors in a traditional Balinese village. White-clad professionals. Two distinct tasting experiences.
           </p>
           <div className="luna-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#book" className="px-8 py-4 bg-[#D4AF37] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#E8C84B] transition-all">
-              Reserve Your Table
+            <a href="#menus" className="px-8 py-4 bg-[#D4AF37] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#E8C84B] transition-all">
+              See the Menus
             </a>
-            <a href="#menu" className="px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
-              Explore the Menu
+            <a href="#book" className="px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+              Reserve Your Table
             </a>
           </div>
         </div>
@@ -76,25 +121,25 @@ export default function LunaPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center mb-24">
             <div className="luna-reveal">
-              <img src="/generated/luna-table.jpg" alt="11-course table setting" className="rounded-2xl w-full aspect-[4/3] object-cover" />
+              <img src="/generated/luna-table.jpg" alt="Table setting" className="rounded-2xl w-full aspect-[4/3] object-cover" />
             </div>
             <div className="luna-reveal">
               <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Experience</p>
               <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                11 Courses.<br />One Unforgettable Night.
+                One Night.<br />Two Journeys.
               </h2>
               <div className="w-12 h-[2px] bg-[#D4AF37] mb-8" />
               <p className="text-white/60 mb-6 leading-relaxed">
                 We arrive as a team of white-clad professionals. We transform your villa garden or a Balinese village courtyard into an open-air Michelin-inspired dining room.
               </p>
               <p className="text-white/60 mb-8 leading-relaxed">
-                Every course is prepared in front of your guests. Every wine is paired. Every detail — from the hand-pressed linen to the gold-rimmed plates — is considered.
+                Every course is prepared in front of your guests. Every wine is paired. Every detail — from the hand-pressed linen to the gold-rimmed plates — is considered. Choose between two curated tasting experiences.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { icon: Flame, label: 'Open-Flame Cooking' },
                   { icon: Wine, label: 'Sommelier Pairing' },
-                  { icon: Clock, label: '3–4 Hour Journey' },
+                  { icon: Clock, label: '2.5–3 Hour Journey' },
                   { icon: Users, label: '4–24 Guests' },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-3">
@@ -108,22 +153,84 @@ export default function LunaPage() {
         </div>
       </section>
 
-      {/* Menu */}
-      <section id="menu" className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
+      {/* The Two Menus */}
+      <section id="menus" className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Menu</p>
-            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>A Journey Through Italy</h2>
-            <p className="text-white/50">Sample 11-course tasting menu. Changes with the seasons.</p>
+            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Menus</p>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Two Experiences. One Extraordinary Evening.</h2>
+            <p className="text-white/50">Every course is prepared in your villa. Every wine is paired by our sommelier.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 max-w-4xl mx-auto">
-            {MENU_COURSES.map((course) => (
-              <div key={course.num} className="flex gap-4 items-start">
-                <span className="text-[#D4AF37] text-sm font-medium mt-1">{course.num}</span>
-                <div>
-                  <h4 className="text-white font-medium mb-1">{course.name}</h4>
-                  <p className="text-white/50 text-sm">{course.desc}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {MENUS.map((menu) => (
+              <div key={menu.id} className="luna-reveal rounded-2xl border border-white/10 overflow-hidden">
+                {/* Menu header */}
+                <div className="p-8 md:p-10" style={{ background: 'rgba(255,255,255,0.03)' }}>
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.name}</h3>
+                      <p className="text-sm text-white/50">{menu.duration}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-2xl font-medium text-[#D4AF37]">{menu.price}</p>
+                      <p className="text-xs text-white/40">per person</p>
+                    </div>
+                  </div>
+                  <p className="text-white/60 leading-relaxed mb-6">{menu.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {menu.perfectFor.map((tag) => (
+                      <span key={tag} className="text-xs px-3 py-1 rounded-full border border-white/10 text-white/60">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Courses */}
+                <div className="p-8 md:p-10 border-t border-white/10">
+                  {/* Starters */}
+                  <div className="mb-8">
+                    <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Starter</p>
+                    {menu.courses.starter.map((course) => (
+                      <div key={course.name} className="mb-4 last:mb-0">
+                        <h4 className="text-white font-medium mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{course.name}</h4>
+                        <p className="text-white/50 text-sm">{course.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Mains */}
+                  <div className="mb-8">
+                    <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Main Course</p>
+                    {menu.courses.main.map((course) => (
+                      <div key={course.name} className="mb-4 last:mb-0">
+                        <h4 className="text-white font-medium mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{course.name}</h4>
+                        <p className="text-white/50 text-sm">{course.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Dessert */}
+                  <div className="mb-8">
+                    <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Dessert</p>
+                    {menu.courses.dessert.map((course) => (
+                      <div key={course.name} className="mb-4 last:mb-0">
+                        <h4 className="text-white font-medium mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{course.name}</h4>
+                        <p className="text-white/50 text-sm">{course.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Wine */}
+                  <div className="pt-6 border-t border-white/10">
+                    <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Recommended Wine Pairing</p>
+                    <div className="space-y-2 text-sm text-white/50">
+                      {menu.wine.red && <p><span className="text-white/70">Red:</span> {menu.wine.red}</p>}
+                      {menu.wine.white && <p><span className="text-white/70">White:</span> {menu.wine.white}</p>}
+                      {menu.wine.sparkling && <p><span className="text-white/70">Sparkling:</span> {menu.wine.sparkling}</p>}
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -147,17 +254,13 @@ export default function LunaPage() {
               <p className="text-white/60 mb-8 leading-relaxed">
                 "Fine dining is not about showing off. It is about making your guests feel like the most important people in the world for one evening."
               </p>
-              <div className="flex items-center gap-2 mb-2">
-                <Check className="w-4 h-4 text-[#D4AF37]" />
-                <span className="text-sm text-white/80">Michelin-starred training, Milan</span>
-              </div>
-              <div className="flex items-center gap-2 mb-2">
-                <Check className="w-4 h-4 text-[#D4AF37]" />
-                <span className="text-sm text-white/80">8-person Indonesian fine dining team</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-[#D4AF37]" />
-                <span className="text-sm text-white/80">500+ fine dining experiences in Bali</span>
+              <div className="space-y-3">
+                {['Michelin-starred training, Milan', '8-person Indonesian fine dining team', '500+ fine dining experiences in Bali'].map((item) => (
+                  <div key={item} className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-[#D4AF37]" />
+                    <span className="text-sm text-white/80">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
@@ -214,22 +317,37 @@ export default function LunaPage() {
               <p className="text-white/60 mb-8 leading-relaxed">
                 Sofia, our fine dining concierge, will confirm your date and menu within the hour. We recommend booking 7+ days in advance for peak season.
               </p>
+
+              {/* Menu pricing cards */}
               <div className="space-y-4 mb-8">
-                {[
-                  { label: '5-Course Journey', price: 'IDR 2.2M / guest' },
-                  { label: '7-Course Experience', price: 'IDR 2.5M / guest' },
-                  { label: '11-Course Tasting', price: 'IDR 3.2M / guest' },
-                  { label: 'Bespoke Menu', price: 'Custom quote' },
-                ].map((p) => (
-                  <div key={p.label} className="flex items-center justify-between py-3 border-b border-white/10">
-                    <span className="text-white/80">{p.label}</span>
-                    <span className="text-[#D4AF37] font-medium">{p.price}</span>
+                {MENUS.map((menu) => (
+                  <div key={menu.id} className="flex items-center justify-between py-4 border-b border-white/10 group cursor-pointer">
+                    <div>
+                      <p className="text-white/80 font-medium">{menu.name}</p>
+                      <p className="text-sm text-white/40">{menu.duration}</p>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="text-[#D4AF37] font-medium">{menu.price}</span>
+                      <ChevronRight className="w-4 h-4 text-white/30 group-hover:text-[#D4AF37] transition-colors" />
+                    </div>
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-white/40">
-                * Wine pairing available at IDR 850K per guest. Minimum 4 guests. Service charge and government tax included.
-              </p>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#D4AF37]" />
+                  <span className="text-sm text-white/80">Wine pairing available — IDR 850K per guest</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#D4AF37]" />
+                  <span className="text-sm text-white/80">Minimum 4 guests</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#D4AF37]" />
+                  <span className="text-sm text-white/80">Service charge and government tax included</span>
+                </div>
+              </div>
             </div>
             <div className="p-8 rounded-2xl border border-white/10">
               <BookingForm universe="luna" compact />

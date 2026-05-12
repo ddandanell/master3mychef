@@ -8,30 +8,27 @@ gsap.registerPlugin(ScrollTrigger)
 
 const PORTALS = [
   {
-    id: 'luna',
-    name: 'LUNA',
-    title: 'An Extraordinary Evening',
-    subtitle: 'Italian fine dining. Outdoors in a Balinese village. Up to 11 courses.',
-    price: 'From IDR 2.2M per guest',
+    id: 'fine-dining',
+    title: 'Fine Dining',
+    subtitle: 'Italian tasting menus in your villa. Two curated experiences.',
+    price: 'From IDR 2,200,000++',
     path: '/fine-dining',
     image: '/generated/hub-hero-v2.jpg',
     accent: '#D4AF37',
   },
   {
-    id: 'sol',
-    name: 'SOL',
-    title: 'Your Private Villa Chef',
-    subtitle: 'Breakfast, lunch, dinner. No planning. No grocery runs. No cleanup.',
+    id: 'catering',
+    title: 'Catering',
+    subtitle: 'Private chef for breakfast, lunch, and dinner. No planning needed.',
     price: 'From IDR 600K per hour',
     path: '/villa-chef',
     image: '/generated/sol-hero-v2.jpg',
     accent: '#6B8E5A',
   },
   {
-    id: 'aura',
-    name: 'AURA',
-    title: 'Events, Perfectly Hosted',
-    subtitle: 'Weddings, retreats, celebrations. Every detail handled.',
+    id: 'events',
+    title: 'Events',
+    subtitle: 'Weddings, retreats, and celebrations. Fully hosted.',
     price: 'Custom quote',
     path: '/events',
     image: '/generated/aura-hero-v2.jpg',
@@ -131,8 +128,7 @@ export default function HubPage() {
       <section ref={portalsRef} className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16 md:mb-24">
-            <p className="u-label text-sm mb-4">Three Ways to Dine</p>
-            <h2 className="u-heading text-4xl md:text-5xl lg:text-6xl mb-6">Choose Your Experience</h2>
+            <h2 className="u-heading text-4xl md:text-5xl lg:text-6xl mb-6">What We Do</h2>
             <div className="gold-arc mx-auto" />
           </div>
 
@@ -150,22 +146,16 @@ export default function HubPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                 <div className="absolute inset-0 p-8 flex flex-col justify-end pointer-events-none">
-                  <p
-                    className="text-xs tracking-[0.3em] uppercase mb-3"
-                    style={{ color: portal.accent, fontFamily: "'Cormorant Garamond', serif" }}
-                  >
-                    {portal.name}
-                  </p>
-                  <h3 className="text-2xl md:text-3xl text-white mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  <h3 className="text-3xl md:text-4xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
                     {portal.title}
                   </h3>
-                  <p className="text-sm text-white/70 mb-4 leading-relaxed">
+                  <p className="text-sm text-white/70 mb-5 leading-relaxed">
                     {portal.subtitle}
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-white/60">{portal.price}</span>
                     <span className="flex items-center gap-2 text-sm font-medium transition-all group-hover:gap-4" style={{ color: portal.accent }}>
-                      Enter Universe <ArrowRight className="w-4 h-4" />
+                      Explore <ArrowRight className="w-4 h-4" />
                     </span>
                   </div>
                 </div>

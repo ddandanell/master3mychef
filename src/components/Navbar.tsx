@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChefHat } from 'lucide-react'
 const NAV_LINKS = [
   { label: 'Fine Dining', path: '/fine-dining' },
-  { label: 'Villa Chef', path: '/villa-chef' },
+  { label: 'Catering', path: '/villa-chef' },
   { label: 'Events', path: '/events' },
   { label: 'Contact', path: '/contact' },
 ]

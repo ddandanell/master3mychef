@@ -20,17 +20,21 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen" style={{ background: 'var(--u-bg)', color: 'var(--u-text)' }}>
-      {/* Hero */}
-      <section className="relative py-32 md:py-40 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
-          <p className="u-label text-sm mb-4">Contact</p>
-          <h1 className="u-heading text-5xl md:text-6xl mb-6">
+      {/* Hero with image */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/generated/contact-hero-v2.jpg" alt="Bali at dusk" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto py-32">
+          <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Contact</p>
+          <h1 className="text-5xl md:text-6xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Let's <span className="italic">Talk</span>
           </h1>
-          <p className="text-lg mb-4" style={{ color: 'var(--u-text-muted)' }}>
+          <p className="text-lg text-white/70 mb-4">
             We respond within the hour. Usually much faster.
           </p>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium" style={{ background: 'rgba(212,175,55,0.1)', color: '#D4AF37' }}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium" style={{ background: 'rgba(212,175,55,0.15)', color: '#D4AF37', border: '1px solid rgba(212,175,55,0.3)' }}>
             <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
             WhatsApp online now
           </div>

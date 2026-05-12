@@ -61,9 +61,9 @@ export default function HubPage() {
       tl.fromTo('.hub-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
 
       // Portals scroll reveal
-      gsap.fromTo('.portal-card', { y: 80, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: 'power3.out',
-        scrollTrigger: { trigger: portalsRef.current, start: 'top 75%', once: true },
+      gsap.fromTo('.portal-card', { y: 60 }, {
+        y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out',
+        scrollTrigger: { trigger: portalsRef.current, start: 'top 85%', once: true },
       })
 
       // Trust bar
@@ -82,12 +82,12 @@ export default function HubPage() {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hub-hero-v2.jpg"
+            src="/generated/hub-hero-v3.jpg"
             alt="Luxury Bali villa"
             className="w-full h-full object-cover"
             onError={(e) => { (e.target as HTMLImageElement).src = '/hero-home.jpg' }}
           />
-          <div className="absolute inset-0 bg-black/65" />
+          <div className="absolute inset-0 bg-black/45" />
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -138,20 +138,18 @@ export default function HubPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {PORTALS.map((portal) => (
-              <Link
-                key={portal.id}
-                to={portal.path}
-                className="portal-card group relative overflow-hidden rounded-2xl aspect-[3/4] md:aspect-[4/5]"
-              >
+              <div key={portal.id} className="portal-card group relative rounded-2xl overflow-hidden" style={{ aspectRatio: '3/4' }}>
+                <Link to={portal.path} className="absolute inset-0 z-10" aria-label={portal.title} />
                 <img
                   src={portal.image}
                   alt={portal.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0.3' }}
+                  style={{ background: '#1a1a1a' }}
+                  onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0.4' }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <div className="absolute inset-0 p-8 flex flex-col justify-end pointer-events-none">
                   <p
                     className="text-xs tracking-[0.3em] uppercase mb-3"
                     style={{ color: portal.accent, fontFamily: "'Cormorant Garamond', serif" }}
@@ -174,10 +172,10 @@ export default function HubPage() {
 
                 {/* Hover border */}
                 <div
-                  className="absolute inset-0 rounded-2xl border-2 border-transparent transition-colors duration-500 group-hover:border-opacity-100"
+                  className="absolute inset-0 rounded-2xl border-2 border-transparent transition-colors duration-500 group-hover:border-opacity-100 pointer-events-none"
                   style={{ borderColor: portal.accent }}
                 />
-              </Link>
+              </div>
             ))}
           </div>
         </div>

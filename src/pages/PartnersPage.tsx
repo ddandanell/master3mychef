@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Star, Award, Shield, Users, Send, Check, ChevronDown } from 'lucide-react'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -83,12 +83,13 @@ export default function PartnersPage() {
         title="Villa Partner Programme — myCHEF for Bali Hospitality Partners"
         description="Trusted by 50+ luxury villas across Bali. Certified chef placement, insurance, dedicated account management. Join the myCHEF villa partner programme."
         canonical="https://mychef.id/partners"
-        ogImage="https://mychef.id/generated/partner-platform-hero.jpg"
+        ogImage="https://mychef.id/generated/partner-platform-hero.webp"
+        jsonLd={[breadcrumbSchema('Partners', 'https://mychef.id/partners')]}
       />
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/hub-bali.jpg" alt="Villa partnerships" className="w-full h-full object-cover" style={{ opacity: 0.35 }} />
+          <img src="/generated/hub-bali.webp" alt="Villa partnerships" className="w-full h-full object-cover" style={{ opacity: 0.35 }} />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.75) 50%, transparent 100%)' }} />
         </div>
         <div className="relative z-10 px-8 md:px-16 lg:px-20 py-24 max-w-[650px]">
@@ -172,7 +173,7 @@ export default function PartnersPage() {
 
       {/* Villa Aerial */}
       <section className="part-reveal relative overflow-hidden">
-        <img src="/generated/city-seminyak.jpg" alt="Bali villas" className="w-full aspect-[21/9] object-cover" loading="lazy" />
+        <img src="/generated/city-seminyak.webp" alt="Bali villas" className="w-full aspect-[21/9] object-cover" loading="lazy" />
         <div className="absolute inset-0 flex items-center justify-center" style={{ background: 'rgba(26,26,26,0.4)' }}>
           <div className="text-center px-6">
             <p className="font-playfair font-bold text-white text-3xl md:text-5xl mb-4">500+ Villas Served</p>
@@ -234,12 +235,12 @@ export default function PartnersPage() {
           </div>
           <form className="space-y-5" onSubmit={handlePartnerSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <input required value={partnerForm.name} onChange={(e) => setPartnerForm((f) => ({ ...f, name: e.target.value }))} type="text" placeholder="Your Name *" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
-              <input required value={partnerForm.email} onChange={(e) => setPartnerForm((f) => ({ ...f, email: e.target.value }))} type="email" placeholder="Email *" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
+              <input required value={partnerForm.name} onChange={(e) => setPartnerForm((f) => ({ ...f, name: e.target.value }))} type="text" placeholder="Your Name *" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#6B6560] focus:border-[#2C5F7C]" />
+              <input required value={partnerForm.email} onChange={(e) => setPartnerForm((f) => ({ ...f, email: e.target.value }))} type="email" placeholder="Email *" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#6B6560] focus:border-[#2C5F7C]" />
             </div>
-            <input value={partnerForm.property} onChange={(e) => setPartnerForm((f) => ({ ...f, property: e.target.value }))} type="text" placeholder="Property / Villa Name" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
+            <input value={partnerForm.property} onChange={(e) => setPartnerForm((f) => ({ ...f, property: e.target.value }))} type="text" placeholder="Property / Villa Name" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#6B6560] focus:border-[#2C5F7C]" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <select value={partnerForm.type} onChange={(e) => setPartnerForm((f) => ({ ...f, type: e.target.value }))} className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] focus:border-[#2C5F7C] focus:outline-none">
+              <select value={partnerForm.type} onChange={(e) => setPartnerForm((f) => ({ ...f, type: e.target.value }))} className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] focus:border-[#2C5F7C]">
                 <option value="">Property Type</option>
                 <option>Luxury Villa</option>
                 <option>Boutique Hotel</option>
@@ -248,9 +249,9 @@ export default function PartnersPage() {
                 <option>Private Estate</option>
                 <option>Other</option>
               </select>
-              <input value={partnerForm.size} onChange={(e) => setPartnerForm((f) => ({ ...f, size: e.target.value }))} type="text" placeholder="Number of Rooms / Villas" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
+              <input value={partnerForm.size} onChange={(e) => setPartnerForm((f) => ({ ...f, size: e.target.value }))} type="text" placeholder="Number of Rooms / Villas" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#6B6560] focus:border-[#2C5F7C]" />
             </div>
-            <textarea value={partnerForm.notes} onChange={(e) => setPartnerForm((f) => ({ ...f, notes: e.target.value }))} placeholder="Tell us about your property, guest profile, and what you are looking for in a hospitality partner..." rows={4} className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none resize-none" />
+            <textarea value={partnerForm.notes} onChange={(e) => setPartnerForm((f) => ({ ...f, notes: e.target.value }))} placeholder="Tell us about your property, guest profile, and what you are looking for in a hospitality partner..." rows={4} className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#6B6560] focus:border-[#2C5F7C] resize-none" />
             <button type="submit" className="w-full bg-[#2C5F7C] text-white font-inter font-semibold text-xs uppercase tracking-[2px] py-4 hover:bg-[#1E4A5E] transition-all flex items-center justify-center gap-2">
               <Send size={14} /> Send Partnership Request
             </button>

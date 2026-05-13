@@ -14,7 +14,7 @@ import {
   Star,
   TrendingUp,
 } from 'lucide-react'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 
 const WA = '6282237565997'
@@ -114,15 +114,17 @@ export default function PartnerPlatformPage() {
         title="myCHEF Partner Platform — Michelin-Level Private Dining for Bali Villas"
         description="A villa dining partner platform built for luxury villas, villa management companies, boutique hospitality brands, and premium operators across Bali. Co-branded or white-label, monthly commission, transparent dashboard."
         canonical={`${SITE}/partner-platform`}
-        ogImage={`${SITE}/generated/partner-platform-hero.jpg`}
+        ogImage={`${SITE}/generated/partner-platform-hero.webp`}
+        jsonLd={[breadcrumbSchema('Partner Platform', `${SITE}/partner-platform`), jsonLd]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative w-full min-h-[88vh] flex items-end overflow-hidden">
         <img
-          src="/generated/partner-platform-hero.jpg"
+          src="/generated/partner-platform-hero.webp"
           alt="Luxury Bali villa private dining setup at golden hour"
+          width={1920}
+          height={1080}
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
         />
@@ -131,7 +133,7 @@ export default function PartnerPlatformPage() {
           style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.92))', backdropFilter: 'blur(2px)' }}
         />
         <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-28 pt-28 md:pt-36 max-w-[1280px] mx-auto w-full text-white">
-          <p className="text-[#D4AF37] text-xs md:text-sm tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             myCHEF Partner Platform
           </p>
           <h1 className="text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] mb-7 max-w-[1000px]" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -145,7 +147,7 @@ export default function PartnerPlatformPage() {
               href={waApply}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#E8C84B] transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
             >
               Apply for Partnership
             </a>
@@ -153,7 +155,7 @@ export default function PartnerPlatformPage() {
               href={waShowcase}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-10 py-4 border border-[#D4AF37]/60 text-[#D4AF37] font-semibold text-xs uppercase tracking-[0.25em] rounded-full hover:bg-[#D4AF37]/10 transition-colors"
+              className="inline-flex items-center justify-center px-10 py-4 border border-[#C5A028]/60 text-[#C5A028] font-semibold text-xs uppercase tracking-[0.25em] rounded-full hover:bg-[#C5A028]/10 transition-colors"
             >
               Request Showcase Dinner
             </a>
@@ -166,7 +168,7 @@ export default function PartnerPlatformPage() {
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-6">01 — The opportunity</p>
         <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-8 max-w-[820px]">
           Most villas compete on view, pool, bedrooms, interior, location.
-          <span className="block text-[#D4AF37] italic mt-2">Very few compete on what guests remember.</span>
+          <span className="block text-[#C5A028] italic mt-2">Very few compete on what guests remember.</span>
         </h2>
         <p className="text-[#4A4745] text-lg leading-relaxed max-w-[680px]">
           myCHEF lets a villa become known for something guests talk about after they leave. Not simply a villa — an experience.
@@ -199,7 +201,7 @@ export default function PartnerPlatformPage() {
               'Villa becomes a complete hospitality experience',
             ].map((b) => (
               <li key={b} className="flex items-start gap-3 text-[#1A1A1A]">
-                <Check className="w-4 h-4 text-[#D4AF37] mt-1 flex-shrink-0" /> <span>{b}</span>
+                <Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> <span>{b}</span>
               </li>
             ))}
           </ul>
@@ -210,17 +212,17 @@ export default function PartnerPlatformPage() {
       <section className="bg-[#0A0A0A] text-white px-6 md:px-12 py-24 md:py-32">
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-14 max-w-[760px] mx-auto">
-            <p className="font-cormorant text-[#D4AF37] text-sm uppercase tracking-[0.35em] mb-4">03 — What we actually provide</p>
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.35em] mb-4">03 — What we actually provide</p>
             <h2 className="font-playfair text-4xl md:text-5xl leading-tight">A Michelin-level hospitality layer on top of luxury villas.</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-14">
             <div>
-              <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>We provide</p>
+              <p className="text-[#C5A028] text-xs uppercase tracking-[0.3em] mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>We provide</p>
               <ul className="space-y-2.5">
                 {WHAT_WE_PROVIDE.map((it) => (
                   <li key={it} className="flex items-start gap-3 text-white/85">
-                    <Check className="w-4 h-4 text-[#D4AF37] mt-1 flex-shrink-0" /> {it}
+                    <Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> {it}
                   </li>
                 ))}
               </ul>
@@ -250,7 +252,7 @@ export default function PartnerPlatformPage() {
           <ol className="space-y-7">
             {GUEST_JOURNEY.map((s) => (
               <li key={s.step} className="grid grid-cols-[60px_1fr] gap-5 md:gap-8 items-baseline border-b border-[#E5E3E0] pb-7 last:border-0">
-                <span className="font-playfair text-3xl text-[#D4AF37]">{s.step}</span>
+                <span className="font-playfair text-3xl text-[#C5A028]">{s.step}</span>
                 <div>
                   <h3 className="font-playfair text-2xl mb-1.5">{s.title}</h3>
                   <p className="text-[#4A4745]">{s.desc}</p>
@@ -264,7 +266,7 @@ export default function PartnerPlatformPage() {
       {/* ── KITCHEN BAND IMAGE ───────────────────────────────────────── */}
       <section className="relative w-full h-[40vh] min-h-[340px] overflow-hidden">
         <img
-          src="/generated/partner-platform-dashboard.jpg"
+          src="/generated/partner-platform-dashboard.webp"
           alt="Chef plating a Michelin-level course on a black marble countertop in a Bali villa"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
@@ -288,44 +290,44 @@ export default function PartnerPlatformPage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Co-Branded */}
-            <div className="relative bg-white border border-[#D4AF37]/60 rounded-2xl p-8 md:p-10 flex flex-col">
-              <span className="absolute -top-3 left-8 inline-flex items-center gap-1.5 bg-[#D4AF37] text-[#050505] text-[10px] uppercase tracking-[0.25em] font-semibold px-3 py-1.5 rounded-full">
+            <div className="relative bg-white border border-[#C5A028]/60 rounded-2xl p-8 md:p-10 flex flex-col">
+              <span className="absolute -top-3 left-8 inline-flex items-center gap-1.5 bg-[#C5A028] text-[#050505] text-[10px] uppercase tracking-[0.25em] font-semibold px-3 py-1.5 rounded-full">
                 <Sparkles className="w-3 h-3" /> Most Visibility
               </span>
               <p className="font-cormorant text-[#2C5F7C] text-xs uppercase tracking-[0.3em] mb-3">Option A</p>
               <h3 className="font-playfair text-3xl mb-3">Co-Branded Partnership</h3>
               <p className="text-[#4A4745] mb-6">myCHEF is visible as the culinary partner. We may feature the villa in marketing, create content together, and mention it in campaigns. The villa benefits from association with the myCHEF brand.</p>
               <div className="mb-6">
-                <p className="text-5xl font-playfair text-[#D4AF37]">12<span className="text-2xl">%</span></p>
+                <p className="text-5xl font-playfair text-[#C5A028]">12<span className="text-2xl">%</span></p>
                 <p className="text-xs uppercase tracking-[0.2em] text-[#8A8785] mt-1">Commission per order</p>
               </div>
               <p className="text-[10px] uppercase tracking-[0.25em] text-[#8A8785] mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Best for</p>
               <ul className="space-y-2 mb-8 flex-grow">
                 {['Villas wanting visibility', 'Luxury brands', 'Marketing-focused villas', 'Hospitality groups wanting exposure'].map((b) => (
-                  <li key={b} className="flex items-start gap-2 text-sm text-[#4A4745]"><Check className="w-4 h-4 text-[#D4AF37] mt-0.5 flex-shrink-0" /> {b}</li>
+                  <li key={b} className="flex items-start gap-2 text-sm text-[#4A4745]"><Check className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" /> {b}</li>
                 ))}
               </ul>
-              <a href={waApply} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#E8C84B] transition-colors">
+              <a href={waApply} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
                 Apply Co-Branded
               </a>
             </div>
 
             {/* White-Label */}
             <div className="bg-[#0A0A0A] text-white border border-white/10 rounded-2xl p-8 md:p-10 flex flex-col">
-              <p className="font-cormorant text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-3">Option B</p>
+              <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[0.3em] mb-3">Option B</p>
               <h3 className="font-playfair text-3xl mb-3">White-Label Partnership</h3>
               <p className="text-white/65 mb-6">myCHEF operates invisibly. Neutral uniforms, no visible branding, unmarked equipment. The experience appears fully owned by the villa. Sell it as your own, use the photos freely.</p>
               <div className="mb-6">
-                <p className="text-5xl font-playfair text-[#D4AF37]">7<span className="text-2xl">%</span></p>
+                <p className="text-5xl font-playfair text-[#C5A028]">7<span className="text-2xl">%</span></p>
                 <p className="text-xs uppercase tracking-[0.2em] text-white/45 mt-1">Commission per order</p>
               </div>
               <p className="text-[10px] uppercase tracking-[0.25em] text-white/45 mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Best for</p>
               <ul className="space-y-2 mb-8 flex-grow">
                 {['Luxury villa brands', 'Hospitality groups', 'Villas protecting brand identity', 'Ultra-private clients'].map((b) => (
-                  <li key={b} className="flex items-start gap-2 text-sm text-white/75"><Check className="w-4 h-4 text-[#D4AF37] mt-0.5 flex-shrink-0" /> {b}</li>
+                  <li key={b} className="flex items-start gap-2 text-sm text-white/75"><Check className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" /> {b}</li>
                 ))}
               </ul>
-              <a href={waApply} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-[#D4AF37]/60 text-[#D4AF37] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#D4AF37]/10 transition-colors">
+              <a href={waApply} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-[#C5A028]/60 text-[#C5A028] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#C5A028]/10 transition-colors">
                 Apply White-Label
               </a>
             </div>
@@ -354,11 +356,11 @@ export default function PartnerPlatformPage() {
 
             <div className="grid md:grid-cols-2 gap-5 pt-7 border-t border-[#E5E3E0]">
               <div className="flex items-baseline gap-3">
-                <p className="font-playfair text-2xl text-[#D4AF37]">12%</p>
+                <p className="font-playfair text-2xl text-[#C5A028]">12%</p>
                 <p className="text-sm text-[#4A4745]">Co-Branded partner earns <span className="font-medium text-[#1A1A1A]">IDR 2,400,000</span> on this dinner.</p>
               </div>
               <div className="flex items-baseline gap-3">
-                <p className="font-playfair text-2xl text-[#D4AF37]">7%</p>
+                <p className="font-playfair text-2xl text-[#C5A028]">7%</p>
                 <p className="text-sm text-[#4A4745]">White-Label partner earns <span className="font-medium text-[#1A1A1A]">IDR 1,400,000</span> on this dinner.</p>
               </div>
             </div>
@@ -385,7 +387,7 @@ export default function PartnerPlatformPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {DASHBOARD_BLOCKS.map((b) => (
               <div key={b.title} className="bg-white border border-[#E5E3E0] rounded-2xl p-6">
-                <b.icon className="w-6 h-6 text-[#D4AF37] mb-4" />
+                <b.icon className="w-6 h-6 text-[#C5A028] mb-4" />
                 <h3 className="font-playfair text-xl mb-2">{b.title}</h3>
                 <p className="text-sm text-[#4A4745]">{b.desc}</p>
               </div>
@@ -409,7 +411,7 @@ export default function PartnerPlatformPage() {
             </p>
             <ul className="space-y-2 text-[#4A4745]">
               {['Guest trust', 'Premium positioning', 'Direct-booking credibility'].map((b) => (
-                <li key={b} className="flex items-start gap-2"><Check className="w-4 h-4 text-[#D4AF37] mt-1 flex-shrink-0" /> {b}</li>
+                <li key={b} className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> {b}</li>
               ))}
             </ul>
           </div>
@@ -427,23 +429,23 @@ export default function PartnerPlatformPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white border border-[#E5E3E0] rounded-2xl p-7">
-              <Award className="w-6 h-6 text-[#D4AF37] mb-4" />
+              <Award className="w-6 h-6 text-[#C5A028] mb-4" />
               <h3 className="font-playfair text-2xl mb-3">Partner Score</h3>
               <p className="text-sm text-[#4A4745] mb-5">Scored on kitchen readiness, operational communication, guest feedback, booking cooperation, villa standards, event execution, and reliability.</p>
               <p className="text-[10px] uppercase tracking-[0.25em] text-[#8A8785] mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Higher-scoring partners receive</p>
               <ul className="space-y-1.5 text-sm text-[#4A4745]">
                 {['Priority referrals', 'More visibility', 'Better collaboration', 'Preferred partner status', 'Marketing priority'].map((b) => (
-                  <li key={b} className="flex items-start gap-2"><Check className="w-3.5 h-3.5 text-[#D4AF37] mt-1 flex-shrink-0" /> {b}</li>
+                  <li key={b} className="flex items-start gap-2"><Check className="w-3.5 h-3.5 text-[#C5A028] mt-1 flex-shrink-0" /> {b}</li>
                 ))}
               </ul>
             </div>
             <div className="bg-white border border-[#E5E3E0] rounded-2xl p-7">
-              <Star className="w-6 h-6 text-[#D4AF37] mb-4" />
+              <Star className="w-6 h-6 text-[#C5A028] mb-4" />
               <h3 className="font-playfair text-2xl mb-3">Guest Feedback System</h3>
               <p className="text-sm text-[#4A4745] mb-5">After every dinner, guests leave structured feedback. Partners see satisfaction scores in real time. We track food, service, experience, villa integration, and overall satisfaction — creating operational accountability across the platform.</p>
               <ul className="space-y-1.5 text-sm text-[#4A4745]">
                 {['Food quality', 'Service quality', 'Experience quality', 'Villa integration', 'Overall satisfaction'].map((b) => (
-                  <li key={b} className="flex items-start gap-2"><Check className="w-3.5 h-3.5 text-[#D4AF37] mt-1 flex-shrink-0" /> {b}</li>
+                  <li key={b} className="flex items-start gap-2"><Check className="w-3.5 h-3.5 text-[#C5A028] mt-1 flex-shrink-0" /> {b}</li>
                 ))}
               </ul>
             </div>
@@ -454,7 +456,7 @@ export default function PartnerPlatformPage() {
       {/* ── WHITE-LABEL STANDARDS ──────────────────────────────────── */}
       <section className="bg-white px-6 md:px-12 py-20 md:py-24">
         <div className="max-w-[900px] mx-auto text-center">
-          <Shield className="w-7 h-7 text-[#D4AF37] mx-auto mb-5" />
+          <Shield className="w-7 h-7 text-[#C5A028] mx-auto mb-5" />
           <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-3">10 — White-label standards</p>
           <h2 className="font-playfair text-3xl md:text-4xl leading-tight mb-5">The villa remains the hero.</h2>
           <p className="text-[#4A4745] text-lg">
@@ -471,7 +473,7 @@ export default function PartnerPlatformPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {AUDIENCE.map((a) => (
               <div key={a.name} className="bg-white border border-[#E5E3E0] rounded-2xl p-6">
-                <Building2 className="w-5 h-5 text-[#D4AF37] mb-3" />
+                <Building2 className="w-5 h-5 text-[#C5A028] mb-3" />
                 <h3 className="font-playfair text-xl mb-2">{a.name}</h3>
                 <p className="text-sm text-[#4A4745]">{a.desc}</p>
               </div>
@@ -499,7 +501,7 @@ export default function PartnerPlatformPage() {
           <ul className="grid sm:grid-cols-2 gap-3 max-w-[640px] mx-auto">
             {['Functional villa kitchen', 'Kitchen access', 'Basic communication', 'Guest introduction support'].map((r) => (
               <li key={r} className="flex items-center gap-3 bg-[#FAFAF8] border border-[#E5E3E0] rounded-xl px-4 py-3.5 text-[#1A1A1A]">
-                <Check className="w-4 h-4 text-[#D4AF37] flex-shrink-0" /> {r}
+                <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0" /> {r}
               </li>
             ))}
           </ul>
@@ -529,7 +531,7 @@ export default function PartnerPlatformPage() {
       {/* ── FINAL CTA ──────────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] text-white px-6 md:px-12 py-24 md:py-32">
         <div className="max-w-[820px] mx-auto text-center">
-          <p className="font-cormorant text-[#D4AF37] text-sm uppercase tracking-[0.35em] mb-5">The next step</p>
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.35em] mb-5">The next step</p>
           <h2 className="font-playfair text-3xl md:text-5xl leading-tight mb-5">The experience speaks better than the presentation ever can.</h2>
           <p className="text-white/65 text-lg mb-12 max-w-[640px] mx-auto">
             Large villa groups can request a private tasting, an investor dinner, or an owner showcase evening. Smaller partners can join the monthly showcase dinners and invitation-only events.
@@ -539,7 +541,7 @@ export default function PartnerPlatformPage() {
               href={waApply}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-10 py-4 bg-[#D4AF37] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] rounded-full hover:bg-[#E8C84B] transition-colors"
+              className="inline-flex items-center justify-center px-10 py-4 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] rounded-full hover:bg-[#D4B43A] transition-colors"
             >
               Apply for Partnership
             </a>
@@ -556,7 +558,7 @@ export default function PartnerPlatformPage() {
             myCHEF Partner Platform — controlled premium hospitality, the leading luxury villa dining network in Bali.
           </p>
           <p className="text-xs text-white/60 mt-6">
-            Already a guest looking to book? <Link to="/quote" className="text-[#D4AF37] hover:underline">Get a quote</Link>.
+            Already a guest looking to book? <Link to="/quote" className="text-[#C5A028] hover:underline">Get a quote</Link>.
           </p>
         </div>
       </section>
@@ -567,7 +569,7 @@ export default function PartnerPlatformPage() {
 function Stat({ label, value, accent = false }: { label: string; value: string; accent?: boolean }) {
   return (
     <div>
-      <p className={`font-playfair text-2xl md:text-3xl ${accent ? 'text-[#D4AF37]' : 'text-[#1A1A1A]'}`}>{value}</p>
+      <p className={`font-playfair text-2xl md:text-3xl ${accent ? 'text-[#B08D22]' : 'text-[#1A1A1A]'}`}>{value}</p>
       <p className="text-[10px] uppercase tracking-[0.2em] text-[#8A8785] mt-1.5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{label}</p>
     </div>
   )

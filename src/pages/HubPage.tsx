@@ -4,7 +4,7 @@ import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema } from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,15 +14,15 @@ const PORTALS = [
     title: 'Fine Dining',
     subtitle: 'Italian tasting menus in your villa. Two curated experiences.',
     path: '/fine-dining',
-    image: '/generated/hub-fine-dining.png',
-    accent: '#D4AF37',
+    image: '/generated/hub-fine-dining.webp',
+    accent: '#C5A028',
   },
   {
     id: 'catering',
     title: 'Catering',
     subtitle: 'Private chef for breakfast, lunch, and dinner. No planning needed.',
     path: '/villa-chef',
-    image: '/generated/hub-catering.png',
+    image: '/generated/hub-catering.webp',
     accent: '#6B8E5A',
   },
   {
@@ -30,7 +30,7 @@ const PORTALS = [
     title: 'Events',
     subtitle: 'Weddings, retreats, and celebrations. Fully hosted.',
     path: '/events',
-    image: '/generated/hub-events.png',
+    image: '/generated/hub-events.webp',
     accent: '#2C5F7C',
   },
 ]
@@ -42,37 +42,37 @@ const TRUST_CARDS = [
     eyebrow: 'Promise',
     title: '100% Experience Guarantee',
     body: 'If the execution is not what we promised, we make it right.',
-    image: '/generated/trust-guarantee.jpg',
+    image: '/generated/trust-guarantee.webp',
   },
   {
     eyebrow: 'Standard',
     title: 'The New Standard for Private Dining in Bali',
     body: 'Built for villas, families, weddings, and hosted experiences.',
-    image: '/generated/trust-standard.jpg',
+    image: '/generated/trust-standard.webp',
   },
   {
     eyebrow: 'Network',
     title: 'Verified Chefs. Real Accountability.',
     body: 'Every chef is selected, reviewed, and matched to the experience.',
-    image: '/generated/trust-chefs.jpg',
+    image: '/generated/trust-chefs.webp',
   },
   {
     eyebrow: 'Leadership',
     title: 'Designed for Market Dominance',
     body: 'Fine dining, catering, and events delivered through one premium system.',
-    image: '/generated/trust-leader.jpg',
+    image: '/generated/trust-leader.webp',
   },
   {
     eyebrow: 'Execution',
     title: 'From Menu to Service Flow',
     body: 'We handle planning, food, staffing, setup, and guest experience.',
-    image: '/generated/trust-execution.jpg',
+    image: '/generated/trust-execution.webp',
   },
   {
     eyebrow: 'Hosts',
     title: 'Built for Villas, Hosts, and Private Guests',
     body: 'Professional presentation, clear process, and repeatable quality.',
-    image: '/generated/trust-hosts.jpg',
+    image: '/generated/trust-hosts.webp',
   },
 ] as const
 
@@ -194,34 +194,44 @@ export default function HubPage() {
     return () => ctx.revert()
   }, [])
 
+  const homeBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
+    ],
+  }
+
   return (
     <div>
       <SeoHead
         title="Private Chef Bali | Luxury Villa Dining, Catering & Events by myCHEF"
         description="Private chef in Bali for luxury villa dining, Bali villa catering, private events, parties, and fine dining experiences by myCHEF. Same-day WhatsApp confirmation."
         canonical="https://mychef.id/"
-        ogImage="https://mychef.id/generated/hub-hero-v3.jpg"
+        ogImage="https://mychef.id/generated/hub-hero-v3.webp"
+        jsonLd={[localBusinessSchema, homeBreadcrumb]}
       />
       {/* PORTALS — now the page opener. "Choose Your Way" leads. */}
-      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pt-32 md:pt-40 pb-24 md:pb-32 px-6" style={{ background: 'var(--u-bg)' }}>
+      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pt-24 md:pt-28 pb-24 md:pb-32 px-6" style={{ paddingTop: '100px', background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16 md:mb-24">
-            <p className="hub-hero-label text-[#D4AF37] text-xs md:text-sm tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <div className="text-center mb-8 md:mb-12">
+            <p className="hub-hero-label text-[#C5A028] tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.5rem' }}>
               myCHEF.id — Bali
             </p>
-            <h1 className="u-heading text-4xl md:text-6xl lg:text-7xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Choose Your Way</h1>
-            <div className="gold-arc mx-auto mb-6" />
-            <p className="text-[#1A1A1A]/65 max-w-xl mx-auto leading-relaxed">
-              Three dedicated experiences. One standard: make it exceptional from start to finish.
-            </p>
+            <h1 className="u-heading text-4xl md:text-6xl lg:text-7xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Choose Your Way</h1>
+            <div className="gold-arc mx-auto mb-4" />
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-            {PORTALS.map((portal) => (
+            {PORTALS.map((portal, idx) => (
               <div key={portal.id} className="portal-card group relative rounded-2xl overflow-hidden w-full" style={{ aspectRatio: '3/4', minHeight: '480px' }}>
                 <Link to={portal.path} className="absolute inset-0 z-10" aria-label={portal.title} />
                 <img
                   src={portal.image}
                   alt={portal.title}
+                  width={600}
+                  height={800}
+                  fetchPriority={idx === 0 ? 'high' : undefined}
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                   style={{ background: '#1a1a1a' }}
                   onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0.4' }}
@@ -262,8 +272,11 @@ export default function HubPage() {
                   <img
                     src={card.image}
                     alt={card.title}
+                    width={640}
+                    height={400}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div
                     className="absolute inset-0"
@@ -271,7 +284,7 @@ export default function HubPage() {
                   />
                   <span
                     className="absolute top-4 left-4 text-[10px] tracking-[0.3em] uppercase font-semibold px-3 py-1.5 rounded-full"
-                    style={{ background: 'rgba(0,0,0,0.55)', color: '#D4AF37', backdropFilter: 'blur(8px)', fontFamily: "'Cormorant Garamond', serif" }}
+                    style={{ background: 'rgba(0,0,0,0.55)', color: '#C5A028', backdropFilter: 'blur(8px)', fontFamily: "'Cormorant Garamond', serif" }}
                   >
                     {card.eyebrow}
                   </span>
@@ -286,7 +299,7 @@ export default function HubPage() {
                 </div>
                 <span
                   className="absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
-                  style={{ background: 'linear-gradient(to right, transparent, #D4AF37, transparent)' }}
+                  style={{ background: 'linear-gradient(to right, transparent, #C5A028, transparent)' }}
                 />
               </div>
             ))}
@@ -327,7 +340,16 @@ export default function HubPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-              <img src="/generated/team-photo.jpg" alt="The myCHEF team" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0' }} />
+              <img
+                src="/generated/team-photo.webp"
+                alt="The myCHEF team"
+                width={800}
+                height={1000}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0' }}
+              />
             </div>
             <div>
               <p className="u-label text-sm mb-4">Who We Are</p>
@@ -384,7 +406,7 @@ export default function HubPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {TRUST_STATS.map((stat) => (
               <div key={stat.label} className="trust-item text-center">
-                <stat.icon className="w-6 h-6 mx-auto mb-4 text-[#D4AF37]" />
+                <stat.icon className="w-6 h-6 mx-auto mb-4 text-[#C5A028]" />
                 <p className="text-3xl md:text-4xl mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>{stat.value}</p>
                 <p className="text-sm" style={{ color: 'var(--u-text-muted)' }}>{stat.label}</p>
               </div>
@@ -395,7 +417,7 @@ export default function HubPage() {
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full">
               <figure className="flex flex-col items-center text-center max-w-[280px]">
                 <img
-                  src="/generated/villa-award-2025.jpg"
+                  src="/generated/villa-award-2025.webp"
                   alt="Villa Award 2025 — Best Choice for Private Dining"
                   width={280}
                   height={280}
@@ -412,7 +434,7 @@ export default function HubPage() {
 
               <figure className="flex flex-col items-center text-center max-w-[280px]">
                 <img
-                  src="/generated/villa-award-2026.jpg"
+                  src="/generated/villa-award-2026.webp"
                   alt="Villa Award 2026 — Best Choice for Private Dining"
                   width={280}
                   height={280}
@@ -439,9 +461,9 @@ export default function HubPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {REVIEWS.map((review, i) => (
-              <div key={i} className="p-6 rounded-2xl border transition-all hover:border-[#D4AF37]/30" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div key={i} className="p-6 rounded-2xl border transition-all hover:border-[#C5A028]/30" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
                 <div className="flex gap-1 mb-3">
-                  {[1,2,3,4,5].map((s) => <Star key={s} className="w-3 h-3 fill-[#D4AF37] text-[#D4AF37]" />)}
+                  {[1,2,3,4,5].map((s) => <Star key={s} className="w-3 h-3 fill-[#C5A028] text-[#C5A028]" />)}
                 </div>
                 <p className="text-sm leading-relaxed mb-4 italic" style={{ color: 'var(--u-text)' }}>"{review.text}"</p>
                 <div className="flex items-center justify-between">
@@ -488,7 +510,16 @@ export default function HubPage() {
               </Link>
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <img src="/generated/hub-villa.jpg" alt="Luxury villa partnership" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0' }} />
+              <img
+                src="/generated/hub-villa.webp"
+                alt="Luxury villa partnership"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0' }}
+              />
             </div>
           </div>
         </div>
@@ -521,11 +552,20 @@ export default function HubPage() {
       {/* FINAL CTA */}
       <section className="py-24 md:py-32 px-6 relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/hub-bali.jpg" alt="Bali landscape" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0' }} />
+          <img
+            src="/generated/hub-bali.webp"
+            alt="Bali landscape"
+            width={1920}
+            height={1080}
+            className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+            onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0' }}
+          />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center max-w-3xl mx-auto">
-          <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Ready When You Are</p>
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Ready When You Are</p>
           <h2 className="text-4xl md:text-6xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Your Villa. Our Kitchen.<br />
             <span className="italic">One Message Away.</span>

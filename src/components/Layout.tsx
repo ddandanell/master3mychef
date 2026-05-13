@@ -25,8 +25,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <UniverseProvider>
       <div className="min-h-screen flex flex-col transition-colors duration-700" style={{ background: 'var(--u-bg)', color: 'var(--u-text)' }}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
       </div>

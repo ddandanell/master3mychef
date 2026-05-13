@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Mail, MapPin, CreditCard, Calendar, AlertCircle, CheckCircle } from 'lucide-react'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 
 const PAYMENT_RULES = [
   {
@@ -38,14 +38,15 @@ export default function TermsPage() {
         title="Terms & Payment | myCHEF — Private Chef Bali"
         description="myCHEF terms of service and payment rules for private chef, Bali villa catering, and event bookings — deposits, balance, and booking confirmation."
         canonical="https://mychef.id/terms-of-service"
+        jsonLd={[breadcrumbSchema('Terms & Payment', 'https://mychef.id/terms-of-service')]}
       />
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-[800px] mx-auto">
-          <Link to="/" className="inline-flex items-center gap-2 text-[#D4AF37] text-sm tracking-wider uppercase mb-8 hover:text-[#E8C84B] transition-colors" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <Link to="/" className="inline-flex items-center gap-2 text-[#C5A028] text-sm tracking-wider uppercase mb-8 hover:text-[#D4B43A] transition-colors" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
-          <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
           <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Payment & Booking Terms</h1>
           <p className="text-white/60 text-sm">Effective: January 2025 &nbsp;|&nbsp; Company: MyChef &nbsp;|&nbsp; NPWP: 1000000005064323</p>
         </div>
@@ -57,7 +58,7 @@ export default function TermsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
             {PAYMENT_RULES.map((rule) => (
               <div key={rule.title} className="p-6 rounded-2xl border border-white/10" style={{ background: 'rgba(255,255,255,0.02)' }}>
-                <rule.icon className="w-6 h-6 text-[#D4AF37] mb-4" strokeWidth={1.5} />
+                <rule.icon className="w-6 h-6 text-[#C5A028] mb-4" strokeWidth={1.5} />
                 <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{rule.title}</h3>
                 <p className="text-white/50 text-sm leading-relaxed">{rule.desc}</p>
               </div>
@@ -83,9 +84,9 @@ export default function TermsPage() {
             <div className="border-b border-white/10 pb-12">
               <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>2. Payment Schedule</h2>
               <div className="text-white/60 text-sm leading-relaxed space-y-4">
-                <div className="flex items-start gap-4 p-4 rounded-xl border border-[#D4AF37]/20" style={{ background: 'rgba(212,175,55,0.05)' }}>
-                  <div className="w-10 h-10 rounded-full bg-[#D4AF37]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#D4AF37] text-sm font-bold">25%</span>
+                <div className="flex items-start gap-4 p-4 rounded-xl border border-[#C5A028]/20" style={{ background: 'rgba(212,175,55,0.05)' }}>
+                  <div className="w-10 h-10 rounded-full bg-[#C5A028]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#C5A028] text-sm font-bold">25%</span>
                   </div>
                   <div>
                     <p className="text-white/80 font-medium mb-1">Deposit to Confirm</p>
@@ -137,9 +138,9 @@ export default function TermsPage() {
               <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>5. Cancellations and Refunds</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                 {CANCELLATION_TIERS.map((tier) => (
-                  <div key={tier.days} className={`p-6 rounded-2xl border text-center ${tier.refund === '100%' ? 'border-[#D4AF37]/30' : tier.refund === '50%' ? 'border-white/10' : 'border-red-900/30'}`} style={{ background: tier.refund === '100%' ? 'rgba(212,175,55,0.05)' : 'rgba(255,255,255,0.02)' }}>
+                  <div key={tier.days} className={`p-6 rounded-2xl border text-center ${tier.refund === '100%' ? 'border-[#C5A028]/30' : tier.refund === '50%' ? 'border-white/10' : 'border-red-900/30'}`} style={{ background: tier.refund === '100%' ? 'rgba(212,175,55,0.05)' : 'rgba(255,255,255,0.02)' }}>
                     <p className="text-xs text-white/60 uppercase tracking-wider mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{tier.days}</p>
-                    <p className={`text-3xl font-light mb-2 ${tier.refund === '100%' ? 'text-[#D4AF37]' : tier.refund === '50%' ? 'text-white/60' : 'text-red-400/60'}`} style={{ fontFamily: "'Playfair Display', serif" }}>{tier.refund}</p>
+                    <p className={`text-3xl font-light mb-2 ${tier.refund === '100%' ? 'text-[#C5A028]' : tier.refund === '50%' ? 'text-white/60' : 'text-red-400/60'}`} style={{ fontFamily: "'Playfair Display', serif" }}>{tier.refund}</p>
                     <p className="text-xs text-white/60">{tier.note}</p>
                   </div>
                 ))}
@@ -185,21 +186,21 @@ export default function TermsPage() {
                 <p className="mb-4">All confirmations, payments, or booking changes must be sent directly to:</p>
                 <div className="flex flex-col sm:flex-row items-start gap-6">
                   <div className="flex items-center gap-3">
-                    <MessageCircle className="w-5 h-5 text-[#D4AF37]" />
+                    <MessageCircle className="w-5 h-5 text-[#C5A028]" />
                     <div>
                       <p className="text-white/80 text-sm">WhatsApp</p>
                       <p className="text-white/50 text-sm">+62 822-3756-5997</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-[#D4AF37]" />
+                    <Mail className="w-5 h-5 text-[#C5A028]" />
                     <div>
                       <p className="text-white/80 text-sm">Email</p>
                       <p className="text-white/50 text-sm">indonesia@mychef.id</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <MapPin className="w-5 h-5 text-[#D4AF37]" />
+                    <MapPin className="w-5 h-5 text-[#C5A028]" />
                     <div>
                       <p className="text-white/80 text-sm">Business Hours</p>
                       <p className="text-white/50 text-sm">09:00 – 22:00 WIB (Mon–Sun)</p>

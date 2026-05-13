@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { Check, MessageCircle, ShieldCheck } from 'lucide-react'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 
 const SITE = 'https://mychef.id'
@@ -24,11 +24,12 @@ export default function CertifiedPartnerPage() {
         title={`${niceName} — myCHEF Certified Partner`}
         description={`${niceName} is an officially certified myCHEF villa dining partner. Verified for Michelin-level private dining execution in Bali.`}
         canonical={canonical}
-        ogImage={`${SITE}/generated/best-partner-2026.png`}
+        ogImage={`${SITE}/generated/best-partner-2026.webp`}
+        jsonLd={[breadcrumbSchema(niceName, canonical)]}
       />
 
       <section className="px-6 md:px-12 py-32 max-w-[900px] mx-auto text-center">
-        <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] font-semibold px-4 py-2 rounded-full mb-10">
+        <div className="inline-flex items-center gap-2 bg-[#C5A028]/10 border border-[#C5A028]/30 text-[#C5A028] text-[10px] uppercase tracking-[0.3em] font-semibold px-4 py-2 rounded-full mb-10">
           <ShieldCheck className="w-3.5 h-3.5" /> Verified Partner
         </div>
 
@@ -53,7 +54,7 @@ export default function CertifiedPartnerPage() {
             'Trusted by 50+ luxury villas',
           ].map((b) => (
             <li key={b} className="flex items-start gap-3 bg-white border border-[#E5E3E0] rounded-xl px-4 py-3.5">
-              <Check className="w-4 h-4 text-[#D4AF37] mt-1 flex-shrink-0" /> <span>{b}</span>
+              <Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> <span>{b}</span>
             </li>
           ))}
         </ul>
@@ -61,7 +62,7 @@ export default function CertifiedPartnerPage() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           <Link
             to="/quote"
-            className="inline-flex items-center justify-center bg-[#D4AF37] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#E8C84B] transition-colors"
+            className="inline-flex items-center justify-center bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
           >
             Book Dining at {niceName}
           </Link>

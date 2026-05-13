@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check } from 'lucide-react'
-import SeoHead from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
 import { LANDING_PAGES, GUIDES, BLOG_POSTS } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -23,7 +23,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${entry.title} | myCHEF`} description={entry.description} canonical={canonical} />
+      <SeoHead title={`${entry.title} | myCHEF`} description={entry.description} canonical={canonical} jsonLd={[localBusinessSchema, breadcrumbSchema(entry.title, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[800px] mx-auto">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">
@@ -37,9 +37,9 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
             Full article content for this page is being prepared. In the meantime, here is what you can do right now:
           </p>
           <ul className="space-y-2">
-            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#D4AF37] mt-1 flex-shrink-0" /> Message us on WhatsApp for an immediate answer.</li>
-            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#D4AF37] mt-1 flex-shrink-0" /> Request a personalized quote — we respond within 24 hours.</li>
-            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#D4AF37] mt-1 flex-shrink-0" /> Browse our sample menus to see what our chefs can cook for you.</li>
+            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> Message us on WhatsApp for an immediate answer.</li>
+            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> Request a personalized quote — we respond within 24 hours.</li>
+            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> Browse our sample menus to see what our chefs can cook for you.</li>
           </ul>
         </div>
 
@@ -47,7 +47,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           <a href={waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
           </a>
-          <Link to="/quote" className="inline-flex items-center justify-center bg-[#D4AF37] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
+          <Link to="/quote" className="inline-flex items-center justify-center bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
             Get a Quote
           </Link>
           <Link to="/menus" className="inline-flex items-center justify-center border border-[#1A1A1A]/20 text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">

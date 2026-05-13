@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { MessageCircle, Mail, MapPin, Phone, ArrowRight } from 'lucide-react'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
 
 const WA = '6282237565997'
 const SITE = 'https://mychef.id'
@@ -24,8 +24,8 @@ const CONCIERGES: Concierge[] = [
     role: 'Fine Dining Concierge',
     area: 'Fine Dining',
     desc: 'Menus, dietary preferences, wine pairings, and reservations for our two tasting experiences in your villa.',
-    portrait: '/generated/portrait-sofia.jpg',
-    accent: '#D4AF37',
+    portrait: '/generated/portrait-sofia.webp',
+    accent: '#C5A028',
     message: "Hi Sofia, I'd like to book a fine dining experience at my villa.",
   },
   {
@@ -34,7 +34,7 @@ const CONCIERGES: Concierge[] = [
     role: 'Villa Chef Coordinator',
     area: 'Catering',
     desc: 'Daily chef bookings, meal plans, weekly stays, and matching the right chef to your kitchen.',
-    portrait: '/generated/portrait-daniel.jpg',
+    portrait: '/generated/portrait-daniel.webp',
     accent: '#6B8E5A',
     message: "Hi Daniel, I'd like to book a private chef for my villa.",
   },
@@ -44,7 +44,7 @@ const CONCIERGES: Concierge[] = [
     role: 'Events Manager',
     area: 'Events',
     desc: 'Weddings, corporate events, retreats, and celebrations from intimate dinners to 200-guest receptions.',
-    portrait: '/generated/portrait-olivia.jpg',
+    portrait: '/generated/portrait-olivia.webp',
     accent: '#2C5F7C',
     message: "Hi Olivia, I'd like to plan an event in Bali.",
   },
@@ -54,7 +54,7 @@ const CONCIERGES: Concierge[] = [
     role: 'Partnerships & Staffing',
     area: 'Partners & Staffing',
     desc: 'Villa partner program, long-term chef staffing, and corporate hospitality arrangements.',
-    portrait: '/generated/portrait-marco.jpg',
+    portrait: '/generated/portrait-marco.webp',
     accent: '#8B4513',
     message: "Hi Marco, I'd like to talk about a partnership / staffing arrangement.",
   },
@@ -81,14 +81,17 @@ export default function ContactPage() {
         title="Contact myCHEF — Concierges by Service | myCHEF"
         description="Speak directly with the right person — Sofia for fine dining, Daniel for villa chef catering, Olivia for events, Marco for partnerships and staffing."
         canonical={`${SITE}/contact`}
-        ogImage={`${SITE}/generated/contact-hero.jpg`}
+        ogImage={`${SITE}/generated/contact-hero.webp`}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Contact', `${SITE}/contact`)]}
       />
 
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <section className="relative w-full min-h-[68vh] flex items-end overflow-hidden">
         <img
-          src="/generated/contact-hero.jpg"
+          src="/generated/contact-hero.webp"
           alt="Luxury Bali villa terrace at golden hour with a concierge desk"
+          width={1920}
+          height={1080}
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
         />
@@ -98,7 +101,7 @@ export default function ContactPage() {
         />
         <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-24 pt-32 max-w-[1280px] mx-auto w-full text-white">
           <p
-            className="text-[#D4AF37] text-xs md:text-sm tracking-[0.35em] uppercase mb-6"
+            className="text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-6"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Contact
@@ -112,7 +115,7 @@ export default function ContactPage() {
           <p className="text-base md:text-xl text-white/75 mb-10 max-w-[640px] leading-relaxed">
             Four people lead the four services. Pick the one closest to what you need — we usually reply within the hour.
           </p>
-          <div className="flex items-center gap-3 text-[#D4AF37] text-sm">
+          <div className="flex items-center gap-3 text-[#C5A028] text-sm">
             <span className="inline-block w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
             <span style={{ fontFamily: "'Cormorant Garamond', serif", letterSpacing: '0.15em' }}>WhatsApp online now</span>
           </div>
@@ -142,15 +145,18 @@ export default function ContactPage() {
                   href={waLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block bg-white border border-[#E5E3E0] rounded-2xl overflow-hidden hover:border-[#D4AF37] transition-colors"
+                  className="group block bg-white border border-[#E5E3E0] rounded-2xl overflow-hidden hover:border-[#C5A028] transition-colors"
                 >
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <img
                       src={c.portrait}
                       alt={`${c.name} — ${c.role}`}
+                      width={480}
+                      height={600}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                       style={{ objectPosition: 'center 18%' }}
                       loading="lazy"
+                      decoding="async"
                     />
                     <div
                       className="absolute inset-x-0 bottom-0 h-20"
@@ -164,7 +170,7 @@ export default function ContactPage() {
                     <h3 className="font-playfair text-2xl mb-1">{c.name}</h3>
                     <p className="text-xs text-[#8A8785] uppercase tracking-wider mb-3">{c.role}</p>
                     <p className="text-sm text-[#4A4745] mb-4 min-h-[60px]">{c.desc}</p>
-                    <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] font-semibold text-[#1A1A1A] group-hover:text-[#D4AF37] transition-colors">
+                    <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] font-semibold text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">
                       <MessageCircle className="w-3.5 h-3.5" /> Chat on WhatsApp
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                     </span>
@@ -192,10 +198,13 @@ export default function ContactPage() {
           {/* Left — concierge portrait */}
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#0A0A0A] order-2 md:order-1">
             <img
-              src="/generated/contact-concierge.jpg"
+              src="/generated/contact-concierge.webp"
               alt="myCHEF concierge replying to a guest enquiry from the Bali office"
+              width={800}
+              height={1000}
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
+              decoding="async"
             />
             {/* Soft gradient bottom so any future caption reads cleanly */}
             <div
@@ -203,7 +212,7 @@ export default function ContactPage() {
               style={{ background: 'linear-gradient(to bottom, rgba(10,10,10,0) 0%, rgba(10,10,10,0.55) 100%)' }}
             />
             <div className="absolute bottom-6 left-6 right-6 text-white">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Concierge Desk</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Concierge Desk</p>
               <p className="text-sm text-white/85">Bali, 08:00 – 22:00 WITA</p>
             </div>
           </div>
@@ -235,7 +244,7 @@ export default function ContactPage() {
                 <Field label="Message" value={form.message} onChange={(v) => setForm((f) => ({ ...f, message: v }))} multiline required />
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-black text-xs uppercase tracking-[0.25em] font-semibold px-8 py-4 rounded-full hover:bg-[#E8C84B] transition-colors"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black text-xs uppercase tracking-[0.25em] font-semibold px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
                 >
                   Send Message
                 </button>
@@ -252,7 +261,7 @@ export default function ContactPage() {
 function ContactItem({ icon: Icon, label, value, href, hint }: { icon: React.ComponentType<{ className?: string }>; label: string; value: string; href?: string; hint?: string }) {
   const content = (
     <div className="flex flex-col items-start gap-2">
-      <div className="flex items-center gap-2 text-[#D4AF37]">
+      <div className="flex items-center gap-2 text-[#C5A028]">
         <Icon className="w-4 h-4" />
         <p className="text-xs uppercase tracking-[0.25em] font-medium" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{label}</p>
       </div>
@@ -262,7 +271,7 @@ function ContactItem({ icon: Icon, label, value, href, hint }: { icon: React.Com
   )
 
   return href ? (
-    <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="hover:[&_p:nth-child(2)]:text-[#D4AF37] transition-colors">
+    <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="hover:[&_p:nth-child(2)]:text-[#C5A028] transition-colors">
       {content}
     </a>
   ) : (
@@ -280,7 +289,7 @@ function Field({ label, value, onChange, type = 'text', multiline = false, requi
           onChange={(e) => onChange(e.target.value)}
           required={required}
           rows={5}
-          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#D4AF37] focus:outline-none resize-none"
+          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028] resize-none"
         />
       ) : (
         <input
@@ -288,7 +297,7 @@ function Field({ label, value, onChange, type = 'text', multiline = false, requi
           value={value}
           onChange={(e) => onChange(e.target.value)}
           required={required}
-          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#D4AF37] focus:outline-none"
+          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028]"
         />
       )}
     </label>

@@ -9,8 +9,8 @@
     /* Brand Core */
     --brand-black: #050505;
     --brand-white: #F5F3EF;
-    --brand-gold: #D4AF37;
-    --brand-gold-light: #E8C84B;
+    --brand-gold: #C5A028;
+    --brand-gold-light: #D4B43A;
     --whatsapp: #25D366;
 
     /* shadcn compatibility */
@@ -40,8 +40,8 @@
     --u-bg-alt: #FFFFFF;
     --u-text: #1A1A1A;
     --u-text-muted: #6B5B4E;
-    --u-accent: #D4AF37;
-    --u-accent-rgb: 212, 175, 55;
+    --u-accent: #C5A028;
+    --u-accent-rgb: 197, 160, 40;
     --u-border: #E5E3E0;
     --u-surface: #FFFFFF;
     --u-hero-overlay: rgba(5, 5, 5, 0.45);
@@ -53,8 +53,8 @@
     --u-bg-alt: #0A0A0A;
     --u-text: #F5F3EF;
     --u-text-muted: #9A9590;
-    --u-accent: #D4AF37;
-    --u-accent-rgb: 212, 175, 55;
+    --u-accent: #C5A028;
+    --u-accent-rgb: 197, 160, 40;
     --u-border: #2A2A2A;
     --u-surface: #111111;
     --u-hero-overlay: rgba(5, 5, 5, 0.55);
@@ -92,6 +92,25 @@
     text-rendering: optimizeLegibility;
     /* Smooth hash-anchor scrolling. Lenis (when active) overrides this with auto. */
     scroll-behavior: smooth;
+  }
+
+  /* Skip-to-content link for keyboard users */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--brand-gold);
+    color: var(--brand-black);
+    padding: 8px 16px;
+    z-index: 100;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    transition: top 0.2s;
+  }
+  .skip-link:focus {
+    top: 0;
   }
 
   body {

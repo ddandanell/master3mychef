@@ -69,7 +69,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
   if (submitted) {
     return (
       <div className="text-center py-16 px-6">
-        <div className="w-16 h-16 rounded-full bg-[#D4AF37] flex items-center justify-center mx-auto mb-6">
+        <div className="w-16 h-16 rounded-full bg-[#C5A028] flex items-center justify-center mx-auto mb-6">
           <Check className="w-8 h-8 text-black" />
         </div>
         <h3 className="text-2xl mb-3" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>
@@ -110,7 +110,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
               {field.type === 'select' ? (
                 <select
                   required
-                  className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent appearance-none outline-none focus:ring-2 transition-all"
+                  className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent appearance-none focus:ring-2 focus:ring-[var(--u-accent)] transition-all"
                   style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}
                   value={formData[field.name] || ''}
                   onChange={(e) => handleChange(field.name, e.target.value)}
@@ -125,7 +125,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
                   type={field.type}
                   required={field.type !== 'select'}
                   placeholder={field.placeholder || ''}
-                  className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent outline-none focus:ring-2 transition-all"
+                  className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent focus:ring-2 focus:ring-[var(--u-accent)] transition-all"
                   style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}
                   value={formData[field.name] || ''}
                   onChange={(e) => handleChange(field.name, e.target.value)}
@@ -144,7 +144,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
             <textarea
               rows={3}
               placeholder="Dietary restrictions, allergies, special occasions..."
-              className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent outline-none focus:ring-2 transition-all resize-none"
+              className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent focus:ring-2 focus:ring-[var(--u-accent)] transition-all resize-none"
               style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}
               value={formData.notes || ''}
               onChange={(e) => handleChange('notes', e.target.value)}

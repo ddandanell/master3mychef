@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Shield, AlertTriangle, CheckCircle2, XCircle, Clock, Calendar, Utensils } from 'lucide-react'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 
 const CLIENT_POLICY = [
   {
@@ -8,7 +8,7 @@ const CLIENT_POLICY = [
     title: '14+ Days Before',
     refund: '100%',
     desc: 'Full refund of all payments made. No questions asked.',
-    color: '#D4AF37',
+    color: '#C5A028',
   },
   {
     icon: Clock,
@@ -52,14 +52,15 @@ export default function CancellationPage() {
         title="Cancellation Policy | myCHEF — Private Chef Bali"
         description="Cancellation and refund policy for myCHEF private chef, Bali villa catering, and event bookings — full refund 14+ days before, 50% within 7–13 days."
         canonical="https://mychef.id/cancellation"
+        jsonLd={[breadcrumbSchema('Cancellation Policy', 'https://mychef.id/cancellation')]}
       />
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-[800px] mx-auto">
-          <Link to="/" className="inline-flex items-center gap-2 text-[#D4AF37] text-sm tracking-wider uppercase mb-8 hover:text-[#E8C84B] transition-colors" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <Link to="/" className="inline-flex items-center gap-2 text-[#C5A028] text-sm tracking-wider uppercase mb-8 hover:text-[#D4B43A] transition-colors" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
-          <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
           <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Cancellation Policy</h1>
           <p className="text-white/40 text-sm">Clear rules. No surprises. We respect your time — and ours.</p>
         </div>
@@ -76,7 +77,7 @@ export default function CancellationPage() {
                 className="p-6 rounded-2xl border text-center transition-all duration-500 hover:border-opacity-50"
                 style={{
                   background: 'rgba(255,255,255,0.02)',
-                  borderColor: tier.color === '#D4AF37' ? 'rgba(212,175,55,0.2)' : tier.color === '#8B7355' ? 'rgba(255,255,255,0.1)' : 'rgba(139,0,0,0.2)',
+                  borderColor: tier.color === '#C5A028' ? 'rgba(212,175,55,0.2)' : tier.color === '#8B7355' ? 'rgba(255,255,255,0.1)' : 'rgba(139,0,0,0.2)',
                 }}
               >
                 <tier.icon className="w-8 h-8 mx-auto mb-4" style={{ color: tier.color }} strokeWidth={1.5} />
@@ -93,7 +94,7 @@ export default function CancellationPage() {
             <ul className="space-y-3">
               {DEDUCTIONS.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-white/50">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 mt-2 flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A028]/40 mt-2 flex-shrink-0" />
                   {item}
                 </li>
               ))}
@@ -105,7 +106,7 @@ export default function CancellationPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
             {CHEF_POLICY.map((item) => (
               <div key={item.title} className="p-6 rounded-2xl border border-white/10" style={{ background: 'rgba(255,255,255,0.02)' }}>
-                <item.icon className="w-6 h-6 text-[#D4AF37] mb-4" strokeWidth={1.5} />
+                <item.icon className="w-6 h-6 text-[#C5A028] mb-4" strokeWidth={1.5} />
                 <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
                 <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
               </div>
@@ -119,11 +120,11 @@ export default function CancellationPage() {
               <p>All change requests must be made directly to MyChef, and <strong className="text-white/80">no later than 72 hours</strong> before the shift or booking starts.</p>
               <div className="space-y-3 ml-2">
                 <div className="flex items-start gap-3">
-                  <Calendar className="w-4 h-4 text-[#D4AF37] mt-0.5 flex-shrink-0" />
+                  <Calendar className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" />
                   <p><strong className="text-white/80">Date, time, or location changes:</strong> Must be requested at least 72 hours in advance. Later changes cannot be guaranteed and may be treated as a cancellation.</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Utensils className="w-4 h-4 text-[#D4AF37] mt-0.5 flex-shrink-0" />
+                  <Utensils className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" />
                   <p><strong className="text-white/80">Menu changes:</strong> Must be requested at least 72 hours before the booking. All changes are subject to chef availability and must be confirmed in writing by MyChef.</p>
                 </div>
               </div>
@@ -132,7 +133,7 @@ export default function CancellationPage() {
 
           {/* Contact */}
           <div className="mt-12 p-8 rounded-2xl border border-white/10 text-center">
-            <p className="text-[#D4AF37] text-sm tracking-widest uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Need to Cancel or Change?</p>
+            <p className="text-[#C5A028] text-sm tracking-widest uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Need to Cancel or Change?</p>
             <p className="text-white/60 text-sm mb-6">Contact us directly. We will handle your request within 24 hours.</p>
             <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
               <MessageCircle className="w-4 h-4" /> WhatsApp +62 822-3756-5997

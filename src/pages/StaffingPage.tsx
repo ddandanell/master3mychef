@@ -16,7 +16,7 @@ import {
   Award,
   Star,
 } from 'lucide-react'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 
 const WA = '6282237565997'
@@ -132,14 +132,17 @@ export default function StaffingPage() {
         title="Private Chef Staffing in Bali — Full-Time, Part-Time, Live-In | myCHEF"
         description="myCHEF runs the recruitment side for private villa chefs across Bali. Match a vetted chef to your household — a week, a month, a season, or long-term."
         canonical={`${SITE}/staffing`}
-        ogImage={`${SITE}/generated/staffing-hero.jpg`}
+        ogImage={`${SITE}/generated/staffing-hero.webp`}
+        jsonLd={[breadcrumbSchema('Staffing', `${SITE}/staffing`)]}
       />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative w-full min-h-[78vh] flex items-end overflow-hidden">
         <img
-          src="/generated/staffing-hero.jpg"
+          src="/generated/staffing-hero.webp"
           alt="Private chef plating an elegant Mediterranean dish in a luxury Bali villa kitchen"
+          width={1920}
+          height={1080}
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
         />
@@ -149,7 +152,7 @@ export default function StaffingPage() {
         />
         <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-24 pt-32 max-w-[1280px] mx-auto w-full text-white">
           <p
-            className="text-[#D4AF37] text-xs md:text-sm tracking-[0.35em] uppercase mb-7"
+            className="text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-7"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Private Chef Recruitment
@@ -165,7 +168,7 @@ export default function StaffingPage() {
           </p>
           <a
             href="#quote"
-            className="inline-flex items-center justify-center px-10 py-4 bg-[#D4AF37] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#E8C84B] transition-colors mb-10"
+            className="inline-flex items-center justify-center px-10 py-4 bg-[#C5A028] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors mb-10"
           >
             Get a Staffing Quote
           </a>
@@ -180,7 +183,7 @@ export default function StaffingPage() {
               { icon: Star, label: '500+ Placements' },
             ].map((badge) => (
               <div key={badge.label} className="flex items-center gap-2 text-white/60">
-                <badge.icon className="w-4 h-4 text-[#D4AF37]" strokeWidth={1.5} />
+                <badge.icon className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />
                 <span className="text-xs tracking-wider uppercase">{badge.label}</span>
               </div>
             ))}
@@ -206,7 +209,7 @@ export default function StaffingPage() {
           </div>
           <div className="aspect-[4/5] overflow-hidden rounded-2xl">
             <img
-              src="/generated/staffing-market.jpg"
+              src="/generated/staffing-market.webp"
               alt="Chef shopping for fresh produce at a traditional Balinese morning market"
               className="w-full h-full object-cover"
               loading="lazy"
@@ -220,7 +223,7 @@ export default function StaffingPage() {
         <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="aspect-[4/5] overflow-hidden rounded-2xl order-2 md:order-1">
             <img
-              src="/generated/staffing-table.jpg"
+              src="/generated/staffing-table.webp"
               alt="Elegant breakfast spread on a luxury Bali villa terrace at golden morning light"
               className="w-full h-full object-cover"
               loading="lazy"
@@ -236,7 +239,7 @@ export default function StaffingPage() {
             <ul className="grid grid-cols-1 gap-2.5 text-[#4A4745]">
               {WHAT_CHEFS_DO.map((w) => (
                 <li key={w} className="flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#D4AF37] mt-1 flex-shrink-0" /> {w}
+                  <Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> {w}
                 </li>
               ))}
             </ul>
@@ -255,7 +258,7 @@ export default function StaffingPage() {
           <ol className="space-y-7">
             {HOW_IT_WORKS.map((s) => (
               <li key={s.step} className="grid grid-cols-[60px_1fr] gap-5 md:gap-8 items-baseline border-b border-[#E5E3E0] pb-7 last:border-0">
-                <span className="font-playfair text-3xl text-[#D4AF37]">{s.step}</span>
+                <span className="font-playfair text-3xl text-[#C5A028]">{s.step}</span>
                 <div>
                   <h3 className="font-playfair text-2xl mb-1.5">{s.title}</h3>
                   <p className="text-[#4A4745]">{s.desc}</p>
@@ -282,7 +285,7 @@ export default function StaffingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {STAFFING_TYPES.map((s) => (
               <div key={s.title} className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-7">
-                <s.icon className="w-7 h-7 text-[#D4AF37] mb-4" />
+                <s.icon className="w-7 h-7 text-[#C5A028] mb-4" />
                 <h3 className="font-playfair text-xl mb-2">{s.title}</h3>
                 <p className="text-sm text-[#4A4745]">{s.desc}</p>
               </div>
@@ -301,7 +304,7 @@ export default function StaffingPage() {
       {/* ── 05 — KITCHEN STRIP (image break) ────────────────────────────── */}
       <section className="relative w-full h-[50vh] min-h-[420px] overflow-hidden">
         <img
-          src="/generated/staffing-kitchen.jpg"
+          src="/generated/staffing-kitchen.webp"
           alt="Immaculate luxury villa kitchen in Bali with marble countertops and fresh ingredients"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
@@ -364,7 +367,7 @@ export default function StaffingPage() {
               aria-disabled={!canSubmit}
               className={`inline-flex items-center justify-center gap-2 w-full text-xs font-semibold uppercase tracking-[0.25em] px-8 py-4 rounded-full transition-colors ${
                 canSubmit
-                  ? 'bg-[#D4AF37] text-black hover:bg-[#E8C84B]'
+                  ? 'bg-[#C5A028] text-black hover:bg-[#D4B43A]'
                   : 'bg-[#E5E3E0] text-[#8A8785] cursor-not-allowed pointer-events-none'
               }`}
             >
@@ -406,7 +409,7 @@ export default function StaffingPage() {
       {/* ── FINAL CTA ─────────────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] text-white px-6 md:px-12 py-20 md:py-28">
         <div className="max-w-[800px] mx-auto text-center">
-          <p className="font-cormorant text-[#D4AF37] text-sm uppercase tracking-[0.35em] mb-4">Ready when you are</p>
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.35em] mb-4">Ready when you are</p>
           <h2 className="font-playfair text-3xl md:text-5xl leading-tight mb-6">Match a chef to your villa</h2>
           <p className="text-white/65 text-lg mb-10 max-w-[560px] mx-auto">
             Most placements confirmed within 48 hours of your brief. No commitment to read a proposal.
@@ -414,7 +417,7 @@ export default function StaffingPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#quote"
-              className="inline-flex items-center justify-center px-10 py-4 bg-[#D4AF37] text-black text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#E8C84B] transition-colors"
+              className="inline-flex items-center justify-center px-10 py-4 bg-[#C5A028] text-black text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
             >
               Get a Staffing Quote
             </a>
@@ -442,7 +445,7 @@ function Field({ label, value, onChange, placeholder, type = 'text' }: { label: 
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full bg-white border-2 border-[#E5E3E0] rounded-xl px-3.5 py-3 text-sm focus:border-[#D4AF37] focus:outline-none"
+        className="w-full bg-white border-2 border-[#E5E3E0] rounded-xl px-3.5 py-3 text-sm focus:border-[#C5A028]"
       />
     </label>
   )
@@ -460,7 +463,7 @@ function ChipGroup<T extends string>({ label, options, value, onChange }: { labe
               key={o.id}
               type="button"
               onClick={() => onChange(o.id)}
-              className={`px-5 py-2.5 text-sm rounded-full border-2 transition-colors ${active ? 'border-[#D4AF37] bg-[#D4AF37]/10 text-[#1A1A1A]' : 'border-[#E5E3E0] text-[#4A4745] hover:border-[#1A1A1A]/30'}`}
+              className={`px-5 py-2.5 text-sm rounded-full border-2 transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10 text-[#1A1A1A]' : 'border-[#E5E3E0] text-[#4A4745] hover:border-[#1A1A1A]/30'}`}
             >
               {o.label}
             </button>
@@ -483,7 +486,7 @@ function MultiChip({ label, options, value, onChange }: { label: string; options
               key={o}
               type="button"
               onClick={() => onChange(active ? value.filter((x) => x !== o) : [...value, o])}
-              className={`px-5 py-2.5 text-sm rounded-full border-2 transition-colors ${active ? 'border-[#D4AF37] bg-[#D4AF37]/10' : 'border-[#E5E3E0] text-[#4A4745] hover:border-[#1A1A1A]/30'}`}
+              className={`px-5 py-2.5 text-sm rounded-full border-2 transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10' : 'border-[#E5E3E0] text-[#4A4745] hover:border-[#1A1A1A]/30'}`}
             >
               {o}
             </button>
@@ -503,7 +506,7 @@ function Counter({ label, value, onChange, min = 0, max = 99 }: { label: string;
           type="button"
           onClick={() => onChange(Math.max(min, value - 1))}
           aria-label={`Decrease ${label.toLowerCase()}`}
-          className="w-9 h-9 border-2 border-[#E5E3E0] rounded-full flex items-center justify-center hover:border-[#D4AF37]"
+          className="w-9 h-9 border-2 border-[#E5E3E0] rounded-full flex items-center justify-center hover:border-[#C5A028]"
         >
           <Minus className="w-4 h-4" />
         </button>
@@ -512,7 +515,7 @@ function Counter({ label, value, onChange, min = 0, max = 99 }: { label: string;
           type="button"
           onClick={() => onChange(Math.min(max, value + 1))}
           aria-label={`Increase ${label.toLowerCase()}`}
-          className="w-9 h-9 border-2 border-[#E5E3E0] rounded-full flex items-center justify-center hover:border-[#D4AF37]"
+          className="w-9 h-9 border-2 border-[#E5E3E0] rounded-full flex items-center justify-center hover:border-[#C5A028]"
         >
           <Plus className="w-4 h-4" />
         </button>

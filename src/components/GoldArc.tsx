@@ -8,7 +8,7 @@ export default function GoldArc({ className = '' }: { className?: string }) {
     >
       <path
         d="M0 25 Q100 -15 200 25"
-        stroke="#D4AF37"
+        stroke="#C5A028"
         strokeWidth="1.5"
         fill="none"
       />

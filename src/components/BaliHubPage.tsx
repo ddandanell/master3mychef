@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Utensils, Flame, Sparkles } from 'lucide-react'
-import SeoHead from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
 import { TOP_CITIES } from '@/data/topCities'
 
 const SITE = 'https://mychef.id'
@@ -17,13 +17,15 @@ export default function BaliHubPage() {
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${title} | myCHEF`} description={description} canonical={canonical} ogImage={`${SITE}/generated/bali-hub-hero.jpg`} />
+      <SeoHead title={`${title} | myCHEF`} description={description} canonical={canonical} ogImage={`${SITE}/generated/bali-hub-hero.webp`} jsonLd={[localBusinessSchema, breadcrumbSchema('Bali Guide', canonical)]} />
 
       {/* Hero — full-bleed image with overlay copy */}
       <section className="relative w-full min-h-[78vh] flex items-end overflow-hidden">
         <img
-          src="/generated/bali-hub-hero.jpg"
+          src="/generated/bali-hub-hero.webp"
           alt="Luxury Bali villa with private dining setup at golden hour overlooking rice terraces and the Indian Ocean"
+          width={1920}
+          height={1080}
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
         />
@@ -32,13 +34,13 @@ export default function BaliHubPage() {
           style={{ background: 'linear-gradient(180deg, rgba(5,5,5,0.35) 0%, rgba(5,5,5,0.15) 35%, rgba(5,5,5,0.85) 100%)' }}
         />
         <div className="relative z-10 px-8 pb-12 md:pb-20 pt-24 md:pt-32 max-w-[1100px] mx-auto w-full text-white">
-          <p className="font-cormorant text-[#D4AF37] text-sm uppercase tracking-[4px] mb-4">Bali coverage</p>
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Bali coverage</p>
           <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-6 max-w-[820px]">{title}</h1>
           <p className="text-base md:text-lg text-white/85 max-w-[640px] mb-8">
             Wherever your villa is in Bali, we have a chef ten minutes away. Pick the area closest to where you are staying —
             we cook the same three things at every address: <span className="text-[#6B8E5A] font-medium">catering</span>,{' '}
             <span className="text-[#2C5F7C] font-medium">events</span>, and{' '}
-            <span className="text-[#D4AF37] font-medium">fine dining</span>.
+            <span className="text-[#C5A028] font-medium">fine dining</span>.
           </p>
           <a href={waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1ea855] transition-all">
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
@@ -60,7 +62,7 @@ export default function BaliHubPage() {
               <Link
                 key={c.slug}
                 to={`/${c.slug}`}
-                className="block bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#D4AF37] transition-all"
+                className="block bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#C5A028] transition-all"
               >
                 <div className="flex items-baseline justify-between mb-3">
                   <h3 className="font-playfair text-2xl">{c.name}</h3>
@@ -92,8 +94,8 @@ export default function BaliHubPage() {
               <h3 className="font-playfair text-2xl mb-3">Events</h3>
               <p className="text-sm text-[#4A4745]">Weddings, retreats, corporate dinners, birthdays. Catering, bar, décor, on-site coordination.</p>
             </Link>
-            <Link to="/fine-dining" className="bg-white border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#D4AF37] transition-all">
-              <Flame className="w-6 h-6 text-[#D4AF37] mb-3" />
+            <Link to="/fine-dining" className="bg-white border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#C5A028] transition-all">
+              <Flame className="w-6 h-6 text-[#C5A028] mb-3" />
               <h3 className="font-playfair text-2xl mb-3">Fine Dining</h3>
               <p className="text-sm text-[#4A4745]">Two curated tasting menus in your villa. White-clad team, sommelier pairing, open-flame cooking.</p>
             </Link>

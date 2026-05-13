@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, ChevronLeft, MessageCircle, Minus, Plus } from 'lucide-react'
-import SeoHead from './SeoHead'
+import SeoHead, { breadcrumbSchema } from './SeoHead'
 
 // 9-step quote funnel ported from production mychef.id/quote.
 // Each step writes into a single `form` state. Step 9 builds a WhatsApp
@@ -148,18 +148,19 @@ export default function QuoteFunnel() {
         title="Get a Custom Quote — Private Chef in Bali | myCHEF"
         description="Tell us about your event in 9 quick steps. Get a personalised private chef quote within 24 hours. Fine dining, villa catering, weddings, retreats — all priced transparently."
         canonical="https://mychef.id/quote"
-        ogImage="https://mychef.id/og-image.jpg"
+        ogImage="https://mychef.id/og-image.webp"
+        jsonLd={[breadcrumbSchema('Quote', 'https://mychef.id/quote')]}
       />
       <section className="px-8 pt-24 pb-16 max-w-[800px] mx-auto">
         {/* Progress strip */}
         <div className="flex items-center justify-between mb-6 text-xs text-[#8A8785]">
-          <button onClick={back} disabled={step === 0} className="inline-flex items-center gap-1 disabled:opacity-30 hover:text-[#1A1A1A]">
+          <button type="button" onClick={back} disabled={step === 0} className="inline-flex items-center gap-1 disabled:opacity-30 hover:text-[#1A1A1A]">
             <ChevronLeft className="w-4 h-4" /> Back
           </button>
           <span>Step {step + 1} of 9</span>
         </div>
         <div className="h-1 bg-[#E5E3E0] rounded-full mb-10 overflow-hidden">
-          <div className="h-full bg-[#D4AF37] transition-all" style={{ width: `${((step + 1) / 9) * 100}%` }} />
+          <div className="h-full bg-[#C5A028] transition-all" style={{ width: `${((step + 1) / 9) * 100}%` }} />
         </div>
 
         <h1 className="font-playfair text-3xl md:text-4xl mb-8">{STEP_TITLES[step]}</h1>
@@ -170,14 +171,16 @@ export default function QuoteFunnel() {
               const active = form.serviceType === s.id
               return (
                 <button
+                  type="button"
                   key={s.id}
                   onClick={() => update('serviceType', s.id)}
-                  className={`text-left bg-white border-2 rounded-2xl p-5 transition-all ${active ? 'border-[#D4AF37]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
+                  aria-pressed={active}
+                  className={`text-left bg-white border-2 rounded-2xl p-5 transition-all ${active ? 'border-[#C5A028]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
                 >
                   <h3 className="font-playfair text-xl mb-2">{s.title}</h3>
                   <p className="text-xs text-[#4A4745] mb-4">{s.desc}</p>
                   <ul className="space-y-1 text-xs text-[#4A4745]">
-                    {s.bullets.map((b) => <li key={b} className="flex items-start gap-1"><Check className="w-3 h-3 text-[#D4AF37] mt-0.5 flex-shrink-0" /> {b}</li>)}
+                    {s.bullets.map((b) => <li key={b} className="flex items-start gap-1"><Check className="w-3 h-3 text-[#C5A028] mt-0.5 flex-shrink-0" /> {b}</li>)}
                   </ul>
                 </button>
               )
@@ -191,9 +194,11 @@ export default function QuoteFunnel() {
               const active = form.occasion === o
               return (
                 <button
+                  type="button"
                   key={o}
                   onClick={() => update('occasion', o)}
-                  className={`bg-white border-2 rounded-xl p-4 text-sm font-medium transition-all ${active ? 'border-[#D4AF37]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
+                  aria-pressed={active}
+                  className={`bg-white border-2 rounded-xl p-4 text-sm font-medium transition-all ${active ? 'border-[#C5A028]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
                 >
                   {o}
                 </button>
@@ -206,10 +211,11 @@ export default function QuoteFunnel() {
           <div className="flex flex-col items-center gap-6">
             <div className="flex items-center gap-6">
               <button
+                type="button"
                 onClick={() => update('guests', Math.max(1, form.guests - 1))}
                 disabled={form.guestsFlexible}
                 aria-label="Decrease guest count"
-                className="w-12 h-12 border-2 border-[#E5E3E0] rounded-full flex items-center justify-center hover:border-[#D4AF37] disabled:opacity-30"
+                className="w-12 h-12 border-2 border-[#E5E3E0] rounded-full flex items-center justify-center hover:border-[#C5A028] disabled:opacity-30"
               >
                 <Minus className="w-5 h-5" />
               </button>
@@ -218,17 +224,20 @@ export default function QuoteFunnel() {
                 <div className="text-xs uppercase tracking-[2px] text-[#8A8785] mt-1">Guests</div>
               </div>
               <button
+                type="button"
                 onClick={() => update('guests', form.guests + 1)}
                 disabled={form.guestsFlexible}
                 aria-label="Increase guest count"
-                className="w-12 h-12 border-2 border-[#E5E3E0] rounded-full flex items-center justify-center hover:border-[#D4AF37] disabled:opacity-30"
+                className="w-12 h-12 border-2 border-[#E5E3E0] rounded-full flex items-center justify-center hover:border-[#C5A028] disabled:opacity-30"
               >
                 <Plus className="w-5 h-5" />
               </button>
             </div>
             <button
+              type="button"
               onClick={() => update('guestsFlexible', !form.guestsFlexible)}
-              className={`text-sm px-4 py-2 rounded-full border-2 ${form.guestsFlexible ? 'border-[#D4AF37] text-[#D4AF37]' : 'border-[#E5E3E0] text-[#4A4745]'}`}
+              aria-pressed={form.guestsFlexible}
+              className={`text-sm px-4 py-2 rounded-full border-2 ${form.guestsFlexible ? 'border-[#C5A028] text-[#8B6F1A]' : 'border-[#E5E3E0] text-[#4A4745]'}`}
             >
               Not sure / Varies
             </button>
@@ -243,9 +252,11 @@ export default function QuoteFunnel() {
               const active = form.cuisine === c.id
               return (
                 <button
+                  type="button"
                   key={c.id}
                   onClick={() => update('cuisine', c.id)}
-                  className={`bg-white border-2 rounded-xl p-4 text-sm font-medium transition-all ${active ? 'border-[#D4AF37]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
+                  aria-pressed={active}
+                  className={`bg-white border-2 rounded-xl p-4 text-sm font-medium transition-all ${active ? 'border-[#C5A028]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
                 >
                   {c.label}
                 </button>
@@ -257,15 +268,19 @@ export default function QuoteFunnel() {
         {step === 5 && (
           <div className="grid md:grid-cols-2 gap-4">
             <button
+              type="button"
               onClick={() => update('preMeeting', 'yes')}
-              className={`text-left bg-white border-2 rounded-2xl p-5 transition-all ${form.preMeeting === 'yes' ? 'border-[#D4AF37]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
+              aria-pressed={form.preMeeting === 'yes'}
+              className={`text-left bg-white border-2 rounded-2xl p-5 transition-all ${form.preMeeting === 'yes' ? 'border-[#C5A028]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
             >
               <h3 className="font-playfair text-xl mb-2">Yes, I want a pre-meeting</h3>
               <p className="text-xs text-[#4A4745]">Chef arrives 2 hours early to plan menu and buy fresh ingredients — only hourly rate applies, no extra cost.</p>
             </button>
             <button
+              type="button"
               onClick={() => update('preMeeting', 'no')}
-              className={`text-left bg-white border-2 rounded-2xl p-5 transition-all ${form.preMeeting === 'no' ? 'border-[#D4AF37]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
+              aria-pressed={form.preMeeting === 'no'}
+              className={`text-left bg-white border-2 rounded-2xl p-5 transition-all ${form.preMeeting === 'no' ? 'border-[#C5A028]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
             >
               <h3 className="font-playfair text-xl mb-2">No pre-meeting needed</h3>
               <p className="text-xs text-[#4A4745]">Chef arrives at the scheduled cooking time with ingredients ready to prepare your meal.</p>
@@ -279,12 +294,14 @@ export default function QuoteFunnel() {
               const active = form.addOns.includes(a.id)
               return (
                 <button
+                  type="button"
                   key={a.id}
                   onClick={() => update('addOns', active ? form.addOns.filter((x) => x !== a.id) : [...form.addOns, a.id])}
-                  className={`text-left bg-white border-2 rounded-xl p-4 transition-all ${active ? 'border-[#D4AF37]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
+                  aria-pressed={active}
+                  className={`text-left bg-white border-2 rounded-xl p-4 transition-all ${active ? 'border-[#C5A028]' : 'border-[#E5E3E0] hover:border-[#1A1A1A]/30'}`}
                 >
                   <div className="flex items-start gap-2">
-                    <div className={`w-4 h-4 rounded border-2 mt-1 flex-shrink-0 flex items-center justify-center ${active ? 'border-[#D4AF37] bg-[#D4AF37]' : 'border-[#E5E3E0]'}`}>
+                    <div className={`w-4 h-4 rounded border-2 mt-1 flex-shrink-0 flex items-center justify-center ${active ? 'border-[#C5A028] bg-[#C5A028]' : 'border-[#E5E3E0]'}`}>
                       {active && <Check className="w-3 h-3 text-white" />}
                     </div>
                     <div>
@@ -313,8 +330,10 @@ export default function QuoteFunnel() {
             <Input label="Country" value={form.country} onChange={(v) => update('country', v)} placeholder="Indonesia" disabled={form.addressUnknown} />
             <div className="text-center py-2 text-xs uppercase tracking-[2px] text-[#8A8785]">OR</div>
             <button
+              type="button"
               onClick={() => update('addressUnknown', !form.addressUnknown)}
-              className={`w-full bg-white border-2 rounded-xl p-3 text-sm font-medium transition-all ${form.addressUnknown ? 'border-[#D4AF37] text-[#D4AF37]' : 'border-[#E5E3E0]'}`}
+              aria-pressed={form.addressUnknown}
+              className={`w-full bg-white border-2 rounded-xl p-3 text-sm font-medium transition-all ${form.addressUnknown ? 'border-[#C5A028] text-[#8B6F1A]' : 'border-[#E5E3E0]'}`}
             >
               I don't have the address yet
             </button>
@@ -373,7 +392,7 @@ export default function QuoteFunnel() {
             <button
               onClick={next}
               disabled={!canAdvance}
-              className="bg-[#D4AF37] disabled:bg-[#D4AF37]/40 text-black font-semibold text-sm uppercase tracking-[2px] px-10 py-4 rounded-full hover:bg-[#E8C84B] transition-all"
+              className="bg-[#C5A028] disabled:bg-[#C5A028]/40 text-black font-semibold text-sm uppercase tracking-[2px] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               Continue
             </button>
@@ -404,7 +423,7 @@ function Input({ label, value, onChange, placeholder, disabled }: { label: strin
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         disabled={disabled}
-        className="w-full bg-white border-2 border-[#E5E3E0] rounded-xl p-3 text-sm focus:border-[#D4AF37] focus:outline-none disabled:opacity-50"
+        className="w-full bg-white border-2 border-[#E5E3E0] rounded-xl p-3 text-sm focus:border-[#C5A028] disabled:opacity-50"
       />
     </label>
   )
@@ -479,14 +498,14 @@ function DateStep({ form, update }: { form: QuoteForm; update: <K extends keyof 
         <button
           type="button"
           onClick={() => { setMode('range'); update('dates', []) }}
-          className={`flex-1 text-xs uppercase tracking-[0.15em] py-2 rounded-full transition-colors ${mode === 'range' ? 'bg-[#D4AF37] text-black font-semibold' : 'text-[#4A4745]'}`}
+          className={`flex-1 text-xs uppercase tracking-[0.15em] py-2 rounded-full transition-colors ${mode === 'range' ? 'bg-[#C5A028] text-black font-semibold' : 'text-[#4A4745]'}`}
         >
           Date range
         </button>
         <button
           type="button"
           onClick={() => { setMode('multi'); update('dates', []) }}
-          className={`flex-1 text-xs uppercase tracking-[0.15em] py-2 rounded-full transition-colors ${mode === 'multi' ? 'bg-[#D4AF37] text-black font-semibold' : 'text-[#4A4745]'}`}
+          className={`flex-1 text-xs uppercase tracking-[0.15em] py-2 rounded-full transition-colors ${mode === 'multi' ? 'bg-[#C5A028] text-black font-semibold' : 'text-[#4A4745]'}`}
         >
           Single / multiple days
         </button>
@@ -494,9 +513,9 @@ function DateStep({ form, update }: { form: QuoteForm; update: <K extends keyof 
 
       <div className="bg-white border border-[#E5E3E0] rounded-2xl p-5">
         <div className="flex items-center justify-between mb-4">
-          <button onClick={() => setMonthOffset((o) => o - 1)} className="text-sm px-3 py-1 hover:text-[#D4AF37]" aria-label="Go to previous month">←</button>
+          <button type="button" onClick={() => setMonthOffset((o) => o - 1)} className="text-sm px-3 py-1 hover:text-[#C5A028]" aria-label="Go to previous month">←</button>
           <span className="font-playfair text-lg">{monthName}</span>
-          <button onClick={() => setMonthOffset((o) => o + 1)} className="text-sm px-3 py-1 hover:text-[#D4AF37]" aria-label="Go to next month">→</button>
+          <button type="button" onClick={() => setMonthOffset((o) => o + 1)} className="text-sm px-3 py-1 hover:text-[#C5A028]" aria-label="Go to next month">→</button>
         </div>
         <div className="grid grid-cols-7 gap-1 text-center text-xs text-[#8A8785] mb-2">
           {['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map((d) => <div key={d}>{d}</div>)}
@@ -510,15 +529,17 @@ function DateStep({ form, update }: { form: QuoteForm; update: <K extends keyof 
             const past = new Date(year, month, d) < new Date(today.toDateString())
             return (
               <button
+                type="button"
                 key={i}
                 onClick={() => !past && handleDayClick(d)}
                 disabled={past || form.datesFlexible}
+                aria-pressed={selected}
                 title={past ? 'Past date' : undefined}
                 className={`aspect-square rounded-lg text-sm transition-all ${
                   selected
                     ? isEndpoint
-                      ? 'bg-[#D4AF37] text-black font-semibold'
-                      : 'bg-[#D4AF37]/30 text-[#1A1A1A]'
+                      ? 'bg-[#C5A028] text-black font-semibold'
+                      : 'bg-[#C5A028]/30 text-[#1A1A1A]'
                     : past
                       ? 'text-[#E5E3E0] cursor-not-allowed'
                       : 'hover:bg-[#FAFAF8]'
@@ -544,8 +565,10 @@ function DateStep({ form, update }: { form: QuoteForm; update: <K extends keyof 
       )}
 
       <button
+        type="button"
         onClick={() => update('datesFlexible', !form.datesFlexible)}
-        className={`w-full bg-white border-2 rounded-xl p-3 text-sm font-medium transition-all ${form.datesFlexible ? 'border-[#D4AF37] text-[#D4AF37]' : 'border-[#E5E3E0]'}`}
+        aria-pressed={form.datesFlexible}
+        className={`w-full bg-white border-2 rounded-xl p-3 text-sm font-medium transition-all ${form.datesFlexible ? 'border-[#C5A028] text-[#8B6F1A]' : 'border-[#E5E3E0]'}`}
       >
         Dates are flexible
       </button>

@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
 import OrderPanel from '@/components/OrderPanel'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -106,28 +106,28 @@ const THE_FOUR = [
     name: 'I Made Surya',
     role: 'Pasta. Mediterranean lead.',
     origin: 'Ubud, Bali',
-    image: '/generated/chef-made-surya.png',
+    image: '/generated/chef-made-surya.webp',
     bio: 'Born in a village outside Ubud, where his family ran a warung. He started as a kitchen hand at sixteen in a hotel in Seminyak, moved up to line cook, then to a small Italian restaurant in Canggu where he taught himself to make pasta. Adriano met him in 2021 — they were in the same kitchen for one service, covering for a mutual friend. Adriano watched him work for two hours and offered him an apprenticeship that night. Three months of the training were spent on pasta technique alone. His tagliatelle now travels with him to every Mediterranean evening, rolled in the villa where it will be eaten.',
   },
   {
     name: 'Bayu Pranata',
     role: 'Grill and protein. Wagyu lead.',
     origin: 'Yogyakarta, Java',
-    image: '/generated/chef-bayu-pranata.png',
+    image: '/generated/chef-bayu-pranata.webp',
     bio: 'Born in Yogyakarta. Trained in five-star hotel kitchens in Jakarta before moving to Bali in 2019 looking for less industrial work. He specialised in grilled proteins at a steakhouse in Seminyak, where his ribeye became quietly known among local chefs. Adriano heard about him in 2022, took a meeting, watched him cook a single steak, and hired him the same week. He brings the patience of a man who has been at fire since he was nineteen — and the discipline the Wagyu menu requires.',
   },
   {
     name: 'Rizky Saputra',
     role: 'Sauces and technique. Cross-menu.',
     origin: 'Padang, West Sumatra',
-    image: '/generated/chef-rizky-saputra.png',
+    image: '/generated/chef-rizky-saputra.webp',
     bio: 'Born in Padang, West Sumatra, into a family that has run restaurants for three generations. Minangkabau cooking is built on sauces that take a day — rendang reduced until the coconut milk has all but disappeared, gulai layered over hours, sambal pounded by hand. He grew up understanding that a sauce that takes ten minutes is not yet a sauce. He left Padang at twenty for Jakarta, then came to Bali in 2020 looking for a kitchen that would demand something different from him. He worked in two hotel kitchens before Adriano met him in 2023 at an industry tasting. The way he reduced a single sauce caught Adriano\'s eye — controlled, patient, almost reverent. Adriano hired him within a fortnight. He runs the sauce station on every evening, regardless of menu. The blue cheese sauce on the Wagyu ribeye and the lobster reduction for the tagliatelle are both his hands.',
   },
   {
     name: 'Ni Putu Asri',
     role: 'Pastry.',
     origin: 'North Bali',
-    image: '/generated/chef-ni-putu-asri.png',
+    image: '/generated/chef-ni-putu-asri.webp',
     bio: 'Born in a village in north Bali. Trained at a culinary school in Denpasar, then worked in pastry at a luxury resort in Nusa Dua, where she grew frustrated by the industrial scale of it — sheet trays of identical cakes for the breakfast buffet, made by a kitchen of fifteen. Adriano met her in 2023 at a wedding she had been hired to bake for. The dessert was the best thing on the table. He found her two days later. She left the resort the following month and trained with Adriano for nine months — the longest training any of the four has done. The lady fingers in the tiramisu are baked the morning of the dinner. The Tenerina cake is hers.',
   },
 ]
@@ -162,7 +162,8 @@ export default function LunaPage() {
         title="Fine Dining Bali | Private Chef Villa Tasting Menus by myCHEF"
         description="Private chef fine dining in your Bali villa — Italian and Mediterranean tasting menus, open-flame cooking, sommelier pairing, Michelin-trained team. From IDR 2,200,000++ per guest."
         canonical="https://mychef.id/fine-dining"
-        ogImage="https://mychef.id/generated/luna-hero-v2.jpg"
+        ogImage="https://mychef.id/generated/luna-hero-v2.webp"
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Fine Dining', 'https://mychef.id/fine-dining')]}
       />
       {/*
         Hero — luxury hotel booking aesthetic.
@@ -172,7 +173,14 @@ export default function LunaPage() {
       */}
       <section className="relative min-h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/luna-hero-v2.jpg" alt="Private villa dining at golden hour" className="w-full h-full object-cover" />
+          <img
+            src="/generated/luna-hero-v2.webp"
+            alt="Private villa dining at golden hour"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            className="w-full h-full object-cover"
+          />
           <div
             className="absolute inset-0"
             style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.85))', backdropFilter: 'blur(2px)' }}
@@ -180,7 +188,7 @@ export default function LunaPage() {
         </div>
         <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 pt-32 max-w-[1280px] mx-auto w-full">
           <p
-            className="luna-hero-label text-[#D4AF37] text-xs md:text-sm tracking-[0.35em] uppercase mb-7"
+            className="luna-hero-label text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-7"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Private Villa Dining
@@ -198,13 +206,13 @@ export default function LunaPage() {
             <button
               type="button"
               onClick={() => openOrder('Mediterranean Sea Experience')}
-              className="px-10 py-4 bg-[#D4AF37] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#E8C84B] transition-colors"
+              className="px-10 py-4 bg-[#C5A028] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
             >
               Order Now
             </button>
             <a
               href="#menus"
-              className="inline-flex items-center justify-center px-10 py-4 border border-[#D4AF37]/60 text-[#D4AF37] text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4AF37]/10 transition-colors"
+              className="inline-flex items-center justify-center px-10 py-4 border border-[#C5A028]/60 text-[#C5A028] text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#C5A028]/10 transition-colors"
             >
               Explore Menu
             </a>
@@ -217,12 +225,20 @@ export default function LunaPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="luna-reveal">
-              <img src="/generated/luna-experience-collage.png" alt="Fine dining experience" className="rounded-2xl w-full aspect-[4/3] object-cover" />
+              <img
+                src="/generated/luna-experience-collage.webp"
+                alt="Fine dining experience"
+                width={800}
+                height={600}
+                className="rounded-2xl w-full aspect-[4/3] object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="luna-reveal">
-              <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chapter Four — The Experience</p>
+              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chapter Four — The Experience</p>
               <h2 className="text-4xl md:text-5xl mb-6 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>One Night.<br />Two Journeys.</h2>
-              <div className="w-12 h-[2px] bg-[#D4AF37] mb-8" />
+              <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
               <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
                 We arrive as a team of white-clad professionals. We transform your villa garden or a Balinese village courtyard into an open-air Michelin-inspired dining room.
               </p>
@@ -237,7 +253,7 @@ export default function LunaPage() {
                   { icon: Users, label: '4–24 Guests' },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-3">
-                    <item.icon className="w-5 h-5 text-[#D4AF37]" />
+                    <item.icon className="w-5 h-5 text-[#C5A028]" />
                     <span className="text-sm text-[#1A1A1A]/80">{item.label}</span>
                   </div>
                 ))}
@@ -251,7 +267,7 @@ export default function LunaPage() {
       <section id="menus" className="py-24 md:py-32 px-6 scroll-mt-24">
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Menus</p>
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Menus</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Two Experiences. One Extraordinary Evening.</h2>
             <p className="text-white/50">Every course is prepared in your villa. Every wine is paired by our sommelier.</p>
           </div>
@@ -261,22 +277,26 @@ export default function LunaPage() {
                 {/* Menu image — transparent PNG of the dry-aging cabinet, sits cleanly over the dark menu card */}
                 <div className="pt-8 pb-2 text-center">
                   <img
-                    src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean-sea.png' : '/generated/menu-wagyu.png'}
+                    src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean-sea.webp' : '/generated/menu-wagyu.webp'}
                     alt={menu.id === 'mediterranean' ? 'Mediterranean SEA Experience — certified tuna dry-aging cabinet' : 'Wagyu Experience — certified wagyu dry-aging cabinet'}
-                    style={{ height: '260px', width: 'auto', display: 'inline-block' }}
+                    width={520}
+                    height={260}
                     className="object-contain drop-shadow-2xl"
+                    loading="lazy"
+                    decoding="async"
+                    style={{ height: '260px', width: 'auto', display: 'inline-block' }}
                   />
                 </div>
                 <div className="p-8 md:p-10" style={{ background: 'rgba(255,255,255,0.03)' }}>
                   <div className="flex items-baseline justify-between gap-4 mb-4">
                     <h3 className="text-2xl md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.name}</h3>
-                    <span className="text-[#D4AF37] text-base md:text-lg whitespace-nowrap" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{menu.price}</span>
+                    <span className="text-[#C5A028] text-base md:text-lg whitespace-nowrap" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{menu.price}</span>
                   </div>
                   <p className="text-white/65 leading-relaxed">{menu.teaser}</p>
                 </div>
                 <div className="p-8 md:p-10 border-t border-white/10">
                   <div className="mb-8">
-                    <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Starter</p>
+                    <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Starter</p>
                     {menu.courses.starter.map((c) => (
                       <div key={c.name} className="mb-4 last:mb-0">
                         <h4 className="text-white font-medium mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{c.name}</h4>
@@ -285,7 +305,7 @@ export default function LunaPage() {
                     ))}
                   </div>
                   <div className="mb-8">
-                    <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Main Course</p>
+                    <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Main Course</p>
                     {menu.courses.main.map((c) => (
                       <div key={c.name} className="mb-4 last:mb-0">
                         <h4 className="text-white font-medium mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{c.name}</h4>
@@ -294,7 +314,7 @@ export default function LunaPage() {
                     ))}
                   </div>
                   <div className="mb-8">
-                    <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Dessert</p>
+                    <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Dessert</p>
                     {menu.courses.dessert.map((c) => (
                       <div key={c.name} className="mb-4 last:mb-0">
                         <h4 className="text-white font-medium mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{c.name}</h4>
@@ -303,7 +323,7 @@ export default function LunaPage() {
                     ))}
                   </div>
                   <div className="pt-6 border-t border-white/10 mb-8">
-                    <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Recommended Wine Pairing</p>
+                    <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Recommended Wine Pairing</p>
                     <div className="space-y-2 text-sm text-white/50">
                       {menu.wine.red && <p><span className="text-white/70">Red:</span> {menu.wine.red}</p>}
                       {menu.wine.white && <p><span className="text-white/70">White:</span> {menu.wine.white}</p>}
@@ -316,7 +336,7 @@ export default function LunaPage() {
                       <p className="text-xs text-white/60 uppercase tracking-wider" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Per Person</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-3xl font-medium text-[#D4AF37]" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.price}</p>
+                      <p className="text-3xl font-medium text-[#C5A028]" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.price}</p>
                     </div>
                   </div>
                 </div>
@@ -325,7 +345,7 @@ export default function LunaPage() {
           </div>
           {/* Menu closing line */}
           <div className="mt-12 text-center">
-            <p className="text-[#D4AF37]/70 text-sm italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <p className="text-[#C5A028]/70 text-sm italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Custom menus, dietary adjustments, and bespoke evenings arranged on request.
             </p>
             <p className="text-white/30 text-xs mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -346,8 +366,8 @@ export default function LunaPage() {
           {/* Header — asymmetrical, large */}
           <div className="mb-20 md:mb-28">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-[1px] bg-[#D4AF37]/60" />
-              <p className="text-[#D4AF37] text-xs tracking-[0.4em] uppercase" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Process</p>
+              <div className="w-12 h-[1px] bg-[#C5A028]/60" />
+              <p className="text-[#C5A028] text-xs tracking-[0.4em] uppercase" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Process</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
               <h2 className="text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -369,11 +389,11 @@ export default function LunaPage() {
                 style={{ marginTop: i % 2 === 1 ? '2rem' : '0' }}
               >
                 {/* Card with glassmorphism */}
-                <div className="relative p-8 md:p-6 lg:p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm transition-all duration-700 hover:border-[#D4AF37]/20 hover:bg-white/[0.04] hover:shadow-[0_0_60px_-15px_rgba(212,175,55,0.15)]">
+                <div className="relative p-8 md:p-6 lg:p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm transition-all duration-700 hover:border-[#C5A028]/20 hover:bg-white/[0.04] hover:shadow-[0_0_60px_-15px_rgba(212,175,55,0.15)]">
                   {/* Step number — framed, prominent */}
                   <div className="absolute -top-4 -left-4 z-10">
-                    <div className="relative w-16 h-16 rounded-2xl border-2 border-white/[0.12] bg-[#0a0a0a] flex items-center justify-center transition-all duration-500 group-hover:border-[#D4AF37]/60 group-hover:shadow-[0_0_24px_-4px_rgba(212,175,55,0.25)] group-hover:scale-110">
-                      <span className="text-2xl font-semibold text-white/80 transition-colors duration-500 group-hover:text-[#D4AF37]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <div className="relative w-16 h-16 rounded-2xl border-2 border-white/[0.12] bg-[#0a0a0a] flex items-center justify-center transition-all duration-500 group-hover:border-[#C5A028]/60 group-hover:shadow-[0_0_24px_-4px_rgba(212,175,55,0.25)] group-hover:scale-110">
+                      <span className="text-2xl font-semibold text-white/80 transition-colors duration-500 group-hover:text-[#C5A028]" style={{ fontFamily: "'Playfair Display', serif" }}>
                         {item.step}
                       </span>
                     </div>
@@ -381,15 +401,15 @@ export default function LunaPage() {
 
                   {/* Icon — glassmorphism circle with gold glow on hover */}
                   <div className="relative mb-8 mt-4">
-                    <div className="w-16 h-16 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md flex items-center justify-center transition-all duration-500 group-hover:border-[#D4AF37]/30 group-hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.25)] group-hover:scale-110">
-                      <item.icon className="w-6 h-6 text-[#D4AF37]/80 transition-all duration-500 group-hover:text-[#D4AF37]" strokeWidth={1} />
+                    <div className="w-16 h-16 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md flex items-center justify-center transition-all duration-500 group-hover:border-[#C5A028]/30 group-hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.25)] group-hover:scale-110">
+                      <item.icon className="w-6 h-6 text-[#C5A028]/80 transition-all duration-500 group-hover:text-[#C5A028]" strokeWidth={1} />
                     </div>
                     {/* Subtle glow ring on hover */}
                     <div className="absolute inset-0 w-16 h-16 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ boxShadow: '0 0 40px 8px rgba(212,175,55,0.15)' }} />
                   </div>
 
                   {/* Title — larger, elegant */}
-                  <h3 className="text-xl md:text-lg lg:text-xl text-white mb-3 leading-snug transition-colors duration-500 group-hover:text-[#D4AF37]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  <h3 className="text-xl md:text-lg lg:text-xl text-white mb-3 leading-snug transition-colors duration-500 group-hover:text-[#C5A028]" style={{ fontFamily: "'Playfair Display', serif" }}>
                     {item.title}
                   </h3>
 
@@ -399,7 +419,7 @@ export default function LunaPage() {
                   </p>
 
                   {/* Bottom accent line */}
-                  <div className="mt-6 w-8 h-[1px] bg-white/10 transition-all duration-700 group-hover:w-16 group-hover:bg-[#D4AF37]/40" />
+                  <div className="mt-6 w-8 h-[1px] bg-white/10 transition-all duration-700 group-hover:w-16 group-hover:bg-[#C5A028]/40" />
                 </div>
               </div>
             ))}
@@ -409,10 +429,10 @@ export default function LunaPage() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-6 mb-8">
               <div className="w-16 h-[1px] bg-white/10" />
-              <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#C5A028]/40" />
               <div className="w-16 h-[1px] bg-white/10" />
             </div>
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 border border-[#D4AF37]/30 text-[#D4AF37] text-sm tracking-[0.2em] uppercase rounded-full transition-all duration-500 hover:bg-[#D4AF37]/10 hover:border-[#D4AF37]/50 hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)]">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 border border-[#C5A028]/30 text-[#C5A028] text-sm tracking-[0.2em] uppercase rounded-full transition-all duration-500 hover:bg-[#C5A028]/10 hover:border-[#C5A028]/50 hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)]">
               <Phone className="w-4 h-4" strokeWidth={1.5} /> Start on WhatsApp
             </a>
           </div>
@@ -424,7 +444,7 @@ export default function LunaPage() {
         <div className="max-w-[1280px] mx-auto">
           {/* Header */}
           <div className="text-center mb-10 md:mb-14">
-            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chapter Three</p>
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chapter Three</p>
             <h2 className="text-5xl md:text-6xl lg:text-7xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>The <span className="italic">Four</span></h2>
             <p className="text-xl md:text-2xl text-white/60 italic max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Trained by Adriano. One of them is in your kitchen tonight.
@@ -470,7 +490,11 @@ export default function LunaPage() {
                   <img
                     src={chef.image}
                     alt={chef.name}
+                    width={600}
+                    height={750}
                     className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
+                    loading="lazy"
+                    decoding="async"
                     style={{ objectPosition: 'center 15%' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-50" />
@@ -482,7 +506,7 @@ export default function LunaPage() {
                     <h3 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>{chef.name}</h3>
                     <span className="text-[10px] text-white/60 tracking-wider uppercase">{chef.origin}</span>
                   </div>
-                  <p className="text-[#D4AF37] text-xs tracking-[0.15em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{chef.role}</p>
+                  <p className="text-[#C5A028] text-xs tracking-[0.15em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{chef.role}</p>
                   <p className="text-white/50 text-sm leading-relaxed">{chef.bio}</p>
                 </div>
               </div>
@@ -491,7 +515,7 @@ export default function LunaPage() {
 
           {/* Closing line */}
           <div className="text-center">
-            <p className="text-[#D4AF37]/80 text-sm md:text-base italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <p className="text-[#C5A028]/80 text-sm md:text-base italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               One of the four will be in your kitchen on the night.
             </p>
             <p className="text-white/30 text-xs mt-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -510,22 +534,54 @@ export default function LunaPage() {
       <section id="captured" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Evening</p>
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Evening</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>How It Looks</h2>
             <p className="text-white/50">Candlelight. Crystal. White-clad professionals. Your villa, transformed.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/luna-gallery-1.png" alt="Sommelier presenting wine" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img
+                src="/generated/luna-gallery-1.webp"
+                alt="Sommelier presenting wine"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/luna-gallery-2.png" alt="Chef flambe at open kitchen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img
+                src="/generated/luna-gallery-2.webp"
+                alt="Chef flambe at open kitchen"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/luna-gallery-3.png" alt="Chef plating with guest" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img
+                src="/generated/luna-gallery-3.webp"
+                alt="Chef plating with guest"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/luna-gallery-4.png" alt="Group dining at sunset" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img
+                src="/generated/luna-gallery-4.webp"
+                alt="Group dining at sunset"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
@@ -535,14 +591,14 @@ export default function LunaPage() {
       <section className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Everything Included</p>
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Everything Included</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>What You Get</h2>
             <p className="text-white/50">No hidden fees. No surprises. One price, one extraordinary evening.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {WHATS_INCLUDED.map((item) => (
               <div key={item} className="flex items-center gap-3 p-4 rounded-xl border border-white/10">
-                <Check className="w-5 h-5 text-[#D4AF37] flex-shrink-0" />
+                <Check className="w-5 h-5 text-[#C5A028] flex-shrink-0" />
                 <span className="text-sm text-white/80">{item}</span>
               </div>
             ))}
@@ -560,10 +616,13 @@ export default function LunaPage() {
         {/* Full-bleed editorial header image (eyebrow + h2 are part of the artwork) */}
         <div className="relative w-full h-[60vh] min-h-[420px] max-h-[760px] overflow-hidden">
           <img
-            src="/generated/testimonials-bg.jpg"
+            src="/generated/testimonials-bg.webp"
             alt="Private chef serving guests at a candlelit villa dinner — words from guests"
+            width={1920}
+            height={1080}
             className="absolute inset-0 w-full h-full object-cover"
             loading="lazy"
+            decoding="async"
           />
           {/* Soft fade into the section below so testimonial cards don't sit on hard edge */}
           <div
@@ -577,7 +636,7 @@ export default function LunaPage() {
             {TESTIMONIALS.map((t) => (
               <div key={t.name} className="p-8 rounded-2xl border border-white/10">
                 <div className="flex gap-1 mb-4">
-                  {[1,2,3,4,5].map((s) => <Star key={s} className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />)}
+                  {[1,2,3,4,5].map((s) => <Star key={s} className="w-4 h-4 fill-[#C5A028] text-[#C5A028]" />)}
                 </div>
                 <p className="text-white/80 mb-6 leading-relaxed italic">"{t.text}"</p>
                 <p className="text-sm text-white/60">{t.name}, {t.location}</p>
@@ -591,7 +650,7 @@ export default function LunaPage() {
       <section className="py-24 md:py-32 px-6">
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Frequently Asked</h2>
             <p className="text-white/50">Still have questions? Message Sofia on WhatsApp — she responds within the hour.</p>
           </div>
@@ -600,7 +659,7 @@ export default function LunaPage() {
               <div key={i} className="rounded-2xl border border-white/10 overflow-hidden">
                 <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left">
                   <span className="text-white font-medium pr-4" style={{ fontFamily: "'Playfair Display', serif" }}>{faq.q}</span>
-                  <ChevronRight className={`w-5 h-5 text-[#D4AF37] flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-90' : ''}`} />
+                  <ChevronRight className={`w-5 h-5 text-[#C5A028] flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-90' : ''}`} />
                 </button>
                 {openFaq === i && (
                   <div className="px-6 pb-6">
@@ -623,9 +682,9 @@ export default function LunaPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
-              <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Reserve</p>
+              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Reserve</p>
               <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Book Your<br />Extraordinary Evening</h2>
-              <div className="w-12 h-[2px] bg-[#D4AF37] mb-8" />
+              <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
               <p className="text-white/60 mb-8 leading-relaxed">
                 Sofia, our fine dining concierge, will confirm your date and menu within the hour. We recommend booking 7+ days in advance for peak season.
               </p>
@@ -637,16 +696,16 @@ export default function LunaPage() {
                       <p className="text-sm text-white/60">{menu.duration}</p>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="text-[#D4AF37] font-medium">{menu.price}</span>
-                      <ChevronRight className="w-4 h-4 text-white/30 group-hover:text-[#D4AF37] transition-colors" />
+                      <span className="text-[#C5A028] font-medium">{menu.price}</span>
+                      <ChevronRight className="w-4 h-4 text-white/30 group-hover:text-[#C5A028] transition-colors" />
                     </div>
                   </div>
                 ))}
               </div>
               <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#D4AF37]" /><span className="text-sm text-white/80">Wine pairing available — IDR 850K per guest</span></div>
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#D4AF37]" /><span className="text-sm text-white/80">Minimum 4 guests</span></div>
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#D4AF37]" /><span className="text-sm text-white/80">Service charge and government tax included</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">Wine pairing available — IDR 850K per guest</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">Minimum 4 guests</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">Service charge and government tax included</span></div>
               </div>
               <a href="https://wa.me/6282237565997?text=Hi%20Sofia%2C%20I%27d%20like%20to%20book%20a%20fine%20dining%20experience." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
                 <Phone className="w-4 h-4" /> Book via WhatsApp

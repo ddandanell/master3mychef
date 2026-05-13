@@ -6,12 +6,46 @@ interface SeoHeadProps {
   canonical?: string
   ogImage?: string
   noindex?: boolean
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[]
+}
+
+export const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://mychef.id/#business',
+  name: 'myCHEF Indonesia',
+  url: 'https://mychef.id',
+  telephone: '+62-822-3756-5997',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',
+    addressLocality: 'Denpasar Selatan',
+    addressRegion: 'Bali',
+    postalCode: '80226',
+    addressCountry: 'ID',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -8.6905,
+    longitude: 115.2126,
+  },
+}
+
+export function breadcrumbSchema(currentName: string, currentUrl: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
+      { '@type': 'ListItem', position: 2, name: currentName, item: currentUrl },
+    ],
+  }
 }
 
 // Sets per-route document.title, meta description, canonical, OG tags, and an
 // optional robots noindex directive. Works for a Vite SPA — Google executes JS.
 // For first-contentful-html SEO add vite-plugin-ssg later (see SEO-PAGES-PLAN.md).
-export default function SeoHead({ title, description, canonical, ogImage, noindex }: SeoHeadProps) {
+export default function SeoHead({ title, description, canonical, ogImage, noindex, jsonLd }: SeoHeadProps) {
   useEffect(() => {
     document.title = title
 
@@ -53,7 +87,25 @@ export default function SeoHead({ title, description, canonical, ogImage, noinde
       link.setAttribute('href', canonical)
       setMeta(`meta[property="og:url"]`, 'property', 'og:url', canonical)
     }
-  }, [title, description, canonical, ogImage, noindex])
+
+    // Inject JSON-LD schemas
+    document.head.querySelectorAll('script[data-seohead="jsonld"]').forEach((el) => el.remove())
+
+    if (jsonLd) {
+      const schemas = Array.isArray(jsonLd) ? jsonLd : [jsonLd]
+      schemas.forEach((schema) => {
+        const script = document.createElement('script')
+        script.type = 'application/ld+json'
+        script.setAttribute('data-seohead', 'jsonld')
+        script.textContent = JSON.stringify(schema)
+        document.head.appendChild(script)
+      })
+    }
+
+    return () => {
+      document.head.querySelectorAll('script[data-seohead="jsonld"]').forEach((el) => el.remove())
+    }
+  }, [title, description, canonical, ogImage, noindex, jsonLd])
 
   return null
 }

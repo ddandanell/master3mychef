@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, Utensils } from 'lucide-react'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 
 export default function NotFoundPage() {
   return (
@@ -9,6 +9,7 @@ export default function NotFoundPage() {
         title="Page Not Found | myCHEF — Private Chef Bali"
         description="The page you are looking for does not exist. Explore private chef, Bali villa catering, fine dining, and event experiences with myCHEF."
         noindex
+        jsonLd={[breadcrumbSchema('404', 'https://mychef.id/404')]}
       />
       {/* Subtle background texture */}
       <div className="absolute inset-0 opacity-20">
@@ -17,15 +18,15 @@ export default function NotFoundPage() {
       </div>
 
       <div className="relative z-10 text-center max-w-lg">
-        <Utensils className="w-10 h-10 text-[#D4AF37]/40 mx-auto mb-8" />
-        <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>404</p>
+        <Utensils className="w-10 h-10 text-[#C5A028]/40 mx-auto mb-8" />
+        <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>404</p>
         <h1
           className="text-5xl md:text-7xl mb-6 leading-tight"
           style={{ fontFamily: "'Playfair Display', serif", color: '#FFFFFF' }}
         >
-          Lost in<br /><span className="italic text-[#D4AF37]">Bali?</span>
+          Lost in<br /><span className="italic text-[#C5A028]">Bali?</span>
         </h1>
-        <div className="w-16 h-[1px] bg-[#D4AF37]/40 mx-auto mb-8" />
+        <div className="w-16 h-[1px] bg-[#C5A028]/40 mx-auto mb-8" />
         <p className="mb-4 leading-relaxed text-white/60 text-lg">
           The page you are looking for does not exist.
         </p>
@@ -34,7 +35,7 @@ export default function NotFoundPage() {
         </p>
         <Link
           to="/"
-          className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-[#D4AF37]/40 text-[#D4AF37] text-sm tracking-widest uppercase transition-all hover:bg-[#D4AF37]/10 hover:gap-5"
+          className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-[#C5A028]/40 text-[#C5A028] text-sm tracking-widest uppercase transition-all hover:bg-[#C5A028]/10 hover:gap-5"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
@@ -42,7 +43,7 @@ export default function NotFoundPage() {
 
         {/* Quick links */}
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4 text-xs text-white/30">
-          <Link to="/fine-dining" className="hover:text-[#D4AF37] transition-colors">Fine Dining</Link>
+          <Link to="/fine-dining" className="hover:text-[#C5A028] transition-colors">Fine Dining</Link>
           <span>&middot;</span>
           <Link to="/villa-chef" className="hover:text-[#6B8E5A] transition-colors">Catering</Link>
           <span>&middot;</span>

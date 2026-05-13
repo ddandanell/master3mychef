@@ -3,16 +3,16 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChefHat, ChevronDown } from 'lucide-react'
 
 const NAV_LINKS = [
-  { label: 'Fine Dining', path: '/fine-dining', accent: '#D4AF37', dept: 'Fine Dining' },
+  { label: 'Fine Dining', path: '/fine-dining', accent: '#C5A028', dept: 'Fine Dining' },
   { label: 'Catering', path: '/villa-chef', accent: '#6B8E5A', dept: 'Catering' },
   { label: 'Events', path: '/events', accent: '#2C5F7C', dept: 'Events' },
-  { label: 'Services', path: '/services', accent: '#D4AF37', dept: null },
-  { label: 'Staffing', path: '/staffing', accent: '#D4AF37', dept: null },
-  { label: 'Contact', path: '/contact', accent: '#D4AF37', dept: null },
+  { label: 'Services', path: '/services', accent: '#C5A028', dept: null },
+  { label: 'Staffing', path: '/staffing', accent: '#C5A028', dept: null },
+  { label: 'Contact', path: '/contact', accent: '#C5A028', dept: null },
 ]
 
 const DEPARTMENT_PAGES: Record<string, { name: string; accent: string }> = {
-  '/fine-dining': { name: 'Fine Dining', accent: '#D4AF37' },
+  '/fine-dining': { name: 'Fine Dining', accent: '#C5A028' },
   '/villa-chef': { name: 'Catering', accent: '#6B8E5A' },
   '/events': { name: 'Events', accent: '#2C5F7C' },
 }
@@ -66,8 +66,33 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
 
+  // Focus trap for mobile menu dialog
+  useEffect(() => {
+    if (!mobileOpen) return
+    const menu = document.getElementById('mobile-menu')
+    if (!menu) return
+    const focusable = menu.querySelectorAll<HTMLElement>('a, button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+    const first = focusable[0]
+    const last = focusable[focusable.length - 1]
+
+    const handler = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last?.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first?.focus()
+      }
+    }
+
+    menu.addEventListener('keydown', handler)
+    first?.focus()
+    return () => menu.removeEventListener('keydown', handler)
+  }, [mobileOpen])
+
   const dept = DEPARTMENT_PAGES[location.pathname]
-  const goldClass = 'text-[#D4AF37]'
+  const goldClass = 'text-[#C5A028]'
 
   const handleEnter = (path: string) => {
     if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current)
@@ -83,18 +108,16 @@ export default function Navbar() {
       {/* ── Fixed dark glass navbar ── */}
       <nav
         aria-label="Main navigation"
-        className="fixed top-0 left-0 right-0 z-50 py-4"
+        className="fixed top-0 left-0 right-0 z-50 py-4 min-h-[64px]"
         style={{
-          background: 'rgba(5, 5, 5, 0.78)',
-          backdropFilter: 'blur(14px)',
-          WebkitBackdropFilter: 'blur(14px)',
-          borderBottom: '1px solid rgba(212, 175, 55, 0.18)',
+          background: '#050505',
+          borderBottom: '1px solid rgba(197, 160, 40, 0.18)',
         }}
       >
         <div className="max-w-[1280px] mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 text-white">
-            <ChefHat className="w-7 h-7 text-[#D4AF37]" strokeWidth={1.5} />
+            <ChefHat className="w-7 h-7 text-[#C5A028]" strokeWidth={1.5} />
             <div className="flex flex-col">
               <span className="font-serif text-2xl tracking-wide leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>
                 my<span className={goldClass}>CHEF</span>
@@ -128,13 +151,13 @@ export default function Navbar() {
                     className={`relative text-[13px] tracking-[0.15em] uppercase transition-colors duration-300 ${
                       isActive
                         ? goldClass
-                        : 'text-white/80 hover:text-[#D4AF37]'
+                        : 'text-white/80 hover:text-[#C5A028]'
                     }`}
                     style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
                   >
                     {link.label}
                     <span
-                      className={`absolute -bottom-1 left-0 h-[1.5px] bg-[#D4AF37] transition-all duration-300 ${
+                      className={`absolute -bottom-1 left-0 h-[1.5px] bg-[#C5A028] transition-all duration-300 ${
                         isActive ? 'w-full' : 'w-0 group-hover:w-full'
                       }`}
                     />
@@ -148,13 +171,13 @@ export default function Navbar() {
                     >
                       <div
                         className="rounded-xl border border-white/10 py-2 px-1 min-w-[180px]"
-                        style={{ background: 'rgba(8,8,8,0.96)', backdropFilter: 'blur(20px)' }}
+                        style={{ background: '#050505', border: '1px solid rgba(197, 160, 40, 0.12)' }}
                       >
                         {SUBMENUS[link.path].map((item) => (
                           <a
                             key={item.href}
                             href={item.href}
-                            className="block px-4 py-2 text-[12px] tracking-[0.12em] uppercase transition-colors rounded-lg hover:bg-white/5 text-white/70 hover:text-[#D4AF37]"
+                            className="block px-4 py-2 text-[12px] tracking-[0.12em] uppercase transition-colors rounded-lg hover:bg-white/5 text-white/70 hover:text-[#C5A028]"
                             style={{ fontFamily: "'Cormorant Garamond', serif" }}
                           >
                             {item.label}
@@ -187,12 +210,12 @@ export default function Navbar() {
         <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation" className="fixed inset-0 z-[60] flex flex-col" style={{ background: '#050505' }}>
           <div className="flex items-center justify-between px-6 py-5 border-b" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
             <Link to="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5 text-white">
-              <ChefHat className="w-6 h-6 text-[#D4AF37]" strokeWidth={1.5} />
+              <ChefHat className="w-6 h-6 text-[#C5A028]" strokeWidth={1.5} />
               <span className="font-serif text-xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-                my<span className="text-[#D4AF37]">CHEF</span>
+                my<span className="text-[#C5A028]">CHEF</span>
               </span>
             </Link>
-            <button onClick={() => setMobileOpen(false)} className="p-2 text-white">
+            <button type="button" onClick={() => setMobileOpen(false)} aria-label="Close menu" className="p-2 text-white min-w-[44px] min-h-[44px] flex items-center justify-center">
               <X className="w-6 h-6" />
             </button>
           </div>
@@ -209,22 +232,26 @@ export default function Navbar() {
                       to={link.path}
                       onClick={() => { if (!hasSubmenu) setMobileOpen(false) }}
                       className="text-2xl tracking-widest uppercase transition-colors"
-                      style={{ fontFamily: "'Cormorant Garamond', serif", color: isActive ? '#D4AF37' : '#fff' }}
+                      style={{ fontFamily: "'Cormorant Garamond', serif", color: isActive ? '#C5A028' : '#fff' }}
                     >
                       {link.label}
                     </Link>
                     {hasSubmenu && (
                       <button
+                        type="button"
                         onClick={() => setMobileExpanded(isExpanded ? null : link.path)}
-                        className="p-1 transition-transform"
-                        style={{ color: isActive ? '#D4AF37' : '#fff', transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                        className="p-2 transition-transform min-w-[44px] min-h-[44px] flex items-center justify-center"
+                        style={{ color: isActive ? '#C5A028' : '#fff', transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                        aria-label={isExpanded ? 'Collapse submenu' : 'Expand submenu'}
+                        aria-expanded={isExpanded}
+                        aria-controls={isExpanded ? `submenu-${link.path}` : undefined}
                       >
                         <ChevronDown className="w-5 h-5" />
                       </button>
                     )}
                   </div>
                   {hasSubmenu && isExpanded && (
-                    <div className="flex flex-col items-center gap-3 mt-4">
+                    <div id={`submenu-${link.path}`} className="flex flex-col items-center gap-3 mt-4">
                       {SUBMENUS[link.path].map((item) => (
                         <a
                           key={item.href}

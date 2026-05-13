@@ -5,7 +5,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -19,7 +19,7 @@ const HANDLES = [
     title: 'Private dinners for investors, management teams, and VIP guests',
     body: 'Hosted inside luxury villas, private residences, boardrooms, rooftops, and boutique venues. Elegant, relaxed, conversational, premium.',
     bullets: ['Plated dining', 'Sommelier-style wine service', 'Waiters', 'Candlelight setup', 'Printed menus', 'Cocktail welcome'],
-    image: '/generated/corp-executive.jpg',
+    image: '/generated/corp-executive.webp',
   },
   {
     icon: Mic2,
@@ -27,7 +27,7 @@ const HANDLES = [
     title: 'Professional catering for conferences, workshops, seminars, and retreats',
     body: 'Smooth timing, fast service, clean presentation, international-friendly menus, reliable logistics. Built for the full conference day.',
     bullets: ['Coffee stations', 'Healthy snacks', 'Business lunch', 'Dessert station', 'Drinks', 'Setup & cleanup'],
-    image: '/generated/corp-conference.jpg',
+    image: '/generated/corp-conference.webp',
   },
   {
     icon: Wine,
@@ -35,7 +35,7 @@ const HANDLES = [
     title: 'Luxury standing events designed for relaxed conversation',
     body: 'Startup events, real estate launches, brand activations, chamber gatherings, investor evenings. Designed for movement, connection, and atmosphere.',
     bullets: ['Canapés', 'Live stations', 'Oyster bars', 'Cocktail pairings', 'Grazing tables', 'Bartender team'],
-    image: '/generated/corp-networking.jpg',
+    image: '/generated/corp-networking.webp',
   },
   {
     icon: Award,
@@ -43,7 +43,7 @@ const HANDLES = [
     title: 'Premium large-scale events for award nights and formal evenings',
     body: 'Stage setup, full dinner service, cocktail reception, DJ or live music, custom menus, branded desserts, welcome drinks, full event styling.',
     bullets: ['Elegant banquet setup', 'Gold & black styling', 'Stage & lighting', 'Champagne towers', 'Long-table dinner setup', 'Plated service'],
-    image: '/generated/corp-gala.jpg',
+    image: '/generated/corp-gala.webp',
   },
 ] as const
 
@@ -128,10 +128,10 @@ const PACKAGES: CorporatePackage[] = [
 ]
 
 const GALLERY = [
-  { src: '/generated/corp-villa.jpg', alt: 'Private corporate dinner inside an open-air Bali villa with infinity pool backdrop' },
-  { src: '/generated/corp-cocktail-close.jpg', alt: 'Close-up of a craft corporate cocktail at a Bali rooftop event' },
-  { src: '/generated/corp-plated.jpg', alt: 'Plated fine dining main course at a Bali corporate dinner' },
-  { src: '/generated/corp-team.jpg', alt: 'myCHEF corporate hospitality team in branded black uniforms' },
+  { src: '/generated/corp-villa.webp', alt: 'Private corporate dinner inside an open-air Bali villa with infinity pool backdrop' },
+  { src: '/generated/corp-cocktail-close.webp', alt: 'Close-up of a craft corporate cocktail at a Bali rooftop event' },
+  { src: '/generated/corp-plated.webp', alt: 'Plated fine dining main course at a Bali corporate dinner' },
+  { src: '/generated/corp-team.webp', alt: 'myCHEF corporate hospitality team in branded black uniforms' },
 ] as const
 
 const FAQS = [
@@ -166,13 +166,14 @@ export default function CorporateEventsPage() {
         title="Corporate Events Bali | Luxury Corporate Catering & Event Dining"
         description="Premium corporate events in Bali with luxury catering, cocktails, staffing, chefs, and full event support for conferences, executive dinners, gala events, and company celebrations."
         canonical={`${SITE}/corporate-events`}
-        ogImage={`${SITE}/generated/corp-hero.jpg`}
+        ogImage={`${SITE}/generated/corp-hero.webp`}
+        jsonLd={[breadcrumbSchema('Corporate Events', `${SITE}/corporate-events`)]}
       />
 
       {/* HERO */}
       <section ref={heroRef} className="relative min-h-[88vh] flex items-end overflow-hidden">
         <img
-          src="/generated/corp-hero.jpg"
+          src="/generated/corp-hero.webp"
           alt="Corporate Events Bali — luxury private corporate dinner in a Bali villa"
           width={1600}
           height={900}
@@ -183,7 +184,7 @@ export default function CorporateEventsPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 pb-20 md:pb-28 w-full">
-          <p className="hero-fade text-[#D4AF37] text-sm tracking-[0.4em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <p className="hero-fade text-[#C5A028] text-sm tracking-[0.4em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Corporate Events Bali
           </p>
           <h1 className="hero-fade text-4xl md:text-6xl lg:text-7xl leading-[1.05] max-w-3xl mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -215,7 +216,7 @@ export default function CorporateEventsPage() {
       {/* INTRO */}
       <section className="py-20 md:py-28 px-6" style={{ background: '#0F0F0F' }}>
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-[#D4AF37] text-sm tracking-[0.35em] uppercase mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Hospitality production, not catering</p>
+          <p className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Hospitality production, not catering</p>
           <h2 className="text-3xl md:text-5xl leading-[1.1] mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
             We approach corporate catering like a hospitality production.
           </h2>
@@ -270,7 +271,7 @@ export default function CorporateEventsPage() {
       <section className="py-24 md:py-32 px-6" style={{ background: '#0F0F0F' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[#D4AF37] text-sm tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Why Companies Choose myCHEF</p>
+            <p className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Why Companies Choose myCHEF</p>
             <h2 className="text-4xl md:text-5xl leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>
               Three reasons companies hand us the whole evening.
             </h2>
@@ -278,7 +279,7 @@ export default function CorporateEventsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {WHY.map((w) => (
               <div key={w.title} className="p-8 rounded-2xl border border-white/10" style={{ background: 'rgba(255,255,255,0.02)' }}>
-                <w.icon className="w-7 h-7 text-[#D4AF37] mb-5" />
+                <w.icon className="w-7 h-7 text-[#C5A028] mb-5" />
                 <h3 className="text-xl leading-snug mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{w.title}</h3>
                 <p className="text-sm leading-relaxed text-white/70">{w.body}</p>
               </div>
@@ -306,12 +307,12 @@ export default function CorporateEventsPage() {
                 style={pkg.flagship ? { background: '#0F0F0F' } : undefined}
               >
                 {pkg.flagship && (
-                  <span className="absolute -top-3 left-7 text-[10px] tracking-[0.25em] uppercase px-3 py-1 rounded-full bg-[#D4AF37] text-[#0F0F0F] font-semibold">
+                  <span className="absolute -top-3 left-7 text-[10px] tracking-[0.25em] uppercase px-3 py-1 rounded-full bg-[#C5A028] text-[#0F0F0F] font-semibold">
                     Flagship
                   </span>
                 )}
                 <h3 className={`text-xl mb-2 leading-snug ${pkg.flagship ? 'text-white' : ''}`} style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.name}</h3>
-                <p className={`text-lg font-medium mb-1 ${pkg.flagship ? 'text-[#D4AF37]' : ''}`} style={!pkg.flagship ? { color: '#0F0F0F' } : undefined}>{pkg.price}</p>
+                <p className={`text-lg font-medium mb-1 ${pkg.flagship ? 'text-[#C5A028]' : ''}`} style={!pkg.flagship ? { color: '#0F0F0F' } : undefined}>{pkg.price}</p>
                 <p className={`text-xs uppercase tracking-[0.2em] mb-5 ${pkg.flagship ? 'text-white/60' : ''}`} style={!pkg.flagship ? { color: '#8A8580' } : undefined}>{pkg.min}</p>
                 <p className={`text-xs mb-5 leading-relaxed ${pkg.flagship ? 'text-white/70' : ''}`} style={!pkg.flagship ? { color: '#4A4745' } : undefined}>
                   <span className={`font-semibold tracking-[0.2em] uppercase mr-2 ${pkg.flagship ? 'text-white' : ''}`} style={!pkg.flagship ? { color: '#0F0F0F' } : undefined}>Best for</span>
@@ -320,7 +321,7 @@ export default function CorporateEventsPage() {
                 <ul className="space-y-2 mb-7">
                   {pkg.includes.map((f) => (
                     <li key={f} className={`flex items-start gap-2 text-sm ${pkg.flagship ? 'text-white/85' : ''}`} style={!pkg.flagship ? { color: '#1A1A1A' } : undefined}>
-                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${pkg.flagship ? 'text-[#D4AF37]' : 'text-[#2C5F7C]'}`} />
+                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${pkg.flagship ? 'text-[#C5A028]' : 'text-[#2C5F7C]'}`} />
                       <span>{f}</span>
                     </li>
                   ))}
@@ -329,7 +330,7 @@ export default function CorporateEventsPage() {
                   href={`${WA_BASE}${encodeURIComponent('Hi myCHEF — interested in the ' + pkg.name + ' for a corporate event in Bali. Could you send a proposal?')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`block text-center py-3 rounded-xl text-xs font-semibold tracking-[0.25em] uppercase transition-all hover:scale-[1.02] ${pkg.flagship ? 'bg-[#D4AF37] text-[#0F0F0F]' : 'bg-[#0F0F0F] text-white'}`}
+                  className={`block text-center py-3 rounded-xl text-xs font-semibold tracking-[0.25em] uppercase transition-all hover:scale-[1.02] ${pkg.flagship ? 'bg-[#C5A028] text-[#0F0F0F]' : 'bg-[#0F0F0F] text-white'}`}
                 >
                   Get a Proposal
                 </a>
@@ -343,7 +344,7 @@ export default function CorporateEventsPage() {
       <section className="py-24 md:py-32 px-6" style={{ background: '#0F0F0F' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-12">
-            <p className="text-[#D4AF37] text-sm tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Gallery</p>
+            <p className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Gallery</p>
             <h2 className="text-4xl md:text-5xl leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>
               How corporate events actually look.
             </h2>
@@ -394,11 +395,11 @@ export default function CorporateEventsPage() {
       {/* CTA */}
       <section className="py-24 md:py-32 px-6 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
         <div className="absolute inset-0 opacity-30">
-          <img src="/generated/corp-gala.jpg" alt="" aria-hidden className="w-full h-full object-cover" />
+          <img src="/generated/corp-gala.webp" alt="" aria-hidden className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <Sparkles className="w-7 h-7 text-[#D4AF37] mx-auto mb-5" />
+          <Sparkles className="w-7 h-7 text-[#C5A028] mx-auto mb-5" />
           <h2 className="text-4xl md:text-6xl leading-[1.05] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Let&rsquo;s build your next event properly.
           </h2>
@@ -416,7 +417,7 @@ export default function CorporateEventsPage() {
             </a>
             <a
               href="/quote"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#D4AF37] text-[#0F0F0F] text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#E8C84B] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-[#0F0F0F] text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <Building2 className="w-4 h-4" /> Get Proposal
             </a>

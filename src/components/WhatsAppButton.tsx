@@ -60,7 +60,7 @@ export default function WhatsAppButton() {
                 {contact.role} — Response within the hour
               </p>
             </div>
-            <button onClick={() => setOpen(false)} className="p-1 rounded-full hover:bg-black/5">
+            <button type="button" onClick={() => setOpen(false)} aria-label="Close chat" className="p-1 rounded-full hover:bg-black/5">
               <X className="w-4 h-4" style={{ color: 'var(--u-text-muted)' }} />
             </button>
           </div>

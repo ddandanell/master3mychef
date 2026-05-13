@@ -3,7 +3,7 @@ import { Check, Utensils, Star, MessageCircle, Phone, ShoppingBag, Sparkles, Che
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -69,12 +69,20 @@ export default function SolPage() {
         title="Bali Villa Catering | Private Chef in Your Villa — Daily Dining"
         description="Bali villa catering with a private chef in your kitchen for the length of your stay — daily breakfast, lunch, and dinner. Groceries at cost. From IDR 600,000 per hour."
         canonical="https://mychef.id/villa-chef"
-        ogImage="https://mychef.id/generated/catering-hero.jpg"
+        ogImage="https://mychef.id/generated/catering-hero.webp"
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Villa Chef', 'https://mychef.id/villa-chef')]}
       />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/catering-hero.jpg" alt="Villa chef plating a family-style brunch at a Bali villa, golden morning light" className="w-full h-full object-cover" />
+          <img
+            src="/generated/catering-hero.webp"
+            alt="Villa chef plating a family-style brunch at a Bali villa, golden morning light"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -195,7 +203,15 @@ export default function SolPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-              <img src="/generated/sol-chef-portrait.jpg" alt="Chef Daniel" className="w-full h-full object-cover" />
+              <img
+                src="/generated/sol-chef-portrait.webp"
+                alt="Chef Daniel"
+                width={800}
+                height={1000}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div>
               <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Your Chef</p>
@@ -231,7 +247,15 @@ export default function SolPage() {
               { slug: 'sol-bbq', alt: 'Poolside BBQ catering in a private Bali villa' },
             ].map((img) => (
               <div key={img.slug} className="aspect-square rounded-xl overflow-hidden">
-                <img src={`/generated/${img.slug}.jpg`} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img
+                  src={`/generated/${img.slug}.webp`}
+                  alt={img.alt}
+                  width={600}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
               </div>
             ))}
           </div>

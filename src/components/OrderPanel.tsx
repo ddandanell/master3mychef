@@ -162,7 +162,7 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
                 <ChevronLeft className="w-5 h-5" />
               </button>
             )}
-            <p className="text-[11px] tracking-[0.25em] uppercase text-[#D4AF37]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <p className="text-xs tracking-[0.25em] uppercase text-[#C5A028]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               {stage === 'submitted' ? 'Confirmed' : `Step ${step + 1} of 5`}
             </p>
           </div>
@@ -224,7 +224,7 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
               {[0, 1, 2, 3, 4].map((i) => (
                 <span
                   key={i}
-                  className={`h-[2px] flex-1 rounded-full transition-colors ${i <= step ? 'bg-[#D4AF37]' : 'bg-white/10'}`}
+                  className={`h-[2px] flex-1 rounded-full transition-colors ${i <= step ? 'bg-[#C5A028]' : 'bg-white/10'}`}
                 />
               ))}
             </div>
@@ -233,7 +233,7 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
                 type="button"
                 onClick={() => canAdvance && setStep((s) => Math.min(4, s + 1))}
                 disabled={!canAdvance}
-                className={`text-xs tracking-[0.2em] uppercase font-semibold px-6 py-3 rounded-full transition-colors ${canAdvance ? 'bg-[#D4AF37] text-black hover:bg-[#E8C84B]' : 'bg-white/10 text-white/40 cursor-not-allowed'}`}
+                className={`text-xs tracking-[0.2em] uppercase font-semibold px-6 py-3 rounded-full transition-colors ${canAdvance ? 'bg-[#C5A028] text-black hover:bg-[#D4B43A]' : 'bg-white/10 text-white/40 cursor-not-allowed'}`}
               >
                 Continue
               </button>
@@ -243,7 +243,7 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleSubmit}
-                className="text-xs tracking-[0.2em] uppercase font-semibold px-6 py-3 rounded-full bg-[#D4AF37] text-black hover:bg-[#E8C84B] transition-colors"
+                className="text-xs tracking-[0.2em] uppercase font-semibold px-6 py-3 rounded-full bg-[#C5A028] text-black hover:bg-[#D4B43A] transition-colors"
               >
                 Request Private Dinner
               </a>
@@ -260,7 +260,7 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
 function Heading({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
   return (
     <div className="mb-8">
-      <p className="text-[10px] tracking-[0.3em] uppercase text-[#D4AF37] mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+      <p className="text-xs tracking-[0.3em] uppercase text-[#C5A028] mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
         {eyebrow}
       </p>
       <h2 className="text-3xl md:text-4xl leading-tight mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{title}</h2>
@@ -377,7 +377,7 @@ function Step5Notes({ form, update }: { form: BookingForm; update: <K extends ke
 function SubmittedView({ waLink, onClose }: { waLink: string; onClose: () => void }) {
   return (
     <div className="h-full flex flex-col items-center justify-center text-center">
-      <p className="text-[10px] tracking-[0.3em] uppercase text-[#D4AF37] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+      <p className="text-xs tracking-[0.3em] uppercase text-[#C5A028] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
         Request received
       </p>
       <h2 className="text-3xl md:text-4xl leading-tight mb-4 max-w-[420px]" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -419,7 +419,7 @@ function DarkInput({ value, onChange, placeholder, type = 'text', className = ''
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
       min={min}
-      className={`w-full bg-transparent border border-white/15 rounded-lg px-4 py-3 text-sm placeholder:text-white/30 focus:border-[#D4AF37] focus:outline-none ${className}`}
+      className={`w-full bg-transparent border border-white/15 rounded-lg px-4 py-3 text-sm placeholder:text-white/50 focus:border-[#C5A028] ${className}`}
     />
   )
 }
@@ -431,7 +431,7 @@ function DarkTextarea({ value, onChange, placeholder, rows = 3, className = '' }
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
       rows={rows}
-      className={`w-full bg-transparent border border-white/15 rounded-lg px-4 py-3 text-sm placeholder:text-white/30 focus:border-[#D4AF37] focus:outline-none resize-none ${className}`}
+      className={`w-full bg-transparent border border-white/15 rounded-lg px-4 py-3 text-sm placeholder:text-white/50 focus:border-[#C5A028] resize-none ${className}`}
     />
   )
 }
@@ -441,7 +441,7 @@ function ChipButton({ children, active, onClick }: { children: React.ReactNode; 
     <button
       type="button"
       onClick={onClick}
-      className={`text-sm px-3 py-2.5 rounded-lg border transition-colors ${active ? 'border-[#D4AF37] bg-[#D4AF37]/10 text-white' : 'border-white/15 text-white/70 hover:border-white/30'}`}
+      className={`text-sm px-3 py-2.5 rounded-lg border transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10 text-white' : 'border-white/15 text-white/70 hover:border-white/30'}`}
     >
       {children}
     </button>
@@ -453,10 +453,10 @@ function RadioCard({ children, active, onClick }: { children: React.ReactNode; a
     <button
       type="button"
       onClick={onClick}
-      className={`w-full text-left px-4 py-3.5 rounded-lg border flex items-center gap-3 transition-colors ${active ? 'border-[#D4AF37] bg-[#D4AF37]/10' : 'border-white/15 hover:border-white/30'}`}
+      className={`w-full text-left px-4 py-3.5 rounded-lg border flex items-center gap-3 transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10' : 'border-white/15 hover:border-white/30'}`}
     >
-      <span className={`w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${active ? 'border-[#D4AF37]' : 'border-white/30'}`}>
-        {active && <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />}
+      <span className={`w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${active ? 'border-[#C5A028]' : 'border-white/30'}`}>
+        {active && <span className="w-1.5 h-1.5 rounded-full bg-[#C5A028]" />}
       </span>
       <span className="text-sm">{children}</span>
     </button>
@@ -468,9 +468,9 @@ function CheckCard({ children, active, onClick }: { children: React.ReactNode; a
     <button
       type="button"
       onClick={onClick}
-      className={`w-full text-left px-4 py-3 rounded-lg border flex items-center gap-3 transition-colors ${active ? 'border-[#D4AF37] bg-[#D4AF37]/10' : 'border-white/15 hover:border-white/30'}`}
+      className={`w-full text-left px-4 py-3 rounded-lg border flex items-center gap-3 transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10' : 'border-white/15 hover:border-white/30'}`}
     >
-      <span className={`w-4 h-4 rounded border-2 flex-shrink-0 flex items-center justify-center ${active ? 'border-[#D4AF37] bg-[#D4AF37]' : 'border-white/30'}`}>
+      <span className={`w-4 h-4 rounded border-2 flex-shrink-0 flex items-center justify-center ${active ? 'border-[#C5A028] bg-[#C5A028]' : 'border-white/30'}`}>
         {active && <Check className="w-3 h-3 text-black" strokeWidth={3} />}
       </span>
       <span className="text-sm">{children}</span>

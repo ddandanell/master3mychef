@@ -7,6 +7,7 @@
     "dev": "vite",
     "prebuild": "npx tsx scripts/generate-sitemap.ts && npx tsx scripts/generate-redirects.ts",
     "build": "tsc -b && vite build",
+    "postbuild": "node scripts/prerender.mjs",
     "sitemap": "npx tsx scripts/generate-sitemap.ts",
     "redirects": "npx tsx scripts/generate-redirects.ts",
     "lint": "eslint .",

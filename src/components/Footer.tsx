@@ -39,7 +39,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-              my<span className="text-[#D4AF37]">CHEF</span>
+              my<span className="text-[#C5A028]">CHEF</span>
             </h3>
             <p className="text-sm text-white/55 max-w-xs">
               Private chef, villa catering, and full-service events across Bali. Same-day WhatsApp confirmation.
@@ -56,7 +56,7 @@ export default function Footer() {
             >
               <MessageCircle className="w-3.5 h-3.5" /> +62 822-3756-5997
             </a>
-            <a href="mailto:indonesia@mychef.id" className="text-white/55 hover:text-[#D4AF37] transition-colors">
+            <a href="mailto:indonesia@mychef.id" className="text-white/55 hover:text-[#C5A028] transition-colors">
               indonesia@mychef.id
             </a>
           </div>
@@ -65,7 +65,7 @@ export default function Footer() {
         {/* Discovery row — cities, menus, Bali hub. Routes PageRank into the geo silo. */}
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 py-5 border-t border-white/10 text-xs text-white/60">
           {FOOTER_DISCOVERY.map((l) => (
-            <Link key={l.to} to={l.to} className="hover:text-[#D4AF37] transition-colors uppercase tracking-[0.15em]">
+            <Link key={l.to} to={l.to} className="hover:text-[#C5A028] transition-colors uppercase tracking-[0.15em]">
               {l.label}
             </Link>
           ))}
@@ -80,14 +80,14 @@ export default function Footer() {
                 href={l.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#D4AF37] transition-colors inline-flex items-center gap-1.5"
+                className="hover:text-[#C5A028] transition-colors inline-flex items-center gap-1.5"
               >
                 {l.label === 'Instagram' && <Instagram className="w-3.5 h-3.5" />}
                 {l.label === 'WhatsApp' && <MessageCircle className="w-3.5 h-3.5" />}
                 {l.label}
               </a>
             ) : (
-              <Link key={l.label} to={l.to!} className="hover:text-[#D4AF37] transition-colors">
+              <Link key={l.label} to={l.to!} className="hover:text-[#C5A028] transition-colors">
                 {l.label}
               </Link>
             ),

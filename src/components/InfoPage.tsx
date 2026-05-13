@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check } from 'lucide-react'
-import SeoHead from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
 
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'
@@ -23,7 +23,7 @@ export default function InfoPage({ title, description, slug, highlights }: InfoP
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${title} | myCHEF`} description={description} canonical={canonical} />
+      <SeoHead title={`${title} | myCHEF`} description={description} canonical={canonical} jsonLd={[localBusinessSchema, breadcrumbSchema(title, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[800px] mx-auto">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">myCHEF</p>
@@ -34,7 +34,7 @@ export default function InfoPage({ title, description, slug, highlights }: InfoP
           <ul className="space-y-3 mb-10">
             {highlights.map((h) => (
               <li key={h} className="flex items-start gap-2 text-[#4A4745]">
-                <Check className="w-4 h-4 text-[#D4AF37] mt-1 flex-shrink-0" /> {h}
+                <Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> {h}
               </li>
             ))}
           </ul>
@@ -44,7 +44,7 @@ export default function InfoPage({ title, description, slug, highlights }: InfoP
           <a href={waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
           </a>
-          <Link to="/quote" className="inline-flex items-center justify-center bg-[#D4AF37] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
+          <Link to="/quote" className="inline-flex items-center justify-center bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
             Get a Quote
           </Link>
         </div>

@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check, Utensils, Flame, Sparkles, Building2 } from 'lucide-react'
-import SeoHead from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
 import { AREAS, MICRO_AREAS } from '@/data/sitemap'
 import { TOP_CITIES } from '@/data/topCities'
 
@@ -30,19 +30,18 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
   const canonical = `${SITE}/${slug}`
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'd like a private chef in ${entry.name}, Bali.`)}`
 
-  const jsonLd = {
+  const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType: 'Private Chef',
     areaServed: { '@type': 'Place', name: `${entry.name}, Bali` },
-    provider: {
-      '@type': 'LocalBusiness',
-      '@id': `${SITE}/#business`,
-      name: 'myCHEF Indonesia',
-      telephone: '+62-822-3756-5997',
-      url: SITE,
-    },
+    provider: { '@id': `${SITE}/#business` },
     url: canonical,
+  }
+
+  const localBusiness = {
+    ...localBusinessSchema,
+    areaServed: { '@type': 'Place', name: `${entry.name}, Bali` },
   }
 
   return (
@@ -52,8 +51,8 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
         description={description}
         canonical={canonical}
         ogImage={top ? `${SITE}${top.hero}` : undefined}
+        jsonLd={[localBusiness, serviceSchema, breadcrumbSchema(entry.name, canonical)]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Hero — full-bleed image for top cities, simple eyebrow hero for long-tail areas */}
       {top ? (
@@ -61,6 +60,8 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
           <img
             src={top.hero}
             alt={`Luxury villa in ${entry.name}, Bali, with private dining at golden hour`}
+            width={1920}
+            height={1080}
             className="absolute inset-0 w-full h-full object-cover"
             fetchPriority="high"
           />
@@ -69,7 +70,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
             style={{ background: 'linear-gradient(180deg, rgba(5,5,5,0.30) 0%, rgba(5,5,5,0.15) 35%, rgba(5,5,5,0.85) 100%)' }}
           />
           <div className="relative z-10 px-8 pb-12 md:pb-20 pt-24 md:pt-32 max-w-[1100px] mx-auto w-full text-white">
-            <p className="font-cormorant text-[#D4AF37] text-sm uppercase tracking-[4px] mb-4">Private chef</p>
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Private chef</p>
             <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-5 max-w-[820px]">{title}</h1>
             <p className="text-base md:text-lg text-white/85 max-w-[640px] mb-3">{top.blurb}</p>
             <p className="text-sm text-white/55 italic mb-8">{top.signature}</p>
@@ -85,7 +86,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
               </a>
               <Link
                 to="/quote"
-                className="inline-flex items-center justify-center bg-[#D4AF37] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#E8C84B] transition-all"
+                className="inline-flex items-center justify-center bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
               >
                 Get a Quote
               </Link>
@@ -111,7 +112,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
             </a>
             <Link
               to="/quote"
-              className="inline-flex items-center justify-center bg-[#D4AF37] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#E8C84B] transition-all"
+              className="inline-flex items-center justify-center bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               Get a Quote
             </Link>
@@ -153,12 +154,12 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
 
               {/* Fine Dining */}
               <div className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col">
-                <Flame className="w-6 h-6 text-[#D4AF37] mb-3" />
+                <Flame className="w-6 h-6 text-[#C5A028] mb-3" />
                 <h3 className="font-playfair text-2xl mb-3">Fine Dining in {entry.name}</h3>
                 <p className="text-sm text-[#4A4745] mb-5 flex-grow">
                   Two curated Italian and Mediterranean tasting experiences in your villa. White-clad team, sommelier pairing, open-flame cooking — Michelin-trained execution.
                 </p>
-                <Link to="/fine-dining" className="text-xs uppercase tracking-[2px] font-semibold text-[#D4AF37] hover:text-[#1A1A1A]">
+                <Link to="/fine-dining" className="text-xs uppercase tracking-[2px] font-semibold text-[#8B6F1A] hover:text-[#1A1A1A]">
                   Explore Fine Dining →
                 </Link>
               </div>
@@ -174,7 +175,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
             <h2 className="font-playfair text-3xl mb-4">What we cook in {entry.name}</h2>
             <ul className="space-y-3 text-[#4A4745]">
               {['Mediterranean tasting menus', 'Traditional Balinese cuisine', 'Modern Asian fusion', 'Plant-based and vegan menus', 'Halal-certified menus', 'Dietary customization at no extra cost'].map((it) => (
-                <li key={it} className="flex items-start gap-2"><Check className="w-4 h-4 text-[#D4AF37] mt-1 flex-shrink-0" /> {it}</li>
+                <li key={it} className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> {it}</li>
               ))}
             </ul>
           </div>
@@ -182,7 +183,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
             <h2 className="font-playfair text-3xl mb-4">What is included</h2>
             <ul className="space-y-3 text-[#4A4745]">
               {['Private chef in your villa', 'Fresh-that-morning groceries (billed at cost)', 'Table service and presentation', 'Full kitchen cleanup', 'Wine pairing on request', 'Same-day WhatsApp confirmation'].map((it) => (
-                <li key={it} className="flex items-start gap-2"><Check className="w-4 h-4 text-[#D4AF37] mt-1 flex-shrink-0" /> {it}</li>
+                <li key={it} className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> {it}</li>
               ))}
             </ul>
           </div>
@@ -221,14 +222,14 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
               <Link
                 key={c.slug}
                 to={`/${c.slug}`}
-                className="text-sm font-medium bg-white border border-[#1A1A1A]/10 px-4 py-3 rounded-lg hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all text-center"
+                className="text-sm font-medium bg-white border border-[#1A1A1A]/10 px-4 py-3 rounded-lg hover:border-[#C5A028] hover:text-[#C5A028] transition-all text-center"
               >
                 {c.name}
               </Link>
             ))}
           </div>
           <p className="text-xs text-[#8A8785] mt-6">
-            See <Link to="/guide/private-chef-bali" className="underline hover:text-[#D4AF37]">our full Bali coverage map</Link>.
+            See <Link to="/guide/private-chef-bali" className="underline hover:text-[#C5A028]">our full Bali coverage map</Link>.
           </p>
         </div>
       </section>

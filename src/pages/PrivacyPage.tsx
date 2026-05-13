@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Mail } from 'lucide-react'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 
 const SECTIONS = [
   {
@@ -60,14 +60,15 @@ export default function PrivacyPage() {
         title="Privacy Policy | myCHEF — Private Chef Bali"
         description="How myCHEF collects, uses, and protects your personal information when you book private chef, villa catering, and event services in Bali, Indonesia."
         canonical="https://mychef.id/privacy-policy"
+        jsonLd={[breadcrumbSchema('Privacy Policy', 'https://mychef.id/privacy-policy')]}
       />
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-[800px] mx-auto">
-          <Link to="/" className="inline-flex items-center gap-2 text-[#D4AF37] text-sm tracking-wider uppercase mb-8 hover:text-[#E8C84B] transition-colors" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <Link to="/" className="inline-flex items-center gap-2 text-[#C5A028] text-sm tracking-wider uppercase mb-8 hover:text-[#D4B43A] transition-colors" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
-          <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
           <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Privacy Policy</h1>
           <p className="text-white/40 text-sm">Last updated: January 2024</p>
         </div>
@@ -89,7 +90,7 @@ export default function PrivacyPage() {
 
           {/* Contact CTA */}
           <div className="mt-16 p-8 rounded-2xl border border-white/10 text-center">
-            <p className="text-[#D4AF37] text-sm tracking-widest uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions?</p>
+            <p className="text-[#C5A028] text-sm tracking-widest uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions?</p>
             <p className="text-white/60 text-sm mb-6">If you have any questions about this Privacy Policy, please reach out.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white text-sm rounded-full hover:bg-[#1ea855] transition-all">

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowRight, PartyPopper, Heart, Cake, Users, Briefcase, Gem, ChefHat, CalendarCheck } from 'lucide-react'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
 import { SERVICES } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -18,18 +18,33 @@ const ICONS: Record<string, React.FC<{ className?: string; style?: React.CSSProp
 }
 
 const ACCENTS = [
-  '#D4AF37',
+  '#C5A028',
   '#2C5F7C',
   '#6B8E5A',
-  '#D4AF37',
+  '#C5A028',
   '#2C5F7C',
   '#6B8E5A',
-  '#D4AF37',
+  '#C5A028',
   '#2C5F7C',
 ]
 
 export default function ServicesPage() {
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to know more about your services.')}`
+
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: SERVICES.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Service',
+        name: s.name,
+        description: s.description,
+        url: `${SITE}/services/${s.slug}`,
+      },
+    })),
+  }
 
   return (
     <main className="min-h-screen bg-[#050505] text-white">
@@ -37,14 +52,17 @@ export default function ServicesPage() {
         title="Private Chef Services in Bali — Villa Parties, Weddings, Corporate | myCHEF"
         description="Eight ways we bring extraordinary food to your villa. Villa parties, romantic dinners, birthdays, family reunions, corporate events, weddings, cooking classes, and weekly meal prep."
         canonical={`${SITE}/services`}
-        ogImage={`${SITE}/generated/bali-hub-hero.jpg`}
+        ogImage={`${SITE}/generated/bali-hub-hero.webp`}
+        jsonLd={[localBusinessSchema, itemListSchema, breadcrumbSchema('Services', `${SITE}/services`)]}
       />
 
       {/* ── HERO ── */}
       <section className="relative min-h-[75vh] flex items-end overflow-hidden">
         <img
-          src="/generated/bali-hub-hero.jpg"
+          src="/generated/bali-hub-hero.webp"
           alt="Luxury villa dinner overlooking Bali rice terraces at sunset"
+          width={1920}
+          height={1080}
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
         />
@@ -54,7 +72,7 @@ export default function ServicesPage() {
         />
         <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-24 pt-32 max-w-[1280px] mx-auto w-full">
           <p
-            className="text-[#D4AF37] text-xs md:text-sm tracking-[0.35em] uppercase mb-6"
+            className="text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-6"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             What We Do
@@ -73,7 +91,7 @@ export default function ServicesPage() {
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#D4AF37] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#E8C84B] transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#C5A028] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
             >
               <MessageCircle className="w-4 h-4" /> Enquire on WhatsApp
             </a>
@@ -91,7 +109,7 @@ export default function ServicesPage() {
       <section className="px-6 md:px-12 py-24 md:py-32 max-w-[1280px] mx-auto">
         <div className="text-center mb-16 md:mb-20">
           <p
-            className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4"
+            className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Eight Experiences
@@ -124,7 +142,7 @@ export default function ServicesPage() {
                   <Icon className="w-6 h-6" style={{ color: accent }} strokeWidth={1.5} />
                 </div>
                 <h3
-                  className="text-xl mb-3 transition-colors duration-300 group-hover:text-[#D4AF37]"
+                  className="text-xl mb-3 transition-colors duration-300 group-hover:text-[#C5A028]"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {service.name}
@@ -148,7 +166,7 @@ export default function ServicesPage() {
       <section className="px-6 md:px-12 py-24 md:py-32 border-t border-white/[0.08]">
         <div className="max-w-[800px] mx-auto text-center">
           <p
-            className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4"
+            className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Not Sure Which Service?
@@ -166,7 +184,7 @@ export default function ServicesPage() {
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#D4AF37] text-black text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#E8C84B] transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
           >
             <MessageCircle className="w-4 h-4" /> Message Us on WhatsApp
           </a>

@@ -3,7 +3,7 @@ import { Check, Heart, Building2, PartyPopper, Star, MessageCircle, Phone, Spark
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -48,7 +48,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'sunset-pool-party',
     name: 'Sunset Pool Party Experience',
     concept: 'Luxury Bali villa pool party with cocktails, live BBQ, floating snacks, music and sunset atmosphere.',
-    image: '/generated/party-pool.jpg',
+    image: '/generated/party-pool.webp',
     price: 'From IDR 950,000++ / guest',
     min: 'Min. 10 guests',
     bestFor: 'Birthday parties · Friends trips · Villa weekends · Influencer groups · Pre-wedding events',
@@ -59,7 +59,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'white-party-night',
     name: 'White Party Villa Night',
     concept: 'Luxury all-white evening with cocktails, premium dinner service, candles and high-end villa styling.',
-    image: '/generated/party-white.jpg',
+    image: '/generated/party-white.webp',
     price: 'From IDR 1,450,000++ / guest',
     min: 'Min. 12 guests',
     bestFor: 'Luxury birthdays · Fashion groups · Influencer dinners · Networking events',
@@ -70,7 +70,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'taco-tequila-fiesta',
     name: 'Taco & Tequila Fiesta',
     concept: 'Interactive Mexican-inspired villa party with tacos, tequila, margaritas and social food stations.',
-    image: '/generated/party-tacos.jpg',
+    image: '/generated/party-tacos.webp',
     price: 'From IDR 750,000++ / guest',
     min: 'Min. 8 guests',
     includes: ['Taco station', 'Margarita bar', 'Tequila tasting', 'Nachos & dips', 'Mexican dessert setup'],
@@ -80,7 +80,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'mediterranean-sunset-feast',
     name: 'Mediterranean Sunset Feast',
     concept: 'Luxury Mediterranean sharing dinner inspired by beach clubs and European summer nights.',
-    image: '/generated/party-medi.jpg',
+    image: '/generated/party-medi.webp',
     price: 'From IDR 1,250,000++ / guest',
     min: 'Min. 6 guests',
     includes: ['Seafood', 'Handmade pasta', 'Burrata', 'Shared feast setup', 'Dessert', 'Full service'],
@@ -90,7 +90,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'villa-festival-night',
     name: 'Villa Festival Night',
     concept: 'Private mini-festival atmosphere with food stations, cocktails, lounge areas and entertainment.',
-    image: '/generated/party-festival.jpg',
+    image: '/generated/party-festival.webp',
     price: 'From IDR 1,950,000++ / guest',
     min: 'Min. 20 guests',
     includes: ['Multiple food stations', 'Cocktail bars', 'Lounge styling', 'Lighting setup', 'Service team'],
@@ -100,7 +100,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'rooftop-cocktail-session',
     name: 'Rooftop Cocktail Session',
     concept: 'Elegant rooftop-style cocktail evening with canapés, bartenders and sunset social atmosphere.',
-    image: '/generated/party-rooftop.jpg',
+    image: '/generated/party-rooftop.webp',
     price: 'From IDR 850,000++ / guest',
     min: 'Min. 10 guests',
     includes: ['Signature cocktails', 'Canapés', 'Bartender team', 'Ice & garnish station', 'Service staff'],
@@ -110,7 +110,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'luxury-birthday-experience',
     name: 'Luxury Birthday Experience',
     concept: 'Complete birthday setup with food, drinks, styling, cake and atmosphere planning.',
-    image: '/generated/party-birthday.jpg',
+    image: '/generated/party-birthday.webp',
     price: 'From IDR 1,650,000++ / guest',
     min: 'Min. 8 guests',
     includes: ['Custom dinner', 'Birthday cake', 'Styling assistance', 'Waiters', 'Cocktail welcome', 'Cleanup'],
@@ -120,7 +120,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'recovery-brunch-chill',
     name: 'Recovery Brunch & Chill',
     concept: 'Luxury recovery brunch after weddings, birthdays or villa parties.',
-    image: '/generated/party-brunch.jpg',
+    image: '/generated/party-brunch.webp',
     price: 'From IDR 450,000++ / guest',
     min: 'Min. 6 guests',
     includes: ['Healthy breakfast', 'Fresh juices', 'Coffee station', 'Recovery food', 'Fruit platters'],
@@ -130,7 +130,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'bali-bbq-beer-garden',
     name: 'Bali BBQ & Beer Garden',
     concept: 'Relaxed premium beer-and-grill atmosphere inspired by luxury beach clubs.',
-    image: '/generated/party-beer.jpg',
+    image: '/generated/party-beer.webp',
     price: 'From IDR 650,000++ / guest',
     min: 'Min. 10 guests',
     includes: ['BBQ station', 'Beer buckets', 'Sharing platters', 'Side dishes', 'Dessert'],
@@ -140,7 +140,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'ultimate-villa-celebration',
     name: 'Ultimate Villa Celebration',
     concept: 'Full-scale luxury villa event production. The flagship package.',
-    image: '/generated/party-ultimate.jpg',
+    image: '/generated/party-ultimate.webp',
     price: 'From IDR 2,950,000++ / guest',
     min: 'Min. 20 guests',
     includes: ['Full catering', 'Premium cocktails', 'Staffing', 'Styling', 'Event coordination', 'Luxury table setup', 'Music coordination', 'Cleanup'],
@@ -188,6 +188,65 @@ export default function AuraPage() {
   const ref = useRef<HTMLDivElement>(null)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
+  const eventSchemas = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: 'Bali Villa Wedding by myCHEF',
+      description: 'Intimate villa ceremonies to 200-guest garden receptions. Full-service wedding catering, bar, décor, and coordination.',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      eventStatus: 'https://schema.org/EventScheduled',
+      location: {
+        '@type': 'Place',
+        name: 'Luxury Villa in Bali',
+        address: { '@type': 'PostalAddress', addressLocality: 'Bali', addressCountry: 'ID' },
+      },
+      organizer: { '@id': 'https://mychef.id/#business' },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: 'Corporate Event in Bali by myCHEF',
+      description: 'Executive dinners, conference catering, gala nights, and full corporate productions in Bali villas.',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      eventStatus: 'https://schema.org/EventScheduled',
+      location: {
+        '@type': 'Place',
+        name: 'Luxury Villa in Bali',
+        address: { '@type': 'PostalAddress', addressLocality: 'Bali', addressCountry: 'ID' },
+      },
+      organizer: { '@id': 'https://mychef.id/#business' },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: 'Private Celebration in Bali by myCHEF',
+      description: 'Birthdays, anniversaries, reunions, and milestone celebrations with custom themes and menus.',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      eventStatus: 'https://schema.org/EventScheduled',
+      location: {
+        '@type': 'Place',
+        name: 'Luxury Villa in Bali',
+        address: { '@type': 'PostalAddress', addressLocality: 'Bali', addressCountry: 'ID' },
+      },
+      organizer: { '@id': 'https://mychef.id/#business' },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: 'Wellness Retreat Catering in Bali by myCHEF',
+      description: 'Multi-day retreat catering for yoga, wellness, and corporate offsites across Bali.',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      eventStatus: 'https://schema.org/EventScheduled',
+      location: {
+        '@type': 'Place',
+        name: 'Luxury Villa in Bali',
+        address: { '@type': 'PostalAddress', addressLocality: 'Bali', addressCountry: 'ID' },
+      },
+      organizer: { '@id': 'https://mychef.id/#business' },
+    },
+  ]
+
   useEffect(() => {
     const ctx = gsap.context(() => {
 
@@ -205,12 +264,20 @@ export default function AuraPage() {
         title="Bali Party and Event Catering | Weddings, Villas & Corporate | myCHEF"
         description="Bali party and event catering by myCHEF — luxury villa parties, weddings, corporate dinners, retreats, and gala nights. Catering, bar, décor, and staffing handled end-to-end."
         canonical="https://mychef.id/events"
-        ogImage="https://mychef.id/generated/aura-hero-v2.jpg"
+        ogImage="https://mychef.id/generated/aura-hero-v2.webp"
+        jsonLd={[localBusinessSchema, ...eventSchemas, breadcrumbSchema('Events', 'https://mychef.id/events')]}
       />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/aura-hero-v2.jpg" alt="Event setup" className="w-full h-full object-cover" />
+          <img
+            src="/generated/aura-hero-v2.webp"
+            alt="Event setup"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -304,7 +371,7 @@ export default function AuraPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-28">
             {PACKAGES.map((pkg, i) => (
               <article
                 key={pkg.slug}
@@ -315,7 +382,7 @@ export default function AuraPage() {
                   href={`https://wa.me/6282237565997?text=${encodeURIComponent('Hi myCHEF — interested in the ' + pkg.name + ' package. Could you send details?')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative block overflow-hidden rounded-[20px] aspect-[16/10] mb-7 ring-1 ring-black/5 shadow-[0_24px_60px_-30px_rgba(15,15,15,0.4)]"
+                  className="relative block overflow-hidden rounded-[16px] aspect-[16/8] mb-8 ring-1 ring-black/5 shadow-[0_16px_40px_-20px_rgba(15,15,15,0.3)]"
                 >
                   <img
                     src={pkg.image}
@@ -468,7 +535,15 @@ export default function AuraPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <img src="/generated/aura-team.jpg" alt="Events team" className="w-full h-full object-cover" />
+              <img
+                src="/generated/aura-team.webp"
+                alt="Events team"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Your Team</p>
@@ -496,15 +571,23 @@ export default function AuraPage() {
       {/* Gallery */}
       <section className="py-12 px-6" style={{ background: '#F8F7F5' }}>
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { slug: 'aura-wedding', alt: 'Bali villa wedding reception catered by myCHEF' },
               { slug: 'aura-corporate', alt: 'Bali corporate event dining set up in a luxury villa' },
               { slug: 'aura-toast', alt: 'Champagne toast at a private Bali villa party' },
               { slug: 'aura-tablescape', alt: 'Long-table tablescape styled for a Bali villa event' },
             ].map((img) => (
-              <div key={img.slug} className="aspect-square rounded-xl overflow-hidden">
-                <img src={`/generated/${img.slug}.jpg`} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div key={img.slug} className="aspect-[4/3] rounded-xl overflow-hidden">
+                <img
+                  src={`/generated/${img.slug}.webp`}
+                  alt={img.alt}
+                  width={600}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
               </div>
             ))}
           </div>

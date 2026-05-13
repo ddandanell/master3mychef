@@ -373,24 +373,20 @@ export default function LunaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {MENUS.map((menu) => (
               <div key={menu.id} className="luna-reveal rounded-2xl border border-white/10 overflow-hidden">
-                {/* Menu image */}
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean.png' : '/generated/menu-wagyu.png'}
-                    alt={menu.name}
-                    className="w-full h-full object-cover"
-                  />
+                {/* Menu image — 40% smaller */}
+                <div className="p-6 pb-0">
+                  <div className="max-w-[60%] mx-auto aspect-[4/3] overflow-hidden rounded-xl">
+                    <img
+                      src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean.png' : '/generated/menu-wagyu.png'}
+                      alt={menu.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
                 <div className="p-8 md:p-10" style={{ background: 'rgba(255,255,255,0.03)' }}>
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.name}</h3>
-                      <p className="text-sm text-white/50">{menu.duration}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-2xl font-medium text-[#D4AF37]">{menu.price}</p>
-                      <p className="text-xs text-white/40">per person</p>
-                    </div>
+                  <div className="mb-4">
+                    <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.name}</h3>
+                    <p className="text-sm text-white/50">{menu.duration}</p>
                   </div>
                   <p className="text-white/60 leading-relaxed mb-6">{menu.desc}</p>
                   <div className="flex flex-wrap gap-2">
@@ -427,12 +423,21 @@ export default function LunaPage() {
                       </div>
                     ))}
                   </div>
-                  <div className="pt-6 border-t border-white/10">
+                  <div className="pt-6 border-t border-white/10 mb-8">
                     <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Recommended Wine Pairing</p>
                     <div className="space-y-2 text-sm text-white/50">
                       {menu.wine.red && <p><span className="text-white/70">Red:</span> {menu.wine.red}</p>}
                       {menu.wine.white && <p><span className="text-white/70">White:</span> {menu.wine.white}</p>}
                       {menu.wine.sparkling && <p><span className="text-white/70">Sparkling:</span> {menu.wine.sparkling}</p>}
+                    </div>
+                  </div>
+                  {/* Price at bottom */}
+                  <div className="pt-6 border-t border-white/10 flex items-center justify-between">
+                    <div>
+                      <p className="text-xs text-white/40 uppercase tracking-wider" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Per Person</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-3xl font-medium text-[#D4AF37]" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.price}</p>
                     </div>
                   </div>
                 </div>

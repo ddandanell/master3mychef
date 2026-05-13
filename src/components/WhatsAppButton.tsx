@@ -13,25 +13,25 @@ interface Contact {
 const CONTACTS: Record<string, Contact> = {
   luna: {
     name: 'Sofia',
-    number: '6281234567890',
+    number: '6282237565997',
     role: 'Fine Dining Concierge',
     message: 'Hi Sofia, I\'m interested in a fine dining experience at my villa. Can you share current menu options?',
   },
   sol: {
     name: 'Daniel',
-    number: '6281234567891',
+    number: '6282237565997',
     role: 'Villa Chef Coordinator',
     message: 'Hi Daniel, we\'re staying at a villa and would love to explore private chef options.',
   },
   aura: {
     name: 'Olivia',
-    number: '6281234567892',
+    number: '6282237565997',
     role: 'Events Manager',
     message: 'Hi Olivia, I\'m planning an event and would love your help with the details.',
   },
   hub: {
     name: 'myCHEF',
-    number: '6281234567890',
+    number: '6282237565997',
     role: 'General Inquiry',
     message: 'Hi, I\'d like to learn more about myCHEF services.',
   },

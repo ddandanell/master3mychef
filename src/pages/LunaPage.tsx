@@ -318,13 +318,17 @@ export default function LunaPage() {
               >
                 {/* Card with glassmorphism */}
                 <div className="relative p-8 md:p-6 lg:p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm transition-all duration-700 hover:border-[#D4AF37]/20 hover:bg-white/[0.04] hover:shadow-[0_0_60px_-15px_rgba(212,175,55,0.15)]">
-                  {/* Step number — large, faded */}
-                  <span className="absolute top-4 right-4 text-6xl font-light text-white/[0.03] leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {item.step}
-                  </span>
+                  {/* Step number — framed, prominent */}
+                  <div className="absolute -top-4 -left-4 z-10">
+                    <div className="relative w-16 h-16 rounded-2xl border-2 border-white/[0.12] bg-[#0a0a0a] flex items-center justify-center transition-all duration-500 group-hover:border-[#D4AF37]/60 group-hover:shadow-[0_0_24px_-4px_rgba(212,175,55,0.25)] group-hover:scale-110">
+                      <span className="text-2xl font-semibold text-white/80 transition-colors duration-500 group-hover:text-[#D4AF37]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        {item.step}
+                      </span>
+                    </div>
+                  </div>
 
                   {/* Icon — glassmorphism circle with gold glow on hover */}
-                  <div className="relative mb-8">
+                  <div className="relative mb-8 mt-4">
                     <div className="w-16 h-16 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md flex items-center justify-center transition-all duration-500 group-hover:border-[#D4AF37]/30 group-hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.25)] group-hover:scale-110">
                       <item.icon className="w-6 h-6 text-[#D4AF37]/80 transition-all duration-500 group-hover:text-[#D4AF37]" strokeWidth={1} />
                     </div>

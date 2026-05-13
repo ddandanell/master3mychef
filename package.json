@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "npx tsx scripts/generate-sitemap.ts",
+    "prebuild": "npx tsx scripts/generate-sitemap.ts && npx tsx scripts/generate-redirects.ts",
     "build": "tsc -b && vite build",
     "sitemap": "npx tsx scripts/generate-sitemap.ts",
+    "redirects": "npx tsx scripts/generate-redirects.ts",
     "lint": "eslint .",
     "preview": "vite preview"
   },

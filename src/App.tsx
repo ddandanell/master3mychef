@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 
 // Existing brand pages
@@ -22,11 +22,23 @@ import InfoPage from './components/InfoPage'
 import BlogIndexPage from './components/BlogIndexPage'
 
 import { AREAS, MICRO_AREAS, SERVICES, MENUS, LANDING_PAGES, GUIDES, BLOG_POSTS } from './data/sitemap'
+import { REDIRECTS } from './data/redirects'
 
 export default function App() {
   return (
     <Layout>
       <Routes>
+        {/*
+          301 redirects FIRST. The real 301 happens at the edge (vercel.json /
+          public/_redirects). These Navigate routes are the client-side fallback
+          that fires when the host config is skipped (dev mode, in-app navigation)
+          or when a user hits an old internal link. They must be declared above
+          the data-driven routes so they win the match.
+        */}
+        {REDIRECTS.map((r) => (
+          <Route key={r.from} path={r.from} element={<Navigate to={r.to} replace />} />
+        ))}
+
         {/* Brand pages */}
         <Route path="/" element={<HubPage />} />
         <Route path="/fine-dining" element={<LunaPage />} />

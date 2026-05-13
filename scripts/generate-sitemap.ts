@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
 import { SITEMAP, type SitemapEntry } from '../src/data/sitemap'
+import { REDIRECT_MAP } from '../src/data/redirects'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const SITE = 'https://mychef.id'
@@ -38,7 +39,10 @@ function imageXml(entry: SitemapEntry): string {
   return ''
 }
 
-const urls = SITEMAP.map((e) => `
+// Skip URLs that 301 elsewhere — they should not appear as canonical in the sitemap.
+const indexable = SITEMAP.filter((e) => !REDIRECT_MAP[e.path])
+
+const urls = indexable.map((e) => `
   <url>
     <loc>${SITE}${e.path}</loc>
     <lastmod>${today}</lastmod>
@@ -53,4 +57,4 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
 
 const out = join(__dirname, '..', 'public', 'sitemap.xml')
 writeFileSync(out, xml)
-console.log(`Wrote ${SITEMAP.length} URLs to ${out}`)
+console.log(`Wrote ${indexable.length} canonical URLs to ${out} (${SITEMAP.length - indexable.length} redirected and excluded)`)

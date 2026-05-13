@@ -28,6 +28,7 @@ const FOOTER_DISCOVERY: { label: string; to: string }[] = [
   { label: 'All Bali areas', to: '/guide/private-chef-bali' },
   { label: 'Sample menus', to: '/menus' },
   { label: 'Staffing', to: '/staffing' },
+  { label: 'Corporate Events', to: '/corporate-events' },
 ]
 
 export default function Footer() {

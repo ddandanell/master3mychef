@@ -31,7 +31,8 @@ const SUBMENUS: Record<string, { label: string; href: string }[]> = {
     { label: 'Reserve', href: '/villa-chef#book' },
   ],
   '/events': [
-    { label: 'Packages', href: '/events#packages' },
+    { label: 'Party Events', href: '/events#packages' },
+    { label: 'Corporate Events', href: '/corporate-events' },
     { label: 'Event Types', href: '/events#types' },
     { label: 'How It Works', href: '/events#how-it-works' },
     { label: "What's Included", href: '/events#included' },

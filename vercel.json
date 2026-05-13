@@ -1,7 +1,4 @@
 {
-  "rewrites": [
-    { "source": "/:path*", "destination": "/index.html" }
-  ],
   "redirects": [
     {
       "source": "/kuta",
@@ -206,6 +203,11 @@
     {
       "source": "/services/cooking-classes",
       "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/services/corporate-events",
+      "destination": "/corporate-events",
       "permanent": true
     },
     {

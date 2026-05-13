@@ -26,6 +26,7 @@ import StaffingPage from './pages/StaffingPage'
 import ServicesPage from './pages/ServicesPage'
 import PartnerPlatformPage from './pages/PartnerPlatformPage'
 import CertifiedPartnerPage from './pages/CertifiedPartnerPage'
+import CorporateEventsPage from './pages/CorporateEventsPage'
 
 import { AREAS, MICRO_AREAS, SERVICES, MENUS, LANDING_PAGES, GUIDES, BLOG_POSTS } from './data/sitemap'
 import { REDIRECTS } from './data/redirects'
@@ -67,6 +68,8 @@ export default function App() {
         <Route path="/staffing" element={<StaffingPage />} />
         {/* Partner Platform — villa partnership deep-dive */}
         <Route path="/partner-platform" element={<PartnerPlatformPage />} />
+        {/* Corporate Events Bali — dedicated B2B landing page */}
+        <Route path="/corporate-events" element={<CorporateEventsPage />} />
         {/* Public certified-partner verification pages (templated by slug) */}
         <Route path="/certified/:slug" element={<CertifiedPartnerPage />} />
 

@@ -72,6 +72,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/services/romantic-dinners', to: '/fine-dining', reason: 'Romantic dinners = fine dining offering.' },
   { from: '/services/family-reunions', to: '/villa-chef', reason: 'Family reunions = villa chef multi-day.' },
   { from: '/services/cooking-classes', to: '/contact', reason: 'Niche request — drive to contact.' },
+  { from: '/services/corporate-events', to: '/corporate-events', reason: 'Consolidate corporate SEO equity into the dedicated /corporate-events landing page.' },
   { from: '/menus/asian-fusion', to: '/menus', reason: 'Consolidate menu pages.' },
   { from: '/menus/vegan', to: '/menus', reason: 'Consolidate menu pages.' },
   { from: '/menus/modern-european', to: '/menus', reason: 'Consolidate menu pages.' },

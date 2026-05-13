@@ -88,13 +88,13 @@ export default function PartnersPage() {
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/partners-hero.jpg" alt="Villa partnerships" className="w-full h-full object-cover" style={{ opacity: 0.35 }} />
+          <img src="/generated/hub-bali.jpg" alt="Villa partnerships" className="w-full h-full object-cover" style={{ opacity: 0.35 }} />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.75) 50%, transparent 100%)' }} />
         </div>
         <div className="relative z-10 px-8 md:px-16 lg:px-20 py-24 max-w-[650px]">
           <p className="part-hero-label font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Partners</p>
           <h1 className="part-hero-title font-playfair font-bold text-[#1A1A1A] text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-4">
-            Trusted by Bali&apos;s<br />Finest Properties
+            Villa Chef<br />Partnership Programme
           </h1>
           <p className="part-hero-sub font-inter text-[#4A4745] text-base mb-8 max-w-[480px]">
             Luxury villas, boutique hotels, and wellness retreats across Bali partner with myCHEF 
@@ -172,7 +172,7 @@ export default function PartnersPage() {
 
       {/* Villa Aerial */}
       <section className="part-reveal relative overflow-hidden">
-        <img src="/villa-aerial.jpg" alt="Bali villas" className="w-full aspect-[21/9] object-cover" loading="lazy" />
+        <img src="/generated/city-seminyak.jpg" alt="Bali villas" className="w-full aspect-[21/9] object-cover" loading="lazy" />
         <div className="absolute inset-0 flex items-center justify-center" style={{ background: 'rgba(26,26,26,0.4)' }}>
           <div className="text-center px-6">
             <p className="font-playfair font-bold text-white text-3xl md:text-5xl mb-4">500+ Villas Served</p>

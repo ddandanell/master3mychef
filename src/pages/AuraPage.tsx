@@ -25,9 +25,9 @@ const WHATS_INCLUDED = [
   'Setup, service, and full breakdown',
 ]
 
-const EVENT_TYPES = [
+const EVENT_TYPES: Array<{ icon: typeof Heart; title: string; desc: string; href?: string; cta?: string }> = [
   { icon: Heart, title: 'Weddings', desc: 'Intimate villa ceremonies to 200-guest garden receptions. Every detail handled.' },
-  { icon: Building2, title: 'Corporate Retreats', desc: 'Team dinners, gala nights, and multi-day hospitality programs.' },
+  { icon: Building2, title: 'Corporate Events', desc: 'Executive dinners, conference catering, gala nights, and full corporate productions.', href: '/corporate-events', cta: 'See corporate playbook' },
   { icon: PartyPopper, title: 'Celebrations', desc: 'Birthdays, anniversaries, reunions. Custom themes and menus.' },
 ]
 
@@ -269,12 +269,21 @@ export default function AuraPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {EVENT_TYPES.map((item) => (
-              <div key={item.title} className="aura-reveal text-center p-8 rounded-2xl border border-[#E5E3E0] bg-white hover:border-[#2C5F7C] transition-all hover:shadow-lg">
+              <div key={item.title} className="aura-reveal text-center p-8 rounded-2xl border border-[#E5E3E0] bg-white hover:border-[#2C5F7C] transition-all hover:shadow-lg flex flex-col">
                 <div className="w-14 h-14 rounded-full bg-[#2C5F7C]/10 flex items-center justify-center mx-auto mb-6">
                   <item.icon className="w-6 h-6 text-[#2C5F7C]" />
                 </div>
                 <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#4A4745' }}>{item.desc}</p>
+                <p className="text-sm leading-relaxed flex-grow" style={{ color: '#4A4745' }}>{item.desc}</p>
+                {item.href && item.cta && (
+                  <a
+                    href={item.href}
+                    className="inline-flex items-center gap-2 mt-6 text-xs font-semibold tracking-[0.25em] uppercase self-center text-[#2C5F7C] hover:text-[#0F0F0F] transition-colors"
+                  >
+                    {item.cta}
+                    <ChevronRight className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </div>
             ))}
           </div>

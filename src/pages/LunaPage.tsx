@@ -173,7 +173,7 @@ export default function LunaPage() {
       </section>
 
       {/* The Four — Chapter Three */}
-      <section className="py-24 md:py-32 px-6" style={{ background: '#080808' }}>
+      <section id="the-four" className="py-24 md:py-32 px-6" style={{ background: '#080808' }}>
         <div className="max-w-[1280px] mx-auto">
           {/* Header */}
           <div className="text-center mb-16 md:mb-20">
@@ -284,7 +284,7 @@ export default function LunaPage() {
       </section>
 
       {/* How It Works — Cinematic Luxury */}
-      <section className="relative py-32 md:py-40 px-6 overflow-hidden">
+      <section id="how-it-works" className="relative py-32 md:py-40 px-6 overflow-hidden">
         {/* Cinematic background layers */}
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 30% 20%, rgba(212,175,55,0.08) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(139,69,19,0.06) 0%, transparent 50%), #080808' }} />
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E")' }} />
@@ -482,7 +482,7 @@ export default function LunaPage() {
       </section>
 
       {/* Experience Gallery */}
-      <section className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
+      <section id="captured" className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Evening</p>

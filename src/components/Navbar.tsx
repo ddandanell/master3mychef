@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat, ArrowLeft } from 'lucide-react'
+import { Menu, X, ChefHat, ChevronDown } from 'lucide-react'
 
 const NAV_LINKS = [
   { label: 'Fine Dining', path: '/fine-dining', accent: '#D4AF37', dept: 'Fine Dining' },
@@ -9,11 +9,20 @@ const NAV_LINKS = [
   { label: 'Contact', path: '/contact', accent: '#D4AF37', dept: null },
 ]
 
-const DEPARTMENT_PAGES: Record<string, { name: string; accent: string; backTo: string }> = {
-  '/fine-dining': { name: 'Fine Dining', accent: '#D4AF37', backTo: '/' },
-  '/villa-chef': { name: 'Catering', accent: '#6B8E5A', backTo: '/' },
-  '/events': { name: 'Events', accent: '#2C5F7C', backTo: '/' },
+const DEPARTMENT_PAGES: Record<string, { name: string; accent: string }> = {
+  '/fine-dining': { name: 'Fine Dining', accent: '#D4AF37' },
+  '/villa-chef': { name: 'Catering', accent: '#6B8E5A' },
+  '/events': { name: 'Events', accent: '#2C5F7C' },
 }
+
+// Fine Dining submenu — anchor links to sections on LunaPage
+const FINE_DINING_SUBMENU = [
+  { label: 'Menu', href: '/fine-dining#menus' },
+  { label: 'Captured', href: '/fine-dining#captured' },
+  { label: 'The Process', href: '/fine-dining#the-four' },
+  { label: 'How It Works', href: '/fine-dining#how-it-works' },
+  { label: 'Reserve Evening', href: '/fine-dining#book' },
+]
 
 // Pages where the scrolled navbar should have a dark background
 const DARK_NAV_PAGES = ['/fine-dining', '/privacy', '/terms', '/cancellation']
@@ -21,6 +30,9 @@ const DARK_NAV_PAGES = ['/fine-dining', '/privacy', '/terms', '/cancellation']
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [fdOpen, setFdOpen] = useState(false)
+  const [mobileFdOpen, setMobileFdOpen] = useState(false)
+  const fdTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const location = useLocation()
 
   useEffect(() => {
@@ -31,6 +43,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setMobileOpen(false)
+    setMobileFdOpen(false)
   }, [location.pathname])
 
   useEffect(() => {
@@ -46,6 +59,15 @@ export default function Navbar() {
   const useLightText = !scrolled || hasDarkNavBg
 
   const goldClass = 'text-[#D4AF37]'
+
+  const handleFdEnter = () => {
+    if (fdTimeoutRef.current) clearTimeout(fdTimeoutRef.current)
+    setFdOpen(true)
+  }
+
+  const handleFdLeave = () => {
+    fdTimeoutRef.current = setTimeout(() => setFdOpen(false), 150)
+  }
 
   return (
     <>
@@ -65,100 +87,82 @@ export default function Navbar() {
         }
       >
         <div className="max-w-[1280px] mx-auto px-6 flex items-center justify-between">
-          {/* Logo with department indicator */}
-          <div className="flex items-center gap-4">
-            <Link
-              to="/"
-              className={`flex items-center gap-2.5 transition-colors ${useLightText ? 'text-white' : 'text-[#1A1A1A]'}`}
-            >
-              <ChefHat className="w-7 h-7 text-[#D4AF37]" strokeWidth={1.5} />
-              <div className="flex flex-col">
-                <span className="font-serif text-2xl tracking-wide leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  my<span className={goldClass}>CHEF</span>
-                </span>
-                {dept && (
-                  <span
-                    className="text-[10px] tracking-[0.25em] uppercase mt-0.5 leading-none"
-                    style={{ fontFamily: "'Cormorant Garamond', serif", color: dept.accent }}
-                  >
-                    {dept.name}
-                  </span>
-                )}
-              </div>
-            </Link>
-
-            {/* Department switcher pill */}
-            {dept && (
-              <div className="hidden md:flex items-center gap-1 ml-4 pl-4 border-l" style={{ borderColor: useLightText ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)' }}>
-                <Link
-                  to="/"
-                  className="flex items-center gap-1.5 text-[11px] tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-300"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    color: useLightText ? 'rgba(255,255,255,0.6)' : 'rgba(26,26,26,0.6)',
-                    borderColor: useLightText ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = dept.accent
-                    e.currentTarget.style.color = dept.accent
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = useLightText ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)'
-                    e.currentTarget.style.color = useLightText ? 'rgba(255,255,255,0.6)' : 'rgba(26,26,26,0.6)'
-                  }}
+          {/* Logo */}
+          <Link
+            to="/"
+            className={`flex items-center gap-2.5 transition-colors ${useLightText ? 'text-white' : 'text-[#1A1A1A]'}`}
+          >
+            <ChefHat className="w-7 h-7 text-[#D4AF37]" strokeWidth={1.5} />
+            <div className="flex flex-col">
+              <span className="font-serif text-2xl tracking-wide leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>
+                my<span className={goldClass}>CHEF</span>
+              </span>
+              {dept && (
+                <span
+                  className="text-[10px] tracking-[0.25em] uppercase mt-0.5 leading-none"
+                  style={{ fontFamily: "'Cormorant Garamond', serif", color: dept.accent }}
                 >
-                  <ArrowLeft className="w-3 h-3" /> Home
-                </Link>
-                {NAV_LINKS.filter(l => l.dept && l.path !== location.pathname).map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    className="text-[11px] tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-300"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      color: useLightText ? 'rgba(255,255,255,0.5)' : 'rgba(26,26,26,0.5)',
-                      borderColor: useLightText ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.borderColor = link.accent
-                      e.currentTarget.style.color = link.accent
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.borderColor = useLightText ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'
-                      e.currentTarget.style.color = useLightText ? 'rgba(255,255,255,0.5)' : 'rgba(26,26,26,0.5)'
-                    }}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+                  {dept.name}
+                </span>
+              )}
+            </div>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-10">
             {NAV_LINKS.map((link) => {
               const isActive = location.pathname === link.path
+              const isFineDining = link.path === '/fine-dining'
               return (
-                <Link
+                <div
                   key={link.path}
-                  to={link.path}
-                  className={`relative text-[13px] tracking-[0.15em] uppercase transition-colors duration-300 ${
-                    isActive
-                      ? goldClass
-                      : useLightText
-                        ? 'text-white/90 hover:text-[#D4AF37]'
-                        : 'text-[#1A1A1A]/80 hover:text-[#D4AF37]'
-                  }`}
-                  style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
+                  className="relative"
+                  onMouseEnter={isFineDining ? handleFdEnter : undefined}
+                  onMouseLeave={isFineDining ? handleFdLeave : undefined}
                 >
-                  {link.label}
-                  <span
-                    className={`absolute -bottom-1 left-0 h-[1.5px] bg-[#D4AF37] transition-all duration-300 ${
-                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                  <Link
+                    to={link.path}
+                    className={`relative text-[13px] tracking-[0.15em] uppercase transition-colors duration-300 ${
+                      isActive
+                        ? goldClass
+                        : useLightText
+                          ? 'text-white/90 hover:text-[#D4AF37]'
+                          : 'text-[#1A1A1A]/80 hover:text-[#D4AF37]'
                     }`}
-                  />
-                </Link>
+                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
+                  >
+                    {link.label}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-[1.5px] bg-[#D4AF37] transition-all duration-300 ${
+                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                    />
+                  </Link>
+                  {/* Fine Dining Dropdown */}
+                  {isFineDining && fdOpen && (
+                    <div
+                      className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
+                      onMouseEnter={handleFdEnter}
+                      onMouseLeave={handleFdLeave}
+                    >
+                      <div
+                        className="rounded-xl border border-white/10 py-2 px-1 min-w-[180px]"
+                        style={{ background: 'rgba(5,5,5,0.95)', backdropFilter: 'blur(20px)' }}
+                      >
+                        {FINE_DINING_SUBMENU.map((item) => (
+                          <a
+                            key={item.href}
+                            href={item.href}
+                            className="block px-4 py-2 text-[12px] tracking-[0.12em] uppercase text-white/70 hover:text-[#D4AF37] transition-colors rounded-lg hover:bg-white/5"
+                            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                          >
+                            {item.label}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               )
             })}
           </div>
@@ -197,34 +201,61 @@ export default function Navbar() {
           </div>
 
           {/* Mobile links */}
-          <div className="flex-1 flex flex-col items-center justify-center gap-8 px-6">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setMobileOpen(false)}
-                className="text-2xl tracking-widest uppercase transition-colors"
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  color: location.pathname === link.path ? '#D4AF37' : hasDarkNavBg ? '#fff' : '#1A1A1A',
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
-            {/* Mobile department switcher */}
-            {dept && (
-              <div className="flex flex-wrap justify-center gap-3 mt-4 pt-6 border-t" style={{ borderColor: hasDarkNavBg ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)' }}>
-                <Link to="/" onClick={() => setMobileOpen(false)} className="text-sm tracking-wider uppercase px-4 py-2 rounded-full border" style={{ color: hasDarkNavBg ? '#fff' : '#1A1A1A', borderColor: hasDarkNavBg ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.15)' }}>
-                  ← Home
-                </Link>
-                {NAV_LINKS.filter(l => l.dept && l.path !== location.pathname).map((link) => (
-                  <Link key={link.path} to={link.path} onClick={() => setMobileOpen(false)} className="text-sm tracking-wider uppercase px-4 py-2 rounded-full border" style={{ color: hasDarkNavBg ? '#fff' : '#1A1A1A', borderColor: hasDarkNavBg ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.15)' }}>
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            )}
+          <div className="flex-1 flex flex-col items-center justify-center gap-6 px-6">
+            {NAV_LINKS.map((link) => {
+              const isActive = location.pathname === link.path
+              const isFineDining = link.path === '/fine-dining'
+              return (
+                <div key={link.path} className="flex flex-col items-center">
+                  <div className="flex items-center gap-2">
+                    <Link
+                      to={link.path}
+                      onClick={() => {
+                        if (!isFineDining) setMobileOpen(false)
+                      }}
+                      className="text-2xl tracking-widest uppercase transition-colors"
+                      style={{
+                        fontFamily: "'Cormorant Garamond', serif",
+                        color: isActive ? '#D4AF37' : hasDarkNavBg ? '#fff' : '#1A1A1A',
+                      }}
+                    >
+                      {link.label}
+                    </Link>
+                    {isFineDining && (
+                      <button
+                        onClick={() => setMobileFdOpen(!mobileFdOpen)}
+                        className="p-1 transition-transform"
+                        style={{
+                          color: isActive ? '#D4AF37' : hasDarkNavBg ? '#fff' : '#1A1A1A',
+                          transform: mobileFdOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                        }}
+                      >
+                        <ChevronDown className="w-5 h-5" />
+                      </button>
+                    )}
+                  </div>
+                  {/* Mobile Fine Dining submenu */}
+                  {isFineDining && mobileFdOpen && (
+                    <div className="flex flex-col items-center gap-3 mt-4">
+                      {FINE_DINING_SUBMENU.map((item) => (
+                        <a
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="text-sm tracking-wider uppercase transition-colors"
+                          style={{
+                            fontFamily: "'Cormorant Garamond', serif",
+                            color: hasDarkNavBg ? 'rgba(255,255,255,0.6)' : 'rgba(26,26,26,0.6)',
+                          }}
+                        >
+                          {item.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </div>
       )}

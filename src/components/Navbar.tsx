@@ -15,14 +15,29 @@ const DEPARTMENT_PAGES: Record<string, { name: string; accent: string }> = {
   '/events': { name: 'Events', accent: '#2C5F7C' },
 }
 
-// Fine Dining submenu — anchor links to sections on LunaPage
-const FINE_DINING_SUBMENU = [
-  { label: 'Menu', href: '/fine-dining#menus' },
-  { label: 'Captured', href: '/fine-dining#captured' },
-  { label: 'The Process', href: '/fine-dining#the-four' },
-  { label: 'How It Works', href: '/fine-dining#how-it-works' },
-  { label: 'Reserve Evening', href: '/fine-dining#book' },
-]
+// Submenu definitions per department page
+const SUBMENUS: Record<string, { label: string; href: string }[]> = {
+  '/fine-dining': [
+    { label: 'Menu', href: '/fine-dining#menus' },
+    { label: 'Captured', href: '/fine-dining#captured' },
+    { label: 'The Process', href: '/fine-dining#the-four' },
+    { label: 'How It Works', href: '/fine-dining#how-it-works' },
+    { label: 'Reserve Evening', href: '/fine-dining#book' },
+  ],
+  '/villa-chef': [
+    { label: 'Meal Plans', href: '/villa-chef#plans' },
+    { label: 'How It Works', href: '/villa-chef#how-it-works' },
+    { label: "What's Included", href: '/villa-chef#included' },
+    { label: 'Reserve', href: '/villa-chef#book' },
+  ],
+  '/events': [
+    { label: 'Packages', href: '/events#packages' },
+    { label: 'Event Types', href: '/events#types' },
+    { label: 'How It Works', href: '/events#how-it-works' },
+    { label: "What's Included", href: '/events#included' },
+    { label: 'Reserve', href: '/events#book' },
+  ],
+}
 
 // Pages where the scrolled navbar should have a dark background
 const DARK_NAV_PAGES = ['/fine-dining', '/privacy', '/terms', '/cancellation']
@@ -30,9 +45,9 @@ const DARK_NAV_PAGES = ['/fine-dining', '/privacy', '/terms', '/cancellation']
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [fdOpen, setFdOpen] = useState(false)
-  const [mobileFdOpen, setMobileFdOpen] = useState(false)
-  const fdTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
+  const dropdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const location = useLocation()
 
   useEffect(() => {
@@ -43,7 +58,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setMobileOpen(false)
-    setMobileFdOpen(false)
+    setMobileExpanded(null)
   }, [location.pathname])
 
   useEffect(() => {
@@ -54,19 +69,37 @@ export default function Navbar() {
   const hasDarkNavBg = DARK_NAV_PAGES.includes(location.pathname)
   const dept = DEPARTMENT_PAGES[location.pathname]
 
-  // At top (transparent over hero): ALL pages have dark/cinematic heroes → white text
-  // After scroll: white text for dark-bg navbars, dark text for light-bg navbars
   const useLightText = !scrolled || hasDarkNavBg
-
   const goldClass = 'text-[#D4AF37]'
 
-  const handleFdEnter = () => {
-    if (fdTimeoutRef.current) clearTimeout(fdTimeoutRef.current)
-    setFdOpen(true)
+  const handleEnter = (path: string) => {
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current)
+    setOpenDropdown(path)
   }
 
-  const handleFdLeave = () => {
-    fdTimeoutRef.current = setTimeout(() => setFdOpen(false), 150)
+  const handleLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => setOpenDropdown(null), 150)
+  }
+
+  const getDropdownBg = (path: string) => {
+    if (path === '/fine-dining') return 'rgba(5,5,5,0.95)'
+    if (path === '/villa-chef') return 'rgba(245,240,232,0.98)'
+    if (path === '/events') return 'rgba(255,255,255,0.98)'
+    return 'rgba(5,5,5,0.95)'
+  }
+
+  const getDropdownText = (path: string) => {
+    if (path === '/fine-dining') return 'text-white/70 hover:text-[#D4AF37]'
+    if (path === '/villa-chef') return 'text-[#2C2419]/70 hover:text-[#6B8E5A]'
+    if (path === '/events') return 'text-[#1A1A1A]/70 hover:text-[#2C5F7C]'
+    return 'text-white/70 hover:text-[#D4AF37]'
+  }
+
+  const getDropdownBorder = (path: string) => {
+    if (path === '/fine-dining') return 'border-white/10'
+    if (path === '/villa-chef') return 'border-[#E5E0D8]'
+    if (path === '/events') return 'border-[#E5E3E0]'
+    return 'border-white/10'
   }
 
   return (
@@ -112,13 +145,14 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-10">
             {NAV_LINKS.map((link) => {
               const isActive = location.pathname === link.path
-              const isFineDining = link.path === '/fine-dining'
+              const hasSubmenu = SUBMENUS[link.path] !== undefined
+              const isOpen = openDropdown === link.path
               return (
                 <div
                   key={link.path}
                   className="relative"
-                  onMouseEnter={isFineDining ? handleFdEnter : undefined}
-                  onMouseLeave={isFineDining ? handleFdLeave : undefined}
+                  onMouseEnter={hasSubmenu ? () => handleEnter(link.path) : undefined}
+                  onMouseLeave={hasSubmenu ? handleLeave : undefined}
                 >
                   <Link
                     to={link.path}
@@ -138,22 +172,22 @@ export default function Navbar() {
                       }`}
                     />
                   </Link>
-                  {/* Fine Dining Dropdown */}
-                  {isFineDining && fdOpen && (
+                  {/* Dropdown */}
+                  {hasSubmenu && isOpen && (
                     <div
                       className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
-                      onMouseEnter={handleFdEnter}
-                      onMouseLeave={handleFdLeave}
+                      onMouseEnter={() => handleEnter(link.path)}
+                      onMouseLeave={handleLeave}
                     >
                       <div
-                        className="rounded-xl border border-white/10 py-2 px-1 min-w-[180px]"
-                        style={{ background: 'rgba(5,5,5,0.95)', backdropFilter: 'blur(20px)' }}
+                        className={`rounded-xl border ${getDropdownBorder(link.path)} py-2 px-1 min-w-[180px]`}
+                        style={{ background: getDropdownBg(link.path), backdropFilter: 'blur(20px)' }}
                       >
-                        {FINE_DINING_SUBMENU.map((item) => (
+                        {SUBMENUS[link.path].map((item) => (
                           <a
                             key={item.href}
                             href={item.href}
-                            className="block px-4 py-2 text-[12px] tracking-[0.12em] uppercase text-white/70 hover:text-[#D4AF37] transition-colors rounded-lg hover:bg-white/5"
+                            className={`block px-4 py-2 text-[12px] tracking-[0.12em] uppercase transition-colors rounded-lg hover:bg-white/5 ${getDropdownText(link.path)}`}
                             style={{ fontFamily: "'Cormorant Garamond', serif" }}
                           >
                             {item.label}
@@ -204,14 +238,15 @@ export default function Navbar() {
           <div className="flex-1 flex flex-col items-center justify-center gap-6 px-6">
             {NAV_LINKS.map((link) => {
               const isActive = location.pathname === link.path
-              const isFineDining = link.path === '/fine-dining'
+              const hasSubmenu = SUBMENUS[link.path] !== undefined
+              const isExpanded = mobileExpanded === link.path
               return (
                 <div key={link.path} className="flex flex-col items-center">
                   <div className="flex items-center gap-2">
                     <Link
                       to={link.path}
                       onClick={() => {
-                        if (!isFineDining) setMobileOpen(false)
+                        if (!hasSubmenu) setMobileOpen(false)
                       }}
                       className="text-2xl tracking-widest uppercase transition-colors"
                       style={{
@@ -221,23 +256,23 @@ export default function Navbar() {
                     >
                       {link.label}
                     </Link>
-                    {isFineDining && (
+                    {hasSubmenu && (
                       <button
-                        onClick={() => setMobileFdOpen(!mobileFdOpen)}
+                        onClick={() => setMobileExpanded(isExpanded ? null : link.path)}
                         className="p-1 transition-transform"
                         style={{
                           color: isActive ? '#D4AF37' : hasDarkNavBg ? '#fff' : '#1A1A1A',
-                          transform: mobileFdOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                          transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
                         }}
                       >
                         <ChevronDown className="w-5 h-5" />
                       </button>
                     )}
                   </div>
-                  {/* Mobile Fine Dining submenu */}
-                  {isFineDining && mobileFdOpen && (
+                  {/* Mobile submenu */}
+                  {hasSubmenu && isExpanded && (
                     <div className="flex flex-col items-center gap-3 mt-4">
-                      {FINE_DINING_SUBMENU.map((item) => (
+                      {SUBMENUS[link.path].map((item) => (
                         <a
                           key={item.href}
                           href={item.href}

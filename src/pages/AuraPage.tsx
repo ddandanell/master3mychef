@@ -100,7 +100,7 @@ export default function AuraPage() {
       </section>
 
       {/* How It Works */}
-      <section className="aura-content py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
+      <section id="how-it-works" className="aura-content py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Process</p>
@@ -128,7 +128,7 @@ export default function AuraPage() {
       </section>
 
       {/* Event Types */}
-      <section className="py-24 md:py-32 px-6" style={{ background: '#F8F7F5' }}>
+      <section id="types" className="py-24 md:py-32 px-6" style={{ background: '#F8F7F5' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>What We Do</p>
@@ -182,7 +182,7 @@ export default function AuraPage() {
       </section>
 
       {/* What's Included */}
-      <section className="py-24 md:py-32 px-6" style={{ background: '#F8F7F5' }}>
+      <section id="included" className="py-24 md:py-32 px-6" style={{ background: '#F8F7F5' }}>
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Everything Included</p>
@@ -206,7 +206,7 @@ export default function AuraPage() {
       </section>
 
       {/* Team */}
-      <section className="py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
+      <section id="team" className="py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">

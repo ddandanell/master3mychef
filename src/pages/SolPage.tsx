@@ -95,7 +95,7 @@ export default function SolPage() {
       </section>
 
       {/* How It Works */}
-      <section className="sol-content py-24 md:py-32 px-6">
+      <section id="how-it-works" className="sol-content py-24 md:py-32 px-6">
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Process</p>
@@ -149,7 +149,7 @@ export default function SolPage() {
       </section>
 
       {/* What's Included */}
-      <section className="py-24 md:py-32 px-6" style={{ background: '#F5F0E8' }}>
+      <section id="included" className="py-24 md:py-32 px-6" style={{ background: '#F5F0E8' }}>
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Everything Included</p>
@@ -173,7 +173,7 @@ export default function SolPage() {
       </section>
 
       {/* Chef */}
-      <section className="py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
+      <section id="team" className="py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">

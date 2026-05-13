@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router-dom'
+import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check } from 'lucide-react'
 import SeoHead from './SeoHead'
 import { SERVICES } from '@/data/sitemap'
@@ -7,7 +7,8 @@ const SITE = 'https://mychef.id'
 const WA = '6282237565997'
 
 export default function ServicePage() {
-  const { slug } = useParams<{ slug: string }>()
+  const { pathname } = useLocation()
+  const slug = pathname.replace(/^\/services\//, '').replace(/\/$/, '')
   const service = SERVICES.find((s) => s.slug === slug)
   if (!service) return <Navigate to="/404" replace />
 

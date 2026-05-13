@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "npx tsx scripts/generate-sitemap.ts",
     "build": "tsc -b && vite build",
+    "sitemap": "npx tsx scripts/generate-sitemap.ts",
     "lint": "eslint .",
     "preview": "vite preview"
   },

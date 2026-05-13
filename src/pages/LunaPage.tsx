@@ -214,11 +214,11 @@ export default function LunaPage() {
                 className="group flex flex-col"
               >
                 {/* Portrait — consistent treatment */}
-                <div className="relative aspect-[3/4] max-h-[420px] overflow-hidden rounded-t-2xl">
+                <div className="relative aspect-[3/4] max-h-[252px] overflow-hidden rounded-t-2xl">
                   <img
                     src={chef.image}
                     alt={chef.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
+                    className="w-full h-full object-cover object-top grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-60" />
                 </div>

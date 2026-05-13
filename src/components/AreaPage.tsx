@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router-dom'
+import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check } from 'lucide-react'
 import SeoHead from './SeoHead'
 import { AREAS, MICRO_AREAS } from '@/data/sitemap'
@@ -9,7 +9,8 @@ const WA = '6282237565997'
 // Used for /seminyak, /canggu, /ubud, etc. AND the narrower micro-area pages
 // like /echo-beach-private-chef. Same component, different slug source.
 export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-area' }) {
-  const { slug } = useParams<{ slug: string }>()
+  const { pathname } = useLocation()
+  const slug = pathname.replace(/^\//, '').replace(/\/$/, '')
   const source = kind === 'area' ? AREAS : MICRO_AREAS
   const entry = source.find((a) => a.slug === slug)
 

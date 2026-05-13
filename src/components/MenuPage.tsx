@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router-dom'
+import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle } from 'lucide-react'
 import SeoHead from './SeoHead'
 import { MENUS } from '@/data/sitemap'
@@ -7,9 +7,11 @@ const SITE = 'https://mychef.id'
 const WA = '6282237565997'
 
 export default function MenuPage() {
-  const { slug } = useParams<{ slug?: string }>()
+  const { pathname } = useLocation()
+  const isIndex = pathname === '/menus' || pathname === '/menus/'
+  const slug = pathname.replace(/^\/menus\//, '').replace(/\/$/, '')
 
-  if (!slug) {
+  if (isIndex) {
     return (
       <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
         <SeoHead

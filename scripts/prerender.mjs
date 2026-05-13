@@ -178,7 +178,19 @@ const ROUTES = [
 ]
 
 // ── Launch browser ───────────────────────────────────────────────────────────
-const browser = await chromium.launch()
+let browser
+try {
+  browser = await chromium.launch()
+} catch (err) {
+  if (err.message.includes("Executable doesn't exist")) {
+    console.log('Playwright browser not found. Installing chromium...')
+    const { execSync } = await import('child_process')
+    execSync('npx playwright install chromium', { stdio: 'inherit' })
+    browser = await chromium.launch()
+  } else {
+    throw err
+  }
+}
 const context = await browser.newContext({ viewport: { width: 1280, height: 800 } })
 
 let success = 0

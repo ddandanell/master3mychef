@@ -64,7 +64,7 @@ const HOW_IT_WORKS = [
 ]
 
 const DIFFERENTIATORS = [
-  { icon: ChefHat, title: 'Michelin-Trained Leadership', desc: 'Chef Antonio trained under a Michelin-starred chef in Milan. His standards are the baseline for every dish.' },
+  { icon: ChefHat, title: 'Michelin-Trained Leadership', desc: 'Adriano trained under a Michelin-starred chef in Milan. His standards are the baseline for every dish.' },
   { icon: Users, title: '50+ Indonesian Professionals', desc: 'Chefs, servers, bartenders, and event staff — all trained in-house, all passionate about hospitality.' },
   { icon: Shield, title: 'We Handle Everything', desc: 'Groceries, cooking, service, cleanup. You do not lift a finger. Not even to make a grocery list.' },
   { icon: MapPin, title: 'We Know Bali', desc: '8 years serving villas across Seminyak, Canggu, Ubud, Uluwatu, and Sanur. We know the markets, the kitchens, the rhythm.' },
@@ -92,11 +92,11 @@ const TRUST_STATS = [
 const REVIEWS = [
   { name: 'James & Sarah', location: 'London', dept: 'Fine Dining', text: 'We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the courses — pure magic.' },
   { name: 'The Harrisons', location: 'Sydney', dept: 'Fine Dining', text: 'Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.' },
-  { name: 'Marco & Elena', location: 'Milan', dept: 'Fine Dining', text: 'As Italians, we are picky about our food. Matteo\'s tagliatelle transported us back to Bologna. The wine pairing was impeccable.' },
+  { name: 'Marco & Elena', location: 'Milan', dept: 'Fine Dining', text: 'As Italians, we are picky about our food. The tagliatelle transported us back to Bologna. The wine pairing was impeccable.' },
   { name: 'The Wilson Family', location: 'Singapore', dept: 'Fine Dining', text: 'We booked the Wagyu Experience for my father\'s 70th. He has eaten at three Michelin stars. He said this was better because it was ours.' },
   { name: 'Priya & Rahul', location: 'Mumbai', dept: 'Fine Dining', text: 'The Mediterranean Sea menu was light, sophisticated, and deeply flavourful. Every plate looked like art. Every bite tasted like summer in Sicily.' },
-  { name: 'David Chen', location: 'Hong Kong', dept: 'Fine Dining', text: 'Paco\s ribeye was the best piece of meat I have had in a decade. The fire, the technique, the timing — this man understands heat.' },
-  { name: 'The O\'Briens', location: 'Dublin', dept: 'Catering', text: 'Seven breakfasts, five lunches, four dinners across ten days. Never the same dish twice. The kids asked if Chef Antonio could move in.' },
+  { name: 'David Chen', location: 'Hong Kong', dept: 'Fine Dining', text: 'The ribeye was the best piece of meat I have had in a decade. The fire, the technique, the timing — this team understands heat.' },
+  { name: 'The O\'Briens', location: 'Dublin', dept: 'Catering', text: 'Seven breakfasts, five lunches, four dinners across ten days. Never the same dish twice. The kids asked if the chef could move in.' },
   { name: 'Lisa & Tom', location: 'Amsterdam', dept: 'Catering', text: 'We hired a villa chef for our honeymoon. Waking up to fresh croissants and Balinese coffee every morning — that is the definition of luxury.' },
   { name: 'The Nakamura Family', location: 'Tokyo', dept: 'Catering', text: 'Our chef adjusted every meal for our children\'s tastes without making it feel like kids\' food. The level of care was extraordinary.' },
   { name: 'Sophie & Pierre', location: 'Paris', dept: 'Catering', text: 'Ten days in Ubud with a private chef. We never went to a restaurant. Why would we? The best food in Bali was in our villa.' },
@@ -107,8 +107,8 @@ const REVIEWS = [
   { name: 'Michael R.', location: 'Dubai', dept: 'Events', text: 'My 50th birthday party. They turned our villa pool deck into a dining room that looked like something from a magazine. And the food matched.' },
   { name: 'The Lims', location: 'Kuala Lumpur', dept: 'Events', text: 'Corporate dinner for 30. The team arrived at 2 PM and worked silently until service. Not a single detail was missed.' },
   { name: 'Clara & Felix', location: 'Zurich', dept: 'Events', text: 'We wanted something intimate for our engagement. They created a candlelit dinner for twelve that felt like a scene from a film.' },
-  { name: 'The Patels', location: 'Mumbai', dept: 'Events', text: 'Our daughter\'s graduation dinner. The dessert table alone — Lukas\'s pastries are worth the flight to Bali.' },
-  { name: 'Richard & Amanda', location: 'San Francisco', dept: 'Fine Dining', text: 'We have done tasting menus in Napa, Paris, and Tokyo. The Wagyu Experience at our villa rivalled all of them. Paco is a master.' },
+  { name: 'The Patels', location: 'Mumbai', dept: 'Events', text: 'Our daughter\'s graduation dinner. The dessert table alone — those pastries are worth the flight to Bali.' },
+  { name: 'Richard & Amanda', location: 'San Francisco', dept: 'Fine Dining', text: 'We have done tasting menus in Napa, Paris, and Tokyo. The Wagyu Experience at our villa rivalled all of them. The team is world-class.' },
   { name: 'The Müllers', location: 'Munich', dept: 'Catering', text: 'Two weeks in Canggu with daily chef service. The grocery receipts were transparent, the food was exceptional, and the kitchen was cleaner when they left than when they arrived.' },
   { name: 'Jessica & Ben', location: 'Toronto', dept: 'Fine Dining', text: 'The sommelier paired a Sicilian white with the lobster tagliatelle that made me cry. Not exaggerating. It was that good.' },
   { name: 'The Kwons', location: 'Seoul', dept: 'Events', text: '100 guests for our company anniversary. They served a seven-course plated dinner with military precision. Every guest commented on the food.' },
@@ -258,7 +258,7 @@ export default function HubPage() {
               <h2 className="u-heading text-4xl md:text-5xl mb-6">A Team Built on Passion, Not Pitch Decks</h2>
               <div className="gold-arc mb-8" />
               <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
-                myCHEF.id was born when Chef Antonio — trained under a Michelin-starred chef in Milan — arrived in Bali and saw a gap. 
+                myCHEF.id was born when Adriano — trained under a Michelin-starred chef in Milan — arrived in Bali and saw a gap. 
                 The island had world-class villas. It had incredible ingredients. But the connection between them was missing.
               </p>
               <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>

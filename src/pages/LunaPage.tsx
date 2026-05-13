@@ -481,36 +481,6 @@ export default function LunaPage() {
         </div>
       </section>
 
-      {/* Chef */}
-      <section className="py-24 md:py-32 px-6">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-            <div>
-              <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Your Chef</p>
-              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Chef <span className="italic">Antonio</span></h2>
-              <div className="w-12 h-[2px] bg-[#D4AF37] mb-8" />
-              <p className="text-white/60 mb-6 leading-relaxed">
-                Trained under a Michelin-starred chef in Milan. 20 years of experience. Antonio leads a team of 8 Indonesian fine dining specialists, each trained in classical Italian technique.
-              </p>
-              <p className="text-white/60 mb-8 leading-relaxed">
-                "Fine dining is not about showing off. It is about making your guests feel like the most important people in the world for one evening."
-              </p>
-              <div className="space-y-3">
-                {['Michelin-starred training, Milan', '8-person Indonesian fine dining team', '500+ fine dining experiences in Bali'].map((item) => (
-                  <div key={item} className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-[#D4AF37]" />
-                    <span className="text-sm text-white/80">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
-              <img src="/generated/luna-chef-portrait.jpg" alt="Chef Antonio" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Experience Gallery */}
       <section className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[1280px] mx-auto">

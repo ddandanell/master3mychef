@@ -96,6 +96,37 @@ const TESTIMONIALS = [
   { name: 'The Harrisons', location: 'Sydney', text: 'Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.' },
 ]
 
+const THE_FOUR = [
+  {
+    name: 'Matteo Conti',
+    role: 'Pasta. Mediterranean lead.',
+    origin: 'Bologna, Italy',
+    image: '/generated/chef-matteo.png',
+    bio: 'Born in Bologna. Rolled pasta with his aunt at six. Trained at a one-star in Emilia-Romagna. Adriano met him in Modena fifteen years ago, when they were stagiaires in the same kitchen — the only person in that brigade Adriano stayed in touch with. When myCHEF was founded, Matteo was the first call. He leads almost every Mediterranean Sea evening. His tagliatelle is rolled the same afternoon, in the villa where it will be eaten, on a marble board that travels with him.',
+  },
+  {
+    name: 'Paco Reyes',
+    role: 'Grill and protein. Wagyu lead.',
+    origin: 'San Sebastián, Spain',
+    image: '/generated/chef-paco.png',
+    bio: 'Born in San Sebastián, on the Basque coast. Trained in pintxos bars, then in a two-star in the hills above the city. Adriano worked beside him for a season in 2008 — the kitchen that taught Adriano what joy in fine dining looked like. Fourteen years later, when myCHEF needed a chef who understood fire, Adriano flew back to San Sebastián, sat with Paco for two nights, and brought him to Bali. He leads the Wagyu Experience. The ribeye is his.',
+  },
+  {
+    name: 'Alessandro Conte',
+    role: 'Sauces, technique, plating.',
+    origin: 'Florence, Italy',
+    image: null,
+    bio: 'Born in Florence. Classical training at a two-star in Tuscany, then a year in Lyon. Adriano hired him in 2022 after a single trial dinner in Bali — Alessandro was visiting a friend and was asked to plate one course. The plate told Adriano everything. Alessandro now runs the sauce station on every evening, regardless of menu. The blue cheese sauce on the Wagyu ribeye and the Mediterranean sauce on the barramundi are both his hands.',
+  },
+  {
+    name: 'Lukas Brandt',
+    role: 'Pastry.',
+    origin: 'Vienna, Austria',
+    image: null,
+    bio: 'Born in Vienna. Trained at a three-star in Austria before two years at a renowned Parisian pâtisserie. Adriano recruited him in 2023, against the advice of three people who told him a private kitchen could not justify a pastry chef of Lukas\'s level. Adriano disagreed. The dessert plate is his alone. The lady fingers in the tiramisu are baked the morning of the dinner. The Tenerina cake comes out of his oven, not anyone else\'s.',
+  },
+]
+
 export default function LunaPage() {
   const heroRef = useRef<HTMLDivElement>(null)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -141,7 +172,82 @@ export default function LunaPage() {
         </div>
       </section>
 
-      {/* Experience Intro */}
+      {/* The Four — Chapter Three */}
+      <section className="py-24 md:py-32 px-6" style={{ background: '#080808' }}>
+        <div className="max-w-[1280px] mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16 md:mb-20">
+            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chapter Three</p>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>The <span className="italic">Four</span></h2>
+            <p className="text-xl md:text-2xl text-white/60 italic max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Trained by Adriano. One of them is in your kitchen tonight.
+            </p>
+          </div>
+
+          {/* Intro */}
+          <div className="max-w-3xl mx-auto text-center mb-20 md:mb-24">
+            <p className="text-white/50 leading-relaxed mb-6">
+              Adriano did not build a team. He built a lineage.
+            </p>
+            <p className="text-white/50 leading-relaxed mb-6">
+              Over five years he has chosen four chefs — one by one, on his terms — and trained each of them himself. He found them in Italy, in Spain, in Austria, and once across a counter in Bali. Each is capable of leading an evening end to end. Each has been drilled in the same techniques, the same pacing, the same standards Adriano carried out of Modena and Tokyo.
+            </p>
+            <p className="text-white/50 leading-relaxed mb-6">
+              He does not delegate the training. He never has. A new chef spends six months beside him before they cook a single plate for a paying guest. After that they cook beside him for another year before they lead an evening alone. Every plate, every sauce, every pour is tested, corrected, repeated.
+            </p>
+            <p className="text-white/70 leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
+              These are the four.
+            </p>
+          </div>
+
+          {/* Chef Cards — 2x2 grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-20">
+            {THE_FOUR.map((chef) => (
+              <div
+                key={chef.name}
+                className="group relative rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-700 hover:border-[#D4AF37]/20"
+                style={{ background: 'rgba(255,255,255,0.02)' }}
+              >
+                {/* Image or accent header */}
+                {chef.image ? (
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img
+                      src={chef.image}
+                      alt={chef.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent" />
+                  </div>
+                ) : (
+                  <div className="h-2 bg-gradient-to-r from-[#D4AF37]/60 via-[#D4AF37]/30 to-transparent" />
+                )}
+
+                {/* Content */}
+                <div className="p-8 md:p-10">
+                  <div className="flex items-baseline justify-between mb-2">
+                    <h3 className="text-2xl md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{chef.name}</h3>
+                    <span className="text-xs text-white/40 tracking-wider uppercase">{chef.origin}</span>
+                  </div>
+                  <p className="text-[#D4AF37] text-sm tracking-[0.15em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{chef.role}</p>
+                  <p className="text-white/50 text-sm leading-relaxed">{chef.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Closing line */}
+          <div className="text-center">
+            <p className="text-[#D4AF37]/80 text-sm md:text-base italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              One of them will be in your kitchen on the night.
+            </p>
+            <p className="text-white/30 text-xs mt-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Which one depends on the menu, the date, and what arrived on the morning boat.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Intro — Chapter Four */}
       <section className="luna-content py-24 md:py-32 px-6" style={{ background: '#F5F3EF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
@@ -149,7 +255,7 @@ export default function LunaPage() {
               <img src="/generated/luna-experience-collage.png" alt="Fine dining experience" className="rounded-2xl w-full aspect-[4/3] object-cover" />
             </div>
             <div className="luna-reveal">
-              <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Experience</p>
+              <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chapter Four — The Experience</p>
               <h2 className="text-4xl md:text-5xl mb-6 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>One Night.<br />Two Journeys.</h2>
               <div className="w-12 h-[2px] bg-[#D4AF37] mb-8" />
               <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
@@ -267,6 +373,14 @@ export default function LunaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {MENUS.map((menu) => (
               <div key={menu.id} className="luna-reveal rounded-2xl border border-white/10 overflow-hidden">
+                {/* Menu image */}
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean.png' : '/generated/menu-wagyu.png'}
+                    alt={menu.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="p-8 md:p-10" style={{ background: 'rgba(255,255,255,0.03)' }}>
                   <div className="flex items-start justify-between mb-4">
                     <div>

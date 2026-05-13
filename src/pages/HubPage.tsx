@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, Award } from 'lucide-react'
+import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
@@ -390,24 +390,40 @@ export default function HubPage() {
               </div>
             ))}
           </div>
-          {/* Villa Awards + Best Partner diploma */}
-          <div className="mt-12 pt-8 border-t flex flex-col items-center gap-8" style={{ borderColor: 'var(--u-border)' }}>
-            <BestPartnerBadge variant="dark" width={320} />
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-              <div className="flex items-center gap-3 px-5 py-3 rounded-xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-                <Award className="w-5 h-5 text-[#D4AF37]" />
-                <div>
-                  <p className="text-xs font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2025</p>
+          {/* Villa Awards + Best Partner diploma — three trophies on one row */}
+          <div className="mt-12 pt-8 border-t flex flex-col items-center" style={{ borderColor: 'var(--u-border)' }}>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full">
+              <figure className="flex flex-col items-center text-center max-w-[280px]">
+                <img
+                  src="/generated/villa-award-2025.jpg"
+                  alt="Villa Award 2025 — Best Choice for Private Dining"
+                  width={280}
+                  height={280}
+                  loading="lazy"
+                  className="w-[260px] md:w-[280px] h-auto object-contain drop-shadow-[0_8px_24px_rgba(212,175,55,0.18)]"
+                />
+                <figcaption className="mt-3">
+                  <p className="text-sm font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2025</p>
                   <p className="text-[10px] uppercase tracking-wider" style={{ color: 'var(--u-text-muted)' }}>Best Choice — Private Dining</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 px-5 py-3 rounded-xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-                <Award className="w-5 h-5 text-[#D4AF37]" />
-                <div>
-                  <p className="text-xs font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2026</p>
+                </figcaption>
+              </figure>
+
+              <BestPartnerBadge variant="dark" width={320} />
+
+              <figure className="flex flex-col items-center text-center max-w-[280px]">
+                <img
+                  src="/generated/villa-award-2026.jpg"
+                  alt="Villa Award 2026 — Best Choice for Private Dining"
+                  width={280}
+                  height={280}
+                  loading="lazy"
+                  className="w-[260px] md:w-[280px] h-auto object-contain drop-shadow-[0_8px_24px_rgba(212,175,55,0.18)]"
+                />
+                <figcaption className="mt-3">
+                  <p className="text-sm font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2026</p>
                   <p className="text-[10px] uppercase tracking-wider" style={{ color: 'var(--u-text-muted)' }}>Best Choice — Private Dining</p>
-                </div>
-              </div>
+                </figcaption>
+              </figure>
             </div>
           </div>
         </div>

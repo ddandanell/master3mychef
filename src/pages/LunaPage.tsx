@@ -11,20 +11,20 @@ const MENUS = [
     id: 'mediterranean',
     name: 'Mediterranean Sea Experience',
     price: 'IDR 2,200,000++',
-    duration: '2.5 – 3 hours',
-    desc: 'A refined Mediterranean tasting experience inspired by the southern coast of Italy. Delicate seafood, handmade pasta, citrus notes, basil, olive oil, and premium seasonal ingredients — light, sophisticated, and deeply connected to Mediterranean hospitality.',
+    duration: 'Two and a half to three hours',
+    desc: 'The coast Adriano grew up on, in five movements. The meal opens cold, sharp, and perfumed — the sea waking the palate. It moves through cream and pasta into the centre of the table: the lobster tagliatelle, rolled that afternoon in your kitchen. The main is fish, not meat — the menu\'s promise honoured. It closes on tiramisu, made the way it should be made, because by the time the dessert plate arrives the meal has earned the right to come home.',
     perfectFor: ['Private villa dinners', 'Celebrations', 'Romantic evenings', 'Luxury gatherings'],
     courses: {
       starter: [
-        { name: 'Passione di Dentice', desc: 'Red snapper carpaccio, passion fruit sauce, basil gelato' },
-        { name: 'Burrata', desc: 'Burrata cheese stuffed with prawn mousse, giardiniera' },
+        { name: 'Passione di Dentice', desc: 'Red snapper carpaccio, passion fruit sauce, basil gelato.' },
+        { name: 'Burrata', desc: 'Burrata stuffed with prawn mousse, giardiniera.' },
       ],
       main: [
-        { name: 'Lobster', desc: 'Home-made tagliatelle pasta with lobster sauce, cherry tomatoes, fresh basil' },
-        { name: 'Barramundi and the Sea', desc: 'Barramundi roll, clams, Mediterranean sauce, green beans' },
+        { name: 'Lobster', desc: 'Handmade tagliatelle, lobster sauce, cherry tomatoes, fresh basil.' },
+        { name: 'Barramundi and the Sea', desc: 'Barramundi roll, clams, Mediterranean sauce, green beans.' },
       ],
       dessert: [
-        { name: 'Tiramisu', desc: 'Home-made lady finger, mascarpone cream, espresso coffee' },
+        { name: 'Tiramisu', desc: 'House-made lady fingers, mascarpone cream, espresso.' },
       ],
     },
     wine: {
@@ -38,19 +38,19 @@ const MENUS = [
     id: 'wagyu',
     name: 'Wagyu Experience',
     price: 'IDR 2,400,000++',
-    duration: '~3 hours',
-    desc: 'A rich and elegant tasting experience centered around premium Wagyu Tokusen beef. Deep flavors, handmade elements, luxurious textures, and refined presentation. Every course balances richness, acidity, texture, and warmth.',
+    duration: 'Approximately three hours',
+    desc: 'Wagyu Tokusen in three forms — raw, enveloped, and grilled. The opening is controlled: tartare, polenta chips, cured egg, basil oil. The middle slows the meal down: an oxtail ragout sealed inside a hand-rolled ravioli, finished with Grana Padano and a foam of kale — a long-cooked ingredient hidden in a delicate envelope, the kaiseki principle in Italian form. The climax is the ribeye, grilled hard and answered by three counterpoints: topinambur cream, blue cheese, walnuts. The meal closes on dark chocolate and salted caramel — bitter, restrained, deliberately not too sweet, so the room remembers what it just ate.',
     perfectFor: ['Luxury celebrations', 'Executive dinners', 'Premium villa experiences', 'Wine-focused evenings'],
     courses: {
       starter: [
-        { name: 'My Beef Tartare', desc: 'Wagyu Tokusen chuck tender tartare, polenta chips, cured egg, rocket salad, basil oil' },
-        { name: 'Ravioli di Coda', desc: 'Wagyu Tokusen oxtail ragout stuffed ravioli, Grana Padano cheese sauce, kale foam' },
+        { name: 'My Beef Tartare', desc: 'Wagyu Tokusen chuck tender tartare, polenta chips, cured egg, rocket, basil oil.' },
+        { name: 'Ravioli di Coda', desc: 'Oxtail ragout ravioli, Grana Padano cheese sauce, kale foam.' },
       ],
       main: [
-        { name: 'Ribeye', desc: 'Grilled Wagyu Tokusen ribeye, topinambur cream, blue cheese sauce, walnuts' },
+        { name: 'Ribeye', desc: 'Grilled Wagyu Tokusen ribeye, topinambur cream, blue cheese sauce, walnuts.' },
       ],
       dessert: [
-        { name: 'Tenerina Cake', desc: 'Dark chocolate Callebaut 56% cake, salted caramel gelato' },
+        { name: 'Tenerina Cake', desc: 'Dark chocolate Callebaut 56% cake, salted caramel gelato.' },
       ],
     },
     wine: {
@@ -444,6 +444,15 @@ export default function LunaPage() {
                 </div>
               </div>
             ))}
+          </div>
+          {/* Menu closing line */}
+          <div className="mt-12 text-center">
+            <p className="text-[#D4AF37]/70 text-sm italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Custom menus, dietary adjustments, and bespoke evenings arranged on request.
+            </p>
+            <p className="text-white/30 text-xs mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              All prices subject to government tax and service.
+            </p>
           </div>
         </div>
       </section>

@@ -41,7 +41,7 @@ export default function TermsPage() {
           </Link>
           <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
           <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Payment & Booking Terms</h1>
-          <p className="text-white/40 text-sm">Effective: January 2025 &nbsp;|&nbsp; Company: MyChef &nbsp;|&nbsp; NPWP: 1000000005064323</p>
+          <p className="text-white/60 text-sm">Effective: January 2025 &nbsp;|&nbsp; Company: MyChef &nbsp;|&nbsp; NPWP: 1000000005064323</p>
         </div>
       </section>
 
@@ -95,7 +95,7 @@ export default function TermsPage() {
                     <p className="text-white/50">The remaining balance is paid when the chef arrives at your villa, before service begins.</p>
                   </div>
                 </div>
-                <p className="text-white/40 text-xs italic mt-4">Payment is considered valid only once MyChef confirms receipt.</p>
+                <p className="text-white/60 text-xs italic mt-4">Payment is considered valid only once MyChef confirms receipt.</p>
               </div>
             </div>
 
@@ -109,7 +109,7 @@ export default function TermsPage() {
                   <li>Bank transfer</li>
                   <li>Credit/Debit cards (Visa, MasterCard, and all major cards)</li>
                 </ul>
-                <p className="text-white/40 italic">Proof of payment (transfer slip or screenshot) must be sent directly to our WhatsApp or email contact.</p>
+                <p className="text-white/60 italic">Proof of payment (transfer slip or screenshot) must be sent directly to our WhatsApp or email contact.</p>
               </div>
             </div>
 
@@ -122,7 +122,7 @@ export default function TermsPage() {
                   <p><strong className="text-white/80">Changing date, time, or location:</strong> Must be requested at least 72 hours in advance. Later changes cannot be guaranteed and may be treated as a cancellation.</p>
                   <p><strong className="text-white/80">Changing the menu:</strong> If MyChef is creating the menu for you, changes must be requested at least 72 hours in advance. If you already agreed on a specific menu with the chef, any changes must be requested at least 72 hours before the booking.</p>
                 </div>
-                <p className="text-white/40 italic">All changes are subject to chef availability and must be confirmed in writing by MyChef.</p>
+                <p className="text-white/60 italic">All changes are subject to chef availability and must be confirmed in writing by MyChef.</p>
               </div>
             </div>
 
@@ -132,9 +132,9 @@ export default function TermsPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                 {CANCELLATION_TIERS.map((tier) => (
                   <div key={tier.days} className={`p-6 rounded-2xl border text-center ${tier.refund === '100%' ? 'border-[#D4AF37]/30' : tier.refund === '50%' ? 'border-white/10' : 'border-red-900/30'}`} style={{ background: tier.refund === '100%' ? 'rgba(212,175,55,0.05)' : 'rgba(255,255,255,0.02)' }}>
-                    <p className="text-xs text-white/40 uppercase tracking-wider mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{tier.days}</p>
+                    <p className="text-xs text-white/60 uppercase tracking-wider mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{tier.days}</p>
                     <p className={`text-3xl font-light mb-2 ${tier.refund === '100%' ? 'text-[#D4AF37]' : tier.refund === '50%' ? 'text-white/60' : 'text-red-400/60'}`} style={{ fontFamily: "'Playfair Display', serif" }}>{tier.refund}</p>
-                    <p className="text-xs text-white/40">{tier.note}</p>
+                    <p className="text-xs text-white/60">{tier.note}</p>
                   </div>
                 ))}
               </div>
@@ -144,7 +144,7 @@ export default function TermsPage() {
                   <li>Pre-purchased groceries or special items: If ingredients have already been purchased, those costs (with receipts) may be deducted from any refund.</li>
                   <li>Payment processing or bank fees: Non-refundable if already incurred.</li>
                 </ul>
-                <p className="text-white/40 italic mt-4">If MyChef or the assigned chef cancels, you receive a full refund of all payments made.</p>
+                <p className="text-white/60 italic mt-4">If MyChef or the assigned chef cancels, you receive a full refund of all payments made.</p>
               </div>
             </div>
 

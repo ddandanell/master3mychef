@@ -33,11 +33,13 @@
     <meta name="twitter:description" content="Italian fine dining, private villa chefs, and full-service events in Bali." />
     <meta name="twitter:image" content="https://mychef.id/og-image.jpg" />
 
-    <!-- Performance: preconnect to WhatsApp and preload hero -->
+    <!-- Performance: preconnect to fonts + WhatsApp, preload hero -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://wa.me" />
     <link rel="preload" as="image" href="/generated/hub-hero-v3.jpg" fetchpriority="high" />
 
-    <!-- Structured data: LocalBusiness -->
+    <!-- Structured data: LocalBusiness with AggregateRating -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -59,13 +61,22 @@
           "postalCode": "80226",
           "addressCountry": "ID"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -8.6905,
+          "longitude": 115.2126
+        },
         "areaServed": [
           { "@type": "Place", "name": "Seminyak" },
           { "@type": "Place", "name": "Canggu" },
           { "@type": "Place", "name": "Ubud" },
           { "@type": "Place", "name": "Uluwatu" },
           { "@type": "Place", "name": "Sanur" },
-          { "@type": "Place", "name": "Nusa Dua" }
+          { "@type": "Place", "name": "Nusa Dua" },
+          { "@type": "Place", "name": "Jimbaran" },
+          { "@type": "Place", "name": "Berawa" },
+          { "@type": "Place", "name": "Pererenan" },
+          { "@type": "Place", "name": "Bukit Peninsula" }
         ],
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
@@ -73,7 +84,91 @@
           "opens": "08:00",
           "closes": "22:00"
         },
-        "sameAs": []
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "500",
+          "bestRating": "5"
+        },
+        "sameAs": [
+          "https://instagram.com/mychef.id",
+          "https://facebook.com/mychef.id",
+          "https://wa.me/6282237565997"
+        ]
+      }
+    </script>
+
+    <!-- Structured data: FAQPage — 8 high-intent Bali private chef questions -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How far in advance should I book a private chef in Bali?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For fine dining, 7+ days is ideal. For villa chefs, 3+ days. For events, 4+ weeks. We accommodate last-minute requests whenever possible."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you serve all areas of Bali?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan, Bukit Peninsula and everywhere in between. We have chefs based across the island."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What about dietary restrictions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every menu is tailored. Gluten-free, vegan, halal, nut allergies, pregnancy-friendly — just tell us. We have done it all at no extra charge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are groceries included in the private chef price?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For fine dining and events, ingredients are included. For villa chef catering, groceries are billed at cost with no markup — you see every receipt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many staff come to my villa for fine dining?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Fine dining: 6–10 staff (chef, sous chef, servers, sommelier). Villa chef: 1–2 chefs. Events: depends on scale, quoted in your proposal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the cancellation policy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Full refund 14+ days before. 50% refund 7–13 days before. No refund less than 7 days. See our full cancellation policy for details."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does payment work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A 25% deposit confirms your booking and locks your chef. The remaining 75% is paid when the chef arrives at your villa, before service begins."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does a private chef cost in Bali?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Villa chef catering starts at IDR 600,000 per hour with groceries at cost. Fine dining tasting menus start at IDR 2,200,000++ per guest. Event packages start at IDR 15,000,000 for 10–30 guests."
+            }
+          }
+        ]
       }
     </script>
   </head>

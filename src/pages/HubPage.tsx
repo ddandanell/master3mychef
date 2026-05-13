@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, Award } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import BestPartnerBadge from '@/components/BestPartnerBadge'
+import SeoHead from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -11,27 +13,24 @@ const PORTALS = [
     id: 'fine-dining',
     title: 'Fine Dining',
     subtitle: 'Italian tasting menus in your villa. Two curated experiences.',
-    price: 'From IDR 2,200,000++',
     path: '/fine-dining',
-    image: '/generated/hub-hero-v2.jpg',
+    image: '/generated/hub-fine-dining.png',
     accent: '#D4AF37',
   },
   {
     id: 'catering',
     title: 'Catering',
     subtitle: 'Private chef for breakfast, lunch, and dinner. No planning needed.',
-    price: 'From IDR 600K per hour',
     path: '/villa-chef',
-    image: '/generated/sol-hero-v2.jpg',
+    image: '/generated/hub-catering.png',
     accent: '#6B8E5A',
   },
   {
     id: 'events',
     title: 'Events',
     subtitle: 'Weddings, retreats, and celebrations. Fully hosted.',
-    price: 'Custom quote',
     path: '/events',
-    image: '/generated/aura-hero-v2.jpg',
+    image: '/generated/hub-events.png',
     accent: '#2C5F7C',
   },
 ]
@@ -156,6 +155,12 @@ export default function HubPage() {
 
   return (
     <div>
+      <SeoHead
+        title="myCHEF.id — Private Chef & Villa Dining in Bali"
+        description="Italian fine dining, villa catering, and full-service events in Bali. A Michelin-trained team of 50+, in your kitchen. Same-day WhatsApp confirmation."
+        canonical="https://mychef.id/"
+        ogImage="https://mychef.id/generated/hub-hero-v3.jpg"
+      />
       {/* HERO */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -166,7 +171,7 @@ export default function HubPage() {
           <p className="hub-hero-label text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             myCHEF.id — Bali
           </p>
-          <h1 className="hub-hero-title text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-[1.1]" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="hub-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 leading-[1.1]" style={{ fontFamily: "'Playfair Display', serif" }}>
             Extraordinary Food,<br />
             <span className="italic">Without Leaving Your Villa</span>
           </h1>
@@ -193,23 +198,29 @@ export default function HubPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="u-heading text-4xl md:text-5xl lg:text-6xl mb-6">What We Do</h2>
-            <div className="gold-arc mx-auto" />
+            <div className="gold-arc mx-auto mb-6" />
+            <p className="text-[#1A1A1A]/60 max-w-xl mx-auto leading-relaxed">
+              Three ways we bring extraordinary food to your villa — from intimate dinners to full-service celebrations.
+            </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {PORTALS.map((portal) => (
-              <div key={portal.id} className="portal-card group relative rounded-2xl overflow-hidden" style={{ aspectRatio: '3/4' }}>
+              <div key={portal.id} className="portal-card group relative rounded-2xl overflow-hidden w-full" style={{ aspectRatio: '3/4', minHeight: '480px' }}>
                 <Link to={portal.path} className="absolute inset-0 z-10" aria-label={portal.title} />
-                <img src={portal.image} alt={portal.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style={{ background: '#1a1a1a' }} onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0.4' }} />
+                <img
+                  src={portal.image}
+                  alt={portal.title}
+                  className="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                  style={{ background: '#1a1a1a' }}
+                  onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0.4' }}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute inset-0 p-8 flex flex-col justify-end pointer-events-none">
                   <h3 className="text-3xl md:text-4xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{portal.title}</h3>
                   <p className="text-sm text-white/70 mb-5 leading-relaxed">{portal.subtitle}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-white/60">{portal.price}</span>
-                    <span className="flex items-center gap-2 text-sm font-medium transition-all group-hover:gap-4" style={{ color: portal.accent }}>
-                      Explore <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
+                  <span className="flex items-center gap-2 text-sm font-medium transition-all group-hover:gap-4" style={{ color: portal.accent }}>
+                    Explore <ArrowRight className="w-4 h-4" />
+                  </span>
                 </div>
                 <div className="absolute inset-0 rounded-2xl border-2 border-transparent transition-colors duration-500 group-hover:border-opacity-100 pointer-events-none" style={{ borderColor: portal.accent }} />
               </div>
@@ -314,20 +325,23 @@ export default function HubPage() {
               </div>
             ))}
           </div>
-          {/* Villa Awards */}
-          <div className="mt-12 pt-8 border-t flex flex-col md:flex-row items-center justify-center gap-6" style={{ borderColor: 'var(--u-border)' }}>
-            <div className="flex items-center gap-3 px-5 py-3 rounded-xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-              <Award className="w-5 h-5 text-[#D4AF37]" />
-              <div>
-                <p className="text-xs font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2025</p>
-                <p className="text-[10px] uppercase tracking-wider" style={{ color: 'var(--u-text-muted)' }}>Best Choice — Private Dining</p>
+          {/* Villa Awards + Best Partner diploma */}
+          <div className="mt-12 pt-8 border-t flex flex-col items-center gap-8" style={{ borderColor: 'var(--u-border)' }}>
+            <BestPartnerBadge variant="dark" width={320} />
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+              <div className="flex items-center gap-3 px-5 py-3 rounded-xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+                <Award className="w-5 h-5 text-[#D4AF37]" />
+                <div>
+                  <p className="text-xs font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2025</p>
+                  <p className="text-[10px] uppercase tracking-wider" style={{ color: 'var(--u-text-muted)' }}>Best Choice — Private Dining</p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-center gap-3 px-5 py-3 rounded-xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-              <Award className="w-5 h-5 text-[#D4AF37]" />
-              <div>
-                <p className="text-xs font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2026</p>
-                <p className="text-[10px] uppercase tracking-wider" style={{ color: 'var(--u-text-muted)' }}>Best Choice — Private Dining</p>
+              <div className="flex items-center gap-3 px-5 py-3 rounded-xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+                <Award className="w-5 h-5 text-[#D4AF37]" />
+                <div>
+                  <p className="text-xs font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2026</p>
+                  <p className="text-[10px] uppercase tracking-wider" style={{ color: 'var(--u-text-muted)' }}>Best Choice — Private Dining</p>
+                </div>
               </div>
             </div>
           </div>

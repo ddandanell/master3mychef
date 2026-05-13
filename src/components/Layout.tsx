@@ -8,9 +8,19 @@ import WhatsAppButton from './WhatsAppButton'
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
 
+  // Reset scroll to top on route change — UNLESS the URL contains a hash anchor.
+  // For hash navigation (e.g. /fine-dining#book) we let the browser scroll to the
+  // target section, which is then offset by scroll-mt-24 to clear the fixed nav.
   useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash)
+      if (el) {
+        requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+        return
+      }
+    }
     window.scrollTo({ top: 0, behavior: 'instant' })
-  }, [location.pathname])
+  }, [location.pathname, location.hash])
 
   return (
     <UniverseProvider>

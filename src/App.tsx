@@ -20,6 +20,12 @@ import MenuPage from './components/MenuPage'
 import LandingPage from './components/LandingPage'
 import InfoPage from './components/InfoPage'
 import BlogIndexPage from './components/BlogIndexPage'
+import BaliHubPage from './components/BaliHubPage'
+import QuoteFunnel from './components/QuoteFunnel'
+import StaffingPage from './pages/StaffingPage'
+import ServicesPage from './pages/ServicesPage'
+import PartnerPlatformPage from './pages/PartnerPlatformPage'
+import CertifiedPartnerPage from './pages/CertifiedPartnerPage'
 
 import { AREAS, MICRO_AREAS, SERVICES, MENUS, LANDING_PAGES, GUIDES, BLOG_POSTS } from './data/sitemap'
 import { REDIRECTS } from './data/redirects'
@@ -54,6 +60,15 @@ export default function App() {
         <Route path="/terms-of-service" element={<TermsPage />} />
         <Route path="/cancellation" element={<CancellationPage />} />
         <Route path="/payment-terms" element={<CancellationPage />} />
+
+        {/* Services — top-nav page */}
+        <Route path="/services" element={<ServicesPage />} />
+        {/* Staffing — top-nav page */}
+        <Route path="/staffing" element={<StaffingPage />} />
+        {/* Partner Platform — villa partnership deep-dive */}
+        <Route path="/partner-platform" element={<PartnerPlatformPage />} />
+        {/* Public certified-partner verification pages (templated by slug) */}
+        <Route path="/certified/:slug" element={<CertifiedPartnerPage />} />
 
         {/* Production aliases for existing pages */}
         <Route path="/villa-partners" element={<PartnersPage />} />
@@ -106,8 +121,11 @@ export default function App() {
           <Route key={l.slug} path={`/${l.slug}`} element={<LandingPage kind="landing" />} />
         ))}
 
+        {/* Bali hub — links to all 10 top cities */}
+        <Route path="/guide/private-chef-bali" element={<BaliHubPage />} />
+
         {/* Guides */}
-        {GUIDES.map((g) => (
+        {GUIDES.filter((g) => g.slug !== 'guide/private-chef-bali').map((g) => (
           <Route key={g.slug} path={`/${g.slug}`} element={<LandingPage kind="guide" />} />
         ))}
 
@@ -199,19 +217,7 @@ export default function App() {
             slug="join-our-team"
           />
         } />
-        <Route path="/quote" element={
-          <InfoPage
-            title="Get a Custom Quote"
-            description="Tell us about your event and receive a personalized private chef quote within 24 hours."
-            slug="quote"
-            highlights={[
-              '9-step quick form',
-              'Quote within 24 hours',
-              'Transparent, all-inclusive pricing',
-              'No deposit required to start planning',
-            ]}
-          />
-        } />
+        <Route path="/quote" element={<QuoteFunnel />} />
         <Route path="/calculator" element={
           <InfoPage
             title="Pricing Calculator"

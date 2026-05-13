@@ -3,6 +3,7 @@ import { Check, Utensils, Star, MessageCircle, Phone, ShoppingBag, Sparkles, Che
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
+import SeoHead from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -53,11 +54,6 @@ export default function SolPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.3 })
-      tl.fromTo('.sol-hero-label', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      tl.fromTo('.sol-hero-title', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.5')
-      tl.fromTo('.sol-hero-sub', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      tl.fromTo('.sol-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, '-=0.4')
 
       gsap.fromTo('.sol-reveal', { y: 50, opacity: 0 }, {
         y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
@@ -69,15 +65,21 @@ export default function SolPage() {
 
   return (
     <div ref={ref} data-universe="sol" className="min-h-screen" style={{ background: '#F5F0E8', color: '#2C2419' }}>
+      <SeoHead
+        title="Private Villa Chef in Bali — Daily Breakfast, Lunch & Dinner | myCHEF"
+        description="Hire a private villa chef in Bali for the length of your stay. Daily breakfast, lunch, and dinner. Groceries at cost. From IDR 600,000 per hour."
+        canonical="https://mychef.id/villa-chef"
+        ogImage="https://mychef.id/generated/catering-hero.jpg"
+      />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/sol-hero-v2.jpg" alt="Villa chef on terrace" className="w-full h-full object-cover" />
+          <img src="/generated/catering-hero.jpg" alt="Villa chef plating a family-style brunch at a Bali villa, golden morning light" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="sol-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Catering</p>
-          <h1 className="sol-hero-title text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="sol-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 " style={{ fontFamily: "'Playfair Display', serif" }}>
             Your Private<br /><span className="italic">Villa Chef</span>
           </h1>
           <p className="sol-hero-sub text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
@@ -95,7 +97,7 @@ export default function SolPage() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="sol-content py-24 md:py-32 px-6">
+      <section id="how-it-works" className="sol-content py-24 md:py-32 px-6 scroll-mt-24">
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Process</p>
@@ -123,7 +125,7 @@ export default function SolPage() {
       </section>
 
       {/* Meal Plans */}
-      <section id="plans" className="py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
+      <section id="plans" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FFFFFF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Pricing</p>
@@ -139,7 +141,23 @@ export default function SolPage() {
                   <span className="text-sm" style={{ color: '#8A7B6B' }}>{plan.period}</span>
                 </div>
                 <p className="text-sm mb-6 leading-relaxed" style={{ color: '#8A7B6B' }}>{plan.desc}</p>
-                <a href="#book" className="block text-center py-3 rounded-xl text-sm font-medium tracking-wider uppercase transition-all hover:scale-[1.02]" style={{ background: i === 2 ? '#6B8E5A' : '#F5F0E8', color: i === 2 ? '#FFFFFF' : '#2C2419' }}>
+                <a
+                  href={`#book?plan=${encodeURIComponent(plan.name)}`}
+                  onClick={() => {
+                    // Pre-fill the booking form's meal plan field then scroll
+                    const target = document.querySelector('#book select[name="mealPlan"], #book select') as HTMLSelectElement | null
+                    if (target) {
+                      const match = Array.from(target.options).find((o) => o.text.toLowerCase().includes(plan.name.toLowerCase()))
+                      if (match) {
+                        target.value = match.value || match.text
+                        target.dispatchEvent(new Event('change', { bubbles: true }))
+                      }
+                    }
+                    // The default anchor jump will handle scroll
+                  }}
+                  className="block text-center py-3 rounded-xl text-sm font-medium tracking-wider uppercase transition-all hover:scale-[1.02]"
+                  style={{ background: i === 2 ? '#6B8E5A' : '#F5F0E8', color: i === 2 ? '#FFFFFF' : '#2C2419' }}
+                >
                   Select Plan
                 </a>
               </div>
@@ -149,7 +167,7 @@ export default function SolPage() {
       </section>
 
       {/* What's Included */}
-      <section id="included" className="py-24 md:py-32 px-6" style={{ background: '#F5F0E8' }}>
+      <section id="included" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#F5F0E8' }}>
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Everything Included</p>
@@ -173,7 +191,7 @@ export default function SolPage() {
       </section>
 
       {/* Chef */}
-      <section id="team" className="py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
+      <section id="team" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FFFFFF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
@@ -268,7 +286,7 @@ export default function SolPage() {
       </section>
 
       {/* Booking */}
-      <section id="book" className="py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
+      <section id="book" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FFFFFF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>

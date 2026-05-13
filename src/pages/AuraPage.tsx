@@ -3,6 +3,7 @@ import { Check, Heart, Building2, PartyPopper, Star, MessageCircle, Phone, Spark
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
+import SeoHead from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -58,11 +59,6 @@ export default function AuraPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.3 })
-      tl.fromTo('.aura-hero-label', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      tl.fromTo('.aura-hero-title', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.5')
-      tl.fromTo('.aura-hero-sub', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      tl.fromTo('.aura-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, '-=0.4')
 
       gsap.fromTo('.aura-reveal', { y: 50, opacity: 0 }, {
         y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
@@ -74,6 +70,12 @@ export default function AuraPage() {
 
   return (
     <div ref={ref} data-universe="aura" className="min-h-screen" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>
+      <SeoHead
+        title="Event Catering in Bali — Weddings, Retreats, Corporate Dinners | myCHEF"
+        description="Full-service event catering across Bali. Weddings from intimate vow exchanges to 200-guest galas, corporate retreats, celebrations. Catering, bar, décor, staffing — handled."
+        canonical="https://mychef.id/events"
+        ogImage="https://mychef.id/generated/aura-hero-v2.jpg"
+      />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -82,7 +84,7 @@ export default function AuraPage() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="aura-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Events</p>
-          <h1 className="aura-hero-title text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="aura-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 " style={{ fontFamily: "'Playfair Display', serif" }}>
             Events,<br /><span className="italic">Perfectly Hosted</span>
           </h1>
           <p className="aura-hero-sub text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
@@ -100,7 +102,7 @@ export default function AuraPage() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="aura-content py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
+      <section id="how-it-works" className="aura-content py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FFFFFF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Process</p>
@@ -128,7 +130,7 @@ export default function AuraPage() {
       </section>
 
       {/* Event Types */}
-      <section id="types" className="py-24 md:py-32 px-6" style={{ background: '#F8F7F5' }}>
+      <section id="types" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#F8F7F5' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>What We Do</p>
@@ -149,7 +151,7 @@ export default function AuraPage() {
       </section>
 
       {/* Packages */}
-      <section id="packages" className="py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
+      <section id="packages" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FFFFFF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Packages</p>
@@ -182,7 +184,7 @@ export default function AuraPage() {
       </section>
 
       {/* What's Included */}
-      <section id="included" className="py-24 md:py-32 px-6" style={{ background: '#F8F7F5' }}>
+      <section id="included" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#F8F7F5' }}>
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Everything Included</p>
@@ -206,7 +208,7 @@ export default function AuraPage() {
       </section>
 
       {/* Team */}
-      <section id="team" className="py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
+      <section id="team" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FFFFFF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
@@ -301,7 +303,7 @@ export default function AuraPage() {
       </section>
 
       {/* Booking */}
-      <section id="book" className="py-24 md:py-32 px-6" style={{ background: '#FFFFFF' }}>
+      <section id="book" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FFFFFF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>

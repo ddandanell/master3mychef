@@ -76,7 +76,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
           Message Sent to {config.whatsappName}
         </h3>
         <p className="mb-6" style={{ color: 'var(--u-text-muted)' }}>
-          She typically responds within the hour. Meanwhile, feel free to browse our menus.
+          {config.whatsappName} typically responds within the hour. Meanwhile, feel free to browse our menus.
         </p>
         <button
           onClick={() => { setSubmitted(false); setFormData({}) }}

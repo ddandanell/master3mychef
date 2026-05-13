@@ -1,0 +1,120 @@
+import { Link } from 'react-router-dom'
+import { MessageCircle, Utensils, Flame, Sparkles } from 'lucide-react'
+import SeoHead from './SeoHead'
+import { TOP_CITIES } from '@/data/topCities'
+
+const SITE = 'https://mychef.id'
+const WA = '6282237565997'
+
+// The Bali hub — links to all 10 top-city pages.
+// Lives at /guide/private-chef-bali so the SEO from the old guide URL is reused.
+// This is the page each city page links back to ("See the full Bali coverage map").
+export default function BaliHubPage() {
+  const canonical = `${SITE}/guide/private-chef-bali`
+  const title = 'Private Chef in Bali — Every Villa Region We Serve'
+  const description = 'myCHEF serves the ten most-visited villa regions in Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan, and Bukit. Catering, events, and fine dining at every address.'
+  const waLink = `https://wa.me/${WA}?text=${encodeURIComponent("Hi myCHEF, I'd like a private chef in Bali.")}`
+
+  return (
+    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+      <SeoHead title={`${title} | myCHEF`} description={description} canonical={canonical} ogImage={`${SITE}/generated/bali-hub-hero.jpg`} />
+
+      {/* Hero — full-bleed image with overlay copy */}
+      <section className="relative w-full min-h-[78vh] flex items-end overflow-hidden">
+        <img
+          src="/generated/bali-hub-hero.jpg"
+          alt="Luxury Bali villa with private dining setup at golden hour overlooking rice terraces and the Indian Ocean"
+          className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(180deg, rgba(5,5,5,0.35) 0%, rgba(5,5,5,0.15) 35%, rgba(5,5,5,0.85) 100%)' }}
+        />
+        <div className="relative z-10 px-8 pb-12 md:pb-20 pt-24 md:pt-32 max-w-[1100px] mx-auto w-full text-white">
+          <p className="font-cormorant text-[#D4AF37] text-sm uppercase tracking-[4px] mb-4">Bali coverage</p>
+          <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-6 max-w-[820px]">{title}</h1>
+          <p className="text-base md:text-lg text-white/85 max-w-[640px] mb-8">
+            Wherever your villa is in Bali, we have a chef ten minutes away. Pick the area closest to where you are staying —
+            we cook the same three things at every address: <span className="text-[#6B8E5A] font-medium">catering</span>,{' '}
+            <span className="text-[#2C5F7C] font-medium">events</span>, and{' '}
+            <span className="text-[#D4AF37] font-medium">fine dining</span>.
+          </p>
+          <a href={waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1ea855] transition-all">
+            <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* The 10 cities, each as a card linking to the area page */}
+      <section className="px-8 py-16 bg-white">
+        <div className="max-w-[1100px] mx-auto">
+          <h2 className="font-playfair text-3xl md:text-4xl mb-2">The ten regions we cook in</h2>
+          <p className="text-[#4A4745] mb-10 max-w-[640px]">
+            Each region has its own villa profile, its own kitchens, and its own logistics.
+            Tap a region to see what we do there and what we cook best.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {TOP_CITIES.map((c) => (
+              <Link
+                key={c.slug}
+                to={`/${c.slug}`}
+                className="block bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#D4AF37] transition-all"
+              >
+                <div className="flex items-baseline justify-between mb-3">
+                  <h3 className="font-playfair text-2xl">{c.name}</h3>
+                  <span className="text-xs uppercase tracking-[2px] text-[#8A8785]">→</span>
+                </div>
+                <p className="text-sm font-medium text-[#1A1A1A] mb-2">{c.hook}</p>
+                <p className="text-sm text-[#4A4745] mb-3">{c.blurb}</p>
+                <p className="text-xs text-[#8A8785] italic">{c.signature}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Three-service callout */}
+      <section className="px-8 py-16 bg-[#FAFAF8]">
+        <div className="max-w-[1100px] mx-auto">
+          <p className="text-center font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">What we cook everywhere</p>
+          <h2 className="text-center font-playfair text-3xl md:text-4xl mb-12">Three services. Every villa. Every region.</h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link to="/villa-chef" className="bg-white border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#6B8E5A] transition-all">
+              <Utensils className="w-6 h-6 text-[#6B8E5A] mb-3" />
+              <h3 className="font-playfair text-2xl mb-3">Catering</h3>
+              <p className="text-sm text-[#4A4745]">Private villa chef for breakfast, lunch, dinner. Weekly meal prep. Groceries billed at cost — no markup.</p>
+            </Link>
+            <Link to="/events" className="bg-white border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#2C5F7C] transition-all">
+              <Sparkles className="w-6 h-6 text-[#2C5F7C] mb-3" />
+              <h3 className="font-playfair text-2xl mb-3">Events</h3>
+              <p className="text-sm text-[#4A4745]">Weddings, retreats, corporate dinners, birthdays. Catering, bar, décor, on-site coordination.</p>
+            </Link>
+            <Link to="/fine-dining" className="bg-white border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#D4AF37] transition-all">
+              <Flame className="w-6 h-6 text-[#D4AF37] mb-3" />
+              <h3 className="font-playfair text-2xl mb-3">Fine Dining</h3>
+              <p className="text-sm text-[#4A4745]">Two curated tasting menus in your villa. White-clad team, sommelier pairing, open-flame cooking.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner callout */}
+      <section className="px-8 py-16 bg-white">
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Partner villas</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-4">We work with 50+ luxury villas across Bali</h2>
+          <p className="text-[#4A4745] mb-6">
+            If you own or manage a villa in any of the ten regions above, our partner programme lets you offer on-demand
+            fine dining as part of your guest experience — at preferred partner pricing.
+          </p>
+          <Link to="/partners" className="inline-flex items-center justify-center bg-[#2C5F7C] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1E4A5E] transition-all">
+            See the Partner Programme
+          </Link>
+        </div>
+      </section>
+    </main>
+  )
+}

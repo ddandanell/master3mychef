@@ -90,6 +90,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* Smooth hash-anchor scrolling. Lenis (when active) overrides this with auto. */
+    scroll-behavior: smooth;
   }
 
   body {
@@ -99,6 +101,42 @@
     overflow-x: hidden;
     transition: background-color 0.6s ease, color 0.6s ease;
   }
+
+  /* Gold focus ring everywhere — accessibility + brand */
+  *:focus-visible {
+    outline: 2px solid var(--brand-gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--brand-gold);
+    color: #050505;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Hero fade-in keyframe — used by .luna-hero-* (Fine Dining) and any other hero
+     that wants a guaranteed reveal independent of GSAP/ScrollTrigger. */
+  @keyframes hero-rise {
+    from { opacity: 0; transform: translate3d(0, 20px, 0); }
+    to   { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+  .luna-hero-label, .luna-hero-title, .luna-hero-sub, .luna-hero-cta,
+  .sol-hero-label,  .sol-hero-title,  .sol-hero-sub,  .sol-hero-cta,
+  .aura-hero-label, .aura-hero-title, .aura-hero-sub, .aura-hero-cta {
+    animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .luna-hero-label, .sol-hero-label, .aura-hero-label { animation-delay: 0.10s; }
+  .luna-hero-title, .sol-hero-title, .aura-hero-title { animation-delay: 0.20s; }
+  .luna-hero-sub,   .sol-hero-sub,   .aura-hero-sub   { animation-delay: 0.45s; }
+  .luna-hero-cta,   .sol-hero-cta,   .aura-hero-cta   { animation-delay: 0.65s; }
 
   /* Lenis smooth scroll */
   html.lenis, html.lenis body {

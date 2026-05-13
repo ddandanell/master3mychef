@@ -53,6 +53,7 @@ export const AREAS: { slug: string; name: string }[] = [
   { slug: 'petitenget', name: 'Petitenget' },
   { slug: 'berawa', name: 'Berawa' },
   { slug: 'pererenan', name: 'Pererenan' },
+  { slug: 'bukit', name: 'Bukit Peninsula' },
   { slug: 'tanah-lot', name: 'Tanah Lot' },
   { slug: 'tabanan', name: 'Tabanan' },
   { slug: 'denpasar', name: 'Denpasar' },
@@ -62,7 +63,6 @@ export const AREAS: { slug: string; name: string }[] = [
   { slug: 'lovina', name: 'Lovina' },
   { slug: 'candidasa', name: 'Candidasa' },
   { slug: 'padang-bai', name: 'Padang Bai' },
-  { slug: 'bukit', name: 'Bukit Peninsula' },
   { slug: 'ungasan', name: 'Ungasan' },
   { slug: 'pecatu', name: 'Pecatu' },
 ]
@@ -144,6 +144,8 @@ export const INFO_PAGES: SitemapEntry[] = [
   { path: '/recommended-services', type: 'info', title: 'Recommended Services in Bali', description: 'Our trusted partners for DJs, decor, photography, transport, and other event services in Bali.', priority: 0.5, changefreq: 'monthly' },
   { path: '/join-our-team', type: 'info', title: 'Join Our Team', description: 'Open chef and hospitality roles at myCHEF — apply to join our growing team.', priority: 0.4, changefreq: 'monthly' },
   { path: '/quote', type: 'tool', title: 'Get a Custom Quote', description: 'Tell us about your event and receive a personalized private chef quote within 24 hours.', priority: 0.9, changefreq: 'monthly' },
+  { path: '/staffing', type: 'info', title: 'Private Chef Staffing in Bali', description: 'Full-time, part-time, live-in, retreat, and temporary cover private chef staffing for villas, families, and retreats in Bali.', priority: 0.9, changefreq: 'monthly' },
+  { path: '/partner-platform', type: 'info', title: 'myCHEF Partner Platform — Michelin-Level Private Dining for Bali Villas', description: 'A villa dining partner platform for luxury villas, villa management companies, boutique hospitality brands, and premium operators across Bali. Co-branded or white-label.', priority: 0.9, changefreq: 'monthly' },
   { path: '/calculator', type: 'tool', title: 'Pricing Calculator', description: 'Estimate the cost of a private chef in Bali — guests, meals, cuisine, and add-ons.', priority: 0.7, changefreq: 'monthly' },
   { path: '/blog', type: 'blog-index', title: 'myCHEF Blog', description: 'Guides, cost breakdowns, and culinary insights for hosting in Bali.', priority: 0.8, changefreq: 'monthly' },
 ]

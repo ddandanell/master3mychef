@@ -3,6 +3,8 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Star, Award, Shield, Users, Send, Check, ChevronDown } from 'lucide-react'
+import BestPartnerBadge from '@/components/BestPartnerBadge'
+import SeoHead from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -43,20 +45,32 @@ const faqs = [
   { q: 'Do you provide training for in-house staff?', a: 'Yes. We offer culinary training, food safety certification, and hospitality coaching for in-house teams. Many of our partners use this to elevate their entire F&B operation.' },
 ]
 
+const WA = '6282237565997'
+
 export default function PartnersPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const pageRef = useRef<HTMLDivElement>(null)
+  const [partnerForm, setPartnerForm] = useState({ name: '', email: '', property: '', type: '', size: '', notes: '' })
+
+  const handlePartnerSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!partnerForm.name || !partnerForm.email) return
+    const text = encodeURIComponent(
+      `Hi Marco, I would like to apply for the myCHEF partner programme.\n\nName: ${partnerForm.name}\nEmail: ${partnerForm.email}\nProperty: ${partnerForm.property || '—'}\nProperty Type: ${partnerForm.type || '—'}\nRooms / Villas: ${partnerForm.size || '—'}\n\n${partnerForm.notes || ''}`.trim(),
+    )
+    window.open(`https://wa.me/${WA}?text=${text}`, '_blank', 'noopener,noreferrer')
+  }
 
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.3 })
-    tl.fromTo('.part-hero-label', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
-    tl.fromTo('.part-hero-title', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.4')
-    tl.fromTo('.part-hero-sub', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.5')
+    tl.fromTo('.part-hero-label', { y: 20 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
+    tl.fromTo('.part-hero-title', { y: 30 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.4')
+    tl.fromTo('.part-hero-sub', { y: 20 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.5')
   }, [])
 
   useGSAP(() => {
     document.querySelectorAll('.part-reveal').forEach((el) => {
-      gsap.fromTo(el, { y: 50, opacity: 0 }, {
+      gsap.fromTo(el, { y: 50 }, {
         y: 0, opacity: 1, duration: 0.9, ease: 'power3.out',
         scrollTrigger: { trigger: el, start: 'top 82%', once: true },
       })
@@ -65,6 +79,12 @@ export default function PartnersPage() {
 
   return (
     <div ref={pageRef} className="bg-white">
+      <SeoHead
+        title="Villa Partner Programme — myCHEF for Bali Hospitality Partners"
+        description="Trusted by 50+ luxury villas across Bali. Certified chef placement, insurance, dedicated account management. Join the myCHEF villa partner programme."
+        canonical="https://mychef.id/partners"
+        ogImage="https://mychef.id/generated/partner-platform-hero.jpg"
+      />
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -72,11 +92,11 @@ export default function PartnersPage() {
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.75) 50%, transparent 100%)' }} />
         </div>
         <div className="relative z-10 px-8 md:px-16 lg:px-20 py-24 max-w-[650px]">
-          <p className="part-hero-label font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4" style={{ opacity: 0 }}>Partners</p>
-          <h1 className="part-hero-title font-playfair font-bold text-[#1A1A1A] text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-4" style={{ opacity: 0 }}>
+          <p className="part-hero-label font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Partners</p>
+          <h1 className="part-hero-title font-playfair font-bold text-[#1A1A1A] text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-4">
             Trusted by Bali&apos;s<br />Finest Properties
           </h1>
-          <p className="part-hero-sub font-inter text-[#4A4745] text-base mb-8 max-w-[480px]" style={{ opacity: 0 }}>
+          <p className="part-hero-sub font-inter text-[#4A4745] text-base mb-8 max-w-[480px]">
             Luxury villas, boutique hotels, and wellness retreats across Bali partner with myCHEF 
             to deliver exceptional culinary experiences to their guests. 8+ years. 50+ team members. 
             One trusted hospitality partner.
@@ -92,9 +112,12 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* Partner Logos */}
-      <section className="part-reveal py-12 px-8 border-b border-[#E5E3E0]" style={{ opacity: 0 }}>
+      {/* Partner Logos + Best Partner badge */}
+      <section className="part-reveal py-14 px-8 border-b border-[#E5E3E0]">
         <div className="max-w-container-lg mx-auto">
+          <div className="flex justify-center mb-8">
+            <BestPartnerBadge variant="dark" width={280} />
+          </div>
           <p className="font-inter text-[#8A8785] text-xs uppercase tracking-[2px] text-center mb-6">Serving 50+ luxury villas across Bali</p>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
             {partnerRegions.map((region) => (
@@ -105,7 +128,7 @@ export default function PartnersPage() {
       </section>
 
       {/* Benefits */}
-      <section className="part-reveal py-20 md:py-28 px-8" style={{ backgroundColor: '#F8F7F5', opacity: 0 }}>
+      <section className="part-reveal py-20 md:py-28 px-8" style={{ backgroundColor: '#F8F7F5' }}>
         <div className="max-w-container-lg mx-auto">
           <div className="text-center mb-14">
             <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Why Partner</p>
@@ -127,7 +150,7 @@ export default function PartnersPage() {
       </section>
 
       {/* Certifications */}
-      <section className="part-reveal py-20 md:py-28 px-8" style={{ opacity: 0 }}>
+      <section className="part-reveal py-20 md:py-28 px-8">
         <div className="max-w-container-lg mx-auto">
           <div className="text-center mb-14">
             <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Certifications</p>
@@ -148,7 +171,7 @@ export default function PartnersPage() {
       </section>
 
       {/* Villa Aerial */}
-      <section className="part-reveal relative overflow-hidden" style={{ opacity: 0 }}>
+      <section className="part-reveal relative overflow-hidden">
         <img src="/villa-aerial.jpg" alt="Bali villas" className="w-full aspect-[21/9] object-cover" loading="lazy" />
         <div className="absolute inset-0 flex items-center justify-center" style={{ background: 'rgba(26,26,26,0.4)' }}>
           <div className="text-center px-6">
@@ -159,7 +182,7 @@ export default function PartnersPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="part-reveal py-20 md:py-28 px-8" style={{ backgroundColor: '#F8F7F5', opacity: 0 }}>
+      <section className="part-reveal py-20 md:py-28 px-8" style={{ backgroundColor: '#F8F7F5' }}>
         <div className="max-w-container-lg mx-auto">
           <div className="text-center mb-12">
             <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Partner Stories</p>
@@ -179,7 +202,7 @@ export default function PartnersPage() {
       </section>
 
       {/* FAQ */}
-      <section className="part-reveal py-20 md:py-28 px-8" style={{ opacity: 0 }}>
+      <section className="part-reveal py-20 md:py-28 px-8">
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-12">
             <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Questions</p>
@@ -202,21 +225,21 @@ export default function PartnersPage() {
       </section>
 
       {/* Form */}
-      <section id="partner-form" className="part-reveal py-20 md:py-28 px-8" style={{ backgroundColor: '#F8F7F5', opacity: 0 }}>
+      <section id="partner-form" className="part-reveal py-20 md:py-28 px-8" style={{ backgroundColor: '#F8F7F5' }}>
         <div className="max-w-[600px] mx-auto">
           <div className="text-center mb-10">
             <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Get Started</p>
             <h2 className="font-playfair font-bold text-[#1A1A1A] text-3xl md:text-4xl mb-4">Become a Partner</h2>
             <p className="font-inter text-[#4A4745] text-sm">Tell us about your property and we will design a partnership that elevates your guest experience.</p>
           </div>
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={handlePartnerSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <input type="text" placeholder="Your Name *" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
-              <input type="email" placeholder="Email *" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
+              <input required value={partnerForm.name} onChange={(e) => setPartnerForm((f) => ({ ...f, name: e.target.value }))} type="text" placeholder="Your Name *" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
+              <input required value={partnerForm.email} onChange={(e) => setPartnerForm((f) => ({ ...f, email: e.target.value }))} type="email" placeholder="Email *" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
             </div>
-            <input type="text" placeholder="Property / Villa Name" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
+            <input value={partnerForm.property} onChange={(e) => setPartnerForm((f) => ({ ...f, property: e.target.value }))} type="text" placeholder="Property / Villa Name" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <select className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none">
+              <select value={partnerForm.type} onChange={(e) => setPartnerForm((f) => ({ ...f, type: e.target.value }))} className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] focus:border-[#2C5F7C] focus:outline-none">
                 <option value="">Property Type</option>
                 <option>Luxury Villa</option>
                 <option>Boutique Hotel</option>
@@ -225,12 +248,13 @@ export default function PartnersPage() {
                 <option>Private Estate</option>
                 <option>Other</option>
               </select>
-              <input type="text" placeholder="Number of Rooms / Villas" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
+              <input value={partnerForm.size} onChange={(e) => setPartnerForm((f) => ({ ...f, size: e.target.value }))} type="text" placeholder="Number of Rooms / Villas" className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none" />
             </div>
-            <textarea placeholder="Tell us about your property, guest profile, and what you are looking for in a hospitality partner..." rows={4} className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none resize-none" />
+            <textarea value={partnerForm.notes} onChange={(e) => setPartnerForm((f) => ({ ...f, notes: e.target.value }))} placeholder="Tell us about your property, guest profile, and what you are looking for in a hospitality partner..." rows={4} className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 font-inter text-sm text-[#1A1A1A] placeholder:text-[#8A8785] focus:border-[#2C5F7C] focus:outline-none resize-none" />
             <button type="submit" className="w-full bg-[#2C5F7C] text-white font-inter font-semibold text-xs uppercase tracking-[2px] py-4 hover:bg-[#1E4A5E] transition-all flex items-center justify-center gap-2">
               <Send size={14} /> Send Partnership Request
             </button>
+            <p className="text-xs text-[#8A8785] text-center mt-2">Opens WhatsApp with your details pre-filled to send to Marco.</p>
           </form>
         </div>
       </section>

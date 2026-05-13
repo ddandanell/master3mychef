@@ -67,17 +67,12 @@
     },
     {
       "source": "/ungasan",
-      "destination": "/uluwatu",
+      "destination": "/bukit",
       "permanent": true
     },
     {
       "source": "/pecatu",
-      "destination": "/uluwatu",
-      "permanent": true
-    },
-    {
-      "source": "/bukit",
-      "destination": "/uluwatu",
+      "destination": "/bukit",
       "permanent": true
     },
     {
@@ -263,11 +258,6 @@
     {
       "source": "/guide/bali-cuisine-glossary",
       "destination": "/menus",
-      "permanent": true
-    },
-    {
-      "source": "/guide/private-chef-bali",
-      "destination": "/",
       "permanent": true
     },
     {

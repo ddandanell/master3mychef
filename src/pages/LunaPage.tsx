@@ -3,6 +3,9 @@ import { Flame, Wine, Clock, Users, Star, Check, ChevronRight, MessageCircle, Ph
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
+import OrderPanel from '@/components/OrderPanel'
+import BestPartnerBadge from '@/components/BestPartnerBadge'
+import SeoHead from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -12,6 +15,7 @@ const MENUS = [
     name: 'Mediterranean Sea Experience',
     price: 'IDR 2,200,000++',
     duration: 'Two and a half to three hours',
+    teaser: 'Italian seafood, in five movements. Pasta rolled in your villa.',
     desc: 'The coast Adriano grew up on, in five movements. The meal opens cold, sharp, and perfumed — the sea waking the palate. It moves through cream and pasta into the centre of the table: the lobster tagliatelle, rolled that afternoon in your kitchen. The main is fish, not meat — the menu\'s promise honoured. It closes on tiramisu, made the way it should be made, because by the time the dessert plate arrives the meal has earned the right to come home.',
     perfectFor: ['Private villa dinners', 'Celebrations', 'Romantic evenings', 'Luxury gatherings'],
     courses: {
@@ -39,6 +43,7 @@ const MENUS = [
     name: 'Wagyu Experience',
     price: 'IDR 2,400,000++',
     duration: 'Approximately three hours',
+    teaser: 'Wagyu Tokusen in three forms. Open-flame ribeye at your table.',
     desc: 'Wagyu Tokusen in three forms — raw, enveloped, and grilled. The opening is controlled: tartare, polenta chips, cured egg, basil oil. The middle slows the meal down: an oxtail ragout sealed inside a hand-rolled ravioli, finished with Grana Padano and a foam of kale — a long-cooked ingredient hidden in a delicate envelope, the kaiseki principle in Italian form. The climax is the ribeye, grilled hard and answered by three counterpoints: topinambur cream, blue cheese, walnuts. The meal closes on dark chocolate and salted caramel — bitter, restrained, deliberately not too sweet, so the room remembers what it just ate.',
     perfectFor: ['Luxury celebrations', 'Executive dinners', 'Premium villa experiences', 'Wine-focused evenings'],
     courses: {
@@ -130,15 +135,19 @@ const THE_FOUR = [
 export default function LunaPage() {
   const heroRef = useRef<HTMLDivElement>(null)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const [orderOpen, setOrderOpen] = useState(false)
+  const [orderExperience, setOrderExperience] = useState<string | undefined>(undefined)
+
+  const openOrder = (experience?: string) => {
+    setOrderExperience(experience)
+    setOrderOpen(true)
+  }
 
   useEffect(() => {
+    // Hero motion handled by CSS keyframe (.luna-hero-fade) so it is guaranteed
+    // to play even if GSAP context.revert() fires from a Strict Mode double-mount.
+    // GSAP still drives the scroll-triggered reveals below the fold.
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.3 })
-      tl.fromTo('.luna-hero-label', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      tl.fromTo('.luna-hero-title', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.5')
-      tl.fromTo('.luna-hero-sub', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      tl.fromTo('.luna-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, '-=0.4')
-
       gsap.fromTo('.luna-reveal', { y: 50, opacity: 0 }, {
         y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
         scrollTrigger: { trigger: '.luna-content', start: 'top 75%', once: true },
@@ -149,101 +158,56 @@ export default function LunaPage() {
 
   return (
     <div ref={heroRef} data-universe="luna" className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <SeoHead
+        title="Private Villa Fine Dining in Bali — Mediterranean & Wagyu Tasting Menus | myCHEF"
+        description="Two curated Italian and Mediterranean tasting menus in your Bali villa. Open-flame cooking, sommelier pairing, Michelin-trained team. From IDR 2,200,000++ per guest."
+        canonical="https://mychef.id/fine-dining"
+        ogImage="https://mychef.id/generated/luna-hero-v2.jpg"
+      />
+      {/*
+        Hero — luxury hotel booking aesthetic.
+        Full-screen cinematic image, dark gradient overlay (not flat tint), tiny gold
+        eyebrow, oversized serif headline, two CTAs: Order Now (opens the side panel)
+        and Explore Menu (anchors to #menus). Generous spacing — no badges, no chips.
+      */}
+      <section className="relative min-h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/luna-hero-v2.jpg" alt="Fine dining in Balinese village" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/65" />
+          <img src="/generated/luna-hero-v2.jpg" alt="Private villa dining at golden hour" className="w-full h-full object-cover" />
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.85))', backdropFilter: 'blur(2px)' }}
+          />
         </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="luna-hero-label inline-block text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-6 px-4 py-2 rounded-full border border-[#D4AF37]/30" style={{ fontFamily: "'Cormorant Garamond', serif", background: 'rgba(0,0,0,0.4)', textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>Fine Dining</p>
-          <h1 className="luna-hero-title text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>
-            An Extraordinary<br /><span className="italic">Evening</span>
-          </h1>
-          <p className="luna-hero-sub text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-            Italian fine dining, outdoors in a traditional Balinese village. Two curated tasting experiences. A team of white-clad professionals in your villa.
+        <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 pt-32 max-w-[1280px] mx-auto w-full">
+          <p
+            className="luna-hero-label text-[#D4AF37] text-xs md:text-sm tracking-[0.35em] uppercase mb-7"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Private Villa Dining
           </p>
-          <div className="luna-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#menus" className="px-8 py-4 bg-[#D4AF37] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#E8C84B] transition-all">See the Menus</a>
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
-              <MessageCircle className="w-4 h-4" /> Message Sofia
+          <h1
+            className="luna-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-8  max-w-[920px]"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Mediterranean Sea Experience
+          </h1>
+          <p className="luna-hero-sub text-base md:text-xl text-white/75 mb-12 max-w-[640px] leading-relaxed">
+            Two and a half to three hours of Mediterranean fine dining, served privately in your villa.
+          </p>
+          <div className="luna-hero-cta flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <button
+              type="button"
+              onClick={() => openOrder('Mediterranean Sea Experience')}
+              className="px-10 py-4 bg-[#D4AF37] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#E8C84B] transition-colors"
+            >
+              Order Now
+            </button>
+            <a
+              href="#menus"
+              className="inline-flex items-center justify-center px-10 py-4 border border-[#D4AF37]/60 text-[#D4AF37] text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4AF37]/10 transition-colors"
+            >
+              Explore Menu
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* The Four — Chapter Three */}
-      <section id="the-four" className="py-24 md:py-32 px-6" style={{ background: '#080808' }}>
-        <div className="max-w-[1280px] mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16 md:mb-20">
-            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chapter Three</p>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>The <span className="italic">Four</span></h2>
-            <p className="text-xl md:text-2xl text-white/60 italic max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              Trained by Adriano. One of them is in your kitchen tonight.
-            </p>
-          </div>
-
-          {/* Intro */}
-          <div className="max-w-3xl mx-auto text-center mb-20 md:mb-24">
-            <p className="text-white/50 leading-relaxed mb-6">
-              Adriano did not build a team. He built a lineage.
-            </p>
-            <p className="text-white/50 leading-relaxed mb-6">
-              He arrived in Bali in 2019 with the standards of Modena and Tokyo in his hands. He chose not to import a kitchen from Europe. He chose instead to find local talent and teach them everything he knew.
-            </p>
-            <p className="text-white/50 leading-relaxed mb-6">
-              Four chefs, over five years. Each found in Indonesia. Each chosen on his terms. Each trained by him personally — six months beside him before they cook a single plate for a paying guest, another year beside him before they lead an evening alone. Every sauce, every pour, every minute of pacing tested and corrected until it is right.
-            </p>
-            <p className="text-white/50 leading-relaxed mb-6">
-              He found them across three islands and three culinary traditions — Bali, Java, and Sumatra. What they share is the kitchen they were trained in.
-            </p>
-            <p className="text-white/50 leading-relaxed mb-6">
-              The result is something neither Italian nor Indonesian, and at the same time both. It is what happens when a master from one tradition trains his hands in another country, and the country leaves its mark on the cooking.
-            </p>
-            <p className="text-white/70 leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
-              These are the four.
-            </p>
-          </div>
-
-          {/* Chef Portraits + Bios — Desktop 2×2, Mobile vertical */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-20 max-w-[1080px] mx-auto">
-            {THE_FOUR.map((chef) => (
-              <div
-                key={chef.name}
-                className="group flex flex-col"
-              >
-                {/* Portrait — consistent treatment */}
-                <div className="relative aspect-[3/4] max-h-[252px] overflow-hidden rounded-t-2xl">
-                  <img
-                    src={chef.image}
-                    alt={chef.name}
-                    className="w-full h-full object-cover object-top grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-60" />
-                </div>
-
-                {/* Bio card */}
-                <div className="p-6 md:p-8 rounded-b-2xl border border-t-0 border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
-                  <div className="flex items-baseline justify-between mb-1">
-                    <h3 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>{chef.name}</h3>
-                    <span className="text-[10px] text-white/40 tracking-wider uppercase">{chef.origin}</span>
-                  </div>
-                  <p className="text-[#D4AF37] text-xs tracking-[0.15em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{chef.role}</p>
-                  <p className="text-white/50 text-sm leading-relaxed">{chef.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Closing line */}
-          <div className="text-center">
-            <p className="text-[#D4AF37]/80 text-sm md:text-base italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              One of the four will be in your kitchen on the night.
-            </p>
-            <p className="text-white/30 text-xs mt-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              Which one depends on the menu, the date, and what arrived on the morning boat.
-            </p>
           </div>
         </div>
       </section>
@@ -283,92 +247,8 @@ export default function LunaPage() {
         </div>
       </section>
 
-      {/* How It Works — Cinematic Luxury */}
-      <section id="how-it-works" className="relative py-32 md:py-40 px-6 overflow-hidden">
-        {/* Cinematic background layers */}
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 30% 20%, rgba(212,175,55,0.08) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(139,69,19,0.06) 0%, transparent 50%), #080808' }} />
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E")' }} />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,0.4) 50%, rgba(8,8,8,0) 100%)' }} />
-
-        <div className="relative z-10 max-w-[1280px] mx-auto">
-          {/* Header — asymmetrical, large */}
-          <div className="mb-20 md:mb-28">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-[1px] bg-[#D4AF37]/60" />
-              <p className="text-[#D4AF37] text-xs tracking-[0.4em] uppercase" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Process</p>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>
-                How It<br /><span className="italic">Works</span>
-              </h2>
-              <p className="text-white/40 text-sm md:text-base leading-relaxed max-w-md lg:ml-auto lg:text-right">
-                Four deliberate steps from first message to final course. Each handled with the precision of a Michelin kitchen.
-              </p>
-            </div>
-            <div className="mt-8 w-full h-[1px] bg-white/10" />
-          </div>
-
-          {/* Steps — asymmetrical grid with glassmorphism */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 lg:gap-6 mb-16">
-            {HOW_IT_WORKS.map((item, i) => (
-              <div
-                key={item.step}
-                className="group relative"
-                style={{ marginTop: i % 2 === 1 ? '2rem' : '0' }}
-              >
-                {/* Card with glassmorphism */}
-                <div className="relative p-8 md:p-6 lg:p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm transition-all duration-700 hover:border-[#D4AF37]/20 hover:bg-white/[0.04] hover:shadow-[0_0_60px_-15px_rgba(212,175,55,0.15)]">
-                  {/* Step number — framed, prominent */}
-                  <div className="absolute -top-4 -left-4 z-10">
-                    <div className="relative w-16 h-16 rounded-2xl border-2 border-white/[0.12] bg-[#0a0a0a] flex items-center justify-center transition-all duration-500 group-hover:border-[#D4AF37]/60 group-hover:shadow-[0_0_24px_-4px_rgba(212,175,55,0.25)] group-hover:scale-110">
-                      <span className="text-2xl font-semibold text-white/80 transition-colors duration-500 group-hover:text-[#D4AF37]" style={{ fontFamily: "'Playfair Display', serif" }}>
-                        {item.step}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Icon — glassmorphism circle with gold glow on hover */}
-                  <div className="relative mb-8 mt-4">
-                    <div className="w-16 h-16 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md flex items-center justify-center transition-all duration-500 group-hover:border-[#D4AF37]/30 group-hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.25)] group-hover:scale-110">
-                      <item.icon className="w-6 h-6 text-[#D4AF37]/80 transition-all duration-500 group-hover:text-[#D4AF37]" strokeWidth={1} />
-                    </div>
-                    {/* Subtle glow ring on hover */}
-                    <div className="absolute inset-0 w-16 h-16 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ boxShadow: '0 0 40px 8px rgba(212,175,55,0.15)' }} />
-                  </div>
-
-                  {/* Title — larger, elegant */}
-                  <h3 className="text-xl md:text-lg lg:text-xl text-white mb-3 leading-snug transition-colors duration-500 group-hover:text-[#D4AF37]" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {item.title}
-                  </h3>
-
-                  {/* Description — smaller, lighter, almost disappearing */}
-                  <p className="text-xs text-white/35 leading-relaxed transition-colors duration-500 group-hover:text-white/50">
-                    {item.desc}
-                  </p>
-
-                  {/* Bottom accent line */}
-                  <div className="mt-6 w-8 h-[1px] bg-white/10 transition-all duration-700 group-hover:w-16 group-hover:bg-[#D4AF37]/40" />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA — centered with ornament */}
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-6 mb-8">
-              <div className="w-16 h-[1px] bg-white/10" />
-              <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40" />
-              <div className="w-16 h-[1px] bg-white/10" />
-            </div>
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 border border-[#D4AF37]/30 text-[#D4AF37] text-sm tracking-[0.2em] uppercase rounded-full transition-all duration-500 hover:bg-[#D4AF37]/10 hover:border-[#D4AF37]/50 hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)]">
-              <Phone className="w-4 h-4" strokeWidth={1.5} /> Start on WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Menus */}
-      <section id="menus" className="py-24 md:py-32 px-6">
+      <section id="menus" className="py-24 md:py-32 px-6 scroll-mt-24">
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Menus</p>
@@ -378,27 +258,21 @@ export default function LunaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {MENUS.map((menu) => (
               <div key={menu.id} className="luna-reveal rounded-2xl border border-white/10 overflow-hidden">
-                {/* Menu image — 40% smaller */}
-                <div className="p-6 pb-0">
-                  <div className="max-w-[60%] mx-auto aspect-[4/3] overflow-hidden rounded-xl">
-                    <img
-                      src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean.png' : '/generated/menu-wagyu.png'}
-                      alt={menu.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Menu image — transparent PNG of the dry-aging cabinet, sits cleanly over the dark menu card */}
+                <div className="pt-8 pb-2 text-center">
+                  <img
+                    src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean-sea.png' : '/generated/menu-wagyu.png'}
+                    alt={menu.id === 'mediterranean' ? 'Mediterranean SEA Experience — certified tuna dry-aging cabinet' : 'Wagyu Experience — certified wagyu dry-aging cabinet'}
+                    style={{ height: '260px', width: 'auto', display: 'inline-block' }}
+                    className="object-contain drop-shadow-2xl"
+                  />
                 </div>
                 <div className="p-8 md:p-10" style={{ background: 'rgba(255,255,255,0.03)' }}>
-                  <div className="mb-4">
-                    <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.name}</h3>
-                    <p className="text-sm text-white/50">{menu.duration}</p>
+                  <div className="flex items-baseline justify-between gap-4 mb-4">
+                    <h3 className="text-2xl md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.name}</h3>
+                    <span className="text-[#D4AF37] text-base md:text-lg whitespace-nowrap" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{menu.price}</span>
                   </div>
-                  <p className="text-white/60 leading-relaxed mb-6">{menu.desc}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {menu.perfectFor.map((tag) => (
-                      <span key={tag} className="text-xs px-3 py-1 rounded-full border border-white/10 text-white/60">{tag}</span>
-                    ))}
-                  </div>
+                  <p className="text-white/65 leading-relaxed">{menu.teaser}</p>
                 </div>
                 <div className="p-8 md:p-10 border-t border-white/10">
                   <div className="mb-8">
@@ -439,7 +313,7 @@ export default function LunaPage() {
                   {/* Price at bottom */}
                   <div className="pt-6 border-t border-white/10 flex items-center justify-between">
                     <div>
-                      <p className="text-xs text-white/40 uppercase tracking-wider" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Per Person</p>
+                      <p className="text-xs text-white/60 uppercase tracking-wider" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Per Person</p>
                     </div>
                     <div className="text-right">
                       <p className="text-3xl font-medium text-[#D4AF37]" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.price}</p>
@@ -457,6 +331,202 @@ export default function LunaPage() {
             <p className="text-white/30 text-xs mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               All prices subject to government tax and service.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works — Cinematic Luxury */}
+      <section id="how-it-works" className="relative py-32 md:py-40 px-6 overflow-hidden scroll-mt-24">
+        {/* Cinematic background layers */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 30% 20%, rgba(212,175,55,0.08) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(139,69,19,0.06) 0%, transparent 50%), #0A0A0A' }} />
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E")' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,0.4) 50%, rgba(8,8,8,0) 100%)' }} />
+
+        <div className="relative z-10 max-w-[1280px] mx-auto">
+          {/* Header — asymmetrical, large */}
+          <div className="mb-20 md:mb-28">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-[1px] bg-[#D4AF37]/60" />
+              <p className="text-[#D4AF37] text-xs tracking-[0.4em] uppercase" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Process</p>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                How It<br /><span className="italic">Works</span>
+              </h2>
+              <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md lg:ml-auto lg:text-right">
+                Four deliberate steps from first message to final course. Each handled with the precision of a Michelin kitchen.
+              </p>
+            </div>
+            <div className="mt-8 w-full h-[1px] bg-white/10" />
+          </div>
+
+          {/* Steps — asymmetrical grid with glassmorphism */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 lg:gap-6 mb-16">
+            {HOW_IT_WORKS.map((item, i) => (
+              <div
+                key={item.step}
+                className="group relative"
+                style={{ marginTop: i % 2 === 1 ? '2rem' : '0' }}
+              >
+                {/* Card with glassmorphism */}
+                <div className="relative p-8 md:p-6 lg:p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm transition-all duration-700 hover:border-[#D4AF37]/20 hover:bg-white/[0.04] hover:shadow-[0_0_60px_-15px_rgba(212,175,55,0.15)]">
+                  {/* Step number — framed, prominent */}
+                  <div className="absolute -top-4 -left-4 z-10">
+                    <div className="relative w-16 h-16 rounded-2xl border-2 border-white/[0.12] bg-[#0a0a0a] flex items-center justify-center transition-all duration-500 group-hover:border-[#D4AF37]/60 group-hover:shadow-[0_0_24px_-4px_rgba(212,175,55,0.25)] group-hover:scale-110">
+                      <span className="text-2xl font-semibold text-white/80 transition-colors duration-500 group-hover:text-[#D4AF37]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        {item.step}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Icon — glassmorphism circle with gold glow on hover */}
+                  <div className="relative mb-8 mt-4">
+                    <div className="w-16 h-16 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md flex items-center justify-center transition-all duration-500 group-hover:border-[#D4AF37]/30 group-hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.25)] group-hover:scale-110">
+                      <item.icon className="w-6 h-6 text-[#D4AF37]/80 transition-all duration-500 group-hover:text-[#D4AF37]" strokeWidth={1} />
+                    </div>
+                    {/* Subtle glow ring on hover */}
+                    <div className="absolute inset-0 w-16 h-16 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ boxShadow: '0 0 40px 8px rgba(212,175,55,0.15)' }} />
+                  </div>
+
+                  {/* Title — larger, elegant */}
+                  <h3 className="text-xl md:text-lg lg:text-xl text-white mb-3 leading-snug transition-colors duration-500 group-hover:text-[#D4AF37]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {item.title}
+                  </h3>
+
+                  {/* Description — smaller, lighter, almost disappearing */}
+                  <p className="text-xs text-white/60 leading-relaxed transition-colors duration-500 group-hover:text-white/50">
+                    {item.desc}
+                  </p>
+
+                  {/* Bottom accent line */}
+                  <div className="mt-6 w-8 h-[1px] bg-white/10 transition-all duration-700 group-hover:w-16 group-hover:bg-[#D4AF37]/40" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA — centered with ornament */}
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-6 mb-8">
+              <div className="w-16 h-[1px] bg-white/10" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40" />
+              <div className="w-16 h-[1px] bg-white/10" />
+            </div>
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 border border-[#D4AF37]/30 text-[#D4AF37] text-sm tracking-[0.2em] uppercase rounded-full transition-all duration-500 hover:bg-[#D4AF37]/10 hover:border-[#D4AF37]/50 hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)]">
+              <Phone className="w-4 h-4" strokeWidth={1.5} /> Start on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* The Four — Chapter Three */}
+      <section id="the-four" className="py-16 md:py-24 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[1280px] mx-auto">
+          {/* Header */}
+          <div className="text-center mb-10 md:mb-14">
+            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chapter Three</p>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>The <span className="italic">Four</span></h2>
+            <p className="text-xl md:text-2xl text-white/60 italic max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Trained by Adriano. One of them is in your kitchen tonight.
+            </p>
+          </div>
+
+          {/* Intro */}
+          <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+            <p className="text-white/50 leading-relaxed mb-6">
+              Adriano did not build a team. He built a lineage.
+            </p>
+            <p className="text-white/50 leading-relaxed mb-6">
+              He arrived in Bali in 2019 with the standards of Modena and Tokyo in his hands. He chose not to import a kitchen from Europe. He chose instead to find local talent and teach them everything he knew.
+            </p>
+            <p className="text-white/50 leading-relaxed mb-6">
+              Four chefs, over five years. Each found in Indonesia. Each chosen on his terms. Each trained by him personally — six months beside him before they cook a single plate for a paying guest, another year beside him before they lead an evening alone. Every sauce, every pour, every minute of pacing tested and corrected until it is right.
+            </p>
+            <p className="text-white/50 leading-relaxed mb-6">
+              He found them across three islands and three culinary traditions — Bali, Java, and Sumatra. What they share is the kitchen they were trained in.
+            </p>
+            <p className="text-white/50 leading-relaxed mb-6">
+              The result is something neither Italian nor Indonesian, and at the same time both. It is what happens when a master from one tradition trains his hands in another country, and the country leaves its mark on the cooking.
+            </p>
+            <p className="text-white/70 leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
+              These are the four.
+            </p>
+          </div>
+
+          {/*
+            Chef portraits + bios. Editorial magazine framing — the image is the
+            full top half of the card, framed not cropped. Generous aspect-[4/5]
+            (slightly taller than wide), object-position center-top so the chef
+            hat is always visible, no max-height cap.
+          */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-9 mb-16 max-w-[1080px] mx-auto">
+            {THE_FOUR.map((chef) => (
+              <div
+                key={chef.name}
+                className="group flex flex-col"
+              >
+                {/* Portrait — magazine framing, full hat + shoulders visible */}
+                <div className="relative aspect-[4/5] overflow-hidden rounded-t-2xl">
+                  <img
+                    src={chef.image}
+                    alt={chef.name}
+                    className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
+                    style={{ objectPosition: 'center 15%' }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-50" />
+                </div>
+
+                {/* Bio card */}
+                <div className="p-5 md:p-7 rounded-b-2xl border border-t-0 border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
+                  <div className="flex items-baseline justify-between mb-1">
+                    <h3 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>{chef.name}</h3>
+                    <span className="text-[10px] text-white/60 tracking-wider uppercase">{chef.origin}</span>
+                  </div>
+                  <p className="text-[#D4AF37] text-xs tracking-[0.15em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{chef.role}</p>
+                  <p className="text-white/50 text-sm leading-relaxed">{chef.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Closing line */}
+          <div className="text-center">
+            <p className="text-[#D4AF37]/80 text-sm md:text-base italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              One of the four will be in your kitchen on the night.
+            </p>
+            <p className="text-white/30 text-xs mt-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Which one depends on the menu, the date, and what arrived on the morning boat.
+            </p>
+          </div>
+
+          {/* Best Partner diploma — luxury credential */}
+          <div className="mt-16 flex justify-center">
+            <BestPartnerBadge variant="light" width={300} />
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Gallery */}
+      <section id="captured" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Evening</p>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>How It Looks</h2>
+            <p className="text-white/50">Candlelight. Crystal. White-clad professionals. Your villa, transformed.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/luna-gallery-1.png" alt="Sommelier presenting wine" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/luna-gallery-2.png" alt="Chef flambe at open kitchen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/luna-gallery-3.png" alt="Chef plating with guest" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/luna-gallery-4.png" alt="Group dining at sunset" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
           </div>
         </div>
       </section>
@@ -485,38 +555,24 @@ export default function LunaPage() {
         </div>
       </section>
 
-      {/* Experience Gallery */}
-      <section id="captured" className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
-        <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Evening</p>
-            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>How It Looks</h2>
-            <p className="text-white/50">Candlelight. Crystal. White-clad professionals. Your villa, transformed.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/luna-gallery-1.png" alt="Sommelier presenting wine" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/luna-gallery-2.png" alt="Chef flambe at open kitchen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/luna-gallery-3.png" alt="Chef plating with guest" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/luna-gallery-4.png" alt="Group dining at sunset" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-            </div>
-          </div>
+      {/* Testimonials — headline is baked into the cinematic background image */}
+      <section className="relative px-6 py-0" style={{ background: '#0A0A0A' }}>
+        {/* Full-bleed editorial header image (eyebrow + h2 are part of the artwork) */}
+        <div className="relative w-full h-[60vh] min-h-[420px] max-h-[760px] overflow-hidden">
+          <img
+            src="/generated/testimonials-bg.jpg"
+            alt="Private chef serving guests at a candlelit villa dinner — words from guests"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+          {/* Soft fade into the section below so testimonial cards don't sit on hard edge */}
+          <div
+            className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"
+            style={{ background: 'linear-gradient(to bottom, rgba(10,10,10,0) 0%, #0A0A0A 100%)' }}
+          />
         </div>
-      </section>
 
-      {/* Testimonials */}
-      <section className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
-        <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Words From Guests</p>
-            <h2 className="text-4xl md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>They Came for Dinner.<br />They Left with Memories.</h2>
-          </div>
+        <div className="max-w-[1280px] mx-auto pb-24 md:pb-32 pt-12 md:pt-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {TESTIMONIALS.map((t) => (
               <div key={t.name} className="p-8 rounded-2xl border border-white/10">
@@ -524,7 +580,7 @@ export default function LunaPage() {
                   {[1,2,3,4,5].map((s) => <Star key={s} className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />)}
                 </div>
                 <p className="text-white/80 mb-6 leading-relaxed italic">"{t.text}"</p>
-                <p className="text-sm text-white/50">{t.name}, {t.location}</p>
+                <p className="text-sm text-white/60">{t.name}, {t.location}</p>
               </div>
             ))}
           </div>
@@ -563,7 +619,7 @@ export default function LunaPage() {
       </section>
 
       {/* Booking */}
-      <section id="book" className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
+      <section id="book" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
@@ -578,7 +634,7 @@ export default function LunaPage() {
                   <div key={menu.id} className="flex items-center justify-between py-4 border-b border-white/10 group cursor-pointer">
                     <div>
                       <p className="text-white/80 font-medium">{menu.name}</p>
-                      <p className="text-sm text-white/40">{menu.duration}</p>
+                      <p className="text-sm text-white/60">{menu.duration}</p>
                     </div>
                     <div className="flex items-center gap-4">
                       <span className="text-[#D4AF37] font-medium">{menu.price}</span>
@@ -602,6 +658,8 @@ export default function LunaPage() {
           </div>
         </div>
       </section>
+
+      <OrderPanel open={orderOpen} onClose={() => setOrderOpen(false)} initialExperience={orderExperience} />
     </div>
   )
 }

@@ -224,9 +224,14 @@ export default function SolPage() {
       <section className="py-12 px-6" style={{ background: '#F5F0E8' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['sol-breakfast', 'sol-lunch', 'sol-sunset', 'sol-bbq'].map((img) => (
-              <div key={img} className="aspect-square rounded-xl overflow-hidden">
-                <img src={`/generated/${img}.jpg`} alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            {[
+              { slug: 'sol-breakfast', alt: 'Private villa chef breakfast spread in a Bali villa' },
+              { slug: 'sol-lunch', alt: 'Bali villa catering lunch table served by a private chef' },
+              { slug: 'sol-sunset', alt: 'Sunset villa dining set up by myCHEF in Bali' },
+              { slug: 'sol-bbq', alt: 'Poolside BBQ catering in a private Bali villa' },
+            ].map((img) => (
+              <div key={img.slug} className="aspect-square rounded-xl overflow-hidden">
+                <img src={`/generated/${img.slug}.jpg`} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             ))}
           </div>

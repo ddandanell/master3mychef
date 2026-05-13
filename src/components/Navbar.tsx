@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { label: 'Fine Dining', path: '/fine-dining', accent: '#D4AF37', dept: 'Fine Dining' },
   { label: 'Catering', path: '/villa-chef', accent: '#6B8E5A', dept: 'Catering' },
   { label: 'Events', path: '/events', accent: '#2C5F7C', dept: 'Events' },
+  { label: 'Services', path: '/services', accent: '#D4AF37', dept: null },
   { label: 'Staffing', path: '/staffing', accent: '#D4AF37', dept: null },
   { label: 'Contact', path: '/contact', accent: '#D4AF37', dept: null },
 ]

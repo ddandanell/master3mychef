@@ -497,9 +497,14 @@ export default function AuraPage() {
       <section className="py-12 px-6" style={{ background: '#F8F7F5' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['aura-wedding', 'aura-corporate', 'aura-toast', 'aura-tablescape'].map((img) => (
-              <div key={img} className="aspect-square rounded-xl overflow-hidden">
-                <img src={`/generated/${img}.jpg`} alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            {[
+              { slug: 'aura-wedding', alt: 'Bali villa wedding reception catered by myCHEF' },
+              { slug: 'aura-corporate', alt: 'Bali corporate event dining set up in a luxury villa' },
+              { slug: 'aura-toast', alt: 'Champagne toast at a private Bali villa party' },
+              { slug: 'aura-tablescape', alt: 'Long-table tablescape styled for a Bali villa event' },
+            ].map((img) => (
+              <div key={img.slug} className="aspect-square rounded-xl overflow-hidden">
+                <img src={`/generated/${img.slug}.jpg`} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             ))}
           </div>

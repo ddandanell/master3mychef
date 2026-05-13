@@ -182,14 +182,9 @@ let browser
 try {
   browser = await chromium.launch()
 } catch (err) {
-  if (err.message.includes("Executable doesn't exist")) {
-    console.log('Playwright browser not found. Installing chromium...')
-    const { execSync } = await import('child_process')
-    execSync('npx playwright install chromium', { stdio: 'inherit' })
-    browser = await chromium.launch()
-  } else {
-    throw err
-  }
+  console.warn('⚠️  Prerender skipped: Playwright browser unavailable (' + err.message.split('\n')[0] + ')')
+  console.warn('   The app will deploy as an SPA — client-side routing will handle all URLs.')
+  process.exit(0)
 }
 const context = await browser.newContext({ viewport: { width: 1280, height: 800 } })
 

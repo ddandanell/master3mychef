@@ -27,6 +27,9 @@ const vercelConfig = {
     destination: r.to,
     permanent: true,
   })),
+  rewrites: [
+    { source: '/(.*)', destination: '/index.html' },
+  ],
   headers: [
     {
       source: '/(.*)',

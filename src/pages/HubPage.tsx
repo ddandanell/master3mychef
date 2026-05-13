@@ -35,6 +35,47 @@ const PORTALS = [
   },
 ]
 
+// Six editorial trust cards rendered under the three service portals.
+// Each one earns the premium price tag with one concrete promise.
+const TRUST_CARDS = [
+  {
+    eyebrow: 'Promise',
+    title: '100% Experience Guarantee',
+    body: 'If the execution is not what we promised, we make it right.',
+    image: '/generated/trust-guarantee.jpg',
+  },
+  {
+    eyebrow: 'Standard',
+    title: 'The New Standard for Private Dining in Bali',
+    body: 'Built for villas, families, weddings, and hosted experiences.',
+    image: '/generated/trust-standard.jpg',
+  },
+  {
+    eyebrow: 'Network',
+    title: 'Verified Chefs. Real Accountability.',
+    body: 'Every chef is selected, reviewed, and matched to the experience.',
+    image: '/generated/trust-chefs.jpg',
+  },
+  {
+    eyebrow: 'Leadership',
+    title: 'Designed for Market Dominance',
+    body: 'Fine dining, catering, and events delivered through one premium system.',
+    image: '/generated/trust-leader.jpg',
+  },
+  {
+    eyebrow: 'Execution',
+    title: 'From Menu to Service Flow',
+    body: 'We handle planning, food, staffing, setup, and guest experience.',
+    image: '/generated/trust-execution.jpg',
+  },
+  {
+    eyebrow: 'Hosts',
+    title: 'Built for Villas, Hosts, and Private Guests',
+    body: 'Professional presentation, clear process, and repeatable quality.',
+    image: '/generated/trust-hosts.jpg',
+  },
+] as const
+
 const HOW_IT_WORKS = [
   {
     step: '01',
@@ -161,46 +202,17 @@ export default function HubPage() {
         canonical="https://mychef.id/"
         ogImage="https://mychef.id/generated/hub-hero-v3.jpg"
       />
-      {/* HERO */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="/generated/hub-hero-v3.jpg" alt="Luxury Bali villa" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).src = '/hero-home.jpg' }} />
-          <div className="absolute inset-0 bg-black/45" />
-        </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="hub-hero-label text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            myCHEF.id — Bali
-          </p>
-          <h1 className="hub-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 leading-[1.1]" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Extraordinary Food,<br />
-            <span className="italic">Without Leaving Your Villa</span>
-          </h1>
-          <p className="hub-hero-subtitle text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Italian fine dining. Private villa chefs. Full-service events. A Michelin-trained team of 50+, in your kitchen.
-          </p>
-          <div className="hub-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book." target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#D4AF37] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#E8C84B] transition-all hover:scale-105">
-              Book on WhatsApp
-            </a>
-            <Link to="/contact" className="px-8 py-4 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
-              Ask a Question
-            </Link>
-          </div>
-        </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span className="text-white/50 text-xs tracking-widest uppercase">Explore</span>
-          <div className="w-[1px] h-8 bg-gradient-to-b from-white/50 to-transparent" />
-        </div>
-      </section>
-
-      {/* PORTALS */}
-      <section ref={portalsRef} className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+      {/* PORTALS — now the page opener. "Choose Your Way" leads. */}
+      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pt-32 md:pt-40 pb-24 md:pb-32 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16 md:mb-24">
-            <h2 className="u-heading text-4xl md:text-5xl lg:text-6xl mb-6">What We Do</h2>
+            <p className="hub-hero-label text-[#D4AF37] text-xs md:text-sm tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              myCHEF.id — Bali
+            </p>
+            <h1 className="u-heading text-4xl md:text-6xl lg:text-7xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Choose Your Way</h1>
             <div className="gold-arc mx-auto mb-6" />
-            <p className="text-[#1A1A1A]/60 max-w-xl mx-auto leading-relaxed">
-              Three ways we bring extraordinary food to your villa — from intimate dinners to full-service celebrations.
+            <p className="text-[#1A1A1A]/65 max-w-xl mx-auto leading-relaxed">
+              Three dedicated experiences. One standard: make it exceptional from start to finish.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
@@ -229,8 +241,61 @@ export default function HubPage() {
         </div>
       </section>
 
+      {/* TRUST SIGNALS — six editorial cards reinforcing the value prop */}
+      <section className="trust-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-14 md:mb-20">
+            <p className="u-label text-sm mb-4">Why myCHEF</p>
+            <h2 className="u-heading text-3xl md:text-5xl mb-4">Built to be the new standard</h2>
+            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              Six things every guest, host, and villa partner gets from the first message to the last plate.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
+            {TRUST_CARDS.map((card) => (
+              <div
+                key={card.title}
+                className="group relative overflow-hidden rounded-2xl border transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_18px_60px_-20px_rgba(212,175,55,0.35)]"
+                style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}
+              >
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                    loading="lazy"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.45) 100%)' }}
+                  />
+                  <span
+                    className="absolute top-4 left-4 text-[10px] tracking-[0.3em] uppercase font-semibold px-3 py-1.5 rounded-full"
+                    style={{ background: 'rgba(0,0,0,0.55)', color: '#D4AF37', backdropFilter: 'blur(8px)', fontFamily: "'Cormorant Garamond', serif" }}
+                  >
+                    {card.eyebrow}
+                  </span>
+                </div>
+                <div className="p-6 md:p-7">
+                  <h3 className="text-xl md:text-2xl mb-3 leading-tight" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>
+                    {card.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
+                    {card.body}
+                  </p>
+                </div>
+                <span
+                  className="absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
+                  style={{ background: 'linear-gradient(to right, transparent, #D4AF37, transparent)' }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* HOW IT WORKS */}
-      <section className="hiw-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+      <section className="hiw-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label text-sm mb-4">Simple as It Gets</p>

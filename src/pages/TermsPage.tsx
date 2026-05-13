@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Mail, MapPin, CreditCard, Calendar, AlertCircle, CheckCircle } from 'lucide-react'
+import SeoHead from '@/components/SeoHead'
 
 const PAYMENT_RULES = [
   {
@@ -33,6 +34,11 @@ const CANCELLATION_TIERS = [
 export default function TermsPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
+      <SeoHead
+        title="Terms & Payment | myCHEF — Private Chef Bali"
+        description="myCHEF terms of service and payment rules for private chef, Bali villa catering, and event bookings — deposits, balance, and booking confirmation."
+        canonical="https://mychef.id/terms-of-service"
+      />
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-[800px] mx-auto">

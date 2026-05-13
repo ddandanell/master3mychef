@@ -159,8 +159,8 @@ export default function LunaPage() {
   return (
     <div ref={heroRef} data-universe="luna" className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
       <SeoHead
-        title="Private Villa Fine Dining in Bali — Mediterranean & Wagyu Tasting Menus | myCHEF"
-        description="Two curated Italian and Mediterranean tasting menus in your Bali villa. Open-flame cooking, sommelier pairing, Michelin-trained team. From IDR 2,200,000++ per guest."
+        title="Fine Dining Bali | Private Chef Villa Tasting Menus by myCHEF"
+        description="Private chef fine dining in your Bali villa — Italian and Mediterranean tasting menus, open-flame cooking, sommelier pairing, Michelin-trained team. From IDR 2,200,000++ per guest."
         canonical="https://mychef.id/fine-dining"
         ogImage="https://mychef.id/generated/luna-hero-v2.jpg"
       />

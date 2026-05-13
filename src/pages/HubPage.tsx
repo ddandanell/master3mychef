@@ -197,8 +197,8 @@ export default function HubPage() {
   return (
     <div>
       <SeoHead
-        title="myCHEF.id — Private Chef & Villa Dining in Bali"
-        description="Italian fine dining, villa catering, and full-service events in Bali. A Michelin-trained team of 50+, in your kitchen. Same-day WhatsApp confirmation."
+        title="Private Chef Bali | Luxury Villa Dining, Catering & Events by myCHEF"
+        description="Private chef in Bali for luxury villa dining, Bali villa catering, private events, parties, and fine dining experiences by myCHEF. Same-day WhatsApp confirmation."
         canonical="https://mychef.id/"
         ogImage="https://mychef.id/generated/hub-hero-v3.jpg"
       />

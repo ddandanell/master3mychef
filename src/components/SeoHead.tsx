@@ -5,12 +5,13 @@ interface SeoHeadProps {
   description: string
   canonical?: string
   ogImage?: string
+  noindex?: boolean
 }
 
-// Sets per-route document.title, meta description, canonical, and OG tags.
-// Works fine for a Vite SPA — Google now executes JS. For first-contentful-html SEO
-// we should add vite-plugin-ssg later (see SEO-PAGES-PLAN.md).
-export default function SeoHead({ title, description, canonical, ogImage }: SeoHeadProps) {
+// Sets per-route document.title, meta description, canonical, OG tags, and an
+// optional robots noindex directive. Works for a Vite SPA — Google executes JS.
+// For first-contentful-html SEO add vite-plugin-ssg later (see SEO-PAGES-PLAN.md).
+export default function SeoHead({ title, description, canonical, ogImage, noindex }: SeoHeadProps) {
   useEffect(() => {
     document.title = title
 
@@ -30,6 +31,13 @@ export default function SeoHead({ title, description, canonical, ogImage }: SeoH
     setMeta(`meta[name="twitter:title"]`, 'name', 'twitter:title', title)
     setMeta(`meta[name="twitter:description"]`, 'name', 'twitter:description', description)
 
+    setMeta(
+      `meta[name="robots"]`,
+      'name',
+      'robots',
+      noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large'
+    )
+
     if (ogImage) {
       setMeta(`meta[property="og:image"]`, 'property', 'og:image', ogImage)
       setMeta(`meta[name="twitter:image"]`, 'name', 'twitter:image', ogImage)
@@ -45,7 +53,7 @@ export default function SeoHead({ title, description, canonical, ogImage }: SeoH
       link.setAttribute('href', canonical)
       setMeta(`meta[property="og:url"]`, 'property', 'og:url', canonical)
     }
-  }, [title, description, canonical, ogImage])
+  }, [title, description, canonical, ogImage, noindex])
 
   return null
 }

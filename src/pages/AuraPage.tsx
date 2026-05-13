@@ -202,8 +202,8 @@ export default function AuraPage() {
   return (
     <div ref={ref} data-universe="aura" className="min-h-screen" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>
       <SeoHead
-        title="Event Catering in Bali — Weddings, Retreats, Corporate Dinners | myCHEF"
-        description="Full-service event catering across Bali. Weddings from intimate vow exchanges to 200-guest galas, corporate retreats, celebrations. Catering, bar, décor, staffing — handled."
+        title="Bali Party and Event Catering | Weddings, Villas & Corporate | myCHEF"
+        description="Bali party and event catering by myCHEF — luxury villa parties, weddings, corporate dinners, retreats, and gala nights. Catering, bar, décor, and staffing handled end-to-end."
         canonical="https://mychef.id/events"
         ogImage="https://mychef.id/generated/aura-hero-v2.jpg"
       />

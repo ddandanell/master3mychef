@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, Utensils } from 'lucide-react'
+import SeoHead from '@/components/SeoHead'
 
 export default function NotFoundPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden" style={{ background: '#050505' }}>
+      <SeoHead
+        title="Page Not Found | myCHEF — Private Chef Bali"
+        description="The page you are looking for does not exist. Explore private chef, Bali villa catering, fine dining, and event experiences with myCHEF."
+        noindex
+      />
       {/* Subtle background texture */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 30% 50%, rgba(212,175,55,0.08) 0%, transparent 60%)' }} />

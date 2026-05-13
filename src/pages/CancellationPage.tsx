@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Shield, AlertTriangle, CheckCircle2, XCircle, Clock, Calendar, Utensils } from 'lucide-react'
+import SeoHead from '@/components/SeoHead'
 
 const CLIENT_POLICY = [
   {
@@ -47,6 +48,11 @@ const DEDUCTIONS = [
 export default function CancellationPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
+      <SeoHead
+        title="Cancellation Policy | myCHEF — Private Chef Bali"
+        description="Cancellation and refund policy for myCHEF private chef, Bali villa catering, and event bookings — full refund 14+ days before, 50% within 7–13 days."
+        canonical="https://mychef.id/cancellation"
+      />
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-[800px] mx-auto">

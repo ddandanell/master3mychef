@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Mail } from 'lucide-react'
+import SeoHead from '@/components/SeoHead'
 
 const SECTIONS = [
   {
@@ -55,6 +56,11 @@ const SECTIONS = [
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
+      <SeoHead
+        title="Privacy Policy | myCHEF — Private Chef Bali"
+        description="How myCHEF collects, uses, and protects your personal information when you book private chef, villa catering, and event services in Bali, Indonesia."
+        canonical="https://mychef.id/privacy-policy"
+      />
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-[800px] mx-auto">

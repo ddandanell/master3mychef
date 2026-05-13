@@ -66,8 +66,8 @@ export default function SolPage() {
   return (
     <div ref={ref} data-universe="sol" className="min-h-screen" style={{ background: '#F5F0E8', color: '#2C2419' }}>
       <SeoHead
-        title="Private Villa Chef in Bali — Daily Breakfast, Lunch & Dinner | myCHEF"
-        description="Hire a private villa chef in Bali for the length of your stay. Daily breakfast, lunch, and dinner. Groceries at cost. From IDR 600,000 per hour."
+        title="Bali Villa Catering | Private Chef in Your Villa — Daily Dining"
+        description="Bali villa catering with a private chef in your kitchen for the length of your stay — daily breakfast, lunch, and dinner. Groceries at cost. From IDR 600,000 per hour."
         canonical="https://mychef.id/villa-chef"
         ogImage="https://mychef.id/generated/catering-hero.jpg"
       />

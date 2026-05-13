@@ -142,20 +142,20 @@ export default function LunaPage() {
       </section>
 
       {/* Experience Intro */}
-      <section className="luna-content py-24 md:py-32 px-6">
+      <section className="luna-content py-24 md:py-32 px-6" style={{ background: '#F5F3EF' }}>
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="luna-reveal">
               <img src="/generated/luna-table.jpg" alt="Table setting" className="rounded-2xl w-full aspect-[4/3] object-cover" />
             </div>
             <div className="luna-reveal">
               <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Experience</p>
-              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>One Night.<br />Two Journeys.</h2>
+              <h2 className="text-4xl md:text-5xl mb-6 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>One Night.<br />Two Journeys.</h2>
               <div className="w-12 h-[2px] bg-[#D4AF37] mb-8" />
-              <p className="text-white/60 mb-6 leading-relaxed">
+              <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
                 We arrive as a team of white-clad professionals. We transform your villa garden or a Balinese village courtyard into an open-air Michelin-inspired dining room.
               </p>
-              <p className="text-white/60 mb-8 leading-relaxed">
+              <p className="text-[#1A1A1A]/70 mb-8 leading-relaxed">
                 Every course is prepared in front of your guests. Every wine is paired. Every detail — from the hand-pressed linen to the gold-rimmed plates — is considered. Choose between two curated tasting experiences.
               </p>
               <div className="grid grid-cols-2 gap-4">
@@ -167,7 +167,7 @@ export default function LunaPage() {
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-3">
                     <item.icon className="w-5 h-5 text-[#D4AF37]" />
-                    <span className="text-sm text-white/80">{item.label}</span>
+                    <span className="text-sm text-[#1A1A1A]/80">{item.label}</span>
                   </div>
                 ))}
               </div>

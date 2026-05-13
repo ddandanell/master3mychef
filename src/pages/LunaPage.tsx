@@ -153,10 +153,10 @@ export default function LunaPage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src="/generated/luna-hero-v2.jpg" alt="Fine dining in Balinese village" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-black/65" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="luna-hero-label text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Fine Dining</p>
+          <p className="luna-hero-label inline-block text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-6 px-4 py-2 rounded-full border border-[#D4AF37]/30" style={{ fontFamily: "'Cormorant Garamond', serif", background: 'rgba(0,0,0,0.4)', textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>Fine Dining</p>
           <h1 className="luna-hero-title text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>
             An Extraordinary<br /><span className="italic">Evening</span>
           </h1>
@@ -165,7 +165,7 @@ export default function LunaPage() {
           </p>
           <div className="luna-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="#menus" className="px-8 py-4 bg-[#D4AF37] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#E8C84B] transition-all">See the Menus</a>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               <MessageCircle className="w-4 h-4" /> Message Sofia
             </a>
           </div>
@@ -355,7 +355,7 @@ export default function LunaPage() {
               <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40" />
               <div className="w-16 h-[1px] bg-white/10" />
             </div>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 border border-[#D4AF37]/30 text-[#D4AF37] text-sm tracking-[0.2em] uppercase rounded-full transition-all duration-500 hover:bg-[#D4AF37]/10 hover:border-[#D4AF37]/50 hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)]">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 border border-[#D4AF37]/30 text-[#D4AF37] text-sm tracking-[0.2em] uppercase rounded-full transition-all duration-500 hover:bg-[#D4AF37]/10 hover:border-[#D4AF37]/50 hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)]">
               <Phone className="w-4 h-4" strokeWidth={1.5} /> Start on WhatsApp
             </a>
           </div>
@@ -459,7 +459,7 @@ export default function LunaPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
               <Phone className="w-4 h-4" /> Book This Experience
             </a>
           </div>
@@ -566,7 +566,7 @@ export default function LunaPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
               <MessageCircle className="w-4 h-4" /> Ask Sofia on WhatsApp
             </a>
           </div>

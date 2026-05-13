@@ -1,15 +1,22 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat } from 'lucide-react'
+import { Menu, X, ChefHat, ArrowLeft } from 'lucide-react'
+
 const NAV_LINKS = [
-  { label: 'Fine Dining', path: '/fine-dining' },
-  { label: 'Catering', path: '/villa-chef' },
-  { label: 'Events', path: '/events' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Fine Dining', path: '/fine-dining', accent: '#D4AF37', dept: 'Fine Dining' },
+  { label: 'Catering', path: '/villa-chef', accent: '#6B8E5A', dept: 'Catering' },
+  { label: 'Events', path: '/events', accent: '#2C5F7C', dept: 'Events' },
+  { label: 'Contact', path: '/contact', accent: '#D4AF37', dept: null },
 ]
 
+const DEPARTMENT_PAGES: Record<string, { name: string; accent: string; backTo: string }> = {
+  '/fine-dining': { name: 'Fine Dining', accent: '#D4AF37', backTo: '/' },
+  '/villa-chef': { name: 'Catering', accent: '#6B8E5A', backTo: '/' },
+  '/events': { name: 'Events', accent: '#2C5F7C', backTo: '/' },
+}
+
 // Pages where the scrolled navbar should have a dark background
-const DARK_NAV_PAGES = ['/fine-dining']
+const DARK_NAV_PAGES = ['/fine-dining', '/privacy', '/terms', '/cancellation']
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -32,6 +39,7 @@ export default function Navbar() {
   }, [mobileOpen])
 
   const hasDarkNavBg = DARK_NAV_PAGES.includes(location.pathname)
+  const dept = DEPARTMENT_PAGES[location.pathname]
 
   // At top (transparent over hero): ALL pages have dark/cinematic heroes → white text
   // After scroll: white text for dark-bg navbars, dark text for light-bg navbars
@@ -57,16 +65,75 @@ export default function Navbar() {
         }
       >
         <div className="max-w-[1280px] mx-auto px-6 flex items-center justify-between">
-          {/* Logo with icon */}
-          <Link
-            to="/"
-            className={`flex items-center gap-2.5 transition-colors ${useLightText ? 'text-white' : 'text-[#1A1A1A]'}`}
-          >
-            <ChefHat className="w-7 h-7 text-[#D4AF37]" strokeWidth={1.5} />
-            <span className="font-serif text-2xl tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>
-              my<span className={goldClass}>CHEF</span>
-            </span>
-          </Link>
+          {/* Logo with department indicator */}
+          <div className="flex items-center gap-4">
+            <Link
+              to="/"
+              className={`flex items-center gap-2.5 transition-colors ${useLightText ? 'text-white' : 'text-[#1A1A1A]'}`}
+            >
+              <ChefHat className="w-7 h-7 text-[#D4AF37]" strokeWidth={1.5} />
+              <div className="flex flex-col">
+                <span className="font-serif text-2xl tracking-wide leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  my<span className={goldClass}>CHEF</span>
+                </span>
+                {dept && (
+                  <span
+                    className="text-[10px] tracking-[0.25em] uppercase mt-0.5 leading-none"
+                    style={{ fontFamily: "'Cormorant Garamond', serif", color: dept.accent }}
+                  >
+                    {dept.name}
+                  </span>
+                )}
+              </div>
+            </Link>
+
+            {/* Department switcher pill */}
+            {dept && (
+              <div className="hidden md:flex items-center gap-1 ml-4 pl-4 border-l" style={{ borderColor: useLightText ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)' }}>
+                <Link
+                  to="/"
+                  className="flex items-center gap-1.5 text-[11px] tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-300"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    color: useLightText ? 'rgba(255,255,255,0.6)' : 'rgba(26,26,26,0.6)',
+                    borderColor: useLightText ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = dept.accent
+                    e.currentTarget.style.color = dept.accent
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = useLightText ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)'
+                    e.currentTarget.style.color = useLightText ? 'rgba(255,255,255,0.6)' : 'rgba(26,26,26,0.6)'
+                  }}
+                >
+                  <ArrowLeft className="w-3 h-3" /> Home
+                </Link>
+                {NAV_LINKS.filter(l => l.dept && l.path !== location.pathname).map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className="text-[11px] tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-300"
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      color: useLightText ? 'rgba(255,255,255,0.5)' : 'rgba(26,26,26,0.5)',
+                      borderColor: useLightText ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = link.accent
+                      e.currentTarget.style.color = link.accent
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = useLightText ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'
+                      e.currentTarget.style.color = useLightText ? 'rgba(255,255,255,0.5)' : 'rgba(26,26,26,0.5)'
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-10">
@@ -145,6 +212,19 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            {/* Mobile department switcher */}
+            {dept && (
+              <div className="flex flex-wrap justify-center gap-3 mt-4 pt-6 border-t" style={{ borderColor: hasDarkNavBg ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)' }}>
+                <Link to="/" onClick={() => setMobileOpen(false)} className="text-sm tracking-wider uppercase px-4 py-2 rounded-full border" style={{ color: hasDarkNavBg ? '#fff' : '#1A1A1A', borderColor: hasDarkNavBg ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.15)' }}>
+                  ← Home
+                </Link>
+                {NAV_LINKS.filter(l => l.dept && l.path !== location.pathname).map((link) => (
+                  <Link key={link.path} to={link.path} onClick={() => setMobileOpen(false)} className="text-sm tracking-wider uppercase px-4 py-2 rounded-full border" style={{ color: hasDarkNavBg ? '#fff' : '#1A1A1A', borderColor: hasDarkNavBg ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.15)' }}>
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}

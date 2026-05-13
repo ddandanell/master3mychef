@@ -6,6 +6,9 @@ import SolPage from './pages/SolPage'
 import AuraPage from './pages/AuraPage'
 import PartnersPage from './pages/PartnersPage'
 import ContactPage from './pages/ContactPage'
+import PrivacyPage from './pages/PrivacyPage'
+import TermsPage from './pages/TermsPage'
+import CancellationPage from './pages/CancellationPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 export default function App() {
@@ -18,6 +21,9 @@ export default function App() {
         <Route path="/events" element={<AuraPage />} />
         <Route path="/partners" element={<PartnersPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/cancellation" element={<CancellationPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Layout>

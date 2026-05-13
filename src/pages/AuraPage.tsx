@@ -89,7 +89,7 @@ export default function AuraPage() {
             From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail.
           </p>
           <div className="aura-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6281234567892" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1e4a63] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1e4a63] transition-all">
               <MessageCircle className="w-4 h-4" /> Message Olivia
             </a>
             <a href="#packages" className="inline-block px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
@@ -120,7 +120,7 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="text-center">
-            <a href="https://wa.me/6281234567892" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
               <Phone className="w-4 h-4" /> Start on WhatsApp
             </a>
           </div>
@@ -198,7 +198,7 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6281234567892" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
               <Phone className="w-4 h-4" /> Get Your Quote
             </a>
           </div>
@@ -293,7 +293,7 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6281234567892" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
               <MessageCircle className="w-4 h-4" /> Ask Olivia on WhatsApp
             </a>
           </div>
@@ -326,7 +326,7 @@ export default function AuraPage() {
               <p className="text-xs mb-6" style={{ color: '#4A4745' }}>
                 * Custom quotes include catering, bar, staffing, and basic décor. AV, floral, and specialty items quoted separately.
               </p>
-              <a href="https://wa.me/6281234567892" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
                 <Phone className="w-4 h-4" /> Get a Quote on WhatsApp
               </a>
             </div>

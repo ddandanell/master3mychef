@@ -84,7 +84,7 @@ export default function SolPage() {
             Wake up to breakfast. Swim through lunch. Dine at sunset. We shop, cook, serve, and clean — so you do not have to.
           </p>
           <div className="sol-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6281234567891" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all">
               <MessageCircle className="w-4 h-4" /> Message Daniel
             </a>
             <a href="#plans" className="inline-block px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
@@ -115,7 +115,7 @@ export default function SolPage() {
             ))}
           </div>
           <div className="text-center">
-            <a href="https://wa.me/6281234567891" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
               <Phone className="w-4 h-4" /> Start on WhatsApp
             </a>
           </div>
@@ -165,7 +165,7 @@ export default function SolPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6281234567891" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
               <Phone className="w-4 h-4" /> Book Your Chef
             </a>
           </div>
@@ -260,7 +260,7 @@ export default function SolPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6281234567891" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
               <MessageCircle className="w-4 h-4" /> Ask Daniel on WhatsApp
             </a>
           </div>
@@ -293,7 +293,7 @@ export default function SolPage() {
               <p className="text-xs mb-6" style={{ color: '#8A7B6B' }}>
                 * Groceries billed at cost — no markup. Minimum 4-hour booking. Service charge included.
               </p>
-              <a href="https://wa.me/6281234567891" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
                 <Phone className="w-4 h-4" /> Book via WhatsApp
               </a>
             </div>

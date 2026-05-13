@@ -14,7 +14,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const msg = `Hi myCHEF, I'm ${form.name}. ${form.message}`
-    window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(msg)}`, '_blank')
+    window.open(`https://wa.me/6282237565997?text=${encodeURIComponent(msg)}`, '_blank')
     setSubmitted(true)
   }
 

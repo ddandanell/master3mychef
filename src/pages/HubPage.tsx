@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield } from 'lucide-react'
+import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, Award } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -78,14 +78,43 @@ const FAQS = [
   { q: 'What about dietary restrictions?', a: 'Every menu is tailored. Gluten-free, vegan, halal, nut allergies, pregnancy-friendly — just tell us. We have done it all.' },
   { q: 'Are groceries included in the price?', a: 'For fine dining and events, ingredients are included. For villa chef catering, groceries are billed at cost with no markup — you see every receipt.' },
   { q: 'How many staff will come to my villa?', a: 'Fine dining: 6–10 staff (chef, sous chef, servers, sommelier). Villa chef: 1–2 chefs. Events: depends on scale, quoted in your proposal.' },
-  { q: 'What is the cancellation policy?', a: 'Full refund up to 72 hours before. 50% refund 24–72 hours. Within 24 hours, we work with you to reschedule.' },
+  { q: 'What is the cancellation policy?', a: 'Full refund 14+ days before. 50% refund 7–13 days before. No refund less than 7 days. See our full cancellation policy for details.' },
+  { q: 'How does payment work?', a: 'A 25% deposit confirms your booking and locks your chef. The remaining 75% is paid when the chef arrives at your villa, before service begins.' },
 ]
 
 const TRUST_STATS = [
-  { icon: MapPin, value: '500+', label: 'Villas Served' },
+  { icon: MapPin, value: '560+', label: 'Villas Served' },
   { icon: Users, value: '12,000+', label: 'Happy Guests' },
   { icon: Star, value: '4.9', label: 'Average Rating' },
   { icon: Clock, value: '8+', label: 'Years in Bali' },
+]
+
+const REVIEWS = [
+  { name: 'James & Sarah', location: 'London', dept: 'Fine Dining', text: 'We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the courses — pure magic.' },
+  { name: 'The Harrisons', location: 'Sydney', dept: 'Fine Dining', text: 'Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.' },
+  { name: 'Marco & Elena', location: 'Milan', dept: 'Fine Dining', text: 'As Italians, we are picky about our food. Matteo\'s tagliatelle transported us back to Bologna. The wine pairing was impeccable.' },
+  { name: 'The Wilson Family', location: 'Singapore', dept: 'Fine Dining', text: 'We booked the Wagyu Experience for my father\'s 70th. He has eaten at three Michelin stars. He said this was better because it was ours.' },
+  { name: 'Priya & Rahul', location: 'Mumbai', dept: 'Fine Dining', text: 'The Mediterranean Sea menu was light, sophisticated, and deeply flavourful. Every plate looked like art. Every bite tasted like summer in Sicily.' },
+  { name: 'David Chen', location: 'Hong Kong', dept: 'Fine Dining', text: 'Paco\s ribeye was the best piece of meat I have had in a decade. The fire, the technique, the timing — this man understands heat.' },
+  { name: 'The O\'Briens', location: 'Dublin', dept: 'Catering', text: 'Seven breakfasts, five lunches, four dinners across ten days. Never the same dish twice. The kids asked if Chef Antonio could move in.' },
+  { name: 'Lisa & Tom', location: 'Amsterdam', dept: 'Catering', text: 'We hired a villa chef for our honeymoon. Waking up to fresh croissants and Balinese coffee every morning — that is the definition of luxury.' },
+  { name: 'The Nakamura Family', location: 'Tokyo', dept: 'Catering', text: 'Our chef adjusted every meal for our children\'s tastes without making it feel like kids\' food. The level of care was extraordinary.' },
+  { name: 'Sophie & Pierre', location: 'Paris', dept: 'Catering', text: 'Ten days in Ubud with a private chef. We never went to a restaurant. Why would we? The best food in Bali was in our villa.' },
+  { name: 'The Johnsons', location: 'New York', dept: 'Catering', text: 'We have used private chefs in Tuscany, Provence, and the Hamptons. The myCHEF team in Bali was the most professional of all.' },
+  { name: 'Anna K.', location: 'Berlin', dept: 'Catering', text: 'As a vegetarian in Bali, I was worried. The chef created dishes I still dream about. Grilled tempeh with sambal mataku — unforgettable.' },
+  { name: 'The Garcias', location: 'Barcelona', dept: 'Events', text: 'Our wedding dinner for 40 guests. Every plate came out perfect. Every server knew our names. It felt like a five-star restaurant in our garden.' },
+  { name: 'Rebecca & Sam', location: 'Melbourne', dept: 'Events', text: 'We hosted a retreat for 25 executives. The myCHEF team handled everything — dietary restrictions, timing, presentation. Flawless.' },
+  { name: 'Michael R.', location: 'Dubai', dept: 'Events', text: 'My 50th birthday party. They turned our villa pool deck into a dining room that looked like something from a magazine. And the food matched.' },
+  { name: 'The Lims', location: 'Kuala Lumpur', dept: 'Events', text: 'Corporate dinner for 30. The team arrived at 2 PM and worked silently until service. Not a single detail was missed.' },
+  { name: 'Clara & Felix', location: 'Zurich', dept: 'Events', text: 'We wanted something intimate for our engagement. They created a candlelit dinner for twelve that felt like a scene from a film.' },
+  { name: 'The Patels', location: 'Mumbai', dept: 'Events', text: 'Our daughter\'s graduation dinner. The dessert table alone — Lukas\'s pastries are worth the flight to Bali.' },
+  { name: 'Richard & Amanda', location: 'San Francisco', dept: 'Fine Dining', text: 'We have done tasting menus in Napa, Paris, and Tokyo. The Wagyu Experience at our villa rivalled all of them. Paco is a master.' },
+  { name: 'The Müllers', location: 'Munich', dept: 'Catering', text: 'Two weeks in Canggu with daily chef service. The grocery receipts were transparent, the food was exceptional, and the kitchen was cleaner when they left than when they arrived.' },
+  { name: 'Jessica & Ben', location: 'Toronto', dept: 'Fine Dining', text: 'The sommelier paired a Sicilian white with the lobster tagliatelle that made me cry. Not exaggerating. It was that good.' },
+  { name: 'The Kwons', location: 'Seoul', dept: 'Events', text: '100 guests for our company anniversary. They served a seven-course plated dinner with military precision. Every guest commented on the food.' },
+  { name: 'Olivia & Marcus', location: 'Stockholm', dept: 'Catering', text: 'Fresh juice every morning, poolside lunches, candlelit dinners. We felt like we were living in a luxury resort — except it was our villa.' },
+  { name: 'The Fosters', location: 'Chicago', dept: 'Fine Dining', text: 'We asked for a surprise menu. What arrived was a journey through Adriano\'s career — Modena, Tokyo, Bali. Each course told a story.' },
+  { name: 'Yuki & Kenji', location: 'Osaka', dept: 'Events', text: 'Traditional Japanese wedding ceremony followed by a Western-style reception. The team respected every ritual while delivering world-class cuisine.' },
 ]
 
 export default function HubPage() {
@@ -210,7 +239,7 @@ export default function HubPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: 'var(--u-accent)', color: '#fff' }}>
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: 'var(--u-accent)', color: '#fff' }}>
               <MessageCircle className="w-4 h-4" /> Start on WhatsApp
             </a>
           </div>
@@ -241,7 +270,7 @@ export default function HubPage() {
                 We are not a marketplace. We are not an app. We are a kitchen that travels — and we take that seriously.
               </p>
               <div className="flex flex-wrap gap-4">
-                {['Michelin-trained leadership', '50+ staff', '500+ villas served', '12,000+ guests'].map((item) => (
+                {['Michelin-trained leadership', '50+ staff', '560+ villas served', '12,000+ guests'].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <Check className="w-4 h-4" style={{ color: 'var(--u-accent)' }} />
                     <span className="text-sm font-medium" style={{ color: 'var(--u-text)' }}>{item}</span>
@@ -273,7 +302,7 @@ export default function HubPage() {
         </div>
       </section>
 
-      {/* TRUST BAR */}
+      {/* TRUST BAR + AWARDS */}
       <section ref={trustRef} className="py-16 md:py-20 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -285,11 +314,93 @@ export default function HubPage() {
               </div>
             ))}
           </div>
+          {/* Villa Awards */}
+          <div className="mt-12 pt-8 border-t flex flex-col md:flex-row items-center justify-center gap-6" style={{ borderColor: 'var(--u-border)' }}>
+            <div className="flex items-center gap-3 px-5 py-3 rounded-xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <Award className="w-5 h-5 text-[#D4AF37]" />
+              <div>
+                <p className="text-xs font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2025</p>
+                <p className="text-[10px] uppercase tracking-wider" style={{ color: 'var(--u-text-muted)' }}>Best Choice — Private Dining</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 px-5 py-3 rounded-xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <Award className="w-5 h-5 text-[#D4AF37]" />
+              <div>
+                <p className="text-xs font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2026</p>
+                <p className="text-[10px] uppercase tracking-wider" style={{ color: 'var(--u-text-muted)' }}>Best Choice — Private Dining</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* REVIEWS */}
+      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="u-label text-sm mb-4">Guest Words</p>
+            <h2 className="u-heading text-4xl md:text-5xl mb-3">25 Reviews. One Truth.</h2>
+            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Real guests. Real villas. Real experiences.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {REVIEWS.map((review, i) => (
+              <div key={i} className="p-6 rounded-2xl border transition-all hover:border-[#D4AF37]/30" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+                <div className="flex gap-1 mb-3">
+                  {[1,2,3,4,5].map((s) => <Star key={s} className="w-3 h-3 fill-[#D4AF37] text-[#D4AF37]" />)}
+                </div>
+                <p className="text-sm leading-relaxed mb-4 italic" style={{ color: 'var(--u-text)' }}>"{review.text}"</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-medium" style={{ color: 'var(--u-text)' }}>{review.name}</p>
+                    <p className="text-xs" style={{ color: 'var(--u-text-muted)' }}>{review.location}</p>
+                  </div>
+                  <span className="text-[10px] tracking-wider uppercase px-2 py-1 rounded-full border" style={{ borderColor: 'var(--u-border)', color: 'var(--u-text-muted)' }}>{review.dept}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VILLA & AIRBNB OWNERS */}
+      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div>
+              <p className="u-label text-sm mb-4">Partnerships</p>
+              <h2 className="u-heading text-4xl md:text-5xl mb-6">For Villa & Airbnb Owners</h2>
+              <div className="gold-arc mb-8" />
+              <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
+                Elevate your guests' experience by partnering with myCHEF. We currently work with 560+ luxury villas across Bali. Whatever your guests need, we lift everything we touch with excellence.
+              </p>
+              <div className="space-y-4 mb-8">
+                {[
+                  { title: 'Premium Guest Service', desc: 'Offer exclusive dining without any effort on your part.' },
+                  { title: 'Easy Partnership', desc: 'Simple setup with ongoing support for you and your guests.' },
+                  { title: 'Higher Ratings', desc: 'Villas that offer private chef services see higher guest satisfaction and repeat bookings.' },
+                ].map((item) => (
+                  <div key={item.title} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--u-accent)' }} />
+                    <div>
+                      <p className="text-sm font-medium" style={{ color: 'var(--u-text)' }}>{item.title}</p>
+                      <p className="text-sm" style={{ color: 'var(--u-text-muted)' }}>{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <Link to="/partners" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: 'var(--u-accent)', color: '#fff' }}>
+                Partner With myCHEF <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <img src="/generated/hub-villa.jpg" alt="Luxury villa partnership" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0' }} />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label text-sm mb-4">Questions</p>
@@ -305,7 +416,7 @@ export default function HubPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: '#25D366', color: '#fff' }}>
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: '#25D366', color: '#fff' }}>
               <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
             </a>
           </div>
@@ -328,7 +439,7 @@ export default function HubPage() {
             Most inquiries are answered within the hour. No deposit required to start planning.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all hover:scale-105">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all hover:scale-105">
               <Phone className="w-4 h-4" /> WhatsApp Us Now
             </a>
             <Link to="/contact" className="inline-block px-10 py-5 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">

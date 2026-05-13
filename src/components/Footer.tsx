@@ -59,8 +59,8 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-3 text-sm text-white/60">
-              <li>WhatsApp: +62 812 3456 7890</li>
-              <li>Email: hello@mychef.id</li>
+              <li>WhatsApp: +62 822-3756-5997</li>
+              <li>Email: indonesia@mychef.id</li>
               <li>Bali, Indonesia</li>
             </ul>
             <div className="flex gap-4 mt-6">
@@ -79,8 +79,9 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} myCHEF.id. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-white/40">
-            <Link to="/" className="hover:text-white/60 transition-colors">Privacy</Link>
-            <Link to="/" className="hover:text-white/60 transition-colors">Terms</Link>
+            <Link to="/privacy" className="hover:text-white/60 transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white/60 transition-colors">Terms & Payment</Link>
+            <Link to="/cancellation" className="hover:text-white/60 transition-colors">Cancellation</Link>
           </div>
         </div>
       </div>

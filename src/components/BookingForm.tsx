@@ -17,7 +17,7 @@ const CONFIG = {
       { name: 'menu', label: 'Menu Experience', type: 'select', icon: Utensils, options: ['Mediterranean Sea Experience (IDR 2.2M++ pp)', 'Wagyu Experience (IDR 2.4M++ pp)'] },
     ],
     whatsappName: 'Sofia',
-    whatsappNumber: '6281234567890',
+    whatsappNumber: '6282237565997',
   },
   sol: {
     title: 'Book Your Private Villa Chef',
@@ -30,7 +30,7 @@ const CONFIG = {
       { name: 'meals', label: 'Meal Plan', type: 'select', icon: Utensils, options: ['Breakfast Only', 'Half Board', 'Full Board', 'Custom'] },
     ],
     whatsappName: 'Daniel',
-    whatsappNumber: '6281234567891',
+    whatsappNumber: '6282237565997',
   },
   aura: {
     title: 'Plan Your Event',
@@ -42,7 +42,7 @@ const CONFIG = {
       { name: 'villa', label: 'Villa Location', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu, Ubud...' },
     ],
     whatsappName: 'Olivia',
-    whatsappNumber: '6281234567892',
+    whatsappNumber: '6282237565997',
   },
 }
 
@@ -150,6 +150,13 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
               onChange={(e) => handleChange('notes', e.target.value)}
             />
           </div>
+        </div>
+
+        <div className="p-4 rounded-xl border border-dashed" style={{ borderColor: 'var(--u-border)' }}>
+          <p className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-accent)', fontFamily: "'Cormorant Garamond', serif" }}>Payment</p>
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
+            <strong className="text-white/80">25% deposit</strong> confirms your booking and locks your chef. The remaining balance is paid when the chef arrives at your villa, before service begins.
+          </p>
         </div>
 
         <button

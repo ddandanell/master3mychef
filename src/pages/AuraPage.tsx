@@ -31,10 +31,141 @@ const EVENT_TYPES = [
   { icon: PartyPopper, title: 'Celebrations', desc: 'Birthdays, anniversaries, reunions. Custom themes and menus.' },
 ]
 
-const PACKAGES = [
-  { name: 'Intimate', guests: '10–30', price: 'From IDR 15M', desc: 'Cocktail reception, seated dinner, full service staff. Perfect for small gatherings.', features: ['Private chef team', 'Wait staff (2)', 'Bar setup', 'Table décor', 'Sound system'] },
-  { name: 'Villa Celebration', guests: '30–80', price: 'From IDR 35M', desc: 'Multi-course dinner, open bar, live station, full event coordination.', features: ['Executive chef + sous chef', 'Wait staff (4)', 'Bartender', 'Event coordinator', 'Floral arrangement', 'Lighting design'] },
-  { name: 'Grand', guests: '80–200', price: 'From IDR 75M', desc: 'Full-scale event production. Catering, bar, décor, staffing, and logistics.', features: ['Head chef + team of 6', 'Full service staff (8+)', 'Multiple bartenders', 'Event director', 'Custom décor & floral', 'AV & lighting', 'Valet service'] },
+interface PartyPackage {
+  slug: string
+  name: string
+  concept: string
+  image: string
+  price: string
+  min: string
+  bestFor?: string
+  includes: string[]
+  addons: string[]
+}
+
+const PACKAGES: PartyPackage[] = [
+  {
+    slug: 'sunset-pool-party',
+    name: 'Sunset Pool Party Experience',
+    concept: 'Luxury Bali villa pool party with cocktails, live BBQ, floating snacks, music and sunset atmosphere.',
+    image: '/generated/party-pool.jpg',
+    price: 'From IDR 950,000++ / guest',
+    min: 'Min. 10 guests',
+    bestFor: 'Birthday parties · Friends trips · Villa weekends · Influencer groups · Pre-wedding events',
+    includes: ['BBQ station', 'Cocktail bar', 'Floating snacks', 'Party setup', 'Waiters', 'Ice setup', 'Cleanup'],
+    addons: ['DJ', 'Saxophone player', 'Champagne tower', 'Drone videographer', 'Fire dancers', 'Pool decor'],
+  },
+  {
+    slug: 'white-party-night',
+    name: 'White Party Villa Night',
+    concept: 'Luxury all-white evening with cocktails, premium dinner service, candles and high-end villa styling.',
+    image: '/generated/party-white.jpg',
+    price: 'From IDR 1,450,000++ / guest',
+    min: 'Min. 12 guests',
+    bestFor: 'Luxury birthdays · Fashion groups · Influencer dinners · Networking events',
+    includes: ['White styling setup', 'Fine dining menu', 'Cocktail station', 'Waiters', 'Candles & table styling'],
+    addons: ['White floral styling', 'Live violinist', 'Professional photographer', 'Champagne service'],
+  },
+  {
+    slug: 'taco-tequila-fiesta',
+    name: 'Taco & Tequila Fiesta',
+    concept: 'Interactive Mexican-inspired villa party with tacos, tequila, margaritas and social food stations.',
+    image: '/generated/party-tacos.jpg',
+    price: 'From IDR 750,000++ / guest',
+    min: 'Min. 8 guests',
+    includes: ['Taco station', 'Margarita bar', 'Tequila tasting', 'Nachos & dips', 'Mexican dessert setup'],
+    addons: ['Mariachi-style acoustic music', 'Neon signs', 'Custom cocktails', 'DJ'],
+  },
+  {
+    slug: 'mediterranean-sunset-feast',
+    name: 'Mediterranean Sunset Feast',
+    concept: 'Luxury Mediterranean sharing dinner inspired by beach clubs and European summer nights.',
+    image: '/generated/party-medi.jpg',
+    price: 'From IDR 1,250,000++ / guest',
+    min: 'Min. 6 guests',
+    includes: ['Seafood', 'Handmade pasta', 'Burrata', 'Shared feast setup', 'Dessert', 'Full service'],
+    addons: ['Wine pairing', 'Oyster station', 'Live acoustic music'],
+  },
+  {
+    slug: 'villa-festival-night',
+    name: 'Villa Festival Night',
+    concept: 'Private mini-festival atmosphere with food stations, cocktails, lounge areas and entertainment.',
+    image: '/generated/party-festival.jpg',
+    price: 'From IDR 1,950,000++ / guest',
+    min: 'Min. 20 guests',
+    includes: ['Multiple food stations', 'Cocktail bars', 'Lounge styling', 'Lighting setup', 'Service team'],
+    addons: ['DJ booth', 'Dance floor', 'Fire performers', 'LED installations', 'Photo booth'],
+  },
+  {
+    slug: 'rooftop-cocktail-session',
+    name: 'Rooftop Cocktail Session',
+    concept: 'Elegant rooftop-style cocktail evening with canapés, bartenders and sunset social atmosphere.',
+    image: '/generated/party-rooftop.jpg',
+    price: 'From IDR 850,000++ / guest',
+    min: 'Min. 10 guests',
+    includes: ['Signature cocktails', 'Canapés', 'Bartender team', 'Ice & garnish station', 'Service staff'],
+    addons: ['Live saxophone', 'Luxury cigar station', 'Champagne service'],
+  },
+  {
+    slug: 'luxury-birthday-experience',
+    name: 'Luxury Birthday Experience',
+    concept: 'Complete birthday setup with food, drinks, styling, cake and atmosphere planning.',
+    image: '/generated/party-birthday.jpg',
+    price: 'From IDR 1,650,000++ / guest',
+    min: 'Min. 8 guests',
+    includes: ['Custom dinner', 'Birthday cake', 'Styling assistance', 'Waiters', 'Cocktail welcome', 'Cleanup'],
+    addons: ['Balloon styling', 'Live entertainment', 'Photographer', 'Luxury signage'],
+  },
+  {
+    slug: 'recovery-brunch-chill',
+    name: 'Recovery Brunch & Chill',
+    concept: 'Luxury recovery brunch after weddings, birthdays or villa parties.',
+    image: '/generated/party-brunch.jpg',
+    price: 'From IDR 450,000++ / guest',
+    min: 'Min. 6 guests',
+    includes: ['Healthy breakfast', 'Fresh juices', 'Coffee station', 'Recovery food', 'Fruit platters'],
+    addons: ['Ice baths', 'Wellness shots', 'Smoothie station', 'Massage setup'],
+  },
+  {
+    slug: 'bali-bbq-beer-garden',
+    name: 'Bali BBQ & Beer Garden',
+    concept: 'Relaxed premium beer-and-grill atmosphere inspired by luxury beach clubs.',
+    image: '/generated/party-beer.jpg',
+    price: 'From IDR 650,000++ / guest',
+    min: 'Min. 10 guests',
+    includes: ['BBQ station', 'Beer buckets', 'Sharing platters', 'Side dishes', 'Dessert'],
+    addons: ['Craft beer station', 'Sports screen setup', 'Acoustic music'],
+  },
+  {
+    slug: 'ultimate-villa-celebration',
+    name: 'Ultimate Villa Celebration',
+    concept: 'Full-scale luxury villa event production. The flagship package.',
+    image: '/generated/party-ultimate.jpg',
+    price: 'From IDR 2,950,000++ / guest',
+    min: 'Min. 20 guests',
+    includes: ['Full catering', 'Premium cocktails', 'Staffing', 'Styling', 'Event coordination', 'Luxury table setup', 'Music coordination', 'Cleanup'],
+    addons: ['Full production lighting', 'Stage setup', 'Performers', 'Live band', 'Fireworks', 'Luxury transportation'],
+  },
+]
+
+const GLOBAL_ADDONS = [
+  'DJs',
+  'Live musicians',
+  'Saxophone players',
+  'Fire dancers',
+  'Cocktail bartenders',
+  'Champagne towers',
+  'Floral styling',
+  'Balloon styling',
+  'Luxury table setups',
+  'Photo / video team',
+  'Drone videography',
+  'Sound system',
+  'LED lighting',
+  'Branded menus',
+  'Security staff',
+  'Luxury transportation',
+  'Recovery brunch next day',
 ]
 
 const FAQS = [
@@ -95,7 +226,7 @@ export default function AuraPage() {
               <MessageCircle className="w-4 h-4" /> Message Olivia
             </a>
             <a href="#packages" className="inline-block px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
-              See Packages
+              See Party Events
             </a>
           </div>
         </div>
@@ -150,35 +281,151 @@ export default function AuraPage() {
         </div>
       </section>
 
-      {/* Packages */}
-      <section id="packages" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FFFFFF' }}>
+      {/* Party Events — 10 cinematic villa party experiences */}
+      <section id="packages" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FAFAF8' }}>
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Packages</p>
-            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Choose Your Scale</h2>
+          <div className="text-center mb-16 md:mb-24">
+            <p className="text-[#2C5F7C] text-sm tracking-[0.35em] uppercase mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Party Events</p>
+            <h2 className="text-4xl md:text-6xl mb-6 leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif", color: '#0F0F0F' }}>
+              Ten ways to throw the<br/>
+              <span className="italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>villa night people talk about</span>
+            </h2>
+            <p className="max-w-2xl mx-auto text-base md:text-lg leading-relaxed" style={{ color: '#4A4745' }}>
+              We do not sell food. We design the atmosphere — cocktails, sunset light, music, styling, and a service team that runs the night so you can be a guest at your own party.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-20">
             {PACKAGES.map((pkg, i) => (
-              <div key={pkg.name} className={`p-8 rounded-2xl border transition-all hover:shadow-xl ${i === 1 ? 'border-[#2C5F7C] bg-white' : 'border-[#E5E3E0] bg-white'}`}>
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.name}</h3>
-                  {i === 1 && <span className="text-xs px-3 py-1 rounded-full bg-[#2C5F7C] text-white">Most Popular</span>}
-                </div>
-                <p className="text-sm mb-4" style={{ color: '#4A4745' }}>{pkg.guests} guests</p>
-                <p className="text-2xl font-medium mb-4" style={{ color: '#1A1A1A' }}>{pkg.price}</p>
-                <p className="text-sm mb-6 leading-relaxed" style={{ color: '#4A4745' }}>{pkg.desc}</p>
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((f) => (
-                    <li key={f} className="flex items-center gap-3 text-sm" style={{ color: '#1A1A1A' }}>
-                      <Check className="w-4 h-4 text-[#2C5F7C]" />{f}
-                    </li>
-                  ))}
-                </ul>
-                <a href="#book" className="block text-center py-3 rounded-xl text-sm font-medium tracking-wider uppercase transition-all hover:scale-[1.02]" style={{ background: i === 1 ? '#2C5F7C' : '#F8F7F5', color: i === 1 ? '#FFFFFF' : '#1A1A1A' }}>
-                  Get a Quote
+              <article
+                key={pkg.slug}
+                id={pkg.slug}
+                className="group flex flex-col scroll-mt-24"
+              >
+                <a
+                  href={`https://wa.me/6282237565997?text=${encodeURIComponent('Hi myCHEF — interested in the ' + pkg.name + ' package. Could you send details?')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block overflow-hidden rounded-[20px] aspect-[16/10] mb-7 ring-1 ring-black/5 shadow-[0_24px_60px_-30px_rgba(15,15,15,0.4)]"
+                >
+                  <img
+                    src={pkg.image}
+                    alt={`${pkg.name} — ${pkg.concept}`}
+                    width={1280}
+                    height={800}
+                    loading={i < 2 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    className="w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.05]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                  <span
+                    className="absolute top-5 left-5 text-[10px] font-semibold tracking-[0.3em] uppercase px-3.5 py-1.5 rounded-full"
+                    style={{ background: 'rgba(15,15,15,0.78)', color: '#FAFAF8', backdropFilter: 'blur(8px)' }}
+                  >
+                    {String(i + 1).padStart(2, '0')} · Party
+                  </span>
+                  <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+                    <span className="text-[10px] tracking-[0.3em] uppercase font-medium" style={{ color: 'rgba(250,250,248,0.92)', textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>
+                      {pkg.min}
+                    </span>
+                  </div>
                 </a>
-              </div>
+
+                <header className="mb-5">
+                  <h3 className="text-[26px] md:text-[30px] leading-tight mb-3" style={{ fontFamily: "'Playfair Display', serif", color: '#0F0F0F' }}>
+                    {pkg.name}
+                  </h3>
+                  <p className="text-[17px] md:text-lg leading-relaxed" style={{ color: '#4A4745', fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic' }}>
+                    {pkg.concept}
+                  </p>
+                </header>
+
+                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 mb-5 pb-5 border-b border-black/10">
+                  <p className="text-lg font-medium tracking-tight" style={{ color: '#0F0F0F' }}>{pkg.price}</p>
+                </div>
+
+                {pkg.bestFor && (
+                  <p className="text-xs mb-6 leading-relaxed" style={{ color: '#6A6560' }}>
+                    <span className="font-semibold tracking-[0.2em] uppercase mr-2" style={{ color: '#0F0F0F' }}>Best for</span>
+                    {pkg.bestFor}
+                  </p>
+                )}
+
+                <div className="mb-5">
+                  <p className="text-[10px] font-semibold tracking-[0.3em] uppercase mb-3" style={{ color: '#0F0F0F' }}>Includes</p>
+                  <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+                    {pkg.includes.map((feat) => (
+                      <li key={feat} className="flex items-start gap-2 text-xs" style={{ color: '#1A1A1A' }}>
+                        <Check className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-[#2C5F7C]" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-7">
+                  <p className="text-[10px] font-semibold tracking-[0.3em] uppercase mb-3" style={{ color: '#0F0F0F' }}>Optional add-ons</p>
+                  <ul className="flex flex-wrap gap-2">
+                    {pkg.addons.map((a) => (
+                      <li
+                        key={a}
+                        className="text-[11px] px-3 py-1.5 rounded-full border"
+                        style={{ borderColor: 'rgba(15,15,15,0.12)', color: '#4A4745', background: '#FFFFFF' }}
+                      >
+                        {a}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <a
+                  href={`https://wa.me/6282237565997?text=${encodeURIComponent('Hi myCHEF — interested in the ' + pkg.name + ' package. Could you send details?')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] uppercase self-start py-2 border-b-2 border-[#0F0F0F] hover:border-[#2C5F7C] hover:text-[#2C5F7C] transition-colors"
+                  style={{ color: '#0F0F0F' }}
+                >
+                  Book this experience
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </a>
+              </article>
             ))}
+          </div>
+
+          {/* Global Add-Ons */}
+          <div className="mt-24 md:mt-32 pt-16 border-t border-black/10">
+            <div className="text-center mb-12">
+              <p className="text-[#2C5F7C] text-sm tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Available for every party</p>
+              <h3 className="text-3xl md:text-4xl mb-3" style={{ fontFamily: "'Playfair Display', serif", color: '#0F0F0F' }}>Global add-ons</h3>
+              <p className="max-w-xl mx-auto text-sm" style={{ color: '#4A4745' }}>
+                Bolt any of these onto any package. Tell Olivia what you want and we will quote it inside your proposal.
+              </p>
+            </div>
+            <ul className="flex flex-wrap justify-center gap-2.5 max-w-3xl mx-auto">
+              {GLOBAL_ADDONS.map((a) => (
+                <li
+                  key={a}
+                  className="text-xs px-4 py-2 rounded-full border"
+                  style={{ borderColor: 'rgba(15,15,15,0.12)', color: '#1A1A1A', background: '#FFFFFF' }}
+                >
+                  {a}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="text-center mt-20">
+            <p className="text-base mb-6" style={{ color: '#4A4745', fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic' }}>
+              Want something else? We design custom villa parties from scratch.
+            </p>
+            <a
+              href="https://wa.me/6282237565997?text=Hi%20myCHEF%20%E2%80%94%20I%27d%20like%20to%20design%20a%20custom%20villa%20party"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all"
+            >
+              <Phone className="w-4 h-4" /> Design a custom party
+            </a>
           </div>
         </div>
       </section>

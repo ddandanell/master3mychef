@@ -265,7 +265,7 @@ export default function CateringPage() {
             <a href="#book" className="bg-[#D4AF37] text-[#050505] font-inter font-semibold text-xs uppercase tracking-[2px] px-8 py-4 hover:bg-[#C99B2F] transition-all text-center">
               Book a Villa Chef
             </a>
-            <a href="https://wa.me/6281234567892?text=Hi%20Daniel" target="_blank" rel="noopener noreferrer" className="border border-[#2C2419]/20 text-[#2C2419] font-inter text-xs uppercase tracking-[2px] px-8 py-[14px] hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all text-center flex items-center justify-center gap-2">
+            <a href="https://wa.me/6282237565997?text=Hi%20Daniel%2C%20we%27re%20staying%20at%20a%20villa%20and%20would%20love%20to%20explore%20private%20chef%20options." target="_blank" rel="noopener noreferrer" className="border border-[#2C2419]/20 text-[#2C2419] font-inter text-xs uppercase tracking-[2px] px-8 py-[14px] hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all text-center flex items-center justify-center gap-2">
               <MessageCircle size={14} /> Chat with Daniel
             </a>
           </div>
@@ -279,8 +279,8 @@ export default function CateringPage() {
             Your catering contact: <span className="text-[#D4AF37] font-medium">Daniel</span>
           </p>
           <span className="hidden sm:block w-[1px] h-4 bg-[#F5F3EF]/20" />
-          <a href="https://wa.me/6281234567892" target="_blank" rel="noopener noreferrer" className="font-inter text-[#D4AF37] text-sm hover:underline">
-            WhatsApp +62 812 3456 7892
+          <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="font-inter text-[#D4AF37] text-sm hover:underline">
+            WhatsApp +62 822-3756-5997
           </a>
           <span className="hidden sm:block w-[1px] h-4 bg-[#F5F3EF]/20" />
           <p className="font-inter text-[#F5F3EF]/40 text-xs">Response within 2 hours</p>

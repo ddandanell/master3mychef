@@ -55,10 +55,15 @@ export default function Footer() {
               Company
             </h4>
             <ul className="space-y-3">
-              {['About Us', 'Our Chefs', 'Testimonials', 'Contact'].map((l) => (
-                <li key={l}>
-                  <Link to="/contact" className="text-sm text-white/60 hover:text-[#D4AF37] transition-colors">
-                    {l}
+              {[
+                { label: 'Contact', path: '/contact' },
+                { label: 'Privacy Policy', path: '/privacy' },
+                { label: 'Terms & Payment', path: '/terms' },
+                { label: 'Cancellation', path: '/cancellation' },
+              ].map((l) => (
+                <li key={l.path}>
+                  <Link to={l.path} className="text-sm text-white/60 hover:text-[#D4AF37] transition-colors">
+                    {l.label}
                   </Link>
                 </li>
               ))}

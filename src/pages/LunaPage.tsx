@@ -98,32 +98,32 @@ const TESTIMONIALS = [
 
 const THE_FOUR = [
   {
-    name: 'Matteo Conti',
+    name: 'I Made Surya',
     role: 'Pasta. Mediterranean lead.',
-    origin: 'Bologna, Italy',
-    image: '/generated/chef-matteo.png',
-    bio: 'Born in Bologna. Rolled pasta with his aunt at six. Trained at a one-star in Emilia-Romagna. Adriano met him in Modena fifteen years ago, when they were stagiaires in the same kitchen — the only person in that brigade Adriano stayed in touch with. When myCHEF was founded, Matteo was the first call. He leads almost every Mediterranean Sea evening. His tagliatelle is rolled the same afternoon, in the villa where it will be eaten, on a marble board that travels with him.',
+    origin: 'Ubud, Bali',
+    image: '/generated/chef-made-surya.png',
+    bio: 'Born in a village outside Ubud, where his family ran a warung. He started as a kitchen hand at sixteen in a hotel in Seminyak, moved up to line cook, then to a small Italian restaurant in Canggu where he taught himself to make pasta. Adriano met him in 2021 — they were in the same kitchen for one service, covering for a mutual friend. Adriano watched him work for two hours and offered him an apprenticeship that night. Three months of the training were spent on pasta technique alone. His tagliatelle now travels with him to every Mediterranean evening, rolled in the villa where it will be eaten.',
   },
   {
-    name: 'Paco Reyes',
+    name: 'Bayu Pranata',
     role: 'Grill and protein. Wagyu lead.',
-    origin: 'San Sebastián, Spain',
-    image: '/generated/chef-paco.png',
-    bio: 'Born in San Sebastián, on the Basque coast. Trained in pintxos bars, then in a two-star in the hills above the city. Adriano worked beside him for a season in 2008 — the kitchen that taught Adriano what joy in fine dining looked like. Fourteen years later, when myCHEF needed a chef who understood fire, Adriano flew back to San Sebastián, sat with Paco for two nights, and brought him to Bali. He leads the Wagyu Experience. The ribeye is his.',
+    origin: 'Yogyakarta, Java',
+    image: '/generated/chef-bayu-pranata.png',
+    bio: 'Born in Yogyakarta. Trained in five-star hotel kitchens in Jakarta before moving to Bali in 2019 looking for less industrial work. He specialised in grilled proteins at a steakhouse in Seminyak, where his ribeye became quietly known among local chefs. Adriano heard about him in 2022, took a meeting, watched him cook a single steak, and hired him the same week. He brings the patience of a man who has been at fire since he was nineteen — and the discipline the Wagyu menu requires.',
   },
   {
-    name: 'Alessandro Conte',
-    role: 'Sauces, technique, plating.',
-    origin: 'Florence, Italy',
-    image: null,
-    bio: 'Born in Florence. Classical training at a two-star in Tuscany, then a year in Lyon. Adriano hired him in 2022 after a single trial dinner in Bali — Alessandro was visiting a friend and was asked to plate one course. The plate told Adriano everything. Alessandro now runs the sauce station on every evening, regardless of menu. The blue cheese sauce on the Wagyu ribeye and the Mediterranean sauce on the barramundi are both his hands.',
+    name: 'Rizky Saputra',
+    role: 'Sauces and technique. Cross-menu.',
+    origin: 'Padang, West Sumatra',
+    image: '/generated/chef-rizky-saputra.png',
+    bio: 'Born in Padang, West Sumatra, into a family that has run restaurants for three generations. Minangkabau cooking is built on sauces that take a day — rendang reduced until the coconut milk has all but disappeared, gulai layered over hours, sambal pounded by hand. He grew up understanding that a sauce that takes ten minutes is not yet a sauce. He left Padang at twenty for Jakarta, then came to Bali in 2020 looking for a kitchen that would demand something different from him. He worked in two hotel kitchens before Adriano met him in 2023 at an industry tasting. The way he reduced a single sauce caught Adriano\'s eye — controlled, patient, almost reverent. Adriano hired him within a fortnight. He runs the sauce station on every evening, regardless of menu. The blue cheese sauce on the Wagyu ribeye and the lobster reduction for the tagliatelle are both his hands.',
   },
   {
-    name: 'Lukas Brandt',
+    name: 'Ni Putu Asri',
     role: 'Pastry.',
-    origin: 'Vienna, Austria',
-    image: null,
-    bio: 'Born in Vienna. Trained at a three-star in Austria before two years at a renowned Parisian pâtisserie. Adriano recruited him in 2023, against the advice of three people who told him a private kitchen could not justify a pastry chef of Lukas\'s level. Adriano disagreed. The dessert plate is his alone. The lady fingers in the tiramisu are baked the morning of the dinner. The Tenerina cake comes out of his oven, not anyone else\'s.',
+    origin: 'North Bali',
+    image: '/generated/chef-ni-putu-asri.png',
+    bio: 'Born in a village in north Bali. Trained at a culinary school in Denpasar, then worked in pastry at a luxury resort in Nusa Dua, where she grew frustrated by the industrial scale of it — sheet trays of identical cakes for the breakfast buffet, made by a kitchen of fifteen. Adriano met her in 2023 at a wedding she had been hired to bake for. The dessert was the best thing on the table. He found her two days later. She left the resort the following month and trained with Adriano for nine months — the longest training any of the four has done. The lady fingers in the tiramisu are baked the morning of the dinner. The Tenerina cake is hers.',
   },
 ]
 
@@ -190,45 +190,46 @@ export default function LunaPage() {
               Adriano did not build a team. He built a lineage.
             </p>
             <p className="text-white/50 leading-relaxed mb-6">
-              Over five years he has chosen four chefs — one by one, on his terms — and trained each of them himself. He found them in Italy, in Spain, in Austria, and once across a counter in Bali. Each is capable of leading an evening end to end. Each has been drilled in the same techniques, the same pacing, the same standards Adriano carried out of Modena and Tokyo.
+              He arrived in Bali in 2019 with the standards of Modena and Tokyo in his hands. He chose not to import a kitchen from Europe. He chose instead to find local talent and teach them everything he knew.
             </p>
             <p className="text-white/50 leading-relaxed mb-6">
-              He does not delegate the training. He never has. A new chef spends six months beside him before they cook a single plate for a paying guest. After that they cook beside him for another year before they lead an evening alone. Every plate, every sauce, every pour is tested, corrected, repeated.
+              Four chefs, over five years. Each found in Indonesia. Each chosen on his terms. Each trained by him personally — six months beside him before they cook a single plate for a paying guest, another year beside him before they lead an evening alone. Every sauce, every pour, every minute of pacing tested and corrected until it is right.
+            </p>
+            <p className="text-white/50 leading-relaxed mb-6">
+              He found them across three islands and three culinary traditions — Bali, Java, and Sumatra. What they share is the kitchen they were trained in.
+            </p>
+            <p className="text-white/50 leading-relaxed mb-6">
+              The result is something neither Italian nor Indonesian, and at the same time both. It is what happens when a master from one tradition trains his hands in another country, and the country leaves its mark on the cooking.
             </p>
             <p className="text-white/70 leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
               These are the four.
             </p>
           </div>
 
-          {/* Chef Cards — 2x2 grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-20">
+          {/* Chef Portraits + Bios — Desktop 2×2, Mobile vertical */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-20 max-w-[1080px] mx-auto">
             {THE_FOUR.map((chef) => (
               <div
                 key={chef.name}
-                className="group relative rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-700 hover:border-[#D4AF37]/20"
-                style={{ background: 'rgba(255,255,255,0.02)' }}
+                className="group flex flex-col"
               >
-                {/* Image or accent header */}
-                {chef.image ? (
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <img
-                      src={chef.image}
-                      alt={chef.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent" />
-                  </div>
-                ) : (
-                  <div className="h-2 bg-gradient-to-r from-[#D4AF37]/60 via-[#D4AF37]/30 to-transparent" />
-                )}
+                {/* Portrait — consistent treatment */}
+                <div className="relative aspect-[3/4] max-h-[420px] overflow-hidden rounded-t-2xl">
+                  <img
+                    src={chef.image}
+                    alt={chef.name}
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-60" />
+                </div>
 
-                {/* Content */}
-                <div className="p-8 md:p-10">
-                  <div className="flex items-baseline justify-between mb-2">
-                    <h3 className="text-2xl md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{chef.name}</h3>
-                    <span className="text-xs text-white/40 tracking-wider uppercase">{chef.origin}</span>
+                {/* Bio card */}
+                <div className="p-6 md:p-8 rounded-b-2xl border border-t-0 border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
+                  <div className="flex items-baseline justify-between mb-1">
+                    <h3 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>{chef.name}</h3>
+                    <span className="text-[10px] text-white/40 tracking-wider uppercase">{chef.origin}</span>
                   </div>
-                  <p className="text-[#D4AF37] text-sm tracking-[0.15em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{chef.role}</p>
+                  <p className="text-[#D4AF37] text-xs tracking-[0.15em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{chef.role}</p>
                   <p className="text-white/50 text-sm leading-relaxed">{chef.bio}</p>
                 </div>
               </div>
@@ -238,7 +239,7 @@ export default function LunaPage() {
           {/* Closing line */}
           <div className="text-center">
             <p className="text-[#D4AF37]/80 text-sm md:text-base italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              One of them will be in your kitchen on the night.
+              One of the four will be in your kitchen on the night.
             </p>
             <p className="text-white/30 text-xs mt-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Which one depends on the menu, the date, and what arrived on the morning boat.
@@ -608,7 +609,7 @@ export default function LunaPage() {
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#D4AF37]" /><span className="text-sm text-white/80">Minimum 4 guests</span></div>
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#D4AF37]" /><span className="text-sm text-white/80">Service charge and government tax included</span></div>
               </div>
-              <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+              <a href="https://wa.me/6282237565997?text=Hi%20Sofia%2C%20I%27d%20like%20to%20book%20a%20fine%20dining%20experience." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
                 <Phone className="w-4 h-4" /> Book via WhatsApp
               </a>
             </div>

@@ -174,7 +174,7 @@ export default function HubPage() {
             Italian fine dining. Private villa chefs. Full-service events. A Michelin-trained team of 50+, in your kitchen.
           </p>
           <div className="hub-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#D4AF37] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#E8C84B] transition-all hover:scale-105">
+            <a href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book." target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#D4AF37] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#E8C84B] transition-all hover:scale-105">
               Book on WhatsApp
             </a>
             <Link to="/contact" className="px-8 py-4 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">

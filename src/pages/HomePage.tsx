@@ -395,7 +395,7 @@ function CTABannerSection() {
           <Link to="/contact" className="w-full sm:w-auto bg-[#D4AF37] text-[#050505] font-inter font-semibold text-xs uppercase tracking-[2px] px-10 py-4 hover:bg-[#E8C84B] transition-all duration-300 text-center">
             Contact Us
           </Link>
-          <a href="https://wa.me/6281234567890?text=Hi%20myCHEF" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto border border-white/20 text-white/60 font-inter text-xs uppercase tracking-[2px] px-10 py-[14px] hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 text-center">
+          <a href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto border border-white/20 text-white/60 font-inter text-xs uppercase tracking-[2px] px-10 py-[14px] hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 text-center">
             Chat on WhatsApp
           </a>
         </div>

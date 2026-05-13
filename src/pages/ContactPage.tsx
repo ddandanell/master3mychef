@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { MessageCircle, Mail, Phone, MapPin, Check, ArrowRight } from 'lucide-react'
 
 const DEPARTMENTS = [
-  { id: 'luna', name: 'Fine Dining', contact: 'Sofia', number: '6281234567890', desc: 'Menu questions, reservations, dietary needs', color: '#D4AF37' },
-  { id: 'sol', name: 'Villa Chef', contact: 'Daniel', number: '6281234567891', desc: 'Daily chef bookings, meal plans, villa stays', color: '#6B8E5A' },
-  { id: 'aura', name: 'Events', contact: 'Olivia', number: '6281234567892', desc: 'Weddings, corporate events, celebrations', color: '#2C5F7C' },
+  { id: 'luna', name: 'Fine Dining', contact: 'Sofia', number: '6282237565997', desc: 'Menu questions, reservations, dietary needs', color: '#D4AF37' },
+  { id: 'sol', name: 'Villa Chef', contact: 'Daniel', number: '6282237565997', desc: 'Daily chef bookings, meal plans, villa stays', color: '#6B8E5A' },
+  { id: 'aura', name: 'Events', contact: 'Olivia', number: '6282237565997', desc: 'Weddings, corporate events, celebrations', color: '#2C5F7C' },
 ]
 
 export default function ContactPage() {
@@ -84,7 +84,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium mb-1" style={{ color: 'var(--u-text)' }}>WhatsApp</p>
-                    <p className="text-sm" style={{ color: 'var(--u-text-muted)' }}>+62 812 3456 7890</p>
+                    <p className="text-sm" style={{ color: 'var(--u-text-muted)' }}>+62 822-3756-5997</p>
                     <p className="text-xs mt-1" style={{ color: 'var(--u-text-muted)' }}>Fastest response — typically within minutes</p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium mb-1" style={{ color: 'var(--u-text)' }}>Email</p>
-                    <p className="text-sm" style={{ color: 'var(--u-text-muted)' }}>hello@mychef.id</p>
+                    <p className="text-sm" style={{ color: 'var(--u-text-muted)' }}>indonesia@mychef.id</p>
                     <p className="text-xs mt-1" style={{ color: 'var(--u-text-muted)' }}>For detailed proposals and corporate inquiries</p>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium mb-1" style={{ color: 'var(--u-text)' }}>Phone</p>
-                    <p className="text-sm" style={{ color: 'var(--u-text-muted)' }}>+62 812 3456 7890</p>
+                    <p className="text-sm" style={{ color: 'var(--u-text-muted)' }}>+62 822-3756-5997</p>
                     <p className="text-xs mt-1" style={{ color: 'var(--u-text-muted)' }}>Available 8am–10pm Bali time</p>
                   </div>
                 </div>

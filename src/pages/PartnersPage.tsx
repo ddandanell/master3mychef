@@ -22,9 +22,9 @@ const certifications = [
   { name: '8+ Years Operating', desc: 'Established hospitality presence in Bali since 2017 with proven track record.' },
 ]
 
-const partnerLogos = [
-  'The Edge Bali', 'Alila Villas', 'Amanusa', 'Bvlgari Resort',
-  'COMO Shambhala', 'Four Seasons', 'Mandapa Ritz-Carlton', 'Viceroy Bali',
+const partnerRegions = [
+  'Seminyak', 'Canggu', 'Ubud', 'Uluwatu',
+  'Sanur', 'Nusa Dua', 'Pererenan', 'Bingin',
 ]
 
 const testimonials = [
@@ -85,7 +85,7 @@ export default function PartnersPage() {
             <a href="#partner-form" className="bg-[#2C5F7C] text-white font-inter font-semibold text-xs uppercase tracking-[2px] px-8 py-4 hover:bg-[#1E4A5E] transition-all text-center">
               Become a Partner
             </a>
-            <a href="https://wa.me/6281234567894?text=Hi%20Marco" target="_blank" rel="noopener noreferrer" className="border border-[#1A1A1A]/20 text-[#1A1A1A] font-inter text-xs uppercase tracking-[2px] px-8 py-[14px] hover:border-[#2C5F7C] hover:text-[#2C5F7C] transition-all text-center">
+            <a href="https://wa.me/6282237565997?text=Hi%20Marco%2C%20I%27m%20interested%20in%20becoming%20a%20myCHEF%20partner." target="_blank" rel="noopener noreferrer" className="border border-[#1A1A1A]/20 text-[#1A1A1A] font-inter text-xs uppercase tracking-[2px] px-8 py-[14px] hover:border-[#2C5F7C] hover:text-[#2C5F7C] transition-all text-center">
               Chat with Marco
             </a>
           </div>
@@ -95,10 +95,10 @@ export default function PartnersPage() {
       {/* Partner Logos */}
       <section className="part-reveal py-12 px-8 border-b border-[#E5E3E0]" style={{ opacity: 0 }}>
         <div className="max-w-container-lg mx-auto">
-          <p className="font-inter text-[#8A8785] text-xs uppercase tracking-[2px] text-center mb-6">Trusted by leading properties across Bali</p>
+          <p className="font-inter text-[#8A8785] text-xs uppercase tracking-[2px] text-center mb-6">Serving 50+ luxury villas across Bali</p>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-            {partnerLogos.map((logo) => (
-              <span key={logo} className="font-playfair text-[#8A8785] text-sm md:text-base opacity-60">{logo}</span>
+            {partnerRegions.map((region) => (
+              <span key={region} className="font-playfair text-[#8A8785] text-sm md:text-base opacity-60">{region}</span>
             ))}
           </div>
         </div>

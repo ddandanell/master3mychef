@@ -176,29 +176,81 @@ export default function LunaPage() {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
-        <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Process</p>
-            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>How It Works</h2>
-            <p className="text-white/50">Four steps. Zero stress.</p>
+      {/* How It Works — Cinematic Luxury */}
+      <section className="relative py-32 md:py-40 px-6 overflow-hidden">
+        {/* Cinematic background layers */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 30% 20%, rgba(212,175,55,0.08) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(139,69,19,0.06) 0%, transparent 50%), #080808' }} />
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E")' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,0.4) 50%, rgba(8,8,8,0) 100%)' }} />
+
+        <div className="relative z-10 max-w-[1280px] mx-auto">
+          {/* Header — asymmetrical, large */}
+          <div className="mb-20 md:mb-28">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-[1px] bg-[#D4AF37]/60" />
+              <p className="text-[#D4AF37] text-xs tracking-[0.4em] uppercase" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Process</p>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                How It<br /><span className="italic">Works</span>
+              </h2>
+              <p className="text-white/40 text-sm md:text-base leading-relaxed max-w-md lg:ml-auto lg:text-right">
+                Four deliberate steps from first message to final course. Each handled with the precision of a Michelin kitchen.
+              </p>
+            </div>
+            <div className="mt-8 w-full h-[1px] bg-white/10" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {HOW_IT_WORKS.map((item) => (
-              <div key={item.step} className="text-center p-6">
-                <div className="w-14 h-14 rounded-full bg-[#D4AF37]/10 flex items-center justify-center mx-auto mb-6">
-                  <item.icon className="w-6 h-6 text-[#D4AF37]" />
+
+          {/* Steps — asymmetrical grid with glassmorphism */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 lg:gap-6 mb-16">
+            {HOW_IT_WORKS.map((item, i) => (
+              <div
+                key={item.step}
+                className="group relative"
+                style={{ marginTop: i % 2 === 1 ? '2rem' : '0' }}
+              >
+                {/* Card with glassmorphism */}
+                <div className="relative p-8 md:p-6 lg:p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm transition-all duration-700 hover:border-[#D4AF37]/20 hover:bg-white/[0.04] hover:shadow-[0_0_60px_-15px_rgba(212,175,55,0.15)]">
+                  {/* Step number — large, faded */}
+                  <span className="absolute top-4 right-4 text-6xl font-light text-white/[0.03] leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {item.step}
+                  </span>
+
+                  {/* Icon — glassmorphism circle with gold glow on hover */}
+                  <div className="relative mb-8">
+                    <div className="w-16 h-16 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md flex items-center justify-center transition-all duration-500 group-hover:border-[#D4AF37]/30 group-hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.25)] group-hover:scale-110">
+                      <item.icon className="w-6 h-6 text-[#D4AF37]/80 transition-all duration-500 group-hover:text-[#D4AF37]" strokeWidth={1} />
+                    </div>
+                    {/* Subtle glow ring on hover */}
+                    <div className="absolute inset-0 w-16 h-16 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ boxShadow: '0 0 40px 8px rgba(212,175,55,0.15)' }} />
+                  </div>
+
+                  {/* Title — larger, elegant */}
+                  <h3 className="text-xl md:text-lg lg:text-xl text-white mb-3 leading-snug transition-colors duration-500 group-hover:text-[#D4AF37]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {item.title}
+                  </h3>
+
+                  {/* Description — smaller, lighter, almost disappearing */}
+                  <p className="text-xs text-white/35 leading-relaxed transition-colors duration-500 group-hover:text-white/50">
+                    {item.desc}
+                  </p>
+
+                  {/* Bottom accent line */}
+                  <div className="mt-6 w-8 h-[1px] bg-white/10 transition-all duration-700 group-hover:w-16 group-hover:bg-[#D4AF37]/40" />
                 </div>
-                <span className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-2 block" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Step {item.step}</span>
-                <h3 className="text-lg text-white mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-                <p className="text-sm text-white/50 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
+
+          {/* CTA — centered with ornament */}
           <div className="text-center">
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
-              <Phone className="w-4 h-4" /> Start on WhatsApp
+            <div className="flex items-center justify-center gap-6 mb-8">
+              <div className="w-16 h-[1px] bg-white/10" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40" />
+              <div className="w-16 h-[1px] bg-white/10" />
+            </div>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 border border-[#D4AF37]/30 text-[#D4AF37] text-sm tracking-[0.2em] uppercase rounded-full transition-all duration-500 hover:bg-[#D4AF37]/10 hover:border-[#D4AF37]/50 hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)]">
+              <Phone className="w-4 h-4" strokeWidth={1.5} /> Start on WhatsApp
             </a>
           </div>
         </div>

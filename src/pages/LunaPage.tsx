@@ -146,7 +146,7 @@ export default function LunaPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="luna-reveal">
-              <img src="/generated/luna-table.jpg" alt="Table setting" className="rounded-2xl w-full aspect-[4/3] object-cover" />
+              <img src="/generated/luna-experience-collage.png" alt="Fine dining experience" className="rounded-2xl w-full aspect-[4/3] object-cover" />
             </div>
             <div className="luna-reveal">
               <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Experience</p>
@@ -382,15 +382,27 @@ export default function LunaPage() {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="py-12 px-6">
+      {/* Experience Gallery */}
+      <section className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['luna-plating', 'luna-flame', 'luna-dessert', 'luna-detail'].map((img) => (
-              <div key={img} className="aspect-square rounded-xl overflow-hidden">
-                <img src={`/generated/${img}.jpg`} alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-              </div>
-            ))}
+          <div className="text-center mb-16">
+            <p className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Evening</p>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>How It Looks</h2>
+            <p className="text-white/50">Candlelight. Crystal. White-clad professionals. Your villa, transformed.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/luna-gallery-1.png" alt="Sommelier presenting wine" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/luna-gallery-2.png" alt="Chef flambe at open kitchen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/luna-gallery-3.png" alt="Chef plating with guest" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/luna-gallery-4.png" alt="Group dining at sunset" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
           </div>
         </div>
       </section>

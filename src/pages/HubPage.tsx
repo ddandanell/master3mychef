@@ -417,7 +417,7 @@ export default function HubPage() {
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full">
               <figure className="flex flex-col items-center text-center max-w-[280px]">
                 <img
-                  src="/generated/villa-award-2025.webp"
+                  src="/generated/villa-award-2025.png"
                   alt="Villa Award 2025 — Best Choice for Private Dining"
                   width={280}
                   height={280}
@@ -434,7 +434,7 @@ export default function HubPage() {
 
               <figure className="flex flex-col items-center text-center max-w-[280px]">
                 <img
-                  src="/generated/villa-award-2026.webp"
+                  src="/generated/villa-award-2026.png"
                   alt="Villa Award 2026 — Best Choice for Private Dining"
                   width={280}
                   height={280}

@@ -16,7 +16,7 @@ import {
   Award,
   Star,
 } from 'lucide-react'
-import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 
 const WA = '6282237565997'
@@ -138,11 +138,22 @@ export default function StaffingPage() {
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Chef Staffing Bali — Full-Time, Part-Time, Live-In | myCHEF"
-        description="myCHEF runs the recruitment side for private villa chefs across Bali. Match a vetted chef to your household — a week, a month, a season, or long-term. From IDR 8M/month."
+        title="Chef Staffing Bali | Full-Time, Part-Time, Live-In — myCHEF"
+        description="Recruitment for private villa chefs across Bali. Full-time, part-time, live-in. A week, a month, or long-term. From IDR 8M/month."
         canonical={`${SITE}/staffing`}
         ogImage={`${SITE}/generated/staffing-hero.webp`}
-        jsonLd={[breadcrumbSchema('Staffing', `${SITE}/staffing`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema(
+            'Private Chef Staffing Bali',
+            'Full-time, part-time, and live-in private chef placement for villas and households across Bali. Vetted network, trial week, 24h replacement.',
+            `${SITE}/staffing`,
+            'IDR'
+          ),
+          faqPageSchema(FAQS),
+          aggregateRatingSchema('4.9', '500'),
+          breadcrumbSchema('Staffing', `${SITE}/staffing`),
+        ]}
       />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}

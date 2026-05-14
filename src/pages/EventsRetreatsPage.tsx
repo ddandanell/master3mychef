@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import {
   MessageCircle, Calendar, Leaf, Heart, Sun,
-  Coffee,
+  Coffee, Check, Truck, Thermometer,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -55,6 +55,27 @@ const DAILY_SCHEDULE = [
 ]
 
 const DIETARY = ['Plant-Forward', 'Anti-Inflammatory', 'Vegan', 'Sattvic', 'Paleo', 'Keto', 'Gluten-Free', 'Dairy-Free']
+
+const DIETARY_DETAILS = [
+  { name: 'Plant-Forward', desc: 'Vegetables, legumes, and grains as the centrepiece. Meat optional on request.' },
+  { name: 'Anti-Inflammatory', desc: 'Turmeric, ginger, omega-3 rich foods. Low refined sugar, high whole food.' },
+  { name: 'Paleo', desc: 'Grass-fed meats, seafood, vegetables, nuts. No grains, dairy, or processed foods.' },
+  { name: 'Keto', desc: 'High healthy fat, moderate protein, very low carb. Sustained energy without spikes.' },
+  { name: 'Gluten-Free', desc: '100% celiac-safe prep. Separate utensils, certified ingredients, labelled service.' },
+  { name: 'Dairy-Free', desc: 'No milk, butter, or cream. Coconut and nut-based alternatives used throughout.' },
+]
+
+const MULTI_DAY_OPS = [
+  { icon: Truck, title: 'Daily Fresh Sourcing', desc: 'No day-2 leftovers. We source produce every morning from local markets and trusted suppliers.' },
+  { icon: Thermometer, title: 'Food Safety & HACCP', desc: 'Hygiene-certified team. Cold chain maintained. Temperature logs kept for multi-day events.' },
+  { icon: Check, title: 'Daily Delivery vs On-Site', desc: 'On-site chef for retreats 3+ days. Daily delivery for shorter events. Flexible to villa kitchen size.' },
+]
+
+const PAST_RETREATS = [
+  { host: 'Sarah — Yoga Teacher', retreat: '7-Day Yoga Retreat', location: 'Ubud', quote: 'The sattvic meals were beautiful — our guests said it was the best retreat food they have ever had.', image: '/generated/party-medi.webp' },
+  { host: 'Mia — Wellness Coach', retreat: '5-Day Wellness Retreat', location: 'Canggu', quote: 'Plant-forward, anti-inflammatory, and absolutely delicious. The chef understood our philosophy perfectly.', image: '/generated/sol-sunset.webp' },
+  { host: 'David — Corporate Wellness Lead', retreat: '3-Day Executive Retreat', location: 'Seminyak', quote: 'Handled 30 people with 5 different diets. Labeled, delicious, on-time. Professional throughout.', image: '/generated/corp-executive.webp' },
+]
 
 const ADDONS = [
   { icon: Coffee, title: 'Cooking Class', price: '+IDR 1.5M – 2.5M/pp' },
@@ -114,7 +135,7 @@ export default function EventsRetreatsPage() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Retreat Catering</p>
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Chapter 1 — Retreat Catering</p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Retreat Catering<br /><span className="italic">Wellness, Yoga, Surf</span>
           </h1>
@@ -137,7 +158,7 @@ export default function EventsRetreatsPage() {
       {/* FORMATS */}
       <section className="py-20 md:py-28 bg-white retreat-content">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Packages" title="Retreat Packages" subtitle="Three tiers for different retreat styles and dietary philosophies." />
+          <SectionHeader eyebrow="Chapter 2 — Packages" title="Retreat Packages" subtitle="Three tiers for different retreat styles and dietary philosophies." />
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
           </div>
@@ -153,7 +174,7 @@ export default function EventsRetreatsPage() {
       {/* DAILY SCHEDULE */}
       <section className="py-20 md:py-28 bg-[#FAFAF8]">
         <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader eyebrow="Schedule" title="Daily Meal Schedule" subtitle="A typical retreat day — 3 meals + 2 snacks + tea rituals." />
+          <SectionHeader eyebrow="Chapter 3 — Schedule" title="Daily Meal Schedule" subtitle="A typical retreat day — 3 meals + 2 snacks + tea rituals." />
           <div className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden">
             {DAILY_SCHEDULE.map((item, i) => (
               <div key={i} className="flex items-center gap-4 px-6 py-4 border-t border-[#E8E6E3] first:border-t-0">
@@ -166,13 +187,58 @@ export default function EventsRetreatsPage() {
         </div>
       </section>
 
-      {/* DIETARY */}
+      {/* DIETARY SPECIALISM */}
       <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <SectionHeader eyebrow="Dietary" title="Specialist Diets" subtitle="We design menus for every dietary philosophy and restriction." />
-          <div className="flex flex-wrap justify-center gap-3">
+        <div className="max-w-5xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 4 — Dietary" title="Specialist Diets" subtitle="We design menus for every dietary philosophy and restriction." />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {DIETARY_DETAILS.map((d) => (
+              <div key={d.name} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 hover:shadow-md transition-all">
+                <h3 className="font-semibold text-[#1A1A1A] text-sm mb-2">{d.name}</h3>
+                <p className="text-[#4A4745] text-xs leading-relaxed">{d.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-3 mt-8">
             {DIETARY.map((d) => (
-              <span key={d} className="px-5 py-3 bg-[#FAFAF8] border border-[#E8E6E3] rounded-full text-sm font-medium text-[#1A1A1A]">{d}</span>
+              <span key={d} className="px-5 py-3 bg-white border border-[#E8E6E3] rounded-full text-sm font-medium text-[#1A1A1A]">{d}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MULTI-DAY OPERATIONS */}
+      <section className="py-20 md:py-28 bg-[#0A0A0A]">
+        <div className="max-w-5xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 5 — Operations" title="Multi-Day Operations" subtitle="How we maintain quality, safety, and freshness across multiple days." dark />
+          <div className="grid sm:grid-cols-3 gap-6">
+            {MULTI_DAY_OPS.map((op) => (
+              <div key={op.title} className="bg-white/5 rounded-2xl border border-white/10 p-6 text-center">
+                <op.icon className="w-8 h-8 text-[#C5A028] mx-auto mb-4" />
+                <h3 className="text-white text-sm font-semibold mb-2">{op.title}</h3>
+                <p className="text-white/60 text-xs">{op.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PAST RETREATS */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 6 — Past Retreats" title="Retreat Host Testimonials" subtitle="Real hosts, real retreats, real results." />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {PAST_RETREATS.map((r) => (
+              <div key={r.host} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={r.image} alt={`${r.retreat} in ${r.location}`} className="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{r.host}</h3>
+                  <p className="text-[#C5A028] text-xs font-medium mb-2">{r.retreat} · {r.location}</p>
+                  <p className="text-[#4A4745] text-xs italic">"{r.quote}"</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>

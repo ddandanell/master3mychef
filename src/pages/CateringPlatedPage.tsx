@@ -85,11 +85,6 @@ const INCLUDED = [
   'Full setup + cleanup',
 ]
 
-const WHY_PLATED = [
-  'More formal and elegant',
-  'Better for 20-60 guests',
-  'Restaurant-quality service experience',
-]
 
 const GROUP_TOTALS = [
   { guests: 10, course3: 'IDR 9.68M', course4: 'IDR 12.1M', course5: 'IDR 15.73M' },
@@ -140,7 +135,7 @@ export default function CateringPlatedPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Plated Set Menu Catering Bali | Villa Dinners — myCHEF"
-        description="Three-, four-, or five-course plated dinners served restaurant-style at your Bali villa. English-speaking chef, service team, full setup & cleanup. From IDR 800,000/person. Min. IDR 5,000,000."
+        description="Three- to five-course plated dinners at your Bali villa. English-speaking chef, service team, full setup. From IDR 800K/person. Min. IDR 5M."
         canonical={`${SITE}/catering/plated-catering`}
         ogImage={`${SITE}/generated/pkg-italian.webp`}
         jsonLd={[

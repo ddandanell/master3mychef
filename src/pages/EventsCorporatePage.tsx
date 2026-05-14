@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import {
   MessageCircle, Calendar, Monitor,
   Bus, Building2, Globe, FileText, Shield,
+  Users, Check,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -45,6 +46,12 @@ const FORMATS = [
   },
 ]
 
+const CAPACITY_OVERVIEW = [
+  { type: 'Day Events', range: '20 – 100 guests', desc: 'Conferences, offsites, training days. Full AV + coordination.' },
+  { type: 'Multi-Day Retreats', range: '10 – 50 guests', desc: 'Wellness, team-building, executive retreats. On-site chef daily.' },
+  { type: 'Product Launches', range: '50 – 300 guests', desc: 'Brand activations, gala dinners, press events. Full production.' },
+]
+
 const B2B_TRUST = [
   { icon: FileText, title: 'Tax Invoice', desc: 'NPWP-registered. Faktur pajak issued on request.' },
   { icon: Shield, title: 'Liability Insurance', desc: 'Public + product liability coverage. Certificate on request.' },
@@ -52,7 +59,13 @@ const B2B_TRUST = [
   { icon: Building2, title: 'Net-30 Terms', desc: 'Available with credit check for repeat corporate buyers.' },
 ]
 
-const SAMPLE_AGENDA = [
+const B2B_EXTENDED = [
+  { icon: FileText, title: 'Invoicing & NPWP', desc: 'Full tax invoices with NPWP. Faktur pajak on request. Standard 11% PPN.' },
+  { icon: Shield, title: 'Contracts & Insurance', desc: 'Standard event contract included. Public liability + product liability certificates provided.' },
+  { icon: Users, title: 'Security & Privacy', desc: 'NDA-friendly for product launches. Secure guest list handling. VIP protocols available.' },
+]
+
+const SAMPLE_AGENDA_DAY = [
   { time: '08:00', activity: 'Breakfast + Registration' },
   { time: '09:00', activity: 'Opening Session' },
   { time: '10:30', activity: 'Coffee Break' },
@@ -60,6 +73,16 @@ const SAMPLE_AGENDA = [
   { time: '14:00', activity: 'Workshops' },
   { time: '15:30', activity: 'Afternoon Snack' },
   { time: '17:00', activity: 'Closing + Networking' },
+]
+
+const SAMPLE_AGENDA_RETREAT = [
+  { day: 'Day 1', activity: 'Arrival lunch · Welcome dinner · Ice-breaker' },
+  { day: 'Day 2', activity: 'Breakfast · Morning session · Lunch · Team-building · Sunset dinner' },
+  { day: 'Day 3', activity: 'Breakfast · Closing session · Farewell lunch · Departure' },
+]
+
+const LOGO_WALL = [
+  'Tech Co.', 'FMCG Global', 'Fintech Startup', 'Consulting Firm', 'Health Brand', 'Travel Platform',
 ]
 
 const ADDONS = [
@@ -96,8 +119,8 @@ export default function EventsCorporatePage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Corporate Events Bali — Offsites, Conferences, Launches | myCHEF"
-        description="Corporate event catering and coordination in Bali. Day events from IDR 1.2M/pp, multi-day retreats from IDR 2.5M/pp/day. AV, dietary management, day coordinator. Invoice-ready."
+        title="Corporate Events Bali | Offsites, Conferences — myCHEF"
+        description="Corporate event catering in Bali. Day events from IDR 1.2M/pp, multi-day retreats from IDR 2.5M/pp/day. AV, dietary management, coordinator. Invoice-ready."
         canonical={`${SITE}/events/corporate-events`}
         jsonLd={[
           localBusinessSchema,
@@ -119,7 +142,7 @@ export default function EventsCorporatePage() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Corporate Events</p>
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Chapter 1 — Corporate Events</p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Corporate Events<br /><span className="italic">in Bali</span>
           </h1>
@@ -142,7 +165,7 @@ export default function EventsCorporatePage() {
       {/* FORMATS */}
       <section className="py-20 md:py-28 bg-white corporate-content">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Packages" title="Corporate Packages" subtitle="Three formats for different event types and scales." />
+          <SectionHeader eyebrow="Chapter 2 — Packages" title="Corporate Packages" subtitle="Three formats for different event types and scales." />
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
           </div>
@@ -155,12 +178,29 @@ export default function EventsCorporatePage() {
         </div>
       </section>
 
+      {/* CAPACITY OVERVIEW */}
+      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+        <div className="max-w-5xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 3 — Capacity" title="Event Capacity Overview" subtitle="Flexible scale for every corporate need." />
+          <div className="grid sm:grid-cols-3 gap-6">
+            {CAPACITY_OVERVIEW.map((c) => (
+              <div key={c.type} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 text-center hover:shadow-lg transition-all">
+                <Users className="w-8 h-8 text-[#C5A028] mx-auto mb-4" />
+                <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{c.type}</h3>
+                <p className="text-[#C5A028] font-semibold text-sm mb-2">{c.range}</p>
+                <p className="text-[#4A4745] text-xs">{c.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* B2B TRUST */}
       <section className="py-20 md:py-28 bg-[#0A0A0A]">
         <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader eyebrow="B2B" title="Built for Business" subtitle="The operational details that matter to procurement teams." dark />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {B2B_TRUST.map((t) => (
+          <SectionHeader eyebrow="Chapter 4 — B2B Trust" title="Built for Business" subtitle="The operational details that matter to procurement teams." dark />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {B2B_EXTENDED.map((t) => (
               <div key={t.title} className="bg-white/5 rounded-2xl border border-white/10 p-6 text-center">
                 <t.icon className="w-8 h-8 text-[#C5A028] mx-auto mb-4" />
                 <h3 className="text-white text-sm font-semibold mb-2">{t.title}</h3>
@@ -168,18 +208,56 @@ export default function EventsCorporatePage() {
               </div>
             ))}
           </div>
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {B2B_TRUST.map((t) => (
+              <div key={t.title} className="flex items-center gap-3 text-white/80">
+                <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                <span className="text-xs">{t.title}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* SAMPLE AGENDA */}
+      {/* SAMPLE AGENDAS */}
       <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader eyebrow="Sample" title="Day Event Agenda" subtitle="A typical corporate day event timeline. Customisable to your schedule." />
-          <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden">
-            {SAMPLE_AGENDA.map((item, i) => (
-              <div key={i} className="flex items-center gap-4 px-6 py-4 border-t border-[#E8E6E3] first:border-t-0">
-                <span className="text-[#C5A028] font-semibold text-sm w-16 shrink-0">{item.time}</span>
-                <span className="text-[#1A1A1A] text-sm">{item.activity}</span>
+        <div className="max-w-5xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 5 — Agendas" title="Sample Timelines" subtitle="Day event and multi-day retreat structures. Customisable to your schedule." />
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Day Event</h3>
+              <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden">
+                {SAMPLE_AGENDA_DAY.map((item, i) => (
+                  <div key={i} className="flex items-center gap-4 px-6 py-4 border-t border-[#E8E6E3] first:border-t-0">
+                    <span className="text-[#C5A028] font-semibold text-sm w-16 shrink-0">{item.time}</span>
+                    <span className="text-[#1A1A1A] text-sm">{item.activity}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>3-Day Retreat</h3>
+              <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden">
+                {SAMPLE_AGENDA_RETREAT.map((item, i) => (
+                  <div key={i} className="flex items-center gap-4 px-6 py-4 border-t border-[#E8E6E3] first:border-t-0">
+                    <span className="text-[#C5A028] font-semibold text-sm w-20 shrink-0">{item.day}</span>
+                    <span className="text-[#1A1A1A] text-sm">{item.activity}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LOGO WALL */}
+      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <SectionHeader eyebrow="Chapter 6 — Clients" title="Trusted By" subtitle="Corporate clients across tech, FMCG, finance, and hospitality." />
+          <div className="flex flex-wrap justify-center gap-4">
+            {LOGO_WALL.map((logo) => (
+              <div key={logo} className="px-6 py-4 bg-white rounded-xl border border-[#E8E6E3] text-sm font-medium text-[#4A4745] hover:border-[#C5A028]/40 transition-colors">
+                {logo}
               </div>
             ))}
           </div>
@@ -187,12 +265,12 @@ export default function EventsCorporatePage() {
       </section>
 
       {/* ADD-ONS */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader eyebrow="Extras" title="Corporate Add-Ons" subtitle="Scale your event with these professional upgrades." />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {ADDONS.map((a) => (
-              <div key={a.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 flex items-start gap-4">
+              <div key={a.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 flex items-start gap-4">
                 <div className="bg-[#C5A028]/10 rounded-xl p-2.5 shrink-0"><a.icon className="w-5 h-5 text-[#C5A028]" /></div>
                 <div>
                   <h3 className="font-semibold text-[#1A1A1A] text-sm">{a.title}</h3>

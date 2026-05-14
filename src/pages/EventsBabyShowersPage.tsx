@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import {
   MessageCircle, Calendar, Baby, Heart, Flower2,
-  Camera, Music, Sparkles,
+  Camera, Music, Sparkles, GlassWater,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -39,6 +39,33 @@ const FORMATS = [
 ]
 
 const THEMES = ['Boho', 'Pastel', 'Botanical', 'Classic / Gender-Reveal']
+
+const THEME_CARDS = [
+  { name: 'Boho', desc: 'Macramé, dried florals, earthy tones, rattan accents, dreamcatchers.', colour: 'from-[#D7CCC8]/40 to-[#BCAAA4]/20' },
+  { name: 'Pastel', desc: 'Soft pinks, blues, lavenders, balloon arches, candy bar.', colour: 'from-[#F8BBD0]/30 to-[#E1BEE7]/20' },
+  { name: 'Botanical', desc: 'Greenery walls, eucalyptus, white flowers, natural wood.', colour: 'from-[#C8E6C9]/40 to-[#A5D6A7]/20' },
+  { name: 'Classic Gender-Reveal', desc: 'Pink vs blue reveal moment, countdown signage, surprise cake.', colour: 'from-[#BBDEFB]/30 to-[#F8BBD0]/30' },
+]
+
+const DECOR_DETAILS = [
+  { icon: Flower2, title: 'Floral Arrangements', desc: 'Table centrepieces, entrance garlands, and accent blooms matched to your theme.' },
+  { icon: Sparkles, title: 'Signage & Stationery', desc: 'Welcome board, menu cards, place cards, and custom messages.' },
+  { icon: Baby, title: 'Table Styling', desc: 'Linens, runners, charger plates, napkin folds, and themed tableware.' },
+  { icon: Heart, title: 'Photo Backdrop', desc: 'Themed backdrop with props for guest photos and memories.' },
+]
+
+const MOCKTAIL_BAR = [
+  { name: 'Tropical Sunrise', desc: 'Mango, passionfruit, and coconut cream. Vibrant and refreshing.' },
+  { name: 'Berry Bliss', desc: 'Mixed berries, lime, and sparkling water. Tart and beautiful.' },
+  { name: 'Cucumber Mint Cooler', desc: 'Fresh cucumber, mint, and elderflower. Light and elegant.' },
+]
+
+const REAL_BABY_SHOWERS = [
+  { title: 'Pastel Brunch', location: 'Seminyak Villa', image: '/generated/party-white.webp' },
+  { title: 'Botanical Garden', location: 'Ubud Villa', image: '/generated/aura-setup.webp' },
+  { title: 'Boho Afternoon', location: 'Canggu Villa', image: '/generated/aura-tablescape.webp' },
+  { title: 'Gender-Reveal Surprise', location: 'Sanur Villa', image: '/generated/party-birthday.webp' },
+]
 
 const ADDONS = [
   { icon: Camera, title: 'Photographer Extended', price: '+IDR 3.6M (3h)' },
@@ -99,7 +126,7 @@ export default function EventsBabyShowersPage() {
           <div className="absolute inset-0 bg-black/55" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Baby Showers</p>
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Chapter 1 — Baby Showers</p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Baby Showers<br /><span className="italic">Bali Villas</span>
           </h1>
@@ -122,7 +149,7 @@ export default function EventsBabyShowersPage() {
       {/* FORMATS */}
       <section className="py-20 md:py-28 bg-white baby-content">
         <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader eyebrow="Formats" title="Two Baby Shower Formats" subtitle="Intimate gathering or larger celebration — both beautifully styled." />
+          <SectionHeader eyebrow="Chapter 2 — Formats" title="Two Baby Shower Formats" subtitle="Intimate gathering or larger celebration — both beautifully styled." />
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
           </div>
@@ -135,11 +162,22 @@ export default function EventsBabyShowersPage() {
         </div>
       </section>
 
-      {/* THEMES */}
+      {/* THEME GALLERY */}
       <section className="py-20 md:py-28 bg-[#FAFAF8]">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <SectionHeader eyebrow="Themes" title="Choose Your Style" subtitle="Pastel, boho, botanical, or classic gender-reveal." />
-          <div className="flex flex-wrap justify-center gap-3">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 3 — Themes" title="Choose Your Style" subtitle="Four signature themes. Custom designs available on request." />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {THEME_CARDS.map((t) => (
+              <div key={t.name} className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+                <div className={`aspect-[4/3] bg-gradient-to-br ${t.colour}`} />
+                <div className="p-5">
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{t.name}</h3>
+                  <p className="text-[#4A4745] text-xs">{t.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-3 mt-8">
             {THEMES.map((t) => (
               <span key={t} className="px-5 py-3 bg-white border border-[#E8E6E3] rounded-full text-sm font-medium text-[#1A1A1A]">{t}</span>
             ))}
@@ -147,13 +185,72 @@ export default function EventsBabyShowersPage() {
         </div>
       </section>
 
-      {/* ADD-ONS */}
+      {/* DECOR + SETUP DETAIL */}
       <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 4 — Decor" title="What's Included" subtitle="A visual breakdown of the decor and setup in every baby shower package." />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {DECOR_DETAILS.map((d) => (
+              <div key={d.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 text-center hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-4">
+                  <d.icon className="w-5 h-5 text-[#C5A028]" />
+                </div>
+                <h4 className="font-medium text-[#1A1A1A] mb-2">{d.title}</h4>
+                <p className="text-sm text-[#4A4745]">{d.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MOCKTAIL BAR */}
+      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+        <div className="max-w-4xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 5 — Mocktails" title="Mocktail Bar Option" subtitle="Beautiful, alcohol-free drinks crafted for the mother-to-be and all guests." />
+          <div className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden">
+            {MOCKTAIL_BAR.map((m) => (
+              <div key={m.name} className="flex items-start gap-4 px-6 py-5 border-t border-[#E8E6E3] first:border-t-0">
+                <div className="w-10 h-10 rounded-full bg-[#C5A028]/10 flex items-center justify-center flex-shrink-0">
+                  <GlassWater className="w-4 h-4 text-[#C5A028]" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-[#1A1A1A] text-sm mb-1">{m.name}</h4>
+                  <p className="text-[#4A4745] text-xs">{m.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-[#4A4745] text-xs mt-4">Alcohol-free by default. Separate alcohol bar for non-expecting guests available at +IDR 350K/pp.</p>
+        </div>
+      </section>
+
+      {/* REAL BABY SHOWER GALLERY */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 6 — Real Showers" title="Celebration Gallery" subtitle="Real baby showers, real villas, real joy." />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {REAL_BABY_SHOWERS.map((b) => (
+              <div key={b.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={b.image} alt={b.title} className="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{b.title}</h3>
+                  <p className="text-[#4A4745] text-xs">{b.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ADD-ONS */}
+      <section className="py-20 md:py-28 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader eyebrow="Extras" title="Baby Shower Add-Ons" subtitle="Personalise your celebration with these beautiful upgrades." />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {ADDONS.map((a) => (
-              <div key={a.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 flex items-start gap-4">
+              <div key={a.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 flex items-start gap-4">
                 <div className="bg-[#C5A028]/10 rounded-xl p-2.5 shrink-0"><a.icon className="w-5 h-5 text-[#C5A028]" /></div>
                 <div>
                   <h3 className="font-semibold text-[#1A1A1A] text-sm">{a.title}</h3>
@@ -172,7 +269,7 @@ export default function EventsBabyShowersPage() {
       ]} />
 
       {/* FAQ */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Baby Shower FAQ" subtitle="Everything you need to know about baby shower brunches with myCHEF." />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
@@ -180,7 +277,7 @@ export default function EventsBabyShowersPage() {
       </section>
 
       {/* FORM */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-[#FAFAF8]">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
             title="Book Your Baby Shower"

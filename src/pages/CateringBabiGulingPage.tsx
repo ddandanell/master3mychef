@@ -95,6 +95,34 @@ const AREAS = [
   'Nusa Dua', 'Sanur', 'Jimbaran', 'Tanah Lot', 'Kerobokan', 'Kuta', 'Legian', 'Denpasar',
 ]
 
+const BABI_GULING_GALLERY = [
+  '/generated/catering/babi-guling.webp',
+  '/generated/pkg-roast.webp',
+  '/generated/hub-catering.webp',
+  '/generated/aura-buffet.webp',
+  '/generated/pkg-bbq.webp',
+  '/generated/aura-wedding.webp',
+]
+
+const FEAST_COMPONENTS = [
+  { name: 'Whole roasted suckling pig', desc: 'Crispy skin, tender meat, Balinese spice stuffing' },
+  { name: 'Lawar', desc: 'Traditional Balinese salad with coconut and spices' },
+  { name: 'Nasi kuning', desc: 'Fragrant turmeric rice' },
+  { name: 'Sate lilit', desc: 'Minced meat satay on lemongrass skewers' },
+  { name: 'Sambals', desc: 'Three Balinese chilli condiments' },
+  { name: 'Kuah Balung', desc: 'Rich pork bone soup (medium & large)' },
+  { name: 'Dessert', desc: 'Balinese sweets and fresh fruit' },
+]
+
+const COOKING_STEPS = [
+  { step: '01', title: 'Selection', desc: 'Whole pig chosen by weight and guest count.', icon: Package },
+  { step: '02', title: 'Spice paste', desc: 'Basa gede rubbed inside and out.', icon: Utensils },
+  { step: '03', title: 'Stuffing', desc: 'Lemongrass, shallots, garlic, and ginger packed inside.', icon: ChefHat },
+  { step: '04', title: 'Slow roast', desc: 'Spit-roasted over charcoal for 6–8 hours.', icon: Flame },
+  { step: '05', title: 'Basting', desc: 'Coconut water and spice glaze applied every 30 min.', icon: Sparkles },
+  { step: '06', title: 'Rest & carve', desc: 'Rested 20 min, then carved at your villa.', icon: Check },
+]
+
 const FAQS = [
   { q: 'What is Babi Guling?', a: 'Babi Guling is a traditional Balinese whole roasted pig dish. The pig is stuffed with spices, slow-roasted until the skin is crispy, and served with Balinese sides like lawar, nasi kuning, sate, and sambals.' },
   { q: 'How many people does each package serve?', a: 'Small serves 10-15 guests. Medium serves 25-30 guests. Large serves 40-50 guests. For larger groups, contact us for a custom quote.' },
@@ -126,8 +154,8 @@ export default function CateringBabiGulingPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Babi Guling Catering Bali | Whole-Pig Roast for Villas — myCHEF"
-        description="Traditional Balinese Babi Guling whole-pig catering for villas and events in Bali. Served with lawar, nasi kuning, sate, sambals, dessert, and fruit. Small, medium, and large packages. From IDR 3,700,000."
+        title="Babi Guling Bali | Whole-Pig Roast for Villas — myCHEF"
+        description="Balinese Babi Guling whole-pig catering for villas. Lawar, nasi kuning, sate, sambals, dessert, fruit. Small to large packages. From IDR 3.7M."
         canonical={`${SITE}/catering/babi-guling`}
         ogImage={`${SITE}/generated/catering/babi-guling.webp`}
         jsonLd={[
@@ -196,17 +224,20 @@ export default function CateringBabiGulingPage() {
       {/* ═══════ TRUST STRIP ═══════ */}
       <TrustStrip />
 
-      {/* ═══════ WHAT IS BABI GULING ═══════ */}
+      {/* ═══════ CHAPTER 1 — THE PIG ═══════ */}
       <section className="bg-content py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <SectionHeader
                 align="left"
-                eyebrow="Traditional"
+                eyebrow="CHAPTER 1 — THE PIG"
                 title="A Traditional Balinese Whole-Pig Experience"
                 subtitle="Babi Guling is one of Bali's most iconic food experiences. It is a whole roasted pig served with Balinese sides, sambals, rice, sate, and fresh accompaniments."
               />
+              <p className="text-[#4A4745] text-sm leading-relaxed mt-4">
+                Babi Guling has been central to Balinese ceremonies and celebrations for centuries. The ritual of roasting a whole pig over an open fire brings communities together — it is served at weddings, temple festivals, and family gatherings as a symbol of abundance and hospitality. For visitors, it offers an authentic taste of Balinese culture, prepared with the same respect and technique passed down through generations.
+              </p>
               <div className="grid grid-cols-2 gap-3">
                 {['Villa parties', 'Birthdays', 'Local food nights', 'Group dinners', 'Cultural experiences', 'Large family meals', 'Casual events'].map((item) => (
                   <div key={item} className="flex items-center gap-2">
@@ -232,7 +263,7 @@ export default function CateringBabiGulingPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Packages"
+            eyebrow="CHAPTER 2 — THE FEAST"
             title="Choose Your Babi Guling Package"
           />
           <div className="grid md:grid-cols-3 gap-6">
@@ -258,11 +289,72 @@ export default function CateringBabiGulingPage() {
         </div>
       </section>
 
+      {/* ═══════ ANNOTATED DIAGRAM ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 3 — THE COMPONENTS"
+            title="What Is in the Feast"
+            subtitle="Every Babi Guling spread is built around the whole pig and a complete set of traditional accompaniments."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {FEAST_COMPONENTS.map((item) => (
+              <div key={item.name} className="flex items-start gap-3 p-4 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3]">
+                <Check className="w-5 h-5 text-[#C5A028] flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-sm text-[#1A1A1A]">{item.name}</p>
+                  <p className="text-xs text-[#4A4745]">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ COOKING PROCESS ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 4 — THE CRAFT"
+            title="The Cooking Process"
+            subtitle="Eight hours from raw pig to carved feast. Every step is done by hand, over charcoal, in the traditional Balinese way."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {COOKING_STEPS.map((step) => (
+              <div key={step.step} className="text-center">
+                <div className="w-14 h-14 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-4">
+                  <step.icon className="w-6 h-6 text-[#C5A028]" />
+                </div>
+                <span className="text-[#C5A028] text-xs font-bold tracking-wider">{step.step}</span>
+                <h4 className="font-medium text-[#1A1A1A] text-sm mt-1 mb-1">{step.title}</h4>
+                <p className="text-xs text-[#4A4745]">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ BONFIRE SETUP ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[800px] mx-auto text-center">
+          <Flame className="w-10 h-10 text-[#C5A028] mx-auto mb-4" />
+          <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Bonfire Setup Option</h2>
+          <p className="text-[#4A4745] mb-6">
+            For large groups booking the Large Babi Guling package, we offer a premium bonfire setup in your villa garden. This adds atmosphere, warmth, and a focal point for the evening. Available at selected locations with sufficient outdoor space.
+          </p>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {['Garden bonfire', 'Ambient lighting', 'Seating arrangement', 'Fire safety included', 'Evening events only'].map((d) => (
+              <span key={d} className="px-3 py-1.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745]">{d}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ WHAT'S INCLUDED ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Included"
+            eyebrow="CHAPTER 5 — THE SERVICE"
             title="What Every Babi Guling Package Includes"
           />
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -276,8 +368,26 @@ export default function CateringBabiGulingPage() {
         </div>
       </section>
 
-      {/* ═══════ DIETARY NOTE ═══════ */}
+      {/* ═══════ PHOTO GALLERY ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 6 — THE SETUP"
+            title="Babi Guling Gallery"
+            subtitle="Traditional whole-pig setups and carved feasts across Bali villas."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {BABI_GULING_GALLERY.map((src, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
+                <img src={src} alt={`Babi Guling setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ DIETARY NOTE ═══════ */}
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto text-center">
           <ShieldCheck className="w-12 h-12 text-amber-600 mx-auto mb-4" />
           <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Important: Babi Guling Contains Pork</h2>
@@ -299,7 +409,7 @@ export default function CateringBabiGulingPage() {
       </section>
 
       {/* ═══════ BEST FOR ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Occasions"
@@ -320,7 +430,7 @@ export default function CateringBabiGulingPage() {
       </section>
 
       {/* ═══════ ADD-ONS ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Extras"
@@ -341,7 +451,7 @@ export default function CateringBabiGulingPage() {
       </section>
 
       {/* ═══════ HOW SETUP WORKS ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Process"

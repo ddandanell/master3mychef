@@ -49,8 +49,8 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-[#050505] text-white">
       <SeoHead
-        title="Private Chef Services in Bali — Villa Parties, Weddings, Corporate | myCHEF"
-        description="Eight ways we bring extraordinary food to your villa. Villa parties, romantic dinners, birthdays, family reunions, corporate events, weddings, cooking classes, and weekly meal prep."
+        title="Private Chef Services Bali | Parties, Weddings — myCHEF"
+        description="Eight ways we bring food to your villa. Parties, romantic dinners, birthdays, reunions, corporate events, weddings, cooking classes, meal prep."
         canonical={`${SITE}/services`}
         ogImage={`${SITE}/generated/bali-hub-hero.webp`}
         jsonLd={[localBusinessSchema, itemListSchema, breadcrumbSchema('Services', `${SITE}/services`)]}

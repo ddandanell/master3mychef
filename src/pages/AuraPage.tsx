@@ -271,7 +271,7 @@ export default function AuraPage() {
     <div ref={ref} data-universe="aura" className="min-h-screen" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>
       <SeoHead
         title="Bali Event Catering — Villas, Weddings & Corporate | myCHEF"
-        description="Bali event catering by myCHEF — luxury villa parties, weddings, corporate dinners, retreats, and gala nights. Catering, bar, décor, and staffing handled end-to-end. From IDR 15M."
+        description="Bali event catering by myCHEF — villa parties, weddings, corporate dinners, retreats. Catering, bar, décor, staffing end-to-end. From IDR 15M."
         canonical="https://mychef.id/events"
         ogImage="https://mychef.id/generated/aura-hero-v2.webp"
         jsonLd={[localBusinessSchema, ...eventSchemas, breadcrumbSchema('Events', 'https://mychef.id/events')]}
@@ -281,7 +281,7 @@ export default function AuraPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/aura-hero-v2.webp"
-            alt="Event setup"
+            alt="Luxury Bali villa event with long dining table, gold styling, and candlelight"
             width={1920}
             height={1080}
             fetchPriority="high"
@@ -413,7 +413,7 @@ export default function AuraPage() {
                     height={800}
                     loading={i < 2 ? 'eager' : 'lazy'}
                     decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.05]"
+                    className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.05]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                   <span
@@ -559,7 +559,7 @@ export default function AuraPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <img
                 src="/generated/aura-team.webp"
-                alt="Events team"
+                alt="Olivia and the myCHEF events team coordinating a villa wedding in Bali"
                 width={800}
                 height={600}
                 className="w-full h-full object-cover"

@@ -144,7 +144,7 @@ export default function EventsVillaPartiesPage() {
 
       <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Villa Parties' }]} />
 
-      {/* ═══════ HERO — VIBRANT, ENERGETIC, SUNSET ORANGE ACCENTS ═══════ */}
+      {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img

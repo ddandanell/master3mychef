@@ -150,8 +150,8 @@ export default function CateringBuffetPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Buffet Catering Bali | Villa, Wedding & Event Buffet — myCHEF"
-        description="Full-service buffet catering in Bali for villas, weddings, and events. Indonesian, International, and Premium Live-Station buffets. Chef, staff, setup & cleanup included. From IDR 550,000/person. Min. 30 guests."
+        title="Buffet Catering Bali | Villa & Wedding Buffet — myCHEF"
+        description="Buffet catering in Bali for villas and weddings. Indonesian, International, Premium Live-Station. Chef, staff, setup included. From IDR 550K/pp."
         canonical={`${SITE}/catering/buffet`}
         ogImage={`${SITE}/generated/aura-buffet.webp`}
         jsonLd={[

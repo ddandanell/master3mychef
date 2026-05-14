@@ -66,8 +66,8 @@ export default function SolPage() {
   return (
     <div ref={ref} data-universe="sol" className="min-h-screen" style={{ background: '#F5F0E8', color: '#2C2419' }}>
       <SeoHead
-        title="Bali Villa Catering | Private Chef in Your Villa — Daily Dining"
-        description="Bali villa catering with a private chef in your kitchen for the length of your stay — daily breakfast, lunch, and dinner. Groceries at cost. From IDR 600,000 per hour."
+        title="Bali Villa Catering | Private Chef — Daily Dining — myCHEF"
+        description="Bali villa catering with a private chef for your stay. Daily breakfast, lunch, dinner. Groceries at cost. From IDR 600K/hour."
         canonical="https://mychef.id/villa-chef"
         ogImage="https://mychef.id/generated/catering-hero.webp"
         jsonLd={[localBusinessSchema, breadcrumbSchema('Villa Chef', 'https://mychef.id/villa-chef')]}

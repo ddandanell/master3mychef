@@ -11,7 +11,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -173,6 +173,13 @@ export default function EventsWeddingsPage() {
             {WEDDING_TIERS.map((t) => (
               <EventFormatCard key={t.title} {...t} accent="#C5A028" />
             ))}
+          </div>
+
+          {/* Group Total Calculators */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            <GroupTotalCalculator pricePerPerson={600000} minGuests={30} maxGuests={200} defaultGuests={60} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={950000} minGuests={50} maxGuests={200} defaultGuests={60} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={1500000} minGuests={50} maxGuests={200} defaultGuests={60} accent="#C5A028" />
           </div>
         </div>
       </section>

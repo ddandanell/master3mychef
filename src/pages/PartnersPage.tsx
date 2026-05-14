@@ -80,7 +80,7 @@ export default function PartnersPage() {
   return (
     <div ref={pageRef} className="bg-white">
       <SeoHead
-        title="Villa Partner Programme — myCHEF for Bali Hospitality Partners"
+        title="Villa Partner Programme | Bali Hospitality — myCHEF"
         description="Trusted by 50+ luxury villas across Bali. Certified chef placement, insurance, dedicated account management. Join the myCHEF villa partner programme."
         canonical="https://mychef.id/partners"
         ogImage="https://mychef.id/generated/partner-platform-hero.webp"

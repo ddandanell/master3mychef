@@ -111,8 +111,8 @@ export default function PartnerPlatformPage() {
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="myCHEF Partner Platform — Michelin-Level Private Dining for Bali Villas"
-        description="A villa dining partner platform built for luxury villas, villa management companies, boutique hospitality brands, and premium operators across Bali. Co-branded or white-label, monthly commission, transparent dashboard."
+        title="Partner Platform | Private Dining for Bali Villas — myCHEF"
+        description="Villa dining partner platform for luxury villas and management companies across Bali. Co-branded or white-label, monthly commission, transparent dashboard."
         canonical={`${SITE}/partner-platform`}
         ogImage={`${SITE}/generated/partner-platform-hero.webp`}
         jsonLd={[breadcrumbSchema('Partner Platform', `${SITE}/partner-platform`), jsonLd]}

@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
 import OrderPanel from '@/components/OrderPanel'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -170,10 +170,24 @@ export default function LunaPage() {
     <div ref={heroRef} data-universe="luna" className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
       <SeoHead
         title="Private Chef Bali — Fine Dining in Your Villa | myCHEF"
-        description="Private chef fine dining in your Bali villa — Italian and Mediterranean tasting menus, open-flame cooking, sommelier pairing, Michelin-trained team. From IDR 2,200,000++ per guest."
+        description="Private chef fine dining in your Bali villa. Italian and Mediterranean tasting menus, open-flame cooking, wine pairing. From IDR 2.2M++ per guest."
         canonical="https://mychef.id/fine-dining"
         ogImage="https://mychef.id/generated/luna-hero-v2.webp"
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Fine Dining', 'https://mychef.id/fine-dining')]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema(
+            'Private Chef Fine Dining Bali',
+            'Mediterranean and Wagyu tasting menus served privately in your Bali villa. Michelin-trained chef, sommelier wine pairing, open-flame cooking.',
+            'https://mychef.id/fine-dining',
+            'IDR'
+          ),
+          offerSchema('Mediterranean Sea Experience', 'IDR 2200000', 'https://mychef.id/fine-dining', 'Person'),
+          offerSchema('Wagyu Experience', 'IDR 2400000', 'https://mychef.id/fine-dining', 'Person'),
+          offerSchema('Wine Pairing', 'IDR 850000', 'https://mychef.id/fine-dining', 'Person'),
+          faqPageSchema(FAQS),
+          aggregateRatingSchema('4.9', '127'),
+          breadcrumbSchema('Fine Dining', 'https://mychef.id/fine-dining'),
+        ]}
       />
       {/*
         Hero — luxury hotel booking aesthetic.
@@ -274,7 +288,7 @@ export default function LunaPage() {
             <div className="luna-reveal">
               <img
                 src="/generated/luna-experience-collage.webp"
-                alt="Fine dining experience"
+                alt="Michelin-trained chef preparing a Mediterranean tasting menu in a private Bali villa kitchen"
                 width={800}
                 height={600}
                 className="rounded-2xl w-full aspect-[4/3] object-cover"

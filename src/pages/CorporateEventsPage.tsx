@@ -1,11 +1,13 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import {
-  Check, MessageCircle, Phone, Sparkles, ChevronRight, ChevronDown,
+  Check, MessageCircle, Phone, Sparkles, ChevronRight,
   Briefcase, Mic2, Wine, Award, Building2, Users, Globe2, MapPin,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import FAQAccordion from '@/components/catering/FAQAccordion'
+import { Breadcrumb, PressStrip, formatIDR, calculateAllIn } from '@/components/shared'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -68,6 +70,7 @@ const WHY = [
 interface CorporatePackage {
   slug: string
   name: string
+  priceNum: number
   price: string
   min: string
   bestFor: string
@@ -79,6 +82,7 @@ const PACKAGES: CorporatePackage[] = [
   {
     slug: 'corporate-lunch',
     name: 'Corporate Lunch Package',
+    priceNum: 450000,
     price: 'From IDR 450,000++ / guest',
     min: 'Min. 10 guests',
     bestFor: 'Workshops · Meetings · Team lunches · Office gatherings',
@@ -87,6 +91,7 @@ const PACKAGES: CorporatePackage[] = [
   {
     slug: 'conference-catering',
     name: 'Conference Catering Package',
+    priceNum: 550000,
     price: 'From IDR 550,000++ / guest',
     min: 'Min. 20 guests',
     bestFor: 'Conferences · Training days · Seminars · Retreats',
@@ -95,6 +100,7 @@ const PACKAGES: CorporatePackage[] = [
   {
     slug: 'executive-dinner',
     name: 'Executive Dinner Experience',
+    priceNum: 950000,
     price: 'From IDR 950,000++ / guest',
     min: 'Min. 6 guests',
     bestFor: 'Investor dinners · VIP hosting · Executive meetings · Business celebrations',
@@ -103,6 +109,7 @@ const PACKAGES: CorporatePackage[] = [
   {
     slug: 'corporate-cocktail-night',
     name: 'Corporate Cocktail Night',
+    priceNum: 750000,
     price: 'From IDR 750,000++ / guest',
     min: 'Min. 15 guests',
     bestFor: 'Networking · Launch events · Community gatherings · Brand events',
@@ -111,6 +118,7 @@ const PACKAGES: CorporatePackage[] = [
   {
     slug: 'gala-dinner',
     name: 'Gala Dinner Package',
+    priceNum: 1450000,
     price: 'From IDR 1,450,000++ / guest',
     min: 'Min. 20 guests',
     bestFor: 'Award nights · Large company dinners · Formal celebrations · Premium hospitality',
@@ -119,6 +127,7 @@ const PACKAGES: CorporatePackage[] = [
   {
     slug: 'full-corporate-event-production',
     name: 'Full Corporate Event Production',
+    priceNum: 1950000,
     price: 'From IDR 1,950,000++ / guest',
     min: 'Min. 25 guests',
     bestFor: 'Flagship — complete end-to-end event management',
@@ -145,7 +154,6 @@ const FAQS = [
 
 export default function CorporateEventsPage() {
   const heroRef = useRef<HTMLDivElement>(null)
-  const [open, setOpen] = useState<number | null>(0)
 
   useEffect(() => {
     if (heroRef.current) {
@@ -163,12 +171,17 @@ export default function CorporateEventsPage() {
   return (
     <div className="bg-[#0A0A0A] text-white">
       <SeoHead
-        title="Corporate Events Bali | Luxury Corporate Catering & Event Dining"
-        description="Premium corporate events in Bali with luxury catering, cocktails, staffing, chefs, and full event support for conferences, executive dinners, gala events, and company celebrations."
+        title="Corporate Events Bali | Catering & Event Dining — myCHEF"
+        description="Corporate events in Bali with catering, cocktails, staffing, and full event support. Conferences, executive dinners, galas. From IDR 1.2M/person."
         canonical={`${SITE}/corporate-events`}
         ogImage={`${SITE}/generated/corp-hero.webp`}
-        jsonLd={[breadcrumbSchema('Corporate Events', `${SITE}/corporate-events`)]}
+        jsonLd={[
+          breadcrumbSchema('Corporate Events', `${SITE}/corporate-events`, 'Events', `${SITE}/events`),
+          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Corporate Events' }]} className="bg-[#0A0A0A] text-white/70" />
 
       {/* HERO */}
       <section ref={heroRef} className="relative min-h-[88vh] flex items-end overflow-hidden">
@@ -312,7 +325,10 @@ export default function CorporateEventsPage() {
                   </span>
                 )}
                 <h3 className={`text-xl mb-2 leading-snug ${pkg.flagship ? 'text-white' : ''}`} style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.name}</h3>
-                <p className={`text-lg font-medium mb-1 ${pkg.flagship ? 'text-[#C5A028]' : ''}`} style={!pkg.flagship ? { color: '#0F0F0F' } : undefined}>{pkg.price}</p>
+                <p className={`text-lg font-medium ${pkg.flagship ? 'text-[#C5A028]' : ''}`} style={!pkg.flagship ? { color: '#0F0F0F' } : undefined}>{pkg.price}</p>
+                <p className={`text-xs mb-1 ${pkg.flagship ? 'text-white/55' : 'text-[#4A4745]/70'}`}>
+                  ≈ {formatIDR(calculateAllIn(pkg.priceNum))} all-in / guest
+                </p>
                 <p className={`text-xs uppercase tracking-[0.2em] mb-5 ${pkg.flagship ? 'text-white/60' : ''}`} style={!pkg.flagship ? { color: '#8A8580' } : undefined}>{pkg.min}</p>
                 <p className={`text-xs mb-5 leading-relaxed ${pkg.flagship ? 'text-white/70' : ''}`} style={!pkg.flagship ? { color: '#4A4745' } : undefined}>
                   <span className={`font-semibold tracking-[0.2em] uppercase mr-2 ${pkg.flagship ? 'text-white' : ''}`} style={!pkg.flagship ? { color: '#0F0F0F' } : undefined}>Best for</span>
@@ -352,12 +368,14 @@ export default function CorporateEventsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {GALLERY.map((g) => (
               <div key={g.src} className="overflow-hidden rounded-xl aspect-square ring-1 ring-white/10">
-                <img src={g.src} alt={g.alt} width={1024} height={1024} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-[1400ms] ease-out hover:scale-[1.06]" />
+                <img src={g.src} alt={g.alt} width={1024} height={1024} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-1000 ease-out hover:scale-[1.06]" />
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      <PressStrip />
 
       {/* FAQ */}
       <section className="py-24 md:py-32 px-6" style={{ background: '#FAFAF8', color: '#0F0F0F' }}>
@@ -366,29 +384,7 @@ export default function CorporateEventsPage() {
             <p className="text-[#2C5F7C] text-sm tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Common Questions</p>
             <h2 className="text-4xl md:text-5xl leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>Quick answers for event leads.</h2>
           </div>
-          <div className="space-y-3">
-            {FAQS.map((f, i) => {
-              const isOpen = open === i
-              return (
-                <div key={f.q} className="border border-black/10 rounded-xl overflow-hidden bg-white">
-                  <button
-                    type="button"
-                    onClick={() => setOpen(isOpen ? null : i)}
-                    className="w-full flex items-center justify-between gap-4 text-left px-5 py-4"
-                    aria-expanded={isOpen}
-                  >
-                    <span className="text-base md:text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>{f.q}</span>
-                    <ChevronDown className={`w-4 h-4 flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  {isOpen && (
-                    <div className="px-5 pb-5 -mt-1">
-                      <p className="text-sm leading-relaxed" style={{ color: '#4A4745' }}>{f.a}</p>
-                    </div>
-                  )}
-                </div>
-              )
-            })}
-          </div>
+          <FAQAccordion items={[...FAQS]} defaultOpenCount={4} />
         </div>
       </section>
 

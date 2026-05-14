@@ -128,6 +128,15 @@ const UPGRADE_PATH = [
   { title: 'Plated Dinner', price: 'From IDR 800,000/person', href: '/catering/plated-menus', image: '/generated/hub-catering.webp' },
 ]
 
+const DROPOFF_GALLERY = [
+  '/generated/catering/dropoff-hero-v2.webp',
+  '/generated/catering/dropoff-hero.webp',
+  '/generated/hub-catering.webp',
+  '/generated/aura-buffet.webp',
+  '/generated/pkg-bbq.webp',
+  '/generated/pkg-grazing.webp',
+]
+
 const FAQS = [
   { q: 'What is drop-off catering?', a: 'Drop-off catering is prepared food delivered to your villa in ready-to-serve or ready-to-reheat containers. No chef, no waiters, no setup — just great food and clear instructions.' },
   { q: 'Is staff included?', a: 'No. Drop-off catering does not include on-site chef, waiters, or service staff. That is the whole point — privacy and no interruption.' },
@@ -159,8 +168,8 @@ export default function CateringDropOffPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Drop-Off Catering Bali | Food Delivered to Your Villa — myCHEF"
-        description="Drop-off catering in Bali without staff inside your villa. Prepared food delivered ready to reheat or serve. Family dinners, dinner parties, grazing boxes. From IDR 350,000/person."
+        title="Drop-Off Catering Bali | Food Delivered to Villas — myCHEF"
+        description="Drop-off catering in Bali without staff in your villa. Food delivered ready to reheat or serve. Family dinners, grazing boxes. From IDR 350K/person."
         canonical={`${SITE}/catering/drop-off-catering`}
         ogImage={`${SITE}/generated/pkg-dropoff.webp`}
         jsonLd={[
@@ -231,7 +240,7 @@ export default function CateringDropOffPage() {
             <div>
               <SectionHeader
                 align="left"
-                eyebrow="Privacy First"
+                eyebrow="CHAPTER 1 — THE INQUIRY"
                 title="For People Who Want Good Food Without a Team in the Villa"
                 subtitle="Drop-off catering is built for villa guests who want a proper meal but do not want chefs, waiters, or service staff staying inside the villa."
               />
@@ -260,7 +269,7 @@ export default function CateringDropOffPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Packages"
+            eyebrow="CHAPTER 2 — THE MENU"
             title="Choose Your Drop-Off Package"
           />
           <div className="grid md:grid-cols-3 gap-6">
@@ -290,7 +299,7 @@ export default function CateringDropOffPage() {
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Included"
+            eyebrow="CHAPTER 3 — THE SERVICE"
             title="What You Receive"
           />
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -308,7 +317,7 @@ export default function CateringDropOffPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
-            eyebrow="Clear Expectations"
+            eyebrow="CHAPTER 4 — THE BOUNDARY"
             title="What Drop-Off Does Not Include"
             subtitle="Drop-off catering does not include on-site chef, service staff, table setup, live cooking, cleanup, or waiting service. That is the point. If you want staff inside the villa, choose BBQ, buffet, or plated catering."
           />
@@ -327,7 +336,7 @@ export default function CateringDropOffPage() {
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Process"
+            eyebrow="CHAPTER 5 — THE PROCESS"
             title="How Drop-Off Catering Works"
           />
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
@@ -345,8 +354,26 @@ export default function CateringDropOffPage() {
         </div>
       </section>
 
-      {/* ═══════ DELIVERY RULES ═══════ */}
+      {/* ═══════ PHOTO GALLERY ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 6 — THE SETUP"
+            title="Drop-Off Gallery"
+            subtitle="Prepared food, delivery boxes, and finished villa tables from drop-off catering across Bali."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {DROPOFF_GALLERY.map((src, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
+                <img src={src} alt={`Drop-off catering setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ DELIVERY RULES ═══════ */}
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="Delivery"

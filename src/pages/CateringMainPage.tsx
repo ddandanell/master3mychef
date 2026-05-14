@@ -249,8 +249,8 @@ export default function CateringMainPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Bali Catering for Villas, Events, BBQ & Private Parties — myCHEF"
-        description="Premium Bali catering for villas and events. BBQ, buffet, plated dinners, drop-off, Babi Guling, grazing tables, floating breakfast. Clear prices. Fast WhatsApp booking."
+        title="Bali Catering | Villas, BBQ, Buffet & Events — myCHEF"
+        description="Premium Bali catering for villas. BBQ, buffet, plated dinners, drop-off, Babi Guling, grazing tables, floating breakfast. Clear prices. WhatsApp booking."
         canonical={`${SITE}/catering`}
         ogImage={`${SITE}/generated/catering-hero.webp`}
         jsonLd={[
@@ -330,7 +330,7 @@ export default function CateringMainPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Built For"
+            eyebrow="CHAPTER 1 — THE INQUIRY"
             title="Who Villa Catering Is For"
             subtitle="If you are staying in a villa in Canggu, Seminyak, Uluwatu or Ubud — this is designed for you."
           />
@@ -356,7 +356,7 @@ export default function CateringMainPage() {
       <section id="packages" className="cat-content py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Packages"
+            eyebrow="CHAPTER 2 — THE MENU"
             title="Choose Your Catering Style"
             subtitle="Whether you need a casual villa BBQ, food delivered without staff, a full buffet, a plated dinner, Babi Guling, grazing table, or floating breakfast — we make it easy to choose the right format."
           />
@@ -375,7 +375,7 @@ export default function CateringMainPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Why Villa Catering"
+            eyebrow="CHAPTER 3 — THE COMPARISON"
             title="Skip the Restaurant. Eat at Your Villa."
             subtitle="A restaurant dinner for 10 in Seminyak costs 8–12M with drinks and transport. Our Indonesian BBQ for 10: 4.5M. At your villa. With a chef."
           />
@@ -420,7 +420,7 @@ export default function CateringMainPage() {
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="BBQ Catering"
+            eyebrow="CHAPTER 4 — THE BBQ"
             title="BBQ Catering: The Villa Volume Engine"
             subtitle="BBQ is the easiest way to feed a villa group properly. It is live, social, flexible, and works for small family dinners, birthdays, villa parties, and group holidays."
           />
@@ -444,7 +444,7 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 6: ADD-ONS ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Extras"
@@ -460,10 +460,10 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 7: BUFFET PREVIEW ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Buffet Catering"
+            eyebrow="CHAPTER 5 — THE BUFFET"
             title="Buffet Catering for Larger Groups"
             subtitle="For weddings, villa events, corporate dinners, and larger groups, buffet catering keeps service smooth and food available without slowing the event down."
           />
@@ -484,10 +484,10 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 8: PLATED PREVIEW ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Plated Service"
+            eyebrow="CHAPTER 6 — THE PLATED"
             title="Plated Set Menus for Seated Events"
             subtitle="For premium dinners, birthdays, villa owner events, and intimate weddings, plated menus create a more controlled dining experience with table service and stronger presentation."
           />
@@ -518,10 +518,10 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 9: DROP-OFF PREVIEW ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Drop-Off"
+            eyebrow="CHAPTER 7 — THE DROP-OFF"
             title="Drop-Off Catering Without Staff Inside Your Villa"
             subtitle="For families and villa guests who want proper food without staff staying in the villa, drop-off catering is the cleanest option."
           />
@@ -551,10 +551,10 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 10: BABI GULING ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Traditional"
+            eyebrow="CHAPTER 8 — THE TRADITION"
             title="Babi Guling Whole-Pig Catering"
             subtitle="A traditional Balinese whole-pig experience for villa parties, birthdays, and larger group meals."
           />
@@ -577,7 +577,7 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 11: GRAZING TABLES ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Visual"
@@ -604,7 +604,7 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 12: FLOATING BREAKFAST ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Instagram-Ready"
@@ -630,7 +630,22 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 13: PRICING SUMMARY ═══════ */}
+      {/* ═══════ SECTION 13: PRICING TRANSPARENCY ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[800px] mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Why We Publish Our Prices</h2>
+          <p className="text-[#4A4745] mb-6">
+            Most Bali caterers hide pricing behind contact forms and phone calls. We do not. Publishing our prices saves you time, sets clear expectations, and lets you compare formats before reaching out. Every price you see includes chef, staff, ingredients, equipment, setup, service, and cleanup — so there are no surprises on the day. If your group size or location changes the math, we tell you upfront.
+          </p>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {['No hidden fees', 'All-inclusive quotes', '21% tax included', 'Travel fee disclosed upfront', 'Final price before deposit'].map((d) => (
+              <span key={d} className="px-3 py-1.5 rounded-full bg-white border border-[#E8E6E3] text-sm text-[#4A4745]">{d}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 14: PRICING SUMMARY ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
@@ -683,11 +698,11 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 14: HOW BOOKING WORKS ═══════ */}
+      {/* ═══════ SECTION 15: HOW BOOKING WORKS ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Process"
+            eyebrow="CHAPTER 9 — THE PROCESS"
             title="How Booking Works"
             subtitle="From first message to finished dinner — six steps, zero stress."
           />
@@ -719,7 +734,7 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 15: AREAS SERVED ═══════ */}
+      {/* ═══════ SECTION 16: AREAS SERVED ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
@@ -768,7 +783,7 @@ export default function CateringMainPage() {
         subtitle="Real reviews from real villa events across Bali."
       />
 
-      {/* ═══════ SECTION 16: FAQ ═══════ */}
+      {/* ═══════ SECTION 17: FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
@@ -779,7 +794,7 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 17: BOOKING FORM ═══════ */}
+      {/* ═══════ SECTION 18: BOOKING FORM ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader

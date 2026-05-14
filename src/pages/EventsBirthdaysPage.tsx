@@ -10,7 +10,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -106,8 +106,8 @@ export default function EventsBirthdaysPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Birthday Parties Bali — Dinners, Villa Parties, Kids | myCHEF"
-        description="Birthday parties at your Bali villa. Intimate dinners (4–12) from IDR 1.5M/pp, villa parties (15–40) from IDR 850K/pp, kids parties from IDR 350K/child. Cake + decor + photography."
+        title="Birthday Parties Bali | Dinners, Villa Parties — myCHEF"
+        description="Birthday parties at your Bali villa. Intimate dinners from IDR 1.5M/pp, villa parties from IDR 850K/pp, kids from IDR 350K/child. Cake, decor, photography."
         canonical={`${SITE}/events/birthdays`}
         jsonLd={[
           localBusinessSchema,
@@ -155,6 +155,12 @@ export default function EventsBirthdaysPage() {
           <SectionHeader eyebrow="Chapter 2 — Formats" title="Three Birthday Formats" subtitle="Choose the format that matches your guest count and vibe." />
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
+          </div>
+
+          {/* Group Total Calculators */}
+          <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <GroupTotalCalculator pricePerPerson={1500000} minGuests={4} maxGuests={12} defaultGuests={8} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={850000} minGuests={15} maxGuests={40} defaultGuests={20} accent="#C5A028" />
           </div>
         </div>
       </section>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {
   MessageCircle, Phone, Calendar, Users, MapPin, ChevronRight,
   Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music,
-  Award, Globe2, ClipboardCheck, ArrowRight,
+  Award, Globe2, ClipboardCheck, ArrowRight, Check,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -172,6 +172,19 @@ const WHY: WhyItem[] = [
   },
 ]
 
+const WHY_COMPETITIVE = [
+  { vs: 'Mimpi / All-in-one operators', point: 'We specialise in food + events, not real estate. Better menus, sharper pricing, no villa markup.' },
+  { vs: 'Single-service operators', point: 'One contact for catering, bar, staff, and coordination. No chasing five vendors on WhatsApp.' },
+  { vs: 'Hotel packages', point: 'Your villa, your rules, your timeline. No hotel curfews, no generic menus, no ballroom feel.' },
+]
+
+const PRICING_TRANSPARENCY = [
+  { label: 'Per-person base', desc: 'Covers chef, ingredients, service staff, and basic setup. Varies by event type and menu.' },
+  { label: 'Add-ons', desc: 'Photography, custom cake, live music, premium bar, extended decor — all itemised in the proposal.' },
+  { label: 'Tax & service', desc: '10% government service charge + 11% VAT added at proposal. No hidden fees.' },
+  { label: 'Deposit', desc: '50% to confirm the date. Balance due the week of the event. Net-30 for repeat corporate clients.' },
+]
+
 interface PricingRow {
   type: string
   from: React.ReactNode
@@ -279,8 +292,8 @@ export default function EventsMainPage() {
   return (
     <div ref={heroRef} className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Bali Events | Villa Weddings, Birthdays, Retreats & Corporate — myCHEF"
-        description="Bali event production — villa weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties. One team, one bill, run by Sofia. From IDR 600K/pp."
+        title="Bali Events | Weddings, Birthdays, Corporate — myCHEF"
+        description="Bali event production — weddings, birthdays, corporate events, retreats, villa parties. One team, one bill. From IDR 600K/person."
         canonical={`${SITE}/events`}
         ogImage={`${SITE}/generated/aura-hero-v2.webp`}
         jsonLd={[
@@ -330,7 +343,7 @@ export default function EventsMainPage() {
             className="hero-fade text-[#C5A028] text-sm tracking-[0.4em] uppercase mb-6"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
           >
-            Bali Events — Run Like Hospitality Productions
+            Chapter 1 — Bali Events
           </p>
           <h1
             className="hero-fade text-4xl md:text-6xl lg:text-7xl leading-[1.05] max-w-3xl mb-8"
@@ -394,7 +407,7 @@ export default function EventsMainPage() {
       <section id="event-types" className="events-grid py-24 md:py-32 px-6 scroll-mt-24">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 1 — Seven Kinds of Evening"
+            eyebrow="Chapter 2 — Seven Kinds of Evening"
             title="Choose the kind of event you are hosting"
             subtitle="Each pillar has its own page with full pricing, menus, and a tailored inquiry form."
           />
@@ -454,7 +467,7 @@ export default function EventsMainPage() {
               className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
               style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
             >
-              Chapter 2 — How We Run Events
+              Chapter 3 — How We Run Events
             </p>
             <h2
               className="text-3xl md:text-5xl leading-[1.05]"
@@ -494,7 +507,7 @@ export default function EventsMainPage() {
       <section className="py-24 md:py-32 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 3 — Why myCHEF"
+            eyebrow="Chapter 4 — Why myCHEF"
             title="The three reasons hosts hand us the whole evening"
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -519,12 +532,36 @@ export default function EventsMainPage() {
         </div>
       </section>
 
-      {/* ═══════ PRICING TRANSPARENCY ═══════ */}
+      {/* ═══════ WHY MYCHEF FOR EVENTS — COMPETITIVE ADVANTAGE ═══════ */}
       <section className="py-24 md:py-32 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1100px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 4 — Pricing"
-            title="From-prices for every event type"
+            eyebrow="Chapter 5 — Competitive Edge"
+            title="Why myCHEF for events"
+            subtitle="How we compare to the alternatives you are probably researching."
+          />
+          <div className="space-y-4">
+            {WHY_COMPETITIVE.map((item) => (
+              <div key={item.vs} className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-[#E8E6E3]">
+                <div className="w-8 h-8 rounded-full bg-[#C5A028]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Check className="w-4 h-4 text-[#C5A028]" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-[#1A1A1A] text-sm mb-1">vs {item.vs}</h4>
+                  <p className="text-[#4A4745] text-sm">{item.point}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ PRICING TRANSPARENCY ═══════ */}
+      <section className="py-24 md:py-32 px-6 bg-white">
+        <div className="max-w-[1100px] mx-auto">
+          <SectionHeader
+            eyebrow="Chapter 6 — Pricing"
+            title="What an event actually costs"
             subtitle="Every price below is per guest, before tax and service. The proposal Sofia sends includes the all-in total — no surprises."
           />
           <div className="overflow-hidden rounded-2xl border border-[#E8E6E3] bg-white shadow-sm">
@@ -553,10 +590,56 @@ export default function EventsMainPage() {
               </div>
             ))}
           </div>
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {PRICING_TRANSPARENCY.map((pt) => (
+              <div key={pt.label} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-4">
+                <h4 className="font-semibold text-[#1A1A1A] text-xs mb-1">{pt.label}</h4>
+                <p className="text-[#4A4745] text-xs">{pt.desc}</p>
+              </div>
+            ))}
+          </div>
           <p className="mt-6 text-center text-xs text-[#4A4745]/70">
             All prices ++ (10% government service charge and 11% VAT added at proposal). Groceries billed at cost — no
             markup. 50% deposit to confirm.
           </p>
+        </div>
+      </section>
+
+      {/* ═══════ DAY-OF COORDINATOR ═══════ */}
+      <section className="py-24 md:py-32 px-6 bg-[#0F0F0F] text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <p
+            className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5"
+            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+          >
+            Chapter 7 — Your Coordinator
+          </p>
+          <div className="w-24 h-24 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-6">
+            <Heart className="w-10 h-10 text-[#C5A028]" />
+          </div>
+          <h2 className="text-3xl md:text-5xl leading-[1.1] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Sofia
+          </h2>
+          <p className="text-lg text-white/70 mb-6 max-w-2xl mx-auto">
+            "I have coordinated 200+ events across Bali — from 2-person anniversary dinners to 200-guest weddings. 
+            My job is simple: make sure the host never has to look at a watch."
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#25D366] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#1ea855] transition-all"
+            >
+              <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
+            </a>
+            <a
+              href="tel:+6282237565997"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all"
+            >
+              <Phone className="w-4 h-4" /> Call +62 822 3756 5997
+            </a>
+          </div>
         </div>
       </section>
 
@@ -567,7 +650,7 @@ export default function EventsMainPage() {
             className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
           >
-            Chapter 5 — Where We Work
+            Chapter 8 — Where We Work
           </p>
           <h2
             className="text-3xl md:text-4xl text-[#1A1A1A] mb-5"
@@ -607,7 +690,7 @@ export default function EventsMainPage() {
       <section className="py-24 md:py-32 px-6 bg-[#FAFAF8]">
         <div className="max-w-3xl mx-auto">
           <SectionHeader
-            eyebrow="Chapter 6 — Questions"
+            eyebrow="Chapter 9 — Questions"
             title="The eight questions every host asks"
           />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
@@ -618,7 +701,7 @@ export default function EventsMainPage() {
       <section className="py-24 md:py-32 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 7 — Inquire"
+            eyebrow="Chapter 10 — Inquire"
             title="Tell Sofia about your event"
             subtitle="One message. Same-hour reply. A proposal in your inbox within 24 hours."
           />

@@ -92,6 +92,15 @@ const DELIVERY_STEPS = [
   { step: 4, title: 'Retrieve when done', desc: 'We collect the tray 1.5–2h later.' },
 ]
 
+const FLOATING_GALLERY = [
+  '/generated/catering/floating-breakfast.webp',
+  '/generated/pkg-breakfast.webp',
+  '/generated/sol-breakfast.webp',
+  '/generated/hub-catering.webp',
+  '/generated/aura-buffet.webp',
+  '/generated/aura-tablescape.webp',
+]
+
 const FAQS = [
   { q: 'What time do you set up?', a: 'You can choose sunrise (6:00–7:30am), midday (10–11am), or sunset (4:30–6pm).' },
   { q: 'Does the tray come back out?', a: 'Yes. We retrieve the tray 1.5–2 hours after delivery.' },
@@ -186,7 +195,7 @@ export default function CateringFloatingBreakfastPage() {
       <section className="floating-content py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Packages"
+            eyebrow="CHAPTER 1 — THE INQUIRY"
             title="Choose Your Floating Experience"
           />
           <div className="grid md:grid-cols-3 gap-6">
@@ -209,7 +218,7 @@ export default function CateringFloatingBreakfastPage() {
       <section id="setups" className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
-            eyebrow="The Tray"
+            eyebrow="CHAPTER 2 — THE TRAY"
             title="What's on the Tray"
             subtitle="Every floating breakfast is styled with fresh, chef-prepared items and tropical details."
           />
@@ -228,7 +237,7 @@ export default function CateringFloatingBreakfastPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Timing"
+            eyebrow="CHAPTER 3 — THE TIMING"
             title="Choose Your Time"
             subtitle="Three time slots to match your mood and the light."
           />
@@ -247,11 +256,29 @@ export default function CateringFloatingBreakfastPage() {
         </div>
       </section>
 
+      {/* ═══════ PHOTO GALLERY ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 4 — THE SETUP"
+            title="Floating Breakfast Gallery"
+            subtitle="Photo-ready floating trays in Bali villa pools."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {FLOATING_GALLERY.map((src, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
+                <img src={src} alt={`Floating breakfast setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ ADD-ONS ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Extras"
+            eyebrow="CHAPTER 5 — THE EXTRAS"
             title="Add-Ons"
             subtitle="Upgrade your floating breakfast with champagne, photography, music, and styling."
           />
@@ -267,7 +294,7 @@ export default function CateringFloatingBreakfastPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="How It Works"
+            eyebrow="CHAPTER 6 — THE PROCESS"
             title="Delivery Process"
             subtitle="Four simple steps from booking to retrieval."
           />

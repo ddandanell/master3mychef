@@ -150,7 +150,7 @@ export default function CateringBBQPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="BBQ Catering Bali | Villa BBQ, Private Chef & Grill — myCHEF"
-        description="Live BBQ catering in Bali for villas, birthdays, and private events. Indonesian BBQ, International BBQ, Premium Surf & Turf. Chef, staff, equipment, setup & cleanup included. From IDR 450,000/person."
+        description="Live BBQ catering in Bali for villas. Indonesian, International, Premium Surf & Turf. Chef, staff, equipment included. From IDR 450K/pp."
         canonical={`${SITE}/catering/bbq-catering`}
         ogImage={`${SITE}/generated/pkg-bbq.webp`}
         jsonLd={[

@@ -110,6 +110,38 @@ const CROSS_SELL = [
   { title: 'Floating Breakfast', price: 'From IDR 950,000/couple', href: '/catering/floating-breakfast', image: '/generated/catering/floating-breakfast.webp' },
 ]
 
+const GRAZING_GALLERY = [
+  '/generated/pkg-grazing.webp',
+  '/generated/hub-catering.webp',
+  '/generated/aura-buffet.webp',
+  '/generated/aura-tablescape.webp',
+  '/generated/pkg-breakfast.webp',
+  '/generated/sol-breakfast.webp',
+]
+
+const ALL_COMPONENTS = [
+  'Sourdough & artisan breads',
+  'Water crackers & seeded crisps',
+  '4–6 cheeses (soft, hard, blue)',
+  '3–4 cured meats (prosciutto, salami, chorizo)',
+  'Marinated olives & vegetables',
+  'Hummus, tapenade & dips',
+  'Local honey & fruit chutney',
+  'Fresh seasonal fruit',
+  'Dried apricots & figs',
+  'Roasted nuts & seeds',
+  'Edible flowers & microgreens',
+  'Styled wooden boards & linens',
+]
+
+const CUSTOMISATIONS = [
+  { title: 'Cheese-Lover', desc: 'Extra artisan cheeses, honeycomb, quince paste, and crackers.' },
+  { title: 'Italian', desc: 'Prosciutto di Parma, mortadella, pecorino, burrata, grissini, and olive oil.' },
+  { title: 'Mediterranean', desc: 'Feta, halloumi, dolmades, baba ganoush, tzatziki, and pita.' },
+  { title: 'Vegan', desc: 'Plant-based cheeses, vegetable dips, marinated tofu, and fruit-forward styling.' },
+  { title: 'Plant-Based', desc: 'Fully plant-based with nuts, seeds, vegetable crudités, and herb oils.' },
+]
+
 const FAQS = [
   { q: 'What is included in a grazing table?', a: 'All grazing setups include sourdough, crackers, cheese selection, cured meats, marinated vegetables, dips, honey, fresh and dried fruit, nuts, and edible flowers. Styled presentation is included.' },
   { q: 'How many people does each package serve?', a: 'Mini Grazing Box serves 2 people. Cheese & Cold Cuts Platter serves 10 people. Wedding-Scale Grazing Table serves 20-50 guests at IDR 350,000 per person.' },
@@ -141,8 +173,8 @@ export default function CateringGrazingPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Grazing Tables Bali | Cheese, Charcuterie & Platters — myCHEF"
-        description="Photo-ready grazing tables, cheese platters, and charcuterie in Bali for villas, weddings, and parties. Mini boxes, medium platters, and large event tables. From IDR 650,000. Vegan options available."
+        title="Grazing Tables Bali | Cheese & Charcuterie — myCHEF"
+        description="Photo-ready grazing tables and charcuterie in Bali for villas and weddings. Mini boxes, medium platters, large event tables. From IDR 650K. Vegan options."
         canonical={`${SITE}/catering/grazing-tables`}
         ogImage={`${SITE}/generated/pkg-grazing.webp`}
         jsonLd={[
@@ -213,7 +245,7 @@ export default function CateringGrazingPage() {
             <div>
               <SectionHeader
                 align="left"
-                eyebrow="Visual First"
+                eyebrow="CHAPTER 1 — THE VISION"
                 title="Easy Food That Looks Good Immediately"
                 subtitle="Grazing tables are built for events where people want beautiful food without a heavy meal structure. They work for arrivals, welcome drinks, poolside parties, weddings, birthdays, and relaxed villa entertaining."
               />
@@ -242,7 +274,7 @@ export default function CateringGrazingPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Packages"
+            eyebrow="CHAPTER 2 — THE MENU"
             title="Choose Your Grazing Package"
           />
           <div className="grid md:grid-cols-3 gap-6">
@@ -270,11 +302,67 @@ export default function CateringGrazingPage() {
         </div>
       </section>
 
+      {/* ═══════ PHOTOGRAPHY SECTION ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 3 — THE SETUP"
+            title="Grazing Gallery"
+            subtitle="Photo-ready spreads from villa events, weddings, and poolside parties across Bali."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {GRAZING_GALLERY.map((src, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
+                <img src={src} alt={`Grazing table setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ ANNOTATED CALLOUT ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 4 — THE COMPONENTS"
+            title="Every Component on the Board"
+            subtitle="Nothing is hidden. Here is exactly what goes into every grazing setup."
+          />
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {ALL_COMPONENTS.map((item) => (
+              <div key={item} className="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#E8E6E3]">
+                <Check className="w-5 h-5 text-[#6B8E5A]" />
+                <span className="text-[#4A4745] text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ CUSTOMISATION OPTIONS ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 5 — THE STYLE"
+            title="Customisation Options"
+            subtitle="Choose a direction or mix and match. Every grazing setup is tailored to your taste."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {CUSTOMISATIONS.map((c) => (
+              <div key={c.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5 hover:shadow-md transition-all">
+                <h4 className="font-medium text-[#1A1A1A] text-sm md:text-base mb-1">{c.title}</h4>
+                <p className="text-xs text-[#4A4745]">{c.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ WHAT'S INCLUDED ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Included"
+            eyebrow="CHAPTER 6 — THE SERVICE"
             title="What Every Grazing Setup Includes"
           />
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -289,7 +377,7 @@ export default function CateringGrazingPage() {
       </section>
 
       {/* ═══════ VEGAN OPTION ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto text-center">
           <Leaf className="w-12 h-12 text-[#6B8E5A] mx-auto mb-4" />
           <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Vegan and Plant-Based Grazing Available</h2>
@@ -305,7 +393,7 @@ export default function CateringGrazingPage() {
       </section>
 
       {/* ═══════ STYLING ADD-ONS ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Styling"
@@ -326,7 +414,7 @@ export default function CateringGrazingPage() {
       </section>
 
       {/* ═══════ BEST FOR ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Occasions"
@@ -347,7 +435,7 @@ export default function CateringGrazingPage() {
       </section>
 
       {/* ═══════ HOW IT WORKS ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Process"
@@ -369,7 +457,7 @@ export default function CateringGrazingPage() {
       </section>
 
       {/* ═══════ DELIVERY RULES ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="Delivery"

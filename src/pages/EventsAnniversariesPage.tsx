@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import {
   MessageCircle, Calendar, Wine, Camera, Music,
+  CandlestickChart, Flower2, Signpost,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -51,6 +52,19 @@ const HOTEL_COMPARISON = [
   { name: 'myCHEF', price: 'IDR 1,500,000/person', note: 'In your villa, personalised' },
 ]
 
+const REAL_ANNIVERSARIES = [
+  { names: 'Anna & Michael', years: '10 Years', location: 'Seminyak Villa', image: '/generated/aura-toast.webp' },
+  { names: 'Sarah & Tom', years: '25 Years', location: 'Uluwatu Villa', image: '/generated/aura-wedding.webp' },
+  { names: 'Jenny & David', years: '5 Years', location: 'Canggu Villa', image: '/generated/aura-tablescape.webp' },
+  { names: 'Maria & Carlos', years: 'Vow Renewal', location: 'Ubud Villa', image: '/generated/aura-setup.webp' },
+]
+
+const SETUP_DETAILS = [
+  { icon: CandlestickChart, title: 'Candle Landscape', desc: '50+ candles in varied heights — votives, pillars, lanterns — creating a warm, flickering perimeter around your table.' },
+  { icon: Flower2, title: 'Petal Pathway', desc: 'Fresh rose or frangipani petals leading from villa entrance to the dining area. Colour-matched to your preference.' },
+  { icon: Signpost, title: 'Personalised Signage', desc: 'Custom welcome board with your names, anniversary year, and a short message. Kept as a keepsake after dinner.' },
+]
+
 const ADDONS = [
   { icon: Camera, title: 'Anniversary Cake', price: '+IDR 1.5M – 3M' },
   { icon: Wine, title: 'Champagne Veuve', price: '+IDR 2.5M' },
@@ -88,7 +102,7 @@ export default function EventsAnniversariesPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Anniversary Dinners Bali — Romantic Villa Setups | myCHEF"
-        description="Anniversary dinners at your Bali villa. Intimate couple to small-group celebrations. From IDR 1.5M/pp. Personalised menu, candle setup, signage, photographer optional."
+        description="Anniversary dinners at your Bali villa. Couple to small-group celebrations. From IDR 1.5M/person. Menu, candles, signage, photographer."
         canonical={`${SITE}/events/anniversaries`}
         jsonLd={[
           localBusinessSchema,
@@ -111,7 +125,7 @@ export default function EventsAnniversariesPage() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Anniversary Dinners</p>
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Chapter 1 — Anniversary Dinners</p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Anniversary Dinners<br /><span className="italic">Bali Villas</span>
           </h1>
@@ -134,7 +148,7 @@ export default function EventsAnniversariesPage() {
       {/* FORMATS */}
       <section className="py-20 md:py-28 bg-white anniversary-content">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Formats" title="Three Anniversary Options" subtitle="From an intimate dinner for two to a vow renewal with family and friends." />
+          <SectionHeader eyebrow="Chapter 2 — Formats" title="Three Anniversary Options" subtitle="From an intimate dinner for two to a vow renewal with family and friends." />
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
           </div>
@@ -144,6 +158,44 @@ export default function EventsAnniversariesPage() {
             <GroupTotalCalculator pricePerPerson={1500000} minGuests={2} maxGuests={2} defaultGuests={2} label=" couple" accent="#C5A028" />
             <GroupTotalCalculator pricePerPerson={1200000} minGuests={4} maxGuests={16} defaultGuests={8} accent="#C5A028" />
             <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={30} defaultGuests={15} accent="#C5A028" />
+          </div>
+        </div>
+      </section>
+
+      {/* REAL ANNIVERSARY GALLERY */}
+      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 3 — Real Anniversaries" title="Couple Stories" subtitle="Real celebrations, real villas, real love stories." />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {REAL_ANNIVERSARIES.map((a) => (
+              <div key={a.names} className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={a.image} alt={`${a.names} anniversary at ${a.location}`} className="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{a.names}</h3>
+                  <p className="text-[#4A4745] text-xs">{a.years} · {a.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SETUP DETAIL */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 4 — Setup" title="The Details That Matter" subtitle="Every anniversary includes these romantic touches." />
+          <div className="grid sm:grid-cols-3 gap-6">
+            {SETUP_DETAILS.map((s) => (
+              <div key={s.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 text-center hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-4">
+                  <s.icon className="w-5 h-5 text-[#C5A028]" />
+                </div>
+                <h4 className="font-medium text-[#1A1A1A] mb-2">{s.title}</h4>
+                <p className="text-sm text-[#4A4745]">{s.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

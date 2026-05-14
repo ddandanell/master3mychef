@@ -237,7 +237,7 @@ export default function HubPage() {
                   style={{ background: '#1a1a1a' }}
                   onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0.4' }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
                 <div className="absolute inset-0 p-8 flex flex-col justify-end pointer-events-none">
                   <h3 className="text-3xl md:text-4xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{portal.title}</h3>
                   <p className="text-sm text-white/70 mb-5 leading-relaxed">{portal.subtitle}</p>
@@ -556,7 +556,7 @@ export default function HubPage() {
             decoding="async"
             onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0' }}
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-3xl mx-auto">
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Ready When You Are</p>

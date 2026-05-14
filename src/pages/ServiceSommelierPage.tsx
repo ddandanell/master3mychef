@@ -121,8 +121,8 @@ export default function ServiceSommelierPage() {
 
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/luna-wine.webp" alt="Sommelier presenting wine at Bali villa dinner" className="w-full h-full object-cover" width={1920} height={1080} fetchPriority="high" />
-          <div className="absolute inset-0 bg-black/50" />
+          <img src="/generated/sommelier-hero.webp" alt="Professional sommelier pouring wine at luxury Bali villa dinner" className="w-full h-full object-cover" width={1920} height={1080} fetchPriority="high" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 max-w-[1280px] mx-auto w-full">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
@@ -224,7 +224,7 @@ export default function ServiceSommelierPage() {
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img src="/generated/luna-wine.webp" alt="Wine pairing at Bali villa dinner" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="font-playfair text-3xl md:text-5xl text-white mb-6">Book Your Sommelier</h2>

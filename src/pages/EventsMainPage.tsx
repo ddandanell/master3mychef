@@ -348,7 +348,7 @@ export default function EventsMainPage() {
           decoding="async"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/40" />
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 pb-20 md:pb-28 w-full">
           <p
             className="hero-fade text-[#C5A028] text-sm tracking-[0.4em] uppercase mb-6"
@@ -439,7 +439,7 @@ export default function EventsMainPage() {
                     decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-sm">
                     <e.icon className="w-3.5 h-3.5 text-[#C5A028]" />
                     <span
@@ -749,7 +749,7 @@ export default function EventsMainPage() {
             className="w-full h-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/50" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <Sparkles className="w-7 h-7 text-[#C5A028] mx-auto mb-5" />

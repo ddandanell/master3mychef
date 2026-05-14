@@ -122,7 +122,7 @@ export default function StaffingVillaStaffPage() {
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img src="/generated/hub-villa.webp" alt="Villa staff at Bali luxury property" className="w-full h-full object-cover" width={1920} height={1080} fetchPriority="high" />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 max-w-[1280px] mx-auto w-full">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">Staffing</p>
@@ -224,7 +224,7 @@ export default function StaffingVillaStaffPage() {
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img src="/generated/hub-villa.webp" alt="Villa staff team at Bali property" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="font-playfair text-3xl md:text-5xl text-white mb-6">Recruit Your Villa Team</h2>

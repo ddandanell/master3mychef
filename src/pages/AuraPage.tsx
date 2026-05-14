@@ -287,7 +287,7 @@ export default function AuraPage() {
             fetchPriority="high"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="aura-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Bali Event Catering — Villas, Weddings & Corporate</p>
@@ -415,7 +415,7 @@ export default function AuraPage() {
                     decoding="async"
                     className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.05]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t to-black/50 via-transparent to-transparent pointer-events-none" />
                   <span
                     className="absolute top-5 left-5 text-[10px] font-semibold tracking-[0.3em] uppercase px-3.5 py-1.5 rounded-full"
                     style={{ background: 'rgba(15,15,15,0.78)', color: '#FAFAF8', backdropFilter: 'blur(8px)' }}

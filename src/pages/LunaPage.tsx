@@ -207,7 +207,7 @@ export default function LunaPage() {
           />
           <div
             className="absolute inset-0"
-            style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.85))', backdropFilter: 'blur(2px)' }}
+            style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.90))', backdropFilter: 'blur(2px)' }}
           />
         </div>
         <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 pt-32 max-w-[1280px] mx-auto w-full">
@@ -558,7 +558,7 @@ export default function LunaPage() {
                     decoding="async"
                     style={{ objectPosition: 'center 15%' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-50" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60" />
                 </div>
 
                 {/* Bio card */}

@@ -48,6 +48,9 @@ const CateringBabiGulingPage = lazy(() => import('./pages/CateringBabiGulingPage
 const CateringGrazingPage = lazy(() => import('./pages/CateringGrazingPage'))
 const CateringPlatedPage = lazy(() => import('./pages/CateringPlatedPage'))
 const CateringFloatingBreakfastPage = lazy(() => import('./pages/CateringFloatingBreakfastPage'))
+const CateringVillaPage = lazy(() => import('./pages/CateringVillaPage'))
+const CateringCorporatePage = lazy(() => import('./pages/CateringCorporatePage'))
+const CateringRetreatPage = lazy(() => import('./pages/CateringRetreatPage'))
 const InVillaServicePage = lazy(() => import('./components/InVillaServicePage'))
 const PillarSubPage = lazy(() => import('./components/PillarSubPage'))
 const LocationsHubPage = lazy(() => import('./components/LocationsHubPage'))
@@ -100,6 +103,9 @@ export default function App() {
           <Route path="/catering/buffet" element={<CateringBuffetPage />} />
           <Route path="/catering/babi-guling" element={<CateringBabiGulingPage />} />
           <Route path="/catering/grazing-tables" element={<CateringGrazingPage />} />
+          <Route path="/catering/villa-catering" element={<CateringVillaPage />} />
+          <Route path="/catering/corporate-catering" element={<CateringCorporatePage />} />
+          <Route path="/catering/retreat-catering" element={<CateringRetreatPage />} />
           <Route path="/catering/plated-catering" element={<CateringPlatedPage />} />
           <Route path="/catering/floating-breakfast" element={<CateringFloatingBreakfastPage />} />
           <Route path="/events/weddings" element={<EventsWeddingsPage />} />

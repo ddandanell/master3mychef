@@ -10,7 +10,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, formatIDR, formatIDRShort, calculateAllIn } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
@@ -34,12 +34,23 @@ interface EventType {
   href: string
 }
 
+function CardPrice({ price, suffix = '/pp' }: { price: number; suffix?: string }) {
+  return (
+    <>
+      <span className="text-[#C5A028] font-semibold">From {formatIDRShort(price)}++{suffix}</span>
+      <span className="block text-[11px] font-normal text-[#4A4745]/70 mt-0.5">
+        ≈ {formatIDR(calculateAllIn(price))} all-in{suffix}
+      </span>
+    </>
+  )
+}
+
 const EVENT_TYPES: EventType[] = [
   {
     slug: 'weddings',
     eyebrow: 'The Once-In-A-Lifetime',
     title: 'Villa Weddings',
-    fromPrice: <AllInPrice price={600000} />,
+    fromPrice: <CardPrice price={600000} />,
     description:
       'Intimate ceremonies, full receptions, and luxury celebrations. Coordinator on the day, full styling, ceremony to last dance.',
     icon: Heart,
@@ -50,7 +61,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'birthdays',
     eyebrow: 'The Milestone',
     title: 'Birthday Parties',
-    fromPrice: <AllInPrice price={850000} />,
+    fromPrice: <CardPrice price={850000} />,
     description:
       'Intimate dinners, villa parties, and kids celebrations. Cake, themed setup, and a team that makes the day effortless.',
     icon: Cake,
@@ -61,7 +72,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'anniversaries',
     eyebrow: 'The Two Of You',
     title: 'Anniversary Dinners',
-    fromPrice: <AllInPrice price={1200000} />,
+    fromPrice: <CardPrice price={1200000} />,
     description:
       'Private candlelit dinners, vow renewals, and small-group celebrations. The opposite of a hotel package — built around your story.',
     icon: Wine,
@@ -72,7 +83,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'corporate-events',
     eyebrow: 'The Off-Site',
     title: 'Corporate Events',
-    fromPrice: <AllInPrice price={1200000} />,
+    fromPrice: <CardPrice price={1200000} />,
     description:
       'Executive dinners, conferences, retreats, product launches. Hospitality production grade — invoice-ready, NPWP-issued.',
     icon: Briefcase,
@@ -83,7 +94,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'retreats',
     eyebrow: 'The Multi-Day',
     title: 'Wellness & Yoga Retreats',
-    fromPrice: <AllInPrice price={1500000} suffix="/person/day" />,
+    fromPrice: <CardPrice price={1500000} suffix="/pp/day" />,
     description:
       'Dietary-specialist meals across multi-day retreats. Plant-forward, gluten-free, raw, vegan — handled at scale, on schedule.',
     icon: Leaf,
@@ -94,7 +105,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'baby-showers',
     eyebrow: 'The Sweetest',
     title: 'Baby Showers',
-    fromPrice: <AllInPrice price={750000} />,
+    fromPrice: <CardPrice price={750000} />,
     description:
       'Brunch and high-tea showers, themed decor, mocktail bars, and styling so gentle it photographs itself.',
     icon: Baby,
@@ -105,7 +116,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'villa-parties',
     eyebrow: 'The Long Weekend',
     title: 'Villa Parties',
-    fromPrice: <AllInPrice price={650000} />,
+    fromPrice: <CardPrice price={650000} />,
     description:
       'Cocktail receptions, sundowner BBQs, hens & bucks weekends. Bar, music, decor, and Sofia keeping the night on rails.',
     icon: Music,

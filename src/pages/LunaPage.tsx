@@ -86,22 +86,22 @@ const WHATS_INCLUDED = [
 ]
 
 const FAQS = [
-  { q: 'What is the minimum number of guests?', a: 'Four guests minimum. We can accommodate up to 24 for the full fine dining experience.' },
-  { q: 'Can I mix the two menus for my group?', a: 'Absolutely. Half your table can have Mediterranean Sea, half can have Wagyu. Just let Sofia know when booking.' },
-  { q: 'What does "++" mean in the price?', a: '"++" means service charge (typically 10%) and government tax (11%) are added to the menu price. The final per-person total is approximately IDR 2.6M (Mediterranean) and IDR 2.85M (Wagyu). Wine pairing is additional at IDR 850K per guest.' },
-  { q: 'How far in advance should I book?', a: '7+ days is ideal. Peak season (July–August, December) books 2+ weeks ahead. We can sometimes accommodate 48-hour requests — message us and we will try.' },
-  { q: 'Do you provide wine, or do I need to buy it?', a: 'We bring the wine. The pairing is IDR 850K per guest and includes 4–5 glasses matched to each course.' },
-  { q: 'What if someone has allergies or dietary restrictions?', a: 'We adjust every course. Gluten-free, shellfish allergy, pregnancy-friendly, halal, vegan — just tell us. No extra charge.' },
-  { q: 'Where do you cook? Do I need a big kitchen?', a: 'We cook in your villa kitchen. We bring any specialized equipment. We have worked in everything from pool villas to estates.' },
-  { q: 'What time do you arrive?', a: 'Typically 3 hours before service for setup and prep. The tasting experience itself lasts 2.5–3 hours.' },
-  { q: 'Why villa fine dining instead of a restaurant?', a: 'Privacy, pacing, and control. No other tables. No noise. No rush. The chef cooks for you alone, and the evening moves at your speed. For groups of 4–12, the per-person cost is often comparable to a high-end restaurant once you factor in transport and wine markup.' },
-  { q: 'Can I see the menu before booking?', a: 'Yes. We send full menu details, wine pairings, and pricing before you commit. Sofia will walk you through each course.' },
-  { q: 'What happens if I need to cancel?', a: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date.' },
-  { q: 'Is this a real Michelin-trained chef?', a: 'Yes. Adriano, our executive chef, trained in Modena and Tokyo. He personally trains every chef on our team for 6+ months before they lead an evening.' },
-  { q: 'What if I do not like the food?', a: 'We have served 500+ villa dinners with zero complaints requiring refund. If something is not right, we fix it on the spot. Your satisfaction is the standard we cook to.' },
-  { q: 'How do I pay?', a: 'We accept bank transfer (IDR or USD), Wise, and credit card via secure link. A 25% deposit locks your date. Balance due 3 days before the evening.' },
-  { q: 'Is my villa suitable?', a: 'We have worked in pool villas, cliffside estates, and jungle retreats. As long as there is a kitchen and a dining area, we can make it work. We bring tableware, linens, and any equipment we need.' },
-  { q: 'What about children?', a: 'Children are welcome. We can prepare a simplified menu for younger guests at a reduced rate. Let us know ages and preferences when booking.' },
+  { question: 'What is the minimum number of guests?', answer: 'Four guests minimum. We can accommodate up to 24 for the full fine dining experience.' },
+  { question: 'Can I mix the two menus for my group?', answer: 'Absolutely. Half your table can have Mediterranean Sea, half can have Wagyu. Just let Sofia know when booking.' },
+  { question: 'What does "++" mean in the price?', answer: '"++" means service charge (typically 10%) and government tax (11%) are added to the menu price. The final per-person total is approximately IDR 2.6M (Mediterranean) and IDR 2.85M (Wagyu). Wine pairing is additional at IDR 850K per guest.' },
+  { question: 'How far in advance should I book?', answer: '7+ days is ideal. Peak season (July–August, December) books 2+ weeks ahead. We can sometimes accommodate 48-hour requests — message us and we will try.' },
+  { question: 'Do you provide wine, or do I need to buy it?', answer: 'We bring the wine. The pairing is IDR 850K per guest and includes 4–5 glasses matched to each course.' },
+  { question: 'What if someone has allergies or dietary restrictions?', answer: 'We adjust every course. Gluten-free, shellfish allergy, pregnancy-friendly, halal, vegan — just tell us. No extra charge.' },
+  { question: 'Where do you cook? Do I need a big kitchen?', answer: 'We cook in your villa kitchen. We bring any specialized equipment. We have worked in everything from pool villas to estates.' },
+  { question: 'What time do you arrive?', answer: 'Typically 3 hours before service for setup and prep. The tasting experience itself lasts 2.5–3 hours.' },
+  { question: 'Why villa fine dining instead of a restaurant?', answer: 'Privacy, pacing, and control. No other tables. No noise. No rush. The chef cooks for you alone, and the evening moves at your speed. For groups of 4–12, the per-person cost is often comparable to a high-end restaurant once you factor in transport and wine markup.' },
+  { question: 'Can I see the menu before booking?', answer: 'Yes. We send full menu details, wine pairings, and pricing before you commit. Sofia will walk you through each course.' },
+  { question: 'What happens if I need to cancel?', answer: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date.' },
+  { question: 'Is this a real Michelin-trained chef?', answer: 'Yes. Adriano, our executive chef, trained in Modena and Tokyo. He personally trains every chef on our team for 6+ months before they lead an evening.' },
+  { question: 'What if I do not like the food?', answer: 'We have served 500+ villa dinners with zero complaints requiring refund. If something is not right, we fix it on the spot. Your satisfaction is the standard we cook to.' },
+  { question: 'How do I pay?', answer: 'We accept bank transfer (IDR or USD), Wise, and credit card via secure link. A 25% deposit locks your date. Balance due 3 days before the evening.' },
+  { question: 'Is my villa suitable?', answer: 'We have worked in pool villas, cliffside estates, and jungle retreats. As long as there is a kitchen and a dining area, we can make it work. We bring tableware, linens, and any equipment we need.' },
+  { question: 'What about children?', answer: 'Children are welcome. We can prepare a simplified menu for younger guests at a reduced rate. Let us know ages and preferences when booking.' },
 
 ]
 
@@ -181,11 +181,11 @@ export default function LunaPage() {
             'https://mychef.id/fine-dining',
             'IDR'
           ),
-          offerSchema('Mediterranean Sea Experience', 'IDR 2200000', 'https://mychef.id/fine-dining', 'Person'),
-          offerSchema('Wagyu Experience', 'IDR 2400000', 'https://mychef.id/fine-dining', 'Person'),
-          offerSchema('Wine Pairing', 'IDR 850000', 'https://mychef.id/fine-dining', 'Person'),
+          offerSchema('Mediterranean Sea Experience', 2200000, 'https://mychef.id/fine-dining', 'Person'),
+          offerSchema('Wagyu Experience', 2400000, 'https://mychef.id/fine-dining', 'Person'),
+          offerSchema('Wine Pairing', 850000, 'https://mychef.id/fine-dining', 'Person'),
           faqPageSchema(FAQS),
-          aggregateRatingSchema('4.9', '127'),
+          aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Fine Dining', 'https://mychef.id/fine-dining'),
         ]}
       />
@@ -719,12 +719,12 @@ export default function LunaPage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="rounded-2xl border border-white/10 overflow-hidden">
                 <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left">
-                  <span className="text-white font-medium pr-4" style={{ fontFamily: "'Playfair Display', serif" }}>{faq.q}</span>
+                  <span className="text-white font-medium pr-4" style={{ fontFamily: "'Playfair Display', serif" }}>{faq.question}</span>
                   <ChevronRight className={`w-5 h-5 text-[#C5A028] flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-90' : ''}`} />
                 </button>
                 {openFaq === i && (
                   <div className="px-6 pb-6">
-                    <p className="text-sm text-white/60 leading-relaxed">{faq.a}</p>
+                    <p className="text-sm text-white/60 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </div>

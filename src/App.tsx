@@ -52,6 +52,18 @@ const CateringVillaPage = lazy(() => import('./pages/CateringVillaPage'))
 const CateringCorporatePage = lazy(() => import('./pages/CateringCorporatePage'))
 const CateringRetreatPage = lazy(() => import('./pages/CateringRetreatPage'))
 const InVillaServicePage = lazy(() => import('./components/InVillaServicePage'))
+const ServiceWaitersPage = lazy(() => import('./pages/ServiceWaitersPage'))
+const ServiceButlersPage = lazy(() => import('./pages/ServiceButlersPage'))
+const ServiceBartendersPage = lazy(() => import('./pages/ServiceBartendersPage'))
+const ServiceMixologyPage = lazy(() => import('./pages/ServiceMixologyPage'))
+const ServiceSommelierPage = lazy(() => import('./pages/ServiceSommelierPage'))
+const ServiceHostPage = lazy(() => import('./pages/ServiceHostPage'))
+const StaffingPlacementPage = lazy(() => import('./pages/StaffingPlacementPage'))
+const StaffingLiveInPage = lazy(() => import('./pages/StaffingLiveInPage'))
+const StaffingVillaStaffPage = lazy(() => import('./pages/StaffingVillaStaffPage'))
+const StaffingHouseholdPage = lazy(() => import('./pages/StaffingHouseholdPage'))
+const StaffingVillaManagersPage = lazy(() => import('./pages/StaffingVillaManagersPage'))
+const StaffingHotelsPage = lazy(() => import('./pages/StaffingHotelsPage'))
 const PillarSubPage = lazy(() => import('./components/PillarSubPage'))
 const LocationsHubPage = lazy(() => import('./components/LocationsHubPage'))
 const BookPage = lazy(() => import('./components/BookPage'))
@@ -116,7 +128,19 @@ export default function App() {
           <Route path="/events/baby-showers" element={<EventsBabyShowersPage />} />
           <Route path="/events/villa-parties" element={<EventsVillaPartiesPage />} />
           <Route path="/in-villa-service" element={<InVillaServicePage />} />
+          <Route path="/in-villa-service/waiters" element={<ServiceWaitersPage />} />
+          <Route path="/in-villa-service/butlers" element={<ServiceButlersPage />} />
+          <Route path="/in-villa-service/bartenders" element={<ServiceBartendersPage />} />
+          <Route path="/in-villa-service/mixology" element={<ServiceMixologyPage />} />
+          <Route path="/in-villa-service/sommelier" element={<ServiceSommelierPage />} />
+          <Route path="/in-villa-service/host-hostess" element={<ServiceHostPage />} />
           <Route path="/staffing" element={<StaffingPage />} />
+          <Route path="/staffing/private-chef-placement" element={<StaffingPlacementPage />} />
+          <Route path="/staffing/live-in-chef" element={<StaffingLiveInPage />} />
+          <Route path="/staffing/villa-staff" element={<StaffingVillaStaffPage />} />
+          <Route path="/staffing/household-staff" element={<StaffingHouseholdPage />} />
+          <Route path="/staffing/for-villa-managers" element={<StaffingVillaManagersPage />} />
+          <Route path="/staffing/for-hotels-restaurants" element={<StaffingHotelsPage />} />
 
           {/* Pillar sub-pages */}
           {subPages.map(({ path }) => (

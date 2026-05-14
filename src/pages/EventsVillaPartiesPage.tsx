@@ -129,7 +129,7 @@ export default function EventsVillaPartiesPage() {
         title="Villa Parties Bali | Cocktails, BBQ & Celebrations — myCHEF"
         description="Villa parties in Bali. Cocktail receptions, sundowner BBQ parties, and casual mixers. Bartender, music, themed decor, and coordination. From IDR 650K/pp."
         canonical={`${SITE}/events/villa-parties`}
-        ogImage={`${SITE}/generated/party-ultimate.webp`}
+        ogImage={`${SITE}/generated/hero-villa-parties.jpg`}
         jsonLd={[
           localBusinessSchema,
           serviceSchema('Villa Party Catering Bali', 'Villa party catering in Bali. Cocktail receptions, sundowner BBQs, and casual mixers with bartender, music, and themed decor.', `${SITE}/events/villa-parties`, 'IDR'),
@@ -148,7 +148,7 @@ export default function EventsVillaPartiesPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/party-ultimate.webp"
+            src="/generated/hero-villa-parties.jpg"
             alt="Vibrant villa party in Bali at sunset"
             width={1920}
             height={1080}

@@ -114,6 +114,7 @@ export default function EventsRetreatsPage() {
         title="Wellness & Yoga Retreat Catering Bali | myCHEF"
         description="Multi-day retreat catering for yoga, surf, wellness, and corporate retreats in Bali. From IDR 1.5M/pp/day. Plant-forward, GF, anti-inflammatory specialists."
         canonical={`${SITE}/events/retreats`}
+        ogImage={`${SITE}/generated/hero-retreats.jpg`}
         jsonLd={[
           localBusinessSchema,
           serviceSchema('Retreat Catering Bali', 'Multi-day retreat catering for yoga, wellness, and corporate retreats in Bali. Plant-forward, vegan, and dietary-specialist menus.', `${SITE}/events/retreats`, 'IDR'),
@@ -131,7 +132,7 @@ export default function EventsRetreatsPage() {
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/aura-corporate.webp" alt="Wellness retreat meal in Bali" className="w-full h-full object-cover" />
+          <img src="/generated/hero-retreats.jpg" alt="Wellness retreat group dining at Bali villa" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">

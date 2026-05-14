@@ -104,6 +104,7 @@ export default function EventsAnniversariesPage() {
         title="Anniversary Dinners Bali — Romantic Villa Setups | myCHEF"
         description="Anniversary dinners at your Bali villa. Couple to small-group celebrations. From IDR 1.5M/person. Menu, candles, signage, photographer."
         canonical={`${SITE}/events/anniversaries`}
+        ogImage={`${SITE}/generated/hero-anniversaries.jpg`}
         jsonLd={[
           localBusinessSchema,
           serviceSchema('Anniversary Dinner Catering Bali', 'Romantic anniversary dinner catering at Bali villas. Couple dinners, small-group celebrations, and vow renewals.', `${SITE}/events/anniversaries`, 'IDR'),
@@ -121,7 +122,7 @@ export default function EventsAnniversariesPage() {
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/aura-corporate.webp" alt="Romantic anniversary dinner at Bali villa" className="w-full h-full object-cover" />
+          <img src="/generated/hero-anniversaries.jpg" alt="Romantic anniversary dinner at Bali villa" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">

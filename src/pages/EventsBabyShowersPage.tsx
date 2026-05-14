@@ -106,6 +106,7 @@ export default function EventsBabyShowersPage() {
         title="Baby Shower Catering Bali — Villa Brunches | myCHEF"
         description="Baby shower brunches at your Bali villa. Pastel decor, grazing tables, mocktail bar, 10–30 guests from IDR 750K/pp. Photography optional."
         canonical={`${SITE}/events/baby-showers`}
+        ogImage={`${SITE}/generated/hero-baby-showers.jpg`}
         jsonLd={[
           localBusinessSchema,
           serviceSchema('Baby Shower Catering Bali', 'Baby shower brunch catering at Bali villas. Pastel decor, grazing tables, mocktail bar, and photography.', `${SITE}/events/baby-showers`, 'IDR'),
@@ -122,7 +123,7 @@ export default function EventsBabyShowersPage() {
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/aura-corporate.webp" alt="Baby shower brunch at Bali villa" className="w-full h-full object-cover" />
+          <img src="/generated/hero-baby-showers.jpg" alt="Baby shower brunch at Bali villa" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/55" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">

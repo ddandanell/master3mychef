@@ -172,7 +172,7 @@ export default function CateringBuffetPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/aura-buffet.webp"
+            src="/generated/hero-buffet-catering.jpg"
             alt="Full buffet table at a Bali villa event with chafing dishes and staff"
             width={1920}
             height={1080}

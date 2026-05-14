@@ -123,7 +123,7 @@ export default function EventsWeddingsPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/aura-corporate.webp"
+            src="/generated/aura-wedding.webp"
             alt="Bali villa wedding ceremony with couple at altar"
             className="w-full h-full object-cover"
           />

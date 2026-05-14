@@ -109,6 +109,7 @@ export default function EventsBirthdaysPage() {
         title="Birthday Parties Bali | Dinners, Villa Parties — myCHEF"
         description="Birthday parties at your Bali villa. Intimate dinners from IDR 1.5M/pp, villa parties from IDR 850K/pp, kids from IDR 350K/child. Cake, decor, photography."
         canonical={`${SITE}/events/birthdays`}
+        ogImage={`${SITE}/generated/hero-birthdays.jpg`}
         jsonLd={[
           localBusinessSchema,
           serviceSchema('Birthday Party Catering Bali', 'Private chef birthday party catering at Bali villas. Intimate dinners, villa parties, and kids celebrations.', `${SITE}/events/birthdays`, 'IDR'),
@@ -125,7 +126,7 @@ export default function EventsBirthdaysPage() {
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/aura-corporate.webp" alt="Birthday celebration at Bali villa" className="w-full h-full object-cover" />
+          <img src="/generated/hero-birthdays.jpg" alt="Birthday celebration at Bali villa" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">

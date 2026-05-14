@@ -190,7 +190,7 @@ export default function CateringDropOffPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering/dropoff-hero-v2.webp"
+            src="/generated/hero-dropoff-catering.jpg"
             alt="Premium catering boxes opened on a villa dining table"
             width={1920}
             height={1080}

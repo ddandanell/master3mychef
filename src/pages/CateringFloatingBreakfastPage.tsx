@@ -150,7 +150,7 @@ export default function CateringFloatingBreakfastPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering/floating-breakfast.webp"
+            src="/generated/hero-floating-breakfast.jpg"
             alt="Floating breakfast bamboo tray in a Bali villa pool with tropical fruit"
             width={1920}
             height={1080}

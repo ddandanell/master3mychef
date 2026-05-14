@@ -88,16 +88,21 @@ const WHATS_INCLUDED = [
 const FAQS = [
   { q: 'What is the minimum number of guests?', a: 'Four guests minimum. We can accommodate up to 24 for the full fine dining experience.' },
   { q: 'Can I mix the two menus for my group?', a: 'Absolutely. Half your table can have Mediterranean Sea, half can have Wagyu. Just let Sofia know when booking.' },
-  { q: 'What does "++" mean in the price?', a: 'Service charge and government tax are added. The final per-person price is approximately IDR 2.6M (Mediterranean) and IDR 2.85M (Wagyu).' },
+  { q: 'What does "++" mean in the price?', a: '"++" means service charge (typically 10%) and government tax (11%) are added to the menu price. The final per-person total is approximately IDR 2.6M (Mediterranean) and IDR 2.85M (Wagyu). Wine pairing is additional at IDR 850K per guest.' },
   { q: 'How far in advance should I book?', a: '7+ days is ideal. Peak season (July–August, December) books 2+ weeks ahead. We can sometimes accommodate 48-hour requests — message us and we will try.' },
   { q: 'Do you provide wine, or do I need to buy it?', a: 'We bring the wine. The pairing is IDR 850K per guest and includes 4–5 glasses matched to each course.' },
-  { q: 'What if someone has allergies or dietary restrictions?', a: 'We adjust every course. Gluten-free, shellfish allergy, pregnancy-friendly, halal — just tell us. No extra charge.' },
+  { q: 'What if someone has allergies or dietary restrictions?', a: 'We adjust every course. Gluten-free, shellfish allergy, pregnancy-friendly, halal, vegan — just tell us. No extra charge.' },
   { q: 'Where do you cook? Do I need a big kitchen?', a: 'We cook in your villa kitchen. We bring any specialized equipment. We have worked in everything from pool villas to estates.' },
   { q: 'What time do you arrive?', a: 'Typically 3 hours before service for setup and prep. The tasting experience itself lasts 2.5–3 hours.' },
   { q: 'Why villa fine dining instead of a restaurant?', a: 'Privacy, pacing, and control. No other tables. No noise. No rush. The chef cooks for you alone, and the evening moves at your speed. For groups of 4–12, the per-person cost is often comparable to a high-end restaurant once you factor in transport and wine markup.' },
   { q: 'Can I see the menu before booking?', a: 'Yes. We send full menu details, wine pairings, and pricing before you commit. Sofia will walk you through each course.' },
   { q: 'What happens if I need to cancel?', a: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date.' },
   { q: 'Is this a real Michelin-trained chef?', a: 'Yes. Adriano, our executive chef, trained in Modena and Tokyo. He personally trains every chef on our team for 6+ months before they lead an evening.' },
+  { q: 'What if I do not like the food?', a: 'We have served 500+ villa dinners with zero complaints requiring refund. If something is not right, we fix it on the spot. Your satisfaction is the standard we cook to.' },
+  { q: 'How do I pay?', a: 'We accept bank transfer (IDR or USD), Wise, and credit card via secure link. A 25% deposit locks your date. Balance due 3 days before the evening.' },
+  { q: 'Is my villa suitable?', a: 'We have worked in pool villas, cliffside estates, and jungle retreats. As long as there is a kitchen and a dining area, we can make it work. We bring tableware, linens, and any equipment we need.' },
+  { q: 'What about children?', a: 'Children are welcome. We can prepare a simplified menu for younger guests at a reduced rate. Let us know ages and preferences when booking.' },
+
 ]
 
 const TESTIMONIALS = [
@@ -202,10 +207,10 @@ export default function LunaPage() {
             className="luna-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-8  max-w-[920px]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Mediterranean Sea Experience
+            Private Chef Bali — Fine Dining Tasting Menu in Your Villa
           </h1>
           <p className="luna-hero-sub text-base md:text-xl text-white/75 mb-12 max-w-[640px] leading-relaxed">
-            Two and a half to three hours of Mediterranean fine dining, served privately in your villa. From IDR 2,200,000++ per guest. Michelin-trained chef. Wine pairing available.
+            Two and a half to three hours of Mediterranean fine dining, served privately in your villa. From IDR 2,200,000++ per guest. Comparable restaurant experiences start at IDR 3.5M+ with transport and wine markup.
           </p>
           <div className="luna-hero-cta flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-10">
             <button
@@ -213,7 +218,7 @@ export default function LunaPage() {
               onClick={() => openOrder('Mediterranean Sea Experience')}
               className="px-10 py-4 bg-[#C5A028] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
             >
-              Reserve Your Evening
+              Book Your Evening — Reply in 1 Hour
             </button>
             <a
               href="#menus"
@@ -224,9 +229,9 @@ export default function LunaPage() {
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             {[
-              { icon: Star, label: 'Michelin-trained chef' },
-              { icon: Users, label: '4-guest minimum' },
-              { icon: Wine, label: 'Wine pairing available' },
+              { icon: Star, label: '500+ villa dinners served' },
+              { icon: Users, label: '4–24 guests' },
+              { icon: Wine, label: 'Wine pairing +IDR 850K' },
               { icon: Clock, label: '2.5–3 hour journey' },
             ].map((badge) => (
               <div key={badge.label} className="flex items-center gap-2 text-white/60">
@@ -278,7 +283,7 @@ export default function LunaPage() {
               />
             </div>
             <div className="luna-reveal">
-              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chapter Four — The Experience</p>
+              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Experience</p>
               <h2 className="text-4xl md:text-5xl mb-6 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>One Night.<br />Two Journeys.</h2>
               <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
               <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
@@ -748,10 +753,10 @@ export default function LunaPage() {
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">Wine pairing available — IDR 850K per guest</span></div>
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">Minimum 4 guests</span></div>
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">Service charge and government tax included</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">++ adds service charge + government tax (see FAQ)</span></div>
               </div>
               <a href="https://wa.me/6282237565997?text=Hi%20Sofia%2C%20I%27d%20like%20to%20book%20a%20fine%20dining%20experience." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
-                <Phone className="w-4 h-4" /> Book via WhatsApp
+                <Phone className="w-4 h-4" /> Message Sofia — Free Consultation
               </a>
             </div>
             <div className="p-8 rounded-2xl border border-white/10">

@@ -18,7 +18,7 @@ import { getAllSubPages, getAllLocationPaths } from './data/siteArchitecture'
 const HubPage = lazy(() => import('./pages/HubPage'))
 const LunaPage = lazy(() => import('./pages/LunaPage'))
 const SolPage = lazy(() => import('./pages/SolPage'))
-const AuraPage = lazy(() => import('./pages/AuraPage'))
+// const AuraPage = lazy(() => import('./pages/AuraPage'))
 const PartnersPage = lazy(() => import('./pages/PartnersPage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'))
@@ -30,6 +30,14 @@ const ServicesPage = lazy(() => import('./pages/ServicesPage'))
 const PartnerPlatformPage = lazy(() => import('./pages/PartnerPlatformPage'))
 const CertifiedPartnerPage = lazy(() => import('./pages/CertifiedPartnerPage'))
 const CorporateEventsPage = lazy(() => import('./pages/CorporateEventsPage'))
+const EventsMainPage = lazy(() => import('./pages/EventsMainPage'))
+const EventsWeddingsPage = lazy(() => import('./pages/EventsWeddingsPage'))
+const EventsBirthdaysPage = lazy(() => import('./pages/EventsBirthdaysPage'))
+const EventsAnniversariesPage = lazy(() => import('./pages/EventsAnniversariesPage'))
+const EventsCorporatePage = lazy(() => import('./pages/EventsCorporatePage'))
+const EventsRetreatsPage = lazy(() => import('./pages/EventsRetreatsPage'))
+const EventsBabyShowersPage = lazy(() => import('./pages/EventsBabyShowersPage'))
+const EventsVillaPartiesPage = lazy(() => import('./pages/EventsVillaPartiesPage'))
 
 // New system-plan pages
 const CateringPage = lazy(() => import('./pages/CateringMainPage'))
@@ -38,6 +46,8 @@ const CateringDropOffPage = lazy(() => import('./pages/CateringDropOffPage'))
 const CateringBuffetPage = lazy(() => import('./pages/CateringBuffetPage'))
 const CateringBabiGulingPage = lazy(() => import('./pages/CateringBabiGulingPage'))
 const CateringGrazingPage = lazy(() => import('./pages/CateringGrazingPage'))
+const CateringPlatedPage = lazy(() => import('./pages/CateringPlatedPage'))
+const CateringFloatingBreakfastPage = lazy(() => import('./pages/CateringFloatingBreakfastPage'))
 const InVillaServicePage = lazy(() => import('./components/InVillaServicePage'))
 const PillarSubPage = lazy(() => import('./components/PillarSubPage'))
 const LocationsHubPage = lazy(() => import('./components/LocationsHubPage'))
@@ -80,7 +90,7 @@ export default function App() {
           {/* Brand pages */}
           <Route path="/" element={<HubPage />} />
           <Route path="/fine-dining" element={<LunaPage />} />
-          <Route path="/events" element={<AuraPage />} />
+          <Route path="/events" element={<EventsMainPage />} />
           <Route path="/contact" element={<ContactPage />} />
 
           {/* Pillar pages — new canonical URLs */}
@@ -90,6 +100,15 @@ export default function App() {
           <Route path="/catering/buffet" element={<CateringBuffetPage />} />
           <Route path="/catering/babi-guling" element={<CateringBabiGulingPage />} />
           <Route path="/catering/grazing-tables" element={<CateringGrazingPage />} />
+          <Route path="/catering/plated-catering" element={<CateringPlatedPage />} />
+          <Route path="/catering/floating-breakfast" element={<CateringFloatingBreakfastPage />} />
+          <Route path="/events/weddings" element={<EventsWeddingsPage />} />
+          <Route path="/events/birthdays" element={<EventsBirthdaysPage />} />
+          <Route path="/events/anniversaries" element={<EventsAnniversariesPage />} />
+          <Route path="/events/corporate-events" element={<EventsCorporatePage />} />
+          <Route path="/events/retreats" element={<EventsRetreatsPage />} />
+          <Route path="/events/baby-showers" element={<EventsBabyShowersPage />} />
+          <Route path="/events/villa-parties" element={<EventsVillaPartiesPage />} />
           <Route path="/in-villa-service" element={<InVillaServicePage />} />
           <Route path="/staffing" element={<StaffingPage />} />
 

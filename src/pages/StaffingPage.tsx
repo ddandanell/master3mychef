@@ -65,12 +65,17 @@ const FAQS = [
   { q: 'What if a chef is not the right fit?', a: 'The first week is a trial. If the match is not right, we replace the chef at no charge — we maintain a bench of vetted backups for every active placement.' },
   { q: 'Can we hire a chef for just one or two weeks?', a: 'Yes. Short-term placements start at one week. Retreat and event staffing can be a single day. Long-term placements start at one month.' },
   { q: 'Who handles payroll and contracts?', a: 'We provide standard staffing contracts and monthly invoicing. For full-time hires we can advise on Indonesian employment compliance and household structure.' },
-  { q: 'What does it cost?', a: 'Pricing depends on full-time vs part-time, live-in vs live-out, cuisine expertise required, and location. Full-time placements start at IDR 8M/month. The form below returns a tailored proposal within 24 hours.' },
+  { q: 'What does it cost?', a: 'Full-time placements start at IDR 8M/month. Part-time from IDR 4M/month. The price includes the chef\'s salary and our placement fee. Groceries and accommodation (for live-in) are separate. The form below returns a tailored proposal within 24 hours.' },
   { q: 'Do you serve outside Bali?', a: 'Yes. Our network extends to Jakarta and on request to private residences across Indonesia.' },
   { q: 'How long does placement take?', a: 'Most placements are confirmed within 48 hours of your brief. For specialized cuisine or live-in arrangements, allow 3–5 days. Urgent requests: message us on WhatsApp.' },
   { q: 'Can we interview the chef first?', a: 'Yes. We arrange a video call or in-person meeting before confirming the placement. For long-term hires, we recommend a trial dinner where the chef cooks for your household.' },
   { q: 'What is the difference between an agency and myCHEF?', a: 'Agencies send CVs. We send people we know. Every chef in our network has cooked beside our executive chef. We know their strengths, their temperament, and which households they fit.' },
   { q: 'Do you replace chefs mid-contract?', a: 'Yes. If a chef leaves or the match is not working, we replace within 24 hours at no charge. This is standard for all placements.' },
+  { q: 'What if the chef gets sick?', a: 'We maintain a bench of vetted backup chefs for every active placement. If your chef is unwell, we send a replacement within 24 hours at no charge.' },
+  { q: 'Are groceries included in the price?', a: 'No. Groceries are billed separately based on actual receipts. Most households set a weekly budget (e.g. IDR 2–5M/week) and the chef shops within it. You see every receipt.' },
+  { q: 'How do I pay?', a: 'We invoice monthly via bank transfer (IDR or USD), Wise, or credit card. For long-term placements, we can set up automatic monthly billing.' },
+  { q: 'What languages do the chefs speak?', a: 'All chefs speak conversational English. Many speak additional languages. If you need a specific language (Mandarin, French, Japanese), let us know and we will match accordingly.' },
+
 ]
 
 interface StaffingForm {
@@ -168,7 +173,7 @@ export default function StaffingPage() {
             Private Chef Staffing in Bali
           </h1>
           <p className="text-base md:text-xl text-white/75 mb-10 max-w-[640px] leading-relaxed">
-            Part-time and full-time private chefs for villas, families, retreats, and long-term stays — placed by our recruitment team from a vetted network across the island. From IDR 8M/month. Trial week included.
+            Part-time and full-time private chefs for villas, families, retreats, and long-term stays — placed by our recruitment team from a vetted network across the island. From IDR 8M/month. Trial week included. Peak season chefs book 4–6 weeks ahead.
           </p>
           <a
             href="#quote"
@@ -329,7 +334,7 @@ export default function StaffingPage() {
         </div>
       </section>
 
-      {/* ── 05 — KITCHEN STRIP (image break) ────────────────────────────── */}
+      {/* ── KITCHEN STRIP (image break) ────────────────────────────── */}
       <section className="relative w-full h-[50vh] min-h-[420px] overflow-hidden">
         <img
           src="/generated/staffing-kitchen.webp"
@@ -345,10 +350,10 @@ export default function StaffingPage() {
         </div>
       </section>
 
-      {/* ── 07 — STAFFING QUOTE FORM ──────────────────────────────────── */}
+      {/* ── 06 — STAFFING QUOTE FORM ──────────────────────────────────── */}
       <section id="quote" className="bg-white px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
         <div className="max-w-[800px] mx-auto">
-          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">07</p>
+          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">06</p>
           <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-4">Staffing quote</h2>
           <p className="text-[#4A4745] text-lg mb-10">
             Pick the basics here. Once you send, we reply with two or three vetted candidates and an honest budget — within 24 hours.
@@ -408,10 +413,10 @@ export default function StaffingPage() {
         </div>
       </section>
 
-      {/* ── 08 — FAQ ─────────────────────────────────────────────────── */}
+      {/* ── 07 — FAQ ─────────────────────────────────────────────────── */}
       <section id="faq" className="bg-[#FAFAF8] px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
         <div className="max-w-[800px] mx-auto">
-          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">08</p>
+          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">07</p>
           <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-12">Frequently asked</h2>
           <div className="space-y-4">
             {FAQS.map((f) => (

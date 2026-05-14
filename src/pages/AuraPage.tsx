@@ -170,10 +170,11 @@ const GLOBAL_ADDONS = [
 
 const FAQS = [
   { q: 'How far in advance should I book an event?', a: '4+ weeks is ideal. For weddings during peak season (June–September, December), 3+ months is recommended. But message us anyway — we have pulled off miracles in less time.' },
+  { q: 'What does "++" mean in the price?', a: '"++" means service charge (typically 10%) and government tax (11%) are added to the per-guest price. The total event cost depends on guest count, menu, and add-ons. Olivia provides a fully itemised proposal with no hidden fees.' },
   { q: 'What is included in the event price?', a: 'All packages include catering, bar service, staffing, basic décor, and on-site coordination. AV, specialty floral, and entertainment are quoted separately based on your needs.' },
   { q: 'Can you work at any villa in Bali?', a: 'Yes. We have produced events at over 200 villas across Seminyak, Canggu, Ubud, Uluwatu, and Nusa Dua. We know the spaces, the vendors, and the logistics.' },
   { q: 'Do you handle décor and floral?', a: 'Yes. Our Villa Celebration and Grand packages include floral and décor. For Intimate events, we can add it as an upgrade. We work with Bali\'s best floral designers.' },
-  { q: 'Can we taste the menu before the event?', a: 'For events over IDR 50M, we offer a complimentary tasting session at your villa. For smaller events, we can arrange a paid tasting.' },
+  { q: 'Can we taste the menu before the event?', a: 'Yes. For events over IDR 50M, the tasting is complimentary. For smaller events, we offer a paid tasting at IDR 450K++ per person — credited toward your final booking.' },
   { q: 'What about dietary restrictions for large groups?', a: 'We handle it seamlessly. Vegetarian, halal, gluten-free, nut allergies — we label everything and ensure every guest is cared for.' },
   { q: 'Do you provide alcohol and bar service?', a: 'Yes. Full bar service with professional bartenders. We can source premium spirits, wines, and craft cocktails. You can also provide your own alcohol and we handle service.' },
   { q: 'What happens if it rains?', a: 'We always have a backup plan. Bali villas have covered areas, and we bring tenting for outdoor events. Olivia will walk you through contingencies in your proposal.' },
@@ -181,6 +182,10 @@ const FAQS = [
   { q: 'What if our villa has restrictions?', a: 'We work with villa managers before every event. Noise curfews, guest limits, kitchen access — we plan around every restriction so nothing surprises you on the day.' },
   { q: 'Is there a commitment to get a proposal?', a: 'No. The first consultation and proposal are free. You only commit when you approve the plan and pay the deposit.' },
   { q: 'How does payment work?', a: '25% deposit to lock the date. 50% due 2 weeks before. Final 25% on the day. Invoiced and documented for corporate clients.' },
+  { q: 'What if I need to cancel or reschedule?', a: 'Full refund if cancelled 30+ days ahead. 50% refund 14–30 days. Within 14 days, we apply the deposit to a rescheduled date within 6 months.' },
+  { q: 'Are there hidden fees?', a: 'No. Every proposal is itemised — catering, bar, staffing, décor, AV, add-ons. You see every line item before you commit. No surprises on the day.' },
+  { q: 'How do I know the food will be good?', a: 'Our executive chef Adriano trained in Modena and Tokyo. Every event menu is designed by him and executed by his team. See past event photos, read testimonials, or book a tasting.' },
+
 ]
 
 const TESTIMONIALS = [
@@ -287,10 +292,10 @@ export default function AuraPage() {
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="aura-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Bali Event Catering — Villas, Weddings & Corporate</p>
           <h1 className="aura-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 " style={{ fontFamily: "'Playfair Display', serif" }}>
-            Events,<br /><span className="italic">Perfectly Hosted</span>
+            Bali Event Catering —<br /><span className="italic">Villas, Weddings & Corporate</span>
           </h1>
           <p className="aura-hero-sub text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 15M. Olivia replies within 24 hours.
+            From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 15M total event minimum. Olivia replies within 24 hours.
           </p>
           <div className="aura-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1e4a63] transition-all">
@@ -304,8 +309,8 @@ export default function AuraPage() {
             {[
               { label: '200+ events produced' },
               { label: '4.9★ client rating' },
-              { label: 'Olivia replies in 24h' },
-              { label: 'Full-service: catering to cleanup' },
+              { label: '15-person events team' },
+              { label: '200+ villas across Bali' },
             ].map((badge) => (
               <div key={badge.label} className="flex items-center gap-2 text-white/60">
                 <Check className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />
@@ -707,10 +712,10 @@ export default function AuraPage() {
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Here Is What Happens Next</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             {[
-              { step: '1', text: 'Message Olivia' },
-              { step: '2', text: 'Get proposal in 24h' },
-              { step: '3', text: 'Approve & pay 25%' },
-              { step: '4', text: 'Show up & enjoy' },
+              { step: '01', text: 'Message Olivia' },
+              { step: '02', text: 'Get proposal in 24h' },
+              { step: '03', text: 'Approve & pay 25%' },
+              { step: '04', text: 'Show up & enjoy' },
             ].map((item) => (
               <div key={item.step} className="text-center">
                 <span className="text-[#C5A028] text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>{item.step}</span>
@@ -720,7 +725,7 @@ export default function AuraPage() {
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1e4a63] transition-all">
-              <MessageCircle className="w-4 h-4" /> Get Event Quote
+              <MessageCircle className="w-4 h-4" /> Get Quote in 24h — Free Consultation
             </a>
             <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997

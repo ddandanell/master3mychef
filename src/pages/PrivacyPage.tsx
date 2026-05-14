@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Mail } from 'lucide-react'
-import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import FAQAccordion from '@/components/catering/FAQAccordion'
+import SectionHeader from '@/components/catering/SectionHeader'
 
 const SECTIONS = [
   {
@@ -53,6 +55,33 @@ const SECTIONS = [
   },
 ]
 
+const FAQS = [
+  {
+    q: 'What personal data does myCHEF collect?',
+    a: 'We collect name, contact details, villa address, event details, dietary preferences, and payment information. We also collect device and usage data automatically when you visit our website.',
+  },
+  {
+    q: 'How does myCHEF use my data?',
+    a: 'Your data is used to process bookings, match you with chefs, communicate about your event, process payments, send confirmations, and improve our services. Marketing communications are only sent with your consent.',
+  },
+  {
+    q: 'Does myCHEF share my information with third parties?',
+    a: 'We share necessary booking details with your assigned chef and trusted service providers such as payment processors. We do not sell your personal information to third parties for marketing purposes.',
+  },
+  {
+    q: 'How can I request deletion of my data?',
+    a: 'You can request deletion of your personal information by contacting us at indonesia@mychef.id or via WhatsApp at +62 822-3756-5997. We will process your request subject to any legal retention requirements.',
+  },
+  {
+    q: 'Is my payment information secure?',
+    a: 'Yes. Payment information is processed through secure, PCI-compliant payment gateways and is not stored on our servers. We use appropriate technical and organizational measures to protect all personal data.',
+  },
+  {
+    q: 'Does myCHEF use cookies?',
+    a: 'Yes, we use cookies and similar tracking technologies to enhance your experience, understand site usage, remember preferences, and improve our services. You can control cookies through your browser settings.',
+  },
+]
+
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
@@ -60,7 +89,10 @@ export default function PrivacyPage() {
         title="Privacy Policy | myCHEF — Private Chef Bali"
         description="How myCHEF collects, uses, and protects your personal information when you book private chef, villa catering, and event services in Bali, Indonesia."
         canonical="https://mychef.id/privacy-policy"
-        jsonLd={[breadcrumbSchema('Privacy Policy', 'https://mychef.id/privacy-policy')]}
+        jsonLd={[
+          breadcrumbSchema('Privacy Policy', 'https://mychef.id/privacy-policy'),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+        ]}
       />
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
@@ -101,6 +133,14 @@ export default function PrivacyPage() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[800px] mx-auto">
+          <SectionHeader eyebrow="Questions" title="Privacy FAQ" />
+          <FAQAccordion items={FAQS} defaultOpenCount={3} />
         </div>
       </section>
     </div>

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Mail, MapPin, CreditCard, Calendar, AlertCircle, CheckCircle } from 'lucide-react'
-import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import FAQAccordion from '@/components/catering/FAQAccordion'
+import SectionHeader from '@/components/catering/SectionHeader'
 
 const PAYMENT_RULES = [
   {
@@ -31,6 +33,33 @@ const CANCELLATION_TIERS = [
   { days: 'Less than 7 days', refund: '0%', note: 'No refund — ingredients pre-ordered' },
 ]
 
+const FAQS = [
+  {
+    q: 'What are myCHEF terms of service?',
+    a: 'Our terms cover booking deposits, payment schedules, cancellation and refund policies, changes to bookings, and legal terms governed by Indonesian law. A 25% deposit is required to confirm your booking, with the balance paid on arrival.',
+  },
+  {
+    q: 'What happens if I break the terms?',
+    a: 'If payment is not received within the stated timeframe, MyChef reserves the right to cancel or reassign the chef without further notice. Late changes to bookings may be treated as cancellations and are subject to our refund policy.',
+  },
+  {
+    q: 'Can I use myCHEF content for commercial purposes?',
+    a: 'All content on the myCHEF website, including images, text, and branding, is the property of MyChef and may not be used for commercial purposes without prior written consent.',
+  },
+  {
+    q: 'How are disputes resolved?',
+    a: 'Any disputes arising from our services are governed by Indonesian law. We encourage customers to contact us directly to resolve any issues before pursuing formal dispute resolution.',
+  },
+  {
+    q: 'Does myCHEF have liability limits?',
+    a: 'MyChef is not liable for indirect, incidental, or consequential damages arising from the use of our services. Our liability is limited to the total amount paid for the specific booking in question.',
+  },
+  {
+    q: 'Can the terms change without notice?',
+    a: 'We may update our terms from time to time to reflect changes in our practices or for legal, regulatory, or operational reasons. The terms in effect at the time of your booking will apply to that booking.',
+  },
+]
+
 export default function TermsPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
@@ -38,7 +67,10 @@ export default function TermsPage() {
         title="Terms & Payment | myCHEF — Private Chef Bali"
         description="myCHEF terms of service and payment rules for private chef, Bali villa catering, and event bookings — deposits, balance, and booking confirmation."
         canonical="https://mychef.id/terms-of-service"
-        jsonLd={[breadcrumbSchema('Terms & Payment', 'https://mychef.id/terms-of-service')]}
+        jsonLd={[
+          breadcrumbSchema('Terms & Payment', 'https://mychef.id/terms-of-service'),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+        ]}
       />
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
@@ -210,6 +242,14 @@ export default function TermsPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[800px] mx-auto">
+          <SectionHeader eyebrow="Questions" title="Terms FAQ" />
+          <FAQAccordion items={FAQS} defaultOpenCount={3} />
         </div>
       </section>
     </div>

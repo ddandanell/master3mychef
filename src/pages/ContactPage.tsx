@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { MessageCircle, Mail, MapPin, Phone, ArrowRight } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SectionHeader from '@/components/catering/SectionHeader'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const WA = '6282237565997'
 const SITE = 'https://mychef.id'
@@ -16,6 +18,17 @@ interface Concierge {
   /** Pre-filled WhatsApp message text for this concierge. */
   message: string
 }
+
+const FAQS = [
+  { q: 'How do I contact myCHEF?', a: 'The fastest way is WhatsApp at +62 822-3756-5997. You can also email indonesia@mychef.id or call the same number. We usually reply within minutes on WhatsApp.' },
+  { q: 'Who is Sofia and what does she handle?', a: 'Sofia is our Fine Dining Concierge. She handles tasting-menu reservations, dietary preferences, wine pairings, and fine-dining experiences at your villa.' },
+  { q: 'How quickly will myCHEF respond?', a: 'We typically reply within minutes on WhatsApp. For email enquiries, expect a response within a few hours during business hours.' },
+  { q: 'Can I call instead of using WhatsApp?', a: 'Yes. You can call +62 822-3756-5997 directly. Our lines are open daily from 08:00 to 22:00 WITA.' },
+  { q: 'What information should I include in my first message?', a: 'Let us know your name, the service you are interested in, your villa or location in Bali, group size, and preferred date. The more detail, the faster we can help.' },
+  { q: 'Do you have an office I can visit in Bali?', a: 'Yes. Our office is at Jl. Tukad Barito Timur III No.16, Denpasar Selatan, Bali. We serve all of Bali including Seminyak, Canggu, Ubud, Uluwatu, and Sanur.' },
+  { q: 'Can I email myCHEF instead?', a: 'Absolutely. Send detailed proposals or longer enquiries to indonesia@mychef.id and we will route them to the right concierge.' },
+  { q: 'What are your business hours?', a: 'We are open daily from 08:00 to 22:00 WITA (Bali time). WhatsApp messages outside these hours are answered first thing the next morning.' },
+]
 
 const CONCIERGES: Concierge[] = [
   {
@@ -82,7 +95,7 @@ export default function ContactPage() {
         description="Speak directly with the right person — Sofia for fine dining, Daniel for villa chef catering, Olivia for events, Marco for partnerships and staffing."
         canonical={`${SITE}/contact`}
         ogImage={`${SITE}/generated/contact-hero.webp`}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Contact', `${SITE}/contact`)]}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Contact', `${SITE}/contact`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* ── HERO ─────────────────────────────────────────────────────── */}
@@ -252,6 +265,14 @@ export default function ContactPage() {
               </form>
             )}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[800px] mx-auto">
+          <SectionHeader eyebrow="Questions" title="Contact FAQ" />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
     </main>

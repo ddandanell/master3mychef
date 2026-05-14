@@ -18,6 +18,7 @@ import {
 } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const WA = '6282237565997'
 const SITE = 'https://mychef.id'
@@ -61,20 +62,20 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { question: 'How do you vet chefs?', answer: 'Every chef in our network passes a background check, hands-on cooking trial, hospitality assessment, and a reference call. We do not place anyone we would not put in our own home.' },
-  { question: 'What if a chef is not the right fit?', answer: 'The first week is a trial. If the match is not right, we replace the chef at no charge — we maintain a bench of vetted backups for every active placement.' },
-  { question: 'Can we hire a chef for just one or two weeks?', answer: 'Yes. Short-term placements start at one week. Retreat and event staffing can be a single day. Long-term placements start at one month.' },
-  { question: 'Who handles payroll and contracts?', answer: 'We provide standard staffing contracts and monthly invoicing. For full-time hires we can advise on Indonesian employment compliance and household structure.' },
-  { question: 'What does it cost?', answer: 'Full-time placements start at IDR 8M/month. Part-time from IDR 4M/month. The price includes the chef\'s salary and our placement fee. Groceries and accommodation (for live-in) are separate. The form below returns a tailored proposal within 24 hours.' },
-  { question: 'Do you serve outside Bali?', answer: 'Yes. Our network extends to Jakarta and on request to private residences across Indonesia.' },
-  { question: 'How long does placement take?', answer: 'Most placements are confirmed within 48 hours of your brief. For specialized cuisine or live-in arrangements, allow 3–5 days. Urgent requests: message us on WhatsApp.' },
-  { question: 'Can we interview the chef first?', answer: 'Yes. We arrange a video call or in-person meeting before confirming the placement. For long-term hires, we recommend a trial dinner where the chef cooks for your household.' },
-  { question: 'What is the difference between an agency and myCHEF?', answer: 'Agencies send CVs. We send people we know. Every chef in our network has cooked beside our executive chef. We know their strengths, their temperament, and which households they fit.' },
-  { question: 'Do you replace chefs mid-contract?', answer: 'Yes. If a chef leaves or the match is not working, we replace within 24 hours at no charge. This is standard for all placements.' },
-  { question: 'What if the chef gets sick?', answer: 'We maintain a bench of vetted backup chefs for every active placement. If your chef is unwell, we send a replacement within 24 hours at no charge.' },
-  { question: 'Are groceries included in the price?', answer: 'No. Groceries are billed separately based on actual receipts. Most households set a weekly budget (e.g. IDR 2–5M/week) and the chef shops within it. You see every receipt.' },
-  { question: 'How do I pay?', answer: 'We invoice monthly via bank transfer (IDR or USD), Wise, or credit card. For long-term placements, we can set up automatic monthly billing.' },
-  { question: 'What languages do the chefs speak?', answer: 'All chefs speak conversational English. Many speak additional languages. If you need a specific language (Mandarin, French, Japanese), let us know and we will match accordingly.' },
+  { q: 'How do you vet chefs?', a: 'Every chef in our network passes a background check, hands-on cooking trial, hospitality assessment, and a reference call. We do not place anyone we would not put in our own home.' },
+  { q: 'What if a chef is not the right fit?', a: 'The first week is a trial. If the match is not right, we replace the chef at no charge — we maintain a bench of vetted backups for every active placement.' },
+  { q: 'Can we hire a chef for just one or two weeks?', a: 'Yes. Short-term placements start at one week. Retreat and event staffing can be a single day. Long-term placements start at one month.' },
+  { q: 'Who handles payroll and contracts?', a: 'We provide standard staffing contracts and monthly invoicing. For full-time hires we can advise on Indonesian employment compliance and household structure.' },
+  { q: 'What does it cost?', a: 'Full-time placements start at IDR 8M/month. Part-time from IDR 4M/month. The price includes the chef\'s salary and our placement fee. Groceries and accommodation (for live-in) are separate. The form below returns a tailored proposal within 24 hours.' },
+  { q: 'Do you serve outside Bali?', a: 'Yes. Our network extends to Jakarta and on request to private residences across Indonesia.' },
+  { q: 'How long does placement take?', a: 'Most placements are confirmed within 48 hours of your brief. For specialized cuisine or live-in arrangements, allow 3–5 days. Urgent requests: message us on WhatsApp.' },
+  { q: 'Can we interview the chef first?', a: 'Yes. We arrange a video call or in-person meeting before confirming the placement. For long-term hires, we recommend a trial dinner where the chef cooks for your household.' },
+  { q: 'What is the difference between an agency and myCHEF?', a: 'Agencies send CVs. We send people we know. Every chef in our network has cooked beside our executive chef. We know their strengths, their temperament, and which households they fit.' },
+  { q: 'Do you replace chefs mid-contract?', a: 'Yes. If a chef leaves or the match is not working, we replace within 24 hours at no charge. This is standard for all placements.' },
+  { q: 'What if the chef gets sick?', a: 'We maintain a bench of vetted backup chefs for every active placement. If your chef is unwell, we send a replacement within 24 hours at no charge.' },
+  { q: 'Are groceries included in the price?', a: 'No. Groceries are billed separately based on actual receipts. Most households set a weekly budget (e.g. IDR 2–5M/week) and the chef shops within it. You see every receipt.' },
+  { q: 'How do I pay?', a: 'We invoice monthly via bank transfer (IDR or USD), Wise, or credit card. For long-term placements, we can set up automatic monthly billing.' },
+  { q: 'What languages do the chefs speak?', a: 'All chefs speak conversational English. Many speak additional languages. If you need a specific language (Mandarin, French, Japanese), let us know and we will match accordingly.' },
 
 ]
 
@@ -150,7 +151,7 @@ export default function StaffingPage() {
             `${SITE}/staffing`,
             'IDR'
           ),
-          faqPageSchema(FAQS),
+          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 500),
           breadcrumbSchema('Staffing', `${SITE}/staffing`),
         ]}
@@ -429,17 +430,7 @@ export default function StaffingPage() {
         <div className="max-w-[800px] mx-auto">
           <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">07</p>
           <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-12">Frequently asked</h2>
-          <div className="space-y-4">
-            {FAQS.map((f) => (
-              <details key={f.question} className="bg-white border border-[#E5E3E0] rounded-2xl p-5 group">
-                <summary className="font-medium cursor-pointer list-none flex justify-between items-center">
-                  <span>{f.question}</span>
-                  <Plus className="w-4 h-4 text-[#8A8785] group-open:rotate-45 transition-transform" />
-                </summary>
-                <p className="text-sm text-[#4A4745] mt-3">{f.answer}</p>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
 
           <div className="mt-14 text-center">
             <p className="text-[#4A4745] mb-4">Still have questions?</p>

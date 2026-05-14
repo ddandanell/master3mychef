@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Shield, AlertTriangle, CheckCircle2, XCircle, Clock, Calendar, Utensils } from 'lucide-react'
-import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import FAQAccordion from '@/components/catering/FAQAccordion'
+import SectionHeader from '@/components/catering/SectionHeader'
 
 const CLIENT_POLICY = [
   {
@@ -39,6 +41,17 @@ const CHEF_POLICY = [
   },
 ]
 
+const FAQS = [
+  { q: 'What is the myCHEF cancellation policy?', a: 'You can cancel your booking at any time. Cancellations made 14 or more days before the event receive a full refund. Cancellations between 7–13 days before receive a 50% refund. Cancellations less than 7 days before are non-refundable.' },
+  { q: 'Can I get a full refund if I cancel my booking?', a: 'Yes — if you cancel 14 or more days before your scheduled booking, you receive a 100% full refund of all payments made, no questions asked.' },
+  { q: 'What happens if I cancel less than 7 days before?', a: 'Unfortunately, no refund is provided for cancellations made less than 7 days before the event. By this point, all ingredients have been purchased and the chef has blocked their calendar exclusively for your booking.' },
+  { q: 'Can I reschedule instead of cancelling?', a: 'Yes, you may request a reschedule instead of a cancellation. All change requests must be submitted directly to MyChef no later than 72 hours before the booking starts. Later requests may be treated as a cancellation.' },
+  { q: 'What if myCHEF cancels my booking?', a: 'If MyChef or the assigned chef cancels or fails to deliver the service, you will receive a full refund of all payments made. If service begins but cannot be completed for reasons caused by MyChef, a fair refund will be issued based on time worked.' },
+  { q: 'How long does a refund take?', a: 'Once your cancellation is confirmed and approved, refunds are typically processed within 5–10 business days, depending on your bank or payment provider.' },
+  { q: 'Is the deposit refundable?', a: 'The deposit follows the same cancellation tiers: 100% refundable if cancelled 14+ days before, 50% refundable within 7–13 days, and non-refundable if cancelled less than 7 days before.' },
+  { q: 'What if there is an emergency and I need to cancel?', a: 'We understand emergencies happen. Please contact us directly via WhatsApp as soon as possible. While our policy is firm due to perishable ingredients and chef scheduling, we review emergency requests on a case-by-case basis.' },
+]
+
 const DEDUCTIONS = [
   'Pre-purchased groceries or special items: If ingredients have already been purchased, those costs (with receipts) may be deducted from any refund.',
   'Payment processing or bank fees: Non-refundable if already incurred.',
@@ -52,7 +65,10 @@ export default function CancellationPage() {
         title="Cancellation Policy | myCHEF — Private Chef Bali"
         description="Cancellation and refund policy for myCHEF private chef, Bali villa catering, and event bookings — full refund 14+ days before, 50% within 7–13 days."
         canonical="https://mychef.id/cancellation"
-        jsonLd={[breadcrumbSchema('Cancellation Policy', 'https://mychef.id/cancellation')]}
+        jsonLd={[
+          breadcrumbSchema('Cancellation Policy', 'https://mychef.id/cancellation'),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+        ]}
       />
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
@@ -139,6 +155,14 @@ export default function CancellationPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp +62 822-3756-5997
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[800px] mx-auto">
+          <SectionHeader eyebrow="Questions" title="Cancellation FAQ" />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
     </div>

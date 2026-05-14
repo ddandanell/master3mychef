@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
-import { Check, Utensils, Star, MessageCircle, Phone, ShoppingBag, Sparkles, ChevronRight } from 'lucide-react'
+import { useEffect, useRef } from 'react'
+import { Check, Utensils, Star, MessageCircle, Phone, ShoppingBag, Sparkles } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
 import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -50,8 +51,6 @@ const TESTIMONIALS = [
 
 export default function SolPage() {
   const ref = useRef<HTMLDivElement>(null)
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
-
   useEffect(() => {
     const ctx = gsap.context(() => {
 
@@ -291,21 +290,7 @@ export default function SolPage() {
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Frequently Asked</h2>
             <p style={{ color: '#8A7B6B' }}>Still unsure? Message Daniel on WhatsApp — he responds within the hour.</p>
           </div>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <div key={i} className="rounded-2xl border border-[#E5E0D8] bg-white overflow-hidden">
-                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left">
-                  <span className="font-medium pr-4" style={{ fontFamily: "'Playfair Display', serif", color: '#2C2419' }}>{faq.q}</span>
-                  <ChevronRight className={`w-5 h-5 text-[#6B8E5A] flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-90' : ''}`} />
-                </button>
-                {openFaq === i && (
-                  <div className="px-6 pb-6">
-                    <p className="text-sm leading-relaxed" style={{ color: '#8A7B6B' }}>{faq.a}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
             <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
               <MessageCircle className="w-4 h-4" /> Ask Daniel on WhatsApp

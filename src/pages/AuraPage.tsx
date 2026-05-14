@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { Check, Heart, Building2, PartyPopper, Star, MessageCircle, Phone, Sparkles, Truck, ChevronRight } from 'lucide-react'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
@@ -195,7 +196,6 @@ const TESTIMONIALS = [
 
 export default function AuraPage() {
   const ref = useRef<HTMLDivElement>(null)
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
 
   const eventSchemas = [
     {
@@ -645,21 +645,7 @@ export default function AuraPage() {
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Frequently Asked</h2>
             <p style={{ color: '#4A4745' }}>Planning an event is a big decision. Here are the answers you need.</p>
           </div>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <div key={i} className="rounded-2xl border border-[#E5E3E0] bg-white overflow-hidden">
-                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left">
-                  <span className="font-medium pr-4" style={{ fontFamily: "'Playfair Display', serif", color: '#1A1A1A' }}>{faq.q}</span>
-                  <ChevronRight className={`w-5 h-5 text-[#2C5F7C] flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-90' : ''}`} />
-                </button>
-                {openFaq === i && (
-                  <div className="px-6 pb-6">
-                    <p className="text-sm leading-relaxed" style={{ color: '#4A4745' }}>{faq.a}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
             <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
               <MessageCircle className="w-4 h-4" /> Ask Olivia on WhatsApp

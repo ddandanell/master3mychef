@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowRight, PartyPopper, Heart, Cake, Users, Briefcase, Gem, ChefHat, CalendarCheck } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import FAQAccordion from '@/components/catering/FAQAccordion'
+import SectionHeader from '@/components/catering/SectionHeader'
 import { SERVICES } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -16,6 +18,41 @@ const ICONS: Record<string, React.FC<{ className?: string; style?: React.CSSProp
   'cooking-classes': ChefHat,
   'weekly-meal-prep': CalendarCheck,
 }
+
+const FAQS = [
+  {
+    q: 'What services does myCHEF offer in Bali?',
+    a: 'myCHEF offers eight premium private chef experiences in Bali: villa parties, romantic dinners, birthday celebrations, family reunions, corporate events, wedding celebrations, cooking classes, and weekly meal prep. Every service includes menu planning, ingredient sourcing, on-site preparation, and full cleanup.',
+  },
+  {
+    q: 'How do I book a private chef for my villa?',
+    a: 'Booking is simple. Message us on WhatsApp or fill out the quote form on our website. Tell us your dates, guest count, occasion, and any dietary preferences. We will confirm availability and send a custom proposal — usually within the hour.',
+  },
+  {
+    q: 'What is the difference between fine dining and catering?',
+    a: 'Fine dining is a multi-course plated experience served course by course, ideal for intimate dinners and special occasions. Catering covers larger groups with buffet, family-style, or grazing setups — perfect for villa parties, weddings, and corporate events. Both use the same chef team and premium ingredients.',
+  },
+  {
+    q: 'Can myCHEF handle dietary restrictions?',
+    a: 'Absolutely. Our chefs are experienced with vegan, vegetarian, gluten-free, dairy-free, halal, keto, and allergen-sensitive menus. Just let us know your requirements when booking and we will design a menu that everyone can enjoy safely.',
+  },
+  {
+    q: 'How far in advance should I book?',
+    a: 'We recommend booking at least 1–2 weeks ahead for standard services and 3–4 weeks for weddings or large corporate events. Last-minute bookings are sometimes possible depending on chef availability — just ask.',
+  },
+  {
+    q: 'What areas in Bali do you serve?',
+    a: 'We serve all major areas of Bali including Seminyak, Canggu, Uluwatu, Jimbaran, Nusa Dua, Sanur, Ubud, and the surrounding regions. Travel fees may apply for remote locations — we will confirm this in your proposal.',
+  },
+  {
+    q: 'Do you provide all equipment and ingredients?',
+    a: 'Yes. Our chefs bring all necessary ingredients and specialty tools. We use your villa kitchen for preparation and plating. If your kitchen lacks basic cookware, let us know in advance and we will arrange everything needed.',
+  },
+  {
+    q: 'How do I pay for myCHEF services?',
+    a: 'We accept bank transfer (IDR), Wise, and major credit cards. A 50% deposit secures your date, with the balance due 48 hours before the event. Corporate clients can request invoicing with NET-14 terms.',
+  },
+]
 
 const ACCENTS = [
   '#C5A028',
@@ -53,7 +90,7 @@ export default function ServicesPage() {
         description="Eight ways we bring food to your villa. Parties, romantic dinners, birthdays, reunions, corporate events, weddings, cooking classes, meal prep."
         canonical={`${SITE}/services`}
         ogImage={`${SITE}/generated/bali-hub-hero.webp`}
-        jsonLd={[localBusinessSchema, itemListSchema, breadcrumbSchema('Services', `${SITE}/services`)]}
+        jsonLd={[localBusinessSchema, itemListSchema, breadcrumbSchema('Services', `${SITE}/services`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* ── HERO ── */}
@@ -188,6 +225,14 @@ export default function ServicesPage() {
           >
             <MessageCircle className="w-4 h-4" /> Message Us on WhatsApp
           </a>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[800px] mx-auto">
+          <SectionHeader eyebrow="Questions" title="Services FAQ" />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
     </main>

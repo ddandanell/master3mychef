@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import SeoHead, { localBusinessSchema } from '@/components/SeoHead'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -533,14 +534,7 @@ export default function HubPage() {
             <h2 className="u-heading text-4xl md:text-5xl mb-3">Frequently Asked</h2>
             <p className="mb-2" style={{ color: 'var(--u-text-muted)' }}>Still unsure? Message us on WhatsApp — we respond within the hour.</p>
           </div>
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <div key={i} className="p-6 rounded-2xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-                <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>{faq.q}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
             <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: '#25D366', color: '#fff' }}>
               <MessageCircle className="w-4 h-4" /> Ask on WhatsApp

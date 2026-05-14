@@ -3,7 +3,6 @@ import {
   Check,
   X,
   MessageCircle,
-  ChevronRight,
   Award,
   Gauge,
   FileText,
@@ -14,8 +13,9 @@ import {
   Star,
   TrendingUp,
 } from 'lucide-react'
-import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const WA = '6282237565997'
 const SITE = 'https://mychef.id'
@@ -115,7 +115,7 @@ export default function PartnerPlatformPage() {
         description="Villa dining partner platform for luxury villas and management companies across Bali. Co-branded or white-label, monthly commission, transparent dashboard."
         canonical={`${SITE}/partner-platform`}
         ogImage={`${SITE}/generated/partner-platform-hero.webp`}
-        jsonLd={[breadcrumbSchema('Partner Platform', `${SITE}/partner-platform`), jsonLd]}
+        jsonLd={[breadcrumbSchema('Partner Platform', `${SITE}/partner-platform`), jsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
@@ -514,17 +514,7 @@ export default function PartnerPlatformPage() {
         <div className="max-w-[800px] mx-auto">
           <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">13 — Frequently asked</p>
           <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-12">Partner program FAQ</h2>
-          <div className="space-y-4">
-            {FAQS.map((f) => (
-              <details key={f.q} className="bg-white border border-[#E5E3E0] rounded-2xl p-5 group">
-                <summary className="font-medium cursor-pointer list-none flex justify-between items-center">
-                  <span>{f.q}</span>
-                  <ChevronRight className="w-4 h-4 text-[#8A8785] group-open:rotate-90 transition-transform" />
-                </summary>
-                <p className="text-sm text-[#4A4745] mt-3">{f.a}</p>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 

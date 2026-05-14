@@ -37,7 +37,8 @@ export default function Footer() {
 
         {/* Sitemap grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 py-10 border-t border-white/10">
-          {pillars.map((pillar) => (
+          {/* NOTE: Only Fine Dining shown for launch. Restore full pillars.map below to show all. */}
+          {pillars.filter((p) => p.slug === 'fine-dining').map((pillar) => (
             <div key={pillar.slug}>
               <h4 className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 font-semibold">
                 {pillar.navLabel}

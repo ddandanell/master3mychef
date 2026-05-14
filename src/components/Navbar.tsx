@@ -6,6 +6,8 @@ import { PILLARS, PRIMARY_CTA } from '../data/siteArchitecture'
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF'
 
 /* ── Main nav items with their sub-pages ── */
+// NOTE: Additional nav items (Catering, Events, Service, Rent Staff) are
+// hidden for launch. Uncomment below to restore them.
 const NAV_ITEMS = [
   {
     label: 'Fine Dining',

@@ -2,9 +2,10 @@ import { useRef, useState, useEffect } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Star, Award, Shield, Users, Send, Check, ChevronDown } from 'lucide-react'
+import { Star, Award, Shield, Users, Send, Check } from 'lucide-react'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -48,7 +49,6 @@ const faqs = [
 const WA = '6282237565997'
 
 export default function PartnersPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
   const pageRef = useRef<HTMLDivElement>(null)
   const [partnerForm, setPartnerForm] = useState({ name: '', email: '', property: '', type: '', size: '', notes: '' })
 
@@ -209,19 +209,7 @@ export default function PartnersPage() {
             <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Questions</p>
             <h2 className="font-playfair font-bold text-[#1A1A1A] text-3xl md:text-4xl">Frequently Asked</h2>
           </div>
-          <div>
-            {faqs.map((faq, i) => (
-              <div key={i} className="border-b border-[#1A1A1A]/10">
-                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between py-5 text-left group">
-                  <span className="font-inter text-[#1A1A1A] text-sm pr-4 group-hover:text-[#2C5F7C] transition-colors">{faq.q}</span>
-                  <ChevronDown size={16} className={`text-[#8A8785] flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} />
-                </button>
-                <div className={`overflow-hidden transition-all ${openFaq === i ? 'max-h-[500px] pb-5' : 'max-h-0'}`}>
-                  <p className="font-inter text-[#4A4745] text-sm leading-relaxed">{faq.a}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={faqs} defaultOpenCount={4} />
         </div>
       </section>
 

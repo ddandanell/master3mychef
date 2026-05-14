@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
 import OrderPanel from '@/components/OrderPanel'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -144,7 +145,6 @@ const THE_FOUR = [
 
 export default function LunaPage() {
   const heroRef = useRef<HTMLDivElement>(null)
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [orderOpen, setOrderOpen] = useState(false)
   const [orderExperience, setOrderExperience] = useState<string | undefined>(undefined)
 
@@ -715,21 +715,11 @@ export default function LunaPage() {
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Frequently Asked</h2>
             <p className="text-white/50">Still have questions? Message Sofia on WhatsApp — she responds within the hour.</p>
           </div>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <div key={i} className="rounded-2xl border border-white/10 overflow-hidden">
-                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left">
-                  <span className="text-white font-medium pr-4" style={{ fontFamily: "'Playfair Display', serif" }}>{faq.question}</span>
-                  <ChevronRight className={`w-5 h-5 text-[#C5A028] flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-90' : ''}`} />
-                </button>
-                {openFaq === i && (
-                  <div className="px-6 pb-6">
-                    <p className="text-sm text-white/60 leading-relaxed">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+          <FAQAccordion
+            items={FAQS.map((f) => ({ q: f.question, a: f.answer }))}
+            defaultOpenCount={4}
+            dark
+          />
           <div className="text-center mt-12">
             <p className="text-white/50 text-sm mb-4">Peak season books 2+ weeks ahead. Message Sofia to check availability.</p>
             <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">

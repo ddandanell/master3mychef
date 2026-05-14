@@ -538,7 +538,7 @@ export default function CateringBBQPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/pkg-bbq.webp"
+            src="/generated/sol-bbq.webp"
             alt="Finished BBQ table with grilled food"
             className="w-full h-full object-cover"
             loading="lazy"

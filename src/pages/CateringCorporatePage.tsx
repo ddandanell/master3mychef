@@ -20,6 +20,7 @@ import { Breadcrumb } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
+import PressStrip from '@/components/shared/PressStrip'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -264,10 +265,12 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
+      <PressStrip />
+
       {/* FINAL CTA */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/corp-hero.webp" alt="Corporate event catering" className="w-full h-full object-cover" loading="lazy" />
+          <img src="/generated/corp-gala.webp" alt="Corporate event catering" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

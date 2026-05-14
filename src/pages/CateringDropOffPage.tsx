@@ -124,8 +124,8 @@ const BEST_FOR = [
 
 const UPGRADE_PATH = [
   { title: 'BBQ Catering', price: 'From IDR 450,000/person', href: '/catering/bbq-catering', image: '/generated/pkg-bbq.webp' },
-  { title: 'Buffet Catering', price: 'From IDR 550,000/person', href: '/catering/buffet-catering', image: '/generated/aura-buffet.webp' },
-  { title: 'Plated Dinner', price: 'From IDR 800,000/person', href: '/catering/plated-menus', image: '/generated/hub-catering.webp' },
+  { title: 'Buffet Catering', price: 'From IDR 550,000/person', href: '/catering/buffet', image: '/generated/aura-buffet.webp' },
+  { title: 'Plated Dinner', price: 'From IDR 800,000/person', href: '/catering/plated-catering', image: '/generated/hub-catering.webp' },
 ]
 
 const DROPOFF_GALLERY = [
@@ -171,7 +171,7 @@ export default function CateringDropOffPage() {
         title="Drop-Off Catering Bali | Food Delivered to Villas — myCHEF"
         description="Drop-off catering in Bali without staff in your villa. Food delivered ready to reheat or serve. Family dinners, grazing boxes. From IDR 350K/person."
         canonical={`${SITE}/catering/drop-off-catering`}
-        ogImage={`${SITE}/generated/pkg-dropoff.webp`}
+        ogImage={`${SITE}/generated/catering/dropoff-hero-v2.webp`}
         jsonLd={[
           localBusinessSchema,
           serviceSchema('Drop-Off Catering Bali', 'Prepared catering delivered to your villa without staff. Ready to reheat, plate, or serve.', `${SITE}/catering/drop-off-catering`, 'IDR'),

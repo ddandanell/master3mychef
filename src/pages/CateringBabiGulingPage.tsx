@@ -552,7 +552,7 @@ export default function CateringBabiGulingPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering/babi-guling.webp"
+            src="/generated/pkg-roast.webp"
             alt="Complete Babi Guling table with guests"
             className="w-full h-full object-cover"
             loading="lazy"

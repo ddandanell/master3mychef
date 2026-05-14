@@ -39,7 +39,7 @@ const FLOATING_PACKAGES = [
     minGuests: 'For 2',
   },
   {
-    image: '/generated/catering/floating-breakfast.webp',
+    image: '/generated/catering/floating-brunch.webp',
     title: 'Floating Brunch for 2',
     price: 'IDR 1,400,000/couple',
     priceNum: 1400000,
@@ -48,7 +48,7 @@ const FLOATING_PACKAGES = [
     minGuests: 'For 2',
   },
   {
-    image: '/generated/catering/floating-breakfast.webp',
+    image: '/generated/catering/floating-group.webp',
     title: 'Floating Group Brunch',
     price: 'IDR 750,000/person',
     priceNum: 750000,
@@ -245,7 +245,7 @@ export default function CateringFloatingBreakfastPage() {
             {TIME_OPTIONS.map((opt) => (
               <div key={opt.label} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 text-center hover:shadow-md transition-all">
                 <div className="w-12 h-12 rounded-full bg-[#6B8E5A]/10 flex items-center justify-center mx-auto mb-4">
-                  {opt.time === 'Sunrise' ? <Sunrise className="w-5 h-5 text-[#6B8E5A]" /> : opt.time === 'Sunset' ? <Sunset className="w-5 h-5 text-[#6B8E5A]" /> : <Sun className="w-5 h-5 text-[#6B8E5A]" />}
+                  <opt.icon className="w-5 h-5 text-[#6B8E5A]" />
                 </div>
                 <h4 className="font-medium text-lg mb-1">{opt.label}</h4>
                 <p className="text-[#6B8E5A] font-semibold text-sm mb-2">{opt.time}</p>

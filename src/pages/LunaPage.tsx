@@ -181,9 +181,9 @@ export default function LunaPage() {
             'https://mychef.id/fine-dining',
             'IDR'
           ),
-          offerSchema('Mediterranean Sea Experience', 2200000, 'https://mychef.id/fine-dining', 'Person'),
-          offerSchema('Wagyu Experience', 2400000, 'https://mychef.id/fine-dining', 'Person'),
-          offerSchema('Wine Pairing', 850000, 'https://mychef.id/fine-dining', 'Person'),
+          offerSchema('Mediterranean Sea Experience', 2200000, 'IDR', 'https://mychef.id/fine-dining'),
+          offerSchema('Wagyu Experience', 2400000, 'IDR', 'https://mychef.id/fine-dining'),
+          offerSchema('Wine Pairing', 850000, 'IDR', 'https://mychef.id/fine-dining'),
           faqPageSchema(FAQS),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Fine Dining', 'https://mychef.id/fine-dining'),

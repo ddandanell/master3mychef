@@ -30,7 +30,7 @@ const SITE = 'https://mychef.id'
 
 const PLATED_PACKAGES = [
   {
-    image: '/generated/pkg-italian.webp',
+    image: '/generated/catering/plated-menus.webp',
     title: '3-Course Plated',
     price: 'IDR 800,000/person',
     priceNum: 800000,
@@ -39,7 +39,7 @@ const PLATED_PACKAGES = [
     minGuests: 'Min. IDR 5M',
   },
   {
-    image: '/generated/pkg-italian.webp',
+    image: '/generated/menu-wagyu.webp',
     title: '4-Course Plated',
     price: 'IDR 1,000,000/person',
     priceNum: 1000000,
@@ -48,7 +48,7 @@ const PLATED_PACKAGES = [
     minGuests: 'Min. IDR 5M',
   },
   {
-    image: '/generated/pkg-italian.webp',
+    image: '/generated/luna-plating.webp',
     title: '5-Course Premium',
     price: 'IDR 1,300,000/person',
     priceNum: 1300000,
@@ -137,7 +137,7 @@ export default function CateringPlatedPage() {
         title="Plated Set Menu Catering Bali | Villa Dinners — myCHEF"
         description="Three- to five-course plated dinners at your Bali villa. English-speaking chef, service team, full setup. From IDR 800K/person. Min. IDR 5M."
         canonical={`${SITE}/catering/plated-catering`}
-        ogImage={`${SITE}/generated/pkg-italian.webp`}
+        ogImage={`${SITE}/generated/catering/plated-menus.webp`}
         jsonLd={[
           localBusinessSchema,
           serviceSchema('Plated Set Menu Catering Bali', 'Three-, four-, or five-course plated dinners served restaurant-style at your Bali villa.', `${SITE}/catering/plated-catering`, 'IDR'),
@@ -156,7 +156,7 @@ export default function CateringPlatedPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/pkg-italian.webp"
+            src="/generated/catering/plated-menus.webp"
             alt="Elegant plated dinner course served at a Bali villa"
             width={1920}
             height={1080}
@@ -491,7 +491,7 @@ export default function CateringPlatedPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/pkg-italian.webp"
+            src="/generated/luna-plating.webp"
             alt="Plated dinner course ready to serve"
             className="w-full h-full object-cover"
             loading="lazy"

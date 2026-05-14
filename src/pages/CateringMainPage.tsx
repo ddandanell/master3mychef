@@ -46,7 +46,7 @@ const CATERING_STYLES = [
     title: 'Buffet Catering',
     price: 'From IDR 550,000/person',
     description: 'Best for weddings, larger events, and 30+ guests. Full buffet line with service staff.',
-    href: '/catering/buffet-catering',
+    href: '/catering/buffet',
     accent: '#6B8E5A',
   },
   {
@@ -54,7 +54,7 @@ const CATERING_STYLES = [
     title: 'Plated Set Menus',
     price: 'From IDR 800,000/person',
     description: 'Best for seated dinners and premium private events. Full table service included.',
-    href: '/catering/plated-menus',
+    href: '/catering/plated-catering',
     accent: '#2C5F7C',
   },
   {
@@ -64,6 +64,22 @@ const CATERING_STYLES = [
     description: 'Best for villa guests who want food delivered without staff inside. Reheating instructions included.',
     href: '/catering/drop-off-catering',
     accent: '#8B5A2B',
+  },
+  {
+    image: '/generated/hub-villa.webp',
+    title: 'Villa Catering',
+    price: 'From IDR 450,000/person',
+    description: 'Best for villa lunches, dinners, and multi-day stays. Chef comes to your villa.',
+    href: '/catering/villa-catering',
+    accent: '#2C5F7C',
+  },
+  {
+    image: '/generated/corp-villa.webp',
+    title: 'Corporate Catering',
+    price: 'From IDR 450,000/person',
+    description: 'Best for offsites, board dinners, and conference catering. Tax invoiced.',
+    href: '/catering/corporate-catering',
+    accent: '#2C5F7C',
   },
   {
     image: '/generated/catering/babi-guling.webp',
@@ -79,6 +95,14 @@ const CATERING_STYLES = [
     price: 'From IDR 650,000',
     description: 'Best for parties, weddings, poolside events, and welcome snacks.',
     href: '/catering/grazing-tables',
+    accent: '#6B8E5A',
+  },
+  {
+    image: '/generated/city-ubud.webp',
+    title: 'Retreat Catering',
+    price: 'From IDR 400,000/person/day',
+    description: 'Best for yoga retreats, wellness centers, and multi-day group stays. Plant-forward menus.',
+    href: '/catering/retreat-catering',
     accent: '#6B8E5A',
   },
   {
@@ -474,7 +498,7 @@ export default function CateringMainPage() {
           </div>
           <div className="text-center">
             <Link
-              to="/catering/buffet-catering"
+              to="/catering/buffet"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
             >
               View buffet packages <ArrowRight className="w-4 h-4" />

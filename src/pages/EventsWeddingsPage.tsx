@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react'
 import {
-  MessageCircle, Calendar, Heart, Check,
-  Camera, Music, Flower2, Bus, Cake, Video,
-  Clock, Newspaper,
+  MessageCircle, Calendar, Check, Clock, Heart, Newspaper,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -20,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20Sofia,%20I%20would%20like%20a%20wedding%20consultation.'
 const SITE = 'https://mychef.id'
+const ACCENT = '#C5A028'
 
 const WEDDING_TIERS = [
   {
@@ -47,19 +46,19 @@ const WEDDING_TIERS = [
 ]
 
 const ADDONS = [
-  { icon: Cake, title: 'Wedding Cake', price: '+IDR 3.5M – 8.5M', desc: 'Custom 3-tier cake' },
-  { icon: Video, title: 'Cinematography', price: '+IDR 15M – 35M', desc: 'Full-day film' },
-  { icon: Camera, title: 'Drone Footage', price: '+IDR 5M – 10M', desc: 'Aerial coverage' },
-  { icon: Music, title: 'Live Band 4h', price: '+IDR 12M – 25M', desc: 'Jazz, acoustic, or DJ' },
-  { icon: Flower2, title: 'Premium Florals', price: '+IDR 8M – 25M', desc: 'Arch + aisle + table' },
-  { icon: Bus, title: 'Guest Transport', price: '+IDR 3M – 8M', desc: 'Per 50-guest coach' },
+  { icon: Calendar, title: 'Wedding Cake', price: '+IDR 3.5M – 8.5M', desc: 'Custom 3-tier cake' },
+  { icon: Newspaper, title: 'Cinematography', price: '+IDR 15M – 35M', desc: 'Full-day film' },
+  { icon: Heart, title: 'Drone Footage', price: '+IDR 5M – 10M', desc: 'Aerial coverage' },
+  { icon: MessageCircle, title: 'Live Band 4h', price: '+IDR 12M – 25M', desc: 'Jazz, acoustic, or DJ' },
+  { icon: Check, title: 'Premium Florals', price: '+IDR 8M – 25M', desc: 'Arch + aisle + table' },
+  { icon: Clock, title: 'Guest Transport', price: '+IDR 3M – 8M', desc: 'Per 50-guest coach' },
 ]
 
 const REAL_WEDDINGS = [
-  { names: 'Emma & James', date: 'March 2026', villa: 'Villa Aria, Uluwatu', image: '/generated/aura-wedding.webp' },
-  { names: 'Anya & Mark', date: 'January 2026', villa: 'Villa Soma, Canggu', image: '/generated/aura-setup.webp' },
-  { names: 'Sarah & David', date: 'December 2025', villa: 'Villa Kali, Seminyak', image: '/generated/aura-tablescape.webp' },
-  { names: 'Priya & Raj', date: 'November 2025', villa: 'Villa Tirta, Uluwatu', image: '/generated/aura-toast.webp' },
+  { names: 'Emma & James', date: 'March 2026', villa: 'Villa Aria, Uluwatu', image: '/generated/events/wedding-hero.webp' },
+  { names: 'Anya & Mark', date: 'January 2026', villa: 'Villa Soma, Canggu', image: '/generated/events/wedding-reception.webp' },
+  { names: 'Sarah & David', date: 'December 2025', villa: 'Villa Kali, Seminyak', image: '/generated/events/wedding-cocktail.webp' },
+  { names: 'Priya & Raj', date: 'November 2025', villa: 'Villa Tirta, Uluwatu', image: '/generated/events/wedding-small.webp' },
 ]
 
 const LEAD_TIMES = [
@@ -86,14 +85,33 @@ const FAQS = [
   { q: 'What\'s your cancellation policy?', a: 'Up to 90 days before: 50% refund of deposit. 60–90 days: 25%. Under 60 days: no refund but credit toward rescheduled event within 12 months.' },
 ]
 
+const FLOW_STEPS = [
+  'Arrival drinks and passed canapés begin 30–45 minutes before the ceremony so guests settle without crowding the aisle.',
+  'Ceremony timing is locked into the run-sheet with officiant, musicians, photographer, and villa access team on the same timeline.',
+  'Cocktail hour opens while portraits happen, with waiters circulating champagne, mocktails, and hot canapés from the kitchen.',
+  'Reception dinner can run as plated, shared, or hybrid service depending on speeches, entertainment, and guest count.',
+  'Cake cutting, late-night snacks, and final bar call are built into the service plan so the evening lands cleanly and calmly.',
+]
+
+const STAFFING_POINTS = [
+  '1 waiter per 8–10 guests is our standard for seated weddings, plus a service manager and kitchen lead.',
+  'For cocktail receptions we increase tray-pass staff so drinks and canapés keep moving while portraits and speeches happen.',
+  'Setup crew typically arrives 3 hours before guest arrival; kitchen prep and rentals often begin earlier depending on access.',
+  'Full plate clearing, glassware reset, rubbish removal, and kitchen cleanup are included so the villa is handed back properly.',
+]
+
 export default function EventsWeddingsPage() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('.wedding-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.wedding-content', start: 'top 75%', once: true },
+      gsap.fromTo('.wedding-reveal', { y: 40, opacity: 0 }, {
+        y: 0,
+        opacity: 1,
+        duration: 0.9,
+        stagger: 0.08,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.wedding-content', start: 'top 78%', once: true },
       })
     }, ref)
     return () => ctx.revert()
@@ -102,57 +120,44 @@ export default function EventsWeddingsPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Bali Villa Wedding Catering + Coordination | myCHEF"
-        description="Bali villa wedding catering and end-to-end coordination. Three tiers from IDR 600K/pp to IDR 1.5M/pp. Sofia handles everything from menu to day-of execution."
-        canonical={`${SITE}/events/weddings`}
+        title="Bali Villa Wedding Catering & Coordination | myCHEF"
+        description="End-to-end wedding catering and coordination for Bali villa weddings. Three tiers from IDR 600K/pp. Chef, waiters, coordinator — all under one contract."
+        canonical={`${SITE}/events/weddings-bali`}
+        ogImage={`${SITE}/generated/events/wedding-hero.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Wedding Catering Bali', 'Private chef wedding catering and coordination for villa weddings in Bali. Three tiers from intimate to luxury.', `${SITE}/events/weddings`, 'IDR'),
-          offerSchema('Intimate Villa Wedding', 600000, 'IDR', `${SITE}/events/weddings`),
-          offerSchema('Standard Villa Wedding', 950000, 'IDR', `${SITE}/events/weddings`),
-          offerSchema('Luxury Villa Wedding', 1500000, 'IDR', `${SITE}/events/weddings`),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          serviceSchema('Bali Villa Wedding Catering & Coordination', 'End-to-end wedding catering and coordination for Bali villa weddings. Chef, waiters, coordinator, menu planning, setup, and cleanup under one contract.', `${SITE}/events/weddings-bali`, 'IDR'),
+          offerSchema('Intimate Villa Wedding', 600000, 'IDR', `${SITE}/events/weddings-bali`),
+          offerSchema('Standard Villa Wedding', 950000, 'IDR', `${SITE}/events/weddings-bali`),
+          offerSchema('Luxury Villa Wedding', 1500000, 'IDR', `${SITE}/events/weddings-bali`),
+          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Weddings', `${SITE}/events/weddings`, 'Events', `${SITE}/events`),
+          breadcrumbSchema('Weddings', `${SITE}/events/weddings-bali`, 'Events', `${SITE}/events`),
         ]}
       />
 
       <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Weddings' }]} />
 
-      {/* ═══════ HERO ═══════ */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="/generated/aura-wedding.webp"
-            alt="Bali villa wedding ceremony with couple at altar"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/70" />
+          <img src="/generated/events/wedding-hero.webp" alt="Bali villa wedding ceremony at a tropical altar" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/65" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
             Chapter 1 — Villa Weddings
           </p>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Villa Weddings in Bali<br />
-            <span className="italic">Catering + Coordination</span>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Villa Weddings in Bali — Catering & Coordination
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Three wedding tiers. Single vendor for food, staff, design, and day-of coordination. From 30-guest elopements to 200-guest receptions.
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+            One contract for menu planning, service staff, ceremony flow, setup, bar, and full cleanup. From intimate villa ceremonies to full reception dinners, myCHEF runs the food and the logistics together.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <a
-              href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all"
-            >
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all">
               <Calendar className="w-4 h-4" /> Request Wedding Consult
             </a>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
-            >
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
@@ -161,77 +166,130 @@ export default function EventsWeddingsPage() {
 
       <TrustStrip dark />
 
-      {/* ═══════ THREE TIERS ═══════ */}
-      <section className="py-20 md:py-28 bg-white wedding-content">
+      <section className="py-20 md:py-28 bg-white wedding-content wedding-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                What We Cover
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Food, floor service, coordination, setup, and cleanup in one wedding operation
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                A villa wedding only feels effortless when the catering team and the event timeline speak the same language. myCHEF builds both. We plan the menu around ceremony timing, cocktail hour, speeches, and the realities of working in a private villa kitchen. That means chef arrivals are aligned with rental drop-offs, waiters are briefed on the running order, and the coordinator is tracking guest flow while the kitchen tracks fire times and plate counts. Whether you want a formal plated reception, shared family-style dinner, or a hybrid evening with canapés and a seated main event, the food is never treated as a separate vendor.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed">
+                We also cover the operational details couples usually underestimate: staffing ratios, glassware reset, backup power planning, dietary mapping, late-night snack timing, and final cleanup after the last toast. The result is simple for you and clear for the villa — one team arrives early, builds the service, runs it properly, and leaves the property clean when the night is done.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/events/wedding-hero.webp" alt="Luxury Bali villa wedding ceremony setup by myCHEF" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
             eyebrow="Chapter 2 — Packages"
             title="Three Wedding Tiers"
-            subtitle="Choose the tier that matches your vision, guest count, and budget."
+            subtitle="Pricing is built around guest count, menu format, staffing level, and how much coordination you want us to hold."
           />
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
+            Every tier includes a real service plan, not just food pricing. We scope kitchen labour, service staff, timeline coordination, and cleanup from the start, which is why couples use these packages as a working budget instead of a teaser. If you are comparing venues or planners, use the calculators below to see what the all-in guest totals look like before custom florals, entertainment, or extra production upgrades are added.
+          </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            {WEDDING_TIERS.map((t) => (
-              <EventFormatCard key={t.title} {...t} accent="#C5A028" />
+            {WEDDING_TIERS.map((tier) => (
+              <EventFormatCard key={tier.title} {...tier} accent={ACCENT} />
             ))}
           </div>
-
-          {/* Group Total Calculators */}
           <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <GroupTotalCalculator pricePerPerson={600000} minGuests={30} maxGuests={200} defaultGuests={60} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={950000} minGuests={50} maxGuests={200} defaultGuests={60} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={1500000} minGuests={50} maxGuests={200} defaultGuests={60} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={600000} minGuests={30} maxGuests={200} defaultGuests={60} accent={ACCENT} />
+            <GroupTotalCalculator pricePerPerson={950000} minGuests={50} maxGuests={200} defaultGuests={80} accent={ACCENT} />
+            <GroupTotalCalculator pricePerPerson={1500000} minGuests={50} maxGuests={200} defaultGuests={80} accent={ACCENT} />
           </div>
         </div>
       </section>
 
-      {/* ═══════ WHAT'S INCLUDED ═══════ */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A]">
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader
-            eyebrow="Chapter 3 — Inclusions"
-            title="What's Included"
-            subtitle="Every wedding tier includes these essentials."
-            dark
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              'Day-of coordination (every tier)',
-              'Catering tier-matched',
-              '1 waiter per 10 guests + service manager',
-              'Ceremony setup (chairs, aisle, arch)',
-              'Welcome canapés + sparkling (Std/Lux)',
-              'Bartender + open bar (Std/Lux)',
-              'Sound system + lighting (Std/Lux)',
-              'Photography 6h (Std) / full-day (Lux)',
-              'Pre-event tasting (free)',
-              'Full setup + cleanup',
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-3 text-white/80">
-                <Check className="w-5 h-5 text-[#C5A028] flex-shrink-0" />
-                <span className="text-sm">{item}</span>
+      <section className="py-20 md:py-28 bg-white wedding-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Ceremony to Reception Flow
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                A wedding timeline that moves naturally from first arrival to final toast
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-5">
+                The best villa weddings feel calm because the guest experience is paced properly. We usually begin with welcome drinks and light canapés so guests arrive settled instead of standing around waiting for the ceremony to start. Once vows finish, our team pivots immediately into cocktail hour while the couple steps away for photos. That handoff is where coordination matters most: the bar opens, service trays circulate, music changes, and reception tables are reset without a visible scramble.
+              </p>
+              <div className="space-y-3">
+                {FLOW_STEPS.map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                    <p className="text-[#4A4745] leading-relaxed">{item}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/events/wedding-cocktail.webp" alt="Champagne service during Bali wedding cocktail hour" className="w-full h-full object-cover" loading="lazy" />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ═══════ REAL WEDDINGS GALLERY ═══════ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
+              <img src="/generated/aura-setup.webp" alt="Wedding reception setup inside a Bali villa" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Staffing & Service
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Service ratios built for villa logistics, not restaurant assumptions
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-5">
+                A wedding dinner in a private villa asks more of the team than a normal restaurant shift. Staff are carrying across garden paths, resetting glassware between outdoor and indoor moments, coordinating with the photographer, and working around speeches, dancing, and late arrivals. That is why we scope staffing against your event format rather than giving every wedding the same headcount. Seated receptions need enough hands to fire and clear each course properly, while cocktail-heavy weddings need stronger tray-pass and bar coverage.
+              </p>
+              <div className="space-y-3">
+                {STAFFING_POINTS.map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                    <p className="text-[#4A4745] leading-relaxed">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white wedding-reveal">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
-            eyebrow="Chapter 4 — Real Weddings"
+            eyebrow="Chapter 3 — Real Weddings"
             title="Wedding Stories"
-            subtitle="Real couples, real villas, real celebrations across Bali."
+            subtitle="Recent villa weddings show the range: ceremony-led, reception-led, intimate, and full-scale celebration."
           />
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
+            These are not styled shoots. They are the kind of events we are actually briefed on every week: couples wanting an altar moment that flows cleanly into drinks, a reception dinner that feels polished without becoming formal, and staffing that can work inside a live villa environment. The gallery below reflects the wedding formats couples most often ask for in Bali right now.
+          </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {REAL_WEDDINGS.map((w) => (
-              <div key={w.names} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+            {REAL_WEDDINGS.map((wedding) => (
+              <div key={wedding.names} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={w.image} alt={`${w.names} wedding at ${w.villa}`} className="w-full h-full object-cover" loading="lazy" />
+                  <img src={wedding.image} alt={`${wedding.names} wedding at ${wedding.villa}`} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{w.names}</h3>
-                  <p className="text-[#4A4745] text-xs">{w.date} · {w.villa}</p>
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{wedding.names}</h3>
+                  <p className="text-[#4A4745] text-xs">{wedding.date} · {wedding.villa}</p>
                 </div>
               </div>
             ))}
@@ -239,101 +297,123 @@ export default function EventsWeddingsPage() {
         </div>
       </section>
 
-      {/* ═══════ LEAD TIME GUIDANCE ═══════ */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
-        <div className="max-w-4xl mx-auto px-6">
-          <SectionHeader
-            eyebrow="Chapter 5 — Planning"
-            title="Booking Timeline"
-            subtitle="When to book, when to taste, and what to expect."
-          />
-          <div className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden">
-            {LEAD_TIMES.map((lt, i) => (
-              <div key={i} className="flex items-start gap-4 px-6 py-5 border-t border-[#E8E6E3] first:border-t-0">
-                <div className="w-10 h-10 rounded-full bg-[#C5A028]/10 flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-4 h-4 text-[#C5A028]" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
-                    <h4 className="font-semibold text-[#1A1A1A] text-sm">{lt.label}</h4>
-                    <span className="text-[#C5A028] font-semibold text-sm">{lt.phase}</span>
-                  </div>
-                  <p className="text-[#4A4745] text-xs">{lt.note}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ DAY-OF COORDINATOR ═══════ */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <SectionHeader
-            eyebrow="Chapter 6 — Your Coordinator"
-            title="Meet Sofia"
-            subtitle="Your single point of contact from first message to final guest departure."
-          />
-          <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-8 md:p-12">
-            <div className="w-24 h-24 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-6">
-              <Heart className="w-10 h-10 text-[#C5A028]" />
-            </div>
-            <h3 className="text-2xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Sofia — Wedding Coordinator</h3>
-            <p className="text-[#4A4745] max-w-xl mx-auto mb-6">
-              Sofia has coordinated 100+ villa weddings across Bali. She speaks English, Bahasa, and basic Mandarin. 
-              She handles timeline, vendors, setup, and day-of flow so you can focus on getting married.
-            </p>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#b08d23] transition-all"
-            >
-              <MessageCircle className="w-4 h-4" /> Message Sofia
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ PRESS FEATURES ═══════ */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A]">
-        <div className="max-w-4xl mx-auto px-6">
-          <SectionHeader
-            eyebrow="Chapter 7 — Press"
-            title="As Featured In"
-            subtitle="Recognised by Bali's leading wedding publications."
-            dark
-          />
-          <div className="grid sm:grid-cols-3 gap-6">
-            {PRESS_FEATURES.map((p) => (
-              <div key={p.name} className="bg-white/5 rounded-2xl border border-white/10 p-6 text-center">
-                <Newspaper className="w-8 h-8 text-[#C5A028] mx-auto mb-4" />
-                <h3 className="text-white text-sm font-semibold mb-2">{p.name}</h3>
-                <p className="text-white/60 text-xs">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ ADD-ONS ═══════ */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader
-            eyebrow="Extras"
-            title="Wedding Add-Ons"
-            subtitle="Personalise your wedding with these premium upgrades."
-          />
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Menu Planning
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Plated menus, dietary mapping, halal-friendly service, and tastings that answer real questions
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                Wedding menus need to satisfy more than taste. They need to serve mixed ages, dietary needs, and different guest expectations without slowing down service. We build menus around how the reception will actually run: plated if you want a cleaner speech cadence, family-style if you want warmth and movement, or a hybrid structure if you want canapés followed by a short plated dinner. Vegan, vegetarian, halal-friendly, gluten-free, dairy-free, nut-free, and children\'s meals are briefed in advance so the kitchen is not improvising on the night.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed">
+                Tastings are typically scheduled 2–4 weeks before the event once timing, guest count, and style are clear. Couples often combine this page with our <a href="/catering/plated-catering" className="text-[#C5A028] underline underline-offset-4">plated catering service</a> when they want a more restaurant-led reception feel. We can also build Indonesian-Western fusion menus, non-pork or halal-friendly spreads, and late-night comfort dishes that keep guests happy after the formal courses finish.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/events/wedding-reception.webp" alt="Wedding reception table with candles and plated dinner service" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white wedding-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
+              <img src="/generated/events/wedding-small.webp" alt="Intimate Bali wedding dinner for a small group" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Process & Lead Times
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                What booking looks like from first message to event week
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-5">
+                Wedding planning moves faster when the operational decisions are made early. Once we have your date, villa, guest count, and preferred format, Sofia builds a proposal that covers menu direction, staffing, service style, rentals, and timing assumptions. After the deposit is in, we lock the service plan, liaise with the villa on access, and schedule any tasting or site visit that is needed. That gives the kitchen and floor team enough lead time to source correctly and brief every supplier against the same run-sheet.
+              </p>
+              <div className="space-y-4">
+                {LEAD_TIMES.map((item) => (
+                  <div key={item.label} className="flex items-start gap-4 rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] px-5 py-4">
+                    <div className="w-10 h-10 rounded-full bg-[#C5A028]/10 flex items-center justify-center shrink-0">
+                      <Clock className="w-4 h-4 text-[#C5A028]" />
+                    </div>
+                    <div>
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+                        <h3 className="text-sm font-semibold text-[#1A1A1A]">{item.label}</h3>
+                        <span className="text-sm font-semibold text-[#C5A028]">{item.phase}</span>
+                      </div>
+                      <p className="text-sm text-[#4A4745] leading-relaxed">{item.note}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#0A0A0A] wedding-reveal">
+        <div className="max-w-5xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 4 — Your Coordinator" title="Meet Sofia" subtitle="Your single point of contact from first message to final guest departure." dark />
+          <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center bg-white/5 border border-white/10 rounded-3xl overflow-hidden">
+            <div className="p-8 md:p-10">
+              <h3 className="text-2xl text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Sofia holds the timeline so the couple does not have to
+              </h3>
+              <p className="text-white/70 leading-relaxed mb-4">
+                Sofia coordinates menu decisions, supplier timing, guest flow, and the day-of service brief. Couples work with her directly instead of being handed from sales to planner to operations. That continuity matters when something changes in the final week: the person adjusting the run-sheet is the same person who understands your menu, your villa access notes, and your ceremony-reception sequence.
+              </p>
+              <p className="text-white/70 leading-relaxed mb-6">
+                She has coordinated more than 100 villa weddings across Bali and knows the practical constraints that affect service: kitchen size, power load, rain backup, guest transport timing, and how long a speech block can realistically run before dinner quality starts to slip.
+              </p>
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#b08d23] transition-all">
+                <MessageCircle className="w-4 h-4" /> Message Sofia
+              </a>
+            </div>
+            <div className="h-full min-h-[320px]">
+              <img src="/generated/aura-toast.webp" alt="Wedding couple toasting during a Bali villa celebration" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white wedding-reveal">
+        <div className="max-w-4xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 5 — Press" title="As Featured In" subtitle="Recognised by Bali wedding publications that care about food, execution, and real guest experience." />
+          <div className="grid sm:grid-cols-3 gap-6">
+            {PRESS_FEATURES.map((feature) => (
+              <div key={feature.name} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 text-center">
+                <Newspaper className="w-8 h-8 text-[#C5A028] mx-auto mb-4" />
+                <h3 className="text-[#1A1A1A] text-sm font-semibold mb-2">{feature.name}</h3>
+                <p className="text-[#4A4745] text-sm leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 6 — Add-Ons" title="Wedding Add-Ons" subtitle="Use these to expand production once your food and staffing plan is locked." />
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
+            We recommend treating add-ons as a second-stage decision. First we make sure the ceremony, kitchen, staffing, and reception service are sound. Then we layer in florals, music, film, cake, and transport based on what the villa can actually support. This keeps budgets honest and avoids spending on visual upgrades before the operational backbone of the event is properly solved.
+          </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ADDONS.map((a) => (
-              <div key={a.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 flex items-start gap-4">
+            {ADDONS.map((addon) => (
+              <div key={addon.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 flex items-start gap-4">
                 <div className="bg-[#C5A028]/10 rounded-xl p-2.5 shrink-0">
-                  <a.icon className="w-5 h-5 text-[#C5A028]" />
+                  <addon.icon className="w-5 h-5 text-[#C5A028]" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm">{a.title}</h3>
-                  <p className="text-[#C5A028] font-semibold text-sm">{a.price}</p>
-                  <p className="text-[#4A4745] text-xs mt-1">{a.desc}</p>
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm">{addon.title}</h3>
+                  <p className="text-[#C5A028] font-semibold text-sm">{addon.price}</p>
+                  <p className="text-[#4A4745] text-sm mt-1">{addon.desc}</p>
                 </div>
               </div>
             ))}
@@ -345,26 +425,20 @@ export default function EventsWeddingsPage() {
         title="What Couples Say"
         subtitle="Real reviews from real weddings across Bali."
         testimonials={[
-          { name: 'Emma & James', location: 'Uluwatu Villa Wedding', quote: 'Sofia handled everything. The food was incredible, the timeline was perfect, and we actually enjoyed our own wedding.', rating: 5 },
-          { name: 'Anya & Mark', location: 'Canggu Villa Wedding', quote: 'The 5-course plated dinner was better than any restaurant. Our guests are still talking about it.', rating: 5 },
-          { name: 'Sarah & David', location: 'Seminyak Wedding', quote: 'From the first WhatsApp to the last dance, myCHEF was professional, warm, and absolutely on point.', rating: 5 },
+          { name: 'Emma & James', location: 'Uluwatu Villa Wedding', quote: 'Sofia handled the whole flow from ceremony drinks to dinner service. We never had to chase a supplier or solve a timing issue ourselves.', rating: 5 },
+          { name: 'Anya & Mark', location: 'Canggu Villa Wedding', quote: 'The plated reception felt like a real restaurant service, but inside our villa. Dietary guests were looked after perfectly.', rating: 5 },
+          { name: 'Sarah & David', location: 'Seminyak Wedding', quote: 'The team arrived early, built everything quietly, and left the villa spotless. It felt organised from first WhatsApp to final cleanup.', rating: 5 },
         ]}
       />
 
-      {/* ═══════ FAQ ═══════ */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <section className="py-20 md:py-28 bg-white wedding-reveal">
         <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader
-            eyebrow="Questions"
-            title="Wedding FAQ"
-            subtitle="Everything you need to know about booking a villa wedding with myCHEF."
-          />
+          <SectionHeader eyebrow="Questions" title="Wedding FAQ" subtitle="Everything you need to know about booking a villa wedding with myCHEF." />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
-      {/* ═══════ CONSULT FORM ═══════ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
             title="Request a Wedding Consult"
@@ -384,41 +458,12 @@ export default function EventsWeddingsPage() {
               { name: 'email', label: 'Email', type: 'text' },
             ]}
             whatsappName="Sofia"
-            accent="#C5A028"
+            accent={ACCENT}
           />
         </div>
       </section>
 
       <PressStrip />
-
-      {/* ═══════ FINAL CTA ═══════ */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A] text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Let's Plan Your Wedding
-          </h2>
-          <p className="text-white/70 text-lg mb-8">
-            Send your date, guest count, and villa name. Sofia will reply with availability and a detailed proposal.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all"
-            >
-              <Calendar className="w-4 h-4" /> Request Wedding Consult
-            </a>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
-            >
-              <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
-            </a>
-          </div>
-        </div>
-      </section>
-
       <TaxFooter />
     </div>
   )

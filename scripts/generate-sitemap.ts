@@ -10,8 +10,8 @@ import { REDIRECT_MAP } from '../src/data/redirects'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const SITE = 'https://mychef.id'
 const today = new Date().toISOString().slice(0, 10)
-const ogImage = `${SITE}/og-image.jpg`
-const logo = `${SITE}/logo.png`
+const ogImage = `${SITE}/og-image.webp`
+const logo = `${SITE}/logo.webp`
 
 function imageXml(entry: SitemapEntry): string {
   if (entry.type === 'area' || entry.type === 'micro-area') {
@@ -19,7 +19,7 @@ function imageXml(entry: SitemapEntry): string {
     return `
     <image:image>
       <image:loc>${ogImage}</image:loc>
-      <image:title>Private chef in ${areaName}, Bali</image:title>
+      <image:title>Private chef in ${areaName}, Bali — myCHEF villa dining</image:title>
       <image:caption>myCHEF private chef preparing a villa dinner in ${areaName}, Bali</image:caption>
     </image:image>`
   }

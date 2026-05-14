@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import {
   MessageCircle, Calendar, Baby, Heart, Flower2,
-  Camera, Music, Sparkles, GlassWater,
+  Camera, Music, Sparkles, GlassWater, Check,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -19,6 +19,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20Sofia,%20I%20would%20like%20to%20book%20a%20baby%20shower.'
 const SITE = 'https://mychef.id'
+const ACCENT = '#2C5F7C'
 
 const FORMATS = [
   {
@@ -37,6 +38,14 @@ const FORMATS = [
     highlighted: true,
   },
 ]
+
+const GRAND_SHOWER = {
+  title: 'Grand Shower Celebration',
+  price: <AllInPrice price={350000} />,
+  guestRange: '50+ guests',
+  description: 'Lighter per-person pricing for larger shower receptions with grazing, pregnancy-safe buffet service, and coordinated styling.',
+  features: ['Scalable brunch buffet', 'Mocktail welcome drinks', 'Styled gift table', 'Service staff + cleanup', 'Family-friendly setup', 'Vendor coordination'],
+}
 
 const THEMES = ['Boho', 'Pastel', 'Botanical', 'Classic / Gender-Reveal']
 
@@ -61,10 +70,10 @@ const MOCKTAIL_BAR = [
 ]
 
 const REAL_BABY_SHOWERS = [
-  { title: 'Pastel Brunch', location: 'Seminyak Villa', image: '/generated/party-white.webp' },
-  { title: 'Botanical Garden', location: 'Ubud Villa', image: '/generated/aura-setup.webp' },
-  { title: 'Boho Afternoon', location: 'Canggu Villa', image: '/generated/aura-tablescape.webp' },
-  { title: 'Gender-Reveal Surprise', location: 'Sanur Villa', image: '/generated/party-birthday.webp' },
+  { title: 'Pastel Brunch Table', location: 'Seminyak Villa', image: '/generated/events/baby-shower-hero.webp' },
+  { title: 'Garden Mocktail Brunch', location: 'Canggu Villa', image: '/generated/party-brunch.webp' },
+  { title: 'Poolside Family Shower', location: 'Uluwatu Villa', image: '/generated/party-pool.webp' },
+  { title: 'Styled Tablescape Moment', location: 'Ubud Villa', image: '/generated/aura-tablescape.webp' },
 ]
 
 const ADDONS = [
@@ -87,14 +96,25 @@ const FAQS = [
   { q: 'Do you handle the surprise factor?', a: 'Yes — we coordinate discreetly with the host. Suggest the location of the brunch reveal.' },
 ]
 
+const SAFETY_CHECKS = [
+  'We avoid raw fish, unpasteurised cheeses, deli-style cold cuts, and anything that is safer replaced with fully cooked alternatives.',
+  'Proteins are served freshly cooked, pasteurised ingredients are prioritised, and buffet exposure times are carefully managed.',
+  'We can build mocktail menus and lighter brunch dishes that still feel celebratory without leaning on risky ingredients.',
+  'If the mother-to-be has aversions, cravings, gestational dietary needs, or doctor-advised restrictions, we brief around those specifically.',
+]
+
 export default function EventsBabyShowersPage() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('.baby-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.baby-content', start: 'top 75%', once: true },
+      gsap.fromTo('.baby-reveal', { y: 40, opacity: 0 }, {
+        y: 0,
+        opacity: 1,
+        duration: 0.9,
+        stagger: 0.08,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.baby-content', start: 'top 78%', once: true },
       })
     }, ref)
     return () => ctx.revert()
@@ -103,16 +123,16 @@ export default function EventsBabyShowersPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Baby Shower Catering Bali — Villa Brunches | myCHEF"
-        description="Baby shower brunches at your Bali villa. Pastel decor, grazing tables, mocktail bar, 10–30 guests from IDR 750K/pp. Photography optional."
+        title="Baby Shower Catering Bali — Grazing, Brunch & Villa Events | myCHEF"
+        description="Beautiful Bali villa baby showers with brunch catering, grazing tables, pregnancy-safe menus, mocktail bars, styling, and cleanup handled by one team."
         canonical={`${SITE}/events/baby-showers`}
-        ogImage={`${SITE}/generated/hero-baby-showers.jpg`}
+        ogImage={`${SITE}/generated/events/baby-shower-hero.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Baby Shower Catering Bali', 'Baby shower brunch catering at Bali villas. Pastel decor, grazing tables, mocktail bar, and photography.', `${SITE}/events/baby-showers`, 'IDR'),
+          serviceSchema('Baby Shower Catering Bali', 'Baby shower catering in Bali with brunch service, grazing tables, pregnancy-safe menus, mocktail bars, styling, and cleanup.', `${SITE}/events/baby-showers`, 'IDR'),
           offerSchema('Intimate Baby Shower Brunch', 750000, 'IDR', `${SITE}/events/baby-showers`),
           offerSchema('Larger Baby Shower', 1100000, 'IDR', `${SITE}/events/baby-showers`),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Baby Showers', `${SITE}/events/baby-showers`, 'Events', `${SITE}/events`),
         ]}
@@ -120,22 +140,23 @@ export default function EventsBabyShowersPage() {
 
       <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Baby Showers' }]} />
 
-      {/* HERO */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/hero-baby-showers.jpg" alt="Baby shower brunch at Bali villa" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/75" />
+          <img src="/generated/events/baby-shower-hero.webp" alt="Pastel baby shower brunch table in a Bali villa" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/68" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Chapter 1 — Baby Showers</p>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Baby Showers<br /><span className="italic">Bali Villas</span>
+          <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+            Chapter 1 — Baby Showers
+          </p>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Baby Shower Catering in Bali — Brunch, Grazing & Garden Parties
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Pastel decor, grazing brunch, mocktail bar, signage. We handle setup, photography optional. 10–30 guests, daytime, elegant.
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+            Beautiful, stress-free villa showers with brunch spreads, grazing tables, pregnancy-safe food, mocktail bars, styling, and full cleanup handled by one team.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all">
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <Calendar className="w-4 h-4" /> Book Baby Shower
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
@@ -147,97 +168,197 @@ export default function EventsBabyShowersPage() {
 
       <TrustStrip dark />
 
-      {/* FORMATS */}
-      <section className="py-20 md:py-28 bg-white baby-content">
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 2 — Formats" title="Two Baby Shower Formats" subtitle="Intimate gathering or larger celebration — both beautifully styled." />
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-            {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
-          </div>
-
-          {/* Group Total Calculators */}
-          <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <GroupTotalCalculator pricePerPerson={750000} minGuests={10} maxGuests={15} defaultGuests={12} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={1100000} minGuests={16} maxGuests={30} defaultGuests={20} accent="#C5A028" />
-          </div>
-        </div>
-      </section>
-
-      {/* THEME GALLERY */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <section className="py-20 md:py-28 bg-white baby-content baby-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 3 — Themes" title="Choose Your Style" subtitle="Four signature themes. Custom designs available on request." />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {THEME_CARDS.map((t) => (
-              <div key={t.name} className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
-                <div className={`aspect-[4/3] bg-gradient-to-br ${t.colour}`} />
-                <div className="p-5">
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{t.name}</h3>
-                  <p className="text-[#4A4745] text-xs">{t.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-wrap justify-center gap-3 mt-8">
-            {THEMES.map((t) => (
-              <span key={t} className="px-5 py-3 bg-white border border-[#E8E6E3] rounded-full text-sm font-medium text-[#1A1A1A]">{t}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* DECOR + SETUP DETAIL */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 4 — Decor" title="What's Included" subtitle="A visual breakdown of the decor and setup in every baby shower package." />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {DECOR_DETAILS.map((d) => (
-              <div key={d.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 text-center hover:shadow-md transition-all">
-                <div className="w-12 h-12 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-4">
-                  <d.icon className="w-5 h-5 text-[#C5A028]" />
-                </div>
-                <h4 className="font-medium text-[#1A1A1A] mb-2">{d.title}</h4>
-                <p className="text-sm text-[#4A4745]">{d.desc}</p>
-              </div>
-            ))}
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Stress-Free by Design
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                We handle the food, the look, and the practical details so the host can stay present
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                Baby showers are usually at their best when they feel soft and well-paced, not over-programmed. That means the food should be easy to enjoy, the room should already feel beautiful when guests arrive, and the mother-to-be should never be worrying about whether the mocktails are ready or the grazing table is still full. myCHEF handles the brunch service, pregnancy-safe menu planning, styling coordination, and cleanup as one operation so the whole event feels gentle instead of busy.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed">
+                We can build a small brunch for close family and friends, a garden-style shower with more guests, or a larger reception with grazing tables, mocktails, and gift-table styling. The point is always the same: keep the atmosphere warm, photogenic, and easy for everyone attending — especially the guest of honour.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/events/baby-shower-hero.webp" alt="Styled baby shower table setup in Bali" className="w-full h-full object-cover" loading="lazy" />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* MOCKTAIL BAR */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
-        <div className="max-w-4xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 5 — Mocktails" title="Mocktail Bar Option" subtitle="Beautiful, alcohol-free drinks crafted for the mother-to-be and all guests." />
-          <div className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden">
-            {MOCKTAIL_BAR.map((m) => (
-              <div key={m.name} className="flex items-start gap-4 px-6 py-5 border-t border-[#E8E6E3] first:border-t-0">
-                <div className="w-10 h-10 rounded-full bg-[#C5A028]/10 flex items-center justify-center flex-shrink-0">
-                  <GlassWater className="w-4 h-4 text-[#C5A028]" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-[#1A1A1A] text-sm mb-1">{m.name}</h4>
-                  <p className="text-[#4A4745] text-xs">{m.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-[#4A4745] text-xs mt-4">Alcohol-free by default. Separate alcohol bar for non-expecting guests available at +IDR 350K/pp.</p>
-        </div>
-      </section>
-
-      {/* REAL BABY SHOWER GALLERY */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] baby-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 6 — Real Showers" title="Celebration Gallery" subtitle="Real baby showers, real villas, real joy." />
+          <SectionHeader eyebrow="Chapter 2 — Formats" title="Baby Shower Formats" subtitle="Smaller brunches, styled mid-size showers, and larger family gatherings — each with the right food and staffing level." />
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
+            Shower formats are mostly about scale and service style. Intimate gatherings can feel more plated and personal. Mid-size showers benefit from a stronger grazing and mocktail setup. Larger celebrations need lighter per-person pricing, flexible food presentation, and an approach that can absorb family guests, gift moments, and photos without the room feeling crowded.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {[...FORMATS, GRAND_SHOWER].map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}
+          </div>
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            <GroupTotalCalculator pricePerPerson={750000} minGuests={10} maxGuests={15} defaultGuests={12} accent={ACCENT} />
+            <GroupTotalCalculator pricePerPerson={1100000} minGuests={16} maxGuests={30} defaultGuests={20} accent={ACCENT} />
+            <GroupTotalCalculator pricePerPerson={350000} minGuests={50} maxGuests={100} defaultGuests={60} accent={ACCENT} />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white baby-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Grazing Table Showcase
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                The grazing table becomes the centrepiece when it is built to look generous and stay tidy
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                Grazing tables work beautifully for baby showers because they are social, photogenic, and easy for guests to enjoy throughout the event. We design them with balance in mind: artisan cheeses that are pregnancy-safe, cured options when appropriate for non-pregnant guests, seasonal fruit, crackers, dips, fresh breads, pastries, and edible flowers that bring colour without turning the table into decoration only. The layout has to be full enough to feel celebratory but practical enough that guests can actually serve themselves without collapsing the display.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed">
+                For larger showers, the grazing table often becomes the visual anchor while hot items, desserts, and mocktails sit on supporting stations around it. That keeps the main table beautiful while still letting the room function properly for photos, games, and conversation.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/events/baby-shower-hero.webp" alt="Elegant grazing table for a Bali baby shower" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] baby-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
+              <img src="/generated/party-brunch.webp" alt="Pregnancy-safe brunch dishes served for a baby shower" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Pregnancy-Safe Menu
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Pregnancy-safe by default, but still built to feel celebratory
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-5">
+                Shower food should never leave the host second-guessing what is safe to eat. We build the menu from a pregnancy-safe starting point and then adapt for the rest of the guest list around that. That usually means freshly cooked proteins, pasteurised dairy, lighter brunch dishes, fresh fruit, warm pastries, safe dessert options, and an alcohol-free drinks programme that still feels like a treat rather than a compromise.
+              </p>
+              <div className="space-y-3">
+                {SAFETY_CHECKS.map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
+                    <p className="text-[#4A4745] leading-relaxed">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white baby-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Mocktails & Drinks Bar
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                A drinks bar that feels festive without centring alcohol
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-6">
+                Mocktails matter more than people expect at baby showers. They set the tone immediately and help the mother-to-be feel included in the celebratory part of the day. We design them with fresh fruit, herbs, sparkling elements, and clean presentation so they look just as good in hand as any cocktail bar would. For mixed guest groups, we can also keep a separate alcohol service away from the main mocktail station.
+              </p>
+              <div className="space-y-4">
+                {MOCKTAIL_BAR.map((drink) => (
+                  <div key={drink.name} className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-5 flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#2C5F7C]/10 flex items-center justify-center shrink-0">
+                      <GlassWater className="w-4 h-4 text-[#2C5F7C]" />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-[#1A1A1A] mb-1">{drink.name}</h3>
+                      <p className="text-sm text-[#4A4745] leading-relaxed">{drink.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
+              <img src="/generated/party-brunch.webp" alt="Mocktail and brunch styling for a Bali baby shower" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] baby-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
+              <img src="/generated/aura-tablescape.webp" alt="Styled baby shower tablescape and decor setup" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Styling & Setup
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Decor, flowers, balloons, and the small details that make the room feel complete
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-6">
+                Styling for a baby shower should feel cohesive rather than crowded. We usually focus the visual energy on the dining table, welcome sign, backdrop area, and one or two colour moments that photograph beautifully. That approach keeps the villa elegant, leaves room for guests to move, and gives the host a room that already feels "done" before anyone arrives. Themes can be soft and romantic, botanical, boho, or more playful for gender-reveal-style events.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                {THEME_CARDS.map((theme) => (
+                  <div key={theme.name} className="rounded-2xl border border-[#E8E6E3] bg-white overflow-hidden">
+                    <div className={`h-16 bg-gradient-to-br ${theme.colour}`} />
+                    <div className="p-4">
+                      <h3 className="text-sm font-semibold text-[#1A1A1A] mb-1">{theme.name}</h3>
+                      <p className="text-sm text-[#4A4745] leading-relaxed">{theme.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                {DECOR_DETAILS.map((detail) => (
+                  <div key={detail.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-4 flex items-start gap-3">
+                    <div className="rounded-xl bg-[#2C5F7C]/10 p-2.5 shrink-0"><detail.icon className="w-4 h-4 text-[#2C5F7C]" /></div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-[#1A1A1A] mb-1">{detail.title}</h4>
+                      <p className="text-sm text-[#4A4745] leading-relaxed">{detail.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {THEMES.map((theme) => (
+                  <span key={theme} className="px-4 py-2 rounded-full border border-[#E8E6E3] bg-white text-sm text-[#1A1A1A]">{theme}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white baby-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 3 — Real Baby Showers" title="Celebration Gallery" subtitle="Pastel brunches, family showers, and villa setups that feel soft but fully organised." />
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
+            These images show the range most hosts are looking for: one strong styled table, easy daytime food service, polished mocktail presentation, and enough softness in the room that the shower still feels calm. That combination is usually the sweet spot for Bali villas.
+          </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {REAL_BABY_SHOWERS.map((b) => (
-              <div key={b.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+            {REAL_BABY_SHOWERS.map((shower) => (
+              <div key={shower.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={b.image} alt={b.title} className="w-full h-full object-cover" loading="lazy" />
+                  <img src={shower.image} alt={shower.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{b.title}</h3>
-                  <p className="text-[#4A4745] text-xs">{b.location}</p>
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{shower.title}</h3>
+                  <p className="text-[#4A4745] text-xs">{shower.location}</p>
                 </div>
               </div>
             ))}
@@ -245,76 +366,80 @@ export default function EventsBabyShowersPage() {
         </div>
       </section>
 
-      {/* ADD-ONS */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] baby-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Extras" title="Baby Shower Add-Ons" subtitle="Personalise your celebration with these beautiful upgrades." />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ADDONS.map((a) => (
-              <div key={a.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 flex items-start gap-4">
-                <div className="bg-[#C5A028]/10 rounded-xl p-2.5 shrink-0"><a.icon className="w-5 h-5 text-[#C5A028]" /></div>
-                <div>
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm">{a.title}</h3>
-                  <p className="text-[#C5A028] font-semibold text-sm">{a.price}</p>
-                </div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Add-Ons
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Add the extras that matter most to the memory of the day
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-6">
+                For most showers, add-ons are about memory and atmosphere rather than scale. A longer photographer booking, premium florals, or a maternity shoot can make sense because they preserve the day. Live music only works if the host wants a stronger social mood. We help choose extras that support the shower rather than pulling attention away from it.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {ADDONS.map((addon) => (
+                  <div key={addon.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-5 flex items-start gap-4">
+                    <div className="rounded-xl bg-[#2C5F7C]/10 p-2.5 shrink-0"><addon.icon className="w-5 h-5 text-[#2C5F7C]" /></div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-[#1A1A1A]">{addon.title}</h3>
+                      <p className="text-sm font-semibold text-[#2C5F7C]">{addon.price}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
+              <img src="/generated/events/baby-shower-hero.webp" alt="Premium baby shower styling and flowers in a Bali villa" className="w-full h-full object-cover" loading="lazy" />
+            </div>
           </div>
         </div>
       </section>
 
-      <TestimonialBlock title="What New Mothers Say" testimonials={[
-        { name: 'Emily R.', location: 'Seminyak Baby Shower', quote: 'The pastel decor was stunning. Every detail was perfect — from the grazing table to the mocktail bar. My guests were amazed.', rating: 5 },
-        { name: 'Sophie & Friends', location: 'Canggu Baby Shower', quote: 'Sofia coordinated everything discreetly for my surprise shower. I walked in and cried. Absolutely beautiful.', rating: 5 },
-        { name: 'Anna K.', location: 'Ubud Baby Shower', quote: 'The botanical theme matched my villa perfectly. The photographer captured every moment. Highly recommend.', rating: 5 },
-      ]} />
+      <TestimonialBlock
+        title="What New Mothers Say"
+        subtitle="Beautiful in photos, easy to host, safe to enjoy."
+        testimonials={[
+          { name: 'Emily R.', location: 'Seminyak Baby Shower', quote: 'The room looked beautiful the second I walked in and the team had clearly thought through the food so I never had to second-guess what I could eat.', rating: 5 },
+          { name: 'Sophie & Friends', location: 'Canggu Baby Shower', quote: 'Sofia coordinated the whole surprise quietly and the mocktail bar made the day feel genuinely celebratory rather than limiting.', rating: 5 },
+          { name: 'Anna K.', location: 'Ubud Baby Shower', quote: 'The botanical styling, grazing table, and cleanup were all handled so professionally. It felt light and joyful, not stressful.', rating: 5 },
+        ]}
+      />
 
-      {/* FAQ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-white baby-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Baby Shower FAQ" subtitle="Everything you need to know about baby shower brunches with myCHEF." />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
-      {/* FORM */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] baby-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
             title="Book Your Baby Shower"
-            subtitle="We are so excited for you. Tell us about your shower and we will make it beautiful."
-            packageOptions={['Intimate Baby Shower', 'Larger Baby Shower']}
+            subtitle="Tell us your guest count, preferred style, and any pregnancy-safe menu notes. We will shape the shower around those details."
+            packageOptions={['Intimate Baby Shower Brunch', 'Larger Baby Shower', 'Grand Shower Celebration']}
             fields={[
               { name: 'format', label: 'Format', type: 'select', required: true },
               { name: 'date', label: 'Date', type: 'date', required: true },
               { name: 'guests', label: 'Guests', type: 'number', placeholder: 'e.g. 18', required: true },
               { name: 'area', label: 'Villa Location', type: 'text', required: true },
               { name: 'theme', label: 'Theme', type: 'text', placeholder: 'e.g. Pastel, Boho, Gender-Reveal' },
-              { name: 'dietary', label: 'Dietary Needs', type: 'textarea', placeholder: 'Mother-to-be preferences, allergies...' },
+              { name: 'food', label: 'Food Style', type: 'textarea', placeholder: 'Brunch, grazing, mocktail bar, pregnancy-safe notes...' },
+              { name: 'notes', label: 'Guest of Honour Notes', type: 'textarea', placeholder: 'Any cravings, aversions, special surprises, or comfort needs?' },
               { name: 'name', label: 'Your Name', type: 'text', required: true },
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
               { name: 'email', label: 'Email', type: 'text' },
             ]}
             whatsappName="Sofia"
-            accent="#C5A028"
+            accent={ACCENT}
           />
         </div>
       </section>
 
       <PressStrip />
-
-      {/* CTA */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A] text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Ready to Celebrate?</h2>
-          <p className="text-white/70 text-lg mb-8">Send your date, guest count, and theme. We will create a beautiful baby shower brunch.</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all"><Calendar className="w-4 h-4" /> Book Baby Shower</a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"><MessageCircle className="w-4 h-4" /> WhatsApp Sofia</a>
-          </div>
-        </div>
-      </section>
-
       <TaxFooter />
     </div>
   )

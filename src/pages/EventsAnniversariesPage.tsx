@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import {
-  MessageCircle, Calendar, Wine, Camera, Music,
+  MessageCircle, Calendar, Check, Wine, Camera, Music,
   CandlestickChart, Flower2, Signpost,
 } from 'lucide-react'
 import gsap from 'gsap'
@@ -19,6 +19,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20Sofia,%20I%20would%20like%20to%20plan%20an%20anniversary%20dinner.'
 const SITE = 'https://mychef.id'
+const ACCENT = '#2C5F7C'
 
 const FORMATS = [
   {
@@ -53,10 +54,10 @@ const HOTEL_COMPARISON = [
 ]
 
 const REAL_ANNIVERSARIES = [
-  { names: 'Anna & Michael', years: '10 Years', location: 'Seminyak Villa', image: '/generated/aura-toast.webp' },
-  { names: 'Sarah & Tom', years: '25 Years', location: 'Uluwatu Villa', image: '/generated/aura-wedding.webp' },
+  { names: 'Anna & Michael', years: '10 Years', location: 'Seminyak Villa', image: '/generated/events/anniversary-romantic.webp' },
+  { names: 'Sarah & Tom', years: '25 Years', location: 'Uluwatu Villa', image: '/generated/events/anniversary-chef.webp' },
   { names: 'Jenny & David', years: '5 Years', location: 'Canggu Villa', image: '/generated/aura-tablescape.webp' },
-  { names: 'Maria & Carlos', years: 'Vow Renewal', location: 'Ubud Villa', image: '/generated/aura-setup.webp' },
+  { names: 'Maria & Carlos', years: 'Vow Renewal', location: 'Ubud Villa', image: '/generated/aura-toast.webp' },
 ]
 
 const SETUP_DETAILS = [
@@ -85,14 +86,26 @@ const FAQS = [
   { q: 'Can we add a renewal of vows?', a: 'Yes — renewal of vows package combines officiant + ceremony + dinner for 10–30 guests at IDR 2.5M/pp.' },
 ]
 
+const SURPRISE_STEPS = [
+  'We brief one contact person only, so timings, entrance routes, and the reveal moment stay discreet.',
+  'We can stage the table while your partner is out for a treatment, beach walk, surf session, or transfer.',
+  'Chef arrival, candles, flowers, champagne chill, and photography are timed backwards from the reveal moment.',
+  'If there is a speech, vow reading, or ring presentation, the service pace is slowed so the moment does not feel rushed.',
+  'After the surprise lands, the evening flows straight into canapés or the first course without an awkward reset.',
+]
+
 export default function EventsAnniversariesPage() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('.anniversary-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.anniversary-content', start: 'top 75%', once: true },
+      gsap.fromTo('.anniversary-reveal', { y: 40, opacity: 0 }, {
+        y: 0,
+        opacity: 1,
+        duration: 0.9,
+        stagger: 0.08,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.anniversary-content', start: 'top 78%', once: true },
       })
     }, ref)
     return () => ctx.revert()
@@ -101,17 +114,17 @@ export default function EventsAnniversariesPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Anniversary Dinners Bali — Romantic Villa Setups | myCHEF"
-        description="Anniversary dinners at your Bali villa. Couple to small-group celebrations. From IDR 1.5M/person. Menu, candles, signage, photographer."
+        title="Anniversary Dinners in Bali — Private Chef & Villa Catering | myCHEF"
+        description="Bespoke anniversary dinners and celebrations in Bali. Private chef, plated menus, villa decoration, and wine pairings. IDR 650K–2.5M/pp."
         canonical={`${SITE}/events/anniversaries`}
-        ogImage={`${SITE}/generated/hero-anniversaries.jpg`}
+        ogImage={`${SITE}/generated/events/anniversary-romantic.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Anniversary Dinner Catering Bali', 'Romantic anniversary dinner catering at Bali villas. Couple dinners, small-group celebrations, and vow renewals.', `${SITE}/events/anniversaries`, 'IDR'),
+          serviceSchema('Anniversary Dinners in Bali', 'Bespoke anniversary dinners and celebrations in Bali with private chef service, plated menus, villa decoration, and wine pairings.', `${SITE}/events/anniversaries`, 'IDR'),
           offerSchema('Couple Intimate Dinner', 1500000, 'IDR', `${SITE}/events/anniversaries`),
           offerSchema('Small-Group Anniversary', 1200000, 'IDR', `${SITE}/events/anniversaries`),
           offerSchema('Renewal of Vows + Dinner', 2500000, 'IDR', `${SITE}/events/anniversaries`),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Anniversaries', `${SITE}/events/anniversaries`, 'Events', `${SITE}/events`),
         ]}
@@ -119,22 +132,23 @@ export default function EventsAnniversariesPage() {
 
       <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Anniversaries' }]} />
 
-      {/* HERO */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/hero-anniversaries.jpg" alt="Romantic anniversary dinner at Bali villa" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/70" />
+          <img src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dinner setup by a Bali villa pool" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/68" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Chapter 1 — Anniversary Dinners</p>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Anniversary Dinners<br /><span className="italic">Bali Villas</span>
+          <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+            Chapter 1 — Anniversary Dinners
+          </p>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Anniversary Celebrations in Bali — Private Chef Dinners
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Mark the day at your villa, not at someone else's hotel. Personalised menu, candle setup, photographer optional. Independent of any hotel.
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+            Bespoke villa anniversaries with chef-led menus, table service, wine pairing add-ons, and discreet surprise coordination — from a romantic dinner for two to a renewal of vows with family and friends.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all">
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <Calendar className="w-4 h-4" /> Book Anniversary Dinner
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
@@ -146,36 +160,188 @@ export default function EventsAnniversariesPage() {
 
       <TrustStrip dark />
 
-      {/* FORMATS */}
-      <section className="py-20 md:py-28 bg-white anniversary-content">
+      <section className="py-20 md:py-28 bg-white anniversary-content anniversary-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 2 — Formats" title="Three Anniversary Options" subtitle="From an intimate dinner for two to a vow renewal with family and friends." />
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
-          </div>
-
-          {/* Group Total Calculators */}
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <GroupTotalCalculator pricePerPerson={1500000} minGuests={2} maxGuests={2} defaultGuests={2} label=" couple" accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={1200000} minGuests={4} maxGuests={16} defaultGuests={8} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={30} defaultGuests={15} accent="#C5A028" />
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Bespoke by Design
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                A private anniversary should feel personal, not like a hotel package dropped into your villa
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                Anniversary celebrations work best when they are built around the couple instead of a preset restaurant format. Some guests want a quiet chef dinner by the pool with candles and a bottle of champagne. Others want a more layered night: canapés, a styled table, a 4-course plated dinner, a photographer for the toast, and a surprise dessert reveal. We plan for both. myCHEF combines private chef service, villa styling, floor staff, and discreet coordination so the evening feels deliberate from the first reveal to the final course.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed">
+                We can also scale the format if your anniversary includes family or becomes a renewal-of-vows occasion. That means handling service for 2 guests with the same care we would give 20 or 30 guests, while still keeping the intimacy intact. The result is a night that feels deeply personal but professionally run behind the scenes.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dining setup in a Bali villa" className="w-full h-full object-cover" loading="lazy" />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* REAL ANNIVERSARY GALLERY */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] anniversary-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 3 — Real Anniversaries" title="Couple Stories" subtitle="Real celebrations, real villas, real love stories." />
+          <SectionHeader eyebrow="Chapter 2 — Formats" title="Three Anniversary Formats" subtitle="Private, intimate, or ceremonial — each format is built around pacing, staffing, and how visible you want the celebration to feel." />
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
+            These packages are structured around the two things anniversary clients care about most: privacy and control. The private dinner format keeps the evening tight and romantic. The small-group option adds family and friends without turning the night into a big event. The renewal format introduces ceremony timing, officiant coordination, and a more formal reception service so the celebration still feels smooth when more people are involved.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {FORMATS.map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}
+          </div>
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            <GroupTotalCalculator pricePerPerson={1500000} minGuests={2} maxGuests={4} defaultGuests={2} label=" guests" accent={ACCENT} />
+            <GroupTotalCalculator pricePerPerson={1200000} minGuests={4} maxGuests={16} defaultGuests={8} accent={ACCENT} />
+            <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={30} defaultGuests={16} accent={ACCENT} />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white anniversary-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Private Dinner Experience
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                What an in-villa anniversary dinner actually looks like on the night
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                For most couples, the experience starts before the first plate. The chef arrives to prep quietly in the villa kitchen, the floor team lays candles and glassware, and your table is styled so the reveal lands the moment you step into the space. We often begin with a welcome drink and a small canapé course, then move into a 5- or 6-course dinner paced around conversation rather than restaurant turnover. That slower rhythm is the real advantage of dining in your villa.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed">
+                Service is attentive but unobtrusive. The chef stays close to the kitchen, courses are fired to order, and the waiter manages wine, plate clearing, and reset without making the evening feel formal. If there is a photographer or toast moment, we pace around it. If there is a surprise, we build the reveal into the service plan so the timing feels natural rather than staged.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/events/anniversary-chef.webp" alt="Private chef plating an anniversary dinner in a Bali villa" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] anniversary-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
+              <img src="/generated/luna-plating.webp" alt="Fine plated anniversary menu presentation by myCHEF" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Menu & Wine
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Gourmet menus that feel fine-dining, but stay fully personal to the villa setting
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                Anniversary menus usually sit between restaurant refinement and private-home comfort. We can build Western tasting menus, lighter Mediterranean or Indonesian fusion courses, or a more indulgent sequence around seafood and premium beef. Wine pairing is offered as an add-on, and we will happily brief the evening around champagne, a favourite label, or a no-alcohol pairing if that suits the couple better. When clients want a more restaurant-led feeling, we often pair this page with our <a href="/catering/plated-catering" className="text-[#2C5F7C] underline underline-offset-4">plated catering service</a> as a reference point.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4 mt-6">
+                {HOTEL_COMPARISON.map((item) => (
+                  <div key={item.name} className={`rounded-2xl border p-4 ${item.name === 'myCHEF' ? 'bg-[#2C5F7C]/5 border-[#2C5F7C]/20' : 'bg-white border-[#E8E6E3]'}`}>
+                    <h3 className={`text-sm font-semibold mb-1 ${item.name === 'myCHEF' ? 'text-[#2C5F7C]' : 'text-[#1A1A1A]'}`}>{item.name}</h3>
+                    <p className="text-sm font-semibold text-[#1A1A1A] mb-1">{item.price}</p>
+                    <p className="text-sm text-[#4A4745] leading-relaxed">{item.note}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white anniversary-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Surprise Planning
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                We choreograph surprise setups quietly so the moment still feels natural
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-5">
+                Surprise anniversaries only work when the operational side stays invisible. That means tight communication, limited points of contact, and a clear understanding of where your partner will be, when the villa can be reset, and how long the reveal should breathe before the first course starts. We are used to coordinating these moments discreetly and building the rest of the service around them, so the evening never feels like a production exercise.
+              </p>
+              <div className="space-y-3">
+                {SURPRISE_STEPS.map((step) => (
+                  <div key={step} className="flex items-start gap-3">
+                    <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
+                    <p className="text-[#4A4745] leading-relaxed">{step}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/aura-toast.webp" alt="Anniversary toast moment at a Bali villa dinner" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] anniversary-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Villa Decoration & Enhancements
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                The styling details that turn dinner into a true anniversary occasion
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-6">
+                Decoration is usually most effective when it feels concentrated and intentional. Rather than filling the whole villa, we style the arrival path, the dining area, and the one or two visual moments that matter most in photos. Candles, petals, personalised signage, and a well-dressed table often do more for the atmosphere than excessive decor. Once those foundations are set, we can layer champagne, cake, music, or extended photography depending on how celebratory you want the evening to feel.
+              </p>
+              <div className="grid sm:grid-cols-3 gap-4 mb-6">
+                {SETUP_DETAILS.map((detail) => (
+                  <div key={detail.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-5 text-center">
+                    <div className="w-12 h-12 rounded-full bg-[#2C5F7C]/10 flex items-center justify-center mx-auto mb-4">
+                      <detail.icon className="w-5 h-5 text-[#2C5F7C]" />
+                    </div>
+                    <h3 className="text-sm font-semibold text-[#1A1A1A] mb-2">{detail.title}</h3>
+                    <p className="text-sm text-[#4A4745] leading-relaxed">{detail.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {ADDONS.map((addon) => (
+                  <div key={`${addon.title}-${addon.price}`} className="rounded-2xl border border-[#E8E6E3] bg-white p-4 flex items-start gap-3">
+                    <div className="rounded-xl bg-[#2C5F7C]/10 p-2.5 shrink-0"><addon.icon className="w-4 h-4 text-[#2C5F7C]" /></div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-[#1A1A1A]">{addon.title}</h4>
+                      <p className="text-sm font-semibold text-[#2C5F7C]">{addon.price}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
+              <img src="/generated/aura-tablescape.webp" alt="Styled anniversary tablescape in a Bali villa" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white anniversary-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 3 — Real Anniversaries" title="Celebration Gallery" subtitle="Real couple dinners, styled tables, and vow-renewal moments across Bali villas." />
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
+            The images below show the different tones anniversary clients usually choose: deeply private dinners, chef-led table service, more visual styling, and bigger celebration moments when friends or family join. All four formats are handled by the same core team — chef, floor staff, and coordinator — so the level of execution stays consistent even as the mood changes.
+          </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {REAL_ANNIVERSARIES.map((a) => (
-              <div key={a.names} className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+            {REAL_ANNIVERSARIES.map((anniversary) => (
+              <div key={anniversary.names} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={a.image} alt={`${a.names} anniversary at ${a.location}`} className="w-full h-full object-cover" loading="lazy" />
+                  <img src={anniversary.image} alt={`${anniversary.names} anniversary in ${anniversary.location}`} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{a.names}</h3>
-                  <p className="text-[#4A4745] text-xs">{a.years} · {a.location}</p>
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{anniversary.names}</h3>
+                  <p className="text-[#4A4745] text-xs">{anniversary.years} · {anniversary.location}</p>
                 </div>
               </div>
             ))}
@@ -183,113 +349,48 @@ export default function EventsAnniversariesPage() {
         </div>
       </section>
 
-      {/* SETUP DETAIL */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 4 — Setup" title="The Details That Matter" subtitle="Every anniversary includes these romantic touches." />
-          <div className="grid sm:grid-cols-3 gap-6">
-            {SETUP_DETAILS.map((s) => (
-              <div key={s.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 text-center hover:shadow-md transition-all">
-                <div className="w-12 h-12 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-4">
-                  <s.icon className="w-5 h-5 text-[#C5A028]" />
-                </div>
-                <h4 className="font-medium text-[#1A1A1A] mb-2">{s.title}</h4>
-                <p className="text-sm text-[#4A4745]">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialBlock
+        title="What Couples Say"
+        subtitle="Private enough to feel personal, structured enough to feel easy."
+        testimonials={[
+          { name: 'Anna & Michael', location: 'Seminyak Anniversary', quote: 'The surprise setup was timed perfectly. We walked in, had our moment, and dinner just flowed naturally from there.', rating: 5 },
+          { name: 'Sarah & Tom', location: 'Uluwatu Vow Renewal', quote: 'We renewed our vows with family and the team managed ceremony, reception, and the dinner service without it ever feeling over-produced.', rating: 5 },
+          { name: 'Jenny & David', location: 'Canggu Intimate Dinner', quote: 'It felt far more personal than going to a hotel restaurant. The chef, the pacing, and the table styling were exactly right.', rating: 5 },
+        ]}
+      />
 
-      {/* VS HOTELS */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A]">
-        <div className="max-w-4xl mx-auto px-6">
-          <SectionHeader eyebrow="Comparison" title="In Your Villa vs Hotel-Locked" subtitle="Buyers researching anniversary dinners almost always check hotels first. Here is how we compare." dark />
-          <div className="bg-white/5 rounded-2xl border border-white/10 overflow-hidden">
-            <div className="grid grid-cols-3 gap-4 px-6 py-4 text-xs uppercase tracking-wider text-white/50 font-semibold">
-              <span>Venue</span><span>Price</span><span>Note</span>
-            </div>
-            {HOTEL_COMPARISON.map((h) => (
-              <div key={h.name} className={`grid grid-cols-3 gap-4 px-6 py-4 border-t border-white/10 items-center ${h.name === 'myCHEF' ? 'bg-[#C5A028]/10' : ''}`}>
-                <span className={`font-medium ${h.name === 'myCHEF' ? 'text-[#C5A028]' : 'text-white'}`}>{h.name}</span>
-                <span className={`${h.name === 'myCHEF' ? 'text-[#C5A028] font-semibold' : 'text-white/80'}`}>{h.price}</span>
-                <span className="text-white/60 text-sm">{h.note}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ADD-ONS */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Extras" title="Anniversary Add-Ons" subtitle="Make the evening unforgettable with these upgrades." />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ADDONS.map((a) => (
-              <div key={a.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 flex items-start gap-4">
-                <div className="bg-[#C5A028]/10 rounded-xl p-2.5 shrink-0"><a.icon className="w-5 h-5 text-[#C5A028]" /></div>
-                <div>
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm">{a.title}</h3>
-                  <p className="text-[#C5A028] font-semibold text-sm">{a.price}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <TestimonialBlock title="What Couples Say" testimonials={[
-        { name: 'Anna & Michael', location: 'Seminyak Anniversary', quote: 'The candle setup, the petals, the personalised menu — every detail was perfect. Felt like a scene from a movie.', rating: 5 },
-        { name: 'Sarah & Tom', location: 'Uluwatu Vow Renewal', quote: 'We renewed our vows with 20 family members. The ceremony, the dinner, the coordination — flawless.', rating: 5 },
-        { name: 'Jenny & David', location: 'Canggu Intimate Dinner', quote: 'Just the two of us, a 5-course dinner, and a photographer. Best anniversary we have ever had.', rating: 5 },
-      ]} />
-
-      {/* FAQ */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <section className="py-20 md:py-28 bg-white anniversary-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Anniversary FAQ" subtitle="Everything you need to know about anniversary dinners with myCHEF." />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
-      {/* FORM */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] anniversary-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
             title="Tell Us About Your Anniversary"
-            subtitle="We are so excited to help you celebrate. Share your vision and we will make it happen."
+            subtitle="Share the date, the feeling you want, and whether there is a surprise element. We will build the evening around that brief."
             packageOptions={['Couple Intimate Dinner', 'Small-Group Anniversary', 'Renewal of Vows + Dinner']}
             fields={[
               { name: 'package', label: 'Package', type: 'select', required: true },
               { name: 'date', label: 'Date', type: 'date', required: true },
               { name: 'guests', label: 'Guests', type: 'number', placeholder: 'e.g. 2', required: true },
               { name: 'area', label: 'Villa Location', type: 'text', required: true },
-              { name: 'occasion', label: 'What Are You Celebrating?', type: 'text', placeholder: 'e.g. 10th Anniversary' },
-              { name: 'surprise', label: 'Surprise Element?', type: 'textarea', placeholder: 'Tell us about any surprises you are planning...' },
+              { name: 'occasion', label: 'What Are You Celebrating?', type: 'text', placeholder: 'e.g. 10th anniversary, surprise dinner' },
+              { name: 'wine', label: 'Wine / Drinks Preference', type: 'text', placeholder: 'Champagne, wine pairing, no alcohol...' },
+              { name: 'surprise', label: 'Surprise Element?', type: 'textarea', placeholder: 'Tell us about any reveal, speech, or discreet setup needs...' },
               { name: 'name', label: 'Your Name', type: 'text', required: true },
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
               { name: 'email', label: 'Email', type: 'text' },
             ]}
             whatsappName="Sofia"
-            accent="#C5A028"
+            accent={ACCENT}
           />
         </div>
       </section>
 
       <PressStrip />
-
-      {/* CTA */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A] text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Ready to Celebrate Your Love?</h2>
-          <p className="text-white/70 text-lg mb-8">Send your date, villa, and what you are celebrating. We will create something unforgettable.</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all"><Calendar className="w-4 h-4" /> Book Anniversary Dinner</a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"><MessageCircle className="w-4 h-4" /> WhatsApp Sofia</a>
-          </div>
-        </div>
-      </section>
-
       <TaxFooter />
     </div>
   )

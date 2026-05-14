@@ -19,6 +19,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20Sofia,%20I%20would%20like%20a%20retreat%20catering%20quote.'
 const SITE = 'https://mychef.id'
+const ACCENT = '#2C5F7C'
 
 const FORMATS = [
   {
@@ -95,14 +96,32 @@ const FAQS = [
   { q: 'Cancellation for multi-day events?', a: '30+ days before: 50% refund. 14–30 days: 25%. Under 14 days: no refund but credit toward future retreat.' },
 ]
 
+const RETREAT_GALLERY = [
+  { title: 'Sunrise Breakfast', image: '/generated/events/retreat-breakfast.webp' },
+  { title: 'Communal Lunch Table', image: '/generated/events/retreat-table.webp' },
+  { title: 'Whole Produce Prep', image: '/generated/sol-produce.webp' },
+  { title: 'Brunch Recovery Spread', image: '/generated/party-brunch.webp' },
+]
+
+const INTAKE_STEPS = [
+  'Hosts receive a dietary intake form well before arrival so we can map allergies, preferences, and programme goals by guest.',
+  'The kitchen is briefed against a real guest list, not a vague summary, which is how we avoid missing edge cases on day one.',
+  'Dishes are labelled by dietary line and separate prep protocols are used for high-risk allergies and gluten-free requests.',
+  'If your retreat has shifting attendance, we update the service counts daily so portions stay accurate without waste.',
+]
+
 export default function EventsRetreatsPage() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('.retreat-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.retreat-content', start: 'top 75%', once: true },
+      gsap.fromTo('.retreat-reveal', { y: 40, opacity: 0 }, {
+        y: 0,
+        opacity: 1,
+        duration: 0.9,
+        stagger: 0.08,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.retreat-content', start: 'top 78%', once: true },
       })
     }, ref)
     return () => ctx.revert()
@@ -111,17 +130,17 @@ export default function EventsRetreatsPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Wellness & Yoga Retreat Catering Bali | myCHEF"
-        description="Multi-day retreat catering for yoga, surf, wellness, and corporate retreats in Bali. From IDR 1.5M/pp/day. Plant-forward, GF, anti-inflammatory specialists."
+        title="Wellness Retreat Catering Bali — Healthy Meals & Multi-Day F&B | myCHEF"
+        description="Healthy retreat catering in Bali with multi-day meal planning, dietary-coded menus, on-site chef support, and full villa food operations."
         canonical={`${SITE}/events/retreats`}
-        ogImage={`${SITE}/generated/hero-retreats.jpg`}
+        ogImage={`${SITE}/generated/events/retreat-breakfast.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Retreat Catering Bali', 'Multi-day retreat catering for yoga, wellness, and corporate retreats in Bali. Plant-forward, vegan, and dietary-specialist menus.', `${SITE}/events/retreats`, 'IDR'),
+          serviceSchema('Wellness Retreat Catering Bali', 'Healthy multi-day retreat catering in Bali with plant-forward menus, dietary-coded meal planning, and on-site villa food operations.', `${SITE}/events/retreats`, 'IDR'),
           offerSchema('Wellness Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
           offerSchema('Yoga Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
           offerSchema('Corporate-Style Retreat', 2500000, 'IDR', `${SITE}/events/retreats`),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Retreats', `${SITE}/events/retreats`, 'Events', `${SITE}/events`),
         ]}
@@ -129,22 +148,23 @@ export default function EventsRetreatsPage() {
 
       <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Retreats' }]} />
 
-      {/* HERO */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/hero-retreats.jpg" alt="Wellness retreat group dining at Bali villa" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/70" />
+          <img src="/generated/events/retreat-breakfast.webp" alt="Healthy retreat breakfast with fruit and juices in Bali" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/68" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Chapter 1 — Retreat Catering</p>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Retreat Catering<br /><span className="italic">Wellness, Yoga, Surf</span>
+          <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+            Chapter 1 — Retreat Catering
+          </p>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Wellness Retreats in Bali — Healthy Catering & Meal Planning
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Multi-day catering for retreats. Plant-forward, anti-inflammatory, gluten-free, vegan specialists. From IDR 1.5M/pp/day — 3 meals + 2 snacks daily.
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+            Multi-day retreat food planning with balanced breakfasts, communal lunches, dietary-coded dinners, and a team that can sustain quality for several days in a villa environment.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all">
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <Calendar className="w-4 h-4" /> Request Retreat Quote
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
@@ -156,88 +176,185 @@ export default function EventsRetreatsPage() {
 
       <TrustStrip dark />
 
-      {/* FORMATS */}
-      <section className="py-20 md:py-28 bg-white retreat-content">
+      <section className="py-20 md:py-28 bg-white retreat-content retreat-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 2 — Packages" title="Retreat Packages" subtitle="Three tiers for different retreat styles and dietary philosophies." />
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Multi-Day, Not One-Off
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Retreat catering has to support energy, digestion, and repetition across several days
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                Retreat food planning is different from normal event catering because guests are not just attending a dinner. They are waking up together, moving through sessions, practicing, resting, and eating multiple times a day for several days in a row. That changes everything: the menu has to feel nourishing without becoming repetitive, portions need to support the rhythm of the programme, and dietary complexity builds quickly as the guest list gets bigger. We design around those realities from day one.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed">
+                myCHEF specialises in balanced villa retreat operations — breakfast setups that are ready before the first session, communal lunches that keep the day moving, evening dinners that feel satisfying without weighing guests down, and kitchen systems that hold quality across the full week. For organisers who need a more service-specific breakdown, our <a href="/catering/retreat-catering" className="text-[#2C5F7C] underline underline-offset-4">retreat catering page</a> shows the dedicated catering version of this offer.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/events/retreat-breakfast.webp" alt="Healthy breakfast service for a Bali wellness retreat" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] retreat-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 2 — Formats" title="Retreat Formats" subtitle="Wellness-led, yoga-led, or mixed-profile retreats — each with its own service rhythm and dietary intensity." />
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
+            These formats give retreat hosts a starting point for pricing and service design. Some retreats want deeply plant-forward menus, others need stricter sattvic or vegan service, and some need more mixed menus because spouses, facilitators, or corporate groups are sharing the same schedule. The point is not only what guests eat, but how consistently that experience can be maintained every day.
+          </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
+            {FORMATS.map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}
           </div>
-
-          {/* Group Total Calculators */}
           <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <GroupTotalCalculator pricePerPerson={1500000} minGuests={10} maxGuests={30} defaultGuests={15} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={50} defaultGuests={20} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={1500000} minGuests={10} maxGuests={30} defaultGuests={16} accent={ACCENT} />
+            <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={50} defaultGuests={20} accent={ACCENT} />
           </div>
         </div>
       </section>
 
-      {/* DAILY SCHEDULE */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
-        <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 3 — Schedule" title="Daily Meal Schedule" subtitle="A typical retreat day — 3 meals + 2 snacks + tea rituals." />
-          <div className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden">
-            {DAILY_SCHEDULE.map((item, i) => (
-              <div key={i} className="flex items-center gap-4 px-6 py-4 border-t border-[#E8E6E3] first:border-t-0">
-                <span className="text-[#C5A028] font-semibold text-sm w-16 shrink-0">{item.time}</span>
-                <span className="text-[#1A1A1A] text-sm font-medium">{item.meal}</span>
-                <span className="text-[#4A4745] text-xs ml-auto">{item.type}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* DIETARY SPECIALISM */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 4 — Dietary" title="Specialist Diets" subtitle="We design menus for every dietary philosophy and restriction." />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {DIETARY_DETAILS.map((d) => (
-              <div key={d.name} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 hover:shadow-md transition-all">
-                <h3 className="font-semibold text-[#1A1A1A] text-sm mb-2">{d.name}</h3>
-                <p className="text-[#4A4745] text-xs leading-relaxed">{d.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-wrap justify-center gap-3 mt-8">
-            {DIETARY.map((d) => (
-              <span key={d} className="px-5 py-3 bg-white border border-[#E8E6E3] rounded-full text-sm font-medium text-[#1A1A1A]">{d}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* MULTI-DAY OPERATIONS */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A]">
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 5 — Operations" title="Multi-Day Operations" subtitle="How we maintain quality, safety, and freshness across multiple days." dark />
-          <div className="grid sm:grid-cols-3 gap-6">
-            {MULTI_DAY_OPS.map((op) => (
-              <div key={op.title} className="bg-white/5 rounded-2xl border border-white/10 p-6 text-center">
-                <op.icon className="w-8 h-8 text-[#C5A028] mx-auto mb-4" />
-                <h3 className="text-white text-sm font-semibold mb-2">{op.title}</h3>
-                <p className="text-white/60 text-xs">{op.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PAST RETREATS */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-white retreat-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 6 — Past Retreats" title="Retreat Host Testimonials" subtitle="Real hosts, real retreats, real results." />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PAST_RETREATS.map((r) => (
-              <div key={r.host} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Daily Meal Structure
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Meals are timed around the retreat schedule, not around kitchen convenience
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-6">
+                Most retreats succeed when the meal plan supports the emotional tempo of the day. Sunrise breakfasts need to feel clean and energising, lunch needs enough substance for guests to recover without feeling sluggish, and evening meals should close the day rather than overpower it. That pacing is why we build a real meal structure instead of just assigning dishes to time slots. The right food at the wrong moment can throw off the whole retreat.
+              </p>
+              <div className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] overflow-hidden">
+                {DAILY_SCHEDULE.map((item) => (
+                  <div key={`${item.time}-${item.meal}`} className="flex items-center gap-4 px-5 py-4 border-t border-[#E8E6E3] first:border-t-0">
+                    <span className="text-sm font-semibold text-[#2C5F7C] w-16 shrink-0">{item.time}</span>
+                    <span className="text-sm font-medium text-[#1A1A1A]">{item.meal}</span>
+                    <span className="text-sm text-[#4A4745] ml-auto">{item.type}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
+              <img src="/generated/events/retreat-table.webp" alt="Long communal retreat dining table in Bali" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] retreat-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
+              <img src="/generated/sol-produce.webp" alt="Fresh whole produce prepared for wellness retreat catering" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Healthy Menu Philosophy
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Whole ingredients, local produce, and nutritional clarity instead of wellness clichés
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                Healthy retreat food should still feel abundant. Our menu philosophy starts with whole ingredients, strong produce sourcing, and enough protein, fibre, and fat balance that guests feel grounded through the day. We use Bali-grown fruit and vegetables wherever they make sense, avoid leaning on processed shortcuts, and build plant-based lines that feel satisfying rather than symbolic. If a retreat needs a more specific nutritional approach, we build around that rather than forcing every host into the same wellness language.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4 mt-6 mb-6">
+                {DIETARY_DETAILS.map((item) => (
+                  <div key={item.name} className="rounded-2xl border border-[#E8E6E3] bg-white p-4">
+                    <h3 className="text-sm font-semibold text-[#1A1A1A] mb-1">{item.name}</h3>
+                    <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {DIETARY.map((item) => (
+                  <span key={item} className="px-4 py-2 rounded-full border border-[#E8E6E3] bg-white text-sm text-[#1A1A1A]">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white retreat-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Dietary Intake Process
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Dietary requirements are managed through systems, not last-minute improvisation
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-5">
+                Retreat hosts often carry the pressure of multiple dietary profiles at once: vegan guests, gluten-free guests, allergies, low-sugar requests, and participants following specific retreat protocols. The only way to handle that well is with a proper intake and briefing process. We collect information early, structure it in a way the kitchen can use, and then translate that into labelled service and disciplined prep on site.
+              </p>
+              <div className="space-y-3">
+                {INTAKE_STEPS.map((step) => (
+                  <div key={step} className="flex items-start gap-3">
+                    <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
+                    <p className="text-[#4A4745] leading-relaxed">{step}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/events/retreat-breakfast.webp" alt="Labeled healthy breakfast setup for retreat guests" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] retreat-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Multi-Day Logistics
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                How we keep food quality high over 3, 5, or 7 days without repetition fatigue
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-6">
+                The hidden work in retreat catering is consistency. Menus need to evolve through the week, produce needs to stay fresh, portioning has to adapt to attendance, and the kitchen has to protect energy as well as food safety. We plan those systems in advance so the experience stays stable from the first breakfast to the final farewell meal.
+              </p>
+              <div className="grid sm:grid-cols-3 gap-4">
+                {MULTI_DAY_OPS.map((item) => (
+                  <div key={item.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-5 text-center">
+                    <item.icon className="w-6 h-6 text-[#2C5F7C] mx-auto mb-3" />
+                    <h3 className="text-sm font-semibold text-[#1A1A1A] mb-2">{item.title}</h3>
+                    <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
+              <img src="/generated/events/retreat-table.webp" alt="Multi-day retreat lunch service setup in Bali" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white retreat-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 3 — Real Retreats" title="Retreat Gallery" subtitle="Breakfasts, communal lunches, produce-led menus, and the everyday food moments guests actually remember." />
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
+            Retreat photography is useful because it shows more than beautiful plates. It shows portion style, table scale, produce quality, and the tone of the service. Hosts can use the images below to gauge whether they want a more communal format, a more styled breakfast setup, or a menu direction that feels simpler and produce-led.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {RETREAT_GALLERY.map((item) => (
+              <div key={item.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={r.image} alt={`${r.retreat} in ${r.location}`} className="w-full h-full object-cover" loading="lazy" />
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{r.host}</h3>
-                  <p className="text-[#C5A028] text-xs font-medium mb-2">{r.retreat} · {r.location}</p>
-                  <p className="text-[#4A4745] text-xs italic">"{r.quote}"</p>
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm">{item.title}</h3>
                 </div>
               </div>
             ))}
@@ -245,75 +362,80 @@ export default function EventsRetreatsPage() {
         </div>
       </section>
 
-      {/* ADD-ONS */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] retreat-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Extras" title="Retreat Add-Ons" subtitle="Enhance the retreat experience with these activities." />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {ADDONS.map((a) => (
-              <div key={a.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 flex items-start gap-4">
-                <div className="bg-[#C5A028]/10 rounded-xl p-2.5 shrink-0"><a.icon className="w-5 h-5 text-[#C5A028]" /></div>
-                <div>
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm">{a.title}</h3>
-                  <p className="text-[#C5A028] font-semibold text-sm">{a.price}</p>
-                </div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Add-Ons
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Activities and educational extras that deepen the retreat without complicating the meal core
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-6">
+                Add-ons should extend the retreat philosophy, not distract from it. Cooking classes work well when guests want to take something practical home. Foraging walks and dietary consultations suit more educational formats. Recipe books help hosts turn the food programme into part of the retreat memory. We usually suggest choosing one or two meaningful additions rather than stacking too many optional extras into an already full schedule.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {ADDONS.map((addon) => (
+                  <div key={addon.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-5 flex items-start gap-4">
+                    <div className="rounded-xl bg-[#2C5F7C]/10 p-2.5 shrink-0"><addon.icon className="w-5 h-5 text-[#2C5F7C]" /></div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-[#1A1A1A]">{addon.title}</h3>
+                      <p className="text-sm font-semibold text-[#2C5F7C]">{addon.price}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
+              <img src="/generated/party-brunch.webp" alt="Healthy brunch-style retreat spread in Bali" className="w-full h-full object-cover" loading="lazy" />
+            </div>
           </div>
         </div>
       </section>
 
-      <TestimonialBlock title="What Retreat Hosts Say" testimonials={[
-        { name: 'Yoga Teacher Sarah', location: 'Ubud Yoga Retreat', quote: 'The sattvic meals were beautiful — our guests said it was the best retreat food they have ever had.', rating: 5 },
-        { name: 'Wellness Coach Mia', location: 'Canggu Wellness Retreat', quote: 'Plant-forward, anti-inflammatory, and absolutely delicious. The chef understood our philosophy perfectly.', rating: 5 },
-        { name: 'Corporate Wellness Lead', location: 'Seminyak Corporate Retreat', quote: 'Handled 30 people with 5 different diets. Labeled, delicious, on-time. Professional throughout.', rating: 5 },
-      ]} />
+      <TestimonialBlock
+        title="What Retreat Hosts Say"
+        subtitle="Structured enough for organisers, nourishing enough for guests."
+        testimonials={PAST_RETREATS.map((retreat) => ({
+          name: retreat.host,
+          location: `${retreat.retreat} · ${retreat.location}`,
+          quote: retreat.quote,
+          rating: 5,
+        }))}
+      />
 
-      {/* FAQ */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <section className="py-20 md:py-28 bg-white retreat-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Retreat FAQ" subtitle="Operations-focused answers for retreat organisers." />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
-      {/* FORM */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] retreat-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
             title="Request Retreat Quote"
-            subtitle="Tell us about your retreat and we will design a custom catering plan."
+            subtitle="Tell us the dates, participant profile, and dietary mix. We will build a practical multi-day meal plan around your schedule."
             packageOptions={['Wellness Retreat', 'Yoga Retreat', 'Corporate-Style Retreat']}
             fields={[
               { name: 'package', label: 'Retreat Type', type: 'select', required: true },
               { name: 'dates', label: 'Retreat Dates', type: 'text', placeholder: 'e.g. 10-15 June 2026', required: true },
               { name: 'guests', label: 'Participants', type: 'number', placeholder: 'e.g. 20', required: true },
               { name: 'area', label: 'Retreat Location', type: 'text', required: true },
+              { name: 'schedule', label: 'Daily Rhythm', type: 'textarea', placeholder: 'Sunrise session, brunch, workshop, dinner, etc.' },
               { name: 'dietary', label: 'Dietary Breakdown', type: 'textarea', placeholder: 'e.g. 80% vegan, 5 gluten-free, 3 nut allergy...' },
               { name: 'name', label: 'Your Name', type: 'text', required: true },
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
               { name: 'email', label: 'Email', type: 'text', required: true },
             ]}
             whatsappName="Sofia"
-            accent="#C5A028"
+            accent={ACCENT}
           />
         </div>
       </section>
 
       <PressStrip />
-
-      {/* CTA */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A] text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Ready to Fuel Your Retreat?</h2>
-          <p className="text-white/70 text-lg mb-8">Send your dates, headcount, and dietary needs. We will design a custom menu plan.</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all"><Calendar className="w-4 h-4" /> Request Retreat Quote</a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"><MessageCircle className="w-4 h-4" /> WhatsApp Sofia</a>
-          </div>
-        </div>
-      </section>
-
       <TaxFooter />
     </div>
   )

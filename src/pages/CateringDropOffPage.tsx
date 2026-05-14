@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import {
   MessageCircle, Check, Phone, Calendar, Users, MapPin,
   Utensils, Package, CreditCard, ChefHat, Truck, Clock, ShieldCheck,
-  X, Home, Baby, Umbrella, Cake, Sparkles, Plane,
+  X, Home, Baby, Umbrella, Cake, Sparkles, Plane, ArrowRight,
+  Thermometer, ClipboardList, Box, Wine, Coffee, Leaf,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -25,9 +26,12 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20drop-off%20catering.'
+const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20drop-off%20catering%20in%20Bali.'
 const SITE = 'https://mychef.id'
+const PAGE_URL = `${SITE}/catering/drop-off-catering-bali`
+const ACCENT = '#C5A028'
 
+/* ───────── Packages ───────── */
 const DROPOFF_PACKAGES = [
   {
     title: 'Family Dinner Drop-Off',
@@ -55,6 +59,7 @@ const DROPOFF_PACKAGES = [
   },
 ]
 
+/* ───────── Included / Not Included ───────── */
 const INCLUDED = [
   'Freshly prepared food',
   'Ready-to-serve or ready-to-reheat format',
@@ -75,6 +80,7 @@ const NOT_INCLUDED = [
   'No service after delivery',
 ]
 
+/* ───────── How It Works ───────── */
 const HOW_IT_WORKS = [
   { step: '01', title: 'Choose package', desc: 'Family, dinner party, or grazing.', icon: Package },
   { step: '02', title: 'Send details', desc: 'Date, time, area, guest count.', icon: Calendar },
@@ -85,6 +91,7 @@ const HOW_IT_WORKS = [
   { step: '07', title: 'You serve', desc: 'Reheat, plate, and enjoy privately.', icon: Sparkles },
 ]
 
+/* ───────── Delivery Rules ───────── */
 const DELIVERY_RULES = [
   'Order by 4pm for next-day delivery',
   'Delivery window is 90 minutes',
@@ -96,6 +103,7 @@ const DELIVERY_RULES = [
   'Large orders may require earlier confirmation',
 ]
 
+/* ───────── Menu Examples ───────── */
 const MENU_EXAMPLES = [
   {
     title: 'Family Dinner Example',
@@ -111,21 +119,88 @@ const MENU_EXAMPLES = [
   },
 ]
 
+/* ───────── Best For / Use Cases ───────── */
 const BEST_FOR = [
-  { icon: Home, title: 'Family villa dinner', desc: 'Quiet meal at home' },
-  { icon: Plane, title: 'After travel day', desc: 'Food ready on arrival' },
-  { icon: ShieldCheck, title: 'Private dinner', desc: 'No staff in villa' },
-  { icon: Cake, title: 'Small birthday', desc: 'Intimate celebration' },
-  { icon: Baby, title: 'Kids-friendly meal', desc: 'Comfort food for children' },
-  { icon: Umbrella, title: 'Poolside grazing', desc: 'Relaxed by the pool' },
-  { icon: Sparkles, title: 'Welcome dinner', desc: 'Greet villa guests' },
-  { icon: Users, title: 'Next-day group meal', desc: 'Easy follow-up dinner' },
+  { icon: Home, title: 'Villa lunches', desc: 'Quiet meal at home' },
+  { icon: Users, title: 'Staff meals', desc: 'Reliable crew food' },
+  { icon: Cake, title: 'Casual birthdays', desc: 'Intimate celebration' },
+  { icon: Umbrella, title: 'Beach house meals', desc: 'Relaxed by the water' },
+  { icon: Plane, title: 'Crew food', desc: 'Production team dining' },
+  { icon: Box, title: 'Production meals', desc: 'Film and event crews' },
+  { icon: Baby, title: 'Family gatherings', desc: 'Comfort food for all ages' },
+  { icon: Sparkles, title: 'Pre-event food', desc: 'Greet villa guests' },
 ]
 
+/* ───────── Menu Options ───────── */
+const MENU_OPTIONS = [
+  { icon: Utensils, title: 'Indonesian meals', desc: 'Nasi campur, sate, lawar, and local favorites' },
+  { icon: ChefHat, title: 'Western meals', desc: 'Roasts, grills, and continental classics' },
+  { icon: Leaf, title: 'Salads', desc: 'Fresh greens, grain bowls, and composed salads' },
+  { icon: Box, title: 'Sandwiches', desc: 'Gourmet wraps, baguettes, and finger rolls' },
+  { icon: Utensils, title: 'Rice bowls', desc: 'Build-your-own with proteins and toppings' },
+  { icon: Utensils, title: 'Pasta trays', desc: 'Baked and sauced pasta for easy serving' },
+  { icon: Clock, title: 'Breakfast boxes', desc: 'Pastries, eggs, fruit, and coffee packs' },
+  { icon: Box, title: 'Snack platters', desc: 'Dips, crudités, and grazing bites' },
+  { icon: Cake, title: 'Dessert boxes', desc: 'Brownies, tarts, and tropical sweets' },
+]
+
+/* ───────── Drop-Off vs Full Service ───────── */
+const VS_COMPARISON = [
+  { label: 'Drop-Off Catering', points: ['Client manages serving', 'Lower cost', 'No staff in villa', 'Flexible timing', 'Private dining'] },
+  { label: 'Full-Service Catering', points: ['Staff handle everything', 'Better for formal events', 'Precise hot food timing', 'Setup and cleanup included', 'Live cooking available'] },
+]
+
+/* ───────── Food Safety & Timing ───────── */
+const SAFETY_ITEMS = [
+  { icon: Clock, title: 'Delivery windows', desc: 'We schedule a 90-minute window so food arrives fresh, not sitting idle.' },
+  { icon: Thermometer, title: 'Warm food limits', desc: 'Hot dishes are packed insulated and should be served within 60 minutes of delivery.' },
+  { icon: ShieldCheck, title: 'Cold storage', desc: 'Cold items travel in chilled boxes. Refrigerate immediately if not serving right away.' },
+  { icon: ClipboardList, title: 'Reheating', desc: 'Printed instructions included. Most dishes reheat in 10–15 minutes in a standard oven.' },
+  { icon: Calendar, title: 'Same-day ordering', desc: 'Small orders may be possible same-day before 10am. We recommend 24–48 hours notice.' },
+]
+
+/* ───────── Guest Count & Portions ───────── */
+const GUEST_COUNTS = [
+  { range: 'Small group', count: '4–8 guests', tip: 'Order per-person packages with one shared starter.' },
+  { range: 'Medium group', count: '8–16 guests', tip: 'Mix packages and add a grazing board for variety.' },
+  { range: 'Large delivery', count: '16–40 guests', tip: 'Combine multiple packages and add-on trays to avoid under-ordering.' },
+]
+
+/* ───────── Add-Ons ───────── */
+const ADDONS = [
+  { icon: Wine, title: 'Drinks', desc: 'Juice, soft drinks, wine, and beer packs' },
+  { icon: Leaf, title: 'Fruit platters', desc: 'Seasonal tropical fruit for a fresh finish' },
+  { icon: Box, title: 'Grazing boxes', desc: 'Cheese, charcuterie, and cracker selections' },
+  { icon: Cake, title: 'Dessert', desc: 'Cakes, tarts, and individual sweet boxes' },
+  { icon: Coffee, title: 'Coffee', desc: 'Cold brew or hot coffee carafes' },
+  { icon: Utensils, title: 'Disposable plates', desc: 'Eco-friendly cutlery, napkins, and serveware' },
+  { icon: Box, title: 'Reusable equipment', desc: 'Chafing dishes and serving utensils for hire' },
+  { icon: Users, title: 'Setup staff', desc: 'Optional staff to arrange food on arrival' },
+]
+
+/* ───────── FAQ (exactly 7) ───────── */
+const FAQS = [
+  { q: 'Do you set it up?', a: 'Drop-off catering does not include table setup or service. You arrange the food yourself using our printed plating notes. Optional setup staff can be added if needed.' },
+  { q: 'Is staff included?', a: 'No. Drop-off catering does not include on-site chef, waiters, or service staff. That is the whole point — privacy and no interruption.' },
+  { q: 'Can you deliver to villas?', a: 'Yes. We specialize in villa delivery across Bali. Just provide the villa name and access instructions and we will handle the rest.' },
+  { q: 'Can I order same day?', a: 'Small orders may be possible same-day before 10am. We recommend 24–48 hours notice, especially for large groups or peak season.' },
+  { q: 'How is food packed?', a: 'Food is packed in premium recyclable and compostable containers. Hot items are insulated, cold items are chilled. Reheating and plating instructions are printed and included.' },
+  { q: 'What areas do you deliver to?', a: 'We deliver across Bali: Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, and more. Travel fees may apply for remote areas.' },
+  { q: 'What is the minimum order?', a: 'Minimum order is 4 people for family dinner drop-off. Larger packages start at 8 people. Contact us for custom group sizes.' },
+]
+
+/* ───────── Upgrade / Internal Links ───────── */
 const UPGRADE_PATH = [
   { title: 'BBQ Catering', price: 'From IDR 450,000/person', href: '/catering/bbq-catering', image: '/generated/pkg-bbq.webp' },
   { title: 'Buffet Catering', price: 'From IDR 550,000/person', href: '/catering/buffet', image: '/generated/aura-buffet.webp' },
   { title: 'Plated Dinner', price: 'From IDR 800,000/person', href: '/catering/plated-catering', image: '/generated/hub-catering.webp' },
+]
+
+const INTERNAL_LINKS = [
+  { label: 'Fine Dining', href: '/catering/plated-catering' },
+  { label: 'Villa Catering', href: '/catering/villa-catering' },
+  { label: 'Events', href: '/events' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 const DROPOFF_GALLERY = [
@@ -135,21 +210,6 @@ const DROPOFF_GALLERY = [
   '/generated/aura-buffet.webp',
   '/generated/pkg-bbq.webp',
   '/generated/pkg-grazing.webp',
-]
-
-const FAQS = [
-  { q: 'What is drop-off catering?', a: 'Drop-off catering is prepared food delivered to your villa in ready-to-serve or ready-to-reheat containers. No chef, no waiters, no setup — just great food and clear instructions.' },
-  { q: 'Is staff included?', a: 'No. Drop-off catering does not include on-site chef, waiters, or service staff. That is the whole point — privacy and no interruption.' },
-  { q: 'Do I need to reheat the food?', a: 'Some items are ready to serve (salads, grazing items). Hot dishes come with printed reheating instructions. Most take 10-15 minutes in your villa oven.' },
-  { q: 'Do you include instructions?', a: 'Yes. Every drop-off order includes printed reheating and plating instructions. We also send a WhatsApp message with tips.' },
-  { q: 'Can I order for tomorrow?', a: 'Yes, if you order by 4pm for next-day delivery. Large orders or peak season may need more notice.' },
-  { q: 'What areas do you deliver to?', a: 'We deliver across Bali: Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, and more. Travel fees may apply for remote areas.' },
-  { q: 'Do you deliver to villas?', a: 'Yes. We specialize in villa delivery. Just provide the villa name and access instructions.' },
-  { q: 'Can I request vegetarian or gluten-free?', a: 'Absolutely. Tell us when ordering and we will adapt the menu. No extra charge for most dietary needs.' },
-  { q: 'Are containers recyclable?', a: 'Yes. We use premium recyclable and compostable containers. They are designed to keep food fresh and look good on your table.' },
-  { q: 'Do you set up the table?', a: 'No. Drop-off does not include table setup or service. You arrange the food yourself using our plating notes.' },
-  { q: 'Can I upgrade to chef service?', a: 'Yes. If you change your mind and want a chef, waiters, and full service, we can switch you to BBQ, buffet, or plated catering.' },
-  { q: 'Do I need to pay a deposit?', a: 'Yes. A 25% deposit confirms your order. The balance is due before delivery.' },
 ]
 
 export default function CateringDropOffPage() {
@@ -168,30 +228,30 @@ export default function CateringDropOffPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Drop-Off Catering Bali | Food Delivered to Villas — myCHEF"
-        description="Drop-off catering in Bali without staff in your villa. Food delivered ready to reheat or serve. Family dinners, grazing boxes. From IDR 350K/person."
-        canonical={`${SITE}/catering/drop-off-catering`}
-        ogImage={`${SITE}/generated/catering/dropoff-hero-v2.webp`}
+        title="Drop-Off Catering Bali | Delivered Event Food & Platters"
+        description="Drop-off catering in Bali for villa lunches, small events, staff meals, parties, and easy group dining without full-service staff."
+        canonical={PAGE_URL}
+        ogImage={`${SITE}/generated/hero-dropoff-catering.jpg`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Drop-Off Catering Bali', 'Prepared catering delivered to your villa without staff. Ready to reheat, plate, or serve.', `${SITE}/catering/drop-off-catering`, 'IDR'),
-          offerSchema('Family Dinner Drop-Off', 350000, 'IDR', `${SITE}/catering/drop-off-catering`),
-          offerSchema('Dinner Party Drop-Off', 500000, 'IDR', `${SITE}/catering/drop-off-catering`),
-          offerSchema('Grazing Dinner Drop-Off', 650000, 'IDR', `${SITE}/catering/drop-off-catering`),
+          serviceSchema('Drop-Off Catering Bali', 'Prepared catering delivered to your villa without staff. Ready to reheat, plate, or serve.', PAGE_URL, 'IDR'),
+          offerSchema('Family Dinner Drop-Off', 350000, 'IDR', PAGE_URL),
+          offerSchema('Dinner Party Drop-Off', 500000, 'IDR', PAGE_URL),
+          offerSchema('Grazing Dinner Drop-Off', 650000, 'IDR', PAGE_URL),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Drop-Off Catering', `${SITE}/catering/drop-off-catering`, 'Catering', `${SITE}/catering`),
+          breadcrumbSchema('Drop-Off Catering Bali', PAGE_URL, 'Catering', `${SITE}/catering`),
         ]}
       />
 
-      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Drop-Off Catering' }]} />
+      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Drop-Off Catering Bali' }]} />
 
       {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/generated/hero-dropoff-catering.jpg"
-            alt="Premium catering boxes opened on a villa dining table"
+            alt="Drop-off catering boxes with prepared food on a Bali villa dining table"
             width={1920}
             height={1080}
             fetchPriority="high"
@@ -200,22 +260,23 @@ export default function CateringDropOffPage() {
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#8B5A2B] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Drop-Off Catering
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+            Drop-Off Catering Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Drop-Off Catering in Bali<br />
-            <span className="italic">Without Staff Inside Your Villa</span>
+            Drop-Off Catering Bali<br />
+            <span className="italic">for Easy Group Dining</span>
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Prepared catering delivered to your villa, ready to reheat, plate, or serve. No on-site staff, no service team, no interruption. Just proper food, clear instructions, and private dining on your terms.
+            Prepared food, delivered to your villa or venue, ready to serve. Ideal for casual lunches, staff meals, small parties, and low-effort hosting.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#8B5A2B] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#7a4f25] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:brightness-110 transition-all"
+              style={{ background: ACCENT }}
             >
-              <Package className="w-4 h-4" /> Order drop-off catering
+              <Package className="w-4 h-4" /> Order Drop-Off Catering
             </a>
             <a
               href={WA_LINK}
@@ -233,21 +294,21 @@ export default function CateringDropOffPage() {
       {/* ═══════ TRUST STRIP ═══════ */}
       <TrustStrip />
 
-      {/* ═══════ WHY DROP-OFF ═══════ */}
+      {/* ═══════ SECTION 1 — WHY DROP-OFF ═══════ */}
       <section className="do-content py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <SectionHeader
                 align="left"
-                eyebrow="CHAPTER 1 — THE INQUIRY"
-                title="For People Who Want Good Food Without a Team in the Villa"
-                subtitle="Drop-off catering is built for villa guests who want a proper meal but do not want chefs, waiters, or service staff staying inside the villa."
+                eyebrow="Why Choose Drop-Off"
+                title="Cheaper, Faster, Simpler Than Full-Service Catering"
+                subtitle="Drop-off catering in Bali is built for villa guests who want proper food delivered without chefs, waiters, or service staff staying inside the villa."
               />
               <div className="space-y-3">
-                {['Families', 'Villa renters', 'Small dinner parties', 'Privacy-focused guests', 'Next-day meals', 'Groups with children', 'People who do not want restaurant delivery'].map((item) => (
+                {['No staff in your villa — total privacy', 'Lower cost than full-service catering', 'Next-day delivery available', 'Ready to reheat or serve on arrival', 'Ideal for casual and low-effort hosting'].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-[#8B5A2B] flex-shrink-0" />
+                    <Check className="w-5 h-5 flex-shrink-0" style={{ color: ACCENT }} />
                     <span className="text-[#4A4745]">{item}</span>
                   </div>
                 ))}
@@ -256,7 +317,7 @@ export default function CateringDropOffPage() {
             <div className="rounded-2xl overflow-hidden">
               <img
                 src="/generated/hub-catering.webp"
-                alt="Calm villa dining table with food served family-style"
+                alt="Calm villa dining table with drop-off food served family-style"
                 className="w-full h-full object-cover aspect-[4/3]"
                 loading="lazy"
               />
@@ -265,24 +326,189 @@ export default function CateringDropOffPage() {
         </div>
       </section>
 
-      {/* ═══════ PACKAGES ═══════ */}
+      {/* ═══════ SECTION 2 — BEST USE CASES ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 2 — THE MENU"
+            eyebrow="Best Use Cases"
+            title="When Drop-Off Catering Works Best in Bali"
+            subtitle="From villa lunches and staff meals to casual birthdays and pre-event food — drop-off delivery fits dozens of real situations."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {BEST_FOR.map((item) => (
+              <div key={item.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5 text-center hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ background: `${ACCENT}1A` }}>
+                  <item.icon className="w-5 h-5" style={{ color: ACCENT }} />
+                </div>
+                <h4 className="font-medium text-sm mb-1">{item.title}</h4>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 3 — WHAT IS INCLUDED ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="What Is Included"
+            title="Everything That Comes With Your Drop-Off Order"
+            subtitle="Prepared dishes, serving containers, labels, reheating instructions, disposable or upgraded serviceware, delivery, and optional setup."
+          />
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {INCLUDED.map((item) => (
+              <div key={item} className="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#E8E6E3]">
+                <Check className="w-5 h-5" style={{ color: ACCENT }} />
+                <span className="text-[#4A4745] text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 max-w-[800px] mx-auto">
+            <h3 className="text-lg font-medium mb-3 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>Not Included</h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {NOT_INCLUDED.map((item) => (
+                <div key={item} className="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#E8E6E3]">
+                  <X className="w-5 h-5 text-[#4A4745]/40" />
+                  <span className="text-[#4A4745] text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 4 — MENU OPTIONS ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Menu Options"
+            title="Drop-Off Menu Styles for Every Taste"
+            subtitle="Indonesian meals, Western meals, salads, sandwiches, rice bowls, pasta trays, breakfast boxes, snack platters, and dessert boxes."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {MENU_OPTIONS.map((item) => (
+              <div key={item.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5 hover:shadow-md transition-all">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center mb-3" style={{ background: `${ACCENT}1A` }}>
+                  <item.icon className="w-5 h-5" style={{ color: ACCENT }} />
+                </div>
+                <h4 className="font-medium text-sm mb-1">{item.title}</h4>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 5 — DROP-OFF VS FULL SERVICE ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Drop-Off vs Full Service"
+            title="Choose the Right Catering Format for Your Event"
+            subtitle="Drop-off works best when you manage serving yourself. Full service is better for formal events, precise hot food timing, and cleanup."
+          />
+          <div className="grid md:grid-cols-2 gap-6">
+            {VS_COMPARISON.map((col) => (
+              <div key={col.label} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
+                <h3 className="text-xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{col.label}</h3>
+                <div className="space-y-3">
+                  {col.points.map((pt) => (
+                    <div key={pt} className="flex items-center gap-3">
+                      <Check className="w-4 h-4 flex-shrink-0" style={{ color: ACCENT }} />
+                      <span className="text-sm text-[#4A4745]">{pt}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 6 — FOOD SAFETY & TIMING ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Food Safety & Timing"
+            title="Delivery Windows, Storage & Reheating"
+            subtitle="We manage delivery windows, warm food limits, cold storage, reheating guidance, and same-day ordering limitations so your food stays safe and delicious."
+          />
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {SAFETY_ITEMS.map((item) => (
+              <div key={item.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center mb-3" style={{ background: `${ACCENT}1A` }}>
+                  <item.icon className="w-5 h-5" style={{ color: ACCENT }} />
+                </div>
+                <h4 className="font-medium text-sm mb-1">{item.title}</h4>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 7 — GUEST COUNT & PORTIONS ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Guest Count & Portions"
+            title="Plan Portions by Group Size"
+            subtitle="Small group, medium group, or large delivery — per-person planning helps you avoid under-ordering and keeps every guest satisfied."
+          />
+          <div className="grid md:grid-cols-3 gap-6">
+            {GUEST_COUNTS.map((g) => (
+              <div key={g.range} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 text-center">
+                <Users className="w-8 h-8 mx-auto mb-3" style={{ color: ACCENT }} />
+                <h4 className="font-medium text-lg mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{g.range}</h4>
+                <p className="text-sm font-semibold mb-3" style={{ color: ACCENT }}>{g.count}</p>
+                <p className="text-sm text-[#4A4745]">{g.tip}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 8 — ADD-ONS ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Add-Ons"
+            title="Extras to Complete Your Drop-Off Order"
+            subtitle="Drinks, fruit platters, grazing boxes, dessert, coffee, disposable plates, reusable equipment, and optional setup staff."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {ADDONS.map((item) => (
+              <div key={item.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5 text-center hover:shadow-md transition-all">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3" style={{ background: `${ACCENT}1A` }}>
+                  <item.icon className="w-5 h-5" style={{ color: ACCENT }} />
+                </div>
+                <h4 className="font-medium text-sm mb-1">{item.title}</h4>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ PACKAGES (retained for conversion) ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Packages"
             title="Choose Your Drop-Off Package"
           />
           <div className="grid md:grid-cols-3 gap-6">
             {DROPOFF_PACKAGES.map((pkg) => (
-              <div key={pkg.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 hover:shadow-lg transition-all">
+              <div key={pkg.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 hover:shadow-lg transition-all">
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
-                <p className="text-[#8B5A2B] font-semibold text-lg mb-1">{pkg.price}</p>
+                <p className="font-semibold text-lg mb-1" style={{ color: ACCENT }}>{pkg.price}</p>
                 <p className="text-sm text-[#4A4745] mb-1"><AllInPrice price={pkg.priceNum} showPlusPlus={false} suffix="/person" /></p>
                 <p className="text-sm text-[#4A4745] mb-4">{pkg.people}</p>
                 <div className="space-y-2 mb-4">
                   {pkg.format.map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-[#4A4745]">
-                      <Check className="w-4 h-4 text-[#8B5A2B]" /> {item}
+                      <Check className="w-4 h-4" style={{ color: ACCENT }} /> {item}
                     </div>
                   ))}
                 </div>
@@ -295,95 +521,22 @@ export default function CateringDropOffPage() {
         </div>
       </section>
 
-      {/* ═══════ WHAT'S INCLUDED ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="CHAPTER 3 — THE SERVICE"
-            title="What You Receive"
-          />
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {INCLUDED.map((item) => (
-              <div key={item} className="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#E8E6E3]">
-                <Check className="w-5 h-5 text-[#8B5A2B]" />
-                <span className="text-[#4A4745] text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ WHAT'S NOT INCLUDED ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[800px] mx-auto">
-          <SectionHeader
-            eyebrow="CHAPTER 4 — THE BOUNDARY"
-            title="What Drop-Off Does Not Include"
-            subtitle="Drop-off catering does not include on-site chef, service staff, table setup, live cooking, cleanup, or waiting service. That is the point. If you want staff inside the villa, choose BBQ, buffet, or plated catering."
-          />
-          <div className="grid sm:grid-cols-2 gap-4">
-            {NOT_INCLUDED.map((item) => (
-              <div key={item} className="flex items-center gap-3 p-4 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3]">
-                <X className="w-5 h-5 text-[#4A4745]/40" />
-                <span className="text-[#4A4745] text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ═══════ HOW IT WORKS ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 5 — THE PROCESS"
+            eyebrow="How It Works"
             title="How Drop-Off Catering Works"
           />
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
             {HOW_IT_WORKS.map((step) => (
               <div key={step.step} className="text-center">
-                <div className="w-14 h-14 rounded-full bg-[#8B5A2B]/10 flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-6 h-6 text-[#8B5A2B]" />
+                <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: `${ACCENT}1A` }}>
+                  <step.icon className="w-6 h-6" style={{ color: ACCENT }} />
                 </div>
-                <span className="text-[#8B5A2B] text-xs font-bold tracking-wider">{step.step}</span>
+                <span className="text-xs font-bold tracking-wider" style={{ color: ACCENT }}>{step.step}</span>
                 <h4 className="font-medium text-[#1A1A1A] text-sm mt-1 mb-1">{step.title}</h4>
                 <p className="text-xs text-[#4A4745]">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ PHOTO GALLERY ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="CHAPTER 6 — THE SETUP"
-            title="Drop-Off Gallery"
-            subtitle="Prepared food, delivery boxes, and finished villa tables from drop-off catering across Bali."
-          />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {DROPOFF_GALLERY.map((src, i) => (
-              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={src} alt={`Drop-off catering setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ DELIVERY RULES ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[800px] mx-auto">
-          <SectionHeader
-            eyebrow="Delivery"
-            title="Delivery Rules"
-          />
-          <div className="space-y-3">
-            {DELIVERY_RULES.map((rule) => (
-              <div key={rule} className="flex items-start gap-3 p-4 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3]">
-                <Clock className="w-5 h-5 text-[#8B5A2B] flex-shrink-0 mt-0.5" />
-                <span className="text-[#4A4745] text-sm">{rule}</span>
               </div>
             ))}
           </div>
@@ -404,7 +557,7 @@ export default function CateringDropOffPage() {
                 <div className="space-y-2">
                   {menu.items.map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-[#4A4745]">
-                      <Check className="w-4 h-4 text-[#8B5A2B]" /> {item}
+                      <Check className="w-4 h-4" style={{ color: ACCENT }} /> {item}
                     </div>
                   ))}
                 </div>
@@ -414,77 +567,89 @@ export default function CateringDropOffPage() {
         </div>
       </section>
 
-      {/* ═══════ DIETARY ═══════ */}
+      {/* ═══════ DELIVERY RULES ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[800px] mx-auto text-center">
-          <Utensils className="w-10 h-10 text-[#8B5A2B] mx-auto mb-4" />
-          <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Dietary Options</h2>
-          <p className="text-[#4A4745] mb-6">
-            We can adjust menus for vegetarian, vegan, gluten-free, pork-free, seafood-free, nut-free, and child-friendly needs when confirmed before preparation.
-          </p>
-          <div className="flex flex-wrap gap-2 justify-center">
-            {['Vegetarian', 'Vegan', 'Gluten-free', 'Pork-free', 'Seafood-free', 'Nut-free', 'Child-friendly'].map((d) => (
-              <span key={d} className="px-3 py-1.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745]">{d}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ BEST FOR ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[1280px] mx-auto">
+        <div className="max-w-[800px] mx-auto">
           <SectionHeader
-            eyebrow="Use Cases"
-            title="Best For"
+            eyebrow="Delivery"
+            title="Delivery Rules"
           />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {BEST_FOR.map((item) => (
-              <div key={item.title} className="bg-white rounded-xl border border-[#E8E6E3] p-5 text-center hover:shadow-md transition-all">
-                <div className="w-12 h-12 rounded-full bg-[#8B5A2B]/10 flex items-center justify-center mx-auto mb-3">
-                  <item.icon className="w-5 h-5 text-[#8B5A2B]" />
-                </div>
-                <h4 className="font-medium text-sm mb-1">{item.title}</h4>
-                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+          <div className="space-y-3">
+            {DELIVERY_RULES.map((rule) => (
+              <div key={rule} className="flex items-start gap-3 p-4 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3]">
+                <Clock className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: ACCENT }} />
+                <span className="text-[#4A4745] text-sm">{rule}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════ UPGRADE PATH ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="Need More?"
-            title="Need Staff Instead?"
-            subtitle="If you want chef service, waiters, live cooking, setup, and cleanup, choose one of our serviced catering options instead."
-          />
-          <div className="grid md:grid-cols-3 gap-6">
-            {UPGRADE_PATH.map((path) => (
-              <Link
-                key={path.title}
-                to={path.href}
-                className="group bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all"
-              >
-                <div className="aspect-[16/9] overflow-hidden">
-                  <img src={path.image} alt={path.title} className="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
-                </div>
-                <div className="p-5">
-                  <h4 className="font-medium text-[#1A1A1A] mb-1">{path.title}</h4>
-                  <p className="text-[#6B8E5A] text-sm font-semibold">{path.price}</p>
-                </div>
-              </Link>
+      {/* ═══════ DIETARY ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[800px] mx-auto text-center">
+          <Utensils className="w-10 h-10 mx-auto mb-4" style={{ color: ACCENT }} />
+          <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Dietary Options</h2>
+          <p className="text-[#4A4745] mb-6">
+            We can adjust menus for vegetarian, vegan, gluten-free, pork-free, seafood-free, nut-free, and child-friendly needs when confirmed before preparation.
+          </p>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {['Vegetarian', 'Vegan', 'Gluten-free', 'Pork-free', 'Seafood-free', 'Nut-free', 'Child-friendly'].map((d) => (
+              <span key={d} className="px-3 py-1.5 rounded-full bg-white border border-[#E8E6E3] text-sm text-[#4A4745]">{d}</span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════ BOOKING FORM ═══════ */}
+      {/* ═══════ PHOTO GALLERY ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Gallery"
+            title="Drop-Off Catering Gallery"
+            subtitle="Prepared food, delivery boxes, and finished villa tables from drop-off catering across Bali."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {DROPOFF_GALLERY.map((src, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
+                <img src={src} alt={`Drop-off catering setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 9 — FAQ (7 questions) ═══════ */}
       <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[800px] mx-auto">
+          <SectionHeader
+            eyebrow="FAQ"
+            title="Drop-Off Catering FAQ"
+          />
+          <FAQAccordion items={FAQS} defaultOpenCount={3} />
+        </div>
+      </section>
+
+      {/* ═══════ TESTIMONIALS ═══════ */}
+      <TestimonialBlock
+        testimonials={[
+          { name: 'Laura & Ben', location: 'Pererenan Villa', quote: 'The drop-off dinner party package was perfect. Food arrived on time, reheating instructions were clear, and everything tasted fresh. Zero stress.', rating: 5 },
+          { name: 'The Miller Family', location: 'Canggu Villa', quote: 'Family dinner drop-off for 6. The roasted chicken was juicy and the kids loved the dessert. Great option when you want privacy.', rating: 5 },
+          { name: 'Sophie T.', location: 'Seminyak Villa', quote: 'Grazing dinner drop-off for our girls\' night. The charcuterie board was beautiful and the hot mains were delicious. Will order again.', rating: 5 },
+        ]}
+        title="What Drop-Off Guests Say"
+        subtitle="Real reviews from villa drop-off catering across Bali."
+      />
+
+      <PressStrip />
+
+      {/* ═══════ SECTION 10 — CTA + BOOKING FORM ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="Order Now"
             title="Order Drop-Off Catering"
+            subtitle="Order by date, time, location, guest count, food style, and dietary needs. We will confirm delivery window and final price by WhatsApp."
           />
           <BookingFormCatering
             title="Order Drop-Off Catering"
@@ -502,34 +667,56 @@ export default function CateringDropOffPage() {
               { name: 'email', label: 'Email', type: 'text' },
             ]}
             packageOptions={['Family Dinner Drop-Off', 'Dinner Party Drop-Off', 'Grazing Dinner Drop-Off']}
-            accent="#8B5A2B"
+            accent={ACCENT}
           />
         </div>
       </section>
 
-      {/* ═══════ TESTIMONIALS ═══════ */}
-      <TestimonialBlock
-        testimonials={[
-          { name: 'Laura & Ben', location: 'Pererenan Villa', quote: 'The drop-off dinner party package was perfect. Food arrived on time, reheating instructions were clear, and everything tasted fresh. Zero stress.', rating: 5 },
-          { name: 'The Miller Family', location: 'Canggu Villa', quote: 'Family dinner drop-off for 6. The roasted chicken was juicy and the kids loved the dessert. Great option when you want privacy.', rating: 5 },
-          { name: 'Sophie T.', location: 'Seminyak Villa', quote: 'Grazing dinner drop-off for our girls\' night. The charcuterie board was beautiful and the hot mains were delicious. Will order again.', rating: 5 },
-        ]}
-        title="What Drop-Off Guests Say"
-        subtitle="Real reviews from villa drop-off catering across Bali."
-      />
-
-      {/* ═══════ FAQ ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[800px] mx-auto">
+      {/* ═══════ UPGRADE PATH ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Questions"
-            title="Drop-Off FAQ"
+            eyebrow="Need More?"
+            title="Need Staff Instead?"
+            subtitle="If you want chef service, waiters, live cooking, setup, and cleanup, choose one of our serviced catering options instead."
           />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <div className="grid md:grid-cols-3 gap-6">
+            {UPGRADE_PATH.map((path) => (
+              <Link
+                key={path.title}
+                to={path.href}
+                className="group bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all"
+              >
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img src={path.image} alt={path.title} className="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+                </div>
+                <div className="p-5">
+                  <h4 className="font-medium text-[#1A1A1A] mb-1">{path.title}</h4>
+                  <p className="text-sm font-semibold" style={{ color: ACCENT }}>{path.price}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-      <PressStrip />
+      {/* ═══════ INTERNAL LINKS ═══════ */}
+      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-[1280px] mx-auto">
+          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Related Pages</h3>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            {INTERNAL_LINKS.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#1A1A1A] transition-all"
+              >
+                {link.label} <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
@@ -552,9 +739,10 @@ export default function CateringDropOffPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#8B5A2B] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#7a4f25] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:brightness-110 transition-all"
+              style={{ background: ACCENT }}
             >
-              <Package className="w-4 h-4" /> Order drop-off catering
+              <Package className="w-4 h-4" /> Order Drop-Off Catering
             </a>
             <a
               href={WA_LINK}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {
   MessageCircle, Phone, Calendar, Users, MapPin, ChevronRight,
   Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music,
-  Award, Globe2, ClipboardCheck, ArrowRight, Check,
+  Globe2, ClipboardCheck, ArrowRight, Check,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -87,8 +87,8 @@ const EVENT_TYPES: EventType[] = [
     description:
       'Executive dinners, conferences, retreats, product launches. Hospitality production grade — invoice-ready, NPWP-issued.',
     icon: Briefcase,
-    image: '/generated/aura-corporate.webp',
-    href: '/corporate-events',
+    image: '/generated/corporate-event.webp',
+    href: '/events/corporate-events',
   },
   {
     slug: 'retreats',
@@ -135,27 +135,21 @@ interface HowStep {
 const HOW_WE_RUN: HowStep[] = [
   {
     step: '01',
-    title: 'The Brief',
-    body: 'You send guests, date, villa, and the kind of evening you want. We reply within the hour — pricing, options, availability — straight on WhatsApp.',
+    title: 'WhatsApp',
+    body: 'Send the date, guest count, villa, and event type. Sofia replies fast with availability, price direction, and the right format to shortlist.',
     icon: MessageCircle,
   },
   {
     step: '02',
-    title: 'The Design',
-    body: 'Sofia builds a proposal: format, menu, drinks, staffing, styling, music, timing. One document, one number, one team.',
+    title: 'Proposal',
+    body: 'We turn the brief into one working document covering food, drinks, staffing, styling, timing, and all-in pricing for sign-off.',
     icon: ClipboardCheck,
   },
   {
     step: '03',
-    title: 'The Build',
-    body: 'Site recce, supplier briefs, dietary mapping, run-sheet, table plan, decor sourcing. Quiet work in the weeks before so the day looks effortless.',
+    title: 'Event Day',
+    body: 'Our team arrives, builds the setup, runs the service, and clears down after the event so you can focus on hosting instead of coordinating.',
     icon: Calendar,
-  },
-  {
-    step: '04',
-    title: 'The Execution',
-    body: 'On the day: chef brigade, waiters, bartenders, coordinator. We arrive, build it, run it, break it down. You host, your guests remember.',
-    icon: Award,
   },
 ]
 
@@ -303,10 +297,10 @@ export default function EventsMainPage() {
   return (
     <div ref={heroRef} className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Bali Events | Weddings, Birthdays, Corporate — myCHEF"
-        description="Bali event production — weddings, birthdays, corporate events, retreats, villa parties. One team, one bill. From IDR 600K/person."
+        title="Bali Villa Events — Weddings, Birthdays, Corporate & Retreats | myCHEF"
+        description="Bali villa event catering and coordination for weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties."
         canonical={`${SITE}/events`}
-        ogImage={`${SITE}/generated/aura-hero-v2.webp`}
+        ogImage={`${SITE}/generated/hero-events.webp`}
         jsonLd={[
           localBusinessSchema,
           breadcrumbSchema('Events', `${SITE}/events`),
@@ -339,8 +333,8 @@ export default function EventsMainPage() {
       {/* ═══════ HERO — DARK, EDITORIAL, GOLD ═══════ */}
       <section className="relative min-h-[88vh] flex items-end overflow-hidden bg-[#0A0A0A] text-white">
         <img
-          src="/generated/aura-hero-v2.webp"
-          alt="A luxury villa event in Bali — long table, gold styling, candlelight"
+          src="/generated/hero-events.webp"
+          alt="Luxury villa event in Bali with styled dining and celebration setup"
           width={1920}
           height={1080}
           loading="eager"
@@ -414,11 +408,42 @@ export default function EventsMainPage() {
         </div>
       </section>
 
+      {/* ═══════ ALL EVENTS WE COVER ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Chapter 2 — All Events We Cover"
+            title="Four of the formats we run most often"
+            subtitle="Weddings, birthdays, corporate events, and retreats each ask for a different service rhythm — but the same operational discipline."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
+            {EVENT_TYPES.filter((event) => ['weddings', 'birthdays', 'corporate-events', 'retreats'].includes(event.slug)).map((event) => (
+              <Link
+                key={event.slug}
+                to={event.href}
+                className="group bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={event.image} alt={`${event.title} in Bali by myCHEF`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                </div>
+                <div className="p-5">
+                  <p className="text-[#C5A028] text-[11px] tracking-[0.3em] uppercase mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                    {event.eyebrow}
+                  </p>
+                  <h3 className="text-xl text-[#1A1A1A] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{event.title}</h3>
+                  <p className="text-[#4A4745] text-sm leading-relaxed">{event.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ 7 EVENT TYPES ═══════ */}
       <section id="event-types" className="events-grid py-24 md:py-32 px-6 scroll-mt-24">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 2 — Seven Kinds of Evening"
+            eyebrow="Chapter 3 — Seven Kinds of Evening"
             title="Choose the kind of event you are hosting"
             subtitle="Each pillar has its own page with full pricing, menus, and a tailored inquiry form."
           />
@@ -470,7 +495,7 @@ export default function EventsMainPage() {
         </div>
       </section>
 
-      {/* ═══════ HOW WE RUN EVENTS ═══════ */}
+      {/* ═══════ HOW IT WORKS ═══════ */}
       <section className="py-24 md:py-32 px-6 bg-[#0F0F0F] text-white">
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
@@ -478,19 +503,16 @@ export default function EventsMainPage() {
               className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
               style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
             >
-              Chapter 3 — How We Run Events
+              Chapter 4 — How It Works
             </p>
             <h2
               className="text-3xl md:text-5xl leading-[1.05]"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Four stages.{' '}
-              <span className="italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                Quiet weeks before. Effortless on the night.
-              </span>
+              Three clear steps from first message to event day.
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {HOW_WE_RUN.map((s) => (
               <div
                 key={s.step}

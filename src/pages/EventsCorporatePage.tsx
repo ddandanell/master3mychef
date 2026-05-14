@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import {
   MessageCircle, Calendar, Monitor,
   Bus, Building2, Globe, FileText, Shield,
-  Users, Check,
+  Users,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -20,6 +20,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20Sofia,%20I%20would%20like%20a%20corporate%20event%20quote.'
 const SITE = 'https://mychef.id'
+const ACCENT = '#2C5F7C'
 
 const FORMATS = [
   {
@@ -108,9 +109,13 @@ export default function EventsCorporatePage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('.corporate-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.corporate-content', start: 'top 75%', once: true },
+      gsap.fromTo('.corporate-reveal', { y: 40, opacity: 0 }, {
+        y: 0,
+        opacity: 1,
+        duration: 0.9,
+        stagger: 0.08,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.corporate-content', start: 'top 78%', once: true },
       })
     }, ref)
     return () => ctx.revert()
@@ -119,15 +124,16 @@ export default function EventsCorporatePage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Corporate Events Bali | Offsites, Conferences — myCHEF"
-        description="Corporate event catering in Bali. Day events from IDR 1.2M/pp, multi-day retreats from IDR 2.5M/pp/day. AV, dietary management, coordinator. Invoice-ready."
+        title="Corporate Events Bali — Catering & Conference Food | myCHEF"
+        description="Corporate event catering in Bali for offsites, conferences, launches, and retreat dinners. Food, staffing, setup, and cleanup handled under one contract."
         canonical={`${SITE}/events/corporate-events`}
+        ogImage={`${SITE}/generated/events/corporate-team.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Corporate Event Catering Bali', 'Corporate event catering and coordination in Bali. Day events, multi-day retreats, conferences, and product launches.', `${SITE}/events/corporate-events`, 'IDR'),
+          serviceSchema('Corporate Events Bali', 'Corporate event catering and venue support in Bali. Team lunches, conferences, retreat dinners, gala nights, staffing, setup, and cleanup under one contract.', `${SITE}/events/corporate-events`, 'IDR'),
           offerSchema('Corporate Day Event', 1200000, 'IDR', `${SITE}/events/corporate-events`),
           offerSchema('Multi-Day Retreat', 2500000, 'IDR', `${SITE}/events/corporate-events`),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Corporate Events', `${SITE}/events/corporate-events`, 'Events', `${SITE}/events`),
         ]}
@@ -135,22 +141,23 @@ export default function EventsCorporatePage() {
 
       <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Corporate Events' }]} />
 
-      {/* HERO */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/hero-corporate-events.jpg" alt="Corporate event at Bali villa" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/70" />
+          <img src="/generated/events/corporate-team.webp" alt="Corporate team lunch setup at a Bali villa" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/68" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Chapter 1 — Corporate Events</p>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Corporate Events<br /><span className="italic">in Bali</span>
+          <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+            Chapter 1 — Corporate Events
+          </p>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Corporate Events in Bali — Catering & Venue Support
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Day events, multi-day retreats, conferences, product launches. AV included, dietary managed, single invoice. Vetted by HR teams at international companies.
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+            Full F&amp;B operation for offsites, conferences, launches, and gala nights — menus, coffee breaks, staffing, AV coordination, and cleanup managed under one proposal.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all">
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <Calendar className="w-4 h-4" /> Request Corporate Quote
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
@@ -162,119 +169,198 @@ export default function EventsCorporatePage() {
 
       <TrustStrip dark />
 
-      {/* FORMATS */}
-      <section className="py-20 md:py-28 bg-white corporate-content">
+      <section className="py-20 md:py-28 bg-white corporate-content corporate-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 2 — Packages" title="Corporate Packages" subtitle="Three formats for different event types and scales." />
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Corporate Catering, Operationally Built
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                myCHEF handles the food operation and the venue reality at the same time
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                Corporate hosts usually need one supplier who can think beyond a lunch menu. We cover breakfast service, coffee stations, plated or buffet lunches, networking drinks, dietary mapping, floor staff, and the practical realities of running hospitality inside a villa, private venue, or temporary conference setup. That matters because timing is not driven by diners — it is driven by agenda blocks, speakers, registration, workshops, and transport windows.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed">
+                We are particularly useful when the event needs to feel polished without becoming hotel-heavy. You get a service team that understands guest movement, a proposal that can sit next to procurement requirements, and menus that can flex between healthy conference food and more celebratory evening service. If you need a narrower food-only brief, our <a href="/catering/corporate-catering" className="text-[#2C5F7C] underline underline-offset-4">corporate catering page</a> covers that too.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/corp-conference.webp" alt="Corporate conference setup with catered service in Bali" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] corporate-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 2 — Formats" title="Event Formats" subtitle="Structured around real corporate use cases: one-day events, multi-day retreats, and higher-production launches." />
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
+            These packages give teams an operational starting point. Day events cover the full meeting rhythm from breakfast through networking. Retreats layer meals across several days with more dietary planning and kitchen logistics. Launches and gala-style events need a more custom quote because staging, guest flow, and venue production can change dramatically by brief.
+          </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
+            {FORMATS.map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}
           </div>
-
-          {/* Group Total Calculators */}
           <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <GroupTotalCalculator pricePerPerson={1200000} minGuests={20} maxGuests={100} defaultGuests={30} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={50} defaultGuests={20} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={1200000} minGuests={20} maxGuests={100} defaultGuests={40} accent={ACCENT} />
+            <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={50} defaultGuests={20} accent={ACCENT} />
           </div>
-        </div>
-      </section>
-
-      {/* CAPACITY OVERVIEW */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 3 — Capacity" title="Event Capacity Overview" subtitle="Flexible scale for every corporate need." />
-          <div className="grid sm:grid-cols-3 gap-6">
-            {CAPACITY_OVERVIEW.map((c) => (
-              <div key={c.type} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 text-center hover:shadow-lg transition-all">
-                <Users className="w-8 h-8 text-[#C5A028] mx-auto mb-4" />
-                <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{c.type}</h3>
-                <p className="text-[#C5A028] font-semibold text-sm mb-2">{c.range}</p>
-                <p className="text-[#4A4745] text-xs">{c.desc}</p>
+          <div className="mt-10 grid sm:grid-cols-3 gap-4">
+            {CAPACITY_OVERVIEW.map((item) => (
+              <div key={item.type} className="rounded-2xl border border-[#E8E6E3] bg-white p-5 text-center">
+                <Users className="w-7 h-7 text-[#2C5F7C] mx-auto mb-3" />
+                <h3 className="text-sm font-semibold text-[#1A1A1A] mb-1">{item.type}</h3>
+                <p className="text-sm font-semibold text-[#2C5F7C] mb-2">{item.range}</p>
+                <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* B2B TRUST */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A]">
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 4 — B2B Trust" title="Built for Business" subtitle="The operational details that matter to procurement teams." dark />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {B2B_EXTENDED.map((t) => (
-              <div key={t.title} className="bg-white/5 rounded-2xl border border-white/10 p-6 text-center">
-                <t.icon className="w-8 h-8 text-[#C5A028] mx-auto mb-4" />
-                <h3 className="text-white text-sm font-semibold mb-2">{t.title}</h3>
-                <p className="text-white/60 text-xs">{t.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {B2B_TRUST.map((t) => (
-              <div key={t.title} className="flex items-center gap-3 text-white/80">
-                <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
-                <span className="text-xs">{t.title}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SAMPLE AGENDAS */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 5 — Agendas" title="Sample Timelines" subtitle="Day event and multi-day retreat structures. Customisable to your schedule." />
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Day Event</h3>
-              <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden">
-                {SAMPLE_AGENDA_DAY.map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 px-6 py-4 border-t border-[#E8E6E3] first:border-t-0">
-                    <span className="text-[#C5A028] font-semibold text-sm w-16 shrink-0">{item.time}</span>
-                    <span className="text-[#1A1A1A] text-sm">{item.activity}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>3-Day Retreat</h3>
-              <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden">
-                {SAMPLE_AGENDA_RETREAT.map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 px-6 py-4 border-t border-[#E8E6E3] first:border-t-0">
-                    <span className="text-[#C5A028] font-semibold text-sm w-20 shrink-0">{item.day}</span>
-                    <span className="text-[#1A1A1A] text-sm">{item.activity}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* LOGO WALL */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <SectionHeader eyebrow="Chapter 6 — Clients" title="Trusted By" subtitle="Corporate clients across tech, FMCG, finance, and hospitality." />
-          <div className="flex flex-wrap justify-center gap-4">
-            {LOGO_WALL.map((logo) => (
-              <div key={logo} className="px-6 py-4 bg-white rounded-xl border border-[#E8E6E3] text-sm font-medium text-[#4A4745] hover:border-[#C5A028]/40 transition-colors">
-                {logo}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ADD-ONS */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-white corporate-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Extras" title="Corporate Add-Ons" subtitle="Scale your event with these professional upgrades." />
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Corporate Menu Standards
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Menus designed for long working days, international guests, and labelled dietary confidence
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                Corporate food needs to do more than taste good. It has to support attention span, avoid heavy mid-day crashes, and still feel generous enough that guests do not disappear off-site looking for a better meal. We usually recommend lighter breakfast spreads, well-paced coffee breaks, and lunches that feel substantial without killing the room for the next session. For evening events, we can shift into more celebratory buffets, plated service, or passed canapés depending on the brief.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed">
+                Halal-friendly menus, vegetarian lines, vegan dishes, gluten-free plates, allergy protocols, and labelled buffet cards are standard rather than exceptional. We brief the entire kitchen against the dietary map and make sure service staff know what each guest can and cannot be served, which matters far more than putting labels on the table five minutes before lunch starts.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/corp-plated.webp" alt="Plated corporate dinner service by myCHEF in Bali" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] corporate-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
+              <img src="/generated/events/corporate-team.webp" alt="Professional corporate service team at a Bali venue" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Staffing & Service
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Professional staff, clear uniforms, and one service manager holding the floor
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-5">
+                Corporate guests notice service more than they comment on it. Coffee never running dry, registration snacks arriving on time, plates cleared before the next speaker, and the evening drinks setup appearing without chaos — that is the level we plan for. We assign a service manager to the floor, brief staff on the agenda, and coordinate with venue management or villa teams so the hospitality side stays in step with the wider programme.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {B2B_TRUST.map((item) => (
+                  <div key={item.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-4">
+                    <h3 className="text-sm font-semibold text-[#1A1A1A] mb-1">{item.title}</h3>
+                    <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white corporate-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Full-Day Operations
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                We feed people all day without breaking the rhythm of the programme
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-6">
+                A strong corporate food plan is mostly about timing discipline. Breakfast must be ready before arrivals. Coffee breaks need to reset fast enough that nobody misses the next session. Lunch has to land with enough substance to satisfy guests, but without making the afternoon impossible. When the programme includes networking drinks, we reposition the service from work mode to hospitality mode without the event feeling like it is starting over.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] overflow-hidden">
+                  <div className="px-5 py-4 border-b border-[#E8E6E3] text-sm font-semibold text-[#1A1A1A]">Single-Day Conference Flow</div>
+                  {SAMPLE_AGENDA_DAY.map((item) => (
+                    <div key={`${item.time}-${item.activity}`} className="flex items-center gap-4 px-5 py-4 border-t border-[#E8E6E3] first:border-t-0">
+                      <span className="text-sm font-semibold text-[#2C5F7C] w-16 shrink-0">{item.time}</span>
+                      <span className="text-sm text-[#4A4745]">{item.activity}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] overflow-hidden">
+                  <div className="px-5 py-4 border-b border-[#E8E6E3] text-sm font-semibold text-[#1A1A1A]">Multi-Day Retreat Rhythm</div>
+                  {SAMPLE_AGENDA_RETREAT.map((item) => (
+                    <div key={`${item.day}-${item.activity}`} className="flex items-start gap-4 px-5 py-4 border-t border-[#E8E6E3] first:border-t-0">
+                      <span className="text-sm font-semibold text-[#2C5F7C] w-16 shrink-0">{item.day}</span>
+                      <span className="text-sm text-[#4A4745] leading-relaxed">{item.activity}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
+              <img src="/generated/corp-networking.webp" alt="Corporate networking drinks setup in Bali" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#0A0A0A] corporate-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <SectionHeader eyebrow="Chapter 3 — Built for Business" title="Procurement-friendly from proposal to invoice" subtitle="We understand the practical requirements around sign-off, compliance, and executive expectations." dark />
+              <div className="grid sm:grid-cols-3 gap-4 mt-8">
+                {B2B_EXTENDED.map((item) => (
+                  <div key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+                    <item.icon className="w-6 h-6 text-[#2C5F7C] mx-auto mb-3" />
+                    <h3 className="text-sm font-semibold text-white mb-2">{item.title}</h3>
+                    <p className="text-sm text-white/70 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 flex flex-wrap gap-3">
+                {LOGO_WALL.map((logo) => (
+                  <span key={logo} className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-white/80">
+                    {logo}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/generated/corp-executive.webp" alt="Executive corporate dinner environment in Bali" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-white corporate-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 4 — Real Corporate Events" title="Recent Corporate Setups" subtitle="From gala-format evenings to working sessions and networking receptions." />
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
+            The gallery below reflects the breadth of work corporate teams typically ask us to cover in Bali: formal dinners, team lunches, day sessions, and standing receptions. The common thread is that every format needs a food plan, a staffing plan, and a realistic understanding of the venue footprint before the first guest arrives.
+          </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {ADDONS.map((a) => (
-              <div key={a.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 flex items-start gap-4">
-                <div className="bg-[#C5A028]/10 rounded-xl p-2.5 shrink-0"><a.icon className="w-5 h-5 text-[#C5A028]" /></div>
-                <div>
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm">{a.title}</h3>
-                  <p className="text-[#C5A028] font-semibold text-sm">{a.price}</p>
+            {[
+              { title: 'Corporate Gala Dinner', image: '/generated/corp-gala.webp' },
+              { title: 'Team Lunch Service', image: '/generated/events/corporate-team.webp' },
+              { title: 'Conference Catering', image: '/generated/corp-conference.webp' },
+              { title: 'Networking Reception', image: '/generated/corp-networking.webp' },
+            ].map((event) => (
+              <div key={event.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={event.image} alt={event.title} className="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm">{event.title}</h3>
                 </div>
               </div>
             ))}
@@ -282,33 +368,68 @@ export default function EventsCorporatePage() {
         </div>
       </section>
 
-      <TestimonialBlock title="What Corporate Clients Say" testimonials={[
-        { name: 'HR Director, Tech Co.', location: 'Canggu Offsite', quote: 'myCHEF handled our 40-person offsite flawlessly. Dietary restrictions, AV, transport — all managed.', rating: 5 },
-        { name: 'Event Manager, FMCG', location: 'Ubud Retreat', quote: 'The 3-day retreat catering was exceptional. Plant-forward options, on-time delivery, great team.', rating: 5 },
-        { name: 'CEO, Fintech', location: 'Seminyak Product Launch', quote: 'Professional from first contact to final invoice. The branded staging and AV were spot-on.', rating: 5 },
-      ]} />
+      <section className="py-20 md:py-28 bg-[#FAFAF8] corporate-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Add-Ons
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Scale the production once the hospitality core is locked
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-6">
+                Corporate events get expensive fastest when production is added before the service flow is solved. We prefer to lock food timing, staffing, and venue logistics first, then add LED walls, translation, transport, or activities according to what the programme genuinely needs. That keeps budgets defendable and reduces expensive last-minute changes once stakeholders start asking for extras.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {ADDONS.map((addon) => (
+                  <div key={addon.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-5 flex items-start gap-4">
+                    <div className="rounded-xl bg-[#2C5F7C]/10 p-2.5 shrink-0"><addon.icon className="w-5 h-5 text-[#2C5F7C]" /></div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-[#1A1A1A]">{addon.title}</h3>
+                      <p className="text-sm font-semibold text-[#2C5F7C]">{addon.price}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
+              <img src="/generated/corp-villa.webp" alt="Corporate villa venue setup in Bali" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* FAQ */}
-      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+      <TestimonialBlock
+        title="What Corporate Clients Say"
+        subtitle="Operationally sharp, calm on the day, and easy for internal teams to manage."
+        testimonials={[
+          { name: 'HR Director, Tech Co.', location: 'Canggu Offsite', quote: 'myCHEF handled our 40-person offsite with clear dietary labelling, steady coffee service, and a service manager who kept every transition on time.', rating: 5 },
+          { name: 'Event Manager, FMCG', location: 'Ubud Retreat', quote: 'The team understood what a full-day agenda needs. Breakfast, coffee breaks, lunch, and evening drinks all landed exactly when they should.', rating: 5 },
+          { name: 'CEO, Fintech', location: 'Seminyak Product Launch', quote: 'Professional proposal, clean execution, and no surprises on invoicing. It felt built for a corporate client from the first message.', rating: 5 },
+        ]}
+      />
+
+      <section className="py-20 md:py-28 bg-white corporate-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Corporate FAQ" subtitle="B2B-focused answers for procurement and event teams." />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
-      {/* FORM */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] corporate-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
             title="Request Corporate Quote"
-            subtitle="Detailed proposal within 48 hours. Include as much detail as possible."
-            packageOptions={['Day Event', 'Multi-Day Retreat', 'Product Launch']}
+            subtitle="Share your dates, headcount, and event objectives. We will reply with a format recommendation and detailed proposal."
+            packageOptions={['Corporate Day Event', 'Multi-Day Retreat', 'Product Launch / Brand Activation']}
             fields={[
               { name: 'format', label: 'Event Format', type: 'select', required: true },
               { name: 'company', label: 'Company Name', type: 'text', required: true },
               { name: 'date', label: 'Event Date(s)', type: 'text', placeholder: 'e.g. 15-17 June 2026', required: true },
               { name: 'guests', label: 'Headcount', type: 'number', placeholder: 'e.g. 40', required: true },
               { name: 'area', label: 'Preferred Location', type: 'text', required: true },
+              { name: 'agenda', label: 'Event Agenda', type: 'textarea', placeholder: 'Breakfast, sessions, lunch, networking drinks, gala dinner...' },
               { name: 'dietary', label: 'Dietary Breakdown', type: 'textarea', placeholder: 'e.g. 5 vegan, 3 gluten-free, 10 halal...' },
               { name: 'budget', label: 'Budget Range (IDR)', type: 'text' },
               { name: 'name', label: 'Your Name', type: 'text', required: true },
@@ -316,25 +437,12 @@ export default function EventsCorporatePage() {
               { name: 'email', label: 'Email', type: 'text', required: true },
             ]}
             whatsappName="Sofia"
-            accent="#C5A028"
+            accent={ACCENT}
           />
         </div>
       </section>
 
       <PressStrip />
-
-      {/* CTA */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A] text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Ready to Plan Your Corporate Event?</h2>
-          <p className="text-white/70 text-lg mb-8">Send your dates, headcount, and objectives. We will send a detailed proposal with full cost breakdown.</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all"><Calendar className="w-4 h-4" /> Request Corporate Quote</a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"><MessageCircle className="w-4 h-4" /> WhatsApp Sofia</a>
-          </div>
-        </div>
-      </section>
-
       <TaxFooter />
     </div>
   )

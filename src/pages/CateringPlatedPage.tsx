@@ -1,8 +1,10 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Check, Phone, Calendar, Users, MapPin,
   Utensils, Sparkles, ChefHat, Wine,
-  MessageSquare,
+  MessageSquare, Clock, Heart, Briefcase, Gem,
+  Flower2, GlassWater, Star,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -25,8 +27,9 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20plated%20catering%20quote.'
+const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20plated%20dinner%20quote%20in%20Bali.'
 const SITE = 'https://mychef.id'
+const ACCENT = '#C5A028'
 
 const PLATED_PACKAGES = [
   {
@@ -85,7 +88,6 @@ const INCLUDED = [
   'Full setup + cleanup',
 ]
 
-
 const GROUP_TOTALS = [
   { guests: 10, course3: 'IDR 9.68M', course4: 'IDR 12.1M', course5: 'IDR 15.73M' },
   { guests: 20, course3: 'IDR 19.36M', course4: 'IDR 24.2M', course5: 'IDR 31.46M' },
@@ -105,17 +107,67 @@ const WHY_PLATED_VS_BUFFET = [
   { title: 'Formality', plated: 'Individual service, white-glove pacing', buffet: 'Self-serve, casual flow' },
   { title: 'Group size', plated: 'Ideal for 10–60 guests', buffet: 'Better for 30–200 guests' },
   { title: 'Presentation', plated: 'Restaurant-quality plating per guest', buffet: 'Chafing dishes, bulk display' },
+  { title: 'Pacing', plated: 'Timed courses, controlled rhythm', buffet: 'Guest-driven, variable timing' },
+  { title: 'Atmosphere', plated: 'Intimate, focused, elegant', buffet: 'Social, mobile, relaxed' },
+  { title: 'Kitchen output', plated: 'Precise, plated to order', buffet: 'Batch cooking, held in warmers' },
+]
+
+const OCCASIONS = [
+  { icon: Heart, label: 'Anniversaries', desc: 'Romantic multi-course dinners for two or small groups' },
+  { icon: Sparkles, label: 'Birthdays', desc: 'Celebration menus with personal touches and cake service' },
+  { icon: Gem, label: 'Engagement Dinners', desc: 'Intimate proposals and post-proposal celebration dining' },
+  { icon: Briefcase, label: 'Executive Dinners', desc: 'Professional, discreet service for business gatherings' },
+  { icon: Wine, label: 'Wedding Rehearsal Dinners', desc: 'Elegant pre-wedding family dining at your villa' },
+  { icon: Heart, label: 'Romantic Dinners', desc: 'Private chef dinner for couples seeking an unforgettable evening' },
+  { icon: Star, label: 'Luxury Villa Stays', desc: 'Fine dining catering that matches your villa experience' },
+]
+
+const CUISINE_DIRECTIONS = [
+  { name: 'Italian', desc: 'Handmade pasta, risotto, osso buco, tiramisu' },
+  { name: 'Mediterranean', desc: 'Olive oil, fresh seafood, grilled vegetables, herbs' },
+  { name: 'Indonesian Fine Dining', desc: 'Elevated local flavors with modern technique' },
+  { name: 'Seafood', desc: 'Catch-of-the-day, shellfish, ceviche, grilled fish' },
+  { name: 'Steak', desc: 'Wagyu, ribeye, tenderloin with premium sides' },
+  { name: 'Vegetarian Tasting', desc: 'Plant-based multi-course with seasonal produce' },
+  { name: 'Asian Fusion', desc: 'East-meets-West flavors with creative presentation' },
+  { name: 'Custom Chef Menu', desc: 'Bespoke menu designed around your preferences' },
+]
+
+const TABLE_STYLING = [
+  { icon: Sparkles, label: 'Candles & Ambient Lighting', desc: 'Soft candlelight and villa lighting for atmosphere' },
+  { icon: Flower2, label: 'Fresh Flowers', desc: 'Seasonal arrangements matching your color palette' },
+  { icon: Utensils, label: 'Premium Linen & Chargers', desc: 'Crisp tablecloths, napkins, and decorative chargers' },
+  { icon: GlassWater, label: 'Glassware & Stemware', desc: 'Wine glasses, water goblets, and champagne flutes' },
+  { icon: ChefHat, label: 'Printed Menus', desc: 'Personalized menu cards at each place setting' },
+  { icon: Star, label: 'Villa Lighting Design', desc: 'Fairy lights, lanterns, and poolside illumination' },
+]
+
+const WINE_PAIRINGS = [
+  { label: '4-Course Wine Pairing', price: 'IDR 700,000/person', icon: Wine },
+  { label: '5-Course Wine Pairing', price: 'IDR 900,000/person', icon: Wine },
+  { label: 'Welcome Champagne', price: 'IDR 200,000/person', icon: Sparkles },
+  { label: 'Mocktail Pairing', price: 'IDR 350,000/person', icon: GlassWater },
 ]
 
 const FAQS = [
-  { q: 'When is plated better than buffet?', a: 'Plated is ideal for formal events, smaller groups, and when you want a restaurant-quality experience with individual service.' },
-  { q: 'How long is plated service?', a: 'Typically 2.5–3 hours from the amuse-bouche to coffee.' },
-  { q: 'Can the menu be customised?', a: 'Yes. We create custom menus for every booking based on your preferences and dietary requirements.' },
-  { q: "What's the minimum spend?", a: 'IDR 5,000,000 per event.' },
-  { q: 'Do you handle wine?', a: 'Wine pairing is available as an add-on. See the Wine Pairing section for details.' },
-  { q: 'Will the food be hot?', a: 'Yes. We use portable hot-holding equipment to ensure every course arrives at the right temperature.' },
-  { q: 'Is the chef on-site?', a: 'Yes. Your chef is in your kitchen all evening, plating and finishing every dish.' },
-  { q: 'Can I take leftovers?', a: 'Yes. Any leftovers are packaged for you with reheating instructions.' },
+  { q: 'How many courses can we choose?', a: 'We offer three-course, four-course, and five-course plated dinners. Each can be customized with amuse-bouche, palate cleansers, and petits fours.' },
+  { q: 'What is the minimum number of guests?', a: 'There is no strict minimum guest count, but there is a minimum spend of IDR 5,000,000 per event. This covers chef travel, prep time, equipment, and base staffing.' },
+  { q: 'Can the menu be fully vegetarian?', a: 'Yes. We create vegetarian and vegan tasting menus using seasonal Balinese produce. Plant-based multi-course dinners are a specialty.' },
+  { q: 'Do you bring plates, cutlery, and glassware?', a: 'Yes. Every plated dinner includes full tableware: porcelain plates, premium cutlery, glassware, linens, and chargers. You do not need to provide anything.' },
+  { q: 'How long does a plated dinner take?', a: 'A typical plated dinner runs 2.5 to 3.5 hours from the amuse-bouche to coffee and petits fours. Timing is adjusted to your preference.' },
+  { q: 'What areas in Bali do you serve?', a: 'We serve Seminyak, Canggu, Uluwatu, Ubud, Sanur, Nusa Dua, Jimbaran, and surrounding areas. Travel fees may apply for remote locations.' },
+  { q: 'How far in advance should we book?', a: 'We recommend booking 2–4 weeks ahead for full menu planning. Last-minute bookings are possible depending on availability.' },
+]
+
+const SERVICE_FLOW = [
+  { step: '1', title: 'Arrival & Setup', desc: 'Team arrives 3–4 hours before service with all equipment and ingredients.' },
+  { step: '2', title: 'Kitchen Prep', desc: 'Chef preps mise en place, stocks, and sauces in your villa kitchen.' },
+  { step: '3', title: 'Table Styling', desc: 'Staff dresses tables with linen, chargers, glassware, candles, and printed menus.' },
+  { step: '4', title: 'Amuse-Bouche', desc: 'Guests are greeted with a small bite while seating is finalized.' },
+  { step: '5', title: 'Course Timing', desc: 'Each course is served at a measured pace, typically 20–30 minutes apart.' },
+  { step: '6', title: 'Plating & Service', desc: 'Chef plates every dish; waiters serve individually with white-glove attention.' },
+  { step: '7', title: 'Clearing & Reset', desc: 'Tables are cleared and reset between courses for a clean, elegant flow.' },
+  { step: '8', title: 'Cleanup & Departure', desc: 'Full kitchen and dining area cleanup. Leftovers packaged with reheating instructions.' },
 ]
 
 export default function CateringPlatedPage() {
@@ -134,30 +186,30 @@ export default function CateringPlatedPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Plated Set Menu Catering Bali | Villa Dinners — myCHEF"
-        description="Three- to five-course plated dinners at your Bali villa. English-speaking chef, service team, full setup. From IDR 800K/person. Min. IDR 5M."
-        canonical={`${SITE}/catering/plated-catering`}
+        title="Plated Dinner Bali | Private Chef Fine Dining at Your Villa"
+        description="Plated dinner catering in Bali for villas, anniversaries, birthdays, weddings, and private events with chef-led multi-course menus."
+        canonical={`${SITE}/catering/plated-dinner-bali`}
         ogImage={`${SITE}/generated/catering/plated-menus.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Plated Set Menu Catering Bali', 'Three-, four-, or five-course plated dinners served restaurant-style at your Bali villa.', `${SITE}/catering/plated-catering`, 'IDR'),
-          offerSchema('3-Course Plated', 800000, 'IDR', `${SITE}/catering/plated-catering`),
-          offerSchema('4-Course Plated', 1000000, 'IDR', `${SITE}/catering/plated-catering`),
-          offerSchema('5-Course Premium', 1300000, 'IDR', `${SITE}/catering/plated-catering`),
+          serviceSchema('Plated Dinner Bali', 'Private chef fine dining and multi-course plated dinners served at villas across Bali.', `${SITE}/catering/plated-dinner-bali`, 'IDR'),
+          offerSchema('3-Course Plated', 800000, 'IDR', `${SITE}/catering/plated-dinner-bali`),
+          offerSchema('4-Course Plated', 1000000, 'IDR', `${SITE}/catering/plated-dinner-bali`),
+          offerSchema('5-Course Premium', 1300000, 'IDR', `${SITE}/catering/plated-dinner-bali`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Plated Catering', `${SITE}/catering/plated-catering`, 'Catering', `${SITE}/catering`),
+          breadcrumbSchema('Plated Dinner Bali', `${SITE}/catering/plated-dinner-bali`, 'Catering', `${SITE}/catering`),
         ]}
       />
 
-      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Plated Catering' }]} />
+      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Plated Dinner Bali' }]} />
 
       {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/generated/catering/plated-menus.webp"
-            alt="Elegant plated dinner course served at a Bali villa"
+            alt="Elegant plated dinner course served at a Bali villa for private fine dining"
             width={1920}
             height={1080}
             fetchPriority="high"
@@ -166,21 +218,22 @@ export default function CateringPlatedPage() {
           <div className="absolute inset-0 bg-black/75" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Plated Catering
+          <p className="text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600, color: ACCENT }}>
+            Private Chef Fine Dining
           </p>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Plated Set Menu Catering — Bali Villas
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Plated Dinner Bali for Private Villa Fine Dining
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Three-, four-, or five-course plated dinners served restaurant-style at your villa. Minimum IDR 5,000,000 per event.
+            A structured, multi-course dinner experience with chef-led cooking, elegant plating, service staff, and full villa setup.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
               href="#book"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all"
+              style={{ background: ACCENT }}
             >
-              <Calendar className="w-4 h-4" /> Request Plated Quote
+              <Calendar className="w-4 h-4" /> Plan My Plated Dinner
             </a>
             <a
               href="#menus"
@@ -196,52 +249,88 @@ export default function CateringPlatedPage() {
       {/* ═══════ TRUST STRIP ═══════ */}
       <TrustStrip />
 
-      {/* ═══════ PACKAGES ═══════ */}
+      {/* ═══════ SECTION 1: PLATED DINNER IN BALI ═══════ */}
       <section className="plated-content py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 1 — THE INQUIRY"
-            title="Choose Your Plated Experience"
+            eyebrow="The Experience"
+            title="Plated Dinner in Bali"
+            subtitle="A plated dinner offers formality, control, and a premium experience that buffet service cannot match."
           />
-          <div className="grid md:grid-cols-3 gap-6">
-            {PLATED_PACKAGES.map((pkg) => (
-              <CateringPackageCard key={pkg.title} {...pkg} accent="#6B8E5A" />
-            ))}
-          </div>
-          <div className="mt-6 text-center">
-            <p className="text-sm text-[#4A4745]/70">
-              All-in prices include 21% service charge and tax:{' '}
-              <AllInPrice price={800000} className="inline" /> ·{' '}
-              <AllInPrice price={1000000} className="inline" /> ·{' '}
-              <AllInPrice price={1300000} className="inline" />
-            </p>
-          </div>
-
-          {/* Group Total Calculators */}
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <GroupTotalCalculator pricePerPerson={800000} minGuests={7} maxGuests={60} defaultGuests={10} accent="#6B8E5A" />
-            <GroupTotalCalculator pricePerPerson={1000000} minGuests={5} maxGuests={60} defaultGuests={10} accent="#6B8E5A" />
-            <GroupTotalCalculator pricePerPerson={1300000} minGuests={4} maxGuests={60} defaultGuests={10} accent="#6B8E5A" />
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6">
+              <p className="text-[#4A4745] leading-relaxed">
+                A <strong>plated dinner in Bali</strong> is the gold standard for private villa events. Unlike buffet service, where guests serve themselves from heated trays, a plated dinner is a choreographed experience: each course is individually prepared, artfully plated, and served to guests at the table by professional waitstaff.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed">
+                This format gives you complete control over pacing, presentation, and atmosphere. Your private chef designs a multi-course menu tailored to your preferences, dietary needs, and the occasion. Whether it is a romantic dinner for two or a celebration for forty, plated service elevates the evening into something memorable.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  'Individual restaurant-quality plating',
+                  'Controlled course timing',
+                  'White-glove waiter service',
+                  'Intimate, focused atmosphere',
+                  'Custom menu per guest',
+                  'Elegant table styling included',
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 flex-shrink-0" style={{ color: ACCENT }} />
+                    <span className="text-sm text-[#4A4745]">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/generated/hub-fine-dining.webp"
+                alt="Private plated dinner setup at a Bali villa with elegant table styling"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ═══════ SAMPLE MENUS ═══════ */}
-      <section id="menus" className="py-20 md:py-28 px-6">
+      {/* ═══════ SECTION 2: BEST OCCASIONS ═══════ */}
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 2 — THE MENU"
-            title="Sample Menus by Tier"
-            subtitle="Example dishes for each course tier. Every menu is customised to your preferences."
+            eyebrow="Celebrate"
+            title="Best Occasions for a Plated Dinner"
+            subtitle="From intimate anniversaries to executive gatherings, plated service suits the moments that matter most."
           />
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {OCCASIONS.map((occ) => (
+              <div key={occ.label} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: `${ACCENT}15` }}>
+                  <occ.icon className="w-6 h-6" style={{ color: ACCENT }} />
+                </div>
+                <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{occ.label}</h3>
+                <p className="text-sm text-[#4A4745] leading-relaxed">{occ.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 3: MENU STRUCTURE ═══════ */}
+      <section id="menus" className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="The Menu"
+            title="Menu Structure & Course Options"
+            subtitle="Choose your course count. Every menu is customized with wine pairing, amuse-bouche, and dietary alternatives."
+          />
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             {SAMPLE_MENUS.map((menu) => (
-              <div key={menu.tier} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
+              <div key={menu.tier} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
                 <h3 className="text-xl md:text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.tier}</h3>
                 <div className="space-y-3">
                   {menu.courses.map((course, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <span className="w-6 h-6 rounded-full bg-[#6B8E5A]/10 text-[#6B8E5A] text-xs font-semibold flex items-center justify-center">{i + 1}</span>
+                      <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold text-white" style={{ background: ACCENT }}>{i + 1}</span>
                       <span className="text-[#4A4745] text-sm">{course}</span>
                     </div>
                   ))}
@@ -249,35 +338,57 @@ export default function CateringPlatedPage() {
               </div>
             ))}
           </div>
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
+              <h3 className="text-xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Add-Ons & Enhancements</h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  { label: 'Wine Pairing', desc: 'Matched wine per course' },
+                  { label: 'Amuse-Bouche', desc: 'Complimentary with 4+ courses' },
+                  { label: 'Dessert Upgrade', desc: 'Petits fours, cheese course' },
+                  { label: 'Custom Dietary', desc: 'Vegan, gluten-free, halal, kosher' },
+                ].map((add) => (
+                  <div key={add.label} className="flex items-center gap-3">
+                    <Star className="w-4 h-4 flex-shrink-0" style={{ color: ACCENT }} />
+                    <div>
+                      <p className="text-sm font-medium text-[#1A1A1A]">{add.label}</p>
+                      <p className="text-xs text-[#4A4745]">{add.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ═══════ WHAT'S INCLUDED ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      {/* ═══════ SECTION 4: SERVICE FLOW ═══════ */}
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 3 — THE SERVICE"
-            title="What's Included"
-            subtitle="Every plated dinner includes the team, equipment, and service required for a restaurant-quality experience at your villa."
+            eyebrow="The Evening"
+            title="Service Flow"
+            subtitle="From arrival to departure, every step is choreographed for a seamless villa dining experience."
           />
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {INCLUDED.map((item) => (
-              <div key={item} className="flex items-center gap-3 p-4 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3]">
-                <Check className="w-5 h-5 text-[#6B8E5A]" />
-                <span className="text-[#4A4745] text-sm">{item}</span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {SERVICE_FLOW.map((step) => (
+              <div key={step.step} className="bg-white rounded-2xl border border-[#E8E6E3] p-5 md:p-6">
+                <span className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white mb-3" style={{ background: ACCENT }}>{step.step}</span>
+                <h4 className="font-semibold text-[#1A1A1A] mb-1 text-sm">{step.title}</h4>
+                <p className="text-xs text-[#4A4745] leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════ WHY PLATED VS BUFFET ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      {/* ═══════ SECTION 5: WHY PLATED BEATS BUFFET ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 4 — THE COMPARISON"
-            title="Why Plated vs Buffet"
-            subtitle="Plated service is the right choice when you want formality, precision, and an intimate dining experience."
+            eyebrow="The Comparison"
+            title="Why Plated Beats Buffet for Formal Events"
+            subtitle="Better pacing, better presentation, less guest movement, stronger atmosphere, and more controlled kitchen output."
           />
           <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left">
@@ -292,7 +403,7 @@ export default function CateringPlatedPage() {
                 {WHY_PLATED_VS_BUFFET.map((row) => (
                   <tr key={row.title} className="border-b border-[#E8E6E3]">
                     <td className="py-4 font-medium">{row.title}</td>
-                    <td className="py-4 text-[#6B8E5A] font-semibold">{row.plated}</td>
+                    <td className="py-4 font-semibold" style={{ color: ACCENT }}>{row.plated}</td>
                     <td className="py-4 text-[#4A4745]">{row.buffet}</td>
                   </tr>
                 ))}
@@ -304,7 +415,7 @@ export default function CateringPlatedPage() {
               <div key={row.title} className="bg-white rounded-xl border border-[#E8E6E3] p-4">
                 <p className="font-medium mb-2">{row.title}</p>
                 <div className="space-y-1 text-sm">
-                  <div className="flex justify-between"><span className="text-[#4A4745]">Plated</span><span className="text-[#6B8E5A] font-semibold">{row.plated}</span></div>
+                  <div className="flex justify-between"><span className="text-[#4A4745]">Plated</span><span className="font-semibold" style={{ color: ACCENT }}>{row.plated}</span></div>
                   <div className="flex justify-between"><span className="text-[#4A4745]">Buffet</span><span className="text-[#4A4745]">{row.buffet}</span></div>
                 </div>
               </div>
@@ -313,52 +424,119 @@ export default function CateringPlatedPage() {
         </div>
       </section>
 
-      {/* ═══════ WINE PAIRING ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[800px] mx-auto">
+      {/* ═══════ SECTION 6: CUISINE DIRECTIONS ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 5 — THE PAIRING"
-            title="Wine Pairing Add-On"
-            subtitle="Enhance your plated dinner with curated wine pairings and welcome champagne."
+            eyebrow="The Kitchen"
+            title="Cuisine Directions"
+            subtitle="Italian, Mediterranean, Indonesian fine dining, seafood, steak, vegetarian tasting, Asian fusion, or a fully custom chef menu."
           />
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div className="flex items-center gap-4 p-5 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3]">
-              <Wine className="w-5 h-5 text-[#6B8E5A]" />
-              <div>
-                <p className="font-medium text-sm">4-Course Wine Pairing</p>
-                <p className="text-[#6B8E5A] font-semibold text-sm">IDR 700,000/person</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {CUISINE_DIRECTIONS.map((c) => (
+              <div key={c.name} className="bg-white rounded-2xl border border-[#E8E6E3] p-5 md:p-6 hover:shadow-lg transition-all duration-300">
+                <h4 className="font-semibold text-[#1A1A1A] mb-1 text-sm" style={{ fontFamily: "'Playfair Display', serif" }}>{c.name}</h4>
+                <p className="text-xs text-[#4A4745] leading-relaxed">{c.desc}</p>
               </div>
-            </div>
-            <div className="flex items-center gap-4 p-5 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3]">
-              <Wine className="w-5 h-5 text-[#6B8E5A]" />
-              <div>
-                <p className="font-medium text-sm">5-Course Wine Pairing</p>
-                <p className="text-[#6B8E5A] font-semibold text-sm">IDR 900,000/person</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-5 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] sm:col-span-2">
-              <Sparkles className="w-5 h-5 text-[#6B8E5A]" />
-              <div>
-                <p className="font-medium text-sm">Welcome Champagne</p>
-                <p className="text-[#6B8E5A] font-semibold text-sm">IDR 200,000/person</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════ PHOTO GALLERY ═══════ */}
+      {/* ═══════ SECTION 7: TABLE STYLING ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="The Setting"
+            title="Table Styling & Villa Setup"
+            subtitle="Candles, linen, printed menus, flowers, chargers, glassware, and villa lighting — every detail considered."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {TABLE_STYLING.map((item) => (
+              <div key={item.label} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-5 md:p-6 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: `${ACCENT}15` }}>
+                  <item.icon className="w-5 h-5" style={{ color: ACCENT }} />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-[#1A1A1A] text-sm mb-1">{item.label}</h4>
+                  <p className="text-xs text-[#4A4745] leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 8: WINE AND COCKTAIL PAIRING ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[800px] mx-auto">
+          <SectionHeader
+            eyebrow="The Pairing"
+            title="Wine and Cocktail Pairing"
+            subtitle="Pair each course with wine, cocktails, mocktails, or non-alcoholic pairing curated by our team."
+          />
+          <div className="grid sm:grid-cols-2 gap-4">
+            {WINE_PAIRINGS.map((wp) => (
+              <div key={wp.label} className="flex items-center gap-4 p-5 bg-white rounded-xl border border-[#E8E6E3]">
+                <wp.icon className="w-5 h-5 flex-shrink-0" style={{ color: ACCENT }} />
+                <div>
+                  <p className="font-medium text-sm text-[#1A1A1A]">{wp.label}</p>
+                  <p className="font-semibold text-sm" style={{ color: ACCENT }}>{wp.price}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-5 md:p-6">
+            <p className="text-sm text-[#4A4745] leading-relaxed">
+              Our sommelier selects wines that complement each course — crisp whites for seafood starters, full-bodied reds for steak mains, and dessert wines or champagne to finish. Non-alcoholic pairings use fresh juices, herbal infusions, and craft mocktails.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ PACKAGES + PRICING ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Packages"
+            title="Choose Your Plated Experience"
+          />
+          <div className="grid md:grid-cols-3 gap-6">
+            {PLATED_PACKAGES.map((pkg) => (
+              <CateringPackageCard key={pkg.title} {...pkg} accent={ACCENT} />
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-[#4A4745]/70">
+              All-in prices include 21% service charge and tax:{' '}
+              <AllInPrice price={800000} className="inline" /> ·{' '}
+              <AllInPrice price={1000000} className="inline" /> ·{' '}
+              <AllInPrice price={1300000} className="inline" />
+            </p>
+          </div>
+
+          {/* Group Total Calculators */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            <GroupTotalCalculator pricePerPerson={800000} minGuests={7} maxGuests={60} defaultGuests={10} accent={ACCENT} />
+            <GroupTotalCalculator pricePerPerson={1000000} minGuests={5} maxGuests={60} defaultGuests={10} accent={ACCENT} />
+            <GroupTotalCalculator pricePerPerson={1300000} minGuests={4} maxGuests={60} defaultGuests={10} accent={ACCENT} />
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ WHAT'S INCLUDED ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 6 — THE SETUP"
-            title="Plated Dinner Gallery"
-            subtitle="Real plated course presentations from villa dinners across Bali."
+            eyebrow="Inclusions"
+            title="What's Included"
+            subtitle="Every plated dinner includes the team, equipment, and service required for a restaurant-quality experience at your villa."
           />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {PLATED_GALLERY.map((src, i) => (
-              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={src} alt={`Plated dinner setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {INCLUDED.map((item) => (
+              <div key={item} className="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#E8E6E3]">
+                <Check className="w-5 h-5 flex-shrink-0" style={{ color: ACCENT }} />
+                <span className="text-[#4A4745] text-sm">{item}</span>
               </div>
             ))}
           </div>
@@ -369,14 +547,14 @@ export default function CateringPlatedPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 7 — THE INVESTMENT"
+            eyebrow="Investment"
             title="Group Size Guide & Minimum Spend"
             subtitle="All-in prices include service charge and tax (×1.21). Final quote confirmed before deposit."
           />
           <div className="max-w-3xl mx-auto mb-10">
             <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
               <div className="flex items-center gap-3 mb-4">
-                <MessageSquare className="w-5 h-5 text-[#6B8E5A]" />
+                <MessageSquare className="w-5 h-5 flex-shrink-0" style={{ color: ACCENT }} />
                 <h3 className="font-medium text-[#1A1A1A]">Minimum spend: IDR 5,000,000 per event</h3>
               </div>
               <p className="text-sm text-[#4A4745] mb-4">
@@ -385,15 +563,15 @@ export default function CateringPlatedPage() {
               <div className="grid sm:grid-cols-3 gap-3 text-sm">
                 <div className="bg-white rounded-xl border border-[#E8E6E3] p-4 text-center">
                   <p className="text-[#4A4745] mb-1">6 guests × 3-Course</p>
-                  <p className="text-[#6B8E5A] font-semibold">IDR 5.81M</p>
+                  <p className="font-semibold" style={{ color: ACCENT }}>IDR 5.81M</p>
                 </div>
                 <div className="bg-white rounded-xl border border-[#E8E6E3] p-4 text-center">
                   <p className="text-[#4A4745] mb-1">5 guests × 4-Course</p>
-                  <p className="text-[#6B8E5A] font-semibold">IDR 6.05M</p>
+                  <p className="font-semibold" style={{ color: ACCENT }}>IDR 6.05M</p>
                 </div>
                 <div className="bg-white rounded-xl border border-[#E8E6E3] p-4 text-center">
                   <p className="text-[#4A4745] mb-1">4 guests × 5-Course</p>
-                  <p className="text-[#6B8E5A] font-semibold">IDR 6.29M</p>
+                  <p className="font-semibold" style={{ color: ACCENT }}>IDR 6.29M</p>
                 </div>
               </div>
             </div>
@@ -412,9 +590,9 @@ export default function CateringPlatedPage() {
                 {GROUP_TOTALS.map((row) => (
                   <tr key={row.guests} className="border-b border-[#E8E6E3]">
                     <td className="py-4 font-medium">{row.guests} guests</td>
-                    <td className="py-4 text-[#6B8E5A] font-semibold">{row.course3}</td>
-                    <td className="py-4 text-[#6B8E5A] font-semibold">{row.course4}</td>
-                    <td className="py-4 text-[#6B8E5A] font-semibold">{row.course5}</td>
+                    <td className="py-4 font-semibold" style={{ color: ACCENT }}>{row.course3}</td>
+                    <td className="py-4 font-semibold" style={{ color: ACCENT }}>{row.course4}</td>
+                    <td className="py-4 font-semibold" style={{ color: ACCENT }}>{row.course5}</td>
                   </tr>
                 ))}
               </tbody>
@@ -425,10 +603,28 @@ export default function CateringPlatedPage() {
               <div key={row.guests} className="bg-white rounded-xl border border-[#E8E6E3] p-4">
                 <p className="font-medium mb-3">{row.guests} guests</p>
                 <div className="space-y-2 text-sm">
-                  <div className="flex justify-between"><span className="text-[#4A4745]">3-Course</span><span className="text-[#6B8E5A] font-semibold">{row.course3}</span></div>
-                  <div className="flex justify-between"><span className="text-[#4A4745]">4-Course</span><span className="text-[#6B8E5A] font-semibold">{row.course4}</span></div>
-                  <div className="flex justify-between"><span className="text-[#4A4745]">5-Course</span><span className="text-[#6B8E5A] font-semibold">{row.course5}</span></div>
+                  <div className="flex justify-between"><span className="text-[#4A4745]">3-Course</span><span className="font-semibold" style={{ color: ACCENT }}>{row.course3}</span></div>
+                  <div className="flex justify-between"><span className="text-[#4A4745]">4-Course</span><span className="font-semibold" style={{ color: ACCENT }}>{row.course4}</span></div>
+                  <div className="flex justify-between"><span className="text-[#4A4745]">5-Course</span><span className="font-semibold" style={{ color: ACCENT }}>{row.course5}</span></div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ PHOTO GALLERY ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Gallery"
+            title="Plated Dinner Gallery"
+            subtitle="Real plated course presentations from villa dinners across Bali."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {PLATED_GALLERY.map((src, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
+                <img src={src} alt={`Plated dinner setup ${i + 1} at Bali villa`} className="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>
@@ -446,53 +642,68 @@ export default function CateringPlatedPage() {
         subtitle="Real reviews from villa plated dinners across Bali."
       />
 
-      {/* ═══════ FAQ ═══════ */}
+      {/* ═══════ SECTION 9: FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="Questions"
-            title="Plated Catering FAQ"
+            title="Plated Dinner FAQ"
           />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={3} />
         </div>
       </section>
 
-      {/* ═══════ BOOKING FORM ═══════ */}
+      {/* ═══════ SECTION 10: CTA + BOOKING FORM ═══════ */}
       <section id="book" className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="Book Now"
-            title="Request Plated Catering"
+            title="Request Your Plated Dinner"
+            subtitle="Plan your private plated dinner with date, guest count, cuisine, dietary needs, and villa location."
           />
           <BookingFormCatering
-            title="Request Plated Catering"
+            title="Plan My Plated Dinner"
             subtitle="We will confirm availability, menu direction, and pricing within the hour."
             fields={[
               { name: 'package', label: 'Plated Package', type: 'select', icon: Utensils, required: true },
               { name: 'date', label: 'Event Date', type: 'date', icon: Calendar, required: true },
-              { name: 'time', label: 'Event Time', type: 'text', icon: ChefHat, placeholder: 'e.g. 7:00 PM' },
-              { name: 'area', label: 'Area', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu, Ubud...', required: true },
+              { name: 'time', label: 'Event Time', type: 'text', icon: Clock, placeholder: 'e.g. 7:00 PM' },
+              { name: 'area', label: 'Villa Location', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu, Ubud...', required: true },
               { name: 'villa', label: 'Villa Name', type: 'text', required: true },
               { name: 'guests', label: 'Guest Count', type: 'number', icon: Users, placeholder: 'e.g. 25', required: true },
-              { name: 'dietary', label: 'Dietary Notes', type: 'textarea', placeholder: 'Allergies, restrictions, preferences...' },
+              { name: 'cuisine', label: 'Preferred Cuisine', type: 'text', icon: ChefHat, placeholder: 'Italian, seafood, vegetarian...' },
+              { name: 'dietary', label: 'Dietary Needs', type: 'textarea', placeholder: 'Allergies, restrictions, preferences...' },
               { name: 'name', label: 'Your Name', type: 'text', required: true },
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
               { name: 'email', label: 'Email', type: 'text' },
             ]}
             packageOptions={['3-Course Plated', '4-Course Plated', '5-Course Premium']}
-            accent="#6B8E5A"
+            accent={ACCENT}
           />
         </div>
       </section>
 
       <PressStrip />
 
+      {/* ═══════ INTERNAL LINKS ═══════ */}
+      <section className="py-16 md:py-20 px-6 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-[1280px] mx-auto">
+          <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Explore More</p>
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+            <Link to="/catering/fine-dining" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Fine Dining</Link>
+            <Link to="/catering/villa" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Villa Catering</Link>
+            <Link to="/events" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Events</Link>
+            <Link to="/contact" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Contact</Link>
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/generated/luna-plating.webp"
-            alt="Plated dinner course ready to serve"
+            alt="Plated dinner course ready to serve at Bali villa"
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -500,7 +711,7 @@ export default function CateringPlatedPage() {
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Ready for a Restaurant-Style Dinner at Your Villa?
+            Ready for a Private Plated Dinner in Bali?
           </h2>
           <p className="text-white/80 text-lg mb-8">
             Send your date, villa, guest count, and preferred course tier. We will confirm availability and pricing by WhatsApp.
@@ -508,9 +719,10 @@ export default function CateringPlatedPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#book"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all"
+              style={{ background: ACCENT }}
             >
-              <Calendar className="w-4 h-4" /> Request Plated Quote
+              <Calendar className="w-4 h-4" /> Plan My Plated Dinner
             </a>
             <a
               href={WA_LINK}

@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
-  MessageCircle, Check, Phone, Calendar, Users, MapPin,
-  Utensils, Briefcase, ChefHat, ShieldCheck, Clock, FileText,
-  ArrowRight, Coffee, Wine, Sun, Moon, Cookie,
+  MessageCircle, Check, Phone, Calendar, Users,
+  Utensils, Briefcase, ChefHat, Clock, FileText,
+  Coffee, Wine, Sun, Moon, Cookie,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

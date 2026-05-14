@@ -540,14 +540,14 @@ export default function LunaPage() {
             (slightly taller than wide), object-position center-top so the chef
             hat is always visible, no max-height cap.
           */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-9 mb-16 max-w-[1080px] mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 mb-16 max-w-[1080px] mx-auto">
             {THE_FOUR.map((chef) => (
               <div
                 key={chef.name}
                 className="group flex flex-col"
               >
                 {/* Portrait — magazine framing, full hat + shoulders visible */}
-                <div className="relative aspect-[4/5] overflow-hidden rounded-t-2xl">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-t-2xl">
                   <img
                     src={chef.image}
                     alt={chef.name}
@@ -564,11 +564,11 @@ export default function LunaPage() {
                 {/* Bio card */}
                 <div className="p-5 md:p-7 rounded-b-2xl border border-t-0 border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
                   <div className="flex items-baseline justify-between mb-1">
-                    <h3 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>{chef.name}</h3>
+                    <h3 className="text-base md:text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>{chef.name}</h3>
                     <span className="text-[10px] text-white/60 tracking-wider uppercase">{chef.origin}</span>
                   </div>
-                  <p className="text-[#C5A028] text-xs tracking-[0.15em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{chef.role}</p>
-                  <p className="text-white/50 text-sm leading-relaxed">{chef.bio}</p>
+                  <p className="text-[#C5A028] text-[10px] tracking-[0.15em] uppercase mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{chef.role}</p>
+                  <p className="text-white/50 text-xs leading-relaxed line-clamp-4">{chef.bio}</p>
                 </div>
               </div>
             ))}

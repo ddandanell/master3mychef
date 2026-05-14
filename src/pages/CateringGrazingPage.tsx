@@ -2,7 +2,8 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
   MessageCircle, Check, Phone, Calendar, Users, MapPin,
-  Utensils, Heart, Leaf, Flower2, Truck, ShieldCheck, Sparkles, Package, CreditCard, ChefHat,
+  Utensils, Heart, Leaf, Flower2, Truck, ShieldCheck, Sparkles, Package,
+  Clock, Table2, Wine, Baby, ArrowRight,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -24,137 +25,151 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20a%20grazing%20table.'
+const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20a%20grazing%20table%20in%20Bali.'
 const SITE = 'https://mychef.id'
+const PAGE_URL = `${SITE}/catering/grazing-tables-bali`
 
+const GOLD = '#C5A028'
+
+/* ═══════════════════════════════════════════════════════════════
+   PACKAGES — Grazing Table Sizes
+   ═══════════════════════════════════════════════════════════════ */
 const PACKAGES = [
   {
-    title: 'Mini Grazing Box',
-    guests: '2 pax',
+    title: 'Small Grazing Board',
+    guests: '2–4 pax',
     price: 'IDR 650,000',
     priceNum: 650000,
-    includes: ['Cheese', 'Cold cuts', 'Crackers', 'Fruit', 'Dips', 'Nuts', 'Small sweets', 'Styled box presentation'],
+    includes: ['Cheese selection', 'Cold cuts', 'Crackers', 'Fresh fruit', 'Dips', 'Nuts', 'Small sweets', 'Styled board presentation'],
     bestFor: 'Couples, villa arrival snack, honeymoon setup, private poolside snack, small wine night',
   },
   {
-    title: 'Cheese & Cold Cuts Platter',
-    guests: '10 pax',
+    title: 'Medium Villa Table',
+    guests: '8–12 pax',
     price: 'IDR 2,700,000',
     priceNum: 2700000,
-    includes: ['4-6 cheeses', '3-4 cured meats', 'Sourdough', 'Crackers', 'Marinated vegetables', 'Dips', 'Honey', 'Fresh & dried fruit', 'Nuts', 'Edible flowers'],
+    includes: ['4–6 cheeses', '3–4 cured meats', 'Sourdough & bread', 'Crackers', 'Marinated vegetables', 'Dips', 'Honey', 'Fresh & dried fruit', 'Nuts', 'Edible flowers'],
     bestFor: 'Small villa parties, birthdays, wine nights, welcome drinks, group snacks',
   },
   {
-    title: 'Wedding-Scale Grazing Table',
-    guests: '20 to 50 guests',
+    title: 'Full Event Grazing Table',
+    guests: '15–30 guests',
     price: 'IDR 350,000/person',
     priceNum: 350000,
-    includes: ['Large styled grazing table', 'Sourdough', 'Crackers', '4-6 cheeses', '3-4 cured meats', 'Marinated vegetables', 'Dips', 'Honey', 'Fresh & dried fruit', 'Nuts', 'Edible flowers', 'Vegan version available'],
-    bestFor: 'Weddings, larger villa events, corporate events, poolside parties, pre-dinner food, cocktail hour',
+    includes: ['Large styled grazing table', 'Sourdough', 'Crackers', '4–6 cheeses', '3–4 cured meats', 'Marinated vegetables', 'Dips', 'Honey', 'Fresh & dried fruit', 'Nuts', 'Edible flowers', 'Vegan version available'],
+    bestFor: 'Villa events, poolside parties, pre-dinner food, cocktail hour, corporate reception',
+  },
+  {
+    title: 'Wedding Grazing Table',
+    guests: '30–80 guests',
+    price: 'IDR 325,000/person',
+    priceNum: 325000,
+    includes: ['Premium styled grazing table', 'Artisan breads', 'Crackers', '6–8 cheeses', '4–5 cured meats', 'Marinated vegetables', 'Dips & spreads', 'Honey & chutney', 'Fresh & dried fruit', 'Nuts & seeds', 'Edible flowers', 'Labels & signage', 'Vegan version available'],
+    bestFor: 'Weddings, bridal showers, large villa celebrations, luxury events',
+  },
+  {
+    title: 'Corporate Reception Table',
+    guests: '50–150 guests',
+    price: 'IDR 300,000/person',
+    priceNum: 300000,
+    includes: ['Executive grazing display', 'Artisan breads', 'Premium crackers', '6–8 cheeses', '4–5 cured meats', 'Marinated vegetables', 'Gourmet dips', 'Honey & preserves', 'Seasonal fruit', 'Nuts & seeds', 'Edible flowers', 'Branded labels', 'Dedicated setup staff'],
+    bestFor: 'Corporate launches, brand events, retreat welcome, networking receptions',
   },
 ]
 
-const INCLUDED = [
-  'Sourdough', 'Crackers', 'Cheese selection', 'Cold cuts',
-  'Marinated vegetables', 'Dips', 'Honey', 'Fresh fruit',
-  'Dried fruit', 'Nuts', 'Edible flowers', 'Styled presentation',
+/* ═══════════════════════════════════════════════════════════════
+   WHAT GOES ON THE TABLE
+   ═══════════════════════════════════════════════════════════════ */
+const TABLE_COMPONENTS = [
+  { category: 'Cheese', items: ['Brie & camembert', 'Aged cheddar', 'Blue cheese', 'Manchego', 'Goat cheese', 'Cream cheese'] },
+  { category: 'Cured Meats', items: ['Prosciutto di Parma', 'Salami', 'Chorizo', 'Mortadella', 'Coppa', 'Serrano ham'] },
+  { category: 'Fruit', items: ['Fresh grapes', 'Figs', 'Berries', 'Pomegranate', 'Mango', 'Dragon fruit'] },
+  { category: 'Bread & Crackers', items: ['Sourdough', 'Baguette', 'Water crackers', 'Seeded crisps', 'Grissini', 'Rye bread'] },
+  { category: 'Dips & Spreads', items: ['Hummus', 'Tapenade', 'Baba ganoush', 'Tzatziki', 'Fruit chutney', 'Local honey'] },
+  { category: 'Extras', items: ['Marinated olives', 'Roasted nuts', 'Dried apricots', 'Dark chocolate', 'Vegetable crudités', 'Microgreens'] },
 ]
 
-const ADDONS = [
-  { title: 'Keep-the-board bamboo upgrade', price: 'IDR 800,000', description: 'Beautiful bamboo serving board to keep' },
-  { title: 'Floating pool tray styling', price: 'IDR 1,200,000', description: 'Grazing tray styled by the pool' },
-  { title: 'Extra floral styling', price: 'Quote based on size', description: 'Additional edible flowers and decor' },
-  { title: 'Premium cheese upgrade', price: 'Quote based on selection', description: 'Artisan and imported cheeses' },
-  { title: 'Extra cold cuts', price: 'Quote based on quantity', description: 'Additional cured meats' },
+/* ═══════════════════════════════════════════════════════════════
+   STYLING DIRECTION
+   ═══════════════════════════════════════════════════════════════ */
+const STYLING_ITEMS = [
+  { icon: Table2, title: 'Wood Boards', desc: 'Rustic teak and acacia boards layered for depth and texture.' },
+  { icon: Flower2, title: 'Linen & Florals', desc: 'Natural linen runners with edible flowers and tropical greenery.' },
+  { icon: Sparkles, title: 'Height & Layers', desc: 'Risers, cake stands, and stacked crates create visual dimension.' },
+  { icon: Wine, title: 'Candles & Ambience', desc: 'Tea lights and taper candles for evening events and romance.' },
+  { icon: ShieldCheck, title: 'Clean Spacing', desc: 'Breathing room between clusters for an uncluttered premium look.' },
+  { icon: Heart, title: 'Labels & Signage', desc: 'Hand-lettered labels for cheeses, dietary callouts, and event branding.' },
 ]
 
-const BEST_FOR = [
-  { icon: Heart, title: 'Villa welcome snack', desc: 'Greet guests in style' },
-  { icon: Flower2, title: 'Wedding cocktail hour', desc: 'Pre-reception grazing' },
-  { icon: Sparkles, title: 'Poolside party', desc: 'Relaxed by the water' },
-  { icon: Heart, title: 'Birthday gathering', desc: 'Celebration centerpiece' },
-  { icon: Utensils, title: 'Wine night', desc: 'Cheese and charcuterie' },
-  { icon: ShieldCheck, title: 'Corporate villa event', desc: 'Professional but relaxed' },
-  { icon: Truck, title: 'Pre-dinner food', desc: 'Before the main meal' },
-  { icon: Leaf, title: 'Photo-ready brunch', desc: 'Instagram-worthy setup' },
+/* ═══════════════════════════════════════════════════════════════
+   BEST EVENTS FOR GRAZING
+   ═══════════════════════════════════════════════════════════════ */
+const BEST_EVENTS = [
+  { icon: Wine, title: 'Cocktail Parties', desc: 'Self-serve grazing during mingling and drinks.' },
+  { icon: Truck, title: 'Villa Arrivals', desc: 'Welcome guests with an immediate beautiful spread.' },
+  { icon: Heart, title: 'Weddings', desc: 'Cocktail hour or pre-reception grazing for guests.' },
+  { icon: Sparkles, title: 'Birthdays', desc: 'Celebration centerpiece that doubles as décor.' },
+  { icon: ShieldCheck, title: 'Brand Launches', desc: 'Photo-ready display that elevates your event.' },
+  { icon: Leaf, title: 'Retreats', desc: 'Relaxed, nourishing food for wellness gatherings.' },
+  { icon: Flower2, title: 'Pool Parties', desc: 'Poolside grazing with tropical styling.' },
+  { icon: Package, title: 'Bridal Events', desc: 'Elegant spreads for showers and hen parties.' },
+  { icon: Utensils, title: 'Pre-Dinner Receptions', desc: 'Beautiful appetizer before a seated meal.' },
 ]
 
-const HOW_IT_WORKS = [
-  { step: '01', title: 'Choose size', desc: 'Box, platter, or table.', icon: Package },
-  { step: '02', title: 'Send details', desc: 'Date, area, guest count.', icon: Calendar },
-  { step: '03', title: 'Standard or plant', desc: 'Confirm dietary style.', icon: Leaf },
-  { step: '04', title: 'Add styling', desc: 'Boards, flowers, pool.', icon: Flower2 },
-  { step: '05', title: 'Pay deposit', desc: '25% to confirm.', icon: CreditCard },
-  { step: '06', title: 'We prepare', desc: 'Styled and ready.', icon: ChefHat },
-  { step: '07', title: 'You enjoy', desc: 'Serve at your event.', icon: Sparkles },
+/* ═══════════════════════════════════════════════════════════════
+   DIETARY OPTIONS
+   ═══════════════════════════════════════════════════════════════ */
+const DIETARY_OPTIONS = [
+  { icon: Leaf, title: 'Vegetarian Grazing', desc: 'Cheese-forward with extra vegetables, dips, fruit, and nuts. No cured meats.' },
+  { icon: Heart, title: 'Vegan Grazing', desc: 'Plant-based cheeses, vegetable dips, marinated tofu, fruit, nuts, and herb oils.' },
+  { icon: ShieldCheck, title: 'Pork-Free', desc: 'Beef bresaola, turkey, chicken, and seafood charcuterie replace all pork products.' },
+  { icon: Table2, title: 'Gluten-Free Crackers', desc: 'Rice crackers, seed crisps, and vegetable-based alternatives to wheat.' },
+  { icon: Sparkles, title: 'Nut-Free Sections', desc: 'Dedicated nut-free zones with clear labeling for allergy safety.' },
+  { icon: Baby, title: "Children's Platters", desc: 'Mild cheeses, simple fruits, breadsticks, and chocolate — no strong flavors.' },
 ]
 
-const DELIVERY_RULES = [
-  'Mini boxes can be delivered',
-  'Platters can be delivered or styled on-site',
-  'Large grazing tables require setup time',
-  'Villa access must be available before event start',
-  'Outdoor setup needs shade or timing control',
-  'Travel fee may apply by area',
+/* ═══════════════════════════════════════════════════════════════
+   SETUP AND BREAKDOWN
+   ═══════════════════════════════════════════════════════════════ */
+const SETUP_STEPS = [
+  { icon: Clock, title: 'Arrival Time', desc: 'We arrive 60–90 minutes before your event to set up the grazing table.' },
+  { icon: Table2, title: 'Table Requirements', desc: 'A sturdy table or surface is needed. We bring boards, linens, and all serving ware.' },
+  { icon: ShieldCheck, title: 'Shaded Placement', desc: 'Outdoor setups require shade or cover to protect cheese and fruit from direct sun.' },
+  { icon: Sparkles, title: 'Freshness & Replenishment', desc: 'We refresh the table during the event and monitor food safety throughout.' },
+  { icon: Truck, title: 'Cleanup', desc: 'Full breakdown and cleanup included. We leave your space exactly as we found it.' },
+  { icon: Users, title: 'Staff Options', desc: 'Optional dedicated grazing attendant to serve, replenish, and answer guest questions.' },
 ]
 
-const AREAS = [
-  'Canggu', 'Seminyak', 'Berawa', 'Pererenan', 'Ubud', 'Uluwatu',
-  'Nusa Dua', 'Sanur', 'Jimbaran', 'Tanah Lot', 'Kerobokan', 'Kuta', 'Legian', 'Denpasar',
-]
-
-const CROSS_SELL = [
-  { title: 'BBQ Catering', price: 'From IDR 450,000/person', href: '/catering/bbq-catering', image: '/generated/pkg-bbq.webp' },
-  { title: 'Buffet Catering', price: 'From IDR 550,000/person', href: '/catering/buffet', image: '/generated/aura-buffet.webp' },
-  { title: 'Drop-Off Catering', price: 'From IDR 350,000/person', href: '/catering/drop-off-catering', image: '/generated/catering/dropoff-hero-v2.webp' },
-  { title: 'Floating Breakfast', price: 'From IDR 950,000/couple', href: '/catering/floating-breakfast', image: '/generated/catering/floating-breakfast.webp' },
-]
-
-const GRAZING_GALLERY = [
-  '/generated/pkg-grazing.webp',
-  '/generated/hub-catering.webp',
-  '/generated/aura-buffet.webp',
-  '/generated/aura-tablescape.webp',
-  '/generated/pkg-breakfast.webp',
-  '/generated/sol-breakfast.webp',
-]
-
-const ALL_COMPONENTS = [
-  'Sourdough & artisan breads',
-  'Water crackers & seeded crisps',
-  '4–6 cheeses (soft, hard, blue)',
-  '3–4 cured meats (prosciutto, salami, chorizo)',
-  'Marinated olives & vegetables',
-  'Hummus, tapenade & dips',
-  'Local honey & fruit chutney',
-  'Fresh seasonal fruit',
-  'Dried apricots & figs',
-  'Roasted nuts & seeds',
-  'Edible flowers & microgreens',
-  'Styled wooden boards & linens',
-]
-
-const CUSTOMISATIONS = [
-  { title: 'Cheese-Lover', desc: 'Extra artisan cheeses, honeycomb, quince paste, and crackers.' },
-  { title: 'Italian', desc: 'Prosciutto di Parma, mortadella, pecorino, burrata, grissini, and olive oil.' },
-  { title: 'Mediterranean', desc: 'Feta, halloumi, dolmades, baba ganoush, tzatziki, and pita.' },
-  { title: 'Vegan', desc: 'Plant-based cheeses, vegetable dips, marinated tofu, and fruit-forward styling.' },
-  { title: 'Plant-Based', desc: 'Fully plant-based with nuts, seeds, vegetable crudités, and herb oils.' },
-]
-
+/* ═══════════════════════════════════════════════════════════════
+   FAQ — exactly 7 questions per blueprint
+   ═══════════════════════════════════════════════════════════════ */
 const FAQS = [
-  { q: 'What is included in a grazing table?', a: 'All grazing setups include sourdough, crackers, cheese selection, cured meats, marinated vegetables, dips, honey, fresh and dried fruit, nuts, and edible flowers. Styled presentation is included.' },
-  { q: 'How many people does each package serve?', a: 'Mini Grazing Box serves 2 people. Cheese & Cold Cuts Platter serves 10 people. Wedding-Scale Grazing Table serves 20-50 guests at IDR 350,000 per person.' },
-  { q: 'Can you deliver grazing boxes?', a: 'Yes. Mini boxes and platters can be delivered. Large grazing tables require on-site setup time.' },
-  { q: 'Do large grazing tables require setup?', a: 'Yes. Wedding-scale grazing tables need setup time at your venue. We arrange access and timing before the event.' },
-  { q: 'Can you make it vegan or plant-based?', a: 'Absolutely. We create plant-based grazing with vegan dips, vegetables, fruit, nuts, crackers, bread, olives, and fresh styling at the same price.' },
-  { q: 'Can I keep the board?', a: 'Yes. Our bamboo board upgrade includes a beautiful serving board you can keep. Standard setups use our boards which we collect.' },
-  { q: 'Can you style it by the pool?', a: 'Yes. Our floating pool tray styling add-on creates a stunning poolside grazing display.' },
-  { q: 'How far in advance should I book?', a: 'We recommend 3-5 days for boxes and platters. 1-2 weeks for large grazing tables, especially during peak season.' },
-  { q: 'Do you charge travel fees?', a: 'Travel fees may apply for areas outside Seminyak/Canggu. We confirm this before deposit.' },
-  { q: 'Can I add more cheese or cold cuts?', a: 'Yes. Premium cheese upgrades and extra cold cuts are available. Pricing depends on selection and quantity.' },
-  { q: 'Is this enough as a full meal?', a: 'For light events, yes. For full meals, we recommend combining grazing with BBQ, buffet, or plated catering.' },
-  { q: 'Can I combine grazing with BBQ or buffet?', a: 'Absolutely. Grazing works perfectly as a welcome setup before BBQ or buffet catering.' },
+  { q: 'How long can a grazing table stay out?', a: 'Grazing tables are designed for 2–4 hours of service. We use ice packs beneath boards for cheese and replenish perishable items throughout your event. For events longer than 4 hours, we recommend a mid-event refresh.' },
+  { q: 'Do you provide the table?', a: 'We provide all boards, linens, serving ware, and styling props. You provide a sturdy table or surface at your venue. For villa events without a suitable table, we can arrange rental at cost.' },
+  { q: 'Can the grazing table be vegetarian?', a: 'Yes. Our vegetarian grazing table replaces cured meats with extra cheeses, marinated vegetables, dips, fruit, nuts, and premium crackers. It is just as visually stunning and satisfying.' },
+  { q: 'Can you do cheese only?', a: 'Absolutely. We offer a cheese-only grazing table with 6–10 artisan cheeses, honeycomb, quince paste, crackers, bread, nuts, and dried fruit — perfect for wine-focused events.' },
+  { q: 'What areas in Bali do you cover?', a: 'We serve all major Bali areas including Canggu, Seminyak, Berawa, Pererenan, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, Tanah Lot, Kerobokan, Kuta, Legian, and Denpasar. Travel fees may apply outside Canggu/Seminyak.' },
+  { q: 'Is there a minimum guest count?', a: 'Our small grazing board serves 2–4 guests with no minimum. Medium tables start at 8 guests. Full event grazing tables have a 15-guest minimum. Wedding and corporate tables start at 30 guests.' },
+  { q: 'Can you add drinks to the grazing table?', a: 'Yes. We can arrange wine pairings, champagne, craft cocktails, fresh juices, and sparkling water as add-ons. Let us know your preference and we will include it in your quote.' },
+]
+
+/* ═══════════════════════════════════════════════════════════════
+   TESTIMONIALS
+   ═══════════════════════════════════════════════════════════════ */
+const TESTIMONIALS = [
+  { name: 'Emma R.', location: 'Uluwatu Villa', quote: 'The grazing table was the highlight of our wedding cocktail hour. Every guest commented on how beautiful (and tasty) it was.', rating: 5 },
+  { name: 'Jessica & Mike', location: 'Canggu Villa', quote: 'We ordered the cheese platter for 10 and the mini box for our honeymoon suite. Both were stunning and the quality was top-notch.', rating: 5 },
+  { name: 'The Park Family', location: 'Seminyak Villa', quote: 'Wedding-scale grazing for 35 guests. The vegan option was just as beautiful as the regular one. myCHEF nailed it.', rating: 5 },
+]
+
+/* ═══════════════════════════════════════════════════════════════
+   INTERNAL LINKS
+   ═══════════════════════════════════════════════════════════════ */
+const INTERNAL_LINKS = [
+  { label: 'Fine Dining', href: '/catering/fine-dining' },
+  { label: 'Villa Catering', href: '/catering/villa-catering' },
+  { label: 'Events', href: '/events' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export default function CateringGrazingPage() {
@@ -170,33 +185,39 @@ export default function CateringGrazingPage() {
     return () => ctx.revert()
   }, [])
 
+  const schemaFaq = FAQS.map(f => ({ question: f.q, answer: f.a }))
+
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Grazing Tables Bali | Cheese & Charcuterie — myCHEF"
-        description="Photo-ready grazing tables and charcuterie in Bali for villas and weddings. Mini boxes, medium platters, large event tables. From IDR 650K. Vegan options."
-        canonical={`${SITE}/catering/grazing-tables`}
+        title="Grazing Tables Bali | Cheese, Charcuterie & Party Platters"
+        description="Grazing tables in Bali for villa parties, weddings, cocktails, birthdays, and events with cheese, charcuterie, fruit, bread, dips, and styling."
+        canonical={PAGE_URL}
         ogImage={`${SITE}/generated/pkg-grazing.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Grazing Tables Bali', 'Photo-ready grazing boxes, cheese platters, and full grazing tables for villas, weddings, and parties.', `${SITE}/catering/grazing-tables`, 'IDR'),
-          offerSchema('Mini Grazing Box', 650000, 'IDR', `${SITE}/catering/grazing-tables`),
-          offerSchema('Cheese & Cold Cuts Platter', 2700000, 'IDR', `${SITE}/catering/grazing-tables`),
-          offerSchema('Wedding-Scale Grazing Table', 350000, 'IDR', `${SITE}/catering/grazing-tables`),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          serviceSchema('Grazing Tables Bali', 'Styled grazing tables, cheese platters, and charcuterie boards for villa parties, weddings, and events across Bali.', PAGE_URL, 'IDR'),
+          offerSchema('Small Grazing Board', 650000, 'IDR', PAGE_URL),
+          offerSchema('Medium Villa Table', 2700000, 'IDR', PAGE_URL),
+          offerSchema('Full Event Grazing Table', 350000, 'IDR', PAGE_URL),
+          offerSchema('Wedding Grazing Table', 325000, 'IDR', PAGE_URL),
+          offerSchema('Corporate Reception Table', 300000, 'IDR', PAGE_URL),
+          faqPageSchema(schemaFaq),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Grazing Tables', `${SITE}/catering/grazing-tables`, 'Catering', `${SITE}/catering`),
+          breadcrumbSchema('Grazing Tables Bali', PAGE_URL, 'Catering', `${SITE}/catering`),
         ]}
       />
 
-      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Grazing Tables' }]} />
+      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Grazing Tables Bali' }]} />
 
-      {/* ═══════ HERO ═══════ */}
+      {/* ═══════════════════════════════════════════════════════════════
+          HERO
+          ═══════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/generated/pkg-grazing.webp"
-            alt="Beautiful grazing table with cheese, cured meats, fruit, and flowers"
+            alt="Grazing table Bali with cheese, charcuterie, fresh fruit, and edible flowers styled for a villa event"
             width={1920}
             height={1080}
             fetchPriority="high"
@@ -205,22 +226,28 @@ export default function CateringGrazingPage() {
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Grazing Tables & Charcuterie
+          <p
+            className="text-sm tracking-[0.3em] uppercase mb-6"
+            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600, color: GOLD }}
+          >
+            Grazing Tables &amp; Charcuterie Bali
           </p>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Grazing Tables & Charcuterie<br />
-            <span className="italic">in Bali for Villas, Weddings & Parties</span>
+          <h1
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Grazing Tables Bali for Events, Villas, and Parties
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Photo-ready grazing boxes, cheese and cold cuts platters, and full grazing tables for villa parties, weddings, poolside events, welcome drinks, and private gatherings.
+            Styled grazing tables with cheese, charcuterie, fruit, dips, bread, sweets, and event-ready presentation for relaxed luxury hosting.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all"
+              style={{ background: GOLD }}
             >
-              <Package className="w-4 h-4" /> Order grazing setup
+              <Package className="w-4 h-4" /> Design My Grazing Table
             </a>
             <a
               href={WA_LINK}
@@ -235,24 +262,25 @@ export default function CateringGrazingPage() {
         </div>
       </section>
 
-      {/* ═══════ TRUST STRIP ═══════ */}
       <TrustStrip />
 
-      {/* ═══════ WHY GRAZING WORKS ═══════ */}
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 1 — Grazing Tables in Bali
+          ═══════════════════════════════════════════════════════════════ */}
       <section className="graze-content py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <SectionHeader
                 align="left"
-                eyebrow="CHAPTER 1 — THE VISION"
-                title="Easy Food That Looks Good Immediately"
-                subtitle="Grazing tables are built for events where people want beautiful food without a heavy meal structure. They work for arrivals, welcome drinks, poolside parties, weddings, birthdays, and relaxed villa entertaining."
+                eyebrow="Grazing Tables Bali"
+                title="Instant Visual Impact That Reduces Formal Service Pressure"
+                subtitle="Grazing tables are built for events where people want beautiful food without a heavy meal structure. They create an immediate focal point, encourage mingling, and eliminate the need for passed service or plated courses."
               />
               <div className="grid grid-cols-2 gap-3">
-                {['Welcome food', 'Poolside events', 'Villa parties', 'Wedding cocktails', 'Birthday snacks', 'Wine nights', 'Corporate events', 'Pre-dinner food'].map((item) => (
+                {['Villa welcome food', 'Poolside events', 'Wedding cocktail hour', 'Birthday celebrations', 'Wine nights', 'Corporate receptions', 'Pre-dinner grazing', 'Photo-ready brunch'].map((item) => (
                   <div key={item} className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-[#6B8E5A]" />
+                    <Check className="w-4 h-4" style={{ color: GOLD }} />
                     <span className="text-[#4A4745] text-sm">{item}</span>
                   </div>
                 ))}
@@ -261,7 +289,7 @@ export default function CateringGrazingPage() {
             <div className="rounded-2xl overflow-hidden">
               <img
                 src="/generated/pkg-grazing.webp"
-                alt="Villa poolside grazing table setup"
+                alt="Grazing table setup at a Bali villa with cheese, charcuterie, and tropical fruit"
                 className="w-full h-full object-cover aspect-[4/3]"
                 loading="lazy"
               />
@@ -270,26 +298,111 @@ export default function CateringGrazingPage() {
         </div>
       </section>
 
-      {/* ═══════ PACKAGES ═══════ */}
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 2 — Best Events for Grazing
+          ═══════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 2 — THE MENU"
-            title="Choose Your Grazing Package"
+            eyebrow="Best Events for Grazing"
+            title="The Perfect Occasions for a Grazing Table in Bali"
+            subtitle="From intimate villa gatherings to large-scale celebrations, grazing tables adapt to any event style."
           />
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {BEST_EVENTS.map((item) => (
+              <div key={item.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5 text-center hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ background: `${GOLD}15` }}>
+                  <item.icon className="w-5 h-5" style={{ color: GOLD }} />
+                </div>
+                <h3 className="font-medium text-sm mb-1">{item.title}</h3>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 3 — What Goes on the Table
+          ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="What Goes on the Table"
+            title="Every Component on Your Grazing Table"
+            subtitle="Nothing is hidden. Here is exactly what goes into every grazing setup — from cheese and charcuterie to tropical additions."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {TABLE_COMPONENTS.map((group) => (
+              <div key={group.category} className="bg-white rounded-2xl border border-[#E8E6E3] p-6">
+                <h3 className="font-semibold text-[#1A1A1A] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {group.category}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span key={item} className="px-3 py-1.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745]">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 p-6 rounded-2xl border border-[#E8E6E3] bg-white text-center">
+            <p className="text-[#4A4745] text-sm">
+              <strong>Tropical additions:</strong> We incorporate local Bali produce such as dragon fruit, mango, passion fruit, snake fruit, and fresh coconut to give your grazing table a distinctive island character.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 4 — Styling Direction
+          ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Styling Direction"
+            title="How We Style Your Grazing Table"
+            subtitle="Every detail is considered — from board selection to candle placement — for a premium presentation that photographs beautifully."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {STYLING_ITEMS.map((item) => (
+              <div key={item.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-6 hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: `${GOLD}15` }}>
+                  <item.icon className="w-5 h-5" style={{ color: GOLD }} />
+                </div>
+                <h4 className="font-medium text-[#1A1A1A] text-sm md:text-base mb-1">{item.title}</h4>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 5 — Grazing Table Sizes
+          ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Grazing Table Sizes"
+            title="Choose the Right Size for Your Event"
+            subtitle="From intimate boards to full-scale event displays — every size is styled with the same attention to detail."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {PACKAGES.map((pkg) => (
-              <div key={pkg.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 hover:shadow-lg transition-all">
+              <div key={pkg.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 hover:shadow-lg transition-all">
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
-                <p className="text-[#6B8E5A] font-semibold text-lg mb-1">{pkg.price}</p>
+                <p className="font-semibold text-lg mb-1" style={{ color: GOLD }}>{pkg.price}</p>
                 <p className="text-sm text-[#4A4745] mb-1">
-                  <AllInPrice price={pkg.priceNum} showPlusPlus={false} suffix={pkg.title === 'Wedding-Scale Grazing Table' ? '/person' : ''} />
+                  <AllInPrice price={pkg.priceNum} showPlusPlus={false} suffix={pkg.price.includes('/person') ? '/person' : ''} />
                 </p>
                 <p className="text-sm text-[#4A4745] mb-4">{pkg.guests}</p>
                 <div className="space-y-2 mb-4">
                   {pkg.includes.map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-[#4A4745]">
-                      <Check className="w-4 h-4 text-[#6B8E5A]" /> {item}
+                      <Check className="w-4 h-4" style={{ color: GOLD }} /> {item}
                     </div>
                   ))}
                 </div>
@@ -302,131 +415,23 @@ export default function CateringGrazingPage() {
         </div>
       </section>
 
-      {/* ═══════ PHOTOGRAPHY SECTION ═══════ */}
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 6 — Dietary Options
+          ═══════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 3 — THE SETUP"
-            title="Grazing Gallery"
-            subtitle="Photo-ready spreads from villa events, weddings, and poolside parties across Bali."
+            eyebrow="Dietary Options"
+            title="Grazing Tables for Every Diet"
+            subtitle="No one misses out. We create inclusive grazing experiences that cater to all dietary requirements without compromising on visual impact."
           />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {GRAZING_GALLERY.map((src, i) => (
-              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={src} alt={`Grazing table setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ ANNOTATED CALLOUT ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="CHAPTER 4 — THE COMPONENTS"
-            title="Every Component on the Board"
-            subtitle="Nothing is hidden. Here is exactly what goes into every grazing setup."
-          />
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {ALL_COMPONENTS.map((item) => (
-              <div key={item} className="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#E8E6E3]">
-                <Check className="w-5 h-5 text-[#6B8E5A]" />
-                <span className="text-[#4A4745] text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ CUSTOMISATION OPTIONS ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="CHAPTER 5 — THE STYLE"
-            title="Customisation Options"
-            subtitle="Choose a direction or mix and match. Every grazing setup is tailored to your taste."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {CUSTOMISATIONS.map((c) => (
-              <div key={c.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5 hover:shadow-md transition-all">
-                <h4 className="font-medium text-[#1A1A1A] text-sm md:text-base mb-1">{c.title}</h4>
-                <p className="text-xs text-[#4A4745]">{c.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ WHAT'S INCLUDED ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="CHAPTER 6 — THE SERVICE"
-            title="What Every Grazing Setup Includes"
-          />
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {INCLUDED.map((item) => (
-              <div key={item} className="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#E8E6E3]">
-                <Check className="w-5 h-5 text-[#6B8E5A]" />
-                <span className="text-[#4A4745] text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ VEGAN OPTION ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[800px] mx-auto text-center">
-          <Leaf className="w-12 h-12 text-[#6B8E5A] mx-auto mb-4" />
-          <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Vegan and Plant-Based Grazing Available</h2>
-          <p className="text-[#4A4745] mb-6">
-            We can create a plant-based grazing setup at the same price. This includes vegan dips, vegetables, fruit, nuts, crackers, bread, marinated items, plant-based spreads, and fresh styling.
-          </p>
-          <div className="flex flex-wrap gap-2 justify-center">
-            {['Vegan dips', 'Fresh vegetables', 'Seasonal fruit', 'Artisan nuts', 'Crackers & bread', 'Marinated olives', 'Plant-based spreads', 'Edible flowers'].map((d) => (
-              <span key={d} className="px-3 py-1.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745]">{d}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ STYLING ADD-ONS ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="Styling"
-            title="Styling Add-Ons"
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {ADDONS.map((addon) => (
-              <div key={addon.title} className="bg-white rounded-xl border border-[#E8E6E3] p-4 md:p-5 hover:shadow-md transition-all">
-                <div className="flex items-center justify-between gap-2 mb-1">
-                  <h4 className="font-medium text-[#1A1A1A] text-sm md:text-base">{addon.title}</h4>
-                  <span className="text-[#6B8E5A] font-semibold text-sm whitespace-nowrap">{addon.price}</span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {DIETARY_OPTIONS.map((item) => (
+              <div key={item.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-6 hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: `${GOLD}15` }}>
+                  <item.icon className="w-5 h-5" style={{ color: GOLD }} />
                 </div>
-                {addon.description && <p className="text-xs text-[#4A4745]">{addon.description}</p>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ BEST FOR ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="Occasions"
-            title="Best For These Events"
-          />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {BEST_FOR.map((item) => (
-              <div key={item.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5 text-center hover:shadow-md transition-all">
-                <div className="w-12 h-12 rounded-full bg-[#6B8E5A]/10 flex items-center justify-center mx-auto mb-3">
-                  <item.icon className="w-5 h-5 text-[#6B8E5A]" />
-                </div>
-                <h4 className="font-medium text-sm mb-1">{item.title}</h4>
+                <h4 className="font-medium text-[#1A1A1A] text-sm md:text-base mb-1">{item.title}</h4>
                 <p className="text-xs text-[#4A4745]">{item.desc}</p>
               </div>
             ))}
@@ -434,156 +439,172 @@ export default function CateringGrazingPage() {
         </div>
       </section>
 
-      {/* ═══════ HOW IT WORKS ═══════ */}
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 7 — Grazing vs Canapés
+          ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[800px] mx-auto">
+          <SectionHeader
+            eyebrow="Grazing vs Canapés"
+            title="Which Service Style Suits Your Event?"
+            subtitle="Understanding the difference helps you choose the right food format — or combine both for the perfect experience."
+          />
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: `${GOLD}15` }}>
+                <Table2 className="w-5 h-5" style={{ color: GOLD }} />
+              </div>
+              <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Grazing Tables</h3>
+              <ul className="space-y-2">
+                {['Static display — guests serve themselves', 'Highly visual — doubles as event décor', 'Encourages mingling and conversation', 'Ideal for 2–4 hour events', 'No staff required to pass food', 'More relaxed, informal atmosphere'].map((point) => (
+                  <li key={point} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                    <Check className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: GOLD }} />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
+              <div className="w-12 h-12 rounded-full bg-[#6B8E5A]/10 flex items-center justify-center mb-4">
+                <Utensils className="w-5 h-5 text-[#6B8E5A]" />
+              </div>
+              <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Canapés</h3>
+              <ul className="space-y-2">
+                {['Passed by staff — controlled portions', 'Formal and elegant presentation', 'Precise timing and temperature control', 'Ideal for seated dinners or formal receptions', 'Requires service staff', 'More structured, upscale atmosphere'].map((point) => (
+                  <li key={point} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                    <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#6B8E5A]" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 p-6 rounded-2xl border border-[#E8E6E3] bg-white text-center">
+            <p className="text-[#4A4745] text-sm">
+              <strong>Many events need both.</strong> Grazing tables work beautifully as a welcome display while canapés are passed during cocktails. We can design a combined package that gives you the best of both worlds.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 8 — Setup and Breakdown
+          ═══════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Process"
-            title="How It Works"
+            eyebrow="Setup and Breakdown"
+            title="How We Deliver and Set Up Your Grazing Table"
+            subtitle="From arrival to cleanup — we handle every detail so you can focus on your guests."
           />
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            {HOW_IT_WORKS.map((step) => (
-              <div key={step.step} className="text-center">
-                <div className="w-14 h-14 rounded-full bg-[#6B8E5A]/10 flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-6 h-6 text-[#6B8E5A]" />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SETUP_STEPS.map((item) => (
+              <div key={item.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-6 hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: `${GOLD}15` }}>
+                  <item.icon className="w-5 h-5" style={{ color: GOLD }} />
                 </div>
-                <span className="text-[#6B8E5A] text-xs font-bold tracking-wider">{step.step}</span>
-                <h4 className="font-medium text-[#1A1A1A] text-sm mt-1 mb-1">{step.title}</h4>
-                <p className="text-xs text-[#4A4745]">{step.desc}</p>
+                <h4 className="font-medium text-[#1A1A1A] text-sm md:text-base mb-1">{item.title}</h4>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════ DELIVERY RULES ═══════ */}
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 9 — FAQ (7 questions)
+          ═══════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
-            eyebrow="Delivery"
-            title="Delivery and Setup"
-            subtitle="Small boxes and platters can be delivered. Larger grazing tables require setup time on-site."
+            eyebrow="FAQ"
+            title="Grazing Table Questions"
+            subtitle="Everything you need to know about booking a grazing table in Bali."
           />
-          <div className="space-y-3">
-            {DELIVERY_RULES.map((rule) => (
-              <div key={rule} className="flex items-start gap-3 p-4 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3]">
-                <Truck className="w-5 h-5 text-[#6B8E5A] flex-shrink-0 mt-0.5" />
-                <span className="text-[#4A4745] text-sm">{rule}</span>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={3} />
         </div>
       </section>
 
-      {/* ═══════ AREA COVERAGE ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="Coverage"
-            title="Grazing Tables Across Bali"
-          />
-          <div className="flex flex-wrap gap-3 justify-center">
-            {AREAS.map((area) => (
-              <span
-                key={area}
-                className="px-4 py-2 rounded-full bg-white border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#6B8E5A] hover:text-[#6B8E5A] transition-colors cursor-default"
-              >
-                {area}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ BOOKING FORM ═══════ */}
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 10 — CTA
+          ═══════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
-            eyebrow="Order Now"
-            title="Order Grazing Setup"
+            eyebrow="Request a Quote"
+            title="Design My Grazing Table"
+            subtitle="Tell us your guest count, location, preferred style, dietary restrictions, and event timing. We will reply with a tailored quote within the hour."
           />
           <BookingFormCatering
-            title="Order Your Grazing Setup"
+            title="Request Grazing Table Quote"
             subtitle="We will confirm availability, styling options, and pricing within the hour."
             fields={[
               { name: 'package', label: 'Package', type: 'select', icon: Package, required: true },
-              { name: 'date', label: 'Date', type: 'date', icon: Calendar, required: true },
-              { name: 'time', label: 'Time', type: 'text', icon: Utensils, placeholder: 'e.g. 5:00 PM' },
-              { name: 'area', label: 'Area', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu...', required: true },
-              { name: 'villa', label: 'Villa/Venue Address', type: 'text', required: true },
-              { name: 'guests', label: 'Guest Count', type: 'number', icon: Users, placeholder: 'e.g. 10', required: true },
-              { name: 'style', label: 'Standard or Plant-Based?', type: 'text', placeholder: 'Standard / Plant-based' },
-              { name: 'addons', label: 'Add-ons', type: 'textarea', placeholder: 'Bamboo board, pool styling, extra flowers...' },
-              { name: 'setup', label: 'Delivery or On-Site Setup?', type: 'text', placeholder: 'Delivery / On-site setup' },
-              { name: 'occasion', label: 'Occasion', type: 'text', placeholder: 'Wedding, birthday, corporate...' },
+              { name: 'date', label: 'Event Date', type: 'date', icon: Calendar, required: true },
+              { name: 'time', label: 'Event Time', type: 'text', icon: Clock, placeholder: 'e.g. 5:00 PM' },
+              { name: 'area', label: 'Location / Area', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu, Ubud...', required: true },
+              { name: 'villa', label: 'Villa or Venue Name', type: 'text', required: true },
+              { name: 'guests', label: 'Guest Count', type: 'number', icon: Users, placeholder: 'e.g. 20', required: true },
+              { name: 'style', label: 'Style Preference', type: 'text', placeholder: 'Classic / Mediterranean / Vegan / Cheese-only' },
+              { name: 'dietary', label: 'Dietary Restrictions', type: 'textarea', placeholder: 'Vegetarian, vegan, gluten-free, nut-free, pork-free...' },
+              { name: 'addons', label: 'Add-ons', type: 'textarea', placeholder: 'Bamboo board, pool styling, extra flowers, drinks...' },
+              { name: 'occasion', label: 'Occasion', type: 'text', placeholder: 'Wedding, birthday, corporate, pool party...' },
               { name: 'name', label: 'Your Name', type: 'text', required: true },
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
               { name: 'email', label: 'Email', type: 'text' },
             ]}
-            packageOptions={['Mini Grazing Box (2 pax)', 'Cheese & Cold Cuts Platter (10 pax)', 'Wedding-Scale Grazing Table (20-50 pax)']}
-            accent="#6B8E5A"
+            packageOptions={[
+              'Small Grazing Board (2–4 pax)',
+              'Medium Villa Table (8–12 pax)',
+              'Full Event Grazing Table (15–30 pax)',
+              'Wedding Grazing Table (30–80 pax)',
+              'Corporate Reception Table (50–150 pax)',
+            ]}
+            accent={GOLD}
           />
         </div>
       </section>
 
-      {/* ═══════ TESTIMONIALS ═══════ */}
+      {/* ═══════════════════════════════════════════════════════════════
+          TESTIMONIALS
+          ═══════════════════════════════════════════════════════════════ */}
       <TestimonialBlock
-        testimonials={[
-          { name: 'Emma R.', location: 'Uluwatu Villa', quote: 'The grazing table was the highlight of our wedding cocktail hour. Every guest commented on how beautiful (and tasty) it was.', rating: 5 },
-          { name: 'Jessica & Mike', location: 'Canggu Villa', quote: 'We ordered the cheese platter for 10 and the mini box for our honeymoon suite. Both were stunning and the quality was top-notch.', rating: 5 },
-          { name: 'The Park Family', location: 'Seminyak Villa', quote: 'Wedding-scale grazing for 35 guests. The vegan option was just as beautiful as the regular one. myCHEF nailed it.', rating: 5 },
-        ]}
+        testimonials={TESTIMONIALS}
         title="What Grazing Guests Say"
         subtitle="Real reviews from grazing table events across Bali."
       />
 
-      {/* ═══════ FAQ ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[800px] mx-auto">
-          <SectionHeader
-            eyebrow="Questions"
-            title="Grazing FAQ"
-          />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
-        </div>
-      </section>
+      <PressStrip />
 
-      {/* ═══════ CROSS-SELL ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      {/* ═══════════════════════════════════════════════════════════════
+          INTERNAL LINKS
+          ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-16 px-6 border-t border-[#E8E6E3]">
         <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="Want More?"
-            title="Want More Than Grazing?"
-            subtitle="Grazing works well as a welcome setup, snack table, or pre-dinner food. For a full meal, combine it with BBQ, buffet, plated dinner, or drop-off catering."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {CROSS_SELL.map((item) => (
+          <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Related Services</p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            {INTERNAL_LINKS.map((link) => (
               <Link
-                key={item.title}
-                to={item.href}
-                className="group bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all"
+                key={link.href}
+                to={link.href}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors"
               >
-                <div className="aspect-[16/9] overflow-hidden">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
-                </div>
-                <div className="p-4">
-                  <h4 className="font-medium text-[#1A1A1A] text-sm mb-1">{item.title}</h4>
-                  <p className="text-[#6B8E5A] text-xs font-semibold">{item.price}</p>
-                </div>
+                {link.label}
+                <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <PressStrip />
-
-      {/* ═══════ FINAL CTA ═══════ */}
+      {/* ═══════════════════════════════════════════════════════════════
+          FINAL CTA
+          ═══════════════════════════════════════════════════════════════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/generated/pkg-grazing.webp"
-            alt="Beautiful grazing table at a villa event"
+            alt="Beautiful grazing table at a Bali villa event with cheese, charcuterie, and tropical styling"
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -591,17 +612,18 @@ export default function CateringGrazingPage() {
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Order a Grazing Setup for Your Villa or Event
+            Order a Grazing Table for Your Bali Event
           </h2>
           <p className="text-white/80 text-lg mb-8">
-            Send your date, area, guest count, and preferred grazing package. We will confirm availability, styling options, and final price by WhatsApp.
+            Send your date, area, guest count, and preferred grazing style. We will confirm availability, styling options, and final price by WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all"
+              style={{ background: GOLD }}
             >
-              <Package className="w-4 h-4" /> Order grazing setup
+              <Package className="w-4 h-4" /> Design My Grazing Table
             </a>
             <a
               href={WA_LINK}

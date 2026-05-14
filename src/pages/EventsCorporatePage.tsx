@@ -1,15 +1,16 @@
 import { useEffect, useRef } from 'react'
 import {
-  MessageCircle, Calendar, Users, Briefcase, Check, Monitor,
+  MessageCircle, Calendar, Monitor,
   Bus, Building2, Globe, FileText, Shield,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -22,14 +23,14 @@ const SITE = 'https://mychef.id'
 const FORMATS = [
   {
     title: 'Corporate Day Event',
-    price: 'IDR 1,200,000/person',
+    price: <AllInPrice price={1200000} />,
     guestRange: '20–100 guests',
     description: 'Breakfast + 2 coffee breaks + lunch + afternoon snack. AV, coordinator, dietary management included.',
     features: ['Full-day food', 'AV setup (projector, screen, sound)', 'Day coordinator', 'Dietary management', 'Name badges + signage', 'Tax invoice'],
   },
   {
     title: 'Multi-Day Retreat',
-    price: 'IDR 2,500,000/person/day',
+    price: <AllInPrice price={2500000} suffix="/person/day" />,
     guestRange: '10–50 guests',
     description: '3 meals + 2 snacks daily. Retreat coordinator, team-building activities, dietary management.',
     features: ['3 meals + 2 snacks/day', 'Retreat coordinator', 'Dietary management', 'Team-building activities', 'Daily fresh sourcing', 'Tax invoice'],
@@ -98,8 +99,18 @@ export default function EventsCorporatePage() {
         title="Corporate Events Bali — Offsites, Conferences, Launches | myCHEF"
         description="Corporate event catering and coordination in Bali. Day events from IDR 1.2M/pp, multi-day retreats from IDR 2.5M/pp/day. AV, dietary management, day coordinator. Invoice-ready."
         canonical={`${SITE}/events/corporate-events`}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Corporate Events', `${SITE}/events/corporate-events`, 'Events', `${SITE}/events`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Corporate Event Catering Bali', 'Corporate event catering and coordination in Bali. Day events, multi-day retreats, conferences, and product launches.', `${SITE}/events/corporate-events`, 'IDR'),
+          offerSchema('Corporate Day Event', 1200000, 'IDR', `${SITE}/events/corporate-events`),
+          offerSchema('Multi-Day Retreat', 2500000, 'IDR', `${SITE}/events/corporate-events`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Corporate Events', `${SITE}/events/corporate-events`, 'Events', `${SITE}/events`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Corporate Events' }]} />
 
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -134,6 +145,12 @@ export default function EventsCorporatePage() {
           <SectionHeader eyebrow="Packages" title="Corporate Packages" subtitle="Three formats for different event types and scales." />
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
+          </div>
+
+          {/* Group Total Calculators */}
+          <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <GroupTotalCalculator pricePerPerson={1200000} minGuests={20} maxGuests={100} defaultGuests={30} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={50} defaultGuests={20} accent="#C5A028" />
           </div>
         </div>
       </section>
@@ -225,6 +242,8 @@ export default function EventsCorporatePage() {
           />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* CTA */}
       <section className="py-20 md:py-28 bg-[#0A0A0A] text-center">

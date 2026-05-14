@@ -1,8 +1,9 @@
 import { Check } from 'lucide-react'
+import type { ReactNode } from 'react'
 
 interface EventFormatCardProps {
   title: string
-  price: string
+  price: ReactNode
   guestRange: string
   description: string
   features: string[]

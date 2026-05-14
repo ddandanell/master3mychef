@@ -3,16 +3,24 @@ import { useEffect, useRef } from 'react'
 import {
   MessageCircle, Check, Phone, Calendar, Users, MapPin,
   Utensils, Flame, Wine, Beef, Map, Heart,
-  ShieldCheck,
+  ShieldCheck, BadgeCheck,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, {
+  localBusinessSchema,
+  breadcrumbSchema,
+  serviceSchema,
+  offerSchema,
+  faqPageSchema,
+  aggregateRatingSchema,
+} from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import CateringAddOnCard from '@/components/catering/CateringAddOnCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -27,6 +35,7 @@ const BUFFET_PACKAGES = [
     image: '/generated/aura-buffet.webp',
     title: 'Indonesian Buffet',
     price: 'IDR 550,000/person',
+    priceNum: 550000,
     description: '8 hot dishes, 4 cold dishes, dessert, fresh fruit, 5 sambals, rice, noodles, breads.',
     includes: ['Chef', 'Service team (1 per 12 guests)', 'Full chafing setup', 'Serving tables', 'Linens', 'Cutlery', '2.5h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 30 guests',
@@ -35,6 +44,7 @@ const BUFFET_PACKAGES = [
     image: '/generated/pkg-italian.webp',
     title: 'International Buffet',
     price: 'IDR 750,000/person',
+    priceNum: 750000,
     description: 'Mediterranean dishes, Asian fusion, roast station, pasta station, global salads, dessert table.',
     includes: ['Chef', 'Service team (1 per 12 guests)', 'Full buffet setup', 'Tables', 'Linens', 'Cutlery', 'Serving equipment', '2.5h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 30 guests',
@@ -43,6 +53,7 @@ const BUFFET_PACKAGES = [
     image: '/generated/aura-corporate.webp',
     title: 'Premium Live-Station Buffet',
     price: 'IDR 950,000/person',
+    priceNum: 950000,
     description: '3 live food stations, chef\'s choice options, premium roast, full dessert bar.',
     includes: ['Chef', 'Live-station chefs', 'Service team (1 per 12 guests)', 'Full buffet & station setup', 'Premium serving equipment', 'Tables', 'Linens', 'Cutlery', '2.5h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 30 guests',
@@ -91,6 +102,23 @@ const AREAS = [
   'Nusa Dua', 'Sanur', 'Jimbaran', 'Tanah Lot', 'Kerobokan', 'Kuta', 'Legian', 'Denpasar',
 ]
 
+const BUFFET_GALLERY = [
+  '/generated/aura-buffet.webp',
+  '/generated/aura-corporate.webp',
+  '/generated/aura-wedding.webp',
+  '/generated/aura-setup.webp',
+  '/generated/aura-tablescape.webp',
+  '/generated/hub-catering.webp',
+]
+
+const GROUP_SIZE_GUIDE = [
+  { guests: 30, indonesian: 'IDR 19.97M', international: 'IDR 27.23M', premium: 'IDR 34.49M' },
+  { guests: 50, indonesian: 'IDR 33.28M', international: 'IDR 45.38M', premium: 'IDR 57.48M' },
+  { guests: 80, indonesian: 'IDR 53.24M', international: 'IDR 72.60M', premium: 'IDR 91.97M' },
+  { guests: 120, indonesian: 'IDR 79.86M', international: 'IDR 108.90M', premium: 'IDR 137.97M' },
+  { guests: 200, indonesian: 'IDR 133.10M', international: 'IDR 181.50M', premium: 'IDR 229.95M' },
+]
+
 const FAQS = [
   { q: 'What is the minimum guest count for buffet catering?', a: 'Minimum 30 guests for all buffet packages. This ensures the food flow, service quality, and setup costs work properly.' },
   { q: 'Do you provide tables and linens?', a: 'Yes. All buffet packages include serving tables, linens, cutlery, and chafing dishes.' },
@@ -119,19 +147,6 @@ export default function CateringBuffetPage() {
     return () => ctx.revert()
   }, [])
 
-  const offerSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Offer',
-    name: 'Buffet Catering Bali',
-    description: 'Full-service buffet catering for villas, weddings, and events. Indonesian, International, and Premium Live-Station options.',
-    price: '550000',
-    priceCurrency: 'IDR',
-    priceValidUntil: '2026-12-31',
-    availability: 'https://schema.org/InStock',
-    url: `${SITE}/catering/buffet`,
-    seller: { '@id': 'https://mychef.id/#business' },
-  }
-
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
@@ -139,8 +154,19 @@ export default function CateringBuffetPage() {
         description="Full-service buffet catering in Bali for villas, weddings, and events. Indonesian, International, and Premium Live-Station buffets. Chef, staff, setup & cleanup included. From IDR 550,000/person. Min. 30 guests."
         canonical={`${SITE}/catering/buffet`}
         ogImage={`${SITE}/generated/aura-buffet.webp`}
-        jsonLd={[localBusinessSchema, offerSchema, breadcrumbSchema('Buffet Catering', `${SITE}/catering/buffet`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Buffet Catering Bali', 'Full-service buffet catering for villas, weddings, and events. Indonesian, International, and Premium Live-Station options.', `${SITE}/catering/buffet`, 'IDR'),
+          offerSchema('Indonesian Buffet', 550000, 'IDR', `${SITE}/catering/buffet`),
+          offerSchema('International Buffet', 750000, 'IDR', `${SITE}/catering/buffet`),
+          offerSchema('Premium Live-Station Buffet', 950000, 'IDR', `${SITE}/catering/buffet`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Buffet Catering', `${SITE}/catering/buffet`, 'Catering', `${SITE}/catering`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Buffet Catering' }]} />
 
       {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -196,7 +222,7 @@ export default function CateringBuffetPage() {
             <div>
               <SectionHeader
                 align="left"
-                eyebrow="Why Buffet"
+                eyebrow="CHAPTER 1 — THE INQUIRY"
                 title="The Easiest Way to Feed a Bigger Group"
                 subtitle="Buffet catering works when you need food to move smoothly. Guests can eat at their own pace, the service team keeps the table clean, and the event does not stop every time food is served."
               />
@@ -225,7 +251,7 @@ export default function CateringBuffetPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Packages"
+            eyebrow="CHAPTER 2 — THE MENU"
             title="Choose Your Buffet Package"
           />
           <div className="grid md:grid-cols-3 gap-6">
@@ -233,14 +259,48 @@ export default function CateringBuffetPage() {
               <CateringPackageCard key={pkg.title} {...pkg} accent="#6B8E5A" />
             ))}
           </div>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-[#4A4745]/70">
+              All-in prices include 21% service charge and tax:{' '}
+              <AllInPrice price={550000} className="inline" /> ·{' '}
+              <AllInPrice price={750000} className="inline" /> ·{' '}
+              <AllInPrice price={950000} className="inline" />
+            </p>
+          </div>
+
+          {/* Group Total Calculators */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            <GroupTotalCalculator pricePerPerson={550000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#6B8E5A" />
+            <GroupTotalCalculator pricePerPerson={750000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#6B8E5A" />
+            <GroupTotalCalculator pricePerPerson={950000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#6B8E5A" />
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ PRE-EVENT TASTING ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[800px] mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#6B8E5A]/10 text-[#6B8E5A] text-sm font-semibold mb-6">
+            <BadgeCheck className="w-4 h-4" />
+            Free tasting at 40+ guests
+          </div>
+          <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Pre-Event Tasting Promise</h2>
+          <p className="text-[#4A4745] mb-6">
+            For groups of 40 guests or more, we offer a complimentary pre-event tasting session. You will sample the proposed menu, meet the head chef, and confirm every detail before the big day. No surprises. No guesswork.
+          </p>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {['Menu preview', 'Chef meet-and-greet', 'Dietary adjustments', 'Portion confirmation', 'Service timing walkthrough'].map((d) => (
+              <span key={d} className="px-3 py-1.5 rounded-full bg-white border border-[#E8E6E3] text-sm text-[#4A4745]">{d}</span>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ═══════ WHAT'S INCLUDED ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Included"
+            eyebrow="CHAPTER 3 — THE SERVICE"
             title="What Every Buffet Package Includes"
             subtitle="Buffet catering includes the food, people, and setup required to run the meal properly. The goal is simple: your guests eat, the table stays clean, and the event keeps moving."
           />
@@ -255,8 +315,71 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ ADD-ONS ═══════ */}
+      {/* ═══════ PHOTO GALLERY ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 4 — THE SETUP"
+            title="Buffet Photo Gallery"
+            subtitle="Real buffet setups from villa events, weddings, and corporate dinners across Bali."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {BUFFET_GALLERY.map((src, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
+                <img src={src} alt={`Buffet catering setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ GROUP SIZE GUIDE ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 5 — THE INVESTMENT"
+            title="Group Size Guide"
+            subtitle="All-in totals include 21% service charge and tax (×1.21). Final quote confirmed before deposit."
+          />
+          <div className="hidden md:block overflow-x-auto">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="border-b-2 border-[#1A1A1A]">
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Guests</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Indonesian (550K)</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">International (750K)</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Premium Live-Station (950K)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {GROUP_SIZE_GUIDE.map((row) => (
+                  <tr key={row.guests} className="border-b border-[#E8E6E3]">
+                    <td className="py-4 font-medium">{row.guests} guests</td>
+                    <td className="py-4 text-[#6B8E5A] font-semibold">{row.indonesian}</td>
+                    <td className="py-4 text-[#6B8E5A] font-semibold">{row.international}</td>
+                    <td className="py-4 text-[#6B8E5A] font-semibold">{row.premium}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="md:hidden space-y-4">
+            {GROUP_SIZE_GUIDE.map((row) => (
+              <div key={row.guests} className="bg-white rounded-xl border border-[#E8E6E3] p-4">
+                <p className="font-medium mb-3">{row.guests} guests</p>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between"><span className="text-[#4A4745]">Indonesian</span><span className="text-[#6B8E5A] font-semibold">{row.indonesian}</span></div>
+                  <div className="flex justify-between"><span className="text-[#4A4745]">International</span><span className="text-[#6B8E5A] font-semibold">{row.international}</span></div>
+                  <div className="flex justify-between"><span className="text-[#4A4745]">Premium</span><span className="text-[#6B8E5A] font-semibold">{row.premium}</span></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ ADD-ONS ═══════ */}
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Extras"
@@ -271,7 +394,7 @@ export default function CateringBuffetPage() {
       </section>
 
       {/* ═══════ BEST FOR ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Occasions"
@@ -292,7 +415,7 @@ export default function CateringBuffetPage() {
       </section>
 
       {/* ═══════ SETUP REQUIREMENTS ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="Logistics"
@@ -311,7 +434,7 @@ export default function CateringBuffetPage() {
       </section>
 
       {/* ═══════ PRICING SUMMARY ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Compare"
@@ -437,6 +560,8 @@ export default function CateringBuffetPage() {
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

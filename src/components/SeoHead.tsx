@@ -113,6 +113,26 @@ export function aggregateRatingSchema(ratingValue: number, reviewCount: number) 
   }
 }
 
+export function menuSchema(
+  name: string,
+  description: string,
+  url: string,
+  items: { name: string; description?: string }[]
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Menu',
+    name,
+    description,
+    url,
+    hasMenuSection: items.map((item) => ({
+      '@type': 'MenuItem',
+      name: item.name,
+      ...(item.description ? { description: item.description } : {}),
+    })),
+  }
+}
+
 // Sets per-route document.title, meta description, canonical, OG tags, and an
 // optional robots noindex directive. Works for a Vite SPA — Google executes JS.
 // For first-contentful-html SEO add vite-plugin-ssg later (see SEO-PAGES-PLAN.md).

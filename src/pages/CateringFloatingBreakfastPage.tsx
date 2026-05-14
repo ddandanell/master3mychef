@@ -5,12 +5,20 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, {
+  localBusinessSchema,
+  breadcrumbSchema,
+  serviceSchema,
+  offerSchema,
+  faqPageSchema,
+  aggregateRatingSchema,
+} from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import CateringAddOnCard from '@/components/catering/CateringAddOnCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -25,6 +33,7 @@ const FLOATING_PACKAGES = [
     image: '/generated/catering/floating-breakfast.webp',
     title: 'Floating Breakfast for 2',
     price: 'IDR 950,000/couple',
+    priceNum: 950000,
     description: 'Bamboo tray, tropical fruit, croissants, eggs, coffee/tea/juice.',
     includes: ['Custom bamboo tray', 'Tropical fruit', 'Croissants & pastries', 'Eggs', 'Coffee, tea & juice'],
     minGuests: 'For 2',
@@ -33,6 +42,7 @@ const FLOATING_PACKAGES = [
     image: '/generated/catering/floating-breakfast.webp',
     title: 'Floating Brunch for 2',
     price: 'IDR 1,400,000/couple',
+    priceNum: 1400000,
     description: 'Champagne, cured salmon, avocado toast, mini grazing board.',
     includes: ['Champagne', 'Cured salmon', 'Avocado toast', 'Mini grazing board', 'Coffee, tea & juice'],
     minGuests: 'For 2',
@@ -41,6 +51,7 @@ const FLOATING_PACKAGES = [
     image: '/generated/catering/floating-breakfast.webp',
     title: 'Floating Group Brunch',
     price: 'IDR 750,000/person',
+    priceNum: 750000,
     description: '4-10 guests, multiple trays, scaled setup.',
     includes: ['Multiple bamboo trays', 'Scaled fruit & pastries', 'Eggs & mains', 'Coffee, tea & juice', 'Group styling'],
     minGuests: 'Min. 4 guests',
@@ -105,19 +116,6 @@ export default function CateringFloatingBreakfastPage() {
     return () => ctx.revert()
   }, [])
 
-  const offerSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Offer',
-    name: 'Floating Breakfast Bali',
-    description: 'Bamboo tray styled with frangipani, tropical fruit, and chef-prepared brunch delivered to your Bali villa pool.',
-    price: '950000',
-    priceCurrency: 'IDR',
-    priceValidUntil: '2026-12-31',
-    availability: 'https://schema.org/InStock',
-    url: `${SITE}/catering/floating-breakfast`,
-    seller: { '@id': 'https://mychef.id/#business' },
-  }
-
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
@@ -125,8 +123,19 @@ export default function CateringFloatingBreakfastPage() {
         description="Bamboo tray styled with frangipani + tropical fruit + chef-prepared brunch. Delivered to your Bali villa pool, photo-ready. From IDR 950,000/couple."
         canonical={`${SITE}/catering/floating-breakfast`}
         ogImage={`${SITE}/generated/catering/floating-breakfast.webp`}
-        jsonLd={[localBusinessSchema, offerSchema, breadcrumbSchema('Floating Breakfast', `${SITE}/catering/floating-breakfast`, 'Catering', `${SITE}/catering`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Floating Breakfast Bali', 'Bamboo tray styled with frangipani, tropical fruit, and chef-prepared brunch delivered to your Bali villa pool.', `${SITE}/catering/floating-breakfast`, 'IDR'),
+          offerSchema('Floating Breakfast for 2', 950000, 'IDR', `${SITE}/catering/floating-breakfast`),
+          offerSchema('Floating Brunch for 2', 1400000, 'IDR', `${SITE}/catering/floating-breakfast`),
+          offerSchema('Floating Group Brunch', 750000, 'IDR', `${SITE}/catering/floating-breakfast`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Floating Breakfast', `${SITE}/catering/floating-breakfast`, 'Catering', `${SITE}/catering`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Floating Breakfast' }]} />
 
       {/* ═══════ HERO (light, airy) ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -184,6 +193,14 @@ export default function CateringFloatingBreakfastPage() {
             {FLOATING_PACKAGES.map((pkg) => (
               <CateringPackageCard key={pkg.title} {...pkg} accent="#6B8E5A" />
             ))}
+          </div>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-[#4A4745]/70">
+              All-in fixed pricing:{' '}
+              <AllInPrice price={950000} showPlusPlus={false} suffix="/couple" className="inline" /> ·{' '}
+              <AllInPrice price={1400000} showPlusPlus={false} suffix="/couple" className="inline" /> ·{' '}
+              <AllInPrice price={750000} showPlusPlus={false} suffix="/person" className="inline" />
+            </p>
           </div>
         </div>
       </section>
@@ -318,6 +335,8 @@ export default function CateringFloatingBreakfastPage() {
           />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

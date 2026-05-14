@@ -1,15 +1,16 @@
 import { useEffect, useRef } from 'react'
 import {
-  MessageCircle, Calendar, Users, Leaf, Heart, Sun,
-  Check, Sparkles, Coffee,
+  MessageCircle, Calendar, Leaf, Heart, Sun,
+  Coffee,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -22,14 +23,14 @@ const SITE = 'https://mychef.id'
 const FORMATS = [
   {
     title: 'Wellness Retreat',
-    price: 'IDR 1,500,000/person/day',
+    price: <AllInPrice price={1500000} suffix="/person/day" />,
     guestRange: '10–30 guests',
     description: 'Plant-forward, anti-inflammatory, detox-focused. 3 meals + 2 snacks daily. On-site chef.',
     features: ['3 plant-forward meals', '2 healthy snacks', 'Anti-inflammatory focus', 'On-site chef', 'Daily fresh sourcing', 'Welcome ceremony'],
   },
   {
     title: 'Yoga Retreat',
-    price: 'IDR 1,500,000/person/day',
+    price: <AllInPrice price={1500000} suffix="/person/day" />,
     guestRange: '10–30 guests',
     description: 'Fully vegan, sattvic meals. 3 meals + 2 snacks + mid-morning and evening tea ritual.',
     features: ['3 sattvic vegan meals', '2 snacks + tea ritual', 'Fully vegan', 'On-site chef', 'Welcome water blessing', 'Recipe book option'],
@@ -37,7 +38,7 @@ const FORMATS = [
   },
   {
     title: 'Corporate-Style Retreat',
-    price: 'IDR 2,500,000/person/day',
+    price: <AllInPrice price={2500000} suffix="/person/day" />,
     guestRange: '10–50 guests',
     description: 'Mixed dietary management, team-building activities, retreat coordinator included.',
     features: ['3 meals + 2 snacks/day', 'Mixed dietary management', 'Team-building included', 'Retreat coordinator', 'Tax invoice', 'AV support'],
@@ -92,8 +93,19 @@ export default function EventsRetreatsPage() {
         title="Wellness & Yoga Retreat Catering Bali | myCHEF"
         description="Multi-day retreat catering for yoga, surf, wellness, and corporate retreats in Bali. From IDR 1.5M/pp/day. Plant-forward, GF, anti-inflammatory specialists."
         canonical={`${SITE}/events/retreats`}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Retreats', `${SITE}/events/retreats`, 'Events', `${SITE}/events`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Retreat Catering Bali', 'Multi-day retreat catering for yoga, wellness, and corporate retreats in Bali. Plant-forward, vegan, and dietary-specialist menus.', `${SITE}/events/retreats`, 'IDR'),
+          offerSchema('Wellness Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
+          offerSchema('Yoga Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
+          offerSchema('Corporate-Style Retreat', 2500000, 'IDR', `${SITE}/events/retreats`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Retreats', `${SITE}/events/retreats`, 'Events', `${SITE}/events`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Retreats' }]} />
 
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -128,6 +140,12 @@ export default function EventsRetreatsPage() {
           <SectionHeader eyebrow="Packages" title="Retreat Packages" subtitle="Three tiers for different retreat styles and dietary philosophies." />
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
+          </div>
+
+          {/* Group Total Calculators */}
+          <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <GroupTotalCalculator pricePerPerson={1500000} minGuests={10} maxGuests={30} defaultGuests={15} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={50} defaultGuests={20} accent="#C5A028" />
           </div>
         </div>
       </section>
@@ -214,6 +232,8 @@ export default function EventsRetreatsPage() {
           />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* CTA */}
       <section className="py-20 md:py-28 bg-[#0A0A0A] text-center">

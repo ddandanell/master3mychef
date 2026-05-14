@@ -1,15 +1,16 @@
 import { useEffect, useRef } from 'react'
 import {
-  MessageCircle, Calendar, Users, Cake, PartyPopper, Gift,
-  Music, Camera, Check, Sparkles,
+  MessageCircle, Calendar, Cake, PartyPopper, Gift,
+  Music, Camera, Sparkles,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -22,14 +23,14 @@ const SITE = 'https://mychef.id'
 const FORMATS = [
   {
     title: 'Intimate Birthday Dinner',
-    price: 'IDR 1,500,000/person',
+    price: <AllInPrice price={1500000} />,
     guestRange: '4–12 guests',
     description: '5-course plated dinner, birthday cake, styling, and photographer for 1 hour. Perfect for milestone birthdays.',
     features: ['5-course menu', 'Birthday cake', 'Table styling', 'Photographer 1h', 'Dedicated waiter'],
   },
   {
     title: 'Birthday Villa Party',
-    price: 'IDR 850,000/person',
+    price: <AllInPrice price={850000} />,
     guestRange: '15–40 guests',
     description: 'BBQ buffet, bartender, open bar, DJ, decor, cake, and photographer. The full villa party experience.',
     features: ['BBQ buffet (B2)', 'Bartender + open bar 3h', 'DJ 4h', 'Decor + cake', 'Photographer 2h', 'Day-of coordinator'],
@@ -45,6 +46,29 @@ const FORMATS = [
 ]
 
 const THEMES = ['Tropical', 'Glam', 'Surfer', 'Kids Unicorn', 'Milestone 30/40/50', 'Custom']
+
+const CAKE_STYLES = [
+  { name: 'Classic Buttercream', desc: 'Smooth finish, custom colour, name in icing.', colour: 'from-[#F5E6D3] to-[#E8D5C4]' },
+  { name: 'Naked Cake', desc: 'Semi-exposed layers, fresh flowers, rustic finish.', colour: 'from-[#F0E6D8] to-[#E2D4C0]' },
+  { name: 'Chocolate Drip', desc: 'Rich ganache drip, gold leaf, macaron accents.', colour: 'from-[#3E2723] to-[#5D4037]' },
+  { name: 'Tropical Fruit', desc: 'Coconut base, mango, passionfruit, edible flowers.', colour: 'from-[#FFF8E1] to-[#FFECB3]' },
+  { name: 'Mirror Glaze', desc: 'High-gloss finish, marble effect, modern look.', colour: 'from-[#E0F7FA] to-[#B2EBF2]' },
+  { name: 'Custom Tiered', desc: '2–3 tiers, any theme, toppers, and detailing.', colour: 'from-[#F3E5F5] to-[#E1BEE7]' },
+]
+
+const THEMED_SETUPS = [
+  { name: 'Tropical', desc: 'Palm leaves, pineapples, bright colours, pool floats.', colour: 'from-[#C5A028]/20 to-[#C5A028]/5' },
+  { name: 'Glam', desc: 'Black and gold, sequins, champagne tower, sparkle.', colour: 'from-[#1A1A1A]/10 to-[#C5A028]/10' },
+  { name: 'Surfer', desc: 'Beach casual, board shorts, sunset tones, acoustic.', colour: 'from-[#E8913A]/20 to-[#E8913A]/5' },
+  { name: 'Kids Unicorn', desc: 'Pastel rainbow, glitter, balloons, magic backdrop.', colour: 'from-[#F8BBD0]/20 to-[#E1BEE7]/20' },
+]
+
+const REAL_BIRTHDAYS = [
+  { title: 'Milestone 40th', location: 'Canggu Villa', image: '/generated/party-birthday.webp' },
+  { title: 'Kids Pool Party', location: 'Seminyak Villa', image: '/generated/sol-kids.webp' },
+  { title: 'Sunset BBQ Bash', location: 'Uluwatu Villa', image: '/generated/sol-bbq.webp' },
+  { title: 'Intimate 8-Person Dinner', location: 'Ubud Villa', image: '/generated/aura-tablescape.webp' },
+]
 
 const ADDONS = [
   { icon: Cake, title: 'Custom 3-Tier Cake', price: '+IDR 2M – 4M' },
@@ -85,8 +109,18 @@ export default function EventsBirthdaysPage() {
         title="Birthday Parties Bali — Dinners, Villa Parties, Kids | myCHEF"
         description="Birthday parties at your Bali villa. Intimate dinners (4–12) from IDR 1.5M/pp, villa parties (15–40) from IDR 850K/pp, kids parties from IDR 350K/child. Cake + decor + photography."
         canonical={`${SITE}/events/birthdays`}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Birthdays', `${SITE}/events/birthdays`, 'Events', `${SITE}/events`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Birthday Party Catering Bali', 'Private chef birthday party catering at Bali villas. Intimate dinners, villa parties, and kids celebrations.', `${SITE}/events/birthdays`, 'IDR'),
+          offerSchema('Intimate Birthday Dinner', 1500000, 'IDR', `${SITE}/events/birthdays`),
+          offerSchema('Birthday Villa Party', 850000, 'IDR', `${SITE}/events/birthdays`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Birthdays', `${SITE}/events/birthdays`, 'Events', `${SITE}/events`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Birthdays' }]} />
 
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -95,7 +129,7 @@ export default function EventsBirthdaysPage() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Birthday Parties</p>
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Chapter 1 — Birthday Parties</p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Birthday Parties at<br /><span className="italic">Your Bali Villa</span>
           </h1>
@@ -118,25 +152,74 @@ export default function EventsBirthdaysPage() {
       {/* FORMATS */}
       <section className="py-20 md:py-28 bg-white birthday-content">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Formats" title="Three Birthday Formats" subtitle="Choose the format that matches your guest count and vibe." />
+          <SectionHeader eyebrow="Chapter 2 — Formats" title="Three Birthday Formats" subtitle="Choose the format that matches your guest count and vibe." />
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
           </div>
         </div>
       </section>
 
-      {/* THEMES */}
+      {/* CAKE GALLERY */}
       <section className="py-20 md:py-28 bg-[#FAFAF8]">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <SectionHeader eyebrow="Themes" title="Themed Setups" subtitle="Choose a signature theme or request a custom design." />
-          <div className="flex flex-wrap justify-center gap-3">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 3 — Cakes" title="Cake Gallery" subtitle="Six signature cake styles. Custom designs available on request." />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {CAKE_STYLES.map((c) => (
+              <div key={c.name} className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+                <div className={`aspect-[4/3] bg-gradient-to-br ${c.colour}`} />
+                <div className="p-5">
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{c.name}</h3>
+                  <p className="text-[#4A4745] text-xs">{c.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* THEMED SETUP GALLERY */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 4 — Themes" title="Themed Setups" subtitle="Signature themes or fully custom design — your villa, your vision." />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {THEMED_SETUPS.map((t) => (
+              <div key={t.name} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+                <div className={`aspect-[4/3] bg-gradient-to-br ${t.colour}`} />
+                <div className="p-5">
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{t.name}</h3>
+                  <p className="text-[#4A4745] text-xs">{t.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-3 mt-8">
             {THEMES.map((t) => (
               <span key={t} className="px-5 py-3 bg-white border border-[#E8E6E3] rounded-full text-sm font-medium text-[#1A1A1A] hover:border-[#C5A028] transition-colors cursor-default">
                 {t}
               </span>
             ))}
           </div>
-          <p className="text-[#4A4745] text-sm mt-6">Custom themes from +IDR 3,500,000. Milestone themes (30/40/50) included at no extra charge.</p>
+          <p className="text-[#4A4745] text-sm mt-6 text-center">Custom themes from +IDR 3,500,000. Milestone themes (30/40/50) included at no extra charge.</p>
+        </div>
+      </section>
+
+      {/* REAL BIRTHDAY GALLERY */}
+      <section className="py-20 md:py-28 bg-[#FAFAF8]">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader eyebrow="Chapter 5 — Real Birthdays" title="Celebration Gallery" subtitle="Real parties, real villas, real memories made." />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {REAL_BIRTHDAYS.map((b) => (
+              <div key={b.title} className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={b.image} alt={b.title} className="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{b.title}</h3>
+                  <p className="text-[#4A4745] text-xs">{b.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -195,6 +278,8 @@ export default function EventsBirthdaysPage() {
           />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* CTA */}
       <section className="py-20 md:py-28 bg-[#0A0A0A] text-center">

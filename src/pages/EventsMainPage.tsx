@@ -7,9 +7,10 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
@@ -26,7 +27,7 @@ interface EventType {
   slug: string
   title: string
   eyebrow: string
-  fromPrice: string
+  fromPrice: React.ReactNode
   description: string
   icon: typeof Heart
   image: string
@@ -38,7 +39,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'weddings',
     eyebrow: 'The Once-In-A-Lifetime',
     title: 'Villa Weddings',
-    fromPrice: 'From IDR 600K/pp',
+    fromPrice: <AllInPrice price={600000} />,
     description:
       'Intimate ceremonies, full receptions, and luxury celebrations. Coordinator on the day, full styling, ceremony to last dance.',
     icon: Heart,
@@ -49,7 +50,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'birthdays',
     eyebrow: 'The Milestone',
     title: 'Birthday Parties',
-    fromPrice: 'From IDR 850K/pp',
+    fromPrice: <AllInPrice price={850000} />,
     description:
       'Intimate dinners, villa parties, and kids celebrations. Cake, themed setup, and a team that makes the day effortless.',
     icon: Cake,
@@ -60,7 +61,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'anniversaries',
     eyebrow: 'The Two Of You',
     title: 'Anniversary Dinners',
-    fromPrice: 'From IDR 1.2M/pp',
+    fromPrice: <AllInPrice price={1200000} />,
     description:
       'Private candlelit dinners, vow renewals, and small-group celebrations. The opposite of a hotel package — built around your story.',
     icon: Wine,
@@ -71,7 +72,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'corporate-events',
     eyebrow: 'The Off-Site',
     title: 'Corporate Events',
-    fromPrice: 'From IDR 1.2M/pp',
+    fromPrice: <AllInPrice price={1200000} />,
     description:
       'Executive dinners, conferences, retreats, product launches. Hospitality production grade — invoice-ready, NPWP-issued.',
     icon: Briefcase,
@@ -82,7 +83,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'retreats',
     eyebrow: 'The Multi-Day',
     title: 'Wellness & Yoga Retreats',
-    fromPrice: 'From IDR 1.5M/pp/day',
+    fromPrice: <AllInPrice price={1500000} suffix="/person/day" />,
     description:
       'Dietary-specialist meals across multi-day retreats. Plant-forward, gluten-free, raw, vegan — handled at scale, on schedule.',
     icon: Leaf,
@@ -93,7 +94,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'baby-showers',
     eyebrow: 'The Sweetest',
     title: 'Baby Showers',
-    fromPrice: 'From IDR 750K/pp',
+    fromPrice: <AllInPrice price={750000} />,
     description:
       'Brunch and high-tea showers, themed decor, mocktail bars, and styling so gentle it photographs itself.',
     icon: Baby,
@@ -104,7 +105,7 @@ const EVENT_TYPES: EventType[] = [
     slug: 'villa-parties',
     eyebrow: 'The Long Weekend',
     title: 'Villa Parties',
-    fromPrice: 'From IDR 650K/pp',
+    fromPrice: <AllInPrice price={650000} />,
     description:
       'Cocktail receptions, sundowner BBQs, hens & bucks weekends. Bar, music, decor, and Sofia keeping the night on rails.',
     icon: Music,
@@ -173,20 +174,20 @@ const WHY: WhyItem[] = [
 
 interface PricingRow {
   type: string
-  from: string
+  from: React.ReactNode
   minGuests: string
   goodFor: string
 }
 
 const PRICING_TABLE: PricingRow[] = [
-  { type: 'Villa Weddings (Intimate)', from: 'IDR 600,000/pp', minGuests: '10+', goodFor: 'Elopements, micro-weddings' },
-  { type: 'Villa Weddings (Luxury)', from: 'IDR 1,500,000/pp', minGuests: '40+', goodFor: 'Full receptions, multi-day' },
-  { type: 'Birthday Parties', from: 'IDR 850,000/pp', minGuests: '15+', goodFor: 'Milestone dinners, villa parties' },
-  { type: 'Anniversary Dinners', from: 'IDR 1,200,000/pp', minGuests: '2+', goodFor: 'Couples, vow renewals' },
-  { type: 'Corporate Events', from: 'IDR 1,200,000/pp', minGuests: '10+', goodFor: 'Conferences, exec dinners' },
-  { type: 'Wellness Retreats', from: 'IDR 1,500,000/pp/day', minGuests: '8+', goodFor: 'Yoga, wellness, dietary-led' },
-  { type: 'Baby Showers', from: 'IDR 750,000/pp', minGuests: '10+', goodFor: 'Brunch, high tea, gender reveal' },
-  { type: 'Villa Parties', from: 'IDR 650,000/pp', minGuests: '20+', goodFor: 'Sundowners, hens, cocktail' },
+  { type: 'Villa Weddings (Intimate)', from: <AllInPrice price={600000} />, minGuests: '10+', goodFor: 'Elopements, micro-weddings' },
+  { type: 'Villa Weddings (Luxury)', from: <AllInPrice price={1500000} />, minGuests: '40+', goodFor: 'Full receptions, multi-day' },
+  { type: 'Birthday Parties', from: <AllInPrice price={850000} />, minGuests: '15+', goodFor: 'Milestone dinners, villa parties' },
+  { type: 'Anniversary Dinners', from: <AllInPrice price={1200000} />, minGuests: '2+', goodFor: 'Couples, vow renewals' },
+  { type: 'Corporate Events', from: <AllInPrice price={1200000} />, minGuests: '10+', goodFor: 'Conferences, exec dinners' },
+  { type: 'Wellness Retreats', from: <AllInPrice price={1500000} suffix="/person/day" />, minGuests: '8+', goodFor: 'Yoga, wellness, dietary-led' },
+  { type: 'Baby Showers', from: <AllInPrice price={750000} />, minGuests: '10+', goodFor: 'Brunch, high tea, gender reveal' },
+  { type: 'Villa Parties', from: <AllInPrice price={650000} />, minGuests: '20+', goodFor: 'Sundowners, hens, cocktail' },
 ]
 
 const AREAS_COVERED = [
@@ -285,7 +286,16 @@ export default function EventsMainPage() {
         jsonLd={[
           localBusinessSchema,
           breadcrumbSchema('Events', `${SITE}/events`),
+          serviceSchema('Bali Event Catering & Coordination', 'Villa weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties in Bali. One team, one bill.', `${SITE}/events`, 'IDR'),
+          offerSchema('Villa Weddings', 600000, 'IDR', `${SITE}/events/weddings`),
+          offerSchema('Birthday Parties', 850000, 'IDR', `${SITE}/events/birthdays`),
+          offerSchema('Anniversary Dinners', 1200000, 'IDR', `${SITE}/events/anniversaries`),
+          offerSchema('Corporate Events', 1200000, 'IDR', `${SITE}/events/corporate-events`),
+          offerSchema('Wellness & Yoga Retreats', 1500000, 'IDR', `${SITE}/events/retreats`),
+          offerSchema('Baby Showers', 750000, 'IDR', `${SITE}/events/baby-showers`),
+          offerSchema('Villa Parties', 650000, 'IDR', `${SITE}/events/villa-parties`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
           {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
@@ -299,6 +309,8 @@ export default function EventsMainPage() {
           },
         ]}
       />
+
+      <Breadcrumb items={[{ label: 'Events' }]} />
 
       {/* ═══════ HERO — DARK, EDITORIAL, GOLD ═══════ */}
       <section className="relative min-h-[88vh] flex items-end overflow-hidden bg-[#0A0A0A] text-white">
@@ -630,6 +642,8 @@ export default function EventsMainPage() {
           />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden bg-[#0A0A0A] text-white">

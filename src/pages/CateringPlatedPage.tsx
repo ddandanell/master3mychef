@@ -2,14 +2,23 @@ import { useEffect, useRef } from 'react'
 import {
   Check, Phone, Calendar, Users, MapPin,
   Utensils, Sparkles, ChefHat, Wine,
+  MessageSquare,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, {
+  localBusinessSchema,
+  breadcrumbSchema,
+  serviceSchema,
+  offerSchema,
+  faqPageSchema,
+  aggregateRatingSchema,
+} from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -24,6 +33,7 @@ const PLATED_PACKAGES = [
     image: '/generated/pkg-italian.webp',
     title: '3-Course Plated',
     price: 'IDR 800,000/person',
+    priceNum: 800000,
     description: 'Starter + Main + Dessert. Minimum IDR 5,000,000 total.',
     includes: ['English-speaking chef', 'Service manager', '1 waiter per 10 guests', 'Tables, linens, cutlery, porcelain, glassware'],
     minGuests: 'Min. IDR 5M',
@@ -32,6 +42,7 @@ const PLATED_PACKAGES = [
     image: '/generated/pkg-italian.webp',
     title: '4-Course Plated',
     price: 'IDR 1,000,000/person',
+    priceNum: 1000000,
     description: 'Amuse + Starter + Main + Dessert. Minimum IDR 5,000,000 total.',
     includes: ['English-speaking chef', 'Service manager', '1 waiter per 10 guests', 'Tables, linens, cutlery, porcelain, glassware'],
     minGuests: 'Min. IDR 5M',
@@ -40,6 +51,7 @@ const PLATED_PACKAGES = [
     image: '/generated/pkg-italian.webp',
     title: '5-Course Premium',
     price: 'IDR 1,300,000/person',
+    priceNum: 1300000,
     description: 'Amuse + Starter + Palate Cleanser + Main + Dessert + Petits Fours. Minimum IDR 5,000,000 total.',
     includes: ['English-speaking chef', 'Service manager', '1 waiter per 10 guests', 'Tables, linens, cutlery, porcelain, glassware', 'Kitchen tent if needed'],
     minGuests: 'Min. IDR 5M',
@@ -85,6 +97,21 @@ const GROUP_TOTALS = [
   { guests: 30, course3: 'IDR 29.04M', course4: 'IDR 36.3M', course5: 'IDR 47.19M' },
 ]
 
+const PLATED_GALLERY = [
+  '/generated/pkg-italian.webp',
+  '/generated/corp-plated.webp',
+  '/generated/hub-fine-dining.webp',
+  '/generated/aura-toast.webp',
+  '/generated/aura-tablescape.webp',
+  '/generated/hub-catering.webp',
+]
+
+const WHY_PLATED_VS_BUFFET = [
+  { title: 'Formality', plated: 'Individual service, white-glove pacing', buffet: 'Self-serve, casual flow' },
+  { title: 'Group size', plated: 'Ideal for 10–60 guests', buffet: 'Better for 30–200 guests' },
+  { title: 'Presentation', plated: 'Restaurant-quality plating per guest', buffet: 'Chafing dishes, bulk display' },
+]
+
 const FAQS = [
   { q: 'When is plated better than buffet?', a: 'Plated is ideal for formal events, smaller groups, and when you want a restaurant-quality experience with individual service.' },
   { q: 'How long is plated service?', a: 'Typically 2.5–3 hours from the amuse-bouche to coffee.' },
@@ -109,19 +136,6 @@ export default function CateringPlatedPage() {
     return () => ctx.revert()
   }, [])
 
-  const offerSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Offer',
-    name: 'Plated Set Menu Catering Bali',
-    description: 'Three-, four-, or five-course plated dinners served restaurant-style at your Bali villa.',
-    price: '800000',
-    priceCurrency: 'IDR',
-    priceValidUntil: '2026-12-31',
-    availability: 'https://schema.org/InStock',
-    url: `${SITE}/catering/plated-catering`,
-    seller: { '@id': 'https://mychef.id/#business' },
-  }
-
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
@@ -129,8 +143,19 @@ export default function CateringPlatedPage() {
         description="Three-, four-, or five-course plated dinners served restaurant-style at your Bali villa. English-speaking chef, service team, full setup & cleanup. From IDR 800,000/person. Min. IDR 5,000,000."
         canonical={`${SITE}/catering/plated-catering`}
         ogImage={`${SITE}/generated/pkg-italian.webp`}
-        jsonLd={[localBusinessSchema, offerSchema, breadcrumbSchema('Plated Catering', `${SITE}/catering/plated-catering`, 'Catering', `${SITE}/catering`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Plated Set Menu Catering Bali', 'Three-, four-, or five-course plated dinners served restaurant-style at your Bali villa.', `${SITE}/catering/plated-catering`, 'IDR'),
+          offerSchema('3-Course Plated', 800000, 'IDR', `${SITE}/catering/plated-catering`),
+          offerSchema('4-Course Plated', 1000000, 'IDR', `${SITE}/catering/plated-catering`),
+          offerSchema('5-Course Premium', 1300000, 'IDR', `${SITE}/catering/plated-catering`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Plated Catering', `${SITE}/catering/plated-catering`, 'Catering', `${SITE}/catering`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Plated Catering' }]} />
 
       {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -180,13 +205,28 @@ export default function CateringPlatedPage() {
       <section className="plated-content py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Packages"
+            eyebrow="CHAPTER 1 — THE INQUIRY"
             title="Choose Your Plated Experience"
           />
           <div className="grid md:grid-cols-3 gap-6">
             {PLATED_PACKAGES.map((pkg) => (
               <CateringPackageCard key={pkg.title} {...pkg} accent="#6B8E5A" />
             ))}
+          </div>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-[#4A4745]/70">
+              All-in prices include 21% service charge and tax:{' '}
+              <AllInPrice price={800000} className="inline" /> ·{' '}
+              <AllInPrice price={1000000} className="inline" /> ·{' '}
+              <AllInPrice price={1300000} className="inline" />
+            </p>
+          </div>
+
+          {/* Group Total Calculators */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            <GroupTotalCalculator pricePerPerson={800000} minGuests={7} maxGuests={60} defaultGuests={10} accent="#6B8E5A" />
+            <GroupTotalCalculator pricePerPerson={1000000} minGuests={5} maxGuests={60} defaultGuests={10} accent="#6B8E5A" />
+            <GroupTotalCalculator pricePerPerson={1300000} minGuests={4} maxGuests={60} defaultGuests={10} accent="#6B8E5A" />
           </div>
         </div>
       </section>
@@ -195,7 +235,7 @@ export default function CateringPlatedPage() {
       <section id="menus" className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Menus"
+            eyebrow="CHAPTER 2 — THE MENU"
             title="Sample Menus by Tier"
             subtitle="Example dishes for each course tier. Every menu is customised to your preferences."
           />
@@ -221,7 +261,7 @@ export default function CateringPlatedPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Included"
+            eyebrow="CHAPTER 3 — THE SERVICE"
             title="What's Included"
             subtitle="Every plated dinner includes the team, equipment, and service required for a restaurant-quality experience at your villa."
           />
@@ -238,17 +278,40 @@ export default function CateringPlatedPage() {
 
       {/* ═══════ WHY PLATED VS BUFFET ═══════ */}
       <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[800px] mx-auto">
+        <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Compare"
+            eyebrow="CHAPTER 4 — THE COMPARISON"
             title="Why Plated vs Buffet"
             subtitle="Plated service is the right choice when you want formality, precision, and an intimate dining experience."
           />
-          <div className="space-y-4">
-            {WHY_PLATED.map((item) => (
-              <div key={item} className="flex items-center gap-4 p-5 bg-white rounded-xl border border-[#E8E6E3]">
-                <Sparkles className="w-5 h-5 text-[#6B8E5A] flex-shrink-0" />
-                <span className="text-[#1A1A1A] font-medium text-sm md:text-base">{item}</span>
+          <div className="hidden md:block overflow-x-auto">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="border-b-2 border-[#1A1A1A]">
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Factor</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Plated</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Buffet</th>
+                </tr>
+              </thead>
+              <tbody>
+                {WHY_PLATED_VS_BUFFET.map((row) => (
+                  <tr key={row.title} className="border-b border-[#E8E6E3]">
+                    <td className="py-4 font-medium">{row.title}</td>
+                    <td className="py-4 text-[#6B8E5A] font-semibold">{row.plated}</td>
+                    <td className="py-4 text-[#4A4745]">{row.buffet}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="md:hidden space-y-4">
+            {WHY_PLATED_VS_BUFFET.map((row) => (
+              <div key={row.title} className="bg-white rounded-xl border border-[#E8E6E3] p-4">
+                <p className="font-medium mb-2">{row.title}</p>
+                <div className="space-y-1 text-sm">
+                  <div className="flex justify-between"><span className="text-[#4A4745]">Plated</span><span className="text-[#6B8E5A] font-semibold">{row.plated}</span></div>
+                  <div className="flex justify-between"><span className="text-[#4A4745]">Buffet</span><span className="text-[#4A4745]">{row.buffet}</span></div>
+                </div>
               </div>
             ))}
           </div>
@@ -259,7 +322,7 @@ export default function CateringPlatedPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
-            eyebrow="Wine"
+            eyebrow="CHAPTER 5 — THE PAIRING"
             title="Wine Pairing Add-On"
             subtitle="Enhance your plated dinner with curated wine pairings and welcome champagne."
           />
@@ -289,14 +352,57 @@ export default function CateringPlatedPage() {
         </div>
       </section>
 
-      {/* ═══════ GROUP SIZE GUIDE ═══════ */}
+      {/* ═══════ PHOTO GALLERY ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Pricing"
-            title="Group Size Guide"
+            eyebrow="CHAPTER 6 — THE SETUP"
+            title="Plated Dinner Gallery"
+            subtitle="Real plated course presentations from villa dinners across Bali."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {PLATED_GALLERY.map((src, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
+                <img src={src} alt={`Plated dinner setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ GROUP SIZE GUIDE + MINIMUM SPEND ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 7 — THE INVESTMENT"
+            title="Group Size Guide & Minimum Spend"
             subtitle="All-in prices include service charge and tax (×1.21). Final quote confirmed before deposit."
           />
+          <div className="max-w-3xl mx-auto mb-10">
+            <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <MessageSquare className="w-5 h-5 text-[#6B8E5A]" />
+                <h3 className="font-medium text-[#1A1A1A]">Minimum spend: IDR 5,000,000 per event</h3>
+              </div>
+              <p className="text-sm text-[#4A4745] mb-4">
+                The IDR 5M minimum covers chef travel, prep time, equipment, and base staffing. Even for smaller groups, the all-in total will meet or exceed this threshold. Here are examples:
+              </p>
+              <div className="grid sm:grid-cols-3 gap-3 text-sm">
+                <div className="bg-white rounded-xl border border-[#E8E6E3] p-4 text-center">
+                  <p className="text-[#4A4745] mb-1">6 guests × 3-Course</p>
+                  <p className="text-[#6B8E5A] font-semibold">IDR 5.81M</p>
+                </div>
+                <div className="bg-white rounded-xl border border-[#E8E6E3] p-4 text-center">
+                  <p className="text-[#4A4745] mb-1">5 guests × 4-Course</p>
+                  <p className="text-[#6B8E5A] font-semibold">IDR 6.05M</p>
+                </div>
+                <div className="bg-white rounded-xl border border-[#E8E6E3] p-4 text-center">
+                  <p className="text-[#4A4745] mb-1">4 guests × 5-Course</p>
+                  <p className="text-[#6B8E5A] font-semibold">IDR 6.29M</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left">
               <thead>
@@ -383,6 +489,8 @@ export default function CateringPlatedPage() {
           />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

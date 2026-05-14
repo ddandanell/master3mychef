@@ -1,15 +1,15 @@
 import { useEffect, useRef } from 'react'
 import {
-  MessageCircle, Calendar, Users, Heart, Wine, Camera, Music,
-  Check, Sparkles,
+  MessageCircle, Calendar, Wine, Camera, Music,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -22,14 +22,14 @@ const SITE = 'https://mychef.id'
 const FORMATS = [
   {
     title: 'Couple Intimate Dinner',
-    price: 'IDR 1,500,000/person',
+    price: <AllInPrice price={1500000} />,
     guestRange: '2 guests',
     description: 'Custom menu or Fine Dining menu in-villa. Candle setup, petals, welcome sparkling, photographer 1h.',
     features: ['Custom or Fine Dining menu', 'Candle + ambient lighting', 'Petal pathway', 'Welcome sparkling', 'Photographer 1h', 'Personalised toast'],
   },
   {
     title: 'Small-Group Anniversary',
-    price: 'IDR 1,200,000/person',
+    price: <AllInPrice price={1200000} />,
     guestRange: '4–16 guests',
     description: 'Plated 4-course dinner with family and friends. Personalised toast moment, photographer 2h.',
     features: ['4-course plated dinner', 'Personalised toast', 'Photographer 2h', 'Service team', 'Table styling', 'Soft music'],
@@ -37,7 +37,7 @@ const FORMATS = [
   },
   {
     title: 'Renewal of Vows + Dinner',
-    price: 'IDR 2,500,000/person',
+    price: <AllInPrice price={2500000} />,
     guestRange: '10–30 guests',
     description: 'Officiant + ceremony + plated reception. Full event coordination for your vow renewal.',
     features: ['Officiant + ceremony', 'Plated reception', 'Ceremony setup', 'Photographer 4h', 'Day-of coordinator', 'Floral arch'],
@@ -52,7 +52,7 @@ const HOTEL_COMPARISON = [
 ]
 
 const ADDONS = [
-  { icon: Cake, title: 'Anniversary Cake', price: '+IDR 1.5M – 3M' },
+  { icon: Camera, title: 'Anniversary Cake', price: '+IDR 1.5M – 3M' },
   { icon: Wine, title: 'Champagne Veuve', price: '+IDR 2.5M' },
   { icon: Wine, title: 'Champagne Krug', price: '+IDR 5.5M' },
   { icon: Music, title: 'Acoustic Musician', price: '+IDR 2.4M (1h)' },
@@ -90,8 +90,19 @@ export default function EventsAnniversariesPage() {
         title="Anniversary Dinners Bali — Romantic Villa Setups | myCHEF"
         description="Anniversary dinners at your Bali villa. Intimate couple to small-group celebrations. From IDR 1.5M/pp. Personalised menu, candle setup, signage, photographer optional."
         canonical={`${SITE}/events/anniversaries`}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Anniversaries', `${SITE}/events/anniversaries`, 'Events', `${SITE}/events`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Anniversary Dinner Catering Bali', 'Romantic anniversary dinner catering at Bali villas. Couple dinners, small-group celebrations, and vow renewals.', `${SITE}/events/anniversaries`, 'IDR'),
+          offerSchema('Couple Intimate Dinner', 1500000, 'IDR', `${SITE}/events/anniversaries`),
+          offerSchema('Small-Group Anniversary', 1200000, 'IDR', `${SITE}/events/anniversaries`),
+          offerSchema('Renewal of Vows + Dinner', 2500000, 'IDR', `${SITE}/events/anniversaries`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Anniversaries', `${SITE}/events/anniversaries`, 'Events', `${SITE}/events`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Anniversaries' }]} />
 
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -126,6 +137,13 @@ export default function EventsAnniversariesPage() {
           <SectionHeader eyebrow="Formats" title="Three Anniversary Options" subtitle="From an intimate dinner for two to a vow renewal with family and friends." />
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
+          </div>
+
+          {/* Group Total Calculators */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            <GroupTotalCalculator pricePerPerson={1500000} minGuests={2} maxGuests={2} defaultGuests={2} label=" couple" accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={1200000} minGuests={4} maxGuests={16} defaultGuests={8} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={30} defaultGuests={15} accent="#C5A028" />
           </div>
         </div>
       </section>
@@ -204,6 +222,8 @@ export default function EventsAnniversariesPage() {
           />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* CTA */}
       <section className="py-20 md:py-28 bg-[#0A0A0A] text-center">

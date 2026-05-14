@@ -1,15 +1,16 @@
 import { useEffect, useRef } from 'react'
 import {
-  MessageCircle, Calendar, Users, Baby, Heart, Flower2,
-  Check, Camera, Music, Sparkles,
+  MessageCircle, Calendar, Baby, Heart, Flower2,
+  Camera, Music, Sparkles,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -22,14 +23,14 @@ const SITE = 'https://mychef.id'
 const FORMATS = [
   {
     title: 'Intimate Baby Shower Brunch',
-    price: 'IDR 750,000/person',
+    price: <AllInPrice price={750000} />,
     guestRange: '10–15 guests',
     description: 'Grazing brunch + mocktail bar + pastel decor + signage + photographer 1h. Perfect for close friends and family.',
     features: ['Grazing brunch (sweet + savoury)', 'Mocktail bar (3 signature drinks)', 'Pastel decor + signage', 'Photographer 1h', 'Service staff', 'Setup + cleanup'],
   },
   {
     title: 'Larger Baby Shower',
-    price: 'IDR 1,100,000/person',
+    price: <AllInPrice price={1100000} />,
     guestRange: '16–30 guests',
     description: 'Full brunch + mocktail bar + premium decor + signage + guest table setup + photographer 2h + custom cake.',
     features: ['Full brunch + mocktail bar', 'Premium decor + signage', 'Guest table setup', 'Photographer 2h', 'Custom cake', 'Games setup', 'Service staff'],
@@ -78,8 +79,18 @@ export default function EventsBabyShowersPage() {
         title="Baby Shower Catering Bali — Villa Brunches | myCHEF"
         description="Baby shower brunches at your Bali villa. Pastel decor, grazing tables, mocktail bar, 10–30 guests from IDR 750K/pp. Photography optional."
         canonical={`${SITE}/events/baby-showers`}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Baby Showers', `${SITE}/events/baby-showers`, 'Events', `${SITE}/events`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Baby Shower Catering Bali', 'Baby shower brunch catering at Bali villas. Pastel decor, grazing tables, mocktail bar, and photography.', `${SITE}/events/baby-showers`, 'IDR'),
+          offerSchema('Intimate Baby Shower Brunch', 750000, 'IDR', `${SITE}/events/baby-showers`),
+          offerSchema('Larger Baby Shower', 1100000, 'IDR', `${SITE}/events/baby-showers`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Baby Showers', `${SITE}/events/baby-showers`, 'Events', `${SITE}/events`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Baby Showers' }]} />
 
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -114,6 +125,12 @@ export default function EventsBabyShowersPage() {
           <SectionHeader eyebrow="Formats" title="Two Baby Shower Formats" subtitle="Intimate gathering or larger celebration — both beautifully styled." />
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {FORMATS.map((f) => <EventFormatCard key={f.title} {...f} accent="#C5A028" />)}
+          </div>
+
+          {/* Group Total Calculators */}
+          <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <GroupTotalCalculator pricePerPerson={750000} minGuests={10} maxGuests={15} defaultGuests={12} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={1100000} minGuests={16} maxGuests={30} defaultGuests={20} accent="#C5A028" />
           </div>
         </div>
       </section>
@@ -185,6 +202,8 @@ export default function EventsBabyShowersPage() {
           />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* CTA */}
       <section className="py-20 md:py-28 bg-[#0A0A0A] text-center">

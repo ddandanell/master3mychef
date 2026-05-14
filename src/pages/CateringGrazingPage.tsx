@@ -6,10 +6,18 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, {
+  localBusinessSchema,
+  breadcrumbSchema,
+  serviceSchema,
+  offerSchema,
+  faqPageSchema,
+  aggregateRatingSchema,
+} from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -24,6 +32,7 @@ const PACKAGES = [
     title: 'Mini Grazing Box',
     guests: '2 pax',
     price: 'IDR 650,000',
+    priceNum: 650000,
     includes: ['Cheese', 'Cold cuts', 'Crackers', 'Fruit', 'Dips', 'Nuts', 'Small sweets', 'Styled box presentation'],
     bestFor: 'Couples, villa arrival snack, honeymoon setup, private poolside snack, small wine night',
   },
@@ -31,6 +40,7 @@ const PACKAGES = [
     title: 'Cheese & Cold Cuts Platter',
     guests: '10 pax',
     price: 'IDR 2,700,000',
+    priceNum: 2700000,
     includes: ['4-6 cheeses', '3-4 cured meats', 'Sourdough', 'Crackers', 'Marinated vegetables', 'Dips', 'Honey', 'Fresh & dried fruit', 'Nuts', 'Edible flowers'],
     bestFor: 'Small villa parties, birthdays, wine nights, welcome drinks, group snacks',
   },
@@ -38,6 +48,7 @@ const PACKAGES = [
     title: 'Wedding-Scale Grazing Table',
     guests: '20 to 50 guests',
     price: 'IDR 350,000/person',
+    priceNum: 350000,
     includes: ['Large styled grazing table', 'Sourdough', 'Crackers', '4-6 cheeses', '3-4 cured meats', 'Marinated vegetables', 'Dips', 'Honey', 'Fresh & dried fruit', 'Nuts', 'Edible flowers', 'Vegan version available'],
     bestFor: 'Weddings, larger villa events, corporate events, poolside parties, pre-dinner food, cocktail hour',
   },
@@ -127,19 +138,6 @@ export default function CateringGrazingPage() {
     return () => ctx.revert()
   }, [])
 
-  const offerSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Offer',
-    name: 'Grazing Tables Bali',
-    description: 'Photo-ready grazing boxes, cheese platters, and full grazing tables for villas, weddings, and parties.',
-    price: '650000',
-    priceCurrency: 'IDR',
-    priceValidUntil: '2026-12-31',
-    availability: 'https://schema.org/InStock',
-    url: `${SITE}/catering/grazing-tables`,
-    seller: { '@id': 'https://mychef.id/#business' },
-  }
-
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
@@ -147,8 +145,19 @@ export default function CateringGrazingPage() {
         description="Photo-ready grazing tables, cheese platters, and charcuterie in Bali for villas, weddings, and parties. Mini boxes, medium platters, and large event tables. From IDR 650,000. Vegan options available."
         canonical={`${SITE}/catering/grazing-tables`}
         ogImage={`${SITE}/generated/pkg-grazing.webp`}
-        jsonLd={[localBusinessSchema, offerSchema, breadcrumbSchema('Grazing Tables', `${SITE}/catering/grazing-tables`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Grazing Tables Bali', 'Photo-ready grazing boxes, cheese platters, and full grazing tables for villas, weddings, and parties.', `${SITE}/catering/grazing-tables`, 'IDR'),
+          offerSchema('Mini Grazing Box', 650000, 'IDR', `${SITE}/catering/grazing-tables`),
+          offerSchema('Cheese & Cold Cuts Platter', 2700000, 'IDR', `${SITE}/catering/grazing-tables`),
+          offerSchema('Wedding-Scale Grazing Table', 350000, 'IDR', `${SITE}/catering/grazing-tables`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Grazing Tables', `${SITE}/catering/grazing-tables`, 'Catering', `${SITE}/catering`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Grazing Tables' }]} />
 
       {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -241,6 +250,9 @@ export default function CateringGrazingPage() {
               <div key={pkg.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 hover:shadow-lg transition-all">
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold text-lg mb-1">{pkg.price}</p>
+                <p className="text-sm text-[#4A4745] mb-1">
+                  <AllInPrice price={pkg.priceNum} showPlusPlus={false} suffix={pkg.title === 'Wedding-Scale Grazing Table' ? '/person' : ''} />
+                </p>
                 <p className="text-sm text-[#4A4745] mb-4">{pkg.guests}</p>
                 <div className="space-y-2 mb-4">
                   {pkg.includes.map((item) => (
@@ -475,6 +487,8 @@ export default function CateringGrazingPage() {
           </div>
         </div>
       </section>
+
+      <PressStrip />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

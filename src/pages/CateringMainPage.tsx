@@ -6,13 +6,21 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, {
+  localBusinessSchema,
+  breadcrumbSchema,
+  serviceSchema,
+  offerSchema,
+  faqPageSchema,
+  aggregateRatingSchema,
+} from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import CateringAddOnCard from '@/components/catering/CateringAddOnCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustRow from '@/components/catering/TrustRow'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -238,25 +246,6 @@ export default function CateringMainPage() {
     return () => ctx.revert()
   }, [])
 
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Bali Villa Catering',
-    description: 'Premium catering for villas, events, BBQ nights and private parties across Bali.',
-    provider: { '@id': 'https://mychef.id/#business' },
-    areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Catering Packages',
-      itemListElement: BBQ_PACKAGES.map((p) => ({
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: p.title },
-        price: p.price.replace(/[^0-9]/g, ''),
-        priceCurrency: 'IDR',
-      })),
-    },
-  }
-
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
@@ -264,8 +253,28 @@ export default function CateringMainPage() {
         description="Premium Bali catering for villas and events. BBQ, buffet, plated dinners, drop-off, Babi Guling, grazing tables, floating breakfast. Clear prices. Fast WhatsApp booking."
         canonical={`${SITE}/catering`}
         ogImage={`${SITE}/generated/catering-hero.webp`}
-        jsonLd={[localBusinessSchema, serviceSchema, breadcrumbSchema('Catering', `${SITE}/catering`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Bali Villa Catering', 'Premium catering for villas, events, BBQ nights and private parties across Bali.', `${SITE}/catering`, 'IDR'),
+          offerSchema('Indonesian BBQ', 450000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('International BBQ', 600000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('Premium Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('Indonesian Buffet', 550000, 'IDR', `${SITE}/catering/buffet`),
+          offerSchema('International Buffet', 750000, 'IDR', `${SITE}/catering/buffet`),
+          offerSchema('Premium Live-Station Buffet', 950000, 'IDR', `${SITE}/catering/buffet`),
+          offerSchema('3-Course Plated', 800000, 'IDR', `${SITE}/catering/plated-catering`),
+          offerSchema('4-Course Plated', 1000000, 'IDR', `${SITE}/catering/plated-catering`),
+          offerSchema('5-Course Premium', 1300000, 'IDR', `${SITE}/catering/plated-catering`),
+          offerSchema('Family Drop-Off', 350000, 'IDR', `${SITE}/catering/drop-off-catering`),
+          offerSchema('Dinner Party Drop-Off', 500000, 'IDR', `${SITE}/catering/drop-off-catering`),
+          offerSchema('Babi Guling Small', 3700000, 'IDR', `${SITE}/catering/babi-guling`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Catering', `${SITE}/catering`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Catering' }]} />
 
       {/* ═══════ SECTION 1: HERO ═══════ */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -795,6 +804,8 @@ export default function CateringMainPage() {
           </p>
         </div>
       </section>
+
+      <PressStrip />
 
       {/* ═══════ SECTION 18: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

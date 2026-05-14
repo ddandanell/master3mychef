@@ -7,10 +7,18 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, {
+  localBusinessSchema,
+  breadcrumbSchema,
+  serviceSchema,
+  offerSchema,
+  faqPageSchema,
+  aggregateRatingSchema,
+} from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -24,6 +32,7 @@ const DROPOFF_PACKAGES = [
   {
     title: 'Family Dinner Drop-Off',
     price: 'IDR 350,000/person',
+    priceNum: 350000,
     people: '4 to 8 people',
     format: ['Hot main', '2 sides', 'Dessert', 'Bread', 'Ready to reheat'],
     bestFor: 'Families, simple villa dinners, children-friendly meals, relaxed nights in',
@@ -31,6 +40,7 @@ const DROPOFF_PACKAGES = [
   {
     title: 'Dinner Party Drop-Off',
     price: 'IDR 500,000/person',
+    priceNum: 500000,
     people: '8 to 16 people',
     format: ['Starter', 'Main', '3 sides', 'Dessert', 'Plating instructions included'],
     bestFor: 'Villa dinner parties, birthdays, friends, small groups who want better food without staff',
@@ -38,6 +48,7 @@ const DROPOFF_PACKAGES = [
   {
     title: 'Grazing Dinner Drop-Off',
     price: 'IDR 650,000/person',
+    priceNum: 650000,
     people: '8+ people',
     format: ['Charcuterie', 'Cheese board', '2 hot mains', 'Sides', 'Dessert'],
     bestFor: 'Entertaining without staff, poolside evenings, villa parties, welcome dinners',
@@ -145,19 +156,6 @@ export default function CateringDropOffPage() {
     return () => ctx.revert()
   }, [])
 
-  const offerSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Offer',
-    name: 'Drop-Off Catering Bali',
-    description: 'Prepared catering delivered to your villa without staff. Ready to reheat, plate, or serve.',
-    price: '350000',
-    priceCurrency: 'IDR',
-    priceValidUntil: '2026-12-31',
-    availability: 'https://schema.org/InStock',
-    url: `${SITE}/catering/drop-off-catering`,
-    seller: { '@id': 'https://mychef.id/#business' },
-  }
-
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
@@ -165,8 +163,19 @@ export default function CateringDropOffPage() {
         description="Drop-off catering in Bali without staff inside your villa. Prepared food delivered ready to reheat or serve. Family dinners, dinner parties, grazing boxes. From IDR 350,000/person."
         canonical={`${SITE}/catering/drop-off-catering`}
         ogImage={`${SITE}/generated/pkg-dropoff.webp`}
-        jsonLd={[localBusinessSchema, offerSchema, breadcrumbSchema('Drop-Off Catering', `${SITE}/catering/drop-off-catering`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Drop-Off Catering Bali', 'Prepared catering delivered to your villa without staff. Ready to reheat, plate, or serve.', `${SITE}/catering/drop-off-catering`, 'IDR'),
+          offerSchema('Family Dinner Drop-Off', 350000, 'IDR', `${SITE}/catering/drop-off-catering`),
+          offerSchema('Dinner Party Drop-Off', 500000, 'IDR', `${SITE}/catering/drop-off-catering`),
+          offerSchema('Grazing Dinner Drop-Off', 650000, 'IDR', `${SITE}/catering/drop-off-catering`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Drop-Off Catering', `${SITE}/catering/drop-off-catering`, 'Catering', `${SITE}/catering`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Drop-Off Catering' }]} />
 
       {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -259,6 +268,7 @@ export default function CateringDropOffPage() {
               <div key={pkg.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 hover:shadow-lg transition-all">
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#8B5A2B] font-semibold text-lg mb-1">{pkg.price}</p>
+                <p className="text-sm text-[#4A4745] mb-1"><AllInPrice price={pkg.priceNum} showPlusPlus={false} suffix="/person" /></p>
                 <p className="text-sm text-[#4A4745] mb-4">{pkg.people}</p>
                 <div className="space-y-2 mb-4">
                   {pkg.format.map((item) => (
@@ -491,6 +501,8 @@ export default function CateringDropOffPage() {
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

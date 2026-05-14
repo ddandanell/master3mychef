@@ -5,10 +5,11 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { EventFormatCard } from '@/components/events'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
@@ -21,7 +22,7 @@ const SITE = 'https://mychef.id'
 const PARTY_FORMATS = [
   {
     title: 'Cocktail Reception',
-    price: 'IDR 650,000/person',
+    price: <AllInPrice price={650000} />,
     guestRange: '20 — 80 guests',
     description: 'Elegant standing reception with canapés, grazing stations, and flowing drinks. Perfect for arrivals, celebrations, and networking.',
     features: ['6-8 canapé varieties', 'Grazing station', '2.5h open bar', 'Bartender', 'Service staff', 'Cocktail napkins & glassware', 'Cleanup'],
@@ -29,7 +30,7 @@ const PARTY_FORMATS = [
   },
   {
     title: 'Sundowner Party',
-    price: 'IDR 850,000/person',
+    price: <AllInPrice price={850000} />,
     guestRange: '15 — 50 guests',
     description: 'Sunset-to-evening celebration with BBQ, cocktails, and music. The classic Bali villa party experience.',
     features: ['BBQ or buffet menu', '3h open bar', 'Bartender + cocktail menu', 'Bluetooth speaker', 'Sunset timing', 'Service staff', 'Cleanup'],
@@ -37,7 +38,7 @@ const PARTY_FORMATS = [
   },
   {
     title: 'Casual Mixer',
-    price: 'IDR 950,000/person',
+    price: <AllInPrice price={950000} />,
     guestRange: '10 — 30 guests',
     description: 'Relaxed dinner party with family-style sharing plates, wine, and conversation. Intimate but festive.',
     features: ['Family-style sharing menu', 'Wine selection', 'Table styling', 'Background music', 'Personalised menu', 'Service staff', 'Cleanup'],
@@ -122,19 +123,6 @@ export default function EventsVillaPartiesPage() {
     return () => ctx.revert()
   }, [])
 
-  const offerSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Offer',
-    name: 'Villa Parties Bali',
-    description: 'Villa parties in Bali. Cocktail receptions, sundowner parties, and casual mixers with bartender, music, and themed decor.',
-    price: '650000',
-    priceCurrency: 'IDR',
-    priceValidUntil: '2026-12-31',
-    availability: 'https://schema.org/InStock',
-    url: `${SITE}/events/villa-parties`,
-    seller: { '@id': 'https://mychef.id/#business' },
-  }
-
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
@@ -142,8 +130,19 @@ export default function EventsVillaPartiesPage() {
         description="Villa parties in Bali. Cocktail receptions, sundowner BBQ parties, and casual mixers. Bartender, music, themed decor, and coordination. From IDR 650K/pp."
         canonical={`${SITE}/events/villa-parties`}
         ogImage={`${SITE}/generated/party-ultimate.webp`}
-        jsonLd={[localBusinessSchema, offerSchema, breadcrumbSchema('Villa Parties', `${SITE}/events/villa-parties`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Villa Party Catering Bali', 'Villa party catering in Bali. Cocktail receptions, sundowner BBQs, and casual mixers with bartender, music, and themed decor.', `${SITE}/events/villa-parties`, 'IDR'),
+          offerSchema('Cocktail Reception', 650000, 'IDR', `${SITE}/events/villa-parties`),
+          offerSchema('Sundowner Party', 850000, 'IDR', `${SITE}/events/villa-parties`),
+          offerSchema('Casual Mixer', 950000, 'IDR', `${SITE}/events/villa-parties`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Villa Parties', `${SITE}/events/villa-parties`, 'Events', `${SITE}/events`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Villa Parties' }]} />
 
       {/* ═══════ HERO — VIBRANT, ENERGETIC, SUNSET ORANGE ACCENTS ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -204,6 +203,13 @@ export default function EventsVillaPartiesPage() {
             {PARTY_FORMATS.map((fmt) => (
               <EventFormatCard key={fmt.title} {...fmt} accent="#E8913A" />
             ))}
+          </div>
+
+          {/* Group Total Calculators */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            <GroupTotalCalculator pricePerPerson={650000} minGuests={15} maxGuests={50} defaultGuests={25} accent="#E8913A" />
+            <GroupTotalCalculator pricePerPerson={850000} minGuests={15} maxGuests={40} defaultGuests={25} accent="#E8913A" />
+            <GroupTotalCalculator pricePerPerson={950000} minGuests={15} maxGuests={40} defaultGuests={25} accent="#E8913A" />
           </div>
         </div>
       </section>
@@ -344,7 +350,7 @@ export default function EventsVillaPartiesPage() {
             eyebrow="Chapter 8 — Questions"
             title="Villa Party FAQ"
           />
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
@@ -377,6 +383,8 @@ export default function EventsVillaPartiesPage() {
           />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

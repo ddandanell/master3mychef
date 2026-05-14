@@ -6,10 +6,18 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, {
+  localBusinessSchema,
+  breadcrumbSchema,
+  serviceSchema,
+  offerSchema,
+  faqPageSchema,
+  aggregateRatingSchema,
+} from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -24,6 +32,7 @@ const PACKAGES = [
     title: 'Small Babi Guling',
     guests: '10 to 15 guests',
     price: 'IDR 3,700,000 total',
+    priceNum: 3700000,
     includes: ['Whole pig', 'Lawar', 'Nasi kuning', 'Sate', 'Sambals', 'Dessert', 'Fresh fruit'],
     bestFor: 'Small villa parties, family gatherings, birthday dinners, local food experience',
   },
@@ -31,6 +40,7 @@ const PACKAGES = [
     title: 'Medium Babi Guling',
     guests: '25 to 30 guests',
     price: 'IDR 5,000,000 total',
+    priceNum: 5000000,
     includes: ['Whole pig', 'Lawar', 'Nasi kuning', 'Sate', 'Sambals', 'Dessert', 'Fresh fruit', 'Extended sides', 'Kuah Balung soup'],
     bestFor: 'Medium villa events, birthdays, group holiday dinners, casual wedding recovery',
   },
@@ -38,6 +48,7 @@ const PACKAGES = [
     title: 'Large Babi Guling',
     guests: '40 to 50 guests',
     price: 'IDR 7,000,000 total',
+    priceNum: 7000000,
     includes: ['Premium suckling pig', 'Lawar', 'Nasi kuning', 'Sate', 'Sambals', 'Dessert', 'Fresh fruit', 'Extended sides', 'Kuah Balung soup', 'Bonfire setup option'],
     bestFor: 'Large villa parties, weddings, corporate events, big birthdays, group celebrations',
   },
@@ -112,19 +123,6 @@ export default function CateringBabiGulingPage() {
     return () => ctx.revert()
   }, [])
 
-  const offerSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Offer',
-    name: 'Babi Guling Catering Bali',
-    description: 'Traditional Balinese whole-pig catering for villas, parties, and group events. Small, medium, and large packages.',
-    price: '3700000',
-    priceCurrency: 'IDR',
-    priceValidUntil: '2026-12-31',
-    availability: 'https://schema.org/InStock',
-    url: `${SITE}/catering/babi-guling`,
-    seller: { '@id': 'https://mychef.id/#business' },
-  }
-
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
@@ -132,8 +130,19 @@ export default function CateringBabiGulingPage() {
         description="Traditional Balinese Babi Guling whole-pig catering for villas and events in Bali. Served with lawar, nasi kuning, sate, sambals, dessert, and fruit. Small, medium, and large packages. From IDR 3,700,000."
         canonical={`${SITE}/catering/babi-guling`}
         ogImage={`${SITE}/generated/catering/babi-guling.webp`}
-        jsonLd={[localBusinessSchema, offerSchema, breadcrumbSchema('Babi Guling', `${SITE}/catering/babi-guling`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('Babi Guling Catering Bali', 'Traditional Balinese whole-pig catering for villas, parties, and group events. Small, medium, and large packages.', `${SITE}/catering/babi-guling`, 'IDR'),
+          offerSchema('Small Babi Guling', 3700000, 'IDR', `${SITE}/catering/babi-guling`),
+          offerSchema('Medium Babi Guling', 5000000, 'IDR', `${SITE}/catering/babi-guling`),
+          offerSchema('Large Babi Guling', 7000000, 'IDR', `${SITE}/catering/babi-guling`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('Babi Guling', `${SITE}/catering/babi-guling`, 'Catering', `${SITE}/catering`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Babi Guling' }]} />
 
       {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -231,6 +240,7 @@ export default function CateringBabiGulingPage() {
               <div key={pkg.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 hover:shadow-lg transition-all">
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#C5A028] font-semibold text-lg mb-1">{pkg.price}</p>
+                <p className="text-sm text-[#4A4745] mb-1"><AllInPrice price={pkg.priceNum} showPlusPlus={false} suffix=" total" /></p>
                 <p className="text-sm text-[#4A4745] mb-4">{pkg.guests}</p>
                 <div className="space-y-2 mb-4">
                   {pkg.includes.map((item) => (
@@ -425,6 +435,8 @@ export default function CateringBabiGulingPage() {
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

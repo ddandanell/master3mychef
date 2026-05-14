@@ -3,16 +3,25 @@ import { useEffect, useRef } from 'react'
 import {
   MessageCircle, Check, Phone, Calendar, Users, MapPin,
   Utensils, Flame, Wine, Beef, WheatOff, Map, Heart,
+  MessageSquare,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, {
+  localBusinessSchema,
+  breadcrumbSchema,
+  serviceSchema,
+  offerSchema,
+  faqPageSchema,
+  aggregateRatingSchema,
+} from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import CateringAddOnCard from '@/components/catering/CateringAddOnCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 // TrustRow imported but not used in this version
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -27,6 +36,7 @@ const BBQ_PACKAGES = [
     image: '/generated/pkg-bbq.webp',
     title: 'Indonesian BBQ',
     price: 'IDR 450,000/person',
+    priceNum: 450000,
     description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 6 guests',
@@ -35,6 +45,7 @@ const BBQ_PACKAGES = [
     image: '/generated/sol-bbq.webp',
     title: 'International BBQ',
     price: 'IDR 600,000/person',
+    priceNum: 600000,
     description: 'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread, fresh fruit.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 6 guests',
@@ -43,6 +54,7 @@ const BBQ_PACKAGES = [
     image: '/generated/pkg-seafood.webp',
     title: 'Premium Surf & Turf BBQ',
     price: 'IDR 850,000/person',
+    priceNum: 850000,
     description: 'Wagyu steak, whole lobster tail, king prawns, salmon, Mahi-mahi, premium sides, signature sauces, chocolate dessert station.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Ingredients', 'Setup', '2-3h service', 'Plated service', 'Pack-up & cleanup'],
     minGuests: 'Min. 6 guests',
@@ -84,6 +96,30 @@ const AREA_MINIMUMS = [
   { area: 'Jimbaran', min: 'Quote required', fee: 'Quote required' },
 ]
 
+const HOW_IT_WORKS_STEPS = [
+  { step: '01', title: 'Message Sofia', desc: 'WhatsApp your date, area, and guest count.', icon: MessageSquare },
+  { step: '02', title: 'Choose format', desc: 'Indonesian, International, or Premium Surf & Turf.', icon: Utensils },
+  { step: '03', title: 'We arrive & set up', desc: 'Chef, staff, equipment, and ingredients.', icon: Flame },
+  { step: '04', title: 'You enjoy, we clean up', desc: 'Full service and pack-up included.', icon: Check },
+]
+
+const BBQ_GALLERY = [
+  '/generated/pkg-bbq.webp',
+  '/generated/sol-bbq.webp',
+  '/generated/pkg-seafood.webp',
+  '/generated/hub-catering.webp',
+  '/generated/pkg-roast.webp',
+  '/generated/aura-buffet.webp',
+]
+
+const GROUP_SIZE_GUIDE = [
+  { guests: 6, indonesian: 'IDR 3.27M', international: 'IDR 4.36M', premium: 'IDR 6.17M' },
+  { guests: 10, indonesian: 'IDR 5.45M', international: 'IDR 7.26M', premium: 'IDR 10.29M' },
+  { guests: 20, indonesian: 'IDR 10.89M', international: 'IDR 14.52M', premium: 'IDR 20.57M' },
+  { guests: 30, indonesian: 'IDR 16.34M', international: 'IDR 21.78M', premium: 'IDR 30.86M' },
+  { guests: 40, indonesian: 'IDR 21.78M', international: 'IDR 29.04M', premium: 'IDR 41.14M' },
+]
+
 const FAQS = [
   { q: 'How many guests do I need for BBQ catering?', a: 'Minimum 6 guests in Seminyak/Canggu, 10 in Ubud, and 20 in Uluwatu. For other areas, contact us for a quote.' },
   { q: 'Do you bring the grill and cooking equipment?', a: 'Yes. We bring everything — grills, tools, fuel, serving equipment, and cleanup supplies.' },
@@ -110,19 +146,6 @@ export default function CateringBBQPage() {
     return () => ctx.revert()
   }, [])
 
-  const offerSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Offer',
-    name: 'BBQ Catering Bali',
-    description: 'Live BBQ catering with chef, service staff, ingredients, equipment, setup, service, pack-up, and cleanup.',
-    price: '450000',
-    priceCurrency: 'IDR',
-    priceValidUntil: '2026-12-31',
-    availability: 'https://schema.org/InStock',
-    url: `${SITE}/catering/bbq-catering`,
-    seller: { '@id': 'https://mychef.id/#business' },
-  }
-
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
@@ -130,8 +153,19 @@ export default function CateringBBQPage() {
         description="Live BBQ catering in Bali for villas, birthdays, and private events. Indonesian BBQ, International BBQ, Premium Surf & Turf. Chef, staff, equipment, setup & cleanup included. From IDR 450,000/person."
         canonical={`${SITE}/catering/bbq-catering`}
         ogImage={`${SITE}/generated/pkg-bbq.webp`}
-        jsonLd={[localBusinessSchema, offerSchema, breadcrumbSchema('BBQ Catering', `${SITE}/catering/bbq-catering`)]}
+        jsonLd={[
+          localBusinessSchema,
+          serviceSchema('BBQ Catering Bali', 'Live BBQ catering with chef, service staff, ingredients, equipment, setup, service, pack-up, and cleanup.', `${SITE}/catering/bbq-catering`, 'IDR'),
+          offerSchema('Indonesian BBQ', 450000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('International BBQ', 600000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('Premium Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          aggregateRatingSchema(4.9, 127),
+          breadcrumbSchema('BBQ Catering', `${SITE}/catering/bbq-catering`, 'Catering', `${SITE}/catering`),
+        ]}
       />
+
+      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'BBQ Catering' }]} />
 
       {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -187,7 +221,7 @@ export default function CateringBBQPage() {
             <div>
               <SectionHeader
                 align="left"
-                eyebrow="Why BBQ"
+                eyebrow="CHAPTER 1 — THE INQUIRY"
                 title="Why BBQ Is the Easiest Villa Catering Format"
                 subtitle="BBQ works because it is live, flexible, social, and easy to scale. Guests can relax while the chef handles the grill, staff handles service, and the team cleans up after."
               />
@@ -218,16 +252,72 @@ export default function CateringBBQPage() {
         </div>
       </section>
 
-      {/* ═══════ PACKAGES ═══════ */}
+      {/* ═══════ HOW IT WORKS ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Packages"
+            eyebrow="CHAPTER 2 — THE PROCESS"
+            title="How BBQ Catering Works"
+            subtitle="Four simple steps from first message to finished dinner."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {HOW_IT_WORKS_STEPS.map((s) => (
+              <div key={s.step} className="text-center">
+                <div className="w-14 h-14 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-4">
+                  <s.icon className="w-6 h-6 text-[#C5A028]" />
+                </div>
+                <span className="text-[#C5A028] text-xs font-bold tracking-wider">{s.step}</span>
+                <h4 className="font-medium text-[#1A1A1A] text-sm mt-1 mb-1">{s.title}</h4>
+                <p className="text-xs text-[#4A4745]">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ PACKAGES ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 3 — THE MENU"
             title="Choose Your BBQ Package"
           />
           <div className="grid md:grid-cols-3 gap-6">
             {BBQ_PACKAGES.map((pkg) => (
               <CateringPackageCard key={pkg.title} {...pkg} accent="#C5A028" />
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-[#4A4745]/70">
+              All-in prices include 21% service charge and tax:{' '}
+              <AllInPrice price={450000} className="inline" /> ·{' '}
+              <AllInPrice price={600000} className="inline" /> ·{' '}
+              <AllInPrice price={850000} className="inline" />
+            </p>
+          </div>
+
+          {/* Group Total Calculators */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            <GroupTotalCalculator pricePerPerson={450000} minGuests={6} maxGuests={40} defaultGuests={10} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={600000} minGuests={6} maxGuests={40} defaultGuests={10} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={850000} minGuests={6} maxGuests={40} defaultGuests={10} accent="#C5A028" />
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ PHOTO GALLERY ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 4 — THE SETUP"
+            title="BBQ Photo Gallery"
+            subtitle="Real setups from villa BBQ events across Bali."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {BBQ_GALLERY.map((src, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
+                <img src={src} alt={`BBQ catering setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+              </div>
             ))}
           </div>
         </div>
@@ -237,7 +327,7 @@ export default function CateringBBQPage() {
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Included"
+            eyebrow="CHAPTER 5 — THE SERVICE"
             title="What Every BBQ Package Includes"
           />
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
@@ -251,8 +341,53 @@ export default function CateringBBQPage() {
         </div>
       </section>
 
-      {/* ═══════ ADD-ONS ═══════ */}
+      {/* ═══════ GROUP SIZE GUIDE ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHAPTER 6 — THE INVESTMENT"
+            title="Group Size Guide"
+            subtitle="All-in totals include 21% service charge and tax (×1.21). Final quote confirmed before deposit."
+          />
+          <div className="hidden md:block overflow-x-auto">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="border-b-2 border-[#1A1A1A]">
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Guests</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Indonesian (450K)</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">International (600K)</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Premium Surf & Turf (850K)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {GROUP_SIZE_GUIDE.map((row) => (
+                  <tr key={row.guests} className="border-b border-[#E8E6E3]">
+                    <td className="py-4 font-medium">{row.guests} guests</td>
+                    <td className="py-4 text-[#C5A028] font-semibold">{row.indonesian}</td>
+                    <td className="py-4 text-[#C5A028] font-semibold">{row.international}</td>
+                    <td className="py-4 text-[#C5A028] font-semibold">{row.premium}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="md:hidden space-y-4">
+            {GROUP_SIZE_GUIDE.map((row) => (
+              <div key={row.guests} className="bg-white rounded-xl border border-[#E8E6E3] p-4">
+                <p className="font-medium mb-3">{row.guests} guests</p>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between"><span className="text-[#4A4745]">Indonesian</span><span className="text-[#C5A028] font-semibold">{row.indonesian}</span></div>
+                  <div className="flex justify-between"><span className="text-[#4A4745]">International</span><span className="text-[#C5A028] font-semibold">{row.international}</span></div>
+                  <div className="flex justify-between"><span className="text-[#4A4745]">Premium</span><span className="text-[#C5A028] font-semibold">{row.premium}</span></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ ADD-ONS ═══════ */}
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Extras"
@@ -267,7 +402,7 @@ export default function CateringBBQPage() {
       </section>
 
       {/* ═══════ BEST FOR ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Occasions"
@@ -288,7 +423,7 @@ export default function CateringBBQPage() {
       </section>
 
       {/* ═══════ AREA MINIMUMS ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Logistics"
@@ -396,6 +531,8 @@ export default function CateringBBQPage() {
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
+
+      <PressStrip />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

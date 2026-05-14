@@ -13,6 +13,9 @@ import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import CateringAddOnCard from '@/components/catering/CateringAddOnCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import TrustStrip from '@/components/shared/TrustStrip'
+import TaxFooter from '@/components/shared/TaxFooter'
+import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -182,6 +185,9 @@ export default function CateringBuffetPage() {
           <p className="text-white/60 text-sm">From IDR 550,000/person · Min. 30 guests · Chef & staff included</p>
         </div>
       </section>
+
+      {/* ═══════ TRUST STRIP ═══════ */}
+      <TrustStrip />
 
       {/* ═══════ WHY BUFFET WORKS ═══════ */}
       <section className="buffet-content py-20 md:py-28 px-6">
@@ -410,6 +416,17 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
+      {/* ═══════ TESTIMONIALS ═══════ */}
+      <TestimonialBlock
+        testimonials={[
+          { name: 'Sarah & James', location: 'Seminyak Villa', quote: 'The Indonesian buffet for 40 guests was incredible. The sate lilit and nasi kuning were authentic and delicious. Highly recommend myCHEF.', rating: 5 },
+          { name: 'The Chen Family', location: 'Canggu Villa', quote: 'We booked the International buffet for our parents\' anniversary. The live stations were a hit and the service team was impeccable.', rating: 5 },
+          { name: 'Emma R.', location: 'Uluwatu Villa', quote: 'Premium live-station buffet for our wedding reception. The pasta and carving stations kept everyone happy. Beautiful setup too.', rating: 5 },
+        ]}
+        title="What Buffet Guests Say"
+        subtitle="Real reviews from villa buffet events across Bali."
+      />
+
       {/* ═══════ FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
@@ -417,7 +434,7 @@ export default function CateringBuffetPage() {
             eyebrow="Questions"
             title="Buffet FAQ"
           />
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
@@ -457,6 +474,8 @@ export default function CateringBuffetPage() {
           </div>
         </div>
       </section>
+
+      <TaxFooter className="py-6" />
     </div>
   )
 }

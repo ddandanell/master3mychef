@@ -11,6 +11,9 @@ import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/Seo
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import TrustStrip from '@/components/shared/TrustStrip'
+import TaxFooter from '@/components/shared/TaxFooter'
+import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -208,6 +211,9 @@ export default function CateringDropOffPage() {
           <p className="text-white/60 text-sm">From IDR 350,000/person · No staff · Next-day delivery</p>
         </div>
       </section>
+
+      {/* ═══════ TRUST STRIP ═══════ */}
+      <TrustStrip />
 
       {/* ═══════ WHY DROP-OFF ═══════ */}
       <section className="do-content py-20 md:py-28 px-6">
@@ -464,6 +470,17 @@ export default function CateringDropOffPage() {
         </div>
       </section>
 
+      {/* ═══════ TESTIMONIALS ═══════ */}
+      <TestimonialBlock
+        testimonials={[
+          { name: 'Laura & Ben', location: 'Pererenan Villa', quote: 'The drop-off dinner party package was perfect. Food arrived on time, reheating instructions were clear, and everything tasted fresh. Zero stress.', rating: 5 },
+          { name: 'The Miller Family', location: 'Canggu Villa', quote: 'Family dinner drop-off for 6. The roasted chicken was juicy and the kids loved the dessert. Great option when you want privacy.', rating: 5 },
+          { name: 'Sophie T.', location: 'Seminyak Villa', quote: 'Grazing dinner drop-off for our girls\' night. The charcuterie board was beautiful and the hot mains were delicious. Will order again.', rating: 5 },
+        ]}
+        title="What Drop-Off Guests Say"
+        subtitle="Real reviews from villa drop-off catering across Bali."
+      />
+
       {/* ═══════ FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
@@ -471,7 +488,7 @@ export default function CateringDropOffPage() {
             eyebrow="Questions"
             title="Drop-Off FAQ"
           />
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
@@ -511,6 +528,8 @@ export default function CateringDropOffPage() {
           </div>
         </div>
       </section>
+
+      <TaxFooter className="py-6" />
     </div>
   )
 }

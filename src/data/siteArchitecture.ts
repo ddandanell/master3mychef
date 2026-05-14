@@ -264,6 +264,33 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
           'Editorial grazing tables for villa events in Bali. Cheese, charcuterie, seafood, antipasti, dressed for photography.',
         keywords: ['grazing tables bali', 'villa grazing table', 'charcuterie table bali'],
       },
+      {
+        slug: 'babi-guling',
+        label: 'Babi Guling',
+        h1: 'Babi Guling Villa Catering Bali — Whole Pig Feasts',
+        title: 'Babi Guling Villa Catering Bali — myCHEF',
+        description:
+          'Authentic Babi Guling whole-pig feast delivered to your Bali villa. Small, medium, large packages with traditional sides.',
+        keywords: ['babi guling catering bali', 'whole pig roast bali', 'balinese suckling pig villa'],
+      },
+      {
+        slug: 'plated-catering',
+        label: 'Plated Dinner',
+        h1: 'Plated Set Menu Catering Bali — 3, 4, 5 Course',
+        title: 'Plated Set Menu Catering Bali — myCHEF',
+        description:
+          'Plated set menu catering for Bali villa events. Three, four, or five courses from IDR 800K/pp. Chef + service manager included.',
+        keywords: ['plated catering bali villa', 'plated dinner catering bali', 'private plated dinner bali'],
+      },
+      {
+        slug: 'floating-breakfast',
+        label: 'Floating Breakfast',
+        h1: 'Floating Breakfast Bali — Villa Pool Tray Brunch',
+        title: 'Floating Breakfast Bali — myCHEF',
+        description:
+          'Floating breakfast and brunch delivered to your Bali villa pool. Bamboo tray, tropical fruit, photo-ready setup.',
+        keywords: ['floating breakfast bali', 'bali floating breakfast villa', 'floating brunch bali'],
+      },
     ],
   },
 
@@ -277,7 +304,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       'Private event planning across Bali — villa weddings, birthdays, anniversaries, corporate events, retreats, baby showers and villa parties.',
     intro:
       'Full event design, coordination and production in Bali. We handle timeline, vendors, staffing and hospitality flow — food handled by our catering team.',
-    accent: '#2C5F7C',
+    accent: '#C5A028',
     ownsKeywords: [
       'private events bali',
       'villa wedding bali',

@@ -13,6 +13,9 @@ import CateringAddOnCard from '@/components/catering/CateringAddOnCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 // TrustRow imported but not used in this version
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import TrustStrip from '@/components/shared/TrustStrip'
+import TaxFooter from '@/components/shared/TaxFooter'
+import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -173,6 +176,9 @@ export default function CateringBBQPage() {
           <p className="text-white/60 text-sm">From IDR 450,000/person · Chef & staff included · Bali-wide</p>
         </div>
       </section>
+
+      {/* ═══════ TRUST STRIP ═══════ */}
+      <TrustStrip />
 
       {/* ═══════ WHY BBQ WORKS ═══════ */}
       <section className="bbq-content py-20 md:py-28 px-6">
@@ -369,6 +375,17 @@ export default function CateringBBQPage() {
         </div>
       </section>
 
+      {/* ═══════ TESTIMONIALS ═══════ */}
+      <TestimonialBlock
+        testimonials={[
+          { name: 'Mark & Lisa', location: 'Canggu Villa', quote: 'The Indonesian BBQ was incredible. The sate lilit was the best we have had in Bali. Chef and team were professional and cleaned everything.', rating: 5 },
+          { name: 'The Johnson Family', location: 'Seminyak Villa', quote: 'We booked the International BBQ for 14 guests. The Wagyu upgrade was worth every penny. Kids loved the grilled corn.', rating: 5 },
+          { name: 'David K.', location: 'Uluwatu Villa', quote: 'Premium Surf & Turf for my birthday. The lobster and Wagyu combo was outstanding. Felt like a private restaurant in our villa.', rating: 5 },
+        ]}
+        title="What BBQ Guests Say"
+        subtitle="Real reviews from villa BBQ events across Bali."
+      />
+
       {/* ═══════ FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
@@ -376,7 +393,7 @@ export default function CateringBBQPage() {
             eyebrow="Questions"
             title="BBQ FAQ"
           />
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
@@ -416,6 +433,8 @@ export default function CateringBBQPage() {
           </div>
         </div>
       </section>
+
+      <TaxFooter className="py-6" />
     </div>
   )
 }

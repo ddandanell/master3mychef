@@ -25,7 +25,7 @@ export default function Footer() {
               href="https://wa.me/6282237565997?text=Hi%20myCHEF"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-[2px] font-semibold bg-[#25D366] text-white px-4 py-2.5 rounded-full hover:bg-[#1ea855] transition-colors self-start"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-[2px] font-semibold bg-white text-black px-4 py-2.5 rounded-full hover:bg-[#C5A028] hover:text-black transition-colors self-start"
             >
               <MessageCircle className="w-3.5 h-3.5" /> +62 822-3756-5997
             </a>
@@ -85,6 +85,8 @@ export default function Footer() {
               {l.label}
             </Link>
           ))}
+          <Link to="/services" className="hover:text-[#C5A028] transition-colors">Services</Link>
+          <Link to="/partner-platform" className="hover:text-[#C5A028] transition-colors">Partner Platform</Link>
           <Link to={PRIMARY_CTA.href} className="text-[#C5A028] font-semibold hover:text-white transition-colors">
             {PRIMARY_CTA.label}
           </Link>

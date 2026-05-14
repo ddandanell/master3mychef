@@ -177,6 +177,10 @@ const FAQS = [
   { q: 'What about dietary restrictions for large groups?', a: 'We handle it seamlessly. Vegetarian, halal, gluten-free, nut allergies — we label everything and ensure every guest is cared for.' },
   { q: 'Do you provide alcohol and bar service?', a: 'Yes. Full bar service with professional bartenders. We can source premium spirits, wines, and craft cocktails. You can also provide your own alcohol and we handle service.' },
   { q: 'What happens if it rains?', a: 'We always have a backup plan. Bali villas have covered areas, and we bring tenting for outdoor events. Olivia will walk you through contingencies in your proposal.' },
+  { q: 'Can we see photos from past events?', a: 'Yes. Olivia shares a private portfolio of past events matched to your type — weddings, corporate, birthdays — so you can see the quality before booking.' },
+  { q: 'What if our villa has restrictions?', a: 'We work with villa managers before every event. Noise curfews, guest limits, kitchen access — we plan around every restriction so nothing surprises you on the day.' },
+  { q: 'Is there a commitment to get a proposal?', a: 'No. The first consultation and proposal are free. You only commit when you approve the plan and pay the deposit.' },
+  { q: 'How does payment work?', a: '25% deposit to lock the date. 50% due 2 weeks before. Final 25% on the day. Invoiced and documented for corporate clients.' },
 ]
 
 const TESTIMONIALS = [
@@ -261,8 +265,8 @@ export default function AuraPage() {
   return (
     <div ref={ref} data-universe="aura" className="min-h-screen" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>
       <SeoHead
-        title="Bali Party and Event Catering | Weddings, Villas & Corporate | myCHEF"
-        description="Bali party and event catering by myCHEF — luxury villa parties, weddings, corporate dinners, retreats, and gala nights. Catering, bar, décor, and staffing handled end-to-end."
+        title="Bali Event Catering — Villas, Weddings & Corporate | myCHEF"
+        description="Bali event catering by myCHEF — luxury villa parties, weddings, corporate dinners, retreats, and gala nights. Catering, bar, décor, and staffing handled end-to-end. From IDR 15M."
         canonical="https://mychef.id/events"
         ogImage="https://mychef.id/generated/aura-hero-v2.webp"
         jsonLd={[localBusinessSchema, ...eventSchemas, breadcrumbSchema('Events', 'https://mychef.id/events')]}
@@ -281,20 +285,33 @@ export default function AuraPage() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="aura-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Events</p>
+          <p className="aura-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Bali Event Catering — Villas, Weddings & Corporate</p>
           <h1 className="aura-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 " style={{ fontFamily: "'Playfair Display', serif" }}>
             Events,<br /><span className="italic">Perfectly Hosted</span>
           </h1>
           <p className="aura-hero-sub text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail.
+            From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 15M. Olivia replies within 24 hours.
           </p>
-          <div className="aura-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="aura-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1e4a63] transition-all">
-              <MessageCircle className="w-4 h-4" /> Message Olivia
+              <MessageCircle className="w-4 h-4" /> Get Event Quote — 24h Reply
             </a>
             <a href="#packages" className="inline-block px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               See Party Events
             </a>
+          </div>
+          <div className="flex flex-wrap gap-x-6 gap-y-3 justify-center">
+            {[
+              { label: '200+ events produced' },
+              { label: '4.9★ client rating' },
+              { label: 'Olivia replies in 24h' },
+              { label: 'Full-service: catering to cleanup' },
+            ].map((badge) => (
+              <div key={badge.label} className="flex items-center gap-2 text-white/60">
+                <Check className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />
+                <span className="text-xs tracking-wider uppercase">{badge.label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -655,7 +672,7 @@ export default function AuraPage() {
               <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Let's Plan<br />Something Extraordinary</h2>
               <div className="w-12 h-[2px] bg-[#2C5F7C] mb-8" />
               <p className="mb-8 leading-relaxed" style={{ color: '#4A4745' }}>
-                Olivia will design a custom proposal based on your event type, guest count, and vision. Most proposals delivered within 24 hours.
+                Olivia will design a custom proposal based on your event type, guest count, and vision. Most proposals delivered within 24 hours. First consultation is free — no commitment required.
               </p>
               <div className="space-y-4 mb-8">
                 {[
@@ -679,6 +696,35 @@ export default function AuraPage() {
             <div className="p-8 rounded-2xl border border-[#E5E3E0] bg-white">
               <BookingForm universe="aura" compact />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24 md:py-32 px-6" style={{ background: '#0F0F0F' }}>
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Ready When You Are</p>
+          <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Here Is What Happens Next</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            {[
+              { step: '1', text: 'Message Olivia' },
+              { step: '2', text: 'Get proposal in 24h' },
+              { step: '3', text: 'Approve & pay 25%' },
+              { step: '4', text: 'Show up & enjoy' },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <span className="text-[#C5A028] text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>{item.step}</span>
+                <p className="text-white/80 text-sm mt-1">{item.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1e4a63] transition-all">
+              <MessageCircle className="w-4 h-4" /> Get Event Quote
+            </a>
+            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+              <Phone className="w-4 h-4" /> Call +62 822 3756 5997
+            </a>
           </div>
         </div>
       </section>

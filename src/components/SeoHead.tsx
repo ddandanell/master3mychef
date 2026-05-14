@@ -31,14 +31,85 @@ export const localBusinessSchema = {
   },
 }
 
-export function breadcrumbSchema(currentName: string, currentUrl: string) {
+export function breadcrumbSchema(currentName: string, currentUrl: string, parentName?: string, parentUrl?: string) {
+  const items: Record<string, unknown>[] = [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
+  ]
+  if (parentName && parentUrl) {
+    items.push({ '@type': 'ListItem', position: 2, name: parentName, item: parentUrl })
+    items.push({ '@type': 'ListItem', position: 3, name: currentName, item: currentUrl })
+  } else {
+    items.push({ '@type': 'ListItem', position: 2, name: currentName, item: currentUrl })
+  }
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
-      { '@type': 'ListItem', position: 2, name: currentName, item: currentUrl },
-    ],
+    itemListElement: items,
+  }
+}
+
+export function serviceSchema(
+  name: string,
+  description: string,
+  url: string,
+  priceRange?: string
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    url,
+    provider: { '@id': 'https://mychef.id/#business' },
+    areaServed: {
+      '@type': 'Place',
+      name: 'Bali, Indonesia',
+    },
+    ...(priceRange ? { priceRange } : {}),
+  }
+}
+
+export function offerSchema(
+  name: string,
+  price: number,
+  priceCurrency: string = 'IDR',
+  url?: string
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Offer',
+    name,
+    price: price.toString(),
+    priceCurrency,
+    availability: 'https://schema.org/InStock',
+    url: url || 'https://mychef.id',
+    seller: { '@id': 'https://mychef.id/#business' },
+  }
+}
+
+export function faqPageSchema(questions: { question: string; answer: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: questions.map((q) => ({
+      '@type': 'Question',
+      name: q.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: q.answer,
+      },
+    })),
+  }
+}
+
+export function aggregateRatingSchema(ratingValue: number, reviewCount: number) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AggregateRating',
+    ratingValue: ratingValue.toString(),
+    reviewCount: reviewCount.toString(),
+    bestRating: '5',
+    worstRating: '1',
   }
 }
 

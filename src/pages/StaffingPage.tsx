@@ -65,8 +65,12 @@ const FAQS = [
   { q: 'What if a chef is not the right fit?', a: 'The first week is a trial. If the match is not right, we replace the chef at no charge — we maintain a bench of vetted backups for every active placement.' },
   { q: 'Can we hire a chef for just one or two weeks?', a: 'Yes. Short-term placements start at one week. Retreat and event staffing can be a single day. Long-term placements start at one month.' },
   { q: 'Who handles payroll and contracts?', a: 'We provide standard staffing contracts and monthly invoicing. For full-time hires we can advise on Indonesian employment compliance and household structure.' },
-  { q: 'What does it cost?', a: 'Pricing depends on full-time vs part-time, live-in vs live-out, cuisine expertise required, and location. The form below returns a tailored proposal within 24 hours.' },
+  { q: 'What does it cost?', a: 'Pricing depends on full-time vs part-time, live-in vs live-out, cuisine expertise required, and location. Full-time placements start at IDR 8M/month. The form below returns a tailored proposal within 24 hours.' },
   { q: 'Do you serve outside Bali?', a: 'Yes. Our network extends to Jakarta and on request to private residences across Indonesia.' },
+  { q: 'How long does placement take?', a: 'Most placements are confirmed within 48 hours of your brief. For specialized cuisine or live-in arrangements, allow 3–5 days. Urgent requests: message us on WhatsApp.' },
+  { q: 'Can we interview the chef first?', a: 'Yes. We arrange a video call or in-person meeting before confirming the placement. For long-term hires, we recommend a trial dinner where the chef cooks for your household.' },
+  { q: 'What is the difference between an agency and myCHEF?', a: 'Agencies send CVs. We send people we know. Every chef in our network has cooked beside our executive chef. We know their strengths, their temperament, and which households they fit.' },
+  { q: 'Do you replace chefs mid-contract?', a: 'Yes. If a chef leaves or the match is not working, we replace within 24 hours at no charge. This is standard for all placements.' },
 ]
 
 interface StaffingForm {
@@ -129,8 +133,8 @@ export default function StaffingPage() {
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Chef Staffing in Bali — Full-Time, Part-Time, Live-In | myCHEF"
-        description="myCHEF runs the recruitment side for private villa chefs across Bali. Match a vetted chef to your household — a week, a month, a season, or long-term."
+        title="Private Chef Staffing Bali — Full-Time, Part-Time, Live-In | myCHEF"
+        description="myCHEF runs the recruitment side for private villa chefs across Bali. Match a vetted chef to your household — a week, a month, a season, or long-term. From IDR 8M/month."
         canonical={`${SITE}/staffing`}
         ogImage={`${SITE}/generated/staffing-hero.webp`}
         jsonLd={[breadcrumbSchema('Staffing', `${SITE}/staffing`)]}
@@ -155,7 +159,7 @@ export default function StaffingPage() {
             className="text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-7"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Private Chef Recruitment
+            Private Chef Staffing Bali — Placed 500+ Chefs
           </p>
           <h1
             className="text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] mb-7  max-w-[920px]"
@@ -164,20 +168,20 @@ export default function StaffingPage() {
             Private Chef Staffing in Bali
           </h1>
           <p className="text-base md:text-xl text-white/75 mb-10 max-w-[640px] leading-relaxed">
-            Part-time and full-time private chefs for villas, families, retreats, and long-term stays — placed by our recruitment team from a vetted network across the island.
+            Part-time and full-time private chefs for villas, families, retreats, and long-term stays — placed by our recruitment team from a vetted network across the island. From IDR 8M/month. Trial week included.
           </p>
           <a
             href="#quote"
             className="inline-flex items-center justify-center px-10 py-4 bg-[#C5A028] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors mb-10"
           >
-            Get a Staffing Quote
+            Get 3 Vetted Candidates in 24h
           </a>
 
           {/* Trust badges */}
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             {[
               { icon: Shield, label: 'Background Checked' },
-              { icon: Clock, label: 'Trial Period Included' },
+              { icon: Clock, label: 'Trial Week Included' },
               { icon: RefreshCw, label: '24h Replacement' },
               { icon: Award, label: 'Vetted Network' },
               { icon: Star, label: '500+ Placements' },
@@ -269,12 +273,36 @@ export default function StaffingPage() {
         </div>
       </section>
 
-      {/* ── 04 — STAFFING TYPES ──────────────────────────────────────── */}
-      <section id="staffing-types" className="bg-white px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
+      {/* ── 04 — WHO HIRES US ───────────────────────────────────────── */}
+      <section id="who-hires" className="bg-white px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">04</p>
+            <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-4">Who Hires Our Chefs</h2>
+            <p className="text-[#4A4745] text-lg max-w-2xl mx-auto">Villa owners, family offices, retreat operators, and expat households — anyone who needs reliable kitchen talent, not just a CV.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {[
+              { title: 'Villa Owners', desc: 'Long-term placements for private residences. Chefs who know the kitchen, the guests, and the rhythm of the household.' },
+              { title: 'Family Offices', desc: 'Discreet, professional chefs for high-net-worth families. Background-checked, contract-ready, fully managed.' },
+              { title: 'Retreat Operators', desc: 'Wellness and yoga retreat chefs who understand plant-based, macro-balanced, and allergy-aware cooking at scale.' },
+              { title: 'Expat Households', desc: 'Family-friendly chefs who cook for children, manage dietary needs, and run the kitchen without supervision.' },
+            ].map((item) => (
+              <div key={item.title} className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-7">
+                <h3 className="font-playfair text-xl mb-2">{item.title}</h3>
+                <p className="text-sm text-[#4A4745]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 05 — STAFFING TYPES ──────────────────────────────────────── */}
+      <section id="staffing-types" className="bg-[#FAFAF8] px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-end mb-14">
             <div>
-              <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">04</p>
+              <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">05</p>
               <h2 className="font-playfair text-4xl md:text-5xl leading-tight">Six ways to place a chef</h2>
             </div>
             <p className="text-[#4A4745] text-lg">
@@ -284,7 +312,7 @@ export default function StaffingPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {STAFFING_TYPES.map((s) => (
-              <div key={s.title} className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-7">
+              <div key={s.title} className="bg-white border border-[#E5E3E0] rounded-2xl p-7">
                 <s.icon className="w-7 h-7 text-[#C5A028] mb-4" />
                 <h3 className="font-playfair text-xl mb-2">{s.title}</h3>
                 <p className="text-sm text-[#4A4745]">{s.desc}</p>
@@ -317,10 +345,10 @@ export default function StaffingPage() {
         </div>
       </section>
 
-      {/* ── 06 — STAFFING QUOTE FORM ──────────────────────────────────── */}
+      {/* ── 07 — STAFFING QUOTE FORM ──────────────────────────────────── */}
       <section id="quote" className="bg-white px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
         <div className="max-w-[800px] mx-auto">
-          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">06</p>
+          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">07</p>
           <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-4">Staffing quote</h2>
           <p className="text-[#4A4745] text-lg mb-10">
             Pick the basics here. Once you send, we reply with two or three vetted candidates and an honest budget — within 24 hours.
@@ -371,7 +399,7 @@ export default function StaffingPage() {
                   : 'bg-[#E5E3E0] text-[#8A8785] cursor-not-allowed pointer-events-none'
               }`}
             >
-              Request Chef Match
+              Get 3 Vetted Candidates in 24h
             </a>
             <p className="text-xs text-[#8A8785] text-center">
               Pick a schedule, arrangement, and at least one meal to send. Reply within 24 hours.
@@ -380,10 +408,10 @@ export default function StaffingPage() {
         </div>
       </section>
 
-      {/* ── 07 — FAQ ─────────────────────────────────────────────────── */}
+      {/* ── 08 — FAQ ─────────────────────────────────────────────────── */}
       <section id="faq" className="bg-[#FAFAF8] px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
         <div className="max-w-[800px] mx-auto">
-          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">07</p>
+          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">08</p>
           <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-12">Frequently asked</h2>
           <div className="space-y-4">
             {FAQS.map((f) => (
@@ -410,16 +438,16 @@ export default function StaffingPage() {
       <section className="bg-[#0A0A0A] text-white px-6 md:px-12 py-20 md:py-28">
         <div className="max-w-[800px] mx-auto text-center">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.35em] mb-4">Ready when you are</p>
-          <h2 className="font-playfair text-3xl md:text-5xl leading-tight mb-6">Match a chef to your villa</h2>
+          <h2 className="font-playfair text-3xl md:text-5xl leading-tight mb-6">Get 3 vetted candidates in 24 hours</h2>
           <p className="text-white/65 text-lg mb-10 max-w-[560px] mx-auto">
-            Most placements confirmed within 48 hours of your brief. No commitment to read a proposal.
+            Tell us your brief. We shortlist, you interview, we place. No commitment to read a proposal.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#quote"
               className="inline-flex items-center justify-center px-10 py-4 bg-[#C5A028] text-black text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
             >
-              Get a Staffing Quote
+              Get 3 Vetted Candidates in 24h
             </a>
             <a
               href={`https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to staff a chef for my villa.')}`}
@@ -427,7 +455,7 @@ export default function StaffingPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-10 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-colors"
             >
-              <MessageCircle className="w-4 h-4" /> WhatsApp
+              <MessageCircle className="w-4 h-4" /> WhatsApp — 2 Min Reply
             </a>
           </div>
         </div>

@@ -13,6 +13,9 @@ import CateringAddOnCard from '@/components/catering/CateringAddOnCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustRow from '@/components/catering/TrustRow'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import TrustStrip from '@/components/shared/TrustStrip'
+import TaxFooter from '@/components/shared/TaxFooter'
+import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -310,6 +313,9 @@ export default function CateringMainPage() {
           />
         </div>
       </section>
+
+      {/* ═══════ TRUST STRIP ═══════ */}
+      <TrustStrip />
 
       {/* ═══════ SECTION 2: WHO THIS IS FOR ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
@@ -742,6 +748,17 @@ export default function CateringMainPage() {
         </div>
       </section>
 
+      {/* ═══════ TESTIMONIALS ═══════ */}
+      <TestimonialBlock
+        testimonials={[
+          { name: 'Sarah & James', location: 'Seminyak Villa', quote: 'The BBQ was incredible — the Wagyu was perfectly cooked and the team handled everything. We did not lift a finger.', rating: 5 },
+          { name: 'The Chen Family', location: 'Canggu Villa', quote: 'We booked the Indonesian buffet for 40 guests. The sate lilit and nasi kuning were authentic and delicious. Highly recommend.', rating: 5 },
+          { name: 'Emma R.', location: 'Uluwatu Villa', quote: 'The grazing table was the highlight of our wedding cocktail hour. Every guest commented on how beautiful (and tasty) it was.', rating: 5 },
+        ]}
+        title="What Our Guests Say"
+        subtitle="Real reviews from real villa events across Bali."
+      />
+
       {/* ═══════ SECTION 16: FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
@@ -749,7 +766,7 @@ export default function CateringMainPage() {
             eyebrow="Questions"
             title="Catering FAQ"
           />
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
@@ -832,6 +849,8 @@ export default function CateringMainPage() {
           />
         </div>
       </section>
+
+      <TaxFooter className="py-6" />
     </div>
   )
 }

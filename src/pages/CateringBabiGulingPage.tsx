@@ -10,6 +10,9 @@ import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/Seo
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import TrustStrip from '@/components/shared/TrustStrip'
+import TaxFooter from '@/components/shared/TaxFooter'
+import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -180,6 +183,9 @@ export default function CateringBabiGulingPage() {
           </div>
         </div>
       </section>
+
+      {/* ═══════ TRUST STRIP ═══════ */}
+      <TrustStrip />
 
       {/* ═══════ WHAT IS BABI GULING ═══════ */}
       <section className="bg-content py-20 md:py-28 px-6">
@@ -398,6 +404,17 @@ export default function CateringBabiGulingPage() {
         </div>
       </section>
 
+      {/* ═══════ TESTIMONIALS ═══════ */}
+      <TestimonialBlock
+        testimonials={[
+          { name: 'Rachel & Sam', location: 'Ubud Villa', quote: 'The Babi Guling was the highlight of our group dinner. The crispy skin was incredible and the lawar was authentic. A true Balinese experience.', rating: 5 },
+          { name: 'The Wong Family', location: 'Canggu Villa', quote: 'We ordered the medium package for 28 guests. The portions were generous and the whole pig was perfectly cooked. Highly recommend.', rating: 5 },
+          { name: 'Chris M.', location: 'Seminyak Villa', quote: 'Best Babi Guling outside of Ubud. The sambals were spicy and flavorful. Our guests are still talking about it weeks later.', rating: 5 },
+        ]}
+        title="What Babi Guling Guests Say"
+        subtitle="Real reviews from traditional Balinese whole-pig events across Bali."
+      />
+
       {/* ═══════ FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
@@ -405,7 +422,7 @@ export default function CateringBabiGulingPage() {
             eyebrow="Questions"
             title="Babi Guling FAQ"
           />
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
@@ -445,6 +462,8 @@ export default function CateringBabiGulingPage() {
           </div>
         </div>
       </section>
+
+      <TaxFooter className="py-6" />
     </div>
   )
 }

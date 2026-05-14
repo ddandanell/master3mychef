@@ -10,6 +10,9 @@ import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/Seo
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import TrustStrip from '@/components/shared/TrustStrip'
+import TaxFooter from '@/components/shared/TaxFooter'
+import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -190,6 +193,9 @@ export default function CateringGrazingPage() {
           <p className="text-white/60 text-sm">From IDR 650,000 · Vegan options · Bali-wide</p>
         </div>
       </section>
+
+      {/* ═══════ TRUST STRIP ═══════ */}
+      <TrustStrip />
 
       {/* ═══════ WHY GRAZING WORKS ═══════ */}
       <section className="graze-content py-20 md:py-28 px-6">
@@ -420,6 +426,17 @@ export default function CateringGrazingPage() {
         </div>
       </section>
 
+      {/* ═══════ TESTIMONIALS ═══════ */}
+      <TestimonialBlock
+        testimonials={[
+          { name: 'Emma R.', location: 'Uluwatu Villa', quote: 'The grazing table was the highlight of our wedding cocktail hour. Every guest commented on how beautiful (and tasty) it was.', rating: 5 },
+          { name: 'Jessica & Mike', location: 'Canggu Villa', quote: 'We ordered the cheese platter for 10 and the mini box for our honeymoon suite. Both were stunning and the quality was top-notch.', rating: 5 },
+          { name: 'The Park Family', location: 'Seminyak Villa', quote: 'Wedding-scale grazing for 35 guests. The vegan option was just as beautiful as the regular one. myCHEF nailed it.', rating: 5 },
+        ]}
+        title="What Grazing Guests Say"
+        subtitle="Real reviews from grazing table events across Bali."
+      />
+
       {/* ═══════ FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
@@ -427,7 +444,7 @@ export default function CateringGrazingPage() {
             eyebrow="Questions"
             title="Grazing FAQ"
           />
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
@@ -495,6 +512,8 @@ export default function CateringGrazingPage() {
           </div>
         </div>
       </section>
+
+      <TaxFooter className="py-6" />
     </div>
   )
 }

@@ -9,10 +9,24 @@ interface FAQ {
 interface FAQAccordionProps {
   items: FAQ[]
   dark?: boolean
+  defaultOpenCount?: number
 }
 
-export default function FAQAccordion({ items, dark = false }: FAQAccordionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+export default function FAQAccordion({ items, dark = false, defaultOpenCount = 0 }: FAQAccordionProps) {
+  const [openSet, setOpenSet] = useState<Set<number>>(() => {
+    const s = new Set<number>()
+    for (let i = 0; i < Math.min(defaultOpenCount, items.length); i++) s.add(i)
+    return s
+  })
+
+  const toggle = (i: number) => {
+    setOpenSet((prev) => {
+      const next = new Set(prev)
+      if (next.has(i)) next.delete(i)
+      else next.add(i)
+      return next
+    })
+  }
 
   const bgColor = dark ? 'bg-white/[0.04] border-white/10' : 'bg-white border-[#E8E6E3]'
   const textColor = dark ? 'text-white' : 'text-[#1A1A1A]'
@@ -21,14 +35,14 @@ export default function FAQAccordion({ items, dark = false }: FAQAccordionProps)
   return (
     <div className="space-y-3">
       {items.map((item, i) => {
-        const isOpen = openIndex === i
+        const isOpen = openSet.has(i)
         return (
           <div
             key={i}
             className={`${bgColor} rounded-xl border overflow-hidden transition-all duration-300 ${isOpen ? 'shadow-sm' : ''}`}
           >
             <button
-              onClick={() => setOpenIndex(isOpen ? null : i)}
+              onClick={() => toggle(i)}
               className="w-full flex items-center justify-between gap-4 p-4 md:p-5 text-left"
               aria-expanded={isOpen}
             >

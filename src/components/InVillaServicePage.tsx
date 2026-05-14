@@ -1,0 +1,89 @@
+import { Link } from 'react-router-dom'
+import { MessageCircle, Check, ArrowRight } from 'lucide-react'
+import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
+import { PILLARS } from '../data/siteArchitecture'
+
+const SITE = 'https://mychef.id'
+const WA = '6282237565997'
+
+export default function InVillaServicePage() {
+  const pillar = PILLARS['in-villa-service']
+  const canonical = `${SITE}/in-villa-service`
+  const waLink = `https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to hire in-villa service staff.')}`
+
+  return (
+    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+      <SeoHead
+        title={pillar.title}
+        description={pillar.description}
+        canonical={canonical}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('In-Villa Service', canonical)]}
+      />
+
+      <section className="px-6 pt-32 pb-16 max-w-[900px] mx-auto">
+        <p className="font-cormorant text-[#8B5A2B] text-sm uppercase tracking-[4px] mb-4">myCHEF</p>
+        <h1 className="font-playfair text-4xl md:text-5xl leading-tight mb-6">{pillar.h1}</h1>
+        <p className="text-lg text-[#4A4745] max-w-[640px] mb-10">{pillar.intro}</p>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <a
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1ea855] transition-colors"
+          >
+            <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
+          </a>
+          <Link
+            to="/quote"
+            className="inline-flex items-center justify-center gap-2 bg-[#8B5A2B] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
+          >
+            {pillar.ctaPrimary}
+          </Link>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 border-t border-[#E8E6E3]">
+        <div className="max-w-[900px] mx-auto">
+          <h2 className="font-playfair text-2xl md:text-3xl mb-8">Service Staff</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {pillar.subPages.map((sub) => (
+              <Link
+                key={sub.slug}
+                to={`/in-villa-service/${sub.slug}`}
+                className="group flex items-center justify-between p-5 rounded-xl bg-white border border-[#E8E6E3] hover:border-[#8B5A2B] transition-colors"
+              >
+                <div>
+                  <h3 className="font-medium text-[#1A1A1A] mb-1">{sub.label}</h3>
+                  <p className="text-xs text-[#4A4745]">{sub.description}</p>
+                </div>
+                <ArrowRight className="w-4 h-4 text-[#8B5A2B] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-4" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 border-t border-[#E8E6E3]">
+        <div className="max-w-[900px] mx-auto">
+          <h2 className="font-playfair text-2xl md:text-3xl mb-8">What’s included</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              'Uniformed, English-speaking staff',
+              'Pre-event briefing for your occasion',
+              'Per-shift pricing — no long-term contract',
+              'All service tools and uniforms provided',
+              'Same-day confirmation via WhatsApp',
+              'Flexible team size from 1 to 20+',
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3 p-4 rounded-xl bg-white border border-[#E8E6E3]">
+                <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#8B5A2B]" />
+                <span className="text-[#4A4745] text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}

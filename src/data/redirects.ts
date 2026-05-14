@@ -24,6 +24,14 @@ export interface Redirect {
 }
 
 export const REDIRECTS: Redirect[] = [
+  // --- Systems-plan canonical redirects ---
+  { from: '/experience', to: '/fine-dining', reason: 'Systems plan: /experience → /fine-dining/' },
+  { from: '/menus', to: '/fine-dining/menus', reason: 'Systems plan: /menus → /fine-dining/menus/' },
+  { from: '/story', to: '/fine-dining/our-chefs', reason: 'Systems plan: /story → /fine-dining/our-chefs/' },
+  { from: '/service', to: '/in-villa-service', reason: 'Systems plan: /service → /in-villa-service/' },
+  { from: '/join', to: '/staffing', reason: 'Systems plan: /join → /staffing/' },
+  { from: '/partners', to: '/staffing/for-villa-managers', reason: 'Systems plan: /partners → /staffing/for-villa-managers/' },
+
   // --- Areas we don't actively service (redirect to the nearest kept area) ---
   { from: '/kuta', to: '/seminyak', reason: 'Lower-end tourist hub adjacent to Seminyak — same chef pool.' },
   { from: '/legian', to: '/seminyak', reason: 'Adjacent to Seminyak.' },
@@ -55,14 +63,14 @@ export const REDIRECTS: Redirect[] = [
   { from: '/best-private-chef-indonesia', to: '/', reason: 'Generic — homepage covers the value prop.' },
   { from: '/private-chef-for-events', to: '/events', reason: 'Maps directly to /events.' },
   { from: '/luxury-chef-indonesia', to: '/fine-dining', reason: 'Fine dining = luxury chef positioning.' },
-  { from: '/wedding-catering-indonesia', to: '/services/wedding-celebrations', reason: 'Direct service match.' },
+  { from: '/wedding-catering-indonesia', to: '/events/weddings', reason: 'Direct service match.' },
   { from: '/private-dining-indonesia', to: '/fine-dining', reason: 'Private dining = fine dining brand.' },
   { from: '/healthy-meal-delivery-indonesia', to: '/services/weekly-meal-prep', reason: 'Closest service.' },
   { from: '/private-chef-booking-indonesia', to: '/quote', reason: 'Booking intent → quote funnel.' },
-  { from: '/chef-for-hire-indonesia', to: '/villa-chef', reason: 'Hire intent → villa chef brand page.' },
+  { from: '/chef-for-hire-indonesia', to: '/catering', reason: 'Hire intent → catering pillar.' },
   { from: '/proposal-dinner', to: '/fine-dining', reason: 'Premium intimate dining = fine dining.' },
   { from: '/honeymoon-chef', to: '/fine-dining', reason: 'Premium intimate dining = fine dining.' },
-  { from: '/private-chef-breakfast-bali', to: '/villa-chef', reason: 'Breakfast service belongs to villa chef.' },
+  { from: '/private-chef-breakfast-bali', to: '/catering', reason: 'Breakfast service belongs to catering.' },
   { from: '/private-chef-cost-per-day-bali', to: '/pricing', reason: 'Cost intent → pricing.' },
   { from: '/private-chef-cost-bali', to: '/pricing', reason: 'Cost intent → pricing.' },
   { from: '/jakarta', to: '/contact', reason: 'Not actively serving Jakarta — direct interested leads to contact.' },
@@ -70,9 +78,9 @@ export const REDIRECTS: Redirect[] = [
 
   // --- Services / menus we don't lead with ---
   { from: '/services/romantic-dinners', to: '/fine-dining', reason: 'Romantic dinners = fine dining offering.' },
-  { from: '/services/family-reunions', to: '/villa-chef', reason: 'Family reunions = villa chef multi-day.' },
+  { from: '/services/family-reunions', to: '/catering', reason: 'Family reunions = catering multi-day.' },
   { from: '/services/cooking-classes', to: '/contact', reason: 'Niche request — drive to contact.' },
-  { from: '/services/corporate-events', to: '/corporate-events', reason: 'Consolidate corporate SEO equity into the dedicated /corporate-events landing page.' },
+  { from: '/services/corporate-events', to: '/events/corporate-events', reason: 'Consolidate corporate SEO equity into the events pillar.' },
   { from: '/menus/asian-fusion', to: '/menus', reason: 'Consolidate menu pages.' },
   { from: '/menus/vegan', to: '/menus', reason: 'Consolidate menu pages.' },
   { from: '/menus/modern-european', to: '/menus', reason: 'Consolidate menu pages.' },
@@ -91,10 +99,10 @@ export const REDIRECTS: Redirect[] = [
   // /guide/private-chef-bali is intentionally kept as the 10-city hub page.
   { from: '/blog/private-chef-bali-cost-breakdown-2026', to: '/pricing', reason: 'Cost article — pricing page covers intent.' },
   { from: '/blog/best-bali-villas-private-chef-kitchen', to: '/partners', reason: 'Villa-focused article → partner pitch.' },
-  { from: '/blog/wedding-rehearsal-dinner-bali', to: '/services/wedding-celebrations', reason: 'Wedding intent.' },
-  { from: '/blog/yoga-retreat-chef-bali-meal-planning', to: '/events', reason: 'Retreat intent.' },
-  { from: '/blog/private-chef-vs-restaurant-bali', to: '/villa-chef', reason: 'Decision article — point to villa chef offer.' },
-  { from: '/blog', to: '/', reason: 'Blog index empty until first post is written.' },
+  { from: '/blog/wedding-rehearsal-dinner-bali', to: '/events/weddings', reason: 'Wedding intent.' },
+  { from: '/blog/yoga-retreat-chef-bali-meal-planning', to: '/events/retreats', reason: 'Retreat intent.' },
+  { from: '/blog/private-chef-vs-restaurant-bali', to: '/catering', reason: 'Decision article — point to catering offer.' },
+  { from: '/blog', to: '/journal', reason: 'Blog migrated to Journal.' },
 ]
 
 /** Lookup map for the React Router fallback. */

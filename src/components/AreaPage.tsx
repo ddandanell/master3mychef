@@ -17,7 +17,7 @@ const WA = '6282237565997'
 // with H1 / meta / cross-links, but no per-section selling copy.
 export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-area' }) {
   const { pathname } = useLocation()
-  const slug = pathname.replace(/^\//, '').replace(/\/$/, '')
+  const slug = pathname.replace(/^\//, '').replace(/\/$/, '').replace(/^locations\//, '')
   const source = kind === 'area' ? AREAS : MICRO_AREAS
   const entry = source.find((a) => a.slug === slug)
   if (!entry) return <Navigate to="/404" replace />
@@ -135,7 +135,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
                 <p className="text-sm text-[#4A4745] mb-5 flex-grow">
                   Daily villa chef for breakfast, lunch, and dinner. Weekly meal prep. We shop fresh each morning and bill groceries at cost — no markup.
                 </p>
-                <Link to="/villa-chef" className="text-xs uppercase tracking-[2px] font-semibold text-[#6B8E5A] hover:text-[#1A1A1A]">
+                <Link to="/catering" className="text-xs uppercase tracking-[2px] font-semibold text-[#6B8E5A] hover:text-[#1A1A1A]">
                   Explore Catering →
                 </Link>
               </div>
@@ -201,7 +201,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
               We have an active partnership programme with 50+ luxury villas across Bali. If you own or manage a villa in {entry.name},
               partnering with myCHEF gives your guests on-demand fine dining without lifting a finger.
             </p>
-            <Link to="/partners" className="inline-flex items-center text-xs uppercase tracking-[2px] font-semibold text-[#2C5F7C] hover:text-[#1A1A1A]">
+            <Link to="/staffing/for-villa-managers" className="inline-flex items-center text-xs uppercase tracking-[2px] font-semibold text-[#2C5F7C] hover:text-[#1A1A1A]">
               See the partner programme →
             </Link>
           </div>
@@ -221,7 +221,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
             {TOP_CITIES.filter((c) => c.slug !== slug).map((c) => (
               <Link
                 key={c.slug}
-                to={`/${c.slug}`}
+                to={`/locations/${c.slug}`}
                 className="text-sm font-medium bg-white border border-[#1A1A1A]/10 px-4 py-3 rounded-lg hover:border-[#C5A028] hover:text-[#C5A028] transition-all text-center"
               >
                 {c.name}

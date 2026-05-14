@@ -1,6 +1,12 @@
 # 301 redirects generated from src/data/redirects.ts
 # Do not edit by hand — edit the source and re-run `pnpm redirects`.
 
+/experience  /fine-dining  301
+/menus  /fine-dining/menus  301
+/story  /fine-dining/our-chefs  301
+/service  /in-villa-service  301
+/join  /staffing  301
+/partners  /staffing/for-villa-managers  301
 /kuta  /seminyak  301
 /legian  /seminyak  301
 /kerobokan  /seminyak  301
@@ -27,22 +33,22 @@
 /best-private-chef-indonesia  /  301
 /private-chef-for-events  /events  301
 /luxury-chef-indonesia  /fine-dining  301
-/wedding-catering-indonesia  /services/wedding-celebrations  301
+/wedding-catering-indonesia  /events/weddings  301
 /private-dining-indonesia  /fine-dining  301
 /healthy-meal-delivery-indonesia  /services/weekly-meal-prep  301
 /private-chef-booking-indonesia  /quote  301
-/chef-for-hire-indonesia  /villa-chef  301
+/chef-for-hire-indonesia  /catering  301
 /proposal-dinner  /fine-dining  301
 /honeymoon-chef  /fine-dining  301
-/private-chef-breakfast-bali  /villa-chef  301
+/private-chef-breakfast-bali  /catering  301
 /private-chef-cost-per-day-bali  /pricing  301
 /private-chef-cost-bali  /pricing  301
 /jakarta  /contact  301
 /private-chef-menteng  /contact  301
 /services/romantic-dinners  /fine-dining  301
-/services/family-reunions  /villa-chef  301
+/services/family-reunions  /catering  301
 /services/cooking-classes  /contact  301
-/services/corporate-events  /corporate-events  301
+/services/corporate-events  /events/corporate-events  301
 /menus/asian-fusion  /menus  301
 /menus/vegan  /menus  301
 /menus/modern-european  /menus  301
@@ -56,7 +62,7 @@
 /guide/bali-cuisine-glossary  /menus  301
 /blog/private-chef-bali-cost-breakdown-2026  /pricing  301
 /blog/best-bali-villas-private-chef-kitchen  /partners  301
-/blog/wedding-rehearsal-dinner-bali  /services/wedding-celebrations  301
-/blog/yoga-retreat-chef-bali-meal-planning  /events  301
-/blog/private-chef-vs-restaurant-bali  /villa-chef  301
-/blog  /  301
+/blog/wedding-rehearsal-dinner-bali  /events/weddings  301
+/blog/yoga-retreat-chef-bali-meal-planning  /events/retreats  301
+/blog/private-chef-vs-restaurant-bali  /catering  301
+/blog  /journal  301

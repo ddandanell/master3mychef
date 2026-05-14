@@ -1,6 +1,36 @@
 {
   "redirects": [
     {
+      "source": "/experience",
+      "destination": "/fine-dining",
+      "permanent": true
+    },
+    {
+      "source": "/menus",
+      "destination": "/fine-dining/menus",
+      "permanent": true
+    },
+    {
+      "source": "/story",
+      "destination": "/fine-dining/our-chefs",
+      "permanent": true
+    },
+    {
+      "source": "/service",
+      "destination": "/in-villa-service",
+      "permanent": true
+    },
+    {
+      "source": "/join",
+      "destination": "/staffing",
+      "permanent": true
+    },
+    {
+      "source": "/partners",
+      "destination": "/staffing/for-villa-managers",
+      "permanent": true
+    },
+    {
       "source": "/kuta",
       "destination": "/seminyak",
       "permanent": true
@@ -132,7 +162,7 @@
     },
     {
       "source": "/wedding-catering-indonesia",
-      "destination": "/services/wedding-celebrations",
+      "destination": "/events/weddings",
       "permanent": true
     },
     {
@@ -152,7 +182,7 @@
     },
     {
       "source": "/chef-for-hire-indonesia",
-      "destination": "/villa-chef",
+      "destination": "/catering",
       "permanent": true
     },
     {
@@ -167,7 +197,7 @@
     },
     {
       "source": "/private-chef-breakfast-bali",
-      "destination": "/villa-chef",
+      "destination": "/catering",
       "permanent": true
     },
     {
@@ -197,7 +227,7 @@
     },
     {
       "source": "/services/family-reunions",
-      "destination": "/villa-chef",
+      "destination": "/catering",
       "permanent": true
     },
     {
@@ -207,7 +237,7 @@
     },
     {
       "source": "/services/corporate-events",
-      "destination": "/corporate-events",
+      "destination": "/events/corporate-events",
       "permanent": true
     },
     {
@@ -277,22 +307,22 @@
     },
     {
       "source": "/blog/wedding-rehearsal-dinner-bali",
-      "destination": "/services/wedding-celebrations",
+      "destination": "/events/weddings",
       "permanent": true
     },
     {
       "source": "/blog/yoga-retreat-chef-bali-meal-planning",
-      "destination": "/events",
+      "destination": "/events/retreats",
       "permanent": true
     },
     {
       "source": "/blog/private-chef-vs-restaurant-bali",
-      "destination": "/villa-chef",
+      "destination": "/catering",
       "permanent": true
     },
     {
       "source": "/blog",
-      "destination": "/",
+      "destination": "/journal",
       "permanent": true
     }
   ],

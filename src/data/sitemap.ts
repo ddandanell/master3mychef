@@ -6,6 +6,8 @@
 //   3) the public/sitemap.xml output
 // When adding a new page, add it here first.
 
+import { PILLARS, LOCATIONS, JOURNAL_POSTS } from './siteArchitecture'
+
 export type PageType =
   | 'home'
   | 'area'           // city/neighbourhood landing pages: /seminyak, /canggu...
@@ -250,7 +252,95 @@ export function buildSitemap(): SitemapEntry[] {
     slug: b.slug,
   }))
 
-  return [home, ...areas, ...microAreas, ...services, ...menus, ...landing, ...guides, ...blogPosts, ...INFO_PAGES, ...LEGAL_PAGES]
+  // --- System-plan pages ----------------------------------------------------
+
+  const pillarPages: SitemapEntry[] = Object.values(PILLARS).map((p) => ({
+    path: p.url,
+    type: 'info',
+    title: p.title,
+    description: p.description,
+    priority: 0.95,
+    changefreq: 'weekly',
+  }))
+
+  const pillarSubPages: SitemapEntry[] = Object.values(PILLARS).flatMap((p) =>
+    p.subPages.map((s) => ({
+      path: `${p.url}/${s.slug}`,
+      type: 'info' as const,
+      title: s.title,
+      description: s.description,
+      priority: 0.85,
+      changefreq: 'monthly',
+    }))
+  )
+
+  const locationHub: SitemapEntry = {
+    path: '/locations',
+    type: 'info',
+    title: 'Private Chef Locations Bali | Seminyak, Canggu, Ubud, Uluwatu — myCHEF',
+    description: 'Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Villa dining, catering and events in every region.',
+    priority: 0.9,
+    changefreq: 'weekly',
+  }
+
+  const locationPages: SitemapEntry[] = Object.values(LOCATIONS).map((l) => ({
+    path: `/locations/${l.slug}`,
+    type: 'area',
+    title: l.title,
+    description: l.description,
+    priority: 0.85,
+    changefreq: 'weekly',
+    area: l.label,
+    slug: l.slug,
+  }))
+
+  const journalIndex: SitemapEntry = {
+    path: '/journal',
+    type: 'blog-index',
+    title: 'Journal | Bali Private Chef Guides, Menus & Hosting Tips — myCHEF',
+    description: 'Guides, cost breakdowns, and culinary insights for hosting in Bali — private chef cost, villa kitchens, retreats, and rehearsal dinners.',
+    priority: 0.8,
+    changefreq: 'weekly',
+  }
+
+  const journalPosts: SitemapEntry[] = JOURNAL_POSTS.map((p) => ({
+    path: `/journal/${p.slug}`,
+    type: 'blog-post',
+    title: p.title,
+    description: p.description,
+    priority: 0.75,
+    changefreq: 'monthly',
+    slug: p.slug,
+  }))
+
+  const bookPage: SitemapEntry = {
+    path: '/book',
+    type: 'info',
+    title: 'Book | Private Chef, Catering & Events Bali — myCHEF',
+    description: 'Book a private chef, catering, event or staffing in Bali. Same-day WhatsApp confirmation.',
+    priority: 0.95,
+    changefreq: 'weekly',
+  }
+
+  return [
+    home,
+    ...areas,
+    ...microAreas,
+    ...services,
+    ...menus,
+    ...landing,
+    ...guides,
+    ...blogPosts,
+    ...pillarPages,
+    ...pillarSubPages,
+    locationHub,
+    ...locationPages,
+    journalIndex,
+    ...journalPosts,
+    bookPage,
+    ...INFO_PAGES,
+    ...LEGAL_PAGES,
+  ]
 }
 
 export const SITEMAP = buildSitemap()

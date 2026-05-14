@@ -19,6 +19,7 @@ import {
 import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import LocationChips from '@/components/LocationChips'
 
 const WA = '6282237565997'
 const SITE = 'https://mychef.id'
@@ -467,6 +468,12 @@ export default function StaffingPage() {
           </div>
         </div>
       </section>
+
+      <LocationChips
+        title="Staffing Across Bali"
+        subtitle="We place chefs and villa staff in Seminyak, Canggu, Ubud, Uluwatu, and every major region. Local knowledge. Vetted candidates."
+        dark
+      />
     </main>
   )
 }

@@ -10,6 +10,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import LocationChips from '@/components/LocationChips'
 import { Breadcrumb, PressStrip, AllInPrice, formatIDR, formatIDRShort, calculateAllIn } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -333,7 +334,7 @@ export default function EventsMainPage() {
       {/* ═══════ HERO — DARK, EDITORIAL, GOLD ═══════ */}
       <section className="relative min-h-[88vh] flex items-end overflow-hidden bg-[#0A0A0A] text-white">
         <img
-          src="/generated/hero-events.webp"
+          src="/generated/hero-corporate-events.jpg"
           alt="Luxury villa event in Bali with styled dining and celebration setup"
           width={1920}
           height={1080}
@@ -800,6 +801,12 @@ export default function EventsMainPage() {
           </div>
         </div>
       </section>
+
+      <LocationChips
+        title="Events Across Bali"
+        subtitle="Weddings in Uluwatu. Corporate retreats in Ubud. Birthday parties in Canggu. We know every venue, every vendor, every regulation."
+        dark
+      />
     </div>
   )
 }

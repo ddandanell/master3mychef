@@ -31,10 +31,41 @@ const OG_IMAGES: Record<string, string> = {
   '/corporate-events': '/generated/corp-hero.webp',
   '/partners': '/generated/partner-platform-hero.webp',
   '/partner-platform': '/generated/partner-platform-hero.webp',
+  '/catering': '/generated/catering-hero.webp',
+  '/in-villa-service': '/generated/in-villa-service-hero.webp',
+  '/about': '/generated/about-hero.webp',
+  '/chefs': '/generated/chefs-hero.webp',
+  '/pricing': '/generated/pricing-hero.webp',
+  '/faq': '/generated/faq-hero.webp',
+  '/locations': '/generated/hub-villa.webp',
+  '/journal': '/generated/journal-hero.webp',
+  '/reviews': '/generated/reviews-hero.webp',
+  '/why-mychef': '/generated/why-mychef-hero.webp',
+  '/retreats': '/generated/hero-retreats.jpg',
+  '/recommended-services': '/generated/aura-setup.webp',
+  '/join-our-team': '/generated/staffing-hero.webp',
+  '/calculator': '/generated/pricing-hero.webp',
+  '/book': '/generated/book-hero.webp',
+  '/quote': '/generated/og-image.webp',
+}
+
+const PILLAR_OG_IMAGES: Record<string, string> = {
+  'fine-dining': '/generated/luna-hero-v2.webp',
+  'catering': '/generated/catering-hero.webp',
+  'events': '/generated/aura-hero-v2.webp',
+  'in-villa-service': '/generated/in-villa-service-hero.webp',
+  'staffing': '/generated/staffing-hero.webp',
 }
 
 function getOgImage(path: string): string {
-  return OG_IMAGES[path] || '/og-image.webp'
+  if (OG_IMAGES[path]) return OG_IMAGES[path]
+  // Try pillar sub-page fallback: /pillar/subpage → use pillar hero
+  const segments = path.split('/').filter(Boolean)
+  if (segments.length >= 2) {
+    const pillarOg = PILLAR_OG_IMAGES[segments[0]]
+    if (pillarOg) return pillarOg
+  }
+  return '/og-image.webp'
 }
 
 function escapeHtml(text: string): string {
@@ -118,11 +149,17 @@ function injectMeta(html: string, path: string, title: string, description: stri
     `<meta name="twitter:image" content="${ogImage}" />`
   )
 
-  // Robots — noindex for 404, index for everything else
-  if (path === '/404') {
+  // Robots — noindex for thin-content pages and 404
+  const noindexPaths = ['/404', '/book', '/quote', '/calculator', '/join-our-team']
+  if (noindexPaths.includes(path)) {
     html = html.replace(
       /<meta name="robots" content=".*?"\s*\/?>/,
       `<meta name="robots" content="noindex,nofollow" />`
+    )
+  } else {
+    html = html.replace(
+      /<meta name="robots" content=".*?"\s*\/?>/,
+      `<meta name="robots" content="index,follow,max-image-preview:large" />`
     )
   }
 

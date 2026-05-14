@@ -1,0 +1,79 @@
+import { MessageCircle, ArrowRight } from 'lucide-react'
+import PremiumPage from '@/components/PremiumPage'
+
+const SECTIONS = [
+  {
+    id: 'booking',
+    type: 'content' as const,
+    subtitle: 'Booking & Planning',
+    title: 'How to Book Your Private Chef Experience',
+    body: `<p>Booking with myCHEF is simple. Message us on WhatsApp with your dates, villa location, and guest count. Our concierge team — Sofia for fine dining, Daniel for catering, Olivia for events — will respond within the hour.</p>
+    <p>We will send you a detailed proposal with menu options, pricing, and availability. You can adjust, ask questions, or request changes. Once you are happy, a 25% deposit locks your date. The balance is due 3 days before your event.</p>
+    <p>For urgent requests, we can sometimes accommodate 48-hour bookings. Message us and we will do our best.</p>`,
+    image: '/generated/faq-hero.webp',
+    imageAlt: 'myCHEF concierge team',
+  },
+  {
+    id: 'process',
+    type: 'features' as const,
+    subtitle: 'How It Works',
+    title: 'From First Message to Final Course',
+    features: [
+      { icon: MessageCircle, title: 'Message Us', desc: 'WhatsApp your dates, location, and guest count. We reply within the hour.' },
+      { icon: ArrowRight, title: 'We Plan', desc: 'Our concierge designs your menu or event. You approve — or we adjust.' },
+      { icon: ArrowRight, title: 'We Shop & Prep', desc: 'Groceries sourced fresh that morning. We arrive ready to cook.' },
+      { icon: ArrowRight, title: 'You Enjoy', desc: 'Sit back, eat, laugh. We leave your kitchen spotless.' },
+    ],
+  },
+]
+
+const FAQS = [
+  { question: 'How far in advance should I book?', answer: 'For fine dining, 7+ days is ideal. For villa chefs, 3+ days. For events, 4+ weeks. But message us anyway — we accommodate last-minute requests whenever possible.' },
+  { question: 'Do you serve all areas of Bali?', answer: 'Yes. Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, and everywhere in between. We have chefs based across the island.' },
+  { question: 'What about dietary restrictions?', answer: 'Every menu is tailored. Gluten-free, vegan, halal, nut allergies, pregnancy-friendly — just tell us. We have done it all. No extra charge.' },
+  { question: 'Are groceries included in the price?', answer: 'For fine dining and events, ingredients are included. For villa chef catering, groceries are billed at cost with no markup — you see every receipt.' },
+  { question: 'What does "++" mean in the price?', answer: '"++" means service charge (typically 10%) and government tax (11%) are added to the menu price. The final total is approximately 21% above the listed price.' },
+  { question: 'How do I pay?', answer: 'We accept bank transfer (IDR or USD), Wise, and credit card via secure link. A 25% deposit locks your date. Balance due 3 days before the event.' },
+  { question: 'What is your cancellation policy?', answer: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date. No-shows forfeit the deposit.' },
+  { question: 'Do I need a big kitchen?', answer: 'No. We have worked in everything from pool villas to estates. We bring any specialized equipment we need. As long as there is a kitchen and dining area, we can make it work.' },
+  { question: 'What time do you arrive?', answer: 'Typically 3 hours before service for fine dining. For villa chefs, we arrive 1–2 hours before the first meal. For events, setup time varies based on complexity.' },
+  { question: 'Can I see the menu before booking?', answer: 'Yes. We send full menu details, wine pairings, and pricing before you commit. Our concierge will walk you through each course.' },
+  { question: 'Is my villa suitable?', answer: 'We have worked in pool villas, cliffside estates, and jungle retreats. As long as there is a kitchen and dining area, we can make it work.' },
+  { question: 'What about children?', answer: 'Children are welcome. We can prepare a simplified menu for younger guests at a reduced rate. Let us know ages and preferences when booking.' },
+  { question: 'Do you provide wine and alcohol?', answer: 'We offer wine pairing for fine dining at IDR 850,000 per guest. For other events, we can source alcohol or you can provide your own. We do not markup alcohol.' },
+  { question: 'How many staff will come to my villa?', answer: 'Fine dining: 6–10 staff (chef, sous chef, servers, sommelier). Villa chef: 1–2 chefs. Events: varies based on guest count and service style.' },
+  { question: 'What happens if something goes wrong?', answer: 'We have served 500+ villa dinners with zero complaints requiring refund. If something is not right, we fix it on the spot. Your satisfaction is our standard.' },
+  { question: 'Can I mix menus for my group?', answer: 'Absolutely. Half your table can have Mediterranean Sea, half can have Wagyu. Just let us know when booking.' },
+  { question: 'Do you do cooking classes?', answer: 'Yes. Hands-on private cooking classes in your villa kitchen with one of our chefs. Perfect for families, couples, and team-building.' },
+  { question: 'Can you staff my villa long-term?', answer: 'Yes. We place full-time private chefs, butlers, and villa staff. Placement fees start at IDR 15,000,000. Contact us for details.' },
+]
+
+const RELATED_PAGES = [
+  { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
+  { label: 'Book Now', href: '/book', desc: 'Reserve your private chef experience.' },
+  { label: 'Get a Quote', href: '/quote', desc: 'Receive a detailed proposal within 24 hours.' },
+  { label: 'About myCHEF', href: '/about', desc: 'Our story, values, and mission.' },
+  { label: 'Contact', href: '/contact', desc: 'Speak with our concierge team.' },
+  { label: 'Fine Dining', href: '/fine-dining', desc: 'In-villa tasting menus and private chef experiences.' },
+]
+
+export default function FAQPage() {
+  return (
+    <PremiumPage
+      slug="faq"
+      title="Frequently Asked Questions"
+      description="Answers to common questions about private chef services in Bali — booking lead times, pricing, dietary needs, logistics, and more."
+      h1="Everything You Need to Know"
+      subtitle="Booking, pricing, dietary needs, logistics — answered."
+      heroImage="/generated/faq-hero.webp"
+      heroImageAlt="myCHEF concierge team ready to help"
+      keywords={['private chef bali faq', 'bali catering questions', 'villa chef booking']}
+      highlights={['Same-Day Response', 'No Hidden Fees', 'Dietary Flexibility', 'Full Refund 14+ Days']}
+      sections={SECTIONS}
+      faqs={FAQS}
+      relatedPages={RELATED_PAGES}
+      ctaText="Still Have Questions?"
+      ctaSubtext="Message us on WhatsApp. We reply within the hour."
+    />
+  )
+}

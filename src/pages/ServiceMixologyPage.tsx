@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Star, ShieldCheck, Award, FlaskConical } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -121,7 +122,7 @@ export default function ServiceMixologyPage() {
 
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/aura-bartender.webp" alt="Mixologist crafting signature cocktail at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} fetchPriority="high" />
+          <img src="/generated/hero-mixology.webp" alt="Mixologist crafting signature cocktail at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} fetchPriority="high" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 max-w-[1280px] mx-auto w-full">
@@ -216,6 +217,31 @@ export default function ServiceMixologyPage() {
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Mixology FAQ" />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
+        </div>
+      </section>
+
+      {/* ═══════ INTERNAL LINKS ═══════ */}
+      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-[1000px] mx-auto">
+          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link to="/in-villa-service/bartenders" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Bartender Hire</h4>
+              <p className="text-xs text-[#4A4745]">Professional bartenders for your villa event.</p>
+            </Link>
+            <Link to="/in-villa-service/sommelier" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Sommelier Service</h4>
+              <p className="text-xs text-[#4A4745]">Curated wine pairings for your villa dinner.</p>
+            </Link>
+            <Link to="/events/villa-parties" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Villa Parties</h4>
+              <p className="text-xs text-[#4A4745]">BBQ, cocktail, and pool parties with full bar service.</p>
+            </Link>
+            <Link to="/catering/bbq-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">BBQ Catering</h4>
+              <p className="text-xs text-[#4A4745]">Live BBQ stations and grilled feasts for your group.</p>
+            </Link>
+          </div>
         </div>
       </section>
 

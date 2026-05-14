@@ -480,6 +480,59 @@ export default function HubPage() {
         </div>
       </section>
 
+      {/* WHERE WE SERVE — location spider */}
+      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-14 md:mb-20">
+            <p className="u-label text-sm mb-4">Where We Serve</p>
+            <h2 className="u-heading text-3xl md:text-5xl mb-4">Private Chef Across Bali</h2>
+            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              From Seminyak's beachfront villas to Ubud's jungle retreats — we know every kitchen, every market, every road.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            {[
+              { name: 'Seminyak', slug: 'seminyak', image: '/generated/city-seminyak.webp' },
+              { name: 'Canggu', slug: 'canggu', image: '/generated/city-canggu.webp' },
+              { name: 'Ubud', slug: 'ubud', image: '/generated/city-ubud.webp' },
+              { name: 'Uluwatu', slug: 'uluwatu', image: '/generated/city-uluwatu.webp' },
+              { name: 'Sanur', slug: 'sanur', image: '/generated/city-sanur.webp' },
+              { name: 'Nusa Dua', slug: 'nusa-dua', image: '/generated/city-nusa-dua.webp' },
+              { name: 'Jimbaran', slug: 'jimbaran', image: '/generated/city-jimbaran.webp' },
+              { name: 'Berawa', slug: 'berawa', image: '/generated/city-berawa.webp' },
+              { name: 'Pererenan', slug: 'pererenan', image: '/generated/city-pererenan.webp' },
+              { name: 'Bukit', slug: 'bukit', image: '/generated/city-bukit.webp' },
+            ].map((city) => (
+              <Link
+                key={city.slug}
+                to={`/${city.slug}`}
+                className="group relative rounded-2xl overflow-hidden aspect-[4/3]"
+              >
+                <img
+                  src={city.image}
+                  alt={`Private chef in ${city.name}, Bali`}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 flex items-end p-4">
+                  <div>
+                    <p className="text-white font-medium text-sm">{city.name}</p>
+                    <p className="text-white/60 text-xs">Private Chef</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link to="/locations" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4" style={{ color: 'var(--u-accent)' }}>
+              View All Locations <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* VILLA & AIRBNB OWNERS */}
       <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[1280px] mx-auto">

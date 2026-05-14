@@ -28,6 +28,9 @@ export type LocationSlug =
   | 'nusa-dua'
   | 'jimbaran'
   | 'sanur'
+  | 'berawa'
+  | 'pererenan'
+  | 'bukit'
 
 export interface SubPage {
   slug: string
@@ -619,6 +622,36 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
       'Private chef and event catering in Sanur. Family-friendly menus, quieter villas, multi-generational dining.',
     intro:
       'Sanur is our quietest area — relaxed pace, family-friendly service, longer dinners, slower courses.',
+  },
+  berawa: {
+    slug: 'berawa',
+    label: 'Berawa',
+    h1: 'Private Chef Berawa — Villa Dining & Beach Club Events',
+    title: 'Private Chef Berawa | Villa Dining & Events — myCHEF',
+    description:
+      'Private chef and catering in Berawa, Bali. Modern villas, beach club events, and group dining for 20–80 guests.',
+    intro:
+      'Berawa villas are modern, well-equipped, and built for entertaining. We cook villa parties, birthday dinners, and Mediterranean menus.',
+  },
+  pererenan: {
+    slug: 'pererenan',
+    label: 'Pererenan',
+    h1: 'Private Chef Pererenan — Design Villas & Intimate Dining',
+    title: 'Private Chef Pererenan | Design Villa Dining — myCHEF',
+    description:
+      'Private chef in Pererenan, Bali. Quiet, design-forward villas, romantic dinners, small-group fine dining, and weekly meal prep.',
+    intro:
+      'Pererenan is what Canggu was five years ago — quieter, more design-led, and full of new villas with great kitchens.',
+  },
+  bukit: {
+    slug: 'bukit',
+    label: 'Bukit Peninsula',
+    h1: 'Private Chef Bukit Peninsula — Clifftop Villa Fine Dining',
+    title: 'Private Chef Bukit Peninsula | Clifftop Dining — myCHEF',
+    description:
+      'Private chef and event catering in the Bukit Peninsula — Bingin, Padang Padang, Ungasan. Clifftop fine dining for elopements and celebrations.',
+    intro:
+      'The Bukit Peninsula is Bali\'s premium clifftop region. We cook fine dining for elopements, surf-trip groups, and milestone celebrations.',
   },
 }
 

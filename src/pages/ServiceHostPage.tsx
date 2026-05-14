@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, Star, ShieldCheck, HandHeart } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -216,6 +217,31 @@ export default function ServiceHostPage() {
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Host & Hostess FAQ" />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
+        </div>
+      </section>
+
+      {/* ═══════ INTERNAL LINKS ═══════ */}
+      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-[1000px] mx-auto">
+          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link to="/in-villa-service/butlers" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Butler Service</h4>
+              <p className="text-xs text-[#4A4745]">Discreet villa butlers for arrival and guest experience.</p>
+            </Link>
+            <Link to="/events/weddings" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Villa Weddings</h4>
+              <p className="text-xs text-[#4A4745]">Bespoke villa weddings with full catering and coordination.</p>
+            </Link>
+            <Link to="/events/corporate-events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Corporate Events</h4>
+              <p className="text-xs text-[#4A4745]">Professional catering for offsites, conferences, and launches.</p>
+            </Link>
+            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Villa Catering</h4>
+              <p className="text-xs text-[#4A4745]">Full-service catering for your Bali villa stay.</p>
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -18,6 +18,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import CateringAddOnCard from '@/components/catering/CateringAddOnCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import LocationChips from '@/components/LocationChips'
 import TrustRow from '@/components/catering/TrustRow'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { Breadcrumb, PressStrip } from '@/components/shared'
@@ -899,6 +900,11 @@ export default function CateringMainPage() {
           />
         </div>
       </section>
+
+      <LocationChips
+        title="Catering Across Bali"
+        subtitle="BBQ on the beach in Jimbaran. Buffet in a Canggu villa. Plated dinner in Uluwatu. We bring the kitchen to you — wherever you are."
+      />
 
       <TaxFooter className="py-6" />
     </div>

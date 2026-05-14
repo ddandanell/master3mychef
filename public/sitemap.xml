@@ -492,6 +492,39 @@
     </image:image>
   </url>
   <url>
+    <loc>https://mychef.id/locations/berawa</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Berawa, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Berawa, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/locations/pererenan</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Pererenan, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Pererenan, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/locations/bukit</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Bukit Peninsula, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Bukit Peninsula, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://mychef.id/journal</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>

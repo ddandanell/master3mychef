@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import {
   MessageCircle, Calendar, Check, Clock, Heart, Newspaper,
 } from 'lucide-react'
@@ -460,6 +461,31 @@ export default function EventsWeddingsPage() {
             whatsappName="Sofia"
             accent={ACCENT}
           />
+        </div>
+      </section>
+
+      {/* ═══════ INTERNAL LINKS ═══════ */}
+      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-[1000px] mx-auto">
+          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link to="/events/anniversaries" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Anniversary Dinners</h4>
+              <p className="text-xs text-[#4A4745]">Romantic celebrations in your villa</p>
+            </Link>
+            <Link to="/events/corporate-events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Corporate Events</h4>
+              <p className="text-xs text-[#4A4745]">Offsites, conferences, and galas</p>
+            </Link>
+            <Link to="/catering/buffet" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Buffet Catering</h4>
+              <p className="text-xs text-[#4A4745]">Group buffets for villas and events</p>
+            </Link>
+            <Link to="/in-villa-service/bartenders" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Bartender Hire</h4>
+              <p className="text-xs text-[#4A4745]">Professional bar service for your wedding</p>
+            </Link>
+          </div>
         </div>
       </section>
 

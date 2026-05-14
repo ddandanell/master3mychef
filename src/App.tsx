@@ -75,6 +75,16 @@ const ServicePage = lazy(() => import('./components/ServicePage'))
 const MenuPage = lazy(() => import('./components/MenuPage'))
 const LandingPage = lazy(() => import('./components/LandingPage'))
 const InfoPage = lazy(() => import('./components/InfoPage'))
+const AboutPage = lazy(() => import('./pages/AboutPage'))
+const ChefsPage = lazy(() => import('./pages/ChefsPage'))
+const PricingPage = lazy(() => import('./pages/PricingPage'))
+const FAQPage = lazy(() => import('./pages/FAQPage'))
+const ReviewsPage = lazy(() => import('./pages/ReviewsPage'))
+const WhyMychefPage = lazy(() => import('./pages/WhyMychefPage'))
+const RetreatsPage = lazy(() => import('./pages/RetreatsPage'))
+const RecommendedServicesPage = lazy(() => import('./pages/RecommendedServicesPage'))
+const JoinTeamPage = lazy(() => import('./pages/JoinTeamPage'))
+const CalculatorPage = lazy(() => import('./pages/CalculatorPage'))
 const BlogIndexPage = lazy(() => import('./components/BlogIndexPage'))
 const BaliHubPage = lazy(() => import('./components/BaliHubPage'))
 const QuoteFunnel = lazy(() => import('./components/QuoteFunnel'))
@@ -244,125 +254,17 @@ export default function App() {
           ))}
 
           {/* Info / utility pages */}
-          <Route
-            path="/about"
-            element={
-              <InfoPage
-                title="About myCHEF"
-                description="myCHEF is Bali's most-trusted private chef service — Michelin-trained leadership, 50+ Indonesian professionals, and 8+ years of villa hospitality."
-                slug="about"
-                highlights={[
-                  'Michelin-trained executive chef leadership',
-                  '50+ Indonesian hospitality professionals',
-                  '8+ years operating across Bali',
-                  'Background-checked and certified team',
-                ]}
-              />
-            }
-          />
-          <Route
-            path="/chefs"
-            element={
-              <InfoPage
-                title="Our Chefs"
-                description="Meet the chefs behind myCHEF — backgrounds, specialties, and what they cook best."
-                slug="chefs"
-              />
-            }
-          />
-          <Route
-            path="/faq"
-            element={
-              <InfoPage
-                title="Frequently Asked Questions"
-                description="Answers to common questions about private chef services in Bali — booking lead times, pricing, dietary needs, and logistics."
-                slug="faq"
-              />
-            }
-          />
-          <Route
-            path="/why-mychef"
-            element={
-              <InfoPage
-                title="Why Choose myCHEF"
-                description="Why myCHEF is the most-trusted private chef service in Bali — vetted chefs, transparent pricing, and same-day response."
-                slug="why-mychef"
-                highlights={[
-                  'Vetted, background-checked chefs',
-                  'Transparent grocery pass-through (no markup)',
-                  'Same-day WhatsApp confirmation',
-                  'Dietary customization at no extra cost',
-                ]}
-              />
-            }
-          />
-          <Route
-            path="/reviews"
-            element={
-              <InfoPage
-                title="Reviews"
-                description="Real reviews from real guests — families, couples, and event hosts who chose myCHEF."
-                slug="reviews"
-              />
-            }
-          />
-          <Route
-            path="/pricing"
-            element={
-              <InfoPage
-                title="Pricing"
-                description="Transparent pricing for private chef services in Bali — hourly rates, menu pricing, and full-event packages."
-                slug="pricing"
-                highlights={[
-                  'Hourly rates from IDR 600,000',
-                  'Fine dining tasting menus from IDR 2,200,000++ per guest',
-                  'Event packages from IDR 15,000,000',
-                  'Groceries billed at cost — no markup',
-                ]}
-              />
-            }
-          />
-          <Route
-            path="/retreats"
-            element={
-              <InfoPage
-                title="Retreat Catering in Bali"
-                description="Multi-day catering for yoga retreats, wellness retreats, and corporate offsites across Bali — full-board menus, dietary flexibility, and on-site coordination."
-                slug="retreats"
-              />
-            }
-          />
-          <Route
-            path="/recommended-services"
-            element={
-              <InfoPage
-                title="Recommended Services in Bali"
-                description="Our trusted partners for DJs, decor, photography, transport, and other event services in Bali."
-                slug="recommended-services"
-              />
-            }
-          />
-          <Route
-            path="/join-our-team"
-            element={
-              <InfoPage
-                title="Join Our Team"
-                description="Open chef and hospitality roles at myCHEF — apply to join our growing team in Bali and Jakarta."
-                slug="join-our-team"
-              />
-            }
-          />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/chefs" element={<ChefsPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/why-mychef" element={<WhyMychefPage />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/retreats" element={<RetreatsPage />} />
+          <Route path="/recommended-services" element={<RecommendedServicesPage />} />
+          <Route path="/join-our-team" element={<JoinTeamPage />} />
           <Route path="/quote" element={<QuoteFunnel />} />
-          <Route
-            path="/calculator"
-            element={
-              <InfoPage
-                title="Pricing Calculator"
-                description="Estimate the cost of a private chef in Bali — adjust guests, meals, cuisine, and add-ons."
-                slug="calculator"
-              />
-            }
-          />
+          <Route path="/calculator" element={<CalculatorPage />} />
 
           {/* 404 */}
           <Route path="/404" element={<NotFoundPage />} />

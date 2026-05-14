@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { MessageCircle, ArrowRight, PartyPopper, Heart, Cake, Users, Briefcase, Gem, ChefHat, CalendarCheck } from 'lucide-react'
+import { MessageCircle, ArrowRight, PartyPopper, Heart, Cake, Users, Briefcase, Gem, ChefHat, CalendarCheck, MapPin } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -196,6 +196,56 @@ export default function ServicesPage() {
               </Link>
             )
           })}
+        </div>
+      </section>
+
+      {/* ── LOCATIONS ── */}
+      <section className="px-6 md:px-12 py-24 md:py-32 border-t border-white/[0.08]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-14 md:mb-20">
+            <p
+              className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Where We Serve
+            </p>
+            <h2
+              className="text-3xl md:text-5xl mb-4"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Available Across Bali
+            </h2>
+            <p className="text-white/50 max-w-xl mx-auto">
+              Every service is available in every region. We know the local markets, the villa kitchens, and the best suppliers.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              { name: 'Seminyak', slug: 'seminyak' },
+              { name: 'Canggu', slug: 'canggu' },
+              { name: 'Ubud', slug: 'ubud' },
+              { name: 'Uluwatu', slug: 'uluwatu' },
+              { name: 'Sanur', slug: 'sanur' },
+              { name: 'Nusa Dua', slug: 'nusa-dua' },
+              { name: 'Jimbaran', slug: 'jimbaran' },
+              { name: 'Berawa', slug: 'berawa' },
+              { name: 'Pererenan', slug: 'pererenan' },
+              { name: 'Bukit', slug: 'bukit' },
+            ].map((city) => (
+              <Link
+                key={city.slug}
+                to={`/${city.slug}`}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-sm text-white/70 hover:border-[#C5A028]/50 hover:text-[#C5A028] transition-all"
+              >
+                <MapPin className="w-3.5 h-3.5" /> {city.name}
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link to="/locations" className="inline-flex items-center gap-2 text-sm text-[#C5A028] hover:gap-3 transition-all">
+              View All Locations <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 

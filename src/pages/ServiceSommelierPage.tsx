@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Star, ShieldCheck, Award, Wine } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -216,6 +217,31 @@ export default function ServiceSommelierPage() {
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Sommelier FAQ" />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
+        </div>
+      </section>
+
+      {/* ═══════ INTERNAL LINKS ═══════ */}
+      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-[1000px] mx-auto">
+          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link to="/in-villa-service/butlers" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Butler Service</h4>
+              <p className="text-xs text-[#4A4745]">Discreet villa butlers for arrival and guest experience.</p>
+            </Link>
+            <Link to="/in-villa-service/bartenders" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Bartender Hire</h4>
+              <p className="text-xs text-[#4A4745]">Professional bartenders for your villa event.</p>
+            </Link>
+            <Link to="/events/anniversaries" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Anniversary Dinners</h4>
+              <p className="text-xs text-[#4A4745]">Romantic villa anniversaries with private chef service.</p>
+            </Link>
+            <Link to="/fine-dining" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+              <h4 className="font-semibold text-sm mb-1">Fine Dining</h4>
+              <p className="text-xs text-[#4A4745]">Multi-course fine dining experiences in your villa.</p>
+            </Link>
+          </div>
         </div>
       </section>
 

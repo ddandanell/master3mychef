@@ -1,0 +1,87 @@
+import { Star } from 'lucide-react'
+import PremiumPage from '@/components/PremiumPage'
+
+const TESTIMONIALS = [
+  { name: 'James & Sarah', location: 'London, UK', text: 'We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the courses — pure magic.', rating: 5 },
+  { name: 'The Harrisons', location: 'Sydney, Australia', text: 'Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.', rating: 5 },
+  { name: 'Marcus Chen', location: 'Singapore', text: 'I have hosted client dinners at Michelin restaurants across Asia. This was better. The privacy, the pacing, the fact that the chef was cooking three meters from our table — my client still talks about it six months later.', rating: 5 },
+  { name: 'The Williamson Family', location: 'Melbourne, Australia', text: 'We booked a villa chef for our family reunion. Seven nights of incredible food, and the kids actually ate vegetables. The chef even taught our teenager how to make pasta. Worth every rupiah.', rating: 5 },
+  { name: 'Emma & David', location: 'New York, USA', text: 'Our wedding catering was flawless. 80 guests, multiple dietary restrictions, and not a single complaint. The grazing table was Instagram-famous by the end of the night.', rating: 5 },
+  { name: 'Robert K.', location: 'Jakarta, Indonesia', text: 'I hired a full-time private chef through myCHEF for my Jakarta residence. Three months in and the quality has been consistent every single day. They really do train their people properly.', rating: 5 },
+  { name: 'Lisa & Tom', location: 'Amsterdam, Netherlands', text: 'The Mediterranean tasting menu was the highlight of our honeymoon. We still dream about the lobster tagliatelle. Already planning our anniversary trip back to Bali just to book them again.', rating: 5 },
+  { name: 'Corporate Retreat Group', location: 'Sydney, Australia', text: 'We booked myCHEF for a 3-day corporate retreat in Ubud. Breakfast, lunch, dinner — every meal was exceptional. The team handled 30 people with ease. Our CEO asked for their contact before we left.', rating: 5 },
+  { name: 'Sophie M.', location: 'Paris, France', text: 'As a French person, I am picky about food. The Wagyu experience exceeded my expectations. The technique, the presentation, the wine pairing — all world-class. In a villa kitchen. Incredible.', rating: 5 },
+]
+
+const SECTIONS = [
+  {
+    id: 'reviews',
+    type: 'testimonials' as const,
+    subtitle: 'Guest Reviews',
+    title: 'What Our Guests Say About Us',
+    testimonials: TESTIMONIALS.slice(0, 6),
+  },
+  {
+    id: 'more-reviews',
+    type: 'testimonials' as const,
+    subtitle: 'More Stories',
+    title: 'More Guest Experiences',
+    testimonials: TESTIMONIALS.slice(6),
+  },
+  {
+    id: 'stats',
+    type: 'features' as const,
+    subtitle: 'By The Numbers',
+    title: 'Our Track Record',
+    features: [
+      { icon: Star, title: '4.9 Average Rating', desc: 'Across 500+ verified villa dining experiences. Guests rate us on food quality, service, and overall experience.' },
+      { icon: Star, title: '12,000+ Guests Served', desc: 'Families, honeymooners, CEOs, wedding parties, and retreat groups — all served with the same standard.' },
+      { icon: Star, title: '500+ Villa Events', desc: 'From intimate dinners for two to weddings for 200. Every villa, every kitchen, every challenge handled.' },
+      { icon: Star, title: 'Zero Refund Complaints', desc: 'We have never had a guest request a refund due to food quality or service failure. We fix issues on the spot.' },
+    ],
+  },
+  {
+    id: 'cta',
+    type: 'cta' as const,
+    subtitle: 'Join Our Guests',
+    title: 'Experience What They Are Talking About',
+    body: 'Book your private chef experience and see why our guests rate us 4.9 out of 5. Message us on WhatsApp to get started.',
+  },
+]
+
+const FAQS = [
+  { question: 'Are these reviews real?', answer: 'Yes. Every review is from a real guest who booked and experienced our service. We do not use fake testimonials or paid reviews.' },
+  { question: 'Where can I leave a review?', answer: 'After your event, we will send you a review link. You can also leave reviews on Google, TripAdvisor, or our website.' },
+  { question: 'What if I am not satisfied?', answer: 'We have served 500+ events with zero refund complaints. If something is not right, we fix it immediately. Your satisfaction is our standard.' },
+]
+
+const RELATED_PAGES = [
+  { label: 'About myCHEF', href: '/about', desc: 'Our story, values, and mission.' },
+  { label: 'Our Chefs', href: '/chefs', desc: 'Meet the culinary team.' },
+  { label: 'Fine Dining', href: '/fine-dining', desc: 'In-villa tasting menus.' },
+  { label: 'Catering', href: '/catering', desc: 'Full-service villa catering.' },
+  { label: 'Book Now', href: '/book', desc: 'Reserve your experience.' },
+  { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing.' },
+]
+
+export default function ReviewsPage() {
+  return (
+    <PremiumPage
+      slug="reviews"
+      title="Reviews"
+      description="Real reviews from real guests — families, couples, and event hosts who chose myCHEF for their Bali experience."
+      h1="What Our Guests Say"
+      subtitle="Real reviews from real guests. 4.9 average rating across 500+ experiences."
+      heroImage="/generated/reviews-hero.webp"
+      heroImageAlt="Happy guests enjoying private dining in Bali"
+      ogImage="https://mychef.id/generated/reviews-hero.webp"
+      keywords={['private chef bali reviews', 'mychef testimonials', 'bali catering reviews']}
+      highlights={['4.9 Average Rating', '500+ Reviews', '12,000+ Guests', 'Zero Refund Complaints']}
+      sections={SECTIONS}
+      faqs={FAQS}
+      relatedPages={RELATED_PAGES}
+      ctaText="Book Your Experience"
+      ctaSubtext="Join thousands of happy guests. We reply within the hour."
+    />
+  )
+}

@@ -1,5 +1,5 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
-import { MessageCircle, Check, Utensils, Flame, Sparkles, Building2 } from 'lucide-react'
+import { MessageCircle, Check, Utensils, Flame, Sparkles, Building2, Users, ChefHat, PartyPopper } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
 import { AREAS, MICRO_AREAS } from '@/data/sitemap'
 import { TOP_CITIES } from '@/data/topCities'
@@ -120,49 +120,62 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
         </section>
       )}
 
-      {/* Three-service selling sections — only on the 10 top cities */}
+      {/* All services — expanded from 3 to full spider */}
       {top && (
         <section className="px-8 py-16 bg-white">
           <div className="max-w-[1100px] mx-auto">
-            <p className="text-center font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Three ways we cook in {entry.name}</p>
-            <h2 className="text-center font-playfair text-3xl md:text-4xl mb-12">Catering · Events · Fine Dining</h2>
+            <p className="text-center font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Everything we offer in {entry.name}</p>
+            <h2 className="text-center font-playfair text-3xl md:text-4xl mb-12">All Services · All Areas</h2>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {/* Fine Dining */}
+              <Link to="/fine-dining" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#C5A028] transition-all group">
+                <Flame className="w-6 h-6 text-[#C5A028] mb-3" />
+                <h3 className="font-playfair text-xl mb-2">Fine Dining</h3>
+                <p className="text-sm text-[#4A4745] flex-grow">Italian tasting menus, sommelier pairing, open-flame cooking.</p>
+                <span className="text-xs uppercase tracking-[2px] font-semibold text-[#C5A028] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
+              </Link>
+
               {/* Catering */}
-              <div className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col">
+              <Link to="/catering" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#6B8E5A] transition-all group">
                 <Utensils className="w-6 h-6 text-[#6B8E5A] mb-3" />
-                <h3 className="font-playfair text-2xl mb-3">Catering in {entry.name}</h3>
-                <p className="text-sm text-[#4A4745] mb-5 flex-grow">
-                  Daily villa chef for breakfast, lunch, and dinner. Weekly meal prep. We shop fresh each morning and bill groceries at cost — no markup.
-                </p>
-                <Link to="/catering" className="text-xs uppercase tracking-[2px] font-semibold text-[#6B8E5A] hover:text-[#1A1A1A]">
-                  Explore Catering →
-                </Link>
-              </div>
+                <h3 className="font-playfair text-xl mb-2">Catering</h3>
+                <p className="text-sm text-[#4A4745] flex-grow">BBQ, buffet, drop-off, grazing tables, plated dinners.</p>
+                <span className="text-xs uppercase tracking-[2px] font-semibold text-[#6B8E5A] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
+              </Link>
 
               {/* Events */}
-              <div className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col">
+              <Link to="/events" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#2C5F7C] transition-all group">
                 <Sparkles className="w-6 h-6 text-[#2C5F7C] mb-3" />
-                <h3 className="font-playfair text-2xl mb-3">Events in {entry.name}</h3>
-                <p className="text-sm text-[#4A4745] mb-5 flex-grow">
-                  Weddings, retreats, birthdays, corporate dinners. We handle catering, bar, décor, and on-site coordination from intimate dinners to 200-guest receptions.
-                </p>
-                <Link to="/events" className="text-xs uppercase tracking-[2px] font-semibold text-[#2C5F7C] hover:text-[#1A1A1A]">
-                  Explore Events →
-                </Link>
-              </div>
+                <h3 className="font-playfair text-xl mb-2">Events</h3>
+                <p className="text-sm text-[#4A4745] flex-grow">Weddings, birthdays, corporate, retreats, villa parties.</p>
+                <span className="text-xs uppercase tracking-[2px] font-semibold text-[#2C5F7C] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
+              </Link>
 
-              {/* Fine Dining */}
-              <div className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col">
-                <Flame className="w-6 h-6 text-[#C5A028] mb-3" />
-                <h3 className="font-playfair text-2xl mb-3">Fine Dining in {entry.name}</h3>
-                <p className="text-sm text-[#4A4745] mb-5 flex-grow">
-                  Two curated Italian and Mediterranean tasting experiences in your villa. White-clad team, sommelier pairing, open-flame cooking — Michelin-trained execution.
-                </p>
-                <Link to="/fine-dining" className="text-xs uppercase tracking-[2px] font-semibold text-[#8B6F1A] hover:text-[#1A1A1A]">
-                  Explore Fine Dining →
-                </Link>
-              </div>
+              {/* In-Villa Service */}
+              <Link to="/in-villa-service" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#8B5A2B] transition-all group">
+                <Users className="w-6 h-6 text-[#8B5A2B] mb-3" />
+                <h3 className="font-playfair text-xl mb-2">In-Villa Service</h3>
+                <p className="text-sm text-[#4A4745] flex-grow">Waiters, butlers, bartenders, mixologists, sommeliers.</p>
+                <span className="text-xs uppercase tracking-[2px] font-semibold text-[#8B5A2B] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
+              </Link>
+            </div>
+
+            {/* Second row: staffing + services */}
+            <div className="grid md:grid-cols-2 gap-4 mt-4">
+              <Link to="/staffing" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#C5A028] transition-all group">
+                <ChefHat className="w-6 h-6 text-[#C5A028] mb-3" />
+                <h3 className="font-playfair text-xl mb-2">Staffing & Placement</h3>
+                <p className="text-sm text-[#4A4745] flex-grow">Full-time private chefs, villa staff, household staff, hotel recruitment.</p>
+                <span className="text-xs uppercase tracking-[2px] font-semibold text-[#C5A028] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
+              </Link>
+
+              <Link to="/services" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#2C5F7C] transition-all group">
+                <PartyPopper className="w-6 h-6 text-[#2C5F7C] mb-3" />
+                <h3 className="font-playfair text-xl mb-2">All Experiences</h3>
+                <p className="text-sm text-[#4A4745] flex-grow">Villa parties, romantic dinners, cooking classes, weekly meal prep.</p>
+                <span className="text-xs uppercase tracking-[2px] font-semibold text-[#2C5F7C] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
+              </Link>
             </div>
           </div>
         </section>
@@ -221,7 +234,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
             {TOP_CITIES.filter((c) => c.slug !== slug).map((c) => (
               <Link
                 key={c.slug}
-                to={`/locations/${c.slug}`}
+                to={`/${c.slug}`}
                 className="text-sm font-medium bg-white border border-[#1A1A1A]/10 px-4 py-3 rounded-lg hover:border-[#C5A028] hover:text-[#C5A028] transition-all text-center"
               >
                 {c.name}

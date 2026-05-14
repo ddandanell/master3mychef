@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from './SeoHead'
+import FAQAccordion from './catering/FAQAccordion'
 import { getSubPage, getPillarBySlug, type Pillar, type SubPage } from '../data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
@@ -35,13 +36,65 @@ export default function PillarSubPage() {
 
   const related = pillar.subPages.filter((s) => s.slug !== subPage.slug).slice(0, 4)
 
+  // Pillar-specific FAQ fallback content
+  const pillarFaqs: Record<string, { q: string; a: string }[]> = {
+    'fine-dining': [
+      { q: 'What is the minimum number of guests?', a: 'Four guests minimum for the full fine dining experience. We can arrange intimate two-guest romantic evenings on request.' },
+      { q: 'How far in advance should I book?', a: '7+ days is ideal. Peak season (July–August, December) books 2+ weeks ahead. We can sometimes accommodate 48-hour requests.' },
+      { q: 'Do you provide wine pairing?', a: 'Yes. Our sommelier wine pairing is IDR 850,000 per guest and includes 4–5 glasses matched to each course.' },
+      { q: 'Can you accommodate dietary restrictions?', a: 'Absolutely. Gluten-free, vegan, halal, shellfish allergy, pregnancy-friendly — we adjust every course at no extra charge.' },
+    ],
+    'catering': [
+      { q: 'What is the minimum guest count?', a: 'BBQ catering: 10 guests minimum. Buffet: 15 guests. Drop-off: 10 guests. Villa chef: no minimum, 4-hour minimum booking.' },
+      { q: 'Are groceries included?', a: 'For fine dining and events, ingredients are included. For villa chef catering, groceries are billed at cost with receipts — no markup.' },
+      { q: 'How far in advance should I book catering?', a: '3+ days for villa chef. 7+ days for BBQ and buffet. 2+ weeks for large events and peak season.' },
+      { q: 'Can I customize the menu?', a: 'Yes. Every menu is tailored to your preferences, dietary needs, and kitchen capabilities. Just tell us what you need.' },
+    ],
+    'events': [
+      { q: 'Do you handle event planning or just catering?', a: 'We handle both. Our event team coordinates timeline, vendors, staffing, and hospitality flow — food handled by our catering team.' },
+      { q: 'What is the minimum guest count for events?', a: 'Villa parties: 10 guests. Weddings: 20 guests. Corporate events: no minimum. We scale from intimate dinners to 200-guest receptions.' },
+      { q: 'How far in advance should I book an event?', a: '4+ weeks for weddings and large events. 2+ weeks for villa parties and birthdays. Peak season books 6+ weeks ahead.' },
+      { q: 'Can you coordinate with my vendors?', a: 'Yes. We liaise with DJs, photographers, florists, and rental companies on your behalf — one point of contact for everything.' },
+    ],
+    'in-villa-service': [
+      { q: 'Can I hire staff without booking catering?', a: 'Yes. Our in-villa service staff can be hired independently for events where you have your own catering.' },
+      { q: 'How many staff do I need?', a: 'For plated dinners: 1 waiter per 8–10 guests. For buffet: 1 per 15 guests. For cocktail parties: 1 bartender per 25 guests.' },
+      { q: 'What do your staff wear?', a: 'Professional uniforms — black and white for formal events, branded myCHEF attire for casual settings.' },
+      { q: 'How far in advance should I book staff?', a: '3+ days for small teams. 2+ weeks for large events or peak season.' },
+    ],
+    'staffing': [
+      { q: 'What is the placement fee?', a: 'Private chef placement starts at IDR 15,000,000. Villa staff and household staff placement fees vary by role and experience level.' },
+      { q: 'How long does placement take?', a: 'Typically 2–4 weeks from initial request to candidate start date. Includes profiling, interviews, trial dinners, and contract setup.' },
+      { q: 'Do you handle payroll and contracts?', a: 'We provide contract templates and payroll guidance. Some clients prefer us to manage payroll — we offer this as an add-on service.' },
+      { q: 'What if the placement does not work out?', a: 'We offer a 30-day replacement guarantee. If the candidate is not the right fit, we find a replacement at no additional placement fee.' },
+    ],
+  }
+  const faqs = pillarFaqs[pillar.slug] || pillarFaqs['fine-dining']
+
+  // OG image by pillar
+  const pillarOgImages: Record<string, string> = {
+    'fine-dining': 'https://mychef.id/generated/luna-hero-v2.webp',
+    'catering': 'https://mychef.id/generated/catering-hero.webp',
+    'events': 'https://mychef.id/generated/aura-hero-v2.webp',
+    'in-villa-service': 'https://mychef.id/generated/in-villa-service-hero.webp',
+    'staffing': 'https://mychef.id/generated/staffing-hero.webp',
+  }
+  const ogImage = pillarOgImages[pillar.slug]
+
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={subPage.title}
         description={subPage.description}
         canonical={canonical}
-        jsonLd={[localBusinessSchema, breadcrumbSchema(subPage.label, canonical)]}
+        ogImage={ogImage}
+        jsonLd={[
+          localBusinessSchema,
+          breadcrumbSchema(subPage.label, canonical, pillar.navLabel, `${SITE}${pillar.url}`),
+          serviceSchema(subPage.label, subPage.description, canonical),
+          aggregateRatingSchema(4.9, 127),
+          faqPageSchema(faqs.map(f => ({ question: f.q, answer: f.a }))),
+        ]}
       />
 
       {/* Hero */}
@@ -116,6 +169,15 @@ export default function PillarSubPage() {
           </div>
         </section>
       )}
+
+      {/* FAQ */}
+      <section className="px-6 py-16 border-t border-[#E8E6E3] bg-white">
+        <div className="max-w-[800px] mx-auto">
+          <p className="text-sm text-[#C5A028] uppercase tracking-[4px] mb-4 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
+          <h2 className="font-playfair text-3xl md:text-4xl text-center mb-12">Frequently Asked</h2>
+          <FAQAccordion items={faqs} />
+        </div>
+      </section>
 
       {/* Cross-pillar */}
       <section className="px-6 py-16 border-t border-[#E8E6E3]">

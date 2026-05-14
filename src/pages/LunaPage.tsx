@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import { Flame, Wine, Clock, Users, Star, Check, ChevronRight, MessageCircle, Phone, Sparkles, Truck } from 'lucide-react'
+import { Flame, Wine, Clock, Users, Star, Check, ChevronRight, MessageCircle, Phone, Sparkles, Truck, Heart, ChefHat, UtensilsCrossed } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
 import OrderPanel from '@/components/OrderPanel'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import LocationChips from '@/components/LocationChips'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -87,7 +88,7 @@ const WHATS_INCLUDED = [
 ]
 
 const FAQS = [
-  { question: 'What is the minimum number of guests?', answer: 'Four guests minimum. We can accommodate up to 24 for the full fine dining experience.' },
+  { question: 'What is the minimum number of guests?', answer: 'Four guests minimum. We can accommodate up to 24 for the full fine dining experience. For intimate two-guest romantic evenings, message Sofia to arrange.' },
   { question: 'Can I mix the two menus for my group?', answer: 'Absolutely. Half your table can have Mediterranean Sea, half can have Wagyu. Just let Sofia know when booking.' },
   { question: 'What does "++" mean in the price?', answer: '"++" means service charge (typically 10%) and government tax (11%) are added to the menu price. The final per-person total is approximately IDR 2.6M (Mediterranean) and IDR 2.85M (Wagyu). Wine pairing is additional at IDR 850K per guest.' },
   { question: 'How far in advance should I book?', answer: '7+ days is ideal. Peak season (July–August, December) books 2+ weeks ahead. We can sometimes accommodate 48-hour requests — message us and we will try.' },
@@ -103,7 +104,6 @@ const FAQS = [
   { question: 'How do I pay?', answer: 'We accept bank transfer (IDR or USD), Wise, and credit card via secure link. A 25% deposit locks your date. Balance due 3 days before the evening.' },
   { question: 'Is my villa suitable?', answer: 'We have worked in pool villas, cliffside estates, and jungle retreats. As long as there is a kitchen and a dining area, we can make it work. We bring tableware, linens, and any equipment we need.' },
   { question: 'What about children?', answer: 'Children are welcome. We can prepare a simplified menu for younger guests at a reduced rate. Let us know ages and preferences when booking.' },
-
 ]
 
 const TESTIMONIALS = [
@@ -143,10 +143,21 @@ const THE_FOUR = [
   },
 ]
 
+const SIDEBAR_LINKS = [
+  { id: 'private-chef-bali', label: 'Private Chef in Bali' },
+  { id: 'romantic-dinner', label: 'Romantic Dinner' },
+  { id: 'chefs-table', label: "Chef's Table" },
+  { id: 'tasting-menu', label: 'Tasting Menu' },
+  { id: 'our-menus', label: 'Our Menus' },
+  { id: 'our-chefs', label: 'Our Chefs' },
+]
+
 export default function LunaPage() {
   const heroRef = useRef<HTMLDivElement>(null)
   const [orderOpen, setOrderOpen] = useState(false)
   const [orderExperience, setOrderExperience] = useState<string | undefined>(undefined)
+  const [activeSection, setActiveSection] = useState<string>('')
+  const [sidebarVisible, setSidebarVisible] = useState(false)
 
   const openOrder = (experience?: string) => {
     setOrderExperience(experience)
@@ -154,9 +165,6 @@ export default function LunaPage() {
   }
 
   useEffect(() => {
-    // Hero motion handled by CSS keyframe (.luna-hero-fade) so it is guaranteed
-    // to play even if GSAP context.revert() fires from a Strict Mode double-mount.
-    // GSAP still drives the scroll-triggered reveals below the fold.
     const ctx = gsap.context(() => {
       gsap.fromTo('.luna-reveal', { y: 50, opacity: 0 }, {
         y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
@@ -165,6 +173,52 @@ export default function LunaPage() {
     }, heroRef)
     return () => ctx.revert()
   }, [])
+
+  // IntersectionObserver for sidebar active state + visibility
+  useEffect(() => {
+    const sectionIds = SIDEBAR_LINKS.map((l) => l.id)
+    const observers: IntersectionObserver[] = []
+
+    // Visibility observer — show sidebar after scrolling past hero
+    const hero = heroRef.current
+    if (hero) {
+      const heroObserver = new IntersectionObserver(
+        ([entry]) => {
+          setSidebarVisible(!entry.isIntersecting)
+        },
+        { threshold: 0.05, rootMargin: '-80px 0px 0px 0px' }
+      )
+      heroObserver.observe(hero)
+      observers.push(heroObserver)
+    }
+
+    // Active section observer
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { threshold: 0.3, rootMargin: '-80px 0px -40% 0px' }
+    )
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id)
+      if (el) sectionObserver.observe(el)
+    })
+    observers.push(sectionObserver)
+
+    return () => observers.forEach((o) => o.disconnect())
+  }, [])
+
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
 
   return (
     <div ref={heroRef} data-universe="luna" className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
@@ -189,11 +243,56 @@ export default function LunaPage() {
           breadcrumbSchema('Fine Dining', 'https://mychef.id/fine-dining'),
         ]}
       />
+
+      {/* Sticky Sidebar Navigation */}
+      <nav
+        className={`fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-1 transition-all duration-500 ${sidebarVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 pointer-events-none'}`}
+        style={{ paddingLeft: '1rem' }}
+      >
+        {SIDEBAR_LINKS.map((link) => (
+          <button
+            key={link.id}
+            onClick={() => scrollToSection(link.id)}
+            className={`text-left text-[11px] tracking-[0.15em] uppercase px-3 py-2 rounded-r-lg transition-all duration-300 border-l-2 ${
+              activeSection === link.id
+                ? 'text-[#C5A028] border-[#C5A028] bg-[#C5A028]/10'
+                : 'text-white/40 border-transparent hover:text-white/70 hover:bg-white/5'
+            }`}
+            style={{ fontFamily: "'Cormorant Garamond', serif", writingMode: 'horizontal-tb' }}
+          >
+            {link.label}
+          </button>
+        ))}
+      </nav>
+
+      {/* Mobile chip row — horizontal scroll */}
+      <div
+        className={`fixed top-[72px] left-0 right-0 z-40 lg:hidden px-4 transition-all duration-500 ${sidebarVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}
+        style={{ background: 'linear-gradient(to bottom, rgba(5,5,5,0.95), rgba(5,5,5,0.8))' }}
+      >
+        <div className="flex gap-2 overflow-x-auto py-3 scrollbar-hide">
+          {SIDEBAR_LINKS.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollToSection(link.id)}
+              className={`flex-shrink-0 text-[10px] tracking-[0.15em] uppercase px-3 py-1.5 rounded-full border transition-all duration-300 whitespace-nowrap ${
+                activeSection === link.id
+                  ? 'text-[#C5A028] border-[#C5A028]/60 bg-[#C5A028]/10'
+                  : 'text-white/50 border-white/10 hover:text-white/70 hover:border-white/20'
+              }`}
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              {link.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/*
         Hero — luxury hotel booking aesthetic.
         Full-screen cinematic image, dark gradient overlay (not flat tint), tiny gold
         eyebrow, oversized serif headline, two CTAs: Order Now (opens the side panel)
-        and Explore Menu (anchors to #menus). Generous spacing — no badges, no chips.
+        and Explore Menu (anchors to #our-menus). Generous spacing — no badges, no chips.
       */}
       <section className="relative min-h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0">
@@ -235,7 +334,7 @@ export default function LunaPage() {
               Book Your Evening — Reply in 1 Hour
             </button>
             <a
-              href="#menus"
+              href="#our-menus"
               className="inline-flex items-center justify-center px-10 py-4 border border-[#C5A028]/60 text-[#C5A028] text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#C5A028]/10 transition-colors"
             >
               Explore Menu
@@ -257,8 +356,41 @@ export default function LunaPage() {
         </div>
       </section>
 
+      {/* Private Chef in Bali — SEO Section */}
+      <section id="private-chef-bali" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div>
+              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Private Chef in Bali</p>
+              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>A Michelin-Trained Chef in Your Villa</h2>
+              <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
+              <p className="text-white/70 mb-6 leading-relaxed">
+                When you hire a private chef in Bali, you are not ordering dinner. You are commissioning an evening. Our executive chef Adriano — trained in Modena and Tokyo — leads a team of four Indonesian chefs he has personally trained for 6 to 12 months each. They arrive at your villa three hours before service, transform your kitchen into a fine dining station, and serve a multi-course tasting menu at your table.
+              </p>
+              <p className="text-white/70 mb-6 leading-relaxed">
+                Every ingredient is sourced that morning. The pasta is rolled in your kitchen. The Wagyu is flame-grilled in front of your guests. The wine is paired course by course. And when the evening ends, the team leaves your villa spotless — as if they were never there.
+              </p>
+              <p className="text-white/50 text-sm leading-relaxed">
+                This is not a catering service. This is a private restaurant built inside your villa for one night only. Available across Bali: Seminyak, Canggu, Uluwatu, Ubud, Sanur, and Nusa Dua.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/generated/luna-gallery-3.webp"
+                alt="Private chef preparing a fine dining course in a Bali villa kitchen"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Who This Is For */}
-      <section className="py-24 md:py-32 px-6" style={{ background: '#F5F3EF' }}>
+      <section id="built-for" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#F5F3EF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Built For</p>
@@ -281,8 +413,42 @@ export default function LunaPage() {
         </div>
       </section>
 
+      {/* Romantic Dinner — SEO Section */}
+      <section id="romantic-dinner" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#F5F3EF' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div className="order-2 md:order-1 rounded-2xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/generated/luna-gallery-4.webp"
+                alt="Romantic candlelit dinner for two at a private Bali villa"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Romantic Dinner</p>
+              <h2 className="text-4xl md:text-5xl mb-6 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>An Evening for Two</h2>
+              <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
+              <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
+                A romantic dinner in Bali should not mean fighting for a table at a crowded restaurant. It should mean your own villa, your own chef, and an evening that moves at your pace. We design intimate dinners for couples who want privacy without compromise — the same Michelin-trained team, the same ingredients, the same attention to detail, scaled to an evening for two.
+              </p>
+              <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
+                The table is set with candles and crystal. The courses arrive unhurried. The wine is paired to your preference. And the only other voices in the room are the ones you choose to hear. Whether it is a proposal, an anniversary, or simply a night that deserves to be remembered, we build the evening around you.
+              </p>
+              <div className="flex items-center gap-3 text-[#1A1A1A]/60 text-sm">
+                <Heart className="w-4 h-4 text-[#C5A028]" />
+                <span>Minimum four guests, or arrange a two-guest romantic evening on request</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Experience Intro — Chapter Four */}
-      <section className="luna-content py-24 md:py-32 px-6" style={{ background: '#F5F3EF' }}>
+      <section id="experience" className="luna-content py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#F5F3EF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="luna-reveal">
@@ -324,11 +490,102 @@ export default function LunaPage() {
         </div>
       </section>
 
-      {/* Menus */}
-      <section id="menus" className="py-24 md:py-32 px-6 scroll-mt-24">
+      {/* Chef's Table — SEO Section */}
+      <section id="chefs-table" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div>
+              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chef's Table</p>
+              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Watch the Kitchen Work</h2>
+              <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
+              <p className="text-white/70 mb-6 leading-relaxed">
+                Our Chef's Table experience brings the kitchen to the centre of the room. The chef cooks within metres of your guests — plating, saucing, and finishing each course while you watch. It is theatre without pretension: the open flame, the hand-rolled pasta, the precise pour of a reduction. Your guests see the discipline behind the dish.
+              </p>
+              <p className="text-white/70 mb-6 leading-relaxed">
+                This is not a demonstration. It is a working kitchen placed at the heart of your evening. The chef explains nothing unless asked. The food speaks. The fire speaks. And your guests leave with an understanding of what fine dining actually takes — skill, timing, and the quiet confidence of a team that has done this five hundred times.
+              </p>
+              <div className="flex items-center gap-3 text-white/50 text-sm">
+                <ChefHat className="w-4 h-4 text-[#C5A028]" />
+                <span>Available with both Mediterranean Sea and Wagyu menus</span>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/generated/luna-gallery-2.webp"
+                alt="Chef cooking at an open kitchen station during a private villa dinner"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tasting Menu — SEO Section */}
+      <section id="tasting-menu" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Menus</p>
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Tasting Menu</p>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Multi-Course Dining, Built for Your Villa</h2>
+            <p className="text-white/50 max-w-2xl mx-auto">A tasting menu is not a long meal. It is a structured journey — each course designed to follow the last, each flavour building toward a climax. We bring that architecture to your villa.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto">
+            {[
+              {
+                step: '01',
+                title: 'The Opening',
+                desc: 'Cold, sharp, and deliberate. Raw fish or tartare wakes the palate without overwhelming it. The first wine is poured — light, precise, setting the tone.',
+              },
+              {
+                step: '02',
+                title: 'The Centre',
+                desc: 'Pasta or ravioli, handmade that afternoon. This is the heart of the meal — the dish your guests will talk about tomorrow. The wine shifts to match the weight.',
+              },
+              {
+                step: '03',
+                title: 'The Climax',
+                desc: 'The main course: flame-grilled fish or Wagyu ribeye, sauced at the pass, served at temperature. The wine is bold now — Barolo, Brunello, or the best red in the room.',
+              },
+              {
+                step: '04',
+                title: 'The Close',
+                desc: 'Dessert is never an afterthought. Tiramisu with house-made lady fingers, or dark chocolate cake with salted caramel gelato — bitter, restrained, memorable.',
+              },
+              {
+                step: '05',
+                title: 'The Pace',
+                desc: 'Each course is spaced 20–30 minutes apart. The evening lasts 2.5 to 3 hours. No rush. No gaps. Just a rhythm that lets conversation breathe between bites.',
+              },
+              {
+                step: '06',
+                title: 'The Pairing',
+                desc: 'Four to five wines, selected by our sommelier to match each course. Optional at IDR 850K per guest. Non-alcoholic pairings available on request.',
+              },
+            ].map((item) => (
+              <div key={item.step} className="p-6 md:p-8 rounded-2xl border border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
+                <span className="text-[#C5A028]/60 text-sm tracking-[0.2em] uppercase mb-4 block" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{item.step}</span>
+                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <div className="flex items-center justify-center gap-3 text-white/50 text-sm">
+              <UtensilsCrossed className="w-4 h-4 text-[#C5A028]" />
+              <span>Two tasting menus available: Mediterranean Sea and Wagyu Experience</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Menus */}
+      <section id="our-menus" className="py-24 md:py-32 px-6 scroll-mt-24">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Our Menus</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Two Experiences. One Extraordinary Evening.</h2>
             <p className="text-white/50">Every course is prepared in your villa. Every wine is paired by our sommelier.</p>
           </div>
@@ -500,12 +757,12 @@ export default function LunaPage() {
         </div>
       </section>
 
-      {/* The Four — Chapter Three */}
-      <section id="the-four" className="py-16 md:py-24 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
+      {/* The Four — Our Chefs */}
+      <section id="our-chefs" className="py-16 md:py-24 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[1280px] mx-auto">
           {/* Header */}
           <div className="text-center mb-10 md:mb-14">
-            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chapter Three</p>
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Our Chefs</p>
             <h2 className="text-5xl md:text-6xl lg:text-7xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>The <span className="italic">Four</span></h2>
             <p className="text-xl md:text-2xl text-white/60 italic max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Trained by Adriano. One of them is in your kitchen tonight.
@@ -649,7 +906,7 @@ export default function LunaPage() {
       </section>
 
       {/* What's Included */}
-      <section className="py-24 md:py-32 px-6" style={{ background: '#0A0A0A' }}>
+      <section id="included" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Everything Included</p>
@@ -673,7 +930,7 @@ export default function LunaPage() {
       </section>
 
       {/* Testimonials — headline is baked into the cinematic background image */}
-      <section className="relative px-6 py-0" style={{ background: '#0A0A0A' }}>
+      <section id="testimonials" className="relative px-6 py-0 scroll-mt-24" style={{ background: '#0A0A0A' }}>
         {/* Full-bleed editorial header image (eyebrow + h2 are part of the artwork) */}
         <div className="relative w-full h-[60vh] min-h-[420px] max-h-[760px] overflow-hidden">
           <img
@@ -708,7 +965,7 @@ export default function LunaPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 md:py-32 px-6">
+      <section id="faq" className="py-24 md:py-32 px-6 scroll-mt-24">
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
@@ -769,6 +1026,12 @@ export default function LunaPage() {
           </div>
         </div>
       </section>
+
+      <LocationChips
+        title="Fine Dining Across Bali"
+        subtitle="The same Michelin-trained team, the same standards — in every villa from Seminyak to the Bukit Peninsula."
+        dark
+      />
 
       <OrderPanel open={orderOpen} onClose={() => setOrderOpen(false)} initialExperience={orderExperience} />
     </div>

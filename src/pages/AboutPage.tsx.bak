@@ -1,0 +1,97 @@
+import { ChefHat, Users, MapPin, Award, Heart, Globe, Shield, Clock, Star } from 'lucide-react'
+import PremiumPage from '@/components/PremiumPage'
+
+const SECTIONS = [
+  {
+    id: 'story',
+    type: 'content' as const,
+    subtitle: 'Our Story',
+    title: 'From a Single Kitchen to Bali\'s Most Trusted Private Chef Service',
+    body: `<p>myCHEF began in 2016 with a simple belief: that the best dining experiences happen not in restaurants, but in the places where people feel most at home. What started as one chef cooking for friends in a Seminyak villa has grown into Bali\'s premier private dining and catering company.</p>
+    <p>Today, our team of 50+ Indonesian hospitality professionals serves over 12,000 guests annually across Bali\'s most exclusive villas, estates, and event venues. From intimate honeymoon dinners to 200-guest weddings, we bring restaurant-quality execution to private settings.</p>
+    <p>Our executive chef, Adriano, trained under a Michelin-starred chef in Milan before bringing his standards to Bali. Every chef on our team undergoes 6+ months of in-house training before leading an event. This is not outsourcing. This is a culinary system built for villas.</p>`,
+    image: '/generated/luna-team.webp',
+    imageAlt: 'myCHEF culinary team in Bali',
+  },
+  {
+    id: 'values',
+    type: 'features' as const,
+    subtitle: 'What We Stand For',
+    title: 'The Principles Behind Every Plate',
+    features: [
+      { icon: ChefHat, title: 'Michelin-Trained Standards', desc: 'Adriano trained in Modena and Tokyo. His standards — technique, timing, presentation — are the baseline for every dish we serve.' },
+      { icon: Users, title: 'Indigenous Talent First', desc: 'We recruit, train, and promote Indonesian chefs. 50+ professionals, all trained in-house, many rising from kitchen hands to lead chefs.' },
+      { icon: Shield, title: 'Verified & Accountable', desc: 'Every team member is background-checked, certified, and reviewed after every event. Real accountability, not promises.' },
+      { icon: Heart, title: 'Guest-First Always', desc: 'Dietary restrictions, last-minute changes, special requests — we handle them without complaint or extra charges.' },
+      { icon: Globe, title: 'Local Ingredients, Global Technique', desc: 'We source from Bali\'s markets at dawn and apply European technique. Fresh, local, and executed to international standards.' },
+      { icon: Award, title: 'Continuous Improvement', desc: 'After every service, we debrief. What worked, what did not, and how we do better next time. This is how quality compounds.' },
+    ],
+  },
+  {
+    id: 'coverage',
+    type: 'content' as const,
+    subtitle: 'Where We Serve',
+    title: 'Across Bali, From Seminyak to Uluwatu',
+    body: `<p>We operate across every major area of Bali. Our chefs are based in Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, and Jimbaran — which means we can respond quickly and arrive prepared, wherever your villa is located.</p>
+    <p>We know the local markets, the villa kitchens, the traffic patterns, and the best suppliers in each area. This local knowledge means fresher ingredients, better timing, and smoother service.</p>
+    <p>Whether you are in a cliffside estate in Uluwatu, a jungle retreat in Ubud, or a beachfront villa in Canggu, we have the team and the experience to deliver.</p>`,
+    image: '/generated/hub-villa.webp',
+    imageAlt: 'Luxury Bali villa where myCHEF provides private dining',
+  },
+  {
+    id: 'testimonials',
+    type: 'testimonials' as const,
+    subtitle: 'Guest Stories',
+    title: 'What Our Guests Say',
+    testimonials: [
+      { name: 'James & Sarah', location: 'London, UK', text: 'We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the courses — pure magic.', rating: 5 },
+      { name: 'The Harrisons', location: 'Sydney, Australia', text: 'Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.', rating: 5 },
+      { name: 'Marcus Chen', location: 'Singapore', text: 'I have hosted client dinners at Michelin restaurants across Asia. This was better. The privacy, the pacing, the fact that the chef was cooking three meters from our table.', rating: 5 },
+    ],
+  },
+  {
+    id: 'cta',
+    type: 'cta' as const,
+    subtitle: 'Start the Conversation',
+    title: 'Experience the Difference',
+    body: 'Whether you are planning a romantic dinner, a family celebration, or a corporate event, we would love to hear from you. Message us on WhatsApp and we will respond within the hour.',
+  },
+]
+
+const FAQS = [
+  { question: 'How long has myCHEF been operating in Bali?', answer: 'Since 2016. We started with one chef in Seminyak and have grown to a team of 50+ professionals serving over 12,000 guests annually across Bali.' },
+  { question: 'Are your chefs professionally trained?', answer: 'Yes. Our executive chef trained under a Michelin-starred chef in Milan. Every chef on our team undergoes 6+ months of in-house training before leading an event.' },
+  { question: 'Do you only serve Bali?', answer: 'Our primary operations are in Bali, but we also serve Jakarta for select private chef and staffing engagements. Contact us to discuss your location.' },
+  { question: 'What makes myCHEF different from other private chef services?', answer: 'Three things: Michelin-trained leadership that sets the standard, an in-house training program for Indonesian talent, and a full-service approach — we handle planning, cooking, service, and cleanup.' },
+  { question: 'How do I know I can trust your team in my villa?', answer: 'Every team member is background-checked and certified. We have served in over 500 villas with zero security incidents. We treat your home with the respect it deserves.' },
+]
+
+const RELATED_PAGES = [
+  { label: 'Our Chefs', href: '/chefs', desc: 'Meet the culinary team behind myCHEF.' },
+  { label: 'Fine Dining', href: '/fine-dining', desc: 'In-villa tasting menus and private chef experiences.' },
+  { label: 'Catering', href: '/catering', desc: 'Full-service villa catering for any occasion.' },
+  { label: 'Events', href: '/events', desc: 'Weddings, retreats, and celebrations across Bali.' },
+  { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all our services.' },
+  { label: 'Contact', href: '/contact', desc: 'Get in touch with our concierge team.' },
+]
+
+export default function AboutPage() {
+  return (
+    <PremiumPage
+      slug="about"
+      title="About myCHEF"
+      description="myCHEF is Bali\'s most-trusted private chef service — Michelin-trained leadership, 50+ Indonesian professionals, and 8+ years of villa hospitality."
+      h1="Bali\'s Most Trusted Private Chef Service"
+      subtitle="Michelin-trained leadership. 50+ Indonesian professionals. 8+ years of villa hospitality."
+      heroImage="/generated/about-hero.webp"
+      heroImageAlt="myCHEF executive chef in Bali villa kitchen"
+      keywords={['private chef bali', 'about mychef', 'bali catering company']}
+      highlights={['8+ Years Operating', '50+ Team Members', '12,000+ Guests Served', 'Michelin-Trained Leadership']}
+      sections={SECTIONS}
+      faqs={FAQS}
+      relatedPages={RELATED_PAGES}
+      ctaText="Chat With Our Team"
+      ctaSubtext="We reply within the hour. No pressure, just answers."
+    />
+  )
+}

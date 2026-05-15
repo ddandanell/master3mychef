@@ -253,6 +253,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mychef.id/catering/corporate-catering</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/catering/retreat-catering</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mychef.id/events/weddings</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>

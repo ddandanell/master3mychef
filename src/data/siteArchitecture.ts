@@ -267,6 +267,24 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
           'Floating breakfast and brunch delivered to your Bali villa pool. Bamboo tray, tropical fruit, photo-ready setup.',
         keywords: ['floating breakfast bali', 'bali floating breakfast villa', 'floating brunch bali'],
       },
+      {
+        slug: 'corporate-catering',
+        label: 'Corporate Catering',
+        h1: 'Corporate Catering Bali — Business Lunches & Event Catering',
+        title: 'Corporate Catering Bali | Business Lunch & Event Catering',
+        description:
+          'Corporate catering in Bali for team lunches, workshops, retreats, product launches, meetings, and company events with professional service.',
+        keywords: ['corporate catering bali', 'business catering bali', 'corporate lunch bali'],
+      },
+      {
+        slug: 'retreat-catering',
+        label: 'Retreat Catering',
+        h1: 'Retreat Catering Bali — Yoga, Wellness & Group Meals',
+        title: 'Retreat Catering Bali | Yoga, Wellness & Group Meals',
+        description:
+          'Retreat catering in Bali for yoga, wellness, business, and creative retreats with healthy menus, dietary planning, and multi-day service.',
+        keywords: ['retreat catering bali', 'yoga retreat catering bali', 'wellness retreat food bali'],
+      },
     ],
   },
 

@@ -1064,7 +1064,7 @@ export default function LunaPage() {
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">++ adds service charge + government tax (see FAQ)</span></div>
               </div>
               <Button asChild variant="whatsapp" size="brand">
-                <a href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20fine%20dining%20experience." target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20fine%20dining%20experience." target="_blank" rel="noopener noreferrer" data-source="luna-fine-dining-cta">
                   <Phone className="w-4 h-4" />
                   Reserve My Private Dinner
                 </a>

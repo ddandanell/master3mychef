@@ -400,6 +400,7 @@ export default function Navbar() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
+              data-source="nav-mobile-whatsapp"
               className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-white py-3.5 text-[14px] font-semibold uppercase tracking-[0.1em] text-black transition-colors hover:bg-[#C5A028] hover:text-black"
             >
               <Phone className="w-4 h-4" /> WhatsApp

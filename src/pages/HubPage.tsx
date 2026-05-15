@@ -363,7 +363,7 @@ export default function HubPage() {
               Founded by Adriano — trained under a Michelin-starred chef in Milan — myCHEF.id brings extraordinary dining to Bali's finest villas. A team of 50+ Indonesian hospitality professionals handles everything, from grocery sourcing to the last clean plate. We are not a marketplace. We are a kitchen that travels.
             </p>
             <div className="hub-hero-cta mb-3 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
-              <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ background: 'var(--u-accent)', color: '#fff' }}>
+              <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ background: 'var(--u-accent)', color: '#fff' }}>
                 <MessageCircle className="w-4 h-4" /> Get My Free Quote <span aria-hidden="true">→</span>
               </a>
               <Link to="/pricing" className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border px-6 py-4 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ borderColor: 'var(--u-accent)', color: 'var(--u-accent)' }}>
@@ -412,6 +412,7 @@ export default function HubPage() {
                     href="https://wa.me/6282237565997"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-source="homepage-pricing-strip"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028]"
                   >
                     Message us <ArrowRight className="h-4 w-4" />
@@ -531,7 +532,7 @@ export default function HubPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: 'var(--u-accent)', color: '#fff' }}>
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-trust-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: 'var(--u-accent)', color: '#fff' }}>
               <MessageCircle className="w-4 h-4" /> Start on WhatsApp
             </a>
           </div>
@@ -811,7 +812,7 @@ export default function HubPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: '#C5A028', color: '#fff' }}>
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-about-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: '#C5A028', color: '#fff' }}>
               <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
             </a>
           </div>
@@ -871,7 +872,7 @@ export default function HubPage() {
             Most inquiries are answered within the hour. No deposit required to start planning.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-final-cta" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105">
               <Phone className="w-4 h-4" /> Get My Free Quote <span aria-hidden="true">→</span>
             </a>
             <Link to="/contact" className="inline-block px-10 py-5 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">

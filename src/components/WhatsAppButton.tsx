@@ -1,6 +1,5 @@
 import { MessageCircle } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
-import { trackWhatsAppClick } from '@/lib/analytics'
 
 const WHATSAPP_NUMBER = '6282237565997'
 const WHATSAPP_MESSAGE = "Hi myCHEF! I'd like to enquire about your services."
@@ -27,9 +26,9 @@ export default function WhatsAppButton() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat with us on WhatsApp"
+          data-source={`${source}--floating-button`}
           className="flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A028] focus-visible:ring-offset-2 focus-visible:ring-offset-black active:scale-95"
           style={{ backgroundColor: '#25D366' }}
-          onClick={() => trackWhatsAppClick(source)}
         >
           <MessageCircle className="h-6 w-6" />
         </a>

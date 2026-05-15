@@ -11,7 +11,6 @@ const MOBILE_WA_LINK = `https://wa.me/6282237565997?text=${encodeURIComponent(MO
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
-  const pageSource = location.pathname.replace(/^\/+|\/+$/g, '').replace(/\//g, '_') || 'home'
 
   // Reset scroll to top on route change — UNLESS the URL contains a hash anchor.
   // For hash navigation (e.g. /fine-dining#book) we let the browser scroll to the
@@ -37,7 +36,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       const anchor = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[href*="wa.me"]')
       if (anchor) {
         const source =
-          window.location.pathname.replace(/^\/+|\/+$/g, '').replace(/\//g, '_') || 'home'
+          anchor.dataset.source ||
+          window.location.pathname.replace(/^\/+|\/+$/g, '').replace(/\//g, '_') ||
+          'home'
         trackWhatsAppClick(source)
       }
     }
@@ -63,7 +64,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           rel="noopener noreferrer"
           className="fixed inset-x-0 bottom-0 z-[55] flex min-h-[56px] items-center justify-center border-t border-black/10 bg-[#C5A028] px-4 pt-3 text-center text-sm font-semibold text-[#1A1916] shadow-[0_-12px_30px_rgba(0,0,0,0.12)] md:hidden"
           style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.75rem)' }}
-          onClick={() => trackWhatsAppClick(pageSource)}
+          data-source="mobile-sticky-bar"
         >
           <span className="inline-flex items-center justify-center gap-2">
             Book on WhatsApp

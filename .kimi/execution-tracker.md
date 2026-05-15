@@ -101,3 +101,20 @@
 | LunaPage missing `ShieldCheck`, `RefreshCw` imports | ✅ FIXED | `src/pages/LunaPage.tsx:3` | Added to lucide-react import |
 | .bak files removed | ✅ FIXED | `src/pages/*.bak` | 10 backup files cleaned |
 | Final build | ✅ CLEAN | — | tsc --noEmit: 0 errors · vite build: 92 URLs · 125 redirects · 1m 40s |
+
+---
+## POST-PUSH QA AUDIT (2026-05-15) — Copilot
+| Fix | Status | File | Notes |
+|-----|--------|------|-------|
+| WA links: "Hi Sofia" → "Hi myCHEF" on 11 static WA pages | ✅ FIXED | 11 pages | Wrong pre-fill text corrected |
+| WA tracking: universal click handler | ✅ FIXED | Layout.tsx | Covers all 108 wa.me links in one change |
+| Analytics: fires without GA_ID via dataLayer fallback | ✅ FIXED | analytics.ts | GTM fallback always fires |
+| OG image: EventsPage hero-events.webp (missing) → hub-events.webp | ✅ FIXED | EventsPage.tsx | |
+| OG image: ChefsPage chef-portrait (wrong path) → chefs-hero.webp | ✅ FIXED | ChefsPage.tsx | |
+| Dead link: /catering/fine-dining → /fine-dining (4 pages) | ✅ FIXED | CateringPlatedPage, FloatingBreakfastPage, GrazingPage, BabiGulingPage | |
+| Dead link: /catering/villa → /catering/villa-catering | ✅ FIXED | CateringPlatedPage | |
+| Dead link: /catering/buffet-catering → /catering/buffet (2 pages) | ✅ FIXED | CateringBBQPage, CateringVillaPage | |
+| Dead link: footer /login (404) → /partner-platform | ✅ FIXED | Footer.tsx | No login system exists |
+| Meta title too long: LocationsHubPage (72 chars) | ✅ FIXED | LocationsHubPage.tsx | Trimmed to 44 chars |
+| Meta title too long: JournalPage (67 chars) | ✅ FIXED | JournalPage.tsx | Trimmed to 60 chars |
+| GitHub push | ✅ DONE | — | Commit f177864 main branch |

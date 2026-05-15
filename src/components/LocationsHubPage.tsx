@@ -65,7 +65,7 @@ export default function LocationsHubPage() {
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Chef Locations Bali | Seminyak, Canggu, Ubud, Uluwatu — myCHEF"
+        title="Private Chef Locations in Bali — myCHEF"
         description="Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Villa dining, catering and events in every region."
         canonical={canonical}
         jsonLd={[localBusinessSchema, breadcrumbSchema('Locations', canonical)]}

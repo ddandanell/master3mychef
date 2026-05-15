@@ -14,7 +14,7 @@ export function JournalIndexPage() {
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Journal | Bali Private Chef Guides, Menus & Hosting Tips — myCHEF"
+        title="Bali Private Chef Journal | Tips, Menus & Guides — myCHEF"
         description="Guides, cost breakdowns, and culinary insights for hosting in Bali — private chef cost, villa kitchens, retreats, and rehearsal dinners."
         canonical={canonical}
         jsonLd={[localBusinessSchema, breadcrumbSchema('Journal', canonical)]}

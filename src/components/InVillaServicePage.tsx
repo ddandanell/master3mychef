@@ -143,10 +143,9 @@ export default function InVillaServicePage() {
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href={waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
+              <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="in-villa-hero" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
                 <MessageCircle className="w-4 h-4" /> Hire Staff Now
-              </a>
-              <Link to="/quote" className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-colors">
+              </a>              <Link to="/quote" className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-colors">
                 Get a Quote
               </Link>
             </div>
@@ -272,7 +271,7 @@ export default function InVillaServicePage() {
           <h2 className="font-playfair text-3xl md:text-5xl mb-4">Ready to Hire Staff?</h2>
           <p className="text-white/60 mb-8">Message us on WhatsApp. We reply within the hour with staffing ratios, availability, and clear per-shift pricing before you book.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
+            <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="in-villa-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
               <MessageCircle className="w-4 h-4" /> Hire Staff Now
             </a>
             <Link to="/quote" className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-colors">

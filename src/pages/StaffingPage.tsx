@@ -239,7 +239,7 @@ export default function StaffingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">
-              <a href={WA_MARCO} target="_blank" rel="noopener noreferrer">
+              <a href={WA_MARCO} target="_blank" rel="noopener noreferrer" data-source="staffing-hero">
                 <MessageCircle className="w-4 h-4" />
                 Request Staff Now — Reply in 1 Hour
               </a>
@@ -479,6 +479,7 @@ export default function StaffingPage() {
                 href={WA_MARCO}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-source="staffing-cta"
                 className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105"
                 style={{ background: '#C5A028', color: '#1A1A1A' }}
               >

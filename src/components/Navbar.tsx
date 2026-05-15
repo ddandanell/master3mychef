@@ -293,12 +293,16 @@ export default function Navbar() {
     const map: Record<string, string> = {
       '/fine-dining': 'Fine Dining',
       '/catering': 'Catering',
+      '/villa-chef': 'Catering',
       '/events': 'Events',
       '/in-villa-service': 'In-Villa Service',
       '/staffing': 'Staffing',
       '/locations': 'Locations',
+      '/journal': 'Journal',
       '/about': 'About',
       '/contact': 'Contact',
+      '/pricing': 'Pricing',
+      '/reviews': 'Reviews',
     }
     for (const [k, v] of Object.entries(map)) {
       if (location.pathname === k || location.pathname.startsWith(k + '/')) return v

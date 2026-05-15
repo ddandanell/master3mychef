@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, Calendar } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { JOURNAL_POSTS, JOURNAL_CATEGORIES } from '../data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
@@ -22,6 +22,10 @@ export function JournalIndexPage() {
           localBusinessSchema,
           aggregateRatingSchema(4.9, 560),
           breadcrumbSchema('Journal', canonical),
+          faqPageSchema([
+            { question: 'What topics does the myCHEF journal cover?', answer: 'The myCHEF journal covers practical guides for hosting in Bali — private chef costs, villa kitchen setups, event planning, retreat catering, rehearsal dinners, menu showcases, and location guides.' },
+            { question: 'Are the guides based on real Bali hosting experience?', answer: 'Yes — every guide is written from direct experience delivering 12,000+ guest events, 560+ villa dinners, and 500+ catered events across Bali since 2019.' },
+          ]),
           {
             '@context': 'https://schema.org',
             '@type': 'ItemList',

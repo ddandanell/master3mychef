@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Shield, AlertTriangle, CheckCircle2, XCircle, Clock, Calendar, Utensils } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
 
@@ -66,6 +66,7 @@ export default function CancellationPage() {
         description="Cancellation and refund policy for myCHEF private chef, Bali villa catering, and event bookings — full refund 14+ days before, 50% within 7–13 days."
         canonical="https://mychef.id/cancellation"
         jsonLd={[
+          localBusinessSchema,
           breadcrumbSchema('Cancellation Policy', 'https://mychef.id/cancellation'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}

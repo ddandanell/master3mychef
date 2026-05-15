@@ -29,6 +29,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           headline: entry.title,
           description: entry.description,
           url: canonical,
+          ...(entry.date ? { datePublished: entry.date, dateModified: entry.date } : {}),
           author: { '@type': 'Organization', name: 'myCHEF', url: SITE },
           publisher: {
             '@type': 'Organization',

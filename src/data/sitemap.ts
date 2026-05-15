@@ -100,7 +100,7 @@ export const MENUS: { slug: string; name: string; description: string }[] = [
   { slug: 'halal', name: 'Halal Menu', description: 'Certified halal menus prepared with care for Muslim guests visiting Bali.' },
 ]
 
-export const LANDING_PAGES: { slug: string; title: string; description: string }[] = [
+export const LANDING_PAGES: { slug: string; title: string; description: string; date?: string }[] = [
   { slug: 'best-private-chef-indonesia', title: 'Best Private Chef in Indonesia', description: 'Top-rated private chefs across Indonesia — Bali, Jakarta, and beyond. Background-checked, fluent in international cuisine.' },
   { slug: 'private-chef-for-events', title: 'Private Chef for Events', description: 'Hire a private chef for weddings, corporate events, birthdays, and milestone celebrations across Indonesia.' },
   { slug: 'luxury-chef-indonesia', title: 'Luxury Private Chef in Indonesia', description: 'Michelin-trained luxury private chefs for villa dining, yacht charters, and high-net-worth hospitality in Indonesia.' },
@@ -117,17 +117,17 @@ export const LANDING_PAGES: { slug: string; title: string; description: string }
   { slug: 'private-chef-menteng', title: 'Private Chef in Menteng, Jakarta', description: 'Private chef services in Menteng, Central Jakarta — for residences, expats, and corporate hospitality.' },
 ]
 
-export const GUIDES: { slug: string; title: string; description: string }[] = [
-  { slug: 'guide/bali-cuisine-glossary', title: 'Bali Cuisine Glossary', description: 'A complete glossary of Balinese cuisine — ingredients, dishes, cooking techniques, and regional specialties.' },
-  { slug: 'guide/private-chef-bali', title: 'Private Chef in Bali — Complete Guide', description: 'Everything you need to know about hiring a private chef in Bali — costs, what to expect, how to choose.' },
+export const GUIDES: { slug: string; title: string; description: string; date?: string }[] = [
+  { slug: 'guide/bali-cuisine-glossary', title: 'Bali Cuisine Glossary', description: 'A complete glossary of Balinese cuisine — ingredients, dishes, cooking techniques, and regional specialties.', date: '2025-01-15' },
+  { slug: 'guide/private-chef-bali', title: 'Private Chef in Bali — Complete Guide', description: 'Everything you need to know about hiring a private chef in Bali — costs, what to expect, how to choose.', date: '2025-02-01' },
 ]
 
-export const BLOG_POSTS: { slug: string; title: string; description: string }[] = [
-  { slug: 'blog/private-chef-bali-cost-breakdown-2026', title: 'Private Chef Bali — Cost Breakdown 2026', description: 'Full 2026 cost breakdown for hiring a private chef in Bali — chef fees, groceries, service charges, and tipping.' },
-  { slug: 'blog/best-bali-villas-private-chef-kitchen', title: 'Best Bali Villas with a Private Chef Kitchen', description: 'Our pick of the best Bali villas with chef-friendly kitchens — gas hobs, professional ranges, prep space, and storage.' },
-  { slug: 'blog/wedding-rehearsal-dinner-bali', title: 'Wedding Rehearsal Dinner in Bali — Planning Guide', description: 'How to plan a wedding rehearsal dinner in Bali — venue tips, menu ideas, and timeline templates.' },
-  { slug: 'blog/yoga-retreat-chef-bali-meal-planning', title: 'Yoga Retreat Chef in Bali — Meal Planning', description: 'Meal planning for yoga retreats in Bali — plant-based menus, ayurvedic principles, and post-asana nutrition.' },
-  { slug: 'blog/private-chef-vs-restaurant-bali', title: 'Private Chef vs Restaurant in Bali — Which Is Better?', description: 'A side-by-side comparison of hiring a private chef versus dining at a restaurant in Bali — cost, experience, and convenience.' },
+export const BLOG_POSTS: { slug: string; title: string; description: string; date?: string }[] = [
+  { slug: 'blog/private-chef-bali-cost-breakdown-2026', title: 'Private Chef Bali — Cost Breakdown 2026', description: 'Full 2026 cost breakdown for hiring a private chef in Bali — chef fees, groceries, service charges, and tipping.', date: '2026-01-10' },
+  { slug: 'blog/best-bali-villas-private-chef-kitchen', title: 'Best Bali Villas with a Private Chef Kitchen', description: 'Our pick of the best Bali villas with chef-friendly kitchens — gas hobs, professional ranges, prep space, and storage.', date: '2025-11-20' },
+  { slug: 'blog/wedding-rehearsal-dinner-bali', title: 'Wedding Rehearsal Dinner in Bali — Planning Guide', description: 'How to plan a wedding rehearsal dinner in Bali — venue tips, menu ideas, and timeline templates.', date: '2025-10-05' },
+  { slug: 'blog/yoga-retreat-chef-bali-meal-planning', title: 'Yoga Retreat Chef in Bali — Meal Planning', description: 'Meal planning for yoga retreats in Bali — plant-based menus, ayurvedic principles, and post-asana nutrition.', date: '2025-09-18' },
+  { slug: 'blog/private-chef-vs-restaurant-bali', title: 'Private Chef vs Restaurant in Bali — Which Is Better?', description: 'A side-by-side comparison of hiring a private chef versus dining at a restaurant in Bali — cost, experience, and convenience.', date: '2025-08-12' },
 ]
 
 // --- Info / utility pages ----------------------------------------------------

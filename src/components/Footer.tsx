@@ -87,6 +87,8 @@ export default function Footer() {
             </Link>
           ))}
           <Link to="/services" className="hover:text-[#C5A028] transition-colors">Services</Link>
+          <Link to="/pricing" className="hover:text-[#C5A028] transition-colors">Pricing</Link>
+          <Link to="/reviews" className="hover:text-[#C5A028] transition-colors">Reviews</Link>
           <Link to="/partner-platform" className="hover:text-[#C5A028] transition-colors">Partner Platform</Link>
           <Link to={PRIMARY_CTA.href} className="text-[#C5A028] font-semibold hover:text-white transition-colors">
             {PRIMARY_CTA.label}

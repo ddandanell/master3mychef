@@ -684,10 +684,13 @@ export default function HubPage() {
               </div>
             ))}
           </div>
+          <div className="text-center mt-10">
+            <Link to="/reviews" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105" style={{ color: 'var(--u-accent)' }}>
+              Read All Reviews <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
-
-      {/* WHERE WE SERVE — location spider */}
       <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-14 md:mb-20">

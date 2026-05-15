@@ -159,15 +159,6 @@ export const INFO_PAGES: SitemapEntry[] = [
 
 export const STATIC_SERVICE_PAGES: SitemapEntry[] = [
   {
-    path: '/catering/buffet',
-    type: 'info',
-    title: 'Buffet Catering Bali | Villa, Wedding & Event Buffets',
-    description:
-      'Buffet catering in Bali for villas, weddings, retreats, and events with Indonesian, Western, BBQ, and custom menu options.',
-    priority: 0.7,
-    changefreq: 'monthly',
-  },
-  {
     path: '/catering/villa-catering',
     type: 'info',
     title: 'Villa Catering Bali | Private Chef & Event Catering',

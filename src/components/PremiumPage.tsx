@@ -153,7 +153,12 @@ export default function PremiumPage({
           size="brand"
           className="w-full sm:w-auto"
         >
-          <a href={action.href} target="_blank" rel="noopener noreferrer">
+          <a
+            href={action.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-source={`premium-${slug}-${variant}-action`}
+          >
             {content}
           </a>
         </Button>

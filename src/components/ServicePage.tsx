@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { SERVICES } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -37,9 +37,24 @@ export default function ServicePage() {
     ],
   }
 
+  const serviceFaq = faqPageSchema([
+    {
+      question: `How much does ${service.name} cost in Bali?`,
+      answer: `Pricing for ${service.name} in Bali depends on guest count, menu selection, and duration. Starting from IDR 250,000 per person. Request a free custom quote via WhatsApp.`,
+    },
+    {
+      question: `How do I book ${service.name} with myCHEF?`,
+      answer: `WhatsApp us at +62 822-3756-5997 with your date, villa location, guest count, and any dietary requirements. We respond within 1 hour and confirm same-day.`,
+    },
+    {
+      question: `Does myCHEF handle grocery shopping for ${service.name}?`,
+      answer: `Yes. Our chefs handle all grocery shopping at market cost — no markup. You receive a full receipt for transparency.`,
+    },
+  ])
+
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${title} | myCHEF`} description={service.description} canonical={canonical} jsonLd={[localBusinessSchema, serviceSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(service.name, canonical)]} />
+      <SeoHead title={`${title} | myCHEF`} description={service.description} canonical={canonical} jsonLd={[localBusinessSchema, serviceSchema, aggregateRatingSchema(4.9, 560), serviceFaq, breadcrumbSchema(service.name, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[960px] mx-auto">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Services</p>

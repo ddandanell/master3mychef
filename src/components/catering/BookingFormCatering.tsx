@@ -70,7 +70,7 @@ export default function BookingFormCatering({
         <a
           href={`https://wa.me/${WA_NUMBER}`}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer" data-source="booking-form-catering-cta"
           className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-[#D4B43A]"
         >
           <Phone className="w-4 h-4" /> Open WhatsApp

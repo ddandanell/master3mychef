@@ -142,7 +142,7 @@ export default function JoinTeamPage() {
                 </div>
                 <div className="mt-7">
                   <Button asChild variant="whatsapp" className="w-full rounded-full uppercase tracking-[0.2em]">
-                    <a href={roleLink} target="_blank" rel="noopener noreferrer">
+                    <a href={roleLink} target="_blank" rel="noopener noreferrer" data-source="join-team-cta">
                       <MessageCircle className="h-4 w-4" />
                       Apply on WhatsApp
                     </a>

@@ -127,7 +127,7 @@ export default function ServicesPage() {
             <a
               href={waLink}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" data-source="services-cta" 
               className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#C5A028] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
             >
               <MessageCircle className="w-4 h-4" /> Enquire on WhatsApp
@@ -270,7 +270,7 @@ export default function ServicesPage() {
           <a
             href={waLink}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer" data-source="services-cta" 
             className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
           >
             <MessageCircle className="w-4 h-4" /> Message Us on WhatsApp

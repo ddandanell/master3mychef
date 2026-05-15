@@ -234,7 +234,7 @@ export default function PartnersPage() {
                 <Link to="/certified-partner" className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#F1ECE0] transition-colors">
                   View Partner Programme
                 </Link>
-                <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+                <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
                   <MessageCircle className="w-4 h-4" /> WhatsApp Us
                 </a>
               </div>
@@ -258,7 +258,7 @@ export default function PartnersPage() {
               <a href={pressMailto} className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white hover:bg-[#2A2A2A] transition-colors">
                 <Mail className="w-4 h-4" /> Contact {PRESS_EMAIL}
               </a>
-              <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#1A1A1A]/15 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] hover:border-[#C5A028] transition-colors">
+              <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center gap-2 rounded-full border border-[#1A1A1A]/15 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] hover:border-[#C5A028] transition-colors">
                 <MessageCircle className="w-4 h-4" /> Request a Quick Quote
               </a>
             </div>
@@ -316,7 +316,7 @@ export default function PartnersPage() {
               <Link to="/certified-partner" className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#D5AF35] transition-colors">
                 Certified Partner Details <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+              <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
                 <MessageCircle className="w-4 h-4" /> Partnership WhatsApp
               </a>
             </div>
@@ -431,7 +431,7 @@ export default function PartnersPage() {
           <p className="text-white/72 text-base leading-relaxed mb-8 max-w-[680px] mx-auto">
             Whether you&apos;re writing a feature, managing a villa portfolio, or building a new hospitality partnership, message the team and we&apos;ll route you fast.
           </p>
-          <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#D5AF35] transition-colors">
+          <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#D5AF35] transition-colors">
             <MessageCircle className="w-4 h-4" /> WhatsApp Partnership Inquiries
           </a>
         </div>

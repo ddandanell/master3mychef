@@ -232,9 +232,7 @@ export default function FAQPage() {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-source="faq-cta" 
                 className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A]"
               >
                 <MessageCircle className="h-4 w-4" />

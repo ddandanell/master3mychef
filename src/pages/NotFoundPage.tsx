@@ -83,7 +83,7 @@ export default function NotFoundPage() {
                   </Link>
                 </Button>
                 <Button asChild variant="secondary" size="brand" className="w-full sm:w-auto">
-                  <a href={waLink} target="_blank" rel="noopener noreferrer">
+                  <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="not-found-cta" >
                     <MessageCircle className="h-4 w-4" />
                     Still lost? Chat with us directly
                   </a>
@@ -124,7 +124,7 @@ export default function NotFoundPage() {
                 <a
                   href={waLink}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer" data-source="not-found-cta" 
                   className="mt-5 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C5A028]"
                 >
                   <MessageCircle className="h-4 w-4" />

@@ -146,7 +146,7 @@ export default function PartnerPlatformPage() {
             <a
               href={waApply}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" data-source="partner-platform-apply"
               className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
             >
               Apply for Partnership
@@ -154,7 +154,7 @@ export default function PartnerPlatformPage() {
             <a
               href={waShowcase}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" data-source="partner-platform-showcase"
               className="inline-flex items-center justify-center px-10 py-4 border border-[#C5A028]/60 text-[#C5A028] font-semibold text-xs uppercase tracking-[0.25em] rounded-full hover:bg-[#C5A028]/10 transition-colors"
             >
               Request Showcase Dinner
@@ -307,7 +307,7 @@ export default function PartnerPlatformPage() {
                   <li key={b} className="flex items-start gap-2 text-sm text-[#4A4745]"><Check className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" /> {b}</li>
                 ))}
               </ul>
-              <a href={waApply} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
+              <a href={waApply} target="_blank" rel="noopener noreferrer" data-source="partner-platform-apply" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
                 Apply Co-Branded
               </a>
             </div>
@@ -327,7 +327,7 @@ export default function PartnerPlatformPage() {
                   <li key={b} className="flex items-start gap-2 text-sm text-white/75"><Check className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" /> {b}</li>
                 ))}
               </ul>
-              <a href={waApply} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-[#C5A028]/60 text-[#C5A028] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#C5A028]/10 transition-colors">
+              <a href={waApply} target="_blank" rel="noopener noreferrer" data-source="partner-platform-apply" className="inline-flex items-center justify-center gap-2 border border-[#C5A028]/60 text-[#C5A028] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#C5A028]/10 transition-colors">
                 Apply White-Label
               </a>
             </div>
@@ -530,7 +530,7 @@ export default function PartnerPlatformPage() {
             <a
               href={waApply}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" data-source="partner-platform-apply"
               className="inline-flex items-center justify-center px-10 py-4 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] rounded-full hover:bg-[#D4B43A] transition-colors"
             >
               Apply for Partnership
@@ -538,7 +538,7 @@ export default function PartnerPlatformPage() {
             <a
               href={waShowcase}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" data-source="partner-platform-showcase"
               className="inline-flex items-center justify-center gap-2 px-10 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-colors"
             >
               <MessageCircle className="w-4 h-4" /> Request Showcase Dinner

@@ -20,25 +20,9 @@ interface NavItem {
 }
 
 /* ── Catering dropdown items (real, unique pages) ── */
-const CATERING_SUBPAGES: SubPageItem[] = [
-  { slug: 'bbq-catering', label: 'BBQ Catering' },
-  { slug: 'buffet', label: 'Buffet Catering' },
-  { slug: 'plated-catering', label: 'Plated Set Menu' },
-  { slug: 'drop-off-catering', label: 'Drop-Off Catering' },
-  { slug: 'babi-guling', label: 'Babi Guling' },
-  { slug: 'grazing-tables', label: 'Grazing Tables' },
-  { slug: 'floating-breakfast', label: 'Floating Breakfast' },
-]
-
-/* ── Events dropdown items (real, unique pages) ── */
-const EVENTS_SUBPAGES: SubPageItem[] = [
-  { slug: 'weddings', label: 'Weddings' },
-  { slug: 'birthdays', label: 'Birthdays' },
-  { slug: 'anniversaries', label: 'Anniversaries' },
-  { slug: 'corporate-events', label: 'Corporate Events' },
-  { slug: 'retreats', label: 'Retreats' },
-  { slug: 'villa-parties', label: 'Villa Parties' },
-]
+// Catering and Events use PILLARS directly so adding a sub-page to
+// siteArchitecture.ts automatically appears in both sitemap and nav —
+// no second place to update, no risk of orphan pages.
 
 /* ── Main nav items with their sub-pages ── */
 const NAV_ITEMS: NavItem[] = [
@@ -53,14 +37,14 @@ const NAV_ITEMS: NavItem[] = [
     label: 'Catering',
     href: '/catering',
     accent: '#6B8E5A',
-    subPages: CATERING_SUBPAGES,
+    subPages: PILLARS['catering'].subPages,
     dropdownAlign: 'left',
   },
   {
     label: 'Events',
     href: '/events',
     accent: '#2C5F7C',
-    subPages: EVENTS_SUBPAGES,
+    subPages: PILLARS['events'].subPages,
     dropdownAlign: 'center',
   },
   {

@@ -64,6 +64,7 @@ export default function CancellationPage() {
       <SeoHead
         title="Cancellation Policy | myCHEF — Private Chef Bali"
         description="Cancellation and refund policy for myCHEF private chef, Bali villa catering, and event bookings — full refund 14+ days before, 50% within 7–13 days."
+        ogImage="/og-image.webp"
         canonical="https://mychef.id/cancellation"
         jsonLd={[
           localBusinessSchema,

@@ -66,6 +66,7 @@ export default function TermsPage() {
       <SeoHead
         title="Terms & Payment | myCHEF — Private Chef Bali"
         description="myCHEF terms of service and payment rules for private chef, Bali villa catering, and event bookings — deposits, balance, and booking confirmation."
+        ogImage="/og-image.webp"
         canonical="https://mychef.id/terms-of-service"
         jsonLd={[
           breadcrumbSchema('Terms & Payment', 'https://mychef.id/terms-of-service'),

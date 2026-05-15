@@ -39,6 +39,7 @@ export default function NotFoundPage() {
         title="Page Not Found | myCHEF — Private Chef Bali"
         description="The page you are looking for does not exist. Explore fine dining, events, villa catering, and contact options with myCHEF."
         noindex
+        ogImage="/og-image.webp"
         jsonLd={[breadcrumbSchema('404', 'https://mychef.id/404')]}
       />
 

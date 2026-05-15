@@ -88,6 +88,7 @@ export default function PrivacyPage() {
       <SeoHead
         title="Privacy Policy | myCHEF — Private Chef Bali"
         description="How myCHEF collects, uses, and protects your personal information when you book private chef, villa catering, and event services in Bali, Indonesia."
+        ogImage="/og-image.webp"
         canonical="https://mychef.id/privacy-policy"
         jsonLd={[
           breadcrumbSchema('Privacy Policy', 'https://mychef.id/privacy-policy'),

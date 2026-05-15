@@ -1,10 +1,17 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { PILLARS } from '../data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'
+
+const CATERING_FAQS = faqPageSchema([
+  { question: 'How much does villa catering cost in Bali?', answer: 'Villa catering in Bali starts from IDR 250,000 per person for drop-off catering, IDR 350,000 for buffet, IDR 450,000 for BBQ, and IDR 600,000 per hour for a private villa chef. All prices are transparent — no markup on groceries.' },
+  { question: 'What is included in myCHEF catering packages?', answer: 'All catering packages include menu design, grocery shopping at cost (no markup), chef and service staff, all equipment and serveware, setup, table service, and full kitchen cleanup. Dietary customization is included at no extra cost.' },
+  { question: 'How many guests can you cater for in a Bali villa?', answer: 'myCHEF caters from 2 to 200+ guests. We scale staffing, equipment, and production to your exact guest count. Minimum for BBQ is 10 guests, buffet 15 guests, and villa chef bookings are 4 hours minimum.' },
+  { question: 'Do you cater in all areas of Bali?', answer: 'Yes. We serve Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan, and the Bukit Peninsula. WhatsApp us for same-day availability checks.' },
+])
 
 export default function CateringPage() {
   const pillar = PILLARS.catering
@@ -18,7 +25,7 @@ export default function CateringPage() {
         description={pillar.description}
         ogImage="/hero-catering.webp"
         canonical={canonical}
-        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Catering', canonical)]}
+        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Catering', canonical), CATERING_FAQS]}
       />
 
       <section className="px-6 pt-32 pb-16 max-w-[900px] mx-auto">

@@ -16,6 +16,7 @@ export function JournalIndexPage() {
       <SeoHead
         title="Bali Private Chef Journal | Tips, Menus & Guides — myCHEF"
         description="Guides, cost breakdowns, and culinary insights for hosting in Bali — private chef cost, villa kitchens, retreats, and rehearsal dinners."
+        ogImage="/og-image.webp"
         canonical={canonical}
         jsonLd={[
           localBusinessSchema,

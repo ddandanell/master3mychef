@@ -109,6 +109,7 @@ export function JournalPostPage() {
         title={post.title}
         description={post.excerpt}
         canonical={canonical}
+        ogImage="/og-image.webp"
         ogType="article"
         jsonLd={[
           localBusinessSchema,

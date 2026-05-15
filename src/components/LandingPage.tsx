@@ -30,6 +30,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           description: entry.description,
           url: canonical,
           ...(entry.date ? { datePublished: entry.date, dateModified: entry.date } : {}),
+          ...(entry.content ? { articleBody: entry.content.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() } : {}),
           author: { '@type': 'Organization', name: 'myCHEF', url: SITE },
           publisher: {
             '@type': 'Organization',
@@ -57,16 +58,23 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         <h1 className="font-playfair text-4xl md:text-5xl leading-tight mb-6">{entry.title}</h1>
         <p className="text-lg text-[#4A4745] mb-8">{entry.description}</p>
 
-        <div className="prose prose-stone max-w-none text-[#4A4745]">
-          <p>
-            Full article content for this page is being prepared. In the meantime, here is what you can do right now:
-          </p>
-          <ul className="space-y-2">
-            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> Message us on WhatsApp for an immediate answer.</li>
-            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> Request a personalized quote — we respond within 24 hours.</li>
-            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> Browse our sample menus to see what our chefs can cook for you.</li>
-          </ul>
-        </div>
+        {entry.content ? (
+          <div
+            className="prose prose-stone max-w-none text-[#4A4745] prose-headings:font-playfair prose-headings:text-[#1A1A1A] prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-p:leading-relaxed prose-p:mb-5 prose-li:leading-relaxed prose-strong:text-[#1A1A1A]"
+            dangerouslySetInnerHTML={{ __html: entry.content }}
+          />
+        ) : (
+          <div className="prose prose-stone max-w-none text-[#4A4745]">
+            <p>
+              Full article content for this page is being prepared. In the meantime, here is what you can do right now:
+            </p>
+            <ul className="space-y-2">
+              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> Message us on WhatsApp for an immediate answer.</li>
+              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> Request a personalized quote — we respond within 24 hours.</li>
+              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> Browse our sample menus to see what our chefs can cook for you.</li>
+            </ul>
+          </div>
+        )}
 
         <div className="flex flex-col sm:flex-row gap-4 mt-10">
           <a href={waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">

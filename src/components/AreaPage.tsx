@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check, Utensils, Flame, Sparkles, Building2, Users, ChefHat, PartyPopper } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { AREAS, MICRO_AREAS } from '@/data/sitemap'
 import { getLocationBySlug } from '@/data/siteArchitecture'
 import { TOP_CITIES } from '@/data/topCities'
@@ -52,6 +52,25 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
     areaServed: { '@type': 'Place', name: `${entry.name}, Bali` },
   }
 
+  const areaFaq = faqPageSchema([
+    {
+      question: `How much does a private chef cost in ${entry.name}?`,
+      answer: `Private chef services in ${entry.name} start from $85 per session. Villa catering for groups starts from $35 per person. Full pricing depends on group size, menu complexity, and duration. Request a free quote via WhatsApp.`,
+    },
+    {
+      question: `Can I hire a private chef for my villa in ${entry.name}?`,
+      answer: `Yes. myCHEF sends trained chefs directly to your villa in ${entry.name}. The chef handles grocery shopping, cooking, serving, and clean-up — you enjoy restaurant-quality dining at your villa.`,
+    },
+    {
+      question: `What cuisines are available in ${entry.name}?`,
+      answer: `Our chefs cover Balinese, Indonesian, Italian, Japanese, Mediterranean, and international fusion menus. Custom menus and dietary accommodations (vegan, gluten-free, halal) are available on request.`,
+    },
+    {
+      question: `How quickly can myCHEF confirm a booking in ${entry.name}?`,
+      answer: `Same-day confirmation for most bookings. WhatsApp us and a coordinator will confirm chef availability and pricing within 1 hour.`,
+    },
+  ])
+
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
@@ -59,7 +78,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
         description={description}
         canonical={canonical}
         ogImage={top ? `${SITE}${top.hero}` : undefined}
-        jsonLd={[localBusiness, serviceSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(entry.name, canonical)]}
+        jsonLd={[localBusiness, serviceSchema, aggregateRatingSchema(4.9, 560), areaFaq, breadcrumbSchema(entry.name, canonical)]}
       />
 
       {/* Hero — full-bleed image for top cities, simple eyebrow hero for long-tail areas */}

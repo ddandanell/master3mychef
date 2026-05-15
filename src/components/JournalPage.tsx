@@ -91,7 +91,27 @@ export function JournalPostPage() {
         title={post.title}
         description={post.excerpt}
         canonical={canonical}
-        jsonLd={[localBusinessSchema, breadcrumbSchema(post.title, canonical)]}
+        jsonLd={[
+          localBusinessSchema,
+          breadcrumbSchema(post.title, canonical),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: post.title,
+            description: post.excerpt,
+            url: canonical,
+            datePublished: post.date,
+            dateModified: post.date,
+            author: { '@type': 'Organization', name: 'myCHEF', url: SITE },
+            publisher: {
+              '@type': 'Organization',
+              name: 'myCHEF',
+              url: SITE,
+              logo: { '@type': 'ImageObject', url: `${SITE}/mychef-logo.svg` },
+            },
+            mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+          },
+        ]}
       />
 
       <article className="px-6 pt-32 pb-16 max-w-[720px] mx-auto">

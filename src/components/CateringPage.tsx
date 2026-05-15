@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
 import { PILLARS } from '../data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
@@ -17,7 +17,7 @@ export default function CateringPage() {
         title={pillar.title}
         description={pillar.description}
         canonical={canonical}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Catering', canonical)]}
+        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Catering', canonical)]}
       />
 
       <section className="px-6 pt-32 pb-16 max-w-[900px] mx-auto">

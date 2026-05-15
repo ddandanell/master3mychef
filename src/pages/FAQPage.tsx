@@ -1,7 +1,7 @@
 import type { ComponentType } from 'react'
 import { Link } from 'react-router-dom'
 import { Clock3, MapPin, MessageCircle, PartyPopper, Users, UtensilsCrossed, Wallet } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 interface FAQItem {
@@ -148,6 +148,7 @@ export default function FAQPage() {
         canonical={canonical}
         jsonLd={[
           localBusinessSchema,
+          aggregateRatingSchema(4.9, 560),
           breadcrumbSchema('FAQ', canonical),
           faqPageSchema(faqSchemaItems),
         ]}

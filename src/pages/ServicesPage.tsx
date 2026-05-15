@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowRight, PartyPopper, Heart, Cake, Users, Briefcase, Gem, ChefHat, CalendarCheck, MapPin } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { SERVICES } from '@/data/sitemap'
@@ -90,7 +90,7 @@ export default function ServicesPage() {
         description="Eight ways we bring food to your villa. Parties, romantic dinners, birthdays, reunions, corporate events, weddings, cooking classes, meal prep."
         canonical={`${SITE}/services`}
         ogImage={`${SITE}/generated/bali-hub-hero.webp`}
-        jsonLd={[localBusinessSchema, itemListSchema, breadcrumbSchema('Services', `${SITE}/services`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={[localBusinessSchema, itemListSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Services', `${SITE}/services`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* ── HERO ── */}

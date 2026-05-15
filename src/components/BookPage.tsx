@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, ChefHat, PartyPopper, Users, Briefcase, Wine, Star, Shield, Clock, Check } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import { ContactRiskReversal } from '@/components/shared'
 
@@ -70,7 +70,7 @@ export default function BookPage() {
         canonical={getPageMeta('book').canonical}
         ogImage={getPageMeta('book').ogImage}
         noindex
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Book', getPageMeta('book').canonical)]}
+        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Book', getPageMeta('book').canonical)]}
       />
 
       {/* Hero */}

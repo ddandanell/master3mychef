@@ -161,7 +161,7 @@ export default function CateringCorporatePage() {
             alt="Professional corporate event catering setup at Bali villa"
             width={1920}
             height={1080}
-            fetchPriority="high"
+            decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/55" />

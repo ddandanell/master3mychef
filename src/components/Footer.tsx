@@ -125,7 +125,7 @@ export default function Footer() {
         {/* Staff login + legal */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-6 border-t border-white/10">
           <Link
-            to="/login"
+            to="/partner-platform"
             className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-white/40 hover:text-[#C5A028] transition-colors px-4 py-2 rounded-full border border-white/10"
           >
             <LogIn className="w-3.5 h-3.5" /> Staff Login

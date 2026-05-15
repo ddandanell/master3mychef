@@ -166,7 +166,7 @@ const TESTIMONIALS = [
    INTERNAL LINKS
    ═══════════════════════════════════════════════════════════════ */
 const INTERNAL_LINKS = [
-  { label: 'Fine Dining', href: '/catering/fine-dining' },
+  { label: 'Fine Dining', href: '/fine-dining' },
   { label: 'Villa Catering', href: '/catering/villa-catering' },
   { label: 'Events', href: '/events' },
   { label: 'Contact', href: '/contact' },
@@ -220,7 +220,7 @@ export default function CateringGrazingPage() {
             alt="Grazing table Bali with cheese, charcuterie, fresh fruit, and edible flowers styled for a villa event"
             width={1920}
             height={1080}
-            fetchPriority="high"
+            decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70" />

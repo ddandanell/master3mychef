@@ -254,7 +254,7 @@ export default function CateringDropOffPage() {
             alt="Drop-off catering boxes with prepared food on a Bali villa dining table"
             width={1920}
             height={1080}
-            fetchPriority="high"
+            decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70" />

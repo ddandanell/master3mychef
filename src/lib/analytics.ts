@@ -1,6 +1,9 @@
 // Replace with real GA4 measurement ID when ready
 const GA_ID = import.meta.env.VITE_GA_ID ?? ''
 
+// Prevent unused variable error while keeping ID accessible
+void GA_ID
+
 type AnalyticsParams = Record<string, unknown>
 
 declare global {

@@ -20,8 +20,23 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 600,
+    cssCodeSplit: true,
+    cssMinify: true,
     rollupOptions: {
       output: {
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name ?? ''
+          if (/\.css$/i.test(info)) {
+            return 'assets/css/[name]-[hash][extname]'
+          }
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/i.test(info)) {
+            return 'assets/images/[name]-[hash][extname]'
+          }
+          if (/\.(woff2?|ttf|otf|eot)$/i.test(info)) {
+            return 'assets/fonts/[name]-[hash][extname]'
+          }
+          return 'assets/[name]-[hash][extname]'
+        },
         manualChunks(id) {
           if (!id.includes('node_modules')) return
           if (id.includes('gsap')) return 'gsap'

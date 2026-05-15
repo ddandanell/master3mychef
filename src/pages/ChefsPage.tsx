@@ -152,7 +152,7 @@ export default function ChefsPage() {
       subtitle="From Adriano’s Michelin-trained leadership to our Bali-based specialists in Mediterranean, Indonesian, and BBQ dining."
       heroImage="/generated/chefs-hero.webp"
       heroImageAlt="myCHEF culinary team in Bali"
-      ogImage="https://mychef.id/chef-portrait.webp"
+      ogImage="https://mychef.id/generated/chefs-hero.webp"
       keywords={['private chef bali', 'mychef chefs', 'bali culinary team']}
       highlights={['Adriano + Lead Chef Profiles', '50+ Hospitality Professionals', '6+ Months of Training', 'Book a Chef via WhatsApp']}
       sections={SECTIONS}

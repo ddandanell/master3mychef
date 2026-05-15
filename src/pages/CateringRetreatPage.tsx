@@ -176,7 +176,7 @@ export default function CateringRetreatPage() {
             alt="Healthy retreat catering in Bali with tropical breakfast bowls and yoga guests"
             width={1920}
             height={1080}
-            fetchPriority="high"
+            decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/60" />

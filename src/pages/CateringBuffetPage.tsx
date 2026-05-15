@@ -202,7 +202,7 @@ export default function CateringBuffetPage() {
             alt="Styled buffet table in Bali villa garden with chafing dishes and floral arrangements"
             width={1920}
             height={1080}
-            fetchPriority="high"
+            decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/75" />

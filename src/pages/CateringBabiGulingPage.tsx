@@ -168,7 +168,7 @@ export default function CateringBabiGulingPage() {
             alt="Traditional Balinese Babi Guling whole-pig catering setup with crispy skin, rice, sambal, and lawar for a villa party in Bali"
             width={1920}
             height={1080}
-            fetchPriority="high"
+            decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/75" />
@@ -662,7 +662,7 @@ export default function CateringBabiGulingPage() {
         <div className="max-w-[800px] mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Explore More</p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link to="/catering/fine-dining" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+            <Link to="/fine-dining" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
               Fine Dining
             </Link>
             <Link to="/catering/villa-catering" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">

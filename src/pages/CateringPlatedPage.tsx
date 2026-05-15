@@ -212,7 +212,7 @@ export default function CateringPlatedPage() {
             alt="Elegant plated dinner course served at a Bali villa for private fine dining"
             width={1920}
             height={1080}
-            fetchPriority="high"
+            decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/75" />
@@ -690,8 +690,8 @@ export default function CateringPlatedPage() {
         <div className="max-w-[1280px] mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Explore More</p>
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-            <Link to="/catering/fine-dining" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Fine Dining</Link>
-            <Link to="/catering/villa" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Villa Catering</Link>
+            <Link to="/fine-dining" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Fine Dining</Link>
+            <Link to="/catering/villa-catering" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Villa Catering</Link>
             <Link to="/events" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Events</Link>
             <Link to="/contact" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Contact</Link>
           </div>

@@ -121,7 +121,7 @@ export default function StaffingLiveInPage() {
 
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/staffing-kitchen.webp" alt="Live-in chef preparing meal at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} fetchPriority="high" />
+          <img src="/generated/staffing-kitchen.webp" alt="Live-in chef preparing meal at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 max-w-[1280px] mx-auto w-full">

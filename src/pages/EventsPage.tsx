@@ -320,7 +320,7 @@ export default function EventsPage() {
         title="Bali Event Catering — From IDR 350K/person | Weddings, Birthdays, Corporate | myCHEF"
         description="Bali villa event catering with transparent pricing. Intimate gatherings from IDR 350K/person, villa celebrations from IDR 550K/person, grand events from IDR 750K/person. Weddings, birthdays, anniversaries, corporate events & retreats."
         canonical={`${SITE}/events`}
-        ogImage={`${SITE}/generated/hero-events.webp`}
+        ogImage={`${SITE}/generated/hub-events.webp`}
         jsonLd={[
           localBusinessSchema,
           breadcrumbSchema('Events', `${SITE}/events`),

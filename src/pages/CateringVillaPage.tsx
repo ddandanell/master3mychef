@@ -157,7 +157,7 @@ export default function CateringVillaPage() {
             alt="Long villa dining table by pool at sunset with chef-prepared Bali catering"
             width={1920}
             height={1080}
-            fetchPriority="high"
+            decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/75" />
@@ -246,7 +246,7 @@ export default function CateringVillaPage() {
               Explore BBQ Catering <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
-            <Link to="/catering/buffet-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/buffet" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
               Explore Buffet Catering <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>

@@ -121,7 +121,7 @@ export default function ServiceMixologyPage() {
 
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1600&q=80" alt="Cocktail-focused mixology experience at a Bali villa" className="w-full h-full object-cover" width={1920} height={1080} fetchPriority="high" />
+          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1600&q=80" alt="Cocktail-focused mixology experience at a Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 max-w-[1280px] mx-auto w-full">

@@ -71,7 +71,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
             width={1920}
             height={1080}
             className="absolute inset-0 w-full h-full object-cover"
-            fetchPriority="high"
+            decoding="async" fetchPriority="high"
           />
           <div
             className="absolute inset-0"

@@ -19,20 +19,15 @@ interface Review {
 const SITE = 'https://mychef.id'
 const WHATSAPP_URL = 'https://wa.me/6282237565997'
 
-const REVIEWS_SCHEMAS = [
-  localBusinessSchema,
-  breadcrumbSchema('Reviews', `${SITE}/reviews`),
-  {
-    '@context': 'https://schema.org',
-    '@type': 'AggregateRating',
-    itemReviewed: {
-      '@type': 'LocalBusiness',
-      name: 'myCHEF',
-    },
-    ratingValue: '4.9',
-    reviewCount: '560',
-  },
-]
+const MONTH_MAP: Record<string, string> = {
+  January: '01', February: '02', March: '03', April: '04',
+  May: '05', June: '06', July: '07', August: '08',
+  September: '09', October: '10', November: '11', December: '12',
+}
+function toISOMonth(human: string): string {
+  const [month, year] = human.split(' ')
+  return `${year}-${MONTH_MAP[month] ?? '01'}`
+}
 
 const STATS = [
   '560+ events',
@@ -116,6 +111,28 @@ const REVIEWS: Review[] = [
     review: 'The closing dinner felt like the emotional finale our retreat needed. Long table, candlelight, beautifully plated food and a service team that read the room perfectly. Guests asked for the WhatsApp number before dessert was finished.',
     rating: 5,
   },
+]
+
+const REVIEWS_SCHEMAS = [
+  localBusinessSchema,
+  breadcrumbSchema('Reviews', `${SITE}/reviews`),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'AggregateRating',
+    itemReviewed: { '@type': 'LocalBusiness', name: 'myCHEF', url: SITE },
+    ratingValue: '4.9',
+    reviewCount: '560',
+  },
+  ...REVIEWS.map((r) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    author: { '@type': 'Person', name: r.name.split('·')[0].trim() },
+    reviewBody: r.review,
+    reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5 },
+    datePublished: toISOMonth(r.date),
+    name: r.eventType,
+    itemReviewed: { '@type': 'LocalBusiness', name: 'myCHEF', url: SITE },
+  })),
 ]
 
 const SOCIAL_PROOF = [

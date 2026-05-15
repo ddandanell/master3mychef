@@ -15,7 +15,7 @@ export const localBusinessSchema = {
   '@id': 'https://mychef.id/#business',
   name: 'myCHEF.id',
   description: 'Private chef, catering, events, and staffing services in Bali',
-  url: 'https://www.mychef.id',
+  url: 'https://mychef.id',
   telephone: '+62-822-3756-5997',
   email: 'hello@mychef.id',
   address: {
@@ -196,7 +196,7 @@ export function organizationSchema(
     '@type': 'Organization',
     '@id': 'https://mychef.id/#organization',
     name: 'myCHEF.id',
-    url: 'https://www.mychef.id',
+    url: 'https://mychef.id',
     logo: logoUrl,
     sameAs,
   }

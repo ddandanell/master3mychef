@@ -13,6 +13,9 @@ interface CateringPackageCardProps {
   accent?: string
 }
 
+const cardClass = (linked: boolean, base: string) =>
+  `${base} bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all duration-300 ${linked ? 'hover:border-[#6B8E5A]' : ''}`
+
 export default function CateringPackageCard({
   image,
   title,
@@ -24,11 +27,8 @@ export default function CateringPackageCard({
   cta = 'View details',
   accent = '#6B8E5A',
 }: CateringPackageCardProps) {
-  const Wrapper = href ? Link : 'div'
-  const wrapperProps = href ? { to: href, className: 'group block' } : { className: 'block' }
-
-  return (
-    <Wrapper {...(wrapperProps as any)} className={`${wrapperProps.className} bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all duration-300 ${href ? 'hover:border-[#6B8E5A]' : ''}`}>
+  const inner = (
+    <>
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={image}
@@ -79,6 +79,10 @@ export default function CateringPackageCard({
           </span>
         )}
       </div>
-    </Wrapper>
+    </>
   )
+
+  return href
+    ? <Link to={href} className={cardClass(true, 'group block')}>{inner}</Link>
+    : <div className={cardClass(false, 'block')}>{inner}</div>
 }

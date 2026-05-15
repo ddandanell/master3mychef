@@ -194,7 +194,7 @@ export default function JoinTeamPage() {
     <PremiumPage
       slug="join-our-team"
       title="Join Bali's #1 Private Chef Team"
-      description="Join Bali's #1 private chef team at myCHEF. We are always looking for talented, passionate hospitality professionals across chefs, bartenders, coordinators, and villa service roles."
+      description="Join myCHEF — Bali's top private chef service. Roles for chefs, bartenders, villa service staff & coordinators. Apply via WhatsApp today."
       h1="Join Bali's #1 Private Chef Team"
       subtitle="We're always looking for talented, passionate hospitality professionals."
       heroImage="/generated/staffing-hero.webp"

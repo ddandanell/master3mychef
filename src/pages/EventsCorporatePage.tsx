@@ -191,7 +191,7 @@ export default function EventsCorporatePage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/corp-conference.webp" alt="Corporate conference setup with catered service in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/corp-conference.webp" alt="Corporate conference setup with catered service in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -241,7 +241,7 @@ export default function EventsCorporatePage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/corp-plated.webp" alt="Plated corporate dinner service by myCHEF in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/corp-plated.webp" alt="Plated corporate dinner service by myCHEF in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function EventsCorporatePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/events/corporate-team.webp" alt="Professional corporate service team at a Bali venue" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/events/corporate-team.webp" alt="Professional corporate service team at a Bali venue" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -311,7 +311,7 @@ export default function EventsCorporatePage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/corp-networking.webp" alt="Corporate networking drinks setup in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/corp-networking.webp" alt="Corporate networking drinks setup in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -340,7 +340,7 @@ export default function EventsCorporatePage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/corp-executive.webp" alt="Executive corporate dinner environment in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/corp-executive.webp" alt="Executive corporate dinner environment in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -398,7 +398,7 @@ export default function EventsCorporatePage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/corp-villa.webp" alt="Corporate villa venue setup in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/corp-villa.webp" alt="Corporate villa venue setup in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

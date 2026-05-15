@@ -12,7 +12,7 @@ export default function CateringAddOnCard({ title, price, description, image }: 
     <div className="bg-white rounded-xl border border-[#E8E6E3] p-4 md:p-5 hover:border-[#6B8E5A]/40 hover:shadow-md transition-all duration-300 flex items-start gap-4">
       {image && (
         <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 hidden sm:block">
-          <img src={image} alt={title} className="w-full h-full object-cover" loading="lazy" />
+          <img src={image} alt={title} width={64} height={64} loading="lazy" decoding="async" className="w-full h-full object-cover" />
         </div>
       )}
       <div className="flex-1 min-w-0">

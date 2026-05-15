@@ -13,7 +13,7 @@
  * - Internal linking
  * - Full SEO schema
  */
-import type { ReactNode } from 'react'
+import type { ReactNode, ElementType } from 'react'
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight, Star, Clock, Shield, Users, Phone, Mail, Calendar } from 'lucide-react'
 import SeoHead, {
@@ -55,7 +55,7 @@ export interface PageSection {
   body?: string
   image?: string
   imageAlt?: string
-  features?: { icon: any; title: string; desc: string }[]
+  features?: { icon: ElementType; title: string; desc: string }[]
   profiles?: PageProfile[]
   testimonials?: { name: string; location: string; text: string; rating?: number }[]
   links?: { label: string; href: string; desc?: string }[]

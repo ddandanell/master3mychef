@@ -257,8 +257,11 @@ export default function CateringFloatingBreakfastPage() {
               <img
                 src="/generated/catering/floating-breakfast.webp"
                 alt="Floating breakfast tray with tropical fruit and coffee in a Bali villa pool"
-                className="w-full h-full object-cover aspect-[4/3]"
+                width={800}
+                height={600}
                 loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover aspect-[4/3]"
               />
             </div>
           </div>
@@ -380,8 +383,11 @@ export default function CateringFloatingBreakfastPage() {
               <img
                 src="/generated/catering/floating-breakfast.webp"
                 alt="Styled floating breakfast tray with tropical fruit, coffee, and white linen in a clear Bali villa pool"
-                className="w-full h-full object-cover aspect-[4/3]"
+                width={800}
+                height={600}
                 loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover aspect-[4/3]"
               />
             </div>
             <div>
@@ -608,8 +614,11 @@ export default function CateringFloatingBreakfastPage() {
           <img
             src="/generated/catering/floating-breakfast.webp"
             alt="Floating breakfast tray in a Bali villa pool"
-            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
             loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70" />
         </div>

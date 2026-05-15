@@ -148,7 +148,7 @@ export default function EventsVillaPartiesPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Villa Party Catering Bali — BBQ, Pool & Night Events | myCHEF"
-        description="Villa party catering in Bali for BBQ nights, cocktail receptions, pool parties, and late events. Food, bar, staff, music coordination, and cleanup in one service."
+        description="Villa party catering in Bali — BBQ nights, cocktail receptions, pool parties & late events. Food, bar, staff and cleanup in one service."
         canonical={`${SITE}/events/villa-parties`}
         ogImage={`${SITE}/bbq-poolside.webp`}
         jsonLd={[

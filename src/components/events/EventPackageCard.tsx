@@ -13,6 +13,9 @@ interface EventPackageCardProps {
   accent?: string
 }
 
+const cardClass = (linked: boolean, base: string) =>
+  `${base} bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all duration-300 ${linked ? 'hover:border-[#C5A028]' : ''}`
+
 export default function EventPackageCard({
   image,
   title,
@@ -24,11 +27,8 @@ export default function EventPackageCard({
   cta = 'View details',
   accent = '#C5A028',
 }: EventPackageCardProps) {
-  const Wrapper = href ? Link : 'div'
-  const wrapperProps = href ? { to: href, className: 'group block' } : { className: 'block' }
-
-  return (
-    <Wrapper {...(wrapperProps as any)} className={`${wrapperProps.className} bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all duration-300 ${href ? 'hover:border-[#C5A028]' : ''}`}>
+  const inner = (
+    <>
       {image && (
         <div className="relative aspect-[4/3] overflow-hidden">
           <img
@@ -81,6 +81,10 @@ export default function EventPackageCard({
           </span>
         )}
       </div>
-    </Wrapper>
+    </>
   )
+
+  return href
+    ? <Link to={href} className={cardClass(true, 'group block')}>{inner}</Link>
+    : <div className={cardClass(false, 'block')}>{inner}</div>
 }

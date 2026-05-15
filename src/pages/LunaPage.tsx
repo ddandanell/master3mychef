@@ -329,6 +329,7 @@ export default function LunaPage() {
             width={1920}
             height={1080}
             fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover"
           />
           <div

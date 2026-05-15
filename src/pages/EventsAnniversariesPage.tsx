@@ -182,7 +182,7 @@ export default function EventsAnniversariesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dining setup in a Bali villa" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dining setup in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@ export default function EventsAnniversariesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/anniversary-chef.webp" alt="Private chef plating an anniversary dinner in a Bali villa" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/events/anniversary-chef.webp" alt="Private chef plating an anniversary dinner in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -233,7 +233,7 @@ export default function EventsAnniversariesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/luna-plating.webp" alt="Fine plated anniversary menu presentation by myCHEF" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/luna-plating.webp" alt="Fine plated anniversary menu presentation by myCHEF" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -282,7 +282,7 @@ export default function EventsAnniversariesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/aura-toast.webp" alt="Anniversary toast moment at a Bali villa dinner" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/aura-toast.webp" alt="Anniversary toast moment at a Bali villa dinner" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -325,7 +325,7 @@ export default function EventsAnniversariesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/aura-tablescape.webp" alt="Styled anniversary tablescape in a Bali villa" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/aura-tablescape.webp" alt="Styled anniversary tablescape in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

@@ -45,7 +45,7 @@ function PricingCalculator() {
             ].map((opt) => (
               <button
                 key={opt.key}
-                onClick={() => setMenu(opt.key as any)}
+                onClick={() => setMenu(opt.key as 'mediterranean' | 'wagyu' | 'villa-chef')}
                 className={`p-3 rounded-xl border text-left transition-colors ${
                   menu === opt.key
                     ? 'border-[#C5A028] bg-[#C5A028]/10'

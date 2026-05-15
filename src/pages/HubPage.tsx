@@ -798,7 +798,7 @@ export default function HubPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: '#C9A227', color: '#fff' }}>
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: '#C5A028', color: '#fff' }}>
               <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
             </a>
           </div>

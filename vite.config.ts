@@ -43,6 +43,8 @@ export default defineConfig({
           if (id.includes('@react-three') || id.includes('/three/')) return 'three'
           if (id.includes('react-router')) return 'router'
           if (id.includes('@radix-ui')) return 'radix'
+          if (id.includes('react-dom')) return 'react-dom'
+          if (id.includes('lucide-react')) return 'lucide'
         },
       },
     },

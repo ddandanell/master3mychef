@@ -205,7 +205,7 @@ export default function EventsWeddingsPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/event-wedding.webp" alt="Luxury Bali villa wedding ceremony setup by myCHEF" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/event-wedding.webp" alt="Luxury Bali villa wedding ceremony setup by myCHEF" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -257,7 +257,7 @@ export default function EventsWeddingsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/aura-toast.webp" alt="Champagne service during Bali wedding cocktail hour" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/aura-toast.webp" alt="Champagne service during Bali wedding cocktail hour" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -267,7 +267,7 @@ export default function EventsWeddingsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/aura-setup.webp" alt="Wedding reception setup inside a Bali villa" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/aura-setup.webp" alt="Wedding reception setup inside a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -336,7 +336,7 @@ export default function EventsWeddingsPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/wedding-reception.webp" alt="Wedding reception table with candles and plated dinner service" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/wedding-reception.webp" alt="Wedding reception table with candles and plated dinner service" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -346,7 +346,7 @@ export default function EventsWeddingsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/aura-setup.webp" alt="Intimate Bali wedding dinner for a small group" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/aura-setup.webp" alt="Intimate Bali wedding dinner for a small group" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -398,7 +398,7 @@ export default function EventsWeddingsPage() {
               </a>
             </div>
             <div className="h-full min-h-[320px]">
-              <img src="/generated/aura-toast.webp" alt="Wedding couple toasting during a Bali villa celebration" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/aura-toast.webp" alt="Wedding couple toasting during a Bali villa celebration" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

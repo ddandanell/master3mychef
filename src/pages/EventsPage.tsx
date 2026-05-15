@@ -318,7 +318,7 @@ export default function EventsPage() {
     <div ref={heroRef} className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Bali Event Catering | Villas, Weddings & Corporate — myCHEF"
-        description="Bali villa event catering with transparent pricing. Intimate gatherings from IDR 350K/person, villa celebrations from IDR 550K/person, grand events from IDR 750K/person. Weddings, birthdays, anniversaries, corporate events & retreats."
+        description="Bali villa event catering for weddings, birthdays, anniversaries, corporate & retreats. From IDR 350K/person. Same-day WhatsApp confirmation."
         canonical={`${SITE}/events`}
         ogImage={`${SITE}/generated/hub-events.webp`}
         jsonLd={[

@@ -198,7 +198,7 @@ export default function EventsRetreatsPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/retreat-breakfast.webp" alt="Healthy breakfast service for a Bali wellness retreat" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/events/retreat-breakfast.webp" alt="Healthy breakfast service for a Bali wellness retreat" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -244,7 +244,7 @@ export default function EventsRetreatsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/events/retreat-table.webp" alt="Long communal retreat dining table in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/events/retreat-table.webp" alt="Long communal retreat dining table in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function EventsRetreatsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/sol-produce.webp" alt="Fresh whole produce prepared for wellness retreat catering" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/sol-produce.webp" alt="Fresh whole produce prepared for wellness retreat catering" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -309,7 +309,7 @@ export default function EventsRetreatsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/retreat-breakfast.webp" alt="Labeled healthy breakfast setup for retreat guests" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/events/retreat-breakfast.webp" alt="Labeled healthy breakfast setup for retreat guests" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -339,7 +339,7 @@ export default function EventsRetreatsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/events/retreat-table.webp" alt="Multi-day retreat lunch service setup in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/events/retreat-table.webp" alt="Multi-day retreat lunch service setup in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -392,7 +392,7 @@ export default function EventsRetreatsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/party-brunch.webp" alt="Healthy brunch-style retreat spread in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/party-brunch.webp" alt="Healthy brunch-style retreat spread in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

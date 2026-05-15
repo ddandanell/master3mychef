@@ -241,8 +241,11 @@ export default function CateringBabiGulingPage() {
               <img
                 src="/generated/pkg-roast.webp"
                 alt="Chef carving traditional Babi Guling with Balinese sides at a villa event"
-                className="w-full h-full object-cover aspect-[4/3]"
+                width={800}
+                height={600}
                 loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover aspect-[4/3]"
               />
             </div>
           </div>
@@ -390,8 +393,11 @@ export default function CateringBabiGulingPage() {
               <img
                 src="/generated/hub-catering.webp"
                 alt="Professional Babi Guling catering team serving at a Bali villa event"
-                className="w-full h-full object-cover aspect-[4/3]"
+                width={800}
+                height={600}
                 loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover aspect-[4/3]"
               />
             </div>
             <div className="order-1 md:order-2">
@@ -626,8 +632,11 @@ export default function CateringBabiGulingPage() {
           <img
             src="/generated/pkg-roast.webp"
             alt="Complete Babi Guling catering table with guests at a Bali villa"
-            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
             loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70" />
         </div>

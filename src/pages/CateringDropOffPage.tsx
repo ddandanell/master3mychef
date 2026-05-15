@@ -318,8 +318,11 @@ export default function CateringDropOffPage() {
               <img
                 src="/generated/hub-catering.webp"
                 alt="Calm villa dining table with drop-off food served family-style"
-                className="w-full h-full object-cover aspect-[4/3]"
+                width={800}
+                height={600}
                 loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover aspect-[4/3]"
               />
             </div>
           </div>
@@ -724,8 +727,11 @@ export default function CateringDropOffPage() {
           <img
             src="/generated/hub-catering.webp"
             alt="Beautiful finished villa table after drop-off catering"
-            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
             loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70" />
         </div>

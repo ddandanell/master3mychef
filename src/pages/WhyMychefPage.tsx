@@ -173,7 +173,7 @@ export default function WhyMychefPage() {
     <PremiumPage
       slug="why-mychef"
       title="Why 560+ Villas Choose myCHEF"
-      description="Discover why 560+ villas trust myCHEF: Michelin-trained leadership, 50+ local professionals, same-day confirmation, villa-first service, and a true no-stress guarantee."
+      description="Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, 50+ local professionals, same-day confirmation and a no-stress guarantee."
       h1="Why 560+ Villas Choose myCHEF"
       subtitle="Michelin-trained leadership, 50+ local professionals, and calm villa-ready execution for dinners, events, and multi-day stays across Bali."
       heroImage="/generated/why-mychef-hero.webp"

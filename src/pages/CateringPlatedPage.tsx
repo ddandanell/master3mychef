@@ -285,8 +285,11 @@ export default function CateringPlatedPage() {
               <img
                 src="/generated/hub-fine-dining.webp"
                 alt="Private plated dinner setup at a Bali villa with elegant table styling"
-                className="w-full h-full object-cover"
+                width={1920}
+                height={1080}
                 loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
@@ -704,8 +707,11 @@ export default function CateringPlatedPage() {
           <img
             src="/generated/luna-plating.webp"
             alt="Plated dinner course ready to serve at Bali villa"
-            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
             loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70" />
         </div>

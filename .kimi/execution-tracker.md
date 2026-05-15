@@ -134,3 +134,23 @@
 | All navbar links verified: 7 catering + 6 events slugs → explicit routes | — | — | No dead nav links |
 | Final build clean | ✅ | — | vite build 3.62s, 0 errors |
 | GitHub push | ✅ DONE | — | Commits: 8d1728b, 3b9c271, 9b51a4f on main |
+
+---
+## BUNDLE + DESIGN-SYSTEM TIGHTEN (2026-05-16) — Claude (joined agent)
+> Picked up the open items from `.kimi/qa-bundle-audit.md` and `.kimi/qa-report-latest.md`. Skipped dependency removal (higher risk, owner action) and the intentional catering green CTA (per `.kimi/qa-agent.md` it is by design).
+
+| Fix | Status | File | Notes |
+|-----|--------|------|-------|
+| Split `react-dom` into its own chunk | ✅ FIXED | `vite.config.ts` | `manualChunks` now matches `react-dom` |
+| Split `lucide-react` into its own chunk | ✅ FIXED | `vite.config.ts` | `manualChunks` now matches `lucide-react` |
+| Off-spec gold `#C9A227` → `#C5A028` | ✅ FIXED | `src/pages/HubPage.tsx:801` | Hub WhatsApp pill button now uses brand gold token |
+| TypeScript check | ✅ CLEAN | — | `npx tsc --noEmit`: 0 errors |
+| Production build | ✅ CLEAN | — | `npm run build`: 3.86s, postbuild injected 156 meta files |
+| Index chunk size | ✅ IMPROVED | `dist/assets/index-*.js` | 303 kB → **124 kB** raw (-59%) · gzip 93 kB → **34 kB** (-63%) |
+| `react-dom` extracted | ✅ IMPROVED | `dist/assets/react-dom-*.js` | 192 kB raw / 60 kB gzip — now cached independently of app entry |
+| `lucide` extracted | ✅ IMPROVED | `dist/assets/lucide-*.js` | 29 kB raw / 10 kB gzip — independently cacheable |
+
+### Still open (owner / future agent)
+- Remove 9 confirmed-unused deps from `package.json` (`framer-motion`, `three`, `@react-three/fiber`, `@react-three/drei`, `@studio-freight/lenis`, `date-fns`, `@hookform/resolvers`, `zod`, `react-router`) — est. -160 kB gzip. Defer until owner can verify no runtime usage in dynamic imports / scripts dir.
+- Delete unused `components/ui/*.tsx` files (47 unused, only `button` + `collapsible` referenced). Tree-shaking already excludes them from the bundle; purely a maintenance cleanup.
+- HubPage hero contrast review (medium) — light cream background may not meet WCAG AA against headline text; needs design call, not a one-line fix.

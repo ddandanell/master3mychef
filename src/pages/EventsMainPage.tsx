@@ -774,8 +774,11 @@ export default function EventsMainPage() {
             src="/generated/aura-tablescape.webp"
             alt=""
             aria-hidden
-            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
             loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/50" />
         </div>

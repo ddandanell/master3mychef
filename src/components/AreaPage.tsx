@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check, Utensils, Flame, Sparkles, Building2, Users, ChefHat, PartyPopper } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
 import { AREAS, MICRO_AREAS } from '@/data/sitemap'
 import { getLocationBySlug } from '@/data/siteArchitecture'
 import { TOP_CITIES } from '@/data/topCities'
@@ -59,7 +59,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
         description={description}
         canonical={canonical}
         ogImage={top ? `${SITE}${top.hero}` : undefined}
-        jsonLd={[localBusiness, serviceSchema, breadcrumbSchema(entry.name, canonical)]}
+        jsonLd={[localBusiness, serviceSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(entry.name, canonical)]}
       />
 
       {/* Hero — full-bleed image for top cities, simple eyebrow hero for long-tail areas */}

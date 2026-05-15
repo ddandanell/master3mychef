@@ -5,7 +5,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, faqPageSchema, localBusinessSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import { Breadcrumb, PressStrip, formatIDR, calculateAllIn } from '@/components/shared'
 
@@ -178,6 +178,7 @@ export default function CorporateEventsPage() {
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema('Corporate Event Catering Bali', 'myCHEF.id provides corporate event catering in Bali for executive dinners, conferences, networking nights, and gala functions. We coordinate menus, staffing, drinks, and service logistics for smooth private-venue events.', `${SITE}/corporate-events`),
+          aggregateRatingSchema(4.9, 89),
           breadcrumbSchema('Corporate Event Catering Bali', `${SITE}/corporate-events`, 'Events', `${SITE}/events`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
         ]}

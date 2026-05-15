@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
 import { SERVICES } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -39,7 +39,7 @@ export default function ServicePage() {
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${title} | myCHEF`} description={service.description} canonical={canonical} jsonLd={[localBusinessSchema, serviceSchema, breadcrumbSchema(service.name, canonical)]} />
+      <SeoHead title={`${title} | myCHEF`} description={service.description} canonical={canonical} jsonLd={[localBusinessSchema, serviceSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(service.name, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[960px] mx-auto">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Services</p>

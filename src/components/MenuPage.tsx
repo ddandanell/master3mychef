@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { ArrowRight, MessageCircle } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { MENUS } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -59,7 +59,11 @@ export default function MenuPage() {
           description="Explore myCHEF menu ideas for Bali villas — Mediterranean set menus, Indonesian feasts, BBQ nights, tasting menus, and customizable cuisine pages."
           ogImage="/hero-fine-dining.webp"
           canonical={`${SITE}/menus`}
-          jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Menus', `${SITE}/menus`)]}
+          jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Menus', `${SITE}/menus`), faqPageSchema([
+            { question: 'What types of menus does myCHEF offer in Bali?', answer: 'myCHEF offers Mediterranean tasting menus, Indonesian feasts, BBQ nights, grazing tables, floating breakfast menus, and fully customizable cuisines for any villa event in Bali.' },
+            { question: 'Can I customise the menu for dietary restrictions?', answer: 'Yes — every menu is fully customizable. We accommodate gluten-free, vegan, halal, vegetarian, shellfish allergies, and pregnancy-safe requests at no extra charge.' },
+            { question: 'How do I choose the right menu for my villa event?', answer: 'Contact our team via WhatsApp with your guest count, occasion, and preferences. We will recommend the best menu and send a proposal with pricing within 24 hours.' },
+          ])]}
         />
 
         <section className="px-8 pt-32 pb-16 max-w-[1120px] mx-auto">

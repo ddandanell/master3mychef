@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { BLOG_POSTS } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -16,6 +16,10 @@ export default function BlogIndexPage() {
             localBusinessSchema,
             aggregateRatingSchema(4.9, 560),
             breadcrumbSchema('Blog', `${SITE}/blog`),
+            faqPageSchema([
+              { question: 'What topics does the myCHEF blog cover?', answer: 'The myCHEF blog covers private chef cost guides, villa dining tips, event planning in Bali, menu showcases, location guides, and hospitality staffing insights for villa owners and guests.' },
+              { question: 'Who writes the myCHEF guides?', answer: 'All guides are written by the myCHEF team — based on real experience delivering 12,000+ guest experiences, 560+ villa dinners, and 500+ events across Bali.' },
+            ]),
             {
               '@context': 'https://schema.org',
               '@type': 'ItemList',

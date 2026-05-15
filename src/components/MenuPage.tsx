@@ -57,7 +57,7 @@ export default function MenuPage() {
         <SeoHead
           title="Private Chef Menus in Bali | myCHEF"
           description="Explore myCHEF menu ideas for Bali villas — Mediterranean set menus, Indonesian feasts, BBQ nights, tasting menus, and customizable cuisine pages."
-        ogImage="/hero-fine-dining.webp"
+          ogImage="/hero-fine-dining.webp"
           canonical={`${SITE}/menus`}
           jsonLd={[localBusinessSchema, breadcrumbSchema('Menus', `${SITE}/menus`)]}
         />
@@ -170,7 +170,7 @@ export default function MenuPage() {
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${title} | myCHEF`} description={menu.description} canonical={canonical} jsonLd={[breadcrumbSchema(menu.name, canonical)]} />
+      <SeoHead title={`${title} | myCHEF`} description={menu.description} canonical={canonical} ogImage="/hero-fine-dining.webp" jsonLd={[localBusinessSchema, breadcrumbSchema(menu.name, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[960px] mx-auto">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Menu</p>

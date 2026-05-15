@@ -1,6 +1,20 @@
 import { useState } from 'react'
 import { MessageCircle } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
+import { breadcrumbSchema } from '@/components/SeoHead'
+
+const SOFTWARE_APPLICATION_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'myCHEF.id Pricing Calculator',
+  applicationCategory: 'BusinessApplication',
+  description: 'Free online calculator to estimate private chef, catering, and event costs in Bali.',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'IDR',
+  },
+}
 
 function PricingCalculator() {
   const [guests, setGuests] = useState(8)
@@ -115,7 +129,7 @@ function PricingCalculator() {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#128C7E] transition-colors w-full"
+          className="flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors w-full"
         >
           <MessageCircle className="w-4 h-4" />
           Confirm via WhatsApp
@@ -180,17 +194,23 @@ export default function CalculatorPage() {
         slug="calculator"
         title="Pricing Calculator"
         description="Estimate the cost of a private chef in Bali — adjust guests, meals, cuisine, and add-ons."
+        seoTitle="Pricing Calculator | Private Chef Bali | myCHEF.id"
+        seoDescription="Estimate your private chef, catering, or event costs instantly. Transparent IDR pricing, no hidden fees."
+        canonicalUrl="https://mychef.id/calculator"
         h1="Pricing Calculator"
         subtitle="Estimate your private chef experience in 30 seconds."
         heroImage="/generated/pricing-hero.webp"
         heroImageAlt="Fine dining dish"
         ogImage="https://mychef.id/generated/pricing-hero.webp"
-        noindex
         keywords={['private chef bali price', 'bali catering calculator', 'villa chef cost']}
         highlights={['Instant Estimate', 'Adjust Guests & Menu', 'WhatsApp Confirmation', 'No Obligation']}
         sections={SECTIONS}
         faqs={FAQS}
         relatedPages={RELATED_PAGES}
+        extraJsonLd={[
+          breadcrumbSchema('Pricing Calculator', 'https://mychef.id/calculator'),
+          SOFTWARE_APPLICATION_SCHEMA,
+        ]}
         ctaText="Get a Precise Quote"
         ctaSubtext="Message us on WhatsApp for a detailed proposal."
       />

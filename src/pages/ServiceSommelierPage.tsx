@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
   breadcrumbSchema,
-  serviceSchema,
+  detailedServiceSchema,
   faqPageSchema,
   aggregateRatingSchema,
 } from '@/components/SeoHead'
@@ -103,15 +103,14 @@ export default function ServiceSommelierPage() {
         ogImage={`${SITE}/generated/luna-wine.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema(
-            'Sommelier Bali',
-            'Professional sommelier service for villa dinners and events in Bali. Wine pairing curation, tableside service, and cellar consultation.',
+          detailedServiceSchema(
+            'Sommelier Service Bali',
+            'myCHEF.id provides sommelier service in Bali for villa dinners, celebrations, and private events. We curate wine pairings, guide bottle selections, and deliver polished tableside service throughout the experience.',
             `${SITE}/in-villa-service/sommelier`,
-            'IDR',
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 34),
-          breadcrumbSchema('Sommelier', `${SITE}/in-villa-service/sommelier`, 'In-Villa Service', `${SITE}/in-villa-service`),
+          breadcrumbSchema('Sommelier Service Bali', `${SITE}/in-villa-service/sommelier`, 'In-Villa Service', `${SITE}/in-villa-service`),
         ]}
       />
 
@@ -135,7 +134,7 @@ export default function ServiceSommelierPage() {
             From approachable to investment-grade. From IDR 1,200,000 per dinner.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1ea855] transition-colors">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
               <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
             </a>
             <a href="#book" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
@@ -220,26 +219,26 @@ export default function ServiceSommelierPage() {
         </div>
       </section>
 
-      {/* ═══════ INTERNAL LINKS ═══════ */}
       <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
         <div className="max-w-[1000px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
+          <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>
+          <h3 className="font-playfair text-3xl text-[#1A1A1A] mb-6">You might also need</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/in-villa-service/butlers" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Butler Service</h4>
-              <p className="text-xs text-[#4A4745]">Discreet villa butlers for arrival and guest experience.</p>
+            <Link to="/in-villa-service/mixology" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Mixology</h4>
+              <p className="text-xs text-[#4A4745]">Add a cocktail moment before dinner or a creative after-party pour.</p>
             </Link>
-            <Link to="/in-villa-service/bartenders" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Bartender Hire</h4>
-              <p className="text-xs text-[#4A4745]">Professional bartenders for your villa event.</p>
+            <Link to="/fine-dining" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Fine Dining</h4>
+              <p className="text-xs text-[#4A4745]">Pair your sommelier with a chef-led tasting menu for a full experience.</p>
             </Link>
-            <Link to="/events/anniversaries" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Anniversary Dinners</h4>
-              <p className="text-xs text-[#4A4745]">Romantic villa anniversaries with private chef service.</p>
+            <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">In-Villa Service</h4>
+              <p className="text-xs text-[#4A4745]">Explore the full staffing hub for tableside service and guest support.</p>
             </Link>
-            <Link to="/fine-dining" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Fine Dining</h4>
-              <p className="text-xs text-[#4A4745]">Multi-course fine dining experiences in your villa.</p>
+            <Link to="/catering" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Catering</h4>
+              <p className="text-xs text-[#4A4745]">Explore menus and formats for villa dinners, receptions, and larger groups.</p>
             </Link>
           </div>
         </div>
@@ -259,7 +258,7 @@ export default function ServiceSommelierPage() {
             Reply within 2 hours.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
             <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">

@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, ChefHat, PartyPopper, Users, Briefcase, Wine, Star, Shield, Clock, Check } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
+import { getPageMeta } from '@/data/page-meta'
+import { ContactRiskReversal } from '@/components/shared'
 
-const SITE = 'https://mychef.id'
 const WA = '6282237565997'
 
 const BOOKING_CARDS = [
@@ -61,22 +62,29 @@ const HOW_IT_WORKS = [
 ]
 
 export default function BookPage() {
-  const canonical = `${SITE}/book`
-
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Book | Private Chef, Catering & Events Bali — myCHEF"
-        description="Book a private chef, catering, event or staffing in Bali. Same-day WhatsApp confirmation."
-        canonical={canonical}
+        title={getPageMeta('book').title}
+        description={getPageMeta('book').description}
+        canonical={getPageMeta('book').canonical}
+        ogImage={getPageMeta('book').ogImage}
         noindex
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Book', canonical)]}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Book', getPageMeta('book').canonical)]}
       />
 
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/book-hero.webp" alt="Book your experience" className="w-full h-full object-cover" />
+          <img
+            src="/generated/book-hero.webp"
+            alt="Book your experience"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 pb-16 md:pb-24 pt-32">
@@ -96,6 +104,9 @@ export default function BookPage() {
           </div>
         </div>
       </section>
+
+      {/* Risk Reversal */}
+      <ContactRiskReversal />
 
       {/* Trust bar */}
       <section className="bg-[#0A0A0A] py-6">
@@ -145,7 +156,7 @@ export default function BookPage() {
                       href={waLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-xs uppercase tracking-[2px] px-5 py-3 rounded-full hover:bg-[#128C7E] transition-colors"
+                      className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-xs uppercase tracking-[2px] px-5 py-3 rounded-full hover:bg-[#D4B43A] transition-colors"
                     >
                       <MessageCircle className="w-3.5 h-3.5" /> Book via WhatsApp
                     </a>
@@ -189,7 +200,7 @@ export default function BookPage() {
             href={`https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to book an experience but I am not sure what I need. Can you help?')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#128C7E] transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
           >
             <MessageCircle className="w-4 h-4" /> Get Personalized Advice
           </a>

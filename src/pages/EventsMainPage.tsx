@@ -8,6 +8,7 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import LocationChips from '@/components/LocationChips'
@@ -15,13 +16,14 @@ import { Breadcrumb, PressStrip, AllInPrice, formatIDR, formatIDRShort, calculat
 import TrustStrip from '@/components/shared/TrustStrip'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import { EventsRiskReversal } from '@/components/shared'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
 const WA_NUMBER = '6282237565997'
 const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
-  "Hi Sofia, I'd like to plan an event in Bali. Could you walk me through the options?",
+  "Hi myCHEF, I'd like to plan an event in Bali. Could you walk me through the options?",
 )}`
 
 interface EventType {
@@ -88,7 +90,7 @@ const EVENT_TYPES: EventType[] = [
     description:
       'Executive dinners, conferences, retreats, product launches. Hospitality production grade — invoice-ready, NPWP-issued.',
     icon: Briefcase,
-    image: '/generated/corporate-event.webp',
+    image: '/generated/corporate-event.svg',
     href: '/events/corporate-events',
   },
   {
@@ -298,10 +300,10 @@ export default function EventsMainPage() {
   return (
     <div ref={heroRef} className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Bali Villa Events — Weddings, Birthdays, Corporate & Retreats | myCHEF"
-        description="Bali villa event catering and coordination for weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties."
-        canonical={`${SITE}/events`}
-        ogImage={`${SITE}/generated/hero-events.webp`}
+        title={getPageMeta('events').title}
+        description={getPageMeta('events').description}
+        canonical={getPageMeta('events').canonical}
+        ogImage={getPageMeta('events').ogImage}
         jsonLd={[
           localBusinessSchema,
           breadcrumbSchema('Events', `${SITE}/events`),
@@ -329,12 +331,12 @@ export default function EventsMainPage() {
         ]}
       />
 
-      <Breadcrumb items={[{ label: 'Events' }]} />
+      <Breadcrumb items={[{ label: 'Events' }]} theme="dark" />
 
       {/* ═══════ HERO — DARK, EDITORIAL, GOLD ═══════ */}
       <section className="relative min-h-[88vh] flex items-end overflow-hidden bg-[#0A0A0A] text-white">
         <img
-          src="/generated/hero-corporate-events.jpg"
+          src="/hero-events.webp"
           alt="Luxury villa event in Bali with styled dining and celebration setup"
           width={1920}
           height={1080}
@@ -355,7 +357,7 @@ export default function EventsMainPage() {
             className="hero-fade text-4xl md:text-6xl lg:text-7xl leading-[1.05] max-w-3xl mb-8"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            One team builds the whole evening.<br />
+            Events in Bali, run by one team.<br />
             <span className="italic text-white/85" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               You just host.
             </span>
@@ -369,9 +371,9 @@ export default function EventsMainPage() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#25D366] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#1ea855] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
-              <Phone className="w-4 h-4" /> Plan My Event
+              <Phone className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
               href="#event-types"
@@ -380,14 +382,17 @@ export default function EventsMainPage() {
               View Event Types <ChevronRight className="w-4 h-4" />
             </a>
           </div>
-          <p className="hero-fade mt-6 text-white/55 text-xs tracking-wider">
-            Same-day WhatsApp reply · 50% deposit only · Real NPWP invoice on request
+          <p className="hero-fade mt-4 text-sm text-white/60">
+            From IDR 600K++/guest · Free consultation · Same-day WhatsApp reply · Transparent proposal before deposit
           </p>
         </div>
       </section>
 
       {/* ═══════ TRUST STRIP ═══════ */}
       <TrustStrip dark />
+
+      {/* ═══════ RISK REVERSAL ═══════ */}
+      <EventsRiskReversal dark />
 
       {/* ═══════ INTRO ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-[#0F0F0F] text-white">
@@ -663,9 +668,9 @@ export default function EventsMainPage() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#25D366] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#1ea855] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
-              <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
+              <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
               href="tel:+6282237565997"
@@ -788,9 +793,9 @@ export default function EventsMainPage() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#25D366] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#1ea855] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
-              <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
+              <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
               href="tel:+6282237565997"

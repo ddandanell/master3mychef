@@ -5,7 +5,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -17,7 +17,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20Sofia,%20I%20would%20like%20to%20book%20a%20birthday%20party.'
+const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20birthday%20party.'
 const SITE = 'https://mychef.id'
 const ACCENT = '#2C5F7C'
 
@@ -124,12 +124,12 @@ export default function EventsBirthdaysPage() {
         ogImage={`${SITE}/generated/events/birthday-pool.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Birthday Party Catering Bali', 'Birthday party catering and villa event coordination in Bali. Intimate dinners, villa parties, kids celebrations, cake, decor, staff, and cleanup.', `${SITE}/events/birthdays`, 'IDR'),
+          detailedServiceSchema('Birthday Party Catering Bali', 'myCHEF.id caters birthday parties in Bali with private chef menus, buffet or plated service, drinks, and event staffing. We manage setup, flow, and cleanup for everything from intimate dinners to full villa parties.', `${SITE}/events/birthdays`),
           offerSchema('Intimate Birthday Dinner', 1500000, 'IDR', `${SITE}/events/birthdays`),
           offerSchema('Birthday Villa Party', 850000, 'IDR', `${SITE}/events/birthdays`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Birthdays', `${SITE}/events/birthdays`, 'Events', `${SITE}/events`),
+          breadcrumbSchema('Birthday Party Catering Bali', `${SITE}/events/birthdays`, 'Events', `${SITE}/events`),
         ]}
       />
 
@@ -137,7 +137,7 @@ export default function EventsBirthdaysPage() {
 
       <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/birthday-pool.webp" alt="Birthday pool party dinner at a Bali villa" className="w-full h-full object-cover" />
+          <img src="/generated/events/birthday-pool.webp" alt="Birthday pool party dinner at a Bali villa" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-black/65" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
@@ -150,7 +150,7 @@ export default function EventsBirthdaysPage() {
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
             Food, drinks, bar service, decor, entertainment coordination, and full cleanup for birthdays that actually run smoothly — from intimate milestone dinners to high-energy villa pool parties.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <Calendar className="w-4 h-4" /> Book a Birthday
             </a>
@@ -158,6 +158,9 @@ export default function EventsBirthdaysPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
+          <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.2em]">
+            From IDR 350K/child or 850K++/guest · Cake, staff, and cleanup handled
+          </p>
         </div>
       </section>
 

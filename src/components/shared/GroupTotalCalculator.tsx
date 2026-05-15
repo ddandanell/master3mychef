@@ -44,6 +44,7 @@ export default function GroupTotalCalculator({
         </div>
         <input
           type="range"
+          aria-label="Number of guests"
           min={minGuests}
           max={maxGuests}
           value={guests}

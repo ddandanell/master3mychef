@@ -41,8 +41,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://wa.me" />
+    <link rel="dns-prefetch" href="https://wa.me" />
+    <!-- Google Tag Manager: replace GTM-XXXXXXX with your container ID -->
+    <!-- (GTM script here) -->
+    <!-- Google Analytics 4: replace G-XXXXXXXXXX with your measurement ID -->
+    <!-- (GA4 script here) -->
     <!-- Preload the first above-the-fold portal image on the home page -->
     <link rel="preload" as="image" href="/generated/hub-fine-dining.webp" fetchpriority="high" />
+
+    <!-- Structured data: Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://mychef.id/#organization",
+        "name": "myCHEF.id",
+        "url": "https://www.mychef.id",
+        "logo": "https://mychef.id/generated/hub-hero-v3.webp",
+        "sameAs": [
+          "https://www.instagram.com/mychef.id",
+          "https://www.facebook.com/mychef.id"
+        ]
+      }
+    </script>
 
     <!-- Structured data: LocalBusiness with AggregateRating -->
     <script type="application/ld+json">
@@ -50,14 +71,13 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "@id": "https://mychef.id/#business",
-        "name": "myCHEF Indonesia",
-        "alternateName": "myCHEF.id",
-        "description": "Private chefs, villa catering, and full-service events across Bali. Italian fine dining and Michelin-trained leadership.",
-        "url": "https://mychef.id/",
+        "name": "myCHEF.id",
+        "description": "Private chef, catering, events, and staffing services in Bali",
+        "url": "https://www.mychef.id",
         "telephone": "+62-822-3756-5997",
-        "email": "indonesia@mychef.id",
-        "image": "https://mychef.id/og-image.webp",
-        "priceRange": "IDR 600.000 - IDR 75.000.000",
+        "email": "hello@mychef.id",
+        "image": "https://mychef.id/generated/hub-hero-v3.webp",
+        "priceRange": "$$$$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Jl. Tukad Barito Timur III No.16, Panjer",
@@ -86,20 +106,89 @@
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "08:00",
-          "closes": "22:00"
+          "opens": "07:00",
+          "closes": "23:00"
         },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
-          "reviewCount": "500",
+          "reviewCount": "127",
           "bestRating": "5"
         },
         "sameAs": [
-          "https://instagram.com/mychef.id",
-          "https://facebook.com/mychef.id",
-          "https://wa.me/6282237565997"
+          "https://www.instagram.com/mychef.id",
+          "https://www.facebook.com/mychef.id"
         ]
+      }
+    </script>
+
+    <!-- Structured data: Service — Private Chef / Fine Dining -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Private Chef / Fine Dining",
+        "description": "Italian tasting menus and open-flame dining experiences in your Bali villa. Michelin-trained leadership.",
+        "url": "https://mychef.id/fine-dining",
+        "provider": { "@id": "https://mychef.id/#business" },
+        "areaServed": { "@type": "Place", "name": "Bali, Indonesia" },
+        "priceRange": "$$$$"
+      }
+    </script>
+
+    <!-- Structured data: Service — Villa Catering -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Villa Catering",
+        "description": "Daily private chef service for villa stays — breakfast, lunch, and dinner. Groceries at cost.",
+        "url": "https://mychef.id/catering",
+        "provider": { "@id": "https://mychef.id/#business" },
+        "areaServed": { "@type": "Place", "name": "Bali, Indonesia" },
+        "priceRange": "$$$"
+      }
+    </script>
+
+    <!-- Structured data: Service — Event Production -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Event Production",
+        "description": "Weddings, retreats, birthdays, and corporate events — full planning, catering, and service staff.",
+        "url": "https://mychef.id/events",
+        "provider": { "@id": "https://mychef.id/#business" },
+        "areaServed": { "@type": "Place", "name": "Bali, Indonesia" },
+        "priceRange": "$$$$"
+      }
+    </script>
+
+    <!-- Structured data: Service — In-Villa Service Staff -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "In-Villa Service Staff",
+        "description": "Uniformed waiters, butlers, bartenders, mixologists, and sommeliers for villa dining and events.",
+        "url": "https://mychef.id/in-villa-service",
+        "provider": { "@id": "https://mychef.id/#business" },
+        "areaServed": { "@type": "Place", "name": "Bali, Indonesia" },
+        "priceRange": "$$$"
+      }
+    </script>
+
+    <!-- Structured data: Service — Staffing & Placement -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Staffing & Placement",
+        "description": "Hire vetted private chefs, live-in chefs, butlers, and villa staff across Bali. 48-hour placement.",
+        "url": "https://mychef.id/staffing",
+        "provider": { "@id": "https://mychef.id/#business" },
+        "areaServed": { "@type": "Place", "name": "Bali, Indonesia" },
+        "priceRange": "$$$"
       }
     </script>
 
@@ -179,6 +268,7 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Tawk.to Live Chat: paste script here -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

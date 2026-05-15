@@ -9,8 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
-  breadcrumbSchema,
-  serviceSchema,
+  cateringBreadcrumbSchema,
+  cateringServiceSchema,
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
@@ -144,17 +144,17 @@ export default function CateringBabiGulingPage() {
       <SeoHead
         title="Babi Guling Catering Bali | Traditional Balinese Feast"
         description="Babi guling catering in Bali for villa parties, weddings, birthdays, and private events with traditional Balinese flavors and full setup."
-        canonical={`${SITE}/catering/babi-guling-catering-bali`}
-        ogImage={`${SITE}/generated/hero-babiguling-catering.jpg`}
+        canonical={`${SITE}/catering/babi-guling`}
+        ogImage={`${SITE}/generated/hero-babiguling-catering.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Babi Guling Catering Bali', 'Traditional Balinese whole-pig catering for villas, parties, weddings, birthdays, and private events across Bali.', `${SITE}/catering/babi-guling-catering-bali`, 'IDR'),
-          offerSchema('Small Babi Guling', 3700000, 'IDR', `${SITE}/catering/babi-guling-catering-bali`),
-          offerSchema('Medium Babi Guling', 5000000, 'IDR', `${SITE}/catering/babi-guling-catering-bali`),
-          offerSchema('Large Babi Guling', 7000000, 'IDR', `${SITE}/catering/babi-guling-catering-bali`),
+          cateringServiceSchema('Babi Guling Catering Bali', 'Traditional babi guling catering for Bali villas, birthdays, weddings, and cultural celebrations with full Balinese sides. myCHEF.id roasts, carves, and serves the feast on site across Bali.', `${SITE}/catering/babi-guling`),
+          offerSchema('Small Babi Guling', 3700000, 'IDR', `${SITE}/catering/babi-guling`),
+          offerSchema('Medium Babi Guling', 5000000, 'IDR', `${SITE}/catering/babi-guling`),
+          offerSchema('Large Babi Guling', 7000000, 'IDR', `${SITE}/catering/babi-guling`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Babi Guling Catering Bali', `${SITE}/catering/babi-guling-catering-bali`, 'Catering', `${SITE}/catering`),
+          cateringBreadcrumbSchema('Babi Guling Catering Bali', `${SITE}/catering/babi-guling`),
         ]}
       />
 
@@ -164,7 +164,7 @@ export default function CateringBabiGulingPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-babiguling-catering.jpg"
+            src="/generated/hero-babiguling-catering.webp"
             alt="Traditional Balinese Babi Guling whole-pig catering setup with crispy skin, rice, sambal, and lawar for a villa party in Bali"
             width={1920}
             height={1080}

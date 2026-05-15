@@ -74,7 +74,15 @@ export default function LocationsHubPage() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/locations-hero.webp" alt="Bali locations" className="w-full h-full object-cover" />
+          <img
+            src="/generated/locations-hero.webp"
+            alt="Bali locations"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 pb-16 md:pb-24 pt-32">
@@ -163,6 +171,28 @@ export default function LocationsHubPage() {
         </div>
       </section>
 
+      <section className="py-10 bg-[#FAFAF8]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="rounded-2xl border border-black/5 bg-white px-6 py-6">
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-3">Popular Areas</p>
+            <div className="flex flex-wrap gap-3">
+              {['seminyak', 'canggu', 'ubud', 'uluwatu', 'nusa-dua'].map((slug) => {
+                const location = LOCATIONS[slug as keyof typeof LOCATIONS]
+                return (
+                  <Link
+                    key={slug}
+                    to={`/locations/${slug}`}
+                    className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-sm text-[#1A1A1A] transition-colors hover:border-[#C5A028] hover:text-[#C5A028]"
+                  >
+                    {location.label}
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How it works */}
       <section className="py-16 md:py-24 bg-[#FAFAF8]">
         <div className="max-w-[1200px] mx-auto px-6">
@@ -194,7 +224,7 @@ export default function LocationsHubPage() {
             href={`https://wa.me/6282237565997?text=${encodeURIComponent('Hi myCHEF, I would like to book a private chef. My villa is in: ')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#128C7E] transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
           >
             <MapPin className="w-4 h-4" /> Book for Your Location
           </a>

@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -18,7 +18,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20Sofia,%20I%20would%20like%20to%20book%20a%20baby%20shower.'
+const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20baby%20shower.'
 const SITE = 'https://mychef.id'
 const ACCENT = '#2C5F7C'
 
@@ -130,12 +130,12 @@ export default function EventsBabyShowersPage() {
         ogImage={`${SITE}/generated/events/baby-shower-hero.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Baby Shower Catering Bali', 'Baby shower catering in Bali with brunch service, grazing tables, pregnancy-safe menus, mocktail bars, styling, and cleanup.', `${SITE}/events/baby-showers`, 'IDR'),
+          detailedServiceSchema('Baby Shower Catering Bali', 'myCHEF.id provides baby shower catering in Bali with brunch menus, grazing tables, mocktails, and elegant villa styling. We coordinate service, setup, and cleanup for relaxed celebrations at private villas and venues.', `${SITE}/events/baby-showers`),
           offerSchema('Intimate Baby Shower Brunch', 750000, 'IDR', `${SITE}/events/baby-showers`),
           offerSchema('Larger Baby Shower', 1100000, 'IDR', `${SITE}/events/baby-showers`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Baby Showers', `${SITE}/events/baby-showers`, 'Events', `${SITE}/events`),
+          breadcrumbSchema('Baby Shower Catering Bali', `${SITE}/events/baby-showers`, 'Events', `${SITE}/events`),
         ]}
       />
 
@@ -143,7 +143,7 @@ export default function EventsBabyShowersPage() {
 
       <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/baby-shower-hero.webp" alt="Pastel baby shower brunch table in a Bali villa" className="w-full h-full object-cover" />
+          <img src="/generated/events/baby-shower-hero.webp" alt="Pastel baby shower brunch table in a Bali villa" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-black/68" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
@@ -156,7 +156,7 @@ export default function EventsBabyShowersPage() {
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
             Beautiful, stress-free villa showers with brunch spreads, grazing tables, pregnancy-safe food, mocktail bars, styling, and full cleanup handled by one team.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <Calendar className="w-4 h-4" /> Book Baby Shower
             </a>
@@ -164,6 +164,9 @@ export default function EventsBabyShowersPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
+          <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.2em]">
+            From IDR 750K++/guest · Styling, mocktails, and cleanup included
+          </p>
         </div>
       </section>
 
@@ -416,6 +419,30 @@ export default function EventsBabyShowersPage() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <section className="py-16 bg-[#F5F3EE]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-sm uppercase tracking-widest text-[#C5A028] mb-3">Also available</p>
+          <h2 className="text-2xl font-semibold text-[#1A1916] mb-8">Explore More myCHEF Services</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { to: '/events/birthdays', label: 'Birthdays' },
+              { to: '/catering', label: 'Villa Catering' },
+              { to: '/in-villa-service', label: 'In-Villa Staff' },
+              { to: '/book', label: 'Book myCHEF' }
+            ].map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 bg-[#FAFAF8] baby-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
@@ -437,31 +464,6 @@ export default function EventsBabyShowersPage() {
             whatsappName="Sofia"
             accent={ACCENT}
           />
-        </div>
-      </section>
-
-      {/* ═══════ INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1000px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/events/anniversaries" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Anniversary Dinners</h4>
-              <p className="text-xs text-[#4A4745]">Romantic villa anniversaries with private chef service.</p>
-            </Link>
-            <Link to="/events/villa-parties" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Villa Parties</h4>
-              <p className="text-xs text-[#4A4745]">BBQ, cocktail, and pool parties with full bar service.</p>
-            </Link>
-            <Link to="/catering/grazing-tables" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Grazing Tables</h4>
-              <p className="text-xs text-[#4A4745]">Beautiful grazing spreads for any celebration.</p>
-            </Link>
-            <Link to="/in-villa-service/bartenders" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Bartender Hire</h4>
-              <p className="text-xs text-[#4A4745]">Professional bartenders for your villa event.</p>
-            </Link>
-          </div>
         </div>
       </section>
 

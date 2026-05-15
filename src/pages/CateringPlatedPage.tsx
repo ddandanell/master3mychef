@@ -10,8 +10,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
-  breadcrumbSchema,
-  serviceSchema,
+  cateringBreadcrumbSchema,
+  cateringServiceSchema,
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
@@ -188,17 +188,17 @@ export default function CateringPlatedPage() {
       <SeoHead
         title="Plated Dinner Bali | Private Chef Fine Dining at Your Villa"
         description="Plated dinner catering in Bali for villas, anniversaries, birthdays, weddings, and private events with chef-led multi-course menus."
-        canonical={`${SITE}/catering/plated-dinner-bali`}
+        canonical={`${SITE}/catering/plated-catering`}
         ogImage={`${SITE}/generated/catering/plated-menus.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Plated Dinner Bali', 'Private chef fine dining and multi-course plated dinners served at villas across Bali.', `${SITE}/catering/plated-dinner-bali`, 'IDR'),
-          offerSchema('3-Course Plated', 800000, 'IDR', `${SITE}/catering/plated-dinner-bali`),
-          offerSchema('4-Course Plated', 1000000, 'IDR', `${SITE}/catering/plated-dinner-bali`),
-          offerSchema('5-Course Premium', 1300000, 'IDR', `${SITE}/catering/plated-dinner-bali`),
+          cateringServiceSchema('Plated Dinner Catering Bali', 'Plated dinner catering in Bali for villas, anniversaries, weddings, and premium private events with multi-course menus. myCHEF.id provides chefs, service staff, elegant plating, and cleanup across Bali.', `${SITE}/catering/plated-catering`),
+          offerSchema('3-Course Plated', 800000, 'IDR', `${SITE}/catering/plated-catering`),
+          offerSchema('4-Course Plated', 1000000, 'IDR', `${SITE}/catering/plated-catering`),
+          offerSchema('5-Course Premium', 1300000, 'IDR', `${SITE}/catering/plated-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Plated Dinner Bali', `${SITE}/catering/plated-dinner-bali`, 'Catering', `${SITE}/catering`),
+          cateringBreadcrumbSchema('Plated Dinner Catering Bali', `${SITE}/catering/plated-catering`),
         ]}
       />
 

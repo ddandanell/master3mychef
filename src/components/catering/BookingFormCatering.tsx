@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { Calendar, MessageSquare, Check, Phone } from 'lucide-react'
 
 interface Field {
@@ -18,6 +18,8 @@ interface BookingFormCateringProps {
   packageOptions?: string[]
   whatsappName?: string
   accent?: string
+  submitLabel?: string
+  submitLabelBuilder?: (formData: Record<string, string>) => string
 }
 
 const WA_NUMBER = '6282237565997'
@@ -29,7 +31,10 @@ export default function BookingFormCatering({
   packageOptions,
   whatsappName = 'myCHEF',
   accent = '#6B8E5A',
+  submitLabel,
+  submitLabelBuilder,
 }: BookingFormCateringProps) {
+  const formId = useId()
   const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState<Record<string, string>>({})
 
@@ -66,7 +71,7 @@ export default function BookingFormCatering({
           href={`https://wa.me/${WA_NUMBER}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-wider px-6 py-3 rounded-full hover:bg-[#1ea855] transition-colors"
+          className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-[#D4B43A]"
         >
           <Phone className="w-4 h-4" /> Open WhatsApp
         </a>
@@ -74,13 +79,17 @@ export default function BookingFormCatering({
     )
   }
 
+  const resolvedSubmitLabel = submitLabelBuilder ? submitLabelBuilder(formData) : submitLabel ?? 'Send via WhatsApp'
+
   const renderField = (field: Field) => {
     const Icon = field.icon
     const value = formData[field.name] || ''
 
+    const fieldId = `${formId}-${field.name}`
+
     return (
       <div key={field.name}>
-        <label className="block text-sm font-medium text-[#1A1A1A] mb-2">
+        <label htmlFor={fieldId} className="block text-sm font-medium text-[#1A1A1A] mb-2">
           {field.label}
           {field.required && <span className="text-red-500 ml-1">*</span>}
         </label>
@@ -90,6 +99,7 @@ export default function BookingFormCatering({
           )}
           {field.type === 'select' ? (
             <select
+              id={fieldId}
               value={value}
               onChange={(e) => handleChange(field.name, e.target.value)}
               className={`w-full rounded-xl border border-[#E8E6E3] bg-white px-3 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#6B8E5A] transition-colors ${Icon ? 'pl-10' : ''}`}
@@ -101,6 +111,7 @@ export default function BookingFormCatering({
             </select>
           ) : field.type === 'textarea' ? (
             <textarea
+              id={fieldId}
               value={value}
               onChange={(e) => handleChange(field.name, e.target.value)}
               placeholder={field.placeholder}
@@ -109,6 +120,7 @@ export default function BookingFormCatering({
             />
           ) : (
             <input
+              id={fieldId}
               type={field.type}
               value={value}
               onChange={(e) => handleChange(field.name, e.target.value)}
@@ -134,10 +146,10 @@ export default function BookingFormCatering({
 
       <button
         type="submit"
-        className="w-full mt-6 inline-flex items-center justify-center gap-2 text-white font-semibold text-sm uppercase tracking-wider px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
+        className="mt-6 inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-opacity hover:opacity-90"
         style={{ background: accent }}
       >
-        <MessageSquare className="w-4 h-4" /> Send via WhatsApp
+        <MessageSquare className="w-4 h-4" /> {resolvedSubmitLabel}
       </button>
       <p className="text-xs text-center text-[#4A4745]/60 mt-3">
         No payment required now. We will confirm availability first.

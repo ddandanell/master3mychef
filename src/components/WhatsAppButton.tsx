@@ -1,90 +1,39 @@
-import { useState } from 'react'
-import { MessageCircle, X } from 'lucide-react'
-import { useUniverse } from '@/contexts/UniverseContext'
+import { MessageCircle } from 'lucide-react'
+import { useLocation } from 'react-router-dom'
+import { trackWhatsAppClick } from '@/lib/analytics'
 
-interface Contact {
-  name: string
-  number: string
-  role: string
-  photo?: string
-  message: string
-}
+const WHATSAPP_NUMBER = '6282237565997'
+const WHATSAPP_MESSAGE = "Hi myCHEF! I'd like to enquire about your services."
 
-const CONTACTS: Record<string, Contact> = {
-  luna: {
-    name: 'Sofia',
-    number: '6282237565997',
-    role: 'Fine Dining Concierge',
-    message: 'Hi Sofia, I\'m interested in a fine dining experience at my villa. Can you share current menu options?',
-  },
-  sol: {
-    name: 'Daniel',
-    number: '6282237565997',
-    role: 'Villa Chef Coordinator',
-    message: 'Hi Daniel, we\'re staying at a villa and would love to explore private chef options.',
-  },
-  aura: {
-    name: 'Olivia',
-    number: '6282237565997',
-    role: 'Events Manager',
-    message: 'Hi Olivia, I\'m planning an event and would love your help with the details.',
-  },
-  hub: {
-    name: 'myCHEF',
-    number: '6282237565997',
-    role: 'General Inquiry',
-    message: 'Hi, I\'d like to learn more about myCHEF services.',
-  },
+function getPageSource(pathname: string) {
+  const normalized = pathname.replace(/^\/+|\/+$/g, '')
+  return normalized ? normalized.replace(/\//g, '_') : 'home'
 }
 
 export default function WhatsAppButton() {
-  const { universe } = useUniverse()
-  const [open, setOpen] = useState(false)
-
-  const contact = CONTACTS[universe] || CONTACTS.hub
-  const waUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(contact.message)}`
+  const location = useLocation()
+  const source = getPageSource(location.pathname)
+  const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-      {open && (
-        <div
-          className="mb-2 rounded-2xl p-4 shadow-2xl max-w-[280px]"
-          style={{ background: 'var(--u-surface)', border: '1px solid var(--u-border)' }}
-        >
-          <div className="flex items-start justify-between mb-2">
-            <div>
-              <p className="text-sm font-semibold" style={{ color: 'var(--u-text)' }}>
-                Chat with {contact.name}
-              </p>
-              <p className="text-xs" style={{ color: 'var(--u-text-muted)' }}>
-                {contact.role} — Response within the hour
-              </p>
-            </div>
-            <button type="button" onClick={() => setOpen(false)} aria-label="Close chat" className="p-1 rounded-full hover:bg-black/5">
-              <X className="w-4 h-4" style={{ color: 'var(--u-text-muted)' }} />
-            </button>
-          </div>
-          <a
-            href={waUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-white text-sm font-medium transition-transform hover:scale-[1.02] active:scale-[0.98]"
-            style={{ background: '#25D366' }}
-          >
-            <MessageCircle className="w-4 h-4" />
-            Start Chat
-          </a>
+    <div className="fixed bottom-6 right-6 z-50 hidden items-center md:flex">
+      <div className="group relative flex items-center">
+        <div className="pointer-events-none absolute right-full mr-3 hidden whitespace-nowrap rounded-full border border-[#C5A028]/30 bg-black/90 px-3 py-2 text-xs font-medium text-white opacity-0 shadow-lg transition-all duration-200 sm:block sm:translate-x-2 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 sm:group-focus-within:translate-x-0 sm:group-focus-within:opacity-100">
+          Chat with us on WhatsApp
         </div>
-      )}
 
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 active:scale-95 whatsapp-pulse"
-        style={{ background: '#25D366' }}
-        aria-label="Open WhatsApp"
-      >
-        <MessageCircle className="w-7 h-7 text-white" />
-      </button>
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with us on WhatsApp"
+          className="flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A028] focus-visible:ring-offset-2 focus-visible:ring-offset-black active:scale-95"
+          style={{ backgroundColor: '#25D366' }}
+          onClick={() => trackWhatsAppClick(source)}
+        >
+          <MessageCircle className="h-6 w-6" />
+        </a>
+      </div>
     </div>
   )
 }

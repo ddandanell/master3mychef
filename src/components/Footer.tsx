@@ -81,7 +81,7 @@ export default function Footer() {
 
         {/* Secondary nav row */}
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-6 border-t border-white/10 text-sm text-white/60">
-          {PRIMARY_NAV.filter((n) => !['Fine Dining', 'Catering', 'Events', 'In-Villa Service', 'Staffing'].includes(n.label)).map((l) => (
+          {PRIMARY_NAV.filter((n) => !['Fine Dining', 'Events & Catering', 'Events', 'In-Villa Service', 'Staffing'].includes(n.label)).map((l) => (
             <Link key={l.href} to={l.href} className="hover:text-[#C5A028] transition-colors">
               {l.label}
             </Link>

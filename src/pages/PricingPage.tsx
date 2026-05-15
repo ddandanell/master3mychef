@@ -1,5 +1,24 @@
 import { Tag } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
+import { breadcrumbSchema } from '@/components/SeoHead'
+import PricingCalculator from '@/components/PricingCalculator'
+
+const PRICING_OFFER_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Offer',
+  name: 'myCHEF Bali services from IDR 250,000',
+  description: 'Starting prices for private chef, catering, event, and villa staffing services in Bali.',
+  price: '250000',
+  priceCurrency: 'IDR',
+  availability: 'https://schema.org/InStock',
+  url: 'https://mychef.id/pricing',
+  seller: { '@id': 'https://mychef.id/#business' },
+  itemOffered: {
+    '@type': 'Service',
+    name: 'myCHEF pricing',
+    description: 'Starting prices across private chef, catering, events, and hospitality staffing in Bali.',
+  },
+}
 
 const SECTIONS = [
   {
@@ -13,6 +32,15 @@ const SECTIONS = [
     <p><strong>Events:</strong> Custom quotes based on guest count, menu complexity, staffing needs, and equipment. We deliver a detailed proposal within 24 hours.</p>`,
     image: '/generated/pricing-hero.webp',
     imageAlt: 'Elegant fine dining plate',
+  },
+  {
+    id: 'pricing-calculator',
+    type: 'custom' as const,
+    subtitle: 'Quick Estimate',
+    title: 'Build Your Estimate in Seconds',
+    body: 'Choose a service type, guest range, duration and any add-ons to see a live starting price before you message us on WhatsApp.',
+    bg: 'accent' as const,
+    render: <PricingCalculator hideHeader />,
   },
   {
     id: 'fine-dining-pricing',
@@ -117,6 +145,9 @@ export default function PricingPage() {
       slug="pricing"
       title="Pricing"
       description="Transparent pricing for private chef services in Bali — hourly rates, menu pricing, and full-event packages. No hidden fees. No markup on groceries."
+      seoTitle="Private Chef Pricing Bali | Transparent Rates | myCHEF.id"
+      seoDescription="Clear, honest pricing for private chefs, catering, and events in Bali. From IDR 350K per person. Book via WhatsApp."
+      canonicalUrl="https://mychef.id/pricing"
       h1="Transparent Pricing for Every Experience"
       subtitle="No hidden fees. No markup on groceries. Clear pricing before you commit."
       heroImage="/generated/pricing-hero.webp"
@@ -127,6 +158,10 @@ export default function PricingPage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
+      extraJsonLd={[
+        breadcrumbSchema('Pricing', 'https://mychef.id/pricing'),
+        PRICING_OFFER_SCHEMA,
+      ]}
       ctaText="Get a Custom Quote"
       ctaSubtext="Detailed proposal within 24 hours. No obligation."
     />

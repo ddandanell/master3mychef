@@ -10,8 +10,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
-  breadcrumbSchema,
-  serviceSchema,
+  cateringBreadcrumbSchema,
+  cateringServiceSchema,
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
@@ -28,7 +28,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20drop-off%20catering%20in%20Bali.'
 const SITE = 'https://mychef.id'
-const PAGE_URL = `${SITE}/catering/drop-off-catering-bali`
+const PAGE_URL = `${SITE}/catering/drop-off-catering`
 const ACCENT = '#C5A028'
 
 /* ───────── Packages ───────── */
@@ -231,16 +231,16 @@ export default function CateringDropOffPage() {
         title="Drop-Off Catering Bali | Delivered Event Food & Platters"
         description="Drop-off catering in Bali for villa lunches, small events, staff meals, parties, and easy group dining without full-service staff."
         canonical={PAGE_URL}
-        ogImage={`${SITE}/generated/hero-dropoff-catering.jpg`}
+        ogImage={`${SITE}/generated/hero-dropoff-catering.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Drop-Off Catering Bali', 'Prepared catering delivered to your villa without staff. Ready to reheat, plate, or serve.', PAGE_URL, 'IDR'),
+          cateringServiceSchema('Drop-Off Catering Bali', 'Prepared catering delivered to Bali villas and venues for low-effort lunches, staff meals, and casual group dining. myCHEF.id sends ready-to-serve dishes with delivery coordination and reheating guidance across Bali.', PAGE_URL),
           offerSchema('Family Dinner Drop-Off', 350000, 'IDR', PAGE_URL),
           offerSchema('Dinner Party Drop-Off', 500000, 'IDR', PAGE_URL),
           offerSchema('Grazing Dinner Drop-Off', 650000, 'IDR', PAGE_URL),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Drop-Off Catering Bali', PAGE_URL, 'Catering', `${SITE}/catering`),
+          cateringBreadcrumbSchema('Drop-Off Catering Bali', PAGE_URL),
         ]}
       />
 
@@ -250,7 +250,7 @@ export default function CateringDropOffPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-dropoff-catering.jpg"
+            src="/generated/hero-dropoff-catering.webp"
             alt="Drop-off catering boxes with prepared food on a Bali villa dining table"
             width={1920}
             height={1080}

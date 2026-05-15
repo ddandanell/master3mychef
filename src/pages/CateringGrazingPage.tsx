@@ -9,8 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
-  breadcrumbSchema,
-  serviceSchema,
+  cateringBreadcrumbSchema,
+  cateringServiceSchema,
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
@@ -27,7 +27,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20a%20grazing%20table%20in%20Bali.'
 const SITE = 'https://mychef.id'
-const PAGE_URL = `${SITE}/catering/grazing-tables-bali`
+const PAGE_URL = `${SITE}/catering/grazing-tables`
 
 const GOLD = '#C5A028'
 
@@ -196,7 +196,7 @@ export default function CateringGrazingPage() {
         ogImage={`${SITE}/generated/pkg-grazing.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Grazing Tables Bali', 'Styled grazing tables, cheese platters, and charcuterie boards for villa parties, weddings, and events across Bali.', PAGE_URL, 'IDR'),
+          cateringServiceSchema('Grazing Tables Bali', 'Styled grazing tables in Bali for villa parties, weddings, poolside events, and welcome receptions with cheese, charcuterie, fruit, and breads. myCHEF.id designs, delivers, and sets each table across Bali.', PAGE_URL),
           offerSchema('Small Grazing Board', 650000, 'IDR', PAGE_URL),
           offerSchema('Medium Villa Table', 2700000, 'IDR', PAGE_URL),
           offerSchema('Full Event Grazing Table', 350000, 'IDR', PAGE_URL),
@@ -204,7 +204,7 @@ export default function CateringGrazingPage() {
           offerSchema('Corporate Reception Table', 300000, 'IDR', PAGE_URL),
           faqPageSchema(schemaFaq),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Grazing Tables Bali', PAGE_URL, 'Catering', `${SITE}/catering`),
+          cateringBreadcrumbSchema('Grazing Tables Bali', PAGE_URL),
         ]}
       />
 

@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { MessageCircle, Mail, MapPin, Phone, ArrowRight } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import { ContactRiskReversal } from '@/components/shared'
 
 const WA = '6282237565997'
-const SITE = 'https://mychef.id'
 
 interface Concierge {
   id: 'sofia' | 'daniel' | 'olivia' | 'marco'
@@ -39,7 +40,7 @@ const CONCIERGES: Concierge[] = [
     desc: 'Menus, dietary preferences, wine pairings, and reservations for our two tasting experiences in your villa.',
     portrait: '/generated/portrait-sofia.webp',
     accent: '#C5A028',
-    message: "Hi Sofia, I'd like to book a fine dining experience at my villa.",
+    message: "Hi myCHEF, I'd like to book a fine dining experience at my villa.",
   },
   {
     id: 'daniel',
@@ -91,11 +92,11 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Contact myCHEF — Concierges by Service | myCHEF"
-        description="Speak directly with the right person — Sofia for fine dining, Daniel for villa chef catering, Olivia for events, Marco for partnerships and staffing."
-        canonical={`${SITE}/contact`}
-        ogImage={`${SITE}/generated/contact-hero.webp`}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Contact', `${SITE}/contact`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
+        title={getPageMeta('contact').title}
+        description={getPageMeta('contact').description}
+        canonical={getPageMeta('contact').canonical}
+        ogImage={getPageMeta('contact').ogImage}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Contact', getPageMeta('contact').canonical), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* ── HERO ─────────────────────────────────────────────────────── */}
@@ -123,17 +124,20 @@ export default function ContactPage() {
             className="text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] mb-7 max-w-[900px]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Speak to the right person
+            We&rsquo;ll reply within 1 hour on WhatsApp.
           </h1>
           <p className="text-base md:text-xl text-white/75 mb-10 max-w-[640px] leading-relaxed">
-            Four people lead the four services. Pick the one closest to what you need — we usually reply within the hour.
+            Choose the right concierge below or send one quick WhatsApp message and we will route your booking request instantly.
           </p>
           <div className="flex items-center gap-3 text-[#C5A028] text-sm">
-            <span className="inline-block w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
+            <span className="inline-block w-2 h-2 rounded-full bg-[#C5A028] animate-pulse" />
             <span style={{ fontFamily: "'Cormorant Garamond', serif", letterSpacing: '0.15em' }}>WhatsApp online now</span>
           </div>
         </div>
       </section>
+
+      {/* ── RISK REVERSAL ─────────────────────────────────────────────── */}
+      <ContactRiskReversal />
 
       {/* ── THE FOUR INDONESIAN LEADERS ───────────────────────────────── */}
       <section className="px-6 md:px-12 py-20 md:py-28">
@@ -232,8 +236,27 @@ export default function ContactPage() {
 
           {/* Right — form */}
           <div className="order-1 md:order-2">
-            <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">Not sure who to ask?</p>
-            <h2 className="font-playfair text-3xl md:text-4xl leading-tight mb-4">Send a general note</h2>
+            <div className="mb-6 rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-sm">
+              <p className="text-sm text-[#4A4745] mb-4">Prefer to just message us? →</p>
+              <a
+                href={`https://wa.me/${WA}?text=${encodeURIComponent("Hi myCHEF, I'd like help with a booking in Bali.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-black transition-colors hover:bg-[#D4B43A]"
+              >
+                <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF — Reply in 1 Hour
+              </a>
+              <p className="mt-3 text-xs text-[#8A8785] text-center">Fastest option for availability, menus, and pricing.</p>
+            </div>
+
+            <div className="mb-6 flex items-center gap-3">
+              <div className="h-px flex-1 bg-[#E5E3E0]" />
+              <span className="text-[11px] uppercase tracking-[0.3em] text-[#8A8785]">Form as secondary option</span>
+              <div className="h-px flex-1 bg-[#E5E3E0]" />
+            </div>
+
+            <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">Need to send more detail?</p>
+            <h2 className="font-playfair text-3xl md:text-4xl leading-tight mb-4">Send a detailed note</h2>
             <p className="text-[#4A4745] mb-8">
               We route it to the right person and reply on WhatsApp — usually within the hour.
             </p>
@@ -259,7 +282,7 @@ export default function ContactPage() {
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black text-xs uppercase tracking-[0.25em] font-semibold px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
                 >
-                  Send Message
+                  Send Details via WhatsApp
                 </button>
                 <p className="text-xs text-[#8A8785] text-center">Opens WhatsApp with your note pre-filled.</p>
               </form>

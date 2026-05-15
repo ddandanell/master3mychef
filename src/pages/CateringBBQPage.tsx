@@ -9,8 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
-  breadcrumbSchema,
-  serviceSchema,
+  cateringBreadcrumbSchema,
+  cateringServiceSchema,
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
@@ -154,17 +154,17 @@ export default function CateringBBQPage() {
       <SeoHead
         title="BBQ Catering Bali | Private Villa BBQ & Chef Service"
         description="BBQ catering in Bali for villas, pool parties, birthdays, weddings, and corporate events with chefs, setup, service, and cleanup."
-        canonical={`${SITE}/catering/bbq-catering-bali`}
-        ogImage={`${SITE}/generated/hero-buffet-catering.jpg`}
+        canonical={`${SITE}/catering/bbq-catering`}
+        ogImage={`${SITE}/bbq-poolside.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('BBQ Catering Bali', 'Live BBQ catering with chef, service staff, ingredients, equipment, setup, service, pack-up, and cleanup for Bali villas and events.', `${SITE}/catering/bbq-catering-bali`, 'IDR'),
-          offerSchema('Indonesian BBQ', 450000, 'IDR', `${SITE}/catering/bbq-catering-bali`),
-          offerSchema('International BBQ', 600000, 'IDR', `${SITE}/catering/bbq-catering-bali`),
-          offerSchema('Premium Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering-bali`),
+          cateringServiceSchema('BBQ Catering Bali', 'Live-fire BBQ catering for Bali villas, birthdays, weddings, and relaxed private events with chefs grilling on site. myCHEF.id handles ingredients, setup, service, and cleanup across Bali.', `${SITE}/catering/bbq-catering`),
+          offerSchema('Indonesian BBQ', 450000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('International BBQ', 600000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('Premium Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('BBQ Catering Bali', `${SITE}/catering/bbq-catering-bali`, 'Catering', `${SITE}/catering`),
+          cateringBreadcrumbSchema('BBQ Catering Bali', `${SITE}/catering/bbq-catering`),
         ]}
       />
 
@@ -174,7 +174,7 @@ export default function CateringBBQPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-buffet-catering.jpg"
+            src="/generated/hero-buffet-catering.webp"
             alt="Chef grilling seafood and meat at a Bali villa BBQ by the pool"
             width={1920}
             height={1080}
@@ -295,7 +295,7 @@ export default function CateringBBQPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/catering/villa-catering-bali" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/villa-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
               Explore Villa Catering <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -658,7 +658,7 @@ export default function CateringBBQPage() {
               <h4 className="font-semibold text-sm mb-1">Fine Dining</h4>
               <p className="text-xs text-[#4A4745]">7–11 course tasting menus in your villa</p>
             </Link>
-            <Link to="/catering/villa-catering-bali" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
               <h4 className="font-semibold text-sm mb-1">Villa Catering</h4>
               <p className="text-xs text-[#4A4745]">Full-service catering for villa groups</p>
             </Link>

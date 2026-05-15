@@ -10,8 +10,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
-  breadcrumbSchema,
-  serviceSchema,
+  cateringBreadcrumbSchema,
+  cateringServiceSchema,
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
@@ -152,17 +152,17 @@ export default function CateringRetreatPage() {
       <SeoHead
         title="Retreat Catering Bali | Yoga, Wellness & Group Meals"
         description="Retreat catering in Bali for yoga, wellness, business, and creative retreats with healthy menus, dietary planning, and multi-day service."
-        canonical={`${SITE}/catering/retreat-catering-bali`}
-        ogImage={`${SITE}/generated/hero-retreats.jpg`}
+        canonical={`${SITE}/catering/retreat-catering`}
+        ogImage={`${SITE}/generated/hero-retreats.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Retreat Catering Bali', 'Multi-day wellness-focused catering for yoga, wellness, business, and creative retreats in Bali. Plant-forward, dietary accommodation.', `${SITE}/catering/retreat-catering-bali`, 'IDR'),
-          offerSchema('Yoga Retreat Catering', 400000, 'IDR', `${SITE}/catering/retreat-catering-bali`),
-          offerSchema('Wellness Retreat Catering', 450000, 'IDR', `${SITE}/catering/retreat-catering-bali`),
-          offerSchema('Corporate Retreat Catering', 500000, 'IDR', `${SITE}/catering/retreat-catering-bali`),
+          cateringServiceSchema('Retreat Catering Bali', 'Retreat catering in Bali for yoga, wellness, business, and creative retreats with plant-forward menus and dietary planning. myCHEF.id runs consistent multi-day meal service, timing, and kitchen operations across Bali.', `${SITE}/catering/retreat-catering`),
+          offerSchema('Yoga Retreat Catering', 400000, 'IDR', `${SITE}/catering/retreat-catering`),
+          offerSchema('Wellness Retreat Catering', 450000, 'IDR', `${SITE}/catering/retreat-catering`),
+          offerSchema('Corporate Retreat Catering', 500000, 'IDR', `${SITE}/catering/retreat-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 156),
-          breadcrumbSchema('Retreat Catering Bali', `${SITE}/catering/retreat-catering-bali`, 'Catering', `${SITE}/catering`),
+          cateringBreadcrumbSchema('Retreat Catering Bali', `${SITE}/catering/retreat-catering`),
         ]}
       />
 
@@ -172,7 +172,7 @@ export default function CateringRetreatPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-retreats.jpg"
+            src="/generated/hero-retreats.webp"
             alt="Healthy retreat catering in Bali with tropical breakfast bowls and yoga guests"
             width={1920}
             height={1080}
@@ -478,7 +478,7 @@ export default function CateringRetreatPage() {
       {/* ═══════ SECTION 12: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/hero-retreats.jpg" alt="Retreat catering in Bali" className="w-full h-full object-cover" loading="lazy" />
+          <img src="/generated/hero-retreats.webp" alt="Retreat catering in Bali" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">
@@ -516,7 +516,7 @@ export default function CateringRetreatPage() {
               <h4 className="font-semibold text-sm mb-1">Fine Dining</h4>
               <p className="text-xs text-[#4A4745]">7–11 course tasting menus in your villa</p>
             </Link>
-            <Link to="/catering/villa-catering-bali" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
               <h4 className="font-semibold text-sm mb-1">Villa Catering</h4>
               <p className="text-xs text-[#4A4745]">Full-service catering for villa groups</p>
             </Link>

@@ -1,210 +1,265 @@
-import { useState, useMemo } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
-  Check,
   MessageCircle,
-  Plus,
-  Minus,
+  Check,
   ChefHat,
-  Calendar,
   Home,
-  Sparkles,
-  RefreshCw,
   Users,
-  Shield,
+  ShieldCheck,
   Clock,
-  Award,
   Star,
+  ArrowRight,
+  Phone,
+  RefreshCw,
+  FileText,
 } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
-import BestPartnerBadge from '@/components/BestPartnerBadge'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import SeoHead, {
+  localBusinessSchema,
+  breadcrumbSchema,
+  serviceSchema,
+  faqPageSchema,
+  aggregateRatingSchema,
+} from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import LocationChips from '@/components/LocationChips'
+import { Breadcrumb } from '@/components/shared'
+import PressStrip from '@/components/shared/PressStrip'
+import BestPartnerBadge from '@/components/BestPartnerBadge'
+import { Button } from '@/components/ui/button'
+import { StaffingRiskReversal } from '@/components/shared'
 
-const WA = '6282237565997'
+gsap.registerPlugin(ScrollTrigger)
+
 const SITE = 'https://mychef.id'
+const WA_NUMBER = '6282237565997'
+const WA_MARCO = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
+  "Hi Marco, I'm looking to hire hospitality staff for my villa/hotel in Bali. Can you help?",
+)}`
 
-// /staffing — positioned as a recruitment team, not a service.
-// "We have a network of vetted private chefs across Bali. Tell us what you
-// need; we match a chef and place them in your villa for as long as you need."
-//
-// All hero / section images are generated via BFL FLUX, paths in public/generated/.
-
-const STAFFING_TYPES = [
-  { icon: ChefHat, title: 'Full-Time Chef', desc: 'Daily household chef support.' },
-  { icon: Calendar, title: 'Part-Time Chef', desc: 'Flexible chef coverage several days per week.' },
-  { icon: Home, title: 'Live-In Chef', desc: 'Chef stays at the villa or property.' },
-  { icon: Sparkles, title: 'Retreat Chef', desc: 'Wellness and retreat meal service.' },
-  { icon: RefreshCw, title: 'Temporary Chef Cover', desc: 'Holiday or short-term replacement.' },
-  { icon: Users, title: 'Event Staffing', desc: 'Extra chefs and hospitality for larger events.' },
+// ── 1. THREE SERVICE CARDS ──────────────────────────────────────────────────
+const SERVICES = [
+  {
+    icon: ChefHat,
+    title: 'Private Chef Placement',
+    slug: '/staffing/private-chef-placement',
+    tag: 'Most Popular',
+    price: 'From IDR 5,500,000/month',
+    desc: 'Long-term chef placement for villas, residences, and family homes. Full-time, part-time, or seasonal. We source, vet, trial, and place — you get a chef who fits your kitchen and your household.',
+    features: [
+      'Full-time, part-time, seasonal options',
+      'Cuisine-matched to your preferences',
+      '30-day replacement guarantee',
+      'Contract & payroll guidance included',
+    ],
+  },
+  {
+    icon: Home,
+    title: 'Live-In Villa Chef',
+    slug: '/staffing/live-in-chef',
+    tag: 'Premium',
+    price: 'From IDR 8,000,000/month',
+    desc: 'Chef lives on-site. Daily market runs, full household board, dietary management, and guest catering — all without lifting a finger. The closest thing to a private restaurant in your villa.',
+    features: [
+      'On-site accommodation arranged',
+      'Daily grocery sourcing included',
+      'All meals — breakfast to dinner',
+      'Event and guest catering capability',
+    ],
+  },
+  {
+    icon: Users,
+    title: 'Villa & Household Staff',
+    slug: '/staffing/villa-staff',
+    tag: 'B2B & Bulk',
+    price: 'Contact for pricing',
+    desc: 'Butlers, housekeepers, villa managers, waiters, and event staff — placed as individuals or as a full team. Used by villa management companies, hotels, and luxury property operators across Bali.',
+    features: [
+      'Villa managers & household managers',
+      'Butlers, waiters, housekeepers',
+      'Hotel & restaurant staffing',
+      'Individual or full-team placement',
+    ],
+  },
 ]
 
-const WHAT_CHEFS_DO = [
-  'Breakfast service in the villa',
-  'Lunch and dinner cooking',
-  'Weekly meal prep and stocking',
-  'Healthy and macro-balanced menus',
-  'Family-friendly home cooking',
-  'Villa guest hospitality support',
-  'Daily grocery shopping',
-  'Kitchen management and stock control',
-  'Menu planning and weekly variation',
-  'Special diets — vegan, gluten-free, halal, kosher',
+// ── 2. WHY MYCHEF TRUST POINTS ──────────────────────────────────────────────
+const TRUST_POINTS = [
+  {
+    icon: ShieldCheck,
+    title: 'We Know Them Personally',
+    desc: 'We have worked beside every person in our network. We know their strengths, their temperament, and which households they fit. We do not send CVs — we send people we trust.',
+  },
+  {
+    icon: RefreshCw,
+    title: 'Zero-Risk Placement',
+    desc: '30-day replacement guarantee on every placement. If the match is not right for any reason, we restart the search at no charge. No questions, no delays.',
+  },
+  {
+    icon: FileText,
+    title: 'We Handle the Paperwork',
+    desc: 'Standard staffing contracts, payroll guidance, and Indonesian employment compliance — all provided. Nothing falls through the cracks after the placement is made.',
+  },
 ]
 
-const HOW_IT_WORKS = [
-  { step: '01', title: 'Tell us what you need', desc: 'Type of chef, household size, cuisine direction, any dietary needs.' },
-  { step: '02', title: 'For how long', desc: 'A week, a month, the full season, or long-term placement.' },
-  { step: '03', title: 'Which kind of person', desc: 'Quiet and unobtrusive, family-friendly, experienced with kids, English-speaking — your call.' },
-  { step: '04', title: 'What they will do', desc: 'Breakfasts only, full board, meal prep, event service — define the scope.' },
-  { step: '05', title: 'How many times per week', desc: 'Daily, three days a week, twice a week — flexible to your schedule.' },
-  { step: '06', title: 'Shopping and groceries', desc: 'Should the chef shop daily? Stock weekly? Run on a household budget? We set this up.' },
-  { step: '07', title: 'Cuisine specialty', desc: 'Mediterranean, Balinese, Asian fusion, plant-based, halal — we match the right chef.' },
+// ── 3. HOW IT WORKS (3 steps) ───────────────────────────────────────────────
+const STEPS = [
+  {
+    number: '01',
+    title: 'Brief Us',
+    desc: 'Tell us the role, schedule, cuisine direction, and household size. Takes five minutes on WhatsApp or the form below. The more specific, the better the match.',
+    icon: MessageCircle,
+  },
+  {
+    number: '02',
+    title: 'We Match',
+    desc: 'Within 24 hours, we shortlist 2–3 vetted candidates from our active network. You review profiles, choose your top pick, and we arrange an in-person or video interview.',
+    icon: Users,
+  },
+  {
+    number: '03',
+    title: 'We Place',
+    desc: 'Contract signed, onboarding handled, first-week check-in included. We stay in contact for the first month to make sure the match is working on both sides.',
+    icon: ShieldCheck,
+  },
 ]
 
+// ── 4. FAQ (5 questions) ────────────────────────────────────────────────────
 const FAQS = [
-  { q: 'How do you vet chefs?', a: 'Every chef in our network passes a background check, hands-on cooking trial, hospitality assessment, and a reference call. We do not place anyone we would not put in our own home.' },
-  { q: 'What if a chef is not the right fit?', a: 'The first week is a trial. If the match is not right, we replace the chef at no charge — we maintain a bench of vetted backups for every active placement.' },
-  { q: 'Can we hire a chef for just one or two weeks?', a: 'Yes. Short-term placements start at one week. Retreat and event staffing can be a single day. Long-term placements start at one month.' },
-  { q: 'Who handles payroll and contracts?', a: 'We provide standard staffing contracts and monthly invoicing. For full-time hires we can advise on Indonesian employment compliance and household structure.' },
-  { q: 'What does it cost?', a: 'Full-time placements start at IDR 8M/month. Part-time from IDR 4M/month. The price includes the chef\'s salary and our placement fee. Groceries and accommodation (for live-in) are separate. The form below returns a tailored proposal within 24 hours.' },
-  { q: 'Do you serve outside Bali?', a: 'Yes. Our network extends to Jakarta and on request to private residences across Indonesia.' },
-  { q: 'How long does placement take?', a: 'Most placements are confirmed within 48 hours of your brief. For specialized cuisine or live-in arrangements, allow 3–5 days. Urgent requests: message us on WhatsApp.' },
-  { q: 'Can we interview the chef first?', a: 'Yes. We arrange a video call or in-person meeting before confirming the placement. For long-term hires, we recommend a trial dinner where the chef cooks for your household.' },
-  { q: 'What is the difference between an agency and myCHEF?', a: 'Agencies send CVs. We send people we know. Every chef in our network has cooked beside our executive chef. We know their strengths, their temperament, and which households they fit.' },
-  { q: 'Do you replace chefs mid-contract?', a: 'Yes. If a chef leaves or the match is not working, we replace within 24 hours at no charge. This is standard for all placements.' },
-  { q: 'What if the chef gets sick?', a: 'We maintain a bench of vetted backup chefs for every active placement. If your chef is unwell, we send a replacement within 24 hours at no charge.' },
-  { q: 'Are groceries included in the price?', a: 'No. Groceries are billed separately based on actual receipts. Most households set a weekly budget (e.g. IDR 2–5M/week) and the chef shops within it. You see every receipt.' },
-  { q: 'How do I pay?', a: 'We invoice monthly via bank transfer (IDR or USD), Wise, or credit card. For long-term placements, we can set up automatic monthly billing.' },
-  { q: 'What languages do the chefs speak?', a: 'All chefs speak conversational English. Many speak additional languages. If you need a specific language (Mandarin, French, Japanese), let us know and we will match accordingly.' },
-
+  {
+    q: 'What types of staff do you place?',
+    a: 'Private chefs, live-in chefs, villa managers, butlers, housekeepers, waiters, event staff, and household managers. For hotels and restaurants we can build full-team briefs on request.',
+  },
+  {
+    q: 'How quickly can you fill a position?',
+    a: 'Most private chef placements are confirmed within 48 hours of receiving a brief. For live-in arrangements or management roles, allow 3–5 days for profiling and a trial session. Urgent requests: message Marco directly on WhatsApp.',
+  },
+  {
+    q: 'What if the staff member is not the right fit?',
+    a: 'Every placement includes a 30-day trial period. If the match is not working — for any reason — we replace at no charge. We maintain a bench of vetted backup candidates for every active placement.',
+  },
+  {
+    q: 'Do you handle contracts and payroll?',
+    a: 'Yes. We provide standard Indonesian staffing contracts and payroll guidance. For long-term or full-team placements, we can advise on employment compliance and household structure. All included in the placement fee.',
+  },
+  {
+    q: 'What does it cost?',
+    a: 'Private chef placement starts from IDR 5,500,000/month (part-time) and IDR 9,500,000/month (full-time). Our placement fee is one month\'s salary, which covers sourcing, vetting, trials, contract, and six months of ongoing support. Villa & household staff pricing is quoted per role.',
+  },
 ]
 
-interface StaffingForm {
-  schedule: 'full-time' | 'part-time' | ''
-  arrangement: 'live-in' | 'live-out' | ''
-  people: number
-  meals: string[]
-  cuisine: string
-  dietary: string
-  daysPerWeek: number
-  startDate: string
-  location: string
-  budget: string
-  whatsapp: string
-  email: string
-}
-
-const INITIAL: StaffingForm = {
-  schedule: '',
-  arrangement: '',
-  people: 2,
-  meals: [],
-  cuisine: '',
-  dietary: '',
-  daysPerWeek: 5,
-  startDate: '',
-  location: '',
-  budget: '',
-  whatsapp: '',
-  email: '',
-}
-
-const MEAL_OPTIONS = ['Breakfast', 'Lunch', 'Dinner', 'Meal prep only']
+// ── 5. STATS BAR ─────────────────────────────────────────────────────────────
+const STATS = [
+  { icon: Users, value: '50+', label: 'Active Staff' },
+  { icon: Home, value: '560+', label: 'Villas Served' },
+  { icon: Clock, value: '48h', label: 'Avg. Placement Time' },
+  { icon: Star, value: '4.9 ★', label: 'Client Rating' },
+]
 
 export default function StaffingPage() {
-  const [form, setForm] = useState<StaffingForm>(INITIAL)
-  const update = <K extends keyof StaffingForm>(key: K, value: StaffingForm[K]) =>
-    setForm((f) => ({ ...f, [key]: value }))
+  const ref = useRef<HTMLDivElement>(null)
 
-  const waMessage = useMemo(() => {
-    const lines = ['Hi myCHEF, I would like a staffing quote.', '']
-    lines.push(`Schedule: ${form.schedule || '—'}`)
-    lines.push(`Arrangement: ${form.arrangement || '—'}`)
-    lines.push(`People: ${form.people}`)
-    lines.push(`Meals: ${form.meals.length ? form.meals.join(', ') : '—'}`)
-    lines.push(`Cuisine: ${form.cuisine || '—'}`)
-    lines.push(`Dietary needs: ${form.dietary || '—'}`)
-    lines.push(`Days per week: ${form.daysPerWeek}`)
-    lines.push(`Start date: ${form.startDate || '—'}`)
-    lines.push(`Location: ${form.location || '—'}`)
-    lines.push(`Budget: ${form.budget || '—'}`)
-    if (form.whatsapp) lines.push(`WhatsApp: ${form.whatsapp}`)
-    if (form.email) lines.push(`Email: ${form.email}`)
-    return lines.join('\n')
-  }, [form])
-
-  const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(waMessage)}`
-  const canSubmit = !!form.schedule && !!form.arrangement && form.meals.length > 0
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        '.staffing-reveal',
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.12,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: '.staffing-reveal', start: 'top 87%', once: true },
+        },
+      )
+    }, ref)
+    return () => ctx.revert()
+  }, [])
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Chef Staffing Bali | Full-Time, Part-Time, Live-In — myCHEF"
-        description="Recruitment for private villa chefs across Bali. Full-time, part-time, live-in. A week, a month, or long-term. From IDR 8M/month."
-        canonical={`${SITE}/staffing`}
-        ogImage={`${SITE}/generated/staffing-hero.webp`}
+        title={getPageMeta('staffing').title}
+        description={getPageMeta('staffing').description}
+        canonical={getPageMeta('staffing').canonical}
+        ogImage={getPageMeta('staffing').ogImage}
         jsonLd={[
           localBusinessSchema,
           serviceSchema(
-            'Private Chef Staffing Bali',
-            'Full-time, part-time, and live-in private chef placement for villas and households across Bali. Vetted network, trial week, 24h replacement.',
+            'Hospitality Staffing Bali',
+            'Private chef, live-in chef, and villa household staff placement across Bali. Vetted network, 48h confirmation, 30-day replacement guarantee.',
             `${SITE}/staffing`,
-            'IDR'
+            'IDR',
           ),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 500),
+          aggregateRatingSchema(4.9, 560),
           breadcrumbSchema('Staffing', `${SITE}/staffing`),
         ]}
       />
 
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative w-full min-h-[78vh] flex items-end overflow-hidden">
+      {/* ── BREADCRUMB ──────────────────────────────────────────────────── */}
+      <div className="pt-24 md:pt-28 px-6 max-w-[1280px] mx-auto">
+        <Breadcrumb items={[{ label: 'Staffing' }]} theme="dark" />
+      </div>
+
+      {/* ── HERO ────────────────────────────────────────────────────────── */}
+      <section className="relative w-full min-h-[80vh] flex items-end overflow-hidden">
         <img
           src="/generated/staffing-hero.webp"
-          alt="Private chef plating an elegant Mediterranean dish in a luxury Bali villa kitchen"
+          alt="Professional hospitality staff at a luxury Bali villa"
           width={1920}
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
+          decoding="async"
         />
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.88))', backdropFilter: 'blur(2px)' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.85))' }}
         />
         <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-24 pt-32 max-w-[1280px] mx-auto w-full text-white">
           <p
-            className="text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-7"
+            className="text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-6"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Private Chef Staffing Bali — Placed 500+ Chefs
+            Staffing &amp; Placement · Bali
           </p>
+          {/* ── META TITLE H1 ── */}
           <h1
-            className="text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] mb-7  max-w-[920px]"
+            className="text-[2.4rem] md:text-6xl lg:text-7xl leading-[1.06] mb-6 max-w-[860px]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Private Chef Staffing in Bali
+            Hire Vetted Hospitality Staff for Your Villa, Hotel or Home.
           </h1>
-          <p className="text-base md:text-xl text-white/75 mb-10 max-w-[640px] leading-relaxed">
-            Part-time and full-time private chefs for villas, families, retreats, and long-term stays — placed by our recruitment team from a vetted network across the island. From IDR 8M/month. Trial week included. Peak season chefs book 4–6 weeks ahead.
+          <p className="text-base md:text-xl text-white/75 mb-10 max-w-[620px] leading-relaxed">
+            Private chefs, live-in chefs, villa staff, and household teams — placed within 48 hours. All background-checked, English-speaking, and trained. For villa managers, hotel owners, and private households across Bali.
           </p>
-          <a
-            href="#quote"
-            className="inline-flex items-center justify-center px-10 py-4 bg-[#C5A028] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors mb-10"
-          >
-            Get 3 Vetted Candidates in 24h
-          </a>
-
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">
+              <a href={WA_MARCO} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-4 h-4" />
+                Request Staff Now — Reply in 1 Hour
+              </a>
+            </Button>
+            <Button asChild variant="secondary" size="brand" className="w-full sm:w-auto">
+              <Link to="/staffing/private-chef-placement">
+                View Chef Placement
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+          </div>
           {/* Trust badges */}
-          <div className="flex flex-wrap gap-x-6 gap-y-3">
+          <div className="flex flex-wrap gap-x-6 gap-y-3 mt-10">
             {[
-              { icon: Shield, label: 'Background Checked' },
-              { icon: Clock, label: 'Trial Week Included' },
-              { icon: RefreshCw, label: '24h Replacement' },
-              { icon: Award, label: 'Vetted Network' },
-              { icon: Star, label: '500+ Placements' },
+              { icon: ShieldCheck, label: 'Background Checked' },
+              { icon: Clock, label: '48h Placement' },
+              { icon: RefreshCw, label: '30-Day Replacement Guarantee' },
+              { icon: Star, label: '4.9 Client Rating' },
             ].map((badge) => (
-              <div key={badge.label} className="flex items-center gap-2 text-white/60">
+              <div key={badge.label} className="flex items-center gap-2 text-white/55">
                 <badge.icon className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />
                 <span className="text-xs tracking-wider uppercase">{badge.label}</span>
               </div>
@@ -213,355 +268,273 @@ export default function StaffingPage() {
         </div>
       </section>
 
-      {/* ── 01 — HOW WE WORK ─────────────────────────────────────────────── */}
-      <section id="recruitment" className="px-6 md:px-12 py-24 md:py-32 max-w-[1280px] mx-auto scroll-mt-24">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <div>
-            <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">01</p>
-            <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-6">A recruitment team for villa kitchens</h2>
-            <p className="text-[#4A4745] text-lg leading-relaxed mb-5">
-              myCHEF runs an active network of vetted private chefs across Bali. We are not a marketplace.
-              We are a recruitment team — we know each chef personally, we know what they cook best, and we
-              know which households they fit.
-            </p>
-            <p className="text-[#4A4745] text-lg leading-relaxed">
-              Whether you need a chef for a week, a month, a season, or long-term — tell us the brief and
-              we match a person, not just a profile.
-            </p>
-          </div>
-          <div className="aspect-[4/5] overflow-hidden rounded-2xl">
-            <img
-              src="/generated/staffing-market.webp"
-              alt="Chef shopping for fresh produce at a traditional Balinese morning market"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
+      {/* ── RISK REVERSAL ───────────────────────────────────────────────── */}
+      <StaffingRiskReversal />
 
-      {/* ── 02 — WHAT YOUR CHEF CAN DO ────────────────────────────────── */}
-      <section id="chef-can-do" className="bg-white px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
-        <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <div className="aspect-[4/5] overflow-hidden rounded-2xl order-2 md:order-1">
-            <img
-              src="/generated/staffing-table.webp"
-              alt="Elegant breakfast spread on a luxury Bali villa terrace at golden morning light"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-          <div className="order-1 md:order-2">
-            <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">02</p>
-            <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-6">What your chef can do</h2>
-            <p className="text-[#4A4745] text-lg leading-relaxed mb-7">
-              Every chef in our network is a full villa professional. The scope is yours to set —
-              breakfast only, half-board, full board, or a household where the chef quietly runs the kitchen.
-            </p>
-            <ul className="grid grid-cols-1 gap-2.5 text-[#4A4745]">
-              {WHAT_CHEFS_DO.map((w) => (
-                <li key={w} className="flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> {w}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 03 — HOW IT WORKS ──────────────────────────────────────────── */}
-      <section id="how-it-works" className="bg-[#FAFAF8] px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
-        <div className="max-w-[1100px] mx-auto">
-          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">03</p>
-          <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-4">How it works</h2>
-          <p className="text-[#4A4745] text-lg mb-14 max-w-[640px]">
-            One brief from you. One recruitment process from us. The more specific the brief, the better the match.
-          </p>
-          <ol className="space-y-7">
-            {HOW_IT_WORKS.map((s) => (
-              <li key={s.step} className="grid grid-cols-[60px_1fr] gap-5 md:gap-8 items-baseline border-b border-[#E5E3E0] pb-7 last:border-0">
-                <span className="font-playfair text-3xl text-[#C5A028]">{s.step}</span>
-                <div>
-                  <h3 className="font-playfair text-2xl mb-1.5">{s.title}</h3>
-                  <p className="text-[#4A4745]">{s.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* ── 04 — WHO HIRES US ───────────────────────────────────────── */}
-      <section id="who-hires" className="bg-white px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
-            <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">04</p>
-            <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-4">Who Hires Our Chefs</h2>
-            <p className="text-[#4A4745] text-lg max-w-2xl mx-auto">Villa owners, family offices, retreat operators, and expat households — anyone who needs reliable kitchen talent, not just a CV.</p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {[
-              { title: 'Villa Owners', desc: 'Long-term placements for private residences. Chefs who know the kitchen, the guests, and the rhythm of the household.' },
-              { title: 'Family Offices', desc: 'Discreet, professional chefs for high-net-worth families. Background-checked, contract-ready, fully managed.' },
-              { title: 'Retreat Operators', desc: 'Wellness and yoga retreat chefs who understand plant-based, macro-balanced, and allergy-aware cooking at scale.' },
-              { title: 'Expat Households', desc: 'Family-friendly chefs who cook for children, manage dietary needs, and run the kitchen without supervision.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-7">
-                <h3 className="font-playfair text-xl mb-2">{item.title}</h3>
-                <p className="text-sm text-[#4A4745]">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 05 — STAFFING TYPES ──────────────────────────────────────── */}
-      <section id="staffing-types" className="bg-[#FAFAF8] px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-end mb-14">
-            <div>
-              <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">05</p>
-              <h2 className="font-playfair text-4xl md:text-5xl leading-tight">Six ways to place a chef</h2>
+      {/* ── STATS BAR ───────────────────────────────────────────────────── */}
+      <section className="bg-[#1A1A1A] px-6 py-10">
+        <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {STATS.map((s) => (
+            <div key={s.label} className="staffing-reveal">
+              <p
+                className="text-3xl md:text-4xl mb-1"
+                style={{ color: '#C5A028', fontFamily: "'Playfair Display', serif" }}
+              >
+                {s.value}
+              </p>
+              <p className="text-xs tracking-widest uppercase text-white/50">{s.label}</p>
             </div>
-            <p className="text-[#4A4745] text-lg">
-              Most placements fall into one of these. If yours does not, tell us in the form — we
-              build custom arrangements regularly.
+          ))}
+        </div>
+      </section>
+
+      {/* ── THREE SERVICE CARDS ─────────────────────────────────────────── */}
+      <section className="px-6 md:px-12 py-24 md:py-32 max-w-[1280px] mx-auto">
+        <div className="text-center mb-14">
+          <p
+            className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Chapter I — Our Services
+          </p>
+          <h2 className="text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Three Ways We Place Staff
+          </h2>
+          <p className="max-w-xl mx-auto text-[#4A4745]">
+            From a single chef placement to a full household team — we handle every step of the process.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
+          {SERVICES.map((svc) => (
+            <div
+              key={svc.title}
+              className="staffing-reveal group relative flex flex-col rounded-2xl border border-[#E5E3E0] bg-white overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(197,160,40,0.25)]"
+            >
+              {/* Tag */}
+              <div className="absolute top-4 right-4 z-10">
+                <span
+                  className="text-[10px] font-semibold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full"
+                  style={{ background: 'rgba(197,160,40,0.12)', color: '#C5A028' }}
+                >
+                  {svc.tag}
+                </span>
+              </div>
+              <div className="p-8 flex flex-col flex-1">
+                <svc.icon className="w-8 h-8 mb-5" style={{ color: '#C5A028' }} strokeWidth={1.5} />
+                <h3 className="text-2xl mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {svc.title}
+                </h3>
+                <p className="text-sm font-semibold mb-4" style={{ color: '#C5A028' }}>
+                  {svc.price}
+                </p>
+                <p className="text-sm text-[#4A4745] leading-relaxed mb-6">{svc.desc}</p>
+                <ul className="space-y-2 mb-8 flex-1">
+                  {svc.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                      <Check className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#C5A028' }} />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to={svc.slug}
+                  className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all group-hover:gap-3"
+                  style={{ color: '#C5A028' }}
+                >
+                  Learn More <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <span
+                className="absolute inset-x-0 bottom-0 h-[3px] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
+                style={{ background: 'linear-gradient(to right, transparent, #C5A028, transparent)' }}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── WHY MYCHEF FOR STAFFING ─────────────────────────────────────── */}
+      <section className="bg-white px-6 md:px-12 py-24 md:py-32">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-14">
+            <p
+              className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Chapter II — Why myCHEF
+            </p>
+            <h2 className="text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Why myCHEF for Staffing
+            </h2>
+            <p className="max-w-xl mx-auto text-[#4A4745]">
+              Agencies send CVs. We send people we know. There is a difference.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {STAFFING_TYPES.map((s) => (
-              <div key={s.title} className="bg-white border border-[#E5E3E0] rounded-2xl p-7">
-                <s.icon className="w-7 h-7 text-[#C5A028] mb-4" />
-                <h3 className="font-playfair text-xl mb-2">{s.title}</h3>
-                <p className="text-sm text-[#4A4745]">{s.desc}</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {TRUST_POINTS.map((tp) => (
+              <div
+                key={tp.title}
+                className="staffing-reveal flex flex-col items-start p-8 rounded-2xl border border-[#E5E3E0]"
+                style={{ background: '#FAFAF8' }}
+              >
+                <tp.icon className="w-8 h-8 mb-5" style={{ color: '#C5A028' }} strokeWidth={1.5} />
+                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {tp.title}
+                </h3>
+                <p className="text-sm text-[#4A4745] leading-relaxed">{tp.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Best Partner diploma strip — luxury credential between sections */}
-      <section className="bg-white px-6 md:px-12 py-12 border-t border-[#E5E3E0]">
-        <div className="max-w-[800px] mx-auto flex justify-center">
-          <BestPartnerBadge variant="dark" width={300} />
+      {/* ── HOW IT WORKS ────────────────────────────────────────────────── */}
+      <section className="px-6 md:px-12 py-24 md:py-32 max-w-[1280px] mx-auto">
+        <div className="text-center mb-14">
+          <p
+            className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Chapter III — Process
+          </p>
+          <h2 className="text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            How It Works
+          </h2>
+          <p className="max-w-xl mx-auto text-[#4A4745]">
+            From brief to placed — three steps. Most placements confirmed within 48 hours.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          {STEPS.map((step) => (
+            <div key={step.number} className="staffing-reveal text-center">
+              <div
+                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+                style={{ background: 'rgba(197,160,40,0.10)', color: '#C5A028' }}
+              >
+                <step.icon className="w-7 h-7" strokeWidth={1.5} />
+              </div>
+              <p
+                className="text-xs tracking-[0.3em] uppercase mb-2"
+                style={{ color: '#C5A028', fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Step {step.number}
+              </p>
+              <h3 className="text-2xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+                {step.title}
+              </h3>
+              <p className="text-sm text-[#4A4745] leading-relaxed">{step.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* ── KITCHEN STRIP (image break) ────────────────────────────── */}
-      <section className="relative w-full h-[50vh] min-h-[420px] overflow-hidden">
-        <img
-          src="/generated/staffing-kitchen.webp"
-          alt="Immaculate luxury villa kitchen in Bali with marble countertops and fresh ingredients"
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
-        />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.5))' }} />
-        <div className="relative z-10 h-full flex items-center justify-center px-6 text-center text-white">
-          <p className="font-playfair text-3xl md:text-5xl max-w-[800px] leading-tight">
-            "The right chef makes the kitchen quiet. The household stops thinking about food and starts enjoying it."
-          </p>
-        </div>
-      </section>
+      {/* ── PRESS STRIP ─────────────────────────────────────────────────── */}
+      <PressStrip />
 
-      {/* ── 06 — STAFFING QUOTE FORM ──────────────────────────────────── */}
-      <section id="quote" className="bg-white px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
-        <div className="max-w-[800px] mx-auto">
-          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">06</p>
-          <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-4">Staffing quote</h2>
-          <p className="text-[#4A4745] text-lg mb-10">
-            Pick the basics here. Once you send, we reply with two or three vetted candidates and an honest budget — within 24 hours.
-          </p>
-
-          <div className="space-y-6">
-            <ChipGroup
-              label="Schedule"
-              options={[{ id: 'full-time', label: 'Full-time' }, { id: 'part-time', label: 'Part-time' }]}
-              value={form.schedule}
-              onChange={(v) => update('schedule', v as StaffingForm['schedule'])}
-            />
-            <ChipGroup
-              label="Arrangement"
-              options={[{ id: 'live-in', label: 'Live-in' }, { id: 'live-out', label: 'Live-out' }]}
-              value={form.arrangement}
-              onChange={(v) => update('arrangement', v as StaffingForm['arrangement'])}
-            />
-            <Counter
-              label="Number of people"
-              value={form.people}
-              onChange={(v) => update('people', v)}
-              min={1}
-            />
-            <MultiChip
-              label="Meals required"
-              options={MEAL_OPTIONS}
-              value={form.meals}
-              onChange={(v) => update('meals', v)}
-            />
-            <Field label="Cuisine direction" value={form.cuisine} onChange={(v) => update('cuisine', v)} placeholder="Mediterranean, Asian fusion, plant-based, family cooking…" />
-            <Field label="Dietary needs" value={form.dietary} onChange={(v) => update('dietary', v)} placeholder="Halal, vegan, gluten-free, kosher, nut allergy — list all" />
-            <Counter label="Days per week" value={form.daysPerWeek} onChange={(v) => update('daysPerWeek', v)} min={1} max={7} />
-            <Field label="Start date" value={form.startDate} onChange={(v) => update('startDate', v)} placeholder="e.g. June 2026" />
-            <Field label="Location in Bali" value={form.location} onChange={(v) => update('location', v)} placeholder="Seminyak, Canggu, Ubud, Jakarta…" />
-            <Field label="Budget range (optional)" value={form.budget} onChange={(v) => update('budget', v)} placeholder="IDR per month" />
-            <Field label="WhatsApp" value={form.whatsapp} onChange={(v) => update('whatsapp', v)} placeholder="+62 …" />
-            <Field label="Email" value={form.email} onChange={(v) => update('email', v)} placeholder="you@example.com" type="email" />
-
-            <a
-              href={canSubmit ? waLink : undefined}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-disabled={!canSubmit}
-              className={`inline-flex items-center justify-center gap-2 w-full text-xs font-semibold uppercase tracking-[0.25em] px-8 py-4 rounded-full transition-colors ${
-                canSubmit
-                  ? 'bg-[#C5A028] text-black hover:bg-[#D4B43A]'
-                  : 'bg-[#E5E3E0] text-[#8A8785] cursor-not-allowed pointer-events-none'
-              }`}
+      {/* ── FAQ ─────────────────────────────────────────────────────────── */}
+      <section className="bg-white px-6 md:px-12 py-24 md:py-32">
+        <div className="max-w-[860px] mx-auto">
+          <div className="text-center mb-12">
+            <p
+              className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              Get 3 Vetted Candidates in 24h
-            </a>
-            <p className="text-xs text-[#8A8785] text-center">
-              Pick a schedule, arrangement, and at least one meal to send. Reply within 24 hours.
+              Chapter IV — Questions
+            </p>
+            <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Staffing FAQ
+            </h2>
+          </div>
+          <FAQAccordion
+            items={FAQS}
+            defaultOpenCount={4}
+          />
+        </div>
+      </section>
+
+      {/* ── MARCO — FINAL CTA ────────────────────────────────────────────── */}
+      <section
+        className="px-6 md:px-12 py-24 md:py-32"
+        style={{ background: 'linear-gradient(135deg, #1A1A1A 0%, #2C2117 100%)' }}
+      >
+        <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p
+              className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-6"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Chapter V — Your Staffing Director
+            </p>
+            <h2
+              className="text-3xl md:text-5xl text-white mb-5 leading-tight"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Talk to Marco.
+            </h2>
+            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8">
+              Marco is our staffing director. He has overseen 200+ placements across Bali's finest villas, hotels, and private households. Message him on WhatsApp and he will respond within the hour with a shortlist and honest advice — no pitch, no pressure.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href={WA_MARCO}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105"
+                style={{ background: '#C5A028', color: '#1A1A1A' }}
+              >
+                <MessageCircle className="w-4 h-4" /> Request Staff Now — Reply in 1 Hour
+              </a>
+              <a
+                href={`tel:+${WA_NUMBER}`}
+                className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full border border-white/25 text-white/80 transition-all hover:border-white/60 hover:scale-105"
+              >
+                <Phone className="w-4 h-4" /> Call the Team
+              </a>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-[#6B6B67] mt-4">
+              <span>✅ Background-checked staff</span>
+              <span>✅ English-speaking</span>
+              <span>✅ Same-day confirmation</span>
+            </div>
+            <p className="text-white/50 text-sm mt-4">
+              Free brief review · 30-day replacement guarantee · Response within 1 hour
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* ── 07 — FAQ ─────────────────────────────────────────────────── */}
-      <section id="faq" className="bg-[#FAFAF8] px-6 md:px-12 py-24 md:py-32 scroll-mt-24">
-        <div className="max-w-[800px] mx-auto">
-          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">07</p>
-          <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-12">Frequently asked</h2>
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
-
-          <div className="mt-14 text-center">
-            <p className="text-[#4A4745] mb-4">Still have questions?</p>
-            <Link to="/contact" className="text-xs uppercase tracking-[0.2em] font-semibold text-[#2C5F7C] hover:text-[#1A1A1A]">
-              Contact us →
-            </Link>
+          {/* Sub-service links */}
+          <div className="space-y-3">
+            <p
+              className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-5"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Or explore a specific service
+            </p>
+            {[
+              { label: 'Private Chef Placement', href: '/staffing/private-chef-placement' },
+              { label: 'Live-In Villa Chef', href: '/staffing/live-in-chef' },
+              { label: 'Villa & Household Staff', href: '/staffing/villa-staff' },
+              { label: 'Household & Domestic Staff', href: '/staffing/household-staff' },
+              { label: 'For Villa Managers', href: '/staffing/for-villa-managers' },
+              { label: 'For Hotels & Restaurants', href: '/staffing/for-hotels-restaurants' },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="flex items-center justify-between px-6 py-4 rounded-xl border border-white/10 text-white/70 text-sm tracking-wide hover:border-[#C5A028]/50 hover:text-white transition-all group"
+              >
+                {link.label}
+                <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#C5A028' }} />
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── FINAL CTA ─────────────────────────────────────────────────── */}
-      <section className="bg-[#0A0A0A] text-white px-6 md:px-12 py-20 md:py-28">
-        <div className="max-w-[800px] mx-auto text-center">
-          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.35em] mb-4">Ready when you are</p>
-          <h2 className="font-playfair text-3xl md:text-5xl leading-tight mb-6">Get 3 vetted candidates in 24 hours</h2>
-          <p className="text-white/65 text-lg mb-10 max-w-[560px] mx-auto">
-            Tell us your brief. We shortlist, you interview, we place. No commitment to read a proposal.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#quote"
-              className="inline-flex items-center justify-center px-10 py-4 bg-[#C5A028] text-black text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
-            >
-              Get 3 Vetted Candidates in 24h
-            </a>
-            <a
-              href={`https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to staff a chef for my villa.')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-colors"
-            >
-              <MessageCircle className="w-4 h-4" /> WhatsApp — 2 Min Reply
-            </a>
-          </div>
+      {/* ── BEST PARTNER BADGE ──────────────────────────────────────────── */}
+      <section className="bg-white px-6 py-12 border-t border-[#E5E3E0]">
+        <div className="max-w-[400px] mx-auto flex justify-center">
+          <BestPartnerBadge variant="dark" width={280} />
         </div>
       </section>
-
-      <LocationChips
-        title="Staffing Across Bali"
-        subtitle="We place chefs and villa staff in Seminyak, Canggu, Ubud, Uluwatu, and every major region. Local knowledge. Vetted candidates."
-        dark
-      />
-    </main>
-  )
-}
-
-function Field({ label, value, onChange, placeholder, type = 'text' }: { label: string; value: string; onChange: (v: string) => void; placeholder?: string; type?: string }) {
-  return (
-    <label className="block">
-      <span className="block text-sm font-medium mb-1.5">{label}</span>
-      <input
-        type={type}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-        className="w-full bg-white border-2 border-[#E5E3E0] rounded-xl px-3.5 py-3 text-sm focus:border-[#C5A028]"
-      />
-    </label>
-  )
-}
-
-function ChipGroup<T extends string>({ label, options, value, onChange }: { label: string; options: { id: T; label: string }[]; value: T | ''; onChange: (v: T) => void }) {
-  return (
-    <div>
-      <span className="block text-sm font-medium mb-2">{label}</span>
-      <div className="flex flex-wrap gap-2">
-        {options.map((o) => {
-          const active = value === o.id
-          return (
-            <button
-              key={o.id}
-              type="button"
-              onClick={() => onChange(o.id)}
-              className={`px-5 py-2.5 text-sm rounded-full border-2 transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10 text-[#1A1A1A]' : 'border-[#E5E3E0] text-[#4A4745] hover:border-[#1A1A1A]/30'}`}
-            >
-              {o.label}
-            </button>
-          )
-        })}
-      </div>
-    </div>
-  )
-}
-
-function MultiChip({ label, options, value, onChange }: { label: string; options: string[]; value: string[]; onChange: (v: string[]) => void }) {
-  return (
-    <div>
-      <span className="block text-sm font-medium mb-2">{label}</span>
-      <div className="flex flex-wrap gap-2">
-        {options.map((o) => {
-          const active = value.includes(o)
-          return (
-            <button
-              key={o}
-              type="button"
-              onClick={() => onChange(active ? value.filter((x) => x !== o) : [...value, o])}
-              className={`px-5 py-2.5 text-sm rounded-full border-2 transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10' : 'border-[#E5E3E0] text-[#4A4745] hover:border-[#1A1A1A]/30'}`}
-            >
-              {o}
-            </button>
-          )
-        })}
-      </div>
-    </div>
-  )
-}
-
-function Counter({ label, value, onChange, min = 0, max = 99 }: { label: string; value: number; onChange: (v: number) => void; min?: number; max?: number }) {
-  return (
-    <div>
-      <span className="block text-sm font-medium mb-2">{label}</span>
-      <div className="flex items-center gap-3">
-        <button
-          type="button"
-          onClick={() => onChange(Math.max(min, value - 1))}
-          aria-label={`Decrease ${label.toLowerCase()}`}
-          className="w-9 h-9 border-2 border-[#E5E3E0] rounded-full flex items-center justify-center hover:border-[#C5A028]"
-        >
-          <Minus className="w-4 h-4" />
-        </button>
-        <span className="font-playfair text-2xl w-10 text-center">{value}</span>
-        <button
-          type="button"
-          onClick={() => onChange(Math.min(max, value + 1))}
-          aria-label={`Increase ${label.toLowerCase()}`}
-          className="w-9 h-9 border-2 border-[#E5E3E0] rounded-full flex items-center justify-center hover:border-[#C5A028]"
-        >
-          <Plus className="w-4 h-4" />
-        </button>
-      </div>
     </div>
   )
 }

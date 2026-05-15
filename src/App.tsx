@@ -20,6 +20,7 @@ const LunaPage = lazy(() => import('./pages/LunaPage'))
 const SolPage = lazy(() => import('./pages/SolPage'))
 // const AuraPage = lazy(() => import('./pages/AuraPage'))
 const PartnersPage = lazy(() => import('./pages/PartnersPage'))
+const PressPage = lazy(() => import('./pages/PressPage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'))
 const TermsPage = lazy(() => import('./pages/TermsPage'))
@@ -29,7 +30,6 @@ const StaffingPage = lazy(() => import('./pages/StaffingPage'))
 const ServicesPage = lazy(() => import('./pages/ServicesPage'))
 const PartnerPlatformPage = lazy(() => import('./pages/PartnerPlatformPage'))
 const CertifiedPartnerPage = lazy(() => import('./pages/CertifiedPartnerPage'))
-const CorporateEventsPage = lazy(() => import('./pages/CorporateEventsPage'))
 const EventsMainPage = lazy(() => import('./pages/EventsMainPage'))
 const EventsWeddingsPage = lazy(() => import('./pages/EventsWeddingsPage'))
 const EventsBirthdaysPage = lazy(() => import('./pages/EventsBirthdaysPage'))
@@ -67,7 +67,12 @@ const StaffingHotelsPage = lazy(() => import('./pages/StaffingHotelsPage'))
 const PillarSubPage = lazy(() => import('./components/PillarSubPage'))
 const LocationsHubPage = lazy(() => import('./components/LocationsHubPage'))
 const BookPage = lazy(() => import('./components/BookPage'))
-import { JournalIndexPage, JournalPostPage } from './components/JournalPage'
+const JournalIndexPage = lazy(() =>
+  import('./components/JournalPage').then((module) => ({ default: module.JournalIndexPage }))
+)
+const JournalPostPage = lazy(() =>
+  import('./components/JournalPage').then((module) => ({ default: module.JournalPostPage }))
+)
 
 // SEO template pages
 const AreaPage = lazy(() => import('./components/AreaPage'))
@@ -81,7 +86,6 @@ const PricingPage = lazy(() => import('./pages/PricingPage'))
 const FAQPage = lazy(() => import('./pages/FAQPage'))
 const ReviewsPage = lazy(() => import('./pages/ReviewsPage'))
 const WhyMychefPage = lazy(() => import('./pages/WhyMychefPage'))
-const RetreatsPage = lazy(() => import('./pages/RetreatsPage'))
 const RecommendedServicesPage = lazy(() => import('./pages/RecommendedServicesPage'))
 const JoinTeamPage = lazy(() => import('./pages/JoinTeamPage'))
 const CalculatorPage = lazy(() => import('./pages/CalculatorPage'))
@@ -180,8 +184,11 @@ export default function App() {
 
           {/* Legacy top-nav pages (kept for compatibility) */}
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/partners" element={<PartnersPage />} />
+          <Route path="/press" element={<PressPage />} />
           <Route path="/partner-platform" element={<PartnerPlatformPage />} />
-          <Route path="/corporate-events" element={<CorporateEventsPage />} />
+          <Route path="/certified-partner" element={<PartnerPlatformPage />} />
+          <Route path="/corporate-events" element={<Navigate to="/events/corporate-events" replace />} />
           <Route path="/certified/:slug" element={<CertifiedPartnerPage />} />
 
           {/* Legacy aliases */}
@@ -260,7 +267,7 @@ export default function App() {
           <Route path="/why-mychef" element={<WhyMychefPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
           <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/retreats" element={<RetreatsPage />} />
+          <Route path="/retreats" element={<Navigate to="/events/retreats" replace />} />
           <Route path="/recommended-services" element={<RecommendedServicesPage />} />
           <Route path="/join-our-team" element={<JoinTeamPage />} />
           <Route path="/quote" element={<QuoteFunnel />} />

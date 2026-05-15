@@ -9,8 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
-  breadcrumbSchema,
-  serviceSchema,
+  cateringBreadcrumbSchema,
+  cateringServiceSchema,
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
@@ -36,7 +36,7 @@ const BUFFET_PACKAGES = [
     description: '8 hot dishes, 4 cold dishes, dessert, fresh fruit, 5 sambals, rice, noodles, breads.',
     includes: ['Chef', 'Service team (1 per 12 guests)', 'Full chafing setup', 'Serving tables', 'Linens', 'Cutlery', '2.5h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 30 guests',
-    image: '/generated/hero-buffet-catering.jpg',
+    image: '/generated/hero-buffet-catering.webp',
   },
   {
     title: 'International Buffet',
@@ -179,16 +179,16 @@ export default function CateringBuffetPage() {
         title="Buffet Catering Bali | Villa, Wedding & Event Buffets"
         description="Buffet catering in Bali for villas, weddings, retreats, and events with Indonesian, Western, BBQ, and custom menu options."
         canonical={`${SITE}/catering/buffet`}
-        ogImage={`${SITE}/generated/hero-buffet-catering.jpg`}
+        ogImage={`${SITE}/generated/hero-buffet-catering.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Buffet Catering Bali', 'Full-service buffet catering for villas, weddings, retreats, and events in Bali. Indonesian, International, and Premium Live-Station options.', `${SITE}/catering/buffet`, 'IDR'),
+          cateringServiceSchema('Buffet Catering Bali', 'Full-service buffet catering for Bali villas, weddings, retreats, and large private events with Indonesian and international menu options. myCHEF.id brings chefs, service staff, buffet equipment, and cleanup across Bali.', `${SITE}/catering/buffet`),
           offerSchema('Indonesian Buffet', 550000, 'IDR', `${SITE}/catering/buffet`),
           offerSchema('International Buffet', 750000, 'IDR', `${SITE}/catering/buffet`),
           offerSchema('Premium Live-Station Buffet', 950000, 'IDR', `${SITE}/catering/buffet`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 186),
-          breadcrumbSchema('Buffet Catering Bali', `${SITE}/catering/buffet`, 'Catering', `${SITE}/catering`),
+          cateringBreadcrumbSchema('Buffet Catering Bali', `${SITE}/catering/buffet`),
         ]}
       />
 
@@ -198,7 +198,7 @@ export default function CateringBuffetPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-buffet-catering.jpg"
+            src="/generated/hero-buffet-catering.webp"
             alt="Styled buffet table in Bali villa garden with chafing dishes and floral arrangements"
             width={1920}
             height={1080}
@@ -321,7 +321,7 @@ export default function CateringBuffetPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/catering/bbq-catering-bali" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/bbq-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
               Explore BBQ Catering <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>

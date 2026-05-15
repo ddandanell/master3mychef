@@ -28,7 +28,7 @@ const WHATS_INCLUDED = [
 
 const EVENT_TYPES: Array<{ icon: typeof Heart; title: string; desc: string; href?: string; cta?: string }> = [
   { icon: Heart, title: 'Weddings', desc: 'Intimate villa ceremonies to 200-guest garden receptions. Every detail handled.' },
-  { icon: Building2, title: 'Corporate Events', desc: 'Executive dinners, conference catering, gala nights, and full corporate productions.', href: '/corporate-events', cta: 'See corporate playbook' },
+  { icon: Building2, title: 'Corporate Events', desc: 'Executive dinners, conference catering, gala nights, and full corporate productions.', href: '/events/corporate-events', cta: 'See corporate playbook' },
   { icon: PartyPopper, title: 'Celebrations', desc: 'Birthdays, anniversaries, reunions. Custom themes and menus.' },
 ]
 
@@ -342,7 +342,7 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="text-center">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <Phone className="w-4 h-4" /> Start on WhatsApp
             </a>
           </div>
@@ -520,7 +520,7 @@ export default function AuraPage() {
               href="https://wa.me/6282237565997?text=Hi%20myCHEF%20%E2%80%94%20I%27d%20like%20to%20design%20a%20custom%20villa%20party"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <Phone className="w-4 h-4" /> Design a custom party
             </a>
@@ -545,7 +545,7 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <Phone className="w-4 h-4" /> Get Your Quote
             </a>
           </div>
@@ -647,7 +647,7 @@ export default function AuraPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <MessageCircle className="w-4 h-4" /> Ask Olivia on WhatsApp
             </a>
           </div>
@@ -680,7 +680,7 @@ export default function AuraPage() {
               <p className="text-xs mb-6" style={{ color: '#4A4745' }}>
                 * Custom quotes include catering, bar, staffing, and basic décor. AV, floral, and specialty items quoted separately.
               </p>
-              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
                 <Phone className="w-4 h-4" /> Get a Quote on WhatsApp
               </a>
             </div>

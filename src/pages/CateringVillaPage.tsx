@@ -9,8 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
-  breadcrumbSchema,
-  serviceSchema,
+  cateringBreadcrumbSchema,
+  cateringServiceSchema,
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
@@ -133,17 +133,17 @@ export default function CateringVillaPage() {
       <SeoHead
         title="Villa Catering Bali | Private Chef & Event Catering"
         description="Private villa catering in Bali with chef-led menus, setup, service, drinks, and cleanup for birthdays, family dinners, retreats, and villa events."
-        canonical={`${SITE}/catering/villa-catering-bali`}
-        ogImage={`${SITE}/generated/hero-buffet-catering.jpg`}
+        canonical={`${SITE}/catering/villa-catering`}
+        ogImage={`${SITE}/generated/hero-buffet-catering.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Villa Catering Bali', 'Private chef and service team catering at your Bali villa. Groups of 8-200. Multi-day available. Full setup and cleanup.', `${SITE}/catering/villa-catering-bali`, 'IDR'),
-          offerSchema('Villa Lunch', 450000, 'IDR', `${SITE}/catering/villa-catering-bali`),
-          offerSchema('Villa Dinner', 650000, 'IDR', `${SITE}/catering/villa-catering-bali`),
-          offerSchema('Multi-Day Villa Catering', 550000, 'IDR', `${SITE}/catering/villa-catering-bali`),
+          cateringServiceSchema('Villa Catering Bali', 'Villa catering in Bali for private lunches, dinners, birthdays, and multi-day stays with chef-led menus and on-site service. myCHEF.id brings the kitchen team, setup, service, and cleanup to your villa across Bali.', `${SITE}/catering/villa-catering`),
+          offerSchema('Villa Lunch', 450000, 'IDR', `${SITE}/catering/villa-catering`),
+          offerSchema('Villa Dinner', 650000, 'IDR', `${SITE}/catering/villa-catering`),
+          offerSchema('Multi-Day Villa Catering', 550000, 'IDR', `${SITE}/catering/villa-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 312),
-          breadcrumbSchema('Villa Catering Bali', `${SITE}/catering/villa-catering-bali`, 'Catering', `${SITE}/catering`),
+          cateringBreadcrumbSchema('Villa Catering Bali', `${SITE}/catering/villa-catering`),
         ]}
       />
 
@@ -153,7 +153,7 @@ export default function CateringVillaPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-buffet-catering.jpg"
+            src="/generated/hero-buffet-catering.webp"
             alt="Long villa dining table by pool at sunset with chef-prepared Bali catering"
             width={1920}
             height={1080}

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { Calendar, Users, MapPin, Utensils, MessageSquare, Check } from 'lucide-react'
 
 interface BookingFormProps {
@@ -48,6 +48,7 @@ const CONFIG = {
 
 export default function BookingForm({ universe, compact }: BookingFormProps) {
   const config = CONFIG[universe]
+  const formId = useId()
   const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState<Record<string, string>>({})
 
@@ -100,15 +101,19 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
       )}
 
       <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-5">
-        {config.fields.map((field) => (
+        {config.fields.map((field) => {
+          const fieldId = `${formId}-${field.name}`
+
+          return (
           <div key={field.name}>
-            <label className="block text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-text-muted)', fontFamily: "'Cormorant Garamond', serif" }}>
+            <label htmlFor={fieldId} className="block text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-text-muted)', fontFamily: "'Cormorant Garamond', serif" }}>
               {field.label}
             </label>
             <div className="relative">
               <field.icon className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: 'var(--u-text-muted)' }} />
               {field.type === 'select' ? (
                 <select
+                  id={fieldId}
                   required
                   className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent appearance-none focus:ring-2 focus:ring-[var(--u-accent)] transition-all"
                   style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}
@@ -122,6 +127,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
                 </select>
               ) : (
                 <input
+                  id={fieldId}
                   type={field.type}
                   required={field.type !== 'select'}
                   placeholder={field.placeholder || ''}
@@ -133,15 +139,17 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
               )}
             </div>
           </div>
-        ))}
+          )
+        })}
 
         <div>
-          <label className="block text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-text-muted)', fontFamily: "'Cormorant Garamond', serif" }}>
+          <label htmlFor={`${formId}-notes`} className="block text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-text-muted)', fontFamily: "'Cormorant Garamond', serif" }}>
             Special Requests
           </label>
           <div className="relative">
             <MessageSquare className="absolute left-4 top-4 w-4 h-4" style={{ color: 'var(--u-text-muted)' }} />
             <textarea
+              id={`${formId}-notes`}
               rows={3}
               placeholder="Dietary restrictions, allergies, special occasions..."
               className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent focus:ring-2 focus:ring-[var(--u-accent)] transition-all resize-none"
@@ -161,7 +169,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
 
         <button
           type="submit"
-          className="w-full py-4 rounded-xl text-black font-semibold tracking-widest uppercase text-sm transition-all hover:scale-[1.01] active:scale-[0.99]"
+          className="w-full min-h-[44px] rounded-xl py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all hover:scale-[1.01] active:scale-[0.99]"
           style={{ background: 'var(--u-accent)' }}
         >
           Send to {config.whatsappName} via WhatsApp

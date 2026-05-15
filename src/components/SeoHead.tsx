@@ -13,9 +13,11 @@ export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   '@id': 'https://mychef.id/#business',
-  name: 'myCHEF Indonesia',
-  url: 'https://mychef.id',
+  name: 'myCHEF.id',
+  description: 'Private chef, catering, events, and staffing services in Bali',
+  url: 'https://www.mychef.id',
   telephone: '+62-822-3756-5997',
+  email: 'hello@mychef.id',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',
@@ -29,6 +31,54 @@ export const localBusinessSchema = {
     latitude: -8.6905,
     longitude: 115.2126,
   },
+  priceRange: '$$$$',
+  openingHours: 'Mo-Su 07:00-23:00',
+  image: 'https://mychef.id/generated/hub-hero-v3.webp',
+}
+
+
+const cateringProviderSchema = {
+  '@type': 'FoodEstablishment',
+  name: 'myCHEF.id',
+  url: 'https://mychef.id',
+  telephone: '+62822-3756-5997',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Bali',
+    addressCountry: 'ID',
+  },
+}
+
+export function cateringServiceSchema(
+  name: string,
+  description: string,
+  url: string,
+  type: 'Service' | 'FoodService' = 'Service',
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': type,
+    name,
+    description,
+    provider: cateringProviderSchema,
+    areaServed: {
+      '@type': 'Place',
+      name: 'Bali, Indonesia',
+    },
+    url,
+  }
+}
+
+export function cateringBreadcrumbSchema(currentName: string, currentUrl: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id' },
+      { '@type': 'ListItem', position: 2, name: 'Catering', item: 'https://mychef.id/catering' },
+      { '@type': 'ListItem', position: 3, name: currentName, item: currentUrl },
+    ],
+  }
 }
 
 export function breadcrumbSchema(currentName: string, currentUrl: string, parentName?: string, parentUrl?: string) {
@@ -66,6 +116,30 @@ export function serviceSchema(
       name: 'Bali, Indonesia',
     },
     ...(priceRange ? { priceRange } : {}),
+  }
+}
+
+export function detailedServiceSchema(
+  name: string,
+  description: string,
+  url: string
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    provider: {
+      '@type': 'Organization',
+      name: 'myCHEF.id',
+      url: 'https://mychef.id',
+      telephone: '+62822-3756-5997',
+    },
+    areaServed: {
+      '@type': 'Place',
+      name: 'Bali, Indonesia',
+    },
+    url,
   }
 }
 
@@ -110,6 +184,21 @@ export function aggregateRatingSchema(ratingValue: number, reviewCount: number) 
     reviewCount: reviewCount.toString(),
     bestRating: '5',
     worstRating: '1',
+  }
+}
+
+export function organizationSchema(
+  logoUrl: string,
+  sameAs: string[]
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://mychef.id/#organization',
+    name: 'myCHEF.id',
+    url: 'https://www.mychef.id',
+    logo: logoUrl,
+    sameAs,
   }
 }
 

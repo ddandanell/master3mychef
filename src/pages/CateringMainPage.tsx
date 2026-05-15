@@ -1,19 +1,21 @@
-import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import {
   MessageCircle, Check, ArrowRight, Phone, Calendar, Users, MapPin,
-  Utensils, CreditCard, ChefHat, Sparkles, ShieldCheck,
+  Utensils, CreditCard, ChefHat, Sparkles, ShieldCheck, HelpCircle,
+  Home, PartyPopper, Flame, Wine, Flower2, CakeSlice,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
   breadcrumbSchema,
-  serviceSchema,
+  cateringServiceSchema,
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
 } from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import CateringAddOnCard from '@/components/catering/CateringAddOnCard'
@@ -25,10 +27,12 @@ import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
+import { CateringRiskReversal } from '@/components/shared'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20catering%20quote.'
+const WA_DAILY_CHEF_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20daily%20villa%20chef.'
 const SITE = 'https://mychef.id'
 
 /* ── DATA ── */
@@ -208,6 +212,57 @@ const FLOATING_PACKAGES = [
   { title: 'Floating Group Brunch', price: 'IDR 750,000/person', description: '4 to 10 guests. Large floating tray setup.' },
 ]
 
+const DAILY_CHEF_PACKAGES = [
+  {
+    title: 'Breakfast Only',
+    price: 'IDR 600,000',
+    period: '/hour',
+    desc: 'Fresh tropical fruits, pastries, eggs any style, Balinese coffee. ~2 hours/day.',
+    bestFor: 'Couples, light mornings, villa guests who lunch out',
+  },
+  {
+    title: 'Half Board',
+    price: 'IDR 1,100,000',
+    period: '/hour',
+    desc: 'Breakfast + dinner. Perfect for families who lunch out. ~4–5 hours/day.',
+    bestFor: 'Families, groups who explore Bali during the day',
+  },
+  {
+    title: 'Full Board',
+    price: 'IDR 1,500,000',
+    period: '/hour',
+    desc: 'Breakfast, lunch, and dinner. The complete villa experience. ~6–8 hours/day.',
+    bestFor: 'Extended stays, retreats, families who want full coverage',
+  },
+  {
+    title: 'Custom',
+    price: 'Quote',
+    period: '',
+    desc: 'Special occasions, dietary programs, or extended stays. We design around you.',
+    bestFor: 'Multi-week stays, wellness programs, special diets',
+  },
+]
+
+const DAILY_CHEF_INCLUDES = [
+  'Private villa chef (dedicated to your villa)',
+  'Full grocery shopping & ingredient sourcing',
+  'Breakfast, lunch & dinner preparation',
+  'Table service & presentation',
+  'Full kitchen cleanup after every meal',
+  'Menu planning based on your preferences',
+  'Dietary customization at no extra cost',
+  'Fresh, local ingredients + premium imports',
+]
+
+const DAILY_CHEF_ADDONS = [
+  { icon: Wine, title: 'Bartender & Cocktails', desc: 'Mixologist, full bar setup, signature drinks. From IDR 850K.' },
+  { icon: Users, title: 'Waiters & Service Staff', desc: 'Professional waiters for plated or buffet service. 1 per 10 guests.' },
+  { icon: Flower2, title: 'Table Styling & Flowers', desc: 'Linens, candles, floral arrangements, and table decor.' },
+  { icon: CakeSlice, title: 'Custom Cakes', desc: 'Birthday, anniversary, or celebration cakes. 3-day notice.' },
+  { icon: Utensils, title: 'Breakfast Service', desc: 'Morning after? We do villa breakfast too. Continental or full.' },
+  { icon: Flame, title: 'Live BBQ Station', desc: 'Chef grills at your villa. Whole fish, ribs, prawns, skewers.' },
+]
+
 const PRICING_TABLE = [
   { name: 'Indonesian BBQ', price: 'IDR 450,000/person', min: '6 guests', bestFor: 'Villa BBQ' },
   { name: 'International BBQ', price: 'IDR 600,000/person', min: '6 guests', bestFor: 'Villa BBQ' },
@@ -256,10 +311,52 @@ const FAQS = [
   { q: 'Can I see a menu before booking?', a: 'Yes. We send a full menu proposal with exact pricing before you pay anything. No commitment required to review. Most quotes are sent within 2 hours.' },
   { q: 'What if my guest count changes?', a: 'Final headcount is due 48 hours before your event. We adjust portions and staffing. No penalty for small changes. Large increases may affect minimums.' },
   { q: 'Why myCHEF and not another caterer?', a: 'We own the full stack — chefs, equipment, logistics, staff training. No middlemen. That is why we can quote fast, deliver consistently, and fix issues immediately. Most other caterers outsource at least one layer.' },
+  { q: 'What is the difference between One-Time Catering and Daily Chef Service?', a: 'One-Time Catering is for a single event — a BBQ night, a birthday dinner, a wedding buffet. The chef arrives, cooks, serves, and leaves. Daily Chef Service is for ongoing stays — the same chef comes to your villa every day for breakfast, lunch, and dinner throughout your holiday. Daily chef is billed hourly; one-time catering is billed per person.' },
+  { q: 'Which service is right for me?', a: 'If you are celebrating one special occasion, choose One-Time Catering. If you are staying in a villa for multiple days and want every meal handled, choose Daily Chef Service. Not sure? Message us on WhatsApp and we will guide you in under 2 minutes.' },
+]
+
+/* ── Decision Helper Data ── */
+const DECISION_QUESTIONS = [
+  {
+    question: 'How long are you staying in the villa?',
+    options: [
+      { label: '1–2 nights', result: 'one-time' },
+      { label: '3+ nights', result: 'daily' },
+    ],
+  },
+  {
+    question: 'What kind of meal experience do you want?',
+    options: [
+      { label: 'One special dinner or party', result: 'one-time' },
+      { label: 'Every meal handled during my stay', result: 'daily' },
+    ],
+  },
+  {
+    question: 'How important is having the same chef every day?',
+    options: [
+      { label: 'Not important — I want the best chef for each event', result: 'one-time' },
+      { label: 'Very important — I want consistency', result: 'daily' },
+    ],
+  },
 ]
 
 export default function CateringMainPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const location = useLocation()
+  const [activeTab, setActiveTab] = useState<'one-time' | 'daily'>('one-time')
+  const [decisionAnswers, setDecisionAnswers] = useState<(string | null)[]>([null, null, null])
+  const [decisionResult, setDecisionResult] = useState<'one-time' | 'daily' | null>(null)
+
+  /* Scroll to #daily-chef on mount if hash present */
+  useEffect(() => {
+    if (location.hash === '#daily-chef') {
+      setActiveTab('daily')
+      setTimeout(() => {
+        const el = document.getElementById('daily-chef')
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 300)
+    }
+  }, [location.hash])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -271,16 +368,33 @@ export default function CateringMainPage() {
     return () => ctx.revert()
   }, [])
 
+  const handleDecisionAnswer = (qIndex: number, result: 'one-time' | 'daily') => {
+    const next = [...decisionAnswers]
+    next[qIndex] = result
+    setDecisionAnswers(next)
+
+    const counts: Record<string, number> = { 'one-time': 0, daily: 0 }
+    next.forEach((a) => { if (a) counts[a]++ })
+    if (counts['one-time'] + counts.daily >= 2) {
+      setDecisionResult(counts['one-time'] >= counts.daily ? 'one-time' : 'daily')
+    }
+  }
+
+  const resetDecision = () => {
+    setDecisionAnswers([null, null, null])
+    setDecisionResult(null)
+  }
+
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Bali Catering | Villas, BBQ, Buffet & Events — myCHEF"
-        description="Premium Bali catering for villas. BBQ, buffet, plated dinners, drop-off, Babi Guling, grazing tables, floating breakfast. Clear prices. WhatsApp booking."
-        canonical={`${SITE}/catering`}
-        ogImage={`${SITE}/generated/catering-hero.webp`}
+        title={getPageMeta('catering').title}
+        description={getPageMeta('catering').description}
+        canonical={getPageMeta('catering').canonical}
+        ogImage={getPageMeta('catering').ogImage}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Bali Villa Catering', 'Premium catering for villas, events, BBQ nights and private parties across Bali.', `${SITE}/catering`, 'IDR'),
+          cateringServiceSchema('Villa Catering Bali', 'Chef-led catering for Bali villas, events, BBQ nights, and private gatherings with flexible formats from buffet to plated service. myCHEF.id manages menus, staffing, setup, and cleanup across Bali.', `${SITE}/catering`, 'FoodService'),
           offerSchema('Indonesian BBQ', 450000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('International BBQ', 600000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('Premium Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),
@@ -316,30 +430,44 @@ export default function CateringMainPage() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            myCHEF Catering — Villa Catering Bali
+            myCHEF Events & Catering
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Villa Catering Bali.<br />
-            <span className="italic">Chef, Staff & Setup Included.</span>
+            Events & Catering for Bali Villas.<br />
+            <span className="italic">Built for Groups, Parties & Hosted Dinners.</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            BBQ, buffet, plated dinners and drop-off catering for villas across Bali. From IDR 450K per person. A real chef grills at your villa. We bring everything — equipment, staff, ingredients. You eat.
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+            This page is for villa parties, weddings, corporate dinners, and catered meals for 5+ guests. If you want a chef for breakfast, lunch, or intimate in-villa dining during your stay, book our Private Villa Dining service instead.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
             >
-              <MessageCircle className="w-4 h-4" /> Get a Quote — 2 Min Reply
+              <MessageCircle className="w-4 h-4" /> Get Catering Quote for 5+ Guests
             </a>
-            <a
-              href="#packages"
+            <Link
+              to="/villa-chef"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
             >
-              <ArrowRight className="w-4 h-4" /> See All Packages
-            </a>
+              <ArrowRight className="w-4 h-4" /> Need a Private Villa Chef?
+            </Link>
+          </div>
+          <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-white/15 bg-black/25 p-5 md:p-6 text-left backdrop-blur-sm">
+            <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+              Not sure which service?
+            </p>
+            <p className="text-sm md:text-base text-white/85 leading-relaxed mb-4">
+              Choose Events & Catering for BBQs, buffet service, plated group dinners, weddings, and formal villa setups. Choose <span className="font-semibold text-white">Private Villa Dining</span> for 1–4 guests, family stays, and everyday breakfast, lunch, or dinner with a chef in your villa.
+            </p>
+            <Link
+              to="/villa-chef"
+              className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors"
+            >
+              <ArrowRight className="w-4 h-4" /> View Private Villa Dining
+            </Link>
           </div>
           <TrustRow
             items={['500+ villa events served', '4.9★ Google Reviews', 'Chef + staff included', 'Same-day quotes', 'Bali-wide service']}
@@ -351,7 +479,324 @@ export default function CateringMainPage() {
       {/* ═══════ TRUST STRIP ═══════ */}
       <TrustStrip />
 
-      {/* ═══════ SECTION 2: WHO THIS IS FOR ═══════ */}
+      {/* ═══════ RISK REVERSAL ═══════ */}
+      <CateringRiskReversal />
+
+      {/* ═══════ SECTION 2: SERVICE TABS ═══════ */}
+      <section id="service-tabs" className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="CHOOSE YOUR SERVICE"
+            title="Two Ways to Eat Well in Your Villa"
+            subtitle="Whether you need one spectacular meal or a chef every day of your stay — we have you covered."
+          />
+
+          {/* Tab Switcher */}
+          <div className="flex justify-center mb-12">
+            <div className="inline-flex bg-[#FAFAF8] rounded-full p-1 border border-[#E8E6E3]">
+              <button
+                type="button"
+                onClick={() => setActiveTab('one-time')}
+                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all ${
+                  activeTab === 'one-time'
+                    ? 'bg-[#6B8E5A] text-white shadow-md'
+                    : 'text-[#4A4745] hover:text-[#1A1A1A]'
+                }`}
+              >
+                <PartyPopper className="w-4 h-4 inline-block mr-2 -mt-0.5" />
+                One-Time Catering
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveTab('daily')}
+                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all ${
+                  activeTab === 'daily'
+                    ? 'bg-[#C5A028] text-white shadow-md'
+                    : 'text-[#4A4745] hover:text-[#1A1A1A]'
+                }`}
+              >
+                <Home className="w-4 h-4 inline-block mr-2 -mt-0.5" />
+                Daily Chef Service
+              </button>
+            </div>
+          </div>
+
+          {/* ONE-TIME CATERING PANEL */}
+          {activeTab === 'one-time' && (
+            <div className="space-y-16">
+              {/* One-time intro */}
+              <div className="max-w-3xl mx-auto text-center">
+                <h3 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  One-Time Catering
+                </h3>
+                <p className="text-[#4A4745] mb-2">
+                  For events, parties, special occasions, and single meals. The chef arrives, cooks, serves, and cleans up — then leaves.
+                </p>
+                <p className="text-[#6B8E5A] font-semibold">Starting from IDR 450,000 per person</p>
+              </div>
+
+              {/* Styles grid */}
+              <div>
+                <h4 className="text-center text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-8 font-semibold">
+                  Choose Your Catering Style
+                </h4>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                  {CATERING_STYLES.map((style) => (
+                    <CateringPackageCard key={style.title} {...style} />
+                  ))}
+                </div>
+              </div>
+
+              {/* BBQ Preview */}
+              <div className="bg-[#FAFAF8] rounded-3xl p-8 md:p-12">
+                <div className="text-center mb-8">
+                  <h4 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>BBQ Catering: The Villa Volume Engine</h4>
+                  <p className="text-[#4A4745] text-sm max-w-2xl mx-auto">
+                    BBQ is the easiest way to feed a villa group properly. Live, social, flexible — works for family dinners, birthdays, and villa parties.
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  {BBQ_PACKAGES.map((pkg) => (
+                    <CateringPackageCard key={pkg.title} {...pkg} />
+                  ))}
+                </div>
+                <div className="text-center">
+                  <Link
+                    to="/catering/bbq-catering"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                  >
+                    View BBQ packages <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Buffet Preview */}
+              <div className="bg-white rounded-3xl border border-[#E8E6E3] p-8 md:p-12">
+                <div className="text-center mb-8">
+                  <h4 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Buffet Catering for Larger Groups</h4>
+                  <p className="text-[#4A4745] text-sm max-w-2xl mx-auto">
+                    For weddings, villa events, corporate dinners, and larger groups. Smooth service, food available without slowing the event.
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  {BUFFET_PACKAGES.map((pkg) => (
+                    <CateringPackageCard key={pkg.title} {...pkg} />
+                  ))}
+                </div>
+                <div className="text-center">
+                  <Link
+                    to="/catering/buffet"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                  >
+                    View buffet packages <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* One-time CTA */}
+              <div className="text-center">
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-10 py-5 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                >
+                  <MessageCircle className="w-4 h-4" /> Get Catering Quote for 5+ Guests
+                </a>
+              </div>
+            </div>
+          )}
+
+          {/* DAILY CHEF SERVICE PANEL */}
+          {activeTab === 'daily' && (
+            <div id="daily-chef" className="space-y-16">
+              {/* Daily intro */}
+              <div className="max-w-3xl mx-auto text-center">
+                <h3 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  Daily Chef Service
+                </h3>
+                <p className="text-[#4A4745] mb-2">
+                  A dedicated chef comes to your villa every day — breakfast, lunch, and dinner. Groceries at cost. Full cleanup after every meal.
+                </p>
+                <p className="text-[#C5A028] font-semibold">Starting from IDR 600,000 per hour</p>
+              </div>
+
+              {/* Daily packages */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {DAILY_CHEF_PACKAGES.map((pkg) => (
+                  <div key={pkg.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 text-center hover:shadow-lg transition-all flex flex-col">
+                    <h4 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h4>
+                    <p className="text-[#C5A028] font-semibold text-lg mb-1">{pkg.price}<span className="text-sm">{pkg.period}</span></p>
+                    <p className="text-[#4A4745] text-sm mb-4 flex-1">{pkg.desc}</p>
+                    <p className="text-xs text-[#4A4745]/70 mb-4">Best for: {pkg.bestFor}</p>
+                    <a
+                      href={WA_DAILY_CHEF_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#C5A028] text-black text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+                    >
+                      <Calendar className="w-4 h-4" /> Enquire
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              {/* What's included */}
+              <div className="bg-white rounded-3xl border border-[#E8E6E3] p-8 md:p-12">
+                <h4 className="text-center text-xl md:text-2xl mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  What Is Included
+                </h4>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                  {DAILY_CHEF_INCLUDES.map((item) => (
+                    <div key={item} className="flex items-start gap-3 p-4 bg-[#FAFAF8] rounded-xl">
+                      <Check className="w-5 h-5 text-[#C5A028] flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-[#4A4745]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-4 max-w-2xl mx-auto flex items-start gap-3">
+                  <ShieldCheck className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-amber-800">
+                    <strong>Groceries billed at cost.</strong> You see every receipt. No markup, no hidden fees. The hourly rate covers chef time, cooking, service, and cleanup.
+                  </p>
+                </div>
+              </div>
+
+              {/* Daily chef add-ons */}
+              <div>
+                <h4 className="text-center text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-8 font-semibold">
+                  Optional Add-Ons
+                </h4>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                  {DAILY_CHEF_ADDONS.map((addon) => (
+                    <div key={addon.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 hover:shadow-lg transition-all">
+                      <addon.icon className="w-6 h-6 text-[#C5A028] mb-3" />
+                      <h5 className="font-semibold text-sm mb-1">{addon.title}</h5>
+                      <p className="text-sm text-[#4A4745]">{addon.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* How daily chef works */}
+              <div className="bg-[#FAFAF8] rounded-3xl p-8 md:p-12">
+                <h4 className="text-center text-xl md:text-2xl mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  How Daily Chef Works
+                </h4>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                  {[
+                    { step: '01', title: 'Message us', desc: 'Tell us your villa, dates, and group size. Most replies within the hour.', icon: MessageCircle },
+                    { step: '02', title: 'Design your plan', desc: 'Menus tailored to your preferences, dietary needs, and schedule.', icon: Utensils },
+                    { step: '03', title: 'Chef shops & cooks', desc: 'Groceries sourced that morning. Chef arrives, cooks, serves.', icon: ChefHat },
+                    { step: '04', title: 'You relax', desc: 'No grocery runs. No dishes. No planning. Just great food every day.', icon: Sparkles },
+                  ].map((step) => (
+                    <div key={step.step} className="text-center">
+                      <div className="w-14 h-14 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-4">
+                        <step.icon className="w-6 h-6 text-[#C5A028]" />
+                      </div>
+                      <span className="text-[#C5A028] text-xs font-bold tracking-wider">{step.step}</span>
+                      <h5 className="font-medium text-[#1A1A1A] text-sm mt-1 mb-1">{step.title}</h5>
+                      <p className="text-xs text-[#4A4745]">{step.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Daily CTA */}
+              <div className="text-center">
+                <a
+                  href={WA_DAILY_CHEF_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+                >
+                  <MessageCircle className="w-4 h-4" /> Book Daily Chef Service
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 3: DECISION HELPER ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[800px] mx-auto">
+          <SectionHeader
+            eyebrow="NOT SURE?"
+            title="Which Service Is Right for Me?"
+            subtitle="Answer 3 quick questions and we will point you to the right option."
+          />
+
+          <div className="bg-white rounded-3xl border border-[#E8E6E3] p-6 md:p-10">
+            {!decisionResult ? (
+              <div className="space-y-8">
+                {DECISION_QUESTIONS.map((q, qIdx) => (
+                  <div key={qIdx} className={qIdx > 0 && !decisionAnswers[qIdx - 1] ? 'opacity-40 pointer-events-none' : ''}>
+                    <p className="font-semibold text-[#1A1A1A] mb-4">
+                      <span className="text-[#6B8E5A] mr-2">{qIdx + 1}.</span>
+                      {q.question}
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {q.options.map((opt) => (
+                        <button
+                          key={opt.label}
+                          type="button"
+                          onClick={() => handleDecisionAnswer(qIdx, opt.result as 'one-time' | 'daily')}
+                          className={`px-5 py-4 rounded-xl border text-left text-sm transition-all ${
+                            decisionAnswers[qIdx] === opt.result
+                              ? 'border-[#6B8E5A] bg-[#6B8E5A]/5 text-[#1A1A1A] font-medium'
+                              : 'border-[#E8E6E3] hover:border-[#6B8E5A]/40 hover:bg-[#FAFAF8]'
+                          }`}
+                        >
+                          {opt.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-6">
+                <div className="w-16 h-16 rounded-full bg-[#6B8E5A]/10 flex items-center justify-center mx-auto mb-6">
+                  <HelpCircle className="w-8 h-8 text-[#6B8E5A]" />
+                </div>
+                <h3 className="text-2xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  We Recommend: {decisionResult === 'one-time' ? 'One-Time Catering' : 'Daily Chef Service'}
+                </h3>
+                <p className="text-[#4A4745] mb-8 max-w-md mx-auto">
+                  {decisionResult === 'one-time'
+                    ? 'Based on your answers, a single-event catering package is the best fit. Browse BBQ, buffet, plated, or drop-off options above.'
+                    : 'Based on your answers, having a dedicated chef for your entire stay will give you the best experience. Explore daily chef packages above.'}
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActiveTab(decisionResult)
+                      setTimeout(() => {
+                        const el = document.getElementById('service-tabs')
+                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                      }, 100)
+                    }}
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                  >
+                    <ArrowRight className="w-4 h-4" /> View {decisionResult === 'one-time' ? 'One-Time Catering' : 'Daily Chef Service'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={resetDecision}
+                    className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#4A4745] text-sm tracking-widest uppercase rounded-full hover:bg-[#FAFAF8] transition-all"
+                  >
+                    Start Over
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 4: WHO THIS IS FOR ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
@@ -377,27 +822,8 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 3: CHOOSE YOUR STYLE ═══════ */}
-      <section id="packages" className="cat-content py-20 md:py-28 px-6">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="CHAPTER 2 — THE MENU"
-            title="Choose Your Catering Style"
-            subtitle="Whether you need a casual villa BBQ, food delivered without staff, a full buffet, a plated dinner, Babi Guling, grazing table, or floating breakfast — we make it easy to choose the right format."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {CATERING_STYLES.map((style) => (
-              <CateringPackageCard key={style.title} {...style} />
-            ))}
-          </div>
-          <p className="text-center text-sm text-[#4A4745]/70 mt-8">
-            Not sure which fits your group? <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="text-[#6B8E5A] font-semibold hover:underline">Message us on WhatsApp</a> — we will recommend the right format in under 2 minutes.
-          </p>
-        </div>
-      </section>
-
-      {/* ═══════ SECTION 4: VILLA VS RESTAURANT ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      {/* ═══════ SECTION 5: VILLA VS RESTAURANT ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="CHAPTER 3 — THE COMPARISON"
@@ -405,12 +831,12 @@ export default function CateringMainPage() {
             subtitle="A restaurant dinner for 10 in Seminyak costs 8–12M with drinks and transport. Our Indonesian BBQ for 10: 4.5M. At your villa. With a chef."
           />
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
+            <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
               <h3 className="text-xl mb-6 text-[#4A4745]" style={{ fontFamily: "'Playfair Display', serif" }}>Restaurant Dinner</h3>
               <div className="space-y-4">
                 {['Transport for 8+ people across Bali traffic', 'Split tables, noisy room, other guests', 'Fixed menu, fixed time, fixed pace', '21% tax and service charge on top', 'Tip expected, parking extra'].map((item) => (
                   <div key={item} className="flex items-start gap-3 text-sm text-[#4A4745]">
-                    <span className="text-red-400 font-bold mt-0.5">✕</span>
+                    <span role="img" aria-label="Not included" className="mt-0.5 font-bold text-red-400">✕</span>
                     <span>{item}</span>
                   </div>
                 ))}
@@ -435,36 +861,9 @@ export default function CateringMainPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
             >
-              <MessageCircle className="w-4 h-4" /> Get a Quote — Compare for Your Group
+              <MessageCircle className="w-4 h-4" /> Get Catering Quote for Your Guests
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* ═══════ SECTION 5: BBQ PREVIEW ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="CHAPTER 4 — THE BBQ"
-            title="BBQ Catering: The Villa Volume Engine"
-            subtitle="BBQ is the easiest way to feed a villa group properly. It is live, social, flexible, and works for small family dinners, birthdays, villa parties, and group holidays."
-          />
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {BBQ_PACKAGES.map((pkg) => (
-              <CateringPackageCard key={pkg.title} {...pkg} />
-            ))}
-          </div>
-          <div className="text-center">
-            <Link
-              to="/catering/bbq-catering"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
-            >
-              View BBQ packages <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <p className="text-center text-sm text-[#4A4745]/70 mt-6">
-            Chef arrives 3 hours before service. Grills live at your villa. Cleans up after. You do nothing.
-          </p>
         </div>
       </section>
 
@@ -484,32 +883,8 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 7: BUFFET PREVIEW ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="CHAPTER 5 — THE BUFFET"
-            title="Buffet Catering for Larger Groups"
-            subtitle="For weddings, villa events, corporate dinners, and larger groups, buffet catering keeps service smooth and food available without slowing the event down."
-          />
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {BUFFET_PACKAGES.map((pkg) => (
-              <CateringPackageCard key={pkg.title} {...pkg} />
-            ))}
-          </div>
-          <div className="text-center">
-            <Link
-              to="/catering/buffet"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
-            >
-              View buffet packages <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ SECTION 8: PLATED PREVIEW ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      {/* ═══════ SECTION 7: PLATED PREVIEW ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="CHAPTER 6 — THE PLATED"
@@ -542,8 +917,8 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 9: DROP-OFF PREVIEW ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      {/* ═══════ SECTION 8: DROP-OFF PREVIEW ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="CHAPTER 7 — THE DROP-OFF"
@@ -575,8 +950,8 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 10: BABI GULING ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      {/* ═══════ SECTION 9: BABI GULING ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="CHAPTER 8 — THE TRADITION"
@@ -601,8 +976,8 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 11: GRAZING TABLES ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      {/* ═══════ SECTION 10: GRAZING TABLES ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Visual"
@@ -628,8 +1003,8 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 12: FLOATING BREAKFAST ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      {/* ═══════ SECTION 11: FLOATING BREAKFAST ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Instagram-Ready"
@@ -655,8 +1030,8 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 13: PRICING TRANSPARENCY ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      {/* ═══════ SECTION 12: PRICING TRANSPARENCY ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto text-center">
           <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Why We Publish Our Prices</h2>
           <p className="text-[#4A4745] mb-6">
@@ -664,14 +1039,14 @@ export default function CateringMainPage() {
           </p>
           <div className="flex flex-wrap gap-2 justify-center">
             {['No hidden fees', 'All-inclusive quotes', '21% tax included', 'Travel fee disclosed upfront', 'Final price before deposit'].map((d) => (
-              <span key={d} className="px-3 py-1.5 rounded-full bg-white border border-[#E8E6E3] text-sm text-[#4A4745]">{d}</span>
+              <span key={d} className="px-3 py-1.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745]">{d}</span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════ SECTION 14: PRICING SUMMARY ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      {/* ═══════ SECTION 13: PRICING SUMMARY ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Compare"
@@ -692,7 +1067,7 @@ export default function CateringMainPage() {
               </thead>
               <tbody>
                 {PRICING_TABLE.map((row) => (
-                  <tr key={row.name} className="border-b border-[#E8E6E3] hover:bg-[#FAFAF8] transition-colors">
+                  <tr key={row.name} className="border-b border-[#E8E6E3] hover:bg-white transition-colors">
                     <td className="py-4 font-medium">{row.name}</td>
                     <td className="py-4 text-[#6B8E5A] font-semibold">{row.price}</td>
                     <td className="py-4 text-[#4A4745]">{row.min}</td>
@@ -708,7 +1083,7 @@ export default function CateringMainPage() {
           {/* Mobile cards */}
           <div className="md:hidden space-y-4">
             {PRICING_TABLE.map((row) => (
-              <div key={row.name} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-4">
+              <div key={row.name} className="bg-white rounded-xl border border-[#E8E6E3] p-4">
                 <div className="flex items-center justify-between mb-2">
                   <h4 className="font-medium">{row.name}</h4>
                   <span className="text-[#6B8E5A] font-semibold text-sm">{row.price}</span>
@@ -723,8 +1098,8 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 15: HOW BOOKING WORKS ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      {/* ═══════ SECTION 14: HOW BOOKING WORKS ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="CHAPTER 9 — THE PROCESS"
@@ -759,8 +1134,8 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 16: AREAS SERVED ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      {/* ═══════ SECTION 15: AREAS SERVED ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Coverage"
@@ -768,17 +1143,17 @@ export default function CateringMainPage() {
             subtitle="We serve villas and event spaces across Bali. Travel fees apply outside Canggu and Seminyak."
           />
           <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
-            <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 text-center">
+            <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 text-center">
               <h3 className="font-medium text-[#1A1A1A] mb-2">Canggu & Seminyak</h3>
               <p className="text-sm text-[#4A4745] mb-3">No travel fee. Same-day booking often available.</p>
               <span className="inline-block px-3 py-1 bg-[#6B8E5A]/10 text-[#6B8E5A] text-xs font-semibold rounded-full">Most Popular</span>
             </div>
-            <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 text-center">
+            <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 text-center">
               <h3 className="font-medium text-[#1A1A1A] mb-2">Uluwatu & Ubud</h3>
               <p className="text-sm text-[#4A4745] mb-3">IDR 250K–500K travel fee. Book 3+ days ahead.</p>
               <span className="inline-block px-3 py-1 bg-[#E8E6E3] text-[#4A4745] text-xs font-semibold rounded-full">3+ Days Ahead</span>
             </div>
-            <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 text-center">
+            <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 text-center">
               <h3 className="font-medium text-[#1A1A1A] mb-2">Nusa Dua, Sanur, Jimbaran</h3>
               <p className="text-sm text-[#4A4745] mb-3">IDR 400K–700K travel fee. Book 5+ days ahead.</p>
               <span className="inline-block px-3 py-1 bg-[#E8E6E3] text-[#4A4745] text-xs font-semibold rounded-full">5+ Days Ahead</span>
@@ -788,7 +1163,7 @@ export default function CateringMainPage() {
             {AREAS.map((area) => (
               <span
                 key={area}
-                className="px-4 py-2 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#6B8E5A] hover:text-[#6B8E5A] transition-colors cursor-default"
+                className="px-4 py-2 rounded-full bg-white border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#6B8E5A] hover:text-[#6B8E5A] transition-colors cursor-default"
               >
                 {area}
               </span>
@@ -808,8 +1183,8 @@ export default function CateringMainPage() {
         subtitle="Real reviews from real villa events across Bali."
       />
 
-      {/* ═══════ SECTION 17: FAQ ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      {/* ═══════ SECTION 16: FAQ ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="Questions"
@@ -819,8 +1194,8 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 18: BOOKING FORM ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      {/* ═══════ SECTION 17: BOOKING FORM ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="Book Now"
@@ -838,6 +1213,10 @@ export default function CateringMainPage() {
               { name: 'notes', label: 'Dietary Notes / Special Requests', type: 'textarea' },
             ]}
             packageOptions={CATERING_STYLES.map((s) => s.title)}
+            submitLabelBuilder={(formData) => {
+              const guestLabel = formData.guests?.trim() ? `${formData.guests.trim()} Guests` : 'Your Guests'
+              return `Get Catering Quote for ${guestLabel}`
+            }}
           />
           <p className="text-center text-xs text-[#4A4745]/60 mt-6">
             No spam. No calls unless you ask. Just a clear quote you can book or ignore.
@@ -878,14 +1257,14 @@ export default function CateringMainPage() {
               </div>
             ))}
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-3">
             <a
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
             >
-              <MessageCircle className="w-4 h-4" /> Get Quote on WhatsApp
+              <MessageCircle className="w-4 h-4" /> Get Catering Quote for Your Guests
             </a>
             <a
               href="tel:+6282237565997"
@@ -894,6 +1273,9 @@ export default function CateringMainPage() {
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>
           </div>
+          <p className="text-sm text-white/60 mb-8">
+            No booking fee · Free consultation · Exact quote within 2 hours
+          </p>
           <TrustRow
             items={['4.9★ from 180+ reviews', '500+ villa events served', '8 years in Bali', 'Same-day quotes']}
             dark

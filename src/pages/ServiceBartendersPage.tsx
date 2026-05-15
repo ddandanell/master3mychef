@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
   breadcrumbSchema,
-  serviceSchema,
+  detailedServiceSchema,
   faqPageSchema,
   aggregateRatingSchema,
 } from '@/components/SeoHead'
@@ -103,15 +103,14 @@ export default function ServiceBartendersPage() {
         ogImage={`${SITE}/generated/aura-bartender.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema(
+          detailedServiceSchema(
             'Bartender Hire Bali',
-            'Professional bartenders for villa events in Bali. Classic and signature cocktails, full bar setup, glassware and service.',
+            'myCHEF.id provides professional bartender hire in Bali for villa dinners, weddings, and private parties. We handle cocktail service, bar setup, glassware, and smooth event execution from first pour to last call.',
             `${SITE}/in-villa-service/bartenders`,
-            'IDR',
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 112),
-          breadcrumbSchema('Bartenders', `${SITE}/in-villa-service/bartenders`, 'In-Villa Service', `${SITE}/in-villa-service`),
+          breadcrumbSchema('Bartender Hire Bali', `${SITE}/in-villa-service/bartenders`, 'In-Villa Service', `${SITE}/in-villa-service`),
         ]}
       />
 
@@ -135,7 +134,7 @@ export default function ServiceBartendersPage() {
             Classic cocktails, signature drinks, full bar setup. From IDR 450,000 per shift.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1ea855] transition-colors">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
               <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
             </a>
             <a href="#book" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
@@ -220,26 +219,26 @@ export default function ServiceBartendersPage() {
         </div>
       </section>
 
-      {/* ═══════ INTERNAL LINKS ═══════ */}
       <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
         <div className="max-w-[1000px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
+          <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>
+          <h3 className="font-playfair text-3xl text-[#1A1A1A] mb-6">You might also need</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/in-villa-service/mixology" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Mixology</h4>
-              <p className="text-xs text-[#4A4745]">Bespoke cocktail programs and masterclasses.</p>
+            <Link to="/in-villa-service/mixology" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Mixology</h4>
+              <p className="text-xs text-[#4A4745]">Go beyond service with signature cocktails and interactive masterclasses.</p>
             </Link>
-            <Link to="/in-villa-service/sommelier" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Sommelier Service</h4>
-              <p className="text-xs text-[#4A4745]">Curated wine pairings for your villa dinner.</p>
+            <Link to="/in-villa-service/waiters" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Waiter Hire</h4>
+              <p className="text-xs text-[#4A4745]">Add smooth floor service for plated dinners, parties, and receptions.</p>
             </Link>
-            <Link to="/events/villa-parties" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Villa Parties</h4>
-              <p className="text-xs text-[#4A4745]">BBQ, cocktail, and pool parties with full bar service.</p>
+            <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">In-Villa Service</h4>
+              <p className="text-xs text-[#4A4745]">Browse the full staffing hub for drinks, dining, and guest-facing support.</p>
             </Link>
-            <Link to="/catering/buffet" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Buffet Catering</h4>
-              <p className="text-xs text-[#4A4745]">Stylish buffet setups for any group size.</p>
+            <Link to="/events" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Events</h4>
+              <p className="text-xs text-[#4A4745]">Plan the full event experience around your bar concept and guest count.</p>
             </Link>
           </div>
         </div>
@@ -259,7 +258,7 @@ export default function ServiceBartendersPage() {
             Reply within 2 hours.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
             <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">

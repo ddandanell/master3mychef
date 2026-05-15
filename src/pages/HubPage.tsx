@@ -1,11 +1,21 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield } from 'lucide-react'
+import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
-import SeoHead, { localBusinessSchema } from '@/components/SeoHead'
+import SeoHead, {
+  localBusinessSchema,
+  serviceSchema,
+  faqPageSchema,
+  aggregateRatingSchema,
+  organizationSchema,
+} from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import PricingCalculator from '@/components/PricingCalculator'
+import TestimonialBlock from '@/components/shared/TestimonialBlock'
+import { RiskReversal } from '@/components/shared'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -20,9 +30,9 @@ const PORTALS = [
   },
   {
     id: 'catering',
-    title: 'Catering',
-    subtitle: 'Private chef for breakfast, lunch, and dinner. No planning needed.',
-    path: '/villa-chef',
+    title: 'Events & Catering',
+    subtitle: 'BBQ, buffet, plated dinners, and hosted villa events for groups of 5+.',
+    path: '/catering',
     image: '/generated/hub-catering.webp',
     accent: '#6B8E5A',
   },
@@ -130,6 +140,22 @@ const TRUST_STATS = [
   { icon: Clock, value: '8+', label: 'Years in Bali' },
 ]
 
+
+const JOURNAL_LINKS = [
+  {
+    title: 'How to Host a Villa Dinner Party in Bali (Complete Guide)',
+    path: '/journal/bali-villa-dinner-party-guide',
+  },
+  {
+    title: 'Bali Wedding Catering Cost: What to Budget in 2025',
+    path: '/journal/wedding-catering-bali-cost',
+  },
+  {
+    title: 'The Bali Floating Breakfast: History, Recipes & How to Order One',
+    path: '/journal/floating-breakfast-bali',
+  },
+]
+
 const REVIEWS = [
   { name: 'James & Sarah', location: 'London', dept: 'Fine Dining', text: 'We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the courses — pure magic.' },
   { name: 'The Harrisons', location: 'Sydney', dept: 'Fine Dining', text: 'Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.' },
@@ -156,6 +182,35 @@ const REVIEWS = [
   { name: 'Olivia & Marcus', location: 'Stockholm', dept: 'Catering', text: 'Fresh juice every morning, poolside lunches, candlelit dinners. We felt like we were living in a luxury resort — except it was our villa.' },
   { name: 'The Fosters', location: 'Chicago', dept: 'Fine Dining', text: 'We asked for a surprise menu. What arrived was a journey through Adriano\'s career — Modena, Tokyo, Bali. Each course told a story.' },
   { name: 'Yuki & Kenji', location: 'Osaka', dept: 'Events', text: 'Traditional Japanese wedding ceremony followed by a Western-style reception. The team respected every ritual while delivering world-class cuisine.' },
+]
+
+const HERO_STATS = ['560+ Villas Served', '12,000+ Happy Guests', '4.9 ★ Rating', '8+ Years in Bali']
+
+const FEATURED_TESTIMONIALS = [
+  {
+    name: 'James & Sarah',
+    location: 'Seminyak Villa',
+    eventType: 'Private Dinner',
+    date: 'March 2026',
+    quote: REVIEWS[0].text,
+    rating: 5,
+  },
+  {
+    name: 'The Harrisons',
+    location: 'Ubud Estate',
+    eventType: 'Anniversary Dinner',
+    date: 'February 2026',
+    quote: REVIEWS[1].text,
+    rating: 5,
+  },
+  {
+    name: 'The Garcias',
+    location: 'Canggu Garden Villa',
+    eventType: 'Wedding Dinner',
+    date: 'January 2026',
+    quote: REVIEWS[12].text,
+    rating: 5,
+  },
 ]
 
 export default function HubPage() {
@@ -195,6 +250,37 @@ export default function HubPage() {
     return () => ctx.revert()
   }, [])
 
+  const homeLocalBusinessSchema: Record<string, unknown> = {
+    ...localBusinessSchema,
+    '@type': 'FoodEstablishment',
+    url: 'https://mychef.id/',
+    telephone: '+62 822-3756-5997',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',
+      addressLocality: 'Denpasar Selatan',
+      addressRegion: 'Bali',
+      postalCode: '80226',
+      addressCountry: 'Indonesia',
+    },
+    areaServed: {
+      '@type': 'Place',
+      name: 'Bali, Indonesia',
+    },
+    priceRange: '$$$$',
+    servesCuisine: ['Italian', 'Mediterranean', 'Indonesian', 'International'],
+  }
+
+  const websiteSchema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://mychef.id/#website',
+    name: 'myCHEF.id',
+    url: 'https://mychef.id/',
+    inLanguage: 'en',
+    publisher: { '@id': 'https://mychef.id/#organization' },
+  }
+
   const homeBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -203,28 +289,133 @@ export default function HubPage() {
     ],
   }
 
+  const homeSchemas: Record<string, unknown>[] = [
+    homeLocalBusinessSchema,
+    websiteSchema,
+    homeBreadcrumb,
+    organizationSchema('https://mychef.id/generated/hub-hero-v3.webp', [
+      'https://www.instagram.com/mychef.id',
+      'https://www.facebook.com/mychef.id',
+    ]),
+    serviceSchema(
+      'Private Chef / Fine Dining',
+      'Italian tasting menus and open-flame dining experiences in your Bali villa. Michelin-trained leadership.',
+      'https://mychef.id/fine-dining',
+      '$$$$'
+    ),
+    serviceSchema(
+      'Villa Catering',
+      'Daily private chef service for villa stays — breakfast, lunch, and dinner. Groceries at cost.',
+      'https://mychef.id/catering',
+      '$$$'
+    ),
+    serviceSchema(
+      'Event Production',
+      'Weddings, retreats, birthdays, and corporate events — full planning, catering, and service staff.',
+      'https://mychef.id/events',
+      '$$$$'
+    ),
+    serviceSchema(
+      'In-Villa Service Staff',
+      'Uniformed waiters, butlers, bartenders, mixologists, and sommeliers for villa dining and events.',
+      'https://mychef.id/in-villa-service',
+      '$$$'
+    ),
+    serviceSchema(
+      'Staffing & Placement',
+      'Hire vetted private chefs, live-in chefs, butlers, and villa staff across Bali. 48-hour placement.',
+      'https://mychef.id/staffing',
+      '$$$'
+    ),
+    aggregateRatingSchema(4.9, 560),
+    faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
+  ]
+
   return (
     <div>
       <SeoHead
-        title="Private Chef Bali | Villa Dining, Catering & Events — myCHEF"
-        description="Private chef in Bali for villa dining, catering, events, and fine dining. Same-day WhatsApp confirmation."
-        canonical="https://mychef.id/"
-        ogImage="https://mychef.id/generated/hub-hero-v3.webp"
-        jsonLd={[localBusinessSchema, homeBreadcrumb]}
+        title={getPageMeta('home').title}
+        description={getPageMeta('home').description}
+        canonical={getPageMeta('home').canonical}
+        ogImage={getPageMeta('home').ogImage}
+        jsonLd={homeSchemas}
       />
-      {/* PORTALS — now the page opener. "Choose Your Way" leads. */}
-      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pt-24 md:pt-28 pb-24 md:pb-32 px-6" style={{ paddingTop: '100px', background: 'var(--u-bg)' }}>
+      {/* HERO — luxury brand identity with Michelin-trained founder story front and centre */}
+      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="px-5 pb-20 pt-20 sm:px-6 sm:pt-24 md:pb-32 md:pt-28" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-8 md:mb-12">
-            <p className="hub-hero-label text-[#C5A028] tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.5rem' }}>
-              myCHEF.id — Bali
+            <p className="hub-hero-label mb-4 text-xs uppercase tracking-[0.35em] text-[#C5A028] sm:text-sm md:text-2xl" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Your Villa. Our Kitchen.
             </p>
-            <h1 className="u-heading text-4xl md:text-6xl lg:text-7xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Choose Your Way</h1>
-            <div className="gold-arc mx-auto mb-4" />
+            <h1 className="hub-hero-title u-heading mb-4 text-[2.15rem] leading-[1.06] sm:text-5xl md:text-6xl lg:text-7xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+              A Michelin-Trained Private Chef, in Your Bali Villa.
+            </h1>
+            <div className="gold-arc mx-auto mb-6" />
+            <p className="hub-hero-subtitle mx-auto mb-6 max-w-2xl text-[15px] leading-relaxed sm:text-lg md:text-xl" style={{ color: 'var(--u-text-muted)' }}>
+              Private dining, catering &amp; events across Bali. We shop, cook &amp; clean. You just enjoy.
+            </p>
+            <p className="mx-auto mb-8 max-w-xl text-sm leading-relaxed sm:text-[15px] md:text-base" style={{ color: 'var(--u-text-muted)' }}>
+              Founded by Adriano — trained under a Michelin-starred chef in Milan — myCHEF.id brings extraordinary dining to Bali's finest villas. A team of 50+ Indonesian hospitality professionals handles everything, from grocery sourcing to the last clean plate. We are not a marketplace. We are a kitchen that travels.
+            </p>
+            <div className="hub-hero-cta mb-3 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
+              <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ background: 'var(--u-accent)', color: '#fff' }}>
+                <MessageCircle className="w-4 h-4" /> Get My Free Quote <span aria-hidden="true">→</span>
+              </a>
+              <Link to="/pricing" className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border px-6 py-4 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ borderColor: 'var(--u-accent)', color: 'var(--u-accent)' }}>
+                Browse Menus &amp; Pricing <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <p className="mt-2 text-xs text-[#C5A028] animate-pulse">
+              <span role="img" aria-label="Available">🟢</span> Available this weekend · Reply within 1 hour
+            </p>
+            <p className="mb-6 text-xs uppercase tracking-[0.18em]" style={{ color: 'var(--u-text-muted)', fontFamily: "'Cormorant Garamond', serif" }}>
+              Weekends fill fast — book early
+            </p>
+            <p className="mb-8 text-sm" style={{ color: 'var(--u-text-muted)' }}>
+              No booking fee · Free consultation · Replies within 1 hour
+            </p>
+            {/* Risk Reversal — trust badges for high-ticket purchases */}
+            <div className="mx-auto mb-8 max-w-2xl">
+              <RiskReversal
+                items={[
+                  { icon: ShieldCheck, label: 'Same-day confirmation or your money back', desc: 'If your chef can\'t make it, we send a replacement within 2 hours or refund 100%' },
+                  { icon: RefreshCw, label: 'Chef replacement guarantee', desc: 'Same-day replacement or full refund — your evening is protected' },
+                ]}
+              />
+            </div>
+            <div className="mx-auto mb-8 grid max-w-3xl grid-cols-2 gap-3 md:grid-cols-4">
+              {HERO_STATS.map((stat) => (
+                <div
+                  key={stat}
+                  className="rounded-2xl border px-4 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.16em]"
+                  style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)', color: 'var(--u-text-muted)' }}
+                >
+                  {stat}
+                </div>
+              ))}
+            </div>
+            <div className="mx-auto mb-12 max-w-3xl rounded-2xl border px-4 py-4 text-left shadow-sm md:px-6" style={{ borderColor: 'rgba(197, 160, 40, 0.22)', background: 'rgba(255,255,255,0.72)', backdropFilter: 'blur(10px)' }}>
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#8A6F15]">Still deciding?</p>
+                  <p className="text-sm leading-relaxed text-[#4A4745]">
+                    Most guests book within 24h of inquiry. WhatsApp us — no commitment required.
+                  </p>
+                </div>
+                <a
+                  href="https://wa.me/6282237565997"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028]"
+                >
+                  Message us <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {PORTALS.map((portal, idx) => (
-              <div key={portal.id} className="portal-card group relative rounded-2xl overflow-hidden w-full" style={{ aspectRatio: '3/4', minHeight: '480px' }}>
+              <div key={portal.id} className="portal-card group relative w-full overflow-hidden rounded-2xl min-h-[420px] sm:min-h-[480px]" style={{ aspectRatio: '3/4' }}>
                 <Link to={portal.path} className="absolute inset-0 z-10" aria-label={portal.title} />
                 <img
                   src={portal.image}
@@ -232,13 +423,14 @@ export default function HubPage() {
                   width={600}
                   height={800}
                   fetchPriority={idx === 0 ? 'high' : undefined}
+                  loading={idx === 0 ? 'eager' : 'lazy'}
                   decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                  className="absolute inset-0 h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                   style={{ background: '#1a1a1a' }}
                   onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0.4' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-                <div className="absolute inset-0 p-8 flex flex-col justify-end pointer-events-none">
+                <div className="pointer-events-none absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
                   <h3 className="text-3xl md:text-4xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{portal.title}</h3>
                   <p className="text-sm text-white/70 mb-5 leading-relaxed">{portal.subtitle}</p>
                   <span className="flex items-center gap-2 text-sm font-medium transition-all group-hover:gap-4" style={{ color: portal.accent }}>
@@ -413,12 +605,21 @@ export default function HubPage() {
               </div>
             ))}
           </div>
+          <div className="mx-auto mt-12 max-w-[920px]">
+            <PricingCalculator
+              compact
+              collapsible
+              defaultOpen={false}
+              title="Quick estimate"
+              description="Tap to get a fast starting price for dinner, catering, events or staffing before you open WhatsApp."
+            />
+          </div>
           {/* Villa Awards + Best Partner diploma — three trophies on one row */}
           <div className="mt-12 pt-8 border-t flex flex-col items-center" style={{ borderColor: 'var(--u-border)' }}>
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full">
               <figure className="flex flex-col items-center text-center max-w-[280px]">
                 <img
-                  src="/generated/villa-award-2025.png"
+                  src="/generated/villa-award-2025.webp"
                   alt="Villa Award 2025 — Best Choice for Private Dining"
                   width={280}
                   height={280}
@@ -435,7 +636,7 @@ export default function HubPage() {
 
               <figure className="flex flex-col items-center text-center max-w-[280px]">
                 <img
-                  src="/generated/villa-award-2026.png"
+                  src="/generated/villa-award-2026.webp"
                   alt="Villa Award 2026 — Best Choice for Private Dining"
                   width={280}
                   height={280}
@@ -451,6 +652,12 @@ export default function HubPage() {
           </div>
         </div>
       </section>
+
+      <TestimonialBlock
+        title="Guest moments worth repeating"
+        subtitle="Private dinners, wedding weekends and hosted events — the details guests remember most."
+        testimonials={FEATURED_TESTIMONIALS}
+      />
 
       {/* REVIEWS */}
       <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
@@ -511,6 +718,8 @@ export default function HubPage() {
                 <img
                   src={city.image}
                   alt={`Private chef in ${city.name}, Bali`}
+                  width={800}
+                  height={600}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                   decoding="async"
@@ -589,9 +798,37 @@ export default function HubPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: '#25D366', color: '#fff' }}>
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: '#C9A227', color: '#fff' }}>
               <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+        <div className="max-w-[1100px] mx-auto rounded-[28px] border border-black/5 bg-white p-8 md:p-10">
+          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-[560px]">
+              <p className="u-label text-sm mb-3">Journal</p>
+              <h2 className="u-heading text-3xl md:text-4xl mb-4">Explore Our Journal</h2>
+              <p style={{ color: 'var(--u-text-muted)' }}>
+                Planning a villa dinner, wedding weekend, or Bali breakfast setup? Browse our latest guides for practical hosting tips.
+              </p>
+            </div>
+            <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4" style={{ color: 'var(--u-accent)' }}>
+              Visit the Journal <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {JOURNAL_LINKS.map((article) => (
+              <Link
+                key={article.path}
+                to={article.path}
+                className="rounded-2xl border border-black/5 bg-[#FAFAF8] px-5 py-5 text-sm font-medium transition-colors hover:border-[#C5A028] hover:text-[#C5A028]"
+              >
+                {article.title}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -621,8 +858,8 @@ export default function HubPage() {
             Most inquiries are answered within the hour. No deposit required to start planning.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all hover:scale-105">
-              <Phone className="w-4 h-4" /> WhatsApp Us Now
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105">
+              <Phone className="w-4 h-4" /> Get My Free Quote <span aria-hidden="true">→</span>
             </a>
             <Link to="/contact" className="inline-block px-10 py-5 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               View All Contact Options

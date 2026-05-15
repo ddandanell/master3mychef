@@ -2,10 +2,12 @@ import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check, Utensils, Flame, Sparkles, Building2, Users, ChefHat, PartyPopper } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
 import { AREAS, MICRO_AREAS } from '@/data/sitemap'
+import { getLocationBySlug } from '@/data/siteArchitecture'
 import { TOP_CITIES } from '@/data/topCities'
 
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'
+const createWaLink = (message: string) => `https://wa.me/${WA}?text=${encodeURIComponent(message)}`
 
 // Single template that powers every city / neighbourhood URL.
 //
@@ -23,12 +25,18 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
   if (!entry) return <Navigate to="/404" replace />
 
   const top = TOP_CITIES.find((c) => c.slug === slug)
-  const title = `Private Chef in ${entry.name}, Bali`
-  const description = top
-    ? `Private chef, villa catering, and full-service events in ${entry.name}. ${top.hook} Background-checked chefs, transparent pricing, same-day response.`
-    : `Private chef services in ${entry.name}, Bali — villa dinners, weekly meal prep, events, and weddings. Background-checked chefs, transparent pricing, same-day response.`
+  const locationPage = kind === 'area' ? getLocationBySlug(slug) : undefined
+  const title = locationPage?.h1 ?? `Private Chef in ${entry.name}, Bali`
+  const description = locationPage?.description ?? (
+    top
+      ? `Private chef, villa catering, and full-service events in ${entry.name}. ${top.hook} Background-checked chefs, transparent pricing, same-day response.`
+      : `Private chef services in ${entry.name}, Bali — villa dinners, weekly meal prep, events, and weddings. Background-checked chefs, transparent pricing, same-day response.`
+  )
   const canonical = `${SITE}/${slug}`
-  const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'd like a private chef in ${entry.name}, Bali.`)}`
+  const waLink = createWaLink(`Hi myCHEF, I'd like a private chef in ${entry.name}, Bali.`)
+  const fineDiningWaLink = createWaLink(`Hi myCHEF, I'd like fine dining with a private chef in ${entry.name}, Bali.`)
+  const cateringWaLink = createWaLink(`Hi myCHEF, I'd like catering in ${entry.name}, Bali.`)
+  const eventsWaLink = createWaLink(`Hi myCHEF, I'd like help planning an event in ${entry.name}, Bali.`)
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -47,7 +55,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title={`${title} | myCHEF`}
+        title={locationPage?.title ?? `${title} | myCHEF`}
         description={description}
         canonical={canonical}
         ogImage={top ? `${SITE}${top.hero}` : undefined}
@@ -73,6 +81,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Private chef</p>
             <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-5 max-w-[820px]">{title}</h1>
             <p className="text-base md:text-lg text-white/85 max-w-[640px] mb-3">{top.blurb}</p>
+            {locationPage?.intro && <p className="text-sm md:text-base text-white/75 max-w-[700px] mb-3">{locationPage.intro}</p>}
             <p className="text-sm text-white/55 italic mb-8">{top.signature}</p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -80,7 +89,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
                 href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1ea855] transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
               >
                 <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
               </a>
@@ -98,15 +107,14 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
           <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Private Chef</p>
           <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-6">{title}</h1>
           <p className="text-lg text-[#4A4745] max-w-[640px] mb-8">
-            Wake up to chef-prepared breakfasts. Host a candlelit dinner under the stars. Plan a wedding for 80 guests.
-            myCHEF brings background-checked chefs to villas across {entry.name} — for single dinners, recurring stays, and full-service events.
+            {locationPage?.intro ?? `Wake up to chef-prepared breakfasts. Host a candlelit dinner under the stars. Plan a wedding for 80 guests. myCHEF brings background-checked chefs to villas across ${entry.name} — for single dinners, recurring stays, and full-service events.`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1ea855] transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
             </a>
@@ -125,32 +133,50 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
         <section className="px-8 py-16 bg-white">
           <div className="max-w-[1100px] mx-auto">
             <p className="text-center font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Everything we offer in {entry.name}</p>
-            <h2 className="text-center font-playfair text-3xl md:text-4xl mb-12">All Services · All Areas</h2>
+            <h2 className="text-center font-playfair text-3xl md:text-4xl mb-4">Most-booked villa dining services in {entry.name}</h2>
+            <p className="text-center text-[#4A4745] max-w-[720px] mx-auto mb-12">
+              Fine dining, group catering, and full-service events — planned around your villa, guest count, and schedule.
+            </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {/* Fine Dining */}
-              <Link to="/fine-dining" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#C5A028] transition-all group">
+              <div className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#C5A028] transition-all">
                 <Flame className="w-6 h-6 text-[#C5A028] mb-3" />
                 <h3 className="font-playfair text-xl mb-2">Fine Dining</h3>
                 <p className="text-sm text-[#4A4745] flex-grow">Italian tasting menus, sommelier pairing, open-flame cooking.</p>
-                <span className="text-xs uppercase tracking-[2px] font-semibold text-[#C5A028] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
-              </Link>
+                <div className="mt-4 flex flex-col gap-3">
+                  <Link to="/fine-dining" className="text-xs uppercase tracking-[2px] font-semibold text-[#C5A028] hover:text-[#1A1A1A]">Explore →</Link>
+                  <a href={fineDiningWaLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs uppercase tracking-[2px] font-semibold text-[#1A1A1A] hover:text-[#C5A028]">
+                    <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
+                  </a>
+                </div>
+              </div>
 
               {/* Catering */}
-              <Link to="/catering" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#6B8E5A] transition-all group">
+              <div className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#6B8E5A] transition-all">
                 <Utensils className="w-6 h-6 text-[#6B8E5A] mb-3" />
                 <h3 className="font-playfair text-xl mb-2">Catering</h3>
                 <p className="text-sm text-[#4A4745] flex-grow">BBQ, buffet, drop-off, grazing tables, plated dinners.</p>
-                <span className="text-xs uppercase tracking-[2px] font-semibold text-[#6B8E5A] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
-              </Link>
+                <div className="mt-4 flex flex-col gap-3">
+                  <Link to="/catering" className="text-xs uppercase tracking-[2px] font-semibold text-[#6B8E5A] hover:text-[#1A1A1A]">Explore →</Link>
+                  <a href={cateringWaLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs uppercase tracking-[2px] font-semibold text-[#1A1A1A] hover:text-[#6B8E5A]">
+                    <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
+                  </a>
+                </div>
+              </div>
 
               {/* Events */}
-              <Link to="/events" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#2C5F7C] transition-all group">
+              <div className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#2C5F7C] transition-all">
                 <Sparkles className="w-6 h-6 text-[#2C5F7C] mb-3" />
                 <h3 className="font-playfair text-xl mb-2">Events</h3>
                 <p className="text-sm text-[#4A4745] flex-grow">Weddings, birthdays, corporate, retreats, villa parties.</p>
-                <span className="text-xs uppercase tracking-[2px] font-semibold text-[#2C5F7C] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
-              </Link>
+                <div className="mt-4 flex flex-col gap-3">
+                  <Link to="/events" className="text-xs uppercase tracking-[2px] font-semibold text-[#2C5F7C] hover:text-[#1A1A1A]">Explore →</Link>
+                  <a href={eventsWaLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs uppercase tracking-[2px] font-semibold text-[#1A1A1A] hover:text-[#2C5F7C]">
+                    <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
+                  </a>
+                </div>
+              </div>
 
               {/* In-Villa Service */}
               <Link to="/in-villa-service" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#8B5A2B] transition-all group">

@@ -5,7 +5,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import { Breadcrumb, PressStrip, formatIDR, calculateAllIn } from '@/components/shared'
 
@@ -176,7 +176,8 @@ export default function CorporateEventsPage() {
         canonical={`${SITE}/corporate-events`}
         ogImage={`${SITE}/generated/corp-hero.webp`}
         jsonLd={[
-          breadcrumbSchema('Corporate Events', `${SITE}/corporate-events`, 'Events', `${SITE}/events`),
+          detailedServiceSchema('Corporate Event Catering Bali', 'myCHEF.id provides corporate event catering in Bali for executive dinners, conferences, networking nights, and gala functions. We coordinate menus, staffing, drinks, and service logistics for smooth private-venue events.', `${SITE}/corporate-events`),
+          breadcrumbSchema('Corporate Event Catering Bali', `${SITE}/corporate-events`, 'Events', `${SITE}/events`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
         ]}
       />
@@ -212,7 +213,7 @@ export default function CorporateEventsPage() {
               href={`${WA_BASE}${encodeURIComponent('Hi myCHEF — interested in your corporate events service in Bali. Could we get a proposal?')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#25D366] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#1ea855] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <Phone className="w-4 h-4" /> Plan My Event
             </a>
@@ -391,7 +392,7 @@ export default function CorporateEventsPage() {
       {/* CTA */}
       <section className="py-24 md:py-32 px-6 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
         <div className="absolute inset-0 opacity-30">
-          <img src="/generated/corp-gala.webp" alt="" aria-hidden className="w-full h-full object-cover" />
+          <img src="/generated/corp-gala.webp" alt="" aria-hidden loading="lazy" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/50" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto text-center">
@@ -407,7 +408,7 @@ export default function CorporateEventsPage() {
               href={`${WA_BASE}${encodeURIComponent('Hi myCHEF — I want to plan a corporate event in Bali. Here is the brief:')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#25D366] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#1ea855] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <Phone className="w-4 h-4" /> Plan My Event
             </a>

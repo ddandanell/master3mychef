@@ -13,6 +13,7 @@
  * - Internal linking
  * - Full SEO schema
  */
+import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight, Star, Clock, Shield, Users, Phone, Mail, Calendar } from 'lucide-react'
 import SeoHead, {
@@ -23,21 +24,44 @@ import SeoHead, {
   aggregateRatingSchema,
 } from './SeoHead'
 import FAQAccordion from './catering/FAQAccordion'
+import { Button } from '@/components/ui/button'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'
 
+export interface PageAction {
+  label: string
+  href: string
+  external?: boolean
+}
+
+export interface PageProfile {
+  name: string
+  role: string
+  specialty: string
+  bio: string
+  achievements: string[]
+  badge?: string
+  image?: string
+  imageAlt?: string
+}
+
 export interface PageSection {
   id: string
-  type: 'hero' | 'content' | 'features' | 'gallery' | 'testimonials' | 'cta' | 'faq' | 'related'
+  type: 'hero' | 'content' | 'features' | 'profiles' | 'gallery' | 'testimonials' | 'cta' | 'faq' | 'related' | 'custom'
   title?: string
   subtitle?: string
   body?: string
   image?: string
   imageAlt?: string
   features?: { icon: any; title: string; desc: string }[]
+  profiles?: PageProfile[]
   testimonials?: { name: string; location: string; text: string; rating?: number }[]
   links?: { label: string; href: string; desc?: string }[]
+  render?: ReactNode
+  primaryAction?: PageAction
+  secondaryAction?: PageAction
   bg?: 'light' | 'dark' | 'accent'
 }
 
@@ -58,6 +82,10 @@ export interface PremiumPageProps {
   ctaText?: string
   ctaSubtext?: string
   noindex?: boolean
+  seoTitle?: string
+  seoDescription?: string
+  canonicalUrl?: string
+  extraJsonLd?: Record<string, unknown>[]
 }
 
 export default function PremiumPage({
@@ -77,8 +105,14 @@ export default function PremiumPage({
   ctaText = 'Chat on WhatsApp',
   ctaSubtext = 'We reply within the hour',
   noindex,
+  seoTitle,
+  seoDescription,
+  canonicalUrl,
+  extraJsonLd,
 }: PremiumPageProps) {
-  const canonical = `${SITE}/${slug}`
+  const canonical = canonicalUrl || `${SITE}/${slug}`
+  const metaTitle = seoTitle || `${title} | myCHEF`
+  const metaDescription = seoDescription || description
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(
     `Hi myCHEF, I'm interested in ${title}. Can you help me?`
   )}`
@@ -86,18 +120,64 @@ export default function PremiumPage({
   const schemas: Record<string, unknown>[] = [
     localBusinessSchema,
     breadcrumbSchema(title, canonical),
-    serviceSchema(title, description, canonical),
+    serviceSchema(title, metaDescription, canonical),
     aggregateRatingSchema(4.9, 500),
   ]
   if (faqs && faqs.length > 0) {
     schemas.push(faqPageSchema(faqs))
   }
+  if (extraJsonLd && extraJsonLd.length > 0) {
+    schemas.push(...extraJsonLd)
+  }
+
+  const renderAction = (
+    action: PageAction,
+    variant: 'primary' | 'secondary'
+  ) => {
+    const isExternal = action.external || /^(https?:|mailto:|tel:)/.test(action.href)
+    const buttonVariant = variant === 'primary' ? 'whatsapp' : 'secondary'
+    const content = (
+      <>
+        {variant === 'primary' && <MessageCircle className="w-4 h-4" />}
+        {action.label}
+        {variant === 'secondary' && <ArrowRight className="w-4 h-4" />}
+      </>
+    )
+
+    if (isExternal) {
+      return (
+        <Button
+          key={`${variant}-${action.href}`}
+          asChild
+          variant={buttonVariant}
+          size="brand"
+          className="w-full sm:w-auto"
+        >
+          <a href={action.href} target="_blank" rel="noopener noreferrer">
+            {content}
+          </a>
+        </Button>
+      )
+    }
+
+    return (
+      <Button
+        key={`${variant}-${action.href}`}
+        asChild
+        variant={buttonVariant}
+        size="brand"
+        className="w-full sm:w-auto"
+      >
+        <Link to={action.href}>{content}</Link>
+      </Button>
+    )
+  }
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title={`${title} | myCHEF`}
-        description={description}
+        title={metaTitle}
+        description={metaDescription}
         canonical={canonical}
         ogImage={ogImage}
         noindex={noindex}
@@ -111,6 +191,10 @@ export default function PremiumPage({
             <img
               src={heroImage}
               alt={heroImageAlt || h1}
+              width={1920}
+              height={1080}
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
@@ -118,6 +202,7 @@ export default function PremiumPage({
         )}
         <div className="relative z-10 w-full px-6 md:px-12 pb-16 md:pb-24 pt-32">
           <div className="max-w-[900px]">
+            <Breadcrumb items={[{ label: title }]} theme="dark" className="px-0 pt-0 pb-8" />
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">
               myCHEF — {keywords[0] || 'Bali'}
             </p>
@@ -143,22 +228,18 @@ export default function PremiumPage({
               </ul>
             )}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={waLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#128C7E] transition-colors"
-              >
-                <MessageCircle className="w-4 h-4" />
-                {ctaText}
-              </a>
-              <Link
-                to="/quote"
-                className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-colors"
-              >
-                Get a Quote
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">
+                <a href={waLink} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4" />
+                  {ctaText}
+                </a>
+              </Button>
+              <Button asChild variant="secondary" size="brand" className="w-full sm:w-auto">
+                <Link to="/quote">
+                  Get a Quote
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -260,6 +341,68 @@ export default function PremiumPage({
                 </div>
               )}
 
+              {/* Chef profiles */}
+              {section.type === 'profiles' && section.profiles && (
+                <div>
+                  {section.subtitle && (
+                    <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4 text-center">
+                      {section.subtitle}
+                    </p>
+                  )}
+                  {section.title && (
+                    <h2 className="font-playfair text-3xl md:text-4xl text-center mb-12">
+                      {section.title}
+                    </h2>
+                  )}
+                  <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    {section.profiles.map((profile) => (
+                      <article
+                        key={profile.name}
+                        className="overflow-hidden rounded-[28px] bg-white border border-black/5 shadow-sm"
+                      >
+                        <div className="aspect-[4/5] bg-gradient-to-br from-[#1A1A1A] via-[#3A3429] to-[#C5A028]/70">
+                          {profile.image ? (
+                            <img
+                              src={profile.image}
+                              alt={profile.imageAlt || profile.name}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                          ) : (
+                            <div className="flex h-full items-center justify-center font-playfair text-6xl text-white/80">
+                              {profile.name.charAt(0)}
+                            </div>
+                          )}
+                        </div>
+                        <div className="p-6 md:p-7">
+                          <span className="inline-flex items-center rounded-full bg-[#C5A028]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[2px] text-[#8B6F1A]">
+                            {profile.role}
+                          </span>
+                          <h3 className="font-playfair text-2xl mt-4">{profile.name}</h3>
+                          <p className="mt-2 text-sm font-semibold uppercase tracking-[2px] text-[#8B6F1A]">
+                            {profile.specialty}
+                          </p>
+                          {profile.badge && (
+                            <p className="mt-3 text-sm text-[#4A4745]">{profile.badge}</p>
+                          )}
+                          <p className="mt-4 text-sm leading-relaxed text-[#4A4745]">
+                            {profile.bio}
+                          </p>
+                          <ul className="mt-6 space-y-2">
+                            {profile.achievements.map((achievement) => (
+                              <li key={achievement} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                                <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#C5A028]" />
+                                <span>{achievement}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Testimonials */}
               {section.type === 'testimonials' && section.testimonials && (
                 <div>
@@ -317,23 +460,44 @@ export default function PremiumPage({
                     <p className="text-lg text-[#4A4745] mb-8">{section.body}</p>
                   )}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a
-                      href={waLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#128C7E] transition-colors"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      {ctaText}
-                    </a>
-                    <Link
-                      to="/quote"
-                      className="inline-flex items-center justify-center gap-2 border border-current font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:opacity-80 transition-opacity"
-                    >
-                      Get a Quote
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    {renderAction(
+                      section.primaryAction || {
+                        label: ctaText,
+                        href: waLink,
+                        external: true,
+                      },
+                      'primary'
+                    )}
+                    {renderAction(
+                      section.secondaryAction || {
+                        label: 'Get a Quote',
+                        href: '/quote',
+                      },
+                      'secondary'
+                    )}
                   </div>
+                </div>
+              )}
+
+              {/* Custom section */}
+              {section.type === 'custom' && section.render && (
+                <div className="mx-auto max-w-[980px]">
+                  {section.subtitle && (
+                    <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4 text-center">
+                      {section.subtitle}
+                    </p>
+                  )}
+                  {section.title && (
+                    <h2 className="font-playfair text-3xl md:text-4xl text-center mb-4">
+                      {section.title}
+                    </h2>
+                  )}
+                  {section.body && (
+                    <p className={`mx-auto max-w-3xl text-center leading-relaxed ${isDark ? 'text-white/75' : 'text-[#4A4745]'}`}>
+                      {section.body}
+                    </p>
+                  )}
+                  <div className={section.title || section.body ? 'mt-10' : ''}>{section.render}</div>
                 </div>
               )}
 
@@ -418,22 +582,18 @@ export default function PremiumPage({
           </h2>
           <p className="text-white/60 mb-8">{ctaSubtext}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#128C7E] transition-colors"
-            >
-              <MessageCircle className="w-4 h-4" />
-              {ctaText}
-            </a>
-            <Link
-              to="/book"
-              className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-colors"
-            >
-              <Calendar className="w-4 h-4" />
-              Book Online
-            </Link>
+            <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">
+              <a href={waLink} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-4 h-4" />
+                {ctaText}
+              </a>
+            </Button>
+            <Button asChild variant="secondary" size="brand" className="w-full sm:w-auto">
+              <Link to="/book">
+                <Calendar className="w-4 h-4" />
+                Book Online
+              </Link>
+            </Button>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/40">
             <a href={`tel:${WA}`} className="flex items-center gap-2 hover:text-white transition-colors">

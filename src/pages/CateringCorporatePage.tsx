@@ -9,8 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
-  breadcrumbSchema,
-  serviceSchema,
+  cateringBreadcrumbSchema,
+  cateringServiceSchema,
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
@@ -137,17 +137,17 @@ export default function CateringCorporatePage() {
       <SeoHead
         title="Corporate Catering Bali | Business Lunch & Event Catering"
         description="Corporate catering in Bali for team lunches, workshops, retreats, product launches, meetings, and company events with professional service."
-        canonical={`${SITE}/catering/corporate-catering-bali`}
-        ogImage={`${SITE}/generated/hero-corporate-events.jpg`}
+        canonical={`${SITE}/catering/corporate-catering`}
+        ogImage={`${SITE}/generated/hero-corporate-events.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Corporate Catering Bali', 'Professional corporate catering for business lunches, workshops, retreats, product launches, and company events in Bali.', `${SITE}/catering/corporate-catering-bali`, 'IDR'),
-          offerSchema('Board Dinner', 850000, 'IDR', `${SITE}/catering/corporate-catering-bali`),
-          offerSchema('Team Offsite Catering', 550000, 'IDR', `${SITE}/catering/corporate-catering-bali`),
-          offerSchema('Conference Catering', 450000, 'IDR', `${SITE}/catering/corporate-catering-bali`),
+          cateringServiceSchema('Corporate Catering Bali', 'Corporate catering in Bali for business lunches, workshops, offsites, launches, and executive dinners with reliable timing and professional presentation. myCHEF.id handles menu planning, staffing, invoicing, and service across Bali.', `${SITE}/catering/corporate-catering`),
+          offerSchema('Board Dinner', 850000, 'IDR', `${SITE}/catering/corporate-catering`),
+          offerSchema('Team Offsite Catering', 550000, 'IDR', `${SITE}/catering/corporate-catering`),
+          offerSchema('Conference Catering', 450000, 'IDR', `${SITE}/catering/corporate-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 89),
-          breadcrumbSchema('Corporate Catering Bali', `${SITE}/catering/corporate-catering-bali`, 'Catering', `${SITE}/catering`),
+          cateringBreadcrumbSchema('Corporate Catering Bali', `${SITE}/catering/corporate-catering`),
         ]}
       />
 
@@ -157,7 +157,7 @@ export default function CateringCorporatePage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-corporate-events.jpg"
+            src="/generated/hero-corporate-events.webp"
             alt="Professional corporate event catering setup at Bali villa"
             width={1920}
             height={1080}
@@ -463,7 +463,7 @@ export default function CateringCorporatePage() {
       {/* ═══════ SECTION 13: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/hero-corporate-events.jpg" alt="Corporate event catering at Bali villa" className="w-full h-full object-cover" loading="lazy" />
+          <img src="/generated/hero-corporate-events.webp" alt="Corporate event catering at Bali villa" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">
@@ -501,7 +501,7 @@ export default function CateringCorporatePage() {
               <h4 className="font-semibold text-sm mb-1">Fine Dining</h4>
               <p className="text-xs text-[#4A4745]">7–11 course tasting menus in your villa</p>
             </Link>
-            <Link to="/catering/villa-catering-bali" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
               <h4 className="font-semibold text-sm mb-1">Villa Catering</h4>
               <p className="text-xs text-[#4A4745]">Full-service catering for villa groups</p>
             </Link>

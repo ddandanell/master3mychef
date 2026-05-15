@@ -377,7 +377,7 @@ export default function QuoteFunnel() {
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 w-full bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1ea855] transition-all"
+              className="inline-flex items-center justify-center gap-2 w-full bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <MessageCircle className="w-4 h-4" /> Send Request via WhatsApp
             </a>

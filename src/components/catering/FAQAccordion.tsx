@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 
 interface FAQ {
@@ -13,6 +13,7 @@ interface FAQAccordionProps {
 }
 
 export default function FAQAccordion({ items, dark = false, defaultOpenCount = 0 }: FAQAccordionProps) {
+  const accordionId = useId()
   const [openSet, setOpenSet] = useState<Set<number>>(() => {
     const s = new Set<number>()
     for (let i = 0; i < Math.min(defaultOpenCount, items.length); i++) s.add(i)
@@ -36,15 +37,21 @@ export default function FAQAccordion({ items, dark = false, defaultOpenCount = 0
     <div className="space-y-3">
       {items.map((item, i) => {
         const isOpen = openSet.has(i)
+        const buttonId = `${accordionId}-button-${i}`
+        const panelId = `${accordionId}-panel-${i}`
+
         return (
           <div
             key={i}
             className={`${bgColor} rounded-xl border overflow-hidden transition-all duration-300 ${isOpen ? 'shadow-sm' : ''}`}
           >
             <button
+              type="button"
+              id={buttonId}
               onClick={() => toggle(i)}
-              className="w-full flex items-center justify-between gap-4 p-4 md:p-5 text-left"
+              className="flex min-h-[52px] w-full items-start justify-between gap-4 p-4 text-left md:items-center md:p-5"
               aria-expanded={isOpen}
+              aria-controls={panelId}
             >
               <span className={`${textColor} font-medium text-sm md:text-base`}>{item.q}</span>
               <ChevronDown
@@ -52,7 +59,10 @@ export default function FAQAccordion({ items, dark = false, defaultOpenCount = 0
               />
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
+              id={panelId}
+              role="region"
+              aria-labelledby={buttonId}
+              className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[640px] opacity-100' : 'max-h-0 opacity-0'}`}
             >
               <p className={`${mutedColor} text-sm px-4 md:px-5 pb-4 md:pb-5 leading-relaxed`}>
                 {item.a}

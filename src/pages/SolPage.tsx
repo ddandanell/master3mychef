@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { Check, Utensils, Star, MessageCircle, Phone, ShoppingBag, Sparkles } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
 import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -65,11 +67,11 @@ export default function SolPage() {
   return (
     <div ref={ref} data-universe="sol" className="min-h-screen" style={{ background: '#F5F0E8', color: '#2C2419' }}>
       <SeoHead
-        title="Bali Villa Catering | Private Chef — Daily Dining — myCHEF"
-        description="Bali villa catering with a private chef for your stay. Daily breakfast, lunch, dinner. Groceries at cost. From IDR 600K/hour."
-        canonical="https://mychef.id/villa-chef"
-        ogImage="https://mychef.id/generated/catering-hero.webp"
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Villa Chef', 'https://mychef.id/villa-chef')]}
+        title={getPageMeta('villa-chef').title}
+        description={getPageMeta('villa-chef').description}
+        canonical={getPageMeta('villa-chef').canonical}
+        ogImage={getPageMeta('villa-chef').ogImage}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Villa Chef', getPageMeta('villa-chef').canonical)]}
       />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -85,20 +87,31 @@ export default function SolPage() {
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="sol-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Catering</p>
+          <p className="sol-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Private Villa Dining</p>
           <h1 className="sol-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 " style={{ fontFamily: "'Playfair Display', serif" }}>
-            Your Private<br /><span className="italic">Villa Chef</span>
+            Your Private Chef<br /><span className="italic">for Everyday Villa Dining</span>
           </h1>
-          <p className="sol-hero-sub text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            Wake up to breakfast. Swim through lunch. Dine at sunset. We shop, cook, serve, and clean — so you do not have to.
+          <p className="sol-hero-sub text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+            This page is for couples, families, and villa guests who want breakfast, lunch, or dinner cooked in their villa. Best for 1–4 guests and longer stays — not parties, weddings, or large catered events.
           </p>
           <div className="sol-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all">
-              <MessageCircle className="w-4 h-4" /> Message Daniel
+              <MessageCircle className="w-4 h-4" /> Message myCHEF
             </a>
-            <a href="#plans" className="inline-block px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
-              See Meal Plans
-            </a>
+            <Link to="/catering" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+              Planning a Group Event?
+            </Link>
+          </div>
+          <div className="mt-8 max-w-3xl mx-auto rounded-2xl border border-white/15 bg-black/25 p-5 md:p-6 text-left backdrop-blur-sm">
+            <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+              Not sure which service?
+            </p>
+            <p className="text-sm md:text-base text-white/85 leading-relaxed mb-4">
+              Choose <span className="font-semibold text-white">Private Villa Dining</span> if you want a chef dedicated to your villa stay, daily meals, or an intimate dinner at home. Choose Events & Catering if you are hosting 5+ guests, a celebration, or need buffet, BBQ, plated service, or wedding-style setup.
+            </p>
+            <Link to="/catering" className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors">
+              View Events & Catering →
+            </Link>
           </div>
         </div>
       </section>
@@ -124,7 +137,7 @@ export default function SolPage() {
             ))}
           </div>
           <div className="text-center">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <Phone className="w-4 h-4" /> Start on WhatsApp
             </a>
           </div>
@@ -190,7 +203,7 @@ export default function SolPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <Phone className="w-4 h-4" /> Book Your Chef
             </a>
           </div>
@@ -292,7 +305,7 @@ export default function SolPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <MessageCircle className="w-4 h-4" /> Ask Daniel on WhatsApp
             </a>
           </div>
@@ -325,7 +338,7 @@ export default function SolPage() {
               <p className="text-xs mb-6" style={{ color: '#8A7B6B' }}>
                 * Groceries billed at cost — no markup. Minimum 4-hour booking. Service charge included.
               </p>
-              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
                 <Phone className="w-4 h-4" /> Book via WhatsApp
               </a>
             </div>

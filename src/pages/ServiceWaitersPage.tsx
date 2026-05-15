@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, Star, ShieldCheck, Award } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -135,7 +136,7 @@ export default function ServiceWaitersPage() {
             English-speaking, trained in fine service. From IDR 350,000 per shift.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1ea855] transition-colors">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
               <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
             </a>
             <a href="#book" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
@@ -238,6 +239,31 @@ export default function ServiceWaitersPage() {
         </div>
       </section>
 
+      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-[1000px] mx-auto">
+          <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>
+          <h3 className="font-playfair text-3xl text-[#1A1A1A] mb-6">You might also need</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link to="/in-villa-service/bartenders" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Bartender Hire</h4>
+              <p className="text-xs text-[#4A4745]">Add a polished bar team for cocktails, wine, and event flow.</p>
+            </Link>
+            <Link to="/in-villa-service/host-hostess" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Host &amp; Hostess</h4>
+              <p className="text-xs text-[#4A4745]">Welcome guests, manage arrivals, and keep the event moving smoothly.</p>
+            </Link>
+            <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">In-Villa Service</h4>
+              <p className="text-xs text-[#4A4745]">Browse the full staffing hub for dinners, parties, and private events.</p>
+            </Link>
+            <Link to="/catering" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Catering</h4>
+              <p className="text-xs text-[#4A4745]">Pair service staff with menus and food planning for your group.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <PressStrip />
 
       {/* Final CTA */}
@@ -253,7 +279,7 @@ export default function ServiceWaitersPage() {
             Reply within 2 hours.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
             <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">

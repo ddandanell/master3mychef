@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -18,7 +18,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20Sofia,%20I%20would%20like%20a%20retreat%20catering%20quote.'
+const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20retreat%20catering%20quote.'
 const SITE = 'https://mychef.id'
 const ACCENT = '#2C5F7C'
 
@@ -137,13 +137,13 @@ export default function EventsRetreatsPage() {
         ogImage={`${SITE}/generated/events/retreat-breakfast.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Wellness Retreat Catering Bali', 'Healthy multi-day retreat catering in Bali with plant-forward menus, dietary-coded meal planning, and on-site villa food operations.', `${SITE}/events/retreats`, 'IDR'),
+          detailedServiceSchema('Wellness Retreat Catering Bali', 'myCHEF.id provides retreat catering in Bali with wellness-focused menus, dietary planning, and on-site chef support. We manage multi-day meal service, kitchen operations, and cleanup for private villas and retreat venues.', `${SITE}/events/retreats`),
           offerSchema('Wellness Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
           offerSchema('Yoga Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
           offerSchema('Corporate-Style Retreat', 2500000, 'IDR', `${SITE}/events/retreats`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Retreats', `${SITE}/events/retreats`, 'Events', `${SITE}/events`),
+          breadcrumbSchema('Wellness Retreat Catering Bali', `${SITE}/events/retreats`, 'Events', `${SITE}/events`),
         ]}
       />
 
@@ -151,7 +151,7 @@ export default function EventsRetreatsPage() {
 
       <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/retreat-breakfast.webp" alt="Healthy retreat breakfast with fruit and juices in Bali" className="w-full h-full object-cover" />
+          <img src="/generated/events/retreat-breakfast.webp" alt="Healthy retreat breakfast with fruit and juices in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-black/68" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
@@ -164,7 +164,7 @@ export default function EventsRetreatsPage() {
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
             Multi-day retreat food planning with balanced breakfasts, communal lunches, dietary-coded dinners, and a team that can sustain quality for several days in a villa environment.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <Calendar className="w-4 h-4" /> Request Retreat Quote
             </a>
@@ -172,6 +172,9 @@ export default function EventsRetreatsPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
+          <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.2em]">
+            From IDR 1.5M++/guest/day · Dietary-coded menus and multi-day service
+          </p>
         </div>
       </section>
 
@@ -413,6 +416,30 @@ export default function EventsRetreatsPage() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <section className="py-16 bg-[#F5F3EE]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-sm uppercase tracking-widest text-[#C5A028] mb-3">Also available</p>
+          <h2 className="text-2xl font-semibold text-[#1A1916] mb-8">Explore More myCHEF Services</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { to: '/events', label: 'All Events' },
+              { to: '/catering', label: 'Villa Catering' },
+              { to: '/fine-dining', label: 'Fine Dining' },
+              { to: '/menus', label: 'Menus' }
+            ].map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 bg-[#FAFAF8] retreat-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
@@ -433,31 +460,6 @@ export default function EventsRetreatsPage() {
             whatsappName="Sofia"
             accent={ACCENT}
           />
-        </div>
-      </section>
-
-      {/* ═══════ INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1000px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/events/corporate-events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Corporate Events</h4>
-              <p className="text-xs text-[#4A4745]">Professional catering for offsites, conferences, and launches.</p>
-            </Link>
-            <Link to="/events/villa-parties" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Villa Parties</h4>
-              <p className="text-xs text-[#4A4745]">BBQ, cocktail, and pool parties with full bar service.</p>
-            </Link>
-            <Link to="/catering/retreat-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Retreat Catering</h4>
-              <p className="text-xs text-[#4A4745]">Dedicated retreat catering with dietary-coded menus.</p>
-            </Link>
-            <Link to="/in-villa-service/host-hostess" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Host & Hostess</h4>
-              <p className="text-xs text-[#4A4745]">Professional hosts for guest reception and coordination.</p>
-            </Link>
-          </div>
         </div>
       </section>
 

@@ -1,80 +1,250 @@
-import { MessageCircle, ArrowRight } from 'lucide-react'
-import PremiumPage from '@/components/PremiumPage'
+import type { ComponentType } from 'react'
+import { Link } from 'react-router-dom'
+import { Clock3, MapPin, MessageCircle, PartyPopper, Users, UtensilsCrossed, Wallet } from 'lucide-react'
+import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
-const SECTIONS = [
+interface FAQItem {
+  q: string
+  a: string
+}
+
+interface FAQCategory {
+  id: string
+  title: string
+  description: string
+  icon: ComponentType<{ className?: string }>
+  items: FAQItem[]
+}
+
+const SITE = 'https://mychef.id'
+const WHATSAPP_URL = 'https://wa.me/6282237565997'
+
+const QUICK_FACTS = [
+  { label: 'Reply time', value: 'Within 1 hour', icon: Clock3 },
+  { label: 'Booking confirm', value: 'Within 24 hours', icon: MessageCircle },
+  { label: 'Areas covered', value: 'All of Bali', icon: MapPin },
+  { label: 'Private dining', value: 'From IDR 450K/pax', icon: Wallet },
+]
+
+const FAQ_CATEGORIES: FAQCategory[] = [
   {
-    id: 'booking',
-    type: 'content' as const,
-    subtitle: 'Booking & Planning',
-    title: 'How to Book Your Private Chef Experience',
-    body: `<p>Booking with myCHEF is simple. Message us on WhatsApp with your dates, villa location, and guest count. Our concierge team — Sofia for fine dining, Daniel for catering, Olivia for events — will respond within the hour.</p>
-    <p>We will send you a detailed proposal with menu options, pricing, and availability. You can adjust, ask questions, or request changes. Once you are happy, a 25% deposit locks your date. The balance is due 3 days before your event.</p>
-    <p>For urgent requests, we can sometimes accommodate 48-hour bookings. Message us and we will do our best.</p>`,
-    image: '/generated/faq-hero.webp',
-    imageAlt: 'myCHEF concierge team',
+    id: 'booking-process',
+    title: 'Booking & Process',
+    description: 'How to book, how quickly we confirm, and how the process works from first message to service day.',
+    icon: MessageCircle,
+    items: [
+      {
+        q: 'How do I book a private chef in Bali?',
+        a: 'Message us on WhatsApp at +62 822-3756-5997 with your date, villa area, guest count and preferred service. We usually respond within 1 hour and confirm availability within 24 hours.',
+      },
+      {
+        q: 'How far in advance should I book?',
+        a: 'For small villa dinners, 24 hours is often enough. For larger events or catering, 1 week is safer. For weddings, we recommend 2+ weeks so we can lock the right chefs, service team and production plan.',
+      },
+      {
+        q: 'Do you serve all areas of Bali?',
+        a: 'Yes. We serve Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and surrounding areas across Bali.',
+      },
+      {
+        q: 'What happens if I need to cancel?',
+        a: 'Cancellation is free up to 48 hours before service. Within 48 hours, the 50% deposit is retained because ingredients, staffing and scheduling have already been committed.',
+      },
+    ],
   },
   {
-    id: 'process',
-    type: 'features' as const,
-    subtitle: 'How It Works',
-    title: 'From First Message to Final Course',
-    features: [
-      { icon: MessageCircle, title: 'Message Us', desc: 'WhatsApp your dates, location, and guest count. We reply within the hour.' },
-      { icon: ArrowRight, title: 'We Plan', desc: 'Our concierge designs your menu or event. You approve — or we adjust.' },
-      { icon: ArrowRight, title: 'We Shop & Prep', desc: 'Groceries sourced fresh that morning. We arrive ready to cook.' },
-      { icon: ArrowRight, title: 'You Enjoy', desc: 'Sit back, eat, laugh. We leave your kitchen spotless.' },
+    id: 'pricing',
+    title: 'Pricing',
+    description: 'Clear starting points for private dining, what is included, and where guest minimums apply.',
+    icon: Wallet,
+    items: [
+      {
+        q: 'How much does a private chef in Bali cost?',
+        a: 'Private chef dinners start from IDR 450K per person. You can see full pricing and package guidance at /pricing.',
+      },
+      {
+        q: 'Are ingredients included in the price?',
+        a: 'Yes. Our team shops, cooks and cleans, so the service is designed to be all inclusive and easy for villa guests.',
+      },
+      {
+        q: 'Is there a minimum guest count?',
+        a: 'Yes. Private dinners start from 2 guests. Catering events are usually best from 10 guests and above.',
+      },
+    ],
+  },
+  {
+    id: 'chef-team',
+    title: 'The Chef & Team',
+    description: 'Who cooks for you, how chefs are matched to bookings, and the standards behind the team.',
+    icon: Users,
+    items: [
+      {
+        q: 'Who are your chefs?',
+        a: 'myCHEF works with 50+ Indonesian culinary professionals, all trained in-house by Adriano. You can meet the team at /chefs.',
+      },
+      {
+        q: 'Can I request a specific chef?',
+        a: 'Yes, especially for recurring stays or repeat bookings. For first-time bookings, we usually match you with the best chef for your cuisine preferences, villa setup and event type.',
+      },
+      {
+        q: 'Are your chefs background-checked?',
+        a: 'Yes. Every chef is background-checked, food-safety trained and comfortable communicating in English with villa guests.',
+      },
+    ],
+  },
+  {
+    id: 'menus-dietary',
+    title: 'Menus & Dietary',
+    description: 'Cuisine options, menu customization and how we handle allergies, vegan requests, halal and more.',
+    icon: UtensilsCrossed,
+    items: [
+      {
+        q: 'Can you accommodate dietary requirements?',
+        a: 'Yes. We regularly cater for vegan, gluten-free, halal and allergy-sensitive bookings. Just tell us your requirements when you book.',
+      },
+      {
+        q: 'Do you cook Indonesian food?',
+        a: 'Yes. We offer Indonesian, Mediterranean, BBQ, Asian fusion and more. You can explore menu ideas at /menus.',
+      },
+      {
+        q: 'Can I customize the menu?',
+        a: 'Absolutely. We send you a proposed menu first, then you can approve it or ask us to adjust courses, proteins, spice level or dietary details.',
+      },
+    ],
+  },
+  {
+    id: 'events-catering',
+    title: 'Events & Catering',
+    description: 'Support for weddings, in-villa staffing, bartenders, waiters and longer-stay chef services.',
+    icon: PartyPopper,
+    items: [
+      {
+        q: 'Do you do weddings?',
+        a: 'Yes. We cater weddings for up to 200 guests and can handle food, waiters, setup and cleanup. See /events/weddings for wedding service details.',
+      },
+      {
+        q: 'Can you provide waiters and bartenders too?',
+        a: 'Yes. We can provide a full in-villa service team including waiters, bartenders and event support. See /in-villa-service.',
+      },
+      {
+        q: 'Do you offer weekly meal prep or live-in chef?',
+        a: 'Yes. We arrange weekly meal prep and live-in chef support for long-stay Bali villa guests. See /staffing for options.',
+      },
     ],
   },
 ]
 
-const FAQS = [
-  { question: 'How far in advance should I book?', answer: 'For fine dining, 7+ days is ideal. For villa chefs, 3+ days. For events, 4+ weeks. But message us anyway — we accommodate last-minute requests whenever possible.' },
-  { question: 'Do you serve all areas of Bali?', answer: 'Yes. Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, and everywhere in between. We have chefs based across the island.' },
-  { question: 'What about dietary restrictions?', answer: 'Every menu is tailored. Gluten-free, vegan, halal, nut allergies, pregnancy-friendly — just tell us. We have done it all. No extra charge.' },
-  { question: 'Are groceries included in the price?', answer: 'For fine dining and events, ingredients are included. For villa chef catering, groceries are billed at cost with no markup — you see every receipt.' },
-  { question: 'What does "++" mean in the price?', answer: '"++" means service charge (typically 10%) and government tax (11%) are added to the menu price. The final total is approximately 21% above the listed price.' },
-  { question: 'How do I pay?', answer: 'We accept bank transfer (IDR or USD), Wise, and credit card via secure link. A 25% deposit locks your date. Balance due 3 days before the event.' },
-  { question: 'What is your cancellation policy?', answer: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date. No-shows forfeit the deposit.' },
-  { question: 'Do I need a big kitchen?', answer: 'No. We have worked in everything from pool villas to estates. We bring any specialized equipment we need. As long as there is a kitchen and dining area, we can make it work.' },
-  { question: 'What time do you arrive?', answer: 'Typically 3 hours before service for fine dining. For villa chefs, we arrive 1–2 hours before the first meal. For events, setup time varies based on complexity.' },
-  { question: 'Can I see the menu before booking?', answer: 'Yes. We send full menu details, wine pairings, and pricing before you commit. Our concierge will walk you through each course.' },
-  { question: 'Is my villa suitable?', answer: 'We have worked in pool villas, cliffside estates, and jungle retreats. As long as there is a kitchen and dining area, we can make it work.' },
-  { question: 'What about children?', answer: 'Children are welcome. We can prepare a simplified menu for younger guests at a reduced rate. Let us know ages and preferences when booking.' },
-  { question: 'Do you provide wine and alcohol?', answer: 'We offer wine pairing for fine dining at IDR 850,000 per guest. For other events, we can source alcohol or you can provide your own. We do not markup alcohol.' },
-  { question: 'How many staff will come to my villa?', answer: 'Fine dining: 6–10 staff (chef, sous chef, servers, sommelier). Villa chef: 1–2 chefs. Events: varies based on guest count and service style.' },
-  { question: 'What happens if something goes wrong?', answer: 'We have served 500+ villa dinners with zero complaints requiring refund. If something is not right, we fix it on the spot. Your satisfaction is our standard.' },
-  { question: 'Can I mix menus for my group?', answer: 'Absolutely. Half your table can have Mediterranean Sea, half can have Wagyu. Just let us know when booking.' },
-  { question: 'Do you do cooking classes?', answer: 'Yes. Hands-on private cooking classes in your villa kitchen with one of our chefs. Perfect for families, couples, and team-building.' },
-  { question: 'Can you staff my villa long-term?', answer: 'Yes. We place full-time private chefs, butlers, and villa staff. Placement fees start at IDR 15,000,000. Contact us for details.' },
-]
-
-const RELATED_PAGES = [
-  { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
-  { label: 'Book Now', href: '/book', desc: 'Reserve your private chef experience.' },
-  { label: 'Get a Quote', href: '/quote', desc: 'Receive a detailed proposal within 24 hours.' },
-  { label: 'About myCHEF', href: '/about', desc: 'Our story, values, and mission.' },
-  { label: 'Contact', href: '/contact', desc: 'Speak with our concierge team.' },
-  { label: 'Fine Dining', href: '/fine-dining', desc: 'In-villa tasting menus and private chef experiences.' },
-]
-
 export default function FAQPage() {
+  const canonical = `${SITE}/faq`
+  const faqSchemaItems = FAQ_CATEGORIES.flatMap((category) =>
+    category.items.map((item) => ({ question: item.q, answer: item.a }))
+  )
+
   return (
-    <PremiumPage
-      slug="faq"
-      title="Frequently Asked Questions"
-      description="Answers to common questions about private chef services in Bali — booking lead times, pricing, dietary needs, logistics, and more."
-      h1="Everything You Need to Know"
-      subtitle="Booking, pricing, dietary needs, logistics — answered."
-      heroImage="/generated/faq-hero.webp"
-      heroImageAlt="myCHEF concierge team ready to help"
-      ogImage="https://mychef.id/generated/faq-hero.webp"
-      keywords={['private chef bali faq', 'bali catering questions', 'villa chef booking']}
-      highlights={['Same-Day Response', 'No Hidden Fees', 'Dietary Flexibility', 'Full Refund 14+ Days']}
-      sections={SECTIONS}
-      faqs={FAQS}
-      relatedPages={RELATED_PAGES}
-      ctaText="Still Have Questions?"
-      ctaSubtext="Message us on WhatsApp. We reply within the hour."
-    />
+    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+      <SeoHead
+        title="FAQ | Private Chef Bali Booking Questions — myCHEF"
+        description="Answers to the most common myCHEF questions about Bali private chef bookings, pricing, menus, weddings, staffing, and villa catering."
+        canonical={canonical}
+        jsonLd={[
+          localBusinessSchema,
+          breadcrumbSchema('FAQ', canonical),
+          faqPageSchema(faqSchemaItems),
+        ]}
+      />
+      <section className="px-5 pt-14 pb-12 sm:px-6 md:pt-24 md:pb-16">
+        <div className="max-w-[1180px] mx-auto grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028] font-semibold mb-4">FAQ</p>
+            <h1 className="mb-5 font-playfair text-3xl leading-tight sm:text-4xl md:text-6xl">Frequently Asked Questions</h1>
+            <p className="max-w-3xl text-lg md:text-xl text-[#4A4745] leading-relaxed">
+              Everything you need to know about booking a private chef, catering, or event service with myCHEF in Bali.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {FAQ_CATEGORIES.map((category) => (
+                <a
+                  key={category.id}
+                  href={`#${category.id}`}
+                  className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-[#E2DDD2] bg-white px-4 py-2.5 text-sm font-semibold text-[#4A4745] transition-colors hover:border-[#C5A028] sm:px-5"
+                >
+                  {category.title}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-[32px] border border-[#E8E2CF] bg-white p-6 shadow-[0_24px_80px_rgba(0,0,0,0.06)] sm:p-8">
+            <p className="text-sm uppercase tracking-[0.25em] text-[#8A7A47] mb-5">Quick answers</p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {QUICK_FACTS.map((fact) => (
+                <div key={fact.label} className="rounded-2xl border border-[#EFE7D1] bg-[#FAFAF8] p-5">
+                  <fact.icon className="h-5 w-5 text-[#C5A028] mb-3" />
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#7A746A] mb-1">{fact.label}</p>
+                  <p className="text-lg font-semibold text-[#1A1A1A]">{fact.value}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 rounded-2xl bg-[#1A1A1A] p-5 text-white">
+              <p className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-2">Need a fast answer?</p>
+              <p className="text-sm text-white/75 leading-relaxed">WhatsApp +62 822-3756-5997 and our team will usually reply within 1 hour.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-16 md:pb-20">
+        <div className="max-w-[1180px] mx-auto space-y-8">
+          {FAQ_CATEGORIES.map((category) => {
+            const Icon = category.icon
+
+            return (
+              <section key={category.id} id={category.id} className="scroll-mt-24 grid gap-6 rounded-[32px] border border-[#E8E2CF] bg-white p-6 md:grid-cols-[0.85fr_1.15fr] md:p-8">
+                <div className="md:pr-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FAF2D4]">
+                    <Icon className="h-5 w-5 text-[#8A6F15]" />
+                  </div>
+                  <p className="mt-5 text-xs uppercase tracking-[0.3em] text-[#C5A028] font-semibold">Category</p>
+                  <h2 className="mt-3 text-3xl font-playfair leading-tight">{category.title}</h2>
+                  <p className="mt-4 text-[#4A4745] leading-relaxed">{category.description}</p>
+                  <p className="mt-5 text-sm font-semibold text-[#1A1A1A]">{category.items.length} questions answered</p>
+                </div>
+
+                <div>
+                  <FAQAccordion items={category.items} defaultOpenCount={1} />
+                </div>
+              </section>
+            )
+          })}
+        </div>
+      </section>
+
+      <section className="px-6 py-20 md:py-24 bg-white border-y border-[#ECE5D5]">
+        <div className="mx-auto max-w-[1100px] rounded-[32px] bg-[#1A1A1A] px-6 py-12 text-white sm:px-8 md:px-12 md:py-14">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028] font-semibold mb-4">Still unsure?</p>
+          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl md:text-5xl font-playfair leading-tight">Ask us directly on WhatsApp</h2>
+              <p className="mt-4 text-white/75 leading-relaxed">
+                Send your dates, area in Bali and guest count. We will tell you what is possible, how much it costs and how quickly we can confirm.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A]"
+              >
+                <MessageCircle className="h-4 w-4" />
+                Message +62 822-3756-5997
+              </a>
+              <Link to="/pricing" className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5">
+                View pricing
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   )
 }

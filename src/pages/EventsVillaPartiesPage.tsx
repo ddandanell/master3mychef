@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -18,7 +18,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20Sofia,%20I%20would%20like%20to%20plan%20a%20villa%20party%20in%20Bali.'
+const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20a%20villa%20party%20in%20Bali.'
 const SITE = 'https://mychef.id'
 const ACCENT = '#2C5F7C'
 
@@ -150,16 +150,16 @@ export default function EventsVillaPartiesPage() {
         title="Villa Party Catering Bali — BBQ, Pool & Night Events | myCHEF"
         description="Villa party catering in Bali for BBQ nights, cocktail receptions, pool parties, and late events. Food, bar, staff, music coordination, and cleanup in one service."
         canonical={`${SITE}/events/villa-parties`}
-        ogImage={`${SITE}/generated/events/villa-party-night.webp`}
+        ogImage={`${SITE}/bbq-poolside.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Villa Party Catering Bali', 'Villa party catering in Bali with BBQ, cocktails, bartender service, staff, music coordination, and full cleanup.', `${SITE}/events/villa-parties`, 'IDR'),
+          detailedServiceSchema('Villa Party Catering Bali', 'myCHEF.id caters villa parties in Bali with BBQ menus, canapés, cocktails, bartenders, and service staff. We handle setup, live service, and cleanup so hosts can focus on the guest experience.', `${SITE}/events/villa-parties`),
           offerSchema('Cocktail Reception', 650000, 'IDR', `${SITE}/events/villa-parties`),
           offerSchema('Sundowner Party', 850000, 'IDR', `${SITE}/events/villa-parties`),
           offerSchema('Casual Mixer', 950000, 'IDR', `${SITE}/events/villa-parties`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Villa Parties', `${SITE}/events/villa-parties`, 'Events', `${SITE}/events`),
+          breadcrumbSchema('Villa Party Catering Bali', `${SITE}/events/villa-parties`, 'Events', `${SITE}/events`),
         ]}
       />
 
@@ -167,7 +167,7 @@ export default function EventsVillaPartiesPage() {
 
       <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/villa-party-night.webp" alt="Night-time villa party with bar and pool lighting in Bali" className="w-full h-full object-cover" />
+          <img src="/generated/events/villa-party-night.webp" alt="Night-time villa party with bar and pool lighting in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-black/68" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
@@ -180,7 +180,7 @@ export default function EventsVillaPartiesPage() {
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
             Sunset BBQs, pool parties, cocktail receptions, and late-night celebrations with food, drinks, bartender service, staffing, music coordination, and cleanup all handled by one team.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <MessageCircle className="w-4 h-4" /> Plan Your Party
             </a>
@@ -188,6 +188,9 @@ export default function EventsVillaPartiesPage() {
               <Wine className="w-4 h-4" /> View Formats
             </a>
           </div>
+          <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.2em]">
+            From IDR 650K++/guest · Bar, staffing, and cleanup handled
+          </p>
         </div>
       </section>
 
@@ -466,6 +469,30 @@ export default function EventsVillaPartiesPage() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <section className="py-16 bg-[#F5F3EE]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-sm uppercase tracking-widest text-[#C5A028] mb-3">Also available</p>
+          <h2 className="text-2xl font-semibold text-[#1A1916] mb-8">Explore More myCHEF Services</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { to: '/events', label: 'All Events' },
+              { to: '/catering', label: 'Villa Catering' },
+              { to: '/in-villa-service/bartenders', label: 'Bartenders' },
+              { to: '/book', label: 'Book myCHEF' }
+            ].map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 bg-[#FAFAF8] party-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Book" title="Plan Your Villa Party" subtitle="Tell us your date, group size, and vibe. Sofia will design the right food, bar, and party flow." />
@@ -488,31 +515,6 @@ export default function EventsVillaPartiesPage() {
             whatsappName="Sofia"
             accent={ACCENT}
           />
-        </div>
-      </section>
-
-      {/* ═══════ INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1000px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/events/weddings" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Villa Weddings</h4>
-              <p className="text-xs text-[#4A4745]">Bespoke villa weddings with full catering and coordination.</p>
-            </Link>
-            <Link to="/events/baby-showers" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Baby Showers</h4>
-              <p className="text-xs text-[#4A4745]">Beautiful villa baby showers with brunch and styling.</p>
-            </Link>
-            <Link to="/catering/bbq-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">BBQ Catering</h4>
-              <p className="text-xs text-[#4A4745]">Live BBQ stations and grilled feasts for your group.</p>
-            </Link>
-            <Link to="/in-villa-service/mixology" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Mixology</h4>
-              <p className="text-xs text-[#4A4745]">Bespoke cocktail programs and masterclasses.</p>
-            </Link>
-          </div>
         </div>
       </section>
 

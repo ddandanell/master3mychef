@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
   breadcrumbSchema,
-  serviceSchema,
+  detailedServiceSchema,
   faqPageSchema,
   aggregateRatingSchema,
 } from '@/components/SeoHead'
@@ -103,15 +103,14 @@ export default function ServiceButlersPage() {
         ogImage={`${SITE}/generated/hub-villa.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema(
+          detailedServiceSchema(
             'Butler Service Bali',
-            'Professional villa butler service in Bali. Discreet, English-speaking butlers for villa stays, events, and luxury hospitality.',
+            'myCHEF.id provides private butler service in Bali for villa stays, events, and luxury guest hosting. Our team manages service flow, guest requests, and discreet household coordination throughout the booking.',
             `${SITE}/in-villa-service/butlers`,
-            'IDR',
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 67),
-          breadcrumbSchema('Butlers', `${SITE}/in-villa-service/butlers`, 'In-Villa Service', `${SITE}/in-villa-service`),
+          breadcrumbSchema('Butler Service Bali', `${SITE}/in-villa-service/butlers`, 'In-Villa Service', `${SITE}/in-villa-service`),
         ]}
       />
 
@@ -135,7 +134,7 @@ export default function ServiceButlersPage() {
             and household coordination. From IDR 1,200,000 per day.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1ea855] transition-colors">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
               <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
             </a>
             <a href="#book" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
@@ -259,7 +258,7 @@ export default function ServiceButlersPage() {
             Reply within 2 hours.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
             <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">

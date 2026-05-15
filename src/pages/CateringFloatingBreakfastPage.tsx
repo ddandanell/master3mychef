@@ -10,8 +10,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
-  breadcrumbSchema,
-  serviceSchema,
+  cateringBreadcrumbSchema,
+  cateringServiceSchema,
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
@@ -166,17 +166,17 @@ export default function CateringFloatingBreakfastPage() {
       <SeoHead
         title="Floating Breakfast Bali | Villa Pool Breakfast Experience"
         description="Floating breakfast in Bali for villas, honeymoon stays, birthdays, and private mornings with tropical food, drinks, styling, and delivery."
-        canonical={`${SITE}/catering/floating-breakfast-bali`}
-        ogImage={`${SITE}/generated/hero-floating-breakfast.jpg`}
+        canonical={`${SITE}/catering/floating-breakfast`}
+        ogImage={`${SITE}/breakfast-spread.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Floating Breakfast Bali', 'Floating breakfast in Bali for villas, honeymoon stays, birthdays, and private mornings with tropical food, drinks, styling, and delivery.', `${SITE}/catering/floating-breakfast-bali`, 'IDR'),
-          offerSchema('Floating Breakfast for 2', 950000, 'IDR', `${SITE}/catering/floating-breakfast-bali`),
-          offerSchema('Floating Brunch for 2', 1400000, 'IDR', `${SITE}/catering/floating-breakfast-bali`),
-          offerSchema('Floating Group Brunch', 750000, 'IDR', `${SITE}/catering/floating-breakfast-bali`),
+          cateringServiceSchema('Floating Breakfast Bali', 'Floating breakfast service in Bali for villa pools, honeymoons, birthdays, and private mornings with tropical dishes and styled presentation. myCHEF.id prepares, delivers, and sets the experience across Bali.', `${SITE}/catering/floating-breakfast`),
+          offerSchema('Floating Breakfast for 2', 950000, 'IDR', `${SITE}/catering/floating-breakfast`),
+          offerSchema('Floating Brunch for 2', 1400000, 'IDR', `${SITE}/catering/floating-breakfast`),
+          offerSchema('Floating Group Brunch', 750000, 'IDR', `${SITE}/catering/floating-breakfast`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Floating Breakfast Bali', `${SITE}/catering/floating-breakfast-bali`, 'Catering', `${SITE}/catering`),
+          cateringBreadcrumbSchema('Floating Breakfast Bali', `${SITE}/catering/floating-breakfast`),
         ]}
       />
 
@@ -186,7 +186,7 @@ export default function CateringFloatingBreakfastPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-floating-breakfast.jpg"
+            src="/generated/hero-floating-breakfast.webp"
             alt="Floating breakfast bamboo tray in a Bali villa pool with tropical fruit, coffee, and flowers"
             width={1920}
             height={1080}

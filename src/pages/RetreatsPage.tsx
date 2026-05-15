@@ -9,7 +9,7 @@ const SECTIONS = [
     title: 'Multi-Day Catering for Yoga, Wellness & Corporate Retreats',
     body: `<p>Retreats are not single events — they are journeys. And the food should support that journey. We provide multi-day catering for yoga retreats, wellness retreats, and corporate offsites across Bali — full-board menus, dietary flexibility, and on-site coordination.</p>
     <p>We understand retreat dynamics: early morning yoga sessions require light, energizing breakfasts. Long workshop days need sustaining lunches. Evening ceremonies call for nourishing, communal dinners. We design menus that match the rhythm of your retreat.</p>`,
-    image: '/generated/hero-retreats.jpg',
+    image: '/generated/hero-retreats.webp',
     imageAlt: 'Wellness retreat dining in Bali',
   },
   {
@@ -82,11 +82,14 @@ export default function RetreatsPage() {
       slug="retreats"
       title="Retreat Catering in Bali"
       description="Multi-day catering for yoga retreats, wellness retreats, and corporate offsites across Bali — full-board menus, dietary flexibility, and on-site coordination."
+      seoTitle="Retreat Catering Bali | Wellness & Yoga Retreats | myCHEF.id"
+      seoDescription="Nourishing retreat menus and private chef services for wellness retreats across Bali. Dietary-coded, locally sourced."
+      canonicalUrl="https://mychef.id/retreats"
       h1="Retreat Catering in Bali"
       subtitle="Full-board menus, dietary flexibility, and on-site coordination for yoga, wellness, and corporate retreats."
-      heroImage="/generated/hero-retreats.jpg"
+      heroImage="/generated/hero-retreats.webp"
       heroImageAlt="Wellness retreat dining in Bali"
-      ogImage="https://mychef.id/generated/hero-retreats.jpg"
+      ogImage="https://mychef.id/generated/hero-retreats.webp"
       keywords={['retreat catering bali', 'yoga retreat food bali', 'wellness retreat catering']}
       highlights={['Full-Board Packages', 'Plant-Forward Menus', 'Dietary Flexibility', 'On-Site Coordination']}
       sections={SECTIONS}

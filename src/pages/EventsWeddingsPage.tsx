@@ -5,7 +5,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -17,7 +17,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20Sofia,%20I%20would%20like%20a%20wedding%20consultation.'
+const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20wedding%20consultation.'
 const SITE = 'https://mychef.id'
 const ACCENT = '#C5A028'
 
@@ -56,10 +56,10 @@ const ADDONS = [
 ]
 
 const REAL_WEDDINGS = [
-  { names: 'Emma & James', date: 'March 2026', villa: 'Villa Aria, Uluwatu', image: '/generated/events/wedding-hero.webp' },
-  { names: 'Anya & Mark', date: 'January 2026', villa: 'Villa Soma, Canggu', image: '/generated/events/wedding-reception.webp' },
-  { names: 'Sarah & David', date: 'December 2025', villa: 'Villa Kali, Seminyak', image: '/generated/events/wedding-cocktail.webp' },
-  { names: 'Priya & Raj', date: 'November 2025', villa: 'Villa Tirta, Uluwatu', image: '/generated/events/wedding-small.webp' },
+  { names: 'Emma & James', date: 'March 2026', villa: 'Villa Aria, Uluwatu', image: '/event-wedding.webp' },
+  { names: 'Anya & Mark', date: 'January 2026', villa: 'Villa Soma, Canggu', image: '/wedding-reception.webp' },
+  { names: 'Sarah & David', date: 'December 2025', villa: 'Villa Kali, Seminyak', image: '/generated/aura-toast.webp' },
+  { names: 'Priya & Raj', date: 'November 2025', villa: 'Villa Tirta, Uluwatu', image: '/generated/aura-setup.webp' },
 ]
 
 const LEAD_TIMES = [
@@ -124,16 +124,24 @@ export default function EventsWeddingsPage() {
         title="Bali Villa Wedding Catering & Coordination | myCHEF"
         description="End-to-end wedding catering and coordination for Bali villa weddings. Three tiers from IDR 600K/pp. Chef, waiters, coordinator — all under one contract."
         canonical={`${SITE}/events/weddings-bali`}
-        ogImage={`${SITE}/generated/events/wedding-hero.webp`}
+        ogImage={`${SITE}/event-wedding.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Bali Villa Wedding Catering & Coordination', 'End-to-end wedding catering and coordination for Bali villa weddings. Chef, waiters, coordinator, menu planning, setup, and cleanup under one contract.', `${SITE}/events/weddings-bali`, 'IDR'),
+          detailedServiceSchema('Wedding Catering Bali', 'myCHEF.id provides wedding catering in Bali with private chef menus, service staff, and full villa coordination. We support intimate ceremonies and reception dinners with setup, timing, and cleanup managed by one team.', `${SITE}/events/weddings-bali`),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Event',
+            name: 'Private Wedding Catering in Bali',
+            description: 'myCHEF.id provides private chef and catering services for intimate wedding celebrations across Bali villas.',
+            location: { '@type': 'Place', name: 'Bali, Indonesia' },
+            organizer: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          },
           offerSchema('Intimate Villa Wedding', 600000, 'IDR', `${SITE}/events/weddings-bali`),
           offerSchema('Standard Villa Wedding', 950000, 'IDR', `${SITE}/events/weddings-bali`),
           offerSchema('Luxury Villa Wedding', 1500000, 'IDR', `${SITE}/events/weddings-bali`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Weddings', `${SITE}/events/weddings-bali`, 'Events', `${SITE}/events`),
+          breadcrumbSchema('Wedding Catering Bali', `${SITE}/events/weddings-bali`, 'Events', `${SITE}/events`),
         ]}
       />
 
@@ -141,7 +149,16 @@ export default function EventsWeddingsPage() {
 
       <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/wedding-hero.webp" alt="Bali villa wedding ceremony at a tropical altar" className="w-full h-full object-cover" />
+          <img
+            src="/event-wedding.webp"
+            alt="Bali villa wedding ceremony at a tropical altar"
+            width={1920}
+            height={1080}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-black/65" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
@@ -154,7 +171,7 @@ export default function EventsWeddingsPage() {
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
             One contract for menu planning, service staff, ceremony flow, setup, bar, and full cleanup. From intimate villa ceremonies to full reception dinners, myCHEF runs the food and the logistics together.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all">
               <Calendar className="w-4 h-4" /> Request Wedding Consult
             </a>
@@ -162,6 +179,9 @@ export default function EventsWeddingsPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
+          <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.2em]">
+            From IDR 600K++/guest · Transparent proposal before deposit
+          </p>
         </div>
       </section>
 
@@ -185,7 +205,7 @@ export default function EventsWeddingsPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/wedding-hero.webp" alt="Luxury Bali villa wedding ceremony setup by myCHEF" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/event-wedding.webp" alt="Luxury Bali villa wedding ceremony setup by myCHEF" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -237,7 +257,7 @@ export default function EventsWeddingsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/wedding-cocktail.webp" alt="Champagne service during Bali wedding cocktail hour" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/aura-toast.webp" alt="Champagne service during Bali wedding cocktail hour" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -316,7 +336,7 @@ export default function EventsWeddingsPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/wedding-reception.webp" alt="Wedding reception table with candles and plated dinner service" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/wedding-reception.webp" alt="Wedding reception table with candles and plated dinner service" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -326,7 +346,7 @@ export default function EventsWeddingsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/events/wedding-small.webp" alt="Intimate Bali wedding dinner for a small group" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/generated/aura-setup.webp" alt="Intimate Bali wedding dinner for a small group" className="w-full h-full object-cover" loading="lazy" />
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -439,6 +459,30 @@ export default function EventsWeddingsPage() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <section className="py-16 bg-[#F5F3EE]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-sm uppercase tracking-widest text-[#C5A028] mb-3">Also available</p>
+          <h2 className="text-2xl font-semibold text-[#1A1916] mb-8">Explore More myCHEF Services</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { to: '/events/anniversaries', label: 'Anniversaries' },
+              { to: '/catering', label: 'Villa Catering' },
+              { to: '/fine-dining', label: 'Fine Dining' },
+              { to: '/in-villa-service', label: 'In-Villa Staff' }
+            ].map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
@@ -461,31 +505,6 @@ export default function EventsWeddingsPage() {
             whatsappName="Sofia"
             accent={ACCENT}
           />
-        </div>
-      </section>
-
-      {/* ═══════ INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1000px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/events/anniversaries" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Anniversary Dinners</h4>
-              <p className="text-xs text-[#4A4745]">Romantic celebrations in your villa</p>
-            </Link>
-            <Link to="/events/corporate-events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Corporate Events</h4>
-              <p className="text-xs text-[#4A4745]">Offsites, conferences, and galas</p>
-            </Link>
-            <Link to="/catering/buffet" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Buffet Catering</h4>
-              <p className="text-xs text-[#4A4745]">Group buffets for villas and events</p>
-            </Link>
-            <Link to="/in-villa-service/bartenders" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Bartender Hire</h4>
-              <p className="text-xs text-[#4A4745]">Professional bar service for your wedding</p>
-            </Link>
-          </div>
         </div>
       </section>
 

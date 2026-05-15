@@ -1,126 +1,142 @@
-import { ChefHat } from 'lucide-react'
+import { ChefHat, Flame, Fish, Sparkles } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
 
 const CHEFS = [
   {
     name: 'Adriano',
     role: 'Executive Chef & Founder',
-    specialty: 'Mediterranean, Tasting Menus',
-    origin: 'Milan, Italy',
+    specialty: 'Mediterranean Fine Dining',
+    badge: 'Milan-born · Michelin-trained in Modena · Founder since 2016',
     image: '/generated/chef-matteo.webp',
-    bio: 'Trained under a Michelin-starred chef in Modena, then spent years in Tokyo mastering precision and restraint. Adriano founded myCHEF in 2016 with a simple mission: bring restaurant-quality dining to Bali\'s villas. He personally trains every chef for 6+ months before they lead an event.',
-    achievements: ['Michelin-starred restaurant training', 'Tokyo kaiseki apprenticeship', '500+ villa dinners led'],
+    bio: 'Adriano built myCHEF after years in Michelin-level kitchens in northern Italy and a formative stretch in Tokyo. He still leads menu development, chef training, and every signature tasting experience we serve in Bali villas.',
+    achievements: ['Michelin-trained in Modena', 'Leads chef training for every new hire', 'Trusted for proposals, anniversaries, and VIP dinners'],
   },
   {
     name: 'I Made Surya',
     role: 'Head Chef — Mediterranean',
-    specialty: 'Handmade Pasta, Seafood',
-    origin: 'Ubud, Bali',
+    specialty: 'Handmade Pasta & Seafood',
+    badge: 'Ubud talent shaped through myCHEF’s in-house program',
     image: '/generated/chef-made-surya.webp',
-    bio: 'Born in a village outside Ubud where his family ran a warung. Started as a kitchen hand at sixteen, taught himself pasta in a Canggu Italian restaurant. Adriano discovered him in 2021 and spent three months training him on pasta technique alone. His tagliatelle is now legendary.',
-    achievements: ['Self-taught pasta specialist', '3-month intensive with Adriano', 'Mediterranean menu lead'],
+    bio: 'Surya is the calm hand behind many of our Mediterranean set menus. He combines Adriano’s technique with Balinese market knowledge, turning just-caught seafood, handmade pasta, and clean sauces into elegant villa dinners.',
+    achievements: ['Leads Mediterranean villa menus', 'Known for fresh pasta and seafood timing', 'Guest favourite for intimate 6–12 person dinners'],
   },
   {
     name: 'Bayu Pranata',
     role: 'Head Chef — BBQ & Grill',
-    specialty: 'Open-Flame Cooking, Smoked Meats',
-    origin: 'Jimbaran, Bali',
+    specialty: 'Open-Flame Cooking',
+    badge: 'Jimbaran grill specialist with decades around charcoal',
     image: '/generated/chef-bayu-pranata.webp',
-    bio: 'Grew up in Jimbaran where his father ran a seafood grill on the beach. Bayu brings decades of fire-cooking intuition to every BBQ event. He knows exactly how long a Wagyu ribeye needs over charcoal, and how to time a whole fish to perfection.',
-    achievements: ['20+ years fire-cooking experience', 'Wagyu and seafood specialist', 'BBQ event lead for 200+ guests'],
+    bio: 'Bayu runs our BBQ and grill experiences with the confidence of someone who grew up cooking over live fire. From wagyu and lobster to whole fish and satay, he keeps the energy relaxed while every protein lands perfectly cooked.',
+    achievements: ['Leads poolside BBQ events across Bali', 'Specialist in seafood, wagyu, and family-style spreads', 'Experienced with celebrations from 10 to 80 guests'],
   },
   {
     name: 'Ni Putu Asri',
     role: 'Head Chef — Balinese & Asian Fusion',
-    specialty: 'Traditional Balinese, Modern Asian',
-    origin: 'Gianyar, Bali',
+    specialty: 'Balinese Classics & Modern Asian',
+    badge: 'Gianyar-born chef rooted in ceremonial cooking traditions',
     image: '/generated/chef-ni-putu-asri.webp',
-    bio: 'Raised in a Gianyar family where ceremonial cooking was passed down through generations. Asri modernizes Balinese classics — bebek betutu, sate lilit, lawar — while respecting their roots. She also leads our Asian fusion experiments, drawing from Thai, Vietnamese, and Japanese technique.',
-    achievements: ['Traditional Balinese cooking heritage', 'Asian fusion innovation', 'Cultural menu consultant'],
-  },
-  {
-    name: 'Rizky Saputra',
-    role: 'Pastry Chef',
-    specialty: 'Desserts, Tiramisu, Chocolate',
-    origin: 'Jakarta, Indonesia',
-    image: '/generated/chef-rizky-saputra.webp',
-    bio: 'Rizky trained in Jakarta\'s finest hotel pastry kitchens before joining myCHEF. His tiramisu has become our signature dessert — house-made lady fingers, mascarpone cream, and espresso that guests still talk about months later. He also creates custom celebration cakes and dessert tables.',
-    achievements: ['5-star hotel pastry background', 'Signature tiramisu recipe', 'Custom celebration cake designer'],
-  },
-  {
-    name: 'Paco',
-    role: 'Sous Chef — European Classics',
-    specialty: 'French Technique, Sauce Work',
-    origin: 'Barcelona, Spain',
-    image: '/generated/chef-paco.webp',
-    bio: 'Paco brings classical French training to the myCHEF kitchen. His sauce work — reductions, emulsions, foams — elevates every dish he touches. He works closely with Adriano on menu development and trains junior chefs in foundational technique.',
-    achievements: ['Classical French training', 'Sauce and reduction specialist', 'Junior chef mentor'],
+    bio: 'Asri protects the local soul of the myCHEF menu. She leads Indonesian feasts, ceremonial dishes, and Asian fusion menus with a balance of authenticity, polish, and warmth that villa guests immediately feel.',
+    achievements: ['Leads Indonesian feast menus', 'Balances tradition with modern plating', 'Trusted for family celebrations and cultural dinners'],
   },
 ]
+
+const CHEF_PERSON_SCHEMAS = CHEFS.map((chef) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: chef.name,
+  jobTitle: chef.role,
+  description: chef.bio,
+  image: `https://mychef.id${chef.image}`,
+  url: 'https://mychef.id/chefs',
+  worksFor: { '@id': 'https://mychef.id/#business' },
+  knowsAbout: [chef.specialty, ...chef.achievements],
+}))
 
 const SECTIONS = [
   {
     id: 'team',
     type: 'content' as const,
-    subtitle: 'The Team',
-    title: 'Meet the Chefs Behind Every Experience',
-    body: `<p>Our culinary team is the heart of myCHEF. Led by executive chef Adriano — who trained under a Michelin-starred chef in Milan — our 50+ professionals bring diverse backgrounds, rigorous training, and genuine passion to every villa kitchen they enter.</p>
-    <p>We recruit Indonesian talent first, then invest in their growth. Many of our lead chefs started as kitchen hands and rose through our in-house training program. This is not outsourcing. This is building a culinary culture.</p>`,
-    image: '/generated/chefs-hero.webp',
-    imageAlt: 'myCHEF culinary team',
+    subtitle: 'Our Team',
+    title: 'The Culinary Team Behind Bali’s Private Dining Favourite',
+    body: `<p>myCHEF is led by Adriano and powered by a 50+ person hospitality team trained for villa service, not restaurant shortcuts. Every chef is taught how to cook beautifully in unfamiliar kitchens, adapt to dietary requests, and leave the space spotless before they go.</p>
+    <p>That means better timing, calmer service, and food that still feels personal even when the event is large. From candlelit dinners to full villa celebrations, the chefs below set the standard.</p>`,
+    image: '/generated/trust-chefs.webp',
+    imageAlt: 'myCHEF chefs preparing private dining service in Bali',
   },
   {
-    id: 'chefs-grid',
+    id: 'profiles',
+    type: 'profiles' as const,
+    subtitle: 'Chef Profiles',
+    title: 'Meet Adriano and the Lead Chefs Guests Ask For By Name',
+    profiles: CHEFS,
+  },
+  {
+    id: 'standards',
     type: 'features' as const,
-    subtitle: 'Our Chefs',
-    title: 'The People Behind the Plates',
-    features: CHEFS.map(c => ({
-      icon: ChefHat,
-      title: c.name,
-      desc: `${c.role} — ${c.specialty}. ${c.origin}.`,
-    })),
-  },
-  {
-    id: 'training',
-    type: 'content' as const,
-    subtitle: 'Training',
-    title: '6 Months of Training Before a Chef Leads Your Evening',
-    body: `<p>Every myCHEF chef undergoes a rigorous training program before they are trusted to lead a villa dining experience. The program covers:</p>
-    <ul>
-      <li><strong>Technique:</strong> Knife skills, sauce work, pasta making, plating standards</li>
-      <li><strong>Timing:</strong> Multi-course service flow, course spacing, temperature control</li>
-      <li><strong>Presentation:</strong> Plate design, table setting, villa kitchen adaptation</li>
-      <li><strong>Service:</strong> Guest interaction, dietary accommodation, problem-solving</li>
-      <li><strong>Cleanup:</strong> Kitchen restoration, equipment care, departure protocol</li>
-    </ul>
-    <p>Only after demonstrating mastery in all five areas does a chef lead their first solo event. And even then, they are shadowed by a senior chef for their first three services.</p>`,
-    image: '/generated/luna-plating.webp',
-    imageAlt: 'Chef plating a fine dining dish',
+    subtitle: 'Why It Works',
+    title: 'How We Keep Every Chef Experience Consistent',
+    features: [
+      {
+        icon: ChefHat,
+        title: '6+ Months of Training',
+        desc: 'Every lead chef is trained on myCHEF recipes, villa kitchen workflows, guest communication, and cleanup standards before leading a booking.',
+      },
+      {
+        icon: Fish,
+        title: 'Cuisine-Led Assignments',
+        desc: 'Mediterranean menus go to Mediterranean specialists. BBQ nights go to grill chefs. We match the chef to the menu, not the other way around.',
+      },
+      {
+        icon: Flame,
+        title: 'Event-Tested Under Pressure',
+        desc: 'Our chefs regularly execute romantic dinners, birthdays, retreats, and large group BBQs in villas across Seminyak, Canggu, Ubud, and Uluwatu.',
+      },
+      {
+        icon: Sparkles,
+        title: 'Service Beyond the Plate',
+        desc: 'Presentation, pacing, table reset, and kitchen restoration are part of the job. The experience should feel effortless from the guest side.',
+      },
+    ],
   },
   {
     id: 'cta',
     type: 'cta' as const,
-    subtitle: 'Work With Us',
-    title: 'Request Your Preferred Chef',
-    body: 'While we assign the best chef for your menu and event type, you can request a specific chef when booking. Message us to check availability.',
+    subtitle: 'Book a Chef',
+    title: 'Tell Us Your Dates and We’ll Match the Right Chef',
+    body: 'Share your villa location, guest count, and the kind of meal you want. We will recommend the best chef for that menu and help you lock in availability fast.',
   },
 ]
 
 const FAQS = [
-  { question: 'Can I request a specific chef?', answer: 'Yes. When you book, let us know if you have a preference. We will check their availability and assign them if possible. Some chefs specialize in specific cuisines or event types.' },
-  { question: 'Are all your chefs Indonesian?', answer: 'Our executive chef is Italian, but our kitchen team is predominantly Indonesian. We believe in developing local talent — many of our lead chefs started as kitchen hands and trained with us for years.' },
-  { question: 'How do you ensure quality across different chefs?', answer: 'Standardized recipes, rigorous training, and post-event reviews. Every dish follows a spec sheet. Every service is debriefed. This is how we maintain consistency across 50+ team members.' },
-  { question: 'Do your chefs speak English?', answer: 'Yes. All lead chefs and service staff speak English fluently. Many also speak additional languages including Mandarin, French, and Japanese.' },
-  { question: 'What happens if my assigned chef gets sick?', answer: 'We have backup chefs on standby for every event. If your assigned chef cannot make it, we will notify you immediately and send a replacement of equal or higher skill level.' },
+  {
+    question: 'Can I request Adriano specifically?',
+    answer: 'Yes — especially for tasting menus, VIP dinners, and milestone occasions. We will confirm his availability and, if he is booked, recommend the closest-fit lead chef from the same service style.',
+  },
+  {
+    question: 'Do you only have Italian chefs?',
+    answer: 'No. Adriano leads the standards, but myCHEF is built around Indonesian culinary talent. Our team includes specialists in Mediterranean, Balinese, Asian fusion, BBQ, pastry, and family-style villa dining.',
+  },
+  {
+    question: 'How do you make sure quality stays high across different chefs?',
+    answer: 'Recipes, plating standards, service checklists, and post-event reviews are standardized. Every chef is trained to the same myCHEF playbook before they run a service on their own.',
+  },
+  {
+    question: 'Can chefs handle allergies, kids, halal, or vegetarian menus?',
+    answer: 'Yes. We customize every booking around dietary restrictions, cultural needs, and age ranges so the menu feels considered rather than improvised.',
+  },
+  {
+    question: 'What areas of Bali do your chefs cover?',
+    answer: 'Our chefs regularly serve Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding villa areas.',
+  },
 ]
 
 const RELATED_PAGES = [
-  { label: 'About myCHEF', href: '/about', desc: 'Our story, values, and mission.' },
-  { label: 'Fine Dining', href: '/fine-dining', desc: 'In-villa tasting menus led by our best chefs.' },
-  { label: 'Catering', href: '/catering', desc: 'Full-service villa catering for any occasion.' },
-  { label: 'Events', href: '/events', desc: 'Weddings, retreats, and celebrations.' },
-  { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
-  { label: 'Book Now', href: '/book', desc: 'Reserve your private chef experience.' },
+  { label: 'About myCHEF', href: '/about', desc: 'Read the founder story and the standards behind the team.' },
+  { label: 'Menus', href: '/menus', desc: 'See the menu styles each chef can execute in your villa.' },
+  { label: 'Fine Dining', href: '/fine-dining', desc: 'Explore tasting menus and premium in-villa dining.' },
+  { label: 'Catering', href: '/catering', desc: 'Planning a bigger group, BBQ, or buffet-style event?' },
+  { label: 'Pricing', href: '/pricing', desc: 'Understand starting prices and what is included.' },
+  { label: 'Book Now', href: '/book', desc: 'Reserve your date and tell us which chef style you want.' },
 ]
 
 export default function ChefsPage() {
@@ -128,19 +144,23 @@ export default function ChefsPage() {
     <PremiumPage
       slug="chefs"
       title="Our Chefs"
-      description="Meet the chefs behind myCHEF — Michelin-trained leadership, Indonesian talent, and a rigorous training program that ensures every plate meets our standards."
-      h1="The Chefs Behind Every Experience"
-      subtitle="Michelin-trained leadership. Indonesian talent. Rigorous standards."
+      description="Meet Adriano and the lead chefs behind myCHEF — Michelin-trained leadership, villa-tested specialists, and a 50+ person team trusted across Bali."
+      seoTitle="Our Private Chefs in Bali | myCHEF.id"
+      seoDescription="Meet our team of 50+ professional chefs available across Bali. Michelin-trained leadership, Indonesian culinary excellence."
+      canonicalUrl="https://mychef.id/chefs"
+      h1="Meet the Chefs Behind Every myCHEF Experience"
+      subtitle="From Adriano’s Michelin-trained leadership to our Bali-based specialists in Mediterranean, Indonesian, and BBQ dining."
       heroImage="/generated/chefs-hero.webp"
       heroImageAlt="myCHEF culinary team in Bali"
-      ogImage="https://mychef.id/generated/chefs-hero.webp"
+      ogImage="https://mychef.id/chef-portrait.webp"
       keywords={['private chef bali', 'mychef chefs', 'bali culinary team']}
-      highlights={['Michelin-Trained Executive Chef', '50+ Indonesian Professionals', '6-Month Training Program', 'Background-Checked Team']}
+      highlights={['Adriano + Lead Chef Profiles', '50+ Hospitality Professionals', '6+ Months of Training', 'Book a Chef via WhatsApp']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
+      extraJsonLd={CHEF_PERSON_SCHEMAS}
       ctaText="Book a Chef"
-      ctaSubtext="Tell us your dates and we will match you with the perfect chef."
+      ctaSubtext="Message us on WhatsApp and we will recommend the best chef for your villa, menu, and dates."
     />
   )
 }

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { Flame, Wine, Clock, Users, Star, Check, ChevronRight, MessageCircle, Phone, Sparkles, Truck, Heart, ChefHat, UtensilsCrossed } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Flame, Wine, Clock, Users, Star, Check, ChevronRight, MessageCircle, Phone, Sparkles, Truck, Heart, ChefHat, UtensilsCrossed, ShieldCheck, RefreshCw } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
@@ -8,6 +9,11 @@ import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import LocationChips from '@/components/LocationChips'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import { Button } from '@/components/ui/button'
+import Breadcrumb from '@/components/shared/Breadcrumb'
+import TestimonialBlock from '@/components/shared/TestimonialBlock'
+import { FineDiningRiskReversal } from '@/components/shared'
+import { getPageMeta } from '@/data/page-meta'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -107,9 +113,30 @@ const FAQS = [
 ]
 
 const TESTIMONIALS = [
-  { name: 'James & Sarah', location: 'London', text: 'We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the courses — pure magic.' },
-  { name: 'The Harrisons', location: 'Sydney', text: 'Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.' },
-  { name: 'Marcus Chen', location: 'Singapore', text: 'I have hosted client dinners at Michelin restaurants across Asia. This was better. The privacy, the pacing, the fact that the chef was cooking three meters from our table — my client still talks about it six months later.' },
+  {
+    name: 'James & Sarah',
+    location: 'Seminyak clifftop villa',
+    eventType: 'Anniversary Dinner',
+    date: 'February 2026',
+    quote: 'We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the courses — pure magic.',
+    rating: 5,
+  },
+  {
+    name: 'The Harrisons',
+    location: 'Ubud jungle estate',
+    eventType: 'Private Celebration',
+    date: 'January 2026',
+    quote: 'Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.',
+    rating: 5,
+  },
+  {
+    name: 'Marcus Chen',
+    location: 'Uluwatu ocean villa',
+    eventType: 'Executive Dinner',
+    date: 'December 2025',
+    quote: 'I have hosted client dinners at Michelin restaurants across Asia. This was better. The privacy, the pacing, the fact that the chef was cooking three meters from our table — my client still talks about it six months later.',
+    rating: 5,
+  },
 ]
 
 const THE_FOUR = [
@@ -223,10 +250,10 @@ export default function LunaPage() {
   return (
     <div ref={heroRef} data-universe="luna" className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
       <SeoHead
-        title="Private Chef Bali — Fine Dining in Your Villa | myCHEF"
-        description="Private chef fine dining in your Bali villa. Italian and Mediterranean tasting menus, open-flame cooking, wine pairing. From IDR 2.2M++ per guest."
-        canonical="https://mychef.id/fine-dining"
-        ogImage="https://mychef.id/generated/luna-hero-v2.webp"
+        title={getPageMeta('fine-dining').title}
+        description={getPageMeta('fine-dining').description}
+        canonical={getPageMeta('fine-dining').canonical}
+        ogImage={getPageMeta('fine-dining').ogImage}
         jsonLd={[
           localBusinessSchema,
           serviceSchema(
@@ -310,6 +337,7 @@ export default function LunaPage() {
           />
         </div>
         <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 pt-32 max-w-[1280px] mx-auto w-full">
+          <Breadcrumb items={[{ label: 'Fine Dining' }]} theme="dark" className="px-0 pt-0 pb-8" />
           <p
             className="luna-hero-label text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-7"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
@@ -317,35 +345,49 @@ export default function LunaPage() {
             Private Chef Bali — Fine Dining in Your Villa
           </p>
           <h1
-            className="luna-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-8  max-w-[920px]"
+            className="luna-hero-title mb-8 max-w-[920px] text-[2.55rem] leading-[1.04] text-white sm:text-[3.25rem] md:text-7xl lg:text-8xl"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Private Chef Bali — Fine Dining Tasting Menu in Your Villa
           </h1>
-          <p className="luna-hero-sub text-base md:text-xl text-white/75 mb-12 max-w-[640px] leading-relaxed">
+          <p className="luna-hero-sub mb-12 max-w-[640px] text-base leading-relaxed text-white/75 md:text-xl">
             Two and a half to three hours of Mediterranean fine dining, served privately in your villa. From IDR 2,200,000++ per guest. Comparable restaurant experiences start at IDR 3.5M+ with transport and wine markup.
           </p>
-          <div className="luna-hero-cta flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-10">
-            <button
+          <div className="luna-hero-cta mb-4 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <Button
               type="button"
+              variant="primary"
+              size="brand"
+              className="w-full text-xs tracking-[0.25em] sm:w-auto md:text-sm"
               onClick={() => openOrder('Mediterranean Sea Experience')}
-              className="px-10 py-4 bg-[#C5A028] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
             >
-              Book Your Evening — Reply in 1 Hour
-            </button>
-            <a
-              href="#our-menus"
-              className="inline-flex items-center justify-center px-10 py-4 border border-[#C5A028]/60 text-[#C5A028] text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#C5A028]/10 transition-colors"
-            >
-              Explore Menu
-            </a>
+              Reserve My Private Dinner
+            </Button>
+            <Button asChild variant="secondary" size="brand" className="w-full text-xs tracking-[0.25em] sm:w-auto md:text-sm">
+              <a href="#our-menus">Explore Menu</a>
+            </Button>
           </div>
+          <p className="mb-10 text-xs uppercase tracking-[0.18em] text-white/55" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            Weekends fill fast — book early
+          </p>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             {[
               { icon: Star, label: '500+ villa dinners served' },
               { icon: Users, label: '4–24 guests' },
               { icon: Wine, label: 'Wine pairing +IDR 850K' },
               { icon: Clock, label: '2.5–3 hour journey' },
+            ].map((badge) => (
+              <div key={badge.label} className="flex items-center gap-2 text-white/60">
+                <badge.icon className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />
+                <span className="text-xs tracking-wider uppercase">{badge.label}</span>
+              </div>
+            ))}
+          </div>
+          {/* Risk Reversal — Fine Dining guarantees */}
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+            {[
+              { icon: ShieldCheck, label: 'Same-day confirmation or your money back' },
+              { icon: RefreshCw, label: 'Chef can\'t make it? Replacement within 2h or 100% refund' },
             ].map((badge) => (
               <div key={badge.label} className="flex items-center gap-2 text-white/60">
                 <badge.icon className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />
@@ -446,6 +488,9 @@ export default function LunaPage() {
           </div>
         </div>
       </section>
+
+      {/* Risk Reversal — Fine Dining guarantees */}
+      <FineDiningRiskReversal dark className="border-y border-white/10" />
 
       {/* Experience Intro — Chapter Four */}
       <section id="experience" className="luna-content py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#F5F3EF' }}>
@@ -750,9 +795,12 @@ export default function LunaPage() {
               <div className="w-1.5 h-1.5 rounded-full bg-[#C5A028]/40" />
               <div className="w-16 h-[1px] bg-white/10" />
             </div>
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 border border-[#C5A028]/30 text-[#C5A028] text-sm tracking-[0.2em] uppercase rounded-full transition-all duration-500 hover:bg-[#C5A028]/10 hover:border-[#C5A028]/50 hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)]">
-              <Phone className="w-4 h-4" strokeWidth={1.5} /> Start on WhatsApp
-            </a>
+            <Button asChild variant="secondary" size="brand" className="text-sm tracking-[0.2em] hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)]">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer">
+                <Phone className="w-4 h-4" strokeWidth={1.5} />
+                Start on WhatsApp
+              </a>
+            </Button>
           </div>
         </div>
       </section>
@@ -922,9 +970,12 @@ export default function LunaPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
-              <Phone className="w-4 h-4" /> Book This Experience
-            </a>
+            <Button asChild variant="whatsapp" size="brand">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer">
+                <Phone className="w-4 h-4" />
+                Book This Experience
+              </a>
+            </Button>
           </div>
         </div>
       </section>
@@ -949,19 +1000,11 @@ export default function LunaPage() {
           />
         </div>
 
-        <div className="max-w-[1280px] mx-auto pb-24 md:pb-32 pt-12 md:pt-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {TESTIMONIALS.map((t) => (
-              <div key={t.name} className="p-8 rounded-2xl border border-white/10">
-                <div className="flex gap-1 mb-4">
-                  {[1,2,3,4,5].map((s) => <Star key={s} className="w-4 h-4 fill-[#C5A028] text-[#C5A028]" />)}
-                </div>
-                <p className="text-white/80 mb-6 leading-relaxed italic">"{t.text}"</p>
-                <p className="text-sm text-white/60">{t.name}, {t.location}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <TestimonialBlock
+          title="Guest Words"
+          subtitle="Anniversaries, executive dinners and private celebrations — this is what guests remember after the last course."
+          testimonials={TESTIMONIALS}
+        />
       </section>
 
       {/* FAQ */}
@@ -979,9 +1022,12 @@ export default function LunaPage() {
           />
           <div className="text-center mt-12">
             <p className="text-white/50 text-sm mb-4">Peak season books 2+ weeks ahead. Message Sofia to check availability.</p>
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
-              <MessageCircle className="w-4 h-4" /> Message Sofia — Reply in 1 Hour
-            </a>
+            <Button asChild variant="whatsapp" size="brand">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-4 h-4" />
+                Reserve My Private Dinner
+              </a>
+            </Button>
           </div>
         </div>
       </section>
@@ -1016,9 +1062,21 @@ export default function LunaPage() {
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">Minimum 4 guests</span></div>
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">++ adds service charge + government tax (see FAQ)</span></div>
               </div>
-              <a href="https://wa.me/6282237565997?text=Hi%20Sofia%2C%20I%27d%20like%20to%20book%20a%20fine%20dining%20experience." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1ea855] transition-all">
-                <Phone className="w-4 h-4" /> Message Sofia — Free Consultation
-              </a>
+              <Button asChild variant="whatsapp" size="brand">
+                <a href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20fine%20dining%20experience." target="_blank" rel="noopener noreferrer">
+                  <Phone className="w-4 h-4" />
+                  Reserve My Private Dinner
+                </a>
+              </Button>
+              <p className="text-sm text-white/55 mt-3">
+                No booking fee · Menu tweaks welcome · Replies within 1 hour
+              </p>
+              <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 px-5 py-5">
+                <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028] mb-3">Read our guides</p>
+                <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#C5A028] transition-colors">
+                  Visit the myCHEF Journal <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
             <div className="p-8 rounded-2xl border border-white/10">
               <BookingForm universe="luna" compact />

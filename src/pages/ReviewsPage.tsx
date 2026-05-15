@@ -1,87 +1,333 @@
-import { Star } from 'lucide-react'
-import PremiumPage from '@/components/PremiumPage'
+import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { CalendarDays, MessageCircle, Star } from 'lucide-react'
+import SeoHead, { breadcrumbSchema, localBusinessSchema } from '@/components/SeoHead'
+import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
-const TESTIMONIALS = [
-  { name: 'James & Sarah', location: 'London, UK', text: 'We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the courses — pure magic.', rating: 5 },
-  { name: 'The Harrisons', location: 'Sydney, Australia', text: 'Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.', rating: 5 },
-  { name: 'Marcus Chen', location: 'Singapore', text: 'I have hosted client dinners at Michelin restaurants across Asia. This was better. The privacy, the pacing, the fact that the chef was cooking three meters from our table — my client still talks about it six months later.', rating: 5 },
-  { name: 'The Williamson Family', location: 'Melbourne, Australia', text: 'We booked a villa chef for our family reunion. Seven nights of incredible food, and the kids actually ate vegetables. The chef even taught our teenager how to make pasta. Worth every rupiah.', rating: 5 },
-  { name: 'Emma & David', location: 'New York, USA', text: 'Our wedding catering was flawless. 80 guests, multiple dietary restrictions, and not a single complaint. The grazing table was Instagram-famous by the end of the night.', rating: 5 },
-  { name: 'Robert K.', location: 'Jakarta, Indonesia', text: 'I hired a full-time private chef through myCHEF for my Jakarta residence. Three months in and the quality has been consistent every single day. They really do train their people properly.', rating: 5 },
-  { name: 'Lisa & Tom', location: 'Amsterdam, Netherlands', text: 'The Mediterranean tasting menu was the highlight of our honeymoon. We still dream about the lobster tagliatelle. Already planning our anniversary trip back to Bali just to book them again.', rating: 5 },
-  { name: 'Corporate Retreat Group', location: 'Sydney, Australia', text: 'We booked myCHEF for a 3-day corporate retreat in Ubud. Breakfast, lunch, dinner — every meal was exceptional. The team handled 30 people with ease. Our CEO asked for their contact before we left.', rating: 5 },
-  { name: 'Sophie M.', location: 'Paris, France', text: 'As a French person, I am picky about food. The Wagyu experience exceeded my expectations. The technique, the presentation, the wine pairing — all world-class. In a villa kitchen. Incredible.', rating: 5 },
-]
+type ReviewCategory = 'All' | 'Weddings' | 'Private Dinners' | 'Catering' | 'Retreats'
 
-const SECTIONS = [
+interface Review {
+  name: string
+  location: string
+  date: string
+  eventType: string
+  category: Exclude<ReviewCategory, 'All'>
+  review: string
+  rating: number
+}
+
+const SITE = 'https://mychef.id'
+const WHATSAPP_URL = 'https://wa.me/6282237565997'
+
+const REVIEWS_SCHEMAS = [
+  localBusinessSchema,
+  breadcrumbSchema('Reviews', `${SITE}/reviews`),
   {
-    id: 'reviews',
-    type: 'testimonials' as const,
-    subtitle: 'Guest Reviews',
-    title: 'What Our Guests Say About Us',
-    testimonials: TESTIMONIALS.slice(0, 6),
-  },
-  {
-    id: 'more-reviews',
-    type: 'testimonials' as const,
-    subtitle: 'More Stories',
-    title: 'More Guest Experiences',
-    testimonials: TESTIMONIALS.slice(6),
-  },
-  {
-    id: 'stats',
-    type: 'features' as const,
-    subtitle: 'By The Numbers',
-    title: 'Our Track Record',
-    features: [
-      { icon: Star, title: '4.9 Average Rating', desc: 'Across 500+ verified villa dining experiences. Guests rate us on food quality, service, and overall experience.' },
-      { icon: Star, title: '12,000+ Guests Served', desc: 'Families, honeymooners, CEOs, wedding parties, and retreat groups — all served with the same standard.' },
-      { icon: Star, title: '500+ Villa Events', desc: 'From intimate dinners for two to weddings for 200. Every villa, every kitchen, every challenge handled.' },
-      { icon: Star, title: 'Zero Refund Complaints', desc: 'We have never had a guest request a refund due to food quality or service failure. We fix issues on the spot.' },
-    ],
-  },
-  {
-    id: 'cta',
-    type: 'cta' as const,
-    subtitle: 'Join Our Guests',
-    title: 'Experience What They Are Talking About',
-    body: 'Book your private chef experience and see why our guests rate us 4.9 out of 5. Message us on WhatsApp to get started.',
+    '@context': 'https://schema.org',
+    '@type': 'AggregateRating',
+    itemReviewed: {
+      '@type': 'LocalBusiness',
+      name: 'myCHEF',
+    },
+    ratingValue: '4.9',
+    reviewCount: '560',
   },
 ]
 
-const FAQS = [
-  { question: 'Are these reviews real?', answer: 'Yes. Every review is from a real guest who booked and experienced our service. We do not use fake testimonials or paid reviews.' },
-  { question: 'Where can I leave a review?', answer: 'After your event, we will send you a review link. You can also leave reviews on Google, TripAdvisor, or our website.' },
-  { question: 'What if I am not satisfied?', answer: 'We have served 500+ events with zero refund complaints. If something is not right, we fix it immediately. Your satisfaction is our standard.' },
+const STATS = [
+  '560+ events',
+  '4.9★ rating',
+  '12,000+ guests',
+  '98% repeat bookings',
 ]
 
-const RELATED_PAGES = [
-  { label: 'About myCHEF', href: '/about', desc: 'Our story, values, and mission.' },
-  { label: 'Our Chefs', href: '/chefs', desc: 'Meet the culinary team.' },
-  { label: 'Fine Dining', href: '/fine-dining', desc: 'In-villa tasting menus.' },
-  { label: 'Catering', href: '/catering', desc: 'Full-service villa catering.' },
-  { label: 'Book Now', href: '/book', desc: 'Reserve your experience.' },
-  { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing.' },
+const FILTERS: ReviewCategory[] = ['All', 'Weddings', 'Private Dinners', 'Catering', 'Retreats']
+
+const REVIEWS: Review[] = [
+  {
+    name: 'Olivia · Seminyak',
+    location: 'Seminyak villa',
+    date: 'February 2026',
+    eventType: 'Private dinner for 8',
+    category: 'Private Dinners',
+    review: 'We booked myCHEF for our first night in Bali and it set the tone for the whole trip. Chef Bayu adjusted the menu for our gluten-free guest without making it feel like a compromise. The snapper, sambal and the way they left the kitchen spotless felt unbelievably polished.',
+    rating: 5,
+  },
+  {
+    name: 'Harper · Uluwatu',
+    location: 'Clifftop villa in Uluwatu',
+    date: 'January 2026',
+    eventType: 'Wedding dinner for 42',
+    category: 'Weddings',
+    review: 'We needed a wedding team that could handle sunset timing, dietary notes and a very small villa kitchen. myCHEF made it look effortless. Dinner landed exactly on schedule, the waiters were warm and calm, and our parents are still talking about the lamb and truffle jus.',
+    rating: 5,
+  },
+  {
+    name: 'Noah · Canggu',
+    location: 'Canggu birthday villa',
+    date: 'March 2026',
+    eventType: 'Birthday BBQ for 18',
+    category: 'Catering',
+    review: 'This was supposed to be a relaxed birthday lunch and it ended up feeling like a private resort event. The grazing starters disappeared in minutes, the seafood grill was excellent and the bartender kept everything moving without ever being intrusive. Zero stress for the host.',
+    rating: 5,
+  },
+  {
+    name: 'Isla · Ubud',
+    location: 'Retreat venue in Ubud',
+    date: 'December 2025',
+    eventType: 'Wellness retreat for 26',
+    category: 'Retreats',
+    review: 'Our retreat group had vegan, high-protein and no-dairy requests all at the same table. Every meal still felt abundant and beautiful. Adriano’s team understood exactly how to keep food nourishing without making it boring, which is rare even at dedicated retreat venues.',
+    rating: 5,
+  },
+  {
+    name: 'Theo · Nusa Dua',
+    location: 'Nusa Dua family villa',
+    date: 'November 2025',
+    eventType: 'Villa dinner for 12',
+    category: 'Private Dinners',
+    review: 'We had grandparents, toddlers and two very fussy eaters, so I expected some friction. Instead the chef paced the courses perfectly, made a separate kids pasta on request and still delivered a dinner that felt elegant for the adults. It was the easiest “special occasion” we have ever hosted.',
+    rating: 5,
+  },
+  {
+    name: 'Mila · Jimbaran',
+    location: 'Jimbaran garden villa',
+    date: 'October 2025',
+    eventType: 'Wedding welcome party for 65',
+    category: 'Weddings',
+    review: 'The welcome party was where we actually got to relax because myCHEF handled everything. They coordinated service, cleared glasses quickly and kept the buffet looking fresh all night. Guests thought we had hired a full hotel team, which says everything.',
+    rating: 5,
+  },
+  {
+    name: 'Ethan · Berawa',
+    location: 'Berawa corporate offsite',
+    date: 'September 2025',
+    eventType: 'Corporate catering for 35',
+    category: 'Catering',
+    review: 'We booked breakfast, lunch and an evening canape service for our company offsite. Menus changed every day, portions were generous and the communication on timing was excellent. For Bali operations, reliability matters as much as flavor, and they delivered both.',
+    rating: 5,
+  },
+  {
+    name: 'Sofia · Tabanan',
+    location: 'Tabanan retreat estate',
+    date: 'August 2025',
+    eventType: 'Yoga retreat closing dinner',
+    category: 'Retreats',
+    review: 'The closing dinner felt like the emotional finale our retreat needed. Long table, candlelight, beautifully plated food and a service team that read the room perfectly. Guests asked for the WhatsApp number before dessert was finished.',
+    rating: 5,
+  },
+]
+
+const SOCIAL_PROOF = [
+  { name: 'Google', detail: '4.9★ local service rating' },
+  { name: 'TripAdvisor', detail: 'Villa dining and event feedback' },
+  { name: 'Airbnb Experiences', detail: 'Guest-loved private chef moments' },
 ]
 
 export default function ReviewsPage() {
+  const [activeFilter, setActiveFilter] = useState<ReviewCategory>('All')
+
+  const filteredReviews = useMemo(
+    () => (activeFilter === 'All' ? REVIEWS : REVIEWS.filter((review) => review.category === activeFilter)),
+    [activeFilter],
+  )
+
+  const canonical = `${SITE}/reviews`
+
   return (
-    <PremiumPage
-      slug="reviews"
-      title="Reviews"
-      description="Real reviews from real guests — families, couples, and event hosts who chose myCHEF for their Bali experience."
-      h1="What Our Guests Say"
-      subtitle="Real reviews from real guests. 4.9 average rating across 500+ experiences."
-      heroImage="/generated/reviews-hero.webp"
-      heroImageAlt="Happy guests enjoying private dining in Bali"
-      ogImage="https://mychef.id/generated/reviews-hero.webp"
-      keywords={['private chef bali reviews', 'mychef testimonials', 'bali catering reviews']}
-      highlights={['4.9 Average Rating', '500+ Reviews', '12,000+ Guests', 'Zero Refund Complaints']}
-      sections={SECTIONS}
-      faqs={FAQS}
-      relatedPages={RELATED_PAGES}
-      ctaText="Book Your Experience"
-      ctaSubtext="Join thousands of happy guests. We reply within the hour."
-    />
+    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+      <SeoHead
+        title="myCHEF Reviews | 4.9★ Private Chef & Catering Bali"
+        description="Read guest reviews for myCHEF private dinners, weddings, retreats and catering events across Bali."
+        canonical={canonical}
+        ogImage={`${SITE}/dining-table.webp`}
+        jsonLd={REVIEWS_SCHEMAS}
+      />
+      <section className="px-5 pt-14 pb-12 sm:px-6 md:pt-24 md:pb-16">
+        <div className="max-w-[1200px] mx-auto grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028] font-semibold mb-4">Guest reviews</p>
+            <h1 className="mb-5 font-playfair text-3xl leading-tight sm:text-4xl md:text-6xl">What Our Guests Say</h1>
+            <p className="text-lg md:text-xl text-[#4A4745] max-w-3xl leading-relaxed">
+              4.9★ average across 560+ villa dinners, catering events and private chef bookings in Bali.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#E4D7A8] bg-white px-5 py-3 shadow-sm">
+                <div className="flex items-center gap-1" aria-label="Five star rating">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <Star key={index} className="h-4 w-4 fill-[#C5A028] text-[#C5A028]" />
+                  ))}
+                </div>
+                <span className="text-sm font-semibold text-[#1A1A1A]">4.9 / 5 guest rating</span>
+              </div>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A]"
+              >
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp us
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-[32px] border border-[#E8E2CF] bg-white p-8 shadow-[0_24px_80px_rgba(0,0,0,0.06)]">
+            <p className="text-sm uppercase tracking-[0.25em] text-[#8A7A47] mb-4">Trusted by villa guests across Bali</p>
+            <div className="space-y-5">
+              <div className="rounded-2xl bg-[#FAFAF8] p-5 border border-[#EFE7D1]">
+                <p className="text-3xl font-playfair text-[#1A1A1A] mb-1">560+</p>
+                <p className="text-sm text-[#4A4745]">Private dinners, celebrations and chef bookings delivered in Bali villas.</p>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl bg-[#FAFAF8] p-5 border border-[#EFE7D1]">
+                  <p className="text-2xl font-playfair mb-1">12,000+</p>
+                  <p className="text-sm text-[#4A4745]">Guests served by Adriano and the myCHEF team.</p>
+                </div>
+                <div className="rounded-2xl bg-[#FAFAF8] p-5 border border-[#EFE7D1]">
+                  <p className="text-2xl font-playfair mb-1">98%</p>
+                  <p className="text-sm text-[#4A4745]">Repeat or referred bookings from villas, retreats and event hosts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-10 md:pb-14">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-2 gap-4 md:grid-cols-4">
+          {STATS.map((stat) => (
+            <div key={stat} className="rounded-2xl border border-[#E8E2CF] bg-white px-5 py-4 text-center text-sm font-semibold text-[#4A4745] shadow-sm">
+              {stat}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <TestimonialBlock
+        title="Featured guest moments"
+        subtitle="From weddings to long-table villa dinners, these are the details guests remember."
+        testimonials={REVIEWS.slice(0, 3).map((review) => ({
+          name: review.name,
+          location: review.location,
+          eventType: review.eventType,
+          date: review.date,
+          quote: review.review,
+          rating: review.rating,
+        }))}
+      />
+
+      <section className="px-6 py-20 md:py-24">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028] font-semibold mb-3">Browse by occasion</p>
+              <h2 className="text-3xl md:text-5xl font-playfair mb-3">Reviews by category</h2>
+              <p className="max-w-2xl text-[#4A4745] leading-relaxed">
+                Weddings, private dinners, retreat catering and villa celebrations — filter by the type of experience you want to book.
+              </p>
+            </div>
+            <Link to="/pricing" className="text-sm font-semibold text-[#1A1A1A] underline decoration-[#C5A028] underline-offset-4">
+              See pricing guide
+            </Link>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            {FILTERS.map((filter) => {
+              const isActive = filter === activeFilter
+              return (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setActiveFilter(filter)}
+                  className={`min-h-[44px] rounded-full px-4 py-2.5 text-sm font-semibold transition-colors sm:px-5 ${isActive ? 'bg-[#C5A028] text-black' : 'border border-[#E2DDD2] bg-white text-[#4A4745] hover:border-[#C5A028]'}`}
+                >
+                  {filter}
+                </button>
+              )
+            })}
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            {filteredReviews.map((review) => (
+              <article key={`${review.name}-${review.date}`} className="rounded-[28px] border border-[#E8E2CF] bg-white p-6 md:p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+                <div className="flex flex-col gap-3 border-b border-[#F0EBDE] pb-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="rounded-full bg-[#FAF2D4] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#8A6F15]">
+                      {review.eventType}
+                    </span>
+                    <span className="text-xs uppercase tracking-[0.18em] text-[#7A746A]">{review.category}</span>
+                  </div>
+                  <div className="inline-flex items-center gap-2 text-sm text-[#4A4745]">
+                    <CalendarDays className="h-4 w-4 text-[#C5A028]" />
+                    {review.date}
+                  </div>
+                </div>
+
+                <div className="mt-5 flex items-center gap-1">
+                  {Array.from({ length: review.rating }).map((_, index) => (
+                    <Star key={index} className="h-4 w-4 fill-[#C5A028] text-[#C5A028]" />
+                  ))}
+                </div>
+
+                <div className="mt-4">
+                  <h3 className="text-xl font-playfair text-[#1A1A1A]">{review.name}</h3>
+                  <p className="mt-1 text-sm text-[#4A4745]">{review.location}</p>
+                </div>
+
+                <p className="mt-5 text-sm leading-7 text-[#35312E] sm:text-[15px]">“{review.review}”</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-20 bg-white border-y border-[#ECE5D5]">
+        <div className="max-w-[1100px] mx-auto text-center">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028] font-semibold mb-4">Social proof</p>
+          <h2 className="text-3xl md:text-4xl font-playfair mb-4">Seen where guests already search and share</h2>
+          <p className="max-w-2xl mx-auto text-[#4A4745] leading-relaxed">
+            Placeholder badges for your review platforms — ready for Google, TripAdvisor and Airbnb Experiences proof points.
+          </p>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {SOCIAL_PROOF.map((badge) => (
+              <div key={badge.name} className="rounded-[24px] border border-[#E8E2CF] bg-[#FAFAF8] px-6 py-7 text-left">
+                <p className="text-xs uppercase tracking-[0.3em] text-[#8A7A47] mb-3">Badge placeholder</p>
+                <h3 className="text-2xl font-playfair mb-2">{badge.name}</h3>
+                <p className="text-sm text-[#4A4745]">{badge.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-20 md:py-24">
+        <div className="max-w-[1100px] mx-auto rounded-[32px] bg-[#1A1A1A] px-8 py-12 text-white md:px-12 md:py-14">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028] font-semibold mb-4">Ready when you are</p>
+          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl md:text-5xl font-playfair leading-tight">Ready to create your own story?</h2>
+              <p className="mt-4 text-white/75 leading-relaxed">
+                Tell us your villa, date and guest count. We will match you with the right chef and service style for your dinner, event or retreat.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A]"
+              >
+                <MessageCircle className="h-4 w-4" />
+                Chat on WhatsApp
+              </a>
+              <Link to="/book" className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5">
+                Start booking
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   )
 }

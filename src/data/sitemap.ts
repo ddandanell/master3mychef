@@ -141,13 +141,13 @@ export const INFO_PAGES: SitemapEntry[] = [
   { path: '/about', type: 'info', title: 'About myCHEF — Bali Private Chef Team', description: 'About myCHEF — our story, our team, and our mission to bring extraordinary food to villas across Bali and Indonesia.', priority: 0.7, changefreq: 'monthly' },
   { path: '/chefs', type: 'info', title: 'Our Chefs | myCHEF Bali Private Chef Team', description: 'Meet our team of professional private chefs in Bali — backgrounds, specialties, and what they cook best.', priority: 0.7, changefreq: 'monthly' },
   { path: '/faq', type: 'info', title: 'FAQ | Private Chef Bali — Bookings, Pricing & Dietary', description: 'Answers to common questions about private chef services in Bali — bookings, pricing, dietary needs, and logistics.', priority: 0.7, changefreq: 'monthly' },
-  { path: '/why-mychef', type: 'info', title: 'Why Choose myCHEF | Bali Private Chef You Can Trust', description: 'Why myCHEF is the most-trusted private chef service in Bali — vetted chefs, transparent pricing, and same-day response.', priority: 0.7, changefreq: 'monthly' },
+  { path: '/why-mychef', type: 'info', title: 'Why 560+ Villas Choose myCHEF | Trusted Private Chef Bali', description: 'Discover why 560+ villas trust myCHEF — Michelin-trained leadership, 50+ local professionals, same-day confirmation, and villa-ready service across Bali.', priority: 0.7, changefreq: 'monthly' },
   { path: '/reviews', type: 'info', title: 'Reviews | myCHEF Bali Private Chef Guests', description: 'Real reviews from real guests — read what families, couples, and event hosts say about myCHEF villa dining and catering in Bali.', priority: 0.7, changefreq: 'monthly' },
   { path: '/pricing', type: 'info', title: 'Pricing | Private Chef Bali, Villa Catering & Events', description: 'Transparent pricing for private chef services in Bali — hourly rates, menu pricing, fine dining, and full event packages.', priority: 0.8, changefreq: 'monthly' },
   { path: '/jakarta', type: 'area', title: 'Private Chef in Jakarta — Residences & Corporate Hospitality', description: 'Private chef services in Jakarta for residences, expat households, and corporate hospitality — Menteng, Kemang, SCBD, Pondok Indah.', priority: 0.75, changefreq: 'weekly', area: 'Jakarta' },
   { path: '/retreats', type: 'info', title: 'Retreat Catering in Bali | Yoga, Wellness & Corporate Offsites', description: 'Multi-day retreat catering across Bali for yoga retreats, wellness retreats, and corporate offsites — full-board menus and on-site coordination.', priority: 0.7, changefreq: 'monthly' },
-  { path: '/recommended-services', type: 'info', title: 'Recommended Services in Bali | DJs, Decor & Photography', description: 'Our trusted partners for DJs, decor, photography, transport, and other event services in Bali.', priority: 0.4, changefreq: 'monthly' },
-  { path: '/join-our-team', type: 'info', title: 'Join Our Team | myCHEF Bali Chef & Hospitality Roles', description: 'Open chef and hospitality roles at myCHEF — apply to join our growing team in Bali and Jakarta.', priority: 0.3, changefreq: 'monthly' },
+  { path: '/recommended-services', type: 'info', title: 'Build Your Perfect Villa Experience | myCHEF Concierge Bali', description: 'Not sure what you need? Let myCHEF guide you to the right Bali villa service — fine dining, events, catering, or staffing.', priority: 0.4, changefreq: 'monthly' },
+  { path: '/join-our-team', type: 'info', title: "Join Bali's #1 Private Chef Team | myCHEF Careers", description: 'Apply to join the myCHEF team in Bali — private chef, bartender, event coordinator, and villa host opportunities.', priority: 0.3, changefreq: 'monthly' },
   { path: '/quote', type: 'tool', title: 'Get a Custom Quote | Private Chef Bali by myCHEF', description: 'Tell us about your event and receive a personalized private chef quote — villa dining, party, corporate, or wedding — within 24 hours.', priority: 0.9, changefreq: 'monthly' },
   { path: '/services', type: 'info', title: 'Private Chef Services in Bali | Villa, Weddings, Corporate | myCHEF', description: 'Eight ways myCHEF brings extraordinary food to your villa in Bali — villa parties, romantic dinners, birthdays, family reunions, corporate events, weddings, classes, and meal prep.', priority: 0.85, changefreq: 'monthly' },
   // /staffing is now generated from PILLARS in buildSitemap() — removed duplicate
@@ -157,10 +157,31 @@ export const INFO_PAGES: SitemapEntry[] = [
   { path: '/blog', type: 'blog-index', title: 'Bali Hosting & Private Chef Guides | myCHEF Blog', description: 'Guides, cost breakdowns, and culinary insights for hosting in Bali — private chef cost, villa kitchens, retreats, and rehearsal dinners.', priority: 0.75, changefreq: 'monthly' },
 ]
 
+export const STATIC_SERVICE_PAGES: SitemapEntry[] = [
+  {
+    path: '/catering/buffet',
+    type: 'info',
+    title: 'Buffet Catering Bali | Villa, Wedding & Event Buffets',
+    description:
+      'Buffet catering in Bali for villas, weddings, retreats, and events with Indonesian, Western, BBQ, and custom menu options.',
+    priority: 0.7,
+    changefreq: 'monthly',
+  },
+  {
+    path: '/catering/villa-catering',
+    type: 'info',
+    title: 'Villa Catering Bali | Private Chef & Event Catering',
+    description:
+      'Private villa catering in Bali with chef-led menus, setup, service, drinks, and cleanup for birthdays, family dinners, retreats, and villa events.',
+    priority: 0.7,
+    changefreq: 'monthly',
+  },
+]
+
 export const LEGAL_PAGES: SitemapEntry[] = [
   { path: '/privacy-policy', type: 'legal', title: 'Privacy Policy', description: 'How myCHEF collects, stores, and protects your personal information.', priority: 0.2, changefreq: 'monthly', aliases: ['/privacy'] },
   { path: '/terms-of-service', type: 'legal', title: 'Terms of Service', description: 'The terms that govern your use of myCHEF services.', priority: 0.2, changefreq: 'monthly', aliases: ['/terms'] },
-  { path: '/payment-terms', type: 'legal', title: 'Payment Terms', description: 'Deposit, balance, refund, and cancellation policy for myCHEF bookings.', priority: 0.2, changefreq: 'monthly', aliases: ['/cancellation'] },
+  { path: '/cancellation', type: 'legal', title: 'Cancellation Policy', description: 'Cancellation and refund policy for myCHEF bookings, including deposits, balance payments, and refund timelines.', priority: 0.2, changefreq: 'monthly', aliases: ['/payment-terms'] },
 ]
 
 // Build the full flat sitemap from the structured arrays above.
@@ -256,8 +277,8 @@ export function buildSitemap(): SitemapEntry[] {
     type: 'info',
     title: p.title,
     description: p.description,
-    priority: 0.95,
-    changefreq: 'weekly',
+    priority: 0.9,
+    changefreq: 'monthly',
   }))
 
   const pillarSubPages: SitemapEntry[] = Object.values(PILLARS).flatMap((p) =>
@@ -266,7 +287,7 @@ export function buildSitemap(): SitemapEntry[] {
       type: 'info' as const,
       title: s.title,
       description: s.description,
-      priority: 0.85,
+      priority: 0.7,
       changefreq: 'monthly',
     }))
   )
@@ -276,8 +297,8 @@ export function buildSitemap(): SitemapEntry[] {
     type: 'info',
     title: 'Private Chef Locations Bali | Seminyak, Canggu, Ubud, Uluwatu — myCHEF',
     description: 'Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Villa dining, catering and events in every region.',
-    priority: 0.9,
-    changefreq: 'weekly',
+    priority: 0.8,
+    changefreq: 'monthly',
   }
 
   const locationPages: SitemapEntry[] = Object.values(LOCATIONS).map((l) => ({
@@ -285,8 +306,8 @@ export function buildSitemap(): SitemapEntry[] {
     type: 'area',
     title: l.title,
     description: l.description,
-    priority: 0.85,
-    changefreq: 'weekly',
+    priority: 0.7,
+    changefreq: 'monthly',
     area: l.label,
     slug: l.slug,
   }))
@@ -304,7 +325,7 @@ export function buildSitemap(): SitemapEntry[] {
     path: `/journal/${p.slug}`,
     type: 'blog-post',
     title: p.title,
-    description: p.description,
+    description: p.excerpt,
     priority: 0.75,
     changefreq: 'monthly',
     slug: p.slug,
@@ -315,8 +336,8 @@ export function buildSitemap(): SitemapEntry[] {
     type: 'info',
     title: 'Book | Private Chef, Catering & Events Bali — myCHEF',
     description: 'Book a private chef, catering, event or staffing in Bali. Same-day WhatsApp confirmation.',
-    priority: 0.95,
-    changefreq: 'weekly',
+    priority: 0.8,
+    changefreq: 'monthly',
   }
 
   return [
@@ -330,6 +351,7 @@ export function buildSitemap(): SitemapEntry[] {
     ...blogPosts,
     ...pillarPages,
     ...pillarSubPages,
+    ...STATIC_SERVICE_PAGES,
     locationHub,
     ...locationPages,
     journalIndex,

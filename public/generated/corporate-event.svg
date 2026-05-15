@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">corporate-event placeholder</title>
+  <desc id="desc">Brand placeholder image for corporate-event asset.</desc>
+  <rect width="1600" height="900" fill="#C5A028" />
+  <g fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="2">
+    <path d="M0 150h1600" />
+    <path d="M0 450h1600" />
+    <path d="M0 750h1600" />
+    <path d="M200 0v900" />
+    <path d="M800 0v900" />
+    <path d="M1400 0v900" />
+  </g>
+  <text x="800" y="410" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="42" letter-spacing="10">MYCHEF GENERATED</text>
+  <text x="800" y="490" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">corporate-event</text>
+</svg>

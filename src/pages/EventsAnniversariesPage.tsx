@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -18,7 +18,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20Sofia,%20I%20would%20like%20to%20plan%20an%20anniversary%20dinner.'
+const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20an%20anniversary%20dinner.'
 const SITE = 'https://mychef.id'
 const ACCENT = '#2C5F7C'
 
@@ -121,13 +121,13 @@ export default function EventsAnniversariesPage() {
         ogImage={`${SITE}/generated/events/anniversary-romantic.webp`}
         jsonLd={[
           localBusinessSchema,
-          serviceSchema('Anniversary Dinners in Bali', 'Bespoke anniversary dinners and celebrations in Bali with private chef service, plated menus, villa decoration, and wine pairings.', `${SITE}/events/anniversaries`, 'IDR'),
+          detailedServiceSchema('Anniversary Dinner Bali', 'myCHEF.id creates private anniversary dinners in Bali with chef-led menus, romantic villa styling, and polished service. We handle planning, cooking, setup, and cleanup so the celebration feels effortless.', `${SITE}/events/anniversaries`),
           offerSchema('Couple Intimate Dinner', 1500000, 'IDR', `${SITE}/events/anniversaries`),
           offerSchema('Small-Group Anniversary', 1200000, 'IDR', `${SITE}/events/anniversaries`),
           offerSchema('Renewal of Vows + Dinner', 2500000, 'IDR', `${SITE}/events/anniversaries`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Anniversaries', `${SITE}/events/anniversaries`, 'Events', `${SITE}/events`),
+          breadcrumbSchema('Anniversary Dinner Bali', `${SITE}/events/anniversaries`, 'Events', `${SITE}/events`),
         ]}
       />
 
@@ -135,7 +135,7 @@ export default function EventsAnniversariesPage() {
 
       <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dinner setup by a Bali villa pool" className="w-full h-full object-cover" />
+          <img src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dinner setup by a Bali villa pool" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-black/68" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
@@ -148,7 +148,7 @@ export default function EventsAnniversariesPage() {
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
             Bespoke villa anniversaries with chef-led menus, table service, wine pairing add-ons, and discreet surprise coordination — from a romantic dinner for two to a renewal of vows with family and friends.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <Calendar className="w-4 h-4" /> Book Anniversary Dinner
             </a>
@@ -156,6 +156,9 @@ export default function EventsAnniversariesPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
+          <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.2em]">
+            From IDR 1.2M++/guest · Romantic styling and discreet coordination available
+          </p>
         </div>
       </section>
 
@@ -367,6 +370,30 @@ export default function EventsAnniversariesPage() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <section className="py-16 bg-[#F5F3EE]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-sm uppercase tracking-widest text-[#C5A028] mb-3">Also available</p>
+          <h2 className="text-2xl font-semibold text-[#1A1916] mb-8">Explore More myCHEF Services</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { to: '/events/weddings', label: 'Villa Weddings' },
+              { to: '/fine-dining', label: 'Fine Dining' },
+              { to: '/catering', label: 'Villa Catering' },
+              { to: '/book', label: 'Book myCHEF' }
+            ].map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 bg-[#FAFAF8] anniversary-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
@@ -388,31 +415,6 @@ export default function EventsAnniversariesPage() {
             whatsappName="Sofia"
             accent={ACCENT}
           />
-        </div>
-      </section>
-
-      {/* ═══════ INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1000px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/events/weddings" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Villa Weddings</h4>
-              <p className="text-xs text-[#4A4745]">Bespoke villa weddings with full catering and coordination.</p>
-            </Link>
-            <Link to="/events/corporate-events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Corporate Events</h4>
-              <p className="text-xs text-[#4A4745]">Professional catering for offsites, conferences, and launches.</p>
-            </Link>
-            <Link to="/catering/buffet" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Buffet Catering</h4>
-              <p className="text-xs text-[#4A4745]">Stylish buffet setups for any group size.</p>
-            </Link>
-            <Link to="/in-villa-service/sommelier" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Sommelier Service</h4>
-              <p className="text-xs text-[#4A4745]">Curated wine pairings for your villa dinner.</p>
-            </Link>
-          </div>
         </div>
       </section>
 

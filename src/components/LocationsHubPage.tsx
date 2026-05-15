@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MapPin, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
 import { LOCATIONS } from '../data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
@@ -68,7 +68,7 @@ export default function LocationsHubPage() {
         title="Private Chef Locations in Bali — myCHEF"
         description="Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Villa dining, catering and events in every region."
         canonical={canonical}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Locations', canonical)]}
+        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Locations', canonical)]}
       />
 
       {/* Hero */}

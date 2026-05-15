@@ -20,6 +20,88 @@ const PRICING_OFFER_SCHEMA = {
   },
 }
 
+const PRICE_SPECIFICATION_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'myCHEF Bali Service Pricing',
+  description: 'Transparent pricing for private chef, catering, events, and staffing services in Bali.',
+  url: 'https://mychef.id/pricing',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      item: {
+        '@type': 'Offer',
+        name: 'Fine Dining — Mediterranean Sea Experience',
+        description: '5-course Italian seafood tasting menu. Includes all ingredients, table setting, service staff, and cleanup.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '2200000', priceCurrency: 'IDR', valueAddedTaxIncluded: false },
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': 'https://mychef.id/#business' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      item: {
+        '@type': 'Offer',
+        name: 'Fine Dining — Wagyu Experience',
+        description: '4-course Wagyu-focused menu with handmade pasta and grilled ribeye. Includes all ingredients and service.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '2400000', priceCurrency: 'IDR', valueAddedTaxIncluded: false },
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': 'https://mychef.id/#business' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      item: {
+        '@type': 'Offer',
+        name: 'Private Villa Chef — Hourly Rate',
+        description: 'Private chef for breakfast, lunch, or dinner in your villa. Minimum 4 hours. Groceries at cost.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '600000', priceCurrency: 'IDR', unitText: 'HOUR' },
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': 'https://mychef.id/#business' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      item: {
+        '@type': 'Offer',
+        name: 'BBQ Catering',
+        description: 'BBQ catering for villa parties. Includes grill setup, meats, sides, sauces, and service staff.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '450000', priceCurrency: 'IDR', unitText: 'PERSON' },
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': 'https://mychef.id/#business' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 5,
+      item: {
+        '@type': 'Offer',
+        name: 'Drop-Off Catering',
+        description: 'Pre-plated meals delivered to your villa. Minimum 10 guests.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '250000', priceCurrency: 'IDR', unitText: 'PERSON' },
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': 'https://mychef.id/#business' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 6,
+      item: {
+        '@type': 'Offer',
+        name: 'Wait Staff & Servers',
+        description: 'Professional table service staff for villa dinners and events. Minimum 4 hours.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '250000', priceCurrency: 'IDR', unitText: 'HOUR' },
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': 'https://mychef.id/#business' },
+      },
+    },
+  ],
+}
+
 const SECTIONS = [
   {
     id: 'transparency',
@@ -161,6 +243,7 @@ export default function PricingPage() {
       extraJsonLd={[
         breadcrumbSchema('Pricing', 'https://mychef.id/pricing'),
         PRICING_OFFER_SCHEMA,
+        PRICE_SPECIFICATION_SCHEMA,
       ]}
       ctaText="Get a Custom Quote"
       ctaSubtext="Detailed proposal within 24 hours. No obligation."

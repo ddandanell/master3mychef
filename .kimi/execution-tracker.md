@@ -327,8 +327,19 @@ Tree-shaking was already excluding all 9 deps from the bundle, so output size ba
 - Always read + update this file at the start of every task
 - Push to GitHub every hour minimum
 
-**Last Updated:** 2026-05-16 07:50 UTC+8
-**Current Git Head:** 6668790 (main)
+---
+
+## LUNA PAGE NAV GRID + OVERLAY FIXES (2026-05-16) — Copilot Agent
+
+| Fix | Status | File | Notes |
+|-----|--------|------|-------|
+| LunaPage "Choose Your Evening" nav grid | ✅ DONE | `src/pages/LunaPage.tsx` | 6-card grid after hero, all sub-pages linked with price anchors and icons |
+| CateringRetreatPage hero overlays | ✅ DONE | `src/pages/CateringRetreatPage.tsx` | Both overlays bg-black/60 → bg-black/68 |
+| UI component cleanup | ✅ SKIPPED | — | Audit found 8 more components in use (input, label, separator, sheet, skeleton, textarea, toggle, tooltip) — NOT safe to delete |
+| TypeScript | ✅ CLEAN | — | 0 errors |
+| Build | ✅ CLEAN | — | 160 meta files |
+| Git push | ✅ DONE | — | Commit `4470032` → main |
+
+**Last Updated:** 2026-05-16 07:55 UTC+8
+**Current Git Head:** 4470032 (main)
 **Build Status:** ✅ PASSING
-**Type Status:** ✅ CLEAN
-**All 6 fine-dining sub-pages:** ✅ COMPLETE

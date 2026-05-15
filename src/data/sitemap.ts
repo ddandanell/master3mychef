@@ -154,7 +154,7 @@ export const INFO_PAGES: SitemapEntry[] = [
   // /staffing is now generated from PILLARS in buildSitemap() — removed duplicate
   { path: '/partner-platform', type: 'info', title: 'Partner Platform | myCHEF — Bali Villa Operator Dining', description: 'A villa dining partner platform for luxury villas, villa management companies, boutique hospitality brands, and premium operators across Bali. Co-branded or white-label.', priority: 0.85, changefreq: 'monthly' },
   { path: '/corporate-events', type: 'info', title: 'Corporate Events Bali | Luxury Corporate Catering & Event Dining', description: 'Premium corporate events in Bali with luxury catering, cocktails, staffing, chefs, and full event support for conferences, executive dinners, gala events, and company celebrations.', priority: 0.9, changefreq: 'monthly' },
-  { path: '/calculator', type: 'tool', title: 'Private Chef Bali Pricing Calculator | myCHEF', description: 'Estimate the cost of a private chef in Bali — guests, meals, cuisine, and add-ons — in under a minute.', priority: 0.6, changefreq: 'monthly' },
+  { path: '/calculator', type: 'tool', title: 'Private Chef Bali Pricing Calculator | myCHEF', description: 'Estimate the cost of a private chef in Bali — guests, meals, cuisine, and add-ons — in under a minute.', priority: 0.85, changefreq: 'monthly' },
   { path: '/blog', type: 'blog-index', title: 'Bali Hosting & Private Chef Guides | myCHEF Blog', description: 'Guides, cost breakdowns, and culinary insights for hosting in Bali — private chef cost, villa kitchens, retreats, and rehearsal dinners.', priority: 0.75, changefreq: 'monthly' },
 ]
 

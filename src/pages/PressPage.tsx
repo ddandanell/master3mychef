@@ -1,6 +1,6 @@
 import { Award, BadgeCheck, Camera, Clock3, FileText, Mail, MessageCircle, Newspaper, Sparkles } from 'lucide-react'
 
-import SeoHead, { breadcrumbSchema, localBusinessSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import { Button } from '@/components/ui/button'
 
@@ -66,7 +66,7 @@ export default function PressPage() {
         description="Press coverage, media kit, and PR contact for myCHEF.id — Bali's premier private chef and catering service. Request press kit via WhatsApp."
         canonical={`${SITE}/press`}
         ogImage={`${SITE}/partners-hero.webp`}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Press & Media', `${SITE}/press`)]}
+        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Media', `${SITE}/press`)]}
       />
 
       <div className="pt-24 md:pt-28 px-6 md:px-12">

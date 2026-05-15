@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { Check, MessageCircle, ShieldCheck } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, localBusinessSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 
 const SITE = 'https://mychef.id'
@@ -25,7 +25,7 @@ export default function CertifiedPartnerPage() {
         description={`${niceName} is an officially certified myCHEF villa dining partner. Verified for Michelin-level private dining execution in Bali.`}
         canonical={canonical}
         ogImage={`${SITE}/generated/best-partner-2026.webp`}
-        jsonLd={[localBusinessSchema, breadcrumbSchema(niceName, canonical)]}
+        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(niceName, canonical)]}
       />
 
       <section className="px-6 md:px-12 py-32 max-w-[900px] mx-auto text-center">

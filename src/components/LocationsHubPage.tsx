@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MapPin, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { LOCATIONS } from '../data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
@@ -69,7 +69,11 @@ export default function LocationsHubPage() {
         description="Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Villa dining, catering and events in every region."
         ogImage="/og-image.webp"
         canonical={canonical}
-        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Locations', canonical)]}
+        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Locations', canonical), faqPageSchema([
+          { question: 'Which areas in Bali does myCHEF.id cover?', answer: 'myCHEF.id covers all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and Bingin — serving 560+ villas across the island.' },
+          { question: 'Does myCHEF.id travel to my villa location?', answer: 'Yes — our team travels to your villa anywhere in Bali. We handle all logistics including ingredients, equipment, and setup, so you never need to leave your villa.' },
+          { question: 'How far in advance do I need to book?', answer: 'We recommend booking 24–48 hours in advance. For large events or catering, earlier is better. Contact us via WhatsApp for last-minute availability.' },
+        ])]}
       />
 
       {/* Hero */}

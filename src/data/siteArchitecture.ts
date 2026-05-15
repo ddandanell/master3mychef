@@ -348,6 +348,15 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
           'Plan a private villa party in Bali — cocktail, dinner, after-party. Staff, bar, sound, hospitality flow.',
         keywords: ['villa party bali', 'cocktail party villa bali'],
       },
+      {
+        slug: 'baby-showers',
+        label: 'Baby Showers',
+        h1: 'Baby Shower Catering in Bali — Villa Brunch & Grazing',
+        title: 'Baby Shower Catering Bali | Grazing & Brunch — myCHEF',
+        description:
+          'Beautiful Bali villa baby showers with brunch catering, grazing tables, pregnancy-safe menus, mocktail bars, styling, and cleanup handled by one team.',
+        keywords: ['baby shower bali', 'baby shower catering bali', 'baby shower villa bali'],
+      },
     ],
   },
 

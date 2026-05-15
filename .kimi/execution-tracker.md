@@ -267,8 +267,40 @@ Tree-shaking was already excluding all 9 deps from the bundle, so output size ba
 
 ---
 
-**Project Closed:** 2026-05-16 05:15 UTC+8
-**Final Git Head:** 859451d (main)
+## FINE DINING SUB-PAGES + MENU PAGE REDESIGN (2026-05-16) — Copilot Agent
+
+> Continued autonomous build. User requested: all 6 fine-dining sub-pages designed and built. Hero overlay readability fixes across all pages.
+
+### New Pages Built
+| Page | Route | File | Status |
+|------|-------|------|--------|
+| Private Chef in Bali | `/fine-dining/private-chef-bali` | `src/pages/PrivateChefBaliPage.tsx` | ✅ DONE |
+| Tasting Menu | `/fine-dining/tasting-menu` | `src/pages/TastingMenuPage.tsx` | ✅ DONE |
+| Romantic Dinner | `/fine-dining/romantic-dinner` | `src/pages/RomanticDinnerPage.tsx` | ✅ DONE |
+| Chef's Table | `/fine-dining/chefs-table` | `src/pages/ChefsTablePage.tsx` | ✅ DONE |
+
+### Pages Modified
+| Fix | Status | File | Notes |
+|-----|--------|------|-------|
+| MenuPage hero redesign | ✅ DONE | `src/components/MenuPage.tsx` | Full-bleed hero (luna-plating.webp), TrustStrip, fine dining spotlight with 4-image grid, internal links to tasting menu |
+| CateringCorporate overlay | ✅ DONE | `src/pages/CateringCorporatePage.tsx` | Hero overlay darkened bg-black/55 → bg-black/68 for readability |
+| All 4 fine-dining routes wired | ✅ DONE | `src/App.tsx` | Lazy-loaded routes under `/fine-dining/*` |
+| Mobile bottom bar overlap | ✅ VERIFIED | `src/components/Layout.tsx` | `pb-[calc(env(safe-area-inset-bottom)+5.5rem)]` correctly compiles and creates 88px+ clearance above sticky bar |
+
+### Build
+| Check | Status | Notes |
+|-------|--------|-------|
+| TypeScript | ✅ CLEAN | 0 errors |
+| Production build | ✅ CLEAN | 3.67s · 160 meta files injected |
+| Git push | ✅ DONE | Commit `5c35325` → `ddandanell/master3mychef` main |
+
+### Standing instruction added (2026-05-16)
+> **RULE**: At the start of every task, always read and update this file (`execution-tracker.md`) first.
+
+---
+
+**Last Updated:** 2026-05-16 07:35 UTC+8
+**Current Git Head:** 5c35325 (main)
 **Build Status:** ✅ PASSING
 **Type Status:** ✅ CLEAN
 **Security:** ✅ SECURE

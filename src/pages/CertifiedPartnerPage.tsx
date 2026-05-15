@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { Check, MessageCircle, ShieldCheck } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema, faqPageSchema } from '@/components/SeoHead'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 
 const SITE = 'https://mychef.id'
@@ -25,7 +25,11 @@ export default function CertifiedPartnerPage() {
         description={`${niceName} is an officially certified myCHEF villa dining partner. Verified for Michelin-level private dining execution in Bali.`}
         canonical={canonical}
         ogImage={`${SITE}/generated/best-partner-2026.webp`}
-        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(niceName, canonical)]}
+        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(niceName, canonical), faqPageSchema([
+          { question: 'What does myCHEF Certified Partner mean?', answer: 'A myCHEF Certified Partner villa has completed at least 10 verified myCHEF private dining events, maintains a 4.8+ guest rating, and is officially recognised for excellence in Michelin-level private dining execution in Bali.' },
+          { question: 'How does a villa become a myCHEF Certified Partner?', answer: 'Villas earn certified partner status by consistently hosting successful myCHEF private dining events, maintaining high guest satisfaction scores, and meeting our service and quality standards over 12+ months.' },
+          { question: 'Can guests book myCHEF dining at any Certified Partner villa?', answer: 'Yes — if you are staying at a myCHEF Certified Partner villa, our team is pre-approved to cook and serve on the property. Book via WhatsApp at +62 822-3756-5997.' },
+        ])]}
       />
 
       <section className="px-6 md:px-12 py-32 max-w-[900px] mx-auto text-center">

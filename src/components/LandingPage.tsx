@@ -1,15 +1,18 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
-import { MessageCircle, Check } from 'lucide-react'
+import { MessageCircle, Check, ArrowLeft, Calendar } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { LANDING_PAGES, GUIDES, BLOG_POSTS } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'
 
+function formatDate(iso?: string) {
+  if (!iso) return null
+  const d = new Date(iso + 'T00:00:00')
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+}
+
 // Catch-all template for SEO keyword landing pages, guides, and blog posts.
-// Looks up the current pathname in the matching data array. Real article content
-// is intentionally kept short here — Kimi can replace this stub with full copy
-// per page. The route still preserves the URL and ships valid SEO meta.
 export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | 'guide' | 'blog' }) {
   const { pathname } = useLocation()
   const slug = pathname.replace(/^\//, '').replace(/\/$/, '')
@@ -20,6 +23,14 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
 
   const canonical = `${SITE}/${entry.slug}`
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'm interested in ${entry.title}.`)}`
+
+  // Related posts: pick up to 3 from the same kind, excluding current
+  const relatedSource = kind === 'guide'
+    ? [...GUIDES.filter((g) => g.slug !== 'guide/private-chef-bali'), ...BLOG_POSTS]
+    : kind === 'blog'
+      ? [...BLOG_POSTS, ...GUIDES.filter((g) => g.slug !== 'guide/private-chef-bali')]
+      : []
+  const related = relatedSource.filter((p) => p.slug !== entry.slug).slice(0, 3)
 
   const articleSchema =
     kind === 'guide' || kind === 'blog'
@@ -52,9 +63,21 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       <SeoHead title={`${entry.title} | myCHEF`} description={entry.description} canonical={canonical} ogImage="/og-image.webp" ogType={kind === 'guide' || kind === 'blog' ? 'article' : 'website'} jsonLd={jsonLdArr} />
 
       <section className="px-8 pt-32 pb-16 max-w-[800px] mx-auto">
-        <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">
-          {kind === 'guide' ? 'Guide' : kind === 'blog' ? 'Blog' : 'myCHEF'}
-        </p>
+        {(kind === 'guide' || kind === 'blog') && (
+          <Link to="/blog" className="inline-flex items-center gap-1.5 text-sm text-[#4A4745] hover:text-[#C5A028] transition-colors mb-8">
+            <ArrowLeft className="w-3.5 h-3.5" /> Blog &amp; Guides
+          </Link>
+        )}
+        <div className="flex items-center gap-3 mb-4">
+          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px]">
+            {kind === 'guide' ? 'Guide' : kind === 'blog' ? 'Article' : 'myCHEF'}
+          </p>
+          {entry.date && (
+            <span className="inline-flex items-center gap-1 text-xs text-[#4A4745]/60">
+              <Calendar className="w-3 h-3" /> {formatDate(entry.date)}
+            </span>
+          )}
+        </div>
         <h1 className="font-playfair text-4xl md:text-5xl leading-tight mb-6">{entry.title}</h1>
         <p className="text-lg text-[#4A4745] mb-8">{entry.description}</p>
 
@@ -87,6 +110,29 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
             See Menus
           </Link>
         </div>
+
+        {related.length > 0 && (
+          <div className="mt-16 pt-10 border-t border-[#1A1A1A]/10">
+            <h2 className="font-playfair text-2xl mb-6">More from myCHEF</h2>
+            <div className="space-y-4">
+              {related.map((p) => (
+                <Link
+                  key={p.slug}
+                  to={`/${p.slug}`}
+                  className="block bg-white border border-[#1A1A1A]/10 rounded-xl p-5 hover:border-[#C5A028] transition-all"
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className={`text-xs font-medium uppercase tracking-wider px-2 py-0.5 rounded-full ${p.slug.startsWith('guide/') ? 'text-[#6B8E5A] bg-[#6B8E5A]/10' : 'text-[#2C5F7C] bg-[#2C5F7C]/10'}`}>
+                      {p.slug.startsWith('guide/') ? 'Guide' : 'Article'}
+                    </span>
+                  </div>
+                  <h3 className="font-playfair text-lg">{p.title}</h3>
+                  <p className="text-sm text-[#4A4745] mt-1">{p.description}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
     </main>
   )

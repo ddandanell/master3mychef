@@ -399,6 +399,37 @@ export default function LunaPage() {
         </div>
       </section>
 
+      {/* ── Six Experiences Navigation ──────────────────────────────────── */}
+      <section className="py-16 md:py-20 px-6" style={{ background: '#111111' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Fine Dining Experiences</p>
+            <h2 className="text-2xl md:text-3xl text-white" style={{ fontFamily: "'Playfair Display', serif" }}>Choose Your Evening</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+            {[
+              { href: '/fine-dining/private-chef-bali', label: 'Private Chef in Bali', sub: 'From IDR 2,200,000++', icon: '🍽' },
+              { href: '/fine-dining/tasting-menu', label: 'Tasting Menu', sub: '5 or 7 courses', icon: '🌿' },
+              { href: '/fine-dining/romantic-dinner', label: 'Romantic Dinner', sub: 'Couples & anniversaries', icon: '🕯' },
+              { href: '/fine-dining/chefs-table', label: "Chef's Table", sub: 'IDR 3,500,000++ · 6 seats', icon: '👨‍🍳' },
+              { href: '/fine-dining/menus', label: 'Our Menus', sub: 'Riviera · Odyssée · Custom', icon: '📋' },
+              { href: '/fine-dining/our-chefs', label: 'Our Chefs', sub: 'Adriano & the team', icon: '⭐' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="group flex flex-col gap-2 rounded-xl border border-white/10 px-5 py-4 hover:border-[#C5A028]/60 hover:bg-white/5 transition-all duration-200"
+              >
+                <span className="text-xl">{item.icon}</span>
+                <span className="text-white font-medium text-sm leading-snug" style={{ fontFamily: "'Playfair Display', serif" }}>{item.label}</span>
+                <span className="text-white/40 text-xs">{item.sub}</span>
+                <span className="text-[#C5A028] text-xs mt-auto opacity-0 group-hover:opacity-100 transition-opacity">Explore →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Private Chef in Bali — SEO Section */}
       <section id="private-chef-bali" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[1280px] mx-auto">

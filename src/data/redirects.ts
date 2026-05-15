@@ -178,6 +178,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/blog/yoga-retreat-chef-bali-meal-planning', to: '/events/retreats', reason: 'Retreat intent.' },
   { from: '/blog/private-chef-vs-restaurant-bali', to: '/catering', reason: 'Decision article → catering offer.' },
   { from: '/blog', to: '/journal', reason: 'Blog migrated to Journal.' },
+  { from: '/catering/buffet-catering', to: '/catering/buffet', reason: 'Old slug renamed: buffet-catering → buffet to match route.' },
 ]
 
 /** Lookup map for the React Router fallback. */

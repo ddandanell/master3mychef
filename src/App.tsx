@@ -13,6 +13,8 @@ const RomanticDinnerPage = lazy(() => import('./pages/RomanticDinnerPage'))
 const TastingMenuPage = lazy(() => import('./pages/TastingMenuPage'))
 const PrivateChefBaliPage = lazy(() => import('./pages/PrivateChefBaliPage'))
 const ChefsTablePage = lazy(() => import('./pages/ChefsTablePage'))
+const FineDiningMenusPage = lazy(() => import('./pages/FineDiningMenusPage'))
+const FineDiningChefsPage = lazy(() => import('./pages/FineDiningChefsPage'))
 const SolPage = lazy(() => import('./pages/SolPage'))
 // const AuraPage = lazy(() => import('./pages/AuraPage'))
 const PartnersPage = lazy(() => import('./pages/PartnersPage'))
@@ -119,6 +121,8 @@ export default function App() {
           <Route path="/fine-dining/tasting-menu" element={<TastingMenuPage />} />
           <Route path="/fine-dining/private-chef-bali" element={<PrivateChefBaliPage />} />
           <Route path="/fine-dining/chefs-table" element={<ChefsTablePage />} />
+          <Route path="/fine-dining/menus" element={<FineDiningMenusPage />} />
+          <Route path="/fine-dining/our-chefs" element={<FineDiningChefsPage />} />
           <Route path="/events" element={<EventsMainPage />} />
           <Route path="/contact" element={<ContactPage />} />
 

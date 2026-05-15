@@ -162,6 +162,7 @@ export default function ContactPage() {
                   href={waLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-source="contact-chef-card"
                   className="group block bg-white border border-[#E5E3E0] rounded-2xl overflow-hidden hover:border-[#C5A028] transition-colors"
                 >
                   <div className="relative aspect-[4/5] overflow-hidden">
@@ -202,7 +203,7 @@ export default function ContactPage() {
       {/* ── DIRECT CONTACT STRIP ──────────────────────────────────────── */}
       <section className="bg-white px-6 md:px-12 py-16 md:py-20 border-y border-[#E5E3E0]">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-          <ContactItem icon={MessageCircle} label="WhatsApp" value="+62 822-3756-5997" href={`https://wa.me/${WA}`} hint="Fastest — typically within minutes" />
+          <ContactItem icon={MessageCircle} label="WhatsApp" value="+62 822-3756-5997" href={`https://wa.me/${WA}`} hint="Fastest — typically within minutes" dataSource="contact-info-whatsapp" />
           <ContactItem icon={Mail} label="Email" value="indonesia@mychef.id" href="mailto:indonesia@mychef.id" hint="For detailed proposals" />
           <ContactItem icon={Phone} label="Phone" value="+62 822-3756-5997" href="tel:+6282237565997" hint="08:00 – 22:00 WITA, daily" />
           <ContactItem icon={MapPin} label="Office" value="Jl. Tukad Barito Timur III No.16, Denpasar Selatan, Bali" hint="Serving all of Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur" />
@@ -242,6 +243,7 @@ export default function ContactPage() {
                 href={`https://wa.me/${WA}?text=${encodeURIComponent("Hi myCHEF, I'd like help with a booking in Bali.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-source="contact-quick-message"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-black transition-colors hover:bg-[#D4B43A]"
               >
                 <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF — Reply in 1 Hour
@@ -302,7 +304,7 @@ export default function ContactPage() {
   )
 }
 
-function ContactItem({ icon: Icon, label, value, href, hint }: { icon: React.ComponentType<{ className?: string }>; label: string; value: string; href?: string; hint?: string }) {
+function ContactItem({ icon: Icon, label, value, href, hint, dataSource }: { icon: React.ComponentType<{ className?: string }>; label: string; value: string; href?: string; hint?: string; dataSource?: string }) {
   const content = (
     <div className="flex flex-col items-start gap-2">
       <div className="flex items-center gap-2 text-[#C5A028]">
@@ -315,7 +317,7 @@ function ContactItem({ icon: Icon, label, value, href, hint }: { icon: React.Com
   )
 
   return href ? (
-    <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="hover:[&_p:nth-child(2)]:text-[#C5A028] transition-colors">
+    <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" data-source={dataSource} className="hover:[&_p:nth-child(2)]:text-[#C5A028] transition-colors">
       {content}
     </a>
   ) : (

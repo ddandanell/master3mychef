@@ -443,6 +443,7 @@ export default function CateringMainPage() {
             <a
               href={WA_LINK}
               target="_blank"
+              data-source="catering-hero"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
             >
@@ -598,6 +599,7 @@ export default function CateringMainPage() {
                 <a
                   href={WA_LINK}
                   target="_blank"
+              data-source="catering-package"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-10 py-5 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
                 >
@@ -858,6 +860,7 @@ export default function CateringMainPage() {
             <a
               href={WA_LINK}
               target="_blank"
+              data-source="catering-mid-cta"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
             >
@@ -1073,7 +1076,7 @@ export default function CateringMainPage() {
                     <td className="py-4 text-[#4A4745]">{row.min}</td>
                     <td className="py-4 text-[#4A4745]">{row.bestFor}</td>
                     <td className="py-4">
-                      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-[#6B8E5A] hover:underline">Check date</a>
+                      <a href={WA_LINK} target="_blank" data-source="catering-table-check" rel="noopener noreferrer" className="text-sm font-semibold text-[#6B8E5A] hover:underline">Check date</a>
                     </td>
                   </tr>
                 ))}
@@ -1089,7 +1092,7 @@ export default function CateringMainPage() {
                   <span className="text-[#6B8E5A] font-semibold text-sm">{row.price}</span>
                 </div>
                 <p className="text-xs text-[#4A4745] mb-3">Min. {row.min} · {row.bestFor}</p>
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A]">
+                <a href={WA_LINK} target="_blank" data-source="catering-card-check" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A]">
                   Check date <ArrowRight className="w-3 h-3" />
                 </a>
               </div>
@@ -1125,6 +1128,7 @@ export default function CateringMainPage() {
             <a
               href={WA_LINK}
               target="_blank"
+              data-source="catering-chat-cta"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] hover:underline"
             >
@@ -1261,6 +1265,7 @@ export default function CateringMainPage() {
             <a
               href={WA_LINK}
               target="_blank"
+              data-source="catering-final-cta"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
             >

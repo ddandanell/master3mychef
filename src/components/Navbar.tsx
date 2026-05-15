@@ -16,6 +16,7 @@ interface NavItem {
   href: string
   accent: string
   subPages?: SubPageItem[]
+  dropdownAlign?: 'left' | 'center' | 'right'
 }
 
 /* ── Catering dropdown items (real, unique pages) ── */
@@ -46,45 +47,53 @@ const NAV_ITEMS: NavItem[] = [
     href: '/fine-dining',
     accent: '#C5A028',
     subPages: PILLARS['fine-dining'].subPages,
+    dropdownAlign: 'left',
   },
   {
     label: 'Catering',
     href: '/catering',
     accent: '#6B8E5A',
     subPages: CATERING_SUBPAGES,
+    dropdownAlign: 'left',
   },
   {
     label: 'Events',
     href: '/events',
     accent: '#2C5F7C',
     subPages: EVENTS_SUBPAGES,
+    dropdownAlign: 'center',
   },
   {
-    label: 'In-Villa Service',
+    label: 'In-Villa',
     href: '/in-villa-service',
     accent: '#8B5A2B',
     subPages: PILLARS['in-villa-service'].subPages,
+    dropdownAlign: 'center',
   },
   {
     label: 'Staffing',
     href: '/staffing',
     accent: '#C5A028',
     subPages: PILLARS['staffing'].subPages,
+    dropdownAlign: 'right',
   },
   {
     label: 'Locations',
     href: '/locations',
     accent: '#C5A028',
+    dropdownAlign: 'right',
   },
   {
     label: 'About',
     href: '/about',
     accent: '#C5A028',
+    dropdownAlign: 'right',
   },
   {
     label: 'Contact',
     href: '/contact',
     accent: '#C5A028',
+    dropdownAlign: 'right',
   },
 ]
 
@@ -115,6 +124,14 @@ function DesktopDropdown({
     timeoutRef.current = setTimeout(() => setOpen(false), 150)
   }
 
+  // Dropdown alignment: left/center/right prevents clipping off screen edges
+  const alignClass =
+    item.dropdownAlign === 'left'
+      ? 'left-0'
+      : item.dropdownAlign === 'right'
+        ? 'right-0'
+        : 'left-1/2 -translate-x-1/2'
+
   return (
     <div
       className="relative"
@@ -123,7 +140,7 @@ function DesktopDropdown({
     >
       <Link
         to={item.href}
-        className={`relative block py-2 text-[15px] tracking-[0.08em] uppercase transition-colors duration-200 ${
+        className={`relative block py-2 text-[14px] tracking-[0.06em] uppercase transition-colors duration-200 ${
           active ? 'text-[#C5A028]' : 'text-white/80 hover:text-[#C5A028]'
         }`}
         style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
@@ -139,12 +156,12 @@ function DesktopDropdown({
       {/* Dropdown panel */}
       {hasSubPages && (
         <div
-          className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 transition-all duration-200 ${
+          className={`absolute top-full ${alignClass} pt-3 transition-all duration-200 ${
             open ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2 pointer-events-none'
           }`}
         >
           <div
-            className="bg-[#0F0F0F] border border-white/10 rounded-xl py-3 px-1 min-w-[260px] shadow-2xl shadow-black/50"
+            className="bg-[#0F0F0F] border border-white/10 rounded-xl py-3 px-1 min-w-[240px] shadow-2xl shadow-black/50"
             style={{ backdropFilter: 'blur(16px)' }}
           >
             {item.subPages!.map((sub) => {
@@ -330,7 +347,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden xl:flex items-center gap-5">
             {NAV_ITEMS.map((item) => (
               <DesktopDropdown key={item.href} item={item} currentPath={location.pathname} />
             ))}
@@ -341,11 +358,11 @@ export default function Navbar() {
             {/* Pricing — desktop */}
             <Link
               to="/pricing"
-              className="hidden text-[13px] font-medium text-white/70 hover:text-[#C5A028] transition-colors lg:inline-flex"
+              className="hidden text-[13px] font-medium text-white/70 hover:text-[#C5A028] transition-colors xl:inline-flex"
             >
               Pricing
             </Link>
-            {/* Book CTA — desktop */}
+            {/* Book CTA — always visible on sm+ */}
             <Link
               to={PRIMARY_CTA.href}
               className="hidden min-h-[44px] items-center justify-center rounded-full bg-[#C5A028] px-5 py-2 text-[13px] font-semibold uppercase tracking-[0.1em] text-black transition-all hover:bg-[#D4B43A] sm:inline-flex"
@@ -354,14 +371,14 @@ export default function Navbar() {
               {PRIMARY_CTA.label}
             </Link>
 
-            {/* Hamburger — mobile */}
+            {/* Hamburger — mobile/tablet (hidden on xl+) */}
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="flex h-11 w-11 items-center justify-center text-white transition-colors hover:text-[#C5A028] lg:hidden"
+              className="flex h-11 w-11 items-center justify-center text-white transition-colors hover:text-[#C5A028] xl:hidden"
             >
               {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -376,7 +393,7 @@ export default function Navbar() {
         aria-modal="true"
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
-        className={`fixed bottom-0 left-0 right-0 top-[64px] z-[60] bg-[#050505] transition-all duration-300 md:top-[72px] lg:hidden ${
+        className={`fixed bottom-0 left-0 right-0 top-[64px] z-[60] bg-[#050505] transition-all duration-300 md:top-[72px] xl:hidden ${
           menuOpen ? 'visible opacity-100' : 'invisible pointer-events-none opacity-0'
         }`}
       >

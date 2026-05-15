@@ -151,6 +151,38 @@
 | `lucide` extracted | ✅ IMPROVED | `dist/assets/lucide-*.js` | 29 kB raw / 10 kB gzip — independently cacheable |
 
 ### Still open (owner / future agent)
-- Remove 9 confirmed-unused deps from `package.json` (`framer-motion`, `three`, `@react-three/fiber`, `@react-three/drei`, `@studio-freight/lenis`, `date-fns`, `@hookform/resolvers`, `zod`, `react-router`) — est. -160 kB gzip. Defer until owner can verify no runtime usage in dynamic imports / scripts dir.
-- Delete unused `components/ui/*.tsx` files (47 unused, only `button` + `collapsible` referenced). Tree-shaking already excludes them from the bundle; purely a maintenance cleanup.
+- Delete unused `components/ui/*.tsx` files (50 unused, only `button` + `collapsible` referenced). Tree-shaking already excludes them from the bundle; purely a maintenance cleanup. Verified counts via grep — see notes below.
 - HubPage hero contrast review (medium) — light cream background may not meet WCAG AA against headline text; needs design call, not a one-line fix.
+
+---
+## UNUSED DEPENDENCY CLEANUP (2026-05-16) — Claude (joined agent)
+> Re-verified every dep from `qa-bundle-audit.md` had **zero** import references across `src/` and `scripts/` (`grep -rln "from 'pkg'"`). Then `npm uninstall`ed in one shot.
+
+| Removed | Status | Notes |
+|---------|--------|-------|
+| `framer-motion` | ✅ REMOVED | 0 references |
+| `three` | ✅ REMOVED | 0 references |
+| `@react-three/fiber` | ✅ REMOVED | 0 references |
+| `@react-three/drei` | ✅ REMOVED | 0 references |
+| `@studio-freight/lenis` | ✅ REMOVED | 0 references |
+| `date-fns` | ✅ REMOVED | 0 references |
+| `@hookform/resolvers` | ✅ REMOVED | 0 references (and the only consumer `ui/form.tsx` is itself unused) |
+| `zod` | ✅ REMOVED | 0 references |
+| `react-router` | ✅ REMOVED | 0 references (`react-router-dom` is the actual consumer) |
+| Production build | ✅ CLEAN | 3.33s · 157 meta files injected · 0 errors |
+
+### Honest reality check on the audit's "-160 kB gzip" estimate
+Tree-shaking was already excluding all 9 deps from the bundle, so output size barely moved (index 124 → 125 kB; react-dom 192 → 184 kB; total flat ±2 kB). The **real** wins from the removal are:
+- Smaller `node_modules` + faster `npm install` (-9 packages, -3 transitive trees including all of `three`/r3f)
+- Lower attack surface and fewer Dependabot alerts
+- Clear signal in `package.json` about what the app actually uses
+
+### Follow-on: security patches
+| Fix | Status | Notes |
+|-----|--------|-------|
+| `npm audit fix` (no `--force`) | ✅ DONE | 16 packages updated with non-breaking patches |
+| Vulnerabilities | ✅ 0 remaining | Down from 10 (3 moderate, 7 high) → 0 |
+| Production build post-patch | ✅ CLEAN | 4.29s · 157 meta files · 0 errors |
+
+### Still open (owner / future agent)
+- Unused `components/ui/*.tsx` files (50) — still safe to delete but not blocking anything.

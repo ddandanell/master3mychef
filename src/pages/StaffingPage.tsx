@@ -341,7 +341,7 @@ export default function StaffingPage() {
                   className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all group-hover:gap-3"
                   style={{ color: '#C5A028' }}
                 >
-                  Learn More <ArrowRight className="w-4 h-4" />
+                  View {svc.title} <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
               <span

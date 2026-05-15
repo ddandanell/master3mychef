@@ -93,7 +93,7 @@ export default function Footer() {
           <Link to="/reviews" className="hover:text-[#C5A028] transition-colors">Reviews</Link>
           <Link to="/why-mychef" className="hover:text-[#C5A028] transition-colors">Why myCHEF</Link>
           <Link to="/press" className="hover:text-[#C5A028] transition-colors">Press</Link>
-          <Link to="/join-team" className="hover:text-[#C5A028] transition-colors">Join the Team</Link>
+          <Link to="/join-our-team" className="hover:text-[#C5A028] transition-colors">Join the Team</Link>
           <Link to="/partner-platform" className="hover:text-[#C5A028] transition-colors">Partner Platform</Link>
           <Link to={PRIMARY_CTA.href} className="text-[#C5A028] font-semibold hover:text-white transition-colors">
             {PRIMARY_CTA.label}

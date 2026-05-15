@@ -2,15 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 
-import {
-  AREAS,
-  MICRO_AREAS,
-  SERVICES,
-  MENUS,
-  LANDING_PAGES,
-  GUIDES,
-  BLOG_POSTS,
-} from './data/sitemap'
+import { LANDING_PAGE_SLUGS, GUIDE_SLUGS, BLOG_POST_SLUGS, SERVICE_SLUGS, MENU_SLUGS, AREA_SLUGS, MICRO_AREA_SLUGS } from './data/route-slugs'
 import { REDIRECTS } from './data/redirects'
 import { getAllSubPages, getAllLocationPaths } from './data/siteArchitecture'
 
@@ -196,10 +188,10 @@ export default function App() {
           <Route path="/villa-partners" element={<PartnersPage />} />
 
           {/* Legacy area pages (still served at root for SEO continuity) */}
-          {AREAS.map((a) => (
+          {AREA_SLUGS.map((a) => (
             <Route key={a.slug} path={`/${a.slug}`} element={<AreaPage kind="area" />} />
           ))}
-          {MICRO_AREAS.map((m) => (
+          {MICRO_AREA_SLUGS.map((m) => (
             <Route key={m.slug} path={`/${m.slug}`} element={<AreaPage kind="micro-area" />} />
           ))}
 
@@ -231,33 +223,33 @@ export default function App() {
           />
 
           {/* Service detail pages */}
-          {SERVICES.map((s) => (
-            <Route key={s.slug} path={`/services/${s.slug}`} element={<ServicePage />} />
+          {SERVICE_SLUGS.map((slug) => (
+            <Route key={slug} path={`/services/${slug}`} element={<ServicePage />} />
           ))}
 
           {/* Menu pages */}
           <Route path="/menus" element={<MenuPage />} />
-          {MENUS.map((m) => (
-            <Route key={m.slug} path={`/menus/${m.slug}`} element={<MenuPage />} />
+          {MENU_SLUGS.map((slug) => (
+            <Route key={slug} path={`/menus/${slug}`} element={<MenuPage />} />
           ))}
 
           {/* Landing pages */}
-          {LANDING_PAGES.map((l) => (
-            <Route key={l.slug} path={`/${l.slug}`} element={<LandingPage kind="landing" />} />
+          {LANDING_PAGE_SLUGS.map((slug) => (
+            <Route key={slug} path={`/${slug}`} element={<LandingPage kind="landing" />} />
           ))}
 
           {/* Bali hub */}
           <Route path="/guide/private-chef-bali" element={<BaliHubPage />} />
 
           {/* Guides */}
-          {GUIDES.filter((g) => g.slug !== 'guide/private-chef-bali').map((g) => (
-            <Route key={g.slug} path={`/${g.slug}`} element={<LandingPage kind="guide" />} />
+          {GUIDE_SLUGS.filter((s) => s !== 'guide/private-chef-bali').map((slug) => (
+            <Route key={slug} path={`/${slug}`} element={<LandingPage kind="guide" />} />
           ))}
 
           {/* Blog (legacy) */}
           <Route path="/blog" element={<BlogIndexPage />} />
-          {BLOG_POSTS.map((p) => (
-            <Route key={p.slug} path={`/${p.slug}`} element={<LandingPage kind="blog" />} />
+          {BLOG_POST_SLUGS.map((slug) => (
+            <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />
           ))}
 
           {/* Info / utility pages */}

@@ -229,6 +229,7 @@ export default function LocationsHubPage() {
             href={`https://wa.me/6282237565997?text=${encodeURIComponent('Hi myCHEF, I would like to book a private chef. My villa is in: ')}`}
             target="_blank"
             rel="noopener noreferrer"
+            data-source="locations-hub-cta"
             className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
           >
             <MapPin className="w-4 h-4" /> Book for Your Location

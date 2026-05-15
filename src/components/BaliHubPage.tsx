@@ -76,7 +76,7 @@ export default function BaliHubPage() {
             <span className="text-[#2C5F7C] font-medium">events</span>, and{' '}
             <span className="text-[#C5A028] font-medium">fine dining</span>.
           </p>
-          <a href={waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all">
+          <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="bali-hub-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all">
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
           </a>
         </div>

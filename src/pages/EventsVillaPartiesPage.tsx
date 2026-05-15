@@ -189,7 +189,7 @@ export default function EventsVillaPartiesPage() {
             Sunset BBQs, pool parties, cocktail receptions, and late-night celebrations with food, drinks, bartender service, staffing, music coordination, and cleanup all handled by one team.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-villa-parties-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <MessageCircle className="w-4 h-4" /> Plan Your Party
             </a>
             <a href="#formats" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">

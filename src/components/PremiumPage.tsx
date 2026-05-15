@@ -229,7 +229,7 @@ export default function PremiumPage({
             )}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">
-                <a href={waLink} target="_blank" rel="noopener noreferrer">
+                <a href={waLink} target="_blank" rel="noopener noreferrer" data-source={`premium-${slug}-section-cta`}>
                   <MessageCircle className="w-4 h-4" />
                   {ctaText}
                 </a>
@@ -583,7 +583,7 @@ export default function PremiumPage({
           <p className="text-white/60 mb-8">{ctaSubtext}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">
-              <a href={waLink} target="_blank" rel="noopener noreferrer">
+              <a href={waLink} target="_blank" rel="noopener noreferrer" data-source={`premium-${slug}-final-cta`}>
                 <MessageCircle className="w-4 h-4" />
                 {ctaText}
               </a>

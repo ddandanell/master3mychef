@@ -73,7 +73,7 @@ export default function CertifiedPartnerPage() {
           <a
             href={`https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'd like to verify and book dining at ${niceName}.`)}`}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer" data-source="certified-partner-cta"
             className="inline-flex items-center justify-center gap-2 border border-[#1A1A1A]/20 text-[#1A1A1A] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#1A1A1A]/5 transition-colors"
           >
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp

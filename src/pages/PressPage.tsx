@@ -100,7 +100,7 @@ export default function PressPage() {
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Button asChild variant="primary" size="brand" className="w-full sm:w-auto">
-                <a href={PRESS_KIT_LINK} target="_blank" rel="noopener noreferrer">
+                <a href={PRESS_KIT_LINK} target="_blank" rel="noopener noreferrer" data-source="press-kit-cta">
                   <MessageCircle className="h-4 w-4" />
                   Request Press Kit
                 </a>
@@ -195,7 +195,7 @@ export default function PressPage() {
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button asChild variant="primary" size="brand" className="w-full sm:w-auto">
-                <a href={PRESS_KIT_LINK} target="_blank" rel="noopener noreferrer">
+                <a href={PRESS_KIT_LINK} target="_blank" rel="noopener noreferrer" data-source="press-kit-cta">
                   <MessageCircle className="h-4 w-4" />
                   Request Full Press Kit on WhatsApp
                 </a>

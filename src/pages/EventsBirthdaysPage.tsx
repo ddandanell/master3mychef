@@ -162,7 +162,7 @@ export default function EventsBirthdaysPage() {
             <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <Calendar className="w-4 h-4" /> Book a Birthday
             </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-birthdays-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>

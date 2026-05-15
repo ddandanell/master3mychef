@@ -279,9 +279,7 @@ export default function CateringDropOffPage() {
               <Package className="w-4 h-4" /> Order Drop-Off Catering
             </a>
             <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-drop-off-cta"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
             >
               <MessageCircle className="w-4 h-4" /> WhatsApp availability
@@ -751,9 +749,7 @@ export default function CateringDropOffPage() {
               <Package className="w-4 h-4" /> Order Drop-Off Catering
             </a>
             <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-drop-off-cta"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
             >
               <Phone className="w-4 h-4" /> WhatsApp myCHEF

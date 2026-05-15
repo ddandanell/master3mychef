@@ -175,7 +175,7 @@ export default function EventsWeddingsPage() {
             <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all">
               <Calendar className="w-4 h-4" /> Request Wedding Consult
             </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-weddings-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
@@ -393,7 +393,7 @@ export default function EventsWeddingsPage() {
               <p className="text-white/70 leading-relaxed mb-6">
                 She has coordinated more than 100 villa weddings across Bali and knows the practical constraints that affect service: kitchen size, power load, rain backup, guest transport timing, and how long a speech block can realistically run before dinner quality starts to slip.
               </p>
-              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#b08d23] transition-all">
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-weddings-cta" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#b08d23] transition-all">
                 <MessageCircle className="w-4 h-4" /> Message Sofia
               </a>
             </div>

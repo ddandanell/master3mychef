@@ -127,7 +127,7 @@ export default function PrivacyPage() {
             <p className="text-[#C5A028] text-sm tracking-widest uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions?</p>
             <p className="text-white/60 text-sm mb-6">If you have any questions about this Privacy Policy, please reach out.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white text-sm rounded-full hover:bg-[#D4B43A] transition-all">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="privacy-cta" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white text-sm rounded-full hover:bg-[#D4B43A] transition-all">
                 <MessageCircle className="w-4 h-4" /> WhatsApp
               </a>
               <a href="mailto:indonesia@mychef.id" className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white text-sm rounded-full hover:bg-white/5 transition-all">

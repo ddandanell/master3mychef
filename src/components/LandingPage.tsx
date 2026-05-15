@@ -105,7 +105,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         )}
 
         <div className="flex flex-col sm:flex-row gap-4 mt-10">
-          <a href={waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
+          <a href={waLink} target="_blank" rel="noopener noreferrer" data-source={`landing-${entry.slug}-cta`} className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
           </a>
           <Link to="/quote" className="inline-flex items-center justify-center bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">

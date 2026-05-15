@@ -212,9 +212,7 @@ export default function CorporateEventsPage() {
           </p>
           <div className="hero-fade flex flex-wrap gap-3">
             <a
-              href={`${WA_BASE}${encodeURIComponent('Hi myCHEF — interested in your corporate events service in Bali. Could we get a proposal?')}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`${WA_BASE}${encodeURIComponent('Hi myCHEF — interested in your corporate events service in Bali. Could we get a proposal?')}`} target="_blank" rel="noopener noreferrer" data-source="corporate-events-cta"
               className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <Phone className="w-4 h-4" /> Plan My Event
@@ -346,9 +344,7 @@ export default function CorporateEventsPage() {
                   ))}
                 </ul>
                 <a
-                  href={`${WA_BASE}${encodeURIComponent('Hi myCHEF — interested in the ' + pkg.name + ' for a corporate event in Bali. Could you send a proposal?')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`${WA_BASE}${encodeURIComponent('Hi myCHEF — interested in the ' + pkg.name + ' for a corporate event in Bali. Could you send a proposal?')}`} target="_blank" rel="noopener noreferrer" data-source="corporate-events-cta"
                   className={`block text-center py-3 rounded-xl text-xs font-semibold tracking-[0.25em] uppercase transition-all hover:scale-[1.02] ${pkg.flagship ? 'bg-[#C5A028] text-[#0F0F0F]' : 'bg-[#0F0F0F] text-white'}`}
                 >
                   Get a Proposal
@@ -407,9 +403,7 @@ export default function CorporateEventsPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a
-              href={`${WA_BASE}${encodeURIComponent('Hi myCHEF — I want to plan a corporate event in Bali. Here is the brief:')}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`${WA_BASE}${encodeURIComponent('Hi myCHEF — I want to plan a corporate event in Bali. Here is the brief:')}`} target="_blank" rel="noopener noreferrer" data-source="corporate-events-cta"
               className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <Phone className="w-4 h-4" /> Plan My Event
@@ -421,9 +415,7 @@ export default function CorporateEventsPage() {
               <Building2 className="w-4 h-4" /> Get Proposal
             </a>
             <a
-              href={WA_BASE + encodeURIComponent('Hi myCHEF')}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={WA_BASE + encodeURIComponent('Hi myCHEF')} target="_blank" rel="noopener noreferrer" data-source="corporate-events-cta"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all"
             >
               <MessageCircle className="w-4 h-4" /> WhatsApp Us

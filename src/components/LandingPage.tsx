@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { LANDING_PAGES, GUIDES, BLOG_POSTS } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -40,7 +40,10 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         }
       : null
 
-  const jsonLdArr = [localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(entry.title, canonical), ...(articleSchema ? [articleSchema] : [])]
+  const jsonLdArr = [localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(entry.title, canonical), faqPageSchema([
+    { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 822-3756-5997 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
+    { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond — covering 560+ villas across the island.' },
+  ]), ...(articleSchema ? [articleSchema] : [])]
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">

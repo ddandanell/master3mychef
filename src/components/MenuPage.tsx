@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { ArrowRight, MessageCircle } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, localBusinessSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema } from './SeoHead'
 import { MENUS } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -59,7 +59,7 @@ export default function MenuPage() {
           description="Explore myCHEF menu ideas for Bali villas — Mediterranean set menus, Indonesian feasts, BBQ nights, tasting menus, and customizable cuisine pages."
           ogImage="/hero-fine-dining.webp"
           canonical={`${SITE}/menus`}
-          jsonLd={[localBusinessSchema, breadcrumbSchema('Menus', `${SITE}/menus`)]}
+          jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Menus', `${SITE}/menus`)]}
         />
 
         <section className="px-8 pt-32 pb-16 max-w-[1120px] mx-auto">
@@ -170,7 +170,7 @@ export default function MenuPage() {
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${title} | myCHEF`} description={menu.description} canonical={canonical} ogImage="/hero-fine-dining.webp" jsonLd={[localBusinessSchema, breadcrumbSchema(menu.name, canonical)]} />
+      <SeoHead title={`${title} | myCHEF`} description={menu.description} canonical={canonical} ogImage="/hero-fine-dining.webp" jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(menu.name, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[960px] mx-auto">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Menu</p>

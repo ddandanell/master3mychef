@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Mail, MapPin, CreditCard, Calendar, AlertCircle, CheckCircle } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
 
@@ -70,6 +70,7 @@ export default function TermsPage() {
         canonical="https://mychef.id/terms-of-service"
         jsonLd={[
           breadcrumbSchema('Terms & Payment', 'https://mychef.id/terms-of-service'),
+          aggregateRatingSchema(4.9, 560),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />

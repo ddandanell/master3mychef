@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
 import { LANDING_PAGES, GUIDES, BLOG_POSTS } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -40,7 +40,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         }
       : null
 
-  const jsonLdArr = [localBusinessSchema, breadcrumbSchema(entry.title, canonical), ...(articleSchema ? [articleSchema] : [])]
+  const jsonLdArr = [localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(entry.title, canonical), ...(articleSchema ? [articleSchema] : [])]
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">

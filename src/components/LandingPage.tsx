@@ -21,9 +21,30 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   const canonical = `${SITE}/${entry.slug}`
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'm interested in ${entry.title}.`)}`
 
+  const articleSchema =
+    kind === 'guide' || kind === 'blog'
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: entry.title,
+          description: entry.description,
+          url: canonical,
+          author: { '@type': 'Organization', name: 'myCHEF', url: SITE },
+          publisher: {
+            '@type': 'Organization',
+            name: 'myCHEF',
+            url: SITE,
+            logo: { '@type': 'ImageObject', url: `${SITE}/mychef-logo.svg` },
+          },
+          mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+        }
+      : null
+
+  const jsonLdArr = [localBusinessSchema, breadcrumbSchema(entry.title, canonical), ...(articleSchema ? [articleSchema] : [])]
+
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${entry.title} | myCHEF`} description={entry.description} canonical={canonical} jsonLd={[localBusinessSchema, breadcrumbSchema(entry.title, canonical)]} />
+      <SeoHead title={`${entry.title} | myCHEF`} description={entry.description} canonical={canonical} jsonLd={jsonLdArr} />
 
       <section className="px-8 pt-32 pb-16 max-w-[800px] mx-auto">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">

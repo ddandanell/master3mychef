@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat, Phone } from 'lucide-react'
+import { Menu, X, ChefHat, Phone, Tag } from 'lucide-react'
 import { PILLARS, PRIMARY_CTA } from '../data/siteArchitecture'
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF'
@@ -396,6 +396,13 @@ export default function Navbar() {
 
           {/* Bottom actions */}
           <div className="mt-8 space-y-3">
+            <Link
+              to="/pricing"
+              onClick={() => setMenuOpen(false)}
+              className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border border-white/20 py-3.5 text-[14px] font-semibold uppercase tracking-[0.1em] text-white/80 transition-colors hover:border-[#C5A028] hover:text-[#C5A028]"
+            >
+              <Tag className="w-4 h-4" /> View Pricing
+            </Link>
             <a
               href={WA_LINK}
               target="_blank"

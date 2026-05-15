@@ -9,6 +9,10 @@ import { getAllSubPages, getAllLocationPaths } from './data/siteArchitecture'
 // ── Page components (code-split into per-route chunks) ───────────────────────
 const HubPage = lazy(() => import('./pages/HubPage'))
 const LunaPage = lazy(() => import('./pages/LunaPage'))
+const RomanticDinnerPage = lazy(() => import('./pages/RomanticDinnerPage'))
+const TastingMenuPage = lazy(() => import('./pages/TastingMenuPage'))
+const PrivateChefBaliPage = lazy(() => import('./pages/PrivateChefBaliPage'))
+const ChefsTablePage = lazy(() => import('./pages/ChefsTablePage'))
 const SolPage = lazy(() => import('./pages/SolPage'))
 // const AuraPage = lazy(() => import('./pages/AuraPage'))
 const PartnersPage = lazy(() => import('./pages/PartnersPage'))
@@ -111,6 +115,10 @@ export default function App() {
           {/* Brand pages */}
           <Route path="/" element={<HubPage />} />
           <Route path="/fine-dining" element={<LunaPage />} />
+          <Route path="/fine-dining/romantic-dinner" element={<RomanticDinnerPage />} />
+          <Route path="/fine-dining/tasting-menu" element={<TastingMenuPage />} />
+          <Route path="/fine-dining/private-chef-bali" element={<PrivateChefBaliPage />} />
+          <Route path="/fine-dining/chefs-table" element={<ChefsTablePage />} />
           <Route path="/events" element={<EventsMainPage />} />
           <Route path="/contact" element={<ContactPage />} />
 

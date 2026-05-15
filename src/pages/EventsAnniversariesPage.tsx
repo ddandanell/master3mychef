@@ -115,7 +115,7 @@ export default function EventsAnniversariesPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Anniversary Dinners in Bali — Private Chef & Villa Catering | myCHEF"
+        title="Anniversary Dinners Bali | Private Chef & Catering — myCHEF"
         description="Bespoke anniversary dinners and celebrations in Bali. Private chef, plated menus, villa decoration, and wine pairings. IDR 650K–2.5M/pp."
         canonical={`${SITE}/events/anniversaries`}
         ogImage={`${SITE}/generated/events/anniversary-romantic.webp`}

@@ -124,7 +124,7 @@ export default function EventsBabyShowersPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Baby Shower Catering Bali — Grazing, Brunch & Villa Events | myCHEF"
+        title="Baby Shower Catering Bali | Grazing & Brunch — myCHEF"
         description="Beautiful Bali villa baby showers with brunch catering, grazing tables, pregnancy-safe menus, mocktail bars, styling, and cleanup handled by one team."
         canonical={`${SITE}/events/baby-showers`}
         ogImage={`${SITE}/generated/events/baby-shower-hero.webp`}

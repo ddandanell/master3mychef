@@ -131,7 +131,7 @@ export default function EventsRetreatsPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Wellness Retreat Catering Bali — Healthy Meals & Multi-Day F&B | myCHEF"
+        title="Wellness Retreat Catering Bali | Healthy Meals — myCHEF"
         description="Healthy retreat catering in Bali with multi-day meal planning, dietary-coded menus, on-site chef support, and full villa food operations."
         canonical={`${SITE}/events/retreats`}
         ogImage={`${SITE}/generated/events/retreat-breakfast.webp`}

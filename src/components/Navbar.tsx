@@ -21,7 +21,7 @@ interface NavItem {
 /* ── Catering dropdown items (real, unique pages) ── */
 const CATERING_SUBPAGES: SubPageItem[] = [
   { slug: 'bbq-catering', label: 'BBQ Catering' },
-  { slug: 'buffet-catering', label: 'Buffet Catering' },
+  { slug: 'buffet', label: 'Buffet Catering' },
   { slug: 'plated-catering', label: 'Plated Set Menu' },
   { slug: 'drop-off-catering', label: 'Drop-Off Catering' },
   { slug: 'babi-guling', label: 'Babi Guling' },

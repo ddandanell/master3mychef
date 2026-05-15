@@ -214,7 +214,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
         keywords: ['bbq catering bali', 'villa bbq bali', 'pool bbq catering'],
       },
       {
-        slug: 'buffet-catering',
+        slug: 'buffet',
         label: 'Buffet Catering',
         h1: 'Buffet Catering in Bali — Group Buffets for Villas',
         title: 'Buffet Catering Bali | Villa & Group Buffets — myCHEF',

@@ -21,6 +21,7 @@ export default function BaliHubPage() {
         title={`${title} | myCHEF`}
         description={description}
         canonical={canonical}
+        ogType="article"
         ogImage={`${SITE}/generated/bali-hub-hero.webp`}
         jsonLd={[
           localBusinessSchema,

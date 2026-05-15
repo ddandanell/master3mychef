@@ -5,6 +5,7 @@ interface SeoHeadProps {
   description: string
   canonical?: string
   ogImage?: string
+  ogType?: 'website' | 'article'
   noindex?: boolean
   jsonLd?: Record<string, unknown> | Record<string, unknown>[]
 }
@@ -225,7 +226,7 @@ export function menuSchema(
 // Sets per-route document.title, meta description, canonical, OG tags, and an
 // optional robots noindex directive. Works for a Vite SPA — Google executes JS.
 // For first-contentful-html SEO add vite-plugin-ssg later (see SEO-PAGES-PLAN.md).
-export default function SeoHead({ title, description, canonical, ogImage, noindex, jsonLd }: SeoHeadProps) {
+export default function SeoHead({ title, description, canonical, ogImage, ogType = 'website', noindex, jsonLd }: SeoHeadProps) {
   useEffect(() => {
     document.title = title
 
@@ -242,6 +243,7 @@ export default function SeoHead({ title, description, canonical, ogImage, noinde
     setMeta(`meta[name="description"]`, 'name', 'description', description)
     setMeta(`meta[property="og:title"]`, 'property', 'og:title', title)
     setMeta(`meta[property="og:description"]`, 'property', 'og:description', description)
+    setMeta(`meta[property="og:type"]`, 'property', 'og:type', ogType)
     setMeta(`meta[name="twitter:title"]`, 'name', 'twitter:title', title)
     setMeta(`meta[name="twitter:description"]`, 'name', 'twitter:description', description)
 

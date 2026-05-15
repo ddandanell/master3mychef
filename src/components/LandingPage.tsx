@@ -44,7 +44,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${entry.title} | myCHEF`} description={entry.description} canonical={canonical} jsonLd={jsonLdArr} />
+      <SeoHead title={`${entry.title} | myCHEF`} description={entry.description} canonical={canonical} ogType={kind === 'guide' || kind === 'blog' ? 'article' : 'website'} jsonLd={jsonLdArr} />
 
       <section className="px-8 pt-32 pb-16 max-w-[800px] mx-auto">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">

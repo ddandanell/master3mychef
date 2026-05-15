@@ -108,6 +108,7 @@ export function JournalPostPage() {
         title={post.title}
         description={post.excerpt}
         canonical={canonical}
+        ogType="article"
         jsonLd={[
           localBusinessSchema,
           breadcrumbSchema(post.title, canonical),

@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CalendarDays, MessageCircle, Star } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, localBusinessSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema, faqPageSchema } from '@/components/SeoHead'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 type ReviewCategory = 'All' | 'Weddings' | 'Private Dinners' | 'Catering' | 'Retreats'
@@ -116,6 +116,11 @@ const REVIEWS: Review[] = [
 const REVIEWS_SCHEMAS = [
   localBusinessSchema,
   breadcrumbSchema('Reviews', `${SITE}/reviews`),
+  faqPageSchema([
+    { question: 'How do guests rate myCHEF private chef services?', answer: 'myCHEF holds a 4.9-star average rating across 560+ verified reviews from villa guests, wedding parties, corporate retreats, and catering events throughout Bali.' },
+    { question: 'Where can I read myCHEF reviews?', answer: 'Guest reviews are collected from Google, TripAdvisor, and direct feedback from villa owners and event planners. Our rating reflects 560+ experiences delivered across Bali.' },
+    { question: 'Are the reviews from real guests?', answer: 'Yes — all reviews on this page are from real guests who experienced myCHEF private chef dinners, catering, and hospitality staffing at their Bali villas and events.' },
+  ]),
   {
     '@context': 'https://schema.org',
     '@type': 'AggregateRating',

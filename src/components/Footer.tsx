@@ -88,7 +88,12 @@ export default function Footer() {
           ))}
           <Link to="/services" className="hover:text-[#C5A028] transition-colors">Services</Link>
           <Link to="/pricing" className="hover:text-[#C5A028] transition-colors">Pricing</Link>
+          <Link to="/calculator" className="hover:text-[#C5A028] transition-colors">Price Calculator</Link>
+          <Link to="/faq" className="hover:text-[#C5A028] transition-colors">FAQ</Link>
           <Link to="/reviews" className="hover:text-[#C5A028] transition-colors">Reviews</Link>
+          <Link to="/why-mychef" className="hover:text-[#C5A028] transition-colors">Why myCHEF</Link>
+          <Link to="/press" className="hover:text-[#C5A028] transition-colors">Press</Link>
+          <Link to="/join-team" className="hover:text-[#C5A028] transition-colors">Join the Team</Link>
           <Link to="/partner-platform" className="hover:text-[#C5A028] transition-colors">Partner Platform</Link>
           <Link to={PRIMARY_CTA.href} className="text-[#C5A028] font-semibold hover:text-white transition-colors">
             {PRIMARY_CTA.label}

@@ -338,6 +338,13 @@ export default function Navbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-3">
+            {/* Pricing — desktop */}
+            <Link
+              to="/pricing"
+              className="hidden text-[13px] font-medium text-white/70 hover:text-[#C5A028] transition-colors lg:inline-flex"
+            >
+              Pricing
+            </Link>
             {/* Book CTA — desktop */}
             <Link
               to={PRIMARY_CTA.href}

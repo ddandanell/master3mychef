@@ -108,6 +108,26 @@ for (const url of sitemapUrls) {
 }
 if (issues === s0) ok(`All ${sitemapUrls.length} sitemap URLs are canonical`)
 
+// ── Check 6: No www.mychef.id in source ──────────────────────────────────────
+console.log('\n[6] No www.mychef.id in source files')
+const srcDirs = ['src/pages', 'src/components', 'src/data', 'index.html']
+let w0 = issues
+for (const dir of srcDirs) {
+  const fullDir = join(ROOT, dir)
+  if (!existsSync(fullDir)) continue
+  const stat = (await import('node:fs')).statSync(fullDir)
+  const files = stat.isDirectory()
+    ? readdirSync(fullDir).filter(f => /\.(tsx?|html)$/.test(f)).map(f => join(fullDir, f))
+    : [fullDir]
+  for (const file of files) {
+    const content = readFileSync(file, 'utf8')
+    if (content.includes('www.mychef.id')) {
+      fail(`www.mychef.id found in ${file.replace(ROOT + '/', '')}`)
+    }
+  }
+}
+if (issues === w0) ok('No www.mychef.id in source')
+
 // ── Summary ──────────────────────────────────────────────────────────────────
 console.log('')
 if (issues === 0) {

@@ -17,7 +17,33 @@ export default function BaliHubPage() {
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${title} | myCHEF`} description={description} canonical={canonical} ogImage={`${SITE}/generated/bali-hub-hero.webp`} jsonLd={[localBusinessSchema, breadcrumbSchema('Bali Guide', canonical)]} />
+      <SeoHead
+        title={`${title} | myCHEF`}
+        description={description}
+        canonical={canonical}
+        ogImage={`${SITE}/generated/bali-hub-hero.webp`}
+        jsonLd={[
+          localBusinessSchema,
+          breadcrumbSchema('Bali Guide', canonical),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: title,
+            description,
+            url: canonical,
+            image: `${SITE}/generated/bali-hub-hero.webp`,
+            publisher: {
+              '@type': 'Organization',
+              name: 'myCHEF',
+              url: SITE,
+              logo: { '@type': 'ImageObject', url: `${SITE}/mychef-logo.svg` },
+            },
+            author: { '@type': 'Organization', name: 'myCHEF' },
+            dateModified: new Date().toISOString().slice(0, 10),
+            mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+          },
+        ]}
+      />
 
       {/* Hero — full-bleed image with overlay copy */}
       <section className="relative w-full min-h-[78vh] flex items-end overflow-hidden">

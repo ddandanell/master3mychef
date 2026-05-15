@@ -402,14 +402,19 @@ export default function HubPage() {
                     Most guests book within 24h of inquiry. WhatsApp us — no commitment required.
                   </p>
                 </div>
-                <a
-                  href="https://wa.me/6282237565997"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028]"
-                >
-                  Message us <ArrowRight className="h-4 w-4" />
-                </a>
+                <div className="flex flex-col gap-2 sm:items-end">
+                  <a
+                    href="https://wa.me/6282237565997"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028]"
+                  >
+                    Message us <ArrowRight className="h-4 w-4" />
+                  </a>
+                  <Link to="/calculator" className="inline-flex items-center gap-1 text-xs text-[#8A6F15] hover:text-[#C5A028] transition-colors">
+                    Estimate price first →
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

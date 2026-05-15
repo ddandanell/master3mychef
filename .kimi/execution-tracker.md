@@ -118,3 +118,19 @@
 | Meta title too long: LocationsHubPage (72 chars) | ✅ FIXED | LocationsHubPage.tsx | Trimmed to 44 chars |
 | Meta title too long: JournalPage (67 chars) | ✅ FIXED | JournalPage.tsx | Trimmed to 60 chars |
 | GitHub push | ✅ DONE | — | Commit f177864 main branch |
+| Navbar 404: CATERING_SUBPAGES slug buffet-catering → buffet | ✅ FIXED | Navbar.tsx + siteArchitecture.ts | Live navbar was generating /catering/buffet-catering |
+| Sitemap duplicate: /catering/buffet in STATIC_SERVICE_PAGES and pillarSubPages | ✅ FIXED | sitemap.ts | 92→91 canonical URLs |
+| FAQ schema: SolPage (7 questions) | ✅ FIXED | SolPage.tsx | faqPageSchema added |
+| FAQ schema: AuraPage (7 questions) | ✅ FIXED | AuraPage.tsx | faqPageSchema added |
+| FAQ schema: PartnersPage | ✅ FIXED | PartnersPage.tsx | faqPageSchema added |
+| Redirect: /catering/buffet-catering → /catering/buffet | ✅ FIXED | redirects.ts | 126 redirects total |
+| Meta title too long: EventsPage (86 chars) | ✅ FIXED | EventsPage.tsx | Trimmed to 58 chars |
+| Meta title too long: EventsRetreatsPage (73 chars) | ✅ FIXED | EventsRetreatsPage.tsx | Trimmed to 58 chars |
+| Meta title too long: EventsAnniversariesPage (70 chars) | ✅ FIXED | EventsAnniversariesPage.tsx | Trimmed to 59 chars |
+| Meta title too long: EventsBabyShowersPage (69 chars) | ✅ FIXED | EventsBabyShowersPage.tsx | Trimmed to 58 chars |
+| All FAQ schema coverage confirmed: 56 pages ✅ | — | — | All pages with FAQAccordion have faqPageSchema |
+| All canonical coverage confirmed | — | — | 49 custom + 9 via PremiumPage auto-slug |
+| All OG images verified: 10 URLs all resolve to real files | — | — | public/ and public/generated/ checked |
+| All navbar links verified: 7 catering + 6 events slugs → explicit routes | — | — | No dead nav links |
+| Final build clean | ✅ | — | vite build 3.62s, 0 errors |
+| GitHub push | ✅ DONE | — | Commits: 8d1728b, 3b9c271, 9b51a4f on main |

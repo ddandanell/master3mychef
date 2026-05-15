@@ -121,7 +121,7 @@ export default function PremiumPage({
     localBusinessSchema,
     breadcrumbSchema(title, canonical),
     serviceSchema(title, metaDescription, canonical),
-    aggregateRatingSchema(4.9, 500),
+    aggregateRatingSchema(4.9, 560),
   ]
   if (faqs && faqs.length > 0) {
     schemas.push(faqPageSchema(faqs))

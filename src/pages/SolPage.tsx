@@ -4,7 +4,7 @@ import { Check, Utensils, Star, MessageCircle, Phone, ShoppingBag, Sparkles } fr
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
@@ -71,7 +71,7 @@ export default function SolPage() {
         description={getPageMeta('villa-chef').description}
         canonical={getPageMeta('villa-chef').canonical}
         ogImage={getPageMeta('villa-chef').ogImage}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Villa Chef', getPageMeta('villa-chef').canonical)]}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Villa Chef', getPageMeta('villa-chef').canonical), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

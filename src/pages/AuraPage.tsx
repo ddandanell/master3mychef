@@ -4,7 +4,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -274,7 +274,7 @@ export default function AuraPage() {
         description="Bali event catering by myCHEF — villa parties, weddings, corporate dinners, retreats. Catering, bar, décor, staffing end-to-end. From IDR 15M."
         canonical="https://mychef.id/events"
         ogImage="https://mychef.id/generated/aura-hero-v2.webp"
-        jsonLd={[localBusinessSchema, ...eventSchemas, breadcrumbSchema('Events', 'https://mychef.id/events')]}
+        jsonLd={[localBusinessSchema, ...eventSchemas, breadcrumbSchema('Events', 'https://mychef.id/events'), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

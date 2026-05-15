@@ -128,7 +128,36 @@ for (const dir of srcDirs) {
 }
 if (issues === w0) ok('No www.mychef.id in source')
 
-// ── Summary ──────────────────────────────────────────────────────────────────
+// ── Check 7: All LandingPages, Guides, and BlogPosts have content ─────────────
+console.log('\n[7] All landing/guide/blog pages have article content')
+{
+  const sitemapSrc = readFileSync(join(ROOT, 'src/data/sitemap.ts'), 'utf8')
+  // Parse slugs for LANDING_PAGES, GUIDES, BLOG_POSTS and check each has a content field
+  const sections = ['LANDING_PAGES', 'GUIDES', 'BLOG_POSTS']
+  let n0 = issues
+  for (const section of sections) {
+    // Find block start
+    const startIdx = sitemapSrc.indexOf(`export const ${section}`)
+    if (startIdx === -1) continue
+    // Find next export const after this one
+    const nextExport = sitemapSrc.indexOf('\nexport const ', startIdx + 10)
+    const block = nextExport === -1 ? sitemapSrc.slice(startIdx) : sitemapSrc.slice(startIdx, nextExport)
+    // Extract slugs and check if each has a content field nearby
+    const slugMatches = [...block.matchAll(/slug:\s*['"]([^'"]+)['"]/g)]
+    for (const m of slugMatches) {
+      const slug = m[1]
+      const pos = m.index ?? 0
+      // Look for content: in the next 200 chars after this slug
+      const nearby = block.slice(pos, pos + 400)
+      if (!nearby.includes('content:')) {
+        fail(`${section} slug '${slug}' has no article content field`)
+      }
+    }
+  }
+  if (issues === n0) ok('All landing/guide/blog pages have article content')
+}
+
+
 console.log('')
 if (issues === 0) {
   console.log('✅ All checks passed — site quality is clean.\n')

@@ -2,6 +2,12 @@ import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChefHat, Phone, Tag } from 'lucide-react'
 import { PILLARS, PRIMARY_CTA } from '../data/siteArchitecture'
+import { AREA_SLUGS, MICRO_AREA_SLUGS } from '../data/route-slugs'
+
+const AREA_PATHS = new Set([
+  ...AREA_SLUGS.map((a) => `/${a.slug}`),
+  ...MICRO_AREA_SLUGS.map((a) => `/${a.slug}`),
+])
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF'
 
@@ -297,6 +303,7 @@ export default function Navbar() {
     for (const [k, v] of Object.entries(map)) {
       if (location.pathname === k || location.pathname.startsWith(k + '/')) return v
     }
+    if (AREA_PATHS.has(location.pathname)) return 'Locations'
     return undefined
   })()
 

@@ -164,7 +164,7 @@ export default function CateringCorporatePage() {
             decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-black/68" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>

@@ -1,7 +1,8 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
-import { ArrowRight, MessageCircle } from 'lucide-react'
+import { ArrowRight, MessageCircle, Check } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { MENUS } from '@/data/sitemap'
+import TrustStrip from '@/components/shared/TrustStrip'
 
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'
@@ -66,34 +67,99 @@ export default function MenuPage() {
           ])]}
         />
 
-        <section className="px-8 pt-32 pb-16 max-w-[1120px] mx-auto">
-          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Menus</p>
-          <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-6">Private Chef Menus for Bali Villas</h1>
-          <p className="text-lg text-[#4A4745] max-w-[720px] mb-8">
-            Start with one of our most-booked menu styles, then customize around your villa,
-            guest count, dietary needs, and the mood you want to create.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              to="/book"
-              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
-            >
-              Book a Menu
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <a
-              href={`https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like help choosing the right menu for my villa stay.')}`}
-              target="_blank" data-source="menu-hero"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border border-[#1A1A1A]/15 text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:border-[#C5A028] hover:text-[#8B6F1A] transition-colors"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Ask on WhatsApp
-            </a>
+        {/* ══════════════════════════════════ HERO ══════════════════════════════════ */}
+        <section className="relative h-[70vh] min-h-[480px] flex items-end overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="/generated/luna-plating.webp"
+              alt="myCHEF private chef menus — Bali villa dining"
+              width={1920} height={1080}
+              decoding="async" fetchPriority="high"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
+          </div>
+          <div className="relative z-10 max-w-[1120px] mx-auto px-8 pb-16 w-full">
+            <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              The myCHEF Menu Collection
+            </p>
+            <h1 className="text-white text-4xl md:text-6xl leading-tight mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Private Chef Menus<br /><span className="italic">for Bali Villas</span>
+            </h1>
+            <p className="text-white/75 text-lg max-w-[600px] mb-8">
+              Every menu is adapted to your villa, your group, and your evening. These are starting points — we build from here.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href={`https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like help choosing the right menu for my villa stay.')}`}
+                target="_blank" data-source="menu-hero" rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
+              </a>
+              <Link
+                to="/fine-dining"
+                className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-colors"
+              >
+                Fine Dining Menus <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </section>
 
-        <section className="px-8 pb-20 max-w-[1120px] mx-auto">
+        <TrustStrip />
+
+        {/* ══════════════════════════════════ FINE DINING SPOTLIGHT ══════════════════════════════════ */}
+        <section className="py-20 px-8 bg-[#1A1A1A]">
+          <div className="max-w-[1120px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                Premium · Fine Dining
+              </p>
+              <h2 className="text-white text-3xl md:text-4xl mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Tasting Menus.<br /><span className="italic">In your villa.</span>
+              </h2>
+              <p className="text-white/65 text-base leading-relaxed mb-6">
+                The Luna fine dining collection features two multi-course menus — Mediterranean Sea (IDR 2,200,000++) and Wagyu Experience (IDR 2,400,000++) — prepared by a Michelin-trained team in your villa kitchen.
+              </p>
+              <ul className="space-y-2 mb-8">
+                {['Five courses, handmade pasta, premium ingredients', 'Michelin-trained chef + team of 6–10', 'All groceries, service, and cleanup included', 'Optional wine pairing +IDR 850K per person'].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-white/65">
+                    <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/fine-dining" className="inline-flex items-center gap-2 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase px-7 py-3.5 rounded-full hover:bg-[#D4B43A] transition-all">
+                  The Full Experience <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link to="/fine-dining/tasting-menu" className="inline-flex items-center gap-2 border border-white/20 text-white text-sm tracking-widest uppercase px-7 py-3.5 rounded-full hover:bg-white/10 transition-all">
+                  Tasting Menu
+                </Link>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { src: '/generated/luna-plating.webp', alt: 'Fine dining plating' },
+                { src: '/generated/luna-dessert.webp', alt: 'Dessert course' },
+                { src: '/generated/luna-wine.webp', alt: 'Wine pairing service' },
+                { src: '/generated/luna-table.webp', alt: 'Villa table setting' },
+              ].map((img) => (
+                <div key={img.src} className="aspect-square overflow-hidden rounded-[16px]">
+                  <img src={img.src} alt={img.alt} width={400} height={400} loading="lazy" decoding="async"
+                    className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-8 py-20 max-w-[1120px] mx-auto">
+          <div className="mb-10">
+            <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Most Booked</p>
+            <h2 className="text-3xl md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>Villa Catering Menus</h2>
+          </div>
           <div className="grid md:grid-cols-2 gap-6">
             {FEATURED_MENUS.map((menu) => {
               const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'm interested in the ${menu.name}. Can you send details?`)}`

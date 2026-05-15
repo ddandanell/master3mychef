@@ -67,6 +67,7 @@ export default function LocationsHubPage() {
       <SeoHead
         title="Private Chef Locations in Bali — myCHEF"
         description="Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Villa dining, catering and events in every region."
+        ogImage="/og-image.webp"
         canonical={canonical}
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Locations', canonical)]}
       />

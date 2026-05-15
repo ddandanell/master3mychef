@@ -10,6 +10,7 @@ export default function BlogIndexPage() {
       <SeoHead
         title="myCHEF Blog | Private Chef Bali Guides"
         description="Guides, cost breakdowns, and culinary insights for hosting in Bali — written by myCHEF."
+        ogImage="/og-image.webp"
         canonical={`${SITE}/blog`}
         jsonLd={[
             localBusinessSchema,

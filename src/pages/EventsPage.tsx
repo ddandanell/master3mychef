@@ -333,6 +333,14 @@ export default function EventsPage() {
           offerSchema('Intimate Gathering', 350_000, 'IDR', `${SITE}/events`),
           offerSchema('Villa Celebration', 550_000, 'IDR', `${SITE}/events`),
           offerSchema('Grand Event', 750_000, 'IDR', `${SITE}/events`),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Event',
+            name: 'Private Events and Celebrations in Bali',
+            description: 'Private chef events and celebrations at Bali villas — menus, service staff, setup, and concierge coordination.',
+            location: { '@type': 'Place', name: 'Bali, Indonesia' },
+            organizer: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          },
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           {

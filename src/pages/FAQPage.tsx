@@ -145,6 +145,7 @@ export default function FAQPage() {
       <SeoHead
         title="FAQ | Private Chef Bali Booking Questions — myCHEF"
         description="Answers to the most common myCHEF questions about Bali private chef bookings, pricing, menus, weddings, staffing, and villa catering."
+        ogImage="/og-image.webp"
         canonical={canonical}
         jsonLd={[
           localBusinessSchema,

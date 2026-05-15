@@ -16,6 +16,7 @@ export default function CateringPage() {
       <SeoHead
         title={pillar.title}
         description={pillar.description}
+        ogImage="/hero-catering.webp"
         canonical={canonical}
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Catering', canonical)]}
       />

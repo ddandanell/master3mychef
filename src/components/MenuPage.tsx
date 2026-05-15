@@ -57,6 +57,7 @@ export default function MenuPage() {
         <SeoHead
           title="Private Chef Menus in Bali | myCHEF"
           description="Explore myCHEF menu ideas for Bali villas — Mediterranean set menus, Indonesian feasts, BBQ nights, tasting menus, and customizable cuisine pages."
+        ogImage="/hero-fine-dining.webp"
           canonical={`${SITE}/menus`}
           jsonLd={[localBusinessSchema, breadcrumbSchema('Menus', `${SITE}/menus`)]}
         />

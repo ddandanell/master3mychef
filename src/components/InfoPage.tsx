@@ -23,7 +23,7 @@ export default function InfoPage({ title, description, slug, highlights }: InfoP
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${title} | myCHEF`} description={description} canonical={canonical} jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(title, canonical)]} />
+      <SeoHead title={`${title} | myCHEF`} description={description} canonical={canonical} ogImage="/og-image.webp" jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(title, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[800px] mx-auto">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">myCHEF</p>

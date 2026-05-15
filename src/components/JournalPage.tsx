@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, Calendar } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema } from './SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
 import { JOURNAL_POSTS, JOURNAL_CATEGORIES } from '../data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
@@ -17,7 +17,24 @@ export function JournalIndexPage() {
         title="Bali Private Chef Journal | Tips, Menus & Guides — myCHEF"
         description="Guides, cost breakdowns, and culinary insights for hosting in Bali — private chef cost, villa kitchens, retreats, and rehearsal dinners."
         canonical={canonical}
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Journal', canonical)]}
+        jsonLd={[
+          localBusinessSchema,
+          aggregateRatingSchema(4.9, 560),
+          breadcrumbSchema('Journal', canonical),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'myCHEF Journal',
+            url: canonical,
+            numberOfItems: posts.length,
+            itemListElement: posts.slice(0, 10).map((p, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              url: `${SITE}/journal/${p.slug}`,
+              name: p.title,
+            })),
+          },
+        ]}
       />
 
       <section className="px-6 pt-32 pb-16 max-w-[1000px] mx-auto">

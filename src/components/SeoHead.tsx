@@ -41,7 +41,7 @@ const cateringProviderSchema = {
   '@type': 'FoodEstablishment',
   name: 'myCHEF.id',
   url: 'https://mychef.id',
-  telephone: '+62822-3756-5997',
+  telephone: '+62-822-3756-5997',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Bali',
@@ -133,7 +133,7 @@ export function detailedServiceSchema(
       '@type': 'Organization',
       name: 'myCHEF.id',
       url: 'https://mychef.id',
-      telephone: '+62822-3756-5997',
+      telephone: '+62-822-3756-5997',
     },
     areaServed: {
       '@type': 'Place',

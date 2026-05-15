@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { ArrowRight, MessageCircle } from 'lucide-react'
-import SeoHead, { breadcrumbSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema } from './SeoHead'
 import { MENUS } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -58,7 +58,7 @@ export default function MenuPage() {
           title="Private Chef Menus in Bali | myCHEF"
           description="Explore myCHEF menu ideas for Bali villas — Mediterranean set menus, Indonesian feasts, BBQ nights, tasting menus, and customizable cuisine pages."
           canonical={`${SITE}/menus`}
-          jsonLd={[breadcrumbSchema('Menus', `${SITE}/menus`)]}
+          jsonLd={[localBusinessSchema, breadcrumbSchema('Menus', `${SITE}/menus`)]}
         />
 
         <section className="px-8 pt-32 pb-16 max-w-[1120px] mx-auto">

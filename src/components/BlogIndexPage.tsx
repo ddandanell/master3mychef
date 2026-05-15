@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import SeoHead, { breadcrumbSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema } from './SeoHead'
 import { BLOG_POSTS } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
@@ -11,7 +11,7 @@ export default function BlogIndexPage() {
         title="myCHEF Blog | Private Chef Bali Guides"
         description="Guides, cost breakdowns, and culinary insights for hosting in Bali — written by myCHEF."
         canonical={`${SITE}/blog`}
-        jsonLd={[breadcrumbSchema('Blog', `${SITE}/blog`)]}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Blog', `${SITE}/blog`)]}
       />
 
       <section className="px-8 pt-32 pb-16 max-w-[960px] mx-auto">

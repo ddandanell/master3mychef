@@ -37,8 +37,7 @@ export default function Footer() {
 
         {/* Sitemap grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 py-10 border-t border-white/10">
-          {/* NOTE: Only Fine Dining shown for launch. Restore full pillars.map below to show all. */}
-          {pillars.filter((p) => p.slug === 'fine-dining').map((pillar) => (
+          {pillars.map((pillar) => (
             <div key={pillar.slug}>
               <h4 className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 font-semibold">
                 {pillar.navLabel}
@@ -95,6 +94,8 @@ export default function Footer() {
           <Link to="/press" className="hover:text-[#C5A028] transition-colors">Press</Link>
           <Link to="/join-our-team" className="hover:text-[#C5A028] transition-colors">Join the Team</Link>
           <Link to="/partner-platform" className="hover:text-[#C5A028] transition-colors">Partner Platform</Link>
+          <Link to="/journal" className="hover:text-[#C5A028] transition-colors">Journal</Link>
+          <Link to="/blog" className="hover:text-[#C5A028] transition-colors">Blog & Guides</Link>
           <Link to={PRIMARY_CTA.href} className="text-[#C5A028] font-semibold hover:text-white transition-colors">
             {PRIMARY_CTA.label}
           </Link>

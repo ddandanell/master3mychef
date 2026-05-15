@@ -379,6 +379,7 @@ export default function EventsMainPage() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
+              data-source="events-hero"
               className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <Phone className="w-4 h-4" /> Plan My Event — Free Consultation
@@ -804,6 +805,7 @@ export default function EventsMainPage() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
+              data-source="events-cta"
               className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation

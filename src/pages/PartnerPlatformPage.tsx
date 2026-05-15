@@ -13,7 +13,7 @@ import {
   Star,
   TrendingUp,
 } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
@@ -115,7 +115,7 @@ export default function PartnerPlatformPage() {
         description="Villa dining partner platform for luxury villas and management companies across Bali. Co-branded or white-label, monthly commission, transparent dashboard."
         canonical={`${SITE}/partner-platform`}
         ogImage={`${SITE}/generated/partner-platform-hero.webp`}
-        jsonLd={[breadcrumbSchema('Partner Platform', `${SITE}/partner-platform`), jsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Partner Platform', `${SITE}/partner-platform`), jsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}

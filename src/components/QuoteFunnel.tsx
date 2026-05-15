@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, ChevronLeft, MessageCircle, Minus, Plus } from 'lucide-react'
-import SeoHead, { breadcrumbSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema } from './SeoHead'
 
 // 9-step quote funnel ported from production mychef.id/quote.
 // Each step writes into a single `form` state. Step 9 builds a WhatsApp
@@ -150,7 +150,7 @@ export default function QuoteFunnel() {
         canonical="https://mychef.id/quote"
         ogImage="https://mychef.id/og-image.webp"
         noindex
-        jsonLd={[breadcrumbSchema('Quote', 'https://mychef.id/quote')]}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Quote', 'https://mychef.id/quote')]}
       />
       <section className="px-8 pt-24 pb-16 max-w-[800px] mx-auto">
         {/* Progress strip */}

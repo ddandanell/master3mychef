@@ -16,7 +16,7 @@ import {
   Star,
 } from 'lucide-react'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -178,7 +178,7 @@ export default function PartnersPage() {
         description="Press kit details and Certified Partner programme information for villa managers looking to work with myCHEF in Bali."
         canonical="https://mychef.id/partners"
         ogImage="https://mychef.id/partners-hero.webp"
-        jsonLd={[breadcrumbSchema('Press & Partners', 'https://mychef.id/partners'), faqPageSchema(faqs.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Press & Partners', 'https://mychef.id/partners'), faqPageSchema(faqs.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       <section className="relative overflow-hidden border-b border-[#E8E3D8]">

@@ -421,7 +421,7 @@ export default function CateringMainPage() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering-hero.webp"
+            src="/generated/catering-catering-hero-lg.webp"
             alt="Chef grilling seafood at a Bali villa poolside at sunset"
             width={1920}
             height={1080}

@@ -20,6 +20,7 @@ export interface SubPage {
   title: string
   description: string
   intro?: string
+  icon?: string
 }
 
 export interface Pillar {
@@ -28,6 +29,12 @@ export interface Pillar {
   url: string
   description: string
   h1: string
+  title: string
+  intro: string
+  navLabel: string
+  ctaPrimary: string
+  accent: string
+  relatedPillars: PillarSlug[]
   subPages: SubPage[]
 }
 
@@ -38,6 +45,12 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
     url: '/fine-dining',
     h1: 'Michelin-Trained Private Chef Experiences',
     description: 'The premier private fine-dining service in Bali. Italian tasting menus, sommelier pairing, and open-flame cooking in your villa.',
+    title: 'Private Chef Fine Dining | Michelin-Trained Villa Dinners — myCHEF',
+    intro: 'Experience Michelin-standard dining in the privacy of your villa. Multi-course tasting menus, wine pairings, and Italian fine dining technique.',
+    navLabel: 'Fine Dining',
+    ctaPrimary: 'Reserve Fine Dining',
+    accent: '#C5A028',
+    relatedPillars: ['catering', 'events', 'in-villa-service'],
     subPages: [
       { slug: 'romantic-dinner', label: 'Romantic Dinner', h1: 'Private Romantic Dinner in Bali', title: 'Romantic Dinner Bali | Private Villa Chef — myCHEF', description: 'Intimate five-course private chef dinners for couples in Bali villas. Candlelight, sommelier pairing, and Michelin-trained service.' },
       { slug: 'tasting-menu', label: 'Tasting Menu', h1: 'Market-Led Private Tasting Menus', title: 'Private Tasting Menu Bali | 7-11 Course Experiences — myCHEF', description: 'Signature 7 to 11 course tasting menus by Adriano. Seasonal Balinese ingredients met with Italian technique.' },
@@ -53,6 +66,12 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
     url: '/catering',
     h1: 'Villa Catering & Group Events',
     description: 'Full-service catering for Bali villas. BBQ nights, buffets, drop-off feasts, and grazing tables for groups of 10 to 150.',
+    title: 'Villa Catering Bali | Private Chef Catering Service — myCHEF',
+    intro: 'From intimate dinners to 150-guest celebrations. BBQs, buffets, and chef-led services with full setup and cleanup.',
+    navLabel: 'Catering',
+    ctaPrimary: 'Get Catering Quote',
+    accent: '#6B8E5A',
+    relatedPillars: ['fine-dining', 'events', 'in-villa-service'],
     subPages: [
       { slug: 'bbq-catering', label: 'BBQ Catering', h1: 'Live-Fire BBQ Catering Bali', title: 'BBQ Catering Bali | Private Villa BBQ & Chef Service — myCHEF', description: 'Bali’s #1 villa BBQ catering. Fresh seafood, Wagyu steaks, and organic sides grilled live at your pool.' },
       { slug: 'buffet', label: 'Buffet', h1: 'Event Buffet Catering', title: 'Buffet Catering Bali | Large Group & Event Service — myCHEF', description: 'Sophisticated buffet lines for weddings, corporate retreats, and large villa parties. Full setup and service included.' },
@@ -72,6 +91,12 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
     url: '/events',
     h1: 'Bali Event Production & Hospitality',
     description: 'One team for your entire event. Weddings, birthdays, corporate retreats, and villa parties anywhere in Bali.',
+    title: 'Bali Event Catering | Private Villa Celebrations — myCHEF',
+    intro: 'Weddings, birthdays, corporate retreats, and celebrations. Full production, coordination, and hospitality for any group size.',
+    navLabel: 'Events',
+    ctaPrimary: 'Plan Your Event',
+    accent: '#A67C52',
+    relatedPillars: ['catering', 'fine-dining', 'in-villa-service'],
     subPages: [
       { slug: 'weddings', label: 'Weddings', h1: 'Villa Wedding Catering & Planning', title: 'Bali Wedding Catering | Villa Wedding Specialist — myCHEF', description: 'Elegant wedding catering for Bali villa weddings. Plated dinners, buffets, and cocktail receptions with full team support.' },
       { slug: 'birthdays', label: 'Birthdays', h1: 'Villa Birthday Party Catering', title: 'Birthday Catering Bali | Private Villa Celebration — myCHEF', description: 'Celebrate your birthday with a live chef BBQ or fine-dining menu. We handle food, drinks, cake, and styling.' },
@@ -88,6 +113,12 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
     url: '/in-villa-service',
     h1: 'Professional Villa Service Staff',
     description: 'Uniformed, English-speaking staff for your villa. Waiters, butlers, bartenders, and coordinators available by the shift.',
+    title: 'Hire Villa Staff Bali | Professional Waiters & Butlers — myCHEF',
+    intro: 'Uniformed, trained service staff for villa events. Waiters, butlers, bartenders, sommeliers, and event coordinators.',
+    navLabel: 'In-Villa Service',
+    ctaPrimary: 'Hire Staff',
+    accent: '#D4A574',
+    relatedPillars: ['catering', 'events', 'fine-dining'],
     subPages: [
       { slug: 'waiters', label: 'Waiters', h1: 'Private Waiter Service Bali', title: 'Hire Waiters Bali | Professional Villa Server — myCHEF', description: 'Uniformed waiters for villa dinners and events. English-speaking, trained in fine-dining service standards.' },
       { slug: 'butlers', label: 'Butlers', h1: 'Private Butler Service Bali', title: 'Hire Butlers Bali | Professional Villa Host — myCHEF', description: 'Discreet, anticipatory butler service for villas and estates. Expert in guest relations and household flow.' },
@@ -103,6 +134,12 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
     url: '/staffing',
     h1: 'Hospitality Staffing & Placement',
     description: 'Long-term staffing for villas, hotels, and residences. We source, vet, and place private chefs and household teams.',
+    title: 'Staff Placement Bali | Hire Chefs & Household Staff — myCHEF',
+    intro: 'Permanent and seasonal staffing solutions. Private chef placement, villa managers, household teams, and specialized hospitality roles.',
+    navLabel: 'Staffing',
+    ctaPrimary: 'Find Staff',
+    accent: '#8B7355',
+    relatedPillars: ['fine-dining', 'catering', 'in-villa-service'],
     subPages: [
       { slug: 'private-chef-placement', label: 'Chef Placement', h1: 'Private Chef Placement Bali', title: 'Hire a Full-Time Chef Bali | Staff Placement — myCHEF', description: 'Permanent or seasonal private chef placement for your villa or residence. We handle vetting, trials, and contracts.' },
       { slug: 'live-in-chef', label: 'Live-In Chef', h1: 'Live-In Villa Chef Service', title: 'Live-In Chef Bali | Full-Board Villa Hosting — myCHEF', description: 'Professional chefs who live on-site to manage all meals, groceries, and kitchen logistics for your family or guests.' },
@@ -440,3 +477,114 @@ export function getAllLocationPaths(): { location: LocationPage; path: string }[
     path: `/locations/${location.slug}`,
   }))
 }
+
+/* -----------------------------------------------------------------------
+ * PRIMARY NAVIGATION & CTA
+ * --------------------------------------------------------------------- */
+
+export const PRIMARY_NAV: Array<{ label: string; href: string }> = [
+  { label: 'Fine Dining', href: '/fine-dining' },
+  { label: 'Catering', href: '/catering' },
+  { label: 'Events', href: '/events' },
+  { label: 'In-Villa Service', href: '/in-villa-service' },
+  { label: 'Staffing', href: '/staffing' },
+  { label: 'Locations', href: '/locations' },
+  { label: 'Help', href: '/help' },
+  { label: 'About', href: '/about' },
+]
+
+export const PRIMARY_CTA = {
+  label: 'Book Now',
+  href: '/quote',
+}
+
+/* -----------------------------------------------------------------------
+ * JOURNAL & BLOG CONTENT
+ * --------------------------------------------------------------------- */
+
+export interface JournalPost {
+  slug: string
+  title: string
+  category: string
+  author: string
+  date: string
+  excerpt: string
+  content: string
+  readTime?: number
+}
+
+export interface JournalCategory {
+  slug: string
+  label: string
+  description: string
+}
+
+export const JOURNAL_CATEGORIES: JournalCategory[] = [
+  { slug: 'recipes', label: 'Recipes', description: 'Chef-created recipes and culinary techniques' },
+  { slug: 'travel', label: 'Travel', description: 'Bali destination guides and travel stories' },
+  { slug: 'events', label: 'Events', description: 'Event planning tips and celebration ideas' },
+  { slug: 'wellness', label: 'Wellness', description: 'Health, nutrition, and wellness insights' },
+]
+
+export const JOURNAL_POSTS: JournalPost[] = [
+  {
+    slug: 'michelin-training-bali',
+    title: 'Michelin Training in Bali: How Our Chefs Master Italian Technique',
+    category: 'recipes',
+    author: 'Adriano',
+    date: '2026-05-10',
+    excerpt: 'Discover how Michelin-trained techniques translate to intimate villa dining in Bali.',
+    content: 'Full article content goes here...',
+  },
+  {
+    slug: 'sustainable-sourcing',
+    title: 'Sustainable Sourcing: Our Farm-to-Villa Philosophy',
+    category: 'wellness',
+    author: 'myCHEF Team',
+    date: '2026-05-05',
+    excerpt: 'Learn about our commitment to local, organic ingredients.',
+    content: 'Full article content goes here...',
+  },
+]
+
+/* -----------------------------------------------------------------------
+ * MENUS & DINING
+ * --------------------------------------------------------------------- */
+
+export interface MenuItem {
+  name: string
+  description: string
+  price?: number
+  allergens?: string[]
+}
+
+export interface Menu {
+  slug: string
+  name: string
+  description: string
+  servings: string
+  items: MenuItem[]
+}
+
+export const MENUS: Menu[] = [
+  {
+    slug: 'italian-tasting',
+    name: 'Italian Tasting Menu',
+    description: 'Seven-course Mediterranean journey',
+    servings: '4-6 guests',
+    items: [
+      { name: 'Amuse Bouche', description: 'Chef\'s welcome bite' },
+      { name: 'Antipasti', description: 'Seasonal Italian starters' },
+    ],
+  },
+  {
+    slug: 'wagyu-experience',
+    name: 'Wagyu Experience',
+    description: 'Premium Japanese beef feast',
+    servings: '4-6 guests',
+    items: [
+      { name: 'A5 Wagyu Tataki', description: 'Seared Japanese beef carpaccio' },
+      { name: 'Wagyu Steak Course', description: 'Prime cuts with seasonal accompaniments' },
+    ],
+  },
+]

@@ -75,7 +75,7 @@ export default function PillarSubPage() {
   // OG image by pillar
   const pillarOgImages: Record<string, string> = {
     'fine-dining': 'https://mychef.id/generated/luna-hero-v2.webp',
-    'catering': 'https://mychef.id/generated/catering-hero.webp',
+    'catering': 'https://mychef.id/generated/catering-catering-hero-lg.webp',
     'events': 'https://mychef.id/generated/aura-hero-v2.webp',
     'in-villa-service': 'https://mychef.id/generated/in-villa-service-hero.webp',
     'staffing': 'https://mychef.id/generated/staffing-hero.webp',

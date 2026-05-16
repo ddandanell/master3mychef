@@ -57,8 +57,8 @@ const ADDONS = [
 ]
 
 const REAL_WEDDINGS = [
-  { names: 'Emma & James', date: 'March 2026', villa: 'Villa Aria, Uluwatu', image: '/event-wedding.webp' },
-  { names: 'Anya & Mark', date: 'January 2026', villa: 'Villa Soma, Canggu', image: '/wedding-reception.webp' },
+  { names: 'Emma & James', date: 'March 2026', villa: 'Villa Aria, Uluwatu', image: '/events-event-wedding-xl.webp' },
+  { names: 'Anya & Mark', date: 'January 2026', villa: 'Villa Soma, Canggu', image: '/events-wedding-reception-lg.webp' },
   { names: 'Sarah & David', date: 'December 2025', villa: 'Villa Kali, Seminyak', image: '/generated/aura-toast.webp' },
   { names: 'Priya & Raj', date: 'November 2025', villa: 'Villa Tirta, Uluwatu', image: '/generated/aura-setup.webp' },
 ]
@@ -149,7 +149,7 @@ export default function EventsWeddingsPage() {
         title="Bali Villa Wedding Catering & Coordination | myCHEF"
         description="End-to-end wedding catering and coordination for Bali villa weddings. Three tiers from IDR 600K/pp. Chef, waiters, coordinator — all under one contract."
         canonical={`${SITE}/events/weddings-bali`}
-        ogImage={`${SITE}/event-wedding.webp`}
+        ogImage={`${SITE}/events-event-wedding-xl.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema('Wedding Catering Bali', 'myCHEF.id provides wedding catering in Bali with private chef menus, service staff, and full villa coordination. We support intimate ceremonies and reception dinners with setup, timing, and cleanup managed by one team.', `${SITE}/events/weddings-bali`),
@@ -173,7 +173,7 @@ export default function EventsWeddingsPage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/event-wedding.webp"
+            src="/events-event-wedding-xl.webp"
             alt="Bali villa wedding ceremony at a tropical altar"
             width={1920}
             height={1080}
@@ -234,7 +234,7 @@ export default function EventsWeddingsPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/event-wedding.webp" alt="Luxury Bali villa wedding ceremony setup by myCHEF" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/events-event-wedding-xl.webp" alt="Luxury Bali villa wedding ceremony setup by myCHEF" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -365,7 +365,7 @@ export default function EventsWeddingsPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/wedding-reception.webp" alt="Wedding reception table with candles and plated dinner service" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/events-wedding-reception-lg.webp" alt="Wedding reception table with candles and plated dinner service" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

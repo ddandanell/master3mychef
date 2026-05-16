@@ -175,7 +175,7 @@ export default function CateringBBQPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-buffet-catering.webp"
+            src="/generated/catering-hero-buffet-catering-lg.webp"
             alt="Chef grilling seafood and meat at a Bali villa BBQ by the pool"
             width={1920}
             height={1080}

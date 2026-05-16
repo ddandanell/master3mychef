@@ -155,7 +155,7 @@ export default function CateringVillaPage() {
         title="Villa Catering Bali | Private Chef & Event Catering"
         description="Private villa catering in Bali with chef-led menus, setup, service, drinks, and cleanup for birthdays, family dinners, retreats, and villa events."
         canonical={`${SITE}/catering/villa-catering`}
-        ogImage={`${SITE}/generated/hero-buffet-catering.webp`}
+        ogImage={`${SITE}/generated/catering-hero-buffet-catering-lg.webp`}
         jsonLd={[
           localBusinessSchema,
           cateringServiceSchema('Villa Catering Bali', 'Villa catering in Bali for private lunches, dinners, birthdays, and multi-day stays with chef-led menus and on-site service. myCHEF.id brings the kitchen team, setup, service, and cleanup to your villa across Bali.', `${SITE}/catering/villa-catering`),
@@ -174,7 +174,7 @@ export default function CateringVillaPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-buffet-catering.webp"
+            src="/generated/catering-hero-buffet-catering-lg.webp"
             alt="Long villa dining table by pool at sunset with chef-prepared Bali catering"
             width={1920}
             height={1080}
@@ -532,7 +532,7 @@ export default function CateringVillaPage() {
       {/* ═══════ SECTION 13: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/catering-hero.webp" alt="Villa catering setup with chef and team at Bali villa" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/catering-catering-hero-lg.webp" alt="Villa catering setup with chef and team at Bali villa" className="w-full h-full object-cover" loading="lazy" />
           <div
             className="absolute inset-0"
             style={{

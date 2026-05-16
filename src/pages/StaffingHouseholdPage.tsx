@@ -107,7 +107,7 @@ export default function StaffingHouseholdPage() {
         title="Household Staff Bali | Private Estate Recruitment — myCHEF"
         description="Household staff recruitment in Bali for private residences — nannies, drivers, housekeepers, head of house. From IDR 4,000,000 per month."
         canonical={`${SITE}/staffing/household-staff`}
-        ogImage={`${SITE}/generated/staffing-table.webp`}
+        ogImage={`${SITE}/generated/staffing-staffing-table-lg.webp`}
         jsonLd={[
           localBusinessSchema,
           serviceSchema(
@@ -125,7 +125,7 @@ export default function StaffingHouseholdPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/staffing-table.webp" alt="Household staff serving at private Bali residence" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+          <img src="/generated/staffing-staffing-table-lg.webp" alt="Household staff serving at private Bali residence" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
           <div
             className="absolute inset-0"
             style={{
@@ -237,7 +237,7 @@ export default function StaffingHouseholdPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/staffing-table.webp" alt="Household staff at private Bali residence" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/staffing-staffing-table-lg.webp" alt="Household staff at private Bali residence" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

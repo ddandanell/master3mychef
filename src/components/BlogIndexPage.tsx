@@ -62,7 +62,7 @@ export default function BlogIndexPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-plating.webp"
+            src="/generated/misc-luna-plating-md.webp"
             alt="Chef plating fine dining dinner in a Bali villa — myCHEF Journal"
             width={1920}
             height={1080}

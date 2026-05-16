@@ -158,7 +158,7 @@ export default function FineDiningMenusPage() {
         title="Private Chef Menus Bali | Riviera & Odyssey — myCHEF"
         description="Browse the myCHEF private chef menus for Bali villas — La Riviera and L'Odyssée, both rooted in Mediterranean fine dining."
         canonical="https://mychef.id/fine-dining/menus"
-        ogImage="/generated/luna-plating.webp"
+        ogImage="/generated/misc-luna-plating-md.webp"
         jsonLd={[
           localBusinessSchema,
           breadcrumbSchema('Our Menus', `${SITE_URL}/fine-dining/menus`, 'Fine Dining', `${SITE_URL}/fine-dining`),
@@ -169,7 +169,7 @@ export default function FineDiningMenusPage() {
       <section className="relative flex min-h-[92vh] items-center justify-center overflow-hidden bg-[#1A1916]">
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-plating.webp"
+            src="/generated/misc-luna-plating-md.webp"
             alt="Luxury private chef plating in a Bali villa for myCHEF fine dining menus"
             width={1920}
             height={1080}

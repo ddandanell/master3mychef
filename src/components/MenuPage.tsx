@@ -71,7 +71,7 @@ export default function MenuPage() {
         <section className="relative h-[70vh] min-h-[480px] flex items-end overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src="/generated/luna-plating.webp"
+              src="/generated/misc-luna-plating-md.webp"
               alt="myCHEF private chef menus — Bali villa dining"
               width={1920} height={1080}
               decoding="async" fetchPriority="high"
@@ -140,7 +140,7 @@ export default function MenuPage() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               {[
-                { src: '/generated/luna-plating.webp', alt: 'Fine dining plating' },
+                { src: '/generated/misc-luna-plating-md.webp', alt: 'Fine dining plating' },
                 { src: '/generated/luna-dessert.webp', alt: 'Dessert course' },
                 { src: '/generated/luna-wine.webp', alt: 'Wine pairing service' },
                 { src: '/generated/luna-table.webp', alt: 'Villa table setting' },

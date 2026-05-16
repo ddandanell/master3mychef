@@ -37,7 +37,7 @@ const BUFFET_PACKAGES = [
     description: '8 hot dishes, 4 cold dishes, dessert, fresh fruit, 5 sambals, rice, noodles, breads.',
     includes: ['Chef', 'Service team (1 per 12 guests)', 'Full chafing setup', 'Serving tables', 'Linens', 'Cutlery', '2.5h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 30 guests',
-    image: '/generated/hero-buffet-catering.webp',
+    image: '/generated/catering-hero-buffet-catering-lg.webp',
   },
   {
     title: 'International Buffet',
@@ -180,7 +180,7 @@ export default function CateringBuffetPage() {
         title="Buffet Catering Bali | Villa, Wedding & Event Buffets"
         description="Buffet catering in Bali for villas, weddings, retreats, and events with Indonesian, Western, BBQ, and custom menu options."
         canonical={`${SITE}/catering/buffet`}
-        ogImage={`${SITE}/generated/hero-buffet-catering.webp`}
+        ogImage={`${SITE}/generated/catering-hero-buffet-catering-lg.webp`}
         jsonLd={[
           localBusinessSchema,
           cateringServiceSchema('Buffet Catering Bali', 'Full-service buffet catering for Bali villas, weddings, retreats, and large private events with Indonesian and international menu options. myCHEF.id brings chefs, service staff, buffet equipment, and cleanup across Bali.', `${SITE}/catering/buffet`),
@@ -199,7 +199,7 @@ export default function CateringBuffetPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-buffet-catering.webp"
+            src="/generated/catering-hero-buffet-catering-lg.webp"
             alt="Styled buffet table in Bali villa garden with chafing dishes and floral arrangements"
             width={1920}
             height={1080}

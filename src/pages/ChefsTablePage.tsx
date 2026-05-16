@@ -294,7 +294,7 @@ export default function ChefsTablePage() {
           {[
             { src: '/generated/luna-flame.webp', alt: 'Open flame cooking — Chef\'s Table Bali' },
             { src: '/generated/luna-chef-portrait.webp', alt: 'Adriano — private chef, Bali' },
-            { src: '/generated/luna-plating.webp', alt: 'Plated fine dining course' },
+            { src: '/generated/misc-luna-plating-md.webp', alt: 'Plated fine dining course' },
             { src: '/generated/luna-ingredients.webp', alt: 'Fresh market ingredients for Chef\'s Table' },
           ].map((img) => (
             <div key={img.src} className="aspect-square overflow-hidden rounded-[16px]">

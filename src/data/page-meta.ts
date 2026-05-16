@@ -233,7 +233,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Wedding catering in Bali for villa ceremonies, receptions and recovery brunches. Menus, staffing and service built for estate weddings.',
     canonical: `${SITE}/events/weddings`,
     h1: 'Wedding Catering in Bali — Villa Weddings & Receptions',
-    ogImage: `${SITE}/event-wedding.webp`,
+    ogImage: `${SITE}/events-event-wedding-xl.webp`,
   },
 
   'events-birthdays': {
@@ -468,7 +468,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'See private chef Bali pricing before you book. Compare hourly service, tasting menus, catering packages, and event formats with no hidden fees.',
     canonical: `${SITE}/pricing`,
     h1: 'Pricing',
-    ogImage: `${SITE}/generated/catering-hero.webp`,
+    ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,
   },
 
   press: {
@@ -538,7 +538,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Estimate private chef Bali pricing in under a minute. Adjust guests, meals, menu style, and add-ons to see a realistic starting budget.',
     canonical: `${SITE}/calculator`,
     h1: 'Private Chef Pricing Calculator',
-    ogImage: `${SITE}/generated/catering-hero.webp`,
+    ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,
   },
 
   'privacy-policy': {
@@ -708,7 +708,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Book a tasting menu in Bali with a private chef cooking multi-course Mediterranean or Wagyu dinners in your villa kitchen.',
     canonical: `${SITE}/fine-dining/tasting-menu`,
     h1: 'Tasting Menu in Bali',
-    ogImage: `${SITE}/generated/luna-plating.webp`,
+    ogImage: `${SITE}/generated/misc-luna-plating-md.webp`,
   },
 
   'fine-dining-private-chef-bali': {
@@ -738,7 +738,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'See private chef menus in Bali before you book. Compare Riviera and Odyssey paths, signature dishes, and add-ons for villa dinners.',
     canonical: `${SITE}/fine-dining/menus`,
     h1: 'Private Chef Menus in Bali',
-    ogImage: `${SITE}/generated/luna-plating.webp`,
+    ogImage: `${SITE}/generated/misc-luna-plating-md.webp`,
   },
 
   'fine-dining-our-chefs': {
@@ -828,7 +828,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Find a live-in chef in Bali for daily family meals, estate stays, and full-time kitchen coverage with vetted monthly placements.',
     canonical: `${SITE}/staffing/live-in-chef`,
     h1: 'Live-In Chef Placement in Bali',
-    ogImage: `${SITE}/generated/staffing-kitchen.webp`,
+    ogImage: `${SITE}/generated/staffing-staffing-kitchen-lg.webp`,
   },
 
   'staffing-villa-staff': {
@@ -848,7 +848,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Recruit household staff in Bali for residences and estates, from housekeepers and drivers to nannies and heads of house.',
     canonical: `${SITE}/staffing/household-staff`,
     h1: 'Household Staff Placement in Bali',
-    ogImage: `${SITE}/generated/staffing-table.webp`,
+    ogImage: `${SITE}/generated/staffing-staffing-table-lg.webp`,
   },
 
   'staffing-for-villa-managers': {

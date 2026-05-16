@@ -161,7 +161,7 @@ export default function JoinTeamPage() {
       title: 'Work with a team that takes hospitality seriously',
       body: `<p>myCHEF is trusted by private villas, event hosts, and long-stay guests because the standards are real. We care about timing, polish, cleanliness, warmth, and how the guest feels in the room.</p>
       <p>If you want to work with a team that values professionalism and gives you room to grow, you will feel at home here.</p>`,
-      image: '/generated/staffing-kitchen.webp',
+      image: '/generated/staffing-staffing-kitchen-lg.webp',
       imageAlt: 'myCHEF team training inside a Bali villa kitchen',
     },
     {

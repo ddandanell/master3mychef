@@ -52,7 +52,7 @@ const PLATED_PACKAGES = [
     minGuests: 'Min. IDR 5M',
   },
   {
-    image: '/generated/luna-plating.webp',
+    image: '/generated/misc-luna-plating-md.webp',
     title: '5-Course Premium',
     price: 'IDR 1,300,000/person',
     priceNum: 1300000,
@@ -709,7 +709,7 @@ export default function CateringPlatedPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-plating.webp"
+            src="/generated/misc-luna-plating-md.webp"
             alt="Plated dinner course ready to serve at Bali villa"
             width={1920}
             height={1080}

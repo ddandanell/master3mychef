@@ -26,6 +26,8 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
 
   const top = TOP_CITIES.find((c) => c.slug === slug)
   const locationPage = kind === 'area' ? getLocationBySlug(slug) : undefined
+  const isJakarta = ['jakarta', 'menteng', 'kemang', 'scbd', 'pondok-indah', 'bsd'].includes(slug)
+  const region = isJakarta ? 'Jakarta' : 'Bali'
   const title = locationPage?.h1 ?? `Private Chef in ${entry.name}, Bali`
   const description = locationPage?.description ?? (
     top

@@ -230,7 +230,7 @@ export default function ServiceButlersPage() {
             </Link>
             <Link to="/in-villa-service/sommelier" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
               <h4 className="font-semibold text-sm mb-1">Sommelier Service</h4>
-              <p className="text-xs text-[#4A4745]">Curated wine pairings for your villa dinner.</p>
+              <p className="text-xs text-[#4A4745]">Tailored wine pairings for your villa dinner.</p>
             </Link>
             <Link to="/events/corporate-events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
               <h4 className="font-semibold text-sm mb-1">Corporate Events</h4>

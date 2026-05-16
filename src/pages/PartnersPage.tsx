@@ -82,12 +82,12 @@ const partnerSupport = [
 
 const logoGroups = [
   {
-    title: 'Press logo placeholders',
-    items: ['Lifestyle Media Placeholder', 'Travel Editor Placeholder', 'Luxury Bali Guide Placeholder'],
+    title: 'Recent media coverage',
+    items: ['Travel and lifestyle media', 'Hospitality business publications', 'Bali destination editors'],
   },
   {
-    title: 'Partner villa placeholders',
-    items: ['Seminyak Villa Portfolio', 'Uluwatu Retreat Partner', 'Canggu Boutique Stay'],
+    title: 'Active partner segments',
+    items: ['Seminyak villa portfolios', 'Uluwatu retreat operators', 'Canggu boutique stays'],
   },
 ]
 

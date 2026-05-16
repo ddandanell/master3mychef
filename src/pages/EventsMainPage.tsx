@@ -51,77 +51,77 @@ function CardPrice({ price, suffix = '/pp' }: { price: number; suffix?: string }
 const EVENT_TYPES: EventType[] = [
   {
     slug: 'weddings',
-    eyebrow: 'The Once-In-A-Lifetime',
+    eyebrow: 'Your Villa Wedding',
     title: 'Villa Weddings',
     fromPrice: <CardPrice price={600000} />,
     description:
-      'Intimate ceremonies, full receptions, and luxury celebrations. Coordinator on the day, full styling, ceremony to last dance.',
+      'Ceremony to reception, entirely in your villa. We handle vendors, timeline, styling, food, staff. You walk down the aisle.',
     icon: Heart,
     image: '/generated/aura-wedding.webp',
     href: '/events/weddings',
   },
   {
     slug: 'birthdays',
-    eyebrow: 'The Milestone',
+    eyebrow: 'The Celebration',
     title: 'Birthday Parties',
     fromPrice: <CardPrice price={850000} />,
     description:
-      'Intimate dinners, villa parties, and kids celebrations. Cake, themed setup, and a team that makes the day effortless.',
+      'Cake, setup, themed decor, and a full team. Your guests arrive, you celebrate. We handle everything else.',
     icon: Cake,
     image: '/generated/party-birthday.webp',
     href: '/events/birthdays',
   },
   {
     slug: 'anniversaries',
-    eyebrow: 'The Two Of You',
+    eyebrow: 'Your Story, Celebrated',
     title: 'Anniversary Dinners',
     fromPrice: <CardPrice price={1200000} />,
     description:
-      'Private candlelit dinners, vow renewals, and small-group celebrations. The opposite of a hotel package — built around your story.',
+      'Private candlelit dinner built around your history. Wine paired. Service perfect. The opposite of generic.',
     icon: Wine,
     image: '/generated/aura-toast.webp',
     href: '/events/anniversaries',
   },
   {
     slug: 'corporate-events',
-    eyebrow: 'The Off-Site',
+    eyebrow: 'Executive Hospitality',
     title: 'Corporate Events',
     fromPrice: <CardPrice price={1200000} />,
     description:
-      'Executive dinners, conferences, retreats, product launches. Hospitality production grade — invoice-ready, NPWP-issued.',
+      'Offsites, dinners, retreats, launches. Full hospitality production. Invoice-ready. NPWP-issued. Zero stress.',
     icon: Briefcase,
     image: '/generated/corp-gala.webp',
     href: '/events/corporate-events',
   },
   {
     slug: 'retreats',
-    eyebrow: 'The Multi-Day',
+    eyebrow: 'Multi-Day Hospitality',
     title: 'Wellness & Yoga Retreats',
     fromPrice: <CardPrice price={1500000} suffix="/pp/day" />,
     description:
-      'Dietary-specialist meals across multi-day retreats. Plant-forward, gluten-free, raw, vegan — handled at scale, on schedule.',
+      'Plant-forward, gluten-free, raw, vegan—dietary specialists handle everything at scale. Three meals daily. On schedule.',
     icon: Leaf,
     image: '/generated/party-medi.webp',
     href: '/events/retreats',
   },
   {
     slug: 'baby-showers',
-    eyebrow: 'The Sweetest',
+    eyebrow: 'The Celebration',
     title: 'Baby Showers',
     fromPrice: <CardPrice price={750000} />,
     description:
-      'Brunch and high-tea showers, themed decor, mocktail bars, and styling so gentle it photographs itself.',
+      'Brunch, high tea, themed decor, mocktail bar. Styled so well it photographs itself. You just show up.',
     icon: Baby,
     image: '/generated/party-white.webp',
     href: '/events/baby-showers',
   },
   {
     slug: 'villa-parties',
-    eyebrow: 'The Long Weekend',
+    eyebrow: 'The Celebration',
     title: 'Villa Parties',
     fromPrice: <CardPrice price={650000} />,
     description:
-      'Cocktail receptions, sundowner BBQs, hens & bucks weekends. Bar, music, decor, and Sofia keeping the night on rails.',
+      'Cocktail receptions, sundowner BBQs, hens & bucks weekends. Bar staff, music, decor. We run it. You host it.',
     icon: Music,
     image: '/generated/party-ultimate.webp',
     href: '/events/villa-parties',
@@ -138,20 +138,20 @@ interface HowStep {
 const HOW_WE_RUN: HowStep[] = [
   {
     step: '01',
-    title: 'WhatsApp',
-    body: 'Send the date, guest count, villa, and event type. Sofia replies fast with availability, price direction, and the right format to shortlist.',
+    title: 'Message Us',
+    body: 'Date, guest count, villa, event type. Sofia replies within hours with availability and pricing.',
     icon: MessageCircle,
   },
   {
     step: '02',
     title: 'Proposal',
-    body: 'We turn the brief into one working document covering food, drinks, staffing, styling, timing, and all-in pricing for sign-off.',
+    body: 'One document covers food, drinks, staff, styling, timing, all-in cost. You review. We adjust until you sign off.',
     icon: ClipboardCheck,
   },
   {
     step: '03',
     title: 'Event Day',
-    body: 'Our team arrives, builds the setup, runs the service, and clears down after the event so you can focus on hosting instead of coordinating.',
+    body: 'Our team arrives early, builds setup, runs service, clears down. You host. We execute.',
     icon: Calendar,
   },
 ]
@@ -762,17 +762,42 @@ export default function EventsMainPage() {
             fields={[
               { name: 'event_type', label: 'Event Type', type: 'select', icon: Heart, required: true },
               { name: 'date', label: 'Event Date', type: 'date', icon: Calendar, required: true },
+              { name: 'duration', label: 'Event Duration / Days', type: 'text', icon: Calendar, placeholder: 'e.g. 1 evening, 3 days, 15-17 June' },
               { name: 'guests', label: 'Number of Guests', type: 'number', icon: Users, placeholder: 'e.g. 40', required: true },
               { name: 'villa', label: 'Villa / Location', type: 'text', icon: MapPin, placeholder: 'Canggu, Seminyak, TBC...' },
+              { name: 'company', label: 'Company / Planner', type: 'text', icon: Briefcase, placeholder: 'Optional, if booking for a client or business' },
               { name: 'budget', label: 'Budget Range (optional)', type: 'text', placeholder: 'e.g. IDR 50M total' },
+              {
+                name: 'dietary',
+                label: 'Dietary / Cuisine Brief',
+                type: 'textarea',
+                icon: Check,
+                placeholder: 'Vegan count, halal, allergies, kids meals, cuisine direction...',
+                rows: 4,
+              },
+              {
+                name: 'proposal',
+                label: 'Proposal / Invoice Needs',
+                type: 'textarea',
+                icon: ClipboardCheck,
+                placeholder: 'Line-item quote, NPWP invoice, tasting, planner coordination, PO requirements...',
+                rows: 4,
+              },
               { name: 'name', label: 'Your Name', type: 'text', required: true },
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
               { name: 'email', label: 'Email', type: 'text' },
-              { name: 'notes', label: 'Tell us more', type: 'textarea', placeholder: 'Vibe, dietary needs, special requests, anything else we should know...' },
+              {
+                name: 'notes',
+                label: 'Tell us more',
+                type: 'textarea',
+                placeholder: 'Vibe, timing, service style, special requests, and anything else we should know...',
+                rows: 5,
+              },
             ]}
             packageOptions={EVENT_TYPES.map((e) => e.title)}
             whatsappName="Sofia"
             accent="#C5A028"
+            messageIntro="Hi Sofia, I'm planning an event in Bali and would like a proposal."
           />
         </div>
       </section>

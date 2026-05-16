@@ -160,7 +160,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
         h1: 'Private Chef Menus in Bali',
         title: 'Private Chef Menus Bali | Riviera & Odyssey — myCHEF',
         description:
-          'Browse the myCHEF private chef menus for Bali villas — Mediterranean tasting menus, seafood, plant-forward, and bespoke.',
+          'Browse the myCHEF private chef menus for Bali villas — Mediterranean tasting menus, seafood, plant-forward, and custom options.',
         keywords: ['private chef menus bali', 'tasting menu pricing bali'],
       },
       {
@@ -434,7 +434,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
         h1: 'Mixology in Bali — Private Villa Cocktail Programs',
         title: 'Mixology Bali | Private Villa Cocktail Programs — myCHEF',
         description:
-          'Private mixology in Bali — bespoke cocktail menus, signature drinks, demonstrations, fresh-pressed builds.',
+          'Private mixology in Bali — signature cocktail menus, custom drinks, demonstrations, fresh-pressed builds.',
         keywords: ['mixologist bali villa', 'cocktail program bali', 'villa mixology bali'],
       },
       {
@@ -443,7 +443,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
         h1: 'Sommelier Service in Bali — Villa Wine Pairings',
         title: 'Sommelier Bali | Villa Wine Pairings — myCHEF',
         description:
-          'Hire a sommelier in Bali for villa dinners. Curated wine pairings, table service, cellar selection.',
+          'Hire a sommelier in Bali for villa dinners. Tailored wine pairings, table service, cellar selection.',
         keywords: ['sommelier bali', 'wine pairing villa bali'],
       },
       {
@@ -721,7 +721,7 @@ export const JOURNAL_POSTS: readonly JournalPost[] = [
     date: '2025-02-21',
     category: 'menu-showcases',
     readTime: '5 min read',
-    content: `<p>An Indonesian menu tends to feel generous, aromatic, and rooted in place — perfectly suited to our <a href="/catering" class="text-[#C5A028] underline font-medium">villa catering</a> service for groups who want Bali on the table. It works beautifully for guests who want Bali to show up on the table — satay, sambals, grilled seafood, ceremonial dishes, and family-style sharing.</p><p>Mediterranean menus usually feel lighter, more polished, and more familiar to mixed international groups — and are a signature strength of our <a href="/fine-dining" class="text-[#C5A028] underline font-medium">private fine dining</a> experience. Handmade pasta, grilled fish, bright salads, and olive-oil-led flavours make them especially strong for birthdays, anniversaries, and villa dinners with wine.</p><p>Think about your guest list before you decide. If the group wants a local sense of occasion, Indonesian dishes often create the stronger memory. If you need broad appeal with a premium visual finish, Mediterranean menus are usually the safer choice.</p><p>The strongest answer is often a hybrid. Many villa hosts choose Mediterranean structure with one or two Indonesian signatures so the dinner feels both elevated and unmistakably Bali.</p>`,
+    content: `<p>An Indonesian menu tends to feel generous, aromatic, and rooted in place — perfectly suited to our <a href="/catering" class="text-[#C5A028] underline font-medium">villa catering</a> service for groups who want Bali on the table. It works beautifully for guests who want Bali to show up on the table — satay, sambals, grilled seafood, ceremonial dishes, and family-style sharing.</p><p>Mediterranean menus usually feel lighter, more polished, and more familiar to mixed international groups — and are a signature strength of our <a href="/fine-dining" class="text-[#C5A028] underline font-medium">private fine dining</a> experience. Handmade pasta, grilled fish, bright salads, and olive-oil-led flavours make them especially strong for birthdays, anniversaries, and villa dinners with wine.</p><p>Think about your guest list before you decide. If the group wants a local sense of occasion, Indonesian dishes often create the stronger memory. If you need broad appeal with a premium visual finish, Mediterranean menus are usually the safer choice.</p><p>The strongest answer is often a hybrid. Many villa hosts choose Mediterranean structure with one or two Indonesian signatures so the dinner feels both refined and unmistakably Bali.</p>`,
   },
   {
     slug: 'adriano-michelin-trained-chef-bali',

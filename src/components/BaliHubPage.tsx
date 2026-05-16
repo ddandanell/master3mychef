@@ -131,7 +131,7 @@ export default function BaliHubPage() {
             <Link to="/fine-dining" className="bg-white border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#C5A028] transition-all">
               <Flame className="w-6 h-6 text-[#C5A028] mb-3" />
               <h3 className="font-playfair text-2xl mb-3">Fine Dining</h3>
-              <p className="text-sm text-[#4A4745]">Two curated tasting menus in your villa. White-clad team, sommelier pairing, open-flame cooking.</p>
+              <p className="text-sm text-[#4A4745]">Two signature tasting menus in your villa. White-clad team, sommelier pairing, open-flame cooking.</p>
             </Link>
           </div>
         </div>

@@ -43,7 +43,7 @@ const PRICING_TIERS = [
     highlight: true,
   },
   {
-    title: 'Bespoke Program',
+    title: 'Signature Program',
     price: 'IDR 4,000,000',
     unit: '/day',
     features: ['Full-day program', 'Custom menu creation', 'Molecular techniques', 'Bar setup design', 'Branded cocktails', 'Unlimited guests'],
@@ -64,7 +64,7 @@ const WHAT_INCLUDED = [
 
 const HOW_IT_WORKS = [
   { step: '01', title: 'Briefing', desc: 'Your tastes, preferences, and the occasion.', icon: Calendar },
-  { step: '02', title: 'Menu design', desc: 'Bespoke cocktails crafted around your story.', icon: FlaskConical },
+  { step: '02', title: 'Menu design', desc: 'Signature cocktails built around your story.', icon: FlaskConical },
   { step: '03', title: 'Sourcing', desc: 'Premium spirits, fresh produce, unique ingredients.', icon: ShieldCheck },
   { step: '04', title: 'Experience', desc: 'Build, shake, stir, and taste. Interactive and memorable.', icon: Award },
   { step: '05', title: 'Take home', desc: 'Recipe cards and ingredient list to recreate.', icon: Star },
@@ -74,9 +74,9 @@ const FAQS = [
   { q: 'What is the difference between a bartender and a mixologist?', a: 'A bartender serves drinks efficiently. A mixologist designs cocktails as culinary creations — balancing flavors, sourcing unique ingredients, and creating an experience around each drink. Think chef versus cook.' },
   { q: 'Can guests participate in making cocktails?', a: 'Absolutely. Our masterclass tier is designed for hands-on participation. Guests learn techniques, build their own drinks, and take home recipe cards.' },
   { q: 'Do you use local Balinese ingredients?', a: 'Yes. We incorporate arak, local fruits, Balinese spices, and tropical botanicals into our creations. It is Bali in a glass.' },
-  { q: 'How long does a session last?', a: 'Cocktail Experience: 2 hours. Mixology Masterclass: 3 hours. Bespoke Program: full day with breaks.' },
+  { q: 'How long does a session last?', a: 'Cocktail Experience: 2 hours. Mixology Masterclass: 3 hours. Signature Program: full day with breaks.' },
   { q: 'What areas do you cover?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'How far in advance should I book?', a: '1–2 weeks for standard sessions. 3–4 weeks for bespoke programs during peak season.' },
+  { q: 'How far in advance should I book?', a: '1–2 weeks for standard sessions. 3–4 weeks for signature programs during peak season.' },
   { q: 'Can you create non-alcoholic experiences?', a: 'Yes. Our zero-proof programs are increasingly popular — complex, layered mocktails that rival their alcoholic counterparts.' },
   { q: 'Do you provide the alcohol?', a: 'We provide a detailed shopping list. You purchase the spirits. We bring all mixers, garnishes, tools, and glassware.' },
 ]
@@ -98,14 +98,14 @@ export default function ServiceMixologyPage() {
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Mixology Bali | Private Villa Cocktail Programs — myCHEF"
-        description="Private mixology in Bali — bespoke cocktail menus, signature drinks, demonstrations, fresh-pressed builds. From IDR 1,500,000 per session."
+        description="Private mixology in Bali — signature cocktail menus, custom drinks, demonstrations, fresh-pressed builds. From IDR 1,500,000 per session."
         canonical={`${SITE}/in-villa-service/mixology`}
         ogImage="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1600&q=80"
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema(
             'Mixology Experience Bali',
-            'myCHEF.id creates private mixology experiences in Bali with bespoke cocktail menus, demonstrations, and premium bar service. We design the drinks, setup, and guest interaction for villa events and celebrations.',
+            'myCHEF.id creates private mixology experiences in Bali with signature cocktail menus, demonstrations, and premium bar service. We design the drinks, setup, and guest interaction for villa events and celebrations.',
             `${SITE}/in-villa-service/mixology`,
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
@@ -130,7 +130,7 @@ export default function ServiceMixologyPage() {
             Mixology in Bali
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Bespoke cocktail programs and masterclasses in your villa. 
+            Signature cocktail programs and masterclasses in your villa. 
             Signature drinks, fresh ingredients, unforgettable experiences. From IDR 1,500,000.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

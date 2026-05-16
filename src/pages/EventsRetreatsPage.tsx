@@ -460,16 +460,27 @@ export default function EventsRetreatsPage() {
             fields={[
               { name: 'package', label: 'Retreat Type', type: 'select', required: true },
               { name: 'dates', label: 'Retreat Dates', type: 'text', placeholder: 'e.g. 10-15 June 2026', required: true },
+              { name: 'duration', label: 'Retreat Length / Days', type: 'text', placeholder: 'e.g. 5 days, 7 days' },
               { name: 'guests', label: 'Participants', type: 'number', placeholder: 'e.g. 20', required: true },
               { name: 'area', label: 'Retreat Location', type: 'text', required: true },
+              { name: 'meals', label: 'Meals Needed Per Day', type: 'text', placeholder: 'e.g. breakfast, lunch, dinner, 2 snacks' },
+              { name: 'profile', label: 'Participant Profile / Retreat Focus', type: 'text', placeholder: 'Yoga, wellness, mixed corporate, beginners...' },
               { name: 'schedule', label: 'Daily Rhythm', type: 'textarea', placeholder: 'Sunrise session, brunch, workshop, dinner, etc.' },
               { name: 'dietary', label: 'Dietary Breakdown', type: 'textarea', placeholder: 'e.g. 80% vegan, 5 gluten-free, 3 nut allergy...' },
+              {
+                name: 'safety',
+                label: 'Food Safety Priorities',
+                type: 'textarea',
+                placeholder: 'Allergy protocols, separate prep lines, ingredient sourcing, anything critical for your group...',
+                rows: 4,
+              },
               { name: 'name', label: 'Your Name', type: 'text', required: true },
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
               { name: 'email', label: 'Email', type: 'text', required: true },
             ]}
             whatsappName="Sofia"
             accent={ACCENT}
+            messageIntro="Hi Sofia, I'm planning a retreat in Bali and need a multi-day food proposal."
           />
         </div>
       </section>

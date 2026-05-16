@@ -116,7 +116,7 @@ export default function EventsAnniversariesPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Anniversary Dinners Bali | Private Chef & Catering — myCHEF"
-        description="Bespoke anniversary dinners and celebrations in Bali. Private chef, plated menus, villa decoration, and wine pairings. IDR 650K–2.5M/pp."
+        description="Private anniversary dinners and celebrations in Bali. Private chef, plated menus, villa decoration, and wine pairings. IDR 650K–2.5M/pp."
         canonical={`${SITE}/events/anniversaries`}
         ogImage={`${SITE}/generated/events/anniversary-romantic.webp`}
         jsonLd={[
@@ -157,7 +157,7 @@ export default function EventsAnniversariesPage() {
             Anniversary Celebrations in Bali — Private Chef Dinners
           </h1>
           <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-xl">
-            Bespoke villa anniversaries with chef-led menus, table service, wine pairing add-ons, and discreet surprise coordination — from a romantic dinner for two to a renewal of vows with family and friends.
+            Private villa anniversaries with chef-led menus, table service, wine pairing add-ons, and discreet surprise coordination — from a romantic dinner for two to a renewal of vows with family and friends.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
             <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
@@ -180,7 +180,7 @@ export default function EventsAnniversariesPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Bespoke by Design
+                Built Around You
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
                 A private anniversary should feel personal, not like a hotel package dropped into your villa

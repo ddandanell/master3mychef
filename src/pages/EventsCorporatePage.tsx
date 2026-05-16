@@ -466,17 +466,27 @@ export default function EventsCorporatePage() {
               { name: 'format', label: 'Event Format', type: 'select', required: true },
               { name: 'company', label: 'Company Name', type: 'text', required: true },
               { name: 'date', label: 'Event Date(s)', type: 'text', placeholder: 'e.g. 15-17 June 2026', required: true },
+              { name: 'duration', label: 'Duration / Run of Show', type: 'text', placeholder: 'e.g. 3 days, breakfast to networking dinner' },
               { name: 'guests', label: 'Headcount', type: 'number', placeholder: 'e.g. 40', required: true },
               { name: 'area', label: 'Preferred Location', type: 'text', required: true },
+              { name: 'venue_type', label: 'Venue Type', type: 'text', placeholder: 'Villa, resort, function room, beach club...' },
               { name: 'agenda', label: 'Event Agenda', type: 'textarea', placeholder: 'Breakfast, sessions, lunch, networking drinks, gala dinner...' },
               { name: 'dietary', label: 'Dietary Breakdown', type: 'textarea', placeholder: 'e.g. 5 vegan, 3 gluten-free, 10 halal...' },
               { name: 'budget', label: 'Budget Range (IDR)', type: 'text' },
+              {
+                name: 'procurement',
+                label: 'Procurement / Invoice Requirements',
+                type: 'textarea',
+                placeholder: 'PO, NPWP invoice, line-item proposal, payment terms, approvals...',
+                rows: 4,
+              },
               { name: 'name', label: 'Your Name', type: 'text', required: true },
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
               { name: 'email', label: 'Email', type: 'text', required: true },
             ]}
             whatsappName="Sofia"
             accent={ACCENT}
+            messageIntro="Hi Sofia, I'm planning a corporate event in Bali and need a proposal."
           />
         </div>
       </section>

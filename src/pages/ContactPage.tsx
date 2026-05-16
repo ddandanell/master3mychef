@@ -74,17 +74,51 @@ const CONCIERGES: Concierge[] = [
   },
 ]
 
+const SERVICE_OPTIONS = [
+  'Fine Dining',
+  'Catering',
+  'Events',
+  'Partners & Staffing',
+  'Not sure yet',
+] as const
+
+const INITIAL_FORM = {
+  service: '',
+  name: '',
+  whatsapp: '',
+  email: '',
+  company: '',
+  dates: '',
+  location: '',
+  guests: '',
+  duration: '',
+  dietary: '',
+  message: '',
+}
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState(INITIAL_FORM)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Build a wa.me message with the form contents (no backend, same pattern as the
-    // rest of the site) and open it.
-    const text = encodeURIComponent(
-      `Hi myCHEF,\n\nName: ${form.name}\nEmail: ${form.email}\n\n${form.message}`,
-    )
+    const lines = [
+      ['Service Needed', form.service],
+      ['Name', form.name],
+      ['WhatsApp', form.whatsapp],
+      ['Email', form.email],
+      ['Company / Planner', form.company],
+      ['Preferred Date(s)', form.dates],
+      ['Villa / Venue', form.location],
+      ['Group Size', form.guests],
+      ['Stay Length / Event Duration', form.duration],
+      ['Dietary / Cuisine Notes', form.dietary],
+      ['Planning Notes', form.message],
+    ]
+      .filter(([, value]) => value.trim())
+      .map(([label, value]) => `${label}: ${value}`)
+
+    const text = encodeURIComponent(`Hi myCHEF,\n\nI need help with a booking inquiry.\n\n${lines.join('\n')}`)
     window.open(`https://wa.me/${WA}?text=${text}`, '_blank', 'noopener,noreferrer')
     setSubmitted(true)
   }
@@ -269,7 +303,7 @@ export default function ContactPage() {
                 <p className="text-sm text-[#4A4745] mb-6">Open WhatsApp on your device to hit send. We will reply shortly.</p>
                 <button
                   type="button"
-                  onClick={() => { setSubmitted(false); setForm({ name: '', email: '', message: '' }) }}
+                  onClick={() => { setSubmitted(false); setForm(INITIAL_FORM) }}
                   className="text-xs uppercase tracking-[0.2em] text-[#8A8785] hover:text-[#1A1A1A]"
                 >
                   Send another →
@@ -277,9 +311,47 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5 bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-7">
-                <Field label="Name" value={form.name} onChange={(v) => setForm((f) => ({ ...f, name: v }))} required />
-                <Field label="Email" value={form.email} onChange={(v) => setForm((f) => ({ ...f, email: v }))} type="email" required />
-                <Field label="Message" value={form.message} onChange={(v) => setForm((f) => ({ ...f, message: v }))} multiline required />
+                <div className="grid md:grid-cols-2 gap-5">
+                  <Field
+                    label="Service Needed"
+                    value={form.service}
+                    onChange={(v) => setForm((f) => ({ ...f, service: v }))}
+                    type="select"
+                    options={SERVICE_OPTIONS}
+                    required
+                  />
+                  <Field label="Name" value={form.name} onChange={(v) => setForm((f) => ({ ...f, name: v }))} required />
+                  <Field label="WhatsApp" value={form.whatsapp} onChange={(v) => setForm((f) => ({ ...f, whatsapp: v }))} required />
+                  <Field label="Email" value={form.email} onChange={(v) => setForm((f) => ({ ...f, email: v }))} type="email" />
+                  <Field label="Company / Planner" value={form.company} onChange={(v) => setForm((f) => ({ ...f, company: v }))} />
+                  <Field label="Preferred Date(s)" value={form.dates} onChange={(v) => setForm((f) => ({ ...f, dates: v }))} />
+                  <Field label="Villa / Venue" value={form.location} onChange={(v) => setForm((f) => ({ ...f, location: v }))} />
+                  <Field label="Group Size" value={form.guests} onChange={(v) => setForm((f) => ({ ...f, guests: v }))} />
+                  <Field
+                    label="Stay Length / Event Duration"
+                    value={form.duration}
+                    onChange={(v) => setForm((f) => ({ ...f, duration: v }))}
+                  />
+                  <div className="md:col-span-2">
+                    <Field
+                      label="Dietary / Cuisine Notes"
+                      value={form.dietary}
+                      onChange={(v) => setForm((f) => ({ ...f, dietary: v }))}
+                      multiline
+                      rows={3}
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <Field
+                      label="Planning Notes"
+                      value={form.message}
+                      onChange={(v) => setForm((f) => ({ ...f, message: v }))}
+                      multiline
+                      rows={5}
+                      required
+                    />
+                  </div>
+                </div>
                 <button
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black text-xs uppercase tracking-[0.25em] font-semibold px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
@@ -325,16 +397,48 @@ function ContactItem({ icon: Icon, label, value, href, hint, dataSource }: { ico
   )
 }
 
-function Field({ label, value, onChange, type = 'text', multiline = false, required = false }: { label: string; value: string; onChange: (v: string) => void; type?: string; multiline?: boolean; required?: boolean }) {
+function Field({
+  label,
+  value,
+  onChange,
+  type = 'text',
+  multiline = false,
+  required = false,
+  options,
+  rows = 5,
+}: {
+  label: string
+  value: string
+  onChange: (v: string) => void
+  type?: 'text' | 'email' | 'select'
+  multiline?: boolean
+  required?: boolean
+  options?: readonly string[]
+  rows?: number
+}) {
   return (
     <label className="block">
       <span className="block text-xs uppercase tracking-[0.2em] mb-2 text-[#4A4745]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{label}</span>
-      {multiline ? (
+      {type === 'select' ? (
+        <select
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          required={required}
+          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028]"
+        >
+          <option value="">Select {label.toLowerCase()}</option>
+          {options?.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      ) : multiline ? (
         <textarea
           value={value}
           onChange={(e) => onChange(e.target.value)}
           required={required}
-          rows={5}
+          rows={rows}
           className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028] resize-none"
         />
       ) : (

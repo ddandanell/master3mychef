@@ -125,12 +125,12 @@ const OCCASIONS = [
 const CUISINE_DIRECTIONS = [
   { name: 'Italian', desc: 'Handmade pasta, risotto, osso buco, tiramisu' },
   { name: 'Mediterranean', desc: 'Olive oil, fresh seafood, grilled vegetables, herbs' },
-  { name: 'Indonesian Fine Dining', desc: 'Elevated local flavors with modern technique' },
+  { name: 'Indonesian Fine Dining', desc: 'Refined local flavors with modern technique' },
   { name: 'Seafood', desc: 'Catch-of-the-day, shellfish, ceviche, grilled fish' },
   { name: 'Steak', desc: 'Wagyu, ribeye, tenderloin with premium sides' },
   { name: 'Vegetarian Tasting', desc: 'Plant-based multi-course with seasonal produce' },
   { name: 'Asian Fusion', desc: 'East-meets-West flavors with creative presentation' },
-  { name: 'Custom Chef Menu', desc: 'Bespoke menu designed around your preferences' },
+  { name: 'Custom Chef Menu', desc: 'Custom menu designed around your preferences' },
 ]
 
 const TABLE_STYLING = [
@@ -476,7 +476,7 @@ export default function CateringPlatedPage() {
           <SectionHeader
             eyebrow="The Pairing"
             title="Wine and Cocktail Pairing"
-            subtitle="Pair each course with wine, cocktails, mocktails, or non-alcoholic pairing curated by our team."
+            subtitle="Pair each course with wine, cocktails, mocktails, or non-alcoholic pairing selected by our team."
           />
           <div className="grid sm:grid-cols-2 gap-4">
             {WINE_PAIRINGS.map((wp) => (

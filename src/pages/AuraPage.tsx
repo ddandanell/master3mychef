@@ -354,7 +354,7 @@ export default function AuraPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>What We Do</p>
-            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Every Occasion,<br />Elevated</h2>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Every Occasion,<br />Done Right</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {EVENT_TYPES.map((item) => (

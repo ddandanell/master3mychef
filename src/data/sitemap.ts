@@ -134,7 +134,7 @@ export const LANDING_PAGES: { slug: string; title: string; description: string; 
 <ul>
 <li><strong><a href="/events/weddings" class="text-[#C5A028] hover:underline font-medium">Weddings & receptions</a></strong> — Full wedding catering, cocktail hours, rehearsal dinners, and day-after brunches</li>
 <li><strong><a href="/events/corporate-events" class="text-[#C5A028] hover:underline font-medium">Corporate events</a></strong> — Working lunches, client entertainment, team dinners, product launches, and conferences</li>
-<li><strong><a href="/events/birthday-party-catering" class="text-[#C5A028] hover:underline font-medium">Milestone birthdays</a></strong> — 30th, 40th, 50th, 60th — curated menus matched to the guest of honour's taste</li>
+<li><strong><a href="/events/birthday-party-catering" class="text-[#C5A028] hover:underline font-medium">Milestone birthdays</a></strong> — 30th, 40th, 50th, 60th — custom menus matched to the guest of honour's taste</li>
 <li><strong>Proposal dinners</strong> — Private, candlelit, discreet — with ring placement coordination on request</li>
 <li><strong>Yoga retreats & wellness events</strong> — Macro-balanced, plant-forward menus designed around the retreat programme</li>
 <li><strong>Holiday villa parties</strong> — Christmas, New Year's Eve, Nyepi (silent day) dinners, Eid celebrations</li>
@@ -185,7 +185,7 @@ export const LANDING_PAGES: { slug: string; title: string; description: string; 
   {
     slug: 'private-dining-indonesia',
     title: 'Private Dining in Indonesia',
-    description: 'Curated private dining experiences in your villa, hotel suite, or private residence anywhere in Indonesia.',
+    description: 'Private dining experiences in your villa, hotel suite, or private residence anywhere in Indonesia.',
     date: '2025-02-20',
     content: `<h2>Why Private Dining Is the Better Dinner</h2>
 <p>A private dining experience removes every variable that makes restaurants inconsistent: a loud neighbouring table, a slow kitchen on a full Saturday, a waiter who does not know what is in the sauce. Private dining at your villa means the kitchen is working only for your table, and a <a href="/fine-dining/private-dinner" class="text-[#C5A028] hover:underline font-medium">private dinner</a> format keeps the timing and menu focused entirely on your group.</p>
@@ -280,7 +280,7 @@ export const LANDING_PAGES: { slug: string; title: string; description: string; 
   {
     slug: 'honeymoon-chef',
     title: 'Honeymoon Private Chef in Bali',
-    description: 'Honeymoon villa chef packages — breakfast in bed, sunset dinners, and curated romantic menus.',
+    description: 'Honeymoon villa chef packages — breakfast in bed, sunset dinners, and private romantic menus.',
     date: '2025-01-25',
     content: `<h2>The Honeymoon You Actually Remember</h2>
 <p>Honeymoons are not about doing as much as possible. They are about being somewhere extraordinary without anything going wrong. Food is the moment that anchors a day — the breakfast on the terrace, the dinner when you finally stop looking at your phones. myCHEF designs honeymoon chef packages around the rhythm of a honeymoon, not a corporate schedule.</p>
@@ -455,7 +455,7 @@ export const BLOG_POSTS: { slug: string; title: string; description: string; dat
 <h2>Groceries: Passed at Cost</h2>
 <p>myCHEF sources fresh every morning from Bali's local markets and suppliers. Grocery costs are passed through at market price with zero markup. For a typical 4-person dinner with quality ingredients, expect IDR 400,000–800,000 depending on protein (seafood and wagyu push higher).</p>
 <h2>Optional Extras</h2>
-<p>Wine pairing (curated selection, IDR 300,000–600,000 per person), service staff such as waiters (IDR 250,000 per person per event), and bartenders (market rate) are all available as add-ons. Glassware and linen are included.</p>
+<p>Wine pairing (tailored selection, IDR 300,000–600,000 per person), service staff such as waiters (IDR 250,000 per person per event), and bartenders (market rate) are all available as add-ons. Glassware and linen are included.</p>
 <h2>Tipping</h2>
 <p>Tipping is appreciated but not expected. A IDR 100,000–200,000 tip per chef is a meaningful gesture for good service in the Bali context.</p>
 <h2>Total Cost Example: 6-Person Villa Dinner</h2>

@@ -1213,14 +1213,19 @@ export default function CateringMainPage() {
               { name: 'date', label: 'Event Date', type: 'date', icon: Calendar, required: true },
               { name: 'guests', label: 'Number of Guests', type: 'number', icon: Users, placeholder: 'e.g. 12', required: true },
               { name: 'area', label: 'Villa Location', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu, Ubud...', required: true },
+              { name: 'duration', label: 'Stay Length / Service Window', type: 'text', icon: Calendar, placeholder: 'e.g. 12 days, dinner only, breakfast + dinner' },
+              { name: 'meals', label: 'Meals Needed', type: 'text', icon: Utensils, placeholder: 'Breakfast, lunch, dinner, BBQ, special event...' },
+              { name: 'budget', label: 'Budget Range (optional)', type: 'text', icon: CreditCard, placeholder: 'e.g. IDR 40M total' },
               { name: 'name', label: 'Your Name', type: 'text', required: true },
-              { name: 'notes', label: 'Dietary Notes / Special Requests', type: 'textarea' },
+              { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
+              { name: 'notes', label: 'Dietary Notes / Special Requests', type: 'textarea', rows: 4 },
             ]}
             packageOptions={CATERING_STYLES.map((s) => s.title)}
             submitLabelBuilder={(formData) => {
               const guestLabel = formData.guests?.trim() ? `${formData.guests.trim()} Guests` : 'Your Guests'
               return `Get Catering Quote for ${guestLabel}`
             }}
+            messageIntro="Hi myCHEF, I'd like a catering quote for my stay in Bali."
           />
           <p className="text-center text-xs text-[#4A4745]/60 mt-6">
             No spam. No calls unless you ask. Just a clear quote you can book or ignore.

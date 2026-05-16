@@ -8,7 +8,7 @@ const SCENARIOS = [
   {
     title: 'I want a private dinner for 2–6 people',
     href: '/fine-dining',
-    desc: 'Choose this if you want a romantic dinner, anniversary meal, or elevated tasting-style evening at the villa.',
+    desc: 'Choose this if you want a romantic dinner, anniversary meal, or tasting-menu style evening at the villa.',
     eyebrow: 'Fine Dining',
   },
   {

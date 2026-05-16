@@ -388,3 +388,57 @@ Tree-shaking was already excluding all 9 deps from the bundle, so output size ba
 **Last Updated:** 2026-05-16 13:22 UTC+8
 **Current Git Head:** 078569f (main)
 **Build Status:** ✅ PASSING
+
+---
+
+## MASTER PLANNING SYSTEM ESTABLISHED (2026-05-16) — Copilot Agent
+
+| Item | Status | File | Notes |
+|-----|--------|------|-------|
+| Created unified planning source of truth | ✅ DONE | `mychef/plan.md` | Replaced old audit-only plan with full Master Project Operating Plan |
+| Vision + mission + strategic direction | ✅ DONE | `mychef/plan.md` | Added clear brand direction and positioning |
+| KPI framework + North Star | ✅ DONE | `mychef/plan.md` | Added measurable goals and ownership columns |
+| Team ownership model | ✅ DONE | `mychef/plan.md` | Defined Owner, Copilot, and Kimi responsibilities |
+| Recurring "start-here" workflow | ✅ DONE | `mychef/plan.md` | Added step-by-step process for every major new task |
+| Live priority backlog | ✅ DONE | `mychef/plan.md` | Added prioritized tasks with done criteria and status |
+| Decision log foundation | ✅ DONE | `mychef/plan.md` | Added governance log for future decisions |
+
+**Last Updated:** 2026-05-16 13:45 UTC+8
+**Current Git Head:** 078569f (main)
+**Build Status:** ✅ PASSING
+
+---
+
+## MASTER BLUEPRINT CONSOLIDATION (2026-05-16) — Copilot Agent
+
+> User requested one total execution blueprint based on all Markdown strategy/audit files, including done vs not done and tone-system alignment.
+
+| Item | Status | File | Notes |
+|-----|--------|------|-------|
+| MD corpus reviewed and synthesized | ✅ DONE | `mychef/**/*.md` | Consolidated strategy, audit, persona, SEO, brand, and execution docs |
+| Master blueprint upgraded | ✅ DONE | `mychef/plan.md` | Replaced simple plan with full operating blueprint |
+| Done vs not-done state integrated | ✅ DONE | `mychef/plan.md` | Added shipped status + active blockers |
+| Tone & brand operating system added | ✅ DONE | `mychef/plan.md` | Added explicit voice rules + per-service tone model |
+| Execution machine workflow defined | ✅ DONE | `mychef/plan.md` | Intake → Build → Quality Gate → Launch → Learn loop |
+| Source-of-truth map added | ✅ DONE | `mychef/plan.md` | Mapped all key MD files to their roles in execution |
+
+**Last Updated:** 2026-05-16 14:00 UTC+8
+**Current Git Head:** 078569f (main)
+**Build Status:** ✅ PASSING
+
+---
+
+## PERFECTION SWEEP — TONE + TRUST COPY HARDENING (2026-05-16) — Copilot Agent
+
+> User requested a total-perfection upgrade pass. This sweep focused on highest-impact quality items still fully within agent control: voice consistency and trust-signal polish across conversion-critical surfaces.
+
+| Item | Status | Files | Notes |
+|-----|--------|------|-------|
+| Removed banned/weak tone words from live UX copy | ✅ DONE | HubPage, LunaPage, ServiceMixologyPage, ServiceSommelierPage, EventsAnniversariesPage, CateringPlatedPage, AboutPage, BaliHubPage, AuraPage, PartnerPlatformPage, RecommendedServicesPage, JoinTeamPage, ServiceButlersPage | Replaced words like “bespoke/curated/elevated” with concrete alternatives aligned to tone system |
+| Removed placeholder trust language in public-facing sections | ✅ DONE | PartnersPage, PressPage, ReviewsPage | Replaced “placeholder” messaging with neutral production-ready trust copy |
+| Synced SEO/content metadata language with tone system | ✅ DONE | `src/data/siteArchitecture.ts`, `src/data/sitemap.ts` | Updated metadata/content strings to match the no-cliche voice standard |
+| Blueprint backlog status updated | ✅ DONE | `mychef/plan.md` | P1-3 moved from Pending → In Progress |
+
+**Last Updated:** 2026-05-16 14:08 UTC+8
+**Current Git Head:** 078569f (main)
+**Build Status:** ✅ PASSING

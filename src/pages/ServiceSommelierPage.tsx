@@ -53,7 +53,7 @@ const PRICING_TIERS = [
 
 const WHAT_INCLUDED = [
   'Certified sommelier',
-  'Curated wine selection',
+  'Tailored wine selection',
   'Food pairing design',
   'Tableside service',
   'Tasting notes and stories',
@@ -71,8 +71,8 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'What does a sommelier do at a villa dinner?', a: 'A sommelier curates wine pairings for your menu, sources the bottles, serves tableside with tasting notes, and ensures each wine is opened and poured at the perfect moment. They elevate the meal from dinner to experience.' },
-  { q: 'Do I need to buy the wine separately?', a: 'Yes. The sommelier fee covers curation, service, and expertise. Wine is purchased separately based on the curated list. We work with your budget — from approachable to investment-grade.' },
+  { q: 'What does a sommelier do at a villa dinner?', a: 'A sommelier builds wine pairings for your menu, sources the bottles, serves tableside with tasting notes, and ensures each wine is opened and poured at the perfect moment. They turn dinner into a complete hospitality moment.' },
+  { q: 'Do I need to buy the wine separately?', a: 'Yes. The sommelier fee covers planning, service, and expertise. Wine is purchased separately based on the recommended list. We work with your budget — from approachable to investment-grade.' },
   { q: 'Can the sommelier work with my existing wine collection?', a: 'Absolutely. If you have a cellar or purchased wines, our sommelier will review your collection and design pairings from what you already own.' },
   { q: 'What types of wine do you pair?', a: 'Everything from Old World classics (Burgundy, Bordeaux, Champagne) to New World discoveries and emerging regions. We also curate sake, natural wine, and non-alcoholic pairings.' },
   { q: 'How many wines for a multi-course dinner?', a: 'Typically one wine per course, plus an aperitif. A 4-course dinner usually features 4–5 wines. A tasting menu may include 6–8.' },
@@ -98,7 +98,7 @@ export default function ServiceSommelierPage() {
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Sommelier Bali | Villa Wine Pairings — myCHEF"
-        description="Hire a sommelier in Bali for villa dinners. Curated wine pairings, table service, cellar selection. From IDR 1,200,000 per dinner."
+        description="Hire a sommelier in Bali for villa dinners. Tailored wine pairings, table service, cellar selection. From IDR 1,200,000 per dinner."
         canonical={`${SITE}/in-villa-service/sommelier`}
         ogImage={`${SITE}/generated/luna-wine.webp`}
         jsonLd={[
@@ -130,7 +130,7 @@ export default function ServiceSommelierPage() {
             Sommelier Service in Bali
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Curated wine pairings and tableside service for your villa dinner. 
+            Tailored wine pairings and tableside service for your villa dinner. 
             From approachable to investment-grade. From IDR 1,200,000 per dinner.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -206,7 +206,7 @@ export default function ServiceSommelierPage() {
         testimonials={[
           { name: 'Richard & Anne', location: 'London', quote: 'The sommelier transformed our anniversary dinner. Each wine was perfectly matched, and the stories behind each bottle made the evening unforgettable.', rating: 5 },
           { name: 'Private Dining Client', location: 'Tokyo', quote: 'We brought our own collection. The sommelier reviewed 40 bottles and designed a 6-course pairing that was extraordinary. True expertise.', rating: 5 },
-          { name: 'Wedding Couple', location: 'Sydney', quote: 'Our wedding sommelier curated wines for 60 guests across 5 courses. Every table was talking about the pairings. A highlight of the day.', rating: 5 },
+          { name: 'Wedding Couple', location: 'Sydney', quote: 'Our wedding sommelier selected wines for 60 guests across 5 courses. Every table was talking about the pairings. A highlight of the day.', rating: 5 },
         ]}
         title="What Clients Say"
         subtitle="Real reviews from villa dinners across Bali."

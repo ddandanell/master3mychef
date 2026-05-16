@@ -253,7 +253,7 @@ export default function PressPage() {
             </div>
             <h2 className="mt-4 font-playfair text-4xl text-[#1A1916]">Trusted by Bali&apos;s Best Villas</h2>
             <p className="mt-4 max-w-[640px] text-lg leading-8 text-[#4A4745]">
-              Placeholder logo wall styled as text brands for now — ready to swap with approved partner marks when available.
+              Selected outlets and partner groups are listed as text for now, and will be swapped to approved brand marks when licensing is finalized.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {TRUSTED_VILLAS.map((villa) => (

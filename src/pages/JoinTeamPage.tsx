@@ -30,7 +30,7 @@ const ROLES = [
   {
     icon: ChefHat,
     title: 'Private Chef',
-    desc: 'Cook refined breakfasts, lunches, family dinners, and elevated villa menus while bringing calm confidence to the guest experience.',
+    desc: 'Cook refined breakfasts, lunches, family dinners, and premium villa menus while bringing calm confidence to the guest experience.',
     requirements: ['Professional kitchen experience', 'Strong hygiene and prep discipline', 'Warm guest communication'],
   },
   {

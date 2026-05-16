@@ -547,7 +547,7 @@ export default function LunaPage() {
                 We arrive as a team of white-clad professionals. We transform your villa garden or a Balinese village courtyard into an open-air Michelin-inspired dining room.
               </p>
               <p className="text-[#1A1A1A]/70 mb-8 leading-relaxed">
-                Every course is prepared in front of your guests. Every wine is paired. Every detail — from the hand-pressed linen to the gold-rimmed plates — is considered. Choose between two curated tasting experiences.
+                Every course is prepared in front of your guests. Every wine is paired. Every detail — from the hand-pressed linen to the gold-rimmed plates — is considered. Choose between two signature tasting experiences.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -741,7 +741,7 @@ export default function LunaPage() {
           {/* Menu closing line */}
           <div className="mt-12 text-center">
             <p className="text-[#C5A028]/70 text-sm italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              Custom menus, dietary adjustments, and bespoke evenings arranged on request.
+              Custom menus, dietary adjustments, and private evening formats arranged on request.
             </p>
             <p className="text-white/[30%] text-xs mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               All prices subject to government tax and service.

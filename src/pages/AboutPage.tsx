@@ -48,7 +48,7 @@ const SECTIONS = [
       { icon: Users, title: 'Indonesian Talent First', desc: 'myCHEF grows local culinary talent through in-house training, mentorship, and clear progression into lead-chef roles.' },
       { icon: Shield, title: 'Trusted in Private Spaces', desc: 'Our team is trained to operate discreetly, communicate clearly, and leave every kitchen restored after service.' },
       { icon: Heart, title: 'Guest-First Hospitality', desc: 'Allergies, children, celebrations, last-minute changes, and cultural requirements are handled with care, not friction.' },
-      { icon: Globe, title: 'Local Produce, Global Technique', desc: 'We source in Bali, then cook with Mediterranean, modern European, Indonesian, and Asian techniques that feel elevated but never forced.' },
+      { icon: Globe, title: 'Local Produce, Global Technique', desc: 'We source in Bali, then cook with Mediterranean, modern European, Indonesian, and Asian techniques that feel refined but never forced.' },
       { icon: Award, title: 'Constant Refinement', desc: 'Menus, prep systems, and service flow are reviewed continuously so each booking gets better than the last.' },
     ],
   },

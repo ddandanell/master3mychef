@@ -352,12 +352,12 @@ export default function ReviewsPage() {
           <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028] font-semibold mb-4">Social proof</p>
           <h2 className="text-3xl md:text-4xl font-playfair mb-4">Seen where guests already search and share</h2>
           <p className="max-w-2xl mx-auto text-[#4A4745] leading-relaxed">
-            Placeholder badges for your review platforms — ready for Google, TripAdvisor and Airbnb Experiences proof points.
+            Review-platform badges prepared for Google, TripAdvisor, and Airbnb Experiences proof points.
           </p>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {SOCIAL_PROOF.map((badge) => (
               <div key={badge.name} className="rounded-[24px] border border-[#E8E2CF] bg-[#FAFAF8] px-6 py-7 text-left">
-                <p className="text-xs uppercase tracking-[0.3em] text-[#8A7A47] mb-3">Badge placeholder</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-[#8A7A47] mb-3">Review platform</p>
                 <h3 className="text-2xl font-playfair mb-2">{badge.name}</h3>
                 <p className="text-sm text-[#4A4745]">{badge.detail}</p>
               </div>

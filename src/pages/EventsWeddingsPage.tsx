@@ -495,10 +495,19 @@ export default function EventsWeddingsPage() {
             fields={[
               { name: 'package', label: 'Wedding Package', type: 'select', required: true },
               { name: 'date', label: 'Wedding Date', type: 'date', required: true },
+              { name: 'celebration_days', label: 'Celebration Length', type: 'text', placeholder: 'e.g. 1 day, 3-day wedding weekend' },
               { name: 'guests', label: 'Number of Guests', type: 'number', placeholder: 'e.g. 60', required: true },
               { name: 'villa', label: 'Villa Name', type: 'text', placeholder: 'e.g. Villa Aria, Seminyak', required: true },
               { name: 'area', label: 'Villa Location', type: 'text', placeholder: 'e.g. Seminyak, Uluwatu...', required: true },
               { name: 'ceremony', label: 'Ceremony / Reception Split', type: 'text', placeholder: 'e.g. Ceremony 4pm, Reception 6pm' },
+              {
+                name: 'cuisine_direction',
+                label: 'Cuisine Direction / Cultural Notes',
+                type: 'textarea',
+                placeholder: 'Indian, Western, Balinese, halal, vegetarian mix, family dishes, late-night snacks...',
+                rows: 4,
+              },
+              { name: 'planner', label: 'Planner / Production Contact', type: 'text', placeholder: 'Optional wedding planner or coordinator name' },
               { name: 'budget', label: 'Budget Range (IDR)', type: 'text', placeholder: 'e.g. 50M - 100M' },
               { name: 'dietary', label: 'Dietary Requirements', type: 'textarea', placeholder: 'Halal, vegan, allergies...' },
               { name: 'name', label: 'Your Name', type: 'text', required: true },
@@ -507,6 +516,7 @@ export default function EventsWeddingsPage() {
             ]}
             whatsappName="Sofia"
             accent={ACCENT}
+            messageIntro="Hi Sofia, I'm planning a wedding in Bali and would like a proposal."
           />
         </div>
       </section>

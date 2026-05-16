@@ -72,10 +72,10 @@ const DASHBOARD_BLOCKS = [
 const AUDIENCE = [
   { name: 'Luxury villas', desc: 'Independent high-end villas competing on guest experience.' },
   { name: 'Villa management companies', desc: 'Multi-property operators adding a premium hospitality layer.' },
-  { name: 'Boutique resorts', desc: 'Small luxury resorts wanting curated private dining without an in-house F&B build.' },
+  { name: 'Boutique resorts', desc: 'Small luxury resorts wanting private dining programs without an in-house F&B build.' },
   { name: 'Hospitality groups', desc: 'Portfolios scaling premium service across multiple properties.' },
   { name: 'Concierge operators', desc: 'Independent concierges adding fine dining to their offering.' },
-  { name: 'Luxury travel agencies', desc: 'High-touch agents curating end-to-end Bali itineraries.' },
+  { name: 'Luxury travel agencies', desc: 'High-touch agents planning end-to-end Bali itineraries.' },
   { name: 'Premium Airbnb operators', desc: 'Top-tier short-term rental hosts differentiating with hospitality.' },
 ]
 

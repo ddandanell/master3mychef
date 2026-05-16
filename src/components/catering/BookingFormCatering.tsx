@@ -9,6 +9,8 @@ interface Field {
   placeholder?: string
   options?: string[]
   required?: boolean
+  waLabel?: string
+  rows?: number
 }
 
 interface BookingFormCateringProps {
@@ -20,6 +22,7 @@ interface BookingFormCateringProps {
   accent?: string
   submitLabel?: string
   submitLabelBuilder?: (formData: Record<string, string>) => string
+  messageIntro?: string
 }
 
 const WA_NUMBER = '6282237565997'
@@ -33,6 +36,7 @@ export default function BookingFormCatering({
   accent = '#6B8E5A',
   submitLabel,
   submitLabelBuilder,
+  messageIntro,
 }: BookingFormCateringProps) {
   const formId = useId()
   const [submitted, setSubmitted] = useState(false)
@@ -44,11 +48,16 @@ export default function BookingFormCatering({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const lines = Object.entries(formData)
-      .filter(([, v]) => v)
-      .map(([k, v]) => `${k}: ${v}`)
-    const msg = `Hi ${whatsappName}, I'm interested in catering.\n\n${lines.join('\n')}`
-    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank')
+    const lines = fields
+      .map((field) => {
+        const value = formData[field.name]?.trim()
+        if (!value) return null
+        return `${field.waLabel ?? field.label}: ${value}`
+      })
+      .filter((line): line is string => Boolean(line))
+    const intro = messageIntro ?? `Hi ${whatsappName}, I'd like help with ${title.toLowerCase()}.`
+    const msg = [intro, lines.join('\n')].filter(Boolean).join('\n\n')
+    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer')
     setSubmitted(true)
   }
 
@@ -102,6 +111,7 @@ export default function BookingFormCatering({
               id={fieldId}
               value={value}
               onChange={(e) => handleChange(field.name, e.target.value)}
+              required={field.required}
               className={`w-full rounded-xl border border-[#E8E6E3] bg-white px-3 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#6B8E5A] transition-colors ${Icon ? 'pl-10' : ''}`}
             >
               <option value="">Select {field.label.toLowerCase()}</option>
@@ -115,7 +125,8 @@ export default function BookingFormCatering({
               value={value}
               onChange={(e) => handleChange(field.name, e.target.value)}
               placeholder={field.placeholder}
-              rows={3}
+              required={field.required}
+              rows={field.rows ?? 3}
               className="w-full rounded-xl border border-[#E8E6E3] bg-white px-3 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#6B8E5A] transition-colors resize-none"
             />
           ) : (
@@ -125,6 +136,7 @@ export default function BookingFormCatering({
               value={value}
               onChange={(e) => handleChange(field.name, e.target.value)}
               placeholder={field.placeholder}
+              required={field.required}
               className={`w-full rounded-xl border border-[#E8E6E3] bg-white px-3 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#6B8E5A] transition-colors ${Icon ? 'pl-10' : ''}`}
             />
           )}

@@ -69,7 +69,7 @@ export default function LocationsHubPage() {
       <SeoHead
         title="Private Chef Locations in Bali — myCHEF"
         description="Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Villa dining, catering and events in every region."
-        ogImage="/og-image.webp"
+        ogImage="/misc-og-image-xl.webp"
         canonical={canonical}
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Locations', canonical), faqPageSchema([
           { question: 'Which areas in Bali does myCHEF.id cover?', answer: 'myCHEF.id covers all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and Bingin — serving 560+ villas across the island.' },

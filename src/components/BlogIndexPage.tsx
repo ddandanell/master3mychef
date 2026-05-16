@@ -29,7 +29,7 @@ export default function BlogIndexPage() {
       <SeoHead
         title="myCHEF Journal | Private Chef Bali & Hosting Guides"
         description="Practical guides, cost breakdowns, and culinary insights for hosting in Bali villas — written by the myCHEF team."
-        ogImage="/og-image.webp"
+        ogImage="/misc-og-image-xl.webp"
         canonical={`${SITE}/blog`}
         jsonLd={[
           localBusinessSchema,

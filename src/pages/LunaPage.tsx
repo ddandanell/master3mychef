@@ -467,7 +467,7 @@ export default function LunaPage() {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-3.webp"
+                src="/generated/experience-luna-gallery-3-md.webp"
                 alt="Private chef preparing a fine dining course in a Bali villa kitchen"
                 width={800}
                 height={600}
@@ -509,7 +509,7 @@ export default function LunaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="order-2 md:order-1 rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-4.webp"
+                src="/generated/experience-luna-gallery-4-md.webp"
                 alt="Romantic candlelit dinner for two at a private Bali villa"
                 width={800}
                 height={600}
@@ -602,7 +602,7 @@ export default function LunaPage() {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-2.webp"
+                src="/generated/experience-luna-gallery-2-md.webp"
                 alt="Chef cooking at an open kitchen station during a private villa dinner"
                 width={800}
                 height={600}
@@ -962,7 +962,7 @@ export default function LunaPage() {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-2.webp"
+                src="/generated/experience-luna-gallery-2-md.webp"
                 alt="Chef flambe at open kitchen"
                 width={800}
                 height={600}
@@ -972,7 +972,7 @@ export default function LunaPage() {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-3.webp"
+                src="/generated/experience-luna-gallery-3-md.webp"
                 alt="Chef plating with guest"
                 width={800}
                 height={600}
@@ -982,7 +982,7 @@ export default function LunaPage() {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-4.webp"
+                src="/generated/experience-luna-gallery-4-md.webp"
                 alt="Group dining at sunset"
                 width={800}
                 height={600}

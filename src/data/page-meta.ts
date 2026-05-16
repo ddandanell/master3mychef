@@ -808,7 +808,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Book hosts and hostesses in Bali to greet guests, manage arrival flow, and keep villa weddings and events running smoothly.',
     canonical: `${SITE}/in-villa-service/host-hostess`,
     h1: 'Host & Hostess Hire in Bali',
-    ogImage: `${SITE}/generated/trust-hosts.webp`,
+    ogImage: `${SITE}/generated/misc-trust-hosts-lg.webp`,
   },
 
   'staffing-private-chef-placement': {

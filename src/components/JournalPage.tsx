@@ -16,7 +16,7 @@ export function JournalIndexPage() {
       <SeoHead
         title="Bali Private Chef Journal | Tips, Menus & Guides — myCHEF"
         description="Guides, cost breakdowns, and culinary insights for hosting in Bali — private chef cost, villa kitchens, retreats, and rehearsal dinners."
-        ogImage="/og-image.webp"
+        ogImage="/misc-og-image-xl.webp"
         canonical={canonical}
         jsonLd={[
           localBusinessSchema,
@@ -113,7 +113,7 @@ export function JournalPostPage() {
         title={post.title}
         description={post.excerpt}
         canonical={canonical}
-        ogImage="/og-image.webp"
+        ogImage="/misc-og-image-xl.webp"
         ogType="article"
         jsonLd={[
           localBusinessSchema,

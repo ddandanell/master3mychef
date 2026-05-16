@@ -220,7 +220,8 @@ async function collectImageFiles(): Promise<Record<string, ImageFile>> {
 
 function normalizeImagePath(refPath: string): string {
   // Convert relative paths to absolute paths
-  if (refPath.startsWith('/')) return refPath;
+  if (refPath.startsWith('/public/')) return refPath;
+  if (refPath.startsWith('/')) return `/public${refPath}`;
   if (refPath.startsWith('.')) {
     return `/public/${refPath.replace(/^\.\//, '').replace(/^\.\.\/public\//, '')}`;
   }

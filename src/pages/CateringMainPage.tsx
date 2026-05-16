@@ -497,7 +497,7 @@ export default function CateringMainPage() {
               <button
                 type="button"
                 onClick={() => setActiveTab('one-time')}
-                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all ${
+                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] ${
                   activeTab === 'one-time'
                     ? 'bg-[#6B8E5A] text-white shadow-md'
                     : 'text-[#4A4745] hover:text-[#1A1A1A]'
@@ -509,7 +509,7 @@ export default function CateringMainPage() {
               <button
                 type="button"
                 onClick={() => setActiveTab('daily')}
-                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all ${
+                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
                   activeTab === 'daily'
                     ? 'bg-[#C5A028] text-white shadow-md'
                     : 'text-[#4A4745] hover:text-[#1A1A1A]'
@@ -743,7 +743,7 @@ export default function CateringMainPage() {
                           key={opt.label}
                           type="button"
                           onClick={() => handleDecisionAnswer(qIdx, opt.result as 'one-time' | 'daily')}
-                          className={`px-5 py-4 rounded-xl border text-left text-sm transition-all ${
+                          className={`px-5 py-4 rounded-xl border text-left text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] ${
                             decisionAnswers[qIdx] === opt.result
                               ? 'border-[#6B8E5A] bg-[#6B8E5A]/5 text-[#1A1A1A] font-medium'
                               : 'border-[#E8E6E3] hover:border-[#6B8E5A]/40 hover:bg-[#FAFAF8]'
@@ -779,14 +779,14 @@ export default function CateringMainPage() {
                         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
                       }, 100)
                     }}
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A]"
                   >
                     <ArrowRight className="w-4 h-4" /> View {decisionResult === 'one-time' ? 'One-Time Catering' : 'Daily Chef Service'}
                   </button>
                   <button
                     type="button"
                     onClick={resetDecision}
-                    className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#4A4745] text-sm tracking-widest uppercase rounded-full hover:bg-[#FAFAF8] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#4A4745] text-sm tracking-widest uppercase rounded-full hover:bg-[#FAFAF8] transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A]"
                   >
                     Start Over
                   </button>

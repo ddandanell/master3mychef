@@ -630,32 +630,32 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
   'nusa-dua': {
     slug: 'nusa-dua',
     label: 'Nusa Dua',
-    h1: 'Private Chef Nusa Dua — Resort Villa Fine Dining & Events',
-    title: 'Private Chef Nusa Dua | Resort Villa Dining — myCHEF',
+    h1: 'Private Chef Service in Nusa Dua',
+    title: 'Private Chef Nusa Dua Bali | myCHEF Services',
     description:
-      'Private chef and event catering in Nusa Dua. Resort-grade plated service, beachfront dinners, corporate offsites.',
+      'Private chef in Nusa Dua, Bali for resort villas, executive dinners and events. Fine dining, catering and secure-estate service.',
     intro:
-      'In Nusa Dua, myCHEF delivers resort-grade villa dining for family compounds, corporate offsites, and polished multi-course dinners inside secure estates. We coordinate gate clearance, staff passes, and larger service brigades so guests get five-star pacing without leaving the villa.',
+      'Nusa Dua is built around five-star resorts, gated residences, and private estates where access, timing, and presentation matter as much as the menu. myCHEF plans secure-estate logistics, plated service, and executive hosting with resort-level precision.',
   },
   jimbaran: {
     slug: 'jimbaran',
     label: 'Jimbaran',
-    h1: 'Private Chef Jimbaran — Bayfront Villa Dining & Seafood',
-    title: 'Private Chef Jimbaran | Bayfront Villa Dining — myCHEF',
+    h1: 'Private Chef Service in Jimbaran',
+    title: 'Private Chef Jimbaran Bali | myCHEF Services',
     description:
-      'Private chef and catering in Jimbaran. Seafood-forward menus, bayfront villa dinners and weddings.',
+      'Private chef in Jimbaran, Bali for seafood dinners, beachside villas and group BBQs. Catering, events and sunset service by myCHEF.',
     intro:
-      'In Jimbaran, myCHEF builds seafood-led villa dinners, beachside BBQs, and intimate sunset suppers for guests staying between the bay and the clifftop resorts. We source from the morning catch, handle smoke-friendly grill setups, and plate polished meals that feel more private than the beach restaurants below.',
+      'Jimbaran blends bayfront villas, clifftop estates, and Bali\'s strongest seafood supply line. myCHEF builds sunset dinners, seafood BBQs, and celebration service that feels more private than the shoreline restaurants.',
   },
   sanur: {
     slug: 'sanur',
     label: 'Sanur',
-    h1: 'Private Chef Sanur — Quiet Villa Dining & Family Events',
-    title: 'Private Chef Sanur | Quiet Villa Dining — myCHEF',
+    h1: 'Private Chef Service in Sanur',
+    title: 'Private Chef Sanur Bali | myCHEF Services',
     description:
-      'Private chef and event catering in Sanur. Family-friendly menus, quieter villas, multi-generational dining.',
+      'Private chef in Sanur, Bali for family villas, beach dinners and events. Breakfast, catering and chef service with east-coast travel covered.',
     intro:
-      'Sanur bookings are slower-paced and family-led, so myCHEF designs sunrise breakfasts, elegant seafood dinners, and multi-generational villa meals that suit children, grandparents, and dietary needs in one service. We work around relaxed east-coast schedules with calm staffing, earlier dining times, and menus that feel refined without being heavy.',
+      'Sanur is an east-coast base for slower mornings, family compounds, and earlier dinner service. myCHEF designs calm, multi-generational dining with breakfast spreads, seafood dinners, and polished villa catering.',
   },
   berawa: {
     slug: 'berawa',
@@ -670,22 +670,22 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
   pererenan: {
     slug: 'pererenan',
     label: 'Pererenan',
-    h1: 'Private Chef Pererenan — Design Villas & Intimate Dining',
-    title: 'Private Chef Pererenan | Design Villa Dining — myCHEF',
+    h1: 'Private Chef Service in Pererenan',
+    title: 'Private Chef Pererenan Bali | myCHEF Services',
     description:
-      'Private chef in Pererenan, Bali. Quiet, design-forward villas, romantic dinners, small-group fine dining, and weekly meal prep.',
+      'Private chef in Pererenan, Bali for design villas, quiet stays and group dinners. Fine dining, catering and weekly chef service.',
     intro:
-      'Pererenan calls for quieter, design-led service, and myCHEF delivers romantic dinners, chef-table evenings, and discreet multi-day meal plans inside architect-designed villas near the surf. We handle harder-to-reach addresses, privacy-sensitive setups, and polished service for guests who chose Pererenan precisely because it feels more removed.',
+      'Pererenan is the design-led side of north Canggu: calmer roads, stronger kitchens, and villas built for longer stays. myCHEF runs intimate dinners, repeat chef visits, and understated group dining that fits the area.',
   },
   bukit: {
     slug: 'bukit',
     label: 'Bukit Peninsula',
-    h1: 'Private Chef Bukit Peninsula — Clifftop Villa Fine Dining',
-    title: 'Private Chef Bukit Peninsula | Clifftop Dining — myCHEF',
+    h1: 'Private Chef Service in Bukit Peninsula',
+    title: 'Private Chef Bukit Peninsula Bali | myCHEF Services',
     description:
-      'Private chef and event catering in the Bukit Peninsula — Bingin, Padang Padang, Ungasan. Clifftop fine dining for elopements and celebrations.',
+      'Private chef in Bukit Peninsula, Bali for clifftop villas, surf groups and celebrations. Fine dining, catering and event service.',
     intro:
-      'Across the Bukit Peninsula, myCHEF runs clifftop dining, surf-group feasts, and milestone celebrations for villas in Bingin, Pecatu, Padang Padang, and Ungasan. We plan around wind, lift access, and dramatic terrace layouts so the food, service, and sunset timing all feel intentional.',
+      'The Bukit Peninsula covers Bali\'s southern cliff belt, from Pecatu to Ungasan. myCHEF handles wind-aware setups, sunset timing, and mobile service for the peninsula\'s most dramatic villas.',
   },
   kuta: {
     slug: 'kuta',
@@ -738,10 +738,10 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
   denpasar: {
     slug: 'denpasar',
     label: 'Denpasar',
-    h1: 'Private Chef Denpasar — Corporate & Residential Dining',
-    title: 'Private Chef Denpasar | Corporate & Residential — myCHEF',
-    description: 'Professional catering and private chef services in Denpasar for corporate events.',
-    intro: 'Serving Bali’s administrative center, we provide structured catering for business events and professional private chef services.',
+    h1: 'Private Chef Service in Denpasar',
+    title: 'Private Chef Denpasar Bali | myCHEF Services',
+    description: 'Private chef in Denpasar, Bali for business lunches, family villas and private events. Fast central logistics, catering and chef service.',
+    intro: 'Denpasar is Bali\'s operational center, so myCHEF uses it for fast residential service, business lunches, and structured private events where timing and clean logistics matter.',
   },
   gianyar: {
     slug: 'gianyar',

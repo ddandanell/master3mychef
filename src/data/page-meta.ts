@@ -6,6 +6,8 @@
  * typed source of truth.
  */
 
+import { LOCATION_LANDING_PAGES } from './locationLandingPages'
+
 export interface PageMeta {
   /** Route path (e.g. '/', '/fine-dining') */
   path: string
@@ -336,32 +338,29 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'nusa-dua': {
     path: '/nusa-dua',
-    title: 'Private Chef Nusa Dua | Resort Villa Dining & Catering',
-    description:
-      'Private chef Nusa Dua service for resort villas, family compounds and corporate offsites. Plated dinners, breakfasts and event catering.',
+    title: LOCATION_LANDING_PAGES['nusa-dua'].title,
+    description: LOCATION_LANDING_PAGES['nusa-dua'].description,
     canonical: `${SITE}/nusa-dua`,
-    h1: 'Private Chef Nusa Dua — Resort Villa Fine Dining & Events',
-    ogImage: `${SITE}/generated/hub-villa.webp`,
+    h1: LOCATION_LANDING_PAGES['nusa-dua'].h1,
+    ogImage: `${SITE}${LOCATION_LANDING_PAGES['nusa-dua'].heroImage}`,
   },
 
   jimbaran: {
     path: '/jimbaran',
-    title: 'Private Chef Jimbaran | Seafood Dinners & Villa BBQs',
-    description:
-      'Private chef Jimbaran service for seafood dinners, beachside BBQs and villa celebrations. Fresh catch menus with chef-led grilling.',
+    title: LOCATION_LANDING_PAGES.jimbaran.title,
+    description: LOCATION_LANDING_PAGES.jimbaran.description,
     canonical: `${SITE}/jimbaran`,
-    h1: 'Private Chef Jimbaran — Bayfront Villa Dining & Seafood',
-    ogImage: `${SITE}/generated/hub-villa.webp`,
+    h1: LOCATION_LANDING_PAGES.jimbaran.h1,
+    ogImage: `${SITE}${LOCATION_LANDING_PAGES.jimbaran.heroImage}`,
   },
 
   sanur: {
     path: '/sanur',
-    title: 'Private Chef Sanur | Family Villa Dining & Small Events',
-    description:
-      'Private chef Sanur service for family villas, quiet dinners and small events. Early dining, flexible menus and calm service staff.',
+    title: LOCATION_LANDING_PAGES.sanur.title,
+    description: LOCATION_LANDING_PAGES.sanur.description,
     canonical: `${SITE}/sanur`,
-    h1: 'Private Chef Sanur — Quiet Villa Dining & Family Events',
-    ogImage: `${SITE}/generated/hub-villa.webp`,
+    h1: LOCATION_LANDING_PAGES.sanur.h1,
+    ogImage: `${SITE}${LOCATION_LANDING_PAGES.sanur.heroImage}`,
   },
 
   berawa: {
@@ -376,12 +375,29 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   pererenan: {
     path: '/pererenan',
-    title: 'Private Chef Pererenan | Fine Dining & Weekly Chef Service',
-    description:
-      'Private chef Pererenan service for design villas, romantic dinners and meal prep. Quiet setups, fine dining and weekly chef service.',
+    title: LOCATION_LANDING_PAGES.pererenan.title,
+    description: LOCATION_LANDING_PAGES.pererenan.description,
     canonical: `${SITE}/pererenan`,
-    h1: 'Private Chef Pererenan — Design Villas & Intimate Dining',
-    ogImage: `${SITE}/generated/hub-villa.webp`,
+    h1: LOCATION_LANDING_PAGES.pererenan.h1,
+    ogImage: `${SITE}${LOCATION_LANDING_PAGES.pererenan.heroImage}`,
+  },
+
+  bukit: {
+    path: '/bukit',
+    title: LOCATION_LANDING_PAGES.bukit.title,
+    description: LOCATION_LANDING_PAGES.bukit.description,
+    canonical: `${SITE}/bukit`,
+    h1: LOCATION_LANDING_PAGES.bukit.h1,
+    ogImage: `${SITE}${LOCATION_LANDING_PAGES.bukit.heroImage}`,
+  },
+
+  denpasar: {
+    path: '/denpasar',
+    title: LOCATION_LANDING_PAGES.denpasar.title,
+    description: LOCATION_LANDING_PAGES.denpasar.description,
+    canonical: `${SITE}/denpasar`,
+    h1: LOCATION_LANDING_PAGES.denpasar.h1,
+    ogImage: `${SITE}${LOCATION_LANDING_PAGES.denpasar.heroImage}`,
   },
 
   pecatu: {

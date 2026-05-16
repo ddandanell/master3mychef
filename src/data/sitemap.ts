@@ -6,6 +6,7 @@
 //   3) the public/sitemap.xml output
 // When adding a new page, add it here first.
 
+import { getCustomLocationPage } from './locationLandingPages'
 import { PILLARS, LOCATIONS, JOURNAL_POSTS } from './siteArchitecture'
 
 export type PageType =
@@ -164,6 +165,58 @@ export const LANDING_PAGES: { slug: string; title: string; description: string; 
 <h2>The myCHEF Value Proposition</h2>
 <p>While restaurant prices in Bali have surged, a <a href="/fine-dining/private-chef-bali" class="text-[#C5A028] hover:underline font-medium">private chef booking</a> often provides better value for groups. You avoid the 300% wine markups, the transport costs to Seminyak or Ubud, and the 21% tax/service charge common in hotels. Most importantly, you get a dedicated Michelin-trained team focused entirely on your table.</p>
 <p>Use our <a href="/calculator" class="text-[#C5A028] hover:underline font-medium">online pricing calculator</a> to build a budget for your specific dates and guest count.</p>`,
+  },
+  {
+    slug: 'private-tasting-menu-bali',
+    title: 'Private Tasting Menu Bali | Michelin-Level Villa Dining',
+    description: 'Bespoke 7-11 course tasting menus served in your Bali villa. Italian fine dining, Wagyu experiences, and Mediterranean craft by myCHEF.',
+    date: '2026-05-17',
+    content: `<h2>The Fine Art of the Villa Tasting Menu</h2>
+<p>A tasting menu is the peak of the <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining experience</a>. myCHEF brings this restaurant-level precision to your villa terrace, removing the noise and distractions of a public dining room.</p>
+<h2>Our 2026 Signature Menus</h2>
+<ul>
+<li><strong>The Mediterranean Journey</strong> — 7 courses focused on fresh seafood, citrus, and artisanal pasta.</li>
+<li><strong>The Wagyu Elevation</strong> — 9 courses showcasing the highest grade Japanese and Australian beef.</li>
+<li><strong>The Plant-Based Masterclass</strong> — 7 courses of innovative, chef-led Balinese and international vegan craft.</li>
+</ul>
+<h2>What to Expect During Your Service</h2>
+<p>Your team arrives 90 minutes before the first course. We handle the full table setting, wine service, and course-by-course explanation. Between each course, our staff ensures your glasses are full and the pace of the evening matches your group\'s mood. Finally, we leave your kitchen spotless, as if we were never there.</p>
+<p>Explore our <a href="/menus/tasting-menu" class="text-[#C5A028] hover:underline font-medium">current tasting menu styles</a> or message Putu, our AI concierge, to check date availability.</p>`,
+  },
+  {
+    slug: 'chef-table-experience-bali',
+    title: "Chef's Table Experience Bali | Interactive Villa Dining",
+    description: "An intimate, interactive chef's table experience in your Bali villa kitchen. Watch Michelin-trained chefs work up close. Perfect for foodies and celebrations.",
+    date: '2026-05-17',
+    content: `<h2>Beyond Dining: The Interactive Chef\'s Table</h2>
+<p>For those who love the theatre of the kitchen, our <a href="/fine-dining/chefs-table" class="text-[#C5A028] hover:underline font-medium">Chef\'s Table experience</a> is the ultimate choice. We transform your villa kitchen island into a front-row seat to culinary excellence.</p>
+<h2>Why Book a Chef\'s Table?</h2>
+<ul>
+<li><strong>Direct Interaction</strong> — Talk to the chef about techniques, sourcing, and the story behind every ingredient.</li>
+<li><strong>Live Plating</strong> — Watch the final touches being applied to complex Michelin-standard dishes.</li>
+<li><strong>Customised Pace</strong> — This is a slow, social evening designed for true food enthusiasts.</li>
+</ul>
+<h2>Perfect for Celebrations</h2>
+<p>The Chef\'s Table is our #1 recommendation for <strong>anniversaries</strong> and <strong>milestone birthdays</strong> in Bali. It provides more than just a meal; it provides a shared memory and an education in high-end gastronomy. We serve this format for groups of 2 to 12 guests.</p>
+<p>Read about <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">Adriano and our lead chefs</a> or start a menu discussion via WhatsApp today.</p>`,
+  },
+  {
+    slug: 'seafood-bbq-catering-bali',
+    title: 'Seafood BBQ Catering Bali | Jimbaran Style Villa Dinners',
+    description: 'Fresh Jimbaran-style seafood BBQ catering delivered and cooked in your Bali villa. Snapper, jumbo prawns, clams, and lobster with local sambals.',
+    date: '2026-05-17',
+    content: `<h2>Jimbaran Seafood BBQ — Served in Your Private Villa</h2>
+<p>The Jimbaran BBQ is a Bali icon, but the traffic and crowds can ruin the experience. myCHEF brings the exact same quality — and better — to your villa poolside. Our <a href="/catering/bbq-catering" class="text-[#C5A028] hover:underline font-medium">seafood BBQ service</a> is the island\'s most requested group dinner.</p>
+<h2>The Freshness Guarantee</h2>
+<p>Our chefs source directly from the fish markets at dawn on the day of your booking. We select only the best local Red Snapper, Jumbo King Prawns, Clams, and Calamari. Everything is marinated in our signature Balinese spice pastes and grilled over premium coconut husk charcoal for that authentic smoky finish.</p>
+<h2>Side Dishes & Accompaniments</h2>
+<ul>
+<li><strong>Organic Salads</strong> — Crisp, fresh, and vibrant.</li>
+<li><strong>Traditional Lawar</strong> — A Balinese vegetable classic.</li>
+<li><strong>Hand-Crafted Sambals</strong> — From mild to high-heat, made fresh in your kitchen.</li>
+<li><strong>Steamed Red & White Rice</strong> — The perfect base for a Balinese feast.</li>
+</ul>
+<p>Planning a social evening? <a href="/book" class="text-[#C5A028] hover:underline font-medium">Request a Seafood BBQ quote</a> for your villa location today.</p>`,
   },
   {
     slug: 'private-tasting-menu-bali-villa',
@@ -500,6 +553,88 @@ export const LANDING_PAGES: { slug: string; title: string; description: string; 
 <h2>Coverage Area</h2>
 <p>Primary coverage: Menteng, Gondangdia, Cikini. Extended coverage: Kemang, Dharmawangsa, Pondok Indah, Kuningan, Senopati. For locations outside these areas, review our <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing</a> and message us for a custom travel quote.</p>`,
   },
+  {
+    slug: 'corporate-retreat-catering-bali',
+    title: 'Corporate Retreat Catering Bali | Executive Offsite Support',
+    description: 'Professional catering and hospitality for corporate retreats in Bali. Menus, coffee breaks, and executive service by myCHEF.',
+    date: '2026-05-17',
+    content: `<h2>Executive Catering for Bali Corporate Retreats</h2>
+<p>A successful corporate offsite depends on timing, reliability, and food that fuels productivity. myCHEF provides specialized <a href="/catering/corporate-catering" class="text-[#C5A028] hover:underline font-medium">corporate retreat catering</a> that understands the needs of executive groups and company teams.</p>
+<h2>Scale and Consistency</h2>
+<p>We manage F&B operations for groups of 10 to 120 guests. Whether you are hosting a 3-day executive board retreat or a week-long company offsite, our teams ensure that breakfast is served on the dot, coffee breaks are seamless, and evening dinners are professional and high-end.</p>
+<h2>Our Corporate Capability</h2>
+<ul>
+<li><strong>Dedicated Event Manager</strong> — One point of contact for all logistics.</li>
+<li><strong>Dietary-Coded Menus</strong> — Clear labeling for all allergies and preferences.</li>
+<li><strong>Flexible Schedules</strong> — We adapt to changing workshop timings and session shifts.</li>
+<li><strong>Invoice Ready</strong> — Full NPWP invoicing for company expenses.</li>
+</ul>
+<p>Planning an offsite? <a href="/help/corporate-guide" class="text-[#C5A028] hover:underline font-medium">View our corporate planning guide</a> or request a formal proposal today.</p>`,
+  },
+  {
+    slug: 'luxury-birthday-party-bali',
+    title: 'Luxury Birthday Party Bali | Villa Celebration Catering',
+    description: 'Host a milestone birthday party in your Bali villa with myCHEF. Full-service catering, bar service, and event coordination.',
+    date: '2026-05-17',
+    content: `<h2>Milestone Birthdays, Elevated In Your Villa</h2>
+<p>A birthday in Bali is a lifetime memory. myCHEF ensures it is a stress-free one. We provide high-end <a href="/events/birthdays" class="text-[#C5A028] hover:underline font-medium">birthday party catering</a> and coordination, allowing you to be a guest at your own celebration.</p>
+<h2>The Full Celebration Suite</h2>
+<p>We do more than just the food. Our birthday packages include:</p>
+<ul>
+<li><strong>Interactive Bar & Mixology</strong> — Professional bartenders and custom cocktail menus.</li>
+<li><strong>Event Styling</strong> — Florals, candlelight, and table settings that match your theme.</li>
+<li><strong>Staffed Service</strong> — Attentive team to ensure guests are always looked after.</li>
+</ul>
+<p>Whether you want a long-table formal dinner for 20 or a high-energy poolside BBQ for 60, we scale our team and menu to match. We cover all areas including Seminyak, Canggu, Ubud, and Uluwatu.</p>
+<p>Message Olivia on WhatsApp to <a href="/book" class="text-[#C5A028] hover:underline font-medium">start planning your celebration</a>.</p>`,
+  },
+  {
+    slug: 'hire-private-chef-bali-monthly',
+    title: 'Hire Private Chef Bali Monthly | Long-Term Villa Placement',
+    description: 'Professional private chef placement for long-term villa stays in Bali. Vetted chefs for monthly residency and family meals.',
+    date: '2026-05-17',
+    content: `<h2>Long-Term Culinary Support for Bali Residents</h2>
+<p>For villa owners and long-term guests, myCHEF provides professional <a href="/staffing/private-chef-placement" class="text-[#C5A028] hover:underline font-medium">private chef placement</a> for monthly or recurring stays. Enjoy restaurant-quality meals daily without the hassle of hiring and vetting yourself.</p>
+<h2>The myCHEF Vetting Process</h2>
+<p>We don\'t just find a chef; we find a match. Our placement service includes:</p>
+<ul>
+<li><strong>Rigorous Vetting</strong> — Criminal record checks, health certification, and multi-stage cooking trials.</li>
+<li><strong>Dietary Specialisation</strong> — Matching you with a chef who understands your specific health or cultural needs.</li>
+<li><strong>Contract Management</strong> — We handle all Indonesian employment contracts and compliance.</li>
+</ul>
+<p>Speak with Marco, our Head of Staffing, to <a href="/staffing" class="text-[#C5A028] hover:underline font-medium">view current candidate profiles</a>.</p>`,
+  },
+  {
+    slug: 'villa-staff-bali-agency',
+    title: 'Villa Staff Bali Agency | Vetted Butlers, Waiters & Staff',
+    description: 'The trusted agency for vetted villa staff in Bali. Uniformed butlers, waiters, and villa managers for placement.',
+    date: '2026-05-17',
+    content: `<h2>Professional Villa Staffing for High-End Bali Residences</h2>
+<p>Finding reliable, trained staff in Bali can be a challenge. myCHEF Staffing is the island\'s most trusted <a href="/staffing" class="text-[#C5A028] hover:underline font-medium">villa staffing agency</a>, providing hotel-standard hospitality professionals to private villas and estates.</p>
+<h2>Available Roles for Placement</h2>
+<ul>
+<li><strong>Private Butlers</strong> — 5-star trained for guest relations and discreet service.</li>
+<li><strong>Uniformed Waiters</strong> — Experienced in fine dining and large-scale event flow.</li>
+<li><strong>Villa Managers</strong> — Operational leaders for estate management and concierge.</li>
+</ul>
+<p><a href="/contact" class="text-[#C5A028] hover:underline font-medium">Contact our staffing desk</a> to discuss your household or villa portfolio needs.</p>`,
+  },
+  {
+    slug: 'butler-service-bali-daily-rate',
+    title: 'Butler Service Bali Daily Rate | Professional Villa Butlers',
+    description: 'Hire a professional private butler in Bali by the day. Daily rates for villa guest relations and concierge support by myCHEF.',
+    date: '2026-05-17',
+    content: `<h2>Hotel-Level Butler Service, In Your Private Villa</h2>
+<p>Elevate your Bali stay with a dedicated <a href="/in-villa-service/butlers" class="text-[#C5A028] hover:underline font-medium">private butler</a>. Our daily service provides a professional point of contact for all guest needs, from morning coffee to evening dinner coordination.</p>
+<h2>The Daily Butler Role</h2>
+<ul>
+<li><strong>Guest Concierge</strong> — Managing bookings, transport, and local recommendations.</li>
+<li><strong>Table & Bar Service</strong> — Ensuring drinks are served and tables are set perfectly.</li>
+<li><strong>Discreet Hospitality</strong> — High-end service that respects your privacy.</li>
+</ul>
+<p>We offer transparent <a href="/in-villa-service" class="text-[#C5A028] hover:underline font-medium">daily rates for butler service</a> anywhere in Bali. Our teams are English-speaking, background-checked, and highly experienced in 5-star villa environments.</p>
+<p>Message us on WhatsApp to <a href="/book" class="text-[#C5A028] hover:underline font-medium">check butler availability</a> for your dates.</p>`,
+  },
 ]
 
 export const GUIDES: { slug: string; title: string; description: string; date?: string; content?: string }[] = [
@@ -556,103 +691,218 @@ export const GUIDES: { slug: string; title: string; description: string; date?: 
 
 export const BLOG_POSTS: { slug: string; title: string; description: string; date?: string; content?: string }[] = [
   {
-    slug: 'blog/private-chef-bali-cost-breakdown-2026',
-    title: 'Private Chef Bali — Cost Breakdown 2026',
-    description: 'Full 2026 cost breakdown for hiring a private chef in Bali — chef fees, groceries, service charges, and tipping.',
-    date: '2026-01-10',
-    content: `<h2><a href="/pricing" class="text-[#C5A028] hover:underline font-medium">What You Actually Pay For</a></h2>
-<p>A private chef booking in Bali has three cost components: the chef service fee, groceries, and any extras (wine, special equipment, additional staff). Understanding how each is charged removes 90% of the sticker shock.</p>
-<h2>Chef Service Fee (2026 Rates)</h2>
-<p>myCHEF charges per person for fixed menus, or per hour for flexible villa cooking:</p>
+    slug: "blog/private-chef-bali-cost-breakdown-2026",
+    title: "Private Chef Bali Cost Breakdown 2026",
+    description: "2026 Bali private chef cost breakdown with sample villa dinner totals, grocery ranges, staffing add-ons, and booking tips you can use.",
+    date: "2026-05-10",
+    content: `<p>If you are pricing a private chef in Bali, the number only makes sense once you split it into parts. The useful question is not “How much is a private chef?” It is “What do I pay for, what changes the quote, and what stays fixed?” That is where most villa guests save time. It is also how you avoid comparing one clean quote with another quote that hides half the spend.</p>
+<h2><a href="/pricing" class="text-[#C5A028] hover:underline font-medium">The 3 Parts of a Private Chef Bill</a></h2>
+<p>Most myCHEF bookings in Bali have three lines: chef service, groceries, and optional extras. Chef service is the labor, equipment, plating, setup, and cleanup. Groceries are passed through at cost. Extras cover things like added wait staff, bartenders, or wine. That structure matters because it tells you which parts are fixed and which parts move with the menu.</p>
+<p>For example, a simple villa dinner for four can keep the chef fee steady while the grocery bill changes fast. Local line-caught fish, Australian wagyu, imported cheese, or alcohol all move the total. A plant-forward menu with market vegetables, tempeh, and one seafood course lands very differently from a steak-led dinner with pairings.</p>
+<h2>2026 Rates You Can Use as a Real Starting Point</h2>
+<p>Here are the working public anchors from myCHEF's current offer:</p>
 <ul>
-<li><strong>Mediterranean <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">Fine Dining</a> (7-course)</strong> — IDR 2,200,000 per person</li>
-<li><strong>Wagyu Fine Dining</strong> — IDR 2,400,000 per person</li>
-<li><strong>Private Villa Chef (hourly)</strong> — IDR 600,000 per hour (minimum 3 hours)</li>
-<li><strong><a href="/catering/bbq-catering" class="text-[#C5A028] hover:underline font-medium">BBQ Catering</a></strong> — from IDR 450,000 per person</li>
-<li><strong>Drop-Off Catering</strong> — from IDR 250,000 per person</li>
+<li><strong>Private villa chef</strong> — IDR 600,000 per hour, with a 3-hour minimum.</li>
+<li><strong><a href="/catering/bbq-catering" class="text-[#C5A028] hover:underline font-medium">BBQ catering</a></strong> — from IDR 450,000 per guest.</li>
+<li><strong>Drop-off catering</strong> — from IDR 250,000 per guest.</li>
+<li><strong><a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">Mediterranean fine dining</a></strong> — IDR 2,200,000 per guest.</li>
+<li><strong>Wagyu fine dining</strong> — IDR 2,400,000 per guest.</li>
 </ul>
-<p>The service fee covers the chef, all equipment, all tableware, and full cleanup. No hidden service charges on top.</p>
-<h2>Groceries: Passed at Cost</h2>
-<p>myCHEF sources fresh every morning from Bali's local markets and suppliers. Grocery costs are passed through at market price with zero markup. For a typical 4-person dinner with quality ingredients, expect IDR 400,000–800,000 depending on protein (seafood and wagyu push higher).</p>
-<h2>Optional Extras</h2>
-<p>Wine pairing (tailored selection, IDR 300,000–600,000 per person), service staff such as waiters (IDR 250,000 per person per event), and bartenders (market rate) are all available as add-ons. Glassware and linen are included.</p>
-<h2>Tipping</h2>
-<p>Tipping is appreciated but not expected. A IDR 100,000–200,000 tip per chef is a meaningful gesture for good service in the Bali context.</p>
-<h2>Total Cost Example: 6-Person Villa Dinner</h2>
-<p>Mediterranean tasting menu × 6: IDR 13,200,000 · Groceries: IDR 600,000 · Optional wine: IDR 1,800,000 · <strong>Total: IDR 15,600,000</strong> (approx USD 960 / EUR 890). Per person this is IDR 2,600,000 — less than a comparable restaurant experience when you factor in transport, service charges, and the fact that you never leave your villa.</p>`,
+<p>These numbers help you pick the right format before you even ask for a quote. A birthday lunch for ten is usually better handled as villa catering or a BBQ. An anniversary dinner for two or four often justifies a tasting menu. A family staying a week in <a href="/locations/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu</a> or <a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak</a> may get the best value from flexible hourly cooking across several meals.</p>
+<h2>Real Bali Cost Scenarios</h2>
+<p><strong>Scenario 1: casual family dinner for 6.</strong> If you book a 4-hour private chef service, the labor starts at IDR 2,400,000. Add groceries of roughly IDR 600,000 to 1,000,000 for fish, chicken, salads, rice, and dessert. Total working range: about IDR 3,000,000 to 3,400,000, before drinks.</p>
+<p><strong>Scenario 2: BBQ night for 12.</strong> At IDR 450,000 per guest, the menu starts at IDR 5,400,000. Add premium seafood or imported beef and the grocery side goes up. Add one extra server if the group is mixed between adults and children and you want the evening to run cleanly. This is why a BBQ quote can change a lot with protein choices.</p>
+<p><strong>Scenario 3: fine dining for 6.</strong> A 7-course Mediterranean menu at IDR 2,200,000 per guest lands at IDR 13,200,000. Add groceries around IDR 600,000 and wine pairings from IDR 300,000 to 600,000 per guest if you want them. That puts a polished villa dinner around the same zone as a top restaurant night once you factor in transport, tax, and drink markups.</p>
+<p>The hidden win is not just price. It is friction. No traffic. No split cars. No waiting for a table because someone is late. No one in your group trying to decode three menus to deal with allergies.</p>
+<h2>What Pushes the Total Up or Down</h2>
+<p>The biggest cost driver is protein. Reef fish, prawns, imported beef, and wagyu change the grocery bill fast. The second is service format. Shared platters are usually more efficient than plated tasting menus. The third is staffing. If you want passed canapes, synchronized wine pours, or a cocktail station, extra hands help.</p>
+<p>You can keep a Bali private chef booking efficient by doing four simple things. First, share clear guest numbers early. Second, decide whether the night is about abundance or theatre. Third, tell the team what kitchen you have. Fourth, use one strong menu instead of trying to cover every cuisine at once. Guests who want a faster estimate can start with the <a href="/calculator" class="text-[#C5A028] hover:underline font-medium">pricing calculator</a> and then move to a custom brief through <a href="/quote" class="text-[#C5A028] hover:underline font-medium">the quote form</a>.</p>
+<p>If your stay is longer than one night, cost per meal often improves when the same team cooks several services. That is especially useful for villa groups in <a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud</a> or <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu</a>, where guests often prefer to stay put once the day winds down.</p>
+<h2>FAQ</h2>
+<h3>Do private chefs in Bali add a service charge on top?</h3>
+<p>With myCHEF, the service fee, equipment, tableware, and cleanup are already in the chef line. Groceries are passed at cost. Extras are quoted separately, so the structure is easy to read.</p>
+<h3>How much should I budget for groceries?</h3>
+<p>For a normal villa dinner, groceries often sit around IDR 400,000 to 800,000 for four guests. Seafood-heavy or beef-heavy menus will go higher. Plant-forward menus usually stay lower.</p>
+<h3>Is tipping expected?</h3>
+<p>No. It is appreciated, not required. If service was excellent, IDR 100,000 to 200,000 per chef is a normal and meaningful thank you.</p>`,
   },
   {
-    slug: 'blog/best-bali-villas-private-chef-kitchen',
-    title: 'Best Bali Villas with a Private Chef Kitchen',
-    description: 'Our pick of the best Bali villas with chef-friendly kitchens — gas hobs, professional ranges, prep space, and storage.',
-    date: '2025-11-20',
-    content: `<h2>What Makes a Kitchen Chef-Friendly?</h2>
-<p>A chef-friendly kitchen has four things: adequate heat output (gas preferred, induction acceptable), a large prep surface, proper ventilation, and enough refrigeration for a day's mise en place. Most luxury Bali villas tick at least three of these. Where they fall short, myCHEF brings portable equipment.</p>
-<h2>The Heat Question</h2>
-<p>Gas hobs are preferred for high-heat cooking — stir-fries, searing, and wok work require flame response that induction cannot fully replicate. However, myCHEF chefs are trained to work on induction and ceramic hobs and adjust technique accordingly. No villa should feel excluded from a chef experience because of the cooktop.</p>
-<h2>Prep Space</h2>
-<p>The minimum for a tasting menu for 6 is roughly 2m² of clear, clean prep surface. Villas with butler's kitchens or outdoor preparation areas are ideal. Island-style layouts that face the dining area allow guests to watch the cooking — this is part of the experience for <a href="/fine-dining/private-dinner" class="text-[#C5A028] hover:underline font-medium">private dinners</a>.</p>
-<h2>What myCHEF Brings</h2>
-<p>Regardless of kitchen spec, myCHEF arrives with: all cookware and baking equipment, tableware and glassware, a portable gas burner for wok stations, prep boards, and a full kit of professional knives. The only things needed from the villa are running water, electricity, and refrigerator space.</p>
-<h2>What to Tell the Chef When Booking</h2>
-<p>When you plan an <a href="/in-villa-service" class="text-[#C5A028] hover:underline font-medium">in-villa service</a>, mention: how many hobs are available, whether the kitchen is gas or induction, any restrictions on cooking smells (some villa managers prefer no strong aromas near the pool area), and whether there is outdoor prep or serving space. This lets the chef plan the mise en place timeline precisely.</p>
-<h2>Villas With Outstanding Kitchen Setups</h2>
-<p>From myCHEF's experience across 560+ villas in Bali: larger luxury estates in Seminyak and Canggu most consistently have full-sized refrigerators, gas ranges, and proper ventilation. Ubud jungle villas often have open-sided kitchens that create excellent airflow for long cooking days. Uluwatu cliff villas frequently have spectacular outdoor grilling terraces that work perfectly for <a href="/catering/bbq-catering" class="text-[#C5A028] hover:underline font-medium">BBQ</a> and seafood events.</p>`,
+    slug: "blog/best-bali-villas-private-chef-kitchen",
+    title: "Best Bali Villas With a Private Chef Kitchen",
+    description: "What makes a Bali villa kitchen work for a private chef, with prep-space checks, equipment notes, and location-by-location tips.",
+    date: "2026-04-24",
+    content: `<p>A villa does not need a restaurant kitchen to host a great private chef dinner. It needs the right basics. That is good news, because many Bali guests worry about the kitchen long before they should. Across 560+ villa services, the pattern is simple: chefs can adapt to a lot, but they need to know the constraints early.</p>
+<h2>What a Chef Actually Needs in a Bali Villa Kitchen</h2>
+<p>A chef-friendly kitchen has four practical traits. First, reliable heat. Gas is best, but strong induction works. Second, clear prep space. A tasting menu for six needs more room than guests expect. Third, cold storage. A full refrigerator is fine if part of it can be cleared. Fourth, ventilation. Searing fish in a sealed room with weak extraction is not fun for anyone.</p>
+<p>If you are choosing between villas, ask for real kitchen photos. You want to see the hob, the oven, the main counter, and the fridge. Marketing shots often show the island but not the working side. That one detail can save a day of back and forth once you are ready to book <a href="/catering/villa-catering" class="text-[#C5A028] hover:underline font-medium">in-villa catering</a> or a chef-led dinner.</p>
+<h2>What myCHEF Can Work Around</h2>
+<p>Most weak points are manageable. If a villa only has two burners, the team can stage more prep in advance. If the counter is small, chefs bring boards and portable setup. If the kitchen is open-air, the timeline can be adjusted around wind and light. myCHEF also arrives with cookware, knives, service gear, tableware, and cleanup tools, so guests are not depending on whatever the villa owner left in the drawers.</p>
+<p>The main issue to flag is not prestige. It is friction. Tell the team if the villa has strict smell rules, a steep stair route between kitchen and dining table, or a separate staff entrance that closes at night. Those details matter more than whether the room looks glossy on Instagram.</p>
+<h2>Area-by-Area Patterns Guests Should Know</h2>
+<p><a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak</a> villas tend to have solid indoor kitchens with decent refrigeration. <a href="/locations/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu</a> properties often have open-plan islands that work well for chef interaction but need tighter airflow planning if the weather is still. <a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud</a> villas usually have calm prep environments and good outdoor airflow, which suits longer family-style dinners. <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu</a> and <a href="/locations/jimbaran" class="text-[#C5A028] hover:underline font-medium">Jimbaran</a> often shine for grill setups, sea views, and sunset timing.</p>
+<p>If your priority is a showpiece dinner, pick the villa with the best guest-facing island or terrace. If your priority is smooth execution for a group with children, pick the villa with the shortest path from fridge to table and the least amount of stairs.</p>
+<p>A fast kitchen checklist helps. Count burners. Check oven size. Ask whether the extractor works. Clear one fridge shelf. Confirm whether dining is inside or outside. Those five details tell the chef more than a long villa description ever will. They also help you decide whether the right fit is a seated dinner, a grazing setup, or a lighter service from <a href="/services" class="text-[#C5A028] hover:underline font-medium">the main services page</a>.</p>
+<p>Guests sometimes assume the “best” villa kitchen is the one with the highest-end finish. In practice, the best working kitchens are the ones with simple flow. Clear access. Good light. Enough bench space. A sink that is easy to use. That is why some modest kitchens outperform larger ones once the service starts.
+<h2>How to Brief the Team Before Booking</h2>
+<p>Send five facts. Number of guests. Meal format. Kitchen photos. Dining location. Any access limits. That is enough for the team to decide whether the night needs a simple chef setup, a portable burner, or extra staff. Guests planning special occasions can pair the kitchen brief with the right service page, such as <a href="/services/romantic-dinners" class="text-[#C5A028] hover:underline font-medium">romantic dinners</a>, <a href="/services/birthday-celebrations" class="text-[#C5A028] hover:underline font-medium">birthday celebrations</a>, or <a href="/services/villa-parties" class="text-[#C5A028] hover:underline font-medium">villa parties</a>.</p>
+<p>If you do not have the villa locked yet, ask for a short recommendation instead of guessing. A fast message through <a href="/contact" class="text-[#C5A028] hover:underline font-medium">contact</a> or <a href="/quote" class="text-[#C5A028] hover:underline font-medium">custom quote</a> is usually enough to rule a property in or out.</p>
+<p>If you are comparing two villas that look similar online, send both. A team that cooks in Bali every week can usually tell which one will run better from a few photos and the neighborhood alone. That saves money, but more importantly, it saves the night.</p>
+<h2>FAQ</h2>
+<h3>Can a private chef work in a villa with induction only?</h3>
+<p>Yes. Gas is easier for some techniques, but trained chefs adapt. The key is to share the kitchen photos in advance so timing and equipment can be planned properly.</p>
+<h3>Does the villa need to provide cookware and plates?</h3>
+<p>No. myCHEF brings the working equipment, service ware, and table setup needed for the booking. The villa mainly needs power, water, and usable fridge space.</p>
+<h3>Should I avoid booking a chef if my villa kitchen is small?</h3>
+<p>Not automatically. Small kitchens still work for brunches, family dinners, and many plated services. The issue is planning, not square meters alone.</p>`,
   },
   {
-    slug: 'blog/wedding-rehearsal-dinner-bali',
-    title: 'Wedding Rehearsal Dinner in Bali — Planning Guide',
-    description: 'How to plan a wedding rehearsal dinner in Bali — venue tips, menu ideas, and timeline templates.',
-    date: '2025-10-05',
-    content: `<h2>Why a Rehearsal Dinner Matters More in Bali</h2>
-<p><a href="/events/weddings" class="text-[#C5A028] hover:underline font-medium">Wedding</a> guests travelling to Bali often arrive 2–3 days before the ceremony. The rehearsal dinner is the first real moment to gather the group — a chance to shake off jet lag, get people talking, and set the emotional tone for the celebration ahead. Getting it right is more important than many couples expect.</p>
-<h2>Venue Options</h2>
-<p>Three formats work well for Bali rehearsal dinners: the wedding villa itself (intimate, convenient, builds familiarity with the space), a separate private villa rented for the evening (more formal, different visual context from the ceremony), or a beach club with a private dining buyout (for larger parties who want a more social, animated setting). myCHEF can <a href="/catering" class="text-[#C5A028] hover:underline font-medium">cater</a> all three.</p>
-<h2>Menu Ideas for a Rehearsal Dinner</h2>
-<p>The rehearsal dinner should feel slightly more relaxed than the wedding itself. A long family-style dinner with sharing plates is the most popular format — it naturally encourages conversation across the table. Good options include: a Mediterranean spread with handmade pasta, grilled seafood and antipasti; a Balinese feast with babi guling, satay, and lawar; or a <a href="/catering/bbq-catering" class="text-[#C5A028] hover:underline font-medium">BBQ-style evening</a> with whole fish, wagyu, and grilled vegetables. Avoid elaborate tasting menus here — save the theatre for the wedding dinner.</p>
-<h2>Timeline Template</h2>
-<p><strong>6:00pm</strong> — Guests arrive. Welcome drinks (sparkling, mocktails, local beer). myCHEF service staff in position.<br/>
-<strong>6:30pm</strong> — Canapes and light starters served during mingling.<br/>
-<strong>7:15pm</strong> — Seated dinner begins. Sharing platters brought to the table family-style.<br/>
-<strong>8:45pm</strong> — Speeches if needed (rehearsal dinners in Bali often skip formal speeches).<br/>
-<strong>9:00pm</strong> — Dessert and coffee. Relaxed wind-down.<br/>
-<strong>10:00pm</strong> — Close. Guests return to their villas or hotel for an early night before the wedding.</p>
-<h2>Logistics to Confirm Early</h2>
-<p>Guest dietary requirements (especially vegetarian, vegan, allergies — collect these on the RSVP form), final head count (needed 48 hours before service), table setup preferences, and whether the venue has outdoor lighting for an evening event. myCHEF handles all food, staffing, glassware, and cleanup — the venue just needs to be booked and accessible.</p>`,
+    slug: "blog/wedding-rehearsal-dinner-bali",
+    title: "Wedding Rehearsal Dinner in Bali Planning Guide",
+    description: "Plan a Bali wedding rehearsal dinner with the right timeline, menu style, staffing plan, weather backup, and realistic costs.",
+    date: "2026-04-08",
+    content: `<p>A Bali rehearsal dinner has one job. Get everyone settled before the wedding day starts moving fast. Guests are arriving from different time zones. Families are meeting for the first time. Some people want a toast. Some people just need a calm meal and an early night. That is why the best rehearsal dinners in Bali feel organized, but not stiff.</p>
+<h2>Pick the Right Format for the Guest Mix</h2>
+<p>Three formats usually work. A seated family-style dinner is the safest choice for 12 to 40 guests. It creates movement at the table without needing a formal restaurant rhythm. A standing cocktail dinner works when the group is social, younger, and staying close by. A BBQ or grill night works well if the wedding crowd is already in one villa compound and the tone should stay relaxed.</p>
+<p>For most couples, the rehearsal dinner should not try to outshine the wedding meal. It should make the group feel looked after. That is why many hosts choose <a href="/services/wedding-celebrations" class="text-[#C5A028] hover:underline font-medium">wedding celebration catering</a> or <a href="/catering/villa-catering" class="text-[#C5A028] hover:underline font-medium">villa catering</a> instead of a full tasting format. You want good food, quick flow, and enough flexibility for late arrivals.</p>
+<h2>Build a Menu That Travels Well Across Ages and Diets</h2>
+<p>The strongest rehearsal dinner menus have range, not noise. Shared starters, one or two clear mains, and a dessert that lands well after speeches. Mediterranean family-style works because it covers pescatarians, gluten-free guests, and children without making the table feel segmented. Balinese and Indonesian menus work well too if the group is open to local spice and you balance rich dishes with fresh salads and grilled fish.</p>
+<p>Keep the menu readable. Four to six dishes is enough for a seated sharing dinner. If you want live fire, a <a href="/catering/bbq-catering" class="text-[#C5A028] hover:underline font-medium">BBQ catering setup</a> can handle prawns, whole fish, skewers, corn, greens, and simple sides without slowing the evening. Save complex plating and long chef narration for a smaller dinner on another night.</p>
+<p>It also helps to build one obvious vegetarian path instead of treating dietary guests as an afterthought. A strong pasta, vegetable grill plate, or shared mezze section lets everyone eat the same dinner with small variations. That keeps the table feeling unified, which is exactly what a rehearsal dinner should do.</p>
+<h2>A Rehearsal Dinner Timeline That Feels Calm</h2>
+<p>A strong timeline is short. Guests arrive around 6:00 pm. Drinks and canapes run for 30 to 45 minutes. Dinner starts by 7:00 or 7:15. Toasts happen before people get tired. Dessert lands before 9:00. Most groups are done by 10:00. That schedule leaves room for jet lag, children, and an early wedding call time the next morning.</p>
+<p>If the dinner is in <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu</a> or <a href="/locations/jimbaran" class="text-[#C5A028] hover:underline font-medium">Jimbaran</a>, use sunset to your advantage but do not let it control the whole evening. In <a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud</a>, build in extra buffer for guests who are still settling into the villa road network. In <a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak</a> and <a href="/locations/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu</a>, traffic timing matters more than distance, so ask guests to leave early and arrive together if possible.</p>
+<h2>Staffing, Weather Backup, and Cost Range</h2>
+<p>Most rehearsal dinners need more than just a chef. If you are serving drinks on arrival, clearing plates, and handling speeches, at least one extra service staff member makes a real difference. It keeps the couple out of problem-solving mode. It also keeps the parents from stepping into host duties when they should be sitting down.</p>
+<p>For cost, work from format. A shared villa dinner may start with hourly chef service and groceries. A larger rehearsal dinner may fit better under per-head catering. BBQ starts from IDR 450,000 per guest. Fine dining is available, but most couples get better value and easier flow from a less formal menu. Weather backup matters too. If rain changes the seating plan, know whether the villa has a covered dining area before the day arrives. Pricing questions are easiest to sort through the <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing page</a> and then finalize through <a href="/quote" class="text-[#C5A028] hover:underline font-medium">a custom quote</a>.</p>
+<p>One more practical tip: tie the dinner to the accommodation list. If parents, siblings, and the couple are staying in different villas, decide transport early and tell guests the dress code in the same message as the timing. Small logistics reduce late arrivals, and late arrivals are what throw off rehearsal dinners more than almost anything else.</p>
+<h2>FAQ</h2>
+<h3>How many days before the wedding should the rehearsal dinner happen?</h3>
+<p>Usually one or two nights before. One night before is the standard choice. Two nights before helps if the guest list is flying in from several countries and arrivals are spread out.</p>
+<h3>Should we do plated service or family-style?</h3>
+<p>Family-style is the easier option for most Bali rehearsal dinners. It feels warm, moves faster, and handles mixed dietary needs with less friction.</p>
+<h3>What if our villa has no rain backup?</h3>
+<p>Plan a covered area or a tented solution early. Weather is not constant in Bali, even in dry months. A backup plan is cheaper than a last-minute scramble.</p>`,
   },
   {
-    slug: 'blog/yoga-retreat-chef-bali-meal-planning',
-    title: 'Yoga Retreat Chef in Bali — Meal Planning',
-    description: 'Meal planning for yoga retreats in Bali — plant-based menus, ayurvedic principles, and post-asana nutrition.',
-    date: '2025-09-18',
-    content: `<h2>Why Food Is Part of the Retreat Design</h2>
-<p><a href="/events" class="text-[#C5A028] hover:underline font-medium">At a yoga retreat</a>, meals are not breaks from the programme — they are part of it. Guests are usually more conscious of what they eat than usual, more responsive to flavour and texture, and more likely to comment on food quality in reviews. The kitchen is a significant lever for overall retreat satisfaction.</p>
-<h2>Principles of Retreat Meal Planning</h2>
-<p>Retreat nutrition should follow the rhythm of the practice schedule. Morning yoga sessions need a light pre-practice option (fruit, tea, perhaps a small smoothie) followed by a more substantial post-practice breakfast. Midday meals should be nourishing but not heavy — guests have afternoon sessions ahead. Dinners can be more substantial, as the body is in recovery mode for the night.</p>
-<h2>Plant-Based Menus for Yoga Retreats</h2>
-<p>myCHEF builds <a href="/catering" class="text-[#C5A028] hover:underline font-medium">plant-based retreat catering</a> around: whole grains (brown rice, quinoa, millet), legumes (tempeh is ideal — it is fermented, protein-dense, and local to Bali), fresh vegetables roasted or lightly dressed, tropical fruits for natural sweetness, and coconut-based sauces and dressings. These menus are designed to keep energy stable rather than spiked.</p>
-<h2>Ayurvedic Considerations</h2>
-<p>Ayurveda-aligned retreat menus reduce raw foods (especially at dinner), favour warm and cooked preparations, avoid excessive garlic and onion in favour of asafoetida and ginger, and use warming spices like cumin, coriander, and turmeric. myCHEF chefs can adapt the base Balinese spice repertoire to align with these principles without losing flavour.</p>
-<h2>Practical Logistics for <a href="/in-villa-service" class="text-[#C5A028] hover:underline font-medium">Multi-Day In-Villa Retreats</a></h2>
-<p>For retreats of 5 days or more, myCHEF assigns a dedicated chef team for consistency. Menus rotate daily so guests are not eating the same breakfast on day 3 as day 1. Dietary notes (allergies, intolerances, preferences) are collected before arrival and baked into every meal plan. The kitchen team operates quietly and efficiently — retreats have a stillness that good hospitality professionals understand how to respect.</p>`,
+    slug: "blog/yoga-retreat-chef-bali-meal-planning",
+    title: "Yoga Retreat Chef in Bali Meal Planning",
+    description: "Meal-planning guide for Bali yoga retreats with sample menus, nutrition timing, dietary systems, staffing, and cost notes.",
+    date: "2026-03-21",
+    content: `<p>Retreat food in Bali is not filler between classes. It shapes energy, mood, digestion, and reviews. Guests remember how they felt after breakfast. They remember whether lunch made the afternoon session heavy. They remember if dinner felt calm or chaotic. Good retreat catering is not about showing off. It is about getting the rhythm right for several days in a row.</p>
+<h2>Plan Meals Around the Practice Schedule</h2>
+<p>The cleanest retreat meal plans follow the body, not the kitchen. Before morning practice, most groups need something light: fruit, tea, coffee, coconut water, maybe a small smoothie. After practice, breakfast can do the real work. Think eggs, warm grains, tropical fruit, yogurt, tempeh, or a plant-based spread with enough protein to hold guests through the morning.</p>
+<p>Lunch should refill energy without dragging the body down. That usually means one strong protein, one grain, two vegetables, something raw and fresh, and a sauce or broth that pulls the plate together. Dinner can be warmer and slower. Guests are no longer trying to move well in 90 minutes, so soups, curries, roasted vegetables, and coconut-based braises make sense.</p>
+<h2>A Sample Day That Works for Bali Retreats</h2>
+<p><strong>Pre-practice:</strong> bananas, papaya, herbal tea, black coffee, and coconut water.</p>
+<p><strong>Breakfast:</strong> soft eggs, turmeric potatoes, sauteed greens, overnight oats, granola, local fruit, and fresh juice.</p>
+<p><strong>Lunch:</strong> grilled fish or tempeh, rice or quinoa, charred greens, cucumber salad, sambal on the side, and a chilled soup or dressing.</p>
+<p><strong>Snack:</strong> cut fruit, energy balls, or banana bread after a workshop.</p>
+<p><strong>Dinner:</strong> pumpkin soup, coconut braised vegetables, grilled chicken or tofu, warm rice, and a lighter dessert.</p>
+<p>This format works well for mixed groups because it keeps the plate balanced and gives vegans, vegetarians, and omnivores room to eat from the same table. Retreat hosts comparing formats can pair this with the broader <a href="/retreats" class="text-[#C5A028] hover:underline font-medium">retreat catering page</a> and use <a href="/calculator" class="text-[#C5A028] hover:underline font-medium">the calculator</a> for early budget shape.</p>
+<p>Hydration deserves its own plan too. Bali heat changes how guests feel in practice. Water stations, iced herbal tea, fresh coconut, and electrolyte-friendly drinks do real work at retreats. They are not decoration. They are part of the recovery plan, especially if the schedule includes hikes, surf, or long midday workshops.</p>
+<h2>Plant-Based, Ayurvedic, and Allergy Systems</h2>
+<p>Many Bali yoga retreats want plant-based menus. That works well here. Tempeh is local, practical, and protein-dense. Coconut, herbs, rice, leafy greens, pumpkin, eggplant, mango, and papaya all fit naturally into a retreat kitchen. If the retreat wants ayurvedic principles, the main adjustment is usually warmth and digestibility. Warm breakfasts. Fewer icy drinks. Lighter use of raw food at night. Careful use of garlic and onion depending on the brief.</p>
+<p>The operational point is this: build one master system and then layer in exclusions. Do not invent six separate menus if you can solve the table with one strong base and a few controlled swaps. Allergy notes should be collected before arrival. The chef team should have one clear matrix before day one begins.</p>
+<h2>Staffing, Consistency, and Cost for Multi-Day Retreats</h2>
+<p>A five-day retreat is a different job from a one-off dinner. Consistency matters more than flair. The same team should know the group by day two. They learn who eats early, who needs low spice, who is training hard, and who needs coffee ready before dawn. That is where a dedicated chef team becomes more valuable than a rotating setup.</p>
+<p>Cost depends on guest count, service style, and how many meals are cooked each day. Some retreats want full-board service. Others only need brunch and dinner. If the group is staying in one villa or campus, per-day planning often works better than treating each meal as a separate event. Large retreats also need quiet logistics: storage, dish flow, refill stations, and cleanup that does not disturb sessions. That is why hosts often start with <a href="/quote" class="text-[#C5A028] hover:underline font-medium">a custom retreat brief</a> instead of a generic dinner quote.</p>
+<p>Menu rotation matters as much as nutrition. Even healthy guests get bored if breakfast looks the same every morning. Good retreat kitchens rotate textures, colors, and cooking methods so day three still feels fresh. That consistency is one reason hosts come back to the same team instead of rebriefing new vendors every retreat.</p>
+<h2>FAQ</h2>
+<h3>Should yoga retreat menus in Bali be fully vegan?</h3>
+<p>Not always. Many retreats do well with a mostly plant-based base plus optional eggs, fish, or chicken. The right answer depends on the retreat promise and the guest mix.</p>
+<h3>How far ahead should dietary notes be collected?</h3>
+<p>Before guests arrive. The kitchen should start day one with a clean list of allergies, intolerances, and non-negotiable preferences, not build it table by table.</p>
+<h3>What is the biggest food mistake retreat hosts make?</h3>
+<p>Serving meals that are too heavy at the wrong time. A great lunch for a holiday group can feel wrong for people heading into breathwork, mobility, or an evening flow.</p>`,
   },
   {
-    slug: 'blog/private-chef-vs-restaurant-bali',
-    title: 'Private Chef vs Restaurant in Bali — Which Is Better?',
-    description: 'A side-by-side comparison of hiring a private chef versus dining at a restaurant in Bali — cost, experience, and convenience.',
-    date: '2025-08-12',
-    content: `<h2>The Price Question — Closer Than You Think</h2>
-<p>The headline number for a private chef in Bali looks higher than a restaurant menu. But the total comparison rarely works out that way. A restaurant meal for 6 in Bali includes: transport (and Bali traffic, both ways), service charges and taxes (typically 21%), beverage markup (wine at 3–4x retail), and the variable of whether you get the chef's best work or their 40th table that night.</p>
-<p>A private chef setup priced through our <a href="/calculator" class="text-[#C5A028] hover:underline font-medium">price calculator</a> includes none of those friction points. The chef has one table. Groceries are at market cost. You stay in your villa. For occasions that matter, the comparison usually lands within IDR 200,000–400,000 per person — and the <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">private experience</a> wins on every non-price dimension.</p>
-<h2>Experience Quality</h2>
-<p>Restaurants are optimised for throughput. A private chef is optimised for your table. Menu personalisation, course timing, dietary substitutions, pace of service — all of these are controlled by you and your chef together. This is the difference between hospitality and service.</p>
-<p>myCHEF chefs discuss the menu before arriving. If you want the pasta course skipped and an extra seafood course added, that happens. If someone in the group cannot eat gluten, the whole menu is restructured — not just one plate swapped out.</p>
-<h2>When a Restaurant Is the Right Choice</h2>
-<p>Restaurants win when: the social energy of a public space is part of the appeal, you want to support a specific chef's creative work, you are a solo traveller or couple who wants to meet people, or you want to eat at a specific iconic Bali venue. These are legitimate reasons to book a table.</p>
-<h2>When a Private Chef Is the Right Choice</h2>
-<p>A private chef wins when: your group is 4 or more people, the occasion is a <a href="/catering" class="text-[#C5A028] hover:underline font-medium">celebration</a> (birthday, anniversary, proposal, honeymoon), you have children or guests with serious dietary restrictions, you are jet-lagged and do not want to leave the villa, or you want food quality that consistently reflects your group's preferences rather than a standard menu.</p>
-<h2>The Simple Test</h2>
-<p>If the occasion matters enough to remember, a private chef is worth the consideration. If you are looking for a quick lunch with flexibility to explore the neighbourhood, a restaurant serves that better. Both have their place — the question is which one serves the moment you are actually in.</p>`,
+    slug: "blog/private-chef-vs-restaurant-bali",
+    title: "Private Chef vs Restaurant in Bali Which Is Better?",
+    description: "Compare a private chef and a Bali restaurant on total cost, comfort, menu control, kids, transport, and celebration value.",
+    date: "2026-03-05",
+    content: `<p>People compare a private chef and a restaurant in Bali as if one is always expensive and the other is always practical. That is too simple. The real comparison changes with group size, traffic, children, dietary needs, and what the night is supposed to feel like. For two people grabbing a casual dinner, a restaurant is often the easy answer. For a villa group or a milestone dinner, the math changes quickly.</p>
+<h2>Total Spend Is Often Closer Than Guests Expect</h2>
+<p>A restaurant menu looks cheaper because you see only the plate price first. Then the rest arrives. Cars. Drivers. Bali traffic. Service charge. Tax. Beverage markup. The cost of moving a group of six through town and back. A private chef quote is more direct. You see chef service, groceries, and any extras. That makes the first number feel bigger, but the total can land surprisingly close.</p>
+<p>Take a group villa night in <a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak</a> or <a href="/locations/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu</a>. If you already have the table, the pool, and the drinks at the villa, a private chef removes transport and venue markup. Guests pricing both sides can compare the structure on <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing</a> and then test real numbers in the <a href="/calculator" class="text-[#C5A028] hover:underline font-medium">cost calculator</a>.</p>
+<p>Say your group has eight adults. Two cars, round-trip driver time, and one late booking at a busy restaurant can wipe out the “savings” quickly. That does not mean restaurants are poor value. It means the comparison should be done on the whole night, not just on the cost of the main course.</p>
+<h2>The Comfort Gap Gets Bigger With Groups</h2>
+<p>Restaurants are built to handle many tables. That is not a criticism. It is just the model. A private chef is built around one table. Your pace. Your children. Your older relatives. Your speech. Your late swimmer who wants to shower before the main course. That flexibility matters more than the menu itself for birthdays, anniversaries, and reunion dinners.</p>
+<p>The comfort gap gets even wider in <a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud</a> or <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu</a>, where guests often prefer not to get back in the car after a long day. Staying in the villa is not just convenient. It often protects the mood of the night.</p>
+<h2>Menu Control and Dietary Handling</h2>
+<p>This is where private chefs usually win. If one guest is gluten-free, one hates shellfish, one wants no dairy, and two children need a simple plate early, the private format handles it better. The menu can be built for the group instead of forcing the group to negotiate with the menu.</p>
+<p>That does not mean restaurants fail. Bali has excellent restaurants. But a restaurant has to protect the kitchen system for every table in the room. A private chef can redesign the evening around your group. That is a big advantage for <a href="/services/romantic-dinners" class="text-[#C5A028] hover:underline font-medium">romantic dinners</a>, <a href="/services/birthday-celebrations" class="text-[#C5A028] hover:underline font-medium">birthdays</a>, and villa stays with mixed ages.</p>
+<p>Privacy is another difference guests tend to underrate. Some moments are better without neighboring tables, loud music, or a hard turn time at the end of service. If the dinner includes a speech, a proposal, or simply a family conversation that matters, that privacy changes the whole feel of the evening.</p>
+<h2>When Each Option Wins</h2>
+<p>Choose a restaurant if you want public energy, chef-counter buzz, or a specific dining room you have been wanting to try. Choose a private chef if the group is four or more, if the occasion matters, if transport feels annoying, or if the group has real dietary complexity. Choose a private chef if you want the dinner to feel like part of the villa stay rather than a break from it.</p>
+<p>The easiest rule is simple. If the memory matters more than the outing, a chef usually wins. If exploration matters more than control, book the restaurant. Guests who still sit between the two can start with the broader <a href="/services" class="text-[#C5A028] hover:underline font-medium">services overview</a> and narrow the format from there.</p>
+<p>There is also a recovery factor. After surfing, sightseeing, or a wedding day, even energetic groups lose appetite for more logistics. A dinner that comes to the villa often gets a stronger response simply because the group arrives at the table relaxed instead of already tired.</p>
+<p>That is why the best choice is often the one that protects the evening, not the one that looks cheapest on paper. Good hospitality is partly about food. It is also about reducing all the small things that chip away at a good night.</p>
+<h2>FAQ</h2>
+<h3>Is a private chef always more expensive than a restaurant in Bali?</h3>
+<p>No. For larger groups, the total can be close once you add transport, taxes, service, and drink markups on the restaurant side.</p>
+<h3>What is the best option for families with children?</h3>
+<p>A private chef is usually easier. Children can eat earlier, adults can stay relaxed, and no one needs to manage cars or bedtime around a restaurant schedule.</p>
+<h3>When should I still choose a restaurant?</h3>
+<p>Choose a restaurant when the room itself is part of the experience or when you want a more spontaneous night out instead of a hosted event in the villa.</p>`,
+  },
+  {
+    slug: "blog/how-to-plan-villa-birthday-party-bali",
+    title: "How to Plan a Villa Birthday Party in Bali",
+    description: "How to plan a villa birthday party in Bali, from catering and setup to entertainment, staffing, timing, and budget ranges.",
+    date: "2026-05-16",
+    content: `<p>A villa birthday party in Bali can be easy or messy. The difference is not taste. It is sequence. The best parties decide the format first, then lock food, then solve setup, then add entertainment. The worst parties do the opposite. They start with a DJ or a cake idea and only later realize the villa has one small fridge and a 10:00 pm sound rule.</p>
+<h2>Start With the Right Party Format</h2>
+<p>Ask one question first: is this a dinner party, a sunset cocktail party, or a full birthday event with a late peak? Each format changes food, staffing, and spend. A seated birthday dinner for 10 to 16 people can run beautifully with a chef team and one or two service staff. A poolside party for 25 or more usually needs a stronger catering setup, easier food flow, and more attention on drinks.</p>
+<p>If the guest list is mixed, a hybrid format works well. Start with canapes and drinks. Move into a shared dinner. Then let the bar and music carry the last two hours. That is often the cleanest fit for <a href="/services/birthday-celebrations" class="text-[#C5A028] hover:underline font-medium">birthday celebrations</a> and <a href="/services/villa-parties" class="text-[#C5A028] hover:underline font-medium">villa parties</a> in Bali.</p>
+<h2>Food and Drinks That Keep the Party Moving</h2>
+<p>Choose food by movement, not ego. If people will stand, talk, and change spots, use canapes, skewers, grazing elements, and one easy hot station. If people will sit, use a family-style dinner or a structured buffet. BBQ is strong for birthdays because it smells good, feels social, and handles varied ages well. That is why <a href="/catering/bbq-catering" class="text-[#C5A028] hover:underline font-medium">BBQ catering</a> is a common starting point for villa events.</p>
+<p>For budget anchors, drop-off catering starts from IDR 250,000 per guest. BBQ starts from IDR 450,000 per guest. A private chef on an hourly basis starts at IDR 600,000 per hour with a 3-hour minimum. The right format depends on guest count and how much hosting you want the team to absorb. Drinks matter too. If the group wants cocktails, plan bar support early instead of asking the chef team to carry both food and drink flow.</p>
+<p>Cake timing matters more than most hosts think. If dessert and cake arrive together, the table often stalls. A better flow is dinner first, then lights down, cake moment, then late sweets or fruit nearby for anyone still talking. That one adjustment makes the party feel intentional instead of rushed.</p>
+<h2>Setup, Entertainment, and Villa Rules</h2>
+<p>Good setup makes the party feel bigger than it is. You do not need complicated styling. You need clear zones: arrivals, drinks, food, candles or florals, cake moment, and seating for older guests. Check three villa rules before booking anything: sound cutoff, outside vendor access, and parking. These rules decide whether a DJ makes sense or whether an acoustic duo, playlist, or sax set is the smarter move.</p>
+<p>Location shapes the plan. In <a href="/locations/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu</a> and <a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak</a>, vendors are easier to source quickly, but traffic for guest arrivals can be slow. In <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu</a>, sunset timing is excellent, but transport home needs thought if people are drinking. In <a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud</a>, earlier dinner starts usually work better than late-night peaks.</p>
+<h2>Budget and Timeline for a Smooth Night</h2>
+<p>Work backwards from the first guest arrival. Four weeks out, lock the villa rules and rough headcount. Two weeks out, confirm the food format and drinks plan. One week out, confirm the final guest number, allergies, cake, and entertainment. Two days out, send the run sheet. On the day, keep setup simple and let one person own decisions.</p>
+<p>A practical mid-range Bali birthday party budget often includes food, service staff, some decor, cake, ice, and transport for vendors. The exact total changes fast with alcohol and entertainment, which is why the cleanest next step is usually the <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing page</a> plus a tailored brief through <a href="/quote" class="text-[#C5A028] hover:underline font-medium">myCHEF's quote form</a>. That gets you a plan that matches the villa instead of a generic party package.</p>
+<p>Always keep one backup zone dry and one late-night area quiet. Rain can move people fast, and not every guest wants to stand near the speakers all night. A few chairs, towels, and a covered corner do more for the party than another decorative install.</p>
+<p>If guests are staying across several villas, send the exact pin and arrival window twice. That tiny step prevents the usual birthday problem in Bali: half the group arriving on time and the other half losing twenty minutes to villa turn-offs and traffic.</p>
+<h2>FAQ</h2>
+<h3>What is the best food format for a Bali villa birthday?</h3>
+<p>For most groups, BBQ or family-style sharing is the safest choice. It keeps people social and avoids the stop-start feeling of overcomplicated plated service.</p>
+<h3>How early should I book a chef or caterer?</h3>
+<p>For birthdays in busy Bali periods, earlier is better. Two to four weeks gives the team more room to coordinate staffing, sourcing, and any bar or entertainment support.</p>
+<h3>Do I need extra service staff for a birthday party?</h3>
+<p>If more than 10 to 12 guests are attending, usually yes. Extra staff keeps the host out of logistics and keeps plates, drinks, and cleanup moving quietly.</p>`,
+  },
+  {
+    slug: "blog/private-chef-romantic-dinners-bali",
+    title: "Private Chef for Romantic Dinners in Bali",
+    description: "Plan a romantic private chef dinner in Bali for proposals, anniversaries, and honeymoons with menu ideas, setup tips, and costs.",
+    date: "2026-05-14",
+    content: `<p>The best romantic dinners in Bali are not big. They are precise. The table is in the right spot. Dinner starts at the right light. The menu fits the couple. The service is present, then invisible. That is why a private chef works so well for proposals, anniversaries, and honeymoon nights. The whole evening can be built around one moment instead of around a restaurant room full of other people.</p>
+<h2>Choose the Scene Before You Choose the Menu</h2>
+<p>Start with setting. A cliff-edge terrace in <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu</a> suits sunset and champagne. A quiet garden in <a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud</a> suits candles and a slower pace. A modern villa in <a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak</a> or <a href="/locations/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu</a> works well if you want music, a photographer, or a short transfer from other plans.</p>
+<p>Once the setting is clear, everything else gets easier. Table size. Lighting. Whether you need flowers. Whether you want a path of candles or something simpler. Guests planning a proposal can also review the dedicated <a href="/proposal-dinner" class="text-[#C5A028] hover:underline font-medium">proposal dinner page</a> or the <a href="/honeymoon-chef" class="text-[#C5A028] hover:underline font-medium">honeymoon chef page</a> for service context.</p>
+<h2>Menus That Feel Romantic Without Feeling Heavy</h2>
+<p>Romantic dinners work best when the menu feels elegant but easy to eat. Four to seven courses is enough. Fresh crudo, handmade pasta, grilled fish, a small beef course, and a light dessert all work well. Mediterranean menus are popular because they feel clean and celebratory without becoming too rich. If the couple loves local flavors, a refined Indonesian or Balinese progression can work too.</p>
+<p>Do not build the dinner around ten “special” ingredients. Build it around pace. A strong opener. One memorable middle course. One main. One dessert. That gives the chef room to make the night feel personal. For a more formal setup, <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining menus</a> start at IDR 2,200,000 per guest. For a more relaxed setup, hourly private chef service can make sense when the dinner is only one part of a larger evening.</p>
+<p>Wine can lift the night, but it should never dominate it. Some couples want Champagne at arrival and one white with dinner. Others want a non-alcoholic pairing with citrus, herbs, tea, and tonic profiles. Both work. The key is matching the drink plan to the mood of the evening instead of copying a restaurant template.</p>
+<h2>Proposal and Anniversary Logistics</h2>
+<p>If there is a proposal involved, protect the moment with a simple sequence. The ring should be with one person. The photographer should have one clear position. The chef team should know the cue for the course or champagne pour. Too many moving parts create stress. Small signals work better than dramatic surprises.</p>
+<p>For anniversaries, the most useful upgrade is usually not more decor. It is better service timing. Serve the first course quickly after the couple sits. Keep the table clean. Leave space between main and dessert if gifts, notes, or a toast are planned. If you want flowers, candles, or a musician, make sure the villa allows outside vendors before the day arrives.</p>
+<h2>Cost and Booking Flow</h2>
+<p>A private chef romantic dinner in Bali can be simple or elaborate. A casual 3-hour chef booking starts from IDR 1,800,000 in labor before groceries. A premium tasting menu starts from the fine dining per-person rate. Add-ons such as wine, service staff, flowers, or a photographer shift the total more than most couples expect. That is normal. Romantic dinners are driven by details.</p>
+<p>The easiest booking path is to decide three things first: location, dinner style, and whether the night includes a proposal or another surprise. After that, compare base pricing on <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing</a>, then send the final brief through <a href="/quote" class="text-[#C5A028] hover:underline font-medium">the quote page</a> or go straight to <a href="/services/romantic-dinners" class="text-[#C5A028] hover:underline font-medium">romantic dinners</a> for a more occasion-specific start.</p>
+<p>If the night matters, do not leave booking to the last minute. A little lead time gives space to coordinate flowers, weather backup, kitchen access, and any photographer or musician. Those are small details, but together they are what make the dinner feel easy when the moment arrives.</p>
+<p>One final point: keep the reveal simple. A clean table, warm light, and a confident service rhythm usually feel more romantic than overdecorating the villa. The room should support the couple, not compete with them.</p>
+<p>When couples remember these nights later, they usually talk about the feeling first. Calm. Privacy. Good timing. Food that felt made for them. That is the real brief, and it is exactly what a villa dinner can deliver.</p>
+<h2>FAQ</h2>
+<h3>Is a private chef better than a restaurant for a proposal in Bali?</h3>
+<p>Usually yes. You control the timing, privacy, and setup. That matters if you want the proposal to feel calm and not depend on a public dining room.</p>
+<h3>How many courses should a romantic dinner have?</h3>
+<p>Usually four to seven. Fewer courses can still feel special if the setting is strong and the pacing is right.</p>
+<h3>Can the chef team help coordinate flowers or a surprise dessert?</h3>
+<p>Yes, if those details are planned in advance. The key is to brief the team early so the service flow and timing stay clean.</p>`,
   },
 ]
 
@@ -713,16 +963,20 @@ export function buildSitemap(): SitemapEntry[] {
     changefreq: 'weekly',
   }
 
-  const areas: SitemapEntry[] = AREAS.map((a) => ({
-    path: `/${a.slug}`,
-    type: 'area',
-    title: `Private Chef in ${a.name}, Bali`,
-    description: `Private chef services in ${a.name}, Bali. Custom menus, transparent pricing, same-day responses. Background-checked chefs.`,
-    priority: 0.8,
-    changefreq: 'weekly',
-    area: a.name,
-    slug: a.slug,
-  }))
+  const areas: SitemapEntry[] = AREAS.map((a) => {
+    const customPage = getCustomLocationPage(a.slug)
+
+    return {
+      path: `/${a.slug}`,
+      type: 'area',
+      title: customPage?.title ?? `Private Chef in ${a.name}, Bali`,
+      description: customPage?.description ?? `Private chef services in ${a.name}, Bali. Custom menus, transparent pricing, same-day responses. Background-checked chefs.`,
+      priority: 0.8,
+      changefreq: 'weekly',
+      area: a.name,
+      slug: a.slug,
+    }
+  })
 
   const microAreas: SitemapEntry[] = MICRO_AREAS.map((m) => ({
     path: `/${m.slug}`,
@@ -819,16 +1073,20 @@ export function buildSitemap(): SitemapEntry[] {
     changefreq: 'monthly',
   }
 
-  const locationPages: SitemapEntry[] = Object.values(LOCATIONS).map((l) => ({
-    path: `/locations/${l.slug}`,
-    type: 'area',
-    title: l.title,
-    description: l.description,
-    priority: 0.7,
-    changefreq: 'monthly',
-    area: l.label,
-    slug: l.slug,
-  }))
+  const locationPages: SitemapEntry[] = Object.values(LOCATIONS).map((l) => {
+    const customPage = getCustomLocationPage(l.slug)
+
+    return {
+      path: `/locations/${l.slug}`,
+      type: 'area',
+      title: customPage?.title ?? l.title,
+      description: customPage?.description ?? l.description,
+      priority: 0.7,
+      changefreq: 'monthly',
+      area: l.label,
+      slug: l.slug,
+    }
+  })
 
   const journalIndex: SitemapEntry = {
     path: '/journal',

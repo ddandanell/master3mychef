@@ -7,6 +7,15 @@ export const LANDING_PAGE_SLUGS: string[] = [
   'villa-bbq-catering-bali',
   'bali-wedding-catering-packages',
   'michelin-private-chef-bali-prices',
+  'private-tasting-menu-bali',
+  'chef-table-experience-bali',
+  'seafood-bbq-catering-bali',
+  'group-villa-dinner-packages-bali',
+  'corporate-retreat-catering-bali',
+  'luxury-birthday-party-bali',
+  'hire-private-chef-bali-monthly',
+  'villa-staff-bali-agency',
+  'butler-service-bali-daily-rate',
   'best-private-chef-indonesia',
   'private-chef-for-events',
   'luxury-chef-indonesia',
@@ -34,6 +43,8 @@ export const BLOG_POST_SLUGS: string[] = [
   'blog/wedding-rehearsal-dinner-bali',
   'blog/yoga-retreat-chef-bali-meal-planning',
   'blog/private-chef-vs-restaurant-bali',
+  'blog/how-to-plan-villa-birthday-party-bali',
+  'blog/private-chef-romantic-dinners-bali',
 ]
 
 export const SERVICE_SLUGS: string[] = [

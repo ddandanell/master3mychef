@@ -56,6 +56,12 @@
 - **Files:** `src/data/page-meta.ts`
 - **Result:** Added SEO meta descriptions for 33 routes across catering subpages, event pages, Bali location pages, the locations hub, and 5 blog posts. Coverage now 42/95.
 
+## 2026-05-17 — Phase 3 Location Expansion
+- **Agent:** Copilot
+- **Branch:** auto-improve/location-expansion-phase3
+- **Files:** `src/App.tsx`, `src/components/LocationLandingPage.tsx`, `src/data/locationLandingPages.ts`, `src/data/page-meta.ts`, `src/data/route-slugs.ts`, `src/data/siteArchitecture.ts`, `src/data/sitemap.ts`, `src/pages/{Sanur,NusaDua,Jimbaran,Denpasar,BukitPeninsula,Pererenan}Page.tsx`, `public/sitemap.xml`
+- **Result:** Added 6 custom Bali location landing pages with hero sections, travel-fee logistics, booking guidance, guest-profile copy, internal service links, and LocalBusiness geo schema. TypeScript check and production build passed.
+
 ---
 
 ## 2026-05-17 — Conversion Copy: Service Subpages
@@ -63,3 +69,9 @@
 - **Branch:** auto-improve/conversion-copy-subpages *(repo automation later renamed the working branch)*
 - **Files:** `src/pages/CateringBuffetPage.tsx`, `src/pages/CateringVillaPage.tsx`, `src/pages/CateringFloatingBreakfastPage.tsx`
 - **Result:** Rewrote heroes, process copy, and CTAs to be outcome-first, shorter, and more concrete. Removed vague styling language from floating breakfast and buffet sections. Quality gates: `npx tsc -b --noEmit` ✓, `npm run build` ✓.
+
+## 2026-05-16 — Blog Content Sprint 1
+- **Agent:** Copilot
+- **Branch:** auto-improve/blog-content-sprint-phase3
+- **Files:** `src/data/sitemap.ts`, `src/data/route-slugs.ts`, generated sitemap files
+- **Result:** Expanded 5 existing blog posts, added 2 new blog posts, refreshed blog route slugs, and validated with TypeScript + production build.

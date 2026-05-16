@@ -4,6 +4,7 @@ import Layout from './components/Layout'
 
 import { LANDING_PAGE_SLUGS, GUIDE_SLUGS, BLOG_POST_SLUGS, SERVICE_SLUGS, MENU_SLUGS, AREA_SLUGS, MICRO_AREA_SLUGS } from './data/route-slugs'
 import { REDIRECTS } from './data/redirects'
+import { CUSTOM_LOCATION_PAGE_SLUGS } from './data/locationLandingPages'
 import { getAllSubPages, getAllLocationPaths } from './data/siteArchitecture'
 
 // ── Page components (code-split into per-route chunks) ───────────────────────
@@ -64,6 +65,12 @@ const StaffingVillaManagersPage = lazy(() => import('./pages/StaffingVillaManage
 const StaffingHotelsPage = lazy(() => import('./pages/StaffingHotelsPage'))
 const PillarSubPage = lazy(() => import('./components/PillarSubPage'))
 const LocationsHubPage = lazy(() => import('./components/LocationsHubPage'))
+const SanurPage = lazy(() => import('./pages/SanurPage'))
+const NusaDuaPage = lazy(() => import('./pages/NusaDuaPage'))
+const JimbaranPage = lazy(() => import('./pages/JimbaranPage'))
+const DenpasarPage = lazy(() => import('./pages/DenpasarPage'))
+const BukitPeninsulaPage = lazy(() => import('./pages/BukitPeninsulaPage'))
+const PererenanPage = lazy(() => import('./pages/PererenanPage'))
 const BookPage = lazy(() => import('./components/BookPage'))
 const JournalIndexPage = lazy(() =>
   import('./components/JournalPage').then((module) => ({ default: module.JournalIndexPage }))
@@ -115,6 +122,7 @@ function PageLoader() {
 export default function App() {
   const subPages = getAllSubPages()
   const locationPaths = getAllLocationPaths()
+  const customLocationSlugs = new Set<string>(CUSTOM_LOCATION_PAGE_SLUGS)
 
   return (
     <Layout>
@@ -177,7 +185,13 @@ export default function App() {
 
           {/* Locations */}
           <Route path="/locations" element={<LocationsHubPage />} />
-          {locationPaths.map(({ path }) => (
+          <Route path="/locations/sanur" element={<SanurPage />} />
+          <Route path="/locations/nusa-dua" element={<NusaDuaPage />} />
+          <Route path="/locations/jimbaran" element={<JimbaranPage />} />
+          <Route path="/locations/denpasar" element={<DenpasarPage />} />
+          <Route path="/locations/bukit" element={<BukitPeninsulaPage />} />
+          <Route path="/locations/pererenan" element={<PererenanPage />} />
+          {locationPaths.filter(({ location }) => !customLocationSlugs.has(location.slug)).map(({ path }) => (
             <Route key={path} path={path} element={<AreaPage kind="area" />} />
           ))}
 
@@ -210,7 +224,13 @@ export default function App() {
           <Route path="/villa-partners" element={<PartnersPage />} />
 
           {/* Legacy area pages (still served at root for SEO continuity) */}
-          {AREA_SLUGS.map((a) => (
+          <Route path="/sanur" element={<SanurPage />} />
+          <Route path="/nusa-dua" element={<NusaDuaPage />} />
+          <Route path="/jimbaran" element={<JimbaranPage />} />
+          <Route path="/denpasar" element={<DenpasarPage />} />
+          <Route path="/bukit" element={<BukitPeninsulaPage />} />
+          <Route path="/pererenan" element={<PererenanPage />} />
+          {AREA_SLUGS.filter((a) => !customLocationSlugs.has(a.slug)).map((a) => (
             <Route key={a.slug} path={`/${a.slug}`} element={<AreaPage kind="area" />} />
           ))}
           {MICRO_AREA_SLUGS.map((m) => (

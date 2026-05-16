@@ -24,6 +24,10 @@ export function trackWhatsAppClick(source: string) {
   trackEvent('whatsapp_click', { source, transport_type: 'beacon' })
 }
 
+export function trackWhatsAppConversion(source: string) {
+  trackWhatsAppClick(source)
+}
+
 export function trackPageView(path: string) {
   trackEvent('page_view', { page_path: path })
 }

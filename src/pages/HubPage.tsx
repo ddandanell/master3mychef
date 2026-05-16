@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw } from 'lucide-react'
+import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw, ConciergeBell, UsersRound } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
@@ -310,15 +310,15 @@ export default function HubPage() {
         jsonLd={homeSchemas}
       />
       {/* HERO — luxury brand identity with Michelin-trained founder story front and centre */}
-      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-20 pt-20 sm:pt-28 md:pb-32" style={{ background: 'var(--u-bg)' }}>
+      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-20 pt-16 md:pb-32 md:pt-[72px]" style={{ background: 'var(--u-bg)' }}>
         <div className="mb-10 md:mb-14">
           <div className="relative min-h-[calc(100vh-64px)] overflow-hidden md:min-h-[calc(100vh-72px)]">
             <img
-              src="/generated/home-hero-ivory-villa-v2.png"
+              src="/generated/home-hero-ivory-villa.png"
               alt="Luxury private dining table in a Bali villa at sunset"
               width={1536}
               height={1024}
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover object-[center_52%]"
               fetchPriority="high"
               loading="eager"
               decoding="async"
@@ -645,76 +645,153 @@ export default function HubPage() {
         </div>
       </section>
 
-      {/* AWARD-WINNING PRIVATE DINING — NEW SECTION */}
-      <section ref={trustRef} className="py-20 md:py-28 px-6" style={{ background: 'var(--u-bg)' }}>
-        <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
-            {/* Background Image with Awards */}
-            <div className="relative aspect-[4/5] md:aspect-[1/1.2] rounded-2xl overflow-hidden">
-              <img
-                src="/generated/awards-luxury-still-life.png"
-                alt="Award-winning private dining — myCHEF recognized for villa dining in Bali"
-                width={800}
-                height={1000}
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+      {/* PRIVATE CHEF SERVICE IN BALI — TRUST SECTION */}
+      <section ref={trustRef} style={{ background: '#faf8f3' }} className="py-0">
+        <div
+          className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-0 items-center min-h-[calc(100vh-82px)]"
+          style={{ padding: '96px 7vw 72px' }}
+        >
+          {/* Left: Content */}
+          <div className="flex flex-col justify-center pr-0 lg:pr-12">
+            {/* Eyebrow */}
+            <p
+              className="mb-6 text-sm uppercase tracking-[0.15em]"
+              style={{ color: '#b88a2b', fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
+            >
+              Trusted by villas, families, and private hosts
+            </p>
 
-            {/* Text Content */}
-            <div className="flex flex-col justify-center">
-              <p className="u-label mb-4">AWARD-WINNING PRIVATE DINING</p>
-              <h2 className="u-heading text-4xl md:text-5xl mb-6">Recognized for Private Villa Dining in Bali</h2>
-              <div className="gold-arc mb-8" />
+            {/* Main Heading */}
+            <h2
+              className="mb-8 text-5xl lg:text-6xl leading-tight"
+              style={{ fontFamily: "'Playfair Display', serif", color: '#1a1714', fontWeight: 400 }}
+            >
+              Private Chef Service in Bali
+            </h2>
 
-              <p className="mb-8 leading-relaxed text-base" style={{ color: 'var(--u-text-muted)' }}>
-                A refined dining experience for villas, families, private events, and long-stay guests. Built around trusted chefs, elegant service, and consistent guest satisfaction.
-              </p>
+            {/* Description */}
+            <p
+              className="mb-12 text-lg leading-[1.7]"
+              style={{ color: '#5c5550' }}
+            >
+              We partner with private villas, villa managers, and guests who want restaurant-level dining without the coordination work. From intimate dinners to larger private events, every detail is handled by our team.
+            </p>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <a
-                  href="https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20a%20private%20dinner"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-source="homepage-awards-cta"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105"
-                  style={{
-                    background: '#C5A028',
-                    color: 'white',
-                  }}
+            {/* Three Trust Icons */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
+              {/* Icon Box 1 */}
+              <div className="flex flex-col">
+                <div
+                  className="mb-4 w-12 h-12 flex items-center justify-center rounded-full"
+                  style={{ background: '#b88a2b' }}
                 >
-                  <MessageCircle className="w-4 h-4" />
-                  Plan Your Dinner
-                </a>
-                <Link
-                  to="/fine-dining"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 border"
-                  style={{
-                    borderColor: 'var(--u-border)',
-                    color: 'var(--u-text)',
-                  }}
+                  <ChefHat className="w-6 h-6 text-white" strokeWidth={1.5} />
+                </div>
+                <h3
+                  className="mb-2 text-sm font-semibold uppercase tracking-widest"
+                  style={{ color: '#1a1714' }}
                 >
-                  View Dining Options
-                </Link>
+                  Michelin-Trained
+                </h3>
+                <p
+                  className="text-xs leading-relaxed"
+                  style={{ color: '#7d7470' }}
+                >
+                  Leadership by Adriano, trained under Michelin-starred chefs in Milan.
+                </p>
               </div>
 
-              {/* Trust Line */}
-              <p className="text-sm uppercase tracking-[0.15em]" style={{ color: 'var(--u-text-muted)' }}>
-                560+ villas served · 12,000+ guests · 4.9 average rating
-              </p>
+              {/* Icon Box 2 */}
+              <div className="flex flex-col">
+                <div
+                  className="mb-4 w-12 h-12 flex items-center justify-center rounded-full"
+                  style={{ background: '#b88a2b' }}
+                >
+                  <UsersRound className="w-6 h-6 text-white" strokeWidth={1.5} />
+                </div>
+                <h3
+                  className="mb-2 text-sm font-semibold uppercase tracking-widest"
+                  style={{ color: '#1a1714' }}
+                >
+                  50+ Professionals
+                </h3>
+                <p
+                  className="text-xs leading-relaxed"
+                  style={{ color: '#7d7470' }}
+                >
+                  Chefs, servers, bartenders, and event staff — all trained in-house.
+                </p>
+              </div>
+
+              {/* Icon Box 3 */}
+              <div className="flex flex-col">
+                <div
+                  className="mb-4 w-12 h-12 flex items-center justify-center rounded-full"
+                  style={{ background: '#b88a2b' }}
+                >
+                  <ConciergeBell className="w-6 h-6 text-white" strokeWidth={1.5} />
+                </div>
+                <h3
+                  className="mb-2 text-sm font-semibold uppercase tracking-widest"
+                  style={{ color: '#1a1714' }}
+                >
+                  1-Hour Response
+                </h3>
+                <p
+                  className="text-xs leading-relaxed"
+                  style={{ color: '#7d7470' }}
+                >
+                  Same-day confirmation or same-day replacement guarantee.
+                </p>
+              </div>
             </div>
+
+            {/* Trust Metrics */}
+            <p
+              className="text-sm uppercase tracking-[0.1em]"
+              style={{ color: '#9d8d78' }}
+            >
+              ✓ 560+ villas served  ✓ 12,000+ happy guests  ✓ 4.9 average rating
+            </p>
           </div>
 
-          {/* Section Below Image */}
-          <div className="mt-20 md:mt-28 pt-16 md:pt-20 border-t" style={{ borderColor: 'var(--u-border)' }}>
-            <div className="text-center mb-12">
-              <h3 className="u-heading text-3xl md:text-4xl mb-6">Trusted by villas, families, and private hosts</h3>
-              <p className="max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
-                myCHEF works with private villas, villa managers, and guests who want a polished dining experience without the usual coordination work. From intimate dinners to larger private events, the focus is simple: reliable chefs, beautiful food, and calm execution.
-              </p>
+          {/* Right: Image */}
+          <div className="relative h-full lg:flex items-center justify-center hidden">
+            <div
+              className="relative w-full max-w-[500px]"
+              style={{ aspectRatio: '4/5' }}
+            >
+              <img
+                src="/images/family-villa-dinner-cutout.png"
+                alt="Family enjoying private villa dinner in Bali"
+                width={500}
+                height={625}
+                className="w-full h-full object-contain"
+                loading="lazy"
+                decoding="async"
+                style={{
+                  filter: 'drop-shadow(0 20px 60px rgba(0,0,0,0.08))'
+                }}
+              />
             </div>
+          </div>
+        </div>
+
+        {/* Mobile Image (shows below on smaller screens) */}
+        <div className="lg:hidden px-6 py-12">
+          <div
+            className="relative w-full rounded-2xl overflow-hidden"
+            style={{ aspectRatio: '4/3' }}
+          >
+            <img
+              src="/public/images/family-villa-dinner-cutout.png"
+              alt="Family enjoying private villa dinner in Bali"
+              width={600}
+              height={450}
+              className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>

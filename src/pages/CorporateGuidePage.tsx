@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom'
-import { CheckCircle, ArrowRight } from 'lucide-react'
-import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
-import Breadcrumb from '@/components/shared/Breadcrumb'
+import { ArrowRight } from 'lucide-react'
+import SeoHead, { breadcrumbSchema, Breadcrumb } from '@/components/SeoHead'
 
 const SITE = 'https://mychef.id'
 

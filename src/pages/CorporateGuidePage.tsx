@@ -1,5 +1,6 @@
-import { ArrowRight } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, Breadcrumb } from '@/components/SeoHead'
+import { ArrowRight, CheckCircle } from 'lucide-react'
+import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 
 const SITE = 'https://mychef.id'
 

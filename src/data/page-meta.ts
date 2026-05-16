@@ -428,7 +428,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Meet Adriano and the chefs behind myCHEF. See specialties, training, and who cooks fine dining, BBQs, retreats, and villa dinners.',
     canonical: `${SITE}/chefs`,
     h1: 'Meet the myCHEF Chefs',
-    ogImage: `${SITE}/generated/chefs-hero.webp`,
+    ogImage: `${SITE}/generated/finedining-chefs-hero-xl.webp`,
   },
 
   faq: {
@@ -448,7 +448,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'See why 560+ villas book myCHEF for private dining, catering, and events. Michelin-trained leadership, calm logistics, and fast replies.',
     canonical: `${SITE}/why-mychef`,
     h1: 'Why 560+ Villas Choose myCHEF',
-    ogImage: `${SITE}/generated/hub-bali.webp`,
+    ogImage: `${SITE}/generated/misc-hub-bali-lg.webp`,
   },
 
   reviews: {
@@ -508,7 +508,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       "Tell myCHEF what you're hosting and get the right service fast. Match guest count, mood, and budget to the best villa dining format.",
     canonical: `${SITE}/recommended-services`,
     h1: 'Build Your Perfect Villa Experience',
-    ogImage: `${SITE}/generated/aura-setup.webp`,
+    ogImage: `${SITE}/generated/experience-aura-setup-lg.webp`,
   },
 
   'join-our-team': {
@@ -518,7 +518,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Apply to join myCHEF as a chef, bartender, waiter, or coordinator in Bali. Work with a fast-moving team trusted by 560+ villas.',
     canonical: `${SITE}/join-our-team`,
     h1: 'Join the myCHEF Team',
-    ogImage: `${SITE}/generated/staffing-hero.webp`,
+    ogImage: `${SITE}/generated/staffing-staffing-hero-xl.webp`,
   },
 
   quote: {
@@ -748,7 +748,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Meet the myCHEF fine dining chefs behind Bali villa tastings, from Michelin-trained leadership to specialists in fire, seafood, and sauce.',
     canonical: `${SITE}/fine-dining/our-chefs`,
     h1: 'Our Chefs — myCHEF Bali',
-    ogImage: `${SITE}/generated/chefs-hero.webp`,
+    ogImage: `${SITE}/generated/finedining-chefs-hero-xl.webp`,
   },
 
   'in-villa-service-waiters': {
@@ -818,7 +818,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Fill long-term kitchen roles faster with private chef placement in Bali. Vetted candidates, trials, contracts, and onboarding support.',
     canonical: `${SITE}/staffing/private-chef-placement`,
     h1: 'Private Chef Placement in Bali',
-    ogImage: `${SITE}/generated/staffing-hero.webp`,
+    ogImage: `${SITE}/generated/staffing-staffing-hero-xl.webp`,
   },
 
   'staffing-live-in-chef': {

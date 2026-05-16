@@ -419,9 +419,9 @@ export default function EventsCorporatePage() {
         title="What Corporate Clients Say"
         subtitle="Operationally sharp, calm on the day, and easy for internal teams to manage."
         testimonials={[
-          { name: 'HR Director, Tech Co.', location: 'Canggu Offsite', quote: 'myCHEF handled our 40-person offsite with clear dietary labelling, steady coffee service, and a service manager who kept every transition on time.', rating: 5 },
-          { name: 'Event Manager, FMCG', location: 'Ubud Retreat', quote: 'The team understood what a full-day agenda needs. Breakfast, coffee breaks, lunch, and evening drinks all landed exactly when they should.', rating: 5 },
-          { name: 'CEO, Fintech', location: 'Seminyak Product Launch', quote: 'Professional proposal, clean execution, and no surprises on invoicing. It felt built for a corporate client from the first message.', rating: 5 },
+          { name: 'HR Director, Tech Co.', location: 'Canggu Offsite (40 people)', quote: '3-day retreat, mixed dietary needs. myCHEF delivered breakfast on time daily, managed gluten-free + vegan labels cleanly, and kept the agenda running. One contact point, zero stress.', rating: 5 },
+          { name: 'Event Manager, FMCG', location: 'Ubud Retreat (28 people)', quote: 'Coffee breaks are when things break. myCHEF hit every 10:30 and 15:00 time block exactly. Service manager stayed invisible but ran the whole floor. That matters for a packed 2-day agenda.', rating: 5 },
+          { name: 'CEO, Fintech', location: 'Seminyak Product Launch (85 people)', quote: 'We flew in executives from 4 countries. Proposal was clear on what was included. Invoice was itemized. The team understood "corporate" meant no drama, just execution. They nailed it.', rating: 5 },
         ]}
       />
 

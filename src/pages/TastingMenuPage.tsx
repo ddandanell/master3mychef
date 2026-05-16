@@ -171,7 +171,6 @@ export default function TastingMenuPage() {
         ]}
       />
 
-      <Breadcrumb items={[{ label: 'Fine Dining', href: '/fine-dining' }, { label: 'Tasting Menu' }]} />
 
       {/* ══════════════════════════════════ HERO ══════════════════════════════════ */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
@@ -184,6 +183,9 @@ export default function TastingMenuPage() {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/65 to-black/40" />
+        </div>
+        <div className="absolute top-0 left-0 z-10 w-full">
+          <Breadcrumb items={[{ label: 'Fine Dining', href: '/fine-dining' }, { label: 'Tasting Menu' }]} theme="dark" className="py-6" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24">
           <p className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>

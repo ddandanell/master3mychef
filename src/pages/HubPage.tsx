@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw, ConciergeBell, UsersRound } from 'lucide-react'
+import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
@@ -646,152 +646,107 @@ export default function HubPage() {
       </section>
 
       {/* PRIVATE CHEF SERVICE IN BALI — TRUST SECTION */}
-      <section ref={trustRef} style={{ background: '#faf8f3' }} className="py-0">
-        <div
-          className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-0 items-center min-h-[calc(100vh-82px)]"
-          style={{ padding: '96px 7vw 72px' }}
-        >
-          {/* Left: Content */}
-          <div className="flex flex-col justify-center pr-0 lg:pr-12">
-            {/* Eyebrow */}
-            <p
-              className="mb-6 text-sm uppercase tracking-[0.15em]"
-              style={{ color: '#b88a2b', fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
-            >
-              Trusted by villas, families, and private hosts
-            </p>
+      <section ref={trustRef} style={{ background: '#faf8f3' }} className="py-20 md:py-32 px-6">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left: Content */}
+            <div className="flex flex-col justify-center">
+              {/* Founder Story */}
+              <p
+                className="mb-10 text-lg md:text-xl leading-[1.8]"
+                style={{ color: '#3d3530', fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
+              >
+                Founded by Adriano — trained under a Michelin-starred chef in Milan — myCHEF.id delivers restaurant-level private dining to Bali's finest villas with a 50+ person hospitality team.
+              </p>
 
-            {/* Main Heading */}
-            <h2
-              className="mb-8 text-5xl lg:text-6xl leading-tight"
-              style={{ fontFamily: "'Playfair Display', serif", color: '#1a1714', fontWeight: 400 }}
-            >
-              Private Chef Service in Bali
-            </h2>
-
-            {/* Description */}
-            <p
-              className="mb-12 text-lg leading-[1.7]"
-              style={{ color: '#5c5550' }}
-            >
-              We partner with private villas, villa managers, and guests who want restaurant-level dining without the coordination work. From intimate dinners to larger private events, every detail is handled by our team.
-            </p>
-
-            {/* Three Trust Icons */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
-              {/* Icon Box 1 */}
-              <div className="flex flex-col">
+              {/* Two Guarantee Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+                {/* Card 1 */}
                 <div
-                  className="mb-4 w-12 h-12 flex items-center justify-center rounded-full"
-                  style={{ background: '#b88a2b' }}
+                  className="p-6 rounded-2xl border"
+                  style={{ borderColor: '#d4c5a9', background: 'rgba(255, 255, 255, 0.6)' }}
                 >
-                  <ChefHat className="w-6 h-6 text-white" strokeWidth={1.5} />
+                  <h3
+                    className="mb-3 text-base font-semibold uppercase tracking-widest"
+                    style={{ color: '#1a1714', fontFamily: "'Playfair Display', serif" }}
+                  >
+                    Same-day Confirmation
+                  </h3>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: '#6d6460' }}
+                  >
+                    If your chef can't make it, we send a replacement within 2 hours or refund 100%
+                  </p>
                 </div>
-                <h3
-                  className="mb-2 text-sm font-semibold uppercase tracking-widest"
-                  style={{ color: '#1a1714' }}
+
+                {/* Card 2 */}
+                <div
+                  className="p-6 rounded-2xl border"
+                  style={{ borderColor: '#d4c5a9', background: 'rgba(255, 255, 255, 0.6)' }}
                 >
-                  Michelin-Trained
-                </h3>
-                <p
-                  className="text-xs leading-relaxed"
-                  style={{ color: '#7d7470' }}
-                >
-                  Leadership by Adriano, trained under Michelin-starred chefs in Milan.
-                </p>
+                  <h3
+                    className="mb-3 text-base font-semibold uppercase tracking-widest"
+                    style={{ color: '#1a1714', fontFamily: "'Playfair Display', serif" }}
+                  >
+                    Chef Replacement Guarantee
+                  </h3>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: '#6d6460' }}
+                  >
+                    Same-day replacement or full refund — your evening is protected
+                  </p>
+                </div>
               </div>
 
-              {/* Icon Box 2 */}
-              <div className="flex flex-col">
+              {/* Trust Metrics */}
+              <div className="space-y-3 md:space-y-2">
                 <div
-                  className="mb-4 w-12 h-12 flex items-center justify-center rounded-full"
-                  style={{ background: '#b88a2b' }}
+                  className="text-base font-semibold uppercase tracking-widest"
+                  style={{ color: '#1a1714', fontFamily: "'Playfair Display', serif" }}
                 >
-                  <UsersRound className="w-6 h-6 text-white" strokeWidth={1.5} />
+                  560+ Villas Served
                 </div>
-                <h3
-                  className="mb-2 text-sm font-semibold uppercase tracking-widest"
-                  style={{ color: '#1a1714' }}
-                >
-                  50+ Professionals
-                </h3>
-                <p
-                  className="text-xs leading-relaxed"
-                  style={{ color: '#7d7470' }}
-                >
-                  Chefs, servers, bartenders, and event staff — all trained in-house.
-                </p>
-              </div>
-
-              {/* Icon Box 3 */}
-              <div className="flex flex-col">
                 <div
-                  className="mb-4 w-12 h-12 flex items-center justify-center rounded-full"
-                  style={{ background: '#b88a2b' }}
+                  className="text-base font-semibold uppercase tracking-widest"
+                  style={{ color: '#1a1714', fontFamily: "'Playfair Display', serif" }}
                 >
-                  <ConciergeBell className="w-6 h-6 text-white" strokeWidth={1.5} />
+                  12,000+ Happy Guests
                 </div>
-                <h3
-                  className="mb-2 text-sm font-semibold uppercase tracking-widest"
-                  style={{ color: '#1a1714' }}
+                <div
+                  className="text-base font-semibold uppercase tracking-widest"
+                  style={{ color: '#1a1714', fontFamily: "'Playfair Display', serif" }}
                 >
-                  1-Hour Response
-                </h3>
-                <p
-                  className="text-xs leading-relaxed"
-                  style={{ color: '#7d7470' }}
+                  4.9 ★ Rating
+                </div>
+                <div
+                  className="text-base font-semibold uppercase tracking-widest"
+                  style={{ color: '#1a1714', fontFamily: "'Playfair Display', serif" }}
                 >
-                  Same-day confirmation or same-day replacement guarantee.
-                </p>
+                  8+ Years in Bali
+                </div>
               </div>
             </div>
 
-            {/* Trust Metrics */}
-            <p
-              className="text-sm uppercase tracking-[0.1em]"
-              style={{ color: '#9d8d78' }}
-            >
-              ✓ 560+ villas served  ✓ 12,000+ happy guests  ✓ 4.9 average rating
-            </p>
-          </div>
-
-          {/* Right: Image */}
-          <div className="relative h-full lg:flex items-center justify-center hidden">
-            <div
-              className="relative w-full max-w-[500px]"
-              style={{ aspectRatio: '4/5' }}
-            >
-              <img
-                src="/images/family-villa-dinner-cutout.png"
-                alt="Family enjoying private villa dinner in Bali"
-                width={500}
-                height={625}
-                className="w-full h-full object-contain"
-                loading="lazy"
-                decoding="async"
-                style={{
-                  filter: 'drop-shadow(0 20px 60px rgba(0,0,0,0.08))'
-                }}
-              />
+            {/* Right: Image */}
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="/images/family-dinner-table.png"
+                  alt="Family enjoying private villa dinner with myCHEF"
+                  width={600}
+                  height={700}
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0.5' }}
+                  style={{
+                    filter: 'drop-shadow(0 20px 60px rgba(0,0,0,0.08))'
+                  }}
+                />
+              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Mobile Image (shows below on smaller screens) */}
-        <div className="lg:hidden px-6 py-12">
-          <div
-            className="relative w-full rounded-2xl overflow-hidden"
-            style={{ aspectRatio: '4/3' }}
-          >
-            <img
-              src="/public/images/family-villa-dinner-cutout.png"
-              alt="Family enjoying private villa dinner in Bali"
-              width={600}
-              height={450}
-              className="w-full h-full object-cover"
-              loading="lazy"
-              decoding="async"
-            />
           </div>
         </div>
       </section>

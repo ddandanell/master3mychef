@@ -80,8 +80,8 @@ export default function LocationsHubPage() {
       <section className="relative flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/bali-hub-hero.webp"
-            alt="Aerial view of Bali coastline at sunset"
+            src="/generated/bali-locations-sunset.webp"
+            alt="Dramatic Bali sunset over tropical landscape"
             width={1920}
             height={1080}
             fetchPriority="high"

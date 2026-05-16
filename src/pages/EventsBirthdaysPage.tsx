@@ -67,7 +67,7 @@ const THEMED_SETUPS = [
 
 const REAL_BIRTHDAYS = [
   { title: 'Milestone 40th Pool Dinner', location: 'Canggu Villa', image: '/generated/events-birthday-pool-xl.webp' },
-  { title: 'Birthday Welcome Setup', location: 'Seminyak Villa', image: '/generated/party-birthday.webp' },
+  { title: 'Birthday Welcome Setup', location: 'Seminyak Villa', image: '/generated/events-party-birthday-lg.webp' },
   { title: 'Sunset BBQ Bash', location: 'Uluwatu Villa', image: '/generated/sol-bbq.webp' },
   { title: 'Birthday Brunch Recovery', location: 'Berawa Villa', image: '/generated/party-brunch.webp' },
 ]
@@ -198,7 +198,7 @@ export default function EventsBirthdaysPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/party-birthday.webp" alt="Birthday celebration dining setup in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/events-party-birthday-lg.webp" alt="Birthday celebration dining setup in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

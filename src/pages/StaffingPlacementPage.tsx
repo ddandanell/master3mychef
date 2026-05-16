@@ -100,7 +100,7 @@ export default function StaffingPlacementPage() {
         title="Private Chef Placement Bali | Villa Recruitment — myCHEF"
         description="Long-term private chef placement in Bali. Profiles, trials, contracts, payroll guidance. From IDR 5,500,000 per month."
         canonical={`${SITE}/staffing/private-chef-placement`}
-        ogImage={`${SITE}/generated/staffing-hero.webp`}
+        ogImage={`${SITE}/generated/staffing-staffing-hero-xl.webp`}
         jsonLd={[
           localBusinessSchema,
           serviceSchema(
@@ -118,7 +118,7 @@ export default function StaffingPlacementPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/staffing-hero.webp" alt="Private chef preparing meal at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+          <img src="/generated/staffing-staffing-hero-xl.webp" alt="Private chef preparing meal at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
           <div
             className="absolute inset-0"
             style={{

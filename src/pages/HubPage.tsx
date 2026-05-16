@@ -28,7 +28,7 @@ const PORTALS = [
     title: 'Catering & Events',
     subtitle: 'BBQ, buffet, plated dinners. Weddings, retreats, celebrations. We handle everything. You enjoy.',
     path: '/catering',
-    image: '/generated/hub-catering.webp',
+    image: '/generated/misc-hub-catering-lg.webp',
     accent: '#6B8E5A',
   },
   {
@@ -784,7 +784,7 @@ export default function HubPage() {
               style={{ aspectRatio: '4/5' }}
             >
               <img
-                src="/generated/hub-villa.webp"
+                src="/generated/misc-hub-villa-lg.webp"
                 alt="Family enjoying private villa dinner in Bali"
                 width={500}
                 height={625}
@@ -805,7 +805,7 @@ export default function HubPage() {
             style={{ aspectRatio: '4/3' }}
           >
             <img
-              src="/generated/hub-villa.webp"
+              src="/generated/misc-hub-villa-lg.webp"
               alt="Family enjoying private villa dinner in Bali"
               width={600}
               height={450}
@@ -941,7 +941,7 @@ export default function HubPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <img
-                src="/generated/hub-villa.webp"
+                src="/generated/misc-hub-villa-lg.webp"
                 alt="Luxury villa partnership"
                 width={800}
                 height={600}

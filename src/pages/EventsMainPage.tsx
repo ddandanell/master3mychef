@@ -361,7 +361,7 @@ export default function EventsMainPage() {
       {/* ═══════ HERO — DARK, EDITORIAL, GOLD ═══════ */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0A0A0A] text-white">
         <img
-          src="/hero-events.webp"
+          src="/events-hero-events-xl.webp"
           alt="Luxury villa event in Bali with styled dining and celebration setup"
           width={1920}
           height={1080}

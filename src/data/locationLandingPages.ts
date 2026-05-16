@@ -105,7 +105,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Nusa Dua Bali | myCHEF Services',
     description: 'Private chef in Nusa Dua, Bali for resort villas, executive dinners and events. Fine dining, catering and secure-estate service.',
     h1: 'Private Chef Service in Nusa Dua',
-    heroImage: '/generated/hub-bali.webp',
+    heroImage: '/generated/misc-hub-bali-lg.webp',
     heroAlt: 'Luxury estate mood in Nusa Dua, Bali set for a private chef dinner with resort-style service',
     intro: 'Nusa Dua is where Bali shifts into polished resort energy: secure estates, larger compounds, and guests who expect service to run with hotel precision.',
     areaDescription: [
@@ -276,7 +276,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Bukit Peninsula Bali | myCHEF Services',
     description: 'Private chef in Bukit Peninsula, Bali for clifftop villas, surf groups and celebrations. Fine dining, catering and event service.',
     h1: 'Private Chef Service in Bukit Peninsula',
-    heroImage: '/generated/hub-bali.webp',
+    heroImage: '/generated/misc-hub-bali-lg.webp',
     heroAlt: 'Dramatic cliffside villa setting across the Bukit Peninsula in Bali prepared for a private chef service',
     intro: 'The Bukit Peninsula covers Bali\'s southern clifftop belt: Pecatu, Ungasan, Bingin, Padang Padang, and villas where the setting is part of the dinner.',
     areaDescription: [

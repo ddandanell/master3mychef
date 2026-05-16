@@ -26,7 +26,7 @@ const LOCATION_DETAILS = [
   {
     slug: 'uluwatu',
     highlights: ['Cliffside estates', 'Ocean views', 'Wedding venues'],
-    image: '/generated/hub-bali.webp',
+    image: '/generated/misc-hub-bali-lg.webp',
   },
   {
     slug: 'nusa-dua',
@@ -46,7 +46,7 @@ const LOCATION_DETAILS = [
   {
     slug: 'berawa',
     highlights: ['Modern villas', 'Beach club culture', 'Group events'],
-    image: '/generated/hub-bali.webp',
+    image: '/generated/misc-hub-bali-lg.webp',
   },
   {
     slug: 'pererenan',

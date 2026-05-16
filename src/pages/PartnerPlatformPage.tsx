@@ -17,6 +17,7 @@ import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema, aggregat
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
+import OptimizedImage from '@/components/OptimizedImage'
 const WA = '6282237565997'
 const SITE = 'https://mychef.id'
 
@@ -114,14 +115,14 @@ export default function PartnerPlatformPage() {
         title="Partner Platform | Private Dining for Bali Villas — myCHEF"
         description="Villa dining partner platform for private villas and management companies across Bali. Co-branded or white-label, monthly commission, transparent dashboard."
         canonical={`${SITE}/partner-platform`}
-        ogImage={`${SITE}/generated/partner-platform-hero.webp`}
+        ogImage={`${SITE}/generated/mychef-misc-bali-partner-platform-hero.webp`}
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Partner Platform', `${SITE}/partner-platform`), jsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative w-full min-h-[88vh] flex items-end overflow-hidden">
         <img
-          src="/generated/partner-platform-hero.webp"
+          src="/generated/mychef-misc-bali-partner-platform-hero.webp"
           alt="Private Bali villa private dining setup at golden hour"
           width={1920}
           height={1080}
@@ -264,7 +265,7 @@ export default function PartnerPlatformPage() {
 
       {/* ── KITCHEN BAND IMAGE ───────────────────────────────────────── */}
       <section className="relative w-full h-[40vh] min-h-[340px] overflow-hidden">
-        <img
+        <OptimizedImage
           src="/generated/partner-platform-dashboard.webp"
           alt="Chef plating a Michelin-level course on a black marble countertop in a Bali villa"
           className="absolute inset-0 w-full h-full object-cover"

@@ -23,6 +23,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20Babi%20Guling%20catering%20in%20Bali.'
@@ -117,13 +118,14 @@ const BABI_GULING_GALLERY = [
 ]
 
 const FAQS = [
-  { q: 'Is Babi Guling pork?', a: 'Yes. Babi Guling is a traditional Balinese whole roasted pig dish. It is pork-based and not suitable for halal groups or pork-free events. We offer non-pork alternatives for mixed groups.' },
-  { q: 'How many people does one pig serve?', a: 'Small serves 10–15 guests. Medium serves 25–30 guests. Large serves 40–50 guests. For larger groups, contact us for a custom quote with multiple pigs.' },
-  { q: 'Can you do non-pork sides or alternatives?', a: 'Yes. For mixed groups we can add non-pork dishes such as chicken satay, vegetable urap, and seafood options alongside the main Babi Guling spread.' },
-  { q: 'Do you bring staff to serve and carve?', a: 'Yes. Optional service staff can carve the pig at your villa, manage the buffet table, and serve guests throughout the event.' },
-  { q: 'How far in advance should I book?', a: 'We recommend 3–7 days minimum. For large events or peak season, 2+ weeks is ideal to secure your preferred date and package size.' },
-  { q: 'Can you do halal alternatives?', a: 'Babi Guling itself contains pork and is not halal. For fully halal events we recommend our Indonesian BBQ, International Buffet, or Plated Menu with certified halal options.' },
-  { q: 'What areas in Bali do you cover?', a: 'We deliver across Canggu, Seminyak, Berawa, Pererenan, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, Tanah Lot, Kerobokan, Kuta, Legian, and Denpasar. Travel fees may apply outside Seminyak/Canggu.' },
+  { q: "How long does it take to cook?", a: "6–7h small, up to 10h large. We start off-site, finish at your villa." },
+  { q: "Where do the pigs come from?", a: "Local Balinese farms. Free-range, traditional diet." },
+  { q: "Is it suitable for Muslim guests?", a: "**No — contains pork.** For halal events, see Indonesian BBQ or Buffet." },
+  { q: "What's the difference between sizes?", a: "Small (10–15): single suckling. Medium (25–30): larger pig + soup. Large (40–50): full ceremony + bonfire option." },
+  { q: "How traditional is the preparation?", a: "Authentic bumbu Bali. Slow-roast on spit. No shortcuts." },
+  { q: "Can we add a Balinese welcome ceremony?", a: "Yes — mejejahitan + dancers + gamelan (+IDR 5M–6.5M)." },
+  { q: "How is the pig served?", a: "Carved table-side. Then platters to table. Family-style." },
+  { q: "How far in advance to book?", a: "Minimum 2 days. Recommended 5+ days for ceremonial events." }
 ]
 
 export default function CateringBabiGulingPage() {
@@ -185,13 +187,13 @@ export default function CateringBabiGulingPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Flame className="w-4 h-4" /> Book Babi Guling Catering
             </a>
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-babi-guling-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <MessageCircle className="w-4 h-4" /> WhatsApp availability
             </a>
@@ -340,13 +342,13 @@ export default function CateringBabiGulingPage() {
             For groups with non-pork eaters, we can add chicken satay, vegetable urap, seafood dishes, and vegetarian sides alongside the main Babi Guling spread. For fully halal events, we recommend our Indonesian BBQ, International Buffet, or Plated Menu with certified halal options.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link to="/catering/bbq-catering" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+            <Link to="/catering/bbq-catering" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Indonesian BBQ
             </Link>
-            <Link to="/catering/buffet" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+            <Link to="/catering/buffet" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Buffet Catering
             </Link>
-            <Link to="/catering/drop-off-catering" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+            <Link to="/catering/drop-off-catering" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Drop-Off Catering
             </Link>
           </div>
@@ -444,7 +446,7 @@ export default function CateringBabiGulingPage() {
           <div className="text-center mt-8">
             <Link
               to="/catering"
-              className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
             >
               View all catering options <ArrowRight className="w-4 h-4" />
             </Link>
@@ -559,7 +561,7 @@ export default function CateringBabiGulingPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {BABI_GULING_GALLERY.map((src, i) => (
               <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={src} alt={`Babi Guling catering setup ${i + 1} at a Bali villa event`} className="w-full h-full object-cover" loading="lazy" />
+                <OptimizedImage src={src} alt={`Babi Guling catering setup ${i + 1} at a Bali villa event`} className="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>
@@ -650,13 +652,13 @@ export default function CateringBabiGulingPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Flame className="w-4 h-4" /> Book Babi Guling Catering
             </a>
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-babi-guling-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Phone className="w-4 h-4" /> WhatsApp myCHEF
             </a>
@@ -669,16 +671,16 @@ export default function CateringBabiGulingPage() {
         <div className="max-w-[800px] mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Explore More</p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link to="/fine-dining" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+            <Link to="/fine-dining" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Fine Dining
             </Link>
-            <Link to="/catering/villa-catering" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+            <Link to="/catering/villa-catering" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Villa Catering
             </Link>
-            <Link to="/events" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+            <Link to="/events" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Events
             </Link>
-            <Link to="/contact" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+            <Link to="/contact" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Contact
             </Link>
           </div>

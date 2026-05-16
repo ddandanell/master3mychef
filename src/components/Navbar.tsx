@@ -190,7 +190,7 @@ export default function Navbar() {
             {/* Search Trigger */}
             <button
               onClick={() => setSearchOpen(true)}
-              className="p-2 text-white/70 hover:text-[#C5A028] transition-colors"
+              className="p-2 text-white/70 hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               aria-label="Search myCHEF"
             >
               <Search className="w-5 h-5" strokeWidth={1.5} />
@@ -213,7 +213,7 @@ export default function Navbar() {
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="flex h-10 w-10 items-center justify-center text-white transition-colors hover:text-[#C5A028] lg:hidden flex-shrink-0"
+              className="flex h-10 w-10 items-center justify-center text-white transition-colors hover:text-[#C5A028] lg:hidden flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
             >
               {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -238,7 +238,7 @@ export default function Navbar() {
             type="button"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
-            className="absolute top-6 right-5 inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-gray-700 transition-colors hover:text-[#C5A028]"
+            className="absolute top-6 right-5 inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-gray-700 transition-colors hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
           >
             <X className="h-5 w-5 stroke-[1.5]" />
           </button>
@@ -268,7 +268,7 @@ export default function Navbar() {
                       <button
                         type="button"
                         onClick={() => toggleExpanded(item.href)}
-                        className={`w-full flex items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors ${
+                        className={`w-full flex items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
                           active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-gray-100'
                         }`}
                       >

@@ -26,6 +26,8 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
 
   const top = TOP_CITIES.find((c) => c.slug === slug)
   const locationPage = kind === 'area' ? getLocationBySlug(slug) : undefined
+  const isJakarta = ['jakarta', 'menteng', 'kemang', 'scbd', 'pondok-indah', 'bsd'].includes(slug)
+  const region = isJakarta ? 'Jakarta' : 'Bali'
   const title = locationPage?.h1 ?? `Private Chef in ${entry.name}, Bali`
   const description = locationPage?.description ?? (
     top
@@ -78,7 +80,13 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
         description={description}
         canonical={canonical}
         ogImage={top ? `${SITE}${top.hero}` : undefined}
-        jsonLd={[localBusiness, serviceSchema, aggregateRatingSchema(4.9, 560), areaFaq, breadcrumbSchema(entry.name, canonical)]}
+        jsonLd={[
+          localBusiness, 
+          serviceSchema, 
+          aggregateRatingSchema(4.9, 560), 
+          areaFaq, 
+          breadcrumbSchema(entry.name, canonical, 'Locations', `${SITE}/locations`)
+        ]}
       />
 
       {/* Hero — full-bleed image for top cities, simple eyebrow hero for long-tail areas */}
@@ -268,20 +276,20 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
         </div>
       </section>
 
-      {/* Cross-city linking — all 10 top cities for the silo */}
+      {/* Cross-city linking — siblings in the same region */}
       <section className="px-8 py-16 bg-[#FAFAF8]">
         <div className="max-w-[960px] mx-auto">
-          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-2">Everywhere in Bali</p>
-          <h2 className="font-playfair text-3xl mb-6">We cook across every villa region</h2>
+          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-2">Explore {region}</p>
+          <h2 className="font-playfair text-3xl mb-6">We cook across every primary region</h2>
           <p className="text-[#4A4745] mb-6 max-w-[640px]">
-            myCHEF serves the ten most-visited villa regions on the island. Browse the area closest to where you are staying —
+            myCHEF serves the most-visited areas in {region}. Browse the location closest to where you are staying —
             same team, same standards, same WhatsApp number.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {TOP_CITIES.filter((c) => c.slug !== slug).map((c) => (
+            {TOP_CITIES.filter((c) => c.slug !== slug && (isJakarta ? ['jakarta', 'menteng', 'kemang', 'scbd', 'pondok-indah'].includes(c.slug) : !['jakarta', 'menteng', 'kemang', 'scbd', 'pondok-indah'].includes(c.slug))).map((c) => (
               <Link
                 key={c.slug}
-                to={`/${c.slug}`}
+                to={`/locations/${c.slug}`}
                 className="text-sm font-medium bg-white border border-[#1A1A1A]/10 px-4 py-3 rounded-lg hover:border-[#C5A028] hover:text-[#C5A028] transition-all text-center"
               >
                 {c.name}
@@ -289,7 +297,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
             ))}
           </div>
           <p className="text-xs text-[#8A8785] mt-6">
-            See <Link to="/guide/private-chef-bali" className="underline hover:text-[#C5A028]">our full Bali coverage map</Link>.
+            See <Link to="/locations" className="underline hover:text-[#C5A028]">our full {region} coverage map</Link>.
           </p>
         </div>
       </section>

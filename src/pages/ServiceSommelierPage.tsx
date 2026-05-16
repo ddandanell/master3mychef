@@ -18,6 +18,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -116,7 +117,7 @@ export default function ServiceSommelierPage() {
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
   <div className="absolute inset-0">
-    <img src="/generated/chefs-table-hero-luxury.webp" alt="Sommelier presenting wine at private Bali villa dinner" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+    <img src="/generated/mychef-misc-bali-chefs-table-hero-luxury.webp" alt="Sommelier presenting wine at private Bali villa dinner" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
     <div
       className="absolute inset-0"
       style={{
@@ -253,7 +254,7 @@ export default function ServiceSommelierPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/luna-wine.webp" alt="Wine pairing at Bali villa dinner" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/luna-wine.webp" alt="Wine pairing at Bali villa dinner" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

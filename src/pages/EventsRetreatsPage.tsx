@@ -15,6 +15,7 @@ import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/comp
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20retreat%20catering%20quote.'
@@ -112,8 +113,8 @@ const FAQS = [
 ]
 
 const RETREAT_GALLERY = [
-  { title: 'Sunrise Breakfast', image: '/generated/events/retreat-breakfast.webp' },
-  { title: 'Communal Lunch Table', image: '/generated/events/retreat-table.webp' },
+  { title: 'Sunrise Breakfast', image: '/generated/generated/mychef-events-bali-retreat-breakfast.webp' },
+  { title: 'Communal Lunch Table', image: '/generated/generated/mychef-events-bali-retreat-table.webp' },
   { title: 'Whole Produce Prep', image: '/generated/sol-produce.webp' },
   { title: 'Brunch Recovery Spread', image: '/generated/party-brunch.webp' },
 ]
@@ -148,7 +149,7 @@ export default function EventsRetreatsPage() {
         title="Wellness Retreat Catering Bali | Healthy Meals — myCHEF"
         description="Healthy retreat catering in Bali with multi-day meal planning, dietary-coded menus, on-site chef support, and full villa food operations."
         canonical={`${SITE}/events/retreats`}
-        ogImage={`${SITE}/generated/events/retreat-breakfast.webp`}
+        ogImage={`${SITE}/generated/generated/mychef-events-bali-retreat-breakfast.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema('Wellness Retreat Catering Bali', 'myCHEF.id provides retreat catering in Bali with wellness-focused menus, dietary planning, and on-site chef support. We manage multi-day meal service, kitchen operations, and cleanup for private villas and retreat venues.', `${SITE}/events/retreats`),
@@ -171,7 +172,7 @@ export default function EventsRetreatsPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/retreat-breakfast.webp" alt="Healthy retreat breakfast with fruit and juices in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/generated/mychef-events-bali-retreat-breakfast.webp" alt="Healthy retreat breakfast with fruit and juices in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
@@ -192,10 +193,10 @@ export default function EventsRetreatsPage() {
             Multi-day retreat food planning with balanced breakfasts, communal lunches, dietary-coded dinners, and a team that can sustain quality for several days in a villa environment.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Calendar className="w-4 h-4" /> Request Retreat Quote
             </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-retreats-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-retreats-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
@@ -221,11 +222,11 @@ export default function EventsRetreatsPage() {
                 Retreat food planning is different from normal event catering because guests are not just attending a dinner. They are waking up together, moving through sessions, practicing, resting, and eating multiple times a day for several days in a row. That changes everything: the menu has to feel nourishing without becoming repetitive, portions need to support the rhythm of the programme, and dietary complexity builds quickly as the guest list gets bigger. We design around those realities from day one.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                myCHEF specialises in balanced villa retreat operations — breakfast setups that are ready before the first session, communal lunches that keep the day moving, evening dinners that feel satisfying without weighing guests down, and kitchen systems that hold quality across the full week. For organisers who need a more service-specific breakdown, our <a href="/catering/retreat-catering" className="text-[#2C5F7C] underline underline-offset-4">retreat catering page</a> shows the dedicated catering version of this offer.
+                myCHEF specialises in balanced villa retreat operations — breakfast setups that are ready before the first session, communal lunches that keep the day moving, evening dinners that feel satisfying without weighing guests down, and kitchen systems that hold quality across the full week. For organisers who need a more service-specific breakdown, our <a href="/catering/retreat-catering" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">retreat catering page</a> shows the dedicated catering version of this offer.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/retreat-breakfast.webp" alt="Healthy breakfast service for a Bali wellness retreat" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-retreat-breakfast.webp" alt="Healthy breakfast service for a Bali wellness retreat" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -271,7 +272,7 @@ export default function EventsRetreatsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/events/retreat-table.webp" alt="Long communal retreat dining table in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-retreat-table.webp" alt="Long communal retreat dining table in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -336,7 +337,7 @@ export default function EventsRetreatsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/retreat-breakfast.webp" alt="Labeled healthy breakfast setup for retreat guests" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-retreat-breakfast.webp" alt="Labeled healthy breakfast setup for retreat guests" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -366,7 +367,7 @@ export default function EventsRetreatsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/events/retreat-table.webp" alt="Multi-day retreat lunch service setup in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-retreat-table.webp" alt="Multi-day retreat lunch service setup in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -382,7 +383,7 @@ export default function EventsRetreatsPage() {
             {RETREAT_GALLERY.map((item) => (
               <div key={item.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
+                  <OptimizedImage src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-semibold text-[#1A1A1A] text-sm">{item.title}</h3>
@@ -468,7 +469,7 @@ export default function EventsRetreatsPage() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium"
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 {link.label}
               </Link>

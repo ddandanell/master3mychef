@@ -61,6 +61,19 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
   }, [isOpen])
 
   useEffect(() => {
+    if (!isOpen) return
+
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose()
+      }
+    }
+
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [isOpen, onClose])
+
+  useEffect(() => {
     if (!query.trim()) {
       setResults([])
       return
@@ -98,8 +111,9 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
             <Sparkles className="w-5 h-5 text-[#C5A028]" />
             <h2 className="text-white font-playfair text-xl tracking-wide">Search myCHEF</h2>
           </div>
-          <button 
+          <button
             onClick={onClose}
+            aria-label="Close search (Escape)"
             className="p-2 text-white/40 hover:text-white transition-colors"
           >
             <X size={24} />

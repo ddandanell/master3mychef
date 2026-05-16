@@ -22,6 +22,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20buffet%20catering%20quote%20for%20my%20Bali%20event.'
@@ -36,7 +37,7 @@ const BUFFET_PACKAGES = [
     description: '8 hot dishes, 4 cold dishes, dessert, fresh fruit, 5 sambals, rice, noodles, breads.',
     includes: ['Chef', 'Service team (1 per 12 guests)', 'Full chafing setup', 'Serving tables', 'Linens', 'Cutlery', '2.5h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 30 guests',
-    image: '/generated/hero-buffet-catering.webp',
+    image: '/generated/mychef-catering-bali-hero-buffet-catering.webp',
   },
   {
     title: 'International Buffet',
@@ -179,7 +180,7 @@ export default function CateringBuffetPage() {
         title="Buffet Catering Bali | Villa, Wedding & Event Buffets"
         description="Buffet catering in Bali for villas, weddings, retreats, and events with Indonesian, Western, BBQ, and custom menu options."
         canonical={`${SITE}/catering/buffet`}
-        ogImage={`${SITE}/generated/hero-buffet-catering.webp`}
+        ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet-catering.webp`}
         jsonLd={[
           localBusinessSchema,
           cateringServiceSchema('Buffet Catering Bali', 'Full-service buffet catering for Bali villas, weddings, retreats, and large private events with Indonesian and international menu options. myCHEF.id brings chefs, service staff, buffet equipment, and cleanup across Bali.', `${SITE}/catering/buffet`),
@@ -198,7 +199,7 @@ export default function CateringBuffetPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-buffet-catering.webp"
+            src="/generated/mychef-catering-bali-hero-buffet-catering.webp"
             alt="Styled buffet table in Bali villa garden with chafing dishes and floral arrangements"
             width={1920}
             height={1080}
@@ -217,20 +218,19 @@ export default function CateringBuffetPage() {
             Chapter 1 — Buffet Catering Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Buffet Catering Bali<br />
-            <span className="italic">So 30+ Guests Eat on Time</span>
+            Buffet Catering for Bali Villa Events
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            Your guests eat when they want. Dishes stay hot. Lines stay short. We set the buffet, restock the trays, clear plates, and clean up after service.
+            Three buffet tiers — from Indonesian classics to live-station premium with sushi, pasta, and carving. Minimum 30 guests. Sample tasting at 40+.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
             From IDR 550,000/person · Min. 30 guests · Chef & staff included · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <MessageCircle className="w-4 h-4" /> Get Buffet Quote
             </a>
-            <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               View Buffet Packages
             </a>
           </div>
@@ -326,11 +326,11 @@ export default function CateringBuffetPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/catering/bbq-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/bbq-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Explore BBQ Catering <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
-            <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Explore Plated Dinners <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -469,7 +469,7 @@ export default function CateringBuffetPage() {
             {BUFFET_PACKAGES.map((pkg) => (
               <div key={pkg.title} className="buffet-reveal bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden flex flex-col">
                 <div className="aspect-[16/10] overflow-hidden">
-                  <img src={pkg.image} alt={`${pkg.title} setup at Bali villa`} className="w-full h-full object-cover" loading="lazy" />
+                  <OptimizedImage src={pkg.image} alt={`${pkg.title} setup at Bali villa`} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-6 md:p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
@@ -485,7 +485,7 @@ export default function CateringBuffetPage() {
                       </li>
                     ))}
                   </ul>
-                  <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#C5A028] text-black text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+                  <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#C5A028] text-black text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                     <Calendar className="w-4 h-4" /> Request This Buffet
                   </a>
                 </div>
@@ -566,11 +566,11 @@ export default function CateringBuffetPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/in-villa-service/bartenders" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/in-villa-service/bartenders" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Hire Bartenders <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
-            <Link to="/in-villa-service/waiters" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/in-villa-service/waiters" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Hire Waiters <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -617,7 +617,7 @@ export default function CateringBuffetPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Explore Plated Dinners <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -729,10 +729,10 @@ export default function CateringBuffetPage() {
             Send your date, villa or venue, guest count, and menu style. We confirm setup, staffing, and price on WhatsApp within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <MessageCircle className="w-4 h-4" /> Get Buffet Quote
             </a>
-            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Phone className="w-4 h-4" /> Call +62 822-3756-5997
             </a>
           </div>
@@ -749,19 +749,19 @@ export default function CateringBuffetPage() {
         <div className="max-w-[1000px] mx-auto">
           <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/fine-dining" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/fine-dining" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1">Fine Dining</h4>
               <p className="text-xs text-[#4A4745]">7–11 course tasting menus in your villa</p>
             </Link>
-            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1">Villa Catering</h4>
               <p className="text-xs text-[#4A4745]">Full-service catering for villa groups</p>
             </Link>
-            <Link to="/events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1">Events</h4>
               <p className="text-xs text-[#4A4745]">Weddings, birthdays, corporate events</p>
             </Link>
-            <Link to="/contact" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/contact" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1">Contact</h4>
               <p className="text-xs text-[#4A4745]">Speak to our team directly</p>
             </Link>

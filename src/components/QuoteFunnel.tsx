@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, ChevronLeft, MessageCircle, Minus, Plus } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema } from './SeoHead'
@@ -91,6 +91,7 @@ const STEP_TITLES = [
 export default function QuoteFunnel() {
   const [step, setStep] = useState(0)
   const [form, setForm] = useState<QuoteForm>(INITIAL)
+  const headingRef = useRef<HTMLHeadingElement>(null)
 
   const update = <K extends keyof QuoteForm>(key: K, value: QuoteForm[K]) =>
     setForm((f) => ({ ...f, [key]: value }))
@@ -143,29 +144,52 @@ export default function QuoteFunnel() {
 
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(waMessage)}`
 
+  // Keyboard navigation: Enter to advance, Escape to go back
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Enter' && canAdvance) {
+        e.preventDefault()
+        next()
+      }
+      if (e.key === 'Escape' && step > 0) {
+        e.preventDefault()
+        back()
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [step, canAdvance, next, back])
+
+  // Focus heading when step changes for screen reader announcement
+  useEffect(() => {
+    headingRef.current?.focus({ preventScroll: true })
+  }, [step])
+
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Get a Custom Quote — Private Chef in Bali | myCHEF"
         description="Tell us about your event in 9 quick steps. Get a personalised private chef quote within 24 hours. Fine dining, villa catering, weddings, retreats — all priced transparently."
         canonical="https://mychef.id/quote"
-        ogImage="https://mychef.id/og-image.webp"
+        ogImage="https://mychef.id/mychef-misc-bali-og-image.webp"
         noindex
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Quote', 'https://mychef.id/quote')]}
       />
       <section className="px-8 pt-24 pb-16 max-w-[800px] mx-auto">
         {/* Progress strip */}
         <div className="flex items-center justify-between mb-6 text-xs text-[#8A8785]">
-          <button type="button" onClick={back} disabled={step === 0} className="inline-flex items-center gap-1 disabled:opacity-30 hover:text-[#1A1A1A]">
+          <button type="button" onClick={back} disabled={step === 0} aria-label={step === 0 ? 'Go back to previous step (disabled at first step)' : 'Go back to previous step (Escape)'} className="inline-flex items-center gap-1 disabled:opacity-30 hover:text-[#1A1A1A]">
             <ChevronLeft className="w-4 h-4" /> Back
           </button>
-          <span>Step {step + 1} of 9</span>
+          <span aria-live="polite" aria-atomic="true">Step {step + 1} of 9</span>
         </div>
         <div className="h-1 bg-[#E5E3E0] rounded-full mb-10 overflow-hidden">
           <div className="h-full bg-[#C5A028] transition-all" style={{ width: `${((step + 1) / 9) * 100}%` }} />
         </div>
 
-        <h1 className="font-playfair text-3xl md:text-4xl mb-8">{STEP_TITLES[step]}</h1>
+        <h1 ref={headingRef} tabIndex={-1} className="font-playfair text-3xl md:text-4xl mb-8 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-2" role="status" aria-live="assertive">
+          {STEP_TITLES[step]}
+        </h1>
 
         {step === 0 && (
           <div className="grid md:grid-cols-3 gap-4">
@@ -239,7 +263,7 @@ export default function QuoteFunnel() {
               type="button"
               onClick={() => update('guestsFlexible', !form.guestsFlexible)}
               aria-pressed={form.guestsFlexible}
-              className={`text-sm px-4 py-2 rounded-full border-2 ${form.guestsFlexible ? 'border-[#C5A028] text-[#8B6F1A]' : 'border-[#E5E3E0] text-[#4A4745]'}`}
+              className={`text-sm px-4 py-2 rounded-full border-2 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C5A028] ${form.guestsFlexible ? 'border-[#C5A028] text-[#8B6F1A]' : 'border-[#E5E3E0] text-[#4A4745]'}`}
             >
               Not sure / Varies
             </button>
@@ -335,7 +359,7 @@ export default function QuoteFunnel() {
               type="button"
               onClick={() => update('addressUnknown', !form.addressUnknown)}
               aria-pressed={form.addressUnknown}
-              className={`w-full bg-white border-2 rounded-xl p-3 text-sm font-medium transition-all ${form.addressUnknown ? 'border-[#C5A028] text-[#8B6F1A]' : 'border-[#E5E3E0]'}`}
+              className={`w-full bg-white border-2 rounded-xl p-3 text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C5A028] ${form.addressUnknown ? 'border-[#C5A028] text-[#8B6F1A]' : 'border-[#E5E3E0]'}`}
             >
               I don't have the address yet
             </button>
@@ -396,7 +420,8 @@ export default function QuoteFunnel() {
             <button
               onClick={next}
               disabled={!canAdvance}
-              className="bg-[#C5A028] disabled:bg-[#C5A028]/40 text-black font-semibold text-sm uppercase tracking-[2px] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
+              aria-label={canAdvance ? 'Continue to next step (Enter key)' : 'Continue (complete current step to proceed)'}
+              className="bg-[#C5A028] disabled:bg-[#C5A028]/40 text-black font-semibold text-sm uppercase tracking-[2px] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C5A028]"
             >
               Continue
             </button>
@@ -427,7 +452,7 @@ function Input({ label, value, onChange, placeholder, disabled }: { label: strin
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         disabled={disabled}
-        className="w-full bg-white border-2 border-[#E5E3E0] rounded-xl p-3 text-sm focus:border-[#C5A028] disabled:opacity-50"
+        className="w-full bg-white border-2 border-[#E5E3E0] rounded-xl p-3 text-sm focus:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] disabled:opacity-50"
       />
     </label>
   )
@@ -435,10 +460,8 @@ function Input({ label, value, onChange, placeholder, disabled }: { label: strin
 
 function DateStep({ form, update }: { form: QuoteForm; update: <K extends keyof QuoteForm>(key: K, value: QuoteForm[K]) => void }) {
   const [monthOffset, setMonthOffset] = useState(0)
-  // Range-select mode: most catering clients book consecutive days (10-day stay,
-  // long weekend, week-long retreat). Tap-each-day was tedious and error-prone.
-  // Mode picker lets users choose; range is the default since it's the common case.
   const [mode, setMode] = useState<'range' | 'multi'>('range')
+  const monthButtonRef = useRef<HTMLDivElement>(null)
 
   const today = new Date()
   const view = new Date(today.getFullYear(), today.getMonth() + monthOffset, 1)
@@ -498,28 +521,32 @@ function DateStep({ form, update }: { form: QuoteForm; update: <K extends keyof 
   return (
     <div className="space-y-5">
       {/* Mode switcher */}
-      <div className="flex bg-white border border-[#E5E3E0] rounded-full p-1">
+      <div className="flex bg-white border border-[#E5E3E0] rounded-full p-1" role="tablist" aria-label="Date selection mode">
         <button
           type="button"
           onClick={() => { setMode('range'); update('dates', []) }}
-          className={`flex-1 text-xs uppercase tracking-[0.15em] py-2 rounded-full transition-colors ${mode === 'range' ? 'bg-[#C5A028] text-black font-semibold' : 'text-[#4A4745]'}`}
+          role="tab"
+          aria-selected={mode === 'range'}
+          className={`flex-1 text-xs uppercase tracking-[0.15em] py-2 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${mode === 'range' ? 'bg-[#C5A028] text-black font-semibold' : 'text-[#4A4745]'}`}
         >
           Date range
         </button>
         <button
           type="button"
           onClick={() => { setMode('multi'); update('dates', []) }}
-          className={`flex-1 text-xs uppercase tracking-[0.15em] py-2 rounded-full transition-colors ${mode === 'multi' ? 'bg-[#C5A028] text-black font-semibold' : 'text-[#4A4745]'}`}
+          role="tab"
+          aria-selected={mode === 'multi'}
+          className={`flex-1 text-xs uppercase tracking-[0.15em] py-2 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${mode === 'multi' ? 'bg-[#C5A028] text-black font-semibold' : 'text-[#4A4745]'}`}
         >
           Single / multiple days
         </button>
       </div>
 
-      <div className="bg-white border border-[#E5E3E0] rounded-2xl p-5">
+      <div ref={monthButtonRef} className="bg-white border border-[#E5E3E0] rounded-2xl p-5">
         <div className="flex items-center justify-between mb-4">
-          <button type="button" onClick={() => setMonthOffset((o) => o - 1)} className="text-sm px-3 py-1 hover:text-[#C5A028]" aria-label="Go to previous month">←</button>
-          <span className="font-playfair text-lg">{monthName}</span>
-          <button type="button" onClick={() => setMonthOffset((o) => o + 1)} className="text-sm px-3 py-1 hover:text-[#C5A028]" aria-label="Go to next month">→</button>
+          <button type="button" onClick={() => setMonthOffset((o) => o - 1)} className="text-sm px-3 py-1 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" aria-label={`Go to previous month (${new Date(new Date().getFullYear(), new Date().getMonth() + monthOffset - 1, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })})`}>←</button>
+          <span className="font-playfair text-lg" role="heading" aria-level={3}>{monthName}</span>
+          <button type="button" onClick={() => setMonthOffset((o) => o + 1)} className="text-sm px-3 py-1 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" aria-label={`Go to next month (${new Date(new Date().getFullYear(), new Date().getMonth() + monthOffset + 1, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })})`}>→</button>
         </div>
         <div className="grid grid-cols-7 gap-1 text-center text-xs text-[#8A8785] mb-2">
           {['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map((d) => <div key={d}>{d}</div>)}
@@ -529,19 +556,26 @@ function DateStep({ form, update }: { form: QuoteForm; update: <K extends keyof 
             if (d === null) return <div key={i} />
             const iso = isoFor(d)
             const selected = isInRange(iso)
-            const isEndpoint = iso === rangeStart || iso === rangeEnd
+            const isStartpoint = iso === rangeStart
+            const isEndpoint = iso === rangeEnd
             const past = new Date(year, month, d) < new Date(today.toDateString())
+            const dateLabel = new Date(year, month, d).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+            let ariaLabel = dateLabel
+            if (selected) ariaLabel += ', selected'
+            if (isStartpoint) ariaLabel += ', range start'
+            if (isEndpoint) ariaLabel += ', range end'
+            if (past) ariaLabel += ', past date'
             return (
               <button
                 type="button"
                 key={i}
                 onClick={() => !past && handleDayClick(d)}
                 disabled={past || form.datesFlexible}
+                aria-label={ariaLabel}
                 aria-pressed={selected}
-                title={past ? 'Past date' : undefined}
-                className={`aspect-square rounded-lg text-sm transition-all ${
+                className={`aspect-square rounded-lg text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
                   selected
-                    ? isEndpoint
+                    ? isStartpoint || isEndpoint
                       ? 'bg-[#C5A028] text-black font-semibold'
                       : 'bg-[#C5A028]/30 text-[#1A1A1A]'
                     : past
@@ -572,7 +606,7 @@ function DateStep({ form, update }: { form: QuoteForm; update: <K extends keyof 
         type="button"
         onClick={() => update('datesFlexible', !form.datesFlexible)}
         aria-pressed={form.datesFlexible}
-        className={`w-full bg-white border-2 rounded-xl p-3 text-sm font-medium transition-all ${form.datesFlexible ? 'border-[#C5A028] text-[#8B6F1A]' : 'border-[#E5E3E0]'}`}
+        className={`w-full bg-white border-2 rounded-xl p-3 text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C5A028] ${form.datesFlexible ? 'border-[#C5A028] text-[#8B6F1A]' : 'border-[#E5E3E0]'}`}
       >
         Dates are flexible
       </button>

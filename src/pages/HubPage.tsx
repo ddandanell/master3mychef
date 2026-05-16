@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw, UsersRound, ConciergeBell } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
   serviceSchema,
@@ -16,15 +14,13 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { RiskReversal } from '@/components/shared'
 import TrustSection from '@/components/trust/TrustSection'
 
-gsap.registerPlugin(ScrollTrigger)
-
 const PORTALS = [
   {
     id: 'fine-dining',
     title: 'Fine Dining',
     subtitle: 'A private chef cooks exclusively for you. Multi-course menu. Wine pairing. Your villa. Just your table.',
     path: '/fine-dining',
-    image: '/generated/hub-fine-dining.webp',
+    image: '/generated/mychef-misc-bali-hub-fine-dining.webp',
     accent: '#C5A028',
   },
   {
@@ -32,7 +28,7 @@ const PORTALS = [
     title: 'Catering & Events',
     subtitle: 'BBQ, buffet, plated dinners. Weddings, retreats, celebrations. We handle everything. You enjoy.',
     path: '/catering',
-    image: '/generated/hub-catering.webp',
+    image: '/generated/mychef-catering-bali-hub-catering.webp',
     accent: '#6B8E5A',
   },
   {
@@ -178,40 +174,58 @@ export default function HubPage() {
   const [hoveredStep, setHoveredStep] = useState<string | null>(null)
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.3 })
-      tl.fromTo('.hub-hero-label', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
-      tl.fromTo('.hub-hero-title', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5')
-      tl.fromTo('.hub-hero-subtitle', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-      tl.fromTo('.hub-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+    let cancelled = false
+    let cleanup: (() => void) | undefined
 
-      gsap.fromTo('.portal-card', { y: 60, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out',
-        scrollTrigger: { trigger: portalsRef.current, start: 'top 85%', once: true },
+    void (async () => {
+      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
+        import('gsap'),
+        import('gsap/ScrollTrigger'),
+      ])
+
+      if (cancelled) return
+
+      gsap.registerPlugin(ScrollTrigger)
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({ delay: 0.3 })
+        tl.fromTo('.hub-hero-label', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
+        tl.fromTo('.hub-hero-title', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5')
+        tl.fromTo('.hub-hero-subtitle', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+        tl.fromTo('.hub-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+
+        gsap.fromTo('.portal-card', { y: 60, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out',
+          scrollTrigger: { trigger: portalsRef.current, start: 'top 85%', once: true },
+        })
+
+        gsap.fromTo('.trust-item', { y: 40, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: {
+            trigger: trustRef.current,
+            start: 'top 80%',
+            once: true,
+            onEnter: () => { statsAnimationStartedRef.current = true },
+          },
+        })
+
+        gsap.fromTo('.hiw-step', { y: 50, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: 'power3.out',
+          scrollTrigger: { trigger: '.hiw-section', start: 'top 75%', once: true },
+        })
+
+        gsap.fromTo('.diff-card', { y: 40, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.diff-section', start: 'top 80%', once: true },
+        })
       })
 
-      gsap.fromTo('.trust-item', { y: 40, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: {
-          trigger: trustRef.current,
-          start: 'top 80%',
-          once: true,
-          onEnter: () => { statsAnimationStartedRef.current = true },
-        },
-      })
+      cleanup = () => ctx.revert()
+    })()
 
-      gsap.fromTo('.hiw-step', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: 'power3.out',
-        scrollTrigger: { trigger: '.hiw-section', start: 'top 75%', once: true },
-      })
-
-      gsap.fromTo('.diff-card', { y: 40, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.diff-section', start: 'top 80%', once: true },
-      })
-    })
-
-    return () => ctx.revert()
+    return () => {
+      cancelled = true
+      cleanup?.()
+    }
   }, [])
 
   const homeLocalBusinessSchema: Record<string, unknown> = {
@@ -314,7 +328,7 @@ export default function HubPage() {
         <div className="mb-10 md:mb-14">
           <div className="relative min-h-[calc(100vh-64px)] overflow-hidden md:min-h-[calc(100vh-72px)]">
             <img
-              src="/generated/bali-hub-hero.webp"
+              src="/generated/mychef-location-bali-hub-hero.webp"
               alt="Luxury private dining table in a Bali villa at sunset"
               width={1536}
               height={1024}
@@ -323,7 +337,6 @@ export default function HubPage() {
               loading="eager"
               decoding="async"
               onError={(e) => {
-                console.error('❌ Critical: Homepage hero image failed to load. Check that public/generated/bali-hub-hero.webp exists.')
                 const img = e.target as HTMLImageElement
                 img.style.opacity = '0.3'
               }} />
@@ -427,11 +440,13 @@ export default function HubPage() {
       </section>
 
       {/* LUXURY TRUST SECTION */}
-      <TrustSection />
+      <div className="cv-auto">
+        <TrustSection />
+      </div>
 
       {/* HOW IT WORKS */}
       <section
-        className="relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
+        className="cv-auto relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
         style={{
           backgroundImage: 'url(/generated/hero-how-it-works.webp)',
           backgroundSize: 'cover',
@@ -632,7 +647,7 @@ export default function HubPage() {
       </section>
 
       {/* WHAT MAKES US DIFFERENT */}
-      <section className="diff-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+      <section className="cv-auto diff-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label mb-4">Why Choose Us</p>
@@ -652,7 +667,7 @@ export default function HubPage() {
       </section>
 
       {/* PRIVATE CHEF SERVICE IN BALI — TRUST SECTION */}
-      <section ref={trustRef} style={{ background: '#faf8f3' }} className="py-0">
+      <section ref={trustRef} style={{ background: '#faf8f3' }} className="cv-auto py-0">
         <div
           className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-0 items-center min-h-[calc(100vh-82px)]"
           style={{ padding: '96px 7vw 72px' }}
@@ -768,7 +783,7 @@ export default function HubPage() {
               style={{ aspectRatio: '4/5' }}
             >
               <img
-                src="/generated/hub-villa.webp"
+                src="/generated/mychef-misc-bali-hub-villa.webp"
                 alt="Family enjoying private villa dinner in Bali"
                 width={500}
                 height={625}
@@ -789,7 +804,7 @@ export default function HubPage() {
             style={{ aspectRatio: '4/3' }}
           >
             <img
-              src="/generated/hub-villa.webp"
+              src="/generated/mychef-misc-bali-hub-villa.webp"
               alt="Family enjoying private villa dinner in Bali"
               width={600}
               height={450}
@@ -925,7 +940,7 @@ export default function HubPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <img
-                src="/generated/hub-villa.webp"
+                src="/generated/mychef-misc-bali-hub-villa.webp"
                 alt="Luxury villa partnership"
                 width={800}
                 height={600}
@@ -988,7 +1003,7 @@ export default function HubPage() {
       <section className="py-24 md:py-32 px-6 relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hub-bali.webp"
+            src="/generated/mychef-location-bali-hub-bali.webp"
             alt="Bali landscape"
             width={1920}
             height={1080}

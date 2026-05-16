@@ -36,7 +36,7 @@ const ACTS = [
   },
   {
     act: 'Act III — The Build',
-    image: '/generated/luna-plating.webp',
+    image: '/generated/mychef-finedining-bali-luna-plating.webp',
     title: 'Handmade pasta. Rolled here, this afternoon.',
     body: 'The middle course is where the evening settles. Pasta that was made in your kitchen earlier that day. A sauce that took hours. This is the centre of the meal — the moment the format justifies itself.',
     medi: 'Lobster Tagliatelle — handmade pasta, lobster reduction, cherry tomatoes, basil',
@@ -155,7 +155,7 @@ export default function TastingMenuPage() {
         title="Tasting Menu Bali | Multi-Course Private Dining — myCHEF"
         description="Private five-course tasting menu in your Bali villa with handmade pasta and Mediterranean or Wagyu paths. From IDR 2,200,000++ per person."
         canonical={`${SITE}/fine-dining/tasting-menu`}
-        ogImage={`${SITE}/generated/luna-plating.webp`}
+        ogImage={`${SITE}/generated/mychef-finedining-bali-luna-plating.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema(
@@ -176,7 +176,7 @@ export default function TastingMenuPage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-plating.webp"
+            src="/generated/mychef-finedining-bali-luna-plating.webp"
             alt="Perfectly plated private tasting menu dish in a Bali villa — myCHEF fine dining"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"

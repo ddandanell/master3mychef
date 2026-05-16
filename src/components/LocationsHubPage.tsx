@@ -4,58 +4,59 @@ import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, 
 import { LOCATIONS } from '../data/siteArchitecture'
 import Breadcrumb from './shared/Breadcrumb'
 
+import OptimizedImage from '@/components/OptimizedImage'
 const SITE = 'https://mychef.id'
 
 const LOCATION_DETAILS = [
   {
     slug: 'seminyak',
     highlights: ['Beachfront villas', 'Luxury estates', 'Sunset dining'],
-    image: '/generated/bali-locations-sunset.webp',
+    image: '/generated/mychef-location-bali-locations-sunset.webp',
   },
   {
     slug: 'canggu',
     highlights: ['Surf villas', 'Rice field views', 'Bohemian luxury'],
-    image: '/generated/bali-hub-hero.webp',
+    image: '/generated/mychef-location-bali-hub-hero.webp',
   },
   {
     slug: 'ubud',
     highlights: ['Jungle retreats', 'Wellness focus', 'Rice terrace views'],
-    image: '/generated/bali-locations-sunset.webp',
+    image: '/generated/mychef-location-bali-locations-sunset.webp',
   },
   {
     slug: 'uluwatu',
     highlights: ['Cliffside estates', 'Ocean views', 'Wedding venues'],
-    image: '/generated/hub-bali.webp',
+    image: '/generated/mychef-location-bali-hub-bali.webp',
   },
   {
     slug: 'nusa-dua',
     highlights: ['Resort villas', 'Family-friendly', 'Calm beaches'],
-    image: '/generated/bali-locations-sunset.webp',
+    image: '/generated/mychef-location-bali-locations-sunset.webp',
   },
   {
     slug: 'jimbaran',
     highlights: ['Seafood tradition', 'Beach clubs', 'Sunset dinners'],
-    image: '/generated/bali-hub-hero.webp',
+    image: '/generated/mychef-location-bali-hub-hero.webp',
   },
   {
     slug: 'sanur',
     highlights: ['Quiet beaches', 'Family villas', 'Relaxed pace'],
-    image: '/generated/bali-locations-sunset.webp',
+    image: '/generated/mychef-location-bali-locations-sunset.webp',
   },
   {
     slug: 'berawa',
     highlights: ['Modern villas', 'Beach club culture', 'Group events'],
-    image: '/generated/hub-bali.webp',
+    image: '/generated/mychef-location-bali-hub-bali.webp',
   },
   {
     slug: 'pererenan',
     highlights: ['Design villas', 'Quiet atmosphere', 'Chef-friendly kitchens'],
-    image: '/generated/bali-locations-sunset.webp',
+    image: '/generated/mychef-location-bali-locations-sunset.webp',
   },
   {
     slug: 'bukit',
     highlights: ['Clifftop premium', 'Surf villas', 'Ocean horizon'],
-    image: '/generated/bali-hub-hero.webp',
+    image: '/generated/mychef-location-bali-hub-hero.webp',
   },
 ]
 
@@ -68,7 +69,7 @@ export default function LocationsHubPage() {
       <SeoHead
         title="Private Chef Locations in Bali — myCHEF"
         description="Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Villa dining, catering and events in every region."
-        ogImage="/og-image.webp"
+        ogImage="/mychef-misc-bali-og-image.webp"
         canonical={canonical}
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Locations', canonical), faqPageSchema([
           { question: 'Which areas in Bali does myCHEF.id cover?', answer: 'myCHEF.id covers all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and Bingin — serving 560+ villas across the island.' },
@@ -81,7 +82,7 @@ export default function LocationsHubPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/bali-locations-sunset.webp"
+            src="/generated/mychef-location-bali-locations-sunset.webp"
             alt="Dramatic Bali sunset over tropical landscape — myCHEF service areas"
             width={1920}
             height={1080}
@@ -147,16 +148,14 @@ export default function LocationsHubPage() {
                   to={`/locations/${loc.slug}`}
                   className="group relative overflow-hidden rounded-2xl border border-black/5 bg-white hover:shadow-xl transition-all duration-300"
                 >
-                  {details?.image && (
-                    <div className="h-56 overflow-hidden">
-                      <img
-                        src={details.image}
-                        alt={loc.label}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
+                  <div className="h-56 overflow-hidden bg-[#E5E3E0]">
+                    <OptimizedImage
+                      src={details?.image || '/generated/mychef-location-bali-locations-sunset.webp'}
+                      alt={loc.label}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
                   <div className="p-7">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2">
@@ -216,8 +215,8 @@ export default function LocationsHubPage() {
               </div>
             </div>
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
-              <img
-                src="/generated/bali-locations-sunset.webp"
+              <OptimizedImage
+                src="/generated/mychef-location-bali-locations-sunset.webp"
                 alt="Dramatic skyline at dusk — myCHEF private chef expansion to Jakarta"
                 className="w-full h-full object-cover"
               />
@@ -232,26 +231,13 @@ export default function LocationsHubPage() {
           <div className="rounded-2xl border border-black/5 bg-white px-6 py-8">
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Detailed Service Areas</p>
             <div className="flex flex-wrap gap-2.5">
-              {[
-                { label: 'Seminyak', href: '/locations/seminyak' },
-                { label: 'Canggu', href: '/locations/canggu' },
-                { label: 'Berawa', href: '/locations/berawa' },
-                { label: 'Pererenan', href: '/locations/pererenan' },
-                { label: 'Ubud', href: '/locations/ubud' },
-                { label: 'Uluwatu', href: '/locations/uluwatu' },
-                { label: 'Bingin', href: '/locations/bukit' },
-                { label: 'Nusa Dua', href: '/locations/nusa-dua' },
-                { label: 'Jimbaran', href: '/locations/jimbaran' },
-                { label: 'Sanur', href: '/locations/sanur' },
-                { label: 'Jakarta', href: '/jakarta' },
-                { label: 'Menteng', href: '/private-chef-menteng' },
-              ].map((link) => (
+              {locations.sort((a, b) => a.label.localeCompare(b.label)).map((loc) => (
                 <Link
-                  key={link.label}
-                  to={link.href}
+                  key={loc.slug}
+                  to={`/locations/${loc.slug}`}
                   className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-white"
                 >
-                  {link.label}
+                  {loc.label}
                 </Link>
               ))}
             </div>

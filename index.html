@@ -9,6 +9,14 @@
     <title>Private Chef Bali | Luxury Villa Dining, Catering & Events by myCHEF</title>
     <meta name="description" content="Private chef in Bali for luxury villa dining, Bali villa catering, private events, parties, and fine dining experiences by myCHEF. Same-day WhatsApp confirmation." />
     <link rel="canonical" href="https://mychef.id/" />
+    
+    <!-- Initialise Analytics DataLayer & gtag -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // gtag('config', 'VITE_GA_ID_PLACEHOLDER'); // Configured dynamically via VITE_GA_ID in .env
+    </script>
 
     <!-- Icons + PWA -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -51,27 +59,48 @@
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" />
     </noscript>
-    <!-- Google Tag Manager: set VITE_GTM_ID in the deployment environment to enable. -->
+    <!-- Defer analytics boot until after first paint/idle so tracking does not compete with LCP/FID. -->
     <script type="module">
-      (function(w,d,s,l,i){
-      if (!i) return;
-      w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer',import.meta.env.VITE_GTM_ID);
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0PQH8ZKTF"></script>
-    <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-W0PQH8ZKTF');
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-W0PQH8ZKTF');
+
+      const loadAnalytics = () => {
+        if (document.documentElement.dataset.analyticsLoaded === 'true') return;
+        document.documentElement.dataset.analyticsLoaded = 'true';
+
+        const gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-W0PQH8ZKTF';
+        document.head.appendChild(gaScript);
+
+        const gtmId = import.meta.env.VITE_GTM_ID;
+        if (!gtmId) return;
+
+        const gtmScript = document.createElement('script');
+        gtmScript.async = true;
+        gtmScript.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}&l=dataLayer`;
+        document.head.appendChild(gtmScript);
+        window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+      };
+
+      const scheduleAnalytics = () => {
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(loadAnalytics, { timeout: 2500 });
+          return;
+        }
+        window.setTimeout(loadAnalytics, 1500);
+      };
+
+      if (document.readyState === 'complete') {
+        scheduleAnalytics();
+      } else {
+        window.addEventListener('load', scheduleAnalytics, { once: true });
+      }
     </script>
-    <!-- Preload the first above-the-fold portal image on the home page -->
-    <link rel="preload" as="image" href="/generated/hub-fine-dining.webp" fetchpriority="high" />
+    <!-- Preload the actual homepage LCP image so the hero starts fetching before React bootstraps. -->
+    <link rel="preload" as="image" href="/generated/bali-hub-hero.webp" fetchpriority="high" />
 
     <!-- Structured data: Organization -->
     <script type="application/ld+json">

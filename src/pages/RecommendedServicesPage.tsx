@@ -146,9 +146,9 @@ export default function RecommendedServicesPage() {
       description="Not sure what you need? Let the myCHEF concierge team guide you to the right Bali villa service — fine dining, events, catering, or staffing."
       h1="Not Sure What You Need? We'll Help."
       subtitle="myCHEF works like a concierge: tell us the occasion, the guest count, and the vibe you want, and we will guide you to the right service quickly."
-      heroImage="/generated/aura-setup.webp"
+      heroImage="/generated/mychef-experience-bali-aura-setup.webp"
       heroImageAlt="myCHEF concierge-style villa experience setup in Bali"
-      ogImage="https://mychef.id/generated/aura-setup.webp"
+      ogImage="https://mychef.id/generated/mychef-experience-bali-aura-setup.webp"
       keywords={['mychef concierge bali', 'villa experience bali', 'private chef bali help']}
       highlights={['Private Dinners', 'Villa Events', 'Group Catering', 'Ongoing Staffing']}
       sections={sections}

@@ -176,9 +176,9 @@ export default function WhyMychefPage() {
       description="Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, 50+ local professionals, same-day confirmation and a no-stress guarantee."
       h1="Why 560+ Villas Choose myCHEF"
       subtitle="Michelin-trained leadership, 50+ local professionals, and calm villa-ready execution for dinners, events, and multi-day stays across Bali."
-      heroImage="/generated/hub-bali.webp"
+      heroImage="/generated/mychef-location-bali-hub-bali.webp"
       heroImageAlt="Luxury myCHEF dinner setup inside a Bali villa"
-      ogImage="https://mychef.id/generated/hub-bali.webp"
+      ogImage="https://mychef.id/generated/mychef-location-bali-hub-bali.webp"
       keywords={['why mychef', 'trusted private chef bali', 'villa chef bali']}
       highlights={['Michelin-Trained in Milan', '50+ Local Professionals', 'Same-Day Confirmation', 'No-Stress Guarantee']}
       sections={sections}

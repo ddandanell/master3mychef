@@ -5,8 +5,6 @@ import {
   Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music,
   Globe2, ClipboardCheck, ArrowRight, Check,
 } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -18,7 +16,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { EventsRiskReversal } from '@/components/shared'
 
-gsap.registerPlugin(ScrollTrigger)
+import OptimizedImage from '@/components/OptimizedImage'
 
 const SITE = 'https://mychef.id'
 const WA_NUMBER = '6282237565997'
@@ -279,22 +277,41 @@ export default function EventsMainPage() {
   const heroRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        '.hero-fade',
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1.1, stagger: 0.12, ease: 'power3.out' },
-      )
-      gsap.fromTo(
-        '.events-reveal',
-        { y: 40, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 0.9, stagger: 0.08, ease: 'power3.out',
-          scrollTrigger: { trigger: '.events-grid', start: 'top 80%', once: true },
-        },
-      )
-    }, heroRef)
-    return () => ctx.revert()
+    let cancelled = false
+    let cleanup: (() => void) | undefined
+
+    void (async () => {
+      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
+        import('gsap'),
+        import('gsap/ScrollTrigger'),
+      ])
+
+      if (cancelled) return
+
+      gsap.registerPlugin(ScrollTrigger)
+      const ctx = gsap.context(() => {
+        gsap.fromTo(
+          '.hero-fade',
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 1.1, stagger: 0.12, ease: 'power3.out' },
+        )
+        gsap.fromTo(
+          '.events-reveal',
+          { y: 40, opacity: 0 },
+          {
+            y: 0, opacity: 1, duration: 0.9, stagger: 0.08, ease: 'power3.out',
+            scrollTrigger: { trigger: '.events-grid', start: 'top 80%', once: true },
+          },
+        )
+      }, heroRef)
+
+      cleanup = () => ctx.revert()
+    })()
+
+    return () => {
+      cancelled = true
+      cleanup?.()
+    }
   }, [])
 
   return (
@@ -344,7 +361,7 @@ export default function EventsMainPage() {
       {/* ═══════ HERO — DARK, EDITORIAL, GOLD ═══════ */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0A0A0A] text-white">
         <img
-          src="/hero-events.webp"
+          src="/mychef-events-bali-hero-events.webp"
           alt="Luxury villa event in Bali with styled dining and celebration setup"
           width={1920}
           height={1080}
@@ -386,13 +403,13 @@ export default function EventsMainPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="events-hero"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <MessageCircle className="w-4 h-4" /> Book on WhatsApp
             </a>
             <a
               href="#event-types"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               View Event Types <ChevronRight className="w-4 h-4" />
             </a>
@@ -442,10 +459,10 @@ export default function EventsMainPage() {
               <Link
                 key={event.slug}
                 to={event.href}
-                className="group bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300"
+                className="group bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={event.image} alt={`${event.title} in Bali by myCHEF`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <OptimizedImage src={event.image} alt={`${event.title} in Bali by myCHEF`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <p className="text-[#C5A028] text-[11px] tracking-[0.3em] uppercase mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -473,7 +490,7 @@ export default function EventsMainPage() {
               <Link
                 key={e.slug}
                 to={e.href}
-                className="events-reveal group bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300"
+                className="events-reveal group bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
@@ -683,13 +700,13 @@ export default function EventsMainPage() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
               href="tel:+6282237565997"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>
@@ -837,13 +854,13 @@ export default function EventsMainPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="events-cta"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
               href="tel:+6282237565997"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>

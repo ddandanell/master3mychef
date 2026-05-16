@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ChefHat, X, UtensilsCrossed, Users, Cake, Briefcase, MessageCircle, Sparkles, Bot, User } from 'lucide-react'
-import { trackWhatsAppClick } from '@/lib/analytics'
+import { trackWhatsAppConversion } from '@/lib/analytics'
 
 const WHATSAPP_NUMBER = '6282237565997'
 
@@ -121,7 +121,7 @@ export default function ConciergeWidget() {
     const fullMessage = prefix + option.baseMessage
     const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(fullMessage)}`
 
-    trackWhatsAppClick(`${option.id}--concierge-widget`)
+    trackWhatsAppConversion(`${option.id}--concierge-widget`)
 
     window.open(waUrl, '_blank', 'noopener,noreferrer')
     setIsOpen(false)
@@ -160,8 +160,8 @@ export default function ConciergeWidget() {
               <span className="text-[10px] font-bold text-[#C5A028] uppercase tracking-wider">
                 {persona === 'ai' ? 'myCHEF AI' : 'Adriano (Founder)'}
               </span>
-              <button 
-                className="ml-auto p-0.5 text-white/40 hover:text-white"
+              <button
+                className="ml-auto p-0.5 text-white/40 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
                 onClick={(e) => { e.stopPropagation(); setShowNotification(false) }}
               >
                 <X className="h-3 w-3" />
@@ -210,7 +210,7 @@ export default function ConciergeWidget() {
           <div className="flex items-center gap-3">
             <div className="flex items-center justify-center h-10 w-10 rounded-full bg-[#C5A028]/10 overflow-hidden border border-[#C5A028]/20">
               <img 
-                src={persona === 'ai' ? '/generated/avatar-ai.webp' : '/generated/luna-chef-portrait.webp'} 
+                src={persona === 'ai' ? '/generated/avatar-ai.webp' : '/generated/mychef-finedining-bali-luna-chef-portrait.webp'} 
                 alt={persona === 'ai' ? 'myCHEF AI' : 'Adriano'} 
                 className="h-full w-full object-cover" 
               />
@@ -230,7 +230,7 @@ export default function ConciergeWidget() {
           <button
             onClick={() => setIsOpen(false)}
             aria-label="Close"
-            className="text-white/60 hover:text-white transition-colors p-1"
+            className="text-white/60 hover:text-white transition-colors p-1 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
           >
             <X className="h-4 w-4" />
           </button>
@@ -261,7 +261,7 @@ export default function ConciergeWidget() {
                 <button
                   key={option.id}
                   onClick={() => handleServiceClick(option)}
-                  className="w-full text-left px-4 py-3 rounded-xl bg-white/[0.03] hover:bg-[#C5A028]/10 border border-white/[0.06] hover:border-[#C5A028]/40 transition-all duration-150 flex items-center gap-3 group"
+                  className="w-full text-left px-4 py-3 rounded-xl bg-white/[0.03] hover:bg-[#C5A028]/10 border border-white/[0.06] hover:border-[#C5A028]/40 transition-all duration-150 flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 >
                   <div className="h-8 w-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[#C5A028]/20 transition-colors">
                     <Icon className="h-4 w-4 text-[#C5A028] flex-shrink-0" strokeWidth={1.8} />

@@ -151,7 +151,7 @@ export default function FineDiningChefsPage() {
         title="Our Chefs Bali | Vetted Private Chefs — myCHEF"
         description="Meet the chefs behind myCHEF. International training, Indonesian sourcing, plated for your villa."
         canonical="https://mychef.id/fine-dining/our-chefs"
-        ogImage="/generated/chefs-hero.webp"
+        ogImage="/generated/mychef-finedining-bali-chefs-hero.webp"
         jsonLd={[
           localBusinessSchema,
           breadcrumbSchema('Our Chefs Bali', `${SITE}/fine-dining/our-chefs`, 'Fine Dining', `${SITE}/fine-dining`),
@@ -162,7 +162,7 @@ export default function FineDiningChefsPage() {
       <section className="relative min-h-[90vh] overflow-hidden flex items-center">
         <div className="absolute inset-0">
           <img
-            src="/generated/chefs-hero.webp"
+            src="/generated/mychef-finedining-bali-chefs-hero.webp"
             alt="myCHEF chefs preparing a fine dining private service in Bali"
             width={1920}
             height={1080}

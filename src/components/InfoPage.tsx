@@ -23,7 +23,7 @@ export default function InfoPage({ title, description, slug, highlights, heroIma
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${title} | myCHEF`} description={description} canonical={canonical} ogImage={heroImage || "/og-image.webp"} jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(title, canonical), faqPageSchema([
+      <SeoHead title={`${title} | myCHEF`} description={description} canonical={canonical} ogImage={heroImage || "/mychef-misc-bali-og-image.webp"} jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(title, canonical), faqPageSchema([
         { question: `Does myCHEF offer private chef services in ${title.replace(' | myCHEF', '').replace('Private Chef in ', '')}?`, answer: `Yes — myCHEF offers private chef dining, villa catering, and event services including ${title.replace('Private Chef in ', '').replace(' | myCHEF', '')}. Contact us via WhatsApp to discuss availability.` },
         { question: 'How do I book a private chef?', answer: 'Send a WhatsApp message to +62 822-3756-5997 with your date, location, and guest count. We reply within the hour and send a proposal within 24 hours.' },
       ])]} />

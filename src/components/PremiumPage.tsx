@@ -1,3 +1,4 @@
+import OptimizedImage from '@/components/OptimizedImage'
 /**
  * PremiumPage — Full-featured page template for myCHEF
  * 
@@ -312,7 +313,7 @@ export default function PremiumPage({
                     )}
                   </div>
                   <div className={idx % 2 === 0 ? 'order-2' : 'order-1'}>
-                    <img
+                    <OptimizedImage
                       src={section.image}
                       alt={section.imageAlt || section.title}
                       className="w-full rounded-2xl shadow-xl"
@@ -373,7 +374,7 @@ export default function PremiumPage({
                       >
                         <div className="aspect-[4/5] bg-gradient-to-br from-[#1A1A1A] via-[#3A3429] to-[#C5A028]/70">
                           {profile.image ? (
-                            <img
+                            <OptimizedImage
                               src={profile.image}
                               alt={profile.imageAlt || profile.name}
                               className="w-full h-full object-cover"

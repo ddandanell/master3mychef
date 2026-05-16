@@ -2,11 +2,11 @@ import fs from 'fs'
 import path from 'path'
 
 const CRITICAL_ASSETS = [
-  'public/generated/bali-hub-hero.webp',
-  'public/generated/hub-fine-dining.webp',
-  'public/generated/hub-catering.webp',
-  'public/generated/hub-events.webp',
-  'public/generated/hero-how-it-works.webp',
+  'public/generated/mychef-location-bali-hub-hero.webp',
+  'public/generated/mychef-misc-bali-hub-fine-dining.webp',
+  'public/generated/mychef-catering-bali-hub-catering.webp',
+  'public/generated/mychef-events-bali-hub-events.webp',
+  'public/generated/mychef-misc-bali-hero-how-it-works.webp',
 ]
 
 export function validateCriticalAssets() {

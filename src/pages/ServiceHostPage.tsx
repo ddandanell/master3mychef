@@ -18,6 +18,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -100,7 +101,7 @@ export default function ServiceHostPage() {
         title="Host & Hostess Hire Bali | Event Reception — myCHEF"
         description="Hosts and hostesses for villa events, weddings and corporate functions in Bali. Welcome service, guest direction. From IDR 400,000 per shift."
         canonical={`${SITE}/in-villa-service/host-hostess`}
-        ogImage={`${SITE}/generated/trust-hosts.webp`}
+        ogImage={`${SITE}/generated/misc-trust-hosts-lg.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema(
@@ -253,7 +254,7 @@ export default function ServiceHostPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/staffing-hero.webp" alt="Professional hosts at Bali villa event" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-staffing-bali-staffing-hero.webp" alt="Professional hosts at Bali villa event" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

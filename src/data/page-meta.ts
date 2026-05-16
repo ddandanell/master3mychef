@@ -233,7 +233,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Wedding catering in Bali for villa ceremonies, receptions and recovery brunches. Menus, staffing and service built for estate weddings.',
     canonical: `${SITE}/events/weddings`,
     h1: 'Wedding Catering in Bali — Villa Weddings & Receptions',
-    ogImage: `${SITE}/event-wedding.webp`,
+    ogImage: `${SITE}/events-event-wedding-xl.webp`,
   },
 
   'events-birthdays': {
@@ -407,6 +407,537 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Private chef Pecatu service for surf villas, sunset BBQs and recovery brunches. Fast chef setup for stays across the Bukit coast.',
     canonical: `${SITE}/pecatu`,
     h1: 'Private Chef Pecatu — Surf & Sunset Dining',
+    ogImage: `${SITE}/generated/hub-villa.webp`,
+  },
+
+
+  about: {
+    path: '/about',
+    title: 'About myCHEF | Michelin-Trained Private Chef Team in Bali',
+    description:
+      'Meet the team behind myCHEF and see how Michelin-trained leadership, Bali sourcing, and villa-first service shape every private chef booking.',
+    canonical: `${SITE}/about`,
+    h1: 'About myCHEF',
+    ogImage: `${SITE}/generated/luna-chef-portrait.webp`,
+  },
+
+  chefs: {
+    path: '/chefs',
+    title: 'Our Chefs Bali | Meet the myCHEF Private Chef Team',
+    description:
+      'Meet Adriano and the chefs behind myCHEF. See specialties, training, and who cooks fine dining, BBQs, retreats, and villa dinners.',
+    canonical: `${SITE}/chefs`,
+    h1: 'Meet the myCHEF Chefs',
+    ogImage: `${SITE}/generated/finedining-chefs-hero-xl.webp`,
+  },
+
+  faq: {
+    path: '/faq',
+    title: 'FAQ | Private Chef Bali Booking Questions — myCHEF',
+    description:
+      'Get fast answers on private chef pricing, menus, dietary requests, staffing, weddings, and booking flow before you confirm your Bali date.',
+    canonical: `${SITE}/faq`,
+    h1: 'Frequently Asked Questions',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'why-mychef': {
+    path: '/why-mychef',
+    title: 'Why 560+ Villas Choose myCHEF | Trusted Private Chef Bali',
+    description:
+      'See why 560+ villas book myCHEF for private dining, catering, and events. Michelin-trained leadership, calm logistics, and fast replies.',
+    canonical: `${SITE}/why-mychef`,
+    h1: 'Why 560+ Villas Choose myCHEF',
+    ogImage: `${SITE}/generated/misc-hub-bali-lg.webp`,
+  },
+
+  reviews: {
+    path: '/reviews',
+    title: 'myCHEF Reviews | 4.9★ Private Chef & Catering Bali',
+    description:
+      'Read what villa guests say after weddings, family dinners, retreats, and chef-led events in Bali. Real reviews, real hosts, clear outcomes.',
+    canonical: `${SITE}/reviews`,
+    h1: 'What Our Guests Say',
+    ogImage: `${SITE}/dining-table.webp`,
+  },
+
+  pricing: {
+    path: '/pricing',
+    title: 'Private Chef Bali Pricing | Fine Dining, Catering & Events',
+    description:
+      'See private chef Bali pricing before you book. Compare hourly service, tasting menus, catering packages, and event formats with no hidden fees.',
+    canonical: `${SITE}/pricing`,
+    h1: 'Pricing',
+    ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,
+  },
+
+  press: {
+    path: '/press',
+    title: 'Press & Media | myCHEF.id Bali',
+    description:
+      'Access myCHEF press coverage, brand facts, media contact details, and images for stories about private chef dining, catering, and Bali villas.',
+    canonical: `${SITE}/press`,
+    h1: 'myCHEF in the Press',
+    ogImage: `${SITE}/generated/partner-platform-hero.webp`,
+  },
+
+  'partner-platform': {
+    path: '/partner-platform',
+    title: 'Partner Platform | Private Dining for Bali Villas — myCHEF',
+    description:
+      'Give villa owners a better guest dining offer with co-branded private chef service, live booking visibility, and revenue-sharing in Bali.',
+    canonical: `${SITE}/partner-platform`,
+    h1: 'Partner Platform for Bali Villas',
+    ogImage: `${SITE}/generated/partner-platform-hero.webp`,
+  },
+
+  services: {
+    path: '/services',
+    title: 'Private Chef Services Bali | Parties, Weddings & Villas',
+    description:
+      'Compare private chef services in Bali for birthdays, weddings, villa parties, meal prep, classes, and romantic dinners before you enquire.',
+    canonical: `${SITE}/services`,
+    h1: 'Private Chef Services in Bali',
+    ogImage: `${SITE}/generated/bali-hub-hero.webp`,
+  },
+
+  'recommended-services': {
+    path: '/recommended-services',
+    title: 'Build Your Perfect Villa Experience | myCHEF Concierge Bali',
+    description:
+      "Tell myCHEF what you're hosting and get the right service fast. Match guest count, mood, and budget to the best villa dining format.",
+    canonical: `${SITE}/recommended-services`,
+    h1: 'Build Your Perfect Villa Experience',
+    ogImage: `${SITE}/generated/experience-aura-setup-lg.webp`,
+  },
+
+  'join-our-team': {
+    path: '/join-our-team',
+    title: 'Join the myCHEF Team | Private Chef & Villa Roles in Bali',
+    description:
+      'Apply to join myCHEF as a chef, bartender, waiter, or coordinator in Bali. Work with a fast-moving team trusted by 560+ villas.',
+    canonical: `${SITE}/join-our-team`,
+    h1: 'Join the myCHEF Team',
+    ogImage: `${SITE}/generated/staffing-staffing-hero-xl.webp`,
+  },
+
+  quote: {
+    path: '/quote',
+    title: 'Get a Custom Quote — Private Chef in Bali | myCHEF',
+    description:
+      'Send your date, guest count, and villa details to get a custom private chef Bali quote for dinners, parties, weddings, or multi-day stays.',
+    canonical: `${SITE}/quote`,
+    h1: 'Get Your Custom Quote',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  calculator: {
+    path: '/calculator',
+    title: 'Private Chef Bali Pricing Calculator | Estimate Your Cost',
+    description:
+      'Estimate private chef Bali pricing in under a minute. Adjust guests, meals, menu style, and add-ons to see a realistic starting budget.',
+    canonical: `${SITE}/calculator`,
+    h1: 'Private Chef Pricing Calculator',
+    ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,
+  },
+
+  'privacy-policy': {
+    path: '/privacy-policy',
+    title: 'Privacy Policy | myCHEF — Private Chef Bali',
+    description:
+      'Read how myCHEF collects, stores, and uses guest details when you enquire, book private chef service, or message the Bali concierge team.',
+    canonical: `${SITE}/privacy-policy`,
+    h1: 'Privacy Policy',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'terms-of-service': {
+    path: '/terms-of-service',
+    title: 'Terms & Payment | myCHEF — Private Chef Bali',
+    description:
+      'Review payment terms, deposits, booking rules, and service conditions before you confirm a private chef, catering, or staffing booking.',
+    canonical: `${SITE}/terms-of-service`,
+    h1: 'Payment & Booking Terms',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  cancellation: {
+    path: '/cancellation',
+    title: 'Cancellation Policy | myCHEF — Private Chef Bali',
+    description:
+      'See refund timelines and cancellation rules for private chef, catering, and event bookings so you can confirm dates with clear expectations.',
+    canonical: `${SITE}/cancellation`,
+    h1: 'Cancellation Policy',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  blog: {
+    path: '/blog',
+    title: 'myCHEF Journal | Private Chef Bali & Hosting Guides',
+    description:
+      'Read practical Bali hosting guides on private chef costs, villa kitchens, retreat menus, and event planning written by the myCHEF team.',
+    canonical: `${SITE}/blog`,
+    h1: 'myCHEF Journal',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  journal: {
+    path: '/journal',
+    title: 'Bali Private Chef Journal | Tips, Menus & Guides — myCHEF',
+    description:
+      'Explore Bali private chef stories, menu ideas, and hosting insights for villas, retreats, and events from the myCHEF journal.',
+    canonical: `${SITE}/journal`,
+    h1: 'Journal',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  help: {
+    path: '/help',
+    title: 'Help & Guides | myCHEF Bali Support Center',
+    description:
+      'Browse booking help for private chef Bali services, from first enquiry to menus, pricing, staffing, and changes before your villa date.',
+    canonical: `${SITE}/help`,
+    h1: 'How can we help?',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'help-getting-started': {
+    path: '/help/getting-started',
+    title: 'Getting Started: Book Your First Private Chef in Bali',
+    description:
+      'Learn how to book your first private chef in Bali, what details to send, how quotes work, and what happens after you confirm.',
+    canonical: `${SITE}/help/getting-started`,
+    h1: 'Getting Started',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'help-pricing': {
+    path: '/help/pricing',
+    title: 'Pricing Guide | myCHEF Private Chef & Catering Costs',
+    description:
+      'Understand private chef Bali pricing, what each format includes, and how guest count, menu style, and staffing change the final quote.',
+    canonical: `${SITE}/help/pricing`,
+    h1: 'Pricing Breakdown',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'help-menu-guide': {
+    path: '/help/menu-guide',
+    title: 'Menu Selection Guide | myCHEF Bali Cuisine & Dietary Options',
+    description:
+      'Choose the right myCHEF menu with guidance on cuisines, dietary needs, course styles, and how to shape a meal around your group.',
+    canonical: `${SITE}/help/menu-guide`,
+    h1: 'Menu Selection Guide',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'help-wedding-guide': {
+    path: '/help/wedding-guide',
+    title: 'Wedding Catering Guide | myCHEF Bali Villa Weddings',
+    description:
+      'Plan Bali wedding catering with clear steps for guest counts, service styles, tastings, staffing, and multi-day villa celebrations.',
+    canonical: `${SITE}/help/wedding-guide`,
+    h1: 'Planning a Villa Wedding',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'help-corporate-guide': {
+    path: '/help/corporate-guide',
+    title: 'Corporate & Team Retreat Catering | myCHEF Bali',
+    description:
+      'Plan corporate catering in Bali with menu guidance, staffing options, timing, and multi-day meal flow for teams and offsites.',
+    canonical: `${SITE}/help/corporate-guide`,
+    h1: 'Corporate & Retreat Catering',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'help-staffing-guide': {
+    path: '/help/staffing-guide',
+    title: 'In-Villa Staffing & Service Guide | myCHEF Bali',
+    description:
+      'Find the right Bali villa staff for dinners, parties, and extended stays, from waiters and bartenders to butlers and household help.',
+    canonical: `${SITE}/help/staffing-guide`,
+    h1: 'In-Villa Staffing & Service',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'help-managing-booking': {
+    path: '/help/managing-booking',
+    title: 'Managing Your Booking | myCHEF Bali Support',
+    description:
+      'Know what happens after booking: menu sign-off, villa setup, chef arrival, changes, dietary updates, and event-day coordination.',
+    canonical: `${SITE}/help/managing-booking`,
+    h1: 'Managing Your Booking',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  menus: {
+    path: '/menus',
+    title: 'Private Chef Menus in Bali | myCHEF',
+    description:
+      'Browse private chef menus for Bali villas, from Mediterranean tasting dinners to Indonesian feasts, BBQs, breakfasts, and custom group meals.',
+    canonical: `${SITE}/menus`,
+    h1: 'Private Chef Menus in Bali',
+    ogImage: `${SITE}/hero-fine-dining.webp`,
+  },
+
+  'guide-private-chef-bali': {
+    path: '/guide/private-chef-bali',
+    title: 'Private Chef in Bali — Every Villa Region We Serve | myCHEF',
+    description:
+      'Understand how private chef Bali bookings work, what it costs, which villas fit best, and how to choose the right dining format.',
+    canonical: `${SITE}/guide/private-chef-bali`,
+    h1: 'Private Chef in Bali — Every Villa Region We Serve',
+    ogImage: `${SITE}/generated/bali-hub-hero.webp`,
+  },
+
+  'fine-dining-romantic-dinner': {
+    path: '/fine-dining/romantic-dinner',
+    title: 'Romantic Dinner Bali | Private Villa Date Night — myCHEF',
+    description:
+      'Plan a romantic dinner in Bali with a private chef, candlelit villa setup, refined courses, and optional flowers or champagne.',
+    canonical: `${SITE}/fine-dining/romantic-dinner`,
+    h1: 'Romantic Dinner in Bali',
+    ogImage: `${SITE}/generated/section-romantic-dinner.webp`,
+  },
+
+  'fine-dining-tasting-menu': {
+    path: '/fine-dining/tasting-menu',
+    title: 'Tasting Menu Bali | Multi-Course Private Dining — myCHEF',
+    description:
+      'Book a tasting menu in Bali with a private chef cooking multi-course Mediterranean or Wagyu dinners in your villa kitchen.',
+    canonical: `${SITE}/fine-dining/tasting-menu`,
+    h1: 'Tasting Menu in Bali',
+    ogImage: `${SITE}/generated/misc-luna-plating-md.webp`,
+  },
+
+  'fine-dining-private-chef-bali': {
+    path: '/fine-dining/private-chef-bali',
+    title: 'Private Chef Bali | Michelin-Trained Villa Dining — myCHEF',
+    description:
+      'Hire a private chef in Bali for plated villa dinners with ingredients, service, and Michelin-trained standards built into the night.',
+    canonical: `${SITE}/fine-dining/private-chef-bali`,
+    h1: 'Private Chef in Bali',
+    ogImage: `${SITE}/generated/luna-hero-v2.webp`,
+  },
+
+  'fine-dining-chefs-table': {
+    path: '/fine-dining/chefs-table',
+    title: "Chef's Table Bali | Adriano 7-Course Private Dining — myCHEF",
+    description:
+      "Reserve a chef's table in Bali for front-row dining, live plating, and a guided multi-course menu served inside your villa.",
+    canonical: `${SITE}/fine-dining/chefs-table`,
+    h1: "Chef's Table in Bali",
+    ogImage: `${SITE}/generated/chefs-table-hero-luxury.webp`,
+  },
+
+  'fine-dining-menus': {
+    path: '/fine-dining/menus',
+    title: 'Private Chef Menus Bali | Riviera & Odyssey — myCHEF',
+    description:
+      'See private chef menus in Bali before you book. Compare Riviera and Odyssey paths, signature dishes, and add-ons for villa dinners.',
+    canonical: `${SITE}/fine-dining/menus`,
+    h1: 'Private Chef Menus in Bali',
+    ogImage: `${SITE}/generated/misc-luna-plating-md.webp`,
+  },
+
+  'fine-dining-our-chefs': {
+    path: '/fine-dining/our-chefs',
+    title: 'Our Chefs Bali | Vetted Private Chefs — myCHEF',
+    description:
+      'Meet the myCHEF fine dining chefs behind Bali villa tastings, from Michelin-trained leadership to specialists in fire, seafood, and sauce.',
+    canonical: `${SITE}/fine-dining/our-chefs`,
+    h1: 'Our Chefs — myCHEF Bali',
+    ogImage: `${SITE}/generated/finedining-chefs-hero-xl.webp`,
+  },
+
+  'in-villa-service-waiters': {
+    path: '/in-villa-service/waiters',
+    title: 'Waiter Hire Bali | Per-Shift Villa Waiters — myCHEF',
+    description:
+      'Hire waiters in Bali for villa dinners, weddings, and events. Uniformed staff handle serving, clearing, and calm guest flow.',
+    canonical: `${SITE}/in-villa-service/waiters`,
+    h1: 'Waiter Hire in Bali',
+    ogImage: `${SITE}/generated/aura-bartender.webp`,
+  },
+
+  'in-villa-service-butlers': {
+    path: '/in-villa-service/butlers',
+    title: 'Butler Service Bali | Villa Butlers Per Shift — myCHEF',
+    description:
+      'Book a villa butler in Bali for arrival service, discreet hosting, table resets, and polished support throughout the stay.',
+    canonical: `${SITE}/in-villa-service/butlers`,
+    h1: 'Butler Service in Bali',
+    ogImage: `${SITE}/generated/hub-villa.webp`,
+  },
+
+  'in-villa-service-bartenders': {
+    path: '/in-villa-service/bartenders',
+    title: 'Bartender Hire Bali | Villa Bartenders — myCHEF',
+    description:
+      'Hire a Bali bartender for villa parties and dinners. Cocktails, glassware, ice, garnish prep, and smooth service in one booking.',
+    canonical: `${SITE}/in-villa-service/bartenders`,
+    h1: 'Bartender Hire in Bali',
+    ogImage: `${SITE}/generated/aura-bartender.webp`,
+  },
+
+  'in-villa-service-mixology': {
+    path: '/in-villa-service/mixology',
+    title: 'Mixology Bali | Private Villa Cocktail Programs — myCHEF',
+    description:
+      'Add private mixology in Bali for signature cocktails, guided tastings, and cocktail classes built around your villa gathering.',
+    canonical: `${SITE}/in-villa-service/mixology`,
+    h1: 'Private Mixology in Bali',
+    ogImage: `${SITE}/bartender.webp`,
+  },
+
+  'in-villa-service-sommelier': {
+    path: '/in-villa-service/sommelier',
+    title: 'Sommelier Bali | Villa Wine Pairings — myCHEF',
+    description:
+      'Hire a sommelier in Bali for villa wine pairings, bottle selection, and service that lifts tasting menus, dinners, and celebrations.',
+    canonical: `${SITE}/in-villa-service/sommelier`,
+    h1: 'Sommelier Service in Bali',
+    ogImage: `${SITE}/generated/luna-wine.webp`,
+  },
+
+  'in-villa-service-host-hostess': {
+    path: '/in-villa-service/host-hostess',
+    title: 'Host & Hostess Hire Bali | Event Reception — myCHEF',
+    description:
+      'Book hosts and hostesses in Bali to greet guests, manage arrival flow, and keep villa weddings and events running smoothly.',
+    canonical: `${SITE}/in-villa-service/host-hostess`,
+    h1: 'Host & Hostess Hire in Bali',
+    ogImage: `${SITE}/generated/misc-trust-hosts-lg.webp`,
+  },
+
+  'staffing-private-chef-placement': {
+    path: '/staffing/private-chef-placement',
+    title: 'Private Chef Placement Bali | Villa Recruitment — myCHEF',
+    description:
+      'Fill long-term kitchen roles faster with private chef placement in Bali. Vetted candidates, trials, contracts, and onboarding support.',
+    canonical: `${SITE}/staffing/private-chef-placement`,
+    h1: 'Private Chef Placement in Bali',
+    ogImage: `${SITE}/generated/staffing-staffing-hero-xl.webp`,
+  },
+
+  'staffing-live-in-chef': {
+    path: '/staffing/live-in-chef',
+    title: 'Live-In Chef Bali | Full-Time Villa Chef Placement — myCHEF',
+    description:
+      'Find a live-in chef in Bali for daily family meals, estate stays, and full-time kitchen coverage with vetted monthly placements.',
+    canonical: `${SITE}/staffing/live-in-chef`,
+    h1: 'Live-In Chef Placement in Bali',
+    ogImage: `${SITE}/generated/staffing-staffing-kitchen-lg.webp`,
+  },
+
+  'staffing-villa-staff': {
+    path: '/staffing/villa-staff',
+    title: 'Villa Staff Placement Bali | Managers & Housekeepers — myCHEF',
+    description:
+      'Hire villa staff in Bali with one partner for managers, housekeepers, gardeners, pool crew, and front-of-house hospitality roles.',
+    canonical: `${SITE}/staffing/villa-staff`,
+    h1: 'Villa Staff Placement in Bali',
+    ogImage: `${SITE}/generated/hub-villa.webp`,
+  },
+
+  'staffing-household-staff': {
+    path: '/staffing/household-staff',
+    title: 'Household Staff Bali | Private Estate Recruitment — myCHEF',
+    description:
+      'Recruit household staff in Bali for residences and estates, from housekeepers and drivers to nannies and heads of house.',
+    canonical: `${SITE}/staffing/household-staff`,
+    h1: 'Household Staff Placement in Bali',
+    ogImage: `${SITE}/generated/staffing-staffing-table-lg.webp`,
+  },
+
+  'staffing-for-villa-managers': {
+    path: '/staffing/for-villa-managers',
+    title: 'Staffing for Villa Managers Bali | myCHEF',
+    description:
+      'Give your properties faster staffing support with vetted chefs and service hires for Bali villa managers and hospitality teams.',
+    canonical: `${SITE}/staffing/for-villa-managers`,
+    h1: 'Staffing for Villa Managers in Bali',
+    ogImage: `${SITE}/generated/corp-villa.webp`,
+  },
+
+  'staffing-for-hotels-restaurants': {
+    path: '/staffing/for-hotels-restaurants',
+    title: 'Hotels & Restaurants Staffing Bali | myCHEF',
+    description:
+      'Solve hospitality hiring in Bali with vetted chefs, servers, and managers for hotels, restaurants, beach clubs, and resorts.',
+    canonical: `${SITE}/staffing/for-hotels-restaurants`,
+    h1: 'Staffing for Hotels & Restaurants in Bali',
+    ogImage: `${SITE}/generated/aura-corporate.webp`,
+  },
+
+  jakarta: {
+    path: '/jakarta',
+    title: 'Private Chef in Jakarta | Residence & Corporate Dining',
+    description:
+      'Bring the myCHEF private chef standard to Jakarta for residence dinners, business hosting, and discreet service in premium homes and suites.',
+    canonical: `${SITE}/jakarta`,
+    h1: 'Private Chef in Jakarta',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'private-chef-menteng': {
+    path: '/private-chef-menteng',
+    title: 'Private Chef in Menteng | Residence Dining & Hosting',
+    description:
+      "Book a private chef in Menteng for embassy dinners, family hosting, and polished in-home service in one of Jakarta's top districts.",
+    canonical: `${SITE}/private-chef-menteng`,
+    h1: 'Private Chef in Menteng',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'private-chef-kemang': {
+    path: '/private-chef-kemang',
+    title: 'Private Chef in Kemang | Home Dining & Social Hosting',
+    description:
+      'Hire a private chef in Kemang for expat homes, creative gatherings, birthdays, and relaxed private dining without restaurant travel.',
+    canonical: `${SITE}/private-chef-kemang`,
+    h1: 'Private Chef in Kemang',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'private-chef-scbd': {
+    path: '/private-chef-scbd',
+    title: 'Private Chef in SCBD | Executive Dining & Hosting',
+    description:
+      'Book a private chef in SCBD for executive dinners, apartment hosting, and business entertainment with polished service and timing.',
+    canonical: `${SITE}/private-chef-scbd`,
+    h1: 'Private Chef in SCBD',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'private-chef-pondok-indah': {
+    path: '/private-chef-pondok-indah',
+    title: 'Private Chef in Pondok Indah | Family Estate Dining',
+    description:
+      'Hire a private chef in Pondok Indah for family estates, weekend entertaining, and private dining with discreet in-home service.',
+    canonical: `${SITE}/private-chef-pondok-indah`,
+    h1: 'Private Chef in Pondok Indah',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  'private-chef-bsd': {
+    path: '/private-chef-bsd',
+    title: 'Private Chef in BSD City | Home Dining & Group Catering',
+    description:
+      "Book a private chef in BSD City for home dinners, company gatherings, and polished catering across Jakarta's fast-growing west side.",
+    canonical: `${SITE}/private-chef-bsd`,
+    h1: 'Private Chef in BSD City',
+    ogImage: `${SITE}/og-image.webp`,
+  },
+
+  kuta: {
+    path: '/kuta',
+    title: 'Private Chef Kuta | Villa Dinners, Surf Trips & Catering',
+    description:
+      'Book a private chef in Kuta for villa dinners, surf-group meals, and last-night celebrations with fast setup near the airport and beach.',
+    canonical: `${SITE}/kuta`,
+    h1: 'Private Chef Kuta — Villa Dining & Group Meals',
     ogImage: `${SITE}/generated/hub-villa.webp`,
   },
 

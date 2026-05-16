@@ -29,7 +29,7 @@ export default function BlogIndexPage() {
       <SeoHead
         title="myCHEF Journal | Private Chef Bali & Hosting Guides"
         description="Practical guides, cost breakdowns, and culinary insights for hosting in Bali villas — written by the myCHEF team."
-        ogImage="/og-image.webp"
+        ogImage="/mychef-misc-bali-og-image.webp"
         canonical={`${SITE}/blog`}
         jsonLd={[
           localBusinessSchema,
@@ -62,7 +62,7 @@ export default function BlogIndexPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-plating.webp"
+            src="/generated/mychef-finedining-bali-luna-plating.webp"
             alt="Chef plating fine dining dinner in a Bali villa — myCHEF Journal"
             width={1920}
             height={1080}

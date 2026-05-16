@@ -26,6 +26,56 @@
       "permanent": true
     },
     {
+      "source": "/seminyak",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/canggu",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/uluwatu",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/ubud",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/sanur",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/nusa-dua",
+      "destination": "/locations/nusa-dua",
+      "permanent": true
+    },
+    {
+      "source": "/jimbaran",
+      "destination": "/locations/jimbaran",
+      "permanent": true
+    },
+    {
+      "source": "/pererenan",
+      "destination": "/locations/pererenan",
+      "permanent": true
+    },
+    {
+      "source": "/bukit",
+      "destination": "/locations/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/berawa",
+      "destination": "/locations/berawa",
+      "permanent": true
+    },
+    {
       "source": "/kuta",
       "destination": "/locations/seminyak",
       "permanent": true
@@ -98,6 +148,36 @@
     {
       "source": "/pecatu",
       "destination": "/locations/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/jakarta",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/menteng",
+      "destination": "/locations/menteng",
+      "permanent": true
+    },
+    {
+      "source": "/kemang",
+      "destination": "/locations/kemang",
+      "permanent": true
+    },
+    {
+      "source": "/scbd",
+      "destination": "/locations/scbd",
+      "permanent": true
+    },
+    {
+      "source": "/pondok-indah",
+      "destination": "/locations/pondok-indah",
+      "permanent": true
+    },
+    {
+      "source": "/bsd",
+      "destination": "/locations/bsd",
       "permanent": true
     },
     {
@@ -241,53 +321,8 @@
       "permanent": true
     },
     {
-      "source": "/best-private-chef-indonesia",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/private-chef-for-events",
-      "destination": "/events",
-      "permanent": true
-    },
-    {
-      "source": "/luxury-chef-indonesia",
-      "destination": "/fine-dining",
-      "permanent": true
-    },
-    {
-      "source": "/wedding-catering-indonesia",
-      "destination": "/events/weddings",
-      "permanent": true
-    },
-    {
-      "source": "/private-dining-indonesia",
-      "destination": "/fine-dining",
-      "permanent": true
-    },
-    {
-      "source": "/healthy-meal-delivery-indonesia",
-      "destination": "/catering",
-      "permanent": true
-    },
-    {
       "source": "/private-chef-booking-indonesia",
       "destination": "/quote",
-      "permanent": true
-    },
-    {
-      "source": "/chef-for-hire-indonesia",
-      "destination": "/catering",
-      "permanent": true
-    },
-    {
-      "source": "/proposal-dinner",
-      "destination": "/fine-dining",
-      "permanent": true
-    },
-    {
-      "source": "/honeymoon-chef",
-      "destination": "/fine-dining",
       "permanent": true
     },
     {
@@ -303,26 +338,6 @@
     {
       "source": "/private-chef-cost-bali",
       "destination": "/pricing",
-      "permanent": true
-    },
-    {
-      "source": "/jakarta",
-      "destination": "/contact",
-      "permanent": true
-    },
-    {
-      "source": "/private-chef-menteng",
-      "destination": "/contact",
-      "permanent": true
-    },
-    {
-      "source": "/recommended-services",
-      "destination": "/contact",
-      "permanent": true
-    },
-    {
-      "source": "/join-our-team",
-      "destination": "/contact",
       "permanent": true
     },
     {
@@ -343,16 +358,6 @@
     {
       "source": "/villa-partners",
       "destination": "/partner-platform",
-      "permanent": true
-    },
-    {
-      "source": "/why-mychef",
-      "destination": "/about",
-      "permanent": true
-    },
-    {
-      "source": "/calculator",
-      "destination": "/quote",
       "permanent": true
     },
     {

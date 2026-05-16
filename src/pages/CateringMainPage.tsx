@@ -1,12 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {
   MessageCircle, Check, ArrowRight, Phone, Calendar, Users, MapPin,
   Utensils, CreditCard, ChefHat, Sparkles, ShieldCheck, HelpCircle,
   Home, PartyPopper, Flame, Wine, Flower2, CakeSlice,
 } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
   breadcrumbSchema,
@@ -29,7 +27,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { CateringRiskReversal } from '@/components/shared'
 
-gsap.registerPlugin(ScrollTrigger)
+import OptimizedImage from '@/components/OptimizedImage'
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20catering%20quote.'
 const WA_DAILY_CHEF_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20daily%20villa%20chef.'
@@ -112,7 +110,7 @@ const CATERING_STYLES = [
     accent: '#6B8E5A',
   },
   {
-    image: '/generated/catering/floating-breakfast.webp',
+    image: '/generated/generated/mychef-catering-bali-floating-breakfast.webp',
     title: 'Floating Breakfast',
     price: 'From IDR 950,000/couple',
     description: 'Best for villa pools, couples, birthdays, and honeymoon mornings.',
@@ -349,25 +347,18 @@ export default function CateringMainPage() {
   const [decisionResult, setDecisionResult] = useState<'one-time' | 'daily' | null>(null)
 
   /* Scroll to #daily-chef on mount if hash present */
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (location.hash === '#daily-chef') {
       setActiveTab('daily')
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         const el = document.getElementById('daily-chef')
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }, 300)
+      return () => clearTimeout(timer)
     }
   }, [location.hash])
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo('.cat-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.cat-content', start: 'top 75%', once: true },
-      })
-    }, ref)
-    return () => ctx.revert()
-  }, [])
+  // No GSAP animations are wired on this page currently.
 
   const handleDecisionAnswer = (qIndex: number, result: 'one-time' | 'daily') => {
     const next = [...decisionAnswers]
@@ -420,7 +411,7 @@ export default function CateringMainPage() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering-hero.webp"
+            src="/generated/mychef-catering-bali-catering-hero.webp"
             alt="Chef grilling seafood at a Bali villa poolside at sunset"
             width={1920}
             height={1080}
@@ -506,7 +497,7 @@ export default function CateringMainPage() {
               <button
                 type="button"
                 onClick={() => setActiveTab('one-time')}
-                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all ${
+                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] ${
                   activeTab === 'one-time'
                     ? 'bg-[#6B8E5A] text-white shadow-md'
                     : 'text-[#4A4745] hover:text-[#1A1A1A]'
@@ -518,7 +509,7 @@ export default function CateringMainPage() {
               <button
                 type="button"
                 onClick={() => setActiveTab('daily')}
-                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all ${
+                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
                   activeTab === 'daily'
                     ? 'bg-[#C5A028] text-white shadow-md'
                     : 'text-[#4A4745] hover:text-[#1A1A1A]'
@@ -752,7 +743,7 @@ export default function CateringMainPage() {
                           key={opt.label}
                           type="button"
                           onClick={() => handleDecisionAnswer(qIdx, opt.result as 'one-time' | 'daily')}
-                          className={`px-5 py-4 rounded-xl border text-left text-sm transition-all ${
+                          className={`px-5 py-4 rounded-xl border text-left text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] ${
                             decisionAnswers[qIdx] === opt.result
                               ? 'border-[#6B8E5A] bg-[#6B8E5A]/5 text-[#1A1A1A] font-medium'
                               : 'border-[#E8E6E3] hover:border-[#6B8E5A]/40 hover:bg-[#FAFAF8]'
@@ -788,14 +779,14 @@ export default function CateringMainPage() {
                         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
                       }, 100)
                     }}
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A]"
                   >
                     <ArrowRight className="w-4 h-4" /> View {decisionResult === 'one-time' ? 'One-Time Catering' : 'Daily Chef Service'}
                   </button>
                   <button
                     type="button"
                     onClick={resetDecision}
-                    className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#4A4745] text-sm tracking-widest uppercase rounded-full hover:bg-[#FAFAF8] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#4A4745] text-sm tracking-widest uppercase rounded-full hover:bg-[#FAFAF8] transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A]"
                   >
                     Start Over
                   </button>
@@ -1267,7 +1258,7 @@ export default function CateringMainPage() {
       {/* ═══════ SECTION 18: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <OptimizedImage
             src="/generated/hub-catering.webp"
             alt="Completed villa dinner table with food ready"
             className="w-full h-full object-cover"

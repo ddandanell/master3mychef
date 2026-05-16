@@ -3,3 +3,5 @@ dist
 .DS_Store
 .vercel
 public/images/
+test-results/
+.env

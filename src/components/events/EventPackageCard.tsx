@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Check, ArrowRight } from 'lucide-react'
 
+import OptimizedImage from '@/components/OptimizedImage'
 interface EventPackageCardProps {
   image?: string
   title: string
@@ -31,7 +32,7 @@ export default function EventPackageCard({
     <>
       {image && (
         <div className="relative aspect-[4/3] overflow-hidden">
-          <img
+          <OptimizedImage
             src={image}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

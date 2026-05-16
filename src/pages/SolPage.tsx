@@ -1,14 +1,10 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, Utensils, Star, MessageCircle, Phone, ShoppingBag, Sparkles } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const HOW_IT_WORKS = [
   { step: '01', title: 'Message Daniel on WhatsApp', desc: 'Tell us your villa, dates, and how many people. Most replies within the hour.', icon: MessageCircle },
@@ -54,14 +50,32 @@ const TESTIMONIALS = [
 export default function SolPage() {
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    const ctx = gsap.context(() => {
+    let cancelled = false
+    let cleanup: (() => void) | undefined
 
-      gsap.fromTo('.sol-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.sol-content', start: 'top 75%', once: true },
-      })
-    }, ref)
-    return () => ctx.revert()
+    void (async () => {
+      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
+        import('gsap'),
+        import('gsap/ScrollTrigger'),
+      ])
+
+      if (cancelled) return
+
+      gsap.registerPlugin(ScrollTrigger)
+      const ctx = gsap.context(() => {
+        gsap.fromTo('.sol-reveal', { y: 50, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.sol-content', start: 'top 75%', once: true },
+        })
+      }, ref)
+
+      cleanup = () => ctx.revert()
+    })()
+
+    return () => {
+      cancelled = true
+      cleanup?.()
+    }
   }, [])
 
   return (
@@ -77,7 +91,7 @@ export default function SolPage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering-hero.webp"
+            src="/generated/mychef-catering-bali-catering-hero.webp"
             alt="Villa chef plating a family-style brunch at a Bali villa, golden morning light"
             width={1920}
             height={1080}
@@ -215,7 +229,7 @@ export default function SolPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden max-w-[75%] mx-auto">
               <img
-                src="/generated/sol-chef-portrait.webp"
+                src="/generated/mychef-finedining-bali-sol-chef-portrait.webp"
                 alt="Chef Daniel"
                 width={800}
                 height={1000}

@@ -17,6 +17,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -99,7 +100,7 @@ export default function StaffingPlacementPage() {
         title="Private Chef Placement Bali | Villa Recruitment — myCHEF"
         description="Long-term private chef placement in Bali. Profiles, trials, contracts, payroll guidance. From IDR 5,500,000 per month."
         canonical={`${SITE}/staffing/private-chef-placement`}
-        ogImage={`${SITE}/generated/staffing-hero.webp`}
+        ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-hero.webp`}
         jsonLd={[
           localBusinessSchema,
           serviceSchema(
@@ -117,7 +118,7 @@ export default function StaffingPlacementPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/staffing-hero.webp" alt="Private chef preparing meal at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+          <img src="/generated/mychef-staffing-bali-staffing-hero.webp" alt="Private chef preparing meal at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
           <div
             className="absolute inset-0"
             style={{
@@ -229,7 +230,7 @@ export default function StaffingPlacementPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/staffing-kitchen.webp" alt="Private chef working in Bali villa kitchen" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-staffing-bali-staffing-kitchen.webp" alt="Private chef working in Bali villa kitchen" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

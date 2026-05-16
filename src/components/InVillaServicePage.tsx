@@ -117,18 +117,19 @@ export default function InVillaServicePage() {
       />
 
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-end overflow-hidden">
+      <section className="relative flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/in-villa-service-hero.webp"
-            alt="Professional villa service staff"
+            src="/generated/butler-service.webp"
+            alt="Professional butler serving luxury villa dinner in Bali"
             width={1920}
             height={1080}
             fetchPriority="high"
             decoding="async"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/45 to-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-transparent" />
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 pb-16 md:pb-24 pt-32">
           <div className="max-w-[900px]">

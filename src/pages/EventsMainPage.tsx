@@ -90,7 +90,7 @@ const EVENT_TYPES: EventType[] = [
     description:
       'Executive dinners, conferences, retreats, product launches. Hospitality production grade — invoice-ready, NPWP-issued.',
     icon: Briefcase,
-    image: '/generated/corporate-event.svg',
+    image: '/generated/corp-gala.webp',
     href: '/events/corporate-events',
   },
   {

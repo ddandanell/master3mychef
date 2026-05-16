@@ -298,6 +298,19 @@ export default function Navbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-3">
+            {/* About + Contact — text links beside Book Now on large screens */}
+            <Link
+              to="/about"
+              className="hidden lg:inline-flex items-center text-[13px] font-medium text-white/80 hover:text-[#C5A028] transition-colors px-2"
+            >
+              About
+            </Link>
+            <Link
+              to="/contact"
+              className="hidden lg:inline-flex items-center text-[13px] font-medium text-white/80 hover:text-[#C5A028] transition-colors px-2"
+            >
+              Contact
+            </Link>
             {/* Book CTA — always visible on sm+ */}
             <Link
               to={PRIMARY_CTA.href}

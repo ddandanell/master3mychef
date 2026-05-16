@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import BestPartnerBadge from '@/components/BestPartnerBadge'
 import SeoHead, {
   localBusinessSchema,
   serviceSchema,
@@ -13,7 +12,6 @@ import SeoHead, {
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import PricingCalculator from '@/components/PricingCalculator'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { RiskReversal } from '@/components/shared'
 import TrustSection from '@/components/trust/TrustSection'
@@ -99,13 +97,6 @@ const FAQS = [
   { q: 'How does payment work?', a: 'A 25% deposit confirms your booking and locks your chef. The remaining 75% is paid when the chef arrives at your villa, before service begins.' },
 ]
 
-const TRUST_STATS = [
-  { icon: MapPin, target: 560, suffix: '+', decimals: 0, label: 'Villas Served' },
-  { icon: Users, target: 12000, suffix: '+', decimals: 0, label: 'Happy Guests' },
-  { icon: Star, target: 4.9, suffix: '', decimals: 1, label: 'Average Rating' },
-  { icon: Clock, target: 8, suffix: '+', decimals: 0, label: 'Years in Bali' },
-]
-
 
 const JOURNAL_LINKS = [
   {
@@ -184,38 +175,7 @@ export default function HubPage() {
   const portalsRef = useRef<HTMLDivElement>(null)
   const trustRef = useRef<HTMLDivElement>(null)
   const statsAnimationStartedRef = useRef(false)
-  const [animatedStatValues, setAnimatedStatValues] = useState<number[]>(
-    TRUST_STATS.map(() => 0)
-  )
   const [hoveredStep, setHoveredStep] = useState<string | null>(null)
-
-  const formatStatValue = (value: number, decimals: number, suffix: string) => {
-    const formatted = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toLocaleString('en-US')
-    return `${formatted}${suffix}`
-  }
-
-  const animateTrustStats = () => {
-    if (statsAnimationStartedRef.current) return
-    statsAnimationStartedRef.current = true
-
-    const duration = 1600
-    const start = performance.now()
-
-    const tick = (now: number) => {
-      const progress = Math.min((now - start) / duration, 1)
-      const eased = 1 - Math.pow(1 - progress, 3)
-
-      setAnimatedStatValues(TRUST_STATS.map((stat) => stat.target * eased))
-
-      if (progress < 1) {
-        requestAnimationFrame(tick)
-      } else {
-        setAnimatedStatValues(TRUST_STATS.map((stat) => stat.target))
-      }
-    }
-
-    requestAnimationFrame(tick)
-  }
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -236,7 +196,7 @@ export default function HubPage() {
           trigger: trustRef.current,
           start: 'top 80%',
           once: true,
-          onEnter: animateTrustStats,
+          onEnter: () => { statsAnimationStartedRef.current = true },
         },
       })
 
@@ -685,63 +645,75 @@ export default function HubPage() {
         </div>
       </section>
 
-      {/* TRUST BAR + AWARDS */}
-      <section ref={trustRef} className="py-16 md:py-20 px-6" style={{ background: 'var(--u-bg)' }}>
+      {/* AWARD-WINNING PRIVATE DINING — NEW SECTION */}
+      <section ref={trustRef} className="py-20 md:py-28 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            {TRUST_STATS.map((stat, index) => (
-              <div key={stat.label} className="trust-item text-center">
-                <stat.icon className="w-6 h-6 mx-auto mb-4 text-[#C5A028]" />
-                <p className="text-3xl md:text-4xl mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>
-                  {formatStatValue(animatedStatValues[index], stat.decimals, stat.suffix)}
-                </p>
-                <p className="text-sm" style={{ color: 'var(--u-text-muted)' }}>{stat.label}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+            {/* Background Image with Awards */}
+            <div className="relative aspect-[4/5] md:aspect-[1/1.2] rounded-2xl overflow-hidden">
+              <img
+                src="/generated/awards-luxury-still-life.png"
+                alt="Award-winning private dining — myCHEF recognized for villa dining in Bali"
+                width={800}
+                height={1000}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            {/* Text Content */}
+            <div className="flex flex-col justify-center">
+              <p className="u-label mb-4">AWARD-WINNING PRIVATE DINING</p>
+              <h2 className="u-heading text-4xl md:text-5xl mb-6">Recognized for Private Villa Dining in Bali</h2>
+              <div className="gold-arc mb-8" />
+
+              <p className="mb-8 leading-relaxed text-base" style={{ color: 'var(--u-text-muted)' }}>
+                A refined dining experience for villas, families, private events, and long-stay guests. Built around trusted chefs, elegant service, and consistent guest satisfaction.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a
+                  href="https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20a%20private%20dinner"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-source="homepage-awards-cta"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105"
+                  style={{
+                    background: '#C5A028',
+                    color: 'white',
+                  }}
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Plan Your Dinner
+                </a>
+                <Link
+                  to="/fine-dining"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 border"
+                  style={{
+                    borderColor: 'var(--u-border)',
+                    color: 'var(--u-text)',
+                  }}
+                >
+                  View Dining Options
+                </Link>
               </div>
-            ))}
-          </div>
-          <div className="mx-auto mt-12 max-w-[920px]">
-            <PricingCalculator
-              compact
-              collapsible
-              defaultOpen={false}
-              title="Quick estimate"
-              description="Tap to get a fast starting price for dinner, catering, events or staffing before you open WhatsApp."
-            />
-          </div>
-          {/* Villa Awards + Best Partner diploma — three trophies on one row */}
-          <div className="mt-12 pt-8 border-t flex flex-col items-center" style={{ borderColor: 'var(--u-border)' }}>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full">
-              <figure className="flex flex-col items-center text-center max-w-[280px]">
-                <img
-                  src="/generated/villa-award-2025.png"
-                  alt="Villa Award 2025 — Best Choice for Private Dining"
-                  width={280}
-                  height={280}
-                  loading="lazy"
-                  className="w-[260px] md:w-[280px] h-auto object-contain drop-shadow-[0_8px_24px_rgba(212,175,55,0.18)]"
-                />
-                <figcaption className="mt-3">
-                  <p className="text-sm font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2025</p>
-                  <p className="text-[10px] uppercase tracking-wider" style={{ color: 'var(--u-text-muted)' }}>Best Choice — Private Dining</p>
-                </figcaption>
-              </figure>
 
-              <BestPartnerBadge variant="dark" width={320} />
+              {/* Trust Line */}
+              <p className="text-sm uppercase tracking-[0.15em]" style={{ color: 'var(--u-text-muted)' }}>
+                560+ villas served · 12,000+ guests · 4.9 average rating
+              </p>
+            </div>
+          </div>
 
-              <figure className="flex flex-col items-center text-center max-w-[280px]">
-                <img
-                  src="/generated/villa-award-2026.png"
-                  alt="Villa Award 2026 — Best Choice for Private Dining"
-                  width={280}
-                  height={280}
-                  loading="lazy"
-                  className="w-[260px] md:w-[280px] h-auto object-contain drop-shadow-[0_8px_24px_rgba(212,175,55,0.18)]"
-                />
-                <figcaption className="mt-3">
-                  <p className="text-sm font-medium" style={{ color: 'var(--u-text)' }}>Villa Award 2026</p>
-                  <p className="text-[10px] uppercase tracking-wider" style={{ color: 'var(--u-text-muted)' }}>Best Choice — Private Dining</p>
-                </figcaption>
-              </figure>
+          {/* Section Below Image */}
+          <div className="mt-20 md:mt-28 pt-16 md:pt-20 border-t" style={{ borderColor: 'var(--u-border)' }}>
+            <div className="text-center mb-12">
+              <h3 className="u-heading text-3xl md:text-4xl mb-6">Trusted by villas, families, and private hosts</h3>
+              <p className="max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
+                myCHEF works with private villas, villa managers, and guests who want a polished dining experience without the usual coordination work. From intimate dinners to larger private events, the focus is simple: reliable chefs, beautiful food, and calm execution.
+              </p>
             </div>
           </div>
         </div>

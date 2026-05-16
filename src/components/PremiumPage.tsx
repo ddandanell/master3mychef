@@ -190,7 +190,7 @@ export default function PremiumPage({
       />
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-end overflow-hidden">
+      <section className="relative flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
         {heroImage && (
           <div className="absolute inset-0">
             <img

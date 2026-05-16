@@ -200,13 +200,8 @@ export default function StaffingPage() {
         ]}
       />
 
-      {/* ── BREADCRUMB ──────────────────────────────────────────────────── */}
-      <div className="pt-20 md:pt-24 px-6 max-w-[1280px] mx-auto">
-        <Breadcrumb items={[{ label: 'Staffing' }]} theme="dark" />
-      </div>
-
       {/* ── HERO ────────────────────────────────────────────────────────── */}
-      <section className="relative w-full min-h-[80vh] flex items-end overflow-hidden">
+      <section className="relative w-full flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
         <img
           src="/generated/staffing-hero.webp"
           alt="Professional hospitality staff at a luxury Bali villa"
@@ -218,9 +213,10 @@ export default function StaffingPage() {
         />
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.85))' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.88) 100%)' }}
         />
         <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-24 pt-32 max-w-[1280px] mx-auto w-full text-white">
+          <Breadcrumb items={[{ label: 'Staffing' }]} theme="dark" className="px-0 pt-0 pb-8" />
           <p
             className="text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-6"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}

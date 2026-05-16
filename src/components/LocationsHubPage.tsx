@@ -77,18 +77,20 @@ export default function LocationsHubPage() {
       />
 
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-end overflow-hidden">
+      <section className="relative flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/locations-hero.webp"
-            alt="Bali locations"
+            src="/generated/bali-hub-hero.webp"
+            alt="Aerial view of Bali coastline at sunset"
             width={1920}
             height={1080}
             fetchPriority="high"
             decoding="async"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+          {/* Left-leaning cinematic overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 pb-16 md:pb-24 pt-32">
           <div className="max-w-[900px]">
@@ -127,21 +129,21 @@ export default function LocationsHubPage() {
       </section>
 
       {/* Locations Grid */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-[1200px] mx-auto px-6">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4 text-center">Where We Serve</p>
-          <h2 className="font-playfair text-3xl md:text-4xl text-center mb-12">Every Region of Bali</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="font-playfair text-3xl md:text-4xl text-center mb-14">Every Region of Bali</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {locations.map((loc) => {
               const details = LOCATION_DETAILS.find((d) => d.slug === loc.slug)
               return (
                 <Link
                   key={loc.slug}
                   to={`/locations/${loc.slug}`}
-                  className="group relative overflow-hidden rounded-2xl border border-black/5 bg-white hover:shadow-lg transition-all"
+                  className="group relative overflow-hidden rounded-2xl border border-black/5 bg-white hover:shadow-xl transition-all duration-300"
                 >
                   {details?.image && (
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-56 overflow-hidden">
                       <img
                         src={details.image}
                         alt={loc.label}
@@ -150,7 +152,7 @@ export default function LocationsHubPage() {
                       />
                     </div>
                   )}
-                  <div className="p-6">
+                  <div className="p-7">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2">
                         <MapPin className="w-5 h-5 text-[#C5A028]" />
@@ -158,7 +160,7 @@ export default function LocationsHubPage() {
                       </div>
                       <ArrowRight className="w-5 h-5 text-[#C5A028] transition-transform group-hover:translate-x-1" />
                     </div>
-                    <p className="text-sm text-[#4A4745] leading-relaxed mb-3">{loc.intro}</p>
+                    <p className="text-sm text-[#4A4745] leading-relaxed mb-4">{loc.intro}</p>
                     {details?.highlights && (
                       <div className="flex flex-wrap gap-2">
                         {details.highlights.map((h) => (

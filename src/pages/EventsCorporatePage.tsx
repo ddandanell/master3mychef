@@ -162,7 +162,7 @@ export default function EventsCorporatePage() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Corporate Events in Bali — Catering & Venue Support
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
             Full F&amp;B operation for offsites, conferences, launches, and gala nights — menus, coffee breaks, staffing, AV coordination, and cleanup managed under one proposal.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -173,7 +173,7 @@ export default function EventsCorporatePage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
-          <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.2em]">
+          <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em]">
             From IDR 1.2M++/guest · NPWP invoicing and venue coordination available
           </p>
         </div>
@@ -335,13 +335,13 @@ export default function EventsCorporatePage() {
                   <div key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
                     <item.icon className="w-6 h-6 text-[#2C5F7C] mx-auto mb-3" />
                     <h3 className="text-sm font-semibold text-white mb-2">{item.title}</h3>
-                    <p className="text-sm text-white/70 leading-relaxed">{item.desc}</p>
+                    <p className="text-sm text-white/[70%] leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 {LOGO_WALL.map((logo) => (
-                  <span key={logo} className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-white/80">
+                  <span key={logo} className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-white/[80%]">
                     {logo}
                   </span>
                 ))}

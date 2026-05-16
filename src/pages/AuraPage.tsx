@@ -294,7 +294,7 @@ export default function AuraPage() {
           <h1 className="aura-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 " style={{ fontFamily: "'Playfair Display', serif" }}>
             Bali Event Catering —<br /><span className="italic">Villas, Weddings & Corporate</span>
           </h1>
-          <p className="aura-hero-sub text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+          <p className="aura-hero-sub text-lg md:text-xl text-white/[80%] mb-10 max-w-2xl mx-auto">
             From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 15M total event minimum. Olivia replies within 24 hours.
           </p>
           <div className="aura-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -312,7 +312,7 @@ export default function AuraPage() {
               { label: '15-person events team' },
               { label: '200+ villas across Bali' },
             ].map((badge) => (
-              <div key={badge.label} className="flex items-center gap-2 text-white/60">
+              <div key={badge.label} className="flex items-center gap-2 text-white/[60%]">
                 <Check className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />
                 <span className="text-xs tracking-wider uppercase">{badge.label}</span>
               </div>
@@ -705,7 +705,7 @@ export default function AuraPage() {
             ].map((item) => (
               <div key={item.step} className="text-center">
                 <span className="text-[#C5A028] text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>{item.step}</span>
-                <p className="text-white/80 text-sm mt-1">{item.text}</p>
+                <p className="text-white/[80%] text-sm mt-1">{item.text}</p>
               </div>
             ))}
           </div>

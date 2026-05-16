@@ -227,7 +227,7 @@ export default function PartnersPage() {
                 <Building2 className="w-4 h-4" /> Villa Partners
               </div>
               <h2 className="font-playfair text-3xl mb-3">Want to become a Certified Partner?</h2>
-              <p className="text-white/72 text-sm leading-relaxed mb-6">
+              <p className="text-white/[72%] text-sm leading-relaxed mb-6">
                 Designed for villa managers who want reliable chef availability, partner rewards, and dining assets that feel premium from enquiry to guest table.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -298,7 +298,7 @@ export default function PartnersPage() {
           <div className="bg-[#111111] text-white rounded-[28px] p-8 md:p-10">
             <p className="text-[#C5A028] text-xs uppercase tracking-[0.35em] font-semibold mb-4">Certified Partner Programme</p>
             <h2 className="font-playfair text-3xl md:text-5xl leading-[1.08] mb-5">Built for villa managers who want the dining side handled properly.</h2>
-            <p className="text-white/72 text-sm md:text-base leading-relaxed mb-8">
+            <p className="text-white/[72%] text-sm md:text-base leading-relaxed mb-8">
               The programme gives your property a cleaner operational handoff, stronger guest-facing presentation, and direct access to the myCHEF team for booking, menus, and event support.
             </p>
             <div className="mb-8">
@@ -306,7 +306,7 @@ export default function PartnersPage() {
             </div>
             <ul className="space-y-3 mb-8">
               {partnerSupport.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-white/78">
+                <li key={item} className="flex items-start gap-3 text-sm text-white/[78%]">
                   <ShieldCheck className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" />
                   <span>{item}</span>
                 </li>
@@ -428,7 +428,7 @@ export default function PartnersPage() {
         <div className="max-w-[900px] mx-auto text-center">
           <p className="text-[#C5A028] text-xs uppercase tracking-[0.35em] font-semibold mb-4">Let&apos;s Talk</p>
           <h2 className="font-playfair text-3xl md:text-5xl mb-5">WhatsApp is the fastest way to start a partnership conversation.</h2>
-          <p className="text-white/72 text-base leading-relaxed mb-8 max-w-[680px] mx-auto">
+          <p className="text-white/[72%] text-base leading-relaxed mb-8 max-w-[680px] mx-auto">
             Whether you&apos;re writing a feature, managing a villa portfolio, or building a new hospitality partnership, message the team and we&apos;ll route you fast.
           </p>
           <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#D5AF35] transition-colors">

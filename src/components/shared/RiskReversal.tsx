@@ -21,7 +21,7 @@ export default function RiskReversal({ items = defaultItems, dark = false, class
   const bgClass = dark ? 'bg-[#0A0A0A]' : 'bg-white'
   const borderClass = dark ? 'border-[#C5A028]/20' : 'border-[#E8E6E3]'
   const textClass = dark ? 'text-white' : 'text-[#1A1A1A]'
-  const mutedClass = dark ? 'text-white/60' : 'text-[#4A4745]'
+  const mutedClass = dark ? 'text-white/[60%]' : 'text-[#4A4745]'
   const iconBg = dark ? 'bg-[#C5A028]/10' : 'bg-[#6B8E5A]/10'
   const iconColor = dark ? 'text-[#C5A028]' : 'text-[#6B8E5A]'
 

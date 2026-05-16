@@ -120,7 +120,7 @@ export default function ServicesPage() {
           >
             Our <span className="italic">Services</span>
           </h1>
-          <p className="text-base md:text-xl text-white/75 mb-10 max-w-[640px] leading-relaxed">
+          <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[640px] leading-relaxed">
             Eight ways we bring extraordinary food to your villa — from intimate dinners for two to full-scale weddings and corporate retreats.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -157,7 +157,7 @@ export default function ServicesPage() {
           >
             Something for Every Occasion
           </h2>
-          <p className="text-white/50 max-w-xl mx-auto">
+          <p className="text-white/[50%] max-w-xl mx-auto">
             Each service is built around the same principle: extraordinary food, in your villa, with zero stress.
           </p>
         </div>
@@ -184,7 +184,7 @@ export default function ServicesPage() {
                 >
                   {service.name}
                 </h3>
-                <p className="text-white/50 text-sm leading-relaxed mb-6">
+                <p className="text-white/[50%] text-sm leading-relaxed mb-6">
                   {service.description}
                 </p>
                 <span
@@ -215,7 +215,7 @@ export default function ServicesPage() {
             >
               Available Across Bali
             </h2>
-            <p className="text-white/50 max-w-xl mx-auto">
+            <p className="text-white/[50%] max-w-xl mx-auto">
               Every service is available in every region. We know the local markets, the villa kitchens, and the best suppliers.
             </p>
           </div>
@@ -235,7 +235,7 @@ export default function ServicesPage() {
               <Link
                 key={city.slug}
                 to={`/${city.slug}`}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-sm text-white/70 hover:border-[#C5A028]/50 hover:text-[#C5A028] transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-sm text-white/[70%] hover:border-[#C5A028]/50 hover:text-[#C5A028] transition-all"
               >
                 <MapPin className="w-3.5 h-3.5" /> {city.name}
               </Link>
@@ -264,7 +264,7 @@ export default function ServicesPage() {
           >
             We Will Guide You
           </h2>
-          <p className="text-white/50 mb-10 max-w-lg mx-auto">
+          <p className="text-white/[50%] mb-10 max-w-lg mx-auto">
             Tell us about your occasion, guest count, and vision. We will recommend the right service and build a custom proposal — usually within the hour.
           </p>
           <a

@@ -163,7 +163,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
         <div className="p-4 rounded-xl border border-dashed" style={{ borderColor: 'var(--u-border)' }}>
           <p className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-accent)', fontFamily: "'Cormorant Garamond', serif" }}>Payment</p>
           <p className="text-sm leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
-            <strong className="text-white/80">25% deposit</strong> confirms your booking and locks your chef. The remaining balance is paid when the chef arrives at your villa, before service begins.
+            <strong className="text-white/[80%]">25% deposit</strong> confirms your booking and locks your chef. The remaining balance is paid when the chef arrives at your villa, before service begins.
           </p>
         </div>
 

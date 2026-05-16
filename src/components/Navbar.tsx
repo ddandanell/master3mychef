@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat, Phone, Tag } from 'lucide-react'
+import { Menu, X, ChefHat, UtensilsCrossed, Wine, MapPin, ChevronRight, CalendarDays, MessageCircle, type LucideIcon } from 'lucide-react'
 import { PILLARS, PRIMARY_CTA } from '../data/siteArchitecture'
 import { AREA_SLUGS, MICRO_AREA_SLUGS } from '../data/route-slugs'
 
@@ -23,6 +23,13 @@ interface NavItem {
   accent: string
   subPages?: SubPageItem[]
   dropdownAlign?: 'left' | 'center' | 'right'
+}
+
+interface MobileLuxuryNavItem {
+  title: string
+  description: string
+  href: string
+  icon: LucideIcon
 }
 
 /* ── Catering dropdown items (real, unique pages) ── */
@@ -87,6 +94,33 @@ const NAV_ITEMS: NavItem[] = [
   },
 ]
 
+const MOBILE_LUXURY_NAV: MobileLuxuryNavItem[] = [
+  {
+    title: 'Fine Dining',
+    description: 'Menus & Experiences',
+    href: '/fine-dining',
+    icon: UtensilsCrossed,
+  },
+  {
+    title: 'Catering & Events',
+    description: 'Villa Catering, Weddings & Corporate Events',
+    href: '/catering',
+    icon: Wine,
+  },
+  {
+    title: 'Private Chef / In-Villa',
+    description: 'Daily Chef, Long Stay & Staffing',
+    href: '/in-villa-service',
+    icon: ChefHat,
+  },
+  {
+    title: 'Locations',
+    description: 'Canggu, Ubud, Seminyak and more',
+    href: '/locations',
+    icon: MapPin,
+  },
+]
+
 function isActivePath(current: string, target: string): boolean {
   if (current === target) return true
   if (target !== '/' && current.startsWith(target + '/')) return true
@@ -131,7 +165,7 @@ function DesktopDropdown({
       <Link
         to={item.href}
         className={`relative block py-2 text-[14px] tracking-[0.06em] uppercase transition-colors duration-200 ${
-          active ? 'text-[#C5A028]' : 'text-white/80 hover:text-[#C5A028]'
+          active ? 'text-[#C5A028]' : 'text-white/[80%] hover:text-[#C5A028]'
         }`}
         style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
       >
@@ -164,7 +198,7 @@ function DesktopDropdown({
                   className={`flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] transition-all ${
                     subActive
                       ? 'text-[#C5A028] bg-white/[0.06]'
-                      : 'text-white/60 hover:text-white hover:bg-white/[0.04]'
+                      : 'text-white/[60%] hover:text-white hover:bg-white/[0.04]'
                   }`}
                   style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
                 >
@@ -173,92 +207,6 @@ function DesktopDropdown({
                     style={{ background: item.accent }}
                   />
                   <span className="truncate">{sub.label}</span>
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      )}
-    </div>
-  )
-}
-
-/* ── Mobile accordion item ── */
-function MobileAccordion({
-  item,
-  currentPath,
-  onNavigate,
-}: {
-  item: NavItem
-  currentPath: string
-  onNavigate: () => void
-}) {
-  const [expanded, setExpanded] = useState(false)
-  const active = isActivePath(currentPath, item.href)
-  const hasSubPages = item.subPages && item.subPages.length > 0
-  const panelId = `mobile-submenu-${item.href.replace(/\//g, '-') || 'root'}`
-
-  return (
-    <div className="border-b border-white/8">
-      <div className="flex items-center justify-between w-full py-4">
-        <Link
-          to={item.href}
-          onClick={onNavigate}
-          className={`text-[20px] tracking-wide ${
-            active ? 'text-[#C5A028]' : 'text-white'
-          }`}
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
-          {item.label}
-        </Link>
-        {hasSubPages && (
-          <button
-            type="button"
-            onClick={() => setExpanded(!expanded)}
-            className="flex min-h-[44px] min-w-[44px] items-center justify-center p-2 text-white/40 transition-colors hover:text-white/70"
-            aria-label={expanded ? `Collapse ${item.label} submenu` : `Expand ${item.label} submenu`}
-            aria-expanded={expanded}
-            aria-controls={panelId}
-          >
-            <span
-              className={`text-lg transition-transform duration-200 ${
-                expanded ? 'rotate-180' : ''
-              }`}
-            >
-              ▼
-            </span>
-          </button>
-        )}
-      </div>
-
-      {hasSubPages && (
-        <div
-          id={panelId}
-          className={`overflow-hidden transition-all duration-300 ${
-            expanded ? 'max-h-[600px] opacity-100 pb-4' : 'max-h-0 opacity-0'
-          }`}
-        >
-          <div className="space-y-1 pl-3">
-            {item.subPages!.map((sub) => {
-              const subPath = `${item.href}/${sub.slug}`
-              const subActive = currentPath === subPath
-              return (
-                <Link
-                  key={sub.slug}
-                  to={subPath}
-                  onClick={onNavigate}
-                  className={`flex min-h-[44px] items-center gap-3 rounded-lg px-3 py-2.5 text-[15px] transition-colors ${
-                    subActive
-                      ? 'text-[#C5A028] bg-white/[0.05]'
-                      : 'text-white/50 hover:text-white/80 hover:bg-white/[0.03]'
-                  }`}
-                  style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
-                >
-                  <span
-                    className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                    style={{ background: item.accent }}
-                  />
-                  {sub.label}
                 </Link>
               )
             })}
@@ -353,7 +301,7 @@ export default function Navbar() {
             {/* Pricing — desktop */}
             <Link
               to="/pricing"
-              className="hidden text-[13px] font-medium text-white/70 hover:text-[#C5A028] transition-colors xl:inline-flex"
+              className="hidden text-[13px] font-medium text-white/[70%] hover:text-[#C5A028] transition-colors xl:inline-flex"
             >
               Pricing
             </Link>
@@ -388,49 +336,105 @@ export default function Navbar() {
         aria-modal="true"
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
-        className={`fixed bottom-0 left-0 right-0 top-[64px] z-[60] bg-[#050505] transition-all duration-300 md:top-[72px] xl:hidden ${
+        className={`fixed bottom-0 left-0 right-0 top-[64px] z-[60] transition-all duration-300 md:top-[72px] xl:hidden ${
           menuOpen ? 'visible opacity-100' : 'invisible pointer-events-none opacity-0'
         }`}
+        style={{
+          background: 'radial-gradient(120% 90% at 12% 0%, #1B1A18 0%, #0D0D0C 45%, #070707 100%)',
+        }}
       >
-        <div className="mx-auto h-full max-w-md overflow-y-auto px-5 pb-10 pt-6">
-          {/* Nav items with accordions */}
-          <div className="space-y-0">
-            {NAV_ITEMS.map((item) => (
-              <MobileAccordion
-                key={item.href}
-                item={item}
-                currentPath={location.pathname}
-                onNavigate={() => setMenuOpen(false)}
-              />
-            ))}
+        <div className="mx-auto flex h-full w-full max-w-md flex-col px-5 pb-7 pt-6">
+          <div className="flex items-start justify-between">
+            <Link to="/" onClick={() => setMenuOpen(false)} className="inline-flex items-center gap-3">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#C5A028]/65 bg-[#0f0f0e]">
+                <ChefHat className="h-4.5 w-4.5 text-[#C5A028]" strokeWidth={1.8} />
+              </span>
+              <span className="block">
+                <span
+                  className="block text-[23px] leading-none text-white"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  my<span className="text-[#C5A028]">CHEF</span>
+                </span>
+                <span className="mt-1 block text-[10px] uppercase tracking-[0.34em] text-[#c5a028]/85">Fine Dining</span>
+              </span>
+            </Link>
+            <button
+              type="button"
+              onClick={() => setMenuOpen(false)}
+              aria-label="Close menu"
+              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-white/[80%] transition-colors hover:text-[#C5A028]"
+            >
+              <X className="h-5 w-5 stroke-[1.5]" />
+            </button>
           </div>
 
-          {/* Bottom actions */}
-          <div className="mt-8 space-y-3">
+          <p className="mt-7 text-[11px] uppercase tracking-[0.34em] text-[#C5A028]/80">Private Dining in Bali</p>
+          <div className="mt-3 h-px bg-gradient-to-r from-[#C5A028]/55 via-[#C5A028]/18 to-transparent" />
+
+          <div className="mt-4 space-y-1.5">
+            {MOBILE_LUXURY_NAV.map((item) => {
+              const Icon = item.icon
+              const active = isActivePath(location.pathname, item.href)
+              return (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={`group flex items-center gap-3.5 rounded-2xl px-1 py-3 transition-colors ${
+                    active ? 'bg-white/[0.03]' : 'hover:bg-white/[0.02]'
+                  }`}
+                >
+                  <span className="inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-[#C5A028]/40 bg-[#111110]">
+                    <Icon className="h-4.5 w-4.5 text-[#C5A028]" strokeWidth={1.7} />
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span
+                      className="block text-[22px] leading-[1.1] text-white"
+                      style={{ fontFamily: "'Playfair Display', serif" }}
+                    >
+                      {item.title}
+                    </span>
+                    <span className="mt-1 block text-[12px] leading-snug text-white/[48%]">{item.description}</span>
+                  </span>
+                  <ChevronRight className="h-4.5 w-4.5 flex-shrink-0 text-[#C5A028]/80 transition-transform duration-200 group-hover:translate-x-[1px]" />
+                </Link>
+              )
+            })}
+          </div>
+
+          <div className="mt-4 h-px bg-gradient-to-r from-[#C5A028]/18 via-white/8 to-transparent" />
+
+          <div className="mt-3.5 flex items-center gap-5 text-[12px] uppercase tracking-[0.19em] text-white/[58%]">
+            <Link to="/about" onClick={() => setMenuOpen(false)} className="transition-colors hover:text-[#C5A028]">
+              About
+            </Link>
+            <Link to="/partners" onClick={() => setMenuOpen(false)} className="transition-colors hover:text-[#C5A028]">
+              Partners
+            </Link>
+            <Link to="/contact" onClick={() => setMenuOpen(false)} className="transition-colors hover:text-[#C5A028]">
+              Contact
+            </Link>
+          </div>
+
+          <div className="mt-auto space-y-3 pt-7">
             <Link
-              to="/pricing"
+              to="/book"
               onClick={() => setMenuOpen(false)}
-              className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border border-white/20 py-3.5 text-[14px] font-semibold uppercase tracking-[0.1em] text-white/80 transition-colors hover:border-[#C5A028] hover:text-[#C5A028]"
+              className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-[#C5A028] px-4 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#111] transition-colors hover:bg-[#d1ad36]"
             >
-              <Tag className="w-4 h-4" /> View Pricing
+              <CalendarDays className="h-4 w-4" /> Book Experience
             </Link>
             <a
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
               data-source="nav-mobile-whatsapp"
-              className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-white py-3.5 text-[14px] font-semibold uppercase tracking-[0.1em] text-black transition-colors hover:bg-[#C5A028] hover:text-black"
+              className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl border border-white/22 bg-transparent px-4 text-[12px] font-semibold uppercase tracking-[0.2em] text-white/[0.86] transition-colors hover:border-[#C5A028] hover:text-[#C5A028]"
             >
-              <Phone className="w-4 h-4" /> WhatsApp
+              <MessageCircle className="h-4 w-4" /> WhatsApp Concierge
             </a>
-
-            <Link
-              to="/book"
-              onClick={() => setMenuOpen(false)}
-              className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-[#C5A028] py-3.5 text-[14px] font-semibold uppercase tracking-[0.1em] text-black transition-colors hover:bg-[#D4B43A]"
-            >
-              Book Now
-            </Link>
+            <p className="pt-1 text-center text-[11px] text-white/[42%]">Fast reply · Bali private dining</p>
           </div>
         </div>
       </div>

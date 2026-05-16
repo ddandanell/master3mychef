@@ -283,7 +283,7 @@ export default function LunaPage() {
             className={`text-left text-[11px] tracking-[0.15em] uppercase px-3 py-2 rounded-r-lg transition-all duration-300 border-l-2 ${
               activeSection === link.id
                 ? 'text-[#C5A028] border-[#C5A028] bg-[#C5A028]/10'
-                : 'text-white/40 border-transparent hover:text-white/70 hover:bg-white/5'
+                : 'text-white/[40%] border-transparent hover:text-white/[70%] hover:bg-white/5'
             }`}
             style={{ fontFamily: "'Cormorant Garamond', serif", writingMode: 'horizontal-tb' }}
           >
@@ -305,7 +305,7 @@ export default function LunaPage() {
               className={`flex-shrink-0 text-[10px] tracking-[0.15em] uppercase px-3 py-1.5 rounded-full border transition-all duration-300 whitespace-nowrap ${
                 activeSection === link.id
                   ? 'text-[#C5A028] border-[#C5A028]/60 bg-[#C5A028]/10'
-                  : 'text-white/50 border-white/10 hover:text-white/70 hover:border-white/20'
+                  : 'text-white/[50%] border-white/10 hover:text-white/[70%] hover:border-white/20'
               }`}
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
@@ -351,7 +351,7 @@ export default function LunaPage() {
           >
             Private Chef Bali — Fine Dining Tasting Menu in Your Villa
           </h1>
-          <p className="luna-hero-sub mb-12 max-w-[640px] text-base leading-relaxed text-white/75 md:text-xl">
+          <p className="luna-hero-sub mb-12 max-w-[640px] text-base leading-relaxed text-white/[75%] md:text-xl">
             Two and a half to three hours of Mediterranean fine dining, served privately in your villa. From IDR 2,200,000++ per guest. Comparable restaurant experiences start at IDR 3.5M+ with transport and wine markup.
           </p>
           <div className="luna-hero-cta mb-4 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -368,7 +368,7 @@ export default function LunaPage() {
               <a href="#our-menus">Explore Menu</a>
             </Button>
           </div>
-          <p className="mb-10 text-xs uppercase tracking-[0.18em] text-white/55" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <p className="mb-10 text-xs uppercase tracking-[0.18em] text-white/[55%]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Weekends fill fast — book early
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
@@ -378,7 +378,7 @@ export default function LunaPage() {
               { icon: Wine, label: 'Wine pairing +IDR 850K' },
               { icon: Clock, label: '2.5–3 hour journey' },
             ].map((badge) => (
-              <div key={badge.label} className="flex items-center gap-2 text-white/60">
+              <div key={badge.label} className="flex items-center gap-2 text-white/[60%]">
                 <badge.icon className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />
                 <span className="text-xs tracking-wider uppercase">{badge.label}</span>
               </div>
@@ -390,7 +390,7 @@ export default function LunaPage() {
               { icon: ShieldCheck, label: 'Same-day confirmation or your money back' },
               { icon: RefreshCw, label: 'Chef can\'t make it? Replacement within 2h or 100% refund' },
             ].map((badge) => (
-              <div key={badge.label} className="flex items-center gap-2 text-white/60">
+              <div key={badge.label} className="flex items-center gap-2 text-white/[60%]">
                 <badge.icon className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />
                 <span className="text-xs tracking-wider uppercase">{badge.label}</span>
               </div>
@@ -422,7 +422,7 @@ export default function LunaPage() {
               >
                 <span className="text-xl">{item.icon}</span>
                 <span className="text-white font-medium text-sm leading-snug" style={{ fontFamily: "'Playfair Display', serif" }}>{item.label}</span>
-                <span className="text-white/40 text-xs">{item.sub}</span>
+                <span className="text-white/[40%] text-xs">{item.sub}</span>
                 <span className="text-[#C5A028] text-xs mt-auto opacity-0 group-hover:opacity-100 transition-opacity">Explore →</span>
               </Link>
             ))}
@@ -438,13 +438,13 @@ export default function LunaPage() {
               <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Private Chef in Bali</p>
               <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>A Michelin-Trained Chef in Your Villa</h2>
               <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
-              <p className="text-white/70 mb-6 leading-relaxed">
+              <p className="text-white/[70%] mb-6 leading-relaxed">
                 When you hire a private chef in Bali, you are not ordering dinner. You are commissioning an evening. Our executive chef Adriano — trained in Modena and Tokyo — leads a team of four Indonesian chefs he has personally trained for 6 to 12 months each. They arrive at your villa three hours before service, transform your kitchen into a fine dining station, and serve a multi-course tasting menu at your table.
               </p>
-              <p className="text-white/70 mb-6 leading-relaxed">
+              <p className="text-white/[70%] mb-6 leading-relaxed">
                 Every ingredient is sourced that morning. The pasta is rolled in your kitchen. The Wagyu is flame-grilled in front of your guests. The wine is paired course by course. And when the evening ends, the team leaves your villa spotless — as if they were never there.
               </p>
-              <p className="text-white/50 text-sm leading-relaxed">
+              <p className="text-white/[50%] text-sm leading-relaxed">
                 This is not a catering service. This is a private restaurant built inside your villa for one night only. Available across Bali: Seminyak, Canggu, Uluwatu, Ubud, Sanur, and Nusa Dua.
               </p>
             </div>
@@ -479,7 +479,7 @@ export default function LunaPage() {
               { title: 'Special Occasions', desc: 'Birthdays, reunions, farewells. A long table, your people, no closing time.' },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
-                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                <h3 className="text-xl mb-3 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
                 <p className="text-[#4A4745] text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -575,13 +575,13 @@ export default function LunaPage() {
               <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chef's Table</p>
               <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Watch the Kitchen Work</h2>
               <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
-              <p className="text-white/70 mb-6 leading-relaxed">
+              <p className="text-white/[70%] mb-6 leading-relaxed">
                 Our Chef's Table experience brings the kitchen to the centre of the room. The chef cooks within metres of your guests — plating, saucing, and finishing each course while you watch. It is theatre without pretension: the open flame, the hand-rolled pasta, the precise pour of a reduction. Your guests see the discipline behind the dish.
               </p>
-              <p className="text-white/70 mb-6 leading-relaxed">
+              <p className="text-white/[70%] mb-6 leading-relaxed">
                 This is not a demonstration. It is a working kitchen placed at the heart of your evening. The chef explains nothing unless asked. The food speaks. The fire speaks. And your guests leave with an understanding of what fine dining actually takes — skill, timing, and the quiet confidence of a team that has done this five hundred times.
               </p>
-              <div className="flex items-center gap-3 text-white/50 text-sm">
+              <div className="flex items-center gap-3 text-white/[50%] text-sm">
                 <ChefHat className="w-4 h-4 text-[#C5A028]" />
                 <span>Available with both Mediterranean Sea and Wagyu menus</span>
               </div>
@@ -607,7 +607,7 @@ export default function LunaPage() {
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Tasting Menu</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Multi-Course Dining, Built for Your Villa</h2>
-            <p className="text-white/50 max-w-2xl mx-auto">A tasting menu is not a long meal. It is a structured journey — each course designed to follow the last, each flavour building toward a climax. We bring that architecture to your villa.</p>
+            <p className="text-white/[50%] max-w-2xl mx-auto">A tasting menu is not a long meal. It is a structured journey — each course designed to follow the last, each flavour building toward a climax. We bring that architecture to your villa.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto">
             {[
@@ -645,12 +645,12 @@ export default function LunaPage() {
               <div key={item.step} className="p-6 md:p-8 rounded-2xl border border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
                 <span className="text-[#C5A028]/60 text-sm tracking-[0.2em] uppercase mb-4 block" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{item.step}</span>
                 <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-white/[50%] text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-12">
-            <div className="flex items-center justify-center gap-3 text-white/50 text-sm">
+            <div className="flex items-center justify-center gap-3 text-white/[50%] text-sm">
               <UtensilsCrossed className="w-4 h-4 text-[#C5A028]" />
               <span>Two tasting menus available: Mediterranean Sea and Wagyu Experience</span>
             </div>
@@ -664,7 +664,7 @@ export default function LunaPage() {
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Our Menus</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Two Experiences. One Extraordinary Evening.</h2>
-            <p className="text-white/50">Every course is prepared in your villa. Every wine is paired by our sommelier.</p>
+            <p className="text-white/[50%]">Every course is prepared in your villa. Every wine is paired by our sommelier.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {MENUS.map((menu) => (
@@ -687,7 +687,7 @@ export default function LunaPage() {
                     <h3 className="text-2xl md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.name}</h3>
                     <span className="text-[#C5A028] text-base md:text-lg whitespace-nowrap" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{menu.price}</span>
                   </div>
-                  <p className="text-white/65 leading-relaxed">{menu.teaser}</p>
+                  <p className="text-white/[65%] leading-relaxed">{menu.teaser}</p>
                 </div>
                 <div className="p-8 md:p-10 border-t border-white/10">
                   <div className="mb-8">
@@ -695,7 +695,7 @@ export default function LunaPage() {
                     {menu.courses.starter.map((c) => (
                       <div key={c.name} className="mb-4 last:mb-0">
                         <h4 className="text-white font-medium mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{c.name}</h4>
-                        <p className="text-white/50 text-sm">{c.desc}</p>
+                        <p className="text-white/[50%] text-sm">{c.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -704,7 +704,7 @@ export default function LunaPage() {
                     {menu.courses.main.map((c) => (
                       <div key={c.name} className="mb-4 last:mb-0">
                         <h4 className="text-white font-medium mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{c.name}</h4>
-                        <p className="text-white/50 text-sm">{c.desc}</p>
+                        <p className="text-white/[50%] text-sm">{c.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -713,22 +713,22 @@ export default function LunaPage() {
                     {menu.courses.dessert.map((c) => (
                       <div key={c.name} className="mb-4 last:mb-0">
                         <h4 className="text-white font-medium mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{c.name}</h4>
-                        <p className="text-white/50 text-sm">{c.desc}</p>
+                        <p className="text-white/[50%] text-sm">{c.desc}</p>
                       </div>
                     ))}
                   </div>
                   <div className="pt-6 border-t border-white/10 mb-8">
                     <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Recommended Wine Pairing</p>
-                    <div className="space-y-2 text-sm text-white/50">
-                      {menu.wine.red && <p><span className="text-white/70">Red:</span> {menu.wine.red}</p>}
-                      {menu.wine.white && <p><span className="text-white/70">White:</span> {menu.wine.white}</p>}
-                      {menu.wine.sparkling && <p><span className="text-white/70">Sparkling:</span> {menu.wine.sparkling}</p>}
+                    <div className="space-y-2 text-sm text-white/[50%]">
+                      {menu.wine.red && <p><span className="text-white/[70%]">Red:</span> {menu.wine.red}</p>}
+                      {menu.wine.white && <p><span className="text-white/[70%]">White:</span> {menu.wine.white}</p>}
+                      {menu.wine.sparkling && <p><span className="text-white/[70%]">Sparkling:</span> {menu.wine.sparkling}</p>}
                     </div>
                   </div>
                   {/* Price at bottom */}
                   <div className="pt-6 border-t border-white/10 flex items-center justify-between">
                     <div>
-                      <p className="text-xs text-white/60 uppercase tracking-wider" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Per Person</p>
+                      <p className="text-xs text-white/[60%] uppercase tracking-wider" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Per Person</p>
                     </div>
                     <div className="text-right">
                       <p className="text-3xl font-medium text-[#C5A028]" style={{ fontFamily: "'Playfair Display', serif" }}>{menu.price}</p>
@@ -743,7 +743,7 @@ export default function LunaPage() {
             <p className="text-[#C5A028]/70 text-sm italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Custom menus, dietary adjustments, and bespoke evenings arranged on request.
             </p>
-            <p className="text-white/30 text-xs mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <p className="text-white/[30%] text-xs mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               All prices subject to government tax and service.
             </p>
           </div>
@@ -768,7 +768,7 @@ export default function LunaPage() {
               <h2 className="text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif" }}>
                 How It<br /><span className="italic">Works</span>
               </h2>
-              <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md lg:ml-auto lg:text-right">
+              <p className="text-white/[60%] text-sm md:text-base leading-relaxed max-w-md lg:ml-auto lg:text-right">
                 Four deliberate steps from first message to final course. Each handled with the precision of a Michelin kitchen.
               </p>
             </div>
@@ -788,7 +788,7 @@ export default function LunaPage() {
                   {/* Step number — framed, prominent */}
                   <div className="absolute -top-4 -left-4 z-10">
                     <div className="relative w-16 h-16 rounded-2xl border-2 border-white/[0.12] bg-[#0a0a0a] flex items-center justify-center transition-all duration-500 group-hover:border-[#C5A028]/60 group-hover:shadow-[0_0_24px_-4px_rgba(212,175,55,0.25)] group-hover:scale-110">
-                      <span className="text-2xl font-semibold text-white/80 transition-colors duration-500 group-hover:text-[#C5A028]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      <span className="text-2xl font-semibold text-white/[80%] transition-colors duration-500 group-hover:text-[#C5A028]" style={{ fontFamily: "'Playfair Display', serif" }}>
                         {item.step}
                       </span>
                     </div>
@@ -809,7 +809,7 @@ export default function LunaPage() {
                   </h3>
 
                   {/* Description — smaller, lighter, almost disappearing */}
-                  <p className="text-xs text-white/60 leading-relaxed transition-colors duration-500 group-hover:text-white/50">
+                  <p className="text-xs text-white/[60%] leading-relaxed transition-colors duration-500 group-hover:text-white/[50%]">
                     {item.desc}
                   </p>
 
@@ -844,29 +844,29 @@ export default function LunaPage() {
           <div className="text-center mb-10 md:mb-14">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Our Chefs</p>
             <h2 className="text-5xl md:text-6xl lg:text-7xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>The <span className="italic">Four</span></h2>
-            <p className="text-xl md:text-2xl text-white/60 italic max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <p className="text-xl md:text-2xl text-white/[60%] italic max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Trained by Adriano. One of them is in your kitchen tonight.
             </p>
           </div>
 
           {/* Intro */}
           <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-            <p className="text-white/50 leading-relaxed mb-6">
+            <p className="text-white/[50%] leading-relaxed mb-6">
               Adriano did not build a team. He built a lineage.
             </p>
-            <p className="text-white/50 leading-relaxed mb-6">
+            <p className="text-white/[50%] leading-relaxed mb-6">
               He arrived in Bali in 2019 with the standards of Modena and Tokyo in his hands. He chose not to import a kitchen from Europe. He chose instead to find local talent and teach them everything he knew.
             </p>
-            <p className="text-white/50 leading-relaxed mb-6">
+            <p className="text-white/[50%] leading-relaxed mb-6">
               Four chefs, over five years. Each found in Indonesia. Each chosen on his terms. Each trained by him personally — six months beside him before they cook a single plate for a paying guest, another year beside him before they lead an evening alone. Every sauce, every pour, every minute of pacing tested and corrected until it is right.
             </p>
-            <p className="text-white/50 leading-relaxed mb-6">
+            <p className="text-white/[50%] leading-relaxed mb-6">
               He found them across three islands and three culinary traditions — Bali, Java, and Sumatra. What they share is the kitchen they were trained in.
             </p>
-            <p className="text-white/50 leading-relaxed mb-6">
+            <p className="text-white/[50%] leading-relaxed mb-6">
               The result is something neither Italian nor Indonesian, and at the same time both. It is what happens when a master from one tradition trains his hands in another country, and the country leaves its mark on the cooking.
             </p>
-            <p className="text-white/70 leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <p className="text-white/[70%] leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
               These are the four.
             </p>
           </div>
@@ -902,10 +902,10 @@ export default function LunaPage() {
                 <div className="p-5 md:p-7 rounded-b-2xl border border-t-0 border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
                   <div className="flex items-baseline justify-between mb-1">
                     <h3 className="text-base md:text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>{chef.name}</h3>
-                    <span className="text-[10px] text-white/60 tracking-wider uppercase">{chef.origin}</span>
+                    <span className="text-[10px] text-white/[60%] tracking-wider uppercase">{chef.origin}</span>
                   </div>
                   <p className="text-[#C5A028] text-[10px] tracking-[0.15em] uppercase mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{chef.role}</p>
-                  <p className="text-white/50 text-xs leading-relaxed line-clamp-4">{chef.bio}</p>
+                  <p className="text-white/[50%] text-xs leading-relaxed line-clamp-4">{chef.bio}</p>
                 </div>
               </div>
             ))}
@@ -916,7 +916,7 @@ export default function LunaPage() {
             <p className="text-[#C5A028]/80 text-sm md:text-base italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               One of the four will be in your kitchen on the night.
             </p>
-            <p className="text-white/30 text-xs mt-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <p className="text-white/[30%] text-xs mt-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Which one depends on the menu, the date, and what arrived on the morning boat.
             </p>
           </div>
@@ -934,7 +934,7 @@ export default function LunaPage() {
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Evening</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>How It Looks</h2>
-            <p className="text-white/50">Candlelight. Crystal. White-clad professionals. Your villa, transformed.</p>
+            <p className="text-white/[50%]">Candlelight. Crystal. White-clad professionals. Your villa, transformed.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -991,13 +991,13 @@ export default function LunaPage() {
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Everything Included</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>What You Get</h2>
-            <p className="text-white/50">No hidden fees. No surprises. One price, one extraordinary evening.</p>
+            <p className="text-white/[50%]">No hidden fees. No surprises. One price, one extraordinary evening.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {WHATS_INCLUDED.map((item) => (
               <div key={item} className="flex items-center gap-3 p-4 rounded-xl border border-white/10">
                 <Check className="w-5 h-5 text-[#C5A028] flex-shrink-0" />
-                <span className="text-sm text-white/80">{item}</span>
+                <span className="text-sm text-white/[80%]">{item}</span>
               </div>
             ))}
           </div>
@@ -1045,7 +1045,7 @@ export default function LunaPage() {
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Frequently Asked</h2>
-            <p className="text-white/50">Still have questions? Message Sofia on WhatsApp — she responds within the hour.</p>
+            <p className="text-white/[50%]">Still have questions? Message Sofia on WhatsApp — she responds within the hour.</p>
           </div>
           <FAQAccordion
             items={FAQS.map((f) => ({ q: f.question, a: f.answer }))}
@@ -1053,7 +1053,7 @@ export default function LunaPage() {
             dark
           />
           <div className="text-center mt-12">
-            <p className="text-white/50 text-sm mb-4">Peak season books 2+ weeks ahead. Message Sofia to check availability.</p>
+            <p className="text-white/[50%] text-sm mb-4">Peak season books 2+ weeks ahead. Message Sofia to check availability.</p>
             <Button asChild variant="whatsapp" size="brand">
               <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="luna-faq-cta">
                 <MessageCircle className="w-4 h-4" />
@@ -1072,27 +1072,27 @@ export default function LunaPage() {
               <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Reserve</p>
               <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Book Your<br />Extraordinary Evening</h2>
               <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
-              <p className="text-white/60 mb-8 leading-relaxed">
+              <p className="text-white/[60%] mb-8 leading-relaxed">
                 Sofia, our fine dining concierge, will confirm your date and menu within the hour. We recommend booking 7+ days in advance for peak season.
               </p>
               <div className="space-y-4 mb-8">
                 {MENUS.map((menu) => (
                   <div key={menu.id} className="flex items-center justify-between py-4 border-b border-white/10 group cursor-pointer">
                     <div>
-                      <p className="text-white/80 font-medium">{menu.name}</p>
-                      <p className="text-sm text-white/60">{menu.duration}</p>
+                      <p className="text-white/[80%] font-medium">{menu.name}</p>
+                      <p className="text-sm text-white/[60%]">{menu.duration}</p>
                     </div>
                     <div className="flex items-center gap-4">
                       <span className="text-[#C5A028] font-medium">{menu.price}</span>
-                      <ChevronRight className="w-4 h-4 text-white/30 group-hover:text-[#C5A028] transition-colors" />
+                      <ChevronRight className="w-4 h-4 text-white/[30%] group-hover:text-[#C5A028] transition-colors" />
                     </div>
                   </div>
                 ))}
               </div>
               <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">Wine pairing available — IDR 850K per guest</span></div>
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">Minimum 4 guests</span></div>
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/80">++ adds service charge + government tax (see FAQ)</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">Wine pairing available — IDR 850K per guest</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">Minimum 4 guests</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">++ adds service charge + government tax (see FAQ)</span></div>
               </div>
               <Button asChild variant="whatsapp" size="brand">
                 <a href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20fine%20dining%20experience." target="_blank" rel="noopener noreferrer" data-source="luna-fine-dining-cta">
@@ -1100,7 +1100,7 @@ export default function LunaPage() {
                   Reserve My Private Dinner
                 </a>
               </Button>
-              <p className="text-sm text-white/55 mt-3">
+              <p className="text-sm text-white/[55%] mt-3">
                 No booking fee · Menu tweaks welcome · Replies within 1 hour
               </p>
               <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 px-5 py-5">

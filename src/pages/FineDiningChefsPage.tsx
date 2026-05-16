@@ -59,7 +59,7 @@ const TEAM_CHEFS: ChefCard[] = [
     style: 'Warm, intuitive, confident with large groups. Makes cooking look effortless.',
     signatureDish: 'Balinese bebek betutu reimagined for fine dining plating',
     availableFor: 'Villa dinners, events, corporate bookings, groups up to 30',
-    image: '/generated/chefs-hero.webp',
+    image: '/generated/fd-team-service.jpg',
     dataSource: 'chefs-surya-cta',
     specialtyLabel: 'Indonesian-Mediterranean Fusion',
   },
@@ -81,7 +81,7 @@ const TEAM_CHEFS: ChefCard[] = [
     style: 'Creative, grounded, deeply connected to Bali\'s food culture.',
     signatureDish: 'Jackfruit rendang with tempeh crust and sambal matah',
     availableFor: 'Villa dinners, retreats, plant-forward events',
-    image: '/generated/luna-ingredients.webp',
+    image: '/generated/fd-villa-candle-dinner.jpg',
     dataSource: 'chefs-asri-cta',
     specialtyLabel: 'Plant-Forward Balinese',
   },
@@ -194,10 +194,13 @@ export default function FineDiningChefsPage() {
                 Our Chefs
               </h1>
               <p
-                className="mb-8 max-w-2xl text-2xl italic text-white/80 md:text-3xl"
+                className="mb-8 max-w-2xl text-2xl italic text-white/[80%] md:text-3xl"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 International training. Balinese soul. Every dish a decision.
+              </p>
+              <p className="mb-8 max-w-2xl text-sm uppercase tracking-[0.2em] text-white/[70%]">
+                The team executes two core fine-dining menus: La Riviera and L&apos;Odyssée.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a
@@ -211,17 +214,17 @@ export default function FineDiningChefsPage() {
                   Book via WhatsApp
                 </a>
                 <Link
-                  to="/fine-dining"
+                  to="/fine-dining/menus"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-8 py-4 text-sm uppercase tracking-[0.24em] text-white transition-colors hover:bg-white/10"
                 >
-                  Explore Fine Dining
+                  View Menus
                   <ChevronRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-white/70">
+          <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-white/[80%]">
             <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-[#C5A028]" /> 560+ villas served</span>
             <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-[#C5A028]" /> 12,000+ guests hosted</span>
             <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-[#C5A028]" /> 50+ Indonesian hospitality professionals</span>
@@ -232,9 +235,9 @@ export default function FineDiningChefsPage() {
       <section className="bg-[#1A1916] px-6 py-8 md:px-10 md:py-10">
         <div className="mx-auto grid max-w-6xl gap-5 text-center md:grid-cols-3">
           {PHILOSOPHY_ITEMS.map((item) => (
-            <div key={item.label} className="reveal rounded-2xl border border-white/10 px-6 py-6">
+            <div key={item.label} className="reveal rounded-2xl border border-[#C5A028]/40 bg-white/[0.05] px-6 py-6">
               <p
-                className="text-lg text-white md:text-xl"
+                className="text-lg font-medium text-white md:text-xl"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {item.label}
@@ -248,7 +251,7 @@ export default function FineDiningChefsPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div className="reveal overflow-hidden rounded-[30px] border border-white/10 bg-black/20">
             <img
-              src="/generated/luna-chef-portrait.webp"
+              src="/generated/fd-chef-signature.jpg"
               alt="Adriano, founder and head chef of myCHEF Bali"
               width={900}
               height={1100}
@@ -271,7 +274,7 @@ export default function FineDiningChefsPage() {
             >
               Adriano
             </h2>
-            <div className="space-y-4 text-base leading-relaxed text-white/72 md:text-lg">
+            <div className="space-y-4 text-base leading-relaxed text-white/[0.85] md:text-lg">
               <p>
                 Adriano trained under a Michelin-starred chef in Milan and spent 12 years inside European fine dining kitchens where precision was non-negotiable.
               </p>
@@ -286,23 +289,23 @@ export default function FineDiningChefsPage() {
               </p>
             </div>
 
-            <div className="mt-8 rounded-2xl border border-[#C5A028]/30 bg-white/[0.03] p-6">
+            <div className="mt-8 rounded-2xl border border-[#C5A028]/40 bg-white/[0.08] p-6">
               <p className="mb-2 text-sm font-medium uppercase tracking-[0.22em] text-[#C5A028]">Chef&apos;s Table note</p>
-              <p className="text-white/80">
+              <p className="text-white/[90%]">
                 Adriano is available for Chef&apos;s Table on Friday and Saturday only, with a maximum of 6 guests.
               </p>
             </div>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {ADRIANO_SPECIALTIES.map((item) => (
-                <div key={item} className="inline-flex items-center gap-3 rounded-2xl border border-white/10 px-4 py-3 text-white/78">
+                <div key={item} className="inline-flex items-center gap-3 rounded-2xl border border-white/10 px-4 py-3 text-white/[0.85]">
                   <Check className="h-4 w-4 shrink-0 text-[#C5A028]" />
                   <span>{item}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 rounded-2xl border border-white/10 bg-black/20 p-6">
+            <div className="mt-8 rounded-2xl border border-white/15 bg-white/[0.04] p-6">
               <div className="mb-3 inline-flex items-center gap-2 text-[#C5A028]">
                 <Star className="h-4 w-4" />
                 <span className="text-sm uppercase tracking-[0.24em]">Signature dish</span>
@@ -310,7 +313,7 @@ export default function FineDiningChefsPage() {
               <p className="text-lg text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
                 Handmade tagliolini with Bali lemon and bottarga
               </p>
-              <p className="mt-3 text-sm text-white/65">
+              <p className="mt-3 text-sm text-white/[0.85]">
                 Available for Chef&apos;s Table (Fri/Sat only), 7-Course Tasting Menu, and custom collaborations.
               </p>
             </div>
@@ -326,7 +329,7 @@ export default function FineDiningChefsPage() {
                 <MessageCircle className="h-4 w-4" />
                 Reserve with Adriano
               </a>
-              <Link to="/fine-dining/chefs-table" className="inline-flex items-center gap-2 text-sm font-medium text-white/70 transition-colors hover:text-white">
+              <Link to="/fine-dining/chefs-table" className="inline-flex items-center gap-2 text-sm font-medium text-white/[80%] transition-colors hover:text-white">
                 View Chef&apos;s Table
                 <ChevronRight className="h-4 w-4" />
               </Link>
@@ -483,8 +486,11 @@ export default function FineDiningChefsPage() {
             <h2 className="mb-5 text-4xl text-white md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>
               Reserve your chef
             </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-white/72 md:text-lg">
-              Tell us your date, guest count, and preferred chef. We will confirm availability fast and match the right kitchen talent to your villa dinner.
+            <p
+              className="mx-auto mb-8 max-w-2xl text-base leading-relaxed md:text-lg"
+              style={{ color: '#E7E2D8' }}
+            >
+              Share your date, guest count, and preferred chef. We confirm quickly and match the right kitchen talent for your villa dinner.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a

@@ -224,7 +224,7 @@ export default function CateringPlatedPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Plated Dinner Bali for Private Villa Fine Dining
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-2xl mx-auto">
             A structured, multi-course dinner experience with chef-led cooking, elegant plating, service staff, and full villa setup.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -242,7 +242,7 @@ export default function CateringPlatedPage() {
               <Utensils className="w-4 h-4" /> View Sample Menus
             </a>
           </div>
-          <p className="text-white/60 text-sm">From IDR 800,000/person · Min. IDR 5,000,000 · Chef & staff included</p>
+          <p className="text-white/[60%] text-sm">From IDR 800,000/person · Min. IDR 5,000,000 · Chef & staff included</p>
         </div>
       </section>
 
@@ -719,7 +719,7 @@ export default function CateringPlatedPage() {
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Ready for a Private Plated Dinner in Bali?
           </h2>
-          <p className="text-white/80 text-lg mb-8">
+          <p className="text-white/[80%] text-lg mb-8">
             Send your date, villa, guest count, and preferred course tier. We will confirm availability and pricing by WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

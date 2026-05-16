@@ -120,7 +120,7 @@ export default function NotFoundPage() {
               </div>
               <div className="mt-8 rounded-3xl bg-[#1A1916] px-6 py-6 text-white">
                 <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028]">WhatsApp fallback</p>
-                <p className="mt-3 text-lg leading-7 text-white/80">Still lost? Chat with us directly and we will point you to the right page fast.</p>
+                <p className="mt-3 text-lg leading-7 text-white/[80%]">Still lost? Chat with us directly and we will point you to the right page fast.</p>
                 <a
                   href={waLink}
                   target="_blank"

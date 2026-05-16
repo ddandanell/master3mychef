@@ -153,7 +153,7 @@ export default function TastingMenuPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Tasting Menu Bali | Multi-Course Private Dining — myCHEF"
-        description="A private five-course tasting menu in your Bali villa. Michelin-trained chef, handmade pasta, Wagyu or Mediterranean sea experience. From IDR 2,200,000++ per person."
+        description="Private five-course tasting menu in your Bali villa with handmade pasta and Mediterranean or Wagyu paths. From IDR 2,200,000++ per person."
         canonical={`${SITE}/fine-dining/tasting-menu`}
         ogImage={`${SITE}/generated/luna-plating.webp`}
         jsonLd={[
@@ -193,10 +193,10 @@ export default function TastingMenuPage() {
             A Private Tasting Menu<br />
             <span className="italic">In Your Bali Villa</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/85 mb-3 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/[85%] mb-3 max-w-2xl mx-auto leading-relaxed">
             Five courses. A Michelin-trained team. Handmade pasta rolled in your kitchen the afternoon of your dinner.
           </p>
-          <p className="text-white/55 text-sm mb-10 tracking-wide">
+          <p className="text-white/[55%] text-sm mb-10 tracking-wide">
             From IDR 2,200,000++ per person · Wine pairing +IDR 850,000 · 4 guests minimum
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -215,7 +215,7 @@ export default function TastingMenuPage() {
               The Full Experience <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/50 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Michelin-trained kitchen</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> All ingredients included</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full table service + cleanup</span>
@@ -231,11 +231,11 @@ export default function TastingMenuPage() {
           <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-8" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             The Idea
           </p>
-          <blockquote className="text-white/90 leading-relaxed" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', lineHeight: 1.5 }}>
+          <blockquote className="text-white/[90%] leading-relaxed" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', lineHeight: 1.5 }}>
             "A tasting menu is not a meal.<br />
             <span className="italic">It is a story told in courses</span> — cold to warm, delicate to bold, and back again. Every plate is a decision, not just an ingredient."
           </blockquote>
-          <p className="text-white/40 text-sm mt-8 tracking-wide uppercase">— Adriano · Executive Chef · Michelin-trained, Modena</p>
+          <p className="text-white/[40%] text-sm mt-8 tracking-wide uppercase">— Adriano · Executive Chef · Michelin-trained, Modena</p>
         </div>
       </section>
 
@@ -302,7 +302,7 @@ export default function TastingMenuPage() {
             <h2 className="text-white text-3xl md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>
               Wine Pairing
             </h2>
-            <p className="text-white/70 text-base mt-4 max-w-[540px] mx-auto">
+            <p className="text-white/[70%] text-base mt-4 max-w-[540px] mx-auto">
               Our sommelier selects 4–5 pours — one per course, matched to the menu you choose. The aperitif is always Franciacorta.
             </p>
           </div>
@@ -316,7 +316,7 @@ export default function TastingMenuPage() {
               </div>
             ))}
           </div>
-          <p className="text-center text-white/40 text-xs mt-8">Prefer to provide your own wine? We open and serve it. We can recommend specific bottles to source.</p>
+          <p className="text-center text-white/[40%] text-xs mt-8">Prefer to provide your own wine? We open and serve it. We can recommend specific bottles to source.</p>
         </div>
       </section>
 
@@ -343,7 +343,7 @@ export default function TastingMenuPage() {
                     {item.time}
                   </p>
                   <p className="text-white font-medium mb-0.5">{item.event}</p>
-                  <p className="text-white/50 text-sm">{item.note}</p>
+                  <p className="text-white/[50%] text-sm">{item.note}</p>
                 </div>
               </div>
             ))}
@@ -490,7 +490,7 @@ export default function TastingMenuPage() {
         <h2 className="text-white text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
           Book Your Tasting Evening
         </h2>
-        <p className="text-white/60 text-lg mb-10 max-w-[540px] mx-auto">
+        <p className="text-white/[60%] text-lg mb-10 max-w-[540px] mx-auto">
           Tell us your date, villa, and guest count. We confirm the menu and availability within the hour.
         </p>
         <a
@@ -501,7 +501,7 @@ export default function TastingMenuPage() {
         >
           <MessageCircle className="w-5 h-5" /> Message Sofia on WhatsApp
         </a>
-        <p className="text-white/30 text-xs mt-6">Replies within 1 hour · No booking fee</p>
+        <p className="text-white/[30%] text-xs mt-6">Replies within 1 hour · No booking fee</p>
       </section>
 
       <section className="py-10 px-6 bg-[#141414]">
@@ -513,7 +513,7 @@ export default function TastingMenuPage() {
             { label: 'Our Menus', href: '/menus' },
             { label: 'Our Chefs', href: '/chefs' },
           ].map((l) => (
-            <Link key={l.href} to={l.href} className="text-white/40 text-sm hover:text-[#C5A028] transition-colors">
+            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors">
               {l.label}
             </Link>
           ))}

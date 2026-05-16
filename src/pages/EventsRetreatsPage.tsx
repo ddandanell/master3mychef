@@ -169,7 +169,7 @@ export default function EventsRetreatsPage() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Wellness Retreats in Bali — Healthy Catering & Meal Planning
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
             Multi-day retreat food planning with balanced breakfasts, communal lunches, dietary-coded dinners, and a team that can sustain quality for several days in a villa environment.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -180,7 +180,7 @@ export default function EventsRetreatsPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
-          <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.2em]">
+          <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em]">
             From IDR 1.5M++/guest/day · Dietary-coded menus and multi-day service
           </p>
         </div>

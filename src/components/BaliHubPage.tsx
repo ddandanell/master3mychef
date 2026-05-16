@@ -70,7 +70,7 @@ export default function BaliHubPage() {
         <div className="relative z-10 px-8 pb-12 md:pb-20 pt-24 md:pt-32 max-w-[1100px] mx-auto w-full text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Bali coverage</p>
           <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-6 max-w-[820px]">{title}</h1>
-          <p className="text-base md:text-lg text-white/85 max-w-[640px] mb-8">
+          <p className="text-base md:text-lg text-white/[85%] max-w-[640px] mb-8">
             Wherever your villa is in Bali, we have a chef ten minutes away. Pick the area closest to where you are staying —
             we cook the same three things at every address: <span className="text-[#6B8E5A] font-medium">catering</span>,{' '}
             <span className="text-[#2C5F7C] font-medium">events</span>, and{' '}

@@ -443,7 +443,7 @@ export default function HubPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
                 <div className="pointer-events-none absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
                   <h3 className="text-3xl md:text-4xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{portal.title}</h3>
-                  <p className="text-sm text-white/70 mb-5 leading-relaxed">{portal.subtitle}</p>
+                  <p className="text-sm text-white/[70%] mb-5 leading-relaxed">{portal.subtitle}</p>
                   <span className="flex items-center gap-2 text-sm font-medium transition-all group-hover:gap-4" style={{ color: portal.accent }}>
                     Explore <ArrowRight className="w-4 h-4" />
                   </span>
@@ -742,7 +742,7 @@ export default function HubPage() {
                 <div className="absolute inset-0 flex items-end p-4">
                   <div>
                     <p className="text-white font-medium text-sm">{city.name}</p>
-                    <p className="text-white/60 text-xs">Private Chef</p>
+                    <p className="text-white/[60%] text-xs">Private Chef</p>
                   </div>
                 </div>
               </Link>
@@ -868,7 +868,7 @@ export default function HubPage() {
             Your Villa. Our Kitchen.<br />
             <span className="italic">One Message Away.</span>
           </h2>
-          <p className="text-white/70 mb-10 max-w-xl mx-auto">
+          <p className="text-white/[70%] mb-10 max-w-xl mx-auto">
             Most inquiries are answered within the hour. No deposit required to start planning.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -84,7 +84,7 @@ export default function WhyMychefPage() {
               className="rounded-3xl border border-white/10 bg-white/5 px-6 py-7 text-center backdrop-blur-sm"
             >
               <div className="font-playfair text-4xl text-[#C5A028] md:text-5xl">{stat.value}</div>
-              <div className="mt-2 text-xs uppercase tracking-[0.35em] text-white/65">{stat.label}</div>
+              <div className="mt-2 text-xs uppercase tracking-[0.35em] text-white/[65%]">{stat.label}</div>
             </div>
           ))}
         </div>

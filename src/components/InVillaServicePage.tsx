@@ -134,7 +134,7 @@ export default function InVillaServicePage() {
           <div className="max-w-[900px]">
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF</p>
             <h1 className="font-playfair text-4xl md:text-6xl text-white leading-[1.1] mb-6">{pillar.h1}</h1>
-            <p className="text-lg md:text-xl text-white/80 max-w-[640px] mb-8">Per-shift waiters, butlers, bartenders, mixologists, and sommeliers for Bali villas. From IDR 250,000/hour, briefed to your event and ready for dinners, parties, and full-service hosting.</p>
+            <p className="text-lg md:text-xl text-white/[80%] max-w-[640px] mb-8">Per-shift waiters, butlers, bartenders, mixologists, and sommeliers for Bali villas. From IDR 250,000/hour, briefed to your event and ready for dinners, parties, and full-service hosting.</p>
             <div className="flex flex-wrap gap-3 mb-8">
               {['Uniformed Staff', 'Same-Day Booking', 'English-Speaking', 'Background-Checked'].map((h) => (
                 <span key={h} className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full">
@@ -162,7 +162,7 @@ export default function InVillaServicePage() {
             { icon: Shield, text: 'Background-Checked Team' },
             { icon: Clock, text: 'Same-Day Response' },
           ].map(({ icon: Icon, text }) => (
-            <div key={text} className="flex items-center gap-2 text-white/60 text-sm">
+            <div key={text} className="flex items-center gap-2 text-white/[60%] text-sm">
               <Icon className="w-4 h-4 text-[#C5A028]" /> {text}
             </div>
           ))}
@@ -269,7 +269,7 @@ export default function InVillaServicePage() {
       <section className="py-16 md:py-24 bg-[#0A0A0A] text-white">
         <div className="max-w-[700px] mx-auto px-6 text-center">
           <h2 className="font-playfair text-3xl md:text-5xl mb-4">Ready to Hire Staff?</h2>
-          <p className="text-white/60 mb-8">Message us on WhatsApp. We reply within the hour with staffing ratios, availability, and clear per-shift pricing before you book.</p>
+          <p className="text-white/[60%] mb-8">Message us on WhatsApp. We reply within the hour with staffing ratios, availability, and clear per-shift pricing before you book.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="in-villa-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
               <MessageCircle className="w-4 h-4" /> Hire Staff Now

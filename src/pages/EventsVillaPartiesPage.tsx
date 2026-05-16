@@ -185,7 +185,7 @@ export default function EventsVillaPartiesPage() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Villa Parties in Bali — BBQ, Pool, Cocktail & Night Events
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
             Sunset BBQs, pool parties, cocktail receptions, and late-night celebrations with food, drinks, bartender service, staffing, music coordination, and cleanup all handled by one team.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -196,7 +196,7 @@ export default function EventsVillaPartiesPage() {
               <Wine className="w-4 h-4" /> View Formats
             </a>
           </div>
-          <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.2em]">
+          <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em]">
             From IDR 650K++/guest · Bar, staffing, and cleanup handled
           </p>
         </div>

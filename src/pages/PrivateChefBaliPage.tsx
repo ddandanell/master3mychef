@@ -125,7 +125,7 @@ export default function PrivateChefBaliPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Private Chef Bali | Michelin-Trained Villa Dining — myCHEF"
-        description="Hire a Michelin-trained private chef for your Bali villa. From IDR 2,200,000 per person, ingredients included. 560+ villas served, 12,000+ guests. All areas of Bali."
+        description="Hire a private chef for your Bali villa from IDR 2,200,000 per person. Ingredients included, 560+ villas served, 12,000+ guests, all Bali areas covered."
         canonical={`${SITE}/fine-dining/private-chef-bali`}
         ogImage={`${SITE}/generated/luna-hero-v2.webp`}
         jsonLd={[
@@ -165,10 +165,10 @@ export default function PrivateChefBaliPage() {
             A Michelin-Trained Private Chef.<br />
             <span className="italic">In Your Bali Villa.</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/85 mb-3 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/[85%] mb-3 max-w-2xl mx-auto leading-relaxed">
             We arrive at your villa 3 hours early. We cook, serve every course, and leave your kitchen spotless.
           </p>
-          <p className="text-white/55 text-sm mb-10 tracking-wide">
+          <p className="text-white/[55%] text-sm mb-10 tracking-wide">
             From IDR 2,200,000 per person · All ingredients included · Bali-wide service
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -187,7 +187,7 @@ export default function PrivateChefBaliPage() {
               Browse Menus <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/50 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Michelin-trained chef team</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> All groceries included</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full cleanup after dinner</span>
@@ -215,10 +215,10 @@ export default function PrivateChefBaliPage() {
             <h2 className="text-white text-3xl md:text-4xl mb-6 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
               No other table.<br />No other guests.
             </h2>
-            <p className="text-white/70 text-base leading-relaxed mb-6">
+            <p className="text-white/[70%] text-base leading-relaxed mb-6">
               Just your villa, your people, and a chef who trained for a decade in Michelin kitchens in Milan and Modena. The menu is Italian in technique, Balinese in setting — adapted to your preferences, your dietary needs, and the season.
             </p>
-            <p className="text-white/70 text-base leading-relaxed mb-8">
+            <p className="text-white/[70%] text-base leading-relaxed mb-8">
               We bring the kitchen to you. The team arrives 3 hours before your first course — setting the table, preparing the mise en place, sourcing that morning's freshest catch. You arrive to a table already set.
             </p>
             <Link to="/fine-dining" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline">
@@ -299,10 +299,10 @@ export default function PrivateChefBaliPage() {
             <h2 className="text-white text-3xl md:text-4xl mb-6 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
               He left Italy with a knife, a notebook, and a decade in Michelin kitchens.
             </h2>
-            <p className="text-white/70 text-base leading-relaxed mb-4">
+            <p className="text-white/[70%] text-base leading-relaxed mb-4">
               Adriano trained under a Michelin-starred chef in Milan. He worked in Modena, staged in Tokyo, and opened in Bali not to build a restaurant — but to take restaurant-quality technique directly into the homes of people who deserved it.
             </p>
-            <p className="text-white/70 text-base leading-relaxed mb-8">
+            <p className="text-white/[70%] text-base leading-relaxed mb-8">
               He still leads every tasting menu, every Chef's Table, and every training session for the team of 50+ Indonesian hospitality professionals he has built.
             </p>
             <Link to="/chefs" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline">
@@ -408,7 +408,7 @@ export default function PrivateChefBaliPage() {
         <h2 className="text-white text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
           Ready to Book Your Private Chef?
         </h2>
-        <p className="text-white/60 text-lg mb-10 max-w-[540px] mx-auto">
+        <p className="text-white/[60%] text-lg mb-10 max-w-[540px] mx-auto">
           Tell us your date, villa area, guest count, and menu preference. We confirm availability within 1 hour.
         </p>
         <a
@@ -419,7 +419,7 @@ export default function PrivateChefBaliPage() {
         >
           <MessageCircle className="w-5 h-5" /> Hire a Private Chef — WhatsApp
         </a>
-        <p className="text-white/30 text-xs mt-6">Replies within 1 hour · No booking fee · Bali-wide</p>
+        <p className="text-white/[30%] text-xs mt-6">Replies within 1 hour · No booking fee · Bali-wide</p>
       </section>
 
       <section className="py-10 px-6 bg-[#141414]">
@@ -431,7 +431,7 @@ export default function PrivateChefBaliPage() {
             { label: "Chef's Table", href: '/fine-dining/chefs-table' },
             { label: 'Our Menus', href: '/menus' },
           ].map((l) => (
-            <Link key={l.href} to={l.href} className="text-white/40 text-sm hover:text-[#C5A028] transition-colors">
+            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors">
               {l.label}
             </Link>
           ))}

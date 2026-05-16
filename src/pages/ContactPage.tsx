@@ -126,7 +126,7 @@ export default function ContactPage() {
           >
             We&rsquo;ll reply within 1 hour on WhatsApp.
           </h1>
-          <p className="text-base md:text-xl text-white/75 mb-10 max-w-[640px] leading-relaxed">
+          <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[640px] leading-relaxed">
             Choose the right concierge below or send one quick WhatsApp message and we will route your booking request instantly.
           </p>
           <div className="flex items-center gap-3 text-[#C5A028] text-sm">
@@ -231,7 +231,7 @@ export default function ContactPage() {
             />
             <div className="absolute bottom-6 left-6 right-6 text-white">
               <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Concierge Desk</p>
-              <p className="text-sm text-white/85">Bali, 08:00 – 22:00 WITA</p>
+              <p className="text-sm text-white/[85%]">Bali, 08:00 – 22:00 WITA</p>
             </div>
           </div>
 

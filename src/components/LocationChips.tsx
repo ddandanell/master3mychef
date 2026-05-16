@@ -41,7 +41,7 @@ export default function LocationChips({
           >
             {title}
           </h2>
-          <p className={`max-w-xl mx-auto text-sm ${dark ? 'text-white/50' : 'text-[#4A4745]'}`}>
+          <p className={`max-w-xl mx-auto text-sm ${dark ? 'text-white/[50%]' : 'text-[#4A4745]'}`}>
             {subtitle}
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function LocationChips({
               to={`/${city.slug}`}
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm transition-all ${
                 dark
-                  ? 'border-white/10 text-white/60 hover:border-[#C5A028]/50 hover:text-[#C5A028]'
+                  ? 'border-white/10 text-white/[60%] hover:border-[#C5A028]/50 hover:text-[#C5A028]'
                   : 'border-[#E8E6E3] text-[#4A4745] hover:border-[#C5A028]/50 hover:text-[#C5A028]'
               }`}
             >

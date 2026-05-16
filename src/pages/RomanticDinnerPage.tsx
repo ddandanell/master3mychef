@@ -95,7 +95,7 @@ export default function RomanticDinnerPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Romantic Dinner Bali | Private Villa Date Night — myCHEF"
-        description="A private romantic dinner in your Bali villa — candlelit table, five Michelin-trained courses, flower arrangement, champagne, and a team that disappears when you sit. From IDR 2,200,000 per person."
+        description="Private romantic dinner in your Bali villa: candlelit table, five refined courses, optional flowers and champagne, and discreet service. From IDR 2,200,000 pp."
         canonical={`${SITE}/fine-dining/romantic-dinner`}
         ogImage={`${SITE}/generated/section-romantic-dinner.webp`}
         jsonLd={[
@@ -135,10 +135,10 @@ export default function RomanticDinnerPage() {
             A Private Dinner<br />
             <span className="italic">Built for Two</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/85 mb-4 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto leading-relaxed">
             No other table. No other guests. A candlelit setting in your own villa, five Michelin-trained courses, and a team that becomes invisible the moment you sit down.
           </p>
-          <p className="text-white/60 text-sm mb-10 tracking-wide">
+          <p className="text-white/[60%] text-sm mb-10 tracking-wide">
             From IDR 2,200,000 per person · Table setting included · Flowers on request · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -157,7 +157,7 @@ export default function RomanticDinnerPage() {
               See the Full Experience <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/50 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Michelin-trained chef</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Table setting + candles included</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full kitchen cleanup</span>
@@ -178,8 +178,8 @@ export default function RomanticDinnerPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="rounded-[24px] border border-white/10 p-8">
-              <p className="text-white/40 text-xs uppercase tracking-[0.3em] mb-6 font-semibold">The restaurant</p>
-              <ul className="space-y-4 text-white/65 text-sm leading-relaxed">
+              <p className="text-white/[40%] text-xs uppercase tracking-[0.3em] mb-6 font-semibold">The restaurant</p>
+              <ul className="space-y-4 text-white/[65%] text-sm leading-relaxed">
                 {[
                   'Other couples at the next table — they can hear everything',
                   'Kitchen noise, rushed service, tight timing',
@@ -188,7 +188,7 @@ export default function RomanticDinnerPage() {
                   'No flexibility for allergies or preferences',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-0.5 text-white/25 text-lg leading-none">×</span>
+                    <span className="mt-0.5 text-white/[25%] text-lg leading-none">×</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -196,7 +196,7 @@ export default function RomanticDinnerPage() {
             </div>
             <div className="rounded-[24px] border border-[#C5A028]/30 bg-[#C5A028]/5 p-8">
               <p className="text-[#C5A028] text-xs uppercase tracking-[0.3em] mb-6 font-semibold">Your villa</p>
-              <ul className="space-y-4 text-white/85 text-sm leading-relaxed">
+              <ul className="space-y-4 text-white/[85%] text-sm leading-relaxed">
                 {[
                   'Your table only — the entire dining space is yours',
                   'The pace is yours. Courses arrive when you are ready.',
@@ -212,7 +212,7 @@ export default function RomanticDinnerPage() {
               </ul>
             </div>
           </div>
-          <p className="text-center text-white/50 text-sm mt-10 italic" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.1rem' }}>
+          <p className="text-center text-white/[50%] text-sm mt-10 italic" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.1rem' }}>
             "The privacy, the pacing, the fact that the chef was cooking three meters from our table — my partner still talks about it."
           </p>
         </div>
@@ -234,9 +234,9 @@ export default function RomanticDinnerPage() {
           </p>
           <h2 className="text-white text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             We arrive 3 hours before you sit down.<br />
-            <span className="italic text-white/75">When you walk out, the table is already set.</span>
+            <span className="italic text-white/[75%]">When you walk out, the table is already set.</span>
           </h2>
-          <p className="text-white/70 text-base md:text-lg max-w-[640px]">
+          <p className="text-white/[70%] text-base md:text-lg max-w-[640px]">
             White linens, candles lit, flowers placed, wine breathing. Your chef is quietly working in the kitchen. You do nothing except arrive to it.
           </p>
         </div>
@@ -277,9 +277,9 @@ export default function RomanticDinnerPage() {
 
           <div className="bg-[#1A1A1A] rounded-[24px] p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
-              <p className="text-white/50 text-xs uppercase tracking-[0.3em] mb-2">Price per person</p>
-              <p className="text-white text-3xl font-light" style={{ fontFamily: "'Playfair Display', serif" }}>IDR 2,200,000 <span className="text-white/50 text-lg">++</span></p>
-              <p className="text-white/50 text-xs mt-1">Wagyu Experience also available at IDR 2,400,000++</p>
+              <p className="text-white/[50%] text-xs uppercase tracking-[0.3em] mb-2">Price per person</p>
+              <p className="text-white text-3xl font-light" style={{ fontFamily: "'Playfair Display', serif" }}>IDR 2,200,000 <span className="text-white/[50%] text-lg">++</span></p>
+              <p className="text-white/[50%] text-xs mt-1">Wagyu Experience also available at IDR 2,400,000++</p>
             </div>
             <a
               href={WA_LINK}
@@ -394,7 +394,7 @@ export default function RomanticDinnerPage() {
               <div key={step.n} className="text-center">
                 <p className="text-[#C5A028] text-4xl mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{step.n}</p>
                 <h3 className="text-white text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{step.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{step.desc}</p>
+                <p className="text-white/[60%] text-sm leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -514,7 +514,7 @@ export default function RomanticDinnerPage() {
           <h2 className="text-white text-4xl md:text-6xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Build Your Perfect Evening
           </h2>
-          <p className="text-white/70 text-lg mb-10 leading-relaxed">
+          <p className="text-white/[70%] text-lg mb-10 leading-relaxed">
             Tell us your date, your villa, and the occasion.<br />We handle everything else.
           </p>
           <a
@@ -525,7 +525,7 @@ export default function RomanticDinnerPage() {
           >
             <MessageCircle className="w-5 h-5" /> Message Sofia on WhatsApp
           </a>
-          <p className="text-white/40 text-xs mt-6">Replies within 1 hour · No booking fee · Free consultation</p>
+          <p className="text-white/[40%] text-xs mt-6">Replies within 1 hour · No booking fee · Free consultation</p>
         </div>
       </section>
 
@@ -539,7 +539,7 @@ export default function RomanticDinnerPage() {
             { label: 'Our Menus', href: '/menus' },
             { label: 'Pricing', href: '/pricing' },
           ].map((l) => (
-            <Link key={l.href} to={l.href} className="text-white/50 text-sm hover:text-[#C5A028] transition-colors">
+            <Link key={l.href} to={l.href} className="text-white/[50%] text-sm hover:text-[#C5A028] transition-colors">
               {l.label}
             </Link>
           ))}

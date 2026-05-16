@@ -15,7 +15,7 @@ export default function Footer() {
             <h3 className="text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
               my<span className="text-[#C5A028]">CHEF</span>
             </h3>
-            <p className="text-sm text-white/55 max-w-xs">
+            <p className="text-sm text-white/[55%] max-w-xs">
               Private chef, villa catering, and full-service events across Bali. Same-day WhatsApp confirmation.
             </p>
           </div>
@@ -30,7 +30,7 @@ export default function Footer() {
             >
               <MessageCircle className="w-3.5 h-3.5" /> +62 822-3756-5997
             </a>
-            <a href="mailto:indonesia@mychef.id" className="text-white/55 hover:text-[#C5A028] transition-colors">
+            <a href="mailto:indonesia@mychef.id" className="text-white/[55%] hover:text-[#C5A028] transition-colors">
               indonesia@mychef.id
             </a>
           </div>
@@ -45,13 +45,13 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2.5">
                 <li>
-                  <Link to={pillar.url} className="text-sm text-white/70 hover:text-white transition-colors">
+                  <Link to={pillar.url} className="text-sm text-white/[70%] hover:text-white transition-colors">
                     Overview
                   </Link>
                 </li>
                 {pillar.subPages.map((sub) => (
                   <li key={sub.slug}>
-                    <Link to={`${pillar.url}/${sub.slug}`} className="text-sm text-white/50 hover:text-white transition-colors">
+                    <Link to={`${pillar.url}/${sub.slug}`} className="text-sm text-white/[50%] hover:text-white transition-colors">
                       {sub.label}
                     </Link>
                   </li>
@@ -64,13 +64,13 @@ export default function Footer() {
             <h4 className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 font-semibold">Locations</h4>
             <ul className="space-y-2.5">
               <li>
-                <Link to="/locations" className="text-sm text-white/70 hover:text-white transition-colors">
+                <Link to="/locations" className="text-sm text-white/[70%] hover:text-white transition-colors">
                   All Locations
                 </Link>
               </li>
               {locations.map((loc) => (
                 <li key={loc.slug}>
-                  <Link to={`/locations/${loc.slug}`} className="text-sm text-white/50 hover:text-white transition-colors">
+                  <Link to={`/locations/${loc.slug}`} className="text-sm text-white/[50%] hover:text-white transition-colors">
                     {loc.label}
                   </Link>
                 </li>
@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
 
         {/* Secondary nav row */}
-        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-6 border-t border-white/10 text-sm text-white/60">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-6 border-t border-white/10 text-sm text-white/[60%]">
           {PRIMARY_NAV.filter((n) => !['Fine Dining', 'Events & Catering', 'Events', 'In-Villa Service', 'Staffing'].includes(n.label)).map((l) => (
             <Link key={l.href} to={l.href} className="hover:text-[#C5A028] transition-colors">
               {l.label}
@@ -103,7 +103,7 @@ export default function Footer() {
         </div>
 
         {/* Contact row */}
-        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-6 border-t border-white/10 text-sm text-white/60">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-6 border-t border-white/10 text-sm text-white/[60%]">
           <a href="tel:+6282237565997" className="inline-flex items-center gap-1.5 hover:text-[#C5A028] transition-colors">
             <Phone className="w-3.5 h-3.5" /> +62 822-3756-5997
           </a>
@@ -136,19 +136,19 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-6 border-t border-white/10">
           <Link
             to="/partner-platform"
-            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-white/40 hover:text-[#C5A028] transition-colors px-4 py-2 rounded-full border border-white/10"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-white/[40%] hover:text-[#C5A028] transition-colors px-4 py-2 rounded-full border border-white/10"
           >
             <LogIn className="w-3.5 h-3.5" /> Staff Login
           </Link>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/40">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/[40%]">
             <Link to="/terms" className="hover:text-[#C5A028] transition-colors">Terms</Link>
             <Link to="/privacy" className="hover:text-[#C5A028] transition-colors">Privacy</Link>
             <Link to="/cancellation" className="hover:text-[#C5A028] transition-colors">Cancellation</Link>
           </div>
         </div>
 
-        <p className="text-xs text-white/30 text-center mt-4">
+        <p className="text-xs text-white/[30%] text-center mt-4">
           &copy; {new Date().getFullYear()} myCHEF.id. All rights reserved.
         </p>
       </div>

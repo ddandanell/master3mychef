@@ -234,7 +234,7 @@ export default function StaffingPage() {
           >
             Hire Vetted Hospitality Staff for Your Villa, Hotel or Home.
           </h1>
-          <p className="text-base md:text-xl text-white/75 mb-10 max-w-[620px] leading-relaxed">
+          <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[620px] leading-relaxed">
             Private chefs, live-in chefs, villa staff, and household teams — placed within 48 hours. All background-checked, English-speaking, and trained. For villa managers, hotel owners, and private households across Bali.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -259,7 +259,7 @@ export default function StaffingPage() {
               { icon: RefreshCw, label: '30-Day Replacement Guarantee' },
               { icon: Star, label: '4.9 Client Rating' },
             ].map((badge) => (
-              <div key={badge.label} className="flex items-center gap-2 text-white/55">
+              <div key={badge.label} className="flex items-center gap-2 text-white/[55%]">
                 <badge.icon className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />
                 <span className="text-xs tracking-wider uppercase">{badge.label}</span>
               </div>
@@ -282,7 +282,7 @@ export default function StaffingPage() {
               >
                 {s.value}
               </p>
-              <p className="text-xs tracking-widest uppercase text-white/50">{s.label}</p>
+              <p className="text-xs tracking-widest uppercase text-white/[50%]">{s.label}</p>
             </div>
           ))}
         </div>
@@ -471,7 +471,7 @@ export default function StaffingPage() {
             >
               Talk to Marco.
             </h2>
-            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8">
+            <p className="text-white/[70%] text-base md:text-lg leading-relaxed mb-8">
               Marco is our staffing director. He has overseen 200+ placements across Bali's finest villas, hotels, and private households. Message him on WhatsApp and he will respond within the hour with a shortlist and honest advice — no pitch, no pressure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -487,7 +487,7 @@ export default function StaffingPage() {
               </a>
               <a
                 href={`tel:+${WA_NUMBER}`}
-                className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full border border-white/25 text-white/80 transition-all hover:border-white/60 hover:scale-105"
+                className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full border border-white/25 text-white/[80%] transition-all hover:border-white/60 hover:scale-105"
               >
                 <Phone className="w-4 h-4" /> Call the Team
               </a>
@@ -497,7 +497,7 @@ export default function StaffingPage() {
               <span>✅ English-speaking</span>
               <span>✅ Same-day confirmation</span>
             </div>
-            <p className="text-white/50 text-sm mt-4">
+            <p className="text-white/[50%] text-sm mt-4">
               Free brief review · 30-day replacement guarantee · Response within 1 hour
             </p>
           </div>
@@ -520,7 +520,7 @@ export default function StaffingPage() {
               <Link
                 key={link.href}
                 to={link.href}
-                className="flex items-center justify-between px-6 py-4 rounded-xl border border-white/10 text-white/70 text-sm tracking-wide hover:border-[#C5A028]/50 hover:text-white transition-all group"
+                className="flex items-center justify-between px-6 py-4 rounded-xl border border-white/10 text-white/[70%] text-sm tracking-wide hover:border-[#C5A028]/50 hover:text-white transition-all group"
               >
                 {link.label}
                 <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#C5A028' }} />

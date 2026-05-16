@@ -253,15 +253,15 @@ export default function PricingCalculator({
         <div className="rounded-[28px] bg-[#1A1A1A] p-6 text-white">
           <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028]">Estimated total</p>
           <p className="mt-4 text-3xl font-playfair leading-tight md:text-4xl">From {formatEstimateIDR(estimatedTotal)}</p>
-          <p className="mt-4 text-sm leading-relaxed text-white/75">
+          <p className="mt-4 text-sm leading-relaxed text-white/[75%]">
             Based on {selectedService.label.toLowerCase()}, {selectedGuests.label} guests and {selectedDuration.label.toLowerCase()} service.
           </p>
           {serviceType === 'staffing' && (
-            <p className="mt-3 text-sm leading-relaxed text-white/75">
+            <p className="mt-3 text-sm leading-relaxed text-white/[75%]">
               Staffing estimates include a starter crew of {baseWaiters} waiter{baseWaiters > 1 ? 's' : ''} for this guest range.
             </p>
           )}
-          <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">
+          <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/[80%]">
             <div className="flex items-center justify-between gap-4">
               <span>Core estimate</span>
               <span>{formatEstimateIDR(serviceSubtotal)}</span>
@@ -271,8 +271,8 @@ export default function PricingCalculator({
               <span>{formatEstimateIDR(addOnsTotal)}</span>
             </div>
           </div>
-          <p className="mt-6 text-sm text-white/75">Final pricing confirmed on WhatsApp. No hidden fees.</p>
-          <p className="mt-3 text-xs uppercase tracking-[0.18em] text-white/50">“From” uses the lowest guest count in your selected range.</p>
+          <p className="mt-6 text-sm text-white/[75%]">Final pricing confirmed on WhatsApp. No hidden fees.</p>
+          <p className="mt-3 text-xs uppercase tracking-[0.18em] text-white/[50%]">“From” uses the lowest guest count in your selected range.</p>
           <Button asChild variant="whatsapp" size="brand" className="mt-6 w-full justify-center">
             <a href={`https://wa.me/6282237565997?text=${whatsappText}`} target="_blank" rel="noopener noreferrer" data-source="pricing-calculator-cta">
               <MessageCircle className="h-4 w-4" />

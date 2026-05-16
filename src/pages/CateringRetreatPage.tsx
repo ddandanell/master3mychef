@@ -189,10 +189,10 @@ export default function CateringRetreatPage() {
             Retreat Catering Bali<br />
             <span className="italic">for Wellness, Yoga, and Group Stays</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/85 mb-4 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
             Consistent, healthy, chef-led catering for multi-day retreats where the food needs to support energy, rhythm, and the full guest experience.
           </p>
-          <p className="text-white/60 text-sm mb-10">
+          <p className="text-white/[60%] text-sm mb-10">
             From IDR 400,000/person/day · Plant-forward · Full board · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -203,7 +203,7 @@ export default function CateringRetreatPage() {
               View Retreat Packages
             </a>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/50 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Multi-day capable</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Dietary tracking</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Dedicated retreat chef</span>
@@ -488,7 +488,7 @@ export default function CateringRetreatPage() {
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Plan Your Retreat Meals
           </h2>
-          <p className="text-white/80 text-lg mb-8">
+          <p className="text-white/[80%] text-lg mb-8">
             Tell us your retreat length, guest count, daily schedule, villa location, dietary profile, and preferred food style. We will design a custom menu and confirm chef availability within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -499,7 +499,7 @@ export default function CateringRetreatPage() {
               <Phone className="w-4 h-4" /> Call +62 822-3756-5997
             </a>
           </div>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/50 text-xs">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> 24h proposal turnaround</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Dedicated retreat chef</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> No hidden fees</span>

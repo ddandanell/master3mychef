@@ -188,7 +188,7 @@ export default function FAQPage() {
             </div>
             <div className="mt-6 rounded-2xl bg-[#1A1A1A] p-5 text-white">
               <p className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-2">Need a fast answer?</p>
-              <p className="text-sm text-white/75 leading-relaxed">WhatsApp +62 822-3756-5997 and our team will usually reply within 1 hour.</p>
+              <p className="text-sm text-white/[75%] leading-relaxed">WhatsApp +62 822-3756-5997 and our team will usually reply within 1 hour.</p>
             </div>
           </div>
         </div>
@@ -226,7 +226,7 @@ export default function FAQPage() {
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-5xl font-playfair leading-tight">Ask us directly on WhatsApp</h2>
-              <p className="mt-4 text-white/75 leading-relaxed">
+              <p className="mt-4 text-white/[75%] leading-relaxed">
                 Send your dates, area in Bali and guest count. We will tell you what is possible, how much it costs and how quickly we can confirm.
               </p>
             </div>

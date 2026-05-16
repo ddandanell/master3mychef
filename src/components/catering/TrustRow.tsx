@@ -7,7 +7,7 @@ interface TrustRowProps {
 }
 
 export default function TrustRow({ items, dark = false, columns = 5 }: TrustRowProps) {
-  const textColor = dark ? 'text-white/80' : 'text-[#4A4745]'
+  const textColor = dark ? 'text-white/[80%]' : 'text-[#4A4745]'
   const iconColor = dark ? 'text-[#C5A028]' : 'text-[#6B8E5A]'
 
   return (

@@ -436,7 +436,7 @@ export default function CateringMainPage() {
             Events & Catering for Bali Villas.<br />
             <span className="italic">Built for Groups, Parties & Hosted Dinners.</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
             This page is for villa parties, weddings, corporate dinners, and catered meals for 5+ guests. If you want a chef for breakfast, lunch, or intimate in-villa dining during your stay, book our Private Villa Dining service instead.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -460,7 +460,7 @@ export default function CateringMainPage() {
             <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
               Not sure which service?
             </p>
-            <p className="text-sm md:text-base text-white/85 leading-relaxed mb-4">
+            <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
               Choose Events & Catering for BBQs, buffet service, plated group dinners, weddings, and formal villa setups. Choose <span className="font-semibold text-white">Private Villa Dining</span> for 1–4 guests, family stays, and everyday breakfast, lunch, or dinner with a chef in your villa.
             </p>
             <Link
@@ -1257,7 +1257,7 @@ export default function CateringMainPage() {
             ].map((item) => (
               <div key={item.step} className="text-center">
                 <span className="text-[#C5A028] text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>{item.step}</span>
-                <p className="text-white/80 text-sm mt-1">{item.text}</p>
+                <p className="text-white/[80%] text-sm mt-1">{item.text}</p>
               </div>
             ))}
           </div>
@@ -1278,7 +1278,7 @@ export default function CateringMainPage() {
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>
           </div>
-          <p className="text-sm text-white/60 mb-8">
+          <p className="text-sm text-white/[60%] mb-8">
             No booking fee · Free consultation · Exact quote within 2 hours
           </p>
           <TrustRow

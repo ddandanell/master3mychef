@@ -96,7 +96,7 @@ export default function BookPage() {
           <div className="max-w-[900px]">
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF</p>
             <h1 className="font-playfair text-4xl md:text-6xl text-white leading-[1.1] mb-6">Book Your Experience</h1>
-            <p className="text-lg md:text-xl text-white/80 max-w-[600px] mb-8">
+            <p className="text-lg md:text-xl text-white/[80%] max-w-[600px] mb-8">
               Choose the service that fits your occasion. We confirm same-day via WhatsApp and build every experience around your preferences.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -121,7 +121,7 @@ export default function BookPage() {
             { icon: Shield, text: 'Background-Checked Team' },
             { icon: Clock, text: 'Same-Day Response' },
           ].map(({ icon: Icon, text }) => (
-            <div key={text} className="flex items-center gap-2 text-white/60 text-sm">
+            <div key={text} className="flex items-center gap-2 text-white/[60%] text-sm">
               <Icon className="w-4 h-4 text-[#C5A028]" /> {text}
             </div>
           ))}
@@ -201,7 +201,7 @@ export default function BookPage() {
       <section className="py-16 md:py-24 bg-[#0A0A0A] text-white">
         <div className="max-w-[700px] mx-auto px-6 text-center">
           <h2 className="font-playfair text-3xl md:text-5xl mb-4">Not Sure What You Need?</h2>
-          <p className="text-white/60 mb-8">Message us on WhatsApp with your dates and occasion. We will recommend the perfect service and send a proposal within 24 hours.</p>
+          <p className="text-white/[60%] mb-8">Message us on WhatsApp with your dates and occasion. We will recommend the perfect service and send a proposal within 24 hours.</p>
           <a
             href={`https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to book an experience but I am not sure what I need. Can you help?')}`}
             target="_blank"

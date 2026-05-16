@@ -170,10 +170,10 @@ export default function CateringVillaPage() {
             Villa Catering Bali,<br />
             <span className="italic">Built for Private Villas</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/85 mb-4 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
             Chef-led catering, discreet service, full setup, and cleanup for villa dinners, poolside parties, birthdays, family gatherings, and private events across Bali.
           </p>
-          <p className="text-white/60 text-sm mb-10">
+          <p className="text-white/[60%] text-sm mb-10">
             From IDR 450,000/person · Chef + team included · Groceries at cost · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -184,7 +184,7 @@ export default function CateringVillaPage() {
               View Menu Styles
             </a>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/50 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Same-day WhatsApp reply</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> 50% deposit only</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full cleanup included</span>
@@ -472,7 +472,7 @@ export default function CateringVillaPage() {
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Ready for Villa Catering?
           </h2>
-          <p className="text-white/80 text-lg mb-8">
+          <p className="text-white/[80%] text-lg mb-8">
             Tell us your villa, group size, and dates. We will confirm chef availability and send a custom quote within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -483,7 +483,7 @@ export default function CateringVillaPage() {
               <Phone className="w-4 h-4" /> Call +62 822-3756-5997
             </a>
           </div>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/50 text-xs">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Same-day reply</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> 50% deposit only</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> No hidden fees</span>

@@ -238,7 +238,7 @@ export default function CateringGrazingPage() {
           >
             Grazing Tables Bali for Events, Villas, and Parties
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-2xl mx-auto">
             Styled grazing tables with cheese, charcuterie, fruit, dips, bread, sweets, and event-ready presentation for relaxed luxury hosting.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -256,7 +256,7 @@ export default function CateringGrazingPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
           </div>
-          <p className="text-white/60 text-sm">From IDR 650,000 · Vegan options · Bali-wide</p>
+          <p className="text-white/[60%] text-sm">From IDR 650,000 · Vegan options · Bali-wide</p>
         </div>
       </section>
 
@@ -612,7 +612,7 @@ export default function CateringGrazingPage() {
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Order a Grazing Table for Your Bali Event
           </h2>
-          <p className="text-white/80 text-lg mb-8">
+          <p className="text-white/[80%] text-lg mb-8">
             Send your date, area, guest count, and preferred grazing style. We will confirm availability, styling options, and final price by WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

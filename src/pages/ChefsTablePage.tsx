@@ -97,10 +97,10 @@ export default function ChefsTablePage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Chef's Table Bali | Adriano's Private 7-Course Experience — myCHEF"
-        description="The most exclusive myCHEF experience. Counter seating, 7 courses, live commentary by Adriano. Maximum 6 guests. IDR 3,500,000++ per person. Friday & Saturday only."
+        title="Chef's Table Bali | Adriano 7-Course Private Dining — myCHEF"
+        description="Exclusive Chef's Table in your Bali villa: Adriano-led 7-course private dining with live commentary. Max 6 guests. IDR 3,500,000++ pp. Fri-Sat only."
         canonical={`${SITE}/fine-dining/chefs-table`}
-        ogImage={`${SITE}/generated/luna-flame.webp`}
+        ogImage={`${SITE}/generated/chefs-table-hero-luxury.png`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema(
@@ -121,8 +121,8 @@ export default function ChefsTablePage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-flame.webp"
-            alt="Chef cooking over open flame at the Chef's Table — myCHEF Bali private dining"
+            src="/generated/chefs-table-hero-luxury.png"
+            alt="Luxury private villa dinner service in Bali with candlelight and wine pairing"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
@@ -136,10 +136,10 @@ export default function ChefsTablePage() {
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.0] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             The Chef's Table
           </h1>
-          <p className="text-xl md:text-2xl text-white/75 mb-3 max-w-2xl mx-auto leading-relaxed italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <p className="text-xl md:text-2xl text-white/[75%] mb-3 max-w-2xl mx-auto leading-relaxed italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Counter seating. Live narrative. The full technique made visible.
           </p>
-          <p className="text-white/50 text-sm mb-10 tracking-wide">
+          <p className="text-white/[50%] text-sm mb-10 tracking-wide">
             IDR 3,500,000++ per person · Friday & Saturday only · 6 seats maximum
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -158,7 +158,7 @@ export default function ChefsTablePage() {
               Full Fine Dining <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/40 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[40%] text-xs">
             <span className="flex items-center gap-1.5"><Lock className="w-3.5 h-3.5 text-[#C5A028]" /> Adriano only — no substitutes</span>
             <span className="flex items-center gap-1.5"><Users className="w-3.5 h-3.5 text-[#C5A028]" /> 6 guests maximum</span>
             <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-[#C5A028]" /> 2 bookings per weekend</span>
@@ -174,13 +174,13 @@ export default function ChefsTablePage() {
           <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-8" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             What Makes This Different
           </p>
-          <p className="text-white/85 leading-relaxed mb-6" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.4rem, 2.8vw, 2rem)' }}>
+          <p className="text-white/[0.85] leading-relaxed mb-6" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.4rem, 2.8vw, 2rem)' }}>
             "At a restaurant, you eat. The chef stays in the kitchen. Here, there is no separation."
           </p>
-          <p className="text-white/60 text-base leading-relaxed mb-6">
+          <p className="text-white/[60%] text-base leading-relaxed mb-6">
             You sit at the counter. Adriano works in front of you. Every decision — the salt, the flame, the rest — is explained as it happens. This is not theatre. This is how a chef actually works.
           </p>
-          <p className="text-white/40 text-xl leading-relaxed" style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic' }}>
+          <p className="text-white/[40%] text-xl leading-relaxed" style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic' }}>
             Six seats. One chef. One evening.
           </p>
         </div>
@@ -236,19 +236,19 @@ export default function ChefsTablePage() {
               The Menu
             </h2>
           </div>
-          <p className="text-center text-white/55 text-sm mb-12 max-w-[640px] mx-auto ct-reveal">
-            Unlike the set menus, the Chef's Table menu is built around what Adriano finds at the market that morning. The framework below is fixed. What fills it changes every time.
+          <p className="text-center text-white/[55%] text-sm mb-12 max-w-[640px] mx-auto ct-reveal">
+            Unlike the two set menus (La Riviera and L&apos;Odyssée), the Chef&apos;s Table menu is built around what Adriano finds at the market that morning. The framework below is fixed. What fills it changes every time.
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
             {MENU_FRAMEWORK.map((item) => (
               <div key={item.num} className="ct-reveal rounded-[20px] border border-white/10 p-7">
                 <p className="text-[#C5A028] text-3xl font-light mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{item.num}</p>
                 <h3 className="text-white font-medium text-base mb-2">{item.course}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-white/[50%] text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-center text-white/30 text-xs mt-8 ct-reveal">
+          <p className="text-center text-white/[30%] text-xs mt-8 ct-reveal">
             "No two Chef's Table evenings are identical. This is by design."
           </p>
         </div>
@@ -390,7 +390,7 @@ export default function ChefsTablePage() {
         <h2 className="text-white text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
           Tell us your date.
         </h2>
-        <p className="text-white/60 text-lg mb-10 max-w-[500px] mx-auto">
+        <p className="text-white/[60%] text-lg mb-10 max-w-[500px] mx-auto">
           We take two Chef's Table bookings per weekend. Availability goes fast — especially in peak season.
         </p>
         <a
@@ -401,19 +401,17 @@ export default function ChefsTablePage() {
         >
           <MessageCircle className="w-5 h-5" /> Check Adriano's Availability
         </a>
-        <p className="text-white/30 text-xs mt-6">Friday & Saturday evenings · 6 guests maximum · 50% deposit to confirm</p>
+        <p className="text-white/[30%] text-xs mt-6">Friday & Saturday evenings · 6 guests maximum · 50% deposit to confirm</p>
       </section>
 
       <section className="py-10 px-6 bg-[#141414]">
         <div className="max-w-[960px] mx-auto flex flex-wrap justify-center gap-x-8 gap-y-3">
           {[
             { label: 'Fine Dining Overview', href: '/fine-dining' },
-            { label: 'Tasting Menu', href: '/fine-dining/tasting-menu' },
-            { label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner' },
-            { label: 'Private Chef in Bali', href: '/fine-dining/private-chef-bali' },
-            { label: 'Our Chefs', href: '/chefs' },
+            { label: 'Our Menus', href: '/fine-dining/menus' },
+            { label: 'Our Chefs', href: '/fine-dining/our-chefs' },
           ].map((l) => (
-            <Link key={l.href} to={l.href} className="text-white/40 text-sm hover:text-[#C5A028] transition-colors">
+            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors">
               {l.label}
             </Link>
           ))}

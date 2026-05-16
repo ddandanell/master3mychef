@@ -372,7 +372,7 @@ export default function ReviewsPage() {
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-5xl font-playfair leading-tight">Ready to create your own story?</h2>
-              <p className="mt-4 text-white/75 leading-relaxed">
+              <p className="mt-4 text-white/[75%] leading-relaxed">
                 Tell us your villa, date and guest count. We will match you with the right chef and service style for your dinner, event or retreat.
               </p>
             </div>

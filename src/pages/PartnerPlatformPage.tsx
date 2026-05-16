@@ -139,7 +139,7 @@ export default function PartnerPlatformPage() {
           <h1 className="text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] mb-7 max-w-[1000px]" style={{ fontFamily: "'Playfair Display', serif" }}>
             Michelin-Level Private Dining for Bali Villas
           </h1>
-          <p className="text-base md:text-xl text-white/80 mb-10 max-w-[720px] leading-relaxed">
+          <p className="text-base md:text-xl text-white/[80%] mb-10 max-w-[720px] leading-relaxed">
             A villa dining partner platform built for luxury villas, villa management companies, boutique hospitality brands, and premium operators across Bali.
           </p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -221,18 +221,18 @@ export default function PartnerPlatformPage() {
               <p className="text-[#C5A028] text-xs uppercase tracking-[0.3em] mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>We provide</p>
               <ul className="space-y-2.5">
                 {WHAT_WE_PROVIDE.map((it) => (
-                  <li key={it} className="flex items-start gap-3 text-white/85">
+                  <li key={it} className="flex items-start gap-3 text-white/[85%]">
                     <Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> {it}
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="text-white/55 text-xs uppercase tracking-[0.3em] mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>You don't need</p>
+              <p className="text-white/[55%] text-xs uppercase tracking-[0.3em] mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>You don't need</p>
               <ul className="space-y-2.5">
                 {WHAT_PARTNER_DOESNT_NEED.map((it) => (
-                  <li key={it} className="flex items-start gap-3 text-white/50">
-                    <X className="w-4 h-4 text-white/30 mt-1 flex-shrink-0" /> <span className="line-through decoration-white/15">{it}</span>
+                  <li key={it} className="flex items-start gap-3 text-white/[50%]">
+                    <X className="w-4 h-4 text-white/[30%] mt-1 flex-shrink-0" /> <span className="line-through decoration-white/15">{it}</span>
                   </li>
                 ))}
               </ul>
@@ -316,15 +316,15 @@ export default function PartnerPlatformPage() {
             <div className="bg-[#0A0A0A] text-white border border-white/10 rounded-2xl p-8 md:p-10 flex flex-col">
               <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[0.3em] mb-3">Option B</p>
               <h3 className="font-playfair text-3xl mb-3">White-Label Partnership</h3>
-              <p className="text-white/65 mb-6">myCHEF operates invisibly. Neutral uniforms, no visible branding, unmarked equipment. The experience appears fully owned by the villa. Sell it as your own, use the photos freely.</p>
+              <p className="text-white/[65%] mb-6">myCHEF operates invisibly. Neutral uniforms, no visible branding, unmarked equipment. The experience appears fully owned by the villa. Sell it as your own, use the photos freely.</p>
               <div className="mb-6">
                 <p className="text-5xl font-playfair text-[#C5A028]">7<span className="text-2xl">%</span></p>
-                <p className="text-xs uppercase tracking-[0.2em] text-white/45 mt-1">Commission per order</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-white/[45%] mt-1">Commission per order</p>
               </div>
-              <p className="text-[10px] uppercase tracking-[0.25em] text-white/45 mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Best for</p>
+              <p className="text-[10px] uppercase tracking-[0.25em] text-white/[45%] mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Best for</p>
               <ul className="space-y-2 mb-8 flex-grow">
                 {['Luxury villa brands', 'Hospitality groups', 'Villas protecting brand identity', 'Ultra-private clients'].map((b) => (
-                  <li key={b} className="flex items-start gap-2 text-sm text-white/75"><Check className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" /> {b}</li>
+                  <li key={b} className="flex items-start gap-2 text-sm text-white/[75%]"><Check className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" /> {b}</li>
                 ))}
               </ul>
               <a href={waApply} target="_blank" rel="noopener noreferrer" data-source="partner-platform-apply" className="inline-flex items-center justify-center gap-2 border border-[#C5A028]/60 text-[#C5A028] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#C5A028]/10 transition-colors">
@@ -523,7 +523,7 @@ export default function PartnerPlatformPage() {
         <div className="max-w-[820px] mx-auto text-center">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.35em] mb-5">The next step</p>
           <h2 className="font-playfair text-3xl md:text-5xl leading-tight mb-5">The experience speaks better than the presentation ever can.</h2>
-          <p className="text-white/65 text-lg mb-12 max-w-[640px] mx-auto">
+          <p className="text-white/[65%] text-lg mb-12 max-w-[640px] mx-auto">
             Large villa groups can request a private tasting, an investor dinner, or an owner showcase evening. Smaller partners can join the monthly showcase dinners and invitation-only events.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -544,10 +544,10 @@ export default function PartnerPlatformPage() {
               <MessageCircle className="w-4 h-4" /> Request Showcase Dinner
             </a>
           </div>
-          <p className="text-xs text-white/45 mt-10 italic">
+          <p className="text-xs text-white/[45%] mt-10 italic">
             myCHEF Partner Platform — controlled premium hospitality, the leading luxury villa dining network in Bali.
           </p>
-          <p className="text-xs text-white/60 mt-6">
+          <p className="text-xs text-white/[60%] mt-6">
             Already a guest looking to book? <Link to="/quote" className="text-[#C5A028] hover:underline">Get a quote</Link>.
           </p>
         </div>

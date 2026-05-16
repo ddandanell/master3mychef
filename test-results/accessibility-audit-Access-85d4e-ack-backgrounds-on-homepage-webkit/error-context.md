@@ -1,0 +1,1281 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: accessibility-audit.spec.ts >> Accessibility & Visual Audit >> check for black text on black backgrounds on homepage
+- Location: tests/e2e/accessibility-audit.spec.ts:16:3
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 0
+Received: 1
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - link "Skip to main content" [ref=e4]:
+    - /url: "#main-content"
+  - navigation "Main navigation" [ref=e5]:
+    - generic [ref=e6]:
+      - link "myCHEF" [ref=e7]:
+        - /url: /
+        - img [ref=e8]
+        - generic [ref=e11]: myCHEF
+      - generic [ref=e12]:
+        - link "Book" [ref=e13]:
+          - /url: /book
+        - button "Open menu" [ref=e14] [cursor=pointer]:
+          - img [ref=e15]
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: Your Villa. Our Kitchen.
+          - heading "A Michelin-Trained Private Chef, in Your Bali Villa." [level=1] [ref=e22]
+          - paragraph [ref=e24]: Private dining, catering & events across Bali. We shop, cook & clean. You just enjoy.
+          - paragraph [ref=e25]: Founded by Adriano — trained under a Michelin-starred chef in Milan — myCHEF.id brings extraordinary dining to Bali's finest villas. A team of 50+ Indonesian hospitality professionals handles everything, from grocery sourcing to the last clean plate. We are not a marketplace. We are a kitchen that travels.
+          - generic [ref=e26]:
+            - link "Get My Free Quote" [ref=e27]:
+              - /url: https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa.
+              - img [ref=e28]
+              - text: Get My Free Quote
+              - generic [ref=e30]: →
+            - link "Browse Menus & Pricing" [ref=e31]:
+              - /url: /pricing
+              - text: Browse Menus & Pricing
+              - img [ref=e32]
+          - paragraph [ref=e34]:
+            - img "Available" [ref=e35]: 🟢
+            - text: Available this weekend · Reply within 1 hour
+          - paragraph [ref=e36]: Weekends fill fast — book early
+          - paragraph [ref=e37]: No booking fee · Free consultation · Replies within 1 hour
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - img [ref=e44]
+              - generic [ref=e47]:
+                - paragraph [ref=e48]: Same-day confirmation or your money back
+                - paragraph [ref=e49]: If your chef can't make it, we send a replacement within 2 hours or refund 100%
+            - generic [ref=e50]:
+              - img [ref=e52]
+              - generic [ref=e57]:
+                - paragraph [ref=e58]: Chef replacement guarantee
+                - paragraph [ref=e59]: Same-day replacement or full refund — your evening is protected
+          - generic [ref=e60]:
+            - generic [ref=e61]: 560+ Villas Served
+            - generic [ref=e62]: 12,000+ Happy Guests
+            - generic [ref=e63]: 4.9 ★ Rating
+            - generic [ref=e64]: 8+ Years in Bali
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - paragraph [ref=e68]: Still deciding?
+              - paragraph [ref=e69]: Most guests book within 24h of inquiry. WhatsApp us — no commitment required.
+            - generic [ref=e70]:
+              - link "Message us" [ref=e71]:
+                - /url: https://wa.me/6282237565997
+                - text: Message us
+                - img [ref=e72]
+              - link "Estimate price first →" [ref=e74]:
+                - /url: /calculator
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - link "Fine Dining" [ref=e77]:
+              - /url: /fine-dining
+            - img "Fine Dining" [ref=e78]
+            - generic:
+              - heading "Fine Dining" [level=3]
+              - paragraph: Italian tasting menus in your villa. Two curated experiences.
+              - generic:
+                - text: Explore
+                - img
+          - generic [ref=e80]:
+            - link "Events & Catering" [ref=e81]:
+              - /url: /catering
+            - img "Events & Catering" [ref=e82]
+            - generic:
+              - heading "Events & Catering" [level=3]
+              - paragraph: BBQ, buffet, plated dinners, and hosted villa events for groups of 5+.
+              - generic:
+                - text: Explore
+                - img
+          - generic [ref=e84]:
+            - link "Events" [ref=e85]:
+              - /url: /events
+            - img "Events" [ref=e86]
+            - generic:
+              - heading "Events" [level=3]
+              - paragraph: Weddings, retreats, and celebrations. Fully hosted.
+              - generic:
+                - text: Explore
+                - img
+      - generic [ref=e89]:
+        - generic [ref=e90]:
+          - paragraph [ref=e91]: Why myCHEF
+          - heading "Built to be the new standard" [level=2] [ref=e92]
+          - paragraph [ref=e93]: Six things every guest, host, and villa partner gets from the first message to the last plate.
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - img "100% Experience Guarantee" [ref=e97]
+              - generic [ref=e99]: Promise
+            - generic [ref=e100]:
+              - heading "100% Experience Guarantee" [level=3] [ref=e101]
+              - paragraph [ref=e102]: If the execution is not what we promised, we make it right.
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - img "The New Standard for Private Dining in Bali" [ref=e105]
+              - generic [ref=e107]: Standard
+            - generic [ref=e108]:
+              - heading "The New Standard for Private Dining in Bali" [level=3] [ref=e109]
+              - paragraph [ref=e110]: Built for villas, families, weddings, and hosted experiences.
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - img "Verified Chefs. Real Accountability." [ref=e113]
+              - generic [ref=e115]: Network
+            - generic [ref=e116]:
+              - heading "Verified Chefs. Real Accountability." [level=3] [ref=e117]
+              - paragraph [ref=e118]: Every chef is selected, reviewed, and matched to the experience.
+          - generic [ref=e119]:
+            - generic [ref=e120]:
+              - img "Designed for Market Dominance" [ref=e121]
+              - generic [ref=e123]: Leadership
+            - generic [ref=e124]:
+              - heading "Designed for Market Dominance" [level=3] [ref=e125]
+              - paragraph [ref=e126]: Fine dining, catering, and events delivered through one premium system.
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - img "From Menu to Service Flow" [ref=e129]
+              - generic [ref=e131]: Execution
+            - generic [ref=e132]:
+              - heading "From Menu to Service Flow" [level=3] [ref=e133]
+              - paragraph [ref=e134]: We handle planning, food, staffing, setup, and guest experience.
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - img "Built for Villas, Hosts, and Private Guests" [ref=e137]
+              - generic [ref=e139]: Hosts
+            - generic [ref=e140]:
+              - heading "Built for Villas, Hosts, and Private Guests" [level=3] [ref=e141]
+              - paragraph [ref=e142]: Professional presentation, clear process, and repeatable quality.
+      - generic [ref=e144]:
+        - generic [ref=e145]:
+          - paragraph [ref=e146]: Simple as It Gets
+          - heading "How It Works" [level=2] [ref=e147]
+          - paragraph [ref=e148]: From first message to first bite — four steps. No stress. No surprises.
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - img [ref=e152]
+            - generic [ref=e154]: Step 01
+            - heading "Message Us on WhatsApp" [level=3] [ref=e155]
+            - paragraph [ref=e156]: Tell us your dates, villa location, and how many guests. Takes two minutes.
+          - generic [ref=e157]:
+            - img [ref=e159]
+            - generic [ref=e162]: Step 02
+            - heading "We Plan Everything" [level=3] [ref=e163]
+            - paragraph [ref=e164]: Our concierge designs your menu or event. You approve — or we adjust. No pressure.
+          - generic [ref=e165]:
+            - img [ref=e167]
+            - generic [ref=e169]: Step 03
+            - heading "We Shop, Prep & Cook" [level=3] [ref=e170]
+            - paragraph [ref=e171]: Groceries sourced fresh that morning. We arrive at your villa ready to cook.
+          - generic [ref=e172]:
+            - img [ref=e174]
+            - generic [ref=e177]: Step 04
+            - heading "You Enjoy. We Clean." [level=3] [ref=e178]
+            - paragraph [ref=e179]: Sit back, eat, laugh. When you are done, we leave your kitchen spotless.
+        - link "Start on WhatsApp" [ref=e181]:
+          - /url: https://wa.me/6282237565997
+          - img [ref=e182]
+          - text: Start on WhatsApp
+      - generic [ref=e186]:
+        - img "The myCHEF team" [ref=e188]
+        - generic [ref=e189]:
+          - paragraph [ref=e190]: Who We Are
+          - heading "A Team Built on Passion, Not Pitch Decks" [level=2] [ref=e191]
+          - paragraph [ref=e193]: myCHEF.id was born when Adriano — trained under a Michelin-starred chef in Milan — arrived in Bali and saw a gap. The island had world-class villas. It had incredible ingredients. But the connection between them was missing.
+          - paragraph [ref=e194]: "Today we are a team of 50+ Indonesian hospitality professionals. Chefs trained in Italian technique. Servers who anticipate before you ask. Event producers who have handled 200+ weddings and corporate retreats. Every person on our team shares one belief: extraordinary food should not require leaving your villa."
+          - paragraph [ref=e195]: We are not a marketplace. We are not an app. We are a kitchen that travels — and we take that seriously.
+          - generic [ref=e196]:
+            - generic [ref=e197]:
+              - img [ref=e198]
+              - generic [ref=e200]: Michelin-trained leadership
+            - generic [ref=e201]:
+              - img [ref=e202]
+              - generic [ref=e204]: 50+ staff
+            - generic [ref=e205]:
+              - img [ref=e206]
+              - generic [ref=e208]: 560+ villas served
+            - generic [ref=e209]:
+              - img [ref=e210]
+              - generic [ref=e212]: 12,000+ guests
+      - generic [ref=e214]:
+        - generic [ref=e215]:
+          - paragraph [ref=e216]: Why Choose Us
+          - heading "What Makes Us Different" [level=2] [ref=e217]
+          - paragraph [ref=e218]: Anyone can cook. We build experiences.
+        - generic [ref=e219]:
+          - generic [ref=e220]:
+            - img [ref=e221]
+            - heading "Michelin-Trained Leadership" [level=3] [ref=e223]
+            - paragraph [ref=e224]: Adriano trained under a Michelin-starred chef in Milan. His standards are the baseline for every dish.
+          - generic [ref=e225]:
+            - img [ref=e226]
+            - heading "50+ Indonesian Professionals" [level=3] [ref=e231]
+            - paragraph [ref=e232]: Chefs, servers, bartenders, and event staff — all trained in-house, all passionate about hospitality.
+          - generic [ref=e233]:
+            - img [ref=e234]
+            - heading "We Handle Everything" [level=3] [ref=e236]
+            - paragraph [ref=e237]: Groceries, cooking, service, cleanup. You do not lift a finger. Not even to make a grocery list.
+          - generic [ref=e238]:
+            - img [ref=e239]
+            - heading "We Know Bali" [level=3] [ref=e242]
+            - paragraph [ref=e243]: 8 years serving villas across Seminyak, Canggu, Ubud, Uluwatu, and Sanur. We know the markets, the kitchens, the rhythm.
+          - generic [ref=e244]:
+            - img [ref=e245]
+            - heading "Same-Day Response" [level=3] [ref=e248]
+            - paragraph [ref=e249]: Most inquiries confirmed within the hour. Proposals delivered within 24 hours. No waiting games.
+          - generic [ref=e250]:
+            - img [ref=e251]
+            - heading "12,000+ Happy Guests" [level=3] [ref=e253]
+            - paragraph [ref=e254]: Families, honeymooners, CEOs, wedding parties. A 4.9 average rating across 500+ villa experiences.
+      - generic [ref=e256]:
+        - generic [ref=e257]:
+          - generic [ref=e258]:
+            - img [ref=e259]
+            - paragraph [ref=e262]: 560+
+            - paragraph [ref=e263]: Villas Served
+          - generic [ref=e264]:
+            - img [ref=e265]
+            - paragraph [ref=e270]: 12,000+
+            - paragraph [ref=e271]: Happy Guests
+          - generic [ref=e272]:
+            - img [ref=e273]
+            - paragraph [ref=e275]: "4.9"
+            - paragraph [ref=e276]: Average Rating
+          - generic [ref=e277]:
+            - img [ref=e278]
+            - paragraph [ref=e281]: 8+
+            - paragraph [ref=e282]: Years in Bali
+        - button "Quick estimate Tap to get a fast starting price for dinner, catering, events or staffing before you open WhatsApp." [ref=e286] [cursor=pointer]:
+          - generic [ref=e287]:
+            - generic [ref=e288]:
+              - img [ref=e289]
+              - text: Quick estimate
+            - paragraph [ref=e291]: Tap to get a fast starting price for dinner, catering, events or staffing before you open WhatsApp.
+          - img [ref=e293]
+        - generic [ref=e296]:
+          - figure "Villa Award 2025 Best Choice — Private Dining" [ref=e297]:
+            - img "Villa Award 2025 — Best Choice for Private Dining" [ref=e298]
+            - generic [ref=e299]:
+              - paragraph [ref=e300]: Villa Award 2025
+              - paragraph [ref=e301]: Best Choice — Private Dining
+          - img "Awarded Best Partner 2026 — myCHEF Private Villa Dining"
+          - figure "Villa Award 2026 Best Choice — Private Dining" [ref=e302]:
+            - img "Villa Award 2026 — Best Choice for Private Dining" [ref=e303]
+            - generic [ref=e304]:
+              - paragraph [ref=e305]: Villa Award 2026
+              - paragraph [ref=e306]: Best Choice — Private Dining
+      - generic [ref=e308]:
+        - generic [ref=e309]:
+          - paragraph [ref=e310]: Testimonials
+          - heading "Guest moments worth repeating" [level=2] [ref=e311]
+          - paragraph [ref=e312]: Private dinners, wedding weekends and hosted events — the details guests remember most.
+        - generic [ref=e313]:
+          - article [ref=e314]:
+            - generic [ref=e315]:
+              - generic "5 star review" [ref=e316]:
+                - img [ref=e317]
+                - img [ref=e319]
+                - img [ref=e321]
+                - img [ref=e323]
+                - img [ref=e325]
+              - generic [ref=e327]: Private Dinner
+            - img [ref=e328]
+            - paragraph [ref=e331]: “We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the courses — pure magic.”
+            - generic [ref=e332]:
+              - generic [ref=e334]: J&
+              - generic [ref=e335]:
+                - paragraph [ref=e336]: James & Sarah
+                - paragraph [ref=e337]: Seminyak Villa
+              - generic [ref=e338]:
+                - img [ref=e339]
+                - text: March 2026
+          - article [ref=e341]:
+            - generic [ref=e342]:
+              - generic "5 star review" [ref=e343]:
+                - img [ref=e344]
+                - img [ref=e346]
+                - img [ref=e348]
+                - img [ref=e350]
+                - img [ref=e352]
+              - generic [ref=e354]: Anniversary Dinner
+            - img [ref=e355]
+            - paragraph [ref=e358]: “Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.”
+            - generic [ref=e359]:
+              - generic [ref=e361]: TH
+              - generic [ref=e362]:
+                - paragraph [ref=e363]: The Harrisons
+                - paragraph [ref=e364]: Ubud Estate
+              - generic [ref=e365]:
+                - img [ref=e366]
+                - text: February 2026
+          - article [ref=e368]:
+            - generic [ref=e369]:
+              - generic "5 star review" [ref=e370]:
+                - img [ref=e371]
+                - img [ref=e373]
+                - img [ref=e375]
+                - img [ref=e377]
+                - img [ref=e379]
+              - generic [ref=e381]: Wedding Dinner
+            - img [ref=e382]
+            - paragraph [ref=e385]: “Our wedding dinner for 40 guests. Every plate came out perfect. Every server knew our names. It felt like a five-star restaurant in our garden.”
+            - generic [ref=e386]:
+              - generic [ref=e388]: TG
+              - generic [ref=e389]:
+                - paragraph [ref=e390]: The Garcias
+                - paragraph [ref=e391]: Canggu Garden Villa
+              - generic [ref=e392]:
+                - img [ref=e393]
+                - text: January 2026
+      - generic [ref=e396]:
+        - generic [ref=e397]:
+          - paragraph [ref=e398]: Guest Words
+          - heading "25 Reviews. One Truth." [level=2] [ref=e399]
+          - paragraph [ref=e400]: Real guests. Real villas. Real experiences.
+        - generic [ref=e401]:
+          - generic [ref=e402]:
+            - generic [ref=e403]:
+              - img [ref=e404]
+              - img [ref=e406]
+              - img [ref=e408]
+              - img [ref=e410]
+              - img [ref=e412]
+            - paragraph [ref=e414]: "\"We expected good food. We got a memory we will talk about for the rest of our lives. The team in white, the village setting, the courses — pure magic.\""
+            - generic [ref=e415]:
+              - generic [ref=e416]:
+                - paragraph [ref=e417]: James & Sarah
+                - paragraph [ref=e418]: London
+              - generic [ref=e419]: Fine Dining
+          - generic [ref=e420]:
+            - generic [ref=e421]:
+              - img [ref=e422]
+              - img [ref=e424]
+              - img [ref=e426]
+              - img [ref=e428]
+              - img [ref=e430]
+            - paragraph [ref=e432]: "\"Our anniversary dinner under the stars in a Balinese village. It felt like we had stepped into another world. Every course was a revelation.\""
+            - generic [ref=e433]:
+              - generic [ref=e434]:
+                - paragraph [ref=e435]: The Harrisons
+                - paragraph [ref=e436]: Sydney
+              - generic [ref=e437]: Fine Dining
+          - generic [ref=e438]:
+            - generic [ref=e439]:
+              - img [ref=e440]
+              - img [ref=e442]
+              - img [ref=e444]
+              - img [ref=e446]
+              - img [ref=e448]
+            - paragraph [ref=e450]: "\"As Italians, we are picky about our food. The tagliatelle transported us back to Bologna. The wine pairing was impeccable.\""
+            - generic [ref=e451]:
+              - generic [ref=e452]:
+                - paragraph [ref=e453]: Marco & Elena
+                - paragraph [ref=e454]: Milan
+              - generic [ref=e455]: Fine Dining
+          - generic [ref=e456]:
+            - generic [ref=e457]:
+              - img [ref=e458]
+              - img [ref=e460]
+              - img [ref=e462]
+              - img [ref=e464]
+              - img [ref=e466]
+            - paragraph [ref=e468]: "\"We booked the Wagyu Experience for my father's 70th. He has eaten at three Michelin stars. He said this was better because it was ours.\""
+            - generic [ref=e469]:
+              - generic [ref=e470]:
+                - paragraph [ref=e471]: The Wilson Family
+                - paragraph [ref=e472]: Singapore
+              - generic [ref=e473]: Fine Dining
+          - generic [ref=e474]:
+            - generic [ref=e475]:
+              - img [ref=e476]
+              - img [ref=e478]
+              - img [ref=e480]
+              - img [ref=e482]
+              - img [ref=e484]
+            - paragraph [ref=e486]: "\"The Mediterranean Sea menu was light, sophisticated, and deeply flavourful. Every plate looked like art. Every bite tasted like summer in Sicily.\""
+            - generic [ref=e487]:
+              - generic [ref=e488]:
+                - paragraph [ref=e489]: Priya & Rahul
+                - paragraph [ref=e490]: Mumbai
+              - generic [ref=e491]: Fine Dining
+          - generic [ref=e492]:
+            - generic [ref=e493]:
+              - img [ref=e494]
+              - img [ref=e496]
+              - img [ref=e498]
+              - img [ref=e500]
+              - img [ref=e502]
+            - paragraph [ref=e504]: "\"The ribeye was the best piece of meat I have had in a decade. The fire, the technique, the timing — this team understands heat.\""
+            - generic [ref=e505]:
+              - generic [ref=e506]:
+                - paragraph [ref=e507]: David Chen
+                - paragraph [ref=e508]: Hong Kong
+              - generic [ref=e509]: Fine Dining
+          - generic [ref=e510]:
+            - generic [ref=e511]:
+              - img [ref=e512]
+              - img [ref=e514]
+              - img [ref=e516]
+              - img [ref=e518]
+              - img [ref=e520]
+            - paragraph [ref=e522]: "\"Seven breakfasts, five lunches, four dinners across ten days. Never the same dish twice. The kids asked if the chef could move in.\""
+            - generic [ref=e523]:
+              - generic [ref=e524]:
+                - paragraph [ref=e525]: The O'Briens
+                - paragraph [ref=e526]: Dublin
+              - generic [ref=e527]: Catering
+          - generic [ref=e528]:
+            - generic [ref=e529]:
+              - img [ref=e530]
+              - img [ref=e532]
+              - img [ref=e534]
+              - img [ref=e536]
+              - img [ref=e538]
+            - paragraph [ref=e540]: "\"We hired a villa chef for our honeymoon. Waking up to fresh croissants and Balinese coffee every morning — that is the definition of luxury.\""
+            - generic [ref=e541]:
+              - generic [ref=e542]:
+                - paragraph [ref=e543]: Lisa & Tom
+                - paragraph [ref=e544]: Amsterdam
+              - generic [ref=e545]: Catering
+          - generic [ref=e546]:
+            - generic [ref=e547]:
+              - img [ref=e548]
+              - img [ref=e550]
+              - img [ref=e552]
+              - img [ref=e554]
+              - img [ref=e556]
+            - paragraph [ref=e558]: "\"Our chef adjusted every meal for our children's tastes without making it feel like kids' food. The level of care was extraordinary.\""
+            - generic [ref=e559]:
+              - generic [ref=e560]:
+                - paragraph [ref=e561]: The Nakamura Family
+                - paragraph [ref=e562]: Tokyo
+              - generic [ref=e563]: Catering
+          - generic [ref=e564]:
+            - generic [ref=e565]:
+              - img [ref=e566]
+              - img [ref=e568]
+              - img [ref=e570]
+              - img [ref=e572]
+              - img [ref=e574]
+            - paragraph [ref=e576]: "\"Ten days in Ubud with a private chef. We never went to a restaurant. Why would we? The best food in Bali was in our villa.\""
+            - generic [ref=e577]:
+              - generic [ref=e578]:
+                - paragraph [ref=e579]: Sophie & Pierre
+                - paragraph [ref=e580]: Paris
+              - generic [ref=e581]: Catering
+          - generic [ref=e582]:
+            - generic [ref=e583]:
+              - img [ref=e584]
+              - img [ref=e586]
+              - img [ref=e588]
+              - img [ref=e590]
+              - img [ref=e592]
+            - paragraph [ref=e594]: "\"We have used private chefs in Tuscany, Provence, and the Hamptons. The myCHEF team in Bali was the most professional of all.\""
+            - generic [ref=e595]:
+              - generic [ref=e596]:
+                - paragraph [ref=e597]: The Johnsons
+                - paragraph [ref=e598]: New York
+              - generic [ref=e599]: Catering
+          - generic [ref=e600]:
+            - generic [ref=e601]:
+              - img [ref=e602]
+              - img [ref=e604]
+              - img [ref=e606]
+              - img [ref=e608]
+              - img [ref=e610]
+            - paragraph [ref=e612]: "\"As a vegetarian in Bali, I was worried. The chef created dishes I still dream about. Grilled tempeh with sambal mataku — unforgettable.\""
+            - generic [ref=e613]:
+              - generic [ref=e614]:
+                - paragraph [ref=e615]: Anna K.
+                - paragraph [ref=e616]: Berlin
+              - generic [ref=e617]: Catering
+          - generic [ref=e618]:
+            - generic [ref=e619]:
+              - img [ref=e620]
+              - img [ref=e622]
+              - img [ref=e624]
+              - img [ref=e626]
+              - img [ref=e628]
+            - paragraph [ref=e630]: "\"Our wedding dinner for 40 guests. Every plate came out perfect. Every server knew our names. It felt like a five-star restaurant in our garden.\""
+            - generic [ref=e631]:
+              - generic [ref=e632]:
+                - paragraph [ref=e633]: The Garcias
+                - paragraph [ref=e634]: Barcelona
+              - generic [ref=e635]: Events
+          - generic [ref=e636]:
+            - generic [ref=e637]:
+              - img [ref=e638]
+              - img [ref=e640]
+              - img [ref=e642]
+              - img [ref=e644]
+              - img [ref=e646]
+            - paragraph [ref=e648]: "\"We hosted a retreat for 25 executives. The myCHEF team handled everything — dietary restrictions, timing, presentation. Flawless.\""
+            - generic [ref=e649]:
+              - generic [ref=e650]:
+                - paragraph [ref=e651]: Rebecca & Sam
+                - paragraph [ref=e652]: Melbourne
+              - generic [ref=e653]: Events
+          - generic [ref=e654]:
+            - generic [ref=e655]:
+              - img [ref=e656]
+              - img [ref=e658]
+              - img [ref=e660]
+              - img [ref=e662]
+              - img [ref=e664]
+            - paragraph [ref=e666]: "\"My 50th birthday party. They turned our villa pool deck into a dining room that looked like something from a magazine. And the food matched.\""
+            - generic [ref=e667]:
+              - generic [ref=e668]:
+                - paragraph [ref=e669]: Michael R.
+                - paragraph [ref=e670]: Dubai
+              - generic [ref=e671]: Events
+          - generic [ref=e672]:
+            - generic [ref=e673]:
+              - img [ref=e674]
+              - img [ref=e676]
+              - img [ref=e678]
+              - img [ref=e680]
+              - img [ref=e682]
+            - paragraph [ref=e684]: "\"Corporate dinner for 30. The team arrived at 2 PM and worked silently until service. Not a single detail was missed.\""
+            - generic [ref=e685]:
+              - generic [ref=e686]:
+                - paragraph [ref=e687]: The Lims
+                - paragraph [ref=e688]: Kuala Lumpur
+              - generic [ref=e689]: Events
+          - generic [ref=e690]:
+            - generic [ref=e691]:
+              - img [ref=e692]
+              - img [ref=e694]
+              - img [ref=e696]
+              - img [ref=e698]
+              - img [ref=e700]
+            - paragraph [ref=e702]: "\"We wanted something intimate for our engagement. They created a candlelit dinner for twelve that felt like a scene from a film.\""
+            - generic [ref=e703]:
+              - generic [ref=e704]:
+                - paragraph [ref=e705]: Clara & Felix
+                - paragraph [ref=e706]: Zurich
+              - generic [ref=e707]: Events
+          - generic [ref=e708]:
+            - generic [ref=e709]:
+              - img [ref=e710]
+              - img [ref=e712]
+              - img [ref=e714]
+              - img [ref=e716]
+              - img [ref=e718]
+            - paragraph [ref=e720]: "\"Our daughter's graduation dinner. The dessert table alone — those pastries are worth the flight to Bali.\""
+            - generic [ref=e721]:
+              - generic [ref=e722]:
+                - paragraph [ref=e723]: The Patels
+                - paragraph [ref=e724]: Mumbai
+              - generic [ref=e725]: Events
+          - generic [ref=e726]:
+            - generic [ref=e727]:
+              - img [ref=e728]
+              - img [ref=e730]
+              - img [ref=e732]
+              - img [ref=e734]
+              - img [ref=e736]
+            - paragraph [ref=e738]: "\"We have done tasting menus in Napa, Paris, and Tokyo. The Wagyu Experience at our villa rivalled all of them. The team is world-class.\""
+            - generic [ref=e739]:
+              - generic [ref=e740]:
+                - paragraph [ref=e741]: Richard & Amanda
+                - paragraph [ref=e742]: San Francisco
+              - generic [ref=e743]: Fine Dining
+          - generic [ref=e744]:
+            - generic [ref=e745]:
+              - img [ref=e746]
+              - img [ref=e748]
+              - img [ref=e750]
+              - img [ref=e752]
+              - img [ref=e754]
+            - paragraph [ref=e756]: "\"Two weeks in Canggu with daily chef service. The grocery receipts were transparent, the food was exceptional, and the kitchen was cleaner when they left than when they arrived.\""
+            - generic [ref=e757]:
+              - generic [ref=e758]:
+                - paragraph [ref=e759]: The Müllers
+                - paragraph [ref=e760]: Munich
+              - generic [ref=e761]: Catering
+          - generic [ref=e762]:
+            - generic [ref=e763]:
+              - img [ref=e764]
+              - img [ref=e766]
+              - img [ref=e768]
+              - img [ref=e770]
+              - img [ref=e772]
+            - paragraph [ref=e774]: "\"The sommelier paired a Sicilian white with the lobster tagliatelle that made me cry. Not exaggerating. It was that good.\""
+            - generic [ref=e775]:
+              - generic [ref=e776]:
+                - paragraph [ref=e777]: Jessica & Ben
+                - paragraph [ref=e778]: Toronto
+              - generic [ref=e779]: Fine Dining
+          - generic [ref=e780]:
+            - generic [ref=e781]:
+              - img [ref=e782]
+              - img [ref=e784]
+              - img [ref=e786]
+              - img [ref=e788]
+              - img [ref=e790]
+            - paragraph [ref=e792]: "\"100 guests for our company anniversary. They served a seven-course plated dinner with military precision. Every guest commented on the food.\""
+            - generic [ref=e793]:
+              - generic [ref=e794]:
+                - paragraph [ref=e795]: The Kwons
+                - paragraph [ref=e796]: Seoul
+              - generic [ref=e797]: Events
+          - generic [ref=e798]:
+            - generic [ref=e799]:
+              - img [ref=e800]
+              - img [ref=e802]
+              - img [ref=e804]
+              - img [ref=e806]
+              - img [ref=e808]
+            - paragraph [ref=e810]: "\"Fresh juice every morning, poolside lunches, candlelit dinners. We felt like we were living in a luxury resort — except it was our villa.\""
+            - generic [ref=e811]:
+              - generic [ref=e812]:
+                - paragraph [ref=e813]: Olivia & Marcus
+                - paragraph [ref=e814]: Stockholm
+              - generic [ref=e815]: Catering
+          - generic [ref=e816]:
+            - generic [ref=e817]:
+              - img [ref=e818]
+              - img [ref=e820]
+              - img [ref=e822]
+              - img [ref=e824]
+              - img [ref=e826]
+            - paragraph [ref=e828]: "\"We asked for a surprise menu. What arrived was a journey through Adriano's career — Modena, Tokyo, Bali. Each course told a story.\""
+            - generic [ref=e829]:
+              - generic [ref=e830]:
+                - paragraph [ref=e831]: The Fosters
+                - paragraph [ref=e832]: Chicago
+              - generic [ref=e833]: Fine Dining
+          - generic [ref=e834]:
+            - generic [ref=e835]:
+              - img [ref=e836]
+              - img [ref=e838]
+              - img [ref=e840]
+              - img [ref=e842]
+              - img [ref=e844]
+            - paragraph [ref=e846]: "\"Traditional Japanese wedding ceremony followed by a Western-style reception. The team respected every ritual while delivering world-class cuisine.\""
+            - generic [ref=e847]:
+              - generic [ref=e848]:
+                - paragraph [ref=e849]: Yuki & Kenji
+                - paragraph [ref=e850]: Osaka
+              - generic [ref=e851]: Events
+        - link "Read All Reviews" [ref=e853]:
+          - /url: /reviews
+          - text: Read All Reviews
+          - img [ref=e854]
+      - generic [ref=e857]:
+        - generic [ref=e858]:
+          - paragraph [ref=e859]: Where We Serve
+          - heading "Private Chef Across Bali" [level=2] [ref=e860]
+          - paragraph [ref=e861]: From Seminyak's beachfront villas to Ubud's jungle retreats — we know every kitchen, every market, every road.
+        - generic [ref=e862]:
+          - link "Private chef in Seminyak, Bali Seminyak Private Chef" [ref=e863]:
+            - /url: /seminyak
+            - img "Private chef in Seminyak, Bali" [ref=e864]
+            - generic [ref=e867]:
+              - paragraph [ref=e868]: Seminyak
+              - paragraph [ref=e869]: Private Chef
+          - link "Private chef in Canggu, Bali Canggu Private Chef" [ref=e870]:
+            - /url: /canggu
+            - img "Private chef in Canggu, Bali" [ref=e871]
+            - generic [ref=e874]:
+              - paragraph [ref=e875]: Canggu
+              - paragraph [ref=e876]: Private Chef
+          - link "Private chef in Ubud, Bali Ubud Private Chef" [ref=e877]:
+            - /url: /ubud
+            - img "Private chef in Ubud, Bali" [ref=e878]
+            - generic [ref=e881]:
+              - paragraph [ref=e882]: Ubud
+              - paragraph [ref=e883]: Private Chef
+          - link "Private chef in Uluwatu, Bali Uluwatu Private Chef" [ref=e884]:
+            - /url: /uluwatu
+            - img "Private chef in Uluwatu, Bali" [ref=e885]
+            - generic [ref=e888]:
+              - paragraph [ref=e889]: Uluwatu
+              - paragraph [ref=e890]: Private Chef
+          - link "Private chef in Sanur, Bali Sanur Private Chef" [ref=e891]:
+            - /url: /sanur
+            - img "Private chef in Sanur, Bali" [ref=e892]
+            - generic [ref=e895]:
+              - paragraph [ref=e896]: Sanur
+              - paragraph [ref=e897]: Private Chef
+          - link "Private chef in Nusa Dua, Bali Nusa Dua Private Chef" [ref=e898]:
+            - /url: /nusa-dua
+            - img "Private chef in Nusa Dua, Bali" [ref=e899]
+            - generic [ref=e902]:
+              - paragraph [ref=e903]: Nusa Dua
+              - paragraph [ref=e904]: Private Chef
+          - link "Private chef in Jimbaran, Bali Jimbaran Private Chef" [ref=e905]:
+            - /url: /jimbaran
+            - img "Private chef in Jimbaran, Bali" [ref=e906]
+            - generic [ref=e909]:
+              - paragraph [ref=e910]: Jimbaran
+              - paragraph [ref=e911]: Private Chef
+          - link "Private chef in Berawa, Bali Berawa Private Chef" [ref=e912]:
+            - /url: /berawa
+            - img "Private chef in Berawa, Bali" [ref=e913]
+            - generic [ref=e916]:
+              - paragraph [ref=e917]: Berawa
+              - paragraph [ref=e918]: Private Chef
+          - link "Private chef in Pererenan, Bali Pererenan Private Chef" [ref=e919]:
+            - /url: /pererenan
+            - img "Private chef in Pererenan, Bali" [ref=e920]
+            - generic [ref=e923]:
+              - paragraph [ref=e924]: Pererenan
+              - paragraph [ref=e925]: Private Chef
+          - link "Private chef in Bukit, Bali Bukit Private Chef" [ref=e926]:
+            - /url: /bukit
+            - img "Private chef in Bukit, Bali" [ref=e927]
+            - generic [ref=e930]:
+              - paragraph [ref=e931]: Bukit
+              - paragraph [ref=e932]: Private Chef
+        - link "View All Locations" [ref=e934]:
+          - /url: /locations
+          - text: View All Locations
+          - img [ref=e935]
+      - generic [ref=e939]:
+        - generic [ref=e940]:
+          - paragraph [ref=e941]: Partnerships
+          - heading "For Villa & Airbnb Owners" [level=2] [ref=e942]
+          - paragraph [ref=e944]: Elevate your guests' experience by partnering with myCHEF. We currently work with 560+ luxury villas across Bali. Whatever your guests need, we lift everything we touch with excellence.
+          - generic [ref=e945]:
+            - generic [ref=e946]:
+              - img [ref=e947]
+              - generic [ref=e949]:
+                - paragraph [ref=e950]: Premium Guest Service
+                - paragraph [ref=e951]: Offer exclusive dining without any effort on your part.
+            - generic [ref=e952]:
+              - img [ref=e953]
+              - generic [ref=e955]:
+                - paragraph [ref=e956]: Easy Partnership
+                - paragraph [ref=e957]: Simple setup with ongoing support for you and your guests.
+            - generic [ref=e958]:
+              - img [ref=e959]
+              - generic [ref=e961]:
+                - paragraph [ref=e962]: Higher Ratings
+                - paragraph [ref=e963]: Villas that offer private chef services see higher guest satisfaction and repeat bookings.
+          - link "Partner With myCHEF" [ref=e964]:
+            - /url: /partners
+            - text: Partner With myCHEF
+            - img [ref=e965]
+        - img "Luxury villa partnership" [ref=e968]
+      - generic [ref=e970]:
+        - generic [ref=e971]:
+          - paragraph [ref=e972]: Questions
+          - heading "Frequently Asked" [level=2] [ref=e973]
+          - paragraph [ref=e974]: Still unsure? Message us on WhatsApp — we respond within the hour.
+        - generic [ref=e975]:
+          - generic [ref=e976]:
+            - button "How far in advance should I book?" [expanded] [ref=e977] [cursor=pointer]:
+              - generic [ref=e978]: How far in advance should I book?
+              - img [ref=e979]
+            - region "How far in advance should I book?" [ref=e981]:
+              - paragraph [ref=e982]: For fine dining, 7+ days is ideal. For villa chefs, 3+ days. For events, 4+ weeks. But message us anyway — we accommodate last-minute requests whenever possible.
+          - generic [ref=e983]:
+            - button "Do you serve all areas of Bali?" [expanded] [ref=e984] [cursor=pointer]:
+              - generic [ref=e985]: Do you serve all areas of Bali?
+              - img [ref=e986]
+            - region "Do you serve all areas of Bali?" [ref=e988]:
+              - paragraph [ref=e989]: Yes. Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, and everywhere in between. We have chefs based across the island.
+          - generic [ref=e990]:
+            - button "What about dietary restrictions?" [expanded] [ref=e991] [cursor=pointer]:
+              - generic [ref=e992]: What about dietary restrictions?
+              - img [ref=e993]
+            - region "What about dietary restrictions?" [ref=e995]:
+              - paragraph [ref=e996]: Every menu is tailored. Gluten-free, vegan, halal, nut allergies, pregnancy-friendly — just tell us. We have done it all.
+          - generic [ref=e997]:
+            - button "Are groceries included in the price?" [expanded] [ref=e998] [cursor=pointer]:
+              - generic [ref=e999]: Are groceries included in the price?
+              - img [ref=e1000]
+            - region "Are groceries included in the price?" [ref=e1002]:
+              - paragraph [ref=e1003]: For fine dining and events, ingredients are included. For villa chef catering, groceries are billed at cost with no markup — you see every receipt.
+          - generic [ref=e1004]:
+            - button "How many staff will come to my villa?" [ref=e1005] [cursor=pointer]:
+              - generic [ref=e1006]: How many staff will come to my villa?
+              - img [ref=e1007]
+            - region "How many staff will come to my villa?":
+              - paragraph [ref=e1009]: "Fine dining: 6–10 staff (chef, sous chef, servers, sommelier). Villa chef: 1–2 chefs. Events: depends on scale, quoted in your proposal."
+          - generic [ref=e1010]:
+            - button "What is the cancellation policy?" [ref=e1011] [cursor=pointer]:
+              - generic [ref=e1012]: What is the cancellation policy?
+              - img [ref=e1013]
+            - region "What is the cancellation policy?":
+              - paragraph [ref=e1015]: Full refund 14+ days before. 50% refund 7–13 days before. No refund less than 7 days. See our full cancellation policy for details.
+          - generic [ref=e1016]:
+            - button "How does payment work?" [ref=e1017] [cursor=pointer]:
+              - generic [ref=e1018]: How does payment work?
+              - img [ref=e1019]
+            - region "How does payment work?":
+              - paragraph [ref=e1021]: A 25% deposit confirms your booking and locks your chef. The remaining 75% is paid when the chef arrives at your villa, before service begins.
+        - link "Ask on WhatsApp" [ref=e1023]:
+          - /url: https://wa.me/6282237565997
+          - img [ref=e1024]
+          - text: Ask on WhatsApp
+      - generic [ref=e1027]:
+        - generic [ref=e1028]:
+          - generic [ref=e1029]:
+            - paragraph [ref=e1030]: Journal
+            - heading "Explore Our Journal" [level=2] [ref=e1031]
+            - paragraph [ref=e1032]: Planning a villa dinner, wedding weekend, or Bali breakfast setup? Browse our latest guides for practical hosting tips.
+          - link "Visit the Journal" [ref=e1033]:
+            - /url: /journal
+            - text: Visit the Journal
+            - img [ref=e1034]
+        - generic [ref=e1036]:
+          - link "How to Host a Villa Dinner Party in Bali (Complete Guide)" [ref=e1037]:
+            - /url: /journal/bali-villa-dinner-party-guide
+          - 'link "Bali Wedding Catering Cost: What to Budget in 2025" [ref=e1038]':
+            - /url: /journal/wedding-catering-bali-cost
+          - 'link "The Bali Floating Breakfast: History, Recipes & How to Order One" [ref=e1039]':
+            - /url: /journal/floating-breakfast-bali
+      - generic [ref=e1040]:
+        - img "Bali landscape" [ref=e1042]
+        - generic [ref=e1044]:
+          - paragraph [ref=e1045]: Ready When You Are
+          - heading "Your Villa. Our Kitchen. One Message Away." [level=2] [ref=e1046]:
+            - text: Your Villa. Our Kitchen.
+            - text: One Message Away.
+          - paragraph [ref=e1047]: Most inquiries are answered within the hour. No deposit required to start planning.
+          - generic [ref=e1048]:
+            - link "Get My Free Quote" [ref=e1049]:
+              - /url: https://wa.me/6282237565997
+              - img [ref=e1050]
+              - text: Get My Free Quote
+              - generic [ref=e1052]: →
+            - link "View All Contact Options" [ref=e1053]:
+              - /url: /contact
+  - generic [ref=e1054]: ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · 5-star rated
+  - contentinfo [ref=e1055]:
+    - generic [ref=e1056]:
+      - generic [ref=e1057]:
+        - generic [ref=e1058]:
+          - heading "myCHEF" [level=3] [ref=e1059]
+          - paragraph [ref=e1060]: Private chef, villa catering, and full-service events across Bali. Same-day WhatsApp confirmation.
+        - generic [ref=e1061]:
+          - link "+62 822-3756-5997" [ref=e1062]:
+            - /url: https://wa.me/6282237565997?text=Hi%20myCHEF
+            - img [ref=e1063]
+            - text: +62 822-3756-5997
+          - link "indonesia@mychef.id" [ref=e1065]:
+            - /url: mailto:indonesia@mychef.id
+      - generic [ref=e1066]:
+        - generic [ref=e1067]:
+          - heading "Fine Dining" [level=4] [ref=e1068]
+          - list [ref=e1069]:
+            - listitem [ref=e1070]:
+              - link "Overview" [ref=e1071]:
+                - /url: /fine-dining
+            - listitem [ref=e1072]:
+              - link "Private Chef in Bali" [ref=e1073]:
+                - /url: /fine-dining/private-chef-bali
+            - listitem [ref=e1074]:
+              - link "Tasting Menu" [ref=e1075]:
+                - /url: /fine-dining/tasting-menu
+            - listitem [ref=e1076]:
+              - link "Romantic Dinner" [ref=e1077]:
+                - /url: /fine-dining/romantic-dinner
+            - listitem [ref=e1078]:
+              - link "Chef’s Table" [ref=e1079]:
+                - /url: /fine-dining/chefs-table
+            - listitem [ref=e1080]:
+              - link "Our Menus" [ref=e1081]:
+                - /url: /fine-dining/menus
+            - listitem [ref=e1082]:
+              - link "Our Chefs" [ref=e1083]:
+                - /url: /fine-dining/our-chefs
+        - generic [ref=e1084]:
+          - heading "Catering" [level=4] [ref=e1085]
+          - list [ref=e1086]:
+            - listitem [ref=e1087]:
+              - link "Overview" [ref=e1088]:
+                - /url: /catering
+            - listitem [ref=e1089]:
+              - link "BBQ Catering" [ref=e1090]:
+                - /url: /catering/bbq-catering
+            - listitem [ref=e1091]:
+              - link "Buffet Catering" [ref=e1092]:
+                - /url: /catering/buffet
+            - listitem [ref=e1093]:
+              - link "Plated Set Menu" [ref=e1094]:
+                - /url: /catering/plated-catering
+            - listitem [ref=e1095]:
+              - link "Drop-Off Catering" [ref=e1096]:
+                - /url: /catering/drop-off-catering
+            - listitem [ref=e1097]:
+              - link "Babi Guling" [ref=e1098]:
+                - /url: /catering/babi-guling
+            - listitem [ref=e1099]:
+              - link "Grazing Tables" [ref=e1100]:
+                - /url: /catering/grazing-tables
+            - listitem [ref=e1101]:
+              - link "Floating Breakfast" [ref=e1102]:
+                - /url: /catering/floating-breakfast
+            - listitem [ref=e1103]:
+              - link "Corporate Catering" [ref=e1104]:
+                - /url: /catering/corporate-catering
+            - listitem [ref=e1105]:
+              - link "Retreat Catering" [ref=e1106]:
+                - /url: /catering/retreat-catering
+        - generic [ref=e1107]:
+          - heading "Events" [level=4] [ref=e1108]
+          - list [ref=e1109]:
+            - listitem [ref=e1110]:
+              - link "Overview" [ref=e1111]:
+                - /url: /events
+            - listitem [ref=e1112]:
+              - link "Weddings" [ref=e1113]:
+                - /url: /events/weddings
+            - listitem [ref=e1114]:
+              - link "Birthdays" [ref=e1115]:
+                - /url: /events/birthdays
+            - listitem [ref=e1116]:
+              - link "Anniversaries" [ref=e1117]:
+                - /url: /events/anniversaries
+            - listitem [ref=e1118]:
+              - link "Corporate Events" [ref=e1119]:
+                - /url: /events/corporate-events
+            - listitem [ref=e1120]:
+              - link "Retreats" [ref=e1121]:
+                - /url: /events/retreats
+            - listitem [ref=e1122]:
+              - link "Villa Parties" [ref=e1123]:
+                - /url: /events/villa-parties
+            - listitem [ref=e1124]:
+              - link "Baby Showers" [ref=e1125]:
+                - /url: /events/baby-showers
+        - generic [ref=e1126]:
+          - heading "In-Villa Service" [level=4] [ref=e1127]
+          - list [ref=e1128]:
+            - listitem [ref=e1129]:
+              - link "Overview" [ref=e1130]:
+                - /url: /in-villa-service
+            - listitem [ref=e1131]:
+              - link "Waiters" [ref=e1132]:
+                - /url: /in-villa-service/waiters
+            - listitem [ref=e1133]:
+              - link "Butlers" [ref=e1134]:
+                - /url: /in-villa-service/butlers
+            - listitem [ref=e1135]:
+              - link "Bartenders" [ref=e1136]:
+                - /url: /in-villa-service/bartenders
+            - listitem [ref=e1137]:
+              - link "Mixology" [ref=e1138]:
+                - /url: /in-villa-service/mixology
+            - listitem [ref=e1139]:
+              - link "Sommelier" [ref=e1140]:
+                - /url: /in-villa-service/sommelier
+            - listitem [ref=e1141]:
+              - link "Host & Hostess" [ref=e1142]:
+                - /url: /in-villa-service/host-hostess
+        - generic [ref=e1143]:
+          - heading "Staffing" [level=4] [ref=e1144]
+          - list [ref=e1145]:
+            - listitem [ref=e1146]:
+              - link "Overview" [ref=e1147]:
+                - /url: /staffing
+            - listitem [ref=e1148]:
+              - link "Private Chef Placement" [ref=e1149]:
+                - /url: /staffing/private-chef-placement
+            - listitem [ref=e1150]:
+              - link "Live-In Chef" [ref=e1151]:
+                - /url: /staffing/live-in-chef
+            - listitem [ref=e1152]:
+              - link "Villa Staff" [ref=e1153]:
+                - /url: /staffing/villa-staff
+            - listitem [ref=e1154]:
+              - link "Household Staff" [ref=e1155]:
+                - /url: /staffing/household-staff
+            - listitem [ref=e1156]:
+              - link "For Villa Managers" [ref=e1157]:
+                - /url: /staffing/for-villa-managers
+            - listitem [ref=e1158]:
+              - link "For Hotels & Restaurants" [ref=e1159]:
+                - /url: /staffing/for-hotels-restaurants
+        - generic [ref=e1160]:
+          - heading "Locations" [level=4] [ref=e1161]
+          - list [ref=e1162]:
+            - listitem [ref=e1163]:
+              - link "All Locations" [ref=e1164]:
+                - /url: /locations
+            - listitem [ref=e1165]:
+              - link "Seminyak" [ref=e1166]:
+                - /url: /locations/seminyak
+            - listitem [ref=e1167]:
+              - link "Canggu" [ref=e1168]:
+                - /url: /locations/canggu
+            - listitem [ref=e1169]:
+              - link "Uluwatu" [ref=e1170]:
+                - /url: /locations/uluwatu
+            - listitem [ref=e1171]:
+              - link "Ubud" [ref=e1172]:
+                - /url: /locations/ubud
+            - listitem [ref=e1173]:
+              - link "Nusa Dua" [ref=e1174]:
+                - /url: /locations/nusa-dua
+            - listitem [ref=e1175]:
+              - link "Jimbaran" [ref=e1176]:
+                - /url: /locations/jimbaran
+            - listitem [ref=e1177]:
+              - link "Sanur" [ref=e1178]:
+                - /url: /locations/sanur
+            - listitem [ref=e1179]:
+              - link "Berawa" [ref=e1180]:
+                - /url: /locations/berawa
+            - listitem [ref=e1181]:
+              - link "Pererenan" [ref=e1182]:
+                - /url: /locations/pererenan
+            - listitem [ref=e1183]:
+              - link "Bukit Peninsula" [ref=e1184]:
+                - /url: /locations/bukit
+      - generic [ref=e1185]:
+        - link "Catering" [ref=e1186]:
+          - /url: /catering
+        - link "Locations" [ref=e1187]:
+          - /url: /locations
+        - link "About" [ref=e1188]:
+          - /url: /about
+        - link "Contact" [ref=e1189]:
+          - /url: /contact
+        - link "Services" [ref=e1190]:
+          - /url: /services
+        - link "Pricing" [ref=e1191]:
+          - /url: /pricing
+        - link "Price Calculator" [ref=e1192]:
+          - /url: /calculator
+        - link "FAQ" [ref=e1193]:
+          - /url: /faq
+        - link "Reviews" [ref=e1194]:
+          - /url: /reviews
+        - link "Why myCHEF" [ref=e1195]:
+          - /url: /why-mychef
+        - link "Press" [ref=e1196]:
+          - /url: /press
+        - link "Join the Team" [ref=e1197]:
+          - /url: /join-our-team
+        - link "Partner Platform" [ref=e1198]:
+          - /url: /partner-platform
+        - link "Journal" [ref=e1199]:
+          - /url: /journal
+        - link "Blog & Guides" [ref=e1200]:
+          - /url: /blog
+        - link "Book" [ref=e1201]:
+          - /url: /book
+      - generic [ref=e1202]:
+        - link "+62 822-3756-5997" [ref=e1203]:
+          - /url: tel:+6282237565997
+          - img [ref=e1204]
+          - text: +62 822-3756-5997
+        - link "indonesia@mychef.id" [ref=e1206]:
+          - /url: mailto:indonesia@mychef.id
+          - img [ref=e1207]
+          - text: indonesia@mychef.id
+        - generic [ref=e1210]:
+          - img [ref=e1211]
+          - text: Bali, Indonesia
+        - link "Instagram" [ref=e1214]:
+          - /url: https://instagram.com/mychef.id
+          - img [ref=e1215]
+          - text: Instagram
+        - link "WhatsApp" [ref=e1218]:
+          - /url: https://wa.me/6282237565997
+          - img [ref=e1219]
+          - text: WhatsApp
+      - generic [ref=e1221]:
+        - link "Staff Login" [ref=e1222]:
+          - /url: /partner-platform
+          - img [ref=e1223]
+          - text: Staff Login
+        - generic [ref=e1226]:
+          - link "Terms" [ref=e1227]:
+            - /url: /terms
+          - link "Privacy" [ref=e1228]:
+            - /url: /privacy
+          - link "Cancellation" [ref=e1229]:
+            - /url: /cancellation
+      - paragraph [ref=e1230]: © 2026 myCHEF.id. All rights reserved.
+  - generic [ref=e1232]:
+    - generic: Chat with us on WhatsApp
+    - link "Chat with us on WhatsApp" [ref=e1233]:
+      - /url: https://wa.me/6282237565997?text=Hi%20myCHEF!%20I'd%20like%20to%20enquire%20about%20your%20services.
+      - img [ref=e1234]
+```
+
+# Test source
+
+```ts
+  1   | import { test, expect } from '@playwright/test';
+  2   | import { injectAxe, checkA11y } from 'axe-playwright';
+  3   | 
+  4   | test.describe('Accessibility & Visual Audit', () => {
+  5   |   test('homepage has no accessibility violations', async ({ page }) => {
+  6   |     await page.goto('/');
+  7   |     await injectAxe(page);
+  8   |     await checkA11y(page, null, {
+  9   |       detailedReport: true,
+  10  |       detailedReportOptions: {
+  11  |         html: true
+  12  |       }
+  13  |     });
+  14  |   });
+  15  | 
+  16  |   test('check for black text on black backgrounds on homepage', async ({ page }) => {
+  17  |     await page.goto('/');
+  18  | 
+  19  |     const textElements = await page.locator('*').all();
+  20  |     const issues: { element: string; bg: string; color: string; content: string }[] = [];
+  21  | 
+  22  |     for (const element of textElements) {
+  23  |       const isVisible = await element.isVisible();
+  24  |       if (!isVisible) continue;
+  25  | 
+  26  |       const style = await element.evaluate(el => {
+  27  |         const computed = window.getComputedStyle(el);
+  28  |         return {
+  29  |           color: computed.color,
+  30  |           backgroundColor: computed.backgroundColor,
+  31  |           tagName: el.tagName,
+  32  |           textContent: el.textContent?.substring(0, 50) || ''
+  33  |         };
+  34  |       });
+  35  | 
+  36  |       // Check for black/very dark text on black/very dark backgrounds
+  37  |       const isBlackOrDarkText = isColorDark(style.color);
+  38  |       const isBlackOrDarkBg = isColorDark(style.backgroundColor);
+  39  | 
+  40  |       if (isBlackOrDarkText && isBlackOrDarkBg && style.textContent.trim().length > 0) {
+  41  |         issues.push({
+  42  |           element: style.tagName,
+  43  |           bg: style.backgroundColor,
+  44  |           color: style.color,
+  45  |           content: style.textContent
+  46  |         });
+  47  |       }
+  48  |     }
+  49  | 
+  50  |     if (issues.length > 0) {
+  51  |       console.log('Found potential contrast issues:');
+  52  |       issues.forEach(issue => {
+  53  |         console.log(`  Element: ${issue.element}, Text: "${issue.content}", BG: ${issue.bg}, Color: ${issue.color}`);
+  54  |       });
+  55  |     }
+  56  | 
+> 57  |     expect(issues.length).toBe(0);
+      |                           ^ Error: expect(received).toBe(expected) // Object.is equality
+  58  |   });
+  59  | 
+  60  |   test('fine-dining page has no accessibility violations', async ({ page }) => {
+  61  |     await page.goto('/fine-dining');
+  62  |     await injectAxe(page);
+  63  |     await checkA11y(page, null, {
+  64  |       detailedReport: true
+  65  |     });
+  66  |   });
+  67  | 
+  68  |   test('fine-dining/our-chefs page loads correctly', async ({ page }) => {
+  69  |     await page.goto('/fine-dining/our-chefs');
+  70  | 
+  71  |     // Check page title and heading
+  72  |     const heading = page.locator('h1, h2').first();
+  73  |     await expect(heading).toBeVisible();
+  74  | 
+  75  |     // Check for content
+  76  |     const content = page.locator('body');
+  77  |     const text = await content.textContent();
+  78  |     expect(text).toBeTruthy();
+  79  |     expect(text?.length).toBeGreaterThan(0);
+  80  |   });
+  81  | 
+  82  |   test('check all major pages for contrast issues', async ({ page }) => {
+  83  |     const pages = ['/', '/fine-dining', '/catering', '/events', '/in-villa-service', '/staffing', '/locations'];
+  84  | 
+  85  |     for (const pagePath of pages) {
+  86  |       await page.goto(pagePath);
+  87  | 
+  88  |       // Simple contrast check
+  89  |       const lowContrastElements: string[] = [];
+  90  | 
+  91  |       const elements = await page.locator('[style*="color"]').all();
+  92  |       for (const element of elements.slice(0, 20)) { // Check first 20 for performance
+  93  |         const isVisible = await element.isVisible().catch(() => false);
+  94  |         if (!isVisible) continue;
+  95  | 
+  96  |         const hasLowContrast = await element.evaluate(el => {
+  97  |           const style = window.getComputedStyle(el);
+  98  |           const color = style.color;
+  99  |           const bgColor = style.backgroundColor;
+  100 | 
+  101 |           return isColorDark(color) && isColorDark(bgColor);
+  102 |         }).catch(() => false);
+  103 | 
+  104 |         if (hasLowContrast) {
+  105 |           const text = await element.textContent();
+  106 |           lowContrastElements.push(`${pagePath}: "${text?.substring(0, 30)}"`);
+  107 |         }
+  108 |       }
+  109 | 
+  110 |       if (lowContrastElements.length > 0) {
+  111 |         console.warn(`Page ${pagePath} has potential contrast issues:`, lowContrastElements);
+  112 |       }
+  113 |     }
+  114 |   });
+  115 | 
+  116 |   test('verify headings hierarchy', async ({ page }) => {
+  117 |     await page.goto('/');
+  118 | 
+  119 |     const h1Count = await page.locator('h1').count();
+  120 |     const h2Count = await page.locator('h2').count();
+  121 | 
+  122 |     // Should have proper heading hierarchy
+  123 |     expect(h1Count).toBeGreaterThan(0);
+  124 |     expect(h2Count).toBeGreaterThan(0);
+  125 |   });
+  126 | 
+  127 |   test('check image alt text', async ({ page }) => {
+  128 |     await page.goto('/');
+  129 | 
+  130 |     const images = await page.locator('img').all();
+  131 |     const missingAltText: string[] = [];
+  132 | 
+  133 |     for (const image of images) {
+  134 |       const alt = await image.getAttribute('alt');
+  135 |       const src = await image.getAttribute('src');
+  136 | 
+  137 |       if (!alt || alt.trim() === '') {
+  138 |         missingAltText.push(src || 'unknown');
+  139 |       }
+  140 |     }
+  141 | 
+  142 |     console.log(`Total images: ${images.length}, Missing alt text: ${missingAltText.length}`);
+  143 |     if (missingAltText.length > 0) {
+  144 |       console.warn('Images missing alt text:', missingAltText.slice(0, 5));
+  145 |     }
+  146 |   });
+  147 | 
+  148 |   test('verify links are keyboard accessible', async ({ page }) => {
+  149 |     await page.goto('/');
+  150 | 
+  151 |     // Tab through links
+  152 |     const links = await page.locator('a').all();
+  153 |     expect(links.length).toBeGreaterThan(0);
+  154 | 
+  155 |     // First link should be focusable
+  156 |     const firstLink = page.locator('a').first();
+  157 |     await firstLink.focus();
+```

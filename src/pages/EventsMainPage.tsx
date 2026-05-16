@@ -366,11 +366,11 @@ export default function EventsMainPage() {
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Events in Bali, run by one team.<br />
-            <span className="italic text-white/85" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <span className="italic text-white/[85%]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               You just host.
             </span>
           </h1>
-          <p className="hero-fade text-base md:text-xl max-w-2xl leading-relaxed text-white/80 mb-8">
+          <p className="hero-fade text-base md:text-xl max-w-2xl leading-relaxed text-white/[80%] mb-8">
             Villa weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties.
             Food, drinks, staff, styling, and coordination — handled by one team, in your villa, anywhere in Bali.
           </p>
@@ -391,7 +391,7 @@ export default function EventsMainPage() {
               View Event Types <ChevronRight className="w-4 h-4" />
             </a>
           </div>
-          <p className="hero-fade mt-4 text-sm text-white/60">
+          <p className="hero-fade mt-4 text-sm text-white/[60%]">
             From IDR 600K++/guest · Free consultation · Same-day WhatsApp reply · Transparent proposal before deposit
           </p>
         </div>
@@ -415,7 +415,7 @@ export default function EventsMainPage() {
           <h2 className="text-3xl md:text-5xl leading-[1.1] mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
             We approach events the way a fine-dining kitchen approaches service.
           </h2>
-          <p className="text-lg leading-relaxed text-white/75">
+          <p className="text-lg leading-relaxed text-white/[75%]">
             One brigade owns the night — chefs in the kitchen, waiters on the floor, bartenders on the bar, a coordinator
             on the timeline. Whether it is a six-person anniversary or a hundred-and-fifty-guest wedding, the standard
             is the same: hot food on time, full glasses, clean plates, and a host who never had to look at a watch.
@@ -483,7 +483,7 @@ export default function EventsMainPage() {
                   <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-sm">
                     <e.icon className="w-3.5 h-3.5 text-[#C5A028]" />
                     <span
-                      className="text-[10px] tracking-[0.3em] uppercase text-white/90"
+                      className="text-[10px] tracking-[0.3em] uppercase text-white/[90%]"
                       style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
                     >
                       {e.eyebrow}
@@ -544,7 +544,7 @@ export default function EventsMainPage() {
                 <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {s.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-white/70">{s.body}</p>
+                <p className="text-sm leading-relaxed text-white/[70%]">{s.body}</p>
               </div>
             ))}
           </div>
@@ -668,7 +668,7 @@ export default function EventsMainPage() {
           <h2 className="text-3xl md:text-5xl leading-[1.1] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             Sofia
           </h2>
-          <p className="text-lg text-white/70 mb-6 max-w-2xl mx-auto">
+          <p className="text-lg text-white/[70%] mb-6 max-w-2xl mx-auto">
             "I have coordinated 200+ events across Bali — from 2-person anniversary dinners to 200-guest weddings. 
             My job is simple: make sure the host never has to look at a watch."
           </p>
@@ -796,7 +796,7 @@ export default function EventsMainPage() {
           <h2 className="text-4xl md:text-6xl leading-[1.05] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             One message and we&rsquo;re running.
           </h2>
-          <p className="max-w-xl mx-auto text-base md:text-lg text-white/75 mb-10">
+          <p className="max-w-xl mx-auto text-base md:text-lg text-white/[75%] mb-10">
             Sofia replies inside the hour. The proposal lands inside the day. The team arrives on the date — built,
             briefed, and ready.
           </p>

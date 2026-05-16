@@ -22,10 +22,7 @@ interface MenuCard {
   imageAlt: string
   courses?: string[]
   winePairing?: string
-  highlights?: string[]
   dataSource: string
-  detailHref?: string
-  detailLabel?: string
 }
 
 interface Testimonial {
@@ -72,32 +69,10 @@ const MENU_CARDS: MenuCard[] = [
     winePairing: '+IDR 1,100,000 per person',
     dataSource: 'menus-odyssee-cta',
   },
-  {
-    name: "Chef's Table",
-    subtitle: '7-Course Counter Experience',
-    price: 'IDR 3,500,000++ per person',
-    description: 'A counter-side experience for up to six guests, led by Adriano personally. Entirely market-led, intensely personal, and never repeated exactly the same way twice. Designed for guests who want the full conversation behind the cooking.',
-    image: '/generated/luna-flame.webp',
-    imageAlt: 'Adriano cooking over flame for the Chef s Table private dinner experience',
-    highlights: ['Counter-side service', '6 guests maximum', 'Adriano only', 'No two evenings identical'],
-    dataSource: 'menus-chefs-table-cta',
-    detailHref: '/fine-dining/chefs-table',
-    detailLabel: "Explore Chef's Table",
-  },
-  {
-    name: 'Custom Menu',
-    subtitle: 'Bespoke Design',
-    price: 'From IDR 1,800,000++ per person',
-    description: 'You tell us the occasion and we design around it. Indonesian, Mediterranean, fusion, dietary restrictions, celebratory pacing, family-style or plated service — all handled with the same luxury standard.',
-    image: '/generated/luna-detail.webp',
-    imageAlt: 'Luxury plated detail from a bespoke myCHEF private dining menu in Bali',
-    highlights: ['Designed for your occasion', 'Indonesian to Mediterranean', 'Dietary restrictions handled', 'Villa-friendly execution'],
-    dataSource: 'menus-custom-cta',
-  },
 ]
 
 const PHILOSOPHY_STATS: Stat[] = [
-  { value: '4', label: 'Menu Styles' },
+  { value: '2', label: 'Signature Menus' },
   { value: '12,000+', label: 'Guests Fed' },
   { value: '100%', label: 'Market-Fresh' },
 ]
@@ -132,7 +107,7 @@ const TESTIMONIALS: Testimonial[] = [
 const FAQS: FAQItem[] = [
   {
     q: 'Which menu should I choose?',
-    a: 'Choose La Riviera if you want a classic five-course Mediterranean dinner. Choose L\'Odyssée for the most complete chef-led tasting. Choose Chef\'s Table if you want Adriano counter-side for a maximum of six guests. Choose Custom Menu when the occasion or dietary needs require a menu built around you.',
+    a: 'Choose La Riviera if you want a classic five-course Mediterranean dinner. Choose L\'Odyssée for the fullest chef-led tasting progression with a longer format and optional premium pairing.',
   },
   {
     q: 'Can you accommodate dietary restrictions?',
@@ -152,7 +127,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How far in advance should I book?',
-    a: 'Three to seven days is ideal, especially for premium seafood, wine pairing, or Chef\'s Table requests. During peak season we recommend booking earlier, but we can often accommodate short-notice villa dinners if the date is open.',
+    a: 'Three to seven days is ideal, especially for premium seafood and wine pairing requests. During peak season we recommend booking earlier, but we can often accommodate short-notice villa dinners if the date is open.',
   },
 ]
 
@@ -181,7 +156,7 @@ export default function FineDiningMenusPage() {
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Menus Bali | Riviera & Odyssey — myCHEF"
-        description="Browse the myCHEF private chef menus for Bali villas — Mediterranean tasting menus, seafood, plant-forward, and bespoke."
+        description="Browse the myCHEF private chef menus for Bali villas — La Riviera and L'Odyssée, both rooted in Mediterranean fine dining."
         canonical="https://mychef.id/fine-dining/menus"
         ogImage="/generated/luna-plating.webp"
         jsonLd={[
@@ -218,7 +193,7 @@ export default function FineDiningMenusPage() {
             className="mb-6 text-sm uppercase tracking-[0.35em] text-[#C5A028]"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
           >
-            Riviera · Odyssey · Bespoke Villa Dining
+              Riviera · L&apos;Odyssée
           </p>
           <h1
             className="mb-6 text-5xl text-white sm:text-6xl lg:text-7xl"
@@ -227,7 +202,7 @@ export default function FineDiningMenusPage() {
             Our Menus
           </h1>
           <p
-            className="mx-auto mb-10 max-w-3xl text-2xl italic text-white/80 md:text-3xl"
+            className="mx-auto mb-10 max-w-3xl text-2xl italic text-white/[80%] md:text-3xl"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Mediterranean tasting menus. Refined. Seasonal. Cooked in your villa.
@@ -287,10 +262,10 @@ export default function FineDiningMenusPage() {
               className="mb-4 text-xs uppercase tracking-[0.35em] text-[#C5A028]"
               style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
             >
-              Four Ways To Dine
+              Two Signature Menus
             </p>
             <h2 className="text-3xl text-white md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Choose the evening that fits your villa
+              Choose between our two signature menus
             </h2>
           </div>
 
@@ -321,15 +296,15 @@ export default function FineDiningMenusPage() {
                   <h3 className="mb-3 text-3xl text-white md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>
                     {menu.name}
                   </h3>
-                  <p className="mb-5 text-sm uppercase tracking-[0.18em] text-white/55">{menu.price}</p>
-                  <p className="mb-6 max-w-2xl text-base leading-relaxed text-white/75">{menu.description}</p>
+                  <p className="mb-5 text-sm uppercase tracking-[0.18em] text-white/[55%]">{menu.price}</p>
+                  <p className="mb-6 max-w-2xl text-base leading-relaxed text-white/[75%]">{menu.description}</p>
 
                   {menu.courses && (
                     <div className="mb-6 flex flex-wrap gap-2">
                       {menu.courses.map((course) => (
                         <span
                           key={course}
-                          className="rounded-full border border-white/12 bg-white/[0.03] px-4 py-2 text-xs uppercase tracking-[0.18em] text-white/75"
+                          className="rounded-full border border-white/12 bg-white/[0.03] px-4 py-2 text-xs uppercase tracking-[0.18em] text-white/[75%]"
                         >
                           {course}
                         </span>
@@ -337,19 +312,8 @@ export default function FineDiningMenusPage() {
                     </div>
                   )}
 
-                  {menu.highlights && (
-                    <div className="mb-6 grid gap-3 sm:grid-cols-2">
-                      {menu.highlights.map((highlight) => (
-                        <div key={highlight} className="flex items-start gap-2 text-sm text-white/75">
-                          <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#C5A028]" />
-                          <span>{highlight}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
                   {menu.winePairing && (
-                    <p className="mb-8 text-sm text-white/60">
+                    <p className="mb-8 text-sm text-white/[60%]">
                       Wine pairing available: <span className="text-[#C5A028]">{menu.winePairing}</span>
                     </p>
                   )}
@@ -365,19 +329,23 @@ export default function FineDiningMenusPage() {
                       <MessageCircle className="h-4 w-4" />
                       Enquire on WhatsApp
                     </a>
-                    {menu.detailHref && menu.detailLabel && (
-                      <Link
-                        to={menu.detailHref}
-                        className="inline-flex items-center justify-center gap-2 text-sm uppercase tracking-[0.16em] text-white/75 transition-colors hover:text-white"
-                      >
-                        {menu.detailLabel}
-                        <ChevronRight className="h-4 w-4" />
-                      </Link>
-                    )}
                   </div>
                 </div>
               </article>
             ))}
+          </div>
+          <div className="reveal mt-10 rounded-[24px] border border-[#C5A028]/25 bg-white/[0.05] p-7 text-center">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028]">Looking for the most exclusive format?</p>
+            <p className="mt-3 text-base text-white/[80%]">
+              Chef&apos;s Table is a separate Adriano-led counter experience, distinct from the two signature menus above.
+            </p>
+            <Link
+              to="/fine-dining/chefs-table"
+              className="mt-5 inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-white/[85%] transition-colors hover:text-white"
+            >
+              Explore Chef&apos;s Table
+              <ChevronRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -442,7 +410,7 @@ export default function FineDiningMenusPage() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#C5A028]" />
-                  <span className="text-sm leading-relaxed text-white/75">{item}</span>
+                  <span className="text-sm leading-relaxed text-white/[75%]">{item}</span>
                 </div>
               ))}
             </div>
@@ -472,10 +440,10 @@ export default function FineDiningMenusPage() {
                     <Star key={`${testimonial.name}-${starIndex}`} className="h-4 w-4 fill-current" />
                   ))}
                 </div>
-                <p className="mb-6 text-base leading-relaxed text-white/78">“{testimonial.quote}”</p>
+                <p className="mb-6 text-base leading-relaxed text-white/[78%]">“{testimonial.quote}”</p>
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white">{testimonial.name}</p>
-                  <p className="mt-1 text-sm text-white/50">{testimonial.stay}</p>
+                  <p className="mt-1 text-sm text-white/[50%]">{testimonial.stay}</p>
                 </div>
               </article>
             ))}
@@ -513,7 +481,7 @@ export default function FineDiningMenusPage() {
           <h2 className="mb-5 text-3xl text-white md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>
             Reserve your table tonight
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
+          <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-white/[70%] md:text-lg">
             Tell us your villa, guest count, and preferred menu. We will reply on WhatsApp with availability, next steps, and the clearest option for your evening.
           </p>
           <a

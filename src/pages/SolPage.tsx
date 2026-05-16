@@ -91,7 +91,7 @@ export default function SolPage() {
           <h1 className="sol-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 " style={{ fontFamily: "'Playfair Display', serif" }}>
             Your Private Chef<br /><span className="italic">for Everyday Villa Dining</span>
           </h1>
-          <p className="sol-hero-sub text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+          <p className="sol-hero-sub text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
             This page is for couples, families, and villa guests who want breakfast, lunch, or dinner cooked in their villa. Best for 1–4 guests and longer stays — not parties, weddings, or large catered events.
           </p>
           <div className="sol-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -106,7 +106,7 @@ export default function SolPage() {
             <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
               Not sure which service?
             </p>
-            <p className="text-sm md:text-base text-white/85 leading-relaxed mb-4">
+            <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
               Choose <span className="font-semibold text-white">Private Villa Dining</span> if you want a chef dedicated to your villa stay, daily meals, or an intimate dinner at home. Choose Events & Catering if you are hosting 5+ guests, a celebration, or need buffet, BBQ, plated service, or wedding-style setup.
             </p>
             <Link to="/catering" className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors">

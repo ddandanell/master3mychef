@@ -81,7 +81,7 @@ export default function CancellationPage() {
           </Link>
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
           <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Cancellation Policy</h1>
-          <p className="text-white/40 text-sm">Clear rules. No surprises. We respect your time — and ours.</p>
+          <p className="text-white/[40%] text-sm">Clear rules. No surprises. We respect your time — and ours.</p>
         </div>
       </section>
 
@@ -100,9 +100,9 @@ export default function CancellationPage() {
                 }}
               >
                 <tier.icon className="w-8 h-8 mx-auto mb-4" style={{ color: tier.color }} strokeWidth={1.5} />
-                <p className="text-xs text-white/40 uppercase tracking-wider mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{tier.title}</p>
+                <p className="text-xs text-white/[40%] uppercase tracking-wider mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{tier.title}</p>
                 <p className="text-4xl font-light mb-3" style={{ fontFamily: "'Playfair Display', serif", color: tier.color }}>{tier.refund}</p>
-                <p className="text-xs text-white/40 leading-relaxed">{tier.desc}</p>
+                <p className="text-xs text-white/[40%] leading-relaxed">{tier.desc}</p>
               </div>
             ))}
           </div>
@@ -112,7 +112,7 @@ export default function CancellationPage() {
             <h3 className="text-lg mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Additional Deductions</h3>
             <ul className="space-y-3">
               {DEDUCTIONS.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-white/50">
+                <li key={i} className="flex items-start gap-3 text-sm text-white/[50%]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C5A028]/40 mt-2 flex-shrink-0" />
                   {item}
                 </li>
@@ -127,7 +127,7 @@ export default function CancellationPage() {
               <div key={item.title} className="p-6 rounded-2xl border border-white/10" style={{ background: 'rgba(255,255,255,0.02)' }}>
                 <item.icon className="w-6 h-6 text-[#C5A028] mb-4" strokeWidth={1.5} />
                 <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-white/[50%] text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -135,16 +135,16 @@ export default function CancellationPage() {
           {/* Changes to Bookings */}
           <div className="border-t border-white/10 pt-12">
             <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Changes to Bookings</h2>
-            <div className="text-white/60 text-sm leading-relaxed space-y-4">
-              <p>All change requests must be made directly to MyChef, and <strong className="text-white/80">no later than 72 hours</strong> before the shift or booking starts.</p>
+            <div className="text-white/[60%] text-sm leading-relaxed space-y-4">
+              <p>All change requests must be made directly to MyChef, and <strong className="text-white/[80%]">no later than 72 hours</strong> before the shift or booking starts.</p>
               <div className="space-y-3 ml-2">
                 <div className="flex items-start gap-3">
                   <Calendar className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" />
-                  <p><strong className="text-white/80">Date, time, or location changes:</strong> Must be requested at least 72 hours in advance. Later changes cannot be guaranteed and may be treated as a cancellation.</p>
+                  <p><strong className="text-white/[80%]">Date, time, or location changes:</strong> Must be requested at least 72 hours in advance. Later changes cannot be guaranteed and may be treated as a cancellation.</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Utensils className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" />
-                  <p><strong className="text-white/80">Menu changes:</strong> Must be requested at least 72 hours before the booking. All changes are subject to chef availability and must be confirmed in writing by MyChef.</p>
+                  <p><strong className="text-white/[80%]">Menu changes:</strong> Must be requested at least 72 hours before the booking. All changes are subject to chef availability and must be confirmed in writing by MyChef.</p>
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function CancellationPage() {
           {/* Contact */}
           <div className="mt-12 p-8 rounded-2xl border border-white/10 text-center">
             <p className="text-[#C5A028] text-sm tracking-widest uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Need to Cancel or Change?</p>
-            <p className="text-white/60 text-sm mb-6">Contact us directly. We will handle your request within 24 hours.</p>
+            <p className="text-white/[60%] text-sm mb-6">Contact us directly. We will handle your request within 24 hours.</p>
             <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="cancellation-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <MessageCircle className="w-4 h-4" /> WhatsApp +62 822-3756-5997
             </a>

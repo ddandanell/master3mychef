@@ -104,7 +104,7 @@ export default function PrivacyPage() {
           </Link>
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
           <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Privacy Policy</h1>
-          <p className="text-white/40 text-sm">Last updated: January 2024</p>
+          <p className="text-white/[40%] text-sm">Last updated: January 2024</p>
         </div>
       </section>
 
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
             {SECTIONS.map((section) => (
               <div key={section.title} className="border-b border-white/10 pb-12">
                 <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>{section.title}</h2>
-                <div className="text-white/60 text-sm leading-relaxed whitespace-pre-line">
+                <div className="text-white/[60%] text-sm leading-relaxed whitespace-pre-line">
                   {section.content}
                 </div>
               </div>
@@ -125,7 +125,7 @@ export default function PrivacyPage() {
           {/* Contact CTA */}
           <div className="mt-16 p-8 rounded-2xl border border-white/10 text-center">
             <p className="text-[#C5A028] text-sm tracking-widest uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions?</p>
-            <p className="text-white/60 text-sm mb-6">If you have any questions about this Privacy Policy, please reach out.</p>
+            <p className="text-white/[60%] text-sm mb-6">If you have any questions about this Privacy Policy, please reach out.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="privacy-cta" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white text-sm rounded-full hover:bg-[#D4B43A] transition-all">
                 <MessageCircle className="w-4 h-4" /> WhatsApp

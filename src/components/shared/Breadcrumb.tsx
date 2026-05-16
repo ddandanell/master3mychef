@@ -17,10 +17,10 @@ interface BreadcrumbProps {
 export default function Breadcrumb({ items, className = '', theme = 'light' }: BreadcrumbProps) {
   const linkClass =
     theme === 'dark'
-      ? 'text-white/60 hover:text-white'
+      ? 'text-white/[60%] hover:text-white'
       : 'text-[#4A4745]/60 hover:text-[#1A1A1A]'
   const currentClass = theme === 'dark' ? 'text-white font-medium' : 'text-[#1A1A1A] font-medium'
-  const separatorClass = theme === 'dark' ? 'text-white/30' : 'text-[#4A4745]/30'
+  const separatorClass = theme === 'dark' ? 'text-white/[30%]' : 'text-[#4A4745]/30'
 
   return (
     <nav aria-label="Breadcrumb" className={cn('py-4 px-6', className)}>

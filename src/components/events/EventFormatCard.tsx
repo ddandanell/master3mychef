@@ -37,15 +37,15 @@ export default function EventFormatCard({
       <p className="font-semibold text-lg mb-1" style={{ color: accent }}>
         {price}
       </p>
-      <p className={`text-sm mb-4 ${highlighted ? 'text-white/60' : 'text-[#4A4745]'}`}>
+      <p className={`text-sm mb-4 ${highlighted ? 'text-white/[60%]' : 'text-[#4A4745]'}`}>
         {guestRange}
       </p>
-      <p className={`text-sm mb-5 leading-relaxed ${highlighted ? 'text-white/70' : 'text-[#4A4745]'}`}>
+      <p className={`text-sm mb-5 leading-relaxed ${highlighted ? 'text-white/[70%]' : 'text-[#4A4745]'}`}>
         {description}
       </p>
       <div className="space-y-2">
         {features.map((item) => (
-          <div key={item} className={`flex items-center gap-2 text-sm ${highlighted ? 'text-white/80' : 'text-[#4A4745]'}`}>
+          <div key={item} className={`flex items-center gap-2 text-sm ${highlighted ? 'text-white/[80%]' : 'text-[#4A4745]'}`}>
             <Check className="w-4 h-4 flex-shrink-0" style={{ color: accent }} />
             <span>{item}</span>
           </div>

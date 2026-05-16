@@ -180,7 +180,7 @@ export default function CateringBabiGulingPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Babi Guling Catering Bali for a Proper Balinese Feast
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-2xl mx-auto">
             Traditional Balinese suckling pig catering for villa parties, birthdays, weddings, and events where guests want something local, social, and memorable.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -642,7 +642,7 @@ export default function CateringBabiGulingPage() {
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Book Babi Guling Catering for Your Event
           </h2>
-          <p className="text-white/80 text-lg mb-8">
+          <p className="text-white/[80%] text-lg mb-8">
             Send your guest count, villa area, serving style, pork or non-pork needs, and event time. We will confirm availability and final price by WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

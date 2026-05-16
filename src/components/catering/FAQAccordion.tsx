@@ -31,7 +31,7 @@ export default function FAQAccordion({ items, dark = false, defaultOpenCount = 0
 
   const bgColor = dark ? 'bg-white/[0.04] border-white/10' : 'bg-white border-[#E8E6E3]'
   const textColor = dark ? 'text-white' : 'text-[#1A1A1A]'
-  const mutedColor = dark ? 'text-white/70' : 'text-[#4A4745]'
+  const mutedColor = dark ? 'text-white/[70%]' : 'text-[#4A4745]'
 
   return (
     <div className="space-y-3">
@@ -55,7 +55,7 @@ export default function FAQAccordion({ items, dark = false, defaultOpenCount = 0
             >
               <span className={`${textColor} font-medium text-sm md:text-base`}>{item.q}</span>
               <ChevronDown
-                className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''} ${dark ? 'text-white/50' : 'text-[#4A4745]'}`}
+                className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''} ${dark ? 'text-white/[50%]' : 'text-[#4A4745]'}`}
               />
             </button>
             <div

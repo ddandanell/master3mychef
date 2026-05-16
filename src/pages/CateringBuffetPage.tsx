@@ -215,10 +215,10 @@ export default function CateringBuffetPage() {
             Buffet Catering Bali<br />
             <span className="italic">for Smooth, High-Volume Service</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/85 mb-4 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
             A clean, organized catering format for larger groups, villa parties, weddings, retreats, and corporate events where food needs to flow properly.
           </p>
-          <p className="text-white/60 text-sm mb-10">
+          <p className="text-white/[60%] text-sm mb-10">
             From IDR 550,000/person · Min. 30 guests · Chef & staff included · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -229,7 +229,7 @@ export default function CateringBuffetPage() {
               View Buffet Packages
             </a>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/50 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Same-day WhatsApp reply</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Tables & chafing dishes included</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full cleanup after</span>
@@ -715,7 +715,7 @@ export default function CateringBuffetPage() {
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Ready for Buffet Catering?
           </h2>
-          <p className="text-white/80 text-lg mb-8">
+          <p className="text-white/[80%] text-lg mb-8">
             Send your date, area, guest count, and preferred buffet style. We will confirm availability, setup needs, and final price by WhatsApp within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -726,7 +726,7 @@ export default function CateringBuffetPage() {
               <Phone className="w-4 h-4" /> Call +62 822-3756-5997
             </a>
           </div>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/50 text-xs">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Same-day reply</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> 50% deposit only</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> No hidden fees</span>

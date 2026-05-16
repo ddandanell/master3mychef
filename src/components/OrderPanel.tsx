@@ -157,7 +157,7 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
                 type="button"
                 onClick={() => setStep((s) => Math.max(0, s - 1))}
                 aria-label="Go back"
-                className="p-1 text-white/60 hover:text-white"
+                className="p-1 text-white/[60%] hover:text-white"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -170,7 +170,7 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="p-2 text-white/60 hover:text-white"
+            className="p-2 text-white/[60%] hover:text-white"
           >
             <X className="w-5 h-5" />
           </button>
@@ -233,7 +233,7 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
                 type="button"
                 onClick={() => canAdvance && setStep((s) => Math.min(4, s + 1))}
                 disabled={!canAdvance}
-                className={`text-xs tracking-[0.2em] uppercase font-semibold px-6 py-3 rounded-full transition-colors ${canAdvance ? 'bg-[#C5A028] text-black hover:bg-[#D4B43A]' : 'bg-white/10 text-white/40 cursor-not-allowed'}`}
+                className={`text-xs tracking-[0.2em] uppercase font-semibold px-6 py-3 rounded-full transition-colors ${canAdvance ? 'bg-[#C5A028] text-black hover:bg-[#D4B43A]' : 'bg-white/10 text-white/[40%] cursor-not-allowed'}`}
               >
                 Continue
               </button>
@@ -265,7 +265,7 @@ function Heading({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?
         {eyebrow}
       </p>
       <h2 className="text-3xl md:text-4xl leading-tight mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{title}</h2>
-      {sub && <p className="text-sm text-white/55">{sub}</p>}
+      {sub && <p className="text-sm text-white/[55%]">{sub}</p>}
     </div>
   )
 }
@@ -384,7 +384,7 @@ function SubmittedView({ waLink, onClose }: { waLink: string; onClose: () => voi
       <h2 className="text-3xl md:text-4xl leading-tight mb-4 max-w-[420px]" style={{ fontFamily: "'Playfair Display', serif" }}>
         Your evening is being prepared.
       </h2>
-      <p className="text-sm text-white/55 max-w-[420px] mb-10">
+      <p className="text-sm text-white/[55%] max-w-[420px] mb-10">
         One of our team members will contact you shortly to finalize the experience.
       </p>
       <a
@@ -399,7 +399,7 @@ function SubmittedView({ waLink, onClose }: { waLink: string; onClose: () => voi
       <button
         type="button"
         onClick={onClose}
-        className="mt-10 text-xs uppercase tracking-[0.2em] text-white/50 hover:text-white/90"
+        className="mt-10 text-xs uppercase tracking-[0.2em] text-white/[50%] hover:text-white/[90%]"
       >
         Close
       </button>
@@ -410,7 +410,7 @@ function SubmittedView({ waLink, onClose }: { waLink: string; onClose: () => voi
 // ─── Form atoms ────────────────────────────────────────────────────────────
 
 function Label({ children }: { children: React.ReactNode }) {
-  return <p className="text-[11px] tracking-[0.2em] uppercase text-white/55 mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{children}</p>
+  return <p className="text-[11px] tracking-[0.2em] uppercase text-white/[55%] mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{children}</p>
 }
 
 function DarkInput({ value, onChange, placeholder, type = 'text', className = '', min }: { value: string; onChange: (v: string) => void; placeholder?: string; type?: string; className?: string; min?: string }) {
@@ -421,7 +421,7 @@ function DarkInput({ value, onChange, placeholder, type = 'text', className = ''
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
       min={min}
-      className={`w-full bg-transparent border border-white/15 rounded-lg px-4 py-3 text-sm placeholder:text-white/50 focus:border-[#C5A028] ${className}`}
+      className={`w-full bg-transparent border border-white/15 rounded-lg px-4 py-3 text-sm placeholder:text-white/[50%] focus:border-[#C5A028] ${className}`}
     />
   )
 }
@@ -433,7 +433,7 @@ function DarkTextarea({ value, onChange, placeholder, rows = 3, className = '' }
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
       rows={rows}
-      className={`w-full bg-transparent border border-white/15 rounded-lg px-4 py-3 text-sm placeholder:text-white/50 focus:border-[#C5A028] resize-none ${className}`}
+      className={`w-full bg-transparent border border-white/15 rounded-lg px-4 py-3 text-sm placeholder:text-white/[50%] focus:border-[#C5A028] resize-none ${className}`}
     />
   )
 }
@@ -443,7 +443,7 @@ function ChipButton({ children, active, onClick }: { children: React.ReactNode; 
     <button
       type="button"
       onClick={onClick}
-      className={`text-sm px-3 py-2.5 rounded-lg border transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10 text-white' : 'border-white/15 text-white/70 hover:border-white/30'}`}
+      className={`text-sm px-3 py-2.5 rounded-lg border transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10 text-white' : 'border-white/15 text-white/[70%] hover:border-white/30'}`}
     >
       {children}
     </button>

@@ -99,9 +99,9 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
           <div className="relative z-10 px-8 pb-12 md:pb-20 pt-24 md:pt-32 max-w-[1100px] mx-auto w-full text-white">
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Private chef</p>
             <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-5 max-w-[820px]">{title}</h1>
-            <p className="text-base md:text-lg text-white/85 max-w-[640px] mb-3">{top.blurb}</p>
-            {locationPage?.intro && <p className="text-sm md:text-base text-white/75 max-w-[700px] mb-3">{locationPage.intro}</p>}
-            <p className="text-sm text-white/55 italic mb-8">{top.signature}</p>
+            <p className="text-base md:text-lg text-white/[85%] max-w-[640px] mb-3">{top.blurb}</p>
+            {locationPage?.intro && <p className="text-sm md:text-base text-white/[75%] max-w-[700px] mb-3">{locationPage.intro}</p>}
+            <p className="text-sm text-white/[55%] italic mb-8">{top.signature}</p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a

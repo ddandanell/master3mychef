@@ -168,7 +168,7 @@ export default function EventsWeddingsPage() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Villa Weddings in Bali — Catering & Coordination
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
             One contract for menu planning, service staff, ceremony flow, setup, bar, and full cleanup. From intimate villa ceremonies to full reception dinners, myCHEF runs the food and the logistics together.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -179,7 +179,7 @@ export default function EventsWeddingsPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
-          <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.2em]">
+          <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em]">
             From IDR 600K++/guest · Transparent proposal before deposit
           </p>
         </div>
@@ -387,10 +387,10 @@ export default function EventsWeddingsPage() {
               <h3 className="text-2xl text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
                 Sofia holds the timeline so the couple does not have to
               </h3>
-              <p className="text-white/70 leading-relaxed mb-4">
+              <p className="text-white/[70%] leading-relaxed mb-4">
                 Sofia coordinates menu decisions, supplier timing, guest flow, and the day-of service brief. Couples work with her directly instead of being handed from sales to planner to operations. That continuity matters when something changes in the final week: the person adjusting the run-sheet is the same person who understands your menu, your villa access notes, and your ceremony-reception sequence.
               </p>
-              <p className="text-white/70 leading-relaxed mb-6">
+              <p className="text-white/[70%] leading-relaxed mb-6">
                 She has coordinated more than 100 villa weddings across Bali and knows the practical constraints that affect service: kitchen size, power load, rain backup, guest transport timing, and how long a speech block can realistically run before dinner quality starts to slip.
               </p>
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-weddings-cta" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#b08d23] transition-all">

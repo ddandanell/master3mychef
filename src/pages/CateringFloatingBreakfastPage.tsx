@@ -626,7 +626,7 @@ export default function CateringFloatingBreakfastPage() {
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Book Your Floating Breakfast in Bali
           </h2>
-          <p className="text-white/80 text-lg mb-8">
+          <p className="text-white/[80%] text-lg mb-8">
             Send your date, villa location, guest count, breakfast style, and special occasion. We will confirm availability and styling by WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

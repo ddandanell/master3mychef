@@ -82,7 +82,7 @@ export default function TermsPage() {
           </Link>
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
           <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Payment & Booking Terms</h1>
-          <p className="text-white/60 text-sm">Effective: January 2025 &nbsp;|&nbsp; Company: MyChef &nbsp;|&nbsp; NPWP: 1000000005064323</p>
+          <p className="text-white/[60%] text-sm">Effective: January 2025 &nbsp;|&nbsp; Company: MyChef &nbsp;|&nbsp; NPWP: 1000000005064323</p>
         </div>
       </section>
 
@@ -94,7 +94,7 @@ export default function TermsPage() {
               <div key={rule.title} className="p-6 rounded-2xl border border-white/10" style={{ background: 'rgba(255,255,255,0.02)' }}>
                 <rule.icon className="w-6 h-6 text-[#C5A028] mb-4" strokeWidth={1.5} />
                 <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{rule.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{rule.desc}</p>
+                <p className="text-white/[50%] text-sm leading-relaxed">{rule.desc}</p>
               </div>
             ))}
           </div>
@@ -104,11 +104,11 @@ export default function TermsPage() {
             {/* 1. Bookings and Deposits */}
             <div className="border-b border-white/10 pb-12">
               <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>1. Bookings and Deposits</h2>
-              <div className="text-white/60 text-sm leading-relaxed space-y-4">
+              <div className="text-white/[60%] text-sm leading-relaxed space-y-4">
                 <p>When you receive an offer from MyChef, the following rules apply:</p>
                 <ul className="list-disc list-inside space-y-2 ml-2">
-                  <li>You have <strong className="text-white/80">7 calendar days</strong> to pay the deposit in order to confirm and secure your booking.</li>
-                  <li>If your booking is scheduled for the <strong className="text-white/80">same week</strong>, payment must be made immediately, and proof of payment must be sent to us before we lock the chef to your booking.</li>
+                  <li>You have <strong className="text-white/[80%]">7 calendar days</strong> to pay the deposit in order to confirm and secure your booking.</li>
+                  <li>If your booking is scheduled for the <strong className="text-white/[80%]">same week</strong>, payment must be made immediately, and proof of payment must be sent to us before we lock the chef to your booking.</li>
                   <li>If payment is not received within the stated time, MyChef reserves the right to cancel or reassign the chef without further notice.</li>
                 </ul>
               </div>
@@ -117,53 +117,53 @@ export default function TermsPage() {
             {/* 2. Payment Schedule */}
             <div className="border-b border-white/10 pb-12">
               <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>2. Payment Schedule</h2>
-              <div className="text-white/60 text-sm leading-relaxed space-y-4">
+              <div className="text-white/[60%] text-sm leading-relaxed space-y-4">
                 <div className="flex items-start gap-4 p-4 rounded-xl border border-[#C5A028]/20" style={{ background: 'rgba(212,175,55,0.05)' }}>
                   <div className="w-10 h-10 rounded-full bg-[#C5A028]/20 flex items-center justify-center flex-shrink-0">
                     <span className="text-[#C5A028] text-sm font-bold">25%</span>
                   </div>
                   <div>
-                    <p className="text-white/80 font-medium mb-1">Deposit to Confirm</p>
-                    <p className="text-white/50">Paid at booking to lock your date and chef.</p>
+                    <p className="text-white/[80%] font-medium mb-1">Deposit to Confirm</p>
+                    <p className="text-white/[50%]">Paid at booking to lock your date and chef.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-4 rounded-xl border border-white/10">
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-white/60 text-sm font-bold">75%</span>
+                    <span className="text-white/[60%] text-sm font-bold">75%</span>
                   </div>
                   <div>
-                    <p className="text-white/80 font-medium mb-1">Balance on Arrival</p>
-                    <p className="text-white/50">The remaining balance is paid when the chef arrives at your villa, before service begins.</p>
+                    <p className="text-white/[80%] font-medium mb-1">Balance on Arrival</p>
+                    <p className="text-white/[50%]">The remaining balance is paid when the chef arrives at your villa, before service begins.</p>
                   </div>
                 </div>
-                <p className="text-white/60 text-xs italic mt-4">Payment is considered valid only once MyChef confirms receipt.</p>
+                <p className="text-white/[60%] text-xs italic mt-4">Payment is considered valid only once MyChef confirms receipt.</p>
               </div>
             </div>
 
             {/* 3. Payment Methods */}
             <div className="border-b border-white/10 pb-12">
               <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>3. Payment Methods</h2>
-              <div className="text-white/60 text-sm leading-relaxed">
+              <div className="text-white/[60%] text-sm leading-relaxed">
                 <p className="mb-4">Payments can be made through:</p>
                 <ul className="list-disc list-inside space-y-2 ml-2 mb-4">
                   <li>Online payment link (sent directly by MyChef)</li>
                   <li>Bank transfer</li>
                   <li>Credit/Debit cards (Visa, MasterCard, and all major cards)</li>
                 </ul>
-                <p className="text-white/60 italic">Proof of payment (transfer slip or screenshot) must be sent directly to our WhatsApp or email contact.</p>
+                <p className="text-white/[60%] italic">Proof of payment (transfer slip or screenshot) must be sent directly to our WhatsApp or email contact.</p>
               </div>
             </div>
 
             {/* 4. Changes to Bookings */}
             <div className="border-b border-white/10 pb-12">
               <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>4. Changes to Bookings</h2>
-              <div className="text-white/60 text-sm leading-relaxed space-y-4">
-                <p>All change requests must be made directly to MyChef, and <strong className="text-white/80">no later than 72 hours</strong> before the shift or booking starts.</p>
+              <div className="text-white/[60%] text-sm leading-relaxed space-y-4">
+                <p>All change requests must be made directly to MyChef, and <strong className="text-white/[80%]">no later than 72 hours</strong> before the shift or booking starts.</p>
                 <div className="space-y-3 ml-2">
-                  <p><strong className="text-white/80">Changing date, time, or location:</strong> Must be requested at least 72 hours in advance. Later changes cannot be guaranteed and may be treated as a cancellation.</p>
-                  <p><strong className="text-white/80">Changing the menu:</strong> If MyChef is creating the menu for you, changes must be requested at least 72 hours in advance. If you already agreed on a specific menu with the chef, any changes must be requested at least 72 hours before the booking.</p>
+                  <p><strong className="text-white/[80%]">Changing date, time, or location:</strong> Must be requested at least 72 hours in advance. Later changes cannot be guaranteed and may be treated as a cancellation.</p>
+                  <p><strong className="text-white/[80%]">Changing the menu:</strong> If MyChef is creating the menu for you, changes must be requested at least 72 hours in advance. If you already agreed on a specific menu with the chef, any changes must be requested at least 72 hours before the booking.</p>
                 </div>
-                <p className="text-white/60 italic">All changes are subject to chef availability and must be confirmed in writing by MyChef.</p>
+                <p className="text-white/[60%] italic">All changes are subject to chef availability and must be confirmed in writing by MyChef.</p>
               </div>
             </div>
 
@@ -173,26 +173,26 @@ export default function TermsPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                 {CANCELLATION_TIERS.map((tier) => (
                   <div key={tier.days} className={`p-6 rounded-2xl border text-center ${tier.refund === '100%' ? 'border-[#C5A028]/30' : tier.refund === '50%' ? 'border-white/10' : 'border-red-900/30'}`} style={{ background: tier.refund === '100%' ? 'rgba(212,175,55,0.05)' : 'rgba(255,255,255,0.02)' }}>
-                    <p className="text-xs text-white/60 uppercase tracking-wider mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{tier.days}</p>
-                    <p className={`text-3xl font-light mb-2 ${tier.refund === '100%' ? 'text-[#C5A028]' : tier.refund === '50%' ? 'text-white/60' : 'text-red-400/60'}`} style={{ fontFamily: "'Playfair Display', serif" }}>{tier.refund}</p>
-                    <p className="text-xs text-white/60">{tier.note}</p>
+                    <p className="text-xs text-white/[60%] uppercase tracking-wider mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{tier.days}</p>
+                    <p className={`text-3xl font-light mb-2 ${tier.refund === '100%' ? 'text-[#C5A028]' : tier.refund === '50%' ? 'text-white/[60%]' : 'text-red-400/60'}`} style={{ fontFamily: "'Playfair Display', serif" }}>{tier.refund}</p>
+                    <p className="text-xs text-white/[60%]">{tier.note}</p>
                   </div>
                 ))}
               </div>
-              <div className="text-white/60 text-sm leading-relaxed space-y-3">
-                <p><strong className="text-white/80">Additional Deductions:</strong></p>
+              <div className="text-white/[60%] text-sm leading-relaxed space-y-3">
+                <p><strong className="text-white/[80%]">Additional Deductions:</strong></p>
                 <ul className="list-disc list-inside space-y-2 ml-2">
                   <li>Pre-purchased groceries or special items: If ingredients have already been purchased, those costs (with receipts) may be deducted from any refund.</li>
                   <li>Payment processing or bank fees: Non-refundable if already incurred.</li>
                 </ul>
-                <p className="text-white/60 italic mt-4">If MyChef or the assigned chef cancels, you receive a full refund of all payments made.</p>
+                <p className="text-white/[60%] italic mt-4">If MyChef or the assigned chef cancels, you receive a full refund of all payments made.</p>
               </div>
             </div>
 
             {/* 6. Pricing */}
             <div className="border-b border-white/10 pb-12">
               <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>6. Pricing</h2>
-              <div className="text-white/60 text-sm leading-relaxed space-y-3">
+              <div className="text-white/[60%] text-sm leading-relaxed space-y-3">
                 <p>All prices are stated in your offer and include everything listed in the service description (chef service hours, preparation, cooking, and cleaning).</p>
                 <p>Groceries, rentals, or special requests are only included if clearly stated in writing.</p>
                 <p>All prices are final and include applicable Indonesian taxes.</p>
@@ -202,13 +202,13 @@ export default function TermsPage() {
             {/* 7. Legal */}
             <div className="border-b border-white/10 pb-12">
               <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>7. Legal Terms</h2>
-              <div className="text-white/60 text-sm leading-relaxed space-y-3">
+              <div className="text-white/[60%] text-sm leading-relaxed space-y-3">
                 <p>These terms are governed by Indonesian law. A Bahasa Indonesia version is available upon request, and both versions are equal in meaning.</p>
                 <div className="p-4 rounded-xl border border-white/10 mt-4">
-                  <p className="text-white/80 font-medium mb-1">Company Details</p>
-                  <p className="text-white/50">MyChef</p>
-                  <p className="text-white/50">NPWP: 1000000005064323</p>
-                  <p className="text-white/50">Registered and operating in Indonesia</p>
+                  <p className="text-white/[80%] font-medium mb-1">Company Details</p>
+                  <p className="text-white/[50%]">MyChef</p>
+                  <p className="text-white/[50%]">NPWP: 1000000005064323</p>
+                  <p className="text-white/[50%]">Registered and operating in Indonesia</p>
                 </div>
               </div>
             </div>
@@ -216,28 +216,28 @@ export default function TermsPage() {
             {/* Contact */}
             <div>
               <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>8. Contact</h2>
-              <div className="text-white/60 text-sm leading-relaxed mb-8">
+              <div className="text-white/[60%] text-sm leading-relaxed mb-8">
                 <p className="mb-4">All confirmations, payments, or booking changes must be sent directly to:</p>
                 <div className="flex flex-col sm:flex-row items-start gap-6">
                   <div className="flex items-center gap-3">
                     <MessageCircle className="w-5 h-5 text-[#C5A028]" />
                     <div>
-                      <p className="text-white/80 text-sm">WhatsApp</p>
-                      <p className="text-white/50 text-sm">+62 822-3756-5997</p>
+                      <p className="text-white/[80%] text-sm">WhatsApp</p>
+                      <p className="text-white/[50%] text-sm">+62 822-3756-5997</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-[#C5A028]" />
                     <div>
-                      <p className="text-white/80 text-sm">Email</p>
-                      <p className="text-white/50 text-sm">indonesia@mychef.id</p>
+                      <p className="text-white/[80%] text-sm">Email</p>
+                      <p className="text-white/[50%] text-sm">indonesia@mychef.id</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="w-5 h-5 text-[#C5A028]" />
                     <div>
-                      <p className="text-white/80 text-sm">Business Hours</p>
-                      <p className="text-white/50 text-sm">09:00 – 22:00 WIB (Mon–Sun)</p>
+                      <p className="text-white/[80%] text-sm">Business Hours</p>
+                      <p className="text-white/[50%] text-sm">09:00 – 22:00 WIB (Mon–Sun)</p>
                     </div>
                   </div>
                 </div>

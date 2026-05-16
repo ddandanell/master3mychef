@@ -267,7 +267,7 @@ export default function CateringDropOffPage() {
             Drop-Off Catering Bali<br />
             <span className="italic">for Easy Group Dining</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-2xl mx-auto">
             Prepared food, delivered to your villa or venue, ready to serve. Ideal for casual lunches, staff meals, small parties, and low-effort hosting.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -285,7 +285,7 @@ export default function CateringDropOffPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp availability
             </a>
           </div>
-          <p className="text-white/60 text-sm">From IDR 350,000/person · No staff · Next-day delivery</p>
+          <p className="text-white/[60%] text-sm">From IDR 350,000/person · No staff · Next-day delivery</p>
         </div>
       </section>
 
@@ -737,7 +737,7 @@ export default function CateringDropOffPage() {
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Want Dinner Delivered to Your Villa?
           </h2>
-          <p className="text-white/80 text-lg mb-8">
+          <p className="text-white/[80%] text-lg mb-8">
             Choose your package, send your area and guest count, and we will confirm the final price and delivery window by WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

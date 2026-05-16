@@ -129,7 +129,7 @@ export default function ServiceSommelierPage() {
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
             Sommelier Service in Bali
           </h1>
-          <p className="text-white/80 text-lg md:text-xl max-w-[600px] mb-8">
+          <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
             Curated wine pairings and tableside service for your villa dinner. 
             From approachable to investment-grade. From IDR 1,200,000 per dinner.
           </p>
@@ -154,16 +154,16 @@ export default function ServiceSommelierPage() {
               <div key={tier.title} className={`rounded-2xl p-8 ${tier.highlight ? 'bg-[#1A1A1A] text-white' : 'bg-white border border-[#E8E6E3]'}`}>
                 <h3 className="font-playfair text-2xl mb-2">{tier.title}</h3>
                 <p className={`text-3xl font-semibold mb-1 ${tier.highlight ? 'text-[#C5A028]' : 'text-[#1A1A1A]'}`}>{tier.price}</p>
-                <p className={`text-sm mb-6 ${tier.highlight ? 'text-white/60' : 'text-[#4A4745]'}`}>{tier.unit}</p>
+                <p className={`text-sm mb-6 ${tier.highlight ? 'text-white/[60%]' : 'text-[#4A4745]'}`}>{tier.unit}</p>
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm">
                       <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${tier.highlight ? 'text-[#C5A028]' : 'text-[#6B8E5A]'}`} />
-                      <span className={tier.highlight ? 'text-white/80' : 'text-[#4A4745]'}>{f}</span>
+                      <span className={tier.highlight ? 'text-white/[80%]' : 'text-[#4A4745]'}>{f}</span>
                     </li>
                   ))}
                 </ul>
-                <p className={`text-xs ${tier.highlight ? 'text-white/50' : 'text-[#8A8785]'}`}>Best for: {tier.bestFor}</p>
+                <p className={`text-xs ${tier.highlight ? 'text-white/[50%]' : 'text-[#8A8785]'}`}>Best for: {tier.bestFor}</p>
               </div>
             ))}
           </div>
@@ -253,7 +253,7 @@ export default function ServiceSommelierPage() {
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="font-playfair text-3xl md:text-5xl text-white mb-6">Book Your Sommelier</h2>
-          <p className="text-white/80 text-lg mb-8">
+          <p className="text-white/[80%] text-lg mb-8">
             Tell us your menu and we will design wine pairings that elevate every course.
             Reply within 2 hours.
           </p>

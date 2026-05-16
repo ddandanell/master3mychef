@@ -215,7 +215,7 @@ export default function PremiumPage({
               {h1}
             </h1>
             {subtitle && (
-              <p className="text-lg md:text-xl text-white/80 max-w-[600px] mb-8">
+              <p className="text-lg md:text-xl text-white/[80%] max-w-[600px] mb-8">
                 {subtitle}
               </p>
             )}
@@ -259,7 +259,7 @@ export default function PremiumPage({
             { icon: Shield, text: 'Background-Checked Team' },
             { icon: Clock, text: 'Same-Day Response' },
           ].map(({ icon: Icon, text }) => (
-            <div key={text} className="flex items-center gap-2 text-white/60 text-sm">
+            <div key={text} className="flex items-center gap-2 text-white/[60%] text-sm">
               <Icon className="w-4 h-4 text-[#C5A028]" />
               {text}
             </div>
@@ -374,7 +374,7 @@ export default function PremiumPage({
                               loading="lazy"
                             />
                           ) : (
-                            <div className="flex h-full items-center justify-center font-playfair text-6xl text-white/80">
+                            <div className="flex h-full items-center justify-center font-playfair text-6xl text-white/[80%]">
                               {profile.name.charAt(0)}
                             </div>
                           )}
@@ -498,7 +498,7 @@ export default function PremiumPage({
                     </h2>
                   )}
                   {section.body && (
-                    <p className={`mx-auto max-w-3xl text-center leading-relaxed ${isDark ? 'text-white/75' : 'text-[#4A4745]'}`}>
+                    <p className={`mx-auto max-w-3xl text-center leading-relaxed ${isDark ? 'text-white/[75%]' : 'text-[#4A4745]'}`}>
                       {section.body}
                     </p>
                   )}
@@ -585,7 +585,7 @@ export default function PremiumPage({
           <h2 className="font-playfair text-3xl md:text-5xl mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-white/60 mb-8">{ctaSubtext}</p>
+          <p className="text-white/[60%] mb-8">{ctaSubtext}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">
               <a href={waLink} target="_blank" rel="noopener noreferrer" data-source={`premium-${slug}-final-cta`}>
@@ -600,7 +600,7 @@ export default function PremiumPage({
               </Link>
             </Button>
           </div>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/40">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/[40%]">
             <a href={`tel:${WA}`} className="flex items-center gap-2 hover:text-white transition-colors">
               <Phone className="w-4 h-4" /> +62 822-3756-5997
             </a>

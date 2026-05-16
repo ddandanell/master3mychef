@@ -96,7 +96,7 @@ export default function LocationsHubPage() {
             <h1 className="font-playfair text-4xl md:text-6xl text-white leading-[1.1] mb-6">
               Private Chef Across Bali
             </h1>
-            <p className="text-lg md:text-xl text-white/80 max-w-[600px] mb-8">
+            <p className="text-lg md:text-xl text-white/[80%] max-w-[600px] mb-8">
               From Seminyak's beachfront villas to Ubud's jungle retreats — myCHEF serves every major region in Bali with local knowledge, vetted chefs and same-day confirmation.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -119,7 +119,7 @@ export default function LocationsHubPage() {
             { icon: Shield, text: 'Local Market Knowledge' },
             { icon: Clock, text: 'Same-Day Response' },
           ].map(({ icon: Icon, text }) => (
-            <div key={text} className="flex items-center gap-2 text-white/60 text-sm">
+            <div key={text} className="flex items-center gap-2 text-white/[60%] text-sm">
               <Icon className="w-4 h-4 text-[#C5A028]" /> {text}
             </div>
           ))}
@@ -224,7 +224,7 @@ export default function LocationsHubPage() {
       <section className="py-16 md:py-24 bg-[#0A0A0A] text-white">
         <div className="max-w-[700px] mx-auto px-6 text-center">
           <h2 className="font-playfair text-3xl md:text-5xl mb-4">Wherever Your Villa Is</h2>
-          <p className="text-white/60 mb-8">We have chefs across Bali. Message us with your location and we will confirm availability within the hour.</p>
+          <p className="text-white/[60%] mb-8">We have chefs across Bali. Message us with your location and we will confirm availability within the hour.</p>
           <a
             href={`https://wa.me/6282237565997?text=${encodeURIComponent('Hi myCHEF, I would like to book a private chef. My villa is in: ')}`}
             target="_blank"

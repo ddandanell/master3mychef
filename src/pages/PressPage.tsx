@@ -129,9 +129,9 @@ export default function PressPage() {
             <div className="mt-8 rounded-[28px] bg-[#1A1916] p-6 text-white">
               <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028]">PR Contact</p>
               <p className="mt-3 text-xl font-semibold">Sofia — Communications</p>
-              <p className="mt-2 text-white/75">WhatsApp: +62 822-3756-5997</p>
-              <p className="mt-1 text-white/75">Email: press@mychef.id</p>
-              <p className="mt-4 inline-flex items-center gap-2 text-sm text-white/75">
+              <p className="mt-2 text-white/[75%]">WhatsApp: +62 822-3756-5997</p>
+              <p className="mt-1 text-white/[75%]">Email: press@mychef.id</p>
+              <p className="mt-4 inline-flex items-center gap-2 text-sm text-white/[75%]">
                 <Clock3 className="h-4 w-4 text-[#C5A028]" />
                 Response time: Within 24 hours
               </p>
@@ -190,7 +190,7 @@ export default function PressPage() {
           <div>
             <p className="text-xs uppercase tracking-[0.4em] text-[#C5A028]">Press Kit Download Section</p>
             <h2 className="mt-4 font-playfair text-4xl md:text-5xl">Press Kit &amp; Media Assets</h2>
-            <p className="mt-5 max-w-[680px] text-lg leading-8 text-white/70">
+            <p className="mt-5 max-w-[680px] text-lg leading-8 text-white/[70%]">
               Everything a journalist, blogger, or producer needs to cover the brand quickly — from logos and founder background to fact-sheet details and polished food imagery.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -210,7 +210,7 @@ export default function PressPage() {
                   <div className="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-[#C5A028]/20 text-[#C5A028]">
                     {index === 0 ? <BadgeCheck className="h-4 w-4" /> : index === 1 ? <FileText className="h-4 w-4" /> : index === 2 ? <Sparkles className="h-4 w-4" /> : <Camera className="h-4 w-4" />}
                   </div>
-                  <p className="text-base leading-7 text-white/80">✅ {item}</p>
+                  <p className="text-base leading-7 text-white/[80%]">✅ {item}</p>
                 </div>
               ))}
             </div>

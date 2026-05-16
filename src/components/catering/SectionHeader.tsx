@@ -8,7 +8,7 @@ interface SectionHeaderProps {
 
 export default function SectionHeader({ eyebrow, title, subtitle, align = 'center', dark = false }: SectionHeaderProps) {
   const textColor = dark ? 'text-white' : 'text-[#1A1A1A]'
-  const mutedColor = dark ? 'text-white/60' : 'text-[#4A4745]'
+  const mutedColor = dark ? 'text-white/[60%]' : 'text-[#4A4745]'
   const accentColor = dark ? 'text-[#C5A028]' : 'text-[#6B8E5A]'
 
   return (

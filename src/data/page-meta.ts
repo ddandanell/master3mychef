@@ -38,7 +38,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/fine-dining',
     title: 'Fine Dining Bali | Private Chef Tasting Menu in Your Villa',
     description:
-      'Private chef fine dining in your Bali villa. Mediterranean & Wagyu tasting menus, open-flame cooking, wine pairing. From IDR 2.2M++ per guest.',
+      'Private chef fine dining in your villa. Mediterranean & Wagyu tasting menus, open-flame cooking, wine pairing. From IDR 2.2M per guest.',
     canonical: `${SITE}/fine-dining`,
     h1: 'Private Chef Bali — Fine Dining Tasting Menu in Your Villa',
     ogImage: `${SITE}/hero-fine-dining.webp`,
@@ -48,7 +48,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/catering',
     title: 'Villa Catering Bali | BBQ, Buffet & Plated Service',
     description:
-      'Premium Bali catering for villas. BBQ, buffet, plated dinners, drop-off, Babi Guling, grazing tables. Real chef grills at your villa. From IDR 450K pp.',
+      'Bali villa catering: BBQ, buffet, plated service, Babi Guling. Chef grills at your villa. From IDR 450K per person.',
     canonical: `${SITE}/catering`,
     h1: 'Villa Catering Bali. Chef, Staff & Setup Included.',
     ogImage: `${SITE}/hero-catering.webp`,
@@ -78,7 +78,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/in-villa-service',
     title: 'In-Villa Service Bali | Waiters, Butlers & Bartenders',
     description:
-      'Short-term hospitality staff for Bali villas and events — waiters, butlers, bartenders, mixologists, sommeliers, hosts. Uniformed, trained, same-day booking.',
+      'Hire villa service staff in Bali: waiters, butlers, bartenders, mixologists, sommeliers. Uniformed, trained, same-day booking.',
     canonical: `${SITE}/in-villa-service`,
     h1: 'In-Villa Service Staff — Waiters, Butlers, Mixologists',
     ogImage: `${SITE}/bartender.webp`,
@@ -88,7 +88,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/contact',
     title: 'Contact myCHEF.id | Book Your Private Chef in Bali',
     description:
-      'Speak directly with the right person — Sofia for fine dining, Daniel for villa chef catering, Olivia for events, Marco for partnerships and staffing.',
+      'Contact myCHEF: Sofia (fine dining), Daniel (villa chef), Olivia (events), Marco (staffing). Direct WhatsApp booking.',
     canonical: `${SITE}/contact`,
     h1: 'Speak to the right person',
     ogImage: `${SITE}/generated/contact-hero.webp`,

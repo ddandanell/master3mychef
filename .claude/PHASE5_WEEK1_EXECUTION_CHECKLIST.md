@@ -1,209 +1,220 @@
-# Phase 5 Week 1 Execution Checklist
-**Dates:** May 25-31, 2026  
-**Owner:** SEO Lead  
-**Status:** Ready for Execution
+# Phase 5 Week 1: Execution Checklist — June 1-7, 2026
+
+**Objective:** Launch Tier 1 keyword content + optimize homepage and pillar pages  
+**Target Keywords:** 4 high-opportunity blog posts + 2 pillar page optimizations  
+**Expected Results:** 4-6 keywords moving from position 50+ → 30-40 range, 100+ organic impressions
 
 ---
 
-## DAY 1-2 (May 25-26): GSC Baseline Capture
+## 📋 Pre-Launch Checklist (May 25-31)
 
-### Pre-Execution
-- [ ] Ensure Google Search Console access is confirmed
-- [ ] Verify GSC account shows mychef.id in resources
-- [ ] Check current indexation baseline (expected: ~18-20 pages)
+### Deployment Readiness
+- [ ] **Site live on myCHEF.id** (target May 25)
+- [ ] **GSC property created & verified** (ready to submit sitemaps)
+- [ ] **GA4 goals configured** (page views, blog views, service page clicks, form submissions)
+- [ ] **Robots.txt finalized** (no noindex tags on blog pages)
+- [ ] **Sitemaps generated & submitted** (sitemap.xml includes all blog pages)
+- [ ] **Meta tags verified** (H1, meta descriptions, OG tags on all pages)
+- [ ] **SSL certificate active** (HTTPS on all pages)
 
-### Task 1a: Access GSC
-- [ ] Open: https://search.google.com/search-console/performance?resource_id=sc-domain%3Amychef.id
-- [ ] Set date range: **May 1-24, 2026** (previous 24 days)
-- [ ] Ensure "Property" filter is mychef.id (not specific URL)
+### Content Finalization
+- [ ] **Blog #1 outline reviewed** (structure, internal links, images identified)
+- [ ] **Blog #2 outline reviewed** (tables, pricing, money-saving tactics confirmed)
+- [ ] **Blog #3 outline reviewed** (verification steps, red flags/green lights complete)
+- [ ] **Blog #4 outline reviewed** (role definition, differentiators vs restaurant chefs)
 
-### Task 1b: Export Performance Data
-**Columns to Export (in this order):**
-1. Query (keyword)
-2. Impressions
-3. Avg Position
-4. CTR
-5. Clicks
-6. Pages (optional - shows which page ranks for keyword)
-
-**Filters Before Export:**
-- Include keywords with ≥5 impressions (proven demand)
-- Sort by "Avg Position" descending (easiest wins first)
-- Target position range: 30-100 (achievable improvements)
-
-### Task 1c: Create Baseline Spreadsheet
-- [ ] Create file: `/reports/PHASE5_KEYWORD_BASELINE_2026-05-24.csv`
-- [ ] Fill in exported GSC data
-- [ ] Add "Category" column: Brand, Pillar, Blog, Long-tail
-- [ ] Add "Priority" column: T1 (40-55), T2 (55-75), T3 (75+)
-- [ ] Total keywords expected: 15-25 with impressions ≥5
-
-**Baseline Checks:**
-- [ ] Keyword count exported (minimum 15)
-- [ ] All positions visible (check for #1 positions - unlikely but possible)
-- [ ] CTR captured (even 0% entries are valid)
-- [ ] Impressions column shows numeric values
+### Technical Setup
+- [ ] **Canonical tags set** (homepage, pillar pages, blog index)
+- [ ] **Mobile responsiveness tested** (all breakpoints 320-1920px)
+- [ ] **Page speed baseline captured** (LCP, CLS, INP metrics recorded)
+- [ ] **Lighthouse scores baseline** (mobile & desktop)
+- [ ] **404 error redirects configured** (no broken internal links)
 
 ---
 
-## DAY 3-4 (May 27-28): Competitor Content Analysis
+## 🎯 June 1-7: Blog Launch Week
 
-### Competitor Selection Process
+### Monday, June 1 — Blog #1 Publication & Homepage Optimization
 
-**For each pillar page, find top 3 ranking competitors:**
+**Blog #1: How to Hire a Private Chef (3,000-3,500 words)**
+- [ ] **Content written** (cover all H2 sections from outline)
+- [ ] **Internal links inserted** (6-8 links to related pages)
+- [ ] **Images added** (10-12 images with alt text)
+- [ ] **Schema markup applied** (FAQPage, BreadcrumbList, HowTo)
+- [ ] **Meta title & description set** (120 chars, keyword-focused)
+- [ ] **URL slug finalized** (/blog/how-to-hire-private-chef)
+- [ ] **Published to production**
 
-#### /fine-dining — Top Keywords to Analyze
-1. Search: "fine dining bali"
-2. Search: "fine dining experience bali"  
-3. Search: "hire private chef bali"
-- Expected top competitors: (1) hospitality review sites, (2) private chef services, (3) villa rental + dining combos
-- Document top 3 unique domains from positions 1-10
+**Homepage H2 Fine Dining Optimization**
+- [ ] **"Fine dining at home" section created** (if not already exists)
+- [ ] **Internal link to Blog #1** (anchor: "See our hiring guide")
+- [ ] **Hero section CTA updated** (emphasize fine dining positioning)
+- [ ] **Schema markup updated** (LocalBusiness, Service)
+- [ ] **Meta tags reviewed** (homepage meta description includes "fine dining")
+- [ ] **Deployed to production**
 
-#### /catering — Top Keywords to Analyze
-1. Search: "bali villa catering"
-2. Search: "bali wedding catering"
-3. Search: "corporate catering bali"
-- Expected top competitors: (1) catering companies, (2) wedding planners, (3) event venues
-- Document top 3 unique domains from positions 1-10
-
-#### /events — Top Keywords to Analyze
-1. Search: "wedding catering bali"
-2. Search: "bali event planning"
-3. Search: "corporate retreat bali"
-- Expected top competitors: (1) event planners, (2) wedding services, (3) venue + catering combos
-- Document top 3 unique domains from positions 1-10
-
-#### /locations — Geographic Competitors
-1. Search: "bali villa services seminyak"
-2. Search: "canggu villa catering"
-3. Search: "ubud private chef"
-- Expected top competitors: (1) location-specific service providers, (2) villa rental + add-ons, (3) local hospitality
-- Document top 3 unique domains from positions 1-10
-
-### Competitor Content Audit Template
-
-**For EACH competitor page identified:**
-
-1. **Basic Info**
-   - [ ] Domain name
-   - [ ] Full page URL
-   - [ ] Current ranking position (from search)
-   - [ ] Page title (from meta tag)
-
-2. **Content Length**
-   - [ ] Open page in browser
-   - [ ] Select all (Cmd+A)
-   - [ ] Paste into word counter (online tool or `wc -w`)
-   - [ ] Record: Total word count
-
-3. **Header Structure**
-   - [ ] Open DevTools (Cmd+Option+I)
-   - [ ] Search for `<h1>` tags - count them
-   - [ ] Search for `<h2>` tags - count them
-   - [ ] Search for `<h3>` tags - count them
-   - [ ] Record: H1 count, H2 count, H3 count
-
-4. **Internal Links**
-   - [ ] Search in DevTools for `<a href="` patterns pointing to same domain
-   - [ ] Count unique internal links (exclude nav/footer duplicates)
-   - [ ] Record: Internal link count
-
-5. **Images**
-   - [ ] Count visible images above the fold (hero + first section)
-   - [ ] Count total images on page
-   - [ ] Record: Hero images, total images
-
-6. **Schema Markup**
-   - [ ] View page source (Cmd+U)
-   - [ ] Search for `"@type":`
-   - [ ] List all schema types found (e.g., Service, FAQPage, Organization, LocalBusiness)
-   - [ ] Record: Schema types
-
-7. **Meta Description**
-   - [ ] Copy from DevTools or page source
-   - [ ] Check length (target: 150-160 chars)
-   - [ ] Record: Meta description + length
-
-8. **Update Frequency**
-   - [ ] Check footer for "Last Updated" date
-   - [ ] Check blog section last post date
-   - [ ] Check Google Cache date (site:domain on Google)
-   - [ ] Estimate frequency: Weekly, Monthly, Static
-   - [ ] Record: Frequency estimate
-
-### Competitor Audit Spreadsheet Creation
-- [ ] Create file: `/reports/PHASE5_COMPETITOR_AUDIT_2026-05-28.csv`
-- [ ] Fill in template with all competitor data
-- [ ] Add "myCHEF Current" comparison column
-- [ ] Calculate gaps: "Content Gap" (words), "H2 Gap", "Link Gap", "Image Gap"
-- [ ] Expected rows: 3 competitors × ~5 pillar pages = 15 rows minimum
+**GSC & Monitoring**
+- [ ] **Blog #1 URL submitted to GSC** (via "Inspect URL" to encourage indexing)
+- [ ] **Homepage resubmitted to GSC** (ensure updated content crawled)
+- [ ] **GA4 pageview tracking verified** (can see blog post in real-time)
 
 ---
 
-## DAY 5-7 (May 29-31): Gap Ranking & Prioritization
+### Wednesday, June 3 — Blog #2 Publication & Fine-Dining Pillar Optimization
 
-### Analysis Process
+**Blog #2: Private Chef Cost Breakdown (2,000-2,500 words)**
+- [ ] **Content written** (pricing tables, real-world scenarios, comparisons)
+- [ ] **Internal links inserted** (8-10 links to hiring guide, fine-dining page, cost page)
+- [ ] **Images added** (8-10 images: pricing breakdown, plating, ambiance)
+- [ ] **Schema markup applied** (FAQPage, BreadcrumbList, PriceRangeWidget)
+- [ ] **Meta title & description set** (120 chars, "cost bali" keyword-focused)
+- [ ] **URL slug finalized** (/blog/private-chef-cost)
+- [ ] **Published to production**
 
-**For each identified keyword/competitor pair:**
-- [ ] Calculate opportunity score: (current position - 20) × (gap size)
-- [ ] Classify into Tier 1 (quick wins) or Tier 2 (medium effort)
-- [ ] Estimate effort hours (easy gap = 4h, medium = 6-8h, hard = 10+h)
-- [ ] Estimate timeline to improvement (2-4 weeks typical for Tier 1)
+**Fine-Dining Pillar Page Optimization**
+- [ ] **"Fine dining experience at home" section expanded** (250-300 words)
+- [ ] **Internal links added** (Blog #1 How to Hire, Blog #2 Cost, Blog #3 Qualifications)
+- [ ] **Pillar-to-blog linking strategy implemented** (hub-and-spoke architecture clear)
+- [ ] **Schema markup updated** (Service, BreadcrumbList, LocalBusiness)
+- [ ] **Meta tags reviewed** ("fine dining" keyword in title and description)
+- [ ] **Call-to-action visible** (link to /fine-dining service page)
+- [ ] **Deployed to production**
 
-**Tier 1 Criteria (Quick Wins):**
-- Current position: 40-55
-- Competitor gap: <500 words OR <3 H2s
-- Estimated effort: 4-6 hours
-- Expected result: Move to position 20-30 in 2-4 weeks
-
-**Tier 2 Criteria (Medium Priority):**
-- Current position: 55-75
-- Competitor gap: 500-1,200 words
-- Estimated effort: 6-10 hours
-- Expected result: Move to position 25-35 in 4-8 weeks
-
-### Final Deliverable: Ranked Opportunities
-
-- [ ] Create file: `/reports/PHASE5_OPPORTUNITIES_RANKED_2026-05-31.md`
-- [ ] Format as markdown with 3 tiers
-- [ ] Each opportunity includes:
-  - Keyword name
-  - Current page & position
-  - Competitor leader domain & position
-  - Specific gap (e.g., "+600 words, +2 H2s, add FAQPage schema")
-  - Effort estimate (hours)
-  - Expected timeline to improvement
-- [ ] Target: 8-10 Tier 1 opportunities, 8-12 Tier 2, 4-6 Tier 3
-- [ ] Total opportunities: 20-30
+**GSC & Monitoring**
+- [ ] **Blog #2 URL submitted to GSC**
+- [ ] **Fine-Dining pillar page resubmitted to GSC**
+- [ ] **GA4 behavior tracking confirmed** (can track clicks from blog to service pages)
 
 ---
 
-## HANDOFF: May 31 → June 1
+### Friday, June 6-7 — Blog #3 & #4 Publication
 
-**Deliverables to Content Lead:**
-1. ✓ PHASE5_KEYWORD_BASELINE_2026-05-24.csv
-2. ✓ PHASE5_COMPETITOR_AUDIT_2026-05-28.csv
-3. ✓ PHASE5_OPPORTUNITIES_RANKED_2026-05-31.md
+**Blog #3: Private Chef Qualifications & Training (1,800-2,000 words)**
+- [ ] **Content written** (qualifications, certifications, red flags/green lights)
+- [ ] **Internal links inserted** (6-8 links to hiring guide, role definition, services)
+- [ ] **Images added** (8-10 images: training, certifications, chef at work)
+- [ ] **Schema markup applied** (FAQPage, BreadcrumbList, EducationEvent)
+- [ ] **Meta title & description set** ("qualifications" keyword-focused)
+- [ ] **URL slug finalized** (/blog/private-chef-qualifications)
+- [ ] **Published to production**
 
-**Content Lead Ready to Execute:**
-- 10 Tier 1 quick-win opportunities
-- 8-12 Tier 2 medium opportunities
-- Full effort estimates (total ~65-91 hours across 3 weeks)
-- Detailed page optimization templates in PHASE5_WEEK2_OPTIMIZATION.md
+**Blog #4: What Does a Private Chef Do (1,800-2,000 words)**
+- [ ] **Content written** (responsibilities, daily workflow, role differences)
+- [ ] **Internal links inserted** (6-8 links to hiring guide, cost, qualifications)
+- [ ] **Images added** (8-10 images: chef at work, menu planning, client interaction)
+- [ ] **Schema markup applied** (FAQPage, BreadcrumbList, JobPosting)
+- [ ] **Meta title & description set** ("what does private chef do" keyword-focused)
+- [ ] **URL slug finalized** (/blog/what-does-private-chef-do)
+- [ ] **Published to production**
+
+**GSC & Monitoring**
+- [ ] **Blog #3 & #4 URLs submitted to GSC**
+- [ ] **Blog index page optimized** (all 4 blog posts visible and linked)
+- [ ] **GA4 pageview tracking confirmed** (can see all 4 blog posts in real-time)
 
 ---
 
-## Success Criteria
+## 📊 Week 1 Quality Checks
 
-- [ ] All 3 deliverables completed by May 31
-- [ ] ≥15 baseline keywords captured from GSC
-- [ ] ≥3 competitors audited per pillar page
-- [ ] ≥20 opportunities prioritized
-- [ ] Effort estimates provided for all Tier 1 items
-- [ ] No blockers preventing June 1 content optimization launch
+### Content Quality
+- [ ] **All blog posts are original, not AI-generated** (voice matches brand)
+- [ ] **Word counts meet targets** (Blog #1: 3000+, #2: 2000+, #3-4: 1800+)
+- [ ] **All internal links work** (no 404 errors)
+- [ ] **All images load correctly** (no missing alt text)
+- [ ] **Schema markup validated** (use schema.org validator or Google Rich Results Test)
+
+### Technical Quality
+- [ ] **Mobile rendering correct** (test on iPhone, Android, tablet)
+- [ ] **Page load speed acceptable** (LCP <2.5s, CLS <0.1)
+- [ ] **No console errors** (check DevTools console for JavaScript errors)
+- [ ] **Meta tags display correctly** (check Google search preview)
+- [ ] **XML sitemap updated** (includes all new blog posts)
+
+### SEO Quality
+- [ ] **Target keyword in H1** (Blog #1: "How to Hire", #2: "Cost", #3: "Qualifications", #4: "What Does")
+- [ ] **Target keyword in meta description** (each blog has keyword in meta)
+- [ ] **Related keywords mentioned** (secondary keywords present in body)
+- [ ] **Keyword density natural** (not stuffed, reads naturally)
+- [ ] **Outbound links quality** (only linking to reputable sources)
+
+### User Experience
+- [ ] **CTA visible above fold** (encourage service page visit or contact form)
+- [ ] **Internal link anchor text descriptive** (not "click here" or "learn more")
+- [ ] **Mobile touch targets large enough** (buttons, links at least 48px)
+- [ ] **No auto-play audio/video** (no autoplay disruptions)
+- [ ] **Form fields accessible** (can tab through contact form)
 
 ---
 
-**Status:** Ready for May 25 Kickoff  
-**Created:** May 17, 2026  
-**Last Updated:** May 17, 2026
+## 📈 Week 1 Monitoring & Metrics
+
+### Daily Monitoring (June 1-7)
+- [ ] **Google Search Console dashboard reviewed** (check new URL status)
+- [ ] **GA4 real-time tracking checked** (verify traffic flowing to new pages)
+- [ ] **No indexation errors reported** (check GSC for crawl issues)
+- [ ] **Page speed monitored** (LCP/CLS/INP remain stable)
+
+### End-of-Week Metrics Capture (June 7)
+- [ ] **GSC impressions recorded** (baseline for keyword tracking)
+- [ ] **GA4 sessions recorded** (baseline blog traffic)
+- [ ] **Bounce rate noted** (target: <50% for blog content)
+- [ ] **Internal CTR documented** (% of blog visitors clicking to service pages)
+
+### Expected Results by June 7
+- [ ] **4 blog posts indexed** (all appearing in Google index)
+- [ ] **10-20 organic impressions** (early impressions in GSC)
+- [ ] **1-3 organic clicks** (early traffic to blog posts)
+- [ ] **0-2 clicks from blog to service pages** (early conversion tracking)
+- [ ] **Homepage remaining stable** (no negative side effects from changes)
+
+---
+
+## 🔧 Troubleshooting & Contingencies
+
+### If Blog Not Indexing
+- [ ] Check GSC for crawl errors (robots.txt, noindex, redirects)
+- [ ] Resubmit URL via GSC "Inspect URL" tool
+- [ ] Create internal link from homepage to blog (help crawlability)
+- [ ] Check XML sitemap includes blog post URL
+
+### If Page Load Speed Degrades
+- [ ] Check image file sizes (should be <200KB each)
+- [ ] Review third-party scripts (analytics, ads, embeds)
+- [ ] Run Lighthouse for specific bottlenecks
+- [ ] Defer non-critical CSS/JS
+
+### If Rankings Not Improving
+- [ ] Normal — SEO takes 2-4 weeks for new content
+- [ ] Continue publishing remaining blogs on schedule
+- [ ] Monitor GSC for keyword impressions (not just rankings)
+- [ ] Consider backlink acquisition for faster ranking
+
+### If Blog Traffic Lower Than Expected
+- [ ] Check GA4 filtering (no exclude filters active)
+- [ ] Verify GA4 goal tracking (pageview goal triggered)
+- [ ] Check if users bouncing too quickly (content quality issue)
+- [ ] Review internal linking (users may not be finding blog)
+
+---
+
+## 📋 Sign-Off & Next Phase
+
+**Week 1 Completion Criteria:**
+- [ ] All 4 blog posts published to production
+- [ ] Homepage & Fine-Dining pillar optimized
+- [ ] All URLs submitted to GSC
+- [ ] GA4 tracking verified working
+- [ ] No technical errors on blog pages
+- [ ] Content quality verified (no AI generation detected)
+
+**Handoff to Week 2 (June 8-14):**
+- [ ] Blog #5, #6, #7 outlines ready for writing
+- [ ] Events & In-Villa pillar pages ready for optimization
+- [ ] Week 1 metrics documented for comparison
+
+---
+
+**Status:** 🟢 Ready for Execution  
+**Start Date:** June 1, 2026  
+**Completion Date:** June 7, 2026  
+**Owner:** Content & Marketing Team

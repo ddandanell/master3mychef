@@ -60,7 +60,7 @@ const REAL_WEDDINGS = [
   { names: 'Emma & James', date: 'March 2026', villa: 'Villa Aria, Uluwatu', image: '/events-event-wedding-xl.webp' },
   { names: 'Anya & Mark', date: 'January 2026', villa: 'Villa Soma, Canggu', image: '/events-wedding-reception-lg.webp' },
   { names: 'Sarah & David', date: 'December 2025', villa: 'Villa Kali, Seminyak', image: '/generated/aura-toast.webp' },
-  { names: 'Priya & Raj', date: 'November 2025', villa: 'Villa Tirta, Uluwatu', image: '/generated/aura-setup.webp' },
+  { names: 'Priya & Raj', date: 'November 2025', villa: 'Villa Tirta, Uluwatu', image: '/generated/experience-aura-setup-lg.webp' },
 ]
 
 const LEAD_TIMES = [
@@ -296,7 +296,7 @@ export default function EventsWeddingsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/aura-setup.webp" alt="Wedding reception setup inside a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/experience-aura-setup-lg.webp" alt="Wedding reception setup inside a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -409,7 +409,7 @@ export default function EventsWeddingsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/aura-setup.webp" alt="Intimate Bali wedding dinner for a small group" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/experience-aura-setup-lg.webp" alt="Intimate Bali wedding dinner for a small group" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>

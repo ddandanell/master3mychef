@@ -254,7 +254,7 @@ export default function ServiceHostPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/staffing-hero.webp" alt="Professional hosts at Bali villa event" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/staffing-staffing-hero-xl.webp" alt="Professional hosts at Bali villa event" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

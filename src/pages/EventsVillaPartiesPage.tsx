@@ -71,7 +71,7 @@ const MUSIC_OPTIONS = [
 ]
 
 const DECOR_GALLERY = [
-  { title: 'Festoon Lighting', desc: 'String lights across terraces and gardens.', image: '/generated/aura-setup.webp' },
+  { title: 'Festoon Lighting', desc: 'String lights across terraces and gardens.', image: '/generated/experience-aura-setup-lg.webp' },
   { title: 'Pool Floats & Decor', desc: 'Themed inflatables, flower arrangements, lanterns.', image: '/generated/party-pool.webp' },
   { title: 'Lounge Areas', desc: 'Low tables, cushions, rugs for relaxed seating.', image: '/generated/party-rooftop.webp' },
   { title: 'Bar Styling', desc: 'Custom bar setup with branded menus and garnishes.', image: '/generated/party-beer.webp' },

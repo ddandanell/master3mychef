@@ -109,6 +109,42 @@ export default function Footer() {
           ))}
 
           <div className="group">
+            <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Top Experiences</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/villa-bbq-catering-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                  Villa BBQ Nights
+                </Link>
+              </li>
+              <li>
+                <Link to="/bali-wedding-catering-packages" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                  Wedding Catering
+                </Link>
+              </li>
+              <li>
+                <Link to="/michelin-private-chef-bali-prices" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                  Michelin Chef Prices
+                </Link>
+              </li>
+              <li>
+                <Link to="/private-tasting-menu-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                  Private Tasting Menus
+                </Link>
+              </li>
+              <li>
+                <Link to="/chef-table-experience-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                  Chef Table Experience
+                </Link>
+              </li>
+              <li>
+                <Link to="/luxury-birthday-party-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                  Villa Birthday Parties
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="group">
             <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Locations</h4>
             <ul className="space-y-3">
               <li>

@@ -321,7 +321,12 @@ export default function HubPage() {
               className="absolute inset-0 h-full w-full object-cover object-[center_52%]"
               fetchPriority="high"
               loading="eager"
-              decoding="async" />
+              decoding="async"
+              onError={(e) => {
+                console.error('❌ Critical: Homepage hero image failed to load. Check that public/generated/bali-hub-hero.webp exists.')
+                const img = e.target as HTMLImageElement
+                img.style.opacity = '0.3'
+              }} />
             <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)' }} />
             <div className="absolute inset-0 bg-black/20 md:hidden" />
             <div className="relative z-10 mx-auto flex min-h-[calc(100vh-64px)] max-w-[1280px] items-center px-5 py-10 sm:px-6 md:min-h-[calc(100vh-72px)] md:py-14">

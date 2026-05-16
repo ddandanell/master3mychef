@@ -1,4 +1,5 @@
-import { useId, useState } from 'react'
+import { useEffect, useId, useMemo, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Calendar, MessageSquare, Check, Phone } from 'lucide-react'
 
 interface Field {
@@ -39,8 +40,20 @@ export default function BookingFormCatering({
   messageIntro,
 }: BookingFormCateringProps) {
   const formId = useId()
+  const location = useLocation()
   const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState<Record<string, string>>({})
+
+  const selectedPackage = useMemo(() => {
+    const value = new URLSearchParams(location.search).get('package')?.trim()
+    if (!value || !packageOptions?.includes(value)) return ''
+    return value
+  }, [location.search, packageOptions])
+
+  useEffect(() => {
+    if (!selectedPackage) return
+    setFormData((prev) => (prev.package === selectedPackage ? prev : { ...prev, package: selectedPackage }))
+  }, [selectedPackage])
 
   const handleChange = (name: string, value: string) => {
     setFormData((prev) => ({ ...prev, [name]: value }))

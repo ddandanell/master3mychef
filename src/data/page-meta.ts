@@ -111,7 +111,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Hire vetted private chefs, live-in chefs, and villa staff in Bali. 48-hour placement. Hotels, villas, restaurants. Message Marco on WhatsApp.',
     canonical: `${SITE}/staffing`,
     h1: 'Hire Vetted Hospitality Staff for Your Villa, Hotel or Home.',
-    ogImage: `${SITE}/chef-portrait.webp`,
+    ogImage: `${SITE}/generated/luna-chef-portrait.webp`,
   },
 } as const
 

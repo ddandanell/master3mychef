@@ -152,10 +152,14 @@ export default function PrivateChefBaliPage() {
             alt="Michelin-trained private chef preparing dinner in a Bali villa — myCHEF"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.25) 100%)',
+            }}
           />
-          <div className="absolute inset-0 bg-black/55" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="absolute top-0 left-0 z-10 w-full">
           <Breadcrumb items={[{ label: 'Fine Dining', href: '/fine-dining' }, { label: 'Private Chef Bali' }]} theme="dark" className="py-6" />
@@ -208,8 +212,7 @@ export default function PrivateChefBaliPage() {
               src="/generated/luna-table.webp"
               alt="Private chef dinner table in a Bali villa — elegant setting, myCHEF"
               width={800} height={600} loading="lazy" decoding="async"
-              className="w-full h-auto object-cover rounded-[20px]"
-            />
+              className="w-full h-auto object-cover rounded-[20px]" />
           </div>
           <div className="pcb-reveal">
             <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -317,8 +320,7 @@ export default function PrivateChefBaliPage() {
               src="/generated/luna-chef-portrait.webp"
               alt="Adriano — myCHEF executive chef, Michelin-trained, Bali private dining"
               width={800} height={1000} loading="lazy" decoding="async"
-              className="w-full h-auto object-cover rounded-[20px]"
-            />
+              className="w-full h-auto object-cover rounded-[20px]" />
           </div>
         </div>
       </section>

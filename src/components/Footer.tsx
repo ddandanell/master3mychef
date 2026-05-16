@@ -64,8 +64,8 @@ export default function Footer() {
             <h4 className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 font-semibold">Locations</h4>
             <ul className="space-y-2.5">
               <li>
-                <Link to="/locations" className="text-sm text-white/[70%] hover:text-white transition-colors">
-                  All Locations
+                <Link to="/locations" className="text-sm text-white/[70%] hover:text-white transition-colors font-medium">
+                  Bali Regions
                 </Link>
               </li>
               {locations.map((loc) => (
@@ -75,6 +75,62 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li className="pt-2">
+                <Link to="/jakarta" className="text-sm text-white/[70%] hover:text-white transition-colors font-medium">
+                  Jakarta Expansion
+                </Link>
+              </li>
+              <li>
+                <Link to="/jakarta" className="text-sm text-white/[50%] hover:text-white transition-colors">
+                  Private Chef Jakarta
+                </Link>
+              </li>
+              <li>
+                <Link to="/private-chef-menteng" className="text-sm text-white/[50%] hover:text-white transition-colors">
+                  Chef in Menteng
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 font-semibold">Planning Guides</h4>
+            <ul className="space-y-2.5">
+              <li>
+                <Link to="/help" className="text-sm text-white/[70%] hover:text-white transition-colors">
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link to="/help/pricing" className="text-sm text-white/[50%] hover:text-white transition-colors">
+                  Pricing Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/help/menu-guide" className="text-sm text-white/[50%] hover:text-white transition-colors">
+                  Menu Planning
+                </Link>
+              </li>
+              <li>
+                <Link to="/help/wedding-guide" className="text-sm text-white/[50%] hover:text-white transition-colors">
+                  Wedding Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/help/corporate-guide" className="text-sm text-white/[50%] hover:text-white transition-colors">
+                  Corporate Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/help/staffing-guide" className="text-sm text-white/[50%] hover:text-white transition-colors">
+                  Staffing Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/journal" className="text-sm text-white/[50%] hover:text-white transition-colors">
+                  myCHEF Journal
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

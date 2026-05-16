@@ -189,8 +189,7 @@ export default function CateringFloatingBreakfastPage() {
           decoding="async"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-center md:object-[center_center]"
-          style={{ objectPosition: 'center center' }}
-        />
+          style={{ objectPosition: 'center center' }} />
 
         {/* Left-to-right gradient — text zone dark, image visible on right */}
         <div
@@ -316,8 +315,7 @@ export default function CateringFloatingBreakfastPage() {
                 height={600}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover aspect-[4/3]"
-              />
+                className="w-full h-full object-cover aspect-[4/3]" />
             </div>
           </div>
         </div>
@@ -442,8 +440,7 @@ export default function CateringFloatingBreakfastPage() {
                 height={600}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover aspect-[4/3]"
-              />
+                className="w-full h-full object-cover aspect-[4/3]" />
             </div>
             <div>
               <p className="text-[#4A4745] text-sm leading-relaxed mb-4">
@@ -673,8 +670,7 @@ export default function CateringFloatingBreakfastPage() {
             height={1080}
             loading="lazy"
             decoding="async"
-            className="w-full h-full object-cover"
-          />
+            className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

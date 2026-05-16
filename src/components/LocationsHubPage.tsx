@@ -86,8 +86,7 @@ export default function LocationsHubPage() {
             height={1080}
             fetchPriority="high"
             decoding="async"
-            className="w-full h-full object-cover object-center"
-          />
+            className="w-full h-full object-cover object-center" />
           {/* Left-leaning cinematic overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/15" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
@@ -178,23 +177,77 @@ export default function LocationsHubPage() {
         </div>
       </section>
 
+      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Beyond Bali</p>
+              <h2 className="font-playfair text-3xl md:text-5xl mb-6">Jakarta Expansion</h2>
+              <p className="text-lg text-white/70 mb-8 leading-relaxed">
+                myCHEF has expanded to Indonesia's capital, bringing the same Michelin-trained standards to private residences and corporate suites in Jakarta.
+              </p>
+              <div className="space-y-4">
+                <Link
+                  to="/jakarta"
+                  className="flex items-center justify-between p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
+                >
+                  <div>
+                    <h3 className="font-playfair text-xl mb-1">Private Chef Jakarta</h3>
+                    <p className="text-sm text-white/50">Full-service fine dining and weekly meal prep.</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-[#C5A028] transition-transform group-hover:translate-x-1" />
+                </Link>
+                <Link
+                  to="/private-chef-menteng"
+                  className="flex items-center justify-between p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
+                >
+                  <div>
+                    <h3 className="font-playfair text-xl mb-1">Chef in Menteng</h3>
+                    <p className="text-sm text-white/50">Discreet service for Jakarta's primary diplomatic district.</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-[#C5A028] transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+            </div>
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/generated/jakarta-skyline.webp"
+                alt="Jakarta skyline at dusk — myCHEF private chef expansion"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-10 bg-[#FAFAF8]">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="rounded-2xl border border-black/5 bg-white px-6 py-6">
-            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-3">Popular Areas</p>
-            <div className="flex flex-wrap gap-3">
-              {['seminyak', 'canggu', 'ubud', 'uluwatu', 'nusa-dua'].map((slug) => {
-                const location = LOCATIONS[slug as keyof typeof LOCATIONS]
-                return (
-                  <Link
-                    key={slug}
-                    to={`/locations/${slug}`}
-                    className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-sm text-[#1A1A1A] transition-colors hover:border-[#C5A028] hover:text-[#C5A028]"
-                  >
-                    {location.label}
-                  </Link>
-                )
-              })}
+          <div className="rounded-2xl border border-black/5 bg-white px-6 py-8">
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Detailed Service Areas</p>
+            <div className="flex flex-wrap gap-2.5">
+              {[
+                { label: 'Seminyak', href: '/locations/seminyak' },
+                { label: 'Canggu', href: '/locations/canggu' },
+                { label: 'Berawa', href: '/locations/berawa' },
+                { label: 'Pererenan', href: '/locations/pererenan' },
+                { label: 'Ubud', href: '/locations/ubud' },
+                { label: 'Uluwatu', href: '/locations/uluwatu' },
+                { label: 'Bingin', href: '/locations/bukit' },
+                { label: 'Nusa Dua', href: '/locations/nusa-dua' },
+                { label: 'Jimbaran', href: '/locations/jimbaran' },
+                { label: 'Sanur', href: '/locations/sanur' },
+                { label: 'Jakarta', href: '/jakarta' },
+                { label: 'Menteng', href: '/private-chef-menteng' },
+              ].map((link) => (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

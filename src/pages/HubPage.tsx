@@ -53,7 +53,7 @@ const HOW_IT_WORKS = [
     title: 'Message Us',
     desc: 'Your dates, villa, guest count. We reply within the hour.',
     icon: MessageCircle,
-    color: '#C9A227',
+    color: '#C5A028',
   },
   {
     step: '02',
@@ -321,30 +321,30 @@ export default function HubPage() {
               className="absolute inset-0 h-full w-full object-cover object-[center_52%]"
               fetchPriority="high"
               loading="eager"
-              decoding="async"
-            />
-            <div className="absolute inset-0 bg-white/0" />
+              decoding="async" />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)' }} />
+            <div className="absolute inset-0 bg-black/20 md:hidden" />
             <div className="relative z-10 mx-auto flex min-h-[calc(100vh-64px)] max-w-[1280px] items-center px-5 py-10 sm:px-6 md:min-h-[calc(100vh-72px)] md:py-14">
-              <div className="max-w-2xl rounded-2xl bg-[#F5F3EF]/80 p-5 backdrop-blur-[2px] md:max-w-[46%] md:bg-transparent md:p-0 md:backdrop-blur-0">
-                <p className="hub-hero-label mb-4 text-xs uppercase tracking-[0.34em] text-[#8A6F15] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              <div className="max-w-2xl md:max-w-[46%]">
+                <p className="hub-hero-label mb-4 text-xs uppercase tracking-[0.34em] text-[#C5A028] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Your Villa. Our Kitchen.
                 </p>
-                <h1 className="hub-hero-title mb-4 text-[2rem] leading-[1.08] text-[#171614] sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h1 className="hub-hero-title mb-4 text-[2rem] leading-[1.08] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
                   A Michelin-Trained Private Chef, in Your Bali Villa.
                 </h1>
                 <div className="gold-arc mb-6" />
-                <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: '#4A4745' }}>
+                <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>
                   Private dining, catering, and events across Bali. We shop, cook, serve, and clean. You just enjoy.
                 </p>
                 <div className="hub-hero-cta mb-4 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-                  <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ background: '#111', color: '#F5F3EF' }}>
+                  <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ background: '#C5A028', color: '#111' }}>
                     <MessageCircle className="w-4 h-4" /> Get My Free Quote <span aria-hidden="true">→</span>
                   </a>
-                  <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ borderColor: '#1A1916', color: '#1A1916' }}>
+                  <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
                     Browse Menus &amp; Pricing <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-                <p className="text-sm uppercase tracking-[0.18em] text-[#5E564B]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-sm uppercase tracking-[0.18em] text-white/60" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Replies within 1 hour · Weekends fill fast
                 </p>
               </div>
@@ -447,12 +447,12 @@ export default function HubPage() {
           <div className="text-center mb-16 md:mb-24">
             <p
               className="text-base md:text-[16px] tracking-[0.08em] uppercase mb-5"
-              style={{ color: '#C9A227', fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, letterSpacing: '0.1em' }}
+              style={{ color: '#C5A028', fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, letterSpacing: '0.1em' }}
             >
               Simple as It Gets
             </p>
             <div className="flex justify-center mb-7">
-              <div style={{ width: '60px', height: '1px', background: '#C9A227' }} />
+              <div style={{ width: '60px', height: '1px', background: '#C5A028' }} />
             </div>
             <h2
               className="text-5xl md:text-7xl leading-tight mb-6"
@@ -515,7 +515,7 @@ export default function HubPage() {
                     Step {item.step}
                   </p>
                   <div className="flex justify-center mb-6">
-                    <div style={{ width: '45px', height: '1px', background: '#C9A227' }} />
+                    <div style={{ width: '45px', height: '1px', background: '#C5A028' }} />
                   </div>
                   <h3
                     className="text-2xl md:text-3xl leading-tight mb-5"
@@ -537,7 +537,7 @@ export default function HubPage() {
                     className="hidden md:block absolute top-1/3 -right-5 w-10 h-px"
                     style={{
                       background: 'rgba(201, 162, 39, 0.45)',
-                      backgroundImage: 'radial-gradient(circle, #C9A227 1px, transparent 1px)',
+                      backgroundImage: 'radial-gradient(circle, #C5A028 1px, transparent 1px)',
                       backgroundSize: '6px 100%',
                       backgroundPosition: 'left center',
                       backgroundRepeat: 'repeat-x',
@@ -557,7 +557,7 @@ export default function HubPage() {
               data-source="homepage-hiw-cta"
               className="inline-flex items-center justify-center gap-3 px-12 py-4 rounded-full mb-6 transition-all hover:shadow-lg hover:scale-105"
               style={{
-                background: '#C9A227',
+                background: '#C5A028',
                 color: 'white',
                 fontFamily: "'Inter', sans-serif",
                 fontSize: '15px',
@@ -763,7 +763,7 @@ export default function HubPage() {
               style={{ aspectRatio: '4/5' }}
             >
               <img
-                src="/images/family-villa-dinner-cutout.png"
+                src="/generated/hub-villa.webp"
                 alt="Family enjoying private villa dinner in Bali"
                 width={500}
                 height={625}
@@ -772,8 +772,7 @@ export default function HubPage() {
                 decoding="async"
                 style={{
                   filter: 'drop-shadow(0 20px 60px rgba(0,0,0,0.08))'
-                }}
-              />
+                }} />
             </div>
           </div>
         </div>
@@ -785,7 +784,7 @@ export default function HubPage() {
             style={{ aspectRatio: '4/3' }}
           >
             <img
-              src="/public/images/family-villa-dinner-cutout.png"
+              src="/generated/hub-villa.webp"
               alt="Family enjoying private villa dinner in Bali"
               width={600}
               height={450}

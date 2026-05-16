@@ -209,8 +209,7 @@ export default function StaffingPage() {
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
-          decoding="async"
-        />
+          decoding="async" />
         <div
           className="absolute inset-0"
           style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.88) 100%)' }}

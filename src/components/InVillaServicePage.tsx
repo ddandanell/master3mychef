@@ -126,8 +126,7 @@ export default function InVillaServicePage() {
             height={1080}
             fetchPriority="high"
             decoding="async"
-            className="w-full h-full object-cover object-center"
-          />
+            className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/55" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
@@ -267,8 +266,7 @@ export default function InVillaServicePage() {
               alt="myCHEF award-winning private villa dining in Bali"
               className="w-full h-full object-cover"
               loading="lazy"
-              decoding="async"
-            />
+              decoding="async" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           </div>
 

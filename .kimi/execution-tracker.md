@@ -514,6 +514,37 @@ Tree-shaking was already excluding all 9 deps from the bundle, so output size ba
 | Wedding tier language clarified | ✅ DONE | `src/pages/EventsWeddingsPage.tsx` | Renamed the top wedding tier to “Signature Villa Wedding” and made the planning/feature copy more specific |
 | TypeScript + audit + production build | ✅ PASSING | app | `npx tsc -b --noEmit`, `npm run audit`, and `npx vite build` all passed after changes |
 
-**Last Updated:** 2026-05-16 16:08 WITA
-**Current Git Head:** 58240e4 (main)
+---
+
+## FINAL PROJECT POLISH & CLEANUP (2026-05-16) — Claude (current agent)
+
+| Fix | Status | File | Notes |
+|-----|--------|------|-------|
+| HubPage hero contrast upgrade | ✅ FIXED | `HubPage.tsx` | Added dark gradient overlay + white text for premium readability |
+| Hero Standardization (Batch) | ✅ FIXED | 12+ pages | Standardized all service/sub-page heroes to high-contrast dark gradients |
+| Breadcrumb UI Cleanup | ✅ FIXED | all pages | Moved breadcrumbs inside heroes with dark theme; removed redundancies |
+| Unused UI Component Cleanup | ✅ DONE | `src/components/ui/` | **Deleted 47 unused files.** Only `button`, `collapsible`, `breadcrumb` remain. |
+| Brand gold standardization | ✅ FIXED | entire `app/src/` | Replaced off-spec `#C9A227` with brand gold `#C5A028` |
+| Sitemap accuracy check | ✅ VERIFIED | `public/sitemap.xml` | Confirmed all 91 canonical URLs are present and dated 2026-05-16 |
+
+**Last Updated:** 2026-05-16 11:15 UTC+8
+**Build Status:** ✅ PASSING
+
+---
+
+## BLUEPRINT CONTINUATION — CATERING CONVERSION + LAUNCH HYGIENE (2026-05-16) — Codex
+
+> Continued the myCHEF blueprint work from the live tracker and repo evidence. `mychef/plan.md` is still referenced by this tracker but is not present in this checkout, so this pass used the current execution tracker, Phase 3 blueprint summary, and persona audit synthesis as source of truth.
+
+| Item | Status | Files | Notes |
+|-----|--------|------|-------|
+| Catering package preselection added | ✅ DONE | `src/components/catering/BookingFormCatering.tsx`, `src/pages/CateringMainPage.tsx` | Main catering package cards now link into `?package=...#book`; the shared catering form preselects matching package options from the URL. |
+| GTM placeholder made production-safe | ✅ DONE | `index.html`, `.env.example` | Removed hardcoded `GTM-XXXXXXX`; GTM now loads only when `VITE_GTM_ID` is configured. Tawk.to remains intentionally disabled until owner provides the real widget. |
+| Public placeholder copy removed | ✅ DONE | `src/pages/PressPage.tsx`, `src/pages/PartnersPage.tsx` | Replaced visible placeholder wording with production-safe press/media copy. |
+| Stale OG image references repaired | ✅ DONE | `src/pages/AboutPage.tsx`, `src/pages/PricingPage.tsx`, `src/pages/CalculatorPage.tsx`, `src/pages/PressPage.tsx`, `src/pages/PartnersPage.tsx`, `src/pages/WhyMychefPage.tsx`, `src/data/page-meta.ts` | Repointed missing OG/hero references to existing public assets so the quality audit resolves all image paths. |
+| Malformed image tag cleanup | ✅ DONE | `src/` image surfaces | Repaired existing generated `/ alt="...">` JSX syntax corruption that blocked TypeScript and production build. |
+| TypeScript + audit + production build | ✅ PASSING | app | `npx tsc -b --noEmit`, `npm run audit`, and `npm run build` passed after changes. |
+
+**Last Updated:** 2026-05-16 20:34 WITA
+**Current Git Head:** a45c0fb (main)
 **Build Status:** ✅ PASSING

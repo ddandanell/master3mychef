@@ -330,8 +330,7 @@ export default function LunaPage() {
             height={1080}
             fetchPriority="high"
             decoding="async"
-            className="w-full h-full object-cover"
-          />
+            className="w-full h-full object-cover" />
           <div
             className="absolute inset-0"
             style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.90))', backdropFilter: 'blur(2px)' }}
@@ -456,8 +455,7 @@ export default function LunaPage() {
                 height={600}
                 className="w-full h-full object-cover"
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" />
             </div>
           </div>
         </div>
@@ -499,8 +497,7 @@ export default function LunaPage() {
                 height={600}
                 className="w-full h-full object-cover"
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" />
             </div>
             <div className="order-1 md:order-2">
               <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Romantic Dinner</p>
@@ -536,8 +533,7 @@ export default function LunaPage() {
                 height={600}
                 className="rounded-2xl w-full aspect-[4/3] object-cover"
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" />
             </div>
             <div className="luna-reveal">
               <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Experience</p>
@@ -594,8 +590,7 @@ export default function LunaPage() {
                 height={600}
                 className="w-full h-full object-cover"
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" />
             </div>
           </div>
         </div>
@@ -945,8 +940,7 @@ export default function LunaPage() {
                 height={600}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
@@ -956,8 +950,7 @@ export default function LunaPage() {
                 height={600}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
@@ -967,8 +960,7 @@ export default function LunaPage() {
                 height={600}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
@@ -978,8 +970,7 @@ export default function LunaPage() {
                 height={600}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" />
             </div>
           </div>
         </div>
@@ -1023,8 +1014,7 @@ export default function LunaPage() {
             height={1080}
             className="absolute inset-0 w-full h-full object-cover"
             loading="lazy"
-            decoding="async"
-          />
+            decoding="async" />
           {/* Soft fade into the section below so testimonial cards don't sit on hard edge */}
           <div
             className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"

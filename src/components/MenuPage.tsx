@@ -75,8 +75,7 @@ export default function MenuPage() {
               alt="myCHEF private chef menus — Bali villa dining"
               width={1920} height={1080}
               decoding="async" fetchPriority="high"
-              className="w-full h-full object-cover"
-            />
+              className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
           </div>
           <div className="relative z-10 max-w-[1120px] mx-auto px-8 pb-16 w-full">

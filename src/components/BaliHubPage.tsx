@@ -61,8 +61,7 @@ export default function BaliHubPage() {
           width={1920}
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"
-          decoding="async" fetchPriority="high"
-        />
+          decoding="async" fetchPriority="high" />
         <div
           className="absolute inset-0"
           style={{ background: 'linear-gradient(180deg, rgba(5,5,5,0.35) 0%, rgba(5,5,5,0.15) 35%, rgba(5,5,5,0.85) 100%)' }}

@@ -351,8 +351,7 @@ export default function EventsMainPage() {
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0 w-full h-full object-cover" />
         <div
           className="absolute inset-0"
           style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.10) 100%)' }}
@@ -809,7 +808,7 @@ export default function EventsMainPage() {
         <div className="absolute inset-0 opacity-40">
           <img
             src="/generated/aura-tablescape.webp"
-            alt=""
+            alt="Aura restaurant/service at myCHEF fine dining"
             aria-hidden
             width={1920}
             height={1080}

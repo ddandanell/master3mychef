@@ -221,8 +221,7 @@ export default function CateringGrazingPage() {
             width={1920}
             height={1080}
             decoding="async" fetchPriority="high"
-            className="w-full h-full object-cover"
-          />
+            className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
@@ -289,8 +288,7 @@ export default function CateringGrazingPage() {
                 src="/generated/pkg-grazing.webp"
                 alt="Grazing table setup at a Bali villa with cheese, charcuterie, and tropical fruit"
                 className="w-full h-full object-cover aspect-[4/3]"
-                loading="lazy"
-              />
+                loading="lazy" />
             </div>
           </div>
         </div>
@@ -604,8 +602,7 @@ export default function CateringGrazingPage() {
             src="/generated/pkg-grazing.webp"
             alt="Beautiful grazing table at a Bali villa event with cheese, charcuterie, and tropical styling"
             className="w-full h-full object-cover"
-            loading="lazy"
-          />
+            loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

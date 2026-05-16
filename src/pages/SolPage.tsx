@@ -82,8 +82,7 @@ export default function SolPage() {
             width={1920}
             height={1080}
             fetchPriority="high"
-            className="w-full h-full object-cover"
-          />
+            className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -222,8 +221,7 @@ export default function SolPage() {
                 height={1000}
                 className="w-full h-full object-cover"
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" />
             </div>
             <div>
               <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Your Chef</p>

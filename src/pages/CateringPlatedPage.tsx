@@ -202,8 +202,6 @@ export default function CateringPlatedPage() {
         ]}
       />
 
-      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Plated Dinner Bali' }]} />
-
       {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -213,18 +211,24 @@ export default function CateringPlatedPage() {
             width={1920}
             height={1080}
             decoding="async" fetchPriority="high"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
           />
-          <div className="absolute inset-0 bg-black/75" />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
+          <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Plated Dinner Bali' }]} theme="dark" className="justify-center mb-8" />
           <p className="text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600, color: ACCENT }}>
             Private Chef Fine Dining
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Plated Dinner Bali for Private Villa Fine Dining
           </h1>
-          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-2xl mx-auto">
             A structured, multi-course dinner experience with chef-led cooking, elegant plating, service staff, and full villa setup.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -289,8 +293,7 @@ export default function CateringPlatedPage() {
                 height={1080}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover"
-              />
+                className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -711,8 +714,7 @@ export default function CateringPlatedPage() {
             height={1080}
             loading="lazy"
             decoding="async"
-            className="w-full h-full object-cover"
-          />
+            className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

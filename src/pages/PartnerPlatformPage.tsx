@@ -126,8 +126,7 @@ export default function PartnerPlatformPage() {
           width={1920}
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"
-          decoding="async" fetchPriority="high"
-        />
+          decoding="async" fetchPriority="high" />
         <div
           className="absolute inset-0"
           style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.92))', backdropFilter: 'blur(2px)' }}
@@ -269,8 +268,7 @@ export default function PartnerPlatformPage() {
           src="/generated/partner-platform-dashboard.webp"
           alt="Chef plating a Michelin-level course on a black marble countertop in a Bali villa"
           className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
-        />
+          loading="lazy" />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.55))' }} />
         <div className="relative z-10 h-full flex items-center justify-center px-6 text-center text-white">
           <p className="font-playfair text-2xl md:text-4xl max-w-[820px] leading-tight">

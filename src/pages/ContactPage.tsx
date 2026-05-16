@@ -141,8 +141,7 @@ export default function ContactPage() {
           width={1920}
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"
-          fetchPriority="high"
-        />
+          fetchPriority="high" />
         <div
           className="absolute inset-0"
           style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.40), rgba(0,0,0,0.86))', backdropFilter: 'blur(2px)' }}
@@ -256,8 +255,7 @@ export default function ContactPage() {
               height={1000}
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
-              decoding="async"
-            />
+              decoding="async" />
             {/* Soft gradient bottom so any future caption reads cleanly */}
             <div
               className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"

@@ -139,35 +139,37 @@ export default function EventsAnniversariesPage() {
         ]}
       />
 
-      <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Anniversaries' }]} />
-
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dinner setup by a Bali villa pool" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
-            style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.10) 100%)' }}
+            style={{
+              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
           />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="relative z-10 px-6 md:px-8 py-12 md:py-20 max-w-2xl mx-auto md:mx-0 md:ml-auto md:mr-auto md:flex md:flex-col md:justify-center h-full w-full">
-          <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+          <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Anniversaries' }]} theme="dark" className="mb-8" />
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
             Chapter 1 — Anniversary Dinners
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
             Anniversary Celebrations in Bali — Private Chef Dinners
           </h1>
-          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-xl">
+          <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
             Private villa anniversaries with chef-led menus, table service, wine pairing add-ons, and discreet surprise coordination — from a romantic dinner for two to a renewal of vows with family and friends.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <Calendar className="w-4 h-4" /> Book Anniversary Dinner
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-anniversaries-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
-          <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em] text-left">
+          <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left">
             From IDR 1.2M++/guest · Romantic styling and discreet coordination available
           </p>
         </div>

@@ -122,9 +122,14 @@ export default function RomanticDinnerPage() {
             alt="Candlelit romantic dinner table in a Bali villa at dusk with flowers and wine"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.25) 100%)',
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/35" />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="absolute top-0 left-0 z-10 w-full">
           <Breadcrumb items={[{ label: 'Fine Dining', href: '/fine-dining' }, { label: 'Romantic Dinner' }]} theme="dark" className="py-6" />
@@ -227,8 +232,7 @@ export default function RomanticDinnerPage() {
           alt="Candlelit private dining table set for two in a Bali villa with white linens and flowers"
           width={1920} height={1080}
           loading="lazy" decoding="async"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/15" />
         <div className="relative z-10 px-8 pb-16 md:pb-24 pt-32 max-w-[900px] mx-auto w-full">
           <p className="text-[#C5A028] text-xs uppercase tracking-[0.35em] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -506,8 +510,7 @@ export default function RomanticDinnerPage() {
           alt="Private fine dining in Bali villa"
           width={1920} height={800}
           loading="lazy" decoding="async"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/75 to-black/60" />
         <div className="relative z-10 text-center max-w-[720px] mx-auto">
           <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>

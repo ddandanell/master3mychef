@@ -34,6 +34,7 @@ gsap.registerPlugin(ScrollTrigger)
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20catering%20quote.'
 const WA_DAILY_CHEF_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20daily%20villa%20chef.'
 const SITE = 'https://mychef.id'
+const bookingHref = (packageName: string) => `?package=${encodeURIComponent(packageName)}#book`
 
 /* ── DATA ── */
 
@@ -426,9 +427,16 @@ export default function CateringMainPage() {
             decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/70" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/25 md:hidden" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
+          <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-8" />
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
             myCHEF Events & Catering
           </p>
@@ -436,7 +444,7 @@ export default function CateringMainPage() {
             Events & Catering Services<br />
             <span className="italic">Built for Groups, Parties & Hosted Dinners.</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-3xl mx-auto">
             This page is for villa parties, weddings, corporate dinners, and catered meals for 5+ guests. If you want a chef for breakfast, lunch, or intimate in-villa dining during your stay, book our Private Villa Dining service instead.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -558,7 +566,7 @@ export default function CateringMainPage() {
                 </div>
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
                   {BBQ_PACKAGES.map((pkg) => (
-                    <CateringPackageCard key={pkg.title} {...pkg} />
+                    <CateringPackageCard key={pkg.title} {...pkg} href={bookingHref(pkg.title)} cta="Select package" />
                   ))}
                 </div>
                 <div className="text-center">
@@ -581,7 +589,7 @@ export default function CateringMainPage() {
                 </div>
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
                   {BUFFET_PACKAGES.map((pkg) => (
-                    <CateringPackageCard key={pkg.title} {...pkg} />
+                    <CateringPackageCard key={pkg.title} {...pkg} href={bookingHref(pkg.title)} cta="Select package" />
                   ))}
                 </div>
                 <div className="text-center">
@@ -899,7 +907,10 @@ export default function CateringMainPage() {
               <div key={pkg.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 text-center hover:shadow-lg transition-all">
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold text-lg mb-3">{pkg.price}</p>
-                <p className="text-[#4A4745] text-sm">{pkg.description}</p>
+                <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                  Select package <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             ))}
           </div>
@@ -935,10 +946,10 @@ export default function CateringMainPage() {
                 <p className="text-[#6B8E5A] font-semibold mb-3">{pkg.price}</p>
                 <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
                 <Link
-                  to="/catering/drop-off-catering"
+                  to={bookingHref(pkg.title)}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider"
                 >
-                  View details <ArrowRight className="w-4 h-4" />
+                  Select package <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             ))}
@@ -966,7 +977,10 @@ export default function CateringMainPage() {
               <div key={pkg.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 hover:shadow-lg transition-all">
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold mb-3">{pkg.price}</p>
-                <p className="text-[#4A4745] text-sm">{pkg.description}</p>
+                <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                  Select package <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             ))}
           </div>
@@ -992,7 +1006,10 @@ export default function CateringMainPage() {
               <div key={pkg.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 hover:shadow-lg transition-all">
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold mb-3">{pkg.price}</p>
-                <p className="text-[#4A4745] text-sm">{pkg.description}</p>
+                <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                  Select package <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             ))}
           </div>
@@ -1019,7 +1036,10 @@ export default function CateringMainPage() {
               <div key={pkg.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 hover:shadow-lg transition-all text-center">
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold mb-3">{pkg.price}</p>
-                <p className="text-[#4A4745] text-sm">{pkg.description}</p>
+                <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                  Select package <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             ))}
           </div>
@@ -1049,7 +1069,7 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 13: PRICING SUMMARY ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+      <section id="book" className="scroll-mt-24 py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Compare"
@@ -1220,7 +1240,16 @@ export default function CateringMainPage() {
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
               { name: 'notes', label: 'Dietary Notes / Special Requests', type: 'textarea', rows: 4 },
             ]}
-            packageOptions={CATERING_STYLES.map((s) => s.title)}
+            packageOptions={[
+              ...CATERING_STYLES.map((s) => s.title),
+              ...BBQ_PACKAGES.map((p) => p.title),
+              ...BUFFET_PACKAGES.map((p) => p.title),
+              ...PLATED_PACKAGES.map((p) => p.title),
+              ...DROPOFF_PACKAGES.map((p) => p.title),
+              ...BABIGULING_PACKAGES.map((p) => p.title),
+              ...GRAZING_PACKAGES.map((p) => p.title),
+              ...FLOATING_PACKAGES.map((p) => p.title),
+            ]}
             submitLabelBuilder={(formData) => {
               const guestLabel = formData.guests?.trim() ? `${formData.guests.trim()} Guests` : 'Your Guests'
               return `Get Catering Quote for ${guestLabel}`
@@ -1242,8 +1271,7 @@ export default function CateringMainPage() {
             src="/generated/hub-catering.webp"
             alt="Completed villa dinner table with food ready"
             className="w-full h-full object-cover"
-            loading="lazy"
-          />
+            loading="lazy" />
           <div className="absolute inset-0 bg-black/75" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

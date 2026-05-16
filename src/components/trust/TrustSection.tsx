@@ -20,7 +20,7 @@ export default function TrustSection() {
         <p
           className="text-sm md:text-base tracking-[0.55em] uppercase"
           style={{
-            color: '#C9A227',
+            color: '#C5A028',
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 500,
             letterSpacing: '0.1em',
@@ -30,7 +30,7 @@ export default function TrustSection() {
         </p>
 
         {/* Divider */}
-        <div className="mx-auto mt-4 h-px w-12 md:w-14 bg-[#C9A227]" />
+        <div className="mx-auto mt-4 h-px w-12 md:w-14 bg-[#C5A028]" />
 
         {/* Headline */}
         <h2
@@ -97,7 +97,7 @@ function TrustGuaranteeCard() {
               background: '#F4F1EA',
             }}
           >
-            <ShieldCheck size={30} color="#C9A227" strokeWidth={1.8} />
+            <ShieldCheck size={30} color="#C5A028" strokeWidth={1.8} />
           </div>
           <div className="text-center md:text-left">
             <h3
@@ -130,11 +130,11 @@ function TrustGuaranteeCard() {
         {/* Center: myCHEF Logo */}
         <div className="flex items-center justify-center md:px-4 border-t md:border-t-0 md:border-x md:border-[rgba(201,162,39,0.16)] pt-6 md:pt-0">
           <div className="flex flex-col items-center gap-1">
-            <ChefHat size={40} color="#C9A227" strokeWidth={1.6} />
+            <ChefHat size={40} color="#C5A028" strokeWidth={1.6} />
             <p
               className="text-sm tracking-widest mt-2"
               style={{
-                color: '#C9A227',
+                color: '#C5A028',
                 fontFamily: "'Cormorant Garamond', serif",
                 fontWeight: 600,
                 letterSpacing: '0.1em',
@@ -145,7 +145,7 @@ function TrustGuaranteeCard() {
             <p
               className="text-xs tracking-widest"
               style={{
-                color: '#C9A227',
+                color: '#C5A028',
                 fontFamily: "'Cormorant Garamond', serif",
                 fontWeight: 500,
                 letterSpacing: '0.08em',
@@ -166,7 +166,7 @@ function TrustGuaranteeCard() {
               background: '#F4F1EA',
             }}
           >
-            <RefreshCw size={30} color="#C9A227" strokeWidth={1.8} />
+            <RefreshCw size={30} color="#C5A028" strokeWidth={1.8} />
           </div>
           <div className="text-center md:text-left">
             <h3
@@ -236,7 +236,7 @@ function StatsGrid() {
             boxShadow: '0 12px 35px rgba(40, 30, 20, 0.04)',
           }}
         >
-          <stat.icon size={48} color="#C9A227" strokeWidth={1.6} className="mx-auto mb-3 md:mb-4" />
+          <stat.icon size={48} color="#C5A028" strokeWidth={1.6} className="mx-auto mb-3 md:mb-4" />
           <p
             className="text-3xl md:text-4xl mb-2"
             style={{
@@ -279,7 +279,7 @@ function CtaLine() {
           background: '#F4F1EA',
         }}
       >
-        <MessageCircle size={22} color="#C9A227" strokeWidth={1.6} />
+        <MessageCircle size={22} color="#C5A028" strokeWidth={1.6} />
       </div>
       <p
         className="text-lg md:text-xl"
@@ -291,7 +291,7 @@ function CtaLine() {
       >
         Message us with date, guest count, and villa area
       </p>
-      <ArrowRight size={24} color="#C9A227" strokeWidth={1.6} className="flex-shrink-0" />
+      <ArrowRight size={24} color="#C5A028" strokeWidth={1.6} className="flex-shrink-0" />
     </div>
   )
 }

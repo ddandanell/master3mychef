@@ -23,7 +23,6 @@ export default function BestPartnerBadge({ variant = 'dark', width = 220, classN
         filter: variant === 'light' ? 'invert(1) brightness(1.4) opacity(0.9)' : 'opacity(0.9)',
       }}
       className={`inline-block select-none ${className}`}
-      loading="lazy"
-    />
+      loading="lazy" />
   )
 }

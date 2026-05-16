@@ -112,7 +112,7 @@ const SECTIONS = [
     <p><strong>Fine Dining:</strong> Per-person menu pricing with ingredients included. Service charge (10%) and government tax (11%) are added. Wine pairing is optional at IDR 850,000 per guest.</p>
     <p><strong>Villa Chef / Catering:</strong> Chef hourly rate plus groceries at cost. You see every receipt. We do not markup ingredients.</p>
     <p><strong>Events:</strong> Custom quotes based on guest count, menu complexity, staffing needs, and equipment. We deliver a detailed proposal within 24 hours.</p>`,
-    image: '/generated/pricing-hero.webp',
+    image: '/generated/catering-hero.webp',
     imageAlt: 'Elegant fine dining plate',
   },
   {
@@ -232,9 +232,9 @@ export default function PricingPage() {
       canonicalUrl="https://mychef.id/pricing"
       h1="Transparent Pricing for Every Experience"
       subtitle="No hidden fees. No markup on groceries. Clear pricing before you commit."
-      heroImage="/generated/pricing-hero.webp"
+      heroImage="/generated/catering-hero.webp"
       heroImageAlt="Elegant fine dining dish"
-      ogImage="https://mychef.id/generated/pricing-hero.webp"
+      ogImage="https://mychef.id/generated/catering-hero.webp"
       keywords={['private chef bali price', 'bali catering cost', 'villa chef rates bali']}
       highlights={['No Hidden Fees', 'Grocery Receipts Provided', '25% Deposit to Book', '24-Hour Quote Delivery']}
       sections={SECTIONS}

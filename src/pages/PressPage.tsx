@@ -65,7 +65,7 @@ export default function PressPage() {
         title="Press & Media | myCHEF.id Bali"
         description="Press coverage, media kit, and PR contact for myCHEF.id — Bali's premier private chef and catering service. Request press kit via WhatsApp."
         canonical={`${SITE}/press`}
-        ogImage={`${SITE}/partners-hero.webp`}
+        ogImage={`${SITE}/generated/partner-platform-hero.webp`}
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Media', `${SITE}/press`), faqPageSchema([
           { question: 'How do I request a press kit for myCHEF.id?', answer: 'Press kits, high-resolution imagery, and interview requests can be arranged via WhatsApp at +62 822-3756-5997 or email indonesia@mychef.id. We respond within 24 hours.' },
           { question: 'Has myCHEF.id been featured in the press?', answer: 'myCHEF.id has been covered by travel and lifestyle media for its Michelin-trained luxury private chef service in Bali, serving 12,000+ guests across 560+ villas and delivering 500+ events.' },
@@ -159,7 +159,7 @@ export default function PressPage() {
             <p className="text-xs uppercase tracking-[0.4em] text-[#8A857D]">Media Coverage</p>
             <h2 className="mt-4 font-playfair text-4xl text-[#1A1916] md:text-5xl">Recent mention highlights</h2>
             <p className="mt-4 text-lg leading-8 text-[#4A4745]">
-              Simulated coverage placeholders for the dedicated press page — designed to show the kind of editorial positioning myCHEF.id belongs in.
+              A press-ready overview of the editorial positioning myCHEF.id belongs in, with story angles for food, travel, villa, and hospitality coverage.
             </p>
           </div>
 

@@ -180,9 +180,14 @@ export default function TastingMenuPage() {
             alt="Perfectly plated private tasting menu dish in a Bali villa — myCHEF fine dining"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.25) 100%)',
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/65 to-black/40" />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="absolute top-0 left-0 z-10 w-full">
           <Breadcrumb items={[{ label: 'Fine Dining', href: '/fine-dining' }, { label: 'Tasting Menu' }]} theme="dark" className="py-6" />
@@ -293,8 +298,7 @@ export default function TastingMenuPage() {
           alt="Wine pairing for private tasting menu in Bali villa"
           width={1920} height={900}
           loading="lazy" decoding="async"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/75 to-black/60" />
         <div className="relative z-10 max-w-[900px] mx-auto">
           <div className="text-center mb-14">

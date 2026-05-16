@@ -28,7 +28,7 @@ const heroStats = ['50+ staff', '560+ villas', '12,000+ guests']
 
 const pressStats = [
   'Served 12,000+ guests',
-  'Featured in [Bali-based lifestyle media placeholder]',
+  'Built for Bali villa and lifestyle media',
   '8 years in Bali',
 ]
 
@@ -40,8 +40,8 @@ const pressResources = [
   },
   {
     icon: Camera,
-    title: 'Photo + b-roll placeholders',
-    desc: 'Use our placeholder process media while final press imagery and behind-the-scenes footage are prepared.',
+    title: 'Photo + b-roll library',
+    desc: 'Request approved service, team, and behind-the-scenes visuals for editorial use while the final press library is prepared.',
   },
   {
     icon: Mail,
@@ -177,7 +177,7 @@ export default function PartnersPage() {
         title="Press & Partners | myCHEF Bali"
         description="Press kit details and Certified Partner programme information for villa managers looking to work with myCHEF in Bali."
         canonical="https://mychef.id/partners"
-        ogImage="https://mychef.id/partners-hero.webp"
+        ogImage="https://mychef.id/generated/partner-platform-hero.webp"
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Partners', 'https://mychef.id/partners'), faqPageSchema(faqs.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
@@ -249,7 +249,7 @@ export default function PartnersPage() {
             <p className="text-[#C5A028] text-xs uppercase tracking-[0.35em] font-semibold mb-4">Press & Media</p>
             <h2 className="font-playfair text-3xl md:text-5xl leading-[1.08] mb-5">A quick media brief for journalists, editors, and Bali storytellers.</h2>
             <p className="text-[#4A4745] text-base leading-relaxed mb-6 max-w-[720px]">
-              myCHEF has served 12,000+ guests across Bali villas, events, and private dining experiences. Our press kit covers the brand story, Adriano&apos;s Michelin-trained Milan background, company milestones, and placeholder visual assets until the final press library is released.
+              myCHEF has served 12,000+ guests across Bali villas, events, and private dining experiences. Our press kit covers the brand story, Adriano&apos;s Michelin-trained Milan background, company milestones, and approved visual assets for editorial requests.
             </p>
             <p className="text-[#1A1A1A] text-sm md:text-base font-medium mb-8">
               {pressStats.join(' · ')}

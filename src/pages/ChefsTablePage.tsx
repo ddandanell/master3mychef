@@ -124,9 +124,14 @@ export default function ChefsTablePage() {
             alt="Luxury private villa dinner service in Bali with candlelight and wine pairing"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.25) 100%)',
+            }}
           />
-          <div className="absolute inset-0 bg-black/85" />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="absolute top-0 left-0 z-10 w-full">
           <Breadcrumb items={[{ label: 'Fine Dining', href: '/fine-dining' }, { label: "Chef's Table" }]} theme="dark" className="py-6" />
@@ -220,8 +225,7 @@ export default function ChefsTablePage() {
                 src="/generated/luna-chef-portrait.webp"
                 alt="Adriano — executive chef at myCHEF private dining, Bali"
                 width={700} height={900} loading="lazy" decoding="async"
-                className="w-full h-auto rounded-[20px] object-cover"
-              />
+                className="w-full h-auto rounded-[20px] object-cover" />
             </div>
           </div>
         </div>

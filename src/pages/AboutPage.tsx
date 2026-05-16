@@ -118,7 +118,7 @@ export default function AboutPage() {
       subtitle="Michelin-trained origin. Bali-built team. Trusted in 560+ villas across the island."
       heroImage="/generated/section-villa-kitchen.webp"
       heroImageAlt="Indonesian private chef preparing luxury villa dinner in Bali"
-      ogImage="https://mychef.id/chef-portrait.webp"
+      ogImage="https://mychef.id/generated/luna-chef-portrait.webp"
       keywords={['private chef bali', 'about mychef', 'bali catering company']}
       highlights={['Michelin-Trained Founder', '50+ Staff', '560+ Villas Served', '12,000+ Guests Hosted']}
       sections={SECTIONS}

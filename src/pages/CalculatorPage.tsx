@@ -145,7 +145,7 @@ const SECTIONS = [
     subtitle: 'Estimate',
     title: 'Pricing Calculator',
     body: `<p>Use our calculator to estimate the cost of your private chef experience. Adjust guests, menu type, and add-ons to see a rough total. For a precise quote, message us on WhatsApp — we respond within the hour.</p>`,
-    image: '/generated/pricing-hero.webp',
+    image: '/generated/catering-hero.webp',
     imageAlt: 'Fine dining dish',
   },
   {
@@ -198,9 +198,9 @@ export default function CalculatorPage() {
         canonicalUrl="https://mychef.id/calculator"
         h1="Pricing Calculator"
         subtitle="Estimate your private chef experience in 30 seconds."
-        heroImage="/generated/pricing-hero.webp"
+        heroImage="/generated/catering-hero.webp"
         heroImageAlt="Fine dining dish"
-        ogImage="https://mychef.id/generated/pricing-hero.webp"
+        ogImage="https://mychef.id/generated/catering-hero.webp"
         keywords={['private chef bali price', 'bali catering calculator', 'villa chef cost']}
         highlights={['Instant Estimate', 'Adjust Guests & Menu', 'WhatsApp Confirmation', 'No Obligation']}
         sections={SECTIONS}

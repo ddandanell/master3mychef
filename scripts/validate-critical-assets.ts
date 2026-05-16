@@ -3,10 +3,10 @@ import path from 'path'
 
 const CRITICAL_ASSETS = [
   'public/generated/bali-hub-hero.webp',
-  'public/generated/hub-fine-dining.webp',
-  'public/generated/hub-catering.webp',
-  'public/generated/hub-events.webp',
-  'public/generated/hero-how-it-works.webp',
+  'public/generated/misc-hub-fine-dining-lg.webp',
+  'public/generated/misc-hub-catering-lg.webp',
+  'public/generated/events-hub-events-md.webp',
+  'public/generated/misc-hero-how-it-works-lg.webp',
 ]
 
 export function validateCriticalAssets() {

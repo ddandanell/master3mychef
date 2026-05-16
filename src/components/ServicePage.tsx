@@ -2,6 +2,7 @@ import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { SERVICES } from '@/data/sitemap'
+import { trackWhatsAppClick } from '../lib/analytics'
 
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'
@@ -61,7 +62,7 @@ export default function ServicePage() {
         <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-6">{service.name}</h1>
         <p className="text-lg text-[#4A4745] max-w-[640px] mb-8">{service.description}</p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <a href={waLink} target="_blank" rel="noopener noreferrer" data-source={`service-${slug}-cta`} className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
+          <a href={waLink} onClick={() => trackWhatsAppClick(`service-${slug}-cta`)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
           </a>
           <Link to="/quote" className="inline-flex items-center justify-center bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">

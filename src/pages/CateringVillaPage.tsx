@@ -24,6 +24,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20villa%20catering%20quote%20for%20my%20Bali%20villa.'
@@ -531,7 +532,7 @@ export default function CateringVillaPage() {
       {/* ═══════ SECTION 13: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/catering-hero.webp" alt="Villa catering setup with chef and team at Bali villa" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/catering-hero.webp" alt="Villa catering setup with chef and team at Bali villa" className="w-full h-full object-cover" loading="lazy" />
           <div
             className="absolute inset-0"
             style={{

@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Flame, Wine, Clock, Users, Star, Check, ChevronRight, MessageCircle, Phone, Sparkles, Truck, Heart, ChefHat, UtensilsCrossed, ShieldCheck, RefreshCw } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
 import OrderPanel from '@/components/OrderPanel'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
@@ -14,8 +12,6 @@ import Breadcrumb from '@/components/shared/Breadcrumb'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { FineDiningRiskReversal } from '@/components/shared'
 import { getPageMeta } from '@/data/page-meta'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const MENUS = [
   {
@@ -192,13 +188,32 @@ export default function LunaPage() {
   }
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo('.luna-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.luna-content', start: 'top 75%', once: true },
-      })
-    }, heroRef)
-    return () => ctx.revert()
+    let cancelled = false
+    let cleanup: (() => void) | undefined
+
+    void (async () => {
+      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
+        import('gsap'),
+        import('gsap/ScrollTrigger'),
+      ])
+
+      if (cancelled) return
+
+      gsap.registerPlugin(ScrollTrigger)
+      const ctx = gsap.context(() => {
+        gsap.fromTo('.luna-reveal', { y: 50, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.luna-content', start: 'top 75%', once: true },
+        })
+      }, heroRef)
+
+      cleanup = () => ctx.revert()
+    })()
+
+    return () => {
+      cancelled = true
+      cleanup?.()
+    }
   }, [])
 
   // IntersectionObserver for sidebar active state + visibility

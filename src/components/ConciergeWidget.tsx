@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ChefHat, X, UtensilsCrossed, Users, Cake, Briefcase, MessageCircle, Sparkles, Bot, User } from 'lucide-react'
-import { trackWhatsAppClick } from '@/lib/analytics'
+import { trackWhatsAppConversion } from '@/lib/analytics'
 
 const WHATSAPP_NUMBER = '6282237565997'
 
@@ -121,7 +121,7 @@ export default function ConciergeWidget() {
     const fullMessage = prefix + option.baseMessage
     const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(fullMessage)}`
 
-    trackWhatsAppClick(`${option.id}--concierge-widget`)
+    trackWhatsAppConversion(`${option.id}--concierge-widget`)
 
     window.open(waUrl, '_blank', 'noopener,noreferrer')
     setIsOpen(false)

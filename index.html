@@ -9,6 +9,14 @@
     <title>Private Chef Bali | Luxury Villa Dining, Catering & Events by myCHEF</title>
     <meta name="description" content="Private chef in Bali for luxury villa dining, Bali villa catering, private events, parties, and fine dining experiences by myCHEF. Same-day WhatsApp confirmation." />
     <link rel="canonical" href="https://mychef.id/" />
+    
+    <!-- Initialise Analytics DataLayer & gtag -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // gtag('config', 'VITE_GA_ID_PLACEHOLDER'); // Configured dynamically via VITE_GA_ID in .env
+    </script>
 
     <!-- Icons + PWA -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -70,8 +78,8 @@
       gtag('js', new Date());
       gtag('config', 'G-W0PQH8ZKTF');
     </script>
-    <!-- Preload the first above-the-fold portal image on the home page -->
-    <link rel="preload" as="image" href="/generated/hub-fine-dining.webp" fetchpriority="high" />
+    <!-- Preload the actual homepage LCP image so the hero starts fetching before React bootstraps. -->
+    <link rel="preload" as="image" href="/generated/bali-hub-hero.webp" fetchpriority="high" />
 
     <!-- Structured data: Organization -->
     <script type="application/ld+json">

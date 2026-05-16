@@ -23,6 +23,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20a%20grazing%20table%20in%20Bali.'
@@ -291,7 +292,7 @@ export default function CateringGrazingPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden">
-              <img
+              <OptimizedImage
                 src="/generated/pkg-grazing.webp"
                 alt="Grazing table setup at a Bali villa with cheese, charcuterie, and tropical fruit"
                 className="w-full h-full object-cover aspect-[4/3]"
@@ -605,7 +606,7 @@ export default function CateringGrazingPage() {
           ═══════════════════════════════════════════════════════════════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <OptimizedImage
             src="/generated/pkg-grazing.webp"
             alt="Beautiful grazing table at a Bali villa event with cheese, charcuterie, and tropical styling"
             className="w-full h-full object-cover"

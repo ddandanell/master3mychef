@@ -6,6 +6,7 @@ import { PILLARS } from '../data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
 import LocationChips from './LocationChips'
 
+import OptimizedImage from '@/components/OptimizedImage'
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'
 
@@ -250,7 +251,7 @@ export default function InVillaServicePage() {
               </div>
             </div>
             <div>
-              <img src="/generated/staffing-table.webp" alt="Professional service staff setting table" className="w-full rounded-2xl shadow-xl" loading="lazy" />
+              <OptimizedImage src="/generated/staffing-table.webp" alt="Professional service staff setting table" className="w-full rounded-2xl shadow-xl" loading="lazy" />
             </div>
           </div>
         </div>
@@ -261,7 +262,7 @@ export default function InVillaServicePage() {
         <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Award image */}
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-            <img
+            <OptimizedImage
               src="/generated/were-awards.png"
               alt="myCHEF award-winning private villa dining in Bali"
               className="w-full h-full object-cover"

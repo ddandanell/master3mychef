@@ -29,6 +29,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { CateringRiskReversal } from '@/components/shared'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20catering%20quote.'
@@ -1267,7 +1268,7 @@ export default function CateringMainPage() {
       {/* ═══════ SECTION 18: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <OptimizedImage
             src="/generated/hub-catering.webp"
             alt="Completed villa dinner table with food ready"
             className="w-full h-full object-cover"

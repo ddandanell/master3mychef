@@ -26,6 +26,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20floating%20breakfast%20in%20Bali.'
@@ -183,7 +184,7 @@ export default function CateringFloatingBreakfastPage() {
       {/* ═══════ HERO ═══════ */}
       <section className="relative overflow-hidden bg-black" style={{ minHeight: 'clamp(520px, 88vh, 100vh)' }}>
         {/* Background image — tray visible on right, villa on left */}
-        <img
+        <OptimizedImage
           src="/generated/floating-breakfast-bali.png"
           alt="Floating breakfast bamboo tray in a Bali villa pool at sunset with tropical fruit, coffee, and flowers"
           decoding="async"
@@ -459,7 +460,7 @@ export default function CateringFloatingBreakfastPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
             {FLOATING_GALLERY.map((src, i) => (
               <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={src} alt={`Floating breakfast setup ${i + 1} in a Bali villa pool`} className="w-full h-full object-cover" loading="lazy" />
+                <OptimizedImage src={src} alt={`Floating breakfast setup ${i + 1} in a Bali villa pool`} className="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>

@@ -23,6 +23,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20Babi%20Guling%20catering%20in%20Bali.'
@@ -559,7 +560,7 @@ export default function CateringBabiGulingPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {BABI_GULING_GALLERY.map((src, i) => (
               <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={src} alt={`Babi Guling catering setup ${i + 1} at a Bali villa event`} className="w-full h-full object-cover" loading="lazy" />
+                <OptimizedImage src={src} alt={`Babi Guling catering setup ${i + 1} at a Bali villa event`} className="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>

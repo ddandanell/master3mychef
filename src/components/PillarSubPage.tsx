@@ -3,6 +3,7 @@ import { MessageCircle, Check, ArrowRight } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from './SeoHead'
 import FAQAccordion from './catering/FAQAccordion'
 import { getSubPage, getPillarBySlug, type Pillar, type SubPage } from '../data/siteArchitecture'
+import { trackWhatsAppClick } from '../lib/analytics'
 
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'
@@ -111,9 +112,9 @@ export default function PillarSubPage() {
         <div className="flex flex-col sm:flex-row gap-4">
           <a
             href={waLink}
+            onClick={() => trackWhatsAppClick(`${pillarSlug}-${subSlug}-cta`)}
             target="_blank"
             rel="noopener noreferrer"
-            data-source={`${pillarSlug}-${subSlug}-cta`}
             className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
           >
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp

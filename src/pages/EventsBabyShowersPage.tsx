@@ -16,6 +16,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20baby%20shower.'
@@ -149,7 +150,7 @@ export default function EventsBabyShowersPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/baby-shower-hero.webp" alt="Pastel baby shower brunch table in a Bali villa" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/events/baby-shower-hero.webp" alt="Pastel baby shower brunch table in a Bali villa" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
@@ -371,7 +372,7 @@ export default function EventsBabyShowersPage() {
             {REAL_BABY_SHOWERS.map((shower) => (
               <div key={shower.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={shower.image} alt={shower.title} className="w-full h-full object-cover" loading="lazy" />
+                  <OptimizedImage src={shower.image} alt={shower.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{shower.title}</h3>

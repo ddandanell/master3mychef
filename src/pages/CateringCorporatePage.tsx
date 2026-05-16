@@ -22,6 +22,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20corporate%20catering%20quote%20for%20my%20Bali%20event.'
@@ -467,7 +468,7 @@ export default function CateringCorporatePage() {
       {/* ═══════ SECTION 13: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/hero-corporate-events.webp" alt="Corporate event catering at Bali villa" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/hero-corporate-events.webp" alt="Corporate event catering at Bali villa" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

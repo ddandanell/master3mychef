@@ -1,6 +1,5 @@
-// The 10 top Bali cities where we actively sell catering, events, and fine dining.
-// Used by AreaPage (each city links to the other nine) and by the Bali hub page
-// at /guide/private-chef-bali.
+// The 15 top Bali & Jakarta regions where we actively sell catering, events, and fine dining.
+// Used by AreaPage (each city links to the other siblings) and by the Locations hub.
 //
 // Each entry carries the short "why people go there" hook used as page copy.
 
@@ -21,7 +20,7 @@ export const TOP_CITIES: TopCity[] = [
   {
     slug: 'seminyak',
     name: 'Seminyak',
-    hook: 'Beach clubs, luxury villas, and a sunset dining culture built around Petitenget and the coast.',
+    hook: 'Beach clubs, premium villas, and a sunset dining culture built around Petitenget and the coast.',
     blurb: 'Seminyak is the original Bali villa scene — Petitenget and Oberoi-area villas, walk-to-beach addresses, and a dense restaurant culture. We cook fine dining for groups who came for the food scene and want one private evening that beats every restaurant on the strip.',
     signature: 'We shop Pasar Seminyak and Jl. Petitenget producers each morning.',
     hero: '/generated/city-seminyak.webp',
@@ -62,7 +61,7 @@ export const TOP_CITIES: TopCity[] = [
     slug: 'nusa-dua',
     name: 'Nusa Dua',
     hook: 'A five-star resort enclave with large villa estates, polished service, and family retreat energy.',
-    blurb: 'Nusa Dua is the home of Bali\'s gated luxury villas and resort hospitality. We cater corporate retreats, executive dinners, and high-end private events with the same precision as the surrounding five-star kitchens.',
+    blurb: 'Nusa Dua is the home of Bali\'s gated premium villas and resort hospitality. We cater corporate retreats, executive dinners, and high-end private events with the same precision as the surrounding five-star kitchens.',
     signature: 'We coordinate with the major estate kitchens and bring full service teams.',
     hero: '/generated/city-nusa-dua.webp',
   },
@@ -97,5 +96,45 @@ export const TOP_CITIES: TopCity[] = [
     blurb: 'The Bukit Peninsula is Bali\'s premium clifftop region — Bingin, Padang Padang, Ungasan, Pecatu. We cook fine dining for elopements, surf-trip groups, and milestone celebrations against the Indian Ocean horizon.',
     signature: 'We service every Bukit clifftop villa with a full team.',
     hero: '/generated/city-bukit.webp',
+  },
+  {
+    slug: 'jakarta',
+    name: 'Jakarta',
+    hook: 'Urban fine dining and executive corporate catering in Indonesia’s capital.',
+    blurb: 'myCHEF Jakarta brings our Bali standards to the city’s premier residences and corporate suites. We specialize in discreet executive lunches, boardroom dinners, and high-end residential events.',
+    signature: 'We shop the premium markets of South Jakarta each morning.',
+    hero: '/generated/bali-locations-sunset.webp',
+  },
+  {
+    slug: 'menteng',
+    name: 'Menteng',
+    hook: 'Discreet, high-security private dining for Jakarta’s diplomatic and historic residential heart.',
+    blurb: 'Menteng demands the highest level of discretion and service. We provide Michelin-trained chefs for embassy dinners, formal family hosting, and elite residential events within Jakarta’s most prestigious district.',
+    signature: 'Our teams are vetted for high-security diplomatic residences.',
+    hero: '/generated/bali-locations-sunset.webp',
+  },
+  {
+    slug: 'kemang',
+    name: 'Kemang',
+    hook: 'Sophisticated social catering and family dining for Jakarta’s international and creative community.',
+    blurb: 'Kemang is the heart of Jakarta’s expat social life. We cook Mediterranean feasts, social BBQ events, and healthy family-style dinners for the district’s vibrant community of international residents.',
+    signature: 'We understand the culinary diversity Kemang residents expect.',
+    hero: '/generated/bali-locations-sunset.webp',
+  },
+  {
+    slug: 'scbd',
+    name: 'SCBD',
+    hook: 'Executive corporate hospitality and boardroom private dining in the Business District.',
+    blurb: 'Serving the high-rises and penthouses of SCBD, myCHEF provides seamless executive hospitality. We manage boardroom lunches, corporate networking events, and premium apartment dining with absolute precision.',
+    signature: 'We specialize in corporate timing and executive menu flow.',
+    hero: '/generated/bali-locations-sunset.webp',
+  },
+  {
+    slug: 'pondok-indah',
+    name: 'Pondok Indah',
+    hook: 'Exclusive residential private chef services for Jakarta’s premier family estates.',
+    blurb: 'Pondok Indah villas and estates are built for multi-generational dining. We provide large-format catering, milestone birthday dinners, and consistent private chef service for the district’s primary residences.',
+    signature: 'We manage the kitchen logistics for Pondok Indah’s largest family estates.',
+    hero: '/generated/bali-locations-sunset.webp',
   },
 ]

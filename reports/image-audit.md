@@ -1,16 +1,16 @@
 # MyChef Image Audit Report
-**Generated:** 2026-05-16T10:59:43.549Z
+**Generated:** 2026-05-16T16:23:28.297Z
 
 ## Summary
-- **Total Images:** 83
-- **Total References:** 227
-- **Total File Size:** 27.38 MB
-- **Images Without Alt Text:** 52
-- **Images Not Following Convention:** 83
+- **Total Images:** 93
+- **Total References:** 232
+- **Total File Size:** 26.64 MB
+- **Images Without Alt Text:** 54
+- **Images Not Following Convention:** 84
 
 ## Format Distribution
-- **WEBP:** 78
-- **PNG:** 4
+- **WEBP:** 89
+- **PNG:** 3
 - **JPG:** 1
 
 ## Top 10 Files with Most Image References
@@ -32,12 +32,10 @@
   - Used by: 1 file(s)
 - `/public/event-wedding.webp` (webp, 651.7 KB)
   - Used by: 1 file(s)
-- `/public/images/family-villa-dinner-cutout.png` (png, 2.13 MB)
-  - Used by: 1 file(s)
 - `/public/generated/were-awards.png` (png, 2.13 MB)
   - Used by: 1 file(s)
 - `/public/generated/trust-hosts.webp` (webp, 89.57 KB)
-  - Used by: 1 file(s)
+  - Used by: 0 file(s)
 - `/public/generated/testimonials-bg.webp` (webp, 81.07 KB)
   - Used by: 1 file(s)
 - `/public/generated/team-photo.webp` (webp, 334.87 KB)
@@ -49,7 +47,7 @@
 - `/public/generated/staffing-hero.webp` (webp, 83.26 KB)
   - Used by: 5 file(s)
 - `/public/generated/sommelier-hero.webp` (webp, 126.15 KB)
-  - Used by: 1 file(s)
+  - Used by: 0 file(s)
 - `/public/generated/sol-produce.webp` (webp, 155.32 KB)
   - Used by: 1 file(s)
 - `/public/generated/sol-chef-portrait.webp` (webp, 40.88 KB)
@@ -87,9 +85,11 @@
 - `/public/generated/luna-table.webp` (webp, 100.92 KB)
   - Used by: 2 file(s)
 - `/public/generated/luna-plating.webp` (webp, 79.78 KB)
-  - Used by: 5 file(s)
-- `/public/generated/luna-hero-v2.webp` (webp, 226.96 KB)
-  - Used by: 2 file(s)
+  - Used by: 6 file(s)
+- `/public/generated/luna-hero-v3.webp` (webp, 138.28 KB)
+  - Used by: 1 file(s)
+- `/public/generated/luna-hero-v2.webp` (webp, 91.49 KB)
+  - Used by: 1 file(s)
 - `/public/generated/luna-gallery-4.webp` (webp, 223.66 KB)
   - Used by: 1 file(s)
 - `/public/generated/luna-gallery-3.webp` (webp, 131.01 KB)
@@ -104,18 +104,24 @@
   - Used by: 1 file(s)
 - `/public/generated/luna-chef-portrait.webp` (webp, 64.39 KB)
   - Used by: 2 file(s)
+- `/public/generated/jakarta-skyline.webp` (webp, 86.61 KB)
+  - Used by: 0 file(s)
 - `/public/generated/hub-villa.webp` (webp, 133.71 KB)
-  - Used by: 3 file(s)
-- `/public/generated/hub-fine-dining.webp` (webp, 201.96 KB)
+  - Used by: 2 file(s)
+- `/public/generated/hub-fine-dining.webp` (webp, 31.94 KB)
   - Used by: 1 file(s)
-- `/public/generated/hub-catering.webp` (webp, 129.59 KB)
+- `/public/generated/hub-events.webp` (webp, 140.34 KB)
+  - Used by: 0 file(s)
+- `/public/generated/hub-catering.webp` (webp, 121.34 KB)
   - Used by: 3 file(s)
 - `/public/generated/hub-bali.webp` (webp, 103.52 KB)
   - Used by: 1 file(s)
-- `/public/generated/home-hero-ivory-villa.png` (png, 1.57 MB)
-  - Used by: 1 file(s)
+- `/public/generated/home-hero-ivory-villa.webp` (webp, 115.06 KB)
+  - Used by: 0 file(s)
 - `/public/generated/hero-retreats.webp` (webp, 218.29 KB)
   - Used by: 1 file(s)
+- `/public/generated/hero-how-it-works.webp` (webp, 46.13 KB)
+  - Used by: 0 file(s)
 - `/public/generated/hero-dropoff-catering.webp` (webp, 207.58 KB)
   - Used by: 1 file(s)
 - `/public/generated/hero-corporate-events.webp` (webp, 253.14 KB)
@@ -124,6 +130,16 @@
   - Used by: 3 file(s)
 - `/public/generated/hero-babiguling-catering.webp` (webp, 228.98 KB)
   - Used by: 1 file(s)
+- `/public/generated/help-hero.webp` (webp, 81.22 KB)
+  - Used by: 1 file(s)
+- `/public/generated/guide-wedding.webp` (webp, 180.89 KB)
+  - Used by: 1 file(s)
+- `/public/generated/guide-staffing.webp` (webp, 115.78 KB)
+  - Used by: 0 file(s)
+- `/public/generated/guide-menu.webp` (webp, 91.47 KB)
+  - Used by: 1 file(s)
+- `/public/generated/guide-corporate.webp` (webp, 137.29 KB)
+  - Used by: 0 file(s)
 - `/public/generated/floating-breakfast-bali.png` (png, 2.13 MB)
   - Used by: 1 file(s)
 - `/public/generated/fd-chef-signature.jpg` (jpg, 356.99 KB)
@@ -143,13 +159,13 @@
 - `/public/generated/contact-concierge.webp` (webp, 52.26 KB)
   - Used by: 1 file(s)
 - `/public/generated/chefs-table-hero-luxury.webp` (webp, 139.61 KB)
-  - Used by: 1 file(s)
+  - Used by: 2 file(s)
 - `/public/generated/chefs-hero.webp` (webp, 532.11 KB)
   - Used by: 1 file(s)
 - `/public/generated/catering-hero.webp` (webp, 122 KB)
   - Used by: 3 file(s)
 - `/public/generated/butler-service.webp` (webp, 532.93 KB)
-  - Used by: 1 file(s)
+  - Used by: 2 file(s)
 - `/public/generated/book-hero.webp` (webp, 816.96 KB)
   - Used by: 1 file(s)
 - `/public/generated/best-partner-2026.webp` (webp, 56.08 KB)
@@ -157,7 +173,9 @@
 - `/public/generated/bali-locations-sunset.webp` (webp, 424.3 KB)
   - Used by: 1 file(s)
 - `/public/generated/bali-hub-hero.webp` (webp, 211.12 KB)
-  - Used by: 2 file(s)
+  - Used by: 3 file(s)
+- `/public/generated/avatar-ai.webp` (webp, 24.86 KB)
+  - Used by: 0 file(s)
 - `/public/generated/aura-toast.webp` (webp, 69.6 KB)
   - Used by: 2 file(s)
 - `/public/generated/aura-team.webp` (webp, 117.89 KB)
@@ -172,10 +190,8 @@
   - Used by: 2 file(s)
 - `/public/generated/aura-bartender.webp` (webp, 104.46 KB)
   - Used by: 2 file(s)
-- `/public/generated/catering/plated-menus.webp` (webp, 534.45 KB)
-  - Used by: 1 file(s)
-- `/public/generated/catering/floating-breakfast.webp` (webp, 570.02 KB)
-  - Used by: 1 file(s)
+- `/public/images/family-villa-dinner-cutout.png` (png, 2.13 MB)
+  - Used by: 0 file(s)
 - `/public/generated/events/villa-party-night.webp` (webp, 818.02 KB)
   - Used by: 1 file(s)
 - `/public/generated/events/retreat-table.webp` (webp, 919.7 KB)
@@ -192,38 +208,42 @@
   - Used by: 1 file(s)
 - `/public/generated/events/anniversary-chef.webp` (webp, 378.16 KB)
   - Used by: 1 file(s)
+- `/public/generated/catering/plated-menus.webp` (webp, 534.45 KB)
+  - Used by: 1 file(s)
+- `/public/generated/catering/floating-breakfast.webp` (webp, 570.02 KB)
+  - Used by: 1 file(s)
 
 ## References Without Alt Text
+- `/src/pages/WeddingGuidePage.tsx:108` — `/generated/guide-wedding.webp`
 - `/src/pages/TastingMenuPage.tsx:179` — `/generated/luna-plating.webp`
-- `/src/pages/TastingMenuPage.tsx:292` — `/generated/luna-wine.webp`
+- `/src/pages/TastingMenuPage.tsx:297` — `/generated/luna-wine.webp`
 - `/src/pages/StaffingPage.tsx:206` — `/generated/staffing-hero.webp`
 - `/src/pages/SolPage.tsx:80` — `/generated/catering-hero.webp`
-- `/src/pages/SolPage.tsx:219` — `/generated/sol-chef-portrait.webp`
+- `/src/pages/SolPage.tsx:218` — `/generated/sol-chef-portrait.webp`
 - `/src/pages/ServicesPage.tsx:99` — `/generated/bali-hub-hero.webp`
 - `/src/pages/RomanticDinnerPage.tsx:121` — `/generated/section-romantic-dinner.webp`
-- `/src/pages/RomanticDinnerPage.tsx:226` — `/generated/luna-table.webp`
-- `/src/pages/RomanticDinnerPage.tsx:505` — `/generated/luna-detail.webp`
+- `/src/pages/RomanticDinnerPage.tsx:231` — `/generated/luna-table.webp`
+- `/src/pages/RomanticDinnerPage.tsx:509` — `/generated/luna-detail.webp`
 - `/src/pages/PrivateChefBaliPage.tsx:151` — `/generated/luna-hero-v2.webp`
-- `/src/pages/PrivateChefBaliPage.tsx:208` — `/generated/luna-table.webp`
-- `/src/pages/PrivateChefBaliPage.tsx:317` — `/generated/luna-chef-portrait.webp`
+- `/src/pages/PrivateChefBaliPage.tsx:212` — `/generated/luna-table.webp`
+- `/src/pages/PrivateChefBaliPage.tsx:320` — `/generated/luna-chef-portrait.webp`
 - `/src/pages/PartnerPlatformPage.tsx:124` — `/generated/partner-platform-hero.webp`
-- `/src/pages/PartnerPlatformPage.tsx:269` — `/generated/partner-platform-dashboard.webp`
-- `/src/pages/LunaPage.tsx:327` — `/generated/luna-hero-v2.webp`
-- `/src/pages/LunaPage.tsx:453` — `/generated/luna-gallery-3.webp`
-- `/src/pages/LunaPage.tsx:496` — `/generated/luna-gallery-4.webp`
+- `/src/pages/PartnerPlatformPage.tsx:268` — `/generated/partner-platform-dashboard.webp`
+- `/src/pages/MenuGuidePage.tsx:98` — `/generated/guide-menu.webp`
+- `/src/pages/LunaPage.tsx:327` — `/generated/luna-hero-v3.webp`
+- `/src/pages/LunaPage.tsx:455` — `/generated/luna-gallery-3.webp`
+- `/src/pages/LunaPage.tsx:497` — `/generated/luna-gallery-4.webp`
 - `/src/pages/LunaPage.tsx:533` — `/generated/luna-experience-collage.webp`
-- `/src/pages/LunaPage.tsx:591` — `/generated/luna-gallery-2.webp`
-- `/src/pages/LunaPage.tsx:942` — `/generated/luna-gallery-1.webp`
-- ... and 55 more
+- ... and 60 more
 
 ## Largest Images
 1. `/public/generated/floating-breakfast-bali.png` (1752x898) — 2.13 MB — Used 1x
-2. `/public/images/family-villa-dinner-cutout.png` (1536x1024) — 2.13 MB — Used 2x
-3. `/public/generated/were-awards.png` (1536x1024) — 2.13 MB — Used 1x
-4. `/public/generated/home-hero-ivory-villa.png` (1536x1024) — 1.57 MB — Used 1x
-5. `/public/generated/events/retreat-table.webp` (1440x800) — 919.7 KB — Used 4x
-6. `/public/generated/events/birthday-pool.webp` (1440x800) — 896 KB — Used 2x
-7. `/public/generated/events/retreat-breakfast.webp` (1440x800) — 874.25 KB — Used 6x
-8. `/public/generated/events/villa-party-night.webp` (1440x800) — 818.02 KB — Used 4x
-9. `/public/generated/book-hero.webp` (1440x800) — 816.96 KB — Used 1x
-10. `/public/generated/events/corporate-team.webp` (1440x800) — 718.42 KB — Used 4x
+2. `/public/generated/were-awards.png` (1536x1024) — 2.13 MB — Used 1x
+3. `/public/images/family-villa-dinner-cutout.png` (1536x1024) — 2.13 MB — Used 0x
+4. `/public/generated/events/retreat-table.webp` (1440x800) — 919.7 KB — Used 4x
+5. `/public/generated/events/birthday-pool.webp` (1440x800) — 896 KB — Used 2x
+6. `/public/generated/events/retreat-breakfast.webp` (1440x800) — 874.25 KB — Used 6x
+7. `/public/generated/events/villa-party-night.webp` (1440x800) — 818.02 KB — Used 4x
+8. `/public/generated/book-hero.webp` (1440x800) — 816.96 KB — Used 1x
+9. `/public/generated/events/corporate-team.webp` (1440x800) — 718.42 KB — Used 4x
+10. `/public/hero-events.webp` (2752x1536) — 665.65 KB — Used 1x

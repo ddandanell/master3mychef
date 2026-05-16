@@ -25,6 +25,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20plated%20dinner%20quote%20in%20Bali.'
@@ -630,7 +631,7 @@ export default function CateringPlatedPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {PLATED_GALLERY.map((src, i) => (
               <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={src} alt={`Plated dinner setup ${i + 1} at Bali villa`} className="w-full h-full object-cover" loading="lazy" />
+                <OptimizedImage src={src} alt={`Plated dinner setup ${i + 1} at Bali villa`} className="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>

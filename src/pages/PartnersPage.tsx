@@ -19,6 +19,7 @@ import BestPartnerBadge from '@/components/BestPartnerBadge'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA = '6282237565997'
@@ -183,7 +184,7 @@ export default function PartnersPage() {
 
       <section className="relative overflow-hidden border-b border-[#E8E3D8]">
         <div className="absolute inset-0">
-          <img src="/generated/partner-platform-hero.webp" alt="myCHEF Bali partner programme" className="w-full h-full object-cover opacity-20" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/partner-platform-hero.webp" alt="myCHEF Bali partner programme" className="w-full h-full object-cover opacity-20" loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(250,250,248,0.86),rgba(250,250,248,0.98))]" />
         </div>
         <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-32">

@@ -17,6 +17,7 @@ import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema, aggregat
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
+import OptimizedImage from '@/components/OptimizedImage'
 const WA = '6282237565997'
 const SITE = 'https://mychef.id'
 
@@ -264,7 +265,7 @@ export default function PartnerPlatformPage() {
 
       {/* ── KITCHEN BAND IMAGE ───────────────────────────────────────── */}
       <section className="relative w-full h-[40vh] min-h-[340px] overflow-hidden">
-        <img
+        <OptimizedImage
           src="/generated/partner-platform-dashboard.webp"
           alt="Chef plating a Michelin-level course on a black marble countertop in a Bali villa"
           className="absolute inset-0 w-full h-full object-cover"

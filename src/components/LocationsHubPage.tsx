@@ -4,6 +4,7 @@ import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, 
 import { LOCATIONS } from '../data/siteArchitecture'
 import Breadcrumb from './shared/Breadcrumb'
 
+import OptimizedImage from '@/components/OptimizedImage'
 const SITE = 'https://mychef.id'
 
 const LOCATION_DETAILS = [
@@ -149,7 +150,7 @@ export default function LocationsHubPage() {
                 >
                   {details?.image && (
                     <div className="h-56 overflow-hidden">
-                      <img
+                      <OptimizedImage
                         src={details.image}
                         alt={loc.label}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -216,7 +217,7 @@ export default function LocationsHubPage() {
               </div>
             </div>
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
-              <img
+              <OptimizedImage
                 src="/generated/bali-locations-sunset.webp"
                 alt="Dramatic skyline at dusk — myCHEF private chef expansion to Jakarta"
                 className="w-full h-full object-cover"

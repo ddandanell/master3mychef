@@ -5,8 +5,6 @@ import {
   Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music,
   Globe2, ClipboardCheck, ArrowRight, Check,
 } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -18,7 +16,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { EventsRiskReversal } from '@/components/shared'
 
-gsap.registerPlugin(ScrollTrigger)
+import OptimizedImage from '@/components/OptimizedImage'
 
 const SITE = 'https://mychef.id'
 const WA_NUMBER = '6282237565997'
@@ -279,22 +277,41 @@ export default function EventsMainPage() {
   const heroRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        '.hero-fade',
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1.1, stagger: 0.12, ease: 'power3.out' },
-      )
-      gsap.fromTo(
-        '.events-reveal',
-        { y: 40, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 0.9, stagger: 0.08, ease: 'power3.out',
-          scrollTrigger: { trigger: '.events-grid', start: 'top 80%', once: true },
-        },
-      )
-    }, heroRef)
-    return () => ctx.revert()
+    let cancelled = false
+    let cleanup: (() => void) | undefined
+
+    void (async () => {
+      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
+        import('gsap'),
+        import('gsap/ScrollTrigger'),
+      ])
+
+      if (cancelled) return
+
+      gsap.registerPlugin(ScrollTrigger)
+      const ctx = gsap.context(() => {
+        gsap.fromTo(
+          '.hero-fade',
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 1.1, stagger: 0.12, ease: 'power3.out' },
+        )
+        gsap.fromTo(
+          '.events-reveal',
+          { y: 40, opacity: 0 },
+          {
+            y: 0, opacity: 1, duration: 0.9, stagger: 0.08, ease: 'power3.out',
+            scrollTrigger: { trigger: '.events-grid', start: 'top 80%', once: true },
+          },
+        )
+      }, heroRef)
+
+      cleanup = () => ctx.revert()
+    })()
+
+    return () => {
+      cancelled = true
+      cleanup?.()
+    }
   }, [])
 
   return (
@@ -445,7 +462,7 @@ export default function EventsMainPage() {
                 className="group bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300"
               >
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={event.image} alt={`${event.title} in Bali by myCHEF`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <OptimizedImage src={event.image} alt={`${event.title} in Bali by myCHEF`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <p className="text-[#C5A028] text-[11px] tracking-[0.3em] uppercase mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>

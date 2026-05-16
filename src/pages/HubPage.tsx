@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw, UsersRound, ConciergeBell } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
   serviceSchema,
@@ -15,8 +13,6 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { RiskReversal } from '@/components/shared'
 import TrustSection from '@/components/trust/TrustSection'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const PORTALS = [
   {
@@ -178,40 +174,58 @@ export default function HubPage() {
   const [hoveredStep, setHoveredStep] = useState<string | null>(null)
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.3 })
-      tl.fromTo('.hub-hero-label', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
-      tl.fromTo('.hub-hero-title', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5')
-      tl.fromTo('.hub-hero-subtitle', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-      tl.fromTo('.hub-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+    let cancelled = false
+    let cleanup: (() => void) | undefined
 
-      gsap.fromTo('.portal-card', { y: 60, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out',
-        scrollTrigger: { trigger: portalsRef.current, start: 'top 85%', once: true },
+    void (async () => {
+      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
+        import('gsap'),
+        import('gsap/ScrollTrigger'),
+      ])
+
+      if (cancelled) return
+
+      gsap.registerPlugin(ScrollTrigger)
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({ delay: 0.3 })
+        tl.fromTo('.hub-hero-label', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
+        tl.fromTo('.hub-hero-title', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5')
+        tl.fromTo('.hub-hero-subtitle', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+        tl.fromTo('.hub-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+
+        gsap.fromTo('.portal-card', { y: 60, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out',
+          scrollTrigger: { trigger: portalsRef.current, start: 'top 85%', once: true },
+        })
+
+        gsap.fromTo('.trust-item', { y: 40, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: {
+            trigger: trustRef.current,
+            start: 'top 80%',
+            once: true,
+            onEnter: () => { statsAnimationStartedRef.current = true },
+          },
+        })
+
+        gsap.fromTo('.hiw-step', { y: 50, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: 'power3.out',
+          scrollTrigger: { trigger: '.hiw-section', start: 'top 75%', once: true },
+        })
+
+        gsap.fromTo('.diff-card', { y: 40, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.diff-section', start: 'top 80%', once: true },
+        })
       })
 
-      gsap.fromTo('.trust-item', { y: 40, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: {
-          trigger: trustRef.current,
-          start: 'top 80%',
-          once: true,
-          onEnter: () => { statsAnimationStartedRef.current = true },
-        },
-      })
+      cleanup = () => ctx.revert()
+    })()
 
-      gsap.fromTo('.hiw-step', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: 'power3.out',
-        scrollTrigger: { trigger: '.hiw-section', start: 'top 75%', once: true },
-      })
-
-      gsap.fromTo('.diff-card', { y: 40, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.diff-section', start: 'top 80%', once: true },
-      })
-    })
-
-    return () => ctx.revert()
+    return () => {
+      cancelled = true
+      cleanup?.()
+    }
   }, [])
 
   const homeLocalBusinessSchema: Record<string, unknown> = {

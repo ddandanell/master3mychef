@@ -16,6 +16,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import TaxFooter from '@/components/shared/TaxFooter'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20a%20villa%20party%20in%20Bali.'
@@ -173,7 +174,7 @@ export default function EventsVillaPartiesPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/villa-party-night.webp" alt="Night-time villa party with bar and pool lighting in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/events/villa-party-night.webp" alt="Night-time villa party with bar and pool lighting in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
@@ -227,7 +228,7 @@ export default function EventsVillaPartiesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/villa-party-night.webp" alt="Bali villa party setup with bar and long-table dining" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/events/villa-party-night.webp" alt="Bali villa party setup with bar and long-table dining" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
           <SectionHeader eyebrow="Chapter 2 — Formats" title="Party Types & Formats" subtitle="Choose the structure first, then we dial the food, bar, and entertainment around it." />
@@ -262,7 +263,7 @@ export default function EventsVillaPartiesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/sol-bbq.webp" alt="Live BBQ station for a Bali villa party" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/sol-bbq.webp" alt="Live BBQ station for a Bali villa party" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -272,7 +273,7 @@ export default function EventsVillaPartiesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/party-beer.webp" alt="Party bartender service and drinks at a Bali villa event" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/party-beer.webp" alt="Party bartender service and drinks at a Bali villa event" className="w-full h-full object-cover" loading="lazy" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -331,7 +332,7 @@ export default function EventsVillaPartiesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/party-pool.webp" alt="Poolside villa party staffing and setup in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/party-pool.webp" alt="Poolside villa party staffing and setup in Bali" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -360,7 +361,7 @@ export default function EventsVillaPartiesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/party-rooftop.webp" alt="Late-night rooftop style villa party in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/party-rooftop.webp" alt="Late-night rooftop style villa party in Bali" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -439,7 +440,7 @@ export default function EventsVillaPartiesPage() {
             ].map((party) => (
               <div key={party.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={party.image} alt={party.title} className="w-full h-full object-cover" loading="lazy" />
+                  <OptimizedImage src={party.image} alt={party.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-semibold text-[#1A1A1A] text-sm">{party.title}</h3>
@@ -457,7 +458,7 @@ export default function EventsVillaPartiesPage() {
             {DECOR_GALLERY.map((decor) => (
               <div key={decor.title} className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={decor.image} alt={decor.title} className="w-full h-full object-cover" loading="lazy" />
+                  <OptimizedImage src={decor.image} alt={decor.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-medium text-[#1A1A1A] mb-1">{decor.title}</h3>

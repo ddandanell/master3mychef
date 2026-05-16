@@ -24,6 +24,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20drop-off%20catering%20in%20Bali.'
@@ -618,7 +619,7 @@ export default function CateringDropOffPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {DROPOFF_GALLERY.map((src, i) => (
               <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={src} alt={`Drop-off catering setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                <OptimizedImage src={src} alt={`Drop-off catering setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>
@@ -694,7 +695,7 @@ export default function CateringDropOffPage() {
                 className="group bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all"
               >
                 <div className="aspect-[16/9] overflow-hidden">
-                  <img src={path.image} alt={path.title} className="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+                  <OptimizedImage src={path.image} alt={path.title} className="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h4 className="font-medium text-[#1A1A1A] mb-1">{path.title}</h4>

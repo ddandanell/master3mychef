@@ -16,6 +16,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20an%20anniversary%20dinner.'
@@ -141,7 +142,7 @@ export default function EventsAnniversariesPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dinner setup by a Bali villa pool" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dinner setup by a Bali villa pool" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
@@ -354,7 +355,7 @@ export default function EventsAnniversariesPage() {
             {REAL_ANNIVERSARIES.map((anniversary) => (
               <div key={anniversary.names} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={anniversary.image} alt={`${anniversary.names} anniversary in ${anniversary.location}`} className="w-full h-full object-cover" loading="lazy" />
+                  <OptimizedImage src={anniversary.image} alt={`${anniversary.names} anniversary in ${anniversary.location}`} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{anniversary.names}</h3>

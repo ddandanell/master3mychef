@@ -1,24 +1,97 @@
 {
-  "timestamp": "2026-05-16T16:42:40.132Z",
+  "timestamp": "2026-05-16T18:32:46.589Z",
   "scanPaths": [
     "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src",
     "/Users/openclaw/Downloads/MYCHEF . MASTER/app/public"
   ],
   "summary": {
-    "totalImages": 93,
+    "totalImages": 100,
     "totalReferences": 204,
     "imagesWithoutAlt": 54,
-    "imagesNotFollowingConvention": 84,
-    "totalFileSize": 27933584,
+    "imagesNotFollowingConvention": 85,
+    "totalFileSize": 21909181,
     "formats": {
-      "webp": 89,
-      "png": 3,
-      "jpg": 1
+      "webp": 93,
+      "jpg": 2,
+      "png": 4,
+      "svg": 1
     }
   },
   "images": {
-    "/public/wedding-reception.webp": {
-      "path": "/public/wedding-reception.webp",
+    "/public/misc-og-image-xl.webp": {
+      "path": "/public/misc-og-image-xl.webp",
+      "format": "webp",
+      "size": 74992,
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/misc-og-image-xl.jpg": {
+      "path": "/public/misc-og-image-xl.jpg",
+      "format": "jpg",
+      "size": 111873,
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/icon-512.png": {
+      "path": "/public/icon-512.png",
+      "format": "png",
+      "size": 9943,
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/icon-192.png": {
+      "path": "/public/icon-192.png",
+      "format": "png",
+      "size": 2394,
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/favicon.svg": {
+      "path": "/public/favicon.svg",
+      "format": "svg",
+      "size": 685,
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/favicon-32.png": {
+      "path": "/public/favicon-32.png",
+      "format": "png",
+      "size": 301,
+      "dimensions": {
+        "width": 32,
+        "height": 32
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/events-wedding-reception-lg.webp": {
+      "path": "/public/events-wedding-reception-lg.webp",
       "format": "webp",
       "size": 165524,
       "dimensions": {
@@ -31,8 +104,8 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx"
       ]
     },
-    "/public/hero-events.webp": {
-      "path": "/public/hero-events.webp",
+    "/public/events-hero-events-xl.webp": {
+      "path": "/public/events-hero-events-xl.webp",
       "format": "webp",
       "size": 681626,
       "dimensions": {
@@ -45,8 +118,8 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsMainPage.tsx"
       ]
     },
-    "/public/event-wedding.webp": {
-      "path": "/public/event-wedding.webp",
+    "/public/events-event-wedding-xl.webp": {
+      "path": "/public/events-event-wedding-xl.webp",
       "format": "webp",
       "size": 667342,
       "dimensions": {
@@ -59,34 +132,32 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx"
       ]
     },
-    "/public/generated/were-awards.png": {
-      "path": "/public/generated/were-awards.png",
+    "/public/apple-touch-icon.png": {
+      "path": "/public/apple-touch-icon.png",
       "format": "png",
-      "size": 2231096,
+      "size": 1125,
       "dimensions": {
-        "width": 1536,
-        "height": 1024
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx"
-      ]
-    },
-    "/public/generated/trust-hosts.webp": {
-      "path": "/public/generated/trust-hosts.webp",
-      "format": "webp",
-      "size": 91716,
-      "dimensions": {
-        "width": 1440,
-        "height": 800
+        "width": 180,
+        "height": 180
       },
       "hasNamingConvention": false,
       "usageCount": 0,
       "referencedBy": []
     },
-    "/public/generated/testimonials-bg.webp": {
-      "path": "/public/generated/testimonials-bg.webp",
+    "/public/images/family-villa-dinner-cutout.webp": {
+      "path": "/public/images/family-villa-dinner-cutout.webp",
+      "format": "webp",
+      "size": 148324,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/ui-testimonials-bg-lg.webp": {
+      "path": "/public/generated/ui-testimonials-bg-lg.webp",
       "format": "webp",
       "size": 83012,
       "dimensions": {
@@ -99,22 +170,44 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
       ]
     },
-    "/public/generated/team-photo.webp": {
-      "path": "/public/generated/team-photo.webp",
+    "/public/generated/ui-guide-wedding-lg.webp": {
+      "path": "/public/generated/ui-guide-wedding-lg.webp",
       "format": "webp",
-      "size": 342906,
+      "size": 185228,
       "dimensions": {
-        "width": 1440,
-        "height": 800
+        "width": 1344,
+        "height": 768
       },
       "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx"
-      ]
+      "usageCount": 0,
+      "referencedBy": []
     },
-    "/public/generated/staffing-table.webp": {
-      "path": "/public/generated/staffing-table.webp",
+    "/public/generated/ui-guide-menu-lg.webp": {
+      "path": "/public/generated/ui-guide-menu-lg.webp",
+      "format": "webp",
+      "size": 93668,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/ui-guide-corporate-lg.webp": {
+      "path": "/public/generated/ui-guide-corporate-lg.webp",
+      "format": "webp",
+      "size": 140580,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/staffing-staffing-table-lg.webp": {
+      "path": "/public/generated/staffing-staffing-table-lg.webp",
       "format": "webp",
       "size": 101630,
       "dimensions": {
@@ -128,8 +221,8 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx"
       ]
     },
-    "/public/generated/staffing-kitchen.webp": {
-      "path": "/public/generated/staffing-kitchen.webp",
+    "/public/generated/staffing-staffing-kitchen-lg.webp": {
+      "path": "/public/generated/staffing-staffing-kitchen-lg.webp",
       "format": "webp",
       "size": 88542,
       "dimensions": {
@@ -145,8 +238,8 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHotelsPage.tsx"
       ]
     },
-    "/public/generated/staffing-hero.webp": {
-      "path": "/public/generated/staffing-hero.webp",
+    "/public/generated/staffing-staffing-hero-xl.webp": {
+      "path": "/public/generated/staffing-staffing-hero-xl.webp",
       "format": "webp",
       "size": 85262,
       "dimensions": {
@@ -163,219 +256,29 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceButlersPage.tsx"
       ]
     },
-    "/public/generated/sommelier-hero.webp": {
-      "path": "/public/generated/sommelier-hero.webp",
+    "/public/generated/staffing-guide-staffing-lg.webp": {
+      "path": "/public/generated/staffing-guide-staffing-lg.webp",
       "format": "webp",
-      "size": 129174,
+      "size": 118554,
       "dimensions": {
-        "width": 1440,
-        "height": 832
+        "width": 1344,
+        "height": 768
       },
       "hasNamingConvention": false,
       "usageCount": 0,
       "referencedBy": []
     },
-    "/public/generated/sol-produce.webp": {
-      "path": "/public/generated/sol-produce.webp",
+    "/public/generated/staffing-butler-service-lg.webp": {
+      "path": "/public/generated/staffing-butler-service-lg.webp",
       "format": "webp",
-      "size": 159046,
-      "dimensions": {
-        "width": 1024,
-        "height": 1024
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx"
-      ]
-    },
-    "/public/generated/sol-chef-portrait.webp": {
-      "path": "/public/generated/sol-chef-portrait.webp",
-      "format": "webp",
-      "size": 41862,
-      "dimensions": {
-        "width": 768,
-        "height": 1024
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/SolPage.tsx"
-      ]
-    },
-    "/public/generated/sol-bbq.webp": {
-      "path": "/public/generated/sol-bbq.webp",
-      "format": "webp",
-      "size": 135900,
-      "dimensions": {
-        "width": 1024,
-        "height": 576
-      },
-      "hasNamingConvention": false,
-      "usageCount": 6,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx"
-      ]
-    },
-    "/public/generated/section-romantic-dinner.webp": {
-      "path": "/public/generated/section-romantic-dinner.webp",
-      "format": "webp",
-      "size": 552357,
+      "size": 545716,
       "dimensions": {
         "width": 1440,
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/RomanticDinnerPage.tsx"
-      ]
-    },
-    "/public/generated/pkg-roast.webp": {
-      "path": "/public/generated/pkg-roast.webp",
-      "format": "webp",
-      "size": 114804,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx"
-      ]
-    },
-    "/public/generated/pkg-grazing.webp": {
-      "path": "/public/generated/pkg-grazing.webp",
-      "format": "webp",
-      "size": 87154,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 3,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringGrazingPage.tsx"
-      ]
-    },
-    "/public/generated/party-white.webp": {
-      "path": "/public/generated/party-white.webp",
-      "format": "webp",
-      "size": 140664,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx"
-      ]
-    },
-    "/public/generated/party-ultimate.webp": {
-      "path": "/public/generated/party-ultimate.webp",
-      "format": "webp",
-      "size": 117598,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceMixologyPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceBartendersPage.tsx"
-      ]
-    },
-    "/public/generated/party-rooftop.webp": {
-      "path": "/public/generated/party-rooftop.webp",
-      "format": "webp",
-      "size": 89132,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx"
-      ]
-    },
-    "/public/generated/party-pool.webp": {
-      "path": "/public/generated/party-pool.webp",
-      "format": "webp",
-      "size": 128730,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 3,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx"
-      ]
-    },
-    "/public/generated/party-festival.webp": {
-      "path": "/public/generated/party-festival.webp",
-      "format": "webp",
-      "size": 189928,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx"
-      ]
-    },
-    "/public/generated/party-brunch.webp": {
-      "path": "/public/generated/party-brunch.webp",
-      "format": "webp",
-      "size": 132308,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 8,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx"
-      ]
-    },
-    "/public/generated/party-birthday.webp": {
-      "path": "/public/generated/party-birthday.webp",
-      "format": "webp",
-      "size": 110012,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx"
-      ]
-    },
-    "/public/generated/party-beer.webp": {
-      "path": "/public/generated/party-beer.webp",
-      "format": "webp",
-      "size": 110770,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx"
-      ]
+      "usageCount": 0,
+      "referencedBy": []
     },
     "/public/generated/partner-platform-hero.webp": {
       "path": "/public/generated/partner-platform-hero.webp",
@@ -392,8 +295,32 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PartnerPlatformPage.tsx"
       ]
     },
-    "/public/generated/partner-platform-dashboard.webp": {
-      "path": "/public/generated/partner-platform-dashboard.webp",
+    "/public/generated/misc-trust-hosts-lg.webp": {
+      "path": "/public/generated/misc-trust-hosts-lg.webp",
+      "format": "webp",
+      "size": 91716,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/misc-section-romantic-dinner-lg.webp": {
+      "path": "/public/generated/misc-section-romantic-dinner-lg.webp",
+      "format": "webp",
+      "size": 552357,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/misc-partner-platform-dashboard-xl.webp": {
+      "path": "/public/generated/misc-partner-platform-dashboard-xl.webp",
       "format": "webp",
       "size": 85926,
       "dimensions": {
@@ -401,43 +328,11 @@
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PartnerPlatformPage.tsx"
-      ]
+      "usageCount": 0,
+      "referencedBy": []
     },
-    "/public/generated/luna-wine.webp": {
-      "path": "/public/generated/luna-wine.webp",
-      "format": "webp",
-      "size": 56398,
-      "dimensions": {
-        "width": 768,
-        "height": 1024
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/TastingMenuPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceSommelierPage.tsx"
-      ]
-    },
-    "/public/generated/luna-table.webp": {
-      "path": "/public/generated/luna-table.webp",
-      "format": "webp",
-      "size": 103344,
-      "dimensions": {
-        "width": 1024,
-        "height": 576
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/RomanticDinnerPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PrivateChefBaliPage.tsx"
-      ]
-    },
-    "/public/generated/luna-plating.webp": {
-      "path": "/public/generated/luna-plating.webp",
+    "/public/generated/misc-luna-plating-md.webp": {
+      "path": "/public/generated/misc-luna-plating-md.webp",
       "format": "webp",
       "size": 81696,
       "dimensions": {
@@ -455,117 +350,141 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BlogIndexPage.tsx"
       ]
     },
-    "/public/generated/luna-hero-v3.webp": {
-      "path": "/public/generated/luna-hero-v3.webp",
+    "/public/generated/misc-jakarta-skyline-lg.webp": {
+      "path": "/public/generated/misc-jakarta-skyline-lg.webp",
       "format": "webp",
-      "size": 141594,
+      "size": 88684,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/misc-hub-villa-lg.webp": {
+      "path": "/public/generated/misc-hub-villa-lg.webp",
+      "format": "webp",
+      "size": 136918,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 3,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx"
+      ]
+    },
+    "/public/generated/misc-hub-fine-dining-lg.webp": {
+      "path": "/public/generated/misc-hub-fine-dining-lg.webp",
+      "format": "webp",
+      "size": 32702,
+      "dimensions": {
+        "width": 896,
+        "height": 1184
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/misc-hub-catering-lg.webp": {
+      "path": "/public/generated/misc-hub-catering-lg.webp",
+      "format": "webp",
+      "size": 124256,
+      "dimensions": {
+        "width": 896,
+        "height": 1184
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/misc-hub-bali-lg.webp": {
+      "path": "/public/generated/misc-hub-bali-lg.webp",
+      "format": "webp",
+      "size": 106008,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 1,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx"
+      ]
+    },
+    "/public/generated/misc-hero-how-it-works-lg.webp": {
+      "path": "/public/generated/misc-hero-how-it-works-lg.webp",
+      "format": "webp",
+      "size": 47238,
       "dimensions": {
         "width": 1216,
         "height": 832
       },
       "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
-      ]
+      "usageCount": 0,
+      "referencedBy": []
     },
-    "/public/generated/luna-hero-v2.webp": {
-      "path": "/public/generated/luna-hero-v2.webp",
+    "/public/generated/misc-help-hero-xl.webp": {
+      "path": "/public/generated/misc-help-hero-xl.webp",
       "format": "webp",
-      "size": 93684,
+      "size": 83174,
       "dimensions": {
-        "width": 1216,
-        "height": 832
+        "width": 1344,
+        "height": 768
       },
       "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PrivateChefBaliPage.tsx"
-      ]
+      "usageCount": 0,
+      "referencedBy": []
     },
-    "/public/generated/luna-gallery-4.webp": {
-      "path": "/public/generated/luna-gallery-4.webp",
+    "/public/generated/misc-contact-hero-xl.webp": {
+      "path": "/public/generated/misc-contact-hero-xl.webp",
       "format": "webp",
-      "size": 229032,
+      "size": 654933,
       "dimensions": {
-        "width": 1402,
-        "height": 1122
+        "width": 1440,
+        "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
-      ]
+      "usageCount": 0,
+      "referencedBy": []
     },
-    "/public/generated/luna-gallery-3.webp": {
-      "path": "/public/generated/luna-gallery-3.webp",
+    "/public/generated/misc-contact-concierge-lg.webp": {
+      "path": "/public/generated/misc-contact-concierge-lg.webp",
       "format": "webp",
-      "size": 134152,
+      "size": 53510,
       "dimensions": {
-        "width": 1402,
-        "height": 1122
+        "width": 1200,
+        "height": 1044
       },
       "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
-      ]
+      "usageCount": 0,
+      "referencedBy": []
     },
-    "/public/generated/luna-gallery-2.webp": {
-      "path": "/public/generated/luna-gallery-2.webp",
+    "/public/generated/misc-book-hero-xl.webp": {
+      "path": "/public/generated/misc-book-hero-xl.webp",
       "format": "webp",
-      "size": 149832,
+      "size": 836565,
       "dimensions": {
-        "width": 1402,
-        "height": 1122
+        "width": 1440,
+        "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
-      ]
+      "usageCount": 0,
+      "referencedBy": []
     },
-    "/public/generated/luna-gallery-1.webp": {
-      "path": "/public/generated/luna-gallery-1.webp",
+    "/public/generated/misc-avatar-ai-md.webp": {
+      "path": "/public/generated/misc-avatar-ai-md.webp",
       "format": "webp",
-      "size": 153376,
-      "dimensions": {
-        "width": 1402,
-        "height": 1122
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
-      ]
-    },
-    "/public/generated/luna-experience-collage.webp": {
-      "path": "/public/generated/luna-experience-collage.webp",
-      "format": "webp",
-      "size": 165008,
-      "dimensions": {
-        "width": 1402,
-        "height": 1122
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
-      ]
-    },
-    "/public/generated/luna-detail.webp": {
-      "path": "/public/generated/luna-detail.webp",
-      "format": "webp",
-      "size": 119238,
+      "size": 25454,
       "dimensions": {
         "width": 1024,
         "height": 1024
       },
       "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/RomanticDinnerPage.tsx"
-      ]
+      "usageCount": 0,
+      "referencedBy": []
     },
     "/public/generated/luna-chef-portrait.webp": {
       "path": "/public/generated/luna-chef-portrait.webp",
@@ -582,141 +501,6 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ChefsTablePage.tsx"
       ]
     },
-    "/public/generated/jakarta-skyline.webp": {
-      "path": "/public/generated/jakarta-skyline.webp",
-      "format": "webp",
-      "size": 88684,
-      "dimensions": {
-        "width": 1344,
-        "height": 768
-      },
-      "hasNamingConvention": false,
-      "usageCount": 0,
-      "referencedBy": []
-    },
-    "/public/generated/hub-villa.webp": {
-      "path": "/public/generated/hub-villa.webp",
-      "format": "webp",
-      "size": 136918,
-      "dimensions": {
-        "width": 1024,
-        "height": 576
-      },
-      "hasNamingConvention": false,
-      "usageCount": 6,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaStaffPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx"
-      ]
-    },
-    "/public/generated/hub-fine-dining.webp": {
-      "path": "/public/generated/hub-fine-dining.webp",
-      "format": "webp",
-      "size": 32702,
-      "dimensions": {
-        "width": 896,
-        "height": 1184
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringPlatedPage.tsx"
-      ]
-    },
-    "/public/generated/hub-events.webp": {
-      "path": "/public/generated/hub-events.webp",
-      "format": "webp",
-      "size": 143704,
-      "dimensions": {
-        "width": 896,
-        "height": 1184
-      },
-      "hasNamingConvention": false,
-      "usageCount": 0,
-      "referencedBy": []
-    },
-    "/public/generated/hub-catering.webp": {
-      "path": "/public/generated/hub-catering.webp",
-      "format": "webp",
-      "size": 124256,
-      "dimensions": {
-        "width": 896,
-        "height": 1184
-      },
-      "hasNamingConvention": false,
-      "usageCount": 4,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringMainPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringDropOffPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx"
-      ]
-    },
-    "/public/generated/hub-bali.webp": {
-      "path": "/public/generated/hub-bali.webp",
-      "format": "webp",
-      "size": 106008,
-      "dimensions": {
-        "width": 1024,
-        "height": 576
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx"
-      ]
-    },
-    "/public/generated/home-hero-ivory-villa.webp": {
-      "path": "/public/generated/home-hero-ivory-villa.webp",
-      "format": "webp",
-      "size": 117820,
-      "dimensions": {
-        "width": 1216,
-        "height": 832
-      },
-      "hasNamingConvention": false,
-      "usageCount": 0,
-      "referencedBy": []
-    },
-    "/public/generated/hero-retreats.webp": {
-      "path": "/public/generated/hero-retreats.webp",
-      "format": "webp",
-      "size": 223532,
-      "dimensions": {
-        "width": 1440,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringRetreatPage.tsx"
-      ]
-    },
-    "/public/generated/hero-how-it-works.webp": {
-      "path": "/public/generated/hero-how-it-works.webp",
-      "format": "webp",
-      "size": 47238,
-      "dimensions": {
-        "width": 1216,
-        "height": 832
-      },
-      "hasNamingConvention": false,
-      "usageCount": 0,
-      "referencedBy": []
-    },
-    "/public/generated/hero-dropoff-catering.webp": {
-      "path": "/public/generated/hero-dropoff-catering.webp",
-      "format": "webp",
-      "size": 212562,
-      "dimensions": {
-        "width": 1440,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringDropOffPage.tsx"
-      ]
-    },
     "/public/generated/hero-corporate-events.webp": {
       "path": "/public/generated/hero-corporate-events.webp",
       "format": "webp",
@@ -731,106 +515,10 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringCorporatePage.tsx"
       ]
     },
-    "/public/generated/hero-buffet-catering.webp": {
-      "path": "/public/generated/hero-buffet-catering.webp",
+    "/public/generated/floating-breakfast-bali.webp": {
+      "path": "/public/generated/floating-breakfast-bali.webp",
       "format": "webp",
-      "size": 276236,
-      "dimensions": {
-        "width": 1440,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 3,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringVillaPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx"
-      ]
-    },
-    "/public/generated/hero-babiguling-catering.webp": {
-      "path": "/public/generated/hero-babiguling-catering.webp",
-      "format": "webp",
-      "size": 234478,
-      "dimensions": {
-        "width": 1440,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx"
-      ]
-    },
-    "/public/generated/help-hero.webp": {
-      "path": "/public/generated/help-hero.webp",
-      "format": "webp",
-      "size": 83174,
-      "dimensions": {
-        "width": 1344,
-        "height": 768
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HelpPage.tsx"
-      ]
-    },
-    "/public/generated/guide-wedding.webp": {
-      "path": "/public/generated/guide-wedding.webp",
-      "format": "webp",
-      "size": 185228,
-      "dimensions": {
-        "width": 1344,
-        "height": 768
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/WeddingGuidePage.tsx"
-      ]
-    },
-    "/public/generated/guide-staffing.webp": {
-      "path": "/public/generated/guide-staffing.webp",
-      "format": "webp",
-      "size": 118554,
-      "dimensions": {
-        "width": 1344,
-        "height": 768
-      },
-      "hasNamingConvention": false,
-      "usageCount": 0,
-      "referencedBy": []
-    },
-    "/public/generated/guide-menu.webp": {
-      "path": "/public/generated/guide-menu.webp",
-      "format": "webp",
-      "size": 93668,
-      "dimensions": {
-        "width": 1344,
-        "height": 768
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/MenuGuidePage.tsx"
-      ]
-    },
-    "/public/generated/guide-corporate.webp": {
-      "path": "/public/generated/guide-corporate.webp",
-      "format": "webp",
-      "size": 140580,
-      "dimensions": {
-        "width": 1344,
-        "height": 768
-      },
-      "hasNamingConvention": false,
-      "usageCount": 0,
-      "referencedBy": []
-    },
-    "/public/generated/floating-breakfast-bali.png": {
-      "path": "/public/generated/floating-breakfast-bali.png",
-      "format": "png",
-      "size": 2231726,
+      "size": 171554,
       "dimensions": {
         "width": 1752,
         "height": 898
@@ -841,95 +529,72 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx"
       ]
     },
-    "/public/generated/fd-chef-signature.jpg": {
-      "path": "/public/generated/fd-chef-signature.jpg",
-      "format": "jpg",
-      "size": 365553,
+    "/public/generated/finedining-were-awards-lg.webp": {
+      "path": "/public/generated/finedining-were-awards-lg.webp",
+      "format": "webp",
+      "size": 148324,
       "dimensions": {
-        "width": 896,
-        "height": 1200
+        "width": 1536,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/finedining-sommelier-hero-xl.webp": {
+      "path": "/public/generated/finedining-sommelier-hero-xl.webp",
+      "format": "webp",
+      "size": 129174,
+      "dimensions": {
+        "width": 1440,
+        "height": 832
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/finedining-sol-produce-md.webp": {
+      "path": "/public/generated/finedining-sol-produce-md.webp",
+      "format": "webp",
+      "size": 159046,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/finedining-sol-chef-portrait-sm.webp": {
+      "path": "/public/generated/finedining-sol-chef-portrait-sm.webp",
+      "format": "webp",
+      "size": 41862,
+      "dimensions": {
+        "width": 768,
+        "height": 1024
       },
       "hasNamingConvention": false,
       "usageCount": 1,
       "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningChefsPage.tsx"
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/SolPage.tsx"
       ]
     },
-    "/public/generated/corp-villa.webp": {
-      "path": "/public/generated/corp-villa.webp",
+    "/public/generated/finedining-sol-bbq-md.webp": {
+      "path": "/public/generated/finedining-sol-bbq-md.webp",
       "format": "webp",
-      "size": 121554,
+      "size": 135900,
       "dimensions": {
-        "width": 1280,
-        "height": 800
+        "width": 1024,
+        "height": 576
       },
       "hasNamingConvention": false,
-      "usageCount": 4,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaManagersPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx"
-      ]
+      "usageCount": 0,
+      "referencedBy": []
     },
-    "/public/generated/corp-plated.webp": {
-      "path": "/public/generated/corp-plated.webp",
+    "/public/generated/finedining-chefs-hero-xl.webp": {
+      "path": "/public/generated/finedining-chefs-hero-xl.webp",
       "format": "webp",
-      "size": 62678,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx"
-      ]
-    },
-    "/public/generated/corp-networking.webp": {
-      "path": "/public/generated/corp-networking.webp",
-      "format": "webp",
-      "size": 77160,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx"
-      ]
-    },
-    "/public/generated/corp-executive.webp": {
-      "path": "/public/generated/corp-executive.webp",
-      "format": "webp",
-      "size": 65222,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx"
-      ]
-    },
-    "/public/generated/corp-conference.webp": {
-      "path": "/public/generated/corp-conference.webp",
-      "format": "webp",
-      "size": 73574,
-      "dimensions": {
-        "width": 1280,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 2,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx"
-      ]
-    },
-    "/public/generated/contact-hero.webp": {
-      "path": "/public/generated/contact-hero.webp",
-      "format": "webp",
-      "size": 654933,
+      "size": 544884,
       "dimensions": {
         "width": 1440,
         "height": 800
@@ -937,21 +602,451 @@
       "hasNamingConvention": false,
       "usageCount": 1,
       "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ContactPage.tsx"
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningChefsPage.tsx"
       ]
     },
-    "/public/generated/contact-concierge.webp": {
-      "path": "/public/generated/contact-concierge.webp",
-      "format": "webp",
-      "size": 53510,
+    "/public/generated/finedining-chef-signature-md.jpg": {
+      "path": "/public/generated/finedining-chef-signature-md.jpg",
+      "format": "jpg",
+      "size": 365553,
       "dimensions": {
-        "width": 1200,
-        "height": 1044
+        "width": 896,
+        "height": 1200
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/experience-luna-wine-md.webp": {
+      "path": "/public/generated/experience-luna-wine-md.webp",
+      "format": "webp",
+      "size": 56398,
+      "dimensions": {
+        "width": 768,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/experience-luna-table-md.webp": {
+      "path": "/public/generated/experience-luna-table-md.webp",
+      "format": "webp",
+      "size": 103344,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/experience-luna-hero-v3-xl.webp": {
+      "path": "/public/generated/experience-luna-hero-v3-xl.webp",
+      "format": "webp",
+      "size": 141594,
+      "dimensions": {
+        "width": 1216,
+        "height": 832
       },
       "hasNamingConvention": false,
       "usageCount": 1,
       "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ContactPage.tsx"
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
+      ]
+    },
+    "/public/generated/experience-luna-hero-v2-xl.webp": {
+      "path": "/public/generated/experience-luna-hero-v2-xl.webp",
+      "format": "webp",
+      "size": 93684,
+      "dimensions": {
+        "width": 1216,
+        "height": 832
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/experience-luna-gallery-4-md.webp": {
+      "path": "/public/generated/experience-luna-gallery-4-md.webp",
+      "format": "webp",
+      "size": 229032,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 2,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
+      ]
+    },
+    "/public/generated/experience-luna-gallery-3-md.webp": {
+      "path": "/public/generated/experience-luna-gallery-3-md.webp",
+      "format": "webp",
+      "size": 134152,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 2,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
+      ]
+    },
+    "/public/generated/experience-luna-gallery-2-md.webp": {
+      "path": "/public/generated/experience-luna-gallery-2-md.webp",
+      "format": "webp",
+      "size": 149832,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 2,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
+      ]
+    },
+    "/public/generated/experience-luna-gallery-1-md.webp": {
+      "path": "/public/generated/experience-luna-gallery-1-md.webp",
+      "format": "webp",
+      "size": 153376,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 1,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
+      ]
+    },
+    "/public/generated/experience-luna-detail-md.webp": {
+      "path": "/public/generated/experience-luna-detail-md.webp",
+      "format": "webp",
+      "size": 119238,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/experience-luna-collage-xl.webp": {
+      "path": "/public/generated/experience-luna-collage-xl.webp",
+      "format": "webp",
+      "size": 165008,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 1,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx"
+      ]
+    },
+    "/public/generated/experience-home-hero-ivory-villa-lg.webp": {
+      "path": "/public/generated/experience-home-hero-ivory-villa-lg.webp",
+      "format": "webp",
+      "size": 117820,
+      "dimensions": {
+        "width": 1216,
+        "height": 832
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/experience-hero-retreats-xl.webp": {
+      "path": "/public/generated/experience-hero-retreats-xl.webp",
+      "format": "webp",
+      "size": 223532,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 2,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringRetreatPage.tsx"
+      ]
+    },
+    "/public/generated/experience-aura-toast-md.webp": {
+      "path": "/public/generated/experience-aura-toast-md.webp",
+      "format": "webp",
+      "size": 71266,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/experience-aura-team-lg.webp": {
+      "path": "/public/generated/experience-aura-team-lg.webp",
+      "format": "webp",
+      "size": 120724,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 1,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/AuraPage.tsx"
+      ]
+    },
+    "/public/generated/experience-aura-tablescape-md.webp": {
+      "path": "/public/generated/experience-aura-tablescape-md.webp",
+      "format": "webp",
+      "size": 114030,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/experience-aura-setup-lg.webp": {
+      "path": "/public/generated/experience-aura-setup-lg.webp",
+      "format": "webp",
+      "size": 141508,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 4,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx"
+      ]
+    },
+    "/public/generated/experience-aura-hero-v2-xl.webp": {
+      "path": "/public/generated/experience-aura-hero-v2-xl.webp",
+      "format": "webp",
+      "size": 114558,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 1,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/AuraPage.tsx"
+      ]
+    },
+    "/public/generated/experience-aura-corporate-lg.webp": {
+      "path": "/public/generated/experience-aura-corporate-lg.webp",
+      "format": "webp",
+      "size": 124600,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/experience-aura-bartender-md.webp": {
+      "path": "/public/generated/experience-aura-bartender-md.webp",
+      "format": "webp",
+      "size": 106970,
+      "dimensions": {
+        "width": 768,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-party-white-lg.webp": {
+      "path": "/public/generated/events-party-white-lg.webp",
+      "format": "webp",
+      "size": 140664,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-party-ultimate-xl.webp": {
+      "path": "/public/generated/events-party-ultimate-xl.webp",
+      "format": "webp",
+      "size": 117598,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-party-rooftop-lg.webp": {
+      "path": "/public/generated/events-party-rooftop-lg.webp",
+      "format": "webp",
+      "size": 89132,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-party-pool-lg.webp": {
+      "path": "/public/generated/events-party-pool-lg.webp",
+      "format": "webp",
+      "size": 128730,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-party-festival-lg.webp": {
+      "path": "/public/generated/events-party-festival-lg.webp",
+      "format": "webp",
+      "size": 189928,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-party-brunch-lg.webp": {
+      "path": "/public/generated/events-party-brunch-lg.webp",
+      "format": "webp",
+      "size": 132308,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-party-birthday-lg.webp": {
+      "path": "/public/generated/events-party-birthday-lg.webp",
+      "format": "webp",
+      "size": 110012,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 2,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx"
+      ]
+    },
+    "/public/generated/events-party-beer-lg.webp": {
+      "path": "/public/generated/events-party-beer-lg.webp",
+      "format": "webp",
+      "size": 110770,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-hub-events-md.webp": {
+      "path": "/public/generated/events-hub-events-md.webp",
+      "format": "webp",
+      "size": 143704,
+      "dimensions": {
+        "width": 896,
+        "height": 1184
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-corp-villa-lg.webp": {
+      "path": "/public/generated/events-corp-villa-lg.webp",
+      "format": "webp",
+      "size": 121554,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-corp-plated-lg.webp": {
+      "path": "/public/generated/events-corp-plated-lg.webp",
+      "format": "webp",
+      "size": 62678,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-corp-networking-lg.webp": {
+      "path": "/public/generated/events-corp-networking-lg.webp",
+      "format": "webp",
+      "size": 77160,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-corp-executive-lg.webp": {
+      "path": "/public/generated/events-corp-executive-lg.webp",
+      "format": "webp",
+      "size": 65222,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-corp-conference-lg.webp": {
+      "path": "/public/generated/events-corp-conference-lg.webp",
+      "format": "webp",
+      "size": 73574,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events-birthday-pool-xl.webp": {
+      "path": "/public/generated/events-birthday-pool-xl.webp",
+      "format": "webp",
+      "size": 917505,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 1,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx"
       ]
     },
     "/public/generated/chefs-table-hero-luxury.webp": {
@@ -969,22 +1064,84 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ChefsTablePage.tsx"
       ]
     },
-    "/public/generated/chefs-hero.webp": {
-      "path": "/public/generated/chefs-hero.webp",
+    "/public/generated/catering-plated-menus-lg.webp": {
+      "path": "/public/generated/catering-plated-menus-lg.webp",
       "format": "webp",
-      "size": 544884,
+      "size": 547278,
       "dimensions": {
         "width": 1440,
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 1,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering-pkg-roast-md.webp": {
+      "path": "/public/generated/catering-pkg-roast-md.webp",
+      "format": "webp",
+      "size": 114804,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering-pkg-grazing-md.webp": {
+      "path": "/public/generated/catering-pkg-grazing-md.webp",
+      "format": "webp",
+      "size": 87154,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering-hero-dropoff-lg.webp": {
+      "path": "/public/generated/catering-hero-dropoff-lg.webp",
+      "format": "webp",
+      "size": 212562,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering-hero-buffet-catering-lg.webp": {
+      "path": "/public/generated/catering-hero-buffet-catering-lg.webp",
+      "format": "webp",
+      "size": 276236,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 3,
       "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningChefsPage.tsx"
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringVillaPage.tsx",
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx"
       ]
     },
-    "/public/generated/catering-hero.webp": {
-      "path": "/public/generated/catering-hero.webp",
+    "/public/generated/catering-hero-babiguling-lg.webp": {
+      "path": "/public/generated/catering-hero-babiguling-lg.webp",
+      "format": "webp",
+      "size": 234478,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering-catering-hero-lg.webp": {
+      "path": "/public/generated/catering-catering-hero-lg.webp",
       "format": "webp",
       "size": 124928,
       "dimensions": {
@@ -997,49 +1154,6 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/SolPage.tsx",
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringVillaPage.tsx",
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringMainPage.tsx"
-      ]
-    },
-    "/public/generated/butler-service.webp": {
-      "path": "/public/generated/butler-service.webp",
-      "format": "webp",
-      "size": 545716,
-      "dimensions": {
-        "width": 1440,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 3,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceButlersPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx"
-      ]
-    },
-    "/public/generated/book-hero.webp": {
-      "path": "/public/generated/book-hero.webp",
-      "format": "webp",
-      "size": 836565,
-      "dimensions": {
-        "width": 1440,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BookPage.tsx"
-      ]
-    },
-    "/public/generated/best-partner-2026.webp": {
-      "path": "/public/generated/best-partner-2026.webp",
-      "format": "webp",
-      "size": 57426,
-      "dimensions": {
-        "width": 612,
-        "height": 408
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BestPartnerBadge.tsx"
       ]
     },
     "/public/generated/bali-locations-sunset.webp": {
@@ -1072,133 +1186,43 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BaliHubPage.tsx"
       ]
     },
-    "/public/generated/avatar-ai.webp": {
-      "path": "/public/generated/avatar-ai.webp",
+    "/public/generated/about-team-photo-lg.webp": {
+      "path": "/public/generated/about-team-photo-lg.webp",
       "format": "webp",
-      "size": 25454,
-      "dimensions": {
-        "width": 1024,
-        "height": 1024
-      },
-      "hasNamingConvention": false,
-      "usageCount": 0,
-      "referencedBy": []
-    },
-    "/public/generated/aura-toast.webp": {
-      "path": "/public/generated/aura-toast.webp",
-      "format": "webp",
-      "size": 71266,
-      "dimensions": {
-        "width": 1024,
-        "height": 576
-      },
-      "hasNamingConvention": false,
-      "usageCount": 6,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx"
-      ]
-    },
-    "/public/generated/aura-team.webp": {
-      "path": "/public/generated/aura-team.webp",
-      "format": "webp",
-      "size": 120724,
-      "dimensions": {
-        "width": 1024,
-        "height": 576
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/AuraPage.tsx"
-      ]
-    },
-    "/public/generated/aura-tablescape.webp": {
-      "path": "/public/generated/aura-tablescape.webp",
-      "format": "webp",
-      "size": 114030,
-      "dimensions": {
-        "width": 1024,
-        "height": 1024
-      },
-      "hasNamingConvention": false,
-      "usageCount": 6,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsMainPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx"
-      ]
-    },
-    "/public/generated/aura-setup.webp": {
-      "path": "/public/generated/aura-setup.webp",
-      "format": "webp",
-      "size": 141508,
-      "dimensions": {
-        "width": 1024,
-        "height": 576
-      },
-      "hasNamingConvention": false,
-      "usageCount": 4,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx"
-      ]
-    },
-    "/public/generated/aura-hero-v2.webp": {
-      "path": "/public/generated/aura-hero-v2.webp",
-      "format": "webp",
-      "size": 114558,
+      "size": 342906,
       "dimensions": {
         "width": 1440,
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/AuraPage.tsx"
-      ]
+      "usageCount": 0,
+      "referencedBy": []
     },
-    "/public/generated/aura-corporate.webp": {
-      "path": "/public/generated/aura-corporate.webp",
+    "/public/generated/about-best-partner-2026-md.webp": {
+      "path": "/public/generated/about-best-partner-2026-md.webp",
       "format": "webp",
-      "size": 124600,
+      "size": 57426,
       "dimensions": {
-        "width": 1024,
-        "height": 576
-      },
-      "hasNamingConvention": false,
-      "usageCount": 4,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHotelsPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx"
-      ]
-    },
-    "/public/generated/aura-bartender.webp": {
-      "path": "/public/generated/aura-bartender.webp",
-      "format": "webp",
-      "size": 106970,
-      "dimensions": {
-        "width": 768,
-        "height": 1024
-      },
-      "hasNamingConvention": false,
-      "usageCount": 4,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceWaitersPage.tsx",
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceBartendersPage.tsx"
-      ]
-    },
-    "/public/images/family-villa-dinner-cutout.png": {
-      "path": "/public/images/family-villa-dinner-cutout.png",
-      "format": "png",
-      "size": 2231096,
-      "dimensions": {
-        "width": 1536,
-        "height": 1024
+        "width": 612,
+        "height": 408
       },
       "hasNamingConvention": false,
       "usageCount": 0,
       "referencedBy": []
+    },
+    "/public/generated/catering/floating-breakfast.webp": {
+      "path": "/public/generated/catering/floating-breakfast.webp",
+      "format": "webp",
+      "size": 583697,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 3,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx"
+      ]
     },
     "/public/generated/events/villa-party-night.webp": {
       "path": "/public/generated/events/villa-party-night.webp",
@@ -1256,20 +1280,6 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx"
       ]
     },
-    "/public/generated/events/birthday-pool.webp": {
-      "path": "/public/generated/events/birthday-pool.webp",
-      "format": "webp",
-      "size": 917505,
-      "dimensions": {
-        "width": 1440,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx"
-      ]
-    },
     "/public/generated/events/baby-shower-hero.webp": {
       "path": "/public/generated/events/baby-shower-hero.webp",
       "format": "webp",
@@ -1311,34 +1321,6 @@
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx"
       ]
-    },
-    "/public/generated/catering/plated-menus.webp": {
-      "path": "/public/generated/catering/plated-menus.webp",
-      "format": "webp",
-      "size": 547278,
-      "dimensions": {
-        "width": 1440,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 1,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringPlatedPage.tsx"
-      ]
-    },
-    "/public/generated/catering/floating-breakfast.webp": {
-      "path": "/public/generated/catering/floating-breakfast.webp",
-      "format": "webp",
-      "size": 583697,
-      "dimensions": {
-        "width": 1440,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 3,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx"
-      ]
     }
   },
   "references": [
@@ -1353,8 +1335,8 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/TastingMenuPage.tsx",
       "line": 179,
       "type": "src",
-      "path": "/generated/luna-plating.webp",
-      "raw": "src=\"/generated/luna-plating.webp\""
+      "path": "/generated/misc-luna-plating-md.webp",
+      "raw": "src=\"/generated/misc-luna-plating-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/TastingMenuPage.tsx",
@@ -1407,87 +1389,87 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaManagersPage.tsx",
       "line": 233,
       "type": "src",
-      "path": "/generated/staffing-kitchen.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-kitchen.webp\" alt=\"Professional hospitality team in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "path": "/generated/staffing-staffing-kitchen-lg.webp",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Professional hospitality team in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
       "alt": "Professional hospitality team in Bali villa kitchen"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
       "line": 121,
       "type": "src",
-      "path": "/generated/staffing-hero.webp",
-      "raw": "<img src=\"/generated/staffing-hero.webp\" alt=\"Private chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "path": "/generated/staffing-staffing-hero-xl.webp",
+      "raw": "<img src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Private chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
       "alt": "Private chef preparing meal at Bali villa"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
       "line": 121,
       "type": "img",
-      "path": "/generated/staffing-hero.webp",
+      "path": "/generated/staffing-staffing-hero-xl.webp",
       "alt": "Private chef preparing meal at Bali villa",
-      "raw": "<img src=\"/generated/staffing-hero.webp\" alt=\"Private chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Private chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
       "line": 233,
       "type": "src",
-      "path": "/generated/staffing-kitchen.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-kitchen.webp\" alt=\"Private chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "path": "/generated/staffing-staffing-kitchen-lg.webp",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Private chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
       "alt": "Private chef working in Bali villa kitchen"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPage.tsx",
       "line": 206,
       "type": "src",
-      "path": "/generated/staffing-hero.webp",
-      "raw": "src=\"/generated/staffing-hero.webp\""
+      "path": "/generated/staffing-staffing-hero-xl.webp",
+      "raw": "src=\"/generated/staffing-staffing-hero-xl.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingLiveInPage.tsx",
       "line": 121,
       "type": "src",
-      "path": "/generated/staffing-kitchen.webp",
-      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Live-in chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "path": "/generated/staffing-staffing-kitchen-lg.webp",
+      "raw": "<img src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Live-in chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
       "alt": "Live-in chef preparing meal at Bali villa"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingLiveInPage.tsx",
       "line": 121,
       "type": "img",
-      "path": "/generated/staffing-kitchen.webp",
+      "path": "/generated/staffing-staffing-kitchen-lg.webp",
       "alt": "Live-in chef preparing meal at Bali villa",
-      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Live-in chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Live-in chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingLiveInPage.tsx",
       "line": 233,
       "type": "src",
-      "path": "/generated/staffing-kitchen.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-kitchen.webp\" alt=\"Live-in chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "path": "/generated/staffing-staffing-kitchen-lg.webp",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Live-in chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
       "alt": "Live-in chef working in Bali villa kitchen"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHouseholdPage.tsx",
       "line": 128,
       "type": "src",
-      "path": "/generated/staffing-table.webp",
-      "raw": "<img src=\"/generated/staffing-table.webp\" alt=\"Household staff serving at private Bali residence\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "path": "/generated/staffing-staffing-table-lg.webp",
+      "raw": "<img src=\"/generated/staffing-staffing-table-lg.webp\" alt=\"Household staff serving at private Bali residence\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
       "alt": "Household staff serving at private Bali residence"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHouseholdPage.tsx",
       "line": 128,
       "type": "img",
-      "path": "/generated/staffing-table.webp",
+      "path": "/generated/staffing-staffing-table-lg.webp",
       "alt": "Household staff serving at private Bali residence",
-      "raw": "<img src=\"/generated/staffing-table.webp\" alt=\"Household staff serving at private Bali residence\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/staffing-staffing-table-lg.webp\" alt=\"Household staff serving at private Bali residence\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHouseholdPage.tsx",
       "line": 240,
       "type": "src",
-      "path": "/generated/staffing-table.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-table.webp\" alt=\"Household staff at private Bali residence\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "path": "/generated/staffing-staffing-table-lg.webp",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-table-lg.webp\" alt=\"Household staff at private Bali residence\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
       "alt": "Household staff at private Bali residence"
     },
     {
@@ -1510,23 +1492,23 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHotelsPage.tsx",
       "line": 233,
       "type": "src",
-      "path": "/generated/staffing-kitchen.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-kitchen.webp\" alt=\"Professional kitchen team at Bali restaurant\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "path": "/generated/staffing-staffing-kitchen-lg.webp",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Professional kitchen team at Bali restaurant\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
       "alt": "Professional kitchen team at Bali restaurant"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/SolPage.tsx",
       "line": 94,
       "type": "src",
-      "path": "/generated/catering-hero.webp",
-      "raw": "src=\"/generated/catering-hero.webp\""
+      "path": "/generated/catering-catering-hero-lg.webp",
+      "raw": "src=\"/generated/catering-catering-hero-lg.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/SolPage.tsx",
       "line": 232,
       "type": "src",
-      "path": "/generated/sol-chef-portrait.webp",
-      "raw": "src=\"/generated/sol-chef-portrait.webp\""
+      "path": "/generated/finedining-sol-chef-portrait-sm.webp",
+      "raw": "src=\"/generated/finedining-sol-chef-portrait-sm.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServicesPage.tsx",
@@ -1555,8 +1537,8 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceWaitersPage.tsx",
       "line": 278,
       "type": "src",
-      "path": "/generated/staffing-hero.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-hero.webp\" alt=\"Professional service team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "path": "/generated/staffing-staffing-hero-xl.webp",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Professional service team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
       "alt": "Professional service team at Bali villa"
     },
     {
@@ -1611,8 +1593,8 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceHostPage.tsx",
       "line": 257,
       "type": "src",
-      "path": "/generated/staffing-hero.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-hero.webp\" alt=\"Professional hosts at Bali villa event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "path": "/generated/staffing-staffing-hero-xl.webp",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Professional hosts at Bali villa event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
       "alt": "Professional hosts at Bali villa event"
     },
     {
@@ -1635,8 +1617,8 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceButlersPage.tsx",
       "line": 257,
       "type": "src",
-      "path": "/generated/staffing-hero.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-hero.webp\" alt=\"Luxury villa butler service Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "path": "/generated/staffing-staffing-hero-xl.webp",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Luxury villa butler service Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
       "alt": "Luxury villa butler service Bali"
     },
     {
@@ -1738,71 +1720,71 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
       "line": 342,
       "type": "src",
-      "path": "/generated/luna-hero-v3.webp",
-      "raw": "src=\"/generated/luna-hero-v3.webp\""
+      "path": "/generated/experience-luna-hero-v3-xl.webp",
+      "raw": "src=\"/generated/experience-luna-hero-v3-xl.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
       "line": 470,
       "type": "src",
-      "path": "/generated/luna-gallery-3.webp",
-      "raw": "src=\"/generated/luna-gallery-3.webp\""
+      "path": "/generated/experience-luna-gallery-3-md.webp",
+      "raw": "src=\"/generated/experience-luna-gallery-3-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
       "line": 512,
       "type": "src",
-      "path": "/generated/luna-gallery-4.webp",
-      "raw": "src=\"/generated/luna-gallery-4.webp\""
+      "path": "/generated/experience-luna-gallery-4-md.webp",
+      "raw": "src=\"/generated/experience-luna-gallery-4-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
       "line": 548,
       "type": "src",
-      "path": "/generated/luna-experience-collage.webp",
-      "raw": "src=\"/generated/luna-experience-collage.webp\""
+      "path": "/generated/experience-luna-collage-xl.webp",
+      "raw": "src=\"/generated/experience-luna-collage-xl.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
       "line": 605,
       "type": "src",
-      "path": "/generated/luna-gallery-2.webp",
-      "raw": "src=\"/generated/luna-gallery-2.webp\""
+      "path": "/generated/experience-luna-gallery-2-md.webp",
+      "raw": "src=\"/generated/experience-luna-gallery-2-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
       "line": 955,
       "type": "src",
-      "path": "/generated/luna-gallery-1.webp",
-      "raw": "src=\"/generated/luna-gallery-1.webp\""
+      "path": "/generated/experience-luna-gallery-1-md.webp",
+      "raw": "src=\"/generated/experience-luna-gallery-1-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
       "line": 965,
       "type": "src",
-      "path": "/generated/luna-gallery-2.webp",
-      "raw": "src=\"/generated/luna-gallery-2.webp\""
+      "path": "/generated/experience-luna-gallery-2-md.webp",
+      "raw": "src=\"/generated/experience-luna-gallery-2-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
       "line": 975,
       "type": "src",
-      "path": "/generated/luna-gallery-3.webp",
-      "raw": "src=\"/generated/luna-gallery-3.webp\""
+      "path": "/generated/experience-luna-gallery-3-md.webp",
+      "raw": "src=\"/generated/experience-luna-gallery-3-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
       "line": 985,
       "type": "src",
-      "path": "/generated/luna-gallery-4.webp",
-      "raw": "src=\"/generated/luna-gallery-4.webp\""
+      "path": "/generated/experience-luna-gallery-4-md.webp",
+      "raw": "src=\"/generated/experience-luna-gallery-4-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
       "line": 1029,
       "type": "src",
-      "path": "/generated/testimonials-bg.webp",
-      "raw": "src=\"/generated/testimonials-bg.webp\""
+      "path": "/generated/ui-testimonials-bg-lg.webp",
+      "raw": "src=\"/generated/ui-testimonials-bg-lg.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
@@ -1813,38 +1795,38 @@
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "line": 609,
+      "line": 610,
       "type": "src",
       "path": "/generated/team-photo.webp",
       "raw": "src=\"/generated/team-photo.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "line": 785,
+      "line": 786,
       "type": "src",
-      "path": "/generated/hub-villa.webp",
-      "raw": "src=\"/generated/hub-villa.webp\""
+      "path": "/generated/misc-hub-villa-lg.webp",
+      "raw": "src=\"/generated/misc-hub-villa-lg.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "line": 806,
+      "line": 807,
       "type": "src",
-      "path": "/generated/hub-villa.webp",
-      "raw": "src=\"/generated/hub-villa.webp\""
+      "path": "/generated/misc-hub-villa-lg.webp",
+      "raw": "src=\"/generated/misc-hub-villa-lg.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "line": 942,
+      "line": 943,
       "type": "src",
-      "path": "/generated/hub-villa.webp",
-      "raw": "src=\"/generated/hub-villa.webp\""
+      "path": "/generated/misc-hub-villa-lg.webp",
+      "raw": "src=\"/generated/misc-hub-villa-lg.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "line": 1005,
+      "line": 1006,
       "type": "src",
-      "path": "/generated/hub-bali.webp",
-      "raw": "src=\"/generated/hub-bali.webp\""
+      "path": "/generated/misc-hub-bali-lg.webp",
+      "raw": "src=\"/generated/misc-hub-bali-lg.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HelpPage.tsx",
@@ -1857,15 +1839,15 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningMenusPage.tsx",
       "line": 172,
       "type": "src",
-      "path": "/generated/luna-plating.webp",
-      "raw": "src=\"/generated/luna-plating.webp\""
+      "path": "/generated/misc-luna-plating-md.webp",
+      "raw": "src=\"/generated/misc-luna-plating-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningChefsPage.tsx",
       "line": 165,
       "type": "src",
-      "path": "/generated/chefs-hero.webp",
-      "raw": "src=\"/generated/chefs-hero.webp\""
+      "path": "/generated/finedining-chefs-hero-xl.webp",
+      "raw": "src=\"/generated/finedining-chefs-hero-xl.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningChefsPage.tsx",
@@ -1878,24 +1860,24 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
       "line": 176,
       "type": "src",
-      "path": "/event-wedding.webp",
-      "raw": "src=\"/event-wedding.webp\""
+      "path": "/events-event-wedding-xl.webp",
+      "raw": "src=\"/events-event-wedding-xl.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
       "line": 237,
       "type": "src",
-      "path": "/event-wedding.webp",
-      "raw": "<img src=\"/event-wedding.webp\" alt=\"Luxury Bali villa wedding ceremony setup by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "path": "/events-event-wedding-xl.webp",
+      "raw": "<img src=\"/events-event-wedding-xl.webp\" alt=\"Luxury Bali villa wedding ceremony setup by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
       "alt": "Luxury Bali villa wedding ceremony setup by myCHEF"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
       "line": 237,
       "type": "img",
-      "path": "/event-wedding.webp",
+      "path": "/events-event-wedding-xl.webp",
       "alt": "Luxury Bali villa wedding ceremony setup by myCHEF",
-      "raw": "<img src=\"/event-wedding.webp\" alt=\"Luxury Bali villa wedding ceremony setup by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/events-event-wedding-xl.webp\" alt=\"Luxury Bali villa wedding ceremony setup by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
@@ -1917,49 +1899,49 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
       "line": 299,
       "type": "src",
-      "path": "/generated/aura-setup.webp",
-      "raw": "<img src=\"/generated/aura-setup.webp\" alt=\"Wedding reception setup inside a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "path": "/generated/experience-aura-setup-lg.webp",
+      "raw": "<img src=\"/generated/experience-aura-setup-lg.webp\" alt=\"Wedding reception setup inside a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
       "alt": "Wedding reception setup inside a Bali villa"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
       "line": 299,
       "type": "img",
-      "path": "/generated/aura-setup.webp",
+      "path": "/generated/experience-aura-setup-lg.webp",
       "alt": "Wedding reception setup inside a Bali villa",
-      "raw": "<img src=\"/generated/aura-setup.webp\" alt=\"Wedding reception setup inside a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/experience-aura-setup-lg.webp\" alt=\"Wedding reception setup inside a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
       "line": 368,
       "type": "src",
-      "path": "/wedding-reception.webp",
-      "raw": "<img src=\"/wedding-reception.webp\" alt=\"Wedding reception table with candles and plated dinner service\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "path": "/events-wedding-reception-lg.webp",
+      "raw": "<img src=\"/events-wedding-reception-lg.webp\" alt=\"Wedding reception table with candles and plated dinner service\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
       "alt": "Wedding reception table with candles and plated dinner service"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
       "line": 368,
       "type": "img",
-      "path": "/wedding-reception.webp",
+      "path": "/events-wedding-reception-lg.webp",
       "alt": "Wedding reception table with candles and plated dinner service",
-      "raw": "<img src=\"/wedding-reception.webp\" alt=\"Wedding reception table with candles and plated dinner service\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/events-wedding-reception-lg.webp\" alt=\"Wedding reception table with candles and plated dinner service\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
       "line": 412,
       "type": "src",
-      "path": "/generated/aura-setup.webp",
-      "raw": "<img src=\"/generated/aura-setup.webp\" alt=\"Intimate Bali wedding dinner for a small group\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "path": "/generated/experience-aura-setup-lg.webp",
+      "raw": "<img src=\"/generated/experience-aura-setup-lg.webp\" alt=\"Intimate Bali wedding dinner for a small group\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
       "alt": "Intimate Bali wedding dinner for a small group"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
       "line": 412,
       "type": "img",
-      "path": "/generated/aura-setup.webp",
+      "path": "/generated/experience-aura-setup-lg.webp",
       "alt": "Intimate Bali wedding dinner for a small group",
-      "raw": "<img src=\"/generated/aura-setup.webp\" alt=\"Intimate Bali wedding dinner for a small group\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/experience-aura-setup-lg.webp\" alt=\"Intimate Bali wedding dinner for a small group\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
@@ -2133,8 +2115,8 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsMainPage.tsx",
       "line": 364,
       "type": "src",
-      "path": "/hero-events.webp",
-      "raw": "src=\"/hero-events.webp\""
+      "path": "/events-hero-events-xl.webp",
+      "raw": "src=\"/events-hero-events-xl.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsMainPage.tsx",
@@ -2251,25 +2233,25 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
       "line": 147,
       "type": "src",
-      "path": "/generated/events/birthday-pool.webp",
-      "raw": "<OptimizedImage src=\"/generated/events/birthday-pool.webp\" alt=\"Birthday pool party dinner at a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
+      "path": "/generated/events-birthday-pool-xl.webp",
+      "raw": "<OptimizedImage src=\"/generated/events-birthday-pool-xl.webp\" alt=\"Birthday pool party dinner at a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
       "alt": "Birthday pool party dinner at a Bali villa"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
       "line": 201,
       "type": "src",
-      "path": "/generated/party-birthday.webp",
-      "raw": "<img src=\"/generated/party-birthday.webp\" alt=\"Birthday celebration dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "path": "/generated/events-party-birthday-lg.webp",
+      "raw": "<img src=\"/generated/events-party-birthday-lg.webp\" alt=\"Birthday celebration dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
       "alt": "Birthday celebration dining setup in a Bali villa"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
       "line": 201,
       "type": "img",
-      "path": "/generated/party-birthday.webp",
+      "path": "/generated/events-party-birthday-lg.webp",
       "alt": "Birthday celebration dining setup in a Bali villa",
-      "raw": "<img src=\"/generated/party-birthday.webp\" alt=\"Birthday celebration dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/events-party-birthday-lg.webp\" alt=\"Birthday celebration dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
@@ -2499,17 +2481,17 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
       "line": 250,
       "type": "src",
-      "path": "/generated/luna-plating.webp",
-      "raw": "<img src=\"/generated/luna-plating.webp\" alt=\"Fine plated anniversary menu presentation by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "path": "/generated/misc-luna-plating-md.webp",
+      "raw": "<img src=\"/generated/misc-luna-plating-md.webp\" alt=\"Fine plated anniversary menu presentation by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
       "alt": "Fine plated anniversary menu presentation by myCHEF"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
       "line": 250,
       "type": "img",
-      "path": "/generated/luna-plating.webp",
+      "path": "/generated/misc-luna-plating-md.webp",
       "alt": "Fine plated anniversary menu presentation by myCHEF",
-      "raw": "<img src=\"/generated/luna-plating.webp\" alt=\"Fine plated anniversary menu presentation by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/misc-luna-plating-md.webp\" alt=\"Fine plated anniversary menu presentation by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
@@ -2575,30 +2557,30 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringVillaPage.tsx",
       "line": 177,
       "type": "src",
-      "path": "/generated/hero-buffet-catering.webp",
-      "raw": "src=\"/generated/hero-buffet-catering.webp\""
+      "path": "/generated/catering-hero-buffet-catering-lg.webp",
+      "raw": "src=\"/generated/catering-hero-buffet-catering-lg.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringVillaPage.tsx",
       "line": 535,
       "type": "src",
-      "path": "/generated/catering-hero.webp",
-      "raw": "<OptimizedImage src=\"/generated/catering-hero.webp\" alt=\"Villa catering setup with chef and team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "path": "/generated/catering-catering-hero-lg.webp",
+      "raw": "<OptimizedImage src=\"/generated/catering-catering-hero-lg.webp\" alt=\"Villa catering setup with chef and team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
       "alt": "Villa catering setup with chef and team at Bali villa"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringRetreatPage.tsx",
       "line": 174,
       "type": "src",
-      "path": "/generated/hero-retreats.webp",
-      "raw": "src=\"/generated/hero-retreats.webp\""
+      "path": "/generated/experience-hero-retreats-xl.webp",
+      "raw": "src=\"/generated/experience-hero-retreats-xl.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringRetreatPage.tsx",
       "line": 486,
       "type": "src",
-      "path": "/generated/hero-retreats.webp",
-      "raw": "<OptimizedImage src=\"/generated/hero-retreats.webp\" alt=\"Retreat catering in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "path": "/generated/experience-hero-retreats-xl.webp",
+      "raw": "<OptimizedImage src=\"/generated/experience-hero-retreats-xl.webp\" alt=\"Retreat catering in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
       "alt": "Retreat catering in Bali"
     },
     {
@@ -2619,19 +2601,19 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringPlatedPage.tsx",
       "line": 712,
       "type": "src",
-      "path": "/generated/luna-plating.webp",
-      "raw": "src=\"/generated/luna-plating.webp\""
+      "path": "/generated/misc-luna-plating-md.webp",
+      "raw": "src=\"/generated/misc-luna-plating-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringMainPage.tsx",
-      "line": 424,
+      "line": 414,
       "type": "src",
-      "path": "/generated/catering-hero.webp",
-      "raw": "src=\"/generated/catering-hero.webp\""
+      "path": "/generated/catering-catering-hero-lg.webp",
+      "raw": "src=\"/generated/catering-catering-hero-lg.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringMainPage.tsx",
-      "line": 1272,
+      "line": 1262,
       "type": "src",
       "path": "/generated/hub-catering.webp",
       "raw": "src=\"/generated/hub-catering.webp\""
@@ -2661,8 +2643,8 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
       "line": 188,
       "type": "src",
-      "path": "/generated/floating-breakfast-bali.png",
-      "raw": "src=\"/generated/floating-breakfast-bali.png\""
+      "path": "/generated/floating-breakfast-bali.webp",
+      "raw": "src=\"/generated/floating-breakfast-bali.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
@@ -2694,14 +2676,14 @@
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringDropOffPage.tsx",
-      "line": 324,
+      "line": 323,
       "type": "src",
       "path": "/generated/hub-catering.webp",
       "raw": "src=\"/generated/hub-catering.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringDropOffPage.tsx",
-      "line": 732,
+      "line": 731,
       "type": "src",
       "path": "/generated/hub-catering.webp",
       "raw": "src=\"/generated/hub-catering.webp\""
@@ -2725,19 +2707,19 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
       "line": 202,
       "type": "src",
-      "path": "/generated/hero-buffet-catering.webp",
-      "raw": "src=\"/generated/hero-buffet-catering.webp\""
+      "path": "/generated/catering-hero-buffet-catering-lg.webp",
+      "raw": "src=\"/generated/catering-hero-buffet-catering-lg.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
-      "line": 449,
+      "line": 448,
       "type": "src",
       "path": "/generated/aura-tablescape.webp",
       "raw": "src=\"/generated/aura-tablescape.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
-      "line": 713,
+      "line": 712,
       "type": "src",
       "path": "/generated/aura-corporate.webp",
       "raw": "<img src=\"/generated/aura-corporate.webp\" alt=\"Completed buffet table with food ready and staff at Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
@@ -2745,7 +2727,7 @@
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
-      "line": 713,
+      "line": 712,
       "type": "img",
       "path": "/generated/aura-corporate.webp",
       "alt": "Completed buffet table with food ready and staff at Bali villa",
@@ -2753,28 +2735,28 @@
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
-      "line": 168,
+      "line": 169,
       "type": "src",
       "path": "/generated/hero-babiguling-catering.webp",
       "raw": "src=\"/generated/hero-babiguling-catering.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
-      "line": 240,
+      "line": 241,
       "type": "src",
       "path": "/generated/pkg-roast.webp",
       "raw": "src=\"/generated/pkg-roast.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
-      "line": 391,
+      "line": 392,
       "type": "src",
       "path": "/generated/hub-catering.webp",
       "raw": "src=\"/generated/hub-catering.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
-      "line": 629,
+      "line": 630,
       "type": "src",
       "path": "/generated/pkg-roast.webp",
       "raw": "src=\"/generated/pkg-roast.webp\""
@@ -2783,8 +2765,8 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx",
       "line": 178,
       "type": "src",
-      "path": "/generated/hero-buffet-catering.webp",
-      "raw": "src=\"/generated/hero-buffet-catering.webp\""
+      "path": "/generated/catering-hero-buffet-catering-lg.webp",
+      "raw": "src=\"/generated/catering-hero-buffet-catering-lg.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx",
@@ -2813,22 +2795,22 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/AuraPage.tsx",
       "line": 284,
       "type": "src",
-      "path": "/generated/aura-hero-v2.webp",
-      "raw": "src=\"/generated/aura-hero-v2.webp\""
+      "path": "/generated/experience-aura-hero-v2-xl.webp",
+      "raw": "src=\"/generated/experience-aura-hero-v2-xl.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/AuraPage.tsx",
       "line": 568,
       "type": "src",
-      "path": "/generated/aura-team.webp",
-      "raw": "src=\"/generated/aura-team.webp\""
+      "path": "/generated/experience-aura-team-lg.webp",
+      "raw": "src=\"/generated/experience-aura-team-lg.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/MenuPage.tsx",
       "line": 74,
       "type": "src",
-      "path": "/generated/luna-plating.webp",
-      "raw": "src=\"/generated/luna-plating.webp\""
+      "path": "/generated/misc-luna-plating-md.webp",
+      "raw": "src=\"/generated/misc-luna-plating-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/LocationsHubPage.tsx",
@@ -2855,16 +2837,16 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx",
       "line": 254,
       "type": "src",
-      "path": "/generated/staffing-table.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-table.webp\" alt=\"Professional service staff setting table\" className=\"w-full rounded-2xl shadow-xl\" loading=\"lazy\" />",
+      "path": "/generated/staffing-staffing-table-lg.webp",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-table-lg.webp\" alt=\"Professional service staff setting table\" className=\"w-full rounded-2xl shadow-xl\" loading=\"lazy\" />",
       "alt": "Professional service staff setting table"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx",
       "line": 266,
       "type": "src",
-      "path": "/generated/were-awards.png",
-      "raw": "src=\"/generated/were-awards.png\""
+      "path": "/generated/were-awards.webp",
+      "raw": "src=\"/generated/were-awards.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BookPage.tsx",
@@ -2877,8 +2859,8 @@
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BlogIndexPage.tsx",
       "line": 65,
       "type": "src",
-      "path": "/generated/luna-plating.webp",
-      "raw": "src=\"/generated/luna-plating.webp\""
+      "path": "/generated/misc-luna-plating-md.webp",
+      "raw": "src=\"/generated/misc-luna-plating-md.webp\""
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BestPartnerBadge.tsx",

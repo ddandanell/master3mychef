@@ -32,21 +32,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/partners', to: '/staffing/for-villa-managers', reason: 'Systems plan: /partners → /staffing/for-villa-managers/' },
 
   // --- Areas consolidation → /locations/[area] ---
-  { from: '/kuta', to: '/locations/seminyak', reason: 'Lower-end tourist hub adjacent to Seminyak — consolidated under locations.' },
-  { from: '/legian', to: '/locations/seminyak', reason: 'Adjacent to Seminyak.' },
-  { from: '/kerobokan', to: '/locations/seminyak', reason: 'Sub-neighborhood of Seminyak.' },
-  { from: '/petitenget', to: '/locations/seminyak', reason: 'Sub-neighborhood of Seminyak.' },
-  { from: '/tanah-lot', to: '/locations/canggu', reason: 'West coast cluster with Canggu.' },
-  { from: '/tabanan', to: '/locations/canggu', reason: 'West coast — Canggu chefs travel there.' },
-  { from: '/denpasar', to: '/locations/sanur', reason: 'Greater Denpasar area — Sanur is closest serviced.' },
-  { from: '/gianyar', to: '/locations/ubud', reason: 'Gianyar regency — Ubud is the chef base.' },
-  { from: '/tegallalang', to: '/locations/ubud', reason: 'Ubud regency.' },
-  { from: '/amed', to: '/locations/sanur', reason: 'East coast — limited service from Sanur base.' },
-  { from: '/lovina', to: '/locations/sanur', reason: 'North coast — limited service.' },
-  { from: '/candidasa', to: '/locations/sanur', reason: 'East Bali — limited service.' },
-  { from: '/padang-bai', to: '/locations/sanur', reason: 'East Bali — limited service.' },
-  { from: '/ungasan', to: '/locations/bukit', reason: 'Sub-area of the Bukit Peninsula.' },
-  { from: '/pecatu', to: '/locations/bukit', reason: 'Sub-area of the Bukit Peninsula.' },
+  // (Legacy redirects removed to allow dedicated location pages to rank)
 
   // --- Micro-areas (private-chef variant) → /locations/ ---
   { from: '/echo-beach-private-chef', to: '/locations/canggu', reason: 'Echo Beach is in Canggu.' },
@@ -85,16 +71,8 @@ export const REDIRECTS: Redirect[] = [
   { from: '/blog/private-chef-vs-restaurant-bali', to: '/catering', reason: 'Service comparison → catering hub.' },
 
   // --- SEO landing pages → most relevant pillar ---
-  { from: '/best-private-chef-indonesia', to: '/', reason: 'Top-level SEO landing page → homepage.' },
-  { from: '/private-chef-for-events', to: '/events', reason: 'Events SEO landing → events pillar.' },
-  { from: '/luxury-chef-indonesia', to: '/fine-dining', reason: 'Luxury chef SEO landing → fine-dining.' },
-  { from: '/wedding-catering-indonesia', to: '/events/weddings', reason: 'Wedding catering SEO → wedding events.' },
-  { from: '/private-dining-indonesia', to: '/fine-dining', reason: 'Private dining SEO → fine-dining.' },
-  { from: '/healthy-meal-delivery-indonesia', to: '/catering', reason: 'Meal delivery SEO → catering.' },
+  // (Landing page redirects removed to allow dedicated content to rank)
   { from: '/private-chef-booking-indonesia', to: '/quote', reason: 'Booking SEO → quote form.' },
-  { from: '/chef-for-hire-indonesia', to: '/catering', reason: 'Hire chef SEO → catering.' },
-  { from: '/proposal-dinner', to: '/fine-dining', reason: 'Proposal dinner request → fine-dining.' },
-  { from: '/honeymoon-chef', to: '/fine-dining', reason: 'Honeymoon request → fine-dining.' },
   { from: '/private-chef-breakfast-bali', to: '/catering', reason: 'Breakfast service → catering.' },
 
   // --- Pricing pages ---
@@ -102,18 +80,13 @@ export const REDIRECTS: Redirect[] = [
   { from: '/private-chef-cost-bali', to: '/pricing', reason: 'Cost inquiry → pricing page.' },
 
   // --- Contact & info pages ---
-  { from: '/jakarta', to: '/contact', reason: 'Jakarta office page → contact form.' },
-  { from: '/private-chef-menteng', to: '/contact', reason: 'Menteng location → contact.' },
-  { from: '/recommended-services', to: '/contact', reason: 'Service recommendations → contact.' },
-  { from: '/join-our-team', to: '/contact', reason: 'Recruitment → contact/staffing.' },
+  // (Jakarta and service redirects removed to allow dedicated canonical pages)
   { from: '/reviews', to: '/', reason: 'Old reviews page → homepage (testimonials integrated everywhere).' },
 
   // --- Legacy utility pages ---
   { from: '/retreats', to: '/events/retreats', reason: 'Consolidate retreat traffic into the dedicated retreats event page.' },
   { from: '/corporate-events', to: '/events/corporate-events', reason: 'Consolidate duplicate corporate events content into the canonical events pillar page.' },
   { from: '/villa-partners', to: '/partner-platform', reason: 'Old partners page → new partner platform.' },
-  { from: '/why-mychef', to: '/about', reason: 'Why choose us → about page.' },
-  { from: '/calculator', to: '/quote', reason: 'Old price calculator → quote form.' },
   { from: '/catering/buffet-catering', to: '/catering/buffet', reason: 'Old slug renamed: buffet-catering → buffet to match route.' },
 ]
 

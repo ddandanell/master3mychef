@@ -271,11 +271,10 @@ export default function CateringDropOffPage() {
             Drop-Off Catering Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Drop-Off Catering Bali<br />
-            <span className="italic">for Easy Group Dining</span>
+            Drop-Off Catering — Bali Villa Dinners Delivered
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-2xl mx-auto">
-            Prepared food, delivered to your villa or venue, ready to serve. Ideal for casual lunches, staff meals, small parties, and low-effort hosting.
+            No staff in your villa. Chef-prepared dinners delivered with reheating instructions. Order by 4pm for next-day delivery.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a

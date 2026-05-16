@@ -26,81 +26,6 @@
       "permanent": true
     },
     {
-      "source": "/kuta",
-      "destination": "/locations/seminyak",
-      "permanent": true
-    },
-    {
-      "source": "/legian",
-      "destination": "/locations/seminyak",
-      "permanent": true
-    },
-    {
-      "source": "/kerobokan",
-      "destination": "/locations/seminyak",
-      "permanent": true
-    },
-    {
-      "source": "/petitenget",
-      "destination": "/locations/seminyak",
-      "permanent": true
-    },
-    {
-      "source": "/tanah-lot",
-      "destination": "/locations/canggu",
-      "permanent": true
-    },
-    {
-      "source": "/tabanan",
-      "destination": "/locations/canggu",
-      "permanent": true
-    },
-    {
-      "source": "/denpasar",
-      "destination": "/locations/sanur",
-      "permanent": true
-    },
-    {
-      "source": "/gianyar",
-      "destination": "/locations/ubud",
-      "permanent": true
-    },
-    {
-      "source": "/tegallalang",
-      "destination": "/locations/ubud",
-      "permanent": true
-    },
-    {
-      "source": "/amed",
-      "destination": "/locations/sanur",
-      "permanent": true
-    },
-    {
-      "source": "/lovina",
-      "destination": "/locations/sanur",
-      "permanent": true
-    },
-    {
-      "source": "/candidasa",
-      "destination": "/locations/sanur",
-      "permanent": true
-    },
-    {
-      "source": "/padang-bai",
-      "destination": "/locations/sanur",
-      "permanent": true
-    },
-    {
-      "source": "/ungasan",
-      "destination": "/locations/bukit",
-      "permanent": true
-    },
-    {
-      "source": "/pecatu",
-      "destination": "/locations/bukit",
-      "permanent": true
-    },
-    {
       "source": "/echo-beach-private-chef",
       "destination": "/locations/canggu",
       "permanent": true
@@ -241,53 +166,8 @@
       "permanent": true
     },
     {
-      "source": "/best-private-chef-indonesia",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/private-chef-for-events",
-      "destination": "/events",
-      "permanent": true
-    },
-    {
-      "source": "/luxury-chef-indonesia",
-      "destination": "/fine-dining",
-      "permanent": true
-    },
-    {
-      "source": "/wedding-catering-indonesia",
-      "destination": "/events/weddings",
-      "permanent": true
-    },
-    {
-      "source": "/private-dining-indonesia",
-      "destination": "/fine-dining",
-      "permanent": true
-    },
-    {
-      "source": "/healthy-meal-delivery-indonesia",
-      "destination": "/catering",
-      "permanent": true
-    },
-    {
       "source": "/private-chef-booking-indonesia",
       "destination": "/quote",
-      "permanent": true
-    },
-    {
-      "source": "/chef-for-hire-indonesia",
-      "destination": "/catering",
-      "permanent": true
-    },
-    {
-      "source": "/proposal-dinner",
-      "destination": "/fine-dining",
-      "permanent": true
-    },
-    {
-      "source": "/honeymoon-chef",
-      "destination": "/fine-dining",
       "permanent": true
     },
     {
@@ -303,26 +183,6 @@
     {
       "source": "/private-chef-cost-bali",
       "destination": "/pricing",
-      "permanent": true
-    },
-    {
-      "source": "/jakarta",
-      "destination": "/contact",
-      "permanent": true
-    },
-    {
-      "source": "/private-chef-menteng",
-      "destination": "/contact",
-      "permanent": true
-    },
-    {
-      "source": "/recommended-services",
-      "destination": "/contact",
-      "permanent": true
-    },
-    {
-      "source": "/join-our-team",
-      "destination": "/contact",
       "permanent": true
     },
     {
@@ -343,16 +203,6 @@
     {
       "source": "/villa-partners",
       "destination": "/partner-platform",
-      "permanent": true
-    },
-    {
-      "source": "/why-mychef",
-      "destination": "/about",
-      "permanent": true
-    },
-    {
-      "source": "/calculator",
-      "destination": "/quote",
       "permanent": true
     },
     {

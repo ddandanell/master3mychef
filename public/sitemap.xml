@@ -39,6 +39,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://mychef.id/uluwatu</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Uluwatu, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Uluwatu, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://mychef.id/ubud</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -47,17 +58,6 @@
       <image:loc>https://mychef.id/og-image.webp</image:loc>
       <image:title>Private chef in Ubud, Bali — myCHEF villa dining</image:title>
       <image:caption>myCHEF private chef preparing a villa dinner in Ubud, Bali</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://mychef.id/sanur</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mychef.id/og-image.webp</image:loc>
-      <image:title>Private chef in Sanur, Bali — myCHEF villa dining</image:title>
-      <image:caption>myCHEF private chef preparing a villa dinner in Sanur, Bali</image:caption>
     </image:image>
   </url>
   <url>
@@ -72,17 +72,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://mychef.id/uluwatu</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mychef.id/og-image.webp</image:loc>
-      <image:title>Private chef in Uluwatu, Bali — myCHEF villa dining</image:title>
-      <image:caption>myCHEF private chef preparing a villa dinner in Uluwatu, Bali</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://mychef.id/jimbaran</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -91,6 +80,17 @@
       <image:loc>https://mychef.id/og-image.webp</image:loc>
       <image:title>Private chef in Jimbaran, Bali — myCHEF villa dining</image:title>
       <image:caption>myCHEF private chef preparing a villa dinner in Jimbaran, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/sanur</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Sanur, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Sanur, Bali</image:caption>
     </image:image>
   </url>
   <url>
@@ -124,6 +124,237 @@
       <image:loc>https://mychef.id/og-image.webp</image:loc>
       <image:title>Private chef in Bukit Peninsula, Bali — myCHEF villa dining</image:title>
       <image:caption>myCHEF private chef preparing a villa dinner in Bukit Peninsula, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/kuta</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Kuta, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Kuta, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/legian</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Legian, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Legian, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/kerobokan</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Kerobokan, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Kerobokan, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/petitenget</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Petitenget, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Petitenget, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/tanah-lot</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Tanah Lot, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Tanah Lot, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/tabanan</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Tabanan, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Tabanan, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/denpasar</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Denpasar, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Denpasar, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/gianyar</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Gianyar, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Gianyar, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/tegallalang</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Tegallalang, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Tegallalang, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/amed</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Amed, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Amed, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/lovina</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Lovina, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Lovina, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/candidasa</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Candidasa, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Candidasa, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/padang-bai</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Padang Bai, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Padang Bai, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/ungasan</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Ungasan, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Ungasan, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/pecatu</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Pecatu, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Pecatu, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/jakarta</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Jakarta, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Jakarta, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/menteng</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Menteng, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Menteng, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/kemang</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Kemang, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Kemang, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/scbd</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in SCBD, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in SCBD, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/pondok-indah</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Pondok Indah, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Pondok Indah, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/bsd</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in BSD City, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in BSD City, Bali</image:caption>
     </image:image>
   </url>
   <url>
@@ -481,6 +712,120 @@
   </url>
   <url>
     <loc>https://mychef.id/michelin-private-chef-bali-prices</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/private-tasting-menu-bali</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/chef-table-experience-bali</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/seafood-bbq-catering-bali</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/group-villa-dinner-packages-bali</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/corporate-retreat-catering-bali</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/luxury-birthday-party-bali</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/hire-private-chef-bali-monthly</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/villa-staff-bali-agency</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/butler-service-bali-daily-rate</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/best-private-chef-indonesia</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/private-chef-for-events</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/luxury-chef-indonesia</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/wedding-catering-indonesia</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/private-dining-indonesia</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/healthy-meal-delivery-indonesia</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/chef-for-hire-indonesia</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/proposal-dinner</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/honeymoon-chef</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/private-chef-menteng</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

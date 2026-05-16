@@ -243,13 +243,12 @@ export default function CateringFloatingBreakfastPage() {
                   fontSize: 'clamp(42px, 6vw, 88px)',
                 }}
               >
-                Floating Breakfast Bali
-                <span className="block italic">Wake Up to Breakfast in Your Pool</span>
+                Floating Breakfast — In Your Bali Villa Pool
               </h1>
 
               {/* Body */}
               <p className="text-white/85 text-base md:text-lg leading-[1.55] mb-8 max-w-[540px]">
-                You wake up to fruit, pastries, eggs, coffee, juice, and flowers already set in the pool at your villa.
+                Bamboo tray styled with frangipani + tropical fruit + chef-prepared brunch. Delivered to your pool, photo-ready, retrieved when you're done.
               </p>
 
               {/* CTAs */}

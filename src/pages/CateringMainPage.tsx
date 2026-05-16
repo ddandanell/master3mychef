@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {
   MessageCircle, Check, ArrowRight, Phone, Calendar, Users, MapPin,
@@ -347,13 +347,14 @@ export default function CateringMainPage() {
   const [decisionResult, setDecisionResult] = useState<'one-time' | 'daily' | null>(null)
 
   /* Scroll to #daily-chef on mount if hash present */
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (location.hash === '#daily-chef') {
       setActiveTab('daily')
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         const el = document.getElementById('daily-chef')
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }, 300)
+      return () => clearTimeout(timer)
     }
   }, [location.hash])
 

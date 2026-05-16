@@ -337,7 +337,6 @@ export default function HubPage() {
               loading="eager"
               decoding="async"
               onError={(e) => {
-                console.error('❌ Critical: Homepage hero image failed to load. Check that public/generated/bali-hub-hero.webp exists.')
                 const img = e.target as HTMLImageElement
                 img.style.opacity = '0.3'
               }} />

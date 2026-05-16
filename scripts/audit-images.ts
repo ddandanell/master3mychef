@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
-import { promisify } from 'util';
+import { fileURLToPath } from 'url';
 import sharp from 'sharp';
-import glob from 'glob';
+import { glob as globAsync } from 'glob';
 
-const globAsync = promisify(glob);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 interface ImageReference {
   file: string;

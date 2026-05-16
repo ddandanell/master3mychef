@@ -1,0 +1,4833 @@
+{
+  "timestamp": "2026-05-16T10:52:56.324Z",
+  "scanPaths": [
+    "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src",
+    "/Users/openclaw/Downloads/MYCHEF . MASTER/app/public"
+  ],
+  "summary": {
+    "totalImages": 252,
+    "totalReferences": 227,
+    "imagesWithoutAlt": 53,
+    "imagesNotFollowingConvention": 84,
+    "totalFileSize": 87446758,
+    "formats": {
+      "webp": 221,
+      "png": 16,
+      "svg": 2,
+      "jpg": 13
+    }
+  },
+  "images": {
+    "/public/yacht-dining.webp": {
+      "path": "/public/yacht-dining.webp",
+      "format": "webp",
+      "size": 73382,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/wedding-reception.webp": {
+      "path": "/public/wedding-reception.webp",
+      "format": "webp",
+      "size": 165524,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/villa-aerial.webp": {
+      "path": "/public/villa-aerial.webp",
+      "format": "webp",
+      "size": 202966,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/test-bfl-chef.webp": {
+      "path": "/public/test-bfl-chef.webp",
+      "format": "webp",
+      "size": 89734,
+      "dimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/pathway-fine-dining.webp": {
+      "path": "/public/pathway-fine-dining.webp",
+      "format": "webp",
+      "size": 63308,
+      "dimensions": {
+        "width": 1184,
+        "height": 864
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/pathway-events.webp": {
+      "path": "/public/pathway-events.webp",
+      "format": "webp",
+      "size": 170544,
+      "dimensions": {
+        "width": 1184,
+        "height": 864
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/pathway-catering.webp": {
+      "path": "/public/pathway-catering.webp",
+      "format": "webp",
+      "size": 94332,
+      "dimensions": {
+        "width": 1184,
+        "height": 864
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/pasta-making.webp": {
+      "path": "/public/pasta-making.webp",
+      "format": "webp",
+      "size": 74274,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/partners-hero.webp": {
+      "path": "/public/partners-hero.webp",
+      "format": "webp",
+      "size": 148236,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/og-image.webp": {
+      "path": "/public/og-image.webp",
+      "format": "webp",
+      "size": 269586,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/menu-plating.webp": {
+      "path": "/public/menu-plating.webp",
+      "format": "webp",
+      "size": 412274,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/logo.webp": {
+      "path": "/public/logo.webp",
+      "format": "webp",
+      "size": 269586,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/icon-512.webp": {
+      "path": "/public/icon-512.webp",
+      "format": "webp",
+      "size": 7950,
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/icon-512.png": {
+      "path": "/public/icon-512.png",
+      "format": "png",
+      "size": 21827,
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/icon-192.webp": {
+      "path": "/public/icon-192.webp",
+      "format": "webp",
+      "size": 3056,
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/icon-192.png": {
+      "path": "/public/icon-192.png",
+      "format": "png",
+      "size": 8157,
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/hero-home.webp": {
+      "path": "/public/hero-home.webp",
+      "format": "webp",
+      "size": 706052,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/hero-fine-dining.webp": {
+      "path": "/public/hero-fine-dining.webp",
+      "format": "webp",
+      "size": 247788,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/hero-events.webp": {
+      "path": "/public/hero-events.webp",
+      "format": "webp",
+      "size": 681626,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/hero-catering.webp": {
+      "path": "/public/hero-catering.webp",
+      "format": "webp",
+      "size": 541434,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/favicon.svg": {
+      "path": "/public/favicon.svg",
+      "format": "svg",
+      "size": 699,
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/favicon-32.webp": {
+      "path": "/public/favicon-32.webp",
+      "format": "webp",
+      "size": 586,
+      "dimensions": {
+        "width": 32,
+        "height": 32
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/favicon-32.png": {
+      "path": "/public/favicon-32.png",
+      "format": "png",
+      "size": 1137,
+      "dimensions": {
+        "width": 32,
+        "height": 32
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/event-wedding.webp": {
+      "path": "/public/event-wedding.webp",
+      "format": "webp",
+      "size": 667342,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/dining-table.webp": {
+      "path": "/public/dining-table.webp",
+      "format": "webp",
+      "size": 102112,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/corporate-event.webp": {
+      "path": "/public/corporate-event.webp",
+      "format": "webp",
+      "size": 263214,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/chef-portrait.webp": {
+      "path": "/public/chef-portrait.webp",
+      "format": "webp",
+      "size": 211716,
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/chef-maria.webp": {
+      "path": "/public/chef-maria.webp",
+      "format": "webp",
+      "size": 36956,
+      "dimensions": {
+        "width": 864,
+        "height": 1184
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/chef-david.webp": {
+      "path": "/public/chef-david.webp",
+      "format": "webp",
+      "size": 43056,
+      "dimensions": {
+        "width": 864,
+        "height": 1184
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/chef-antonio.webp": {
+      "path": "/public/chef-antonio.webp",
+      "format": "webp",
+      "size": 56018,
+      "dimensions": {
+        "width": 864,
+        "height": 1184
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/chef-ani.webp": {
+      "path": "/public/chef-ani.webp",
+      "format": "webp",
+      "size": 35430,
+      "dimensions": {
+        "width": 864,
+        "height": 1184
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/card-fine-dining.webp": {
+      "path": "/public/card-fine-dining.webp",
+      "format": "webp",
+      "size": 341808,
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/card-events.webp": {
+      "path": "/public/card-events.webp",
+      "format": "webp",
+      "size": 878860,
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/card-catering.webp": {
+      "path": "/public/card-catering.webp",
+      "format": "webp",
+      "size": 623024,
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/breakfast-spread.webp": {
+      "path": "/public/breakfast-spread.webp",
+      "format": "webp",
+      "size": 135852,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/bbq-poolside.webp": {
+      "path": "/public/bbq-poolside.webp",
+      "format": "webp",
+      "size": 189122,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/bartender.webp": {
+      "path": "/public/bartender.webp",
+      "format": "webp",
+      "size": 110576,
+      "dimensions": {
+        "width": 1344,
+        "height": 768
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/apple-touch-icon.webp": {
+      "path": "/public/apple-touch-icon.webp",
+      "format": "webp",
+      "size": 2936,
+      "dimensions": {
+        "width": 180,
+        "height": 180
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/apple-touch-icon.png": {
+      "path": "/public/apple-touch-icon.png",
+      "format": "png",
+      "size": 7749,
+      "dimensions": {
+        "width": 180,
+        "height": 180
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/images/family-villa-dinner.png": {
+      "path": "/public/images/family-villa-dinner.png",
+      "format": "png",
+      "size": 1702849,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/images/family-villa-dinner-cutout.png": {
+      "path": "/public/images/family-villa-dinner-cutout.png",
+      "format": "png",
+      "size": 2231096,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 1,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx"
+      ]
+    },
+    "/public/images/family-dinner-table.png": {
+      "path": "/public/images/family-dinner-table.png",
+      "format": "png",
+      "size": 163964,
+      "dimensions": {
+        "width": 612,
+        "height": 408
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/why-mychef-hero.webp": {
+      "path": "/public/generated/why-mychef-hero.webp",
+      "format": "webp",
+      "size": 772678,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/were-awards.png": {
+      "path": "/public/generated/were-awards.png",
+      "format": "png",
+      "size": 2231096,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/villa-party-night.webp": {
+      "path": "/public/generated/villa-party-night.webp",
+      "format": "webp",
+      "size": 772320,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/villa-award-2026.webp": {
+      "path": "/public/generated/villa-award-2026.webp",
+      "format": "webp",
+      "size": 80966,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/villa-award-2026.png": {
+      "path": "/public/generated/villa-award-2026.png",
+      "format": "png",
+      "size": 1588090,
+      "dimensions": {
+        "width": 980,
+        "height": 950
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/villa-award-2025.webp": {
+      "path": "/public/generated/villa-award-2025.webp",
+      "format": "webp",
+      "size": 98972,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/villa-award-2025.png": {
+      "path": "/public/generated/villa-award-2025.png",
+      "format": "png",
+      "size": 1485057,
+      "dimensions": {
+        "width": 951,
+        "height": 858
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/trust-standard.webp": {
+      "path": "/public/generated/trust-standard.webp",
+      "format": "webp",
+      "size": 78078,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/trust-section-bg.png": {
+      "path": "/public/generated/trust-section-bg.png",
+      "format": "png",
+      "size": 1398739,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/trust-leader.webp": {
+      "path": "/public/generated/trust-leader.webp",
+      "format": "webp",
+      "size": 215474,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/trust-hosts.webp": {
+      "path": "/public/generated/trust-hosts.webp",
+      "format": "webp",
+      "size": 91716,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/trust-guarantee.webp": {
+      "path": "/public/generated/trust-guarantee.webp",
+      "format": "webp",
+      "size": 50504,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/trust-execution.webp": {
+      "path": "/public/generated/trust-execution.webp",
+      "format": "webp",
+      "size": 71900,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/trust-chefs.webp": {
+      "path": "/public/generated/trust-chefs.webp",
+      "format": "webp",
+      "size": 85636,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/testimonials-bg.webp": {
+      "path": "/public/generated/testimonials-bg.webp",
+      "format": "webp",
+      "size": 83012,
+      "dimensions": {
+        "width": 1600,
+        "height": 1066
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/team-photo.webp": {
+      "path": "/public/generated/team-photo.webp",
+      "format": "webp",
+      "size": 342906,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/staffing-table.webp": {
+      "path": "/public/generated/staffing-table.webp",
+      "format": "webp",
+      "size": 101630,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/staffing-market.webp": {
+      "path": "/public/generated/staffing-market.webp",
+      "format": "webp",
+      "size": 104656,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/staffing-kitchen.webp": {
+      "path": "/public/generated/staffing-kitchen.webp",
+      "format": "webp",
+      "size": 88542,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/staffing-hero.webp": {
+      "path": "/public/generated/staffing-hero.webp",
+      "format": "webp",
+      "size": 85262,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sommelier-wine.webp": {
+      "path": "/public/generated/sommelier-wine.webp",
+      "format": "webp",
+      "size": 587327,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sommelier-hero.webp": {
+      "path": "/public/generated/sommelier-hero.webp",
+      "format": "webp",
+      "size": 129174,
+      "dimensions": {
+        "width": 1440,
+        "height": 832
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sol-sunset.webp": {
+      "path": "/public/generated/sol-sunset.webp",
+      "format": "webp",
+      "size": 83088,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sol-produce.webp": {
+      "path": "/public/generated/sol-produce.webp",
+      "format": "webp",
+      "size": 159046,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sol-lunch.webp": {
+      "path": "/public/generated/sol-lunch.webp",
+      "format": "webp",
+      "size": 128820,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sol-kids.webp": {
+      "path": "/public/generated/sol-kids.webp",
+      "format": "webp",
+      "size": 132184,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sol-hero.webp": {
+      "path": "/public/generated/sol-hero.webp",
+      "format": "webp",
+      "size": 105626,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sol-hero-v2.webp": {
+      "path": "/public/generated/sol-hero-v2.webp",
+      "format": "webp",
+      "size": 88558,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sol-cooking.webp": {
+      "path": "/public/generated/sol-cooking.webp",
+      "format": "webp",
+      "size": 103422,
+      "dimensions": {
+        "width": 768,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sol-cleanup.webp": {
+      "path": "/public/generated/sol-cleanup.webp",
+      "format": "webp",
+      "size": 66982,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sol-chef-portrait.webp": {
+      "path": "/public/generated/sol-chef-portrait.webp",
+      "format": "webp",
+      "size": 41862,
+      "dimensions": {
+        "width": 768,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sol-breakfast.webp": {
+      "path": "/public/generated/sol-breakfast.webp",
+      "format": "webp",
+      "size": 142616,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/sol-bbq.webp": {
+      "path": "/public/generated/sol-bbq.webp",
+      "format": "webp",
+      "size": 135900,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/services-hero.webp": {
+      "path": "/public/generated/services-hero.webp",
+      "format": "webp",
+      "size": 694564,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/section-wedding-setup.webp": {
+      "path": "/public/generated/section-wedding-setup.webp",
+      "format": "webp",
+      "size": 835478,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/section-villa-kitchen.webp": {
+      "path": "/public/generated/section-villa-kitchen.webp",
+      "format": "webp",
+      "size": 548813,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/section-romantic-dinner.webp": {
+      "path": "/public/generated/section-romantic-dinner.webp",
+      "format": "webp",
+      "size": 552357,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/section-long-table.webp": {
+      "path": "/public/generated/section-long-table.webp",
+      "format": "webp",
+      "size": 543779,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/section-grazing-table.webp": {
+      "path": "/public/generated/section-grazing-table.webp",
+      "format": "webp",
+      "size": 1003402,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/section-floating-breakfast.webp": {
+      "path": "/public/generated/section-floating-breakfast.webp",
+      "format": "webp",
+      "size": 614539,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/section-family-dinner.webp": {
+      "path": "/public/generated/section-family-dinner.webp",
+      "format": "webp",
+      "size": 688238,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/section-cocktail-bar.webp": {
+      "path": "/public/generated/section-cocktail-bar.webp",
+      "format": "webp",
+      "size": 660225,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/section-buffet-spread.webp": {
+      "path": "/public/generated/section-buffet-spread.webp",
+      "format": "webp",
+      "size": 944743,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/section-bbq-grill.webp": {
+      "path": "/public/generated/section-bbq-grill.webp",
+      "format": "webp",
+      "size": 656684,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/reviews-hero.webp": {
+      "path": "/public/generated/reviews-hero.webp",
+      "format": "webp",
+      "size": 557667,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/retreats-hero.webp": {
+      "path": "/public/generated/retreats-hero.webp",
+      "format": "webp",
+      "size": 674998,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/quote-hero.webp": {
+      "path": "/public/generated/quote-hero.webp",
+      "format": "webp",
+      "size": 559468,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pricing-hero.webp": {
+      "path": "/public/generated/pricing-hero.webp",
+      "format": "webp",
+      "size": 371817,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/portrait-sofia.webp": {
+      "path": "/public/generated/portrait-sofia.webp",
+      "format": "webp",
+      "size": 31292,
+      "dimensions": {
+        "width": 800,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/portrait-olivia.webp": {
+      "path": "/public/generated/portrait-olivia.webp",
+      "format": "webp",
+      "size": 35672,
+      "dimensions": {
+        "width": 800,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/portrait-marco.webp": {
+      "path": "/public/generated/portrait-marco.webp",
+      "format": "webp",
+      "size": 40008,
+      "dimensions": {
+        "width": 800,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/portrait-daniel.webp": {
+      "path": "/public/generated/portrait-daniel.webp",
+      "format": "webp",
+      "size": 41788,
+      "dimensions": {
+        "width": 800,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pkg-tacos.webp": {
+      "path": "/public/generated/pkg-tacos.webp",
+      "format": "webp",
+      "size": 86928,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pkg-seafood.webp": {
+      "path": "/public/generated/pkg-seafood.webp",
+      "format": "webp",
+      "size": 89944,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pkg-roast.webp": {
+      "path": "/public/generated/pkg-roast.webp",
+      "format": "webp",
+      "size": 114804,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pkg-italian.webp": {
+      "path": "/public/generated/pkg-italian.webp",
+      "format": "webp",
+      "size": 104076,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pkg-grazing.webp": {
+      "path": "/public/generated/pkg-grazing.webp",
+      "format": "webp",
+      "size": 87154,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pkg-cocktails.webp": {
+      "path": "/public/generated/pkg-cocktails.webp",
+      "format": "webp",
+      "size": 82528,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pkg-celebration.webp": {
+      "path": "/public/generated/pkg-celebration.webp",
+      "format": "webp",
+      "size": 76796,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pkg-breakfast.webp": {
+      "path": "/public/generated/pkg-breakfast.webp",
+      "format": "webp",
+      "size": 103006,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pkg-bbq.webp": {
+      "path": "/public/generated/pkg-bbq.webp",
+      "format": "webp",
+      "size": 97698,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pkg-asian.webp": {
+      "path": "/public/generated/pkg-asian.webp",
+      "format": "webp",
+      "size": 91330,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/party-white.webp": {
+      "path": "/public/generated/party-white.webp",
+      "format": "webp",
+      "size": 140664,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/party-ultimate.webp": {
+      "path": "/public/generated/party-ultimate.webp",
+      "format": "webp",
+      "size": 117598,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/party-tacos.webp": {
+      "path": "/public/generated/party-tacos.webp",
+      "format": "webp",
+      "size": 137092,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/party-rooftop.webp": {
+      "path": "/public/generated/party-rooftop.webp",
+      "format": "webp",
+      "size": 89132,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/party-pool.webp": {
+      "path": "/public/generated/party-pool.webp",
+      "format": "webp",
+      "size": 128730,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/party-medi.webp": {
+      "path": "/public/generated/party-medi.webp",
+      "format": "webp",
+      "size": 109256,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/party-festival.webp": {
+      "path": "/public/generated/party-festival.webp",
+      "format": "webp",
+      "size": 189928,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/party-brunch.webp": {
+      "path": "/public/generated/party-brunch.webp",
+      "format": "webp",
+      "size": 132308,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/party-birthday.webp": {
+      "path": "/public/generated/party-birthday.webp",
+      "format": "webp",
+      "size": 110012,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/party-beer.webp": {
+      "path": "/public/generated/party-beer.webp",
+      "format": "webp",
+      "size": 110770,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/partner-platform-hero.webp": {
+      "path": "/public/generated/partner-platform-hero.webp",
+      "format": "webp",
+      "size": 130566,
+      "dimensions": {
+        "width": 1440,
+        "height": 832
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/partner-platform-dashboard.webp": {
+      "path": "/public/generated/partner-platform-dashboard.webp",
+      "format": "webp",
+      "size": 85926,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/partner-hero.webp": {
+      "path": "/public/generated/partner-hero.webp",
+      "format": "webp",
+      "size": 668280,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/menu-wagyu.webp": {
+      "path": "/public/generated/menu-wagyu.webp",
+      "format": "webp",
+      "size": 64206,
+      "dimensions": {
+        "width": 673,
+        "height": 720
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/menu-mediterranean.webp": {
+      "path": "/public/generated/menu-mediterranean.webp",
+      "format": "webp",
+      "size": 56922,
+      "dimensions": {
+        "width": 979,
+        "height": 767
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/menu-mediterranean-sea.webp": {
+      "path": "/public/generated/menu-mediterranean-sea.webp",
+      "format": "webp",
+      "size": 46622,
+      "dimensions": {
+        "width": 608,
+        "height": 720
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-wine.webp": {
+      "path": "/public/generated/luna-wine.webp",
+      "format": "webp",
+      "size": 56398,
+      "dimensions": {
+        "width": 768,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-village.webp": {
+      "path": "/public/generated/luna-village.webp",
+      "format": "webp",
+      "size": 166952,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-team.webp": {
+      "path": "/public/generated/luna-team.webp",
+      "format": "webp",
+      "size": 172232,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-table.webp": {
+      "path": "/public/generated/luna-table.webp",
+      "format": "webp",
+      "size": 103344,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-plating.webp": {
+      "path": "/public/generated/luna-plating.webp",
+      "format": "webp",
+      "size": 81696,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-ingredients.webp": {
+      "path": "/public/generated/luna-ingredients.webp",
+      "format": "webp",
+      "size": 351796,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-hero.webp": {
+      "path": "/public/generated/luna-hero.webp",
+      "format": "webp",
+      "size": 88890,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-hero-v2.webp": {
+      "path": "/public/generated/luna-hero-v2.webp",
+      "format": "webp",
+      "size": 232406,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-guests.webp": {
+      "path": "/public/generated/luna-guests.webp",
+      "format": "webp",
+      "size": 136742,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-gallery-4.webp": {
+      "path": "/public/generated/luna-gallery-4.webp",
+      "format": "webp",
+      "size": 229032,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-gallery-3.webp": {
+      "path": "/public/generated/luna-gallery-3.webp",
+      "format": "webp",
+      "size": 134152,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-gallery-2.webp": {
+      "path": "/public/generated/luna-gallery-2.webp",
+      "format": "webp",
+      "size": 149832,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-gallery-1.webp": {
+      "path": "/public/generated/luna-gallery-1.webp",
+      "format": "webp",
+      "size": 153376,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-flame.webp": {
+      "path": "/public/generated/luna-flame.webp",
+      "format": "webp",
+      "size": 100512,
+      "dimensions": {
+        "width": 768,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-experience-collage.webp": {
+      "path": "/public/generated/luna-experience-collage.webp",
+      "format": "webp",
+      "size": 165008,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-detail.webp": {
+      "path": "/public/generated/luna-detail.webp",
+      "format": "webp",
+      "size": 119238,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-dessert.webp": {
+      "path": "/public/generated/luna-dessert.webp",
+      "format": "webp",
+      "size": 61832,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/luna-chef-portrait.webp": {
+      "path": "/public/generated/luna-chef-portrait.webp",
+      "format": "webp",
+      "size": 65936,
+      "dimensions": {
+        "width": 768,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/locations-hero.webp": {
+      "path": "/public/generated/locations-hero.webp",
+      "format": "webp",
+      "size": 867896,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/in-villa-service-hero.webp": {
+      "path": "/public/generated/in-villa-service-hero.webp",
+      "format": "webp",
+      "size": 665857,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hub-villa.webp": {
+      "path": "/public/generated/hub-villa.webp",
+      "format": "webp",
+      "size": 136918,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hub-hero.webp": {
+      "path": "/public/generated/hub-hero.webp",
+      "format": "webp",
+      "size": 144310,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hub-hero-v3.webp": {
+      "path": "/public/generated/hub-hero-v3.webp",
+      "format": "webp",
+      "size": 269586,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hub-hero-v2.webp": {
+      "path": "/public/generated/hub-hero-v2.webp",
+      "format": "webp",
+      "size": 156378,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hub-fine-dining.webp": {
+      "path": "/public/generated/hub-fine-dining.webp",
+      "format": "webp",
+      "size": 206806,
+      "dimensions": {
+        "width": 1086,
+        "height": 1448
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hub-events.webp": {
+      "path": "/public/generated/hub-events.webp",
+      "format": "webp",
+      "size": 157466,
+      "dimensions": {
+        "width": 1086,
+        "height": 1448
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hub-chef.webp": {
+      "path": "/public/generated/hub-chef.webp",
+      "format": "webp",
+      "size": 37154,
+      "dimensions": {
+        "width": 768,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hub-catering.webp": {
+      "path": "/public/generated/hub-catering.webp",
+      "format": "webp",
+      "size": 132696,
+      "dimensions": {
+        "width": 1086,
+        "height": 1448
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hub-bali.webp": {
+      "path": "/public/generated/hub-bali.webp",
+      "format": "webp",
+      "size": 106008,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/home-hero-ivory-villa.png": {
+      "path": "/public/generated/home-hero-ivory-villa.png",
+      "format": "png",
+      "size": 1644921,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/home-hero-ivory-villa-v2.png": {
+      "path": "/public/generated/home-hero-ivory-villa-v2.png",
+      "format": "png",
+      "size": 1195351,
+      "dimensions": {
+        "width": 1535,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-villa-parties.webp": {
+      "path": "/public/generated/hero-villa-parties.webp",
+      "format": "webp",
+      "size": 333582,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-villa-parties.jpg": {
+      "path": "/public/generated/hero-villa-parties.jpg",
+      "format": "jpg",
+      "size": 948870,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-retreats.webp": {
+      "path": "/public/generated/hero-retreats.webp",
+      "format": "webp",
+      "size": 223532,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-retreats.jpg": {
+      "path": "/public/generated/hero-retreats.jpg",
+      "format": "jpg",
+      "size": 679102,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-mixology.webp": {
+      "path": "/public/generated/hero-mixology.webp",
+      "format": "webp",
+      "size": 133988,
+      "dimensions": {
+        "width": 1216,
+        "height": 832
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-how-it-works.png": {
+      "path": "/public/generated/hero-how-it-works.png",
+      "format": "png",
+      "size": 1643192,
+      "dimensions": {
+        "width": 1535,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-floating-breakfast.webp": {
+      "path": "/public/generated/hero-floating-breakfast.webp",
+      "format": "webp",
+      "size": 189568,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-floating-breakfast.jpg": {
+      "path": "/public/generated/hero-floating-breakfast.jpg",
+      "format": "jpg",
+      "size": 601076,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-dropoff-catering.webp": {
+      "path": "/public/generated/hero-dropoff-catering.webp",
+      "format": "webp",
+      "size": 212562,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-dropoff-catering.jpg": {
+      "path": "/public/generated/hero-dropoff-catering.jpg",
+      "format": "jpg",
+      "size": 665720,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-corporate-events.webp": {
+      "path": "/public/generated/hero-corporate-events.webp",
+      "format": "webp",
+      "size": 259212,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-corporate-events.jpg": {
+      "path": "/public/generated/hero-corporate-events.jpg",
+      "format": "jpg",
+      "size": 736825,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-buffet-catering.webp": {
+      "path": "/public/generated/hero-buffet-catering.webp",
+      "format": "webp",
+      "size": 276236,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-buffet-catering.jpg": {
+      "path": "/public/generated/hero-buffet-catering.jpg",
+      "format": "jpg",
+      "size": 807674,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-birthdays.webp": {
+      "path": "/public/generated/hero-birthdays.webp",
+      "format": "webp",
+      "size": 263304,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-birthdays.jpg": {
+      "path": "/public/generated/hero-birthdays.jpg",
+      "format": "jpg",
+      "size": 763660,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-baby-showers.webp": {
+      "path": "/public/generated/hero-baby-showers.webp",
+      "format": "webp",
+      "size": 210638,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-baby-showers.jpg": {
+      "path": "/public/generated/hero-baby-showers.jpg",
+      "format": "jpg",
+      "size": 633172,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-babiguling-catering.webp": {
+      "path": "/public/generated/hero-babiguling-catering.webp",
+      "format": "webp",
+      "size": 234478,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-babiguling-catering.jpg": {
+      "path": "/public/generated/hero-babiguling-catering.jpg",
+      "format": "jpg",
+      "size": 715084,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-anniversaries.webp": {
+      "path": "/public/generated/hero-anniversaries.webp",
+      "format": "webp",
+      "size": 237114,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/hero-anniversaries.jpg": {
+      "path": "/public/generated/hero-anniversaries.jpg",
+      "format": "jpg",
+      "size": 713195,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/floating-breakfast-bali.png": {
+      "path": "/public/generated/floating-breakfast-bali.png",
+      "format": "png",
+      "size": 2231726,
+      "dimensions": {
+        "width": 1752,
+        "height": 898
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/fd-villa-candle-dinner.jpg": {
+      "path": "/public/generated/fd-villa-candle-dinner.jpg",
+      "format": "jpg",
+      "size": 603617,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/fd-team-service.jpg": {
+      "path": "/public/generated/fd-team-service.jpg",
+      "format": "jpg",
+      "size": 292726,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/fd-chef-signature.jpg": {
+      "path": "/public/generated/fd-chef-signature.jpg",
+      "format": "jpg",
+      "size": 365553,
+      "dimensions": {
+        "width": 896,
+        "height": 1200
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/favicon-source.webp": {
+      "path": "/public/generated/favicon-source.webp",
+      "format": "webp",
+      "size": 18574,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/faq-hero.webp": {
+      "path": "/public/generated/faq-hero.webp",
+      "format": "webp",
+      "size": 710879,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corporate-events-hero.webp": {
+      "path": "/public/generated/corporate-events-hero.webp",
+      "format": "webp",
+      "size": 721616,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corporate-event.svg": {
+      "path": "/public/generated/corporate-event.svg",
+      "format": "svg",
+      "size": 888,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corporate-dinner.webp": {
+      "path": "/public/generated/corporate-dinner.webp",
+      "format": "webp",
+      "size": 799102,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corp-villa.webp": {
+      "path": "/public/generated/corp-villa.webp",
+      "format": "webp",
+      "size": 121554,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corp-team.webp": {
+      "path": "/public/generated/corp-team.webp",
+      "format": "webp",
+      "size": 54250,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corp-plated.webp": {
+      "path": "/public/generated/corp-plated.webp",
+      "format": "webp",
+      "size": 62678,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corp-networking.webp": {
+      "path": "/public/generated/corp-networking.webp",
+      "format": "webp",
+      "size": 77160,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corp-hero.webp": {
+      "path": "/public/generated/corp-hero.webp",
+      "format": "webp",
+      "size": 107688,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corp-gala.webp": {
+      "path": "/public/generated/corp-gala.webp",
+      "format": "webp",
+      "size": 133654,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corp-executive.webp": {
+      "path": "/public/generated/corp-executive.webp",
+      "format": "webp",
+      "size": 65222,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corp-conference.webp": {
+      "path": "/public/generated/corp-conference.webp",
+      "format": "webp",
+      "size": 73574,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/corp-cocktail-close.webp": {
+      "path": "/public/generated/corp-cocktail-close.webp",
+      "format": "webp",
+      "size": 81134,
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/contact-hero.webp": {
+      "path": "/public/generated/contact-hero.webp",
+      "format": "webp",
+      "size": 654933,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/contact-hero-v2.webp": {
+      "path": "/public/generated/contact-hero-v2.webp",
+      "format": "webp",
+      "size": 120304,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/contact-concierge.webp": {
+      "path": "/public/generated/contact-concierge.webp",
+      "format": "webp",
+      "size": 53510,
+      "dimensions": {
+        "width": 1200,
+        "height": 1044
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/city-uluwatu.webp": {
+      "path": "/public/generated/city-uluwatu.webp",
+      "format": "webp",
+      "size": 104490,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/city-ubud.webp": {
+      "path": "/public/generated/city-ubud.webp",
+      "format": "webp",
+      "size": 217534,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/city-seminyak.webp": {
+      "path": "/public/generated/city-seminyak.webp",
+      "format": "webp",
+      "size": 160726,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/city-sanur.webp": {
+      "path": "/public/generated/city-sanur.webp",
+      "format": "webp",
+      "size": 205496,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/city-pererenan.webp": {
+      "path": "/public/generated/city-pererenan.webp",
+      "format": "webp",
+      "size": 166030,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/city-nusa-dua.webp": {
+      "path": "/public/generated/city-nusa-dua.webp",
+      "format": "webp",
+      "size": 161774,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/city-jimbaran.webp": {
+      "path": "/public/generated/city-jimbaran.webp",
+      "format": "webp",
+      "size": 78148,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/city-canggu.webp": {
+      "path": "/public/generated/city-canggu.webp",
+      "format": "webp",
+      "size": 168802,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/city-bukit.webp": {
+      "path": "/public/generated/city-bukit.webp",
+      "format": "webp",
+      "size": 141586,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/city-berawa.webp": {
+      "path": "/public/generated/city-berawa.webp",
+      "format": "webp",
+      "size": 171874,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/chefs-table-hero-luxury.webp": {
+      "path": "/public/generated/chefs-table-hero-luxury.webp",
+      "format": "webp",
+      "size": 142960,
+      "dimensions": {
+        "width": 1535,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/chefs-table-hero-luxury.png": {
+      "path": "/public/generated/chefs-table-hero-luxury.png",
+      "format": "png",
+      "size": 1920979,
+      "dimensions": {
+        "width": 1535,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/chefs-hero.webp": {
+      "path": "/public/generated/chefs-hero.webp",
+      "format": "webp",
+      "size": 544884,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/chef-rizky-saputra.webp": {
+      "path": "/public/generated/chef-rizky-saputra.webp",
+      "format": "webp",
+      "size": 185118,
+      "dimensions": {
+        "width": 1122,
+        "height": 1402
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/chef-paco.webp": {
+      "path": "/public/generated/chef-paco.webp",
+      "format": "webp",
+      "size": 149832,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/chef-ni-putu-asri.webp": {
+      "path": "/public/generated/chef-ni-putu-asri.webp",
+      "format": "webp",
+      "size": 139414,
+      "dimensions": {
+        "width": 1122,
+        "height": 1402
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/chef-matteo.webp": {
+      "path": "/public/generated/chef-matteo.webp",
+      "format": "webp",
+      "size": 134152,
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/chef-made-surya.webp": {
+      "path": "/public/generated/chef-made-surya.webp",
+      "format": "webp",
+      "size": 79164,
+      "dimensions": {
+        "width": 1122,
+        "height": 1402
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/chef-bayu-pranata.webp": {
+      "path": "/public/generated/chef-bayu-pranata.webp",
+      "format": "webp",
+      "size": 143782,
+      "dimensions": {
+        "width": 1122,
+        "height": 1402
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering-hero.webp": {
+      "path": "/public/generated/catering-hero.webp",
+      "format": "webp",
+      "size": 124928,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/butler-service.webp": {
+      "path": "/public/generated/butler-service.webp",
+      "format": "webp",
+      "size": 545716,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/book-hero.webp": {
+      "path": "/public/generated/book-hero.webp",
+      "format": "webp",
+      "size": 836565,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/best-partner-2026.webp": {
+      "path": "/public/generated/best-partner-2026.webp",
+      "format": "webp",
+      "size": 57426,
+      "dimensions": {
+        "width": 612,
+        "height": 408
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/bali-locations-sunset.webp": {
+      "path": "/public/generated/bali-locations-sunset.webp",
+      "format": "webp",
+      "size": 434488,
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/bali-hub-hero.webp": {
+      "path": "/public/generated/bali-hub-hero.webp",
+      "format": "webp",
+      "size": 216188,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/baby-shower-table.webp": {
+      "path": "/public/generated/baby-shower-table.webp",
+      "format": "webp",
+      "size": 619413,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/aura-wedding.webp": {
+      "path": "/public/generated/aura-wedding.webp",
+      "format": "webp",
+      "size": 163636,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/aura-toast.webp": {
+      "path": "/public/generated/aura-toast.webp",
+      "format": "webp",
+      "size": 71266,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/aura-team.webp": {
+      "path": "/public/generated/aura-team.webp",
+      "format": "webp",
+      "size": 120724,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/aura-tablescape.webp": {
+      "path": "/public/generated/aura-tablescape.webp",
+      "format": "webp",
+      "size": 114030,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/aura-setup.webp": {
+      "path": "/public/generated/aura-setup.webp",
+      "format": "webp",
+      "size": 141508,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/aura-hero.webp": {
+      "path": "/public/generated/aura-hero.webp",
+      "format": "webp",
+      "size": 82320,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/aura-hero-v2.webp": {
+      "path": "/public/generated/aura-hero-v2.webp",
+      "format": "webp",
+      "size": 114558,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/aura-dance.webp": {
+      "path": "/public/generated/aura-dance.webp",
+      "format": "webp",
+      "size": 131758,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/aura-corporate.webp": {
+      "path": "/public/generated/aura-corporate.webp",
+      "format": "webp",
+      "size": 124600,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/aura-buffet.webp": {
+      "path": "/public/generated/aura-buffet.webp",
+      "format": "webp",
+      "size": 134564,
+      "dimensions": {
+        "width": 1024,
+        "height": 576
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/aura-bartender.webp": {
+      "path": "/public/generated/aura-bartender.webp",
+      "format": "webp",
+      "size": 106970,
+      "dimensions": {
+        "width": 768,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/anniversary-romantic.webp": {
+      "path": "/public/generated/anniversary-romantic.webp",
+      "format": "webp",
+      "size": 455086,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/about-hero.webp": {
+      "path": "/public/generated/about-hero.webp",
+      "format": "webp",
+      "size": 500256,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering/plated-menus.webp": {
+      "path": "/public/generated/catering/plated-menus.webp",
+      "format": "webp",
+      "size": 547278,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering/floating-group.webp": {
+      "path": "/public/generated/catering/floating-group.webp",
+      "format": "webp",
+      "size": 982854,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering/floating-brunch.webp": {
+      "path": "/public/generated/catering/floating-brunch.webp",
+      "format": "webp",
+      "size": 748762,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering/floating-breakfast.webp": {
+      "path": "/public/generated/catering/floating-breakfast.webp",
+      "format": "webp",
+      "size": 583697,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering/dropoff-hero.webp": {
+      "path": "/public/generated/catering/dropoff-hero.webp",
+      "format": "webp",
+      "size": 597788,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering/dropoff-hero-v2.webp": {
+      "path": "/public/generated/catering/dropoff-hero-v2.webp",
+      "format": "webp",
+      "size": 20344,
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/catering/babi-guling.webp": {
+      "path": "/public/generated/catering/babi-guling.webp",
+      "format": "webp",
+      "size": 628929,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/wedding-small.webp": {
+      "path": "/public/generated/events/wedding-small.webp",
+      "format": "webp",
+      "size": 668409,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/wedding-reception.webp": {
+      "path": "/public/generated/events/wedding-reception.webp",
+      "format": "webp",
+      "size": 742633,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/wedding-hero.webp": {
+      "path": "/public/generated/events/wedding-hero.webp",
+      "format": "webp",
+      "size": 913711,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/wedding-cocktail.webp": {
+      "path": "/public/generated/events/wedding-cocktail.webp",
+      "format": "webp",
+      "size": 648469,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/villa-party-night.webp": {
+      "path": "/public/generated/events/villa-party-night.webp",
+      "format": "webp",
+      "size": 837649,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/retreat-table.webp": {
+      "path": "/public/generated/events/retreat-table.webp",
+      "format": "webp",
+      "size": 941773,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/retreat-breakfast.webp": {
+      "path": "/public/generated/events/retreat-breakfast.webp",
+      "format": "webp",
+      "size": 895230,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/corporate-team.webp": {
+      "path": "/public/generated/events/corporate-team.webp",
+      "format": "webp",
+      "size": 735664,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/birthday-pool.webp": {
+      "path": "/public/generated/events/birthday-pool.webp",
+      "format": "webp",
+      "size": 917505,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/baby-shower-hero.webp": {
+      "path": "/public/generated/events/baby-shower-hero.webp",
+      "format": "webp",
+      "size": 636549,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/anniversary-romantic.webp": {
+      "path": "/public/generated/events/anniversary-romantic.webp",
+      "format": "webp",
+      "size": 679305,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/events/anniversary-chef.webp": {
+      "path": "/public/generated/events/anniversary-chef.webp",
+      "format": "webp",
+      "size": 387232,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    }
+  },
+  "references": [
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/TastingMenuPage.tsx",
+      "line": 179,
+      "type": "src",
+      "path": "/generated/luna-plating.webp",
+      "raw": "src=\"/generated/luna-plating.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/TastingMenuPage.tsx",
+      "line": 292,
+      "type": "src",
+      "path": "/generated/luna-wine.webp",
+      "raw": "src=\"/generated/luna-wine.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaStaffPage.tsx",
+      "line": 124,
+      "type": "src",
+      "path": "/generated/hub-villa.webp",
+      "raw": "<img src=\"/generated/hub-villa.webp\" alt=\"Villa staff at Bali luxury property\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "alt": "Villa staff at Bali luxury property"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaStaffPage.tsx",
+      "line": 124,
+      "type": "img",
+      "path": "/generated/hub-villa.webp",
+      "alt": "Villa staff at Bali luxury property",
+      "raw": "<img src=\"/generated/hub-villa.webp\" alt=\"Villa staff at Bali luxury property\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaStaffPage.tsx",
+      "line": 226,
+      "type": "src",
+      "path": "/generated/hub-villa.webp",
+      "raw": "<img src=\"/generated/hub-villa.webp\" alt=\"Villa staff team at Bali property\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Villa staff team at Bali property"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaStaffPage.tsx",
+      "line": 226,
+      "type": "img",
+      "path": "/generated/hub-villa.webp",
+      "alt": "Villa staff team at Bali property",
+      "raw": "<img src=\"/generated/hub-villa.webp\" alt=\"Villa staff team at Bali property\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaManagersPage.tsx",
+      "line": 124,
+      "type": "src",
+      "path": "/generated/corp-villa.webp",
+      "raw": "<img src=\"/generated/corp-villa.webp\" alt=\"Luxury Bali villa with professional hospitality staff\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "alt": "Luxury Bali villa with professional hospitality staff"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaManagersPage.tsx",
+      "line": 124,
+      "type": "img",
+      "path": "/generated/corp-villa.webp",
+      "alt": "Luxury Bali villa with professional hospitality staff",
+      "raw": "<img src=\"/generated/corp-villa.webp\" alt=\"Luxury Bali villa with professional hospitality staff\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaManagersPage.tsx",
+      "line": 226,
+      "type": "src",
+      "path": "/generated/staffing-kitchen.webp",
+      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Professional hospitality team in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Professional hospitality team in Bali villa kitchen"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaManagersPage.tsx",
+      "line": 226,
+      "type": "img",
+      "path": "/generated/staffing-kitchen.webp",
+      "alt": "Professional hospitality team in Bali villa kitchen",
+      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Professional hospitality team in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
+      "line": 124,
+      "type": "src",
+      "path": "/generated/staffing-hero.webp",
+      "raw": "<img src=\"/generated/staffing-hero.webp\" alt=\"Private chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "alt": "Private chef preparing meal at Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
+      "line": 124,
+      "type": "img",
+      "path": "/generated/staffing-hero.webp",
+      "alt": "Private chef preparing meal at Bali villa",
+      "raw": "<img src=\"/generated/staffing-hero.webp\" alt=\"Private chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
+      "line": 226,
+      "type": "src",
+      "path": "/generated/staffing-kitchen.webp",
+      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Private chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Private chef working in Bali villa kitchen"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
+      "line": 226,
+      "type": "img",
+      "path": "/generated/staffing-kitchen.webp",
+      "alt": "Private chef working in Bali villa kitchen",
+      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Private chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPage.tsx",
+      "line": 206,
+      "type": "src",
+      "path": "/generated/staffing-hero.webp",
+      "raw": "src=\"/generated/staffing-hero.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingLiveInPage.tsx",
+      "line": 124,
+      "type": "src",
+      "path": "/generated/staffing-kitchen.webp",
+      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Live-in chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "alt": "Live-in chef preparing meal at Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingLiveInPage.tsx",
+      "line": 124,
+      "type": "img",
+      "path": "/generated/staffing-kitchen.webp",
+      "alt": "Live-in chef preparing meal at Bali villa",
+      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Live-in chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingLiveInPage.tsx",
+      "line": 226,
+      "type": "src",
+      "path": "/generated/staffing-kitchen.webp",
+      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Live-in chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Live-in chef working in Bali villa kitchen"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingLiveInPage.tsx",
+      "line": 226,
+      "type": "img",
+      "path": "/generated/staffing-kitchen.webp",
+      "alt": "Live-in chef working in Bali villa kitchen",
+      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Live-in chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHouseholdPage.tsx",
+      "line": 131,
+      "type": "src",
+      "path": "/generated/staffing-table.webp",
+      "raw": "<img src=\"/generated/staffing-table.webp\" alt=\"Household staff serving at private Bali residence\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "alt": "Household staff serving at private Bali residence"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHouseholdPage.tsx",
+      "line": 131,
+      "type": "img",
+      "path": "/generated/staffing-table.webp",
+      "alt": "Household staff serving at private Bali residence",
+      "raw": "<img src=\"/generated/staffing-table.webp\" alt=\"Household staff serving at private Bali residence\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHouseholdPage.tsx",
+      "line": 233,
+      "type": "src",
+      "path": "/generated/staffing-table.webp",
+      "raw": "<img src=\"/generated/staffing-table.webp\" alt=\"Household staff at private Bali residence\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Household staff at private Bali residence"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHouseholdPage.tsx",
+      "line": 233,
+      "type": "img",
+      "path": "/generated/staffing-table.webp",
+      "alt": "Household staff at private Bali residence",
+      "raw": "<img src=\"/generated/staffing-table.webp\" alt=\"Household staff at private Bali residence\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHotelsPage.tsx",
+      "line": 124,
+      "type": "src",
+      "path": "/generated/aura-corporate.webp",
+      "raw": "<img src=\"/generated/aura-corporate.webp\" alt=\"Professional hospitality team at Bali hotel restaurant\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "alt": "Professional hospitality team at Bali hotel restaurant"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHotelsPage.tsx",
+      "line": 124,
+      "type": "img",
+      "path": "/generated/aura-corporate.webp",
+      "alt": "Professional hospitality team at Bali hotel restaurant",
+      "raw": "<img src=\"/generated/aura-corporate.webp\" alt=\"Professional hospitality team at Bali hotel restaurant\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHotelsPage.tsx",
+      "line": 226,
+      "type": "src",
+      "path": "/generated/staffing-kitchen.webp",
+      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Professional kitchen team at Bali restaurant\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Professional kitchen team at Bali restaurant"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHotelsPage.tsx",
+      "line": 226,
+      "type": "img",
+      "path": "/generated/staffing-kitchen.webp",
+      "alt": "Professional kitchen team at Bali restaurant",
+      "raw": "<img src=\"/generated/staffing-kitchen.webp\" alt=\"Professional kitchen team at Bali restaurant\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/SolPage.tsx",
+      "line": 80,
+      "type": "src",
+      "path": "/generated/catering-hero.webp",
+      "raw": "src=\"/generated/catering-hero.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/SolPage.tsx",
+      "line": 219,
+      "type": "src",
+      "path": "/generated/sol-chef-portrait.webp",
+      "raw": "src=\"/generated/sol-chef-portrait.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServicesPage.tsx",
+      "line": 99,
+      "type": "src",
+      "path": "/generated/bali-hub-hero.webp",
+      "raw": "src=\"/generated/bali-hub-hero.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceWaitersPage.tsx",
+      "line": 126,
+      "type": "src",
+      "path": "/generated/aura-bartender.webp",
+      "raw": "<img src=\"/generated/aura-bartender.webp\" alt=\"Professional waiter serving at Bali villa dinner\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "alt": "Professional waiter serving at Bali villa dinner"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceWaitersPage.tsx",
+      "line": 126,
+      "type": "img",
+      "path": "/generated/aura-bartender.webp",
+      "alt": "Professional waiter serving at Bali villa dinner",
+      "raw": "<img src=\"/generated/aura-bartender.webp\" alt=\"Professional waiter serving at Bali villa dinner\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceWaitersPage.tsx",
+      "line": 272,
+      "type": "src",
+      "path": "/generated/staffing-hero.webp",
+      "raw": "<img src=\"/generated/staffing-hero.webp\" alt=\"Professional service team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Professional service team at Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceWaitersPage.tsx",
+      "line": 272,
+      "type": "img",
+      "path": "/generated/staffing-hero.webp",
+      "alt": "Professional service team at Bali villa",
+      "raw": "<img src=\"/generated/staffing-hero.webp\" alt=\"Professional service team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceSommelierPage.tsx",
+      "line": 124,
+      "type": "src",
+      "path": "/generated/sommelier-hero.webp",
+      "raw": "<img src=\"/generated/sommelier-hero.webp\" alt=\"Professional sommelier pouring wine at luxury Bali villa dinner\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "alt": "Professional sommelier pouring wine at luxury Bali villa dinner"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceSommelierPage.tsx",
+      "line": 124,
+      "type": "img",
+      "path": "/generated/sommelier-hero.webp",
+      "alt": "Professional sommelier pouring wine at luxury Bali villa dinner",
+      "raw": "<img src=\"/generated/sommelier-hero.webp\" alt=\"Professional sommelier pouring wine at luxury Bali villa dinner\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceSommelierPage.tsx",
+      "line": 251,
+      "type": "src",
+      "path": "/generated/luna-wine.webp",
+      "raw": "<img src=\"/generated/luna-wine.webp\" alt=\"Wine pairing at Bali villa dinner\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Wine pairing at Bali villa dinner"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceSommelierPage.tsx",
+      "line": 251,
+      "type": "img",
+      "path": "/generated/luna-wine.webp",
+      "alt": "Wine pairing at Bali villa dinner",
+      "raw": "<img src=\"/generated/luna-wine.webp\" alt=\"Wine pairing at Bali villa dinner\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceMixologyPage.tsx",
+      "line": 251,
+      "type": "src",
+      "path": "/generated/party-ultimate.webp",
+      "raw": "<img src=\"/generated/party-ultimate.webp\" alt=\"Mixology experience at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Mixology experience at Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceMixologyPage.tsx",
+      "line": 251,
+      "type": "img",
+      "path": "/generated/party-ultimate.webp",
+      "alt": "Mixology experience at Bali villa",
+      "raw": "<img src=\"/generated/party-ultimate.webp\" alt=\"Mixology experience at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceHostPage.tsx",
+      "line": 124,
+      "type": "src",
+      "path": "/generated/trust-hosts.webp",
+      "raw": "<img src=\"/generated/trust-hosts.webp\" alt=\"Professional hosts welcoming guests at Bali villa event\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "alt": "Professional hosts welcoming guests at Bali villa event"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceHostPage.tsx",
+      "line": 124,
+      "type": "img",
+      "path": "/generated/trust-hosts.webp",
+      "alt": "Professional hosts welcoming guests at Bali villa event",
+      "raw": "<img src=\"/generated/trust-hosts.webp\" alt=\"Professional hosts welcoming guests at Bali villa event\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceHostPage.tsx",
+      "line": 251,
+      "type": "src",
+      "path": "/generated/staffing-hero.webp",
+      "raw": "<img src=\"/generated/staffing-hero.webp\" alt=\"Professional hosts at Bali villa event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Professional hosts at Bali villa event"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceHostPage.tsx",
+      "line": 251,
+      "type": "img",
+      "path": "/generated/staffing-hero.webp",
+      "alt": "Professional hosts at Bali villa event",
+      "raw": "<img src=\"/generated/staffing-hero.webp\" alt=\"Professional hosts at Bali villa event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceButlersPage.tsx",
+      "line": 124,
+      "type": "src",
+      "path": "/generated/hub-villa.webp",
+      "raw": "<img src=\"/generated/hub-villa.webp\" alt=\"Professional butler at luxury Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "alt": "Professional butler at luxury Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceButlersPage.tsx",
+      "line": 124,
+      "type": "img",
+      "path": "/generated/hub-villa.webp",
+      "alt": "Professional butler at luxury Bali villa",
+      "raw": "<img src=\"/generated/hub-villa.webp\" alt=\"Professional butler at luxury Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceButlersPage.tsx",
+      "line": 251,
+      "type": "src",
+      "path": "/generated/staffing-hero.webp",
+      "raw": "<img src=\"/generated/staffing-hero.webp\" alt=\"Luxury villa butler service Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Luxury villa butler service Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceButlersPage.tsx",
+      "line": 251,
+      "type": "img",
+      "path": "/generated/staffing-hero.webp",
+      "alt": "Luxury villa butler service Bali",
+      "raw": "<img src=\"/generated/staffing-hero.webp\" alt=\"Luxury villa butler service Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceBartendersPage.tsx",
+      "line": 124,
+      "type": "src",
+      "path": "/generated/aura-bartender.webp",
+      "raw": "<img src=\"/generated/aura-bartender.webp\" alt=\"Professional bartender crafting cocktails at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
+      "alt": "Professional bartender crafting cocktails at Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceBartendersPage.tsx",
+      "line": 124,
+      "type": "img",
+      "path": "/generated/aura-bartender.webp",
+      "alt": "Professional bartender crafting cocktails at Bali villa",
+      "raw": "<img src=\"/generated/aura-bartender.webp\" alt=\"Professional bartender crafting cocktails at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceBartendersPage.tsx",
+      "line": 251,
+      "type": "src",
+      "path": "/generated/party-ultimate.webp",
+      "raw": "<img src=\"/generated/party-ultimate.webp\" alt=\"Villa bar setup at Bali event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Villa bar setup at Bali event"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceBartendersPage.tsx",
+      "line": 251,
+      "type": "img",
+      "path": "/generated/party-ultimate.webp",
+      "alt": "Villa bar setup at Bali event",
+      "raw": "<img src=\"/generated/party-ultimate.webp\" alt=\"Villa bar setup at Bali event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/RomanticDinnerPage.tsx",
+      "line": 121,
+      "type": "src",
+      "path": "/generated/section-romantic-dinner.webp",
+      "raw": "src=\"/generated/section-romantic-dinner.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/RomanticDinnerPage.tsx",
+      "line": 226,
+      "type": "src",
+      "path": "/generated/luna-table.webp",
+      "raw": "src=\"/generated/luna-table.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/RomanticDinnerPage.tsx",
+      "line": 505,
+      "type": "src",
+      "path": "/generated/luna-detail.webp",
+      "raw": "src=\"/generated/luna-detail.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PrivateChefBaliPage.tsx",
+      "line": 151,
+      "type": "src",
+      "path": "/generated/luna-hero-v2.webp",
+      "raw": "src=\"/generated/luna-hero-v2.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PrivateChefBaliPage.tsx",
+      "line": 208,
+      "type": "src",
+      "path": "/generated/luna-table.webp",
+      "raw": "src=\"/generated/luna-table.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PrivateChefBaliPage.tsx",
+      "line": 317,
+      "type": "src",
+      "path": "/generated/luna-chef-portrait.webp",
+      "raw": "src=\"/generated/luna-chef-portrait.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PartnersPage.tsx",
+      "line": 186,
+      "type": "src",
+      "path": "/generated/partner-platform-hero.webp",
+      "raw": "<img src=\"/generated/partner-platform-hero.webp\" alt=\"myCHEF Bali partner programme\" className=\"w-full h-full object-cover opacity-20\" loading=\"lazy\" decoding=\"async\" />",
+      "alt": "myCHEF Bali partner programme"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PartnersPage.tsx",
+      "line": 186,
+      "type": "img",
+      "path": "/generated/partner-platform-hero.webp",
+      "alt": "myCHEF Bali partner programme",
+      "raw": "<img src=\"/generated/partner-platform-hero.webp\" alt=\"myCHEF Bali partner programme\" className=\"w-full h-full object-cover opacity-20\" loading=\"lazy\" decoding=\"async\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PartnerPlatformPage.tsx",
+      "line": 124,
+      "type": "src",
+      "path": "/generated/partner-platform-hero.webp",
+      "raw": "src=\"/generated/partner-platform-hero.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PartnerPlatformPage.tsx",
+      "line": 269,
+      "type": "src",
+      "path": "/generated/partner-platform-dashboard.webp",
+      "raw": "src=\"/generated/partner-platform-dashboard.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
+      "line": 327,
+      "type": "src",
+      "path": "/generated/luna-hero-v2.webp",
+      "raw": "src=\"/generated/luna-hero-v2.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
+      "line": 453,
+      "type": "src",
+      "path": "/generated/luna-gallery-3.webp",
+      "raw": "src=\"/generated/luna-gallery-3.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
+      "line": 496,
+      "type": "src",
+      "path": "/generated/luna-gallery-4.webp",
+      "raw": "src=\"/generated/luna-gallery-4.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
+      "line": 533,
+      "type": "src",
+      "path": "/generated/luna-experience-collage.webp",
+      "raw": "src=\"/generated/luna-experience-collage.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
+      "line": 591,
+      "type": "src",
+      "path": "/generated/luna-gallery-2.webp",
+      "raw": "src=\"/generated/luna-gallery-2.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
+      "line": 942,
+      "type": "src",
+      "path": "/generated/luna-gallery-1.webp",
+      "raw": "src=\"/generated/luna-gallery-1.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
+      "line": 953,
+      "type": "src",
+      "path": "/generated/luna-gallery-2.webp",
+      "raw": "src=\"/generated/luna-gallery-2.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
+      "line": 964,
+      "type": "src",
+      "path": "/generated/luna-gallery-3.webp",
+      "raw": "src=\"/generated/luna-gallery-3.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
+      "line": 975,
+      "type": "src",
+      "path": "/generated/luna-gallery-4.webp",
+      "raw": "src=\"/generated/luna-gallery-4.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
+      "line": 1020,
+      "type": "src",
+      "path": "/generated/testimonials-bg.webp",
+      "raw": "src=\"/generated/testimonials-bg.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
+      "line": 317,
+      "type": "src",
+      "path": "/generated/home-hero-ivory-villa.png",
+      "raw": "src=\"/generated/home-hero-ivory-villa.png\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
+      "line": 590,
+      "type": "src",
+      "path": "/generated/team-photo.webp",
+      "raw": "src=\"/generated/team-photo.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
+      "line": 766,
+      "type": "src",
+      "path": "/images/family-villa-dinner-cutout.png",
+      "raw": "src=\"/images/family-villa-dinner-cutout.png\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
+      "line": 788,
+      "type": "src",
+      "path": "/public/images/family-villa-dinner-cutout.png",
+      "raw": "src=\"/public/images/family-villa-dinner-cutout.png\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
+      "line": 924,
+      "type": "src",
+      "path": "/generated/hub-villa.webp",
+      "raw": "src=\"/generated/hub-villa.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
+      "line": 987,
+      "type": "src",
+      "path": "/generated/hub-bali.webp",
+      "raw": "src=\"/generated/hub-bali.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningMenusPage.tsx",
+      "line": 172,
+      "type": "src",
+      "path": "/generated/luna-plating.webp",
+      "raw": "src=\"/generated/luna-plating.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningChefsPage.tsx",
+      "line": 165,
+      "type": "src",
+      "path": "/generated/chefs-hero.webp",
+      "raw": "src=\"/generated/chefs-hero.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningChefsPage.tsx",
+      "line": 255,
+      "type": "src",
+      "path": "/generated/fd-chef-signature.jpg",
+      "raw": "src=\"/generated/fd-chef-signature.jpg\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 177,
+      "type": "src",
+      "path": "/event-wedding.webp",
+      "raw": "src=\"/event-wedding.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 235,
+      "type": "src",
+      "path": "/event-wedding.webp",
+      "raw": "<img src=\"/event-wedding.webp\" alt=\"Luxury Bali villa wedding ceremony setup by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Luxury Bali villa wedding ceremony setup by myCHEF"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 235,
+      "type": "img",
+      "path": "/event-wedding.webp",
+      "alt": "Luxury Bali villa wedding ceremony setup by myCHEF",
+      "raw": "<img src=\"/event-wedding.webp\" alt=\"Luxury Bali villa wedding ceremony setup by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 287,
+      "type": "src",
+      "path": "/generated/aura-toast.webp",
+      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Champagne service during Bali wedding cocktail hour\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Champagne service during Bali wedding cocktail hour"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 287,
+      "type": "img",
+      "path": "/generated/aura-toast.webp",
+      "alt": "Champagne service during Bali wedding cocktail hour",
+      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Champagne service during Bali wedding cocktail hour\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 297,
+      "type": "src",
+      "path": "/generated/aura-setup.webp",
+      "raw": "<img src=\"/generated/aura-setup.webp\" alt=\"Wedding reception setup inside a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Wedding reception setup inside a Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 297,
+      "type": "img",
+      "path": "/generated/aura-setup.webp",
+      "alt": "Wedding reception setup inside a Bali villa",
+      "raw": "<img src=\"/generated/aura-setup.webp\" alt=\"Wedding reception setup inside a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 366,
+      "type": "src",
+      "path": "/wedding-reception.webp",
+      "raw": "<img src=\"/wedding-reception.webp\" alt=\"Wedding reception table with candles and plated dinner service\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Wedding reception table with candles and plated dinner service"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 366,
+      "type": "img",
+      "path": "/wedding-reception.webp",
+      "alt": "Wedding reception table with candles and plated dinner service",
+      "raw": "<img src=\"/wedding-reception.webp\" alt=\"Wedding reception table with candles and plated dinner service\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 410,
+      "type": "src",
+      "path": "/generated/aura-setup.webp",
+      "raw": "<img src=\"/generated/aura-setup.webp\" alt=\"Intimate Bali wedding dinner for a small group\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Intimate Bali wedding dinner for a small group"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 410,
+      "type": "img",
+      "path": "/generated/aura-setup.webp",
+      "alt": "Intimate Bali wedding dinner for a small group",
+      "raw": "<img src=\"/generated/aura-setup.webp\" alt=\"Intimate Bali wedding dinner for a small group\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 462,
+      "type": "src",
+      "path": "/generated/aura-toast.webp",
+      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Wedding couple toasting during a Bali villa celebration\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Wedding couple toasting during a Bali villa celebration"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "line": 462,
+      "type": "img",
+      "path": "/generated/aura-toast.webp",
+      "alt": "Wedding couple toasting during a Bali villa celebration",
+      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Wedding couple toasting during a Bali villa celebration\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 178,
+      "type": "src",
+      "path": "/generated/events/villa-party-night.webp",
+      "raw": "<img src=\"/generated/events/villa-party-night.webp\" alt=\"Night-time villa party with bar and pool lighting in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
+      "alt": "Night-time villa party with bar and pool lighting in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 178,
+      "type": "img",
+      "path": "/generated/events/villa-party-night.webp",
+      "alt": "Night-time villa party with bar and pool lighting in Bali",
+      "raw": "<img src=\"/generated/events/villa-party-night.webp\" alt=\"Night-time villa party with bar and pool lighting in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 228,
+      "type": "src",
+      "path": "/generated/events/villa-party-night.webp",
+      "raw": "<img src=\"/generated/events/villa-party-night.webp\" alt=\"Bali villa party setup with bar and long-table dining\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Bali villa party setup with bar and long-table dining"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 228,
+      "type": "img",
+      "path": "/generated/events/villa-party-night.webp",
+      "alt": "Bali villa party setup with bar and long-table dining",
+      "raw": "<img src=\"/generated/events/villa-party-night.webp\" alt=\"Bali villa party setup with bar and long-table dining\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 263,
+      "type": "src",
+      "path": "/generated/sol-bbq.webp",
+      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"Live BBQ station for a Bali villa party\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Live BBQ station for a Bali villa party"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 263,
+      "type": "img",
+      "path": "/generated/sol-bbq.webp",
+      "alt": "Live BBQ station for a Bali villa party",
+      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"Live BBQ station for a Bali villa party\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 273,
+      "type": "src",
+      "path": "/generated/party-beer.webp",
+      "raw": "<img src=\"/generated/party-beer.webp\" alt=\"Party bartender service and drinks at a Bali villa event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Party bartender service and drinks at a Bali villa event"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 273,
+      "type": "img",
+      "path": "/generated/party-beer.webp",
+      "alt": "Party bartender service and drinks at a Bali villa event",
+      "raw": "<img src=\"/generated/party-beer.webp\" alt=\"Party bartender service and drinks at a Bali villa event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 332,
+      "type": "src",
+      "path": "/generated/party-pool.webp",
+      "raw": "<img src=\"/generated/party-pool.webp\" alt=\"Poolside villa party staffing and setup in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Poolside villa party staffing and setup in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 332,
+      "type": "img",
+      "path": "/generated/party-pool.webp",
+      "alt": "Poolside villa party staffing and setup in Bali",
+      "raw": "<img src=\"/generated/party-pool.webp\" alt=\"Poolside villa party staffing and setup in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 361,
+      "type": "src",
+      "path": "/generated/party-rooftop.webp",
+      "raw": "<img src=\"/generated/party-rooftop.webp\" alt=\"Late-night rooftop style villa party in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Late-night rooftop style villa party in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "line": 361,
+      "type": "img",
+      "path": "/generated/party-rooftop.webp",
+      "alt": "Late-night rooftop style villa party in Bali",
+      "raw": "<img src=\"/generated/party-rooftop.webp\" alt=\"Late-night rooftop style villa party in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 176,
+      "type": "src",
+      "path": "/generated/events/retreat-breakfast.webp",
+      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Healthy retreat breakfast with fruit and juices in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
+      "alt": "Healthy retreat breakfast with fruit and juices in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 176,
+      "type": "img",
+      "path": "/generated/events/retreat-breakfast.webp",
+      "alt": "Healthy retreat breakfast with fruit and juices in Bali",
+      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Healthy retreat breakfast with fruit and juices in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 226,
+      "type": "src",
+      "path": "/generated/events/retreat-breakfast.webp",
+      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Healthy breakfast service for a Bali wellness retreat\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Healthy breakfast service for a Bali wellness retreat"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 226,
+      "type": "img",
+      "path": "/generated/events/retreat-breakfast.webp",
+      "alt": "Healthy breakfast service for a Bali wellness retreat",
+      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Healthy breakfast service for a Bali wellness retreat\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 272,
+      "type": "src",
+      "path": "/generated/events/retreat-table.webp",
+      "raw": "<img src=\"/generated/events/retreat-table.webp\" alt=\"Long communal retreat dining table in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Long communal retreat dining table in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 272,
+      "type": "img",
+      "path": "/generated/events/retreat-table.webp",
+      "alt": "Long communal retreat dining table in Bali",
+      "raw": "<img src=\"/generated/events/retreat-table.webp\" alt=\"Long communal retreat dining table in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 282,
+      "type": "src",
+      "path": "/generated/sol-produce.webp",
+      "raw": "<img src=\"/generated/sol-produce.webp\" alt=\"Fresh whole produce prepared for wellness retreat catering\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Fresh whole produce prepared for wellness retreat catering"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 282,
+      "type": "img",
+      "path": "/generated/sol-produce.webp",
+      "alt": "Fresh whole produce prepared for wellness retreat catering",
+      "raw": "<img src=\"/generated/sol-produce.webp\" alt=\"Fresh whole produce prepared for wellness retreat catering\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 337,
+      "type": "src",
+      "path": "/generated/events/retreat-breakfast.webp",
+      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Labeled healthy breakfast setup for retreat guests\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Labeled healthy breakfast setup for retreat guests"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 337,
+      "type": "img",
+      "path": "/generated/events/retreat-breakfast.webp",
+      "alt": "Labeled healthy breakfast setup for retreat guests",
+      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Labeled healthy breakfast setup for retreat guests\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 367,
+      "type": "src",
+      "path": "/generated/events/retreat-table.webp",
+      "raw": "<img src=\"/generated/events/retreat-table.webp\" alt=\"Multi-day retreat lunch service setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Multi-day retreat lunch service setup in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 367,
+      "type": "img",
+      "path": "/generated/events/retreat-table.webp",
+      "alt": "Multi-day retreat lunch service setup in Bali",
+      "raw": "<img src=\"/generated/events/retreat-table.webp\" alt=\"Multi-day retreat lunch service setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 420,
+      "type": "src",
+      "path": "/generated/party-brunch.webp",
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Healthy brunch-style retreat spread in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Healthy brunch-style retreat spread in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 420,
+      "type": "img",
+      "path": "/generated/party-brunch.webp",
+      "alt": "Healthy brunch-style retreat spread in Bali",
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Healthy brunch-style retreat spread in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsMainPage.tsx",
+      "line": 347,
+      "type": "src",
+      "path": "/hero-events.webp",
+      "raw": "src=\"/hero-events.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsMainPage.tsx",
+      "line": 811,
+      "type": "src",
+      "path": "/generated/aura-tablescape.webp",
+      "raw": "src=\"/generated/aura-tablescape.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 180,
+      "type": "src",
+      "path": "/generated/events/corporate-team.webp",
+      "raw": "<img src=\"/generated/events/corporate-team.webp\" alt=\"Corporate team lunch setup at a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
+      "alt": "Corporate team lunch setup at a Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 180,
+      "type": "img",
+      "path": "/generated/events/corporate-team.webp",
+      "alt": "Corporate team lunch setup at a Bali villa",
+      "raw": "<img src=\"/generated/events/corporate-team.webp\" alt=\"Corporate team lunch setup at a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 228,
+      "type": "src",
+      "path": "/generated/corp-conference.webp",
+      "raw": "<img src=\"/generated/corp-conference.webp\" alt=\"Corporate conference setup with catered service in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Corporate conference setup with catered service in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 228,
+      "type": "img",
+      "path": "/generated/corp-conference.webp",
+      "alt": "Corporate conference setup with catered service in Bali",
+      "raw": "<img src=\"/generated/corp-conference.webp\" alt=\"Corporate conference setup with catered service in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 278,
+      "type": "src",
+      "path": "/generated/corp-plated.webp",
+      "raw": "<img src=\"/generated/corp-plated.webp\" alt=\"Plated corporate dinner service by myCHEF in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Plated corporate dinner service by myCHEF in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 278,
+      "type": "img",
+      "path": "/generated/corp-plated.webp",
+      "alt": "Plated corporate dinner service by myCHEF in Bali",
+      "raw": "<img src=\"/generated/corp-plated.webp\" alt=\"Plated corporate dinner service by myCHEF in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 288,
+      "type": "src",
+      "path": "/generated/events/corporate-team.webp",
+      "raw": "<img src=\"/generated/events/corporate-team.webp\" alt=\"Professional corporate service team at a Bali venue\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Professional corporate service team at a Bali venue"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 288,
+      "type": "img",
+      "path": "/generated/events/corporate-team.webp",
+      "alt": "Professional corporate service team at a Bali venue",
+      "raw": "<img src=\"/generated/events/corporate-team.webp\" alt=\"Professional corporate service team at a Bali venue\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 348,
+      "type": "src",
+      "path": "/generated/corp-networking.webp",
+      "raw": "<img src=\"/generated/corp-networking.webp\" alt=\"Corporate networking drinks setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Corporate networking drinks setup in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 348,
+      "type": "img",
+      "path": "/generated/corp-networking.webp",
+      "alt": "Corporate networking drinks setup in Bali",
+      "raw": "<img src=\"/generated/corp-networking.webp\" alt=\"Corporate networking drinks setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 377,
+      "type": "src",
+      "path": "/generated/corp-executive.webp",
+      "raw": "<img src=\"/generated/corp-executive.webp\" alt=\"Executive corporate dinner environment in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Executive corporate dinner environment in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 377,
+      "type": "img",
+      "path": "/generated/corp-executive.webp",
+      "alt": "Executive corporate dinner environment in Bali",
+      "raw": "<img src=\"/generated/corp-executive.webp\" alt=\"Executive corporate dinner environment in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 435,
+      "type": "src",
+      "path": "/generated/corp-villa.webp",
+      "raw": "<img src=\"/generated/corp-villa.webp\" alt=\"Corporate villa venue setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Corporate villa venue setup in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 435,
+      "type": "img",
+      "path": "/generated/corp-villa.webp",
+      "alt": "Corporate villa venue setup in Bali",
+      "raw": "<img src=\"/generated/corp-villa.webp\" alt=\"Corporate villa venue setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 148,
+      "type": "src",
+      "path": "/generated/events/birthday-pool.webp",
+      "raw": "<img src=\"/generated/events/birthday-pool.webp\" alt=\"Birthday pool party dinner at a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
+      "alt": "Birthday pool party dinner at a Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 148,
+      "type": "img",
+      "path": "/generated/events/birthday-pool.webp",
+      "alt": "Birthday pool party dinner at a Bali villa",
+      "raw": "<img src=\"/generated/events/birthday-pool.webp\" alt=\"Birthday pool party dinner at a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 196,
+      "type": "src",
+      "path": "/generated/party-birthday.webp",
+      "raw": "<img src=\"/generated/party-birthday.webp\" alt=\"Birthday celebration dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Birthday celebration dining setup in a Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 196,
+      "type": "img",
+      "path": "/generated/party-birthday.webp",
+      "alt": "Birthday celebration dining setup in a Bali villa",
+      "raw": "<img src=\"/generated/party-birthday.webp\" alt=\"Birthday celebration dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 236,
+      "type": "src",
+      "path": "/generated/sol-bbq.webp",
+      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"BBQ catering spread for a Bali birthday villa party\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "BBQ catering spread for a Bali birthday villa party"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 236,
+      "type": "img",
+      "path": "/generated/sol-bbq.webp",
+      "alt": "BBQ catering spread for a Bali birthday villa party",
+      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"BBQ catering spread for a Bali birthday villa party\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 268,
+      "type": "src",
+      "path": "/generated/party-brunch.webp",
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Birthday brunch desserts and cake styling in a villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Birthday brunch desserts and cake styling in a villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 268,
+      "type": "img",
+      "path": "/generated/party-brunch.webp",
+      "alt": "Birthday brunch desserts and cake styling in a villa",
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Birthday brunch desserts and cake styling in a villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 297,
+      "type": "src",
+      "path": "/generated/party-pool.webp",
+      "raw": "<img src=\"/generated/party-pool.webp\" alt=\"Poolside birthday setup with staff and table styling in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Poolside birthday setup with staff and table styling in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 297,
+      "type": "img",
+      "path": "/generated/party-pool.webp",
+      "alt": "Poolside birthday setup with staff and table styling in Bali",
+      "raw": "<img src=\"/generated/party-pool.webp\" alt=\"Poolside birthday setup with staff and table styling in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 307,
+      "type": "src",
+      "path": "/generated/party-festival.webp",
+      "raw": "<img src=\"/generated/party-festival.webp\" alt=\"Themed birthday party styling inspiration for Bali villa events\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Themed birthday party styling inspiration for Bali villa events"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 307,
+      "type": "img",
+      "path": "/generated/party-festival.webp",
+      "alt": "Themed birthday party styling inspiration for Bali villa events",
+      "raw": "<img src=\"/generated/party-festival.webp\" alt=\"Themed birthday party styling inspiration for Bali villa events\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 390,
+      "type": "src",
+      "path": "/generated/party-white.webp",
+      "raw": "<img src=\"/generated/party-white.webp\" alt=\"Premium birthday party styling with decor and lighting in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Premium birthday party styling with decor and lighting in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 390,
+      "type": "img",
+      "path": "/generated/party-white.webp",
+      "alt": "Premium birthday party styling with decor and lighting in Bali",
+      "raw": "<img src=\"/generated/party-white.webp\" alt=\"Premium birthday party styling with decor and lighting in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 154,
+      "type": "src",
+      "path": "/generated/events/baby-shower-hero.webp",
+      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Pastel baby shower brunch table in a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
+      "alt": "Pastel baby shower brunch table in a Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 154,
+      "type": "img",
+      "path": "/generated/events/baby-shower-hero.webp",
+      "alt": "Pastel baby shower brunch table in a Bali villa",
+      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Pastel baby shower brunch table in a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 202,
+      "type": "src",
+      "path": "/generated/events/baby-shower-hero.webp",
+      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Styled baby shower table setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Styled baby shower table setup in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 202,
+      "type": "img",
+      "path": "/generated/events/baby-shower-hero.webp",
+      "alt": "Styled baby shower table setup in Bali",
+      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Styled baby shower table setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 243,
+      "type": "src",
+      "path": "/generated/events/baby-shower-hero.webp",
+      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Elegant grazing table for a Bali baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Elegant grazing table for a Bali baby shower"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 243,
+      "type": "img",
+      "path": "/generated/events/baby-shower-hero.webp",
+      "alt": "Elegant grazing table for a Bali baby shower",
+      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Elegant grazing table for a Bali baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 253,
+      "type": "src",
+      "path": "/generated/party-brunch.webp",
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Pregnancy-safe brunch dishes served for a baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Pregnancy-safe brunch dishes served for a baby shower"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 253,
+      "type": "img",
+      "path": "/generated/party-brunch.webp",
+      "alt": "Pregnancy-safe brunch dishes served for a baby shower",
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Pregnancy-safe brunch dishes served for a baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 306,
+      "type": "src",
+      "path": "/generated/party-brunch.webp",
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Mocktail and brunch styling for a Bali baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Mocktail and brunch styling for a Bali baby shower"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 306,
+      "type": "img",
+      "path": "/generated/party-brunch.webp",
+      "alt": "Mocktail and brunch styling for a Bali baby shower",
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Mocktail and brunch styling for a Bali baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 316,
+      "type": "src",
+      "path": "/generated/aura-tablescape.webp",
+      "raw": "<img src=\"/generated/aura-tablescape.webp\" alt=\"Styled baby shower tablescape and decor setup\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Styled baby shower tablescape and decor setup"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 316,
+      "type": "img",
+      "path": "/generated/aura-tablescape.webp",
+      "alt": "Styled baby shower tablescape and decor setup",
+      "raw": "<img src=\"/generated/aura-tablescape.webp\" alt=\"Styled baby shower tablescape and decor setup\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 408,
+      "type": "src",
+      "path": "/generated/events/baby-shower-hero.webp",
+      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Premium baby shower styling and flowers in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Premium baby shower styling and flowers in a Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 408,
+      "type": "img",
+      "path": "/generated/events/baby-shower-hero.webp",
+      "alt": "Premium baby shower styling and flowers in a Bali villa",
+      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Premium baby shower styling and flowers in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 146,
+      "type": "src",
+      "path": "/generated/events/anniversary-romantic.webp",
+      "raw": "<img src=\"/generated/events/anniversary-romantic.webp\" alt=\"Romantic anniversary dinner setup by a Bali villa pool\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
+      "alt": "Romantic anniversary dinner setup by a Bali villa pool"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 146,
+      "type": "img",
+      "path": "/generated/events/anniversary-romantic.webp",
+      "alt": "Romantic anniversary dinner setup by a Bali villa pool",
+      "raw": "<img src=\"/generated/events/anniversary-romantic.webp\" alt=\"Romantic anniversary dinner setup by a Bali villa pool\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 196,
+      "type": "src",
+      "path": "/generated/events/anniversary-romantic.webp",
+      "raw": "<img src=\"/generated/events/anniversary-romantic.webp\" alt=\"Romantic anniversary dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Romantic anniversary dining setup in a Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 196,
+      "type": "img",
+      "path": "/generated/events/anniversary-romantic.webp",
+      "alt": "Romantic anniversary dining setup in a Bali villa",
+      "raw": "<img src=\"/generated/events/anniversary-romantic.webp\" alt=\"Romantic anniversary dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 237,
+      "type": "src",
+      "path": "/generated/events/anniversary-chef.webp",
+      "raw": "<img src=\"/generated/events/anniversary-chef.webp\" alt=\"Private chef plating an anniversary dinner in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Private chef plating an anniversary dinner in a Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 237,
+      "type": "img",
+      "path": "/generated/events/anniversary-chef.webp",
+      "alt": "Private chef plating an anniversary dinner in a Bali villa",
+      "raw": "<img src=\"/generated/events/anniversary-chef.webp\" alt=\"Private chef plating an anniversary dinner in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 247,
+      "type": "src",
+      "path": "/generated/luna-plating.webp",
+      "raw": "<img src=\"/generated/luna-plating.webp\" alt=\"Fine plated anniversary menu presentation by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Fine plated anniversary menu presentation by myCHEF"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 247,
+      "type": "img",
+      "path": "/generated/luna-plating.webp",
+      "alt": "Fine plated anniversary menu presentation by myCHEF",
+      "raw": "<img src=\"/generated/luna-plating.webp\" alt=\"Fine plated anniversary menu presentation by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 296,
+      "type": "src",
+      "path": "/generated/aura-toast.webp",
+      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Anniversary toast moment at a Bali villa dinner\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Anniversary toast moment at a Bali villa dinner"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 296,
+      "type": "img",
+      "path": "/generated/aura-toast.webp",
+      "alt": "Anniversary toast moment at a Bali villa dinner",
+      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Anniversary toast moment at a Bali villa dinner\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 339,
+      "type": "src",
+      "path": "/generated/aura-tablescape.webp",
+      "raw": "<img src=\"/generated/aura-tablescape.webp\" alt=\"Styled anniversary tablescape in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Styled anniversary tablescape in a Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 339,
+      "type": "img",
+      "path": "/generated/aura-tablescape.webp",
+      "alt": "Styled anniversary tablescape in a Bali villa",
+      "raw": "<img src=\"/generated/aura-tablescape.webp\" alt=\"Styled anniversary tablescape in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ContactPage.tsx",
+      "line": 139,
+      "type": "src",
+      "path": "/generated/contact-hero.webp",
+      "raw": "src=\"/generated/contact-hero.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ContactPage.tsx",
+      "line": 253,
+      "type": "src",
+      "path": "/generated/contact-concierge.webp",
+      "raw": "src=\"/generated/contact-concierge.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ChefsTablePage.tsx",
+      "line": 123,
+      "type": "src",
+      "path": "/generated/chefs-table-hero-luxury.webp",
+      "raw": "src=\"/generated/chefs-table-hero-luxury.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ChefsTablePage.tsx",
+      "line": 220,
+      "type": "src",
+      "path": "/generated/luna-chef-portrait.webp",
+      "raw": "src=\"/generated/luna-chef-portrait.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringVillaPage.tsx",
+      "line": 176,
+      "type": "src",
+      "path": "/generated/hero-buffet-catering.webp",
+      "raw": "src=\"/generated/hero-buffet-catering.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringVillaPage.tsx",
+      "line": 529,
+      "type": "src",
+      "path": "/generated/catering-hero.webp",
+      "raw": "<img src=\"/generated/catering-hero.webp\" alt=\"Villa catering setup with chef and team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Villa catering setup with chef and team at Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringVillaPage.tsx",
+      "line": 529,
+      "type": "img",
+      "path": "/generated/catering-hero.webp",
+      "alt": "Villa catering setup with chef and team at Bali villa",
+      "raw": "<img src=\"/generated/catering-hero.webp\" alt=\"Villa catering setup with chef and team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringRetreatPage.tsx",
+      "line": 175,
+      "type": "src",
+      "path": "/generated/hero-retreats.webp",
+      "raw": "src=\"/generated/hero-retreats.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringRetreatPage.tsx",
+      "line": 481,
+      "type": "src",
+      "path": "/generated/hero-retreats.webp",
+      "raw": "<img src=\"/generated/hero-retreats.webp\" alt=\"Retreat catering in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Retreat catering in Bali"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringRetreatPage.tsx",
+      "line": 481,
+      "type": "img",
+      "path": "/generated/hero-retreats.webp",
+      "alt": "Retreat catering in Bali",
+      "raw": "<img src=\"/generated/hero-retreats.webp\" alt=\"Retreat catering in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringPlatedPage.tsx",
+      "line": 211,
+      "type": "src",
+      "path": "/generated/catering/plated-menus.webp",
+      "raw": "src=\"/generated/catering/plated-menus.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringPlatedPage.tsx",
+      "line": 286,
+      "type": "src",
+      "path": "/generated/hub-fine-dining.webp",
+      "raw": "src=\"/generated/hub-fine-dining.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringPlatedPage.tsx",
+      "line": 708,
+      "type": "src",
+      "path": "/generated/luna-plating.webp",
+      "raw": "src=\"/generated/luna-plating.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringMainPage.tsx",
+      "line": 422,
+      "type": "src",
+      "path": "/generated/catering-hero.webp",
+      "raw": "src=\"/generated/catering-hero.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringMainPage.tsx",
+      "line": 1242,
+      "type": "src",
+      "path": "/generated/hub-catering.webp",
+      "raw": "src=\"/generated/hub-catering.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringGrazingPage.tsx",
+      "line": 219,
+      "type": "src",
+      "path": "/generated/pkg-grazing.webp",
+      "raw": "src=\"/generated/pkg-grazing.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringGrazingPage.tsx",
+      "line": 289,
+      "type": "src",
+      "path": "/generated/pkg-grazing.webp",
+      "raw": "src=\"/generated/pkg-grazing.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringGrazingPage.tsx",
+      "line": 604,
+      "type": "src",
+      "path": "/generated/pkg-grazing.webp",
+      "raw": "src=\"/generated/pkg-grazing.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
+      "line": 187,
+      "type": "src",
+      "path": "/generated/floating-breakfast-bali.png",
+      "raw": "src=\"/generated/floating-breakfast-bali.png\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
+      "line": 313,
+      "type": "src",
+      "path": "/generated/catering/floating-breakfast.webp",
+      "raw": "src=\"/generated/catering/floating-breakfast.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
+      "line": 439,
+      "type": "src",
+      "path": "/generated/catering/floating-breakfast.webp",
+      "raw": "src=\"/generated/catering/floating-breakfast.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
+      "line": 670,
+      "type": "src",
+      "path": "/generated/catering/floating-breakfast.webp",
+      "raw": "src=\"/generated/catering/floating-breakfast.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringDropOffPage.tsx",
+      "line": 253,
+      "type": "src",
+      "path": "/generated/hero-dropoff-catering.webp",
+      "raw": "src=\"/generated/hero-dropoff-catering.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringDropOffPage.tsx",
+      "line": 317,
+      "type": "src",
+      "path": "/generated/hub-catering.webp",
+      "raw": "src=\"/generated/hub-catering.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringDropOffPage.tsx",
+      "line": 726,
+      "type": "src",
+      "path": "/generated/hub-catering.webp",
+      "raw": "src=\"/generated/hub-catering.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringCorporatePage.tsx",
+      "line": 160,
+      "type": "src",
+      "path": "/generated/hero-corporate-events.webp",
+      "raw": "src=\"/generated/hero-corporate-events.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringCorporatePage.tsx",
+      "line": 466,
+      "type": "src",
+      "path": "/generated/hero-corporate-events.webp",
+      "raw": "<img src=\"/generated/hero-corporate-events.webp\" alt=\"Corporate event catering at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
+      "alt": "Corporate event catering at Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringCorporatePage.tsx",
+      "line": 466,
+      "type": "img",
+      "path": "/generated/hero-corporate-events.webp",
+      "alt": "Corporate event catering at Bali villa",
+      "raw": "<img src=\"/generated/hero-corporate-events.webp\" alt=\"Corporate event catering at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
+      "line": 201,
+      "type": "src",
+      "path": "/generated/hero-buffet-catering.webp",
+      "raw": "src=\"/generated/hero-buffet-catering.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
+      "line": 443,
+      "type": "src",
+      "path": "/generated/aura-tablescape.webp",
+      "raw": "src=\"/generated/aura-tablescape.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
+      "line": 708,
+      "type": "src",
+      "path": "/generated/aura-corporate.webp",
+      "raw": "<img src=\"/generated/aura-corporate.webp\" alt=\"Completed buffet table with food ready and staff at Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Completed buffet table with food ready and staff at Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
+      "line": 708,
+      "type": "img",
+      "path": "/generated/aura-corporate.webp",
+      "alt": "Completed buffet table with food ready and staff at Bali villa",
+      "raw": "<img src=\"/generated/aura-corporate.webp\" alt=\"Completed buffet table with food ready and staff at Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
+      "line": 167,
+      "type": "src",
+      "path": "/generated/hero-babiguling-catering.webp",
+      "raw": "src=\"/generated/hero-babiguling-catering.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
+      "line": 240,
+      "type": "src",
+      "path": "/generated/pkg-roast.webp",
+      "raw": "src=\"/generated/pkg-roast.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
+      "line": 392,
+      "type": "src",
+      "path": "/generated/hub-catering.webp",
+      "raw": "src=\"/generated/hub-catering.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
+      "line": 631,
+      "type": "src",
+      "path": "/generated/pkg-roast.webp",
+      "raw": "src=\"/generated/pkg-roast.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx",
+      "line": 177,
+      "type": "src",
+      "path": "/generated/hero-buffet-catering.webp",
+      "raw": "src=\"/generated/hero-buffet-catering.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx",
+      "line": 332,
+      "type": "src",
+      "path": "/generated/sol-bbq.webp",
+      "raw": "src=\"/generated/sol-bbq.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx",
+      "line": 626,
+      "type": "src",
+      "path": "/generated/sol-bbq.webp",
+      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"Finished BBQ table with grilled food at Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
+      "alt": "Finished BBQ table with grilled food at Bali villa"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx",
+      "line": 626,
+      "type": "img",
+      "path": "/generated/sol-bbq.webp",
+      "alt": "Finished BBQ table with grilled food at Bali villa",
+      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"Finished BBQ table with grilled food at Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/AuraPage.tsx",
+      "line": 283,
+      "type": "src",
+      "path": "/generated/aura-hero-v2.webp",
+      "raw": "src=\"/generated/aura-hero-v2.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/AuraPage.tsx",
+      "line": 562,
+      "type": "src",
+      "path": "/generated/aura-team.webp",
+      "raw": "src=\"/generated/aura-team.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/MenuPage.tsx",
+      "line": 74,
+      "type": "src",
+      "path": "/generated/luna-plating.webp",
+      "raw": "src=\"/generated/luna-plating.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/LocationsHubPage.tsx",
+      "line": 83,
+      "type": "src",
+      "path": "/generated/bali-locations-sunset.webp",
+      "raw": "src=\"/generated/bali-locations-sunset.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx",
+      "line": 123,
+      "type": "src",
+      "path": "/generated/butler-service.webp",
+      "raw": "src=\"/generated/butler-service.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx",
+      "line": 254,
+      "type": "src",
+      "path": "/generated/staffing-table.webp",
+      "raw": "<img src=\"/generated/staffing-table.webp\" alt=\"Professional service staff setting table\" className=\"w-full rounded-2xl shadow-xl\" loading=\"lazy\" />",
+      "alt": "Professional service staff setting table"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx",
+      "line": 254,
+      "type": "img",
+      "path": "/generated/staffing-table.webp",
+      "alt": "Professional service staff setting table",
+      "raw": "<img src=\"/generated/staffing-table.webp\" alt=\"Professional service staff setting table\" className=\"w-full rounded-2xl shadow-xl\" loading=\"lazy\" />"
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx",
+      "line": 266,
+      "type": "src",
+      "path": "/generated/were-awards.png",
+      "raw": "src=\"/generated/were-awards.png\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BookPage.tsx",
+      "line": 85,
+      "type": "src",
+      "path": "/generated/book-hero.webp",
+      "raw": "src=\"/generated/book-hero.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BestPartnerBadge.tsx",
+      "line": 17,
+      "type": "src",
+      "path": "/generated/best-partner-2026.webp",
+      "raw": "src=\"/generated/best-partner-2026.webp\""
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BaliHubPage.tsx",
+      "line": 59,
+      "type": "src",
+      "path": "/generated/bali-hub-hero.webp",
+      "raw": "src=\"/generated/bali-hub-hero.webp\""
+    }
+  ],
+  "hotspots": [
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "count": 14
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "count": 14
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "count": 14
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "count": 14
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "count": 13
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "count": 12
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "count": 12
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
+      "count": 10
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
+      "count": 6
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaStaffPage.tsx",
+      "count": 4
+    }
+  ]
+}

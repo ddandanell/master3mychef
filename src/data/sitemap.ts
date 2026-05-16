@@ -131,8 +131,6 @@ export const BLOG_POSTS = [
 ]
 
 export function buildSitemap(): SitemapEntry[] {
-  const SITE = 'https://mychef.id'
-
   const home: SitemapEntry = {
     path: '/',
     type: 'home',
@@ -215,5 +213,11 @@ export function buildSitemap(): SitemapEntry[] {
     ...infoPages,
   ]
 }
+
+export const SERVICES = Object.values(PILLARS).map((pillar) => ({
+  slug: pillar.slug,
+  name: pillar.label,
+  description: pillar.description,
+}))
 
 export const SITEMAP = buildSitemap()

@@ -82,7 +82,7 @@ export default function ServicePage() {
 
           <h2 className="font-playfair text-3xl mb-6">Other services</h2>
           <div className="flex flex-wrap gap-3">
-            {SERVICES.filter((s) => s.slug !== slug).map((s) => (
+            {SERVICES.filter((s: typeof SERVICES[0]) => s.slug !== slug).map((s: typeof SERVICES[0]) => (
               <Link key={s.slug} to={`/services/${s.slug}`} className="text-sm border border-[#1A1A1A]/15 px-4 py-2 rounded-full hover:border-[#C5A028] hover:text-[#C5A028] transition-all">
                 {s.name}
               </Link>

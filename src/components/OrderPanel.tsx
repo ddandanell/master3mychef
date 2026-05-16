@@ -94,6 +94,18 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
     if (open) setStage('form')
   }, [open])
 
+  // Handle Escape key to close the panel
+  useEffect(() => {
+    if (!open) return
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose()
+      }
+    }
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [open, onClose])
+
   const update = <K extends keyof BookingForm>(key: K, value: BookingForm[K]) =>
     setForm((f) => ({ ...f, [key]: value }))
 
@@ -169,7 +181,7 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
           <button
             type="button"
             onClick={onClose}
-            aria-label="Close"
+            aria-label="Close booking panel (Escape)"
             className="p-2 text-white/[60%] hover:text-white"
           >
             <X className="w-5 h-5" />

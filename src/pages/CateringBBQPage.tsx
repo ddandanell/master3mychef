@@ -175,7 +175,7 @@ export default function CateringBBQPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering-hero-buffet-catering-lg.webp"
+            src="/generated/mychef-catering-bali-hero-buffet-catering.webp"
             alt="Chef grilling seafood and meat at a Bali villa BBQ by the pool"
             width={1920}
             height={1080}
@@ -204,10 +204,10 @@ export default function CateringBBQPage() {
             From IDR 450,000/person · Chef + staff + equipment included · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <MessageCircle className="w-4 h-4" /> Build My BBQ Menu
             </a>
-            <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               View BBQ Packages
             </a>
           </div>
@@ -301,7 +301,7 @@ export default function CateringBBQPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/catering/villa-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/villa-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Explore Villa Catering <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -400,7 +400,7 @@ export default function CateringBBQPage() {
                       </li>
                     ))}
                   </ul>
-                  <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#C5A028] text-black text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+                  <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#C5A028] text-black text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                     <Calendar className="w-4 h-4" /> Book This BBQ
                   </a>
                 </div>
@@ -481,11 +481,11 @@ export default function CateringBBQPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/in-villa-service/bartenders" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/in-villa-service/bartenders" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Hire Bartenders <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
-            <Link to="/in-villa-service/waiters" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/in-villa-service/waiters" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Hire Waiters <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -535,11 +535,11 @@ export default function CateringBBQPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/catering/buffet" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/buffet" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Explore Buffet Catering <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
-            <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Explore Plated Dinners <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -648,10 +648,10 @@ export default function CateringBBQPage() {
             Send your date, area, guest count, and preferred BBQ package. We will confirm availability and final price by WhatsApp within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <MessageCircle className="w-4 h-4" /> Build My BBQ Menu
             </a>
-            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Phone className="w-4 h-4" /> Call +62 822-3756-5997
             </a>
           </div>
@@ -668,19 +668,19 @@ export default function CateringBBQPage() {
         <div className="max-w-[1000px] mx-auto">
           <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/fine-dining" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/fine-dining" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1">Fine Dining</h4>
               <p className="text-xs text-[#4A4745]">7–11 course tasting menus in your villa</p>
             </Link>
-            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1">Villa Catering</h4>
               <p className="text-xs text-[#4A4745]">Full-service catering for villa groups</p>
             </Link>
-            <Link to="/events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1">Events</h4>
               <p className="text-xs text-[#4A4745]">Weddings, birthdays, corporate events</p>
             </Link>
-            <Link to="/contact" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/contact" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1">Contact</h4>
               <p className="text-xs text-[#4A4745]">Speak to our team directly</p>
             </Link>

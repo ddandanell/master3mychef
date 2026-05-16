@@ -257,6 +257,53 @@ export default function InVillaServicePage() {
         </div>
       </section>
 
+      {/* WERE Awards Section */}
+      <section className="py-20 md:py-28 bg-[#0A0A0A]">
+        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+          {/* Award image */}
+          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+            <img
+              src="/generated/were-awards.png"
+              alt="myCHEF award-winning private villa dining in Bali"
+              className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          </div>
+
+          {/* Text */}
+          <div className="flex flex-col justify-center">
+            <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-5">AWARD-WINNING PRIVATE DINING</p>
+            <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-white mb-6 leading-tight">
+              Recognized for Private Villa Dining in Bali
+            </h2>
+            <div className="w-12 h-px bg-[#C5A028] mb-8" />
+            <p className="text-white/70 leading-relaxed mb-8 text-base">
+              A refined dining experience for villas, families, private events, and long-stay guests. Built around trusted chefs, elegant service, and consistent guest satisfaction.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <a
+                href={waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-source="in-villa-awards-cta"
+                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" /> Plan Your Dinner
+              </a>
+              <Link
+                to="/fine-dining"
+                className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-colors"
+              >
+                View Dining Options
+              </Link>
+            </div>
+            <p className="text-white/40 text-sm">560+ villas served · 12,000+ guests · 4.9 average rating</p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-[800px] mx-auto px-6">

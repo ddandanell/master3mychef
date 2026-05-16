@@ -47,3 +47,11 @@
 **Branch:** main  
 **Status:** ✅ CERTIFIED FOR DEPLOYMENT / PHASE 3 ACTIVE  
 **Last Updated:** 2026-05-16 23:58 WITA
+
+---
+
+## 2026-05-17 — Meta Description Expansion
+- **Agent:** Copilot
+- **Branch:** auto-improve/meta-expansion
+- **Files:** `src/data/page-meta.ts`
+- **Result:** Added SEO meta descriptions for 33 routes across catering subpages, event pages, Bali location pages, the locations hub, and 5 blog posts. Coverage now 42/95.

@@ -38,11 +38,11 @@ const WEDDING_TIERS = [
     highlighted: true,
   },
   {
-    title: 'Luxury Villa Wedding',
+    title: 'Signature Villa Wedding',
     price: <AllInPrice price={1500000} />,
     guestRange: '50+ guests',
-    description: 'Premium everything. Dedicated planner from booking, signature cocktail reception, full-day photo + video.',
-    features: ['Premium plated + cocktail reception', 'Bartender + 6h open bar', 'Premium florals + arch', 'Full sound + lighting', 'Photo + video full-day', 'Dedicated planner', 'Pre-event tasting'],
+    description: 'Dedicated planner from booking, cocktail reception, full-day photo + video, and a full villa run-sheet.',
+    features: ['Plated dinner + cocktail reception', 'Bartender + 6h open bar', 'Ceremony florals + arch', 'Full sound + lighting', 'Photo + video full-day', 'Dedicated planner', 'Pre-event tasting'],
   },
 ]
 
@@ -51,7 +51,7 @@ const ADDONS = [
   { icon: Newspaper, title: 'Cinematography', price: '+IDR 15M – 35M', desc: 'Full-day film' },
   { icon: Heart, title: 'Drone Footage', price: '+IDR 5M – 10M', desc: 'Aerial coverage' },
   { icon: MessageCircle, title: 'Live Band 4h', price: '+IDR 12M – 25M', desc: 'Jazz, acoustic, or DJ' },
-  { icon: Check, title: 'Premium Florals', price: '+IDR 8M – 25M', desc: 'Arch + aisle + table' },
+  { icon: Check, title: 'Ceremony Florals', price: '+IDR 8M – 25M', desc: 'Arch + aisle + table' },
   { icon: Clock, title: 'Guest Transport', price: '+IDR 3M – 8M', desc: 'Per 50-guest coach' },
 ]
 
@@ -63,7 +63,7 @@ const REAL_WEDDINGS = [
 ]
 
 const LEAD_TIMES = [
-  { phase: '3–10 months', label: 'Peak season booking', note: 'Jul–Sep, Dec–Jan. Luxury tier requires 3+ months.' },
+  { phase: '3–10 months', label: 'Peak season booking', note: 'Jul–Sep, Dec–Jan. Signature tier requires 3+ months.' },
   { phase: '1–3 months', label: 'Standard booking', note: 'Off-peak dates. Standard + Intimate tiers.' },
   { phase: '2–4 weeks', note: 'Pre-event tasting', label: 'Tasting window' },
   { phase: '1 month', label: 'Minimum off-peak', note: 'Intimate tier only. Subject to availability.' },
@@ -76,15 +76,15 @@ const PRESS_FEATURES = [
 ]
 
 const FAQS = [
-  { q: 'How far in advance should I book?', a: '3–10 months for peak season (Jul–Sep, Dec–Jan). 1 month minimum for off-peak. Luxury tier requires 3+ months.' },
-  { q: 'Do you do the wedding planning?', a: 'Standard + Luxury include planning from booking. Intimate includes day-of coordination. For larger weddings (80+) we always include a dedicated planner.' },
+  { q: 'How far in advance should I book?', a: '3–10 months for peak season (Jul–Sep, Dec–Jan). 1 month minimum for off-peak. Signature tier requires 3+ months.' },
+  { q: 'Do you do the wedding planning?', a: 'Standard + Signature include planning from booking. Intimate includes day-of coordination. For larger weddings (80+) we always include a dedicated planner.' },
   { q: 'Can I use my own florist or photographer?', a: 'Yes — we coordinate any vendor you bring. We have preferred partners with negotiated rates if you prefer.' },
   { q: 'How does tasting work?', a: 'Free pre-event tasting for all tiers, scheduled 2–4 weeks before wedding. We taste 3 dishes per course; you finalise the menu after.' },
   { q: 'What if it rains?', a: 'Every wedding has a wet-weather backup plan in the booking. We coordinate marquee rental + indoor relocation if needed.' },
   { q: 'Can you scope a three-day wedding weekend instead of one dinner?', a: 'Yes. We can split the brief into welcome night, ceremony day, and farewell brunch or lunch so each service format is costed and planned separately. That usually gives couples more control than forcing one package over the whole weekend.' },
   { q: 'Can you plan for mixed cultural food expectations?', a: 'Yes. The consult is where we map must-have dishes, vegetarian or halal-friendly needs, spice levels, and how different family groups should be served. We shape the menu brief around the guest mix before the tasting stage.' },
   { q: 'Do you handle non-Christian ceremonies?', a: 'Yes — Hindu, Muslim, Jewish, Balinese traditional, secular celebrant — all coordinated through our vetted officiant network.' },
-  { q: 'Can my guests stay nearby?', a: 'We work with luxury villa partners and can arrange room blocks. Not included in package pricing.' },
+  { q: 'Can my guests stay nearby?', a: 'We work with private villa partners and can arrange room blocks. Not included in package pricing.' },
   { q: 'What\'s your cancellation policy?', a: 'Up to 90 days before: 50% refund of deposit. 60–90 days: 25%. Under 60 days: no refund but credit toward rescheduled event within 12 months.' },
 ]
 
@@ -162,7 +162,7 @@ export default function EventsWeddingsPage() {
           },
           offerSchema('Intimate Villa Wedding', 600000, 'IDR', `${SITE}/events/weddings-bali`),
           offerSchema('Standard Villa Wedding', 950000, 'IDR', `${SITE}/events/weddings-bali`),
-          offerSchema('Luxury Villa Wedding', 1500000, 'IDR', `${SITE}/events/weddings-bali`),
+          offerSchema('Signature Villa Wedding', 1500000, 'IDR', `${SITE}/events/weddings-bali`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Wedding Catering Bali', `${SITE}/events/weddings-bali`, 'Events', `${SITE}/events`),
@@ -549,7 +549,7 @@ export default function EventsWeddingsPage() {
           <BookingFormCatering
             title="Request a Wedding Consult"
             subtitle="Tell us about your wedding and we will send a detailed proposal within 48 hours."
-            packageOptions={['Intimate Villa Wedding', 'Standard Villa Wedding', 'Luxury Villa Wedding']}
+            packageOptions={['Intimate Villa Wedding', 'Standard Villa Wedding', 'Signature Villa Wedding']}
             fields={[
               { name: 'package', label: 'Wedding Package', type: 'select', required: true },
               { name: 'date', label: 'Wedding Date', type: 'date', required: true },

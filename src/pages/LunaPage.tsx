@@ -25,7 +25,7 @@ const MENUS = [
     duration: 'Two and a half to three hours',
     teaser: 'Italian seafood, in five movements. Pasta rolled in your villa.',
     desc: 'The coast Adriano grew up on, in five movements. The meal opens cold, sharp, and perfumed — the sea waking the palate. It moves through cream and pasta into the centre of the table: the lobster tagliatelle, rolled that afternoon in your kitchen. The main is fish, not meat — the menu\'s promise honoured. It closes on tiramisu, made the way it should be made, because by the time the dessert plate arrives the meal has earned the right to come home.',
-    perfectFor: ['Private villa dinners', 'Celebrations', 'Romantic evenings', 'Luxury gatherings'],
+    perfectFor: ['Private villa dinners', 'Celebrations', 'Romantic evenings', 'Milestone gatherings'],
     courses: {
       starter: [
         { name: 'Passione di Dentice', desc: 'Red snapper carpaccio, passion fruit sauce, basil gelato.' },
@@ -53,7 +53,7 @@ const MENUS = [
     duration: 'Approximately three hours',
     teaser: 'Wagyu Tokusen in three forms. Open-flame ribeye at your table.',
     desc: 'Wagyu Tokusen in three forms — raw, enveloped, and grilled. The opening is controlled: tartare, polenta chips, cured egg, basil oil. The middle slows the meal down: an oxtail ragout sealed inside a hand-rolled ravioli, finished with Grana Padano and a foam of kale — a long-cooked ingredient hidden in a delicate envelope, the kaiseki principle in Italian form. The climax is the ribeye, grilled hard and answered by three counterpoints: topinambur cream, blue cheese, walnuts. The meal closes on dark chocolate and salted caramel — bitter, restrained, deliberately not too sweet, so the room remembers what it just ate.',
-    perfectFor: ['Luxury celebrations', 'Executive dinners', 'Premium villa experiences', 'Wine-focused evenings'],
+    perfectFor: ['Milestone celebrations', 'Executive dinners', 'Private villa evenings', 'Wine-focused evenings'],
     courses: {
       starter: [
         { name: 'My Beef Tartare', desc: 'Wagyu Tokusen chuck tender tartare, polenta chips, cured egg, rocket, basil oil.' },
@@ -87,7 +87,7 @@ const WHATS_INCLUDED = [
   'Sous chef & kitchen team',
   'Professional service staff',
   'Sommelier wine pairing (optional)',
-  'Premium ingredients & imports',
+  'Fresh ingredients and select imports',
   'Table setting with linens & candles',
   'Full kitchen cleanup',
   'Dietary customization (no extra charge)',

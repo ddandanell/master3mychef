@@ -500,3 +500,20 @@ Tree-shaking was already excluding all 9 deps from the bundle, so output size ba
 **Last Updated:** 2026-05-16 16:05 WITA
 **Current Git Head:** 119a36f (main)
 **Build Status:** ✅ PASSING
+
+---
+
+## TOP CONVERSION PAGES — TONE CONSISTENCY PASS (2026-05-16) — Copilot Agent
+
+> Closed the remaining top-page tone pass by replacing softer “luxury/premium” phrasing with clearer, more concrete language on fine dining, catering, and wedding conversion surfaces.
+
+| Item | Status | Files | Notes |
+|-----|--------|------|-------|
+| Fine dining language tightened | ✅ DONE | `src/pages/LunaPage.tsx` | Replaced vague “luxury/premium” audience and inclusion labels with more grounded wording like milestone gatherings, private villa evenings, and select imports |
+| Catering package language clarified | ✅ DONE | `src/pages/CateringMainPage.tsx` | Renamed offer labels and subtitles so package tiers describe service format more concretely instead of leaning on generic premium wording |
+| Wedding tier language clarified | ✅ DONE | `src/pages/EventsWeddingsPage.tsx` | Renamed the top wedding tier to “Signature Villa Wedding” and made the planning/feature copy more specific |
+| TypeScript + audit + production build | ✅ PASSING | app | `npx tsc -b --noEmit`, `npm run audit`, and `npx vite build` all passed after changes |
+
+**Last Updated:** 2026-05-16 16:08 WITA
+**Current Git Head:** 58240e4 (main)
+**Build Status:** ✅ PASSING

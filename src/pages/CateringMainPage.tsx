@@ -58,7 +58,7 @@ const CATERING_STYLES = [
     image: '/generated/hub-catering.webp',
     title: 'Plated Set Menus',
     price: 'From IDR 800,000/person',
-    description: 'Best for seated dinners and premium private events. Full table service included.',
+    description: 'Best for seated dinners and private events with full table service.',
     href: '/catering/plated-catering',
     accent: '#2C5F7C',
   },
@@ -139,9 +139,9 @@ const BBQ_PACKAGES = [
   },
   {
     image: '/generated/pkg-seafood.webp',
-    title: 'Premium Surf & Turf',
+    title: 'Surf & Turf BBQ',
     price: 'IDR 850,000/person',
-    description: 'Wagyu steak, lobster tail, king prawns, salmon, Mahi-mahi, premium sides, signature sauces, chocolate dessert station.',
+    description: 'Wagyu steak, lobster tail, king prawns, salmon, Mahi-mahi, larger-format sides, signature sauces, chocolate dessert station.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Plated service', 'Setup & cleanup'],
     minGuests: 'Min. 6 guests',
   },
@@ -149,7 +149,7 @@ const BBQ_PACKAGES = [
 
 const ADDONS = [
   { title: 'Bartender + 3h open bar', price: 'IDR 4,000,000 flat', description: 'Professional bartender with full cocktail setup' },
-  { title: 'Wagyu upgrade', price: '+ IDR 250,000/person', description: 'Upgrade any BBQ to premium Wagyu beef' },
+  { title: 'Wagyu upgrade', price: '+ IDR 250,000/person', description: 'Upgrade any BBQ to Wagyu beef' },
   { title: 'Gluten-free upgrade', price: '+ IDR 50,000/adult', description: 'Full gluten-free menu adaptation' },
   { title: 'Plated service', price: '+ IDR 50,000/person', description: 'Upgrade from buffet to full plated service' },
   { title: 'Out-of-area travel', price: 'IDR 250K – 700K', description: 'Travel fee depending on area and event size' },
@@ -174,10 +174,10 @@ const BUFFET_PACKAGES = [
   },
   {
     image: '/generated/aura-corporate.webp',
-    title: 'Premium Live-Station Buffet',
+    title: 'Live-Station Buffet',
     price: 'IDR 950,000/person',
-    description: '3 live food stations, premium roast, full dessert bar.',
-    includes: ['Head chef', '5 service staff', 'Live stations', 'Premium linens', 'Setup & cleanup'],
+    description: '3 live food stations, roast station, full dessert bar.',
+    includes: ['Head chef', '5 service staff', 'Live stations', 'Event linens', 'Setup & cleanup'],
     minGuests: 'Min. 30 guests',
   },
 ]
@@ -185,7 +185,7 @@ const BUFFET_PACKAGES = [
 const PLATED_PACKAGES = [
   { title: '3-Course Plated', price: 'IDR 800,000/person', description: 'Starter, main, dessert. Full table service.' },
   { title: '4-Course Plated', price: 'IDR 1,000,000/person', description: 'Amuse-bouche, starter, main, dessert.' },
-  { title: '5-Course Premium', price: 'IDR 1,300,000/person', description: 'Amuse-bouche, starter, fish, meat, dessert.' },
+  { title: '5-Course Dinner', price: 'IDR 1,300,000/person', description: 'Amuse-bouche, starter, fish, meat, dessert.' },
 ]
 
 const DROPOFF_PACKAGES = [
@@ -197,7 +197,7 @@ const DROPOFF_PACKAGES = [
 const BABIGULING_PACKAGES = [
   { title: 'Small', price: 'IDR 3,700,000', description: '10 to 15 guests. Whole pig, lawar, nasi kuning, sate, sambals, dessert, fruit.' },
   { title: 'Medium', price: 'IDR 5,000,000', description: '25 to 30 guests. Extended sides and larger portions.' },
-  { title: 'Large', price: 'IDR 7,000,000', description: '40 to 50 guests. Full spread with premium sides.' },
+  { title: 'Large', price: 'IDR 7,000,000', description: '40 to 50 guests. Full spread with extended sides.' },
 ]
 
 const GRAZING_PACKAGES = [
@@ -251,7 +251,7 @@ const DAILY_CHEF_INCLUDES = [
   'Full kitchen cleanup after every meal',
   'Menu planning based on your preferences',
   'Dietary customization at no extra cost',
-  'Fresh, local ingredients + premium imports',
+  'Fresh, local ingredients + select imports',
 ]
 
 const DAILY_CHEF_ADDONS = [
@@ -266,13 +266,13 @@ const DAILY_CHEF_ADDONS = [
 const PRICING_TABLE = [
   { name: 'Indonesian BBQ', price: 'IDR 450,000/person', min: '6 guests', bestFor: 'Villa BBQ' },
   { name: 'International BBQ', price: 'IDR 600,000/person', min: '6 guests', bestFor: 'Villa BBQ' },
-  { name: 'Premium Surf & Turf', price: 'IDR 850,000/person', min: '6 guests', bestFor: 'Special occasions' },
+  { name: 'Surf & Turf BBQ', price: 'IDR 850,000/person', min: '6 guests', bestFor: 'Special occasions' },
   { name: 'Indonesian Buffet', price: 'IDR 550,000/person', min: '30 guests', bestFor: 'Weddings & events' },
   { name: 'International Buffet', price: 'IDR 750,000/person', min: '30 guests', bestFor: 'Weddings & events' },
-  { name: 'Live-Station Buffet', price: 'IDR 950,000/person', min: '30 guests', bestFor: 'Premium events' },
+  { name: 'Live-Station Buffet', price: 'IDR 950,000/person', min: '30 guests', bestFor: 'Larger-format events' },
   { name: '3-Course Plated', price: 'IDR 800,000/person', min: '10 guests', bestFor: 'Seated dinners' },
-  { name: '4-Course Plated', price: 'IDR 1,000,000/person', min: '10 guests', bestFor: 'Premium dinners' },
-  { name: '5-Course Premium', price: 'IDR 1,300,000/person', min: '10 guests', bestFor: 'Fine dining' },
+  { name: '4-Course Plated', price: 'IDR 1,000,000/person', min: '10 guests', bestFor: 'Milestone dinners' },
+  { name: '5-Course Dinner', price: 'IDR 1,300,000/person', min: '10 guests', bestFor: 'Fine dining' },
   { name: 'Family Drop-Off', price: 'IDR 350,000/person', min: '4 guests', bestFor: 'Private meals' },
   { name: 'Dinner Party Drop-Off', price: 'IDR 500,000/person', min: '8 guests', bestFor: 'Small parties' },
   { name: 'Babi Guling Small', price: 'IDR 3,700,000 total', min: '10 guests', bestFor: 'Traditional events' },
@@ -397,13 +397,13 @@ export default function CateringMainPage() {
           cateringServiceSchema('Villa Catering Bali', 'Chef-led catering for Bali villas, events, BBQ nights, and private gatherings with flexible formats from buffet to plated service. myCHEF.id manages menus, staffing, setup, and cleanup across Bali.', `${SITE}/catering`, 'FoodService'),
           offerSchema('Indonesian BBQ', 450000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('International BBQ', 600000, 'IDR', `${SITE}/catering/bbq-catering`),
-          offerSchema('Premium Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('Indonesian Buffet', 550000, 'IDR', `${SITE}/catering/buffet`),
           offerSchema('International Buffet', 750000, 'IDR', `${SITE}/catering/buffet`),
-          offerSchema('Premium Live-Station Buffet', 950000, 'IDR', `${SITE}/catering/buffet`),
+          offerSchema('Live-Station Buffet', 950000, 'IDR', `${SITE}/catering/buffet`),
           offerSchema('3-Course Plated', 800000, 'IDR', `${SITE}/catering/plated-catering`),
           offerSchema('4-Course Plated', 1000000, 'IDR', `${SITE}/catering/plated-catering`),
-          offerSchema('5-Course Premium', 1300000, 'IDR', `${SITE}/catering/plated-catering`),
+          offerSchema('5-Course Dinner', 1300000, 'IDR', `${SITE}/catering/plated-catering`),
           offerSchema('Family Drop-Off', 350000, 'IDR', `${SITE}/catering/drop-off-catering`),
           offerSchema('Dinner Party Drop-Off', 500000, 'IDR', `${SITE}/catering/drop-off-catering`),
           offerSchema('Babi Guling Small', 3700000, 'IDR', `${SITE}/catering/babi-guling`),
@@ -876,7 +876,7 @@ export default function CateringMainPage() {
           <SectionHeader
             eyebrow="Extras"
             title="Upgrade Your Catering"
-            subtitle="Add drinks, premium ingredients, plated service, or dietary adjustments directly when you book."
+            subtitle="Add drinks, specific ingredients, plated service, or dietary adjustments directly when you book."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {ADDONS.map((addon) => (
@@ -892,7 +892,7 @@ export default function CateringMainPage() {
           <SectionHeader
             eyebrow="CHAPTER 6 — THE PLATED"
             title="Plated Set Menus for Seated Events"
-            subtitle="For premium dinners, birthdays, villa owner events, and intimate weddings, plated menus create a more controlled dining experience with table service and stronger presentation."
+            subtitle="For milestone dinners, birthdays, villa owner events, and intimate weddings, plated menus create a more controlled dining experience with table service and stronger presentation."
           />
           <div className="grid md:grid-cols-3 gap-6 mb-10">
             {PLATED_PACKAGES.map((pkg) => (

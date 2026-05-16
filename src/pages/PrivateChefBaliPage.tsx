@@ -154,7 +154,8 @@ export default function PrivateChefBaliPage() {
             decoding="async" fetchPriority="high"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/35" />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
         <div className="absolute top-0 left-0 z-10 w-full">
           <Breadcrumb items={[{ label: 'Fine Dining', href: '/fine-dining' }, { label: 'Private Chef Bali' }]} theme="dark" className="py-6" />
@@ -165,7 +166,7 @@ export default function PrivateChefBaliPage() {
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             A Michelin-Trained Private Chef.<br />
-            <span className="italic">In Your Bali Villa.</span>
+            <span className="italic">At Your Space.</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-3 max-w-2xl mx-auto leading-relaxed">
             We arrive at your villa 3 hours early. We cook, serve every course, and leave your kitchen spotless.
@@ -180,7 +181,7 @@ export default function PrivateChefBaliPage() {
               data-source="private-chef-bali-hero"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
             >
-              <MessageCircle className="w-4 h-4" /> Hire a Private Chef
+              <MessageCircle className="w-4 h-4" /> Book on WhatsApp
             </a>
             <Link
               to="/menus"
@@ -218,7 +219,7 @@ export default function PrivateChefBaliPage() {
               No other table.<br />No other guests.
             </h2>
             <p className="text-white/[70%] text-base leading-relaxed mb-6">
-              Just your villa, your people, and a chef who trained for a decade in Michelin kitchens in Milan and Modena. The menu is Italian in technique, Balinese in setting — adapted to your preferences, your dietary needs, and the season.
+              Just your space, your people, and a chef who trained for a decade in Michelin kitchens in Milan and Modena. The menu is Italian in technique, Balinese in setting — adapted to your preferences, your dietary needs, and the season.
             </p>
             <p className="text-white/[70%] text-base leading-relaxed mb-8">
               We bring the kitchen to you. The team arrives 3 hours before your first course — setting the table, preparing the mise en place, sourcing that morning's freshest catch. You arrive to a table already set.

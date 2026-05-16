@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, type LucideIcon } from 'lucide-react'
+import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, ChevronDown, type LucideIcon } from 'lucide-react'
 import { PILLARS, PRIMARY_CTA } from '../data/siteArchitecture'
 
 interface NavItem {
@@ -38,7 +38,20 @@ function isActivePath(current: string, target: string): boolean {
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
   const location = useLocation()
+
+  const toggleExpanded = (href: string) => {
+    const newSet = new Set(expandedItems)
+    if (newSet.has(href)) {
+      newSet.delete(href)
+    } else {
+      // Close all others when opening a new one (only one open at a time on mobile)
+      newSet.clear()
+      newSet.add(href)
+    }
+    setExpandedItems(newSet)
+  }
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
@@ -188,51 +201,87 @@ export default function Navbar() {
           <p className="text-[11px] uppercase tracking-[0.34em] text-[#C5A028] mb-6">Private Dining in Bali</p>
           <div className="h-px bg-gradient-to-r from-[#C5A028]/55 via-[#C5A028]/18 to-transparent mb-6" />
 
-          {/* Mobile nav items */}
-          <div className="space-y-3 flex-1">
+          {/* Mobile nav items — accordion style */}
+          <div className="space-y-2 flex-1">
             {NAV_ITEMS.map((item) => {
               const Icon = item.icon
               const active = isActivePath(location.pathname, item.href)
               const subpages = NAV_SUBPAGES[item.href] ?? []
-              return (
-                <div key={item.href} className="space-y-2">
-                  <Link
-                    to={item.href}
-                    onClick={() => setMenuOpen(false)}
-                    className={`flex items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors ${
-                      active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-gray-100'
-                    }`}
-                  >
-                    <Icon className="h-5 w-5 text-[#C5A028] flex-shrink-0" strokeWidth={1.6} />
-                    <span
-                      className={`text-[16px] ${active ? 'text-[#C5A028]' : 'text-gray-900'}`}
-                      style={{ fontFamily: "'Playfair Display', serif" }}
-                    >
-                      {item.label}
-                    </span>
-                  </Link>
+              const isExpanded = expandedItems.has(item.href)
 
-                  {subpages.length > 0 && (
-                    <div className="ml-6 border-l border-[#C5A028]/20 pl-4 space-y-2">
-                      {subpages.map((subpage) => {
-                        const subpageActive = isActivePath(location.pathname, subpage.href)
-                        return (
-                          <Link
-                            key={subpage.href}
-                            to={subpage.href}
-                            onClick={() => setMenuOpen(false)}
-                            className={`block rounded-xl px-3 py-2 text-sm transition-colors ${
-                              subpageActive
-                                ? 'bg-[#C5A028]/10 text-[#C5A028]'
-                                : 'text-gray-600 hover:bg-gray-100 hover:text-[#C5A028]'
-                            }`}
-                            style={{ fontFamily: "'Playfair Display', serif" }}
-                          >
-                            {subpage.label}
-                          </Link>
-                        )
-                      })}
-                    </div>
+              return (
+                <div key={item.href}>
+                  {subpages.length > 0 ? (
+                    <>
+                      {/* Accordion trigger — no navigation, just expand */}
+                      <button
+                        type="button"
+                        onClick={() => toggleExpanded(item.href)}
+                        className={`w-full flex items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors ${
+                          active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-gray-100'
+                        }`}
+                      >
+                        <Icon className="h-5 w-5 text-[#C5A028] flex-shrink-0" strokeWidth={1.6} />
+                        <span
+                          className={`text-[16px] flex-1 text-left ${active ? 'text-[#C5A028]' : 'text-gray-900'}`}
+                          style={{ fontFamily: "'Playfair Display', serif" }}
+                        >
+                          {item.label}
+                        </span>
+                        <ChevronDown
+                          className={`h-4 w-4 text-gray-600 transition-transform flex-shrink-0 ${
+                            isExpanded ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+
+                      {/* Accordion content — visible only when expanded */}
+                      {isExpanded && (
+                        <div className="ml-6 border-l border-[#C5A028]/20 pl-4 space-y-2 mt-2">
+                          {subpages.map((subpage) => {
+                            const subpageActive = isActivePath(location.pathname, subpage.href)
+                            return (
+                              <Link
+                                key={subpage.href}
+                                to={subpage.href}
+                                onClick={() => {
+                                  setMenuOpen(false)
+                                  setExpandedItems(new Set())
+                                }}
+                                className={`block rounded-xl px-3 py-2 text-sm transition-colors ${
+                                  subpageActive
+                                    ? 'bg-[#C5A028]/10 text-[#C5A028]'
+                                    : 'text-gray-600 hover:bg-gray-100 hover:text-[#C5A028]'
+                                }`}
+                                style={{ fontFamily: "'Playfair Display', serif" }}
+                              >
+                                {subpage.label}
+                              </Link>
+                            )
+                          })}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    /* Link without subpages */
+                    <Link
+                      to={item.href}
+                      onClick={() => {
+                        setMenuOpen(false)
+                        setExpandedItems(new Set())
+                      }}
+                      className={`flex items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors ${
+                        active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-gray-100'
+                      }`}
+                    >
+                      <Icon className="h-5 w-5 text-[#C5A028] flex-shrink-0" strokeWidth={1.6} />
+                      <span
+                        className={`text-[16px] ${active ? 'text-[#C5A028]' : 'text-gray-900'}`}
+                        style={{ fontFamily: "'Playfair Display', serif" }}
+                      >
+                        {item.label}
+                      </span>
+                    </Link>
                   )}
                 </div>
               )

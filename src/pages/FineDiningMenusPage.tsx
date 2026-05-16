@@ -177,7 +177,8 @@ export default function FineDiningMenusPage() {
             fetchPriority="high"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/30" />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
 
         <div className="absolute inset-x-0 top-0 z-20">

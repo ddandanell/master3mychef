@@ -287,7 +287,8 @@ export default function AuraPage() {
             fetchPriority="high"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="aura-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Bali Event Catering — Villas, Weddings & Corporate</p>

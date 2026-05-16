@@ -433,7 +433,7 @@ export default function CateringMainPage() {
             myCHEF Events & Catering
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Events & Catering for Bali Villas.<br />
+            Events & Catering Services<br />
             <span className="italic">Built for Groups, Parties & Hosted Dinners.</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
@@ -447,7 +447,7 @@ export default function CateringMainPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
             >
-              <MessageCircle className="w-4 h-4" /> Get Catering Quote for 5+ Guests
+              <MessageCircle className="w-4 h-4" /> Book on WhatsApp
             </a>
             <Link
               to="/villa-chef"

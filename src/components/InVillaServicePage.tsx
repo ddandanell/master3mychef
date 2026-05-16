@@ -128,8 +128,8 @@ export default function InVillaServicePage() {
             decoding="async"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/45 to-black/15" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 pb-16 md:pb-24 pt-32">
           <div className="max-w-[900px]">

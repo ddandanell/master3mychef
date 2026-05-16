@@ -178,10 +178,8 @@ export default function EventsCorporatePage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src="/generated/events/corporate-team.webp" alt="Corporate team lunch setup at a Bali villa" className="w-full h-full object-cover" loading="lazy" decoding="async" />
-          <div
-            className="absolute inset-0"
-            style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.10) 100%)' }}
-          />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
         <div className="relative z-10 px-6 md:px-8 py-12 md:py-20 max-w-2xl mx-auto md:mx-0 md:ml-auto md:mr-auto md:flex md:flex-col md:justify-center h-full w-full">
           <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>

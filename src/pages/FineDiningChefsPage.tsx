@@ -170,7 +170,8 @@ export default function FineDiningChefsPage() {
             decoding="async"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/55 to-black/25" />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
 
         <div className="relative z-10 mx-auto flex min-h-[90vh] max-w-7xl flex-col justify-between px-6 pb-16 pt-28 md:px-10 md:pb-20">

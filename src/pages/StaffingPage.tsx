@@ -237,7 +237,7 @@ export default function StaffingPage() {
             <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">
               <a href={WA_MARCO} target="_blank" rel="noopener noreferrer" data-source="staffing-hero">
                 <MessageCircle className="w-4 h-4" />
-                Request Staff Now — Reply in 1 Hour
+                Book on WhatsApp
               </a>
             </Button>
             <Button asChild variant="secondary" size="brand" className="w-full sm:w-auto">

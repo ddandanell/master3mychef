@@ -385,7 +385,7 @@ export default function EventsMainPage() {
               data-source="events-hero"
               className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
-              <Phone className="w-4 h-4" /> Plan My Event — Free Consultation
+              <MessageCircle className="w-4 h-4" /> Book on WhatsApp
             </a>
             <a
               href="#event-types"

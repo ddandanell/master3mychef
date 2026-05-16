@@ -5,8 +5,6 @@ import {
   Utensils, CreditCard, ChefHat, Sparkles, ShieldCheck, HelpCircle,
   Home, PartyPopper, Flame, Wine, Flower2, CakeSlice,
 } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
   breadcrumbSchema,
@@ -30,7 +28,6 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { CateringRiskReversal } from '@/components/shared'
 
 import OptimizedImage from '@/components/OptimizedImage'
-gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20catering%20quote.'
 const WA_DAILY_CHEF_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20daily%20villa%20chef.'
@@ -360,15 +357,7 @@ export default function CateringMainPage() {
     }
   }, [location.hash])
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo('.cat-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.cat-content', start: 'top 75%', once: true },
-      })
-    }, ref)
-    return () => ctx.revert()
-  }, [])
+  // No GSAP animations are wired on this page currently.
 
   const handleDecisionAnswer = (qIndex: number, result: 'one-time' | 'daily') => {
     const next = [...decisionAnswers]

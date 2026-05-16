@@ -1,7 +1,7 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { ArrowRight, MessageCircle, Check } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
-import { MENUS } from '@/data/sitemap'
+import { MENUS } from '@/data/siteArchitecture'
 import TrustStrip from '@/components/shared/TrustStrip'
 
 const SITE = 'https://mychef.id'

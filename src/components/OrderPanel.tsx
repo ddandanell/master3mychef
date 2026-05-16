@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { X, ChevronLeft, MessageCircle, Check } from 'lucide-react'
+import { useOverlayAccessibility } from '@/hooks/useOverlayAccessibility'
 
 // Right-side slide-over booking panel for the Fine Dining page.
 // Five steps, designed as a luxury hotel booking experience — not a takeaway form.
@@ -75,6 +76,13 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
   const [stage, setStage] = useState<Stage>('form')
   const [step, setStep] = useState(0)
   const [form, setForm] = useState<BookingForm>(INITIAL)
+  const panelRef = useRef<HTMLElement>(null)
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
+  const titleId = useId()
+  const descriptionId = useId()
+
+  useOverlayAccessibility({ active: open, containerRef: panelRef, onClose })
 
   useEffect(() => {
     if (open && initialExperience) {
@@ -92,6 +100,13 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
   // Reset to step 0 / form stage on each fresh open
   useEffect(() => {
     if (open) setStage('form')
+  }, [open])
+
+  useEffect(() => {
+    if (!open) return
+
+    const timer = window.setTimeout(() => closeButtonRef.current?.focus(), 50)
+    return () => window.clearTimeout(timer)
   }, [open])
 
   const update = <K extends keyof BookingForm>(key: K, value: BookingForm[K]) =>
@@ -137,39 +152,56 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
   return (
     <>
       {/* Backdrop */}
-      <button
-        type="button"
-        aria-label="Close booking panel"
+      <div
+        aria-hidden="true"
         onClick={onClose}
         className="fixed inset-0 z-[80] bg-black/70 backdrop-blur-sm transition-opacity"
       />
 
       {/* Panel */}
       <aside
-        className="fixed top-0 right-0 z-[81] h-full w-full md:w-[40vw] md:min-w-[460px] bg-[#0A0A0A] text-white shadow-2xl flex flex-col"
+        ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        aria-describedby={descriptionId}
+        tabIndex={-1}
+        className="fixed top-0 right-0 z-[81] flex h-full w-full flex-col bg-[#0A0A0A] text-white shadow-2xl md:w-[40vw] md:min-w-[460px]"
         style={{ borderLeft: '1px solid rgba(212,175,55,0.15)' }}
       >
+        <button type="button" onClick={() => contentRef.current?.focus()} className="skip-link z-[90]">
+          Skip to booking form
+        </button>
+        <p id={descriptionId} className="sr-only">
+          Private dinner booking panel. Press Escape to close and Tab to move through the form controls.
+        </p>
         {/* Header */}
-        <header className="flex items-center justify-between px-6 md:px-8 py-5 border-b border-white/8">
+        <header className="flex items-center justify-between border-b border-white/8 px-6 py-5 md:px-8">
           <div className="flex items-center gap-3">
             {step > 0 && stage === 'form' && (
               <button
                 type="button"
                 onClick={() => setStep((s) => Math.max(0, s - 1))}
-                aria-label="Go back"
+                aria-label="Go back to the previous booking step"
                 className="p-1 text-white/[60%] hover:text-white"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
             )}
-            <p className="text-xs tracking-[0.25em] uppercase text-[#C5A028]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              {stage === 'submitted' ? 'Confirmed' : `Step ${step + 1} of 5`}
-            </p>
+            <div>
+              <p className="text-xs tracking-[0.25em] uppercase text-[#C5A028]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                {stage === 'submitted' ? 'Confirmed' : `Step ${step + 1} of 5`}
+              </p>
+              <h2 id={titleId} className="sr-only">
+                {stage === 'submitted' ? 'Private dinner request confirmed' : 'Private dinner booking form'}
+              </h2>
+            </div>
           </div>
           <button
+            ref={closeButtonRef}
             type="button"
             onClick={onClose}
-            aria-label="Close"
+            aria-label="Close booking panel"
             className="p-2 text-white/[60%] hover:text-white"
           >
             <X className="w-5 h-5" />
@@ -177,7 +209,7 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
         </header>
 
         {/* Body */}
-        <div className="flex-1 overflow-y-auto px-6 md:px-10 py-8 md:py-10">
+        <div ref={contentRef} id="order-panel-content" tabIndex={-1} className="flex-1 overflow-y-auto px-6 py-8 md:px-10 md:py-10">
           {stage === 'submitted' ? (
             <SubmittedView waLink={waLink} onClose={onClose} />
           ) : (
@@ -399,6 +431,7 @@ function SubmittedView({ waLink, onClose }: { waLink: string; onClose: () => voi
       <button
         type="button"
         onClick={onClose}
+        aria-label="Close booking panel"
         className="mt-10 text-xs uppercase tracking-[0.2em] text-white/[50%] hover:text-white/[90%]"
       >
         Close

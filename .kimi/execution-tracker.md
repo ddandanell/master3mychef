@@ -107,3 +107,9 @@
 - **Branch:** auto-improve/blog-publish-phase4
 - **Files:** `src/data/sitemap.ts`, `src/data/route-slugs.ts`, `.kimi/execution-tracker.md`, generated sitemap files
 - **Result:** Published 4 new blog posts across Villa Dining, Events, Bali Living, and Chef Stories. Added breakfast, birthday dinner, area-comparison, and behind-the-scenes posts. Quality gates: `npx tsc -b --noEmit` ✓, `npm run build` ✓.
+
+## 2026-05-16 — Phase 4 ARIA Accessibility Fixes
+- **Agent:** Copilot
+- **Branch:** auto-improve/aria-fixes-phase4
+- **Files:** `src/components/SearchOverlay.tsx`, `src/components/Navbar.tsx`, `src/components/ConciergeWidget.tsx`, `src/components/OrderPanel.tsx`, `src/components/catering/BookingFormCatering.tsx`, `src/components/QuoteFunnel.tsx`, `src/hooks/useOverlayAccessibility.ts`, `src/lib/analytics.ts`, `.kimi/execution-tracker.md`
+- **Result:** Implemented dialog roles, focus traps, escape handling, keyboard-accessible search results, aria-current states, labelled icon buttons, and form hint/error descriptions across the highest-priority overlay and navigation surfaces. Verified with `npx tsc -b --noEmit`, `npm run build`, and Playwright keyboard smoke checks for SearchOverlay, ConciergeWidget, OrderPanel, and active nav state.

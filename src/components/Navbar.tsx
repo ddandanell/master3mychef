@@ -133,6 +133,7 @@ export default function Navbar() {
                 <div key={item.href} className="relative group">
                   <Link
                     to={item.href}
+                    aria-current={active ? 'page' : undefined}
                     className={`flex flex-col items-center gap-1.5 transition-colors group ${
                       active ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
                     }`}
@@ -161,6 +162,7 @@ export default function Navbar() {
                             <Link
                               key={subpage.href}
                               to={subpage.href}
+                              aria-current={subpageActive ? 'page' : undefined}
                               className={`flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm transition-colors ${
                                 subpageActive
                                   ? 'bg-[#C5A028]/12 text-[#C5A028]'
@@ -192,6 +194,9 @@ export default function Navbar() {
               onClick={() => setSearchOpen(true)}
               className="p-2 text-white/70 hover:text-[#C5A028] transition-colors"
               aria-label="Search myCHEF"
+              aria-haspopup="dialog"
+              aria-expanded={searchOpen}
+              aria-controls="search-overlay"
             >
               <Search className="w-5 h-5" strokeWidth={1.5} />
             </button>
@@ -268,6 +273,9 @@ export default function Navbar() {
                       <button
                         type="button"
                         onClick={() => toggleExpanded(item.href)}
+                        aria-expanded={isExpanded}
+                        aria-controls={`mobile-subnav-${item.href.replace(/\//g, '') || 'root'}`}
+                        aria-current={active ? 'page' : undefined}
                         className={`w-full flex items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors ${
                           active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-gray-100'
                         }`}
@@ -288,13 +296,14 @@ export default function Navbar() {
 
                       {/* Accordion content — visible only when expanded */}
                       {isExpanded && (
-                        <div className="ml-6 border-l border-[#C5A028]/20 pl-4 space-y-2 mt-2">
+                        <div id={`mobile-subnav-${item.href.replace(/\//g, '') || 'root'}`} className="ml-6 border-l border-[#C5A028]/20 pl-4 space-y-2 mt-2">
                           {subpages.map((subpage) => {
                             const subpageActive = isActivePath(location.pathname, subpage.href)
                             return (
                               <Link
                                 key={subpage.href}
                                 to={subpage.href}
+                                aria-current={subpageActive ? 'page' : undefined}
                                 onClick={() => {
                                   setMenuOpen(false)
                                   setExpandedItems(new Set())
@@ -323,6 +332,7 @@ export default function Navbar() {
                     /* Link without subpages */
                     <Link
                       to={item.href}
+                      aria-current={active ? 'page' : undefined}
                       onClick={() => {
                         setMenuOpen(false)
                         setExpandedItems(new Set())

@@ -156,7 +156,13 @@ export default function QuoteFunnel() {
       <section className="px-8 pt-24 pb-16 max-w-[800px] mx-auto">
         {/* Progress strip */}
         <div className="flex items-center justify-between mb-6 text-xs text-[#8A8785]">
-          <button type="button" onClick={back} disabled={step === 0} className="inline-flex items-center gap-1 disabled:opacity-30 hover:text-[#1A1A1A]">
+          <button
+            type="button"
+            onClick={back}
+            disabled={step === 0}
+            aria-label={step === 0 ? 'You are already on the first step' : `Go back to ${STEP_TITLES[step - 1]}`}
+            className="inline-flex items-center gap-1 disabled:opacity-30 hover:text-[#1A1A1A]"
+          >
             <ChevronLeft className="w-4 h-4" /> Back
           </button>
           <span>Step {step + 1} of 9</span>

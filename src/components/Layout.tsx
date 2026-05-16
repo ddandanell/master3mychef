@@ -5,6 +5,7 @@ import { trackPageView, trackWhatsAppClick, trackPhoneClick } from '@/lib/analyt
 import Navbar from './Navbar'
 import Footer from './Footer'
 import ConciergeWidget from './ConciergeWidget'
+import WhatsAppButton from './WhatsAppButton'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
@@ -62,6 +63,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
         <Footer />
         <ConciergeWidget />
+        <WhatsAppButton />
       </div>
     </UniverseProvider>
   )

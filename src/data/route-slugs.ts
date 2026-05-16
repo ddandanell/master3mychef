@@ -4,6 +4,9 @@
 // is only imported inside the lazy-loaded LandingPage component.
 
 export const LANDING_PAGE_SLUGS: string[] = [
+  'villa-bbq-catering-bali',
+  'bali-wedding-catering-packages',
+  'michelin-private-chef-bali-prices',
   'best-private-chef-indonesia',
   'private-chef-for-events',
   'luxury-chef-indonesia',

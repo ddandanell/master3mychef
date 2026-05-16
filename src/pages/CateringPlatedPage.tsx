@@ -42,7 +42,7 @@ const PLATED_PACKAGES = [
     minGuests: 'Min. IDR 5M',
   },
   {
-    image: '/generated/menu-wagyu.webp',
+    image: '/generated/catering/plated-menus.webp',
     title: '4-Course Plated',
     price: 'IDR 1,000,000/person',
     priceNum: 1000000,

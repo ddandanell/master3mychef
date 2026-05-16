@@ -670,7 +670,7 @@ export default function LunaPage() {
                 {/* Menu image — transparent PNG of the dry-aging cabinet, sits cleanly over the dark menu card */}
                 <div className="pt-8 pb-2 text-center">
                   <img
-                    src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean-sea.webp' : '/generated/menu-wagyu.webp'}
+                    src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean-sea.webp' : '/generated/luna-plating.webp'}
                     alt={menu.id === 'mediterranean' ? 'Mediterranean SEA Experience — certified tuna dry-aging cabinet' : 'Wagyu Experience — certified wagyu dry-aging cabinet'}
                     width={520}
                     height={260}

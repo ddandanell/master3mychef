@@ -139,6 +139,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mychef.id/villa-bbq-catering-bali</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/bali-wedding-catering-packages</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/michelin-private-chef-bali-prices</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mychef.id/guide/private-chef-bali</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -498,6 +516,72 @@
       <image:loc>https://mychef.id/og-image.webp</image:loc>
       <image:title>Private chef in Bukit Peninsula, Bali — myCHEF villa dining</image:title>
       <image:caption>myCHEF private chef preparing a villa dinner in Bukit Peninsula, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/locations/kuta</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Kuta, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Kuta, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/locations/legian</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Legian, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Legian, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/locations/kerobokan</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Kerobokan, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Kerobokan, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/locations/petitenget</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Petitenget, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Petitenget, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/locations/tanah-lot</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Tanah Lot, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Tanah Lot, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/locations/tabanan</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Tabanan, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Tabanan, Bali</image:caption>
     </image:image>
   </url>
   <url>

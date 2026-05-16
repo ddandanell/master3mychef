@@ -65,3 +65,29 @@
 **Commit:** 14fd277  
 **Impact:** All interactive elements now meet 44px minimum for better mobile usability
 
+
+---
+
+## SEO TECHNICAL AUDIT & INTERNAL LINKING (2026-05-16 22:30)
+
+| Item | Status | Files | Notes |
+|-----|--------|------|-------|
+| Technical SEO audit | ✅ DONE | .kimi/SEO_AUDIT_2026-05-16.md | Audited 95 URLs: 4 high-priority issues identified, 0 critical blockers |
+| Crawlability check | ✅ PASS | public/robots.txt, public/sitemap.xml | Clean robots.txt with AI crawler support, 95 URLs in sitemap with image markup |
+| Structured data audit | ✅ PASS | src/components/SeoHead.tsx | Comprehensive JSON-LD: localBusiness, breadcrumbs, FAQ, ratings, services |
+| Internal linking pass | ✅ DONE | CateringMainPage.tsx, AboutPage.tsx | Added 6 contextual links to location pages with descriptive anchors |
+| Priority plan created | ✅ DONE | .kimi/SEO_AUDIT_2026-05-16.md | P1: internal linking ✅, H1 cleanup (pending), meta expansion (pending) |
+
+**Strengths Confirmed:**
+- AI-era robots.txt (GPTBot, ClaudeBot, PerplexityBot allowed)
+- 126 redirects properly managed, no chains
+- Mobile-first responsive design
+- Centralized meta management pattern in place
+
+**Next SEO Tasks (P1):**
+- H1 semantic cleanup (ensure ONE H1 per page, matches primary keyword)
+- Expand page-meta.ts to all 95 URLs (currently only 10 covered)
+- Add meta descriptions for 85+ pages (target 120-155 chars)
+
+**Pattern:** SEO skill workflow — audit first, fix technical, then content
+

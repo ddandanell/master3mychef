@@ -31,6 +31,21 @@ export type LocationSlug =
   | 'berawa'
   | 'pererenan'
   | 'bukit'
+  | 'kuta'
+  | 'legian'
+  | 'kerobokan'
+  | 'petitenget'
+  | 'tanah-lot'
+  | 'tabanan'
+  | 'denpasar'
+  | 'gianyar'
+  | 'tegallalang'
+  | 'amed'
+  | 'lovina'
+  | 'candidasa'
+  | 'padang-bai'
+  | 'ungasan'
+  | 'pecatu'
 
 export interface SubPage {
   slug: string
@@ -671,6 +686,126 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
       'Private chef and event catering in the Bukit Peninsula — Bingin, Padang Padang, Ungasan. Clifftop fine dining for elopements and celebrations.',
     intro:
       'Across the Bukit Peninsula, myCHEF runs clifftop dining, surf-group feasts, and milestone celebrations for villas in Bingin, Pecatu, Padang Padang, and Ungasan. We plan around wind, lift access, and dramatic terrace layouts so the food, service, and sunset timing all feel intentional.',
+  },
+  kuta: {
+    slug: 'kuta',
+    label: 'Kuta',
+    h1: 'Private Chef Kuta — Villa Dining & Group BBQs',
+    title: 'Private Chef Kuta | Villa Dining & Group BBQs — myCHEF',
+    description: 'Hire a private chef in Kuta for villa dinners, family BBQs, and group celebrations.',
+    intro: 'In Kuta, myCHEF provides reliable villa dining for families and groups staying near the heart of Bali’s activity. We specialize in casual sharing feasts and poolside BBQs.',
+  },
+  legian: {
+    slug: 'legian',
+    label: 'Legian',
+    h1: 'Private Chef Legian — Fine Dining & Private Catering',
+    title: 'Private Chef Legian | Fine Dining & Private Catering — myCHEF',
+    description: 'Premium private chef services in Legian. Plated fine dining and group catering.',
+    intro: 'myCHEF brings restaurant-quality dining to Legian’s private villas, offering an intimate alternative to the busy local dining strip.',
+  },
+  kerobokan: {
+    slug: 'kerobokan',
+    label: 'Kerobokan',
+    h1: 'Private Chef Kerobokan — Local Villa Dining',
+    title: 'Private Chef Kerobokan | Local Villa Dining — myCHEF',
+    description: 'Private chef and catering services in Kerobokan. Healthy meal prep and family dinners.',
+    intro: 'Serving the residential heart of Bali, myCHEF in Kerobokan focuses on consistent quality for both holiday guests and expatriate families.',
+  },
+  petitenget: {
+    slug: 'petitenget',
+    label: 'Petitenget',
+    h1: 'Private Chef Petitenget — High-End Villa Dining',
+    title: 'Private Chef Petitenget | High-End Villa Dining — myCHEF',
+    description: 'Bespoke private chef experiences in Petitenget. Fine dining and cocktail parties.',
+    intro: 'In the stylish Petitenget area, we deliver high-touch service and Michelin-level menus that match the sophisticated atmosphere of the neighborhood.',
+  },
+  'tanah-lot': {
+    slug: 'tanah-lot',
+    label: 'Tanah Lot',
+    h1: 'Private Chef Tanah Lot — Destination Dining',
+    title: 'Private Chef Tanah Lot | Destination Dining — myCHEF',
+    description: 'Exclusive private chef service near Tanah Lot. Oceanfront dining and clifftop events.',
+    intro: 'Experience dramatic sunset dining near Tanah Lot with myCHEF. We coordinate specialized logistics for more remote villas.',
+  },
+  tabanan: {
+    slug: 'tabanan',
+    label: 'Tabanan',
+    h1: 'Private Chef Tabanan — Retreat & Jungle Dining',
+    title: 'Private Chef Tabanan | Retreat & Jungle Dining — myCHEF',
+    description: 'Retreat catering and private chef services in Tabanan. Plant-forward menus.',
+    intro: 'Tabanan’s vast estates and wellness retreats are a natural fit for myCHEF’s multi-day service models and healthy, locally-sourced menu concepts.',
+  },
+  denpasar: {
+    slug: 'denpasar',
+    label: 'Denpasar',
+    h1: 'Private Chef Denpasar — Corporate & Residential Dining',
+    title: 'Private Chef Denpasar | Corporate & Residential — myCHEF',
+    description: 'Professional catering and private chef services in Denpasar for corporate events.',
+    intro: 'Serving Bali’s administrative center, we provide structured catering for business events and professional private chef services.',
+  },
+  gianyar: {
+    slug: 'gianyar',
+    label: 'Gianyar',
+    h1: 'Private Chef Gianyar — Cultural & Estate Dining',
+    title: 'Private Chef Gianyar | Cultural & Estate Dining — myCHEF',
+    description: 'Private chef services in Gianyar. Traditional Balinese feasts and large estate catering.',
+    intro: 'Gianyar’s heritage estates provide a stunning backdrop for our traditional Balinese whole-pig roasts.',
+  },
+  tegallalang: {
+    slug: 'tegallalang',
+    label: 'Tegallalang',
+    h1: 'Private Chef Tegallalang — Rice Terrace Dining',
+    title: 'Private Chef Tegallalang | Rice Terrace Dining — myCHEF',
+    description: 'Unique private dining experiences in Tegallalang. Scenic lunches and intimate jungle dinners.',
+    intro: 'We bring the myCHEF standard to the iconic rice terraces of Tegallalang, creating unforgettable dining moments.',
+  },
+  amed: {
+    slug: 'amed',
+    label: 'Amed',
+    h1: 'Private Chef Amed — East Bali Seafood Dining',
+    title: 'Private Chef Amed | East Bali Seafood Dining — myCHEF',
+    description: 'Seafood-forward private chef services in Amed. Fresh catch menus and quiet villa dining.',
+    intro: 'In Amed, we leverage the morning’s fresh catch to deliver exceptional seafood-led menus.',
+  },
+  lovina: {
+    slug: 'lovina',
+    label: 'Lovina',
+    h1: 'Private Chef Lovina — North Bali Villa Dining',
+    title: 'Private Chef Lovina | North Bali Villa Dining — myCHEF',
+    description: 'Private chef and catering in Lovina. Family-style dinners and sunrise breakfast service.',
+    intro: 'myCHEF serves the tranquil villas of north Bali with calm, professional service that complements the relaxed pace of life.',
+  },
+  candidasa: {
+    slug: 'candidasa',
+    label: 'Candidasa',
+    h1: 'Private Chef Candidasa — Coastal Villa Dining',
+    title: 'Private Chef Candidasa | Coastal Villa Dining — myCHEF',
+    description: 'Premium private chef services in Candidasa. Oceanfront catering and intimate plated dinners.',
+    intro: 'Our Candidasa service focuses on coastal elegance, delivering refined Mediterranean and Balinese menus.',
+  },
+  'padang-bai': {
+    slug: 'padang-bai',
+    label: 'Padang Bai',
+    h1: 'Private Chef Padang Bai — Port-Side Private Dining',
+    title: 'Private Chef Padang Bai | Private Dining — myCHEF',
+    description: 'Private chef services in Padang Bai for villa guests and yacht departures.',
+    intro: 'We provide high-quality villa dining and specialized provisioning for guests staying in or departing from Padang Bai.',
+  },
+  ungasan: {
+    slug: 'ungasan',
+    label: 'Ungasan',
+    h1: 'Private Chef Ungasan — Clifftop Dining',
+    title: 'Private Chef Ungasan | Clifftop Dining — myCHEF',
+    description: 'High-end private chef and event catering in Ungasan. Michelin-trained teams.',
+    intro: 'Serving the premier estates of Ungasan, we deliver an ultra-premium hospitality layer.',
+  },
+  pecatu: {
+    slug: 'pecatu',
+    label: 'Pecatu',
+    h1: 'Private Chef Pecatu — Surf & Sunset Dining',
+    title: 'Private Chef Pecatu | Surf & Sunset Dining — myCHEF',
+    description: 'Private chef services in Pecatu. Sunset BBQs and recovery brunches.',
+    intro: 'In Pecatu, myCHEF provides the perfect culinary accompaniment to a day on the waves.',
   },
 }
 

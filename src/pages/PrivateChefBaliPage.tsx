@@ -46,7 +46,7 @@ const MENUS = [
     price: 'IDR 2,400,000++',
     tagline: 'Wagyu Tokusen in three forms. Open flame.',
     accent: '#8B4513',
-    image: '/generated/menu-wagyu.webp',
+    image: '/generated/luna-plating.webp',
     courses: [
       'My Beef Tartare — Wagyu chuck tender, polenta chips, cured egg, rocket, basil oil',
       'Ravioli di Coda — oxtail ragout, Grana Padano sauce, kale foam',

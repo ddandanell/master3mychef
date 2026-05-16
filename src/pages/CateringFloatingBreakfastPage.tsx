@@ -42,7 +42,7 @@ const FLOATING_PACKAGES = [
     minGuests: 'For 2',
   },
   {
-    image: '/generated/catering/floating-brunch.webp',
+    image: '/generated/catering/floating-breakfast.webp',
     title: 'Floating Brunch for 2',
     price: 'IDR 1,400,000/couple',
     priceNum: 1400000,
@@ -51,7 +51,7 @@ const FLOATING_PACKAGES = [
     minGuests: 'For 2',
   },
   {
-    image: '/generated/catering/floating-group.webp',
+    image: '/generated/catering/floating-breakfast.webp',
     title: 'Floating Group Brunch',
     price: 'IDR 750,000/person',
     priceNum: 750000,
@@ -131,11 +131,11 @@ const DELIVERY_STEPS = [
 
 const FLOATING_GALLERY = [
   '/generated/catering/floating-breakfast.webp',
-  '/generated/pkg-breakfast.webp',
-  '/generated/sol-breakfast.webp',
+  '/generated/party-brunch.webp',
+  '/generated/aura-toast.webp',
   '/generated/hub-catering.webp',
-  '/generated/aura-buffet.webp',
   '/generated/aura-tablescape.webp',
+  '/generated/section-romantic-dinner.webp',
 ]
 
 const FAQS = [
@@ -664,7 +664,7 @@ export default function CateringFloatingBreakfastPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/aura-breakfast.webp"
+            src="/generated/catering/floating-breakfast.webp"
             alt="Floating breakfast setup ready for guests in Bali villa pool"
             width={1920}
             height={1080}

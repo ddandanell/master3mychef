@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 

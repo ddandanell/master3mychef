@@ -15,7 +15,7 @@ const HERO_IMAGES: HeroImageConfig[] = [
   {
     pageName: 'Home / Bali Hub',
     pageRoute: '/',
-    imagePath: 'public/generated/bali-hub-hero.webp',
+    imagePath: 'public/generated/mychef-location-bali-hub-hero.webp',
     requiredFormat: 'webp',
     minWidth: 1200,
     maxSize: 300,
@@ -24,7 +24,7 @@ const HERO_IMAGES: HeroImageConfig[] = [
   {
     pageName: 'Fine Dining',
     pageRoute: '/fine-dining',
-    imagePath: 'public/generated/misc-hub-fine-dining-lg.webp',
+    imagePath: 'public/generated/mychef-misc-bali-hub-fine-dining.webp',
     requiredFormat: 'webp',
     minWidth: 1200,
     maxSize: 300,
@@ -33,7 +33,7 @@ const HERO_IMAGES: HeroImageConfig[] = [
   {
     pageName: 'Catering',
     pageRoute: '/catering',
-    imagePath: 'public/generated/misc-hub-catering-lg.webp',
+    imagePath: 'public/generated/mychef-catering-bali-hub-catering.webp',
     requiredFormat: 'webp',
     minWidth: 1200,
     maxSize: 300,
@@ -42,7 +42,7 @@ const HERO_IMAGES: HeroImageConfig[] = [
   {
     pageName: 'Events',
     pageRoute: '/events',
-    imagePath: 'public/generated/events-hub-events-md.webp',
+    imagePath: 'public/generated/mychef-events-bali-hub-events.webp',
     requiredFormat: 'webp',
     minWidth: 1200,
     maxSize: 300,
@@ -51,7 +51,7 @@ const HERO_IMAGES: HeroImageConfig[] = [
   {
     pageName: 'How It Works',
     pageRoute: '/getting-started',
-    imagePath: 'public/generated/misc-hero-how-it-works-lg.webp',
+    imagePath: 'public/generated/mychef-misc-bali-hero-how-it-works.webp',
     requiredFormat: 'webp',
     minWidth: 1200,
     maxSize: 300,

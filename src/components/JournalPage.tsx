@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { ArrowRight, Calendar } from 'lucide-react'
+import { ArrowRight, Calendar, Tag } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { JOURNAL_POSTS, JOURNAL_CATEGORIES } from '../data/siteArchitecture'
 
@@ -26,7 +26,7 @@ export function JournalIndexPage() {
       <SeoHead
         title="Bali Private Chef Journal | Tips, Menus & Guides — myCHEF"
         description="Guides, cost breakdowns, and culinary insights for hosting in Bali — private chef cost, villa kitchens, retreats, and rehearsal dinners."
-        ogImage="/misc-og-image-xl.webp"
+        ogImage="/mychef-misc-bali-og-image.webp"
         canonical={canonical}
         jsonLd={[
           localBusinessSchema,
@@ -41,8 +41,8 @@ export function JournalIndexPage() {
             '@type': 'ItemList',
             name: 'myCHEF Journal',
             url: canonical,
-            numberOfItems: posts.length,
-            itemListElement: posts.slice(0, 10).map((p, i) => ({
+            numberOfItems: allPosts.length,
+            itemListElement: allPosts.slice(0, 10).map((p: any, i: number) => ({
               '@type': 'ListItem',
               position: i + 1,
               url: `${SITE}/journal/${p.slug}`,
@@ -63,7 +63,7 @@ export function JournalIndexPage() {
         <div className="flex flex-wrap gap-2 mb-10">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border ${
+            className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded ${
               activeCategory === null
                 ? 'bg-[#C5A028] border-[#C5A028] text-white shadow-md'
                 : 'bg-white border-[#E8E6E3] text-[#4A4745] hover:border-[#C5A028]'
@@ -75,7 +75,7 @@ export function JournalIndexPage() {
             <button
               key={cat.slug}
               onClick={() => setActiveCategory(cat.slug)}
-              className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border ${
+              className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded ${
                 activeCategory === cat.slug
                   ? 'bg-[#C5A028] border-[#C5A028] text-white shadow-md'
                   : 'bg-white border-[#E8E6E3] text-[#4A4745] hover:border-[#C5A028]'
@@ -94,7 +94,7 @@ export function JournalIndexPage() {
                 <Link
                   key={post.slug}
                   to={`/journal/${post.slug}`}
-                  className="group flex flex-col rounded-2xl border border-[#E8E6E3] bg-white p-6 hover:border-[#C5A028] transition-colors"
+                  className="group flex flex-col rounded-2xl border border-[#E8E6E3] bg-white p-6 hover:border-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 >
                   <div className="flex items-center gap-2 text-xs text-[#4A4745] mb-3">
                     <Calendar className="w-3.5 h-3.5" />
@@ -121,9 +121,9 @@ export function JournalIndexPage() {
           <div className="text-center py-20 bg-white rounded-2xl border border-[#E8E6E3] flex flex-col items-center">
             <Tag className="w-12 h-12 text-[#E8E6E3] mb-4" />
             <p className="text-[#4A4745]">No articles found in this category yet.</p>
-            <button 
+            <button
               onClick={() => setActiveCategory(null)}
-              className="mt-4 text-[#C5A028] font-semibold uppercase tracking-[2px] text-sm"
+              className="mt-4 text-[#C5A028] font-semibold uppercase tracking-[2px] text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
             >
               Show all articles
             </button>
@@ -143,7 +143,7 @@ export function JournalPostPage() {
     return (
       <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A] px-6 pt-32 pb-16 max-w-[800px] mx-auto">
         <h1 className="font-playfair text-4xl mb-4">Article not found</h1>
-        <Link to="/journal" className="text-[#C5A028] font-semibold text-sm uppercase tracking-[2px]">
+        <Link to="/journal" className="text-[#C5A028] font-semibold text-sm uppercase tracking-[2px] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded inline-block">
           Back to Journal
         </Link>
       </main>
@@ -152,6 +152,11 @@ export function JournalPostPage() {
 
   const canonical = `${SITE}/journal/${post.slug}`
   const category = JOURNAL_CATEGORIES.find((c) => c.slug === post.category)
+  
+  const postIndex = JOURNAL_POSTS.findIndex((p) => p.slug === slug)
+  const prevPost = postIndex < JOURNAL_POSTS.length - 1 ? JOURNAL_POSTS[postIndex + 1] : null
+  const nextPost = postIndex > 0 ? JOURNAL_POSTS[postIndex - 1] : null
+
   const relatedPosts = [...JOURNAL_POSTS]
     .filter((candidate) => candidate.slug !== post.slug)
     .sort((a, b) => {
@@ -167,7 +172,7 @@ export function JournalPostPage() {
         title={post.title}
         description={post.excerpt}
         canonical={canonical}
-        ogImage="/misc-og-image-xl.webp"
+        ogImage="/mychef-misc-bali-og-image.webp"
         ogType="article"
         jsonLd={[
           localBusinessSchema,
@@ -207,6 +212,37 @@ export function JournalPostPage() {
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
+        {/* Prev/Next Navigation */}
+        <div className="mt-16 grid grid-cols-2 gap-4 border-t border-[#E8E6E3] pt-8">
+          {prevPost ? (
+            <Link
+              to={`/journal/${prevPost.slug}`}
+              className="group flex flex-col items-start text-left focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+            >
+              <span className="text-[10px] uppercase tracking-[2px] text-[#8A8785] mb-2 flex items-center gap-1">
+                <ArrowRight className="w-3 h-3 rotate-180" /> Previous Article
+              </span>
+              <span className="font-playfair text-lg group-hover:text-[#C5A028] transition-colors line-clamp-2">
+                {prevPost.title}
+              </span>
+            </Link>
+          ) : <div />}
+          
+          {nextPost ? (
+            <Link
+              to={`/journal/${nextPost.slug}`}
+              className="group flex flex-col items-end text-right focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+            >
+              <span className="text-[10px] uppercase tracking-[2px] text-[#8A8785] mb-2 flex items-center gap-1">
+                Next Article <ArrowRight className="w-3 h-3" />
+              </span>
+              <span className="font-playfair text-lg group-hover:text-[#C5A028] transition-colors line-clamp-2">
+                {nextPost.title}
+              </span>
+            </Link>
+          ) : <div />}
+        </div>
+
         <div className="mt-12 rounded-2xl border border-[#E8E6E3] bg-white p-6 md:p-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
@@ -215,7 +251,7 @@ export function JournalPostPage() {
             </div>
             <Link
               to="/journal"
-              className="inline-flex items-center gap-2 text-[#C5A028] font-semibold text-sm uppercase tracking-[2px]"
+              className="inline-flex items-center gap-2 text-[#C5A028] font-semibold text-sm uppercase tracking-[2px] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
             >
               View all articles <ArrowRight className="w-4 h-4" />
             </Link>
@@ -225,7 +261,7 @@ export function JournalPostPage() {
               <Link
                 key={relatedPost.slug}
                 to={`/journal/${relatedPost.slug}`}
-                className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]"
+                className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <p className="text-xs uppercase tracking-[2px] text-[#C5A028] mb-2">{relatedPost.readTime}</p>
                 <h3 className="font-playfair text-xl mb-2">{relatedPost.title}</h3>
@@ -238,7 +274,7 @@ export function JournalPostPage() {
         <div className="mt-8 pt-8 border-t border-[#E8E6E3]">
           <Link
             to="/journal"
-            className="inline-flex items-center gap-2 text-[#C5A028] font-semibold text-sm uppercase tracking-[2px]"
+            className="inline-flex items-center gap-2 text-[#C5A028] font-semibold text-sm uppercase tracking-[2px] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
           >
             <ArrowRight className="w-4 h-4 rotate-180" /> All articles
           </Link>

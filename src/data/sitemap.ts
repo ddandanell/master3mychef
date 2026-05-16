@@ -102,6 +102,59 @@ export const MENUS: { slug: string; name: string; description: string }[] = [
 
 export const LANDING_PAGES: { slug: string; title: string; description: string; date?: string; content?: string }[] = [
   {
+    slug: 'villa-bbq-catering-bali',
+    title: 'Villa BBQ Catering Bali | Best Private BBQ Experiences',
+    description: 'The #1 villa BBQ catering service in Bali. Fresh grills, chef-led service, and full setup for your villa poolside party. From IDR 450k per person.',
+    date: '2026-05-17',
+    content: `<h2>The Ultimate Villa BBQ Experience in Bali</h2>
+<p>Bali is the global capital of villa living, and nothing anchors a Bali holiday like a private BBQ poolside. myCHEF transforms your villa garden into a professional grill station, handling everything from charcoal management to the final cleanup.</p>
+<h2>Why Choose a Private Villa BBQ?</h2>
+<ul>
+<li><strong>No Traffic Stress</strong> — Avoid the 1-hour drive to Jimbaran; we bring the fresh seafood and grills to your door.</li>
+<li><strong>Total Privacy</strong> — Enjoy your evening in swimwear by your own pool, with no other tables or time limits.</li>
+<li><strong>Chef-Led Quality</strong> — Every BBQ is managed by a professional chef who understands temperature control, hygiene, and timing.</li>
+</ul>
+<h2>What is Included in Our BBQ Packages?</h2>
+<p>Our <a href="/catering/bbq-catering" class="text-[#C5A028] hover:underline font-medium">BBQ catering</a> is a full-service operation. We bring the grill, the high-quality charcoal, all necessary tableware, and a team that shops, cooks, serves, and cleans. You simply choose your proteins — from Jimbaran-style snapper and jumbo prawns to Australian Wagyu and marinated chicken skewers.</p>
+<h2>Perfect for Every Occasion</h2>
+<p>Whether you are hosting a <strong>milestone birthday</strong>, a <strong>wedding rehearsal dinner</strong>, or just a <strong>relaxed family arrival night</strong>, our BBQ service scales to your needs. We serve groups from 8 to 200 guests anywhere in Bali, including Seminyak, Canggu, Ubud, and Uluwatu.</p>
+<p>Ready to plan your evening? <a href="/book" class="text-[#C5A028] hover:underline font-medium">Request a BBQ proposal here</a> or message us on WhatsApp for a same-day quote.</p>`,
+  },
+  {
+    slug: 'bali-wedding-catering-packages',
+    title: 'Bali Wedding Catering Packages 2026 | Private Estate Weddings',
+    description: 'Transparent wedding catering packages for Bali villa weddings. Plated dinners, buffets, and cocktail receptions with full service coordination.',
+    date: '2026-05-17',
+    content: `<h2>Wedding Catering Built for Bali Villa Estates</h2>
+<p>Planning a wedding in a Bali villa requires more than just a menu; it requires a logistics team that understands the island\'s unique estate environments. myCHEF provides comprehensive <a href="/events/weddings" class="text-[#C5A028] hover:underline font-medium">wedding catering packages</a> that handle the food, the bar, the staff, and the hospitality flow from start to finish.</p>
+<h2>2026 Wedding Service Formats</h2>
+<ul>
+<li><strong>Intimate Plated Service</strong> — Ideal for elopements and small estate weddings (10–30 guests). Multi-course Michelin-standard menus.</li>
+<li><strong>The Elegant Buffet</strong> — Our most popular choice for 40+ guests. High-end stations with live carving, pasta, and Balinese specialties.</li>
+<li><strong>Family-Style Sharing</strong> — Long-table feasts that encourage social connection and warmth.</li>
+</ul>
+<h2>Logistics You Can Trust</h2>
+<p>We know the kitchens of Bali\'s top wedding villas. We bring our own power generators if needed, professional-grade hot boxes to ensure food temperature, and a service brigade briefed on the highest international standards. When you book a <a href="/events" class="text-[#C5A028] hover:underline font-medium">myCHEF event</a>, you are booking peace of mind.</p>
+<p>Speak with Olivia, our Head of Events, to receive a custom proposal and <a href="/help/wedding-guide" class="text-[#C5A028] hover:underline font-medium">view our planning guide</a>.</p>`,
+  },
+  {
+    slug: 'michelin-private-chef-bali-prices',
+    title: 'Michelin Private Chef Bali Prices | 2026 Cost Guide',
+    description: 'Transparent pricing for Michelin-standard private chef experiences in Bali. Cost breakdowns for tasting menus, villa dinners, and groceries.',
+    date: '2026-05-17',
+    content: `<h2>What Does a Michelin-Level Chef Cost in Bali?</h2>
+<p>Luxury private dining should be extraordinary, but the pricing should be transparent. At myCHEF, we follow a strict no-hidden-fee policy. Our <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining experiences</a> are priced per guest, including the chef fee, service team, and all equipment.</p>
+<h2>Price Breakdown (2026 Standards)</h2>
+<ul>
+<li><strong>Mediterranean Tasting Menus</strong> — Starting from IDR 2,200,000++ per guest.</li>
+<li><strong>Wagyu & Seafood Specialists</strong> — Starting from IDR 2,400,000++ per guest.</li>
+<li><strong>Private Chef Table</strong> — A unique counter-side experience from IDR 2,800,000++ per guest.</li>
+</ul>
+<h2>The myCHEF Value Proposition</h2>
+<p>While restaurant prices in Bali have surged, a <a href="/fine-dining/private-chef-bali" class="text-[#C5A028] hover:underline font-medium">private chef booking</a> often provides better value for groups. You avoid the 300% wine markups, the transport costs to Seminyak or Ubud, and the 21% tax/service charge common in hotels. Most importantly, you get a dedicated Michelin-trained team focused entirely on your table.</p>
+<p>Use our <a href="/calculator" class="text-[#C5A028] hover:underline font-medium">online pricing calculator</a> to build a budget for your specific dates and guest count.</p>`,
+  },
+  {
     slug: 'best-private-chef-indonesia',
     title: 'Best Private Chef in Indonesia',
     description: 'Top-rated private chefs across Indonesia — Bali, Jakarta, and beyond. Background-checked, fluent in international cuisine.',

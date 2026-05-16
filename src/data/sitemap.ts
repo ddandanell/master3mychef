@@ -285,6 +285,34 @@ export const BLOG_POSTS = [
     date: '2026-05-18',
     content: `<p>myCHEF Indonesia: Now serving Jakarta with the same Michelin-trained standards.</p>`,
   },
+  {
+    slug: 'private-chef-vs-villa-staff-bali',
+    title: 'Private Chef vs. Villa Staff: Understanding the Difference in Bali',
+    description: 'Why hiring a specialized private chef beats relying on general villa staff for your milestone dinner.',
+    date: '2026-05-17',
+    content: `<h2>The Difference Between Cooking and Hospitality</h2><p>While many Bali villas come with staff who can cook, a professional private chef brings a level of culinary craft and event pacing that general staff cannot match. A private chef handles the full lifecycle of the meal: from sourcing the premium ingredients to the final cleanup, allowing the villa staff to focus on their core duties.</p>`,
+  },
+  {
+    slug: 'bali-private-chef-cost-guide-2026',
+    title: 'The 2026 Bali Private Chef Cost Guide: Menus, Groceries, and Tips',
+    description: 'A transparent breakdown of what to expect when booking a private chef in Bali this year.',
+    date: '2026-05-17',
+    content: `<h2>Transparent Pricing for Bali Private Dining</h2><p>Understanding the cost of a private chef in Bali involves looking at chef fees, grocery budgets, and service expectations. In 2026, a standard private chef dinner in Bali starts from $85 per session plus the cost of ingredients. For larger groups, catering packages starting from $35 per person offer excellent value.</p>`,
+  },
+  {
+    slug: 'villa-wedding-catering-logistics-bali',
+    title: 'Planning a Villa Wedding in Bali? The Essential Catering Logistics Guide',
+    description: 'From kitchen requirements to service flow, here is what you need to know for your villa wedding catering.',
+    date: '2026-05-17',
+    content: `<h2>Successful Villa Wedding Catering Logistics</h2><p>Catering a wedding in a private villa requires careful planning around power, water, access, and service flow. Unlike a hotel, a villa kitchen often needs augmentation with professional equipment, specialized staff, and clear run sheets to ensure a seamless guest experience.</p>`,
+  },
+  {
+    slug: 'yoga-retreat-meal-planning-bali',
+    title: 'Yoga Retreat Meal Planning: Nutritional Integrity for Bali Retreats',
+    description: 'How we design retreat menus that balance detoxification with culinary satisfaction.',
+    date: '2026-05-17',
+    content: `<h2>Nourishing the Mind and Body</h2><p>Our retreat catering focus is on nutrient-dense, plant-forward menus that support the intensive physical and mental work of a yoga retreat. We work with retreat leaders to design menus that are both detoxifying and satisfying, ensuring guests have the energy they need for their practice.</p>`,
+  },
 ]
 
 export function buildSitemap(): SitemapEntry[] {
@@ -352,6 +380,18 @@ export function buildSitemap(): SitemapEntry[] {
     content: b.content,
   }))
 
+  const pillarSubPages: SitemapEntry[] = Object.values(PILLARS).flatMap((p) =>
+    p.subPages.map((s) => ({
+      path: `${p.url}/${s.slug}`,
+      type: 'service',
+      title: s.title,
+      description: s.description,
+      priority: 0.9,
+      changefreq: 'weekly' as const,
+      slug: s.slug,
+    }))
+  )
+
   // Supporting info pages
   const infoPages: SitemapEntry[] = [
     { path: '/locations', type: 'info', title: 'Private Chef Locations Bali | myCHEF', description: 'Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, and beyond.', priority: 0.8, changefreq: 'monthly' },
@@ -367,6 +407,7 @@ export function buildSitemap(): SitemapEntry[] {
     ...landing,
     ...guides,
     ...blogPosts,
+    ...pillarSubPages,
     ...infoPages,
   ]
 }

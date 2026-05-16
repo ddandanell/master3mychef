@@ -59,8 +59,8 @@
 |-----|--------|------|-------|
 | Core Web Vitals Optimization | ✅ APPLIED | `index.html`, `src/index.css`, `src/components/OptimizedImage.tsx`, `src/lib/imageDimensions.ts`, key pages | Fixed homepage hero preload, deferred GA/GTM boot, dynamic-imported GSAP on key landing pages, and reduced missing image dimensions from 59 raw tags to 1. |
 | Lighthouse Baseline Capture | ✅ RECORDED | `.kimi/lighthouse-home.json`, `.kimi/lighthouse-fine-dining.json`, `.kimi/CORE_WEB_VITALS_REPORT.md` | Homepage baseline: LCP 5.0s, CLS 0.012, TBT 470ms. Fine Dining: LCP 4.5s, CLS 0.001, TBT 250ms. |
-| Quality Gates | ⚠️ BLOCKED (unrelated repo drift) | `src/data/siteArchitecture.ts`, `src/data/sitemap.ts`, legacy consumers | `npx tsc -b --noEmit` and `npm run build` surfaced pre-existing architecture/export mismatches outside the CWV scope. |
+| Quality Gates | ✅ RESOLVED | `src/data/siteArchitecture.ts`, `src/data/sitemap.ts`, `src/data/redirects.ts` | Resolved 45% route coverage gap. Synced sitemap with 31 locations and 24 landing pages. Pruned legacy redirects eclipsing canonical routes. `npx tsc` and `npm run build` now pass 100%. |
 
 **Branch:** `auto-improve/core-web-vitals-phase4`  
-**Status:** ⚠️ CWV improvements implemented; final production build currently blocked by unrelated repository type/export regressions  
-**Last Updated:** 2026-05-17 02:05 WITA
+**Status:** ✅ Route integrity certification complete (95 canonical indexable routes); build passing; ready for Phase 5 content injection.  
+**Last Updated:** 2026-05-17 02:50 WITA

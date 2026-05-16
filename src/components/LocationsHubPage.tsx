@@ -148,16 +148,14 @@ export default function LocationsHubPage() {
                   to={`/locations/${loc.slug}`}
                   className="group relative overflow-hidden rounded-2xl border border-black/5 bg-white hover:shadow-xl transition-all duration-300"
                 >
-                  {details?.image && (
-                    <div className="h-56 overflow-hidden">
-                      <OptimizedImage
-                        src={details.image}
-                        alt={loc.label}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
+                  <div className="h-56 overflow-hidden bg-[#E5E3E0]">
+                    <OptimizedImage
+                      src={details?.image || '/generated/bali-locations-sunset.webp'}
+                      alt={loc.label}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
                   <div className="p-7">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2">
@@ -233,26 +231,13 @@ export default function LocationsHubPage() {
           <div className="rounded-2xl border border-black/5 bg-white px-6 py-8">
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Detailed Service Areas</p>
             <div className="flex flex-wrap gap-2.5">
-              {[
-                { label: 'Seminyak', href: '/locations/seminyak' },
-                { label: 'Canggu', href: '/locations/canggu' },
-                { label: 'Berawa', href: '/locations/berawa' },
-                { label: 'Pererenan', href: '/locations/pererenan' },
-                { label: 'Ubud', href: '/locations/ubud' },
-                { label: 'Uluwatu', href: '/locations/uluwatu' },
-                { label: 'Bingin', href: '/locations/bukit' },
-                { label: 'Nusa Dua', href: '/locations/nusa-dua' },
-                { label: 'Jimbaran', href: '/locations/jimbaran' },
-                { label: 'Sanur', href: '/locations/sanur' },
-                { label: 'Jakarta', href: '/jakarta' },
-                { label: 'Menteng', href: '/private-chef-menteng' },
-              ].map((link) => (
+              {locations.sort((a, b) => a.label.localeCompare(b.label)).map((loc) => (
                 <Link
-                  key={link.label}
-                  to={link.href}
+                  key={loc.slug}
+                  to={`/locations/${loc.slug}`}
                   className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-white"
                 >
-                  {link.label}
+                  {loc.label}
                 </Link>
               ))}
             </div>

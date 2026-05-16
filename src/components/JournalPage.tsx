@@ -3,13 +3,23 @@ import { ArrowRight, Calendar } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { JOURNAL_POSTS, JOURNAL_CATEGORIES } from '../data/siteArchitecture'
 
+import { useState, useMemo } from 'react'
+
 const SITE = 'https://mychef.id'
 
 export function JournalIndexPage() {
+  const [activeCategory, setActiveCategory] = useState<string | null>(null)
   const canonical = `${SITE}/journal`
-  const posts = [...JOURNAL_POSTS].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  
+  const allPosts = useMemo(() => 
+    [...JOURNAL_POSTS].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
+    []
   )
+
+  const filteredPosts = useMemo(() => {
+    if (!activeCategory) return allPosts
+    return allPosts.filter(p => p.category === activeCategory)
+  }, [activeCategory, allPosts])
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
@@ -49,32 +59,76 @@ export function JournalIndexPage() {
           Practical guides for hosting in Bali — from hiring a private chef to planning villa events.
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((post) => {
-            const category = JOURNAL_CATEGORIES.find((c) => c.slug === post.category)
-            return (
-              <Link
-                key={post.slug}
-                to={`/journal/${post.slug}`}
-                className="group flex flex-col rounded-2xl border border-[#E8E6E3] bg-white p-6 hover:border-[#C5A028] transition-colors"
-              >
-                <div className="flex items-center gap-2 text-xs text-[#4A4745] mb-3">
-                  <Calendar className="w-3.5 h-3.5" />
-                  <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-                  <span>· {post.readTime}</span>
-                  {category && <span className="text-[#C5A028]">· {category.label}</span>}
-                </div>
-                <h3 className="font-playfair text-xl mb-3 group-hover:text-[#C5A028] transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-sm text-[#4A4745] leading-relaxed flex-1">{post.excerpt}</p>
-                <div className="mt-4 flex items-center gap-1 text-sm font-semibold text-[#C5A028]">
-                  Read <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </div>
-              </Link>
-            )
-          })}
+        {/* Category Filter */}
+        <div className="flex flex-wrap gap-2 mb-10">
+          <button
+            onClick={() => setActiveCategory(null)}
+            className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border ${
+              activeCategory === null
+                ? 'bg-[#C5A028] border-[#C5A028] text-white shadow-md'
+                : 'bg-white border-[#E8E6E3] text-[#4A4745] hover:border-[#C5A028]'
+            }`}
+          >
+            All Articles
+          </button>
+          {JOURNAL_CATEGORIES.map((cat) => (
+            <button
+              key={cat.slug}
+              onClick={() => setActiveCategory(cat.slug)}
+              className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border ${
+                activeCategory === cat.slug
+                  ? 'bg-[#C5A028] border-[#C5A028] text-white shadow-md'
+                  : 'bg-white border-[#E8E6E3] text-[#4A4745] hover:border-[#C5A028]'
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
         </div>
+
+        {filteredPosts.length > 0 ? (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredPosts.map((post) => {
+              const category = JOURNAL_CATEGORIES.find((c) => c.slug === post.category)
+              return (
+                <Link
+                  key={post.slug}
+                  to={`/journal/${post.slug}`}
+                  className="group flex flex-col rounded-2xl border border-[#E8E6E3] bg-white p-6 hover:border-[#C5A028] transition-colors"
+                >
+                  <div className="flex items-center gap-2 text-xs text-[#4A4745] mb-3">
+                    <Calendar className="w-3.5 h-3.5" />
+                    <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                    {category && (
+                      <>
+                        <span>·</span>
+                        <span className="text-[#C5A028] font-medium">{category.label}</span>
+                      </>
+                    )}
+                  </div>
+                  <h3 className="font-playfair text-xl mb-3 group-hover:text-[#C5A028] transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-[#4A4745] leading-relaxed flex-1">{post.excerpt}</p>
+                  <div className="mt-4 flex items-center gap-1 text-sm font-semibold text-[#C5A028]">
+                    Read <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        ) : (
+          <div className="text-center py-20 bg-white rounded-2xl border border-[#E8E6E3] flex flex-col items-center">
+            <Tag className="w-12 h-12 text-[#E8E6E3] mb-4" />
+            <p className="text-[#4A4745]">No articles found in this category yet.</p>
+            <button 
+              onClick={() => setActiveCategory(null)}
+              className="mt-4 text-[#C5A028] font-semibold uppercase tracking-[2px] text-sm"
+            >
+              Show all articles
+            </button>
+          </div>
+        )}
       </section>
     </main>
   )

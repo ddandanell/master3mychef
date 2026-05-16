@@ -26,6 +26,161 @@
       "permanent": true
     },
     {
+      "source": "/seminyak",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/canggu",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/uluwatu",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/ubud",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/sanur",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/nusa-dua",
+      "destination": "/locations/nusa-dua",
+      "permanent": true
+    },
+    {
+      "source": "/jimbaran",
+      "destination": "/locations/jimbaran",
+      "permanent": true
+    },
+    {
+      "source": "/pererenan",
+      "destination": "/locations/pererenan",
+      "permanent": true
+    },
+    {
+      "source": "/bukit",
+      "destination": "/locations/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/berawa",
+      "destination": "/locations/berawa",
+      "permanent": true
+    },
+    {
+      "source": "/kuta",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/legian",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/kerobokan",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/petitenget",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/tanah-lot",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/tabanan",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/denpasar",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/gianyar",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/tegallalang",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/amed",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/lovina",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/candidasa",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/padang-bai",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/ungasan",
+      "destination": "/locations/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/pecatu",
+      "destination": "/locations/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/jakarta",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/menteng",
+      "destination": "/locations/menteng",
+      "permanent": true
+    },
+    {
+      "source": "/kemang",
+      "destination": "/locations/kemang",
+      "permanent": true
+    },
+    {
+      "source": "/scbd",
+      "destination": "/locations/scbd",
+      "permanent": true
+    },
+    {
+      "source": "/pondok-indah",
+      "destination": "/locations/pondok-indah",
+      "permanent": true
+    },
+    {
+      "source": "/bsd",
+      "destination": "/locations/bsd",
+      "permanent": true
+    },
+    {
       "source": "/echo-beach-private-chef",
       "destination": "/locations/canggu",
       "permanent": true

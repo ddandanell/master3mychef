@@ -31,8 +31,40 @@ export const REDIRECTS: Redirect[] = [
   { from: '/join', to: '/staffing', reason: 'Systems plan: /join → /staffing/' },
   { from: '/partners', to: '/staffing/for-villa-managers', reason: 'Systems plan: /partners → /staffing/for-villa-managers/' },
 
-  // --- Areas consolidation → /locations/[area] ---
-  // (Legacy redirects removed to allow dedicated location pages to rank)
+  // --- Areas consolidation & canonicalization → /locations/[area] ---
+  { from: '/seminyak', to: '/locations/seminyak', reason: 'Canonicalize to /locations/' },
+  { from: '/canggu', to: '/locations/canggu', reason: 'Canonicalize to /locations/' },
+  { from: '/uluwatu', to: '/locations/uluwatu', reason: 'Canonicalize to /locations/' },
+  { from: '/ubud', to: '/locations/ubud', reason: 'Canonicalize to /locations/' },
+  { from: '/sanur', to: '/locations/sanur', reason: 'Canonicalize to /locations/' },
+  { from: '/nusa-dua', to: '/locations/nusa-dua', reason: 'Canonicalize to /locations/' },
+  { from: '/jimbaran', to: '/locations/jimbaran', reason: 'Canonicalize to /locations/' },
+  { from: '/pererenan', to: '/locations/pererenan', reason: 'Canonicalize to /locations/' },
+  { from: '/bukit', to: '/locations/bukit', reason: 'Canonicalize to /locations/' },
+  { from: '/berawa', to: '/locations/berawa', reason: 'Canonicalize to /locations/' },
+
+  { from: '/kuta', to: '/locations/seminyak', reason: 'Lower-end tourist hub adjacent to Seminyak.' },
+  { from: '/legian', to: '/locations/seminyak', reason: 'Adjacent to Seminyak.' },
+  { from: '/kerobokan', to: '/locations/seminyak', reason: 'Sub-neighborhood of Seminyak.' },
+  { from: '/petitenget', to: '/locations/seminyak', reason: 'Sub-neighborhood of Seminyak.' },
+  { from: '/tanah-lot', to: '/locations/canggu', reason: 'West coast cluster with Canggu.' },
+  { from: '/tabanan', to: '/locations/canggu', reason: 'West coast — Canggu chefs travel there.' },
+  { from: '/denpasar', to: '/locations/sanur', reason: 'Greater Denpasar area — Sanur is closest serviced.' },
+  { from: '/gianyar', to: '/locations/ubud', reason: 'Gianyar regency — Ubud is the chef base.' },
+  { from: '/tegallalang', to: '/locations/ubud', reason: 'Ubud regency.' },
+  { from: '/amed', to: '/locations/sanur', reason: 'East coast — limited service from Sanur base.' },
+  { from: '/lovina', to: '/locations/sanur', reason: 'North coast — limited service.' },
+  { from: '/candidasa', to: '/locations/sanur', reason: 'East Bali — limited service.' },
+  { from: '/padang-bai', to: '/locations/sanur', reason: 'East Bali — limited service.' },
+  { from: '/ungasan', to: '/locations/bukit', reason: 'Sub-area of the Bukit Peninsula.' },
+  { from: '/pecatu', to: '/locations/bukit', reason: 'Sub-area of the Bukit Peninsula.' },
+
+  { from: '/jakarta', to: '/locations/jakarta', reason: 'Canonicalize to /locations/' },
+  { from: '/menteng', to: '/locations/menteng', reason: 'Canonicalize to /locations/' },
+  { from: '/kemang', to: '/locations/kemang', reason: 'Canonicalize to /locations/' },
+  { from: '/scbd', to: '/locations/scbd', reason: 'Canonicalize to /locations/' },
+  { from: '/pondok-indah', to: '/locations/pondok-indah', reason: 'Canonicalize to /locations/' },
+  { from: '/bsd', to: '/locations/bsd', reason: 'Canonicalize to /locations/' },
 
   // --- Micro-areas (private-chef variant) → /locations/ ---
   { from: '/echo-beach-private-chef', to: '/locations/canggu', reason: 'Echo Beach is in Canggu.' },

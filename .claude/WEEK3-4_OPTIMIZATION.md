@@ -16,9 +16,24 @@ Implement critical and high-priority optimizations identified from SEO audit, ve
 ## Implementation Framework
 
 ### Critical Issues (Fix ASAP - May 25-27)
-Issues that block indexing or cause penalties.
+**Status**: All critical issues either resolved or verified as non-existent in current codebase.
 
-**Pending SEO audit results...**
+#### CRITICAL #1: Homepage Hero Image ✓
+**Status**: COMPLETED (May 16, 2026)
+**Solution**: Build-time validation system prevents accidental deletion
+- `scripts/validate-critical-assets.ts` runs at prebuild and postbuild
+- Critical assets protected in npm hooks
+- CSS fallback styling for image failures
+- Runtime error handling on hero image
+
+#### CRITICAL #2: SEO Foundation ✓
+**Status**: COMPLETED (May 13-17, 2026)
+- index.html updated with full meta tags, OG, Twitter Card
+- LocalBusiness JSON-LD with NAP and service area
+- robots.txt and sitemap.xml deployed
+- All 9 routes indexed and discoverable
+
+No blocking critical issues remaining. Proceed to HIGH priority optimization items.
 
 Template for each critical issue:
 ```
@@ -35,17 +50,85 @@ Template for each critical issue:
 ```
 
 ### High Priority (Fix by May 31 - Week 3)
-Issues that significantly impact rankings.
+Issues that significantly impact rankings and user experience.
 
-**Pending SEO audit results...**
+#### HIGH #1: Founder Name Consistency ✓
+**Status**: COMPLETED
+**Verified**: "Adriano" is canonical across all pages (FineDiningChefsPage, PressPage)
+- No remaining "Antonio" references
+- Lineage narrative consolidated
 
-Timeline:
-- May 25: Start High #1, #2
-- May 26: Complete High #1, #2
-- May 27: Start High #3, #4
-- May 28: Complete High #3, #4
-- May 29-30: Start High #5, #6
-- May 31: Complete High #5, #6
+#### HIGH #2: Terms & Cancellation Pages ✓
+**Status**: COMPLETED
+**Verified**: Both pages have comprehensive, professional content
+- TermsPage.tsx: 8 sections + FAQs (bookings, deposits, payment, changes, cancellations, pricing, legal, contact)
+- CancellationPage.tsx: Client policy tiers + Chef policy + FAQs
+- Both have proper schema markup and SEO structure
+
+#### HIGH #3: Create Missing Image Assets (NEW FOCUS)
+**Impact**: Open Graph/favicon + social sharing, branding visibility
+**Effort**: 2 hours
+**Assets to create**:
+- `/public/og-image.webp` (1200×630) — social preview (wordmark + hero food)
+- `/public/favicon.svg` — vector favicon
+- `/public/favicon-32.png` — 32×32 PNG (fallback)
+- `/public/apple-touch-icon.png` — 180×180 PNG (iOS bookmark)
+**Referenced in**: index.html (lines 16-20)
+**Steps**:
+1. Use existing assets from `/public/generated/` as source material
+2. Design OG image: myCHEF logo + hero food photo, 1200×630
+3. Convert to WebP (primary), JPG fallback, optimize for <100KB
+4. Generate favicon variants from logo
+5. Test in social preview tools (Facebook, Twitter OG checker)
+**Verification**: 
+- All images exist in public/
+- Social share preview shows correct image
+- Favicon appears in browser tab
+
+#### HIGH #4: Contact Info Consistency Audit (NEW FOCUS)
+**Impact**: Trust signals, conversion consistency
+**Effort**: 0.5 hours
+**Canonical values**: 
+- Phone: +62 822-3756-5997
+- Email: indonesia@mychef.id
+**Steps**:
+1. Audit all pages for phone/email mentions
+2. Verify Footer, Contact, Terms, CancellationPage all use canonical
+3. Update any outdated phone numbers
+4. Verify WhatsApp links use correct number
+**Files to audit**: Footer, Contact, PartnersPage, CateringPage, TermsPage, CancellationPage
+**Verification**: grep confirms all pages use canonical contact info
+
+#### HIGH #5: Image Optimization Pass (NEW FOCUS)
+**Impact**: Performance (LCP, CLS), bundle size reduction
+**Effort**: 2.5 hours
+**Current state**: 30+ JPGs and PNGs in `/public/generated/`
+**Action items**:
+1. Convert hero images to AVIF + WebP with JPG fallback
+2. Add responsive srcset for mobile/tablet/desktop sizes
+3. Audit for unused images; remove if not referenced
+4. Target: 40-60% file-size reduction
+**Expected improvement**: LCP <2.5s, measurable mobile performance gain
+**Tools**: ImageMagick, Google PageSpeed Insights, Lighthouse
+
+#### HIGH #6: SEO Content & Metadata Audit (NEW FOCUS)
+**Impact**: Click-through rate, ranking relevance
+**Effort**: 1.5 hours
+**Action items**:
+1. Verify all pages have unique, descriptive title tags (<60 chars)
+2. Verify all pages have meta descriptions (<155 chars)
+3. Check H1 tags are present and unique per page
+4. Audit page links: target <100 total links per page
+5. Verify schema markup is valid (JSON-LD)
+**Tools**: Lighthouse audit, schema validator, SEO extensions
+
+Timeline (Updated):
+- May 25: Continue baseline data collection
+- May 26-27: Assets creation (OG, favicon)
+- May 27-28: Image optimization + srcset
+- May 29: Contact info audit + metadata verification
+- May 30: Deploy optimizations + monitor field data
+- May 31: Analyze results, prepare Week 4 roadmap
 
 ### Medium Priority (Jun 1-4 - Week 4)
 Optimization opportunities without immediate ranking impact.

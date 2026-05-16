@@ -24,7 +24,7 @@ export const localBusinessSchema = {
   description: 'Private chef, catering, events, and staffing services in Bali',
   url: 'https://mychef.id',
   telephone: '+62-822-3756-5997',
-  email: 'hello@mychef.id',
+  email: 'indonesia@mychef.id',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',

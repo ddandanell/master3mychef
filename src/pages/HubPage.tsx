@@ -309,12 +309,12 @@ export default function HubPage() {
         ogImage={getPageMeta('home').ogImage}
         jsonLd={homeSchemas}
       />
-      {/* HERO — luxury brand identity with Michelin-trained founder story front and centre */}
+      {/* HERO — premium brand identity with Michelin-trained founder story front and centre */}
       <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-20 pt-16 md:pb-32 md:pt-[72px]" style={{ background: 'var(--u-bg)' }}>
         <div className="mb-10 md:mb-14">
           <div className="relative min-h-[calc(100vh-64px)] overflow-hidden md:min-h-[calc(100vh-72px)]">
             <img
-              src="/generated/home-hero-ivory-villa.png"
+              src="/generated/bali-hub-hero.webp"
               alt="Luxury private dining table in a Bali villa at sunset"
               width={1536}
               height={1024}
@@ -428,7 +428,7 @@ export default function HubPage() {
       <section
         className="relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
         style={{
-          backgroundImage: 'url(/generated/hero-how-it-works.png)',
+          backgroundImage: 'url(/generated/hero-how-it-works.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -897,7 +897,7 @@ export default function HubPage() {
               <h2 className="u-heading text-4xl md:text-5xl mb-6">For Villa & Airbnb Owners</h2>
               <div className="gold-arc mb-8" />
               <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
-                Elevate your guests' experience by partnering with myCHEF. We currently work with 560+ luxury villas across Bali. Whatever your guests need, we lift everything we touch with excellence.
+                Elevate your guests' experience by partnering with myCHEF. We currently work with 560+ private villas across Bali. Whatever your guests need, we lift everything we touch with excellence.
               </p>
               <div className="space-y-4 mb-8">
                 {[

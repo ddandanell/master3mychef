@@ -30,7 +30,7 @@ const STAFFING_ROLES = [
     role: 'Butler Service',
     description: 'High-end household management, guest services, discretion',
     training: 'Formal protocols, household management, anticipatory service',
-    bestFor: 'Extended stays, private villas, luxury service',
+    bestFor: 'Extended stays, private villas, high-end service',
     priceEstimate: 'IDR 800K–1.5M per day',
   },
   {

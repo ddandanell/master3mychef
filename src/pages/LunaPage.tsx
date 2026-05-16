@@ -166,7 +166,7 @@ const THE_FOUR = [
     role: 'Pastry.',
     origin: 'North Bali',
     image: '/generated/chef-ni-putu-asri.webp',
-    bio: 'Born in a village in north Bali. Trained at a culinary school in Denpasar, then worked in pastry at a luxury resort in Nusa Dua, where she grew frustrated by the industrial scale of it — sheet trays of identical cakes for the breakfast buffet, made by a kitchen of fifteen. Adriano met her in 2023 at a wedding she had been hired to bake for. The dessert was the best thing on the table. He found her two days later. She left the resort the following month and trained with Adriano for nine months — the longest training any of the four has done. The lady fingers in the tiramisu are baked the morning of the dinner. The Tenerina cake is hers.',
+    bio: 'Born in a village in north Bali. Trained at a culinary school in Denpasar, then worked in pastry at a high-end resort in Nusa Dua, where she grew frustrated by the industrial scale of it — sheet trays of identical cakes for the breakfast buffet, made by a kitchen of fifteen. Adriano met her in 2023 at a wedding she had been hired to bake for. The dessert was the best thing on the table. He found her two days later. She left the resort the following month and trained with Adriano for nine months — the longest training any of the four has done. The lady fingers in the tiramisu are baked the morning of the dinner. The Tenerina cake is hers.',
   },
 ]
 
@@ -316,7 +316,7 @@ export default function LunaPage() {
       </div>
 
       {/*
-        Hero — luxury hotel booking aesthetic.
+        Hero — refined hotel booking aesthetic.
         Full-screen cinematic image, dark gradient overlay (not flat tint), tiny gold
         eyebrow, oversized serif headline, two CTAs: Order Now (opens the side panel)
         and Explore Menu (anchors to #our-menus). Generous spacing — no badges, no chips.
@@ -324,34 +324,37 @@ export default function LunaPage() {
       <section className="relative min-h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-hero-v2.webp"
-            alt="Private villa dining at golden hour"
-            width={1920}
-            height={1080}
+            src="/generated/luna-hero-v3.webp"
+            alt="European friends enjoying a candlelit Michelin-level dinner on a private Bali villa terrace with Indonesian staff"
+            width={1216}
+            height={832}
             fetchPriority="high"
             decoding="async"
             className="w-full h-full object-cover" />
           <div
             className="absolute inset-0"
-            style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.90))', backdropFilter: 'blur(2px)' }}
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
           />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 pt-32 max-w-[1280px] mx-auto w-full">
           <Breadcrumb items={[{ label: 'Fine Dining' }]} theme="dark" className="px-0 pt-0 pb-8" />
           <p
-            className="luna-hero-label text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-7"
+            className="luna-hero-label text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-7 font-semibold"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Private Chef Bali — Fine Dining in Your Villa
+            Chapter 1 — Private Villa Fine Dining
           </p>
           <h1
             className="luna-hero-title mb-8 max-w-[920px] text-[2.55rem] leading-[1.04] text-white sm:text-[3.25rem] md:text-7xl lg:text-8xl"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Private Chef Bali — Fine Dining Tasting Menu in Your Villa
+            A Michelin-Trained Chef, in Your Bali Villa.
           </h1>
-          <p className="luna-hero-sub mb-12 max-w-[640px] text-base leading-relaxed text-white/[75%] md:text-xl">
-            Two and a half to three hours of Mediterranean fine dining, served privately in your villa. From IDR 2,200,000++ per guest. Comparable restaurant experiences start at IDR 3.5M+ with transport and wine markup.
+          <p className="luna-hero-sub mb-12 max-w-[640px] text-base leading-relaxed text-white/[85%] md:text-xl font-medium">
+            Mediterranean and Wagyu tasting menus served privately in your villa. We handle groceries, table setting, service, and cleanup. From IDR 2,200,000++ per guest.
           </p>
           <div className="luna-hero-cta mb-4 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button
@@ -916,7 +919,7 @@ export default function LunaPage() {
             </p>
           </div>
 
-          {/* Best Partner diploma — luxury credential */}
+          {/* Best Partner diploma — premium credential */}
           <div className="mt-16 flex justify-center">
             <BestPartnerBadge variant="light" width={300} />
           </div>

@@ -55,7 +55,7 @@ export default function CertifiedPartnerPage() {
             'Background-checked staff',
             'Food safety certified kitchens',
             'Insurance and liability coverage',
-            'Trusted by 50+ luxury villas',
+            'Trusted by 50+ private villas',
           ].map((b) => (
             <li key={b} className="flex items-start gap-3 bg-white border border-[#E5E3E0] rounded-xl px-4 py-3.5">
               <Check className="w-4 h-4 text-[#C5A028] mt-1 flex-shrink-0" /> <span>{b}</span>

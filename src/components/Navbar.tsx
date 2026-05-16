@@ -1,7 +1,34 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, type LucideIcon } from 'lucide-react'
+import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, Search, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, type LucideIcon } from 'lucide-react'
 import { PILLARS, PRIMARY_CTA } from '../data/siteArchitecture'
+import SearchOverlay from './SearchOverlay'
+
+
+// Map icon names to Lucide React icon components
+const iconMap: Record<string, LucideIcon> = {
+  User,
+  Users,
+  Utensils: UtensilsCrossed,
+  Heart,
+  Crown,
+  BookOpen,
+  Flame,
+  Truck,
+  Leaf,
+  Coffee,
+  Mountain,
+  Music,
+  Baby,
+  Wine,
+  Cake,
+}
+
+function getIconComponent(iconName?: string): LucideIcon | null {
+  if (!iconName) return null
+  return iconMap[iconName] || null
+}
+
 
 interface NavItem {
   label: string
@@ -20,11 +47,12 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Help', href: '/help', icon: HelpCircle, accent: '#C5A028' },
 ]
 
-const NAV_SUBPAGES = Object.values(PILLARS).reduce<Record<string, { label: string; href: string }[]>>(
+const NAV_SUBPAGES = Object.values(PILLARS).reduce<Record<string, { label: string; href: string; icon?: string }[]>>(
   (acc, pillar) => {
     acc[pillar.url] = pillar.subPages.map((page) => ({
       label: page.label,
       href: `${pillar.url}/${page.slug}`,
+      icon: page.icon,
     }))
     return acc
   },
@@ -39,6 +67,7 @@ function isActivePath(current: string, target: string): boolean {
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
   const location = useLocation()
 
@@ -55,23 +84,27 @@ export default function Navbar() {
   }
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    document.body.style.overflow = (menuOpen || searchOpen) ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
-  }, [menuOpen])
+  }, [menuOpen, searchOpen])
 
   useEffect(() => {
-    if (!menuOpen) return undefined
+    if (!menuOpen && !searchOpen) return undefined
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setMenuOpen(false)
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+        setSearchOpen(false)
+      }
     }
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [menuOpen])
+  }, [menuOpen, searchOpen])
 
   return (
     <>
+      <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
       {/* ── Full-width luxury navbar at top ── */}
       <nav
         aria-label="Main navigation"
@@ -128,13 +161,19 @@ export default function Navbar() {
                             <Link
                               key={subpage.href}
                               to={subpage.href}
-                              className={`block rounded-xl px-3 py-2.5 text-sm transition-colors ${
+                              className={`flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm transition-colors ${
                                 subpageActive
                                   ? 'bg-[#C5A028]/12 text-[#C5A028]'
                                   : 'text-gray-700 hover:bg-[#C5A028]/8 hover:text-[#C5A028]'
                               }`}
                               style={{ fontFamily: "'Playfair Display', serif" }}
                             >
+                              {subpage.icon && getIconComponent(subpage.icon) && 
+                                (() => {
+                                  const Icon = getIconComponent(subpage.icon)
+                                  return Icon ? <Icon className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} /> : null
+                                })()
+                              }
                               {subpage.label}
                             </Link>
                           )
@@ -147,27 +186,38 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Book Now Button */}
-          <Link
-            to={PRIMARY_CTA.href}
-            className="hidden md:flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#C5A028] text-black font-semibold text-[12px] uppercase tracking-[0.08em] transition-all hover:bg-[#D4B43A] hover:shadow-lg hover:shadow-[#C5A028]/30 flex-shrink-0"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
-          >
-            Book Now
-            <span className="text-[14px]">→</span>
-          </Link>
+          <div className="flex items-center gap-4">
+            {/* Search Trigger */}
+            <button
+              onClick={() => setSearchOpen(true)}
+              className="p-2 text-white/70 hover:text-[#C5A028] transition-colors"
+              aria-label="Search myCHEF"
+            >
+              <Search className="w-5 h-5" strokeWidth={1.5} />
+            </button>
 
-          {/* Hamburger — mobile/tablet (hidden on lg+) */}
-          <button
-            type="button"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-navigation"
-            className="flex h-10 w-10 items-center justify-center text-white transition-colors hover:text-[#C5A028] lg:hidden flex-shrink-0"
-          >
-            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {/* Book Now Button */}
+            <Link
+              to={PRIMARY_CTA.href}
+              className="hidden md:flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#C5A028] text-black font-semibold text-[12px] uppercase tracking-[0.08em] transition-all hover:bg-[#D4B43A] hover:shadow-lg hover:shadow-[#C5A028]/30 flex-shrink-0"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Book Now
+              <span className="text-[14px]">→</span>
+            </Link>
+
+            {/* Hamburger — mobile/tablet (hidden on lg+) */}
+            <button
+              type="button"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-navigation"
+              className="flex h-10 w-10 items-center justify-center text-white transition-colors hover:text-[#C5A028] lg:hidden flex-shrink-0"
+            >
+              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -249,13 +299,19 @@ export default function Navbar() {
                                   setMenuOpen(false)
                                   setExpandedItems(new Set())
                                 }}
-                                className={`block rounded-xl px-3 py-2 text-sm transition-colors ${
+                                className={`flex items-center gap-2 rounded-xl px-3 py-2 text-sm transition-colors ${
                                   subpageActive
                                     ? 'bg-[#C5A028]/10 text-[#C5A028]'
                                     : 'text-gray-600 hover:bg-gray-100 hover:text-[#C5A028]'
                                 }`}
                                 style={{ fontFamily: "'Playfair Display', serif" }}
                               >
+                                {subpage.icon && getIconComponent(subpage.icon) && 
+                                  (() => {
+                                    const Icon = getIconComponent(subpage.icon)
+                                    return Icon ? <Icon className="w-4 h-4 text-[#C5A028] flex-shrink-0" strokeWidth={1.5} /> : null
+                                  })()
+                                }
                                 {subpage.label}
                               </Link>
                             )

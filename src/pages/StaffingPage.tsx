@@ -75,7 +75,7 @@ const SERVICES = [
     slug: '/staffing/villa-staff',
     tag: 'B2B & Bulk',
     price: 'Contact for pricing',
-    desc: 'Butlers, housekeepers, villa managers, waiters, and event staff — placed as individuals or as a full team. Used by villa management companies, hotels, and luxury property operators across Bali.',
+    desc: 'Butlers, housekeepers, villa managers, waiters, and event staff — placed as individuals or as a full team. Used by villa management companies, hotels, and private property operators across Bali.',
     features: [
       'Villa managers & household managers',
       'Butlers, waiters, housekeepers',
@@ -204,7 +204,7 @@ export default function StaffingPage() {
       <section className="relative w-full flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
         <img
           src="/generated/staffing-hero.webp"
-          alt="Professional hospitality staff at a luxury Bali villa"
+          alt="Professional hospitality staff at a private Bali villa"
           width={1920}
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"

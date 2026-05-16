@@ -190,7 +190,7 @@ export default function PremiumPage({
       />
 
       {/* ── HERO ── */}
-      <section className="relative flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
+      <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         {heroImage && (
           <div className="absolute inset-0">
             <img
@@ -202,10 +202,16 @@ export default function PremiumPage({
               decoding="async"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              }}
+            />
+            <div className="absolute inset-0 bg-black/20 md:hidden" />
           </div>
         )}
-        <div className="relative z-10 w-full px-6 md:px-12 pb-16 md:pb-24 pt-32">
+        <div className="relative z-10 w-full px-6 md:px-12 py-16 md:py-24 pt-32">
           <div className="max-w-[900px]">
             <Breadcrumb items={[{ label: title }]} theme="dark" className="px-0 pt-0 pb-8" />
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">

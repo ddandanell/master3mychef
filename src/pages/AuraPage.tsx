@@ -109,19 +109,19 @@ const PACKAGES: PartyPackage[] = [
     addons: ['Live saxophone', 'Luxury cigar station', 'Champagne service'],
   },
   {
-    slug: 'luxury-birthday-experience',
+    slug: 'private-birthday-experience',
     name: 'Luxury Birthday Experience',
     concept: 'Complete birthday setup with food, drinks, styling, cake and atmosphere planning.',
     image: '/generated/party-birthday.webp',
     price: 'From IDR 1,650,000++ / guest',
     min: 'Min. 8 guests',
     includes: ['Custom dinner', 'Birthday cake', 'Styling assistance', 'Waiters', 'Cocktail welcome', 'Cleanup'],
-    addons: ['Balloon styling', 'Live entertainment', 'Photographer', 'Luxury signage'],
+    addons: ['Balloon styling', 'Live entertainment', 'Photographer', 'Custom event signage'],
   },
   {
     slug: 'recovery-brunch-chill',
     name: 'Recovery Brunch & Chill',
-    concept: 'Luxury recovery brunch after weddings, birthdays or villa parties.',
+    concept: 'Refined recovery brunch after weddings, birthdays or villa parties.',
     image: '/generated/party-brunch.webp',
     price: 'From IDR 450,000++ / guest',
     min: 'Min. 6 guests',
@@ -131,7 +131,7 @@ const PACKAGES: PartyPackage[] = [
   {
     slug: 'bali-bbq-beer-garden',
     name: 'Bali BBQ & Beer Garden',
-    concept: 'Relaxed premium beer-and-grill atmosphere inspired by luxury beach clubs.',
+    concept: 'Relaxed premium beer-and-grill atmosphere inspired by iconic beach clubs.',
     image: '/generated/party-beer.webp',
     price: 'From IDR 650,000++ / guest',
     min: 'Min. 10 guests',
@@ -141,12 +141,12 @@ const PACKAGES: PartyPackage[] = [
   {
     slug: 'ultimate-villa-celebration',
     name: 'Ultimate Villa Celebration',
-    concept: 'Full-scale luxury villa event production. The flagship package.',
+    concept: 'Full-scale private villa event production. The flagship package.',
     image: '/generated/party-ultimate.webp',
     price: 'From IDR 2,950,000++ / guest',
     min: 'Min. 20 guests',
-    includes: ['Full catering', 'Premium cocktails', 'Staffing', 'Styling', 'Event coordination', 'Luxury table setup', 'Music coordination', 'Cleanup'],
-    addons: ['Full production lighting', 'Stage setup', 'Performers', 'Live band', 'Fireworks', 'Luxury transportation'],
+    includes: ['Full catering', 'Premium cocktails', 'Staffing', 'Styling', 'Event coordination', 'Fine-dining table setup', 'Music coordination', 'Cleanup'],
+    addons: ['Full production lighting', 'Stage setup', 'Performers', 'Live band', 'Fireworks', 'Premium transportation'],
   },
 ]
 
@@ -602,7 +602,7 @@ export default function AuraPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { slug: 'aura-wedding', alt: 'Bali villa wedding reception catered by myCHEF' },
-              { slug: 'aura-corporate', alt: 'Bali corporate event dining set up in a luxury villa' },
+              { slug: 'aura-corporate', alt: 'Bali corporate event dining set up in a private villa' },
               { slug: 'aura-toast', alt: 'Champagne toast at a private Bali villa party' },
               { slug: 'aura-tablescape', alt: 'Long-table tablescape styled for a Bali villa event' },
             ].map((img) => (

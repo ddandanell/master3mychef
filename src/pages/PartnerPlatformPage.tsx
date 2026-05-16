@@ -21,7 +21,7 @@ const WA = '6282237565997'
 const SITE = 'https://mychef.id'
 
 // /partner-platform — the deep "why partner with us" page for villa groups,
-// hospitality operators, and luxury boutique brands. Storytelling structure
+// hospitality operators, and boutique brands. Storytelling structure
 // with a pricing-card comparison for Co-Branded vs White-Label.
 //
 // Hero + mid-page band images generated via BFL FLUX (see public/generated/).
@@ -72,7 +72,7 @@ const DASHBOARD_BLOCKS = [
 const AUDIENCE = [
   { name: 'Luxury villas', desc: 'Independent high-end villas competing on guest experience.' },
   { name: 'Villa management companies', desc: 'Multi-property operators adding a premium hospitality layer.' },
-  { name: 'Boutique resorts', desc: 'Small luxury resorts wanting private dining programs without an in-house F&B build.' },
+  { name: 'Boutique resorts', desc: 'Small boutique resorts wanting private dining programs without an in-house F&B build.' },
   { name: 'Hospitality groups', desc: 'Portfolios scaling premium service across multiple properties.' },
   { name: 'Concierge operators', desc: 'Independent concierges adding fine dining to their offering.' },
   { name: 'Luxury travel agencies', desc: 'High-touch agents planning end-to-end Bali itineraries.' },
@@ -104,7 +104,7 @@ export default function PartnerPlatformPage() {
       url: SITE,
     },
     areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
-    description: 'A villa dining partner platform that turns luxury Bali villas into Michelin-level private dining destinations — co-branded or fully white-label, with monthly commission and a transparent operational dashboard.',
+    description: 'A villa dining partner platform that turns private Bali villas into Michelin-level private dining destinations — co-branded or fully white-label, with monthly commission and a transparent operational dashboard.',
     url: `${SITE}/partner-platform`,
   }
 
@@ -112,7 +112,7 @@ export default function PartnerPlatformPage() {
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Partner Platform | Private Dining for Bali Villas — myCHEF"
-        description="Villa dining partner platform for luxury villas and management companies across Bali. Co-branded or white-label, monthly commission, transparent dashboard."
+        description="Villa dining partner platform for private villas and management companies across Bali. Co-branded or white-label, monthly commission, transparent dashboard."
         canonical={`${SITE}/partner-platform`}
         ogImage={`${SITE}/generated/partner-platform-hero.webp`}
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Partner Platform', `${SITE}/partner-platform`), jsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
@@ -122,7 +122,7 @@ export default function PartnerPlatformPage() {
       <section className="relative w-full min-h-[88vh] flex items-end overflow-hidden">
         <img
           src="/generated/partner-platform-hero.webp"
-          alt="Luxury Bali villa private dining setup at golden hour"
+          alt="Private Bali villa private dining setup at golden hour"
           width={1920}
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"
@@ -139,7 +139,7 @@ export default function PartnerPlatformPage() {
             Michelin-Level Private Dining for Bali Villas
           </h1>
           <p className="text-base md:text-xl text-white/[80%] mb-10 max-w-[720px] leading-relaxed">
-            A villa dining partner platform built for luxury villas, villa management companies, boutique hospitality brands, and premium operators across Bali.
+            A villa dining partner platform built for private villas, villa management companies, boutique hospitality brands, and premium operators across Bali.
           </p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
@@ -186,7 +186,7 @@ export default function PartnerPlatformPage() {
               Thousands of Bali villas offer near-identical amenities. Even high-end villas struggle to differentiate beyond architecture and photography.
             </p>
             <p className="text-[#4A4745] text-lg leading-relaxed">
-              Guests today are looking for experiences, personalisation, luxury service, storytelling, convenience, and exclusivity — and private dining inside the villa solves all of it at once.
+              Guests today are looking for experiences, personalisation, refined service, storytelling, convenience, and exclusivity — and private dining inside the villa solves all of it at once.
             </p>
           </div>
           <ul className="space-y-3 bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-7">
@@ -212,7 +212,7 @@ export default function PartnerPlatformPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-14 max-w-[760px] mx-auto">
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.35em] mb-4">03 — What we actually provide</p>
-            <h2 className="font-playfair text-4xl md:text-5xl leading-tight">A Michelin-level hospitality layer on top of luxury villas.</h2>
+            <h2 className="font-playfair text-4xl md:text-5xl leading-tight">A Michelin-level hospitality layer on top of private villas.</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-14">
@@ -543,7 +543,7 @@ export default function PartnerPlatformPage() {
             </a>
           </div>
           <p className="text-xs text-white/[45%] mt-10 italic">
-            myCHEF Partner Platform — controlled premium hospitality, the leading luxury villa dining network in Bali.
+            myCHEF Partner Platform — controlled premium hospitality, the leading private villa dining network in Bali.
           </p>
           <p className="text-xs text-white/[60%] mt-6">
             Already a guest looking to book? <Link to="/quote" className="text-[#C5A028] hover:underline">Get a quote</Link>.
@@ -562,3 +562,4 @@ function Stat({ label, value, accent = false }: { label: string; value: string; 
     </div>
   )
 }
+

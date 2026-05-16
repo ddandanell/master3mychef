@@ -170,7 +170,7 @@ const SECTIONS = [
     features: [
       { icon: Tag, title: 'Waiters / Servers', desc: 'From IDR 250,000 per hour. Minimum 4 hours. Professional table service for villa dinners and events.' },
       { icon: Tag, title: 'Bartenders', desc: 'From IDR 350,000 per hour. Minimum 4 hours. Cocktail preparation, bar setup, and drink service.' },
-      { icon: Tag, title: 'Butlers', desc: 'From IDR 400,000 per hour. Minimum 4 hours. Discreet, professional villa service for luxury estates.' },
+      { icon: Tag, title: 'Butlers', desc: 'From IDR 400,000 per hour. Minimum 4 hours. Discreet, professional villa service for private estates.' },
       { icon: Tag, title: 'Private Chef Placement', desc: 'From IDR 15,000,000 placement fee. Full-time live-in or live-out chef placement for villas and residences.' },
     ],
   },

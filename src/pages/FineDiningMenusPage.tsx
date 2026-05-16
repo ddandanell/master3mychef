@@ -64,7 +64,7 @@ const MENU_CARDS: MenuCard[] = [
     price: 'From IDR 2,400,000++ per person',
     description: 'A longer market-led menu with seven refined moments and optional wine pairing. Adriano selects the ingredients in the morning, then builds the dinner around what is exceptional that day. This is the fullest expression of the kitchen.',
     image: '/generated/luna-ingredients.webp',
-    imageAlt: 'Fresh luxury ingredients prepared for L Odyssee private chef menu in Bali',
+    imageAlt: 'Fresh market-fresh ingredients prepared for L Odyssee private chef menu in Bali',
     courses: ['2× Cold Opens', 'Pasta', 'Amuse', 'Protein', 'Pre-Dessert', 'Dessert'],
     winePairing: '+IDR 1,100,000 per person',
     dataSource: 'menus-odyssee-cta',
@@ -123,7 +123,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How fresh are the ingredients?',
-    a: 'Adriano and the team buy around the market that same morning whenever the menu calls for it. We do not build luxury dinners around frozen shortcuts. The menu follows what is beautiful and available that day.',
+    a: 'Adriano and the team buy around the market that same morning whenever the menu calls for it. We do not build fine-dining dinners around frozen shortcuts. The menu follows what is beautiful and available that day.',
   },
   {
     q: 'How far in advance should I book?',
@@ -176,8 +176,22 @@ export default function FineDiningMenusPage() {
             decoding="async"
             fetchPriority="high"
             className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-black/55" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
+        </div>
+
+        <div className="relative z-10 mx-auto w-full max-w-4xl px-6 pt-24 text-center text-white">
+          <Breadcrumb
+            items={[{ label: 'Fine Dining', href: '/fine-dining' }, { label: 'Our Menus' }]}
+            theme="dark"
+            className="justify-center mb-8"
+          />
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">Michelin-Trained Chefs</p>
         </div>
 
         <div className="absolute inset-x-0 top-0 z-20">

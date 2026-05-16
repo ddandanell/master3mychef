@@ -223,12 +223,15 @@ export default function App() {
             element={
               <InfoPage
                 title="Private Chef in Jakarta"
-                description="Private chef services in Jakarta — for residences, expat households, and corporate hospitality."
+                description="Michelin-trained standards, brought to private residences and corporate suites in Indonesia's capital. Experience the myCHEF standard in Jakarta."
                 slug="jakarta"
+                heroImage="/generated/jakarta-skyline.webp"
                 highlights={[
-                  'Background-checked Indonesian chefs',
-                  'Menteng, Kemang, SCBD, Pondok Indah, and beyond',
-                  'Multi-course dinners, weekly meal prep, and event catering',
+                  'Background-checked Indonesian chefs with international experience',
+                  'Coverage in Menteng, Kemang, SCBD, Pondok Indah, and BSD',
+                  'Multi-course fine dining, weekly meal prep, and corporate catering',
+                  'Complete at-home operations: we shop, cook, serve, and clean',
+                  'Bilingual guest relations for seamless coordination',
                 ]}
               />
             }
@@ -237,9 +240,17 @@ export default function App() {
             path="/private-chef-menteng"
             element={
               <InfoPage
-                title="Private Chef in Menteng, Jakarta"
-                description="Private chef services in Menteng, Central Jakarta — discreet, professional, and tailored to residences and embassy hospitality."
+                title="Private Chef in Menteng"
+                description="Discreet, professional private chef services for Jakarta's primary diplomatic and residential district. Tailored to embassy hospitality and private family residences."
                 slug="private-chef-menteng"
+                heroImage="/generated/jakarta-skyline.webp"
+                highlights={[
+                  'Discreet service for high-profile and diplomatic residences',
+                  'Specialized in formal multi-course hosting and embassy dinners',
+                  'Rigorous security and background vetting for all on-site staff',
+                  'Direct communication with Menteng-based guest relations',
+                  'Premium ingredient sourcing for international standards',
+                ]}
               />
             }
           />

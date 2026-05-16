@@ -296,7 +296,7 @@ export default function CateringFloatingBreakfastPage() {
                 A floating breakfast in Bali is one of the most iconic villa experiences. We deliver a styled bamboo tray loaded with tropical fruit, pastries, eggs, fresh juice, and coffee — floating directly in your private pool. It is romantic, effortless, and designed to be photographed.
               </p>
               <p className="text-[#4A4745] text-sm leading-relaxed mt-4">
-                Whether you are on honeymoon, celebrating a birthday, or simply want a slow luxury morning, our floating breakfast turns an ordinary pool into a magazine-worthy scene. Everything is prepared fresh, styled with flowers, and placed in your pool at your chosen time.
+                Whether you are on honeymoon, celebrating a birthday, or simply want a slow, refined morning, our floating breakfast turns an ordinary pool into a magazine-worthy scene. Everything is prepared fresh, styled with flowers, and placed in your pool at your chosen time.
               </p>
               <div className="grid grid-cols-2 gap-3 mt-6">
                 {['Bamboo floating tray', 'Tropical fruit & flowers', 'Fresh pastries & eggs', 'Juice, coffee & tea', 'Photo-ready styling', 'Chef-prepared food', 'Poolside delivery', 'Flexible timing'].map((item) => (

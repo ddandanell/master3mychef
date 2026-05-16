@@ -7,7 +7,7 @@ export default function Footer() {
   const locations = Object.values(LOCATIONS)
 
   return (
-    <footer className="bg-[#0A0A0A] text-white pt-16 pb-8">
+    <footer className="bg-[#0A0A0A] text-white pt-16 pb-8 noise-pattern">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Brand row */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">

@@ -65,7 +65,7 @@ const PACKAGES = [
     price: 'IDR 325,000/person',
     priceNum: 325000,
     includes: ['Premium styled grazing table', 'Artisan breads', 'Crackers', '6–8 cheeses', '4–5 cured meats', 'Marinated vegetables', 'Dips & spreads', 'Honey & chutney', 'Fresh & dried fruit', 'Nuts & seeds', 'Edible flowers', 'Labels & signage', 'Vegan version available'],
-    bestFor: 'Weddings, bridal showers, large villa celebrations, luxury events',
+    bestFor: 'Weddings, bridal showers, large villa celebrations, boutique events',
   },
   {
     title: 'Corporate Reception Table',
@@ -245,7 +245,7 @@ export default function CateringGrazingPage() {
             Grazing Tables Bali for Events, Villas, and Parties
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-2xl mx-auto">
-            Styled grazing tables with cheese, charcuterie, fruit, dips, bread, sweets, and event-ready presentation for relaxed luxury hosting.
+            Styled grazing tables with cheese, charcuterie, fruit, dips, bread, sweets, and event-ready presentation for relaxed, refined hosting.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a

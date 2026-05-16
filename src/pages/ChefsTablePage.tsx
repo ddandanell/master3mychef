@@ -100,7 +100,7 @@ export default function ChefsTablePage() {
         title="Chef's Table Bali | Adriano 7-Course Private Dining — myCHEF"
         description="Exclusive Chef's Table in your Bali villa: Adriano-led 7-course private dining with live commentary. Max 6 guests. IDR 3,500,000++ pp. Fri-Sat only."
         canonical={`${SITE}/fine-dining/chefs-table`}
-        ogImage={`${SITE}/generated/chefs-table-hero-luxury.png`}
+        ogImage={`${SITE}/generated/chefs-table-hero-private-dining.png`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema(
@@ -120,8 +120,8 @@ export default function ChefsTablePage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/chefs-table-hero-luxury.webp"
-            alt="Luxury private villa dinner service in Bali with candlelight and wine pairing"
+            src="/generated/chefs-table-hero-private-dining.webp"
+            alt="Fine dining private villa dinner service in Bali with candlelight and wine pairing"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
             className="w-full h-full object-cover" />

@@ -354,9 +354,13 @@ export default function EventsMainPage() {
           className="absolute inset-0 w-full h-full object-cover" />
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.10) 100%)' }}
+          style={{
+            background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+          }}
         />
+        <div className="absolute inset-0 bg-black/20 md:hidden" />
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-8 py-12 md:py-20 w-full flex flex-col justify-center h-full">
+          <Breadcrumb items={[{ label: 'Events' }]} theme="dark" className="px-0 pt-0 pb-8" />
           <p
             className="hero-fade text-[#C5A028] text-sm tracking-[0.4em] uppercase mb-6"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}

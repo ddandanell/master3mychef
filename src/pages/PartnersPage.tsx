@@ -69,7 +69,7 @@ const partnerBenefits = [
   {
     icon: ShieldCheck,
     title: 'Certified execution',
-    desc: 'Michelin-trained leadership, vetted teams, and SOP-led service designed for luxury villa operations.',
+    desc: 'Michelin-trained leadership, vetted teams, and SOP-led service designed for high-end villa operations.',
   },
 ]
 
@@ -210,7 +210,7 @@ export default function PartnersPage() {
               </div>
               <h2 className="font-playfair text-3xl mb-3">Need the myCHEF story fast?</h2>
               <p className="text-[#4A4745] text-sm leading-relaxed mb-6">
-                Request our media kit, founder background, approved brand details, and interview availability for Bali hospitality, villa dining, and luxury travel coverage.
+                Request our media kit, founder background, approved brand details, and interview availability for Bali hospitality, villa dining, and high-end travel coverage.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="#press-media" className="inline-flex items-center justify-center rounded-full bg-[#C5A028] px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#D5AF35] transition-colors">

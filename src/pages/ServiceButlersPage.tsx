@@ -39,7 +39,7 @@ const PRICING_TIERS = [
     price: 'IDR 2,500,000',
     unit: '/day',
     features: ['12-hour service', 'Full household management', 'Meal coordination', 'Vendor liaison', 'Inventory management', 'Event support'],
-    bestFor: 'Extended stays, luxury villas, high-net-worth guests',
+    bestFor: 'Extended stays, private villas, high-net-worth guests',
     highlight: true,
   },
   {
@@ -105,7 +105,7 @@ export default function ServiceButlersPage() {
           localBusinessSchema,
           detailedServiceSchema(
             'Butler Service Bali',
-            'myCHEF.id provides private butler service in Bali for villa stays, events, and luxury guest hosting. Our team manages service flow, guest requests, and discreet household coordination throughout the booking.',
+            'myCHEF.id provides private butler service in Bali for villa stays, events, and private guest hosting. Our team manages service flow, guest requests, and discreet household coordination throughout the booking.',
             `${SITE}/in-villa-service/butlers`,
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
@@ -113,19 +113,24 @@ export default function ServiceButlersPage() {
           breadcrumbSchema('Butler Service Bali', `${SITE}/in-villa-service/butlers`, 'In-Villa Service', `${SITE}/in-villa-service`),
         ]}
       />
-
-      <Breadcrumb items={[
-        { label: 'In-Villa Service', href: '/in-villa-service' },
-        { label: 'Butlers' },
-      ]} />
-
-      <section className="relative min-h-[85vh] flex items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="/generated/hub-villa.webp" alt="Professional butler at luxury Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
-          <div className="absolute inset-0 bg-black/70" />
-        </div>
-        <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 max-w-[1280px] mx-auto w-full">
-          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
+{/* Hero */}
+<section className="relative min-h-[85vh] flex items-center overflow-hidden">
+  <div className="absolute inset-0">
+    <img src="/generated/butler-service.webp" alt="Professional private butler in a private Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+    <div
+      className="absolute inset-0"
+      style={{
+        background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+      }}
+    />
+    <div className="absolute inset-0 bg-black/20 md:hidden" />
+  </div>
+  <div className="relative z-10 px-6 md:px-12 py-12 md:py-20 max-w-[1280px] mx-auto w-full text-white">
+    <Breadcrumb items={[
+      { label: 'In-Villa Service', href: '/in-villa-service' },
+      { label: 'Butlers' },
+    ]} theme="dark" className="px-0 pt-0 pb-8" />
+    <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
             Butler Service in Bali
           </h1>

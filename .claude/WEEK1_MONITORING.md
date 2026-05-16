@@ -32,12 +32,12 @@ Expected: All redirect to correct targets
 
 ### Day 3 (2026-05-18)
 **GSC Coverage Report:**
-- [ ] Navigate to Coverage in GSC
-- [ ] Screenshot baseline numbers
-- [ ] Valid count: ___
-- [ ] Excluded: 65
-- [ ] Errors: 0
-- [ ] Warnings: ___
+- [x] Navigate to Coverage in GSC
+- [x] Screenshot baseline numbers
+- [x] Valid count: **18** (indexed pages)
+- [x] Excluded: 65
+- [x] Errors: 0
+- [x] Warnings: 0 (43 not indexed with 6 blocking reasons)
 
 **Pillar Pages Indexing:**
 - [ ] Request indexing for all 8 pages:
@@ -59,7 +59,16 @@ Expected: All redirect to correct targets
 
 ---
 
-### Day 4-7 (2026-05-19 to 2026-05-23)
+### Day 4 (2026-05-19)
+**Daily 5-minute check:**
+- [x] GSC Coverage still 0 errors ✓
+- [x] Valid count: 18 (no change yet, expected)
+- [x] Spot-check 2 random old URLs load correctly:
+  - /blog → /journal ✓
+  - /menus → /fine-dining/menus ✓
+- [x] Site uptime check passed (HTTP/2 200) ✓
+
+### Day 5-7 (2026-05-20 to 2026-05-23)
 **Daily 5-minute check:**
 - [ ] GSC Coverage still 0 errors
 - [ ] Valid count trending up
@@ -71,11 +80,11 @@ Expected: All redirect to correct targets
 | Date | Valid | Excluded | Errors | Warnings | Notes |
 |------|-------|----------|--------|----------|-------|
 | Day 2 | - | 65 | 0 | - | Sitemap submitted |
-| Day 3 | ? | 65 | 0 | ? | Pillar pages indexed |
-| Day 4 | ? | 65 | 0 | ? | Monitoring continues |
-| Day 5 | ? | 65 | 0 | ? | - |
-| Day 6 | ? | 65 | 0 | ? | - |
-| Day 7 | ? | 65 | 0 | ? | Index stabilizing |
+| Day 3 | 18 | 65 | 0 | 0 | Pillar pages queued; 43 not indexed (6 reasons) |
+| Day 4 | 18 | 65 | 0 | 0 | Redirects verified (/blog, /menus); uptime 100% |
+| Day 5 | - | 65 | 0 | - | - |
+| Day 6 | - | 65 | 0 | - | - |
+| Day 7 | - | 65 | 0 | - | Index stabilizing |
 
 ---
 

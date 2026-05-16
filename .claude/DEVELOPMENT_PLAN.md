@@ -244,6 +244,14 @@
 - ✅ Build succeeds (4.72s)
 - ✅ TypeScript zero errors
 
+**Phase 3.5 — Bug Fixes & Visual Polish (May 16, Evening):**
+- ✅ Fixed broken images in HubPage.tsx (lines 766, 787: `/images/family-villa-dinner-cutout.png` → `/generated/hub-villa.webp`)
+- ✅ Removed unused import `CheckCircle` from WeddingGuidePage.tsx
+- ✅ Fixed duplicate closing code in AreaPage.tsx (removed lines 301-306 duplicate)
+- ✅ Added subtle noise texture pattern to Footer.tsx and created `.noise-pattern` utility class
+- ✅ Production build: `vite build` — zero errors, all assets injected correctly
+- ✅ Dev server verified: http://localhost:3000 running, HTTP 200, myCHEF marker confirmed
+
 **Phase 4 Todo:**
 - 🔲 Add 57 new redirects to src/data/redirects.ts
 - 🔲 Regenerate public/_redirects

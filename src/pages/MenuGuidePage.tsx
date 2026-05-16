@@ -92,14 +92,31 @@ export default function MenuGuidePage() {
         ]}
       />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-[#1A1A1A] to-[#2A2A2A] text-white py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <Link to="/help" className="text-[#C5A028] flex items-center gap-2 mb-6 hover:underline">
-            ← Back to Help
-          </Link>
-          <h1 className="text-5xl font-light mb-6">Menu Selection Guide</h1>
-          <p className="text-xl text-white/70">Explore cuisine types, dietary customization, and how to work with our chefs on your perfect menu.</p>
+      <section className="relative py-24 md:py-36 overflow-hidden flex items-center min-h-[60vh]">
+        <div className="absolute inset-0">
+          <img
+            src="/generated/guide-menu.webp"
+            alt="Indonesian chef discussing a menu with guests in a private Bali villa — myCHEF"
+            className="w-full h-full object-cover"
+            width={1344}
+            height={768}
+            fetchPriority="high"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-left text-white">
+          <Breadcrumb items={[{ label: 'Help', href: '/help' }, { label: 'Menu Guide' }]} theme="dark" className="px-0 pt-0 pb-8" />
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF Standards</p>
+          <h1 className="text-4xl md:text-7xl font-playfair mb-6">Menu Selection Guide</h1>
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
+            Explore cuisine types, dietary customization, and how our chefs craft the perfect menu for your Bali villa experience.
+          </p>
         </div>
       </section>
 

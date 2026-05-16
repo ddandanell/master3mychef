@@ -39,6 +39,7 @@ export interface SubPage {
   title: string
   description: string
   keywords: string[]
+  icon?: string
 }
 
 export interface Pillar {
@@ -121,6 +122,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'private-chef-bali',
         label: 'Private Chef in Bali',
+        icon: 'User',
         h1: 'Private Chef in Bali — Hire a Chef for Your Villa',
         title: 'Private Chef in Bali | Hire a Chef for Your Villa — myCHEF',
         description:
@@ -130,6 +132,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'tasting-menu',
         label: 'Tasting Menu',
+        icon: 'Utensils',
         h1: 'Tasting Menu in Bali — Multi-Course Private Dining',
         title: 'Tasting Menu Bali | Multi-Course Private Dining — myCHEF',
         description:
@@ -139,6 +142,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'romantic-dinner',
         label: 'Romantic Dinner',
+        icon: 'Heart',
         h1: 'Romantic Dinner in Bali — Private Villa Date Night',
         title: 'Romantic Dinner Bali | Private Villa Date Night — myCHEF',
         description:
@@ -157,6 +161,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'menus',
         label: 'Our Menus',
+        icon: 'BookOpen',
         h1: 'Private Chef Menus in Bali',
         title: 'Private Chef Menus Bali | Riviera & Odyssey — myCHEF',
         description:
@@ -166,6 +171,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'our-chefs',
         label: 'Our Chefs',
+        icon: 'Users',
         h1: 'Our Chefs — myCHEF Bali',
         title: 'Our Chefs Bali | Vetted Private Chefs — myCHEF',
         description:
@@ -207,6 +213,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'bbq-catering',
         label: 'BBQ Catering',
+        icon: 'Flame',
         h1: 'BBQ Catering in Bali — Villa BBQ for Groups',
         title: 'BBQ Catering Bali | Villa BBQ for Groups — myCHEF',
         description:
@@ -216,6 +223,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'buffet',
         label: 'Buffet Catering',
+        icon: 'Utensils',
         h1: 'Buffet Catering in Bali — Group Buffets for Villas',
         title: 'Buffet Catering Bali | Villa & Group Buffets — myCHEF',
         description:
@@ -225,6 +233,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'plated-catering',
         label: 'Plated Set Menu',
+        icon: 'Utensils',
         h1: 'Plated Set Menu Catering Bali — 3, 4, 5 Course',
         title: 'Plated Set Menu Catering Bali — myCHEF',
         description:
@@ -234,6 +243,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'drop-off-catering',
         label: 'Drop-Off Catering',
+        icon: 'Truck',
         h1: 'Drop-Off Catering in Bali — Delivered to Your Villa',
         title: 'Drop-Off Catering Bali | Delivered to Your Villa — myCHEF',
         description:
@@ -243,6 +253,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'babi-guling',
         label: 'Babi Guling',
+        icon: 'Flame',
         h1: 'Babi Guling Villa Catering Bali — Whole Pig Feasts',
         title: 'Babi Guling Villa Catering Bali — myCHEF',
         description:
@@ -252,6 +263,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'grazing-tables',
         label: 'Grazing Tables',
+        icon: 'Leaf',
         h1: 'Grazing Tables in Bali — Editorial Spreads for Villas',
         title: 'Grazing Tables Bali | Editorial Villa Spreads — myCHEF',
         description:
@@ -261,6 +273,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'floating-breakfast',
         label: 'Floating Breakfast',
+        icon: 'Coffee',
         h1: 'Floating Breakfast Bali — Villa Pool Tray Brunch',
         title: 'Floating Breakfast Bali — myCHEF',
         description:
@@ -270,6 +283,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'corporate-catering',
         label: 'Corporate Catering',
+        icon: 'Briefcase',
         h1: 'Corporate Catering Bali — Business Lunches & Event Catering',
         title: 'Corporate Catering Bali | Business Lunch & Event Catering',
         description:
@@ -279,6 +293,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'retreat-catering',
         label: 'Retreat Catering',
+        icon: 'Mountain',
         h1: 'Retreat Catering Bali — Yoga, Wellness & Group Meals',
         title: 'Retreat Catering Bali | Yoga, Wellness & Group Meals',
         description:
@@ -315,6 +330,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'weddings',
         label: 'Weddings',
+        icon: 'Heart',
         h1: 'Villa Weddings in Bali — Private Estate Weddings',
         title: 'Villa Weddings Bali | Private Estate Weddings — myCHEF',
         description:
@@ -324,6 +340,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'birthdays',
         label: 'Birthdays',
+        icon: 'Cake',
         h1: 'Birthday Parties in Bali — Private Villa Birthdays',
         title: 'Birthday Parties Bali | Private Villa Birthdays — myCHEF',
         description:
@@ -333,6 +350,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'anniversaries',
         label: 'Anniversaries',
+        icon: 'Heart',
         h1: 'Anniversary Celebrations in Bali — Private Villa Evenings',
         title: 'Anniversary Celebrations Bali | Private Villa — myCHEF',
         description:
@@ -342,6 +360,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'corporate-events',
         label: 'Corporate Events',
+        icon: 'Briefcase',
         h1: 'Corporate Events in Bali — Offsites, Dinners & Conferences',
         title: 'Corporate Events Bali | Offsites & Dinners — myCHEF',
         description:
@@ -351,6 +370,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'retreats',
         label: 'Retreats',
+        icon: 'Mountain',
         h1: 'Retreats in Bali — Wellness, Leadership & Mastermind',
         title: 'Retreats Bali | Wellness & Leadership — myCHEF',
         description:
@@ -360,6 +380,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'villa-parties',
         label: 'Villa Parties',
+        icon: 'Music',
         h1: 'Villa Parties in Bali — Private Cocktail & Dinner Parties',
         title: 'Villa Parties Bali | Private Cocktail & Dinner — myCHEF',
         description:
@@ -369,6 +390,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'baby-showers',
         label: 'Baby Showers',
+        icon: 'Baby',
         h1: 'Baby Shower Catering in Bali — Villa Brunch & Grazing',
         title: 'Baby Shower Catering Bali | Grazing & Brunch — myCHEF',
         description:
@@ -404,6 +426,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'waiters',
         label: 'Waiters',
+        icon: 'User',
         h1: 'Waiter Hire in Bali — Per-Shift Villa Waiters',
         title: 'Waiter Hire Bali | Per-Shift Villa Waiters — myCHEF',
         description:
@@ -413,6 +436,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'butlers',
         label: 'Butlers',
+        icon: 'User',
         h1: 'Butler Service in Bali — Villa Butlers Per Shift',
         title: 'Butler Service Bali | Villa Butlers Per Shift — myCHEF',
         description:
@@ -422,6 +446,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'bartenders',
         label: 'Bartenders',
+        icon: 'Wine',
         h1: 'Bartender Hire in Bali — Villa Bartenders',
         title: 'Bartender Hire Bali | Villa Bartenders — myCHEF',
         description:
@@ -431,6 +456,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'mixology',
         label: 'Mixology',
+        icon: 'Wine',
         h1: 'Mixology in Bali — Private Villa Cocktail Programs',
         title: 'Mixology Bali | Private Villa Cocktail Programs — myCHEF',
         description:
@@ -440,6 +466,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'sommelier',
         label: 'Sommelier',
+        icon: 'Wine',
         h1: 'Sommelier Service in Bali — Villa Wine Pairings',
         title: 'Sommelier Bali | Villa Wine Pairings — myCHEF',
         description:
@@ -449,6 +476,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       {
         slug: 'host-hostess',
         label: 'Host & Hostess',
+        icon: 'Users',
         h1: 'Host & Hostess Hire in Bali — Event & Villa Reception',
         title: 'Host & Hostess Hire Bali | Event Reception — myCHEF',
         description:

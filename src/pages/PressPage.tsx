@@ -31,7 +31,7 @@ const PRESS_MENTIONS = [
   {
     publication: 'Villas of Bali',
     quote:
-      'Trusted by luxury hosts and villa managers, myCHEF.id consistently delivers the kind of private dining guests remember long after checkout.',
+      'Trusted by high-end hosts and villa managers, myCHEF.id consistently delivers the kind of private dining guests remember long after checkout.',
     year: '2023',
   },
 ]
@@ -68,7 +68,7 @@ export default function PressPage() {
         ogImage={`${SITE}/generated/partner-platform-hero.webp`}
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Media', `${SITE}/press`), faqPageSchema([
           { question: 'How do I request a press kit for myCHEF.id?', answer: 'Press kits, high-resolution imagery, and interview requests can be arranged via WhatsApp at +62 822-3756-5997 or email indonesia@mychef.id. We respond within 24 hours.' },
-          { question: 'Has myCHEF.id been featured in the press?', answer: 'myCHEF.id has been covered by travel and lifestyle media for its Michelin-trained luxury private chef service in Bali, serving 12,000+ guests across 560+ villas and delivering 500+ events.' },
+          { question: 'Has myCHEF.id been featured in the press?', answer: 'myCHEF.id has been covered by travel and lifestyle media for its Michelin-trained private chef service in Bali, serving 12,000+ guests across 560+ villas and delivering 500+ events.' },
           { question: 'Can myCHEF.id arrange chef demonstrations for media?', answer: 'Yes — we can arrange live cooking demonstrations, villa dining press previews, and media experiences. Contact our team via WhatsApp to discuss coverage arrangements.' },
         ])]}
       />

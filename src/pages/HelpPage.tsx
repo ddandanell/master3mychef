@@ -103,18 +103,37 @@ export default function HelpPage() {
       />
 
       {/* Hero */}
-      <section className="relative bg-gradient-to-b from-[#1A1A1A] to-[#2A2A2A] py-20">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h1 className="text-5xl font-light text-white mb-6">Help & Support Center</h1>
-          <p className="text-xl text-white/70 mb-12">Guides, answers, and everything you need to book and manage your myCHEF experience.</p>
+      <section className="relative py-32 md:py-60 overflow-hidden flex items-center min-h-[70vh]">
+        <div className="absolute inset-0">
+          <img
+            src="/generated/help-hero.webp"
+            alt="Professional guest relations in a Bali villa — myCHEF help center"
+            className="w-full h-full object-cover"
+            width={1344}
+            height={768}
+            fetchPriority="high"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center text-white w-full">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair mb-8">How can we help?</h1>
+          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-14 leading-relaxed">
+            Everything you need to know about booking a private chef, managing catering, and planning villa events in Bali.
+          </p>
 
           {/* Quick Search */}
-          <div className="flex items-center gap-3 bg-white/10 rounded-full px-6 py-3 backdrop-blur max-w-md mx-auto border border-white/20">
-            <Search size={20} className="text-white/50" />
+          <div className="flex items-center gap-4 bg-white/10 rounded-full px-8 py-5 backdrop-blur-md border border-white/20 max-w-2xl mx-auto transition-all focus-within:bg-white/15 focus-within:border-[#C5A028]/50 shadow-2xl">
+            <Search size={26} className="text-[#C5A028]" />
             <input
               type="text"
-              placeholder="Search guides..."
-              className="bg-transparent text-white placeholder-white/50 flex-1 outline-none"
+              placeholder="Search for pricing, menus, service areas..."
+              className="bg-transparent text-white placeholder:text-white/40 flex-1 outline-none text-lg"
             />
           </div>
         </div>

@@ -113,19 +113,24 @@ export default function ServiceHostPage() {
           breadcrumbSchema('Host & Hostess Hire Bali', `${SITE}/in-villa-service/host-hostess`, 'In-Villa Service', `${SITE}/in-villa-service`),
         ]}
       />
-
-      <Breadcrumb items={[
-        { label: 'In-Villa Service', href: '/in-villa-service' },
-        { label: 'Host & Hostess' },
-      ]} />
-
-      <section className="relative min-h-[85vh] flex items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="/generated/trust-hosts.webp" alt="Professional hosts welcoming guests at Bali villa event" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
-          <div className="absolute inset-0 bg-black/70" />
-        </div>
-        <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 max-w-[1280px] mx-auto w-full">
-          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
+{/* Hero */}
+<section className="relative min-h-[85vh] flex items-center overflow-hidden">
+  <div className="absolute inset-0">
+    <img src="/generated/hub-staffing.webp" alt="Professional villa host greeting guests in Bali" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+    <div
+      className="absolute inset-0"
+      style={{
+        background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+      }}
+    />
+    <div className="absolute inset-0 bg-black/20 md:hidden" />
+  </div>
+  <div className="relative z-10 px-6 md:px-12 py-12 md:py-20 max-w-[1280px] mx-auto w-full text-white">
+    <Breadcrumb items={[
+      { label: 'In-Villa Service', href: '/in-villa-service' },
+      { label: 'Villa Hosts' },
+    ]} theme="dark" className="px-0 pt-0 pb-8" />
+    <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
             Host & Hostess Hire in Bali
           </h1>

@@ -149,7 +149,7 @@ const REVIEWS: Review[] = [
   },
   {
     name: 'Lucas · Seminyak',
-    location: 'Seminyak luxury villa',
+    location: 'Seminyak private villa',
     date: 'March 2025',
     eventType: 'Villa wedding for 80',
     category: 'Weddings',

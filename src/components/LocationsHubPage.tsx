@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { MapPin, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { LOCATIONS } from '../data/siteArchitecture'
+import Breadcrumb from './shared/Breadcrumb'
 
 const SITE = 'https://mychef.id'
 
@@ -9,52 +10,52 @@ const LOCATION_DETAILS = [
   {
     slug: 'seminyak',
     highlights: ['Beachfront villas', 'Luxury estates', 'Sunset dining'],
-    image: '/generated/city-seminyak.webp',
+    image: '/generated/bali-locations-sunset.webp',
   },
   {
     slug: 'canggu',
     highlights: ['Surf villas', 'Rice field views', 'Bohemian luxury'],
-    image: '/generated/city-canggu.webp',
+    image: '/generated/bali-hub-hero.webp',
   },
   {
     slug: 'ubud',
     highlights: ['Jungle retreats', 'Wellness focus', 'Rice terrace views'],
-    image: '/generated/city-ubud.webp',
+    image: '/generated/bali-locations-sunset.webp',
   },
   {
     slug: 'uluwatu',
     highlights: ['Cliffside estates', 'Ocean views', 'Wedding venues'],
-    image: '/generated/city-uluwatu.webp',
+    image: '/generated/hub-bali.webp',
   },
   {
     slug: 'nusa-dua',
     highlights: ['Resort villas', 'Family-friendly', 'Calm beaches'],
-    image: '/generated/city-nusa-dua.webp',
+    image: '/generated/bali-locations-sunset.webp',
   },
   {
     slug: 'jimbaran',
     highlights: ['Seafood tradition', 'Beach clubs', 'Sunset dinners'],
-    image: '/generated/city-jimbaran.webp',
+    image: '/generated/bali-hub-hero.webp',
   },
   {
     slug: 'sanur',
     highlights: ['Quiet beaches', 'Family villas', 'Relaxed pace'],
-    image: '/generated/city-sanur.webp',
+    image: '/generated/bali-locations-sunset.webp',
   },
   {
     slug: 'berawa',
     highlights: ['Modern villas', 'Beach club culture', 'Group events'],
-    image: '/generated/city-berawa.webp',
+    image: '/generated/hub-bali.webp',
   },
   {
     slug: 'pererenan',
     highlights: ['Design villas', 'Quiet atmosphere', 'Chef-friendly kitchens'],
-    image: '/generated/city-pererenan.webp',
+    image: '/generated/bali-locations-sunset.webp',
   },
   {
     slug: 'bukit',
     highlights: ['Clifftop premium', 'Surf villas', 'Ocean horizon'],
-    image: '/generated/city-bukit.webp',
+    image: '/generated/bali-hub-hero.webp',
   },
 ]
 
@@ -77,33 +78,38 @@ export default function LocationsHubPage() {
       />
 
       {/* Hero */}
-      <section className="relative flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
+      <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
             src="/generated/bali-locations-sunset.webp"
-            alt="Dramatic Bali sunset over tropical landscape"
+            alt="Dramatic Bali sunset over tropical landscape — myCHEF service areas"
             width={1920}
             height={1080}
             fetchPriority="high"
             decoding="async"
             className="w-full h-full object-cover object-center" />
-          {/* Left-leaning cinematic overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/15" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
-        <div className="relative z-10 w-full px-6 md:px-12 pb-16 md:pb-24 pt-32">
-          <div className="max-w-[900px]">
-            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF</p>
-            <h1 className="font-playfair text-4xl md:text-6xl text-white leading-[1.1] mb-6">
-              Private Chef Across Bali
+        <div className="relative z-10 w-full px-6 md:px-12 py-20 max-w-[1100px] mx-auto text-left text-white">
+          <div className="max-w-[750px]">
+            <Breadcrumb items={[{ label: 'Locations' }]} theme="dark" className="px-0 pt-0 pb-8" />
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF Coverage</p>
+            <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8">
+              Private Chef & Hospitality<br /><span className="italic">Across Bali & Jakarta</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/[80%] max-w-[600px] mb-8">
-              From Seminyak's beachfront villas to Ubud's jungle retreats — myCHEF serves every major region in Bali with local knowledge, vetted chefs and same-day confirmation.
+            <p className="text-lg md:text-xl text-white/[85%] leading-relaxed mb-10 max-w-[600px]">
+              From Seminyak's beachfront estates to Menteng's diplomatic residences — myCHEF serves every major region with vetted teams and local operations.
             </p>
             <div className="flex flex-wrap gap-3">
-              {['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Berawa', 'Pererenan', 'Bukit'].map((loc) => (
-                <span key={loc} className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full">
-                  <MapPin className="w-3.5 h-3.5 text-[#C5A028]" /> {loc}
+              {['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Jakarta'].map((loc) => (
+                <span key={loc} className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-[11px] font-bold uppercase tracking-wider px-4 py-2 rounded-full border border-white/10">
+                  <MapPin className="w-3 h-3 text-[#C5A028]" /> {loc}
                 </span>
               ))}
             </div>

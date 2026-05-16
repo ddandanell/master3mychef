@@ -159,27 +159,33 @@ export default function FineDiningChefsPage() {
         ]}
       />
 
-      <section className="relative min-h-[90vh] overflow-hidden">
+      <section className="relative min-h-[90vh] overflow-hidden flex items-center">
         <div className="absolute inset-0">
           <img
             src="/generated/chefs-hero.webp"
-            alt="myCHEF chefs preparing a luxury private dining service in Bali"
+            alt="myCHEF chefs preparing a fine dining private service in Bali"
             width={1920}
             height={1080}
             fetchPriority="high"
             decoding="async"
             className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-black/55" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
 
-        <div className="relative z-10 mx-auto flex min-h-[90vh] max-w-7xl flex-col justify-between px-6 pb-16 pt-28 md:px-10 md:pb-20">
-          <div>
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-12 md:py-20 md:px-10">
+          <div className="max-w-3xl">
             <Breadcrumb
               items={[{ label: 'Fine Dining', href: '/fine-dining' }, { label: 'Our Chefs' }]}
               theme="dark"
-              className="px-0 pt-0 pb-10"
+              className="px-0 pt-0 pb-8"
             />
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-House Culinary Team</p>
             <div className="max-w-4xl">
               <p
                 className="mb-5 text-sm uppercase tracking-[0.35em] text-[#C5A028]"
@@ -281,7 +287,7 @@ export default function FineDiningChefsPage() {
                 He brings an Italian discipline to every menu: clean flavors, exact technique, and the belief that a plate should say only what it needs to say.
               </p>
               <p>
-                After falling in love with Bali in 2018, he founded myCHEF to build a luxury private dining brand that respected local sourcing while holding international standards.
+                After falling in love with Bali in 2018, he founded myCHEF to build a private dining brand that respected local sourcing while holding international standards.
               </p>
               <p>
                 Today he still leads the signature tasting menus, trains the chef team, and takes the bookings where the cooking needs his personal hand.

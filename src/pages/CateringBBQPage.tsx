@@ -180,7 +180,13 @@ export default function CateringBBQPage() {
             height={1080}
             decoding="async" fetchPriority="high"
             className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/75" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>

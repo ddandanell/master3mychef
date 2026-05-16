@@ -8,6 +8,12 @@ interface SeoHeadProps {
   ogType?: 'website' | 'article'
   noindex?: boolean
   jsonLd?: Record<string, unknown> | Record<string, unknown>[]
+  extraMeta?: Array<{
+    key: string
+    name?: string
+    property?: string
+    content: string
+  }>
 }
 
 export const localBusinessSchema = {
@@ -226,7 +232,7 @@ export function menuSchema(
 // Sets per-route document.title, meta description, canonical, OG tags, and an
 // optional robots noindex directive. Works for a Vite SPA — Google executes JS.
 // For first-contentful-html SEO add vite-plugin-ssg later (see SEO-PAGES-PLAN.md).
-export default function SeoHead({ title, description, canonical, ogImage, ogType = 'website', noindex, jsonLd }: SeoHeadProps) {
+export default function SeoHead({ title, description, canonical, ogImage, ogType = 'website', noindex, jsonLd, extraMeta = [] }: SeoHeadProps) {
   useEffect(() => {
     document.title = title
 
@@ -244,6 +250,9 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
     setMeta(`meta[property="og:title"]`, 'property', 'og:title', title)
     setMeta(`meta[property="og:description"]`, 'property', 'og:description', description)
     setMeta(`meta[property="og:type"]`, 'property', 'og:type', ogType)
+    setMeta(`meta[property="og:site_name"]`, 'property', 'og:site_name', 'myCHEF.id')
+    setMeta(`meta[property="og:locale"]`, 'property', 'og:locale', 'en_US')
+    setMeta(`meta[name="twitter:card"]`, 'name', 'twitter:card', 'summary_large_image')
     setMeta(`meta[name="twitter:title"]`, 'name', 'twitter:title', title)
     setMeta(`meta[name="twitter:description"]`, 'name', 'twitter:description', description)
 
@@ -268,7 +277,18 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
       }
       link.setAttribute('href', canonical)
       setMeta(`meta[property="og:url"]`, 'property', 'og:url', canonical)
+      setMeta(`meta[name="twitter:url"]`, 'name', 'twitter:url', canonical)
     }
+
+    extraMeta.forEach(({ name, property, content }) => {
+      if (name) {
+        setMeta(`meta[name="${name}"]`, 'name', name, content)
+      }
+
+      if (property) {
+        setMeta(`meta[property="${property}"]`, 'property', property, content)
+      }
+    })
 
     // Inject JSON-LD schemas
     document.head.querySelectorAll('script[data-seohead="jsonld"]').forEach((el) => el.remove())
@@ -287,7 +307,7 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
     return () => {
       document.head.querySelectorAll('script[data-seohead="jsonld"]').forEach((el) => el.remove())
     }
-  }, [title, description, canonical, ogImage, noindex, jsonLd])
+  }, [title, description, canonical, ogImage, ogType, noindex, jsonLd, extraMeta])
 
   return null
 }

@@ -130,6 +130,54 @@ const FAQ_CATEGORIES: FAQCategory[] = [
         q: 'Do you offer weekly meal prep or live-in chef?',
         a: 'Yes. We arrange weekly meal prep and live-in chef support for long-stay Bali villa guests. See /staffing for options.',
       },
+      {
+        q: 'Can you handle corporate retreats or team dinners?',
+        a: 'Yes. We cater corporate retreats, team offsites and working group dinners with flexible meal schedules, dietary diversity and multi-day planning. See /help/corporate-guide for details.',
+      },
+    ],
+  },
+  {
+    id: 'villa-logistics',
+    title: 'Villa & Logistics',
+    description: 'Kitchen requirements, equipment, arrival timing and how service works at your villa.',
+    icon: MapPin,
+    items: [
+      {
+        q: 'What kitchen equipment do you need?',
+        a: 'Most villas have everything we need. A working stove, fridge, sink and basic cookware are sufficient. For BBQ or specialized dishes we bring additional equipment.',
+      },
+      {
+        q: 'What time does the chef arrive?',
+        a: 'For dinner service, chefs typically arrive 2-3 hours before serving time to shop, prep and cook. For events or catering, arrival timing depends on the scale and menu.',
+      },
+      {
+        q: 'Do you clean up after service?',
+        a: 'Yes. Full cleanup is included. The chef washes all dishes, cleans the kitchen and leaves it as we found it.',
+      },
+      {
+        q: 'Can you serve at villas without kitchens?',
+        a: 'For small villas with limited kitchens, we can adapt. For venues without kitchens, we offer full event catering with off-site prep and service teams.',
+      },
+    ],
+  },
+  {
+    id: 'special-occasions',
+    title: 'Special Occasions',
+    description: 'Birthdays, anniversaries, proposals and how we make milestone moments memorable.',
+    icon: PartyPopper,
+    items: [
+      {
+        q: 'Can you help with surprise dinners or proposals?',
+        a: 'Yes. We coordinate surprise timing, special table setups, champagne service and discreet chef coordination for proposals, anniversaries and milestone celebrations.',
+      },
+      {
+        q: 'Do you provide decorations or table setup?',
+        a: 'Basic table setup is included. For premium table styling, flowers or themed decorations, we can coordinate with trusted Bali event partners.',
+      },
+      {
+        q: 'Can the chef prepare a birthday cake?',
+        a: 'Yes. We can arrange custom cakes or desserts for birthdays and celebrations. Just let us know your preferences when booking.',
+      },
     ],
   },
 ]

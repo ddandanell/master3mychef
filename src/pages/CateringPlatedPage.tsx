@@ -52,7 +52,7 @@ const PLATED_PACKAGES = [
     minGuests: 'Min. IDR 5M',
   },
   {
-    image: '/generated/misc-luna-plating-md.webp',
+    image: '/generated/mychef-finedining-bali-luna-plating.webp',
     title: '5-Course Premium',
     price: 'IDR 1,300,000/person',
     priceNum: 1300000,
@@ -235,14 +235,14 @@ export default function CateringPlatedPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
               href="#book"
-              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
               style={{ background: ACCENT }}
             >
               <Calendar className="w-4 h-4" /> Plan My Plated Dinner
             </a>
             <a
               href="#menus"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Utensils className="w-4 h-4" /> View Sample Menus
             </a>
@@ -697,10 +697,10 @@ export default function CateringPlatedPage() {
         <div className="max-w-[1280px] mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Explore More</p>
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-            <Link to="/fine-dining" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Fine Dining</Link>
-            <Link to="/catering/villa-catering" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Villa Catering</Link>
-            <Link to="/events" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Events</Link>
-            <Link to="/contact" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Contact</Link>
+            <Link to="/fine-dining" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Fine Dining</Link>
+            <Link to="/catering/villa-catering" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Villa Catering</Link>
+            <Link to="/events" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Events</Link>
+            <Link to="/contact" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Contact</Link>
           </div>
         </div>
       </section>
@@ -709,7 +709,7 @@ export default function CateringPlatedPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/misc-luna-plating-md.webp"
+            src="/generated/mychef-finedining-bali-luna-plating.webp"
             alt="Plated dinner course ready to serve at Bali villa"
             width={1920}
             height={1080}
@@ -728,14 +728,14 @@ export default function CateringPlatedPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#book"
-              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
               style={{ background: ACCENT }}
             >
               <Calendar className="w-4 h-4" /> Plan My Plated Dinner
             </a>
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-plated-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Phone className="w-4 h-4" /> WhatsApp myCHEF
             </a>

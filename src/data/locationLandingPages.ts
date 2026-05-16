@@ -280,7 +280,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Sanur Bali | myCHEF Services',
     description: 'Private chef in Sanur, Bali for family villas, beach dinners and events. Breakfast, catering and chef service with east-coast travel covered.',
     h1: 'Private Chef Service in Sanur',
-    heroImage: '/generated/bali-locations-sunset.webp',
+    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
     heroAlt: 'Sunrise-style beach villa atmosphere in Sanur, Bali prepared for a private chef breakfast service',
     intro: 'Sanur suits guests who want Bali to feel easy: calm water, walkable beachfront mornings, and villa evenings that finish before the island traffic starts again.',
     areaDescription: [
@@ -337,7 +337,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Nusa Dua Bali | myCHEF Services',
     description: 'Private chef in Nusa Dua, Bali for resort villas, executive dinners and events. Fine dining, catering and secure-estate service.',
     h1: 'Private Chef Service in Nusa Dua',
-    heroImage: '/generated/misc-hub-bali-lg.webp',
+    heroImage: '/generated/mychef-location-bali-hub-bali.webp',
     heroAlt: 'Luxury estate mood in Nusa Dua, Bali set for a private chef dinner with resort-style service',
     intro: 'Nusa Dua is where Bali shifts into polished resort energy: secure estates, larger compounds, and guests who expect service to run with hotel precision.',
     areaDescription: [
@@ -394,7 +394,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Jimbaran Bali | myCHEF Services',
     description: 'Private chef in Jimbaran, Bali for seafood dinners, beachside villas and group BBQs. Catering, events and sunset service by myCHEF.',
     h1: 'Private Chef Service in Jimbaran',
-    heroImage: '/generated/bali-hub-hero.webp',
+    heroImage: '/generated/mychef-location-bali-hub-hero.webp',
     heroAlt: 'Clifftop and bay-side villa setting in Jimbaran, Bali styled for a sunset private chef dinner',
     intro: 'Jimbaran is Bali\'s seafood coast: bay villas, clifftop estates, and guests who expect the sunset meal to be the main event of the day.',
     areaDescription: [
@@ -508,7 +508,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Bukit Peninsula Bali | myCHEF Services',
     description: 'Private chef in Bukit Peninsula, Bali for clifftop villas, surf groups and celebrations. Fine dining, catering and event service.',
     h1: 'Private Chef Service in Bukit Peninsula',
-    heroImage: '/generated/misc-hub-bali-lg.webp',
+    heroImage: '/generated/mychef-location-bali-hub-bali.webp',
     heroAlt: 'Dramatic cliffside villa setting across the Bukit Peninsula in Bali prepared for a private chef service',
     intro: 'The Bukit Peninsula covers Bali\'s southern clifftop belt: Pecatu, Ungasan, Bingin, Padang Padang, and villas where the setting is part of the dinner.',
     areaDescription: [

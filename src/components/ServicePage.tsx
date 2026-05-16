@@ -55,7 +55,7 @@ export default function ServicePage() {
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${title} | myCHEF`} description={service.description} canonical={canonical} ogImage="/misc-og-image-xl.webp" jsonLd={[localBusinessSchema, serviceSchema, aggregateRatingSchema(4.9, 560), serviceFaq, breadcrumbSchema(service.name, canonical)]} />
+      <SeoHead title={`${title} | myCHEF`} description={service.description} canonical={canonical} ogImage="/mychef-misc-bali-og-image.webp" jsonLd={[localBusinessSchema, serviceSchema, aggregateRatingSchema(4.9, 560), serviceFaq, breadcrumbSchema(service.name, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[960px] mx-auto">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Services</p>

@@ -103,7 +103,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Urban fine dining and executive corporate catering in Indonesia’s capital.',
     blurb: 'myCHEF Jakarta brings our Bali standards to the city’s premier residences and corporate suites. We specialize in discreet executive lunches, boardroom dinners, and high-end residential events.',
     signature: 'We shop the premium markets of South Jakarta each morning.',
-    hero: '/generated/bali-locations-sunset.webp',
+    hero: '/generated/mychef-location-bali-locations-sunset.webp',
   },
   {
     slug: 'menteng',
@@ -111,7 +111,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Discreet, high-security private dining for Jakarta’s diplomatic and historic residential heart.',
     blurb: 'Menteng demands the highest level of discretion and service. We provide Michelin-trained chefs for embassy dinners, formal family hosting, and elite residential events within Jakarta’s most prestigious district.',
     signature: 'Our teams are vetted for high-security diplomatic residences.',
-    hero: '/generated/bali-locations-sunset.webp',
+    hero: '/generated/mychef-location-bali-locations-sunset.webp',
   },
   {
     slug: 'kemang',
@@ -119,7 +119,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Sophisticated social catering and family dining for Jakarta’s international and creative community.',
     blurb: 'Kemang is the heart of Jakarta’s expat social life. We cook Mediterranean feasts, social BBQ events, and healthy family-style dinners for the district’s vibrant community of international residents.',
     signature: 'We understand the culinary diversity Kemang residents expect.',
-    hero: '/generated/bali-locations-sunset.webp',
+    hero: '/generated/mychef-location-bali-locations-sunset.webp',
   },
   {
     slug: 'scbd',
@@ -127,7 +127,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Executive corporate hospitality and boardroom private dining in the Business District.',
     blurb: 'Serving the high-rises and penthouses of SCBD, myCHEF provides seamless executive hospitality. We manage boardroom lunches, corporate networking events, and premium apartment dining with absolute precision.',
     signature: 'We specialize in corporate timing and executive menu flow.',
-    hero: '/generated/bali-locations-sunset.webp',
+    hero: '/generated/mychef-location-bali-locations-sunset.webp',
   },
   {
     slug: 'pondok-indah',
@@ -135,6 +135,6 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Exclusive residential private chef services for Jakarta’s premier family estates.',
     blurb: 'Pondok Indah villas and estates are built for multi-generational dining. We provide large-format catering, milestone birthday dinners, and consistent private chef service for the district’s primary residences.',
     signature: 'We manage the kitchen logistics for Pondok Indah’s largest family estates.',
-    hero: '/generated/bali-locations-sunset.webp',
+    hero: '/generated/mychef-location-bali-locations-sunset.webp',
   },
 ]

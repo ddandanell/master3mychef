@@ -9,7 +9,7 @@ const SECTIONS = [
     title: 'Multi-Day Catering for Yoga, Wellness & Corporate Retreats',
     body: `<p>Retreats are not single events — they are journeys. And the food should support that journey. We provide multi-day catering for yoga retreats, wellness retreats, and corporate offsites across Bali — full-board menus, dietary flexibility, and on-site coordination.</p>
     <p>We understand retreat dynamics: early morning yoga sessions require light, energizing breakfasts. Long workshop days need sustaining lunches. Evening ceremonies call for nourishing, communal dinners. We design menus that match the rhythm of your retreat.</p>`,
-    image: '/generated/experience-hero-retreats-xl.webp',
+    image: '/generated/mychef-experience-bali-hero-retreats.webp',
     imageAlt: 'Wellness retreat dining in Bali',
   },
   {
@@ -36,7 +36,7 @@ const SECTIONS = [
     <p><strong>Lunch (1:00 PM):</strong> Nourishing Buddha bowls — quinoa, roasted vegetables, tahini dressing, grilled tempeh. Fresh young coconut water.</p>
     <p><strong>Afternoon Tea (4:00 PM):</strong> Raw energy balls, herbal infusions, and fresh tropical fruits.</p>
     <p><strong>Dinner (7:00 PM):</strong> Communal long-table dining — Balinese nasi campur with vegan options, grilled local fish, seasonal vegetables, and coconut sambal. Dessert: black rice pudding with mango.</p>`,
-    image: '/generated/events/retreat-table.webp',
+    image: '/generated/generated/mychef-events-bali-retreat-table.webp',
     imageAlt: 'Retreat dining table with healthy food',
   },
   {
@@ -87,9 +87,9 @@ export default function RetreatsPage() {
       canonicalUrl="https://mychef.id/retreats"
       h1="Retreat Catering in Bali"
       subtitle="Full-board menus, dietary flexibility, and on-site coordination for yoga, wellness, and corporate retreats."
-      heroImage="/generated/experience-hero-retreats-xl.webp"
+      heroImage="/generated/mychef-experience-bali-hero-retreats.webp"
       heroImageAlt="Wellness retreat dining in Bali"
-      ogImage="https://mychef.id/generated/experience-hero-retreats-xl.webp"
+      ogImage="https://mychef.id/generated/mychef-experience-bali-hero-retreats.webp"
       keywords={['retreat catering bali', 'yoga retreat food bali', 'wellness retreat catering']}
       highlights={['Full-Board Packages', 'Plant-Forward Menus', 'Dietary Flexibility', 'On-Site Coordination']}
       sections={SECTIONS}

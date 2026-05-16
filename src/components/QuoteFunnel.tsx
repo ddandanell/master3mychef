@@ -171,7 +171,7 @@ export default function QuoteFunnel() {
         title="Get a Custom Quote — Private Chef in Bali | myCHEF"
         description="Tell us about your event in 9 quick steps. Get a personalised private chef quote within 24 hours. Fine dining, villa catering, weddings, retreats — all priced transparently."
         canonical="https://mychef.id/quote"
-        ogImage="https://mychef.id/misc-og-image-xl.webp"
+        ogImage="https://mychef.id/mychef-misc-bali-og-image.webp"
         noindex
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Quote', 'https://mychef.id/quote')]}
       />

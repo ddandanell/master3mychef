@@ -49,7 +49,7 @@ const SRC_DIR = path.join(PROJECT_ROOT, 'src');
 const REPORTS_DIR = path.join(PROJECT_ROOT, 'reports');
 
 // Naming convention: mychef-<service>-<location>-<descriptor>
-const NAMING_PATTERN = /^mychef-[a-z\-]+-[a-z\-]+\.(png|jpg|jpeg|webp|avif|svg|gif)$/i;
+const NAMING_PATTERN = /^mychef-[a-z0-9\-]+\.[a-z0-9]+$/i;
 
 async function collectImageReferences(): Promise<ImageReference[]> {
   const references: ImageReference[] = [];

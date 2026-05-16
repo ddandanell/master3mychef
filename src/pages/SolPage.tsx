@@ -91,7 +91,7 @@ export default function SolPage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering-catering-hero-lg.webp"
+            src="/generated/mychef-catering-bali-catering-hero.webp"
             alt="Villa chef plating a family-style brunch at a Bali villa, golden morning light"
             width={1920}
             height={1080}
@@ -229,7 +229,7 @@ export default function SolPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden max-w-[75%] mx-auto">
               <img
-                src="/generated/finedining-sol-chef-portrait-sm.webp"
+                src="/generated/mychef-finedining-bali-sol-chef-portrait.webp"
                 alt="Chef Daniel"
                 width={800}
                 height={1000}

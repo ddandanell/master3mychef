@@ -34,7 +34,7 @@ const SITE = 'https://mychef.id'
 
 const FLOATING_PACKAGES = [
   {
-    image: '/generated/catering/floating-breakfast.webp',
+    image: '/generated/generated/mychef-catering-bali-floating-breakfast.webp',
     title: 'Floating Breakfast for 2',
     price: 'IDR 950,000/couple',
     priceNum: 950000,
@@ -43,7 +43,7 @@ const FLOATING_PACKAGES = [
     minGuests: 'For 2',
   },
   {
-    image: '/generated/catering/floating-breakfast.webp',
+    image: '/generated/generated/mychef-catering-bali-floating-breakfast.webp',
     title: 'Floating Brunch for 2',
     price: 'IDR 1,400,000/couple',
     priceNum: 1400000,
@@ -52,7 +52,7 @@ const FLOATING_PACKAGES = [
     minGuests: 'For 2',
   },
   {
-    image: '/generated/catering/floating-breakfast.webp',
+    image: '/generated/generated/mychef-catering-bali-floating-breakfast.webp',
     title: 'Floating Group Brunch',
     price: 'IDR 750,000/person',
     priceNum: 750000,
@@ -131,7 +131,7 @@ const DELIVERY_STEPS = [
 ]
 
 const FLOATING_GALLERY = [
-  '/generated/catering/floating-breakfast.webp',
+  '/generated/generated/mychef-catering-bali-floating-breakfast.webp',
   '/generated/party-brunch.webp',
   '/generated/aura-toast.webp',
   '/generated/hub-catering.webp',
@@ -185,7 +185,7 @@ export default function CateringFloatingBreakfastPage() {
       <section className="relative overflow-hidden bg-black" style={{ minHeight: 'clamp(520px, 88vh, 100vh)' }}>
         {/* Background image — tray visible on right, villa on left */}
         <OptimizedImage
-          src="/generated/floating-breakfast-bali.webp"
+          src="/generated/mychef-location-bali-floating-breakfast-bali.webp"
           alt="Floating breakfast bamboo tray in a Bali villa pool at sunset with tropical fruit, coffee, and flowers"
           decoding="async"
           fetchPriority="high"
@@ -309,7 +309,7 @@ export default function CateringFloatingBreakfastPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/catering/floating-breakfast.webp"
+                src="/generated/generated/mychef-catering-bali-floating-breakfast.webp"
                 alt="Floating breakfast tray with tropical fruit and coffee in a Bali villa pool"
                 width={800}
                 height={600}
@@ -434,7 +434,7 @@ export default function CateringFloatingBreakfastPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/catering/floating-breakfast.webp"
+                src="/generated/generated/mychef-catering-bali-floating-breakfast.webp"
                 alt="Styled floating breakfast tray with tropical fruit, coffee, and white linen in a clear Bali villa pool"
                 width={800}
                 height={600}
@@ -664,7 +664,7 @@ export default function CateringFloatingBreakfastPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering/floating-breakfast.webp"
+            src="/generated/generated/mychef-catering-bali-floating-breakfast.webp"
             alt="Floating breakfast setup ready for guests in Bali villa pool"
             width={1920}
             height={1080}

@@ -203,7 +203,7 @@ export default function StaffingPage() {
       {/* ── HERO ────────────────────────────────────────────────────────── */}
       <section className="relative w-full flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
         <img
-          src="/generated/staffing-staffing-hero-xl.webp"
+          src="/generated/mychef-staffing-bali-staffing-hero.webp"
           alt="Professional hospitality staff at a private Bali villa"
           width={1920}
           height={1080}

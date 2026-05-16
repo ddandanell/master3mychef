@@ -46,7 +46,7 @@ const MENUS = [
     price: 'IDR 2,400,000++',
     tagline: 'Wagyu Tokusen in three forms. Open flame.',
     accent: '#8B4513',
-    image: '/generated/misc-luna-plating-md.webp',
+    image: '/generated/mychef-finedining-bali-luna-plating.webp',
     courses: [
       'My Beef Tartare — Wagyu chuck tender, polenta chips, cured egg, rocket, basil oil',
       'Ravioli di Coda — oxtail ragout, Grana Padano sauce, kale foam',
@@ -317,7 +317,7 @@ export default function PrivateChefBaliPage() {
           </div>
           <div className="pcb-reveal order-1 md:order-2">
             <img
-              src="/generated/luna-chef-portrait.webp"
+              src="/generated/mychef-finedining-bali-luna-chef-portrait.webp"
               alt="Adriano — myCHEF executive chef, Michelin-trained, Bali private dining"
               width={800} height={1000} loading="lazy" decoding="async"
               className="w-full h-auto object-cover rounded-[20px]" />

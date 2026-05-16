@@ -113,8 +113,8 @@ const FAQS = [
 ]
 
 const RETREAT_GALLERY = [
-  { title: 'Sunrise Breakfast', image: '/generated/events/retreat-breakfast.webp' },
-  { title: 'Communal Lunch Table', image: '/generated/events/retreat-table.webp' },
+  { title: 'Sunrise Breakfast', image: '/generated/generated/mychef-events-bali-retreat-breakfast.webp' },
+  { title: 'Communal Lunch Table', image: '/generated/generated/mychef-events-bali-retreat-table.webp' },
   { title: 'Whole Produce Prep', image: '/generated/sol-produce.webp' },
   { title: 'Brunch Recovery Spread', image: '/generated/party-brunch.webp' },
 ]
@@ -149,7 +149,7 @@ export default function EventsRetreatsPage() {
         title="Wellness Retreat Catering Bali | Healthy Meals — myCHEF"
         description="Healthy retreat catering in Bali with multi-day meal planning, dietary-coded menus, on-site chef support, and full villa food operations."
         canonical={`${SITE}/events/retreats`}
-        ogImage={`${SITE}/generated/events/retreat-breakfast.webp`}
+        ogImage={`${SITE}/generated/generated/mychef-events-bali-retreat-breakfast.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema('Wellness Retreat Catering Bali', 'myCHEF.id provides retreat catering in Bali with wellness-focused menus, dietary planning, and on-site chef support. We manage multi-day meal service, kitchen operations, and cleanup for private villas and retreat venues.', `${SITE}/events/retreats`),
@@ -172,7 +172,7 @@ export default function EventsRetreatsPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/events/retreat-breakfast.webp" alt="Healthy retreat breakfast with fruit and juices in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/generated/mychef-events-bali-retreat-breakfast.webp" alt="Healthy retreat breakfast with fruit and juices in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
@@ -226,7 +226,7 @@ export default function EventsRetreatsPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/retreat-breakfast.webp" alt="Healthy breakfast service for a Bali wellness retreat" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-retreat-breakfast.webp" alt="Healthy breakfast service for a Bali wellness retreat" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -272,7 +272,7 @@ export default function EventsRetreatsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/events/retreat-table.webp" alt="Long communal retreat dining table in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-retreat-table.webp" alt="Long communal retreat dining table in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -337,7 +337,7 @@ export default function EventsRetreatsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/retreat-breakfast.webp" alt="Labeled healthy breakfast setup for retreat guests" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-retreat-breakfast.webp" alt="Labeled healthy breakfast setup for retreat guests" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -367,7 +367,7 @@ export default function EventsRetreatsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/events/retreat-table.webp" alt="Multi-day retreat lunch service setup in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-retreat-table.webp" alt="Multi-day retreat lunch service setup in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

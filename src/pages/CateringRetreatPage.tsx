@@ -154,7 +154,7 @@ export default function CateringRetreatPage() {
         title="Retreat Catering Bali | Yoga, Wellness & Group Meals"
         description="Retreat catering in Bali for yoga, wellness, business, and creative retreats with healthy menus, dietary planning, and multi-day service."
         canonical={`${SITE}/catering/retreat-catering`}
-        ogImage={`${SITE}/generated/experience-hero-retreats-xl.webp`}
+        ogImage={`${SITE}/generated/mychef-experience-bali-hero-retreats.webp`}
         jsonLd={[
           localBusinessSchema,
           cateringServiceSchema('Retreat Catering Bali', 'Retreat catering in Bali for yoga, wellness, business, and creative retreats with plant-forward menus and dietary planning. myCHEF.id runs consistent multi-day meal service, timing, and kitchen operations across Bali.', `${SITE}/catering/retreat-catering`),
@@ -171,7 +171,7 @@ export default function CateringRetreatPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/experience-hero-retreats-xl.webp"
+            src="/generated/mychef-experience-bali-hero-retreats.webp"
             alt="Healthy retreat catering in Bali with tropical breakfast bowls and yoga guests"
             width={1920}
             height={1080}
@@ -483,7 +483,7 @@ export default function CateringRetreatPage() {
       {/* ═══════ SECTION 12: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/experience-hero-retreats-xl.webp" alt="Retreat catering in Bali" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-experience-bali-hero-retreats.webp" alt="Retreat catering in Bali" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/68" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

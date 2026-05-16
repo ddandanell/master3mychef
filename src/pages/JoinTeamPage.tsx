@@ -161,7 +161,7 @@ export default function JoinTeamPage() {
       title: 'Work with a team that takes hospitality seriously',
       body: `<p>myCHEF is trusted by private villas, event hosts, and long-stay guests because the standards are real. We care about timing, polish, cleanliness, warmth, and how the guest feels in the room.</p>
       <p>If you want to work with a team that values professionalism and gives you room to grow, you will feel at home here.</p>`,
-      image: '/generated/staffing-staffing-kitchen-lg.webp',
+      image: '/generated/mychef-staffing-bali-staffing-kitchen.webp',
       imageAlt: 'myCHEF team training inside a Bali villa kitchen',
     },
     {
@@ -197,9 +197,9 @@ export default function JoinTeamPage() {
       description="Join myCHEF — Bali's top private chef service. Roles for chefs, bartenders, villa service staff & coordinators. Apply via WhatsApp today."
       h1="Join Bali's #1 Private Chef Team"
       subtitle="We're always looking for talented, passionate hospitality professionals."
-      heroImage="/generated/staffing-staffing-hero-xl.webp"
+      heroImage="/generated/mychef-staffing-bali-staffing-hero.webp"
       heroImageAlt="myCHEF hospitality team ready for villa service in Bali"
-      ogImage="https://mychef.id/generated/staffing-staffing-hero-xl.webp"
+      ogImage="https://mychef.id/generated/mychef-staffing-bali-staffing-hero.webp"
       keywords={['chef jobs bali', 'hospitality jobs bali', 'mychef careers']}
       highlights={['Competitive Pay', 'Flexible Scheduling', 'Professional Growth', 'Premium Villa Work']}
       sections={sections}

@@ -117,7 +117,7 @@ export default function ServiceSommelierPage() {
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
   <div className="absolute inset-0">
-    <img src="/generated/chefs-table-hero-luxury.webp" alt="Sommelier presenting wine at private Bali villa dinner" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+    <img src="/generated/mychef-misc-bali-chefs-table-hero-luxury.webp" alt="Sommelier presenting wine at private Bali villa dinner" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
     <div
       className="absolute inset-0"
       style={{

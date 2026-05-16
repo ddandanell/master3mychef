@@ -100,7 +100,7 @@ export default function StaffingLiveInPage() {
         title="Live-In Chef Bali | Full-Time Villa Chef Placement — myCHEF"
         description="Find a live-in chef in Bali. Pre-vetted candidates, trial dinners, structured onboarding. From IDR 8,000,000 per month."
         canonical={`${SITE}/staffing/live-in-chef`}
-        ogImage={`${SITE}/generated/staffing-staffing-kitchen-lg.webp`}
+        ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-kitchen.webp`}
         jsonLd={[
           localBusinessSchema,
           serviceSchema(
@@ -118,7 +118,7 @@ export default function StaffingLiveInPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/staffing-staffing-kitchen-lg.webp" alt="Live-in chef preparing meal at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+          <img src="/generated/mychef-staffing-bali-staffing-kitchen.webp" alt="Live-in chef preparing meal at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
           <div
             className="absolute inset-0"
             style={{
@@ -230,7 +230,7 @@ export default function StaffingLiveInPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/staffing-staffing-kitchen-lg.webp" alt="Live-in chef working in Bali villa kitchen" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-staffing-bali-staffing-kitchen.webp" alt="Live-in chef working in Bali villa kitchen" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

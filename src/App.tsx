@@ -65,6 +65,10 @@ const StaffingVillaManagersPage = lazy(() => import('./pages/StaffingVillaManage
 const StaffingHotelsPage = lazy(() => import('./pages/StaffingHotelsPage'))
 const PillarSubPage = lazy(() => import('./components/PillarSubPage'))
 const LocationsHubPage = lazy(() => import('./components/LocationsHubPage'))
+const SeminyakPage = lazy(() => import('./pages/SeminyakPage'))
+const CangguPage = lazy(() => import('./pages/CangguPage'))
+const UbudPage = lazy(() => import('./pages/UbudPage'))
+const UluwatuPage = lazy(() => import('./pages/UluwatuPage'))
 const SanurPage = lazy(() => import('./pages/SanurPage'))
 const NusaDuaPage = lazy(() => import('./pages/NusaDuaPage'))
 const JimbaranPage = lazy(() => import('./pages/JimbaranPage'))
@@ -185,6 +189,10 @@ export default function App() {
 
           {/* Locations */}
           <Route path="/locations" element={<LocationsHubPage />} />
+          <Route path="/locations/seminyak" element={<SeminyakPage />} />
+          <Route path="/locations/canggu" element={<CangguPage />} />
+          <Route path="/locations/ubud" element={<UbudPage />} />
+          <Route path="/locations/uluwatu" element={<UluwatuPage />} />
           <Route path="/locations/sanur" element={<SanurPage />} />
           <Route path="/locations/nusa-dua" element={<NusaDuaPage />} />
           <Route path="/locations/jimbaran" element={<JimbaranPage />} />
@@ -224,6 +232,10 @@ export default function App() {
           <Route path="/villa-partners" element={<PartnersPage />} />
 
           {/* Legacy area pages (still served at root for SEO continuity) */}
+          <Route path="/seminyak" element={<SeminyakPage />} />
+          <Route path="/canggu" element={<CangguPage />} />
+          <Route path="/ubud" element={<UbudPage />} />
+          <Route path="/uluwatu" element={<UluwatuPage />} />
           <Route path="/sanur" element={<SanurPage />} />
           <Route path="/nusa-dua" element={<NusaDuaPage />} />
           <Route path="/jimbaran" element={<JimbaranPage />} />

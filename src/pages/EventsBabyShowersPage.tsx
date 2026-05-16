@@ -72,7 +72,7 @@ const MOCKTAIL_BAR = [
 ]
 
 const REAL_BABY_SHOWERS = [
-  { title: 'Pastel Brunch Table', location: 'Seminyak Villa', image: '/generated/events/baby-shower-hero.webp' },
+  { title: 'Pastel Brunch Table', location: 'Seminyak Villa', image: '/generated/generated/mychef-events-bali-baby-shower-hero.webp' },
   { title: 'Garden Mocktail Brunch', location: 'Canggu Villa', image: '/generated/party-brunch.webp' },
   { title: 'Poolside Family Shower', location: 'Uluwatu Villa', image: '/generated/party-pool.webp' },
   { title: 'Styled Tablescape Moment', location: 'Ubud Villa', image: '/generated/aura-tablescape.webp' },
@@ -128,7 +128,7 @@ export default function EventsBabyShowersPage() {
         title="Baby Shower Catering Bali | Grazing & Brunch — myCHEF"
         description="Beautiful Bali villa baby showers with brunch catering, grazing tables, pregnancy-safe menus, mocktail bars, styling, and cleanup handled by one team."
         canonical={`${SITE}/events/baby-showers`}
-        ogImage={`${SITE}/generated/events/baby-shower-hero.webp`}
+        ogImage={`${SITE}/generated/generated/mychef-events-bali-baby-shower-hero.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema('Baby Shower Catering Bali', 'myCHEF.id provides baby shower catering in Bali with brunch menus, grazing tables, mocktails, and elegant villa styling. We coordinate service, setup, and cleanup for relaxed celebrations at private villas and venues.', `${SITE}/events/baby-showers`),
@@ -150,7 +150,7 @@ export default function EventsBabyShowersPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/events/baby-shower-hero.webp" alt="Pastel baby shower brunch table in a Bali villa" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/generated/mychef-events-bali-baby-shower-hero.webp" alt="Pastel baby shower brunch table in a Bali villa" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
@@ -204,7 +204,7 @@ export default function EventsBabyShowersPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/baby-shower-hero.webp" alt="Styled baby shower table setup in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-baby-shower-hero.webp" alt="Styled baby shower table setup in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -245,7 +245,7 @@ export default function EventsBabyShowersPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/baby-shower-hero.webp" alt="Elegant grazing table for a Bali baby shower" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-baby-shower-hero.webp" alt="Elegant grazing table for a Bali baby shower" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -410,7 +410,7 @@ export default function EventsBabyShowersPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/events/baby-shower-hero.webp" alt="Premium baby shower styling and flowers in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-baby-shower-hero.webp" alt="Premium baby shower styling and flowers in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

@@ -251,7 +251,7 @@ export default function InVillaServicePage() {
               </div>
             </div>
             <div>
-              <OptimizedImage src="/generated/staffing-staffing-table-lg.webp" alt="Professional service staff setting table" className="w-full rounded-2xl shadow-xl" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-staffing-bali-staffing-table.webp" alt="Professional service staff setting table" className="w-full rounded-2xl shadow-xl" loading="lazy" />
             </div>
           </div>
         </div>

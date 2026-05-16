@@ -89,14 +89,14 @@ export default function ServicesPage() {
         title="Private Chef Services Bali | Parties, Weddings — myCHEF"
         description="Eight ways we bring food to your villa. Parties, romantic dinners, birthdays, reunions, corporate events, weddings, cooking classes, meal prep."
         canonical={`${SITE}/services`}
-        ogImage={`${SITE}/generated/bali-hub-hero.webp`}
+        ogImage={`${SITE}/generated/mychef-location-bali-hub-hero.webp`}
         jsonLd={[localBusinessSchema, itemListSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Services', `${SITE}/services`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* ── HERO ── */}
       <section className="relative min-h-[75vh] flex items-end overflow-hidden">
         <img
-          src="/generated/bali-hub-hero.webp"
+          src="/generated/mychef-location-bali-hub-hero.webp"
           alt="Luxury villa dinner overlooking Bali rice terraces at sunset"
           width={1920}
           height={1080}

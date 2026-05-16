@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, Calendar, Tag } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
-import { JOURNAL_POSTS, JOURNAL_CATEGORIES } from '../data/siteArchitecture'
+import { JOURNAL_POSTS, JOURNAL_CATEGORIES, type JournalPost } from '../data/siteArchitecture'
 
 import { useState, useMemo } from 'react'
 
@@ -42,7 +42,7 @@ export function JournalIndexPage() {
             name: 'myCHEF Journal',
             url: canonical,
             numberOfItems: allPosts.length,
-            itemListElement: allPosts.slice(0, 10).map((p: any, i: number) => ({
+            itemListElement: allPosts.slice(0, 10).map((p: JournalPost, i: number) => ({
               '@type': 'ListItem',
               position: i + 1,
               url: `${SITE}/journal/${p.slug}`,

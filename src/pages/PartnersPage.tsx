@@ -178,13 +178,13 @@ export default function PartnersPage() {
         title="Press & Partners | myCHEF Bali"
         description="Press kit details and Certified Partner programme information for villa managers looking to work with myCHEF in Bali."
         canonical="https://mychef.id/partners"
-        ogImage="https://mychef.id/generated/partner-platform-hero.webp"
+        ogImage="https://mychef.id/generated/mychef-misc-bali-partner-platform-hero.webp"
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Partners', 'https://mychef.id/partners'), faqPageSchema(faqs.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       <section className="relative overflow-hidden border-b border-[#E8E3D8]">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/partner-platform-hero.webp" alt="myCHEF Bali partner programme" className="w-full h-full object-cover opacity-20" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/mychef-misc-bali-partner-platform-hero.webp" alt="myCHEF Bali partner programme" className="w-full h-full object-cover opacity-20" loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(250,250,248,0.86),rgba(250,250,248,0.98))]" />
         </div>
         <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-32">

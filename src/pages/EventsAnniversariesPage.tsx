@@ -56,8 +56,8 @@ const HOTEL_COMPARISON = [
 ]
 
 const REAL_ANNIVERSARIES = [
-  { names: 'Anna & Michael', years: '10 Years', location: 'Seminyak Villa', image: '/generated/events/anniversary-romantic.webp' },
-  { names: 'Sarah & Tom', years: '25 Years', location: 'Uluwatu Villa', image: '/generated/events/anniversary-chef.webp' },
+  { names: 'Anna & Michael', years: '10 Years', location: 'Seminyak Villa', image: '/generated/generated/mychef-events-bali-anniversary-romantic.webp' },
+  { names: 'Sarah & Tom', years: '25 Years', location: 'Uluwatu Villa', image: '/generated/generated/mychef-events-bali-anniversary-chef.webp' },
   { names: 'Jenny & David', years: '5 Years', location: 'Canggu Villa', image: '/generated/aura-tablescape.webp' },
   { names: 'Maria & Carlos', years: 'Vow Renewal', location: 'Ubud Villa', image: '/generated/aura-toast.webp' },
 ]
@@ -119,7 +119,7 @@ export default function EventsAnniversariesPage() {
         title="Anniversary Dinners Bali | Private Chef & Catering — myCHEF"
         description="Private anniversary dinners and celebrations in Bali. Private chef, plated menus, villa decoration, and wine pairings. IDR 650K–2.5M/pp."
         canonical={`${SITE}/events/anniversaries`}
-        ogImage={`${SITE}/generated/events/anniversary-romantic.webp`}
+        ogImage={`${SITE}/generated/generated/mychef-events-bali-anniversary-romantic.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema('Anniversary Dinner Bali', 'myCHEF.id creates private anniversary dinners in Bali with chef-led menus, romantic villa styling, and polished service. We handle planning, cooking, setup, and cleanup so the celebration feels effortless.', `${SITE}/events/anniversaries`),
@@ -142,7 +142,7 @@ export default function EventsAnniversariesPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dinner setup by a Bali villa pool" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/generated/mychef-events-bali-anniversary-romantic.webp" alt="Romantic anniversary dinner setup by a Bali villa pool" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
@@ -196,7 +196,7 @@ export default function EventsAnniversariesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dining setup in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-anniversary-romantic.webp" alt="Romantic anniversary dining setup in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -237,7 +237,7 @@ export default function EventsAnniversariesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/anniversary-chef.webp" alt="Private chef plating an anniversary dinner in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/generated/mychef-events-bali-anniversary-chef.webp" alt="Private chef plating an anniversary dinner in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -247,7 +247,7 @@ export default function EventsAnniversariesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/misc-luna-plating-md.webp" alt="Fine plated anniversary menu presentation by myCHEF" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-finedining-bali-luna-plating.webp" alt="Fine plated anniversary menu presentation by myCHEF" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>

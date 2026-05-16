@@ -100,7 +100,7 @@ export default function ChefsTablePage() {
         title="Chef's Table Bali | Adriano 7-Course Private Dining — myCHEF"
         description="Exclusive Chef's Table in your Bali villa: Adriano-led 7-course private dining with live commentary. Max 6 guests. IDR 3,500,000++ pp. Fri-Sat only."
         canonical={`${SITE}/fine-dining/chefs-table`}
-        ogImage={`${SITE}/generated/chefs-table-hero-luxury.webp`}
+        ogImage={`${SITE}/generated/mychef-misc-bali-chefs-table-hero-luxury.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema(
@@ -120,7 +120,7 @@ export default function ChefsTablePage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/chefs-table-hero-luxury.webp"
+            src="/generated/mychef-misc-bali-chefs-table-hero-luxury.webp"
             alt="Fine dining private villa dinner service in Bali with candlelight and wine pairing"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
@@ -222,7 +222,7 @@ export default function ChefsTablePage() {
             </div>
             <div className="ct-reveal">
               <img
-                src="/generated/luna-chef-portrait.webp"
+                src="/generated/mychef-finedining-bali-luna-chef-portrait.webp"
                 alt="Adriano — executive chef at myCHEF private dining, Bali"
                 width={700} height={900} loading="lazy" decoding="async"
                 className="w-full h-auto rounded-[20px] object-cover" />
@@ -293,8 +293,8 @@ export default function ChefsTablePage() {
         <div className="max-w-[1080px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 py-16">
           {[
             { src: '/generated/luna-flame.webp', alt: 'Open flame cooking — Chef\'s Table Bali' },
-            { src: '/generated/luna-chef-portrait.webp', alt: 'Adriano — private chef, Bali' },
-            { src: '/generated/misc-luna-plating-md.webp', alt: 'Plated fine dining course' },
+            { src: '/generated/mychef-finedining-bali-luna-chef-portrait.webp', alt: 'Adriano — private chef, Bali' },
+            { src: '/generated/mychef-finedining-bali-luna-plating.webp', alt: 'Plated fine dining course' },
             { src: '/generated/luna-ingredients.webp', alt: 'Fresh market ingredients for Chef\'s Table' },
           ].map((img) => (
             <div key={img.src} className="aspect-square overflow-hidden rounded-[16px]">

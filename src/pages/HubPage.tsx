@@ -20,7 +20,7 @@ const PORTALS = [
     title: 'Fine Dining',
     subtitle: 'A private chef cooks exclusively for you. Multi-course menu. Wine pairing. Your villa. Just your table.',
     path: '/fine-dining',
-    image: '/generated/misc-hub-fine-dining-lg.webp',
+    image: '/generated/mychef-misc-bali-hub-fine-dining.webp',
     accent: '#C5A028',
   },
   {
@@ -28,7 +28,7 @@ const PORTALS = [
     title: 'Catering & Events',
     subtitle: 'BBQ, buffet, plated dinners. Weddings, retreats, celebrations. We handle everything. You enjoy.',
     path: '/catering',
-    image: '/generated/misc-hub-catering-lg.webp',
+    image: '/generated/mychef-catering-bali-hub-catering.webp',
     accent: '#6B8E5A',
   },
   {
@@ -328,7 +328,7 @@ export default function HubPage() {
         <div className="mb-10 md:mb-14">
           <div className="relative min-h-[calc(100vh-64px)] overflow-hidden md:min-h-[calc(100vh-72px)]">
             <img
-              src="/generated/bali-hub-hero.webp"
+              src="/generated/mychef-location-bali-hub-hero.webp"
               alt="Luxury private dining table in a Bali villa at sunset"
               width={1536}
               height={1024}
@@ -783,7 +783,7 @@ export default function HubPage() {
               style={{ aspectRatio: '4/5' }}
             >
               <img
-                src="/generated/misc-hub-villa-lg.webp"
+                src="/generated/mychef-misc-bali-hub-villa.webp"
                 alt="Family enjoying private villa dinner in Bali"
                 width={500}
                 height={625}
@@ -804,7 +804,7 @@ export default function HubPage() {
             style={{ aspectRatio: '4/3' }}
           >
             <img
-              src="/generated/misc-hub-villa-lg.webp"
+              src="/generated/mychef-misc-bali-hub-villa.webp"
               alt="Family enjoying private villa dinner in Bali"
               width={600}
               height={450}
@@ -940,7 +940,7 @@ export default function HubPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <img
-                src="/generated/misc-hub-villa-lg.webp"
+                src="/generated/mychef-misc-bali-hub-villa.webp"
                 alt="Luxury villa partnership"
                 width={800}
                 height={600}
@@ -1003,7 +1003,7 @@ export default function HubPage() {
       <section className="py-24 md:py-32 px-6 relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/misc-hub-bali-lg.webp"
+            src="/generated/mychef-location-bali-hub-bali.webp"
             alt="Bali landscape"
             width={1920}
             height={1080}

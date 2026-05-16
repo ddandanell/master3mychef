@@ -110,7 +110,7 @@ const CATERING_STYLES = [
     accent: '#6B8E5A',
   },
   {
-    image: '/generated/catering/floating-breakfast.webp',
+    image: '/generated/generated/mychef-catering-bali-floating-breakfast.webp',
     title: 'Floating Breakfast',
     price: 'From IDR 950,000/couple',
     description: 'Best for villa pools, couples, birthdays, and honeymoon mornings.',
@@ -411,7 +411,7 @@ export default function CateringMainPage() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering-catering-hero-lg.webp"
+            src="/generated/mychef-catering-bali-catering-hero.webp"
             alt="Chef grilling seafood at a Bali villa poolside at sunset"
             width={1920}
             height={1080}

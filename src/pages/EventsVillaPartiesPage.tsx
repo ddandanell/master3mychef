@@ -71,7 +71,7 @@ const MUSIC_OPTIONS = [
 ]
 
 const DECOR_GALLERY = [
-  { title: 'Festoon Lighting', desc: 'String lights across terraces and gardens.', image: '/generated/experience-aura-setup-lg.webp' },
+  { title: 'Festoon Lighting', desc: 'String lights across terraces and gardens.', image: '/generated/mychef-experience-bali-aura-setup.webp' },
   { title: 'Pool Floats & Decor', desc: 'Themed inflatables, flower arrangements, lanterns.', image: '/generated/party-pool.webp' },
   { title: 'Lounge Areas', desc: 'Low tables, cushions, rugs for relaxed seating.', image: '/generated/party-rooftop.webp' },
   { title: 'Bar Styling', desc: 'Custom bar setup with branded menus and garnishes.', image: '/generated/party-beer.webp' },
@@ -174,7 +174,7 @@ export default function EventsVillaPartiesPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/events/villa-party-night.webp" alt="Night-time villa party with bar and pool lighting in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/generated/mychef-events-bali-villa-party-night.webp" alt="Night-time villa party with bar and pool lighting in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
@@ -228,7 +228,7 @@ export default function EventsVillaPartiesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <OptimizedImage src="/generated/events/villa-party-night.webp" alt="Bali villa party setup with bar and long-table dining" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/generated/mychef-events-bali-villa-party-night.webp" alt="Bali villa party setup with bar and long-table dining" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
           <SectionHeader eyebrow="Chapter 2 — Formats" title="Party Types & Formats" subtitle="Choose the structure first, then we dial the food, bar, and entertainment around it." />
@@ -433,7 +433,7 @@ export default function EventsVillaPartiesPage() {
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Night Pool Party', image: '/generated/events/villa-party-night.webp' },
+              { title: 'Night Pool Party', image: '/generated/generated/mychef-events-bali-villa-party-night.webp' },
               { title: 'Poolside Dinner Party', image: '/generated/party-pool.webp' },
               { title: 'Rooftop Mood', image: '/generated/party-rooftop.webp' },
               { title: 'Live BBQ Station', image: '/generated/sol-bbq.webp' },

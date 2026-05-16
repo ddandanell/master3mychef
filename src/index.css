@@ -284,6 +284,12 @@
     animation: pulse-glow 2s ease-in-out infinite;
   }
 
+  /* Skip below-the-fold layout/render work until the section is near the viewport. */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+
   /* Critical hero image fallback — ensures homepage never looks completely broken */
   img[src*="/generated/bali-hub-hero.webp"],
   img[src*="/generated/hub-fine-dining.webp"],

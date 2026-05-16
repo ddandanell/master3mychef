@@ -263,7 +263,7 @@ export default function InVillaServicePage() {
           {/* Award image */}
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
             <OptimizedImage
-              src="/generated/were-awards.png"
+              src="/generated/were-awards.webp"
               alt="myCHEF award-winning private villa dining in Bali"
               className="w-full h-full object-cover"
               loading="lazy"

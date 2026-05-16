@@ -185,7 +185,7 @@ export default function CateringFloatingBreakfastPage() {
       <section className="relative overflow-hidden bg-black" style={{ minHeight: 'clamp(520px, 88vh, 100vh)' }}>
         {/* Background image — tray visible on right, villa on left */}
         <OptimizedImage
-          src="/generated/floating-breakfast-bali.png"
+          src="/generated/floating-breakfast-bali.webp"
           alt="Floating breakfast bamboo tray in a Bali villa pool at sunset with tropical fruit, coffee, and flowers"
           decoding="async"
           fetchPriority="high"

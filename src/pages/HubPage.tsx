@@ -441,11 +441,13 @@ export default function HubPage() {
       </section>
 
       {/* LUXURY TRUST SECTION */}
-      <TrustSection />
+      <div className="cv-auto">
+        <TrustSection />
+      </div>
 
       {/* HOW IT WORKS */}
       <section
-        className="relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
+        className="cv-auto relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
         style={{
           backgroundImage: 'url(/generated/hero-how-it-works.webp)',
           backgroundSize: 'cover',
@@ -646,7 +648,7 @@ export default function HubPage() {
       </section>
 
       {/* WHAT MAKES US DIFFERENT */}
-      <section className="diff-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+      <section className="cv-auto diff-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label mb-4">Why Choose Us</p>
@@ -666,7 +668,7 @@ export default function HubPage() {
       </section>
 
       {/* PRIVATE CHEF SERVICE IN BALI — TRUST SECTION */}
-      <section ref={trustRef} style={{ background: '#faf8f3' }} className="py-0">
+      <section ref={trustRef} style={{ background: '#faf8f3' }} className="cv-auto py-0">
         <div
           className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-0 items-center min-h-[calc(100vh-82px)]"
           style={{ padding: '96px 7vw 72px' }}

@@ -91,6 +91,15 @@ const BlogIndexPage = lazy(() => import('./components/BlogIndexPage'))
 const BaliHubPage = lazy(() => import('./components/BaliHubPage'))
 const QuoteFunnel = lazy(() => import('./components/QuoteFunnel'))
 
+// Help & Guides System
+const HelpPage = lazy(() => import('./pages/HelpPage'))
+const GettingStartedPage = lazy(() => import('./pages/GettingStartedPage'))
+const PricingGuide = lazy(() => import('./pages/PricingGuide'))
+const MenuGuide = lazy(() => import('./pages/MenuGuidePage'))
+const WeddingGuide = lazy(() => import('./pages/WeddingGuidePage'))
+const CorporateGuide = lazy(() => import('./pages/CorporateGuidePage'))
+const StaffingGuide = lazy(() => import('./pages/StaffingGuidePage'))
+
 // Minimal brand-aligned fallback — dark screen with subtle gold pulse
 function PageLoader() {
   return (
@@ -276,6 +285,15 @@ export default function App() {
           <Route path="/join-our-team" element={<JoinTeamPage />} />
           <Route path="/quote" element={<QuoteFunnel />} />
           <Route path="/calculator" element={<CalculatorPage />} />
+
+          {/* Help & Guides */}
+          <Route path="/help" element={<HelpPage />} />
+          <Route path="/help/getting-started" element={<GettingStartedPage />} />
+          <Route path="/help/pricing" element={<PricingGuide />} />
+          <Route path="/help/menu-guide" element={<MenuGuide />} />
+          <Route path="/help/wedding-guide" element={<WeddingGuide />} />
+          <Route path="/help/corporate-guide" element={<CorporateGuide />} />
+          <Route path="/help/staffing-guide" element={<StaffingGuide />} />
 
           {/* 404 */}
           <Route path="/404" element={<NotFoundPage />} />

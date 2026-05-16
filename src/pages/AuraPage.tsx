@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Check, Heart, Building2, PartyPopper, Star, MessageCircle, Phone, Sparkles, Truck, ChevronRight } from 'lucide-react'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
@@ -285,21 +286,26 @@ export default function AuraPage() {
             width={1920}
             height={1080}
             fetchPriority="high"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
           />
-          <div className="absolute inset-0 bg-black/55" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-black/25 md:hidden" />
         </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="aura-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Bali Event Catering — Villas, Weddings & Corporate</p>
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
+          <Breadcrumb items={[{ label: 'Events' }]} theme="dark" className="justify-center mb-8" />
+          <p className="aura-hero-label text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Bali Event Catering — Villas, Weddings & Corporate</p>
           <h1 className="aura-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 " style={{ fontFamily: "'Playfair Display', serif" }}>
             Bali Event Catering —<br /><span className="italic">Villas, Weddings & Corporate</span>
           </h1>
-          <p className="aura-hero-sub text-lg md:text-xl text-white/[80%] mb-10 max-w-2xl mx-auto">
+          <p className="aura-hero-sub text-lg md:text-xl text-white/[85%] mb-10 max-w-2xl mx-auto">
             From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 15M total event minimum. Olivia replies within 24 hours.
           </p>
           <div className="aura-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1e4a63] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <MessageCircle className="w-4 h-4" /> Get Event Quote — 24h Reply
             </a>
             <a href="#packages" className="inline-block px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
@@ -313,7 +319,7 @@ export default function AuraPage() {
               { label: '15-person events team' },
               { label: '200+ villas across Bali' },
             ].map((badge) => (
-              <div key={badge.label} className="flex items-center gap-2 text-white/[60%]">
+              <div key={badge.label} className="flex items-center gap-2 text-white/60">
                 <Check className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />
                 <span className="text-xs tracking-wider uppercase">{badge.label}</span>
               </div>
@@ -565,8 +571,7 @@ export default function AuraPage() {
                 height={600}
                 className="w-full h-full object-cover"
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Your Team</p>

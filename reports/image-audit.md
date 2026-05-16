@@ -1,12 +1,12 @@
 # MyChef Image Audit Report
-**Generated:** 2026-05-16T18:32:46.589Z
+**Generated:** 2026-05-16T18:42:04.568Z
 
 ## Summary
 - **Total Images:** 100
-- **Total References:** 204
+- **Total References:** 158
 - **Total File Size:** 20.89 MB
-- **Images Without Alt Text:** 54
-- **Images Not Following Convention:** 85
+- **Images Without Alt Text:** 0
+- **Images Not Following Convention:** 87
 
 ## Format Distribution
 - **WEBP:** 93
@@ -15,15 +15,15 @@
 - **SVG:** 1
 
 ## Top 10 Files with Most Image References
-1. `/src/pages/EventsWeddingsPage.tsx` — 13 references
-2. `/src/pages/EventsRetreatsPage.tsx` — 13 references
-3. `/src/pages/EventsCorporatePage.tsx` — 13 references
-4. `/src/pages/EventsBirthdaysPage.tsx` — 13 references
-5. `/src/pages/EventsBabyShowersPage.tsx` — 13 references
-6. `/src/pages/EventsAnniversariesPage.tsx` — 11 references
-7. `/src/pages/LunaPage.tsx` — 10 references
-8. `/src/pages/HubPage.tsx` — 6 references
-9. `/src/pages/EventsVillaPartiesPage.tsx` — 6 references
+1. `/src/pages/LunaPage.tsx` — 10 references
+2. `/src/pages/HubPage.tsx` — 7 references
+3. `/src/pages/EventsWeddingsPage.tsx` — 7 references
+4. `/src/pages/EventsRetreatsPage.tsx` — 7 references
+5. `/src/pages/EventsCorporatePage.tsx` — 7 references
+6. `/src/pages/EventsBirthdaysPage.tsx` — 7 references
+7. `/src/pages/EventsBabyShowersPage.tsx` — 7 references
+8. `/src/pages/EventsVillaPartiesPage.tsx` — 6 references
+9. `/src/pages/EventsAnniversariesPage.tsx` — 6 references
 10. `/src/pages/CateringFloatingBreakfastPage.tsx` — 4 references
 
 ## Images Not Following Naming Convention
@@ -211,8 +211,6 @@
   - Used by: 0 file(s)
 - `/public/generated/about-best-partner-2026-md.webp` (webp, 56.08 KB)
   - Used by: 0 file(s)
-- `/public/generated/catering/floating-breakfast.webp` (webp, 570.02 KB)
-  - Used by: 1 file(s)
 - `/public/generated/events/villa-party-night.webp` (webp, 818.02 KB)
   - Used by: 1 file(s)
 - `/public/generated/events/retreat-table.webp` (webp, 919.7 KB)
@@ -227,38 +225,21 @@
   - Used by: 1 file(s)
 - `/public/generated/events/anniversary-chef.webp` (webp, 378.16 KB)
   - Used by: 1 file(s)
+- `/public/generated/catering/floating-breakfast.webp` (webp, 570.02 KB)
+  - Used by: 1 file(s)
 
 ## References Without Alt Text
-- `/src/pages/WeddingGuidePage.tsx:108` — `/generated/guide-wedding.webp`
-- `/src/pages/TastingMenuPage.tsx:179` — `/generated/misc-luna-plating-md.webp`
-- `/src/pages/TastingMenuPage.tsx:297` — `/generated/luna-wine.webp`
-- `/src/pages/StaffingPage.tsx:206` — `/generated/staffing-staffing-hero-xl.webp`
-- `/src/pages/SolPage.tsx:94` — `/generated/catering-catering-hero-lg.webp`
-- `/src/pages/SolPage.tsx:232` — `/generated/finedining-sol-chef-portrait-sm.webp`
-- `/src/pages/ServicesPage.tsx:99` — `/generated/bali-hub-hero.webp`
-- `/src/pages/RomanticDinnerPage.tsx:121` — `/generated/section-romantic-dinner.webp`
-- `/src/pages/RomanticDinnerPage.tsx:231` — `/generated/luna-table.webp`
-- `/src/pages/RomanticDinnerPage.tsx:509` — `/generated/luna-detail.webp`
-- `/src/pages/PrivateChefBaliPage.tsx:151` — `/generated/luna-hero-v2.webp`
-- `/src/pages/PrivateChefBaliPage.tsx:212` — `/generated/luna-table.webp`
-- `/src/pages/PrivateChefBaliPage.tsx:320` — `/generated/luna-chef-portrait.webp`
-- `/src/pages/PartnerPlatformPage.tsx:125` — `/generated/partner-platform-hero.webp`
-- `/src/pages/PartnerPlatformPage.tsx:269` — `/generated/partner-platform-dashboard.webp`
-- `/src/pages/MenuGuidePage.tsx:98` — `/generated/guide-menu.webp`
-- `/src/pages/LunaPage.tsx:342` — `/generated/experience-luna-hero-v3-xl.webp`
-- `/src/pages/LunaPage.tsx:470` — `/generated/experience-luna-gallery-3-md.webp`
-- `/src/pages/LunaPage.tsx:512` — `/generated/experience-luna-gallery-4-md.webp`
-- `/src/pages/LunaPage.tsx:548` — `/generated/experience-luna-collage-xl.webp`
-- ... and 60 more
+- `/src/pages/HubPage.tsx:451` — `/generated/hero-how-it-works.webp`
+- `/src/components/trust/TrustSection.tsx:10` — `/generated/trust-section-bg.png`
 
 ## Largest Images
-1. `/public/generated/events/retreat-table.webp` (1440x800) — 919.7 KB — Used 4x
+1. `/public/generated/events/retreat-table.webp` (1440x800) — 919.7 KB — Used 2x
 2. `/public/generated/events-birthday-pool-xl.webp` (1440x800) — 896 KB — Used 1x
-3. `/public/generated/events/retreat-breakfast.webp` (1440x800) — 874.25 KB — Used 5x
+3. `/public/generated/events/retreat-breakfast.webp` (1440x800) — 874.25 KB — Used 3x
 4. `/public/generated/events/villa-party-night.webp` (1440x800) — 818.02 KB — Used 2x
 5. `/public/generated/misc-book-hero-xl.webp` (1440x800) — 816.96 KB — Used 0x
-6. `/public/generated/events/corporate-team.webp` (1440x800) — 718.42 KB — Used 3x
+6. `/public/generated/events/corporate-team.webp` (1440x800) — 718.42 KB — Used 2x
 7. `/public/events-hero-events-xl.webp` (2752x1536) — 665.65 KB — Used 1x
-8. `/public/generated/events/anniversary-romantic.webp` (1440x800) — 663.38 KB — Used 3x
-9. `/public/events-event-wedding-xl.webp` (2752x1536) — 651.7 KB — Used 3x
+8. `/public/generated/events/anniversary-romantic.webp` (1440x800) — 663.38 KB — Used 2x
+9. `/public/events-event-wedding-xl.webp` (2752x1536) — 651.7 KB — Used 2x
 10. `/public/generated/misc-contact-hero-xl.webp` (1440x800) — 639.58 KB — Used 0x

@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-05-16T18:32:46.589Z",
+  "timestamp": "2026-05-16T18:42:04.568Z",
   "scanPaths": [
     "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src",
     "/Users/openclaw/Downloads/MYCHEF . MASTER/app/public"
   ],
   "summary": {
     "totalImages": 100,
-    "totalReferences": 204,
-    "imagesWithoutAlt": 54,
-    "imagesNotFollowingConvention": 85,
+    "totalReferences": 158,
+    "imagesWithoutAlt": 0,
+    "imagesNotFollowingConvention": 87,
     "totalFileSize": 21909181,
     "formats": {
       "webp": 93,
@@ -99,7 +99,7 @@
         "height": 768
       },
       "hasNamingConvention": false,
-      "usageCount": 2,
+      "usageCount": 1,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx"
       ]
@@ -127,7 +127,7 @@
         "height": 1536
       },
       "hasNamingConvention": false,
-      "usageCount": 3,
+      "usageCount": 2,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx"
       ]
@@ -215,7 +215,7 @@
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 4,
+      "usageCount": 3,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHouseholdPage.tsx",
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx"
@@ -230,7 +230,7 @@
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 6,
+      "usageCount": 5,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaManagersPage.tsx",
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
@@ -247,7 +247,7 @@
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 6,
+      "usageCount": 5,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPage.tsx",
@@ -340,7 +340,7 @@
         "height": 1024
       },
       "hasNamingConvention": false,
-      "usageCount": 7,
+      "usageCount": 6,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/TastingMenuPage.tsx",
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningMenusPage.tsx",
@@ -822,7 +822,7 @@
         "height": 576
       },
       "hasNamingConvention": false,
-      "usageCount": 4,
+      "usageCount": 2,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx"
       ]
@@ -946,7 +946,7 @@
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 2,
+      "usageCount": 1,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx"
       ]
@@ -1058,7 +1058,7 @@
         "height": 1024
       },
       "hasNamingConvention": false,
-      "usageCount": 3,
+      "usageCount": 2,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceSommelierPage.tsx",
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ChefsTablePage.tsx"
@@ -1210,20 +1210,6 @@
       "usageCount": 0,
       "referencedBy": []
     },
-    "/public/generated/catering/floating-breakfast.webp": {
-      "path": "/public/generated/catering/floating-breakfast.webp",
-      "format": "webp",
-      "size": 583697,
-      "dimensions": {
-        "width": 1440,
-        "height": 800
-      },
-      "hasNamingConvention": false,
-      "usageCount": 3,
-      "referencedBy": [
-        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx"
-      ]
-    },
     "/public/generated/events/villa-party-night.webp": {
       "path": "/public/generated/events/villa-party-night.webp",
       "format": "webp",
@@ -1247,7 +1233,7 @@
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 4,
+      "usageCount": 2,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx"
       ]
@@ -1261,7 +1247,7 @@
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 5,
+      "usageCount": 3,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx"
       ]
@@ -1275,7 +1261,7 @@
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 3,
+      "usageCount": 2,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx"
       ]
@@ -1289,7 +1275,7 @@
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 7,
+      "usageCount": 4,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx"
       ]
@@ -1303,7 +1289,7 @@
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 3,
+      "usageCount": 2,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx"
       ]
@@ -1317,41 +1303,50 @@
         "height": 800
       },
       "hasNamingConvention": false,
-      "usageCount": 2,
+      "usageCount": 1,
       "referencedBy": [
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx"
+      ]
+    },
+    "/public/generated/catering/floating-breakfast.webp": {
+      "path": "/public/generated/catering/floating-breakfast.webp",
+      "format": "webp",
+      "size": 583697,
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "hasNamingConvention": false,
+      "usageCount": 3,
+      "referencedBy": [
+        "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx"
       ]
     }
   },
   "references": [
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/WeddingGuidePage.tsx",
-      "line": 108,
-      "type": "src",
+      "line": 107,
+      "type": "img",
       "path": "/generated/guide-wedding.webp",
-      "raw": "src=\"/generated/guide-wedding.webp\""
+      "alt": "Elegant Bali villa wedding reception at sunset — myCHEF",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/TastingMenuPage.tsx",
-      "line": 179,
-      "type": "src",
+      "line": 178,
+      "type": "img",
       "path": "/generated/misc-luna-plating-md.webp",
-      "raw": "src=\"/generated/misc-luna-plating-md.webp\""
+      "alt": "Perfectly plated private tasting menu dish in a Bali villa — myCHEF fine dining",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/TastingMenuPage.tsx",
-      "line": 297,
-      "type": "src",
+      "line": 296,
+      "type": "img",
       "path": "/generated/luna-wine.webp",
-      "raw": "src=\"/generated/luna-wine.webp\""
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaStaffPage.tsx",
-      "line": 125,
-      "type": "src",
-      "path": "/generated/hub-villa.webp",
-      "raw": "<img src=\"/generated/hub-villa.webp\" alt=\"Villa staff at a private Bali property\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
-      "alt": "Villa staff at a private Bali property"
+      "alt": "Wine pairing for private tasting menu in Bali villa",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaStaffPage.tsx",
@@ -1359,23 +1354,15 @@
       "type": "img",
       "path": "/generated/hub-villa.webp",
       "alt": "Villa staff at a private Bali property",
-      "raw": "<img src=\"/generated/hub-villa.webp\" alt=\"Villa staff at a private Bali property\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/hub-villa.webp\" alt=\"Villa staff at a private Bali property\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaStaffPage.tsx",
       "line": 227,
-      "type": "src",
+      "type": "img",
       "path": "/generated/hub-villa.webp",
-      "raw": "<OptimizedImage src=\"/generated/hub-villa.webp\" alt=\"Villa staff team at Bali property\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Villa staff team at Bali property"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaManagersPage.tsx",
-      "line": 121,
-      "type": "src",
-      "path": "/generated/corp-villa.webp",
-      "raw": "<img src=\"/generated/corp-villa.webp\" alt=\"Luxury Bali villa with professional hospitality staff\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
-      "alt": "Luxury Bali villa with professional hospitality staff"
+      "alt": "Villa staff team at Bali property",
+      "raw": "<OptimizedImage src=\"/generated/hub-villa.webp\" alt=\"Villa staff team at Bali property\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaManagersPage.tsx",
@@ -1383,23 +1370,15 @@
       "type": "img",
       "path": "/generated/corp-villa.webp",
       "alt": "Luxury Bali villa with professional hospitality staff",
-      "raw": "<img src=\"/generated/corp-villa.webp\" alt=\"Luxury Bali villa with professional hospitality staff\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/corp-villa.webp\" alt=\"Luxury Bali villa with professional hospitality staff\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingVillaManagersPage.tsx",
       "line": 233,
-      "type": "src",
+      "type": "img",
       "path": "/generated/staffing-staffing-kitchen-lg.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Professional hospitality team in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Professional hospitality team in Bali villa kitchen"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
-      "line": 121,
-      "type": "src",
-      "path": "/generated/staffing-staffing-hero-xl.webp",
-      "raw": "<img src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Private chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
-      "alt": "Private chef preparing meal at Bali villa"
+      "alt": "Professional hospitality team in Bali villa kitchen",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Professional hospitality team in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
@@ -1407,30 +1386,23 @@
       "type": "img",
       "path": "/generated/staffing-staffing-hero-xl.webp",
       "alt": "Private chef preparing meal at Bali villa",
-      "raw": "<img src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Private chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Private chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPlacementPage.tsx",
       "line": 233,
-      "type": "src",
+      "type": "img",
       "path": "/generated/staffing-staffing-kitchen-lg.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Private chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Private chef working in Bali villa kitchen"
+      "alt": "Private chef working in Bali villa kitchen",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Private chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingPage.tsx",
-      "line": 206,
-      "type": "src",
+      "line": 205,
+      "type": "img",
       "path": "/generated/staffing-staffing-hero-xl.webp",
-      "raw": "src=\"/generated/staffing-staffing-hero-xl.webp\""
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingLiveInPage.tsx",
-      "line": 121,
-      "type": "src",
-      "path": "/generated/staffing-staffing-kitchen-lg.webp",
-      "raw": "<img src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Live-in chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
-      "alt": "Live-in chef preparing meal at Bali villa"
+      "alt": "Professional hospitality staff at a private Bali villa",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingLiveInPage.tsx",
@@ -1438,23 +1410,15 @@
       "type": "img",
       "path": "/generated/staffing-staffing-kitchen-lg.webp",
       "alt": "Live-in chef preparing meal at Bali villa",
-      "raw": "<img src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Live-in chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Live-in chef preparing meal at Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingLiveInPage.tsx",
       "line": 233,
-      "type": "src",
+      "type": "img",
       "path": "/generated/staffing-staffing-kitchen-lg.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Live-in chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Live-in chef working in Bali villa kitchen"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHouseholdPage.tsx",
-      "line": 128,
-      "type": "src",
-      "path": "/generated/staffing-staffing-table-lg.webp",
-      "raw": "<img src=\"/generated/staffing-staffing-table-lg.webp\" alt=\"Household staff serving at private Bali residence\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
-      "alt": "Household staff serving at private Bali residence"
+      "alt": "Live-in chef working in Bali villa kitchen",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Live-in chef working in Bali villa kitchen\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHouseholdPage.tsx",
@@ -1462,23 +1426,15 @@
       "type": "img",
       "path": "/generated/staffing-staffing-table-lg.webp",
       "alt": "Household staff serving at private Bali residence",
-      "raw": "<img src=\"/generated/staffing-staffing-table-lg.webp\" alt=\"Household staff serving at private Bali residence\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/staffing-staffing-table-lg.webp\" alt=\"Household staff serving at private Bali residence\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHouseholdPage.tsx",
       "line": 240,
-      "type": "src",
+      "type": "img",
       "path": "/generated/staffing-staffing-table-lg.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-table-lg.webp\" alt=\"Household staff at private Bali residence\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Household staff at private Bali residence"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHotelsPage.tsx",
-      "line": 121,
-      "type": "src",
-      "path": "/generated/aura-corporate.webp",
-      "raw": "<img src=\"/generated/aura-corporate.webp\" alt=\"Professional hospitality team at Bali hotel restaurant\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
-      "alt": "Professional hospitality team at Bali hotel restaurant"
+      "alt": "Household staff at private Bali residence",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-table-lg.webp\" alt=\"Household staff at private Bali residence\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHotelsPage.tsx",
@@ -1486,44 +1442,39 @@
       "type": "img",
       "path": "/generated/aura-corporate.webp",
       "alt": "Professional hospitality team at Bali hotel restaurant",
-      "raw": "<img src=\"/generated/aura-corporate.webp\" alt=\"Professional hospitality team at Bali hotel restaurant\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/aura-corporate.webp\" alt=\"Professional hospitality team at Bali hotel restaurant\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/StaffingHotelsPage.tsx",
       "line": 233,
-      "type": "src",
+      "type": "img",
       "path": "/generated/staffing-staffing-kitchen-lg.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Professional kitchen team at Bali restaurant\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Professional kitchen team at Bali restaurant"
+      "alt": "Professional kitchen team at Bali restaurant",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-kitchen-lg.webp\" alt=\"Professional kitchen team at Bali restaurant\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/SolPage.tsx",
-      "line": 94,
-      "type": "src",
+      "line": 93,
+      "type": "img",
       "path": "/generated/catering-catering-hero-lg.webp",
-      "raw": "src=\"/generated/catering-catering-hero-lg.webp\""
+      "alt": "Villa chef plating a family-style brunch at a Bali villa, golden morning light",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/SolPage.tsx",
-      "line": 232,
-      "type": "src",
+      "line": 231,
+      "type": "img",
       "path": "/generated/finedining-sol-chef-portrait-sm.webp",
-      "raw": "src=\"/generated/finedining-sol-chef-portrait-sm.webp\""
+      "alt": "Chef Daniel",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServicesPage.tsx",
-      "line": 99,
-      "type": "src",
+      "line": 98,
+      "type": "img",
       "path": "/generated/bali-hub-hero.webp",
-      "raw": "src=\"/generated/bali-hub-hero.webp\""
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceWaitersPage.tsx",
-      "line": 122,
-      "type": "src",
-      "path": "/generated/aura-bartender.webp",
-      "raw": "<img src=\"/generated/aura-bartender.webp\" alt=\"Professional waiter serving at Bali villa dinner\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
-      "alt": "Professional waiter serving at Bali villa dinner"
+      "alt": "Luxury villa dinner overlooking Bali rice terraces at sunset",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceWaitersPage.tsx",
@@ -1531,23 +1482,15 @@
       "type": "img",
       "path": "/generated/aura-bartender.webp",
       "alt": "Professional waiter serving at Bali villa dinner",
-      "raw": "<img src=\"/generated/aura-bartender.webp\" alt=\"Professional waiter serving at Bali villa dinner\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/aura-bartender.webp\" alt=\"Professional waiter serving at Bali villa dinner\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceWaitersPage.tsx",
       "line": 278,
-      "type": "src",
+      "type": "img",
       "path": "/generated/staffing-staffing-hero-xl.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Professional service team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Professional service team at Bali villa"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceSommelierPage.tsx",
-      "line": 120,
-      "type": "src",
-      "path": "/generated/chefs-table-hero-luxury.webp",
-      "raw": "<img src=\"/generated/chefs-table-hero-luxury.webp\" alt=\"Sommelier presenting wine at private Bali villa dinner\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
-      "alt": "Sommelier presenting wine at private Bali villa dinner"
+      "alt": "Professional service team at Bali villa",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Professional service team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceSommelierPage.tsx",
@@ -1555,31 +1498,23 @@
       "type": "img",
       "path": "/generated/chefs-table-hero-luxury.webp",
       "alt": "Sommelier presenting wine at private Bali villa dinner",
-      "raw": "<img src=\"/generated/chefs-table-hero-luxury.webp\" alt=\"Sommelier presenting wine at private Bali villa dinner\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/chefs-table-hero-luxury.webp\" alt=\"Sommelier presenting wine at private Bali villa dinner\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceSommelierPage.tsx",
       "line": 257,
-      "type": "src",
+      "type": "img",
       "path": "/generated/luna-wine.webp",
-      "raw": "<OptimizedImage src=\"/generated/luna-wine.webp\" alt=\"Wine pairing at Bali villa dinner\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Wine pairing at Bali villa dinner"
+      "alt": "Wine pairing at Bali villa dinner",
+      "raw": "<OptimizedImage src=\"/generated/luna-wine.webp\" alt=\"Wine pairing at Bali villa dinner\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceMixologyPage.tsx",
       "line": 258,
-      "type": "src",
+      "type": "img",
       "path": "/generated/party-ultimate.webp",
-      "raw": "<OptimizedImage src=\"/generated/party-ultimate.webp\" alt=\"Mixology experience at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Mixology experience at Bali villa"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceHostPage.tsx",
-      "line": 120,
-      "type": "src",
-      "path": "/generated/hub-staffing.webp",
-      "raw": "<img src=\"/generated/hub-staffing.webp\" alt=\"Professional villa host greeting guests in Bali\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
-      "alt": "Professional villa host greeting guests in Bali"
+      "alt": "Mixology experience at Bali villa",
+      "raw": "<OptimizedImage src=\"/generated/party-ultimate.webp\" alt=\"Mixology experience at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceHostPage.tsx",
@@ -1587,23 +1522,15 @@
       "type": "img",
       "path": "/generated/hub-staffing.webp",
       "alt": "Professional villa host greeting guests in Bali",
-      "raw": "<img src=\"/generated/hub-staffing.webp\" alt=\"Professional villa host greeting guests in Bali\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/hub-staffing.webp\" alt=\"Professional villa host greeting guests in Bali\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceHostPage.tsx",
       "line": 257,
-      "type": "src",
+      "type": "img",
       "path": "/generated/staffing-staffing-hero-xl.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Professional hosts at Bali villa event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Professional hosts at Bali villa event"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceButlersPage.tsx",
-      "line": 120,
-      "type": "src",
-      "path": "/generated/butler-service.webp",
-      "raw": "<img src=\"/generated/butler-service.webp\" alt=\"Professional private butler in a private Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
-      "alt": "Professional private butler in a private Bali villa"
+      "alt": "Professional hosts at Bali villa event",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Professional hosts at Bali villa event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceButlersPage.tsx",
@@ -1611,23 +1538,15 @@
       "type": "img",
       "path": "/generated/butler-service.webp",
       "alt": "Professional private butler in a private Bali villa",
-      "raw": "<img src=\"/generated/butler-service.webp\" alt=\"Professional private butler in a private Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/butler-service.webp\" alt=\"Professional private butler in a private Bali villa\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceButlersPage.tsx",
       "line": 257,
-      "type": "src",
+      "type": "img",
       "path": "/generated/staffing-staffing-hero-xl.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Luxury villa butler service Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Luxury villa butler service Bali"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceBartendersPage.tsx",
-      "line": 120,
-      "type": "src",
-      "path": "/generated/aura-bartender.webp",
-      "raw": "<img src=\"/generated/aura-bartender.webp\" alt=\"Professional bartender mixing cocktails at a private Bali villa bar\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />",
-      "alt": "Professional bartender mixing cocktails at a private Bali villa bar"
+      "alt": "Luxury villa butler service Bali",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-hero-xl.webp\" alt=\"Luxury villa butler service Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceBartendersPage.tsx",
@@ -1635,241 +1554,270 @@
       "type": "img",
       "path": "/generated/aura-bartender.webp",
       "alt": "Professional bartender mixing cocktails at a private Bali villa bar",
-      "raw": "<img src=\"/generated/aura-bartender.webp\" alt=\"Professional bartender mixing cocktails at a private Bali villa bar\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />"
+      "raw": "<img src=\"/generated/aura-bartender.webp\" alt=\"Professional bartender mixing cocktails at a private Bali villa bar\" className=\"w-full h-full object-cover\" width={1920} height={1080} decoding=\"async\" fetchPriority=\"high\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ServiceBartendersPage.tsx",
       "line": 257,
-      "type": "src",
+      "type": "img",
       "path": "/generated/party-ultimate.webp",
-      "raw": "<OptimizedImage src=\"/generated/party-ultimate.webp\" alt=\"Villa bar setup at Bali event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Villa bar setup at Bali event"
+      "alt": "Villa bar setup at Bali event",
+      "raw": "<OptimizedImage src=\"/generated/party-ultimate.webp\" alt=\"Villa bar setup at Bali event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/RomanticDinnerPage.tsx",
-      "line": 121,
-      "type": "src",
+      "line": 120,
+      "type": "img",
       "path": "/generated/section-romantic-dinner.webp",
-      "raw": "src=\"/generated/section-romantic-dinner.webp\""
+      "alt": "Candlelit romantic dinner table in a Bali villa at dusk with flowers and wine",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/RomanticDinnerPage.tsx",
-      "line": 231,
-      "type": "src",
+      "line": 230,
+      "type": "img",
       "path": "/generated/luna-table.webp",
-      "raw": "src=\"/generated/luna-table.webp\""
+      "alt": "Candlelit private dining table set for two in a Bali villa with white linens and flowers",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/RomanticDinnerPage.tsx",
-      "line": 509,
-      "type": "src",
+      "line": 508,
+      "type": "img",
       "path": "/generated/luna-detail.webp",
-      "raw": "src=\"/generated/luna-detail.webp\""
+      "alt": "Private fine dining in Bali villa",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PrivateChefBaliPage.tsx",
-      "line": 151,
-      "type": "src",
+      "line": 150,
+      "type": "img",
       "path": "/generated/luna-hero-v2.webp",
-      "raw": "src=\"/generated/luna-hero-v2.webp\""
+      "alt": "Michelin-trained private chef preparing dinner in a Bali villa — myCHEF",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PrivateChefBaliPage.tsx",
-      "line": 212,
-      "type": "src",
+      "line": 211,
+      "type": "img",
       "path": "/generated/luna-table.webp",
-      "raw": "src=\"/generated/luna-table.webp\""
+      "alt": "Private chef dinner table in a Bali villa — elegant setting, myCHEF",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PrivateChefBaliPage.tsx",
-      "line": 320,
-      "type": "src",
+      "line": 319,
+      "type": "img",
       "path": "/generated/luna-chef-portrait.webp",
-      "raw": "src=\"/generated/luna-chef-portrait.webp\""
+      "alt": "Adriano — myCHEF executive chef, Michelin-trained, Bali private dining",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PartnersPage.tsx",
       "line": 187,
-      "type": "src",
+      "type": "img",
       "path": "/generated/partner-platform-hero.webp",
-      "raw": "<OptimizedImage src=\"/generated/partner-platform-hero.webp\" alt=\"myCHEF Bali partner programme\" className=\"w-full h-full object-cover opacity-20\" loading=\"lazy\" decoding=\"async\" />",
-      "alt": "myCHEF Bali partner programme"
+      "alt": "myCHEF Bali partner programme",
+      "raw": "<OptimizedImage src=\"/generated/partner-platform-hero.webp\" alt=\"myCHEF Bali partner programme\" className=\"w-full h-full object-cover opacity-20\" loading=\"lazy\" decoding=\"async\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PartnerPlatformPage.tsx",
-      "line": 125,
-      "type": "src",
+      "line": 124,
+      "type": "img",
       "path": "/generated/partner-platform-hero.webp",
-      "raw": "src=\"/generated/partner-platform-hero.webp\""
+      "alt": "Private Bali villa private dining setup at golden hour",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/PartnerPlatformPage.tsx",
-      "line": 269,
-      "type": "src",
+      "line": 268,
+      "type": "img",
       "path": "/generated/partner-platform-dashboard.webp",
-      "raw": "src=\"/generated/partner-platform-dashboard.webp\""
+      "alt": "Chef plating a Michelin-level course on a black marble countertop in a Bali villa",
+      "raw": "<OptimizedImage..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/MenuGuidePage.tsx",
-      "line": 98,
-      "type": "src",
+      "line": 97,
+      "type": "img",
       "path": "/generated/guide-menu.webp",
-      "raw": "src=\"/generated/guide-menu.webp\""
+      "alt": "Indonesian chef discussing a menu with guests in a private Bali villa — myCHEF",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 342,
-      "type": "src",
+      "line": 341,
+      "type": "img",
       "path": "/generated/experience-luna-hero-v3-xl.webp",
-      "raw": "src=\"/generated/experience-luna-hero-v3-xl.webp\""
+      "alt": "European friends enjoying a candlelit Michelin-level dinner on a private Bali villa terrace with Indonesian staff",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 470,
-      "type": "src",
+      "line": 469,
+      "type": "img",
       "path": "/generated/experience-luna-gallery-3-md.webp",
-      "raw": "src=\"/generated/experience-luna-gallery-3-md.webp\""
+      "alt": "Private chef preparing a fine dining course in a Bali villa kitchen",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 512,
-      "type": "src",
+      "line": 511,
+      "type": "img",
       "path": "/generated/experience-luna-gallery-4-md.webp",
-      "raw": "src=\"/generated/experience-luna-gallery-4-md.webp\""
+      "alt": "Romantic candlelit dinner for two at a private Bali villa",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 548,
-      "type": "src",
+      "line": 547,
+      "type": "img",
       "path": "/generated/experience-luna-collage-xl.webp",
-      "raw": "src=\"/generated/experience-luna-collage-xl.webp\""
+      "alt": "Michelin-trained chef preparing a Mediterranean tasting menu in a private Bali villa kitchen",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 605,
-      "type": "src",
+      "line": 604,
+      "type": "img",
       "path": "/generated/experience-luna-gallery-2-md.webp",
-      "raw": "src=\"/generated/experience-luna-gallery-2-md.webp\""
+      "alt": "Chef cooking at an open kitchen station during a private villa dinner",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 955,
-      "type": "src",
+      "line": 954,
+      "type": "img",
       "path": "/generated/experience-luna-gallery-1-md.webp",
-      "raw": "src=\"/generated/experience-luna-gallery-1-md.webp\""
+      "alt": "Sommelier presenting wine",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 965,
-      "type": "src",
+      "line": 964,
+      "type": "img",
       "path": "/generated/experience-luna-gallery-2-md.webp",
-      "raw": "src=\"/generated/experience-luna-gallery-2-md.webp\""
+      "alt": "Chef flambe at open kitchen",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 975,
-      "type": "src",
+      "line": 974,
+      "type": "img",
       "path": "/generated/experience-luna-gallery-3-md.webp",
-      "raw": "src=\"/generated/experience-luna-gallery-3-md.webp\""
+      "alt": "Chef plating with guest",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 985,
-      "type": "src",
+      "line": 984,
+      "type": "img",
       "path": "/generated/experience-luna-gallery-4-md.webp",
-      "raw": "src=\"/generated/experience-luna-gallery-4-md.webp\""
+      "alt": "Group dining at sunset",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 1029,
-      "type": "src",
+      "line": 1028,
+      "type": "img",
       "path": "/generated/ui-testimonials-bg-lg.webp",
-      "raw": "src=\"/generated/ui-testimonials-bg-lg.webp\""
+      "alt": "Private chef serving guests at a candlelit villa dinner — words from guests",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "line": 331,
-      "type": "src",
+      "line": 330,
+      "type": "img",
       "path": "/generated/bali-hub-hero.webp",
-      "raw": "src=\"/generated/bali-hub-hero.webp\""
+      "alt": "Luxury private dining table in a Bali villa at sunset",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "line": 610,
-      "type": "src",
+      "line": 609,
+      "type": "img",
       "path": "/generated/team-photo.webp",
-      "raw": "src=\"/generated/team-photo.webp\""
+      "alt": "The myCHEF team",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "line": 786,
-      "type": "src",
+      "line": 785,
+      "type": "img",
       "path": "/generated/misc-hub-villa-lg.webp",
-      "raw": "src=\"/generated/misc-hub-villa-lg.webp\""
+      "alt": "Family enjoying private villa dinner in Bali",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "line": 807,
-      "type": "src",
+      "line": 806,
+      "type": "img",
       "path": "/generated/misc-hub-villa-lg.webp",
-      "raw": "src=\"/generated/misc-hub-villa-lg.webp\""
+      "alt": "Family enjoying private villa dinner in Bali",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "line": 943,
-      "type": "src",
+      "line": 942,
+      "type": "img",
       "path": "/generated/misc-hub-villa-lg.webp",
-      "raw": "src=\"/generated/misc-hub-villa-lg.webp\""
+      "alt": "Luxury villa partnership",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "line": 1006,
-      "type": "src",
+      "line": 1005,
+      "type": "img",
       "path": "/generated/misc-hub-bali-lg.webp",
-      "raw": "src=\"/generated/misc-hub-bali-lg.webp\""
+      "alt": "Bali landscape",
+      "raw": "<img..."
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
+      "line": 451,
+      "type": "backgroundImage",
+      "path": "/generated/hero-how-it-works.webp",
+      "raw": "backgroundImage: 'url(/generated/hero-how-it-works.webp)'"
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HelpPage.tsx",
-      "line": 109,
-      "type": "src",
+      "line": 108,
+      "type": "img",
       "path": "/generated/help-hero.webp",
-      "raw": "src=\"/generated/help-hero.webp\""
+      "alt": "Professional guest relations in a Bali villa — myCHEF help center",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningMenusPage.tsx",
-      "line": 172,
-      "type": "src",
+      "line": 171,
+      "type": "img",
       "path": "/generated/misc-luna-plating-md.webp",
-      "raw": "src=\"/generated/misc-luna-plating-md.webp\""
+      "alt": "Luxury private chef plating in a Bali villa for myCHEF fine dining menus",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningChefsPage.tsx",
-      "line": 165,
-      "type": "src",
+      "line": 164,
+      "type": "img",
       "path": "/generated/finedining-chefs-hero-xl.webp",
-      "raw": "src=\"/generated/finedining-chefs-hero-xl.webp\""
+      "alt": "myCHEF chefs preparing a fine dining private service in Bali",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/FineDiningChefsPage.tsx",
-      "line": 260,
-      "type": "src",
+      "line": 259,
+      "type": "img",
       "path": "/generated/fd-chef-signature.jpg",
-      "raw": "src=\"/generated/fd-chef-signature.jpg\""
+      "alt": "Adriano, founder and head chef of myCHEF Bali",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
-      "line": 176,
-      "type": "src",
+      "line": 175,
+      "type": "img",
       "path": "/events-event-wedding-xl.webp",
-      "raw": "src=\"/events-event-wedding-xl.webp\""
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
-      "line": 237,
-      "type": "src",
-      "path": "/events-event-wedding-xl.webp",
-      "raw": "<img src=\"/events-event-wedding-xl.webp\" alt=\"Luxury Bali villa wedding ceremony setup by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Luxury Bali villa wedding ceremony setup by myCHEF"
+      "alt": "Bali villa wedding ceremony at a tropical altar",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
@@ -1877,15 +1825,7 @@
       "type": "img",
       "path": "/events-event-wedding-xl.webp",
       "alt": "Luxury Bali villa wedding ceremony setup by myCHEF",
-      "raw": "<img src=\"/events-event-wedding-xl.webp\" alt=\"Luxury Bali villa wedding ceremony setup by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
-      "line": 289,
-      "type": "src",
-      "path": "/generated/aura-toast.webp",
-      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Champagne service during Bali wedding cocktail hour\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Champagne service during Bali wedding cocktail hour"
+      "raw": "<img src=\"/events-event-wedding-xl.webp\" alt=\"Luxury Bali villa wedding ceremony setup by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
@@ -1893,15 +1833,7 @@
       "type": "img",
       "path": "/generated/aura-toast.webp",
       "alt": "Champagne service during Bali wedding cocktail hour",
-      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Champagne service during Bali wedding cocktail hour\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
-      "line": 299,
-      "type": "src",
-      "path": "/generated/experience-aura-setup-lg.webp",
-      "raw": "<img src=\"/generated/experience-aura-setup-lg.webp\" alt=\"Wedding reception setup inside a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Wedding reception setup inside a Bali villa"
+      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Champagne service during Bali wedding cocktail hour\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
@@ -1909,15 +1841,7 @@
       "type": "img",
       "path": "/generated/experience-aura-setup-lg.webp",
       "alt": "Wedding reception setup inside a Bali villa",
-      "raw": "<img src=\"/generated/experience-aura-setup-lg.webp\" alt=\"Wedding reception setup inside a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
-      "line": 368,
-      "type": "src",
-      "path": "/events-wedding-reception-lg.webp",
-      "raw": "<img src=\"/events-wedding-reception-lg.webp\" alt=\"Wedding reception table with candles and plated dinner service\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Wedding reception table with candles and plated dinner service"
+      "raw": "<img src=\"/generated/experience-aura-setup-lg.webp\" alt=\"Wedding reception setup inside a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
@@ -1925,15 +1849,7 @@
       "type": "img",
       "path": "/events-wedding-reception-lg.webp",
       "alt": "Wedding reception table with candles and plated dinner service",
-      "raw": "<img src=\"/events-wedding-reception-lg.webp\" alt=\"Wedding reception table with candles and plated dinner service\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
-      "line": 412,
-      "type": "src",
-      "path": "/generated/experience-aura-setup-lg.webp",
-      "raw": "<img src=\"/generated/experience-aura-setup-lg.webp\" alt=\"Intimate Bali wedding dinner for a small group\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Intimate Bali wedding dinner for a small group"
+      "raw": "<img src=\"/events-wedding-reception-lg.webp\" alt=\"Wedding reception table with candles and plated dinner service\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
@@ -1941,15 +1857,7 @@
       "type": "img",
       "path": "/generated/experience-aura-setup-lg.webp",
       "alt": "Intimate Bali wedding dinner for a small group",
-      "raw": "<img src=\"/generated/experience-aura-setup-lg.webp\" alt=\"Intimate Bali wedding dinner for a small group\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
-      "line": 464,
-      "type": "src",
-      "path": "/generated/aura-toast.webp",
-      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Wedding couple toasting during a Bali villa celebration\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Wedding couple toasting during a Bali villa celebration"
+      "raw": "<img src=\"/generated/experience-aura-setup-lg.webp\" alt=\"Intimate Bali wedding dinner for a small group\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
@@ -1957,71 +1865,55 @@
       "type": "img",
       "path": "/generated/aura-toast.webp",
       "alt": "Wedding couple toasting during a Bali villa celebration",
-      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Wedding couple toasting during a Bali villa celebration\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Wedding couple toasting during a Bali villa celebration\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
       "line": 177,
-      "type": "src",
+      "type": "img",
       "path": "/generated/events/villa-party-night.webp",
-      "raw": "<OptimizedImage src=\"/generated/events/villa-party-night.webp\" alt=\"Night-time villa party with bar and pool lighting in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
-      "alt": "Night-time villa party with bar and pool lighting in Bali"
+      "alt": "Night-time villa party with bar and pool lighting in Bali",
+      "raw": "<OptimizedImage src=\"/generated/events/villa-party-night.webp\" alt=\"Night-time villa party with bar and pool lighting in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
       "line": 231,
-      "type": "src",
+      "type": "img",
       "path": "/generated/events/villa-party-night.webp",
-      "raw": "<OptimizedImage src=\"/generated/events/villa-party-night.webp\" alt=\"Bali villa party setup with bar and long-table dining\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Bali villa party setup with bar and long-table dining"
+      "alt": "Bali villa party setup with bar and long-table dining",
+      "raw": "<OptimizedImage src=\"/generated/events/villa-party-night.webp\" alt=\"Bali villa party setup with bar and long-table dining\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
       "line": 266,
-      "type": "src",
+      "type": "img",
       "path": "/generated/sol-bbq.webp",
-      "raw": "<OptimizedImage src=\"/generated/sol-bbq.webp\" alt=\"Live BBQ station for a Bali villa party\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Live BBQ station for a Bali villa party"
+      "alt": "Live BBQ station for a Bali villa party",
+      "raw": "<OptimizedImage src=\"/generated/sol-bbq.webp\" alt=\"Live BBQ station for a Bali villa party\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
       "line": 276,
-      "type": "src",
+      "type": "img",
       "path": "/generated/party-beer.webp",
-      "raw": "<OptimizedImage src=\"/generated/party-beer.webp\" alt=\"Party bartender service and drinks at a Bali villa event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Party bartender service and drinks at a Bali villa event"
+      "alt": "Party bartender service and drinks at a Bali villa event",
+      "raw": "<OptimizedImage src=\"/generated/party-beer.webp\" alt=\"Party bartender service and drinks at a Bali villa event\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
       "line": 335,
-      "type": "src",
+      "type": "img",
       "path": "/generated/party-pool.webp",
-      "raw": "<OptimizedImage src=\"/generated/party-pool.webp\" alt=\"Poolside villa party staffing and setup in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Poolside villa party staffing and setup in Bali"
+      "alt": "Poolside villa party staffing and setup in Bali",
+      "raw": "<OptimizedImage src=\"/generated/party-pool.webp\" alt=\"Poolside villa party staffing and setup in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
       "line": 364,
-      "type": "src",
+      "type": "img",
       "path": "/generated/party-rooftop.webp",
-      "raw": "<OptimizedImage src=\"/generated/party-rooftop.webp\" alt=\"Late-night rooftop style villa party in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Late-night rooftop style villa party in Bali"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
-      "line": 175,
-      "type": "src",
-      "path": "/generated/events/retreat-breakfast.webp",
-      "raw": "<OptimizedImage src=\"/generated/events/retreat-breakfast.webp\" alt=\"Healthy retreat breakfast with fruit and juices in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
-      "alt": "Healthy retreat breakfast with fruit and juices in Bali"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
-      "line": 229,
-      "type": "src",
-      "path": "/generated/events/retreat-breakfast.webp",
-      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Healthy breakfast service for a Bali wellness retreat\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Healthy breakfast service for a Bali wellness retreat"
+      "alt": "Late-night rooftop style villa party in Bali",
+      "raw": "<OptimizedImage src=\"/generated/party-rooftop.webp\" alt=\"Late-night rooftop style villa party in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
@@ -2029,15 +1921,7 @@
       "type": "img",
       "path": "/generated/events/retreat-breakfast.webp",
       "alt": "Healthy breakfast service for a Bali wellness retreat",
-      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Healthy breakfast service for a Bali wellness retreat\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
-      "line": 275,
-      "type": "src",
-      "path": "/generated/events/retreat-table.webp",
-      "raw": "<img src=\"/generated/events/retreat-table.webp\" alt=\"Long communal retreat dining table in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Long communal retreat dining table in Bali"
+      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Healthy breakfast service for a Bali wellness retreat\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
@@ -2045,15 +1929,7 @@
       "type": "img",
       "path": "/generated/events/retreat-table.webp",
       "alt": "Long communal retreat dining table in Bali",
-      "raw": "<img src=\"/generated/events/retreat-table.webp\" alt=\"Long communal retreat dining table in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
-      "line": 285,
-      "type": "src",
-      "path": "/generated/sol-produce.webp",
-      "raw": "<img src=\"/generated/sol-produce.webp\" alt=\"Fresh whole produce prepared for wellness retreat catering\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Fresh whole produce prepared for wellness retreat catering"
+      "raw": "<img src=\"/generated/events/retreat-table.webp\" alt=\"Long communal retreat dining table in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
@@ -2061,15 +1937,7 @@
       "type": "img",
       "path": "/generated/sol-produce.webp",
       "alt": "Fresh whole produce prepared for wellness retreat catering",
-      "raw": "<img src=\"/generated/sol-produce.webp\" alt=\"Fresh whole produce prepared for wellness retreat catering\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
-      "line": 340,
-      "type": "src",
-      "path": "/generated/events/retreat-breakfast.webp",
-      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Labeled healthy breakfast setup for retreat guests\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Labeled healthy breakfast setup for retreat guests"
+      "raw": "<img src=\"/generated/sol-produce.webp\" alt=\"Fresh whole produce prepared for wellness retreat catering\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
@@ -2077,15 +1945,7 @@
       "type": "img",
       "path": "/generated/events/retreat-breakfast.webp",
       "alt": "Labeled healthy breakfast setup for retreat guests",
-      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Labeled healthy breakfast setup for retreat guests\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
-      "line": 370,
-      "type": "src",
-      "path": "/generated/events/retreat-table.webp",
-      "raw": "<img src=\"/generated/events/retreat-table.webp\" alt=\"Multi-day retreat lunch service setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Multi-day retreat lunch service setup in Bali"
+      "raw": "<img src=\"/generated/events/retreat-breakfast.webp\" alt=\"Labeled healthy breakfast setup for retreat guests\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
@@ -2093,15 +1953,7 @@
       "type": "img",
       "path": "/generated/events/retreat-table.webp",
       "alt": "Multi-day retreat lunch service setup in Bali",
-      "raw": "<img src=\"/generated/events/retreat-table.webp\" alt=\"Multi-day retreat lunch service setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
-      "line": 423,
-      "type": "src",
-      "path": "/generated/party-brunch.webp",
-      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Healthy brunch-style retreat spread in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Healthy brunch-style retreat spread in Bali"
+      "raw": "<img src=\"/generated/events/retreat-table.webp\" alt=\"Multi-day retreat lunch service setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
@@ -2109,37 +1961,31 @@
       "type": "img",
       "path": "/generated/party-brunch.webp",
       "alt": "Healthy brunch-style retreat spread in Bali",
-      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Healthy brunch-style retreat spread in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Healthy brunch-style retreat spread in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "line": 175,
+      "type": "img",
+      "path": "/generated/events/retreat-breakfast.webp",
+      "alt": "Healthy retreat breakfast with fruit and juices in Bali",
+      "raw": "<OptimizedImage src=\"/generated/events/retreat-breakfast.webp\" alt=\"Healthy retreat breakfast with fruit and juices in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsMainPage.tsx",
-      "line": 364,
-      "type": "src",
+      "line": 363,
+      "type": "img",
       "path": "/events-hero-events-xl.webp",
-      "raw": "src=\"/events-hero-events-xl.webp\""
+      "alt": "Luxury villa event in Bali with styled dining and celebration setup",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsMainPage.tsx",
-      "line": 831,
-      "type": "src",
+      "line": 830,
+      "type": "img",
       "path": "/generated/aura-tablescape.webp",
-      "raw": "src=\"/generated/aura-tablescape.webp\""
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
-      "line": 179,
-      "type": "src",
-      "path": "/generated/events/corporate-team.webp",
-      "raw": "<OptimizedImage src=\"/generated/events/corporate-team.webp\" alt=\"Corporate team lunch setup at a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
-      "alt": "Corporate team lunch setup at a Bali villa"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
-      "line": 233,
-      "type": "src",
-      "path": "/generated/corp-conference.webp",
-      "raw": "<img src=\"/generated/corp-conference.webp\" alt=\"Corporate conference setup with catered service in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Corporate conference setup with catered service in Bali"
+      "alt": "Aura restaurant/service at myCHEF fine dining",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
@@ -2147,15 +1993,7 @@
       "type": "img",
       "path": "/generated/corp-conference.webp",
       "alt": "Corporate conference setup with catered service in Bali",
-      "raw": "<img src=\"/generated/corp-conference.webp\" alt=\"Corporate conference setup with catered service in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
-      "line": 283,
-      "type": "src",
-      "path": "/generated/corp-plated.webp",
-      "raw": "<img src=\"/generated/corp-plated.webp\" alt=\"Plated corporate dinner service by myCHEF in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Plated corporate dinner service by myCHEF in Bali"
+      "raw": "<img src=\"/generated/corp-conference.webp\" alt=\"Corporate conference setup with catered service in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
@@ -2163,15 +2001,7 @@
       "type": "img",
       "path": "/generated/corp-plated.webp",
       "alt": "Plated corporate dinner service by myCHEF in Bali",
-      "raw": "<img src=\"/generated/corp-plated.webp\" alt=\"Plated corporate dinner service by myCHEF in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
-      "line": 293,
-      "type": "src",
-      "path": "/generated/events/corporate-team.webp",
-      "raw": "<img src=\"/generated/events/corporate-team.webp\" alt=\"Professional corporate service team at a Bali venue\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Professional corporate service team at a Bali venue"
+      "raw": "<img src=\"/generated/corp-plated.webp\" alt=\"Plated corporate dinner service by myCHEF in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
@@ -2179,15 +2009,7 @@
       "type": "img",
       "path": "/generated/events/corporate-team.webp",
       "alt": "Professional corporate service team at a Bali venue",
-      "raw": "<img src=\"/generated/events/corporate-team.webp\" alt=\"Professional corporate service team at a Bali venue\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
-      "line": 353,
-      "type": "src",
-      "path": "/generated/corp-networking.webp",
-      "raw": "<img src=\"/generated/corp-networking.webp\" alt=\"Corporate networking drinks setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Corporate networking drinks setup in Bali"
+      "raw": "<img src=\"/generated/events/corporate-team.webp\" alt=\"Professional corporate service team at a Bali venue\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
@@ -2195,15 +2017,7 @@
       "type": "img",
       "path": "/generated/corp-networking.webp",
       "alt": "Corporate networking drinks setup in Bali",
-      "raw": "<img src=\"/generated/corp-networking.webp\" alt=\"Corporate networking drinks setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
-      "line": 382,
-      "type": "src",
-      "path": "/generated/corp-executive.webp",
-      "raw": "<img src=\"/generated/corp-executive.webp\" alt=\"Executive corporate dinner environment in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Executive corporate dinner environment in Bali"
+      "raw": "<img src=\"/generated/corp-networking.webp\" alt=\"Corporate networking drinks setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
@@ -2211,15 +2025,7 @@
       "type": "img",
       "path": "/generated/corp-executive.webp",
       "alt": "Executive corporate dinner environment in Bali",
-      "raw": "<img src=\"/generated/corp-executive.webp\" alt=\"Executive corporate dinner environment in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
-      "line": 440,
-      "type": "src",
-      "path": "/generated/corp-villa.webp",
-      "raw": "<img src=\"/generated/corp-villa.webp\" alt=\"Corporate villa venue setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Corporate villa venue setup in Bali"
+      "raw": "<img src=\"/generated/corp-executive.webp\" alt=\"Executive corporate dinner environment in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
@@ -2227,23 +2033,15 @@
       "type": "img",
       "path": "/generated/corp-villa.webp",
       "alt": "Corporate villa venue setup in Bali",
-      "raw": "<img src=\"/generated/corp-villa.webp\" alt=\"Corporate villa venue setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/corp-villa.webp\" alt=\"Corporate villa venue setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
-      "line": 147,
-      "type": "src",
-      "path": "/generated/events-birthday-pool-xl.webp",
-      "raw": "<OptimizedImage src=\"/generated/events-birthday-pool-xl.webp\" alt=\"Birthday pool party dinner at a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
-      "alt": "Birthday pool party dinner at a Bali villa"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
-      "line": 201,
-      "type": "src",
-      "path": "/generated/events-party-birthday-lg.webp",
-      "raw": "<img src=\"/generated/events-party-birthday-lg.webp\" alt=\"Birthday celebration dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Birthday celebration dining setup in a Bali villa"
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "line": 179,
+      "type": "img",
+      "path": "/generated/events/corporate-team.webp",
+      "alt": "Corporate team lunch setup at a Bali villa",
+      "raw": "<OptimizedImage src=\"/generated/events/corporate-team.webp\" alt=\"Corporate team lunch setup at a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
@@ -2251,15 +2049,7 @@
       "type": "img",
       "path": "/generated/events-party-birthday-lg.webp",
       "alt": "Birthday celebration dining setup in a Bali villa",
-      "raw": "<img src=\"/generated/events-party-birthday-lg.webp\" alt=\"Birthday celebration dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
-      "line": 241,
-      "type": "src",
-      "path": "/generated/sol-bbq.webp",
-      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"BBQ catering spread for a Bali birthday villa party\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "BBQ catering spread for a Bali birthday villa party"
+      "raw": "<img src=\"/generated/events-party-birthday-lg.webp\" alt=\"Birthday celebration dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
@@ -2267,15 +2057,7 @@
       "type": "img",
       "path": "/generated/sol-bbq.webp",
       "alt": "BBQ catering spread for a Bali birthday villa party",
-      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"BBQ catering spread for a Bali birthday villa party\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
-      "line": 273,
-      "type": "src",
-      "path": "/generated/party-brunch.webp",
-      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Birthday brunch desserts and cake styling in a villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Birthday brunch desserts and cake styling in a villa"
+      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"BBQ catering spread for a Bali birthday villa party\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
@@ -2283,15 +2065,7 @@
       "type": "img",
       "path": "/generated/party-brunch.webp",
       "alt": "Birthday brunch desserts and cake styling in a villa",
-      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Birthday brunch desserts and cake styling in a villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
-      "line": 302,
-      "type": "src",
-      "path": "/generated/party-pool.webp",
-      "raw": "<img src=\"/generated/party-pool.webp\" alt=\"Poolside birthday setup with staff and table styling in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Poolside birthday setup with staff and table styling in Bali"
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Birthday brunch desserts and cake styling in a villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
@@ -2299,15 +2073,7 @@
       "type": "img",
       "path": "/generated/party-pool.webp",
       "alt": "Poolside birthday setup with staff and table styling in Bali",
-      "raw": "<img src=\"/generated/party-pool.webp\" alt=\"Poolside birthday setup with staff and table styling in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
-      "line": 312,
-      "type": "src",
-      "path": "/generated/party-festival.webp",
-      "raw": "<img src=\"/generated/party-festival.webp\" alt=\"Themed birthday party styling inspiration for Bali villa events\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Themed birthday party styling inspiration for Bali villa events"
+      "raw": "<img src=\"/generated/party-pool.webp\" alt=\"Poolside birthday setup with staff and table styling in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
@@ -2315,15 +2081,7 @@
       "type": "img",
       "path": "/generated/party-festival.webp",
       "alt": "Themed birthday party styling inspiration for Bali villa events",
-      "raw": "<img src=\"/generated/party-festival.webp\" alt=\"Themed birthday party styling inspiration for Bali villa events\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
-      "line": 395,
-      "type": "src",
-      "path": "/generated/party-white.webp",
-      "raw": "<img src=\"/generated/party-white.webp\" alt=\"Premium birthday party styling with decor and lighting in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Premium birthday party styling with decor and lighting in Bali"
+      "raw": "<img src=\"/generated/party-festival.webp\" alt=\"Themed birthday party styling inspiration for Bali villa events\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
@@ -2331,23 +2089,15 @@
       "type": "img",
       "path": "/generated/party-white.webp",
       "alt": "Premium birthday party styling with decor and lighting in Bali",
-      "raw": "<img src=\"/generated/party-white.webp\" alt=\"Premium birthday party styling with decor and lighting in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/party-white.webp\" alt=\"Premium birthday party styling with decor and lighting in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
-      "line": 153,
-      "type": "src",
-      "path": "/generated/events/baby-shower-hero.webp",
-      "raw": "<OptimizedImage src=\"/generated/events/baby-shower-hero.webp\" alt=\"Pastel baby shower brunch table in a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
-      "alt": "Pastel baby shower brunch table in a Bali villa"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
-      "line": 207,
-      "type": "src",
-      "path": "/generated/events/baby-shower-hero.webp",
-      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Styled baby shower table setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Styled baby shower table setup in Bali"
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "line": 147,
+      "type": "img",
+      "path": "/generated/events-birthday-pool-xl.webp",
+      "alt": "Birthday pool party dinner at a Bali villa",
+      "raw": "<OptimizedImage src=\"/generated/events-birthday-pool-xl.webp\" alt=\"Birthday pool party dinner at a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
@@ -2355,15 +2105,7 @@
       "type": "img",
       "path": "/generated/events/baby-shower-hero.webp",
       "alt": "Styled baby shower table setup in Bali",
-      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Styled baby shower table setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
-      "line": 248,
-      "type": "src",
-      "path": "/generated/events/baby-shower-hero.webp",
-      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Elegant grazing table for a Bali baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Elegant grazing table for a Bali baby shower"
+      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Styled baby shower table setup in Bali\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
@@ -2371,15 +2113,7 @@
       "type": "img",
       "path": "/generated/events/baby-shower-hero.webp",
       "alt": "Elegant grazing table for a Bali baby shower",
-      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Elegant grazing table for a Bali baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
-      "line": 258,
-      "type": "src",
-      "path": "/generated/party-brunch.webp",
-      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Pregnancy-safe brunch dishes served for a baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Pregnancy-safe brunch dishes served for a baby shower"
+      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Elegant grazing table for a Bali baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
@@ -2387,15 +2121,7 @@
       "type": "img",
       "path": "/generated/party-brunch.webp",
       "alt": "Pregnancy-safe brunch dishes served for a baby shower",
-      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Pregnancy-safe brunch dishes served for a baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
-      "line": 311,
-      "type": "src",
-      "path": "/generated/party-brunch.webp",
-      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Mocktail and brunch styling for a Bali baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Mocktail and brunch styling for a Bali baby shower"
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Pregnancy-safe brunch dishes served for a baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
@@ -2403,15 +2129,7 @@
       "type": "img",
       "path": "/generated/party-brunch.webp",
       "alt": "Mocktail and brunch styling for a Bali baby shower",
-      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Mocktail and brunch styling for a Bali baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
-      "line": 321,
-      "type": "src",
-      "path": "/generated/aura-tablescape.webp",
-      "raw": "<img src=\"/generated/aura-tablescape.webp\" alt=\"Styled baby shower tablescape and decor setup\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Styled baby shower tablescape and decor setup"
+      "raw": "<img src=\"/generated/party-brunch.webp\" alt=\"Mocktail and brunch styling for a Bali baby shower\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
@@ -2419,15 +2137,7 @@
       "type": "img",
       "path": "/generated/aura-tablescape.webp",
       "alt": "Styled baby shower tablescape and decor setup",
-      "raw": "<img src=\"/generated/aura-tablescape.webp\" alt=\"Styled baby shower tablescape and decor setup\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
-      "line": 413,
-      "type": "src",
-      "path": "/generated/events/baby-shower-hero.webp",
-      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Premium baby shower styling and flowers in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Premium baby shower styling and flowers in a Bali villa"
+      "raw": "<img src=\"/generated/aura-tablescape.webp\" alt=\"Styled baby shower tablescape and decor setup\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
@@ -2435,23 +2145,15 @@
       "type": "img",
       "path": "/generated/events/baby-shower-hero.webp",
       "alt": "Premium baby shower styling and flowers in a Bali villa",
-      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Premium baby shower styling and flowers in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/events/baby-shower-hero.webp\" alt=\"Premium baby shower styling and flowers in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
-      "line": 145,
-      "type": "src",
-      "path": "/generated/events/anniversary-romantic.webp",
-      "raw": "<OptimizedImage src=\"/generated/events/anniversary-romantic.webp\" alt=\"Romantic anniversary dinner setup by a Bali villa pool\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />",
-      "alt": "Romantic anniversary dinner setup by a Bali villa pool"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
-      "line": 199,
-      "type": "src",
-      "path": "/generated/events/anniversary-romantic.webp",
-      "raw": "<img src=\"/generated/events/anniversary-romantic.webp\" alt=\"Romantic anniversary dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Romantic anniversary dining setup in a Bali villa"
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "line": 153,
+      "type": "img",
+      "path": "/generated/events/baby-shower-hero.webp",
+      "alt": "Pastel baby shower brunch table in a Bali villa",
+      "raw": "<OptimizedImage src=\"/generated/events/baby-shower-hero.webp\" alt=\"Pastel baby shower brunch table in a Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
@@ -2459,15 +2161,7 @@
       "type": "img",
       "path": "/generated/events/anniversary-romantic.webp",
       "alt": "Romantic anniversary dining setup in a Bali villa",
-      "raw": "<img src=\"/generated/events/anniversary-romantic.webp\" alt=\"Romantic anniversary dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
-      "line": 240,
-      "type": "src",
-      "path": "/generated/events/anniversary-chef.webp",
-      "raw": "<img src=\"/generated/events/anniversary-chef.webp\" alt=\"Private chef plating an anniversary dinner in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Private chef plating an anniversary dinner in a Bali villa"
+      "raw": "<img src=\"/generated/events/anniversary-romantic.webp\" alt=\"Romantic anniversary dining setup in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
@@ -2475,15 +2169,7 @@
       "type": "img",
       "path": "/generated/events/anniversary-chef.webp",
       "alt": "Private chef plating an anniversary dinner in a Bali villa",
-      "raw": "<img src=\"/generated/events/anniversary-chef.webp\" alt=\"Private chef plating an anniversary dinner in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
-      "line": 250,
-      "type": "src",
-      "path": "/generated/misc-luna-plating-md.webp",
-      "raw": "<img src=\"/generated/misc-luna-plating-md.webp\" alt=\"Fine plated anniversary menu presentation by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Fine plated anniversary menu presentation by myCHEF"
+      "raw": "<img src=\"/generated/events/anniversary-chef.webp\" alt=\"Private chef plating an anniversary dinner in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
@@ -2491,15 +2177,7 @@
       "type": "img",
       "path": "/generated/misc-luna-plating-md.webp",
       "alt": "Fine plated anniversary menu presentation by myCHEF",
-      "raw": "<img src=\"/generated/misc-luna-plating-md.webp\" alt=\"Fine plated anniversary menu presentation by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
-      "line": 299,
-      "type": "src",
-      "path": "/generated/aura-toast.webp",
-      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Anniversary toast moment at a Bali villa dinner\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Anniversary toast moment at a Bali villa dinner"
+      "raw": "<img src=\"/generated/misc-luna-plating-md.webp\" alt=\"Fine plated anniversary menu presentation by myCHEF\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
@@ -2507,15 +2185,7 @@
       "type": "img",
       "path": "/generated/aura-toast.webp",
       "alt": "Anniversary toast moment at a Bali villa dinner",
-      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Anniversary toast moment at a Bali villa dinner\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
-      "line": 342,
-      "type": "src",
-      "path": "/generated/aura-tablescape.webp",
-      "raw": "<img src=\"/generated/aura-tablescape.webp\" alt=\"Styled anniversary tablescape in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Styled anniversary tablescape in a Bali villa"
+      "raw": "<img src=\"/generated/aura-toast.webp\" alt=\"Anniversary toast moment at a Bali villa dinner\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
@@ -2523,207 +2193,231 @@
       "type": "img",
       "path": "/generated/aura-tablescape.webp",
       "alt": "Styled anniversary tablescape in a Bali villa",
-      "raw": "<img src=\"/generated/aura-tablescape.webp\" alt=\"Styled anniversary tablescape in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/aura-tablescape.webp\" alt=\"Styled anniversary tablescape in a Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
+      "line": 145,
+      "type": "img",
+      "path": "/generated/events/anniversary-romantic.webp",
+      "alt": "Romantic anniversary dinner setup by a Bali villa pool",
+      "raw": "<OptimizedImage src=\"/generated/events/anniversary-romantic.webp\" alt=\"Romantic anniversary dinner setup by a Bali villa pool\" className=\"w-full h-full object-cover\" loading=\"lazy\" decoding=\"async\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ContactPage.tsx",
-      "line": 139,
-      "type": "src",
+      "line": 138,
+      "type": "img",
       "path": "/generated/contact-hero.webp",
-      "raw": "src=\"/generated/contact-hero.webp\""
+      "alt": "Luxury Bali villa terrace at golden hour with a concierge desk",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ContactPage.tsx",
-      "line": 252,
-      "type": "src",
+      "line": 251,
+      "type": "img",
       "path": "/generated/contact-concierge.webp",
-      "raw": "src=\"/generated/contact-concierge.webp\""
+      "alt": "myCHEF concierge replying to a guest enquiry from the Bali office",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ChefsTablePage.tsx",
-      "line": 123,
-      "type": "src",
+      "line": 122,
+      "type": "img",
       "path": "/generated/chefs-table-hero-luxury.webp",
-      "raw": "src=\"/generated/chefs-table-hero-luxury.webp\""
+      "alt": "Fine dining private villa dinner service in Bali with candlelight and wine pairing",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/ChefsTablePage.tsx",
-      "line": 225,
-      "type": "src",
+      "line": 224,
+      "type": "img",
       "path": "/generated/luna-chef-portrait.webp",
-      "raw": "src=\"/generated/luna-chef-portrait.webp\""
+      "alt": "Adriano — executive chef at myCHEF private dining, Bali",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringVillaPage.tsx",
-      "line": 177,
-      "type": "src",
+      "line": 176,
+      "type": "img",
       "path": "/generated/catering-hero-buffet-catering-lg.webp",
-      "raw": "src=\"/generated/catering-hero-buffet-catering-lg.webp\""
+      "alt": "Long villa dining table by pool at sunset with chef-prepared Bali catering",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringVillaPage.tsx",
       "line": 535,
-      "type": "src",
+      "type": "img",
       "path": "/generated/catering-catering-hero-lg.webp",
-      "raw": "<OptimizedImage src=\"/generated/catering-catering-hero-lg.webp\" alt=\"Villa catering setup with chef and team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Villa catering setup with chef and team at Bali villa"
+      "alt": "Villa catering setup with chef and team at Bali villa",
+      "raw": "<OptimizedImage src=\"/generated/catering-catering-hero-lg.webp\" alt=\"Villa catering setup with chef and team at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringRetreatPage.tsx",
-      "line": 174,
-      "type": "src",
+      "line": 173,
+      "type": "img",
       "path": "/generated/experience-hero-retreats-xl.webp",
-      "raw": "src=\"/generated/experience-hero-retreats-xl.webp\""
+      "alt": "Healthy retreat catering in Bali with tropical breakfast bowls and yoga guests",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringRetreatPage.tsx",
       "line": 486,
-      "type": "src",
+      "type": "img",
       "path": "/generated/experience-hero-retreats-xl.webp",
-      "raw": "<OptimizedImage src=\"/generated/experience-hero-retreats-xl.webp\" alt=\"Retreat catering in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Retreat catering in Bali"
+      "alt": "Retreat catering in Bali",
+      "raw": "<OptimizedImage src=\"/generated/experience-hero-retreats-xl.webp\" alt=\"Retreat catering in Bali\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringPlatedPage.tsx",
-      "line": 210,
-      "type": "src",
+      "line": 209,
+      "type": "img",
       "path": "/generated/catering/plated-menus.webp",
-      "raw": "src=\"/generated/catering/plated-menus.webp\""
+      "alt": "Elegant plated dinner course served at a Bali villa for private fine dining",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringPlatedPage.tsx",
-      "line": 291,
-      "type": "src",
+      "line": 290,
+      "type": "img",
       "path": "/generated/hub-fine-dining.webp",
-      "raw": "src=\"/generated/hub-fine-dining.webp\""
+      "alt": "Private plated dinner setup at a Bali villa with elegant table styling",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringPlatedPage.tsx",
-      "line": 712,
-      "type": "src",
+      "line": 711,
+      "type": "img",
       "path": "/generated/misc-luna-plating-md.webp",
-      "raw": "src=\"/generated/misc-luna-plating-md.webp\""
+      "alt": "Plated dinner course ready to serve at Bali villa",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringMainPage.tsx",
-      "line": 414,
-      "type": "src",
+      "line": 413,
+      "type": "img",
       "path": "/generated/catering-catering-hero-lg.webp",
-      "raw": "src=\"/generated/catering-catering-hero-lg.webp\""
+      "alt": "Chef grilling seafood at a Bali villa poolside at sunset",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringMainPage.tsx",
-      "line": 1262,
-      "type": "src",
+      "line": 1261,
+      "type": "img",
       "path": "/generated/hub-catering.webp",
-      "raw": "src=\"/generated/hub-catering.webp\""
+      "alt": "Completed villa dinner table with food ready",
+      "raw": "<OptimizedImage..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringGrazingPage.tsx",
-      "line": 220,
-      "type": "src",
+      "line": 219,
+      "type": "img",
       "path": "/generated/pkg-grazing.webp",
-      "raw": "src=\"/generated/pkg-grazing.webp\""
+      "alt": "Grazing table Bali with cheese, charcuterie, fresh fruit, and edible flowers styled for a villa event",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringGrazingPage.tsx",
-      "line": 296,
-      "type": "src",
+      "line": 295,
+      "type": "img",
       "path": "/generated/pkg-grazing.webp",
-      "raw": "src=\"/generated/pkg-grazing.webp\""
+      "alt": "Grazing table setup at a Bali villa with cheese, charcuterie, and tropical fruit",
+      "raw": "<OptimizedImage..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringGrazingPage.tsx",
-      "line": 610,
-      "type": "src",
+      "line": 609,
+      "type": "img",
       "path": "/generated/pkg-grazing.webp",
-      "raw": "src=\"/generated/pkg-grazing.webp\""
+      "alt": "Beautiful grazing table at a Bali villa event with cheese, charcuterie, and tropical styling",
+      "raw": "<OptimizedImage..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
-      "line": 188,
-      "type": "src",
+      "line": 311,
+      "type": "img",
+      "path": "/generated/catering/floating-breakfast.webp",
+      "alt": "Floating breakfast tray with tropical fruit and coffee in a Bali villa pool",
+      "raw": "<img..."
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
+      "line": 436,
+      "type": "img",
+      "path": "/generated/catering/floating-breakfast.webp",
+      "alt": "Styled floating breakfast tray with tropical fruit, coffee, and white linen in a clear Bali villa pool",
+      "raw": "<img..."
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
+      "line": 666,
+      "type": "img",
+      "path": "/generated/catering/floating-breakfast.webp",
+      "alt": "Floating breakfast setup ready for guests in Bali villa pool",
+      "raw": "<img..."
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
+      "line": 187,
+      "type": "img",
       "path": "/generated/floating-breakfast-bali.webp",
-      "raw": "src=\"/generated/floating-breakfast-bali.webp\""
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
-      "line": 313,
-      "type": "src",
-      "path": "/generated/catering/floating-breakfast.webp",
-      "raw": "src=\"/generated/catering/floating-breakfast.webp\""
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
-      "line": 438,
-      "type": "src",
-      "path": "/generated/catering/floating-breakfast.webp",
-      "raw": "src=\"/generated/catering/floating-breakfast.webp\""
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringFloatingBreakfastPage.tsx",
-      "line": 668,
-      "type": "src",
-      "path": "/generated/catering/floating-breakfast.webp",
-      "raw": "src=\"/generated/catering/floating-breakfast.webp\""
+      "alt": "Floating breakfast bamboo tray in a Bali villa pool at sunset with tropical fruit, coffee, and flowers",
+      "raw": "<OptimizedImage..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringDropOffPage.tsx",
-      "line": 254,
-      "type": "src",
+      "line": 253,
+      "type": "img",
       "path": "/generated/hero-dropoff-catering.webp",
-      "raw": "src=\"/generated/hero-dropoff-catering.webp\""
+      "alt": "Drop-off catering boxes with prepared food on a Bali villa dining table",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringDropOffPage.tsx",
-      "line": 323,
-      "type": "src",
+      "line": 322,
+      "type": "img",
       "path": "/generated/hub-catering.webp",
-      "raw": "src=\"/generated/hub-catering.webp\""
+      "alt": "Calm villa dining table with drop-off food served family-style",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringDropOffPage.tsx",
-      "line": 731,
-      "type": "src",
+      "line": 730,
+      "type": "img",
       "path": "/generated/hub-catering.webp",
-      "raw": "src=\"/generated/hub-catering.webp\""
+      "alt": "Beautiful finished villa table after drop-off catering",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringCorporatePage.tsx",
-      "line": 159,
-      "type": "src",
+      "line": 158,
+      "type": "img",
       "path": "/generated/hero-corporate-events.webp",
-      "raw": "src=\"/generated/hero-corporate-events.webp\""
+      "alt": "Professional corporate event catering setup at Bali villa",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringCorporatePage.tsx",
       "line": 471,
-      "type": "src",
+      "type": "img",
       "path": "/generated/hero-corporate-events.webp",
-      "raw": "<OptimizedImage src=\"/generated/hero-corporate-events.webp\" alt=\"Corporate event catering at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />",
-      "alt": "Corporate event catering at Bali villa"
+      "alt": "Corporate event catering at Bali villa",
+      "raw": "<OptimizedImage src=\"/generated/hero-corporate-events.webp\" alt=\"Corporate event catering at Bali villa\" className=\"w-full h-full object-cover\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
-      "line": 202,
-      "type": "src",
+      "line": 201,
+      "type": "img",
       "path": "/generated/catering-hero-buffet-catering-lg.webp",
-      "raw": "src=\"/generated/catering-hero-buffet-catering-lg.webp\""
+      "alt": "Styled buffet table in Bali villa garden with chafing dishes and floral arrangements",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
-      "line": 448,
-      "type": "src",
+      "line": 447,
+      "type": "img",
       "path": "/generated/aura-tablescape.webp",
-      "raw": "src=\"/generated/aura-tablescape.webp\""
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
-      "line": 712,
-      "type": "src",
-      "path": "/generated/aura-corporate.webp",
-      "raw": "<img src=\"/generated/aura-corporate.webp\" alt=\"Completed buffet table with food ready and staff at Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Completed buffet table with food ready and staff at Bali villa"
+      "alt": "Styled buffet table in Bali villa garden with linens, flowers, and chafing dishes",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBuffetPage.tsx",
@@ -2731,57 +2425,55 @@
       "type": "img",
       "path": "/generated/aura-corporate.webp",
       "alt": "Completed buffet table with food ready and staff at Bali villa",
-      "raw": "<img src=\"/generated/aura-corporate.webp\" alt=\"Completed buffet table with food ready and staff at Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/aura-corporate.webp\" alt=\"Completed buffet table with food ready and staff at Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
-      "line": 169,
-      "type": "src",
+      "line": 168,
+      "type": "img",
       "path": "/generated/hero-babiguling-catering.webp",
-      "raw": "src=\"/generated/hero-babiguling-catering.webp\""
+      "alt": "Traditional Balinese Babi Guling whole-pig catering setup with crispy skin, rice, sambal, and lawar for a villa party in Bali",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
-      "line": 241,
-      "type": "src",
+      "line": 240,
+      "type": "img",
       "path": "/generated/pkg-roast.webp",
-      "raw": "src=\"/generated/pkg-roast.webp\""
+      "alt": "Chef carving traditional Babi Guling with Balinese sides at a villa event",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
-      "line": 392,
-      "type": "src",
+      "line": 391,
+      "type": "img",
       "path": "/generated/hub-catering.webp",
-      "raw": "src=\"/generated/hub-catering.webp\""
+      "alt": "Professional Babi Guling catering team serving at a Bali villa event",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBabiGulingPage.tsx",
-      "line": 630,
-      "type": "src",
+      "line": 629,
+      "type": "img",
       "path": "/generated/pkg-roast.webp",
-      "raw": "src=\"/generated/pkg-roast.webp\""
+      "alt": "Complete Babi Guling catering table with guests at a Bali villa",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx",
-      "line": 178,
-      "type": "src",
+      "line": 177,
+      "type": "img",
       "path": "/generated/catering-hero-buffet-catering-lg.webp",
-      "raw": "src=\"/generated/catering-hero-buffet-catering-lg.webp\""
+      "alt": "Chef grilling seafood and meat at a Bali villa BBQ by the pool",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx",
-      "line": 338,
-      "type": "src",
+      "line": 337,
+      "type": "img",
       "path": "/generated/sol-bbq.webp",
-      "raw": "src=\"/generated/sol-bbq.webp\""
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx",
-      "line": 631,
-      "type": "src",
-      "path": "/generated/sol-bbq.webp",
-      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"Finished BBQ table with grilled food at Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />",
-      "alt": "Finished BBQ table with grilled food at Bali villa"
+      "alt": "Chef grilling at live BBQ station by Bali villa pool with guests watching",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringBBQPage.tsx",
@@ -2789,129 +2481,147 @@
       "type": "img",
       "path": "/generated/sol-bbq.webp",
       "alt": "Finished BBQ table with grilled food at Bali villa",
-      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"Finished BBQ table with grilled food at Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />"
+      "raw": "<img src=\"/generated/sol-bbq.webp\" alt=\"Finished BBQ table with grilled food at Bali villa\" width={1920} height={1080} loading=\"lazy\" decoding=\"async\" className=\"w-full h-full object-cover\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/AuraPage.tsx",
-      "line": 284,
-      "type": "src",
+      "line": 283,
+      "type": "img",
       "path": "/generated/experience-aura-hero-v2-xl.webp",
-      "raw": "src=\"/generated/experience-aura-hero-v2-xl.webp\""
+      "alt": "Luxury Bali villa event with long dining table, gold styling, and candlelight",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/AuraPage.tsx",
-      "line": 568,
-      "type": "src",
+      "line": 567,
+      "type": "img",
       "path": "/generated/experience-aura-team-lg.webp",
-      "raw": "src=\"/generated/experience-aura-team-lg.webp\""
+      "alt": "Olivia and the myCHEF events team coordinating a villa wedding in Bali",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/MenuPage.tsx",
-      "line": 74,
-      "type": "src",
+      "line": 73,
+      "type": "img",
       "path": "/generated/misc-luna-plating-md.webp",
-      "raw": "src=\"/generated/misc-luna-plating-md.webp\""
+      "alt": "myCHEF private chef menus — Bali villa dining",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/LocationsHubPage.tsx",
-      "line": 85,
-      "type": "src",
+      "line": 84,
+      "type": "img",
       "path": "/generated/bali-locations-sunset.webp",
-      "raw": "src=\"/generated/bali-locations-sunset.webp\""
+      "alt": "Dramatic Bali sunset over tropical landscape — myCHEF service areas",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/LocationsHubPage.tsx",
-      "line": 221,
-      "type": "src",
+      "line": 218,
+      "type": "img",
       "path": "/generated/bali-locations-sunset.webp",
-      "raw": "src=\"/generated/bali-locations-sunset.webp\""
+      "alt": "Dramatic skyline at dusk — myCHEF private chef expansion to Jakarta",
+      "raw": "<OptimizedImage..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx",
-      "line": 124,
-      "type": "src",
+      "line": 123,
+      "type": "img",
       "path": "/generated/butler-service.webp",
-      "raw": "src=\"/generated/butler-service.webp\""
+      "alt": "Professional butler serving luxury villa dinner in Bali",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx",
       "line": 254,
-      "type": "src",
+      "type": "img",
       "path": "/generated/staffing-staffing-table-lg.webp",
-      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-table-lg.webp\" alt=\"Professional service staff setting table\" className=\"w-full rounded-2xl shadow-xl\" loading=\"lazy\" />",
-      "alt": "Professional service staff setting table"
+      "alt": "Professional service staff setting table",
+      "raw": "<OptimizedImage src=\"/generated/staffing-staffing-table-lg.webp\" alt=\"Professional service staff setting table\" className=\"w-full rounded-2xl shadow-xl\" loading=\"lazy\" />..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/InVillaServicePage.tsx",
-      "line": 266,
-      "type": "src",
+      "line": 265,
+      "type": "img",
       "path": "/generated/were-awards.webp",
-      "raw": "src=\"/generated/were-awards.webp\""
+      "alt": "myCHEF award-winning private villa dining in Bali",
+      "raw": "<OptimizedImage..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BookPage.tsx",
-      "line": 85,
-      "type": "src",
+      "line": 84,
+      "type": "img",
       "path": "/generated/book-hero.webp",
-      "raw": "src=\"/generated/book-hero.webp\""
+      "alt": "Book your experience",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BlogIndexPage.tsx",
-      "line": 65,
-      "type": "src",
+      "line": 64,
+      "type": "img",
       "path": "/generated/misc-luna-plating-md.webp",
-      "raw": "src=\"/generated/misc-luna-plating-md.webp\""
+      "alt": "Chef plating fine dining dinner in a Bali villa — myCHEF Journal",
+      "raw": "<img..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BestPartnerBadge.tsx",
-      "line": 18,
-      "type": "src",
+      "line": 17,
+      "type": "img",
       "path": "/generated/best-partner-2026.webp",
-      "raw": "src=\"/generated/best-partner-2026.webp\""
+      "alt": "Awarded Best Partner 2026 — myCHEF Private Villa Dining",
+      "raw": "<OptimizedImage..."
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/BaliHubPage.tsx",
-      "line": 59,
-      "type": "src",
+      "line": 58,
+      "type": "img",
       "path": "/generated/bali-hub-hero.webp",
-      "raw": "src=\"/generated/bali-hub-hero.webp\""
+      "alt": "Luxury Bali villa with private dining setup at golden hour overlooking rice terraces and the Indian Ocean",
+      "raw": "<img..."
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/components/trust/TrustSection.tsx",
+      "line": 10,
+      "type": "backgroundImage",
+      "path": "/generated/trust-section-bg.png",
+      "raw": "backgroundImage: 'url(/generated/trust-section-bg.png)'"
     }
   ],
   "hotspots": [
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
-      "count": 13
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
-      "count": 13
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
-      "count": 13
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
-      "count": 13
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
-      "count": 13
-    },
-    {
-      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
-      "count": 11
-    },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
       "count": 10
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/HubPage.tsx",
-      "count": 6
+      "count": 7
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsWeddingsPage.tsx",
+      "count": 7
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsRetreatsPage.tsx",
+      "count": 7
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsCorporatePage.tsx",
+      "count": 7
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBirthdaysPage.tsx",
+      "count": 7
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsBabyShowersPage.tsx",
+      "count": 7
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsVillaPartiesPage.tsx",
+      "count": 6
+    },
+    {
+      "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsAnniversariesPage.tsx",
       "count": 6
     },
     {

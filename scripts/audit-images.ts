@@ -70,93 +70,71 @@ async function collectImageReferences(): Promise<ImageReference[]> {
       for (const file of files) {
         try {
           const content = fs.readFileSync(file, 'utf8');
-          const lines = content.split('\n');
+          
+          // 1. Match img tags (can be multiline)
+          // Look for <img ... /> or <img ... >...</img>
+          const imgRegex = /<img\s+([^>]+?)(\/?)>/gs;
+          let match;
+          while ((match = imgRegex.exec(content)) !== null) {
+            const tagContent = match[1];
+            const srcMatch = tagContent.match(/src\s*=\s*["'{(]([^"'}]+)["'}]/);
+            if (srcMatch && isImagePath(srcMatch[1])) {
+              const altMatch = tagContent.match(/alt\s*=\s*["'{(]([^"'}]+)["'}]/);
+              
+              // Calculate line number
+              const beforeMatch = content.substring(0, match.index);
+              const lineNumber = beforeMatch.split('\n').length;
 
-          lines.forEach((line, index) => {
-            // src attributes: src="..." or src={...}
-            const srcMatches = line.match(/src\s*=\s*["']([^"']+)["']/g);
-            if (srcMatches) {
-              srcMatches.forEach(match => {
-                const pathMatch = match.match(/src\s*=\s*["']([^"']+)["']/);
-                if (pathMatch && isImagePath(pathMatch[1])) {
-                  references.push({
-                    file,
-                    line: index + 1,
-                    type: 'src',
-                    path: pathMatch[1],
-                    raw: line.trim(),
-                  });
-                }
-              });
-            }
-
-            // backgroundImage: url(...)
-            const bgMatches = line.match(/backgroundImage\s*[:=]\s*['"]{0,1}url\(['"]([^'"]+)['"]\)['"]{0,1}/g);
-            if (bgMatches) {
-              bgMatches.forEach(match => {
-                const pathMatch = match.match(/url\(['"]?([^'"]+)['"]?\)/);
-                if (pathMatch && isImagePath(pathMatch[1])) {
-                  references.push({
-                    file,
-                    line: index + 1,
-                    type: 'backgroundImage',
-                    path: pathMatch[1],
-                    raw: line.trim(),
-                  });
-                }
-              });
-            }
-
-            // alt attributes
-            const altMatches = line.match(/alt\s*=\s*["']([^"']+)["']/);
-            if (altMatches && references.length > 0) {
-              const lastRef = references[references.length - 1];
-              if (lastRef.line === index + 1) {
-                lastRef.alt = altMatches[1];
-              }
-            }
-
-            // import statements
-            const importMatches = line.match(/import\s+.*from\s+["']([^"']*\.(png|jpg|jpeg|webp|avif|svg|gif))["']/i);
-            if (importMatches && isImagePath(importMatches[1])) {
               references.push({
                 file,
-                line: index + 1,
-                type: 'import',
-                path: importMatches[1],
-                raw: line.trim(),
+                line: lineNumber,
+                type: 'img',
+                path: srcMatch[1],
+                alt: altMatch ? altMatch[1] : undefined,
+                raw: match[0].split('\n')[0].trim() + '...', // Just the start for summary
               });
             }
+          }
 
-            // CSS url() in style attributes
-            const styleMatches = line.match(/style\s*=\s*["']{[^}]*url\(['"]?([^'"]+)['"]?\)[^}]*["']/);
-            if (styleMatches && isImagePath(styleMatches[1])) {
+          // 2. Match OptimizedImage components (can be multiline)
+          const componentRegex = /<OptimizedImage\s+([^>]+?)(\/?)>/gs;
+          while ((match = componentRegex.exec(content)) !== null) {
+            const tagContent = match[1];
+            const srcMatch = tagContent.match(/src\s*=\s*["'{(]([^"'}]+)["'}]/);
+            if (srcMatch && isImagePath(srcMatch[1])) {
+              const altMatch = tagContent.match(/alt\s*=\s*["'{(]([^"'}]+)["'}]/);
+              
+              const beforeMatch = content.substring(0, match.index);
+              const lineNumber = beforeMatch.split('\n').length;
+
               references.push({
                 file,
-                line: index + 1,
-                type: 'url',
-                path: styleMatches[1],
-                raw: line.trim(),
+                line: lineNumber,
+                type: 'img', // Treat as img for audit purposes
+                path: srcMatch[1],
+                alt: altMatch ? altMatch[1] : undefined,
+                raw: match[0].split('\n')[0].trim() + '...',
               });
             }
+          }
 
-            // img tags
-            const imgMatches = line.match(/<img[^>]+>/);
-            if (imgMatches) {
-              const srcMatch = imgMatches[0].match(/src\s*=\s*["']([^"']+)["']/);
-              const altMatch = imgMatches[0].match(/alt\s*=\s*["']([^"']+)["']/);
-              if (srcMatch && isImagePath(srcMatch[1])) {
-                references.push({
-                  file,
-                  line: index + 1,
-                  type: 'img',
-                  path: srcMatch[1],
-                  alt: altMatch ? altMatch[1] : undefined,
-                  raw: line.trim(),
-                });
-              }
+          // 3. Match backgroundImage in style objects
+          const styleRegex = /backgroundImage\s*[:=]\s*['"]{0,1}url\(['"]?([^'")]*)['"]?\)['"]{0,1}/g;
+          while ((match = styleRegex.exec(content)) !== null) {
+            if (isImagePath(match[1])) {
+              const beforeMatch = content.substring(0, match.index);
+              const lineNumber = beforeMatch.split('\n').length;
+
+              references.push({
+                file,
+                line: lineNumber,
+                type: 'backgroundImage',
+                path: match[1],
+                raw: match[0],
+              });
             }
-          });
+          }
+
         } catch (err) {
           console.warn(`Error reading ${file}:`, err);
         }
@@ -256,7 +234,7 @@ async function generateReport(
       images[normalized].referencedBy = Array.from(usageMap.get(normalized) || []);
     }
 
-    if (ref.type !== 'import' && !ref.alt) {
+    if (ref.type === 'img' && !ref.alt) {
       imagesWithoutAlt.add(normalized);
     }
 

@@ -1,7 +1,7 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { ArrowRight, MessageCircle, Check } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
-import { MENUS } from '@/data/siteArchitecture'
+import { MENUS, type Menu } from '@/data/siteArchitecture'
 import TrustStrip from '@/components/shared/TrustStrip'
 
 const SITE = 'https://mychef.id'
@@ -212,7 +212,7 @@ export default function MenuPage() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {MENUS.map((m) => (
+              {MENUS.map((m: Menu) => (
                 <Link
                   key={m.slug}
                   to={`/menus/${m.slug}`}
@@ -265,7 +265,7 @@ export default function MenuPage() {
           <h2 className="font-playfair text-3xl mb-4">Other menus we cook</h2>
           <p className="text-[#4A4745] mb-6">Need a different direction? Browse the rest of our cuisine pages or message us for a custom villa menu.</p>
           <div className="flex flex-wrap gap-3">
-            {MENUS.filter((m) => m.slug !== slug).map((m) => (
+            {MENUS.filter((m: Menu) => m.slug !== slug).map((m: Menu) => (
               <Link key={m.slug} to={`/menus/${m.slug}`} className="text-sm border border-[#1A1A1A]/15 px-4 py-2 rounded-full hover:border-[#C5A028] hover:text-[#8B6F1A] transition-all">
                 {m.name}
               </Link>

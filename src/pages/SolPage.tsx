@@ -229,7 +229,7 @@ export default function SolPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden max-w-[75%] mx-auto">
               <img
-                src="/generated/sol-chef-portrait.webp"
+                src="/generated/finedining-sol-chef-portrait-sm.webp"
                 alt="Chef Daniel"
                 width={800}
                 height={1000}

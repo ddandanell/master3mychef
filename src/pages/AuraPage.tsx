@@ -274,14 +274,14 @@ export default function AuraPage() {
         title="Bali Event Catering — Villas, Weddings & Corporate | myCHEF"
         description="Bali event catering by myCHEF — villa parties, weddings, corporate dinners, retreats. Catering, bar, décor, staffing end-to-end. From IDR 15M."
         canonical="https://mychef.id/events"
-        ogImage="https://mychef.id/generated/aura-hero-v2.webp"
+        ogImage="https://mychef.id/generated/experience-aura-hero-v2-xl.webp"
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 89), ...eventSchemas, breadcrumbSchema('Events', 'https://mychef.id/events'), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/aura-hero-v2.webp"
+            src="/generated/experience-aura-hero-v2-xl.webp"
             alt="Luxury Bali villa event with long dining table, gold styling, and candlelight"
             width={1920}
             height={1080}
@@ -565,7 +565,7 @@ export default function AuraPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <img
-                src="/generated/aura-team.webp"
+                src="/generated/experience-aura-team-lg.webp"
                 alt="Olivia and the myCHEF events team coordinating a villa wedding in Bali"
                 width={800}
                 height={600}

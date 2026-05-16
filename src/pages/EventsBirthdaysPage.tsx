@@ -66,7 +66,7 @@ const THEMED_SETUPS = [
 ]
 
 const REAL_BIRTHDAYS = [
-  { title: 'Milestone 40th Pool Dinner', location: 'Canggu Villa', image: '/generated/events/birthday-pool.webp' },
+  { title: 'Milestone 40th Pool Dinner', location: 'Canggu Villa', image: '/generated/events-birthday-pool-xl.webp' },
   { title: 'Birthday Welcome Setup', location: 'Seminyak Villa', image: '/generated/party-birthday.webp' },
   { title: 'Sunset BBQ Bash', location: 'Uluwatu Villa', image: '/generated/sol-bbq.webp' },
   { title: 'Birthday Brunch Recovery', location: 'Berawa Villa', image: '/generated/party-brunch.webp' },
@@ -122,7 +122,7 @@ export default function EventsBirthdaysPage() {
         title="Birthday Parties in Bali — Villa Catering & Events | myCHEF"
         description="Birthday parties at your Bali villa with food, drinks, staff, decor, and coordination handled by one team. From intimate dinners to 80-guest pool parties."
         canonical={`${SITE}/events/birthdays`}
-        ogImage={`${SITE}/generated/events/birthday-pool.webp`}
+        ogImage={`${SITE}/generated/events-birthday-pool-xl.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema('Birthday Party Catering Bali', 'myCHEF.id caters birthday parties in Bali with private chef menus, buffet or plated service, drinks, and event staffing. We manage setup, flow, and cleanup for everything from intimate dinners to full villa parties.', `${SITE}/events/birthdays`),
@@ -144,7 +144,7 @@ export default function EventsBirthdaysPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/events/birthday-pool.webp" alt="Birthday pool party dinner at a Bali villa" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/events-birthday-pool-xl.webp" alt="Birthday pool party dinner at a Bali villa" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{

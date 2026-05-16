@@ -339,7 +339,7 @@ export default function LunaPage() {
       <section className="relative min-h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-hero-v3.webp"
+            src="/generated/experience-luna-hero-v3-xl.webp"
             alt="European friends enjoying a candlelit Michelin-level dinner on a private Bali villa terrace with Indonesian staff"
             width={1216}
             height={832}
@@ -545,7 +545,7 @@ export default function LunaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="luna-reveal">
               <img
-                src="/generated/luna-experience-collage.webp"
+                src="/generated/experience-luna-collage-xl.webp"
                 alt="Michelin-trained chef preparing a Mediterranean tasting menu in a private Bali villa kitchen"
                 width={800}
                 height={600}
@@ -952,7 +952,7 @@ export default function LunaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-1.webp"
+                src="/generated/experience-luna-gallery-1-md.webp"
                 alt="Sommelier presenting wine"
                 width={800}
                 height={600}
@@ -1026,7 +1026,7 @@ export default function LunaPage() {
         {/* Full-bleed editorial header image (eyebrow + h2 are part of the artwork) */}
         <div className="relative w-full h-[60vh] min-h-[420px] max-h-[760px] overflow-hidden">
           <img
-            src="/generated/testimonials-bg.webp"
+            src="/generated/ui-testimonials-bg-lg.webp"
             alt="Private chef serving guests at a candlelit villa dinner — words from guests"
             width={1920}
             height={1080}

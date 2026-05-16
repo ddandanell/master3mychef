@@ -20,7 +20,7 @@ const PORTALS = [
     title: 'Fine Dining',
     subtitle: 'A private chef cooks exclusively for you. Multi-course menu. Wine pairing. Your villa. Just your table.',
     path: '/fine-dining',
-    image: '/generated/hub-fine-dining.webp',
+    image: '/generated/misc-hub-fine-dining-lg.webp',
     accent: '#C5A028',
   },
   {
@@ -1004,7 +1004,7 @@ export default function HubPage() {
       <section className="py-24 md:py-32 px-6 relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hub-bali.webp"
+            src="/generated/misc-hub-bali-lg.webp"
             alt="Bali landscape"
             width={1920}
             height={1080}

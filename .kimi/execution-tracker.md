@@ -482,3 +482,21 @@ Tree-shaking was already excluding all 9 deps from the bundle, so output size ba
 
 **Last Updated:** 2026-05-16 15:12 UTC+8
 **Build Status:** ✅ PASSING
+
+---
+
+## PERSONA GAP SPRINT — CORPORATE + RETREAT TRUST CLARITY (2026-05-16) — Copilot Agent
+
+> Continued P1-4 execution by replacing weak proof-style elements with more concrete planning guidance on the two remaining high-intent event pages.
+
+| Item | Status | Files | Notes |
+|-----|--------|------|-------|
+| Corporate proof-style section replaced with proposal clarity | ✅ DONE | `src/pages/EventsCorporatePage.tsx` | Replaced generic logo-style trust pills with concrete proposal inclusions and approval checks that help procurement and internal stakeholders understand what gets scoped before sign-off |
+| Corporate FAQ sharpened for venue + proposal questions | ✅ DONE | `src/pages/EventsCorporatePage.tsx` | Added answers for what the first proposal includes and how villa / resort / function-room briefs are handled |
+| Retreat proof-style section replaced with sample-day planning | ✅ DONE | `src/pages/EventsRetreatsPage.tsx` | Replaced testimonial-style block with a sample one-day retreat food structure that helps hosts judge rhythm, energy, and menu pacing |
+| Retreat FAQ expanded for sample-menu and count-change questions | ✅ DONE | `src/pages/EventsRetreatsPage.tsx` | Added direct answers for sample-menu visibility and participant-count changes during multi-day retreats |
+| TypeScript + audit + production build | ✅ PASSING | app | `npx tsc -b --noEmit`, `npm run audit`, and `npx vite build` all passed after changes |
+
+**Last Updated:** 2026-05-16 16:05 WITA
+**Current Git Head:** 119a36f (main)
+**Build Status:** ✅ PASSING

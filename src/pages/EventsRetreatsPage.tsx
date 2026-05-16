@@ -14,7 +14,6 @@ import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
-import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -73,10 +72,23 @@ const MULTI_DAY_OPS = [
   { icon: Check, title: 'Daily Delivery vs On-Site', desc: 'On-site chef for retreats 3+ days. Daily delivery for shorter events. Flexible to villa kitchen size.' },
 ]
 
-const PAST_RETREATS = [
-  { host: 'Sarah — Yoga Teacher', retreat: '7-Day Yoga Retreat', location: 'Ubud', quote: 'The sattvic meals were beautiful — our guests said it was the best retreat food they have ever had.', image: '/generated/party-medi.webp' },
-  { host: 'Mia — Wellness Coach', retreat: '5-Day Wellness Retreat', location: 'Canggu', quote: 'Plant-forward, anti-inflammatory, and absolutely delicious. The chef understood our philosophy perfectly.', image: '/generated/sol-sunset.webp' },
-  { host: 'David — Corporate Wellness Lead', retreat: '3-Day Executive Retreat', location: 'Seminyak', quote: 'Handled 30 people with 5 different diets. Labeled, delicious, on-time. Professional throughout.', image: '/generated/corp-executive.webp' },
+const SAMPLE_DAY_MENU = [
+  {
+    title: 'Breakfast',
+    menu: 'Tropical fruit, overnight oats, coconut yogurt, eggs to order, sourdough, and a lighter savoury option.',
+  },
+  {
+    title: 'Lunch',
+    menu: 'Produce-led buffet with protein, grain or root base, two vegetables, a vegan line, and labelled sauces on the side.',
+  },
+  {
+    title: 'Snack Window',
+    menu: 'Smoothies, cut fruit, nuts, banana bread, energy bites, or recovery snacks timed around the programme.',
+  },
+  {
+    title: 'Dinner',
+    menu: 'A calmer plated or family-style meal with a satisfying main, lighter sides, and dessert that closes the day without feeling heavy.',
+  },
 ]
 
 const ADDONS = [
@@ -91,6 +103,8 @@ const FAQS = [
   { q: 'Do you handle multiple dietary types simultaneously?', a: 'Yes — common at corporate retreats. We pre-intake dietary needs 14 days before, design parallel menus, label every dish.' },
   { q: 'Can you cook on-site at the retreat villa?', a: 'Yes — daily on-site chef. We work in your villa kitchen or bring a satellite kitchen if needed.' },
   { q: 'What about food safety for multi-day events?', a: 'Hygiene-certified team. Daily fresh sourcing (no leftover day-2). HACCP-compliant cold chain.' },
+  { q: 'Can I see a sample retreat menu before I book?', a: 'Yes. Once we understand your retreat rhythm, guest profile, and dietary direction, we can show a sample day structure so you can see how breakfast, lunch, snacks, and dinner would be paced.' },
+  { q: 'What happens if participant numbers shift during the week?', a: 'We confirm a working headcount before the retreat starts, then adjust daily service counts with the host when attendance changes. That keeps portions realistic and helps control waste.' },
   { q: 'Can the chef join the retreat ceremony?', a: 'Yes — our chefs are often part of the experience. Many retreat hosts include the chef in the welcome ceremony.' },
   { q: 'Can you cater off-island?', a: 'Currently not — refer to specialist outer-island operators. Bali island-wide only.' },
   { q: 'Pricing for kids / accompanying family?', a: 'Kids 3–12 charged at 60% of adult rate. Under 3 free.' },
@@ -409,16 +423,26 @@ export default function EventsRetreatsPage() {
         </div>
       </section>
 
-      <TestimonialBlock
-        title="What Retreat Hosts Say"
-        subtitle="Structured enough for organisers, nourishing enough for guests."
-        testimonials={PAST_RETREATS.map((retreat) => ({
-          name: retreat.host,
-          location: `${retreat.retreat} · ${retreat.location}`,
-          quote: retreat.quote,
-          rating: 5,
-        }))}
-      />
+      <section className="py-20 md:py-28 bg-[#FAFAF8] retreat-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader
+            eyebrow="Chapter 4 — Sample Day"
+            title="A sample one-day retreat food structure"
+            subtitle="Retreat hosts usually need to see how the day eats before they are ready to judge the proposal. This sample is a planning frame, not a fixed menu."
+          />
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-10">
+            {SAMPLE_DAY_MENU.map((item) => (
+              <div key={item.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-6">
+                <h3 className="text-lg mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                <p className="text-sm text-[#4A4745] leading-relaxed">{item.menu}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-sm text-[#4A4745] text-center max-w-4xl mx-auto">
+            Once dates, guest profile, and dietary map are clear, we turn this into a rotation plan that shifts across the week instead of repeating the same energy profile every day.
+          </p>
+        </div>
+      </section>
 
       <section className="py-20 md:py-28 bg-white retreat-reveal">
         <div className="max-w-3xl mx-auto px-6">

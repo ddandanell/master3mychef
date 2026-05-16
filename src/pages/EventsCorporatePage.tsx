@@ -15,7 +15,6 @@ import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
-import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -83,8 +82,32 @@ const SAMPLE_AGENDA_RETREAT = [
   { day: 'Day 3', activity: 'Breakfast · Closing session · Farewell lunch · Departure' },
 ]
 
-const LOGO_WALL = [
-  'Tech Co.', 'FMCG Global', 'Fintech Startup', 'Consulting Firm', 'Health Brand', 'Travel Platform',
+const PROPOSAL_INCLUDED = [
+  'Line-item food and service budget',
+  'Staffing ratios by event moment',
+  'Venue, kitchen, and AV assumptions',
+  'Dietary handling plan and labels',
+  'Deposit, invoice, and payment schedule',
+  'Named coordinator and response path',
+]
+
+const APPROVAL_CHECKS = [
+  {
+    title: 'Budget structure',
+    desc: 'The first proposal separates food, staffing, rentals, and optional production so finance teams can compare like-for-like without guessing what is bundled.',
+  },
+  {
+    title: 'Venue fit',
+    desc: 'We call out whether the plan assumes a villa, resort function room, private venue, or temporary build so ops teams can flag access issues early.',
+  },
+  {
+    title: 'Dietary handling',
+    desc: 'The proposal states how guest dietary data is collected, labelled, and briefed to service so legal, HR, and event leads are not left inferring the process.',
+  },
+  {
+    title: 'Contingency notes',
+    desc: 'We outline the operational assumptions that matter most: weather backup, agenda drift, late arrivals, supplier timing, and what changes the cost.',
+  },
 ]
 
 const ADDONS = [
@@ -100,6 +123,8 @@ const FAQS = [
   { q: 'Do you have liability insurance?', a: 'Yes — public liability + product liability covered. Insurance certificate provided on request.' },
   { q: 'Can you handle Bahasa + English speakers?', a: 'Yes — all coordinators bilingual. Mandarin available on request.' },
   { q: 'How do you manage dietary restrictions for large groups?', a: 'Pre-event dietary form sent 14 days before. We label every dish at the buffet / plate. Halal / vegan / GF / nut allergy / shellfish allergy all handled.' },
+  { q: 'What does the first proposal include?', a: 'The first proposal covers menu structure, staffing assumptions, timing, venue/kitchen assumptions, invoice terms, and any optional rentals or AV line items so internal approval does not depend on a second explanation call.' },
+  { q: 'Can you work inside resorts or function rooms, or only villas?', a: 'Yes — we can scope for villas, resorts, private venues, and temporary event builds. The important part is access, kitchen setup, service route, and venue rules, which is why we ask for venue type in the first brief.' },
   { q: 'Can you organize the whole offsite?', a: 'Yes — through our villa management + activity partners. We become your single coordinator.' },
   { q: 'Lead time for corporate events?', a: 'Day events: 2 weeks. Multi-day retreats: 4–6 weeks. Product launches with custom build: 6–12 weeks.' },
   { q: 'Can you handle global executives?', a: 'Yes — VIP handling is standard. Private dietary preferences, security coordination, and personalised meal service all available.' },
@@ -343,9 +368,9 @@ export default function EventsCorporatePage() {
                 ))}
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
-                {LOGO_WALL.map((logo) => (
-                  <span key={logo} className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-white/[80%]">
-                    {logo}
+                {PROPOSAL_INCLUDED.map((item) => (
+                  <span key={item} className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-white/[80%]">
+                    {item}
                   </span>
                 ))}
               </div>
@@ -415,15 +440,23 @@ export default function EventsCorporatePage() {
         </div>
       </section>
 
-      <TestimonialBlock
-        title="What Corporate Clients Say"
-        subtitle="Operationally sharp, calm on the day, and easy for internal teams to manage."
-        testimonials={[
-          { name: 'HR Director, Tech Co.', location: 'Canggu Offsite (40 people)', quote: '3-day retreat, mixed dietary needs. myCHEF delivered breakfast on time daily, managed gluten-free + vegan labels cleanly, and kept the agenda running. One contact point, zero stress.', rating: 5 },
-          { name: 'Event Manager, FMCG', location: 'Ubud Retreat (28 people)', quote: 'Coffee breaks are when things break. myCHEF hit every 10:30 and 15:00 time block exactly. Service manager stayed invisible but ran the whole floor. That matters for a packed 2-day agenda.', rating: 5 },
-          { name: 'CEO, Fintech', location: 'Seminyak Product Launch (85 people)', quote: 'We flew in executives from 4 countries. Proposal was clear on what was included. Invoice was itemized. The team understood "corporate" meant no drama, just execution. They nailed it.', rating: 5 },
-        ]}
-      />
+      <section className="py-20 md:py-28 bg-[#FAFAF8] corporate-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader
+            eyebrow="Chapter 5 — Approval"
+            title="What decision-makers need before they approve the deposit"
+            subtitle="Instead of generic social proof, this page should help internal teams see exactly how the brief gets translated into an approvable event plan."
+          />
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-10">
+            {APPROVAL_CHECKS.map((item) => (
+              <div key={item.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-6">
+                <h3 className="text-lg mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="py-20 md:py-28 bg-white corporate-reveal">
         <div className="max-w-3xl mx-auto px-6">

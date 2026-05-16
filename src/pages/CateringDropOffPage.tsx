@@ -279,14 +279,14 @@ export default function CateringDropOffPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:brightness-110 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:brightness-110 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
               style={{ background: ACCENT }}
             >
               <Package className="w-4 h-4" /> Order Drop-Off Catering
             </a>
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-drop-off-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <MessageCircle className="w-4 h-4" /> WhatsApp availability
             </a>
@@ -691,7 +691,7 @@ export default function CateringDropOffPage() {
               <Link
                 key={path.title}
                 to={path.href}
-                className="group bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all"
+                className="group bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 <div className="aspect-[16/9] overflow-hidden">
                   <OptimizedImage src={path.image} alt={path.title} className="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
@@ -715,7 +715,7 @@ export default function CateringDropOffPage() {
               <Link
                 key={link.label}
                 to={link.href}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#1A1A1A] transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#1A1A1A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 {link.label} <ArrowRight className="w-3.5 h-3.5" />
               </Link>
@@ -747,14 +747,14 @@ export default function CateringDropOffPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:brightness-110 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:brightness-110 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
               style={{ background: ACCENT }}
             >
               <Package className="w-4 h-4" /> Order Drop-Off Catering
             </a>
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-drop-off-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Phone className="w-4 h-4" /> WhatsApp myCHEF
             </a>

@@ -193,10 +193,10 @@ export default function EventsRetreatsPage() {
             Multi-day retreat food planning with balanced breakfasts, communal lunches, dietary-coded dinners, and a team that can sustain quality for several days in a villa environment.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Calendar className="w-4 h-4" /> Request Retreat Quote
             </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-retreats-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-retreats-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
@@ -222,7 +222,7 @@ export default function EventsRetreatsPage() {
                 Retreat food planning is different from normal event catering because guests are not just attending a dinner. They are waking up together, moving through sessions, practicing, resting, and eating multiple times a day for several days in a row. That changes everything: the menu has to feel nourishing without becoming repetitive, portions need to support the rhythm of the programme, and dietary complexity builds quickly as the guest list gets bigger. We design around those realities from day one.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                myCHEF specialises in balanced villa retreat operations — breakfast setups that are ready before the first session, communal lunches that keep the day moving, evening dinners that feel satisfying without weighing guests down, and kitchen systems that hold quality across the full week. For organisers who need a more service-specific breakdown, our <a href="/catering/retreat-catering" className="text-[#2C5F7C] underline underline-offset-4">retreat catering page</a> shows the dedicated catering version of this offer.
+                myCHEF specialises in balanced villa retreat operations — breakfast setups that are ready before the first session, communal lunches that keep the day moving, evening dinners that feel satisfying without weighing guests down, and kitchen systems that hold quality across the full week. For organisers who need a more service-specific breakdown, our <a href="/catering/retreat-catering" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">retreat catering page</a> shows the dedicated catering version of this offer.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -469,7 +469,7 @@ export default function EventsRetreatsPage() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium"
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 {link.label}
               </Link>

@@ -403,13 +403,13 @@ export default function EventsMainPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="events-hero"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <MessageCircle className="w-4 h-4" /> Book on WhatsApp
             </a>
             <a
               href="#event-types"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               View Event Types <ChevronRight className="w-4 h-4" />
             </a>
@@ -459,7 +459,7 @@ export default function EventsMainPage() {
               <Link
                 key={event.slug}
                 to={event.href}
-                className="group bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300"
+                className="group bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <OptimizedImage src={event.image} alt={`${event.title} in Bali by myCHEF`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
@@ -490,7 +490,7 @@ export default function EventsMainPage() {
               <Link
                 key={e.slug}
                 to={e.href}
-                className="events-reveal group bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300"
+                className="events-reveal group bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
@@ -700,13 +700,13 @@ export default function EventsMainPage() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
               href="tel:+6282237565997"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>
@@ -854,13 +854,13 @@ export default function EventsMainPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="events-cta"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
               href="tel:+6282237565997"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>

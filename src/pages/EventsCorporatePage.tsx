@@ -197,10 +197,10 @@ export default function EventsCorporatePage() {
             Full F&amp;B operation for offsites, conferences, launches, and gala nights — menus, coffee breaks, staffing, AV coordination, and cleanup managed under one proposal.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Calendar className="w-4 h-4" /> Request Corporate Quote
             </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
@@ -226,7 +226,7 @@ export default function EventsCorporatePage() {
                 Corporate hosts usually need one supplier who can think beyond a lunch menu. We cover breakfast service, coffee stations, plated or buffet lunches, networking drinks, dietary mapping, floor staff, and the practical realities of running hospitality inside a villa, private venue, or temporary conference setup. That matters because timing is not driven by diners — it is driven by agenda blocks, speakers, registration, workshops, and transport windows.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                We are particularly useful when the event needs to feel polished without becoming hotel-heavy. You get a service team that understands guest movement, a proposal that can sit next to procurement requirements, and menus that can flex between healthy conference food and more celebratory evening service. If you need a narrower food-only brief, our <a href="/catering/corporate-catering" className="text-[#2C5F7C] underline underline-offset-4">corporate catering page</a> covers that too.
+                We are particularly useful when the event needs to feel polished without becoming hotel-heavy. You get a service team that understands guest movement, a proposal that can sit next to procurement requirements, and menus that can flex between healthy conference food and more celebratory evening service. If you need a narrower food-only brief, our <a href="/catering/corporate-catering" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">corporate catering page</a> covers that too.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -483,7 +483,7 @@ export default function EventsCorporatePage() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium"
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 {link.label}
               </Link>

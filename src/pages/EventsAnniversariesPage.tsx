@@ -163,10 +163,10 @@ export default function EventsAnniversariesPage() {
             Private villa anniversaries with chef-led menus, table service, wine pairing add-ons, and discreet surprise coordination — from a romantic dinner for two to a renewal of vows with family and friends.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Calendar className="w-4 h-4" /> Book Anniversary Dinner
             </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-anniversaries-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-anniversaries-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
@@ -257,7 +257,7 @@ export default function EventsAnniversariesPage() {
                 Gourmet menus that feel fine-dining, but stay fully personal to the villa setting
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Anniversary menus usually sit between restaurant refinement and private-home comfort. We can build Western tasting menus, lighter Mediterranean or Indonesian fusion courses, or a more indulgent sequence around seafood and premium beef. Wine pairing is offered as an add-on, and we will happily brief the evening around champagne, a favourite label, or a no-alcohol pairing if that suits the couple better. When clients want a more restaurant-led feeling, we often pair this page with our <a href="/catering/plated-catering" className="text-[#2C5F7C] underline underline-offset-4">plated catering service</a> as a reference point.
+                Anniversary menus usually sit between restaurant refinement and private-home comfort. We can build Western tasting menus, lighter Mediterranean or Indonesian fusion courses, or a more indulgent sequence around seafood and premium beef. Wine pairing is offered as an add-on, and we will happily brief the evening around champagne, a favourite label, or a no-alcohol pairing if that suits the couple better. When clients want a more restaurant-led feeling, we often pair this page with our <a href="/catering/plated-catering" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">plated catering service</a> as a reference point.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-6">
                 {HOTEL_COMPARISON.map((item) => (
@@ -399,7 +399,7 @@ export default function EventsAnniversariesPage() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium"
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 {link.label}
               </Link>

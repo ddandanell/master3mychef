@@ -180,47 +180,102 @@ export default function CateringFloatingBreakfastPage() {
         ]}
       />
 
-      <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Floating Breakfast Bali' }]} />
-
       {/* ═══════ HERO ═══════ */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/generated/hero-floating-breakfast.webp"
-            alt="Floating breakfast bamboo tray in a Bali villa pool with tropical fruit, coffee, and flowers"
-            width={1920}
-            height={1080}
-            decoding="async" fetchPriority="high"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-white/40" />
-        </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Floating Breakfast Bali
-          </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-[#1A1A1A] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Floating Breakfast Bali<br />
-            <span className="italic">for Villa Pool Mornings</span>
-          </h1>
-          <p className="text-lg md:text-xl text-[#4A4745] mb-8 max-w-2xl mx-auto">
-            A styled floating breakfast experience with tropical dishes, fresh juice, coffee, fruit, and pool-ready presentation delivered to your villa.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <a
-              href="#order"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
-            >
-              <Calendar className="w-4 h-4" /> Book Floating Breakfast
-            </a>
-            <a
-              href="#setups"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-[#1A1A1A]/20 text-[#1A1A1A] text-sm tracking-widest uppercase rounded-full hover:bg-white/60 transition-all"
-            >
-              <Utensils className="w-4 h-4" /> See the Setups
-            </a>
+      <section className="relative overflow-hidden bg-black" style={{ minHeight: 'clamp(520px, 88vh, 100vh)' }}>
+        {/* Background image — tray visible on right, villa on left */}
+        <img
+          src="/generated/floating-breakfast-bali.png"
+          alt="Floating breakfast bamboo tray in a Bali villa pool at sunset with tropical fruit, coffee, and flowers"
+          decoding="async"
+          fetchPriority="high"
+          className="absolute inset-0 w-full h-full object-cover object-center md:object-[center_center]"
+          style={{ objectPosition: 'center center' }}
+        />
+
+        {/* Left-to-right gradient — text zone dark, image visible on right */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+          }}
+        />
+        {/* Bottom-to-top gradient — keeps CTA area readable */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to top, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.10) 40%, transparent 100%)',
+          }}
+        />
+        {/* Mobile — stronger full overlay */}
+        <div className="absolute inset-0 bg-black/30 md:hidden" />
+
+        {/* Content — left-aligned, vertically centered */}
+        <div
+          className="relative z-10 flex items-center"
+          style={{ minHeight: 'clamp(520px, 88vh, 100vh)' }}
+        >
+          <div className="w-full max-w-7xl mx-auto px-6 lg:px-14 pt-24 pb-12">
+            <div className="max-w-[620px]">
+              {/* Breadcrumb */}
+              <Breadcrumb
+                items={[
+                  { label: 'Catering', href: '/catering' },
+                  { label: 'Floating Breakfast' },
+                ]}
+                theme="dark"
+                className="mb-6"
+              />
+
+              {/* Eyebrow */}
+              <p
+                className="text-[#C5A028] text-xs font-semibold uppercase tracking-[0.35em] mb-5"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Floating Breakfast Bali
+              </p>
+
+              {/* Headline */}
+              <h1
+                className="text-white leading-[0.97] tracking-[-0.02em] mb-6"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontWeight: 400,
+                  fontSize: 'clamp(42px, 6vw, 88px)',
+                }}
+              >
+                Floating Breakfast Bali
+                <span className="block italic">for Villa Pool Mornings</span>
+              </h1>
+
+              {/* Body */}
+              <p className="text-white/85 text-base md:text-lg leading-[1.55] mb-8 max-w-[540px]">
+                A styled floating breakfast experience with tropical dishes, fresh juice, coffee, fruit, and pool-ready presentation delivered to your villa.
+              </p>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                <a
+                  href="#order"
+                  data-source="floating-breakfast-hero-primary-cta"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-xs font-bold uppercase tracking-[0.14em] rounded-full hover:bg-[#D4B43A] transition-colors"
+                >
+                  <Calendar className="w-4 h-4" /> Book Floating Breakfast
+                </a>
+                <a
+                  href="#setups"
+                  data-source="floating-breakfast-hero-secondary-cta"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/40 text-white text-xs font-bold uppercase tracking-[0.14em] rounded-full hover:border-[#C5A028] hover:bg-white/5 backdrop-blur-sm transition-all"
+                >
+                  <Utensils className="w-4 h-4" /> See the Setups
+                </a>
+              </div>
+
+              {/* Trust line */}
+              <p className="text-white/60 text-sm">
+                From IDR 950,000/couple · Photo-ready styling · Chef-prepared · Delivered to your villa
+              </p>
+            </div>
           </div>
-          <p className="text-[#4A4745]/80 text-sm">From IDR 950,000/couple · Photo-ready styling · Chef-prepared</p>
         </div>
       </section>
 

@@ -369,3 +369,22 @@ Tree-shaking was already excluding all 9 deps from the bundle, so output size ba
 **Last Updated:** 2026-05-16 09:20 UTC+8
 **Current Git Head:** 66faf04 (main)
 **Build Status:** ✅ PASSING
+
+---
+
+## HERO GAP FIXES + IMAGE AUDIT (2026-05-16) — Copilot Agent
+
+| Fix | Status | File | Notes |
+|-----|--------|------|-------|
+| Locations hero image | ✅ DONE | `LocationsHubPage.tsx` | New atmospheric Bali sunset (`bali-locations-sunset.webp`, downloaded via Pexels CDN, converted to WebP 424KB) |
+| HubPage broken image | ✅ DONE | `HubPage.tsx` | `/images/family-villa-dinner-cutout.png` (missing) → `/generated/luna-guests.webp` |
+| HubPage unused imports | ✅ DONE | `HubPage.tsx` | Removed `ConciergeBell`, `UsersRound` (build was failing) |
+| Fine dining breadcrumb gap (x4) | ✅ DONE | `TastingMenuPage`, `RomanticDinnerPage`, `ChefsTablePage`, `PrivateChefBaliPage` | Moved standalone breadcrumb inside hero with `theme="dark"` — eliminates white gap bar between nav and hero |
+| Chef's Table hero PNG → WebP | ✅ DONE | `ChefsTablePage.tsx` | 1.8MB PNG → 140KB WebP (93% size reduction) |
+| public/images gitignored | ✅ DONE | `.gitignore` | Large unreferenced PNGs no longer tracked |
+| Build | ✅ CLEAN | — | 3.69s · 0 TypeScript errors · 160 meta files |
+| Git push | ✅ DONE | — | Commit `078569f` → main |
+
+**Last Updated:** 2026-05-16 13:22 UTC+8
+**Current Git Head:** 078569f (main)
+**Build Status:** ✅ PASSING

@@ -121,9 +121,7 @@ export default function CorporateGuidePage() {
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#1A1A1A] to-[#2A2A2A] text-white py-16">
         <div className="max-w-4xl mx-auto px-6">
-          <Link to="/help" className="text-[#C5A028] flex items-center gap-2 mb-6 hover:underline">
-            ← Back to Help
-          </Link>
+          <Breadcrumb items={[{ label: 'Help', href: '/help' }, { label: 'Corporate Guide' }]} theme="dark" className="px-0 pt-0 pb-8" />
           <h1 className="text-5xl font-light mb-6">Corporate & Retreat Catering</h1>
           <p className="text-xl text-white/70">Plan your team retreat, corporate dinner, or multi-day offsite with full catering and flexible service.</p>
         </div>

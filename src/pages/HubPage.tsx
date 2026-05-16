@@ -16,6 +16,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import PricingCalculator from '@/components/PricingCalculator'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { RiskReversal } from '@/components/shared'
+import TrustSection from '@/components/trust/TrustSection'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -48,45 +49,6 @@ const PORTALS = [
 
 // Six editorial trust cards rendered under the three service portals.
 // Each one earns the premium price tag with one concrete promise.
-const TRUST_CARDS = [
-  {
-    eyebrow: 'Promise',
-    title: '100% Experience Guarantee',
-    body: 'If the execution is not what we promised, we make it right.',
-    image: '/generated/trust-guarantee.webp',
-  },
-  {
-    eyebrow: 'Standard',
-    title: 'The New Standard for Private Dining in Bali',
-    body: 'Built for villas, families, weddings, and hosted experiences.',
-    image: '/generated/trust-standard.webp',
-  },
-  {
-    eyebrow: 'Network',
-    title: 'Verified Chefs. Real Accountability.',
-    body: 'Every chef is selected, reviewed, and matched to the experience.',
-    image: '/generated/trust-chefs.webp',
-  },
-  {
-    eyebrow: 'Leadership',
-    title: 'Designed for Market Dominance',
-    body: 'Fine dining, catering, and events delivered through one premium system.',
-    image: '/generated/trust-leader.webp',
-  },
-  {
-    eyebrow: 'Execution',
-    title: 'From Menu to Service Flow',
-    body: 'We handle planning, food, staffing, setup, and guest experience.',
-    image: '/generated/trust-execution.webp',
-  },
-  {
-    eyebrow: 'Hosts',
-    title: 'Built for Villas, Hosts, and Private Guests',
-    body: 'Professional presentation, clear process, and repeatable quality.',
-    image: '/generated/trust-hosts.webp',
-  },
-] as const
-
 const HOW_IT_WORKS = [
   {
     step: '01',
@@ -388,7 +350,7 @@ export default function HubPage() {
         jsonLd={homeSchemas}
       />
       {/* HERO — luxury brand identity with Michelin-trained founder story front and centre */}
-      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-20 pt-16 sm:pt-20 md:pb-32" style={{ background: 'var(--u-bg)' }}>
+      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-20 pt-20 sm:pt-28 md:pb-32" style={{ background: 'var(--u-bg)' }}>
         <div className="mb-10 md:mb-14">
           <div className="relative min-h-[calc(100vh-64px)] overflow-hidden md:min-h-[calc(100vh-72px)]">
             <img
@@ -401,7 +363,7 @@ export default function HubPage() {
               loading="eager"
               decoding="async"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(245,243,239,0.28)_0%,rgba(245,243,239,0.18)_40%,rgba(245,243,239,0.05)_63%,rgba(245,243,239,0)_80%)]" />
+            <div className="absolute inset-0 bg-white/0" />
             <div className="relative z-10 mx-auto flex min-h-[calc(100vh-64px)] max-w-[1280px] items-center px-5 py-10 sm:px-6 md:min-h-[calc(100vh-72px)] md:py-14">
               <div className="max-w-2xl rounded-2xl bg-[#F5F3EF]/80 p-5 backdrop-blur-[2px] md:max-w-[46%] md:bg-transparent md:p-0 md:backdrop-blur-0">
                 <p className="hub-hero-label mb-4 text-xs uppercase tracking-[0.34em] text-[#8A6F15] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -422,7 +384,7 @@ export default function HubPage() {
                     Browse Menus &amp; Pricing <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-                <p className="text-xs uppercase tracking-[0.18em] text-[#5E564B]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-sm uppercase tracking-[0.18em] text-[#5E564B]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Replies within 1 hour · Weekends fill fast
                 </p>
               </div>
@@ -498,61 +460,8 @@ export default function HubPage() {
         </div>
       </section>
 
-      {/* TRUST SIGNALS — six editorial cards reinforcing the value prop */}
-      <section className="trust-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
-        <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-14 md:mb-20">
-            <p className="u-label mb-4">Why myCHEF</p>
-            <h2 className="u-heading text-3xl md:text-5xl mb-4">Built to be the new standard</h2>
-            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
-              Six things every guest, host, and villa partner gets from the first message to the last plate.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
-            {TRUST_CARDS.map((card) => (
-              <div
-                key={card.title}
-                className="group relative overflow-hidden rounded-2xl border transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_18px_60px_-20px_rgba(212,175,55,0.35)]"
-                style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}
-              >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    width={640}
-                    height={400}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div
-                    className="absolute inset-0"
-                    style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.45) 100%)' }}
-                  />
-                  <span
-                    className="absolute top-4 left-4 text-[10px] tracking-[0.3em] uppercase font-semibold px-3 py-1.5 rounded-full"
-                    style={{ background: 'rgba(0,0,0,0.55)', color: '#C5A028', backdropFilter: 'blur(8px)', fontFamily: "'Cormorant Garamond', serif" }}
-                  >
-                    {card.eyebrow}
-                  </span>
-                </div>
-                <div className="p-6 md:p-7">
-                  <h3 className="text-xl md:text-2xl mb-3 leading-tight" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>
-                    {card.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
-                    {card.body}
-                  </p>
-                </div>
-                <span
-                  className="absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
-                  style={{ background: 'linear-gradient(to right, transparent, #C5A028, transparent)' }}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* LUXURY TRUST SECTION */}
+      <TrustSection />
 
       {/* HOW IT WORKS */}
       <section

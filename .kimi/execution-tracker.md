@@ -466,3 +466,19 @@ Tree-shaking was already excluding all 9 deps from the bundle, so output size ba
 
 **Last Updated:** 2026-05-16 14:22 UTC+8
 **Build Status:** ✅ PASSING
+
+---
+
+## PERSONA GAP SPRINT — FAMILY + MULTI-CULTURAL PLANNING (2026-05-16) — Copilot Agent
+
+> Continued P1-4 execution on the cleanest persona gaps still controllable in-product without owner-side assets: family decision support on villa catering and multi-cultural / multi-day planning clarity on weddings.
+
+| Item | Status | Files | Notes |
+|-----|--------|------|-------|
+| Family budgeting + service coverage guidance added | ✅ DONE | `src/pages/CateringVillaPage.tsx` | Added dinner-only / breakfast+dinner / celebration-day planning paths, group-total calculators, and FAQ guidance for partial coverage + grocery budgets |
+| Multi-cultural wedding planning section added | ✅ DONE | `src/pages/EventsWeddingsPage.tsx` | Added weekend-format planning and mixed-family menu guidance without relying on new unverifiable claims |
+| Wedding FAQ expanded for multi-day + mixed-cultural briefs | ✅ DONE | `src/pages/EventsWeddingsPage.tsx` | Added FAQ coverage for 3-day wedding weekends and mixed cultural food expectations |
+| TypeScript + audit + production build | ✅ PASSING | app | `npx tsc -b --noEmit`, `npm run audit`, and `npx vite build` all passed after changes |
+
+**Last Updated:** 2026-05-16 15:12 UTC+8
+**Build Status:** ✅ PASSING

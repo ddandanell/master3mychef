@@ -18,7 +18,7 @@ import SeoHead, {
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 // import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, AllInPrice } from '@/components/shared'
+import { Breadcrumb, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -102,6 +102,24 @@ const HOW_IT_WORKS = [
   { step: '06', title: 'Full cleanup', desc: 'Kitchen, dishes, surfaces — spotless. We leave the villa as we found it.', icon: ShieldCheck },
 ]
 
+const FAMILY_COVERAGE_OPTIONS = [
+  {
+    title: 'Dinner-only for long stays',
+    desc: 'The simplest way to remove the hardest meal of the day. Families explore Bali freely, then come back to a proper dinner without shopping, transport, or table logistics.',
+    bullets: ['Best for 5–14 day stays', 'Strong fit for multi-generational groups', 'Pairs well with a grocery budget cap'],
+  },
+  {
+    title: 'Breakfast + dinner rhythm',
+    desc: 'Useful when your group wants calm villa mornings and an easy evening finish, while leaving lunch flexible for beach clubs, day trips, or kids\' schedules.',
+    bullets: ['Good for kids and early risers', 'Reduces restaurant coordination twice daily', 'Works well for 8–20 guests'],
+  },
+  {
+    title: 'Celebration-day full coverage',
+    desc: 'Use full-day catering on the days that matter most: arrival day, birthday dinner, reunion lunch, or the one day everyone stays in the villa together.',
+    bullets: ['Best for milestone days', 'Keeps the villa running cleanly', 'Lets you avoid paying for full service every day'],
+  },
+]
+
 const FAQS = [
   { q: 'Can you cook inside my villa kitchen?', a: 'Yes. Our chefs are experienced in working with villa kitchens of all sizes. We bring any specialized equipment needed. If the kitchen is basic, we adapt the menu accordingly.' },
   { q: 'Do you bring your own equipment?', a: 'We bring chef knives, portable burners, grills, chafing dishes, and serving equipment. Most villas have standard cookware — we use what is there and supplement as needed.' },
@@ -111,6 +129,8 @@ const FAQS = [
   { q: 'Do you clean up after the meal?', a: 'Full cleanup is included. Kitchen, dishes, surfaces, and dining area. You relax. We leave the villa as we found it.' },
   { q: 'What areas in Bali do you serve?', a: 'All major villa areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Pererenan, Berawa, and surrounding regions.' },
   { q: 'How far in advance should I book?', a: 'For villa dinners, 3–7 days is ideal. For multi-day catering or large groups, 2–4 weeks helps us assign the best chef.' },
+  { q: 'Can we book only key meals instead of full service every day?', a: 'Yes. Many groups use us for dinner only, breakfast + dinner, or a few high-impact days during a longer stay. We can scope the service around your actual villa schedule instead of forcing full-day coverage daily.' },
+  { q: 'Can you work to a grocery budget?', a: 'Yes. If you have a target grocery spend, tell us upfront and we will build the menu around it. That usually means balancing one or two premium meals with lighter breakfast or family-style service on other days.' },
   { q: 'Can we add a bartender or waiters?', a: 'Yes. Bartenders, cocktail packages, waiters, and table styling are all available as add-ons. Ask when you book.' },
   { q: 'Is grocery shopping included?', a: 'We shop for fresh ingredients and bill groceries at cost — no markup. You see every receipt.' },
 ]
@@ -359,11 +379,55 @@ export default function CateringVillaPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 7: DIETARY & GUEST HANDLING ═══════ */}
+      {/* ═══════ SECTION 7: FAMILY BUDGET + COVERAGE ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Chapter 7 — Family Planning"
+            title="Build the service around your stay, not the other way around"
+            subtitle="You do not need to book full catering every day to make a villa stay easier. Most families mix celebration meals, dinner-only coverage, and lighter breakfast service depending on who is in the villa each day."
+          />
+          <div className="grid lg:grid-cols-3 gap-6 mt-10">
+            {FAMILY_COVERAGE_OPTIONS.map((option) => (
+              <div key={option.title} className="villa-reveal rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-6">
+                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{option.title}</h3>
+                <p className="text-sm text-[#4A4745] leading-relaxed mb-4">{option.desc}</p>
+                <div className="space-y-2">
+                  {option.bullets.map((bullet) => (
+                    <div key={bullet} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                      <Check className="w-4 h-4 text-[#C5A028] mt-0.5 shrink-0" />
+                      <span>{bullet}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 grid lg:grid-cols-3 gap-6">
+            <div className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-5">
+              <h3 className="text-lg mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Villa Lunch Example</h3>
+              <GroupTotalCalculator pricePerPerson={450000} minGuests={8} maxGuests={40} defaultGuests={14} accent="#C5A028" />
+            </div>
+            <div className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-5">
+              <h3 className="text-lg mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Villa Dinner Example</h3>
+              <GroupTotalCalculator pricePerPerson={650000} minGuests={8} maxGuests={60} defaultGuests={14} accent="#C5A028" />
+            </div>
+            <div className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-5">
+              <h3 className="text-lg mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Multi-Day Service Example</h3>
+              <GroupTotalCalculator pricePerPerson={550000} minGuests={8} maxGuests={40} defaultGuests={14} accent="#C5A028" />
+            </div>
+          </div>
+          <p className="mt-6 text-sm text-[#4A4745] text-center max-w-4xl mx-auto">
+            These totals are the service baseline before groceries and optional add-ons. That makes them useful for early comparison with restaurants, villa outings, and celebration-day catering without pretending the grocery bill is the same for every group.
+          </p>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 8: DIETARY & GUEST HANDLING ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 7 — Dietary"
+            eyebrow="Chapter 8 — Dietary"
             title="Dietary & Guest Handling"
             subtitle="Mixed international groups are the norm in Bali villas. We handle every dietary need without fuss."
           />
@@ -388,11 +452,11 @@ export default function CateringVillaPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 8: OPTIONAL ADD-ONS ═══════ */}
+      {/* ═══════ SECTION 9: OPTIONAL ADD-ONS ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 8 — Add-Ons"
+            eyebrow="Chapter 9 — Add-Ons"
             title="Optional Add-Ons"
             subtitle="Elevate your villa catering with bartenders, waiters, table styling, live BBQ, and more."
           />
@@ -417,11 +481,11 @@ export default function CateringVillaPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 9: AREAS WE SERVE ═══════ */}
+      {/* ═══════ SECTION 10: AREAS WE SERVE ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto text-center">
           <SectionHeader
-            eyebrow="Chapter 9 — Coverage"
+            eyebrow="Chapter 10 — Coverage"
             title="Areas We Serve"
             subtitle="Bali-wide villa catering. From Canggu to Uluwatu, Ubud to Nusa Dua — we come to your villa."
           />
@@ -438,7 +502,7 @@ export default function CateringVillaPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 10: TESTIMONIALS ═══════ */}
+      {/* ═══════ SECTION 11: TESTIMONIALS ═══════ */}
       <TestimonialBlock
         testimonials={[
           { name: 'The Richardson Family', location: 'Canggu Villa', quote: 'We had the multi-day villa catering for 15 people over 4 days. The chef was incredible — every meal was different and delicious. The team left the kitchen spotless each night.', rating: 5 },
@@ -449,17 +513,17 @@ export default function CateringVillaPage() {
         subtitle="Real reviews from villa groups across Bali."
       />
 
-      {/* ═══════ SECTION 11: FAQ ═══════ */}
+      {/* ═══════ SECTION 12: FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
-          <SectionHeader eyebrow="Chapter 10 — FAQ" title="Villa Catering FAQ" />
+          <SectionHeader eyebrow="Chapter 12 — FAQ" title="Villa Catering FAQ" />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
       <PressStrip />
 
-      {/* ═══════ SECTION 12: FINAL CTA ═══════ */}
+      {/* ═══════ SECTION 13: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img src="/generated/catering-hero.webp" alt="Villa catering setup with chef and team at Bali villa" className="w-full h-full object-cover" loading="lazy" />
@@ -491,7 +555,7 @@ export default function CateringVillaPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 13: INTERNAL LINKS ═══════ */}
+      {/* ═══════ SECTION 14: INTERNAL LINKS ═══════ */}
       <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
         <div className="max-w-[1000px] mx-auto">
           <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>

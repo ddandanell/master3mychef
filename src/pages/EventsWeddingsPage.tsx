@@ -81,6 +81,8 @@ const FAQS = [
   { q: 'Can I use my own florist or photographer?', a: 'Yes — we coordinate any vendor you bring. We have preferred partners with negotiated rates if you prefer.' },
   { q: 'How does tasting work?', a: 'Free pre-event tasting for all tiers, scheduled 2–4 weeks before wedding. We taste 3 dishes per course; you finalise the menu after.' },
   { q: 'What if it rains?', a: 'Every wedding has a wet-weather backup plan in the booking. We coordinate marquee rental + indoor relocation if needed.' },
+  { q: 'Can you scope a three-day wedding weekend instead of one dinner?', a: 'Yes. We can split the brief into welcome night, ceremony day, and farewell brunch or lunch so each service format is costed and planned separately. That usually gives couples more control than forcing one package over the whole weekend.' },
+  { q: 'Can you plan for mixed cultural food expectations?', a: 'Yes. The consult is where we map must-have dishes, vegetarian or halal-friendly needs, spice levels, and how different family groups should be served. We shape the menu brief around the guest mix before the tasting stage.' },
   { q: 'Do you handle non-Christian ceremonies?', a: 'Yes — Hindu, Muslim, Jewish, Balinese traditional, secular celebrant — all coordinated through our vetted officiant network.' },
   { q: 'Can my guests stay nearby?', a: 'We work with luxury villa partners and can arrange room blocks. Not included in package pricing.' },
   { q: 'What\'s your cancellation policy?', a: 'Up to 90 days before: 50% refund of deposit. 60–90 days: 25%. Under 60 days: no refund but credit toward rescheduled event within 12 months.' },
@@ -99,6 +101,28 @@ const STAFFING_POINTS = [
   'For cocktail receptions we increase tray-pass staff so drinks and canapés keep moving while portraits and speeches happen.',
   'Setup crew typically arrives 3 hours before guest arrival; kitchen prep and rentals often begin earlier depending on access.',
   'Full plate clearing, glassware reset, rubbish removal, and kitchen cleanup are included so the villa is handed back properly.',
+]
+
+const WEDDING_WEEKEND_FORMATS = [
+  {
+    title: 'Welcome Night / Sangeet-Style Evening',
+    desc: 'A more social format with canapes, family-style dishes, buffet stations, or live cooking so guests can move, meet, and settle into the weekend.',
+  },
+  {
+    title: 'Ceremony + Reception Day',
+    desc: 'The most timing-sensitive service block. Menus and staffing are scoped around vows, portraits, speeches, and how long guests realistically wait between moments.',
+  },
+  {
+    title: 'Farewell Brunch / Recovery Lunch',
+    desc: 'A softer final meal for villa guests the next day - simpler food, calmer pacing, and a clean way to close the wedding weekend without another formal event build.',
+  },
+]
+
+const MULTICULTURAL_MENU_POINTS = [
+  'Different events in the same wedding weekend can carry different food identities instead of forcing one cuisine across every moment.',
+  "Menu direction can be split by guest need: vegetarian-heavy family tables, halal-friendly lines, lower-spice options, children's meals, or late-night comfort dishes.",
+  'The proposal can be structured around must-have dishes and non-negotiable family preferences before the tasting stage, which makes sign-off easier for couples and planners.',
+  'If you already have a planner, family lead, or other decision-maker involved, we can shape the brief so timing, menu style, and service expectations are clear in one document.',
 ]
 
 export default function EventsWeddingsPage() {
@@ -340,6 +364,40 @@ export default function EventsWeddingsPage() {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img src="/wedding-reception.webp" alt="Wedding reception table with candles and plated dinner service" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Multi-Cultural & Multi-Day Planning
+              </p>
+              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Weddings with different family expectations need a clearer food plan, not a more generic one
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-5">
+                The hardest wedding briefs are usually not about guest count alone. They are about different expectations meeting the same table: vegetarian relatives, halal-friendly lines, lower-spice options for one side of the family, late-night snacks for another, and a couple trying to balance elegance with comfort. The useful proposal is not only a per-person rate. It is a structure for how the whole weekend will actually eat.
+              </p>
+              <div className="space-y-3">
+                {MULTICULTURAL_MENU_POINTS.map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                    <p className="text-[#4A4745] leading-relaxed">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="space-y-4">
+              {WEDDING_WEEKEND_FORMATS.map((item) => (
+                <div key={item.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-6">
+                  <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                  <p className="text-[#4A4745] leading-relaxed text-sm">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

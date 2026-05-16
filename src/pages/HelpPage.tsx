@@ -66,7 +66,7 @@ const GUIDES: GuideCard[] = [
     title: 'Managing Your Booking',
     description: 'After you book: communicate with chefs, make changes, and prepare your villa.',
     icon: Settings,
-    link: '#',
+    link: '/help/managing-booking',
     category: 'Post-Booking',
     readTime: '5 min',
   },

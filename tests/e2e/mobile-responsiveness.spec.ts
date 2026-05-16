@@ -142,7 +142,7 @@ test.describe('Mobile Responsiveness Tests', () => {
       await page.setViewportSize({ width: 375, height: 667 });
       await page.goto(BASE_URL);
 
-      const accordionTriggers = page.locator('[role="button"], [data-testid*="accordion"]').slice(0, 3);
+      const accordionTriggers = page.locator('[role="button"], [data-testid*="accordion"]');
       const count = await accordionTriggers.count();
 
       if (count > 0) {

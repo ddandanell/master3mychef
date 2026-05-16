@@ -154,7 +154,7 @@ Received:   0
   142 |       await page.setViewportSize({ width: 375, height: 667 });
   143 |       await page.goto(BASE_URL);
   144 | 
-  145 |       const accordionTriggers = page.locator('[role="button"], [data-testid*="accordion"]').slice(0, 3);
+  145 |       const accordionTriggers = page.locator('[role="button"], [data-testid*="accordion"]');
   146 |       const count = await accordionTriggers.count();
   147 | 
   148 |       if (count > 0) {

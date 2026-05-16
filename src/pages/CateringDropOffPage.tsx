@@ -256,9 +256,16 @@ export default function CateringDropOffPage() {
             height={1080}
             decoding="async" fetchPriority="high"
             className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/70" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
+          <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Drop-Off Catering Bali' }]} theme="dark" className="justify-center mb-8" />
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
             Drop-Off Catering Bali
           </p>
@@ -266,7 +273,7 @@ export default function CateringDropOffPage() {
             Drop-Off Catering Bali<br />
             <span className="italic">for Easy Group Dining</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-2xl mx-auto">
             Prepared food, delivered to your villa or venue, ready to serve. Ideal for casual lunches, staff meals, small parties, and low-effort hosting.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">

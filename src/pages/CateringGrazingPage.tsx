@@ -222,9 +222,16 @@ export default function CateringGrazingPage() {
             height={1080}
             decoding="async" fetchPriority="high"
             className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/70" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
+          <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Grazing Tables Bali' }]} theme="dark" className="justify-center mb-8" />
           <p
             className="text-sm tracking-[0.3em] uppercase mb-6"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600, color: GOLD }}
@@ -237,7 +244,7 @@ export default function CateringGrazingPage() {
           >
             Grazing Tables Bali for Events, Villas, and Parties
           </h1>
-          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-2xl mx-auto">
             Styled grazing tables with cheese, charcuterie, fruit, dips, bread, sweets, and event-ready presentation for relaxed luxury hosting.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">

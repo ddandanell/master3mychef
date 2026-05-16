@@ -211,8 +211,8 @@ export default function LocationsHubPage() {
             </div>
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/jakarta-skyline.webp"
-                alt="Jakarta skyline at dusk — myCHEF private chef expansion"
+                src="/generated/bali-locations-sunset.webp"
+                alt="Dramatic skyline at dusk — myCHEF private chef expansion to Jakarta"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

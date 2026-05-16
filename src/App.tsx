@@ -99,6 +99,7 @@ const MenuGuide = lazy(() => import('./pages/MenuGuidePage'))
 const WeddingGuide = lazy(() => import('./pages/WeddingGuidePage'))
 const CorporateGuide = lazy(() => import('./pages/CorporateGuidePage'))
 const StaffingGuide = lazy(() => import('./pages/StaffingGuidePage'))
+const ManagingBooking = lazy(() => import('./pages/ManagingBookingPage'))
 
 // Minimal brand-aligned fallback — dark screen with subtle gold pulse
 function PageLoader() {
@@ -294,6 +295,7 @@ export default function App() {
           <Route path="/help/wedding-guide" element={<WeddingGuide />} />
           <Route path="/help/corporate-guide" element={<CorporateGuide />} />
           <Route path="/help/staffing-guide" element={<StaffingGuide />} />
+          <Route path="/help/managing-booking" element={<ManagingBooking />} />
 
           {/* 404 */}
           <Route path="/404" element={<NotFoundPage />} />

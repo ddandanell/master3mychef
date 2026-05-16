@@ -632,7 +632,13 @@ export default function CateringBabiGulingPage() {
             loading="lazy"
             decoding="async"
             className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/70" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>

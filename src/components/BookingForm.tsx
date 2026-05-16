@@ -11,10 +11,10 @@ const CONFIG = {
     title: 'Reserve Your Fine Dining Experience',
     subtitle: 'Sofia will confirm your menu and date within the hour.',
     fields: [
-      { name: 'date', label: 'Preferred Date', type: 'date', icon: Calendar },
-      { name: 'guests', label: 'Number of Guests', type: 'number', icon: Users, placeholder: 'e.g. 8' },
-      { name: 'villa', label: 'Villa Location', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu, Ubud...' },
-      { name: 'menu', label: 'Menu Experience', type: 'select', icon: Utensils, options: ['Mediterranean Sea Experience (IDR 2.2M++ pp)', 'Wagyu Experience (IDR 2.4M++ pp)'] },
+      { name: 'date', label: 'Preferred Date', type: 'date', icon: 'Calendar' },
+      { name: 'guests', label: 'Number of Guests', type: 'number', icon: 'Users', placeholder: 'e.g. 8' },
+      { name: 'villa', label: 'Villa Location', type: 'text', icon: 'MapPin', placeholder: 'Seminyak, Canggu, Ubud...' },
+      { name: 'menu', label: 'Menu Experience', type: 'select', icon: 'Utensils', options: ['Mediterranean Sea Experience (IDR 2.2M++ pp)', 'Wagyu Experience (IDR 2.4M++ pp)'] },
     ],
     whatsappName: 'Sofia',
     whatsappNumber: '6282237565997',
@@ -23,11 +23,11 @@ const CONFIG = {
     title: 'Book Your Private Villa Chef',
     subtitle: 'Daniel will match you with the perfect chef for your stay.',
     fields: [
-      { name: 'checkin', label: 'Check-in Date', type: 'date', icon: Calendar },
-      { name: 'checkout', label: 'Check-out Date', type: 'date', icon: Calendar },
-      { name: 'guests', label: 'Number of Guests', type: 'number', icon: Users, placeholder: 'e.g. 6' },
-      { name: 'villa', label: 'Villa Location', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu, Ubud...' },
-      { name: 'meals', label: 'Meal Plan', type: 'select', icon: Utensils, options: ['Breakfast Only', 'Half Board', 'Full Board', 'Custom'] },
+      { name: 'checkin', label: 'Check-in Date', type: 'date', icon: 'Calendar' },
+      { name: 'checkout', label: 'Check-out Date', type: 'date', icon: 'Calendar' },
+      { name: 'guests', label: 'Number of Guests', type: 'number', icon: 'Users', placeholder: 'e.g. 6' },
+      { name: 'villa', label: 'Villa Location', type: 'text', icon: 'MapPin', placeholder: 'Seminyak, Canggu, Ubud...' },
+      { name: 'meals', label: 'Meal Plan', type: 'select', icon: 'Utensils', options: ['Breakfast Only', 'Half Board', 'Full Board', 'Custom'] },
     ],
     whatsappName: 'Daniel',
     whatsappNumber: '6282237565997',
@@ -36,14 +36,21 @@ const CONFIG = {
     title: 'Plan Your Event',
     subtitle: 'Olivia will design a proposal tailored to your occasion.',
     fields: [
-      { name: 'eventType', label: 'Event Type', type: 'select', icon: Utensils, options: ['Wedding', 'Corporate Retreat', 'Birthday', 'Anniversary', 'Other'] },
-      { name: 'date', label: 'Event Date', type: 'date', icon: Calendar },
-      { name: 'guests', label: 'Number of Guests', type: 'number', icon: Users, placeholder: 'e.g. 50' },
-      { name: 'villa', label: 'Villa Location', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu, Ubud...' },
+      { name: 'eventType', label: 'Event Type', type: 'select', icon: 'Utensils', options: ['Wedding', 'Corporate Retreat', 'Birthday', 'Anniversary', 'Other'] },
+      { name: 'date', label: 'Event Date', type: 'date', icon: 'Calendar' },
+      { name: 'guests', label: 'Number of Guests', type: 'number', icon: 'Users', placeholder: 'e.g. 50' },
+      { name: 'villa', label: 'Villa Location', type: 'text', icon: 'MapPin', placeholder: 'Seminyak, Canggu, Ubud...' },
     ],
     whatsappName: 'Olivia',
     whatsappNumber: '6282237565997',
   },
+}
+
+const IconMap = {
+  Calendar,
+  Users,
+  MapPin,
+  Utensils
 }
 
 export default function BookingForm({ universe, compact }: BookingFormProps) {
@@ -103,6 +110,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
       <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-5">
         {config.fields.map((field) => {
           const fieldId = `${formId}-${field.name}`
+          const IconComponent = IconMap[field.icon as keyof typeof IconMap]
 
           return (
           <div key={field.name}>
@@ -110,7 +118,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
               {field.label}
             </label>
             <div className="relative">
-              <field.icon className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: 'var(--u-text-muted)' }} />
+              {IconComponent && <IconComponent className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: 'var(--u-text-muted)' }} />}
               {field.type === 'select' ? (
                 <select
                   id={fieldId}

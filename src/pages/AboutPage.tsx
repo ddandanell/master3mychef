@@ -1,5 +1,4 @@
 import { Award, ChefHat, Globe, Heart, House, Shield, Users, UtensilsCrossed } from 'lucide-react'
-import { Link } from 'react-router-dom'
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema } from '@/components/SeoHead'
 

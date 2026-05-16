@@ -67,12 +67,23 @@ export const AREAS: { slug: string; name: string }[] = [
   { slug: 'padang-bai', name: 'Padang Bai' },
   { slug: 'ungasan', name: 'Ungasan' },
   { slug: 'pecatu', name: 'Pecatu' },
+  { slug: 'jakarta', name: 'Jakarta' },
+  { slug: 'private-chef-menteng', name: 'Menteng' },
+  { slug: 'private-chef-kemang', name: 'Kemang' },
+  { slug: 'private-chef-scbd', name: 'SCBD' },
+  { slug: 'private-chef-pondok-indah', name: 'Pondok Indah' },
+  { slug: 'private-chef-bsd', name: 'BSD City' },
 ]
 
 export const MICRO_AREAS: { slug: string; name: string }[] = [
   { slug: 'echo-beach-private-chef', name: 'Echo Beach' },
   { slug: 'batu-bolong-private-chef', name: 'Batu Bolong' },
   { slug: 'bingin-private-chef', name: 'Bingin' },
+  { slug: 'balangan-private-chef', name: 'Balangan' },
+  { slug: 'medewi-private-chef', name: 'Medewi' },
+  { slug: 'nyang-nyang-private-chef', name: 'Nyang Nyang' },
+  { slug: 'green-bowl-private-chef', name: 'Green Bowl' },
+  { slug: 'dreamland-private-chef', name: 'Dreamland' },
   { slug: 'sayan-private-chef', name: 'Sayan' },
   { slug: 'padang-padang-private-chef', name: 'Padang Padang' },
   { slug: 'pererenan-private-chef', name: 'Pererenan Beach' },
@@ -153,6 +164,62 @@ export const LANDING_PAGES: { slug: string; title: string; description: string; 
 <h2>The myCHEF Value Proposition</h2>
 <p>While restaurant prices in Bali have surged, a <a href="/fine-dining/private-chef-bali" class="text-[#C5A028] hover:underline font-medium">private chef booking</a> often provides better value for groups. You avoid the 300% wine markups, the transport costs to Seminyak or Ubud, and the 21% tax/service charge common in hotels. Most importantly, you get a dedicated Michelin-trained team focused entirely on your table.</p>
 <p>Use our <a href="/calculator" class="text-[#C5A028] hover:underline font-medium">online pricing calculator</a> to build a budget for your specific dates and guest count.</p>`,
+  },
+  {
+    slug: 'private-tasting-menu-bali-villa',
+    title: 'Private Tasting Menu Bali Villa | 7-11 Course Experiences',
+    description: 'Book a multi-course private tasting menu in your Bali villa. Michelin-trained chefs, premium ingredients, and professional service.',
+    date: '2026-05-18',
+    content: `<h2>Restaurant-Level Tasting Menus, Inside Your Villa</h2>
+<p>The tasting menu is the ultimate expression of the myCHEF culinary philosophy. It is a structured sequence of 7 to 11 courses, each designed to showcase a specific Balinese ingredient or Mediterranean technique. Our <a href="/fine-dining/tasting-menu" class="text-[#C5A028] hover:underline font-medium">private tasting menus</a> bring the discipline of a Michelin-starred kitchen to the privacy of your villa terrace.</p>
+<h2>What to Expect from a myCHEF Tasting Menu</h2>
+<ul>
+<li><strong>Personalized Menu Design</strong> — Adriano and the team adapt the sequence to your dietary preferences and the morning market's best catch.</li>
+<li><strong>Full Table Service</strong> — A dedicated service manager and waitstaff handle all plating, wine pouring, and table management.</li>
+<li><strong>Wine Pairing</strong> — Optional tailored wine pairings curated by our sommelier to complement each course.</li>
+</ul>
+<p>Whether you are celebrating a <strong>wedding anniversary</strong>, a <strong>significant birthday</strong>, or simply want to experience the best private dining in Bali, the tasting menu is our flagship recommendation. We serve all areas including Seminyak, Canggu, and Uluwatu.</p>`,
+  },
+  {
+    slug: 'chef-table-experience-bali',
+    title: 'Chef Table Experience Bali | Counter-Side Fine Dining',
+    description: 'The most exclusive private chef experience in Bali. Watch your meal being built course-by-course with live chef commentary.',
+    date: '2026-05-18',
+    content: `<h2>The Theatre of the Kitchen, Brought to Your Villa</h2>
+<p>A <a href="/fine-dining/chefs-table" class="text-[#C5A028] hover:underline font-medium">chef’s table experience</a> is for those who love the process as much as the plate. Instead of being served at a formal dining table, you and your guests gather around your villa’s kitchen island or counter to watch the chef work. It is interactive, educational, and deeply personal.</p>
+<h2>Why Book a Private Chef Table?</h2>
+<p>In a standard private dinner, the kitchen is a workspace. In a chef’s table experience, the kitchen is the stage. You see the knife work, hear the stories behind the ingredients, and watch each dish built with architectural precision. It is the perfect format for groups of 2 to 6 who want a high-engagement evening.</p>
+<p>Adriano personally leads many of our chef table bookings, sharing his journey from Michelin kitchens in Italy to the markets of Bali. <a href="/book" class="text-[#C5A028] hover:underline font-medium">Check availability for your dates</a>.</p>`,
+  },
+  {
+    slug: 'seafood-bbq-catering-bali-cost',
+    title: 'Seafood BBQ Catering Bali Cost | 2026 Price Guide',
+    description: 'Understand the cost of seafood BBQ catering in Bali. Price per head for jumbo prawns, snapper, lobster, and premium sides.',
+    date: '2026-05-18',
+    content: `<h2>Planning a Bali Seafood BBQ? Here is the Budget Guide</h2>
+<p>Seafood is the cornerstone of Bali’s catering scene, but prices vary wildly depending on sourcing and quality. At myCHEF, we source daily from the morning catch in Jimbaran and Kedonganan to ensure the highest possible standard for our <a href="/catering/bbq-catering" class="text-[#C5A028] hover:underline font-medium">seafood BBQs</a>.</p>
+<h2>Average Costs Per Person (2026)</h2>
+<ul>
+<li><strong>Standard Seafood BBQ</strong> — IDR 450,000 to 650,000 per head. Includes snapper, squid, clams, and prawns with organic sides.</li>
+<li><strong>Premium Seafood Feast</strong> — IDR 750,000 to 950,000 per head. Adds jumbo prawns, barramundi, and premium imported ingredients.</li>
+<li><strong>The Lobster Upgrade</strong> — Market price (typically +IDR 400,000 per head). Local Balinese rock lobster or bamboo lobster.</li>
+</ul>
+<p>Our pricing includes the chef, the grill team, charcoal, and all serving equipment. No hidden transport fees for villas in south Bali. <a href="/calculator" class="text-[#C5A028] hover:underline font-medium">Calculate your specific event cost here</a>.</p>`,
+  },
+  {
+    slug: 'group-villa-dinner-packages-bali',
+    title: 'Group Villa Dinner Packages Bali | Catering for 10-50 Guests',
+    description: 'Simplified villa dinner packages for large groups in Bali. Perfect for family reunions, birthdays, and villa parties.',
+    date: '2026-05-18',
+    content: `<h2>Hassle-Free Catering for Large Villa Groups</h2>
+<p>Hosting 15 or 20 people in a Bali villa can be logistical chaos. myCHEF’s <a href="/catering/villa-catering" class="text-[#C5A028] hover:underline font-medium">group dinner packages</a> are designed to remove the stress. We provide one-price-per-head models that include everything: food, staff, setup, and cleanup.</p>
+<h2>Most Popular Group Formats</h2>
+<ul>
+<li><strong>The Indonesian Rijsttafel</strong> — A grand spread of Balinese and Indonesian classics. Best for mixed international groups.</li>
+<li><strong>Mediterranean Sharing Table</strong> — Large platters of pasta, roasted meats, and salads served down the center of the table.</li>
+<li><strong>Poolside Buffet</strong> — Maximum flexibility for groups who want to eat at different times.</li>
+</ul>
+<p>We specialize in managing the flow of large groups inside private residences. Our team is background-checked and accustomed to working alongside villa staff. <a href="/quote" class="text-[#C5A028] hover:underline font-medium">Get a group quote today</a>.</p>`,
   },
   {
     slug: 'best-private-chef-indonesia',

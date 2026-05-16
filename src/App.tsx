@@ -254,6 +254,78 @@ export default function App() {
               />
             }
           />
+          <Route
+            path="/private-chef-kemang"
+            element={
+              <InfoPage
+                title="Private Chef in Kemang"
+                description="Sophisticated private dining and catering for Kemang's vibrant expat and creative community. From family dinners to social events."
+                slug="private-chef-kemang"
+                heroImage="/generated/jakarta-skyline.webp"
+                highlights={[
+                  'Tailored menus for Kemang’s international guest profiles',
+                  'Family-style catering and social event hosting',
+                  'Healthy meal prep and weekly chef service available',
+                  'Expertise in various global cuisines',
+                  'Professional service and full kitchen cleanup',
+                ]}
+              />
+            }
+          />
+          <Route
+            path="/private-chef-scbd"
+            element={
+              <InfoPage
+                title="Private Chef in SCBD"
+                description="Premium corporate catering and executive private dining in the heart of Jakarta's Business District."
+                slug="private-chef-scbd"
+                heroImage="/generated/jakarta-skyline.webp"
+                highlights={[
+                  'Executive boardroom lunches and corporate dinners',
+                  'Seamless logistics for SCBD high-rise apartments and offices',
+                  'Professional hospitality teams for networking events',
+                  'Strict adherence to corporate scheduling and timing',
+                  'High-end plated menus and premium presentation',
+                ]}
+              />
+            }
+          />
+          <Route
+            path="/private-chef-pondok-indah"
+            element={
+              <InfoPage
+                title="Private Chef in Pondok Indah"
+                description="Exclusive residential private chef services for Jakarta's premier family estates."
+                slug="private-chef-pondok-indah"
+                heroImage="/generated/jakarta-skyline.webp"
+                highlights={[
+                  'Large estate catering and multi-generational family dining',
+                  'Specialized in milestone birthdays and home celebrations',
+                  'Vetted staff accustomed to premier residential standards',
+                  'Customizable menus for all dietary requirements',
+                  'Consistent, reliable service for regular bookings',
+                ]}
+              />
+            }
+          />
+          <Route
+            path="/private-chef-bsd"
+            element={
+              <InfoPage
+                title="Private Chef in BSD City"
+                description="Modern private dining and group catering for the residential and tech hubs of BSD."
+                slug="private-chef-bsd"
+                heroImage="/generated/jakarta-skyline.webp"
+                highlights={[
+                  'Convenient villa-style dining for BSD residents',
+                  'Group BBQ catering and social gatherings',
+                  'Modern fusion and healthy menu concepts',
+                  'Flexible booking for both residences and offices',
+                  'Professional Indonesian chefs with international training',
+                ]}
+              />
+            }
+          />
 
           {/* Service detail pages */}
           {SERVICE_SLUGS.map((slug) => (

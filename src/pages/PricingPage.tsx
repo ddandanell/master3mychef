@@ -197,8 +197,8 @@ const SECTIONS = [
     id: 'cta',
     type: 'cta' as const,
     subtitle: 'Get a Custom Quote',
-    title: 'Every Event is Unique. So is Every Quote.',
-    body: 'Tell us your dates, guest count, and vision. We will deliver a detailed proposal within 24 hours — with no obligation to book.',
+    title: 'Every Event Gets a Custom Quote',
+    body: 'Send us your dates, guest count, and vision. You will receive a detailed proposal within 24 hours. No obligation to book.',
   },
 ]
 
@@ -231,7 +231,7 @@ export default function PricingPage() {
       seoDescription="Clear, honest pricing for private chefs, catering, and events in Bali. From IDR 350K per person. Book via WhatsApp."
       canonicalUrl="https://mychef.id/pricing"
       h1="Transparent Pricing for Every Experience"
-      subtitle="No hidden fees. No markup on groceries. Clear pricing before you commit."
+      subtitle="You see every cost before you book. No hidden fees. No grocery markup."
       heroImage="/generated/catering-hero.webp"
       heroImageAlt="Elegant fine dining dish"
       ogImage="https://mychef.id/generated/catering-hero.webp"

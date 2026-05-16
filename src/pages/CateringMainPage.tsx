@@ -626,9 +626,9 @@ export default function CateringMainPage() {
                   Daily Chef Service
                 </h3>
                 <p className="text-[#4A4745] mb-2">
-                  A dedicated chef comes to your villa every day — breakfast, lunch, and dinner. Groceries at cost. Full cleanup after every meal.
+                  Your chef shops, cooks, and cleans — breakfast, lunch, and dinner. You see every grocery receipt. No meal planning. No dishes. Just great food every day.
                 </p>
-                <p className="text-[#C5A028] font-semibold">Starting from IDR 600,000 per hour</p>
+                <p className="text-[#C5A028] font-semibold">IDR 600K/hour · Groceries at cost</p>
               </div>
 
               {/* Daily packages */}
@@ -695,10 +695,10 @@ export default function CateringMainPage() {
                 </h4>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
                   {[
-                    { step: '01', title: 'Message us', desc: 'Tell us your villa, dates, and group size. Most replies within the hour.', icon: MessageCircle },
-                    { step: '02', title: 'Design your plan', desc: 'Menus tailored to your preferences, dietary needs, and schedule.', icon: Utensils },
-                    { step: '03', title: 'Chef shops & cooks', desc: 'Groceries sourced that morning. Chef arrives, cooks, serves.', icon: ChefHat },
-                    { step: '04', title: 'You relax', desc: 'No grocery runs. No dishes. No planning. Just great food every day.', icon: Sparkles },
+                    { step: '01', title: 'Message us', desc: 'Send your villa, dates, and guest count. We reply within the hour.', icon: MessageCircle },
+                    { step: '02', title: 'We build your plan', desc: 'Menus designed for your dietary needs and daily schedule.', icon: Utensils },
+                    { step: '03', title: 'Chef shops & cooks', desc: 'Groceries sourced that morning. Chef arrives, cooks, serves, cleans.', icon: ChefHat },
+                    { step: '04', title: 'You relax', desc: 'No grocery runs. No dishes. No planning. Great food every day.', icon: Sparkles },
                   ].map((step) => (
                     <div key={step.step} className="text-center">
                       <div className="w-14 h-14 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-4">
@@ -1143,7 +1143,7 @@ export default function CateringMainPage() {
           </div>
           <div className="text-center mt-12 max-w-xl mx-auto">
             <p className="text-sm text-[#4A4745] mb-4">
-              Still unsure? Chat with us on WhatsApp — we reply in under 2 minutes during Bali business hours.
+              Questions? We reply within 2 minutes during Bali business hours (9am–6pm).
             </p>
             <a
               href={WA_LINK}
@@ -1152,7 +1152,7 @@ export default function CateringMainPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] hover:underline"
             >
-              <MessageCircle className="w-4 h-4" /> Ask a question
+              <MessageCircle className="w-4 h-4" /> Chat now
             </a>
           </div>
         </div>

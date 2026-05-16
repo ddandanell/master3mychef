@@ -218,11 +218,10 @@ export default function CateringBuffetPage() {
             Chapter 1 — Buffet Catering Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Buffet Catering Bali<br />
-            <span className="italic">So 30+ Guests Eat on Time</span>
+            Buffet Catering for Bali Villa Events
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            Your guests eat when they want. Dishes stay hot. Lines stay short. We set the buffet, restock the trays, clear plates, and clean up after service.
+            Three buffet tiers — from Indonesian classics to live-station premium with sushi, pasta, and carving. Minimum 30 guests. Sample tasting at 40+.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
             From IDR 550,000/person · Min. 30 guests · Chef & staff included · Bali-wide

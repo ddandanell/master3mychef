@@ -118,13 +118,14 @@ const BABI_GULING_GALLERY = [
 ]
 
 const FAQS = [
-  { q: 'Is Babi Guling pork?', a: 'Yes. Babi Guling is a traditional Balinese whole roasted pig dish. It is pork-based and not suitable for halal groups or pork-free events. We offer non-pork alternatives for mixed groups.' },
-  { q: 'How many people does one pig serve?', a: 'Small serves 10–15 guests. Medium serves 25–30 guests. Large serves 40–50 guests. For larger groups, contact us for a custom quote with multiple pigs.' },
-  { q: 'Can you do non-pork sides or alternatives?', a: 'Yes. For mixed groups we can add non-pork dishes such as chicken satay, vegetable urap, and seafood options alongside the main Babi Guling spread.' },
-  { q: 'Do you bring staff to serve and carve?', a: 'Yes. Optional service staff can carve the pig at your villa, manage the buffet table, and serve guests throughout the event.' },
-  { q: 'How far in advance should I book?', a: 'We recommend 3–7 days minimum. For large events or peak season, 2+ weeks is ideal to secure your preferred date and package size.' },
-  { q: 'Can you do halal alternatives?', a: 'Babi Guling itself contains pork and is not halal. For fully halal events we recommend our Indonesian BBQ, International Buffet, or Plated Menu with certified halal options.' },
-  { q: 'What areas in Bali do you cover?', a: 'We deliver across Canggu, Seminyak, Berawa, Pererenan, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, Tanah Lot, Kerobokan, Kuta, Legian, and Denpasar. Travel fees may apply outside Seminyak/Canggu.' },
+  { q: "How long does it take to cook?", a: "6–7h small, up to 10h large. We start off-site, finish at your villa." },
+  { q: "Where do the pigs come from?", a: "Local Balinese farms. Free-range, traditional diet." },
+  { q: "Is it suitable for Muslim guests?", a: "**No — contains pork.** For halal events, see Indonesian BBQ or Buffet." },
+  { q: "What's the difference between sizes?", a: "Small (10–15): single suckling. Medium (25–30): larger pig + soup. Large (40–50): full ceremony + bonfire option." },
+  { q: "How traditional is the preparation?", a: "Authentic bumbu Bali. Slow-roast on spit. No shortcuts." },
+  { q: "Can we add a Balinese welcome ceremony?", a: "Yes — mejejahitan + dancers + gamelan (+IDR 5M–6.5M)." },
+  { q: "How is the pig served?", a: "Carved table-side. Then platters to table. Family-style." },
+  { q: "How far in advance to book?", a: "Minimum 2 days. Recommended 5+ days for ceremonial events." }
 ]
 
 export default function CateringBabiGulingPage() {

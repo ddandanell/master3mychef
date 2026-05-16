@@ -78,7 +78,7 @@ export default function PillarSubPage() {
     'catering': 'https://mychef.id/generated/catering-catering-hero-lg.webp',
     'events': 'https://mychef.id/generated/aura-hero-v2.webp',
     'in-villa-service': 'https://mychef.id/generated/in-villa-service-hero.webp',
-    'staffing': 'https://mychef.id/generated/staffing-hero.webp',
+    'staffing': 'https://mychef.id/generated/staffing-staffing-hero-xl.webp',
   }
   const ogImage = pillarOgImages[pillar.slug]
 

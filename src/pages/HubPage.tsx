@@ -93,24 +93,28 @@ const HOW_IT_WORKS = [
     title: 'Message Us on WhatsApp',
     desc: 'Tell us your dates, villa location, and how many guests. Takes two minutes.',
     icon: MessageCircle,
+    color: '#C9A227',
   },
   {
     step: '02',
     title: 'We Plan Everything',
     desc: 'Our concierge designs your menu or event. You approve — or we adjust. No pressure.',
     icon: Utensils,
+    color: '#6B8E5A',
   },
   {
     step: '03',
     title: 'We Shop, Prep & Cook',
     desc: 'Groceries sourced fresh that morning. We arrive at your villa ready to cook.',
     icon: ChefHat,
+    color: '#2C5F7C',
   },
   {
     step: '04',
     title: 'You Enjoy. We Clean.',
     desc: 'Sit back, eat, laugh. When you are done, we leave your kitchen spotless.',
     icon: Sparkles,
+    color: '#C5734D',
   },
 ]
 
@@ -221,6 +225,7 @@ export default function HubPage() {
   const [animatedStatValues, setAnimatedStatValues] = useState<number[]>(
     TRUST_STATS.map(() => 0)
   )
+  const [hoveredStep, setHoveredStep] = useState<string | null>(null)
 
   const formatStatValue = (value: number, decimals: number, suffix: string) => {
     const formatted = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toLocaleString('en-US')
@@ -553,7 +558,7 @@ export default function HubPage() {
       <section
         className="relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1400&h=900&fit=crop)',
+          backgroundImage: 'url(/generated/hero-how-it-works.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -596,23 +601,41 @@ export default function HubPage() {
           {/* Step cards grid */}
           <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 mb-16 md:mb-24">
             {HOW_IT_WORKS.map((item, idx) => (
-              <div key={item.step} className="relative">
+              <div key={item.step} className="relative overflow-visible">
                 {/* Icon circle - positioned above card */}
                 <div
-                  className="absolute -top-12 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center"
-                  style={{ background: '#C9A227', boxShadow: '0 12px 28px rgba(201, 162, 39, 0.25)' }}
+                  className="absolute flex items-center justify-center cursor-pointer transition-all duration-300"
+                  style={{
+                    top: 0,
+                    left: '50%',
+                    transform: hoveredStep === item.step 
+                      ? 'translate(-50%, -50%) scale(1.15)' 
+                      : 'translate(-50%, -50%) scale(1)',
+                    width: '80px',
+                    height: '80px',
+                    borderRadius: '50%',
+                    background: item.color,
+                    boxShadow: hoveredStep === item.step
+                      ? `0 20px 40px ${item.color}40, inset 0 -2px 8px rgba(0, 0, 0, 0.1)`
+                      : `0 12px 28px ${item.color}40`,
+                    zIndex: 10,
+                    filter: hoveredStep === item.step ? 'saturate(1.2) brightness(1.1)' : 'saturate(1) brightness(1)',
+                  }}
+                  onMouseEnter={() => setHoveredStep(item.step)}
+                  onMouseLeave={() => setHoveredStep(null)}
                 >
                   <item.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                 </div>
 
                 {/* Card */}
                 <div
-                  className="pt-24 pb-10 px-8 rounded-2xl text-center h-full flex flex-col"
+                  className="pt-28 pb-10 px-8 rounded-2xl text-center h-full flex flex-col relative"
                   style={{
                     background: 'rgba(255, 255, 255, 0.72)',
                     backdropFilter: 'blur(16px)',
                     border: '1px solid rgba(201, 162, 39, 0.12)',
                     boxShadow: '0 18px 55px rgba(40, 30, 20, 0.08)',
+                    zIndex: 1,
                   }}
                 >
                   <p

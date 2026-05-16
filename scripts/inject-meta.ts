@@ -13,7 +13,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { SITEMAP } from '../src/data/sitemap'
+import { BLOG_POSTS, GUIDES, SITEMAP } from '../src/data/sitemap'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = join(__dirname, '..', 'dist')
@@ -45,6 +45,7 @@ const OG_IMAGES: Record<string, string> = {
   '/faq': '/generated/faq-hero.webp',
   '/locations': '/generated/hub-villa.webp',
   '/journal': '/generated/journal-hero.webp',
+  '/blog': '/generated/journal-hero.webp',
   '/reviews': '/dining-table.webp',
   '/why-mychef': '/generated/why-mychef-hero.webp',
   '/retreats': '/generated/hero-retreats.jpg',
@@ -63,8 +64,28 @@ const PILLAR_OG_IMAGES: Record<string, string> = {
   'staffing': '/chef-portrait.webp',
 }
 
+const ARTICLE_AUTHOR = 'myCHEF Team'
+const ARTICLE_ROUTES = new Map(
+  [...GUIDES.filter((guide) => guide.slug !== 'guide/private-chef-bali'), ...BLOG_POSTS].map((entry) => [
+    `/${entry.slug}`,
+    entry,
+  ])
+)
+
+function stripHtml(text = ''): string {
+  return text
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&#39;/gi, "'")
+    .replace(/&quot;/gi, '"')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 function getOgImage(path: string): string {
   if (OG_IMAGES[path]) return OG_IMAGES[path]
+  if (ARTICLE_ROUTES.has(path)) return '/generated/luna-hero-v3.webp'
   // Try pillar sub-page fallback: /pillar/subpage → use pillar hero
   const segments = path.split('/').filter(Boolean)
   if (segments.length >= 2) {
@@ -83,20 +104,52 @@ function escapeHtml(text: string): string {
 }
 
 function buildBreadcrumbJsonLd(path: string, name: string): string {
+  const isArticle = ARTICLE_ROUTES.has(path)
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
-      { '@type': 'ListItem', position: 2, name, item: `https://mychef.id${path}` },
+      ...(isArticle
+        ? [{ '@type': 'ListItem', position: 2, name: path.startsWith('/blog/') ? 'Journal' : 'Help', item: `https://mychef.id${path.startsWith('/blog/') ? '/blog' : '/help'}` }]
+        : []),
+      { '@type': 'ListItem', position: isArticle ? 3 : 2, name, item: `https://mychef.id${path}` },
     ],
   }
-  return `<script type="application/ld+json">${JSON.stringify(schema)}</script>`
+  return `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
+}
+
+function buildArticleJsonLd(path: string, title: string, description: string, ogImage: string): string {
+  const article = ARTICLE_ROUTES.get(path)
+  if (!article) return ''
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': path.startsWith('/blog/') ? 'BlogPosting' : 'Article',
+    headline: title,
+    description,
+    url: `${SITE}${path}`,
+    datePublished: article.date,
+    dateModified: article.date,
+    author: { '@type': 'Person', name: ARTICLE_AUTHOR },
+    publisher: {
+      '@type': 'Organization',
+      name: 'myCHEF',
+      url: SITE,
+      logo: { '@type': 'ImageObject', url: `${SITE}/mychef-logo.svg` },
+    },
+    image: ogImage,
+    ...(article.content ? { articleBody: stripHtml(article.content), wordCount: stripHtml(article.content).split(/\s+/).filter(Boolean).length } : {}),
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE}${path}` },
+  }
+
+  return `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
 }
 
 function injectMeta(html: string, path: string, title: string, description: string): string {
   const canonical = `${SITE}${path}`
   const ogImage = `${SITE}${getOgImage(path)}`
+  const article = ARTICLE_ROUTES.get(path)
 
   // Title
   html = html.replace(/<title>.*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
@@ -111,6 +164,12 @@ function injectMeta(html: string, path: string, title: string, description: stri
   html = html.replace(
     /<link rel="canonical" href=".*?"\s*\/?>/,
     `<link rel="canonical" href="${canonical}" />`
+  )
+
+  // OG type
+  html = html.replace(
+    /<meta property="og:type" content=".*?"\s*\/?>/,
+    `<meta property="og:type" content="${article ? 'article' : 'website'}" />`
   )
 
   // OG title
@@ -155,6 +214,13 @@ function injectMeta(html: string, path: string, title: string, description: stri
     `<meta name="twitter:image" content="${ogImage}" />`
   )
 
+  if (article?.date) {
+    html = html.replace(
+      '</head>',
+      `  <meta property="article:published_time" content="${article.date}" />\n  <meta property="article:modified_time" content="${article.date}" />\n  <meta property="article:author" content="${escapeHtml(ARTICLE_AUTHOR)}" />\n</head>`
+    )
+  }
+
   // Robots — noindex for thin-content pages and 404
   const noindexPaths = ['/404', '/book', '/quote', '/calculator', '/join-our-team']
   if (noindexPaths.includes(path)) {
@@ -177,9 +243,12 @@ function injectMeta(html: string, path: string, title: string, description: stri
     )
   }
 
-  // Inject BreadcrumbList before closing </head>
-  const breadcrumb = buildBreadcrumbJsonLd(path, title.split('|')[0].trim())
-  html = html.replace('</head>', `${breadcrumb}\n  </head>`)
+  // Inject structured data before closing </head>
+  const structuredData = [
+    buildBreadcrumbJsonLd(path, title.split('|')[0].trim()),
+    buildArticleJsonLd(path, title, description, ogImage),
+  ].filter(Boolean).join('\n  ')
+  html = html.replace('</head>', `${structuredData}\n  </head>`)
 
   return html
 }

@@ -83,3 +83,15 @@
 - **Branch:** auto-improve/blog-content-sprint-phase3
 - **Files:** `src/data/sitemap.ts`, `src/data/route-slugs.ts`, generated sitemap files
 - **Result:** Expanded 5 existing blog posts, added 2 new blog posts, refreshed blog route slugs, and validated with TypeScript + production build.
+
+## 2026-05-16 — Phase 3 Authority Backlinks Strategy
+- **Agent:** Copilot
+- **Branch:** main
+- **Files:** `.kimi/AUTHORITY_BACKLINKS_STRATEGY.md`, `.kimi/execution-tracker.md`
+- **Result:** Built a backlink acquisition plan for Bali villa, wedding, retreat, and travel publishers. Included 31 target sites, 3 outreach templates, 13 guest post topics, partner value propositions, a tracking table, and a 4-week implementation plan focused on winning 3+ relevant backlinks.
+
+## 2026-05-17 — Blog Infrastructure Enhancements
+- **Agent:** Copilot
+- **Branch:** auto-improve/blog-infrastructure-phase3
+- **Files:** `src/components/BlogIndexPage.tsx`, `src/components/LandingPage.tsx`, `src/components/SeoHead.tsx`, `src/lib/blog.ts`, `scripts/inject-meta.ts`, `.kimi/execution-tracker.md`
+- **Result:** Upgraded the blog system with latest-post hero cards, topic filters, read-time metadata, table of contents, breadcrumbs, share actions, previous/next navigation, related-post scoring, lazy-loaded article images, and stronger static article SEO/meta injection. Quality gates: `npx tsc -b --noEmit` ✓, `npm run build` ✓.

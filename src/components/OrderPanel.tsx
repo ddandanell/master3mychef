@@ -455,6 +455,12 @@ function ChipButton({ children, active, onClick }: { children: React.ReactNode; 
     <button
       type="button"
       onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onClick()
+        }
+      }}
       className={`text-sm px-3 py-2.5 rounded-lg border transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10 text-white' : 'border-white/15 text-white/[70%] hover:border-white/30'}`}
     >
       {children}
@@ -467,6 +473,12 @@ function RadioCard({ children, active, onClick }: { children: React.ReactNode; a
     <button
       type="button"
       onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onClick()
+        }
+      }}
       className={`w-full text-left px-4 py-3.5 rounded-lg border flex items-center gap-3 transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10' : 'border-white/15 hover:border-white/30'}`}
     >
       <span className={`w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${active ? 'border-[#C5A028]' : 'border-white/30'}`}>
@@ -482,6 +494,12 @@ function CheckCard({ children, active, onClick }: { children: React.ReactNode; a
     <button
       type="button"
       onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onClick()
+        }
+      }}
       className={`w-full text-left px-4 py-3 rounded-lg border flex items-center gap-3 transition-colors ${active ? 'border-[#C5A028] bg-[#C5A028]/10' : 'border-white/15 hover:border-white/30'}`}
     >
       <span className={`w-4 h-4 rounded border-2 flex-shrink-0 flex items-center justify-center ${active ? 'border-[#C5A028] bg-[#C5A028]' : 'border-white/30'}`}>

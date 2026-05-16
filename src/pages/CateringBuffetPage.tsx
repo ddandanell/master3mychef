@@ -218,17 +218,17 @@ export default function CateringBuffetPage() {
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Buffet Catering Bali<br />
-            <span className="italic">for Smooth, High-Volume Service</span>
+            <span className="italic">So 30+ Guests Eat on Time</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            A clean, organized catering format for larger groups, villa parties, weddings, retreats, and corporate events where food needs to flow properly.
+            Your guests eat when they want. Dishes stay hot. Lines stay short. We set the buffet, restock the trays, clear plates, and clean up after service.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
             From IDR 550,000/person · Min. 30 guests · Chef & staff included · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
-              <MessageCircle className="w-4 h-4" /> Request Buffet Menu
+              <MessageCircle className="w-4 h-4" /> Get Buffet Quote
             </a>
             <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               View Buffet Packages
@@ -250,15 +250,15 @@ export default function CateringBuffetPage() {
           <SectionHeader
             eyebrow="Chapter 2 — The Format"
             title="Buffet Catering in Bali"
-            subtitle="Buffet is the most practical catering format for larger groups. It scales smoothly, accommodates diverse tastes, and keeps the event moving. Guests serve themselves at their own pace while our staff manages replenishment, clearing, and flow."
+            subtitle="When the guest count climbs, buffet keeps the villa calm and the food moving. Guests eat at their own pace while our team keeps every station full and tidy."
           />
           <div className="grid md:grid-cols-2 gap-8 mt-10">
             <div className="space-y-4">
               <p className="text-[#4A4745]">
-                When guest count exceeds 30, plated service becomes logistically complex and buffet becomes the smarter choice. It does not mean lower quality — it means better logistics. Our buffets use chafing dishes, live stations, and styled serving tables that look as good as they taste.
+                For 30+ guests, buffet is often the cleanest format. People move at their own pace. Different diets are easier to cover. Hot dishes stay hot. The line keeps moving.
               </p>
               <p className="text-[#4A4745]">
-                Every buffet includes a head chef who oversees food quality, service staff who manage the line and clear tables, and full setup equipment — tables, linens, chafing dishes, cutlery, and signage. You provide the space; we handle everything else.
+                You get a head chef, service staff, tables, linens, chafing dishes, cutlery, and clear labels. We build the setup around your villa or venue, then clear it down after the last plate.
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {['Weddings', 'Retreats', 'Corporate events', 'Villa parties', 'Birthdays', 'Family gatherings'].map((tag) => (
@@ -429,7 +429,7 @@ export default function CateringBuffetPage() {
                 align="left"
                 eyebrow="Chapter 8 — Styling"
                 title="Buffet Styling"
-                subtitle="A buffet is not just trays of food. It is a visual presentation. We style every table to match your event — from rustic villa dinners to elegant wedding receptions."
+                subtitle="A buffet should look clean from the first plate to the last. We style each table to fit the villa, the guest count, and the pace of the event."
               />
               <div className="space-y-3 mt-6">
                 {BUFFET_STYLING.map((item) => (
@@ -726,11 +726,11 @@ export default function CateringBuffetPage() {
             Ready for Buffet Catering?
           </h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Send your date, area, guest count, and preferred buffet style. We will confirm availability, setup needs, and final price by WhatsApp within the hour.
+            Send your date, villa or venue, guest count, and menu style. We confirm setup, staffing, and price on WhatsApp within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
-              <MessageCircle className="w-4 h-4" /> Request Buffet Menu
+              <MessageCircle className="w-4 h-4" /> Get Buffet Quote
             </a>
             <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               <Phone className="w-4 h-4" /> Call +62 822-3756-5997

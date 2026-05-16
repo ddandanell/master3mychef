@@ -55,3 +55,11 @@
 - **Branch:** auto-improve/meta-expansion
 - **Files:** `src/data/page-meta.ts`
 - **Result:** Added SEO meta descriptions for 33 routes across catering subpages, event pages, Bali location pages, the locations hub, and 5 blog posts. Coverage now 42/95.
+
+---
+
+## 2026-05-17 — Conversion Copy: Service Subpages
+- **Agent:** Copilot
+- **Branch:** auto-improve/conversion-copy-subpages *(repo automation later renamed the working branch)*
+- **Files:** `src/pages/CateringBuffetPage.tsx`, `src/pages/CateringVillaPage.tsx`, `src/pages/CateringFloatingBreakfastPage.tsx`
+- **Result:** Rewrote heroes, process copy, and CTAs to be outcome-first, shorter, and more concrete. Removed vague styling language from floating breakfast and buffet sections. Quality gates: `npx tsc -b --noEmit` ✓, `npm run build` ✓.

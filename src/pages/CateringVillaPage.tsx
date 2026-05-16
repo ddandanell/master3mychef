@@ -94,12 +94,12 @@ const AREAS = [
 ]
 
 const HOW_IT_WORKS = [
-  { step: '01', title: 'Share villa details', desc: 'Location, kitchen setup, guest count, and occasion. We check chef availability.', icon: Home },
-  { step: '02', title: 'Choose your format', desc: 'Lunch, dinner, multi-day, BBQ, buffet, plated, or grazing. We guide you.', icon: Utensils },
-  { step: '03', title: 'Confirm your menu', desc: 'Customize dishes, dietary needs, and add-ons. Nothing is fixed until you approve.', icon: ChefHat },
-  { step: '04', title: 'Chef arrives prepared', desc: 'With groceries, equipment, and service team. Prep begins in your villa kitchen.', icon: Clock },
-  { step: '05', title: 'We cook, serve, host', desc: 'Everything handled. You eat, drink, and enjoy your villa.', icon: Sparkles },
-  { step: '06', title: 'Full cleanup', desc: 'Kitchen, dishes, surfaces — spotless. We leave the villa as we found it.', icon: ShieldCheck },
+  { step: '01', title: 'Send villa details', desc: 'Share the location, kitchen setup, guest count, and occasion. We match the right chef.', icon: Home },
+  { step: '02', title: 'Pick your format', desc: 'Lunch, dinner, BBQ, buffet, plated, grazing, or multi-day. Choose what fits the stay.', icon: Utensils },
+  { step: '03', title: 'Approve the menu', desc: 'Choose dishes, dietary needs, and add-ons. Nothing is locked until you say yes.', icon: ChefHat },
+  { step: '04', title: 'Chef arrives ready', desc: 'Groceries, equipment, and staff come with us. Prep starts in your villa kitchen.', icon: Clock },
+  { step: '05', title: 'You host. We handle the meal.', desc: 'Food goes out on time. Drinks stay topped up. The kitchen stays under control.', icon: Sparkles },
+  { step: '06', title: 'Leave the cleanup to us', desc: 'Kitchen, dishes, and surfaces are cleaned before we leave.', icon: ShieldCheck },
 ]
 
 const FAMILY_COVERAGE_OPTIONS = [
@@ -193,17 +193,17 @@ export default function CateringVillaPage() {
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Villa Catering Bali,<br />
-            <span className="italic">Built for Private Villas</span>
+            <span className="italic">for Easy Lunches, Dinners, and Long Stays</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            Chef-led catering, discreet service, full setup, and cleanup for villa dinners, poolside parties, birthdays, family gatherings, and private events across Bali.
+            You stay by the pool. Your group eats well. We handle shopping, prep, service, and cleanup in your villa kitchen.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
             From IDR 450,000/person · Chef + team included · Groceries at cost · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-catering-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
-              <MessageCircle className="w-4 h-4" /> Book on WhatsApp
+              <MessageCircle className="w-4 h-4" /> Plan My Villa Meals
             </a>
             <a href="#menu-styles" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               View Menu Styles
@@ -548,11 +548,11 @@ export default function CateringVillaPage() {
             Ready for Villa Catering?
           </h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Tell us your villa, group size, and dates. We will confirm chef availability and send a custom quote within the hour.
+            Tell us your villa, dates, and group size. We will send the right format and a clear quote on WhatsApp within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-catering-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
-              <MessageCircle className="w-4 h-4" /> Request Villa Catering Quote
+              <MessageCircle className="w-4 h-4" /> Get Villa Menu & Quote
             </a>
             <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               <Phone className="w-4 h-4" /> Call +62 822-3756-5997

@@ -123,10 +123,10 @@ const ADDONS = [
 ]
 
 const DELIVERY_STEPS = [
-  { step: 1, title: 'Choose time slot', desc: 'Sunrise, midday, or sunset.' },
-  { step: 2, title: 'We prepare & style', desc: 'Chef prepares everything fresh.' },
-  { step: 3, title: 'Deliver to your pool', desc: 'Styled tray placed in your pool.' },
-  { step: 4, title: 'Retrieve when done', desc: 'We collect the tray 1.5–2h later.' },
+  { step: 1, title: 'Pick a time', desc: 'Choose sunrise, midday, or sunset.' },
+  { step: 2, title: 'We prep the tray', desc: 'Food is cooked fresh. Flowers and drinks are set.' },
+  { step: 3, title: 'Tray goes in your pool', desc: 'We place it safely in calm water or on the pool shelf.' },
+  { step: 4, title: 'We collect it later', desc: 'We return in 1.5–2 hours to pick up the tray.' },
 ]
 
 const FLOATING_GALLERY = [
@@ -243,12 +243,12 @@ export default function CateringFloatingBreakfastPage() {
                 }}
               >
                 Floating Breakfast Bali
-                <span className="block italic">for Villa Pool Mornings</span>
+                <span className="block italic">Wake Up to Breakfast in Your Pool</span>
               </h1>
 
               {/* Body */}
               <p className="text-white/85 text-base md:text-lg leading-[1.55] mb-8 max-w-[540px]">
-                A styled floating breakfast experience with tropical dishes, fresh juice, coffee, fruit, and pool-ready presentation delivered to your villa.
+                You wake up to fruit, pastries, eggs, coffee, juice, and flowers already set in the pool at your villa.
               </p>
 
               {/* CTAs */}
@@ -258,7 +258,7 @@ export default function CateringFloatingBreakfastPage() {
                   data-source="floating-breakfast-hero-primary-cta"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-xs font-bold uppercase tracking-[0.14em] rounded-full hover:bg-[#D4B43A] transition-colors"
                 >
-                  <Calendar className="w-4 h-4" /> Book Floating Breakfast
+                  <Calendar className="w-4 h-4" /> Reserve My Tray
                 </a>
                 <a
                   href="#setups"
@@ -271,7 +271,7 @@ export default function CateringFloatingBreakfastPage() {
 
               {/* Trust line */}
               <p className="text-white/60 text-sm">
-                From IDR 950,000/couple · Photo-ready styling · Chef-prepared · Delivered to your villa
+                From IDR 950,000/couple · Flowers, drinks, and bamboo tray included · Delivered to your villa
               </p>
             </div>
           </div>
@@ -290,13 +290,13 @@ export default function CateringFloatingBreakfastPage() {
                 align="left"
                 eyebrow="Villa Pool Experience"
                 title="Floating Breakfast in Bali"
-                subtitle="Breakfast served in a floating tray in your villa pool. Strong visual, romantic, simple, and social-media friendly."
+                subtitle="You get a bamboo tray in the pool with fruit, pastries, eggs, coffee, juice, and flowers. It works well for honeymoons, birthdays, and slow villa mornings."
               />
               <p className="text-[#4A4745] text-sm leading-relaxed mt-4">
-                A floating breakfast in Bali is one of the most iconic villa experiences. We deliver a styled bamboo tray loaded with tropical fruit, pastries, eggs, fresh juice, and coffee — floating directly in your private pool. It is romantic, effortless, and designed to be photographed.
+                We deliver a bamboo tray loaded with tropical fruit, pastries, eggs, fresh juice, and coffee to your villa. Then we place it in the pool for you.
               </p>
               <p className="text-[#4A4745] text-sm leading-relaxed mt-4">
-                Whether you are on honeymoon, celebrating a birthday, or simply want a slow, refined morning, our floating breakfast turns an ordinary pool into a magazine-worthy scene. Everything is prepared fresh, styled with flowers, and placed in your pool at your chosen time.
+                Choose it for a honeymoon morning, a birthday surprise, or a quiet breakfast before the villa wakes up. Flowers, timing, and tray setup are handled for you.
               </p>
               <div className="grid grid-cols-2 gap-3 mt-6">
                 {['Bamboo floating tray', 'Tropical fruit & flowers', 'Fresh pastries & eggs', 'Juice, coffee & tea', 'Photo-ready styling', 'Chef-prepared food', 'Poolside delivery', 'Flexible timing'].map((item) => (
@@ -444,10 +444,10 @@ export default function CateringFloatingBreakfastPage() {
             </div>
             <div>
               <p className="text-[#4A4745] text-sm leading-relaxed mb-4">
-                Every floating breakfast is designed to look as good as it tastes. The tray floats in clear pool water with your villa as the backdrop. We arrange tropical fruit, fresh coffee, pastries, and white linen with intentional negative space so your photos feel natural and editorial.
+                The tray is arranged so the food stays clear, balanced, and easy to reach. Fruit, coffee, pastries, and flowers each get their own space, with your pool and villa behind them.
               </p>
               <p className="text-[#4A4745] text-sm leading-relaxed mb-4">
-                Flowers are placed to frame the tray without blocking the food. Coffee cups are angled for light reflection. Fruit is stacked for color contrast. The result is a scene that feels effortless — even though every detail is considered.
+                Flowers frame the tray without covering the food. Cups are placed where they stay stable in the water. Fruit is stacked low so the tray still feels open in photos.
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
                 {['Tray floating in clear pool', 'Villa background', 'Tropical fruit arrangement', 'Styled coffee & juice', 'White linen accents', 'Fresh flowers'].map((tag) => (
@@ -634,11 +634,11 @@ export default function CateringFloatingBreakfastPage() {
           <SectionHeader
             eyebrow="Reserve Now"
             title="Book Floating Breakfast"
-            subtitle="Book by date, villa location, guest count, breakfast style, and special occasion. We will confirm availability and styling within the hour."
+            subtitle="Send your date, villa, guest count, and breakfast style. We confirm the tray setup and timing on WhatsApp within the hour."
           />
           <BookingFormCatering
             title="Book Floating Breakfast"
-            subtitle="We will confirm availability, styling, and delivery time within the hour."
+            subtitle="We will confirm the tray setup, timing, and delivery window within the hour."
             fields={[
               { name: 'date', label: 'Date', type: 'date', icon: Calendar, required: true },
               { name: 'timeSlot', label: 'Time Slot', type: 'select', icon: Clock, required: true },
@@ -684,14 +684,14 @@ export default function CateringFloatingBreakfastPage() {
             Book Your Floating Breakfast in Bali
           </h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Send your date, villa location, guest count, breakfast style, and special occasion. We will confirm availability and styling by WhatsApp.
+            Send your date, villa, guest count, and preferred time slot. We will confirm the tray setup and delivery time on WhatsApp within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#order"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
             >
-              <Calendar className="w-4 h-4" /> Book Floating Breakfast
+              <Calendar className="w-4 h-4" /> Reserve My Tray
             </a>
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-floating-breakfast-cta"

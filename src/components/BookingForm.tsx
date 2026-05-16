@@ -1,5 +1,6 @@
 import { useId, useState } from 'react'
-import { Calendar, Users, MapPin, Utensils, MessageSquare, Check } from 'lucide-react'
+import { Calendar, Users, MapPin, Utensils, Check } from 'lucide-react'
+import { MobileFormInput, MobileFormSelect, MobileFormTextarea } from './ui/mobile-form'
 
 interface BookingFormProps {
   universe: 'luna' | 'sol' | 'aura'
@@ -80,7 +81,10 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
           {config.whatsappName} typically responds within the hour. Meanwhile, feel free to browse our menus.
         </p>
         <button
-          onClick={() => { setSubmitted(false); setFormData({}) }}
+          onClick={() => {
+            setSubmitted(false)
+            setFormData({})
+          }}
           className="text-sm underline"
           style={{ color: 'var(--u-accent)' }}
         >
@@ -104,61 +108,41 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
         {config.fields.map((field) => {
           const fieldId = `${formId}-${field.name}`
 
+          if (field.type === 'select' && field.options) {
+            return (
+              <MobileFormSelect
+                key={field.name}
+                id={fieldId}
+                label={field.label}
+                required
+                options={field.options.map((opt) => ({ value: opt, label: opt }))}
+                value={formData[field.name] || ''}
+                onChange={(e: React.ChangeEvent<HTMLSelectElement>) => handleChange(field.name, e.target.value)}
+              />
+            )
+          }
+
           return (
-          <div key={field.name}>
-            <label htmlFor={fieldId} className="block text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-text-muted)', fontFamily: "'Cormorant Garamond', serif" }}>
-              {field.label}
-            </label>
-            <div className="relative">
-              <field.icon className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: 'var(--u-text-muted)' }} />
-              {field.type === 'select' ? (
-                <select
-                  id={fieldId}
-                  required
-                  className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent appearance-none focus:ring-2 focus:ring-[var(--u-accent)] transition-all"
-                  style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}
-                  value={formData[field.name] || ''}
-                  onChange={(e) => handleChange(field.name, e.target.value)}
-                >
-                  <option value="" disabled>Select {field.label}</option>
-                  {field.options?.map((o) => (
-                    <option key={o} value={o}>{o}</option>
-                  ))}
-                </select>
-              ) : (
-                <input
-                  id={fieldId}
-                  type={field.type}
-                  required={field.type !== 'select'}
-                  placeholder={field.placeholder || ''}
-                  className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent focus:ring-2 focus:ring-[var(--u-accent)] transition-all"
-                  style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}
-                  value={formData[field.name] || ''}
-                  onChange={(e) => handleChange(field.name, e.target.value)}
-                />
-              )}
-            </div>
-          </div>
+            <MobileFormInput
+              key={field.name}
+              id={fieldId}
+              label={field.label}
+              type={field.type}
+              required
+              placeholder={field.placeholder || ''}
+              value={formData[field.name] || ''}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(field.name, e.target.value)}
+            />
           )
         })}
 
-        <div>
-          <label htmlFor={`${formId}-notes`} className="block text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-text-muted)', fontFamily: "'Cormorant Garamond', serif" }}>
-            Special Requests
-          </label>
-          <div className="relative">
-            <MessageSquare className="absolute left-4 top-4 w-4 h-4" style={{ color: 'var(--u-text-muted)' }} />
-            <textarea
-              id={`${formId}-notes`}
-              rows={3}
-              placeholder="Dietary restrictions, allergies, special occasions..."
-              className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent focus:ring-2 focus:ring-[var(--u-accent)] transition-all resize-none"
-              style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}
-              value={formData.notes || ''}
-              onChange={(e) => handleChange('notes', e.target.value)}
-            />
-          </div>
-        </div>
+        <MobileFormTextarea
+          id={`${formId}-notes`}
+          label="Special Requests"
+          placeholder="Dietary restrictions, allergies, special occasions..."
+          value={formData.notes || ''}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => handleChange('notes', e.target.value)}
+        />
 
         <div className="p-4 rounded-xl border border-dashed" style={{ borderColor: 'var(--u-border)' }}>
           <p className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-accent)', fontFamily: "'Cormorant Garamond', serif" }}>Payment</p>

@@ -45,6 +45,10 @@ export const BLOG_POST_SLUGS: string[] = [
   'blog/private-chef-vs-restaurant-bali',
   'blog/how-to-plan-villa-birthday-party-bali',
   'blog/private-chef-romantic-dinners-bali',
+  'blog/private-chef-breakfast-bali-villas',
+  'blog/birthday-dinner-bali-villa-without-planner',
+  'blog/seminyak-canggu-ubud-uluwatu-private-chef-night',
+  'blog/private-chef-bali-preparation-12-guest-villa-dinner',
 ]
 
 export const SERVICE_SLUGS: string[] = [

@@ -95,3 +95,9 @@
 - **Branch:** auto-improve/blog-infrastructure-phase3
 - **Files:** `src/components/BlogIndexPage.tsx`, `src/components/LandingPage.tsx`, `src/components/SeoHead.tsx`, `src/lib/blog.ts`, `scripts/inject-meta.ts`, `.kimi/execution-tracker.md`
 - **Result:** Upgraded the blog system with latest-post hero cards, topic filters, read-time metadata, table of contents, breadcrumbs, share actions, previous/next navigation, related-post scoring, lazy-loaded article images, and stronger static article SEO/meta injection. Quality gates: `npx tsc -b --noEmit` ✓, `npm run build` ✓.
+
+## 2026-05-17 — Phase 4 Blog Publish
+- **Agent:** Copilot
+- **Branch:** auto-improve/blog-publish-phase4
+- **Files:** `src/data/sitemap.ts`, `src/data/route-slugs.ts`, `.kimi/execution-tracker.md`, generated sitemap files
+- **Result:** Published 4 new blog posts across Villa Dining, Events, Bali Living, and Chef Stories. Added breakfast, birthday dinner, area-comparison, and behind-the-scenes posts. Quality gates: `npx tsc -b --noEmit` ✓, `npm run build` ✓.

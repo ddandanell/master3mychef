@@ -553,7 +553,7 @@ export default function HubPage() {
       <section
         className="relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
         style={{
-          backgroundImage: 'url(/generated/how-it-works-bg.jpg)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1400&h=900&fit=crop)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -616,8 +616,8 @@ export default function HubPage() {
                   }}
                 >
                   <p
-                    className="text-xs tracking-[0.07em] uppercase mb-6"
-                    style={{ color: '#C9A227', fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
+                    className="text-sm md:text-base tracking-[0.1em] uppercase mb-6 font-semibold"
+                    style={{ color: '#D4AF37', fontFamily: "'Cormorant Garamond', serif", fontWeight: 600, letterSpacing: '0.15em' }}
                   >
                     Step {item.step}
                   </p>

@@ -14,7 +14,8 @@
     "preview": "vite preview",
     "audit": "npx tsx scripts/audit-quality.ts",
     "audit:images": "npx tsx scripts/audit-images.ts",
-    "cleanup:images": "npx tsx scripts/cleanup-unused-images.ts"
+    "cleanup:images": "npx tsx scripts/cleanup-unused-images.ts",
+    "verify": "node scripts/verify-deployment.cjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

@@ -50,3 +50,17 @@
 **Branch:** main  
 **Status:** ✅ CERTIFIED BEYOND-READY / PHASE 3 VELOCITY  
 **Last Updated:** 2026-05-17 00:30 WITA
+
+---
+
+## PHASE 4: TECHNICAL POLISH & OPTIMIZATION (2026-05-17)
+
+| Item | Status | Files | Notes |
+|-----|--------|------|-------|
+| Core Web Vitals Optimization | ✅ APPLIED | `index.html`, `src/index.css`, `src/components/OptimizedImage.tsx`, `src/lib/imageDimensions.ts`, key pages | Fixed homepage hero preload, deferred GA/GTM boot, dynamic-imported GSAP on key landing pages, and reduced missing image dimensions from 59 raw tags to 1. |
+| Lighthouse Baseline Capture | ✅ RECORDED | `.kimi/lighthouse-home.json`, `.kimi/lighthouse-fine-dining.json`, `.kimi/CORE_WEB_VITALS_REPORT.md` | Homepage baseline: LCP 5.0s, CLS 0.012, TBT 470ms. Fine Dining: LCP 4.5s, CLS 0.001, TBT 250ms. |
+| Quality Gates | ⚠️ BLOCKED (unrelated repo drift) | `src/data/siteArchitecture.ts`, `src/data/sitemap.ts`, legacy consumers | `npx tsc -b --noEmit` and `npm run build` surfaced pre-existing architecture/export mismatches outside the CWV scope. |
+
+**Branch:** `auto-improve/core-web-vitals-phase4`  
+**Status:** ⚠️ CWV improvements implemented; final production build currently blocked by unrelated repository type/export regressions  
+**Last Updated:** 2026-05-17 02:05 WITA

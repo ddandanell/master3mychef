@@ -49,7 +49,7 @@ export default function FAQAccordion({ items, dark = false, defaultOpenCount = 0
               type="button"
               id={buttonId}
               onClick={() => toggle(i)}
-              className="flex min-h-[52px] w-full items-start justify-between gap-4 p-4 text-left md:items-center md:p-5"
+              className="flex min-h-[52px] w-full items-start justify-between gap-4 p-4 text-left md:items-center md:p-5 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               aria-expanded={isOpen}
               aria-controls={panelId}
             >

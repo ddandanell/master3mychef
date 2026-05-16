@@ -100,7 +100,7 @@ export default function Navbar() {
                   </Link>
 
                   {subpages.length > 0 && (
-                    <div className="pointer-events-none absolute left-1/2 top-full z-20 mt-4 w-72 -translate-x-1/2 rounded-2xl border border-[#C5A028]/15 bg-[#12110F]/98 p-3 opacity-0 shadow-2xl shadow-black/35 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                    <div className="pointer-events-none absolute left-1/2 top-full z-20 mt-4 w-72 -translate-x-1/2 rounded-2xl border border-[#C5A028]/15 bg-white p-3 opacity-0 shadow-2xl shadow-black/35 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
                       <p
                         className="px-3 pb-2 text-[10px] uppercase tracking-[0.28em] text-[#C5A028]"
                         style={{ fontFamily: "'Cormorant Garamond', serif" }}
@@ -117,7 +117,7 @@ export default function Navbar() {
                               className={`block rounded-xl px-3 py-2.5 text-sm transition-colors ${
                                 subpageActive
                                   ? 'bg-[#C5A028]/12 text-[#C5A028]'
-                                  : 'text-white/78 hover:bg-white/[0.04] hover:text-[#C5A028]'
+                                  : 'text-gray-700 hover:bg-[#C5A028]/8 hover:text-[#C5A028]'
                               }`}
                               style={{ fontFamily: "'Playfair Display', serif" }}
                             >
@@ -164,12 +164,9 @@ export default function Navbar() {
         aria-modal="true"
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
-        className={`fixed bottom-0 left-0 right-0 top-0 z-[60] transition-all duration-300 lg:hidden ${
+        className={`fixed bottom-0 left-0 right-0 top-0 z-[60] transition-all duration-300 lg:hidden bg-white ${
           menuOpen ? 'visible opacity-100' : 'invisible pointer-events-none opacity-0'
         }`}
-        style={{
-          background: 'radial-gradient(120% 90% at 12% 0%, #1B1A18 0%, #0D0D0C 45%, #070707 100%)',
-        }}
       >
         <div className="mx-auto flex h-full w-full max-w-md flex-col px-5 pb-7 pt-20">
           {/* Close button */}
@@ -177,13 +174,13 @@ export default function Navbar() {
             type="button"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
-            className="absolute top-6 right-5 inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-white/[80%] transition-colors hover:text-[#C5A028]"
+            className="absolute top-6 right-5 inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-gray-700 transition-colors hover:text-[#C5A028]"
           >
             <X className="h-5 w-5 stroke-[1.5]" />
           </button>
 
           <h2
-            className="text-[24px] text-white mb-1"
+            className="text-[24px] text-gray-900 mb-1"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             myCHEF
@@ -203,12 +200,12 @@ export default function Navbar() {
                     to={item.href}
                     onClick={() => setMenuOpen(false)}
                     className={`flex items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors ${
-                      active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-white/[0.02]'
+                      active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-gray-100'
                     }`}
                   >
                     <Icon className="h-5 w-5 text-[#C5A028] flex-shrink-0" strokeWidth={1.6} />
                     <span
-                      className={`text-[16px] ${active ? 'text-[#C5A028]' : 'text-white'}`}
+                      className={`text-[16px] ${active ? 'text-[#C5A028]' : 'text-gray-900'}`}
                       style={{ fontFamily: "'Playfair Display', serif" }}
                     >
                       {item.label}
@@ -227,7 +224,7 @@ export default function Navbar() {
                             className={`block rounded-xl px-3 py-2 text-sm transition-colors ${
                               subpageActive
                                 ? 'bg-[#C5A028]/10 text-[#C5A028]'
-                                : 'text-white/74 hover:bg-white/[0.03] hover:text-[#C5A028]'
+                                : 'text-gray-600 hover:bg-gray-100 hover:text-[#C5A028]'
                             }`}
                             style={{ fontFamily: "'Playfair Display', serif" }}
                           >
@@ -255,7 +252,6 @@ export default function Navbar() {
       </div>
 
       {/* ── Top padding spacer (height of navbar) ── */}
-      <div className="h-16 md:h-[72px]" />
     </>
   )
 }

@@ -448,3 +448,21 @@ Tree-shaking was already excluding all 9 deps from the bundle, so output size ba
 **Last Updated:** 2026-05-16 14:08 UTC+8
 **Current Git Head:** 078569f (main)
 **Build Status:** ✅ PASSING
+
+---
+
+## INQUIRY FLOW + NAV SUBPAGE EXPOSURE (2026-05-16) — Copilot Agent
+
+> Continued autonomous execution on the highest-impact items still fully under agent control: lead-capture quality and page discoverability across built service clusters.
+
+| Item | Status | Files | Notes |
+|-----|--------|------|-------|
+| Shared WhatsApp inquiry form hardened | ✅ DONE | `src/components/catering/BookingFormCatering.tsx` | Required fields now enforce properly and WhatsApp payloads use human-readable field labels instead of raw state keys |
+| Contact page upgraded to structured booking intake | ✅ DONE | `src/pages/ContactPage.tsx` | Added service, WhatsApp, company/planner, dates, location, group size, duration, dietary notes, and planning brief fields |
+| Events inquiry capture expanded | ✅ DONE | `src/pages/EventsMainPage.tsx` | Added duration, company/planner, dietary brief, and proposal/invoice requirement capture |
+| Corporate, retreat, wedding, and catering forms sharpened | ✅ DONE | `src/pages/EventsCorporatePage.tsx`, `src/pages/EventsRetreatsPage.tsx`, `src/pages/EventsWeddingsPage.tsx`, `src/pages/CateringMainPage.tsx` | Added procurement, safety, celebration-length, cuisine-direction, service-window, and meal-scope fields tied to persona friction |
+| Top-nav subpages exposed for service pillars | ✅ DONE | `src/components/Navbar.tsx` | Desktop dropdown + mobile nested links now expose all child pages for Fine Dining, Catering, In-Villa Service, Events, and Staffing directly from site architecture |
+| TypeScript + audit + production build | ✅ PASSING | app | `npx tsc -b --noEmit`, `npm run audit`, and `npx vite build` all passed after changes |
+
+**Last Updated:** 2026-05-16 14:22 UTC+8
+**Build Status:** ✅ PASSING

@@ -73,9 +73,15 @@
 ✨ IMPROVE: Thin pages expanded (WhyMychef, RecommendedServices, JoinTeam, NotFound) — ✅ DONE | **Copilot** | Build ✓
 
 ---
-## AGENT TEAM SUMMARY (updated 2026-05-15)
+## AGENT TEAM SUMMARY (updated 2026-05-16)
 ### Completed by Copilot Team:
 - All 40 original tasks (Phases 1–4) ✅
+- ✨ **Tone Consistency Pass (P1-3)**: HubPage, EventsMainPage, PricingPage revised with brand tone rules ✅
+  - Cursor fix: Moved hover pointer from icon circles to cards
+  - Tightened hero copy: PORTALS, HOW_IT_WORKS, DIFFERENTIATORS 
+  - EventsMainPage: stronger eyebrows, tighter descriptions
+  - Applied rules: short sentences, concrete words, guest outcome focus
+  - Build ✓ · Audit ✓ · 0 errors
 - Bug fixes: 2 broken hero images ✅
 - Bug fixes: Internal links on 11 pages ✅  
 - SEO heads on 8 pages ✅

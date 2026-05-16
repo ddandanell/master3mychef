@@ -298,20 +298,13 @@ export default function Navbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-3">
-            {/* Pricing — desktop */}
-            <Link
-              to="/pricing"
-              className="hidden text-[13px] font-medium text-white/[70%] hover:text-[#C5A028] transition-colors xl:inline-flex"
-            >
-              Pricing
-            </Link>
             {/* Book CTA — always visible on sm+ */}
             <Link
               to={PRIMARY_CTA.href}
               className="hidden min-h-[44px] items-center justify-center rounded-full bg-[#C5A028] px-5 py-2 text-[13px] font-semibold uppercase tracking-[0.1em] text-black transition-all hover:bg-[#D4B43A] sm:inline-flex"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              {PRIMARY_CTA.label}
+              Book Now
             </Link>
 
             {/* Hamburger — mobile/tablet (hidden on xl+) */}
@@ -369,10 +362,10 @@ export default function Navbar() {
             </button>
           </div>
 
-          <p className="mt-7 text-[11px] uppercase tracking-[0.34em] text-[#C5A028]/80">Private Dining in Bali</p>
+          <p className="mt-7 text-[11px] uppercase tracking-[0.34em] text-[#C5A028]">Private Dining in Bali</p>
           <div className="mt-3 h-px bg-gradient-to-r from-[#C5A028]/55 via-[#C5A028]/18 to-transparent" />
 
-          <div className="mt-4 space-y-1.5">
+          <div className="mt-5 space-y-3">
             {MOBILE_LUXURY_NAV.map((item) => {
               const Icon = item.icon
               const active = isActivePath(location.pathname, item.href)
@@ -381,38 +374,38 @@ export default function Navbar() {
                   key={item.href}
                   to={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`group flex items-center gap-3.5 rounded-2xl px-1 py-3 transition-colors ${
+                  className={`group flex items-center gap-4 rounded-2xl px-1 py-3.5 transition-colors ${
                     active ? 'bg-white/[0.03]' : 'hover:bg-white/[0.02]'
                   }`}
                 >
-                  <span className="inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-[#C5A028]/40 bg-[#111110]">
-                    <Icon className="h-4.5 w-4.5 text-[#C5A028]" strokeWidth={1.7} />
+                  <span className="inline-flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-[#C5A028]/50 bg-[#111110]">
+                    <Icon className="h-5 w-5 text-[#C5A028]" strokeWidth={1.6} />
                   </span>
                   <span className="min-w-0 flex-1">
                     <span
-                      className="block text-[22px] leading-[1.1] text-white"
+                      className="block text-[21px] leading-tight text-white"
                       style={{ fontFamily: "'Playfair Display', serif" }}
                     >
                       {item.title}
                     </span>
-                    <span className="mt-1 block text-[12px] leading-snug text-white/[48%]">{item.description}</span>
+                    <span className="mt-1.5 block text-[12px] leading-snug text-white/60">{item.description}</span>
                   </span>
-                  <ChevronRight className="h-4.5 w-4.5 flex-shrink-0 text-[#C5A028]/80 transition-transform duration-200 group-hover:translate-x-[1px]" />
+                  <ChevronRight className="h-5 w-5 flex-shrink-0 text-[#C5A028]/75 transition-transform duration-200 group-hover:translate-x-1" />
                 </Link>
               )
             })}
           </div>
 
-          <div className="mt-4 h-px bg-gradient-to-r from-[#C5A028]/18 via-white/8 to-transparent" />
+          <div className="mt-6 h-px bg-gradient-to-r from-[#C5A028]/20 via-white/8 to-transparent" />
 
-          <div className="mt-3.5 flex items-center gap-5 text-[12px] uppercase tracking-[0.19em] text-white/[58%]">
-            <Link to="/about" onClick={() => setMenuOpen(false)} className="transition-colors hover:text-[#C5A028]">
+          <div className="mt-5 space-y-2.5 text-[11px] uppercase tracking-[0.2em] text-white/65">
+            <Link to="/about" onClick={() => setMenuOpen(false)} className="block transition-colors hover:text-[#C5A028]">
               About
             </Link>
-            <Link to="/partners" onClick={() => setMenuOpen(false)} className="transition-colors hover:text-[#C5A028]">
+            <Link to="/partners" onClick={() => setMenuOpen(false)} className="block transition-colors hover:text-[#C5A028]">
               Partners
             </Link>
-            <Link to="/contact" onClick={() => setMenuOpen(false)} className="transition-colors hover:text-[#C5A028]">
+            <Link to="/contact" onClick={() => setMenuOpen(false)} className="block transition-colors hover:text-[#C5A028]">
               Contact
             </Link>
           </div>
@@ -423,7 +416,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-[#C5A028] px-4 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#111] transition-colors hover:bg-[#d1ad36]"
             >
-              <CalendarDays className="h-4 w-4" /> Book Experience
+              <CalendarDays className="h-4 w-4" /> Book Now
             </Link>
             <a
               href={WA_LINK}

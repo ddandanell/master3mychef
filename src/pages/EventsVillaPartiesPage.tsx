@@ -173,22 +173,25 @@ export default function EventsVillaPartiesPage() {
 
       <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Villa Parties' }]} />
 
-      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src="/generated/events/villa-party-night.webp" alt="Night-time villa party with bar and pool lighting in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
-          <div className="absolute inset-0 bg-black/68" />
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.10) 100%)' }}
+          />
         </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
+        <div className="relative z-10 px-6 md:px-8 py-12 md:py-20 max-w-2xl mx-auto md:mx-0 md:ml-auto md:mr-auto md:flex md:flex-col md:justify-center h-full w-full">
           <p className="text-[#2C5F7C] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
             Chapter 1 — Villa Parties
           </p>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
             Villa Parties in Bali — BBQ, Pool, Cocktail & Night Events
           </h1>
-          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-xl">
             Sunset BBQs, pool parties, cocktail receptions, and late-night celebrations with food, drinks, bartender service, staffing, music coordination, and cleanup all handled by one team.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-villa-parties-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
               <MessageCircle className="w-4 h-4" /> Plan Your Party
             </a>
@@ -196,7 +199,7 @@ export default function EventsVillaPartiesPage() {
               <Wine className="w-4 h-4" /> View Formats
             </a>
           </div>
-          <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em]">
+          <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em] text-left">
             From IDR 650K++/guest · Bar, staffing, and cleanup handled
           </p>
         </div>

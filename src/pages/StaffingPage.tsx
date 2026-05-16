@@ -201,7 +201,7 @@ export default function StaffingPage() {
       />
 
       {/* ── BREADCRUMB ──────────────────────────────────────────────────── */}
-      <div className="pt-24 md:pt-28 px-6 max-w-[1280px] mx-auto">
+      <div className="pt-20 md:pt-24 px-6 max-w-[1280px] mx-auto">
         <Breadcrumb items={[{ label: 'Staffing' }]} theme="dark" />
       </div>
 

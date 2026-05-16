@@ -342,7 +342,7 @@ export default function EventsMainPage() {
       <Breadcrumb items={[{ label: 'Events' }]} theme="dark" />
 
       {/* ═══════ HERO — DARK, EDITORIAL, GOLD ═══════ */}
-      <section className="relative min-h-[88vh] flex items-end overflow-hidden bg-[#0A0A0A] text-white">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0A0A0A] text-white">
         <img
           src="/hero-events.webp"
           alt="Luxury villa event in Bali with styled dining and celebration setup"
@@ -353,8 +353,11 @@ export default function EventsMainPage() {
           decoding="async"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/40" />
-        <div className="relative z-10 max-w-[1280px] mx-auto px-6 pb-20 md:pb-28 w-full">
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.10) 100%)' }}
+        />
+        <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-8 py-12 md:py-20 w-full flex flex-col justify-center h-full">
           <p
             className="hero-fade text-[#C5A028] text-sm tracking-[0.4em] uppercase mb-6"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
@@ -362,7 +365,7 @@ export default function EventsMainPage() {
             Chapter 1 — Bali Events
           </p>
           <h1
-            className="hero-fade text-4xl md:text-6xl lg:text-7xl leading-[1.05] max-w-3xl mb-8"
+            className="hero-fade text-5xl md:text-7xl lg:text-8xl leading-[1.05] max-w-2xl mb-8"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Events in Bali, run by one team.<br />
@@ -370,7 +373,7 @@ export default function EventsMainPage() {
               You just host.
             </span>
           </h1>
-          <p className="hero-fade text-base md:text-xl max-w-2xl leading-relaxed text-white/[80%] mb-8">
+          <p className="hero-fade text-base md:text-xl max-w-lg leading-relaxed text-white/[80%] mb-8">
             Villa weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties.
             Food, drinks, staff, styling, and coordination — handled by one team, in your villa, anywhere in Bali.
           </p>

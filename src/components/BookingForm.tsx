@@ -94,7 +94,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
     <div className={`${compact ? '' : 'py-16 md:py-24 px-6'}`}>
       {!compact && (
         <div className="text-center mb-12">
-          <p className="u-label text-sm mb-3">Book Now</p>
+          <p className="u-label mb-3">Book Now</p>
           <h2 className="u-heading text-3xl md:text-4xl mb-3">{config.title}</h2>
           <p style={{ color: 'var(--u-text-muted)' }}>{config.subtitle}</p>
         </div>

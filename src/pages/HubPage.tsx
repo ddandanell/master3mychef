@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw } from 'lucide-react'
 import gsap from 'gsap'
@@ -134,10 +134,10 @@ const FAQS = [
 ]
 
 const TRUST_STATS = [
-  { icon: MapPin, value: '560+', label: 'Villas Served' },
-  { icon: Users, value: '12,000+', label: 'Happy Guests' },
-  { icon: Star, value: '4.9', label: 'Average Rating' },
-  { icon: Clock, value: '8+', label: 'Years in Bali' },
+  { icon: MapPin, target: 560, suffix: '+', decimals: 0, label: 'Villas Served' },
+  { icon: Users, target: 12000, suffix: '+', decimals: 0, label: 'Happy Guests' },
+  { icon: Star, target: 4.9, suffix: '', decimals: 1, label: 'Average Rating' },
+  { icon: Clock, target: 8, suffix: '+', decimals: 0, label: 'Years in Bali' },
 ]
 
 
@@ -217,6 +217,38 @@ export default function HubPage() {
   const heroRef = useRef<HTMLDivElement>(null)
   const portalsRef = useRef<HTMLDivElement>(null)
   const trustRef = useRef<HTMLDivElement>(null)
+  const statsAnimationStartedRef = useRef(false)
+  const [animatedStatValues, setAnimatedStatValues] = useState<number[]>(
+    TRUST_STATS.map(() => 0)
+  )
+
+  const formatStatValue = (value: number, decimals: number, suffix: string) => {
+    const formatted = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toLocaleString('en-US')
+    return `${formatted}${suffix}`
+  }
+
+  const animateTrustStats = () => {
+    if (statsAnimationStartedRef.current) return
+    statsAnimationStartedRef.current = true
+
+    const duration = 1600
+    const start = performance.now()
+
+    const tick = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 3)
+
+      setAnimatedStatValues(TRUST_STATS.map((stat) => stat.target * eased))
+
+      if (progress < 1) {
+        requestAnimationFrame(tick)
+      } else {
+        setAnimatedStatValues(TRUST_STATS.map((stat) => stat.target))
+      }
+    }
+
+    requestAnimationFrame(tick)
+  }
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -233,7 +265,12 @@ export default function HubPage() {
 
       gsap.fromTo('.trust-item', { y: 40, opacity: 0 }, {
         y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: trustRef.current, start: 'top 80%', once: true },
+        scrollTrigger: {
+          trigger: trustRef.current,
+          start: 'top 80%',
+          once: true,
+          onEnter: animateTrustStats,
+        },
       })
 
       gsap.fromTo('.hiw-step', { y: 50, opacity: 0 }, {
@@ -298,7 +335,7 @@ export default function HubPage() {
     homeLocalBusinessSchema,
     websiteSchema,
     homeBreadcrumb,
-    organizationSchema('https://mychef.id/generated/hub-hero-v3.webp', [
+    organizationSchema('https://mychef.id/generated/home-hero-ivory-villa-v2.png', [
       'https://www.instagram.com/mychef.id',
       'https://www.facebook.com/mychef.id',
     ]),
@@ -346,40 +383,54 @@ export default function HubPage() {
         jsonLd={homeSchemas}
       />
       {/* HERO — luxury brand identity with Michelin-trained founder story front and centre */}
-      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="px-5 pb-20 pt-20 sm:px-6 sm:pt-24 md:pb-32 md:pt-28" style={{ background: 'var(--u-bg)' }}>
-        <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-8 md:mb-12">
-            <p className="hub-hero-label mb-4 text-xs uppercase tracking-[0.35em] text-[#C5A028] sm:text-sm md:text-2xl" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              Your Villa. Our Kitchen.
-            </p>
-            <h1 className="hub-hero-title u-heading mb-4 text-[2.15rem] leading-[1.06] sm:text-5xl md:text-6xl lg:text-7xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-              A Michelin-Trained Private Chef, in Your Bali Villa.
-            </h1>
-            <div className="gold-arc mx-auto mb-6" />
-            <p className="hub-hero-subtitle mx-auto mb-6 max-w-2xl text-[15px] leading-relaxed sm:text-lg md:text-xl" style={{ color: 'var(--u-text-muted)' }}>
-              Private dining, catering &amp; events across Bali. We shop, cook &amp; clean. You just enjoy.
-            </p>
-            <p className="mx-auto mb-8 max-w-xl text-sm leading-relaxed sm:text-[15px] md:text-base" style={{ color: 'var(--u-text-muted)' }}>
-              Founded by Adriano — trained under a Michelin-starred chef in Milan — myCHEF.id brings extraordinary dining to Bali's finest villas. A team of 50+ Indonesian hospitality professionals handles everything, from grocery sourcing to the last clean plate. We are not a marketplace. We are a kitchen that travels.
-            </p>
-            <div className="hub-hero-cta mb-3 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
-              <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ background: 'var(--u-accent)', color: '#fff' }}>
-                <MessageCircle className="w-4 h-4" /> Get My Free Quote <span aria-hidden="true">→</span>
-              </a>
-              <Link to="/pricing" className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border px-6 py-4 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ borderColor: 'var(--u-accent)', color: 'var(--u-accent)' }}>
-                Browse Menus &amp; Pricing <ArrowRight className="w-4 h-4" />
-              </Link>
+      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-20 pt-16 sm:pt-20 md:pb-32" style={{ background: 'var(--u-bg)' }}>
+        <div className="mb-10 md:mb-14">
+          <div className="relative min-h-[calc(100vh-64px)] overflow-hidden md:min-h-[calc(100vh-72px)]">
+            <img
+              src="/generated/home-hero-ivory-villa-v2.png"
+              alt="Luxury private dining table in a Bali villa at sunset"
+              width={1536}
+              height={1024}
+              className="absolute inset-0 h-full w-full object-cover"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(245,243,239,0.28)_0%,rgba(245,243,239,0.18)_40%,rgba(245,243,239,0.05)_63%,rgba(245,243,239,0)_80%)]" />
+            <div className="relative z-10 mx-auto flex min-h-[calc(100vh-64px)] max-w-[1280px] items-center px-5 py-10 sm:px-6 md:min-h-[calc(100vh-72px)] md:py-14">
+              <div className="max-w-2xl rounded-2xl bg-[#F5F3EF]/80 p-5 backdrop-blur-[2px] md:max-w-[46%] md:bg-transparent md:p-0 md:backdrop-blur-0">
+                <p className="hub-hero-label mb-4 text-xs uppercase tracking-[0.34em] text-[#8A6F15] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  Your Villa. Our Kitchen.
+                </p>
+                <h1 className="hub-hero-title mb-4 text-[2rem] leading-[1.08] text-[#171614] sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  A Michelin-Trained Private Chef, in Your Bali Villa.
+                </h1>
+                <div className="gold-arc mb-6" />
+                <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: '#4A4745' }}>
+                  Private dining, catering, and events across Bali. We shop, cook, serve, and clean. You just enjoy.
+                </p>
+                <div className="hub-hero-cta mb-4 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+                  <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ background: '#111', color: '#F5F3EF' }}>
+                    <MessageCircle className="w-4 h-4" /> Get My Free Quote <span aria-hidden="true">→</span>
+                  </a>
+                  <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ borderColor: '#1A1916', color: '#1A1916' }}>
+                    Browse Menus &amp; Pricing <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+                <p className="text-xs uppercase tracking-[0.18em] text-[#5E564B]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  Replies within 1 hour · Weekends fill fast
+                </p>
+              </div>
             </div>
-            <p className="mt-2 text-xs text-[#C5A028] animate-pulse">
-              <span role="img" aria-label="Available">🟢</span> Available this weekend · Reply within 1 hour
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-[1280px] px-5 sm:px-6">
+          <div className="mb-8 md:mb-12">
+            <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-relaxed sm:text-[15px] md:text-base" style={{ color: 'var(--u-text-muted)' }}>
+              Founded by Adriano — trained under a Michelin-starred chef in Milan — myCHEF.id delivers restaurant-level private dining to Bali&apos;s finest villas with a 50+ person hospitality team.
             </p>
-            <p className="mb-6 text-xs uppercase tracking-[0.18em]" style={{ color: 'var(--u-text-muted)', fontFamily: "'Cormorant Garamond', serif" }}>
-              Weekends fill fast — book early
-            </p>
-            <p className="mb-8 text-sm" style={{ color: 'var(--u-text-muted)' }}>
-              No booking fee · Free consultation · Replies within 1 hour
-            </p>
-            {/* Risk Reversal — trust badges for high-ticket purchases */}
+
             <div className="mx-auto mb-8 max-w-2xl">
               <RiskReversal
                 items={[
@@ -388,7 +439,7 @@ export default function HubPage() {
                 ]}
               />
             </div>
-            <div className="mx-auto mb-8 grid max-w-3xl grid-cols-2 gap-3 md:grid-cols-4">
+            <div className="mx-auto mb-6 grid max-w-3xl grid-cols-2 gap-3 md:grid-cols-4">
               {HERO_STATS.map((stat) => (
                 <div
                   key={stat}
@@ -399,29 +450,16 @@ export default function HubPage() {
                 </div>
               ))}
             </div>
-            <div className="mx-auto mb-12 max-w-3xl rounded-2xl border px-4 py-4 text-left shadow-sm md:px-6" style={{ borderColor: 'rgba(197, 160, 40, 0.22)', background: 'rgba(255,255,255,0.72)', backdropFilter: 'blur(10px)' }}>
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-[#8A6F15]">Still deciding?</p>
-                  <p className="text-sm leading-relaxed text-[#4A4745]">
-                    Most guests book within 24h of inquiry. WhatsApp us — no commitment required.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 sm:items-end">
-                  <a
-                    href="https://wa.me/6282237565997"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-source="homepage-pricing-strip"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028]"
-                  >
-                    Message us <ArrowRight className="h-4 w-4" />
-                  </a>
-                  <Link to="/calculator" className="inline-flex items-center gap-1 text-xs text-[#8A6F15] hover:text-[#C5A028] transition-colors">
-                    Estimate price first →
-                  </Link>
-                </div>
-              </div>
+            <div className="mx-auto mb-12 text-center">
+              <a
+                href="https://wa.me/6282237565997"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-source="homepage-pricing-strip"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028]"
+              >
+                Message us with date, guest count, and villa area <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
@@ -459,7 +497,7 @@ export default function HubPage() {
       <section className="trust-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-14 md:mb-20">
-            <p className="u-label text-sm mb-4">Why myCHEF</p>
+            <p className="u-label mb-4">Why myCHEF</p>
             <h2 className="u-heading text-3xl md:text-5xl mb-4">Built to be the new standard</h2>
             <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
               Six things every guest, host, and villa partner gets from the first message to the last plate.
@@ -512,29 +550,140 @@ export default function HubPage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="hiw-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
-        <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
-            <p className="u-label text-sm mb-4">Simple as It Gets</p>
-            <h2 className="u-heading text-4xl md:text-5xl mb-3">How It Works</h2>
-            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>From first message to first bite — four steps. No stress. No surprises.</p>
+      <section
+        className="relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
+        style={{
+          backgroundImage: 'url(/generated/how-it-works-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        {/* Warm overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to right, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.79))',
+          }}
+        />
+
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto">
+          {/* Section header */}
+          <div className="text-center mb-16 md:mb-24">
+            <p
+              className="text-base md:text-[16px] tracking-[0.08em] uppercase mb-5"
+              style={{ color: '#C9A227', fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, letterSpacing: '0.1em' }}
+            >
+              Simple as It Gets
+            </p>
+            <div className="flex justify-center mb-7">
+              <div style={{ width: '60px', height: '1px', background: '#C9A227' }} />
+            </div>
+            <h2
+              className="text-5xl md:text-7xl leading-tight mb-6"
+              style={{ fontFamily: "'Playfair Display', serif", fontWeight: 400, color: '#1E1E1E', lineHeight: 0.95 }}
+            >
+              How It Works
+            </h2>
+            <p
+              className="text-xl md:text-2xl max-w-xl mx-auto leading-[1.6]"
+              style={{ color: '#6D5F55', fontFamily: "'Inter', sans-serif", fontWeight: 400 }}
+            >
+              From first message to first bite — four steps. No stress. No surprises.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {HOW_IT_WORKS.map((item) => (
-              <div key={item.step} className="hiw-step text-center">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ background: 'var(--u-accent)', color: '#fff' }}>
-                  <item.icon className="w-6 h-6" />
+
+          {/* Step cards grid */}
+          <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 mb-16 md:mb-24">
+            {HOW_IT_WORKS.map((item, idx) => (
+              <div key={item.step} className="relative">
+                {/* Icon circle - positioned above card */}
+                <div
+                  className="absolute -top-12 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center"
+                  style={{ background: '#C9A227', boxShadow: '0 12px 28px rgba(201, 162, 39, 0.25)' }}
+                >
+                  <item.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                 </div>
-                <span className="text-xs tracking-[0.2em] uppercase mb-2 block" style={{ color: 'var(--u-accent)', fontFamily: "'Cormorant Garamond', serif" }}>Step {item.step}</span>
-                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>{item.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>{item.desc}</p>
+
+                {/* Card */}
+                <div
+                  className="pt-24 pb-10 px-8 rounded-2xl text-center h-full flex flex-col"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.72)',
+                    backdropFilter: 'blur(16px)',
+                    border: '1px solid rgba(201, 162, 39, 0.12)',
+                    boxShadow: '0 18px 55px rgba(40, 30, 20, 0.08)',
+                  }}
+                >
+                  <p
+                    className="text-xs tracking-[0.07em] uppercase mb-6"
+                    style={{ color: '#C9A227', fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
+                  >
+                    Step {item.step}
+                  </p>
+                  <div className="flex justify-center mb-6">
+                    <div style={{ width: '45px', height: '1px', background: '#C9A227' }} />
+                  </div>
+                  <h3
+                    className="text-2xl md:text-3xl leading-tight mb-5"
+                    style={{ fontFamily: "'Playfair Display', serif", color: '#1E1E1E', fontWeight: 400, lineHeight: 1.15 }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    className="text-base leading-[1.65]"
+                    style={{ color: '#6D5F55', fontFamily: "'Inter', sans-serif", fontWeight: 400, maxWidth: '260px', margin: '0 auto' }}
+                  >
+                    {item.desc}
+                  </p>
+                </div>
+
+                {/* Connector line - only on desktop, between cards */}
+                {idx < 3 && (
+                  <div
+                    className="hidden md:block absolute top-1/3 -right-5 w-10 h-px"
+                    style={{
+                      background: 'rgba(201, 162, 39, 0.45)',
+                      backgroundImage: 'radial-gradient(circle, #C9A227 1px, transparent 1px)',
+                      backgroundSize: '6px 100%',
+                      backgroundPosition: 'left center',
+                      backgroundRepeat: 'repeat-x',
+                    }}
+                  />
+                )}
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-trust-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: 'var(--u-accent)', color: '#fff' }}>
-              <MessageCircle className="w-4 h-4" /> Start on WhatsApp
+
+          {/* CTA Button and trust line */}
+          <div className="flex flex-col items-center">
+            <a
+              href="https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-source="homepage-hiw-cta"
+              className="inline-flex items-center justify-center gap-3 px-12 py-4 rounded-full mb-6 transition-all hover:shadow-lg hover:scale-105"
+              style={{
+                background: '#C9A227',
+                color: 'white',
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '15px',
+                fontWeight: 700,
+                letterSpacing: '0.03em',
+                textTransform: 'uppercase',
+                width: 'fit-content',
+                boxShadow: '0 14px 34px rgba(201, 162, 39, 0.28)',
+              }}
+            >
+              <MessageCircle className="w-5 h-5" />
+              Start on WhatsApp
             </a>
+            <p
+              className="text-base"
+              style={{ color: '#6D5F55', fontFamily: "'Inter', sans-serif" }}
+            >
+              Replies within 1 hour · Available across Bali
+            </p>
           </div>
         </div>
       </section>
@@ -556,7 +705,7 @@ export default function HubPage() {
               />
             </div>
             <div>
-              <p className="u-label text-sm mb-4">Who We Are</p>
+              <p className="u-label mb-4">Who We Are</p>
               <h2 className="u-heading text-4xl md:text-5xl mb-6">A Team Built on Passion, Not Pitch Decks</h2>
               <div className="gold-arc mb-8" />
               <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
@@ -588,7 +737,7 @@ export default function HubPage() {
       <section className="diff-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
-            <p className="u-label text-sm mb-4">Why Choose Us</p>
+            <p className="u-label mb-4">Why Choose Us</p>
             <h2 className="u-heading text-4xl md:text-5xl mb-3">What Makes Us Different</h2>
             <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Anyone can cook. We build experiences.</p>
           </div>
@@ -608,10 +757,12 @@ export default function HubPage() {
       <section ref={trustRef} className="py-16 md:py-20 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            {TRUST_STATS.map((stat) => (
+            {TRUST_STATS.map((stat, index) => (
               <div key={stat.label} className="trust-item text-center">
                 <stat.icon className="w-6 h-6 mx-auto mb-4 text-[#C5A028]" />
-                <p className="text-3xl md:text-4xl mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>{stat.value}</p>
+                <p className="text-3xl md:text-4xl mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>
+                  {formatStatValue(animatedStatValues[index], stat.decimals, stat.suffix)}
+                </p>
                 <p className="text-sm" style={{ color: 'var(--u-text-muted)' }}>{stat.label}</p>
               </div>
             ))}
@@ -630,7 +781,7 @@ export default function HubPage() {
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full">
               <figure className="flex flex-col items-center text-center max-w-[280px]">
                 <img
-                  src="/generated/villa-award-2025.webp"
+                  src="/generated/villa-award-2025.png"
                   alt="Villa Award 2025 — Best Choice for Private Dining"
                   width={280}
                   height={280}
@@ -647,7 +798,7 @@ export default function HubPage() {
 
               <figure className="flex flex-col items-center text-center max-w-[280px]">
                 <img
-                  src="/generated/villa-award-2026.webp"
+                  src="/generated/villa-award-2026.png"
                   alt="Villa Award 2026 — Best Choice for Private Dining"
                   width={280}
                   height={280}
@@ -674,7 +825,7 @@ export default function HubPage() {
       <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
-            <p className="u-label text-sm mb-4">Guest Words</p>
+            <p className="u-label mb-4">Guest Words</p>
             <h2 className="u-heading text-4xl md:text-5xl mb-3">25 Reviews. One Truth.</h2>
             <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Real guests. Real villas. Real experiences.</p>
           </div>
@@ -705,7 +856,7 @@ export default function HubPage() {
       <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-14 md:mb-20">
-            <p className="u-label text-sm mb-4">Where We Serve</p>
+            <p className="u-label mb-4">Where We Serve</p>
             <h2 className="u-heading text-3xl md:text-5xl mb-4">Private Chef Across Bali</h2>
             <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
               From Seminyak's beachfront villas to Ubud's jungle retreats — we know every kitchen, every market, every road.
@@ -761,7 +912,7 @@ export default function HubPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div>
-              <p className="u-label text-sm mb-4">Partnerships</p>
+              <p className="u-label mb-4">Partnerships</p>
               <h2 className="u-heading text-4xl md:text-5xl mb-6">For Villa & Airbnb Owners</h2>
               <div className="gold-arc mb-8" />
               <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
@@ -806,7 +957,7 @@ export default function HubPage() {
       <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
-            <p className="u-label text-sm mb-4">Questions</p>
+            <p className="u-label mb-4">Questions</p>
             <h2 className="u-heading text-4xl md:text-5xl mb-3">Frequently Asked</h2>
             <p className="mb-2" style={{ color: 'var(--u-text-muted)' }}>Still unsure? Message us on WhatsApp — we respond within the hour.</p>
           </div>
@@ -823,7 +974,7 @@ export default function HubPage() {
         <div className="max-w-[1100px] mx-auto rounded-[28px] border border-black/5 bg-white p-8 md:p-10">
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="max-w-[560px]">
-              <p className="u-label text-sm mb-3">Journal</p>
+              <p className="u-label mb-3">Journal</p>
               <h2 className="u-heading text-3xl md:text-4xl mb-4">Explore Our Journal</h2>
               <p style={{ color: 'var(--u-text-muted)' }}>
                 Planning a villa dinner, wedding weekend, or Bali breakfast setup? Browse our latest guides for practical hosting tips.

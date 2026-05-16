@@ -98,7 +98,7 @@ export default function Footer() {
           <Link to="/journal" className="hover:text-[#C5A028] transition-colors">Journal</Link>
           <Link to="/blog" className="hover:text-[#C5A028] transition-colors">Blog & Guides</Link>
           <Link to={PRIMARY_CTA.href} className="text-[#C5A028] font-semibold hover:text-white transition-colors">
-            {PRIMARY_CTA.label}
+            Book Now
           </Link>
         </div>
 

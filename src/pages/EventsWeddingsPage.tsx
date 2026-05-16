@@ -147,7 +147,7 @@ export default function EventsWeddingsPage() {
 
       <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Weddings' }]} />
 
-      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/event-wedding.webp"
@@ -159,19 +159,22 @@ export default function EventsWeddingsPage() {
             decoding="async"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/65" />
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.10) 100%)' }}
+          />
         </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
+        <div className="relative z-10 px-6 md:px-8 py-12 md:py-20 max-w-2xl mx-auto md:mx-0 md:ml-auto md:mr-auto md:flex md:flex-col md:justify-center h-full w-full">
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
             Chapter 1 — Villa Weddings
           </p>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
             Villa Weddings in Bali — Catering & Coordination
           </h1>
-          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-xl">
             One contract for menu planning, service staff, ceremony flow, setup, bar, and full cleanup. From intimate villa ceremonies to full reception dinners, myCHEF runs the food and the logistics together.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
             <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#b08d23] transition-all">
               <Calendar className="w-4 h-4" /> Request Wedding Consult
             </a>
@@ -179,7 +182,7 @@ export default function EventsWeddingsPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
-          <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em]">
+          <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em] text-left">
             From IDR 600K++/guest · Transparent proposal before deposit
           </p>
         </div>

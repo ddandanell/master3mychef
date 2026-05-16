@@ -4,10 +4,7 @@ import { UniverseProvider } from '@/contexts/UniverseContext'
 import { trackPageView, trackWhatsAppClick } from '@/lib/analytics'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import WhatsAppButton from './WhatsAppButton'
-
-const MOBILE_WA_MESSAGE = "Hi myCHEF! I'd like to enquire about your services."
-const MOBILE_WA_LINK = `https://wa.me/6282237565997?text=${encodeURIComponent(MOBILE_WA_MESSAGE)}`
+import ConciergeWidget from './ConciergeWidget'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
@@ -48,7 +45,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <UniverseProvider>
-      <div className="min-h-screen flex flex-col overflow-x-hidden pb-[calc(env(safe-area-inset-bottom)+5.5rem)] transition-colors duration-700 md:pb-0" style={{ background: 'var(--u-bg)', color: 'var(--u-text)' }}>
+      <div className="min-h-screen flex flex-col overflow-x-hidden pb-0 transition-colors duration-700" style={{ background: 'var(--u-bg)', color: 'var(--u-text)' }}>
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
@@ -58,20 +55,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · 5-star rated
         </div>
         <Footer />
-        <a
-          href={MOBILE_WA_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed inset-x-0 bottom-0 z-[55] flex min-h-[56px] items-center justify-center border-t border-black/10 bg-[#C5A028] px-4 pt-3 text-center text-sm font-semibold text-[#1A1916] shadow-[0_-12px_30px_rgba(0,0,0,0.12)] md:hidden"
-          style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.75rem)' }}
-          data-source="mobile-sticky-bar"
-        >
-          <span className="inline-flex items-center justify-center gap-2">
-            Book on WhatsApp
-            <span aria-hidden="true">→</span>
-          </span>
-        </a>
-        <WhatsAppButton />
+        <ConciergeWidget />
       </div>
     </UniverseProvider>
   )

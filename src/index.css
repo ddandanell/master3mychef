@@ -47,6 +47,7 @@
     --u-text-muted: #6B5B4E;
     --u-accent: #C5A028;
     --u-accent-rgb: 197, 160, 40;
+    --u-label-accent: #9D7714;
     --u-border: #E5E3E0;
     --u-surface: #FFFFFF;
     --u-hero-overlay: rgba(5, 5, 5, 0.45);
@@ -60,6 +61,7 @@
     --u-text-muted: #9A9590;
     --u-accent: #C5A028;
     --u-accent-rgb: 197, 160, 40;
+    --u-label-accent: #CBAA3A;
     --u-border: #2A2A2A;
     --u-surface: #111111;
     --u-hero-overlay: rgba(5, 5, 5, 0.55);
@@ -73,6 +75,7 @@
     --u-text-muted: #8A7B6B;
     --u-accent: #6B8E5A;
     --u-accent-rgb: 107, 142, 90;
+    --u-label-accent: #557147;
     --u-border: #E5E0D8;
     --u-surface: #FFFFFF;
     --u-hero-overlay: rgba(44, 36, 25, 0.35);
@@ -86,6 +89,7 @@
     --u-text-muted: #4A4745;
     --u-accent: #2C5F7C;
     --u-accent-rgb: 44, 95, 124;
+    --u-label-accent: #1F4E68;
     --u-border: #E5E3E0;
     --u-surface: #F8F7F5;
     --u-hero-overlay: rgba(44, 95, 124, 0.30);
@@ -223,7 +227,9 @@
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: var(--u-accent);
+    color: var(--u-label-accent, var(--u-accent));
+    font-size: 0.95rem;
+    font-weight: 600;
   }
 
   .u-body {

@@ -343,3 +343,29 @@ Tree-shaking was already excluding all 9 deps from the bundle, so output size ba
 **Last Updated:** 2026-05-16 07:55 UTC+8
 **Current Git Head:** 4470032 (main)
 **Build Status:** ✅ PASSING
+
+---
+
+## FLOATING BREAKFAST HERO REDESIGN (2026-05-16) — Copilot Agent
+
+> User provided new hero image (`imafloge.png`) and detailed design brief. Full hero section replaced.
+
+| Fix | Status | File | Notes |
+|-----|--------|------|-------|
+| New hero image copied | ✅ DONE | `public/generated/floating-breakfast-bali.png` | 2.1MB PNG from user-supplied imafloge.png |
+| Hero overlay changed | ✅ DONE | `CateringFloatingBreakfastPage.tsx` | Old: center-aligned, `bg-white/40` (washed out dark text). New: left-to-right dark gradient (0.72→0.42→0.10) + bottom-to-top (0.50→transparent) |
+| Text layout changed | ✅ DONE | `CateringFloatingBreakfastPage.tsx` | Center → left-aligned, max-w 620px, padding-left responsive (px-6 lg:px-14) |
+| Headline color | ✅ DONE | `CateringFloatingBreakfastPage.tsx` | `text-[#1A1A1A]` → `text-white`, clamp(42px,6vw,88px), weight 400 |
+| Gold eyebrow | ✅ DONE | `CateringFloatingBreakfastPage.tsx` | `#C5A028`, tracking-[0.35em], uppercase |
+| Body text | ✅ DONE | `CateringFloatingBreakfastPage.tsx` | `text-[#4A4745]` → `text-white/85`, leading-[1.55] |
+| Buttons | ✅ DONE | `CateringFloatingBreakfastPage.tsx` | Primary: gold bg, black text, rounded-full · Secondary: ghost border-white/40 |
+| Trust line | ✅ DONE | `CateringFloatingBreakfastPage.tsx` | Moved below buttons, `text-white/60`, added "Delivered to your villa" |
+| Mobile overlay | ✅ DONE | `CateringFloatingBreakfastPage.tsx` | Extra `bg-black/30` layer on mobile only |
+| Duplicate breadcrumb removed | ✅ DONE | `CateringFloatingBreakfastPage.tsx` | Old standalone Breadcrumb above hero removed; new Breadcrumb inside hero with `theme="dark"` |
+| TypeScript | ✅ CLEAN | — | 0 errors |
+| Build | ✅ CLEAN | — | 4.28s · 160 meta files |
+| Git push | ✅ DONE | — | Commit `66faf04` → main |
+
+**Last Updated:** 2026-05-16 09:20 UTC+8
+**Current Git Head:** 66faf04 (main)
+**Build Status:** ✅ PASSING

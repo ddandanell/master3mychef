@@ -5,6 +5,7 @@ import BestPartnerBadge from '@/components/BestPartnerBadge'
 
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'
+const HERO_IMAGE = '/generated/mychef-misc-bali-about-best-partner-2026.webp'
 
 // /certified/:slug — public verification page promised on /partner-platform.
 // Until partner data is wired (Supabase / static JSON), this renders a
@@ -32,13 +33,42 @@ export default function CertifiedPartnerPage() {
         ])]}
       />
 
-      <section className="px-6 md:px-12 py-32 max-w-[900px] mx-auto text-center">
-        <div className="inline-flex items-center gap-2 bg-[#C5A028]/10 border border-[#C5A028]/30 text-[#C5A028] text-[10px] uppercase tracking-[0.3em] font-semibold px-4 py-2 rounded-full mb-10">
-          <ShieldCheck className="w-3.5 h-3.5" /> Verified Partner
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-[#0F0F0E] text-white">
+        <div className="absolute inset-0">
+          <img
+            src={HERO_IMAGE}
+            alt={`${niceName} - myCHEF Certified Partner villa for private dining in Bali`}
+            className="h-full w-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/35 to-black/75" />
         </div>
+        <div className="relative z-10 mx-auto grid min-h-[40vh] max-w-[1200px] gap-8 px-6 py-16 md:min-h-[50vh] md:px-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-[#C5A028] text-[#050505] text-[10px] uppercase tracking-[0.3em] font-semibold px-4 py-2 rounded-full mb-6">
+              <ShieldCheck className="w-3.5 h-3.5" /> Verified Partner
+            </div>
+            <h1 className="font-playfair text-4xl md:text-6xl text-white leading-tight mb-4">{niceName}</h1>
+            <p className="text-lg text-white/90 max-w-[600px]">
+              Officially certified for Michelin-level private dining execution
+            </p>
+          </div>
+          <div className="lg:justify-self-end">
+            <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
+              <img
+                src={HERO_IMAGE}
+                alt={`${niceName} villa dining verification imagery`}
+                className="h-full min-h-[280px] w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section className="px-6 md:px-12 py-20 max-w-[900px] mx-auto text-center">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-6">myCHEF Certified Partner</p>
-        <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-6">{niceName}</h1>
         <p className="text-lg text-[#4A4745] mb-10 max-w-[640px] mx-auto">
           This villa is an officially certified myCHEF Partner — verified for Michelin-level private dining execution,
           background-checked culinary team, and operational standards across the myCHEF villa partner network.
@@ -66,7 +96,7 @@ export default function CertifiedPartnerPage() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           <Link
             to="/quote"
-            className="inline-flex items-center justify-center bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
+            className="inline-flex items-center justify-center bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
           >
             Book Dining at {niceName}
           </Link>
@@ -74,7 +104,7 @@ export default function CertifiedPartnerPage() {
             href={`https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'd like to verify and book dining at ${niceName}.`)}`}
             target="_blank"
             rel="noopener noreferrer" data-source="certified-partner-cta"
-            className="inline-flex items-center justify-center gap-2 border border-[#1A1A1A]/20 text-[#1A1A1A] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#1A1A1A]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
+            className="inline-flex items-center justify-center gap-2 border border-[#1A1A1A]/20 text-[#1A1A1A] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#1A1A1A]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
           >
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
           </a>
@@ -83,7 +113,7 @@ export default function CertifiedPartnerPage() {
         <p className="text-xs text-[#8A8785]">
           Certification verified at <span className="text-[#1A1A1A] font-medium">mychef.id/certified/{slug}</span>
           {' · '}
-          <Link to="/partner-platform" className="text-[#2C5F7C] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">About the partner programme →</Link>
+          <Link to="/partner-platform" className="text-[#2C5F7C] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028]">About the partner programme →</Link>
         </p>
       </section>
     </main>

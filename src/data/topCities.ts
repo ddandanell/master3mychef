@@ -55,7 +55,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Relaxed east-coast beach town, family villas, and a sunrise dining culture.',
     blurb: 'Sanur villas favour multi-generational families and longer stays. We cook gentle, classic menus — handmade pasta, fresh seafood, simple Balinese — and weekly meal plans that handle dietary needs across three generations.',
     signature: 'We shop Pasar Sindhu at first light for produce and reef fish.',
-    hero: '/generated/city-sanur.webp',
+    hero: '/generated/mychef-location-bali-city-sanur.webp',
   },
   {
     slug: 'nusa-dua',
@@ -63,7 +63,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'A five-star resort enclave with large villa estates, polished service, and family retreat energy.',
     blurb: 'Nusa Dua is the home of Bali\'s gated premium villas and resort hospitality. We cater corporate retreats, executive dinners, and high-end private events with the same precision as the surrounding five-star kitchens.',
     signature: 'We coordinate with the major estate kitchens and bring full service teams.',
-    hero: '/generated/city-nusa-dua.webp',
+    hero: '/generated/mychef-location-bali-city-nusa-dua.webp',
   },
   {
     slug: 'jimbaran',
@@ -71,7 +71,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Famous for seafood grills and clifftop resorts — intimate fish suppers, beachside BBQs.',
     blurb: 'Jimbaran is where Bali eats seafood. We cook from the morning landing at Kedonganan — barramundi, lobster, prawns, snapper — straight to your villa table, with the salt still on the catch.',
     signature: 'We bring the boat-to-villa supply chain to every Jimbaran booking.',
-    hero: '/generated/city-jimbaran.webp',
+    hero: '/generated/mychef-location-bali-city-jimbaran.webp',
   },
   {
     slug: 'berawa',
@@ -79,7 +79,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Canggu\'s quieter northern sibling — surf villa clusters, health-conscious guests.',
     blurb: 'Berawa villas are modern, well-equipped, and built for entertaining. We cook villa parties for 20–80 guests, birthday dinners, and Mediterranean menus that complement the beach-club aesthetic.',
     signature: 'We handle the logistics for the bigger-than-Canggu villa events.',
-    hero: '/generated/city-berawa.webp',
+    hero: '/generated/mychef-location-bali-city-berawa.webp',
   },
   {
     slug: 'pererenan',
@@ -87,7 +87,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Remote surf breaks, architect-designed villas, and off-grid privacy.',
     blurb: 'Pererenan is what Canggu was five years ago — quieter, more design-led, and full of new villas with great kitchens. We cook romantic dinners, small-group fine dining, and weekly meal prep for the long-stayers.',
     signature: 'We know every chef-friendly villa Pererenan has come online with.',
-    hero: '/generated/city-pererenan.webp',
+    hero: '/generated/mychef-location-bali-city-pererenan.webp',
   },
   {
     slug: 'bukit',
@@ -95,7 +95,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'The southern peninsula — dramatic limestone cliffs, world-class surf, and clifftop villas.',
     blurb: 'The Bukit Peninsula is Bali\'s premium clifftop region — Bingin, Padang Padang, Ungasan, Pecatu. We cook fine dining for elopements, surf-trip groups, and milestone celebrations against the Indian Ocean horizon.',
     signature: 'We service every Bukit clifftop villa with a full team.',
-    hero: '/generated/city-bukit.webp',
+    hero: '/generated/mychef-location-bali-city-bukit.webp',
   },
   {
     slug: 'jakarta',

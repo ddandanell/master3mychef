@@ -36,7 +36,7 @@ const PORTALS = [
     title: 'Events',
     subtitle: 'Full-service hospitality for weddings, corporate offsites, and celebrations. Chef, staff, setup, cleanup.',
     path: '/events',
-    image: '/generated/hub-events.webp',
+    image: '/generated/mychef-events-bali-hub-events.webp',
     accent: '#2C5F7C',
   },
 ]
@@ -448,7 +448,7 @@ export default function HubPage() {
       <section
         className="cv-auto relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
         style={{
-          backgroundImage: 'url(/generated/hero-how-it-works.webp)',
+          backgroundImage: 'url(/generated/mychef-misc-bali-hero-how-it-works.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',

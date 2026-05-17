@@ -364,6 +364,68 @@ export default function FineDiningMenusPage() {
         </div>
       </section>
 
+      <section className="bg-[#1A1916] px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="reveal mb-12 text-center">
+            <p
+              className="mb-4 text-xs uppercase tracking-[0.35em] text-[#C5A028]"
+              style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+            >
+              Learn More
+            </p>
+            <h2 className="text-3xl text-white md:text-5xl mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Explore fine dining in Bali
+            </h2>
+          </div>
+          <div className="reveal grid gap-6 md:grid-cols-3">
+            <Link
+              to="/blog/fine-dining-trends-bali-2026-innovations"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Fine Dining Trends in Bali 2026
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                Discover what&apos;s shaping luxury villa dining this year, from ingredient sourcing to plating innovation.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
+
+            <Link
+              to="/blog/private-chef-bali-cost-breakdown-detailed-2026"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Private Chef Pricing in Bali
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                Understand what goes into our menus—from market sourcing to kitchen team and plating precision.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
+
+            <Link
+              to="/blog/chef-qualifications-credentials-bali-hiring"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Chef Training & Qualifications
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                Learn about the credentials and experience behind our team of Michelin-trained chefs.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#FAFAF8] px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <div className="reveal mb-12 text-center">

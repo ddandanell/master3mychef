@@ -108,8 +108,14 @@ export default function PressPage() {
             </div>
           </div>
 
-          <aside className="rounded-[32px] border border-[#C5A028]/25 bg-white/[0.85] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.08)] backdrop-blur-sm md:p-10 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
-            <div className="flex items-center gap-3 text-[#C5A028]">
+          <aside className="rounded-[32px] border border-[#C5A028]/25 bg-white/[0.85] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.08)] backdrop-blur-sm md:p-10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+            <img
+              src="/generated/mychef-misc-bali-partner-platform-dashboard.webp"
+              alt="myCHEF media kit dashboard and press-ready brand assets"
+              className="h-56 w-full rounded-[24px] object-cover"
+              loading="eager"
+            />
+            <div className="mt-6 flex items-center gap-3 text-[#C5A028]">
               <Newspaper className="h-5 w-5" />
               <span className="text-xs uppercase tracking-[0.35em] text-[#8A857D]">Media snapshot</span>
             </div>
@@ -167,7 +173,7 @@ export default function PressPage() {
             {PRESS_MENTIONS.map((item) => (
               <article
                 key={`${item.publication}-${item.year}`}
-                className="flex h-full flex-col rounded-[28px] border border-[#C5A028]/50 bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.05)] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
+                className="flex h-full flex-col rounded-[28px] border border-[#C5A028]/50 bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.05)] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>

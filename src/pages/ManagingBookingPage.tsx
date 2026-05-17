@@ -137,12 +137,22 @@ export default function ManagingBookingPage() {
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#1A1A1A] to-[#2A2A2A] text-white py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <Link to="/help" className="text-[#C5A028] flex items-center gap-2 mb-6 hover:underline">
-            ← Back to Help
-          </Link>
-          <h1 className="text-5xl font-light mb-6">Managing Your Booking</h1>
-          <p className="text-xl text-white/70">Everything you need to know after you book—from communication to villa prep to day-of coordination.</p>
+        <div className="max-w-4xl mx-auto px-6 grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div>
+            <Link to="/help" className="text-[#C5A028] flex items-center gap-2 mb-6 hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              ← Back to Help
+            </Link>
+            <h1 className="text-5xl font-light mb-6">Managing Your Booking</h1>
+            <p className="text-xl text-white/70">Everything you need to know after you book—from communication to villa prep to day-of coordination.</p>
+          </div>
+          <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
+            <img
+              src="/generated/mychef-misc-bali-contact-concierge.webp"
+              alt="myCHEF concierge coordinating a booking for a Bali villa"
+              className="h-full min-h-[280px] w-full object-cover"
+              loading="eager"
+            />
+          </div>
         </div>
       </section>
 
@@ -241,7 +251,7 @@ export default function ManagingBookingPage() {
           <p className="text-white/70 mb-8">Message us on WhatsApp with any questions or changes needed. We respond within 15 minutes.</p>
           <a
             href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%20have%20a%20question%20about%20my%20booking..."
-            className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
           >
             Message on WhatsApp
             <MessageSquare size={20} />

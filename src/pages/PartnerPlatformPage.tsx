@@ -147,7 +147,7 @@ export default function PartnerPlatformPage() {
               href={waApply}
               target="_blank"
               rel="noopener noreferrer" data-source="partner-platform-apply"
-              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
             >
               Apply for Partnership
             </a>
@@ -155,7 +155,7 @@ export default function PartnerPlatformPage() {
               href={waShowcase}
               target="_blank"
               rel="noopener noreferrer" data-source="partner-platform-showcase"
-              className="inline-flex items-center justify-center px-10 py-4 border border-[#C5A028]/60 text-[#C5A028] font-semibold text-xs uppercase tracking-[0.25em] rounded-full hover:bg-[#C5A028]/10 transition-colors"
+              className="inline-flex items-center justify-center px-10 py-4 border border-[#C5A028]/60 text-[#C5A028] font-semibold text-xs uppercase tracking-[0.25em] rounded-full hover:bg-[#C5A028]/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
             >
               Request Showcase Dinner
             </a>
@@ -266,7 +266,7 @@ export default function PartnerPlatformPage() {
       {/* ── KITCHEN BAND IMAGE ───────────────────────────────────────── */}
       <section className="relative w-full h-[40vh] min-h-[340px] overflow-hidden">
         <OptimizedImage
-          src="/generated/partner-platform-dashboard.webp"
+          src="/generated/mychef-misc-bali-partner-platform-dashboard.webp"
           alt="Chef plating a Michelin-level course on a black marble countertop in a Bali villa"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy" />
@@ -306,7 +306,7 @@ export default function PartnerPlatformPage() {
                   <li key={b} className="flex items-start gap-2 text-sm text-[#4A4745]"><Check className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" /> {b}</li>
                 ))}
               </ul>
-              <a href={waApply} target="_blank" rel="noopener noreferrer" data-source="partner-platform-apply" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
+              <a href={waApply} target="_blank" rel="noopener noreferrer" data-source="partner-platform-apply" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                 Apply Co-Branded
               </a>
             </div>
@@ -326,7 +326,7 @@ export default function PartnerPlatformPage() {
                   <li key={b} className="flex items-start gap-2 text-sm text-white/[75%]"><Check className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" /> {b}</li>
                 ))}
               </ul>
-              <a href={waApply} target="_blank" rel="noopener noreferrer" data-source="partner-platform-apply" className="inline-flex items-center justify-center gap-2 border border-[#C5A028]/60 text-[#C5A028] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#C5A028]/10 transition-colors">
+              <a href={waApply} target="_blank" rel="noopener noreferrer" data-source="partner-platform-apply" className="inline-flex items-center justify-center gap-2 border border-[#C5A028]/60 text-[#C5A028] font-semibold text-xs uppercase tracking-[0.25em] px-8 py-4 rounded-full hover:bg-[#C5A028]/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                 Apply White-Label
               </a>
             </div>
@@ -530,7 +530,7 @@ export default function PartnerPlatformPage() {
               href={waApply}
               target="_blank"
               rel="noopener noreferrer" data-source="partner-platform-apply"
-              className="inline-flex items-center justify-center px-10 py-4 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] rounded-full hover:bg-[#D4B43A] transition-colors"
+              className="inline-flex items-center justify-center px-10 py-4 bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
             >
               Apply for Partnership
             </a>
@@ -538,7 +538,7 @@ export default function PartnerPlatformPage() {
               href={waShowcase}
               target="_blank"
               rel="noopener noreferrer" data-source="partner-platform-showcase"
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Request Showcase Dinner
             </a>
@@ -547,7 +547,7 @@ export default function PartnerPlatformPage() {
             myCHEF Partner Platform — controlled premium hospitality, the leading private villa dining network in Bali.
           </p>
           <p className="text-xs text-white/[60%] mt-6">
-            Already a guest looking to book? <Link to="/quote" className="text-[#C5A028] hover:underline">Get a quote</Link>.
+            Already a guest looking to book? <Link to="/quote" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Get a quote</Link>.
           </p>
         </div>
       </section>

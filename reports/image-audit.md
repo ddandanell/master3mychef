@@ -1,12 +1,12 @@
 # MyChef Image Audit Report
-**Generated:** 2026-05-16T18:53:48.301Z
+**Generated:** 2026-05-17T23:18:05.239Z
 
 ## Summary
 - **Total Images:** 100
 - **Total References:** 158
 - **Total File Size:** 13.28 MB
 - **Images Without Alt Text:** 0
-- **Images Not Following Convention:** 46
+- **Images Not Following Convention:** 4
 
 ## Format Distribution
 - **PNG:** 4
@@ -46,10 +46,10 @@
 1. `/public/generated/mychef-events-bali-hero-events.webp` (2752x1536) — 460.17 KB — Used 0x
 2. `/public/generated/mychef-location-bali-locations-sunset.webp` (1920x1080) — 424.3 KB — Used 2x
 3. `/public/generated/mychef-events-bali-event-wedding.webp` (2752x1536) — 422.64 KB — Used 0x
-4. `/public/generated/mychef-events-bali-anniversary-chef.webp` (1440x800) — 378.16 KB — Used 0x
+4. `/public/generated/mychef-events-bali-anniversary-chef.webp` (1440x800) — 378.16 KB — Used 1x
 5. `/public/generated/mychef-finedining-bali-chef-signature.jpg` (896x1200) — 356.99 KB — Used 0x
 6. `/public/generated/mychef-misc-bali-about-team-photo.webp` (1440x800) — 334.87 KB — Used 0x
-7. `/public/generated/mychef-events-bali-retreat-table.webp` (1440x800) — 271.04 KB — Used 0x
+7. `/public/generated/mychef-events-bali-retreat-table.webp` (1440x800) — 271.04 KB — Used 2x
 8. `/public/generated/mychef-catering-bali-hero-buffet-catering.webp` (1440x800) — 269.76 KB — Used 3x
 9. `/public/generated/mychef-events-bali-birthday-pool.webp` (1440x800) — 255.31 KB — Used 1x
 10. `/public/generated/mychef-events-bali-corporate-events.webp` (1440x800) — 253.14 KB — Used 2x

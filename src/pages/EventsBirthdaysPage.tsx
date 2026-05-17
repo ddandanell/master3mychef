@@ -5,6 +5,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -101,8 +102,16 @@ const STAFFING_POINTS = [
 
 export default function EventsBirthdaysPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.birthday-reveal').forEach(el => {
+        (el as HTMLElement).style.opacity = '1'
+      })
+      return
+    }
+
     const ctx = gsap.context(() => {
       gsap.fromTo('.birthday-reveal', { y: 40, opacity: 0 }, {
         y: 0,
@@ -114,7 +123,7 @@ export default function EventsBirthdaysPage() {
       })
     }, ref)
     return () => ctx.revert()
-  }, [])
+  }, [prefersReducedMotion])
 
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
@@ -238,7 +247,7 @@ export default function EventsBirthdaysPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/sol-bbq.webp" alt="BBQ catering spread for a Bali birthday villa party" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-finedining-bali-sol-bbq.webp" alt="BBQ catering spread for a Bali birthday villa party" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -270,7 +279,7 @@ export default function EventsBirthdaysPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/party-brunch.webp" alt="Birthday brunch desserts and cake styling in a villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-party-brunch.webp" alt="Birthday brunch desserts and cake styling in a villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -299,7 +308,7 @@ export default function EventsBirthdaysPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/party-pool.webp" alt="Poolside birthday setup with staff and table styling in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-party-pool.webp" alt="Poolside birthday setup with staff and table styling in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -309,7 +318,7 @@ export default function EventsBirthdaysPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/party-festival.webp" alt="Themed birthday party styling inspiration for Bali villa events" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-party-festival.webp" alt="Themed birthday party styling inspiration for Bali villa events" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -392,7 +401,7 @@ export default function EventsBirthdaysPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/party-white.webp" alt="Premium birthday party styling with decor and lighting in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-party-white.webp" alt="Premium birthday party styling with decor and lighting in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

@@ -183,13 +183,13 @@ export default function PrivateChefBaliPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="private-chef-bali-hero"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Book on WhatsApp
             </a>
             <Link
               to="/menus"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               Browse Menus <ChevronRight className="w-4 h-4" />
             </Link>
@@ -209,7 +209,7 @@ export default function PrivateChefBaliPage() {
         <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="pcb-reveal">
             <img
-              src="/generated/luna-table.webp"
+              src="/generated/mychef-experience-bali-luna-table.webp"
               alt="Private chef dinner table in a Bali villa — elegant setting, myCHEF"
               width={800} height={600} loading="lazy" decoding="async"
               className="w-full h-auto object-cover rounded-[20px]" />
@@ -227,7 +227,7 @@ export default function PrivateChefBaliPage() {
             <p className="text-white/[70%] text-base leading-relaxed mb-8">
               We bring the kitchen to you. The team arrives 3 hours before your first course — setting the table, preparing the mise en place, sourcing that morning's freshest catch. You arrive to a table already set.
             </p>
-            <Link to="/fine-dining" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline">
+            <Link to="/fine-dining" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
               See the full fine dining experience <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
@@ -285,7 +285,7 @@ export default function PrivateChefBaliPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/fine-dining" className="inline-flex items-center gap-1.5 text-sm font-semibold hover:underline" style={{ color: menu.accent }}>
+                  <Link to="/fine-dining" className="inline-flex items-center gap-1.5 text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5" style={{ color: menu.accent }}>
                     See full experience <ChevronRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -311,7 +311,7 @@ export default function PrivateChefBaliPage() {
             <p className="text-white/[70%] text-base leading-relaxed mb-8">
               He still leads every tasting menu, every Chef's Table, and every training session for the team of 50+ Indonesian hospitality professionals he has built.
             </p>
-            <Link to="/chefs" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline">
+            <Link to="/chefs" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
               Meet all our chefs <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
@@ -377,7 +377,7 @@ export default function PrivateChefBaliPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {TESTIMONIALS.map((t) => (
-              <article key={t.name} className="pcb-reveal rounded-[24px] bg-white border border-[#E8E2CF] p-7 shadow-sm">
+              <article key={t.name} className="pcb-reveal rounded-[24px] bg-white border border-[#E8E2CF] p-7 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                 <div className="flex gap-0.5 mb-4">
                   {Array.from({ length: t.rating }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-[#C5A028] text-[#C5A028]" />
@@ -420,7 +420,7 @@ export default function PrivateChefBaliPage() {
           href={WA_LINK}
           target="_blank" rel="noopener noreferrer"
           data-source="private-chef-bali-final-cta"
-          className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
+          className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
         >
           <MessageCircle className="w-5 h-5" /> Hire a Private Chef — WhatsApp
         </a>
@@ -436,7 +436,7 @@ export default function PrivateChefBaliPage() {
             { label: "Chef's Table", href: '/fine-dining/chefs-table' },
             { label: 'Our Menus', href: '/menus' },
           ].map((l) => (
-            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors">
+            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               {l.label}
             </Link>
           ))}

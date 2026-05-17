@@ -226,7 +226,7 @@ export default function FineDiningMenusPage() {
             target="_blank"
             rel="noopener noreferrer"
             data-source="menus-hero-cta"
-            className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-all hover:scale-[1.02] hover:bg-[#d0ab33]"
+            className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-all hover:scale-[1.02] hover:bg-[#d0ab33] focus:outline-none focus:ring-2 focus:ring-white rounded"
           >
             <MessageCircle className="h-4 w-4" />
             Check Menu Availability
@@ -338,7 +338,7 @@ export default function FineDiningMenusPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       data-source={menu.dataSource}
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-[#d0ab33]"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-[#d0ab33] focus:outline-none focus:ring-2 focus:ring-white rounded"
                     >
                       <MessageCircle className="h-4 w-4" />
                       Enquire on WhatsApp
@@ -355,10 +355,72 @@ export default function FineDiningMenusPage() {
             </p>
             <Link
               to="/fine-dining/chefs-table"
-              className="mt-5 inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-white/[85%] transition-colors hover:text-white"
+              className="mt-5 inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-white/[85%] transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
             >
               Explore Chef&apos;s Table
               <ChevronRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#1A1916] px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="reveal mb-12 text-center">
+            <p
+              className="mb-4 text-xs uppercase tracking-[0.35em] text-[#C5A028]"
+              style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+            >
+              Learn More
+            </p>
+            <h2 className="text-3xl text-white md:text-5xl mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Explore fine dining in Bali
+            </h2>
+          </div>
+          <div className="reveal grid gap-6 md:grid-cols-3">
+            <Link
+              to="/blog/fine-dining-trends-bali-2026-innovations"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Fine Dining Trends in Bali 2026
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                Discover what&apos;s shaping luxury villa dining this year, from ingredient sourcing to plating innovation.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
+
+            <Link
+              to="/blog/private-chef-bali-cost-breakdown-detailed-2026"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Private Chef Pricing in Bali
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                Understand what goes into our menus—from market sourcing to kitchen team and plating precision.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
+
+            <Link
+              to="/blog/chef-qualifications-credentials-bali-hiring"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Chef Training & Qualifications
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                Learn about the credentials and experience behind our team of Michelin-trained chefs.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
             </Link>
           </div>
         </div>
@@ -503,7 +565,7 @@ export default function FineDiningMenusPage() {
             target="_blank"
             rel="noopener noreferrer"
             data-source="menus-final-cta"
-            className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#d0ab33]"
+            className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#d0ab33] focus:outline-none focus:ring-2 focus:ring-white rounded"
           >
             <MessageCircle className="h-4 w-4" />
             Message myCHEF on WhatsApp

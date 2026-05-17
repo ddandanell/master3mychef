@@ -18,7 +18,7 @@ import SeoHead, {
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 // import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -529,6 +529,8 @@ export default function CateringVillaPage() {
 
       <PressStrip />
 
+      <CateringDiscoverySection page="villa" />
+
       {/* ═══════ SECTION 13: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
@@ -563,31 +565,6 @@ export default function CateringVillaPage() {
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Same-day reply</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> 50% deposit only</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> No hidden fees</span>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ SECTION 14: INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1000px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/fine-dining" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              <h4 className="font-semibold text-sm mb-1">Fine Dining</h4>
-              <p className="text-xs text-[#4A4745]">7–11 course tasting menus in your villa</p>
-            </Link>
-            <Link to="/catering/bbq-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              <h4 className="font-semibold text-sm mb-1">BBQ Catering</h4>
-              <p className="text-xs text-[#4A4745]">Live-fire grilling at your villa pool</p>
-            </Link>
-            <Link to="/events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              <h4 className="font-semibold text-sm mb-1">Events</h4>
-              <p className="text-xs text-[#4A4745]">Weddings, birthdays, corporate events</p>
-            </Link>
-            <Link to="/contact" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              <h4 className="font-semibold text-sm mb-1">Contact</h4>
-              <p className="text-xs text-[#4A4745]">Speak to our team directly</p>
-            </Link>
           </div>
         </div>
       </section>

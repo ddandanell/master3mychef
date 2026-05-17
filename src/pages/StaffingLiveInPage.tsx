@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, ChefHat } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
   localBusinessSchema,
   breadcrumbSchema,
@@ -83,8 +84,16 @@ const FAQS = [
 
 export default function StaffingLiveInPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.placement-reveal').forEach(el => {
+        (el as HTMLElement).style.opacity = '1'
+      })
+      return
+    }
+
     const ctx = gsap.context(() => {
       gsap.fromTo('.placement-reveal', { y: 50, opacity: 0 }, {
         y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
@@ -92,7 +101,7 @@ export default function StaffingLiveInPage() {
       })
     }, ref)
     return () => ctx.revert()
-  }, [])
+  }, [prefersReducedMotion])
 
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
@@ -141,10 +150,10 @@ export default function StaffingLiveInPage() {
             structured onboarding. From IDR 8,000,000 per month.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-live-in-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-live-in-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
             </a>
-            <a href="#book" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
+            <a href="#book" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
               <Calendar className="w-4 h-4" /> Request Profiles
             </a>
           </div>
@@ -239,10 +248,10 @@ export default function StaffingLiveInPage() {
             Tell us your requirements and we will send matched chef profiles within 48 hours.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-live-in-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-live-in-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
-            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>

@@ -136,7 +136,7 @@ export default function ContactPage() {
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <section className="relative w-full min-h-[68vh] flex items-end overflow-hidden">
         <img
-          src="/generated/contact-hero.webp"
+          src="/generated/mychef-misc-bali-contact-hero.webp"
           alt="Luxury Bali villa terrace at golden hour with a concierge desk"
           width={1920}
           height={1080}
@@ -196,7 +196,7 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-source="contact-chef-card"
-                  className="group block bg-white border border-[#E5E3E0] rounded-2xl overflow-hidden hover:border-[#C5A028] transition-colors"
+                  className="group block bg-white border border-[#E5E3E0] rounded-2xl overflow-hidden hover:border-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 >
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <img
@@ -249,7 +249,7 @@ export default function ContactPage() {
           {/* Left — concierge portrait */}
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#0A0A0A] order-2 md:order-1">
             <img
-              src="/generated/contact-concierge.webp"
+              src="/generated/mychef-misc-bali-contact-concierge.webp"
               alt="myCHEF concierge replying to a guest enquiry from the Bali office"
               width={800}
               height={1000}
@@ -276,7 +276,7 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="contact-quick-message"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-black transition-colors hover:bg-[#D4B43A]"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF — Reply in 1 Hour
               </a>
@@ -302,7 +302,7 @@ export default function ContactPage() {
                 <button
                   type="button"
                   onClick={() => { setSubmitted(false); setForm(INITIAL_FORM) }}
-                  className="text-xs uppercase tracking-[0.2em] text-[#8A8785] hover:text-[#1A1A1A]"
+                  className="text-xs uppercase tracking-[0.2em] text-[#8A8785] hover:text-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Send another →
                 </button>
@@ -352,7 +352,7 @@ export default function ContactPage() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black text-xs uppercase tracking-[0.25em] font-semibold px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black text-xs uppercase tracking-[0.25em] font-semibold px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white"
                 >
                   Send Details via WhatsApp
                 </button>
@@ -387,7 +387,7 @@ function ContactItem({ icon: Icon, label, value, href, hint, dataSource }: { ico
   )
 
   return href ? (
-    <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" data-source={dataSource} className="hover:[&_p:nth-child(2)]:text-[#C5A028] transition-colors">
+    <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" data-source={dataSource} className="hover:[&_p:nth-child(2)]:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
       {content}
     </a>
   ) : (
@@ -422,7 +422,7 @@ function Field({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           required={required}
-          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028]"
+          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]/30"
         >
           <option value="">Select {label.toLowerCase()}</option>
           {options?.map((option) => (
@@ -437,7 +437,7 @@ function Field({
           onChange={(e) => onChange(e.target.value)}
           required={required}
           rows={rows}
-          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028] resize-none"
+          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]/30 resize-none"
         />
       ) : (
         <input
@@ -445,7 +445,7 @@ function Field({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           required={required}
-          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028]"
+          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]/30"
         />
       )}
     </label>

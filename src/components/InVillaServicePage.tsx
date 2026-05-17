@@ -121,7 +121,7 @@ export default function InVillaServicePage() {
       <section className="relative flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/butler-service.webp"
+            src="/generated/mychef-staffing-bali-butler-service.webp"
             alt="Professional butler serving luxury villa dinner in Bali"
             width={1920}
             height={1080}
@@ -263,7 +263,7 @@ export default function InVillaServicePage() {
           {/* Award image */}
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
             <OptimizedImage
-              src="/generated/were-awards.webp"
+              src="/generated/mychef-misc-bali-were-awards.webp"
               alt="myCHEF award-winning private villa dining in Bali"
               className="w-full h-full object-cover"
               loading="lazy"

@@ -105,7 +105,7 @@ export default function WeddingGuidePage() {
       <section className="relative py-24 md:py-36 overflow-hidden flex items-center min-h-[60vh]">
         <div className="absolute inset-0">
           <img
-            src="/generated/guide-wedding.webp"
+            src="/generated/mychef-ui-bali-guide-wedding.webp"
             alt="Elegant Bali villa wedding reception at sunset — myCHEF"
             className="w-full h-full object-cover"
             width={1344}
@@ -224,7 +224,7 @@ export default function WeddingGuidePage() {
           <p className="text-white/70 mb-8">Message us with your wedding date and venue details. We'll send a full proposal within 24 hours.</p>
           <a
             href="https://wa.me/6282237565997?text=I%20want%20to%20plan%20a%20wedding%20at%20my%20villa..."
-            className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
           >
             Start Planning
             <ArrowRight size={20} />

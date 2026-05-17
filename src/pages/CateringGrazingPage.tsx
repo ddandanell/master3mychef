@@ -1,9 +1,8 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import {
   MessageCircle, Check, Phone, Calendar, Users, MapPin,
   Utensils, Heart, Leaf, Flower2, Truck, ShieldCheck, Sparkles, Package,
-  Clock, Table2, Wine, Baby, ArrowRight,
+  Clock, Table2, Wine, Baby,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -18,7 +17,7 @@ import SeoHead, {
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -166,13 +165,6 @@ const TESTIMONIALS = [
 /* ═══════════════════════════════════════════════════════════════
    INTERNAL LINKS
    ═══════════════════════════════════════════════════════════════ */
-const INTERNAL_LINKS = [
-  { label: 'Fine Dining', href: '/fine-dining' },
-  { label: 'Villa Catering', href: '/catering/villa-catering' },
-  { label: 'Events', href: '/events' },
-  { label: 'Contact', href: '/contact' },
-]
-
 export default function CateringGrazingPage() {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -217,7 +209,7 @@ export default function CateringGrazingPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/pkg-grazing.webp"
+            src="/generated/mychef-catering-bali-pkg-grazing.webp"
             alt="Grazing table Bali with cheese, charcuterie, fresh fruit, and edible flowers styled for a villa event"
             width={1920}
             height={1080}
@@ -293,7 +285,7 @@ export default function CateringGrazingPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <OptimizedImage
-                src="/generated/pkg-grazing.webp"
+                src="/generated/mychef-catering-bali-pkg-grazing.webp"
                 alt="Grazing table setup at a Bali villa with cheese, charcuterie, and tropical fruit"
                 className="w-full h-full object-cover aspect-[4/3]"
                 loading="lazy" />
@@ -580,26 +572,7 @@ export default function CateringGrazingPage() {
 
       <PressStrip />
 
-      {/* ═══════════════════════════════════════════════════════════════
-          INTERNAL LINKS
-          ═══════════════════════════════════════════════════════════════ */}
-      <section className="py-16 px-6 border-t border-[#E8E6E3]">
-        <div className="max-w-[1280px] mx-auto">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Related Services</p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            {INTERNAL_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
-              >
-                {link.label}
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CateringDiscoverySection page="grazing" />
 
       {/* ═══════════════════════════════════════════════════════════════
           FINAL CTA
@@ -607,7 +580,7 @@ export default function CateringGrazingPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <OptimizedImage
-            src="/generated/pkg-grazing.webp"
+            src="/generated/mychef-catering-bali-pkg-grazing.webp"
             alt="Beautiful grazing table at a Bali villa event with cheese, charcuterie, and tropical styling"
             className="w-full h-full object-cover"
             loading="lazy" />

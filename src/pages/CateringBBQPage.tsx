@@ -17,7 +17,7 @@ import SeoHead, {
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -335,7 +335,7 @@ export default function CateringBBQPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/sol-bbq.webp"
+                src="/generated/mychef-finedining-bali-sol-bbq.webp"
                 alt="Chef grilling at live BBQ station by Bali villa pool with guests watching"
                 width={800}
                 height={600}
@@ -628,7 +628,7 @@ export default function CateringBBQPage() {
       {/* ═══════ SECTION 15: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/sol-bbq.webp" alt="Finished BBQ table with grilled food at Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+          <img src="/generated/mychef-finedining-bali-sol-bbq.webp" alt="Finished BBQ table with grilled food at Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
           <div
             className="absolute inset-0"
             style={{
@@ -663,30 +663,7 @@ export default function CateringBBQPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 16: INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1000px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/fine-dining" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1">Fine Dining</h4>
-              <p className="text-xs text-[#4A4745]">7–11 course tasting menus in your villa</p>
-            </Link>
-            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1">Villa Catering</h4>
-              <p className="text-xs text-[#4A4745]">Full-service catering for villa groups</p>
-            </Link>
-            <Link to="/events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1">Events</h4>
-              <p className="text-xs text-[#4A4745]">Weddings, birthdays, corporate events</p>
-            </Link>
-            <Link to="/contact" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1">Contact</h4>
-              <p className="text-xs text-[#4A4745]">Speak to our team directly</p>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CateringDiscoverySection page="bbq" />
 
       <TaxFooter className="py-6" />
     </div>

@@ -15,7 +15,7 @@ interface Props {
 export default function BestPartnerBadge({ variant = 'dark', width = 220, className = '' }: Props) {
   return (
     <OptimizedImage
-      src="/generated/best-partner-2026.webp"
+      src="/generated/mychef-misc-bali-about-best-partner-2026.webp"
       alt="Awarded Best Partner 2026 — myCHEF Private Villa Dining"
       width={width}
       style={{

@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import {
   Check, Phone, Calendar, Users, MapPin,
   Utensils, Sparkles, ChefHat, Wine,
@@ -8,6 +7,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
   localBusinessSchema,
   cateringBreadcrumbSchema,
@@ -20,7 +20,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -173,8 +173,16 @@ const SERVICE_FLOW = [
 
 export default function CateringPlatedPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.plated-reveal').forEach(el => {
+        (el as HTMLElement).style.opacity = '1'
+      })
+      return
+    }
+
     const ctx = gsap.context(() => {
       gsap.fromTo('.plated-reveal', { y: 50, opacity: 0 }, {
         y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
@@ -182,7 +190,7 @@ export default function CateringPlatedPage() {
       })
     }, ref)
     return () => ctx.revert()
-  }, [])
+  }, [prefersReducedMotion])
 
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
@@ -207,7 +215,7 @@ export default function CateringPlatedPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering/plated-menus.webp"
+            src="/generated/mychef-catering-bali-plated-menus.webp"
             alt="Elegant plated dinner course served at a Bali villa for private fine dining"
             width={1920}
             height={1080}
@@ -288,7 +296,7 @@ export default function CateringPlatedPage() {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/hub-fine-dining.webp"
+                src="/generated/mychef-misc-bali-hub-fine-dining.webp"
                 alt="Private plated dinner setup at a Bali villa with elegant table styling"
                 width={1920}
                 height={1080}
@@ -692,18 +700,7 @@ export default function CateringPlatedPage() {
 
       <PressStrip />
 
-      {/* ═══════ INTERNAL LINKS ═══════ */}
-      <section className="py-16 md:py-20 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1280px] mx-auto">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Explore More</p>
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-            <Link to="/fine-dining" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Fine Dining</Link>
-            <Link to="/catering/villa-catering" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Villa Catering</Link>
-            <Link to="/events" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Events</Link>
-            <Link to="/contact" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Contact</Link>
-          </div>
-        </div>
-      </section>
+      <CateringDiscoverySection page="plated" />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

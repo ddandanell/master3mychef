@@ -72,7 +72,7 @@ export default function RecommendedServicesPage() {
             <Link
               key={scenario.title}
               to={scenario.href}
-              className="group rounded-[28px] border border-black/5 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-[#C5A028]/40 hover:shadow-md"
+              className="group rounded-[28px] border border-black/5 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-[#C5A028]/40 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
             >
               <p className="font-cormorant text-sm uppercase tracking-[0.35em] text-[#C5A028]">
                 {scenario.eyebrow}

@@ -59,8 +59,8 @@ const partnerBenefits = [
   },
   {
     icon: Award,
-    title: 'Partner commission structure',
-    desc: 'A clear partner reward model that makes referrals easy to track across recurring guest bookings.',
+    title: '12% co-branded / 7% white-label',
+    desc: 'Co-branded partners earn 12% on every referred booking. White-label partners earn 7%. Tracked per booking, paid monthly.',
   },
   {
     icon: FileText,
@@ -120,7 +120,7 @@ const faqs = [
   },
   {
     q: 'What does the Certified Partner programme include?',
-    a: 'Priority booking access, partner commissions, branded menus, operational support, and a dedicated myCHEF point of contact for guest dining coordination.',
+    a: 'Priority booking access, commissions (12% co-branded / 7% white-label per booking, paid monthly), branded guest menus, operational support, and a dedicated myCHEF point of contact for guest dining coordination.',
   },
   {
     q: 'Can journalists request founder commentary?',
@@ -326,7 +326,7 @@ export default function PartnersPage() {
           <div>
             <p className="text-[#C5A028] text-xs uppercase tracking-[0.35em] font-semibold mb-4">Partner Benefits</p>
             <h3 className="font-playfair text-3xl md:text-4xl mb-6">Why properties join the network</h3>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {partnerBenefits.map((benefit) => (
                 <div key={benefit.title} className="rounded-[24px] border border-[#E8E3D8] bg-white p-6">
                   <benefit.icon className="w-5 h-5 text-[#C5A028] mb-4" />
@@ -334,6 +334,46 @@ export default function PartnersPage() {
                   <p className="text-sm text-[#4A4745] leading-relaxed">{benefit.desc}</p>
                 </div>
               ))}
+            </div>
+
+            {/* Commission tier comparison */}
+            <div className="rounded-[24px] border border-[#E8E3D8] bg-white overflow-hidden">
+              <div className="px-6 py-4 border-b border-[#E8E3D8]">
+                <p className="text-xs uppercase tracking-[0.3em] font-semibold text-[#C5A028]">Commission Structure</p>
+              </div>
+              <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-[#E8E3D8]">
+                <div className="p-6">
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="font-playfair text-4xl text-[#1A1A1A]">12%</span>
+                    <span className="text-xs uppercase tracking-[0.2em] text-[#4A4745]">Co-Branded</span>
+                  </div>
+                  <p className="text-sm text-[#4A4745] leading-relaxed mb-4">Your villa's name and ours appear together on menus, collateral, and guest communications. Full credit for every referral.</p>
+                  <ul className="space-y-1.5">
+                    {['Priority chef availability','Co-branded menus + collateral','Monthly commission payout','Named certification badge'].map(f => (
+                      <li key={f} className="flex items-start gap-2 text-xs text-[#4A4745]">
+                        <span className="text-[#C5A028] mt-0.5">✓</span>{f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="font-playfair text-4xl text-[#1A1A1A]">7%</span>
+                    <span className="text-xs uppercase tracking-[0.2em] text-[#4A4745]">White-Label</span>
+                  </div>
+                  <p className="text-sm text-[#4A4745] leading-relaxed mb-4">myCHEF operates invisibly under your brand. Guests see only your villa's dining experience. Commission on every booking.</p>
+                  <ul className="space-y-1.5">
+                    {['Chef availability on request','Unbranded service delivery','Monthly commission payout','Operational SOP support'].map(f => (
+                      <li key={f} className="flex items-start gap-2 text-xs text-[#4A4745]">
+                        <span className="text-[#C5A028] mt-0.5">✓</span>{f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="px-6 py-4 bg-[#FAFAF8] border-t border-[#E8E3D8] text-xs text-[#6B6560]">
+                Commissions tracked per booking and paid monthly. WhatsApp <a href={partnerWhatsapp} className="text-[#C5A028] underline underline-offset-2">+62 822-3756-5997</a> to discuss which tier fits your property.
+              </div>
             </div>
           </div>
         </div>
@@ -384,22 +424,22 @@ export default function PartnersPage() {
           <form className="space-y-5" onSubmit={handlePartnerSubmit}>
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
-                <label htmlFor="partner-name" className="sr-only">Your name</label>
-                <input id="partner-name" required value={partnerForm.name} onChange={(e) => setPartnerForm((current) => ({ ...current, name: e.target.value }))} type="text" placeholder="Your Name *" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] outline-none focus:border-[#C5A028]" />
+                <label htmlFor="partner-name" className="block text-xs font-medium mb-2 text-[#1A1A1A]">Your Name *</label>
+                <input id="partner-name" required value={partnerForm.name} onChange={(e) => setPartnerForm((current) => ({ ...current, name: e.target.value }))} type="text" placeholder="John Smith" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] focus:outline-none focus:ring-2 focus:ring-[#C5A028] transition-all" />
               </div>
               <div>
-                <label htmlFor="partner-email" className="sr-only">Email</label>
-                <input id="partner-email" required value={partnerForm.email} onChange={(e) => setPartnerForm((current) => ({ ...current, email: e.target.value }))} type="email" placeholder="Email *" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] outline-none focus:border-[#C5A028]" />
+                <label htmlFor="partner-email" className="block text-xs font-medium mb-2 text-[#1A1A1A]">Email *</label>
+                <input id="partner-email" required value={partnerForm.email} onChange={(e) => setPartnerForm((current) => ({ ...current, email: e.target.value }))} type="email" placeholder="john@villa.com" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] focus:outline-none focus:ring-2 focus:ring-[#C5A028] transition-all" />
               </div>
             </div>
             <div>
-              <label htmlFor="partner-property" className="sr-only">Property or villa name</label>
-              <input id="partner-property" value={partnerForm.property} onChange={(e) => setPartnerForm((current) => ({ ...current, property: e.target.value }))} type="text" placeholder="Property / Villa Name" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] outline-none focus:border-[#C5A028]" />
+              <label htmlFor="partner-property" className="block text-xs font-medium mb-2 text-[#1A1A1A]">Property / Villa Name</label>
+              <input id="partner-property" value={partnerForm.property} onChange={(e) => setPartnerForm((current) => ({ ...current, property: e.target.value }))} type="text" placeholder="Villa Serenity" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] focus:outline-none focus:ring-2 focus:ring-[#C5A028] transition-all" />
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
-                <label htmlFor="partner-type" className="sr-only">Property type</label>
-                <select id="partner-type" value={partnerForm.type} onChange={(e) => setPartnerForm((current) => ({ ...current, type: e.target.value }))} className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] outline-none focus:border-[#C5A028]">
+                <label htmlFor="partner-type" className="block text-xs font-medium mb-2 text-[#1A1A1A]">Property Type</label>
+                <select id="partner-type" value={partnerForm.type} onChange={(e) => setPartnerForm((current) => ({ ...current, type: e.target.value }))} className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#C5A028] transition-all appearance-none">
                   <option value="">Property Type</option>
                   <option>Luxury Villa</option>
                   <option>Boutique Hotel</option>

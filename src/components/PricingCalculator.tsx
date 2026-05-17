@@ -215,7 +215,7 @@ export default function PricingCalculator({
             <div className="space-y-3">
               <label className="flex items-center justify-between gap-4 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
                 <span className="flex items-center gap-3">
-                  <input type="checkbox" checked={includeWaiters} onChange={(event) => setIncludeWaiters(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-[#C5A028]" />
+                  <input type="checkbox" checked={includeWaiters} onChange={(event) => setIncludeWaiters(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-2 focus:ring-[#C5A028] focus:outline-none" />
                   + Waiters (+IDR 350K each)
                 </span>
                 {includeWaiters && (
@@ -223,7 +223,7 @@ export default function PricingCalculator({
                     aria-label="Waiter quantity"
                     value={waiterCount}
                     onChange={(event) => setWaiterCount(Number(event.target.value))}
-                    className="rounded-xl border border-[#DDD4BF] bg-white px-3 py-2 text-xs font-semibold text-[#1A1A1A] outline-none"
+                    className="rounded-xl border border-[#DDD4BF] bg-white px-3 py-2 text-xs font-semibold text-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                   >
                     {[1, 2, 3, 4].map((count) => (
                       <option key={count} value={count}>{count}</option>
@@ -233,17 +233,17 @@ export default function PricingCalculator({
               </label>
 
               <label className="flex items-center gap-3 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
-                <input type="checkbox" checked={includeBartender} onChange={(event) => setIncludeBartender(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-[#C5A028]" />
+                <input type="checkbox" checked={includeBartender} onChange={(event) => setIncludeBartender(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-2 focus:ring-[#C5A028] focus:outline-none" />
                 + Bartender (+IDR 450K)
               </label>
 
               <label className="flex items-center gap-3 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
-                <input type="checkbox" checked={includeSommelier} onChange={(event) => setIncludeSommelier(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-[#C5A028]" />
+                <input type="checkbox" checked={includeSommelier} onChange={(event) => setIncludeSommelier(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-2 focus:ring-[#C5A028] focus:outline-none" />
                 + Sommelier (+IDR 650K)
               </label>
 
               <label className="flex items-center gap-3 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
-                <input type="checkbox" checked={includeFloatingBreakfast} onChange={(event) => setIncludeFloatingBreakfast(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-[#C5A028]" />
+                <input type="checkbox" checked={includeFloatingBreakfast} onChange={(event) => setIncludeFloatingBreakfast(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-2 focus:ring-[#C5A028] focus:outline-none" />
                 + Floating Breakfast (+IDR 150K/person)
               </label>
             </div>

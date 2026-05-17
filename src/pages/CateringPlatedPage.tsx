@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
   localBusinessSchema,
   cateringBreadcrumbSchema,
@@ -173,8 +174,16 @@ const SERVICE_FLOW = [
 
 export default function CateringPlatedPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.plated-reveal').forEach(el => {
+        (el as HTMLElement).style.opacity = '1'
+      })
+      return
+    }
+
     const ctx = gsap.context(() => {
       gsap.fromTo('.plated-reveal', { y: 50, opacity: 0 }, {
         y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
@@ -182,7 +191,7 @@ export default function CateringPlatedPage() {
       })
     }, ref)
     return () => ctx.revert()
-  }, [])
+  }, [prefersReducedMotion])
 
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>

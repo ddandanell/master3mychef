@@ -4,6 +4,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import BookingForm from '@/components/BookingForm'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 
@@ -197,6 +198,7 @@ const TESTIMONIALS = [
 
 export default function AuraPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
 
   const eventSchemas = [
     {
@@ -258,6 +260,13 @@ export default function AuraPage() {
   ]
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.aura-reveal').forEach(el => {
+        (el as HTMLElement).style.opacity = '1'
+      })
+      return
+    }
+
     const ctx = gsap.context(() => {
 
       gsap.fromTo('.aura-reveal', { y: 50, opacity: 0 }, {
@@ -266,7 +275,7 @@ export default function AuraPage() {
       })
     }, ref)
     return () => ctx.revert()
-  }, [])
+  }, [prefersReducedMotion])
 
   return (
     <div ref={ref} data-universe="aura" className="min-h-screen" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>

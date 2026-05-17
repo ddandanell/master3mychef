@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ChevronRight, Star } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
   localBusinessSchema, breadcrumbSchema, offerSchema,
   faqPageSchema, aggregateRatingSchema, detailedServiceSchema,
@@ -138,8 +139,16 @@ const FAQS = [
 
 export default function TastingMenuPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.tasting-reveal').forEach(el => {
+        (el as HTMLElement).style.opacity = '1'
+      })
+      return
+    }
+
     const ctx = gsap.context(() => {
       gsap.fromTo('.tasting-reveal', { y: 40, opacity: 0 }, {
         y: 0, opacity: 1, duration: 0.85, stagger: 0.12, ease: 'power3.out',
@@ -147,7 +156,7 @@ export default function TastingMenuPage() {
       })
     }, ref)
     return () => ctx.revert()
-  }, [])
+  }, [prefersReducedMotion])
 
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>

@@ -1,0 +1,28 @@
+{
+  "projectName": "myCHEF",
+  "projectDescription": "Luxury Private Chef Dining Experience in Bali",
+  "alwaysThinkingEnabled": true,
+  "modelSelection": "haiku",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "command": "pnpm prettier --write \"$FILE_PATH\"",
+        "description": "Auto-format on file edit"
+      },
+      {
+        "matcher": "Write|Edit",
+        "command": "pnpm eslint --fix \"$FILE_PATH\"",
+        "description": "Auto-lint on file edit"
+      }
+    ]
+  },
+  "allowedTools": {
+    "Bash": {
+      "pnpm": true,
+      "npm": true,
+      "git": true,
+      "node": true
+    }
+  }
+}

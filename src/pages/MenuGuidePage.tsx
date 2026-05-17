@@ -95,7 +95,7 @@ export default function MenuGuidePage() {
       <section className="relative py-24 md:py-36 overflow-hidden flex items-center min-h-[60vh]">
         <div className="absolute inset-0">
           <img
-            src="/generated/guide-menu.webp"
+            src="/generated/mychef-ui-bali-guide-menu.webp"
             alt="Indonesian chef discussing a menu with guests in a private Bali villa — myCHEF"
             className="w-full h-full object-cover"
             width={1344}

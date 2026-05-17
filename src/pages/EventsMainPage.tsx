@@ -828,7 +828,7 @@ export default function EventsMainPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden bg-[#0A0A0A] text-white">
         <div className="absolute inset-0 opacity-40">
           <img
-            src="/generated/aura-tablescape.webp"
+            src="/generated/mychef-experience-bali-aura-tablescape.webp"
             alt="Aura restaurant/service at myCHEF fine dining"
             aria-hidden
             width={1920}

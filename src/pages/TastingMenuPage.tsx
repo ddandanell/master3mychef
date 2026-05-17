@@ -303,7 +303,7 @@ export default function TastingMenuPage() {
       {/* ══════════════════════════════════ WINE PAIRING ══════════════════════════════════ */}
       <section className="relative py-28 px-6 overflow-hidden">
         <img
-          src="/generated/luna-wine.webp"
+          src="/generated/mychef-experience-bali-luna-wine.webp"
           alt="Wine pairing for private tasting menu in Bali villa"
           width={1920} height={900}
           loading="lazy" decoding="async"

@@ -24,7 +24,7 @@ export default function CertifiedPartnerPage() {
         title={`${niceName} — myCHEF Certified Partner`}
         description={`${niceName} is an officially certified myCHEF villa dining partner. Verified for Michelin-level private dining execution in Bali.`}
         canonical={canonical}
-        ogImage={`${SITE}/generated/best-partner-2026.webp`}
+        ogImage={`${SITE}/generated/mychef-misc-bali-about-best-partner-2026.webp`}
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(niceName, canonical), faqPageSchema([
           { question: 'What does myCHEF Certified Partner mean?', answer: 'A myCHEF Certified Partner villa has completed at least 10 verified myCHEF private dining events, maintains a 4.8+ guest rating, and is officially recognised for excellence in Michelin-level private dining execution in Bali.' },
           { question: 'How does a villa become a myCHEF Certified Partner?', answer: 'Villas earn certified partner status by consistently hosting successful myCHEF private dining events, maintaining high guest satisfaction scores, and meeting our service and quality standards over 12+ months.' },

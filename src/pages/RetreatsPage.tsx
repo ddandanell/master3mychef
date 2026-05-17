@@ -36,7 +36,7 @@ const SECTIONS = [
     <p><strong>Lunch (1:00 PM):</strong> Nourishing Buddha bowls — quinoa, roasted vegetables, tahini dressing, grilled tempeh. Fresh young coconut water.</p>
     <p><strong>Afternoon Tea (4:00 PM):</strong> Raw energy balls, herbal infusions, and fresh tropical fruits.</p>
     <p><strong>Dinner (7:00 PM):</strong> Communal long-table dining — Balinese nasi campur with vegan options, grilled local fish, seasonal vegetables, and coconut sambal. Dessert: black rice pudding with mango.</p>`,
-    image: '/generated/generated/mychef-events-bali-retreat-table.webp',
+    image: '/generated/mychef-events-bali-retreat-table.webp',
     imageAlt: 'Retreat dining table with healthy food',
   },
   {

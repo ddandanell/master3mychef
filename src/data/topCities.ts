@@ -23,7 +23,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Beach clubs, premium villas, and a sunset dining culture built around Petitenget and the coast.',
     blurb: 'Seminyak is the original Bali villa scene — Petitenget and Oberoi-area villas, walk-to-beach addresses, and a dense restaurant culture. We cook fine dining for groups who came for the food scene and want one private evening that beats every restaurant on the strip.',
     signature: 'We shop Pasar Seminyak and Jl. Petitenget producers each morning.',
-    hero: '/generated/city-seminyak.webp',
+    hero: '/generated/mychef-location-bali-city-seminyak.webp',
   },
   {
     slug: 'canggu',
@@ -31,7 +31,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Surf crowd, digital nomads, and jungle pool villas tucked behind the beach clubs.',
     blurb: 'Canggu villas are larger, often family-run, with great kitchens. We cook weekly meal prep for long-stay families, casual poolside lunches, and Mediterranean dinners that work as well for kids as for parents.',
     signature: 'We know every villa kitchen layout from Echo Beach to Batu Bolong.',
-    hero: '/generated/city-canggu.webp',
+    hero: '/generated/mychef-location-bali-city-canggu.webp',
   },
   {
     slug: 'ubud',
@@ -39,7 +39,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Rice terraces, wellness retreats, and an artistic community spread through Bali’s jungle valleys.',
     blurb: 'Ubud villas are spread through Sayan, Penestanan, and the rice terraces. We cook plant-based menus for wellness travellers, Balinese tasting menus for first-time visitors, and full-board catering for yoga retreats.',
     signature: 'We source produce from the Ubud organic farms and Sukawati market.',
-    hero: '/generated/city-ubud.webp',
+    hero: '/generated/mychef-location-bali-city-ubud.webp',
   },
   {
     slug: 'uluwatu',
@@ -47,7 +47,7 @@ export const TOP_CITIES: TopCity[] = [
     hook: 'Clifftop villas, iconic surf breaks, and dramatic ocean views across Bali’s southern edge.',
     blurb: 'Uluwatu villas hang on cliffs above the Indian Ocean. We bring fine dining experiences that match the view — Wagyu under the stars, seafood the night it was caught, wine pairings that respect the setting.',
     signature: 'We work with the Bingin and Padang Padang fish landings.',
-    hero: '/generated/city-uluwatu.webp',
+    hero: '/generated/mychef-location-bali-city-uluwatu.webp',
   },
   {
     slug: 'sanur',

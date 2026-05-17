@@ -607,7 +607,7 @@ export default function HubPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <img
-                src="/generated/team-photo.webp"
+                src="/generated/mychef-misc-bali-team-photo.webp"
                 alt="The myCHEF team"
                 width={800}
                 height={1000}
@@ -865,10 +865,10 @@ export default function HubPage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {[
-              { name: 'Seminyak', slug: 'seminyak', image: '/generated/city-seminyak.webp' },
-              { name: 'Canggu', slug: 'canggu', image: '/generated/city-canggu.webp' },
-              { name: 'Ubud', slug: 'ubud', image: '/generated/city-ubud.webp' },
-              { name: 'Uluwatu', slug: 'uluwatu', image: '/generated/city-uluwatu.webp' },
+              { name: 'Seminyak', slug: 'seminyak', image: '/generated/mychef-location-bali-city-seminyak.webp' },
+              { name: 'Canggu', slug: 'canggu', image: '/generated/mychef-location-bali-city-canggu.webp' },
+              { name: 'Ubud', slug: 'ubud', image: '/generated/mychef-location-bali-city-ubud.webp' },
+              { name: 'Uluwatu', slug: 'uluwatu', image: '/generated/mychef-location-bali-city-uluwatu.webp' },
               { name: 'Sanur', slug: 'sanur', image: '/generated/city-sanur.webp' },
               { name: 'Nusa Dua', slug: 'nusa-dua', image: '/generated/city-nusa-dua.webp' },
               { name: 'Jimbaran', slug: 'jimbaran', image: '/generated/city-jimbaran.webp' },

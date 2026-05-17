@@ -319,10 +319,10 @@
   }
 
   /* Critical hero image fallback — ensures homepage never looks completely broken */
-  img[src*="/generated/bali-hub-hero.webp"],
-  img[src*="/generated/hub-fine-dining.webp"],
-  img[src*="/generated/hub-catering.webp"],
-  img[src*="/generated/hub-events.webp"] {
+  img[src*="/generated/mychef-misc-bali-hub-hero.webp"],
+  img[src*="/generated/mychef-finedining-bali-hub-fine-dining.webp"],
+  img[src*="/generated/mychef-catering-bali-hub-catering.webp"],
+  img[src*="/generated/mychef-events-bali-hub-events.webp"] {
     /* If image fails to load, show a dark background instead of blank space */
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   }

@@ -105,7 +105,7 @@ export default function WeddingGuidePage() {
       <section className="relative py-24 md:py-36 overflow-hidden flex items-center min-h-[60vh]">
         <div className="absolute inset-0">
           <img
-            src="/generated/guide-wedding.webp"
+            src="/generated/mychef-ui-bali-guide-wedding.webp"
             alt="Elegant Bali villa wedding reception at sunset — myCHEF"
             className="w-full h-full object-cover"
             width={1344}

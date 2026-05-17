@@ -118,7 +118,7 @@ export default function StaffingVillaManagersPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/corp-villa.webp" alt="Luxury Bali villa with professional hospitality staff" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+          <img src="/generated/mychef-events-bali-corp-villa.webp" alt="Luxury Bali villa with professional hospitality staff" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
           <div
             className="absolute inset-0"
             style={{

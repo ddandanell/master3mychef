@@ -209,7 +209,7 @@ export default function CateringGrazingPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/pkg-grazing.webp"
+            src="/generated/mychef-catering-bali-pkg-grazing.webp"
             alt="Grazing table Bali with cheese, charcuterie, fresh fruit, and edible flowers styled for a villa event"
             width={1920}
             height={1080}
@@ -285,7 +285,7 @@ export default function CateringGrazingPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <OptimizedImage
-                src="/generated/pkg-grazing.webp"
+                src="/generated/mychef-catering-bali-pkg-grazing.webp"
                 alt="Grazing table setup at a Bali villa with cheese, charcuterie, and tropical fruit"
                 className="w-full h-full object-cover aspect-[4/3]"
                 loading="lazy" />
@@ -580,7 +580,7 @@ export default function CateringGrazingPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <OptimizedImage
-            src="/generated/pkg-grazing.webp"
+            src="/generated/mychef-catering-bali-pkg-grazing.webp"
             alt="Beautiful grazing table at a Bali villa event with cheese, charcuterie, and tropical styling"
             className="w-full h-full object-cover"
             loading="lazy" />

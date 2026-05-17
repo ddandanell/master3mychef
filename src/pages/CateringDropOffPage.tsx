@@ -236,7 +236,7 @@ export default function CateringDropOffPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-dropoff-catering.webp"
+            src="/generated/mychef-catering-bali-hero-dropoff.webp"
             alt="Drop-off catering boxes with prepared food on a Bali villa dining table"
             width={1920}
             height={1080}
@@ -305,7 +305,7 @@ export default function CateringDropOffPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/hub-catering.webp"
+                src="/generated/mychef-catering-bali-hub-catering.webp"
                 alt="Calm villa dining table with drop-off food served family-style"
                 width={800}
                 height={600}
@@ -669,7 +669,7 @@ export default function CateringDropOffPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hub-catering.webp"
+            src="/generated/mychef-catering-bali-hub-catering.webp"
             alt="Beautiful finished villa table after drop-off catering"
             width={1920}
             height={1080}

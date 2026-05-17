@@ -118,7 +118,7 @@ export default function RomanticDinnerPage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/section-romantic-dinner.webp"
+            src="/generated/mychef-misc-bali-section-romantic-dinner.webp"
             alt="Candlelit romantic dinner table in a Bali villa at dusk with flowers and wine"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
@@ -228,7 +228,7 @@ export default function RomanticDinnerPage() {
       {/* ══════════════════════════════════ TABLE SETUP EDITORIAL ══════════════════════════════════ */}
       <section className="relative overflow-hidden min-h-[60vh] flex items-end">
         <img
-          src="/generated/luna-table.webp"
+          src="/generated/mychef-experience-bali-luna-table.webp"
           alt="Candlelit private dining table set for two in a Bali villa with white linens and flowers"
           width={1920} height={1080}
           loading="lazy" decoding="async"
@@ -506,7 +506,7 @@ export default function RomanticDinnerPage() {
       {/* ══════════════════════════════════ FINAL CTA ══════════════════════════════════ */}
       <section className="relative py-28 px-6 overflow-hidden">
         <img
-          src="/generated/luna-detail.webp"
+          src="/generated/mychef-experience-bali-luna-detail.webp"
           alt="Private fine dining in Bali villa"
           width={1920} height={800}
           loading="lazy" decoding="async"

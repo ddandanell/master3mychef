@@ -102,7 +102,7 @@ const CATERING_STYLES = [
     accent: '#6B8E5A',
   },
   {
-    image: '/generated/city-ubud.webp',
+    image: '/generated/mychef-location-bali-city-ubud.webp',
     title: 'Retreat Catering',
     price: 'From IDR 400,000/person/day',
     description: 'Best for yoga retreats, wellness centers, and multi-day group stays. Plant-forward menus.',
@@ -110,7 +110,7 @@ const CATERING_STYLES = [
     accent: '#6B8E5A',
   },
   {
-    image: '/generated/generated/mychef-catering-bali-floating-breakfast.webp',
+    image: '/generated/mychef-catering-bali-floating-breakfast.webp',
     title: 'Floating Breakfast',
     price: 'From IDR 950,000/couple',
     description: 'Best for villa pools, couples, birthdays, and honeymoon mornings.',
@@ -1259,7 +1259,7 @@ export default function CateringMainPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <OptimizedImage
-            src="/generated/hub-catering.webp"
+            src="/generated/mychef-catering-bali-hub-catering.webp"
             alt="Completed villa dinner table with food ready"
             className="w-full h-full object-cover"
             loading="lazy" />

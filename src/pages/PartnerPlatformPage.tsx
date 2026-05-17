@@ -266,7 +266,7 @@ export default function PartnerPlatformPage() {
       {/* ── KITCHEN BAND IMAGE ───────────────────────────────────────── */}
       <section className="relative w-full h-[40vh] min-h-[340px] overflow-hidden">
         <OptimizedImage
-          src="/generated/partner-platform-dashboard.webp"
+          src="/generated/mychef-misc-bali-partner-platform-dashboard.webp"
           alt="Chef plating a Michelin-level course on a black marble countertop in a Bali villa"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy" />

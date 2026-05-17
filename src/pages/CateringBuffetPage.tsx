@@ -445,7 +445,7 @@ export default function CateringBuffetPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/aura-tablescape.webp"
+                src="/generated/mychef-experience-bali-aura-tablescape.webp"
                 alt="Styled buffet table in Bali villa garden with linens, flowers, and chafing dishes"
                 width={800}
                 height={600}
@@ -709,7 +709,7 @@ export default function CateringBuffetPage() {
       {/* ═══════ SECTION 17: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/aura-corporate.webp" alt="Completed buffet table with food ready and staff at Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+          <img src="/generated/mychef-experience-bali-aura-corporate.webp" alt="Completed buffet table with food ready and staff at Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
           <div
             className="absolute inset-0"
             style={{

@@ -117,7 +117,7 @@ export default function ServiceBartendersPage() {
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
   <div className="absolute inset-0">
-    <img src="/generated/aura-bartender.webp" alt="Professional bartender mixing cocktails at a private Bali villa bar" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+    <img src="/generated/mychef-experience-bali-aura-bartender.webp" alt="Professional bartender mixing cocktails at a private Bali villa bar" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
     <div
       className="absolute inset-0"
       style={{
@@ -254,7 +254,7 @@ export default function ServiceBartendersPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/party-ultimate.webp" alt="Villa bar setup at Bali event" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-events-bali-party-ultimate.webp" alt="Villa bar setup at Bali event" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

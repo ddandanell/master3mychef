@@ -286,7 +286,7 @@ export default function EventsWeddingsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/aura-toast.webp" alt="Champagne service during Bali wedding cocktail hour" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-experience-bali-aura-toast.webp" alt="Champagne service during Bali wedding cocktail hour" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -461,7 +461,7 @@ export default function EventsWeddingsPage() {
               </a>
             </div>
             <div className="h-full min-h-[320px]">
-              <img src="/generated/aura-toast.webp" alt="Wedding couple toasting during a Bali villa celebration" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-experience-bali-aura-toast.webp" alt="Wedding couple toasting during a Bali villa celebration" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

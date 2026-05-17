@@ -166,7 +166,7 @@ export default function CateringBabiGulingPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-babiguling-catering.webp"
+            src="/generated/mychef-catering-bali-hero-babiguling.webp"
             alt="Traditional Balinese Babi Guling whole-pig catering setup with crispy skin, rice, sambal, and lawar for a villa party in Bali"
             width={1920}
             height={1080}
@@ -238,7 +238,7 @@ export default function CateringBabiGulingPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/pkg-roast.webp"
+                src="/generated/mychef-catering-bali-pkg-roast.webp"
                 alt="Chef carving traditional Babi Guling with Balinese sides at a villa event"
                 width={800}
                 height={600}
@@ -389,7 +389,7 @@ export default function CateringBabiGulingPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-2xl overflow-hidden order-2 md:order-1">
               <img
-                src="/generated/hub-catering.webp"
+                src="/generated/mychef-catering-bali-hub-catering.webp"
                 alt="Professional Babi Guling catering team serving at a Bali villa event"
                 width={800}
                 height={600}
@@ -629,7 +629,7 @@ export default function CateringBabiGulingPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/pkg-roast.webp"
+            src="/generated/mychef-catering-bali-pkg-roast.webp"
             alt="Complete Babi Guling catering table with guests at a Bali villa"
             width={1920}
             height={1080}

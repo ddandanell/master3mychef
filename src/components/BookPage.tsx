@@ -82,7 +82,7 @@ export default function BookPage() {
       <section className="relative min-h-[50vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/book-hero.webp"
+            src="/generated/mychef-ui-bali-book-hero.webp"
             alt="Book your experience"
             width={1920}
             height={1080}

@@ -335,7 +335,7 @@ export default function CateringBBQPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/sol-bbq.webp"
+                src="/generated/mychef-finedining-bali-sol-bbq.webp"
                 alt="Chef grilling at live BBQ station by Bali villa pool with guests watching"
                 width={800}
                 height={600}
@@ -628,7 +628,7 @@ export default function CateringBBQPage() {
       {/* ═══════ SECTION 15: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/sol-bbq.webp" alt="Finished BBQ table with grilled food at Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+          <img src="/generated/mychef-finedining-bali-sol-bbq.webp" alt="Finished BBQ table with grilled food at Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
           <div
             className="absolute inset-0"
             style={{

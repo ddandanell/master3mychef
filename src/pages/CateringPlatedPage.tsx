@@ -215,7 +215,7 @@ export default function CateringPlatedPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering/plated-menus.webp"
+            src="/generated/mychef-catering-bali-plated-menus.webp"
             alt="Elegant plated dinner course served at a Bali villa for private fine dining"
             width={1920}
             height={1080}
@@ -296,7 +296,7 @@ export default function CateringPlatedPage() {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/hub-fine-dining.webp"
+                src="/generated/mychef-misc-bali-hub-fine-dining.webp"
                 alt="Private plated dinner setup at a Bali villa with elegant table styling"
                 width={1920}
                 height={1080}

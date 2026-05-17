@@ -209,7 +209,7 @@ export default function PrivateChefBaliPage() {
         <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="pcb-reveal">
             <img
-              src="/generated/luna-table.webp"
+              src="/generated/mychef-experience-bali-luna-table.webp"
               alt="Private chef dinner table in a Bali villa — elegant setting, myCHEF"
               width={800} height={600} loading="lazy" decoding="async"
               className="w-full h-auto object-cover rounded-[20px]" />

@@ -106,7 +106,7 @@ export default function HelpPage() {
       <section className="relative py-32 md:py-60 overflow-hidden flex items-center min-h-[70vh]">
         <div className="absolute inset-0">
           <img
-            src="/generated/help-hero.webp"
+            src="/generated/mychef-misc-bali-help-hero.webp"
             alt="Professional guest relations in a Bali villa — myCHEF help center"
             className="w-full h-full object-cover"
             width={1344}

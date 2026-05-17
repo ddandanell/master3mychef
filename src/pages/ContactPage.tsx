@@ -136,7 +136,7 @@ export default function ContactPage() {
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <section className="relative w-full min-h-[68vh] flex items-end overflow-hidden">
         <img
-          src="/generated/contact-hero.webp"
+          src="/generated/mychef-misc-bali-contact-hero.webp"
           alt="Luxury Bali villa terrace at golden hour with a concierge desk"
           width={1920}
           height={1080}
@@ -249,7 +249,7 @@ export default function ContactPage() {
           {/* Left — concierge portrait */}
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#0A0A0A] order-2 md:order-1">
             <img
-              src="/generated/contact-concierge.webp"
+              src="/generated/mychef-misc-bali-contact-concierge.webp"
               alt="myCHEF concierge replying to a guest enquiry from the Bali office"
               width={800}
               height={1000}

@@ -66,7 +66,7 @@ export default function CertifiedPartnerPage() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           <Link
             to="/quote"
-            className="inline-flex items-center justify-center bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+            className="inline-flex items-center justify-center bg-[#C5A028] text-[#050505] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
           >
             Book Dining at {niceName}
           </Link>
@@ -74,7 +74,7 @@ export default function CertifiedPartnerPage() {
             href={`https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'd like to verify and book dining at ${niceName}.`)}`}
             target="_blank"
             rel="noopener noreferrer" data-source="certified-partner-cta"
-            className="inline-flex items-center justify-center gap-2 border border-[#1A1A1A]/20 text-[#1A1A1A] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#1A1A1A]/5 transition-colors"
+            className="inline-flex items-center justify-center gap-2 border border-[#1A1A1A]/20 text-[#1A1A1A] font-semibold text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-full hover:bg-[#1A1A1A]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
           >
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
           </a>
@@ -83,7 +83,7 @@ export default function CertifiedPartnerPage() {
         <p className="text-xs text-[#8A8785]">
           Certification verified at <span className="text-[#1A1A1A] font-medium">mychef.id/certified/{slug}</span>
           {' · '}
-          <Link to="/partner-platform" className="text-[#2C5F7C] hover:underline">About the partner programme →</Link>
+          <Link to="/partner-platform" className="text-[#2C5F7C] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">About the partner programme →</Link>
         </p>
       </section>
     </main>

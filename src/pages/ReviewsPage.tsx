@@ -229,7 +229,7 @@ export default function ReviewsPage() {
               </div>
               <a
                 href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-source="reviews-cta" 
-                className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A]"
+                className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp us
@@ -292,7 +292,7 @@ export default function ReviewsPage() {
                 Weddings, private dinners, retreat catering and villa celebrations — filter by the type of experience you want to book.
               </p>
             </div>
-            <Link to="/pricing" className="text-sm font-semibold text-[#1A1A1A] underline decoration-[#C5A028] underline-offset-4">
+            <Link to="/pricing" className="text-sm font-semibold text-[#1A1A1A] underline decoration-[#C5A028] underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
               See pricing guide
             </Link>
           </div>
@@ -315,7 +315,7 @@ export default function ReviewsPage() {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {filteredReviews.map((review) => (
-              <article key={`${review.name}-${review.date}`} className="rounded-[28px] border border-[#E8E2CF] bg-white p-6 md:p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+              <article key={`${review.name}-${review.date}`} className="rounded-[28px] border border-[#E8E2CF] bg-white p-6 md:p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                 <div className="flex flex-col gap-3 border-b border-[#F0EBDE] pb-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
                   <div className="flex flex-wrap items-center gap-3">
                     <span className="rounded-full bg-[#FAF2D4] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#8A6F15]">
@@ -379,12 +379,12 @@ export default function ReviewsPage() {
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-source="reviews-cta" 
-                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A]"
+                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
               >
                 <MessageCircle className="h-4 w-4" />
                 Chat on WhatsApp
               </a>
-              <Link to="/book" className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5">
+              <Link to="/book" className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 Start booking
               </Link>
             </div>

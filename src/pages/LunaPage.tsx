@@ -435,7 +435,7 @@ export default function LunaPage() {
               <Link
                 key={item.href}
                 to={item.href}
-                className="group flex flex-col gap-2 rounded-xl border border-white/10 px-5 py-4 hover:border-[#C5A028]/60 hover:bg-white/5 transition-all duration-200"
+                className="group flex flex-col gap-2 rounded-xl border border-white/10 px-5 py-4 hover:border-[#C5A028]/60 hover:bg-white/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
               >
                 <span className="text-xl">{item.icon}</span>
                 <span className="text-white font-medium text-sm leading-snug" style={{ fontFamily: "'Playfair Display', serif" }}>{item.label}</span>
@@ -1113,7 +1113,7 @@ export default function LunaPage() {
               </p>
               <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 px-5 py-5">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028] mb-3">Read our guides</p>
-                <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#C5A028] transition-colors">
+                <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                   Visit the myCHEF Journal <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>

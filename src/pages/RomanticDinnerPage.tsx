@@ -153,13 +153,13 @@ export default function RomanticDinnerPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="romantic-dinner-hero"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Plan Our Romantic Dinner
             </a>
             <Link
               to="/fine-dining"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               See the Full Experience <ChevronRight className="w-4 h-4" />
             </Link>
@@ -291,7 +291,7 @@ export default function RomanticDinnerPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="romantic-dinner-menu-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Book This Menu
             </a>
@@ -409,7 +409,7 @@ export default function RomanticDinnerPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="romantic-dinner-howitworks-cta"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Start Planning
             </a>
@@ -430,7 +430,7 @@ export default function RomanticDinnerPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {TESTIMONIALS.map((t) => (
-              <article key={t.name} className="rounded-[24px] border border-[#E8E2CF] bg-white p-7 shadow-sm">
+              <article key={t.name} className="rounded-[24px] border border-[#E8E2CF] bg-white p-7 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                 <div className="flex gap-0.5 mb-4">
                   {Array.from({ length: t.rating }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-[#C5A028] text-[#C5A028]" />
@@ -483,7 +483,7 @@ export default function RomanticDinnerPage() {
                 href={WA_LINK}
                 target="_blank" rel="noopener noreferrer"
                 data-source="romantic-dinner-pricing-cta"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
               >
                 <MessageCircle className="w-4 h-4" /> Get a Quote
               </a>
@@ -526,7 +526,7 @@ export default function RomanticDinnerPage() {
             href={WA_LINK}
             target="_blank" rel="noopener noreferrer"
             data-source="romantic-dinner-final-cta"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
           >
             <MessageCircle className="w-5 h-5" /> Message Sofia on WhatsApp
           </a>
@@ -544,7 +544,7 @@ export default function RomanticDinnerPage() {
             { label: 'Our Menus', href: '/menus' },
             { label: 'Pricing', href: '/pricing' },
           ].map((l) => (
-            <Link key={l.href} to={l.href} className="text-white/[50%] text-sm hover:text-[#C5A028] transition-colors">
+            <Link key={l.href} to={l.href} className="text-white/[50%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               {l.label}
             </Link>
           ))}

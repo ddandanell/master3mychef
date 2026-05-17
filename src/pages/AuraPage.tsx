@@ -305,10 +305,10 @@ export default function AuraPage() {
             From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 15M total event minimum. Olivia replies within 24 hours.
           </p>
           <div className="aura-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Get Event Quote — 24h Reply
             </a>
-            <a href="#packages" className="inline-block px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="#packages" className="inline-block px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               See Party Events
             </a>
           </div>
@@ -349,7 +349,7 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="text-center">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Start on WhatsApp
             </a>
           </div>
@@ -374,7 +374,7 @@ export default function AuraPage() {
                 {item.href && item.cta && (
                   <a
                     href={item.href}
-                    className="inline-flex items-center gap-2 mt-6 text-xs font-semibold tracking-[0.25em] uppercase self-center text-[#2C5F7C] hover:text-[#0F0F0F] transition-colors"
+                    className="inline-flex items-center gap-2 mt-6 text-xs font-semibold tracking-[0.25em] uppercase self-center text-[#2C5F7C] hover:text-[#0F0F0F] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                   >
                     {item.cta}
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -405,13 +405,13 @@ export default function AuraPage() {
               <article
                 key={pkg.slug}
                 id={pkg.slug}
-                className="group flex flex-col scroll-mt-24"
+                className="group flex flex-col scroll-mt-24 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
               >
                 <a
                   href={`https://wa.me/6282237565997?text=${encodeURIComponent('Hi myCHEF — interested in the ' + pkg.name + ' package. Could you send details?')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative block overflow-hidden rounded-[16px] aspect-[16/8] mb-8 ring-1 ring-black/5 shadow-[0_16px_40px_-20px_rgba(15,15,15,0.3)]"
+                  className="relative block overflow-hidden rounded-[16px] aspect-[16/8] mb-8 ring-1 ring-black/5 shadow-[0_16px_40px_-20px_rgba(15,15,15,0.3)] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                 >
                   <img
                     src={pkg.image}
@@ -487,7 +487,7 @@ export default function AuraPage() {
                   href={`https://wa.me/6282237565997?text=${encodeURIComponent('Hi myCHEF — interested in the ' + pkg.name + ' package. Could you send details?')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] uppercase self-start py-2 border-b-2 border-[#0F0F0F] hover:border-[#2C5F7C] hover:text-[#2C5F7C] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] uppercase self-start py-2 border-b-2 border-[#0F0F0F] hover:border-[#2C5F7C] hover:text-[#2C5F7C] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                   style={{ color: '#0F0F0F' }}
                 >
                   Book this experience
@@ -527,7 +527,7 @@ export default function AuraPage() {
               href="https://wa.me/6282237565997?text=Hi%20myCHEF%20%E2%80%94%20I%27d%20like%20to%20design%20a%20custom%20villa%20party"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <Phone className="w-4 h-4" /> Design a custom party
             </a>
@@ -552,7 +552,7 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Get Your Quote
             </a>
           </div>
@@ -653,7 +653,7 @@ export default function AuraPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Ask Olivia on WhatsApp
             </a>
           </div>
@@ -686,7 +686,7 @@ export default function AuraPage() {
               <p className="text-xs mb-6" style={{ color: '#4A4745' }}>
                 * Custom quotes include catering, bar, staffing, and basic décor. AV, floral, and specialty items quoted separately.
               </p>
-              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 <Phone className="w-4 h-4" /> Get a Quote on WhatsApp
               </a>
             </div>
@@ -716,10 +716,10 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1e4a63] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1e4a63] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Get Quote in 24h — Free Consultation
             </a>
-            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>
           </div>

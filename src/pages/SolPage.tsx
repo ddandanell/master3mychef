@@ -108,10 +108,10 @@ export default function SolPage() {
             This page is for couples, families, and villa guests who want breakfast, lunch, or dinner cooked in their villa. Best for 1–4 guests and longer stays — not parties, weddings, or large catered events.
           </p>
           <div className="sol-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Message myCHEF
             </a>
-            <Link to="/catering" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <Link to="/catering" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               Planning a Group Event?
             </Link>
           </div>
@@ -122,7 +122,7 @@ export default function SolPage() {
             <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
               Choose <span className="font-semibold text-white">Private Villa Dining</span> if you want a chef dedicated to your villa stay, daily meals, or an intimate dinner at home. Choose Events & Catering if you are hosting 5+ guests, a celebration, or need buffet, BBQ, plated service, or wedding-style setup.
             </p>
-            <Link to="/catering" className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors">
+            <Link to="/catering" className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               View Events & Catering →
             </Link>
           </div>
@@ -150,7 +150,7 @@ export default function SolPage() {
             ))}
           </div>
           <div className="text-center">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-howitworks" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-howitworks" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Start on WhatsApp
             </a>
           </div>
@@ -216,7 +216,7 @@ export default function SolPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-pricing" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-pricing" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Book Your Chef
             </a>
           </div>
@@ -317,7 +317,7 @@ export default function SolPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-testimonials" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-testimonials" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Ask Daniel on WhatsApp
             </a>
           </div>
@@ -350,7 +350,7 @@ export default function SolPage() {
               <p className="text-xs mb-6" style={{ color: '#8A7B6B' }}>
                 * Groceries billed at cost — no markup. Minimum 4-hour booking. Service charge included.
               </p>
-              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 <Phone className="w-4 h-4" /> Book via WhatsApp
               </a>
             </div>

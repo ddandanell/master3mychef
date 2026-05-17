@@ -302,7 +302,7 @@ export default function ContactPage() {
                 <button
                   type="button"
                   onClick={() => { setSubmitted(false); setForm(INITIAL_FORM) }}
-                  className="text-xs uppercase tracking-[0.2em] text-[#8A8785] hover:text-[#1A1A1A]"
+                  className="text-xs uppercase tracking-[0.2em] text-[#8A8785] hover:text-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Send another →
                 </button>
@@ -352,7 +352,7 @@ export default function ContactPage() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black text-xs uppercase tracking-[0.25em] font-semibold px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black text-xs uppercase tracking-[0.25em] font-semibold px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white"
                 >
                   Send Details via WhatsApp
                 </button>
@@ -422,7 +422,7 @@ function Field({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           required={required}
-          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028]"
+          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]/30"
         >
           <option value="">Select {label.toLowerCase()}</option>
           {options?.map((option) => (
@@ -437,7 +437,7 @@ function Field({
           onChange={(e) => onChange(e.target.value)}
           required={required}
           rows={rows}
-          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028] resize-none"
+          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]/30 resize-none"
         />
       ) : (
         <input
@@ -445,7 +445,7 @@ function Field({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           required={required}
-          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028]"
+          className="w-full bg-transparent border-2 border-[#E5E3E0] rounded-xl px-4 py-3 text-sm focus:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]/30"
         />
       )}
     </label>

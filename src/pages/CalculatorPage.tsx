@@ -128,7 +128,7 @@ function PricingCalculator() {
             `Hi myCHEF, I used your calculator and got an estimate of IDR ${total.toLocaleString()} for ${guests} guests (${menu}). Can you confirm?`
           )}`}
           target="_blank"
-          rel="noopener noreferrer" data-source="calculator-cta" className="flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors w-full"
+          rel="noopener noreferrer" data-source="calculator-cta" className="flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors w-full focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
         >
           <MessageCircle className="w-4 h-4" />
           Confirm via WhatsApp

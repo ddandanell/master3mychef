@@ -102,7 +102,7 @@ export default function PricingGuide() {
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#1A1A1A] to-[#2A2A2A] text-white py-16">
         <div className="max-w-4xl mx-auto px-6">
-          <Link to="/help" className="text-[#C5A028] flex items-center gap-2 mb-6 hover:underline">
+          <Link to="/help" className="text-[#C5A028] flex items-center gap-2 mb-6 hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
             ← Back to Help
           </Link>
           <h1 className="text-5xl font-light mb-6">Pricing Breakdown</h1>
@@ -229,7 +229,7 @@ export default function PricingGuide() {
           <p className="text-white/70 mb-8">Message us with your event details and we'll send you a detailed proposal within 24 hours.</p>
           <a
             href="https://wa.me/6282237565997?text=I%20need%20a%20pricing%20quote%20for..."
-            className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
           >
             Request a Quote
             <ArrowRight size={20} />

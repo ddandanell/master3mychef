@@ -333,7 +333,7 @@ export default function StaffingPage() {
                 </ul>
                 <Link
                   to={svc.slug}
-                  className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all group-hover:gap-3"
+                  className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all group-hover:gap-3 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                   style={{ color: '#C5A028' }}
                 >
                   View {svc.title} <ArrowRight className="w-4 h-4" />
@@ -475,14 +475,14 @@ export default function StaffingPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="staffing-cta"
-                className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105"
+                className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                 style={{ background: '#C5A028', color: '#1A1A1A' }}
               >
                 <MessageCircle className="w-4 h-4" /> Request Staff Now — Reply in 1 Hour
               </a>
               <a
                 href={`tel:+${WA_NUMBER}`}
-                className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full border border-white/25 text-white/[80%] transition-all hover:border-white/60 hover:scale-105"
+                className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full border border-white/25 text-white/[80%] transition-all hover:border-white/60 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
               >
                 <Phone className="w-4 h-4" /> Call the Team
               </a>
@@ -515,7 +515,7 @@ export default function StaffingPage() {
               <Link
                 key={link.href}
                 to={link.href}
-                className="flex items-center justify-between px-6 py-4 rounded-xl border border-white/10 text-white/[70%] text-sm tracking-wide hover:border-[#C5A028]/50 hover:text-white transition-all group"
+                className="flex items-center justify-between px-6 py-4 rounded-xl border border-white/10 text-white/[70%] text-sm tracking-wide hover:border-[#C5A028]/50 hover:text-white transition-all group focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
               >
                 {link.label}
                 <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#C5A028' }} />

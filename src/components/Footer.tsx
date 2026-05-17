@@ -31,7 +31,7 @@ export default function Footer() {
                 href="https://instagram.com/mychef.id"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 bg-white/5 hover:bg-[#C5A028]/20 rounded-full transition-all hover:scale-110"
+                className="p-2.5 bg-white/5 hover:bg-[#C5A028]/20 rounded-full transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 text-white/70 hover:text-[#C5A028]" />
@@ -41,7 +41,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="footer-social"
-                className="p-2.5 bg-white/5 hover:bg-[#C5A028]/20 rounded-full transition-all hover:scale-110"
+                className="p-2.5 bg-white/5 hover:bg-[#C5A028]/20 rounded-full transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="w-5 h-5 text-white/70 hover:text-[#C5A028]" />
@@ -57,15 +57,15 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="footer-top"
-                className="inline-flex items-center gap-2.5 text-sm font-semibold bg-[#C5A028] text-black px-6 py-3.5 rounded-full hover:bg-[#D4B033] transition-all shadow-lg shadow-[#C5A028]/20 hover:shadow-xl hover:shadow-[#C5A028]/30 hover:scale-105"
+                className="inline-flex items-center gap-2.5 text-sm font-semibold bg-[#C5A028] text-black px-6 py-3.5 rounded-full hover:bg-[#D4B033] transition-all shadow-lg shadow-[#C5A028]/20 hover:shadow-xl hover:shadow-[#C5A028]/30 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <MessageCircle className="w-4 h-4" /> +62 822-3756-5997
               </a>
             </div>
             <div className="space-y-2">
-              <a 
-                href="mailto:indonesia@mychef.id" 
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-[#C5A028] transition-colors group"
+              <a
+                href="mailto:indonesia@mychef.id"
+                className="flex items-center gap-2 text-sm text-white/60 hover:text-[#C5A028] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
               >
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 indonesia@mychef.id
@@ -87,18 +87,18 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <Link 
-                    to={pillar.url} 
-                    className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium"
+                  <Link
+                    to={pillar.url}
+                    className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                   >
                     Overview
                   </Link>
                 </li>
                 {pillar.subPages.map((sub) => (
                   <li key={sub.slug}>
-                    <Link 
-                      to={`${pillar.url}/${sub.slug}`} 
-                      className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all"
+                    <Link
+                      to={`${pillar.url}/${sub.slug}`}
+                      className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                     >
                       {sub.label}
                     </Link>
@@ -112,32 +112,32 @@ export default function Footer() {
             <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Top Experiences</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/villa-bbq-catering-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                <Link to="/villa-bbq-catering-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Villa BBQ Nights
                 </Link>
               </li>
               <li>
-                <Link to="/bali-wedding-catering-packages" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                <Link to="/bali-wedding-catering-packages" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Wedding Catering
                 </Link>
               </li>
               <li>
-                <Link to="/michelin-private-chef-bali-prices" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                <Link to="/michelin-private-chef-bali-prices" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Michelin Chef Prices
                 </Link>
               </li>
               <li>
-                <Link to="/private-tasting-menu-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                <Link to="/private-tasting-menu-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Private Tasting Menus
                 </Link>
               </li>
               <li>
-                <Link to="/chef-table-experience-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                <Link to="/chef-table-experience-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Chef Table Experience
                 </Link>
               </li>
               <li>
-                <Link to="/luxury-birthday-party-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all">
+                <Link to="/luxury-birthday-party-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Villa Birthday Parties
                 </Link>
               </li>
@@ -148,43 +148,43 @@ export default function Footer() {
             <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Locations</h4>
             <ul className="space-y-3">
               <li>
-                <Link 
-                  to="/locations" 
-                  className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium"
+                <Link
+                  to="/locations"
+                  className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Bali Regions
                 </Link>
               </li>
               {locations.map((loc) => (
                 <li key={loc.slug}>
-                  <Link 
-                    to={`/locations/${loc.slug}`} 
-                    className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all"
+                  <Link
+                    to={`/locations/${loc.slug}`}
+                    className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                   >
                     {loc.label}
                   </Link>
                 </li>
               ))}
               <li className="pt-2">
-                <Link 
-                  to="/jakarta" 
-                  className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium"
+                <Link
+                  to="/jakarta"
+                  className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Jakarta Expansion
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/jakarta" 
-                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all"
+                <Link
+                  to="/jakarta"
+                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Private Chef Jakarta
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/private-chef-menteng" 
-                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all"
+                <Link
+                  to="/private-chef-menteng"
+                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Chef in Menteng
                 </Link>
@@ -196,57 +196,57 @@ export default function Footer() {
             <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Planning Guides</h4>
             <ul className="space-y-3">
               <li>
-                <Link 
-                  to="/help" 
-                  className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium"
+                <Link
+                  to="/help"
+                  className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Help Center
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/help/pricing" 
-                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all"
+                <Link
+                  to="/help/pricing"
+                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Pricing Guide
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/help/menu-guide" 
-                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all"
+                <Link
+                  to="/help/menu-guide"
+                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Menu Planning
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/help/wedding-guide" 
-                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all"
+                <Link
+                  to="/help/wedding-guide"
+                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Wedding Guide
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/help/corporate-guide" 
-                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all"
+                <Link
+                  to="/help/corporate-guide"
+                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Corporate Guide
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/help/staffing-guide" 
-                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all"
+                <Link
+                  to="/help/staffing-guide"
+                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Staffing Guide
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/journal" 
-                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all"
+                <Link
+                  to="/journal"
+                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   myCHEF Journal
                 </Link>
@@ -258,28 +258,28 @@ export default function Footer() {
         {/* Secondary nav row - Enhanced with better visual separation */}
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-8 border-y border-white/5 text-sm text-white/50">
           {PRIMARY_NAV.filter((n) => !['Fine Dining', 'Events & Catering', 'Events', 'In-Villa Service', 'Staffing'].includes(n.label)).map((l) => (
-            <Link 
-              key={l.href} 
-              to={l.href} 
-              className="hover:text-[#C5A028] transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-[#C5A028] hover:after:w-full after:transition-all"
+            <Link
+              key={l.href}
+              to={l.href}
+              className="hover:text-[#C5A028] transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-[#C5A028] hover:after:w-full after:transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               {l.label}
             </Link>
           ))}
-          <Link to="/services" className="hover:text-[#C5A028] transition-colors">Services</Link>
-          <Link to="/pricing" className="hover:text-[#C5A028] transition-colors">Pricing</Link>
-          <Link to="/calculator" className="hover:text-[#C5A028] transition-colors">Price Calculator</Link>
-          <Link to="/faq" className="hover:text-[#C5A028] transition-colors">FAQ</Link>
-          <Link to="/reviews" className="hover:text-[#C5A028] transition-colors">Reviews</Link>
-          <Link to="/why-mychef" className="hover:text-[#C5A028] transition-colors">Why myCHEF</Link>
-          <Link to="/press" className="hover:text-[#C5A028] transition-colors">Press</Link>
-          <Link to="/join-our-team" className="hover:text-[#C5A028] transition-colors">Join the Team</Link>
-          <Link to="/partner-platform" className="hover:text-[#C5A028] transition-colors">Partner Platform</Link>
-          <Link to="/journal" className="hover:text-[#C5A028] transition-colors">Journal</Link>
-          <Link to="/blog" className="hover:text-[#C5A028] transition-colors">Blog & Guides</Link>
-          <Link 
-            to={PRIMARY_CTA.href} 
-            className="px-4 py-1.5 bg-[#C5A028]/10 text-[#C5A028] font-semibold rounded-full hover:bg-[#C5A028] hover:text-black transition-all"
+          <Link to="/services" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Services</Link>
+          <Link to="/pricing" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Pricing</Link>
+          <Link to="/calculator" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Price Calculator</Link>
+          <Link to="/faq" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">FAQ</Link>
+          <Link to="/reviews" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Reviews</Link>
+          <Link to="/why-mychef" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Why myCHEF</Link>
+          <Link to="/press" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Press</Link>
+          <Link to="/join-our-team" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Join the Team</Link>
+          <Link to="/partner-platform" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Partner Platform</Link>
+          <Link to="/journal" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Journal</Link>
+          <Link to="/blog" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Blog & Guides</Link>
+          <Link
+            to={PRIMARY_CTA.href}
+            className="px-4 py-1.5 bg-[#C5A028]/10 text-[#C5A028] font-semibold rounded-full hover:bg-[#C5A028] hover:text-black transition-all focus:outline-none focus:ring-2 focus:ring-white"
           >
             Book Now
           </Link>
@@ -289,17 +289,17 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 py-8">
           <Link
             to="/partner-platform"
-            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/40 hover:text-[#C5A028] transition-all px-5 py-2.5 rounded-full border border-white/10 hover:border-[#C5A028]/30 hover:bg-white/5"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/40 hover:text-[#C5A028] transition-all px-5 py-2.5 rounded-full border border-white/10 hover:border-[#C5A028]/30 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white"
           >
             <LogIn className="w-4 h-4" /> Staff Login
           </Link>
 
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/40">
-            <Link to="/terms" className="hover:text-[#C5A028] transition-colors">Terms of Service</Link>
+            <Link to="/terms" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Terms of Service</Link>
             <span className="text-white/20">•</span>
-            <Link to="/privacy" className="hover:text-[#C5A028] transition-colors">Privacy Policy</Link>
+            <Link to="/privacy" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Privacy Policy</Link>
             <span className="text-white/20">•</span>
-            <Link to="/cancellation" className="hover:text-[#C5A028] transition-colors">Cancellation Policy</Link>
+            <Link to="/cancellation" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Cancellation Policy</Link>
           </div>
         </div>
 

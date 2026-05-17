@@ -154,13 +154,13 @@ export default function ChefsTablePage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="chefs-table-hero"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Check Adriano's Availability
             </a>
             <Link
               to="/fine-dining"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               Full Fine Dining <ChevronRight className="w-4 h-4" />
             </Link>
@@ -280,7 +280,7 @@ export default function ChefsTablePage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="chefs-table-adriano-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Check Adriano's Availability
             </a>
@@ -339,7 +339,7 @@ export default function ChefsTablePage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="chefs-table-pricing-cta"
-              className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Inquire on WhatsApp
             </a>
@@ -360,7 +360,7 @@ export default function ChefsTablePage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {TESTIMONIALS.map((t) => (
-              <article key={t.name} className="ct-reveal rounded-[24px] border border-[#E8E2CF] bg-[#FAFAF8] p-7">
+              <article key={t.name} className="ct-reveal rounded-[24px] border border-[#E8E2CF] bg-[#FAFAF8] p-7 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                 <div className="flex gap-0.5 mb-4">
                   {Array.from({ length: t.rating }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-[#C5A028] text-[#C5A028]" />
@@ -403,7 +403,7 @@ export default function ChefsTablePage() {
           href={WA_LINK}
           target="_blank" rel="noopener noreferrer"
           data-source="chefs-table-final-cta"
-          className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
+          className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
         >
           <MessageCircle className="w-5 h-5" /> Check Adriano's Availability
         </a>
@@ -417,7 +417,7 @@ export default function ChefsTablePage() {
             { label: 'Our Menus', href: '/fine-dining/menus' },
             { label: 'Our Chefs', href: '/fine-dining/our-chefs' },
           ].map((l) => (
-            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors">
+            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               {l.label}
             </Link>
           ))}

@@ -57,3 +57,30 @@ Each post follows proven structure:
 - Build artifacts: Fresh production bundle in `dist/`
 
 **Status:** Content creation phase complete. Ready for human review and deployment.
+## Image Path Audit Complete - 2026-05-18 07:11
+
+### Issue
+User reported widespread broken image paths across all pages.
+
+### Root Causes Found
+1. **Double-path bug**: 44+ instances of `/generated/generated/` 
+2. **Short-name references**: 100+ instances using abbreviated names instead of full `mychef-[category]-bali-[descriptor].webp` format
+
+### Files Fixed
+- 50+ TypeScript files (pages, components, data modules)
+- Site architecture metadata (og:images)
+- CSS background-image references
+- Location landing pages
+- Component imports
+
+### Validation
+✅ TypeScript compilation: 0 errors
+✅ Production build: 5.45s, 147 files generated
+✅ All asset validation checks passed
+✅ Committed: fix: correct all image paths
+
+### Result
+All 100+ broken image references now point to correct files in `public/generated/` using proper naming convention.
+
+---
+

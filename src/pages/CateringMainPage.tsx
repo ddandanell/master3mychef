@@ -600,7 +600,7 @@ export default function CateringMainPage() {
                   target="_blank"
               data-source="catering-package"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-10 py-5 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                  className="inline-flex items-center gap-2 px-10 py-5 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
                 >
                   <MessageCircle className="w-4 h-4" /> Get Catering Quote for 5+ Guests
                 </a>
@@ -938,7 +938,7 @@ export default function CateringMainPage() {
                 <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
                 <Link
                   to={bookingHref(pkg.title)}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1"
                 >
                   Select package <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -1141,7 +1141,7 @@ export default function CateringMainPage() {
               target="_blank"
               data-source="catering-chat-cta"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] hover:underline"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1"
             >
               <MessageCircle className="w-4 h-4" /> Chat now
             </a>
@@ -1297,13 +1297,13 @@ export default function CateringMainPage() {
               target="_blank"
               data-source="catering-final-cta"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Get Catering Quote for Your Guests
             </a>
             <a
               href="tel:+6282237565997"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>

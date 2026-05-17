@@ -214,14 +214,14 @@ export default function FineDiningChefsPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-source="chefs-hero-cta"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition-all hover:scale-[1.02] hover:bg-[#D2AE34]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition-all hover:scale-[1.02] hover:bg-[#D2AE34] focus:outline-none focus:ring-2 focus:ring-white rounded"
                 >
                   <MessageCircle className="h-4 w-4" />
                   Book via WhatsApp
                 </a>
                 <Link
                   to="/fine-dining/menus"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-8 py-4 text-sm uppercase tracking-[0.24em] text-white transition-colors hover:bg-white/10"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-8 py-4 text-sm uppercase tracking-[0.24em] text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white rounded"
                 >
                   View Menus
                   <ChevronRight className="h-4 w-4" />
@@ -329,12 +329,12 @@ export default function FineDiningChefsPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="chefs-adriano-cta"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition-colors hover:bg-[#D2AE34]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition-colors hover:bg-[#D2AE34] focus:outline-none focus:ring-2 focus:ring-white rounded"
               >
                 <MessageCircle className="h-4 w-4" />
                 Reserve with Adriano
               </a>
-              <Link to="/fine-dining/chefs-table" className="inline-flex items-center gap-2 text-sm font-medium text-white/[80%] transition-colors hover:text-white">
+              <Link to="/fine-dining/chefs-table" className="inline-flex items-center gap-2 text-sm font-medium text-white/[80%] transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded px-1">
                 View Chef&apos;s Table
                 <ChevronRight className="h-4 w-4" />
               </Link>
@@ -405,7 +405,7 @@ export default function FineDiningChefsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-source={chef.dataSource}
-                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#C5A028] transition-colors hover:text-[#A88716]"
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#C5A028] transition-colors hover:text-[#A88716] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                   >
                     <MessageCircle className="h-4 w-4" />
                     {`Book ${chef.name}`}
@@ -503,14 +503,14 @@ export default function FineDiningChefsPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="chefs-final-cta"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition-colors hover:bg-[#D2AE34]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition-colors hover:bg-[#D2AE34] focus:outline-none focus:ring-2 focus:ring-white rounded"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp myCHEF
               </a>
               <Link
                 to="/fine-dining"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-4 text-sm uppercase tracking-[0.24em] text-white transition-colors hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-4 text-sm uppercase tracking-[0.24em] text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white rounded"
               >
                 Explore Fine Dining
                 <ChevronRight className="h-4 w-4" />

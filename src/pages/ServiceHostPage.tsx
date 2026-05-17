@@ -234,15 +234,15 @@ export default function ServiceHostPage() {
               <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Waiter Hire</h4>
               <p className="text-xs text-[#4A4745]">Add polished table service for seated dinners, receptions, and events.</p>
             </Link>
-            <Link to="/in-villa-service/bartenders" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+            <Link to="/in-villa-service/bartenders" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Bartender Hire</h4>
               <p className="text-xs text-[#4A4745]">Keep drinks flowing with a professional bar team and full setup.</p>
             </Link>
-            <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+            <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">In-Villa Service</h4>
               <p className="text-xs text-[#4A4745]">Browse the full staffing hub for guest-facing support across your event.</p>
             </Link>
-            <Link to="/events" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+            <Link to="/events" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Events</h4>
               <p className="text-xs text-[#4A4745]">Plan weddings, corporate functions, and celebrations with myCHEF.</p>
             </Link>

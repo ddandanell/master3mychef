@@ -18,15 +18,17 @@ Only one agent may edit the same area at a time.
 
 ## Current Active Tasks
 
-**Claude CLI** - READY TO START
-- Status: Awaiting task assignment
-- Files: [None yet]
-- Checks: git status ✓, package.json ✓, structure ✓
+**Claude CLI** - IN PROGRESS
+- Task: Phase 5 content integration planning + onboarding checklist
+- Status: Diagnostic phase (framework verification, structure mapping)
+- Scope: Full app codebase analysis, no modifications yet
+- Files: Reading only (siteArchitecture.ts, package.json, tsconfig, vite.config)
 
 ---
 
 ## Last Update
-- **Date**: 2026-05-18 04:59 WITA
-- **Status**: Claude CLI initialized and ready
-- **Git**: 1 modified file (siteArchitecture.ts), 9 untracked (+ AGENT_LOCK.md)
-- **Next**: Waiting for task assignment from David
+- **Date**: 2026-05-18 05:00 WITA
+- **Status**: Onboarding diagnostics running - collecting framework & structure data
+- **Framework**: React 19.2.0 + Vite + TypeScript + Tailwind CSS
+- **Git**: 1 modified file (siteArchitecture.ts), 8 untracked
+- **Next**: Report framework findings, plan content integration approach

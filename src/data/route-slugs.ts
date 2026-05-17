@@ -38,6 +38,7 @@ export const GUIDE_SLUGS: string[] = [
 ]
 
 export const BLOG_POST_SLUGS: string[] = [
+  // Phase 4 (existing)
   'blog/private-chef-bali-cost-breakdown-2026',
   'blog/best-bali-villas-private-chef-kitchen',
   'blog/wedding-rehearsal-dinner-bali',
@@ -45,6 +46,17 @@ export const BLOG_POST_SLUGS: string[] = [
   'blog/private-chef-vs-restaurant-bali',
   'blog/how-to-plan-villa-birthday-party-bali',
   'blog/private-chef-romantic-dinners-bali',
+  // Phase 5 (new content)
+  'blog/how-to-hire-private-chef-bali-complete-guide',
+  'blog/private-chef-bali-cost-breakdown-detailed-2026',
+  'blog/chef-qualifications-credentials-bali-hiring',
+  'blog/private-chef-roles-responsibilities-explained',
+  'blog/wedding-private-chef-bali-planning-guide',
+  'blog/corporate-events-catering-bali-team-dining',
+  'blog/romantic-dinner-at-home-bali-private-chef',
+  'blog/dining-by-location-bali-neighborhood-guide',
+  'blog/fine-dining-trends-bali-2026-innovations',
+  'blog/seasonal-ingredients-bali-cooking-guide',
 ]
 
 export const SERVICE_SLUGS: string[] = [

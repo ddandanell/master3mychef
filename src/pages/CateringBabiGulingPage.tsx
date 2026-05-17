@@ -18,7 +18,7 @@ import SeoHead, {
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -623,6 +623,8 @@ export default function CateringBabiGulingPage() {
         </div>
       </section>
 
+      <CateringDiscoverySection page="babiGuling" />
+
       {/* ═══════ FINAL CTA BANNER ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
@@ -662,27 +664,6 @@ export default function CateringBabiGulingPage() {
             >
               <Phone className="w-4 h-4" /> WhatsApp myCHEF
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[800px] mx-auto">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Explore More</p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link to="/fine-dining" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Fine Dining
-            </Link>
-            <Link to="/catering/villa-catering" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Villa Catering
-            </Link>
-            <Link to="/events" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Events
-            </Link>
-            <Link to="/contact" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Contact
-            </Link>
           </div>
         </div>
       </section>

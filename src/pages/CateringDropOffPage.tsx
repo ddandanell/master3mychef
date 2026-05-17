@@ -1,9 +1,8 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import {
   MessageCircle, Check, Phone, Calendar, Users, MapPin,
   Utensils, Package, CreditCard, ChefHat, Truck, Clock, ShieldCheck,
-  X, Home, Baby, Umbrella, Cake, Sparkles, Plane, ArrowRight,
+  X, Home, Baby, Umbrella, Cake, Sparkles, Plane,
   Thermometer, ClipboardList, Box, Wine, Coffee, Leaf,
 } from 'lucide-react'
 import gsap from 'gsap'
@@ -19,7 +18,7 @@ import SeoHead, {
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -188,20 +187,6 @@ const FAQS = [
   { q: 'How is food packed?', a: 'Food is packed in premium recyclable and compostable containers. Hot items are insulated, cold items are chilled. Reheating and plating instructions are printed and included.' },
   { q: 'What areas do you deliver to?', a: 'We deliver across Bali: Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, and more. Travel fees may apply for remote areas.' },
   { q: 'What is the minimum order?', a: 'Minimum order is 4 people for family dinner drop-off. Larger packages start at 8 people. Contact us for custom group sizes.' },
-]
-
-/* ───────── Upgrade / Internal Links ───────── */
-const UPGRADE_PATH = [
-  { title: 'BBQ Catering', price: 'From IDR 450,000/person', href: '/catering/bbq-catering', image: '/generated/pkg-bbq.webp' },
-  { title: 'Buffet Catering', price: 'From IDR 550,000/person', href: '/catering/buffet', image: '/generated/aura-buffet.webp' },
-  { title: 'Plated Dinner', price: 'From IDR 800,000/person', href: '/catering/plated-catering', image: '/generated/hub-catering.webp' },
-]
-
-const INTERNAL_LINKS = [
-  { label: 'Fine Dining', href: '/catering/plated-catering' },
-  { label: 'Villa Catering', href: '/catering/villa-catering' },
-  { label: 'Events', href: '/events' },
-  { label: 'Contact', href: '/contact' },
 ]
 
 const DROPOFF_GALLERY = [
@@ -678,51 +663,7 @@ export default function CateringDropOffPage() {
         </div>
       </section>
 
-      {/* ═══════ UPGRADE PATH ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="Need More?"
-            title="Need Staff Instead?"
-            subtitle="If you want chef service, waiters, live cooking, setup, and cleanup, choose one of our serviced catering options instead."
-          />
-          <div className="grid md:grid-cols-3 gap-6">
-            {UPGRADE_PATH.map((path) => (
-              <Link
-                key={path.title}
-                to={path.href}
-                className="group bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
-              >
-                <div className="aspect-[16/9] overflow-hidden">
-                  <OptimizedImage src={path.image} alt={path.title} className="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
-                </div>
-                <div className="p-5">
-                  <h4 className="font-medium text-[#1A1A1A] mb-1">{path.title}</h4>
-                  <p className="text-sm font-semibold" style={{ color: ACCENT }}>{path.price}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1280px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Related Pages</h3>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            {INTERNAL_LINKS.map((link) => (
-              <Link
-                key={link.label}
-                to={link.href}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#1A1A1A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
-              >
-                {link.label} <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CateringDiscoverySection page="dropOff" />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

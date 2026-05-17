@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import {
   Check, Phone, Calendar, Users, MapPin,
   Utensils, Sparkles, ChefHat, Wine,
@@ -21,7 +20,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -701,18 +700,7 @@ export default function CateringPlatedPage() {
 
       <PressStrip />
 
-      {/* ═══════ INTERNAL LINKS ═══════ */}
-      <section className="py-16 md:py-20 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1280px] mx-auto">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Explore More</p>
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-            <Link to="/fine-dining" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Fine Dining</Link>
-            <Link to="/catering/villa-catering" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Villa Catering</Link>
-            <Link to="/events" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Events</Link>
-            <Link to="/contact" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Contact</Link>
-          </div>
-        </div>
-      </section>
+      <CateringDiscoverySection page="plated" />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">

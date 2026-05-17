@@ -1155,7 +1155,7 @@ export default function CateringMainPage() {
           <SectionHeader
             eyebrow="Coverage"
             title="Catering Across Bali"
-            subtitle="We serve villas and event spaces across <Link to='/locations' className='underline hover:text-[#C5A028] transition-colors'>all Bali regions</Link>. Popular areas include <Link to='/locations/seminyak' className='underline hover:text-[#C5A028] transition-colors'>Seminyak</Link>, <Link to='/locations/canggu' className='underline hover:text-[#C5A028] transition-colors'>Canggu</Link>, and <Link to='/locations/ubud' className='underline hover:text-[#C5A028] transition-colors'>Ubud</Link>. Travel fees apply outside Canggu and Seminyak."
+            subtitle="We serve villas and event spaces across <Link to='/locations' className='underline hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5'>all Bali regions</Link>. Popular areas include <Link to='/locations/seminyak' className='underline hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5'>Seminyak</Link>, <Link to='/locations/canggu' className='underline hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5'>Canggu</Link>, and <Link to='/locations/ubud' className='underline hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5'>Ubud</Link>. Travel fees apply outside Canggu and Seminyak."
           />
           <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
             <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 text-center">

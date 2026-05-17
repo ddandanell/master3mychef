@@ -196,7 +196,7 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-source="contact-chef-card"
-                  className="group block bg-white border border-[#E5E3E0] rounded-2xl overflow-hidden hover:border-[#C5A028] transition-colors"
+                  className="group block bg-white border border-[#E5E3E0] rounded-2xl overflow-hidden hover:border-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 >
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <img
@@ -276,7 +276,7 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="contact-quick-message"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-black transition-colors hover:bg-[#D4B43A]"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF — Reply in 1 Hour
               </a>
@@ -387,7 +387,7 @@ function ContactItem({ icon: Icon, label, value, href, hint, dataSource }: { ico
   )
 
   return href ? (
-    <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" data-source={dataSource} className="hover:[&_p:nth-child(2)]:text-[#C5A028] transition-colors">
+    <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" data-source={dataSource} className="hover:[&_p:nth-child(2)]:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
       {content}
     </a>
   ) : (

@@ -126,14 +126,14 @@ export default function ServicesPage() {
             <a
               href={waLink}
               target="_blank"
-              rel="noopener noreferrer" data-source="services-cta" 
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#C5A028] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
+              rel="noopener noreferrer" data-source="services-cta"
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#C5A028] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded-full"
             >
               <MessageCircle className="w-4 h-4" /> Enquire on WhatsApp
             </a>
             <Link
               to="/quote"
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 border border-white/30 text-white text-xs md:text-sm tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 border border-white/30 text-white text-xs md:text-sm tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
             >
               Get a Quote <ArrowRight className="w-4 h-4" />
             </Link>
@@ -169,7 +169,7 @@ export default function ServicesPage() {
               <Link
                 key={service.slug}
                 to={`/services/${service.slug}`}
-                className="group relative rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8 transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04]"
+                className="group relative rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8 transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <div
                   className="w-14 h-14 rounded-2xl border flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110"
@@ -234,14 +234,14 @@ export default function ServicesPage() {
               <Link
                 key={city.slug}
                 to={`/${city.slug}`}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-sm text-white/[70%] hover:border-[#C5A028]/50 hover:text-[#C5A028] transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-sm text-white/[70%] hover:border-[#C5A028]/50 hover:text-[#C5A028] transition-all focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <MapPin className="w-3.5 h-3.5" /> {city.name}
               </Link>
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/locations" className="inline-flex items-center gap-2 text-sm text-[#C5A028] hover:gap-3 transition-all">
+            <Link to="/locations" className="inline-flex items-center gap-2 text-sm text-[#C5A028] hover:gap-3 transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               View All Locations <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -269,8 +269,8 @@ export default function ServicesPage() {
           <a
             href={waLink}
             target="_blank"
-            rel="noopener noreferrer" data-source="services-cta" 
-            className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors"
+            rel="noopener noreferrer" data-source="services-cta"
+            className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded-full"
           >
             <MessageCircle className="w-4 h-4" /> Message Us on WhatsApp
           </a>

@@ -444,13 +444,13 @@ export default function CateringMainPage() {
               target="_blank"
               data-source="catering-hero"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Book on WhatsApp
             </a>
             <Link
               to="/villa-chef"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <ArrowRight className="w-4 h-4" /> Need a Private Villa Chef?
             </Link>
@@ -464,7 +464,7 @@ export default function CateringMainPage() {
             </p>
             <Link
               to="/villa-chef"
-              className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
             >
               <ArrowRight className="w-4 h-4" /> View Private Villa Dining
             </Link>
@@ -563,7 +563,7 @@ export default function CateringMainPage() {
                 <div className="text-center">
                   <Link
                     to="/catering/bbq-catering"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
                   >
                     View BBQ packages <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -586,7 +586,7 @@ export default function CateringMainPage() {
                 <div className="text-center">
                   <Link
                     to="/catering/buffet"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
                   >
                     View buffet packages <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -899,7 +899,7 @@ export default function CateringMainPage() {
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold text-lg mb-3">{pkg.price}</p>
                 <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
-                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
                   Select package <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -969,7 +969,7 @@ export default function CateringMainPage() {
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold mb-3">{pkg.price}</p>
                 <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
-                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
                   Select package <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -998,7 +998,7 @@ export default function CateringMainPage() {
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold mb-3">{pkg.price}</p>
                 <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
-                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
                   Select package <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -1028,7 +1028,7 @@ export default function CateringMainPage() {
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold mb-3">{pkg.price}</p>
                 <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
-                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
                   Select package <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -1087,7 +1087,7 @@ export default function CateringMainPage() {
                     <td className="py-4 text-[#4A4745]">{row.min}</td>
                     <td className="py-4 text-[#4A4745]">{row.bestFor}</td>
                     <td className="py-4">
-                      <a href={WA_LINK} target="_blank" data-source="catering-table-check" rel="noopener noreferrer" className="text-sm font-semibold text-[#6B8E5A] hover:underline">Check date</a>
+                      <a href={WA_LINK} target="_blank" data-source="catering-table-check" rel="noopener noreferrer" className="text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">Check date</a>
                     </td>
                   </tr>
                 ))}
@@ -1103,7 +1103,7 @@ export default function CateringMainPage() {
                   <span className="text-[#6B8E5A] font-semibold text-sm">{row.price}</span>
                 </div>
                 <p className="text-xs text-[#4A4745] mb-3">Min. {row.min} · {row.bestFor}</p>
-                <a href={WA_LINK} target="_blank" data-source="catering-card-check" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A]">
+                <a href={WA_LINK} target="_blank" data-source="catering-card-check" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A] focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
                   Check date <ArrowRight className="w-3 h-3" />
                 </a>
               </div>

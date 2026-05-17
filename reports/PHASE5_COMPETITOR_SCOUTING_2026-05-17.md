@@ -62,7 +62,8 @@
 **Expected Competitor Types:** Location-specific service providers, villa rental + add-ons, local hospitality
 
 **Competitors Identified:**
-1. **kubuvillaseminyak.com** - Kubu Concierge Services
+1. ~~**kubuvillaseminyak.com**~~ - ❌ Inaccessible (May 17 domain error)
+   **REPLACED WITH:** **villadewatabali.com** - Villa Dewata Seminyak, Bali (4 & 5 Bedroom Staffed Villas)
 2. **villaseminyak.com** - Services & Facilities - Villas Seminyak Bali
 3. **ausindobalivillas.com** - Bali In Villa Additional Services and Staff
 

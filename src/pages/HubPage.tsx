@@ -355,10 +355,10 @@ export default function HubPage() {
                   Private dining, catering, and events across Bali. We shop, cook, serve, and clean. You just enjoy.
                 </p>
                 <div className="hub-hero-cta mb-4 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-                  <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ background: '#C5A028', color: '#111' }}>
+                  <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
                     <MessageCircle className="w-4 h-4" /> Get My Free Quote <span aria-hidden="true">→</span>
                   </a>
-                  <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
+                  <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
                     Browse Menus &amp; Pricing <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -401,7 +401,7 @@ export default function HubPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="homepage-pricing-strip"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028]"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 Message us with date, guest count, and villa area <ArrowRight className="h-4 w-4" />
               </a>
@@ -410,7 +410,7 @@ export default function HubPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {PORTALS.map((portal, idx) => (
               <div key={portal.id} className="portal-card group relative w-full overflow-hidden rounded-2xl min-h-[420px] sm:min-h-[480px]" style={{ aspectRatio: '3/4' }}>
-                <Link to={portal.path} className="absolute inset-0 z-10" aria-label={portal.title} />
+                <Link to={portal.path} className="absolute inset-0 z-10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" aria-label={portal.title} />
                 <img
                   src={portal.image}
                   alt={portal.title}
@@ -575,7 +575,7 @@ export default function HubPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="homepage-hiw-cta"
-              className="inline-flex items-center justify-center gap-3 px-12 py-4 rounded-full mb-6 transition-all hover:shadow-lg hover:scale-105"
+              className="inline-flex items-center justify-center gap-3 px-12 py-4 rounded-full mb-6 transition-all hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
               style={{
                 background: '#C5A028',
                 color: 'white',
@@ -848,7 +848,7 @@ export default function HubPage() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/reviews" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105" style={{ color: 'var(--u-accent)' }}>
+            <Link to="/reviews" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               Read All Reviews <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -879,7 +879,7 @@ export default function HubPage() {
               <Link
                 key={city.slug}
                 to={`/${city.slug}`}
-                className="group relative rounded-2xl overflow-hidden aspect-[4/3]"
+                className="group relative rounded-2xl overflow-hidden aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <img
                   src={city.image}
@@ -901,7 +901,7 @@ export default function HubPage() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/locations" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4" style={{ color: 'var(--u-accent)' }}>
+            <Link to="/locations" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               View All Locations <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -934,7 +934,7 @@ export default function HubPage() {
                   </div>
                 ))}
               </div>
-              <Link to="/partners" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: 'var(--u-accent)', color: '#fff' }}>
+              <Link to="/partners" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
                 Partner With myCHEF <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -964,7 +964,7 @@ export default function HubPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-about-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: '#C5A028', color: '#fff' }}>
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-about-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
               <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
             </a>
           </div>
@@ -981,7 +981,7 @@ export default function HubPage() {
                 Planning a villa dinner, wedding weekend, or Bali breakfast setup? Browse our latest guides for practical hosting tips.
               </p>
             </div>
-            <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4" style={{ color: 'var(--u-accent)' }}>
+            <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               Visit the Journal <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -990,7 +990,7 @@ export default function HubPage() {
               <Link
                 key={article.path}
                 to={article.path}
-                className="rounded-2xl border border-black/5 bg-[#FAFAF8] px-5 py-5 text-sm font-medium transition-colors hover:border-[#C5A028] hover:text-[#C5A028]"
+                className="rounded-2xl border border-black/5 bg-[#FAFAF8] px-5 py-5 text-sm font-medium transition-colors hover:border-[#C5A028] hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 {article.title}
               </Link>
@@ -1024,10 +1024,10 @@ export default function HubPage() {
             Most inquiries are answered within the hour. No deposit required to start planning.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-final-cta" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-final-cta" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
               <Phone className="w-4 h-4" /> Get My Free Quote <span aria-hidden="true">→</span>
             </a>
-            <Link to="/contact" className="inline-block px-10 py-5 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <Link to="/contact" className="inline-block px-10 py-5 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
               View All Contact Options
             </Link>
           </div>

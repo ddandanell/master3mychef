@@ -234,15 +234,15 @@ export default function ServiceBartendersPage() {
               <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Mixology</h4>
               <p className="text-xs text-[#4A4745]">Go beyond service with signature cocktails and interactive masterclasses.</p>
             </Link>
-            <Link to="/in-villa-service/waiters" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+            <Link to="/in-villa-service/waiters" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Waiter Hire</h4>
               <p className="text-xs text-[#4A4745]">Add smooth floor service for plated dinners, parties, and receptions.</p>
             </Link>
-            <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+            <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">In-Villa Service</h4>
               <p className="text-xs text-[#4A4745]">Browse the full staffing hub for drinks, dining, and guest-facing support.</p>
             </Link>
-            <Link to="/events" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5">
+            <Link to="/events" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Events</h4>
               <p className="text-xs text-[#4A4745]">Plan the full event experience around your bar concept and guest count.</p>
             </Link>

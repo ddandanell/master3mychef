@@ -234,15 +234,15 @@ export default function ServiceButlersPage() {
               <h4 className="font-semibold text-sm mb-1">Bartender Hire</h4>
               <p className="text-xs text-[#4A4745]">Professional bartenders for your villa event.</p>
             </Link>
-            <Link to="/in-villa-service/sommelier" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/in-villa-service/sommelier" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1">Sommelier Service</h4>
               <p className="text-xs text-[#4A4745]">Tailored wine pairings for your villa dinner.</p>
             </Link>
-            <Link to="/events/corporate-events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/events/corporate-events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1">Corporate Events</h4>
               <p className="text-xs text-[#4A4745]">Professional catering for offsites, conferences, and launches.</p>
             </Link>
-            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
+            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <h4 className="font-semibold text-sm mb-1">Villa Catering</h4>
               <p className="text-xs text-[#4A4745]">Full-service catering for your Bali villa stay.</p>
             </Link>

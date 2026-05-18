@@ -168,7 +168,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     h1: 'Private Chef Service in Ubud',
     heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
     heroAlt: 'Jungle valley villa in Ubud, Bali set for a traditional Balinese private chef dinner',
-    intro: 'From Sayan to the rice terraces of Tegallalang, our Ubud service embraces the island’s spiritual heart with organic, locally-sourced menus.',
+    intro: 'From Sayan to the rice terraces of Tegalalang, our Ubud service embraces the island’s spiritual heart with organic, locally sourced menus.',
     areaDescription: [
       'Ubud villas are spread through deep jungle valleys, quiet village lanes, and expansive rice terraces. Guests here usually prioritize privacy, wellness, and a deeper connection to Balinese culture and produce.',
       'myCHEF plans Ubud service around organic sourcing, plant-forward nutrition, and the quiet, professional hosting that fits a retreat setting. We specialize in multi-day retreat catering, traditional Balinese "megibung" feasts, and healthy breakfast service.',
@@ -191,7 +191,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         title: 'Private jungle dinners',
         href: '/fine-dining/romantic-dinner',
         summary: 'Intimate fine dining for couples and small groups set against the Ubud jungle backdrop.',
-        availability: 'Daily dinner coverage in Sayan and Tegalallalang.',
+        availability: 'Daily dinner coverage in Sayan and Tegalalang.',
       },
     ],
     travelFees: [
@@ -211,7 +211,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     bookingRecommendation: 'Book Ubud 3-5 days ahead, especially for retreat catering or traditional feasts that require specific morning-market sourcing.',
     villaDensity: 'Low-to-moderate density but high-value; villas are often more spread out and integrated into villages and jungle.',
     guestProfile: 'Wellness travellers, yoga groups, nature lovers, and cultural explorers who prefer quiet over coast.',
-    landmarks: ['Sayan Ridge', 'Penestanan', 'Tegalallalang Rice Terrace', 'Monkey Forest district', 'Titi Batu area'],
+    landmarks: ['Sayan Ridge', 'Penestanan', 'Tegalalang Rice Terrace', 'Monkey Forest district', 'Titi Batu area'],
     coordinates: {
       latitude: -8.5069,
       longitude: 115.2625,
@@ -229,7 +229,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     areaDescription: [
       'Uluwatu is Bali’s southern clifftop belt, known for world-class surf, iconic temples, and some of the island’s most expensive private estates. Most villas here are built for the view, with expansive terraces and open-air dining rooms.',
       'myCHEF works Uluwatu with a focus on clifftop seafood BBQs, elegant wedding rehearsal dinners, and high-end private hosting. We plan around wind, sun exposure, and the unique logistics of cliff-access properties.',
-      'We leverage the local Bingin and Padang Padang fish landings to bring the island’s best catch directly to the villa, often within hours of it being caught.',
+      'We leverage the local Bingin and Padang‑Padang fish landings to bring the island’s best catch directly to the villa, often within hours of it being caught.',
     ],
     serviceAvailability: [
       {
@@ -396,7 +396,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     h1: 'Private Chef Service in Jimbaran',
     heroImage: '/generated/mychef-location-bali-hub-hero.webp',
     heroAlt: 'Clifftop and bay-side villa setting in Jimbaran, Bali styled for a sunset private chef dinner',
-    intro: 'Jimbaran is Bali\'s seafood coast: bay villas, clifftop estates, and guests who expect the sunset meal to be the main event of the day.',
+    intro: 'Jimbaran is Bali\'s seafood coast: bay villas, cliff‑top estates, and guests who expect the sunset meal to be the main event of the day.',
     areaDescription: [
       'Jimbaran spans two strong dining moods: laid-back villas near the bay and more elevated estates above the coast. Both suit private-chef service because guests usually want the seafood quality of the shoreline restaurants without the crowds, traffic, or beach-table compromise.',
       'myCHEF uses Jimbaran best for seafood-focused menus, villa BBQs, whole-fish service, and elegant plated dinners after a beach day. We shop around the morning landing, design menus around the freshest catch, and adapt service flow to outdoor terraces, lawn dinners, and open-air kitchens.',
@@ -583,14 +583,14 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
       {
         title: 'Weekly chef service',
         href: '/services/weekly-meal-prep',
-        summary: 'Breakfast prep, healthy lunches, kids meals, and recurring villa cooking for longer bookings north of Canggu.',
+        summary: 'Breakfast prep, healthy lunches, kids\' meals, and recurring villa cooking for longer bookings north of Canggu.',
         availability: 'Best for multi-day and family stays.',
       },
       {
         title: 'Private catering & events',
         href: '/events/birthdays',
         summary: 'Birthday dinners, arrival feasts, and small-group events with chef, service, and cleanup fully handled.',
-        availability: 'Works well for 6-24 guest villas.',
+        availability: 'Works well for villas of 6–24 guests.',
       },
     ],
     travelFees: [

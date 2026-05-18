@@ -12,23 +12,23 @@ export default function SectionHeader({ eyebrow, title, subtitle, align = 'cente
   const accentColor = dark ? 'text-[#C5A028]' : 'text-[#6B8E5A]'
 
   return (
-    <div className={`mb-12 md:mb-16 ${align === 'center' ? 'text-center' : 'text-left'}`}>
+    <div className={`mb-14 md:mb-18 ${align === 'center' ? 'text-center' : 'text-left'}`}>
       {eyebrow && (
         <p
-          className={`${accentColor} text-sm uppercase tracking-[0.3em] mb-4`}
+          className={`${accentColor} text-[11px] md:text-xs uppercase tracking-[0.38em] mb-4`}
           style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
         >
           {eyebrow}
         </p>
       )}
       <h2
-        className={`${textColor} text-3xl md:text-4xl lg:text-5xl leading-tight mb-4`}
+        className={`${textColor} text-3xl md:text-4xl lg:text-[3.25rem] leading-[1.05] mb-4`}
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
         {title}
       </h2>
       {subtitle && (
-        <p className={`${mutedColor} text-lg max-w-2xl ${align === 'center' ? 'mx-auto' : ''}`}>
+        <p className={`${mutedColor} text-base md:text-lg max-w-xl ${align === 'center' ? 'mx-auto' : ''}`}>
           {subtitle}
         </p>
       )}

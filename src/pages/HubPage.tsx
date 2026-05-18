@@ -999,6 +999,91 @@ export default function HubPage() {
         </div>
       </section>
 
+      {/* BLOG POSTS */}
+      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="u-label mb-4">Blog & Guides</p>
+            <h2 className="u-heading text-4xl md:text-5xl mb-4">Expert Guides for Your Bali Event</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              From hiring your first private chef to planning a 150-guest wedding, our guides cover everything you need to know.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link to="/blog/how-to-hire-private-chef-bali-complete-guide" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">👨‍🍳</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>How to Hire a Private Chef in Bali</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>A step-by-step guide to finding, vetting, and booking the right chef for your villa.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
+            <Link to="/blog/wedding-private-chef-bali-planning-guide" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">💍</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Planning a Wedding with a Private Chef</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Coordinate your celebration menu, timeline, and service flow for the perfect villa wedding.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
+            <Link to="/blog/corporate-events-catering-bali-team-dining" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">👔</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Corporate Events & Team Dining</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Run executive dinners and off-sites with military precision and memorable food.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
+            <Link to="/blog/chef-qualifications-credentials-bali-hiring" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">⭐</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Chef Qualifications & Training</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>What credentials matter when hiring a private chef for your villa experience.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
+            <Link to="/blog/private-chef-bali-cost-breakdown-detailed-2026" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">💰</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Private Chef Pricing Breakdown</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Understand costs: from ingredients and team size to seasonal pricing and minimums.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
+            <Link to="/blog/fine-dining-trends-bali-2026-innovations" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">🍽️</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Fine Dining Trends 2026</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Discover what's trending in luxury villa dining, from plating to ingredients.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+          </div>
+          <div className="text-center mt-12">
+            <Link to="/blog" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
+              View All Articles <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="py-24 md:py-32 px-6 relative overflow-hidden">
         <div className="absolute inset-0">

@@ -109,12 +109,12 @@ const AREAS = [
 ]
 
 const BABI_GULING_GALLERY = [
-  '/generated/catering/babi-guling.webp',
-  '/generated/pkg-roast.webp',
-  '/generated/hub-catering.webp',
-  '/generated/aura-buffet.webp',
-  '/generated/pkg-bbq.webp',
-  '/generated/aura-wedding.webp',
+  '/generated/mychef-catering-bali-hero-babiguling.webp',
+  '/generated/mychef-catering-bali-pkg-roast.webp',
+  '/generated/mychef-catering-bali-hub-catering.webp',
+  '/generated/mychef-catering-bali-hero-buffet-catering.webp',
+  '/generated/mychef-catering-bali-pkg-roast.webp',
+  '/generated/mychef-events-bali-event-wedding.webp',
 ]
 
 const FAQS = [
@@ -147,7 +147,7 @@ export default function CateringBabiGulingPage() {
         title="Babi Guling Catering Bali | Traditional Balinese Feast"
         description="Babi guling catering in Bali for villa parties, weddings, birthdays, and private events with traditional Balinese flavors and full setup."
         canonical={`${SITE}/catering/babi-guling`}
-        ogImage={`${SITE}/generated/hero-babiguling-catering.webp`}
+        ogImage={`${SITE}/generated/mychef-catering-bali-hero-babiguling.webp`}
         jsonLd={[
           localBusinessSchema,
           cateringServiceSchema('Babi Guling Catering Bali', 'Traditional babi guling catering for Bali villas, birthdays, weddings, and cultural celebrations with full Balinese sides. myCHEF.id roasts, carves, and serves the feast on site across Bali.', `${SITE}/catering/babi-guling`),
@@ -639,7 +639,7 @@ export default function CateringBabiGulingPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />

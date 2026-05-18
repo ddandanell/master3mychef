@@ -212,7 +212,7 @@ export default function StaffingPage() {
           decoding="async" />
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.88) 100%)' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.88) 100%)' }}
         />
         <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-24 pt-32 max-w-[1280px] mx-auto w-full text-white">
           <Breadcrumb items={[{ label: 'Staffing' }]} theme="dark" className="px-0 pt-0 pb-8" />

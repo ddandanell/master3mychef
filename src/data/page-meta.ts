@@ -718,7 +718,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Hire a private chef in Bali for plated villa dinners with ingredients, service, and Michelin-trained standards built into the night.',
     canonical: `${SITE}/fine-dining/private-chef-bali`,
     h1: 'Private Chef in Bali',
-    ogImage: `${SITE}/generated/luna-hero-v2.webp`,
+    ogImage: `${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`,
   },
 
   'fine-dining-chefs-table': {

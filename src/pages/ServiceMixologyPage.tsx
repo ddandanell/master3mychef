@@ -122,7 +122,7 @@ export default function ServiceMixologyPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />

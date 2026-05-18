@@ -101,7 +101,7 @@ export default function ServiceBartendersPage() {
         title="Bartender Hire Bali | Villa Bartenders — myCHEF"
         description="Hire a bartender for your Bali villa. Cocktails, glassware, ice, garnishes, full pour for parties and events. From IDR 450,000 per shift."
         canonical={`${SITE}/in-villa-service/bartenders`}
-        ogImage={`${SITE}/generated/aura-bartender.webp`}
+        ogImage={`${SITE}/generated/mychef-experience-bali-aura-bartender.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema(
@@ -121,7 +121,7 @@ export default function ServiceBartendersPage() {
     <div
       className="absolute inset-0"
       style={{
-        background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+        background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
       }}
     />
     <div className="absolute inset-0 bg-black/20 md:hidden" />

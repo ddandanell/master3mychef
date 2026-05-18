@@ -104,7 +104,7 @@ export default function ServicesPage() {
           decoding="async" fetchPriority="high" />
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.88))' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.50), rgba(0,0,0,0.88))' }}
         />
         <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-24 pt-32 max-w-[1280px] mx-auto w-full">
           <p

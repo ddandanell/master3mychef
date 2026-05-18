@@ -81,7 +81,7 @@ export default function LocationLandingPage({ config }: { config: LocationLandin
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,7,7,0.82)_0%,rgba(7,7,7,0.48)_48%,rgba(7,7,7,0.18)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,7,7,0.88)_0%,rgba(7,7,7,0.62)_48%,rgba(7,7,7,0.25)_100%)]" />
 
         <div className="relative z-10 mx-auto flex w-full max-w-[1160px] flex-col gap-8 px-6 py-28 text-white md:px-10 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-[680px]">

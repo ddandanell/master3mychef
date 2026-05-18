@@ -102,7 +102,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
           />
           <div
             className="absolute inset-0"
-            style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.10) 100%)' }}
+            style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.20) 100%)' }}
           />
           <div className="relative z-10 px-8 md:px-12 py-12 md:py-20 max-w-[1100px] mx-auto w-full text-white flex flex-col justify-center h-full">
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Private chef</p>

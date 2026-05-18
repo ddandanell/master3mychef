@@ -141,9 +141,9 @@ export default function MenuPage() {
             <div className="grid grid-cols-2 gap-3">
               {[
                 { src: '/generated/mychef-finedining-bali-luna-plating.webp', alt: 'Fine dining plating' },
-                { src: '/generated/luna-dessert.webp', alt: 'Dessert course' },
-                { src: '/generated/luna-wine.webp', alt: 'Wine pairing service' },
-                { src: '/generated/luna-table.webp', alt: 'Villa table setting' },
+                { src: '/generated/mychef-experience-bali-luna-gallery-2.webp', alt: 'Dessert course' },
+                { src: '/generated/mychef-experience-bali-luna-wine.webp', alt: 'Wine pairing service' },
+                { src: '/generated/mychef-experience-bali-luna-table.webp', alt: 'Villa table setting' },
               ].map((img) => (
                 <div key={img.src} className="aspect-square overflow-hidden rounded-[16px]">
                   <img src={img.src} alt={img.alt} width={400} height={400} loading="lazy" decoding="async"

@@ -117,11 +117,11 @@ export default function ServiceHostPage() {
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
   <div className="absolute inset-0">
-    <img src="/generated/mychef-staffing-bali-hub-staffing.webp" alt="Professional villa host greeting guests in Bali" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+    <img src="/generated/mychef-staffing-bali-staffing-hero.webp" alt="Professional villa host greeting guests in Bali" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
     <div
       className="absolute inset-0"
       style={{
-        background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+        background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
       }}
     />
     <div className="absolute inset-0 bg-black/20 md:hidden" />

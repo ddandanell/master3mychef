@@ -340,7 +340,7 @@ export default function HubPage() {
                 const img = e.target as HTMLImageElement
                 img.style.opacity = '0.3'
               }} />
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)' }} />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)' }} />
             <div className="absolute inset-0 bg-black/20 md:hidden" />
             <div className="relative z-10 mx-auto flex min-h-[calc(100vh-64px)] max-w-[1280px] items-center px-5 py-10 sm:px-6 md:min-h-[calc(100vh-72px)] md:py-14">
               <div className="max-w-2xl md:max-w-[46%]">
@@ -607,7 +607,7 @@ export default function HubPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <img
-                src="/generated/mychef-misc-bali-team-photo.webp"
+                src="/generated/mychef-misc-bali-about-team-photo.webp"
                 alt="The myCHEF team"
                 width={800}
                 height={1000}

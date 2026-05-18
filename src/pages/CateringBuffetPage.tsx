@@ -208,7 +208,7 @@ export default function CateringBuffetPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -504,30 +504,30 @@ export default function CateringBuffetPage() {
       </section>
 
       {/* ═══════ SECTION 10: GROUP SIZE GUIDE ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
             eyebrow="Chapter 10 — Investment"
             title="Group Size Guide"
             subtitle="All-in totals include 21% service charge and tax. Final quote confirmed before deposit."
           />
-          <div className="hidden md:block overflow-x-auto mt-10">
+          <div className="hidden md:block overflow-x-auto mt-10 bg-white rounded-2xl border border-[#E8E6E3] p-6">
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b-2 border-[#1A1A1A]">
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Guests</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Indonesian (550K)</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">International (750K)</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Premium Live-Station (950K)</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Guests</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Indonesian <span className="text-xs font-normal opacity-70">(550K)</span></th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">International <span className="text-xs font-normal opacity-70">(750K)</span></th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Live-Station <span className="text-xs font-normal opacity-70">(950K)</span></th>
                 </tr>
               </thead>
               <tbody>
                 {GROUP_SIZE_GUIDE.map((row) => (
-                  <tr key={row.guests} className="border-b border-[#E8E6E3]">
-                    <td className="py-4 font-medium">{row.guests} guests</td>
-                    <td className="py-4 text-[#C5A028] font-semibold">{row.indonesian}</td>
-                    <td className="py-4 text-[#C5A028] font-semibold">{row.international}</td>
-                    <td className="py-4 text-[#C5A028] font-semibold">{row.premium}</td>
+                  <tr key={row.guests} className="border-b border-[#E8E6E3] even:bg-[#FAFAF8] last:border-b-0">
+                    <td className="py-5 font-semibold tabular-nums">{row.guests}</td>
+                    <td className="py-5 text-[#C5A028] font-medium tabular-nums">{row.indonesian}</td>
+                    <td className="py-5 text-[#C5A028] font-medium tabular-nums">{row.international}</td>
+                    <td className="py-5 text-[#C5A028] font-medium tabular-nums">{row.premium}</td>
                   </tr>
                 ))}
               </tbody>
@@ -536,11 +536,11 @@ export default function CateringBuffetPage() {
           <div className="md:hidden space-y-4 mt-10">
             {GROUP_SIZE_GUIDE.map((row) => (
               <div key={row.guests} className="bg-white rounded-xl border border-[#E8E6E3] p-4">
-                <p className="font-medium mb-3">{row.guests} guests</p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between"><span className="text-[#4A4745]">Indonesian</span><span className="text-[#C5A028] font-semibold">{row.indonesian}</span></div>
-                  <div className="flex justify-between"><span className="text-[#4A4745]">International</span><span className="text-[#C5A028] font-semibold">{row.international}</span></div>
-                  <div className="flex justify-between"><span className="text-[#4A4745]">Premium</span><span className="text-[#C5A028] font-semibold">{row.premium}</span></div>
+                <p className="font-semibold text-base mb-3 tabular-nums">{row.guests} guests</p>
+                <div className="divide-y divide-[#E8E6E3]">
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">Indonesian</span><span className="text-[#C5A028] font-semibold tabular-nums">{row.indonesian}</span></div>
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">International</span><span className="text-[#C5A028] font-semibold tabular-nums">{row.international}</span></div>
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">Premium</span><span className="text-[#C5A028] font-semibold tabular-nums">{row.premium}</span></div>
                 </div>
               </div>
             ))}
@@ -713,7 +713,7 @@ export default function CateringBuffetPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />

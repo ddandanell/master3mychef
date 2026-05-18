@@ -144,7 +144,7 @@ export default function ContactPage() {
           fetchPriority="high" />
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.40), rgba(0,0,0,0.86))', backdropFilter: 'blur(2px)' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.88))', backdropFilter: 'blur(2px)' }}
         />
         <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-24 pt-32 max-w-[1280px] mx-auto w-full text-white">
           <p

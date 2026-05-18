@@ -132,11 +132,11 @@ const DELIVERY_STEPS = [
 
 const FLOATING_GALLERY = [
   '/generated/mychef-catering-bali-floating-breakfast.webp',
-  '/generated/party-brunch.webp',
-  '/generated/aura-toast.webp',
-  '/generated/hub-catering.webp',
-  '/generated/aura-tablescape.webp',
-  '/generated/section-romantic-dinner.webp',
+  '/generated/mychef-events-bali-party-brunch.webp',
+  '/generated/mychef-experience-bali-aura-toast.webp',
+  '/generated/mychef-catering-bali-hub-catering.webp',
+  '/generated/mychef-experience-bali-aura-tablescape.webp',
+  '/generated/mychef-misc-bali-section-romantic-dinner.webp',
 ]
 
 const FAQS = [
@@ -196,14 +196,14 @@ export default function CateringFloatingBreakfastPage() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
           }}
         />
         {/* Bottom-to-top gradient — keeps CTA area readable */}
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to top, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.10) 40%, transparent 100%)',
+            background: 'linear-gradient(to top, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.20) 40%, transparent 100%)',
           }}
         />
         {/* Mobile — stronger full overlay */}
@@ -676,7 +676,7 @@ export default function CateringFloatingBreakfastPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />

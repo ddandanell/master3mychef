@@ -34,7 +34,7 @@ const ACCENT = '#C5A028'
 
 const PLATED_PACKAGES = [
   {
-    image: '/generated/catering/plated-menus.webp',
+    image: '/generated/mychef-catering-bali-plated-menus.webp',
     title: '3-Course Plated',
     price: 'IDR 800,000/person',
     priceNum: 800000,
@@ -43,7 +43,7 @@ const PLATED_PACKAGES = [
     minGuests: 'Min. IDR 5M',
   },
   {
-    image: '/generated/catering/plated-menus.webp',
+    image: '/generated/mychef-catering-bali-plated-menus.webp',
     title: '4-Course Plated',
     price: 'IDR 1,000,000/person',
     priceNum: 1000000,
@@ -96,11 +96,11 @@ const GROUP_TOTALS = [
 ]
 
 const PLATED_GALLERY = [
-  '/generated/pkg-italian.webp',
-  '/generated/corp-plated.webp',
-  '/generated/hub-fine-dining.webp',
-  '/generated/aura-toast.webp',
-  '/generated/aura-tablescape.webp',
+  '/generated/mychef-catering-bali-plated-menus.webp',
+  '/generated/mychef-events-bali-corp-plated.webp',
+  '/generated/mychef-misc-bali-hub-fine-dining.webp',
+  '/generated/mychef-experience-bali-aura-toast.webp',
+  '/generated/mychef-experience-bali-aura-tablescape.webp',
   '/generated/hub-catering.webp',
 ]
 
@@ -198,7 +198,7 @@ export default function CateringPlatedPage() {
         title="Plated Dinner Bali | Private Chef Fine Dining at Your Villa"
         description="Plated dinner catering in Bali for villas, anniversaries, birthdays, weddings, and private events with chef-led multi-course menus."
         canonical={`${SITE}/catering/plated-catering`}
-        ogImage={`${SITE}/generated/catering/plated-menus.webp`}
+        ogImage={`${SITE}/generated/mychef-catering-bali-plated-menus.webp`}
         jsonLd={[
           localBusinessSchema,
           cateringServiceSchema('Plated Dinner Catering Bali', 'Plated dinner catering in Bali for villas, anniversaries, weddings, and premium private events with multi-course menus. myCHEF.id provides chefs, service staff, elegant plating, and cleanup across Bali.', `${SITE}/catering/plated-catering`),
@@ -224,7 +224,7 @@ export default function CateringPlatedPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -559,7 +559,7 @@ export default function CateringPlatedPage() {
       </section>
 
       {/* ═══════ GROUP SIZE GUIDE + MINIMUM SPEND ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Investment"
@@ -591,23 +591,23 @@ export default function CateringPlatedPage() {
               </div>
             </div>
           </div>
-          <div className="hidden md:block overflow-x-auto">
+          <div className="hidden md:block overflow-x-auto bg-white rounded-2xl border border-[#E8E6E3] p-6">
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b-2 border-[#1A1A1A]">
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Guests</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">3-Course</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">4-Course</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">5-Course Premium</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Guests</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">3-Course</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">4-Course</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">5-Course Premium</th>
                 </tr>
               </thead>
               <tbody>
                 {GROUP_TOTALS.map((row) => (
-                  <tr key={row.guests} className="border-b border-[#E8E6E3]">
-                    <td className="py-4 font-medium">{row.guests} guests</td>
-                    <td className="py-4 font-semibold" style={{ color: ACCENT }}>{row.course3}</td>
-                    <td className="py-4 font-semibold" style={{ color: ACCENT }}>{row.course4}</td>
-                    <td className="py-4 font-semibold" style={{ color: ACCENT }}>{row.course5}</td>
+                  <tr key={row.guests} className="border-b border-[#E8E6E3] even:bg-[#FAFAF8] last:border-b-0">
+                    <td className="py-5 font-semibold tabular-nums">{row.guests}</td>
+                    <td className="py-5 font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course3}</td>
+                    <td className="py-5 font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course4}</td>
+                    <td className="py-5 font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course5}</td>
                   </tr>
                 ))}
               </tbody>
@@ -616,11 +616,11 @@ export default function CateringPlatedPage() {
           <div className="md:hidden space-y-4">
             {GROUP_TOTALS.map((row) => (
               <div key={row.guests} className="bg-white rounded-xl border border-[#E8E6E3] p-4">
-                <p className="font-medium mb-3">{row.guests} guests</p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between"><span className="text-[#4A4745]">3-Course</span><span className="font-semibold" style={{ color: ACCENT }}>{row.course3}</span></div>
-                  <div className="flex justify-between"><span className="text-[#4A4745]">4-Course</span><span className="font-semibold" style={{ color: ACCENT }}>{row.course4}</span></div>
-                  <div className="flex justify-between"><span className="text-[#4A4745]">5-Course</span><span className="font-semibold" style={{ color: ACCENT }}>{row.course5}</span></div>
+                <p className="font-semibold text-base mb-3 tabular-nums">{row.guests} guests</p>
+                <div className="divide-y divide-[#E8E6E3]">
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">3-Course</span><span className="font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course3}</span></div>
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">4-Course</span><span className="font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course4}</span></div>
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">5-Course</span><span className="font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course5}</span></div>
                 </div>
               </div>
             ))}

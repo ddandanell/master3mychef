@@ -97,7 +97,7 @@ export default function RecommendedServicesPage() {
       title: 'A concierge approach, not a confusing booking maze',
       body: `<p>Most guests do not arrive knowing whether they need fine dining, event catering, daily chef service, or villa staffing. They just know what they want the stay to feel like. That is where we start.</p>
       <p>myCHEF listens first, then recommends the right service based on guest count, occasion, villa setup, and the level of service you actually need. It is faster, simpler, and far more useful than guessing alone.</p>`,
-      image: '/generated/contact-concierge.webp',
+      image: '/generated/mychef-misc-bali-contact-concierge.webp',
       imageAlt: 'myCHEF concierge helping a guest choose the right Bali villa service',
     },
     {

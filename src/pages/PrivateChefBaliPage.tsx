@@ -127,7 +127,7 @@ export default function PrivateChefBaliPage() {
         title="Private Chef Bali | Michelin-Trained Villa Dining — myCHEF"
         description="Hire a private chef for your Bali villa from IDR 2,200,000 per person. Ingredients included, 560+ villas served, 12,000+ guests, all Bali areas covered."
         canonical={`${SITE}/fine-dining/private-chef-bali`}
-        ogImage={`${SITE}/generated/luna-hero-v2.webp`}
+        ogImage={`${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema(
@@ -148,7 +148,7 @@ export default function PrivateChefBaliPage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-hero-v2.webp"
+              src="/generated/mychef-experience-bali-luna-hero-v2.webp"
             alt="Michelin-trained private chef preparing dinner in a Bali villa — myCHEF"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
@@ -156,7 +156,7 @@ export default function PrivateChefBaliPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.25) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.25) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />

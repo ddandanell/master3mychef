@@ -72,9 +72,9 @@ const MUSIC_OPTIONS = [
 
 const DECOR_GALLERY = [
   { title: 'Festoon Lighting', desc: 'String lights across terraces and gardens.', image: '/generated/mychef-experience-bali-aura-setup.webp' },
-  { title: 'Pool Floats & Decor', desc: 'Themed inflatables, flower arrangements, lanterns.', image: '/generated/party-pool.webp' },
-  { title: 'Lounge Areas', desc: 'Low tables, cushions, rugs for relaxed seating.', image: '/generated/party-rooftop.webp' },
-  { title: 'Bar Styling', desc: 'Custom bar setup with branded menus and garnishes.', image: '/generated/party-beer.webp' },
+  { title: 'Pool Floats & Decor', desc: 'Themed inflatables, flower arrangements, lanterns.', image: '/generated/mychef-events-bali-party-pool.webp' },
+  { title: 'Lounge Areas', desc: 'Low tables, cushions, rugs for relaxed seating.', image: '/generated/mychef-events-bali-party-rooftop.webp' },
+  { title: 'Bar Styling', desc: 'Custom bar setup with branded menus and garnishes.', image: '/generated/mychef-events-bali-party-beer.webp' },
 ]
 
 const HENS_BUCKS = [
@@ -178,7 +178,7 @@ export default function EventsVillaPartiesPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -434,9 +434,9 @@ export default function EventsVillaPartiesPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: 'Night Pool Party', image: '/generated/mychef-events-bali-villa-party-night.webp' },
-              { title: 'Poolside Dinner Party', image: '/generated/party-pool.webp' },
-              { title: 'Rooftop Mood', image: '/generated/party-rooftop.webp' },
-              { title: 'Live BBQ Station', image: '/generated/sol-bbq.webp' },
+              { title: 'Poolside Dinner Party', image: '/generated/mychef-events-bali-party-pool.webp' },
+              { title: 'Rooftop Mood', image: '/generated/mychef-events-bali-party-rooftop.webp' },
+              { title: 'Live BBQ Station', image: '/generated/mychef-finedining-bali-sol-bbq.webp' },
             ].map((party) => (
               <div key={party.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">

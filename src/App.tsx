@@ -257,7 +257,7 @@ export default function App() {
                 title="Private Chef in Jakarta"
                 description="Michelin-trained standards, brought to private residences and corporate suites in Indonesia's capital. Experience the myCHEF standard in Jakarta."
                 slug="jakarta"
-                heroImage="/generated/mychef-location-jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Background-checked Indonesian chefs with international experience',
                   'Coverage in Menteng, Kemang, SCBD, Pondok Indah, and BSD',
@@ -275,7 +275,7 @@ export default function App() {
                 title="Private Chef in Menteng"
                 description="Discreet, professional private chef services for Jakarta's primary diplomatic and residential district. Tailored to embassy hospitality and private family residences."
                 slug="private-chef-menteng"
-                heroImage="/generated/mychef-location-jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Discreet service for high-profile and diplomatic residences',
                   'Specialized in formal multi-course hosting and embassy dinners',
@@ -293,7 +293,7 @@ export default function App() {
                 title="Private Chef in Kemang"
                 description="Sophisticated private dining and catering for Kemang's vibrant expat and creative community. From family dinners to social events."
                 slug="private-chef-kemang"
-                heroImage="/generated/mychef-location-jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Tailored menus for Kemang’s international guest profiles',
                   'Family-style catering and social event hosting',
@@ -311,7 +311,7 @@ export default function App() {
                 title="Private Chef in SCBD"
                 description="Premium corporate catering and executive private dining in the heart of Jakarta's Business District."
                 slug="private-chef-scbd"
-                heroImage="/generated/mychef-location-jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Executive boardroom lunches and corporate dinners',
                   'Seamless logistics for SCBD high-rise apartments and offices',
@@ -329,7 +329,7 @@ export default function App() {
                 title="Private Chef in Pondok Indah"
                 description="Exclusive residential private chef services for Jakarta's premier family estates."
                 slug="private-chef-pondok-indah"
-                heroImage="/generated/mychef-location-jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Large estate catering and multi-generational family dining',
                   'Specialized in milestone birthdays and home celebrations',
@@ -347,7 +347,7 @@ export default function App() {
                 title="Private Chef in BSD City"
                 description="Modern private dining and group catering for the residential and tech hubs of BSD."
                 slug="private-chef-bsd"
-                heroImage="/generated/mychef-location-jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Convenient villa-style dining for BSD residents',
                   'Group BBQ catering and social gatherings',

@@ -190,12 +190,12 @@ const FAQS = [
 ]
 
 const DROPOFF_GALLERY = [
-  '/generated/catering/dropoff-hero-v2.webp',
-  '/generated/catering/dropoff-hero.webp',
-  '/generated/hub-catering.webp',
-  '/generated/aura-buffet.webp',
-  '/generated/pkg-bbq.webp',
-  '/generated/pkg-grazing.webp',
+  '/generated/mychef-catering-bali-hero-dropoff.webp',
+  '/generated/mychef-catering-bali-hero-dropoff.webp',
+  '/generated/mychef-catering-bali-hub-catering.webp',
+  '/generated/mychef-catering-bali-hero-buffet-catering.webp',
+  '/generated/mychef-catering-bali-pkg-roast.webp',
+  '/generated/mychef-catering-bali-pkg-grazing.webp',
 ]
 
 export default function CateringDropOffPage() {
@@ -217,7 +217,7 @@ export default function CateringDropOffPage() {
         title="Drop-Off Catering Bali | Delivered Event Food & Platters"
         description="Drop-off catering in Bali for villa lunches, small events, staff meals, parties, and easy group dining without full-service staff."
         canonical={PAGE_URL}
-        ogImage={`${SITE}/generated/hero-dropoff-catering.webp`}
+        ogImage={`${SITE}/generated/mychef-catering-bali-hero-dropoff.webp`}
         jsonLd={[
           localBusinessSchema,
           cateringServiceSchema('Drop-Off Catering Bali', 'Prepared catering delivered to Bali villas and venues for low-effort lunches, staff meals, and casual group dining. myCHEF.id sends ready-to-serve dishes with delivery coordination and reheating guidance across Bali.', PAGE_URL),
@@ -245,7 +245,7 @@ export default function CateringDropOffPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />

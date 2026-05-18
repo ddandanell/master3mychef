@@ -115,8 +115,8 @@ const FAQS = [
 const RETREAT_GALLERY = [
   { title: 'Sunrise Breakfast', image: '/generated/mychef-events-bali-retreat-breakfast.webp' },
   { title: 'Communal Lunch Table', image: '/generated/mychef-events-bali-retreat-table.webp' },
-  { title: 'Whole Produce Prep', image: '/generated/sol-produce.webp' },
-  { title: 'Brunch Recovery Spread', image: '/generated/party-brunch.webp' },
+  { title: 'Whole Produce Prep', image: '/generated/mychef-finedining-bali-sol-produce.webp' },
+  { title: 'Brunch Recovery Spread', image: '/generated/mychef-events-bali-party-brunch.webp' },
 ]
 
 const INTAKE_STEPS = [
@@ -176,7 +176,7 @@ export default function EventsRetreatsPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />

@@ -21,7 +21,7 @@ const WA_LINK = `https://wa.me/${WA}?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20b
 const ACTS = [
   {
     act: 'Act I — Arrival',
-    image: '/generated/luna-detail.webp',
+    image: '/generated/mychef-experience-bali-luna-detail.webp',
     title: 'The aperitif on your terrace.',
     body: 'Before anyone sits down. The chef introduces himself. A single amuse-bouche from the kitchen — the first signal of the evening ahead. You are not in a restaurant. You are already in the meal.',
     medi: 'Welcome bite + sparkling wine aperitif',
@@ -29,7 +29,7 @@ const ACTS = [
   },
   {
     act: 'Act II — The Opening',
-    image: '/generated/luna-ingredients.webp',
+    image: '/generated/mychef-experience-bali-luna-gallery-1.webp',
     title: 'Cold, sharp, perfumed.',
     body: 'The starter wakes the palate. It arrives precise and cold — the sea or the grill in a single bite. The plating is exact. Nothing is accidental.',
     medi: 'Passione di Dentice — red snapper carpaccio, passion fruit, basil gelato',
@@ -45,7 +45,7 @@ const ACTS = [
   },
   {
     act: 'Act IV — The Centrepiece',
-    image: '/generated/luna-flame.webp',
+    image: '/generated/mychef-finedining-bali-luna-plating.webp',
     title: 'The main. The reason the menu exists.',
     body: 'One protein. Cooked correctly. No compromise on ingredient quality or technique. This is where the Wagyu ribeye meets open flame, or the barramundi answers the sea it came from.',
     medi: 'Barramundi and the Sea — barramundi roll, clams, Mediterranean sauce, green beans',
@@ -53,7 +53,7 @@ const ACTS = [
   },
   {
     act: 'Act V — The Close',
-    image: '/generated/luna-dessert.webp',
+    image: '/generated/mychef-experience-bali-luna-gallery-2.webp',
     title: 'Restrained. Earned.',
     body: 'Not too sweet. The dessert honours the meal that came before it. The kitchen is already quietly breaking down. The evening is closing at its own pace.',
     medi: 'Tiramisu — house-made lady fingers, mascarpone, Illy espresso, dark cocoa',
@@ -193,7 +193,7 @@ export default function TastingMenuPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.25) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.60) 50%, rgba(0,0,0,0.30) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />

@@ -172,7 +172,7 @@ export default function FineDiningChefsPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -257,7 +257,7 @@ export default function FineDiningChefsPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div className="reveal overflow-hidden rounded-[30px] border border-white/10 bg-black/20">
             <img
-              src="/generated/fd-chef-signature.jpg"
+              src="/generated/mychef-finedining-bali-chef-signature.jpg"
               alt="Adriano, founder and head chef of myCHEF Bali"
               width={900}
               height={1100}

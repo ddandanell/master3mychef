@@ -69,8 +69,8 @@ const THEMED_SETUPS = [
 const REAL_BIRTHDAYS = [
   { title: 'Milestone 40th Pool Dinner', location: 'Canggu Villa', image: '/generated/mychef-events-bali-birthday-pool.webp' },
   { title: 'Birthday Welcome Setup', location: 'Seminyak Villa', image: '/generated/mychef-events-bali-party-birthday.webp' },
-  { title: 'Sunset BBQ Bash', location: 'Uluwatu Villa', image: '/generated/sol-bbq.webp' },
-  { title: 'Birthday Brunch Recovery', location: 'Berawa Villa', image: '/generated/party-brunch.webp' },
+  { title: 'Sunset BBQ Bash', location: 'Uluwatu Villa', image: '/generated/mychef-finedining-bali-sol-bbq.webp' },
+  { title: 'Birthday Brunch Recovery', location: 'Berawa Villa', image: '/generated/mychef-events-bali-party-brunch.webp' },
 ]
 
 const ADDONS = [
@@ -157,7 +157,7 @@ export default function EventsBirthdaysPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />

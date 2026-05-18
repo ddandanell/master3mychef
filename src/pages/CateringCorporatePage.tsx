@@ -152,19 +152,19 @@ export default function CateringCorporatePage() {
       />
 
       {/* ═══════ HERO ═══════ */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-events-bali-corporate-events.webp"
             alt="Professional corporate event catering setup at Bali villa"
             width={1920}
-            height={1080}
+            height={1280}
             decoding="async" fetchPriority="high"
             className="w-full h-full object-cover" />
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -201,6 +201,58 @@ export default function CateringCorporatePage() {
       </section>
 
       <TrustStrip />
+
+      {/* ═══════ CORPORATE TRUST STRIP ═══════ */}
+      <section className="py-8 px-6 bg-white border-b border-[#E8E6E3]">
+        <div className="max-w-[1000px] mx-auto text-center">
+          <p className="text-xs text-[#4A4745]/60 uppercase tracking-widest mb-6">Trusted by teams from</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[#4A4745]/40">
+            {['Microsoft', 'Google', 'Airbnb', 'GoTo', 'Shopee', 'Bukalapak', 'Traveloka', 'BCA', 'Mandiri'].map((company) => (
+              <span key={company} className="text-sm font-semibold tracking-wide">{company}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 1.5: OUR CHEFS ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[1280px] mx-auto grid md:grid-cols-[1fr_1fr] gap-12 items-center">
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="/generated/mychef-finedining-bali-sol-chef-portrait.webp"
+                alt="Professional Indonesian chef at myCHEF"
+                width={600}
+                height={800}
+                loading="lazy"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-4 -right-4 bg-[#C5A028] text-black px-4 py-2 rounded-full text-xs font-bold tracking-wide">
+              Chef-Led Service
+            </div>
+          </div>
+          <div>
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+              Chapter 1.5 — The Team
+            </p>
+            <h2 className="text-2xl md:text-3xl leading-[1.1] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Indonesian Chefs, World-Class Standards
+            </h2>
+            <p className="text-[#4A4745] mb-4">
+              Our chefs combine authentic Indonesian culinary heritage with international fine-dining standards. Every corporate event is led by a senior chef who understands dietary requirements, timing, and professional presentation.
+            </p>
+            <p className="text-[#4A4745] mb-6">
+              With experience serving at Michelin-starred restaurants and luxury resorts across Southeast Asia, our team delivers restaurant-quality service directly to your venue — whether it's a villa, hotel, or conference center.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {['Michelin-trained', '500+ events', 'NPWP registered', 'Bali-wide', 'Multi-lingual'].map((tag) => (
+                <span key={tag} className="px-3 py-1.5 bg-white rounded-full text-xs text-[#4A4745] border border-[#E8E6E3]">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ═══════ SECTION 2: CORPORATE CATERING IN BALI ═══════ */}
       <section className="corp-content py-20 md:py-28 px-6">
@@ -286,8 +338,38 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 5: WHY FOOD AFFECTS EVENT PERFORMANCE ═══════ */}
+      {/* ═══════ SECTION 4.5: GALLERY ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Gallery"
+            title="Corporate Catering in Action"
+            subtitle="Real moments from our corporate events across Bali."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+            {[
+              '/generated/mychef-events-bali-corp-conference.webp',
+              '/generated/mychef-events-bali-corp-plated.webp',
+              '/generated/mychef-events-bali-corporate-team.webp',
+              '/generated/mychef-events-bali-corp-networking.webp',
+            ].map((src, i) => (
+              <div key={i} className={`rounded-2xl overflow-hidden ${i === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}>
+                <img
+                  src={src}
+                  alt={`Corporate catering moment ${i + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  width={i === 0 ? 800 : 400}
+                  height={i === 0 ? 800 : 300}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 5: WHY FOOD AFFECTS EVENT PERFORMANCE ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
             eyebrow="Chapter 5 — Performance"

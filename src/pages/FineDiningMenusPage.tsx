@@ -52,7 +52,7 @@ const MENU_CARDS: MenuCard[] = [
     subtitle: '5-Course Mediterranean',
     price: 'From IDR 2,200,000++ per person',
     description: 'An elegant Riviera-style progression rooted in Italian coastal cooking. Expect handmade pasta, grilled fish, bright salads, and seasonal produce chosen for the table that day. Ideal for intimate dinners of 2 to 12 guests.',
-    image: '/generated/luna-wine.webp',
+    image: '/generated/mychef-experience-bali-luna-wine.webp',
     imageAlt: 'Private villa fine dining table with wine service for the La Riviera menu',
     courses: ['Amuse-bouche', 'Cold Opener', 'Handmade Pasta', 'Grilled Protein', 'Dessert'],
     winePairing: '+IDR 650,000 per person',
@@ -63,7 +63,7 @@ const MENU_CARDS: MenuCard[] = [
     subtitle: "7-Course Chef's Selection",
     price: 'From IDR 2,400,000++ per person',
     description: 'A longer market-led menu with seven refined moments and optional wine pairing. Adriano selects the ingredients in the morning, then builds the dinner around what is exceptional that day. This is the fullest expression of the kitchen.',
-    image: '/generated/luna-ingredients.webp',
+    image: '/generated/mychef-experience-bali-luna-gallery-1.webp',
     imageAlt: 'Fresh market-fresh ingredients prepared for L Odyssee private chef menu in Bali',
     courses: ['2× Cold Opens', 'Pasta', 'Amuse', 'Protein', 'Pre-Dessert', 'Dessert'],
     winePairing: '+IDR 1,100,000 per person',
@@ -179,7 +179,7 @@ export default function FineDiningMenusPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />

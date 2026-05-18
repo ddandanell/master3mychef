@@ -58,8 +58,8 @@ const HOTEL_COMPARISON = [
 const REAL_ANNIVERSARIES = [
   { names: 'Anna & Michael', years: '10 Years', location: 'Seminyak Villa', image: '/generated/mychef-events-bali-anniversary-romantic.webp' },
   { names: 'Sarah & Tom', years: '25 Years', location: 'Uluwatu Villa', image: '/generated/mychef-events-bali-anniversary-chef.webp' },
-  { names: 'Jenny & David', years: '5 Years', location: 'Canggu Villa', image: '/generated/aura-tablescape.webp' },
-  { names: 'Maria & Carlos', years: 'Vow Renewal', location: 'Ubud Villa', image: '/generated/aura-toast.webp' },
+  { names: 'Jenny & David', years: '5 Years', location: 'Canggu Villa', image: '/generated/mychef-experience-bali-aura-tablescape.webp' },
+  { names: 'Maria & Carlos', years: 'Vow Renewal', location: 'Ubud Villa', image: '/generated/mychef-experience-bali-aura-toast.webp' },
 ]
 
 const SETUP_DETAILS = [
@@ -146,7 +146,7 @@ export default function EventsAnniversariesPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />

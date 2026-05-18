@@ -133,51 +133,66 @@ export default function Navbar() {
                 <div key={item.href} className="relative group">
                   <Link
                     to={item.href}
-                    className={`flex flex-col items-center gap-1.5 transition-colors group ${
+                    className={`relative flex flex-col items-center gap-1.5 transition-all duration-300 group ${
                       active ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
                     }`}
                   >
-                    <Icon className="w-5 h-5" strokeWidth={1.5} />
+                    <Icon 
+                      className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" 
+                      strokeWidth={1.5} 
+                    />
                     <span
                       className="text-[11px] uppercase tracking-[0.1em] font-medium"
                       style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       {item.label}
                     </span>
+                    {/* Animated underline */}
+                    <span className={`absolute -bottom-1 left-0 right-0 h-px bg-[#C5A028] transition-all duration-300 origin-left ${
+                      active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    }`} />
                   </Link>
 
                   {subpages.length > 0 && (
-                    <div className="absolute left-1/2 top-full z-20 mt-2 w-72 -translate-x-1/2 translate-y-2 rounded-2xl border border-[#C5A028]/15 bg-white p-3 opacity-0 invisible shadow-2xl shadow-black/35 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0">
-                      <p
-                        className="px-3 pb-2 text-[10px] uppercase tracking-[0.28em] text-[#C5A028]"
-                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                      >
-                        {item.label} Pages
-                      </p>
-                      <div className="max-h-[70vh] space-y-1 overflow-y-auto pr-1">
-                        {subpages.map((subpage) => {
-                          const subpageActive = isActivePath(location.pathname, subpage.href)
-                          return (
-                            <Link
-                              key={subpage.href}
-                              to={subpage.href}
-                              className={`flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm transition-colors ${
-                                subpageActive
-                                  ? 'bg-[#C5A028]/12 text-[#C5A028]'
-                                  : 'text-gray-700 hover:bg-[#C5A028]/8 hover:text-[#C5A028]'
-                              }`}
-                              style={{ fontFamily: "'Playfair Display', serif" }}
-                            >
-                              {subpage.icon && getIconComponent(subpage.icon) && 
-                                (() => {
-                                  const Icon = getIconComponent(subpage.icon)
-                                  return Icon ? <Icon className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} /> : null
-                                })()
-                              }
-                              {subpage.label}
-                            </Link>
-                          )
-                        })}
+                    <div className="absolute left-1/2 top-full z-20 mt-4 w-72 -translate-x-1/2 origin-top pointer-events-none opacity-0 scale-95 blur-[2px] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:pointer-events-auto group-hover:opacity-100 group-hover:scale-100 group-hover:blur-0 group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:scale-100 group-focus-within:blur-0">
+                      {/* Top accent line */}
+                      <div className="absolute -top-px left-1/2 -translate-x-1/2 w-16 h-px bg-[#C5A028]" />
+                      
+                      <div className="rounded-2xl border border-[#C5A028]/15 bg-white/95 p-3 shadow-2xl shadow-black/35 backdrop-blur-md">
+                        <p
+                          className="px-3 pb-2 text-[10px] uppercase tracking-[0.28em] text-[#C5A028]"
+                          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                        >
+                          {item.label} Pages
+                        </p>
+                        <div className="max-h-[70vh] space-y-1 overflow-y-auto pr-1">
+                          {subpages.map((subpage, i) => {
+                            const subpageActive = isActivePath(location.pathname, subpage.href)
+                            return (
+                              <Link
+                                key={subpage.href}
+                                to={subpage.href}
+                                className={`flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm transition-all duration-200 ${
+                                  subpageActive
+                                    ? 'bg-[#C5A028]/12 text-[#C5A028]'
+                                    : 'text-gray-700 hover:bg-[#C5A028]/8 hover:text-[#C5A028] hover:translate-x-1'
+                                }`}
+                                style={{ 
+                                  fontFamily: "'Playfair Display', serif",
+                                  animationDelay: `${i * 50}ms`
+                                }}
+                              >
+                                {subpage.icon && getIconComponent(subpage.icon) && 
+                                  (() => {
+                                    const Icon = getIconComponent(subpage.icon)
+                                    return Icon ? <Icon className="w-4 h-4 flex-shrink-0 transition-transform hover:scale-110" strokeWidth={1.5} /> : null
+                                  })()
+                                }
+                                {subpage.label}
+                              </Link>
+                            )
+                          })}
+                        </div>
                       </div>
                     </div>
                   )}
@@ -190,10 +205,12 @@ export default function Navbar() {
             {/* Search Trigger */}
             <button
               onClick={() => setSearchOpen(true)}
-              className="p-2 text-white/70 hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+              className="group relative p-2 text-white/70 hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               aria-label="Search myCHEF"
             >
-              <Search className="w-5 h-5" strokeWidth={1.5} />
+              <Search className="w-5 h-5 transition-transform group-hover:scale-110" strokeWidth={1.5} />
+              {/* Subtle border circle on hover */}
+              <span className="absolute inset-0 rounded-full border border-transparent group-hover:border-[#C5A028]/30 transition-colors duration-300" />
             </button>
 
             {/* Book Now Button */}

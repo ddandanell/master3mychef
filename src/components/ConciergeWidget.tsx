@@ -210,7 +210,7 @@ export default function ConciergeWidget() {
           <div className="flex items-center gap-2">
             <div className="flex items-center justify-center h-9 w-9 rounded-full bg-[#C5A028]/10 overflow-hidden border border-[#C5A028]/20">
               <img
-                src={persona === 'ai' ? '/generated/avatar-ai.webp' : '/generated/mychef-finedining-bali-luna-chef-portrait.webp'}
+                src={persona === 'ai' ? '/generated/mychef-misc-bali-avatar-ai.webp' : '/generated/mychef-finedining-bali-luna-chef-portrait.webp'}
                 alt={persona === 'ai' ? 'myCHEF AI' : 'Adriano'}
                 className="h-full w-full object-cover"
               />

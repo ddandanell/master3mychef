@@ -51,7 +51,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'sunset-pool-party',
     name: 'Sunset Pool Party Experience',
     concept: 'Luxury Bali villa pool party with cocktails, live BBQ, floating snacks, music and sunset atmosphere.',
-    image: '/generated/party-pool.webp',
+    image: '/generated/mychef-events-bali-party-pool.webp',
     price: 'From IDR 950,000++ / guest',
     min: 'Min. 10 guests',
     bestFor: 'Birthday parties · Friends trips · Villa weekends · Influencer groups · Pre-wedding events',
@@ -299,7 +299,7 @@ export default function AuraPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/25 md:hidden" />

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Search, X, ArrowRight, Utensils, MapPin, ChefHat, Sparkles } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import { PILLARS, LOCATIONS } from '../data/siteArchitecture'
 
 interface SearchResult {
@@ -8,7 +9,7 @@ interface SearchResult {
   subtitle: string
   url: string
   category: 'Service' | 'Location' | 'Guide'
-  icon: any
+  icon: LucideIcon
 }
 
 // Build static search index from architecture

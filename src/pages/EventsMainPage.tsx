@@ -75,7 +75,7 @@ const EVENT_TYPES: EventType[] = [
     title: 'Anniversary Dinners',
     fromPrice: <CardPrice price={1200000} />,
     description:
-      'Private candlelit dinner built around your history. Wine paired. Service perfect. The opposite of generic.',
+      'Private candlelit dinner built around your history. Wine pairing available. Service polished. The opposite of generic.',
     icon: Wine,
     image: '/generated/aura-toast.webp',
     href: '/events/anniversaries',
@@ -86,7 +86,7 @@ const EVENT_TYPES: EventType[] = [
     title: 'Corporate Events',
     fromPrice: <CardPrice price={1200000} />,
     description:
-      'Offsites, dinners, retreats, launches. Full hospitality production. Invoice-ready. NPWP-issued. Zero stress.',
+      'Offsites, dinners, retreats, launches. Full hospitality production. Invoice-ready. NPWP-issued. Lower-stress for hosts.',
     icon: Briefcase,
     image: '/generated/corp-gala.webp',
     href: '/events/corporate-events',
@@ -97,7 +97,7 @@ const EVENT_TYPES: EventType[] = [
     title: 'Wellness & Yoga Retreats',
     fromPrice: <CardPrice price={1500000} suffix="/pp/day" />,
     description:
-      'Plant-forward, gluten-free, raw, vegan—dietary specialists handle everything at scale. Three meals daily. On schedule.',
+      'Plant-forward, gluten-free, raw, vegan—dietary planning handled at scale. Three meals daily. On schedule.',
     icon: Leaf,
     image: '/generated/party-medi.webp',
     href: '/events/retreats',
@@ -108,7 +108,7 @@ const EVENT_TYPES: EventType[] = [
     title: 'Baby Showers',
     fromPrice: <CardPrice price={750000} />,
     description:
-      'Brunch, high tea, themed decor, mocktail bar. Styled so well it photographs itself. You just show up.',
+      'Brunch, high tea, themed decor, mocktail bar. Styled to photograph beautifully. You just show up.',
     icon: Baby,
     image: '/generated/party-white.webp',
     href: '/events/baby-showers',
@@ -137,7 +137,7 @@ const HOW_WE_RUN: HowStep[] = [
   {
     step: '01',
     title: 'Message Us',
-    body: 'Date, guest count, villa, event type. Sofia replies within hours with availability and pricing.',
+    body: 'Date, guest count, villa, event type. Sofia typically replies within a few hours with availability and pricing.',
     icon: MessageCircle,
   },
   {
@@ -187,7 +187,7 @@ const WHY_COMPETITIVE = [
 const PRICING_TRANSPARENCY = [
   { label: 'Per-person base', desc: 'Covers chef, ingredients, service staff, and basic setup. Varies by event type and menu.' },
   { label: 'Add-ons', desc: 'Photography, custom cake, live music, premium bar, extended decor — all itemised in the proposal.' },
-  { label: 'Tax & service', desc: '10% government service charge + 11% VAT added at proposal. No hidden fees.' },
+  { label: 'Tax & service', desc: '10% government service charge + 11% VAT added at proposal. No surprise add-ons.' },
   { label: 'Deposit', desc: '50% to confirm the date. Balance due the week of the event. Net-30 for repeat corporate clients.' },
 ]
 
@@ -219,7 +219,7 @@ const EVENTS_TESTIMONIALS = [
     name: 'Priya & Raj',
     location: 'Uluwatu Villa Wedding',
     quote:
-      'We compared three hotels and a wedding planner. myCHEF was half the price and twice the warmth. Sofia ran the day like a Swiss watch.',
+      'We compared three hotels and a wedding planner. myCHEF felt half the price and twice the warmth. Sofia ran the day like a Swiss watch.',
     rating: 5,
   },
   {
@@ -253,7 +253,7 @@ const FAQS = [
   },
   {
     q: 'Can you work at any villa in Bali?',
-    a: 'Yes. We are mobile hospitality — full kitchen, glassware, linens, generator, cold chain, the lot. We have worked at over 200 villas across Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Pererenan, Berawa, and the Bukit peninsula. If your villa is in Bali, we can run an event there.',
+    a: 'Yes. We are mobile hospitality — full kitchen, glassware, linens, generator, cold chain, the lot. We have worked across villas in Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Pererenan, Berawa, and the Bukit peninsula. If your villa is in Bali, we can run an event there.',
   },
   {
     q: 'Do we pay a deposit, and what happens if we cancel?',
@@ -415,7 +415,7 @@ export default function EventsMainPage() {
             </a>
           </div>
           <p className="hero-fade mt-4 text-sm text-white/[60%]">
-            From IDR 600K++/guest · Free consultation · Same-day WhatsApp reply · Transparent proposal before deposit
+            From IDR 600K++/guest · Free consultation · Typical same-day WhatsApp reply · Transparent proposal before deposit
           </p>
         </div>
       </section>
@@ -692,7 +692,7 @@ export default function EventsMainPage() {
             Sofia
           </h2>
           <p className="text-lg text-white/[70%] mb-6 max-w-2xl mx-auto">
-            "I have coordinated 200+ events across Bali — from 2-person anniversary dinners to 200-guest weddings. 
+            "I have coordinated events across Bali — from 2-person anniversary dinners to 200-guest weddings. 
             My job is simple: make sure the host never has to look at a watch."
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -731,7 +731,7 @@ export default function EventsMainPage() {
           </h2>
           <p className="text-[#4A4745] max-w-2xl mx-auto mb-10">
             Generator, prep kitchen, cold chain, glassware, linens, and the team — packed and travelled to your villa.
-            Same-island, same-day setups.
+            Same-island, day-of setups when feasible.
           </p>
           <div className="flex flex-wrap justify-center gap-2">
             {AREAS_COVERED.map((area) => (
@@ -745,7 +745,7 @@ export default function EventsMainPage() {
             ))}
           </div>
           <p className="mt-8 text-xs text-[#4A4745]/70">
-            Not on the list? We travel anywhere in Bali. Outer-island events on request.
+            Not on the list? We travel anywhere in Bali. Outer-island referrals on request.
           </p>
         </div>
       </section>
@@ -840,7 +840,7 @@ export default function EventsMainPage() {
           <SectionHeader
             eyebrow="Chapter 10 — Inquire"
             title="Tell Sofia about your event"
-            subtitle="One message. Same-hour reply. A proposal in your inbox within 24 hours."
+            subtitle="One message. Same-day reply. A proposal in your inbox within 24 hours when details are clear."
           />
           <BookingFormCatering
             title="Event Inquiry"
@@ -911,7 +911,7 @@ export default function EventsMainPage() {
             One message and we&rsquo;re running.
           </h2>
           <p className="max-w-xl mx-auto text-base md:text-lg text-white/[75%] mb-10">
-            Sofia replies inside the hour. The proposal lands inside the day. The team arrives on the date — built,
+            Sofia replies quickly. The proposal typically lands within a day once details are clear. The team arrives on the date — built,
             briefed, and ready.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -936,7 +936,7 @@ export default function EventsMainPage() {
 
       <LocationChips
         title="Events Across Bali"
-        subtitle="Weddings in Uluwatu. Corporate retreats in Ubud. Birthday parties in Canggu. We know every venue, every vendor, every regulation."
+        subtitle="Weddings in Uluwatu. Corporate retreats in Ubud. Birthday parties in Canggu. We know the venues, vendors, and regulations that matter."
         dark
       />
     </div>

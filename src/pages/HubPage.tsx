@@ -25,8 +25,8 @@ const PORTALS = [
   },
   {
     id: 'catering',
-    title: 'Catering & Events',
-    subtitle: 'BBQ, buffet, plated dinners. Weddings, retreats, celebrations. We handle everything. You enjoy.',
+    title: 'Catering',
+    subtitle: 'BBQ, buffet, plated dinners. Babi guling. Drop-off or full service. We handle everything. You enjoy.',
     path: '/catering',
     image: '/generated/mychef-catering-bali-hub-catering.webp',
     accent: '#6B8E5A',
@@ -352,7 +352,7 @@ export default function HubPage() {
                 </h1>
                 <div className="gold-arc mb-6" />
                 <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>
-                  Private dining, catering, and events across Bali. We shop, cook, serve, and clean. You just enjoy.
+                  Private dining, catering, and events across Bali. We shop, we cook, we serve, we clean. You just enjoy.
                 </p>
                 <div className="hub-hero-cta mb-4 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
                   <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
@@ -917,7 +917,7 @@ export default function HubPage() {
               <h2 className="u-heading text-4xl md:text-5xl mb-6">For Villa & Airbnb Owners</h2>
               <div className="gold-arc mb-8" />
               <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
-                Elevate your guests' experience by partnering with myCHEF. We currently work with 560+ private villas across Bali. Whatever your guests need, we lift everything we touch with excellence.
+                Elevate your guests' experience by partnering with myCHEF. We work with 560+ private villas across Bali. We handle the dining. You deliver the experience.
               </p>
               <div className="space-y-4 mb-8">
                 {[

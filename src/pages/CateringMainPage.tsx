@@ -305,7 +305,7 @@ const FAQS = [
   { q: 'How much deposit is required?', a: 'A 25% deposit is required to confirm your booking. The balance is due on the day of the event.' },
   { q: 'How far in advance should I book?', a: 'We recommend 3-7 days for BBQ and buffet. 2+ weeks for weddings and large events. Drop-off can often be arranged next-day if ordered by 4pm.' },
   { q: 'Is this a real chef or just delivered food?', a: 'A real chef grills at your villa. Not pre-cooked. Not delivered from a kitchen. Live fire, your pool, your garden. The chef arrives 3 hours early, preps everything on site, and serves course by course.' },
-  { q: 'How do I know the food is safe?', a: 'All chefs are food-safety certified. We use separate prep for allergies. We have served 500+ villa events with zero food safety incidents. Every ingredient is purchased fresh the morning of your event.' },
+  { q: 'How do I know the food is safe?', a: 'All chefs are food-safety certified. We use separate prep for allergies. We have served 500+ villa events with a strong safety record. Every ingredient is purchased fresh the morning of your event.' },
   { q: 'What if it rains?', a: 'We bring a kitchen tent for outdoor setups. Or we move indoors if your villa has covered space. We plan for Bali weather — it is part of the service, not an extra charge.' },
   { q: 'Can I see a menu before booking?', a: 'Yes. We send a full menu proposal with exact pricing before you pay anything. No commitment required to review. Most quotes are sent within 2 hours.' },
   { q: 'What if my guest count changes?', a: 'Final headcount is due 48 hours before your event. We adjust portions and staffing. No penalty for small changes. Large increases may affect minimums.' },
@@ -436,7 +436,7 @@ export default function CateringMainPage() {
             <span className="italic">Built for Groups, Parties & Hosted Dinners.</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-3xl mx-auto">
-            This page is for villa parties, weddings, corporate dinners, and catered meals for 5+ guests. If you want a chef for breakfast, lunch, or intimate in-villa dining during your stay, book our Private Villa Dining service instead.
+            For villa parties, weddings, corporate dinners, and catered meals for 5+ guests. For daily breakfast, lunch, or dinner in your villa, book our Private Villa Dining service instead.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
@@ -550,7 +550,7 @@ export default function CateringMainPage() {
               {/* BBQ Preview */}
               <div className="bg-[#FAFAF8] rounded-3xl p-8 md:p-12">
                 <div className="text-center mb-8">
-                  <h4 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>BBQ Catering: The Villa Volume Engine</h4>
+                  <h4 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>BBQ Catering: The Villa Crowd-Pleaser</h4>
                   <p className="text-[#4A4745] text-sm max-w-2xl mx-auto">
                     BBQ is the easiest way to feed a villa group properly. Live, social, flexible — works for family dinners, birthdays, and villa parties.
                   </p>
@@ -829,7 +829,7 @@ export default function CateringMainPage() {
           <SectionHeader
             eyebrow="CHAPTER 3 — THE COMPARISON"
             title="Skip the Restaurant. Eat at Your Villa."
-            subtitle="A restaurant dinner for 10 in Seminyak costs 8–12M with drinks and transport. Our Indonesian BBQ for 10: 4.5M. At your villa. With a chef."
+            subtitle="A restaurant dinner for 10 in Seminyak costs IDR 8–12M with drinks and transport. Our Indonesian BBQ for 10: IDR 4.5M. At your villa. With a chef."
           />
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
@@ -1134,7 +1134,7 @@ export default function CateringMainPage() {
           </div>
           <div className="text-center mt-12 max-w-xl mx-auto">
             <p className="text-sm text-[#4A4745] mb-4">
-              Questions? We reply within 2 minutes during Bali business hours (9am–6pm).
+              Questions? Fast replies during Bali business hours (9am–6pm).
             </p>
             <a
               href={WA_LINK}
@@ -1312,7 +1312,7 @@ export default function CateringMainPage() {
             No booking fee · Free consultation · Exact quote within 2 hours
           </p>
           <TrustRow
-            items={['4.9★ from 180+ reviews', '500+ villa events served', '8 years in Bali', 'Same-day quotes']}
+            items={['4.9★ from 180+ reviews', '500+ villa events served', '8 years in Bali', 'Same-day quotes when possible']}
             dark
           />
         </div>

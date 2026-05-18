@@ -166,22 +166,29 @@ const REVIEWS_SCHEMAS = [
     { question: 'Where can I read myCHEF reviews?', answer: 'Guest reviews are collected from Google, TripAdvisor, and direct feedback from villa owners and event planners. Our rating reflects 560+ experiences delivered across Bali.' },
     { question: 'Are the reviews from real guests?', answer: 'Yes — all reviews on this page are from real guests who experienced myCHEF private chef dinners, catering, and hospitality staffing at their Bali villas and events.' },
   ]),
-  {
-    '@context': 'https://schema.org',
-    '@type': 'AggregateRating',
-    itemReviewed: { '@type': 'LocalBusiness', name: 'myCHEF', url: SITE },
-    ratingValue: '4.9',
-    reviewCount: '560',
-  },
   ...REVIEWS.map((r) => ({
     '@context': 'https://schema.org',
     '@type': 'Review',
-    author: { '@type': 'Person', name: r.name.split('·')[0].trim() },
+    '@id': `${SITE}/reviews#review-${r.name.split('·')[0].trim().replace(/\s+/g, '-').toLowerCase()}`,
+    author: {
+      '@type': 'Person',
+      name: r.name.split('·')[0].trim(),
+    },
     reviewBody: r.review,
-    reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5 },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: r.rating.toString(),
+      bestRating: '5',
+      worstRating: '1',
+    },
     datePublished: toISOMonth(r.date),
     name: r.eventType,
-    itemReviewed: { '@type': 'LocalBusiness', name: 'myCHEF', url: SITE },
+    itemReviewed: {
+      '@type': 'LocalBusiness',
+      '@id': 'https://mychef.id/#business',
+      name: 'myCHEF',
+      url: SITE,
+    },
   })),
 ]
 

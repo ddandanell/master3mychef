@@ -361,7 +361,7 @@ export default function EventsMainPage() {
       {/* ═══════ HERO — DARK, EDITORIAL, GOLD ═══════ */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0A0A0A] text-white">
         <img
-          src="/mychef-events-bali-hero-events.webp"
+          src="/generated/mychef-events-bali-hero-events-new.webp"
           alt="Luxury villa event in Bali with styled dining and celebration setup"
           width={1920}
           height={1080}
@@ -403,13 +403,13 @@ export default function EventsMainPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="events-hero"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Book on WhatsApp
             </a>
             <a
               href="#event-types"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               View Event Types <ChevronRight className="w-4 h-4" />
             </a>
@@ -700,13 +700,13 @@ export default function EventsMainPage() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
               href="tel:+6282237565997"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>
@@ -756,6 +756,72 @@ export default function EventsMainPage() {
         title="What event hosts say"
         subtitle="Real weddings, retreats, off-sites, and parties — from real villas across Bali."
       />
+
+      {/* ═══════ LEARN MORE — BLOG ═══════ */}
+      <section className="py-24 md:py-32 px-6 bg-[#0F0F0F] text-white">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p
+              className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
+              style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+            >
+              Learn More
+            </p>
+            <h2
+              className="text-3xl md:text-5xl leading-[1.05]"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Event planning insights for Bali
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <Link
+              to="/blog/wedding-private-chef-bali-planning-guide"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Planning a Villa Wedding
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                From venue prep to timing coordination, learn how to orchestrate a wedding that feels effortless from the guest perspective.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
+
+            <Link
+              to="/blog/corporate-events-catering-bali-team-dining"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Corporate Events & Team Dining
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                Execute off-sites, executive dinners, and company retreats with the production quality of a five-star kitchen.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
+
+            <Link
+              to="/blog/how-to-plan-villa-birthday-party-bali"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Milestone Celebrations in Bali
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                Birthdays, anniversaries, and milestone moments deserve more than a restaurant reservation—they deserve a production.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ═══════ FAQ ═══════ */}
       <section className="py-24 md:py-32 px-6 bg-[#FAFAF8]">
@@ -854,13 +920,13 @@ export default function EventsMainPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="events-cta"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
               href="tel:+6282237565997"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>

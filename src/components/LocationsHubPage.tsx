@@ -11,52 +11,52 @@ const LOCATION_DETAILS = [
   {
     slug: 'seminyak',
     highlights: ['Beachfront villas', 'Luxury estates', 'Sunset dining'],
-    image: '/generated/mychef-location-bali-locations-sunset.webp',
+    image: '/generated/mychef-location-bali-city-seminyak.webp',
   },
   {
     slug: 'canggu',
     highlights: ['Surf villas', 'Rice field views', 'Bohemian luxury'],
-    image: '/generated/mychef-location-bali-hub-hero.webp',
+    image: '/generated/mychef-location-bali-city-canggu.webp',
   },
   {
     slug: 'ubud',
     highlights: ['Jungle retreats', 'Wellness focus', 'Rice terrace views'],
-    image: '/generated/mychef-location-bali-locations-sunset.webp',
+    image: '/generated/mychef-location-bali-city-ubud.webp',
   },
   {
     slug: 'uluwatu',
     highlights: ['Cliffside estates', 'Ocean views', 'Wedding venues'],
-    image: '/generated/mychef-location-bali-hub-bali.webp',
+    image: '/generated/mychef-location-bali-city-uluwatu.webp',
   },
   {
     slug: 'nusa-dua',
     highlights: ['Resort villas', 'Family-friendly', 'Calm beaches'],
-    image: '/generated/mychef-location-bali-locations-sunset.webp',
+    image: '/generated/mychef-location-bali-city-nusa-dua.webp',
   },
   {
     slug: 'jimbaran',
     highlights: ['Seafood tradition', 'Beach clubs', 'Sunset dinners'],
-    image: '/generated/mychef-location-bali-hub-hero.webp',
+    image: '/generated/mychef-location-bali-city-jimbaran.webp',
   },
   {
     slug: 'sanur',
     highlights: ['Quiet beaches', 'Family villas', 'Relaxed pace'],
-    image: '/generated/mychef-location-bali-locations-sunset.webp',
+    image: '/generated/mychef-location-bali-city-sanur.webp',
   },
   {
     slug: 'berawa',
     highlights: ['Modern villas', 'Beach club culture', 'Group events'],
-    image: '/generated/mychef-location-bali-hub-bali.webp',
+    image: '/generated/mychef-location-bali-city-berawa.webp',
   },
   {
     slug: 'pererenan',
     highlights: ['Design villas', 'Quiet atmosphere', 'Chef-friendly kitchens'],
-    image: '/generated/mychef-location-bali-locations-sunset.webp',
+    image: '/generated/mychef-location-bali-city-pererenan.webp',
   },
   {
     slug: 'bukit',
     highlights: ['Clifftop premium', 'Surf villas', 'Ocean horizon'],
-    image: '/generated/mychef-location-bali-hub-hero.webp',
+    image: '/generated/mychef-location-bali-city-bukit.webp',
   },
 ]
 
@@ -82,7 +82,7 @@ export default function LocationsHubPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-location-bali-locations-sunset.webp"
+            src="/generated/mychef-location-bali-water-sunset.webp"
             alt="Dramatic Bali sunset over tropical landscape — myCHEF service areas"
             width={1920}
             height={1080}
@@ -150,7 +150,7 @@ export default function LocationsHubPage() {
                 >
                   <div className="h-56 overflow-hidden bg-[#E5E3E0]">
                     <OptimizedImage
-                      src={details?.image || '/generated/mychef-location-bali-locations-sunset.webp'}
+                      src={details?.image || '/generated/mychef-location-bali-water-sunset.webp'}
                       alt={loc.label}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
@@ -216,7 +216,7 @@ export default function LocationsHubPage() {
             </div>
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
               <OptimizedImage
-                src="/generated/mychef-location-bali-locations-sunset.webp"
+                src="/generated/mychef-location-bali-water-sunset.webp"
                 alt="Dramatic skyline at dusk — myCHEF private chef expansion to Jakarta"
                 className="w-full h-full object-cover"
               />

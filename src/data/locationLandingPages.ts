@@ -128,7 +128,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         title: 'Poolside BBQ catering',
         href: '/catering/bbq-catering',
         summary: 'Live-fire seafood and steak BBQs with fresh sides and service, perfect for post-surf hosting.',
-        availability: 'Best for 8-30 guest villas.',
+        availability: 'Best for villas of 8–30 guests.',
       },
       {
         title: 'In-villa fine dining',
@@ -242,7 +242,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         title: 'Seafood BBQ catering',
         href: '/catering/bbq-catering',
         summary: 'Live-fire seafood feasts featuring lobster, snapper, and prawns sourced from local landings.',
-        availability: 'Popular for 10-40 guest villa groups.',
+        availability: 'Popular for villa groups of 10–40 guests.',
       },
       {
         title: 'Wedding & event support',
@@ -268,7 +268,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     bookingRecommendation: 'Book Uluwatu 3-4 days ahead for dinners and 7-14 days for event weekends or high-budget seafood feasts.',
     villaDensity: 'Moderate density with many very large estates, event villas, and surf-group houses.',
     guestProfile: 'Surf travellers, wedding groups, premium couples, and guests who value dramatic views and privacy.',
-    landmarks: ['Bingin Cliff', 'Padang Padang', 'Pura Uluwatu', 'Ungasan Ridge', 'Melasti Beach area'],
+    landmarks: ['Bingin Cliff', 'Padang‑Padang', 'Pura Uluwatu', 'Ungasan Ridge', 'Melasti Beach area'],
     coordinates: {
       latitude: -8.8291,
       longitude: 115.0884,
@@ -285,7 +285,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     intro: 'Sanur suits guests who want Bali to feel easy: calm water, walkable beachfront mornings, and villa evenings that finish before the island traffic starts again.',
     areaDescription: [
       'Sanur is Bali\'s classic east-coast beach town: flatter roads, gentler beaches, and a villa market built around families, grandparents, and longer stays. Guests staying here usually want a polished private-chef dinner without the noise or late-night rhythm of Seminyak and Canggu.',
-      'myCHEF plans Sanur service around sunrise breakfasts, early family suppers, and menus that work for mixed age groups. We regularly build seafood-led dinners, Indonesian sharing tables, kids-friendly breakfast spreads, and private catering for birthdays in larger beachfront compounds.',
+      'myCHEF plans Sanur service around sunrise breakfasts, early family suppers, and menus that work for mixed age groups. We regularly build seafood-led dinners, Indonesian sharing tables, kid-friendly breakfast spreads, and private catering for birthdays in larger beachfront compounds.',
       'Because Sanur sits east of our main west-coast flow, we confirm timing and travel early, then arrive with everything staged so the service still feels relaxed. The result is calm, well-paced dining that matches the area itself.',
     ],
     serviceAvailability: [
@@ -299,7 +299,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         title: 'Villa catering',
         href: '/catering',
         summary: 'Buffets, seafood BBQs, and sharing menus for multi-generational stays, birthdays, and arrival-night dinners.',
-        availability: 'Best fit for 8-40 guests in villa compounds.',
+        availability: 'Best fit for villa compounds of 8–40 guests.',
       },
       {
         title: 'Private events',
@@ -413,7 +413,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         title: 'BBQ & group catering',
         href: '/catering/bbq-catering',
         summary: 'Live-grill seafood feasts, bayfront BBQs, and casual high-quality catering for groups that want a social format.',
-        availability: 'Most-booked for 8-30 guest villas.',
+        availability: 'Most-booked for villas of 8–30 guests.',
       },
       {
         title: 'Celebration events',
@@ -527,7 +527,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         title: 'Villa catering & BBQs',
         href: '/catering/villa-catering',
         summary: 'Sharing feasts, premium BBQs, and family-style catering for surf groups and larger villas across the cliffs.',
-        availability: 'Popular for 8-40 guest villas across Pecatu and Ungasan.',
+        availability: 'Popular for villas of 8–40 guests across Pecatu and Ungasan.',
       },
       {
         title: 'Celebrations & events',

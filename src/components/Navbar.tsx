@@ -147,7 +147,7 @@ export default function Navbar() {
                   </Link>
 
                   {subpages.length > 0 && (
-                    <div className="pointer-events-none absolute left-1/2 top-full z-20 mt-4 w-72 -translate-x-1/2 rounded-2xl border border-[#C5A028]/15 bg-white p-3 opacity-0 shadow-2xl shadow-black/35 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                    <div className="absolute left-1/2 top-full z-20 mt-2 w-72 -translate-x-1/2 translate-y-2 rounded-2xl border border-[#C5A028]/15 bg-white p-3 opacity-0 invisible shadow-2xl shadow-black/35 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0">
                       <p
                         className="px-3 pb-2 text-[10px] uppercase tracking-[0.28em] text-[#C5A028]"
                         style={{ fontFamily: "'Cormorant Garamond', serif" }}

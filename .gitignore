@@ -5,3 +5,9 @@ dist
 public/images/
 test-results/
 .env
+
+# Google API Credentials (NEVER COMMIT)
+.credentials/
+*.json
+google-service-account*.json
+*-credentials.json

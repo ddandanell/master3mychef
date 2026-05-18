@@ -427,52 +427,56 @@ export default function CateringMainPage() {
           <div className="absolute inset-0 bg-black/25 md:hidden" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-8" />
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            myCHEF Events & Catering
-          </p>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Events & Catering Services<br />
-            <span className="italic">Built for Groups, Parties & Hosted Dinners.</span>
-          </h1>
-          <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-3xl mx-auto">
-            For villa parties, weddings, corporate dinners, and catered meals for 5+ guests. For daily breakfast, lunch, or dinner in your villa, book our Private Villa Dining service instead.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <a
-              href={WA_LINK}
-              target="_blank"
-              data-source="catering-hero"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
-            >
-              <MessageCircle className="w-4 h-4" /> Book on WhatsApp
-            </a>
-            <Link
-              to="/villa-chef"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
-            >
-              <ArrowRight className="w-4 h-4" /> Need a Private Villa Chef?
-            </Link>
-          </div>
-          <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-white/15 bg-black/25 p-5 md:p-6 text-left backdrop-blur-sm">
-            <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-              Not sure which service?
+          <div className="bg-black/60 rounded-3xl px-8 md:px-12 py-12 md:py-16 backdrop-blur-sm">
+            <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-8" />
+            <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+              myCHEF Events & Catering
             </p>
-            <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
-              Choose Events & Catering for BBQs, buffet service, plated group dinners, weddings, and formal villa setups. Choose <span className="font-semibold text-white">Private Villa Dining</span> for 1–4 guests, family stays, and everyday breakfast, lunch, or dinner with a chef in your villa.
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Events & Catering Services<br />
+              <span className="italic">Built for Groups, Parties & Hosted Dinners.</span>
+            </h1>
+            <p className="text-base md:text-lg text-white/[85%] max-w-3xl mx-auto">
+              For villa parties, weddings, corporate dinners, and catered meals for 5+ guests. For daily breakfast, lunch, or dinner in your villa, book our Private Villa Dining service instead.
             </p>
-            <Link
-              to="/villa-chef"
-              className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
-            >
-              <ArrowRight className="w-4 h-4" /> View Private Villa Dining
-            </Link>
           </div>
-          <TrustRow
-            items={['500+ villa events served', '4.9★ Google Reviews', 'Chef + staff included', 'Same-day quotes', 'Bali-wide service']}
-            dark
-          />
+          <div className="mt-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+              <a
+                href={WA_LINK}
+                target="_blank"
+                data-source="catering-hero"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
+              >
+                <MessageCircle className="w-4 h-4" /> Book on WhatsApp
+              </a>
+              <Link
+                to="/villa-chef"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
+              >
+                <ArrowRight className="w-4 h-4" /> Need a Private Villa Chef?
+              </Link>
+            </div>
+            <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-white/15 bg-black/25 p-5 md:p-6 text-left backdrop-blur-sm">
+              <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Not sure which service?
+              </p>
+              <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
+                Choose Events & Catering for BBQs, buffet service, plated group dinners, weddings, and formal villa setups. Choose <span className="font-semibold text-white">Private Villa Dining</span> for 1–4 guests, family stays, and everyday breakfast, lunch, or dinner with a chef in your villa.
+              </p>
+              <Link
+                to="/villa-chef"
+                className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
+              >
+                <ArrowRight className="w-4 h-4" /> View Private Villa Dining
+              </Link>
+            </div>
+            <TrustRow
+              items={['500+ villa events served', '4.9★ Google Reviews', 'Chef + staff included', 'Same-day quotes', 'Bali-wide service']}
+              dark
+            />
+          </div>
         </div>
       </section>
 

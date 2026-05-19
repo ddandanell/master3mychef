@@ -8,7 +8,7 @@ const WHATSAPP_NUMBER = '6282237565997'
 interface ServiceOption {
   id: string
   label: string
-  icon: React.ComponentType<any>
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
   baseMessage: string
 }
 

@@ -46,7 +46,7 @@ const REQUIREMENTS = [
 
 const TESTIMONIALS = [
   {
-    name: 'Alessandro R.',
+    name: 'Marco R.',
     location: 'Milan, Italy',
     quote: "I am Italian. I know what good cooking looks like. Watching Adriano work at the counter, explaining every choice in real time — it was a masterclass. The seven courses were technically perfect. I did not expect to feel this way about a dinner in Bali.",
     rating: 5,

@@ -1,6 +1,6 @@
 import { MessageCircle } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
-import { trackWhatsAppClick } from '../lib/analytics'
+import { trackWhatsAppClick } from '@/lib/analytics'
 
 const WHATSAPP_NUMBER = '6282237565997'
 const WHATSAPP_MESSAGE = "Hi myCHEF! I'd like to enquire about your services."

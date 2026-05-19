@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Instagram, MessageCircle, LogIn, MapPin, Mail, ChefHat } from 'lucide-react'
-import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA } from '../data/siteArchitecture'
+import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA } from '@/data/siteArchitecture'
 
 export default function Footer() {
   const pillars = Object.values(PILLARS)

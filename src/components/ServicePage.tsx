@@ -2,7 +2,7 @@ import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { SERVICES } from '@/data/sitemap'
-import { trackWhatsAppClick } from '../lib/analytics'
+import { trackWhatsAppClick } from '@/lib/analytics'
 
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MapPin, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
-import { LOCATIONS } from '../data/siteArchitecture'
+import { LOCATIONS } from '@/data/siteArchitecture'
 import Breadcrumb from './shared/Breadcrumb'
 
 import OptimizedImage from '@/components/OptimizedImage'

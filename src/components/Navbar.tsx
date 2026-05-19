@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, Search, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, type LucideIcon } from 'lucide-react'
-import { PILLARS, PRIMARY_CTA } from '../data/siteArchitecture'
+import { PILLARS, PRIMARY_CTA } from '@/data/siteArchitecture'
 import SearchOverlay from './SearchOverlay'
 
 

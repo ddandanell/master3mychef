@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight, Wine, Users, Shield, Clock, Star, Award } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from './SeoHead'
 import { getPageMeta } from '@/data/page-meta'
-import { PILLARS } from '../data/siteArchitecture'
+import { PILLARS } from '@/data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
 import LocationChips from './LocationChips'
 

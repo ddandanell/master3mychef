@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, Calendar, Tag } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
-import { JOURNAL_POSTS, JOURNAL_CATEGORIES, type JournalPost } from '../data/siteArchitecture'
+import { JOURNAL_POSTS, JOURNAL_CATEGORIES, type JournalPost } from '@/data/siteArchitecture'
 
 import { useState, useMemo } from 'react'
 

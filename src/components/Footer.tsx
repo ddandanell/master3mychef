@@ -1,10 +1,17 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Instagram, MessageCircle, LogIn, MapPin, Mail, ChefHat } from 'lucide-react'
+import { Instagram, MessageCircle, LogIn, MapPin, Mail, ChefHat, ChevronDown } from 'lucide-react'
 import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA } from '@/data/siteArchitecture'
+
+// Top Bali locations shown by default — chosen by traffic + villa density
+const TOP_LOCATION_SLUGS = ['seminyak', 'canggu', 'uluwatu', 'ubud', 'nusa-dua']
 
 export default function Footer() {
   const pillars = Object.values(PILLARS)
-  const locations = Object.values(LOCATIONS)
+  const allLocations = Object.values(LOCATIONS)
+  const topLocations = TOP_LOCATION_SLUGS.map(s => allLocations.find(l => l.slug === s)).filter(Boolean)
+  const [showAllLocations, setShowAllLocations] = useState(false)
+  const visibleLocations = showAllLocations ? allLocations : topLocations
 
   return (
     <footer className="relative bg-gradient-to-b from-[#0A0A0A] to-black text-white pt-20 pb-8 noise-pattern overflow-hidden">
@@ -152,10 +159,10 @@ export default function Footer() {
                   to="/locations"
                   className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
-                  Bali Regions
+                  All Areas
                 </Link>
               </li>
-              {locations.map((loc) => (
+              {visibleLocations.map((loc) => loc && (
                 <li key={loc.slug}>
                   <Link
                     to={`/locations/${loc.slug}`}
@@ -165,30 +172,54 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li className="pt-2">
-                <Link
-                  to="/jakarta"
-                  className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
-                >
-                  Jakarta Expansion
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/jakarta"
-                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
-                >
-                  Private Chef Jakarta
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/private-chef-menteng"
-                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
-                >
-                  Chef in Menteng
-                </Link>
-              </li>
+              {!showAllLocations && (
+                <li>
+                  <button
+                    onClick={() => setShowAllLocations(true)}
+                    className="flex items-center gap-1 text-xs text-[#C5A028]/70 hover:text-[#C5A028] transition-colors mt-1 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1 group/btn"
+                    aria-label="Show all locations"
+                  >
+                    <ChevronDown className="w-3 h-3 group-hover/btn:translate-y-0.5 transition-transform" />
+                    See all areas
+                  </button>
+                </li>
+              )}
+              {showAllLocations && (
+                <>
+                  <li className="pt-2 border-t border-white/5">
+                    <Link
+                      to="/jakarta"
+                      className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                    >
+                      Jakarta
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/surabaya"
+                      className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                    >
+                      Surabaya
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/bandung"
+                      className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                    >
+                      Bandung
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/yogyakarta"
+                      className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                    >
+                      Yogyakarta
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
 

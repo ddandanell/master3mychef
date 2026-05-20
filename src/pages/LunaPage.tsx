@@ -135,6 +135,24 @@ const TESTIMONIALS = [
   },
 ]
 
+const RELATED_SERVICES = [
+  {
+    title: 'Daily Villa Chef',
+    desc: 'Breakfast, lunch, and dinner menus designed around your villa rhythm.',
+    href: '/villa-chef',
+  },
+  {
+    title: 'Event Catering',
+    desc: 'Weddings, parties, and retreats with full staffing and service flow.',
+    href: '/events',
+  },
+  {
+    title: 'Villa Hospitality Services',
+    desc: 'Butlers, bartenders, and service teams beyond the kitchen.',
+    href: '/services',
+  },
+]
+
 const THE_FOUR = [
   {
     name: 'I Made Surya',
@@ -1121,6 +1139,50 @@ export default function LunaPage() {
             <div className="p-8 rounded-2xl border border-white/10">
               <BookingForm universe="luna" compact />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section id="related" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#111111' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Complete Your Stay</p>
+            <h2 className="text-4xl md:text-5xl mb-3 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
+            <p className="text-white/[55%] max-w-2xl mx-auto">From daily chef service to event teams, we cover the full villa hospitality stack.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {RELATED_SERVICES.map((item) => (
+              <Link
+                key={item.title}
+                to={item.href}
+                className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-200 hover:border-[#C5A028]/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              >
+                <h3 className="text-xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                <p className="text-sm text-white/[60%] leading-relaxed mb-6">{item.desc}</p>
+                <span className="text-[#C5A028] text-xs uppercase tracking-[0.25em]">Explore →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section id="final-cta" className="py-20 md:py-24 px-6" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[1000px] mx-auto text-center">
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Your Table Is Waiting</p>
+          <h2 className="text-4xl md:text-5xl mb-4 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>An Evening Designed Around You</h2>
+          <p className="text-white/[60%] mb-8">Private villa fine dining, tailored to your guests, your timing, your taste. We respond within 2 hours.</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button asChild variant="whatsapp" size="brand">
+              <a href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20reserve%20a%20fine%20dining%20evening%20in%20Bali." target="_blank" rel="noopener noreferrer" data-source="luna-final-cta">
+                <Phone className="w-4 h-4" />
+                Start Planning on WhatsApp
+              </a>
+            </Button>
+            <Button asChild variant="secondary" size="brand">
+              <a href="mailto:hello@mychef.id">Prefer Email? hello@mychef.id</a>
+            </Button>
           </div>
         </div>
       </section>

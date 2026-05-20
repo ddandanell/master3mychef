@@ -3,7 +3,7 @@
 Only one agent may edit the same area at a time.
 
 Active agents:
-- Hermes: master folder audit only
+- Hermes: Fine Dining blueprint integration (LunaPage + shared sections)
 - Claude CLI: app code work
 - GitHub Copilot: review and small fixes only
 

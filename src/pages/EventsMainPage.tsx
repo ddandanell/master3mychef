@@ -184,6 +184,24 @@ const WHY_COMPETITIVE = [
   { vs: 'Hotel packages', point: 'Your villa, your rules, your timeline. No hotel curfews, no generic menus, no ballroom feel.' },
 ]
 
+const RELATED_SERVICES = [
+  {
+    title: 'Fine Dining in Your Villa',
+    desc: 'Michelin-trained chefs for private tasting evenings.',
+    href: '/fine-dining',
+  },
+  {
+    title: 'Daily Villa Chef',
+    desc: 'Breakfast, lunch, and dinner for longer stays.',
+    href: '/villa-chef',
+  },
+  {
+    title: 'Villa Hospitality Services',
+    desc: 'Butlers, bartenders, and service teams beyond the kitchen.',
+    href: '/services',
+  },
+]
+
 const PRICING_TRANSPARENCY = [
   { label: 'Per-person base', desc: 'Covers chef, ingredients, service staff, and basic setup. Varies by event type and menu.' },
   { label: 'Add-ons', desc: 'Photography, custom cake, live music, premium bar, extended decor — all itemised in the proposal.' },
@@ -925,11 +943,35 @@ export default function EventsMainPage() {
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
-              href="tel:+6282237565997"
+              href="tel:+628****5997"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-24 md:py-32 px-6 bg-[#111111]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Complete Your Stay</p>
+            <h2 className="text-4xl md:text-5xl mb-3 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
+            <p className="text-white/[55%] max-w-2xl mx-auto">Private dinners, daily villa chefs, and hospitality teams beyond the event day.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {RELATED_SERVICES.map((item) => (
+              <Link
+                key={item.title}
+                to={item.href}
+                className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-200 hover:border-[#C5A028]/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              >
+                <h3 className="text-xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                <p className="text-sm text-white/[60%] leading-relaxed mb-6">{item.desc}</p>
+                <span className="text-[#C5A028] text-xs uppercase tracking-[0.25em]">Explore →</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

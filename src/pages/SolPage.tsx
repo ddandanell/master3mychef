@@ -47,6 +47,24 @@ const TESTIMONIALS = [
   { name: 'Marco & Elena', location: 'Milan', text: 'We came for a week and extended to ten days just because of the food. Fresh, healthy, and always surprising. It felt like having a friend who happens to be an incredible chef.' },
 ]
 
+const RELATED_SERVICES = [
+  {
+    title: 'Fine Dining in Your Villa',
+    desc: 'Michelin-trained chefs for private tasting evenings.',
+    href: '/fine-dining',
+  },
+  {
+    title: 'Event Catering',
+    desc: 'Weddings, parties, and retreats with full staffing.',
+    href: '/events',
+  },
+  {
+    title: 'Villa Hospitality Services',
+    desc: 'Butlers, bartenders, and service teams beyond the kitchen.',
+    href: '/services',
+  },
+]
+
 export default function SolPage() {
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
@@ -357,6 +375,30 @@ export default function SolPage() {
             <div className="p-8 rounded-2xl border border-[#E5E0D8] bg-white">
               <BookingForm universe="sol" compact />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-24 md:py-32 px-6" style={{ background: '#F5F0E8' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Complete Your Stay</p>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
+            <p style={{ color: '#8A7B6B' }} className="max-w-2xl mx-auto">Private dinners, event teams, and hospitality staff when your stay needs more than daily meals.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {RELATED_SERVICES.map((item) => (
+              <Link
+                key={item.title}
+                to={item.href}
+                className="group rounded-2xl border border-[#E5E0D8] bg-white p-6 transition-all duration-200 hover:border-[#6B8E5A] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#6B8E5A]"
+              >
+                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                <p className="text-sm leading-relaxed mb-6" style={{ color: '#8A7B6B' }}>{item.desc}</p>
+                <span className="text-[#6B8E5A] text-xs uppercase tracking-[0.25em]">Explore →</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

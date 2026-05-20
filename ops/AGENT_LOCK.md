@@ -3,7 +3,7 @@
 Only one agent may edit the same area at a time.
 
 Active agents:
-- Hermes: Fine Dining blueprint integration (LunaPage + shared sections)
+- Hermes: Events + Villa Chef cross-sells (EventsMainPage + SolPage)
 - Claude CLI: app code work
 - GitHub Copilot: review and small fixes only
 

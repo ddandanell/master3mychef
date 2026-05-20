@@ -448,6 +448,14 @@ export function buildSitemap(): SitemapEntry[] {
     { path: '/journal', type: 'blog-index', title: 'Journal | Bali Private Chef Guides & Hosting Tips', description: 'Guides, cost breakdowns, and insights for hosting in Bali villas.', priority: 0.8, changefreq: 'weekly' },
     { path: '/pricing', type: 'info', title: 'Pricing | Private Chef Bali, Villa Catering & Events', description: 'Transparent pricing for private chef services in Bali.', priority: 0.8, changefreq: 'monthly' },
     { path: '/book', type: 'info', title: 'Book | Private Chef & Catering Bali — myCHEF', description: 'Book a private chef, catering, or event in Bali. Same-day WhatsApp confirmation.', priority: 0.8, changefreq: 'monthly' },
+    { path: '/staffing', type: 'info', title: 'Chef & Villa Staff Placement Bali | myCHEF', description: 'Long-term private chef placement, villa staff, and hospitality recruitment in Bali and Jakarta.', priority: 0.8, changefreq: 'monthly' },
+    { path: '/contact', type: 'info', title: 'Contact myCHEF | Private Chef & Catering Bali', description: 'Contact myCHEF for private chef bookings, catering, and event enquiries in Bali.', priority: 0.5, changefreq: 'monthly' },
+    { path: '/partner-platform', type: 'info', title: 'Villa Partner Platform | myCHEF Bali', description: 'Partner with myCHEF — private chef and catering services for Bali villa managers and owners.', priority: 0.6, changefreq: 'monthly' },
+    { path: '/certified-partner', type: 'info', title: 'Certified Partner Programme | myCHEF Bali', description: 'Become a myCHEF certified partner — preferred private chef and staffing services for Bali villas.', priority: 0.5, changefreq: 'monthly' },
+    { path: '/press', type: 'info', title: 'Press & Media | myCHEF Bali Private Chef', description: 'Press coverage, media kit, and brand story for myCHEF — Bali private chef and catering service.', priority: 0.3, changefreq: 'monthly' },
+    { path: '/privacy', type: 'legal', title: 'Privacy Policy | myCHEF Bali', description: 'Privacy policy for myCHEF private chef and catering services in Bali.', priority: 0.3, changefreq: 'yearly' },
+    { path: '/terms', type: 'legal', title: 'Terms of Service | myCHEF Bali', description: 'Terms of service for myCHEF private chef bookings, catering, and events in Bali.', priority: 0.3, changefreq: 'yearly' },
+    { path: '/cancellation', type: 'legal', title: 'Cancellation Policy | myCHEF Bali', description: 'Cancellation and refund policy for myCHEF private chef and catering bookings in Bali.', priority: 0.3, changefreq: 'yearly' },
   ]
 
   return [

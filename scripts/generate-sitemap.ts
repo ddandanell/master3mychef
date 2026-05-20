@@ -16,9 +16,13 @@ const logo = `${SITE}/logo.webp`
 function imageXml(entry: SitemapEntry): string {
   if (entry.type === 'area' || entry.type === 'micro-area') {
     const areaName = entry.area ?? ''
+    const slug = entry.slug ?? ''
+    // Use per-area OG image if available, fall back to default
+    const areaImage = `${SITE}/generated/og-private-chef-${slug}.webp`
+    const defaultImage = `${SITE}/og-image.webp`
     return `
     <image:image>
-      <image:loc>${ogImage}</image:loc>
+      <image:loc>${areaImage}</image:loc>
       <image:title>Private chef in ${areaName}, Bali — myCHEF villa dining</image:title>
       <image:caption>myCHEF private chef preparing a villa dinner in ${areaName}, Bali</image:caption>
     </image:image>`

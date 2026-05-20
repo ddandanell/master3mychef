@@ -1,17 +1,17 @@
 # MyChef Image Audit Report
-**Generated:** 2026-05-17T23:18:05.239Z
+**Generated:** 2026-05-20T03:41:15.965Z
 
 ## Summary
-- **Total Images:** 100
-- **Total References:** 158
-- **Total File Size:** 13.28 MB
+- **Total Images:** 117
+- **Total References:** 162
+- **Total File Size:** 22.18 MB
 - **Images Without Alt Text:** 0
-- **Images Not Following Convention:** 4
+- **Images Not Following Convention:** 0
 
 ## Format Distribution
 - **PNG:** 4
 - **SVG:** 1
-- **WEBP:** 93
+- **WEBP:** 110
 - **JPG:** 2
 
 ## Top 10 Files with Most Image References
@@ -39,17 +39,17 @@
   - Used by: 0 file(s)
 
 ## References Without Alt Text
-- `/src/pages/HubPage.tsx:451` — `/generated/hero-how-it-works.webp`
-- `/src/components/trust/TrustSection.tsx:10` — `/generated/trust-section-bg.png`
+- `/src/pages/HubPage.tsx:451` — `/generated/mychef-misc-bali-hero-how-it-works.webp`
+- `/src/components/trust/TrustSection.tsx:10` — `/generated/mychef-misc-bali-trust-section-bg.png`
 
 ## Largest Images
-1. `/public/generated/mychef-events-bali-hero-events.webp` (2752x1536) — 460.17 KB — Used 0x
-2. `/public/generated/mychef-location-bali-locations-sunset.webp` (1920x1080) — 424.3 KB — Used 2x
-3. `/public/generated/mychef-events-bali-event-wedding.webp` (2752x1536) — 422.64 KB — Used 0x
-4. `/public/generated/mychef-events-bali-anniversary-chef.webp` (1440x800) — 378.16 KB — Used 1x
-5. `/public/generated/mychef-finedining-bali-chef-signature.jpg` (896x1200) — 356.99 KB — Used 0x
-6. `/public/generated/mychef-misc-bali-about-team-photo.webp` (1440x800) — 334.87 KB — Used 0x
-7. `/public/generated/mychef-events-bali-retreat-table.webp` (1440x800) — 271.04 KB — Used 2x
-8. `/public/generated/mychef-catering-bali-hero-buffet-catering.webp` (1440x800) — 269.76 KB — Used 3x
-9. `/public/generated/mychef-events-bali-birthday-pool.webp` (1440x800) — 255.31 KB — Used 1x
-10. `/public/generated/mychef-events-bali-corporate-events.webp` (1440x800) — 253.14 KB — Used 2x
+1. `/public/generated/mychef-location-bali-city-nusa-dua.webp` (1344x768) — 738.01 KB — Used 0x
+2. `/public/generated/mychef-location-bali-city-menteng.webp` (1344x768) — 709.49 KB — Used 0x
+3. `/public/generated/mychef-location-bali-city-pondok-indah.webp` (1344x768) — 630.42 KB — Used 0x
+4. `/public/generated/mychef-location-bali-city-pererenan.webp` (1344x768) — 620.39 KB — Used 0x
+5. `/public/generated/mychef-events-bali-hero-events-new.webp` (1344x768) — 584.88 KB — Used 1x
+6. `/public/generated/mychef-location-bali-city-ubud.webp` (1344x768) — 565.19 KB — Used 0x
+7. `/public/generated/mychef-location-bali-city-kemang.webp` (1344x768) — 564.23 KB — Used 0x
+8. `/public/generated/mychef-location-bali-city-uluwatu.webp` (1344x768) — 559.98 KB — Used 0x
+9. `/public/generated/mychef-location-bali-city-jimbaran.webp` (1344x768) — 519.23 KB — Used 0x
+10. `/public/generated/mychef-location-bali-city-canggu.webp` (1344x768) — 512.96 KB — Used 0x

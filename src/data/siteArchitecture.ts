@@ -183,6 +183,9 @@ export type LocationSlug =
   | 'scbd'
   | 'pondok-indah'
   | 'bsd'
+  | 'surabaya'
+  | 'bandung'
+  | 'yogyakarta'
 
 export interface LocationPage {
   slug: LocationSlug
@@ -441,6 +444,30 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
     title: 'Private Chef BSD City | Modern Residential Dining — myCHEF',
     description: 'Convenient private dining and group catering for the hubs of BSD.',
     intro: 'myCHEF serves the modern residences and offices of BSD with fresh, reliable private chef services.',
+  },
+  surabaya: {
+    slug: 'surabaya',
+    label: 'Surabaya',
+    h1: 'Private Chef Surabaya — Indonesia\'s Second City',
+    title: 'Private Chef Surabaya | Corporate & Residential Dining — myCHEF',
+    description: 'Premium private chef and corporate catering in Surabaya. Michelin-trained chefs for business events and expat families.',
+    intro: 'Surabaya, Indonesia\'s bustling second city and East Java\'s economic heart, demands the same professional hospitality standards as Jakarta. myCHEF brings Michelin-trained private chefs to serve corporate clients, expat families, and high-net-worth residents across Surabaya\'s business and residential districts.',
+  },
+  bandung: {
+    slug: 'bandung',
+    label: 'Bandung',
+    h1: 'Private Chef Bandung — Weekend Villa & Estate Dining',
+    title: 'Private Chef Bandung | Villa Dining & Retreats — myCHEF',
+    description: 'Private chef services in Bandung for weekend villas, highland estates, and corporate retreats.',
+    intro: 'Just three hours from Jakarta, Bandung\'s cool highland climate has made it Indonesia\'s premier weekend escape destination. Our private chef service caters to luxury villa stays, family estate gatherings, and corporate offsites in Dago, Lembang, and Bandung\'s scenic highland areas.',
+  },
+  yogyakarta: {
+    slug: 'yogyakarta',
+    label: 'Yogyakarta',
+    h1: 'Private Chef Yogyakarta — Cultural & Heritage Dining',
+    title: 'Private Chef Yogyakarta | Cultural & Wellness Catering — myCHEF',
+    description: 'Private chef and retreat catering in Yogyakarta. Authentic Javanese cuisine and wellness-focused menus.',
+    intro: 'Yogyakarta, Java\'s cultural capital, attracts travelers seeking authentic Indonesian heritage and spiritual wellness. myCHEF provides private chef services for heritage estate stays, yoga retreats, and cultural tour groups, specializing in traditional Javanese court cuisine and modern wellness menus.',
   },
 }
 

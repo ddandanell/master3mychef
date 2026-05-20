@@ -358,6 +358,39 @@
     </image:image>
   </url>
   <url>
+    <loc>https://mychef.id/locations/surabaya</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Surabaya, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Surabaya, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/locations/bandung</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Bandung, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Bandung, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mychef.id/locations/yogyakarta</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mychef.id/og-image.webp</image:loc>
+      <image:title>Private chef in Yogyakarta, Bali — myCHEF villa dining</image:title>
+      <image:caption>myCHEF private chef preparing a villa dinner in Yogyakarta, Bali</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://mychef.id/villa-bbq-catering-bali</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>

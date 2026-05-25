@@ -1,23 +1,71 @@
 {
-  "timestamp": "2026-05-20T03:41:15.965Z",
+  "timestamp": "2026-05-25T18:33:55.651Z",
   "scanPaths": [
     "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src",
     "/Users/openclaw/Downloads/MYCHEF . MASTER/app/public"
   ],
   "summary": {
-    "totalImages": 117,
+    "totalImages": 168,
     "totalReferences": 162,
     "imagesWithoutAlt": 0,
     "imagesNotFollowingConvention": 0,
-    "totalFileSize": 23261446,
+    "totalFileSize": 26848586,
     "formats": {
+      "webp": 161,
       "png": 4,
       "svg": 1,
-      "webp": 110,
       "jpg": 2
     }
   },
   "images": {
+    "/public/partners-hero.webp": {
+      "path": "/public/partners-hero.webp",
+      "format": "webp",
+      "size": 79692,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/og-image.webp": {
+      "path": "/public/og-image.webp",
+      "format": "webp",
+      "size": 81700,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/logo.webp": {
+      "path": "/public/logo.webp",
+      "format": "webp",
+      "size": 81700,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/logo-new.webp": {
+      "path": "/public/logo-new.webp",
+      "format": "webp",
+      "size": 10786,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
     "/public/icon-512.png": {
       "path": "/public/icon-512.png",
       "format": "png",
@@ -37,6 +85,18 @@
       "dimensions": {
         "width": 192,
         "height": 192
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/hero-home.webp": {
+      "path": "/public/hero-home.webp",
+      "format": "webp",
+      "size": 91112,
+      "dimensions": {
+        "width": 1216,
+        "height": 832
       },
       "hasNamingConvention": false,
       "usageCount": 0,
@@ -66,6 +126,18 @@
       "usageCount": 0,
       "referencedBy": []
     },
+    "/public/chef-portrait.webp": {
+      "path": "/public/chef-portrait.webp",
+      "format": "webp",
+      "size": 45582,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
     "/public/apple-touch-icon.png": {
       "path": "/public/apple-touch-icon.png",
       "format": "png",
@@ -73,6 +145,510 @@
       "dimensions": {
         "width": 180,
         "height": 180
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/pricing-hero.webp": {
+      "path": "/public/generated/pricing-hero.webp",
+      "format": "webp",
+      "size": 68428,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/partner-platform-hero.webp": {
+      "path": "/public/generated/partner-platform-hero.webp",
+      "format": "webp",
+      "size": 83540,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-staffing.webp": {
+      "path": "/public/generated/og-staffing.webp",
+      "format": "webp",
+      "size": 84392,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-yogyakarta.webp": {
+      "path": "/public/generated/og-private-chef-yogyakarta.webp",
+      "format": "webp",
+      "size": 66798,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-ungasan.webp": {
+      "path": "/public/generated/og-private-chef-ungasan.webp",
+      "format": "webp",
+      "size": 59314,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-uluwatu.webp": {
+      "path": "/public/generated/og-private-chef-uluwatu.webp",
+      "format": "webp",
+      "size": 67914,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-ubud.webp": {
+      "path": "/public/generated/og-private-chef-ubud.webp",
+      "format": "webp",
+      "size": 78270,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-tegallaleng.webp": {
+      "path": "/public/generated/og-private-chef-tegallaleng.webp",
+      "format": "webp",
+      "size": 60314,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-tegallalang.webp": {
+      "path": "/public/generated/og-private-chef-tegallalang.webp",
+      "format": "webp",
+      "size": 60314,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-tanah-lot.webp": {
+      "path": "/public/generated/og-private-chef-tanah-lot.webp",
+      "format": "webp",
+      "size": 65124,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-tabanan.webp": {
+      "path": "/public/generated/og-private-chef-tabanan.webp",
+      "format": "webp",
+      "size": 71646,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-surabaya.webp": {
+      "path": "/public/generated/og-private-chef-surabaya.webp",
+      "format": "webp",
+      "size": 58738,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-seminyak.webp": {
+      "path": "/public/generated/og-private-chef-seminyak.webp",
+      "format": "webp",
+      "size": 73838,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-scbd.webp": {
+      "path": "/public/generated/og-private-chef-scbd.webp",
+      "format": "webp",
+      "size": 53474,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-sanur.webp": {
+      "path": "/public/generated/og-private-chef-sanur.webp",
+      "format": "webp",
+      "size": 76460,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-pondok-indah.webp": {
+      "path": "/public/generated/og-private-chef-pondok-indah.webp",
+      "format": "webp",
+      "size": 60704,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-petitenget.webp": {
+      "path": "/public/generated/og-private-chef-petitenget.webp",
+      "format": "webp",
+      "size": 78918,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-pererenan.webp": {
+      "path": "/public/generated/og-private-chef-pererenan.webp",
+      "format": "webp",
+      "size": 78870,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-pecatu.webp": {
+      "path": "/public/generated/og-private-chef-pecatu.webp",
+      "format": "webp",
+      "size": 70260,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-padang-bai.webp": {
+      "path": "/public/generated/og-private-chef-padang-bai.webp",
+      "format": "webp",
+      "size": 70086,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-nusa-dua.webp": {
+      "path": "/public/generated/og-private-chef-nusa-dua.webp",
+      "format": "webp",
+      "size": 73430,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-menteng.webp": {
+      "path": "/public/generated/og-private-chef-menteng.webp",
+      "format": "webp",
+      "size": 61004,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-lovina.webp": {
+      "path": "/public/generated/og-private-chef-lovina.webp",
+      "format": "webp",
+      "size": 78686,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-legian.webp": {
+      "path": "/public/generated/og-private-chef-legian.webp",
+      "format": "webp",
+      "size": 72126,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-kuta.webp": {
+      "path": "/public/generated/og-private-chef-kuta.webp",
+      "format": "webp",
+      "size": 60832,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-kerobokan.webp": {
+      "path": "/public/generated/og-private-chef-kerobokan.webp",
+      "format": "webp",
+      "size": 71606,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-kemang.webp": {
+      "path": "/public/generated/og-private-chef-kemang.webp",
+      "format": "webp",
+      "size": 56940,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-jimbaran.webp": {
+      "path": "/public/generated/og-private-chef-jimbaran.webp",
+      "format": "webp",
+      "size": 71204,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-jakarta.webp": {
+      "path": "/public/generated/og-private-chef-jakarta.webp",
+      "format": "webp",
+      "size": 53130,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-gianyar.webp": {
+      "path": "/public/generated/og-private-chef-gianyar.webp",
+      "format": "webp",
+      "size": 76528,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-denpasar.webp": {
+      "path": "/public/generated/og-private-chef-denpasar.webp",
+      "format": "webp",
+      "size": 66828,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-canggu.webp": {
+      "path": "/public/generated/og-private-chef-canggu.webp",
+      "format": "webp",
+      "size": 72886,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-candidasa.webp": {
+      "path": "/public/generated/og-private-chef-candidasa.webp",
+      "format": "webp",
+      "size": 72898,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-bukit.webp": {
+      "path": "/public/generated/og-private-chef-bukit.webp",
+      "format": "webp",
+      "size": 71172,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-bsd.webp": {
+      "path": "/public/generated/og-private-chef-bsd.webp",
+      "format": "webp",
+      "size": 57056,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-berawa.webp": {
+      "path": "/public/generated/og-private-chef-berawa.webp",
+      "format": "webp",
+      "size": 71946,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-bandung.webp": {
+      "path": "/public/generated/og-private-chef-bandung.webp",
+      "format": "webp",
+      "size": 59142,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-private-chef-amed.webp": {
+      "path": "/public/generated/og-private-chef-amed.webp",
+      "format": "webp",
+      "size": 52640,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-in-villa-service.webp": {
+      "path": "/public/generated/og-in-villa-service.webp",
+      "format": "webp",
+      "size": 93354,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-fine-dining.webp": {
+      "path": "/public/generated/og-fine-dining.webp",
+      "format": "webp",
+      "size": 87812,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-events.webp": {
+      "path": "/public/generated/og-events.webp",
+      "format": "webp",
+      "size": 100506,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/og-catering.webp": {
+      "path": "/public/generated/og-catering.webp",
+      "format": "webp",
+      "size": 81522,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
       },
       "hasNamingConvention": false,
       "usageCount": 0,
@@ -1630,6 +2206,42 @@
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringVillaPage.tsx",
         "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/CateringMainPage.tsx"
       ]
+    },
+    "/public/generated/journal-hero.webp": {
+      "path": "/public/generated/journal-hero.webp",
+      "format": "webp",
+      "size": 105352,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/contact-hero.webp": {
+      "path": "/public/generated/contact-hero.webp",
+      "format": "webp",
+      "size": 66716,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
+    },
+    "/public/generated/book-hero.webp": {
+      "path": "/public/generated/book-hero.webp",
+      "format": "webp",
+      "size": 73850,
+      "dimensions": {
+        "width": 1216,
+        "height": 640
+      },
+      "hasNamingConvention": false,
+      "usageCount": 0,
+      "referencedBy": []
     }
   },
   "references": [
@@ -2019,7 +2631,7 @@
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 972,
+      "line": 974,
       "type": "img",
       "path": "/generated/mychef-experience-bali-luna-gallery-1.webp",
       "alt": "Sommelier presenting wine",
@@ -2027,7 +2639,7 @@
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 982,
+      "line": 986,
       "type": "img",
       "path": "/generated/mychef-experience-bali-luna-gallery-2.webp",
       "alt": "Chef flambe at open kitchen",
@@ -2035,7 +2647,7 @@
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 992,
+      "line": 998,
       "type": "img",
       "path": "/generated/mychef-experience-bali-luna-gallery-3.webp",
       "alt": "Chef plating with guest",
@@ -2043,7 +2655,7 @@
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 1002,
+      "line": 1010,
       "type": "img",
       "path": "/generated/mychef-experience-bali-luna-gallery-4.webp",
       "alt": "Group dining at sunset",
@@ -2051,7 +2663,7 @@
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/LunaPage.tsx",
-      "line": 1046,
+      "line": 1056,
       "type": "img",
       "path": "/generated/mychef-ui-bali-testimonials-bg.webp",
       "alt": "Private chef serving guests at a candlelit villa dinner — words from guests",
@@ -2314,7 +2926,7 @@
     },
     {
       "file": "/Users/openclaw/Downloads/MYCHEF . MASTER/app/src/pages/EventsMainPage.tsx",
-      "line": 914,
+      "line": 899,
       "type": "img",
       "path": "/generated/mychef-experience-bali-aura-tablescape.webp",
       "alt": "Aura restaurant/service at myCHEF fine dining",

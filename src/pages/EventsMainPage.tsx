@@ -88,7 +88,7 @@ const EVENT_TYPES: EventType[] = [
     description:
       'Offsites, dinners, retreats, launches. Full hospitality production. Invoice-ready. NPWP-issued. Lower-stress for hosts.',
     icon: Briefcase,
-    image: '/generated/corp-gala.webp',
+    image: '/generated/mychef-events-bali-corp-executive.webp',
     href: '/events/corporate-events',
   },
   {
@@ -397,17 +397,15 @@ export default function EventsMainPage() {
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-8 py-12 md:py-20 w-full flex flex-col justify-center h-full">
           <Breadcrumb items={[{ label: 'Events' }]} theme="dark" className="px-0 pt-0 pb-8" />
           <p
-            className="hero-fade text-[#C5A028] text-sm tracking-[0.4em] uppercase mb-6"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+            className="font-cormorant hero-fade text-[#C5A028] text-sm tracking-[0.4em] uppercase mb-6"
           >
             Chapter 1 — Bali Events
           </p>
           <h1
-            className="hero-fade text-5xl md:text-7xl lg:text-8xl leading-[1.05] max-w-2xl mb-8"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="hero-fade font-playfair text-5xl md:text-7xl lg:text-8xl leading-[1.05] max-w-2xl mb-8"
           >
             Events in Bali, run by one team.<br />
-            <span className="italic text-white/[85%]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <span className="font-cormorant italic text-white/[85%]">
               You just host.
             </span>
           </h1>
@@ -448,12 +446,11 @@ export default function EventsMainPage() {
       <section className="py-20 md:py-28 px-6 bg-[#0F0F0F] text-white">
         <div className="max-w-3xl mx-auto text-center">
           <p
-            className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+            className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5"
           >
             Production, not catering
           </p>
-          <h2 className="text-3xl md:text-5xl leading-[1.1] mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="font-playfair text-3xl md:text-5xl leading-[1.1] mb-8">
             We approach events the way a fine-dining kitchen approaches service.
           </h2>
           <p className="text-lg leading-relaxed text-white/[75%]">
@@ -483,10 +480,10 @@ export default function EventsMainPage() {
                   <OptimizedImage src={event.image} alt={`${event.title} in Bali by myCHEF`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
                 <div className="p-5">
-                  <p className="text-[#C5A028] text-[11px] tracking-[0.3em] uppercase mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                  <p className="font-cormorant text-[#C5A028] text-[11px] tracking-[0.3em] uppercase mb-2">
                     {event.eyebrow}
                   </p>
-                  <h3 className="text-xl text-[#1A1A1A] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{event.title}</h3>
+                  <h3 className="font-playfair text-xl text-[#1A1A1A] mb-2">{event.title}</h3>
                   <p className="text-[#4A4745] text-sm leading-relaxed">{event.description}</p>
                 </div>
               </Link>
@@ -524,8 +521,7 @@ export default function EventsMainPage() {
                   <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-sm">
                     <e.icon className="w-3.5 h-3.5 text-[#C5A028]" />
                     <span
-                      className="text-[10px] tracking-[0.3em] uppercase text-white/[90%]"
-                      style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+                      className="font-cormorant text-[10px] tracking-[0.3em] uppercase text-white/[90%]"
                     >
                       {e.eyebrow}
                     </span>
@@ -533,8 +529,7 @@ export default function EventsMainPage() {
                 </div>
                 <div className="p-6 md:p-7">
                   <h3
-                    className="text-2xl text-[#1A1A1A] mb-2"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="font-playfair text-2xl text-[#1A1A1A] mb-2"
                   >
                     {e.title}
                   </h3>
@@ -556,14 +551,12 @@ export default function EventsMainPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p
-              className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
-              style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+              className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
             >
               Chapter 4 — How It Works
             </p>
             <h2
-              className="text-3xl md:text-5xl leading-[1.05]"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="font-playfair text-3xl md:text-5xl leading-[1.05]"
             >
               Three clear steps from first message to event day.
             </h2>
@@ -576,13 +569,12 @@ export default function EventsMainPage() {
                 style={{ background: 'rgba(255,255,255,0.02)' }}
               >
                 <p
-                  className="text-[#C5A028] text-xs tracking-[0.4em] uppercase mb-5"
-                  style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+                  className="font-cormorant text-[#C5A028] text-xs tracking-[0.4em] uppercase mb-5"
                 >
                   {s.step}
                 </p>
                 <s.icon className="w-6 h-6 text-[#C5A028] mb-4" />
-                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="font-playfair text-xl mb-3">
                   {s.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-white/[70%]">{s.body}</p>
@@ -609,8 +601,7 @@ export default function EventsMainPage() {
                   <w.icon className="w-5 h-5 text-[#C5A028]" />
                 </div>
                 <h3
-                  className="text-xl mb-3 text-[#1A1A1A]"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="font-playfair text-xl mb-3 text-[#1A1A1A]"
                 >
                   {w.title}
                 </h3>
@@ -668,8 +659,7 @@ export default function EventsMainPage() {
                 } border-t border-[#E8E6E3]`}
               >
                 <div
-                  className="md:col-span-4 text-base text-[#1A1A1A]"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="font-playfair md:col-span-4 text-base text-[#1A1A1A]"
                 >
                   {row.type}
                 </div>
@@ -698,15 +688,14 @@ export default function EventsMainPage() {
       <section className="py-24 md:py-32 px-6 bg-[#0F0F0F] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <p
-            className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+            className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5"
           >
             Chapter 7 — Your Coordinator
           </p>
           <div className="w-24 h-24 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-6">
             <Heart className="w-10 h-10 text-[#C5A028]" />
           </div>
-          <h2 className="text-3xl md:text-5xl leading-[1.1] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="font-playfair text-3xl md:text-5xl leading-[1.1] mb-4">
             Sofia
           </h2>
           <p className="text-lg text-white/[70%] mb-6 max-w-2xl mx-auto">
@@ -736,14 +725,12 @@ export default function EventsMainPage() {
       <section className="py-20 md:py-24 px-6 bg-white">
         <div className="max-w-[1100px] mx-auto text-center">
           <p
-            className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+            className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
           >
             Chapter 8 — Where We Work
           </p>
           <h2
-            className="text-3xl md:text-4xl text-[#1A1A1A] mb-5"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mb-5"
           >
             Mobile hospitality across Bali
           </h2>
@@ -780,14 +767,12 @@ export default function EventsMainPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p
-              className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
-              style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+              className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
             >
               Learn More
             </p>
             <h2
-              className="text-3xl md:text-5xl leading-[1.05]"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="font-playfair text-3xl md:text-5xl leading-[1.05]"
             >
               Event planning insights for Bali
             </h2>
@@ -925,7 +910,7 @@ export default function EventsMainPage() {
         </div>
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <Sparkles className="w-7 h-7 text-[#C5A028] mx-auto mb-5" />
-          <h2 className="text-4xl md:text-6xl leading-[1.05] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="font-playfair text-4xl md:text-6xl leading-[1.05] mb-6">
             One message and we&rsquo;re running.
           </h2>
           <p className="max-w-xl mx-auto text-base md:text-lg text-white/[75%] mb-10">
@@ -956,8 +941,8 @@ export default function EventsMainPage() {
       <section className="py-24 md:py-32 px-6 bg-[#111111]">
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Complete Your Stay</p>
-            <h2 className="text-4xl md:text-5xl mb-3 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
+            <p className="font-cormorant text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4">Complete Your Stay</p>
+            <h2 className="font-playfair text-4xl md:text-5xl mb-3 text-white">Related Services</h2>
             <p className="text-white/[55%] max-w-2xl mx-auto">Private dinners, daily villa chefs, and hospitality teams beyond the event day.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -967,7 +952,7 @@ export default function EventsMainPage() {
                 to={item.href}
                 className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-200 hover:border-[#C5A028]/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
-                <h3 className="text-xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                <h3 className="font-playfair text-xl text-white mb-3">{item.title}</h3>
                 <p className="text-sm text-white/[60%] leading-relaxed mb-6">{item.desc}</p>
                 <span className="text-[#C5A028] text-xs uppercase tracking-[0.25em]">Explore →</span>
               </Link>

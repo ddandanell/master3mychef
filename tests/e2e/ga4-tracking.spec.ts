@@ -1,110 +1,119 @@
 import { test, expect } from '@playwright/test';
 
+const GA_ID = 'G-W0PQH8ZKTF';
+
+async function waitForDataLayer(page: import('@playwright/test').Page) {
+  await page.waitForFunction(() => Array.isArray((window as any).dataLayer));
+}
+
 test.describe('Google Analytics 4 Tracking', () => {
-  test('gtag script is loaded on homepage', async ({ page }) => {
+  test('gtag bootstrap script with GA ID exists in DOM', async ({ page }) => {
     await page.goto('/');
 
-    // Check gtag script exists in DOM
-    const gtagScript = page.locator('script[src*="googletagmanager.com/gtag"]');
-    await expect(gtagScript).toBeVisible();
+    const gtagScript = page.locator(`script[src*="googletagmanager.com/gtag/js?id=${GA_ID}"]`);
+    await expect(gtagScript).toHaveCount(1);
   });
 
-  test('gtag global function is available', async ({ page }) => {
+  test('gtag and dataLayer are initialized', async ({ page }) => {
     await page.goto('/');
+    await waitForDataLayer(page);
 
-    // Verify gtag is available in window
-    const gtagAvailable = await page.evaluate(() => {
-      return typeof (window as any).gtag === 'function';
-    });
-    expect(gtagAvailable).toBe(true);
+    const state = await page.evaluate(() => ({
+      hasGtag: typeof (window as any).gtag === 'function',
+      hasDataLayer: Array.isArray((window as any).dataLayer),
+    }));
+
+    expect(state.hasGtag).toBe(true);
+    expect(state.hasDataLayer).toBe(true);
   });
 
-  test('GA4 measurement ID is configured correctly', async ({ page }) => {
+  test('gtag config call for GA ID is pushed to dataLayer', async ({ page }) => {
     await page.goto('/');
+    await waitForDataLayer(page);
 
-    // Verify measurement ID G-W0PQH8ZKTF is in the gtag.js script
-    const scriptContent = await page.locator('script[src*="googletagmanager.com/gtag"]').getAttribute('src');
-    expect(scriptContent).toContain('G-W0PQH8ZKTF');
+    await page.waitForFunction(
+      (id) => {
+        const dl = ((window as any).dataLayer || []) as any[];
+        return dl.some((entry) => {
+          if (!entry || typeof entry !== 'object') return false;
+          const first = (entry as any)[0];
+          const second = (entry as any)[1];
+          return first === 'config' && second === id;
+        });
+      },
+      GA_ID
+    );
+
+    const hasConfig = await page.evaluate((id) => {
+      const dl = ((window as any).dataLayer || []) as any[];
+      return dl.some((entry) => {
+        if (!entry || typeof entry !== 'object') return false;
+        const first = (entry as any)[0];
+        const second = (entry as any)[1];
+        return first === 'config' && second === id;
+      });
+    }, GA_ID);
+
+    expect(hasConfig).toBe(true);
   });
 
-  test('dataLayer is initialized', async ({ page }) => {
+  test('SPA navigation pushes page_view event to dataLayer', async ({ page }) => {
     await page.goto('/');
+    await waitForDataLayer(page);
 
-    // Verify dataLayer array exists
-    const dataLayerExists = await page.evaluate(() => {
-      return Array.isArray((window as any).dataLayer);
-    });
-    expect(dataLayerExists).toBe(true);
-  });
-
-  test('gtag config is called with correct measurement ID', async ({ page }) => {
-    const gtdataPushCalls: any[] = [];
-
-    // Intercept gtag calls
     await page.evaluate(() => {
-      const originalPush = (window as any).dataLayer.push;
-      (window as any).dataLayer.push = function(...args: any[]) {
-        (window as any).__gtag_calls = (window as any).__gtag_calls || [];
-        (window as any).__gtag_calls.push(args);
-        return originalPush.apply(this, args);
+      const dl = (window as any).dataLayer as any[];
+      const originalPush = dl.push.bind(dl);
+      (window as any).__trackedEvents = [];
+      dl.push = (...args: any[]) => {
+        (window as any).__trackedEvents.push(...args);
+        return originalPush(...args);
       };
     });
 
-    await page.goto('/');
+    const navLink = page.locator('a[href="/fine-dining"]').first();
+    await navLink.click();
 
-    // Check that config was called
-    const configCalled = await page.evaluate(() => {
-      const calls = (window as any).__gtag_calls || [];
-      return calls.some((call: any[]) => {
-        const firstArg = call[0];
-        return Array.isArray(firstArg) && firstArg[0] === 'config' && firstArg[1] === 'G-W0PQH8ZKTF';
-      });
+    await page.waitForFunction(() => {
+      const events = ((window as any).__trackedEvents || []) as any[];
+      return events.some((entry) => entry && typeof entry === 'object' && entry.event === 'page_view');
     });
 
-    expect(configCalled).toBe(true);
+    const hasPageView = await page.evaluate(() => {
+      const events = ((window as any).__trackedEvents || []) as any[];
+      return events.some((entry) => entry && typeof entry === 'object' && entry.event === 'page_view');
+    });
+
+    expect(hasPageView).toBe(true);
   });
 
-  test('page views are tracked on navigation', async ({ page }) => {
-    // Listen for network requests to Google Analytics
-    const gaTracks: string[] = [];
-    page.on('request', request => {
-      if (request.url().includes('google-analytics') || request.url().includes('googletagmanager')) {
-        gaTracks.push(request.url());
-      }
-    });
-
+  test('conversion click pushes generate_lead event', async ({ page }) => {
     await page.goto('/');
-    await page.waitForTimeout(500);
+    await waitForDataLayer(page);
 
-    // Navigate to another page
-    await page.goto('/fine-dining');
-    await page.waitForTimeout(500);
-
-    // GA request should have been made
-    expect(gaTracks.length).toBeGreaterThan(0);
-  });
-
-  test('GA4 tracking works across multiple pages', async ({ page }) => {
-    const gaTracks: { url: string, timestamp: number }[] = [];
-
-    page.on('request', request => {
-      if (request.url().includes('collect')) {
-        gaTracks.push({
-          url: request.url(),
-          timestamp: Date.now()
-        });
-      }
+    await page.evaluate(() => {
+      const dl = (window as any).dataLayer as any[];
+      const originalPush = dl.push.bind(dl);
+      (window as any).__trackedEvents = [];
+      dl.push = (...args: any[]) => {
+        (window as any).__trackedEvents.push(...args);
+        return originalPush(...args);
+      };
     });
 
-    // Visit multiple pages
-    const pages = ['/', '/fine-dining', '/catering', '/events'];
+    const waLink = page.locator('a[href*="wa.me"]').first();
+    await waLink.click({ force: true });
 
-    for (const pagePath of pages) {
-      await page.goto(pagePath);
-      await page.waitForTimeout(300);
-    }
+    await page.waitForFunction(() => {
+      const events = ((window as any).__trackedEvents || []) as any[];
+      return events.some((entry) => entry && typeof entry === 'object' && entry.event === 'generate_lead');
+    });
 
-    // Should have tracking requests
-    expect(gaTracks.length).toBeGreaterThan(0);
+    const hasLeadEvent = await page.evaluate(() => {
+      const events = ((window as any).__trackedEvents || []) as any[];
+      return events.some((entry) => entry && typeof entry === 'object' && entry.event === 'generate_lead');
+    });
+
+    expect(hasLeadEvent).toBe(true);
   });
 });

@@ -101,8 +101,8 @@ export default function PillarSubPage() {
       {/* Hero */}
       <section className="px-6 pt-32 pb-16 max-w-[900px] mx-auto">
         <p
-          className="text-sm uppercase tracking-[4px] mb-4"
-          style={{ color: pillar.accent, fontFamily: "'Cormorant Garamond', serif" }}
+          className="font-cormorant text-sm uppercase tracking-[4px] mb-4"
+          style={{ color: pillar.accent }}
         >
           {pillar.navLabel}
         </p>
@@ -175,7 +175,7 @@ export default function PillarSubPage() {
       {/* FAQ */}
       <section className="px-6 py-16 border-t border-[#E8E6E3] bg-white">
         <div className="max-w-[800px] mx-auto">
-          <p className="text-sm text-[#C5A028] uppercase tracking-[4px] mb-4 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
+          <p className="font-cormorant text-sm text-[#C5A028] uppercase tracking-[4px] mb-4 text-center">Questions</p>
           <h2 className="font-playfair text-3xl md:text-4xl text-center mb-12">Frequently Asked</h2>
           <FAQAccordion items={faqs} />
         </div>

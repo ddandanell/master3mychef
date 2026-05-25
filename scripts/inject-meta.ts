@@ -235,13 +235,8 @@ function injectMeta(html: string, path: string, title: string, description: stri
     )
   }
 
-  // Remove FAQPage schema for non-homepage routes
-  if (path !== '/') {
-    html = html.replace(
-      /<!-- Structured data: FAQPage[\s\S]*?<\/script>\s*/,
-      ''
-    )
-  }
+  // Note: FAQPage schema is now exclusively handled by SeoHead component at runtime.
+  // The static FAQPage block was removed from index.html to prevent duplicate field errors.
 
   // Inject structured data before closing </head>
   const structuredData = [

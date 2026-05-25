@@ -252,6 +252,44 @@ export default function LocationLandingPage({ config }: { config: LocationLandin
           </div>
         </div>
       </section>
+
+      <section className="bg-white px-6 py-20 md:px-10">
+        <div className="mx-auto max-w-[1160px]">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#C5A028]">Other Bali locations</p>
+          <h2 className="font-playfair text-3xl md:text-4xl">We serve private chefs across Bali</h2>
+          <p className="mt-4 max-w-[720px] text-base leading-7 text-[#4A4745]">
+            myCHEF operates island-wide. If you're staying in a different area or planning events across multiple locations, explore our location pages:
+          </p>
+          
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: 'Seminyak', slug: 'seminyak', desc: 'Beach clubs, luxury villas, vibrant dining scene' },
+              { name: 'Canggu', slug: 'canggu', desc: 'Surf culture, co-living spaces, digital nomad hub' },
+              { name: 'Ubud', slug: 'ubud', desc: 'Rice terraces, wellness retreats, cultural heart' },
+              { name: 'Uluwatu', slug: 'uluwatu', desc: 'Clifftop villas, surf breaks, sunset views' },
+              { name: 'Nusa Dua', slug: 'nusa-dua', desc: 'Resort enclave, family-friendly, golf courses' },
+              { name: 'Jimbaran', slug: 'jimbaran', desc: 'Beachfront dining, luxury resorts, quiet bay' },
+            ]
+              .filter((loc) => loc.slug !== config.slug)
+              .map((location) => (
+                <Link
+                  key={location.slug}
+                  to={`/${location.slug}`}
+                  className="group flex flex-col rounded-[24px] border border-black/5 bg-[#FAFAF8] p-6 transition hover:border-[#C5A028] hover:-translate-y-0.5 hover:shadow-[0_10px_40px_rgba(197,160,40,0.12)] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+                >
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-4 w-4 text-[#C5A028]" />
+                    <p className="font-playfair text-xl text-[#1A1A1A]">{location.name}</p>
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-[#4A4745]">{location.desc}</p>
+                  <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#C5A028] transition group-hover:text-[#1A1A1A]">
+                    View location <ArrowRight className="h-4 w-4" />
+                  </p>
+                </Link>
+              ))}
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

@@ -126,7 +126,7 @@ export default function SolPage() {
             This page is for couples, families, and villa guests who want breakfast, lunch, or dinner cooked in their villa. Best for 1–4 guests and longer stays — not parties, weddings, or large catered events.
           </p>
           <div className="sol-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Message myCHEF
             </a>
             <Link to="/catering" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">

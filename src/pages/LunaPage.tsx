@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Flame, Wine, Clock, Users, Star, Check, ChevronRight, MessageCircle, Phone, Sparkles, Truck, Heart, ChefHat, UtensilsCrossed, ShieldCheck, RefreshCw } from 'lucide-react'
 import BookingForm from '@/components/BookingForm'
-import OrderPanel from '@/components/OrderPanel'
+const OrderPanel = lazy(() => import('@/components/OrderPanel'))
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import LocationChips from '@/components/LocationChips'
@@ -921,9 +921,11 @@ export default function LunaPage() {
                     alt={chef.name}
                     width={600}
                     height={750}
+                    sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                     className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
                     loading="lazy"
                     decoding="async"
+                    fetchPriority="low"
                     style={{ objectPosition: 'center 15%' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60" />
@@ -974,9 +976,11 @@ export default function LunaPage() {
                 alt="Sommelier presenting wine"
                 width={800}
                 height={600}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async" />
+                decoding="async"
+                fetchPriority="low" />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
@@ -984,9 +988,11 @@ export default function LunaPage() {
                 alt="Chef flambe at open kitchen"
                 width={800}
                 height={600}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async" />
+                decoding="async"
+                fetchPriority="low" />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
@@ -994,9 +1000,11 @@ export default function LunaPage() {
                 alt="Chef plating with guest"
                 width={800}
                 height={600}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async" />
+                decoding="async"
+                fetchPriority="low" />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
@@ -1004,9 +1012,11 @@ export default function LunaPage() {
                 alt="Group dining at sunset"
                 width={800}
                 height={600}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async" />
+                decoding="async"
+                fetchPriority="low" />
             </div>
           </div>
         </div>
@@ -1193,7 +1203,9 @@ export default function LunaPage() {
         dark
       />
 
-      <OrderPanel open={orderOpen} onClose={() => setOrderOpen(false)} initialExperience={orderExperience} />
+      <Suspense fallback={null}>
+        <OrderPanel open={orderOpen} onClose={() => setOrderOpen(false)} initialExperience={orderExperience} />
+      </Suspense>
     </div>
   )
 }

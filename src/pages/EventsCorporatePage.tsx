@@ -393,10 +393,10 @@ export default function EventsCorporatePage() {
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Corporate Gala Dinner', image: '/generated/corp-gala.webp' },
+              { title: 'Corporate Gala Dinner', image: '/generated/mychef-events-bali-corp-executive.webp' },
               { title: 'Team Lunch Service', image: '/generated/mychef-events-bali-corporate-team.webp' },
-              { title: 'Conference Catering', image: '/generated/corp-conference.webp' },
-              { title: 'Networking Reception', image: '/generated/corp-networking.webp' },
+              { title: 'Conference Catering', image: '/generated/mychef-events-bali-corp-conference.webp' },
+              { title: 'Networking Reception', image: '/generated/mychef-events-bali-corp-networking.webp' },
             ].map((event) => (
               <div key={event.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">

@@ -1,7 +1,7 @@
 /**
  * myCHEF — MASTER SITEMAP & CONTENT INDEX
  */
-import { LOCATIONS, PILLARS } from './siteArchitecture'
+import { LOCATIONS, PILLARS, JOURNAL_POSTS } from './siteArchitecture'
 
 export interface SitemapEntry {
   path: string
@@ -430,6 +430,17 @@ export function buildSitemap(): SitemapEntry[] {
     content: b.content,
   }))
 
+  // Journal posts (newer content format)
+  const journalPosts: SitemapEntry[] = JOURNAL_POSTS.map((p) => ({
+    path: `/journal/${p.slug}`,
+    type: 'blog-post',
+    title: p.title,
+    description: p.excerpt,
+    priority: 0.8,
+    changefreq: 'monthly',
+    date: p.date,
+  }))
+
   const pillarSubPages: SitemapEntry[] = Object.values(PILLARS).flatMap((p) =>
     p.subPages.map((s) => ({
       path: `${p.url}/${s.slug}`,
@@ -465,6 +476,7 @@ export function buildSitemap(): SitemapEntry[] {
     ...landing,
     ...guides,
     ...blogPosts,
+    ...journalPosts,
     ...pillarSubPages,
     ...infoPages,
   ]

@@ -2742,3 +2742,1416 @@ Scope: events + page paths + conversion sources
 - PREVIEW CHECK: PASS (/=200 /fine-dining=200)
 - CHANGES: AGENTS.md,AGENT_ACTIVE_LOOP.md,CLAUDE.md,index.html,package-lock.json,package.json,public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,scripts/generate-sitemap.ts,scripts/inject-meta.ts,src/components/LocationLandingPage.tsx,src/components/PillarSubPage.tsx,src/pages/CateringMainPage.tsx,src/pages/EventsCorporatePage.tsx,src/pages/EventsMainPage.tsx,src/pages/LunaPage.tsx,src/pages/SolPage.tsx,tests/e2e/ga4-tracking.spec.ts,docs/ACTIVE_LOOP_TASK_STUBS.md,docs/BASH_EXECUTION_POLICY.md,docs/NONSTOP_MACHINE_LOOP.md,docs/UX_READABILITY_CONSISTENCY_PLAN.md,references/,reports/FULL_COMPLETION_REPORT.md,reports/GSC-COVERAGE-ISSUES-2026-05-22.md,reports/gsc-indexation-fix-plan.md,reports/gsc-issues-analysis.md,reports/phase2-canonical-fix-complete.md,reports/phase2-canonical-tags-complete.md,reports/phase3-prerender-complete.md,reports/phase4-complete.md,reports/phase4-internal-linking-audit.md,reports/phase4-internal-linking-complete.md,reports/phase4-linking.md,reports/phase5-content-audit.md,reports/screaming-frog-analysis.md,reports/tracking-evidence-report.md,scripts/nonstop_safe_loop.sh,scripts/prerender.ts,scripts/submit-to-gsc.ts,src/components/shared/RelatedServices.tsx,src/data/related-services.ts,
 - NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 02:49:45 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 03:06:11 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 03:22:57 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 03:40:02 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 03:57:08 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 04:14:10 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 04:30:32 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 04:47:11 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 05:03:23 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 05:20:00 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 05:36:32 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 05:53:07 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 06:09:46 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 06:26:22 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 06:43:18 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 06:59:54 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 07:16:12 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 07:32:46 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 07:49:21 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 08:06:26 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 08:23:06 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 08:39:41 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 08:56:19 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 09:20:23 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 09:36:36 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 09:52:59 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 10:09:35 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 10:26:08 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 10:42:46 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 10:59:39 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 11:16:16 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 11:32:26 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 11:49:02 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 12:05:49 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 12:22:33 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 12:39:18 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 12:55:55 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 13:12:29 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 13:29:09 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 13:46:13 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 14:03:47 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 14:20:26 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 14:37:23 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 14:54:27 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 15:11:30 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 15:28:34 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 15:44:50 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 16:01:29 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 16:18:20 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 16:34:55 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 16:51:44 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 17:08:22 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 17:25:47 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 17:42:27 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 17:59:09 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 18:16:38 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 18:33:18 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 18:50:07 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 19:07:10 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 19:23:43 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 19:40:46 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 19:57:34 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 20:14:13 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 20:30:25 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 20:47:07 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 21:03:25 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 21:20:05 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 21:36:21 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 21:53:00 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 22:09:17 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 22:25:54 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 22:42:19 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 22:59:32 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 23:16:13 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 23:32:24 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-26 23:49:02 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 00:28:18 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 00:44:55 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 01:01:35 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 01:18:38 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 01:35:18 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 01:52:23 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 02:09:02 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 02:26:02 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 02:43:13 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 03:00:16 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 03:16:48 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 03:33:27 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 03:50:30 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 04:07:06 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 04:24:08 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 04:40:43 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 04:56:52 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 05:13:26 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 05:29:44 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 05:46:20 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 06:05:39 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 06:23:14 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 06:39:51 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 06:56:24 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 07:13:00 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 07:29:17 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 07:45:55 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 08:05:10 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 08:21:47 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 08:38:11 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 08:54:50 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 09:11:29 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 09:28:32 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 09:45:16 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 10:02:19 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 10:18:59 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 10:36:09 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 10:52:49 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 11:09:57 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 11:26:38 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 11:43:46 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 12:04:16 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 12:20:49 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 12:37:30 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 12:54:05 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 13:11:11 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 13:27:53 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 13:44:34 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 14:01:11 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 14:17:25 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 14:34:01 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 14:50:53 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 15:07:55 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 15:24:15 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 15:40:53 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 15:58:27 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 16:15:08 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 16:31:19 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 16:48:23 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 17:04:58 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 17:22:18 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 17:39:03 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 17:55:38 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 18:12:40 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 18:29:46 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 18:46:51 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 19:03:06 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 19:19:43 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 19:36:02 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 19:52:40 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 20:08:49 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 20:25:25 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 20:42:03 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 20:58:49 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 21:15:18 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 21:32:41 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 21:49:24 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 22:05:38 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 22:22:20 WITA
+- TRACKING: FAIL
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 22:38:56 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.
+
+## Loop tick - 2026-05-27 22:55:42 WITA
+- TRACKING: PASS
+- BUILD: PASS
+- IMAGES: PASS
+- UI CONSISTENCY: PASS
+- PREVIEW CHECK: PASS (/=200 /fine-dining=200)
+- CHANGES: public/sitemap.xml,reports/image-audit.json,reports/image-audit.md,reports/tracking-evidence-report.md,.playwright-mcp/console-2026-05-27T14-44-15-417Z.log,.playwright-mcp/console-2026-05-27T14-44-17-982Z.log,.playwright-mcp/console-2026-05-27T14-44-20-286Z.log,.playwright-mcp/page-2026-05-27T14-44-16-010Z.yml,.playwright-mcp/page-2026-05-27T14-44-18-107Z.yml,.playwright-mcp/page-2026-05-27T14-44-20-398Z.yml,
+- NEXT STEP: Continue loop and apply one safe reversible UI/readability improvement.

@@ -3,45 +3,49 @@
  * Generate XML sitemap with all prerendered pages
  * 
  * Creates sitemap.xml in dist/ with proper lastmod dates
- * Helps Google discover all 18 prerendered pages
+ * Uses the dynamic SITEMAP from src/data/sitemap as the source of truth
  */
 
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { SITEMAP, type SitemapEntry } from '../src/data/sitemap';
+import { JOURNAL_POSTS } from '../src/data/siteArchitecture';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const SITE_URL = 'https://mychef.id';
 
-// All 18 prerendered pages with priority hints
-const URLS = [
-  { path: '/', priority: 1.0, changefreq: 'daily' },
-  { path: '/fine-dining', priority: 0.9, changefreq: 'weekly' },
-  { path: '/catering', priority: 0.9, changefreq: 'weekly' },
-  { path: '/events', priority: 0.9, changefreq: 'weekly' },
-  { path: '/events/villa-parties', priority: 0.8, changefreq: 'weekly' },
-  { path: '/events/weddings-bali', priority: 0.8, changefreq: 'weekly' },
-  { path: '/fine-dining/private-chef-bali', priority: 0.8, changefreq: 'weekly' },
-  { path: '/faq', priority: 0.7, changefreq: 'monthly' },
-  { path: '/pricing', priority: 0.8, changefreq: 'weekly' },
-  { path: '/chefs', priority: 0.7, changefreq: 'monthly' },
-  { path: '/about', priority: 0.6, changefreq: 'monthly' },
-  { path: '/contact', priority: 0.7, changefreq: 'monthly' },
-  { path: '/seminyak', priority: 0.8, changefreq: 'weekly' },
-  { path: '/canggu', priority: 0.8, changefreq: 'weekly' },
-  { path: '/ubud', priority: 0.8, changefreq: 'weekly' },
-  { path: '/uluwatu', priority: 0.8, changefreq: 'weekly' },
-  { path: '/nusa-dua', priority: 0.8, changefreq: 'weekly' },
-  { path: '/jimbaran', priority: 0.8, changefreq: 'weekly' },
+// Build URL entries from the dynamic SITEMAP
+const URLS: { path: string; priority: number; changefreq: string }[] = [
+  ...SITEMAP.map((entry: SitemapEntry) => ({
+    path: entry.path,
+    priority: entry.priority,
+    changefreq: entry.changefreq,
+  })),
+  // Journal post URLs (individual journal entries under /journal/)
+  ...JOURNAL_POSTS.map((post) => ({
+    path: `/journal/${post.slug}`,
+    priority: 0.8,
+    changefreq: 'monthly' as const,
+  })),
 ];
+
+// Deduplicate by path (sitemap already includes journal posts, but this ensures no duplicates)
+const seen = new Set<string>();
+const UNIQUE_URLS = URLS.filter((url) => {
+  const key = url.path;
+  if (seen.has(key)) return false;
+  seen.add(key);
+  return true;
+});
 
 function generateSitemap(): string {
   const now = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   
-  const urlEntries = URLS.map(({ path, priority, changefreq }) => `  <url>
+  const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq }) => `  <url>
     <loc>${SITE_URL}${path}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>${changefreq}</changefreq>
@@ -70,7 +74,7 @@ async function main() {
   console.log(`✅ Created: ${publicPath}`);
 
   console.log(`\n📊 Sitemap stats:`);
-  console.log(`   URLs: ${URLS.length}`);
+  console.log(`   URLs: ${UNIQUE_URLS.length}`);
   console.log(`   Size: ${(sitemap.length / 1024).toFixed(1)} KB`);
   console.log(`\n🌐 Sitemap URL: ${SITE_URL}/sitemap.xml`);
   console.log(`\n✅ Sitemap generation complete!`);

@@ -15,9 +15,9 @@ const CHEFS = [
     name: 'I Made Surya',
     role: 'Head Chef — Mediterranean',
     specialty: 'Handmade Pasta & Seafood',
-    badge: 'Ubud talent shaped through myCHEF’s in-house program',
-    image: '/generated/chef-made-surya.webp',
-    bio: 'Surya is the calm hand behind many of our Mediterranean set menus. He combines Adriano’s technique with Balinese market knowledge, turning just-caught seafood, handmade pasta, and clean sauces into elegant villa dinners.',
+    badge: "Ubud talent shaped through myCHEF's in-house program",
+    image: '/generated/mychef-finedining-bali-luna-chef-portrait.webp',
+    bio: "Surya is the calm hand behind many of our Mediterranean set menus. He combines Adriano's technique with Balinese market knowledge, turning just-caught seafood, handmade pasta, and clean sauces into elegant villa dinners.",
     achievements: ['Leads Mediterranean villa menus', 'Known for fresh pasta and seafood timing', 'Guest favourite for intimate 6–12 person dinners'],
   },
   {
@@ -25,7 +25,7 @@ const CHEFS = [
     role: 'Head Chef — BBQ & Grill',
     specialty: 'Open-Flame Cooking',
     badge: 'Jimbaran grill specialist with decades around charcoal',
-    image: '/generated/chef-bayu-pranata.webp',
+    image: '/generated/mychef-finedining-bali-sol-chef-portrait.webp',
     bio: 'Bayu runs our BBQ and grill experiences with the confidence of someone who grew up cooking over live fire. From wagyu and lobster to whole fish and satay, he keeps the energy relaxed while every protein lands perfectly cooked.',
     achievements: ['Leads poolside BBQ events across Bali', 'Specialist in seafood, wagyu, and family-style spreads', 'Experienced with celebrations from 10 to 80 guests'],
   },
@@ -34,7 +34,7 @@ const CHEFS = [
     role: 'Head Chef — Balinese & Asian Fusion',
     specialty: 'Balinese Classics & Modern Asian',
     badge: 'Gianyar-born chef rooted in ceremonial cooking traditions',
-    image: '/generated/chef-ni-putu-asri.webp',
+    image: '/generated/mychef-misc-bali-about-team-photo.webp',
     bio: 'Asri protects the local soul of the myCHEF menu. She leads Indonesian feasts, ceremonial dishes, and Asian fusion menus with a balance of authenticity, polish, and warmth that villa guests immediately feel.',
     achievements: ['Leads Indonesian feast menus', 'Balances tradition with modern plating', 'Trusted for family celebrations and cultural dinners'],
   },
@@ -57,7 +57,7 @@ const SECTIONS = [
     id: 'team',
     type: 'content' as const,
     subtitle: 'Our Team',
-    title: 'The Culinary Team Behind Bali’s Private Dining Favourite',
+    title: "The Culinary Team Behind Bali's Private Dining Favourite",
     body: `<p>myCHEF is led by Adriano and powered by a 50+ person hospitality team trained for villa service, not restaurant shortcuts. Every chef is taught how to cook beautifully in unfamiliar kitchens, adapt to dietary requests, and leave the space spotless before they go.</p>
     <p>That means better timing, calmer service, and food that still feels personal even when the event is large. From candlelit dinners to full villa celebrations, the chefs below set the standard.</p>`,
     image: '/generated/trust-chefs.webp',
@@ -102,7 +102,7 @@ const SECTIONS = [
     id: 'cta',
     type: 'cta' as const,
     subtitle: 'Book a Chef',
-    title: 'Tell Us Your Dates and We’ll Match the Right Chef',
+    title: "Tell Us Your Dates and We'll Match the Right Chef",
     body: 'Share your villa location, guest count, and the kind of meal you want. We will recommend the best chef for that menu and help you lock in availability fast.',
   },
 ]
@@ -149,7 +149,7 @@ export default function ChefsPage() {
       seoDescription="Meet our team of 50+ professional chefs available across Bali. Michelin-trained leadership, Indonesian culinary excellence."
       canonicalUrl="https://mychef.id/chefs"
       h1="Meet the Chefs Behind Every myCHEF Experience"
-      subtitle="From Adriano’s Michelin-trained leadership to our Bali-based specialists in Mediterranean, Indonesian, and BBQ dining."
+      subtitle="From Adriano's Michelin-trained leadership to our Bali-based specialists in Mediterranean, Indonesian, and BBQ dining."
       heroImage="/generated/mychef-finedining-bali-chefs-hero.webp"
       heroImageAlt="myCHEF culinary team in Bali"
       ogImage="https://mychef.id/generated/mychef-finedining-bali-chefs-hero.webp"

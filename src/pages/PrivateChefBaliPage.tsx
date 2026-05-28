@@ -31,7 +31,7 @@ const MENUS = [
     price: 'IDR 2,200,000++',
     tagline: 'Five courses. Italian seafood. Open kitchen.',
     accent: '#2C5F7C',
-    image: '/generated/menu-mediterranean-sea.webp',
+    image: '/generated/mychef-experience-bali-luna-gallery-1.webp',
     courses: [
       'Passione di Dentice — red snapper carpaccio, passion fruit, basil gelato',
       'Burrata — prawn mousse, giardiniera, extra virgin olive oil',

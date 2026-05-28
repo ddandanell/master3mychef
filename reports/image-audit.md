@@ -1,30 +1,30 @@
 # MyChef Image Audit Report
-**Generated:** 2026-05-27T14:56:48.345Z
+**Generated:** 2026-05-28T16:56:04.576Z
 
 ## Summary
-- **Total Images:** 168
-- **Total References:** 162
-- **Total File Size:** 25.6 MB
+- **Total Images:** 196
+- **Total References:** 177
+- **Total File Size:** 28.68 MB
 - **Images Without Alt Text:** 0
 - **Images Not Following Convention:** 0
 
 ## Format Distribution
-- **WEBP:** 161
+- **WEBP:** 189
 - **PNG:** 4
 - **SVG:** 1
 - **JPG:** 2
 
 ## Top 10 Files with Most Image References
-1. `/src/pages/LunaPage.tsx` — 10 references
-2. `/src/pages/HubPage.tsx` — 7 references
-3. `/src/pages/EventsWeddingsPage.tsx` — 7 references
-4. `/src/pages/EventsRetreatsPage.tsx` — 7 references
-5. `/src/pages/EventsCorporatePage.tsx` — 7 references
-6. `/src/pages/EventsBirthdaysPage.tsx` — 7 references
-7. `/src/pages/EventsBabyShowersPage.tsx` — 7 references
-8. `/src/pages/EventsVillaPartiesPage.tsx` — 6 references
-9. `/src/pages/EventsAnniversariesPage.tsx` — 6 references
-10. `/src/pages/CateringFloatingBreakfastPage.tsx` — 4 references
+1. `/src/data/siteArchitecture.ts` — 15 references
+2. `/src/pages/LunaPage.tsx` — 10 references
+3. `/src/pages/HubPage.tsx` — 7 references
+4. `/src/pages/EventsWeddingsPage.tsx` — 7 references
+5. `/src/pages/EventsRetreatsPage.tsx` — 7 references
+6. `/src/pages/EventsCorporatePage.tsx` — 7 references
+7. `/src/pages/EventsBirthdaysPage.tsx` — 7 references
+8. `/src/pages/EventsBabyShowersPage.tsx` — 7 references
+9. `/src/pages/EventsVillaPartiesPage.tsx` — 6 references
+10. `/src/pages/EventsAnniversariesPage.tsx` — 6 references
 
 ## Images Not Following Naming Convention
 - `/public/partners-hero.webp` (webp, 77.82 KB)
@@ -49,7 +49,31 @@
   - Used by: 0 file(s)
 - `/public/apple-touch-icon.png` (png, 1.1 KB)
   - Used by: 0 file(s)
+- `/public/generated/staffing-table-lg.webp` (webp, 99.25 KB)
+  - Used by: 0 file(s)
+- `/public/generated/staffing-kitchen-lg.webp` (webp, 86.47 KB)
+  - Used by: 0 file(s)
+- `/public/generated/staffing-hero-xl.webp` (webp, 83.26 KB)
+  - Used by: 0 file(s)
+- `/public/generated/section-romantic-dinner.webp` (webp, 102.79 KB)
+  - Used by: 0 file(s)
 - `/public/generated/pricing-hero.webp` (webp, 66.82 KB)
+  - Used by: 0 file(s)
+- `/public/generated/pkg-grazing.webp` (webp, 85.11 KB)
+  - Used by: 0 file(s)
+- `/public/generated/party-white.webp` (webp, 137.37 KB)
+  - Used by: 0 file(s)
+- `/public/generated/party-ultimate.webp` (webp, 114.84 KB)
+  - Used by: 0 file(s)
+- `/public/generated/party-rooftop.webp` (webp, 87.04 KB)
+  - Used by: 0 file(s)
+- `/public/generated/party-festival.webp` (webp, 185.48 KB)
+  - Used by: 0 file(s)
+- `/public/generated/party-brunch.webp` (webp, 129.21 KB)
+  - Used by: 0 file(s)
+- `/public/generated/party-birthday.webp` (webp, 107.43 KB)
+  - Used by: 0 file(s)
+- `/public/generated/party-beer.webp` (webp, 108.17 KB)
   - Used by: 0 file(s)
 - `/public/generated/partner-platform-hero.webp` (webp, 81.58 KB)
   - Used by: 0 file(s)
@@ -133,11 +157,43 @@
   - Used by: 0 file(s)
 - `/public/generated/og-catering.webp` (webp, 79.61 KB)
   - Used by: 0 file(s)
+- `/public/generated/misc-trust-hosts-lg.webp` (webp, 89.57 KB)
+  - Used by: 0 file(s)
+- `/public/generated/misc-luna-plating-md.webp` (webp, 79.78 KB)
+  - Used by: 0 file(s)
+- `/public/generated/misc-hub-bali-lg.webp` (webp, 103.52 KB)
+  - Used by: 0 file(s)
+- `/public/generated/luna-wine.webp` (webp, 55.08 KB)
+  - Used by: 0 file(s)
+- `/public/generated/luna-detail.webp` (webp, 116.44 KB)
+  - Used by: 0 file(s)
+- `/public/generated/luna-chef-portrait.webp` (webp, 64.39 KB)
+  - Used by: 0 file(s)
 - `/public/generated/journal-hero.webp` (webp, 102.88 KB)
+  - Used by: 0 file(s)
+- `/public/generated/hub-villa.webp` (webp, 133.71 KB)
+  - Used by: 0 file(s)
+- `/public/generated/hub-catering.webp` (webp, 121.34 KB)
+  - Used by: 0 file(s)
+- `/public/generated/finingdining-chefs-hero-xl.webp` (webp, 104.36 KB)
+  - Used by: 0 file(s)
+- `/public/generated/experience-aura-setup-lg.webp` (webp, 138.19 KB)
+  - Used by: 0 file(s)
+- `/public/generated/corp-villa.webp` (webp, 118.71 KB)
   - Used by: 0 file(s)
 - `/public/generated/contact-hero.webp` (webp, 65.15 KB)
   - Used by: 0 file(s)
+- `/public/generated/chefs-table-hero-luxury.webp` (webp, 139.61 KB)
+  - Used by: 0 file(s)
+- `/public/generated/catering-catering-hero-lg.webp` (webp, 122 KB)
+  - Used by: 0 file(s)
 - `/public/generated/book-hero.webp` (webp, 72.12 KB)
+  - Used by: 0 file(s)
+- `/public/generated/bali-hub-hero.webp` (webp, 211.12 KB)
+  - Used by: 0 file(s)
+- `/public/generated/aura-corporate.webp` (webp, 121.68 KB)
+  - Used by: 0 file(s)
+- `/public/generated/aura-bartender.webp` (webp, 104.46 KB)
   - Used by: 0 file(s)
 
 ## References Without Alt Text
@@ -150,8 +206,8 @@
 3. `/public/generated/mychef-location-bali-city-pondok-indah.webp` (1344x768) — 630.42 KB — Used 0x
 4. `/public/generated/mychef-location-bali-city-pererenan.webp` (1344x768) — 620.39 KB — Used 0x
 5. `/public/generated/mychef-events-bali-hero-events-new.webp` (1344x768) — 584.88 KB — Used 1x
-6. `/public/generated/mychef-location-bali-city-ubud.webp` (1344x768) — 565.19 KB — Used 0x
+6. `/public/generated/mychef-location-bali-city-ubud.webp` (1344x768) — 565.19 KB — Used 1x
 7. `/public/generated/mychef-location-bali-city-kemang.webp` (1344x768) — 564.23 KB — Used 0x
 8. `/public/generated/mychef-location-bali-city-uluwatu.webp` (1344x768) — 559.98 KB — Used 0x
 9. `/public/generated/mychef-location-bali-city-jimbaran.webp` (1344x768) — 519.23 KB — Used 0x
-10. `/public/generated/mychef-location-bali-city-canggu.webp` (1344x768) — 512.96 KB — Used 0x
+10. `/public/generated/mychef-location-bali-city-canggu.webp` (1344x768) — 512.96 KB — Used 1x

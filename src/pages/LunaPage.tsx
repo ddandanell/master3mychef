@@ -158,28 +158,28 @@ const THE_FOUR = [
     name: 'I Made Surya',
     role: 'Pasta. Mediterranean lead.',
     origin: 'Ubud, Bali',
-    image: '/generated/chef-made-surya.webp',
+    image: '/generated/mychef-finedining-bali-luna-chef-portrait.webp',
     bio: 'Born in a village outside Ubud, where his family ran a warung. He started as a kitchen hand at sixteen in a hotel in Seminyak, moved up to line cook, then to a small Italian restaurant in Canggu where he taught himself to make pasta. Adriano met him in 2021 — they were in the same kitchen for one service, covering for a mutual friend. Adriano watched him work for two hours and offered him an apprenticeship that night. Three months of the training were spent on pasta technique alone. His tagliatelle now travels with him to every Mediterranean evening, rolled in the villa where it will be eaten.',
   },
   {
     name: 'Bayu Pranata',
     role: 'Grill and protein. Wagyu lead.',
     origin: 'Yogyakarta, Java',
-    image: '/generated/chef-bayu-pranata.webp',
+    image: '/generated/mychef-finedining-bali-sol-chef-portrait.webp',
     bio: 'Born in Yogyakarta. Trained in five-star hotel kitchens in Jakarta before moving to Bali in 2019 looking for less industrial work. He specialised in grilled proteins at a steakhouse in Seminyak, where his ribeye became quietly known among local chefs. Adriano heard about him in 2022, took a meeting, watched him cook a single steak, and hired him the same week. He brings the patience of a man who has been at fire since he was nineteen — and the discipline the Wagyu menu requires.',
   },
   {
     name: 'Rizky Saputra',
     role: 'Sauces and technique. Cross-menu.',
     origin: 'Padang, West Sumatra',
-    image: '/generated/chef-rizky-saputra.webp',
+    image: '/generated/mychef-finedining-bali-chef-signature.jpg',
     bio: 'Born in Padang, West Sumatra, into a family that has run restaurants for three generations. Minangkabau cooking is built on sauces that take a day — rendang reduced until the coconut milk has all but disappeared, gulai layered over hours, sambal pounded by hand. He grew up understanding that a sauce that takes ten minutes is not yet a sauce. He left Padang at twenty for Jakarta, then came to Bali in 2020 looking for a kitchen that would demand something different from him. He worked in two hotel kitchens before Adriano met him in 2023 at an industry tasting. The way he reduced a single sauce caught Adriano\'s eye — controlled, patient, almost reverent. Adriano hired him within a fortnight. He runs the sauce station on every evening, regardless of menu. The blue cheese sauce on the Wagyu ribeye and the lobster reduction for the tagliatelle are both his hands.',
   },
   {
     name: 'Ni Putu Asri',
     role: 'Pastry.',
     origin: 'North Bali',
-    image: '/generated/chef-ni-putu-asri.webp',
+    image: '/generated/mychef-misc-bali-about-team-photo.webp',
     bio: 'Born in a village in north Bali. Trained at a culinary school in Denpasar, then worked in pastry at a high-end resort in Nusa Dua, where she grew frustrated by the industrial scale of it — sheet trays of identical cakes for the breakfast buffet, made by a kitchen of fifteen. Adriano met her in 2023 at a wedding she had been hired to bake for. The dessert was the best thing on the table. He found her two days later. She left the resort the following month and trained with Adriano for nine months — the longest training any of the four has done. The lady fingers in the tiramisu are baked the morning of the dinner. The Tenerina cake is hers.',
   },
 ]
@@ -703,7 +703,7 @@ export default function LunaPage() {
                 {/* Menu image — transparent PNG of the dry-aging cabinet, sits cleanly over the dark menu card */}
                 <div className="pt-8 pb-2 text-center">
                   <img
-                    src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean-sea.webp' : '/generated/mychef-finedining-bali-luna-plating.webp'}
+                    src={menu.id === 'mediterranean' ? '/generated/mychef-experience-bali-luna-gallery-1.webp' : '/generated/mychef-finedining-bali-luna-plating.webp'}
                     alt={menu.id === 'mediterranean' ? 'Mediterranean SEA Experience — certified tuna dry-aging cabinet' : 'Wagyu Experience — certified wagyu dry-aging cabinet'}
                     width={520}
                     height={260}

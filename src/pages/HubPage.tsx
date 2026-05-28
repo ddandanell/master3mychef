@@ -869,12 +869,12 @@ export default function HubPage() {
               { name: 'Canggu', slug: 'canggu', image: '/generated/mychef-location-bali-city-canggu.webp' },
               { name: 'Ubud', slug: 'ubud', image: '/generated/mychef-location-bali-city-ubud.webp' },
               { name: 'Uluwatu', slug: 'uluwatu', image: '/generated/mychef-location-bali-city-uluwatu.webp' },
-              { name: 'Sanur', slug: 'sanur', image: '/generated/city-sanur.webp' },
-              { name: 'Nusa Dua', slug: 'nusa-dua', image: '/generated/city-nusa-dua.webp' },
-              { name: 'Jimbaran', slug: 'jimbaran', image: '/generated/city-jimbaran.webp' },
-              { name: 'Berawa', slug: 'berawa', image: '/generated/city-berawa.webp' },
-              { name: 'Pererenan', slug: 'pererenan', image: '/generated/city-pererenan.webp' },
-              { name: 'Bukit', slug: 'bukit', image: '/generated/city-bukit.webp' },
+              { name: 'Sanur', slug: 'sanur', image: '/generated/mychef-location-bali-city-sanur.webp' },
+              { name: 'Nusa Dua', slug: 'nusa-dua', image: '/generated/mychef-location-bali-city-nusa-dua.webp' },
+              { name: 'Jimbaran', slug: 'jimbaran', image: '/generated/mychef-location-bali-city-jimbaran.webp' },
+              { name: 'Berawa', slug: 'berawa', image: '/generated/mychef-location-bali-city-berawa.webp' },
+              { name: 'Pererenan', slug: 'pererenan', image: '/generated/mychef-location-bali-city-pererenan.webp' },
+              { name: 'Bukit', slug: 'bukit', image: '/generated/mychef-location-bali-city-bukit.webp' },
             ].map((city) => (
               <Link
                 key={city.slug}

@@ -119,7 +119,7 @@ async function startPreviewServer(): Promise<ChildProcess> {
       output += data.toString()
       // Look for server ready signal
       if (output.includes('Local:') || output.includes('ready in')) {
-        setTimeout(() => resolve(server), 2000) // Extra 2s for stability
+        setTimeout(() => resolve(server), 5000) // Extra 5s for stability
       }
     })
     
@@ -171,7 +171,7 @@ async function prerender() {
         // Navigate and wait for React hydration + network idle
         await page.goto(url, { 
           waitUntil: 'networkidle',
-          timeout: 30000 
+          timeout: 45000 
         })
         
         // Wait for React root to have content

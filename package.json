@@ -18,6 +18,11 @@
     "cleanup:images": "npx tsx scripts/cleanup-unused-images.ts",
     "verify": "node scripts/verify-deployment.cjs"
   },
+  "engines": {
+    "node": "20.x",
+    "pnpm": "9.x"
+  },
+  "packageManager": "pnpm@9.15.0",
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@radix-ui/react-collapsible": "^1.1.12",

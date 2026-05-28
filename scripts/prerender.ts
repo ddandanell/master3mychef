@@ -107,10 +107,11 @@ async function startPreviewServer(): Promise<ChildProcess> {
   return new Promise((resolve, reject) => {
     console.log('🌐 Starting preview server...')
     
-    const server = spawn('npx', ['vite', 'preview', '--host', '127.0.0.1', '--port', '4173'], {
+    const server = spawn('pnpm', ['exec', 'vite', 'preview', '--host', '127.0.0.1', '--port', '4173'], {
       cwd: join(__dirname, '..'),
       stdio: 'pipe',
       detached: false,
+      shell: true,
     })
     
     let output = ''

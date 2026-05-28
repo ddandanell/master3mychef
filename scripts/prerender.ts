@@ -117,20 +117,27 @@ async function startPreviewServer(): Promise<ChildProcess> {
     let output = ''
     
     server.stdout?.on('data', (data) => {
-      output += data.toString()
+      const msg = data.toString()
+      output += msg
+      console.log('  [stdout]', msg.trim())
       // Look for server ready signal
-      if (output.includes('Local:') || output.includes('ready in')) {
+      if (output.includes('Local:') || output.includes('ready in') || output.includes('http://')) {
         setTimeout(() => resolve(server), 5000) // Extra 5s for stability
       }
     })
     
     server.stderr?.on('data', (data) => {
       const msg = data.toString()
+      console.log('  [stderr]', msg.trim())
       if (msg.includes('EADDRINUSE')) {
         console.log('    ℹ Server already running on port 4173')
         resolve(server)
       } else if (!msg.includes('MallocStack')) {
         output += msg
+      }
+      // Also check stderr for ready signal
+      if (msg.includes('Local:') || msg.includes('ready in') || msg.includes('http://')) {
+        setTimeout(() => resolve(server), 5000)
       }
     })
     

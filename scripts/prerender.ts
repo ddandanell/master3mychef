@@ -158,7 +158,17 @@ async function prerender() {
     server = await startPreviewServer()
     console.log('    ✅ Server ready\n')
     
-    const browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_PATH })
+    let browser
+    try {
+      browser = await chromium.launch({ headless: true })
+    } catch (e) {
+      console.log('    ⚠️  Playwright chromium not available, skipping prerender')
+      console.log('    This is expected on Vercel builds — prerender runs locally instead')
+      if (server) {
+        server.kill('SIGTERM')
+      }
+      return
+    }
     const context = await browser.newContext({
       userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
       viewport: { width: 1920, height: 1080 },

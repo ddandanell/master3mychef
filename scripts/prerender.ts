@@ -135,8 +135,8 @@ async function startPreviewServer(): Promise<ChildProcess> {
     
     server.on('error', reject)
     
-    // Timeout after 15s
-    setTimeout(() => reject(new Error('Server start timeout')), 15000)
+    // Timeout after 45s
+    setTimeout(() => reject(new Error('Server start timeout')), 45000)
   })
 }
 

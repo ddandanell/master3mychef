@@ -1,14 +1,10 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, Utensils, Star, MessageCircle, Phone, ShoppingBag, Sparkles } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const HOW_IT_WORKS = [
   { step: '01', title: 'Message Daniel on WhatsApp', desc: 'Tell us your villa, dates, and how many people. Most replies within the hour.', icon: MessageCircle },
@@ -51,17 +47,53 @@ const TESTIMONIALS = [
   { name: 'Marco & Elena', location: 'Milan', text: 'We came for a week and extended to ten days just because of the food. Fresh, healthy, and always surprising. It felt like having a friend who happens to be an incredible chef.' },
 ]
 
+const RELATED_SERVICES = [
+  {
+    title: 'Fine Dining in Your Villa',
+    desc: 'Michelin-trained chefs for private tasting evenings.',
+    href: '/fine-dining',
+  },
+  {
+    title: 'Event Catering',
+    desc: 'Weddings, parties, and retreats with full staffing.',
+    href: '/events',
+  },
+  {
+    title: 'Villa Hospitality Services',
+    desc: 'Butlers, bartenders, and service teams beyond the kitchen.',
+    href: '/services',
+  },
+]
+
 export default function SolPage() {
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    const ctx = gsap.context(() => {
+    let cancelled = false
+    let cleanup: (() => void) | undefined
 
-      gsap.fromTo('.sol-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.sol-content', start: 'top 75%', once: true },
-      })
-    }, ref)
-    return () => ctx.revert()
+    void (async () => {
+      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
+        import('gsap'),
+        import('gsap/ScrollTrigger'),
+      ])
+
+      if (cancelled) return
+
+      gsap.registerPlugin(ScrollTrigger)
+      const ctx = gsap.context(() => {
+        gsap.fromTo('.sol-reveal', { y: 50, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.sol-content', start: 'top 75%', once: true },
+        })
+      }, ref)
+
+      cleanup = () => ctx.revert()
+    })()
+
+    return () => {
+      cancelled = true
+      cleanup?.()
+    }
   }, [])
 
   return (
@@ -77,7 +109,7 @@ export default function SolPage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering-hero.webp"
+            src="/generated/mychef-catering-bali-catering-hero.webp"
             alt="Villa chef plating a family-style brunch at a Bali villa, golden morning light"
             width={1920}
             height={1080}
@@ -94,10 +126,10 @@ export default function SolPage() {
             This page is for couples, families, and villa guests who want breakfast, lunch, or dinner cooked in their villa. Best for 1–4 guests and longer stays — not parties, weddings, or large catered events.
           </p>
           <div className="sol-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Message myCHEF
             </a>
-            <Link to="/catering" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <Link to="/catering" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               Planning a Group Event?
             </Link>
           </div>
@@ -108,7 +140,7 @@ export default function SolPage() {
             <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
               Choose <span className="font-semibold text-white">Private Villa Dining</span> if you want a chef dedicated to your villa stay, daily meals, or an intimate dinner at home. Choose Events & Catering if you are hosting 5+ guests, a celebration, or need buffet, BBQ, plated service, or wedding-style setup.
             </p>
-            <Link to="/catering" className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors">
+            <Link to="/catering" className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               View Events & Catering →
             </Link>
           </div>
@@ -136,7 +168,7 @@ export default function SolPage() {
             ))}
           </div>
           <div className="text-center">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-howitworks" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-howitworks" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Start on WhatsApp
             </a>
           </div>
@@ -202,7 +234,7 @@ export default function SolPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-pricing" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-pricing" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Book Your Chef
             </a>
           </div>
@@ -215,7 +247,7 @@ export default function SolPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden max-w-[75%] mx-auto">
               <img
-                src="/generated/sol-chef-portrait.webp"
+                src="/generated/mychef-finedining-bali-sol-chef-portrait.webp"
                 alt="Chef Daniel"
                 width={800}
                 height={1000}
@@ -303,7 +335,7 @@ export default function SolPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-testimonials" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-testimonials" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Ask Daniel on WhatsApp
             </a>
           </div>
@@ -336,13 +368,37 @@ export default function SolPage() {
               <p className="text-xs mb-6" style={{ color: '#8A7B6B' }}>
                 * Groceries billed at cost — no markup. Minimum 4-hour booking. Service charge included.
               </p>
-              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="sol-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 <Phone className="w-4 h-4" /> Book via WhatsApp
               </a>
             </div>
             <div className="p-8 rounded-2xl border border-[#E5E0D8] bg-white">
               <BookingForm universe="sol" compact />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-24 md:py-32 px-6" style={{ background: '#F5F0E8' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Complete Your Stay</p>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
+            <p style={{ color: '#8A7B6B' }} className="max-w-2xl mx-auto">Private dinners, event teams, and hospitality staff when your stay needs more than daily meals.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {RELATED_SERVICES.map((item) => (
+              <Link
+                key={item.title}
+                to={item.href}
+                className="group rounded-2xl border border-[#E5E0D8] bg-white p-6 transition-all duration-200 hover:border-[#6B8E5A] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#6B8E5A]"
+              >
+                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                <p className="text-sm leading-relaxed mb-6" style={{ color: '#8A7B6B' }}>{item.desc}</p>
+                <span className="text-[#6B8E5A] text-xs uppercase tracking-[0.25em]">Explore →</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

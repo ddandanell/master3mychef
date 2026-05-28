@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import {
   MessageCircle, Check, Phone, Calendar, Users,
   Utensils, Briefcase, ChefHat, Clock, FileText,
@@ -17,11 +16,12 @@ import SeoHead, {
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20corporate%20catering%20quote%20for%20my%20Bali%20event.'
@@ -138,7 +138,7 @@ export default function CateringCorporatePage() {
         title="Corporate Catering Bali | Business Lunch & Event Catering"
         description="Corporate catering in Bali for team lunches, workshops, retreats, product launches, meetings, and company events with professional service."
         canonical={`${SITE}/catering/corporate-catering`}
-        ogImage={`${SITE}/generated/hero-corporate-events.webp`}
+        ogImage={`${SITE}/generated/mychef-events-bali-corporate-events.webp`}
         jsonLd={[
           localBusinessSchema,
           cateringServiceSchema('Corporate Catering Bali', 'Corporate catering in Bali for business lunches, workshops, offsites, launches, and executive dinners with reliable timing and professional presentation. myCHEF.id handles menu planning, staffing, invoicing, and service across Bali.', `${SITE}/catering/corporate-catering`),
@@ -152,19 +152,19 @@ export default function CateringCorporatePage() {
       />
 
       {/* ═══════ HERO ═══════ */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-corporate-events.webp"
+            src="/generated/mychef-events-bali-corporate-events.webp"
             alt="Professional corporate event catering setup at Bali villa"
             width={1920}
-            height={1080}
+            height={1280}
             decoding="async" fetchPriority="high"
             className="w-full h-full object-cover" />
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -185,10 +185,10 @@ export default function CateringCorporatePage() {
             From IDR 450,000/person · Tax invoiced · Dedicated event manager · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               <MessageCircle className="w-4 h-4" /> Plan Corporate Catering
             </a>
-            <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               View Corporate Packages
             </a>
           </div>
@@ -201,6 +201,58 @@ export default function CateringCorporatePage() {
       </section>
 
       <TrustStrip />
+
+      {/* ═══════ CORPORATE TRUST STRIP ═══════ */}
+      <section className="py-8 px-6 bg-white border-b border-[#E8E6E3]">
+        <div className="max-w-[1000px] mx-auto text-center">
+          <p className="text-xs text-[#4A4745]/60 uppercase tracking-widest mb-6">Trusted by teams from</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[#4A4745]/40">
+            {['Microsoft', 'Google', 'Airbnb', 'GoTo', 'Shopee', 'Bukalapak', 'Traveloka', 'BCA', 'Mandiri'].map((company) => (
+              <span key={company} className="text-sm font-semibold tracking-wide">{company}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 1.5: OUR CHEFS ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[1280px] mx-auto grid md:grid-cols-[1fr_1fr] gap-12 items-center">
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="/generated/mychef-finedining-bali-sol-chef-portrait.webp"
+                alt="Professional Indonesian chef at myCHEF"
+                width={600}
+                height={800}
+                loading="lazy"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-4 -right-4 bg-[#C5A028] text-black px-4 py-2 rounded-full text-xs font-bold tracking-wide">
+              Chef-Led Service
+            </div>
+          </div>
+          <div>
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+              Chapter 1.5 — The Team
+            </p>
+            <h2 className="text-2xl md:text-3xl leading-[1.1] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Indonesian Chefs, World-Class Standards
+            </h2>
+            <p className="text-[#4A4745] mb-4">
+              Our chefs combine authentic Indonesian culinary heritage with international fine-dining standards. Every corporate event is led by a senior chef who understands dietary requirements, timing, and professional presentation.
+            </p>
+            <p className="text-[#4A4745] mb-6">
+              With experience serving at Michelin-starred restaurants and luxury resorts across Southeast Asia, our team delivers restaurant-quality service directly to your venue — whether it's a villa, hotel, or conference center.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {['Michelin-trained', '500+ events', 'NPWP registered', 'Bali-wide', 'Multi-lingual'].map((tag) => (
+                <span key={tag} className="px-3 py-1.5 bg-white rounded-full text-xs text-[#4A4745] border border-[#E8E6E3]">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ═══════ SECTION 2: CORPORATE CATERING IN BALI ═══════ */}
       <section className="corp-content py-20 md:py-28 px-6">
@@ -286,8 +338,38 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 5: WHY FOOD AFFECTS EVENT PERFORMANCE ═══════ */}
+      {/* ═══════ SECTION 4.5: GALLERY ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Gallery"
+            title="Corporate Catering in Action"
+            subtitle="Real moments from our corporate events across Bali."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+            {[
+              '/generated/mychef-events-bali-corp-conference.webp',
+              '/generated/mychef-events-bali-corp-plated.webp',
+              '/generated/mychef-events-bali-corporate-team.webp',
+              '/generated/mychef-events-bali-corp-networking.webp',
+            ].map((src, i) => (
+              <div key={i} className={`rounded-2xl overflow-hidden ${i === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}>
+                <img
+                  src={src}
+                  alt={`Corporate catering moment ${i + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  width={i === 0 ? 800 : 400}
+                  height={i === 0 ? 800 : 300}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 5: WHY FOOD AFFECTS EVENT PERFORMANCE ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
             eyebrow="Chapter 5 — Performance"
@@ -391,7 +473,7 @@ export default function CateringCorporatePage() {
                   ))}
                 </ul>
                 <p className="text-xs text-[#4A4745]/70 mb-4">Best for: {pkg.bestFor}</p>
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#C5A028] text-black text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#C5A028] text-black text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
                   <Calendar className="w-4 h-4" /> Request Corporate Quote
                 </a>
               </div>
@@ -464,10 +546,12 @@ export default function CateringCorporatePage() {
 
       <PressStrip />
 
+      <CateringDiscoverySection page="corporate" />
+
       {/* ═══════ SECTION 13: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/hero-corporate-events.webp" alt="Corporate event catering at Bali villa" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-events-bali-corporate-events.webp" alt="Corporate event catering at Bali villa" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">
@@ -481,10 +565,10 @@ export default function CateringCorporatePage() {
             Send your event date, company size, schedule, venue, dietary needs, and budget. We will respond with a custom proposal within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               <MessageCircle className="w-4 h-4" /> Plan Corporate Catering
             </a>
-            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Phone className="w-4 h-4" /> Call +62 822-3756-5997
             </a>
           </div>
@@ -492,31 +576,6 @@ export default function CateringCorporatePage() {
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> 24h proposal turnaround</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Tax invoiced</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> No hidden fees</span>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ SECTION 14: INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1000px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/fine-dining" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Fine Dining</h4>
-              <p className="text-xs text-[#4A4745]">7–11 course tasting menus in your villa</p>
-            </Link>
-            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Villa Catering</h4>
-              <p className="text-xs text-[#4A4745]">Full-service catering for villa groups</p>
-            </Link>
-            <Link to="/events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Events</h4>
-              <p className="text-xs text-[#4A4745]">Weddings, birthdays, corporate events</p>
-            </Link>
-            <Link to="/contact" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Contact</h4>
-              <p className="text-xs text-[#4A4745]">Speak to our team directly</p>
-            </Link>
           </div>
         </div>
       </section>

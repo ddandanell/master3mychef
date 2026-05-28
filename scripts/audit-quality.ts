@@ -42,7 +42,7 @@ const pageFiles = readdirSync(PAGES).filter(f => f.endsWith('.tsx'))
 console.log('\n[1] Meta titles (≤65 chars)')
 // Only match title= that appears within a few lines of SeoHead or PremiumPage SeoHead calls
 const seoTitleRe = /(?:SeoHead|<SeoHead)[^>]*?\btitle="([^"]+)"/gs
-let t0 = issues
+const t0 = issues
 for (const file of pageFiles) {
   const src = readPage(file)
   for (const m of src.matchAll(seoTitleRe)) {
@@ -56,7 +56,7 @@ console.log('\n[2] Meta descriptions (80–160 chars)')
 // Only match description= within SeoHead context
 const seoDescRe = /(?:SeoHead|<SeoHead)[^>]*?\bdescription="([^"]+)"/gs
 const skipDesc = ['NotFoundPage', 'PrivacyPage', 'TermsPage', 'CancellationPage']
-let d0 = issues
+const d0 = issues
 for (const file of pageFiles) {
   if (skipDesc.some(s => file.includes(s))) continue
   const src = readPage(file)
@@ -73,7 +73,7 @@ console.log('\n[3] OG images exist in public/')
 const ogRe = /ogImage=["'`]https?:\/\/mychef\.id(\/[^"'`]+)["'`]/g
 const allSrc = pageFiles.map(f => readPage(f)).join('\n')
 const seenOg = new Set<string>()
-let o0 = issues
+const o0 = issues
 for (const m of allSrc.matchAll(ogRe)) {
   const relPath = m[1]
   if (seenOg.has(relPath)) continue
@@ -85,7 +85,7 @@ if (issues === o0) ok(`All ${seenOg.size} OG image paths resolve`)
 // ── 4. No console.log in production pages ────────────────────────────────────
 console.log('\n[4] No console.log in production pages')
 const consoleRe = /console\.log\(/
-let c0 = issues
+const c0 = issues
 for (const file of pageFiles) {
   const lines = readPage(file).split('\n')
   lines.forEach((line, i) => {
@@ -102,7 +102,7 @@ const sitemap = readFileSync(join(PUBLIC, 'sitemap.xml'), 'utf8')
 const sitemapUrls = [...sitemap.matchAll(/<loc>https:\/\/mychef\.id([^<]+)<\/loc>/g)].map(m => m[1])
 const redirects = readFileSync(join(ROOT, 'src/data/redirects.ts'), 'utf8')
 const redirectSet = new Set([...redirects.matchAll(/from:\s*'([^']+)'/g)].map(m => m[1]))
-let s0 = issues
+const s0 = issues
 for (const url of sitemapUrls) {
   if (redirectSet.has(url)) fail(`Sitemap has redirected URL: ${url}`)
 }
@@ -111,7 +111,7 @@ if (issues === s0) ok(`All ${sitemapUrls.length} sitemap URLs are canonical`)
 // ── Check 6: No www.mychef.id in source ──────────────────────────────────────
 console.log('\n[6] No www.mychef.id in source files')
 const srcDirs = ['src/pages', 'src/components', 'src/data', 'index.html']
-let w0 = issues
+const w0 = issues
 for (const dir of srcDirs) {
   const fullDir = join(ROOT, dir)
   if (!existsSync(fullDir)) continue
@@ -134,7 +134,7 @@ console.log('\n[7] All landing/guide/blog pages have article content')
   const sitemapSrc = readFileSync(join(ROOT, 'src/data/sitemap.ts'), 'utf8')
   // Parse slugs for LANDING_PAGES, GUIDES, BLOG_POSTS and check each has a content field
   const sections = ['LANDING_PAGES', 'GUIDES', 'BLOG_POSTS']
-  let n0 = issues
+  const n0 = issues
   for (const section of sections) {
     // Find block start
     const startIdx = sitemapSrc.indexOf(`export const ${section}`)

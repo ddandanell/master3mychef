@@ -4,6 +4,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import BookingForm from '@/components/BookingForm'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 
@@ -50,7 +51,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'sunset-pool-party',
     name: 'Sunset Pool Party Experience',
     concept: 'Luxury Bali villa pool party with cocktails, live BBQ, floating snacks, music and sunset atmosphere.',
-    image: '/generated/party-pool.webp',
+    image: '/generated/mychef-events-bali-party-pool.webp',
     price: 'From IDR 950,000++ / guest',
     min: 'Min. 10 guests',
     bestFor: 'Birthday parties · Friends trips · Villa weekends · Influencer groups · Pre-wedding events',
@@ -61,7 +62,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'white-party-night',
     name: 'White Party Villa Night',
     concept: 'Luxury all-white evening with cocktails, premium dinner service, candles and high-end villa styling.',
-    image: '/generated/party-white.webp',
+    image: '/generated/mychef-events-bali-party-white.webp',
     price: 'From IDR 1,450,000++ / guest',
     min: 'Min. 12 guests',
     bestFor: 'Luxury birthdays · Fashion groups · Influencer dinners · Networking events',
@@ -72,7 +73,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'taco-tequila-fiesta',
     name: 'Taco & Tequila Fiesta',
     concept: 'Interactive Mexican-inspired villa party with tacos, tequila, margaritas and social food stations.',
-    image: '/generated/party-tacos.webp',
+    image: '/generated/mychef-events-bali-party-tacos.webp',
     price: 'From IDR 750,000++ / guest',
     min: 'Min. 8 guests',
     includes: ['Taco station', 'Margarita bar', 'Tequila tasting', 'Nachos & dips', 'Mexican dessert setup'],
@@ -82,7 +83,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'mediterranean-sunset-feast',
     name: 'Mediterranean Sunset Feast',
     concept: 'Luxury Mediterranean sharing dinner inspired by beach clubs and European summer nights.',
-    image: '/generated/party-medi.webp',
+    image: '/generated/mychef-events-bali-party-medi.webp',
     price: 'From IDR 1,250,000++ / guest',
     min: 'Min. 6 guests',
     includes: ['Seafood', 'Handmade pasta', 'Burrata', 'Shared feast setup', 'Dessert', 'Full service'],
@@ -92,7 +93,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'villa-festival-night',
     name: 'Villa Festival Night',
     concept: 'Private mini-festival atmosphere with food stations, cocktails, lounge areas and entertainment.',
-    image: '/generated/party-festival.webp',
+    image: '/generated/mychef-events-bali-party-festival.webp',
     price: 'From IDR 1,950,000++ / guest',
     min: 'Min. 20 guests',
     includes: ['Multiple food stations', 'Cocktail bars', 'Lounge styling', 'Lighting setup', 'Service team'],
@@ -102,7 +103,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'rooftop-cocktail-session',
     name: 'Rooftop Cocktail Session',
     concept: 'Elegant rooftop-style cocktail evening with canapés, bartenders and sunset social atmosphere.',
-    image: '/generated/party-rooftop.webp',
+    image: '/generated/mychef-events-bali-party-rooftop.webp',
     price: 'From IDR 850,000++ / guest',
     min: 'Min. 10 guests',
     includes: ['Signature cocktails', 'Canapés', 'Bartender team', 'Ice & garnish station', 'Service staff'],
@@ -112,7 +113,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'private-birthday-experience',
     name: 'Luxury Birthday Experience',
     concept: 'Complete birthday setup with food, drinks, styling, cake and atmosphere planning.',
-    image: '/generated/party-birthday.webp',
+    image: '/generated/mychef-events-bali-party-birthday.webp',
     price: 'From IDR 1,650,000++ / guest',
     min: 'Min. 8 guests',
     includes: ['Custom dinner', 'Birthday cake', 'Styling assistance', 'Waiters', 'Cocktail welcome', 'Cleanup'],
@@ -122,7 +123,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'recovery-brunch-chill',
     name: 'Recovery Brunch & Chill',
     concept: 'Refined recovery brunch after weddings, birthdays or villa parties.',
-    image: '/generated/party-brunch.webp',
+    image: '/generated/mychef-events-bali-party-brunch.webp',
     price: 'From IDR 450,000++ / guest',
     min: 'Min. 6 guests',
     includes: ['Healthy breakfast', 'Fresh juices', 'Coffee station', 'Recovery food', 'Fruit platters'],
@@ -132,7 +133,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'bali-bbq-beer-garden',
     name: 'Bali BBQ & Beer Garden',
     concept: 'Relaxed premium beer-and-grill atmosphere inspired by iconic beach clubs.',
-    image: '/generated/party-beer.webp',
+    image: '/generated/mychef-events-bali-party-beer.webp',
     price: 'From IDR 650,000++ / guest',
     min: 'Min. 10 guests',
     includes: ['BBQ station', 'Beer buckets', 'Sharing platters', 'Side dishes', 'Dessert'],
@@ -142,7 +143,7 @@ const PACKAGES: PartyPackage[] = [
     slug: 'ultimate-villa-celebration',
     name: 'Ultimate Villa Celebration',
     concept: 'Full-scale private villa event production. The flagship package.',
-    image: '/generated/party-ultimate.webp',
+    image: '/generated/mychef-events-bali-party-ultimate.webp',
     price: 'From IDR 2,950,000++ / guest',
     min: 'Min. 20 guests',
     includes: ['Full catering', 'Premium cocktails', 'Staffing', 'Styling', 'Event coordination', 'Fine-dining table setup', 'Music coordination', 'Cleanup'],
@@ -197,6 +198,7 @@ const TESTIMONIALS = [
 
 export default function AuraPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
 
   const eventSchemas = [
     {
@@ -258,6 +260,13 @@ export default function AuraPage() {
   ]
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.aura-reveal').forEach(el => {
+        (el as HTMLElement).style.opacity = '1'
+      })
+      return
+    }
+
     const ctx = gsap.context(() => {
 
       gsap.fromTo('.aura-reveal', { y: 50, opacity: 0 }, {
@@ -266,7 +275,7 @@ export default function AuraPage() {
       })
     }, ref)
     return () => ctx.revert()
-  }, [])
+  }, [prefersReducedMotion])
 
   return (
     <div ref={ref} data-universe="aura" className="min-h-screen" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>
@@ -274,14 +283,14 @@ export default function AuraPage() {
         title="Bali Event Catering — Villas, Weddings & Corporate | myCHEF"
         description="Bali event catering by myCHEF — villa parties, weddings, corporate dinners, retreats. Catering, bar, décor, staffing end-to-end. From IDR 15M."
         canonical="https://mychef.id/events"
-        ogImage="https://mychef.id/generated/aura-hero-v2.webp"
+        ogImage="https://mychef.id/generated/mychef-experience-bali-aura-hero-v2.webp"
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 89), ...eventSchemas, breadcrumbSchema('Events', 'https://mychef.id/events'), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/aura-hero-v2.webp"
+            src="/generated/mychef-experience-bali-aura-hero-v2.webp"
             alt="Luxury Bali villa event with long dining table, gold styling, and candlelight"
             width={1920}
             height={1080}
@@ -290,7 +299,7 @@ export default function AuraPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/25 md:hidden" />
@@ -305,10 +314,10 @@ export default function AuraPage() {
             From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 15M total event minimum. Olivia replies within 24 hours.
           </p>
           <div className="aura-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Get Event Quote — 24h Reply
             </a>
-            <a href="#packages" className="inline-block px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="#packages" className="inline-block px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               See Party Events
             </a>
           </div>
@@ -349,7 +358,7 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="text-center">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Start on WhatsApp
             </a>
           </div>
@@ -374,7 +383,7 @@ export default function AuraPage() {
                 {item.href && item.cta && (
                   <a
                     href={item.href}
-                    className="inline-flex items-center gap-2 mt-6 text-xs font-semibold tracking-[0.25em] uppercase self-center text-[#2C5F7C] hover:text-[#0F0F0F] transition-colors"
+                    className="inline-flex items-center gap-2 mt-6 text-xs font-semibold tracking-[0.25em] uppercase self-center text-[#2C5F7C] hover:text-[#0F0F0F] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                   >
                     {item.cta}
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -405,13 +414,13 @@ export default function AuraPage() {
               <article
                 key={pkg.slug}
                 id={pkg.slug}
-                className="group flex flex-col scroll-mt-24"
+                className="group flex flex-col scroll-mt-24 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
               >
                 <a
                   href={`https://wa.me/6282237565997?text=${encodeURIComponent('Hi myCHEF — interested in the ' + pkg.name + ' package. Could you send details?')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative block overflow-hidden rounded-[16px] aspect-[16/8] mb-8 ring-1 ring-black/5 shadow-[0_16px_40px_-20px_rgba(15,15,15,0.3)]"
+                  className="relative block overflow-hidden rounded-[16px] aspect-[16/8] mb-8 ring-1 ring-black/5 shadow-[0_16px_40px_-20px_rgba(15,15,15,0.3)] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                 >
                   <img
                     src={pkg.image}
@@ -487,7 +496,7 @@ export default function AuraPage() {
                   href={`https://wa.me/6282237565997?text=${encodeURIComponent('Hi myCHEF — interested in the ' + pkg.name + ' package. Could you send details?')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] uppercase self-start py-2 border-b-2 border-[#0F0F0F] hover:border-[#2C5F7C] hover:text-[#2C5F7C] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] uppercase self-start py-2 border-b-2 border-[#0F0F0F] hover:border-[#2C5F7C] hover:text-[#2C5F7C] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                   style={{ color: '#0F0F0F' }}
                 >
                   Book this experience
@@ -527,7 +536,7 @@ export default function AuraPage() {
               href="https://wa.me/6282237565997?text=Hi%20myCHEF%20%E2%80%94%20I%27d%20like%20to%20design%20a%20custom%20villa%20party"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <Phone className="w-4 h-4" /> Design a custom party
             </a>
@@ -552,7 +561,7 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Get Your Quote
             </a>
           </div>
@@ -565,7 +574,7 @@ export default function AuraPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <img
-                src="/generated/aura-team.webp"
+                src="/generated/mychef-experience-bali-aura-team.webp"
                 alt="Olivia and the myCHEF events team coordinating a villa wedding in Bali"
                 width={800}
                 height={600}
@@ -653,7 +662,7 @@ export default function AuraPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Ask Olivia on WhatsApp
             </a>
           </div>
@@ -686,7 +695,7 @@ export default function AuraPage() {
               <p className="text-xs mb-6" style={{ color: '#4A4745' }}>
                 * Custom quotes include catering, bar, staffing, and basic décor. AV, floral, and specialty items quoted separately.
               </p>
-              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+              <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 <Phone className="w-4 h-4" /> Get a Quote on WhatsApp
               </a>
             </div>
@@ -716,10 +725,10 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1e4a63] transition-all">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1e4a63] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Get Quote in 24h — Free Consultation
             </a>
-            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>
           </div>

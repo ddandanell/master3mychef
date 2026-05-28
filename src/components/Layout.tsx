@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { UniverseProvider } from '@/contexts/UniverseContext'
-import { trackPageView, trackWhatsAppClick } from '@/lib/analytics'
+import { trackPageView, trackWhatsAppClick, trackPhoneClick } from '@/lib/analytics'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import ConciergeWidget from './ConciergeWidget'
@@ -9,9 +9,7 @@ import ConciergeWidget from './ConciergeWidget'
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
 
-  // Reset scroll to top on route change — UNLESS the URL contains a hash anchor.
-  // For hash navigation (e.g. /fine-dining#book) we let the browser scroll to the
-  // target section, which is then offset by scroll-mt-24 to clear the fixed nav.
+  // Reset scroll to top on route change
   useEffect(() => {
     if (location.hash) {
       const el = document.querySelector(location.hash)
@@ -27,21 +25,29 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     trackPageView(`${location.pathname}${location.search}`)
   }, [location.pathname, location.search])
 
-  // Universal WA conversion tracking — catches every wa.me click sitewide
+  // Universal Conversion Tracking — catches every WA and Phone click sitewide
   useEffect(() => {
-    const handleWaClick = (e: MouseEvent) => {
-      const anchor = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[href*="wa.me"]')
-      if (anchor) {
-        const source =
-          anchor.dataset.source ||
-          window.location.pathname.replace(/^\/+|\/+$/g, '').replace(/\//g, '_') ||
-          'home'
+    const handleConversionClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      
+      // WhatsApp Tracking
+      const waAnchor = target.closest<HTMLAnchorElement>('a[href*="wa.me"]')
+      if (waAnchor) {
+        const source = waAnchor.dataset.source || location.pathname.replace(/^\/+|\/+$/g, '').replace(/\//g, '_') || 'home'
         trackWhatsAppClick(source)
+        return
+      }
+
+      // Phone Tracking (Push a number)
+      const phoneAnchor = target.closest<HTMLAnchorElement>('a[href^="tel:"]')
+      if (phoneAnchor) {
+        const source = phoneAnchor.dataset.source || location.pathname.replace(/^\/+|\/+$/g, '').replace(/\//g, '_') || 'home'
+        trackPhoneClick(source)
       }
     }
-    document.addEventListener('click', handleWaClick)
-    return () => document.removeEventListener('click', handleWaClick)
-  }, [])
+    document.addEventListener('click', handleConversionClick)
+    return () => document.removeEventListener('click', handleConversionClick)
+  }, [location.pathname])
 
   return (
     <UniverseProvider>

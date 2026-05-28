@@ -1,3 +1,4 @@
+import OptimizedImage from '@/components/OptimizedImage'
 /**
  * PremiumPage — Full-featured page template for myCHEF
  * 
@@ -205,7 +206,7 @@ export default function PremiumPage({
             <div
               className="absolute inset-0"
               style={{
-                background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+                background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
               }}
             />
             <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -312,7 +313,7 @@ export default function PremiumPage({
                     )}
                   </div>
                   <div className={idx % 2 === 0 ? 'order-2' : 'order-1'}>
-                    <img
+                    <OptimizedImage
                       src={section.image}
                       alt={section.imageAlt || section.title}
                       className="w-full rounded-2xl shadow-xl"
@@ -373,7 +374,7 @@ export default function PremiumPage({
                       >
                         <div className="aspect-[4/5] bg-gradient-to-br from-[#1A1A1A] via-[#3A3429] to-[#C5A028]/70">
                           {profile.image ? (
-                            <img
+                            <OptimizedImage
                               src={profile.image}
                               alt={profile.imageAlt || profile.name}
                               className="w-full h-full object-cover"
@@ -525,7 +526,7 @@ export default function PremiumPage({
                       <Link
                         key={link.href}
                         to={link.href}
-                        className="group bg-white rounded-2xl p-6 shadow-sm border border-black/5 hover:shadow-md transition-shadow"
+                        className="group bg-white rounded-2xl p-6 shadow-sm border border-black/5 hover:shadow-md transition-shadow focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                       >
                         <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors">
                           {link.label}
@@ -571,7 +572,7 @@ export default function PremiumPage({
                 <Link
                   key={page.href}
                   to={page.href}
-                  className="group bg-white rounded-2xl p-6 shadow-sm border border-black/5 hover:shadow-md transition-shadow"
+                  className="group bg-white rounded-2xl p-6 shadow-sm border border-black/5 hover:shadow-md transition-shadow focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 >
                   <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors">
                     {page.label}
@@ -607,10 +608,10 @@ export default function PremiumPage({
             </Button>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/[40%]">
-            <a href={`tel:${WA}`} className="flex items-center gap-2 hover:text-white transition-colors">
+            <a href={`tel:${WA}`} className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Phone className="w-4 h-4" /> +62 822-3756-5997
             </a>
-            <a href="mailto:indonesia@mychef.id" className="flex items-center gap-2 hover:text-white transition-colors">
+            <a href="mailto:indonesia@mychef.id" className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Mail className="w-4 h-4" /> indonesia@mychef.id
             </a>
           </div>

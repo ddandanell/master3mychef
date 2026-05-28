@@ -14,7 +14,7 @@
     /* Brand Core */
     --brand-black: #050505;
     --brand-white: #F5F3EF;
-    --brand-gold: #C5A028;
+    --brand-gold: #7A5C13; /* Updated: darker for AA contrast (5.63:1, was #C5A028 at 2.25:1) */
     --brand-gold-light: #D4B43A;
     --whatsapp: #25D366;
 
@@ -45,9 +45,9 @@
     --u-bg-alt: #FFFFFF;
     --u-text: #1A1A1A;
     --u-text-muted: #6B5B4E;
-    --u-accent: #C5A028;
-    --u-accent-rgb: 197, 160, 40;
-    --u-label-accent: #9D7714;
+    --u-accent: #7A5C13; /* Updated: darker for AA contrast (5.63:1, was #C5A028 at 2.25:1) */
+    --u-accent-rgb: 122, 92, 19;
+    --u-label-accent: #7A5C13;
     --u-border: #E5E3E0;
     --u-surface: #FFFFFF;
     --u-hero-overlay: rgba(5, 5, 5, 0.45);
@@ -61,6 +61,7 @@
     --u-text-muted: #9A9590;
     --u-accent: #C5A028;
     --u-accent-rgb: 197, 160, 40;
+    --u-accent-dark: #7A5C13; /* Darker gold for buttons with white text (5.63:1 ratio) */
     --u-label-accent: #CBAA3A;
     --u-border: #2A2A2A;
     --u-surface: #111111;
@@ -72,9 +73,9 @@
     --u-bg: #F5F0E8;
     --u-bg-alt: #FFFFFF;
     --u-text: #2C2419;
-    --u-text-muted: #8A7B6B;
-    --u-accent: #6B8E5A;
-    --u-accent-rgb: 107, 142, 90;
+    --u-text-muted: #6B5F52; /* Updated: 5.51:1 ratio (was #8A7B6B at 3.61:1) */
+    --u-accent: #557147; /* Updated: 5.22:1 ratio on background (was #6B8E5A at 3.28:1) */
+    --u-accent-rgb: 85, 113, 71;
     --u-label-accent: #557147;
     --u-border: #E5E0D8;
     --u-surface: #FFFFFF;
@@ -148,6 +149,33 @@
       animation-duration: 0.01ms !important;
       transition-duration: 0.01ms !important;
     }
+  }
+
+  /* Luna theme button contrast fix: white text on darker gold for WCAG AA compliance */
+  [data-universe="luna"] [data-slot="button"][data-variant="primary"],
+  [data-universe="luna"] [data-slot="button"][data-variant="default"],
+  [data-universe="luna"] [data-slot="button"][data-variant="whatsapp"] {
+    background-color: var(--u-accent-dark);
+  }
+
+  [data-universe="luna"] [data-slot="button"][data-variant="primary"]:hover,
+  [data-universe="luna"] [data-slot="button"][data-variant="default"]:hover,
+  [data-universe="luna"] [data-slot="button"][data-variant="whatsapp"]:hover {
+    background-color: #6B5210;
+  }
+
+  [data-universe="luna"] [data-slot="button"][data-variant="secondary"],
+  [data-universe="luna"] [data-slot="button"][data-variant="ghost"],
+  [data-universe="luna"] [data-slot="button"][data-variant="link"] {
+    color: var(--u-accent-dark);
+    border-color: var(--u-accent-dark);
+  }
+
+  [data-universe="luna"] [data-slot="button"][data-variant="secondary"]:hover,
+  [data-universe="luna"] [data-slot="button"][data-variant="ghost"]:hover {
+    background-color: var(--u-accent-dark);
+    color: white;
+    border-color: var(--u-accent-dark);
   }
 
   /* Hero fade-in keyframe — used by .luna-hero-* (Fine Dining) and any other hero
@@ -284,11 +312,17 @@
     animation: pulse-glow 2s ease-in-out infinite;
   }
 
+  /* Skip below-the-fold layout/render work until the section is near the viewport. */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+
   /* Critical hero image fallback — ensures homepage never looks completely broken */
-  img[src*="/generated/bali-hub-hero.webp"],
-  img[src*="/generated/hub-fine-dining.webp"],
-  img[src*="/generated/hub-catering.webp"],
-  img[src*="/generated/hub-events.webp"] {
+  img[src*="/generated/mychef-misc-bali-hub-hero.webp"],
+  img[src*="/generated/mychef-finedining-bali-hub-fine-dining.webp"],
+  img[src*="/generated/mychef-catering-bali-hub-catering.webp"],
+  img[src*="/generated/mychef-events-bali-hub-events.webp"] {
     /* If image fails to load, show a dark background instead of blank space */
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   }

@@ -7,7 +7,7 @@ export default function TrustSection() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: 'url(/generated/trust-section-bg.png)',
+          backgroundImage: 'url(/generated/mychef-misc-bali-trust-section-bg.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',

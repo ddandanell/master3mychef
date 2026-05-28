@@ -5,8 +5,6 @@ import {
   Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music,
   Globe2, ClipboardCheck, ArrowRight, Check,
 } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -18,7 +16,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { EventsRiskReversal } from '@/components/shared'
 
-gsap.registerPlugin(ScrollTrigger)
+import OptimizedImage from '@/components/OptimizedImage'
 
 const SITE = 'https://mychef.id'
 const WA_NUMBER = '6282237565997'
@@ -77,7 +75,7 @@ const EVENT_TYPES: EventType[] = [
     title: 'Anniversary Dinners',
     fromPrice: <CardPrice price={1200000} />,
     description:
-      'Private candlelit dinner built around your history. Wine paired. Service perfect. The opposite of generic.',
+      'Private candlelit dinner built around your history. Wine pairing available. Service polished. The opposite of generic.',
     icon: Wine,
     image: '/generated/aura-toast.webp',
     href: '/events/anniversaries',
@@ -88,9 +86,9 @@ const EVENT_TYPES: EventType[] = [
     title: 'Corporate Events',
     fromPrice: <CardPrice price={1200000} />,
     description:
-      'Offsites, dinners, retreats, launches. Full hospitality production. Invoice-ready. NPWP-issued. Zero stress.',
+      'Offsites, dinners, retreats, launches. Full hospitality production. Invoice-ready. NPWP-issued. Lower-stress for hosts.',
     icon: Briefcase,
-    image: '/generated/corp-gala.webp',
+    image: '/generated/mychef-events-bali-corp-executive.webp',
     href: '/events/corporate-events',
   },
   {
@@ -99,7 +97,7 @@ const EVENT_TYPES: EventType[] = [
     title: 'Wellness & Yoga Retreats',
     fromPrice: <CardPrice price={1500000} suffix="/pp/day" />,
     description:
-      'Plant-forward, gluten-free, raw, vegan—dietary specialists handle everything at scale. Three meals daily. On schedule.',
+      'Plant-forward, gluten-free, raw, vegan—dietary planning handled at scale. Three meals daily. On schedule.',
     icon: Leaf,
     image: '/generated/party-medi.webp',
     href: '/events/retreats',
@@ -110,7 +108,7 @@ const EVENT_TYPES: EventType[] = [
     title: 'Baby Showers',
     fromPrice: <CardPrice price={750000} />,
     description:
-      'Brunch, high tea, themed decor, mocktail bar. Styled so well it photographs itself. You just show up.',
+      'Brunch, high tea, themed decor, mocktail bar. Styled to photograph beautifully. You just show up.',
     icon: Baby,
     image: '/generated/party-white.webp',
     href: '/events/baby-showers',
@@ -139,7 +137,7 @@ const HOW_WE_RUN: HowStep[] = [
   {
     step: '01',
     title: 'Message Us',
-    body: 'Date, guest count, villa, event type. Sofia replies within hours with availability and pricing.',
+    body: 'Date, guest count, villa, event type. Sofia typically replies within a few hours with availability and pricing.',
     icon: MessageCircle,
   },
   {
@@ -186,10 +184,28 @@ const WHY_COMPETITIVE = [
   { vs: 'Hotel packages', point: 'Your villa, your rules, your timeline. No hotel curfews, no generic menus, no ballroom feel.' },
 ]
 
+const RELATED_SERVICES = [
+  {
+    title: 'Fine Dining in Your Villa',
+    desc: 'Michelin-trained chefs for private tasting evenings.',
+    href: '/fine-dining',
+  },
+  {
+    title: 'Daily Villa Chef',
+    desc: 'Breakfast, lunch, and dinner for longer stays.',
+    href: '/villa-chef',
+  },
+  {
+    title: 'Villa Hospitality Services',
+    desc: 'Butlers, bartenders, and service teams beyond the kitchen.',
+    href: '/services',
+  },
+]
+
 const PRICING_TRANSPARENCY = [
   { label: 'Per-person base', desc: 'Covers chef, ingredients, service staff, and basic setup. Varies by event type and menu.' },
   { label: 'Add-ons', desc: 'Photography, custom cake, live music, premium bar, extended decor — all itemised in the proposal.' },
-  { label: 'Tax & service', desc: '10% government service charge + 11% VAT added at proposal. No hidden fees.' },
+  { label: 'Tax & service', desc: '10% government service charge + 11% VAT added at proposal. No surprise add-ons.' },
   { label: 'Deposit', desc: '50% to confirm the date. Balance due the week of the event. Net-30 for repeat corporate clients.' },
 ]
 
@@ -221,7 +237,7 @@ const EVENTS_TESTIMONIALS = [
     name: 'Priya & Raj',
     location: 'Uluwatu Villa Wedding',
     quote:
-      'We compared three hotels and a wedding planner. myCHEF was half the price and twice the warmth. Sofia ran the day like a Swiss watch.',
+      'We compared three hotels and a wedding planner. myCHEF felt half the price and twice the warmth. Sofia ran the day like a Swiss watch.',
     rating: 5,
   },
   {
@@ -255,7 +271,7 @@ const FAQS = [
   },
   {
     q: 'Can you work at any villa in Bali?',
-    a: 'Yes. We are mobile hospitality — full kitchen, glassware, linens, generator, cold chain, the lot. We have worked at over 200 villas across Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Pererenan, Berawa, and the Bukit peninsula. If your villa is in Bali, we can run an event there.',
+    a: 'Yes. We are mobile hospitality — full kitchen, glassware, linens, generator, cold chain, the lot. We have worked across villas in Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Pererenan, Berawa, and the Bukit peninsula. If your villa is in Bali, we can run an event there.',
   },
   {
     q: 'Do we pay a deposit, and what happens if we cancel?',
@@ -279,22 +295,41 @@ export default function EventsMainPage() {
   const heroRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        '.hero-fade',
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1.1, stagger: 0.12, ease: 'power3.out' },
-      )
-      gsap.fromTo(
-        '.events-reveal',
-        { y: 40, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 0.9, stagger: 0.08, ease: 'power3.out',
-          scrollTrigger: { trigger: '.events-grid', start: 'top 80%', once: true },
-        },
-      )
-    }, heroRef)
-    return () => ctx.revert()
+    let cancelled = false
+    let cleanup: (() => void) | undefined
+
+    void (async () => {
+      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
+        import('gsap'),
+        import('gsap/ScrollTrigger'),
+      ])
+
+      if (cancelled) return
+
+      gsap.registerPlugin(ScrollTrigger)
+      const ctx = gsap.context(() => {
+        gsap.fromTo(
+          '.hero-fade',
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 1.1, stagger: 0.12, ease: 'power3.out' },
+        )
+        gsap.fromTo(
+          '.events-reveal',
+          { y: 40, opacity: 0 },
+          {
+            y: 0, opacity: 1, duration: 0.9, stagger: 0.08, ease: 'power3.out',
+            scrollTrigger: { trigger: '.events-grid', start: 'top 80%', once: true },
+          },
+        )
+      }, heroRef)
+
+      cleanup = () => ctx.revert()
+    })()
+
+    return () => {
+      cancelled = true
+      cleanup?.()
+    }
   }, [])
 
   return (
@@ -344,7 +379,7 @@ export default function EventsMainPage() {
       {/* ═══════ HERO — DARK, EDITORIAL, GOLD ═══════ */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0A0A0A] text-white">
         <img
-          src="/hero-events.webp"
+          src="/generated/mychef-events-bali-hero-events-new.webp"
           alt="Luxury villa event in Bali with styled dining and celebration setup"
           width={1920}
           height={1080}
@@ -355,24 +390,22 @@ export default function EventsMainPage() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
           }}
         />
         <div className="absolute inset-0 bg-black/20 md:hidden" />
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-8 py-12 md:py-20 w-full flex flex-col justify-center h-full">
           <Breadcrumb items={[{ label: 'Events' }]} theme="dark" className="px-0 pt-0 pb-8" />
           <p
-            className="hero-fade text-[#C5A028] text-sm tracking-[0.4em] uppercase mb-6"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+            className="font-cormorant hero-fade text-[#C5A028] text-sm tracking-[0.4em] uppercase mb-6"
           >
             Chapter 1 — Bali Events
           </p>
           <h1
-            className="hero-fade text-5xl md:text-7xl lg:text-8xl leading-[1.05] max-w-2xl mb-8"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="hero-fade font-playfair text-5xl md:text-7xl lg:text-8xl leading-[1.05] max-w-2xl mb-8"
           >
             Events in Bali, run by one team.<br />
-            <span className="italic text-white/[85%]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <span className="font-cormorant italic text-white/[85%]">
               You just host.
             </span>
           </h1>
@@ -386,19 +419,19 @@ export default function EventsMainPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="events-hero"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Book on WhatsApp
             </a>
             <a
               href="#event-types"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               View Event Types <ChevronRight className="w-4 h-4" />
             </a>
           </div>
           <p className="hero-fade mt-4 text-sm text-white/[60%]">
-            From IDR 600K++/guest · Free consultation · Same-day WhatsApp reply · Transparent proposal before deposit
+            From IDR 600K++/guest · Free consultation · Typical same-day WhatsApp reply · Transparent proposal before deposit
           </p>
         </div>
       </section>
@@ -413,12 +446,11 @@ export default function EventsMainPage() {
       <section className="py-20 md:py-28 px-6 bg-[#0F0F0F] text-white">
         <div className="max-w-3xl mx-auto text-center">
           <p
-            className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+            className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5"
           >
             Production, not catering
           </p>
-          <h2 className="text-3xl md:text-5xl leading-[1.1] mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="font-playfair text-3xl md:text-5xl leading-[1.1] mb-8">
             We approach events the way a fine-dining kitchen approaches service.
           </h2>
           <p className="text-lg leading-relaxed text-white/[75%]">
@@ -442,16 +474,16 @@ export default function EventsMainPage() {
               <Link
                 key={event.slug}
                 to={event.href}
-                className="group bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300"
+                className="group bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={event.image} alt={`${event.title} in Bali by myCHEF`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <OptimizedImage src={event.image} alt={`${event.title} in Bali by myCHEF`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
                 <div className="p-5">
-                  <p className="text-[#C5A028] text-[11px] tracking-[0.3em] uppercase mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                  <p className="font-cormorant text-[#C5A028] text-[11px] tracking-[0.3em] uppercase mb-2">
                     {event.eyebrow}
                   </p>
-                  <h3 className="text-xl text-[#1A1A1A] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{event.title}</h3>
+                  <h3 className="font-playfair text-xl text-[#1A1A1A] mb-2">{event.title}</h3>
                   <p className="text-[#4A4745] text-sm leading-relaxed">{event.description}</p>
                 </div>
               </Link>
@@ -473,7 +505,7 @@ export default function EventsMainPage() {
               <Link
                 key={e.slug}
                 to={e.href}
-                className="events-reveal group bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300"
+                className="events-reveal group bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-xl hover:border-[#C5A028] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
@@ -489,8 +521,7 @@ export default function EventsMainPage() {
                   <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-sm">
                     <e.icon className="w-3.5 h-3.5 text-[#C5A028]" />
                     <span
-                      className="text-[10px] tracking-[0.3em] uppercase text-white/[90%]"
-                      style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+                      className="font-cormorant text-[10px] tracking-[0.3em] uppercase text-white/[90%]"
                     >
                       {e.eyebrow}
                     </span>
@@ -498,8 +529,7 @@ export default function EventsMainPage() {
                 </div>
                 <div className="p-6 md:p-7">
                   <h3
-                    className="text-2xl text-[#1A1A1A] mb-2"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="font-playfair text-2xl text-[#1A1A1A] mb-2"
                   >
                     {e.title}
                   </h3>
@@ -521,14 +551,12 @@ export default function EventsMainPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p
-              className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
-              style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+              className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
             >
               Chapter 4 — How It Works
             </p>
             <h2
-              className="text-3xl md:text-5xl leading-[1.05]"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="font-playfair text-3xl md:text-5xl leading-[1.05]"
             >
               Three clear steps from first message to event day.
             </h2>
@@ -541,13 +569,12 @@ export default function EventsMainPage() {
                 style={{ background: 'rgba(255,255,255,0.02)' }}
               >
                 <p
-                  className="text-[#C5A028] text-xs tracking-[0.4em] uppercase mb-5"
-                  style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+                  className="font-cormorant text-[#C5A028] text-xs tracking-[0.4em] uppercase mb-5"
                 >
                   {s.step}
                 </p>
                 <s.icon className="w-6 h-6 text-[#C5A028] mb-4" />
-                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="font-playfair text-xl mb-3">
                   {s.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-white/[70%]">{s.body}</p>
@@ -574,8 +601,7 @@ export default function EventsMainPage() {
                   <w.icon className="w-5 h-5 text-[#C5A028]" />
                 </div>
                 <h3
-                  className="text-xl mb-3 text-[#1A1A1A]"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="font-playfair text-xl mb-3 text-[#1A1A1A]"
                 >
                   {w.title}
                 </h3>
@@ -633,8 +659,7 @@ export default function EventsMainPage() {
                 } border-t border-[#E8E6E3]`}
               >
                 <div
-                  className="md:col-span-4 text-base text-[#1A1A1A]"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="font-playfair md:col-span-4 text-base text-[#1A1A1A]"
                 >
                   {row.type}
                 </div>
@@ -663,19 +688,18 @@ export default function EventsMainPage() {
       <section className="py-24 md:py-32 px-6 bg-[#0F0F0F] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <p
-            className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+            className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5"
           >
             Chapter 7 — Your Coordinator
           </p>
           <div className="w-24 h-24 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-6">
             <Heart className="w-10 h-10 text-[#C5A028]" />
           </div>
-          <h2 className="text-3xl md:text-5xl leading-[1.1] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="font-playfair text-3xl md:text-5xl leading-[1.1] mb-4">
             Sofia
           </h2>
           <p className="text-lg text-white/[70%] mb-6 max-w-2xl mx-auto">
-            "I have coordinated 200+ events across Bali — from 2-person anniversary dinners to 200-guest weddings. 
+            "I have coordinated events across Bali — from 2-person anniversary dinners to 200-guest weddings. 
             My job is simple: make sure the host never has to look at a watch."
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -683,13 +707,13 @@ export default function EventsMainPage() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
               href="tel:+6282237565997"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>
@@ -701,20 +725,18 @@ export default function EventsMainPage() {
       <section className="py-20 md:py-24 px-6 bg-white">
         <div className="max-w-[1100px] mx-auto text-center">
           <p
-            className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+            className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
           >
             Chapter 8 — Where We Work
           </p>
           <h2
-            className="text-3xl md:text-4xl text-[#1A1A1A] mb-5"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mb-5"
           >
             Mobile hospitality across Bali
           </h2>
           <p className="text-[#4A4745] max-w-2xl mx-auto mb-10">
             Generator, prep kitchen, cold chain, glassware, linens, and the team — packed and travelled to your villa.
-            Same-island, same-day setups.
+            Same-island, day-of setups when feasible.
           </p>
           <div className="flex flex-wrap justify-center gap-2">
             {AREAS_COVERED.map((area) => (
@@ -728,7 +750,7 @@ export default function EventsMainPage() {
             ))}
           </div>
           <p className="mt-8 text-xs text-[#4A4745]/70">
-            Not on the list? We travel anywhere in Bali. Outer-island events on request.
+            Not on the list? We travel anywhere in Bali. Outer-island referrals on request.
           </p>
         </div>
       </section>
@@ -739,6 +761,70 @@ export default function EventsMainPage() {
         title="What event hosts say"
         subtitle="Real weddings, retreats, off-sites, and parties — from real villas across Bali."
       />
+
+      {/* ═══════ LEARN MORE — BLOG ═══════ */}
+      <section className="py-24 md:py-32 px-6 bg-[#0F0F0F] text-white">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p
+              className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
+            >
+              Learn More
+            </p>
+            <h2
+              className="font-playfair text-3xl md:text-5xl leading-[1.05]"
+            >
+              Event planning insights for Bali
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <Link
+              to="/blog/wedding-private-chef-bali-planning-guide"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Planning a Villa Wedding
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                From venue prep to timing coordination, learn how to orchestrate a wedding that feels effortless from the guest perspective.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
+
+            <Link
+              to="/blog/corporate-events-catering-bali-team-dining"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Corporate Events & Team Dining
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                Execute off-sites, executive dinners, and company retreats with the production quality of a five-star kitchen.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
+
+            <Link
+              to="/blog/how-to-plan-villa-birthday-party-bali"
+              className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+            >
+              <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">
+                Milestone Celebrations in Bali
+              </h3>
+              <p className="text-sm text-white/[70%] mb-4">
+                Birthdays, anniversaries, and milestone moments deserve more than a restaurant reservation—they deserve a production.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
+                Read more <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ═══════ FAQ ═══════ */}
       <section className="py-24 md:py-32 px-6 bg-[#FAFAF8]">
@@ -757,7 +843,7 @@ export default function EventsMainPage() {
           <SectionHeader
             eyebrow="Chapter 10 — Inquire"
             title="Tell Sofia about your event"
-            subtitle="One message. Same-hour reply. A proposal in your inbox within 24 hours."
+            subtitle="One message. Same-day reply. A proposal in your inbox within 24 hours when details are clear."
           />
           <BookingFormCatering
             title="Event Inquiry"
@@ -811,7 +897,7 @@ export default function EventsMainPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden bg-[#0A0A0A] text-white">
         <div className="absolute inset-0 opacity-40">
           <img
-            src="/generated/aura-tablescape.webp"
+            src="/generated/mychef-experience-bali-aura-tablescape.webp"
             alt="Aura restaurant/service at myCHEF fine dining"
             aria-hidden
             width={1920}
@@ -824,11 +910,11 @@ export default function EventsMainPage() {
         </div>
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <Sparkles className="w-7 h-7 text-[#C5A028] mx-auto mb-5" />
-          <h2 className="text-4xl md:text-6xl leading-[1.05] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="font-playfair text-4xl md:text-6xl leading-[1.05] mb-6">
             One message and we&rsquo;re running.
           </h2>
           <p className="max-w-xl mx-auto text-base md:text-lg text-white/[75%] mb-10">
-            Sofia replies inside the hour. The proposal lands inside the day. The team arrives on the date — built,
+            Sofia replies quickly. The proposal typically lands within a day once details are clear. The team arrives on the date — built,
             briefed, and ready.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -837,13 +923,13 @@ export default function EventsMainPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="events-cta"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
-              href="tel:+6282237565997"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all"
+              href="tel:+628****5997"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>
@@ -851,9 +937,33 @@ export default function EventsMainPage() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <section className="py-24 md:py-32 px-6 bg-[#111111]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="font-cormorant text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4">Complete Your Stay</p>
+            <h2 className="font-playfair text-4xl md:text-5xl mb-3 text-white">Related Services</h2>
+            <p className="text-white/[55%] max-w-2xl mx-auto">Private dinners, daily villa chefs, and hospitality teams beyond the event day.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {RELATED_SERVICES.map((item) => (
+              <Link
+                key={item.title}
+                to={item.href}
+                className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-200 hover:border-[#C5A028]/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              >
+                <h3 className="font-playfair text-xl text-white mb-3">{item.title}</h3>
+                <p className="text-sm text-white/[60%] leading-relaxed mb-6">{item.desc}</p>
+                <span className="text-[#C5A028] text-xs uppercase tracking-[0.25em]">Explore →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <LocationChips
         title="Events Across Bali"
-        subtitle="Weddings in Uluwatu. Corporate retreats in Ubud. Birthday parties in Canggu. We know every venue, every vendor, every regulation."
+        subtitle="Weddings in Uluwatu. Corporate retreats in Ubud. Birthday parties in Canggu. We know the venues, vendors, and regulations that matter."
         dark
       />
     </div>

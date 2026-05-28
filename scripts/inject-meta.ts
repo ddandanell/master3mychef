@@ -14,6 +14,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { BLOG_POSTS, GUIDES, SITEMAP } from '../src/data/sitemap'
+import { JOURNAL_POSTS } from '../src/data/siteArchitecture'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = join(__dirname, '..', 'dist')
@@ -46,6 +47,21 @@ const OG_IMAGES: Record<string, string> = {
   '/locations': '/generated/hub-villa.webp',
   '/journal': '/generated/journal-hero.webp',
   '/blog': '/generated/journal-hero.webp',
+  // Journal posts (individual OG images)
+  '/journal/michelin-training-bali': '/generated/journal-hero.webp',
+  '/journal/sustainable-sourcing': '/generated/journal-hero.webp',
+  '/journal/private-chef-vs-villa-staff-bali': '/generated/journal-hero.webp',
+  '/journal/bali-private-chef-cost-guide-2026': '/generated/journal-hero.webp',
+  '/journal/villa-wedding-catering-logistics-bali': '/generated/journal-hero.webp',
+  '/journal/yoga-retreat-meal-planning-bali': '/generated/journal-hero.webp',
+  '/journal/private-chef-seminyak-guide': '/generated/journal-hero.webp',
+  '/journal/private-chef-canggu-guide': '/generated/journal-hero.webp',
+  '/journal/private-chef-ubud-villa-dining': '/generated/journal-hero.webp',
+  '/journal/bali-wedding-catering-complete-guide': '/generated/journal-hero.webp',
+  '/journal/private-chef-jakarta-guide': '/generated/journal-hero.webp',
+  '/journal/rehearsal-dinner-planning-bali': '/generated/journal-hero.webp',
+  '/journal/live-in-chef-vs-daily-service': '/generated/journal-hero.webp',
+  '/journal/bbq-catering-cost-breakdown-bali': '/generated/journal-hero.webp',
   '/reviews': '/dining-table.webp',
   '/why-mychef': '/generated/why-mychef-hero.webp',
   '/retreats': '/generated/hero-retreats.jpg',
@@ -66,8 +82,8 @@ const PILLAR_OG_IMAGES: Record<string, string> = {
 
 const ARTICLE_AUTHOR = 'myCHEF Team'
 const ARTICLE_ROUTES = new Map(
-  [...GUIDES.filter((guide) => guide.slug !== 'guide/private-chef-bali'), ...BLOG_POSTS].map((entry) => [
-    `/${entry.slug}`,
+  [...GUIDES.filter((guide) => guide.slug !== 'guide/private-chef-bali'), ...BLOG_POSTS, ...JOURNAL_POSTS].map((entry: any) => [
+    entry.slug.startsWith('blog/') || entry.slug.startsWith('guide/') ? `/${entry.slug}` : `/journal/${entry.slug}`,
     entry,
   ])
 )
@@ -111,7 +127,7 @@ function buildBreadcrumbJsonLd(path: string, name: string): string {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
       ...(isArticle
-        ? [{ '@type': 'ListItem', position: 2, name: path.startsWith('/blog/') ? 'Journal' : 'Help', item: `https://mychef.id${path.startsWith('/blog/') ? '/blog' : '/help'}` }]
+        ? [{ '@type': 'ListItem', position: 2, name: path.startsWith('/blog/') || path.startsWith('/journal/') ? 'Journal' : 'Help', item: `https://mychef.id${path.startsWith('/blog/') ? '/blog' : path.startsWith('/journal/') ? '/journal' : '/help'}` }]
         : []),
       { '@type': 'ListItem', position: isArticle ? 3 : 2, name, item: `https://mychef.id${path}` },
     ],
@@ -125,7 +141,7 @@ function buildArticleJsonLd(path: string, title: string, description: string, og
 
   const schema = {
     '@context': 'https://schema.org',
-    '@type': path.startsWith('/blog/') ? 'BlogPosting' : 'Article',
+    '@type': path.startsWith('/blog/') || path.startsWith('/journal/') ? 'BlogPosting' : 'Article',
     headline: title,
     description,
     url: `${SITE}${path}`,
@@ -235,13 +251,8 @@ function injectMeta(html: string, path: string, title: string, description: stri
     )
   }
 
-  // Remove FAQPage schema for non-homepage routes
-  if (path !== '/') {
-    html = html.replace(
-      /<!-- Structured data: FAQPage[\s\S]*?<\/script>\s*/,
-      ''
-    )
-  }
+  // Note: FAQPage schema is now exclusively handled by SeoHead component at runtime.
+  // The static FAQPage block was removed from index.html to prevent duplicate field errors.
 
   // Inject structured data before closing </head>
   const structuredData = [

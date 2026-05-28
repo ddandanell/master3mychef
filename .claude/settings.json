@@ -1,0 +1,14 @@
+{
+  "projectName": "myCHEF",
+  "projectDescription": "Luxury Private Chef Dining Experience in Bali",
+  "alwaysThinkingEnabled": true,
+  "modelSelection": "haiku",
+  "allowedTools": {
+    "Bash": {
+      "pnpm": true,
+      "npm": true,
+      "git": true,
+      "node": true
+    }
+  }
+}

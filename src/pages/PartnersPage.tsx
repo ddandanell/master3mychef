@@ -19,6 +19,7 @@ import BestPartnerBadge from '@/components/BestPartnerBadge'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA = '6282237565997'
@@ -58,8 +59,8 @@ const partnerBenefits = [
   },
   {
     icon: Award,
-    title: 'Partner commission structure',
-    desc: 'A clear partner reward model that makes referrals easy to track across recurring guest bookings.',
+    title: '12% co-branded / 7% white-label',
+    desc: 'Co-branded partners earn 12% on every referred booking. White-label partners earn 7%. Tracked per booking, paid monthly.',
   },
   {
     icon: FileText,
@@ -119,7 +120,7 @@ const faqs = [
   },
   {
     q: 'What does the Certified Partner programme include?',
-    a: 'Priority booking access, partner commissions, branded menus, operational support, and a dedicated myCHEF point of contact for guest dining coordination.',
+    a: 'Priority booking access, commissions (12% co-branded / 7% white-label per booking, paid monthly), branded guest menus, operational support, and a dedicated myCHEF point of contact for guest dining coordination.',
   },
   {
     q: 'Can journalists request founder commentary?',
@@ -177,13 +178,13 @@ export default function PartnersPage() {
         title="Press & Partners | myCHEF Bali"
         description="Press kit details and Certified Partner programme information for villa managers looking to work with myCHEF in Bali."
         canonical="https://mychef.id/partners"
-        ogImage="https://mychef.id/generated/partner-platform-hero.webp"
+        ogImage="https://mychef.id/generated/mychef-misc-bali-partner-platform-hero.webp"
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Partners', 'https://mychef.id/partners'), faqPageSchema(faqs.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       <section className="relative overflow-hidden border-b border-[#E8E3D8]">
         <div className="absolute inset-0">
-          <img src="/generated/partner-platform-hero.webp" alt="myCHEF Bali partner programme" className="w-full h-full object-cover opacity-20" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/mychef-misc-bali-partner-platform-hero.webp" alt="myCHEF Bali partner programme" className="w-full h-full object-cover opacity-20" loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(250,250,248,0.86),rgba(250,250,248,0.98))]" />
         </div>
         <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-32">
@@ -213,10 +214,10 @@ export default function PartnersPage() {
                 Request our media kit, founder background, approved brand details, and interview availability for Bali hospitality, villa dining, and high-end travel coverage.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="#press-media" className="inline-flex items-center justify-center rounded-full bg-[#C5A028] px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#D5AF35] transition-colors">
+                <a href="#press-media" className="inline-flex items-center justify-center rounded-full bg-[#C5A028] px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#D5AF35] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                   Explore Press Info
                 </a>
-                <a href={pressMailto} className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1A1A1A]/15 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] hover:border-[#C5A028] transition-colors">
+                <a href={pressMailto} className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1A1A1A]/15 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] hover:border-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                   <Mail className="w-4 h-4" /> Email Press Desk
                 </a>
               </div>
@@ -231,10 +232,10 @@ export default function PartnersPage() {
                 Designed for villa managers who want reliable chef availability, partner rewards, and dining assets that feel premium from enquiry to guest table.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link to="/certified-partner" className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#F1ECE0] transition-colors">
+                <Link to="/certified-partner" className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#F1ECE0] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                   View Partner Programme
                 </Link>
-                <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+                <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                   <MessageCircle className="w-4 h-4" /> WhatsApp Us
                 </a>
               </div>
@@ -255,10 +256,10 @@ export default function PartnersPage() {
               {pressStats.join(' · ')}
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
-              <a href={pressMailto} className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white hover:bg-[#2A2A2A] transition-colors">
+              <a href={pressMailto} className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white hover:bg-[#2A2A2A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 <Mail className="w-4 h-4" /> Contact {PRESS_EMAIL}
               </a>
-              <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center gap-2 rounded-full border border-[#1A1A1A]/15 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] hover:border-[#C5A028] transition-colors">
+              <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center gap-2 rounded-full border border-[#1A1A1A]/15 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] hover:border-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                 <MessageCircle className="w-4 h-4" /> Request a Quick Quote
               </a>
             </div>
@@ -313,10 +314,10 @@ export default function PartnersPage() {
               ))}
             </ul>
             <div className="flex flex-wrap gap-3">
-              <Link to="/certified-partner" className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#D5AF35] transition-colors">
+              <Link to="/certified-partner" className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#D5AF35] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                 Certified Partner Details <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
+              <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 <MessageCircle className="w-4 h-4" /> Partnership WhatsApp
               </a>
             </div>
@@ -325,7 +326,7 @@ export default function PartnersPage() {
           <div>
             <p className="text-[#C5A028] text-xs uppercase tracking-[0.35em] font-semibold mb-4">Partner Benefits</p>
             <h3 className="font-playfair text-3xl md:text-4xl mb-6">Why properties join the network</h3>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {partnerBenefits.map((benefit) => (
                 <div key={benefit.title} className="rounded-[24px] border border-[#E8E3D8] bg-white p-6">
                   <benefit.icon className="w-5 h-5 text-[#C5A028] mb-4" />
@@ -333,6 +334,46 @@ export default function PartnersPage() {
                   <p className="text-sm text-[#4A4745] leading-relaxed">{benefit.desc}</p>
                 </div>
               ))}
+            </div>
+
+            {/* Commission tier comparison */}
+            <div className="rounded-[24px] border border-[#E8E3D8] bg-white overflow-hidden">
+              <div className="px-6 py-4 border-b border-[#E8E3D8]">
+                <p className="text-xs uppercase tracking-[0.3em] font-semibold text-[#C5A028]">Commission Structure</p>
+              </div>
+              <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-[#E8E3D8]">
+                <div className="p-6">
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="font-playfair text-4xl text-[#1A1A1A]">12%</span>
+                    <span className="text-xs uppercase tracking-[0.2em] text-[#4A4745]">Co-Branded</span>
+                  </div>
+                  <p className="text-sm text-[#4A4745] leading-relaxed mb-4">Your villa's name and ours appear together on menus, collateral, and guest communications. Full credit for every referral.</p>
+                  <ul className="space-y-1.5">
+                    {['Priority chef availability','Co-branded menus + collateral','Monthly commission payout','Named certification badge'].map(f => (
+                      <li key={f} className="flex items-start gap-2 text-xs text-[#4A4745]">
+                        <span className="text-[#C5A028] mt-0.5">✓</span>{f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="font-playfair text-4xl text-[#1A1A1A]">7%</span>
+                    <span className="text-xs uppercase tracking-[0.2em] text-[#4A4745]">White-Label</span>
+                  </div>
+                  <p className="text-sm text-[#4A4745] leading-relaxed mb-4">myCHEF operates invisibly under your brand. Guests see only your villa's dining experience. Commission on every booking.</p>
+                  <ul className="space-y-1.5">
+                    {['Chef availability on request','Unbranded service delivery','Monthly commission payout','Operational SOP support'].map(f => (
+                      <li key={f} className="flex items-start gap-2 text-xs text-[#4A4745]">
+                        <span className="text-[#C5A028] mt-0.5">✓</span>{f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="px-6 py-4 bg-[#FAFAF8] border-t border-[#E8E3D8] text-xs text-[#6B6560]">
+                Commissions tracked per booking and paid monthly. WhatsApp <a href={partnerWhatsapp} className="text-[#C5A028] underline underline-offset-2">+62 822-3756-5997</a> to discuss which tier fits your property.
+              </div>
             </div>
           </div>
         </div>
@@ -383,22 +424,22 @@ export default function PartnersPage() {
           <form className="space-y-5" onSubmit={handlePartnerSubmit}>
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
-                <label htmlFor="partner-name" className="sr-only">Your name</label>
-                <input id="partner-name" required value={partnerForm.name} onChange={(e) => setPartnerForm((current) => ({ ...current, name: e.target.value }))} type="text" placeholder="Your Name *" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] outline-none focus:border-[#C5A028]" />
+                <label htmlFor="partner-name" className="block text-xs font-medium mb-2 text-[#1A1A1A]">Your Name *</label>
+                <input id="partner-name" required value={partnerForm.name} onChange={(e) => setPartnerForm((current) => ({ ...current, name: e.target.value }))} type="text" placeholder="John Smith" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] focus:outline-none focus:ring-2 focus:ring-[#C5A028] transition-all" />
               </div>
               <div>
-                <label htmlFor="partner-email" className="sr-only">Email</label>
-                <input id="partner-email" required value={partnerForm.email} onChange={(e) => setPartnerForm((current) => ({ ...current, email: e.target.value }))} type="email" placeholder="Email *" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] outline-none focus:border-[#C5A028]" />
+                <label htmlFor="partner-email" className="block text-xs font-medium mb-2 text-[#1A1A1A]">Email *</label>
+                <input id="partner-email" required value={partnerForm.email} onChange={(e) => setPartnerForm((current) => ({ ...current, email: e.target.value }))} type="email" placeholder="john@villa.com" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] focus:outline-none focus:ring-2 focus:ring-[#C5A028] transition-all" />
               </div>
             </div>
             <div>
-              <label htmlFor="partner-property" className="sr-only">Property or villa name</label>
-              <input id="partner-property" value={partnerForm.property} onChange={(e) => setPartnerForm((current) => ({ ...current, property: e.target.value }))} type="text" placeholder="Property / Villa Name" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] outline-none focus:border-[#C5A028]" />
+              <label htmlFor="partner-property" className="block text-xs font-medium mb-2 text-[#1A1A1A]">Property / Villa Name</label>
+              <input id="partner-property" value={partnerForm.property} onChange={(e) => setPartnerForm((current) => ({ ...current, property: e.target.value }))} type="text" placeholder="Villa Serenity" className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] focus:outline-none focus:ring-2 focus:ring-[#C5A028] transition-all" />
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
-                <label htmlFor="partner-type" className="sr-only">Property type</label>
-                <select id="partner-type" value={partnerForm.type} onChange={(e) => setPartnerForm((current) => ({ ...current, type: e.target.value }))} className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] outline-none focus:border-[#C5A028]">
+                <label htmlFor="partner-type" className="block text-xs font-medium mb-2 text-[#1A1A1A]">Property Type</label>
+                <select id="partner-type" value={partnerForm.type} onChange={(e) => setPartnerForm((current) => ({ ...current, type: e.target.value }))} className="w-full rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#C5A028] transition-all appearance-none">
                   <option value="">Property Type</option>
                   <option>Luxury Villa</option>
                   <option>Boutique Hotel</option>
@@ -416,7 +457,7 @@ export default function PartnersPage() {
               <label htmlFor="partner-notes" className="sr-only">Partnership details</label>
               <textarea id="partner-notes" value={partnerForm.notes} onChange={(e) => setPartnerForm((current) => ({ ...current, notes: e.target.value }))} placeholder="Tell us what type of guests you host, what support you want, and any timing constraints..." rows={5} className="w-full resize-none rounded-2xl border border-[#1A1A1A]/15 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#6B6560] outline-none focus:border-[#C5A028]" />
             </div>
-            <button type="submit" className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] transition-colors hover:bg-[#D5AF35]">
+            <button type="submit" className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] transition-colors hover:bg-[#D5AF35] focus:outline-none focus:ring-2 focus:ring-white">
               <Send className="w-4 h-4" /> Send Partnership Request
             </button>
             <p className="text-center text-xs text-[#8A8785]">This opens WhatsApp with your details pre-filled for the myCHEF team.</p>
@@ -431,7 +472,7 @@ export default function PartnersPage() {
           <p className="text-white/[72%] text-base leading-relaxed mb-8 max-w-[680px] mx-auto">
             Whether you&apos;re writing a feature, managing a villa portfolio, or building a new hospitality partnership, message the team and we&apos;ll route you fast.
           </p>
-          <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#D5AF35] transition-colors">
+          <a href={partnerWhatsapp} target="_blank" rel="noopener noreferrer" data-source="partners-cta" className="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#050505] hover:bg-[#D5AF35] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
             <MessageCircle className="w-4 h-4" /> WhatsApp Partnership Inquiries
           </a>
         </div>

@@ -22,7 +22,7 @@ export default function BaliHubPage() {
         description={description}
         canonical={canonical}
         ogType="article"
-        ogImage={`${SITE}/generated/bali-hub-hero.webp`}
+        ogImage={`${SITE}/generated/mychef-location-bali-hub-hero.webp`}
         jsonLd={[
           localBusinessSchema,
           aggregateRatingSchema(4.9, 560),
@@ -39,7 +39,7 @@ export default function BaliHubPage() {
             headline: title,
             description,
             url: canonical,
-            image: `${SITE}/generated/bali-hub-hero.webp`,
+            image: `${SITE}/generated/mychef-location-bali-hub-hero.webp`,
             publisher: {
               '@type': 'Organization',
               name: 'myCHEF',
@@ -56,7 +56,7 @@ export default function BaliHubPage() {
       {/* Hero — full-bleed image with overlay copy */}
       <section className="relative w-full min-h-[78vh] flex items-end overflow-hidden">
         <img
-          src="/generated/bali-hub-hero.webp"
+          src="/generated/mychef-location-bali-hub-hero.webp"
           alt="Luxury Bali villa with private dining setup at golden hour overlooking rice terraces and the Indian Ocean"
           width={1920}
           height={1080}

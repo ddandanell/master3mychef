@@ -1,7 +1,7 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { ArrowRight, MessageCircle, Check } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
-import { MENUS } from '@/data/sitemap'
+import { MENUS, type Menu } from '@/data/siteArchitecture'
 import TrustStrip from '@/components/shared/TrustStrip'
 
 const SITE = 'https://mychef.id'
@@ -71,7 +71,7 @@ export default function MenuPage() {
         <section className="relative h-[70vh] min-h-[480px] flex items-end overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src="/generated/luna-plating.webp"
+              src="/generated/mychef-finedining-bali-luna-plating.webp"
               alt="myCHEF private chef menus — Bali villa dining"
               width={1920} height={1080}
               decoding="async" fetchPriority="high"
@@ -140,10 +140,10 @@ export default function MenuPage() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               {[
-                { src: '/generated/luna-plating.webp', alt: 'Fine dining plating' },
-                { src: '/generated/luna-dessert.webp', alt: 'Dessert course' },
-                { src: '/generated/luna-wine.webp', alt: 'Wine pairing service' },
-                { src: '/generated/luna-table.webp', alt: 'Villa table setting' },
+                { src: '/generated/mychef-finedining-bali-luna-plating.webp', alt: 'Fine dining plating' },
+                { src: '/generated/mychef-experience-bali-luna-gallery-2.webp', alt: 'Dessert course' },
+                { src: '/generated/mychef-experience-bali-luna-wine.webp', alt: 'Wine pairing service' },
+                { src: '/generated/mychef-experience-bali-luna-table.webp', alt: 'Villa table setting' },
               ].map((img) => (
                 <div key={img.src} className="aspect-square overflow-hidden rounded-[16px]">
                   <img src={img.src} alt={img.alt} width={400} height={400} loading="lazy" decoding="async"
@@ -212,7 +212,7 @@ export default function MenuPage() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {MENUS.map((m) => (
+              {MENUS.map((m: Menu) => (
                 <Link
                   key={m.slug}
                   to={`/menus/${m.slug}`}
@@ -265,7 +265,7 @@ export default function MenuPage() {
           <h2 className="font-playfair text-3xl mb-4">Other menus we cook</h2>
           <p className="text-[#4A4745] mb-6">Need a different direction? Browse the rest of our cuisine pages or message us for a custom villa menu.</p>
           <div className="flex flex-wrap gap-3">
-            {MENUS.filter((m) => m.slug !== slug).map((m) => (
+            {MENUS.filter((m: Menu) => m.slug !== slug).map((m: Menu) => (
               <Link key={m.slug} to={`/menus/${m.slug}`} className="text-sm border border-[#1A1A1A]/15 px-4 py-2 rounded-full hover:border-[#C5A028] hover:text-[#8B6F1A] transition-all">
                 {m.name}
               </Link>

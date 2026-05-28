@@ -16,6 +16,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20an%20anniversary%20dinner.'
@@ -55,10 +56,10 @@ const HOTEL_COMPARISON = [
 ]
 
 const REAL_ANNIVERSARIES = [
-  { names: 'Anna & Michael', years: '10 Years', location: 'Seminyak Villa', image: '/generated/events/anniversary-romantic.webp' },
-  { names: 'Sarah & Tom', years: '25 Years', location: 'Uluwatu Villa', image: '/generated/events/anniversary-chef.webp' },
-  { names: 'Jenny & David', years: '5 Years', location: 'Canggu Villa', image: '/generated/aura-tablescape.webp' },
-  { names: 'Maria & Carlos', years: 'Vow Renewal', location: 'Ubud Villa', image: '/generated/aura-toast.webp' },
+  { names: 'Anna & Michael', years: '10 Years', location: 'Seminyak Villa', image: '/generated/mychef-events-bali-anniversary-romantic.webp' },
+  { names: 'Sarah & Tom', years: '25 Years', location: 'Uluwatu Villa', image: '/generated/mychef-events-bali-anniversary-chef.webp' },
+  { names: 'Jenny & David', years: '5 Years', location: 'Canggu Villa', image: '/generated/mychef-experience-bali-aura-tablescape.webp' },
+  { names: 'Maria & Carlos', years: 'Vow Renewal', location: 'Ubud Villa', image: '/generated/mychef-experience-bali-aura-toast.webp' },
 ]
 
 const SETUP_DETAILS = [
@@ -118,7 +119,7 @@ export default function EventsAnniversariesPage() {
         title="Anniversary Dinners Bali | Private Chef & Catering — myCHEF"
         description="Private anniversary dinners and celebrations in Bali. Private chef, plated menus, villa decoration, and wine pairings. IDR 650K–2.5M/pp."
         canonical={`${SITE}/events/anniversaries`}
-        ogImage={`${SITE}/generated/events/anniversary-romantic.webp`}
+        ogImage={`${SITE}/generated/mychef-events-bali-anniversary-romantic.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema('Anniversary Dinner Bali', 'myCHEF.id creates private anniversary dinners in Bali with chef-led menus, romantic villa styling, and polished service. We handle planning, cooking, setup, and cleanup so the celebration feels effortless.', `${SITE}/events/anniversaries`),
@@ -141,11 +142,11 @@ export default function EventsAnniversariesPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dinner setup by a Bali villa pool" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/mychef-events-bali-anniversary-romantic.webp" alt="Romantic anniversary dinner setup by a Bali villa pool" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -162,10 +163,10 @@ export default function EventsAnniversariesPage() {
             Private villa anniversaries with chef-led menus, table service, wine pairing add-ons, and discreet surprise coordination — from a romantic dinner for two to a renewal of vows with family and friends.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Calendar className="w-4 h-4" /> Book Anniversary Dinner
             </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-anniversaries-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-anniversaries-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
             </a>
           </div>
@@ -195,7 +196,7 @@ export default function EventsAnniversariesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/anniversary-romantic.webp" alt="Romantic anniversary dining setup in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-anniversary-romantic.webp" alt="Romantic anniversary dining setup in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -236,7 +237,7 @@ export default function EventsAnniversariesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/anniversary-chef.webp" alt="Private chef plating an anniversary dinner in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-anniversary-chef.webp" alt="Private chef plating an anniversary dinner in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -246,7 +247,7 @@ export default function EventsAnniversariesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/luna-plating.webp" alt="Fine plated anniversary menu presentation by myCHEF" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-finedining-bali-luna-plating.webp" alt="Fine plated anniversary menu presentation by myCHEF" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -256,7 +257,7 @@ export default function EventsAnniversariesPage() {
                 Gourmet menus that feel fine-dining, but stay fully personal to the villa setting
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Anniversary menus usually sit between restaurant refinement and private-home comfort. We can build Western tasting menus, lighter Mediterranean or Indonesian fusion courses, or a more indulgent sequence around seafood and premium beef. Wine pairing is offered as an add-on, and we will happily brief the evening around champagne, a favourite label, or a no-alcohol pairing if that suits the couple better. When clients want a more restaurant-led feeling, we often pair this page with our <a href="/catering/plated-catering" className="text-[#2C5F7C] underline underline-offset-4">plated catering service</a> as a reference point.
+                Anniversary menus usually sit between restaurant refinement and private-home comfort. We can build Western tasting menus, lighter Mediterranean or Indonesian fusion courses, or a more indulgent sequence around seafood and premium beef. Wine pairing is offered as an add-on, and we will happily brief the evening around champagne, a favourite label, or a no-alcohol pairing if that suits the couple better. When clients want a more restaurant-led feeling, we often pair this page with our <a href="/catering/plated-catering" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">plated catering service</a> as a reference point.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-6">
                 {HOTEL_COMPARISON.map((item) => (
@@ -295,7 +296,7 @@ export default function EventsAnniversariesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/aura-toast.webp" alt="Anniversary toast moment at a Bali villa dinner" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-experience-bali-aura-toast.webp" alt="Anniversary toast moment at a Bali villa dinner" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -338,7 +339,7 @@ export default function EventsAnniversariesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/aura-tablescape.webp" alt="Styled anniversary tablescape in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-experience-bali-aura-tablescape.webp" alt="Styled anniversary tablescape in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -354,7 +355,7 @@ export default function EventsAnniversariesPage() {
             {REAL_ANNIVERSARIES.map((anniversary) => (
               <div key={anniversary.names} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={anniversary.image} alt={`${anniversary.names} anniversary in ${anniversary.location}`} className="w-full h-full object-cover" loading="lazy" />
+                  <OptimizedImage src={anniversary.image} alt={`${anniversary.names} anniversary in ${anniversary.location}`} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{anniversary.names}</h3>
@@ -398,7 +399,7 @@ export default function EventsAnniversariesPage() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium"
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 {link.label}
               </Link>

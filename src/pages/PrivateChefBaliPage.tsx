@@ -46,7 +46,7 @@ const MENUS = [
     price: 'IDR 2,400,000++',
     tagline: 'Wagyu Tokusen in three forms. Open flame.',
     accent: '#8B4513',
-    image: '/generated/luna-plating.webp',
+    image: '/generated/mychef-finedining-bali-luna-plating.webp',
     courses: [
       'My Beef Tartare — Wagyu chuck tender, polenta chips, cured egg, rocket, basil oil',
       'Ravioli di Coda — oxtail ragout, Grana Padano sauce, kale foam',
@@ -127,7 +127,7 @@ export default function PrivateChefBaliPage() {
         title="Private Chef Bali | Michelin-Trained Villa Dining — myCHEF"
         description="Hire a private chef for your Bali villa from IDR 2,200,000 per person. Ingredients included, 560+ villas served, 12,000+ guests, all Bali areas covered."
         canonical={`${SITE}/fine-dining/private-chef-bali`}
-        ogImage={`${SITE}/generated/luna-hero-v2.webp`}
+        ogImage={`${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema(
@@ -148,7 +148,7 @@ export default function PrivateChefBaliPage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-hero-v2.webp"
+              src="/generated/mychef-experience-bali-luna-hero-v2.webp"
             alt="Michelin-trained private chef preparing dinner in a Bali villa — myCHEF"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
@@ -156,7 +156,7 @@ export default function PrivateChefBaliPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.25) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.25) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -183,13 +183,13 @@ export default function PrivateChefBaliPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="private-chef-bali-hero"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Book on WhatsApp
             </a>
             <Link
               to="/menus"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               Browse Menus <ChevronRight className="w-4 h-4" />
             </Link>
@@ -209,7 +209,7 @@ export default function PrivateChefBaliPage() {
         <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="pcb-reveal">
             <img
-              src="/generated/luna-table.webp"
+              src="/generated/mychef-experience-bali-luna-table.webp"
               alt="Private chef dinner table in a Bali villa — elegant setting, myCHEF"
               width={800} height={600} loading="lazy" decoding="async"
               className="w-full h-auto object-cover rounded-[20px]" />
@@ -227,7 +227,7 @@ export default function PrivateChefBaliPage() {
             <p className="text-white/[70%] text-base leading-relaxed mb-8">
               We bring the kitchen to you. The team arrives 3 hours before your first course — setting the table, preparing the mise en place, sourcing that morning's freshest catch. You arrive to a table already set.
             </p>
-            <Link to="/fine-dining" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline">
+            <Link to="/fine-dining" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
               See the full fine dining experience <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
@@ -285,7 +285,7 @@ export default function PrivateChefBaliPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/fine-dining" className="inline-flex items-center gap-1.5 text-sm font-semibold hover:underline" style={{ color: menu.accent }}>
+                  <Link to="/fine-dining" className="inline-flex items-center gap-1.5 text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5" style={{ color: menu.accent }}>
                     See full experience <ChevronRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -311,13 +311,13 @@ export default function PrivateChefBaliPage() {
             <p className="text-white/[70%] text-base leading-relaxed mb-8">
               He still leads every tasting menu, every Chef's Table, and every training session for the team of 50+ Indonesian hospitality professionals he has built.
             </p>
-            <Link to="/chefs" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline">
+            <Link to="/chefs" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
               Meet all our chefs <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
           <div className="pcb-reveal order-1 md:order-2">
             <img
-              src="/generated/luna-chef-portrait.webp"
+              src="/generated/mychef-finedining-bali-luna-chef-portrait.webp"
               alt="Adriano — myCHEF executive chef, Michelin-trained, Bali private dining"
               width={800} height={1000} loading="lazy" decoding="async"
               className="w-full h-auto object-cover rounded-[20px]" />
@@ -377,7 +377,7 @@ export default function PrivateChefBaliPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {TESTIMONIALS.map((t) => (
-              <article key={t.name} className="pcb-reveal rounded-[24px] bg-white border border-[#E8E2CF] p-7 shadow-sm">
+              <article key={t.name} className="pcb-reveal rounded-[24px] bg-white border border-[#E8E2CF] p-7 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                 <div className="flex gap-0.5 mb-4">
                   {Array.from({ length: t.rating }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-[#C5A028] text-[#C5A028]" />
@@ -420,7 +420,7 @@ export default function PrivateChefBaliPage() {
           href={WA_LINK}
           target="_blank" rel="noopener noreferrer"
           data-source="private-chef-bali-final-cta"
-          className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
+          className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
         >
           <MessageCircle className="w-5 h-5" /> Hire a Private Chef — WhatsApp
         </a>
@@ -436,7 +436,7 @@ export default function PrivateChefBaliPage() {
             { label: "Chef's Table", href: '/fine-dining/chefs-table' },
             { label: 'Our Menus', href: '/menus' },
           ].map((l) => (
-            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors">
+            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               {l.label}
             </Link>
           ))}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ChevronRight, Star } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
   localBusinessSchema, breadcrumbSchema, offerSchema,
   faqPageSchema, aggregateRatingSchema, detailedServiceSchema,
@@ -20,7 +21,7 @@ const WA_LINK = `https://wa.me/${WA}?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20b
 const ACTS = [
   {
     act: 'Act I — Arrival',
-    image: '/generated/luna-detail.webp',
+    image: '/generated/mychef-experience-bali-luna-detail.webp',
     title: 'The aperitif on your terrace.',
     body: 'Before anyone sits down. The chef introduces himself. A single amuse-bouche from the kitchen — the first signal of the evening ahead. You are not in a restaurant. You are already in the meal.',
     medi: 'Welcome bite + sparkling wine aperitif',
@@ -28,7 +29,7 @@ const ACTS = [
   },
   {
     act: 'Act II — The Opening',
-    image: '/generated/luna-ingredients.webp',
+    image: '/generated/mychef-experience-bali-luna-gallery-1.webp',
     title: 'Cold, sharp, perfumed.',
     body: 'The starter wakes the palate. It arrives precise and cold — the sea or the grill in a single bite. The plating is exact. Nothing is accidental.',
     medi: 'Passione di Dentice — red snapper carpaccio, passion fruit, basil gelato',
@@ -36,7 +37,7 @@ const ACTS = [
   },
   {
     act: 'Act III — The Build',
-    image: '/generated/luna-plating.webp',
+    image: '/generated/mychef-finedining-bali-luna-plating.webp',
     title: 'Handmade pasta. Rolled here, this afternoon.',
     body: 'The middle course is where the evening settles. Pasta that was made in your kitchen earlier that day. A sauce that took hours. This is the centre of the meal — the moment the format justifies itself.',
     medi: 'Lobster Tagliatelle — handmade pasta, lobster reduction, cherry tomatoes, basil',
@@ -44,7 +45,7 @@ const ACTS = [
   },
   {
     act: 'Act IV — The Centrepiece',
-    image: '/generated/luna-flame.webp',
+    image: '/generated/mychef-finedining-bali-luna-plating.webp',
     title: 'The main. The reason the menu exists.',
     body: 'One protein. Cooked correctly. No compromise on ingredient quality or technique. This is where the Wagyu ribeye meets open flame, or the barramundi answers the sea it came from.',
     medi: 'Barramundi and the Sea — barramundi roll, clams, Mediterranean sauce, green beans',
@@ -52,7 +53,7 @@ const ACTS = [
   },
   {
     act: 'Act V — The Close',
-    image: '/generated/luna-dessert.webp',
+    image: '/generated/mychef-experience-bali-luna-gallery-2.webp',
     title: 'Restrained. Earned.',
     body: 'Not too sweet. The dessert honours the meal that came before it. The kitchen is already quietly breaking down. The evening is closing at its own pace.',
     medi: 'Tiramisu — house-made lady fingers, mascarpone, Illy espresso, dark cocoa',
@@ -138,8 +139,16 @@ const FAQS = [
 
 export default function TastingMenuPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.tasting-reveal').forEach(el => {
+        (el as HTMLElement).style.opacity = '1'
+      })
+      return
+    }
+
     const ctx = gsap.context(() => {
       gsap.fromTo('.tasting-reveal', { y: 40, opacity: 0 }, {
         y: 0, opacity: 1, duration: 0.85, stagger: 0.12, ease: 'power3.out',
@@ -147,7 +156,7 @@ export default function TastingMenuPage() {
       })
     }, ref)
     return () => ctx.revert()
-  }, [])
+  }, [prefersReducedMotion])
 
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
@@ -155,7 +164,7 @@ export default function TastingMenuPage() {
         title="Tasting Menu Bali | Multi-Course Private Dining — myCHEF"
         description="Private five-course tasting menu in your Bali villa with handmade pasta and Mediterranean or Wagyu paths. From IDR 2,200,000++ per person."
         canonical={`${SITE}/fine-dining/tasting-menu`}
-        ogImage={`${SITE}/generated/luna-plating.webp`}
+        ogImage={`${SITE}/generated/mychef-finedining-bali-luna-plating.webp`}
         jsonLd={[
           localBusinessSchema,
           detailedServiceSchema(
@@ -176,7 +185,7 @@ export default function TastingMenuPage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-plating.webp"
+            src="/generated/mychef-finedining-bali-luna-plating.webp"
             alt="Perfectly plated private tasting menu dish in a Bali villa — myCHEF fine dining"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
@@ -184,7 +193,7 @@ export default function TastingMenuPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.25) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.60) 50%, rgba(0,0,0,0.30) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -211,13 +220,13 @@ export default function TastingMenuPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="tasting-menu-hero"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Book Your Tasting Evening
             </a>
             <Link
               to="/fine-dining"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               The Full Experience <ChevronRight className="w-4 h-4" />
             </Link>
@@ -294,7 +303,7 @@ export default function TastingMenuPage() {
       {/* ══════════════════════════════════ WINE PAIRING ══════════════════════════════════ */}
       <section className="relative py-28 px-6 overflow-hidden">
         <img
-          src="/generated/luna-wine.webp"
+          src="/generated/mychef-experience-bali-luna-wine.webp"
           alt="Wine pairing for private tasting menu in Bali villa"
           width={1920} height={900}
           loading="lazy" decoding="async"
@@ -388,7 +397,7 @@ export default function TastingMenuPage() {
                   href={`https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'd like to book the ${menu.name} tasting menu in my Bali villa.`)}`}
                   target="_blank" rel="noopener noreferrer"
                   data-source={`tasting-menu-${menu.id}-cta`}
-                  className="inline-flex items-center gap-2 px-7 py-3.5 text-white text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:opacity-90"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 text-white text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
                   style={{ background: menu.accent }}
                 >
                   <MessageCircle className="w-4 h-4" /> Book {menu.name}
@@ -441,7 +450,7 @@ export default function TastingMenuPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="tasting-menu-pricing-cta"
-              className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Book Your Tasting Evening
             </a>
@@ -460,7 +469,7 @@ export default function TastingMenuPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {TESTIMONIALS.map((t) => (
-              <article key={t.name} className="rounded-[24px] border border-[#E8E2CF] bg-white p-7 shadow-sm">
+              <article key={t.name} className="rounded-[24px] border border-[#E8E2CF] bg-white p-7 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
                 <div className="flex gap-0.5 mb-4">
                   {Array.from({ length: t.rating }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-[#C5A028] text-[#C5A028]" />
@@ -503,7 +512,7 @@ export default function TastingMenuPage() {
           href={WA_LINK}
           target="_blank" rel="noopener noreferrer"
           data-source="tasting-menu-final-cta"
-          className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105"
+          className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
         >
           <MessageCircle className="w-5 h-5" /> Message Sofia on WhatsApp
         </a>
@@ -519,7 +528,7 @@ export default function TastingMenuPage() {
             { label: 'Our Menus', href: '/menus' },
             { label: 'Our Chefs', href: '/chefs' },
           ].map((l) => (
-            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors">
+            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               {l.label}
             </Link>
           ))}

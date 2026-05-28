@@ -1,5 +1,6 @@
 import { CalendarDays, Quote, Star } from 'lucide-react'
 
+import OptimizedImage from '@/components/OptimizedImage'
 interface Testimonial {
   name: string
   location: string
@@ -101,7 +102,7 @@ export default function TestimonialBlock({
 
                 <div className="mt-auto flex flex-wrap items-center gap-3 border-t border-[#E8E6E3] pt-6">
                   {t.image ? (
-                    <img
+                    <OptimizedImage
                       src={t.image}
                       alt={t.name}
                       className="h-12 w-12 rounded-full object-cover"

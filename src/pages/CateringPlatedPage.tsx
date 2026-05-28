@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import {
   Check, Phone, Calendar, Users, MapPin,
   Utensils, Sparkles, ChefHat, Wine,
@@ -8,6 +7,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
   localBusinessSchema,
   cateringBreadcrumbSchema,
@@ -20,11 +20,12 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20plated%20dinner%20quote%20in%20Bali.'
@@ -33,7 +34,7 @@ const ACCENT = '#C5A028'
 
 const PLATED_PACKAGES = [
   {
-    image: '/generated/catering/plated-menus.webp',
+    image: '/generated/mychef-catering-bali-plated-menus.webp',
     title: '3-Course Plated',
     price: 'IDR 800,000/person',
     priceNum: 800000,
@@ -42,7 +43,7 @@ const PLATED_PACKAGES = [
     minGuests: 'Min. IDR 5M',
   },
   {
-    image: '/generated/catering/plated-menus.webp',
+    image: '/generated/mychef-catering-bali-plated-menus.webp',
     title: '4-Course Plated',
     price: 'IDR 1,000,000/person',
     priceNum: 1000000,
@@ -51,7 +52,7 @@ const PLATED_PACKAGES = [
     minGuests: 'Min. IDR 5M',
   },
   {
-    image: '/generated/luna-plating.webp',
+    image: '/generated/mychef-finedining-bali-luna-plating.webp',
     title: '5-Course Premium',
     price: 'IDR 1,300,000/person',
     priceNum: 1300000,
@@ -95,11 +96,11 @@ const GROUP_TOTALS = [
 ]
 
 const PLATED_GALLERY = [
-  '/generated/pkg-italian.webp',
-  '/generated/corp-plated.webp',
-  '/generated/hub-fine-dining.webp',
-  '/generated/aura-toast.webp',
-  '/generated/aura-tablescape.webp',
+  '/generated/mychef-catering-bali-plated-menus.webp',
+  '/generated/mychef-events-bali-corp-plated.webp',
+  '/generated/mychef-misc-bali-hub-fine-dining.webp',
+  '/generated/mychef-experience-bali-aura-toast.webp',
+  '/generated/mychef-experience-bali-aura-tablescape.webp',
   '/generated/hub-catering.webp',
 ]
 
@@ -172,8 +173,16 @@ const SERVICE_FLOW = [
 
 export default function CateringPlatedPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.plated-reveal').forEach(el => {
+        (el as HTMLElement).style.opacity = '1'
+      })
+      return
+    }
+
     const ctx = gsap.context(() => {
       gsap.fromTo('.plated-reveal', { y: 50, opacity: 0 }, {
         y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
@@ -181,7 +190,7 @@ export default function CateringPlatedPage() {
       })
     }, ref)
     return () => ctx.revert()
-  }, [])
+  }, [prefersReducedMotion])
 
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
@@ -189,7 +198,7 @@ export default function CateringPlatedPage() {
         title="Plated Dinner Bali | Private Chef Fine Dining at Your Villa"
         description="Plated dinner catering in Bali for villas, anniversaries, birthdays, weddings, and private events with chef-led multi-course menus."
         canonical={`${SITE}/catering/plated-catering`}
-        ogImage={`${SITE}/generated/catering/plated-menus.webp`}
+        ogImage={`${SITE}/generated/mychef-catering-bali-plated-menus.webp`}
         jsonLd={[
           localBusinessSchema,
           cateringServiceSchema('Plated Dinner Catering Bali', 'Plated dinner catering in Bali for villas, anniversaries, weddings, and premium private events with multi-course menus. myCHEF.id provides chefs, service staff, elegant plating, and cleanup across Bali.', `${SITE}/catering/plated-catering`),
@@ -206,7 +215,7 @@ export default function CateringPlatedPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering/plated-menus.webp"
+            src="/generated/mychef-catering-bali-plated-menus.webp"
             alt="Elegant plated dinner course served at a Bali villa for private fine dining"
             width={1920}
             height={1080}
@@ -215,7 +224,7 @@ export default function CateringPlatedPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -234,14 +243,14 @@ export default function CateringPlatedPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
               href="#book"
-              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
               style={{ background: ACCENT }}
             >
               <Calendar className="w-4 h-4" /> Plan My Plated Dinner
             </a>
             <a
               href="#menus"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Utensils className="w-4 h-4" /> View Sample Menus
             </a>
@@ -287,7 +296,7 @@ export default function CateringPlatedPage() {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/hub-fine-dining.webp"
+                src="/generated/mychef-misc-bali-hub-fine-dining.webp"
                 alt="Private plated dinner setup at a Bali villa with elegant table styling"
                 width={1920}
                 height={1080}
@@ -550,7 +559,7 @@ export default function CateringPlatedPage() {
       </section>
 
       {/* ═══════ GROUP SIZE GUIDE + MINIMUM SPEND ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Investment"
@@ -582,23 +591,23 @@ export default function CateringPlatedPage() {
               </div>
             </div>
           </div>
-          <div className="hidden md:block overflow-x-auto">
+          <div className="hidden md:block overflow-x-auto bg-white rounded-2xl border border-[#E8E6E3] p-6">
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b-2 border-[#1A1A1A]">
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Guests</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">3-Course</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">4-Course</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">5-Course Premium</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Guests</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">3-Course</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">4-Course</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">5-Course Premium</th>
                 </tr>
               </thead>
               <tbody>
                 {GROUP_TOTALS.map((row) => (
-                  <tr key={row.guests} className="border-b border-[#E8E6E3]">
-                    <td className="py-4 font-medium">{row.guests} guests</td>
-                    <td className="py-4 font-semibold" style={{ color: ACCENT }}>{row.course3}</td>
-                    <td className="py-4 font-semibold" style={{ color: ACCENT }}>{row.course4}</td>
-                    <td className="py-4 font-semibold" style={{ color: ACCENT }}>{row.course5}</td>
+                  <tr key={row.guests} className="border-b border-[#E8E6E3] even:bg-[#FAFAF8] last:border-b-0">
+                    <td className="py-5 font-semibold tabular-nums">{row.guests}</td>
+                    <td className="py-5 font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course3}</td>
+                    <td className="py-5 font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course4}</td>
+                    <td className="py-5 font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course5}</td>
                   </tr>
                 ))}
               </tbody>
@@ -607,11 +616,11 @@ export default function CateringPlatedPage() {
           <div className="md:hidden space-y-4">
             {GROUP_TOTALS.map((row) => (
               <div key={row.guests} className="bg-white rounded-xl border border-[#E8E6E3] p-4">
-                <p className="font-medium mb-3">{row.guests} guests</p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between"><span className="text-[#4A4745]">3-Course</span><span className="font-semibold" style={{ color: ACCENT }}>{row.course3}</span></div>
-                  <div className="flex justify-between"><span className="text-[#4A4745]">4-Course</span><span className="font-semibold" style={{ color: ACCENT }}>{row.course4}</span></div>
-                  <div className="flex justify-between"><span className="text-[#4A4745]">5-Course</span><span className="font-semibold" style={{ color: ACCENT }}>{row.course5}</span></div>
+                <p className="font-semibold text-base mb-3 tabular-nums">{row.guests} guests</p>
+                <div className="divide-y divide-[#E8E6E3]">
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">3-Course</span><span className="font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course3}</span></div>
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">4-Course</span><span className="font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course4}</span></div>
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">5-Course</span><span className="font-semibold tabular-nums" style={{ color: ACCENT }}>{row.course5}</span></div>
                 </div>
               </div>
             ))}
@@ -630,7 +639,7 @@ export default function CateringPlatedPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {PLATED_GALLERY.map((src, i) => (
               <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={src} alt={`Plated dinner setup ${i + 1} at Bali villa`} className="w-full h-full object-cover" loading="lazy" />
+                <OptimizedImage src={src} alt={`Plated dinner setup ${i + 1} at Bali villa`} className="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>
@@ -691,24 +700,13 @@ export default function CateringPlatedPage() {
 
       <PressStrip />
 
-      {/* ═══════ INTERNAL LINKS ═══════ */}
-      <section className="py-16 md:py-20 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1280px] mx-auto">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Explore More</p>
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-            <Link to="/fine-dining" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Fine Dining</Link>
-            <Link to="/catering/villa-catering" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Villa Catering</Link>
-            <Link to="/events" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Events</Link>
-            <Link to="/contact" className="text-sm text-[#4A4745] hover:text-[#1A1A1A] transition-colors underline underline-offset-4">Contact</Link>
-          </div>
-        </div>
-      </section>
+      <CateringDiscoverySection page="plated" />
 
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-plating.webp"
+            src="/generated/mychef-finedining-bali-luna-plating.webp"
             alt="Plated dinner course ready to serve at Bali villa"
             width={1920}
             height={1080}
@@ -727,14 +725,14 @@ export default function CateringPlatedPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#book"
-              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
               style={{ background: ACCENT }}
             >
               <Calendar className="w-4 h-4" /> Plan My Plated Dinner
             </a>
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-plated-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Phone className="w-4 h-4" /> WhatsApp myCHEF
             </a>

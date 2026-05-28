@@ -106,7 +106,7 @@ export default function HelpPage() {
       <section className="relative py-32 md:py-60 overflow-hidden flex items-center min-h-[70vh]">
         <div className="absolute inset-0">
           <img
-            src="/generated/help-hero.webp"
+            src="/generated/mychef-misc-bali-help-hero.webp"
             alt="Professional guest relations in a Bali villa — myCHEF help center"
             className="w-full h-full object-cover"
             width={1344}
@@ -116,7 +116,7 @@ export default function HelpPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -148,7 +148,7 @@ export default function HelpPage() {
               <Link
                 key={i}
                 to={item.link}
-                className="p-6 border border-[#DDD] rounded-lg hover:border-[#C5A028] hover:bg-[#FAFAF8] transition group"
+                className="p-6 border border-[#DDD] rounded-lg hover:border-[#C5A028] hover:bg-[#FAFAF8] transition group focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
               >
                 <h3 className="font-semibold text-lg mb-2 flex items-center gap-2 text-[#1A1A1A]">
                   {item.q}
@@ -174,7 +174,7 @@ export default function HelpPage() {
                 <Link
                   key={i}
                   to={guide.link}
-                  className="p-8 border border-[#DDD] rounded-lg hover:border-[#C5A028] hover:shadow-lg transition"
+                  className="p-8 border border-[#DDD] rounded-lg hover:border-[#C5A028] hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-12 h-12 rounded-lg bg-[#F5F5F5] flex items-center justify-center">
@@ -202,7 +202,7 @@ export default function HelpPage() {
           <p className="text-white/70 mb-8">Message us directly on WhatsApp — we reply within 1 hour.</p>
           <a
             href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%20have%20a%20question..."
-            className="inline-block px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition"
+            className="inline-block px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
           >
             Message on WhatsApp
           </a>

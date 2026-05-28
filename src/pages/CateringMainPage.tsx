@@ -1,12 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {
   MessageCircle, Check, ArrowRight, Phone, Calendar, Users, MapPin,
   Utensils, CreditCard, ChefHat, Sparkles, ShieldCheck, HelpCircle,
   Home, PartyPopper, Flame, Wine, Flower2, CakeSlice,
 } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
   breadcrumbSchema,
@@ -29,7 +27,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { CateringRiskReversal } from '@/components/shared'
 
-gsap.registerPlugin(ScrollTrigger)
+import OptimizedImage from '@/components/OptimizedImage'
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20catering%20quote.'
 const WA_DAILY_CHEF_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20daily%20villa%20chef.'
@@ -104,7 +102,7 @@ const CATERING_STYLES = [
     accent: '#6B8E5A',
   },
   {
-    image: '/generated/city-ubud.webp',
+    image: '/generated/mychef-location-bali-city-ubud.webp',
     title: 'Retreat Catering',
     price: 'From IDR 400,000/person/day',
     description: 'Best for yoga retreats, wellness centers, and multi-day group stays. Plant-forward menus.',
@@ -112,7 +110,7 @@ const CATERING_STYLES = [
     accent: '#6B8E5A',
   },
   {
-    image: '/generated/catering/floating-breakfast.webp',
+    image: '/generated/mychef-catering-bali-floating-breakfast.webp',
     title: 'Floating Breakfast',
     price: 'From IDR 950,000/couple',
     description: 'Best for villa pools, couples, birthdays, and honeymoon mornings.',
@@ -307,7 +305,7 @@ const FAQS = [
   { q: 'How much deposit is required?', a: 'A 25% deposit is required to confirm your booking. The balance is due on the day of the event.' },
   { q: 'How far in advance should I book?', a: 'We recommend 3-7 days for BBQ and buffet. 2+ weeks for weddings and large events. Drop-off can often be arranged next-day if ordered by 4pm.' },
   { q: 'Is this a real chef or just delivered food?', a: 'A real chef grills at your villa. Not pre-cooked. Not delivered from a kitchen. Live fire, your pool, your garden. The chef arrives 3 hours early, preps everything on site, and serves course by course.' },
-  { q: 'How do I know the food is safe?', a: 'All chefs are food-safety certified. We use separate prep for allergies. We have served 500+ villa events with zero food safety incidents. Every ingredient is purchased fresh the morning of your event.' },
+  { q: 'How do I know the food is safe?', a: 'All chefs are food-safety certified. We use separate prep for allergies. We have served 500+ villa events with a strong safety record. Every ingredient is purchased fresh the morning of your event.' },
   { q: 'What if it rains?', a: 'We bring a kitchen tent for outdoor setups. Or we move indoors if your villa has covered space. We plan for Bali weather — it is part of the service, not an extra charge.' },
   { q: 'Can I see a menu before booking?', a: 'Yes. We send a full menu proposal with exact pricing before you pay anything. No commitment required to review. Most quotes are sent within 2 hours.' },
   { q: 'What if my guest count changes?', a: 'Final headcount is due 48 hours before your event. We adjust portions and staffing. No penalty for small changes. Large increases may affect minimums.' },
@@ -349,25 +347,18 @@ export default function CateringMainPage() {
   const [decisionResult, setDecisionResult] = useState<'one-time' | 'daily' | null>(null)
 
   /* Scroll to #daily-chef on mount if hash present */
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (location.hash === '#daily-chef') {
       setActiveTab('daily')
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         const el = document.getElementById('daily-chef')
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }, 300)
+      return () => clearTimeout(timer)
     }
   }, [location.hash])
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo('.cat-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.cat-content', start: 'top 75%', once: true },
-      })
-    }, ref)
-    return () => ctx.revert()
-  }, [])
+  // No GSAP animations are wired on this page currently.
 
   const handleDecisionAnswer = (qIndex: number, result: 'one-time' | 'daily') => {
     const next = [...decisionAnswers]
@@ -420,7 +411,7 @@ export default function CateringMainPage() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering-hero.webp"
+            src="/generated/mychef-catering-bali-catering-hero.webp"
             alt="Chef grilling seafood at a Bali villa poolside at sunset"
             width={1920}
             height={1080}
@@ -430,58 +421,62 @@ export default function CateringMainPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/25 md:hidden" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-8" />
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            myCHEF Events & Catering
-          </p>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Events & Catering Services<br />
-            <span className="italic">Built for Groups, Parties & Hosted Dinners.</span>
-          </h1>
-          <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-3xl mx-auto">
-            This page is for villa parties, weddings, corporate dinners, and catered meals for 5+ guests. If you want a chef for breakfast, lunch, or intimate in-villa dining during your stay, book our Private Villa Dining service instead.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <a
-              href={WA_LINK}
-              target="_blank"
-              data-source="catering-hero"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
-            >
-              <MessageCircle className="w-4 h-4" /> Book on WhatsApp
-            </a>
-            <Link
-              to="/villa-chef"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
-            >
-              <ArrowRight className="w-4 h-4" /> Need a Private Villa Chef?
-            </Link>
-          </div>
-          <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-white/15 bg-black/25 p-5 md:p-6 text-left backdrop-blur-sm">
-            <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-              Not sure which service?
+          <div className="bg-black/60 rounded-3xl px-8 md:px-12 py-12 md:py-16 backdrop-blur-sm">
+            <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-8" />
+            <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+              myCHEF Events & Catering
             </p>
-            <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
-              Choose Events & Catering for BBQs, buffet service, plated group dinners, weddings, and formal villa setups. Choose <span className="font-semibold text-white">Private Villa Dining</span> for 1–4 guests, family stays, and everyday breakfast, lunch, or dinner with a chef in your villa.
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Events & Catering Services<br />
+              <span className="italic">Built for Groups, Parties & Hosted Dinners.</span>
+            </h1>
+            <p className="text-base md:text-lg text-white/[85%] max-w-3xl mx-auto">
+              For villa parties, weddings, corporate dinners, and catered meals for 5+ guests. For daily breakfast, lunch, or dinner in your villa, book our Private Villa Dining service instead.
             </p>
-            <Link
-              to="/villa-chef"
-              className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors"
-            >
-              <ArrowRight className="w-4 h-4" /> View Private Villa Dining
-            </Link>
           </div>
-          <TrustRow
-            items={['500+ villa events served', '4.9★ Google Reviews', 'Chef + staff included', 'Same-day quotes', 'Bali-wide service']}
-            dark
-          />
+          <div className="mt-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+              <a
+                href={WA_LINK}
+                target="_blank"
+                data-source="catering-hero"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
+              >
+                <MessageCircle className="w-4 h-4" /> Book on WhatsApp
+              </a>
+              <Link
+                to="/villa-chef"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
+              >
+                <ArrowRight className="w-4 h-4" /> Need a Private Villa Chef?
+              </Link>
+            </div>
+            <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-white/15 bg-black/25 p-5 md:p-6 text-left backdrop-blur-sm">
+              <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+                Not sure which service?
+              </p>
+              <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
+                Choose Events & Catering for BBQs, buffet service, plated group dinners, weddings, and formal villa setups. Choose <span className="font-semibold text-white">Private Villa Dining</span> for 1–4 guests, family stays, and everyday breakfast, lunch, or dinner with a chef in your villa.
+              </p>
+              <Link
+                to="/villa-chef"
+                className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
+              >
+                <ArrowRight className="w-4 h-4" /> View Private Villa Dining
+              </Link>
+            </div>
+            <TrustRow
+              items={['500+ villa events served', '4.9★ Google Reviews', 'Chef + staff included', 'Same-day quotes', 'Bali-wide service']}
+              dark
+            />
+          </div>
         </div>
       </section>
 
@@ -506,7 +501,7 @@ export default function CateringMainPage() {
               <button
                 type="button"
                 onClick={() => setActiveTab('one-time')}
-                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all ${
+                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] ${
                   activeTab === 'one-time'
                     ? 'bg-[#6B8E5A] text-white shadow-md'
                     : 'text-[#4A4745] hover:text-[#1A1A1A]'
@@ -518,7 +513,7 @@ export default function CateringMainPage() {
               <button
                 type="button"
                 onClick={() => setActiveTab('daily')}
-                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all ${
+                className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
                   activeTab === 'daily'
                     ? 'bg-[#C5A028] text-white shadow-md'
                     : 'text-[#4A4745] hover:text-[#1A1A1A]'
@@ -559,7 +554,7 @@ export default function CateringMainPage() {
               {/* BBQ Preview */}
               <div className="bg-[#FAFAF8] rounded-3xl p-8 md:p-12">
                 <div className="text-center mb-8">
-                  <h4 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>BBQ Catering: The Villa Volume Engine</h4>
+                  <h4 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>BBQ Catering: The Villa Crowd-Pleaser</h4>
                   <p className="text-[#4A4745] text-sm max-w-2xl mx-auto">
                     BBQ is the easiest way to feed a villa group properly. Live, social, flexible — works for family dinners, birthdays, and villa parties.
                   </p>
@@ -572,7 +567,7 @@ export default function CateringMainPage() {
                 <div className="text-center">
                   <Link
                     to="/catering/bbq-catering"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
                   >
                     View BBQ packages <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -595,7 +590,7 @@ export default function CateringMainPage() {
                 <div className="text-center">
                   <Link
                     to="/catering/buffet"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
                   >
                     View buffet packages <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -609,7 +604,7 @@ export default function CateringMainPage() {
                   target="_blank"
               data-source="catering-package"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-10 py-5 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                  className="inline-flex items-center gap-2 px-10 py-5 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
                 >
                   <MessageCircle className="w-4 h-4" /> Get Catering Quote for 5+ Guests
                 </a>
@@ -752,7 +747,7 @@ export default function CateringMainPage() {
                           key={opt.label}
                           type="button"
                           onClick={() => handleDecisionAnswer(qIdx, opt.result as 'one-time' | 'daily')}
-                          className={`px-5 py-4 rounded-xl border text-left text-sm transition-all ${
+                          className={`px-5 py-4 rounded-xl border text-left text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] ${
                             decisionAnswers[qIdx] === opt.result
                               ? 'border-[#6B8E5A] bg-[#6B8E5A]/5 text-[#1A1A1A] font-medium'
                               : 'border-[#E8E6E3] hover:border-[#6B8E5A]/40 hover:bg-[#FAFAF8]'
@@ -788,14 +783,14 @@ export default function CateringMainPage() {
                         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
                       }, 100)
                     }}
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A]"
                   >
                     <ArrowRight className="w-4 h-4" /> View {decisionResult === 'one-time' ? 'One-Time Catering' : 'Daily Chef Service'}
                   </button>
                   <button
                     type="button"
                     onClick={resetDecision}
-                    className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#4A4745] text-sm tracking-widest uppercase rounded-full hover:bg-[#FAFAF8] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#4A4745] text-sm tracking-widest uppercase rounded-full hover:bg-[#FAFAF8] transition-all focus:outline-none focus:ring-2 focus:ring-[#6B8E5A]"
                   >
                     Start Over
                   </button>
@@ -838,7 +833,7 @@ export default function CateringMainPage() {
           <SectionHeader
             eyebrow="CHAPTER 3 — THE COMPARISON"
             title="Skip the Restaurant. Eat at Your Villa."
-            subtitle="A restaurant dinner for 10 in Seminyak costs 8–12M with drinks and transport. Our Indonesian BBQ for 10: 4.5M. At your villa. With a chef."
+            subtitle="A restaurant dinner for 10 in Seminyak costs IDR 8–12M with drinks and transport. Our Indonesian BBQ for 10: IDR 4.5M. At your villa. With a chef."
           />
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
@@ -908,7 +903,7 @@ export default function CateringMainPage() {
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold text-lg mb-3">{pkg.price}</p>
                 <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
-                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
                   Select package <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -947,7 +942,7 @@ export default function CateringMainPage() {
                 <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
                 <Link
                   to={bookingHref(pkg.title)}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1"
                 >
                   Select package <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -978,7 +973,7 @@ export default function CateringMainPage() {
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold mb-3">{pkg.price}</p>
                 <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
-                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
                   Select package <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -1007,7 +1002,7 @@ export default function CateringMainPage() {
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold mb-3">{pkg.price}</p>
                 <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
-                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
                   Select package <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -1037,7 +1032,7 @@ export default function CateringMainPage() {
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                 <p className="text-[#6B8E5A] font-semibold mb-3">{pkg.price}</p>
                 <p className="text-[#4A4745] text-sm mb-4">{pkg.description}</p>
-                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider">
+                <Link to={bookingHref(pkg.title)} className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
                   Select package <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -1096,7 +1091,7 @@ export default function CateringMainPage() {
                     <td className="py-4 text-[#4A4745]">{row.min}</td>
                     <td className="py-4 text-[#4A4745]">{row.bestFor}</td>
                     <td className="py-4">
-                      <a href={WA_LINK} target="_blank" data-source="catering-table-check" rel="noopener noreferrer" className="text-sm font-semibold text-[#6B8E5A] hover:underline">Check date</a>
+                      <a href={WA_LINK} target="_blank" data-source="catering-table-check" rel="noopener noreferrer" className="text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">Check date</a>
                     </td>
                   </tr>
                 ))}
@@ -1112,7 +1107,7 @@ export default function CateringMainPage() {
                   <span className="text-[#6B8E5A] font-semibold text-sm">{row.price}</span>
                 </div>
                 <p className="text-xs text-[#4A4745] mb-3">Min. {row.min} · {row.bestFor}</p>
-                <a href={WA_LINK} target="_blank" data-source="catering-card-check" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A]">
+                <a href={WA_LINK} target="_blank" data-source="catering-card-check" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A] focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
                   Check date <ArrowRight className="w-3 h-3" />
                 </a>
               </div>
@@ -1143,14 +1138,14 @@ export default function CateringMainPage() {
           </div>
           <div className="text-center mt-12 max-w-xl mx-auto">
             <p className="text-sm text-[#4A4745] mb-4">
-              Questions? We reply within 2 minutes during Bali business hours (9am–6pm).
+              Questions? Fast replies during Bali business hours (9am–6pm).
             </p>
             <a
               href={WA_LINK}
               target="_blank"
               data-source="catering-chat-cta"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] hover:underline"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1"
             >
               <MessageCircle className="w-4 h-4" /> Chat now
             </a>
@@ -1164,7 +1159,7 @@ export default function CateringMainPage() {
           <SectionHeader
             eyebrow="Coverage"
             title="Catering Across Bali"
-            subtitle="We serve villas and event spaces across <Link to='/locations' className='underline hover:text-[#C5A028] transition-colors'>all Bali regions</Link>. Popular areas include <Link to='/locations/seminyak' className='underline hover:text-[#C5A028] transition-colors'>Seminyak</Link>, <Link to='/locations/canggu' className='underline hover:text-[#C5A028] transition-colors'>Canggu</Link>, and <Link to='/locations/ubud' className='underline hover:text-[#C5A028] transition-colors'>Ubud</Link>. Travel fees apply outside Canggu and Seminyak."
+            subtitle="We serve villas and event spaces across <Link to='/locations' className='underline hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5'>all Bali regions</Link>. Popular areas include <Link to='/locations/seminyak' className='underline hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5'>Seminyak</Link>, <Link to='/locations/canggu' className='underline hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5'>Canggu</Link>, and <Link to='/locations/ubud' className='underline hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5'>Ubud</Link>. Travel fees apply outside Canggu and Seminyak."
           />
           <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
             <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 text-center">
@@ -1267,15 +1262,15 @@ export default function CateringMainPage() {
       {/* ═══════ SECTION 18: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="/generated/hub-catering.webp"
+          <OptimizedImage
+            src="/generated/mychef-catering-bali-hub-catering.webp"
             alt="Completed villa dinner table with food ready"
             className="w-full h-full object-cover"
             loading="lazy" />
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -1306,13 +1301,13 @@ export default function CateringMainPage() {
               target="_blank"
               data-source="catering-final-cta"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Get Catering Quote for Your Guests
             </a>
             <a
               href="tel:+6282237565997"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <Phone className="w-4 h-4" /> Call +62 822 3756 5997
             </a>
@@ -1321,7 +1316,7 @@ export default function CateringMainPage() {
             No booking fee · Free consultation · Exact quote within 2 hours
           </p>
           <TrustRow
-            items={['4.9★ from 180+ reviews', '500+ villa events served', '8 years in Bali', 'Same-day quotes']}
+            items={['4.9★ from 180+ reviews', '500+ villa events served', '8 years in Bali', 'Same-day quotes when possible']}
             dark
           />
         </div>

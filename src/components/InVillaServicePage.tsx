@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight, Wine, Users, Shield, Clock, Star, Award } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from './SeoHead'
 import { getPageMeta } from '@/data/page-meta'
-import { PILLARS } from '../data/siteArchitecture'
+import { PILLARS } from '@/data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
 import LocationChips from './LocationChips'
 
+import OptimizedImage from '@/components/OptimizedImage'
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'
 
@@ -120,7 +121,7 @@ export default function InVillaServicePage() {
       <section className="relative flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/butler-service.webp"
+            src="/generated/mychef-staffing-bali-butler-service.webp"
             alt="Professional butler serving luxury villa dinner in Bali"
             width={1920}
             height={1080}
@@ -250,7 +251,7 @@ export default function InVillaServicePage() {
               </div>
             </div>
             <div>
-              <img src="/generated/staffing-table.webp" alt="Professional service staff setting table" className="w-full rounded-2xl shadow-xl" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-staffing-bali-staffing-table.webp" alt="Professional service staff setting table" className="w-full rounded-2xl shadow-xl" loading="lazy" />
             </div>
           </div>
         </div>
@@ -261,8 +262,8 @@ export default function InVillaServicePage() {
         <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Award image */}
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-            <img
-              src="/generated/were-awards.png"
+            <OptimizedImage
+              src="/generated/mychef-misc-bali-were-awards.webp"
               alt="myCHEF award-winning private villa dining in Bali"
               className="w-full h-full object-cover"
               loading="lazy"
@@ -298,6 +299,34 @@ export default function InVillaServicePage() {
               </Link>
             </div>
             <p className="text-white/40 text-sm">560+ villas served · 12,000+ guests · 4.9 average rating</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="py-24 md:py-32 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Learn More</p>
+            <h2 className="font-playfair text-3xl md:text-5xl leading-[1.05] mb-4">Event planning & staffing insights</h2>
+            <p className="text-[#4A4745] max-w-2xl mx-auto">From hiring the right staff to coordinating complex events, our guides cover everything about in-villa service.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <Link to="/blog/wedding-private-chef-bali-planning-guide" className="group rounded-[24px] border border-black/5 bg-white p-8 hover:border-[#C5A028] hover:shadow-lg transition-all">
+              <h3 className="font-semibold text-lg text-[#1A1A1A] mb-2 group-hover:text-[#C5A028] transition-colors">Planning a Villa Wedding</h3>
+              <p className="text-sm text-[#4A4745] mb-4">Coordinate service staff, timing, and guest flow for flawless multi-course wedding dinners.</p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">Read more →</span>
+            </Link>
+            <Link to="/blog/corporate-events-catering-bali-team-dining" className="group rounded-[24px] border border-black/5 bg-white p-8 hover:border-[#C5A028] hover:shadow-lg transition-all">
+              <h3 className="font-semibold text-lg text-[#1A1A1A] mb-2 group-hover:text-[#C5A028] transition-colors">Corporate Event Setup</h3>
+              <p className="text-sm text-[#4A4745] mb-4">How to set up professional catering and service teams for corporate dinners and team-building retreats.</p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">Read more →</span>
+            </Link>
+            <Link to="/blog/how-to-plan-villa-birthday-party-bali" className="group rounded-[24px] border border-black/5 bg-white p-8 hover:border-[#C5A028] hover:shadow-lg transition-all">
+              <h3 className="font-semibold text-lg text-[#1A1A1A] mb-2 group-hover:text-[#C5A028] transition-colors">Birthday Party Hosting</h3>
+              <p className="text-sm text-[#4A4745] mb-4">From staffing ratios to service flow, create a memorable birthday celebration with professional support.</p>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">Read more →</span>
+            </Link>
           </div>
         </div>
       </section>

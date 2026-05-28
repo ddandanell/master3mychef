@@ -1,3 +1,4 @@
+import OptimizedImage from '@/components/OptimizedImage'
 // Reusable "Best Partner 2026" diploma badge.
 // Dark variant (default) shows the badge as-is (grey laurel on light/transparent).
 // Light variant inverts it for dark page backgrounds.
@@ -13,8 +14,8 @@ interface Props {
 
 export default function BestPartnerBadge({ variant = 'dark', width = 220, className = '' }: Props) {
   return (
-    <img
-      src="/generated/best-partner-2026.webp"
+    <OptimizedImage
+      src="/generated/mychef-misc-bali-about-best-partner-2026.webp"
       alt="Awarded Best Partner 2026 — myCHEF Private Villa Dining"
       width={width}
       style={{

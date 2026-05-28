@@ -59,7 +59,7 @@ export default function NotFoundPage() {
         <div className="mx-auto max-w-[1180px]">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.25em] text-[#6B675F] transition-colors hover:text-[#1A1916]"
+            className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.25em] text-[#6B675F] transition-colors hover:text-[#1A1916] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to home
@@ -95,7 +95,7 @@ export default function NotFoundPage() {
               </div>
             </section>
 
-            <aside className="rounded-[32px] border border-white/70 bg-white/80 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.08)] backdrop-blur-sm md:p-10">
+            <aside className="rounded-[32px] border border-white/70 bg-white/80 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.08)] backdrop-blur-sm md:p-10 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
               <div className="flex items-center gap-3 text-[#C5A028]">
                 <Compass className="h-5 w-5" />
                 <span className="text-xs uppercase tracking-[0.35em] text-[#8A857D]">Quick links</span>
@@ -106,7 +106,7 @@ export default function NotFoundPage() {
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="group flex items-center justify-between rounded-2xl border border-[#E7E2D8] bg-[#F8F6F0] px-5 py-5 transition-all hover:border-[#C5A028]/50 hover:bg-white"
+                    className="group flex items-center justify-between rounded-2xl border border-[#E7E2D8] bg-[#F8F6F0] px-5 py-5 transition-all hover:border-[#C5A028]/50 hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                   >
                     <div>
                       <h3 className="font-semibold text-[#1A1916] transition-colors group-hover:text-[#C5A028]">
@@ -125,7 +125,7 @@ export default function NotFoundPage() {
                   href={waLink}
                   target="_blank"
                   rel="noopener noreferrer" data-source="not-found-cta" 
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C5A028]"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                 >
                   <MessageCircle className="h-4 w-4" />
                   Chat on WhatsApp

@@ -1,60 +1,83 @@
-// Generates public/sitemap.xml from src/data/sitemap.ts.
-// Run with: npx tsx scripts/generate-sitemap.ts
-import { writeFileSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
+#!/usr/bin/env tsx
+/**
+ * Generate XML sitemap with all prerendered pages
+ * 
+ * Creates sitemap.xml in dist/ with proper lastmod dates
+ * Uses the dynamic SITEMAP from src/data/sitemap as the source of truth
+ */
 
-import { SITEMAP, type SitemapEntry } from '../src/data/sitemap'
-import { REDIRECT_MAP } from '../src/data/redirects'
+import * as fs from 'fs';
+import * as path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import { SITEMAP, type SitemapEntry } from '../src/data/sitemap';
+import { JOURNAL_POSTS } from '../src/data/siteArchitecture';
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const SITE = 'https://mychef.id'
-const today = new Date().toISOString().slice(0, 10)
-const ogImage = `${SITE}/og-image.webp`
-const logo = `${SITE}/logo.webp`
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-function imageXml(entry: SitemapEntry): string {
-  if (entry.type === 'area' || entry.type === 'micro-area') {
-    const areaName = entry.area ?? ''
-    return `
-    <image:image>
-      <image:loc>${ogImage}</image:loc>
-      <image:title>Private chef in ${areaName}, Bali — myCHEF villa dining</image:title>
-      <image:caption>myCHEF private chef preparing a villa dinner in ${areaName}, Bali</image:caption>
-    </image:image>`
-  }
-  if (entry.path === '/') {
-    return `
-    <image:image>
-      <image:loc>${ogImage}</image:loc>
-      <image:title>myCHEF Indonesia — Private chef in Bali villa</image:title>
-      <image:caption>Private chef plating a Mediterranean villa dinner in Bali</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>${logo}</image:loc>
-      <image:title>myCHEF Indonesia logo</image:title>
-      <image:caption>myCHEF Indonesia — Bali private chef booking service</image:caption>
-    </image:image>`
-  }
-  return ''
+const SITE_URL = 'https://mychef.id';
+
+// Build URL entries from the dynamic SITEMAP
+const URLS: { path: string; priority: number; changefreq: string }[] = [
+  ...SITEMAP.map((entry: SitemapEntry) => ({
+    path: entry.path,
+    priority: entry.priority,
+    changefreq: entry.changefreq,
+  })),
+  // Journal post URLs (individual journal entries under /journal/)
+  ...JOURNAL_POSTS.map((post) => ({
+    path: `/journal/${post.slug}`,
+    priority: 0.8,
+    changefreq: 'monthly' as const,
+  })),
+];
+
+// Deduplicate by path (sitemap already includes journal posts, but this ensures no duplicates)
+const seen = new Set<string>();
+const UNIQUE_URLS = URLS.filter((url) => {
+  const key = url.path;
+  if (seen.has(key)) return false;
+  seen.add(key);
+  return true;
+});
+
+function generateSitemap(): string {
+  const now = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+  
+  const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq }) => `  <url>
+    <loc>${SITE_URL}${path}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority.toFixed(1)}</priority>
+  </url>`).join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlEntries}
+</urlset>`;
 }
 
-// Skip URLs that 301 elsewhere — they should not appear as canonical in the sitemap.
-const indexable = SITEMAP.filter((e) => !REDIRECT_MAP[e.path])
+async function main() {
+  console.log('🗺️  Generating sitemap.xml\n');
 
-const urls = indexable.map((e) => `
-  <url>
-    <loc>${SITE}${e.path}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>${e.changefreq}</changefreq>
-    <priority>${e.priority.toFixed(1)}</priority>${imageXml(e)}
-  </url>`).join('')
+  const sitemap = generateSitemap();
+  const distPath = path.join(__dirname, '../dist/sitemap.xml');
+  const publicPath = path.join(__dirname, '../public/sitemap.xml');
 
-const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">${urls}
-</urlset>
-`
+  // Write to dist (prerendered output)
+  fs.writeFileSync(distPath, sitemap, 'utf-8');
+  console.log(`✅ Created: ${distPath}`);
 
-const out = join(__dirname, '..', 'public', 'sitemap.xml')
-writeFileSync(out, xml)
-console.log(`Wrote ${indexable.length} canonical URLs to ${out} (${SITEMAP.length - indexable.length} redirected and excluded)`)
+  // Write to public (dev server)
+  fs.writeFileSync(publicPath, sitemap, 'utf-8');
+  console.log(`✅ Created: ${publicPath}`);
+
+  console.log(`\n📊 Sitemap stats:`);
+  console.log(`   URLs: ${UNIQUE_URLS.length}`);
+  console.log(`   Size: ${(sitemap.length / 1024).toFixed(1)} KB`);
+  console.log(`\n🌐 Sitemap URL: ${SITE_URL}/sitemap.xml`);
+  console.log(`\n✅ Sitemap generation complete!`);
+}
+
+main().catch(console.error);

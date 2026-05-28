@@ -3,3 +3,11 @@ dist
 .DS_Store
 .vercel
 public/images/
+test-results/
+.env
+
+# Google API Credentials (NEVER COMMIT)
+.credentials/
+*.json
+google-service-account*.json
+*-credentials.json

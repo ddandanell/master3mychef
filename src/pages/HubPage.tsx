@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw, UsersRound, ConciergeBell } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   localBusinessSchema,
   serviceSchema,
@@ -16,23 +14,21 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { RiskReversal } from '@/components/shared'
 import TrustSection from '@/components/trust/TrustSection'
 
-gsap.registerPlugin(ScrollTrigger)
-
 const PORTALS = [
   {
     id: 'fine-dining',
     title: 'Fine Dining',
     subtitle: 'A private chef cooks exclusively for you. Multi-course menu. Wine pairing. Your villa. Just your table.',
     path: '/fine-dining',
-    image: '/generated/hub-fine-dining.webp',
+    image: '/generated/mychef-misc-bali-hub-fine-dining.webp',
     accent: '#C5A028',
   },
   {
     id: 'catering',
-    title: 'Catering & Events',
-    subtitle: 'BBQ, buffet, plated dinners. Weddings, retreats, celebrations. We handle everything. You enjoy.',
+    title: 'Catering',
+    subtitle: 'BBQ, buffet, plated dinners. Babi guling. Drop-off or full service. We handle everything. You enjoy.',
     path: '/catering',
-    image: '/generated/hub-catering.webp',
+    image: '/generated/mychef-catering-bali-hub-catering.webp',
     accent: '#6B8E5A',
   },
   {
@@ -40,7 +36,7 @@ const PORTALS = [
     title: 'Events',
     subtitle: 'Full-service hospitality for weddings, corporate offsites, and celebrations. Chef, staff, setup, cleanup.',
     path: '/events',
-    image: '/generated/hub-events.webp',
+    image: '/generated/mychef-events-bali-hub-events.webp',
     accent: '#2C5F7C',
   },
 ]
@@ -178,40 +174,58 @@ export default function HubPage() {
   const [hoveredStep, setHoveredStep] = useState<string | null>(null)
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.3 })
-      tl.fromTo('.hub-hero-label', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
-      tl.fromTo('.hub-hero-title', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5')
-      tl.fromTo('.hub-hero-subtitle', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-      tl.fromTo('.hub-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+    let cancelled = false
+    let cleanup: (() => void) | undefined
 
-      gsap.fromTo('.portal-card', { y: 60, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out',
-        scrollTrigger: { trigger: portalsRef.current, start: 'top 85%', once: true },
+    void (async () => {
+      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
+        import('gsap'),
+        import('gsap/ScrollTrigger'),
+      ])
+
+      if (cancelled) return
+
+      gsap.registerPlugin(ScrollTrigger)
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({ delay: 0.3 })
+        tl.fromTo('.hub-hero-label', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
+        tl.fromTo('.hub-hero-title', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5')
+        tl.fromTo('.hub-hero-subtitle', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+        tl.fromTo('.hub-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+
+        gsap.fromTo('.portal-card', { y: 60, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out',
+          scrollTrigger: { trigger: portalsRef.current, start: 'top 85%', once: true },
+        })
+
+        gsap.fromTo('.trust-item', { y: 40, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: {
+            trigger: trustRef.current,
+            start: 'top 80%',
+            once: true,
+            onEnter: () => { statsAnimationStartedRef.current = true },
+          },
+        })
+
+        gsap.fromTo('.hiw-step', { y: 50, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: 'power3.out',
+          scrollTrigger: { trigger: '.hiw-section', start: 'top 75%', once: true },
+        })
+
+        gsap.fromTo('.diff-card', { y: 40, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.diff-section', start: 'top 80%', once: true },
+        })
       })
 
-      gsap.fromTo('.trust-item', { y: 40, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: {
-          trigger: trustRef.current,
-          start: 'top 80%',
-          once: true,
-          onEnter: () => { statsAnimationStartedRef.current = true },
-        },
-      })
+      cleanup = () => ctx.revert()
+    })()
 
-      gsap.fromTo('.hiw-step', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: 'power3.out',
-        scrollTrigger: { trigger: '.hiw-section', start: 'top 75%', once: true },
-      })
-
-      gsap.fromTo('.diff-card', { y: 40, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.diff-section', start: 'top 80%', once: true },
-      })
-    })
-
-    return () => ctx.revert()
+    return () => {
+      cancelled = true
+      cleanup?.()
+    }
   }, [])
 
   const homeLocalBusinessSchema: Record<string, unknown> = {
@@ -314,7 +328,7 @@ export default function HubPage() {
         <div className="mb-10 md:mb-14">
           <div className="relative min-h-[calc(100vh-64px)] overflow-hidden md:min-h-[calc(100vh-72px)]">
             <img
-              src="/generated/bali-hub-hero.webp"
+              src="/generated/mychef-location-bali-hub-hero.webp"
               alt="Luxury private dining table in a Bali villa at sunset"
               width={1536}
               height={1024}
@@ -323,11 +337,10 @@ export default function HubPage() {
               loading="eager"
               decoding="async"
               onError={(e) => {
-                console.error('❌ Critical: Homepage hero image failed to load. Check that public/generated/bali-hub-hero.webp exists.')
                 const img = e.target as HTMLImageElement
                 img.style.opacity = '0.3'
               }} />
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)' }} />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)' }} />
             <div className="absolute inset-0 bg-black/20 md:hidden" />
             <div className="relative z-10 mx-auto flex min-h-[calc(100vh-64px)] max-w-[1280px] items-center px-5 py-10 sm:px-6 md:min-h-[calc(100vh-72px)] md:py-14">
               <div className="max-w-2xl md:max-w-[46%]">
@@ -339,13 +352,13 @@ export default function HubPage() {
                 </h1>
                 <div className="gold-arc mb-6" />
                 <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>
-                  Private dining, catering, and events across Bali. We shop, cook, serve, and clean. You just enjoy.
+                  Private dining, catering, and events across Bali. We shop, we cook, we serve, we clean. You just enjoy.
                 </p>
                 <div className="hub-hero-cta mb-4 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-                  <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ background: '#C5A028', color: '#111' }}>
+                  <a href="https://wa.me/6282237565997?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
                     <MessageCircle className="w-4 h-4" /> Get My Free Quote <span aria-hidden="true">→</span>
                   </a>
-                  <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
+                  <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
                     Browse Menus &amp; Pricing <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -388,7 +401,7 @@ export default function HubPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="homepage-pricing-strip"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028]"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 Message us with date, guest count, and villa area <ArrowRight className="h-4 w-4" />
               </a>
@@ -397,7 +410,7 @@ export default function HubPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {PORTALS.map((portal, idx) => (
               <div key={portal.id} className="portal-card group relative w-full overflow-hidden rounded-2xl min-h-[420px] sm:min-h-[480px]" style={{ aspectRatio: '3/4' }}>
-                <Link to={portal.path} className="absolute inset-0 z-10" aria-label={portal.title} />
+                <Link to={portal.path} className="absolute inset-0 z-10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" aria-label={portal.title} />
                 <img
                   src={portal.image}
                   alt={portal.title}
@@ -427,13 +440,15 @@ export default function HubPage() {
       </section>
 
       {/* LUXURY TRUST SECTION */}
-      <TrustSection />
+      <div className="cv-auto">
+        <TrustSection />
+      </div>
 
       {/* HOW IT WORKS */}
       <section
-        className="relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
+        className="cv-auto relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
         style={{
-          backgroundImage: 'url(/generated/hero-how-it-works.webp)',
+          backgroundImage: 'url(/generated/mychef-misc-bali-hero-how-it-works.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -560,7 +575,7 @@ export default function HubPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="homepage-hiw-cta"
-              className="inline-flex items-center justify-center gap-3 px-12 py-4 rounded-full mb-6 transition-all hover:shadow-lg hover:scale-105"
+              className="inline-flex items-center justify-center gap-3 px-12 py-4 rounded-full mb-6 transition-all hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
               style={{
                 background: '#C5A028',
                 color: 'white',
@@ -592,7 +607,7 @@ export default function HubPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <img
-                src="/generated/team-photo.webp"
+                src="/generated/mychef-misc-bali-about-team-photo.webp"
                 alt="The myCHEF team"
                 width={800}
                 height={1000}
@@ -632,7 +647,7 @@ export default function HubPage() {
       </section>
 
       {/* WHAT MAKES US DIFFERENT */}
-      <section className="diff-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+      <section className="cv-auto diff-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label mb-4">Why Choose Us</p>
@@ -652,7 +667,7 @@ export default function HubPage() {
       </section>
 
       {/* PRIVATE CHEF SERVICE IN BALI — TRUST SECTION */}
-      <section ref={trustRef} style={{ background: '#faf8f3' }} className="py-0">
+      <section ref={trustRef} style={{ background: '#faf8f3' }} className="cv-auto py-0">
         <div
           className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-0 items-center min-h-[calc(100vh-82px)]"
           style={{ padding: '96px 7vw 72px' }}
@@ -768,7 +783,7 @@ export default function HubPage() {
               style={{ aspectRatio: '4/5' }}
             >
               <img
-                src="/generated/hub-villa.webp"
+                src="/generated/mychef-misc-bali-hub-villa.webp"
                 alt="Family enjoying private villa dinner in Bali"
                 width={500}
                 height={625}
@@ -789,7 +804,7 @@ export default function HubPage() {
             style={{ aspectRatio: '4/3' }}
           >
             <img
-              src="/generated/hub-villa.webp"
+              src="/generated/mychef-misc-bali-hub-villa.webp"
               alt="Family enjoying private villa dinner in Bali"
               width={600}
               height={450}
@@ -833,7 +848,7 @@ export default function HubPage() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/reviews" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105" style={{ color: 'var(--u-accent)' }}>
+            <Link to="/reviews" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               Read All Reviews <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -850,21 +865,21 @@ export default function HubPage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {[
-              { name: 'Seminyak', slug: 'seminyak', image: '/generated/city-seminyak.webp' },
-              { name: 'Canggu', slug: 'canggu', image: '/generated/city-canggu.webp' },
-              { name: 'Ubud', slug: 'ubud', image: '/generated/city-ubud.webp' },
-              { name: 'Uluwatu', slug: 'uluwatu', image: '/generated/city-uluwatu.webp' },
-              { name: 'Sanur', slug: 'sanur', image: '/generated/city-sanur.webp' },
-              { name: 'Nusa Dua', slug: 'nusa-dua', image: '/generated/city-nusa-dua.webp' },
-              { name: 'Jimbaran', slug: 'jimbaran', image: '/generated/city-jimbaran.webp' },
-              { name: 'Berawa', slug: 'berawa', image: '/generated/city-berawa.webp' },
-              { name: 'Pererenan', slug: 'pererenan', image: '/generated/city-pererenan.webp' },
-              { name: 'Bukit', slug: 'bukit', image: '/generated/city-bukit.webp' },
+              { name: 'Seminyak', slug: 'seminyak', image: '/generated/mychef-location-bali-city-seminyak.webp' },
+              { name: 'Canggu', slug: 'canggu', image: '/generated/mychef-location-bali-city-canggu.webp' },
+              { name: 'Ubud', slug: 'ubud', image: '/generated/mychef-location-bali-city-ubud.webp' },
+              { name: 'Uluwatu', slug: 'uluwatu', image: '/generated/mychef-location-bali-city-uluwatu.webp' },
+              { name: 'Sanur', slug: 'sanur', image: '/generated/mychef-location-bali-city-sanur.webp' },
+              { name: 'Nusa Dua', slug: 'nusa-dua', image: '/generated/mychef-location-bali-city-nusa-dua.webp' },
+              { name: 'Jimbaran', slug: 'jimbaran', image: '/generated/mychef-location-bali-city-jimbaran.webp' },
+              { name: 'Berawa', slug: 'berawa', image: '/generated/mychef-location-bali-city-berawa.webp' },
+              { name: 'Pererenan', slug: 'pererenan', image: '/generated/mychef-location-bali-city-pererenan.webp' },
+              { name: 'Bukit', slug: 'bukit', image: '/generated/mychef-location-bali-city-bukit.webp' },
             ].map((city) => (
               <Link
                 key={city.slug}
                 to={`/${city.slug}`}
-                className="group relative rounded-2xl overflow-hidden aspect-[4/3]"
+                className="group relative rounded-2xl overflow-hidden aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <img
                   src={city.image}
@@ -886,7 +901,7 @@ export default function HubPage() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/locations" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4" style={{ color: 'var(--u-accent)' }}>
+            <Link to="/locations" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               View All Locations <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -902,7 +917,7 @@ export default function HubPage() {
               <h2 className="u-heading text-4xl md:text-5xl mb-6">For Villa & Airbnb Owners</h2>
               <div className="gold-arc mb-8" />
               <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
-                Elevate your guests' experience by partnering with myCHEF. We currently work with 560+ private villas across Bali. Whatever your guests need, we lift everything we touch with excellence.
+                Elevate your guests' experience by partnering with myCHEF. We work with 560+ private villas across Bali. We handle the dining. You deliver the experience.
               </p>
               <div className="space-y-4 mb-8">
                 {[
@@ -919,13 +934,13 @@ export default function HubPage() {
                   </div>
                 ))}
               </div>
-              <Link to="/partners" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: 'var(--u-accent)', color: '#fff' }}>
+              <Link to="/partners" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
                 Partner With myCHEF <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <img
-                src="/generated/hub-villa.webp"
+                src="/generated/mychef-misc-bali-hub-villa.webp"
                 alt="Luxury villa partnership"
                 width={800}
                 height={600}
@@ -949,7 +964,7 @@ export default function HubPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-about-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105" style={{ background: '#C5A028', color: '#fff' }}>
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-about-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
               <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
             </a>
           </div>
@@ -966,7 +981,7 @@ export default function HubPage() {
                 Planning a villa dinner, wedding weekend, or Bali breakfast setup? Browse our latest guides for practical hosting tips.
               </p>
             </div>
-            <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4" style={{ color: 'var(--u-accent)' }}>
+            <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               Visit the Journal <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -975,7 +990,7 @@ export default function HubPage() {
               <Link
                 key={article.path}
                 to={article.path}
-                className="rounded-2xl border border-black/5 bg-[#FAFAF8] px-5 py-5 text-sm font-medium transition-colors hover:border-[#C5A028] hover:text-[#C5A028]"
+                className="rounded-2xl border border-black/5 bg-[#FAFAF8] px-5 py-5 text-sm font-medium transition-colors hover:border-[#C5A028] hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 {article.title}
               </Link>
@@ -984,11 +999,96 @@ export default function HubPage() {
         </div>
       </section>
 
+      {/* BLOG POSTS */}
+      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="u-label mb-4">Blog & Guides</p>
+            <h2 className="u-heading text-4xl md:text-5xl mb-4">Expert Guides for Your Bali Event</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              From hiring your first private chef to planning a 150-guest wedding, our guides cover everything you need to know.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link to="/blog/how-to-hire-private-chef-bali-complete-guide" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">👨‍🍳</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>How to Hire a Private Chef in Bali</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>A step-by-step guide to finding, vetting, and booking the right chef for your villa.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
+            <Link to="/blog/wedding-private-chef-bali-planning-guide" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">💍</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Planning a Wedding with a Private Chef</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Coordinate your celebration menu, timeline, and service flow for the perfect villa wedding.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
+            <Link to="/blog/corporate-events-catering-bali-team-dining" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">👔</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Corporate Events & Team Dining</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Run executive dinners and off-sites with military precision and memorable food.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
+            <Link to="/blog/chef-qualifications-credentials-bali-hiring" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">⭐</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Chef Qualifications & Training</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>What credentials matter when hiring a private chef for your villa experience.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
+            <Link to="/blog/private-chef-bali-cost-breakdown-detailed-2026" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">💰</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Private Chef Pricing Breakdown</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Understand costs: from ingredients and team size to seasonal pricing and minimums.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
+            <Link to="/blog/fine-dining-trends-bali-2026-innovations" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">🍽️</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Fine Dining Trends 2026</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Discover what's trending in luxury villa dining, from plating to ingredients.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+          </div>
+          <div className="text-center mt-12">
+            <Link to="/blog" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
+              View All Articles <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="py-24 md:py-32 px-6 relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hub-bali.webp"
+            src="/generated/mychef-location-bali-hub-bali.webp"
             alt="Bali landscape"
             width={1920}
             height={1080}
@@ -1009,10 +1109,10 @@ export default function HubPage() {
             Most inquiries are answered within the hour. No deposit required to start planning.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-final-cta" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105">
+            <a href="https://wa.me/6282237565997" target="_blank" rel="noopener noreferrer" data-source="homepage-final-cta" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
               <Phone className="w-4 h-4" /> Get My Free Quote <span aria-hidden="true">→</span>
             </a>
-            <Link to="/contact" className="inline-block px-10 py-5 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <Link to="/contact" className="inline-block px-10 py-5 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
               View All Contact Options
             </Link>
           </div>

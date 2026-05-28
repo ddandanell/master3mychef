@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema, serviceSchema } from './SeoHead'
-import { PILLARS } from '../data/siteArchitecture'
+import { PILLARS } from '@/data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
 const WA = '6282237565997'

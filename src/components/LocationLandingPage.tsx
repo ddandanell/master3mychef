@@ -81,7 +81,7 @@ export default function LocationLandingPage({ config }: { config: LocationLandin
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,7,7,0.82)_0%,rgba(7,7,7,0.48)_48%,rgba(7,7,7,0.18)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,7,7,0.88)_0%,rgba(7,7,7,0.62)_48%,rgba(7,7,7,0.25)_100%)]" />
 
         <div className="relative z-10 mx-auto flex w-full max-w-[1160px] flex-col gap-8 px-6 py-28 text-white md:px-10 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-[680px]">
@@ -116,13 +116,13 @@ export default function LocationLandingPage({ config }: { config: LocationLandin
                 href={inquiryLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#111] transition hover:bg-[#d4b43a]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#111] transition hover:bg-[#d4b43a] focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <MessageCircle className="h-4 w-4" /> WhatsApp myCHEF
               </a>
               <Link
                 to="/book"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:border-[#C5A028] hover:text-[#C5A028]"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:border-[#C5A028] hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-white"
               >
                 Request a quote
               </Link>
@@ -183,7 +183,7 @@ export default function LocationLandingPage({ config }: { config: LocationLandin
                   <h3 className="mt-5 font-playfair text-2xl">{service.title}</h3>
                   <p className="mt-4 flex-1 text-sm leading-7 text-[#4A4745]">{service.summary}</p>
                   <p className="mt-5 rounded-2xl bg-[#FAFAF8] px-4 py-3 text-sm leading-6 text-[#1A1A1A]">{service.availability}</p>
-                  <Link to={service.href} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#C5A028] transition hover:text-[#1A1A1A]">
+                  <Link to={service.href} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#C5A028] transition hover:text-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                     Explore service <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
@@ -240,7 +240,7 @@ export default function LocationLandingPage({ config }: { config: LocationLandin
               <Link
                 key={link.href}
                 to={link.href}
-                className="group rounded-[24px] border border-black/5 bg-white px-5 py-6 shadow-[0_10px_40px_rgba(17,17,17,0.04)] transition hover:border-[#C5A028] hover:-translate-y-0.5"
+                className="group rounded-[24px] border border-black/5 bg-white px-5 py-6 shadow-[0_10px_40px_rgba(17,17,17,0.04)] transition hover:border-[#C5A028] hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#C5A028]">myCHEF</p>
                 <p className="mt-3 font-playfair text-2xl text-[#1A1A1A]">{link.label}</p>
@@ -249,6 +249,44 @@ export default function LocationLandingPage({ config }: { config: LocationLandin
                 </p>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-20 md:px-10">
+        <div className="mx-auto max-w-[1160px]">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#C5A028]">Other Bali locations</p>
+          <h2 className="font-playfair text-3xl md:text-4xl">We serve private chefs across Bali</h2>
+          <p className="mt-4 max-w-[720px] text-base leading-7 text-[#4A4745]">
+            myCHEF operates island-wide. If you're staying in a different area or planning events across multiple locations, explore our location pages:
+          </p>
+          
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: 'Seminyak', slug: 'seminyak', desc: 'Beach clubs, luxury villas, vibrant dining scene' },
+              { name: 'Canggu', slug: 'canggu', desc: 'Surf culture, co-living spaces, digital nomad hub' },
+              { name: 'Ubud', slug: 'ubud', desc: 'Rice terraces, wellness retreats, cultural heart' },
+              { name: 'Uluwatu', slug: 'uluwatu', desc: 'Clifftop villas, surf breaks, sunset views' },
+              { name: 'Nusa Dua', slug: 'nusa-dua', desc: 'Resort enclave, family-friendly, golf courses' },
+              { name: 'Jimbaran', slug: 'jimbaran', desc: 'Beachfront dining, luxury resorts, quiet bay' },
+            ]
+              .filter((loc) => loc.slug !== config.slug)
+              .map((location) => (
+                <Link
+                  key={location.slug}
+                  to={`/${location.slug}`}
+                  className="group flex flex-col rounded-[24px] border border-black/5 bg-[#FAFAF8] p-6 transition hover:border-[#C5A028] hover:-translate-y-0.5 hover:shadow-[0_10px_40px_rgba(197,160,40,0.12)] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+                >
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-4 w-4 text-[#C5A028]" />
+                    <p className="font-playfair text-xl text-[#1A1A1A]">{location.name}</p>
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-[#4A4745]">{location.desc}</p>
+                  <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#C5A028] transition group-hover:text-[#1A1A1A]">
+                    View location <ArrowRight className="h-4 w-4" />
+                  </p>
+                </Link>
+              ))}
           </div>
         </div>
       </section>

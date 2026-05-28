@@ -128,7 +128,7 @@ function PricingCalculator() {
             `Hi myCHEF, I used your calculator and got an estimate of IDR ${total.toLocaleString()} for ${guests} guests (${menu}). Can you confirm?`
           )}`}
           target="_blank"
-          rel="noopener noreferrer" data-source="calculator-cta" className="flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors w-full"
+          rel="noopener noreferrer" data-source="calculator-cta" className="flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors w-full focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
         >
           <MessageCircle className="w-4 h-4" />
           Confirm via WhatsApp
@@ -145,7 +145,7 @@ const SECTIONS = [
     subtitle: 'Estimate',
     title: 'Pricing Calculator',
     body: `<p>Use our calculator to estimate the cost of your private chef experience. Adjust guests, menu type, and add-ons to see a rough total. For a precise quote, message us on WhatsApp — we respond within the hour.</p>`,
-    image: '/generated/catering-hero.webp',
+    image: '/generated/mychef-catering-bali-catering-hero.webp',
     imageAlt: 'Fine dining dish',
   },
   {
@@ -198,9 +198,9 @@ export default function CalculatorPage() {
         canonicalUrl="https://mychef.id/calculator"
         h1="Pricing Calculator"
         subtitle="Estimate your private chef experience in 30 seconds."
-        heroImage="/generated/catering-hero.webp"
+        heroImage="/generated/mychef-catering-bali-catering-hero.webp"
         heroImageAlt="Fine dining dish"
-        ogImage="https://mychef.id/generated/catering-hero.webp"
+        ogImage="https://mychef.id/generated/mychef-catering-bali-catering-hero.webp"
         keywords={['private chef bali price', 'bali catering calculator', 'villa chef cost']}
         highlights={['Instant Estimate', 'Adjust Guests & Menu', 'WhatsApp Confirmation', 'No Obligation']}
         sections={SECTIONS}

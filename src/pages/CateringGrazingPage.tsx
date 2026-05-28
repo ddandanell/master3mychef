@@ -1,9 +1,8 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import {
   MessageCircle, Check, Phone, Calendar, Users, MapPin,
   Utensils, Heart, Leaf, Flower2, Truck, ShieldCheck, Sparkles, Package,
-  Clock, Table2, Wine, Baby, ArrowRight,
+  Clock, Table2, Wine, Baby,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -18,11 +17,12 @@ import SeoHead, {
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20a%20grazing%20table%20in%20Bali.'
@@ -165,13 +165,6 @@ const TESTIMONIALS = [
 /* ═══════════════════════════════════════════════════════════════
    INTERNAL LINKS
    ═══════════════════════════════════════════════════════════════ */
-const INTERNAL_LINKS = [
-  { label: 'Fine Dining', href: '/fine-dining' },
-  { label: 'Villa Catering', href: '/catering/villa-catering' },
-  { label: 'Events', href: '/events' },
-  { label: 'Contact', href: '/contact' },
-]
-
 export default function CateringGrazingPage() {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -216,7 +209,7 @@ export default function CateringGrazingPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/pkg-grazing.webp"
+            src="/generated/mychef-catering-bali-pkg-grazing.webp"
             alt="Grazing table Bali with cheese, charcuterie, fresh fruit, and edible flowers styled for a villa event"
             width={1920}
             height={1080}
@@ -225,7 +218,7 @@ export default function CateringGrazingPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -250,14 +243,14 @@ export default function CateringGrazingPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
               style={{ background: GOLD }}
             >
               <Package className="w-4 h-4" /> Design My Grazing Table
             </a>
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-grazing-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
@@ -291,8 +284,8 @@ export default function CateringGrazingPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden">
-              <img
-                src="/generated/pkg-grazing.webp"
+              <OptimizedImage
+                src="/generated/mychef-catering-bali-pkg-grazing.webp"
                 alt="Grazing table setup at a Bali villa with cheese, charcuterie, and tropical fruit"
                 className="w-full h-full object-cover aspect-[4/3]"
                 loading="lazy" />
@@ -579,34 +572,15 @@ export default function CateringGrazingPage() {
 
       <PressStrip />
 
-      {/* ═══════════════════════════════════════════════════════════════
-          INTERNAL LINKS
-          ═══════════════════════════════════════════════════════════════ */}
-      <section className="py-16 px-6 border-t border-[#E8E6E3]">
-        <div className="max-w-[1280px] mx-auto">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Related Services</p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            {INTERNAL_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors"
-              >
-                {link.label}
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CateringDiscoverySection page="grazing" />
 
       {/* ═══════════════════════════════════════════════════════════════
           FINAL CTA
           ═══════════════════════════════════════════════════════════════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="/generated/pkg-grazing.webp"
+          <OptimizedImage
+            src="/generated/mychef-catering-bali-pkg-grazing.webp"
             alt="Beautiful grazing table at a Bali villa event with cheese, charcuterie, and tropical styling"
             className="w-full h-full object-cover"
             loading="lazy" />
@@ -622,14 +596,14 @@ export default function CateringGrazingPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
               style={{ background: GOLD }}
             >
               <Package className="w-4 h-4" /> Design My Grazing Table
             </a>
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-grazing-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Phone className="w-4 h-4" /> WhatsApp myCHEF
             </a>

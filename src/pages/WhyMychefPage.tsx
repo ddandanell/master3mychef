@@ -101,7 +101,7 @@ export default function WhyMychefPage() {
           {TRUST_PILLARS.map((pillar) => (
             <article
               key={pillar.title}
-              className="rounded-[28px] border border-black/5 bg-white p-7 shadow-sm"
+              className="rounded-[28px] border border-black/5 bg-white p-7 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
             >
               <div className="text-3xl leading-none">{pillar.emoji}</div>
               <h3 className="mt-5 font-playfair text-2xl leading-tight text-[#1A1916]">{pillar.title}</h3>
@@ -176,9 +176,9 @@ export default function WhyMychefPage() {
       description="Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, 50+ local professionals, same-day confirmation and a no-stress guarantee."
       h1="Why 560+ Villas Choose myCHEF"
       subtitle="Michelin-trained leadership, 50+ local professionals, and calm villa-ready execution for dinners, events, and multi-day stays across Bali."
-      heroImage="/generated/hub-bali.webp"
+      heroImage="/generated/mychef-location-bali-hub-bali.webp"
       heroImageAlt="Luxury myCHEF dinner setup inside a Bali villa"
-      ogImage="https://mychef.id/generated/hub-bali.webp"
+      ogImage="https://mychef.id/generated/mychef-location-bali-hub-bali.webp"
       keywords={['why mychef', 'trusted private chef bali', 'villa chef bali']}
       highlights={['Michelin-Trained in Milan', '50+ Local Professionals', 'Same-Day Confirmation', 'No-Stress Guarantee']}
       sections={sections}

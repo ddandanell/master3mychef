@@ -16,6 +16,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import TaxFooter from '@/components/shared/TaxFooter'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20a%20villa%20party%20in%20Bali.'
@@ -70,10 +71,10 @@ const MUSIC_OPTIONS = [
 ]
 
 const DECOR_GALLERY = [
-  { title: 'Festoon Lighting', desc: 'String lights across terraces and gardens.', image: '/generated/aura-setup.webp' },
-  { title: 'Pool Floats & Decor', desc: 'Themed inflatables, flower arrangements, lanterns.', image: '/generated/party-pool.webp' },
-  { title: 'Lounge Areas', desc: 'Low tables, cushions, rugs for relaxed seating.', image: '/generated/party-rooftop.webp' },
-  { title: 'Bar Styling', desc: 'Custom bar setup with branded menus and garnishes.', image: '/generated/party-beer.webp' },
+  { title: 'Festoon Lighting', desc: 'String lights across terraces and gardens.', image: '/generated/mychef-experience-bali-aura-setup.webp' },
+  { title: 'Pool Floats & Decor', desc: 'Themed inflatables, flower arrangements, lanterns.', image: '/generated/mychef-events-bali-party-pool.webp' },
+  { title: 'Lounge Areas', desc: 'Low tables, cushions, rugs for relaxed seating.', image: '/generated/mychef-events-bali-party-rooftop.webp' },
+  { title: 'Bar Styling', desc: 'Custom bar setup with branded menus and garnishes.', image: '/generated/mychef-events-bali-party-beer.webp' },
 ]
 
 const HENS_BUCKS = [
@@ -173,11 +174,11 @@ export default function EventsVillaPartiesPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/events/villa-party-night.webp" alt="Night-time villa party with bar and pool lighting in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/mychef-events-bali-villa-party-night.webp" alt="Night-time villa party with bar and pool lighting in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -194,10 +195,10 @@ export default function EventsVillaPartiesPage() {
             Sunset BBQs, pool parties, cocktail receptions, and late-night celebrations with food, drinks, bartender service, staffing, music coordination, and cleanup all handled by one team.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-villa-parties-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-villa-parties-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> Plan Your Party
             </a>
-            <a href="#formats" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="#formats" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Wine className="w-4 h-4" /> View Formats
             </a>
           </div>
@@ -227,7 +228,7 @@ export default function EventsVillaPartiesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/events/villa-party-night.webp" alt="Bali villa party setup with bar and long-table dining" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-events-bali-villa-party-night.webp" alt="Bali villa party setup with bar and long-table dining" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
           <SectionHeader eyebrow="Chapter 2 — Formats" title="Party Types & Formats" subtitle="Choose the structure first, then we dial the food, bar, and entertainment around it." />
@@ -262,7 +263,7 @@ export default function EventsVillaPartiesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/sol-bbq.webp" alt="Live BBQ station for a Bali villa party" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-finedining-bali-sol-bbq.webp" alt="Live BBQ station for a Bali villa party" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -272,7 +273,7 @@ export default function EventsVillaPartiesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/party-beer.webp" alt="Party bartender service and drinks at a Bali villa event" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-events-bali-party-beer.webp" alt="Party bartender service and drinks at a Bali villa event" className="w-full h-full object-cover" loading="lazy" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -331,7 +332,7 @@ export default function EventsVillaPartiesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/party-pool.webp" alt="Poolside villa party staffing and setup in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-events-bali-party-pool.webp" alt="Poolside villa party staffing and setup in Bali" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -360,7 +361,7 @@ export default function EventsVillaPartiesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/party-rooftop.webp" alt="Late-night rooftop style villa party in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-events-bali-party-rooftop.webp" alt="Late-night rooftop style villa party in Bali" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -432,14 +433,14 @@ export default function EventsVillaPartiesPage() {
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Night Pool Party', image: '/generated/events/villa-party-night.webp' },
-              { title: 'Poolside Dinner Party', image: '/generated/party-pool.webp' },
-              { title: 'Rooftop Mood', image: '/generated/party-rooftop.webp' },
-              { title: 'Live BBQ Station', image: '/generated/sol-bbq.webp' },
+              { title: 'Night Pool Party', image: '/generated/mychef-events-bali-villa-party-night.webp' },
+              { title: 'Poolside Dinner Party', image: '/generated/mychef-events-bali-party-pool.webp' },
+              { title: 'Rooftop Mood', image: '/generated/mychef-events-bali-party-rooftop.webp' },
+              { title: 'Live BBQ Station', image: '/generated/mychef-finedining-bali-sol-bbq.webp' },
             ].map((party) => (
               <div key={party.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={party.image} alt={party.title} className="w-full h-full object-cover" loading="lazy" />
+                  <OptimizedImage src={party.image} alt={party.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-semibold text-[#1A1A1A] text-sm">{party.title}</h3>
@@ -457,7 +458,7 @@ export default function EventsVillaPartiesPage() {
             {DECOR_GALLERY.map((decor) => (
               <div key={decor.title} className="bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={decor.image} alt={decor.title} className="w-full h-full object-cover" loading="lazy" />
+                  <OptimizedImage src={decor.image} alt={decor.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-medium text-[#1A1A1A] mb-1">{decor.title}</h3>
@@ -497,7 +498,7 @@ export default function EventsVillaPartiesPage() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium"
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               >
                 {link.label}
               </Link>

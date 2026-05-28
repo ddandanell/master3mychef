@@ -17,11 +17,12 @@ import SeoHead, {
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20BBQ%20catering%20quote%20for%20my%20Bali%20villa.'
@@ -36,7 +37,7 @@ const BBQ_PACKAGES = [
     description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 6 guests',
-    image: '/generated/pkg-bbq.webp',
+    image: '/generated/mychef-experience-bali-aura-team.webp',
   },
   {
     title: 'International BBQ',
@@ -44,7 +45,7 @@ const BBQ_PACKAGES = [
     description: 'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread, fresh fruit.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 6 guests',
-    image: '/generated/sol-bbq.webp',
+    image: '/generated/mychef-finedining-bali-sol-bbq.webp',
   },
   {
     title: 'Premium Surf & Turf BBQ',
@@ -52,7 +53,7 @@ const BBQ_PACKAGES = [
     description: 'Wagyu steak, whole lobster tail, king prawns, salmon, Mahi-mahi, premium sides, signature sauces, chocolate dessert station.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Ingredients', 'Setup', '2-3h service', 'Plated service', 'Pack-up & cleanup'],
     minGuests: 'Min. 6 guests',
-    image: '/generated/pkg-seafood.webp',
+    image: '/generated/mychef-catering-bali-pkg-roast.webp',
   },
 ]
 
@@ -174,7 +175,7 @@ export default function CateringBBQPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/hero-buffet-catering.webp"
+            src="/generated/mychef-catering-bali-hero-buffet-catering.webp"
             alt="Chef grilling seafood and meat at a Bali villa BBQ by the pool"
             width={1920}
             height={1080}
@@ -183,7 +184,7 @@ export default function CateringBBQPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -203,10 +204,10 @@ export default function CateringBBQPage() {
             From IDR 450,000/person · Chef + staff + equipment included · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <MessageCircle className="w-4 h-4" /> Build My BBQ Menu
             </a>
-            <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               View BBQ Packages
             </a>
           </div>
@@ -300,7 +301,7 @@ export default function CateringBBQPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/catering/villa-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/villa-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Explore Villa Catering <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -334,7 +335,7 @@ export default function CateringBBQPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/sol-bbq.webp"
+                src="/generated/mychef-finedining-bali-sol-bbq.webp"
                 alt="Chef grilling at live BBQ station by Bali villa pool with guests watching"
                 width={800}
                 height={600}
@@ -383,7 +384,7 @@ export default function CateringBBQPage() {
             {BBQ_PACKAGES.map((pkg) => (
               <div key={pkg.title} className="bbq-reveal bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden flex flex-col">
                 <div className="aspect-[16/10] overflow-hidden">
-                  <img src={pkg.image} alt={`${pkg.title} setup at Bali villa`} className="w-full h-full object-cover" loading="lazy" />
+                  <OptimizedImage src={pkg.image} alt={`${pkg.title} setup at Bali villa`} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-6 md:p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
@@ -399,7 +400,7 @@ export default function CateringBBQPage() {
                       </li>
                     ))}
                   </ul>
-                  <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#C5A028] text-black text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+                  <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#C5A028] text-black text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                     <Calendar className="w-4 h-4" /> Book This BBQ
                   </a>
                 </div>
@@ -418,30 +419,30 @@ export default function CateringBBQPage() {
       </section>
 
       {/* ═══════ SECTION 8: GROUP SIZE GUIDE ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
             eyebrow="Chapter 8 — Investment"
             title="Group Size Guide"
             subtitle="All-in totals include 21% service charge and tax. Final quote confirmed before deposit."
           />
-          <div className="hidden md:block overflow-x-auto mt-10">
+          <div className="hidden md:block overflow-x-auto mt-10 bg-white rounded-2xl border border-[#E8E6E3] p-6">
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b-2 border-[#1A1A1A]">
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Guests</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Indonesian (450K)</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">International (600K)</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Premium Surf & Turf (850K)</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Guests</th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Indonesian <span className="text-xs font-normal opacity-70">(450K)</span></th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">International <span className="text-xs font-normal opacity-70">(600K)</span></th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Surf & Turf <span className="text-xs font-normal opacity-70">(850K)</span></th>
                 </tr>
               </thead>
               <tbody>
                 {GROUP_SIZE_GUIDE.map((row) => (
-                  <tr key={row.guests} className="border-b border-[#E8E6E3]">
-                    <td className="py-4 font-medium">{row.guests} guests</td>
-                    <td className="py-4 text-[#C5A028] font-semibold">{row.indonesian}</td>
-                    <td className="py-4 text-[#C5A028] font-semibold">{row.international}</td>
-                    <td className="py-4 text-[#C5A028] font-semibold">{row.premium}</td>
+                  <tr key={row.guests} className="border-b border-[#E8E6E3] even:bg-[#FAFAF8] last:border-b-0">
+                    <td className="py-5 font-semibold tabular-nums">{row.guests}</td>
+                    <td className="py-5 text-[#C5A028] font-medium tabular-nums">{row.indonesian}</td>
+                    <td className="py-5 text-[#C5A028] font-medium tabular-nums">{row.international}</td>
+                    <td className="py-5 text-[#C5A028] font-medium tabular-nums">{row.premium}</td>
                   </tr>
                 ))}
               </tbody>
@@ -450,11 +451,11 @@ export default function CateringBBQPage() {
           <div className="md:hidden space-y-4 mt-10">
             {GROUP_SIZE_GUIDE.map((row) => (
               <div key={row.guests} className="bg-white rounded-xl border border-[#E8E6E3] p-4">
-                <p className="font-medium mb-3">{row.guests} guests</p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between"><span className="text-[#4A4745]">Indonesian</span><span className="text-[#C5A028] font-semibold">{row.indonesian}</span></div>
-                  <div className="flex justify-between"><span className="text-[#4A4745]">International</span><span className="text-[#C5A028] font-semibold">{row.international}</span></div>
-                  <div className="flex justify-between"><span className="text-[#4A4745]">Premium</span><span className="text-[#C5A028] font-semibold">{row.premium}</span></div>
+                <p className="font-semibold text-base mb-3 tabular-nums">{row.guests} guests</p>
+                <div className="divide-y divide-[#E8E6E3]">
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">Indonesian</span><span className="text-[#C5A028] font-semibold tabular-nums">{row.indonesian}</span></div>
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">International</span><span className="text-[#C5A028] font-semibold tabular-nums">{row.international}</span></div>
+                  <div className="flex justify-between py-2 text-sm"><span className="text-[#4A4745] text-xs uppercase tracking-wide">Premium</span><span className="text-[#C5A028] font-semibold tabular-nums">{row.premium}</span></div>
                 </div>
               </div>
             ))}
@@ -480,11 +481,11 @@ export default function CateringBBQPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/in-villa-service/bartenders" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/in-villa-service/bartenders" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Hire Bartenders <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
-            <Link to="/in-villa-service/waiters" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/in-villa-service/waiters" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Hire Waiters <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -534,11 +535,11 @@ export default function CateringBBQPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/catering/buffet" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/buffet" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Explore Buffet Catering <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
-            <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline">
+            <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Explore Plated Dinners <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -627,11 +628,11 @@ export default function CateringBBQPage() {
       {/* ═══════ SECTION 15: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/sol-bbq.webp" alt="Finished BBQ table with grilled food at Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+          <img src="/generated/mychef-finedining-bali-sol-bbq.webp" alt="Finished BBQ table with grilled food at Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -647,10 +648,10 @@ export default function CateringBBQPage() {
             Send your date, area, guest count, and preferred BBQ package. We will confirm availability and final price by WhatsApp within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <MessageCircle className="w-4 h-4" /> Build My BBQ Menu
             </a>
-            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Phone className="w-4 h-4" /> Call +62 822-3756-5997
             </a>
           </div>
@@ -662,30 +663,7 @@ export default function CateringBBQPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 16: INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[1000px] mx-auto">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/fine-dining" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Fine Dining</h4>
-              <p className="text-xs text-[#4A4745]">7–11 course tasting menus in your villa</p>
-            </Link>
-            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Villa Catering</h4>
-              <p className="text-xs text-[#4A4745]">Full-service catering for villa groups</p>
-            </Link>
-            <Link to="/events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Events</h4>
-              <p className="text-xs text-[#4A4745]">Weddings, birthdays, corporate events</p>
-            </Link>
-            <Link to="/contact" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors">
-              <h4 className="font-semibold text-sm mb-1">Contact</h4>
-              <p className="text-xs text-[#4A4745]">Speak to our team directly</p>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CateringDiscoverySection page="bbq" />
 
       <TaxFooter className="py-6" />
     </div>

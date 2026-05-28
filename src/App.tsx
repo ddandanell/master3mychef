@@ -65,6 +65,10 @@ const StaffingVillaManagersPage = lazy(() => import('./pages/StaffingVillaManage
 const StaffingHotelsPage = lazy(() => import('./pages/StaffingHotelsPage'))
 const PillarSubPage = lazy(() => import('./components/PillarSubPage'))
 const LocationsHubPage = lazy(() => import('./components/LocationsHubPage'))
+const SeminyakPage = lazy(() => import('./pages/SeminyakPage'))
+const CangguPage = lazy(() => import('./pages/CangguPage'))
+const UbudPage = lazy(() => import('./pages/UbudPage'))
+const UluwatuPage = lazy(() => import('./pages/UluwatuPage'))
 const SanurPage = lazy(() => import('./pages/SanurPage'))
 const NusaDuaPage = lazy(() => import('./pages/NusaDuaPage'))
 const JimbaranPage = lazy(() => import('./pages/JimbaranPage'))
@@ -185,6 +189,10 @@ export default function App() {
 
           {/* Locations */}
           <Route path="/locations" element={<LocationsHubPage />} />
+          <Route path="/locations/seminyak" element={<SeminyakPage />} />
+          <Route path="/locations/canggu" element={<CangguPage />} />
+          <Route path="/locations/ubud" element={<UbudPage />} />
+          <Route path="/locations/uluwatu" element={<UluwatuPage />} />
           <Route path="/locations/sanur" element={<SanurPage />} />
           <Route path="/locations/nusa-dua" element={<NusaDuaPage />} />
           <Route path="/locations/jimbaran" element={<JimbaranPage />} />
@@ -224,6 +232,10 @@ export default function App() {
           <Route path="/villa-partners" element={<PartnersPage />} />
 
           {/* Legacy area pages (still served at root for SEO continuity) */}
+          <Route path="/seminyak" element={<SeminyakPage />} />
+          <Route path="/canggu" element={<CangguPage />} />
+          <Route path="/ubud" element={<UbudPage />} />
+          <Route path="/uluwatu" element={<UluwatuPage />} />
           <Route path="/sanur" element={<SanurPage />} />
           <Route path="/nusa-dua" element={<NusaDuaPage />} />
           <Route path="/jimbaran" element={<JimbaranPage />} />
@@ -245,7 +257,7 @@ export default function App() {
                 title="Private Chef in Jakarta"
                 description="Michelin-trained standards, brought to private residences and corporate suites in Indonesia's capital. Experience the myCHEF standard in Jakarta."
                 slug="jakarta"
-                heroImage="/generated/jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Background-checked Indonesian chefs with international experience',
                   'Coverage in Menteng, Kemang, SCBD, Pondok Indah, and BSD',
@@ -263,7 +275,7 @@ export default function App() {
                 title="Private Chef in Menteng"
                 description="Discreet, professional private chef services for Jakarta's primary diplomatic and residential district. Tailored to embassy hospitality and private family residences."
                 slug="private-chef-menteng"
-                heroImage="/generated/jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Discreet service for high-profile and diplomatic residences',
                   'Specialized in formal multi-course hosting and embassy dinners',
@@ -281,7 +293,7 @@ export default function App() {
                 title="Private Chef in Kemang"
                 description="Sophisticated private dining and catering for Kemang's vibrant expat and creative community. From family dinners to social events."
                 slug="private-chef-kemang"
-                heroImage="/generated/jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Tailored menus for Kemang’s international guest profiles',
                   'Family-style catering and social event hosting',
@@ -299,7 +311,7 @@ export default function App() {
                 title="Private Chef in SCBD"
                 description="Premium corporate catering and executive private dining in the heart of Jakarta's Business District."
                 slug="private-chef-scbd"
-                heroImage="/generated/jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Executive boardroom lunches and corporate dinners',
                   'Seamless logistics for SCBD high-rise apartments and offices',
@@ -317,7 +329,7 @@ export default function App() {
                 title="Private Chef in Pondok Indah"
                 description="Exclusive residential private chef services for Jakarta's premier family estates."
                 slug="private-chef-pondok-indah"
-                heroImage="/generated/jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Large estate catering and multi-generational family dining',
                   'Specialized in milestone birthdays and home celebrations',
@@ -335,7 +347,7 @@ export default function App() {
                 title="Private Chef in BSD City"
                 description="Modern private dining and group catering for the residential and tech hubs of BSD."
                 slug="private-chef-bsd"
-                heroImage="/generated/jakarta-skyline.webp"
+                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
                 highlights={[
                   'Convenient villa-style dining for BSD residents',
                   'Group BBQ catering and social gatherings',

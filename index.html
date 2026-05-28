@@ -9,6 +9,14 @@
     <title>Private Chef Bali | Luxury Villa Dining, Catering & Events by myCHEF</title>
     <meta name="description" content="Private chef in Bali for luxury villa dining, Bali villa catering, private events, parties, and fine dining experiences by myCHEF. Same-day WhatsApp confirmation." />
     <link rel="canonical" href="https://mychef.id/" />
+    
+    <!-- Initialise Analytics DataLayer & gtag -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // gtag('config', 'VITE_GA_ID_PLACEHOLDER'); // Configured dynamically via VITE_GA_ID in .env
+    </script>
 
     <!-- Icons + PWA -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -51,27 +59,48 @@
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" />
     </noscript>
-    <!-- Google Tag Manager: set VITE_GTM_ID in the deployment environment to enable. -->
+    <!-- Defer analytics boot until after first paint/idle so tracking does not compete with LCP/FID. -->
     <script type="module">
-      (function(w,d,s,l,i){
-      if (!i) return;
-      w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer',import.meta.env.VITE_GTM_ID);
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0PQH8ZKTF"></script>
-    <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-W0PQH8ZKTF');
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-W0PQH8ZKTF');
+
+      const loadAnalytics = () => {
+        if (document.documentElement.dataset.analyticsLoaded === 'true') return;
+        document.documentElement.dataset.analyticsLoaded = 'true';
+
+        const gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-W0PQH8ZKTF';
+        document.head.appendChild(gaScript);
+
+        const gtmId = import.meta.env.VITE_GTM_ID;
+        if (!gtmId) return;
+
+        const gtmScript = document.createElement('script');
+        gtmScript.async = true;
+        gtmScript.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}&l=dataLayer`;
+        document.head.appendChild(gtmScript);
+        window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+      };
+
+      const scheduleAnalytics = () => {
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(loadAnalytics, { timeout: 2500 });
+          return;
+        }
+        window.setTimeout(loadAnalytics, 1500);
+      };
+
+      if (document.readyState === 'complete') {
+        scheduleAnalytics();
+      } else {
+        window.addEventListener('load', scheduleAnalytics, { once: true });
+      }
     </script>
-    <!-- Preload the first above-the-fold portal image on the home page -->
-    <link rel="preload" as="image" href="/generated/hub-fine-dining.webp" fetchpriority="high" />
+    <!-- Preload the actual homepage LCP image so the hero starts fetching before React bootstraps. -->
+    <link rel="preload" as="image" href="/generated/bali-hub-hero.webp" fetchpriority="high" />
 
     <!-- Structured data: Organization -->
     <script type="application/ld+json">
@@ -216,79 +245,7 @@
       }
     </script>
 
-    <!-- Structured data: FAQPage — 8 high-intent Bali private chef questions -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How far in advance should I book a private chef in Bali?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For fine dining, 7+ days is ideal. For villa chefs, 3+ days. For events, 4+ weeks. We accommodate last-minute requests whenever possible."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you serve all areas of Bali?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan, Bukit Peninsula and everywhere in between. We have chefs based across the island."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What about dietary restrictions?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Every menu is tailored. Gluten-free, vegan, halal, nut allergies, pregnancy-friendly — just tell us. We have done it all at no extra charge."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are groceries included in the private chef price?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For fine dining and events, ingredients are included. For villa chef catering, groceries are billed at cost with no markup — you see every receipt."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How many staff come to my villa for fine dining?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Fine dining: 6–10 staff (chef, sous chef, servers, sommelier). Villa chef: 1–2 chefs. Events: depends on scale, quoted in your proposal."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the cancellation policy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Full refund 14+ days before. 50% refund 7–13 days before. No refund less than 7 days. See our full cancellation policy for details."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does payment work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A 25% deposit confirms your booking and locks your chef. The remaining 75% is paid when the chef arrives at your villa, before service begins."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How much does a private chef cost in Bali?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Villa chef catering starts at IDR 600,000 per hour with groceries at cost. Fine dining tasting menus start at IDR 2,200,000++ per guest. Event packages start at IDR 15,000,000 for 10–30 guests."
-            }
-          }
-        ]
-      }
-    </script>
+
   </head>
   <body>
     <!-- GTM noscript iframe is intentionally omitted until a real VITE_GTM_ID is configured. -->

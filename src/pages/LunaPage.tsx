@@ -1,10 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Flame, Wine, Clock, Users, Star, Check, ChevronRight, MessageCircle, Phone, Sparkles, Truck, Heart, ChefHat, UtensilsCrossed, ShieldCheck, RefreshCw } from 'lucide-react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BookingForm from '@/components/BookingForm'
-import OrderPanel from '@/components/OrderPanel'
+const OrderPanel = lazy(() => import('@/components/OrderPanel'))
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import LocationChips from '@/components/LocationChips'
@@ -14,8 +12,6 @@ import Breadcrumb from '@/components/shared/Breadcrumb'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { FineDiningRiskReversal } from '@/components/shared'
 import { getPageMeta } from '@/data/page-meta'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const MENUS = [
   {
@@ -139,6 +135,24 @@ const TESTIMONIALS = [
   },
 ]
 
+const RELATED_SERVICES = [
+  {
+    title: 'Daily Villa Chef',
+    desc: 'Breakfast, lunch, and dinner menus designed around your villa rhythm.',
+    href: '/villa-chef',
+  },
+  {
+    title: 'Event Catering',
+    desc: 'Weddings, parties, and retreats with full staffing and service flow.',
+    href: '/events',
+  },
+  {
+    title: 'Villa Hospitality Services',
+    desc: 'Butlers, bartenders, and service teams beyond the kitchen.',
+    href: '/services',
+  },
+]
+
 const THE_FOUR = [
   {
     name: 'I Made Surya',
@@ -192,13 +206,32 @@ export default function LunaPage() {
   }
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo('.luna-reveal', { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.luna-content', start: 'top 75%', once: true },
-      })
-    }, heroRef)
-    return () => ctx.revert()
+    let cancelled = false
+    let cleanup: (() => void) | undefined
+
+    void (async () => {
+      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
+        import('gsap'),
+        import('gsap/ScrollTrigger'),
+      ])
+
+      if (cancelled) return
+
+      gsap.registerPlugin(ScrollTrigger)
+      const ctx = gsap.context(() => {
+        gsap.fromTo('.luna-reveal', { y: 50, opacity: 0 }, {
+          y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.luna-content', start: 'top 75%', once: true },
+        })
+      }, heroRef)
+
+      cleanup = () => ctx.revert()
+    })()
+
+    return () => {
+      cancelled = true
+      cleanup?.()
+    }
   }, [])
 
   // IntersectionObserver for sidebar active state + visibility
@@ -324,7 +357,7 @@ export default function LunaPage() {
       <section className="relative min-h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/luna-hero-v3.webp"
+            src="/generated/mychef-experience-bali-luna-hero-v3.webp"
             alt="European friends enjoying a candlelit Michelin-level dinner on a private Bali villa terrace with Indonesian staff"
             width={1216}
             height={832}
@@ -334,7 +367,7 @@ export default function LunaPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -420,7 +453,7 @@ export default function LunaPage() {
               <Link
                 key={item.href}
                 to={item.href}
-                className="group flex flex-col gap-2 rounded-xl border border-white/10 px-5 py-4 hover:border-[#C5A028]/60 hover:bg-white/5 transition-all duration-200"
+                className="group flex flex-col gap-2 rounded-xl border border-white/10 px-5 py-4 hover:border-[#C5A028]/60 hover:bg-white/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
               >
                 <span className="text-xl">{item.icon}</span>
                 <span className="text-white font-medium text-sm leading-snug" style={{ fontFamily: "'Playfair Display', serif" }}>{item.label}</span>
@@ -452,7 +485,7 @@ export default function LunaPage() {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-3.webp"
+                src="/generated/mychef-experience-bali-luna-gallery-3.webp"
                 alt="Private chef preparing a fine dining course in a Bali villa kitchen"
                 width={800}
                 height={600}
@@ -494,7 +527,7 @@ export default function LunaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="order-2 md:order-1 rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-4.webp"
+                src="/generated/mychef-experience-bali-luna-gallery-4.webp"
                 alt="Romantic candlelit dinner for two at a private Bali villa"
                 width={800}
                 height={600}
@@ -530,7 +563,7 @@ export default function LunaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="luna-reveal">
               <img
-                src="/generated/luna-experience-collage.webp"
+                src="/generated/mychef-experience-bali-luna-collage.webp"
                 alt="Michelin-trained chef preparing a Mediterranean tasting menu in a private Bali villa kitchen"
                 width={800}
                 height={600}
@@ -587,7 +620,7 @@ export default function LunaPage() {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-2.webp"
+                src="/generated/mychef-experience-bali-luna-gallery-2.webp"
                 alt="Chef cooking at an open kitchen station during a private villa dinner"
                 width={800}
                 height={600}
@@ -670,7 +703,7 @@ export default function LunaPage() {
                 {/* Menu image — transparent PNG of the dry-aging cabinet, sits cleanly over the dark menu card */}
                 <div className="pt-8 pb-2 text-center">
                   <img
-                    src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean-sea.webp' : '/generated/luna-plating.webp'}
+                    src={menu.id === 'mediterranean' ? '/generated/menu-mediterranean-sea.webp' : '/generated/mychef-finedining-bali-luna-plating.webp'}
                     alt={menu.id === 'mediterranean' ? 'Mediterranean SEA Experience — certified tuna dry-aging cabinet' : 'Wagyu Experience — certified wagyu dry-aging cabinet'}
                     width={520}
                     height={260}
@@ -888,9 +921,11 @@ export default function LunaPage() {
                     alt={chef.name}
                     width={600}
                     height={750}
+                    sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                     className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
                     loading="lazy"
                     decoding="async"
+                    fetchPriority="low"
                     style={{ objectPosition: 'center 15%' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60" />
@@ -937,43 +972,51 @@ export default function LunaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-1.webp"
+                src="/generated/mychef-experience-bali-luna-gallery-1.webp"
                 alt="Sommelier presenting wine"
                 width={800}
                 height={600}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async" />
+                decoding="async"
+                fetchPriority="low" />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-2.webp"
+                src="/generated/mychef-experience-bali-luna-gallery-2.webp"
                 alt="Chef flambe at open kitchen"
                 width={800}
                 height={600}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async" />
+                decoding="async"
+                fetchPriority="low" />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-3.webp"
+                src="/generated/mychef-experience-bali-luna-gallery-3.webp"
                 alt="Chef plating with guest"
                 width={800}
                 height={600}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async" />
+                decoding="async"
+                fetchPriority="low" />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/generated/luna-gallery-4.webp"
+                src="/generated/mychef-experience-bali-luna-gallery-4.webp"
                 alt="Group dining at sunset"
                 width={800}
                 height={600}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
-                decoding="async" />
+                decoding="async"
+                fetchPriority="low" />
             </div>
           </div>
         </div>
@@ -1011,7 +1054,7 @@ export default function LunaPage() {
         {/* Full-bleed editorial header image (eyebrow + h2 are part of the artwork) */}
         <div className="relative w-full h-[60vh] min-h-[420px] max-h-[760px] overflow-hidden">
           <img
-            src="/generated/testimonials-bg.webp"
+            src="/generated/mychef-ui-bali-testimonials-bg.webp"
             alt="Private chef serving guests at a candlelit villa dinner — words from guests"
             width={1920}
             height={1080}
@@ -1098,7 +1141,7 @@ export default function LunaPage() {
               </p>
               <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 px-5 py-5">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028] mb-3">Read our guides</p>
-                <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#C5A028] transition-colors">
+                <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                   Visit the myCHEF Journal <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -1110,13 +1153,59 @@ export default function LunaPage() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <section id="related" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#111111' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Complete Your Stay</p>
+            <h2 className="text-4xl md:text-5xl mb-3 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
+            <p className="text-white/[55%] max-w-2xl mx-auto">From daily chef service to event teams, we cover the full villa hospitality stack.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {RELATED_SERVICES.map((item) => (
+              <Link
+                key={item.title}
+                to={item.href}
+                className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-200 hover:border-[#C5A028]/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              >
+                <h3 className="text-xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                <p className="text-sm text-white/[60%] leading-relaxed mb-6">{item.desc}</p>
+                <span className="text-[#C5A028] text-xs uppercase tracking-[0.25em]">Explore →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section id="final-cta" className="py-20 md:py-24 px-6" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[1000px] mx-auto text-center">
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Your Table Is Waiting</p>
+          <h2 className="text-4xl md:text-5xl mb-4 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>An Evening Designed Around You</h2>
+          <p className="text-white/[60%] mb-8">Private villa fine dining, tailored to your guests, your timing, your taste. We respond within 2 hours.</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button asChild variant="whatsapp" size="brand">
+              <a href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20reserve%20a%20fine%20dining%20evening%20in%20Bali." target="_blank" rel="noopener noreferrer" data-source="luna-final-cta">
+                <Phone className="w-4 h-4" />
+                Start Planning on WhatsApp
+              </a>
+            </Button>
+            <Button asChild variant="secondary" size="brand">
+              <a href="mailto:hello@mychef.id">Prefer Email? hello@mychef.id</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <LocationChips
         title="Fine Dining Across Bali"
         subtitle="The same Michelin-trained team, the same standards — in every villa from Seminyak to the Bukit Peninsula."
         dark
       />
 
-      <OrderPanel open={orderOpen} onClose={() => setOrderOpen(false)} initialExperience={orderExperience} />
+      <Suspense fallback={null}>
+        <OrderPanel open={orderOpen} onClose={() => setOrderOpen(false)} initialExperience={orderExperience} />
+      </Suspense>
     </div>
   )
 }

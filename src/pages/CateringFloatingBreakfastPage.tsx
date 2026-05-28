@@ -21,11 +21,12 @@ import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import CateringAddOnCard from '@/components/catering/CateringAddOnCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
+import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20floating%20breakfast%20in%20Bali.'
@@ -33,7 +34,7 @@ const SITE = 'https://mychef.id'
 
 const FLOATING_PACKAGES = [
   {
-    image: '/generated/catering/floating-breakfast.webp',
+    image: '/generated/mychef-catering-bali-floating-breakfast.webp',
     title: 'Floating Breakfast for 2',
     price: 'IDR 950,000/couple',
     priceNum: 950000,
@@ -42,7 +43,7 @@ const FLOATING_PACKAGES = [
     minGuests: 'For 2',
   },
   {
-    image: '/generated/catering/floating-breakfast.webp',
+    image: '/generated/mychef-catering-bali-floating-breakfast.webp',
     title: 'Floating Brunch for 2',
     price: 'IDR 1,400,000/couple',
     priceNum: 1400000,
@@ -51,7 +52,7 @@ const FLOATING_PACKAGES = [
     minGuests: 'For 2',
   },
   {
-    image: '/generated/catering/floating-breakfast.webp',
+    image: '/generated/mychef-catering-bali-floating-breakfast.webp',
     title: 'Floating Group Brunch',
     price: 'IDR 750,000/person',
     priceNum: 750000,
@@ -130,12 +131,12 @@ const DELIVERY_STEPS = [
 ]
 
 const FLOATING_GALLERY = [
-  '/generated/catering/floating-breakfast.webp',
-  '/generated/party-brunch.webp',
-  '/generated/aura-toast.webp',
-  '/generated/hub-catering.webp',
-  '/generated/aura-tablescape.webp',
-  '/generated/section-romantic-dinner.webp',
+  '/generated/mychef-catering-bali-floating-breakfast.webp',
+  '/generated/mychef-events-bali-party-brunch.webp',
+  '/generated/mychef-experience-bali-aura-toast.webp',
+  '/generated/mychef-catering-bali-hub-catering.webp',
+  '/generated/mychef-experience-bali-aura-tablescape.webp',
+  '/generated/mychef-misc-bali-section-romantic-dinner.webp',
 ]
 
 const FAQS = [
@@ -183,8 +184,8 @@ export default function CateringFloatingBreakfastPage() {
       {/* ═══════ HERO ═══════ */}
       <section className="relative overflow-hidden bg-black" style={{ minHeight: 'clamp(520px, 88vh, 100vh)' }}>
         {/* Background image — tray visible on right, villa on left */}
-        <img
-          src="/generated/floating-breakfast-bali.png"
+        <OptimizedImage
+          src="/generated/mychef-location-bali-floating-breakfast-bali.webp"
           alt="Floating breakfast bamboo tray in a Bali villa pool at sunset with tropical fruit, coffee, and flowers"
           decoding="async"
           fetchPriority="high"
@@ -195,14 +196,14 @@ export default function CateringFloatingBreakfastPage() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+            background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
           }}
         />
         {/* Bottom-to-top gradient — keeps CTA area readable */}
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to top, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.10) 40%, transparent 100%)',
+            background: 'linear-gradient(to top, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.20) 40%, transparent 100%)',
           }}
         />
         {/* Mobile — stronger full overlay */}
@@ -242,13 +243,12 @@ export default function CateringFloatingBreakfastPage() {
                   fontSize: 'clamp(42px, 6vw, 88px)',
                 }}
               >
-                Floating Breakfast Bali
-                <span className="block italic">Wake Up to Breakfast in Your Pool</span>
+                Floating Breakfast — In Your Bali Villa Pool
               </h1>
 
               {/* Body */}
               <p className="text-white/85 text-base md:text-lg leading-[1.55] mb-8 max-w-[540px]">
-                You wake up to fruit, pastries, eggs, coffee, juice, and flowers already set in the pool at your villa.
+                Bamboo tray styled with frangipani + tropical fruit + chef-prepared brunch. Delivered to your pool, photo-ready, retrieved when you're done.
               </p>
 
               {/* CTAs */}
@@ -256,14 +256,14 @@ export default function CateringFloatingBreakfastPage() {
                 <a
                   href="#order"
                   data-source="floating-breakfast-hero-primary-cta"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-xs font-bold uppercase tracking-[0.14em] rounded-full hover:bg-[#D4B43A] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-xs font-bold uppercase tracking-[0.14em] rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded"
                 >
                   <Calendar className="w-4 h-4" /> Reserve My Tray
                 </a>
                 <a
                   href="#setups"
                   data-source="floating-breakfast-hero-secondary-cta"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/40 text-white text-xs font-bold uppercase tracking-[0.14em] rounded-full hover:border-[#C5A028] hover:bg-white/5 backdrop-blur-sm transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/40 text-white text-xs font-bold uppercase tracking-[0.14em] rounded-full hover:border-[#C5A028] hover:bg-white/5 backdrop-blur-sm transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
                 >
                   <Utensils className="w-4 h-4" /> See the Setups
                 </a>
@@ -309,7 +309,7 @@ export default function CateringFloatingBreakfastPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/catering/floating-breakfast.webp"
+                src="/generated/mychef-catering-bali-floating-breakfast.webp"
                 alt="Floating breakfast tray with tropical fruit and coffee in a Bali villa pool"
                 width={800}
                 height={600}
@@ -434,7 +434,7 @@ export default function CateringFloatingBreakfastPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/catering/floating-breakfast.webp"
+                src="/generated/mychef-catering-bali-floating-breakfast.webp"
                 alt="Styled floating breakfast tray with tropical fruit, coffee, and white linen in a clear Bali villa pool"
                 width={800}
                 height={600}
@@ -459,7 +459,7 @@ export default function CateringFloatingBreakfastPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
             {FLOATING_GALLERY.map((src, i) => (
               <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={src} alt={`Floating breakfast setup ${i + 1} in a Bali villa pool`} className="w-full h-full object-cover" loading="lazy" />
+                <OptimizedImage src={src} alt={`Floating breakfast setup ${i + 1} in a Bali villa pool`} className="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>
@@ -511,7 +511,7 @@ export default function CateringFloatingBreakfastPage() {
           <div className="text-center mt-8">
             <Link
               to="/catering/villa-catering"
-              className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
             >
               Explore villa catering options <ArrowRight className="w-4 h-4" />
             </Link>
@@ -660,11 +660,13 @@ export default function CateringFloatingBreakfastPage() {
         </div>
       </section>
 
+      <CateringDiscoverySection page="floatingBreakfast" />
+
       {/* ═══════ FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/catering/floating-breakfast.webp"
+            src="/generated/mychef-catering-bali-floating-breakfast.webp"
             alt="Floating breakfast setup ready for guests in Bali villa pool"
             width={1920}
             height={1080}
@@ -674,7 +676,7 @@ export default function CateringFloatingBreakfastPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.10) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
             }}
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
@@ -689,37 +691,16 @@ export default function CateringFloatingBreakfastPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#order"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Calendar className="w-4 h-4" /> Reserve My Tray
             </a>
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-floating-breakfast-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
               <Phone className="w-4 h-4" /> WhatsApp myCHEF
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ INTERNAL LINKS ═══════ */}
-      <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-[800px] mx-auto">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#4A4745]/50 mb-6 text-center">Explore More</p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link to="/fine-dining" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
-              Fine Dining
-            </Link>
-            <Link to="/catering/villa-catering" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
-              Villa Catering
-            </Link>
-            <Link to="/events" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
-              Events
-            </Link>
-            <Link to="/contact" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors">
-              Contact
-            </Link>
           </div>
         </div>
       </section>

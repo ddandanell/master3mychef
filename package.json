@@ -5,16 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "npx tsx scripts/validate-critical-assets.ts && npx tsx scripts/generate-sitemap.ts && npx tsx scripts/generate-redirects.ts",
+    "prebuild": "npx tsx scripts/validate-hero-images.ts && npx tsx scripts/validate-critical-assets.ts && npx tsx scripts/generate-sitemap.ts && npx tsx scripts/generate-redirects.ts",
     "build": "tsc -b && vite build",
-    "postbuild": "npx tsx scripts/validate-critical-assets.ts && npx tsx scripts/inject-meta.ts",
+    "postbuild": "npx tsx scripts/validate-critical-assets.ts && npx tsx scripts/inject-meta.ts && npm run prerender",
+    "prerender": "npx tsx scripts/prerender.ts",
     "sitemap": "npx tsx scripts/generate-sitemap.ts",
     "redirects": "npx tsx scripts/generate-redirects.ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "audit": "npx tsx scripts/audit-quality.ts",
     "audit:images": "npx tsx scripts/audit-images.ts",
-    "cleanup:images": "npx tsx scripts/cleanup-unused-images.ts"
+    "cleanup:images": "npx tsx scripts/cleanup-unused-images.ts",
+    "verify": "node scripts/verify-deployment.cjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -45,6 +47,7 @@
     "eslint-plugin-react-refresh": "^0.4.24",
     "glob": "^10.3.10",
     "globals": "^16.5.0",
+    "googleapis": "^172.0.0",
     "plugin-inspect-react-code": "^1.0.3",
     "postcss": "^8.5.6",
     "sharp": "^0.33.1",

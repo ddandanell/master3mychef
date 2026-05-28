@@ -158,7 +158,7 @@ async function prerender() {
     server = await startPreviewServer()
     console.log('    ✅ Server ready\n')
     
-    const browser = await chromium.launch({ headless: true })
+    const browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_PATH })
     const context = await browser.newContext({
       userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
       viewport: { width: 1920, height: 1080 },

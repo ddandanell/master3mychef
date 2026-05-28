@@ -7,7 +7,7 @@ const CHEFS = [
     role: 'Executive Chef & Founder',
     specialty: 'Mediterranean Fine Dining',
     badge: 'Milan-born · Michelin-trained in Modena · Founder since 2016',
-    image: '/generated/chef-matteo.webp',
+    image: '/generated/mychef-finedining-bali-luna-chef-portrait.webp',
     bio: 'Adriano built myCHEF after years in Michelin-level kitchens in northern Italy and a formative stretch in Tokyo. He still leads menu development, chef training, and every signature tasting experience we serve in Bali villas.',
     achievements: ['Michelin-trained in Modena', 'Leads chef training for every new hire', 'Trusted for proposals, anniversaries, and VIP dinners'],
   },
@@ -60,7 +60,7 @@ const SECTIONS = [
     title: "The Culinary Team Behind Bali's Private Dining Favourite",
     body: `<p>myCHEF is led by Adriano and powered by a 50+ person hospitality team trained for villa service, not restaurant shortcuts. Every chef is taught how to cook beautifully in unfamiliar kitchens, adapt to dietary requests, and leave the space spotless before they go.</p>
     <p>That means better timing, calmer service, and food that still feels personal even when the event is large. From candlelit dinners to full villa celebrations, the chefs below set the standard.</p>`,
-    image: '/generated/trust-chefs.webp',
+    image: '/generated/mychef-finedining-bali-chefs-hero.webp',
     imageAlt: 'myCHEF chefs preparing private dining service in Bali',
   },
   {

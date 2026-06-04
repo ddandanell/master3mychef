@@ -13,6 +13,8 @@ import { dirname } from 'path';
 import { SITEMAP, type SitemapEntry } from '../src/data/sitemap';
 import { JOURNAL_POSTS } from '../src/data/siteArchitecture';
 
+import { REDIRECTS } from '../src/data/redirects';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -33,9 +35,13 @@ const URLS: { path: string; priority: number; changefreq: string }[] = [
   })),
 ];
 
+// Fjern redirects fra sitemap
+const REDIRECT_PATHS = new Set(REDIRECTS.map(r => r.from));
+const FILTERED_URLS = URLS.filter(url => !REDIRECT_PATHS.has(url.path));
+
 // Deduplicate by path (sitemap already includes journal posts, but this ensures no duplicates)
 const seen = new Set<string>();
-const UNIQUE_URLS = URLS.filter((url) => {
+const UNIQUE_URLS = FILTERED_URLS.filter((url) => {
   const key = url.path;
   if (seen.has(key)) return false;
   seen.add(key);

@@ -589,7 +589,7 @@ export function buildSitemap(): SitemapEntry[] {
 
   return [
     home,
-    ...areas,
+    // ...areas,  // Fjernet: disse redirecter til /locations/*
     ...locationPages,
     ...landing,
     ...guides,

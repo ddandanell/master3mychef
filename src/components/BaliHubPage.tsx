@@ -4,7 +4,7 @@ import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, 
 import { TOP_CITIES } from '@/data/topCities'
 
 const SITE = 'https://mychef.id'
-const WA = '6282237565997'
+const WA = '491635080236'
 
 // The Bali hub — links to all 10 top-city pages.
 // Lives at /guide/private-chef-bali so the SEO from the old guide URL is reused.
@@ -31,7 +31,7 @@ export default function BaliHubPage() {
             { question: 'How much does a private chef in Bali cost?', answer: 'Private chef services in Bali start from IDR 450,000 per person for set-menu dining. myCHEF.id offers transparent all-inclusive pricing covering ingredients, preparation, service, and cleanup.' },
             { question: 'What areas in Bali does myCHEF.id serve?', answer: 'myCHEF.id serves all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, and surrounding regions — covering 560+ villas across the island.' },
             { question: 'What services does myCHEF.id offer in Bali?', answer: 'myCHEF.id offers private chef dining, catering for events and villas, wedding catering, corporate event catering, and hospitality staffing including butlers, waiters, and bartenders.' },
-            { question: 'Is myCHEF.id available for same-day bookings in Bali?', answer: 'For same-day service, please contact us via WhatsApp at +62 822-3756-5997. Advance bookings of 24–48 hours are recommended to ensure full preparation and the best experience.' },
+            { question: 'Is myCHEF.id available for same-day bookings in Bali?', answer: 'For same-day service, please contact us via WhatsApp at +49 163 5080236. Advance bookings of 24–48 hours are recommended to ensure full preparation and the best experience.' },
           ]),
           {
             '@context': 'https://schema.org',

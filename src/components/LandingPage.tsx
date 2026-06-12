@@ -7,7 +7,7 @@ import Breadcrumb from './shared/Breadcrumb'
 import { type EnrichedPost, enrichPost, formatBlogDate, getRelatedPosts, injectContentEnhancements, sortPostsByDate } from '@/lib/blog'
 
 const SITE = 'https://mychef.id'
-const WA = '6282237565997'
+const WA = '491635080236'
 const AUTHOR = 'myCHEF Team'
 const GUIDE_ENTRIES = sortPostsByDate(GUIDES.filter((guide) => guide.slug !== 'guide/private-chef-bali').map((guide) => enrichPost(guide, 'guide')))
 const BLOG_ENTRIES = sortPostsByDate(BLOG_POSTS.map((post) => enrichPost(post, 'blog')))
@@ -81,7 +81,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
     aggregateRatingSchema(4.9, 560),
     breadcrumbJsonLd,
     faqPageSchema([
-      { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 822-3756-5997 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
+      { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +49 163 5080236 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
       { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond — covering 560+ villas across the island.' },
     ]),
     ...(landingServiceSchema ? [landingServiceSchema] : []),

@@ -22,7 +22,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA = '6282237565997'
+const WA = 491635080236
 const PRESS_EMAIL = 'press@mychef.id'
 
 const heroStats = ['50+ staff', '560+ villas', '12,000+ guests']
@@ -372,7 +372,7 @@ export default function PartnersPage() {
                 </div>
               </div>
               <div className="px-6 py-4 bg-[#FAFAF8] border-t border-[#E8E3D8] text-xs text-[#6B6560]">
-                Commissions tracked per booking and paid monthly. WhatsApp <a href={partnerWhatsapp} className="text-[#C5A028] underline underline-offset-2">+62 822-3756-5997</a> to discuss which tier fits your property.
+                Commissions tracked per booking and paid monthly. WhatsApp <a href={partnerWhatsapp} className="text-[#C5A028] underline underline-offset-2">+49 163 5080236</a> to discuss which tier fits your property.
               </div>
             </div>
           </div>

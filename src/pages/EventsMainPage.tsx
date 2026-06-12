@@ -19,7 +19,7 @@ import { EventsRiskReversal } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
 
 const SITE = 'https://mychef.id'
-const WA_NUMBER = '6282237565997'
+const WA_NUMBER = 491635080236
 const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
   "Hi myCHEF, I'd like to plan an event in Bali. Could you walk me through the options?",
 )}`
@@ -712,10 +712,10 @@ export default function EventsMainPage() {
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
-              href="tel:+6282237565997"
+              href="tel:+491635080236"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <Phone className="w-4 h-4" /> Call +62 822 3756 5997
+              <Phone className="w-4 h-4" /> Call +49 163 5080236
             </a>
           </div>
         </div>
@@ -931,7 +931,7 @@ export default function EventsMainPage() {
               href="tel:+628****5997"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <Phone className="w-4 h-4" /> Call +62 822 3756 5997
+              <Phone className="w-4 h-4" /> Call +49 163 5080236
             </a>
           </div>
         </div>

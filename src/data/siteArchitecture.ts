@@ -8,7 +8,7 @@ export const SITE = {
   name: 'myCHEF',
   url: 'https://mychef.id',
   email: 'indonesia@mychef.id',
-  whatsapp: '6282237565997',
+  whatsapp: '491635080236',
 }
 
 export type PillarSlug = 'fine-dining' | 'catering' | 'events' | 'in-villa-service' | 'staffing'

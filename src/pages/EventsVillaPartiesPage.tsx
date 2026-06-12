@@ -19,7 +19,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20a%20villa%20party%20in%20Bali.'
+const WA_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20a%20villa%20party%20in%20Bali.'
 const SITE = 'https://mychef.id'
 const ACCENT = '#2C5F7C'
 

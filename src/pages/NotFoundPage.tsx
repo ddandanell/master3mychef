@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, Compass, MessageCircle, Sparkles } from 'lucide-
 import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 import { Button } from '@/components/ui/button'
 
-const WA = '6282237565997'
+const WA = 491635080236
 
 const QUICK_LINKS = [
   {

@@ -11,7 +11,7 @@ import { Breadcrumb } from '@/components/shared'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE_URL = 'https://mychef.id'
-const WHATSAPP_NUMBER = '6282237565997'
+const WHATSAPP_NUMBER = 491635080236
 
 interface MenuCard {
   name: string

@@ -11,7 +11,7 @@ import { Breadcrumb } from '@/components/shared'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WHATSAPP_NUMBER = '6282237565997'
+const WHATSAPP_NUMBER = 491635080236
 
 const buildWhatsAppLink = (message: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`

@@ -274,7 +274,7 @@ export default function PricingCalculator({
           <p className="mt-6 text-sm text-white/[75%]">Final pricing confirmed on WhatsApp. No hidden fees.</p>
           <p className="mt-3 text-xs uppercase tracking-[0.18em] text-white/[50%]">“From” uses the lowest guest count in your selected range.</p>
           <Button asChild variant="whatsapp" size="brand" className="mt-6 w-full justify-center">
-            <a href={`https://wa.me/6282237565997?text=${whatsappText}`} target="_blank" rel="noopener noreferrer" data-source="pricing-calculator-cta">
+            <a href={`https://wa.me/491635080236?text=${whatsappText}`} target="_blank" rel="noopener noreferrer" data-source="pricing-calculator-cta">
               <MessageCircle className="h-4 w-4" />
               Get exact quote on WhatsApp
             </a>

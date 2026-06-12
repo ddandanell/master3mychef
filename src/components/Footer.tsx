@@ -44,7 +44,7 @@ export default function Footer() {
                 <Instagram className="w-5 h-5 text-white/70 hover:text-[#C5A028]" />
               </a>
               <a
-                href="https://wa.me/6282237565997"
+                href="https://wa.me/491635080236"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="footer-social"
@@ -60,13 +60,13 @@ export default function Footer() {
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-3 font-semibold">Contact Us</p>
               <a
-                href="https://wa.me/6282237565997?text=Hi%20myCHEF"
+                href="https://wa.me/491635080236?text=Hi%20myCHEF"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="footer-top"
                 className="inline-flex items-center gap-2.5 text-sm font-semibold bg-[#C5A028] text-black px-6 py-3.5 rounded-full hover:bg-[#D4B033] transition-all shadow-lg shadow-[#C5A028]/20 hover:shadow-xl hover:shadow-[#C5A028]/30 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
               >
-                <MessageCircle className="w-4 h-4" /> +62 822-3756-5997
+                <MessageCircle className="w-4 h-4" /> +49 163 5080236
               </a>
             </div>
             <div className="space-y-2">

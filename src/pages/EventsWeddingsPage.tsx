@@ -18,7 +18,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20wedding%20consultation.'
+const WA_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20a%20wedding%20consultation.'
 const SITE = 'https://mychef.id'
 const ACCENT = '#C5A028'
 

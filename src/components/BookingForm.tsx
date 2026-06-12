@@ -17,7 +17,7 @@ const CONFIG = {
       { name: 'menu', label: 'Menu Experience', type: 'select', icon: 'Utensils', options: ['Mediterranean Sea Experience (IDR 2.2M++ pp)', 'Wagyu Experience (IDR 2.4M++ pp)'] },
     ],
     whatsappName: 'Sofia',
-    whatsappNumber: '6282237565997',
+    whatsappNumber: 491635080236,
   },
   sol: {
     title: 'Book Your Private Villa Chef',
@@ -30,7 +30,7 @@ const CONFIG = {
       { name: 'meals', label: 'Meal Plan', type: 'select', icon: 'Utensils', options: ['Breakfast Only', 'Half Board', 'Full Board', 'Custom'] },
     ],
     whatsappName: 'Daniel',
-    whatsappNumber: '6282237565997',
+    whatsappNumber: 491635080236,
   },
   aura: {
     title: 'Plan Your Event',
@@ -42,7 +42,7 @@ const CONFIG = {
       { name: 'villa', label: 'Villa Location', type: 'text', icon: 'MapPin', placeholder: 'Seminyak, Canggu, Ubud...' },
     ],
     whatsappName: 'Olivia',
-    whatsappNumber: '6282237565997',
+    whatsappNumber: 491635080236,
   },
 }
 

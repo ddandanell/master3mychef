@@ -201,7 +201,7 @@ export default function HelpPage() {
           <h2 className="text-3xl font-light mb-6">Didn't find what you need?</h2>
           <p className="text-white/70 mb-8">Message us directly on WhatsApp — we reply within 1 hour.</p>
           <a
-            href="https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%20have%20a%20question..."
+            href="https://wa.me/491635080236?text=Hi%20myCHEF%2C%20I%20have%20a%20question..."
             className="inline-block px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
           >
             Message on WhatsApp

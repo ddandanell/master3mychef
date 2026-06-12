@@ -23,7 +23,7 @@ export const localBusinessSchema = {
   name: 'myCHEF.id',
   description: 'Private chef, catering, events, and staffing services in Bali',
   url: 'https://mychef.id',
-  telephone: '+62-822-3756-5997',
+  telephone: '+49 163 5080236',
   email: 'indonesia@mychef.id',
   address: {
     '@type': 'PostalAddress',
@@ -48,7 +48,7 @@ const cateringProviderSchema = {
   '@type': 'FoodEstablishment',
   name: 'myCHEF.id',
   url: 'https://mychef.id',
-  telephone: '+62-822-3756-5997',
+  telephone: '+49 163 5080236',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Bali',
@@ -140,7 +140,7 @@ export function detailedServiceSchema(
       '@type': 'Organization',
       name: 'myCHEF.id',
       url: 'https://mychef.id',
-      telephone: '+62-822-3756-5997',
+      telephone: '+49 163 5080236',
     },
     areaServed: {
       '@type': 'Place',

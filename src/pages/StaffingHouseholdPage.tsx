@@ -21,7 +21,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WA_NUMBER = '6282237565997'
+const WA_NUMBER = 491635080236
 const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
   "Hi myCHEF, I'd like to hire household staff for my residence in Bali.",
 )}`
@@ -249,7 +249,7 @@ export default function StaffingHouseholdPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-household-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
-            <a href="tel:+6282237565997" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+            <a href="tel:+491635080236" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>

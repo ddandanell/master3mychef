@@ -4,7 +4,7 @@ import SeoHead, { aggregateRatingSchema, breadcrumbSchema, faqPageSchema, localB
 import type { LocationLandingPageConfig } from '@/data/locationLandingPages'
 
 const SITE = 'https://mychef.id'
-const WHATSAPP_NUMBER = '6282237565997'
+const WHATSAPP_NUMBER = '491635080236'
 
 function createWhatsAppLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`

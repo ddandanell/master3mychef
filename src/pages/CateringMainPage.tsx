@@ -29,8 +29,8 @@ import { CateringRiskReversal } from '@/components/shared'
 
 import OptimizedImage from '@/components/OptimizedImage'
 
-const WA_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20a%20catering%20quote.'
-const WA_DAILY_CHEF_LINK = 'https://wa.me/6282237565997?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20daily%20villa%20chef.'
+const WA_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20a%20catering%20quote.'
+const WA_DAILY_CHEF_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20daily%20villa%20chef.'
 const SITE = 'https://mychef.id'
 const bookingHref = (packageName: string) => `?package=${encodeURIComponent(packageName)}#book`
 
@@ -1306,10 +1306,10 @@ export default function CateringMainPage() {
               <MessageCircle className="w-4 h-4" /> Get Catering Quote for Your Guests
             </a>
             <a
-              href="tel:+6282237565997"
+              href="tel:+491635080236"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <Phone className="w-4 h-4" /> Call +62 822 3756 5997
+              <Phone className="w-4 h-4" /> Call +49 163 5080236
             </a>
           </div>
           <p className="text-sm text-white/[60%] mb-8">

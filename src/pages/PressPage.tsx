@@ -5,7 +5,7 @@ import { Breadcrumb } from '@/components/shared'
 import { Button } from '@/components/ui/button'
 
 const SITE = 'https://mychef.id'
-const WA_NUMBER = '6282237565997'
+const WA_NUMBER = 491635080236
 const PRESS_KIT_MESSAGE = "Hi, I'm a journalist/blogger and would like to request the myCHEF.id press kit."
 const PRESS_KIT_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(PRESS_KIT_MESSAGE)}`
 
@@ -67,7 +67,7 @@ export default function PressPage() {
         canonical={`${SITE}/press`}
         ogImage={`${SITE}/generated/partner-platform-hero.webp`}
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Media', `${SITE}/press`), faqPageSchema([
-          { question: 'How do I request a press kit for myCHEF.id?', answer: 'Press kits, high-resolution imagery, and interview requests can be arranged via WhatsApp at +62 822-3756-5997 or email indonesia@mychef.id. We respond within 24 hours.' },
+          { question: 'How do I request a press kit for myCHEF.id?', answer: 'Press kits, high-resolution imagery, and interview requests can be arranged via WhatsApp at +49 163 5080236 or email indonesia@mychef.id. We respond within 24 hours.' },
           { question: 'Has myCHEF.id been featured in the press?', answer: 'myCHEF.id has been covered by travel and lifestyle media for its Michelin-trained private chef service in Bali, serving 12,000+ guests across 560+ villas and delivering 500+ events.' },
           { question: 'Can myCHEF.id arrange chef demonstrations for media?', answer: 'Yes — we can arrange live cooking demonstrations, villa dining press previews, and media experiences. Contact our team via WhatsApp to discuss coverage arrangements.' },
         ])]}
@@ -135,7 +135,7 @@ export default function PressPage() {
             <div className="mt-8 rounded-[28px] bg-[#1A1916] p-6 text-white">
               <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028]">PR Contact</p>
               <p className="mt-3 text-xl font-semibold">Sofia — Communications</p>
-              <p className="mt-2 text-white/[75%]">WhatsApp: +62 822-3756-5997</p>
+              <p className="mt-2 text-white/[75%]">WhatsApp: +49 163 5080236</p>
               <p className="mt-1 text-white/[75%]">Email: press@mychef.id</p>
               <p className="mt-4 inline-flex items-center gap-2 text-sm text-white/[75%]">
                 <Clock3 className="h-4 w-4 text-[#C5A028]" />
@@ -239,7 +239,7 @@ export default function PressPage() {
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-[0.35em] text-[#8A857D]">WhatsApp</dt>
-                <dd className="mt-2 text-lg font-semibold text-[#1A1916]">+62 822-3756-5997</dd>
+                <dd className="mt-2 text-lg font-semibold text-[#1A1916]">+49 163 5080236</dd>
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-[0.35em] text-[#8A857D]">Email</dt>

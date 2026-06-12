@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import PremiumPage, { type PageSection } from '@/components/PremiumPage'
 import { breadcrumbSchema } from '@/components/SeoHead'
 
-const WA = '6282237565997'
+const WA = 491635080236
 
 const SCENARIOS = [
   {

@@ -1,5 +1,6 @@
 /* myCHEF.id — App-specific styles */
 #root {
+  overflow-x: hidden;
   width: 100%;
   min-height: 100vh;
 }

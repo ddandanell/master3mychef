@@ -493,16 +493,16 @@ export function buildSitemap(): SitemapEntry[] {
     changefreq: 'weekly',
   }
 
-  const areas: SitemapEntry[] = AREAS.map((a) => ({
-    path: `/${a.slug}`,
-    type: 'area',
-    title: `Private Chef in ${a.name}, Bali`,
-    description: `Private chef services in ${a.name}, Bali. Custom menus, transparent pricing, and professional service.`,
-    priority: 0.8,
-    changefreq: 'weekly',
-    area: a.name,
-    slug: a.slug,
-  }))
+  // const areas: SitemapEntry[] = AREAS.map((a) => ({
+  //   path: `/${a.slug}`,
+  //   type: 'area',
+  //   title: `Private Chef in ${a.name}, Bali`,
+  //   description: `Private chef services in ${a.name}, Bali. Custom menus, transparent pricing, and professional service.`,
+  //   priority: 0.8,
+  //   changefreq: 'weekly',
+  //   area: a.name,
+  //   slug: a.slug,
+  // }))
 
   const locationPages: SitemapEntry[] = Object.values(LOCATIONS).map((l) => ({
     path: `/locations/${l.slug}`,

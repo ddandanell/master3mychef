@@ -120,6 +120,14 @@ export const REDIRECTS: Redirect[] = [
   { from: '/corporate-events', to: '/events/corporate-events', reason: 'Consolidate duplicate corporate events content into the canonical events pillar page.' },
   { from: '/villa-partners', to: '/partner-platform', reason: 'Old partners page → new partner platform.' },
   { from: '/catering/buffet-catering', to: '/catering/buffet', reason: 'Old slug renamed: buffet-catering → buffet to match route.' },
+
+  // --- 2026-06-13: 404s discovered by Mustafa audit ---
+  // Keyword targets and nav links returning 404 — fix to prevent lead loss on
+  // ranking keywords "private chef Bali" (#27), "Bali private chef hire", "private dining Bali".
+  { from: '/services/private-chef', to: '/in-villa-service', reason: 'Keyword target for "private chef Bali" (#27) and "Bali private chef hire" — page never built. Redirect to main service page.' },
+  { from: '/services/private-dining', to: '/fine-dining', reason: 'Keyword target for "private dining Bali" (1.4K/mo) — page never built. Redirect to fine-dining pillar.' },
+  { from: '/about', to: '/fine-dining/our-chefs', reason: '404 from nav. Redirect to chef profiles as closest "about us" content.' },
+  { from: '/menu', to: '/fine-dining/menus', reason: '404 from nav/marketing. Redirect to fine-dining menus pillar.' },
 ]
 
 /** Lookup map for the React Router fallback. */

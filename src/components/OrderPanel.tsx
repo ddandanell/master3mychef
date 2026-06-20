@@ -302,7 +302,7 @@ function Step1Guests({ form, update }: { form: BookingForm; update: <K extends k
       <DarkInput value={form.villa} onChange={(v) => update('villa', v)} placeholder="Villa name, hotel, or area in Bali" className="mb-8" />
 
       <Label>Date</Label>
-      <DarkInput type="date" value={form.date} onChange={(v) => update('date', v)} min={new Date().toISOString().split('T')[0]} className="mb-8" />
+      <DarkInput type="date" value={form.date} onChange={(v) => update('date', v)} min={(() => { const d = new Date(); d.setDate(d.getDate() + 2); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}` })()} className="mb-8" />
 
       <Label>Preferred dinner start</Label>
       <div className="grid grid-cols-4 gap-2">

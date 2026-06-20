@@ -17,8 +17,8 @@ const PAYMENT_RULES = [
   },
   {
     icon: Calendar,
-    title: 'Same-Week Bookings',
-    desc: 'If your event is in the same week, payment must be made immediately with proof sent before we lock the chef.',
+    title: 'Bookings Within 24 Hours',
+    desc: '100% of the total must be paid upfront for bookings within 24 hours. Proof of payment required before we lock the chef.',
   },
   {
     icon: AlertCircle,
@@ -36,7 +36,7 @@ const CANCELLATION_TIERS = [
 const FAQS = [
   {
     q: 'What are myCHEF terms of service?',
-    a: 'Our terms cover booking deposits, payment schedules, cancellation and refund policies, changes to bookings, and legal terms governed by Indonesian law. A 50% deposit is required to confirm your booking, with the balance paid on arrival.',
+    a: 'Our terms cover booking deposits, payment schedules, cancellation and refund policies, changes to bookings, and legal terms governed by Indonesian law. A 50% deposit is required to confirm your booking, with the balance paid on arrival. Bookings within 24 hours require 100% payment upfront.',
   },
   {
     q: 'What happens if I break the terms?',
@@ -108,7 +108,7 @@ export default function TermsPage() {
                 <p>When you receive an offer from MyChef, the following rules apply:</p>
                 <ul className="list-disc list-inside space-y-2 ml-2">
                   <li>You have <strong className="text-white/[80%]">7 calendar days</strong> to pay the deposit in order to confirm and secure your booking.</li>
-                  <li>If your booking is scheduled for the <strong className="text-white/[80%]">same week</strong>, payment must be made immediately, and proof of payment must be sent to us before we lock the chef to your booking.</li>
+                  <li>If your booking is within <strong className="text-white/[80%]">24 hours</strong>, 100% of the total must be paid upfront, and proof of payment must be sent to us before we lock the chef to your booking.</li>
                   <li>If payment is not received within the stated time, MyChef reserves the right to cancel or reassign the chef without further notice.</li>
                 </ul>
               </div>

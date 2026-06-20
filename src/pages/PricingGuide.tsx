@@ -68,7 +68,7 @@ const FAQS = [
   },
   {
     q: 'What about payment plans?',
-    a: 'We typically take 50% deposit to lock the date and team, then final payment 48 hours before service.',
+    a: 'We take a 50% deposit to lock the date and team, then final payment when the chef arrives. Bookings within 24 hours require 100% payment upfront.',
   },
   {
     q: 'Are there cancellation fees?',

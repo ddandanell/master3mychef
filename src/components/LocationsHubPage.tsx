@@ -74,7 +74,7 @@ export default function LocationsHubPage() {
         jsonLd={[{ ...localBusinessSchema, aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '560', bestRating: '5', worstRating: '1' } }, breadcrumbSchema('Locations', canonical), faqPageSchema([
           { question: 'Which areas in Bali does myCHEF.id cover?', answer: 'myCHEF.id covers all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and Bingin — serving 560+ villas across the island.' },
           { question: 'Does myCHEF.id travel to my villa location?', answer: 'Yes — our team travels to your villa anywhere in Bali. We handle all logistics including ingredients, equipment, and setup, so you never need to leave your villa.' },
-          { question: 'How far in advance do I need to book?', answer: 'We recommend booking 24–48 hours in advance. For large events or catering, earlier is better. Contact us via WhatsApp for last-minute availability.' },
+          { question: 'How far in advance do I need to book?', answer: 'We require a minimum of 48 hours advance notice. For bookings within 24 hours, 100% payment is required upfront. Contact us via WhatsApp to check last-minute availability.' },
         ])]}
       />
 

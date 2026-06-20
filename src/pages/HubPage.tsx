@@ -89,7 +89,7 @@ const FAQS = [
   { q: 'Are groceries included in the price?', a: 'For fine dining and events, ingredients are included. For villa chef catering, groceries are billed at cost with no markup — you see every receipt.' },
   { q: 'How many staff will come to my villa?', a: 'Fine dining: 6–10 staff (chef, sous chef, servers, sommelier). Villa chef: 1–2 chefs. Events: depends on scale, quoted in your proposal.' },
   { q: 'What is the cancellation policy?', a: 'Full refund 14+ days before. 50% refund 7–13 days before. No refund less than 7 days. See our full cancellation policy for details.' },
-  { q: 'How does payment work?', a: 'A 50% deposit confirms your booking and locks your chef. The remaining 50% is paid when the chef arrives at your villa, before service begins.' },
+  { q: 'How does payment work?', a: 'A 50% deposit confirms your booking and locks your chef. Bookings within 24 hours require 100% payment upfront. The remaining 50% is paid when the chef arrives at your villa, before service begins.' },
 ]
 
 

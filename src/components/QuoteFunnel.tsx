@@ -390,8 +390,9 @@ export default function QuoteFunnel() {
               <p className="font-medium text-[#1A1A1A] mb-2">Deposit & cancellation</p>
               <ul className="space-y-1 text-[#4A4745]">
                 <li>• 50% deposit confirms the booking and locks the chef.</li>
+                <li>• Bookings within 24 hours require 100% payment upfront.</li>
                 <li>• Full refund 14+ days before. 50% refund 7–13 days. No refund under 7 days.</li>
-                <li>• Remaining 75% paid when the chef arrives at your villa, before service begins.</li>
+                <li>• Remaining 50% paid when the chef arrives at your villa, before service begins.</li>
               </ul>
               <p className="text-xs text-[#8A8785] mt-3">
                 <Link to="/cancellation" className="underline hover:text-[#1A1A1A]">Read the full cancellation policy →</Link>
@@ -558,7 +559,8 @@ function DateStep({ form, update }: { form: QuoteForm; update: <K extends keyof 
             const selected = isInRange(iso)
             const isStartpoint = iso === rangeStart
             const isEndpoint = iso === rangeEnd
-            const past = new Date(year, month, d) < new Date(today.toDateString())
+            const minBookDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 2)
+            const past = new Date(year, month, d) < minBookDate
             const dateLabel = new Date(year, month, d).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
             let ariaLabel = dateLabel
             if (selected) ariaLabel += ', selected'

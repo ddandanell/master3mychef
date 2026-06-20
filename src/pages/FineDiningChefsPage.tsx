@@ -148,8 +148,8 @@ export default function FineDiningChefsPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Our Chefs Bali | Vetted Private Chefs — myCHEF"
-        description="Meet the chefs behind myCHEF. International training, Indonesian sourcing, plated for your villa."
+        title="Hire a Private Chef Bali | Meet the myCHEF Team"
+        description="Meet myCHEF's private chefs in Bali: Michelin-trained Adriano & specialists in Mediterranean, seafood & fire cooking. Hire yours via WhatsApp today."
         canonical="https://mychef.id/fine-dining/our-chefs"
         ogImage="/generated/mychef-finedining-bali-chefs-hero.webp"
         jsonLd={[

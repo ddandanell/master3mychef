@@ -98,8 +98,8 @@ export default function ServiceBartendersPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Bartender Hire Bali | Villa Bartenders — myCHEF"
-        description="Hire a bartender for your Bali villa. Cocktails, glassware, ice, garnishes, full pour for parties and events. From IDR 450,000 per shift."
+        title="Bartender Hire Bali | Villa Cocktail Service — myCHEF"
+        description="Hire a bartender in Bali for villa parties & dinners. Cocktails, glassware, ice & garnish prep included. From IDR 450K/shift. WhatsApp to book yours."
         canonical={`${SITE}/in-villa-service/bartenders`}
         ogImage={`${SITE}/generated/mychef-experience-bali-aura-bartender.webp`}
         jsonLd={[

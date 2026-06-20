@@ -105,7 +105,7 @@ export default function StaffingHouseholdPage() {
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Household Staff Bali | Private Estate Recruitment — myCHEF"
-        description="Household staff recruitment in Bali for private residences — nannies, drivers, housekeepers, head of house. From IDR 4,000,000 per month."
+        description="Recruit household staff in Bali for private residences & estates. Housekeepers, drivers, nannies & heads of house. Vetted & placed in 48 hours."
         canonical={`${SITE}/staffing/household-staff`}
         ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-table.webp`}
         jsonLd={[

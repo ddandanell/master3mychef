@@ -174,6 +174,8 @@ export default function WhyMychefPage() {
       slug="why-mychef"
       title="Why 560+ Villas Choose myCHEF"
       description="Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, 50+ local professionals, same-day confirmation and a no-stress guarantee."
+      seoTitle="Best Private Chef Service Bali | Why myCHEF? — 560+ Villas"
+      seoDescription="Why 560+ Bali villas trust myCHEF: Michelin-trained leadership, 50+ local staff, same-day confirmation & no-stress guarantee. See the full difference."
       h1="Why 560+ Villas Choose myCHEF"
       subtitle="Michelin-trained leadership, 50+ local professionals, and calm villa-ready execution for dinners, events, and multi-day stays across Bali."
       heroImage="/generated/mychef-location-bali-hub-bali.webp"

@@ -211,8 +211,8 @@ export default function ReviewsPage() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="myCHEF Reviews | 4.9★ Private Chef & Catering Bali"
-        description="Read guest reviews for myCHEF private dinners, weddings, retreats and catering events across Bali."
+        title="myCHEF Bali Reviews | 4.9★ Private Chef & Catering"
+        description="Read 4.9★ myCHEF Bali reviews from villa guests, weddings, retreats & events. Real hosts, real outcomes — see why 560+ villas keep coming back."
         canonical={canonical}
         ogImage={`${SITE}/dining-table.webp`}
         jsonLd={REVIEWS_SCHEMAS}

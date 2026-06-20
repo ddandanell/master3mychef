@@ -98,8 +98,8 @@ export default function ServiceButlersPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Butler Service Bali | Villa Butlers Per Shift — myCHEF"
-        description="Hire a butler in Bali for in-villa hosting, arrival service, guest experience and discreet anticipation. From IDR 1,200,000 per day."
+        title="Butler Hire Bali Villa | Discreet In-Villa Service — myCHEF"
+        description="Hire a private butler in Bali for arrival service, discreet hosting & polished villa support. From IDR 1.2M/day. WhatsApp us to check availability."
         canonical={`${SITE}/in-villa-service/butlers`}
         ogImage={`${SITE}/generated/hub-villa.webp`}
         jsonLd={[

@@ -177,8 +177,8 @@ export default function CateringBuffetPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Buffet Catering Bali | Villa, Wedding & Event Buffets"
-        description="Buffet catering in Bali for villas, weddings, retreats, and events with Indonesian, Western, BBQ, and custom menu options."
+        title="Buffet Catering Bali | Villa & Event Buffets — myCHEF"
+        description="Buffet catering in Bali for villas, weddings & retreats. Indonesian, international & live-station menus with chef, staff & cleanup. WhatsApp for pricing."
         canonical={`${SITE}/catering/buffet`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet-catering.webp`}
         jsonLd={[

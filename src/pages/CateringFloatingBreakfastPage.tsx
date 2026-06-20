@@ -165,8 +165,8 @@ export default function CateringFloatingBreakfastPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Floating Breakfast Bali | Villa Pool Breakfast Experience"
-        description="Floating breakfast in Bali for villas, honeymoon stays, birthdays, and private mornings with tropical food, drinks, styling, and delivery."
+        title="Floating Breakfast Bali | Villa Pool Tray Service — myCHEF"
+        description="Floating breakfast Bali for Seminyak, Canggu & Uluwatu villas. Photo-ready pool trays with tropical fruit, pastries & eggs. WhatsApp to book yours."
         canonical={`${SITE}/catering/floating-breakfast`}
         ogImage={`${SITE}/breakfast-spread.webp`}
         jsonLd={[

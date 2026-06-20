@@ -97,8 +97,8 @@ export default function ChefsTablePage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Chef's Table Bali | Adriano 7-Course Private Dining — myCHEF"
-        description="Exclusive Chef's Table in your Bali villa: Adriano-led 7-course private dining with live commentary. Max 6 guests. IDR 3,500,000++ pp. Fri-Sat only."
+        title="Chef's Table Bali | Adriano 7-Course Exclusive Dining — myCHEF"
+        description="Book Adriano's Chef's Table in Bali: 7-course market menu, counter seating & live commentary. Max 6 guests. IDR 3.5M/pp. WhatsApp to reserve."
         canonical={`${SITE}/fine-dining/chefs-table`}
         ogImage={`${SITE}/generated/mychef-misc-bali-chefs-table-hero-luxury.webp`}
         jsonLd={[

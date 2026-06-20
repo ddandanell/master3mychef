@@ -106,8 +106,8 @@ export default function StaffingVillaStaffPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Villa Staff Placement Bali | Managers & Housekeepers — myCHEF"
-        description="Recruit villa staff in Bali — managers, hosts, housekeepers, gardeners, pool, security. Vetted and trained. From IDR 4,500,000 per month."
+        title="Villa Staff Bali | Managers, Housekeepers & More — myCHEF"
+        description="Hire villa staff in Bali: managers, housekeepers, gardeners, pool crew & front-of-house. One partner, vetted placements. WhatsApp to discuss your needs."
         canonical={`${SITE}/staffing/villa-staff`}
         ogImage={`${SITE}/generated/hub-villa.webp`}
         jsonLd={[

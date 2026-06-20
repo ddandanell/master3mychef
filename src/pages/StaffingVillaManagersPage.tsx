@@ -97,8 +97,8 @@ export default function StaffingVillaManagersPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Staffing for Villa Managers Bali | myCHEF"
-        description="Villa managers: outsource your hospitality hiring to myCHEF. Pre-vetted chefs and front-of-house staff. Partnership rates available."
+        title="Villa Manager Staffing Bali | Chef & Service Hires — myCHEF"
+        description="Outsource hospitality hiring to myCHEF for your Bali villa properties. Pre-vetted chefs & service staff, partnership rates, 48-hour placement. WhatsApp us."
         canonical={`${SITE}/staffing/for-villa-managers`}
         ogImage={`${SITE}/generated/corp-villa.webp`}
         jsonLd={[

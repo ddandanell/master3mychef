@@ -153,8 +153,8 @@ export default function CateringBBQPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="BBQ Catering Bali | Private Villa BBQ & Chef Service"
-        description="BBQ catering in Bali for villas, pool parties, birthdays, weddings, and corporate events with chefs, setup, service, and cleanup."
+        title="BBQ Catering Bali | Live-Fire Villa BBQ for Groups — myCHEF"
+        description="BBQ catering in Bali: chef grills live at your villa. Seafood, Wagyu & Indonesian menus for birthdays, parties & groups. WhatsApp for instant quote."
         canonical={`${SITE}/catering/bbq-catering`}
         ogImage={`${SITE}/bbq-poolside.webp`}
         jsonLd={[

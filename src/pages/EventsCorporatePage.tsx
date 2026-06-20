@@ -151,8 +151,8 @@ export default function EventsCorporatePage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Corporate Events Bali — Catering & Conference Food | myCHEF"
-        description="Corporate event catering in Bali for offsites, conferences, launches, and retreat dinners. Food, staffing, setup, and cleanup handled under one contract."
+        title="Corporate Events Bali | Offsites, Dinners & Launches — myCHEF"
+        description="Corporate event catering in Bali for offsites, conferences & client dinners. Structured menus, staffing & on-site coordination. WhatsApp for a proposal."
         canonical={`${SITE}/events/corporate-events`}
         ogImage={`${SITE}/generated/mychef-events-bali-corporate-team.webp`}
         jsonLd={[

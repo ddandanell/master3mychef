@@ -128,8 +128,8 @@ export default function EventsBirthdaysPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Birthday Parties in Bali — Villa Catering & Events | myCHEF"
-        description="Birthday parties at your Bali villa with food, drinks, staff, decor, and coordination handled by one team. From intimate dinners to 80-guest pool parties."
+        title="Birthday Party Bali Villa | Catering & Events — myCHEF"
+        description="Birthday party catering in Bali for villa dinners, BBQs & milestone events. Private chefs, cocktails & staff for 10–100 guests. WhatsApp to plan yours."
         canonical={`${SITE}/events/birthdays`}
         ogImage={`${SITE}/generated/mychef-events-bali-birthday-pool.webp`}
         jsonLd={[

@@ -98,8 +98,8 @@ export default function ServiceWaitersPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Waiter Hire Bali | Per-Shift Villa Waiters — myCHEF"
-        description="Hire trained waiters in Bali for villa dinners, weddings and events. Uniformed, English-speaking, plated service. From IDR 350,000 per shift."
+        title="Villa Waiters Bali | Professional Per-Shift Service — myCHEF"
+        description="Hire villa waiters in Bali for dinners, weddings & events. Uniformed, English-speaking, trained in plated service. From IDR 350K/shift. WhatsApp us."
         canonical={`${SITE}/in-villa-service/waiters`}
         ogImage={`${SITE}/generated/aura-bartender.webp`}
         jsonLd={[

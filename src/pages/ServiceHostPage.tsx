@@ -98,8 +98,8 @@ export default function ServiceHostPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Host & Hostess Hire Bali | Event Reception — myCHEF"
-        description="Hosts and hostesses for villa events, weddings and corporate functions in Bali. Welcome service, guest direction. From IDR 400,000 per shift."
+        title="Event Host Hire Bali Villa | Host & Hostess — myCHEF"
+        description="Hire event hosts & hostesses in Bali for villa weddings, corporate events & parties. Guest greeting, arrival flow & reception management. WhatsApp us."
         canonical={`${SITE}/in-villa-service/host-hostess`}
         ogImage={`${SITE}/generated/misc-trust-hosts-lg.webp`}
         jsonLd={[

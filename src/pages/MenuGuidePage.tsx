@@ -83,8 +83,8 @@ export default function MenuGuidePage() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Menu Selection Guide | myCHEF Bali Cuisine & Dietary Options"
-        description="Explore menu types, cuisine options, and how to customize your meal. Learn about dietary accommodations and personalization."
+        title="Private Chef Menu Guide Bali | Cuisines & Dietary Options — myCHEF"
+        description="Choose the right private chef menu for your Bali villa. Guidance on cuisines, dietary needs, course styles & how to shape a meal for your group."
         canonical={canonical}
         ogImage="/og-image.webp"
         jsonLd={[

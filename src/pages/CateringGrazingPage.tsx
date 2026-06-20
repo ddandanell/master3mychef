@@ -183,8 +183,8 @@ export default function CateringGrazingPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Grazing Tables Bali | Cheese, Charcuterie & Party Platters"
-        description="Grazing tables in Bali for villa parties, weddings, cocktails, birthdays, and events with cheese, charcuterie, fruit, bread, dips, and styling."
+        title="Grazing Table Bali | Styled Spreads for Villa Events — myCHEF"
+        description="Grazing tables in Bali for weddings, birthdays & villa parties. Styled cheese, charcuterie & tropical spreads designed and delivered to your villa."
         canonical={PAGE_URL}
         ogImage={`${SITE}/generated/pkg-grazing.webp`}
         jsonLd={[

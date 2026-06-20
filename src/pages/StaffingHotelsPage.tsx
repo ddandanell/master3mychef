@@ -97,8 +97,8 @@ export default function StaffingHotelsPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Hotels & Restaurants Staffing Bali | myCHEF"
-        description="Hospitality recruitment in Bali for boutique hotels, restaurants and resorts. Kitchen, service, management. Volume rates available."
+        title="Chef Staffing Hotels Bali | Kitchen & Service Hires — myCHEF"
+        description="Hospitality staffing for Bali hotels, restaurants & beach clubs. Vetted chefs, servers & managers. Volume rates available. WhatsApp us to get started."
         canonical={`${SITE}/staffing/for-hotels-restaurants`}
         ogImage={`${SITE}/generated/aura-corporate.webp`}
         jsonLd={[

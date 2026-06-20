@@ -146,8 +146,8 @@ export default function EventsRetreatsPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Wellness Retreat Catering Bali | Healthy Meals — myCHEF"
-        description="Healthy retreat catering in Bali with multi-day meal planning, dietary-coded menus, on-site chef support, and full villa food operations."
+        title="Retreat Catering Bali | Wellness & Group Stays — myCHEF"
+        description="Retreat catering in Bali for yoga, wellness & leadership groups. Multi-day menus, dietary planning & reliable on-site chef service. WhatsApp us today."
         canonical={`${SITE}/events/retreats`}
         ogImage={`${SITE}/generated/mychef-events-bali-retreat-breakfast.webp`}
         jsonLd={[

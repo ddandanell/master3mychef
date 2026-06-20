@@ -144,8 +144,8 @@ export default function CateringBabiGulingPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Babi Guling Catering Bali | Traditional Balinese Feast"
-        description="Babi guling catering in Bali for villa parties, weddings, birthdays, and private events with traditional Balinese flavors and full setup."
+        title="Babi Guling Catering Bali | Traditional Whole Pig Feast — myCHEF"
+        description="Babi guling catering in Bali for villa feasts, weddings & birthdays. Authentic whole pig roast with Balinese sides, carving & full delivery service."
         canonical={`${SITE}/catering/babi-guling`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-babiguling.webp`}
         jsonLd={[

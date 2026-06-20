@@ -107,7 +107,7 @@ export default function StaffingPlacementPage() {
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Placement Bali | Villa Recruitment — myCHEF"
-        description="Long-term private chef placement in Bali. Profiles, trials, contracts, payroll guidance. From IDR 5,500,000 per month."
+        description="Fill long-term kitchen roles in Bali fast. Vetted private chef candidates, cooking trials, contracts & onboarding support. WhatsApp to start the search."
         canonical={`${SITE}/staffing/private-chef-placement`}
         ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-hero.webp`}
         jsonLd={[

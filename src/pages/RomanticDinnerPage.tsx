@@ -94,8 +94,8 @@ export default function RomanticDinnerPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Romantic Dinner Bali | Private Villa Date Night — myCHEF"
-        description="Private romantic dinner in your Bali villa: candlelit table, five refined courses, optional flowers and champagne, and discreet service. From IDR 2,200,000 pp."
+        title="Romantic Dinner Bali Villa | Private Chef Date Night — myCHEF"
+        description="Book a romantic dinner in your Bali villa: private chef, candlelit setup, 5-course menu, flowers & champagne optional. From IDR 2.2M/pp. WhatsApp us."
         canonical={`${SITE}/fine-dining/romantic-dinner`}
         ogImage={`${SITE}/generated/section-romantic-dinner.webp`}
         jsonLd={[

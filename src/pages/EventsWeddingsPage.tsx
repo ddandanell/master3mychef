@@ -146,8 +146,8 @@ export default function EventsWeddingsPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Bali Villa Wedding Catering & Coordination | myCHEF"
-        description="End-to-end wedding catering and coordination for Bali villa weddings. Three tiers from IDR 600K/pp. Chef, waiters, coordinator — all under one contract."
+        title="Wedding Catering Bali | Villa Weddings & Receptions — myCHEF"
+        description="Wedding catering in Bali for villa ceremonies & receptions. Michelin-trained chefs, full staffing, multi-tier menus from IDR 600K/pp. WhatsApp us."
         canonical={`${SITE}/events/weddings-bali`}
         ogImage={`${SITE}/generated/mychef-events-bali-event-wedding.webp`}
         jsonLd={[

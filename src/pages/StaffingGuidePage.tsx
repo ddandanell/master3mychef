@@ -115,8 +115,8 @@ export default function StaffingGuidePage() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="In-Villa Staffing & Service Guide | myCHEF Bali"
-        description="Hire professional waiters, bartenders, butlers, and household staff for your Bali villa events and extended stays."
+        title="Villa Staffing Guide Bali | Waiters, Butlers & More — myCHEF"
+        description="Find the right villa staff in Bali for dinners, parties & extended stays. Waiters, bartenders, butlers & household staff explained clearly."
         canonical={canonical}
         ogImage="/og-image.webp"
         jsonLd={[

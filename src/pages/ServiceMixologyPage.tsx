@@ -98,8 +98,8 @@ export default function ServiceMixologyPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Mixology Bali | Private Villa Cocktail Programs — myCHEF"
-        description="Private mixology in Bali — signature cocktail menus, custom drinks, demonstrations, fresh-pressed builds. From IDR 1,500,000 per session."
+        title="Mixology Service Bali | Signature Cocktails for Villas — myCHEF"
+        description="Private mixology in Bali: signature cocktail menus, guided tastings & cocktail classes for villa events. From IDR 1.5M/session. WhatsApp us to book."
         canonical={`${SITE}/in-villa-service/mixology`}
         ogImage="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1600&q=80"
         jsonLd={[

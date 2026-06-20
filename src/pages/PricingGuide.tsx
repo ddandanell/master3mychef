@@ -90,8 +90,8 @@ export default function PricingGuide() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Pricing Guide | myCHEF Private Chef & Catering Costs"
-        description="Clear breakdown of private chef and catering pricing in Bali, what's included, and how to budget for your event."
+        title="Private Chef Bali Pricing Guide | What It Really Costs — myCHEF"
+        description="Understand private chef Bali pricing: what each format includes, how guest count & menu style affect cost, and how to read your myCHEF quote."
         canonical={canonical}
         ogImage="/og-image.webp"
         jsonLd={[

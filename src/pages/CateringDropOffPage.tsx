@@ -214,8 +214,8 @@ export default function CateringDropOffPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Drop-Off Catering Bali | Delivered Event Food & Platters"
-        description="Drop-off catering in Bali for villa lunches, small events, staff meals, parties, and easy group dining without full-service staff."
+        title="Drop-Off Catering Bali | Delivered to Your Villa — myCHEF"
+        description="Drop-off catering in Bali: fresh platters, ready-to-serve trays & grazing boxes delivered on time. Ideal for villa lunches, parties & staff meals."
         canonical={PAGE_URL}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-dropoff.webp`}
         jsonLd={[

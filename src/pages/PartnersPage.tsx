@@ -175,8 +175,8 @@ export default function PartnersPage() {
   return (
     <main ref={pageRef} className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Press & Partners | myCHEF Bali"
-        description="Press kit details and Certified Partner programme information for villa managers looking to work with myCHEF in Bali."
+        title="Villa Partner Program Bali | Press & Partners — myCHEF"
+        description="myCHEF villa partner program: co-branded chef service, certified partner benefits & press kit details for villa managers in Bali. WhatsApp us to join."
         canonical="https://mychef.id/partners"
         ogImage="https://mychef.id/generated/mychef-misc-bali-partner-platform-hero.webp"
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Partners', 'https://mychef.id/partners'), faqPageSchema(faqs.map(f => ({ question: f.q, answer: f.a })))]}

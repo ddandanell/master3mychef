@@ -95,8 +95,8 @@ export default function GettingStartedPage() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Getting Started: Book Your First Private Chef in Bali"
-        description="Step-by-step guide to booking your first private chef or catering service at your Bali villa with myCHEF."
+        title="How to Book a Private Chef Bali | Getting Started — myCHEF"
+        description="Step-by-step guide to booking your first private chef in Bali. What to send, how quotes work & what happens after you confirm with myCHEF."
         canonical={canonical}
         ogImage="/og-image.webp"
         jsonLd={[

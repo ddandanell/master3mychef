@@ -135,8 +135,8 @@ export default function CateringCorporatePage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Corporate Catering Bali | Business Lunch & Event Catering"
-        description="Corporate catering in Bali for team lunches, workshops, retreats, product launches, meetings, and company events with professional service."
+        title="Corporate Catering Bali | Offsites, Lunches & Launches — myCHEF"
+        description="Corporate catering in Bali for team offsites, board lunches & product launches. Buffet or plated, professional service & clear logistics. WhatsApp us."
         canonical={`${SITE}/catering/corporate-catering`}
         ogImage={`${SITE}/generated/mychef-events-bali-corporate-events.webp`}
         jsonLd={[

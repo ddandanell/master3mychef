@@ -126,8 +126,8 @@ export default function ManagingBookingPage() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Managing Your Booking | myCHEF Bali Support"
-        description="After you book: how to communicate with your chef, make changes, prepare your villa, and handle special requests."
+        title="Manage Your Chef Booking Bali | After You Confirm — myCHEF"
+        description="Everything that happens after booking your myCHEF private chef in Bali: menu sign-off, villa setup, chef arrival, changes & day-of coordination."
         canonical={canonical}
         ogImage="/og-image.webp"
         jsonLd={[

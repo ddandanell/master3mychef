@@ -107,7 +107,7 @@ export default function StaffingLiveInPage() {
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Live-In Chef Bali | Full-Time Villa Chef Placement — myCHEF"
-        description="Find a live-in chef in Bali. Pre-vetted candidates, trial dinners, structured onboarding. From IDR 8,000,000 per month."
+        description="Find a live-in chef in Bali for daily family meals, estate stays & full-time kitchen coverage. Vetted placements from IDR 8M/month. WhatsApp us."
         canonical={`${SITE}/staffing/live-in-chef`}
         ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-kitchen.webp`}
         jsonLd={[

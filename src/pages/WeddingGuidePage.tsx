@@ -93,8 +93,8 @@ export default function WeddingGuidePage() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Wedding Catering Guide | myCHEF Bali Villa Weddings"
-        description="Complete guide to planning a wedding at your Bali villa. Team sizes, pricing, multi-day packages, and full service coordination."
+        title="Wedding Catering Guide Bali | Plan Your Villa Wedding — myCHEF"
+        description="Plan Bali wedding catering step by step: guest counts, service styles, tastings, staffing & multi-day villa celebrations. Everything you need to know."
         canonical={canonical}
         ogImage="/og-image.webp"
         jsonLd={[

@@ -62,8 +62,8 @@ export default function CancellationPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
       <SeoHead
-        title="Cancellation Policy | myCHEF — Private Chef Bali"
-        description="Cancellation and refund policy for myCHEF private chef, Bali villa catering, and event bookings — full refund 14+ days before, 50% within 7–13 days."
+        title="Cancellation Policy | myCHEF.id"
+        description="myCHEF.id cancellation policy: refund timelines & rules for private chef, catering & event bookings. Full refund available 14+ days before your date."
         ogImage="/og-image.webp"
         canonical="https://mychef.id/cancellation"
         jsonLd={[

@@ -152,8 +152,8 @@ export default function CateringVillaPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Villa Catering Bali | Private Chef & Event Catering"
-        description="Private villa catering in Bali with chef-led menus, setup, service, drinks, and cleanup for birthdays, family dinners, retreats, and villa events."
+        title="Villa Catering Bali | Daily Chef Service for Private Groups — myCHEF"
+        description="Villa catering in Bali for Seminyak, Canggu, Ubud & Uluwatu stays. Breakfast, lunch & dinner with chef setup, service & cleanup. WhatsApp for a quote."
         canonical={`${SITE}/catering/villa-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet-catering.webp`}
         jsonLd={[

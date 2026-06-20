@@ -64,8 +64,8 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
       <SeoHead
-        title="Terms & Payment | myCHEF — Private Chef Bali"
-        description="myCHEF terms of service and payment rules for private chef, Bali villa catering, and event bookings — deposits, balance, and booking confirmation."
+        title="Terms of Service | myCHEF.id"
+        description="myCHEF.id terms of service: payment terms, deposits, booking rules & service conditions for private chef & catering bookings in Bali."
         ogImage="/og-image.webp"
         canonical="https://mychef.id/terms-of-service"
         jsonLd={[

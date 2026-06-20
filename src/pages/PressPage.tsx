@@ -62,8 +62,8 @@ export default function PressPage() {
   return (
     <main className="min-h-screen bg-[#F5F3EE] text-[#1A1916]">
       <SeoHead
-        title="Press & Media | myCHEF.id Bali"
-        description="Press coverage, media kit, and PR contact for myCHEF.id — Bali's premier private chef and catering service. Request press kit via WhatsApp."
+        title="myCHEF Bali Press & Media | Private Chef Coverage"
+        description="myCHEF Bali press kit, brand facts & media contact. Access coverage, imagery & PR details for stories on private chef dining & villa catering in Bali."
         canonical={`${SITE}/press`}
         ogImage={`${SITE}/generated/partner-platform-hero.webp`}
         jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Media', `${SITE}/press`), faqPageSchema([

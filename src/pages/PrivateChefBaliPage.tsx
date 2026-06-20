@@ -124,8 +124,8 @@ export default function PrivateChefBaliPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Private Chef Bali | Michelin-Trained Villa Dining — myCHEF"
-        description="Hire a private chef for your Bali villa from IDR 2,200,000 per person. Ingredients included, 560+ villas served, 12,000+ guests, all Bali areas covered."
+        title="Private Chef Bali Villa | Michelin-Trained Dining — myCHEF"
+        description="Hire a private chef for your Bali villa: ingredients, service & Michelin-trained standards included. 560+ villas served. WhatsApp to check availability."
         canonical={`${SITE}/fine-dining/private-chef-bali`}
         ogImage={`${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`}
         jsonLd={[

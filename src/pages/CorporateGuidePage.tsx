@@ -109,8 +109,8 @@ export default function CorporateGuidePage() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Corporate & Team Retreat Catering | myCHEF Bali"
-        description="Multi-day meal planning for team retreats, corporate dinners, and offsites in Bali. Flexible catering and live-in chef support."
+        title="Corporate Catering Guide Bali | Offsites & Team Retreats — myCHEF"
+        description="Plan corporate catering in Bali: menu options, staffing, timing & multi-day meal flow for teams and offsites. Everything your team needs, handled."
         canonical={canonical}
         ogImage="/og-image.webp"
         jsonLd={[

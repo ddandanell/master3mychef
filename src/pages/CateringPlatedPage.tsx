@@ -195,8 +195,8 @@ export default function CateringPlatedPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Plated Dinner Bali | Private Chef Fine Dining at Your Villa"
-        description="Plated dinner catering in Bali for villas, anniversaries, birthdays, weddings, and private events with chef-led multi-course menus."
+        title="Plated Dinner Bali | 3–5 Course Villa Catering — myCHEF"
+        description="Plated dinner catering in Bali for villa events, weddings & anniversaries. 3–5 course set menus with private chef, waiters & full service included."
         canonical={`${SITE}/catering/plated-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-plated-menus.webp`}
         jsonLd={[

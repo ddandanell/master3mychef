@@ -93,8 +93,8 @@ export default function HelpPage() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Help & Guides | myCHEF Bali Support Center"
-        description="Comprehensive guides, FAQs, and support for booking private chefs, catering, events and villa staffing in Bali."
+        title="Private Chef Bali Guide | Help Centre — myCHEF"
+        description="Your complete guide to booking a private chef in Bali. From first enquiry to menus, pricing, staffing & on-the-day logistics. Get answers fast."
         canonical={canonical}
         ogImage="/og-image.webp"
         jsonLd={[

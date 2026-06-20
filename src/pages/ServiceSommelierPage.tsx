@@ -98,8 +98,8 @@ export default function ServiceSommelierPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Sommelier Bali | Villa Wine Pairings — myCHEF"
-        description="Hire a sommelier in Bali for villa dinners. Tailored wine pairings, table service, cellar selection. From IDR 1,200,000 per dinner."
+        title="Sommelier Hire Bali | Villa Wine Pairings — myCHEF"
+        description="Hire a sommelier in Bali for villa dinners & tasting menus. Expert wine pairings, bottle selection & tableside service. WhatsApp us to add wine service."
         canonical={`${SITE}/in-villa-service/sommelier`}
         ogImage={`${SITE}/generated/luna-wine.webp`}
         jsonLd={[

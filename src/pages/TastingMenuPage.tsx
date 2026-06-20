@@ -161,8 +161,8 @@ export default function TastingMenuPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Tasting Menu Bali | Multi-Course Private Dining — myCHEF"
-        description="Private five-course tasting menu in your Bali villa with handmade pasta and Mediterranean or Wagyu paths. From IDR 2,200,000++ per person."
+        title="Tasting Menu Bali | 5-Course Private Villa Dining — myCHEF"
+        description="Private tasting menu in your Bali villa: Michelin-trained chef, 5 courses, handmade pasta, Mediterranean or Wagyu path. From IDR 2.2M/pp. WhatsApp us."
         canonical={`${SITE}/fine-dining/tasting-menu`}
         ogImage={`${SITE}/generated/mychef-finedining-bali-luna-plating.webp`}
         jsonLd={[

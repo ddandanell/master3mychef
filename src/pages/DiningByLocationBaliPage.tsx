@@ -77,9 +77,9 @@ const SECTIONS = [
     subtitle: 'Matching Chef to Location',
     title: 'How to Match Your Chef to Your Neighborhood',
     features: [
-      { icon: Waves, title: 'Seminyak / Uluwatu', desc: 'Request chefs with international fine-dining background. Ask specifically: "Have you worked in Seminyak/Uluwatu villas? What's your premium sourcing network?"' },
-      { icon: Leaf, title: 'Canggu / Ubud', desc: 'Request plant-forward or retreat-experienced chefs. Key question: "Do you work with organic suppliers? Can you source 80%+ locally?"' },
-      { icon: Fish, title: 'Sanur / Jimbaran', desc: 'Request chefs with strong seafood expertise. Key question: "What's your relationship with the morning fish market? How do you source daily catch?"' },
+      { icon: Waves, title: 'Seminyak / Uluwatu', desc: "Request chefs with international fine-dining background. Ask specifically: \"Have you worked in Seminyak/Uluwatu villas? What's your premium sourcing network?\"" },
+      { icon: Leaf, title: 'Canggu / Ubud', desc: "Request plant-forward or retreat-experienced chefs. Key question: \"Do you work with organic suppliers? Can you source 80%+ locally?\"" },
+      { icon: Fish, title: 'Sanur / Jimbaran', desc: "Request chefs with strong seafood expertise. Key question: \"What's your relationship with the morning fish market? How do you source daily catch?\"" },
       { icon: MapPin, title: 'Any Location', desc: 'Always ask: "Have you worked at villas in [area] before?" Local experience = knowing suppliers, traffic timing, kitchen quirks, and backup plans.' },
     ],
   },

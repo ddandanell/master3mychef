@@ -9,7 +9,7 @@ const SECTIONS = [
     subtitle: 'Retreat Nutrition in Bali',
     title: 'Why Retreat Food Is Part of the Practice',
     body: `<p>At a yoga retreat, food is not a side note — it's integral to the experience. The right meals support energy for morning practice, aid muscle recovery, keep digestion calm during pranayama, and reinforce the mindfulness work your guests are doing on the mat.</p>
-    <p>A private chef specializing in retreat nutrition plans menus around the retreat schedule, not restaurant convenience. Every meal is timed, balanced, and designed to complement the body's state during a day of movement and rest. In Bali — where local ingredients are extraordinary and plant-forward cooking is deeply culturally embedded — the food can become a highlight of the retreat itself.</p>`,
+    <p>A private chef specializing in retreat nutrition plans menus around the retreat schedule, not restaurant convenience. Every meal is timed, balanced, and designed to complement the body's state during a day of movement and rest. In Bali — particularly in <a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud's jungle retreat villas</a> — where local ingredients are extraordinary and plant-forward cooking is deeply culturally embedded, the food can become a highlight of the retreat itself. Our <a href="/in-villa-service" class="text-[#C5A028] hover:underline font-medium">in-villa chef service</a> is purpose-built for this.</p>`,
   },
   {
     id: 'nutrition-principles',
@@ -50,10 +50,10 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Logistics',
     title: 'Catering for Retreat Groups: Logistics & Staffing',
-    body: `<p><strong>Small Retreats (8–15 guests):</strong> 1 chef + 1 assistant. Buffet or family-style service. Chef handles shopping, prep, cooking, and service coordination. Full daily meal plan. Chef typically arrives 2 hours before each main meal.</p>
+    body: `<p><strong>Small Retreats (8–15 guests):</strong> 1 chef + 1 assistant. Buffet or family-style service. Chef handles shopping, prep, cooking, and service coordination. Full daily meal plan. Chef typically arrives 2 hours before each main meal. Our <a href="/catering" class="text-[#C5A028] hover:underline font-medium">retreat catering service</a> is available across all of Bali.</p>
     <p><strong>Medium Retreats (15–30 guests):</strong> 1 head chef + 1–2 kitchen assistants + 1 service coordinator. Full buffet service for all meals. Dedicated assistant for dietary variations (vegan, gluten-free, allergies). Shopping done in bulk 2–3 times per week.</p>
     <p><strong>Large Retreats (30–60 guests):</strong> 2 chefs (one savory, one pastry/snacks) + 3–4 assistants + 2 service staff. Multiple stations at lunch and dinner. Requires villa kitchen capable of supporting high volume or supplemental equipment rental.</p>
-    <p><strong>Live-In vs. Day Chef:</strong> For multi-week retreats or early-morning schedules, a live-in chef arrangement works best. Discuss with villa management — this is standard practice for retreat venues in Bali.</p>`,
+    <p><strong>Live-In vs. Day Chef:</strong> For multi-week retreats or early-morning schedules, a live-in chef arrangement works best. Discuss with villa management — this is standard practice for retreat venues in Bali, particularly in <a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud</a> where most wellness retreats are based.</p>`,
   },
   {
     id: 'budget',
@@ -66,6 +66,7 @@ const SECTIONS = [
       <li>Standard (organic where possible, variety, snacks): IDR 500K–800K/person/day</li>
       <li>Premium (certified organic, specialty items, smoothie bars): IDR 800K–1.5M/person/day</li>
     </ul>
+    <p>See our full <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">private chef pricing guide</a> for a complete breakdown of chef fees and service rates.</p>
     <p><strong>Chef Service Fee (separate from ingredients):</strong></p>
     <ul style="margin: 1rem 0; padding-left: 2rem;">
       <li>1 chef for 8–15 guests: IDR 1.5M–2.5M/day</li>

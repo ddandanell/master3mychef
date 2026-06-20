@@ -9,7 +9,7 @@ const SECTIONS = [
     subtitle: 'Romantic Dining in Bali',
     title: 'A Private Chef Changes Everything About Romantic Dining',
     body: `<p>A romantic dinner at home differs fundamentally from a restaurant experience. With a private chef, you control every detail — ambiance, pacing, personalization, and privacy. In Bali, where villas offer oceanfront terraces, infinity pools, and tropical gardens, a private chef turns dinner into an unforgettable memory.</p>
-    <p>No crowds. No noise. No rush between courses. Just the two of you, a world-class chef in your villa kitchen, and an evening designed entirely around your relationship.</p>`,
+    <p>No crowds. No noise. No rush between courses. Just the two of you, a world-class chef in your villa kitchen, and an evening designed entirely around your relationship. Our <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining tasting menu experiences</a> are the most popular choice for romantic occasions.</p>`,
   },
   {
     id: 'advantages',
@@ -66,8 +66,8 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Bali Venue Advantages',
     title: 'Best Villa Settings for a Romantic Dinner',
-    body: `<p><strong>Oceanfront Villas (Seminyak, Jimbaran, Uluwatu):</strong> Aperitifs at sunset, dinner under stars with ocean horizon. Reserve the terrace table facing west for golden-hour cocktails, then move to a candlelit dinner position as the sky darkens. Chef sets up in the villa kitchen; service happens poolside.</p>
-    <p><strong>Garden Villas (Ubud, Canggu):</strong> Tropical flowers, lantern lighting, and natural seclusion create intimate romance. Ubud gardens offer the added magic of rice terrace or jungle backdrop. Farm-to-table Balinese menus work beautifully here.</p>
+    body: `<p><strong>Oceanfront Villas (Seminyak, Jimbaran, Uluwatu):</strong> Aperitifs at sunset, dinner under stars with ocean horizon. Reserve the terrace table facing west for golden-hour cocktails, then move to a candlelit dinner position as the sky darkens. Chef sets up in the villa kitchen; service happens poolside. See our guides for <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu clifftop villas</a> and <a href="/locations/jimbaran" class="text-[#C5A028] hover:underline font-medium">Jimbaran beachside dining</a>.</p>
+    <p><strong>Garden Villas (Ubud, Canggu):</strong> Tropical flowers, lantern lighting, and natural seclusion create intimate romance. <a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud's jungle and rice field villas</a> offer added magic of rice terrace or jungle backdrop. Farm-to-table Balinese menus work beautifully here.</p>
     <p><strong>Pool Terrace Villas (Anywhere):</strong> Candlelit reflection on the water creates naturally romantic ambiance. A floating floral arrangement in the pool requires zero extra investment and looks extraordinary in photos.</p>
     <p><strong>Seasonal Note:</strong> Dry season (April–October) allows fully outdoor setup. Rainy season (November–March) plan for a covered terrace or indoor-with-garden-views arrangement — the chef adapts either way.</p>`,
   },
@@ -82,7 +82,7 @@ const SECTIONS = [
       <li>Premium Ingredients (2 people): IDR 1M–2.4M</li>
       <li>Wine or Beverage Allowance: IDR 500K–1.3M</li>
     </ul>
-    <p><strong>Total: IDR 3.5M–7M</strong> depending on menu complexity and ingredient sourcing.</p>
+    <p><strong>Total: IDR 3.5M–7M</strong> depending on menu complexity and ingredient sourcing. Our <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">full pricing guide</a> has a complete breakdown of all cost components.</p>
     <p><strong>Optional Add-Ons:</strong></p>
     <ul style="margin: 1rem 0; padding-left: 2rem;">
       <li>Wine Pairing (sommelier-curated per course): +IDR 500K–960K</li>

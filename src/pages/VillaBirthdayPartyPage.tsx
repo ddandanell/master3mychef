@@ -9,7 +9,7 @@ const SECTIONS = [
     subtitle: 'Villa Birthday Planning',
     title: 'Why a Bali Villa Birthday Party Beats Any Restaurant',
     body: `<p>A private villa birthday party in Bali gives you complete control over every detail — guest list, ambiance, timing, menu, and budget. No venue minimums, no shared space with strangers, no set menus. Your villa, your rules, your celebration.</p>
-    <p>With a private chef handling catering, the birthday person enjoys the party instead of worrying about food. A professional team manages every course, dietary need, and service detail — leaving you free to celebrate.</p>`,
+    <p>With a private chef handling catering, the birthday person enjoys the party instead of worrying about food. A professional team manages every course, dietary need, and service detail — leaving you free to celebrate. Browse our <a href="/events" class="text-[#C5A028] hover:underline font-medium">private events and parties service</a> or explore <a href="/catering" class="text-[#C5A028] hover:underline font-medium">villa catering options</a> to get started.</p>`,
   },
   {
     id: 'party-sizes',
@@ -28,9 +28,9 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Menu Options',
     title: 'Catering Menus for Every Birthday Style',
-    body: `<p><strong>Tropical Bali Feast:</strong> The classic villa birthday. Babi guling (slow-roasted suckling pig) as centerpiece, sate lilit, lawar salad, rice, and sambal. Adds cultural authenticity and spectacle. Guests eat together in communal style — festive and social.</p>
+    body: `<p><strong>Tropical Bali Feast:</strong> The classic villa birthday. Babi guling (slow-roasted suckling pig) as centerpiece, sate lilit, lawar salad, rice, and sambal. Adds cultural authenticity and spectacle. Guests eat together in communal style — festive and social. Especially popular at <a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak villas</a> and <a href="/locations/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu surf villas</a>.</p>
     <p><strong>International BBQ / Grill:</strong> Wood-fire grilled proteins (lobster, wagyu beef, whole fish), seasonal vegetables, corn, flatbreads. Casual, social, theatrical. Guests gather around the grill. Great for sunset parties.</p>
-    <p><strong>Grazing & Cocktail:</strong> Charcuterie boards, cheese, dips, crudités, sliders, dessert bites — laid out for guests to graze over 3–4 hours. Flexible and interactive. Pairs well with a cocktail hour format.</p>
+    <p><strong>Grazing & Cocktail:</strong> Charcuterie boards, cheese, dips, crudités, sliders, dessert bites — laid out for guests to graze over 3–4 hours. Flexible and interactive. Pairs well with a cocktail hour format. Our full <a href="/catering" class="text-[#C5A028] hover:underline font-medium">event catering service</a> covers all these styles.</p>
     <p><strong>Fine Dining Plated:</strong> Multi-course surprise menu designed around the birthday person's favorite cuisines. Intimate, celebratory, memorable. Best for 10–20 guests. Pairs with wine, cocktails, and dessert theater.</p>
     <p><strong>Themed Birthday Menus:</strong> Italian night (fresh pasta, antipasti, tiramisu), Japanese omakase, Mediterranean meze, or a specific decade theme. The chef builds every element around the concept.</p>`,
   },
@@ -69,6 +69,7 @@ const SECTIONS = [
       <li>25–50 guests (buffet): IDR 19M–75M total (IDR 750K–1.5M/person)</li>
       <li>50–100 guests (multi-station): IDR 30M–120M total (IDR 600K–1.2M/person)</li>
     </ul>
+    <p>For a full breakdown of what drives these costs, see our <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">private chef pricing guide</a>.</p>
     <p><strong>What's Included:</strong> Chef service, kitchen team, all food preparation, service staff, kitchen cleanup.</p>
     <p><strong>Additional Costs:</strong></p>
     <ul style="margin: 1rem 0; padding-left: 2rem;">

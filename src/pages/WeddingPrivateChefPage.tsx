@@ -147,9 +147,9 @@ export default function WeddingPrivateChefPage() {
       canonicalUrl="https://mychef.id/blog/wedding-private-chef-bali-planning-guide"
       h1="Wedding Private Chef in Bali"
       subtitle="Planning & Catering Guide for Your Villa Wedding"
-      heroImage="/generated/mychef-events-bali-baby-shower-hero.webp"
-      heroImageAlt="Private chef catering setup for Bali villa wedding reception"
-      ogImage="https://mychef.id/generated/mychef-events-bali-baby-shower-hero.webp"
+      heroImage="/generated/mychef-blog-wedding-private-chef.webp"
+      heroImageAlt="Private chef elegantly serving a multi-course wedding dinner at a luxury Bali villa"
+      ogImage="https://mychef.id/generated/mychef-blog-wedding-private-chef.webp"
       keywords={['wedding private chef bali', 'bali villa wedding catering', 'private chef wedding bali']}
       highlights={['Wedding Events', 'Planning Timeline', 'Service Styles', 'Budget Guide']}
       sections={SECTIONS}

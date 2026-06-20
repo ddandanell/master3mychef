@@ -136,9 +136,9 @@ export default function DiningByLocationBaliPage() {
       canonicalUrl="https://mychef.id/blog/dining-by-location-bali-neighborhood-guide"
       h1="Dining by Location in Bali"
       subtitle="Private Chef Neighborhood Guide: Seminyak to Ubud"
-      heroImage="/generated/mychef-catering-bali-hub-catering.webp"
-      heroImageAlt="Private chef dining setup in different Bali villa neighborhoods"
-      ogImage="https://mychef.id/generated/mychef-catering-bali-hub-catering.webp"
+      heroImage="/generated/mychef-blog-dining-by-location.webp"
+      heroImageAlt="Private chef serving elegant dinner on clifftop terrace overlooking Indian Ocean in Uluwatu Bali"
+      ogImage="https://mychef.id/generated/mychef-blog-dining-by-location.webp"
       keywords={['private chef bali location', 'dining bali neighborhood', 'private chef seminyak ubud canggu']}
       highlights={['Seminyak', 'Canggu', 'Uluwatu', 'Ubud', 'Sanur & Jimbaran']}
       sections={SECTIONS}

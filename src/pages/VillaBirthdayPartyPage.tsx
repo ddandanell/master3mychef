@@ -132,9 +132,9 @@ export default function VillaBirthdayPartyPage() {
       canonicalUrl="https://mychef.id/blog/how-to-plan-villa-birthday-party-bali"
       h1="Villa Birthday Party in Bali"
       subtitle="Private Chef Catering Guide"
-      heroImage="/generated/mychef-events-bali-baby-shower-hero.webp"
-      heroImageAlt="Birthday party catering setup in Bali villa with private chef"
-      ogImage="https://mychef.id/generated/mychef-events-bali-baby-shower-hero.webp"
+      heroImage="/generated/mychef-blog-villa-birthday-party.webp"
+      heroImageAlt="Private chef presenting elegant birthday celebration dinner at a luxury Bali villa pool terrace"
+      ogImage="https://mychef.id/generated/mychef-blog-villa-birthday-party.webp"
       keywords={['villa birthday party bali', 'birthday catering bali', 'private chef birthday bali']}
       highlights={['Party Sizes', 'Menu Options', 'Planning Timeline', 'Pricing Guide']}
       sections={SECTIONS}

@@ -127,9 +127,9 @@ export default function YogaRetreatChefPage() {
       canonicalUrl="https://mychef.id/blog/yoga-retreat-chef-bali-meal-planning"
       h1="Yoga Retreat Chef in Bali"
       subtitle="Meal Planning & Retreat Nutrition Guide"
-      heroImage="/generated/mychef-catering-bali-hub-catering.webp"
-      heroImageAlt="Plant-forward retreat meals prepared by private chef for Bali yoga retreat"
-      ogImage="https://mychef.id/generated/mychef-catering-bali-hub-catering.webp"
+      heroImage="/generated/mychef-blog-yoga-retreat-chef.webp"
+      heroImageAlt="Balinese chef preparing vibrant plant-based wellness meals for yoga retreat in Ubud"
+      ogImage="https://mychef.id/generated/mychef-blog-yoga-retreat-chef.webp"
       keywords={['yoga retreat chef bali', 'retreat catering bali', 'wellness retreat food bali']}
       highlights={['Nutrition Planning', 'Daily Meal Structure', 'Local Ingredients', 'Retreat Pricing']}
       sections={SECTIONS}

@@ -111,6 +111,7 @@ const ChefHiringGuidePage = lazy(() => import('./pages/ChefHiringGuidePage'))
 const EventPlanningBaliPage = lazy(() => import('./pages/EventPlanningBaliPage'))
 const BaliCateringMenuPage = lazy(() => import('./pages/BaliCateringMenuPage'))
 const FineDiningGuidePage = lazy(() => import('./pages/FineDiningGuidePage'))
+const WeddingPrivateChefPage = lazy(() => import('./pages/WeddingPrivateChefPage'))
 const ChefProfilePage = lazy(() => import('./pages/ChefProfilePage'))
 
 // Help & Guides System
@@ -338,6 +339,7 @@ export default function App() {
           <Route path="/blog/event-planning-bali" element={<EventPlanningBaliPage />} />
           <Route path="/blog/bali-catering-menu" element={<BaliCateringMenuPage />} />
           <Route path="/blog/fine-dining-guide" element={<FineDiningGuidePage />} />
+          <Route path="/blog/wedding-private-chef-bali-planning-guide" element={<WeddingPrivateChefPage />} />
           {BLOG_POST_SLUGS.map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />
           ))}

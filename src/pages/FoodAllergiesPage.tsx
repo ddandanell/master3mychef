@@ -32,11 +32,12 @@ const articleSchema = {
   url: CANONICAL,
 }
 
-const breadcrumbs = breadcrumbSchema([
-  { name: 'Home', url: 'https://mychef.id/' },
-  { name: 'Blog', url: 'https://mychef.id/journal' },
-  { name: 'Food Allergies & Dietary Requirements', url: CANONICAL },
-])
+const breadcrumbs = breadcrumbSchema(
+  'Food Allergies & Dietary Requirements',
+  CANONICAL,
+  'Blog',
+  'https://mychef.id/journal'
+)
 
 const faqs = [
   {
@@ -65,7 +66,7 @@ const faqs = [
   },
 ]
 
-const faqSchema = faqPageSchema(faqs)
+const faqSchema = faqPageSchema(faqs.map(({ q, a }) => ({ question: q, answer: a })))
 
 const DIETARY_CATEGORIES = [
   {
@@ -146,8 +147,8 @@ export default function FoodAllergiesPage() {
         title="Food Allergies & Dietary Requirements with a Private Chef Bali | myCHEF"
         description="How myCHEF handles food allergies and special diets in Bali: HACCP protocols, cross-contamination controls, and custom menus for vegan, gluten-free, halal, keto, nut-free & dairy-free guests."
         canonical={CANONICAL}
-        type="article"
-        schemas={[localBizWithRating, articleSchema, breadcrumbs, faqSchema]}
+        ogType="article"
+        jsonLd={[localBizWithRating, articleSchema, breadcrumbs, faqSchema]}
       />
 
       {/* Hero */}

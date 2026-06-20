@@ -89,6 +89,7 @@ const ServicePage = lazy(() => import('./components/ServicePage'))
 const MenuPage = lazy(() => import('./components/MenuPage'))
 const LandingPage = lazy(() => import('./components/LandingPage'))
 const InfoPage = lazy(() => import('./components/InfoPage'))
+const JakartaPage = lazy(() => import('./pages/JakartaPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 const ChefsPage = lazy(() => import('./pages/ChefsPage'))
 const PricingPage = lazy(() => import('./pages/PricingPage'))
@@ -252,24 +253,7 @@ export default function App() {
           ))}
 
           {/* Jakarta */}
-          <Route
-            path="/jakarta"
-            element={
-              <InfoPage
-                title="Private Chef in Jakarta"
-                description="Michelin-trained standards, brought to private residences and corporate suites in Indonesia's capital. Experience the myCHEF standard in Jakarta."
-                slug="jakarta"
-                heroImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
-                highlights={[
-                  'Background-checked Indonesian chefs with international experience',
-                  'Coverage in Menteng, Kemang, SCBD, Pondok Indah, and BSD',
-                  'Multi-course fine dining, weekly meal prep, and corporate catering',
-                  'Complete at-home operations: we shop, cook, serve, and clean',
-                  'Bilingual guest relations for seamless coordination',
-                ]}
-              />
-            }
-          />
+          <Route path="/jakarta" element={<JakartaPage />} />
           {/* /private-chef-bali/* — keyword-rich location hub + Tier 1 area pages */}
           <Route path="/private-chef-bali" element={<PrivateChefBaliPage />} />
           <Route path="/private-chef-bali/seminyak" element={<SeminyakPage />} />

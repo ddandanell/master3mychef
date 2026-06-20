@@ -92,13 +92,13 @@ export default function CangguPage() {
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Chef Canggu | Villa Dining &amp; Surf Retreats — myCHEF"
-        description="Book a private chef in Canggu for villa dinners, poolside BBQs &amp; surf retreat catering. Indonesian chefs, healthy menus, same-day availability. Get a quote."
+        title="Private Chef Canggu | Villa Dining & Surf Retreats — myCHEF"
+        description="Book a private chef in Canggu for villa dinners, poolside BBQs & surf retreat catering. Indonesian chefs, healthy menus, same-day availability. Get a quote."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-locations-sunset.webp"
         jsonLd={[
           localBizCanggu,
-          breadcrumbSchema('Private Chef Canggu', canonical),
+          breadcrumbSchema('Private Chef Canggu', canonical, 'Locations', 'https://mychef.id/locations'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',

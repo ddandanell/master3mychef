@@ -93,12 +93,12 @@ export default function SeminyakPage() {
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Seminyak | Beachfront Villa Dining — myCHEF"
-        description="Book a private chef in Seminyak for beachfront villa dinners, events &amp; birthday parties. Indonesian chefs, Michelin standards, same-day availability. Get a quote."
+        description="Book a private chef in Seminyak for beachfront villa dinners, events & birthday parties. Indonesian chefs, Michelin standards, same-day availability. Get a quote."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-locations-sunset.webp"
         jsonLd={[
           localBizSeminyak,
-          breadcrumbSchema('Private Chef Seminyak', canonical),
+          breadcrumbSchema('Private Chef Seminyak', canonical, 'Locations', 'https://mychef.id/locations'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',

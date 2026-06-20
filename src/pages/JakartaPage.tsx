@@ -74,13 +74,30 @@ export default function JakartaPage() {
 
   const localBizJakarta = {
     ...localBusinessSchema,
+    '@id': 'https://mychef.id/locations/jakarta',
     name: 'myCHEF.id Jakarta',
-    description: 'Private chef, catering, corporate dining, and event services in Jakarta, Indonesia',
-    areaServed: {
-      '@type': 'City',
-      name: 'Jakarta',
-      '@id': 'https://www.wikidata.org/wiki/Q3630',
+    description: 'Private chef services in Jakarta — villa dinners, corporate events, and household staffing.',
+    url: 'https://mychef.id/locations/jakarta',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Jakarta',
+      addressRegion: 'DKI Jakarta',
+      addressCountry: 'ID',
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: -6.2088,
+      longitude: 106.8456,
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Jakarta' },
+      { '@type': 'Place', name: 'Menteng' },
+      { '@type': 'Place', name: 'Kemang' },
+      { '@type': 'Place', name: 'SCBD' },
+      { '@type': 'Place', name: 'Pondok Indah' },
+    ],
+    priceRange: 'IDR 1,500,000 – IDR 8,000,000',
+    image: 'https://mychef.id/og-image.webp',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',
@@ -94,12 +111,12 @@ export default function JakartaPage() {
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Jakarta | Corporate & Villa Dining — myCHEF"
-        description="Hire a Michelin-trained private chef in Jakarta. Villa dinners, corporate events, weddings — IDR 450K/person. Indonesian chefs, English-speaking team. WhatsApp for quotes."
+        description="Book a private chef in Jakarta for villa dinners, corporate events & weddings. IDR 450K/person. Indonesian chefs, Michelin standards. Request a quote on WhatsApp."
         canonical={canonical}
         ogImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
         jsonLd={[
           localBizJakarta,
-          breadcrumbSchema('Private Chef Jakarta', canonical),
+          breadcrumbSchema('Private Chef Jakarta', canonical, 'Locations', 'https://mychef.id/locations'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',

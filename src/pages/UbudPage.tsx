@@ -93,12 +93,12 @@ export default function UbudPage() {
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Ubud | Jungle Villa & Retreat Dining — myCHEF"
-        description="Book a private chef in Ubud for jungle villa dinners, wellness retreat catering &amp; Balinese feasts. Organic menus, Indonesian chefs. WhatsApp to book."
+        description="Book a private chef in Ubud for jungle villa dinners, wellness retreat catering & Balinese feasts. Organic menus, Indonesian chefs. WhatsApp to book."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-locations-sunset.webp"
         jsonLd={[
           localBizUbud,
-          breadcrumbSchema('Private Chef Ubud', canonical),
+          breadcrumbSchema('Private Chef Ubud', canonical, 'Locations', 'https://mychef.id/locations'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',

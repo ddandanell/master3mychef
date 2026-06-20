@@ -574,6 +574,125 @@ export default function PrivateChefCostBaliPage() {
           </div>
         </section>
 
+        {/* Section 9: Weekly / Monthly Packages */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-light mb-2">Private Chef for a Week or Month in Bali: What Does It Cost?</h2>
+          <p className="text-[#666] mb-6 leading-relaxed">
+            Many guests staying in Bali for an extended holiday — or expats relocating — want a chef on a weekly or monthly basis rather than for a single event. myCHEF offers flexible multi-day arrangements that are significantly more cost-efficient than booking individual nights.
+          </p>
+
+          <div className="space-y-4 mb-8">
+            {[
+              {
+                duration: '3-Day Stay Package',
+                example: '4 guests · Breakfast + Dinner',
+                totalEstimate: 'IDR 3.5M – 6M total',
+                note: 'Chef visits twice daily. Groceries included. Menu rotates each day. Small logistics surcharge may apply for remote villa locations.',
+              },
+              {
+                duration: '1-Week Villa Chef',
+                example: '4–6 guests · Full board (3 meals/day)',
+                totalEstimate: 'IDR 18M – 32M per week',
+                note: 'Dedicated chef + helper. Full grocery management. Weekly menu planning consultation. Best for families or groups on Bali holidays.',
+              },
+              {
+                duration: 'Monthly Arrangement',
+                example: '2–4 guests · Daily cooking, Mon–Fri',
+                totalEstimate: 'IDR 35M – 65M per month',
+                note: 'Preferred for expats and long-stay residents. Chef sourcing, menu variety, and schedule flexibility managed by myCHEF coordinator.',
+              },
+            ].map((pkg, i) => (
+              <div key={i} className="border border-[#E8E8E0] rounded-xl p-6 bg-white">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
+                  <h3 className="font-semibold text-lg text-[#1A1A1A]">{pkg.duration}</h3>
+                  <span className="bg-[#C5A028]/10 text-[#C5A028] font-semibold text-sm px-3 py-1 rounded whitespace-nowrap self-start sm:self-auto">{pkg.totalEstimate}</span>
+                </div>
+                <p className="text-[#888] text-sm mb-2">{pkg.example}</p>
+                <p className="text-[#666] text-sm leading-relaxed">{pkg.note}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-[#666] leading-relaxed">
+            Multi-day and multi-week packages include a discounted daily rate compared to single-event bookings. A 50% deposit is required to confirm the arrangement, with the balance invoiced weekly or at the end of the stay. Contact us via WhatsApp to discuss your specific schedule and requirements.
+          </p>
+        </section>
+
+        {/* Section 10: How to Read Your Quote */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-light mb-2">How to Read Your myCHEF Quote</h2>
+          <p className="text-[#666] mb-8 leading-relaxed">
+            When you receive a proposal from myCHEF, the pricing format follows Indonesian hospitality standards. Here is exactly what each line means — so you always know the final number before you confirm.
+          </p>
+
+          <div className="space-y-5">
+            {[
+              {
+                term: 'Base Price (per person or total)',
+                explanation: 'The core service cost before any taxes or charges. This is what covers the chef team, ingredients, equipment, staffing, and cleanup. Example: IDR 650,000 per person for 8 guests = IDR 5,200,000 base.',
+              },
+              {
+                term: 'Government Tax (PPN) — 11%',
+                explanation: 'Indonesia\'s value-added tax (Pajak Pertambahan Nilai), currently 11%, applied to the base price. This is a legal requirement on all catering and hospitality services in Indonesia.',
+              },
+              {
+                term: 'Service Charge — 10%',
+                explanation: 'A standard service charge used across Indonesian restaurants and catering. This partially goes to the service team as a structured gratuity system, distinct from tipping.',
+              },
+              {
+                term: '"++" notation',
+                explanation: 'When you see "++" after a price (e.g. IDR 2,200,000++), it means government tax and service charge are added on top. To estimate total: multiply the base by 1.21. IDR 2,200,000++ ≈ IDR 2,662,000 total.',
+              },
+              {
+                term: '"Nett" notation',
+                explanation: 'When a price is quoted as "nett" or "all-in", tax and service are already included. No additional charges will be added. myCHEF always clarifies which format your quote is in.',
+              },
+              {
+                term: 'Logistics / Travel Fee (if applicable)',
+                explanation: 'For events outside central Bali — such as Uluwatu cliff villas, inland Ubud, or remote beach locations — a small logistics fee may apply to cover extended travel time and ingredient transport. Always disclosed upfront.',
+              },
+              {
+                term: '50% Deposit (to confirm)',
+                explanation: 'Once you approve the proposal, a 50% deposit is required to lock the date and chef team. The remaining 50% is paid when the chef arrives at your villa, before service begins. For bookings within 24 hours, 100% is due upfront.',
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-5">
+                <div className="flex-shrink-0 w-2 rounded-full bg-[#C5A028] self-stretch" style={{ minHeight: '24px' }} />
+                <div>
+                  <h3 className="font-semibold text-[#1A1A1A] mb-1">{item.term}</h3>
+                  <p className="text-[#666] leading-relaxed text-sm">{item.explanation}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 bg-[#F5F3F0] rounded-xl p-6">
+            <h3 className="font-semibold text-[#1A1A1A] mb-3">Example: How to Calculate Your Total</h3>
+            <div className="text-sm text-[#555] space-y-2">
+              <div className="flex justify-between border-b border-[#E8E6E3] pb-2">
+                <span>Base price: IDR 650,000 × 8 guests</span>
+                <span className="font-semibold">IDR 5,200,000</span>
+              </div>
+              <div className="flex justify-between border-b border-[#E8E6E3] pb-2">
+                <span>Government tax (11%)</span>
+                <span>IDR 572,000</span>
+              </div>
+              <div className="flex justify-between border-b border-[#E8E6E3] pb-2">
+                <span>Service charge (10%)</span>
+                <span>IDR 520,000</span>
+              </div>
+              <div className="flex justify-between font-bold text-[#1A1A1A] pt-1">
+                <span>Total (nett)</span>
+                <span>IDR 6,292,000</span>
+              </div>
+              <div className="flex justify-between text-[#C5A028] font-semibold pt-2 border-t border-[#E8E6E3]">
+                <span>50% deposit to confirm booking</span>
+                <span>IDR 3,146,000</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Related Pages */}
         <section className="mb-16">
           <h2 className="text-2xl font-light mb-6">Related: Explore Our Services</h2>

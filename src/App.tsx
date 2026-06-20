@@ -102,6 +102,7 @@ const BlogIndexPage = lazy(() => import('./components/BlogIndexPage'))
 const BaliHubPage = lazy(() => import('./components/BaliHubPage'))
 const QuoteFunnel = lazy(() => import('./components/QuoteFunnel'))
 const PrivateChefCostBaliPage = lazy(() => import('./pages/PrivateChefCostBaliPage'))
+const PrivateChefVsRestaurantPage = lazy(() => import('./pages/PrivateChefVsRestaurantPage'))
 const ChefProfilePage = lazy(() => import('./pages/ChefProfilePage'))
 
 // Help & Guides System
@@ -319,6 +320,7 @@ export default function App() {
           <Route path="/blog" element={<BlogIndexPage />} />
           {/* Dedicated blog articles */}
           <Route path="/blog/private-chef-cost-bali" element={<PrivateChefCostBaliPage />} />
+          <Route path="/blog/private-chef-vs-restaurant-bali" element={<PrivateChefVsRestaurantPage />} />
           {BLOG_POST_SLUGS.map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />
           ))}

@@ -100,8 +100,6 @@ export const REDIRECTS: Redirect[] = [
   { from: '/blog/best-bali-villas-private-chef-kitchen', to: '/partner-platform', reason: 'Villa partner content → partner platform.' },
   { from: '/blog/wedding-rehearsal-dinner-bali', to: '/events/weddings', reason: 'Wedding content → wedding events page.' },
   { from: '/blog/yoga-retreat-chef-bali-meal-planning', to: '/events/retreats', reason: 'Retreat content → retreats events page.' },
-  { from: '/blog/private-chef-vs-restaurant-bali', to: '/catering', reason: 'Service comparison → catering hub.' },
-
   // --- SEO landing pages → most relevant pillar ---
   // (Landing page redirects removed to allow dedicated content to rank)
   { from: '/private-chef-booking-indonesia', to: '/quote', reason: 'Booking SEO → quote form.' },

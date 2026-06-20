@@ -748,6 +748,14 @@ export function buildSitemap(): SitemapEntry[] {
 
   // Supporting info pages
   const infoPages: SitemapEntry[] = [
+    // Pillar hub pages — must be here or inject-meta.ts skips them → 404
+    { path: '/fine-dining', type: 'info', title: 'Private Chef Fine Dining | Michelin-Trained Villa Dinners — myCHEF', description: 'The premier private fine-dining service in Bali. Italian tasting menus, sommelier pairing, and open-flame cooking in your villa.', priority: 0.9, changefreq: 'weekly' },
+    { path: '/catering', type: 'info', title: 'Villa Catering Bali | Private Chef Catering Service — myCHEF', description: 'Full-service catering for Bali villas. BBQ nights, buffets, drop-off feasts, and grazing tables for groups of 10 to 150.', priority: 0.9, changefreq: 'weekly' },
+    { path: '/events', type: 'info', title: 'Bali Event Catering | Private Villa Celebrations — myCHEF', description: 'One team for your entire event. Weddings, birthdays, corporate retreats, and villa parties anywhere in Bali.', priority: 0.9, changefreq: 'weekly' },
+    { path: '/in-villa-service', type: 'info', title: 'Hire Villa Staff Bali | Professional Waiters & Butlers — myCHEF', description: 'Uniformed, English-speaking staff for your villa. Waiters, butlers, bartenders, and coordinators available by the shift.', priority: 0.8, changefreq: 'monthly' },
+    // Conversion & utility pages
+    { path: '/quote', type: 'info', title: 'Get a Quote | Private Chef & Catering Bali — myCHEF', description: 'Get a personalised quote for private chef, catering, and event services in Bali. Fast response via WhatsApp.', priority: 0.7, changefreq: 'monthly' },
+    { path: '/help', type: 'info', title: 'Help Centre | Private Chef & Catering Bali — myCHEF', description: 'Answers to your questions about booking a private chef or catering service in Bali. Guides, pricing, and planning support.', priority: 0.6, changefreq: 'monthly' },
     { path: '/locations', type: 'info', title: 'Private Chef Locations Bali | myCHEF', description: 'Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, and beyond.', priority: 0.8, changefreq: 'monthly' },
     { path: '/chefs', type: 'info', title: 'Our Chefs | Michelin-Trained Private Chefs Bali — myCHEF', description: 'Meet Adriano and the myCHEF culinary team — Michelin-trained leadership and villa-tested specialists in Bali.', priority: 0.8, changefreq: 'monthly' },
     { path: '/chefs/adriano', type: 'info', title: 'Adriano — Private Chef Bali | Michelin-Trained Founder | myCHEF', description: 'Book Adriano, Executive Chef & Founder of myCHEF Bali. Michelin-trained in Modena. Italian tasting menus, romantic dinners, VIP villa experiences.', priority: 0.7, changefreq: 'monthly' },

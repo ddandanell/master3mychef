@@ -599,6 +599,24 @@ export const BLOG_POSTS = [
 <h3>Is cleanup handled after the meal or during service?</h3>
 <p>Both. Strong teams reset continuously during service so the end of the night feels calm and the villa returns to order quickly.</p>`,
   },
+  {
+    slug: 'blog/family-kids-menu-private-chef-bali',
+    title: 'Family Dining with a Private Chef in Bali: A Complete Guide for Parents',
+    description: 'Planning villa dining for a family in Bali? Our private chefs build kids\' menus around your children\'s ages and preferences. No restaurant stress. Book in 24 hours.',
+    date: '2026-04-10',
+    content: `<p>Travelling to Bali with children is already a significant logistical undertaking. Getting everyone fed three times a day — in a country where the food is unfamiliar, restaurants are not always near the villa, and children's menus are often afterthoughts — adds unnecessary friction to what should be a holiday.</p>
+<p>A private chef removes that friction entirely. The chef comes to your villa, sources fresh ingredients that morning, and cooks a meal designed specifically for the ages and preferences in your group. Adults get the quality they came for. Children get food they will actually eat. No one sits in a taxi for forty minutes with a tired six-year-old.</p>
+<h2>Kid-Friendly Menu Options by Age</h2>
+<p>Our chefs do not have a fixed children's menu. They build one around the specific children in your group, starting with ages and any notes you provide at booking. For toddlers (1–3), this means soft textures, mild flavours, and finger foods. For young children (4–8), familiar formats like pasta, grilled chicken, and mild fried rice adapted to local ingredients. For older children (9+), a modified version of the adult menu with spice levels adjusted individually.</p>
+<h2>Sample Family Meal Plan</h2>
+<p>A typical full-day family booking covers breakfast, lunch, and dinner. Breakfast might include shakshuka and a fruit platter for adults, fluffy pancakes and scrambled eggs for children. Lunch: nasi goreng with satay for adults, mild fried rice and grilled chicken skewers for kids. Dinner: a three-course adult menu alongside pasta with butter and a grilled fish fillet for children, finishing with ice cream.</p>
+<h2>Handling Picky Eaters</h2>
+<p>Picky eating is not a problem for a private chef — it is normal information that goes into the menu planning. When you book, tell us specifically what the child will and will not eat. The chef designs the kids' menu around these constraints. This is something restaurants structurally cannot do. For very selective eaters, we typically include one or two anchor dishes the child reliably eats alongside a small try-it portion of the adult menu.</p>
+<h2>Food Safety for Children</h2>
+<p>All myCHEF chefs are HACCP-certified, trained in temperature management, cross-contamination prevention, and allergen handling. Ingredients are sourced fresh the morning of your booking. Allergens are documented before cooking begins. Children's food is cooked to appropriate temperatures and served in separate clean dishes to prevent cross-contact.</p>
+<h2>Cost Comparison</h2>
+<p>A family of four at a decent Seminyak restaurant easily spends IDR 4M–6M including food, drinks, service charge, and two-way transfers. A myCHEF villa dinner for the same group runs IDR 3M–5M all-inclusive — with the children eating something they actually want, at home, without anyone melting down in a restaurant. For more detail see our <a href="/blog/private-chef-vs-restaurant-bali" class="text-[#C5A028] hover:underline font-medium">private chef vs restaurant comparison</a> and the full <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing guide</a>.</p>`,
+  },
 ]
 
 export function buildSitemap(): SitemapEntry[] {

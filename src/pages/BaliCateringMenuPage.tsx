@@ -74,7 +74,7 @@ const SECTIONS = [
     type: 'cta' as const,
     subtitle: 'Ready to Plan',
     title: 'Design a Custom Catering Menu for Your Villa Event',
-    body: 'Browse menu options, <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">connect with our chefs</a>, and <a href="/quote" class="text-[#C5A028] hover:underline font-medium">request a quote</a> for your personalized culinary experience.',
+    body: 'Browse menu options, connect with our chefs, and create a personalized culinary experience for your guests.',
     primaryAction: { label: 'Browse Menus', href: '/menus' },
     secondaryAction: { label: 'Chat With Chefs', href: '/contact' },
   },

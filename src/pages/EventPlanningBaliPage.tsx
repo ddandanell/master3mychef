@@ -74,7 +74,7 @@ const SECTIONS = [
     type: 'cta' as const,
     subtitle: 'Ready to Plan',
     title: 'Plan Your Bali Event With Expert Coordination',
-    body: 'Get in touch with our team to discuss your dates, villa, guest count, and culinary vision — or <a href="/quote" class="text-[#C5A028] hover:underline font-medium">request a free quote</a> now.',
+    body: 'Get in touch with our team to discuss your dates, villa, guest count, and culinary vision.',
     primaryAction: { label: 'Contact Our Team', href: '/contact' },
     secondaryAction: { label: 'Browse Catering', href: '/catering' },
   },

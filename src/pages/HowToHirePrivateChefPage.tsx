@@ -111,7 +111,7 @@ const SECTIONS = [
     type: 'cta' as const,
     subtitle: 'Ready to Book',
     title: 'Find Your Perfect Private Chef',
-    body: 'Browse <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">vetted chefs</a> on myCHEF.id, review their specialties, and <a href="/quote" class="text-[#C5A028] hover:underline font-medium">get a quote</a> for your custom culinary experience.',
+    body: 'Browse vetted chefs on myCHEF.id, review their specialties, and book your custom culinary experience.',
     primaryAction: { label: 'Browse Chefs', href: '/chefs' },
     secondaryAction: { label: 'Get Recommendations', href: '/contact' },
   },

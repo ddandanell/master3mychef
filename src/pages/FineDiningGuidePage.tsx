@@ -68,7 +68,7 @@ const SECTIONS = [
     type: 'cta' as const,
     subtitle: 'Ready to Experience It',
     title: 'Plan Your Fine Dining Experience in Bali',
-    body: 'Browse our <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">chef profiles</a>, explore our <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining hub</a>, or contact our team to design a custom tasting menu for your villa.',
+    body: 'Browse our chef profiles, explore sample menus, or contact our team to design a custom tasting menu for your villa.',
     primaryAction: { label: 'Browse Our Chefs', href: '/chefs' },
     secondaryAction: { label: 'Contact Us', href: '/contact' },
   },

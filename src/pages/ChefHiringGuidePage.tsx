@@ -107,7 +107,7 @@ const SECTIONS = [
     type: 'cta' as const,
     subtitle: 'Ready to Hire',
     title: 'Hire a Vetted Chef Using This Framework',
-    body: 'Browse our <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">screened chef profiles</a>, apply these hiring best practices, and <a href="/quote" class="text-[#C5A028] hover:underline font-medium">get a quote</a> with confidence.',
+    body: 'Browse our screened chef profiles, apply these hiring best practices, and book with confidence.',
     primaryAction: { label: 'Browse Our Chefs', href: '/chefs' },
     secondaryAction: { label: 'Get Recommendations', href: '/contact' },
   },

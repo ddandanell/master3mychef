@@ -145,7 +145,7 @@ export default function RomanticDinnerPage() {
             No other table. No other guests. A candlelit setting in your own villa, five Michelin-trained courses, and a team that becomes invisible the moment you sit down.
           </p>
           <p className="text-white/[60%] text-sm mb-10 tracking-wide">
-            From IDR 2,200,000 per person · Table setting included · Flowers on request · Bali-wide
+            From IDR 2,200,000 per person · Table setting included · Flowers on request · Bali-wide — <a href="/pricing" className="text-[#C5A028] hover:underline">see full pricing</a>
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
@@ -377,6 +377,9 @@ export default function RomanticDinnerPage() {
             <h2 className="text-white text-3xl md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>
               How to Plan Your Romantic Dinner
             </h2>
+            <p className="text-white/[50%] text-sm mt-4">
+              Explore our <Link to="/fine-dining" className="text-[#C5A028] hover:underline">full fine dining menu</Link> or <Link to="/chefs" className="text-[#C5A028] hover:underline">meet our chefs</Link> before you book.
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[

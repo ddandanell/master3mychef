@@ -95,7 +95,7 @@ export default function DenpasarPage() {
         ogImage="/generated/mychef-location-bali-hub-bali.webp"
         jsonLd={[
           localBizDenpasar,
-          breadcrumbSchema('Private Chef Denpasar', canonical),
+          breadcrumbSchema('Private Chef Denpasar', canonical, 'Locations', 'https://mychef.id/locations'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',

@@ -1,6 +1,6 @@
 import { ChefHat, Flame, Fish, Sparkles } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
-import { aggregateRatingSchema } from '@/components/SeoHead'
+import { aggregateRatingSchema, breadcrumbSchema } from '@/components/SeoHead'
 
 const CHEFS = [
   {
@@ -163,7 +163,7 @@ export default function ChefsPage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
-      extraJsonLd={[...CHEF_PERSON_SCHEMAS, aggregateRatingSchema(4.9, 560)]}
+      extraJsonLd={[...CHEF_PERSON_SCHEMAS, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Our Chefs', 'https://mychef.id/chefs')]}
       ctaText="Book a Chef"
       ctaSubtext="Message us on WhatsApp and we will recommend the best chef for your villa, menu, and dates."
     />

@@ -95,7 +95,7 @@ export default function NusaDuaPage() {
         ogImage="/generated/mychef-location-bali-hub-bali.webp"
         jsonLd={[
           localBizNusaDua,
-          breadcrumbSchema('Private Chef Nusa Dua', canonical),
+          breadcrumbSchema('Private Chef Nusa Dua', canonical, 'Locations', 'https://mychef.id/locations'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',

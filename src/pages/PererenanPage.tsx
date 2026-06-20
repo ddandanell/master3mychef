@@ -98,7 +98,7 @@ export default function PererenanPage() {
         ogImage="/generated/mychef-location-bali-hub-bali.webp"
         jsonLd={[
           localBizPererenan,
-          breadcrumbSchema('Private Chef Pererenan', canonical),
+          breadcrumbSchema('Private Chef Pererenan', canonical, 'Locations', 'https://mychef.id/locations'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',

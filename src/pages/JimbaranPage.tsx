@@ -95,7 +95,7 @@ export default function JimbaranPage() {
         ogImage="/generated/mychef-location-bali-hub-hero.webp"
         jsonLd={[
           localBizJimbaran,
-          breadcrumbSchema('Private Chef Jimbaran', canonical),
+          breadcrumbSchema('Private Chef Jimbaran', canonical, 'Locations', 'https://mychef.id/locations'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',

@@ -95,7 +95,7 @@ export default function SanurPage() {
         ogImage="/generated/mychef-location-bali-locations-sunset.webp"
         jsonLd={[
           localBizSanur,
-          breadcrumbSchema('Private Chef Sanur', canonical),
+          breadcrumbSchema('Private Chef Sanur', canonical, 'Locations', 'https://mychef.id/locations'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',

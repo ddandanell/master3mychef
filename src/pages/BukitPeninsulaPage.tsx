@@ -95,7 +95,7 @@ export default function BukitPeninsulaPage() {
         ogImage="/generated/mychef-location-bali-hub-bali.webp"
         jsonLd={[
           localBizBukit,
-          breadcrumbSchema('Private Chef Bukit Peninsula', canonical),
+          breadcrumbSchema('Private Chef Bukit Peninsula', canonical, 'Locations', 'https://mychef.id/locations'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',

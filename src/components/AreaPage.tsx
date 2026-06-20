@@ -49,9 +49,38 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
     url: canonical,
   }
 
+  const jakartaLocalBusinessOverrides = isJakarta ? {
+    '@id': `https://mychef.id/locations/${slug}`,
+    name: `myCHEF.id ${entry.name}`,
+    description: `Private chef services in ${entry.name} — villa dinners, corporate events, and household staffing.`,
+    url: `https://mychef.id/locations/${slug}`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: entry.name,
+      addressRegion: 'DKI Jakarta',
+      addressCountry: 'ID',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: -6.2088,
+      longitude: 106.8456,
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Jakarta' },
+      { '@type': 'Place', name: 'Menteng' },
+      { '@type': 'Place', name: 'Kemang' },
+      { '@type': 'Place', name: 'SCBD' },
+      { '@type': 'Place', name: 'Pondok Indah' },
+    ],
+    priceRange: 'IDR 1,500,000 – IDR 8,000,000',
+    image: 'https://mychef.id/og-image.webp',
+  } : {
+    areaServed: { '@type': 'Place', name: `${entry.name}, Bali` },
+  }
+
   const localBusiness = {
     ...localBusinessSchema,
-    areaServed: { '@type': 'Place', name: `${entry.name}, Bali` },
+    ...jakartaLocalBusinessOverrides,
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',

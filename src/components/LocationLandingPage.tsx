@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Building2, CalendarClock, Check, ChefHat, Clock3, MapPin, MessageCircle, Sparkles, UtensilsCrossed, Users } from 'lucide-react'
-import SeoHead, { aggregateRatingSchema, breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import type { LocationLandingPageConfig } from '@/data/locationLandingPages'
 
 const SITE = 'https://mychef.id'
@@ -24,6 +24,13 @@ export default function LocationLandingPage({ config }: { config: LocationLandin
       '@type': 'GeoCoordinates',
       latitude: config.coordinates.latitude,
       longitude: config.coordinates.longitude,
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '560',
+      bestRating: '5',
+      worstRating: '1',
     },
   }
 
@@ -65,7 +72,6 @@ export default function LocationLandingPage({ config }: { config: LocationLandin
         jsonLd={[
           localBusiness,
           serviceSchema,
-          aggregateRatingSchema(4.9, 560),
           breadcrumbSchema(config.name, canonical, 'Locations', `${SITE}/locations`),
           faqSchema,
         ]}

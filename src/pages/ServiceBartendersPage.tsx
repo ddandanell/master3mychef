@@ -4,7 +4,6 @@ import { MessageCircle, Check, Phone, Calendar, Star, ShieldCheck, Award, Wine }
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   detailedServiceSchema,
   faqPageSchema,
@@ -103,7 +102,6 @@ export default function ServiceBartendersPage() {
         canonical={`${SITE}/in-villa-service/bartenders`}
         ogImage={`${SITE}/generated/mychef-experience-bali-aura-bartender.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema(
             'Bartender Hire Bali',
             'myCHEF.id provides professional bartender hire in Bali for villa dinners, weddings, and private parties. We handle cocktail service, bar setup, glassware, and smooth event execution from first pour to last call.',

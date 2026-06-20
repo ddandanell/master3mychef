@@ -2,11 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw, UsersRound, ConciergeBell } from 'lucide-react'
 import SeoHead, {
-  localBusinessSchema,
   serviceSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   organizationSchema,
+  localBusinessSchema,
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -231,6 +230,13 @@ export default function HubPage() {
   const homeLocalBusinessSchema: Record<string, unknown> = {
     ...localBusinessSchema,
     '@type': 'FoodEstablishment',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '560',
+      bestRating: '5',
+      worstRating: '1',
+    },
     url: 'https://mychef.id/',
     telephone: '+49 163 5080236',
     address: {
@@ -310,7 +316,6 @@ export default function HubPage() {
       'https://mychef.id/staffing',
       '$$$'
     ),
-    aggregateRatingSchema(4.9, 560),
     faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
   ]
 

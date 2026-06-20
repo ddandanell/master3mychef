@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { ArrowRight, MessageCircle, Check } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, localBusinessSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { MENUS, type Menu } from '@/data/siteArchitecture'
 import TrustStrip from '@/components/shared/TrustStrip'
 
@@ -60,7 +60,7 @@ export default function MenuPage() {
           description="Explore myCHEF menu ideas for Bali villas — Mediterranean set menus, Indonesian feasts, BBQ nights, tasting menus, and customizable cuisine pages."
           ogImage="/hero-fine-dining.webp"
           canonical={`${SITE}/menus`}
-          jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Menus', `${SITE}/menus`), faqPageSchema([
+          jsonLd={[aggregateRatingSchema(4.9, 560), breadcrumbSchema('Menus', `${SITE}/menus`), faqPageSchema([
             { question: 'What types of menus does myCHEF offer in Bali?', answer: 'myCHEF offers Mediterranean tasting menus, Indonesian feasts, BBQ nights, grazing tables, floating breakfast menus, and fully customizable cuisines for any villa event in Bali.' },
             { question: 'Can I customise the menu for dietary restrictions?', answer: 'Yes — every menu is fully customizable. We accommodate gluten-free, vegan, halal, vegetarian, shellfish allergies, and pregnancy-safe requests at no extra charge.' },
             { question: 'How do I choose the right menu for my villa event?', answer: 'Contact our team via WhatsApp with your guest count, occasion, and preferences. We will recommend the best menu and send a proposal with pricing within 24 hours.' },
@@ -239,7 +239,7 @@ export default function MenuPage() {
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
-      <SeoHead title={`${title} | myCHEF`} description={menu.description} canonical={canonical} ogImage="/hero-fine-dining.webp" jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema(menu.name, canonical)]} />
+      <SeoHead title={`${title} | myCHEF`} description={menu.description} canonical={canonical} ogImage="/hero-fine-dining.webp" jsonLd={[aggregateRatingSchema(4.9, 560), breadcrumbSchema(menu.name, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[960px] mx-auto">
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Menu</p>

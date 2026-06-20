@@ -17,7 +17,6 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   serviceSchema,
   faqPageSchema,
@@ -188,7 +187,6 @@ export default function StaffingPage() {
         canonical={getPageMeta('staffing').canonical}
         ogImage={getPageMeta('staffing').ogImage}
         jsonLd={[
-          localBusinessSchema,
           serviceSchema(
             'Hospitality Staffing Bali',
             'Private chef, live-in chef, and villa household staff placement across Bali. Vetted network, 48h confirmation, 30-day replacement guarantee.',

@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -151,7 +151,6 @@ export default function EventsRetreatsPage() {
         canonical={`${SITE}/events/retreats`}
         ogImage={`${SITE}/generated/mychef-events-bali-retreat-breakfast.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema('Wellness Retreat Catering Bali', 'myCHEF.id provides retreat catering in Bali with wellness-focused menus, dietary planning, and on-site chef support. We manage multi-day meal service, kitchen operations, and cleanup for private villas and retreat venues.', `${SITE}/events/retreats`),
           offerSchema('Wellness Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
           offerSchema('Yoga Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),

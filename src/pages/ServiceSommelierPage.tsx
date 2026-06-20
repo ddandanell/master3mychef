@@ -4,7 +4,6 @@ import { MessageCircle, Check, Phone, Calendar, Star, ShieldCheck, Award, Wine }
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   detailedServiceSchema,
   faqPageSchema,
@@ -103,7 +102,6 @@ export default function ServiceSommelierPage() {
         canonical={`${SITE}/in-villa-service/sommelier`}
         ogImage={`${SITE}/generated/luna-wine.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema(
             'Sommelier Service Bali',
             'myCHEF.id provides sommelier service in Bali for villa dinners, celebrations, and private events. We curate wine pairings, guide bottle selections, and deliver polished tableside service throughout the experience.',

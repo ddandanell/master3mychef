@@ -4,7 +4,6 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   serviceSchema,
   faqPageSchema,
@@ -111,7 +110,6 @@ export default function StaffingPlacementPage() {
         canonical={`${SITE}/staffing/private-chef-placement`}
         ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-hero.webp`}
         jsonLd={[
-          localBusinessSchema,
           serviceSchema(
             'Private Chef Placement Bali',
             'Long-term private chef placement for villas in Bali. Vetted candidates, cooking trials, contracts, and ongoing support.',

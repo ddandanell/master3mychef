@@ -9,7 +9,6 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   cateringBreadcrumbSchema,
   cateringServiceSchema,
   offerSchema,
@@ -170,7 +169,6 @@ export default function CateringFloatingBreakfastPage() {
         canonical={`${SITE}/catering/floating-breakfast`}
         ogImage={`${SITE}/breakfast-spread.webp`}
         jsonLd={[
-          localBusinessSchema,
           cateringServiceSchema('Floating Breakfast Bali', 'Floating breakfast service in Bali for villa pools, honeymoons, birthdays, and private mornings with tropical dishes and styled presentation. myCHEF.id prepares, delivers, and sets the experience across Bali.', `${SITE}/catering/floating-breakfast`),
           offerSchema('Floating Breakfast for 2', 950000, 'IDR', `${SITE}/catering/floating-breakfast`),
           offerSchema('Floating Brunch for 2', 1400000, 'IDR', `${SITE}/catering/floating-breakfast`),

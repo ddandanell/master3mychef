@@ -9,7 +9,6 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
-  localBusinessSchema,
   cateringBreadcrumbSchema,
   cateringServiceSchema,
   offerSchema,
@@ -200,7 +199,6 @@ export default function CateringPlatedPage() {
         canonical={`${SITE}/catering/plated-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-plated-menus.webp`}
         jsonLd={[
-          localBusinessSchema,
           cateringServiceSchema('Plated Dinner Catering Bali', 'Plated dinner catering in Bali for villas, anniversaries, weddings, and premium private events with multi-course menus. myCHEF.id provides chefs, service staff, elegant plating, and cleanup across Bali.', `${SITE}/catering/plated-catering`),
           offerSchema('3-Course Plated', 800000, 'IDR', `${SITE}/catering/plated-catering`),
           offerSchema('4-Course Plated', 1000000, 'IDR', `${SITE}/catering/plated-catering`),

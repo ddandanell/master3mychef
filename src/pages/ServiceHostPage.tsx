@@ -4,7 +4,6 @@ import { MessageCircle, Check, Phone, Calendar, Users, Star, ShieldCheck, HandHe
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   detailedServiceSchema,
   faqPageSchema,
@@ -103,7 +102,6 @@ export default function ServiceHostPage() {
         canonical={`${SITE}/in-villa-service/host-hostess`}
         ogImage={`${SITE}/generated/misc-trust-hosts-lg.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema(
             'Host & Hostess Hire Bali',
             'myCHEF.id provides hosts and hostesses in Bali for villa events, weddings, and brand activations. We manage guest welcome, direction, and front-of-house flow with polished professional service.',

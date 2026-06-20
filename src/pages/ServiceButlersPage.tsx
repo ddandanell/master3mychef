@@ -4,7 +4,6 @@ import { MessageCircle, Check, Phone, Calendar, Users, Star, ShieldCheck, Gem } 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   detailedServiceSchema,
   faqPageSchema,
@@ -103,7 +102,6 @@ export default function ServiceButlersPage() {
         canonical={`${SITE}/in-villa-service/butlers`}
         ogImage={`${SITE}/generated/hub-villa.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema(
             'Butler Service Bali',
             'myCHEF.id provides private butler service in Bali for villa stays, events, and private guest hosting. Our team manages service flow, guest requests, and discreet household coordination throughout the booking.',

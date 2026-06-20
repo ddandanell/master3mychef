@@ -3,7 +3,6 @@ import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, ChefH
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   serviceSchema,
   faqPageSchema,
@@ -109,7 +108,6 @@ export default function StaffingHouseholdPage() {
         canonical={`${SITE}/staffing/household-staff`}
         ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-table.webp`}
         jsonLd={[
-          localBusinessSchema,
           serviceSchema(
             'Household Staff Bali',
             'Household staff recruitment in Bali for private residences — nannies, drivers, housekeepers, and estate managers. Vetted candidates and ongoing support.',

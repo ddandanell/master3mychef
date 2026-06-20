@@ -4,7 +4,6 @@ import { MessageCircle, Check, Phone, Calendar, Users, Star, ShieldCheck, Award 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   serviceSchema,
   faqPageSchema,
@@ -103,7 +102,6 @@ export default function ServiceWaitersPage() {
         canonical={`${SITE}/in-villa-service/waiters`}
         ogImage={`${SITE}/generated/aura-bartender.webp`}
         jsonLd={[
-          localBusinessSchema,
           serviceSchema(
             'Waiter Hire Bali',
             'Professional per-shift waiters for villa events in Bali. Uniformed, English-speaking, trained in plated and buffet service.',

@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -121,7 +121,6 @@ export default function EventsAnniversariesPage() {
         canonical={`${SITE}/events/anniversaries`}
         ogImage={`${SITE}/generated/mychef-events-bali-anniversary-romantic.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema('Anniversary Dinner Bali', 'myCHEF.id creates private anniversary dinners in Bali with chef-led menus, romantic villa styling, and polished service. We handle planning, cooking, setup, and cleanup so the celebration feels effortless.', `${SITE}/events/anniversaries`),
           offerSchema('Couple Intimate Dinner', 1500000, 'IDR', `${SITE}/events/anniversaries`),
           offerSchema('Small-Group Anniversary', 1200000, 'IDR', `${SITE}/events/anniversaries`),

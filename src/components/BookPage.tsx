@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, ChefHat, PartyPopper, Users, Briefcase, Wine, Star, Shield, Clock, Check } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import { ContactRiskReversal } from '@/components/shared'
 
@@ -70,7 +70,7 @@ export default function BookPage() {
         canonical={getPageMeta('book').canonical}
         ogImage={getPageMeta('book').ogImage}
         noindex
-        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Book', getPageMeta('book').canonical), faqPageSchema([
+        jsonLd={[aggregateRatingSchema(4.9, 560), breadcrumbSchema('Book', getPageMeta('book').canonical), faqPageSchema([
           { question: 'How do I book a private chef in Bali?', answer: 'Simply send us a WhatsApp message with your date, villa location, and number of guests. We reply within the hour and send a full proposal within 24 hours.' },
           { question: 'How far in advance do I need to book?', answer: 'We recommend 24–48 hours in advance for private chef dinners, and 3–7 days for larger events and catering. Contact us for last-minute availability.' },
           { question: 'Do you serve villas outside Seminyak and Canggu?', answer: 'Yes — we cover all of Bali including Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond. Just let us know your location when booking.' },

@@ -4,7 +4,7 @@ import { MessageCircle, Check, MapPin, ChevronRight, Star } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema, breadcrumbSchema, offerSchema,
+  breadcrumbSchema, offerSchema,
   faqPageSchema, aggregateRatingSchema, detailedServiceSchema, howToSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -130,7 +130,6 @@ export default function PrivateChefBaliPage() {
         canonical={`${SITE}/fine-dining/private-chef-bali`}
         ogImage={`${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema(
             'Private Chef Bali',
             'Hire a Michelin-trained private chef for your Bali villa. myCHEF serves all villa areas across Bali including Seminyak, Canggu, Ubud, Uluwatu, and Nusa Dua. From IDR 2,200,000 per person including all groceries, table service, and kitchen cleanup.',

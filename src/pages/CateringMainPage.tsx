@@ -6,7 +6,6 @@ import {
   Home, PartyPopper, Flame, Wine, Flower2, CakeSlice,
 } from 'lucide-react'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   cateringServiceSchema,
   offerSchema,
@@ -387,7 +386,6 @@ export default function CateringMainPage() {
         canonical={getPageMeta('catering').canonical}
         ogImage={getPageMeta('catering').ogImage}
         jsonLd={[
-          localBusinessSchema,
           cateringServiceSchema('Villa Catering Bali', 'Chef-led catering for Bali villas, events, BBQ nights, and private gatherings with flexible formats from buffet to plated service. myCHEF.id manages menus, staffing, setup, and cleanup across Bali.', `${SITE}/catering`, 'FoodService'),
           offerSchema('Indonesian BBQ', 450000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('International BBQ', 600000, 'IDR', `${SITE}/catering/bbq-catering`),

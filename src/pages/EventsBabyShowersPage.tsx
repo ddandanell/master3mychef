@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -130,7 +130,6 @@ export default function EventsBabyShowersPage() {
         canonical={`${SITE}/events/baby-showers`}
         ogImage={`${SITE}/generated/mychef-events-bali-baby-shower-hero.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema('Baby Shower Catering Bali', 'myCHEF.id provides baby shower catering in Bali with brunch menus, grazing tables, mocktails, and elegant villa styling. We coordinate service, setup, and cleanup for relaxed celebrations at private villas and venues.', `${SITE}/events/baby-showers`),
           offerSchema('Intimate Baby Shower Brunch', 750000, 'IDR', `${SITE}/events/baby-showers`),
           offerSchema('Larger Baby Shower', 1100000, 'IDR', `${SITE}/events/baby-showers`),

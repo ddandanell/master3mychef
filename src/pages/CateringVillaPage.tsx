@@ -8,7 +8,6 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   cateringBreadcrumbSchema,
   cateringServiceSchema,
   offerSchema,
@@ -157,7 +156,6 @@ export default function CateringVillaPage() {
         canonical={`${SITE}/catering/villa-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet-catering.webp`}
         jsonLd={[
-          localBusinessSchema,
           cateringServiceSchema('Villa Catering Bali', 'Villa catering in Bali for private lunches, dinners, birthdays, and multi-day stays with chef-led menus and on-site service. myCHEF.id brings the kitchen team, setup, service, and cleanup to your villa across Bali.', `${SITE}/catering/villa-catering`),
           offerSchema('Villa Lunch', 450000, 'IDR', `${SITE}/catering/villa-catering`),
           offerSchema('Villa Dinner', 650000, 'IDR', `${SITE}/catering/villa-catering`),

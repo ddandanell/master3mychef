@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
-  localBusinessSchema, breadcrumbSchema, offerSchema,
+  breadcrumbSchema, offerSchema,
   faqPageSchema, aggregateRatingSchema, detailedServiceSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -166,7 +166,6 @@ export default function TastingMenuPage() {
         canonical={`${SITE}/fine-dining/tasting-menu`}
         ogImage={`${SITE}/generated/mychef-finedining-bali-luna-plating.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema(
             'Private Tasting Menu Bali',
             'A private multi-course tasting menu experience in your Bali villa. Choose Mediterranean Sea or Wagyu Experience — Michelin-trained chefs, handmade pasta, premium ingredients, and full service in your villa. myCHEF.id serves across all Bali villa areas.',

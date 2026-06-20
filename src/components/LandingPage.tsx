@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Calendar, Check, ChevronLeft, ChevronRight, Clock3, MessageCircle, Utensils } from 'lucide-react'
-import SeoHead, { aggregateRatingSchema, breadcrumbSchema, faqPageSchema, localBusinessSchema, serviceSchema } from './SeoHead'
+import SeoHead, { aggregateRatingSchema, breadcrumbSchema, faqPageSchema, serviceSchema } from './SeoHead'
 import { BLOG_POSTS, GUIDES, LANDING_PAGES } from '@/data/sitemap'
 import Breadcrumb from './shared/Breadcrumb'
 import { type EnrichedPost, enrichPost, formatBlogDate, getRelatedPosts, injectContentEnhancements, sortPostsByDate } from '@/lib/blog'
@@ -77,7 +77,6 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   const landingServiceSchema = kind === 'landing' ? serviceSchema(entry.title, entry.description, canonical) : null
   const breadcrumbJsonLd = isArticle ? breadcrumbSchema(entry.title, canonical, hubLabel, `${SITE}${hubPath}`) : breadcrumbSchema(entry.title, canonical)
   const jsonLdArr = [
-    localBusinessSchema,
     aggregateRatingSchema(4.9, 560),
     breadcrumbJsonLd,
     faqPageSchema([

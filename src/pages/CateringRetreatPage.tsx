@@ -8,7 +8,6 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   cateringBreadcrumbSchema,
   cateringServiceSchema,
   offerSchema,
@@ -155,7 +154,6 @@ export default function CateringRetreatPage() {
         canonical={`${SITE}/catering/retreat-catering`}
         ogImage={`${SITE}/generated/mychef-experience-bali-hero-retreats.webp`}
         jsonLd={[
-          localBusinessSchema,
           cateringServiceSchema('Retreat Catering Bali', 'Retreat catering in Bali for yoga, wellness, business, and creative retreats with plant-forward menus and dietary planning. myCHEF.id runs consistent multi-day meal service, timing, and kitchen operations across Bali.', `${SITE}/catering/retreat-catering`),
           offerSchema('Yoga Retreat Catering', 400000, 'IDR', `${SITE}/catering/retreat-catering`),
           offerSchema('Wellness Retreat Catering', 450000, 'IDR', `${SITE}/catering/retreat-catering`),

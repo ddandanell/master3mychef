@@ -1,6 +1,6 @@
 import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check, Utensils, Flame, Sparkles, Building2, Users, ChefHat, PartyPopper } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from './SeoHead'
 import { AREAS, MICRO_AREAS } from '@/data/sitemap'
 import { getLocationBySlug } from '@/data/siteArchitecture'
 import { TOP_CITIES } from '@/data/topCities'
@@ -52,6 +52,13 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
   const localBusiness = {
     ...localBusinessSchema,
     areaServed: { '@type': 'Place', name: `${entry.name}, Bali` },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '560',
+      bestRating: '5',
+      worstRating: '1',
+    },
   }
 
   const areaFaq = faqPageSchema([
@@ -82,8 +89,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
         ogImage={top ? `${SITE}${top.hero}` : undefined}
         jsonLd={[
           localBusiness, 
-          serviceSchema, 
-          aggregateRatingSchema(4.9, 560), 
+          serviceSchema,
           areaFaq, 
           breadcrumbSchema(entry.name, canonical, 'Locations', `${SITE}/locations`)
         ]}

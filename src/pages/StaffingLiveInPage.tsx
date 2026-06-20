@@ -4,7 +4,6 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   serviceSchema,
   faqPageSchema,
@@ -111,7 +110,6 @@ export default function StaffingLiveInPage() {
         canonical={`${SITE}/staffing/live-in-chef`}
         ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-kitchen.webp`}
         jsonLd={[
-          localBusinessSchema,
           serviceSchema(
             'Live-In Chef Bali',
             'Full-time live-in chef placement for villas in Bali. Vetted candidates, cooking trials, contracts, and ongoing support.',

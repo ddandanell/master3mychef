@@ -18,7 +18,6 @@ import type { ReactNode, ElementType } from 'react'
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight, Star, Clock, Shield, Users, Phone, Mail, Calendar } from 'lucide-react'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   serviceSchema,
   faqPageSchema,
@@ -119,7 +118,6 @@ export default function PremiumPage({
   )}`
 
   const schemas: Record<string, unknown>[] = [
-    localBusinessSchema,
     breadcrumbSchema(title, canonical),
     serviceSchema(title, metaDescription, canonical),
     aggregateRatingSchema(4.9, 560),

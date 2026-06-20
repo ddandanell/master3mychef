@@ -5,7 +5,7 @@ import {
   Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music,
   Globe2, ClipboardCheck, ArrowRight, Check,
 } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema, howToSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -341,7 +341,6 @@ export default function EventsMainPage() {
         canonical={getPageMeta('events').canonical}
         ogImage={getPageMeta('events').ogImage}
         jsonLd={[
-          localBusinessSchema,
           breadcrumbSchema('Events', `${SITE}/events`),
           serviceSchema('Bali Event Catering & Coordination', 'Villa weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties in Bali. One team, one bill.', `${SITE}/events`, 'IDR'),
           offerSchema('Villa Weddings', 600000, 'IDR', `${SITE}/events/weddings`),

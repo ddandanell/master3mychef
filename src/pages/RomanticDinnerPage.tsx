@@ -4,7 +4,7 @@ import { MessageCircle, Check, Heart, Star, Flower2, Camera, Music2, Wine, Chevr
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema, breadcrumbSchema, offerSchema,
+  breadcrumbSchema, offerSchema,
   faqPageSchema, aggregateRatingSchema, detailedServiceSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -99,7 +99,6 @@ export default function RomanticDinnerPage() {
         canonical={`${SITE}/fine-dining/romantic-dinner`}
         ogImage={`${SITE}/generated/section-romantic-dinner.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema(
             'Romantic Private Dinner Bali',
             'A private candlelit villa dinner in Bali for two — Michelin-trained chef, five-course tasting menu, table setting, flowers on request, and full cleanup. myCHEF.id serves romantic dinners across Seminyak, Canggu, Ubud, Uluwatu, and all Bali villa areas.',

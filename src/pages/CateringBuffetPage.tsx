@@ -8,7 +8,6 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   cateringBreadcrumbSchema,
   cateringServiceSchema,
   offerSchema,
@@ -182,7 +181,6 @@ export default function CateringBuffetPage() {
         canonical={`${SITE}/catering/buffet`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet-catering.webp`}
         jsonLd={[
-          localBusinessSchema,
           cateringServiceSchema('Buffet Catering Bali', 'Full-service buffet catering for Bali villas, weddings, retreats, and large private events with Indonesian and international menu options. myCHEF.id brings chefs, service staff, buffet equipment, and cleanup across Bali.', `${SITE}/catering/buffet`),
           offerSchema('Indonesian Buffet', 550000, 'IDR', `${SITE}/catering/buffet`),
           offerSchema('International Buffet', 750000, 'IDR', `${SITE}/catering/buffet`),

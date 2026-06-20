@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Utensils, Flame, Sparkles } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { TOP_CITIES } from '@/data/topCities'
 
 const SITE = 'https://mychef.id'
@@ -24,7 +24,6 @@ export default function BaliHubPage() {
         ogType="article"
         ogImage={`${SITE}/generated/mychef-location-bali-hub-hero.webp`}
         jsonLd={[
-          localBusinessSchema,
           aggregateRatingSchema(4.9, 560),
           breadcrumbSchema('Bali Guide', canonical),
           faqPageSchema([

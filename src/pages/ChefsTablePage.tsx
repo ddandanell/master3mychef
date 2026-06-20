@@ -4,7 +4,7 @@ import { MessageCircle, Check, ChevronRight, Star, Lock, Clock, Users } from 'lu
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema, breadcrumbSchema, offerSchema,
+  breadcrumbSchema, offerSchema,
   faqPageSchema, aggregateRatingSchema, detailedServiceSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -102,7 +102,6 @@ export default function ChefsTablePage() {
         canonical={`${SITE}/fine-dining/chefs-table`}
         ogImage={`${SITE}/generated/mychef-misc-bali-chefs-table-hero-luxury.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema(
             "Chef's Table Bali — Adriano's Private 7-Course Experience",
             "The most exclusive myCHEF experience. Counter seating at your Bali villa with Adriano, live 7-course market-led tasting menu with commentary between each course. Maximum 6 guests. Available Friday and Saturday evenings only.",

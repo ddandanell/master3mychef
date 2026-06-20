@@ -4,7 +4,6 @@ import { MessageCircle, Check, Phone, Calendar, Star, ShieldCheck, Award, FlaskC
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   detailedServiceSchema,
   faqPageSchema,
@@ -103,7 +102,6 @@ export default function ServiceMixologyPage() {
         canonical={`${SITE}/in-villa-service/mixology`}
         ogImage="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1600&q=80"
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema(
             'Mixology Experience Bali',
             'myCHEF.id creates private mixology experiences in Bali with signature cocktail menus, demonstrations, and premium bar service. We design the drinks, setup, and guest interaction for villa events and celebrations.',

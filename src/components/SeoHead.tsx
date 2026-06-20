@@ -211,12 +211,14 @@ export function howToSchema(params: {
 
 export function aggregateRatingSchema(ratingValue: number, reviewCount: number) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'AggregateRating',
-    ratingValue: ratingValue.toString(),
-    reviewCount: reviewCount.toString(),
-    bestRating: '5',
-    worstRating: '1',
+    ...localBusinessSchema,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: ratingValue.toString(),
+      reviewCount: reviewCount.toString(),
+      bestRating: '5',
+      worstRating: '1',
+    },
   }
 }
 

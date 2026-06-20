@@ -3,7 +3,6 @@ import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, Brief
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   serviceSchema,
   faqPageSchema,
@@ -102,7 +101,6 @@ export default function StaffingHotelsPage() {
         canonical={`${SITE}/staffing/for-hotels-restaurants`}
         ogImage={`${SITE}/generated/aura-corporate.webp`}
         jsonLd={[
-          localBusinessSchema,
           serviceSchema(
             'Hotels & Restaurants Staffing Bali',
             'Hospitality recruitment for boutique hotels, restaurants and resorts in Bali. Kitchen staff, service staff, and management placements with volume rates.',

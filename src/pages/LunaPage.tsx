@@ -6,7 +6,7 @@ const OrderPanel = lazy(() => import('@/components/OrderPanel'))
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import LocationChips from '@/components/LocationChips'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import { Button } from '@/components/ui/button'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -288,7 +288,6 @@ export default function LunaPage() {
         canonical={getPageMeta('fine-dining').canonical}
         ogImage={getPageMeta('fine-dining').ogImage}
         jsonLd={[
-          localBusinessSchema,
           serviceSchema(
             'Private Chef Fine Dining Bali',
             'Mediterranean and Wagyu tasting menus served privately in your Bali villa. Michelin-trained chef, sommelier wine pairing, open-flame cooking.',

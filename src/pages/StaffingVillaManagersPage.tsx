@@ -3,7 +3,6 @@ import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, Brief
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   serviceSchema,
   faqPageSchema,
@@ -102,7 +101,6 @@ export default function StaffingVillaManagersPage() {
         canonical={`${SITE}/staffing/for-villa-managers`}
         ogImage={`${SITE}/generated/corp-villa.webp`}
         jsonLd={[
-          localBusinessSchema,
           serviceSchema(
             'Staffing for Villa Managers Bali',
             'Hospitality staffing partnerships for villa managers in Bali. Pre-vetted chefs and front-of-house staff with partnership rates.',

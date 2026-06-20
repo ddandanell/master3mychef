@@ -7,7 +7,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -156,7 +156,6 @@ export default function EventsCorporatePage() {
         canonical={`${SITE}/events/corporate-events`}
         ogImage={`${SITE}/generated/mychef-events-bali-corporate-team.webp`}
         jsonLd={[
-          localBusinessSchema,
           detailedServiceSchema('Corporate Events Bali', 'myCHEF.id delivers corporate event catering in Bali for conferences, offsites, launches, and executive dinners. We coordinate food, staffing, setup, and service so your event runs smoothly from arrival to final cleanup.', `${SITE}/events/corporate-events`),
           offerSchema('Corporate Day Event', 1200000, 'IDR', `${SITE}/events/corporate-events`),
           offerSchema('Multi-Day Retreat', 2500000, 'IDR', `${SITE}/events/corporate-events`),

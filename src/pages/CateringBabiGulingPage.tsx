@@ -8,7 +8,6 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   cateringBreadcrumbSchema,
   cateringServiceSchema,
   offerSchema,
@@ -149,7 +148,6 @@ export default function CateringBabiGulingPage() {
         canonical={`${SITE}/catering/babi-guling`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-babiguling.webp`}
         jsonLd={[
-          localBusinessSchema,
           cateringServiceSchema('Babi Guling Catering Bali', 'Traditional babi guling catering for Bali villas, birthdays, weddings, and cultural celebrations with full Balinese sides. myCHEF.id roasts, carves, and serves the feast on site across Bali.', `${SITE}/catering/babi-guling`),
           offerSchema('Small Babi Guling', 3700000, 'IDR', `${SITE}/catering/babi-guling`),
           offerSchema('Medium Babi Guling', 5000000, 'IDR', `${SITE}/catering/babi-guling`),

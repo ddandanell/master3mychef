@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight, Wine, Users, Shield, Clock, Star, Award } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from './SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import { PILLARS } from '@/data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
@@ -109,7 +109,6 @@ export default function InVillaServicePage() {
         canonical={getPageMeta('in-villa-service').canonical}
         ogImage={getPageMeta('in-villa-service').ogImage}
         jsonLd={[
-          localBusinessSchema,
           breadcrumbSchema('In-Villa Service', canonical),
           serviceSchema('In-Villa Service Staff', pillar.description, canonical),
           aggregateRatingSchema(4.9, 350),

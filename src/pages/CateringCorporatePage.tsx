@@ -7,7 +7,6 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   cateringBreadcrumbSchema,
   cateringServiceSchema,
   offerSchema,
@@ -140,7 +139,6 @@ export default function CateringCorporatePage() {
         canonical={`${SITE}/catering/corporate-catering`}
         ogImage={`${SITE}/generated/mychef-events-bali-corporate-events.webp`}
         jsonLd={[
-          localBusinessSchema,
           cateringServiceSchema('Corporate Catering Bali', 'Corporate catering in Bali for business lunches, workshops, offsites, launches, and executive dinners with reliable timing and professional presentation. myCHEF.id handles menu planning, staffing, invoicing, and service across Bali.', `${SITE}/catering/corporate-catering`),
           offerSchema('Board Dinner', 850000, 'IDR', `${SITE}/catering/corporate-catering`),
           offerSchema('Team Offsite Catering', 550000, 'IDR', `${SITE}/catering/corporate-catering`),

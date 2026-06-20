@@ -4,7 +4,6 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
-  localBusinessSchema,
   breadcrumbSchema,
   serviceSchema,
   faqPageSchema,
@@ -111,7 +110,6 @@ export default function StaffingVillaStaffPage() {
         canonical={`${SITE}/staffing/villa-staff`}
         ogImage={`${SITE}/generated/hub-villa.webp`}
         jsonLd={[
-          localBusinessSchema,
           serviceSchema(
             'Villa Staff Placement Bali',
             'Villa staff recruitment in Bali — managers, housekeepers, gardeners, pool attendants, and security. Vetted candidates and ongoing support.',

@@ -7,7 +7,6 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   cateringBreadcrumbSchema,
   cateringServiceSchema,
   offerSchema,
@@ -188,7 +187,6 @@ export default function CateringGrazingPage() {
         canonical={PAGE_URL}
         ogImage={`${SITE}/generated/pkg-grazing.webp`}
         jsonLd={[
-          localBusinessSchema,
           cateringServiceSchema('Grazing Tables Bali', 'Styled grazing tables in Bali for villa parties, weddings, poolside events, and welcome receptions with cheese, charcuterie, fruit, and breads. myCHEF.id designs, delivers, and sets each table across Bali.', PAGE_URL),
           offerSchema('Small Grazing Board', 650000, 'IDR', PAGE_URL),
           offerSchema('Medium Villa Table', 2700000, 'IDR', PAGE_URL),

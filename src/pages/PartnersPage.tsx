@@ -16,7 +16,7 @@ import {
   Star,
 } from 'lucide-react'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
-import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 import OptimizedImage from '@/components/OptimizedImage'
@@ -179,7 +179,7 @@ export default function PartnersPage() {
         description="myCHEF villa partner program: co-branded chef service, certified partner benefits & press kit details for villa managers in Bali. WhatsApp us to join."
         canonical="https://mychef.id/partners"
         ogImage="https://mychef.id/generated/mychef-misc-bali-partner-platform-hero.webp"
-        jsonLd={[localBusinessSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Partners', 'https://mychef.id/partners'), faqPageSchema(faqs.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={[aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Partners', 'https://mychef.id/partners'), faqPageSchema(faqs.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       <section className="relative overflow-hidden border-b border-[#E8E3D8]">

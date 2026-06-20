@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, Utensils, Star, MessageCircle, Phone, ShoppingBag, Sparkles } from 'lucide-react'
 import BookingForm from '@/components/BookingForm'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
@@ -103,7 +103,7 @@ export default function SolPage() {
         description={getPageMeta('villa-chef').description}
         canonical={getPageMeta('villa-chef').canonical}
         ogImage={getPageMeta('villa-chef').ogImage}
-        jsonLd={[localBusinessSchema, serviceSchema('Villa Chef Bali', getPageMeta('villa-chef').description, getPageMeta('villa-chef').canonical), aggregateRatingSchema(4.9, 320), breadcrumbSchema('Villa Chef', getPageMeta('villa-chef').canonical), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={[serviceSchema('Villa Chef Bali', getPageMeta('villa-chef').description, getPageMeta('villa-chef').canonical), aggregateRatingSchema(4.9, 320), breadcrumbSchema('Villa Chef', getPageMeta('villa-chef').canonical), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

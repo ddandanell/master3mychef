@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, Calendar, Tag } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema, localBusinessSchema } from './SeoHead'
 import { JOURNAL_POSTS, JOURNAL_CATEGORIES, type JournalPost } from '@/data/siteArchitecture'
 
 import { useState, useMemo } from 'react'
@@ -29,7 +29,6 @@ export function JournalIndexPage() {
         ogImage="/mychef-misc-bali-og-image.webp"
         canonical={canonical}
         jsonLd={[
-          localBusinessSchema,
           aggregateRatingSchema(4.9, 560),
           breadcrumbSchema('Journal', canonical),
           faqPageSchema([

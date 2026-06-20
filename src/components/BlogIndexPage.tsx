@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Calendar, Clock3 } from 'lucide-react'
-import SeoHead, { aggregateRatingSchema, breadcrumbSchema, faqPageSchema, localBusinessSchema } from './SeoHead'
+import SeoHead, { aggregateRatingSchema, breadcrumbSchema, faqPageSchema } from './SeoHead'
 import { BLOG_POSTS, GUIDES } from '@/data/sitemap'
 import Breadcrumb from './shared/Breadcrumb'
 import { enrichPost, formatBlogDate, sortPostsByDate } from '@/lib/blog'
@@ -32,7 +32,6 @@ export default function BlogIndexPage() {
         ogImage="/mychef-misc-bali-og-image.webp"
         canonical={`${SITE}/blog`}
         jsonLd={[
-          localBusinessSchema,
           aggregateRatingSchema(4.9, 560),
           breadcrumbSchema('Journal', `${SITE}/blog`),
           faqPageSchema([

@@ -8,7 +8,6 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  localBusinessSchema,
   cateringBreadcrumbSchema,
   cateringServiceSchema,
   offerSchema,
@@ -219,7 +218,6 @@ export default function CateringDropOffPage() {
         canonical={PAGE_URL}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-dropoff.webp`}
         jsonLd={[
-          localBusinessSchema,
           cateringServiceSchema('Drop-Off Catering Bali', 'Prepared catering delivered to Bali villas and venues for low-effort lunches, staff meals, and casual group dining. myCHEF.id sends ready-to-serve dishes with delivery coordination and reheating guidance across Bali.', PAGE_URL),
           offerSchema('Family Dinner Drop-Off', 350000, 'IDR', PAGE_URL),
           offerSchema('Dinner Party Drop-Off', 500000, 'IDR', PAGE_URL),

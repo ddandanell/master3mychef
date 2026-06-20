@@ -223,6 +223,43 @@ export default function ServiceButlersPage() {
         </div>
       </section>
 
+      {/* Content depth section: Why Butler Service in Bali */}
+      <section className="py-12 bg-[#FAFAF8] border-t border-[#E8E6E3]">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mb-6">Why Hire a Private Butler for Your Bali Villa?</h2>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            A private butler in Bali is not a luxury reserved for five-star hotels. Many of Bali's finest private villas come without on-site staff, or with minimal housekeeping only. A dedicated butler fills the gap — managing your household, anticipating your needs, and coordinating with vendors, drivers, and local suppliers so your group never has to think about logistics.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            The difference between a good Bali villa stay and an extraordinary one is almost always the quality of the service around you. A myCHEF butler arrives briefed on your group's preferences — dietary needs, wake-up times, excursion plans, wine preferences — and runs the villa like a silent, professional machine in the background. Our Indonesian butlers are trained to international hospitality standards and understand both the warmth of Balinese service culture and the discretion required by high-net-worth guests.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed">
+            Whether you're staying for a weekend celebration or a two-week private retreat, a butler transforms your villa from beautiful accommodation into a fully managed private residence experience.
+          </p>
+
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">What's Included in Your Butler Service Experience</h2>
+          <ul className="space-y-3 text-[#4A4745]">
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Arrival greeting and orientation:</strong> Your butler welcomes guests, handles luggage, gives a villa tour, and briefs the group on facilities, house rules, and local recommendations.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Daily household management:</strong> Morning setup, mid-day checks, and evening preparation. The villa is always ready — towels, amenities, pool area, and common spaces maintained throughout the day.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Meal coordination:</strong> Butler works alongside your private chef or organises food delivery, restaurant reservations, and market runs based on group preferences.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Vendor and driver liaison:</strong> Transport, activity bookings, spa treatments, equipment rentals — the butler handles coordination so guests experience Bali without the admin.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Beverage and snack service:</strong> Refreshments prepared and served throughout the day. Pool-side drinks, afternoon fruit platters, evening cocktail setup.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Event support:</strong> For villa celebrations — birthday dinners, anniversary evenings, or group gatherings — the butler manages setup, guest arrival, and coordination with the catering team.</span></li>
+          </ul>
+
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">Butler Service Pricing in Bali</h2>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            Butler hire in Bali is priced per day, with rates reflecting the hours covered and scope of household responsibility. A Day Butler — covering 8 hours of active service — starts at <strong className="text-[#1A1A1A]">IDR 1,200,000 per day</strong>, suitable for villa stays, family holidays, and smaller groups needing dependable daily support.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            A Residence Butler — available for 12 hours per day and covering full household management including vendor coordination, inventory, and event support — is priced from <strong className="text-[#1A1A1A]">IDR 2,500,000 per day</strong>. This tier is recommended for extended stays, high-net-worth guests, and private villa weeks where quality of life depends on everything running invisibly well.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed">
+            For weddings and corporate events requiring a dedicated event butler, rates start at <strong className="text-[#1A1A1A]">IDR 1,800,000 per event</strong>. Multi-day bookings receive discounted daily rates. All prices are subject to 11% tax + 10% service charge (++). Contact us via WhatsApp for a same-day custom quote.
+          </p>
+        </div>
+      </section>
+
       {/* ═══════ INTERNAL LINKS ═══════ */}
       <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
         <div className="max-w-[1000px] mx-auto">

@@ -223,6 +223,43 @@ export default function ServiceHostPage() {
         </div>
       </section>
 
+      {/* Content depth section: Why Host Hire in Bali */}
+      <section className="py-12 bg-[#FAFAF8] border-t border-[#E8E6E3]">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mb-6">Why Hire a Professional Host for Your Bali Event?</h2>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            At a private villa event in Bali, the first person a guest encounters sets the tone for everything that follows. A professional event host or hostess manages that critical first impression — greeting guests with warmth and precision, managing registration and seating, directing traffic across the venue, and coordinating quietly with the catering and service teams to keep the event running on schedule.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            Unlike a hotel ballroom where staff are embedded in the venue, a private villa event in Bali needs its hospitality team built from scratch. Our Indonesian hosts are selected for both their presentation and their ability to manage the unexpected — a late arrival, a vendor running behind, a seating conflict — with grace and calm that guests never see. They work bilingual by default, and can be matched to your guest demographics including Mandarin, Japanese, or Arabic speaking needs.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed">
+            For weddings, corporate dinners, and milestone celebrations across Seminyak, Canggu, Ubud, and Uluwatu, a dedicated host team is what separates a good event from one guests remember years later.
+          </p>
+
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">What's Included in Your Host Service Experience</h2>
+          <ul className="space-y-3 text-[#4A4745]">
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Guest greeting and welcome:</strong> Hosts stationed at arrival points to greet every guest by name, offer a warm welcome, and ensure the entry experience matches the calibre of your event.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Registration management:</strong> Check-in lists, name tags, gift table coordination, and dietary confirmation handled on arrival without delays or confusion.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Venue direction and wayfinding:</strong> Guests directed to tables, bars, ceremony areas, and facilities confidently — no wandering, no uncertainty.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Timeline and vendor coordination:</strong> Hosts communicate with chefs, photographers, DJs, and florists to keep the event running to schedule — including calling cues for speeches, entrances, and course changes.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>VIP management:</strong> Senior hosts experienced in discreet management of high-profile guests — private arrivals, dedicated seating, special requests handled with complete discretion.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Problem resolution:</strong> Last-minute seating changes, late vendors, or unexpected guest requirements — the host team absorbs every issue before it reaches the host or the guests.</span></li>
+          </ul>
+
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">Host and Hostess Hire Pricing in Bali</h2>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            Event host hire in Bali is priced per shift, scaled to coverage level. A single Event Host for events up to 50 guests starts at <strong className="text-[#1A1A1A]">IDR 400,000 per 4-hour shift</strong> — covering guest greeting, registration, direction, and basic coordination. This is the right tier for intimate dinners, small corporate functions, and villa parties with a relaxed pace.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            For events over 50 guests or those requiring VIP management and active timeline coordination, a Senior Host is recommended at <strong className="text-[#1A1A1A]">IDR 600,000 per 6-hour shift</strong>. For large weddings, corporate galas, and conferences requiring multi-station coverage, a Host Team of four professionals is available from <strong className="text-[#1A1A1A]">IDR 2,000,000 per shift</strong>.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed">
+            All hosts arrive briefed on your event, wearing professional attire matched to your formality level. Custom branded uniforms are available for corporate events. Prices are subject to 11% tax + 10% service charge (++). Contact us via WhatsApp to discuss your event and receive a same-day quote.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
         <div className="max-w-[1000px] mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>

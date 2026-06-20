@@ -243,6 +243,43 @@ export default function ServiceWaitersPage() {
         </div>
       </section>
 
+      {/* Content depth section: Why Waiter Hire in Bali */}
+      <section className="py-12 bg-[#FAFAF8] border-t border-[#E8E6E3]">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mb-6">Why Hire Professional Waiters for Your Bali Villa Event?</h2>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            The difference between a memorable villa dinner and a stressful one often comes down to service. When guests are managing their own drinks, waiting for courses, or navigating a buffet without guidance, the host is perpetually in motion rather than present with their guests. A professional waiter team removes all of that — plates arrive at the right moment, glasses are always topped, and the host simply enjoys the evening.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            Our Indonesian waiters are trained in international service standards — French service, family-style plating, passed appetizers, multi-course sequencing. They arrive early to set the table precisely, coordinate with your private chef on course timing, and read the room throughout the night to ensure service enhances rather than interrupts the atmosphere. In a villa setting where there is no restaurant floor manager, a skilled waiter team becomes your invisible event infrastructure.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed">
+            Whether you need a single waiter for an intimate dinner of six or a full service team for a 100-person reception across Canggu, Seminyak, Ubud, or Uluwatu, myCHEF matches you with the right professionals for your event size and service style — all priced transparently in IDR.
+          </p>
+
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">What's Included in Your Waiter Hire Experience</h2>
+          <ul className="space-y-3 text-[#4A4745]">
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Table setup and mise en place:</strong> Waiters arrive 60–90 minutes before guests to lay the table, set glassware, arrange napkins, and prepare service stations — ensuring the venue looks perfect before anyone arrives.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Course timing and kitchen coordination:</strong> Waiters communicate directly with your private chef on course readiness, ensuring each plate is served at the right temperature and in the correct sequence for your menu format.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Beverage service:</strong> Water, wine, and drinks poured and managed throughout the meal — guests never wait, and never pour for themselves unless they choose to.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Dietary and allergen management:</strong> Waiters are briefed on dietary requirements per guest and serve appropriate dishes without confusion or public announcement — a critical detail for large group dinners with mixed needs.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Post-dinner table clearance:</strong> Full clearance of the dining area, washing of service items, and return of the villa to a clean, orderly state — so the host ends the evening in their own home, not a kitchen.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Professional presentation:</strong> All waiters arrive in formal service attire and maintain personal grooming standards consistent with luxury villa hospitality.</span></li>
+          </ul>
+
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">Waiter Hire Pricing in Bali</h2>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            Waiter hire in Bali is priced per shift, scaled to service level and event formality. A single Waiter for intimate dinners of up to 10 guests starts at <strong className="text-[#1A1A1A]">IDR 350,000 per 4-hour shift</strong> — covering table setup, course service, and clearance for a relaxed villa dinner. For events requiring more polished plated service, precise wine pouring, and course sequencing, a Senior Waiter is available from <strong className="text-[#1A1A1A]">IDR 500,000 per 6-hour shift</strong>.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            For larger events — weddings, corporate receptions, milestone dinners with 30 or more guests — a Waiter Team of four is recommended and available from <strong className="text-[#1A1A1A]">IDR 1,600,000 per shift</strong>. This tier covers multi-station service, high-volume course management, and dedicated beverage service across the full event floor.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed">
+            As a rule of thumb: one waiter per 8–10 guests for plated dinners, one per 15 guests for buffet or family-style events. All prices subject to 11% tax + 10% service charge (++). WhatsApp us with your guest count, event date, and service style for a precise same-day quote.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
         <div className="max-w-[1000px] mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>

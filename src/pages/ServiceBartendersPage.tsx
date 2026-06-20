@@ -223,6 +223,43 @@ export default function ServiceBartendersPage() {
         </div>
       </section>
 
+      {/* Content depth section: Why Bartender Hire in Bali */}
+      <section className="py-12 bg-[#FAFAF8] border-t border-[#E8E6E3]">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mb-6">Why Hire a Professional Bartender in Bali?</h2>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            Bali's villa event scene is unlike anywhere else in the world. Your guests expect quality — not a self-service drinks table. A professional Indonesian bartender brings the craft, equipment, and presentation that transforms a villa gathering into a genuine hospitality experience. They manage the bar from setup to breakdown, keep stock flowing, and free the host to actually enjoy the event.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            Beyond the practical, there is a social dimension. A skilled bartender becomes a natural focal point — guests gather at the bar, conversations start, the atmosphere lifts. In a villa setting where there is no restaurant or hotel team running the room, a bartender anchors the guest experience. Our Indonesian bartenders are trained to international cocktail standards, fluent in English, and experienced with the rhythms of private villa events across Seminyak, Canggu, Ubud, Uluwatu, and Jimbaran.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed">
+            Whether you need one bartender for a sunset dinner party or a full bar team for a 100-person wedding, myCHEF matches you with the right professional for your event size, style, and budget — all priced in IDR with no surprises.
+          </p>
+
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">What's Included in Your Bartender Hire Experience</h2>
+          <ul className="space-y-3 text-[#4A4745]">
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Custom cocktail menu:</strong> We design a drink menu matched to your event theme, cuisine, and guest profile — before the day, so guests receive a polished printed or digital menu.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Full bar equipment:</strong> Shakers, jiggers, strainers, muddlers, cutting boards, and tools arrive with the bartender. You don't need to source anything beyond the spirits.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Glassware and garnishes:</strong> Appropriate glassware for each cocktail type, plus garnishes (citrus, herbs, fresh fruit) prepared by the bartender on arrival.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Ice management:</strong> Ice is sourced, transported, and managed throughout the event. This matters more than most guests realise — a bartender who runs out of ice loses the bar.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Shopping list:</strong> A precise spirits and mixer list is sent in advance so you purchase exactly what is needed — no guessing, no overspend.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Bar breakdown and cleanup:</strong> The bartender packs down the bar, washes all equipment, and leaves your villa kitchen as they found it.</span></li>
+          </ul>
+
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">Bartender Hire Pricing in Bali</h2>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            Bartender hire in Bali is priced per shift, with different rates depending on service level and event complexity. Standard bartenders start at <strong className="text-[#1A1A1A]">IDR 450,000 per shift</strong> for a 4-hour engagement covering classic cocktails, beer, and wine service. Premium bartenders — who handle signature cocktails, flair techniques, and larger event volumes — are priced from <strong className="text-[#1A1A1A]">IDR 650,000 per 6-hour shift</strong>.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            For large events with 50 or more guests, a two-person bar team is recommended and available from <strong className="text-[#1A1A1A]">IDR 1,100,000 per shift</strong>. All fees cover the bartender's time, equipment, glassware, ice, and garnishes. Alcohol is purchased separately based on the shopping list we provide. Optionally, we can source all spirits and mixers for a 15% service fee.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed">
+            All prices are subject to 11% tax + 10% service charge (++). Final pricing is confirmed after we understand your event date, guest count, venue, and cocktail requirements. WhatsApp us for a fast custom quote — we respond within 2 hours.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
         <div className="max-w-[1000px] mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>

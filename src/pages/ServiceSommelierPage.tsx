@@ -223,6 +223,43 @@ export default function ServiceSommelierPage() {
         </div>
       </section>
 
+      {/* Content depth section: Why Sommelier Service in Bali */}
+      <section className="py-12 bg-[#FAFAF8] border-t border-[#E8E6E3]">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mb-6">Why Hire a Sommelier for Your Bali Villa Dinner?</h2>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            A private dinner in Bali is already an extraordinary setting — tropical garden, open-air pavilion, candlelight over a rice field or ocean view. What lifts a beautiful dinner into something genuinely memorable is the quality of what's in the glass. A certified sommelier takes the guesswork out of wine selection entirely, curating each bottle to complement the food, the occasion, and the preferences of your guests.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            Sourcing wine in Bali requires local knowledge. Import duties make wine expensive and quality inconsistent without insider access. Our sommeliers know which local distributors carry exceptional stock, which bottles represent real value in the IDR pricing landscape, and how to plan a pairing menu around what's actually available — not what looks good on paper. They can also work with your existing collection if you've brought bottles, applying expert pairing logic to what you already own.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed">
+            For anniversary dinners, wedding receptions, corporate entertaining, and milestone occasions across Seminyak, Ubud, Jimbaran, and Uluwatu, a myCHEF sommelier transforms the dining table into a complete sensory experience that guests discuss long after the evening ends.
+          </p>
+
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">What's Included in Your Sommelier Service Experience</h2>
+          <ul className="space-y-3 text-[#4A4745]">
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Menu review and pairing design:</strong> The sommelier studies your chef's menu in advance and designs a wine sequence that enhances every course — considering flavour weight, acidity, tannin, and guest preferences.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Wine sourcing and procurement:</strong> Selection of bottles from trusted Bali importers and suppliers, with recommendations at every price point. You purchase from the list or the sommelier can source directly.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Tableside service and presentation:</strong> Professional opening, decanting where appropriate, serving at correct temperature, and topping throughout the meal — handled with the timing of a Michelin-trained service.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Tasting notes and storytelling:</strong> Each wine introduced with its origin, producer story, and pairing rationale — turning the meal into a guided tasting experience for curious guests.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Non-alcoholic pairing option:</strong> For guests who do not drink, the sommelier designs a parallel pairing of juices, teas, shrubs, and zero-proof alternatives — ensuring they enjoy the full sensory intention of the meal.</span></li>
+            <li className="flex items-start gap-3"><span className="text-[#C5A028] font-bold mt-0.5">—</span><span><strong>Cellar consultation:</strong> For guests with a personal collection, the sommelier reviews your bottles and designs the optimal pairing sequence from what you already own.</span></li>
+          </ul>
+
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">Sommelier Service Pricing in Bali</h2>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            Sommelier service in Bali is priced per engagement based on the scope and scale of the event. An intimate wine pairing dinner for up to 8 guests — including a curated 4-course pairing with tableside service and tasting notes — starts at <strong className="text-[#1A1A1A]">IDR 1,200,000</strong>. This is the ideal choice for anniversary dinners, birthday celebrations, and special occasion meals in your villa.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed mb-4">
+            For larger events up to 20 guests — including weddings, corporate dinners, and milestone celebrations requiring a full event coverage with 6 or more wines, cellar consultation, and service team briefing — the full Sommelier Service package starts at <strong className="text-[#1A1A1A]">IDR 2,000,000 per event</strong>. For corporate team-building, wine club experiences, or educational tasting sessions with a regional or varietal focus, the Wine Experience package starts at <strong className="text-[#1A1A1A]">IDR 3,500,000 per session</strong>.
+          </p>
+          <p className="text-[#4A4745] leading-relaxed">
+            Wine purchase is always separate from the service fee, based on the sommelier's recommended list. All service fees are subject to 11% tax + 10% service charge (++). Contact us via WhatsApp to discuss your menu and receive a personalised wine pairing proposal.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 px-6 bg-white border-t border-[#E8E6E3]">
         <div className="max-w-[1000px] mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>

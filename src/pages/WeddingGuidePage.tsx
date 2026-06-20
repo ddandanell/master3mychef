@@ -33,7 +33,7 @@ const WEDDING_SERVICES = [
 ]
 
 const PLANNING_TIMELINE = [
-  { when: '3+ months before', what: 'Initial consultation & venue check', context: 'Discuss vision, guest count, date, and venue. <a href="/chefs" className="text-[#C5A028] hover:underline font-medium">Browse our chefs</a> and book a kitchen assessment.' },
+  { when: '3+ months before', what: 'Initial consultation & venue check', context: 'Discuss vision, guest count, date, and venue. Chef visits villa for kitchen assessment.' },
   { when: '2-3 months', what: 'Proposal & menu planning', context: 'Detailed quote, team size, menu options, timeline, and service setup.' },
   { when: '6 weeks before', what: 'Deposit & team lock', context: '50% deposit secures the date and chef team. Final guest count confirmed.' },
   { when: '2-3 weeks', what: 'Menu final approval', context: 'All dishes locked. Wines or specialty items ordered. Service timeline finalized.' },
@@ -43,7 +43,7 @@ const PLANNING_TIMELINE = [
 
 const INCLUSIONS = [
   'Executive chef + sous chef + line cooks',
-  'All ingredients (locally sourced where possible)',
+  'All ingredients (locally sourced where possible — see our catering options)',
   'Full kitchen setup and sanitation',
   'Service team (waiters, bartenders)',
   'Linens, glassware, tableware, presentation',
@@ -135,7 +135,7 @@ export default function WeddingGuidePage() {
 
       {/* Wedding Services */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-light mb-12">Wedding Service Options</h2>
+        <h2 className="text-3xl font-light mb-12">Wedding Service Options — <Link to="/chefs" className="text-[#C5A028] hover:underline text-2xl font-normal">meet our chefs</Link></h2>
         <div className="grid md:grid-cols-2 gap-6">
           {WEDDING_SERVICES.map((service, i) => (
             <div key={i} className="p-8 border border-[#DDD] rounded-lg hover:shadow-lg transition">

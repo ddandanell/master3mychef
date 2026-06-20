@@ -120,7 +120,7 @@ const FAQS = [
   },
   {
     question: 'Should I always do a trial meal?',
-    answer: "For high-stakes events (weddings, <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining</a>), yes. For casual group stays, it's optional but helpful if you're unsure about fit.",
+    answer: "For high-stakes events (weddings, fine dining), yes. For casual group stays, it's optional but helpful if you're unsure about fit.",
   },
   {
     question: 'How important are Michelin credentials?',

@@ -68,14 +68,9 @@ async function main() {
   console.log('🗺️  Generating sitemap.xml\n');
 
   const sitemap = generateSitemap();
-  const distPath = path.join(__dirname, '../dist/sitemap.xml');
   const publicPath = path.join(__dirname, '../public/sitemap.xml');
 
-  // Write to dist (prerendered output)
-  fs.writeFileSync(distPath, sitemap, 'utf-8');
-  console.log(`✅ Created: ${distPath}`);
-
-  // Write to public (dev server)
+  // Write to public/ — vite automatically copies public/ into dist/ during build
   fs.writeFileSync(publicPath, sitemap, 'utf-8');
   console.log(`✅ Created: ${publicPath}`);
 

@@ -364,6 +364,26 @@
       "source": "/catering/buffet-catering",
       "destination": "/catering/buffet",
       "permanent": true
+    },
+    {
+      "source": "/services/private-chef",
+      "destination": "/in-villa-service",
+      "permanent": true
+    },
+    {
+      "source": "/services/private-dining",
+      "destination": "/fine-dining",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/fine-dining/our-chefs",
+      "permanent": true
+    },
+    {
+      "source": "/menu",
+      "destination": "/fine-dining/menus",
+      "permanent": true
     }
   ],
   "headers": [

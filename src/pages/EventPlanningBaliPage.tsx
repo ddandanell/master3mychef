@@ -131,7 +131,7 @@ export default function EventPlanningBaliPage() {
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
-        breadcrumbSchema('Event Planning', 'https://mychef.id/blog/event-planning-bali'),
+        breadcrumbSchema('Event Planning Bali', 'https://mychef.id/blog/event-planning-bali', 'Blog', 'https://mychef.id/blog'),
       ]}
       ctaText="Plan Your Event"
       ctaSubtext="Connect with our team to discuss your dates, venue, and catering needs."

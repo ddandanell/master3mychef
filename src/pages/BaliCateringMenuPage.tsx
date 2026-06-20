@@ -131,7 +131,7 @@ export default function BaliCateringMenuPage() {
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
-        breadcrumbSchema('Catering Menus', 'https://mychef.id/blog/bali-catering-menu'),
+        breadcrumbSchema('Catering Menus Bali', 'https://mychef.id/blog/bali-catering-menu', 'Blog', 'https://mychef.id/blog'),
       ]}
       ctaText="Browse Menu Options"
       ctaSubtext="Explore catering menus and connect with our chefs."

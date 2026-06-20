@@ -184,7 +184,7 @@ const FAQS = [
   { q: 'Can we see photos from past events?', a: 'Yes. Olivia shares a private portfolio of past events matched to your type — weddings, corporate, birthdays — so you can see the quality before booking.' },
   { q: 'What if our villa has restrictions?', a: 'We work with villa managers before every event. Noise curfews, guest limits, kitchen access — we plan around every restriction so nothing surprises you on the day.' },
   { q: 'Is there a commitment to get a proposal?', a: 'No. The first consultation and proposal are free. You only commit when you approve the plan and pay the deposit.' },
-  { q: 'How does payment work?', a: '25% deposit to lock the date. 50% due 2 weeks before. Final 25% on the day. Invoiced and documented for corporate clients.' },
+  { q: 'How does payment work?', a: '50% deposit to lock the date. Remaining 50% due on the day of the event, before service begins. Invoiced and documented for corporate clients.' },
   { q: 'What if I need to cancel or reschedule?', a: 'Full refund if cancelled 30+ days ahead. 50% refund 14–30 days. Within 14 days, we apply the deposit to a rescheduled date within 6 months.' },
   { q: 'Are there hidden fees?', a: 'No. Every proposal is itemised — catering, bar, staffing, décor, AV, add-ons. You see every line item before you commit. No surprises on the day.' },
   { q: 'How do I know the food will be good?', a: 'Our executive chef Adriano trained in Modena and Tokyo. Every event menu is designed by him and executed by his team. See past event photos, read testimonials, or book a tasting.' },
@@ -715,7 +715,7 @@ export default function AuraPage() {
             {[
               { step: '01', text: 'Message Olivia' },
               { step: '02', text: 'Get proposal in 24h' },
-              { step: '03', text: 'Approve & pay 25%' },
+              { step: '03', text: 'Approve & pay 50%' },
               { step: '04', text: 'Show up & enjoy' },
             ].map((item) => (
               <div key={item.step} className="text-center">

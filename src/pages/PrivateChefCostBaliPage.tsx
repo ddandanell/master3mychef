@@ -405,7 +405,7 @@ export default function PrivateChefCostBaliPage() {
               {
                 step: '5',
                 title: 'Account for the Deposit',
-                body: 'myCHEF requires a 25% deposit to confirm your booking date and team. The remaining 75% is due 48 hours before the event. Plan your payment timing accordingly.',
+                body: 'myCHEF requires a 50% deposit to confirm your booking date and team. The remaining 50% is due 48 hours before the event. Plan your payment timing accordingly.',
               },
             ].map((item) => (
               <div key={item.step} className="flex gap-6 items-start">
@@ -531,8 +531,8 @@ export default function PrivateChefCostBaliPage() {
                 detail: 'Within 24 hours, we send a detailed proposal with menu options, staffing plan, pricing breakdown (all-inclusive or ++ clearly marked), and availability confirmation.',
               },
               {
-                step: '3. Confirm with 25% deposit',
-                detail: 'Once you approve the proposal, a 25% deposit secures your chef team and date. We accept bank transfer, credit card, and most major payment methods.',
+                step: '3. Confirm with 50% deposit',
+                detail: 'Once you approve the proposal, a 50% deposit secures your chef team and date. We accept bank transfer, credit card, and most major payment methods.',
               },
               {
                 step: '4. Menu refinement',

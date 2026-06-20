@@ -100,7 +100,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/book',
     title: 'Book a Private Chef Bali | Reserve Your Villa Dining',
     description:
-      'Book a private chef, catering, event or staffing in Bali. Same-day WhatsApp confirmation and a 25% deposit secure your date.',
+      'Book a private chef, catering, event or staffing in Bali. Same-day WhatsApp confirmation and a 50% deposit secure your date.',
     canonical: `${SITE}/book`,
     h1: 'Book Your Experience',
     ogImage: `${SITE}/generated/book-hero.webp`,

@@ -205,7 +205,7 @@ const SECTIONS = [
 const FAQS = [
   { question: 'What does "++" mean in your pricing?', answer: '"++" means service charge (typically 10%) and government tax (11%) are added to the base price. For example, IDR 2,200,000++ becomes approximately IDR 2,662,000 per person.' },
   { question: 'Are groceries included in the price?', answer: 'For fine dining and events, ingredients are included in the per-person price. For villa chef catering, groceries are billed at cost with receipts — we do not markup ingredients.' },
-  { question: 'Do you require a deposit?', answer: 'Yes. A 25% deposit locks your date. Balance is due 3 days before the event. We accept bank transfer (IDR or USD), Wise, and credit card via secure link.' },
+  { question: 'Do you require a deposit?', answer: 'Yes. A 50% deposit locks your date. Balance is due 3 days before the event. We accept bank transfer (IDR or USD), Wise, and credit card via secure link.' },
   { question: 'What is your cancellation policy?', answer: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date. No-shows forfeit the deposit.' },
   { question: 'Do you charge extra for dietary restrictions?', answer: 'No. Gluten-free, vegan, halal, nut allergies, pregnancy-friendly — we accommodate all dietary needs at no extra cost. Just tell us when booking.' },
   { question: 'Is there a minimum guest count?', answer: 'Fine dining: 4 guests minimum (2 for romantic dinners). BBQ: 10 guests. Buffet: 15 guests. Villa chef: no minimum, 4-hour minimum booking.' },

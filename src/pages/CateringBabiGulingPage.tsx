@@ -97,7 +97,7 @@ const HOW_IT_WORKS = [
   { step: '02', title: 'Send details', desc: 'Date, area, guest count.', icon: Calendar },
   { step: '03', title: 'Confirm menu', desc: 'Pork-based menu accepted.', icon: Utensils },
   { step: '04', title: 'Confirm setup', desc: 'Delivery or service setup.', icon: Truck },
-  { step: '05', title: 'Pay deposit', desc: '25% to confirm booking.', icon: CreditCard },
+  { step: '05', title: 'Pay deposit', desc: '50% to confirm booking.', icon: CreditCard },
   { step: '06', title: 'We prepare', desc: 'Whole-pig prep and timing.', icon: ChefHat },
   { step: '07', title: 'Food served', desc: 'Delivered or served at event.', icon: Sparkles },
 ]

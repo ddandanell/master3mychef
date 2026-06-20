@@ -389,7 +389,7 @@ export default function QuoteFunnel() {
             <div className="bg-[#F5F3EF] border border-[#E5E3E0] rounded-2xl p-5 text-sm">
               <p className="font-medium text-[#1A1A1A] mb-2">Deposit & cancellation</p>
               <ul className="space-y-1 text-[#4A4745]">
-                <li>• 25% deposit confirms the booking and locks the chef.</li>
+                <li>• 50% deposit confirms the booking and locks the chef.</li>
                 <li>• Full refund 14+ days before. 50% refund 7–13 days. No refund under 7 days.</li>
                 <li>• Remaining 75% paid when the chef arrives at your villa, before service begins.</li>
               </ul>

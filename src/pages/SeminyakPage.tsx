@@ -176,7 +176,7 @@ export default function SeminyakPage() {
               'Menus that rival Petitenget & Oberoi\'s best restaurants',
               'Full villa party service: chef, waitstaff, bartenders',
               'HACCP-certified food safety practices',
-              '25% deposit to confirm — balance 48h before event',
+              '50% deposit to confirm — balance 48h before event',
               'WhatsApp response within 2 hours (07:00–22:00 WITA)',
               'Bring our own equipment — no villa kitchen surprises',
               'Indonesian chefs trained to international culinary standards',

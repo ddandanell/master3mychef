@@ -84,7 +84,7 @@ const HOW_IT_WORKS = [
   { step: '01', title: 'Choose package', desc: 'Family, dinner party, or grazing.', icon: Package },
   { step: '02', title: 'Send details', desc: 'Date, time, area, guest count.', icon: Calendar },
   { step: '03', title: 'Confirm dietary', desc: 'Vegetarian, gluten-free, etc.', icon: Utensils },
-  { step: '04', title: 'Pay deposit', desc: '25% to confirm your order.', icon: CreditCard },
+  { step: '04', title: 'Pay deposit', desc: '50% to confirm your order.', icon: CreditCard },
   { step: '05', title: 'We prepare', desc: 'Fresh food cooked that day.', icon: ChefHat },
   { step: '06', title: 'Delivered', desc: 'In your selected 90-min window.', icon: Truck },
   { step: '07', title: 'You serve', desc: 'Reheat, plate, and enjoy privately.', icon: Sparkles },

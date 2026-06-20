@@ -159,7 +159,7 @@ export default function BukitPeninsulaPage() {
               'Cliff-access villa specialists with local logistics knowledge',
               'Direct sourcing from Padang-Padang and Bingin fish landings',
               'HACCP-certified kitchen practices, same-day food safety',
-              '25% deposit to secure your date — balance 48h before event',
+              '50% deposit to secure your date — balance 48h before event',
               'WhatsApp response within 2 hours (07:00–22:00 WITA)',
               'Full service team: chefs, waitstaff, sommelier on request',
               'Indonesian chefs trained to international culinary standards',

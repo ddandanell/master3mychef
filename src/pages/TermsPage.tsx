@@ -7,8 +7,8 @@ import SectionHeader from '@/components/catering/SectionHeader'
 const PAYMENT_RULES = [
   {
     icon: CreditCard,
-    title: 'Deposit: 25% to Confirm',
-    desc: 'A 25% deposit of the total amount is required to confirm and secure your booking. This locks your date and chef.',
+    title: 'Deposit: 50% to Confirm',
+    desc: 'A 50% deposit of the total amount is required to confirm and secure your booking. This locks your date and chef.',
   },
   {
     icon: CheckCircle,
@@ -36,7 +36,7 @@ const CANCELLATION_TIERS = [
 const FAQS = [
   {
     q: 'What are myCHEF terms of service?',
-    a: 'Our terms cover booking deposits, payment schedules, cancellation and refund policies, changes to bookings, and legal terms governed by Indonesian law. A 25% deposit is required to confirm your booking, with the balance paid on arrival.',
+    a: 'Our terms cover booking deposits, payment schedules, cancellation and refund policies, changes to bookings, and legal terms governed by Indonesian law. A 50% deposit is required to confirm your booking, with the balance paid on arrival.',
   },
   {
     q: 'What happens if I break the terms?',
@@ -120,7 +120,7 @@ export default function TermsPage() {
               <div className="text-white/[60%] text-sm leading-relaxed space-y-4">
                 <div className="flex items-start gap-4 p-4 rounded-xl border border-[#C5A028]/20" style={{ background: 'rgba(212,175,55,0.05)' }}>
                   <div className="w-10 h-10 rounded-full bg-[#C5A028]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#C5A028] text-sm font-bold">25%</span>
+                    <span className="text-[#C5A028] text-sm font-bold">50%</span>
                   </div>
                   <div>
                     <p className="text-white/[80%] font-medium mb-1">Deposit to Confirm</p>
@@ -129,7 +129,7 @@ export default function TermsPage() {
                 </div>
                 <div className="flex items-start gap-4 p-4 rounded-xl border border-white/10">
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-white/[60%] text-sm font-bold">75%</span>
+                    <span className="text-white/[60%] text-sm font-bold">50%</span>
                   </div>
                   <div>
                     <p className="text-white/[80%] font-medium mb-1">Balance on Arrival</p>

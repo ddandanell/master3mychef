@@ -115,7 +115,7 @@ const FAQS = [
   { q: 'Can menus be branded?', a: 'Yes. We offer branded menu cards, custom signage, and themed presentation for product launches, company milestones, and branded events.' },
   { q: 'How far in advance should we book?', a: 'For corporate events, 2–4 weeks is ideal. For large conferences (100+ guests), 1–2 months helps us secure the best team and plan logistics.' },
   { q: 'Do you provide staff uniforms?', a: 'Yes. All service staff wear professional black uniforms. Kitchen teams wear chef coats. We can match specific dress codes on request.' },
-  { q: 'What payment terms do you offer?', a: '25% deposit to confirm, balance due 7 days before the event. For regular corporate clients, we offer monthly billing and net-14 terms.' },
+  { q: 'What payment terms do you offer?', a: '50% deposit to confirm, balance due 7 days before the event. For regular corporate clients, we offer monthly billing and net-14 terms.' },
 ]
 
 export default function CateringCorporatePage() {

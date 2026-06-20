@@ -159,7 +159,7 @@ export default function SanurPage() {
               'Sunrise breakfast service — arrive before you wake',
               'Sindhu Market sourcing for fresh daily ingredients',
               'HACCP-certified kitchen practices, same-day food safety',
-              '25% deposit to secure your date — balance 48h before event',
+              '50% deposit to secure your date — balance 48h before event',
               'WhatsApp response within 2 hours (07:00–22:00 WITA)',
               'Full service team: chefs, waitstaff, breakfast specialists',
               'Indonesian chefs trained to international culinary standards',

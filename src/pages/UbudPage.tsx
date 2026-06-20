@@ -176,7 +176,7 @@ export default function UbudPage() {
               'Traditional Balinese Babi Guling and Megibung specialists',
               'Plant-based, raw, gluten-free, and Ayurvedic menus available',
               'HACCP-certified food safety practices',
-              '25% deposit to confirm — balance 48h before event',
+              '50% deposit to confirm — balance 48h before event',
               'WhatsApp response within 2 hours (07:00–22:00 WITA)',
               'Multi-day retreat full-board programmes available',
               'Indonesian chefs with deep Balinese culinary heritage',

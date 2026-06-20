@@ -176,7 +176,7 @@ export default function PererenanPage() {
               'Weekly chef packages for multi-day and long-stay guests',
               'Direct sourcing from Canggu local markets and organic suppliers',
               'HACCP-certified kitchen practices, same-day food safety',
-              '25% deposit to secure your date — balance 48h before event',
+              '50% deposit to secure your date — balance 48h before event',
               'WhatsApp response within 2 hours (07:00–22:00 WITA)',
               'Full service team: chefs, waitstaff, breakfast specialists',
               'Indonesian chefs trained to international culinary standards',

@@ -283,7 +283,7 @@ const HOW_IT_WORKS = [
   { step: '02', title: 'Send details', desc: 'Share date, area, guest count, and any dietary needs.', icon: Calendar },
   { step: '03', title: 'Add extras', desc: 'Bartender, Wagyu upgrade, gluten-free, plated service.', icon: Sparkles },
   { step: '04', title: 'Confirm price', desc: 'We send final quote including travel fees and add-ons.', icon: CreditCard },
-  { step: '05', title: 'Pay deposit', desc: '25% deposit to lock your date. Balance due on the day.', icon: ShieldCheck },
+  { step: '05', title: 'Pay deposit', desc: '50% deposit to lock your date. Balance due on the day.', icon: ShieldCheck },
   { step: '06', title: 'We handle everything', desc: 'Chef arrives, cooks, serves, and cleans up. You relax.', icon: ChefHat },
 ]
 
@@ -303,7 +303,7 @@ const FAQS = [
   { q: 'Do you bring equipment?', a: 'Yes. We bring grills, chafing dishes, tables, linens, cutlery, glassware, and everything needed for service.' },
   { q: 'Do you clean up after the event?', a: 'Yes. Full cleanup is included in all serviced packages (BBQ, buffet, plated). Drop-off does not include cleanup.' },
   { q: 'Do you charge travel fees?', a: 'Travel fees apply for areas outside Seminyak/Canggu: IDR 250,000 to 700,000 depending on distance and event size.' },
-  { q: 'How much deposit is required?', a: 'A 25% deposit is required to confirm your booking. The balance is due on the day of the event.' },
+  { q: 'How much deposit is required?', a: 'A 50% deposit is required to confirm your booking. The balance is due on the day of the event.' },
   { q: 'How far in advance should I book?', a: 'We recommend 3-7 days for BBQ and buffet. 2+ weeks for weddings and large events. Drop-off can often be arranged next-day if ordered by 4pm.' },
   { q: 'Is this a real chef or just delivered food?', a: 'A real chef grills at your villa. Not pre-cooked. Not delivered from a kitchen. Live fire, your pool, your garden. The chef arrives 3 hours early, preps everything on site, and serves course by course.' },
   { q: 'How do I know the food is safe?', a: 'All chefs are food-safety certified. We use separate prep for allergies. We have served 500+ villa events with a strong safety record. Every ingredient is purchased fresh the morning of your event.' },

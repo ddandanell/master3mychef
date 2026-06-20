@@ -164,7 +164,7 @@ export default function JakartaPage() {
               Jakarta is one of Southeast Asia's most demanding markets for private dining. With a population of 13 million and a growing community of executives, diplomats, and international families, the city expects the same standards you would find in Singapore or Dubai — but the private chef industry here remains fragmented and inconsistent.
             </p>
             <p className="mb-4 leading-relaxed">
-              myCHEF brings a different model to Jakarta. Every chef on our team is Indonesian, deeply familiar with local ingredients and culinary traditions, and trained to international Michelin-standard protocols. We combine this with the operational infrastructure we have built across 12,000+ events in Bali — structured menus, vetted suppliers, professional service staff, and a 25% deposit booking system that protects both client and chef.
+              myCHEF brings a different model to Jakarta. Every chef on our team is Indonesian, deeply familiar with local ingredients and culinary traditions, and trained to international Michelin-standard protocols. We combine this with the operational infrastructure we have built across 12,000+ events in Bali — structured menus, vetted suppliers, professional service staff, and a 50% deposit booking system that protects both client and chef.
             </p>
             <p className="mb-0 leading-relaxed">
               Whether you are hosting a board dinner in SCBD, a family celebration in Pondok Indah, or a large-scale corporate gala, our Jakarta team delivers the same reliability and culinary quality our Bali clients have trusted since 2019.
@@ -176,7 +176,7 @@ export default function JakartaPage() {
               'All-Indonesian chef team — trained to international standards',
               'Fluent in English and Bahasa Indonesia',
               'HACCP-certified kitchen practices',
-              '25% deposit to confirm your date — balance 48h before event',
+              '50% deposit to confirm your date — balance 48h before event',
               'WhatsApp response within 2 hours (07:00–22:00 WIB)',
               'Custom menus for every dietary requirement at no extra cost',
               'Full service team: chefs, waitstaff, bartenders',

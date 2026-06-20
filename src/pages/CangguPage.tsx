@@ -176,7 +176,7 @@ export default function CangguPage() {
               'Specialists in retreat catering and multi-day meal programmes',
               'Full dietary flexibility: vegan, gluten-free, paleo, raw',
               'HACCP-certified food safety practices',
-              '25% deposit to confirm — balance 48h before event',
+              '50% deposit to confirm — balance 48h before event',
               'WhatsApp response within 2 hours (07:00–22:00 WITA)',
               'All ingredients sourced at cost — fully transparent pricing',
               'Indonesian chefs trained to international culinary standards',

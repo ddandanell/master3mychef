@@ -58,7 +58,7 @@ const HOW_IT_WORKS = [
   { step: '01', title: 'Choose Your Service', desc: 'Select fine dining, catering, events, service staff, or long-term staffing.' },
   { step: '02', title: 'Message Us', desc: 'WhatsApp your dates, location, and guest count. We reply within the hour.' },
   { step: '03', title: 'Receive Proposal', desc: 'We send a detailed proposal with menu, pricing, and availability within 24 hours.' },
-  { step: '04', title: 'Confirm & Enjoy', desc: 'Pay a 25% deposit to lock your date. We handle everything else.' },
+  { step: '04', title: 'Confirm & Enjoy', desc: 'Pay a 50% deposit to lock your date. We handle everything else.' },
 ]
 
 export default function BookPage() {
@@ -99,7 +99,7 @@ export default function BookPage() {
               Choose the service that fits your occasion. We confirm same-day via WhatsApp and build every experience around your preferences.
             </p>
             <div className="flex flex-wrap gap-3">
-              {['Same-Day Confirmation', '25% Deposit', 'Full Refund 14+ Days', 'Dietary Flexibility'].map((h) => (
+              {['Same-Day Confirmation', '50% Deposit', 'Full Refund 14+ Days', 'Dietary Flexibility'].map((h) => (
                 <span key={h} className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full">
                   <Check className="w-3.5 h-3.5 text-[#C5A028]" /> {h}
                 </span>

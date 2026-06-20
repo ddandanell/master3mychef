@@ -316,11 +316,6 @@
       "permanent": true
     },
     {
-      "source": "/blog/private-chef-vs-restaurant-bali",
-      "destination": "/catering",
-      "permanent": true
-    },
-    {
       "source": "/private-chef-booking-indonesia",
       "destination": "/quote",
       "permanent": true

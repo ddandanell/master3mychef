@@ -200,7 +200,7 @@ export default function PrivateChefCostBaliPage() {
               Get Your Custom Quote
             </a>
             <Link
-              to="/help/pricing"
+              to="/pricing"
               className="inline-flex items-center gap-2 border border-white/20 text-white px-6 py-3 rounded hover:border-[#C5A028] hover:text-[#C5A028] transition-colors text-sm uppercase tracking-wider"
             >
               Detailed Pricing Guide
@@ -269,7 +269,7 @@ export default function PrivateChefCostBaliPage() {
         {/* Section 2: What's Included */}
         <section className="mb-16">
           <h2 className="text-3xl font-light mb-2">What's Included in the Price</h2>
-          <p className="text-[#666] mb-8">When you book a private chef through myCHEF, pricing is all-inclusive — no surprise extra charges on the day.</p>
+          <p className="text-[#666] mb-8">When you book a <Link to="/fine-dining/private-chef-bali" className="text-[#C5A028] hover:underline">private chef</Link> through myCHEF, pricing is all-inclusive — no surprise extra charges on the day.</p>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -359,7 +359,7 @@ export default function PrivateChefCostBaliPage() {
 
             <div className="bg-white border border-[#E8E8E0] rounded-lg p-6">
               <div className="flex items-start justify-between gap-4 mb-3">
-                <h3 className="font-semibold text-lg">Corporate Team Retreat — 25 Guests, Ubud</h3>
+                <h3 className="font-semibold text-lg"><Link to="/events/retreats" className="hover:text-[#C5A028] transition-colors">Corporate Team Retreat</Link> — 25 Guests, Ubud</h3>
                 <span className="bg-[#C5A028]/10 text-[#C5A028] text-sm font-semibold px-3 py-1 rounded whitespace-nowrap">IDR 18.5M / day</span>
               </div>
               <p className="text-[#666]">3 days, full board: breakfast, working lunch, gala dinner. 4 chefs + 3 servers rotating. Custom dietary plans, daily menu variation, Balinese welcome ceremony dinner on day 1.</p>
@@ -367,7 +367,7 @@ export default function PrivateChefCostBaliPage() {
 
             <div className="bg-white border border-[#E8E8E0] rounded-lg p-6">
               <div className="flex items-start justify-between gap-4 mb-3">
-                <h3 className="font-semibold text-lg">Beach Wedding — 80 Guests, Uluwatu</h3>
+                <h3 className="font-semibold text-lg"><Link to="/events/weddings" className="hover:text-[#C5A028] transition-colors">Beach Wedding</Link> — 80 Guests, Uluwatu</h3>
                 <span className="bg-[#C5A028]/10 text-[#C5A028] text-sm font-semibold px-3 py-1 rounded whitespace-nowrap">IDR 195M nett</span>
               </div>
               <p className="text-[#666]">5-hour evening event: cocktail hour canapes, 5-course plated dinner, live cooking station, wedding cake. 8 chefs + 10 servers. Custom menu design with 3 consultation sessions.</p>
@@ -419,6 +419,13 @@ export default function PrivateChefCostBaliPage() {
               </div>
             ))}
           </div>
+          <p className="text-[#666] mt-6 leading-relaxed">
+            Not sure which menu style suits your event?{' '}
+            <Link to="/chefs" className="text-[#C5A028] hover:underline">
+              Meet our chefs
+            </Link>{' '}
+            — each specialises in a different cuisine and event format.
+          </p>
         </section>
 
         {/* Section 6: Comparison */}
@@ -454,7 +461,10 @@ export default function PrivateChefCostBaliPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-[#666] mt-4 leading-relaxed">For groups of 4 or more, a private chef often costs the same or less than a premium restaurant dinner — while delivering a completely personalised experience at your villa.</p>
+          <p className="text-[#666] mt-4 leading-relaxed">
+            For groups of 4 or more, a private chef often costs the same or less than a premium restaurant dinner — while delivering a completely personalised experience at your villa.{' '}
+            See our full <Link to="/pricing" className="text-[#C5A028] hover:underline">pricing guide</Link> for transparent starting rates.
+          </p>
         </section>
 
         {/* CTA Mid-Article */}
@@ -569,12 +579,12 @@ export default function PrivateChefCostBaliPage() {
           <h2 className="text-2xl font-light mb-6">Related: Explore Our Services</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { label: 'Private Chef Bali', path: '/fine-dining/private-chef-bali', desc: 'Our flagship private chef service' },
-              { label: 'Event Catering Bali', path: '/catering', desc: 'Catering for events of all sizes' },
-              { label: 'Pricing Guide', path: '/help/pricing', desc: 'Full breakdown of all pricing' },
-              { label: 'Wedding Catering', path: '/events/weddings', desc: 'Luxury wedding catering in Bali' },
-              { label: 'Corporate Retreats', path: '/events/retreats', desc: 'Full-board retreat catering' },
-              { label: 'Book a Chef', path: '/quote', desc: 'Get your custom quote in 24h' },
+              { label: 'Private Chef in Bali', path: '/fine-dining/private-chef-bali', desc: 'Our flagship villa dining service — full team, full menu' },
+              { label: 'Meet Our Chefs', path: '/chefs', desc: 'Adriano and the myCHEF culinary team' },
+              { label: 'Pricing Guide', path: '/pricing', desc: 'Transparent starting prices for every service' },
+              { label: 'Wedding Catering Bali', path: '/events/weddings', desc: 'Luxury wedding catering and staffing' },
+              { label: 'Corporate Retreats', path: '/events/retreats', desc: 'Full-board retreat catering in Bali' },
+              { label: 'Get a Custom Quote', path: '/quote', desc: 'Tell us your event and get a price in 24h' },
             ].map((link) => (
               <Link
                 key={link.path}

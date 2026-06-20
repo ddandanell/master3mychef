@@ -23,6 +23,7 @@ import TrustRow from '@/components/catering/TrustRow'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { CateringRiskReversal } from '@/components/shared'
@@ -1328,6 +1329,12 @@ export default function CateringMainPage() {
       />
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="catering-main"
+        serviceType="catering"
+        label="Get a Catering Quote via WhatsApp"
+        message="Hi! I'd like a catering quote for my event in Bali. Can you help?"
+      />
     </div>
   )
 }

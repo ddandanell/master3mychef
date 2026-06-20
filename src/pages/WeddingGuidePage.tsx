@@ -1,5 +1,5 @@
 import { ArrowRight, Heart } from 'lucide-react'
-import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 
 const SITE = 'https://mychef.id'
@@ -99,6 +99,7 @@ export default function WeddingGuidePage() {
         ogImage="/og-image.webp"
         jsonLd={[
           breadcrumbSchema('Wedding Guide', canonical, 'Help', `${SITE}/help`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />
 

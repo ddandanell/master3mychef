@@ -30,6 +30,7 @@ import PressStrip from '@/components/shared/PressStrip'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import { Button } from '@/components/ui/button'
 import { StaffingRiskReversal } from '@/components/shared'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -531,6 +532,12 @@ export default function StaffingPage() {
           <BestPartnerBadge variant="dark" width={280} />
         </div>
       </section>
+      <StickyMobileCTA
+        pageSource="staffing-main"
+        serviceType="staffing"
+        label="Book Villa Staff via WhatsApp"
+        message="Hi! I'd like to book villa staff (waiters/bartenders/household) in Bali. Can you help?"
+      />
     </div>
   )
 }

@@ -275,6 +275,25 @@ export default function App() {
           <Route path="/private-chef-pondok-indah" element={<Navigate to="/jakarta" replace />} />
           <Route path="/private-chef-bsd" element={<Navigate to="/jakarta" replace />} />
 
+          {/* Bali sub-areas — consolidated to nearest location hub */}
+          {/* Canggu area */}
+          <Route path="/private-chef-bali/berawa" element={<Navigate to="/private-chef-bali/canggu" replace />} />
+          {/* Seminyak area */}
+          <Route path="/private-chef-bali/petitenget" element={<Navigate to="/private-chef-bali/seminyak" replace />} />
+          <Route path="/private-chef-bali/legian" element={<Navigate to="/private-chef-bali/seminyak" replace />} />
+          <Route path="/private-chef-bali/kerobokan" element={<Navigate to="/private-chef-bali/seminyak" replace />} />
+          <Route path="/private-chef-bali/kuta" element={<Navigate to="/private-chef-bali/seminyak" replace />} />
+          <Route path="/private-chef-bali/tanah-lot" element={<Navigate to="/private-chef-bali/seminyak" replace />} />
+          {/* Uluwatu area */}
+          <Route path="/private-chef-bali/pecatu" element={<Navigate to="/private-chef-bali/uluwatu" replace />} />
+          <Route path="/private-chef-bali/ungasan" element={<Navigate to="/private-chef-bali/uluwatu" replace />} />
+          {/* Ubud area */}
+          <Route path="/private-chef-bali/gianyar" element={<Navigate to="/private-chef-bali/ubud" replace />} />
+          <Route path="/private-chef-bali/tegallalang" element={<Navigate to="/private-chef-bali/ubud" replace />} />
+          <Route path="/private-chef-bali/tabanan" element={<Navigate to="/private-chef-bali/ubud" replace />} />
+          {/* Far east — no dedicated page, send to main hub */}
+          <Route path="/private-chef-bali/padang-bai" element={<Navigate to="/private-chef-bali" replace />} />
+
           {/* Service detail pages */}
           {SERVICE_SLUGS.map((slug) => (
             <Route key={slug} path={`/services/${slug}`} element={<ServicePage />} />

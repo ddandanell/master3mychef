@@ -16,6 +16,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20a%20wedding%20consultation.'
@@ -583,6 +584,12 @@ export default function EventsWeddingsPage() {
 
       <PressStrip />
       <TaxFooter />
+      <StickyMobileCTA
+        pageSource="events-weddings"
+        serviceType="wedding"
+        label="Plan My Wedding Menu via WhatsApp"
+        message="Hi! I'd like to plan wedding catering with myCHEF in Bali. Can you help?"
+      />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { CheckCircle, ArrowRight } from 'lucide-react'
-import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 
 const SITE = 'https://mychef.id'
 
@@ -121,6 +121,7 @@ export default function StaffingGuidePage() {
         ogImage="/og-image.webp"
         jsonLd={[
           breadcrumbSchema('Staffing Guide', canonical, 'Help', `${SITE}/help`),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />
 

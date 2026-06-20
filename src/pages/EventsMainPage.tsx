@@ -17,6 +17,7 @@ import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { EventsRiskReversal } from '@/components/shared'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 const SITE = 'https://mychef.id'
 const WA_NUMBER = 491635080236
@@ -965,6 +966,12 @@ export default function EventsMainPage() {
         title="Events Across Bali"
         subtitle="Weddings in Uluwatu. Corporate retreats in Ubud. Birthday parties in Canggu. We know the venues, vendors, and regulations that matter."
         dark
+      />
+      <StickyMobileCTA
+        pageSource="events-main"
+        serviceType="events"
+        label="Plan My Event via WhatsApp"
+        message="Hi! I'd like to plan an event with myCHEF in Bali. Can you help?"
       />
     </div>
   )

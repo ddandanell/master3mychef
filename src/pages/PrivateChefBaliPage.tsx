@@ -10,6 +10,7 @@ import SeoHead, {
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -442,6 +443,12 @@ export default function PrivateChefBaliPage() {
           ))}
         </div>
       </section>
+      <StickyMobileCTA
+        pageSource="private-chef-bali"
+        serviceType="private-chef"
+        label="Book a Private Chef via WhatsApp"
+        message="Hi! I'd like to book a private chef for my villa in Bali. Can you help?"
+      />
     </div>
   )
 }

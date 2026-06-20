@@ -70,7 +70,7 @@ const SERVICES = [
 ]
 
 export default function JakartaPage() {
-  const canonical = `${SITE}/jakarta`
+  const canonical = `${SITE}/locations/jakarta`
 
   const localBizJakarta = {
     ...localBusinessSchema,

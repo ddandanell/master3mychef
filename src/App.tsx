@@ -201,6 +201,7 @@ export default function App() {
           <Route path="/locations/denpasar" element={<DenpasarPage />} />
           <Route path="/locations/bukit" element={<BukitPeninsulaPage />} />
           <Route path="/locations/pererenan" element={<PererenanPage />} />
+          <Route path="/locations/jakarta" element={<JakartaPage />} />
           {locationPaths.filter(({ location }) => !customLocationSlugs.has(location.slug)).map(({ path }) => (
             <Route key={path} path={path} element={<AreaPage kind="area" />} />
           ))}

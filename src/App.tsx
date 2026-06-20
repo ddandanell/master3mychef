@@ -268,6 +268,17 @@ export default function App() {
               />
             }
           />
+          {/* /private-chef-bali/* — keyword-rich location hub + Tier 1 area pages */}
+          <Route path="/private-chef-bali" element={<PrivateChefBaliPage />} />
+          <Route path="/private-chef-bali/seminyak" element={<SeminyakPage />} />
+          <Route path="/private-chef-bali/canggu" element={<CangguPage />} />
+          <Route path="/private-chef-bali/uluwatu" element={<UluwatuPage />} />
+          <Route path="/private-chef-bali/ubud" element={<UbudPage />} />
+          <Route path="/private-chef-bali/jimbaran" element={<JimbaranPage />} />
+          <Route path="/private-chef-bali/nusa-dua" element={<NusaDuaPage />} />
+          <Route path="/private-chef-bali/sanur" element={<SanurPage />} />
+          <Route path="/private-chef-bali/denpasar" element={<DenpasarPage />} />
+
           {/* Jakarta sub-areas — consolidated to single Jakarta page */}
           <Route path="/private-chef-menteng" element={<Navigate to="/jakarta" replace />} />
           <Route path="/private-chef-kemang" element={<Navigate to="/jakarta" replace />} />

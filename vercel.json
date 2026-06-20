@@ -181,6 +181,11 @@
       "permanent": true
     },
     {
+      "source": "/private-chef-puri-indah",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
       "source": "/echo-beach-private-chef",
       "destination": "/locations/canggu",
       "permanent": true

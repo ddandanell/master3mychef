@@ -66,6 +66,9 @@ export const REDIRECTS: Redirect[] = [
   { from: '/pondok-indah', to: '/locations/pondok-indah', reason: 'Canonicalize to /locations/' },
   { from: '/bsd', to: '/locations/bsd', reason: 'Canonicalize to /locations/' },
 
+  // --- Jakarta area (private-chef variant) → /locations/ ---
+  { from: '/private-chef-puri-indah', to: '/locations/jakarta', reason: 'Puri Indah is a West Jakarta neighborhood — no dedicated page, redirect to Jakarta hub.' },
+
   // --- Micro-areas (private-chef variant) → /locations/ ---
   { from: '/echo-beach-private-chef', to: '/locations/canggu', reason: 'Echo Beach is in Canggu.' },
   { from: '/batu-bolong-private-chef', to: '/locations/canggu', reason: 'Batu Bolong is in Canggu.' },

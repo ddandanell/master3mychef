@@ -116,7 +116,7 @@ export default function PrivateChefCostBaliPage() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'How Much Does a Private Chef Cost in Bali? (2025 Price Guide)',
+    headline: 'How Much Does a Private Chef Cost in Bali? (2026 Price Guide)',
     description: 'Real private chef prices in Bali: villa dinners IDR 450K–800K/person, event catering IDR 600K–1.2M/person, weddings IDR 1.5M–3M/person. What\'s included, what affects cost, and how to book.',
     author: {
       '@type': 'Organization',
@@ -154,7 +154,7 @@ export default function PrivateChefCostBaliPage() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Chef Cost Bali 2025 | Real Prices & What's Included — myCHEF"
+        title="Private Chef Cost Bali 2026 | Real Prices & What's Included — myCHEF"
         description="How much does a private chef in Bali cost? Villa dinners from IDR 450K/person, events from IDR 600K, weddings from IDR 1.5M. Full breakdown of what's included."
         canonical={CANONICAL}
         ogType="article"
@@ -180,7 +180,7 @@ export default function PrivateChefCostBaliPage() {
           </nav>
 
           <div className="mb-4">
-            <span className="text-[#C5A028] text-xs uppercase tracking-[2px] font-semibold">Pricing Guide · Updated 2025</span>
+            <span className="text-[#C5A028] text-xs uppercase tracking-[2px] font-semibold">Pricing Guide · Updated 2026</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-light leading-tight mb-6">
             How Much Does a Private Chef Cost in Bali?
@@ -237,7 +237,7 @@ export default function PrivateChefCostBaliPage() {
         {/* Section 1: Full Price Table */}
         <section className="mb-16">
           <h2 className="text-3xl font-light mb-2">Private Chef Prices in Bali by Service Type</h2>
-          <p className="text-[#666] mb-8">The table below covers the five main ways you can hire a private chef or catering team in Bali. All price ranges reflect typical myCHEF bookings in 2025.</p>
+          <p className="text-[#666] mb-8">The table below covers the five main ways you can hire a private chef or catering team in Bali. All price ranges reflect typical myCHEF bookings in 2026.</p>
 
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-sm">

@@ -178,7 +178,7 @@ export default function PricingGuide() {
             Note: All prices are base rates. Final cost includes guest count, menu selection, complexity, and logistics.{' '}
             For a full cost breakdown with real booking examples,{' '}
             <Link to="/blog/private-chef-cost-bali" className="text-[#C5A028] hover:underline">
-              see our 2025 Private Chef Cost Guide →
+              see our 2026 Private Chef Cost Guide →
             </Link>
           </p>
         </div>

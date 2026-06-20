@@ -249,7 +249,7 @@ export default function CorporateEventsCateringBaliPage() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Corporate Event Catering Bali 2025 | Case Studies & Real Costs — myCHEF"
+        title="Corporate Event Catering Bali 2026 | Case Studies & Real Costs — myCHEF"
         description="Real corporate catering case studies from Bali: tech retreat (38 people, 5 days), bank exec dinner (22 guests), fashion launch (74 guests), wellness retreat (24 people, 7 days). Costs, menus, and outcomes."
         canonical={CANONICAL}
         ogType="article"
@@ -425,7 +425,7 @@ export default function CorporateEventsCateringBaliPage() {
 
       {/* Pricing table */}
       <section className="max-w-4xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-light mb-4">Corporate Catering Prices in Bali (2025)</h2>
+        <h2 className="text-3xl font-light mb-4">Corporate Catering Prices in Bali (2026)</h2>
         <p className="text-[#555] leading-relaxed mb-8 max-w-2xl">
           All prices are per person and exclude 11% government tax and 10% service charge unless stated.
           Multi-day bookings and repeat clients receive preferential pricing.

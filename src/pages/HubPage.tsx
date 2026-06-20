@@ -99,7 +99,7 @@ const JOURNAL_LINKS = [
     path: '/journal/bali-villa-dinner-party-guide',
   },
   {
-    title: 'Bali Wedding Catering Cost: What to Budget in 2025',
+    title: 'Bali Wedding Catering Cost: What to Budget in 2026',
     path: '/journal/wedding-catering-bali-cost',
   },
   {

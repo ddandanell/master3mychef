@@ -1,0 +1,236 @@
+================================================================================
+                    myCHEF PETER SYSTEM - START HERE
+================================================================================
+
+📚 DOCUMENTATION CREATED
+
+You now have complete documentation for building your AI chatbot system.
+Here's the map:
+
+================================================================================
+⭐ NEW — YOUR DAILY FILES & "WHERE DO I CHANGE X?" (added 2026-06-08)
+================================================================================
+
+  CONTROL_PANEL.md      → THE one place to change anything: Peter's name, prices,
+                          deposit %, contact info, channels, loop time. Edit here,
+                          then tell Hermes to propagate. Start here for any change.
+
+  QUESTIONS_FOR_DAVID.md → The living Q&A log. Claude/Hermes ask you things here;
+                          you answer over time. Answer the 🔴 "blocking" ones first.
+
+  WEBSITE_ALIGNMENT.md   → Live mychef.id checked against what Peter says. (Update:
+                          your site is healthy — 100+ live pages. Earlier "dead pages"
+                          was a wrong-URL false alarm, now corrected.)
+
+  FEEDBACK_APP_SPEC.md   → Spec for your private login website: review chats, give
+                          feedback, chat with Peter, calendar, upload data, + the
+                          Telegram operator alerts (Peter pings you in real time).
+
+  HERMES_BRIEFING.md     → Hand this to your developer/agent Hermes. His starting point.
+
+  setup/                 → Plain-English setup guides: VPS, EMAIL, GOOGLE_ANALYTICS,
+                          VECTOR_DB, DATABASE_AND_CRM_CONNECTIONS.
+
+  WHERE DO I CHANGE…?
+   • Peter's name / a price / deposit → CONTROL_PANEL.md
+   • Answer Peter's questions         → QUESTIONS_FOR_DAVID.md
+   • Check the website is consistent  → WEBSITE_ALIGNMENT.md
+   • How the panel/Telegram works     → FEEDBACK_APP_SPEC.md
+   • How to set up email/GA/DB/VPS    → setup/
+
+================================================================================
+ORIGINAL PLANNING DOCS
+================================================================================
+
+================================================================================
+1️⃣  README_SYSTEM_OVERVIEW.md (16 KB)
+================================================================================
+   WHO: Everyone
+   WHAT: Navigation guide + overview
+   WHEN: Read this first (5-10 minutes)
+   WHY: Explains what each document is for and where to start
+   
+   ➜ Start here if you're confused about what you're building
+   ➜ It explains the architecture with diagrams
+   ➜ It has a daily workflow example
+   ➜ It shows you the checklist for getting started
+
+================================================================================
+2️⃣  OPEN_QUESTIONS.md (16 KB)
+================================================================================
+   WHO: YOU (Business owner/manager)
+   WHAT: 25 questions you must answer before building
+   WHEN: After reading README, answer these questions
+   WHY: These answers are the blueprint for the entire system
+   
+   ➜ These are NOT technical questions
+   ➜ They're business decisions: pricing strategy, success metrics, etc
+   ➜ BLOCKING questions must be answered first:
+      • Q1: What's your definition of "80% conversion"?
+      • Q3: What's your biggest loss reason?
+      • Q10: Is WhatsApp integration ready?
+      • Q25: When do you want this live?
+   
+   ACTION: Print this, answer the blocking questions, share with Herms
+
+================================================================================
+3️⃣  SYSTEM_SETUP_REQUIREMENTS.md (27 KB)
+================================================================================
+   WHO: Herms (Developer)
+   WHAT: Complete technical specification
+   WHEN: After blocking questions answered, read this
+   WHY: Defines exactly what to build and how it connects
+   
+   ➜ Database schema (what tables, what columns)
+   ➜ Component specs (what each piece does)
+   ➜ Data flows (how data moves through system)
+   ➜ API endpoints (what to build)
+   ➜ Integration points (WhatsApp, GA4, etc)
+   ➜ File structure (where everything lives)
+   
+   ACTION: This is the "spec document" - Herms refers to this while building
+
+================================================================================
+4️⃣  IMPLEMENTATION_ROADMAP.md (17 KB)
+================================================================================
+   WHO: Herms (Developer)
+   WHAT: Step-by-step how to build it
+   WHEN: During building (follow this checklist)
+   WHY: Breaks down the build into 3 phases with clear milestones
+   
+   ➜ Phase 1 (Weeks 1-2): Database + Peter + Judge + Manual testing
+   ➜ Phase 2 (Weeks 2-3): CRM Dashboard + Website Chat + Real customers
+   ➜ Phase 3 (Weeks 3-4): WhatsApp + Email Reports + Full automation
+   
+   ➜ Each section has:
+      • Tasks to complete
+      • Time estimates
+      • Code examples
+      • Testing checklist
+      • Dependencies
+   
+   ACTION: Herms prints this, checks off boxes as building
+
+================================================================================
+                            NEXT STEPS
+================================================================================
+
+IMMEDIATE (Today):
+  1. Both of you: Read README_SYSTEM_OVERVIEW.md (10 min)
+  2. YOU: Start answering OPEN_QUESTIONS.md (45 min)
+  3. YOU: Share your answers with Herms
+  
+WEEK 1:
+  4. Herms: Read SYSTEM_SETUP_REQUIREMENTS.md (30 min)
+  5. Herms: Read IMPLEMENTATION_ROADMAP.md (30 min)
+  6. Both: Sync on blocking questions
+  7. Herms: Start Phase 1 (database + Peter agent + manual testing)
+  8. YOU: Help test with Herms (run 20-30 conversations manually)
+  
+WEEK 2-3:
+  9. Herms: Complete Phase 1, then start Phase 2 (CRM + website chat)
+  10. YOU: Begin reviewing conversations in CRM dashboard
+  11. YOU: Start giving feedback via feedback form
+  
+WEEK 3-4:
+  12. Herms: Phase 2 complete, customers can chat on website
+  13. YOU: Launch with real customers
+  14. Herms: Phase 3 (WhatsApp, email reports)
+
+================================================================================
+                          KEY QUESTIONS FOR YOU
+================================================================================
+
+Before Herms can build, he needs answers to:
+
+Q1: What's "80% conversion" mean to you?
+    - 80% of chats result in name/email captured?
+    - 80% result in booking intent?
+    - 80% result in actual booking?
+    → Your answer: _______________________
+
+Q3: What kills most deals?
+    - Price too high?
+    - Can't verify chef quality?
+    - Timeline doesn't work?
+    - Other?
+    → Your answer: _______________________
+
+Q10: Is WhatsApp integration ready?
+    - Do you have Twilio/Meta account?
+    - Do you have WhatsApp Business number?
+    → Your answer: _______________________
+
+Q25: When do you want this live?
+    - Just testing this month?
+    - Real customers on website by July 1?
+    - Full system (WhatsApp + all) by August?
+    → Your answer: _______________________
+
+════════════════════════════════════════════════════════════════════════════════
+
+DOCUMENTS SUMMARY:
+
+             What It Contains            Size    Read Time
+────────────────────────────────────────────────────────────────────────────
+README_SYSTEM_OVERVIEW.md          Navigation + diagrams              16 KB     10 min
+OPEN_QUESTIONS.md                  25 questions you must answer       16 KB     45 min
+SYSTEM_SETUP_REQUIREMENTS.md       Technical specification            27 KB     30 min
+IMPLEMENTATION_ROADMAP.md          Step-by-step build plan            17 KB     30 min
+────────────────────────────────────────────────────────────────────────────
+                                   TOTAL:                              76 KB    115 min
+
+════════════════════════════════════════════════════════════════════════════════
+
+WHO READS WHAT:
+
+You (Business Owner):
+  ✓ README_SYSTEM_OVERVIEW.md
+  ✓ OPEN_QUESTIONS.md (MUST DO)
+  → Share answers with Herms
+
+Herms (Developer):
+  ✓ README_SYSTEM_OVERVIEW.md
+  ✓ SYSTEM_SETUP_REQUIREMENTS.md (MUST DO)
+  ✓ IMPLEMENTATION_ROADMAP.md (MUST DO)
+  → Ask you the blocking questions first
+
+Both Together:
+  ✓ README_SYSTEM_OVERVIEW.md
+  → Sync on the 4 blocking questions
+  → Discuss Phase 1 expectations
+
+════════════════════════════════════════════════════════════════════════════════
+
+                          WHAT'S YOUR NEXT MOVE?
+
+Option A: You need more clarity
+  → Read README_SYSTEM_OVERVIEW.md first (it explains everything)
+
+Option B: You're ready to decide
+  → Open OPEN_QUESTIONS.md and answer the BLOCKING questions
+  → Share your answers with Herms
+  → Schedule a sync meeting with Herms to confirm
+
+Option C: Herms is ready to start building
+  → Herms: Read SYSTEM_SETUP_REQUIREMENTS.md
+  → Herms: Read IMPLEMENTATION_ROADMAP.md
+  → Herms: Ask you the blocking questions
+  → Both: Confirm Phase 1 scope
+  → Herms: Start Phase 1 (database setup)
+
+════════════════════════════════════════════════════════════════════════════════
+
+All files are in: /Users/openclaw/Downloads/myChef-AI/
+
+Open them in your text editor or terminal:
+  cat /Users/openclaw/Downloads/myChef-AI/README_SYSTEM_OVERVIEW.md
+
+════════════════════════════════════════════════════════════════════════════════
+
+Questions? 
+  1. Check the relevant document (likely README_SYSTEM_OVERVIEW.md)
+  2. Look in /Downloads/myChef-AI/KUNDE TEST/ folder for examples
+  3. Review the existing system architecture there
+
+Good luck! 🚀

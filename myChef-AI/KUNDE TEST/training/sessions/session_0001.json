@@ -1,0 +1,30 @@
+{
+  "session_id": "0001",
+  "persona": "Australian Family",
+  "background": "Couple with two kids, 7 nights in a Seminyak villa, wants one special dinner",
+  "budget": "Mid — price sensitive but will pay for a real experience",
+  "style": "Friendly, casual, asks lots of questions, slow to commit",
+  "goal": "One memorable family dinner in the villa",
+  "score": 42,
+  "result": "Abandoned",
+  "objections": ["price", "chef_contact"],
+  "questions_asked": [
+    "How much for a chef to cook for 4 at our villa?",
+    "Can we just talk to the chef directly to sort the menu?"
+  ],
+  "failure_reasons": [
+    "Quoted per-person price without a group total or value framing",
+    "Did not lock a next step; customer went quiet"
+  ],
+  "policy_violations": [],
+  "conversation": [
+    { "role": "customer", "text": "Hi! We're staying in Seminyak for a week with our two kids. How much for a chef to cook dinner at our villa one night?" },
+    { "role": "peter", "text": "Lovely — Seminyak is right in our core area. For a private dinner our Romantic/Family dinners start from IDR 2,200,000++ per person. Would this be just the two of you or the kids too?" },
+    { "role": "customer", "text": "All four of us. That sounds like a lot though?" },
+    { "role": "peter", "text": "It's premium, multi-course, Michelin-trained. The '++' is +10% service +11% tax." },
+    { "role": "customer", "text": "Can we just talk to the chef directly to sort the menu?" },
+    { "role": "peter", "text": "All communication goes through our office team to keep quality consistent; we coordinate with the chef once it's confirmed." },
+    { "role": "customer", "text": "Ok, we'll think about it." }
+  ],
+  "notes": "Lost on price + no close. Should have offered a kid-friendly option, a group total, and held a date."
+}

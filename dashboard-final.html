@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myCHEF Dashboard - Final</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0f;
+      color: #e0e0e0;
+      padding: 40px;
+    }
+    .container { max-width: 1400px; margin: 0 auto; }
+    h1 { 
+      color: #e94560; 
+      font-size: 2.5rem; 
+      margin-bottom: 8px;
+    }
+    .subtitle { 
+      color: #666; 
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+    .grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .card {
+      background: #13131f;
+      border: 1px solid #1e1e2e;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .card h2 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .metric {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #1e1e2e;
+    }
+    .metric:last-child { border-bottom: none; }
+    .metric-label { color: #888; }
+    .metric-value { 
+      font-weight: 600; 
+      font-size: 1.1rem;
+    }
+    .status-ok { color: #16c79a; }
+    .status-warn { color: #f9a826; }
+    .status-error { color: #e94560; }
+    .status-review { color: #4a90e2; }
+    
+    .issue-list {
+      margin-top: 16px;
+    }
+    .issue-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #1e1e2e;
+      font-size: 0.9rem;
+    }
+    .issue-item:last-child { border-bottom: none; }
+    .issue-url { color: #888; }
+    .issue-status { color: #e94560; }
+    
+    .success-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0;
+      color: #16c79a;
+    }
+    
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #1e1e2e;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔥 myCHEF Dashboard</h1>
+    <p class="subtitle">Final version - Med rigtig audit data | 4. juni 2026</p>
+    
+    <div class="grid">
+      <div class="card">
+        <h2>📊 Overblik</h2>
+        <div class="metric">
+          <span class="metric-label">Sider i alt</span>
+          <span class="metric-value status-review">173</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Audit checks</span>
+          <span class="metric-value status-ok">7/7 kørt</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Problemer fundet</span>
+          <span class="metric-value status-error">38</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Status</span>
+          <span class="metric-value status-error">Fix before shipping</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h2>✅ Bestået</h2>
+        <div class="success-item">
+          <span>✓</span>
+          <span>Meta titles ≤ 65 chars</span>
+        </div>
+        <div class="success-item">
+          <span>✓</span>
+          <span>Meta descriptions 80-160 chars</span>
+        </div>
+        <div class="success-item">
+          <span>✓</span>
+          <span>OG images findes</span>
+        </div>
+        <div class="success-item">
+          <span>✓</span>
+          <span>Ingen console.log i produktion</span>
+        </div>
+        <div class="success-item">
+          <span>✓</span>
+          <span>Ingen www.mychef.id i koden</span>
+        </div>
+        <div class="success-item">
+          <span>✓</span>
+          <span>Alle landing pages har indhold</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h2>❌ Fejl (38)</h2>
+        <div class="metric">
+          <span class="metric-label">Redirected URLs</span>
+          <span class="metric-value status-error">38</span>
+        </div>
+        <p style="color: #888; margin-top: 12px; font-size: 0.9rem;">
+          Alle fejl er redirected URLs i sitemap. 
+          Sider som /seminyak redirecter til /locations/seminyak.
+        </p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>🚨 Redirected URLs der skal fixes</h2>
+      <div class="issue-list">
+        <div class="issue-item">
+          <span class="issue-url">/seminyak → /locations/seminyak</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/canggu → /locations/canggu</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/uluwatu → /locations/uluwatu</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/ubud → /locations/ubud</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/nusa-dua → /locations/nusa-dua</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/jimbaran → /locations/jimbaran</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/sanur → /locations/sanur</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/berawa → /locations/berawa</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/pererenan → /locations/pererenan</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/bukit → /locations/bukit</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/kuta → /locations/kuta</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/legian → /locations/legian</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/kerobokan → /locations/kerobokan</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/petitenget → /locations/petitenget</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/tanah-lot → /locations/tanah-lot</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/tabanan → /locations/tabanan</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/denpasar → /locations/denpasar</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/gianyar → /locations/gianyar</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/tegallalang → /locations/tegallalang</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/amed → /locations/amed</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/lovina → /locations/lovina</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/candidasa → /locations/candidasa</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/padang-bai → /locations/padang-bai</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/ungasan → /locations/ungasan</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/pecatu → /locations/pecatu</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/jakarta → /locations/jakarta</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/menteng → /locations/menteng</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/kemang → /locations/kemang</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/scbd → /locations/scbd</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/pondok-indah → /locations/pondok-indah</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/bsd → /locations/bsd</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/private-chef-breakfast-bali</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/guide/bali-cuisine-glossary</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/blog/private-chef-bali-cost-breakdown-2026</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/blog/best-bali-villas-private-chef-kitchen</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/blog/wedding-rehearsal-dinner-bali</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/blog/yoga-retreat-chef-bali-meal-planning</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+        <div class="issue-item">
+          <span class="issue-url">/blog/private-chef-vs-restaurant-bali</span>
+          <span class="issue-status">Redirect</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card" style="margin-top: 20px;">
+      <h2>📋 Anbefaling</h2>
+      <p style="color: #e0e0e0; line-height: 1.6;">
+        <strong>Problem:</strong> 38 URLs i sitemap redirecter til /locations/* versioner.<br><br>
+        <strong>Løsning:</strong> Opdater sitemap til at pege på de rigtige URLs (/locations/* i stedet for /).<br><br>
+        <strong>Eller:</strong> Fjern redirects og lad /seminyak etc. være selvstændige sider.<br><br>
+        <strong>Status:</strong> David beslutning nødvendig.
+      </p>
+    </div>
+    
+    <div class="footer">
+      <p>Dashboard baseret på audit-quality.ts og audit-images.ts</p>
+      <p>Kør: cd app && npm run audit</p>
+    </div>
+  </div>
+</body>
+</html>

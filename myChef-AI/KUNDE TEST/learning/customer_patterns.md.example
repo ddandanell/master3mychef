@@ -1,0 +1,13 @@
+# (example reference — safe to delete)
+# This mirrors the live customer_patterns.md format so new contributors can see a filled
+# pattern without touching the real file.
+
+## Pattern #1
+Question / Behavior: Budget family asks "what's the cheapest you can do for 6 people?"
+Winning Response: "For 6, our BBQ at IDR 450,000++/person is the best value — chef, staff,
+and equipment all included, so there are no surprises. That's about IDR 3.27M all-in for the
+group. Want me to hold a date?"
+Losing Response (avoid): "Prices start at IDR 450,000++ per person." (no total, no value framing, no close)
+Booking Rate: (measure)
+Evidence: session_0002
+Why it works: converts per-person price into a concrete group total + inclusions + a close.

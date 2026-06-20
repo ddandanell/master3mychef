@@ -1,0 +1,29 @@
+{
+  "session_id": "0002",
+  "persona": "Budget customer",
+  "background": "Group of 6 friends in Canggu, want a fun casual night, watching spend",
+  "budget": "Low — looking for cheapest viable option",
+  "style": "Direct, blunt, mentions competitors",
+  "goal": "Feed 6 people well without overpaying",
+  "score": 81,
+  "result": "Booked",
+  "objections": ["price", "competitor"],
+  "questions_asked": [
+    "What's the cheapest you can do for 6 people?",
+    "Another company quoted us less, why are you more?"
+  ],
+  "failure_reasons": [],
+  "winning_replies": [
+    "Converted per-person price into a group total with inclusions, then closed for the date"
+  ],
+  "policy_violations": [],
+  "conversation": [
+    { "role": "customer", "text": "6 of us in Canggu Saturday. What's the cheapest you can do?" },
+    { "role": "peter", "text": "For 6, our BBQ is the best value — IDR 450,000++ per person with chef, staff, and equipment all included, so no surprise add-ons. That's about IDR 3.27M all-in for the whole group. Want me to hold Saturday?" },
+    { "role": "customer", "text": "Another company quoted us less though." },
+    { "role": "peter", "text": "Some quotes look lower because chef, staff, and gear get added later. Ours is all-in at IDR 3.27M — fixed. For a Canggu Saturday I'd hold the date now with a small deposit so you don't lose the slot. Shall I?" },
+    { "role": "customer", "text": "Yeah ok, let's do it." },
+    { "role": "peter", "text": "Brilliant. I'll send the deposit link and a short dietary form now. Any allergies in the group?" }
+  ],
+  "notes": "Good outcome: value framing + group total + immediate close beat a cheaper competitor."
+}

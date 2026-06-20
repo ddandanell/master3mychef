@@ -234,6 +234,7 @@ export default function PricingGuide() {
           <p className="text-white/70 mb-8">Message us with your event details and we'll send you a detailed proposal within 24 hours.</p>
           <a
             href="https://wa.me/491635080236?text=I%20need%20a%20pricing%20quote%20for..."
+            data-source="pricing-guide-cta"
             className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
           >
             Request a Quote

@@ -210,6 +210,7 @@ export default function MenuGuidePage() {
           <p className="text-white/70 mb-8">Message us with your preferences and we'll propose the perfect menu for your event.</p>
           <a
             href="https://wa.me/491635080236?text=I%20want%20to%20discuss%20menus%20for%20my%20event..."
+            data-source="menu-guide-cta"
             className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
           >
             Start Menu Discussion

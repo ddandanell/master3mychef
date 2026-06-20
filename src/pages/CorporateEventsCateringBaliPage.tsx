@@ -291,6 +291,7 @@ export default function CorporateEventsCateringBaliPage() {
               href={`https://wa.me/${PHONE.digits}?text=${WA_MSG}`}
               target="_blank"
               rel="noopener noreferrer"
+              data-source="corporate-events-cta"
               className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
             >
               <MessageCircle size={16} />

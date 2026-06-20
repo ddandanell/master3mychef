@@ -370,6 +370,7 @@ function WhatsAppButton({ label, message }: { label: string; message: string }) 
       href={`https://wa.me/${PHONE.digits}?text=${encoded}`}
       target="_blank"
       rel="noopener noreferrer"
+      data-source="chef-profile-cta"
       className="inline-flex items-center gap-2 bg-[#C5A028] text-black font-semibold px-6 py-3 rounded-full hover:bg-[#d4af3a] transition-colors"
     >
       <MessageCircle className="w-4 h-4" />

@@ -199,10 +199,11 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
         {/* Footer */}
         <div className="p-6 border-t border-white/10 bg-white/[0.02] text-center">
           <p className="text-[10px] text-white/30 uppercase tracking-widest mb-4">Immediate Support</p>
-          <a 
+          <a
             href="https://wa.me/491635080236?text=Hi%20myCHEF%2C%20I%20have%20a%20question..."
             target="_blank"
             rel="noopener noreferrer"
+            data-source="search-overlay-cta"
             className="inline-flex items-center gap-2 text-[#C5A028] font-bold text-xs uppercase tracking-widest hover:text-white transition-colors"
           >
             Chat with Concierge →

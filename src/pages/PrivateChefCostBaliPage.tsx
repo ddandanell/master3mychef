@@ -540,7 +540,7 @@ export default function PrivateChefCostBaliPage() {
               },
               {
                 step: '5. Final payment + event',
-                detail: 'Remaining balance (75%) is due 48 hours before service. On the day, your chef team arrives 2 hours early to set up. You enjoy the experience — we handle everything else.',
+                detail: 'Remaining balance (50%) is due when the chef arrives at your villa, before service begins. On the day, your chef team arrives 2 hours early to set up. You enjoy the experience — we handle everything else.',
               },
             ].map((step, i) => (
               <div key={i} className="flex gap-6">
@@ -603,7 +603,7 @@ export default function PrivateChefCostBaliPage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="text-2xl font-semibold mb-2">Ready to Book Your Private Chef?</h2>
-              <p className="text-white/80">25% deposit secures your date. Free menu consultation. Responds in 2 hours.</p>
+              <p className="text-white/80">50% deposit secures your date. Free menu consultation. Responds in 2 hours.</p>
             </div>
             <a
               href={`https://wa.me/${PHONE.digits}?text=${WA_MSG}`}

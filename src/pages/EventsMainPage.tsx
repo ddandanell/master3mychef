@@ -343,6 +343,33 @@ export default function EventsMainPage() {
         jsonLd={[
           breadcrumbSchema('Events', `${SITE}/events`),
           serviceSchema('Bali Event Catering & Coordination', 'Villa weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties in Bali. One team, one bill.', `${SITE}/events`, 'IDR'),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'Private Events & Celebrations in Bali',
+            description: 'Full-service event hospitality for weddings, birthdays, corporate offsites, retreats, and villa parties in Bali. Chef, staff, setup, and cleanup — one team, one bill.',
+            provider: {
+              '@type': 'LocalBusiness',
+              name: 'myCHEF.id',
+              url: 'https://mychef.id',
+            },
+            areaServed: {
+              '@type': 'Place',
+              name: 'Bali, Indonesia',
+            },
+            serviceType: 'Event Catering & Coordination',
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'IDR',
+              price: '600000',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                minPrice: '600000',
+                maxPrice: '8000000',
+                priceCurrency: 'IDR',
+              },
+            },
+          },
           offerSchema('Villa Weddings', 600000, 'IDR', `${SITE}/events/weddings`),
           offerSchema('Birthday Parties', 850000, 'IDR', `${SITE}/events/birthdays`),
           offerSchema('Anniversary Dinners', 1200000, 'IDR', `${SITE}/events/anniversaries`),

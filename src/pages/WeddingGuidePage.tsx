@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { ArrowRight, Heart } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
@@ -32,7 +33,7 @@ const WEDDING_SERVICES = [
 ]
 
 const PLANNING_TIMELINE = [
-  { when: '3+ months before', what: 'Initial consultation & venue check', context: 'Discuss vision, guest count, date, and venue. Chef visits villa for kitchen assessment.' },
+  { when: '3+ months before', what: 'Initial consultation & venue check', context: 'Discuss vision, guest count, date, and venue. <a href="/chefs" className="text-[#C5A028] hover:underline font-medium">Browse our chefs</a> and book a kitchen assessment.' },
   { when: '2-3 months', what: 'Proposal & menu planning', context: 'Detailed quote, team size, menu options, timeline, and service setup.' },
   { when: '6 weeks before', what: 'Deposit & team lock', context: '50% deposit secures the date and chef team. Final guest count confirmed.' },
   { when: '2-3 weeks', what: 'Menu final approval', context: 'All dishes locked. Wines or specialty items ordered. Service timeline finalized.' },
@@ -127,7 +128,7 @@ export default function WeddingGuidePage() {
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Celebrations with myCHEF</p>
           <h1 className="text-4xl md:text-7xl font-playfair mb-6">Planning a Villa Wedding</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
-            Everything you need to know about hosting your wedding at a Bali villa with full catering, logistics, and service.
+            Everything you need to know about hosting your wedding at a Bali villa with full <a href="/catering" className="text-[#C5A028] hover:underline font-medium">catering</a>, logistics, and service.
           </p>
         </div>
       </section>
@@ -223,10 +224,10 @@ export default function WeddingGuidePage() {
       <section className="bg-[#1A1A1A] text-white py-16">
         <div className="max-w-3xl mx-auto text-center px-6">
           <h2 className="text-3xl font-light mb-6">Let's plan your wedding</h2>
-          <p className="text-white/70 mb-8">Message us with your wedding date and venue details. We'll send a full proposal within 24 hours.</p>
+          <p className="text-white/70 mb-8">Message us with your wedding date and venue details. We'll send a full proposal within 24 hours. Or <Link to="/pricing" className="text-[#C5A028] hover:underline">view our pricing</Link> first.</p>
           <a
             href="https://wa.me/491635080236?text=I%20want%20to%20plan%20a%20wedding%20at%20my%20villa..."
-            className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5" aria-label="Start planning your wedding"
           >
             Start Planning
             <ArrowRight size={20} />

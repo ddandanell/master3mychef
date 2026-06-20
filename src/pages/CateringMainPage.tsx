@@ -387,6 +387,33 @@ export default function CateringMainPage() {
         ogImage={getPageMeta('catering').ogImage}
         jsonLd={[
           cateringServiceSchema('Villa Catering Bali', 'Chef-led catering for Bali villas, events, BBQ nights, and private gatherings with flexible formats from buffet to plated service. myCHEF.id manages menus, staffing, setup, and cleanup across Bali.', `${SITE}/catering`, 'FoodService'),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'Catering Services in Bali',
+            description: 'Professional catering for villa parties, BBQ nights, buffets, plated dinners, and corporate events across Bali. Full setup, staffing, and cleanup included.',
+            provider: {
+              '@type': 'LocalBusiness',
+              name: 'myCHEF.id',
+              url: 'https://mychef.id',
+            },
+            areaServed: {
+              '@type': 'Place',
+              name: 'Bali, Indonesia',
+            },
+            serviceType: 'Catering Service',
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'IDR',
+              price: '450000',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                minPrice: '350000',
+                maxPrice: '3700000',
+                priceCurrency: 'IDR',
+              },
+            },
+          },
           offerSchema('Indonesian BBQ', 450000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('International BBQ', 600000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),

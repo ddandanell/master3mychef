@@ -294,6 +294,33 @@ export default function LunaPage() {
             'https://mychef.id/fine-dining',
             'IDR'
           ),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'Private Chef Fine Dining in Bali',
+            description: 'Curated tasting menus, wine pairings, and luxury culinary experiences delivered to your Bali villa.',
+            provider: {
+              '@type': 'LocalBusiness',
+              name: 'myCHEF.id',
+              url: 'https://mychef.id',
+            },
+            areaServed: {
+              '@type': 'Place',
+              name: 'Bali, Indonesia',
+            },
+            serviceType: 'Private Chef Service',
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'IDR',
+              price: '2200000',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                minPrice: '2200000',
+                maxPrice: '8000000',
+                priceCurrency: 'IDR',
+              },
+            },
+          },
           offerSchema('Mediterranean Sea Experience', 2200000, 'IDR', 'https://mychef.id/fine-dining'),
           offerSchema('Wagyu Experience', 2400000, 'IDR', 'https://mychef.id/fine-dining'),
           offerSchema('Wine Pairing', 850000, 'IDR', 'https://mychef.id/fine-dining'),

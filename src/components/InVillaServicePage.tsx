@@ -111,6 +111,33 @@ export default function InVillaServicePage() {
         jsonLd={[
           breadcrumbSchema('In-Villa Service', canonical),
           serviceSchema('In-Villa Service Staff', pillar.description, canonical),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'In-Villa Service Staff Bali',
+            description: 'Professional waiters, butlers, bartenders, mixologists, and sommeliers for Bali villas. Per-shift hire with same-day availability, fully briefed and uniformed.',
+            provider: {
+              '@type': 'LocalBusiness',
+              name: 'myCHEF.id',
+              url: 'https://mychef.id',
+            },
+            areaServed: {
+              '@type': 'Place',
+              name: 'Bali, Indonesia',
+            },
+            serviceType: 'Villa Staffing Service',
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'IDR',
+              price: '250000',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                minPrice: '250000',
+                maxPrice: '1500000',
+                priceCurrency: 'IDR',
+              },
+            },
+          },
           aggregateRatingSchema(4.9, 350),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}

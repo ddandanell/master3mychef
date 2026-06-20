@@ -17,9 +17,9 @@ const SECTIONS = [
     subtitle: 'Event Types',
     title: 'Types of Events in Bali',
     features: [
-      { icon: Calendar, title: 'Weddings', desc: 'Small (10–40), Medium (50–100), Large (100–200+). Timeline: 3–12 months planning. Budget: $3,000–200,000+.' },
-      { icon: Users, title: 'Corporate Retreats', desc: 'Team-building (3–5 days), Executive Conferences (1–3 days), Wellness (5–7 days). Budget: $150–500 per person per day.' },
-      { icon: Calendar, title: 'Private Celebrations', desc: 'Birthdays, anniversaries, family reunions (15–50 guests). Budget: $500–15,000 depending on scale.' },
+      { icon: Calendar, title: 'Weddings', desc: 'Small (10–40), Medium (50–100), Large (100–200+). Timeline: 3–12 months planning. Budget: IDR 45M–3B+.' },
+      { icon: Users, title: 'Corporate Retreats', desc: 'Team-building (3–5 days), Executive Conferences (1–3 days), Wellness (5–7 days). Budget: IDR 2.25M–7.5M per person per day.' },
+      { icon: Calendar, title: 'Private Celebrations', desc: 'Birthdays, anniversaries, family reunions (15–50 guests). Budget: IDR 7.5M–225M depending on scale.' },
     ],
   },
   {
@@ -42,7 +42,7 @@ const SECTIONS = [
       <li><strong>50–100 guests:</strong> 2–3 chefs, 4–6 service staff, 1–2 coordinators</li>
       <li><strong>100+ guests:</strong> 4–6 chefs, 8–12 service staff, 2–3 coordinators, bar manager</li>
     </ul>
-    <p><strong>Menu by Event Type:</strong> Wedding (3–5 courses, $100–200/person), Corporate Retreat (casual breakfast/lunch, themed dinner, $40–80/day), Birthday/Anniversary (personalized, $80–150/person).</p>`,
+    <p><strong>Menu by Event Type:</strong> Wedding (3–5 courses, IDR 1.5M–3M/person), Corporate Retreat (casual breakfast/lunch, themed dinner, IDR 600K–1.2M/day), Birthday/Anniversary (personalized, IDR 1.2M–2.25M/person).</p>`,
   },
   {
     id: 'timeline',
@@ -64,9 +64,9 @@ const SECTIONS = [
     subtitle: 'Budget',
     title: 'Budget Planning & Cost Breakdown',
     body: `<p><strong>50-Person Event Budget Tiers:</strong></p>
-    <p><strong>Budget:</strong> Catering $50/person, Staff $20/person, Venue $500–2,000, Coordinator $300, Decor $300, Music $200, Photography $300 = $3,550–4,550 total.</p>
-    <p><strong>Mid-Range:</strong> Catering $100/person, Staff $40/person, Venue $2,000–5,000, Coordinator $600, Decor $1,000, Music $500, Photography $800 = $6,900–8,900 total.</p>
-    <p><strong>Luxury:</strong> Catering $200/person, Staff $80/person, Venue $5,000+, Coordinator $1,200, Decor $3,000+, Music $1,500+, Photography $2,000+ = $13,830+ total.</p>
+    <p><strong>Budget:</strong> Catering IDR 750K/person, Staff IDR 300K/person, Venue IDR 7.5M–30M, Coordinator IDR 4.5M, Decor IDR 4.5M, Music IDR 3M, Photography IDR 4.5M = IDR 53M–68M total for 50 guests.</p>
+    <p><strong>Mid-Range:</strong> Catering IDR 1.5M/person, Staff IDR 600K/person, Venue IDR 30M–75M, Coordinator IDR 9M, Decor IDR 15M, Music IDR 7.5M, Photography IDR 12M = IDR 103M–133M total.</p>
+    <p><strong>Luxury:</strong> Catering IDR 3M/person, Staff IDR 1.2M/person, Venue IDR 75M+, Coordinator IDR 18M, Decor IDR 45M+, Music IDR 22.5M+, Photography IDR 30M+ = IDR 208M+ total.</p>
     <p><strong>Money-Saving Tips:</strong> Daytime events cost less than evening. Buffet or BBQ < plated service. Single menu option < multiple choices. Local ingredients < imported. Weekday < weekend. Group catering < à la carte.</p>`,
   },
   {

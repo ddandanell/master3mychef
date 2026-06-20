@@ -40,10 +40,10 @@ const SECTIONS = [
     subtitle: 'Dietary Options',
     title: 'Accommodations: Vegetarian, Vegan, Gluten-Free',
     body: `<p><strong>Vegetarian:</strong> Traditional gado-gado, sambal goreng, pasta, risotto, grilled vegetables. Protein from legumes, tofu, tempeh, eggs, dairy. Same pricing as omnivore menus.</p>
-    <p><strong>Vegan:</strong> Plant-based Balinese with sambal vegetables, turmeric curries without coconut milk, grilled vegetables. Legumes, tofu, tempeh, nuts, seeds. Coconut milk and cashew cream widely available. Cost: +$10–20/person.</p>
-    <p><strong>Gluten-Free:</strong> Balinese naturally gluten-free (rice-based). Watch soy sauce—use tamari or coconut aminos. Rice noodles, polenta, potatoes instead of wheat. Cost: +$5–15/person.</p>
+    <p><strong>Vegan:</strong> Plant-based Balinese with sambal vegetables, turmeric curries without coconut milk, grilled vegetables. Legumes, tofu, tempeh, nuts, seeds. Coconut milk and cashew cream widely available. Cost: +IDR 150K–300K/person.</p>
+    <p><strong>Gluten-Free:</strong> Balinese naturally gluten-free (rice-based). Watch soy sauce—use tamari or coconut aminos. Rice noodles, polenta, potatoes instead of wheat. Cost: +IDR 75K–225K/person.</p>
     <p><strong>Keto/Low-Carb:</strong> Grilled fish, vegetables, sambal, skip rice. Easily adaptable. Cost: Same or lower.</p>
-    <p><strong>Allergen-Free (Nut, Shellfish, Dairy):</strong> Plan ahead. Requires chef coordination and careful sourcing. Cost: +$20–40/person.</p>`,
+    <p><strong>Allergen-Free (Nut, Shellfish, Dairy):</strong> Plan ahead. Requires chef coordination and careful sourcing. Cost: +IDR 300K–600K/person.</p>`,
   },
   {
     id: 'menu-styles',
@@ -67,7 +67,7 @@ const SECTIONS = [
     <p><strong>Dietary Restrictions:</strong> Affects menu design and chef selection.</p>
     <p><strong>Occasion:</strong> Anniversary → fine dining, plated. Family gathering → buffet, mix of styles. Corporate → buffet, neutral flavors.</p>
     <p><strong>Venue:</strong> Outdoor + weather risk → lighter, flexible BBQ or grazing. Indoor → any style works.</p>
-    <p><strong>Budget Per Person:</strong> $50–80 → casual, local ingredients, buffet. $80–120 → mix of local and imported, some creativity. $120+ → fine dining, specialty chefs, plated.</p>`,
+    <p><strong>Budget Per Person:</strong> IDR 750K–1.2M → casual, local ingredients, buffet. IDR 1.2M–1.8M → mix of local and imported, some creativity. IDR 1.8M+ → fine dining, specialty chefs, plated.</p>`,
   },
   {
     id: 'cta',

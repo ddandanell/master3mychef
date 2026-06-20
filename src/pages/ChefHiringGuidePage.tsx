@@ -28,13 +28,13 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Cuisine Focus',
     title: 'Culinary Specialties: Matching Skills to Your Needs',
-    body: `<p><strong>French Classical:</strong> Sauces, knife work, plating finesse. Background: formal culinary school or France apprenticeship. Cost: $150–300+/person. Skills: mother sauces, classical technique, plating philosophy.</p>
-    <p><strong>Italian Regional:</strong> Pasta-making, risotto, regional specialties. Background: Italian culinary school or family heritage. Cost: $100–180/person. Skills: pasta dough ratios, risotto technique, regional ingredients.</p>
-    <p><strong>Asian (Japanese, Thai, Vietnamese, Chinese):</strong> Wok technique, flavor layering, ingredient knowledge. Background: training in home country or extensive Asian kitchen experience. Cost: $80–150/person. Skills: knife skills, flavor balance, Asian ingredient sourcing.</p>
-    <p><strong>Mediterranean (Spanish, Greek, Moroccan):</strong> Grilling, slow-cooking, spice knowledge. Background: Mediterranean culinary training. Cost: $100–160/person. Skills: wood-fire cooking, spice blending, ingredient sourcing.</p>
-    <p><strong>Contemporary/Fusion:</strong> Plating art, flavor experimentation, technical execution. Background: Michelin background or culinary school + experimentation. Cost: $150–250+/person. Skills: inspiration sources, menu adaptation.</p>
-    <p><strong>Dietary Specialists (Vegan, Keto, Gluten-Free):</strong> Vegetable-forward cooking, protein alternatives, nutritional knowledge. Background: culinary training + specialization. Cost: $100–200/person. Skills: vegan protein ratios, richness without dairy, pastry expertise.</p>
-    <p><strong>Pastry/Dessert:</strong> Baking, chocolate work, pastry dough. Background: formal pastry school (2+ years). Cost: $80–150/person. Skills: favorite desserts, chocolate tempering, bread-making.</p>`,
+    body: `<p><strong>French Classical:</strong> Sauces, knife work, plating finesse. Background: formal culinary school or France apprenticeship. Cost: IDR 2.25M–4.5M+/person. Skills: mother sauces, classical technique, plating philosophy.</p>
+    <p><strong>Italian Regional:</strong> Pasta-making, risotto, regional specialties. Background: Italian culinary school or family heritage. Cost: IDR 1.5M–2.7M/person. Skills: pasta dough ratios, risotto technique, regional ingredients.</p>
+    <p><strong>Asian (Japanese, Thai, Vietnamese, Chinese):</strong> Wok technique, flavor layering, ingredient knowledge. Background: training in home country or extensive Asian kitchen experience. Cost: IDR 1.2M–2.25M/person. Skills: knife skills, flavor balance, Asian ingredient sourcing.</p>
+    <p><strong>Mediterranean (Spanish, Greek, Moroccan):</strong> Grilling, slow-cooking, spice knowledge. Background: Mediterranean culinary training. Cost: IDR 1.5M–2.4M/person. Skills: wood-fire cooking, spice blending, ingredient sourcing.</p>
+    <p><strong>Contemporary/Fusion:</strong> Plating art, flavor experimentation, technical execution. Background: Michelin background or culinary school + experimentation. Cost: IDR 2.25M–3.75M+/person. Skills: inspiration sources, menu adaptation.</p>
+    <p><strong>Dietary Specialists (Vegan, Keto, Gluten-Free):</strong> Vegetable-forward cooking, protein alternatives, nutritional knowledge. Background: culinary training + specialization. Cost: IDR 1.5M–3M/person. Skills: vegan protein ratios, richness without dairy, pastry expertise.</p>
+    <p><strong>Pastry/Dessert:</strong> Baking, chocolate work, pastry dough. Background: formal pastry school (2+ years). Cost: IDR 1.2M–2.25M/person. Skills: favorite desserts, chocolate tempering, bread-making.</p>`,
   },
   {
     id: 'interview-questions',

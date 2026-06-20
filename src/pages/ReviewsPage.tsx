@@ -158,8 +158,19 @@ const REVIEWS: Review[] = [
   },
 ]
 
+const aggregateRatingSchema = {
+  ...localBusinessSchema,
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '560',
+    bestRating: '5',
+    worstRating: '1',
+  },
+}
+
 const REVIEWS_SCHEMAS = [
-  localBusinessSchema,
+  aggregateRatingSchema,
   breadcrumbSchema('Reviews', `${SITE}/reviews`),
   faqPageSchema([
     { question: 'How do guests rate myCHEF private chef services?', answer: 'myCHEF holds a 4.9-star average rating across 560+ verified reviews from villa guests, wedding parties, corporate retreats, and catering events throughout Bali.' },

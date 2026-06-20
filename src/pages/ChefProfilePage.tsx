@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, ChevronRight, Star, Award, Users, Flame } from 'lucide-react'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema } from '@/components/SeoHead'
 import { PHONE } from '@/data/siteArchitecture'
 
 // ── Chef data ─────────────────────────────────────────────────────────────────
@@ -427,6 +427,17 @@ export default function ChefProfilePage() {
     ],
   }
 
+  const localBizWithRating = {
+    ...localBusinessSchema,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '560',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  }
+
   const waMessage = `Hi, I\'d like to book ${chef.name} (${chef.specialty}) for a villa dinner in Bali.`
 
   return (
@@ -437,7 +448,7 @@ export default function ChefProfilePage() {
         canonical={`https://mychef.id/chefs/${chef.slug}`}
         ogImage={chef.ogImage}
         ogType="article"
-        jsonLd={[personSchema, faqSchema, breadcrumbSchema]}
+        jsonLd={[localBizWithRating, personSchema, faqSchema, breadcrumbSchema]}
       />
 
       {/* ── Breadcrumb ── */}
@@ -463,6 +474,8 @@ export default function ChefProfilePage() {
                 className="w-full h-full object-cover object-center"
                 width={600}
                 height={800}
+                decoding="async"
+                fetchPriority="high"
               />
             </div>
             {/* Badge */}

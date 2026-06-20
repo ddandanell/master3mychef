@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ChevronRight, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import { PHONE } from '@/data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
@@ -140,6 +140,17 @@ export default function PrivateChefCostBaliPage() {
     url: CANONICAL,
   }
 
+  const localBizWithRating = {
+    ...localBusinessSchema,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '560',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  }
+
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
@@ -149,6 +160,7 @@ export default function PrivateChefCostBaliPage() {
         ogType="article"
         ogImage="/og-image.webp"
         jsonLd={[
+          localBizWithRating,
           articleSchema,
           breadcrumbSchema('Private Chef Cost Bali', CANONICAL, 'Blog', `${SITE}/blog`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),

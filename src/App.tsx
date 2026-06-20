@@ -285,6 +285,9 @@ export default function App() {
           <Route path="/private-chef-scbd" element={<Navigate to="/jakarta" replace />} />
           <Route path="/private-chef-pondok-indah" element={<Navigate to="/jakarta" replace />} />
           <Route path="/private-chef-bsd" element={<Navigate to="/jakarta" replace />} />
+          <Route path="/surabaya" element={<Navigate to="/jakarta" replace />} />
+          <Route path="/bandung" element={<Navigate to="/jakarta" replace />} />
+          <Route path="/yogyakarta" element={<Navigate to="/jakarta" replace />} />
 
           {/* Bali sub-areas — consolidated to nearest location hub */}
           {/* Canggu area */}

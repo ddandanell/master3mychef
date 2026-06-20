@@ -146,24 +146,24 @@ const RELATED_PAGES = [
 export default function ChefHiringGuidePage() {
   return (
     <PremiumPage
-      slug="blog/chef-hiring-guide"
-      title="Chef Hiring Best Practices: Skills, Credentials & Interview Guide"
-      description="Hire the right private chef. Learn what to look for in credentials, how to interview, ask key questions, and verify culinary expertise."
-      seoTitle="Chef Hiring Best Practices | Skills, Credentials & Interview Tips"
-      seoDescription="Hire the right private chef. Learn what to look for in credentials, how to interview, ask key questions, and verify culinary expertise."
-      canonicalUrl="https://mychef.id/blog/chef-hiring-guide"
-      h1="Chef Hiring Best Practices"
-      subtitle="Skills, Credentials & Interview Guide"
+      slug="blog/chef-qualifications-credentials-bali-hiring"
+      title="Chef Qualifications & Credentials: Hiring Guide for Bali Villas"
+      description="Hire the right private chef in Bali. Learn what credentials to check, how to interview, key questions, and red flags when vetting a chef."
+      seoTitle="Chef Qualifications & Credentials Bali | Private Chef Hiring Guide"
+      seoDescription="Hire the right private chef in Bali. Learn what credentials to check, how to interview, key questions, and red flags when vetting a chef."
+      canonicalUrl="https://mychef.id/blog/chef-qualifications-credentials-bali-hiring"
+      h1="Chef Qualifications & Credentials: Hiring Guide for Bali"
+      subtitle="Skills, Credentials & Interview Guide for Villa Stays"
       heroImage="/generated/mychef-catering-bali-hub-catering.webp"
-      heroImageAlt="Professional chef credentials and interview process"
+      heroImageAlt="Professional chef credentials and interview process in Bali"
       ogImage="https://mychef.id/generated/mychef-catering-bali-hub-catering.webp"
-      keywords={['chef hiring best practices', 'chef credentials', 'how to interview a chef']}
+      keywords={['chef qualifications bali', 'private chef credentials bali', 'how to hire chef bali']}
       highlights={['Credentials', 'Interview Questions', 'Red Flags', 'Vetting Process']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
-        breadcrumbSchema('Chef Hiring Guide', 'https://mychef.id/blog/chef-hiring-guide'),
+        breadcrumbSchema('Chef Qualifications Bali', 'https://mychef.id/blog/chef-qualifications-credentials-bali-hiring', 'Blog', 'https://mychef.id/blog'),
       ]}
       ctaText="Browse Vetted Chefs"
       ctaSubtext="Apply these hiring best practices to our pre-screened chef profiles."

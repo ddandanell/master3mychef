@@ -134,7 +134,7 @@ const FAQS = [
 const RELATED_PAGES = [
   { label: 'Browse Chefs', href: '/chefs', desc: 'Explore available chefs and their specialties.' },
   { label: 'Fine Dining Guide', href: '/blog/fine-dining-guide', desc: 'Learn about tasting menus and fine dining experiences.' },
-  { label: 'Chef Hiring Best Practices', href: '/blog/chef-hiring-guide', desc: 'Advanced tips on credentials, interviews, and vetting.' },
+  { label: 'Chef Hiring Best Practices', href: '/blog/chef-qualifications-credentials-bali-hiring', desc: 'Advanced tips on credentials, interviews, and vetting.' },
   { label: 'Catering Menus', href: '/blog/bali-catering-menu', desc: 'Explore menu options and cuisine styles.' },
   { label: 'Contact Us', href: '/contact', desc: 'Get personalized chef recommendations.' },
 ]

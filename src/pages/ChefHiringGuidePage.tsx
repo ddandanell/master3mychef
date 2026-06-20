@@ -84,7 +84,7 @@ const SECTIONS = [
     title: 'Evaluating Chef Experience: Portfolio, References & Trial Meals',
     body: `<p><strong>Portfolio Review:</strong> Ask for sample menus, client photos, and video clips. Look for consistency in plating quality, creativity within cuisine, diverse menu progression, and professional food photography.</p>
     <p><strong>Reference Calling:</strong> Ask what the occasion was, how many guests, how the chef handled special requests or last-minute changes, how dietary issues were managed, whether you'd hire them again, any negatives or concerns. Red flags: hesitation, vague answers, "fine but...", unwillingness to be contacted again, mention of conflicts or unprofessionalism.</p>
-    <p><strong>Trial Meal:</strong> Format: 1–2 dish preparation in your villa kitchen (1–2 hours), you taste and observe. Cost: often free or $50–100 minimal fee. Evaluate: cleanliness and workspace organization, knife work and pacing, communication and explanation of process, does food match expectations, do you enjoy being around them for 1–2 hours?</p>`,
+    <p><strong>Trial Meal:</strong> Format: 1–2 dish preparation in your villa kitchen (1–2 hours), you taste and observe. Cost: often free or IDR 800K–1.6M minimal fee. Evaluate: cleanliness and workspace organization, knife work and pacing, communication and explanation of process, does food match expectations, do you enjoy being around them for 1–2 hours?</p>`,
   },
   {
     id: 'contract-red-flags',

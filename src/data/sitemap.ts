@@ -617,6 +617,38 @@ export const BLOG_POSTS = [
 <h2>Cost Comparison</h2>
 <p>A family of four at a decent Seminyak restaurant easily spends IDR 4M–6M including food, drinks, service charge, and two-way transfers. A myCHEF villa dinner for the same group runs IDR 3M–5M all-inclusive — with the children eating something they actually want, at home, without anyone melting down in a restaurant. For more detail see our <a href="/blog/private-chef-vs-restaurant-bali" class="text-[#C5A028] hover:underline font-medium">private chef vs restaurant comparison</a> and the full <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing guide</a>.</p>`,
   },
+  {
+    slug: 'blog/corporate-events-catering-bali',
+    title: 'Corporate Event Catering in Bali: 4 Real Case Studies (2025)',
+    description: 'How myCHEF handled a 38-person tech retreat, a Singapore bank executive dinner, a fashion label product launch, and a 7-day wellness retreat in Bali. Real costs, menus, and outcomes.',
+    date: '2026-04-25',
+    content: `<p>Corporate events in Bali require a catering partner who can operate without friction across varied group sizes, dietary requirements, and event formats. Below are four real engagements — anonymised at client request — showing how myCHEF adapts to different industries and expectations.</p>
+<h2>Case Study 1: Tech Company Team Retreat (38 People, 5 Days, Canggu)</h2>
+<p>A Berlin-based software company flew 38 employees to Bali for their annual offsite. myCHEF assigned a dedicated retreat chef team for five days of full-board catering — breakfast, working lunch, and themed dinners. Zero dietary incidents across five days, 4.9/5 guest satisfaction, re-booked for the following year.</p>
+<h2>Case Study 2: Singapore Bank Executive Dinner (22 Guests, Seminyak)</h2>
+<p>A Singapore private bank hosted 22 high-net-worth clients at a Seminyak villa. myCHEF delivered a 5-course fine dining experience with sommelier service. Three clients booked private dinners during their stay. Bank re-booked within 10 days.</p>
+<h2>Case Study 3: Fashion Label Product Launch (74 Guests, Uluwatu)</h2>
+<p>A French fashion label launched a resort collection with cocktail canapes and a 4-course dinner at a clifftop villa. myCHEF coordinated course timing with the brand presentation moments. Event covered in Vogue Indonesia and Harper's Bazaar Indonesia.</p>
+<h2>Case Study 4: Wellness Platform Retreat (24 People, 7 Days, Ubud)</h2>
+<p>A health technology company brought 24 senior leaders to Ubud for a plant-based digital detox retreat. myCHEF sourced directly from organic highland farms and designed nutritionist-approved menus. Guest food score: 4.95/5. Client re-booked twice within three months.</p>
+<h2>Corporate Catering Prices in Bali</h2>
+<p>Working lunches and coffee breaks cost IDR 300,000–700,000 per person. Full-board retreat catering runs IDR 900,000–2,000,000 per person per day. Executive plated dinners range from IDR 1,500,000–3,500,000+ per person. All prices exclude 11% tax and 10% service charge.</p>`,
+  },
+  {
+    slug: 'blog/food-allergies-dietary-requirements-private-chef-bali',
+    title: 'Food Allergies & Dietary Requirements with a Private Chef in Bali: The Complete Safety Guide',
+    description: "How myCHEF handles food allergies and special diets in Bali: HACCP protocols, cross-contamination controls, and custom menus for vegan, gluten-free, halal, keto, nut-free & dairy-free guests.",
+    date: '2026-04-20',
+    content: `<p>For guests with food allergies or strict dietary requirements, a private chef is one of the safest dining options available in Bali. You communicate your needs directly to the chef, the chef builds the menu around them, shops accordingly, and cooks in a controlled environment with no cross-kitchen contamination from other tables' orders.</p>
+<h2>Dietary Categories We Handle</h2>
+<p>myCHEF chefs handle vegan, gluten-free (including coeliac severity), halal, keto, nut-free, and dairy-free requirements, as well as combinations of these. For vegan guests, our chefs build complete-protein menus using tempeh, tofu, legumes, and whole grains rather than simply removing meat. For gluten-free guests, every sauce and condiment is checked for hidden wheat sources — soy sauce, marinades, and stock cubes are replaced with safe alternatives throughout.</p>
+<h2>HACCP Allergen Safety Protocol</h2>
+<p>All myCHEF chefs are HACCP-certified. For allergen-sensitive bookings, this means: allergens are documented before shopping, shopping lists exclude the allergen entirely, dedicated clean equipment is used for severe allergies, allergen-free dishes are prepared before any dishes containing allergens, and service is separated to prevent cross-contact. For anaphylactic-severity allergies, the allergen is simply absent from the kitchen.</p>
+<h2>Cross-Contamination Control</h2>
+<p>A private chef at your villa cooks only your food — there are no other orders running in parallel. When an allergen is declared, the chef does not introduce it into the kitchen. This is structurally different from a restaurant kitchen where multiple dishes are prepared simultaneously on shared equipment. For gluten/coeliac, kecap manis (contains wheat) and standard soy sauce are replaced with tamari or coconut aminos throughout. For nut allergy, peanut oil and nut-containing sauces are removed and replaced entirely.</p>
+<h2>How to Declare Requirements</h2>
+<p>At booking via WhatsApp, provide: every allergy and its severity (trace reaction, intolerance, or anaphylactic), every dietary category (vegan, halal, keto, etc.), all hard exclusions, preferred cuisines, and any children's specific requirements. The chef receives this before shopping and proposes a menu for your approval before any ingredient is purchased. See also our <a href="/blog/family-kids-menu-private-chef-bali" class="text-[#C5A028] hover:underline font-medium">family and kids' dining guide</a> and the full <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing guide</a>.</p>`,
+  },
 ]
 
 export function buildSitemap(): SitemapEntry[] {

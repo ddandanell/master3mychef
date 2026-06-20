@@ -21,7 +21,7 @@ export default function StickyMobileCTA({
   label = 'Get a Free Quote via WhatsApp',
   message = 'Hi! I found you on your website and would like a quote.',
   pageSource,
-  serviceType = '',
+  serviceType: _serviceType = '',
 }: StickyMobileCTAProps) {
   const waUrl = `https://wa.me/${PHONE.digits}?text=${encodeURIComponent(message)}`
 

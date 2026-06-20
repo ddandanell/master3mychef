@@ -49,7 +49,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/petitenget', to: '/locations/seminyak', reason: 'Sub-neighborhood of Seminyak.' },
   { from: '/tanah-lot', to: '/locations/canggu', reason: 'West coast cluster with Canggu.' },
   { from: '/tabanan', to: '/locations/canggu', reason: 'West coast — Canggu chefs travel there.' },
-  { from: '/denpasar', to: '/locations/sanur', reason: 'Greater Denpasar area — Sanur is closest serviced.' },
+  { from: '/denpasar', to: '/locations/denpasar', reason: 'Dedicated DenpasarPage exists at /locations/denpasar — canonicalize there.' },
   { from: '/gianyar', to: '/locations/ubud', reason: 'Gianyar regency — Ubud is the chef base.' },
   { from: '/tegallalang', to: '/locations/ubud', reason: 'Ubud regency.' },
   { from: '/amed', to: '/locations/sanur', reason: 'East coast — limited service from Sanur base.' },
@@ -71,10 +71,20 @@ export const REDIRECTS: Redirect[] = [
   { from: '/batu-bolong-private-chef', to: '/locations/canggu', reason: 'Batu Bolong is in Canggu.' },
   { from: '/pererenan-private-chef', to: '/locations/pererenan', reason: 'Pererenan private chef page.' },
   { from: '/bingin-private-chef', to: '/locations/uluwatu', reason: 'Bingin is on the Bukit / Uluwatu cluster.' },
+  { from: '/balangan-private-chef', to: '/locations/uluwatu', reason: 'Balangan beach is on the Bukit Peninsula.' },
+  { from: '/dreamland-private-chef', to: '/locations/uluwatu', reason: 'Dreamland beach is on the Bukit Peninsula.' },
+  { from: '/nyang-nyang-private-chef', to: '/locations/uluwatu', reason: 'Nyang Nyang is on the Bukit Peninsula.' },
+  { from: '/green-bowl-private-chef', to: '/locations/uluwatu', reason: 'Green Bowl is on the Bukit Peninsula.' },
+  { from: '/medewi-private-chef', to: '/locations/canggu', reason: 'Medewi is west coast — closest active area is Canggu.' },
   { from: '/padang-padang-private-chef', to: '/locations/uluwatu', reason: 'Padang Padang is on Bukit.' },
   { from: '/sayan-private-chef', to: '/locations/ubud', reason: 'Sayan is in Ubud.' },
   { from: '/penestanan-private-chef', to: '/locations/ubud', reason: 'Penestanan is in Ubud.' },
   { from: '/sanur-beach-private-chef', to: '/locations/sanur', reason: 'Sanur private chef page.' },
+
+  // --- Indonesia cities that were 404 (footer links) → Jakarta hub ---
+  { from: '/surabaya', to: '/locations/jakarta', reason: 'Java city — no dedicated page, redirect to Jakarta hub.' },
+  { from: '/bandung', to: '/locations/jakarta', reason: 'Java city — no dedicated page, redirect to Jakarta hub.' },
+  { from: '/yogyakarta', to: '/locations/jakarta', reason: 'Java city — no dedicated page, redirect to Jakarta hub.' },
 
   // --- Services / menus we don't lead with ---
   { from: '/services/romantic-dinners', to: '/fine-dining/romantic-dinner', reason: 'Romantic dinners now under fine-dining pillar.' },

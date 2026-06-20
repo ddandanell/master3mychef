@@ -22,7 +22,7 @@
 /petitenget  /locations/seminyak  301
 /tanah-lot  /locations/canggu  301
 /tabanan  /locations/canggu  301
-/denpasar  /locations/sanur  301
+/denpasar  /locations/denpasar  301
 /gianyar  /locations/ubud  301
 /tegallalang  /locations/ubud  301
 /amed  /locations/sanur  301
@@ -41,10 +41,18 @@
 /batu-bolong-private-chef  /locations/canggu  301
 /pererenan-private-chef  /locations/pererenan  301
 /bingin-private-chef  /locations/uluwatu  301
+/balangan-private-chef  /locations/uluwatu  301
+/dreamland-private-chef  /locations/uluwatu  301
+/nyang-nyang-private-chef  /locations/uluwatu  301
+/green-bowl-private-chef  /locations/uluwatu  301
+/medewi-private-chef  /locations/canggu  301
 /padang-padang-private-chef  /locations/uluwatu  301
 /sayan-private-chef  /locations/ubud  301
 /penestanan-private-chef  /locations/ubud  301
 /sanur-beach-private-chef  /locations/sanur  301
+/surabaya  /locations/jakarta  301
+/bandung  /locations/jakarta  301
+/yogyakarta  /locations/jakarta  301
 /services/romantic-dinners  /fine-dining/romantic-dinner  301
 /services/family-reunions  /catering  301
 /services/cooking-classes  /contact  301

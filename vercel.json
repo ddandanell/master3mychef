@@ -107,7 +107,7 @@
     },
     {
       "source": "/denpasar",
-      "destination": "/locations/sanur",
+      "destination": "/locations/denpasar",
       "permanent": true
     },
     {
@@ -201,6 +201,31 @@
       "permanent": true
     },
     {
+      "source": "/balangan-private-chef",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/dreamland-private-chef",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/nyang-nyang-private-chef",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/green-bowl-private-chef",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/medewi-private-chef",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
       "source": "/padang-padang-private-chef",
       "destination": "/locations/uluwatu",
       "permanent": true
@@ -218,6 +243,21 @@
     {
       "source": "/sanur-beach-private-chef",
       "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/surabaya",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/bandung",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/yogyakarta",
+      "destination": "/locations/jakarta",
       "permanent": true
     },
     {

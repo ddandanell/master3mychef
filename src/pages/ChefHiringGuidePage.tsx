@@ -1,5 +1,5 @@
 import PremiumPage from '@/components/PremiumPage'
-import { breadcrumbSchema } from '@/components/SeoHead'
+import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { Award, CheckCircle, Users, Shield } from 'lucide-react'
 
 const SECTIONS = [
@@ -8,7 +8,7 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Hiring Best Practices',
     title: 'Chef Hiring Best Practices: Skills, Credentials & Interview Guide',
-    body: `<p>Hiring a private chef is one of the most important decisions for your villa stay or event. This advanced guide walks you through evaluating chef credentials, conducting effective interviews, assessing experience, and avoiding red flags.</p>
+    body: `<p>Hiring a private chef is one of the most important decisions for your villa stay or event. This advanced guide walks you through evaluating chef credentials, conducting effective interviews, assessing experience, and avoiding red flags. Pair it with our <a href="/blog/how-to-hire-private-chef" class="text-[#C5A028] hover:underline font-medium">beginner hiring guide</a> for the full picture.</p>
     <p>By the end, you'll have a systematic approach to vetting and selecting chefs who deliver consistent, world-class dining.</p>`,
   },
   {
@@ -32,7 +32,7 @@ const SECTIONS = [
     <p><strong>Italian Regional:</strong> Pasta-making, risotto, regional specialties. Background: Italian culinary school or family heritage. Cost: IDR 1.5M–2.7M/person. Skills: pasta dough ratios, risotto technique, regional ingredients.</p>
     <p><strong>Asian (Japanese, Thai, Vietnamese, Chinese):</strong> Wok technique, flavor layering, ingredient knowledge. Background: training in home country or extensive Asian kitchen experience. Cost: IDR 1.2M–2.25M/person. Skills: knife skills, flavor balance, Asian ingredient sourcing.</p>
     <p><strong>Mediterranean (Spanish, Greek, Moroccan):</strong> Grilling, slow-cooking, spice knowledge. Background: Mediterranean culinary training. Cost: IDR 1.5M–2.4M/person. Skills: wood-fire cooking, spice blending, ingredient sourcing.</p>
-    <p><strong>Contemporary/Fusion:</strong> Plating art, flavor experimentation, technical execution. Background: Michelin background or culinary school + experimentation. Cost: IDR 2.25M–3.75M+/person. Skills: inspiration sources, menu adaptation.</p>
+    <p><strong>Contemporary/Fusion:</strong> Plating art, flavor experimentation, technical execution. Background: Michelin background or culinary school + experimentation. Ideal for <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining</a> experiences. Cost: IDR 2.25M–3.75M+/person. Skills: inspiration sources, menu adaptation.</p>
     <p><strong>Dietary Specialists (Vegan, Keto, Gluten-Free):</strong> Vegetable-forward cooking, protein alternatives, nutritional knowledge. Background: culinary training + specialization. Cost: IDR 1.5M–3M/person. Skills: vegan protein ratios, richness without dairy, pastry expertise.</p>
     <p><strong>Pastry/Dessert:</strong> Baking, chocolate work, pastry dough. Background: formal pastry school (2+ years). Cost: IDR 1.2M–2.25M/person. Skills: favorite desserts, chocolate tempering, bread-making.</p>`,
   },
@@ -95,7 +95,7 @@ const SECTIONS = [
     <ul style="margin: 1rem 0; padding-left: 2rem;">
       <li>Dates, times, meals included, head count, dietary restrictions listed</li>
       <li>Finalized menu (or process for finalization), substitution policy, special requests procedures</li>
-      <li>Per-person rate or flat fee, what's included (shopping, equipment, cleanup), payment schedule, surcharge triggers</li>
+      <li><a href="/pricing" class="text-[#C5A028] hover:underline font-medium">Per-person rate or flat fee</a>, what's included (shopping, equipment, cleanup), payment schedule, surcharge triggers</li>
       <li>Cancellation fees, chef illness backup plan, force majeure rescheduling option</li>
       <li>Chef responsible for food safety, liability insurance details, health permit confirmation, allergen handling protocols</li>
       <li>Primary contact person, emergency contact (24-hour availability), dietary form deadline (1 week prior), final headcount deadline</li>
@@ -107,7 +107,7 @@ const SECTIONS = [
     type: 'cta' as const,
     subtitle: 'Ready to Hire',
     title: 'Hire a Vetted Chef Using This Framework',
-    body: 'Browse our screened chef profiles, apply these hiring best practices, and book with confidence.',
+    body: 'Browse our <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">screened chef profiles</a>, apply these hiring best practices, and <a href="/quote" class="text-[#C5A028] hover:underline font-medium">get a quote</a> with confidence.',
     primaryAction: { label: 'Browse Our Chefs', href: '/chefs' },
     secondaryAction: { label: 'Get Recommendations', href: '/contact' },
   },
@@ -120,7 +120,7 @@ const FAQS = [
   },
   {
     question: 'Should I always do a trial meal?',
-    answer: "For high-stakes events (weddings, fine dining), yes. For casual group stays, it's optional but helpful if you're unsure about fit.",
+    answer: "For high-stakes events (weddings, <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining</a>), yes. For casual group stays, it's optional but helpful if you're unsure about fit.",
   },
   {
     question: 'How important are Michelin credentials?',
@@ -164,6 +164,7 @@ export default function ChefHiringGuidePage() {
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
         breadcrumbSchema('Chef Qualifications Bali', 'https://mychef.id/blog/chef-qualifications-credentials-bali-hiring', 'Blog', 'https://mychef.id/blog'),
+        faqPageSchema(FAQS.map(f => ({ question: f.question, answer: f.answer }))),
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',

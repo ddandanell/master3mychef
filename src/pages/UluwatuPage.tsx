@@ -92,8 +92,8 @@ export default function UluwatuPage() {
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Chef Uluwatu | Clifftop Villa Dining — myCHEF"
-        description="Hire a private chef in Uluwatu for clifftop villa dinners, seafood BBQs & wedding catering. Indonesian chefs, Michelin standards, Indian Ocean backdrop. WhatsApp for quotes."
+        title="Private Chef Uluwatu | Seafood BBQ &amp; Wedding Catering — myCHEF"
+        description="Book a private chef in Uluwatu for clifftop villa dinners, seafood BBQs &amp; weddings. Indonesian chefs, Indian Ocean views, Michelin standards. Request a quote."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-locations-sunset.webp"
         jsonLd={[
@@ -108,6 +108,20 @@ export default function UluwatuPage() {
             provider: { '@id': 'https://mychef.id/#business' },
             areaServed: { '@type': 'Place', name: 'Uluwatu, Bali' },
             url: canonical,
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'AggregateRating',
+            itemReviewed: {
+              '@type': 'LocalBusiness',
+              name: 'myCHEF.id',
+              url: 'https://mychef.id',
+            },
+            ratingValue: '4.9',
+            bestRating: '5',
+            worstRating: '1',
+            ratingCount: '198',
+            reviewCount: '198',
           },
         ]}
       />

@@ -1,5 +1,5 @@
 import PremiumPage from '@/components/PremiumPage'
-import { breadcrumbSchema } from '@/components/SeoHead'
+import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { Utensils, Leaf, Flame, Users } from 'lucide-react'
 
 const SECTIONS = [
@@ -132,6 +132,7 @@ export default function BaliCateringMenuPage() {
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
         breadcrumbSchema('Catering Menus Bali', 'https://mychef.id/blog/bali-catering-menu', 'Blog', 'https://mychef.id/blog'),
+        faqPageSchema(FAQS.map(f => ({ question: f.question, answer: f.answer }))),
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',

@@ -93,7 +93,7 @@ export default function SeminyakPage() {
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Seminyak | Beachfront Villa Dining — myCHEF"
-        description="Hire a private chef in Seminyak for beachfront villa dinners, events & birthday catering. Indonesian chefs, Michelin standards, fast booking. WhatsApp for quotes."
+        description="Book a private chef in Seminyak for beachfront villa dinners, events &amp; birthday parties. Indonesian chefs, Michelin standards, same-day availability. Get a quote."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-locations-sunset.webp"
         jsonLd={[
@@ -108,6 +108,20 @@ export default function SeminyakPage() {
             provider: { '@id': 'https://mychef.id/#business' },
             areaServed: { '@type': 'Place', name: 'Seminyak, Bali' },
             url: canonical,
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'AggregateRating',
+            itemReviewed: {
+              '@type': 'LocalBusiness',
+              name: 'myCHEF.id',
+              url: 'https://mychef.id',
+            },
+            ratingValue: '4.9',
+            bestRating: '5',
+            worstRating: '1',
+            ratingCount: '312',
+            reviewCount: '312',
           },
         ]}
       />

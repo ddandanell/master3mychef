@@ -348,6 +348,8 @@ export default function App() {
           <Route path="/blog/yoga-retreat-chef-bali-meal-planning" element={<YogaRetreatChefPage />} />
           <Route path="/blog/private-chef-romantic-dinners-bali" element={<RomanticDinnerBaliPage />} />
           <Route path="/blog/corporate-events-catering-bali-team-dining" element={<CorporateEventsCateringBaliPage />} />
+          <Route path="/blog/private-chef-bali-cost-breakdown-detailed-2026" element={<PrivateChefCostBaliPage />} />
+          <Route path="/blog/wedding-rehearsal-dinner-bali" element={<WeddingPrivateChefPage />} />
           {BLOG_POST_SLUGS.map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />
           ))}

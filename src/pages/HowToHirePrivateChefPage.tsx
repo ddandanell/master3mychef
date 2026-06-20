@@ -33,10 +33,10 @@ const SECTIONS = [
     subtitle: 'Specialties',
     title: 'Types of Private Chefs',
     features: [
-      { icon: TrendingUp, title: 'Fine Dining', desc: 'Michelin-star restaurants or classical training. $180–300+/person. Best for special occasions.' },
-      { icon: Users, title: 'Mediterranean/Wood-Fire', desc: 'Italian, Spanish, Moroccan training. $120–180/person. Best for social dinners.' },
-      { icon: CheckCircle, title: 'Casual/Everyday', desc: 'Home cooking or hospitality training. $60–100/person. Best for longer villa stays.' },
-      { icon: Shield, title: 'Dietary Specialists', desc: 'Vegan, keto, raw, gluten-free expertise. $100–200/person. Best for health-focused trips.' },
+      { icon: TrendingUp, title: 'Fine Dining', desc: 'Michelin-star restaurants or classical training. IDR 2.7M–4.5M+/person. Best for special occasions.' },
+      { icon: Users, title: 'Mediterranean/Wood-Fire', desc: 'Italian, Spanish, Moroccan training. IDR 1.8M–2.7M/person. Best for social dinners.' },
+      { icon: CheckCircle, title: 'Casual/Everyday', desc: 'Home cooking or hospitality training. IDR 900K–1.5M/person. Best for longer villa stays.' },
+      { icon: Shield, title: 'Dietary Specialists', desc: 'Vegan, keto, raw, gluten-free expertise. IDR 1.5M–3M/person. Best for health-focused trips.' },
     ],
   },
   {
@@ -47,17 +47,17 @@ const SECTIONS = [
     body: `<p><strong>Pricing Models:</strong></p>
     <p><strong>Per-Person Rate (Most Common):</strong></p>
     <ul style="margin: 1rem 0; padding-left: 2rem;">
-      <li>Emerging chef: $80–120 per person per meal</li>
-      <li>Established chef: $120–180 per person per meal</li>
-      <li>Celebrity chef: $180–300+ per person per meal</li>
+      <li>Emerging chef: IDR 1.2M–1.8M per person per meal</li>
+      <li>Established chef: IDR 1.8M–2.7M per person per meal</li>
+      <li>Celebrity chef: IDR 2.7M–4.5M+ per person per meal</li>
     </ul>
     <p><strong>Daily/Weekly Flat Rate:</strong></p>
     <ul style="margin: 1rem 0; padding-left: 2rem;">
-      <li>Budget: $300–600/day</li>
-      <li>Mid-range: $600–1,000/day</li>
-      <li>Premium: $1,000–2,000/day</li>
+      <li>Budget: IDR 4.5M–9M/day (groceries included)</li>
+      <li>Mid-range: IDR 9M–15M/day</li>
+      <li>Premium: IDR 15M–30M/day</li>
     </ul>
-    <p><strong>Meal-by-Meal:</strong> Breakfast $10–20/person, Lunch $20–40/person, Dinner $30–100+/person.</p>`,
+    <p><strong>Meal-by-Meal:</strong> Breakfast IDR 150K–300K/person, Lunch IDR 300K–600K/person, Dinner IDR 450K–1.5M+/person.</p>`,
   },
   {
     id: 'vetting',
@@ -142,12 +142,12 @@ const RELATED_PAGES = [
 export default function HowToHirePrivateChefPage() {
   return (
     <PremiumPage
-      slug="blog/how-to-hire-private-chef"
+      slug="blog/how-to-hire-private-chef-bali-complete-guide"
       title="Complete Guide: How to Hire a Private Chef in Bali"
       description="Learn how to hire a private chef in Bali. Compare costs, required qualifications, booking process, and find chefs for your villa stay."
       seoTitle="How to Hire a Private Chef in Bali | Cost, Skills & Booking Guide"
       seoDescription="Learn how to hire a private chef in Bali. Compare costs, required qualifications, booking process, and find chefs for your villa stay."
-      canonicalUrl="https://mychef.id/blog/how-to-hire-private-chef"
+      canonicalUrl="https://mychef.id/blog/how-to-hire-private-chef-bali-complete-guide"
       h1="How to Hire a Private Chef in Bali"
       subtitle="Complete guide to cost, qualifications, and booking process."
       heroImage="/generated/mychef-catering-bali-hub-catering.webp"
@@ -159,7 +159,7 @@ export default function HowToHirePrivateChefPage() {
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
-        breadcrumbSchema('How to Hire a Chef', 'https://mychef.id/blog/how-to-hire-private-chef'),
+        breadcrumbSchema('How to Hire a Private Chef Bali', 'https://mychef.id/blog/how-to-hire-private-chef-bali-complete-guide', 'Blog', 'https://mychef.id/blog'),
       ]}
       ctaText="Browse Available Chefs"
       ctaSubtext="Start with vetted chef profiles and book your private dining experience."

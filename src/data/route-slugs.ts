@@ -57,6 +57,11 @@ export const BLOG_POST_SLUGS: string[] = [
   'blog/dining-by-location-bali-neighborhood-guide',
   'blog/fine-dining-trends-bali-2026-innovations',
   'blog/seasonal-ingredients-bali-cooking-guide',
+  // Phase 6 (sitemap entries missing from catch-all — prevent 404s)
+  'blog/private-chef-breakfast-bali-villas',
+  'blog/birthday-dinner-bali-villa-without-planner',
+  'blog/seminyak-canggu-ubud-uluwatu-private-chef-night',
+  'blog/private-chef-bali-preparation-12-guest-villa-dinner',
 ]
 
 export const SERVICE_SLUGS: string[] = [

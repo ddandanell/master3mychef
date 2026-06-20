@@ -515,7 +515,7 @@ export default function FamilyKidsMenuPage() {
               {
                 href: '/locations/canggu',
                 title: 'Family-friendly Canggu',
-                desc: 'Private chef options in Bali's most popular family destination.',
+                desc: "Private chef options in Bali's most popular family destination.",
               },
             ].map(({ href, title, desc }) => (
               <Link

@@ -9,7 +9,6 @@ export const CUSTOM_LOCATION_PAGE_SLUGS = [
   'denpasar',
   'bukit',
   'pererenan',
-  'jakarta',
 ] as const
 
 export type CustomLocationPageSlug = typeof CUSTOM_LOCATION_PAGE_SLUGS[number]

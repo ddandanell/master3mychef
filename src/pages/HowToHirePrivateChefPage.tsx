@@ -1,5 +1,5 @@
 import PremiumPage from '@/components/PremiumPage'
-import { breadcrumbSchema } from '@/components/SeoHead'
+import { breadcrumbSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import { CheckCircle, Users, TrendingUp, Shield } from 'lucide-react'
 
 const SECTIONS = [
@@ -160,6 +160,7 @@ export default function HowToHirePrivateChefPage() {
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
         breadcrumbSchema('How to Hire a Private Chef Bali', 'https://mychef.id/blog/how-to-hire-private-chef-bali-complete-guide', 'Blog', 'https://mychef.id/blog'),
+        aggregateRatingSchema(4.9, 183),
       ]}
       ctaText="Browse Available Chefs"
       ctaSubtext="Start with vetted chef profiles and book your private dining experience."

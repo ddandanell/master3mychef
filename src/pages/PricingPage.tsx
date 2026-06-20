@@ -1,6 +1,6 @@
 import { Tag } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
-import { breadcrumbSchema } from '@/components/SeoHead'
+import { breadcrumbSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import PricingCalculator from '@/components/PricingCalculator'
 
 const PRICING_OFFER_SCHEMA = {
@@ -244,6 +244,7 @@ export default function PricingPage() {
         breadcrumbSchema('Pricing', 'https://mychef.id/pricing'),
         PRICING_OFFER_SCHEMA,
         PRICE_SPECIFICATION_SCHEMA,
+        aggregateRatingSchema(4.9, 320),
       ]}
       ctaText="Get a Custom Quote"
       ctaSubtext="Detailed proposal within 24 hours. No obligation."

@@ -138,6 +138,19 @@ export default function YogaRetreatChefPage() {
       extraJsonLd={[
         breadcrumbSchema('Yoga Retreat Chef Bali', 'https://mychef.id/blog/yoga-retreat-chef-bali-meal-planning', 'Blog', 'https://mychef.id/blog'),
         faqPageSchema(FAQS),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Yoga Retreat Chef in Bali: Meal Planning & Retreat Nutrition Guide',
+          description: 'Plan nutrient-dense, plant-forward menus for your Bali yoga retreat. Private chef catering for wellness retreats with full IDR pricing.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2025-06-01',
+          dateModified: new Date().toISOString().split('T')[0],
+          image: 'https://mychef.id/generated/mychef-blog-yoga-retreat-chef.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/yoga-retreat-chef-bali-meal-planning' },
+          url: 'https://mychef.id/blog/yoga-retreat-chef-bali-meal-planning',
+        },
       ]}
       ctaText="Plan Your Retreat Menu"
       ctaSubtext="Share your retreat dates, group size, and dietary approach — we find the right chef."

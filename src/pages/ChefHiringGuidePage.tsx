@@ -164,6 +164,19 @@ export default function ChefHiringGuidePage() {
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
         breadcrumbSchema('Chef Qualifications Bali', 'https://mychef.id/blog/chef-qualifications-credentials-bali-hiring', 'Blog', 'https://mychef.id/blog'),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Chef Qualifications & Credentials: Hiring Guide for Bali Villas',
+          description: 'Hire the right private chef in Bali. Learn what credentials to check, how to interview, key questions, and red flags when vetting a chef.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2025-04-01',
+          dateModified: new Date().toISOString().split('T')[0],
+          image: 'https://mychef.id/generated/mychef-catering-bali-hub-catering.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/chef-qualifications-credentials-bali-hiring' },
+          url: 'https://mychef.id/blog/chef-qualifications-credentials-bali-hiring',
+        },
       ]}
       ctaText="Browse Vetted Chefs"
       ctaSubtext="Apply these hiring best practices to our pre-screened chef profiles."

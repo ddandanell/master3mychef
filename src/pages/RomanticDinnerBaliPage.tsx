@@ -160,6 +160,19 @@ export default function RomanticDinnerBaliPage() {
       extraJsonLd={[
         breadcrumbSchema('Romantic Dinner Bali', 'https://mychef.id/blog/romantic-dinner-at-home-bali-private-chef', 'Blog', 'https://mychef.id/blog'),
         faqPageSchema(FAQS),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Romantic Dinner at Home in Bali: Private Chef Experience',
+          description: 'Plan an unforgettable romantic dinner in your Bali villa with a private chef. Tasting menus, personalization ideas, and pricing in IDR.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2025-07-01',
+          dateModified: new Date().toISOString().split('T')[0],
+          image: 'https://mychef.id/generated/mychef-misc-bali-hub-fine-dining.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/romantic-dinner-at-home-bali-private-chef' },
+          url: 'https://mychef.id/blog/romantic-dinner-at-home-bali-private-chef',
+        },
       ]}
       ctaText="Book Your Romantic Dinner"
       ctaSubtext="Tell us your date and occasion — we find the perfect chef for your evening."

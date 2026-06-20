@@ -117,6 +117,19 @@ export default function FineDiningGuidePage() {
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
         breadcrumbSchema('Fine Dining Guide', 'https://mychef.id/blog/fine-dining-guide', 'Blog', 'https://mychef.id/blog'),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Fine Dining in Bali: Ultimate Guide to Private Chef Tasting Menus',
+          description: 'Discover fine dining in Bali with private chefs. Curated tasting menus, wine pairings, and luxury culinary experiences for villa stays.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2025-08-01',
+          dateModified: new Date().toISOString().split('T')[0],
+          image: 'https://mychef.id/generated/mychef-misc-bali-hub-fine-dining.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/fine-dining-guide' },
+          url: 'https://mychef.id/blog/fine-dining-guide',
+        },
       ]}
       ctaText="Reserve Your Tasting Menu"
       ctaSubtext="Browse our fine dining chefs and plan your private culinary experience."

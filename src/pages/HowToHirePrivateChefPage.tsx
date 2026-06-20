@@ -161,6 +161,19 @@ export default function HowToHirePrivateChefPage() {
       extraJsonLd={[
         breadcrumbSchema('How to Hire a Private Chef Bali', 'https://mychef.id/blog/how-to-hire-private-chef-bali-complete-guide', 'Blog', 'https://mychef.id/blog'),
         aggregateRatingSchema(4.9, 183),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'How to Hire a Private Chef in Bali',
+          description: 'Learn how to hire a private chef in Bali. Compare costs, required qualifications, booking process, and find chefs for your villa stay.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2025-03-01',
+          dateModified: new Date().toISOString().split('T')[0],
+          image: 'https://mychef.id/generated/mychef-catering-bali-hub-catering.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/how-to-hire-private-chef-bali-complete-guide' },
+          url: 'https://mychef.id/blog/how-to-hire-private-chef-bali-complete-guide',
+        },
       ]}
       ctaText="Browse Available Chefs"
       ctaSubtext="Start with vetted chef profiles and book your private dining experience."

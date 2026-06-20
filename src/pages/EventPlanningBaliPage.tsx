@@ -132,6 +132,19 @@ export default function EventPlanningBaliPage() {
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
         breadcrumbSchema('Event Planning Bali', 'https://mychef.id/blog/event-planning-bali', 'Blog', 'https://mychef.id/blog'),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Event Planning in Bali: Complete Guide for Weddings and Private Celebrations',
+          description: 'Complete Bali event planning guide. Catering, staffing, venue setup, and timeline for weddings, corporate events, and celebrations.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2025-04-15',
+          dateModified: new Date().toISOString().split('T')[0],
+          image: 'https://mychef.id/generated/mychef-events-bali-baby-shower-hero.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/event-planning-bali' },
+          url: 'https://mychef.id/blog/event-planning-bali',
+        },
       ]}
       ctaText="Plan Your Event"
       ctaSubtext="Connect with our team to discuss your dates, venue, and catering needs."

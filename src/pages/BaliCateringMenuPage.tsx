@@ -132,6 +132,19 @@ export default function BaliCateringMenuPage() {
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
         breadcrumbSchema('Catering Menus Bali', 'https://mychef.id/blog/bali-catering-menu', 'Blog', 'https://mychef.id/blog'),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Bali Catering Menus: Traditional and Modern Options for Your Villa',
+          description: 'Explore Bali catering menus for weddings, events, and group stays. Traditional Balinese, fusion, and international cuisine options.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2025-05-01',
+          dateModified: new Date().toISOString().split('T')[0],
+          image: 'https://mychef.id/generated/mychef-catering-bali-hero-babiguling.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/bali-catering-menu' },
+          url: 'https://mychef.id/blog/bali-catering-menu',
+        },
       ]}
       ctaText="Browse Menu Options"
       ctaSubtext="Explore catering menus and connect with our chefs."

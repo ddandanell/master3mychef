@@ -143,6 +143,19 @@ export default function VillaBirthdayPartyPage() {
       extraJsonLd={[
         breadcrumbSchema('Villa Birthday Party Bali', 'https://mychef.id/blog/how-to-plan-villa-birthday-party-bali', 'Blog', 'https://mychef.id/blog'),
         faqPageSchema(FAQS),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'How to Plan a Villa Birthday Party in Bali with a Private Chef',
+          description: 'Plan an unforgettable birthday party in your Bali villa. Private chef catering, menu ideas, planning timeline, and full pricing in IDR.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2025-05-15',
+          dateModified: new Date().toISOString().split('T')[0],
+          image: 'https://mychef.id/generated/mychef-blog-villa-birthday-party.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/how-to-plan-villa-birthday-party-bali' },
+          url: 'https://mychef.id/blog/how-to-plan-villa-birthday-party-bali',
+        },
       ]}
       ctaText="Plan Your Birthday Party"
       ctaSubtext="Share your date, guest count, and vision — we find the perfect chef for your celebration."

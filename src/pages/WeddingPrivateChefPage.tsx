@@ -158,6 +158,19 @@ export default function WeddingPrivateChefPage() {
       extraJsonLd={[
         breadcrumbSchema('Wedding Private Chef Bali', 'https://mychef.id/blog/wedding-private-chef-bali-planning-guide', 'Blog', 'https://mychef.id/blog'),
         faqPageSchema(FAQS),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Wedding Private Chef in Bali: Planning & Catering Guide',
+          description: 'Plan your Bali villa wedding catering with a private chef. Menus, timelines, service styles, and full budget breakdown in IDR.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2025-05-01',
+          dateModified: new Date().toISOString().split('T')[0],
+          image: 'https://mychef.id/generated/mychef-blog-wedding-private-chef.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/wedding-private-chef-bali-planning-guide' },
+          url: 'https://mychef.id/blog/wedding-private-chef-bali-planning-guide',
+        },
       ]}
       ctaText="Plan Your Wedding Catering"
       ctaSubtext="Share your dates, guest count, and vision — we match you with the right chef."

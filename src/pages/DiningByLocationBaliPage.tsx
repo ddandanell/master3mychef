@@ -147,6 +147,19 @@ export default function DiningByLocationBaliPage() {
       extraJsonLd={[
         breadcrumbSchema('Dining by Location Bali', 'https://mychef.id/blog/dining-by-location-bali-neighborhood-guide', 'Blog', 'https://mychef.id/blog'),
         faqPageSchema(FAQS),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Dining by Location in Bali: Private Chef Guide by Neighborhood',
+          description: 'How location shapes your private dining experience in Bali. Seminyak, Canggu, Uluwatu, Ubud, Sanur, and Jimbaran.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2025-09-01',
+          dateModified: new Date().toISOString().split('T')[0],
+          image: 'https://mychef.id/generated/mychef-blog-dining-by-location.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/dining-by-location-bali-neighborhood-guide' },
+          url: 'https://mychef.id/blog/dining-by-location-bali-neighborhood-guide',
+        },
       ]}
       ctaText="Find a Chef in Your Area"
       ctaSubtext="Tell us your villa location and we match you with an experienced local chef."

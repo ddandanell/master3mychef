@@ -105,7 +105,7 @@ const FAQS = [
   },
   {
     q: 'How is payment handled?',
-    a: 'Staff costs are invoiced separately from chef services. 50% deposit upfront, balance due within 48 hours of service.',
+    a: 'Staff costs are invoiced separately from chef services. 25% deposit upfront, balance due within 48 hours of service.',
   },
 ]
 

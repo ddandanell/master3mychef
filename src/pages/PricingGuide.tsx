@@ -68,7 +68,7 @@ const FAQS = [
   },
   {
     q: 'What about payment plans?',
-    a: 'We typically take 30% deposit to lock the date and team, then final payment 48 hours before service.',
+    a: 'We typically take 25% deposit to lock the date and team, then final payment 48 hours before service.',
   },
   {
     q: 'Are there cancellation fees?',

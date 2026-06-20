@@ -41,6 +41,11 @@ export const localBusinessSchema = {
   priceRange: '$$$$',
   openingHours: 'Mo-Su 07:00-23:00',
   image: 'https://mychef.id/generated/hub-hero-v3.webp',
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'HACCP Food Safety Certification',
+    credentialCategory: 'Food Safety',
+  },
 }
 
 

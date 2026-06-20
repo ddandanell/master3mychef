@@ -6,7 +6,7 @@ interface TrustStripProps {
 
 const items = [
   { icon: MessageCircle, label: 'Same-day WhatsApp', desc: 'Confirmation within the hour' },
-  { icon: Wallet, label: '50% deposit only', desc: 'Balance due before event' },
+  { icon: Wallet, label: '25% deposit only', desc: 'Balance due before event' },
   { icon: Users, label: '1 waiter per 10 guests', desc: 'Industry-standard service' },
   { icon: Sparkles, label: 'Full cleanup', desc: 'We pack up and leave' },
 ]

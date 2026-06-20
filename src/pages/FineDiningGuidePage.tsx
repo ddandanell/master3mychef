@@ -47,11 +47,11 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Investment',
     title: 'Cost & Booking a Fine Dining Experience',
-    body: `<p><strong>Emerging Chef:</strong> $80–120 per person for 4–5 courses. Talented, less portfolio depth.</p>
-    <p><strong>Established Chef:</strong> $120–180 per person for 6–8 courses. Michelin-trained, strong reviews.</p>
-    <p><strong>Celebrity Chef:</strong> $180–300+ per person for 8–10 courses. Michelin stars, international fame.</p>
-    <p>Group size discounts apply — 4 guests cost ~$500 total; 8 guests cost ~$800 (price per person drops as numbers rise).</p>
-    <p>Additional costs: wine pairing (+$25–50/person), ingredient upgrades like truffle or caviar (+$20–100), multi-day events (negotiate per-day rates).</p>
+    body: `<p><strong>Emerging Chef:</strong> IDR 1.2M–1.8M per person for 4–5 courses. Talented, less portfolio depth.</p>
+    <p><strong>Established Chef:</strong> IDR 1.8M–2.7M per person for 6–8 courses. Michelin-trained, strong reviews.</p>
+    <p><strong>Celebrity Chef:</strong> IDR 2.7M–4.8M+ per person for 8–10 courses. Michelin stars, international fame.</p>
+    <p>Group size discounts apply — 4 guests cost ~IDR 8M total; 8 guests cost ~IDR 13M (price per person drops as numbers rise).</p>
+    <p>Additional costs: wine pairing (+IDR 400K–800K/person), ingredient upgrades like truffle or caviar (+IDR 300K–1.5M), multi-day events (negotiate per-day rates).</p>
     <p>Ideal booking timeline: 4–6 weeks ahead. Acceptable: 2–3 weeks. Rush: 1 week (premium surcharge may apply).</p>`,
   },
   {
@@ -90,7 +90,7 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Browse Chefs', href: '/chefs', desc: 'Meet Luna, Sol, Aura, and other leading fine dining chefs.' },
-  { label: 'How to Hire a Chef', href: '/blog/how-to-hire-private-chef', desc: 'Complete guide to vetting and booking private chefs.' },
+  { label: 'How to Hire a Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Complete guide to vetting and booking private chefs.' },
   { label: 'Catering Menus', href: '/blog/bali-catering-menu', desc: 'Explore menu styles beyond fine dining.' },
   { label: 'Menus', href: '/menus', desc: 'Browse all available menu options.' },
   { label: 'Contact', href: '/contact', desc: 'Chat with our team about your preferences.' },
@@ -116,7 +116,7 @@ export default function FineDiningGuidePage() {
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
-        breadcrumbSchema('Fine Dining Guide', 'https://mychef.id/blog/fine-dining-guide'),
+        breadcrumbSchema('Fine Dining Guide', 'https://mychef.id/blog/fine-dining-guide', 'Blog', 'https://mychef.id/blog'),
       ]}
       ctaText="Reserve Your Tasting Menu"
       ctaSubtext="Browse our fine dining chefs and plan your private culinary experience."

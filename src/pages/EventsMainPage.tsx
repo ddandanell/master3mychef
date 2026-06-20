@@ -5,7 +5,7 @@ import {
   Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music,
   Globe2, ClipboardCheck, ArrowRight, Check,
 } from 'lucide-react'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema, howToSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -361,6 +361,12 @@ export default function EventsMainPage() {
           },
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Book an Event in Bali with myCHEF',
+            description: 'Plan your Bali villa event — wedding, birthday, corporate retreat — in 3 simple steps.',
+            totalTime: 'PT20M',
+            steps: HOW_WE_RUN.map(s => ({ name: s.title, text: s.body })),
+          }),
           {
             '@context': 'https://schema.org',
             '@type': 'ItemList',

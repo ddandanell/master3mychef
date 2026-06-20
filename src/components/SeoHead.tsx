@@ -188,6 +188,27 @@ export function faqPageSchema(questions: { question: string; answer: string }[])
   }
 }
 
+export function howToSchema(params: {
+  name: string
+  description: string
+  steps: { name: string; text: string }[]
+  totalTime?: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: params.name,
+    description: params.description,
+    ...(params.totalTime ? { totalTime: params.totalTime } : {}),
+    step: params.steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
+  }
+}
+
 export function aggregateRatingSchema(ratingValue: number, reviewCount: number) {
   return {
     '@context': 'https://schema.org',

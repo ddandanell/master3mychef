@@ -12,6 +12,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -402,6 +403,12 @@ export default function CateringMainPage() {
           offerSchema('Babi Guling Small', 3700000, 'IDR', `${SITE}/catering/babi-guling`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Book Catering in Bali',
+            description: 'Book professional catering for your Bali villa or event in 6 easy steps.',
+            totalTime: 'PT15M',
+            steps: HOW_IT_WORKS.map(s => ({ name: s.title, text: s.desc })),
+          }),
           breadcrumbSchema('Catering', `${SITE}/catering`),
         ]}
       />

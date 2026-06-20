@@ -4,11 +4,26 @@
  * Single source of truth for navigation, pages, SEO, and internal linking.
  */
 
+// ─────────────────────────────────────────────────────────────────────────────
+// PHONE / WHATSAPP — SINGLE SOURCE OF TRUTH
+// To change the number site-wide, run: node scripts/change-phone.js <new>
+// e.g.  node scripts/change-phone.js 491635080236
+// ─────────────────────────────────────────────────────────────────────────────
+export const PHONE = {
+  /** Digits only — used in wa.me links and tel: href   e.g. 491635080236 */
+  digits:   '491635080236',
+  /** Display format with spaces                        e.g. +49 163 5080236 */
+  display:  '+49 163 5080236',
+  /** Hyphenated — used in schema.org telephone field   e.g. +49-163-5080236 */
+  schema:   '+49-163-5080236',
+}
+
 export const SITE = {
   name: 'myCHEF',
   url: 'https://mychef.id',
   email: 'indonesia@mychef.id',
-  whatsapp: '491635080236',
+  /** @deprecated use PHONE.digits */
+  whatsapp: PHONE.digits,
 }
 
 export type PillarSlug = 'fine-dining' | 'catering' | 'events' | 'in-villa-service' | 'staffing'

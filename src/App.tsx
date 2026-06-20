@@ -352,6 +352,9 @@ export default function App() {
           <Route path="/blog/private-chef-bali-cost-breakdown-detailed-2026" element={<PrivateChefCostBaliPage />} />
           <Route path="/blog/wedding-rehearsal-dinner-bali" element={<WeddingPrivateChefPage />} />
           <Route path="/blog/dining-by-location-bali-neighborhood-guide" element={<DiningByLocationBaliPage />} />
+          <Route path="/blog/private-chef-roles-responsibilities-explained" element={<HowToHirePrivateChefPage />} />
+          <Route path="/blog/fine-dining-trends-bali-2026-innovations" element={<FineDiningGuidePage />} />
+          <Route path="/blog/seasonal-ingredients-bali-cooking-guide" element={<BaliCateringMenuPage />} />
           {BLOG_POST_SLUGS.map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />
           ))}

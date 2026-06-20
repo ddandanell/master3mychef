@@ -78,12 +78,12 @@ export default function CateringPage() {
           <h2 className="font-playfair text-2xl md:text-3xl mb-8">What’s included</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              ‘Menu design tailored to your group’,
-              ‘All equipment, chafing dishes & serveware’,
-              ‘Grocery shopping at cost — no markup’,
-              ‘Setup, service and full clean-up’,
-              ‘Dietary customization at no extra cost’,
-              ‘Scalable from 8 to 200 guests’,
+              'Menu design tailored to your group',
+              'All equipment, chafing dishes & serveware',
+              'Grocery shopping at cost — no markup',
+              'Setup, service and full clean-up',
+              'Dietary customization at no extra cost',
+              'Scalable from 8 to 200 guests',
             ].map((item) => (
               <div key={item} className="flex items-start gap-3 p-4 rounded-xl bg-white border border-[#E8E6E3]">
                 <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#6B8E5A]" />

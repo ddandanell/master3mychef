@@ -656,6 +656,37 @@ export const BLOG_POSTS = [
 <h2>How to Declare Requirements</h2>
 <p>At booking via WhatsApp, provide: every allergy and its severity (trace reaction, intolerance, or anaphylactic), every dietary category (vegan, halal, keto, etc.), all hard exclusions, preferred cuisines, and any children's specific requirements. The chef receives this before shopping and proposes a menu for your approval before any ingredient is purchased. See also our <a href="/blog/family-kids-menu-private-chef-bali" class="text-[#C5A028] hover:underline font-medium">family and kids' dining guide</a> and the full <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing guide</a>.</p>`,
   },
+  // Shorthand alias posts — these routes exist in App.tsx and are linked from
+  // BlogPage.tsx / other pages, but were never registered in BLOG_POSTS so
+  // inject-meta never generated static HTML for them → 404 on direct access.
+  {
+    slug: 'blog/how-to-hire-private-chef',
+    title: 'How to Hire a Private Chef in Bali: Complete Guide',
+    description: 'Step-by-step guide to hiring a private chef in Bali. What to look for, how to vet candidates, costs, and the full hiring process.',
+    date: '2026-05-18',
+    content: `<h2>How to Hire a Private Chef in Bali</h2><p>Hiring a private chef in Bali involves five steps: define your needs, shortlist candidates, vet their credentials, arrange a tasting or menu proposal, and finalise the contract. For the detailed step-by-step process including interview questions and red flags, see our <a href="/blog/how-to-hire-private-chef-bali-complete-guide" class="text-[#C5A028] hover:underline font-medium">complete hiring guide</a>.</p>`,
+  },
+  {
+    slug: 'blog/chef-hiring-guide',
+    title: 'Chef Qualifications & Credentials: Hiring Guide for Bali Villas',
+    description: 'Hire the right private chef in Bali. Learn what credentials to check, how to interview, key questions, and red flags when vetting a chef.',
+    date: '2026-05-18',
+    content: `<h2>What Separates a Professional Chef from a Home Cook</h2><p>The difference between a professional private chef and someone who "can cook" is formal training, hands-on kitchen experience, and reliable execution under pressure. When hiring, look for tangible proof of competency.</p><h2>Essential Qualifications to Verify</h2><p>Culinary diploma or apprenticeship, current HACCP food-safety certification, fluent English, and verifiable references from past clients. Ask candidates for portfolio menus and client testimonials before scheduling an interview.</p><h2>How to Vet a Chef Step by Step</h2><p>Request documentation, conduct a screening call, perform an in-person interview, check references, and — for important events — arrange a small tasting at cost. See the full qualification breakdown in our <a href="/blog/chef-qualifications-credentials-bali-hiring" class="text-[#C5A028] hover:underline font-medium">detailed credentials guide</a>.</p>`,
+  },
+  {
+    slug: 'blog/event-planning-bali',
+    title: 'Event Planning in Bali: Complete Guide for Weddings & Private Celebrations',
+    description: 'Complete Bali event planning guide. Catering, staffing, venue setup, and timeline for weddings, corporate events, and celebrations.',
+    date: '2026-05-18',
+    content: `<h2>Planning Your Event in Bali</h2><p>Bali is one of the world's premier event destinations — villa venues, open-air gardens, and beachfront settings that are impossible to replicate elsewhere. But executing a flawless event in Bali requires local knowledge: vendor lead times, permit requirements, and the logistics of moving large groups across the island.</p><h2>Event Types and Timelines</h2><p>Weddings (10–200 guests) require 3–12 months of planning. Corporate retreats need 4–8 weeks. Private celebrations and villa parties can be organised in 1–2 weeks with the right team. The earlier you lock in catering, the better: top private chefs book out 3–4 weeks in advance during high season.</p><h2>Catering and Staffing</h2><p>Catering is the single highest-impact element of any event. For plated dinners, plan for 1 server per 6 guests. Buffets require 1 server per 15 guests plus 2 kitchen staff. All myCHEF event packages include the chef, sous-chef, service staff, setup, and full cleanup. Explore <a href="/blog/bali-catering-menu" class="text-[#C5A028] hover:underline font-medium">catering menu options</a> for buffet, plated, and grazing styles.</p>`,
+  },
+  {
+    slug: 'blog/bali-catering-menu',
+    title: 'Bali Catering Menus: Traditional & Modern Options for Your Villa',
+    description: 'Explore Bali catering menus — traditional Indonesian, modern fusion, plated dinners, buffets, and grazing boards for villa events.',
+    date: '2026-05-18',
+    content: `<h2>Bali Catering Menus: What Are Your Options?</h2><p>A private chef in Bali offers far more flexibility than a fixed restaurant menu. From traditional Balinese nasi campur to modern Mediterranean-Balinese fusion, the menu is built around your group's preferences, dietary needs, and the style of event you are hosting.</p><h2>Traditional Balinese</h2><p>Iconic dishes — babi guling (suckling pig), bebek betutu (slow-cooked duck), sate lilit (lemongrass skewers), lawar (ceremonial salad), and nasi campur — make for an authentic culinary experience that guests remember. Best for groups of 6 or more who want genuine Balinese culture at the table.</p><h2>Modern Fusion and Contemporary</h2><p>Mediterranean-Balinese fusion uses Italian and Spanish technique applied to local ingredients: charred octopus with sambal, turmeric risotto, wood-fired fish with coconut leche. Contemporary Balinese applies French plating discipline to local recipes. Both styles work well for smaller, upscale groups.</p><h2>Dietary Accommodations</h2><p>All menus can be adapted for vegetarian, vegan, gluten-free, halal, keto, and nut-free requirements. Tell your chef at booking — not the day before. For complex dietary groups, see the <a href="/blog/food-allergies-dietary-requirements-private-chef-bali" class="text-[#C5A028] hover:underline font-medium">food allergies guide</a>.</p><h2>Menu Styles: Plated, Buffet, Grazing, BBQ</h2><p>Plated (formal, 4–8 guests), buffet (casual, 8+ guests), grazing boards (4–6 guests, bohemian), and BBQ/wood-fire (6–12 guests, interactive). Your chef will recommend the right style for your group size and event format.</p>`,
+  },
 ]
 
 export function buildSitemap(): SitemapEntry[] {

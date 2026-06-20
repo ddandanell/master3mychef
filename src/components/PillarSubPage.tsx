@@ -18,6 +18,15 @@ function getWhatsAppText(pillar: Pillar, subPage: SubPage): string {
   return base
 }
 
+function getCTALabel(pillarSlug: string): string {
+  if (pillarSlug === 'fine-dining') return 'Reserve via WhatsApp'
+  if (pillarSlug === 'catering') return 'Get a Catering Quote'
+  if (pillarSlug === 'events') return 'Plan My Event'
+  if (pillarSlug === 'in-villa-service') return 'Hire Staff Now'
+  if (pillarSlug === 'staffing') return 'Request Chef Profiles'
+  return 'Chat on WhatsApp'
+}
+
 export default function PillarSubPage() {
   const location = useLocation()
   const path = location.pathname.replace(/\/$/, '')
@@ -116,7 +125,7 @@ export default function PillarSubPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
           >
-            <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
+            <MessageCircle className="w-4 h-4" /> {getCTALabel(pillarSlug)}
           </a>
           <Link
             to="/quote"

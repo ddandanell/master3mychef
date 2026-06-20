@@ -102,6 +102,7 @@ const BlogIndexPage = lazy(() => import('./components/BlogIndexPage'))
 const BaliHubPage = lazy(() => import('./components/BaliHubPage'))
 const QuoteFunnel = lazy(() => import('./components/QuoteFunnel'))
 const PrivateChefCostBaliPage = lazy(() => import('./pages/PrivateChefCostBaliPage'))
+const ChefProfilePage = lazy(() => import('./pages/ChefProfilePage'))
 
 // Help & Guides System
 const HelpPage = lazy(() => import('./pages/HelpPage'))
@@ -341,6 +342,7 @@ export default function App() {
           {/* Info / utility pages */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/chefs" element={<ChefsPage />} />
+          <Route path="/chefs/:slug" element={<ChefProfilePage />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/why-mychef" element={<WhyMychefPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />

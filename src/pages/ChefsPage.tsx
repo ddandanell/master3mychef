@@ -4,6 +4,7 @@ import PremiumPage from '@/components/PremiumPage'
 const CHEFS = [
   {
     name: 'Adriano',
+    slug: 'adriano',
     role: 'Executive Chef & Founder',
     specialty: 'Mediterranean Fine Dining',
     badge: 'Milan-born · Michelin-trained in Modena · Founder since 2016',
@@ -13,15 +14,17 @@ const CHEFS = [
   },
   {
     name: 'I Made Surya',
+    slug: 'made-surya',
     role: 'Head Chef — Mediterranean',
     specialty: 'Handmade Pasta & Seafood',
     badge: "Ubud talent shaped through myCHEF's in-house program",
-    image: '/generated/mychef-finedining-bali-luna-chef-portrait.webp',
+    image: '/generated/portrait-daniel.webp',
     bio: "Surya is the calm hand behind many of our Mediterranean set menus. He combines Adriano's technique with Balinese market knowledge, turning just-caught seafood, handmade pasta, and clean sauces into elegant villa dinners.",
     achievements: ['Leads Mediterranean villa menus', 'Known for fresh pasta and seafood timing', 'Guest favourite for intimate 6–12 person dinners'],
   },
   {
     name: 'Bayu Pranata',
+    slug: 'bayu-pranata',
     role: 'Head Chef — BBQ & Grill',
     specialty: 'Open-Flame Cooking',
     badge: 'Jimbaran grill specialist with decades around charcoal',
@@ -31,10 +34,11 @@ const CHEFS = [
   },
   {
     name: 'Ni Putu Asri',
+    slug: 'ni-putu-asri',
     role: 'Head Chef — Balinese & Asian Fusion',
     specialty: 'Balinese Classics & Modern Asian',
     badge: 'Gianyar-born chef rooted in ceremonial cooking traditions',
-    image: '/generated/mychef-misc-bali-about-team-photo.webp',
+    image: '/generated/portrait-olivia.webp',
     bio: 'Asri protects the local soul of the myCHEF menu. She leads Indonesian feasts, ceremonial dishes, and Asian fusion menus with a balance of authenticity, polish, and warmth that villa guests immediately feel.',
     achievements: ['Leads Indonesian feast menus', 'Balances tradition with modern plating', 'Trusted for family celebrations and cultural dinners'],
   },
@@ -47,7 +51,7 @@ const CHEF_PERSON_SCHEMAS = CHEFS.map((chef) => ({
   jobTitle: chef.role,
   description: chef.bio,
   image: `https://mychef.id${chef.image}`,
-  url: 'https://mychef.id/chefs',
+  url: `https://mychef.id/chefs/${chef.slug}`,
   worksFor: { '@id': 'https://mychef.id/#business' },
   knowsAbout: [chef.specialty, ...chef.achievements],
 }))

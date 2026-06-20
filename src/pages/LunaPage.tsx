@@ -1101,6 +1101,36 @@ export default function LunaPage() {
         />
       </section>
 
+      {/* Location & Guide Links */}
+      <section className="py-16 md:py-20 px-6" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-6 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Fine Dining by Location</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <Link to="/locations/ubud" className="group rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 hover:border-[#C5A028]/50 hover:bg-white/[0.06] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <p className="text-[#C5A028] text-xs uppercase tracking-wider mb-1">Ubud</p>
+              <p className="text-white text-sm font-medium group-hover:text-[#C5A028] transition-colors">Ubud jungle villa fine dining</p>
+            </Link>
+            <Link to="/locations/seminyak" className="group rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 hover:border-[#C5A028]/50 hover:bg-white/[0.06] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <p className="text-[#C5A028] text-xs uppercase tracking-wider mb-1">Seminyak</p>
+              <p className="text-white text-sm font-medium group-hover:text-[#C5A028] transition-colors">Seminyak beachfront fine dining</p>
+            </Link>
+            <Link to="/locations/uluwatu" className="group rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 hover:border-[#C5A028]/50 hover:bg-white/[0.06] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <p className="text-[#C5A028] text-xs uppercase tracking-wider mb-1">Uluwatu</p>
+              <p className="text-white text-sm font-medium group-hover:text-[#C5A028] transition-colors">Uluwatu cliffside dining</p>
+            </Link>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/blog/fine-dining-guide" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Read our complete guide to fine dining in Bali →
+            </Link>
+            <span className="text-white/20">·</span>
+            <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              See fine dining pricing →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section id="faq" className="py-24 md:py-32 px-6 scroll-mt-24">
         <div className="max-w-[800px] mx-auto">

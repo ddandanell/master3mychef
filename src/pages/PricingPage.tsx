@@ -225,9 +225,9 @@ const RELATED_PAGES = [
   { label: 'Fine Dining', href: '/fine-dining', desc: 'In-villa tasting menus and private chef experiences.' },
   { label: 'Catering', href: '/catering', desc: 'Full-service villa catering for any occasion.' },
   { label: 'Events', href: '/events', desc: 'Weddings, retreats, and celebrations across Bali.' },
+  { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, butlers, bartenders, and sommeliers per shift.' },
+  { label: 'How to Hire a Private Chef', href: '/blog/how-to-hire-private-chef', desc: 'Step-by-step guide to finding, vetting, and booking a chef.' },
   { label: 'Get a Quote', href: '/quote', desc: 'Receive a detailed proposal within 24 hours.' },
-  { label: 'Book Now', href: '/book', desc: 'Reserve your private chef experience online.' },
-  { label: 'Contact', href: '/contact', desc: 'Speak with our concierge team.' },
 ]
 
 export default function PricingPage() {

@@ -157,6 +157,7 @@ export default function JakartaPage() {
               href={`https://wa.me/${WA}?text=${WA_MSG}`}
               target="_blank"
               rel="noopener noreferrer"
+              data-source="jakarta-cta"
               className="inline-flex items-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <MessageCircle className="w-4 h-4" /> Get a Jakarta Quote
@@ -178,13 +179,13 @@ export default function JakartaPage() {
           <h2 className="font-playfair text-3xl md:text-4xl mb-6">The myCHEF Standard in Jakarta</h2>
           <div className="prose prose-lg text-[#4A4745] max-w-none">
             <p className="mb-4 leading-relaxed">
-              Jakarta is one of Southeast Asia's most demanding markets for private dining. With a population of 13 million and a growing community of executives, diplomats, and international families, the city expects the same standards you would find in Singapore or Dubai — but the private chef industry here remains fragmented and inconsistent.
+              Jakarta is one of Southeast Asia's most demanding markets for private dining. With a population of 13 million and a growing community of executives, diplomats, and international families, the city expects the same standards you would find in Singapore or Dubai — but the private chef industry here remains fragmented and inconsistent. Read our <Link to="/blog/how-to-hire-private-chef" className="text-[#C5A028] hover:underline font-medium">complete guide to hiring a private chef</Link> before you book.
             </p>
             <p className="mb-4 leading-relaxed">
-              myCHEF brings a different model to Jakarta. Every chef on our team is Indonesian, deeply familiar with local ingredients and culinary traditions, and trained to international Michelin-standard protocols. We combine this with the operational infrastructure we have built across 12,000+ events in Bali — structured menus, vetted suppliers, professional service staff, and a 50% deposit booking system that protects both client and chef.
+              myCHEF brings a different model to Jakarta. Every chef on our team is Indonesian, deeply familiar with local ingredients and culinary traditions, and trained to international Michelin-standard protocols. We combine this with the operational infrastructure we have built across 12,000+ events in Bali — structured menus, vetted suppliers, professional service staff, and a 50% deposit booking system that protects both client and chef. Our <Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Jakarta catering services</Link> span corporate lunches, private dinners, and full-scale galas.
             </p>
             <p className="mb-0 leading-relaxed">
-              Whether you are hosting a board dinner in SCBD, a family celebration in Pondok Indah, or a large-scale corporate gala, our Jakarta team delivers the same reliability and culinary quality our Bali clients have trusted since 2019.
+              Whether you are hosting a <Link to="/events" className="text-[#C5A028] hover:underline font-medium">Jakarta corporate event or villa dinner</Link> in SCBD, a family celebration in Pondok Indah, or a large-scale corporate gala, our Jakarta team delivers the same reliability and culinary quality our Bali clients have trusted since 2019. See <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">our pricing guide</Link> for Jakarta-specific rates.
             </p>
           </div>
 
@@ -291,6 +292,31 @@ export default function JakartaPage() {
         </div>
       </section>
 
+      {/* Guides & Resources */}
+      <section className="py-16 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Guides &amp; Resources</p>
+          <h2 className="font-playfair text-2xl mb-8">Helpful reads for Jakarta clients</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'How to hire a private chef', path: '/blog/how-to-hire-private-chef', desc: 'Complete step-by-step hiring guide — vetting, pricing, what to expect' },
+              { label: 'Chef hiring & credentials guide', path: '/blog/chef-hiring-guide', desc: 'What qualifications to look for and red flags to avoid' },
+              { label: 'Jakarta catering services', path: '/catering', desc: 'Corporate events, villa dinners, and large-scale galas' },
+              { label: 'Private chef pricing', path: '/pricing', desc: 'Transparent starting prices for every Jakarta service format' },
+            ].map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="group block bg-[#FAFAF8] border border-[#E8E6E3] rounded-xl p-5 hover:border-[#C5A028] transition-colors"
+              >
+                <div className="font-semibold text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors mb-1">{link.label}</div>
+                <div className="text-[#8A8785] text-sm">{link.desc}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Internal links */}
       <section className="py-16 bg-[#F5F3F0] border-t border-[#E8E6E3]">
         <div className="max-w-5xl mx-auto px-6">
@@ -298,7 +324,7 @@ export default function JakartaPage() {
           <div className="grid sm:grid-cols-3 gap-4">
             {[
               { label: 'Private Chef in Bali', path: '/fine-dining/private-chef-bali', desc: 'Our flagship Bali service — villa dining, events, weddings' },
-              { label: 'Corporate Catering', path: '/catering/corporate', desc: 'Executive lunches, board dinners, team retreats' },
+              { label: 'Corporate Catering Jakarta', path: '/events', desc: 'Corporate events, board dinners, team retreats' },
               { label: 'Pricing Guide', path: '/pricing', desc: 'Transparent starting prices for every service format' },
             ].map((link) => (
               <Link

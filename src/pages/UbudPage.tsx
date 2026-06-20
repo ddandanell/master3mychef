@@ -174,13 +174,13 @@ export default function UbudPage() {
           <h2 className="font-playfair text-3xl md:text-4xl mb-6">The myCHEF Standard in Ubud</h2>
           <div className="prose prose-lg text-[#4A4745] max-w-none">
             <p className="mb-4 leading-relaxed">
-              Ubud is Bali's spiritual and cultural heart — rice terraces, jungle valleys, and a slower pace that invites deeper dining experiences. Guests here don't just want food; they want a connection to Balinese culture, local ingredients, and the land. Our Ubud service is built around that intention.
+              Ubud is Bali's spiritual and cultural heart — rice terraces, jungle valleys, and a slower pace that invites deeper dining experiences. Guests here don't just want food; they want a connection to Balinese culture, local ingredients, and the land. Our Ubud service is built around that intention. New to private chef dining? Our <Link to="/blog/how-to-hire-private-chef" className="text-[#C5A028] hover:underline font-medium">guide to hiring a private chef</Link> walks through the whole process.
             </p>
             <p className="mb-4 leading-relaxed">
-              We source from the Ubud morning market, work with local organic farmers in the Sayan and Penestanan valleys, and build menus that reflect the season and the surroundings. Our chefs are experienced in both traditional Balinese cooking — Babi Guling, Megibung feasts, jamu-infused dishes — and the modern wellness cuisine that Ubud's international retreat guests expect.
+              We source from the Ubud morning market, work with local organic farmers in the Sayan and Penestanan valleys, and build menus that reflect the season and the surroundings. Our chefs are experienced in both <Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">fine dining in Ubud</Link> and traditional Balinese cooking — Babi Guling, Megibung feasts, jamu-infused dishes — as well as the modern wellness cuisine that Ubud's international <Link to="/events" className="text-[#C5A028] hover:underline font-medium">yoga retreat and wellness event</Link> guests expect.
             </p>
             <p className="mb-0 leading-relaxed">
-              Ubud's geography is complex — villas spread across jungle roads, valley floors, and elevated ridges. We coordinate transport and staging carefully and build extra time into Ubud logistics so your service starts precisely on schedule, regardless of the access.
+              Ubud's geography is complex — villas spread across jungle roads, valley floors, and elevated ridges. We coordinate transport and staging carefully and build extra time into Ubud logistics so your service starts precisely on schedule, regardless of the access. See <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">our pricing guide</Link> for Ubud-specific rates including logistics fees for remote locations.
             </p>
           </div>
 
@@ -282,6 +282,31 @@ export default function UbudPage() {
                   {faq.a}
                 </div>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Guides & Resources */}
+      <section className="py-16 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Guides &amp; Resources</p>
+          <h2 className="font-playfair text-2xl mb-8">Helpful reads for Ubud guests</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'How to hire a private chef in Bali', path: '/blog/how-to-hire-private-chef', desc: 'Complete step-by-step hiring guide — vetting, pricing, what to expect' },
+              { label: 'Chef hiring & credentials guide', path: '/blog/chef-hiring-guide', desc: 'What qualifications to look for and red flags to avoid' },
+              { label: 'Yoga retreat chef services', path: '/events', desc: 'Full-board retreat catering: breakfast, lunch, and dinner daily' },
+              { label: 'Private chef pricing', path: '/pricing', desc: 'Transparent starting prices for every Ubud service format' },
+            ].map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="group block bg-[#FAFAF8] border border-[#E8E6E3] rounded-xl p-5 hover:border-[#C5A028] transition-colors"
+              >
+                <div className="font-semibold text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors mb-1">{link.label}</div>
+                <div className="text-[#8A8785] text-sm">{link.desc}</div>
+              </Link>
             ))}
           </div>
         </div>

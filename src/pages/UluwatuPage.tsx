@@ -174,13 +174,13 @@ export default function UluwatuPage() {
           <h2 className="font-playfair text-3xl md:text-4xl mb-6">The myCHEF Standard in Uluwatu</h2>
           <div className="prose prose-lg text-[#4A4745] max-w-none">
             <p className="mb-4 leading-relaxed">
-              Uluwatu is Bali's most dramatic address — sheer limestone cliffs, world-class surf breaks, and private estates perched at the edge of the Indian Ocean. The villas here are built for the view, with sweeping open-air terraces and outdoor dining rooms that demand a culinary experience worthy of the setting.
+              Uluwatu is Bali's most dramatic address — sheer limestone cliffs, world-class surf breaks, and private estates perched at the edge of the Indian Ocean. The villas here are built for the view, with sweeping open-air terraces and outdoor dining rooms that demand a culinary experience worthy of the setting. Discover what <Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">cliffside fine dining</Link> looks like with a private chef.
             </p>
             <p className="mb-4 leading-relaxed">
               myCHEF has operated in Uluwatu since our founding, building deep knowledge of cliff-facing property logistics, local supplier networks, and the high expectations of the international guests who stay here. We source seafood directly from the Bingin and Padang-Padang fish landings — often within hours of the catch arriving. Our menus are designed around Uluwatu's wind patterns and sun timing, so your sunset course lands precisely as the horizon turns gold.
             </p>
             <p className="mb-0 leading-relaxed">
-              Every chef on our Uluwatu team is Indonesian, fluent in English, and experienced in both traditional Balinese cuisine and European fine dining techniques. Whether you are hosting an intimate dinner for two, a cliff-side seafood BBQ for twenty, or a wedding rehearsal dinner for eighty, we bring Michelin-level execution to your villa terrace.
+              Every chef on our Uluwatu team is Indonesian, fluent in English, and experienced in both traditional Balinese cuisine and European fine dining techniques. Whether you are hosting an intimate dinner for two, a cliff-side seafood BBQ for twenty, or <Link to="/events" className="text-[#C5A028] hover:underline font-medium">Uluwatu villa weddings and events</Link> for eighty, we bring Michelin-level execution to your villa terrace. See <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">our pricing guide</Link> for a full overview.
             </p>
           </div>
 
@@ -282,6 +282,31 @@ export default function UluwatuPage() {
                   {faq.a}
                 </div>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Guides & Resources */}
+      <section className="py-16 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Guides &amp; Resources</p>
+          <h2 className="font-playfair text-2xl mb-8">Helpful reads for Uluwatu guests</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'How to hire a private chef in Bali', path: '/blog/how-to-hire-private-chef', desc: 'Complete step-by-step hiring guide — vetting, pricing, what to expect' },
+              { label: 'Chef hiring & credentials guide', path: '/blog/chef-hiring-guide', desc: 'What qualifications to look for and red flags to avoid' },
+              { label: 'Uluwatu villa weddings & events', path: '/events', desc: 'Rehearsal dinners, cliff-side ceremonies, and celebration catering' },
+              { label: 'Private chef pricing', path: '/pricing', desc: 'Transparent starting prices for every Uluwatu service format' },
+            ].map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="group block bg-[#FAFAF8] border border-[#E8E6E3] rounded-xl p-5 hover:border-[#C5A028] transition-colors"
+              >
+                <div className="font-semibold text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors mb-1">{link.label}</div>
+                <div className="text-[#8A8785] text-sm">{link.desc}</div>
+              </Link>
             ))}
           </div>
         </div>

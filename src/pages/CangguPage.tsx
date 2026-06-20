@@ -174,13 +174,13 @@ export default function CangguPage() {
           <h2 className="font-playfair text-3xl md:text-4xl mb-6">The myCHEF Standard in Canggu</h2>
           <div className="prose prose-lg text-[#4A4745] max-w-none">
             <p className="mb-4 leading-relaxed">
-              Canggu is where surf culture meets villa living — a sprawling neighbourhood of modern pool villas, organic cafés, and long-stay guests who eat with intention. The food scene here is among Bali's best for healthy international cooking, and our Canggu guests expect the same from a private chef: fresh, nutrient-dense, globally-influenced food that matches their lifestyle.
+              Canggu is where surf culture meets villa living — a sprawling neighbourhood of modern pool villas, organic cafés, and long-stay guests who eat with intention. The food scene here is among Bali's best for healthy international cooking, and our Canggu guests expect the same from a private chef: fresh, nutrient-dense, globally-influenced food that matches their lifestyle. Not sure what a private chef setup looks like? Read our <Link to="/blog/how-to-hire-private-chef" className="text-[#C5A028] hover:underline font-medium">complete guide to hiring a private chef in Bali</Link>.
             </p>
             <p className="mb-4 leading-relaxed">
-              myCHEF is Canggu-based, which means faster deployment, lower travel fees, and chefs who know every villa kitchen layout from Echo Beach to the Pererenan border. We specialise in multi-day meal programmes for surf groups and retreats, high-energy poolside BBQs, and elegant villa dinners that rival Canggu's best restaurants — served at your pool instead of a table on the strip.
+              myCHEF is Canggu-based, which means faster deployment, lower travel fees, and chefs who know every villa kitchen layout from Echo Beach to the Pererenan border. We specialise in multi-day meal programmes for <Link to="/events" className="text-[#C5A028] hover:underline font-medium">surf retreats and villa parties</Link>, high-energy <Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Canggu villa catering</Link>, and elegant villa dinners that rival Canggu's best restaurants — served at your pool instead of a table on the strip.
             </p>
             <p className="mb-0 leading-relaxed">
-              All of our Canggu chefs are Indonesian professionals trained to international culinary standards. They are fluent in English, experienced with the full range of dietary requirements common in the area — vegan, paleo, gluten-free, Ayurvedic — and built for the social, collaborative cooking style that Canggu guests love.
+              All of our Canggu chefs are Indonesian professionals trained to international culinary standards. They are fluent in English, experienced with the full range of dietary requirements common in the area — vegan, paleo, gluten-free, Ayurvedic — and built for the social, collaborative cooking style that Canggu guests love. See <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">private chef pricing in Canggu</Link> for a full breakdown.
             </p>
           </div>
 
@@ -282,6 +282,31 @@ export default function CangguPage() {
                   {faq.a}
                 </div>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Guides & Resources */}
+      <section className="py-16 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Guides &amp; Resources</p>
+          <h2 className="font-playfair text-2xl mb-8">Helpful reads for Canggu guests</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'How to hire a private chef in Bali', path: '/blog/how-to-hire-private-chef', desc: 'Complete step-by-step hiring guide — vetting, pricing, what to expect' },
+              { label: 'Chef hiring &amp; credentials guide', path: '/blog/chef-hiring-guide', desc: 'What qualifications to look for and red flags to avoid' },
+              { label: 'Canggu villa catering', path: '/catering', desc: 'BBQ, buffet, grazing tables, and drop-off options' },
+              { label: 'Private chef pricing', path: '/pricing', desc: 'Transparent starting prices for every Canggu service format' },
+            ].map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="group block bg-[#FAFAF8] border border-[#E8E6E3] rounded-xl p-5 hover:border-[#C5A028] transition-colors"
+              >
+                <div className="font-semibold text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors mb-1" dangerouslySetInnerHTML={{ __html: link.label }} />
+                <div className="text-[#8A8785] text-sm">{link.desc}</div>
+              </Link>
             ))}
           </div>
         </div>

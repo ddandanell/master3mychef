@@ -78,18 +78,49 @@ export default function CateringPage() {
           <h2 className="font-playfair text-2xl md:text-3xl mb-8">What’s included</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              'Menu design tailored to your group',
-              'All equipment, chafing dishes & serveware',
-              'Grocery shopping at cost — no markup',
-              'Setup, service and full clean-up',
-              'Dietary customization at no extra cost',
-              'Scalable from 8 to 200 guests',
+              ‘Menu design tailored to your group’,
+              ‘All equipment, chafing dishes & serveware’,
+              ‘Grocery shopping at cost — no markup’,
+              ‘Setup, service and full clean-up’,
+              ‘Dietary customization at no extra cost’,
+              ‘Scalable from 8 to 200 guests’,
             ].map((item) => (
               <div key={item} className="flex items-start gap-3 p-4 rounded-xl bg-white border border-[#E8E6E3]">
                 <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#6B8E5A]" />
                 <span className="text-[#4A4745] text-sm">{item}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-12 border-t border-[#E8E6E3]">
+        <div className="max-w-[900px] mx-auto">
+          <h2 className="font-playfair text-xl md:text-2xl mb-6">Catering by location</h2>
+          <div className="grid sm:grid-cols-2 gap-3 mb-6">
+            <Link
+              to="/locations/canggu"
+              className="flex items-center justify-between p-4 rounded-xl bg-white border border-[#E8E6E3] hover:border-[#6B8E5A] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#6B8E5A]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#6B8E5A] transition-colors">Canggu villa catering</span>
+              <ArrowRight className="w-4 h-4 text-[#6B8E5A] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-4" />
+            </Link>
+            <Link
+              to="/locations/seminyak"
+              className="flex items-center justify-between p-4 rounded-xl bg-white border border-[#E8E6E3] hover:border-[#6B8E5A] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#6B8E5A]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#6B8E5A] transition-colors">Seminyak event catering</span>
+              <ArrowRight className="w-4 h-4 text-[#6B8E5A] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-4" />
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            <Link to="/blog/bali-catering-menu" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Explore Bali catering menus →
+            </Link>
+            <span className="text-[#E8E6E3]">·</span>
+            <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Catering pricing →
+            </Link>
           </div>
         </div>
       </section>

@@ -174,13 +174,13 @@ export default function SeminyakPage() {
           <h2 className="font-playfair text-3xl md:text-4xl mb-6">The myCHEF Standard in Seminyak</h2>
           <div className="prose prose-lg text-[#4A4745] max-w-none">
             <p className="mb-4 leading-relaxed">
-              Seminyak is Bali's original luxury villa destination — walk-to-beach estates, designer strips, and a restaurant scene that has set the standard for fine dining on the island. Guests here expect the best, and they often want one unforgettable evening that exceeds anything they find on the strip, served at their own pool.
+              Seminyak is Bali's original luxury villa destination — walk-to-beach estates, designer strips, and a restaurant scene that has set the standard for <Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">private fine dining</Link> on the island. Guests here expect the best, and they often want one unforgettable evening that exceeds anything they find on the strip, served at their own pool.
             </p>
             <p className="mb-4 leading-relaxed">
-              myCHEF has served Seminyak since our founding, building menus and service standards that rival the Petitenget and Oberoi area's top restaurants. We know the villa layouts, the sunset timing, and the high-energy social dining culture that makes Seminyak different from Ubud or Uluwatu. Whether you want an intimate 4-course dinner for two or a villa party for sixty, we deploy a full team with the right size brigade.
+              myCHEF has served Seminyak since our founding, building menus and service standards that rival the Petitenget and Oberoi area's top restaurants. We know the villa layouts, the sunset timing, and the high-energy social dining culture that makes Seminyak different from Ubud or Uluwatu. Whether you want an intimate 4-course dinner for two or a <Link to="/events" className="text-[#C5A028] hover:underline font-medium">villa birthday party or event</Link> for sixty, we deploy a full team with the right size brigade.
             </p>
             <p className="mb-0 leading-relaxed">
-              Every chef on our Seminyak team is Indonesian, fluent in English, and trained to international culinary standards. We source from Seminyak's premium markets and bring our own equipment — knives, serving ware, and linen — so your villa kitchen needs nothing beyond the basics.
+              Every chef on our Seminyak team is Indonesian, fluent in English, and trained to international culinary standards. We source from Seminyak's premium markets and bring our own equipment — knives, serving ware, and linen — so your villa kitchen needs nothing beyond the basics. Browse our <Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Seminyak catering services</Link> or check <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">current pricing</Link> for a full breakdown.
             </p>
           </div>
 
@@ -282,6 +282,31 @@ export default function SeminyakPage() {
                   {faq.a}
                 </div>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Guides & Resources */}
+      <section className="py-16 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Guides &amp; Resources</p>
+          <h2 className="font-playfair text-2xl mb-8">Helpful reads for Seminyak guests</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'How to hire a private chef in Bali', path: '/blog/how-to-hire-private-chef', desc: 'Complete step-by-step hiring guide — vetting, pricing, what to expect' },
+              { label: 'Chef hiring & credentials guide', path: '/blog/chef-hiring-guide', desc: 'What qualifications to look for and red flags to avoid' },
+              { label: 'Seminyak catering services', path: '/catering', desc: 'Villa party catering, cocktail events, and plated dinners' },
+              { label: 'Private chef pricing', path: '/pricing', desc: 'Transparent starting prices for every Seminyak service format' },
+            ].map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="group block bg-[#FAFAF8] border border-[#E8E6E3] rounded-xl p-5 hover:border-[#C5A028] transition-colors"
+              >
+                <div className="font-semibold text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors mb-1">{link.label}</div>
+                <div className="text-[#8A8785] text-sm">{link.desc}</div>
+              </Link>
             ))}
           </div>
         </div>

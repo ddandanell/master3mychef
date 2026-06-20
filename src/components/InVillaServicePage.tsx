@@ -366,6 +366,48 @@ export default function InVillaServicePage() {
         </div>
       </section>
 
+      {/* Location & Resource Links */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-6 text-center">In-Villa Service by Location</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <Link
+              to="/chefs"
+              className="group flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-black/5 hover:border-[#C5A028] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">Meet our private chefs</span>
+              <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
+            </Link>
+            <Link
+              to="/locations/canggu"
+              className="group flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-black/5 hover:border-[#C5A028] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">In-villa chef Canggu</span>
+              <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
+            </Link>
+            <Link
+              to="/locations/ubud"
+              className="group flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-black/5 hover:border-[#C5A028] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">In-villa chef Ubud</span>
+              <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
+            </Link>
+            <Link
+              to="/pricing"
+              className="group flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-black/5 hover:border-[#C5A028] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">In-villa chef pricing</span>
+              <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
+            </Link>
+          </div>
+          <div className="text-center">
+            <Link to="/blog/how-to-hire-private-chef" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Complete hiring guide: how to hire a private chef in Bali →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 md:py-24 bg-[#0A0A0A] text-white">
         <div className="max-w-[700px] mx-auto px-6 text-center">

@@ -785,6 +785,31 @@ export default function EventsMainPage() {
           <p className="mt-8 text-xs text-[#4A4745]/70">
             Not on the list? We travel anywhere in Bali. Outer-island referrals on request.
           </p>
+          <div className="mt-10 grid sm:grid-cols-2 max-w-xl mx-auto gap-3">
+            <Link
+              to="/locations/uluwatu"
+              className="flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-[#E8E6E3] hover:border-[#C5A028]/50 transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">Uluwatu wedding venue</span>
+              <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
+            </Link>
+            <Link
+              to="/locations/ubud"
+              className="flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-[#E8E6E3] hover:border-[#C5A028]/50 transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">Ubud retreat catering</span>
+              <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
+            </Link>
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
+            <Link to="/blog/event-planning-bali" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Bali event planning guide →
+            </Link>
+            <span className="text-[#E8E6E3]">·</span>
+            <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Event catering pricing →
+            </Link>
+          </div>
         </div>
       </section>
 

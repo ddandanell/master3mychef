@@ -434,8 +434,16 @@ export default function QuoteFunnel() {
         </p>
 
         {step === 8 && (
-          <div className="mt-10 text-center">
+          <div className="mt-10 text-center space-y-3">
             <Link to="/" className="text-xs uppercase tracking-[2px] text-[#8A8785] hover:text-[#1A1A1A]">← Back to home</Link>
+            <div className="flex flex-wrap justify-center gap-4 pt-2">
+              <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+                See full pricing →
+              </Link>
+              <Link to="/chefs" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+                Meet the chefs →
+              </Link>
+            </div>
           </div>
         )}
       </section>

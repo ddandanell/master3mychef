@@ -9,7 +9,7 @@ const SECTIONS = [
     subtitle: 'Event Planning',
     title: 'Event Planning in Bali: Complete Guide for Weddings & Celebrations',
     body: `<p>Bali's infinity-pool villas and year-round weather make it a prime destination for hosted events. The key is understanding logistics: vendor coordination, cultural considerations, and weather contingencies.</p>
-    <p>This guide walks you through event types, venue selection, catering, staffing, budgeting, and timelines for weddings, corporate retreats, and private celebrations.</p>`,
+    <p>This guide walks you through event types, venue selection, <a href="/catering" class="text-[#C5A028] hover:underline font-medium">catering</a>, staffing, budgeting, and timelines for weddings, corporate retreats, and private celebrations.</p>`,
   },
   {
     id: 'event-types',
@@ -28,7 +28,7 @@ const SECTIONS = [
     subtitle: 'Venues',
     title: 'Venue Selection: Villa, Beach, Garden Setup',
     body: `<p><strong>Private Villa (Most Popular):</strong> Intimate, all-in-one accommodation + event space, kitchen access, privacy, flexible timing. Limited capacity (20–40 people comfortably). Weather risk (indoor backup required). Best for weddings under 50 guests, intimate celebrations, multi-day events.</p>
-    <p><strong>Beach Venue (Sunset Views):</strong> Photographic backdrop, flexible setup. Tide and weather contingencies, sand logistics, noise restrictions. Best for afternoon/evening celebrations, 20–100 guests.</p>
+    <p><strong>Beach Venue (Sunset Views):</strong> Photographic backdrop, flexible setup. Popular in <a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak</a> and <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu</a>. Tide and weather contingencies, sand logistics, noise restrictions. Best for afternoon/evening celebrations, 20–100 guests.</p>
     <p><strong>Villa Garden + Pavilion (Optimal Balance):</strong> Garden ceremony/cocktails, pavilion for weather protection, villa kitchens for prep. Weather flexibility, intimate feel with event infrastructure. Best for 40–100 guests.</p>`,
   },
   {
@@ -42,7 +42,7 @@ const SECTIONS = [
       <li><strong>50–100 guests:</strong> 2–3 chefs, 4–6 service staff, 1–2 coordinators</li>
       <li><strong>100+ guests:</strong> 4–6 chefs, 8–12 service staff, 2–3 coordinators, bar manager</li>
     </ul>
-    <p><strong>Menu by Event Type:</strong> Wedding (3–5 courses, IDR 1.5M–3M/person), Corporate Retreat (casual breakfast/lunch, themed dinner, IDR 600K–1.2M/day), Birthday/Anniversary (personalized, IDR 1.2M–2.25M/person).</p>`,
+    <p><strong>Menu by Event Type:</strong> <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">Wedding fine dining</a> (3–5 courses, IDR 1.5M–3M/person), Corporate Retreat (casual breakfast/lunch, themed dinner, IDR 600K–1.2M/day), Birthday/Anniversary (personalized, IDR 1.2M–2.25M/person).</p>`,
   },
   {
     id: 'timeline',
@@ -64,7 +64,7 @@ const SECTIONS = [
     subtitle: 'Budget',
     title: 'Budget Planning & Cost Breakdown',
     body: `<p><strong>50-Person Event Budget Tiers:</strong></p>
-    <p><strong>Budget:</strong> Catering IDR 750K/person, Staff IDR 300K/person, Venue IDR 7.5M–30M, Coordinator IDR 4.5M, Decor IDR 4.5M, Music IDR 3M, Photography IDR 4.5M = IDR 53M–68M total for 50 guests.</p>
+    <p><strong>Budget:</strong> <a href="/catering" class="text-[#C5A028] hover:underline font-medium">Catering</a> IDR 750K/person, Staff IDR 300K/person, Venue IDR 7.5M–30M, Coordinator IDR 4.5M, Decor IDR 4.5M, Music IDR 3M, Photography IDR 4.5M = IDR 53M–68M total for 50 guests.</p>
     <p><strong>Mid-Range:</strong> Catering IDR 1.5M/person, Staff IDR 600K/person, Venue IDR 30M–75M, Coordinator IDR 9M, Decor IDR 15M, Music IDR 7.5M, Photography IDR 12M = IDR 103M–133M total.</p>
     <p><strong>Luxury:</strong> Catering IDR 3M/person, Staff IDR 1.2M/person, Venue IDR 75M+, Coordinator IDR 18M, Decor IDR 45M+, Music IDR 22.5M+, Photography IDR 30M+ = IDR 208M+ total.</p>
     <p><strong>Money-Saving Tips:</strong> Daytime events cost less than evening. Buffet or BBQ < plated service. Single menu option < multiple choices. Local ingredients < imported. Weekday < weekend. Group catering < à la carte.</p>`,
@@ -74,7 +74,7 @@ const SECTIONS = [
     type: 'cta' as const,
     subtitle: 'Ready to Plan',
     title: 'Plan Your Bali Event With Expert Coordination',
-    body: 'Get in touch with our team to discuss your dates, villa, guest count, and culinary vision.',
+    body: 'Get in touch with our team to discuss your dates, villa, guest count, and culinary vision — or <a href="/quote" class="text-[#C5A028] hover:underline font-medium">request a free quote</a> now.',
     primaryAction: { label: 'Contact Our Team', href: '/contact' },
     secondaryAction: { label: 'Browse Catering', href: '/catering' },
   },
@@ -145,6 +145,56 @@ export default function EventPlanningBaliPage() {
           image: 'https://mychef.id/generated/mychef-events-bali-baby-shower-hero.webp',
           mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/event-planning-bali' },
           url: 'https://mychef.id/blog/event-planning-bali',
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: 'How to Plan a Private Event in Bali',
+          description: 'Step-by-step guide to planning a wedding, corporate retreat, or private celebration in Bali — covering venue selection, catering, staffing, budgeting, and timelines.',
+          totalTime: 'PT60M',
+          estimatedCost: {
+            '@type': 'MonetaryAmount',
+            currency: 'IDR',
+            value: '53000000',
+          },
+          step: [
+            {
+              '@type': 'HowToStep',
+              name: 'Define Event Type and Guest Count',
+              text: 'Determine the event category (wedding, corporate retreat, or private celebration), expected number of guests, and overall budget tier (budget, mid-range, or luxury) to guide every subsequent decision.',
+              position: 1,
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Select and Secure a Venue',
+              text: 'Choose between a private villa (ideal for under 50 guests), a beach venue (20–100 guests), or a villa garden and pavilion combination (40–100 guests). Book the venue first as availability drives all other bookings.',
+              position: 2,
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Hire Key Vendors 90 Days Out',
+              text: 'Secure your caterer, event coordinator, bar, photography, and music at least 3 months before the event. At this stage, begin menu ideation with the chef and collect dietary requirements from guests.',
+              position: 3,
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Finalize Catering and Staffing Plan',
+              text: 'Confirm the catering team size for your guest count (1–2 chefs and 2–3 staff for 20–50 guests; scale up proportionally). Finalize the menu — 3–5 courses for weddings, casual daily catering for retreats — and sign the catering contract 60 days out.',
+              position: 4,
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Confirm Logistics and Weather Contingencies',
+              text: 'Thirty days before the event, confirm final headcount, brief all staff on dietary and cultural details, arrange a weather backup plan (indoor space or pavilion), and finalize seating and service flow.',
+              position: 5,
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Execute and Enjoy the Event',
+              text: 'On the day, welcome vendors and staff, run a brief pre-event walkthrough, confirm meal timing, and allow the coordinator and catering team to manage logistics so you can focus on your guests.',
+              position: 6,
+            },
+          ],
         },
       ]}
       ctaText="Plan Your Event"

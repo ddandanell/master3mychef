@@ -178,6 +178,56 @@ export default function ChefHiringGuidePage() {
           mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/chef-qualifications-credentials-bali-hiring' },
           url: 'https://mychef.id/blog/chef-qualifications-credentials-bali-hiring',
         },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: 'How to Verify Chef Qualifications and Hire the Right Private Chef in Bali',
+          description: 'A systematic process for evaluating chef credentials, conducting interviews, and selecting a qualified private chef for your Bali villa or event.',
+          totalTime: 'PT45M',
+          estimatedCost: {
+            '@type': 'MonetaryAmount',
+            currency: 'IDR',
+            value: '1800000',
+          },
+          step: [
+            {
+              '@type': 'HowToStep',
+              name: 'Check Culinary Credentials',
+              text: 'Confirm the chef has formal culinary school training, a recognised apprenticeship, or at least 5 years of professional kitchen experience. Look for Michelin-restaurant background as a positive signal.',
+              position: 1,
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Verify Food Safety Certification',
+              text: 'Request proof of a valid HACCP, Servsafe, or equivalent food safety certificate. Certifications should be current (renewed every 2–3 years) and accompanied by a local health permit.',
+              position: 2,
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Match Cuisine Specialty to Your Needs',
+              text: 'Identify whether you need French classical, Italian, Asian, Mediterranean, dietary specialist (vegan, keto, gluten-free), or pastry expertise, then shortlist chefs whose primary specialty aligns.',
+              position: 3,
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Conduct a Structured Interview',
+              text: 'Ask the 20 key questions covering culinary background, allergy handling, menu planning process, experience with your group size, and logistics such as kitchen setup requirements and cleanup.',
+              position: 4,
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Call References and Review Portfolio',
+              text: 'Contact 2–3 recent clients directly. Ask how the chef handled special requests, dietary issues, and last-minute changes. Review sample menus and client photos for consistency and quality.',
+              position: 5,
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Arrange a Trial Meal and Sign a Contract',
+              text: 'For high-stakes events, schedule a 1–2 hour trial preparation in your villa kitchen. Once satisfied, sign a written contract covering dates, menu, pricing, cancellation terms, and allergen protocols.',
+              position: 6,
+            },
+          ],
+        },
       ]}
       ctaText="Browse Vetted Chefs"
       ctaSubtext="Apply these hiring best practices to our pre-screened chef profiles."

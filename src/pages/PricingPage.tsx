@@ -2,6 +2,7 @@ import { Tag } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import PricingCalculator from '@/components/PricingCalculator'
+import EmailCaptureBar from '@/components/EmailCaptureBar'
 
 const PRICING_OFFER_SCHEMA = {
   '@context': 'https://schema.org',
@@ -123,6 +124,14 @@ const SECTIONS = [
     body: 'Choose a service type, guest range, duration and any add-ons to see a live starting price before you message us on WhatsApp.',
     bg: 'accent' as const,
     render: <PricingCalculator hideHeader />,
+  },
+  {
+    id: 'price-guide-cta',
+    type: 'custom' as const,
+    subtitle: '',
+    title: '',
+    body: '',
+    render: <EmailCaptureBar />,
   },
   {
     id: 'fine-dining-pricing',

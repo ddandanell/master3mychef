@@ -9,7 +9,7 @@ const SECTIONS = [
     subtitle: 'Bali Catering',
     title: 'Bali Catering Menus: Traditional & Modern Options for Your Villa',
     body: `<p>Balinese cuisine is a complex blend of spices, fresh herbs, and cooking techniques developed over centuries. Eating traditionally in Bali is an immersion into island identity—food carries cultural meaning, ritual, and flavor depth rarely found in fusion interpretations.</p>
-    <p>Whether you prefer traditional Balinese, modern fusion, or international cuisine, this guide explores menu styles, dietary accommodations, and how to choose the right approach for your event.</p>`,
+    <p>Whether you prefer traditional Balinese, modern fusion, or international cuisine, this guide explores menu styles, dietary accommodations, and how to choose the right approach for your event. Visit our <a href="/catering" class="text-[#C5A028] hover:underline font-medium">catering hub</a> for full service options.</p>`,
   },
   {
     id: 'balinese-tradition',
@@ -62,19 +62,19 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Selection Guide',
     title: 'How to Choose the Right Menu for Your Event',
-    body: `<p><strong>Group Size & Composition:</strong> 2 people → fine dining, intimate menus. 4–6 → balanced between interactive and elegant. 8+ → buffet or grazing (easier scaling).</p>
+    body: `<p><strong>Group Size & Composition:</strong> 2 people → <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining</a>, intimate menus. 4–6 → balanced between interactive and elegant. 8+ → buffet or grazing (easier scaling).</p>
     <p><strong>Cuisine Preferences:</strong> Adventurous → Balinese traditional or fusion. Conservative → international, familiar flavors.</p>
     <p><strong>Dietary Restrictions:</strong> Affects menu design and chef selection.</p>
-    <p><strong>Occasion:</strong> Anniversary → fine dining, plated. Family gathering → buffet, mix of styles. Corporate → buffet, neutral flavors.</p>
+    <p><strong>Occasion:</strong> Anniversary → <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining</a>, plated. Family gathering → buffet, mix of styles. Corporate → buffet, neutral flavors.</p>
     <p><strong>Venue:</strong> Outdoor + weather risk → lighter, flexible BBQ or grazing. Indoor → any style works.</p>
-    <p><strong>Budget Per Person:</strong> IDR 750K–1.2M → casual, local ingredients, buffet. IDR 1.2M–1.8M → mix of local and imported, some creativity. IDR 1.8M+ → fine dining, specialty chefs, plated.</p>`,
+    <p><strong>Budget Per Person</strong> — see our <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing page</a>: IDR 750K–1.2M → casual, local ingredients, buffet. IDR 1.2M–1.8M → mix of local and imported, some creativity. IDR 1.8M+ → fine dining, specialty chefs, plated.</p>`,
   },
   {
     id: 'cta',
     type: 'cta' as const,
     subtitle: 'Ready to Plan',
     title: 'Design a Custom Catering Menu for Your Villa Event',
-    body: 'Browse menu options, connect with our chefs, and create a personalized culinary experience for your guests.',
+    body: 'Browse menu options, <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">connect with our chefs</a>, and <a href="/quote" class="text-[#C5A028] hover:underline font-medium">request a quote</a> for your personalized culinary experience.',
     primaryAction: { label: 'Browse Menus', href: '/menus' },
     secondaryAction: { label: 'Chat With Chefs', href: '/contact' },
   },

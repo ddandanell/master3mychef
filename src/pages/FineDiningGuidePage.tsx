@@ -1,6 +1,7 @@
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { Wine, ChefHat, Sparkles, Clock } from 'lucide-react'
+import EmailCaptureBar from '@/components/EmailCaptureBar'
 
 const SECTIONS = [
   {
@@ -8,7 +9,7 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Fine Dining in Bali',
     title: 'The Art of the Tasting Menu in Your Private Villa',
-    body: `<p>Fine dining is more than a meal — it's a curated, multi-course culinary journey. In Bali, fine dining takes on a unique character. Rather than rigid fine dining establishments, you can experience Michelin-caliber cuisine in the intimate setting of a private villa, with a dedicated chef tailoring every course to your preferences.</p>
+    body: `<p>Fine dining is more than a meal — it's a curated, multi-course culinary journey. In Bali, fine dining takes on a unique character. Rather than rigid fine dining establishments, you can experience Michelin-caliber cuisine in the intimate setting of a <a href="/in-villa-service" class="text-[#C5A028] hover:underline font-medium">private villa</a>, with a dedicated chef tailoring every course to your preferences.</p>
     <p>Your villa becomes a private restaurant. No formal dress codes, no tables inches apart, no time pressure between courses. Just you, your guests, and world-class cooking in bare feet by your pool.</p>`,
   },
   {
@@ -32,12 +33,20 @@ const SECTIONS = [
     ],
   },
   {
+    id: 'price-guide-cta',
+    type: 'custom' as const,
+    subtitle: '',
+    title: '',
+    body: '',
+    render: <EmailCaptureBar />,
+  },
+  {
     id: 'how-to-plan',
     type: 'content' as const,
     subtitle: 'Planning Your Experience',
     title: 'Steps to a Perfect Tasting Menu',
     body: `<p><strong>1. Define Your Vision:</strong> How many guests? What cuisines excite you? Do you want interactive cooking or surprise courses?</p>
-    <p><strong>2. Choose Your Chef:</strong> Review portfolios, ask about past clients, schedule a consultation.</p>
+    <p><strong>2. Choose Your Chef:</strong> <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">Browse chef portfolios</a>, ask about past clients, schedule a consultation.</p>
     <p><strong>3. Co-Create the Menu:</strong> Discuss themes, preferences, and story arc. Agree on pacing and wine pairings.</p>
     <p><strong>4. Handle Logistics:</strong> Confirm head count, kitchen access, service timing, and payment.</p>
     <p><strong>5. Day-Of:</strong> Chef arrives early for prep. You relax and experience the meal.</p>`,
@@ -52,14 +61,14 @@ const SECTIONS = [
     <p><strong>Celebrity Chef:</strong> IDR 2.7M–4.8M+ per person for 8–10 courses. Michelin stars, international fame.</p>
     <p>Group size discounts apply — 4 guests cost ~IDR 8M total; 8 guests cost ~IDR 13M (price per person drops as numbers rise).</p>
     <p>Additional costs: wine pairing (+IDR 400K–800K/person), ingredient upgrades like truffle or caviar (+IDR 300K–1.5M), multi-day events (negotiate per-day rates).</p>
-    <p>Ideal booking timeline: 4–6 weeks ahead. Acceptable: 2–3 weeks. Rush: 1 week (premium surcharge may apply).</p>`,
+    <p><a href="/pricing" class="text-[#C5A028] hover:underline font-medium">Pricing and availability</a>: booking timeline 4–6 weeks ahead. Acceptable: 2–3 weeks. Rush: 1 week (premium surcharge may apply).</p>`,
   },
   {
     id: 'cta',
     type: 'cta' as const,
     subtitle: 'Ready to Experience It',
     title: 'Plan Your Fine Dining Experience in Bali',
-    body: 'Browse our chef profiles, explore sample menus, or contact our team to design a custom tasting menu for your villa.',
+    body: 'Browse our <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">chef profiles</a>, explore our <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining hub</a>, or contact our team to design a custom tasting menu for your villa.',
     primaryAction: { label: 'Browse Our Chefs', href: '/chefs' },
     secondaryAction: { label: 'Contact Us', href: '/contact' },
   },

@@ -28,26 +28,11 @@ const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
 
 const PRICING_TIERS = [
   {
-    title: 'Standard Service',
-    price: 'IDR 350,000',
-    unit: '/waiter/shift',
-    features: ['4-hour shift', 'Uniformed service', 'Table setting', 'Course service', 'Basic cleanup'],
-    bestFor: 'Intimate dinners, family meals, small gatherings',
-  },
-  {
-    title: 'Premium Service',
-    price: 'IDR 500,000',
-    unit: '/waiter/shift',
-    features: ['6-hour shift', 'White-glove service', 'Wine service', 'Full table management', 'Kitchen coordination', 'Guest interaction'],
-    bestFor: 'Weddings, corporate events, fine dining',
-    highlight: true,
-  },
-  {
-    title: 'Head Waiter',
-    price: 'IDR 750,000',
-    unit: '/shift',
-    features: ['Full event oversight', 'Team coordination', 'Menu briefing', 'Timeline management', 'Guest relations', 'Problem resolution'],
-    bestFor: 'Large events, multi-course dinners, VIP service',
+    title: 'Waiter Service',
+    price: 'IDR 250,000',
+    unit: '/hour',
+    features: ['Minimum 3 hours', 'Uniformed, English-speaking', 'Table setting & course service', 'Wine & drink service', 'Setup & cleanup'],
+    bestFor: 'Villa dinners, weddings, and events of any size',
   },
 ]
 
@@ -77,7 +62,7 @@ const FAQS = [
   { q: 'How far in advance should I book?', a: '3–7 days for standard service. 2–4 weeks for premium events during peak season (July–August, December).' },
   { q: 'Do you provide wine service?', a: 'Yes. Premium and head waiter tiers include wine service — pouring, timing, and basic pairing guidance.' },
   { q: 'What areas do you cover?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'Is there a minimum booking?', a: 'Minimum 2 waiters per booking, 4-hour shift minimum.' },
+  { q: 'Is there a minimum booking?', a: 'Minimum 2 waiters per booking, 3-hour minimum per waiter.' },
   { q: 'Can I request the same waiters again?', a: 'Yes. We keep records of your preferred team and do our best to reassign them for future events.' },
 ]
 
@@ -97,8 +82,8 @@ export default function ServiceWaitersPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Villa Waiters Bali | Professional Per-Shift Service — myCHEF"
-        description="Hire villa waiters in Bali for dinners, weddings & events. Uniformed, English-speaking, trained in plated service. From IDR 350K/shift. WhatsApp us."
+        title="Villa Waiters Bali | Professional Hourly Service — myCHEF"
+        description="Hire villa waiters in Bali for dinners, weddings & events. Uniformed, English-speaking, trained in plated service. From IDR 250K/hour. WhatsApp us."
         canonical={`${SITE}/in-villa-service/waiters`}
         ogImage={`${SITE}/generated/aura-bartender.webp`}
         jsonLd={[
@@ -136,8 +121,8 @@ export default function ServiceWaitersPage() {
             Waiter Hire in Bali
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Professional, uniformed waiters for your villa dinner, wedding, or event. 
-            English-speaking, trained in fine service. From IDR 350,000 per shift.
+            Professional, uniformed waiters for your villa dinner, wedding, or event.
+            English-speaking, trained in fine service. From IDR 250,000 per hour, minimum 3 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-waiters-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -155,22 +140,22 @@ export default function ServiceWaitersPage() {
       {/* Pricing Tiers */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
-          <SectionHeader eyebrow="Pricing" title="Service Tiers" subtitle="Choose the level of service that matches your event." />
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
+          <SectionHeader eyebrow="Pricing" title="Simple Hourly Rate" subtitle="One transparent net rate — IDR 250,000 per hour, minimum 3 hours." />
+          <div className="grid gap-6 mt-12 max-w-md mx-auto">
             {PRICING_TIERS.map((tier) => (
-              <div key={tier.title} className={`rounded-2xl p-8 ${tier.highlight ? 'bg-[#1A1A1A] text-white' : 'bg-white border border-[#E8E6E3]'}`}>
+              <div key={tier.title} className="rounded-2xl p-8 bg-[#1A1A1A] text-white">
                 <h3 className="font-playfair text-2xl mb-2">{tier.title}</h3>
-                <p className={`text-3xl font-semibold mb-1 ${tier.highlight ? 'text-[#C5A028]' : 'text-[#1A1A1A]'}`}>{tier.price}</p>
-                <p className={`text-sm mb-6 ${tier.highlight ? 'text-white/[60%]' : 'text-[#4A4745]'}`}>{tier.unit}</p>
+                <p className="text-3xl font-semibold mb-1 text-[#C5A028]">{tier.price}</p>
+                <p className="text-sm mb-6 text-white/[60%]">{tier.unit}</p>
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm">
-                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${tier.highlight ? 'text-[#C5A028]' : 'text-[#6B8E5A]'}`} />
-                      <span className={tier.highlight ? 'text-white/[80%]' : 'text-[#4A4745]'}>{f}</span>
+                      <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#C5A028]" />
+                      <span className="text-white/[80%]">{f}</span>
                     </li>
                   ))}
                 </ul>
-                <p className={`text-xs ${tier.highlight ? 'text-white/[50%]' : 'text-[#8A8785]'}`}>Best for: {tier.bestFor}</p>
+                <p className="text-xs text-white/[50%]">Best for: {tier.bestFor}</p>
               </div>
             ))}
           </div>
@@ -269,13 +254,13 @@ export default function ServiceWaitersPage() {
 
           <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">Waiter Hire Pricing in Bali</h2>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            Waiter hire in Bali is priced per shift, scaled to service level and event formality. A single Waiter for intimate dinners of up to 10 guests starts at <strong className="text-[#1A1A1A]">IDR 350,000 per 4-hour shift</strong> — covering table setup, course service, and clearance for a relaxed villa dinner. For events requiring more polished plated service, precise wine pouring, and course sequencing, a Senior Waiter is available from <strong className="text-[#1A1A1A]">IDR 500,000 per 6-hour shift</strong>.
+            Waiter hire in Bali is priced simply: <strong className="text-[#1A1A1A]">IDR 250,000 per hour</strong>, with a <strong className="text-[#1A1A1A]">3-hour minimum</strong> per waiter. The same net rate covers everything — table setup, plated course service, wine and beverage pouring, course sequencing, and post-dinner clearance — whether you book a single waiter for an intimate dinner or a full team for a wedding.
           </p>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            For larger events — weddings, corporate receptions, milestone dinners with 30 or more guests — a Waiter Team of four is recommended and available from <strong className="text-[#1A1A1A]">IDR 1,600,000 per shift</strong>. This tier covers multi-station service, high-volume course management, and dedicated beverage service across the full event floor.
+            For larger events — weddings, corporate receptions, milestone dinners with 30 or more guests — simply add more waiters at the same <strong className="text-[#1A1A1A]">IDR 250,000 per hour</strong> rate. A team of four delivers multi-station service, high-volume course management, and dedicated beverage service across the full event floor.
           </p>
           <p className="text-[#4A4745] leading-relaxed">
-            As a rule of thumb: one waiter per 8–10 guests for plated dinners, one per 15 guests for buffet or family-style events. All prices subject to 11% tax + 10% service charge (++). WhatsApp us with your guest count, event date, and service style for a precise same-day quote.
+            As a rule of thumb: one waiter per 8–10 guests for plated dinners, one per 15 guests for buffet or family-style events. All prices are net in IDR. WhatsApp us with your guest count, event date, and service style for a precise same-day quote.
           </p>
         </div>
       </section>

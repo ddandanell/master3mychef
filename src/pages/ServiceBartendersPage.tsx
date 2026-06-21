@@ -28,26 +28,11 @@ const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
 
 const PRICING_TIERS = [
   {
-    title: 'Standard Bartender',
-    price: 'IDR 450,000',
-    unit: '/shift',
-    features: ['4-hour shift', 'Classic cocktails', 'Beer & wine service', 'Glassware provided', 'Basic bar setup', 'Ice & garnishes'],
-    bestFor: 'Villa dinners, small parties, casual gatherings',
-  },
-  {
-    title: 'Premium Bartender',
-    price: 'IDR 650,000',
-    unit: '/shift',
-    features: ['6-hour shift', 'Signature cocktails', 'Full spirits menu', 'Premium glassware', 'Custom menu design', 'Flair techniques'],
-    bestFor: 'Weddings, corporate events, milestone celebrations',
-    highlight: true,
-  },
-  {
-    title: 'Bar Team (2 pax)',
-    price: 'IDR 1,100,000',
-    unit: '/shift',
-    features: ['6-hour shift', '2 bartenders', 'High-volume service', 'Multiple stations', 'Full bar management', 'Stock control'],
-    bestFor: 'Large events, 50+ guests, multi-station bars',
+    title: 'Bartender Service',
+    price: 'IDR 350,000',
+    unit: '/hour',
+    features: ['Minimum 3 hours', 'Classic & signature cocktails', 'Full bar setup', 'Glassware, ice & garnish prep', 'Beer & wine service'],
+    bestFor: 'Villa parties, dinners, and weddings',
   },
 ]
 
@@ -98,7 +83,7 @@ export default function ServiceBartendersPage() {
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Bartender Hire Bali | Villa Cocktail Service — myCHEF"
-        description="Hire a bartender in Bali for villa parties & dinners. Cocktails, glassware, ice & garnish prep included. From IDR 450K/shift. WhatsApp to book yours."
+        description="Hire a bartender in Bali for villa parties & dinners. Cocktails, glassware, ice & garnish prep included. From IDR 350K/hour. WhatsApp to book yours."
         canonical={`${SITE}/in-villa-service/bartenders`}
         ogImage={`${SITE}/generated/mychef-experience-bali-aura-bartender.webp`}
         jsonLd={[
@@ -134,8 +119,8 @@ export default function ServiceBartendersPage() {
             Bartender Hire in Bali
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Professional bartenders for your villa party, wedding, or event. 
-            Classic cocktails, signature drinks, full bar setup. From IDR 450,000 per shift.
+            Professional bartenders for your villa party, wedding, or event.
+            Classic cocktails, signature drinks, full bar setup. From IDR 350,000 per hour (minimum 3 hours).
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-bartenders-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -152,22 +137,22 @@ export default function ServiceBartendersPage() {
 
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
-          <SectionHeader eyebrow="Pricing" title="Bartender Packages" subtitle="Choose the service level that matches your event." />
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
+          <SectionHeader eyebrow="Pricing" title="Bartender Pricing" subtitle="One simple net hourly rate — minimum 3 hours." />
+          <div className="grid gap-6 mt-12 max-w-md mx-auto">
             {PRICING_TIERS.map((tier) => (
-              <div key={tier.title} className={`rounded-2xl p-8 ${tier.highlight ? 'bg-[#1A1A1A] text-white' : 'bg-white border border-[#E8E6E3]'}`}>
+              <div key={tier.title} className="rounded-2xl p-8 bg-[#1A1A1A] text-white">
                 <h3 className="font-playfair text-2xl mb-2">{tier.title}</h3>
-                <p className={`text-3xl font-semibold mb-1 ${tier.highlight ? 'text-[#C5A028]' : 'text-[#1A1A1A]'}`}>{tier.price}</p>
-                <p className={`text-sm mb-6 ${tier.highlight ? 'text-white/[60%]' : 'text-[#4A4745]'}`}>{tier.unit}</p>
+                <p className="text-3xl font-semibold mb-1 text-[#C5A028]">{tier.price}</p>
+                <p className="text-sm mb-6 text-white/[60%]">{tier.unit}</p>
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm">
-                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${tier.highlight ? 'text-[#C5A028]' : 'text-[#6B8E5A]'}`} />
-                      <span className={tier.highlight ? 'text-white/[80%]' : 'text-[#4A4745]'}>{f}</span>
+                      <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#C5A028]" />
+                      <span className="text-white/[80%]">{f}</span>
                     </li>
                   ))}
                 </ul>
-                <p className={`text-xs ${tier.highlight ? 'text-white/[50%]' : 'text-[#8A8785]'}`}>Best for: {tier.bestFor}</p>
+                <p className="text-xs text-white/[50%]">Best for: {tier.bestFor}</p>
               </div>
             ))}
           </div>
@@ -249,13 +234,13 @@ export default function ServiceBartendersPage() {
 
           <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">Bartender Hire Pricing in Bali</h2>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            Bartender hire in Bali is priced per shift, with different rates depending on service level and event complexity. Standard bartenders start at <strong className="text-[#1A1A1A]">IDR 450,000 per shift</strong> for a 4-hour engagement covering classic cocktails, beer, and wine service. Premium bartenders — who handle signature cocktails, flair techniques, and larger event volumes — are priced from <strong className="text-[#1A1A1A]">IDR 650,000 per 6-hour shift</strong>.
+            Bartender hire in Bali is priced at one simple net hourly rate of <strong className="text-[#1A1A1A]">IDR 350,000 per hour</strong>, with a <strong className="text-[#1A1A1A]">3-hour minimum</strong>. The same rate covers classic and signature cocktails, beer and wine service, flair techniques, and high-volume events — you only pay for the hours your bartender works.
           </p>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            For large events with 50 or more guests, a two-person bar team is recommended and available from <strong className="text-[#1A1A1A]">IDR 1,100,000 per shift</strong>. All fees cover the bartender's time, equipment, glassware, ice, and garnishes. Alcohol is purchased separately based on the shopping list we provide. Optionally, we can source all spirits and mixers for a 15% service fee.
+            For large events with 50 or more guests, a second bartender is recommended, billed at the same <strong className="text-[#1A1A1A]">IDR 350,000 per hour</strong> rate. All fees cover the bartender's time, equipment, glassware, ice, and garnishes. Alcohol is purchased separately based on the shopping list we provide. Optionally, we can source all spirits and mixers for a 15% service fee.
           </p>
           <p className="text-[#4A4745] leading-relaxed">
-            All prices are subject to 11% tax + 10% service charge (++). Final pricing is confirmed after we understand your event date, guest count, venue, and cocktail requirements. WhatsApp us for a fast custom quote — we respond within 2 hours.
+            Final pricing is confirmed after we understand your event date, guest count, venue, and cocktail requirements. WhatsApp us for a fast custom quote — we respond within 2 hours.
           </p>
         </div>
       </section>

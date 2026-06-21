@@ -28,26 +28,11 @@ const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
 
 const PRICING_TIERS = [
   {
-    title: 'Event Host',
-    price: 'IDR 400,000',
-    unit: '/shift',
-    features: ['4-hour shift', 'Guest greeting', 'Registration', 'Direction', 'Basic coordination', 'Up to 50 guests'],
-    bestFor: 'Small events, dinners, corporate functions',
-  },
-  {
-    title: 'Senior Host',
-    price: 'IDR 600,000',
-    unit: '/shift',
-    features: ['6-hour shift', 'VIP management', 'Timeline coordination', 'Vendor liaison', 'Problem resolution', 'Up to 100 guests'],
-    bestFor: 'Weddings, large parties, corporate events',
-    highlight: true,
-  },
-  {
-    title: 'Host Team (4 pax)',
-    price: 'IDR 2,000,000',
-    unit: '/shift',
-    features: ['6-hour shift', '4 hosts', 'Full reception', 'Multi-station coverage', 'Bilingual team', 'Unlimited guests'],
-    bestFor: 'Large weddings, galas, conferences',
+    title: 'Event Host Service',
+    price: 'IDR 300,000',
+    unit: '/hour',
+    features: ['Minimum 3 hours', 'Guest greeting & registration', 'Guest direction & flow', 'Timeline coordination', 'Professional, English-speaking'],
+    bestFor: 'Villa parties, weddings, and corporate events',
   },
 ]
 
@@ -135,7 +120,7 @@ export default function ServiceHostPage() {
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
             Professional hosts and hostesses for your villa event, wedding, or corporate function. 
-            Welcome service, guest direction, event coordination. From IDR 400,000 per shift.
+            Welcome service, guest direction, event coordination. From IDR 300,000 per hour, 3-hour minimum.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-host-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -152,22 +137,22 @@ export default function ServiceHostPage() {
 
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
-          <SectionHeader eyebrow="Pricing" title="Host Service Tiers" subtitle="Choose the team size that matches your event." />
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
+          <SectionHeader eyebrow="Pricing" title="Host Service Pricing" subtitle="One simple net hourly rate, with a 3-hour minimum." />
+          <div className="grid gap-6 mt-12 max-w-md mx-auto">
             {PRICING_TIERS.map((tier) => (
-              <div key={tier.title} className={`rounded-2xl p-8 ${tier.highlight ? 'bg-[#1A1A1A] text-white' : 'bg-white border border-[#E8E6E3]'}`}>
+              <div key={tier.title} className="rounded-2xl p-8 bg-[#1A1A1A] text-white">
                 <h3 className="font-playfair text-2xl mb-2">{tier.title}</h3>
-                <p className={`text-3xl font-semibold mb-1 ${tier.highlight ? 'text-[#C5A028]' : 'text-[#1A1A1A]'}`}>{tier.price}</p>
-                <p className={`text-sm mb-6 ${tier.highlight ? 'text-white/[60%]' : 'text-[#4A4745]'}`}>{tier.unit}</p>
+                <p className="text-3xl font-semibold mb-1 text-[#C5A028]">{tier.price}</p>
+                <p className="text-sm mb-6 text-white/[60%]">{tier.unit}</p>
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm">
-                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${tier.highlight ? 'text-[#C5A028]' : 'text-[#6B8E5A]'}`} />
-                      <span className={tier.highlight ? 'text-white/[80%]' : 'text-[#4A4745]'}>{f}</span>
+                      <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#C5A028]" />
+                      <span className="text-white/[80%]">{f}</span>
                     </li>
                   ))}
                 </ul>
-                <p className={`text-xs ${tier.highlight ? 'text-white/[50%]' : 'text-[#8A8785]'}`}>Best for: {tier.bestFor}</p>
+                <p className="text-xs text-white/[50%]">Best for: {tier.bestFor}</p>
               </div>
             ))}
           </div>
@@ -249,13 +234,13 @@ export default function ServiceHostPage() {
 
           <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">Host and Hostess Hire Pricing in Bali</h2>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            Event host hire in Bali is priced per shift, scaled to coverage level. A single Event Host for events up to 50 guests starts at <strong className="text-[#1A1A1A]">IDR 400,000 per 4-hour shift</strong> — covering guest greeting, registration, direction, and basic coordination. This is the right tier for intimate dinners, small corporate functions, and villa parties with a relaxed pace.
+            Event host hire in Bali is priced at one simple net hourly rate: <strong className="text-[#1A1A1A]">IDR 300,000 per hour, with a 3-hour minimum</strong>. This covers guest greeting, registration, venue direction, and timeline coordination — whether you are hosting an intimate villa dinner, a small corporate function, or a relaxed celebration.
           </p>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            For events over 50 guests or those requiring VIP management and active timeline coordination, a Senior Host is recommended at <strong className="text-[#1A1A1A]">IDR 600,000 per 6-hour shift</strong>. For large weddings, corporate galas, and conferences requiring multi-station coverage, a Host Team of four professionals is available from <strong className="text-[#1A1A1A]">IDR 2,000,000 per shift</strong>.
+            For larger weddings, corporate galas, and conferences, simply add more hosts at the same <strong className="text-[#1A1A1A]">IDR 300,000 per hour, 3-hour minimum</strong> rate to scale coverage — VIP management, multi-station reception, and bilingual support included. One host per 25 seated guests, or one per 40 standing guests, is a good starting point.
           </p>
           <p className="text-[#4A4745] leading-relaxed">
-            All hosts arrive briefed on your event, wearing professional attire matched to your formality level. Custom branded uniforms are available for corporate events. Prices are subject to 11% tax + 10% service charge (++). Contact us via WhatsApp to discuss your event and receive a same-day quote.
+            All hosts arrive briefed on your event, wearing professional attire matched to your formality level. Custom branded uniforms are available for corporate events. Contact us via WhatsApp to discuss your event and receive a same-day quote.
           </p>
         </div>
       </section>

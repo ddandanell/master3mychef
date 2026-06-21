@@ -36,7 +36,7 @@ const BBQ_PACKAGES = [
     description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 10 guests',
-    image: '/generated/mychef-experience-bali-aura-team.webp',
+    image: '/generated/mychef-catering-bali-bbq-grill-satay.webp',
   },
   {
     title: 'International BBQ',
@@ -52,7 +52,7 @@ const BBQ_PACKAGES = [
     description: 'Wagyu steak, whole lobster tail, king prawns, salmon, Mahi-mahi, premium sides, signature sauces, chocolate dessert station.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Ingredients', 'Setup', '2-3h service', 'Plated service', 'Pack-up & cleanup'],
     minGuests: 'Min. 10 guests',
-    image: '/generated/mychef-catering-bali-pkg-roast.webp',
+    image: '/generated/mychef-catering-bali-bbq-grill-surfturf.webp',
   },
 ]
 

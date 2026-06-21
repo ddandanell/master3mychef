@@ -41,7 +41,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/jimbaran', to: '/locations/jimbaran', reason: 'Canonicalize to /locations/' },
   { from: '/pererenan', to: '/locations/pererenan', reason: 'Canonicalize to /locations/' },
   { from: '/bukit', to: '/locations/bukit', reason: 'Canonicalize to /locations/' },
-  { from: '/berawa', to: '/locations/berawa', reason: 'Canonicalize to /locations/' },
+  { from: '/berawa', to: '/locations/canggu', reason: 'Berawa is part of Canggu; /locations/berawa has no page — go straight to the real Canggu page (no chain).' },
 
   { from: '/kuta', to: '/locations/seminyak', reason: 'Lower-end tourist hub adjacent to Seminyak.' },
   { from: '/legian', to: '/locations/seminyak', reason: 'Adjacent to Seminyak.' },

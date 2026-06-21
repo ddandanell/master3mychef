@@ -42,6 +42,21 @@ Then read the relevant control file for your task area:
 
 Root control files are the source of truth. Agent artifacts in `.claude/`, `.kimi/`, and `.ai/` are session history only.
 
+## IMAGE RULES (must follow when generating or selecting any imagery)
+
+myCHEF is an Indonesian company. Apply these rules to every generated or chosen image:
+
+1. **All service staff must look Indonesian/Balinese** — chefs, bartenders, waiters, hosts, butlers, sommeliers, and any team member shown delivering the service. This is non-negotiable: an Indonesian company is staffed by Indonesians, and it sells better.
+2. **Guests / clients may be anyone** — tourists, Western/white couples and families are fine and expected, since they are the customer. Only the people *providing the service* must be Indonesian.
+3. Images must look 100% real (not obviously AI-generated).
+4. Convert to WebP (quality ~82); hero images min width 1200px, keep under ~300KB.
+5. When auditing existing images, replace any photo where the staff/chef/bartender appears non-Indonesian.
+
+## UI / CONTRAST RULES
+
+- Never place dark text directly over a background photo or dark background. If a section uses a background image, add a light veil/overlay (e.g. `rgba(245,243,239,0.85+)`) behind dark text, or use light text with a dark scrim. Always verify text/background contrast in the browser (desktop + mobile) before considering a change done.
+- Avoid `background-attachment: fixed` for text sections (unreliable positioning on mobile can push text onto dark image regions).
+
 Claude role:
 You are the senior coding, reasoning, architecture, debugging, and execution agent.
 Your job is to:

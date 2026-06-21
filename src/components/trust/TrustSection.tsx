@@ -10,8 +10,13 @@ export default function TrustSection() {
           backgroundImage: 'url(/generated/mychef-misc-bali-trust-hosts.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
         }}
+      />
+
+      {/* Light veil so the dark headline/text stay readable over the photo */}
+      <div
+        className="absolute inset-0"
+        style={{ background: 'rgba(245, 243, 239, 0.88)' }}
       />
 
       {/* Content layer */}

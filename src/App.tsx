@@ -107,6 +107,7 @@ const KutaPage = lazy(() => import('./pages/KutaPage'))
 const PrivateChefVsRestaurantPage = lazy(() => import('./pages/PrivateChefVsRestaurantPage'))
 const FamilyKidsMenuPage = lazy(() => import('./pages/FamilyKidsMenuPage'))
 const CorporateEventsCateringBaliPage = lazy(() => import('./pages/CorporateEventsCateringBaliPage'))
+const CorporateCaseStudiesPage = lazy(() => import('./pages/CorporateCaseStudiesPage'))
 const FoodAllergiesPage = lazy(() => import('./pages/FoodAllergiesPage'))
 const HowToHirePrivateChefPage = lazy(() => import('./pages/HowToHirePrivateChefPage'))
 const ChefHiringGuidePage = lazy(() => import('./pages/ChefHiringGuidePage'))
@@ -182,6 +183,7 @@ export default function App() {
           <Route path="/events/birthdays" element={<EventsBirthdaysPage />} />
           <Route path="/events/anniversaries" element={<EventsAnniversariesPage />} />
           <Route path="/events/corporate-events" element={<EventsCorporatePage />} />
+          <Route path="/corporate-case-studies" element={<CorporateCaseStudiesPage />} />
           <Route path="/events/retreats" element={<EventsRetreatsPage />} />
           <Route path="/events/baby-showers" element={<EventsBabyShowersPage />} />
           <Route path="/events/villa-parties" element={<EventsVillaPartiesPage />} />

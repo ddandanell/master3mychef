@@ -213,6 +213,8 @@ export default function ConciergeWidget() {
                 src={persona === 'ai' ? '/generated/mychef-misc-bali-avatar-ai.webp' : '/generated/mychef-finedining-bali-luna-chef-portrait.webp'}
                 alt={persona === 'ai' ? 'myCHEF AI' : 'Adriano'}
                 className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div>

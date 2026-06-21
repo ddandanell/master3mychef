@@ -17,6 +17,7 @@ import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import TaxFooter from '@/components/shared/TaxFooter'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import EmailCaptureBar from '@/components/EmailCaptureBar'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20a%20villa%20party%20in%20Bali.'
@@ -474,6 +475,12 @@ export default function EventsVillaPartiesPage() {
         title="Party People Say"
         subtitle="Real celebrations, real villas, real good times."
       />
+
+      <section className="py-10 bg-[#0a0a0a]">
+        <div className="max-w-3xl mx-auto px-6">
+          <EmailCaptureBar />
+        </div>
+      </section>
 
       <section className="py-20 md:py-28 bg-white party-reveal">
         <div className="max-w-3xl mx-auto px-6">

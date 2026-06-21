@@ -16,6 +16,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import EmailCaptureBar from '@/components/EmailCaptureBar'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20a%20retreat%20catering%20quote.'
@@ -443,6 +444,12 @@ export default function EventsRetreatsPage() {
           <p className="mt-6 text-sm text-[#4A4745] text-center max-w-4xl mx-auto">
             Once dates, guest profile, and dietary map are clear, we turn this into a rotation plan that shifts across the week instead of repeating the same energy profile every day.
           </p>
+        </div>
+      </section>
+
+      <section className="py-10 bg-[#0a0a0a]">
+        <div className="max-w-3xl mx-auto px-6">
+          <EmailCaptureBar />
         </div>
       </section>
 

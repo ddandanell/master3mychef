@@ -17,6 +17,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import EmailCaptureBar from '@/components/EmailCaptureBar'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20baby%20shower.'
@@ -424,6 +425,12 @@ export default function EventsBabyShowersPage() {
           { name: 'Anna K.', location: 'Ubud Baby Shower', quote: 'The botanical styling, grazing table, and cleanup were all handled so professionally. It felt light and joyful, not stressful.', rating: 5 },
         ]}
       />
+
+      <section className="py-10 bg-[#0a0a0a]">
+        <div className="max-w-3xl mx-auto px-6">
+          <EmailCaptureBar />
+        </div>
+      </section>
 
       <section className="py-20 md:py-28 bg-white baby-reveal">
         <div className="max-w-3xl mx-auto px-6">

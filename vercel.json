@@ -157,27 +157,27 @@
     },
     {
       "source": "/menteng",
-      "destination": "/private-chef-menteng",
+      "destination": "/locations/jakarta",
       "permanent": true
     },
     {
       "source": "/kemang",
-      "destination": "/private-chef-kemang",
+      "destination": "/locations/jakarta",
       "permanent": true
     },
     {
       "source": "/scbd",
-      "destination": "/private-chef-scbd",
+      "destination": "/locations/jakarta",
       "permanent": true
     },
     {
       "source": "/pondok-indah",
-      "destination": "/private-chef-pondok-indah",
+      "destination": "/locations/jakarta",
       "permanent": true
     },
     {
       "source": "/bsd",
-      "destination": "/private-chef-bsd",
+      "destination": "/locations/jakarta",
       "permanent": true
     },
     {
@@ -467,57 +467,57 @@
     },
     {
       "source": "/locations/berawa",
-      "destination": "/private-chef-bali/berawa",
-      "permanent": true
-    },
-    {
-      "source": "/locations/gianyar",
-      "destination": "/private-chef-bali/gianyar",
+      "destination": "/locations/canggu",
       "permanent": true
     },
     {
       "source": "/locations/kerobokan",
-      "destination": "/private-chef-bali/kerobokan",
+      "destination": "/locations/seminyak",
       "permanent": true
     },
     {
       "source": "/locations/legian",
-      "destination": "/private-chef-bali/legian",
-      "permanent": true
-    },
-    {
-      "source": "/locations/padang-bai",
-      "destination": "/private-chef-bali/padang-bai",
-      "permanent": true
-    },
-    {
-      "source": "/locations/pecatu",
-      "destination": "/private-chef-bali/pecatu",
+      "destination": "/locations/seminyak",
       "permanent": true
     },
     {
       "source": "/locations/petitenget",
-      "destination": "/private-chef-bali/petitenget",
+      "destination": "/locations/seminyak",
       "permanent": true
     },
     {
-      "source": "/locations/tabanan",
-      "destination": "/private-chef-bali/tabanan",
-      "permanent": true
-    },
-    {
-      "source": "/locations/tanah-lot",
-      "destination": "/private-chef-bali/tanah-lot",
+      "source": "/locations/gianyar",
+      "destination": "/locations/ubud",
       "permanent": true
     },
     {
       "source": "/locations/tegallalang",
-      "destination": "/private-chef-bali/tegallalang",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tabanan",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tanah-lot",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pecatu",
+      "destination": "/locations/bukit",
       "permanent": true
     },
     {
       "source": "/locations/ungasan",
-      "destination": "/private-chef-bali/ungasan",
+      "destination": "/locations/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/locations/padang-bai",
+      "destination": "/locations/sanur",
       "permanent": true
     },
     {
@@ -537,27 +537,27 @@
     },
     {
       "source": "/locations/menteng",
-      "destination": "/private-chef-menteng",
+      "destination": "/locations/jakarta",
       "permanent": true
     },
     {
       "source": "/locations/kemang",
-      "destination": "/private-chef-kemang",
+      "destination": "/locations/jakarta",
       "permanent": true
     },
     {
       "source": "/locations/scbd",
-      "destination": "/private-chef-scbd",
+      "destination": "/locations/jakarta",
       "permanent": true
     },
     {
       "source": "/locations/pondok-indah",
-      "destination": "/private-chef-pondok-indah",
+      "destination": "/locations/jakarta",
       "permanent": true
     },
     {
       "source": "/locations/bsd",
-      "destination": "/private-chef-bsd",
+      "destination": "/locations/jakarta",
       "permanent": true
     },
     {

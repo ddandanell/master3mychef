@@ -116,7 +116,7 @@ export default function ServiceMixologyPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1600&q=80" alt="Cocktail-focused mixology experience at a Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+          <img src="/generated/mychef-experience-bali-aura-bartender.webp" alt="Cocktail-focused mixology experience at a Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
           <div
             className="absolute inset-0"
             style={{

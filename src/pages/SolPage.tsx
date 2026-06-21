@@ -114,6 +114,7 @@ export default function SolPage() {
             width={1920}
             height={1080}
             fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/70" />
         </div>

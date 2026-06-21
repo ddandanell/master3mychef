@@ -103,6 +103,7 @@ export default function MenuGuidePage() {
             width={1344}
             height={768}
             fetchPriority="high"
+            decoding="async"
           />
           <div
             className="absolute inset-0"

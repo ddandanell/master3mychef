@@ -127,7 +127,7 @@ const BBQ_PACKAGES = [
     price: 'IDR 550,000/person',
     description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Setup & cleanup'],
-    minGuests: 'Min. 6 guests',
+    minGuests: 'Min. 10 guests',
   },
   {
     image: '/generated/sol-bbq.webp',
@@ -135,7 +135,7 @@ const BBQ_PACKAGES = [
     price: 'IDR 700,000/person',
     description: 'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Setup & cleanup'],
-    minGuests: 'Min. 6 guests',
+    minGuests: 'Min. 10 guests',
   },
   {
     image: '/generated/pkg-seafood.webp',
@@ -143,7 +143,7 @@ const BBQ_PACKAGES = [
     price: 'IDR 850,000/person',
     description: 'Wagyu steak, lobster tail, king prawns, salmon, Mahi-mahi, larger-format sides, signature sauces, chocolate dessert station.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Plated service', 'Setup & cleanup'],
-    minGuests: 'Min. 6 guests',
+    minGuests: 'Min. 10 guests',
   },
 ]
 

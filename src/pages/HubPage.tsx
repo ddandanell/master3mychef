@@ -245,7 +245,7 @@ export default function HubPage() {
       addressLocality: 'Denpasar Selatan',
       addressRegion: 'Bali',
       postalCode: '80226',
-      addressCountry: 'Indonesia',
+      addressCountry: 'ID',
     },
     areaServed: {
       '@type': 'Place',
@@ -282,7 +282,7 @@ export default function HubPage() {
     homeLocalBusinessSchema,
     websiteSchema,
     homeBreadcrumb,
-    organizationSchema('https://mychef.id/generated/home-hero-ivory-villa-v2.png', [
+    organizationSchema('https://mychef.id/og-image.webp', [
       'https://www.instagram.com/mychef.id',
       'https://www.facebook.com/mychef.id',
     ]),

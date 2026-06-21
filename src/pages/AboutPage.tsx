@@ -59,7 +59,7 @@ const SECTIONS = [
     title: 'Built for the Realities of Bali Villa Hospitality',
     body: `<p>We serve across Bali’s major villa destinations — Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua, and surrounding areas. We know the kitchens, the access constraints, the traffic, and the suppliers, which means fewer surprises on the day.</p>
     <p>That local knowledge matters. It is how we keep ingredients fresh, arrivals on time, and service calm even when a villa kitchen is small or the guest list changes late.</p>`,
-    image: '/generated/hub-villa.webp',
+    image: '/generated/mychef-misc-bali-hub-villa.webp',
     imageAlt: 'Luxury Bali villa where myCHEF serves private dining',
   },
   {

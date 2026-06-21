@@ -148,7 +148,6 @@ export const REDIRECTS: Redirect[] = [
   { from: '/chef-placement-bali', to: '/staffing/private-chef-placement', reason: 'GA4 404 (2 views). Old slug → placement page.' },
   { from: '/live-in-chef-bali', to: '/staffing/live-in-chef', reason: 'GA4 404 (2 views). Old slug → live-in chef page.' },
   { from: '/retreat-catering-bali', to: '/catering/retreat-catering', reason: 'GA4 404 (2 views). Old slug → retreat catering page.' },
-  { from: '/villa-bbq-catering-bali', to: '/catering/bbq-catering', reason: 'GA4 404 (2 views). Old slug → BBQ catering page.' },
   { from: '/getting-started', to: '/help/getting-started', reason: 'GA4 404 (2 views). Bare URL → help getting-started page.' },
 ]
 

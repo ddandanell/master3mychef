@@ -155,7 +155,7 @@ const SECTIONS = [
       { icon: Tag, title: 'BBQ Catering', desc: 'From IDR 550,000 per person. Minimum 10 guests. Includes grill setup, meats, sides, sauces, and service staff.' },
       { icon: Tag, title: 'Buffet Catering', desc: 'From IDR 450,000 per person. Minimum 30 guests. Multiple stations, hot and cold options, full service team.' },
       { icon: Tag, title: 'Drop-Off Catering', desc: 'From IDR 350,000 per person. Minimum 4 guests. Pre-plated meals delivered to your villa. No service staff included.' },
-      { icon: Tag, title: 'Floating Breakfast', desc: 'From IDR 350,000 per person. Minimum 2 guests. Delivered to your pool at your chosen time. Also available as an add-on: +IDR 350,000 per person on any catering package.' },
+      { icon: Tag, title: 'Floating Breakfast', desc: 'From IDR 950,000 per couple. Minimum 2 guests. Delivered to your pool at your chosen time. Also available as an add-on: +IDR 350,000 per person on any catering package.' },
       { icon: Tag, title: 'Grazing Table', desc: 'From IDR 4,500,000 total. Artisan cheeses, cured meats, fresh fruits, and accompaniments. Serves 10–15 guests.' },
     ],
   },
@@ -245,7 +245,7 @@ export default function PricingPage() {
       heroImageAlt="Elegant fine dining dish"
       ogImage="https://mychef.id/generated/mychef-catering-bali-catering-hero.webp"
       keywords={['private chef bali price', 'bali catering cost', 'villa chef rates bali']}
-      highlights={['No Hidden Fees', 'Grocery Receipts Provided', '25% Deposit to Book', '24-Hour Quote Delivery']}
+      highlights={['No Hidden Fees', 'Grocery Receipts Provided', '50% Deposit to Book', '24-Hour Quote Delivery']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}

@@ -350,9 +350,9 @@ export default function RomanticDinnerPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
               { src: '/generated/mychef-events-bali-anniversary-romantic.webp', alt: 'Romantic anniversary dinner in Bali villa' },
-              { src: '/generated/luna-detail.webp', alt: 'Elegant plated dish from myCHEF private dining' },
+              { src: '/generated/mychef-experience-bali-luna-detail.webp', alt: 'Elegant plated dish from myCHEF private dining' },
               { src: '/generated/luna-dessert.webp', alt: 'Tiramisu dessert from private villa dinner' },
-              { src: '/generated/luna-wine.webp', alt: 'Wine pairing for romantic villa dinner Bali' },
+              { src: '/generated/mychef-experience-bali-luna-wine.webp', alt: 'Wine pairing for romantic villa dinner Bali' },
             ].map((img) => (
               <div key={img.src} className="aspect-square overflow-hidden rounded-[16px]">
                 <img

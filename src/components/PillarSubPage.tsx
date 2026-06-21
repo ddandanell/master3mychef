@@ -55,7 +55,7 @@ export default function PillarSubPage() {
       { q: 'Can you accommodate dietary restrictions?', a: 'Absolutely. Gluten-free, vegan, halal, shellfish allergy, pregnancy-friendly — we adjust every course at no extra charge.' },
     ],
     'catering': [
-      { q: 'What is the minimum guest count?', a: 'BBQ catering: 10 guests minimum. Buffet: 15 guests. Drop-off: 10 guests. Villa chef: no minimum, 4-hour minimum booking.' },
+      { q: 'What is the minimum guest count?', a: 'BBQ catering: 10 guests minimum. Buffet: 30 guests. Drop-off: 4 guests. Villa chef: no minimum, 4-hour minimum booking.' },
       { q: 'Are groceries included?', a: 'For fine dining and events, ingredients are included. For villa chef catering, groceries are billed at cost with receipts — no markup.' },
       { q: 'How far in advance should I book catering?', a: '3+ days for villa chef. 7+ days for BBQ and buffet. 2+ weeks for large events and peak season.' },
       { q: 'Can I customize the menu?', a: 'Yes. Every menu is tailored to your preferences, dietary needs, and kitchen capabilities. Just tell us what you need.' },

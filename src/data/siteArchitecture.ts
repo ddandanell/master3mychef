@@ -705,7 +705,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
       </ul>
 
       <h2>Summary: Budgeting for Success</h2>
-      <p>To get the most value, we recommend booking a <a href="/catering/villa-catering">villa catering package</a> for your arrival night and a specialized <a href="/fine-dining/private-dinner">private dinner</a> for your final evening. This balances cost and extraordinary experiences perfectly.</p>
+      <p>To get the most value, we recommend booking a <a href="/catering/villa-catering">villa catering package</a> for your arrival night and a specialized <a href="/fine-dining/private-chef-bali">private dinner</a> for your final evening. This balances cost and extraordinary experiences perfectly.</p>
       
       <p>Ready to start planning? Use our <a href="/pricing">instant price breakdown</a> or message Putu, our AI Concierge, for a custom quote.</p>
     `,

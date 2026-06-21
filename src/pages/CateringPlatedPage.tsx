@@ -100,7 +100,7 @@ const PLATED_GALLERY = [
   '/generated/mychef-misc-bali-hub-fine-dining.webp',
   '/generated/mychef-experience-bali-aura-toast.webp',
   '/generated/mychef-experience-bali-aura-tablescape.webp',
-  '/generated/hub-catering.webp',
+  '/generated/mychef-catering-bali-hub-catering.webp',
 ]
 
 const WHY_PLATED_VS_BUFFET = [

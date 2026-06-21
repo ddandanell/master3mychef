@@ -461,11 +461,6 @@
       "permanent": true
     },
     {
-      "source": "/villa-bbq-catering-bali",
-      "destination": "/catering/bbq-catering",
-      "permanent": true
-    },
-    {
       "source": "/getting-started",
       "destination": "/help/getting-started",
       "permanent": true

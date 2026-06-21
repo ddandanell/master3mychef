@@ -755,7 +755,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/in-villa-service/waiters',
     title: 'Villa Waiters Bali | Professional Per-Shift Service — myCHEF',
     description:
-      'Hire villa waiters in Bali for dinners, weddings & events. Uniformed, English-speaking, trained in plated service. From IDR 350K/shift. WhatsApp us.',
+      'Hire villa waiters in Bali for dinners, weddings & events. Uniformed, English-speaking, trained in plated service. From IDR 250K/hour. WhatsApp us.',
     canonical: `${SITE}/in-villa-service/waiters`,
     h1: 'Waiter Hire in Bali',
     ogImage: `${SITE}/generated/aura-bartender.webp`,
@@ -775,7 +775,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/in-villa-service/bartenders',
     title: 'Bartender Hire Bali | Villa Cocktail Service — myCHEF',
     description:
-      'Hire a bartender in Bali for villa parties & dinners. Cocktails, glassware, ice & garnish prep included. From IDR 450K/shift. WhatsApp to book yours.',
+      'Hire a bartender in Bali for villa parties & dinners. Cocktails, glassware, ice & garnish prep included. From IDR 350K/hour. WhatsApp to book yours.',
     canonical: `${SITE}/in-villa-service/bartenders`,
     h1: 'Bartender Hire in Bali',
     ogImage: `${SITE}/generated/aura-bartender.webp`,

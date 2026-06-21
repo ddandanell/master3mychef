@@ -88,7 +88,7 @@ const STEPS = [
 const TIMELINE = [
   { when: 'Within 1 hour', what: 'Initial WhatsApp reply', context: 'We acknowledge your message and ask clarifying questions' },
   { when: 'Within 24 hours', what: 'Proposal sent', context: 'Full breakdown: chef, menu, team, price, and logistics' },
-  { when: 'After approval', what: 'Deposit taken', context: 'Usually 30% to lock the team and ingredients' },
+  { when: 'After approval', what: 'Deposit taken', context: '50% to lock the team and ingredients'},
   { when: '1–3 days before', what: 'Final confirmation', context: 'Guest count, menu review, and villa setup walk-through' },
   { when: 'Service day', what: 'Team arrives', context: 'Usually 2–3 hours before your scheduled dinner time' },
 ]
@@ -120,7 +120,7 @@ const FAQS = [
   },
   {
     q: 'How is payment handled?',
-    a: 'We take a 30% deposit to confirm your booking and lock the chef and team. The balance is settled before or on the day of service. We accept bank transfer and most major payment methods.',
+    a: 'We take a 50% deposit to confirm your booking and lock the chef and team. The balance is settled before or on the day of service. We accept bank transfer and most major payment methods.',
   },
   {
     q: 'What if I\'m not sure exactly when I need the service?',

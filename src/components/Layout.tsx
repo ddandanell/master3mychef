@@ -59,7 +59,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Navbar />
         <main id="main-content" className="flex-1">{children}</main>
         <div className="bg-[#1A1916] text-[#C5A028] text-xs py-2 text-center">
-          ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · 5-star rated
+          ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · 4.9★ rated
         </div>
         <Footer />
         <ConciergeWidget />

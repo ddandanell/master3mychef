@@ -1247,7 +1247,7 @@ export default function LunaPage() {
               </a>
             </Button>
             <Button asChild variant="secondary" size="brand">
-              <a href="mailto:hello@mychef.id">Prefer Email? hello@mychef.id</a>
+              <a href="mailto:indonesia@mychef.id">Prefer Email? indonesia@mychef.id</a>
             </Button>
           </div>
         </div>

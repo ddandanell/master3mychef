@@ -152,7 +152,7 @@ const SECTIONS = [
     title: 'Villa Chef & Catering Rates',
     features: [
       { icon: Tag, title: 'Private Villa Chef', desc: 'From IDR 600,000 per hour. Minimum 4 hours. Groceries billed at cost with receipts provided. Breakfast, lunch, dinner, or full-board available.' },
-      { icon: Tag, title: 'BBQ Catering', desc: 'From IDR 450,000 per person. Minimum 10 guests. Includes grill setup, meats, sides, sauces, and service staff.' },
+      { icon: Tag, title: 'BBQ Catering', desc: 'From IDR 550,000 per person. Minimum 10 guests. Includes grill setup, meats, sides, sauces, and service staff.' },
       { icon: Tag, title: 'Buffet Catering', desc: 'From IDR 450,000 per person. Minimum 30 guests. Multiple stations, hot and cold options, full service team.' },
       { icon: Tag, title: 'Drop-Off Catering', desc: 'From IDR 350,000 per person. Minimum 4 guests. Pre-plated meals delivered to your villa. No service staff included.' },
       { icon: Tag, title: 'Floating Breakfast', desc: 'From IDR 350,000 per person. Minimum 2 guests. Delivered to your pool at your chosen time. Also available as an add-on: +IDR 350,000 per person on any catering package.' },

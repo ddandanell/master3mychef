@@ -32,7 +32,7 @@ const SITE = 'https://mychef.id'
 const BBQ_PACKAGES = [
   {
     title: 'Indonesian BBQ',
-    price: 450000,
+    price: 550000,
     description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 10 guests',
@@ -40,7 +40,7 @@ const BBQ_PACKAGES = [
   },
   {
     title: 'International BBQ',
-    price: 600000,
+    price: 700000,
     description: 'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread, fresh fruit.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 10 guests',
@@ -107,10 +107,10 @@ const AREA_MINIMUMS = [
 ]
 
 const GROUP_SIZE_GUIDE = [
-  { guests: 10, indonesian: 'IDR 5.45M', international: 'IDR 7.26M', premium: 'IDR 10.29M' },
-  { guests: 20, indonesian: 'IDR 10.89M', international: 'IDR 14.52M', premium: 'IDR 20.57M' },
-  { guests: 30, indonesian: 'IDR 16.34M', international: 'IDR 21.78M', premium: 'IDR 30.86M' },
-  { guests: 40, indonesian: 'IDR 21.78M', international: 'IDR 29.04M', premium: 'IDR 41.14M' },
+  { guests: 10, indonesian: 'IDR 6.66M', international: 'IDR 8.47M', premium: 'IDR 10.29M' },
+  { guests: 20, indonesian: 'IDR 13.31M', international: 'IDR 16.94M', premium: 'IDR 20.57M' },
+  { guests: 30, indonesian: 'IDR 19.97M', international: 'IDR 25.41M', premium: 'IDR 30.86M' },
+  { guests: 40, indonesian: 'IDR 26.62M', international: 'IDR 33.88M', premium: 'IDR 41.14M' },
 ]
 
 const BBQ_VS_OTHERS = [
@@ -119,7 +119,7 @@ const BBQ_VS_OTHERS = [
   { aspect: 'Group size', bbq: '10–40 guests ideal', buffet: '30–200 guests', plated: '10–60 guests' },
   { aspect: 'Service style', bbq: 'Chef grills live, staff serves', buffet: 'Guests self-serve from stations', plated: 'Individual courses to each guest' },
   { aspect: 'Setup', bbq: 'Grill, prep station, serving table', buffet: 'Chafing dishes, multiple stations', plated: 'Full table setting, course pacing' },
-  { aspect: 'Price range', bbq: 'IDR 450K–850K/pp', buffet: 'IDR 450K–950K/pp', plated: 'IDR 800K–1.3M/pp' },
+  { aspect: 'Price range', bbq: 'IDR 550K–850K/pp', buffet: 'IDR 450K–950K/pp', plated: 'IDR 800K–1.3M/pp' },
 ]
 
 const FAQS = [
@@ -157,8 +157,8 @@ export default function CateringBBQPage() {
         ogImage={`${SITE}/bbq-poolside.webp`}
         jsonLd={[
           cateringServiceSchema('BBQ Catering Bali', 'Live-fire BBQ catering for Bali villas, birthdays, weddings, and relaxed private events with chefs grilling on site. myCHEF.id handles ingredients, setup, service, and cleanup across Bali.', `${SITE}/catering/bbq-catering`),
-          offerSchema('Indonesian BBQ', 450000, 'IDR', `${SITE}/catering/bbq-catering`),
-          offerSchema('International BBQ', 600000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('Indonesian BBQ', 550000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('International BBQ', 700000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('Premium Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
@@ -198,7 +198,7 @@ export default function CateringBBQPage() {
             Fresh grills, chef-led cooking, villa-ready setup, and relaxed poolside service for groups who want a proper BBQ without managing anything.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 450,000/person · Chef + staff + equipment included · Bali-wide
+            From IDR 550,000/person · Chef + staff + equipment included · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
@@ -407,8 +407,8 @@ export default function CateringBBQPage() {
 
           {/* Group Total Calculators */}
           <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <GroupTotalCalculator pricePerPerson={450000} minGuests={10} maxGuests={40} defaultGuests={10} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={600000} minGuests={10} maxGuests={40} defaultGuests={10} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={550000} minGuests={10} maxGuests={40} defaultGuests={10} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={700000} minGuests={10} maxGuests={40} defaultGuests={10} accent="#C5A028" />
             <GroupTotalCalculator pricePerPerson={850000} minGuests={10} maxGuests={40} defaultGuests={10} accent="#C5A028" />
           </div>
           <TaxFooter className="mt-6" />
@@ -428,8 +428,8 @@ export default function CateringBBQPage() {
               <thead>
                 <tr className="border-b-2 border-[#1A1A1A]">
                   <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Guests</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Indonesian <span className="text-xs font-normal opacity-70">(450K)</span></th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">International <span className="text-xs font-normal opacity-70">(600K)</span></th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Indonesian <span className="text-xs font-normal opacity-70">(550K)</span></th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">International <span className="text-xs font-normal opacity-70">(700K)</span></th>
                   <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Surf & Turf <span className="text-xs font-normal opacity-70">(850K)</span></th>
                 </tr>
               </thead>

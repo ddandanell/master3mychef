@@ -41,7 +41,7 @@ const CATERING_STYLES = [
   {
     image: '/generated/mychef-catering-style-bbq.webp',
     title: 'BBQ Catering',
-    price: 'From IDR 450,000/person',
+    price: 'From IDR 550,000/person',
     description: 'Best for villa dinners, birthdays, and relaxed group meals. Chef grills live at your villa.',
     href: '/catering/bbq-catering',
     accent: '#C5A028',
@@ -124,7 +124,7 @@ const BBQ_PACKAGES = [
   {
     image: '/generated/pkg-bbq.webp',
     title: 'Indonesian BBQ',
-    price: 'IDR 450,000/person',
+    price: 'IDR 550,000/person',
     description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Setup & cleanup'],
     minGuests: 'Min. 6 guests',
@@ -132,7 +132,7 @@ const BBQ_PACKAGES = [
   {
     image: '/generated/sol-bbq.webp',
     title: 'International BBQ',
-    price: 'IDR 600,000/person',
+    price: 'IDR 700,000/person',
     description: 'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Setup & cleanup'],
     minGuests: 'Min. 6 guests',
@@ -264,8 +264,8 @@ const DAILY_CHEF_ADDONS = [
 ]
 
 const PRICING_TABLE = [
-  { name: 'Indonesian BBQ', price: 'IDR 450,000/person', min: '10 guests', bestFor: 'Villa BBQ' },
-  { name: 'International BBQ', price: 'IDR 600,000/person', min: '10 guests', bestFor: 'Villa BBQ' },
+  { name: 'Indonesian BBQ', price: 'IDR 550,000/person', min: '10 guests', bestFor: 'Villa BBQ' },
+  { name: 'International BBQ', price: 'IDR 700,000/person', min: '10 guests', bestFor: 'Villa BBQ' },
   { name: 'Surf & Turf BBQ', price: 'IDR 850,000/person', min: '10 guests', bestFor: 'Special occasions' },
   { name: 'Indonesian Buffet', price: 'IDR 450,000/person', min: '30 guests', bestFor: 'Weddings & events' },
   { name: 'International Buffet', price: 'IDR 750,000/person', min: '30 guests', bestFor: 'Weddings & events' },
@@ -414,8 +414,8 @@ export default function CateringMainPage() {
               },
             },
           },
-          offerSchema('Indonesian BBQ', 450000, 'IDR', `${SITE}/catering/bbq-catering`),
-          offerSchema('International BBQ', 600000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('Indonesian BBQ', 550000, 'IDR', `${SITE}/catering/bbq-catering`),
+          offerSchema('International BBQ', 700000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('Indonesian Buffet', 450000, 'IDR', `${SITE}/catering/buffet`),
           offerSchema('International Buffet', 750000, 'IDR', `${SITE}/catering/buffet`),

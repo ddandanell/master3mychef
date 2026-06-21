@@ -264,10 +264,10 @@ const DAILY_CHEF_ADDONS = [
 ]
 
 const PRICING_TABLE = [
-  { name: 'Indonesian BBQ', price: 'IDR 450,000/person', min: '6 guests', bestFor: 'Villa BBQ' },
-  { name: 'International BBQ', price: 'IDR 600,000/person', min: '6 guests', bestFor: 'Villa BBQ' },
-  { name: 'Surf & Turf BBQ', price: 'IDR 850,000/person', min: '6 guests', bestFor: 'Special occasions' },
-  { name: 'Indonesian Buffet', price: 'IDR 550,000/person', min: '30 guests', bestFor: 'Weddings & events' },
+  { name: 'Indonesian BBQ', price: 'IDR 450,000/person', min: '10 guests', bestFor: 'Villa BBQ' },
+  { name: 'International BBQ', price: 'IDR 600,000/person', min: '10 guests', bestFor: 'Villa BBQ' },
+  { name: 'Surf & Turf BBQ', price: 'IDR 850,000/person', min: '10 guests', bestFor: 'Special occasions' },
+  { name: 'Indonesian Buffet', price: 'IDR 450,000/person', min: '30 guests', bestFor: 'Weddings & events' },
   { name: 'International Buffet', price: 'IDR 750,000/person', min: '30 guests', bestFor: 'Weddings & events' },
   { name: 'Live-Station Buffet', price: 'IDR 950,000/person', min: '30 guests', bestFor: 'Larger-format events' },
   { name: '3-Course Plated', price: 'IDR 800,000/person', min: '10 guests', bestFor: 'Seated dinners' },
@@ -296,7 +296,7 @@ const FAQS = [
   { q: 'Do your prices include chef and staff?', a: 'Yes. All BBQ, buffet, and plated packages include a private chef and service staff. Drop-off catering does not include on-site staff — that is the point.' },
   { q: 'Do you provide catering at villas?', a: 'Yes. We specialize in villa catering across Bali. We bring all equipment, set up in your villa garden or pool area, and clean up after.' },
   { q: 'Can I book only drop-off food?', a: 'Absolutely. Our drop-off catering is designed for guests who want great food without staff staying in the villa.' },
-  { q: 'What is the minimum guest count?', a: 'BBQ: 6 guests (Seminyak/Canggu), 10 (Ubud), 20 (Uluwatu). Buffet: 30 guests. Plated: 10 guests. Drop-off: 4 guests. Babi Guling: 10 guests.' },
+  { q: 'What is the minimum guest count?', a: 'BBQ: 10 guests (Seminyak/Canggu & Ubud), 20 (Uluwatu). Buffet: 30 guests. Plated: 10 guests. Drop-off: 4 guests. Babi Guling: 10 guests.' },
   { q: 'Do you offer halal or pork-free menus?', a: 'Yes. We offer fully halal and pork-free BBQ, buffet, and plated menus. Babi Guling contains pork and is not halal.' },
   { q: 'Does Babi Guling contain pork?', a: 'Yes. Babi Guling is a traditional Balinese whole-pig roast and contains pork. It is not suitable for halal groups.' },
   { q: 'Can you handle gluten-free or allergies?', a: 'Yes. We accommodate gluten-free, nut-free, dairy-free, shellfish-free, and other allergies. Please tell us when booking.' },
@@ -417,7 +417,7 @@ export default function CateringMainPage() {
           offerSchema('Indonesian BBQ', 450000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('International BBQ', 600000, 'IDR', `${SITE}/catering/bbq-catering`),
           offerSchema('Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),
-          offerSchema('Indonesian Buffet', 550000, 'IDR', `${SITE}/catering/buffet`),
+          offerSchema('Indonesian Buffet', 450000, 'IDR', `${SITE}/catering/buffet`),
           offerSchema('International Buffet', 750000, 'IDR', `${SITE}/catering/buffet`),
           offerSchema('Live-Station Buffet', 950000, 'IDR', `${SITE}/catering/buffet`),
           offerSchema('3-Course Plated', 800000, 'IDR', `${SITE}/catering/plated-catering`),

@@ -82,8 +82,8 @@ const PRICE_SPECIFICATION_SCHEMA = {
       item: {
         '@type': 'Offer',
         name: 'Drop-Off Catering',
-        description: 'Pre-plated meals delivered to your villa. Minimum 10 guests.',
-        priceSpecification: { '@type': 'PriceSpecification', price: '250000', priceCurrency: 'IDR', unitText: 'PERSON' },
+        description: 'Pre-plated meals delivered to your villa. Minimum 4 guests.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '350000', priceCurrency: 'IDR', unitText: 'PERSON' },
         availability: 'https://schema.org/InStock',
         seller: { '@id': 'https://mychef.id/#business' },
       },
@@ -153,9 +153,9 @@ const SECTIONS = [
     features: [
       { icon: Tag, title: 'Private Villa Chef', desc: 'From IDR 600,000 per hour. Minimum 4 hours. Groceries billed at cost with receipts provided. Breakfast, lunch, dinner, or full-board available.' },
       { icon: Tag, title: 'BBQ Catering', desc: 'From IDR 450,000 per person. Minimum 10 guests. Includes grill setup, meats, sides, sauces, and service staff.' },
-      { icon: Tag, title: 'Buffet Catering', desc: 'From IDR 350,000 per person. Minimum 15 guests. Multiple stations, hot and cold options, full service team.' },
-      { icon: Tag, title: 'Drop-Off Catering', desc: 'From IDR 250,000 per person. Minimum 10 guests. Pre-plated meals delivered to your villa. No service staff included.' },
-      { icon: Tag, title: 'Floating Breakfast', desc: 'From IDR 350,000 per person. Minimum 2 guests. Delivered to your pool at your chosen time.' },
+      { icon: Tag, title: 'Buffet Catering', desc: 'From IDR 450,000 per person. Minimum 30 guests. Multiple stations, hot and cold options, full service team.' },
+      { icon: Tag, title: 'Drop-Off Catering', desc: 'From IDR 350,000 per person. Minimum 4 guests. Pre-plated meals delivered to your villa. No service staff included.' },
+      { icon: Tag, title: 'Floating Breakfast', desc: 'From IDR 350,000 per person. Minimum 2 guests. Delivered to your pool at your chosen time. Also available as an add-on: +IDR 350,000 per person on any catering package.' },
       { icon: Tag, title: 'Grazing Table', desc: 'From IDR 4,500,000 total. Artisan cheeses, cured meats, fresh fruits, and accompaniments. Serves 10–15 guests.' },
     ],
   },
@@ -217,7 +217,7 @@ const FAQS = [
   { question: 'Do you require a deposit?', answer: 'Yes. A 50% deposit locks your date. Balance is due 3 days before the event. We accept bank transfer (IDR or USD), Wise, and credit card via secure link.' },
   { question: 'What is your cancellation policy?', answer: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date. No-shows forfeit the deposit.' },
   { question: 'Do you charge extra for dietary restrictions?', answer: 'No. Gluten-free, vegan, halal, nut allergies, pregnancy-friendly — we accommodate all dietary needs at no extra cost. Just tell us when booking.' },
-  { question: 'Is there a minimum guest count?', answer: 'Fine dining: 4 guests minimum (2 for romantic dinners). BBQ: 10 guests. Buffet: 15 guests. Villa chef: no minimum, 4-hour minimum booking.' },
+  { question: 'Is there a minimum guest count?', answer: 'Fine dining: 4 guests minimum (2 for romantic dinners). BBQ: 10 guests. Buffet: 30 guests. Villa chef: no minimum, 4-hour minimum booking.' },
   { question: 'Can I get a quote before committing?', answer: 'Absolutely. Use our quote form or message us on WhatsApp. We deliver detailed proposals within 24 hours with full pricing breakdowns.' },
 ]
 

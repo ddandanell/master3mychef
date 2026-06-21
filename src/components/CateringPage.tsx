@@ -7,7 +7,7 @@ const SITE = 'https://mychef.id'
 const WA = '491635080236'
 
 const CATERING_FAQS = faqPageSchema([
-  { question: 'How much does villa catering cost in Bali?', answer: 'Villa catering in Bali starts from IDR 250,000 per person for drop-off catering, IDR 350,000 for buffet, IDR 450,000 for BBQ, and IDR 600,000 per hour for a private villa chef. All prices are transparent — no markup on groceries.' },
+  { question: 'How much does villa catering cost in Bali?', answer: 'Villa catering in Bali starts from IDR 350,000 per person for drop-off catering, IDR 450,000 for buffet, IDR 450,000 for BBQ, and IDR 600,000 per hour for a private villa chef. All prices are transparent — no markup on groceries.' },
   { question: 'What is included in myCHEF catering packages?', answer: 'All catering packages include menu design, grocery shopping at cost (no markup), chef and service staff, all equipment and serveware, setup, table service, and full kitchen cleanup. Dietary customization is included at no extra cost.' },
   { question: 'How many guests can you cater for in a Bali villa?', answer: 'myCHEF caters from 2 to 200+ guests. We scale staffing, equipment, and production to your exact guest count. Minimum for BBQ is 10 guests, buffet 15 guests, and villa chef bookings are 4 hours minimum.' },
   { question: 'Do you cater in all areas of Bali?', answer: 'Yes. We serve Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan, and the Bukit Peninsula. WhatsApp us for same-day availability checks.' },

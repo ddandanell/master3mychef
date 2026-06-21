@@ -184,6 +184,9 @@ export default function EventsBirthdaysPage() {
           <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left">
             From IDR 350K/child or 850K++/guest · Cake, staff, and cleanup handled
           </p>
+          <p className="text-xs text-white/[60%] mt-2 text-left">
+            All prices marked {'"++"'} are subject to 10% service charge + 11% government tax.
+          </p>
         </div>
       </section>
 

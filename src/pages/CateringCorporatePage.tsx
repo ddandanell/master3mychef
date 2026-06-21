@@ -109,6 +109,7 @@ const CORP_ADDONS = [
 ]
 
 const FAQS = [
+  { q: 'What does corporate catering cost?', a: 'Three per-person tiers: Standard IDR 450,000, Premium IDR 750,000, and Luxury IDR 1,200,000 (subject to 10% service charge + 11% government tax). Minimum spend is IDR 7,500,000.' },
   { q: 'Can you invoice companies?', a: 'Yes. We provide full tax invoices (NPWP-registered) with detailed breakdowns of food costs, service charges, and applicable taxes. Net-14 payment terms available for regular corporate clients.' },
   { q: 'Can you handle multi-day events?', a: 'Absolutely. Multi-day offsites and conferences are a specialty. We assign a dedicated team and event manager who stays with your group for the full duration.' },
   { q: 'Do you serve in villas or venues?', a: 'Both. We cater at private villas, hotels, conference centers, co-working spaces, and outdoor venues across Bali. We coordinate with venue managers for kitchen access and logistics.' },
@@ -180,7 +181,7 @@ export default function CateringCorporatePage() {
             Reliable catering for business lunches, workshops, retreats, company dinners, product launches, and executive gatherings across Bali.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 450,000/person · Tax invoiced · Dedicated event manager · Bali-wide
+            From IDR 450,000/person · Min. spend IDR 7,500,000 · Tax invoiced · Dedicated event manager · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">

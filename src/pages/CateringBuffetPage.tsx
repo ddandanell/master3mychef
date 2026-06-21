@@ -32,7 +32,7 @@ const SITE = 'https://mychef.id'
 const BUFFET_PACKAGES = [
   {
     title: 'Indonesian Buffet',
-    price: 550000,
+    price: 450000,
     description: '8 hot dishes, 4 cold dishes, dessert, fresh fruit, 5 sambals, rice, noodles, breads.',
     includes: ['Chef', 'Service team (1 per 12 guests)', 'Full chafing setup', 'Serving tables', 'Linens', 'Cutlery', '2.5h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 30 guests',
@@ -129,11 +129,11 @@ const AREA_MINIMUMS = [
 ]
 
 const GROUP_SIZE_GUIDE = [
-  { guests: 30, indonesian: 'IDR 19.97M', international: 'IDR 27.23M', premium: 'IDR 34.49M' },
-  { guests: 50, indonesian: 'IDR 33.28M', international: 'IDR 45.38M', premium: 'IDR 57.48M' },
-  { guests: 80, indonesian: 'IDR 53.24M', international: 'IDR 72.60M', premium: 'IDR 91.97M' },
-  { guests: 120, indonesian: 'IDR 79.86M', international: 'IDR 108.90M', premium: 'IDR 137.97M' },
-  { guests: 200, indonesian: 'IDR 133.10M', international: 'IDR 181.50M', premium: 'IDR 229.95M' },
+  { guests: 30, indonesian: 'IDR 16.34M', international: 'IDR 27.23M', premium: 'IDR 34.49M' },
+  { guests: 50, indonesian: 'IDR 27.23M', international: 'IDR 45.38M', premium: 'IDR 57.48M' },
+  { guests: 80, indonesian: 'IDR 43.56M', international: 'IDR 72.60M', premium: 'IDR 91.97M' },
+  { guests: 120, indonesian: 'IDR 65.34M', international: 'IDR 108.90M', premium: 'IDR 137.97M' },
+  { guests: 200, indonesian: 'IDR 108.90M', international: 'IDR 181.50M', premium: 'IDR 229.95M' },
 ]
 
 const BUFFET_VS_PLATED = [
@@ -143,7 +143,7 @@ const BUFFET_VS_PLATED = [
   { aspect: 'Service style', buffet: 'Self-serve with staff assistance', plated: 'Individual courses to each guest' },
   { aspect: 'Setup time', buffet: '2–3 hours before service', plated: '3–4 hours before service' },
   { aspect: 'Staff needed', buffet: '1 per 12 guests + chef', plated: '1 per 8 guests + chef + kitchen team' },
-  { aspect: 'Price range', buffet: 'IDR 550K–950K/pp', plated: 'IDR 800K–1.3M/pp' },
+  { aspect: 'Price range', buffet: 'IDR 450K–950K/pp', plated: 'IDR 800K–1.3M/pp' },
   { aspect: 'Dietary flexibility', buffet: 'High — guests choose what they want', plated: 'Medium — pre-selected courses with substitutions' },
 ]
 
@@ -182,7 +182,7 @@ export default function CateringBuffetPage() {
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet-catering.webp`}
         jsonLd={[
           cateringServiceSchema('Buffet Catering Bali', 'Full-service buffet catering for Bali villas, weddings, retreats, and large private events with Indonesian and international menu options. myCHEF.id brings chefs, service staff, buffet equipment, and cleanup across Bali.', `${SITE}/catering/buffet`),
-          offerSchema('Indonesian Buffet', 550000, 'IDR', `${SITE}/catering/buffet`),
+          offerSchema('Indonesian Buffet', 450000, 'IDR', `${SITE}/catering/buffet`),
           offerSchema('International Buffet', 750000, 'IDR', `${SITE}/catering/buffet`),
           offerSchema('Premium Live-Station Buffet', 950000, 'IDR', `${SITE}/catering/buffet`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
@@ -222,7 +222,7 @@ export default function CateringBuffetPage() {
             Three buffet tiers — from Indonesian classics to live-station premium with sushi, pasta, and carving. Minimum 30 guests. Sample tasting at 40+.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 550,000/person · Min. 30 guests · Chef & staff included · Bali-wide
+            From IDR 450,000/person · Min. 30 guests · Chef & staff included · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
@@ -493,7 +493,7 @@ export default function CateringBuffetPage() {
 
           {/* Group Total Calculators */}
           <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <GroupTotalCalculator pricePerPerson={550000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={450000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
             <GroupTotalCalculator pricePerPerson={750000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
             <GroupTotalCalculator pricePerPerson={950000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
           </div>
@@ -514,7 +514,7 @@ export default function CateringBuffetPage() {
               <thead>
                 <tr className="border-b-2 border-[#1A1A1A]">
                   <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Guests</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Indonesian <span className="text-xs font-normal opacity-70">(550K)</span></th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Indonesian <span className="text-xs font-normal opacity-70">(450K)</span></th>
                   <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">International <span className="text-xs font-normal opacity-70">(750K)</span></th>
                   <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Live-Station <span className="text-xs font-normal opacity-70">(950K)</span></th>
                 </tr>

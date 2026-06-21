@@ -212,6 +212,9 @@ export default function EventsWeddingsPage() {
           <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left">
             From IDR 600K++/guest · Transparent proposal before deposit
           </p>
+          <p className="text-xs text-white/[60%] mt-2 text-left">
+            All prices marked {'"++"'} are subject to 10% service charge + 11% government tax.
+          </p>
         </div>
       </section>
 

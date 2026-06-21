@@ -35,7 +35,7 @@ const BBQ_PACKAGES = [
     price: 450000,
     description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
-    minGuests: 'Min. 6 guests',
+    minGuests: 'Min. 10 guests',
     image: '/generated/mychef-experience-bali-aura-team.webp',
   },
   {
@@ -43,7 +43,7 @@ const BBQ_PACKAGES = [
     price: 600000,
     description: 'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread, fresh fruit.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
-    minGuests: 'Min. 6 guests',
+    minGuests: 'Min. 10 guests',
     image: '/generated/mychef-finedining-bali-sol-bbq.webp',
   },
   {
@@ -51,7 +51,7 @@ const BBQ_PACKAGES = [
     price: 850000,
     description: 'Wagyu steak, whole lobster tail, king prawns, salmon, Mahi-mahi, premium sides, signature sauces, chocolate dessert station.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Ingredients', 'Setup', '2-3h service', 'Plated service', 'Pack-up & cleanup'],
-    minGuests: 'Min. 6 guests',
+    minGuests: 'Min. 10 guests',
     image: '/generated/mychef-catering-bali-pkg-roast.webp',
   },
 ]
@@ -96,8 +96,8 @@ const ADDONS = [
 ]
 
 const AREA_MINIMUMS = [
-  { area: 'Seminyak / Canggu', min: '6 guests', fee: 'No travel fee' },
-  { area: 'Berawa / Pererenan', min: '6 guests', fee: 'No travel fee' },
+  { area: 'Seminyak / Canggu', min: '10 guests', fee: 'No travel fee' },
+  { area: 'Berawa / Pererenan', min: '10 guests', fee: 'No travel fee' },
   { area: 'Ubud', min: '10 guests', fee: 'IDR 350,000' },
   { area: 'Uluwatu', min: '20 guests', fee: 'IDR 500,000' },
   { area: 'Nusa Dua', min: 'Quote required', fee: 'Quote required' },
@@ -107,7 +107,6 @@ const AREA_MINIMUMS = [
 ]
 
 const GROUP_SIZE_GUIDE = [
-  { guests: 6, indonesian: 'IDR 3.27M', international: 'IDR 4.36M', premium: 'IDR 6.17M' },
   { guests: 10, indonesian: 'IDR 5.45M', international: 'IDR 7.26M', premium: 'IDR 10.29M' },
   { guests: 20, indonesian: 'IDR 10.89M', international: 'IDR 14.52M', premium: 'IDR 20.57M' },
   { guests: 30, indonesian: 'IDR 16.34M', international: 'IDR 21.78M', premium: 'IDR 30.86M' },
@@ -117,10 +116,10 @@ const GROUP_SIZE_GUIDE = [
 const BBQ_VS_OTHERS = [
   { aspect: 'Energy', bbq: 'Relaxed, social, live-fire atmosphere', buffet: 'Self-serve, efficient for large groups', plated: 'Formal, precise, restaurant-style' },
   { aspect: 'Best for', bbq: 'Villa parties, birthdays, poolside, casual events', buffet: 'Weddings, large groups, mixed dietary needs', plated: 'Anniversaries, corporate dinners, fine dining' },
-  { aspect: 'Group size', bbq: '6–40 guests ideal', buffet: '30–200 guests', plated: '10–60 guests' },
+  { aspect: 'Group size', bbq: '10–40 guests ideal', buffet: '30–200 guests', plated: '10–60 guests' },
   { aspect: 'Service style', bbq: 'Chef grills live, staff serves', buffet: 'Guests self-serve from stations', plated: 'Individual courses to each guest' },
   { aspect: 'Setup', bbq: 'Grill, prep station, serving table', buffet: 'Chafing dishes, multiple stations', plated: 'Full table setting, course pacing' },
-  { aspect: 'Price range', bbq: 'IDR 450K–850K/pp', buffet: 'IDR 550K–950K/pp', plated: 'IDR 800K–1.3M/pp' },
+  { aspect: 'Price range', bbq: 'IDR 450K–850K/pp', buffet: 'IDR 450K–950K/pp', plated: 'IDR 800K–1.3M/pp' },
 ]
 
 const FAQS = [
@@ -129,7 +128,7 @@ const FAQS = [
   { q: 'Can we choose the meat quality?', a: 'Yes. Our standard packages use high-quality local and imported meats. The Wagyu upgrade (+IDR 250K/pp) replaces standard beef with premium Wagyu. We also offer halal and pork-free options.' },
   { q: 'Do you serve drinks and cocktails?', a: 'Drinks are not included in the base package, but you can add a bartender with 3-hour open bar for IDR 4,000,000 flat. We also offer wine pairing and soft drink packages.' },
   { q: 'What happens if it rains?', a: 'We monitor weather and can set up under covered terraces, verandas, or indoor kitchens. For uncovered outdoor setups, we bring pop-up tents. We always have a backup plan.' },
-  { q: 'How many guests do I need?', a: 'Minimum 6 guests in Seminyak/Canggu, 10 in Ubud, and 20 in Uluwatu. For other areas, contact us for a custom quote.' },
+  { q: 'How many guests do I need?', a: 'Minimum 10 guests in Seminyak/Canggu and Ubud, and 20 in Uluwatu. For other areas, contact us for a custom quote.' },
   { q: 'Do you clean up after the BBQ?', a: 'Full cleanup is included. We pack up all equipment, dispose of waste, clean the grill area, and leave your villa as we found it.' },
   { q: 'Can you do vegetarian or vegan BBQ?', a: 'Yes. We offer full vegetarian and vegan BBQ menus with grilled vegetables, plant-based proteins, salads, and sides. No compromise on flavor.' },
   { q: 'How far in advance should I book?', a: 'For Seminyak/Canggu, 3–7 days is ideal. For other areas, 1–2 weeks. Last-minute bookings possible depending on chef availability.' },
@@ -408,9 +407,9 @@ export default function CateringBBQPage() {
 
           {/* Group Total Calculators */}
           <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <GroupTotalCalculator pricePerPerson={450000} minGuests={6} maxGuests={40} defaultGuests={10} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={600000} minGuests={6} maxGuests={40} defaultGuests={10} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={850000} minGuests={6} maxGuests={40} defaultGuests={10} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={450000} minGuests={10} maxGuests={40} defaultGuests={10} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={600000} minGuests={10} maxGuests={40} defaultGuests={10} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={850000} minGuests={10} maxGuests={40} defaultGuests={10} accent="#C5A028" />
           </div>
           <TaxFooter className="mt-6" />
         </div>

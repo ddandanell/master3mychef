@@ -233,6 +233,61 @@ const AREAS_COVERED = [
   'Jimbaran', 'Berawa', 'Pererenan', 'Bukit', 'Bingin', 'Tabanan',
 ]
 
+interface PopularEventType {
+  title: string
+  icon: typeof Heart
+  description: string
+  href: string
+}
+
+const POPULAR_EVENT_TYPES: PopularEventType[] = [
+  {
+    title: 'Birthday Parties in Bali Villas',
+    icon: Cake,
+    description: 'The most common event we run. myCHEF handles the chef team, themed setup, cake coordination, and all staffing so the birthday person never has to manage logistics.',
+    href: '/events/birthdays',
+  },
+  {
+    title: 'Proposal Dinners',
+    icon: Heart,
+    description: 'Intimate, private, and styled for the moment. We design a candlelit menu for two with florals, a personalised course reveal, and a coordinator who cues the moment.',
+    href: '/events/anniversaries',
+  },
+  {
+    title: 'Anniversary Dinners',
+    icon: Wine,
+    description: 'Fine dining brought to your villa terrace or pool deck. Multi-course, wine-paired, and polished — the opposite of a crowded restaurant on a special night.',
+    href: '/events/anniversaries',
+  },
+  {
+    title: 'Baby Showers and Family Gatherings',
+    icon: Baby,
+    description: 'Brunch spreads, high teas, mocktail bars, and styled setups that photograph beautifully. We cater for mixed dietary needs across generations without fuss.',
+    href: '/events/baby-showers',
+  },
+  {
+    title: 'Bachelorette and Hen Party Catering',
+    icon: Sparkles,
+    description: 'Cocktail masterclasses, grazing tables, poolside BBQs, or full sit-down dinners. We build the menu around the vibe — relaxed brunch to fully styled gala night.',
+    href: '/events/villa-parties',
+  },
+  {
+    title: 'Corporate Team Dinners and Retreats',
+    icon: Briefcase,
+    description: 'Executive dinners, off-sites, and multi-day retreats with invoice-ready billing and NPWP. One team manages food, drinks, staffing, and coordination from brief to cleanup.',
+    href: '/events/corporate-events',
+  },
+]
+
+const WHATS_INCLUDED = [
+  'Head chef and sous chef for events of 20 or more guests',
+  'All cooking equipment, prep stations, and servingware brought to the villa',
+  'Customised menu design built around your brief and cuisine preferences',
+  'Full event staffing — waiters, bartenders, and kitchen team as required',
+  'Setup, service throughout the event, and complete post-event cleanup',
+  'Dietary accommodations handled as standard: halal, vegan, gluten-free, nut-free, and kids portions available',
+]
+
 const EVENTS_TESTIMONIALS = [
   {
     name: 'Priya & Raj',
@@ -289,6 +344,26 @@ const FAQS = [
   {
     q: 'Do you provide staff, bartenders, and coordinators?',
     a: 'Yes — chefs, waiters (1 per 10 guests is our standard), bartenders, kitchen team, runners, and an on-site event coordinator are part of every package. For corporate and weddings we add a dedicated coordinator who manages timing, suppliers, and the run-sheet.',
+  },
+  {
+    q: 'How many guests can myCHEF cater for at a villa event?',
+    a: 'We have catered events from 2 guests (intimate anniversary dinners) up to 250+ guests (full villa weddings and corporate retreats). For events of 20 or more we bring a sous chef alongside the head chef. Above 60 guests we add a dedicated kitchen team and expand staffing accordingly. There is no hard upper limit — just tell us the headcount and we size the team.',
+  },
+  {
+    q: 'How far in advance should I book event catering in Bali?',
+    a: 'For smaller events (under 30 guests), 3 to 6 weeks is comfortable. For birthdays, bachelorette parties, and anniversary dinners, 2 to 4 weeks is usually fine. Weddings and large retreats during high season (July, August, December, January) should ideally be booked 3 to 6 months out. That said, we have pulled together 30-guest dinners with 72 hours notice — WhatsApp Sofia and we will tell you exactly what is available.',
+  },
+  {
+    q: 'Can you set up a themed dinner or surprise party?',
+    a: 'Yes. Themed setups — tropical, Balinese, Mediterranean, black-tie, bohemian garden — are something we do regularly. For surprise parties we coordinate directly with whoever is organising it, keep the setup quiet until the guest of honour arrives, and cue the reveal. Florals, candles, signage, and personalised menus can all be arranged through us or with your preferred decor supplier.',
+  },
+  {
+    q: 'What types of cuisine are available for events?',
+    a: 'Our chefs cover a wide range: modern European, Italian, Japanese, South-East Asian, Middle Eastern, BBQ and grill, plant-based and vegan, raw food, and traditional Balinese (including whole roast suckling pig). For large events we can run two cuisine lines in parallel — for example, a halal Indonesian buffet alongside a Western plated service. Share your brief and we match the chef and menu to it.',
+  },
+  {
+    q: 'Do you provide waitstaff for villa events?',
+    a: 'Yes — professional waitstaff are included in every event package. Our standard ratio is 1 waiter per 10 guests for seated service, adjusted for cocktail-style and buffet events. Staff arrive early for briefing, are uniformed, trained in plated and silver service, and stay through cleanup. Bartenders, sommeliers, and butler-style service can be added depending on the event format.',
   },
 ]
 
@@ -579,6 +654,112 @@ export default function EventsMainPage() {
         </div>
       </section>
 
+      {/* ═══════ MOST POPULAR EVENT TYPES ═══════ */}
+      <section className="py-24 md:py-32 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Most Requested"
+            title="The most popular event types we run in Bali"
+            subtitle="From intimate proposal dinners to full villa birthday parties — here is what guests book most often and what myCHEF provides for each."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {POPULAR_EVENT_TYPES.map((item) => (
+              <Link
+                key={item.title}
+                to={item.href}
+                className="group bg-white rounded-2xl border border-[#E8E6E3] p-7 hover:border-[#C5A028]/50 hover:shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              >
+                <div className="w-11 h-11 rounded-xl bg-[#C5A028]/10 flex items-center justify-center mb-5">
+                  <item.icon className="w-5 h-5 text-[#C5A028]" />
+                </div>
+                <h3 className="font-playfair text-xl text-[#1A1A1A] mb-3 group-hover:text-[#C5A028] transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-[#4A4745]">{item.description}</p>
+                <span className="inline-flex items-center gap-2 mt-5 text-xs font-semibold tracking-[0.25em] uppercase text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">
+                  Learn more <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm">
+            <span className="text-[#4A4745]">Also explore:</span>
+            <Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Fine dining for intimate events
+            </Link>
+            <span className="text-[#E8E6E3]">·</span>
+            <Link to="/catering" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Buffet and catering formats
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ WHAT'S INCLUDED IN VILLA EVENT CATERING ═══════ */}
+      <section className="py-24 md:py-32 px-6 bg-white">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div>
+              <p className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5">
+                What You Get
+              </p>
+              <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] leading-[1.1] mb-6">
+                What is included in villa event catering
+              </h2>
+              <p className="text-[#4A4745] leading-relaxed mb-8">
+                Every myCHEF event package is designed so the host arrives and enjoys — not manages. Here is what comes
+                standard with every booking.
+              </p>
+              <ul className="space-y-4">
+                {WHATS_INCLUDED.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-[#C5A028]/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-[#C5A028]" />
+                    </div>
+                    <span className="text-sm text-[#4A4745] leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-8 md:p-10">
+              <p className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4">
+                Good to know
+              </p>
+              <h3 className="font-playfair text-2xl text-[#1A1A1A] mb-5">
+                Fully mobile. No villa kitchen required.
+              </h3>
+              <p className="text-sm text-[#4A4745] leading-relaxed mb-6">
+                myCHEF operates as a mobile hospitality team. We bring everything the event needs — prep equipment,
+                glassware, linen, cold storage, and the full kitchen setup. If your villa has a small kitchen or no
+                kitchen at all, that is not a problem.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 p-3 bg-white rounded-xl border border-[#E8E6E3]">
+                  <MapPin className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                  <span className="text-sm text-[#4A4745]">We cover all areas across Bali</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-white rounded-xl border border-[#E8E6E3]">
+                  <Users className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                  <span className="text-sm text-[#4A4745]">Events from 2 to 250+ guests</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-white rounded-xl border border-[#E8E6E3]">
+                  <ClipboardCheck className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                  <span className="text-sm text-[#4A4745]">One proposal, one invoice, one contact</span>
+                </div>
+              </div>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              >
+                <MessageCircle className="w-4 h-4" /> Ask Sofia About Your Event
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ HOW IT WORKS ═══════ */}
       <section className="py-24 md:py-32 px-6 bg-[#0F0F0F] text-white">
         <div className="max-w-[1280px] mx-auto">
@@ -785,12 +966,19 @@ export default function EventsMainPage() {
           <p className="mt-8 text-xs text-[#4A4745]/70">
             Not on the list? We travel anywhere in Bali. Outer-island referrals on request.
           </p>
-          <div className="mt-10 grid sm:grid-cols-2 max-w-xl mx-auto gap-3">
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 max-w-3xl mx-auto gap-3">
             <Link
-              to="/locations/uluwatu"
+              to="/locations/seminyak"
               className="flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-[#E8E6E3] hover:border-[#C5A028]/50 transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
             >
-              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">Uluwatu wedding venue</span>
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">Seminyak villa events</span>
+              <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
+            </Link>
+            <Link
+              to="/locations/canggu"
+              className="flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-[#E8E6E3] hover:border-[#C5A028]/50 transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">Canggu birthday parties</span>
               <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
             </Link>
             <Link
@@ -798,6 +986,27 @@ export default function EventsMainPage() {
               className="flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-[#E8E6E3] hover:border-[#C5A028]/50 transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
             >
               <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">Ubud retreat catering</span>
+              <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
+            </Link>
+            <Link
+              to="/locations/uluwatu"
+              className="flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-[#E8E6E3] hover:border-[#C5A028]/50 transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">Uluwatu wedding catering</span>
+              <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
+            </Link>
+            <Link
+              to="/fine-dining"
+              className="flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-[#E8E6E3] hover:border-[#C5A028]/50 transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">Fine dining for intimate events</span>
+              <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
+            </Link>
+            <Link
+              to="/catering"
+              className="flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-[#E8E6E3] hover:border-[#C5A028]/50 transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+            >
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">Buffet and catering formats</span>
               <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
             </Link>
           </div>
@@ -889,7 +1098,8 @@ export default function EventsMainPage() {
         <div className="max-w-3xl mx-auto">
           <SectionHeader
             eyebrow="Chapter 9 — Questions"
-            title="The eight questions every host asks"
+            title="Event catering FAQs"
+            subtitle="Common questions about booking villa event catering in Bali — from guest counts and lead times to cuisine types and what is included."
           />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>

@@ -295,10 +295,10 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
   kuta: {
     slug: 'kuta',
     label: 'Kuta',
-    h1: 'Private Chef Kuta — Villa Dining & Group BBQs',
-    title: 'Private Chef Kuta | Villa Dining & Group BBQs — myCHEF',
-    description: 'Hire a private chef in Kuta for villa dinners, family BBQs, and group celebrations.',
-    intro: 'In Kuta, myCHEF provides reliable villa dining for families and groups staying near the heart of Bali’s activity. We specialize in casual sharing feasts and poolside BBQs that work perfectly for high-energy holiday villas.',
+    h1: 'Private Chef in Kuta Bali — Villa Dining & Event Catering',
+    title: 'Private Chef Kuta Bali | Villa Dining & Event Catering — myCHEF',
+    description: 'Hire a private chef in Kuta Bali for villa dinners, BBQ parties, and celebrations. myCHEF serves Kuta, Legian, and Tuban from IDR 600k/day.',
+    intro: 'In Kuta, myCHEF provides private chef services for families, groups, and celebrations staying near the heart of Bali. We specialize in poolside BBQ parties, family villa dinners, and birthday celebrations across Kuta, Legian, and Tuban.',
   },
   legian: {
     slug: 'legian',

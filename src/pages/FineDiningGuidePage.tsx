@@ -1,6 +1,6 @@
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
-import { Wine, ChefHat, Sparkles, Clock } from 'lucide-react'
+import { Wine, ChefHat, Sparkles, Clock, Shield, MapPin, UtensilsCrossed, Heart } from 'lucide-react'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 
 const SECTIONS = [
@@ -31,6 +31,45 @@ const SECTIONS = [
       { icon: ChefHat, title: 'Flexibility', desc: 'Private: 8–10 courses without time pressure. Restaurant: Standardized pace for table turnover.' },
       { icon: Clock, title: 'Experience', desc: 'Private: Bespoke, never repeated. Restaurant: Same experience 500 times per year.' },
     ],
+  },
+  {
+    id: 'why-choose',
+    type: 'features' as const,
+    subtitle: 'Why Choose Villa Fine Dining',
+    title: 'Why Fine Dining at Your Villa Beats a Restaurant',
+    features: [
+      { icon: Shield, title: 'Total Privacy', desc: 'No neighbouring tables, no ambient noise, no strangers. Your villa is your private restaurant — the experience belongs entirely to you and your guests.' },
+      { icon: UtensilsCrossed, title: 'Fully Customised Menu', desc: 'Every course is designed around your preferences, dietary requirements, and culinary curiosity. Nothing on the menu is there by accident.' },
+      { icon: MapPin, title: 'No Travel Required', desc: 'Your chef arrives at your villa with all ingredients and equipment. You dress how you like, start when you like, and end when you feel like it.' },
+      { icon: Heart, title: 'Chef Dedication', desc: 'A restaurant chef is cooking for 40 tables simultaneously. Your private chef is cooking exclusively for your table — every plate gets full attention.' },
+    ],
+  },
+  {
+    id: 'occasions',
+    type: 'content' as const,
+    subtitle: 'Popular Occasions',
+    title: 'Perfect Fine Dining Occasions at Your Villa',
+    body: `<p>A private fine dining experience in Bali elevates any special occasion. Here are the celebrations guests love most:</p>
+    <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
+      <li><strong>Honeymoon Dinner:</strong> The most intimate meal of your marriage. Your chef sets the table, dims the lights, and creates a menu that tells the story of your first days together. <a href="/events/anniversaries" class="text-[#C5A028] hover:underline font-medium">Learn about romantic events</a>.</li>
+      <li><strong>Proposal Dinner:</strong> Propose over a candlelit 7-course menu designed for the moment — flowers, champagne, and a chef who disappears after each course so you have complete privacy. <a href="/events" class="text-[#C5A028] hover:underline font-medium">Browse our events services</a>.</li>
+      <li><strong>Anniversary Celebration:</strong> Mark the years with a dining experience that matches the milestone. Recreate a dish from a past trip, or explore something entirely new together.</li>
+      <li><strong>Birthday Dinner:</strong> Gift the birthday guest a bespoke tasting menu centred on their favourite cuisines, with a dedicated chef and sommelier for the evening. <a href="/events/birthdays" class="text-[#C5A028] hover:underline font-medium">Birthday catering options</a>.</li>
+      <li><strong>Corporate Entertaining:</strong> Impress clients or reward a leadership team with a private chef dinner in your villa — far more memorable than any restaurant booking. <a href="/events/corporate-events" class="text-[#C5A028] hover:underline font-medium">Corporate events in Bali</a>.</li>
+    </ul>`,
+  },
+  {
+    id: 'locations',
+    type: 'content' as const,
+    subtitle: 'Where We Serve',
+    title: 'Fine Dining Available Across Bali',
+    body: `<p>Our fine dining chefs are available throughout the island, coming directly to your villa no matter where you are staying:</p>
+    <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
+      <li><a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak</a> — The original luxury heartland of Bali. Boutique villas, sophisticated guests, and the highest density of fine dining requests on the island.</li>
+      <li><a href="/locations/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu</a> — Modern, creative, and increasingly upscale. Canggu villa guests love progressive and fusion tasting menus.</li>
+      <li><a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud</a> — Jungle retreats and rice terrace villas. Fine dining in Ubud often features Balinese-inspired menus and farm-to-table ingredients sourced from local markets.</li>
+    </ul>
+    <p style="margin-top:0.75rem;">We also cover Nusa Dua, Uluwatu, Jimbaran, and beyond. <a href="/help/getting-started" class="text-[#C5A028] hover:underline font-medium">See how to get started</a> and check availability for your villa address.</p>`,
   },
   {
     id: 'price-guide-cta',
@@ -95,10 +134,31 @@ const FAQS = [
     question: 'What is the minimum group size for fine dining?',
     answer: "Fine dining works beautifully for 2–4 people for intimacy, or larger groups for shared experience. There's no minimum, but pricing is per person.",
   },
+  {
+    question: 'How far in advance should I book a private fine dining experience?',
+    answer: 'We recommend booking 4–6 weeks ahead to allow time for menu co-creation, ingredient sourcing, and chef preparation. 2–3 weeks is workable for most requests. Rush bookings within one week are possible subject to chef availability and may carry a premium surcharge. The earlier you book, the more creative latitude your chef has.',
+  },
+  {
+    question: 'Can the chef accommodate dietary restrictions for fine dining?',
+    answer: 'Yes — and this is one of the strongest advantages of private chef fine dining over a restaurant. Your chef designs the entire menu around your group. Whether you require gluten-free, vegan, nut-free, kosher, halal, or have specific ingredient aversions, every course will be fully adapted. Share all restrictions clearly at the time of booking so the chef can plan accordingly.',
+  },
+  {
+    question: 'What is included in the fine dining price — ingredients, equipment, and service?',
+    answer: 'Our fine dining packages include the chef\'s time, all ingredients, professional kitchen equipment, table setup, and full service from arrival through to cleanup. Wine and alcohol are generally priced separately. Optional additions include a sommelier, a dedicated waiter, specialty ingredients such as truffle or caviar, and floral table arrangements. Your booking confirmation will itemise exactly what is included.',
+  },
+  {
+    question: 'Do you offer wine pairing with fine dining?',
+    answer: 'Yes. You can choose to add a curated wine pairing to any tasting menu. Your chef or our in-house sommelier will select wines that complement each course — typically 4–6 different pours across an 8-course menu. Alternatively, you can bring your own bottles and ask the chef for pairing recommendations in advance. Wine pairing typically adds IDR 400K–800K per person depending on the selection.',
+  },
 ]
 
 const RELATED_PAGES = [
   { label: 'Browse Chefs', href: '/chefs', desc: 'Meet Luna, Sol, Aura, and other leading fine dining chefs.' },
+  { label: 'Events & Special Occasions', href: '/events', desc: 'Proposals, anniversaries, birthdays, corporate dinners and more.' },
+  { label: 'Getting Started', href: '/help/getting-started', desc: 'How to book a private chef in Bali — step by step.' },
+  { label: 'Fine Dining in Seminyak', href: '/locations/seminyak', desc: 'Private chef fine dining for Seminyak villa guests.' },
+  { label: 'Fine Dining in Canggu', href: '/locations/canggu', desc: 'Tasting menus and private dining in Canggu villas.' },
+  { label: 'Fine Dining in Ubud', href: '/locations/ubud', desc: 'Farm-to-table and Balinese-inspired fine dining in Ubud.' },
   { label: 'How to Hire a Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Complete guide to vetting and booking private chefs.' },
   { label: 'Catering Menus', href: '/blog/bali-catering-menu', desc: 'Explore menu styles beyond fine dining.' },
   { label: 'Menus', href: '/menus', desc: 'Browse all available menu options.' },

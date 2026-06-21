@@ -102,6 +102,8 @@ const BlogIndexPage = lazy(() => import('./components/BlogIndexPage'))
 const BaliHubPage = lazy(() => import('./components/BaliHubPage'))
 const QuoteFunnel = lazy(() => import('./components/QuoteFunnel'))
 const PrivateChefCostBaliPage = lazy(() => import('./pages/PrivateChefCostBaliPage'))
+const PrivateChefCostBaliPageBlog = lazy(() => import('./pages/blog/PrivateChefCostBaliPage'))
+const KutaPage = lazy(() => import('./pages/KutaPage'))
 const PrivateChefVsRestaurantPage = lazy(() => import('./pages/PrivateChefVsRestaurantPage'))
 const FamilyKidsMenuPage = lazy(() => import('./pages/FamilyKidsMenuPage'))
 const CorporateEventsCateringBaliPage = lazy(() => import('./pages/CorporateEventsCateringBaliPage'))
@@ -215,6 +217,7 @@ export default function App() {
           <Route path="/locations/denpasar" element={<DenpasarPage />} />
           <Route path="/locations/bukit" element={<BukitPeninsulaPage />} />
           <Route path="/locations/pererenan" element={<PererenanPage />} />
+          <Route path="/locations/kuta" element={<KutaPage />} />
           <Route path="/locations/jakarta" element={<JakartaPage />} />
           {locationPaths.filter(({ location }) => !customLocationSlugs.has(location.slug)).map(({ path }) => (
             <Route key={path} path={path} element={<AreaPage kind="area" />} />
@@ -259,6 +262,7 @@ export default function App() {
           <Route path="/denpasar" element={<DenpasarPage />} />
           <Route path="/bukit" element={<BukitPeninsulaPage />} />
           <Route path="/pererenan" element={<PererenanPage />} />
+          <Route path="/kuta" element={<KutaPage />} />
           {AREA_SLUGS.filter((a) => !customLocationSlugs.has(a.slug)).map((a) => (
             <Route key={a.slug} path={`/${a.slug}`} element={<AreaPage kind="area" />} />
           ))}
@@ -335,7 +339,7 @@ export default function App() {
           {/* Blog (legacy) */}
           <Route path="/blog" element={<BlogIndexPage />} />
           {/* Dedicated blog articles */}
-          <Route path="/blog/private-chef-cost-bali" element={<PrivateChefCostBaliPage />} />
+          <Route path="/blog/private-chef-cost-bali" element={<PrivateChefCostBaliPageBlog />} />
           <Route path="/blog/private-chef-vs-restaurant-bali" element={<PrivateChefVsRestaurantPage />} />
           <Route path="/blog/family-kids-menu-private-chef-bali" element={<FamilyKidsMenuPage />} />
           <Route path="/blog/corporate-events-catering-bali" element={<CorporateEventsCateringBaliPage />} />

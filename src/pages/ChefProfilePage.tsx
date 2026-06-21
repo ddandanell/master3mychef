@@ -18,6 +18,9 @@ interface ChefData {
   shortBio: string
   fullBio: string[]
   achievements: string[]
+  signatureDishes: string[]
+  guestQuote: string
+  guestName: string
   menuStyles: { title: string; desc: string }[]
   perfectFor: string[]
   faqs: { question: string; answer: string }[]
@@ -52,6 +55,13 @@ const CHEFS_DATA: Record<string, ChefData> = {
       'Leads VIP dinners, proposals, and milestone occasions',
       'Developed the full myCHEF recipe and training playbook',
     ],
+    signatureDishes: [
+      'Hand-rolled tagliatelle al tartufo',
+      'Grilled branzino with salsa verde',
+      'Tiramisu with espresso-soaked ladyfingers',
+    ],
+    guestQuote: 'Adriano cooked for our anniversary and it was genuinely the best meal we had in Bali — better than any restaurant. The pasta alone was worth flying here for.',
+    guestName: 'Sophie R., Sydney',
     menuStyles: [
       {
         title: 'Italian Tasting Menu',
@@ -135,6 +145,13 @@ const CHEFS_DATA: Record<string, ChefData> = {
       'Guest favourite for intimate 6–12 person villa dinners',
       'Selects produce personally from Jimbaran and Ubud markets',
     ],
+    signatureDishes: [
+      'Prawn linguine with chilli and white wine',
+      'Pan-seared sea bass with caponata',
+      'Panna cotta with passion fruit',
+    ],
+    guestQuote: 'Surya cooked for our group of eight and every single person at the table was blown away. The pasta he made from scratch that evening is something we still talk about.',
+    guestName: 'James T., London',
     menuStyles: [
       {
         title: 'Mediterranean Villa Dinner',
@@ -218,6 +235,13 @@ const CHEFS_DATA: Record<string, ChefData> = {
       'Born and trained in Jimbaran grill tradition',
       'Trusted for birthday BBQs, retreat dinners, and villa parties',
     ],
+    signatureDishes: [
+      'Wagyu beef brisket with chimichurri',
+      'Jimbaran-style grilled whole fish',
+      'Smoky lamb ribs with sambal matah',
+    ],
+    guestQuote: 'Bayu turned our villa into a proper grill restaurant for the night. The wagyu was perfectly cooked and the whole fish was stunning — our group of 25 was raving all week.',
+    guestName: 'Mark L., Melbourne',
     menuStyles: [
       {
         title: 'Poolside BBQ Dinner',
@@ -302,6 +326,13 @@ const CHEFS_DATA: Record<string, ChefData> = {
       'Raised in Gianyar — the cultural heartland of Bali',
       'Developed myCHEF Asian fusion menu alongside Adriano',
     ],
+    signatureDishes: [
+      'Bebek betutu (slow-cooked Balinese duck)',
+      'Nasi goreng kampung with market herbs',
+      'Balinese lawar with pork and coconut',
+    ],
+    guestQuote: 'Asri cooked an Indonesian feast for our family of twelve and it was extraordinary. She explained every dish as she served it — it felt like a true cultural experience, not just dinner.',
+    guestName: 'Priya N., Singapore',
     menuStyles: [
       {
         title: 'Indonesian Feast (Rijsttafel)',
@@ -358,6 +389,366 @@ const CHEFS_DATA: Record<string, ChefData> = {
     seoDescription:
       "Book Ni Putu Asri for authentic Balinese and Indonesian feast menus in your villa. Gianyar-born, ceremonial cooking heritage, Asian fusion specialist. Book via WhatsApp.",
     ogImage: 'https://mychef.id/generated/portrait-olivia.webp',
+  },
+
+  'wayan-suarjana': {
+    slug: 'wayan-suarjana',
+    name: 'Wayan Suarjana',
+    role: 'Head Pastry Chef',
+    origin: 'Seminyak, Bali',
+    badge: 'Bali-trained · Luxury hotel pastry kitchens in Seminyak',
+    portrait: '/generated/chef-wayan-suarjana-portrait.webp',
+    portraitAlt: 'Wayan Suarjana — Head Pastry Chef at myCHEF Bali',
+    specialty: 'Pastry, Desserts & Petit Fours',
+    cuisine: ['Plated desserts', 'Chocolate work', 'Celebration cakes', 'Tropical fruit pastry'],
+    shortBio:
+      'Wayan brings precision and patience to every dessert course. Trained in Seminyak hotel pastry kitchens before joining myCHEF, he leads all our dessert menus from chocolate tasting plates to tropical fruit pavlovas and Balinese rice pudding variations.',
+    fullBio: [
+      'Wayan Suarjana began his culinary journey not in a restaurant but in the pastry kitchen of a five-star resort in Seminyak — an environment where precision is non-negotiable and every plate must tell a story. He spent six years working his way from apprentice to lead pastry chef, mastering the techniques behind plated desserts, chocolate work, choux pastry, and the delicate art of sugar sculpture.',
+      'What sets Wayan apart is his ability to bring Balinese flavour into European pastry forms without losing the integrity of either. His pandan creme brulee, his coconut and lemongrass panna cotta, and his dark chocolate tart with Balinese palm sugar have become some of the most consistently praised desserts across the myCHEF menu catalogue.',
+      'When he joined myCHEF, Wayan took over all dessert menu development and has since expanded the pastry offering to cover everything from elegant petit fours for tasting menus to full custom celebration cakes for villa birthday parties. He also mentors the junior kitchen staff on pastry fundamentals — extending his influence beyond his own bookings.',
+      'For villa guests who want a dessert course that feels worthy of everything that came before it, Wayan is the reason that last plate lands with the same intention as the first.',
+    ],
+    achievements: [
+      'Leads all pastry and dessert menus across myCHEF',
+      'Creates custom celebration cakes for villa events',
+      'Specialist in chocolate work and plated fine-dining desserts',
+      'Six years in luxury five-star hotel pastry kitchens',
+      'Developed the full myCHEF dessert menu catalogue',
+    ],
+    signatureDishes: [
+      'Chocolate lava cake with Balinese vanilla',
+      'Tropical fruit pavlova with lychee cream',
+      'Coconut pandan layer cake',
+    ],
+    guestQuote: 'The dessert course Wayan prepared was honestly the highlight of our entire stay. The chocolate cake was perfect, and the pandan layer cake looked like art.',
+    guestName: 'Clara M., Amsterdam',
+    menuStyles: [
+      {
+        title: 'Dessert Tasting Plate',
+        desc: 'A curated selection of three plated desserts — ideal for closing a tasting menu or as a standalone dessert experience for guests who want something special after their main course.',
+      },
+      {
+        title: 'Celebration Cake & Petit Fours',
+        desc: 'Custom cakes built around your occasion — birthday, anniversary, proposal, or farewell dinner. Wayan designs and bakes to brief, delivered and plated at your villa.',
+      },
+      {
+        title: 'Tropical Fruit Pastry Course',
+        desc: 'A lighter dessert progression built around Bali\'s exceptional seasonal fruits — papaya, mango, passionfruit, lychee, and rambutan shaped into pavlovas, sorbets, and tarts.',
+      },
+      {
+        title: 'Chocolate & Caramel Experience',
+        desc: 'For guests who want pure indulgence — a chocolate-forward dessert course covering dark chocolate fondant, salted caramel bonbons, and Balinese palm sugar ice cream.',
+      },
+    ],
+    perfectFor: [
+      'Tasting menu dessert courses',
+      'Villa birthday celebrations',
+      'Anniversary and proposal dinners',
+      'Guests wanting Michelin-level pastry in a villa setting',
+      'Events needing a custom celebration cake',
+    ],
+    faqs: [
+      {
+        question: 'Can Wayan bake a custom birthday cake for a villa party?',
+        answer:
+          'Yes — custom celebration cakes are one of Wayan\'s most requested services. Message us with the date, flavour preferences, and any decoration brief and he will design something around your occasion.',
+      },
+      {
+        question: 'What is Wayan\'s signature dessert?',
+        answer:
+          'Wayan\'s most requested dish is his chocolate lava cake with Balinese vanilla cream, but his coconut pandan layer cake and tropical fruit pavlova are equally loved. All desserts are made from scratch on the day.',
+      },
+      {
+        question: 'Can Wayan handle dietary requirements in his desserts?',
+        answer:
+          'Yes — Wayan regularly creates gluten-free, dairy-free, and vegan dessert courses. Let us know your guests\' requirements at booking and the dessert menu is adapted from the start.',
+      },
+      {
+        question: 'Does Wayan work alongside other chefs or independently?',
+        answer:
+          'Both. Wayan often works as the pastry component of a full myCHEF dinner service, collaborating with a main chef. For purely dessert-focused experiences or celebration cakes, he is also available independently.',
+      },
+      {
+        question: 'What areas of Bali does Wayan cover?',
+        answer:
+          'Wayan serves villas across Seminyak, Canggu, Ubud, Uluwatu, and Nusa Dua. For villa locations outside central Bali, please message us and we will confirm logistics and any travel requirements.',
+      },
+    ],
+    seoTitle: "Wayan Suarjana — Pastry Chef Bali | Custom Cakes & Plated Desserts | myCHEF",
+    seoDescription:
+      "Book Wayan Suarjana, myCHEF Head Pastry Chef in Bali. Custom celebration cakes, plated desserts, chocolate tasting courses. Hotel-trained pastry specialist. Book via WhatsApp.",
+    ogImage: 'https://mychef.id/generated/chef-wayan-suarjana-portrait.webp',
+  },
+
+  'ketut-mahardika': {
+    slug: 'ketut-mahardika',
+    name: 'Ketut Mahardika',
+    role: 'Head Chef — Seafood & Japanese',
+    origin: 'Jimbaran, Bali',
+    badge: 'Jimbaran-born · Japanese knife technique · Direct market sourcing',
+    portrait: '/generated/chef-ketut-mahardika-portrait.webp',
+    portraitAlt: 'Ketut Mahardika — Head Chef Seafood and Japanese at myCHEF Bali',
+    specialty: 'Japanese Technique & Fresh Seafood',
+    cuisine: ['Sashimi & crudo', 'Japanese-spiced seafood', 'Tempura & gyoza', 'Tuna and prawn tartare'],
+    shortBio:
+      'Ketut specialises in Japanese-influenced preparations and Bali seafood. He sources directly from Jimbaran each morning and builds menus around what arrived. His sashimi boards, grilled fish with yuzu, and local prawn tempura are consistently the most requested dishes across our Japanese-leaning bookings.',
+    fullBio: [
+      'Ketut Mahardika grew up metres from the Jimbaran fish market — the morning auction that supplies some of the freshest seafood in Southeast Asia. From childhood he understood what a good fish looked like, smelled like, and how quickly quality deteriorates in the tropics. That foundation gave him an almost instinctive relationship with raw seafood that no culinary school can replicate.',
+      'He trained his knife skills under a Japanese-trained chef he met through the Bali hospitality circuit, spending two intensive years learning classical Japanese fish butchery: the honboshi cut, the sakudori fillet, the kasumi-style thin slice. That technical grounding allowed him to work with sashimi-grade fish in a way that most Balinese chefs had never approached.',
+      'Ketut joined myCHEF to build out the Japanese and seafood arm of the menu catalogue — a gap he saw clearly in Bali\'s villa dining scene, where guests often wanted Japanese-quality fish work outside of a restaurant setting. He now handles all sourcing for large seafood events, negotiates directly with Jimbaran boat captains for specific catches, and can build a sashimi board from species that most Bali diners have never encountered.',
+      'For villa guests who love Japanese food or simply want the freshest possible seafood prepared with real technical skill, Ketut is the most natural choice on the myCHEF team.',
+    ],
+    achievements: [
+      'Trained in Japanese knife technique and fish butchery',
+      'Sashimi, crudo, and raw seafood specialist',
+      'Sources direct from Jimbaran fish market every morning',
+      'Manages seafood sourcing for large myCHEF events',
+      'Leads all Japanese-influenced menu bookings',
+    ],
+    signatureDishes: [
+      'Otoro sashimi with ponzu',
+      'Grilled king prawns with yuzu butter',
+      'Japanese-spiced yellowfin tuna tataki',
+    ],
+    guestQuote: 'Ketut prepared a sashimi and grilled seafood dinner that rivalled anything we have eaten in Tokyo. The fish was extraordinary — you could tell it was sourced that morning.',
+    guestName: 'Hiroshi K., Osaka',
+    menuStyles: [
+      {
+        title: 'Sashimi & Crudo Board',
+        desc: 'Ketut\'s signature: a curated board of market-fresh sashimi, tuna tataki, and local prawn crudo — plated with Japanese precision and Bali citrus. Perfect as a standalone starter or tasting course.',
+      },
+      {
+        title: 'Japanese Seafood Dinner',
+        desc: 'A 3–5 course progression through Japanese technique: miso-glazed grilled fish, tempura, sashimi, and a prawn or scallop main. Built entirely around what arrived at Jimbaran that morning.',
+      },
+      {
+        title: 'Omakase Villa Experience',
+        desc: 'Trust the chef. Ketut selects the day\'s best fish and builds a multi-course tasting menu around it — no fixed menu, total freshness. For adventurous guests who want the truest seafood experience in Bali.',
+      },
+      {
+        title: 'Seafood Feast (Large Groups)',
+        desc: 'Ketut scales the Japanese seafood experience to larger groups — whole grilled fish, king prawn platters, sashimi sharing boards, and tempura stations for 10–30 guests at villa events.',
+      },
+    ],
+    perfectFor: [
+      'Japanese food lovers and sashimi enthusiasts',
+      'Intimate seafood-focused dinners (2–10 guests)',
+      'Guests wanting the freshest possible Bali seafood',
+      'Omakase-style chef\'s menu experiences',
+      'Large-group villa seafood feasts',
+    ],
+    faqs: [
+      {
+        question: 'Can I book Ketut for a sashimi dinner at my villa?',
+        answer:
+          'Yes — sashimi and Japanese seafood menus are Ketut\'s most requested format. Message us your villa location, guest count, and any dietary restrictions and we will confirm availability within the hour.',
+      },
+      {
+        question: 'How fresh is the seafood Ketut uses?',
+        answer:
+          'Ketut sources directly from Jimbaran fish market each morning and builds the day\'s menu around what arrived on the boats. The fish used for sashimi-grade preparations is handled same-day.',
+      },
+      {
+        question: 'Does Ketut work with non-seafood dietary guests in a mixed group?',
+        answer:
+          'Yes. Ketut regularly runs seafood-forward menus with parallel dishes for guests who do not eat fish — Japanese-style tofu, vegetable tempura, and mushroom broths are common additions to a mixed booking.',
+      },
+      {
+        question: 'What is an omakase experience with Ketut?',
+        answer:
+          'Omakase means "I\'ll leave it to you" in Japanese — Ketut selects the day\'s best fish and designs a multi-course tasting menu on the spot. No fixed menu, just what is freshest and most interesting at market that morning.',
+      },
+      {
+        question: 'Can Ketut prepare a large sashimi spread for a villa party?',
+        answer:
+          'Absolutely. Ketut regularly prepares sashimi sharing boards and raw seafood spreads for groups of 15–30 guests at villa parties. He coordinates volume and variety directly with Jimbaran suppliers.',
+      },
+    ],
+    seoTitle: "Ketut Mahardika — Seafood & Japanese Chef Bali | Sashimi Specialist | myCHEF",
+    seoDescription:
+      "Book Ketut Mahardika for Japanese seafood and sashimi dinners in your Bali villa. Jimbaran-born, knife-trained, daily market sourcing. Omakase and feast menus. Book via WhatsApp.",
+    ogImage: 'https://mychef.id/generated/chef-ketut-mahardika-portrait.webp',
+  },
+
+  'sari-dewi-kusuma': {
+    slug: 'sari-dewi-kusuma',
+    name: 'Sari Dewi Kusuma',
+    role: 'Wellness & Retreat Chef',
+    origin: 'Ubud, Bali',
+    badge: 'Ubud wellness community favourite · Yoga retreat and detox specialist',
+    portrait: '/generated/chef-sari-dewi-portrait.webp',
+    portraitAlt: 'Sari Dewi Kusuma — Wellness and Retreat Chef at myCHEF Bali',
+    specialty: 'Plant-Based, Ayurvedic & Raw Cuisine',
+    cuisine: ['Raw vegan cuisine', 'Ayurvedic meal planning', 'Balinese whole food', 'Detox and cleanse menus'],
+    shortBio:
+      'Sari leads our wellness kitchen — retreat catering, detox programmes, and the kind of Balinese whole-food cooking that leaves guests feeling genuinely restored. She understands the rhythms of yoga retreat schedules, works around complex dietary combinations, and turns healthy eating into something guests actually look forward to.',
+    fullBio: [
+      'Sari Dewi Kusuma grew up in the hills above Ubud, in a family that grew most of its own food and cooked according to the principles of Balinese herbalism and seasonal eating. Long before wellness became an industry, her household was already living what most Ubud retreat centres now sell: whole food, fermentation, jamu tonics, and a relationship with ingredients that starts at the soil.',
+      'Her professional path took her through several of Ubud\'s most respected wellness retreats, where she developed the specific skill set that sets her apart: the ability to cook for people with complex, overlapping dietary requirements — vegan, raw, gluten-free, Ayurvedic, low-FODMAP — simultaneously, across three meals a day, for groups of 15–40 guests, without losing flavour, presentation, or variety.',
+      'Sari joined myCHEF to lead all wellness-adjacent bookings — yoga retreat catering, detox programmes, silent retreat meal service, and the growing number of villa guests who simply want healthy, vibrant food that does not feel like a compromise. Her jamu golden turmeric bowl and her raw zucchini pad thai have become two of the most shared dishes in myCHEF\'s social history.',
+      'What Sari brings to every booking is not just skill but genuine conviction. She believes that the best wellness food should be the most delicious food — that nourishment and pleasure are not opposites. Guests who book Sari do not feel like they are eating health food. They feel like they are eating something extraordinary.',
+    ],
+    achievements: [
+      'Leads all retreat and wellness bookings across Ubud and Bali',
+      'Specialist in raw, vegan, and Ayurvedic menu construction',
+      'Trusted by yoga retreat operators across Bali for multi-day catering',
+      'Raised in Ubud with deep knowledge of Balinese herbalism',
+      'Developed the myCHEF wellness and detox menu catalogue',
+    ],
+    signatureDishes: [
+      'Raw zucchini pad thai with cashew sauce',
+      'Jamu golden turmeric bowl',
+      'Balinese banana blossom curry',
+    ],
+    guestQuote: 'Sari fed our yoga retreat group for seven days and every single meal was incredible. People who normally struggle to eat healthy were going back for seconds. She is truly gifted.',
+    guestName: 'Rachel B., Los Angeles',
+    menuStyles: [
+      {
+        title: 'Yoga Retreat Catering',
+        desc: 'Full-day meal service for retreat groups — breakfast, lunch, and dinner built around plant-based Balinese whole food, with full accommodation for dietary overlaps (raw, vegan, GF, Ayurvedic).',
+      },
+      {
+        title: 'Detox & Cleanse Programme',
+        desc: 'Structured multi-day menus designed around cleansing — jamu tonics, enzyme-rich raw food, light cooked meals, and hydration-focused snack plates. Designed in consultation with retreat operators.',
+      },
+      {
+        title: 'Villa Wellness Dinner',
+        desc: 'A single-evening plant-based dinner for villa guests who want vibrant, health-focused food without sacrificing elegance. Sari\'s wellness dinners feel like a fine-dining experience, not a salad bar.',
+      },
+      {
+        title: 'Balinese Whole Food Experience',
+        desc: 'A menu rooted in traditional Balinese food culture — jamu drinks, fermented condiments, rice-based mains, and tropical fruit desserts. Educational, nourishing, and deeply grounded in place.',
+      },
+    ],
+    perfectFor: [
+      'Yoga and wellness retreat groups',
+      'Detox and cleanse programmes',
+      'Vegan, raw, and Ayurvedic dietary guests',
+      'Health-conscious villa stays in Ubud',
+      'Guests wanting vibrant plant-based cooking',
+    ],
+    faqs: [
+      {
+        question: 'Can Sari cater for a multi-day yoga retreat?',
+        answer:
+          'Yes — multi-day retreat catering is Sari\'s core specialty. She works with retreat operators to build a full meal plan across the programme, accommodates complex dietary combinations, and manages all sourcing.',
+      },
+      {
+        question: 'What dietary requirements does Sari specialise in?',
+        answer:
+          'Sari regularly cooks for raw vegan, whole-food plant-based, Ayurvedic, gluten-free, and low-FODMAP guests. She is one of the few chefs in Bali who can handle multiple overlapping requirements simultaneously at scale.',
+      },
+      {
+        question: 'What is a jamu tonic and does Sari include it in her menus?',
+        answer:
+          'Jamu is a traditional Balinese and Javanese herbal tonic — typically made from turmeric, ginger, lemongrass, and tamarind. Sari includes jamu in most of her wellness menus as a morning or pre-meal ritual drink.',
+      },
+      {
+        question: 'Is Sari\'s food suitable for non-vegan guests in a mixed group?',
+        answer:
+          'Absolutely. Sari\'s plant-based food is designed to be enjoyed by everyone at the table, not just dietary guests. Most non-vegan guests who eat her food are surprised by how satisfying and flavour-forward it is.',
+      },
+      {
+        question: 'Can Sari cook for villa guests who simply want healthy food, not a retreat?',
+        answer:
+          'Yes. Many of Sari\'s bookings are simply villa guests who want vibrant, health-focused food during their stay — not a formal retreat programme. She adapts her menus to any setting or occasion.',
+      },
+    ],
+    seoTitle: "Sari Dewi Kusuma — Wellness Chef Bali | Vegan & Retreat Catering | myCHEF",
+    seoDescription:
+      "Book Sari Dewi Kusuma for wellness and retreat catering in Bali. Vegan, raw, Ayurvedic menus. Yoga retreat specialist in Ubud. Detox programmes and villa wellness dinners. Book via WhatsApp.",
+    ogImage: 'https://mychef.id/generated/chef-sari-dewi-portrait.webp',
+  },
+
+  'komang-artha': {
+    slug: 'komang-artha',
+    name: 'Komang Artha',
+    role: 'Senior Event Chef',
+    origin: 'Klungkung, Bali',
+    badge: '15 years running events from 20 to 200 guests across Bali',
+    portrait: '/generated/chef-komang-artha-portrait.webp',
+    portraitAlt: 'Komang Artha — Senior Event Chef at myCHEF Bali',
+    specialty: 'Large-Scale Villa Events & Buffets',
+    cuisine: ['Indonesian rijsttafel', 'Large-format buffets', 'Wedding catering', 'Corporate event menus'],
+    shortBio:
+      'Komang has the calmness of someone who has cooked through everything — power outages, rain-cancelled outdoor setups, last-minute dietary changes at 150-person weddings. He leads our larger events and catering programmes with a team coordination skill that keeps the kitchen and front-of-house moving in sync regardless of what changes.',
+    fullBio: [
+      'Komang Artha grew up in Klungkung, one of Bali\'s nine regencies, in a family with a long tradition of cooking for large communal gatherings. Temple festivals, cremation ceremonies, harvest feasts — events where feeding 80 or 120 people was simply what the community did. That upbringing gave Komang a capacity for scale that most chefs never develop: the ability to stay calm, coordinated, and creative when the numbers are high and the margin for error is low.',
+      'He entered the professional hospitality industry at 22 and spent a decade working through hotel and resort catering in Bali before joining myCHEF to lead the events division. That hotel background gave him the systems discipline — HACCP compliance, ordering logistics, kitchen brigade management, front-of-house timing — that separates an event that feels effortless from one that feels chaotic.',
+      'At myCHEF, Komang manages all bookings above 30 guests and all formal catering events. His domain covers weddings, corporate retreats, large-group villa parties, and the multi-day catering programmes that some luxury villa estates commission for month-long residencies. He has cooked for groups of 200 at Uluwatu clifftop weddings and for 20 at intimate anniversary feasts in Ubud — the range is part of what makes him the most versatile chef on the team.',
+      'For event hosts who need absolute reliability — where the stakes are high and a catering failure is not an option — Komang is the person myCHEF sends first. He does not get flustered, does not cut corners under pressure, and has a quiet confidence in his kitchen that the entire service team responds to.',
+    ],
+    achievements: [
+      'Leads events from 20 to 200+ guests across Bali',
+      'Specialist in wedding and corporate catering logistics',
+      'Mentors junior kitchen staff across myCHEF',
+      'Decade of hotel and resort catering experience in Bali',
+      '15 years of large-scale event execution across Bali villa estates',
+    ],
+    signatureDishes: [
+      'Indonesian rijsttafel (rice table feast)',
+      'Spit-roasted suckling pig buffet',
+      'Satay platter with six sauces',
+    ],
+    guestQuote: 'Komang and his team catered our 120-person villa wedding and everything was seamless. The food was outstanding and not a single thing went wrong — he is a true professional.',
+    guestName: 'Emma & Tom W., Edinburgh',
+    menuStyles: [
+      {
+        title: 'Large-Group Villa Dinner',
+        desc: 'Komang\'s core format: a plated or family-style dinner for 30–100 guests. He manages multi-station kitchen setups, coordinates front-of-house timing, and ensures every table receives the same quality.',
+      },
+      {
+        title: 'Indonesian Rijsttafel Feast',
+        desc: 'A 10–14 dish Indonesian rice table spread — the most generous expression of Balinese and Indonesian food culture. Ideal for large groups who want a communal, immersive culinary experience.',
+      },
+      {
+        title: 'Villa Wedding Catering',
+        desc: 'Komang leads all wedding catering for myCHEF — ceremony canapes, cocktail hour, plated dinner or buffet, and dessert. He coordinates with the villa and event planner to align food timing with the full day schedule.',
+      },
+      {
+        title: 'Corporate Retreat Catering',
+        desc: 'Multi-day catering for corporate groups — breakfast, working lunches, and evening dinners. Komang builds menus around productivity, dietary diversity, and the kind of food that sustains focus across a long retreat.',
+      },
+    ],
+    perfectFor: [
+      'Large villa events (30–200 guests)',
+      'Villa weddings and receptions',
+      'Corporate retreats and team dinners',
+      'Multi-day villa catering programmes',
+      'Hosts who need guaranteed reliability at scale',
+    ],
+    faqs: [
+      {
+        question: 'Can Komang cater for a villa wedding in Bali?',
+        answer:
+          'Yes — villa weddings are one of Komang\'s most common bookings. He coordinates with event planners, manages the full catering timeline, and can handle everything from ceremony canapes to a plated wedding dinner for 100+ guests.',
+      },
+      {
+        question: 'What is the largest group Komang has cooked for?',
+        answer:
+          'Komang has led catering for events above 200 guests with additional kitchen support. For groups above 80, we recommend early outreach so Komang can confirm staffing, equipment, and supplier logistics in advance.',
+      },
+      {
+        question: 'Does Komang handle multi-day catering for retreat programmes?',
+        answer:
+          'Yes. Komang regularly manages multi-day catering for corporate and wellness retreats — full breakfast, lunch, and dinner service for groups staying at Bali villas over 3–7 days. He builds the full meal plan and manages all sourcing.',
+      },
+      {
+        question: 'How does Komang manage dietary requirements at large events?',
+        answer:
+          'Dietary requirements are collected at booking and built into the event menu plan from the start. Komang runs separate preparation and service for allergen-restricted guests and labels all dishes clearly during buffet service.',
+      },
+      {
+        question: 'Does Komang include Indonesian dishes or is he flexible across cuisines?',
+        answer:
+          'Komang specialises in Indonesian and Balinese cuisine but has the experience to execute international formats — Mediterranean buffets, BBQ feasts, and mixed-cuisine corporate menus are all within his range. Tell us your brief and we will design around it.',
+      },
+    ],
+    seoTitle: "Komang Artha — Event Chef Bali | Large Villa Events & Wedding Catering | myCHEF",
+    seoDescription:
+      "Book Komang Artha for large villa events, weddings, and corporate catering in Bali. 15 years experience, groups from 30 to 200+ guests. Indonesian feast and buffet specialist. Book via WhatsApp.",
+    ogImage: 'https://mychef.id/generated/chef-komang-artha-portrait.webp',
   },
 }
 
@@ -578,7 +969,52 @@ export default function ChefProfilePage() {
         </div>
       </section>
 
-      {/* ── Mid-page CTA ── */}
+      {/* ── Signature Dishes ── */}
+      <section className="bg-[#0A0A0A] py-16">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-serif text-white mb-3 text-center">
+            {chef.name.split(' ')[0]}'s Signature Dishes
+          </h2>
+          <p className="text-gray-400 text-center mb-10 max-w-xl mx-auto">
+            Dishes that define {chef.name.split(' ')[0]}'s cooking — prepared fresh at your villa from market-sourced ingredients.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {chef.signatureDishes.map((dish, i) => (
+              <div key={i} className="p-5 rounded-2xl border border-[#C5A028]/30 bg-[#111] text-center">
+                <div className="w-8 h-8 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-[#C5A028] text-sm font-semibold">{i + 1}</span>
+                </div>
+                <p className="text-white text-sm font-medium leading-snug">{dish}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Guest Reviews ── */}
+      <section className="py-16">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-serif text-white mb-10 text-center">
+            What Guests Say About {chef.name.split(' ')[0]}
+          </h2>
+          <div className="rounded-2xl border border-white/10 bg-[#111] p-8">
+            <div className="flex gap-1 mb-4">
+              {[1, 2, 3, 4, 5].map((s) => (
+                <Star key={s} className="w-4 h-4 fill-[#C5A028] text-[#C5A028]" />
+              ))}
+            </div>
+            <blockquote className="text-gray-200 text-lg leading-relaxed italic mb-4">
+              "{chef.guestQuote}"
+            </blockquote>
+            <p className="text-[#C5A028] text-sm font-medium">— {chef.guestName}</p>
+          </div>
+          <p className="text-gray-500 text-sm text-center mt-6">
+            myCHEF holds a 4.9-star average across 560+ villa dining experiences in Bali.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Book for Your Villa CTA ── */}
       <section className="bg-[#0A0A0A] py-16">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center gap-2 mb-3">
@@ -586,13 +1022,13 @@ export default function ChefProfilePage() {
             <span className="text-[#C5A028] text-sm font-medium uppercase tracking-widest">Book {chef.name}</span>
           </div>
           <h2 className="text-2xl md:text-3xl font-serif text-white mb-4">
-            Ready to Book {chef.name} for Your Villa?
+            Book {chef.name.split(' ')[0]} for Your Villa
           </h2>
           <p className="text-gray-400 mb-8">
             Tell us your villa, dates, guest count, and the kind of experience you want. We will confirm{' '}
             {chef.name.split(' ')[0]}'s availability and send a menu proposal within a few hours.
           </p>
-          <WhatsAppButton label={`Message Us — Book ${chef.name.split(' ')[0]}`} message={waMessage} />
+          <WhatsAppButton label={`Book ${chef.name.split(' ')[0]} via WhatsApp`} message={waMessage} />
           <p className="text-gray-500 text-sm mt-4">Typical response time: under 1 hour</p>
         </div>
       </section>

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
+import CityDeepDive from '@/components/CityDeepDive'
+import { CITY_CONTENT } from '@/data/cityContent'
 
 const SITE = 'https://mychef.id'
 const WA = '491635080236'
@@ -99,7 +101,7 @@ export default function PererenanPage() {
         jsonLd={[
           localBizPererenan,
           breadcrumbSchema('Private Chef Pererenan', canonical, 'Locations', 'https://mychef.id/locations'),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          faqPageSchema([...FAQS, ...CITY_CONTENT['pererenan'].faqs].map(f => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',
             '@type': 'Service',
@@ -258,7 +260,7 @@ export default function PererenanPage() {
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
           <h2 className="font-playfair text-3xl mb-10">Pererenan Private Chef FAQ</h2>
           <div className="space-y-4">
-            {FAQS.map((faq, i) => (
+            {[...FAQS, ...CITY_CONTENT['pererenan'].faqs].map((faq, i) => (
               <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
                 <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
                   {faq.q}
@@ -295,6 +297,7 @@ export default function PererenanPage() {
           </div>
         </div>
       </section>
-    </main>
+          <CityDeepDive slug="pererenan" cityName="Pererenan" />
+</main>
   )
 }

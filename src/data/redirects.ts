@@ -139,6 +139,16 @@ export const REDIRECTS: Redirect[] = [
   { from: '/services/private-dining', to: '/fine-dining', reason: 'Keyword target for "private dining Bali" (1.4K/mo) — page never built. Redirect to fine-dining pillar.' },
   { from: '/about', to: '/fine-dining/our-chefs', reason: '404 from nav. Redirect to chef profiles as closest "about us" content.' },
   { from: '/menu', to: '/fine-dining/menus', reason: '404 from nav/marketing. Redirect to fine-dining menus pillar.' },
+
+  // GA4 (25 May–21 Jun 2026): live URLs hitting the 404 page. Map each to its real equivalent.
+  { from: '/romantic-dinner', to: '/fine-dining/romantic-dinner', reason: 'GA4 404 (8 views). Bare URL → real romantic dinner page.' },
+  { from: '/corporate-events-catering-bali', to: '/blog/corporate-events-catering-bali', reason: 'GA4 404 (4 views). Page lives under /blog/.' },
+  { from: '/events/weddings-bali', to: '/events/weddings', reason: 'GA4 404 (2 views). Old slug → canonical weddings page.' },
+  { from: '/chef-placement-bali', to: '/staffing/private-chef-placement', reason: 'GA4 404 (2 views). Old slug → placement page.' },
+  { from: '/live-in-chef-bali', to: '/staffing/live-in-chef', reason: 'GA4 404 (2 views). Old slug → live-in chef page.' },
+  { from: '/retreat-catering-bali', to: '/catering/retreat-catering', reason: 'GA4 404 (2 views). Old slug → retreat catering page.' },
+  { from: '/villa-bbq-catering-bali', to: '/catering/bbq-catering', reason: 'GA4 404 (2 views). Old slug → BBQ catering page.' },
+  { from: '/getting-started', to: '/help/getting-started', reason: 'GA4 404 (2 views). Bare URL → help getting-started page.' },
 ]
 
 /** Lookup map for the React Router fallback. */

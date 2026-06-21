@@ -148,6 +148,91 @@ export default function Footer() {
                   Villa Birthday Parties
                 </Link>
               </li>
+              <li>
+                <Link to="/seafood-bbq-catering-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Seafood BBQ Catering
+                </Link>
+              </li>
+              <li>
+                <Link to="/group-villa-dinner-packages-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Group Villa Dinners
+                </Link>
+              </li>
+              <li>
+                <Link to="/private-chef-for-events" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Private Chef for Events
+                </Link>
+              </li>
+              <li>
+                <Link to="/proposal-dinner" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Proposal Dinners
+                </Link>
+              </li>
+              <li>
+                <Link to="/honeymoon-chef" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Honeymoon Chef
+                </Link>
+              </li>
+              <li>
+                <Link to="/private-chef-breakfast-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Private Chef Breakfast
+                </Link>
+              </li>
+              <li>
+                <Link to="/corporate-retreat-catering-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Corporate Retreat Catering
+                </Link>
+              </li>
+              <li>
+                <Link to="/hire-private-chef-bali-monthly" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Monthly Private Chef
+                </Link>
+              </li>
+              <li>
+                <Link to="/villa-staff-bali-agency" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Villa Staff Agency
+                </Link>
+              </li>
+              <li>
+                <Link to="/butler-service-bali-daily-rate" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Butler Service
+                </Link>
+              </li>
+              <li>
+                <Link to="/luxury-chef-indonesia" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Luxury Chef Indonesia
+                </Link>
+              </li>
+              <li>
+                <Link to="/best-private-chef-indonesia" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Best Private Chef Indonesia
+                </Link>
+              </li>
+              <li>
+                <Link to="/private-dining-indonesia" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Private Dining Indonesia
+                </Link>
+              </li>
+              <li>
+                <Link to="/wedding-catering-indonesia" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Wedding Catering Indonesia
+                </Link>
+              </li>
+              <li>
+                <Link to="/healthy-meal-delivery-indonesia" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Healthy Meal Delivery
+                </Link>
+              </li>
+              <li>
+                <Link to="/chef-for-hire-indonesia" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Chef for Hire Indonesia
+                </Link>
+              </li>
+              <li>
+                <Link to="/private-chef-menteng" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Private Chef Menteng (Jakarta)
+                </Link>
+              </li>
             </ul>
           </div>
 

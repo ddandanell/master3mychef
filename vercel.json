@@ -186,6 +186,11 @@
       "permanent": true
     },
     {
+      "source": "/private-chef-kuningan",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
       "source": "/echo-beach-private-chef",
       "destination": "/locations/canggu",
       "permanent": true

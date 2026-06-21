@@ -68,6 +68,7 @@ export const REDIRECTS: Redirect[] = [
 
   // --- Jakarta area (private-chef variant) → /locations/ ---
   { from: '/private-chef-puri-indah', to: '/locations/jakarta', reason: 'Puri Indah is a West Jakarta neighborhood — no dedicated page, redirect to Jakarta hub.' },
+  { from: '/private-chef-kuningan', to: '/locations/jakarta', reason: 'Kuningan is a Central Jakarta business district — no dedicated page. Redirect to Jakarta hub (fixes GSC "duplicate, Google chose different canonical").' },
 
   // --- Micro-areas (private-chef variant) → /locations/ ---
   { from: '/echo-beach-private-chef', to: '/locations/canggu', reason: 'Echo Beach is in Canggu.' },

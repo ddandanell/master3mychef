@@ -39,7 +39,7 @@ const bookingHref = (packageName: string) => `?package=${encodeURIComponent(pack
 
 const CATERING_STYLES = [
   {
-    image: '/generated/pkg-bbq.webp',
+    image: '/generated/mychef-catering-style-bbq.webp',
     title: 'BBQ Catering',
     price: 'From IDR 450,000/person',
     description: 'Best for villa dinners, birthdays, and relaxed group meals. Chef grills live at your villa.',
@@ -47,15 +47,15 @@ const CATERING_STYLES = [
     accent: '#C5A028',
   },
   {
-    image: '/generated/aura-buffet.webp',
+    image: '/generated/mychef-catering-style-buffet.webp',
     title: 'Buffet Catering',
-    price: 'From IDR 550,000/person',
+    price: 'From IDR 450,000/person',
     description: 'Best for weddings, larger events, and 30+ guests. Full buffet line with service staff.',
     href: '/catering/buffet',
     accent: '#6B8E5A',
   },
   {
-    image: '/generated/hub-catering.webp',
+    image: '/generated/mychef-catering-style-plated.webp',
     title: 'Plated Set Menus',
     price: 'From IDR 800,000/person',
     description: 'Best for seated dinners and private events with full table service.',
@@ -63,7 +63,7 @@ const CATERING_STYLES = [
     accent: '#2C5F7C',
   },
   {
-    image: '/generated/catering/dropoff-hero.webp',
+    image: '/generated/mychef-catering-style-dropoff.webp',
     title: 'Drop-Off Catering',
     price: 'From IDR 350,000/person',
     description: 'Best for villa guests who want food delivered without staff inside. Reheating instructions included.',
@@ -71,7 +71,7 @@ const CATERING_STYLES = [
     accent: '#8B5A2B',
   },
   {
-    image: '/generated/hub-villa.webp',
+    image: '/generated/mychef-catering-style-villa.webp',
     title: 'Villa Catering',
     price: 'From IDR 450,000/person',
     description: 'Best for villa lunches, dinners, and multi-day stays. Chef comes to your villa.',
@@ -79,7 +79,7 @@ const CATERING_STYLES = [
     accent: '#2C5F7C',
   },
   {
-    image: '/generated/corp-villa.webp',
+    image: '/generated/mychef-catering-style-corporate.webp',
     title: 'Corporate Catering',
     price: 'From IDR 450,000/person',
     description: 'Best for offsites, board dinners, and conference catering. Tax invoiced.',
@@ -87,7 +87,7 @@ const CATERING_STYLES = [
     accent: '#2C5F7C',
   },
   {
-    image: '/generated/catering/babi-guling.webp',
+    image: '/generated/mychef-catering-style-babi-guling.webp',
     title: 'Babi Guling',
     price: 'From IDR 3,700,000 total',
     description: 'Best for traditional Balinese whole-pig events. 10 to 50 guests.',
@@ -95,7 +95,7 @@ const CATERING_STYLES = [
     accent: '#C5A028',
   },
   {
-    image: '/generated/pkg-grazing.webp',
+    image: '/generated/mychef-catering-style-grazing.webp',
     title: 'Grazing Tables',
     price: 'From IDR 650,000',
     description: 'Best for parties, weddings, poolside events, and welcome snacks.',
@@ -103,7 +103,7 @@ const CATERING_STYLES = [
     accent: '#6B8E5A',
   },
   {
-    image: '/generated/mychef-location-bali-city-ubud.webp',
+    image: '/generated/mychef-catering-style-retreat.webp',
     title: 'Retreat Catering',
     price: 'From IDR 400,000/person/day',
     description: 'Best for yoga retreats, wellness centers, and multi-day group stays. Plant-forward menus.',
@@ -111,7 +111,7 @@ const CATERING_STYLES = [
     accent: '#6B8E5A',
   },
   {
-    image: '/generated/mychef-catering-bali-floating-breakfast.webp',
+    image: '/generated/mychef-catering-style-floating.webp',
     title: 'Floating Breakfast',
     price: 'From IDR 950,000/couple',
     description: 'Best for villa pools, couples, birthdays, and honeymoon mornings.',

@@ -859,6 +859,48 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://mychef.id/help/getting-started</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/help/pricing</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/help/menu-guide</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/help/wedding-guide</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/help/corporate-guide</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/help/staffing-guide</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/help/managing-booking</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://mychef.id/locations</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>

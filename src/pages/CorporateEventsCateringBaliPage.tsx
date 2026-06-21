@@ -530,8 +530,9 @@ export default function CorporateEventsCateringBaliPage() {
           <h2 className="text-2xl font-light mb-8">Related Services</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { label: 'Events Retreats', href: '/events/retreats', desc: 'Multi-day retreat catering' },
+              { label: 'Corporate Case Studies', href: '/corporate-case-studies', desc: 'Real budgets, headcounts & outcomes' },
               { label: 'Corporate Events', href: '/events/corporate-events', desc: 'Full corporate event service' },
+              { label: 'Events Retreats', href: '/events/retreats', desc: 'Multi-day retreat catering' },
               { label: 'Private Chef Cost', href: '/blog/private-chef-cost-bali', desc: 'Pricing guide for all events' },
             ].map((link) => (
               <Link

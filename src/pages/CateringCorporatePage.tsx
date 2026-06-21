@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import {
   MessageCircle, Check, Phone, Calendar, Users,
   Utensils, Briefcase, ChefHat, Clock, FileText,
@@ -269,6 +270,11 @@ export default function CateringCorporatePage() {
               </p>
               <p className="text-[#4A4745]">
                 Our team arrives 2–3 hours before service, sets up quietly, and serves without disrupting presentations or discussions. After the event, we handle full cleanup and provide a detailed tax invoice within 48 hours.
+              </p>
+              <p className="text-[#4A4745]">
+                Curious how this works for a real brief? Our{' '}
+                <Link to="/corporate-case-studies" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">corporate case studies</Link>{' '}
+                walk through actual events — headcounts, menus, budgets, and outcomes.
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {['Tax invoiced', 'Dedicated manager', 'On-time service', 'Dietary tracking', 'Multi-day capable', 'Venue coordination'].map((tag) => (

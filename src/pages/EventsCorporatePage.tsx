@@ -240,7 +240,9 @@ export default function EventsCorporatePage() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader eyebrow="Chapter 2 — Formats" title="Event Formats" subtitle="Structured around real corporate use cases: one-day events, multi-day retreats, and higher-production launches." />
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
-            These packages give teams an operational starting point. Day events cover the full meeting rhythm from breakfast through networking. Retreats layer meals across several days with more dietary planning and kitchen logistics. Launches and gala-style events need a more custom quote because staging, guest flow, and venue production can change dramatically by brief.
+            These packages give teams an operational starting point. Day events cover the full meeting rhythm from breakfast through networking. Retreats layer meals across several days with more dietary planning and kitchen logistics. Launches and gala-style events need a more custom quote because staging, guest flow, and venue production can change dramatically by brief. To see how these formats play out in practice, browse our{' '}
+            <Link to="/corporate-case-studies" className="text-[#2C5F7C] underline underline-offset-2 hover:text-[#C5A028] transition-colors">corporate case studies</Link>{' '}
+            for real budgets, headcounts, and outcomes.
           </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}

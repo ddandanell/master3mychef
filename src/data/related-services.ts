@@ -69,7 +69,7 @@ export const EVENTS_RELATED: RelatedService[] = [
   {
     title: 'Weddings',
     description: 'End-to-end wedding catering and coordination. From intimate ceremonies to 100+ guest receptions.',
-    path: '/events/weddings-bali',
+    path: '/events/weddings',
     category: 'Events'
   },
   {

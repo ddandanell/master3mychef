@@ -150,23 +150,23 @@ export default function EventsWeddingsPage() {
       <SeoHead
         title="Wedding Catering Bali | Villa Weddings & Receptions — myCHEF"
         description="Wedding catering in Bali for villa ceremonies & receptions. Michelin-trained chefs, full staffing, multi-tier menus from IDR 600K/pp. WhatsApp us."
-        canonical={`${SITE}/events/weddings-bali`}
+        canonical={`${SITE}/events/weddings`}
         ogImage={`${SITE}/generated/mychef-events-bali-event-wedding.webp`}
         jsonLd={[
-          detailedServiceSchema('Wedding Catering Bali', 'myCHEF.id provides wedding catering in Bali with private chef menus, service staff, and full villa coordination. We support intimate ceremonies and reception dinners with setup, timing, and cleanup managed by one team.', `${SITE}/events/weddings-bali`),
+          detailedServiceSchema('Wedding Catering Bali', 'myCHEF.id provides wedding catering in Bali with private chef menus, service staff, and full villa coordination. We support intimate ceremonies and reception dinners with setup, timing, and cleanup managed by one team.', `${SITE}/events/weddings`),
           eventSchema({
             name: 'Private Wedding Catering in Bali',
             description: 'myCHEF.id provides private chef and catering services for intimate wedding celebrations across Bali villas.',
-            url: `${SITE}/events/weddings-bali`,
+            url: `${SITE}/events/weddings`,
             lowPrice: 600000,
             image: `${SITE}/generated/mychef-events-bali-event-wedding.webp`,
           }),
-          offerSchema('Intimate Villa Wedding', 600000, 'IDR', `${SITE}/events/weddings-bali`),
-          offerSchema('Standard Villa Wedding', 950000, 'IDR', `${SITE}/events/weddings-bali`),
-          offerSchema('Signature Villa Wedding', 1500000, 'IDR', `${SITE}/events/weddings-bali`),
+          offerSchema('Intimate Villa Wedding', 600000, 'IDR', `${SITE}/events/weddings`),
+          offerSchema('Standard Villa Wedding', 950000, 'IDR', `${SITE}/events/weddings`),
+          offerSchema('Signature Villa Wedding', 1500000, 'IDR', `${SITE}/events/weddings`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
-          breadcrumbSchema('Wedding Catering Bali', `${SITE}/events/weddings-bali`, 'Events', `${SITE}/events`),
+          breadcrumbSchema('Wedding Catering Bali', `${SITE}/events/weddings`, 'Events', `${SITE}/events`),
         ]}
       />
 

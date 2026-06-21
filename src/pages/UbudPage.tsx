@@ -95,7 +95,7 @@ export default function UbudPage() {
         title="Private Chef Ubud | Jungle Villa & Retreat Dining — myCHEF"
         description="Book a private chef in Ubud for jungle villa dinners, wellness retreat catering & Balinese feasts. Organic menus, Indonesian chefs. WhatsApp to book."
         canonical={canonical}
-        ogImage="/generated/mychef-location-bali-locations-sunset.webp"
+        ogImage="/generated/mychef-location-bali-city-ubud.webp"
         jsonLd={[
           localBizUbud,
           breadcrumbSchema('Private Chef Ubud', canonical, 'Locations', 'https://mychef.id/locations'),
@@ -130,7 +130,7 @@ export default function UbudPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-location-bali-locations-sunset.webp"
+            src="/generated/mychef-location-bali-city-ubud.webp"
             alt="Jungle valley villa in Ubud, Bali set for a traditional Balinese private chef dinner"
             width={1920}
             height={1080}

@@ -92,7 +92,7 @@ export default function JimbaranPage() {
         title="Private Chef Jimbaran | Seafood Villa Dining & BBQ — myCHEF"
         description="Hire a private chef in Jimbaran for seafood villa dinners, bayfront BBQs & sunset celebrations. Same-day fresh catch, Indonesian chefs, Michelin standards. WhatsApp for quotes."
         canonical={canonical}
-        ogImage="/generated/mychef-location-bali-hub-hero.webp"
+        ogImage="/generated/mychef-location-bali-city-jimbaran.webp"
         jsonLd={[
           localBizJimbaran,
           breadcrumbSchema('Private Chef Jimbaran', canonical, 'Locations', 'https://mychef.id/locations'),
@@ -126,7 +126,7 @@ export default function JimbaranPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-location-bali-hub-hero.webp"
+            src="/generated/mychef-location-bali-city-jimbaran.webp"
             alt="Jimbaran Bay villa terrace in Bali set for a private chef seafood dinner at sunset"
             width={1920} height={1080}
             className="w-full h-full object-cover"

@@ -95,7 +95,7 @@ export default function PererenanPage() {
         title="Private Chef Pererenan | Design Villas & Private Dining — myCHEF"
         description="Hire a private chef in Pererenan for designer villa dinners, weekly chef service & group feasts. Indonesian chefs, Michelin standards, quiet Canggu enclave. WhatsApp for quotes."
         canonical={canonical}
-        ogImage="/generated/mychef-location-bali-hub-bali.webp"
+        ogImage="/generated/mychef-location-bali-city-pererenan.webp"
         jsonLd={[
           localBizPererenan,
           breadcrumbSchema('Private Chef Pererenan', canonical, 'Locations', 'https://mychef.id/locations'),
@@ -116,7 +116,7 @@ export default function PererenanPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-location-bali-hub-bali.webp"
+            src="/generated/mychef-location-bali-city-pererenan.webp"
             alt="Architect-designed villa in Pererenan, Bali set up for a private chef dinner with rice-field views"
             width={1920}
             height={1080}

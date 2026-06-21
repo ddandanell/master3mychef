@@ -92,7 +92,7 @@ export default function DenpasarPage() {
         title="Private Chef Denpasar | Home Dining & Business Catering — myCHEF"
         description="Hire a private chef in Denpasar for business lunches, home dining & recurring meal service. Fast central logistics, Indonesian chefs, same-day availability. WhatsApp us today."
         canonical={canonical}
-        ogImage="/generated/mychef-location-bali-hub-bali.webp"
+        ogImage="/generated/mychef-location-bali-city-denpasar.webp"
         jsonLd={[
           localBizDenpasar,
           breadcrumbSchema('Private Chef Denpasar', canonical, 'Locations', 'https://mychef.id/locations'),
@@ -112,7 +112,7 @@ export default function DenpasarPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-location-bali-hub-bali.webp"
+            src="/generated/mychef-location-bali-city-denpasar.webp"
             alt="Urban villa dining room in Denpasar, Bali prepared for a private chef business lunch or family dinner"
             width={1920} height={1080}
             className="w-full h-full object-cover"

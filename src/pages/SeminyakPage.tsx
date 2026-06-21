@@ -95,7 +95,7 @@ export default function SeminyakPage() {
         title="Private Chef Seminyak | Beachfront Villa Dining — myCHEF"
         description="Book a private chef in Seminyak for beachfront villa dinners, events & birthday parties. Indonesian chefs, Michelin standards, same-day availability. Get a quote."
         canonical={canonical}
-        ogImage="/generated/mychef-location-bali-locations-sunset.webp"
+        ogImage="/generated/mychef-location-bali-city-seminyak.webp"
         jsonLd={[
           localBizSeminyak,
           breadcrumbSchema('Private Chef Seminyak', canonical, 'Locations', 'https://mychef.id/locations'),
@@ -130,7 +130,7 @@ export default function SeminyakPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-location-bali-locations-sunset.webp"
+            src="/generated/mychef-location-bali-city-seminyak.webp"
             alt="Luxury beachfront villa in Seminyak, Bali set for a private chef sunset dinner"
             width={1920}
             height={1080}

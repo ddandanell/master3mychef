@@ -100,7 +100,7 @@ export default function KutaPage() {
         title="Private Chef Kuta Bali | Villa Dining & Event Catering — myCHEF"
         description="Hire a private chef in Kuta Bali for villa dinners, BBQ parties, and celebrations. myCHEF serves Kuta, Legian, and Tuban from IDR 600k/day."
         canonical={canonical}
-        ogImage="/generated/mychef-location-bali-locations-sunset.webp"
+        ogImage="/generated/mychef-location-bali-city-kuta.webp"
         jsonLd={[
           localBizKuta,
           breadcrumbSchema('Private Chef Kuta', canonical, 'Locations', 'https://mychef.id/locations'),
@@ -135,7 +135,7 @@ export default function KutaPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-location-bali-locations-sunset.webp"
+            src="/generated/mychef-location-bali-city-kuta.webp"
             alt="Luxury villa pool in Kuta Bali set up for a private chef BBQ party"
             width={1920}
             height={1080}

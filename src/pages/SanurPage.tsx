@@ -92,7 +92,7 @@ export default function SanurPage() {
         title="Private Chef Sanur | Family Villa Dining & Catering — myCHEF"
         description="Hire a private chef in Sanur for family villa dinners, sunrise breakfasts & celebration catering. Indonesian chefs, multi-generational menus, calm east-coast setting. WhatsApp us."
         canonical={canonical}
-        ogImage="/generated/mychef-location-bali-locations-sunset.webp"
+        ogImage="/generated/mychef-location-bali-city-sanur.webp"
         jsonLd={[
           localBizSanur,
           breadcrumbSchema('Private Chef Sanur', canonical, 'Locations', 'https://mychef.id/locations'),
@@ -112,7 +112,7 @@ export default function SanurPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-location-bali-locations-sunset.webp"
+            src="/generated/mychef-location-bali-city-sanur.webp"
             alt="Calm beachfront villa in Sanur, Bali set for a private chef breakfast at sunrise over the Lombok Strait"
             width={1920} height={1080}
             className="w-full h-full object-cover"

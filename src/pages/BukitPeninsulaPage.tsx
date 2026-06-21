@@ -92,7 +92,7 @@ export default function BukitPeninsulaPage() {
         title="Private Chef Bukit Peninsula Bali | Clifftop Villas — myCHEF"
         description="Hire a private chef on the Bukit Peninsula for clifftop dinners, surf retreat catering & wedding events. Covers Pecatu, Ungasan, Bingin, Padang-Padang. WhatsApp for quotes."
         canonical={canonical}
-        ogImage="/generated/mychef-location-bali-hub-bali.webp"
+        ogImage="/generated/mychef-location-bali-city-bukit.webp"
         jsonLd={[
           localBizBukit,
           breadcrumbSchema('Private Chef Bukit Peninsula', canonical, 'Locations', 'https://mychef.id/locations'),
@@ -112,7 +112,7 @@ export default function BukitPeninsulaPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-location-bali-hub-bali.webp"
+            src="/generated/mychef-location-bali-city-bukit.webp"
             alt="Dramatic clifftop villa on Bali's Bukit Peninsula set for a sunset private chef dinner over the Indian Ocean"
             width={1920} height={1080}
             className="w-full h-full object-cover"

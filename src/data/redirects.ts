@@ -60,11 +60,11 @@ export const REDIRECTS: Redirect[] = [
   { from: '/pecatu', to: '/locations/bukit', reason: 'Sub-area of the Bukit Peninsula.' },
 
   { from: '/jakarta', to: '/locations/jakarta', reason: 'Canonicalize to /locations/' },
-  { from: '/menteng', to: '/locations/menteng', reason: 'Canonicalize to /locations/' },
-  { from: '/kemang', to: '/locations/kemang', reason: 'Canonicalize to /locations/' },
-  { from: '/scbd', to: '/locations/scbd', reason: 'Canonicalize to /locations/' },
-  { from: '/pondok-indah', to: '/locations/pondok-indah', reason: 'Canonicalize to /locations/' },
-  { from: '/bsd', to: '/locations/bsd', reason: 'Canonicalize to /locations/' },
+  { from: '/menteng', to: '/private-chef-menteng', reason: 'No /locations/menteng page exists — point to the real dedicated district page.' },
+  { from: '/kemang', to: '/private-chef-kemang', reason: 'No /locations/kemang page exists — point to the real dedicated district page.' },
+  { from: '/scbd', to: '/private-chef-scbd', reason: 'No /locations/scbd page exists — point to the real dedicated district page.' },
+  { from: '/pondok-indah', to: '/private-chef-pondok-indah', reason: 'No /locations/pondok-indah page exists — point to the real dedicated district page.' },
+  { from: '/bsd', to: '/private-chef-bsd', reason: 'No /locations/bsd page exists — point to the real dedicated district page.' },
 
   // --- Jakarta area (private-chef variant) → /locations/ ---
   { from: '/private-chef-puri-indah', to: '/locations/jakarta', reason: 'Puri Indah is a West Jakarta neighborhood — no dedicated page, redirect to Jakarta hub.' },
@@ -149,6 +149,32 @@ export const REDIRECTS: Redirect[] = [
   { from: '/live-in-chef-bali', to: '/staffing/live-in-chef', reason: 'GA4 404 (2 views). Old slug → live-in chef page.' },
   { from: '/retreat-catering-bali', to: '/catering/retreat-catering', reason: 'GA4 404 (2 views). Old slug → retreat catering page.' },
   { from: '/getting-started', to: '/help/getting-started', reason: 'GA4 404 (2 views). Bare URL → help getting-started page.' },
+
+  // --- Locations hub links without a dedicated /locations page → real pages (fix 404s) ---
+  // The /locations hub iterates every city in LOCATIONS and links to /locations/[slug],
+  // but only 12 have a page. Redirect the rest to a real, relevant page so none 404.
+  { from: '/locations/berawa', to: '/private-chef-bali/berawa', reason: 'No /locations page; real area page exists under /private-chef-bali.' },
+  { from: '/locations/gianyar', to: '/private-chef-bali/gianyar', reason: 'No /locations page; real area page exists under /private-chef-bali.' },
+  { from: '/locations/kerobokan', to: '/private-chef-bali/kerobokan', reason: 'No /locations page; real area page exists under /private-chef-bali.' },
+  { from: '/locations/legian', to: '/private-chef-bali/legian', reason: 'No /locations page; real area page exists under /private-chef-bali.' },
+  { from: '/locations/padang-bai', to: '/private-chef-bali/padang-bai', reason: 'No /locations page; real area page exists under /private-chef-bali.' },
+  { from: '/locations/pecatu', to: '/private-chef-bali/pecatu', reason: 'No /locations page; real area page exists under /private-chef-bali.' },
+  { from: '/locations/petitenget', to: '/private-chef-bali/petitenget', reason: 'No /locations page; real area page exists under /private-chef-bali.' },
+  { from: '/locations/tabanan', to: '/private-chef-bali/tabanan', reason: 'No /locations page; real area page exists under /private-chef-bali.' },
+  { from: '/locations/tanah-lot', to: '/private-chef-bali/tanah-lot', reason: 'No /locations page; real area page exists under /private-chef-bali.' },
+  { from: '/locations/tegallalang', to: '/private-chef-bali/tegallalang', reason: 'No /locations page; real area page exists under /private-chef-bali.' },
+  { from: '/locations/ungasan', to: '/private-chef-bali/ungasan', reason: 'No /locations page; real area page exists under /private-chef-bali.' },
+  { from: '/locations/amed', to: '/locations/sanur', reason: 'East Bali — no dedicated page; served from Sanur base.' },
+  { from: '/locations/candidasa', to: '/locations/sanur', reason: 'East Bali — no dedicated page; served from Sanur base.' },
+  { from: '/locations/lovina', to: '/locations/sanur', reason: 'North Bali — no dedicated page; served from Sanur base.' },
+  { from: '/locations/menteng', to: '/private-chef-menteng', reason: 'Jakarta district — real dedicated page.' },
+  { from: '/locations/kemang', to: '/private-chef-kemang', reason: 'Jakarta district — real dedicated page.' },
+  { from: '/locations/scbd', to: '/private-chef-scbd', reason: 'Jakarta district — real dedicated page.' },
+  { from: '/locations/pondok-indah', to: '/private-chef-pondok-indah', reason: 'Jakarta district — real dedicated page.' },
+  { from: '/locations/bsd', to: '/private-chef-bsd', reason: 'Jakarta district — real dedicated page.' },
+  { from: '/locations/bandung', to: '/locations/jakarta', reason: 'Java city — no dedicated page; Jakarta hub.' },
+  { from: '/locations/surabaya', to: '/locations/jakarta', reason: 'Java city — no dedicated page; Jakarta hub.' },
+  { from: '/locations/yogyakarta', to: '/locations/jakarta', reason: 'Java city — no dedicated page; Jakarta hub.' },
 ]
 
 /** Lookup map for the React Router fallback. */

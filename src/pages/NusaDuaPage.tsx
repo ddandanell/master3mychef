@@ -92,7 +92,7 @@ export default function NusaDuaPage() {
         title="Private Chef Nusa Dua | Resort Villa & Executive Dining — myCHEF"
         description="Hire a private chef in Nusa Dua for resort-grade villa dining, corporate offsites & celebration events. Indonesian chefs, five-star precision, full logistics. WhatsApp for quotes."
         canonical={canonical}
-        ogImage="/generated/mychef-location-bali-hub-bali.webp"
+        ogImage="/generated/mychef-location-bali-city-nusa-dua.webp"
         jsonLd={[
           localBizNusaDua,
           breadcrumbSchema('Private Chef Nusa Dua', canonical, 'Locations', 'https://mychef.id/locations'),
@@ -126,7 +126,7 @@ export default function NusaDuaPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-location-bali-hub-bali.webp"
+            src="/generated/mychef-location-bali-city-nusa-dua.webp"
             alt="Luxury resort-style villa in Nusa Dua, Bali prepared for a private chef fine-dining dinner"
             width={1920} height={1080}
             className="w-full h-full object-cover"

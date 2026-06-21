@@ -95,7 +95,7 @@ export default function CangguPage() {
         title="Private Chef Canggu | Villa Dining & Surf Retreats — myCHEF"
         description="Book a private chef in Canggu for villa dinners, poolside BBQs & surf retreat catering. Indonesian chefs, healthy menus, same-day availability. Get a quote."
         canonical={canonical}
-        ogImage="/generated/mychef-location-bali-locations-sunset.webp"
+        ogImage="/generated/mychef-location-bali-city-canggu.webp"
         jsonLd={[
           localBizCanggu,
           breadcrumbSchema('Private Chef Canggu', canonical, 'Locations', 'https://mychef.id/locations'),
@@ -130,7 +130,7 @@ export default function CangguPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-location-bali-locations-sunset.webp"
+            src="/generated/mychef-location-bali-city-canggu.webp"
             alt="Modern pool villa in Canggu, Bali set for a casual private chef BBQ dinner"
             width={1920}
             height={1080}

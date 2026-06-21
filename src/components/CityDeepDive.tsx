@@ -9,13 +9,13 @@ interface CityDeepDiveProps {
   cityName: string
 }
 
-const SERVICES: { name: string; href: string; desc: (c: string) => string }[] = [
-  { name: 'Private Chef', href: '/fine-dining/private-chef-bali', desc: (c) => `A dedicated chef cooking fresh in your ${c} villa — one dinner or your whole stay.` },
-  { name: 'Fine Dining', href: '/fine-dining', desc: () => `Multi-course tasting menus and wine pairings, plated to restaurant standard.` },
-  { name: 'Catering', href: '/catering', desc: () => `Villa, buffet, plated, grazing, drop-off, babi guling and floating breakfast.` },
-  { name: 'BBQ', href: '/catering/bbq-catering', desc: () => `Live grill stations — seafood, premium meats and Balinese favourites, poolside.` },
-  { name: 'Events', href: '/events', desc: (c) => `Weddings, birthdays, villa parties, corporate dinners and retreats in ${c}.` },
-  { name: 'In-Villa Staff', href: '/in-villa-service', desc: () => `Professional waiters, bartenders, butlers, hosts and sommeliers.` },
+const SERVICES: { name: string; href: string; img: string; desc: (c: string) => string }[] = [
+  { name: 'Private Chef', href: '/fine-dining/private-chef-bali', img: '/generated/mychef-experience-bali-aura-tablescape.webp', desc: (c) => `A dedicated chef cooking fresh in your ${c} villa — one dinner or your whole stay.` },
+  { name: 'Fine Dining', href: '/fine-dining', img: '/generated/mychef-finedining-bali-luna-plating.webp', desc: () => `Multi-course tasting menus and wine pairings, plated to restaurant standard.` },
+  { name: 'Catering', href: '/catering', img: '/generated/mychef-catering-bali-hero-buffet-catering.webp', desc: () => `Villa, buffet, plated, grazing, drop-off, babi guling and floating breakfast.` },
+  { name: 'BBQ', href: '/catering/bbq-catering', img: '/generated/mychef-catering-bali-bbq-grill-satay.webp', desc: () => `Live grill stations — seafood, premium meats and Balinese favourites, poolside.` },
+  { name: 'Events', href: '/events', img: '/generated/mychef-events-bali-wedding-reception.webp', desc: (c) => `Weddings, birthdays, villa parties, corporate dinners and retreats in ${c}.` },
+  { name: 'In-Villa Staff', href: '/in-villa-service', img: '/generated/mychef-staffing-bali-staffing-hero.webp', desc: () => `Professional waiters, bartenders, butlers, hosts and sommeliers.` },
 ]
 
 /**
@@ -43,13 +43,25 @@ export default function CityDeepDive({ slug, cityName }: CityDeepDiveProps) {
               <Link
                 key={svc.href}
                 to={svc.href}
-                className="group block border border-[#E8E6E3] rounded-2xl p-6 hover:border-[#C5A028] transition-colors"
+                className="group block overflow-hidden rounded-2xl border border-[#E8E6E3] hover:border-[#C5A028] transition-colors"
               >
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-playfair text-xl">{svc.name}</h3>
-                  <ChevronRight className="w-4 h-4 text-[#C5A028] group-hover:translate-x-1 transition-transform" />
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={svc.img}
+                    alt={`${svc.name} in ${cityName}, Bali by myCHEF`}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05))' }} />
+                  <h3 className="absolute bottom-3 left-4 font-playfair text-xl text-white">{svc.name}</h3>
                 </div>
-                <p className="text-[#4A4745] text-sm leading-relaxed">{svc.desc(cityName)}</p>
+                <div className="p-5">
+                  <p className="text-[#4A4745] text-sm leading-relaxed mb-3">{svc.desc(cityName)}</p>
+                  <span className="inline-flex items-center gap-1 text-[#C5A028] text-xs font-semibold uppercase tracking-wider">
+                    Explore {svc.name} <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

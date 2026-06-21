@@ -223,6 +223,48 @@ export function howToSchema(params: {
   }
 }
 
+export function eventSchema(params: {
+  name: string
+  description: string
+  url: string
+  eventType?: string
+  lowPrice?: number
+  priceCurrency?: string
+  image?: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': params.eventType ?? 'Event',
+    name: params.name,
+    description: params.description,
+    url: params.url,
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    location: {
+      '@type': 'Place',
+      name: 'Your private villa, Bali',
+      address: {
+        '@type': 'PostalAddress',
+        addressRegion: 'Bali',
+        addressCountry: 'ID',
+      },
+    },
+    organizer: { '@id': 'https://mychef.id/#business' },
+    ...(params.image ? { image: params.image } : {}),
+    ...(params.lowPrice
+      ? {
+          offers: {
+            '@type': 'AggregateOffer',
+            lowPrice: params.lowPrice.toString(),
+            priceCurrency: params.priceCurrency ?? 'IDR',
+            availability: 'https://schema.org/InStock',
+            url: params.url,
+          },
+        }
+      : {}),
+  }
+}
+
 export function aggregateRatingSchema(ratingValue: number, reviewCount: number) {
   return {
     ...localBusinessSchema,

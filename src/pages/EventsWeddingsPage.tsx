@@ -6,7 +6,7 @@ import {
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -154,14 +154,13 @@ export default function EventsWeddingsPage() {
         ogImage={`${SITE}/generated/mychef-events-bali-event-wedding.webp`}
         jsonLd={[
           detailedServiceSchema('Wedding Catering Bali', 'myCHEF.id provides wedding catering in Bali with private chef menus, service staff, and full villa coordination. We support intimate ceremonies and reception dinners with setup, timing, and cleanup managed by one team.', `${SITE}/events/weddings-bali`),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Event',
+          eventSchema({
             name: 'Private Wedding Catering in Bali',
             description: 'myCHEF.id provides private chef and catering services for intimate wedding celebrations across Bali villas.',
-            location: { '@type': 'Place', name: 'Bali, Indonesia' },
-            organizer: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
-          },
+            url: `${SITE}/events/weddings-bali`,
+            lowPrice: 600000,
+            image: `${SITE}/generated/mychef-events-bali-event-wedding.webp`,
+          }),
           offerSchema('Intimate Villa Wedding', 600000, 'IDR', `${SITE}/events/weddings-bali`),
           offerSchema('Standard Villa Wedding', 950000, 'IDR', `${SITE}/events/weddings-bali`),
           offerSchema('Signature Villa Wedding', 1500000, 'IDR', `${SITE}/events/weddings-bali`),

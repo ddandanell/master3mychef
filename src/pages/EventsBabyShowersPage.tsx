@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -134,14 +134,12 @@ export default function EventsBabyShowersPage() {
           detailedServiceSchema('Baby Shower Catering Bali', 'myCHEF.id provides baby shower catering in Bali with brunch menus, grazing tables, mocktails, and elegant villa styling. We coordinate service, setup, and cleanup for relaxed celebrations at private villas and venues.', `${SITE}/events/baby-showers`),
           offerSchema('Intimate Baby Shower Brunch', 750000, 'IDR', `${SITE}/events/baby-showers`),
           offerSchema('Larger Baby Shower', 1100000, 'IDR', `${SITE}/events/baby-showers`),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Event',
+          eventSchema({
             name: 'Baby Shower Catering in Bali',
             description: 'Baby shower catering at Bali villas — private chef menus, grazing tables, service staff, and full coordination.',
-            location: { '@type': 'Place', name: 'Bali, Indonesia' },
-            organizer: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
-          },
+            url: `${SITE}/events/baby-showers`,
+            lowPrice: 750000,
+          }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Baby Shower Catering Bali', `${SITE}/events/baby-showers`, 'Events', `${SITE}/events`),

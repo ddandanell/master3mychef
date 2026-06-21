@@ -8,7 +8,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -160,14 +160,12 @@ export default function EventsCorporatePage() {
           detailedServiceSchema('Corporate Events Bali', 'myCHEF.id delivers corporate event catering in Bali for conferences, offsites, launches, and executive dinners. We coordinate food, staffing, setup, and service so your event runs smoothly from arrival to final cleanup.', `${SITE}/events/corporate-events`),
           offerSchema('Corporate Day Event', 1200000, 'IDR', `${SITE}/events/corporate-events`),
           offerSchema('Multi-Day Retreat', 2500000, 'IDR', `${SITE}/events/corporate-events`),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Event',
+          eventSchema({
             name: 'Corporate Event Catering in Bali',
             description: 'Corporate catering at Bali villas and venues — private chef menus, service staff, team dinners, and offsite events.',
-            location: { '@type': 'Place', name: 'Bali, Indonesia' },
-            organizer: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
-          },
+            url: `${SITE}/events/corporate-events`,
+            lowPrice: 1200000,
+          }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Corporate Events Bali', `${SITE}/events/corporate-events`, 'Events', `${SITE}/events`),

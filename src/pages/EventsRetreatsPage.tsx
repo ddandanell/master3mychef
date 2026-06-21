@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -156,14 +156,12 @@ export default function EventsRetreatsPage() {
           offerSchema('Wellness Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
           offerSchema('Yoga Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
           offerSchema('Corporate-Style Retreat', 2500000, 'IDR', `${SITE}/events/retreats`),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Event',
+          eventSchema({
             name: 'Corporate Retreat Catering in Bali',
             description: 'Full-board private chef catering for corporate retreats in Bali — daily menus, dietary accommodation, team dining.',
-            location: { '@type': 'Place', name: 'Bali, Indonesia' },
-            organizer: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
-          },
+            url: `${SITE}/events/retreats`,
+            lowPrice: 1500000,
+          }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Wellness Retreat Catering Bali', `${SITE}/events/retreats`, 'Events', `${SITE}/events`),

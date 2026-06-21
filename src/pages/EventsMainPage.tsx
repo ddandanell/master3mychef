@@ -5,7 +5,7 @@ import {
   Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music,
   Globe2, ClipboardCheck, ArrowRight, Check,
 } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema, howToSchema, eventSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -452,14 +452,12 @@ export default function EventsMainPage() {
           offerSchema('Wellness & Yoga Retreats', 1500000, 'IDR', `${SITE}/events/retreats`),
           offerSchema('Baby Showers', 750000, 'IDR', `${SITE}/events/baby-showers`),
           offerSchema('Villa Parties', 650000, 'IDR', `${SITE}/events/villa-parties`),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Event',
+          eventSchema({
             name: 'Private Events and Celebrations in Bali',
             description: 'Private chef events, weddings, birthdays, corporate dinners, and villa parties across Bali — managed end-to-end.',
-            location: { '@type': 'Place', name: 'Bali, Indonesia' },
-            organizer: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
-          },
+            url: `${SITE}/events`,
+            lowPrice: 600000,
+          }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           howToSchema({

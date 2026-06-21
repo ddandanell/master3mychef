@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -158,14 +158,12 @@ export default function EventsVillaPartiesPage() {
           offerSchema('Cocktail Reception', 650000, 'IDR', `${SITE}/events/villa-parties`),
           offerSchema('Sundowner Party', 850000, 'IDR', `${SITE}/events/villa-parties`),
           offerSchema('Casual Mixer', 950000, 'IDR', `${SITE}/events/villa-parties`),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Event',
+          eventSchema({
             name: 'Villa Party Catering in Bali',
             description: 'Private chef villa parties in Bali — BBQ, poolside, buffet, plated dinner, cocktail service, and full staff.',
-            location: { '@type': 'Place', name: 'Bali, Indonesia' },
-            organizer: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
-          },
+            url: `${SITE}/events/villa-parties`,
+            lowPrice: 650000,
+          }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Villa Party Catering Bali', `${SITE}/events/villa-parties`, 'Events', `${SITE}/events`),

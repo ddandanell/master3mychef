@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -126,14 +126,12 @@ export default function EventsAnniversariesPage() {
           offerSchema('Couple Intimate Dinner', 1500000, 'IDR', `${SITE}/events/anniversaries`),
           offerSchema('Small-Group Anniversary', 1200000, 'IDR', `${SITE}/events/anniversaries`),
           offerSchema('Renewal of Vows + Dinner', 2500000, 'IDR', `${SITE}/events/anniversaries`),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Event',
+          eventSchema({
             name: 'Private Anniversary Dinner in Bali',
             description: 'Romantic private chef anniversary dinners at Bali villas — chef-led menus, elegant service, full setup.',
-            location: { '@type': 'Place', name: 'Bali, Indonesia' },
-            organizer: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
-          },
+            url: `${SITE}/events/anniversaries`,
+            lowPrice: 1200000,
+          }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Anniversary Dinner Bali', `${SITE}/events/anniversaries`, 'Events', `${SITE}/events`),

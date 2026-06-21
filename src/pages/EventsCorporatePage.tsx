@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import EmailCaptureBar from '@/components/EmailCaptureBar'
 import {
   MessageCircle, Calendar, Monitor,
   Bus, Building2, Globe, FileText, Shield,
@@ -457,6 +458,12 @@ export default function EventsCorporatePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-[#0a0a0a]">
+        <div className="max-w-3xl mx-auto px-6">
+          <EmailCaptureBar />
         </div>
       </section>
 

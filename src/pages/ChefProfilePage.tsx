@@ -36,7 +36,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     role: 'Executive Chef & Founder',
     origin: 'Milan, Italy',
     badge: 'Michelin-trained in Modena · Founded myCHEF in Bali 2016',
-    portrait: '/generated/mychef-finedining-bali-luna-chef-portrait.webp',
+    portrait: '/generated/chef-adriano-portrait.webp',
     portraitAlt: 'Adriano — Executive Chef and Founder of myCHEF Bali',
     specialty: 'Mediterranean Fine Dining',
     cuisine: ['Italian tasting menus', 'Handmade pasta', 'Seafood crudo', 'French-influenced fine dining'],
@@ -117,7 +117,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     seoTitle: "Adriano — Private Chef Bali | Michelin-Trained Founder | myCHEF",
     seoDescription:
       "Book Adriano, Executive Chef & Founder of myCHEF Bali. Michelin-trained in Modena, Italy. Italian tasting menus, romantic dinners, VIP villa experiences. WhatsApp to book.",
-    ogImage: 'https://mychef.id/generated/mychef-finedining-bali-luna-chef-portrait.webp',
+    ogImage: 'https://mychef.id/generated/chef-adriano-portrait.webp',
   },
 
   'made-surya': {
@@ -126,7 +126,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     role: 'Head Chef — Mediterranean',
     origin: 'Ubud, Bali',
     badge: "Ubud-born · Trained through myCHEF\'s in-house program under Adriano",
-    portrait: '/generated/portrait-daniel.webp',
+    portrait: '/generated/chef-made-surya-portrait.webp',
     portraitAlt: 'I Made Surya — Head Chef Mediterranean at myCHEF Bali',
     specialty: 'Handmade Pasta & Seafood',
     cuisine: ['Handmade pasta', 'Mediterranean seafood', 'Set menus', 'Clean Italian technique'],
@@ -207,7 +207,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     seoTitle: "I Made Surya — Private Chef Bali | Mediterranean & Pasta Specialist | myCHEF",
     seoDescription:
       "Book I Made Surya, myCHEF Bali Head Chef for Mediterranean villa dinners and handmade pasta. Ubud-born, trained under Adriano. Perfect for 2–15 guests. Book via WhatsApp.",
-    ogImage: 'https://mychef.id/generated/portrait-daniel.webp',
+    ogImage: 'https://mychef.id/generated/chef-made-surya-portrait.webp',
   },
 
   'bayu-pranata': {
@@ -216,7 +216,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     role: 'Head Chef — BBQ & Grill',
     origin: 'Jimbaran, Bali',
     badge: 'Jimbaran grill specialist · Decades of live-fire cooking across Bali',
-    portrait: '/generated/mychef-finedining-bali-sol-chef-portrait.webp',
+    portrait: '/generated/chef-bayu-pranata-portrait.webp',
     portraitAlt: 'Bayu Pranata — Head Chef BBQ and Grill at myCHEF Bali',
     specialty: 'Open-Flame & Live-Fire Cooking',
     cuisine: ['BBQ & grilling', 'Wagyu & premium cuts', 'Seafood grill', 'Indonesian satay & babi guling'],
@@ -297,7 +297,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     seoTitle: "Bayu Pranata — BBQ Chef Bali | Live-Fire Grill Specialist | myCHEF",
     seoDescription:
       "Book Bayu Pranata for BBQ and grill events in Bali. Poolside BBQ dinners, wagyu nights, large group celebrations (10–80+ guests). Jimbaran-born live-fire specialist. Book via WhatsApp.",
-    ogImage: 'https://mychef.id/generated/mychef-finedining-bali-sol-chef-portrait.webp',
+    ogImage: 'https://mychef.id/generated/chef-bayu-pranata-portrait.webp',
   },
 
   'ni-putu-asri': {
@@ -306,7 +306,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     role: 'Head Chef — Balinese & Asian Fusion',
     origin: 'Gianyar, Bali',
     badge: 'Gianyar-born · Rooted in Balinese ceremonial cooking tradition',
-    portrait: '/generated/portrait-olivia.webp',
+    portrait: '/generated/chef-ni-putu-asri-portrait.webp',
     portraitAlt: 'Ni Putu Asri — Head Chef Balinese and Asian Fusion at myCHEF Bali',
     specialty: 'Balinese Classics & Modern Asian',
     cuisine: ['Indonesian feast menus', 'Balinese ceremonial dishes', 'Asian fusion', 'Modern Indonesian plating'],
@@ -388,7 +388,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     seoTitle: "Ni Putu Asri — Balinese Chef Bali | Indonesian Feast Specialist | myCHEF",
     seoDescription:
       "Book Ni Putu Asri for authentic Balinese and Indonesian feast menus in your villa. Gianyar-born, ceremonial cooking heritage, Asian fusion specialist. Book via WhatsApp.",
-    ogImage: 'https://mychef.id/generated/portrait-olivia.webp',
+    ogImage: 'https://mychef.id/generated/chef-ni-putu-asri-portrait.webp',
   },
 
   'wayan-suarjana': {

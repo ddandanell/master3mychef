@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {
   MessageCircle, Calendar, Check, Clock, Heart, Newspaper,
 } from 'lucide-react'
+import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
@@ -514,6 +515,12 @@ export default function EventsWeddingsPage() {
           { name: 'Sarah & David', location: 'Seminyak Wedding', quote: 'The team arrived early, built everything quietly, and left the villa spotless. It felt organised from first WhatsApp to final cleanup.', rating: 5 },
         ]}
       />
+
+      <section className="py-10 bg-[#0a0a0a]">
+        <div className="max-w-3xl mx-auto px-6">
+          <EmailCaptureBar />
+        </div>
+      </section>
 
       <section className="py-20 md:py-28 bg-white wedding-reveal">
         <div className="max-w-3xl mx-auto px-6">

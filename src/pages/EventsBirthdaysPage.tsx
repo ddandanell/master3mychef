@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import EmailCaptureBar from '@/components/EmailCaptureBar'
 import {
   MessageCircle, Calendar, Check, Cake, PartyPopper, Gift,
   Music, Camera, Sparkles,
@@ -415,6 +416,12 @@ export default function EventsBirthdaysPage() {
           { name: 'Marcus & Friends', location: 'Uluwatu Dinner', quote: 'The intimate dinner felt polished and warm at the same time. Service was attentive without making the evening feel formal.', rating: 5 },
         ]}
       />
+
+      <section className="py-10 bg-[#0a0a0a]">
+        <div className="max-w-3xl mx-auto px-6">
+          <EmailCaptureBar />
+        </div>
+      </section>
 
       <section className="py-20 md:py-28 bg-white birthday-reveal">
         <div className="max-w-3xl mx-auto px-6">

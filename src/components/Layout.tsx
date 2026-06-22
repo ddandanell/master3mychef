@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { UniverseProvider } from '@/contexts/UniverseContext'
-import { trackPageView, trackWhatsAppClick, trackPhoneClick } from '@/lib/analytics'
+import { trackWhatsAppClick, trackPhoneClick } from '@/lib/analytics'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import ConciergeWidget from './ConciergeWidget'
@@ -22,9 +22,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [location.pathname, location.hash])
 
-  useEffect(() => {
-    trackPageView(`${location.pathname}${location.search}`)
-  }, [location.pathname, location.search])
+  // Page views are tracked by GA4 (via GTM-KCBNZBL9) + GA4 Enhanced Measurement
+  // history events. The manual trackPageView call was removed to prevent duplicate page views.
 
   // Universal Conversion Tracking — catches every WA and Phone click sitewide
   useEffect(() => {

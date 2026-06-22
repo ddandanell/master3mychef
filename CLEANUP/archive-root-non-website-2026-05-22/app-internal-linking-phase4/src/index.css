@@ -1,0 +1,295 @@
+/*
+  Font loading strategy:
+  - Google Fonts stylesheet is loaded via <link> in index.html with preload + media=print onload trick
+  - This avoids render-blocking @import and allows the browser to discover fonts earlier
+  - display=swap is already set on the Google Fonts URL
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Core */
+    --brand-black: #050505;
+    --brand-white: #F5F3EF;
+    --brand-gold: #C5A028;
+    --brand-gold-light: #D4B43A;
+    --whatsapp: #25D366;
+
+    /* shadcn compatibility */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+
+    /* Universe Tokens (default / hub) */
+    --u-bg: #F5F3EF;
+    --u-bg-alt: #FFFFFF;
+    --u-text: #1A1A1A;
+    --u-text-muted: #6B5B4E;
+    --u-accent: #C5A028;
+    --u-accent-rgb: 197, 160, 40;
+    --u-label-accent: #9D7714;
+    --u-border: #E5E3E0;
+    --u-surface: #FFFFFF;
+    --u-hero-overlay: rgba(5, 5, 5, 0.45);
+  }
+
+  /* Universe LUNA — Fine Dining */
+  [data-universe="luna"] {
+    --u-bg: #050505;
+    --u-bg-alt: #0A0A0A;
+    --u-text: #F5F3EF;
+    --u-text-muted: #9A9590;
+    --u-accent: #C5A028;
+    --u-accent-rgb: 197, 160, 40;
+    --u-label-accent: #CBAA3A;
+    --u-border: #2A2A2A;
+    --u-surface: #111111;
+    --u-hero-overlay: rgba(5, 5, 5, 0.55);
+  }
+
+  /* Universe SOL — Villa Chef */
+  [data-universe="sol"] {
+    --u-bg: #F5F0E8;
+    --u-bg-alt: #FFFFFF;
+    --u-text: #2C2419;
+    --u-text-muted: #8A7B6B;
+    --u-accent: #6B8E5A;
+    --u-accent-rgb: 107, 142, 90;
+    --u-label-accent: #557147;
+    --u-border: #E5E0D8;
+    --u-surface: #FFFFFF;
+    --u-hero-overlay: rgba(44, 36, 25, 0.35);
+  }
+
+  /* Universe AURA — Events */
+  [data-universe="aura"] {
+    --u-bg: #FFFFFF;
+    --u-bg-alt: #F8F7F5;
+    --u-text: #1A1A1A;
+    --u-text-muted: #4A4745;
+    --u-accent: #2C5F7C;
+    --u-accent-rgb: 44, 95, 124;
+    --u-label-accent: #1F4E68;
+    --u-border: #E5E3E0;
+    --u-surface: #F8F7F5;
+    --u-hero-overlay: rgba(44, 95, 124, 0.30);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    /* Smooth hash-anchor scrolling. Lenis (when active) overrides this with auto. */
+    scroll-behavior: smooth;
+  }
+
+  /* Skip-to-content link for keyboard users */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--brand-gold);
+    color: var(--brand-black);
+    padding: 8px 16px;
+    z-index: 100;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    transition: top 0.2s;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--u-bg);
+    color: var(--u-text);
+    overflow-x: hidden;
+    transition: background-color 0.6s ease, color 0.6s ease;
+  }
+
+  /* Gold focus ring everywhere — accessibility + brand */
+  *:focus-visible {
+    outline: 2px solid var(--brand-gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--brand-gold);
+    color: #050505;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Hero fade-in keyframe — used by .luna-hero-* (Fine Dining) and any other hero
+     that wants a guaranteed reveal independent of GSAP/ScrollTrigger. */
+  @keyframes hero-rise {
+    from { opacity: 0; transform: translate3d(0, 20px, 0); }
+    to   { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+  .luna-hero-label, .luna-hero-title, .luna-hero-sub, .luna-hero-cta,
+  .sol-hero-label,  .sol-hero-title,  .sol-hero-sub,  .sol-hero-cta,
+  .aura-hero-label, .aura-hero-title, .aura-hero-sub, .aura-hero-cta {
+    animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .luna-hero-label, .sol-hero-label, .aura-hero-label { animation-delay: 0.10s; }
+  .luna-hero-title, .sol-hero-title, .aura-hero-title { animation-delay: 0.20s; }
+  .luna-hero-sub,   .sol-hero-sub,   .aura-hero-sub   { animation-delay: 0.45s; }
+  .luna-hero-cta,   .sol-hero-cta,   .aura-hero-cta   { animation-delay: 0.65s; }
+
+  /* Lenis smooth scroll */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--u-bg-alt);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--u-border);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--u-accent);
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: rgba(var(--u-accent-rgb), 0.3);
+    color: var(--u-text);
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer components {
+  /* Subtle noise texture pattern — used on dark backgrounds */
+  .noise-pattern {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .noise-pattern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.015;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' seed='2' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' /%3E%3C/svg%3E");
+    background-size: 100px 100px;
+  }
+
+  .noise-pattern > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Universe-aware typography */
+  .u-heading {
+    font-family: 'Playfair Display', serif;
+    color: var(--u-text);
+  }
+
+  .u-label {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--u-label-accent, var(--u-accent));
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .u-body {
+    font-family: 'Inter', sans-serif;
+    color: var(--u-text-muted);
+  }
+
+  /* Gold arc divider */
+  .gold-arc {
+    width: 60px;
+    height: 2px;
+    background: var(--u-accent);
+    border-radius: 1px;
+  }
+
+  /* Glass nav */
+  .glass-nav {
+    background: rgba(var(--u-bg), 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--u-border);
+  }
+
+  /* WhatsApp pulse */
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+  }
+
+  .whatsapp-pulse {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Critical hero image fallback — ensures homepage never looks completely broken */
+  img[src*="/generated/bali-hub-hero.webp"],
+  img[src*="/generated/hub-fine-dining.webp"],
+  img[src*="/generated/hub-catering.webp"],
+  img[src*="/generated/hub-events.webp"] {
+    /* If image fails to load, show a dark background instead of blank space */
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  }
+}

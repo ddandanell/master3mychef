@@ -1,0 +1,67 @@
+AGENT LINKS A — Strategic Internal Links from Blog Pages to Service + Location Hubs
+Run: 2026-06-21
+Commit: 66ac5cb → main
+================================================================================
+
+PAGES EDITED: 5
+LINKS ADDED: 17 total
+
+--------------------------------------------------------------------------------
+1. WeddingPrivateChefPage.tsx  (/blog/wedding-private-chef-bali-planning-guide)
+   Links added: 4
+   - /fine-dining         → "fine dining reception"          (intro body)
+   - /pricing             → "private chef pricing guide"     (intro body)
+   - /locations/uluwatu   → "Uluwatu"                        (planning-timeline section)
+   - /locations/ubud      → "Ubud"                           (planning-timeline section)
+   - /events              → "wedding and events service"     (planning-timeline section)
+
+--------------------------------------------------------------------------------
+2. VillaBirthdayPartyPage.tsx  (/blog/how-to-plan-villa-birthday-party-bali)
+   Links added: 4
+   - /events              → "private events and parties service"  (intro body)
+   - /catering            → "villa catering options"              (intro body)
+   - /locations/seminyak  → "Seminyak villas"                     (menu-ideas section)
+   - /locations/canggu    → "Canggu surf villas"                  (menu-ideas section)
+   - /catering            → "event catering service"              (menu-ideas section)
+   - /pricing             → "private chef pricing guide"          (budget section)
+
+--------------------------------------------------------------------------------
+3. YogaRetreatChefPage.tsx  (/blog/yoga-retreat-chef-bali-meal-planning)
+   Links added: 4
+   - /locations/ubud      → "Ubud's jungle retreat villas"        (intro body)
+   - /in-villa-service    → "in-villa chef service"               (intro body)
+   - /catering            → "retreat catering service"            (group-sizes section)
+   - /locations/ubud      → "Ubud"                                (group-sizes section)
+   - /pricing             → "private chef pricing guide"          (budget section)
+
+--------------------------------------------------------------------------------
+4. DiningByLocationBaliPage.tsx  (/blog/dining-by-location-bali-neighborhood-guide)
+   Links added: 8
+   - /locations/seminyak  → "Seminyak private chef guide"         (seminyak section)
+   - /fine-dining         → "restaurant-quality fine dining"      (seminyak section)
+   - /locations/canggu    → "Canggu private chef guide"           (canggu section)
+   - /locations/uluwatu   → "Uluwatu private chef guide"          (uluwatu section)
+   - /fine-dining         → "fine dining tasting menu experiences" (uluwatu section)
+   - /locations/ubud      → "Ubud private chef guide"             (ubud section)
+   - /catering            → "Retreat catering"                    (ubud section)
+   - /locations/sanur     → "Sanur private chef guide"            (sanur-jimbaran section)
+   - /locations/jimbaran  → "Jimbaran private chef guide"         (sanur-jimbaran section)
+
+--------------------------------------------------------------------------------
+5. RomanticDinnerBaliPage.tsx  (/blog/romantic-dinner-at-home-bali-private-chef)
+   Links added: 4
+   - /fine-dining         → "fine dining tasting menu experiences" (intro body)
+   - /locations/uluwatu   → "Uluwatu clifftop villas"              (bali-settings section)
+   - /locations/jimbaran  → "Jimbaran beachside dining"            (bali-settings section)
+   - /locations/ubud      → "Ubud's jungle and rice field villas"  (bali-settings section)
+   - /pricing             → "full pricing guide"                   (cost section)
+
+--------------------------------------------------------------------------------
+LINK FORMAT USED: <a href="..." class="text-[#C5A028] hover:underline font-medium">...</a>
+(HTML strings in body fields — consistent with existing page pattern)
+
+TSC CHECK: No errors in any of the 5 edited files.
+Pre-existing error in CateringPage.tsx (unrelated, was present before this session).
+
+GIT: commit 66ac5cb pushed to origin/main
+================================================================================

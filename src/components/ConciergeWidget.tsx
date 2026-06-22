@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { ChefHat, X, UtensilsCrossed, Users, Cake, Briefcase, MessageCircle, Sparkles, Bot, User } from 'lucide-react'
 import { trackWhatsAppConversion } from '@/lib/analytics'
 
-const WHATSAPP_NUMBER = '491635080236'
+const WHATSAPP_NUMBER = '628113803488'
 
 interface ServiceOption {
   id: string

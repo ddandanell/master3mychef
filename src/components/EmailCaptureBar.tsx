@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { MessageCircle, X, FileText } from 'lucide-react'
 
-const WA_NUMBER = '491635080236'
+const WA_NUMBER = '628113803488'
 const WA_TEXT = "Hi, I'd like the free Bali Private Chef Price Guide please"
 const STORAGE_KEY = 'priceguide_dismissed'
 

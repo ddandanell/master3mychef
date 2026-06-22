@@ -1,0 +1,40 @@
+Agent 10 Result: Add Service schema to 4 pillar hub pages
+==========================================================
+Date: 2026-06-21
+Status: COMPLETED
+Commit: 470d376
+
+FILES MODIFIED
+--------------
+1. src/pages/LunaPage.tsx           — /fine-dining
+2. src/pages/CateringMainPage.tsx   — /catering
+3. src/pages/EventsMainPage.tsx     — /events
+4. src/components/InVillaServicePage.tsx — /in-villa-service
+
+CHANGES
+-------
+Each page received a new inline @type:Service object added to the jsonLd[]
+array, alongside the existing schema entries. Each schema block includes:
+
+  - @type: Service
+  - name: service-specific name
+  - description: service-specific description
+  - provider: { @type: LocalBusiness, name: myCHEF.id, url: https://mychef.id }
+  - areaServed: { @type: Place, name: Bali, Indonesia }
+  - serviceType: (Fine Dining / Catering / Events / Villa Staffing)
+  - offers: { @type: Offer, priceCurrency: IDR, price, priceSpecification
+      with minPrice/maxPrice/priceCurrency }
+
+PRICE RANGES
+------------
+Fine Dining:     IDR 2,200,000 – 8,000,000
+Catering:        IDR 350,000   – 3,700,000
+Events:          IDR 600,000   – 8,000,000
+In-Villa Staff:  IDR 250,000   – 1,500,000
+
+VERIFICATION
+------------
+- tsc -b: EXIT 0 (no TypeScript errors)
+- git commit: 470d376 on main
+- git push: pushed to origin/main successfully
+- 5 files changed, 113 insertions(+), 4 deletions(-)

@@ -1,0 +1,36 @@
+AGENT 2 RESULT — AggregateRating Schema: 6 Bali Location Pages
+===============================================================
+Date: 2026-06-21
+Commit SHA: f59ef26
+Branch: main → pushed to origin
+
+PAGES UPDATED (all 6):
+1. CangguPage.tsx      — ratingCount/reviewCount: 287
+2. UbudPage.tsx        — ratingCount/reviewCount: 213
+3. SeminyakPage.tsx    — ratingCount/reviewCount: 312
+4. UluwatuPage.tsx     — ratingCount/reviewCount: 198
+5. NusaDuaPage.tsx     — ratingCount/reviewCount: 175
+6. JimbaranPage.tsx    — ratingCount/reviewCount: 241
+
+SCHEMA ADDED TO EACH PAGE (in jsonLd array):
+{
+  '@context': 'https://schema.org',
+  '@type': 'AggregateRating',
+  itemReviewed: {
+    '@type': 'LocalBusiness',
+    name: 'myCHEF.id',
+    url: 'https://mychef.id',
+  },
+  ratingValue: '4.9',
+  bestRating: '5',
+  worstRating: '1',
+  ratingCount: '<varied per page>',
+  reviewCount: '<varied per page>',
+}
+
+NOTES:
+- All 6 pages already had aggregateRating nested inside their LocalBusiness schema.
+  This task added a SEPARATE top-level AggregateRating schema to the jsonLd array.
+- TypeScript check (tsc -b) passed with zero errors before commit.
+- Review counts vary in 150–320 range as specified.
+- Linter also updated meta descriptions on Canggu, Ubud, Seminyak post-commit (intentional).

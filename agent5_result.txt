@@ -1,0 +1,36 @@
+Agent 5 Result: HowTo Schema — 3 Guide Pages
+=============================================
+Date: 2026-06-21
+Status: COMPLETE
+Commits: e1a6f44 (HowTo schema), 0312cc7 (linter cleanup + push)
+Branch: main → pushed to origin
+
+Pages Updated
+-------------
+1. src/pages/HowToHirePrivateChefPage.tsx
+   - HowTo: "How to Hire a Private Chef in Bali"
+   - 5 steps: Define Needs → Find Chefs → Vet Credentials → Interview → Book
+   - totalTime: PT30M | estimatedCost: IDR 1,500,000
+
+2. src/pages/ChefHiringGuidePage.tsx
+   - HowTo: "How to Verify Chef Qualifications and Hire the Right Private Chef in Bali"
+   - 6 steps: Check Credentials → Verify Food Safety → Match Specialty → Interview → Call References → Trial Meal & Contract
+   - totalTime: PT45M | estimatedCost: IDR 1,800,000
+
+3. src/pages/EventPlanningBaliPage.tsx
+   - HowTo: "How to Plan a Private Event in Bali"
+   - 6 steps: Define Event → Select Venue → Hire Vendors 90 Days Out → Finalize Catering → Confirm Logistics → Execute
+   - totalTime: PT60M | estimatedCost: IDR 53,000,000
+
+Implementation
+--------------
+- Each HowTo block added to extraJsonLd[] alongside existing BlogPosting/breadcrumb schemas
+- Steps derived from actual page content (not generic)
+- TypeScript check (tsc -b) passed with exit 0
+- Side-fix: repaired a linter-introduced broken string at ChefHiringGuidePage line 123 (HTML link inside double-quoted string broke TypeScript parsing)
+
+Expected SEO Impact
+-------------------
+- Enables HowTo rich results in Google Search showing numbered step carousels
+- Targets "how to hire a private chef bali", "event planning bali", "chef qualifications bali" queries
+- Steps match actual on-page content (schema-content alignment required for rich result eligibility)

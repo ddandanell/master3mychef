@@ -6,7 +6,7 @@ import { getSubPage, getPillarBySlug, type Pillar, type SubPage } from '@/data/s
 import { trackWhatsAppClick } from '@/lib/analytics'
 
 const SITE = 'https://mychef.id'
-const WA = '491635080236'
+const WA = '628113803488'
 
 function getWhatsAppText(pillar: Pillar, subPage: SubPage): string {
   const base = `Hi myCHEF, I'm interested in ${subPage.label.toLowerCase()}.`

@@ -6,7 +6,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import { SERVICES } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
-const WA = 491635080236
+const WA = 628113803488
 
 const ICONS: Record<string, React.FC<{ className?: string; style?: React.CSSProperties; strokeWidth?: number }>> = {
   'villa-parties': PartyPopper,

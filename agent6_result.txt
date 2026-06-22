@@ -1,0 +1,67 @@
+Agent 6 Result — BreadcrumbList Schema
+=======================================
+Commit: 5391677
+Date: 2026-06-21
+
+SUMMARY
+-------
+13 pages updated. Task scope adjusted from "12 pages missing it" after
+audit revealed most pages already had breadcrumb schema. Two categories
+of work were done:
+
+1. LOCATION PAGES — 2-level upgraded to 3-level (11 pages)
+   Previously: Home → [Page]
+   Now: Home → Locations → [Page]
+
+   Pages updated:
+   - SeminyakPage.tsx    → Home → Locations → Private Chef Seminyak
+   - CangguPage.tsx      → Home → Locations → Private Chef Canggu
+   - UbudPage.tsx        → Home → Locations → Private Chef Ubud
+   - UluwatuPage.tsx     → Home → Locations → Private Chef Uluwatu
+   - NusaDuaPage.tsx     → Home → Locations → Private Chef Nusa Dua
+   - JimbaranPage.tsx    → Home → Locations → Private Chef Jimbaran
+   - SanurPage.tsx       → Home → Locations → Private Chef Sanur
+   - PererenanPage.tsx   → Home → Locations → Private Chef Pererenan
+   - DenpasarPage.tsx    → Home → Locations → Private Chef Denpasar
+   - BukitPeninsulaPage.tsx → Home → Locations → Private Chef Bukit Peninsula
+   - JakartaPage.tsx     → Home → Locations → Private Chef Jakarta
+
+   Parent URL used: https://mychef.id/locations
+
+2. SERVICE PAGES — explicit BreadcrumbList added (2 pages)
+   These pages used PremiumPage which auto-generates a schema, but the
+   explicit import+schema was missing from the page file itself.
+
+   - ChefsPage.tsx    → Home → Our Chefs (https://mychef.id/chefs)
+   - RetreatsPage.tsx → Home → Retreat Catering Bali (https://mychef.id/retreats)
+
+AUDIT FINDINGS
+--------------
+- Original task said "12 pages missing it" — the grep command in the
+  task brief used `grep -rL "breadcrumb|BreadcrumbList"` (lowercase b).
+  The cateringBreadcrumbSchema catering pages all matched correctly.
+- Actual pages missing any breadcrumb at runtime: 0 (PremiumPage injects
+  it automatically for ChefsPage and RetreatsPage).
+- Actual gap found: 11 location pages had shallow 2-level breadcrumbs
+  with no parent category, which weakens Google's understanding of site
+  hierarchy. All upgraded to 3-level.
+
+TYPESCRIPT
+----------
+tsc -b: exit 0 (no errors)
+
+FILES CHANGED
+-------------
+src/pages/SeminyakPage.tsx
+src/pages/CangguPage.tsx
+src/pages/UbudPage.tsx
+src/pages/UluwatuPage.tsx
+src/pages/NusaDuaPage.tsx
+src/pages/JimbaranPage.tsx
+src/pages/SanurPage.tsx
+src/pages/PererenanPage.tsx
+src/pages/DenpasarPage.tsx
+src/pages/BukitPeninsulaPage.tsx
+src/pages/JakartaPage.tsx
+src/pages/ChefsPage.tsx
+src/pages/RetreatsPage.tsx

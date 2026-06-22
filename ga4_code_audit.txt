@@ -1,0 +1,229 @@
+GA4 CONVERSION TRACKING AUDIT — mychef.id
+Generated: 2026-06-21
+Auditor: Claude agent
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. GA4 MEASUREMENT ID
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Measurement ID: G-W0PQH8ZKTF
+  Location: index.html (hardcoded — correct approach for Vite SPA)
+  Script: googletagmanager.com/gtag/js?id=G-W0PQH8ZKTF
+  Load strategy: deferred via requestIdleCallback / 1500ms fallback
+    — fires after first paint, no impact on LCP/FID
+
+  .env.example shows VITE_GA_ID and VITE_GTM_ID as optional env vars.
+  The real GA4 ID is hardcoded in index.html (not a secret — it's
+  visible in the browser). This is fine.
+
+  GTM: Optional — only loads if VITE_GTM_ID is set in Vercel env vars.
+  GTM is NOT currently configured. GA4 fires independently without it.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. CRITICAL BUG FOUND AND FIXED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  PROBLEM: Content-Security-Policy in vercel.json did NOT include
+  googletagmanager.com in script-src or connect-src.
+  This means GA4's JS was blocked from loading on every page in
+  production. ZERO events were being received by GA4.
+
+  FIXED: vercel.json CSP now includes:
+    script-src: + https://www.googletagmanager.com
+                + https://www.google-analytics.com
+                + 'unsafe-inline' (required for inline gtag init script)
+    connect-src: + https://www.google-analytics.com
+                 + https://analytics.google.com
+                 + https://www.googletagmanager.com
+                 + https://region1.google-analytics.com
+
+  Commit: 59097a9
+  Deployed to: https://github.com/ddandanell/master3mychef.git (main)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. WHAT IS ALREADY TRACKED (pre-existing code)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  FILE: src/lib/analytics.ts
+  All events are dual-fired: GA4 (window.gtag) + GTM dataLayer
+
+  Events defined:
+    generate_lead     — WhatsApp click (any source)
+    generate_lead     — Phone call click (any source)
+    page_view         — SPA route change
+    form_start        — first field interaction (deduplicated per session)
+    form_complete     — form submitted
+    cta_click         — generic CTA button
+    scroll_depth      — milestones 25/50/75/90%
+    time_on_page      — milestones 30/60/120/180 seconds
+    quote_submitted   — quote funnel final WhatsApp CTA click
+
+  UNIVERSAL DELEGATE (src/components/Layout.tsx):
+    A document-level click listener catches ALL wa.me and tel: links
+    sitewide, regardless of whether the component has explicit
+    trackWhatsAppClick() calls. Uses data-source attribute for label,
+    falls back to pathname if missing.
+
+  EXPLICIT COMPONENT TRACKING:
+    WhatsAppButton.tsx          → trackWhatsAppClick('[page]--floating-button')
+    StickyMobileCTA.tsx         → trackWhatsAppClick('[page]--sticky-mobile-cta')
+    ConciergeWidget.tsx         → trackWhatsAppConversion('concierge-widget-[service]')
+    ServicePage.tsx             → trackWhatsAppClick('service-[slug]-cta')
+    PillarSubPage.tsx           → trackWhatsAppClick('[pillar]-[sub]-cta')
+    QuoteFunnel.tsx             → trackEvent('quote_submitted', {service_type, source})
+    Layout.tsx                  → trackPageView on every route change
+
+  VERCEL ANALYTICS: @vercel/analytics/react — injected in main.tsx
+  (separate from GA4, tracks Vercel's own metrics)
+
+  HOOKS (defined but NOT called anywhere in the app):
+    src/hooks/useScrollDepth.ts — tracks 25/50/75/90% scroll milestones
+    src/hooks/useTimeOnPage.ts  — tracks 30/60/120/180s time milestones
+    STATUS: Dead code — these hooks exist but are imported by no page.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. WHAT WAS ADDED IN THIS SESSION (commit 59097a9)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  1. vercel.json — CSP fix (see section 2 above — the critical fix)
+
+  2. ExitIntentPopup.tsx
+     - Added trackWhatsAppClick('exit-intent-popup') to WA CTA
+     - Added data-source="exit-intent-popup" to anchor tag
+     - The popup fires for exit intent (mouse leaves top) or after
+       25s on page — this is a high-intent conversion moment
+
+  3. 9 pages — added data-source attributes to previously untagged
+     wa.me anchor tags (all now captured with specific source labels
+     by the universal Layout.tsx delegate):
+       ChefProfilePage.tsx       → data-source="chef-profile-cta"
+       JakartaPage.tsx           → data-source="jakarta-cta"
+       AuraPage.tsx              → data-source="aura-cta" / "aura-package-image-cta"
+                                   / "aura-package-text-cta" / "aura-custom-party-cta"
+                                   / "aura-final-cta"
+       CorporateEventsCateringBaliPage.tsx → data-source="corporate-events-cta"
+       SearchOverlay.tsx         → data-source="search-overlay-cta"
+       NusaDuaPage.tsx           → data-source="nusa-dua-cta"
+       PricingGuide.tsx          → data-source="pricing-guide-cta"
+       StaffingGuidePage.tsx     → data-source="staffing-guide-cta"
+       MenuGuidePage.tsx         → data-source="menu-guide-cta"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5. PRE-EXISTING TSC ERROR (not introduced by this session)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  src/components/CateringPage.tsx lines 81/87/92 — invalid characters
+  (appears to be a unicode/invisible character issue in a string array).
+  This file was not touched in this session and the error exists in
+  git history from a prior commit. Build still succeeds via Vite
+  (Vite uses esbuild, not tsc, for production builds). Should be fixed
+  in a separate cleanup pass.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6. WHAT STILL NEEDS MANUAL SETUP IN GA4 DASHBOARD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  All events fire automatically after the CSP fix deploys. But GA4
+  does not automatically treat events as "conversions" — you must
+  mark them manually in the dashboard.
+
+  STEP 1 — Mark these events as conversions:
+    Go to: https://analytics.google.com/analytics/web/#/p[PROPERTY_ID]/admin/conversions
+    (replace [PROPERTY_ID] with your GA4 property ID)
+
+    Mark as conversion:
+      ✓ generate_lead    (WhatsApp + Phone clicks — the primary KPI)
+      ✓ quote_submitted  (quote funnel final CTA click)
+
+    Optional / engagement:
+      ✓ form_complete    (if you add this to quote funnel later)
+
+  STEP 2 — Create custom dimensions for richer reports:
+    Go to: Admin > Custom definitions > Custom dimensions
+    Add:
+      Dimension name: source          Scope: Event   Parameter: source
+      Dimension name: method          Scope: Event   Parameter: method
+      Dimension name: service_type    Scope: Event   Parameter: service_type
+      Dimension name: page_context    Scope: Event   Parameter: page_context
+      Dimension name: scroll_depth    Scope: Event   Parameter: scroll_depth
+      Dimension name: time_on_page    Scope: Event   Parameter: time_on_page
+
+  STEP 3 — Create an Exploration report to see WhatsApp sources:
+    Go to: Explore > Blank exploration
+    Dimensions: event_name, source, method
+    Metrics: event_count
+    Filter: event_name = generate_lead
+    This shows which CTAs drive the most WhatsApp clicks.
+
+  STEP 4 — Enable scroll_depth and time_on_page hooks (optional):
+    The hooks useScrollDepth and useTimeOnPage exist in:
+      src/hooks/useScrollDepth.ts
+      src/hooks/useTimeOnPage.ts
+    They are fully built but not called anywhere. To activate, add
+    these to any high-traffic page component:
+      import { useScrollDepth } from '@/hooks/useScrollDepth'
+      import { useTimeOnPage } from '@/hooks/useTimeOnPage'
+      // inside component:
+      useScrollDepth('fine-dining')
+      useTimeOnPage('fine-diving')
+    Recommended pages to instrument first:
+      - FineDiningPage (highest value page)
+      - PricingGuide (high purchase intent)
+      - QuoteFunnel (step-by-step engagement data)
+
+  STEP 5 — Verify data is flowing (do this after Vercel deploys):
+    Go to: https://analytics.google.com/analytics/web/#/p[PROPERTY_ID]/realtime
+    Open mychef.id in another tab, click a WhatsApp button.
+    You should see a generate_lead event appear in realtime within 5s.
+    If you see it: tracking is working.
+    If not: check browser console for CSP errors (should be fixed now).
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7. GA4 DASHBOARD DIRECT LINKS (bookmark these)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Realtime overview:
+    https://analytics.google.com/analytics/web/#/p[PID]/realtime
+
+  Events list (to mark conversions):
+    https://analytics.google.com/analytics/web/#/p[PID]/admin/conversions
+
+  Custom dimensions:
+    https://analytics.google.com/analytics/web/#/p[PID]/admin/customdimensions
+
+  Acquisition overview (to see traffic sources):
+    https://analytics.google.com/analytics/web/#/p[PID]/acquisition/overview
+
+  Engagement events:
+    https://analytics.google.com/analytics/web/#/p[PID]/engagement/events
+
+  Replace [PID] with your GA4 property ID (find at Admin > Property Settings).
+  Measurement ID G-W0PQH8ZKTF is the stream ID, not the property ID.
+  Property ID is a numeric value like 123456789.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+8. FILES CHANGED IN THIS SESSION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  /Users/openclaw/Movies/LIve website/MYCHEF Live webste/app/vercel.json
+  /Users/openclaw/Movies/LIve website/MYCHEF Live webste/app/src/components/ExitIntentPopup.tsx
+  /Users/openclaw/Movies/LIve website/MYCHEF Live webste/app/src/components/SearchOverlay.tsx
+  /Users/openclaw/Movies/LIve website/MYCHEF Live webste/app/src/pages/AuraPage.tsx
+  /Users/openclaw/Movies/LIve website/MYCHEF Live webste/app/src/pages/ChefProfilePage.tsx
+  /Users/openclaw/Movies/LIve website/MYCHEF Live webste/app/src/pages/CorporateEventsCateringBaliPage.tsx
+  /Users/openclaw/Movies/LIve website/MYCHEF Live webste/app/src/pages/JakartaPage.tsx
+  /Users/openclaw/Movies/LIve website/MYCHEF Live webste/app/src/pages/MenuGuidePage.tsx
+  /Users/openclaw/Movies/LIve website/MYCHEF Live webste/app/src/pages/NusaDuaPage.tsx
+  /Users/openclaw/Movies/LIve website/MYCHEF Live webste/app/src/pages/PricingGuide.tsx
+  /Users/openclaw/Movies/LIve website/MYCHEF Live webste/app/src/pages/StaffingGuidePage.tsx
+
+  Git commit: 59097a9
+  Branch: main
+  Remote: https://github.com/ddandanell/master3mychef.git

@@ -14,7 +14,7 @@ import { Breadcrumb } from '@/components/shared'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WA = 491635080236
+const WA = 628113803488
 const WA_LINK = `https://wa.me/${WA}?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20inquire%20about%20the%20Chef%27s%20Table%20experience%20with%20Adriano.`
 
 const TIMELINE = [

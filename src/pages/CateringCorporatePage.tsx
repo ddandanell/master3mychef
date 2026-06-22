@@ -24,7 +24,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20a%20corporate%20catering%20quote%20for%20my%20Bali%20event.'
+const WA_LINK = 'https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20a%20corporate%20catering%20quote%20for%20my%20Bali%20event.'
 const SITE = 'https://mychef.id'
 
 /* ── DATA ── */
@@ -574,8 +574,8 @@ export default function CateringCorporatePage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               <MessageCircle className="w-4 h-4" /> Plan Corporate Catering
             </a>
-            <a href="tel:+491635080236" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Phone className="w-4 h-4" /> Call +49 163 5080236
+            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <Phone className="w-4 h-4" /> Call +62 811-3803-488
             </a>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">

@@ -27,7 +27,7 @@ const SECTIONS = [
   },
   {
     title: '6. Your Rights',
-    content: `You have the right to:\n\n• Access and receive a copy of your personal information\n• Correct inaccurate or incomplete information\n• Request deletion of your personal information (subject to legal requirements)\n• Object to or restrict certain processing of your information\n• Withdraw consent for marketing communications at any time\n• Lodge a complaint with relevant data protection authorities\n\nTo exercise these rights, please contact us at indonesia@mychef.id or via WhatsApp at +49 163 5080236.`,
+    content: `You have the right to:\n\n• Access and receive a copy of your personal information\n• Correct inaccurate or incomplete information\n• Request deletion of your personal information (subject to legal requirements)\n• Object to or restrict certain processing of your information\n• Withdraw consent for marketing communications at any time\n• Lodge a complaint with relevant data protection authorities\n\nTo exercise these rights, please contact us at indonesia@mychef.id or via WhatsApp at +62 811-3803-488.`,
   },
   {
     title: '7. Cookies and Tracking Technologies',
@@ -51,7 +51,7 @@ const SECTIONS = [
   },
   {
     title: '12. Contact Us',
-    content: `If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:\n\nmyCHEF Indonesia\nJl. Tukad Barito Timur III No.16\nPanjer, Denpasar Selatan\nKota Denpasar, Bali 80226\nIndonesia\n\nEmail: indonesia@mychef.id\nWhatsApp: +49 163 5080236`,
+    content: `If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:\n\nmyCHEF Indonesia\nJl. Tukad Barito Timur III No.16\nPanjer, Denpasar Selatan\nKota Denpasar, Bali 80226\nIndonesia\n\nEmail: indonesia@mychef.id\nWhatsApp: +62 811-3803-488`,
   },
 ]
 
@@ -70,7 +70,7 @@ const FAQS = [
   },
   {
     q: 'How can I request deletion of my data?',
-    a: 'You can request deletion of your personal information by contacting us at indonesia@mychef.id or via WhatsApp at +49 163 5080236. We will process your request subject to any legal retention requirements.',
+    a: 'You can request deletion of your personal information by contacting us at indonesia@mychef.id or via WhatsApp at +62 811-3803-488. We will process your request subject to any legal retention requirements.',
   },
   {
     q: 'Is my payment information secure?',
@@ -127,7 +127,7 @@ export default function PrivacyPage() {
             <p className="text-[#C5A028] text-sm tracking-widest uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions?</p>
             <p className="text-white/[60%] text-sm mb-6">If you have any questions about this Privacy Policy, please reach out.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="https://wa.me/491635080236" target="_blank" rel="noopener noreferrer" data-source="privacy-cta" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white text-sm rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+              <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="privacy-cta" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white text-sm rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 <MessageCircle className="w-4 h-4" /> WhatsApp
               </a>
               <a href="mailto:indonesia@mychef.id" className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white text-sm rounded-full hover:bg-white/5 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">

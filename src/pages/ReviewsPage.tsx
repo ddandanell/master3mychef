@@ -17,7 +17,7 @@ interface Review {
 }
 
 const SITE = 'https://mychef.id'
-const WHATSAPP_URL = 'https://wa.me/491635080236'
+const WHATSAPP_URL = 'https://wa.me/628113803488'
 
 const MONTH_MAP: Record<string, string> = {
   January: '01', February: '02', March: '03', April: '04',

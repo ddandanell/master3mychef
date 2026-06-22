@@ -6,7 +6,7 @@ import { getLocationBySlug } from '@/data/siteArchitecture'
 import { TOP_CITIES } from '@/data/topCities'
 
 const SITE = 'https://mychef.id'
-const WA = '491635080236'
+const WA = '628113803488'
 const createWaLink = (message: string) => `https://wa.me/${WA}?text=${encodeURIComponent(message)}`
 
 // Single template that powers every city / neighbourhood URL.

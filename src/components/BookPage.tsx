@@ -4,7 +4,7 @@ import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from 
 import { getPageMeta } from '@/data/page-meta'
 import { ContactRiskReversal } from '@/components/shared'
 
-const WA = '491635080236'
+const WA = '628113803488'
 
 const BOOKING_CARDS = [
   {

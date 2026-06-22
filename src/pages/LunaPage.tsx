@@ -885,7 +885,7 @@ export default function LunaPage() {
               <div className="w-16 h-[1px] bg-white/10" />
             </div>
             <Button asChild variant="secondary" size="brand" className="text-sm tracking-[0.2em] hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)]">
-              <a href="https://wa.me/491635080236" target="_blank" rel="noopener noreferrer" data-source="luna-howitworks-cta">
+              <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="luna-howitworks-cta">
                 <Phone className="w-4 h-4" strokeWidth={1.5} />
                 Start on WhatsApp
               </a>
@@ -1066,7 +1066,7 @@ export default function LunaPage() {
           </div>
           <div className="text-center mt-12">
             <Button asChild variant="whatsapp" size="brand">
-              <a href="https://wa.me/491635080236" target="_blank" rel="noopener noreferrer" data-source="luna-included-cta">
+              <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="luna-included-cta">
                 <Phone className="w-4 h-4" />
                 Book This Experience
               </a>
@@ -1147,7 +1147,7 @@ export default function LunaPage() {
           <div className="text-center mt-12">
             <p className="text-white/[50%] text-sm mb-4">Peak season books 2+ weeks ahead. Message Sofia to check availability.</p>
             <Button asChild variant="whatsapp" size="brand">
-              <a href="https://wa.me/491635080236" target="_blank" rel="noopener noreferrer" data-source="luna-faq-cta">
+              <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="luna-faq-cta">
                 <MessageCircle className="w-4 h-4" />
                 Reserve My Private Dinner
               </a>
@@ -1187,7 +1187,7 @@ export default function LunaPage() {
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">++ adds service charge + government tax (see FAQ)</span></div>
               </div>
               <Button asChild variant="whatsapp" size="brand">
-                <a href="https://wa.me/491635080236?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20fine%20dining%20experience." target="_blank" rel="noopener noreferrer" data-source="luna-fine-dining-cta">
+                <a href="https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20fine%20dining%20experience." target="_blank" rel="noopener noreferrer" data-source="luna-fine-dining-cta">
                   <Phone className="w-4 h-4" />
                   Reserve My Private Dinner
                 </a>
@@ -1241,7 +1241,7 @@ export default function LunaPage() {
           <p className="text-white/[60%] mb-8">Private villa fine dining, tailored to your guests, your timing, your taste. We respond within 2 hours.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild variant="whatsapp" size="brand">
-              <a href="https://wa.me/491635080236?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20reserve%20a%20fine%20dining%20evening%20in%20Bali." target="_blank" rel="noopener noreferrer" data-source="luna-final-cta">
+              <a href="https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20reserve%20a%20fine%20dining%20evening%20in%20Bali." target="_blank" rel="noopener noreferrer" data-source="luna-final-cta">
                 <Phone className="w-4 h-4" />
                 Start Planning on WhatsApp
               </a>

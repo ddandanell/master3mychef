@@ -20,7 +20,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 const SITE = 'https://mychef.id'
-const WA_NUMBER = 491635080236
+const WA_NUMBER = 628113803488
 const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
   "Hi myCHEF, I'd like to plan an event in Bali. Could you walk me through the options?",
 )}`
@@ -924,10 +924,10 @@ export default function EventsMainPage() {
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
-              href="tel:+491635080236"
+              href="tel:+628113803488"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <Phone className="w-4 h-4" /> Call +49 163 5080236
+              <Phone className="w-4 h-4" /> Call +62 811-3803-488
             </a>
           </div>
         </div>
@@ -1194,10 +1194,10 @@ export default function EventsMainPage() {
               <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
             </a>
             <a
-              href="tel:+491635080236"
+              href="tel:+628113803488"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <Phone className="w-4 h-4" /> Call +49 163 5080236
+              <Phone className="w-4 h-4" /> Call +62 811-3803-488
             </a>
           </div>
         </div>

@@ -124,7 +124,7 @@ function PricingCalculator() {
         </div>
 
         <a
-          href={`https://wa.me/491635080236?text=${encodeURIComponent(
+          href={`https://wa.me/628113803488?text=${encodeURIComponent(
             `Hi myCHEF, I used your calculator and got an estimate of IDR ${total.toLocaleString()} for ${guests} guests (${menu}). Can you confirm?`
           )}`}
           target="_blank"

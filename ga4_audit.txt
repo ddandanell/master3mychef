@@ -1,0 +1,243 @@
+GA4 AUDIT REPORT — mychef.id
+Date: 2026-06-21
+Auditor: Claude (OpenClaw AI)
+Property ID: p504769688 | Account ID: a368171430
+GA4 Measurement ID: G-W0PQH8ZKTF
+
+════════════════════════════════════════════════════════════════
+1. GA4 MEASUREMENT ID STATUS
+════════════════════════════════════════════════════════════════
+
+Hardcoded in index.html (line 67 + 75): G-W0PQH8ZKTF   PRESENT
+VITE_GA_ID env var (.env.example): blank               MISSING
+CSP (vercel.json): googletagmanager.com allowed         OK
+script-src includes 'unsafe-inline': YES                OK
+connect-src includes google-analytics.com: YES          OK
+
+The GA4 ID is hardcoded directly in index.html and loads via a
+deferred script after page idle. The CSP correctly whitelists all
+GA4/GTM domains. The technical implementation for GA4 to fire is sound.
+
+════════════════════════════════════════════════════════════════
+2. LIVE GA4 DASHBOARD DATA (pulled 2026-06-21 ~01:38 WIB)
+════════════════════════════════════════════════════════════════
+
+TODAY (Jun 21):
+  Active users:          0
+  Event count:           0
+  Key events:            0
+  New users:             0
+  Real-time users:       0 (no data available)
+
+LAST 7 DAYS (Jun 14–20):
+  Total users:           7
+  30-day users:          8 (+14.3%)
+  Sessions by channel:   Direct: 10 | Referral: 3 | Organic Social: 1
+  Organic Search:        0 (zero organic search sessions recorded)
+
+ACTIVE USERS BY COUNTRY (last 28 days):
+  Indonesia:   6 (+14.3%)
+  Switzerland: 1
+  USA:         1
+  Others:      0
+
+TOP EVENTS (last 7 days):
+  page_view:                  23
+  user_engagement:            17
+  scroll:                     16
+  session_start:              14
+  discovery_call_form_start:  10  ← ANOMALY (see §5)
+  first_visit:                6
+  scroll_depth:               5
+  generate_lead:              0   ← WhatsApp/phone events NOT firing
+  quote_submitted:            0   ← Quote funnel NOT tracked
+
+KEY EVENTS / CONVERSIONS configured:   NONE
+GA4 recommendation displayed:
+  "Complete your implementation by collecting Lead Gen Key Event"
+
+TOP PAGE (last 7 days):
+  "Private Tutor Near Me · Bali · IB Cambridge IGCSE · 5★" — 23 views
+  !! This page title does NOT belong to mychef.id — see §5 RED FLAG 1
+
+════════════════════════════════════════════════════════════════
+3. CODE IMPLEMENTATION — WHAT IS BUILT
+════════════════════════════════════════════════════════════════
+
+FILE: src/lib/analytics.ts
+  Central event hub. All tracking functions call:
+  1. window.gtag('event', ...) — fires to GA4
+  2. window.dataLayer.push(...) — GTM fallback, always fires
+
+FILE: index.html (lines 63–101)
+  Deferred GA4 bootstrap: loads gtag.js after requestIdleCallback
+  (2500ms timeout) or 1500ms setTimeout fallback.
+  Also initialises GTM if VITE_GTM_ID env var is set (currently not set).
+
+FILE: src/main.tsx
+  Mounts @vercel/analytics (Vercel's own product analytics, separate
+  from GA4) and @vercel/speed-insights. These work independently.
+
+EVENTS IMPLEMENTED:
+
+  trackWhatsAppClick(source)      → generate_lead (method: WhatsApp)
+    Called from: ServicePage CTA, WhatsAppButton floating button,
+    PillarSubPage CTA, StickyMobileCTA, Layout sitewide listener
+
+  trackPhoneClick(source)         → generate_lead (method: Phone)
+    Called from: Layout sitewide tel: click listener
+
+  trackPageView(path)             → page_view
+    Called from: Layout on every React Router route change
+
+  trackScrollDepth(depth, source) → scroll_depth
+    Called from: useScrollDepth hook (25/50/75/90% milestones)
+
+  trackTimeOnPage(seconds, source) → time_on_page
+    Called from: useTimeOnPage hook (30/60/120/180s milestones)
+    !! Hook defined but NOT imported/used in any page component
+
+  trackEvent('quote_submitted', ...)
+    Called from: QuoteFunnel — when user clicks "Send via WhatsApp"
+
+  trackFormStart()                → form_start    [DEFINED, NEVER CALLED]
+  trackFormComplete()             → form_complete  [DEFINED, NEVER CALLED]
+  trackCTAClick()                 → cta_click      [DEFINED, NEVER CALLED]
+
+SITEWIDE CONVERSION LISTENER (Layout.tsx):
+  document.addEventListener('click', ...) captures ALL clicks on:
+  - Any a[href*="wa.me"] (WhatsApp links) — fires generate_lead
+  - Any a[href^="tel:"] (phone links) — fires generate_lead
+  This is a solid catch-all that does NOT require individual component
+  instrumentation for WhatsApp/phone clicks.
+
+════════════════════════════════════════════════════════════════
+4. CONVERSION EVENTS — STATUS
+════════════════════════════════════════════════════════════════
+
+EXPECTED CONVERSIONS FOR mychef.id:
+
+  Event name         | Implemented | Firing | Marked as Key Event
+  -------------------|-------------|--------|--------------------
+  generate_lead      | YES         | YES*   | NO
+  quote_submitted    | YES         | YES*   | NO
+  scroll_depth       | YES         | YES*   | NO (not needed)
+  page_view          | YES         | YES*   | NO (not needed)
+  form_start         | NO          | NO     | NO
+  form_complete      | NO          | NO     | NO
+
+  * Code fires the event; whether it reaches Google depends on whether
+  the user's browser allows gtag (ad blockers, iOS ITP, etc.)
+
+  GA4 shows 0 generate_lead events in last 7 days.
+  Either: (a) no real WhatsApp clicks happened, or (b) the 7 users
+  did not interact with conversion elements, or (c) the deferred
+  analytics load is timing out before users click.
+
+  The 2500ms idle timeout is aggressive — on slow connections the
+  GA4 script may not load before users click and leave.
+
+════════════════════════════════════════════════════════════════
+5. RED FLAGS & ANOMALIES
+════════════════════════════════════════════════════════════════
+
+RED FLAG 1 — WRONG DATA IN PROPERTY (HIGHEST PRIORITY):
+  Top page: "Private Tutor Near Me · Bali · IB Cambridge IGCSE · 5★"
+  This title has 23 views in 7 days but belongs to a tutoring website,
+  NOT mychef.id. This means the GA4 property G-W0PQH8ZKTF is receiving
+  data from at least one other website.
+
+  Likely cause: The measurement ID G-W0PQH8ZKTF was previously used on
+  another site (tutoring business) and that site is still sending hits.
+  OR: The property was shared/reused when setting up mychef.id.
+
+  Action required:
+  a) Go to GA4 Admin → Data Streams
+  b) Check all streams attached to this property
+  c) Remove any stream that is not mychef.id
+  d) Consider creating a fresh GA4 property for a clean baseline
+
+RED FLAG 2 — discovery_call_form_start EVENT:
+  10 occurrences in last 7 days, NOT present in current codebase.
+  This event name appears to come from a previous version or a GTM
+  container that was active on the site.
+
+  If this came from the tutoring site contamination: explains the
+  mismatch between events and mychef.id behaviour.
+
+RED FLAG 3 — ZERO ORGANIC SEARCH SESSIONS:
+  Despite active SEO work (sitemaps submitted, pages indexed), GA4
+  shows 0 organic search sessions in 7 days. Either the site is not
+  yet ranking and receiving clicks, or organic sessions are being
+  miscategorised as Direct (common with GA4 when referrer is lost).
+
+RED FLAG 4 — GTM NOT CONFIGURED:
+  VITE_GTM_ID is blank. index.html silently skips GTM bootstrap.
+  This is fine if GTM is not being used, but if conversion tracking
+  was being routed through GTM previously, it would explain gaps.
+
+════════════════════════════════════════════════════════════════
+6. ACTION ITEMS (priority order)
+════════════════════════════════════════════════════════════════
+
+PRIORITY 1 — CLEAN UP GA4 PROPERTY (CRITICAL)
+  GA4 Admin → Data Streams → Remove non-mychef.id streams
+  If the property is contaminated, create a fresh property, get a new
+  Measurement ID, update index.html line 67+75 with the new ID.
+  This will give clean baseline data going forward.
+
+PRIORITY 2 — MARK CONVERSION EVENTS AS KEY EVENTS
+  GA4 Admin → Events → find "generate_lead" → Mark as key event
+  GA4 Admin → Events → find "quote_submitted" → Mark as key event
+  This enables conversion tracking in GA4 reports and Google Ads.
+
+PRIORITY 3 — IMPLEMENT MISSING FORM TRACKING
+  In QuoteFunnel.tsx step 1, call:
+    trackFormStart('quote-funnel', 'quote-page', form.serviceType)
+  In quote submission handler, call:
+    trackFormComplete('quote-funnel', 'quote-page', form.serviceType)
+  (in addition to the existing quote_submitted event)
+
+PRIORITY 4 — CONNECT useTimeOnPage HOOK
+  Import useTimeOnPage in high-intent pages:
+    /fine-dining, /catering, /events, /quote, homepage
+  This gives engagement depth data for content optimisation.
+
+PRIORITY 5 — REDUCE ANALYTICS LOAD DELAY
+  The 2500ms idle callback timeout may cause missed events on fast
+  interactions. Consider reducing to 1000ms or loading analytics on
+  DOMContentLoaded + idle, whichever comes first.
+
+PRIORITY 6 — SET VITE_GA_ID IN VERCEL ENV VARS
+  Even though GA4 is hardcoded, set VITE_GA_ID=G-W0PQH8ZKTF in
+  Vercel project settings for consistency and to enable analytics.ts
+  module-level ID access without relying on hardcoding.
+
+PRIORITY 7 — ADD EMAIL CAPTURE FORM TRACKING
+  The lead magnet email forms added to 3 high-traffic pages have no
+  GA4 event tracking on submission. Add trackEvent('email_capture',
+  {source: pageSource}) on form submit.
+
+PRIORITY 8 — REALTIME VERIFICATION (after above fixes)
+  Visit mychef.id in incognito, open GA4 Realtime report side-by-side.
+  Click a WhatsApp CTA. Verify generate_lead appears in realtime.
+  This confirms end-to-end tracking is working.
+
+════════════════════════════════════════════════════════════════
+7. WHAT IS WORKING CORRECTLY
+════════════════════════════════════════════════════════════════
+
+  - GA4 measurement ID is hardcoded and loads on every page
+  - CSP correctly allows all GA4/GTM domains
+  - page_view fires on every React Router route change
+  - scroll events fire (GA4 default enhanced measurement)
+  - scroll_depth fires at 25/50/75/90% milestones
+  - generate_lead is wired to ALL WhatsApp and phone clicks sitewide
+  - quote_submitted fires when quote funnel WhatsApp button is clicked
+  - @vercel/analytics runs independently (Vercel product analytics)
+  - dataLayer fallback always fires regardless of GA4 status
+  - Analytics load is deferred after idle (good for Core Web Vitals)
+
+════════════════════════════════════════════════════════════════
+END OF AUDIT — Report file: ga4_audit.txt
+════════════════════════════════════════════════════════════════

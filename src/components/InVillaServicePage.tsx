@@ -8,7 +8,7 @@ import LocationChips from './LocationChips'
 
 import OptimizedImage from '@/components/OptimizedImage'
 const SITE = 'https://mychef.id'
-const WA = '491635080236'
+const WA = '628113803488'
 
 const SERVICE_TYPES = [
   {

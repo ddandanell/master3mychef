@@ -34,7 +34,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WA_NUMBER = 491635080236
+const WA_NUMBER = 628113803488
 const WA_MARCO = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
   "Hi Marco, I'm looking to hire hospitality staff for my villa/hotel in Bali. Can you help?",
 )}`

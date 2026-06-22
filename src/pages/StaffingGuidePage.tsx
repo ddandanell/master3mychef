@@ -230,7 +230,7 @@ export default function StaffingGuidePage() {
           <h2 className="text-3xl font-light mb-6">Hire professional villa staff</h2>
           <p className="text-white/70 mb-8">Tell us your event, dates, and staffing needs. We'll match you with experienced professionals.</p>
           <a
-            href="https://wa.me/491635080236?text=I%20need%20professional%20staff%20for%20my%20villa%20event..."
+            href="https://wa.me/628113803488?text=I%20need%20professional%20staff%20for%20my%20villa%20event..."
             data-source="staffing-guide-cta"
             className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
           >

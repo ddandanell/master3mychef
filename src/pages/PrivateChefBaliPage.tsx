@@ -15,7 +15,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WA = 491635080236
+const WA = 628113803488
 const WA_LINK = `https://wa.me/${WA}?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20hire%20a%20private%20chef%20for%20my%20Bali%20villa.`
 
 const HOW_IT_WORKS = [

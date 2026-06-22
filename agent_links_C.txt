@@ -1,0 +1,74 @@
+AGENT LINKS C — Internal cross-links: service hubs → location + blog pages
+Commit: 5e23a54
+Date: 2026-06-21
+
+FILES CHANGED
+─────────────────────────────────────────────────────────────────────────────
+src/pages/LunaPage.tsx               (fine dining hub — /fine-dining)
+src/components/CateringPage.tsx      (catering hub — /catering)
+src/pages/EventsMainPage.tsx         (events hub — /events)
+src/components/InVillaServicePage.tsx (in-villa service hub — /in-villa-service)
+src/pages/PricingPage.tsx            (pricing page — /pricing)
+src/components/QuoteFunnel.tsx       (quote funnel — /quote)
+
+LINKS ADDED
+─────────────────────────────────────────────────────────────────────────────
+
+FINE DINING HUB (/fine-dining) → LunaPage.tsx
+  New section "Fine Dining by Location" added before FAQ:
+  • /locations/ubud        → "Ubud jungle villa fine dining"
+  • /locations/seminyak    → "Seminyak beachfront fine dining"
+  • /locations/uluwatu     → "Uluwatu cliffside dining"
+  • /blog/fine-dining-guide → "Read our complete guide to fine dining in Bali"
+  • /pricing               → "See fine dining pricing"
+
+CATERING HUB (/catering) → CateringPage.tsx
+  New section "Catering by location" added after "What's included":
+  • /locations/canggu      → "Canggu villa catering"
+  • /locations/seminyak    → "Seminyak event catering"
+  • /blog/bali-catering-menu → "Explore Bali catering menus"
+  • /pricing               → "Catering pricing"
+
+EVENTS HUB (/events) → EventsMainPage.tsx
+  Location link cards + blog links added inside "Where We Work" section:
+  • /locations/uluwatu     → "Uluwatu wedding venue"
+  • /locations/ubud        → "Ubud retreat catering"
+  • /blog/event-planning-bali → "Bali event planning guide"
+  • /pricing               → "Event catering pricing"
+
+IN-VILLA SERVICE HUB (/in-villa-service) → InVillaServicePage.tsx
+  New section "In-Villa Service by Location" added before CTA:
+  • /chefs                 → "Meet our private chefs"
+  • /locations/canggu      → "In-villa chef Canggu"
+  • /locations/ubud        → "In-villa chef Ubud"
+  • /pricing               → "In-villa chef pricing"
+  • /blog/how-to-hire-private-chef → "Complete hiring guide"
+
+PRICING PAGE (/pricing) → PricingPage.tsx
+  RELATED_PAGES array updated:
+  • /fine-dining           → "Fine Dining"
+  • /catering              → "Catering"
+  • /events                → "Events"
+  • /in-villa-service      → "In-Villa Service" (NEW)
+  • /blog/how-to-hire-private-chef → "How to Hire a Private Chef" (NEW)
+  • /quote                 → "Get a Quote"
+
+QUOTE FUNNEL (/quote) → QuoteFunnel.tsx
+  Links added on final summary step (step 8):
+  • /pricing               → "See full pricing"
+  • /chefs                 → "Meet the chefs"
+
+TECHNICAL NOTES
+─────────────────────────────────────────────────────────────────────────────
+• All links use <Link to="..."> from react-router-dom (SPA navigation)
+• Styling: text-[#C5A028] hover:underline font-medium or card-style with
+  ArrowRight icon, consistent with site design system
+• All location routes verified to exist in App.tsx (/locations/ubud,
+  /locations/seminyak, /locations/uluwatu, /locations/canggu all confirmed)
+• All blog routes confirmed: /blog/fine-dining-guide, /blog/bali-catering-menu,
+  /blog/event-planning-bali, /blog/how-to-hire-private-chef — all routed
+• TSC check: 0 new errors (3 pre-existing CateringPage sandbox encoding
+  errors on the '& serveware' string that pre-date this commit and do not
+  affect production builds)
+• 11 files changed, 286 insertions, 24 deletions
+• Committed and pushed to origin/main: 5e23a54

@@ -1,7 +1,7 @@
 import PremiumPage, { type PageSection } from '@/components/PremiumPage'
 import { breadcrumbSchema } from '@/components/SeoHead'
 
-const WA = 491635080236
+const WA = 628113803488
 
 const TRUST_PILLARS = [
   {

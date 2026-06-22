@@ -1,0 +1,775 @@
+- generic [ref=e3]:
+  - link "Skip to main content" [ref=e4] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main navigation" [ref=e5]:
+    - generic [ref=e6]:
+      - link "myCHEF" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8]
+        - generic [ref=e10]: myCHEF
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - link "Fine Dining" [ref=e13] [cursor=pointer]:
+            - /url: /fine-dining
+            - img [ref=e14]
+            - generic [ref=e19]: Fine Dining
+          - generic:
+            - paragraph: Fine Dining Pages
+            - generic:
+              - link "Romantic Dinner":
+                - /url: /fine-dining/romantic-dinner
+              - link "Tasting Menu":
+                - /url: /fine-dining/tasting-menu
+              - link "Chef’s Table":
+                - /url: /fine-dining/chefs-table
+              - link "Our Menus":
+                - /url: /fine-dining/menus
+              - link "Our Chefs":
+                - /url: /fine-dining/our-chefs
+              - link "Private Chef Bali":
+                - /url: /fine-dining/private-chef-bali
+        - generic [ref=e20]:
+          - link "Catering" [ref=e21] [cursor=pointer]:
+            - /url: /catering
+            - img [ref=e22]
+            - generic [ref=e27]: Catering
+          - generic:
+            - paragraph: Catering Pages
+            - generic:
+              - link "BBQ Catering":
+                - /url: /catering/bbq-catering
+              - link "Buffet":
+                - /url: /catering/buffet
+              - link "Plated Catering":
+                - /url: /catering/plated-catering
+              - link "Drop-Off":
+                - /url: /catering/drop-off-catering
+              - link "Babi Guling":
+                - /url: /catering/babi-guling
+              - link "Grazing Tables":
+                - /url: /catering/grazing-tables
+              - link "Villa Catering":
+                - /url: /catering/villa-catering
+              - link "Corporate":
+                - /url: /catering/corporate-catering
+              - link "Retreats":
+                - /url: /catering/retreat-catering
+              - link "Floating Breakfast":
+                - /url: /catering/floating-breakfast
+        - generic [ref=e28]:
+          - link "Events" [ref=e29] [cursor=pointer]:
+            - /url: /events
+            - img [ref=e30]
+            - generic [ref=e32]: Events
+          - generic:
+            - paragraph: Events Pages
+            - generic:
+              - link "Weddings":
+                - /url: /events/weddings
+              - link "Birthdays":
+                - /url: /events/birthdays
+              - link "Anniversaries":
+                - /url: /events/anniversaries
+              - link "Corporate":
+                - /url: /events/corporate-events
+              - link "Retreats":
+                - /url: /events/retreats
+              - link "Baby Showers":
+                - /url: /events/baby-showers
+              - link "Villa Parties":
+                - /url: /events/villa-parties
+        - generic [ref=e33]:
+          - link "In-Villa" [ref=e34] [cursor=pointer]:
+            - /url: /in-villa-service
+            - img [ref=e35]
+            - generic [ref=e38]: In-Villa
+          - generic:
+            - paragraph: In-Villa Pages
+            - generic:
+              - link "Waiters":
+                - /url: /in-villa-service/waiters
+              - link "Butlers":
+                - /url: /in-villa-service/butlers
+              - link "Bartenders":
+                - /url: /in-villa-service/bartenders
+              - link "Mixology":
+                - /url: /in-villa-service/mixology
+              - link "Sommelier":
+                - /url: /in-villa-service/sommelier
+              - link "Hosts":
+                - /url: /in-villa-service/host-hostess
+        - generic [ref=e39]:
+          - link "Staffing" [ref=e40] [cursor=pointer]:
+            - /url: /staffing
+            - img [ref=e41]
+            - generic [ref=e44]: Staffing
+          - generic:
+            - paragraph: Staffing Pages
+            - generic:
+              - link "Chef Placement":
+                - /url: /staffing/private-chef-placement
+              - link "Live-In Chef":
+                - /url: /staffing/live-in-chef
+              - link "Villa Staff":
+                - /url: /staffing/villa-staff
+              - link "Household Staff":
+                - /url: /staffing/household-staff
+              - link "For Villa Managers":
+                - /url: /staffing/for-villa-managers
+              - link "For Hotels":
+                - /url: /staffing/for-hotels-restaurants
+        - link "Locations" [ref=e46] [cursor=pointer]:
+          - /url: /locations
+          - img [ref=e47]
+          - generic [ref=e50]: Locations
+        - link "Help" [ref=e52] [cursor=pointer]:
+          - /url: /help
+          - img [ref=e53]
+          - generic [ref=e56]: Help
+      - generic [ref=e57]:
+        - button "Search myCHEF" [ref=e58] [cursor=pointer]:
+          - img [ref=e59]
+        - link "Book Now →" [ref=e62] [cursor=pointer]:
+          - /url: /quote
+          - text: Book Now
+          - generic [ref=e63]: →
+  - main [ref=e64]:
+    - main [ref=e65]:
+      - generic [ref=e66]:
+        - img "Professional butler serving luxury villa dinner in Bali" [ref=e68]
+        - generic [ref=e72]:
+          - paragraph [ref=e73]: myCHEF
+          - heading "Professional Villa Service Staff" [level=1] [ref=e74]
+          - paragraph [ref=e75]: Per-shift waiters, butlers, bartenders, mixologists, and sommeliers for Bali villas. From IDR 250,000/hour, briefed to your event and ready for dinners, parties, and full-service hosting.
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - img [ref=e78]
+              - text: Uniformed Staff
+            - generic [ref=e80]:
+              - img [ref=e81]
+              - text: Same-Day Booking
+            - generic [ref=e83]:
+              - img [ref=e84]
+              - text: English-Speaking
+            - generic [ref=e86]:
+              - img [ref=e87]
+              - text: Background-Checked
+          - generic [ref=e89]:
+            - link "Hire Staff Now" [ref=e90] [cursor=pointer]:
+              - /url: https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%20would%20like%20to%20hire%20in-villa%20service%20staff.
+              - img [ref=e91]
+              - text: Hire Staff Now
+            - link "Get a Quote" [ref=e93] [cursor=pointer]:
+              - /url: /quote
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - img [ref=e97]
+          - text: 4.9 Rating (350+ Reviews)
+        - generic [ref=e99]:
+          - img [ref=e100]
+          - text: 500+ Events Staffed
+        - generic [ref=e105]:
+          - img [ref=e106]
+          - text: Background-Checked Team
+        - generic [ref=e108]:
+          - img [ref=e109]
+          - text: Same-Day Response
+      - generic [ref=e114]:
+        - generic [ref=e115]:
+          - paragraph [ref=e116]: What In-Villa Service Means
+          - heading "Hotel-level front-of-house service, booked per shift for your villa." [level=2] [ref=e117]
+          - paragraph [ref=e118]: In-villa service means short-term hospitality staff for the moments when your villa needs more than food alone. We send waiters for plated dinners and breakfasts, butlers for discreet guest care, and bartenders or sommeliers for drinks-led hosting.
+          - paragraph [ref=e119]: You tell us the guest count, timing, and tone. We tell you how many people you need, what each role costs, and which staffing mix keeps the service smooth without overbooking the team.
+          - generic [ref=e120]:
+            - generic [ref=e121]:
+              - img [ref=e122]
+              - text: Per-shift pricing
+            - generic [ref=e124]:
+              - img [ref=e125]
+              - text: Staffing ratios advised before booking
+            - generic [ref=e127]:
+              - img [ref=e128]
+              - text: Same-day confirmation via WhatsApp
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - img [ref=e133]
+            - heading "Waiters & Servers" [level=3] [ref=e138]
+            - paragraph [ref=e139]: For breakfasts, family-style lunches, plated dinners, and event floor service. They greet, pour, clear, reset, and keep the table moving.
+            - paragraph [ref=e140]: Best for private dinners, birthdays, and villa parties.
+          - generic [ref=e141]:
+            - img [ref=e143]
+            - heading "Butlers & Hosts" [level=3] [ref=e146]
+            - paragraph [ref=e147]: For guest arrival, poolside hosting, villa flow, and discreet front-of-house support. The role is calm, anticipatory, and detail-led.
+            - paragraph [ref=e148]: Best for luxury stays, executive hosting, and full-villa service.
+          - generic [ref=e149]:
+            - img [ref=e151]
+            - heading "Bartenders & Sommeliers" [level=3] [ref=e153]
+            - paragraph [ref=e154]: For cocktail hours, sundowners, after-parties, and wine-led dinners. We match the right person to the tone of the event.
+            - paragraph [ref=e155]: Best for sunset drinks, weddings, and chef-led dinners.
+      - generic [ref=e157]:
+        - paragraph [ref=e158]: Our Services
+        - heading "Choose the exact role you need" [level=2] [ref=e159]
+        - paragraph [ref=e160]: Each card links to a dedicated service page with role details, pricing, and direct WhatsApp booking.
+        - generic [ref=e161]:
+          - link "Waiters & Servers Professional table service for villa dinners and events. Uniformed, English-speaking, and trained in fine dining service. From IDR 250,000/hour" [ref=e162] [cursor=pointer]:
+            - /url: /in-villa-service/waiters
+            - img [ref=e163]
+            - heading "Waiters & Servers" [level=3] [ref=e168]
+            - paragraph [ref=e169]: Professional table service for villa dinners and events. Uniformed, English-speaking, and trained in fine dining service.
+            - paragraph [ref=e170]: From IDR 250,000/hour
+            - img [ref=e171]
+          - link "Butlers Discreet, professional villa service for luxury estates. Anticipatory service, etiquette-trained, and detail-oriented. From IDR 400,000/hour" [ref=e173] [cursor=pointer]:
+            - /url: /in-villa-service/butlers
+            - img [ref=e174]
+            - heading "Butlers" [level=3] [ref=e177]
+            - paragraph [ref=e178]: Discreet, professional villa service for luxury estates. Anticipatory service, etiquette-trained, and detail-oriented.
+            - paragraph [ref=e179]: From IDR 400,000/hour
+            - img [ref=e180]
+          - link "Bartenders Cocktail preparation and bar service for villa events. Classic cocktails, creative mixology, and professional presentation. From IDR 350,000/hour" [ref=e182] [cursor=pointer]:
+            - /url: /in-villa-service/bartenders
+            - img [ref=e183]
+            - heading "Bartenders" [level=3] [ref=e185]
+            - paragraph [ref=e186]: Cocktail preparation and bar service for villa events. Classic cocktails, creative mixology, and professional presentation.
+            - paragraph [ref=e187]: From IDR 350,000/hour
+            - img [ref=e188]
+          - link "Mixology Service Signature cocktail creation, menu design, and bar consultancy for special events and villa parties. From IDR 500,000/hour" [ref=e190] [cursor=pointer]:
+            - /url: /in-villa-service/mixology
+            - img [ref=e191]
+            - heading "Mixology Service" [level=3] [ref=e193]
+            - paragraph [ref=e194]: Signature cocktail creation, menu design, and bar consultancy for special events and villa parties.
+            - paragraph [ref=e195]: From IDR 500,000/hour
+            - img [ref=e196]
+          - link "Sommelier Wine pairing, selection, and service for fine dining experiences. Expert knowledge of Italian and international wines. From IDR 450,000/hour" [ref=e198] [cursor=pointer]:
+            - /url: /in-villa-service/sommelier
+            - img [ref=e199]
+            - heading "Sommelier" [level=3] [ref=e201]
+            - paragraph [ref=e202]: Wine pairing, selection, and service for fine dining experiences. Expert knowledge of Italian and international wines.
+            - paragraph [ref=e203]: From IDR 450,000/hour
+            - img [ref=e204]
+          - link "Host & Hostess Guest reception, seating coordination, and event flow management. The face of your event from arrival to departure. From IDR 300,000/hour" [ref=e206] [cursor=pointer]:
+            - /url: /in-villa-service/host-hostess
+            - img [ref=e207]
+            - heading "Host & Hostess" [level=3] [ref=e212]
+            - paragraph [ref=e213]: Guest reception, seating coordination, and event flow management. The face of your event from arrival to departure.
+            - paragraph [ref=e214]: From IDR 300,000/hour
+            - img [ref=e215]
+      - generic [ref=e219]:
+        - generic [ref=e220]:
+          - paragraph [ref=e221]: What You Get
+          - heading "Every Booking Includes" [level=2] [ref=e222]
+          - generic [ref=e223]:
+            - generic [ref=e224]:
+              - img [ref=e225]
+              - generic [ref=e227]: Uniformed, English-speaking staff
+            - generic [ref=e228]:
+              - img [ref=e229]
+              - generic [ref=e231]: Pre-event briefing for your occasion
+            - generic [ref=e232]:
+              - img [ref=e233]
+              - generic [ref=e235]: Per-shift pricing — no long-term contract
+            - generic [ref=e236]:
+              - img [ref=e237]
+              - generic [ref=e239]: All service tools and uniforms provided
+            - generic [ref=e240]:
+              - img [ref=e241]
+              - generic [ref=e243]: Same-day confirmation via WhatsApp
+            - generic [ref=e244]:
+              - img [ref=e245]
+              - generic [ref=e247]: Flexible team size from 1 to 20+
+            - generic [ref=e248]:
+              - img [ref=e249]
+              - generic [ref=e251]: Background-checked and certified
+            - generic [ref=e252]:
+              - img [ref=e253]
+              - generic [ref=e255]: Real-time kitchen coordination
+        - img "Professional service staff setting table" [ref=e257]
+      - generic [ref=e259]:
+        - img "myCHEF award-winning private villa dining in Bali" [ref=e261]
+        - generic [ref=e263]:
+          - paragraph [ref=e264]: AWARD-WINNING PRIVATE DINING
+          - heading "Recognized for Private Villa Dining in Bali" [level=2] [ref=e265]
+          - paragraph [ref=e267]: A refined dining experience for villas, families, private events, and long-stay guests. Built around trusted chefs, elegant service, and consistent guest satisfaction.
+          - generic [ref=e268]:
+            - link "Plan Your Dinner" [ref=e269] [cursor=pointer]:
+              - /url: https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%20would%20like%20to%20hire%20in-villa%20service%20staff.
+              - img [ref=e270]
+              - text: Plan Your Dinner
+            - link "View Dining Options" [ref=e272] [cursor=pointer]:
+              - /url: /fine-dining
+          - paragraph [ref=e273]: 560+ villas served · 12,000+ guests · 4.9 average rating
+      - generic [ref=e275]:
+        - paragraph [ref=e276]: Questions
+        - heading "Frequently Asked" [level=2] [ref=e277]
+        - generic [ref=e278]:
+          - generic [ref=e279]:
+            - button "How many staff do I need for my event?" [ref=e280] [cursor=pointer]:
+              - generic [ref=e281]: How many staff do I need for my event?
+              - img [ref=e282]
+            - region "How many staff do I need for my event?":
+              - paragraph [ref=e284]: For plated dinners, we recommend 1 waiter per 8–10 guests. For buffet service, 1 per 15 guests. For cocktail parties, 1 bartender per 25 guests. We will advise based on your event details.
+          - generic [ref=e285]:
+            - button "Can I hire staff without booking catering?" [ref=e286] [cursor=pointer]:
+              - generic [ref=e287]: Can I hire staff without booking catering?
+              - img [ref=e288]
+            - region "Can I hire staff without booking catering?":
+              - paragraph [ref=e290]: Yes. Our in-villa service staff can be hired independently for events where you have your own catering or are hosting a self-catered gathering.
+          - generic [ref=e291]:
+            - button "What do your staff wear?" [ref=e292] [cursor=pointer]:
+              - generic [ref=e293]: What do your staff wear?
+              - img [ref=e294]
+            - region "What do your staff wear?":
+              - paragraph [ref=e296]: All service staff wear professional uniforms — black and white for formal events, branded myCHEF attire for casual settings. We can adapt to your event dress code.
+          - generic [ref=e297]:
+            - button "How far in advance should I book service staff?" [ref=e298] [cursor=pointer]:
+              - generic [ref=e299]: How far in advance should I book service staff?
+              - img [ref=e300]
+            - region "How far in advance should I book service staff?":
+              - paragraph [ref=e302]: 3+ days for small teams (1–4 staff). 2+ weeks for large events (10+ staff) or peak season. Last-minute bookings possible subject to availability.
+          - generic [ref=e303]:
+            - button "Are your staff trained in wine service?" [ref=e304] [cursor=pointer]:
+              - generic [ref=e305]: Are your staff trained in wine service?
+              - img [ref=e306]
+            - region "Are your staff trained in wine service?":
+              - paragraph [ref=e308]: Our premium waiters and sommeliers are trained in wine service, including decanting, pouring, and basic pairing knowledge. For advanced wine pairing, book our sommelier service.
+          - generic [ref=e309]:
+            - button "Do you provide bar equipment and glassware?" [ref=e310] [cursor=pointer]:
+              - generic [ref=e311]: Do you provide bar equipment and glassware?
+              - img [ref=e312]
+            - region "Do you provide bar equipment and glassware?":
+              - paragraph [ref=e314]: Basic bar tools are included with bartender bookings. Specialty glassware, ice, and garnishes can be arranged. Let us know your requirements when booking.
+      - generic [ref=e316]:
+        - heading "Ready to Hire Staff?" [level=2] [ref=e317]
+        - paragraph [ref=e318]: Message us on WhatsApp. We reply within the hour with staffing ratios, availability, and clear per-shift pricing before you book.
+        - generic [ref=e319]:
+          - link "Hire Staff Now" [ref=e320] [cursor=pointer]:
+            - /url: https://wa.me/6282237565997?text=Hi%20myCHEF%2C%20I%20would%20like%20to%20hire%20in-villa%20service%20staff.
+            - img [ref=e321]
+            - text: Hire Staff Now
+          - link "Get a Quote" [ref=e323] [cursor=pointer]:
+            - /url: /quote
+      - generic [ref=e325]:
+        - generic [ref=e326]:
+          - paragraph [ref=e327]: Where We Serve
+          - heading "Service Staff Across Bali" [level=2] [ref=e328]
+          - paragraph [ref=e329]: Waiters in Seminyak. Bartenders in Canggu. Butlers in Uluwatu. We know every villa, every event space, every service standard.
+        - generic [ref=e330]:
+          - link "Seminyak" [ref=e331] [cursor=pointer]:
+            - /url: /seminyak
+            - img [ref=e332]
+            - text: Seminyak
+          - link "Canggu" [ref=e335] [cursor=pointer]:
+            - /url: /canggu
+            - img [ref=e336]
+            - text: Canggu
+          - link "Ubud" [ref=e339] [cursor=pointer]:
+            - /url: /ubud
+            - img [ref=e340]
+            - text: Ubud
+          - link "Uluwatu" [ref=e343] [cursor=pointer]:
+            - /url: /uluwatu
+            - img [ref=e344]
+            - text: Uluwatu
+          - link "Sanur" [ref=e347] [cursor=pointer]:
+            - /url: /sanur
+            - img [ref=e348]
+            - text: Sanur
+          - link "Nusa Dua" [ref=e351] [cursor=pointer]:
+            - /url: /nusa-dua
+            - img [ref=e352]
+            - text: Nusa Dua
+          - link "Jimbaran" [ref=e355] [cursor=pointer]:
+            - /url: /jimbaran
+            - img [ref=e356]
+            - text: Jimbaran
+          - link "Berawa" [ref=e359] [cursor=pointer]:
+            - /url: /berawa
+            - img [ref=e360]
+            - text: Berawa
+          - link "Pererenan" [ref=e363] [cursor=pointer]:
+            - /url: /pererenan
+            - img [ref=e364]
+            - text: Pererenan
+          - link "Bukit" [ref=e367] [cursor=pointer]:
+            - /url: /bukit
+            - img [ref=e368]
+            - text: Bukit
+        - link "View All Locations →" [ref=e372] [cursor=pointer]:
+          - /url: /locations
+          - text: View All Locations
+          - generic [ref=e373]: →
+  - generic [ref=e374]: ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · 5-star rated
+  - contentinfo [ref=e375]:
+    - generic [ref=e377]:
+      - generic [ref=e378]:
+        - generic [ref=e379]:
+          - generic [ref=e380]:
+            - img [ref=e382]
+            - heading "myCHEF" [level=3] [ref=e384]
+          - paragraph [ref=e385]: Private chef, villa catering, and full-service events across Bali. Same-day WhatsApp confirmation.
+          - generic [ref=e386]:
+            - link "Instagram" [ref=e387] [cursor=pointer]:
+              - /url: https://instagram.com/mychef.id
+              - img [ref=e388]
+            - link "WhatsApp" [ref=e391] [cursor=pointer]:
+              - /url: https://wa.me/6282237565997
+              - img [ref=e392]
+        - generic [ref=e394]:
+          - generic [ref=e395]:
+            - paragraph [ref=e396]: Contact Us
+            - link "+62 822-3756-5997" [ref=e397] [cursor=pointer]:
+              - /url: https://wa.me/6282237565997?text=Hi%20myCHEF
+              - img [ref=e398]
+              - text: +62 822-3756-5997
+          - generic [ref=e400]:
+            - link "indonesia@mychef.id" [ref=e401] [cursor=pointer]:
+              - /url: mailto:indonesia@mychef.id
+              - img [ref=e402]
+              - text: indonesia@mychef.id
+            - generic [ref=e405]:
+              - img [ref=e406]
+              - text: Bali, Indonesia
+      - generic [ref=e409]:
+        - generic [ref=e410]:
+          - heading "Fine Dining" [level=4] [ref=e411]
+          - list [ref=e412]:
+            - listitem [ref=e413]:
+              - link "Overview" [ref=e414] [cursor=pointer]:
+                - /url: /fine-dining
+            - listitem [ref=e415]:
+              - link "Romantic Dinner" [ref=e416] [cursor=pointer]:
+                - /url: /fine-dining/romantic-dinner
+            - listitem [ref=e417]:
+              - link "Tasting Menu" [ref=e418] [cursor=pointer]:
+                - /url: /fine-dining/tasting-menu
+            - listitem [ref=e419]:
+              - link "Chef’s Table" [ref=e420] [cursor=pointer]:
+                - /url: /fine-dining/chefs-table
+            - listitem [ref=e421]:
+              - link "Our Menus" [ref=e422] [cursor=pointer]:
+                - /url: /fine-dining/menus
+            - listitem [ref=e423]:
+              - link "Our Chefs" [ref=e424] [cursor=pointer]:
+                - /url: /fine-dining/our-chefs
+            - listitem [ref=e425]:
+              - link "Private Chef Bali" [ref=e426] [cursor=pointer]:
+                - /url: /fine-dining/private-chef-bali
+        - generic [ref=e427]:
+          - heading "Catering" [level=4] [ref=e428]
+          - list [ref=e429]:
+            - listitem [ref=e430]:
+              - link "Overview" [ref=e431] [cursor=pointer]:
+                - /url: /catering
+            - listitem [ref=e432]:
+              - link "BBQ Catering" [ref=e433] [cursor=pointer]:
+                - /url: /catering/bbq-catering
+            - listitem [ref=e434]:
+              - link "Buffet" [ref=e435] [cursor=pointer]:
+                - /url: /catering/buffet
+            - listitem [ref=e436]:
+              - link "Plated Catering" [ref=e437] [cursor=pointer]:
+                - /url: /catering/plated-catering
+            - listitem [ref=e438]:
+              - link "Drop-Off" [ref=e439] [cursor=pointer]:
+                - /url: /catering/drop-off-catering
+            - listitem [ref=e440]:
+              - link "Babi Guling" [ref=e441] [cursor=pointer]:
+                - /url: /catering/babi-guling
+            - listitem [ref=e442]:
+              - link "Grazing Tables" [ref=e443] [cursor=pointer]:
+                - /url: /catering/grazing-tables
+            - listitem [ref=e444]:
+              - link "Villa Catering" [ref=e445] [cursor=pointer]:
+                - /url: /catering/villa-catering
+            - listitem [ref=e446]:
+              - link "Corporate" [ref=e447] [cursor=pointer]:
+                - /url: /catering/corporate-catering
+            - listitem [ref=e448]:
+              - link "Retreats" [ref=e449] [cursor=pointer]:
+                - /url: /catering/retreat-catering
+            - listitem [ref=e450]:
+              - link "Floating Breakfast" [ref=e451] [cursor=pointer]:
+                - /url: /catering/floating-breakfast
+        - generic [ref=e452]:
+          - heading "Events" [level=4] [ref=e453]
+          - list [ref=e454]:
+            - listitem [ref=e455]:
+              - link "Overview" [ref=e456] [cursor=pointer]:
+                - /url: /events
+            - listitem [ref=e457]:
+              - link "Weddings" [ref=e458] [cursor=pointer]:
+                - /url: /events/weddings
+            - listitem [ref=e459]:
+              - link "Birthdays" [ref=e460] [cursor=pointer]:
+                - /url: /events/birthdays
+            - listitem [ref=e461]:
+              - link "Anniversaries" [ref=e462] [cursor=pointer]:
+                - /url: /events/anniversaries
+            - listitem [ref=e463]:
+              - link "Corporate" [ref=e464] [cursor=pointer]:
+                - /url: /events/corporate-events
+            - listitem [ref=e465]:
+              - link "Retreats" [ref=e466] [cursor=pointer]:
+                - /url: /events/retreats
+            - listitem [ref=e467]:
+              - link "Baby Showers" [ref=e468] [cursor=pointer]:
+                - /url: /events/baby-showers
+            - listitem [ref=e469]:
+              - link "Villa Parties" [ref=e470] [cursor=pointer]:
+                - /url: /events/villa-parties
+        - generic [ref=e471]:
+          - heading "In-Villa Service" [level=4] [ref=e472]
+          - list [ref=e473]:
+            - listitem [ref=e474]:
+              - link "Overview" [ref=e475] [cursor=pointer]:
+                - /url: /in-villa-service
+            - listitem [ref=e476]:
+              - link "Waiters" [ref=e477] [cursor=pointer]:
+                - /url: /in-villa-service/waiters
+            - listitem [ref=e478]:
+              - link "Butlers" [ref=e479] [cursor=pointer]:
+                - /url: /in-villa-service/butlers
+            - listitem [ref=e480]:
+              - link "Bartenders" [ref=e481] [cursor=pointer]:
+                - /url: /in-villa-service/bartenders
+            - listitem [ref=e482]:
+              - link "Mixology" [ref=e483] [cursor=pointer]:
+                - /url: /in-villa-service/mixology
+            - listitem [ref=e484]:
+              - link "Sommelier" [ref=e485] [cursor=pointer]:
+                - /url: /in-villa-service/sommelier
+            - listitem [ref=e486]:
+              - link "Hosts" [ref=e487] [cursor=pointer]:
+                - /url: /in-villa-service/host-hostess
+        - generic [ref=e488]:
+          - heading "Staffing" [level=4] [ref=e489]
+          - list [ref=e490]:
+            - listitem [ref=e491]:
+              - link "Overview" [ref=e492] [cursor=pointer]:
+                - /url: /staffing
+            - listitem [ref=e493]:
+              - link "Chef Placement" [ref=e494] [cursor=pointer]:
+                - /url: /staffing/private-chef-placement
+            - listitem [ref=e495]:
+              - link "Live-In Chef" [ref=e496] [cursor=pointer]:
+                - /url: /staffing/live-in-chef
+            - listitem [ref=e497]:
+              - link "Villa Staff" [ref=e498] [cursor=pointer]:
+                - /url: /staffing/villa-staff
+            - listitem [ref=e499]:
+              - link "Household Staff" [ref=e500] [cursor=pointer]:
+                - /url: /staffing/household-staff
+            - listitem [ref=e501]:
+              - link "For Villa Managers" [ref=e502] [cursor=pointer]:
+                - /url: /staffing/for-villa-managers
+            - listitem [ref=e503]:
+              - link "For Hotels" [ref=e504] [cursor=pointer]:
+                - /url: /staffing/for-hotels-restaurants
+        - generic [ref=e505]:
+          - heading "Top Experiences" [level=4] [ref=e506]
+          - list [ref=e507]:
+            - listitem [ref=e508]:
+              - link "Villa BBQ Nights" [ref=e509] [cursor=pointer]:
+                - /url: /villa-bbq-catering-bali
+            - listitem [ref=e510]:
+              - link "Wedding Catering" [ref=e511] [cursor=pointer]:
+                - /url: /bali-wedding-catering-packages
+            - listitem [ref=e512]:
+              - link "Michelin Chef Prices" [ref=e513] [cursor=pointer]:
+                - /url: /michelin-private-chef-bali-prices
+            - listitem [ref=e514]:
+              - link "Private Tasting Menus" [ref=e515] [cursor=pointer]:
+                - /url: /private-tasting-menu-bali
+            - listitem [ref=e516]:
+              - link "Chef Table Experience" [ref=e517] [cursor=pointer]:
+                - /url: /chef-table-experience-bali
+            - listitem [ref=e518]:
+              - link "Villa Birthday Parties" [ref=e519] [cursor=pointer]:
+                - /url: /luxury-birthday-party-bali
+        - generic [ref=e520]:
+          - heading "Locations" [level=4] [ref=e521]
+          - list [ref=e522]:
+            - listitem [ref=e523]:
+              - link "Bali Regions" [ref=e524] [cursor=pointer]:
+                - /url: /locations
+            - listitem [ref=e525]:
+              - link "Seminyak" [ref=e526] [cursor=pointer]:
+                - /url: /locations/seminyak
+            - listitem [ref=e527]:
+              - link "Canggu" [ref=e528] [cursor=pointer]:
+                - /url: /locations/canggu
+            - listitem [ref=e529]:
+              - link "Uluwatu" [ref=e530] [cursor=pointer]:
+                - /url: /locations/uluwatu
+            - listitem [ref=e531]:
+              - link "Ubud" [ref=e532] [cursor=pointer]:
+                - /url: /locations/ubud
+            - listitem [ref=e533]:
+              - link "Nusa Dua" [ref=e534] [cursor=pointer]:
+                - /url: /locations/nusa-dua
+            - listitem [ref=e535]:
+              - link "Jimbaran" [ref=e536] [cursor=pointer]:
+                - /url: /locations/jimbaran
+            - listitem [ref=e537]:
+              - link "Sanur" [ref=e538] [cursor=pointer]:
+                - /url: /locations/sanur
+            - listitem [ref=e539]:
+              - link "Berawa" [ref=e540] [cursor=pointer]:
+                - /url: /locations/berawa
+            - listitem [ref=e541]:
+              - link "Pererenan" [ref=e542] [cursor=pointer]:
+                - /url: /locations/pererenan
+            - listitem [ref=e543]:
+              - link "Bukit Peninsula" [ref=e544] [cursor=pointer]:
+                - /url: /locations/bukit
+            - listitem [ref=e545]:
+              - link "Kuta" [ref=e546] [cursor=pointer]:
+                - /url: /locations/kuta
+            - listitem [ref=e547]:
+              - link "Legian" [ref=e548] [cursor=pointer]:
+                - /url: /locations/legian
+            - listitem [ref=e549]:
+              - link "Kerobokan" [ref=e550] [cursor=pointer]:
+                - /url: /locations/kerobokan
+            - listitem [ref=e551]:
+              - link "Petitenget" [ref=e552] [cursor=pointer]:
+                - /url: /locations/petitenget
+            - listitem [ref=e553]:
+              - link "Tanah Lot" [ref=e554] [cursor=pointer]:
+                - /url: /locations/tanah-lot
+            - listitem [ref=e555]:
+              - link "Tabanan" [ref=e556] [cursor=pointer]:
+                - /url: /locations/tabanan
+            - listitem [ref=e557]:
+              - link "Denpasar" [ref=e558] [cursor=pointer]:
+                - /url: /locations/denpasar
+            - listitem [ref=e559]:
+              - link "Gianyar" [ref=e560] [cursor=pointer]:
+                - /url: /locations/gianyar
+            - listitem [ref=e561]:
+              - link "Tegallalang" [ref=e562] [cursor=pointer]:
+                - /url: /locations/tegallalang
+            - listitem [ref=e563]:
+              - link "Amed" [ref=e564] [cursor=pointer]:
+                - /url: /locations/amed
+            - listitem [ref=e565]:
+              - link "Lovina" [ref=e566] [cursor=pointer]:
+                - /url: /locations/lovina
+            - listitem [ref=e567]:
+              - link "Candidasa" [ref=e568] [cursor=pointer]:
+                - /url: /locations/candidasa
+            - listitem [ref=e569]:
+              - link "Padang Bai" [ref=e570] [cursor=pointer]:
+                - /url: /locations/padang-bai
+            - listitem [ref=e571]:
+              - link "Ungasan" [ref=e572] [cursor=pointer]:
+                - /url: /locations/ungasan
+            - listitem [ref=e573]:
+              - link "Pecatu" [ref=e574] [cursor=pointer]:
+                - /url: /locations/pecatu
+            - listitem [ref=e575]:
+              - link "Jakarta" [ref=e576] [cursor=pointer]:
+                - /url: /locations/jakarta
+            - listitem [ref=e577]:
+              - link "Menteng" [ref=e578] [cursor=pointer]:
+                - /url: /locations/menteng
+            - listitem [ref=e579]:
+              - link "Kemang" [ref=e580] [cursor=pointer]:
+                - /url: /locations/kemang
+            - listitem [ref=e581]:
+              - link "SCBD" [ref=e582] [cursor=pointer]:
+                - /url: /locations/scbd
+            - listitem [ref=e583]:
+              - link "Pondok Indah" [ref=e584] [cursor=pointer]:
+                - /url: /locations/pondok-indah
+            - listitem [ref=e585]:
+              - link "BSD City" [ref=e586] [cursor=pointer]:
+                - /url: /locations/bsd
+            - listitem [ref=e587]:
+              - link "Jakarta Expansion" [ref=e588] [cursor=pointer]:
+                - /url: /jakarta
+            - listitem [ref=e589]:
+              - link "Private Chef Jakarta" [ref=e590] [cursor=pointer]:
+                - /url: /jakarta
+            - listitem [ref=e591]:
+              - link "Chef in Menteng" [ref=e592] [cursor=pointer]:
+                - /url: /private-chef-menteng
+        - generic [ref=e593]:
+          - heading "Planning Guides" [level=4] [ref=e594]
+          - list [ref=e595]:
+            - listitem [ref=e596]:
+              - link "Help Center" [ref=e597] [cursor=pointer]:
+                - /url: /help
+            - listitem [ref=e598]:
+              - link "Pricing Guide" [ref=e599] [cursor=pointer]:
+                - /url: /help/pricing
+            - listitem [ref=e600]:
+              - link "Menu Planning" [ref=e601] [cursor=pointer]:
+                - /url: /help/menu-guide
+            - listitem [ref=e602]:
+              - link "Wedding Guide" [ref=e603] [cursor=pointer]:
+                - /url: /help/wedding-guide
+            - listitem [ref=e604]:
+              - link "Corporate Guide" [ref=e605] [cursor=pointer]:
+                - /url: /help/corporate-guide
+            - listitem [ref=e606]:
+              - link "Staffing Guide" [ref=e607] [cursor=pointer]:
+                - /url: /help/staffing-guide
+            - listitem [ref=e608]:
+              - link "myCHEF Journal" [ref=e609] [cursor=pointer]:
+                - /url: /journal
+      - generic [ref=e610]:
+        - link "Catering" [ref=e611] [cursor=pointer]:
+          - /url: /catering
+        - link "Locations" [ref=e612] [cursor=pointer]:
+          - /url: /locations
+        - link "Help" [ref=e613] [cursor=pointer]:
+          - /url: /help
+        - link "About" [ref=e614] [cursor=pointer]:
+          - /url: /about
+        - link "Services" [ref=e615] [cursor=pointer]:
+          - /url: /services
+        - link "Pricing" [ref=e616] [cursor=pointer]:
+          - /url: /pricing
+        - link "Price Calculator" [ref=e617] [cursor=pointer]:
+          - /url: /calculator
+        - link "FAQ" [ref=e618] [cursor=pointer]:
+          - /url: /faq
+        - link "Reviews" [ref=e619] [cursor=pointer]:
+          - /url: /reviews
+        - link "Why myCHEF" [ref=e620] [cursor=pointer]:
+          - /url: /why-mychef
+        - link "Press" [ref=e621] [cursor=pointer]:
+          - /url: /press
+        - link "Join the Team" [ref=e622] [cursor=pointer]:
+          - /url: /join-our-team
+        - link "Partner Platform" [ref=e623] [cursor=pointer]:
+          - /url: /partner-platform
+        - link "Journal" [ref=e624] [cursor=pointer]:
+          - /url: /journal
+        - link "Blog & Guides" [ref=e625] [cursor=pointer]:
+          - /url: /blog
+        - link "Book Now" [ref=e626] [cursor=pointer]:
+          - /url: /quote
+      - generic [ref=e627]:
+        - link "Staff Login" [ref=e628] [cursor=pointer]:
+          - /url: /partner-platform
+          - img [ref=e629]
+          - text: Staff Login
+        - generic [ref=e632]:
+          - link "Terms of Service" [ref=e633] [cursor=pointer]:
+            - /url: /terms
+          - generic [ref=e634]: •
+          - link "Privacy Policy" [ref=e635] [cursor=pointer]:
+            - /url: /privacy
+          - generic [ref=e636]: •
+          - link "Cancellation Policy" [ref=e637] [cursor=pointer]:
+            - /url: /cancellation
+      - paragraph [ref=e640]: © 2026 myCHEF.id. All rights reserved.
+  - button "Open myCHEF Concierge" [ref=e642] [cursor=pointer]:
+    - img [ref=e644]
+    - generic [ref=e646]: Ask myCHEF
+  - generic [ref=e648]:
+    - generic: Chat with us on WhatsApp
+    - link "Chat with us on WhatsApp" [ref=e649] [cursor=pointer]:
+      - /url: https://wa.me/6282237565997?text=Hi%20myCHEF!%20I'd%20like%20to%20enquire%20about%20your%20services.
+      - img [ref=e650]

@@ -1,0 +1,312 @@
+import { useMemo, useState } from 'react'
+import { Calculator, ChevronDown, MessageCircle } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
+
+type ServiceType = 'private-chef-dinner' | 'catering-event' | 'fine-dining-experience' | 'staffing'
+type GuestRange = '2-4' | '5-10' | '11-20' | '20+'
+type DurationKey = '2-hours' | '3-hours' | 'half-day' | 'full-day'
+
+interface PricingCalculatorProps {
+  compact?: boolean
+  collapsible?: boolean
+  defaultOpen?: boolean
+  hideHeader?: boolean
+  title?: string
+  description?: string
+  className?: string
+}
+
+const SERVICE_OPTIONS: { value: ServiceType; label: string; badge?: string }[] = [
+  { value: 'private-chef-dinner', label: 'Private Dinner', badge: 'Most Popular' },
+  { value: 'catering-event', label: 'Catering Event' },
+  { value: 'fine-dining-experience', label: 'Fine Dining Experience' },
+  { value: 'staffing', label: 'Staffing' },
+]
+
+const GUEST_OPTIONS: { value: GuestRange; label: string; minGuests: number }[] = [
+  { value: '2-4', label: '2–4', minGuests: 2 },
+  { value: '5-10', label: '5–10', minGuests: 5 },
+  { value: '11-20', label: '11–20', minGuests: 11 },
+  { value: '20+', label: '20+', minGuests: 20 },
+]
+
+const DURATION_OPTIONS: { value: DurationKey; label: string; multiplier: number }[] = [
+  { value: '2-hours', label: '2 hours', multiplier: 1 },
+  { value: '3-hours', label: '3 hours', multiplier: 1.2 },
+  { value: 'half-day', label: 'Half day', multiplier: 1.5 },
+  { value: 'full-day', label: 'Full day', multiplier: 2 },
+]
+
+function formatEstimateIDR(value: number) {
+  return `IDR ${Math.round(value).toLocaleString('id-ID')}`
+}
+
+function recommendedWaiters(guestCount: number) {
+  return Math.max(1, Math.ceil(guestCount / 8))
+}
+
+export default function PricingCalculator({
+  compact = false,
+  collapsible = false,
+  defaultOpen = true,
+  hideHeader = false,
+  title = 'Quick estimate',
+  description = 'Choose your service, guest count and timing to see a live starting price.',
+  className = '',
+}: PricingCalculatorProps) {
+  const [serviceType, setServiceType] = useState<ServiceType>('private-chef-dinner')
+  const [guestRange, setGuestRange] = useState<GuestRange>('2-4')
+  const [duration, setDuration] = useState<DurationKey>('2-hours')
+  const [includeWaiters, setIncludeWaiters] = useState(false)
+  const [waiterCount, setWaiterCount] = useState(1)
+  const [includeBartender, setIncludeBartender] = useState(false)
+  const [includeSommelier, setIncludeSommelier] = useState(false)
+  const [includeFloatingBreakfast, setIncludeFloatingBreakfast] = useState(false)
+  const [isOpen, setIsOpen] = useState(defaultOpen)
+
+  const selectedService = SERVICE_OPTIONS.find((option) => option.value === serviceType) ?? SERVICE_OPTIONS[0]
+  const selectedGuests = GUEST_OPTIONS.find((option) => option.value === guestRange) ?? GUEST_OPTIONS[0]
+  const selectedDuration = DURATION_OPTIONS.find((option) => option.value === duration) ?? DURATION_OPTIONS[0]
+  const baseWaiters = recommendedWaiters(selectedGuests.minGuests)
+
+  const serviceSubtotal = useMemo(() => {
+    const guestCount = selectedGuests.minGuests
+    const multiplier = selectedDuration.multiplier
+
+    switch (serviceType) {
+      case 'private-chef-dinner':
+        return (guestCount * 450_000 + 500_000) * multiplier
+      case 'catering-event':
+        return (guestCount * 350_000 + 1_500_000) * multiplier
+      case 'fine-dining-experience':
+        return (guestCount * 850_000 + 750_000) * multiplier
+      case 'staffing':
+        return baseWaiters * 350_000 * multiplier
+      default:
+        return 0
+    }
+  }, [baseWaiters, selectedDuration.multiplier, selectedGuests.minGuests, serviceType])
+
+  const addOnsTotal = useMemo(() => {
+    const guestCount = selectedGuests.minGuests
+
+    return (
+      (includeWaiters ? waiterCount * 350_000 : 0) +
+      (includeBartender ? 450_000 : 0) +
+      (includeSommelier ? 650_000 : 0) +
+      (includeFloatingBreakfast ? guestCount * 150_000 : 0)
+    )
+  }, [includeBartender, includeFloatingBreakfast, includeSommelier, includeWaiters, selectedGuests.minGuests, waiterCount])
+
+  const estimatedTotal = Math.round(serviceSubtotal + addOnsTotal)
+
+  const selectedAddOns = [
+    includeWaiters ? `${waiterCount} waiter${waiterCount > 1 ? 's' : ''}` : null,
+    includeBartender ? 'bartender' : null,
+    includeSommelier ? 'sommelier' : null,
+    includeFloatingBreakfast ? 'floating breakfast' : null,
+  ].filter(Boolean)
+
+  const whatsappText = encodeURIComponent(
+    `Hi myCHEF, I'd like a quote for ${selectedService.label}. Guests: ${selectedGuests.label}. Duration: ${selectedDuration.label}.${selectedAddOns.length ? ` Add-ons: ${selectedAddOns.join(', ')}.` : ''}`,
+  )
+
+  const calculatorBody = (
+    <div className={`${compact ? 'rounded-[28px] p-5 md:p-6' : 'rounded-[32px] p-6 md:p-8'} border border-[#E5D9B5] bg-white shadow-[0_24px_80px_rgba(0,0,0,0.06)]`}>
+      {!hideHeader && !collapsible && (
+        <div className="mb-8 text-center">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#FAF2D4] px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#8A6F15]">
+            <Calculator className="h-4 w-4" />
+            {title}
+          </div>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-[#4A4745]">{description}</p>
+        </div>
+      )}
+
+      <div className={`grid gap-6 ${compact ? 'lg:grid-cols-1' : 'xl:grid-cols-[1.2fr_0.8fr]'}`}>
+        <div className="space-y-6">
+          <fieldset>
+            <legend className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em] text-[#8A7A47]">
+              Service type
+            </legend>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {SERVICE_OPTIONS.map((option) => {
+                const isActive = serviceType === option.value
+                return (
+                  <label
+                    key={option.value}
+                    className={`cursor-pointer rounded-2xl border px-4 py-3 text-sm font-semibold transition ${isActive ? 'border-[#C5A028] bg-[#FAF2D4] text-[#1A1A1A]' : 'border-[#E5DED0] bg-[#FAFAF8] text-[#4A4745] hover:border-[#C5A028]/60'}`}
+                  >
+                    <input
+                      type="radio"
+                      name="service-type"
+                      value={option.value}
+                      checked={serviceType === option.value}
+                      onChange={() => setServiceType(option.value)}
+                      className="sr-only"
+                    />
+                    <div className="flex items-start justify-between gap-3">
+                      <span>{option.label}</span>
+                      {option.badge && (
+                        <span className="rounded-full bg-[#C5A028] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white">
+                          {option.badge}
+                        </span>
+                      )}
+                    </div>
+                  </label>
+                )
+              })}
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em] text-[#8A7A47]">Number of guests</legend>
+            <div className="grid grid-cols-2 gap-3">
+              {GUEST_OPTIONS.map((option) => {
+                const isActive = guestRange === option.value
+                return (
+                  <label
+                    key={option.value}
+                    className={`cursor-pointer rounded-2xl border px-4 py-3 text-sm font-semibold transition ${isActive ? 'border-[#C5A028] bg-[#FAF2D4] text-[#1A1A1A]' : 'border-[#E5DED0] bg-[#FAFAF8] text-[#4A4745] hover:border-[#C5A028]/60'}`}
+                  >
+                    <input
+                      type="radio"
+                      name="guest-range"
+                      value={option.value}
+                      checked={guestRange === option.value}
+                      onChange={() => setGuestRange(option.value)}
+                      className="sr-only"
+                    />
+                    {option.label}
+                  </label>
+                )
+              })}
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em] text-[#8A7A47]">Duration</legend>
+            <div className="grid grid-cols-2 gap-3">
+              {DURATION_OPTIONS.map((option) => {
+                const isActive = duration === option.value
+                return (
+                  <label
+                    key={option.value}
+                    className={`cursor-pointer rounded-2xl border px-4 py-3 text-sm font-semibold transition ${isActive ? 'border-[#C5A028] bg-[#FAF2D4] text-[#1A1A1A]' : 'border-[#E5DED0] bg-[#FAFAF8] text-[#4A4745] hover:border-[#C5A028]/60'}`}
+                  >
+                    <input
+                      type="radio"
+                      name="duration"
+                      value={option.value}
+                      checked={duration === option.value}
+                      onChange={() => setDuration(option.value)}
+                      className="sr-only"
+                    />
+                    {option.label}
+                  </label>
+                )
+              })}
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend className="mb-3 block text-xs font-semibold uppercase tracking-[0.22em] text-[#8A7A47]">Add-ons</legend>
+            <div className="space-y-3">
+              <label className="flex items-center justify-between gap-4 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
+                <span className="flex items-center gap-3">
+                  <input type="checkbox" checked={includeWaiters} onChange={(event) => setIncludeWaiters(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-[#C5A028]" />
+                  + Waiters (+IDR 350K each)
+                </span>
+                {includeWaiters && (
+                  <select
+                    aria-label="Waiter quantity"
+                    value={waiterCount}
+                    onChange={(event) => setWaiterCount(Number(event.target.value))}
+                    className="rounded-xl border border-[#DDD4BF] bg-white px-3 py-2 text-xs font-semibold text-[#1A1A1A] outline-none"
+                  >
+                    {[1, 2, 3, 4].map((count) => (
+                      <option key={count} value={count}>{count}</option>
+                    ))}
+                  </select>
+                )}
+              </label>
+
+              <label className="flex items-center gap-3 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
+                <input type="checkbox" checked={includeBartender} onChange={(event) => setIncludeBartender(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-[#C5A028]" />
+                + Bartender (+IDR 450K)
+              </label>
+
+              <label className="flex items-center gap-3 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
+                <input type="checkbox" checked={includeSommelier} onChange={(event) => setIncludeSommelier(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-[#C5A028]" />
+                + Sommelier (+IDR 650K)
+              </label>
+
+              <label className="flex items-center gap-3 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
+                <input type="checkbox" checked={includeFloatingBreakfast} onChange={(event) => setIncludeFloatingBreakfast(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-[#C5A028]" />
+                + Floating Breakfast (+IDR 150K/person)
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div className="rounded-[28px] bg-[#1A1A1A] p-6 text-white">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028]">Estimated total</p>
+          <p className="mt-4 text-3xl font-playfair leading-tight md:text-4xl">From {formatEstimateIDR(estimatedTotal)}</p>
+          <p className="mt-4 text-sm leading-relaxed text-white/[75%]">
+            Based on {selectedService.label.toLowerCase()}, {selectedGuests.label} guests and {selectedDuration.label.toLowerCase()} service.
+          </p>
+          {serviceType === 'staffing' && (
+            <p className="mt-3 text-sm leading-relaxed text-white/[75%]">
+              Staffing estimates include a starter crew of {baseWaiters} waiter{baseWaiters > 1 ? 's' : ''} for this guest range.
+            </p>
+          )}
+          <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/[80%]">
+            <div className="flex items-center justify-between gap-4">
+              <span>Core estimate</span>
+              <span>{formatEstimateIDR(serviceSubtotal)}</span>
+            </div>
+            <div className="mt-2 flex items-center justify-between gap-4">
+              <span>Add-ons</span>
+              <span>{formatEstimateIDR(addOnsTotal)}</span>
+            </div>
+          </div>
+          <p className="mt-6 text-sm text-white/[75%]">Final pricing confirmed on WhatsApp. No hidden fees.</p>
+          <p className="mt-3 text-xs uppercase tracking-[0.18em] text-white/[50%]">“From” uses the lowest guest count in your selected range.</p>
+          <Button asChild variant="whatsapp" size="brand" className="mt-6 w-full justify-center">
+            <a href={`https://wa.me/6282237565997?text=${whatsappText}`} target="_blank" rel="noopener noreferrer" data-source="pricing-calculator-cta">
+              <MessageCircle className="h-4 w-4" />
+              Get exact quote on WhatsApp
+            </a>
+          </Button>
+        </div>
+      </div>
+    </div>
+  )
+
+  if (!collapsible) {
+    return <div className={className}>{calculatorBody}</div>
+  }
+
+  return (
+    <Collapsible open={isOpen} onOpenChange={setIsOpen} className={className}>
+      <div className="overflow-hidden rounded-[28px] border border-[#E5D9B5] bg-white shadow-[0_18px_60px_rgba(0,0,0,0.06)]">
+        <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left md:px-6">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#FAF2D4] px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-[#8A6F15]">
+              <Calculator className="h-3.5 w-3.5" />
+              {title}
+            </div>
+            {!hideHeader && <p className="mt-3 text-sm leading-relaxed text-[#4A4745]">{description}</p>}
+          </div>
+          <div className={`rounded-full border border-[#E3D4A2] p-3 text-[#8A6F15] transition-transform ${isOpen ? 'rotate-180' : ''}`}>
+            <ChevronDown className="h-4 w-4" />
+          </div>
+        </CollapsibleTrigger>
+        <CollapsibleContent className="border-t border-[#F0E8D3] px-4 pb-4 pt-2 md:px-6 md:pb-6">
+          {calculatorBody}
+        </CollapsibleContent>
+      </div>
+    </Collapsible>
+  )
+}

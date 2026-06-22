@@ -1,0 +1,117 @@
+Generating 36 images → /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated
+API key: bfl_I4SL...
+  Submitting luna-hero... OK (3bcf6786...)
+  Submitting luna-chef-portrait... OK (631c56aa...)
+  Submitting luna-plating... OK (bf7c58f4...)
+  Submitting luna-table... OK (887b3139...)
+  Submitting luna-team... OK (14e01db7...)
+  Submitting luna-wine... OK (96640f89...)
+  Submitting luna-ingredients... OK (105f5bfa...)
+  Submitting luna-dessert... OK (5caab72d...)
+  Submitting luna-guests... OK (7d98db0b...)
+  Submitting luna-village... OK (733e7dad...)
+  Submitting luna-flame... OK (63e91b8a...)
+  Submitting luna-detail... OK (5a01614d...)
+  Submitting sol-hero... OK (c06a500b...)
+  Submitting sol-chef-portrait... OK (14ce73b7...)
+  Submitting sol-breakfast... OK (f92689b4...)
+  Submitting sol-lunch... OK (be7dd339...)
+  Submitting sol-sunset... OK (ce341c84...)
+  Submitting sol-produce... OK (8f559446...)
+  Submitting sol-cooking... OK (8070f49a...)
+  Submitting sol-kids... OK (59e64a38...)
+  Submitting sol-bbq... OK (b6108710...)
+  Submitting sol-cleanup... OK (06f1291d...)
+  Submitting aura-hero... OK (2202d3b5...)
+  Submitting aura-team... OK (0bab2bef...)
+  Submitting aura-wedding... OK (c3cc0577...)
+  Submitting aura-corporate... OK (0e3c7c82...)
+  Submitting aura-toast... OK (e9b546b0...)
+  Submitting aura-buffet... OK (038d8d83...)
+  Submitting aura-bartender... OK (ecbe7d49...)
+  Submitting aura-tablescape... OK (88b69c75...)
+  Submitting aura-dance... OK (32921ed5...)
+  Submitting aura-setup... OK (9dfad597...)
+  Submitting hub-hero... OK (b5e39a35...)
+  Submitting hub-chef... OK (e9672fad...)
+  Submitting hub-villa... OK (e58f910d...)
+  Submitting hub-bali... OK (3cf2efde...)
+
+Polling for results...
+  [1/36] luna-hero... Ready
+  [2/36] luna-chef-portrait... Ready
+  [3/36] luna-plating... Ready
+  [4/36] luna-table... Ready
+  [5/36] luna-team... Ready
+  [6/36] luna-wine... Ready
+  [7/36] luna-ingredients... Ready
+  [8/36] luna-dessert... Ready
+  [9/36] luna-guests... Ready
+  [10/36] luna-village... Ready
+  [11/36] luna-flame... Ready
+  [12/36] luna-detail... Ready
+  [13/36] sol-hero... Ready
+  [14/36] sol-chef-portrait... Ready
+  [15/36] sol-breakfast... Ready
+  [16/36] sol-lunch... Ready
+  [17/36] sol-sunset... Ready
+  [18/36] sol-produce... Ready
+  [19/36] sol-cooking... Ready
+  [20/36] sol-kids... Ready
+  [21/36] sol-bbq... Ready
+  [22/36] sol-cleanup... Ready
+  [23/36] aura-hero... Ready
+  [24/36] aura-team... Ready
+  [25/36] aura-wedding... Ready
+  [26/36] aura-corporate... Ready
+  [27/36] aura-toast... Ready
+  [28/36] aura-buffet... Ready
+  [29/36] aura-bartender... Ready
+  [30/36] aura-tablescape... Ready
+  [31/36] aura-dance... Ready
+  [32/36] aura-setup... Ready
+  [33/36] hub-hero... Ready
+  [34/36] hub-chef... Ready
+  [35/36] hub-villa... Ready
+  [36/36] hub-bali... Ready
+
+Downloading...
+  luna-hero... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-hero.jpg
+  luna-chef-portrait... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-chef-portrait.jpg
+  luna-plating... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-plating.jpg
+  luna-table... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-table.jpg
+  luna-team... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-team.jpg
+  luna-wine... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-wine.jpg
+  luna-ingredients... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-ingredients.jpg
+  luna-dessert... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-dessert.jpg
+  luna-guests... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-guests.jpg
+  luna-village... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-village.jpg
+  luna-flame... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-flame.jpg
+  luna-detail... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/luna-detail.jpg
+  sol-hero... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/sol-hero.jpg
+  sol-chef-portrait... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/sol-chef-portrait.jpg
+  sol-breakfast... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/sol-breakfast.jpg
+  sol-lunch... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/sol-lunch.jpg
+  sol-sunset... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/sol-sunset.jpg
+  sol-produce... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/sol-produce.jpg
+  sol-cooking... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/sol-cooking.jpg
+  sol-kids... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/sol-kids.jpg
+  sol-bbq... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/sol-bbq.jpg
+  sol-cleanup... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/sol-cleanup.jpg
+  aura-hero... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/aura-hero.jpg
+  aura-team... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/aura-team.jpg
+  aura-wedding... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/aura-wedding.jpg
+  aura-corporate... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/aura-corporate.jpg
+  aura-toast... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/aura-toast.jpg
+  aura-buffet... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/aura-buffet.jpg
+  aura-bartender... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/aura-bartender.jpg
+  aura-tablescape... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/aura-tablescape.jpg
+  aura-dance... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/aura-dance.jpg
+  aura-setup... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/aura-setup.jpg
+  hub-hero... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/hub-hero.jpg
+  hub-chef... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/hub-chef.jpg
+  hub-villa... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/hub-villa.jpg
+  hub-bali... /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/hub-bali.jpg
+
+Done: 36 ready, 0 failed, 0 other
+Manifest saved to /Users/openclaw/Downloads/MYCHEF . MASTER/app/public/generated/manifest.json

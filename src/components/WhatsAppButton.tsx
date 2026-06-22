@@ -2,7 +2,7 @@ import { MessageCircle } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
 import { trackWhatsAppClick } from '@/lib/analytics'
 
-const WHATSAPP_NUMBER = '491635080236'
+const WHATSAPP_NUMBER = '628113803488'
 const WHATSAPP_MESSAGE = "Hi myCHEF! I'd like to enquire about your services."
 
 function getPageSource(pathname: string) {

@@ -20,7 +20,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20baby%20shower.'
+const WA_LINK = 'https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20baby%20shower.'
 const SITE = 'https://mychef.id'
 const ACCENT = '#2C5F7C'
 

@@ -24,7 +24,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20a%20grazing%20table%20in%20Bali.'
+const WA_LINK = 'https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20a%20grazing%20table%20in%20Bali.'
 const SITE = 'https://mychef.id'
 const PAGE_URL = `${SITE}/catering/grazing-tables`
 

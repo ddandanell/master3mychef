@@ -1,0 +1,36 @@
+AGENT 4 RESULT — EmailCaptureBar Lead Magnet
+=============================================
+Status: COMPLETE
+Commit: 6f6352f
+Branch: main → pushed to origin
+
+FILES CREATED
+─────────────
+src/components/EmailCaptureBar.tsx
+  - Mid-page banner component (not a popup)
+  - Gold (#C5A028) left accent bar matching site theme
+  - WhatsApp CTA: wa.me/491635080236?text=Hi%2C+I%27d+like+the+free+Bali+Private+Chef+Price+Guide+please
+  - Dismissible: localStorage key 'priceguide_dismissed'
+  - SSR-safe localStorage check: typeof window !== 'undefined'
+  - No any types, no unused imports — TypeScript strict compliant
+
+FILES MODIFIED
+──────────────
+src/pages/HowToHirePrivateChefPage.tsx
+  - EmailCaptureBar inserted after 'what-they-do' section (section 2 of 8)
+  - Renders as custom section between chef role overview and chef types
+
+src/pages/PricingPage.tsx
+  - EmailCaptureBar inserted after 'pricing-calculator' section (section 2 of 7)
+  - Renders after the live pricing calculator, before fine dining pricing table
+
+src/pages/FineDiningGuidePage.tsx
+  - EmailCaptureBar inserted after 'private-vs-restaurant' section (section 3 of 6)
+  - Renders after the comparison table, before planning steps
+
+TYPESCRIPT CHECK
+────────────────
+EmailCaptureBar.tsx: 0 errors (verified with tsc --noEmit)
+All 3 modified pages: 0 new errors introduced
+
+NOTE: Pre-existing errors in ChefHiringGuidePage.tsx (unrelated to this task) exist in the repo.

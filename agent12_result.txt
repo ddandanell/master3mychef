@@ -1,0 +1,197 @@
+MYCHEF.ID — DEPLOYMENT VERIFICATION REPORT
+Agent 12 | Date: 2026-06-21
+============================================================
+
+## DEPLOYMENT STATUS
+
+### Deployment #1 (Most Recent) — FAILED
+  ID:       dpl_79jr8kycZpQxN5sppEz2QpRH6Hbn
+  SHA:      f59ef261032b28aae0e172192a0fdaa547f9bddf
+  Commit:   seo: add AggregateRating schema to 6 Bali location pages
+            (Canggu, Ubud, Seminyak, Uluwatu, Nusa Dua, Jimbaran)
+  State:    ERROR — build failed, never reached production
+  Root cause: TypeScript compile errors in src/pages/ChefHiringGuidePage.tsx
+              Lines 123–137: multiple TS1005/TS1109/TS1128/TS1137 errors
+              ("',' expected", "Expression expected", "Declaration or
+              statement expected")
+              Build exited with code 2: "ELIFECYCLE Command failed"
+  Impact:   AggregateRating schema for 6 Bali location pages NOT deployed.
+            Production site continues running previous deployment.
+
+### Deployment #2 (Active Production) — READY
+  ID:       dpl_ETx4myMuumrn6S3JPK59ZeXQiYuY
+  SHA:      5016a431be2b1dd1dc2e8b7cf9f358c8b0302cbe
+  Commit:   fix: add 301 redirect for /private-chef-puri-indah → /locations/jakarta
+  State:    READY — currently serving production traffic at https://mychef.id
+  Note:     This deployment also includes BlogPosting schema from
+            dpl_2drGrkvP79QtMTHR1xHUdnd3GhRH (SHA d6f71b9f) which was
+            part of the chain before it.
+
+============================================================
+
+## PAGE VERIFICATION — DESKTOP (1280x800)
+
+### 1. https://mychef.id/blog/how-to-hire-private-chef
+  Status:     FAIL — 404 "Page Not Found"
+  Title:      "Page Not Found | myCHEF — Private Chef Bali"
+  H1:         "This page took a holiday in Bali"
+  Schemas:    Organization, LocalBusiness, Service x5, WebSite, BreadcrumbList
+              (global schemas only — no page-specific BlogPosting)
+  Root cause: The route slug registered in route-slugs.ts is
+              'blog/how-to-hire-private-chef-bali-complete-guide'
+              but the page component (HowToHirePrivateChefPage.tsx) and all
+              internal links use the short slug
+              'blog/how-to-hire-private-chef'. The router never registers
+              the short form, so the URL 404s.
+  Fix needed: Either add 'blog/how-to-hire-private-chef' to BLOG_POST_SLUGS
+              in route-slugs.ts, OR add a 301 redirect from the short URL to
+              the registered long URL, OR change the component slug to match.
+
+### 2. https://mychef.id/blog/chef-hiring-guide
+  Status:     PASS
+  Title:      "Chef Qualifications & Credentials Bali | Private Chef Hiring Guide"
+  H1:         "Chef Qualifications & Credentials: Hiring Guide for Bali"
+  Navigation: Present
+  Images:     2 loaded, 0 broken
+  Schemas:    Organization, LocalBusiness, Service x5, WebSite, BreadcrumbList,
+              Service, LocalBusiness, FAQPage, BreadcrumbList, BlogPosting
+  BlogPosting schema: PRESENT — PASS
+  Notes:      Full schema coverage. FAQPage + BlogPosting both present.
+
+### 3. https://mychef.id/locations/jakarta
+  Status:     PASS
+  Title:      "Private Chef Jakarta | Corporate & Villa Dining — myCHEF"
+  H1:         "Private Chefin Jakarta"
+  Navigation: Present
+  Images:     2 loaded, 0 broken
+  Schemas:    Organization, LocalBusiness, Service x5, WebSite,
+              LocalBusiness, BreadcrumbList, FAQPage, Service
+  Notes:      LocalBusiness + FAQPage present. No AggregateRating (that
+              commit failed to deploy — only affects Bali pages anyway).
+
+### 4. https://mychef.id (Homepage)
+  Status:     PASS
+  Title:      "Private Chef Bali | Villa Dining, Catering & Events — myCHEF"
+  H1:         "A Michelin-Trained Private Chef, in Your Bali Villa."
+  Navigation: Present (mobile menu button detected)
+  Images:     20 total, 0 broken (after render)
+  Schemas:    Organization, LocalBusiness, Service x5, WebSite,
+              FoodEstablishment, WebSite, BreadcrumbList, Organization,
+              Service x5, FAQPage
+  Notes:      Rich schema coverage. All images rendered correctly.
+
+============================================================
+
+## REDIRECT CHECK
+
+  /private-chef-puri-indah → /locations/jakarta
+  Result:     PASS — redirect works correctly
+  Final URL:  https://mychef.id/locations/jakarta
+  Title after redirect: "Private Chef Jakarta | Corporate & Villa Dining — myCHEF"
+  Deployed in: dpl_ETx4myMuumrn6S3JPK59ZeXQiYuY (active production)
+
+============================================================
+
+## PAGE VERIFICATION — MOBILE (375x812 simulated)
+
+Note: Chrome extension resize sets OS window size; browser viewport reported
+as ~594x635 (Chrome UI chrome overhead). Mobile layout verified via
+hasMobileMenu detection and responsive element checks.
+
+### 1. https://mychef.id (Homepage) — Mobile
+  Status:     PASS
+  H1:         "A Michelin-Trained Private Chef, in Your Bali Villa."
+  Mobile menu button: DETECTED
+  Navigation: PRESENT
+  Images:     20 total, 0 broken
+  Schemas:    Full schema set present (same as desktop)
+
+### 2. https://mychef.id/blog/chef-hiring-guide — Mobile
+  Status:     PASS
+  H1:         "Chef Qualifications & Credentials: Hiring Guide for Bali"
+  Mobile menu button: DETECTED
+  Navigation: PRESENT
+  Images:     0 broken
+  BlogPosting schema: PRESENT
+
+### 3. https://mychef.id/locations/jakarta — Mobile
+  Status:     PASS
+  H1:         "Private Chefin Jakarta"
+  Mobile menu button: DETECTED
+  Navigation: PRESENT
+  Images:     0 broken
+  LocalBusiness + FAQPage schema: PRESENT
+
+### 4. https://mychef.id/blog/how-to-hire-private-chef — Mobile
+  Status:     FAIL — 404 (same as desktop, route not registered)
+
+============================================================
+
+## SCHEMA SUMMARY
+
+  Page                              BlogPosting   FAQPage   LocalBusiness   AggRating
+  /blog/how-to-hire-private-chef    N/A (404)     N/A       N/A             N/A
+  /blog/chef-hiring-guide           PRESENT       PRESENT   PRESENT         —
+  /locations/jakarta                —             PRESENT   PRESENT         —
+  / (homepage)                      —             PRESENT   PRESENT         —
+
+============================================================
+
+## ISSUES FOUND
+
+  CRITICAL
+  --------
+  1. BUILD FAILURE — dpl_79jr8kycZpQxN5sppEz2QpRH6Hbn (f59ef26)
+     TypeScript errors in ChefHiringGuidePage.tsx lines 123–137.
+     AggregateRating schema for 6 Bali location pages never deployed.
+     The TS errors appear to be a syntax issue introduced in this commit
+     that broke the build — the local file at that line looks clean but
+     the committed version has a syntax problem.
+
+  HIGH
+  ----
+  2. PAGE 404 — /blog/how-to-hire-private-chef
+     Route slug mismatch: component uses short slug, router only knows
+     long slug (blog/how-to-hire-private-chef-bali-complete-guide).
+     This page is referenced in internal links across the site (HubPage,
+     ChefHiringGuidePage, FineDiningGuidePage) and appears in BlogPage
+     listing — all those links are dead.
+     Fix: Add 'blog/how-to-hire-private-chef' to BLOG_POST_SLUGS in
+     src/data/route-slugs.ts
+
+  LOW
+  ---
+  3. H1 TYPO on /locations/jakarta
+     H1 reads "Private Chefin Jakarta" — appears to be a copy/paste
+     artifact ("Chefin" should be "Chef in"). Minor copy issue.
+
+============================================================
+
+## WHAT IS WORKING CORRECTLY
+
+  - Homepage loads, correct title, rich schema, mobile menu present
+  - /blog/chef-hiring-guide loads with BlogPosting + FAQPage schema (PASS)
+  - /locations/jakarta loads with LocalBusiness + FAQPage schema (PASS)
+  - Redirect /private-chef-puri-indah → /locations/jakarta works (PASS)
+  - Mobile menu button present on all passing pages
+  - No broken images on passing pages
+  - Navigation present on all pages
+
+============================================================
+
+## RECOMMENDED ACTIONS (priority order)
+
+  1. Fix ChefHiringGuidePage.tsx syntax error in commit f59ef26 and redeploy
+     to get AggregateRating schema live for 6 Bali location pages.
+
+  2. Add 'blog/how-to-hire-private-chef' to BLOG_POST_SLUGS in
+     src/data/route-slugs.ts (one line fix), then also add the short slug
+     to the inject-meta.ts SITEMAP entries so the pre-rendered HTML is
+     generated. This will fix the 404 on a high-traffic blog page with
+     internal links pointing to it.
+
+  3. Fix H1 copy on JakartaPage: "Private Chefin Jakarta" → "Private Chef
+     in Jakarta".
+
+============================================================
+END OF REPORT

@@ -20,7 +20,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/491635080236?text=Hi%20myCHEF,%20I%20would%20like%20a%20wedding%20consultation.'
+const WA_LINK = 'https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20a%20wedding%20consultation.'
 const SITE = 'https://mychef.id'
 const ACCENT = '#C5A028'
 

@@ -191,6 +191,25 @@ export default function ServiceBartendersPage() {
         </div>
       </section>
 
+      {/* Photo gallery */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader eyebrow="Gallery" title="In the mix" subtitle="Real villa-bar moments across Bali." />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+            {[
+              { src: '/generated/mychef-bartenders-1.webp', alt: 'Balinese bartender pouring a cocktail at a Bali villa party' },
+              { src: '/generated/mychef-bartenders-2.webp', alt: 'Balinese bartender shaking drinks at a poolside villa bar at dusk' },
+              { src: '/generated/mychef-bartenders-3.webp', alt: 'Balinese bartender serving cocktails to guests at a Bali villa event' },
+              { src: '/generated/mychef-bartenders-4.webp', alt: 'Balinese bartender with a full premium bar setup at golden hour' },
+            ].map((g) => (
+              <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
+                <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TestimonialBlock
         testimonials={[
           { name: 'Tom & Lisa', location: 'Melbourne', quote: 'The bartender created a signature cocktail for our wedding. Guests are still talking about it six months later. Absolute professional.', rating: 5 },

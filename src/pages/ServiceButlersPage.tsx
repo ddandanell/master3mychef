@@ -206,6 +206,25 @@ export default function ServiceButlersPage() {
         </div>
       </section>
 
+      {/* Photo gallery */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader eyebrow="Gallery" title="The butler's touch" subtitle="Seamless villa hospitality across Bali." />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+            {[
+              { src: '/generated/mychef-butlers-1.webp', alt: 'Balinese butler serving breakfast on a Bali villa terrace' },
+              { src: '/generated/mychef-butlers-2.webp', alt: 'Balinese butler welcoming guests at a luxury Bali villa entrance' },
+              { src: '/generated/mychef-butlers-3.webp', alt: 'Balinese butler attending to guests by the Bali villa pool' },
+              { src: '/generated/mychef-butlers-4.webp', alt: 'Balinese butler arranging a welcome amenity at a Bali villa' },
+            ].map((g) => (
+              <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
+                <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TestimonialBlock
         testimonials={[
           { name: 'The Harrison Family', location: 'New York', quote: 'Our butler made the two-week stay effortless. He anticipated everything — from breakfast preferences to excursion planning. Worth every rupiah.', rating: 5 },

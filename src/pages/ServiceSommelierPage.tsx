@@ -206,6 +206,25 @@ export default function ServiceSommelierPage() {
         </div>
       </section>
 
+      {/* Photo gallery */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader eyebrow="Gallery" title="The wine moment" subtitle="Pairings and pours at Bali villas." />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+            {[
+              { src: '/generated/mychef-sommelier-1.webp', alt: 'Balinese sommelier presenting wine to guests at a Bali villa dinner' },
+              { src: '/generated/mychef-sommelier-2.webp', alt: 'Balinese sommelier pouring wine at a candlelit Bali villa table' },
+              { src: '/generated/mychef-sommelier-3.webp', alt: 'Balinese sommelier decanting wine at a Bali villa' },
+              { src: '/generated/mychef-sommelier-4.webp', alt: 'Balinese sommelier guiding a wine tasting on a Bali villa terrace' },
+            ].map((g) => (
+              <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
+                <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TestimonialBlock
         testimonials={[
           { name: 'Richard & Anne', location: 'London', quote: 'The sommelier transformed our anniversary dinner. Each wine was perfectly matched, and the stories behind each bottle made the evening unforgettable.', rating: 5 },

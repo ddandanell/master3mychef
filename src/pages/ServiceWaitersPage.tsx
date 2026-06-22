@@ -210,6 +210,25 @@ export default function ServiceWaitersPage() {
       </section>
 
       {/* Testimonials */}
+      {/* Photo gallery */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader eyebrow="Gallery" title="At your service" subtitle="Polished villa service across Bali." />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+            {[
+              { src: '/generated/mychef-waiters-1.webp', alt: 'Balinese waiter serving a plated dish to guests at a Bali villa dinner' },
+              { src: '/generated/mychef-waiters-2.webp', alt: 'Balinese waiters carrying drinks to guests by a Bali villa pool' },
+              { src: '/generated/mychef-waiters-3.webp', alt: 'Balinese waiter pouring wine at a candlelit Bali villa dinner' },
+              { src: '/generated/mychef-waiters-4.webp', alt: 'Balinese waiter setting an elegant table on a Bali villa terrace' },
+            ].map((g) => (
+              <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
+                <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TestimonialBlock
         testimonials={[
           { name: 'Sarah & James', location: 'London', quote: 'The waiters were impeccable. Discreet, professional, and anticipated every need. Our villa dinner felt like a Michelin restaurant.', rating: 5 },

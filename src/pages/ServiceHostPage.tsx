@@ -191,6 +191,25 @@ export default function ServiceHostPage() {
         </div>
       </section>
 
+      {/* Photo gallery */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader eyebrow="Gallery" title="Hosting done right" subtitle="Warm welcomes at Bali villa events." />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+            {[
+              { src: '/generated/mychef-host-1.webp', alt: 'Balinese hostess welcoming guests at a Bali villa event' },
+              { src: '/generated/mychef-host-2.webp', alt: 'Balinese host coordinating a Bali villa dinner party' },
+              { src: '/generated/mychef-host-3.webp', alt: 'Balinese hostess guiding guests at a Bali villa celebration' },
+              { src: '/generated/mychef-host-4.webp', alt: 'Balinese host and hostess greeting arriving guests at a Bali villa' },
+            ].map((g) => (
+              <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
+                <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TestimonialBlock
         testimonials={[
           { name: 'Wedding Couple', location: 'Melbourne', quote: 'Our host team of 4 managed 120 guests flawlessly. Registration, seating, timeline — everything ran like clockwork. We did not worry about a thing.', rating: 5 },

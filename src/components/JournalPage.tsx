@@ -151,7 +151,25 @@ export function JournalPostPage() {
 
   const canonical = `${SITE}/journal/${post.slug}`
   const category = JOURNAL_CATEGORIES.find((c) => c.slug === post.category)
-  
+
+  // Article schema: image (Google-recommended field). Use the first image in the
+  // post body if present (made absolute), else the site OG fallback.
+  const firstImgMatch = post.content.match(/<img[^>]+src="([^"]+)"/)
+  const rawImg = firstImgMatch?.[1] ?? '/mychef-misc-bali-og-image.webp'
+  const articleImage = rawImg.startsWith('http') ? rawImg : `${SITE}${rawImg}`
+
+  // Article schema: author. Real chef authors are People (E-E-A-T) and link to
+  // their profile page when one exists; the in-house byline stays Organization.
+  const AUTHOR_PROFILES: Record<string, string> = { Adriano: `${SITE}/chefs/adriano` }
+  const isOrgAuthor = /team|mychef/i.test(post.author)
+  const articleAuthor = isOrgAuthor
+    ? { '@type': 'Organization', name: 'myCHEF', url: SITE }
+    : {
+        '@type': 'Person',
+        name: post.author,
+        ...(AUTHOR_PROFILES[post.author] ? { url: AUTHOR_PROFILES[post.author] } : {}),
+      }
+
   const postIndex = JOURNAL_POSTS.findIndex((p) => p.slug === slug)
   const prevPost = postIndex < JOURNAL_POSTS.length - 1 ? JOURNAL_POSTS[postIndex + 1] : null
   const nextPost = postIndex > 0 ? JOURNAL_POSTS[postIndex - 1] : null
@@ -184,7 +202,8 @@ export function JournalPostPage() {
             url: canonical,
             datePublished: post.date,
             dateModified: post.date,
-            author: { '@type': 'Organization', name: 'myCHEF', url: SITE },
+            image: articleImage,
+            author: articleAuthor,
             publisher: {
               '@type': 'Organization',
               name: 'myCHEF',

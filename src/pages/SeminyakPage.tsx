@@ -82,13 +82,6 @@ export default function SeminyakPage() {
       '@type': 'Place',
       name: 'Seminyak, Bali',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '640',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

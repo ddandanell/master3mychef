@@ -79,13 +79,6 @@ export default function SanurPage() {
     name: 'myCHEF.id Sanur',
     description: 'Private chef, family villa dining, sunrise breakfast service, and celebration catering in Sanur, Bali',
     areaServed: { '@type': 'Place', name: 'Sanur, Bali' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '430',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

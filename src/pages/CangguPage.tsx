@@ -82,13 +82,6 @@ export default function CangguPage() {
       '@type': 'Place',
       name: 'Canggu, Bali',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '620',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

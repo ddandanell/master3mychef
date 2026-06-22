@@ -79,13 +79,6 @@ export default function JimbaranPage() {
     name: 'myCHEF.id Jimbaran',
     description: 'Private chef, seafood villa dining, bayfront BBQ, and celebration catering in Jimbaran, Bali',
     areaServed: { '@type': 'Place', name: 'Jimbaran, Bali' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '460',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

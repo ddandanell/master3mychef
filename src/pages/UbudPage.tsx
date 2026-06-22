@@ -82,13 +82,6 @@ export default function UbudPage() {
       '@type': 'Place',
       name: 'Ubud, Bali',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '490',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

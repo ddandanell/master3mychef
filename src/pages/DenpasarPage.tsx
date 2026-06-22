@@ -79,13 +79,6 @@ export default function DenpasarPage() {
     name: 'myCHEF.id Denpasar',
     description: 'Private chef, home dining, business lunch catering, and recurring meal service in Denpasar, Bali',
     areaServed: { '@type': 'Place', name: 'Denpasar, Bali' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '350',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

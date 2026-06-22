@@ -82,13 +82,6 @@ export default function PererenanPage() {
       '@type': 'Place',
       name: 'Pererenan, Bali',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '410',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

@@ -79,13 +79,6 @@ export default function NusaDuaPage() {
     name: 'myCHEF.id Nusa Dua',
     description: 'Private chef, resort-style fine dining, corporate catering, and executive event service in Nusa Dua, Bali',
     areaServed: { '@type': 'Place', name: 'Nusa Dua, Bali' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '390',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

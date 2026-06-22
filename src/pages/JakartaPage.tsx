@@ -100,13 +100,6 @@ export default function JakartaPage() {
     ],
     priceRange: 'IDR 1,500,000 – IDR 8,000,000',
     image: 'https://mychef.id/og-image.webp',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '560',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

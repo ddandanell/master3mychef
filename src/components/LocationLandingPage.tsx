@@ -25,13 +25,6 @@ export default function LocationLandingPage({ config }: { config: LocationLandin
       latitude: config.coordinates.latitude,
       longitude: config.coordinates.longitude,
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '560',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   const serviceSchema = {

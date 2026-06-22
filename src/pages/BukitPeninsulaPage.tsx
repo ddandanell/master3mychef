@@ -79,13 +79,6 @@ export default function BukitPeninsulaPage() {
     name: 'myCHEF.id Bukit Peninsula',
     description: 'Private chef, clifftop tasting menus, surf retreat catering, and wedding dining on the Bukit Peninsula, Bali',
     areaServed: { '@type': 'Place', name: 'Bukit Peninsula, Bali' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '520',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

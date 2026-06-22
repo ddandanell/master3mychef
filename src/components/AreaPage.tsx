@@ -81,13 +81,6 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
   const localBusiness = {
     ...localBusinessSchema,
     ...jakartaLocalBusinessOverrides,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '560',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   const areaFaq = faqPageSchema([

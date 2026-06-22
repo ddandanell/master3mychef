@@ -87,13 +87,6 @@ export default function KutaPage() {
         longitude: 115.1677,
       },
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '340',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

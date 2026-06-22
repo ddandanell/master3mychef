@@ -821,13 +821,6 @@ export default function ChefProfilePage() {
 
   const localBizWithRating = {
     ...localBusinessSchema,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '560',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   const waMessage = `Hi, I\'d like to book ${chef.name} (${chef.specialty}) for a villa dinner in Bali.`

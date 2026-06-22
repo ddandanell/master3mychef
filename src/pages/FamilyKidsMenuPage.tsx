@@ -87,13 +87,6 @@ export default function FamilyKidsMenuPage() {
 
   const localBizWithRating = {
     ...localBusinessSchema,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '560',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

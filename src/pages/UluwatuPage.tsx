@@ -82,13 +82,6 @@ export default function UluwatuPage() {
       '@type': 'Place',
       name: 'Uluwatu, Bali',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '580',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

@@ -230,13 +230,6 @@ export default function HubPage() {
   const homeLocalBusinessSchema: Record<string, unknown> = {
     ...localBusinessSchema,
     '@type': 'FoodEstablishment',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '560',
-      bestRating: '5',
-      worstRating: '1',
-    },
     url: 'https://mychef.id/',
     telephone: '+62 811-3803-488',
     address: {

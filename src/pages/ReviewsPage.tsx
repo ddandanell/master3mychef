@@ -19,15 +19,6 @@ interface Review {
 const SITE = 'https://mychef.id'
 const WHATSAPP_URL = 'https://wa.me/628113803488'
 
-const MONTH_MAP: Record<string, string> = {
-  January: '01', February: '02', March: '03', April: '04',
-  May: '05', June: '06', July: '07', August: '08',
-  September: '09', October: '10', November: '11', December: '12',
-}
-function toISOMonth(human: string): string {
-  const [month, year] = human.split(' ')
-  return `${year}-${MONTH_MAP[month] ?? '01'}`
-}
 
 const STATS = [
   '560+ events',
@@ -160,13 +151,6 @@ const REVIEWS: Review[] = [
 
 const aggregateRatingSchema = {
   ...localBusinessSchema,
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '560',
-    bestRating: '5',
-    worstRating: '1',
-  },
 }
 
 const REVIEWS_SCHEMAS = [
@@ -177,30 +161,6 @@ const REVIEWS_SCHEMAS = [
     { question: 'Where can I read myCHEF reviews?', answer: 'Guest reviews are collected from Google, TripAdvisor, and direct feedback from villa owners and event planners. Our rating reflects 560+ experiences delivered across Bali.' },
     { question: 'Are the reviews from real guests?', answer: 'Yes — all reviews on this page are from real guests who experienced myCHEF private chef dinners, catering, and hospitality staffing at their Bali villas and events.' },
   ]),
-  ...REVIEWS.map((r) => ({
-    '@context': 'https://schema.org',
-    '@type': 'Review',
-    '@id': `${SITE}/reviews#review-${r.name.split('·')[0].trim().replace(/\s+/g, '-').toLowerCase()}`,
-    author: {
-      '@type': 'Person',
-      name: r.name.split('·')[0].trim(),
-    },
-    reviewBody: r.review,
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: r.rating.toString(),
-      bestRating: '5',
-      worstRating: '1',
-    },
-    datePublished: toISOMonth(r.date),
-    name: r.eventType,
-    itemReviewed: {
-      '@type': 'LocalBusiness',
-      '@id': 'https://mychef.id/#business',
-      name: 'myCHEF',
-      url: SITE,
-    },
-  })),
 ]
 
 const SOCIAL_PROOF = [

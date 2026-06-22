@@ -21,7 +21,8 @@ _Last verified: 2026-06-23 · HEAD `1bd1e65` = `origin/main` · Vercel READY on 
 - **Tracking re-audited 2026-06-23.** `index.html` is **GTM-only** (`GTM-KCBNZBL9`); GA4 `G-W0PQH8ZKTF` is configured *inside* GTM (the ID in index.html is a comment). `index.html` not changed.
   - page_view = single (no manual `trackPageView` caller). OK.
   - `generate_lead` conversion **double-fire FIXED** (`Layout.tsx` global listener + 5 component onClicks → now listener-only, attribution via `data-source`). Verified tsc exit 0.
-  - **Open:** `trackEvent` dual-sends to gtag + dataLayer — possible second GA4 hit if GTM forwards custom events; needs GTM Preview / GA4 DebugView (see KNOWN_ISSUES #3 / NEXT_ACTIONS #1).
+  - `trackEvent` gtag+dataLayer dual-send **resolved by live test 2026-06-23:** `window.gtag` is undefined → gtag call is a no-op; GA4 receives events only via dataLayer→GTM; one WhatsApp click = one `generate_lead`. No code change (gtag line is inert).
+  - **Remaining P0 — needs external Google verification:** GA4 `/g/collect` beacons aren't observable from the page; GTM container's server-side hit count (one tag vs. firing on both `generate_lead` and `gtm.linkClick`) must be confirmed in GA4 DebugView / GTM Preview by the owner (protocol in NEXT_ACTIONS #1).
 - `robots.txt` present (allows Googlebot/Bingbot + AI crawlers); `sitemap.xml` = **151** URLs.
 - `AggregateRating` present only in the **neutralized** `src/components/SeoHead.tsx` helper (no per-page rating; no legal-page review markup).
 - Conversion: WhatsApp `wa.me/628113803488` (`+62 811-3803-488`) sitewide; `ExitIntentPopup` + `EmailCaptureBar` live.

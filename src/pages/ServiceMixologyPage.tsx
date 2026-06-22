@@ -94,10 +94,10 @@ const SIGNATURE_COCKTAILS = [
 ]
 
 const GALLERY = [
-  { src: '/generated/mychef-experience-bali-aura-toast.webp', alt: 'Guests toasting with signature cocktails at a Bali villa' },
-  { src: '/generated/mychef-experience-bali-aura-tablescape.webp', alt: 'Cocktail bar tablescape and glassware setup in a Bali villa' },
-  { src: '/generated/mychef-events-bali-party-rooftop.webp', alt: 'Rooftop villa cocktail party in Bali' },
-  { src: '/generated/mychef-events-bali-party-white.webp', alt: 'Elegant white-themed villa cocktail celebration' },
+  { src: '/generated/mychef-mixology-bali-bar-setup.webp', alt: 'Balinese mixologist shaking a cocktail at a Bali villa bar at golden hour' },
+  { src: '/generated/mychef-mixology-bali-poolside-guests.webp', alt: 'Guests enjoying cocktails by a Bali villa pool while an Indonesian server presents a drinks tray' },
+  { src: '/generated/mychef-mixology-bali-class.webp', alt: 'Balinese mixologist leading a hands-on cocktail-shaking class for guests at a Bali villa' },
+  { src: '/generated/mychef-mixology-bali-cocktail-craft.webp', alt: 'Balinese bartender garnishing signature butterfly-pea cocktails at a Bali villa bar' },
 ]
 
 const BOOKING_STEPS = [

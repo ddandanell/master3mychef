@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, Mail } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
 
@@ -92,7 +92,6 @@ export default function PrivacyPage() {
         canonical="https://mychef.id/privacy-policy"
         jsonLd={[
           breadcrumbSchema('Privacy Policy', 'https://mychef.id/privacy-policy'),
-          aggregateRatingSchema(4.9, 560),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />

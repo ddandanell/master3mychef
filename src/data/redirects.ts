@@ -113,7 +113,10 @@ export const REDIRECTS: Redirect[] = [
   { from: '/blog/private-chef-bali-cost-breakdown-2026', to: '/pricing', reason: 'Cost breakdown content → pricing page.' },
   { from: '/blog/best-bali-villas-private-chef-kitchen', to: '/partner-platform', reason: 'Villa partner content → partner platform.' },
   { from: '/blog/wedding-rehearsal-dinner-bali', to: '/events/weddings', reason: 'Wedding content → wedding events page.' },
-  { from: '/blog/yoga-retreat-chef-bali-meal-planning', to: '/events/retreats', reason: 'Retreat content → retreats events page.' },
+  // NOTE: /blog/yoga-retreat-chef-bali-meal-planning is intentionally NOT redirected.
+  // It renders a unique page (YogaRetreatChefPage) that self-canonicalises, emits
+  // Article + BreadcrumbList schema, and is internally linked from
+  // DiningByLocationBaliPage. Redirecting it orphaned real, indexable content.
   // --- SEO landing pages → most relevant pillar ---
   // (Landing page redirects removed to allow dedicated content to rank)
   { from: '/private-chef-booking-indonesia', to: '/quote', reason: 'Booking SEO → quote form.' },

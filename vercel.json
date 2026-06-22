@@ -361,11 +361,6 @@
       "permanent": true
     },
     {
-      "source": "/blog/yoga-retreat-chef-bali-meal-planning",
-      "destination": "/events/retreats",
-      "permanent": true
-    },
-    {
       "source": "/private-chef-booking-indonesia",
       "destination": "/quote",
       "permanent": true

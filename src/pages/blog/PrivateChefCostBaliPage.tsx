@@ -97,8 +97,8 @@ export default function PrivateChefCostBaliPageBlog() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    headline: 'How Much Does a Private Chef in Bali Cost? [2025 Guide]',
-    description: 'Private chef costs in Bali range from IDR 600k/day for villa dining to IDR 20M+ for large events. Get real 2025 pricing, what is included, and how to book.',
+    headline: 'How Much Does a Private Chef in Bali Cost? [2026 Guide]',
+    description: 'Private chef costs in Bali range from IDR 600k/day for villa dining to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book.',
     author: {
       '@type': 'Organization',
       name: 'myCHEF.id',
@@ -136,8 +136,8 @@ export default function PrivateChefCostBaliPageBlog() {
   return (
     <main className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="How Much Does a Private Chef in Bali Cost? [2025 Guide] — myCHEF"
-        description="Private chef costs in Bali range from IDR 600k/day for villa dining to IDR 20M+ for large events. Get real 2025 pricing, what is included, and how to book."
+        title="How Much Does a Private Chef in Bali Cost? [2026 Guide] — myCHEF"
+        description="Private chef costs in Bali range from IDR 600k/day for villa dining to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book."
         canonical={CANONICAL}
         ogType="article"
         ogImage="/og-image.webp"
@@ -162,13 +162,13 @@ export default function PrivateChefCostBaliPageBlog() {
           </nav>
 
           <div className="mb-4">
-            <span className="text-[#C5A028] text-xs uppercase tracking-[2px] font-semibold">Pricing Guide &middot; 2025</span>
+            <span className="text-[#C5A028] text-xs uppercase tracking-[2px] font-semibold">Pricing Guide &middot; 2026</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-light leading-tight mb-6">
             How Much Does a Private Chef in Bali Cost?
           </h1>
           <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
-            Real 2025 pricing from IDR 600,000 per day for a daily villa chef to IDR 20,000,000+ for large events and weddings. What is included, what affects the price, and how to get your quote.
+            Real 2026 pricing from IDR 600,000 per day for a daily villa chef to IDR 20,000,000+ for large events and weddings. What is included, what affects the price, and how to get your quote.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -194,7 +194,7 @@ export default function PrivateChefCostBaliPageBlog() {
       {/* Quick Summary Bar */}
       <section className="bg-[#C5A028] text-white py-10">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-xl font-semibold mb-4">2025 Private Chef Cost Summary — Bali</h2>
+          <h2 className="text-xl font-semibold mb-4">2026 Private Chef Cost Summary — Bali</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white/10 rounded p-4">
               <div className="text-xl font-bold">IDR 600K – 1.5M</div>
@@ -228,7 +228,7 @@ export default function PrivateChefCostBaliPageBlog() {
               Hiring a private chef in Bali is more affordable than most visitors expect — and far more flexible than booking a restaurant. The total price depends on four variables: the type of service (daily hire vs. one-off dinner vs. event catering), the guest count, the cuisine and menu complexity, and whether groceries are included or billed separately.
             </p>
             <p className="mb-4 leading-relaxed">
-              This guide uses real 2025 pricing from <Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">myCHEF villa dining</Link> and <Link to="/catering" className="text-[#C5A028] hover:underline font-medium">catering services</Link> across Bali. Below you will find every pricing tier, what is included, what drives cost up or down, and how to compare quotes accurately before you book.
+              This guide uses real 2026 pricing from <Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">myCHEF villa dining</Link> and <Link to="/catering" className="text-[#C5A028] hover:underline font-medium">catering services</Link> across Bali. Below you will find every pricing tier, what is included, what drives cost up or down, and how to compare quotes accurately before you book.
             </p>
           </div>
         </section>
@@ -236,7 +236,7 @@ export default function PrivateChefCostBaliPageBlog() {
         {/* Section 2: Price Table */}
         <section className="mb-16">
           <h2 className="text-3xl font-light mb-4">Private Chef Prices in Bali: Full Breakdown</h2>
-          <p className="text-[#666] mb-8">The table below shows all four main service tiers for private chef hire in Bali, based on 2025 bookings through myCHEF.</p>
+          <p className="text-[#666] mb-8">The table below shows all four main service tiers for private chef hire in Bali, based on 2026 bookings through myCHEF.</p>
 
           <div className="overflow-x-auto rounded-xl border border-[#E8E8E0]">
             <table className="w-full border-collapse text-sm">

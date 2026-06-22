@@ -2,6 +2,16 @@
 
 You are connected to the permanent OpenClaw central AI operating system.
 
+## ⚠️ CANONICAL PRODUCTION SOURCE — READ FIRST
+
+**Root `/src` is the live production app. It is what Vercel builds and deploys. Make all website edits here.**
+
+- Vercel project `master3mychef` builds from the repo ROOT: `index.html` loads `/src/main.tsx`, and `.vercel/project.json` lives at root. Edits belong in root `/src`, root `/public`, root `index.html`, and root `vercel.json`.
+- **Do NOT edit `app/`.** The `app/` folder is a stale, separate git repo with a divergent history that does **not** deploy. Editing `app/src/...` has zero effect on the live site. Treat it as archived (pending a decision to delete it).
+- **Build:** `npx playwright install chromium && tsc -b && vite build`; `postbuild` then runs `inject-meta.ts` + `prerender`. Always run `npx tsc -b` (exit 0) at root before committing.
+- **Deploy:** the root repo pushes to `github.com/ddandanell/master3mychef` `main`; Vercel auto-deploys on push.
+- **Content hub:** the live blog hub is `/journal` (`src/components/JournalPage.tsx`). `/blog` 301-redirects to `/journal`, so `src/components/BlogIndexPage.tsx` (routed at `/blog`) is vestigial behind that redirect — do not invest in it. The old unrouted `src/pages/BlogPage.tsx` was removed as dead code (2026-06-23).
+
 Central skills repository:
 /Users/openclaw/OpenClaw/openclaw-skills
 

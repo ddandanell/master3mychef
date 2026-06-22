@@ -657,8 +657,8 @@ export const BLOG_POSTS = [
 <p>At booking via WhatsApp, provide: every allergy and its severity (trace reaction, intolerance, or anaphylactic), every dietary category (vegan, halal, keto, etc.), all hard exclusions, preferred cuisines, and any children's specific requirements. The chef receives this before shopping and proposes a menu for your approval before any ingredient is purchased. See also our <a href="/blog/family-kids-menu-private-chef-bali" class="text-[#C5A028] hover:underline font-medium">family and kids' dining guide</a> and the full <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing guide</a>.</p>`,
   },
   // Shorthand alias posts — these routes exist in App.tsx and are linked from
-  // BlogPage.tsx / other pages, but were never registered in BLOG_POSTS so
-  // inject-meta never generated static HTML for them → 404 on direct access.
+  // other pages, but were never registered in BLOG_POSTS so inject-meta never
+  // generated static HTML for them → 404 on direct access.
   {
     slug: 'blog/how-to-hire-private-chef',
     title: 'How to Hire a Private Chef in Bali: Complete Guide',

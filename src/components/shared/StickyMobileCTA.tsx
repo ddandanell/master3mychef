@@ -1,6 +1,5 @@
 import { MessageCircle } from 'lucide-react'
 import { PHONE } from '@/data/siteArchitecture'
-import { trackWhatsAppClick } from '@/lib/analytics'
 
 interface StickyMobileCTAProps {
   /** Short label shown on the button */
@@ -25,17 +24,13 @@ export default function StickyMobileCTA({
 }: StickyMobileCTAProps) {
   const waUrl = `https://wa.me/${PHONE.digits}?text=${encodeURIComponent(message)}`
 
-  function handleClick() {
-    trackWhatsAppClick(`${pageSource}--sticky-mobile-cta`)
-  }
-
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
       <a
         href={waUrl}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={handleClick}
+        data-source={`${pageSource}--sticky-mobile-cta`}
         className="flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[1.5px] h-14 w-full hover:bg-[#B08F20] active:bg-[#9A7E1C] transition-colors"
         aria-label={label}
       >

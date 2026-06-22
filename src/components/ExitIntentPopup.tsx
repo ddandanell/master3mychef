@@ -2,7 +2,6 @@ import { useState, useEffect, useCallback } from 'react'
 import { MessageCircle, X, Gift } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
 import { PHONE } from '@/data/siteArchitecture'
-import { trackWhatsAppClick } from '@/lib/analytics'
 
 const SESSION_KEY = 'mychef_exit_popup_shown'
 
@@ -125,7 +124,7 @@ export default function ExitIntentPopup() {
           target="_blank"
           rel="noopener noreferrer"
           data-source="exit-intent-popup"
-          onClick={() => { trackWhatsAppClick('exit-intent-popup'); handleClose() }}
+          onClick={handleClose}
           className="flex items-center justify-center gap-2 w-full px-6 py-4 text-white font-semibold text-sm uppercase tracking-widest rounded-full transition-colors mb-3"
           style={{ background: '#C5A028' }}
           onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = '#B08F20')}

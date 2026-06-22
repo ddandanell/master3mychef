@@ -3,6 +3,7 @@
 _One line per shipped change. Newest first. SHA = production commit on `main`._
 
 ## 2026-06-23
+- `<tracking fix>` — **fix(analytics): eliminate `generate_lead` double-fire.** Removed redundant per-component `trackWhatsAppClick` on 5 `wa.me` anchors (ServicePage, PillarSubPage, StickyMobileCTA, ExitIntentPopup, WhatsAppButton); Layout's global delegated listener is now the single source, attribution preserved via `data-source`. page_view confirmed single. `index.html` GTM/GA4 NOT touched. Remaining: `trackEvent` gtag+dataLayer dual-send needs GTM Preview (KNOWN_ISSUES #3). tsc exit 0.
 - `<this sprint>` — **Project Control Sprint:** added `/project-skills` (15 skills + 4 sub-agents) and control files (PROJECT_CONTROL_STATUS, KNOWN_ISSUES, NEXT_ACTIONS, DO_NOT_TOUCH, PROJECT_SKILLS_INDEX, this file). Audited last 5 days. No website feature/code change. Docs only.
 - `1bd1e65` — chore(cleanup): document root `/src` as canonical prod source in CLAUDE.md; remove dead unrouted `BlogPage.tsx`. Build READY.
 - `dede4cc` — docs(sprint): 2026-06-23 v2 report (dual-repo + dead BlogPage findings).

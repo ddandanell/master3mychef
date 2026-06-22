@@ -67,9 +67,9 @@ export default function TermsPage() {
         title="Terms of Service | myCHEF.id"
         description="myCHEF.id terms of service: payment terms, deposits, booking rules & service conditions for private chef & catering bookings in Bali."
         ogImage="/og-image.webp"
-        canonical="https://mychef.id/terms-of-service"
+        canonical="https://mychef.id/terms"
         jsonLd={[
-          breadcrumbSchema('Terms & Payment', 'https://mychef.id/terms-of-service'),
+          breadcrumbSchema('Terms & Payment', 'https://mychef.id/terms'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />
@@ -81,7 +81,7 @@ export default function TermsPage() {
           </Link>
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
           <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Payment & Booking Terms</h1>
-          <p className="text-white/[60%] text-sm">Effective: January 2025 &nbsp;|&nbsp; Company: MyChef &nbsp;|&nbsp; NPWP: 1000000005064323</p>
+          <p className="text-white/[60%] text-sm">Effective: June 2026 &nbsp;|&nbsp; Last updated: June 2026 &nbsp;|&nbsp; Company: MyChef &nbsp;|&nbsp; NPWP: 1000000005064323</p>
         </div>
       </section>
 
@@ -198,11 +198,50 @@ export default function TermsPage() {
               </div>
             </div>
 
-            {/* 7. Legal */}
+            {/* 7. Guest Responsibilities, Kitchen & Safety */}
             <div className="border-b border-white/10 pb-12">
-              <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>7. Legal Terms</h2>
+              <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>7. Guest Responsibilities, Kitchen &amp; Safety</h2>
               <div className="text-white/[60%] text-sm leading-relaxed space-y-3">
-                <p>These terms are governed by Indonesian law. A Bahasa Indonesia version is available upon request, and both versions are equal in meaning.</p>
+                <p>You confirm you are authorised to host the event at the stated location and that the venue or owner permits catered service.</p>
+                <p>You will provide reasonable, safe access to a functional kitchen or cooking space, clean water, power, and adequate workspace at the agreed time.</p>
+                <p>The final guest count must be confirmed in advance; service and pricing are based on the confirmed count.</p>
+                <p>You are responsible for the conduct of your guests and for any damage to MyChef or chef equipment caused by you or your guests.</p>
+              </div>
+            </div>
+
+            {/* 8. Allergies, Dietary Requirements & Food Safety */}
+            <div className="border-b border-white/10 pb-12">
+              <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>8. Allergies, Dietary Requirements &amp; Food Safety</h2>
+              <div className="text-white/[60%] text-sm leading-relaxed space-y-3">
+                <p>You must disclose <strong className="text-white/[80%]">all allergies, intolerances, and dietary restrictions in writing before the event</strong>. We will take reasonable care to accommodate disclosed requirements.</p>
+                <p>Our food is prepared in environments that may handle nuts, shellfish, dairy, gluten, eggs, soy, and other allergens, and we cannot guarantee a fully allergen-free preparation. Guests with severe allergies accept this risk.</p>
+                <p>MyChef is not liable for reactions arising from allergies or restrictions that were not disclosed in writing, or from food stored or reheated after service outside our control.</p>
+              </div>
+            </div>
+
+            {/* 9. Liability */}
+            <div className="border-b border-white/10 pb-12">
+              <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>9. Liability</h2>
+              <div className="text-white/[60%] text-sm leading-relaxed space-y-3">
+                <p>MyChef is not liable for indirect, incidental, or consequential damages arising from the services.</p>
+                <p>Except where liability cannot be limited under Indonesian law, MyChef&rsquo;s total liability for any claim is limited to the amount paid for the specific booking in question. Nothing in these terms excludes liability that cannot lawfully be excluded.</p>
+              </div>
+            </div>
+
+            {/* 10. Force Majeure */}
+            <div className="border-b border-white/10 pb-12">
+              <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>10. Force Majeure</h2>
+              <div className="text-white/[60%] text-sm leading-relaxed space-y-3">
+                <p>Neither party is liable for failure or delay caused by events beyond reasonable control &mdash; including natural disaster, severe weather, fire, flood, power or water failure, illness, government action, or civil disruption.</p>
+                <p>Where such an event prevents service, the parties will work in good faith to reschedule. If rescheduling is not possible, refunds are handled fairly, with deduction only for unrecoverable costs already incurred (for example, perishable groceries already purchased).</p>
+              </div>
+            </div>
+
+            {/* 11. Legal */}
+            <div className="border-b border-white/10 pb-12">
+              <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>11. Legal Terms</h2>
+              <div className="text-white/[60%] text-sm leading-relaxed space-y-3">
+                <p>These terms are governed by the laws of the Republic of Indonesia. We encourage you to contact us directly to resolve any issue first. Disputes that cannot be resolved amicably are subject to the competent courts of Denpasar, Bali, unless otherwise required by applicable consumer-protection law. A Bahasa Indonesia version is available upon request, and both versions are equal in meaning.</p>
                 <div className="p-4 rounded-xl border border-white/10 mt-4">
                   <p className="text-white/[80%] font-medium mb-1">Company Details</p>
                   <p className="text-white/[50%]">MyChef</p>
@@ -214,7 +253,7 @@ export default function TermsPage() {
 
             {/* Contact */}
             <div>
-              <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>8. Contact</h2>
+              <h2 className="text-xl md:text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>12. Contact</h2>
               <div className="text-white/[60%] text-sm leading-relaxed mb-8">
                 <p className="mb-4">All confirmations, payments, or booking changes must be sent directly to:</p>
                 <div className="flex flex-col sm:flex-row items-start gap-6">

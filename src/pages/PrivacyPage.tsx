@@ -7,7 +7,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 const SECTIONS = [
   {
     title: '1. Introduction',
-    content: `myCHEF Indonesia ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our private chef booking services in Bali, Indonesia.\n\nBy using our services, you agree to the collection and use of information in accordance with this policy. If you do not agree with our policies and practices, please do not use our services.`,
+    content: `myCHEF Indonesia ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our private chef booking services in Bali, Indonesia.\n\nBy using our services, you agree to the collection and use of information in accordance with this policy. If you do not agree with our policies and practices, please do not use our services.\n\nData controller: MyChef (myCHEF.id), NPWP 1000000005064323, Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Kota Denpasar, Bali 80226, Indonesia. Privacy enquiries: indonesia@mychef.id.`,
   },
   {
     title: '2. Information We Collect',
@@ -15,7 +15,7 @@ const SECTIONS = [
   },
   {
     title: '3. How We Use Your Information',
-    content: `We use the collected information for the following purposes:\n\n• Process and fulfill your private chef bookings\n• Match you with appropriate chefs based on your preferences\n• Communicate with you about your booking, menu selections, and service details\n• Process payments and prevent fraud\n• Send booking confirmations, reminders, and follow-up communications\n• Improve our services and customer experience\n• Respond to your inquiries and provide customer support\n• Comply with legal obligations under Indonesian law\n• Send marketing communications (with your consent)`,
+    content: `We use the collected information for the following purposes:\n\n• Process and fulfill your private chef bookings\n• Match you with appropriate chefs based on your preferences\n• Communicate with you about your booking, menu selections, and service details\n• Process payments and prevent fraud\n• Send booking confirmations, reminders, and follow-up communications\n• Improve our services and customer experience\n• Respond to your inquiries and provide customer support\n• Comply with legal obligations under Indonesian law\n• Send marketing communications (with your consent)\n\nLegal basis: we process personal data to perform our contract with you (your booking), to comply with legal and tax obligations, with your consent (marketing and non-essential cookies), and for our legitimate interests in operating and improving the service.`,
   },
   {
     title: '4. Information Sharing and Disclosure',
@@ -89,9 +89,9 @@ export default function PrivacyPage() {
         title="Privacy Policy | myCHEF.id"
         description="myCHEF.id privacy policy — how we collect, store and use your data when you book private chef or catering services in Bali."
         ogImage="/og-image.webp"
-        canonical="https://mychef.id/privacy-policy"
+        canonical="https://mychef.id/privacy"
         jsonLd={[
-          breadcrumbSchema('Privacy Policy', 'https://mychef.id/privacy-policy'),
+          breadcrumbSchema('Privacy Policy', 'https://mychef.id/privacy'),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />
@@ -103,7 +103,7 @@ export default function PrivacyPage() {
           </Link>
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
           <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Privacy Policy</h1>
-          <p className="text-white/[40%] text-sm">Last updated: January 2024</p>
+          <p className="text-white/[40%] text-sm">Last updated: June 2026</p>
         </div>
       </section>
 

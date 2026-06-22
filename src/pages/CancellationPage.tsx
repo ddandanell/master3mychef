@@ -50,6 +50,8 @@ const FAQS = [
   { q: 'How long does a refund take?', a: 'Once your cancellation is confirmed and approved, refunds are typically processed within 5–10 business days, depending on your bank or payment provider.' },
   { q: 'Is the deposit refundable?', a: 'The deposit follows the same cancellation tiers: 100% refundable if cancelled 14+ days before, 50% refundable within 7–13 days, and non-refundable if cancelled less than 7 days before.' },
   { q: 'What if there is an emergency and I need to cancel?', a: 'We understand emergencies happen. Please contact us directly via WhatsApp as soon as possible. While our policy is firm due to perishable ingredients and chef scheduling, we review emergency requests on a case-by-case basis.' },
+  { q: 'What happens if the chef cannot access the property or kitchen?', a: 'If the chef cannot perform because access to the property, kitchen, or guests is not provided at the agreed time, it is treated as a same-day cancellation and no refund applies. Please make sure access, power, water, and workspace are ready before the agreed start time.' },
+  { q: 'What about outdoor events and bad weather?', a: 'For outdoor events, the client is responsible for a viable sheltered backup space. Where severe weather beyond either party\'s control prevents service, we work in good faith to reschedule, and any refund is issued net of unrecoverable costs already incurred (such as perishable groceries already purchased).' },
 ]
 
 const DEDUCTIONS = [

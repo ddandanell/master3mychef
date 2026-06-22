@@ -119,32 +119,32 @@ export default function Footer() {
             <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Top Experiences</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/catering/bbq-catering" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                <Link to="/villa-bbq-catering-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Villa BBQ Nights
                 </Link>
               </li>
               <li>
-                <Link to="/events/weddings" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                <Link to="/bali-wedding-catering-packages" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Wedding Catering
                 </Link>
               </li>
               <li>
-                <Link to="/fine-dining/private-chef-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                <Link to="/michelin-private-chef-bali-prices" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Michelin Chef Prices
                 </Link>
               </li>
               <li>
-                <Link to="/fine-dining/tasting-menu" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                <Link to="/private-tasting-menu-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Private Tasting Menus
                 </Link>
               </li>
               <li>
-                <Link to="/fine-dining/chefs-table" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                <Link to="/chef-table-experience-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Chef Table Experience
                 </Link>
               </li>
               <li>
-                <Link to="/events/birthdays" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                <Link to="/luxury-birthday-party-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Villa Birthday Parties
                 </Link>
               </li>

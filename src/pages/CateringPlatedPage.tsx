@@ -33,7 +33,7 @@ const ACCENT = '#C5A028'
 
 const PLATED_PACKAGES = [
   {
-    image: '/generated/mychef-catering-bali-plated-menus.webp',
+    image: '/generated/mychef-catering-bali-plated-3course-table.webp',
     title: '3-Course Plated',
     price: 'IDR 800,000/person',
     priceNum: 800000,
@@ -42,7 +42,7 @@ const PLATED_PACKAGES = [
     minGuests: 'Min. IDR 5M',
   },
   {
-    image: '/generated/mychef-catering-bali-plated-menus.webp',
+    image: '/generated/mychef-catering-bali-plated-4course-table.webp',
     title: '4-Course Plated',
     price: 'IDR 1,000,000/person',
     priceNum: 1000000,
@@ -51,7 +51,7 @@ const PLATED_PACKAGES = [
     minGuests: 'Min. IDR 5M',
   },
   {
-    image: '/generated/mychef-finedining-bali-luna-plating.webp',
+    image: '/generated/mychef-catering-bali-plated-5course-premium-table.webp',
     title: '5-Course Premium',
     price: 'IDR 1,300,000/person',
     priceNum: 1300000,

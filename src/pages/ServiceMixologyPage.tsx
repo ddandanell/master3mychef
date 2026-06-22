@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { MessageCircle, Check, Phone, Calendar, Star, ShieldCheck, Award, FlaskConical } from 'lucide-react'
+import { MessageCircle, Check, X, Phone, Calendar, Star, ShieldCheck, Award, FlaskConical } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
@@ -53,13 +53,62 @@ const PRICING_TIERS = [
 
 const WHAT_INCLUDED = [
   'Professional mixologist',
-  'Premium spirits and ingredients',
+  'Premium mixers, syrups & fresh juices',
   'Specialized bar tools',
   'Elegant glassware',
   'Fresh garnishes and botanicals',
   'Custom cocktail menu',
   'Tasting notes and stories',
   'Recipe cards for guests',
+]
+
+// The base spirits (alcohol) are NOT part of the package price — these are the three ways we handle it.
+const ALCOHOL_OPTIONS = [
+  { n: '01', t: 'We suggest the bottles', d: 'Tell us your menu and budget and we recommend exactly which spirits to buy — by brand and bottle — so nothing is wasted.' },
+  { n: '02', t: 'We send a shopping list', d: 'You get a simple, itemised list of what to buy and how much. Pick it up yourself or have your villa stock it before we arrive.' },
+  { n: '03', t: 'We bring it for you', d: 'Prefer zero effort? We source and deliver everything, added to your quote at cost. You just enjoy the evening.' },
+]
+
+const NOT_INCLUDED = [
+  'Base spirits / alcohol — see the three options above',
+  'Premium or rare bottle upgrades',
+  'Extra glassware beyond the standard set',
+  'Hours beyond your booked session (overtime quoted on request)',
+  'Travel outside South Bali (quoted by location)',
+  'Gratuities — always optional, never expected',
+]
+
+const PACKAGE_TABLE = [
+  { name: 'Cocktail Experience', duration: '2 hours', pax: 'Up to 8', price: 'IDR 1,500,000', overtime: 'On request' },
+  { name: 'Mixology Masterclass', duration: '3 hours', pax: 'Up to 12', price: 'IDR 2,500,000', overtime: 'On request' },
+  { name: 'Signature Program', duration: 'Full day', pax: 'Unlimited', price: 'IDR 4,000,000', overtime: 'On request' },
+]
+
+const SIGNATURE_COCKTAILS = [
+  { name: 'Balinese Arak Sour', notes: 'Local arak, fresh lime, palm sugar, silky egg-white foam' },
+  { name: 'Lemongrass & Kaffir Gimlet', notes: 'Gin, house lemongrass cordial, kaffir lime leaf' },
+  { name: 'Spiced Tamarind Margarita', notes: 'Tequila, tamarind, chili-salt rim, Bali sea salt' },
+  { name: 'Butterfly-Pea Spritz', notes: 'Colour-changing, floral and refreshing, low-alcohol' },
+  { name: 'Young Coconut Colada', notes: 'Fresh young coconut, rum (or zero-proof), pineapple' },
+  { name: 'Sandalwood Old Fashioned', notes: 'Aged rum or bourbon, palm-sugar, aromatic spice' },
+]
+
+const GALLERY = [
+  { src: '/generated/mychef-experience-bali-aura-toast.webp', alt: 'Guests toasting with signature cocktails at a Bali villa' },
+  { src: '/generated/mychef-experience-bali-aura-tablescape.webp', alt: 'Cocktail bar tablescape and glassware setup in a Bali villa' },
+  { src: '/generated/mychef-events-bali-party-rooftop.webp', alt: 'Rooftop villa cocktail party in Bali' },
+  { src: '/generated/mychef-events-bali-party-white.webp', alt: 'Elegant white-themed villa cocktail celebration' },
+]
+
+const BOOKING_STEPS = [
+  { n: '1', t: 'Check your date', d: 'Message us on WhatsApp with your date, villa and guest count. We reply within 2 hours and hold the date for you.' },
+  { n: '2', t: 'Confirm menu & spirits', d: 'We design your cocktail menu and agree how the spirits are handled — we suggest, send a shopping list, or bring them.' },
+  { n: '3', t: 'Secure with 25% deposit', d: 'A 25% deposit locks in your booking. The balance is settled after your event — simple and transparent.' },
+]
+
+const SAFETY = [
+  { t: 'Experienced, professional mixologists', d: 'Trained, vetted bartenders who run villa cocktail experiences across Bali every week.' },
+  { t: 'Hygienic, food-safe handling', d: 'Sanitised tools, a clean bar setup and careful handling from setup through to service.' },
 ]
 
 const HOW_IT_WORKS = [
@@ -71,6 +120,8 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
+  { q: 'Is the alcohol included in the price?', a: 'No — and this keeps your price fair. The package covers your mixologist, the cocktail menu, premium mixers, fresh juices, syrups, garnishes, bar tools and glassware. The base spirits (the alcohol itself) are bought separately, so you only pay for the bottles you actually want.' },
+  { q: 'So how does the alcohol work?', a: 'Three ways, your choice: (1) we recommend the exact bottles to match your menu and budget, (2) we send a simple shopping list for you or your villa to stock before we arrive, or (3) we source and bring everything for you, added to your quote at cost. Mixers, garnishes, tools and glassware are always included either way.' },
   { q: 'What is the difference between a bartender and a mixologist?', a: 'A bartender serves drinks efficiently. A mixologist designs cocktails as culinary creations — balancing flavors, sourcing unique ingredients, and creating an experience around each drink. Think chef versus cook.' },
   { q: 'Can guests participate in making cocktails?', a: 'Absolutely. Our masterclass tier is designed for hands-on participation. Guests learn techniques, build their own drinks, and take home recipe cards.' },
   { q: 'Do you use local Balinese ingredients?', a: 'Yes. We incorporate arak, local fruits, Balinese spices, and tropical botanicals into our creations. It is Bali in a glass.' },
@@ -78,7 +129,6 @@ const FAQS = [
   { q: 'What areas do you cover?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
   { q: 'How far in advance should I book?', a: '1–2 weeks for standard sessions. 3–4 weeks for signature programs during peak season.' },
   { q: 'Can you create non-alcoholic experiences?', a: 'Yes. Our zero-proof programs are increasingly popular — complex, layered mocktails that rival their alcoholic counterparts.' },
-  { q: 'Do you provide the alcohol?', a: 'We provide a detailed shopping list. You purchase the spirits. We bring all mixers, garnishes, tools, and glassware.' },
 ]
 
 export default function ServiceMixologyPage() {
@@ -98,7 +148,7 @@ export default function ServiceMixologyPage() {
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Mixology Service Bali | Signature Cocktails for Villas — myCHEF"
-        description="Private mixology in Bali: signature cocktail menus, guided tastings & cocktail classes for villa events. From IDR 1.5M/session. WhatsApp us to book."
+        description="Private mixology in Bali: signature cocktail menus, guided tastings & cocktail classes for villa events. From IDR 1.5M/session (spirits separate — we suggest, send a shopping list, or bring them). WhatsApp us to book."
         canonical={`${SITE}/in-villa-service/mixology`}
         ogImage="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1600&q=80"
         jsonLd={[
@@ -136,7 +186,7 @@ export default function ServiceMixologyPage() {
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
             Signature cocktail programs and masterclasses in your villa. 
-            Signature drinks, fresh ingredients, unforgettable experiences. From IDR 1,500,000.
+            Signature drinks, fresh ingredients, unforgettable experiences. From IDR 1,500,000 per session — spirits not included, your choice how we handle them.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-mixology-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -172,19 +222,97 @@ export default function ServiceMixologyPage() {
               </div>
             ))}
           </div>
+          <p className="text-center text-sm md:text-base text-[#4A4745] mt-10 max-w-[760px] mx-auto">
+            Every package includes your mixologist, custom cocktail menu, premium mixers, tools &amp; glassware. <strong className="text-[#1A1A1A]">The alcohol (base spirits) is not included</strong> — pick one of the three easy options below.
+          </p>
+        </div>
+      </section>
+
+      {/* Package comparison table */}
+      <section className="px-6 pb-8">
+        <div className="max-w-[1280px] mx-auto overflow-x-auto">
+          <table className="w-full text-left border-collapse min-w-[640px]">
+            <thead>
+              <tr className="border-b-2 border-[#E8E6E3]">
+                <th className="py-4 pr-4 font-playfair text-lg text-[#1A1A1A]">Package</th>
+                <th className="py-4 px-4 text-xs font-semibold uppercase tracking-wider text-[#8A8785]">Duration</th>
+                <th className="py-4 px-4 text-xs font-semibold uppercase tracking-wider text-[#8A8785]">Max guests</th>
+                <th className="py-4 px-4 text-xs font-semibold uppercase tracking-wider text-[#8A8785]">Price</th>
+                <th className="py-4 pl-4 text-xs font-semibold uppercase tracking-wider text-[#8A8785]">Extra hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              {PACKAGE_TABLE.map((p) => (
+                <tr key={p.name} className="border-b border-[#E8E6E3]">
+                  <td className="py-4 pr-4 font-medium text-[#1A1A1A]">{p.name}</td>
+                  <td className="py-4 px-4 text-sm text-[#4A4745]">{p.duration}</td>
+                  <td className="py-4 px-4 text-sm text-[#4A4745]">{p.pax}</td>
+                  <td className="py-4 px-4 text-sm font-semibold text-[#1A1A1A]">{p.price}</td>
+                  <td className="py-4 pl-4 text-sm text-[#4A4745]">{p.overtime}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="text-xs text-[#8A8785] mt-4 max-w-[820px] leading-relaxed">
+            Prices exclude spirits (see the three options below). Travel is included across South Bali — Uluwatu, Jimbaran, Seminyak, Canggu, Ubud and Nusa Dua; other areas are quoted by location. Extra hours and premium bottle upgrades are quoted on request.
+          </p>
+        </div>
+      </section>
+
+      {/* Alcohol clarity — make it unmistakable that spirits are separate */}
+      <section className="py-20 md:py-28 px-6 bg-[#1A1A1A] text-white">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="max-w-[800px]">
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">About the alcohol</p>
+            <h2 className="font-playfair text-3xl md:text-5xl leading-tight mb-5">The spirits are separate — here is how it works</h2>
+            <p className="text-white/[80%] text-lg mb-4">
+              Our package prices cover the full experience: your professional mixologist, the custom cocktail menu, premium mixers, fresh juices, syrups, garnishes, ice, bar tools and glassware. <strong className="text-white">The base spirits — the alcohol itself — are not included in the price.</strong>
+            </p>
+            <p className="text-white/[80%] text-lg">
+              Why? It keeps your price fair and flexible — you only pay for the bottles you actually want, at the quality and budget that suit you. Choose whichever is easiest:
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            {ALCOHOL_OPTIONS.map((o) => (
+              <div key={o.n} className="rounded-2xl border border-white/15 bg-white/[0.04] p-8">
+                <p className="font-cormorant text-[#C5A028] text-base mb-3">{o.n}</p>
+                <h3 className="font-playfair text-2xl mb-3">{o.t}</h3>
+                <p className="text-white/[70%] text-sm leading-relaxed">{o.d}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-white/[60%] text-sm mt-8 max-w-[800px]">
+            Everything else — mixers, fresh juices, syrups, garnishes, ice, the full professional bar kit and glassware — is always included. You never need to buy those separately.
+          </p>
         </div>
       </section>
 
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
-          <SectionHeader eyebrow="Inclusions" title="What's Included" subtitle="Every mixology experience is fully equipped." />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
-            {WHAT_INCLUDED.map((item) => (
-              <div key={item} className="flex items-start gap-3 p-5 rounded-xl bg-[#FAFAF8] border border-[#E8E6E3]">
-                <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
-                <span className="text-[#4A4745] text-sm">{item}</span>
-              </div>
-            ))}
+          <SectionHeader eyebrow="Inclusions" title="What's Included" subtitle="Mixologist, mixers, tools & glassware — spirits sold separately." />
+          <div className="grid lg:grid-cols-2 gap-6 mt-12">
+            <div className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-8">
+              <h3 className="font-playfair text-2xl mb-5 text-[#1A1A1A]">Included in every package</h3>
+              <ul className="space-y-3">
+                {WHAT_INCLUDED.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-[#4A4745]">
+                    <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-[#E8E6E3] bg-white p-8">
+              <h3 className="font-playfair text-2xl mb-5 text-[#1A1A1A]">Not included</h3>
+              <ul className="space-y-3">
+                {NOT_INCLUDED.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-[#4A4745]">
+                    <X className="w-5 h-5 text-[#B23B3B] mt-0.5 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -204,6 +332,47 @@ export default function ServiceMixologyPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Signature cocktails + gallery (social proof) */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader eyebrow="The drinks" title="Signature Creations" subtitle="A taste of what your mixologist can build — every menu is designed around you and your guests." />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
+            {SIGNATURE_COCKTAILS.map((c) => (
+              <div key={c.name} className="rounded-xl border border-[#E8E6E3] bg-[#FAFAF8] p-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <FlaskConical className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                  <h3 className="font-playfair text-xl text-[#1A1A1A]">{c.name}</h3>
+                </div>
+                <p className="text-sm text-[#4A4745]">{c.notes}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-[#8A8785] mt-4">Illustrative menu — your final cocktails are designed to your tastes during the briefing.</p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+            {GALLERY.map((g) => (
+              <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
+                <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Safety & quality signals */}
+      <section className="py-14 px-6 bg-[#FAFAF8] border-y border-[#E8E6E3]">
+        <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-8">
+          {SAFETY.map((s) => (
+            <div key={s.t} className="flex items-start gap-4">
+              <ShieldCheck className="w-7 h-7 text-[#6B8E5A] flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-medium text-[#1A1A1A] mb-1">{s.t}</h3>
+                <p className="text-sm text-[#4A4745]">{s.d}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -250,6 +419,29 @@ export default function ServiceMixologyPage() {
       </section>
 
       <PressStrip />
+
+      {/* Booking flow — 3 steps */}
+      <section className="py-20 md:py-28 px-6 bg-[#1A1A1A] text-white">
+        <div className="max-w-[1280px] mx-auto">
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">Booking in 3 steps</p>
+          <h2 className="font-playfair text-3xl md:text-5xl mb-3">How to book</h2>
+          <p className="text-white/[70%] mb-12 max-w-[680px]">Most villa sessions book 1–2 weeks ahead; allow 3–4 weeks for the full-day Signature Program in peak season.</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {BOOKING_STEPS.map((s) => (
+              <div key={s.n} className="rounded-2xl border border-white/15 bg-white/[0.04] p-8">
+                <div className="w-10 h-10 rounded-full bg-[#C5A028] text-black font-semibold flex items-center justify-center mb-4">{s.n}</div>
+                <h3 className="font-playfair text-2xl mb-3">{s.t}</h3>
+                <p className="text-white/[70%] text-sm leading-relaxed">{s.d}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-mixology-cta" className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
+              <MessageCircle className="w-4 h-4" /> Check my date on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">

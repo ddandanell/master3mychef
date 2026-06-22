@@ -245,8 +245,8 @@ export const GUIDES = [
 export const BLOG_POSTS = [
   {
     slug: "blog/private-chef-cost-bali",
-    title: "How Much Does a Private Chef in Bali Cost? [2025 Guide]",
-    description: "Private chef costs in Bali range from IDR 600k/day for villa dining to IDR 20M+ for large events. Real 2025 pricing, what is included, and how to book.",
+    title: "How Much Does a Private Chef in Bali Cost? [2026 Guide]",
+    description: "Private chef costs in Bali range from IDR 600k/day for villa dining to IDR 20M+ for large events. Real 2026 pricing, what is included, and how to book.",
     date: "2025-01-15",
     content: `<p>A private chef in Bali costs IDR 600,000 to IDR 1,500,000 per day for daily villa hire, IDR 1,500,000 to IDR 5,000,000 total for a private dinner (2-8 guests), IDR 8,000,000 to IDR 25,000,000 for event catering (20-50 guests), and from IDR 20,000,000 for large weddings or events. Groceries are typically billed separately. Prices exclude 11% tax + 10% service charge unless quoted nett.</p>`,
   },

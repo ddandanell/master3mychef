@@ -45,6 +45,7 @@ export interface PageProfile {
   badge?: string
   image?: string
   imageAlt?: string
+  slug?: string
 }
 
 export interface PageSection {
@@ -406,6 +407,16 @@ export default function PremiumPage({
                               </li>
                             ))}
                           </ul>
+                          {profile.slug && (
+                            <Link
+                              to={`/chefs/${profile.slug}`}
+                              data-source={`premium-${slug}-profile-${profile.slug}`}
+                              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-[2px] text-[#8B6F1A] hover:text-[#C5A028] transition-colors"
+                            >
+                              View {profile.name}&rsquo;s profile
+                              <ArrowRight className="h-4 w-4" />
+                            </Link>
+                          )}
                         </div>
                       </article>
                     ))}

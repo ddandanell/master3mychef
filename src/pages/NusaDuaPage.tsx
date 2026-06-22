@@ -108,20 +108,6 @@ export default function NusaDuaPage() {
             areaServed: { '@type': 'Place', name: 'Nusa Dua, Bali' },
             url: canonical,
           },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'AggregateRating',
-            itemReviewed: {
-              '@type': 'LocalBusiness',
-              name: 'myCHEF.id',
-              url: 'https://mychef.id',
-            },
-            ratingValue: '4.9',
-            bestRating: '5',
-            worstRating: '1',
-            ratingCount: '175',
-            reviewCount: '175',
-          },
         ]}
       />
 

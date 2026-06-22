@@ -111,20 +111,6 @@ export default function CangguPage() {
             areaServed: { '@type': 'Place', name: 'Canggu, Bali' },
             url: canonical,
           },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'AggregateRating',
-            itemReviewed: {
-              '@type': 'LocalBusiness',
-              name: 'myCHEF.id',
-              url: 'https://mychef.id',
-            },
-            ratingValue: '4.9',
-            bestRating: '5',
-            worstRating: '1',
-            ratingCount: '287',
-            reviewCount: '287',
-          },
         ]}
       />
 

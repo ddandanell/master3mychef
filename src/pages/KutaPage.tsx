@@ -116,20 +116,6 @@ export default function KutaPage() {
             areaServed: { '@type': 'Place', name: 'Kuta, Bali' },
             url: canonical,
           },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'AggregateRating',
-            itemReviewed: {
-              '@type': 'LocalBusiness',
-              name: 'myCHEF.id',
-              url: 'https://mychef.id',
-            },
-            ratingValue: '4.9',
-            bestRating: '5',
-            worstRating: '1',
-            ratingCount: '340',
-            reviewCount: '340',
-          },
         ]}
       />
 

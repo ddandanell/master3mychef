@@ -733,6 +733,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://mychef.id/villa-chef</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/recommended-services</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/join-our-team</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://mychef.id/help/getting-started</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>

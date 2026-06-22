@@ -40,6 +40,10 @@ const ROUTES = [
   { path: '/certified-partner', file: 'certified-partner.html' },
   { path: '/press', file: 'press.html' },
   { path: '/retreats', file: 'retreats.html' },
+  // Service & utility pages that were internally linked but 404'd on direct access
+  { path: '/villa-chef', file: 'villa-chef.html' },
+  { path: '/recommended-services', file: 'recommended-services.html' },
+  { path: '/join-our-team', file: 'join-our-team.html' },
   // Staffing
   { path: '/staffing', file: 'staffing.html' },
   // In-villa service

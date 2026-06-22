@@ -3,7 +3,9 @@
 _Open items found during the 2026-06-23 control audit. Status: OPEN unless noted. Do not claim fixed without evidence._
 
 ## Structural
-1. **Triple repo / dual app tree.** Root (deploys) + `app/` (stale) + `Mychef Live/` (stale) each have a `.git`. Risk: edits land in a non-deploying tree. _Mitigation shipped:_ documented in `CLAUDE.md` + `PROJECT_CONTROL_STATUS.md`. _Real fix (pending owner):_ archive/delete `app/` and `Mychef Live/`.
+1. **Three nested git repos.** Root (deploys mychef.id) + `app/` + `Mychef Live/`. _Audited 2026-06-23:_
+   - `app/` = **stale duplicate** of the marketing site, does not deploy, **106 uncommitted files** (1.2 GB). Risk: edits land in a dead tree. _Guards:_ documented in `CLAUDE.md`/`DO_NOT_TOUCH.md`/`PROJECT_CONTROL_STATUS.md` + physical marker `app/_DO_NOT_USE_STALE_DUPLICATE.md`. _Pending owner:_ back up the 106 uncommitted files, then archive/remove.
+   - `Mychef Live/` = **a SEPARATE Next.js application** (auth/admin/chef-application platform, 1.3 GB, 0 uncommitted) — NOT a duplicate. Do not delete; confirm with owner whether it is active. Not part of the marketing-site repo's concerns.
 2. **Vestigial `/blog` surface.** `/blog` 301→`/journal`, yet `BlogIndexPage.tsx` + a `/blog` entry in `scripts/prerender.mjs` + `scripts/inject-meta.ts` still exist (prerenders an unreachable page). Low risk; clean up as a deliberate decision.
 
 ## Tracking (Skill 06) — re-audited 2026-06-23

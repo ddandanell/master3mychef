@@ -14,8 +14,8 @@ _Protected paths/systems. Edit only to delete or document, and only after re-ver
 
 | Path / system | Why protected | Allowed action |
 |---|---|---|
-| `app/` | Stale parallel repo (own `.git`), does NOT deploy, divergent history, 0 recent commits | None. Do not edit. Candidate for archive/delete (owner decision). |
-| `Mychef Live/` | Second stale nested repo (own `.git`) | None. Do not edit. Candidate for archive. |
+| `app/` | **Stale duplicate** of the marketing site (own `.git`, last commit `48bc7d6`, divergent), does NOT deploy. ⚠️ **106 uncommitted files** (1.2 GB) — deleting blindly loses that work. | None. Do not edit. Archive only after owner sign-off AND backing up the uncommitted work. |
+| `Mychef Live/` | **NOT a duplicate — a SEPARATE Next.js app** (auth + chef-application + admin + notifications; `.next/`, `actions/`, own `.env.local`; last commit `90d1a8f`, 0 uncommitted, 1.3 GB). Unrelated to the mychef.id marketing site. | Do not edit during marketing-site sprints. **Do not delete** — it is a distinct project; confirm status with owner. |
 | `src/components/BlogIndexPage.tsx` | Vestigial: `/blog` 301→`/journal`, so it never serves users | Do not invest. Delete only as a deliberate decision. |
 | `index.html` GTM/GA4/CSP block | Tracking; blind edits cause data loss or double-count | Change only after Skill 06 measurement (GA4 DebugView / GTM Preview). |
 | `AggregateRating` / `Review` schema | Self-serving review markup = manual-action risk; removed site-wide on purpose (`21390a7`,`7adfc18`) | Re-add ONLY if backed by real, on-page, verifiable reviews. |

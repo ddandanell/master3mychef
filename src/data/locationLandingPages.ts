@@ -52,7 +52,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Seminyak | Beachfront Villa Dining — myCHEF',
     description: 'Hire a private chef in Seminyak for beachfront villa dinners, BBQs & events. Michelin-trained, fast setup, all Seminyak areas covered. WhatsApp us.',
     h1: 'Private Chef Service in Seminyak',
-    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroImage: '/generated/mychef-city-seminyak.webp',
     heroAlt: 'Luxury beachfront villa in Seminyak, Bali set for a private chef sunset dinner',
     intro: 'Seminyak is Bali’s premier villa destination, where beachfront estates meet a world-class food scene. We provide on-demand fine dining that rivals the strip’s best restaurants.',
     areaDescription: [
@@ -109,7 +109,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Canggu | Surf Villas & Family Feasts — myCHEF',
     description: 'Hire a private chef in Canggu for villa dinners, poolside BBQs & retreat catering. Perfect for surf groups, families & long stays. WhatsApp us.',
     h1: 'Private Chef Service in Canggu',
-    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroImage: '/generated/mychef-city-canggu.webp',
     heroAlt: 'Modern pool villa in Canggu, Bali prepared for a casual private chef BBQ',
     intro: 'In the heart of Bali’s creative and surf culture, our Canggu service focuses on vibrant, healthy menus and relaxed social dining that fits the neighborhood’s lifestyle.',
     areaDescription: [
@@ -166,7 +166,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Ubud | Jungle Villa & Retreat Dining — myCHEF',
     description: 'Hire a private chef in Ubud for jungle villa dinners, wellness retreats & multi-day catering. Plant-forward menus, organic sourcing. WhatsApp to book.',
     h1: 'Private Chef Service in Ubud',
-    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroImage: '/generated/mychef-city-ubud.webp',
     heroAlt: 'Jungle valley villa in Ubud, Bali set for a traditional Balinese private chef dinner',
     intro: 'From Sayan to the rice terraces of Tegalalang, our Ubud service embraces the island’s spiritual heart with organic, locally sourced menus.',
     areaDescription: [
@@ -223,7 +223,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Uluwatu | Clifftop Villa Dining — myCHEF',
     description: 'Hire a private chef in Uluwatu for clifftop villa dinners, sunset feasts & wedding catering. Seafood-forward menus, polished service. WhatsApp us.',
     h1: 'Private Chef Service in Uluwatu',
-    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroImage: '/generated/mychef-city-uluwatu.webp',
     heroAlt: 'Clifftop villa terrace in Uluwatu, Bali styled for a premium private chef seafood dinner',
     intro: 'Uluwatu’s dramatic cliffs demand a dining experience to match. We specialize in clifftop seafood feasts and high-end celebrations with the Indian Ocean as your backdrop.',
     areaDescription: [
@@ -280,7 +280,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Sanur | Family Villa Dining & Catering — myCHEF',
     description: 'Hire a private chef in Sanur for family villa dinners, beach brunches & events. Calm east-coast service, seafood menus & easy booking. WhatsApp us.',
     h1: 'Private Chef Service in Sanur',
-    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroImage: '/generated/mychef-city-sanur.webp',
     heroAlt: 'Sunrise-style beach villa atmosphere in Sanur, Bali prepared for a private chef breakfast service',
     intro: 'Sanur suits guests who want Bali to feel easy: calm water, walkable beachfront mornings, and villa evenings that finish before the island traffic starts again.',
     areaDescription: [
@@ -337,7 +337,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Nusa Dua | Resort Villa & Executive Dining — myCHEF',
     description: 'Hire a private chef in Nusa Dua for resort villas & executive dinners. Fine dining, plated catering & secure-estate service. WhatsApp us today.',
     h1: 'Private Chef Service in Nusa Dua',
-    heroImage: '/generated/mychef-location-bali-hub-bali.webp',
+    heroImage: '/generated/mychef-city-nusa-dua.webp',
     heroAlt: 'Luxury estate mood in Nusa Dua, Bali set for a private chef dinner with resort-style service',
     intro: 'Nusa Dua is where Bali shifts into polished resort energy: secure estates, larger compounds, and guests who expect service to run with hotel precision.',
     areaDescription: [
@@ -394,7 +394,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Jimbaran | Seafood Villa Dining & BBQ — myCHEF',
     description: 'Hire a private chef in Jimbaran for seafood villa dinners, bayfront BBQs & sunset events. Fresh local catch, polished service. WhatsApp us today.',
     h1: 'Private Chef Service in Jimbaran',
-    heroImage: '/generated/mychef-location-bali-hub-hero.webp',
+    heroImage: '/generated/mychef-city-jimbaran.webp',
     heroAlt: 'Clifftop and bay-side villa setting in Jimbaran, Bali styled for a sunset private chef dinner',
     intro: 'Jimbaran is Bali\'s seafood coast: bay villas, cliff‑top estates, and guests who expect the sunset meal to be the main event of the day.',
     areaDescription: [
@@ -451,7 +451,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Denpasar | Home Dining & Business Catering — myCHEF',
     description: 'Hire a private chef in Denpasar for business lunches, family dinners & private events. Fast central logistics, same-day booking. WhatsApp us.',
     h1: 'Private Chef Service in Denpasar',
-    heroImage: '/generated/mychef-location-bali-hub-bali.webp',
+    heroImage: '/generated/mychef-city-denpasar.webp',
     heroAlt: 'Urban villa and business-district atmosphere in Denpasar, Bali set for a private chef lunch or dinner',
     intro: 'Denpasar is Bali\'s operational center: quicker logistics, residential compounds, and business-friendly service windows that make chef deployment simpler and faster.',
     areaDescription: [
@@ -508,7 +508,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Bukit Peninsula Bali | Clifftop Villas — myCHEF',
     description: 'Hire a private chef on the Bukit Peninsula for clifftop villa dinners, surf-group feasts & celebrations. Uluwatu, Pecatu & Ungasan covered.',
     h1: 'Private Chef Service in Bukit Peninsula',
-    heroImage: '/generated/mychef-location-bali-hub-bali.webp',
+    heroImage: '/generated/mychef-city-bukit.webp',
     heroAlt: 'Dramatic cliffside villa setting across the Bukit Peninsula in Bali prepared for a private chef service',
     intro: 'The Bukit Peninsula covers Bali\'s southern clifftop belt: Pecatu, Ungasan, Bingin, Padang Padang, and villas where the setting is part of the dinner.',
     areaDescription: [
@@ -565,7 +565,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     title: 'Private Chef Pererenan | Design Villas & Private Dining — myCHEF',
     description: 'Hire a private chef in Pererenan for design villa dinners, weekly meal plans & relaxed group feasts. Quiet Canggu enclave. WhatsApp us today.',
     h1: 'Private Chef Service in Pererenan',
-    heroImage: '/generated/mychef-location-bali-hub-bali.webp',
+    heroImage: '/generated/mychef-city-pererenan.webp',
     heroAlt: 'Design-led villa in Pererenan, Bali styled for an intimate private chef dinner',
     intro: 'Pererenan is the quieter north-west edge of the Canggu orbit: bigger villas, calmer streets, and guests who want design, privacy, and better breathing room.',
     areaDescription: [

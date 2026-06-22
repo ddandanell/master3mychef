@@ -3,18 +3,11 @@
 _Prioritized. Each action names the skill to run. No new website features until structure is clean._
 
 ## Highest impact (next 5)
-1. **P0 — needs external Google verification (owner login required).** Repo + in-browser evidence is exhausted (see below). Only GA4 DebugView / GTM Preview can confirm the server-side hit count. **Already proven in-browser (no code change needed): `window.gtag` is undefined → the gtag path is inert; one WhatsApp click = one `generate_lead` dataLayer push.** The remaining question is purely GTM-container config.
-
-   **Owner test protocol (≈5 min):**
-   1. In GTM, open **Preview** (Tag Assistant) and connect to `https://mychef.id/`.
-   2. Open **GA4 → Admin → DebugView** in parallel.
-   3. Load the homepage → expect **one** `page_view`.
-   4. Navigate to one service page → expect **one** `page_view` (no duplicate from SPA history).
-   5. Click **one** WhatsApp CTA → expect **one** `generate_lead`. Note: the click pushes BOTH `generate_lead` (our event) and GTM's built-in `gtm.linkClick`. Verify the container does **not** fire the GA4 conversion on both, and that Enhanced Measurement "outbound click" isn't separately counted as a conversion.
-   6. Click **one** phone (`tel:`) CTA if present → expect **one** lead event.
-   7. Confirm each event carries the correct `data-source` (e.g. `service-…-cta`, `homepage-hero`).
-   8. **Decide:** if any event shows **twice** in DebugView, identify the duplicated path (A direct gtag — already ruled out; B dataLayer custom-event tag; C GTM link-click tag; D Enhanced Measurement; E other) and disable the redundant **GTM tag/trigger** (container-side), OR if it is the `window.gtag` line, remove it from `src/lib/analytics.ts`. If every event shows **once**, mark this issue CLOSED in KNOWN_ISSUES.
-   - Already done in code this/last sprint: page_view single-fire; Vector-1 `generate_lead` component double-fire removed; gtag path proven inert.
+1. **Tracking P0 — DONE (verified directly in GTM + GA4, fix applied 2026-06-23).** No double-counting; WhatsApp-conversion mapping fixed to `generate_lead` (owner-approved). Remaining owner confirmations / follow-ups:
+   - **Confirm live:** in GA4 DebugView/Realtime, click a WhatsApp CTA on mychef.id and confirm **one** `generate_lead` appears (I couldn't self-confirm — this browser's events didn't register in Realtime; likely consent-mode/cookieless or a blocker).
+   - **Phone tracking gap:** `tel:` clicks have no GTM trigger/tag → not tracked. The site code already pushes `generate_lead` (method=Phone) via the global listener, but GTM doesn't consume it. To fix: add a GTM trigger for phone clicks (Link Click `tel:` OR Custom Event `generate_lead`) feeding a GA4 event. Small, additive.
+   - **Investigate consent/collection:** Realtime showed 0 active users for the test session and no `/g/collect` was observable — check whether Consent Mode is denying `analytics_storage` by default (no banner found), which would limit GA4 data. Verify real-user data quality in GA4 Realtime.
+   - Optional cleanup: the dead `window.gtag?.()` line in `src/lib/analytics.ts` is inert (gtag undefined) — remove only if desired; not required.
 2. **Archive `app/` safely (owner sign-off needed).** It is a stale duplicate with **106 uncommitted files** — do NOT delete blindly. Steps: (a) in `app/`, `git stash` or commit the 106 changes to a backup branch, or copy the folder to an external archive; (b) confirm nothing unique is needed; (c) then remove `app/` from the working tree. Physical marker already added (`app/_DO_NOT_USE_STALE_DUPLICATE.md`). **`Mychef Live/` is a separate Next.js app — do NOT delete; confirm with owner whether it's active.**
 3. **Sitemap integrity pass** (Skill 05): verify all 151 `<loc>` are 200 and self-canonical; remove any redirected/404 URL; confirm 0 chains.
 4. **Resolve the two cost-guide pages** (Skill 03/09): confirm intent; canonicalize the secondary to the primary if they overlap; ensure the live one is linked from `/journal` + pricing.

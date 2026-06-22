@@ -21,8 +21,9 @@ _Last verified: 2026-06-23 · HEAD `1bd1e65` = `origin/main` · Vercel READY on 
 - **Tracking re-audited 2026-06-23.** `index.html` is **GTM-only** (`GTM-KCBNZBL9`); GA4 `G-W0PQH8ZKTF` is configured *inside* GTM (the ID in index.html is a comment). `index.html` not changed.
   - page_view = single (no manual `trackPageView` caller). OK.
   - `generate_lead` conversion **double-fire FIXED** (`Layout.tsx` global listener + 5 component onClicks → now listener-only, attribution via `data-source`). Verified tsc exit 0.
-  - `trackEvent` gtag+dataLayer dual-send **resolved by live test 2026-06-23:** `window.gtag` is undefined → gtag call is a no-op; GA4 receives events only via dataLayer→GTM; one WhatsApp click = one `generate_lead`. No code change (gtag line is inert).
-  - **Remaining P0 — needs external Google verification:** GA4 `/g/collect` beacons aren't observable from the page; GTM container's server-side hit count (one tag vs. firing on both `generate_lead` and `gtm.linkClick`) must be confirmed in GA4 DebugView / GTM Preview by the owner (protocol in NEXT_ACTIONS #1).
+  - **Tracking P0 CLOSED via direct GTM + GA4 account verification (2026-06-23).** No double-counting anywhere: GTM `GTM-KCBNZBL9` has 1 GA4 config + 1 WhatsApp event tag (`whatsapp_click`) on 1 Link-Click trigger; Tag Assistant confirmed one click → tag fires once. Outbound `click` not a key event.
+  - **Fix applied (owner-approved):** GA4 event-modification "Map WhatsApp Click to Conversion" changed `whatsapp_click`→ new value `whatsapp_contact` ⟶ **`generate_lead`** so WhatsApp clicks count under the existing `generate_lead` key event. GA4-only change, reversible; no code/index.html/GTM-tag change.
+  - **Open (owner to confirm):** live server-side count not observable from this browser session (Realtime 0 active users — consent/cookieless or blocker). Owner to confirm `generate_lead` populates with real traffic. Phone (`tel:`) clicks still have no GTM tag (untracked) — see NEXT_ACTIONS.
 - `robots.txt` present (allows Googlebot/Bingbot + AI crawlers); `sitemap.xml` = **151** URLs.
 - `AggregateRating` present only in the **neutralized** `src/components/SeoHead.tsx` helper (no per-page rating; no legal-page review markup).
 - Conversion: WhatsApp `wa.me/628113803488` (`+62 811-3803-488`) sitewide; `ExitIntentPopup` + `EmailCaptureBar` live.

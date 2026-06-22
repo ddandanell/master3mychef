@@ -1225,6 +1225,25 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ TESTIMONIALS ═══════ */}
+      {/* Photo gallery */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader eyebrow="Gallery" title="Catering across Bali" subtitle="From villa buffets to plated dinners." />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+            {[
+              { src: '/generated/mychef-catering-1.webp', alt: 'Balinese chefs plating gourmet dishes at a Bali villa buffet' },
+              { src: '/generated/mychef-catering-2.webp', alt: 'Lavish catering buffet on a Bali villa terrace with Indonesian staff serving' },
+              { src: '/generated/mychef-catering-3.webp', alt: 'Indonesian catering team preparing food at a Bali villa event' },
+              { src: '/generated/mychef-catering-4.webp', alt: 'Elegant plated dinner service by a Balinese waiter at a Bali villa' },
+            ].map((g) => (
+              <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
+                <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TestimonialBlock
         testimonials={[
           { name: 'Sarah & James', location: 'Seminyak Villa', quote: 'The BBQ was incredible — the Wagyu was perfectly cooked and the team handled everything. We did not lift a finger.', rating: 5 },

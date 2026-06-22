@@ -821,6 +821,26 @@ export default function HubPage() {
         </div>
       </section>
 
+      {/* Photo gallery */}
+      <section className="py-16 md:py-24 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Gallery</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-8">Private dining moments in Bali</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { src: '/generated/mychef-home-1.webp', alt: 'Balinese private chef cooking for a family at a luxury Bali villa' },
+              { src: '/generated/mychef-home-2.webp', alt: 'Guests dining on a Bali villa terrace served by a Balinese waiter' },
+              { src: '/generated/mychef-home-3.webp', alt: 'Balinese private chef presenting a dish to guests at a Bali villa' },
+              { src: '/generated/mychef-home-4.webp', alt: 'Couple enjoying a private villa dinner with a Balinese chef in Bali' },
+            ].map((g) => (
+              <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
+                <img src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" width={1024} height={1024} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TestimonialBlock
         title="Guest moments worth repeating"
         subtitle="Private dinners, wedding weekends and hosted events — the details guests remember most."

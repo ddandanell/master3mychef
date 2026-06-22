@@ -283,6 +283,26 @@ export default function InVillaServicePage() {
         </div>
       </section>
 
+      {/* Photo gallery */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Gallery</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-8">In-villa service across Bali</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { src: '/generated/mychef-invilla-hub-1.webp', alt: 'Balinese butler welcoming guests at a luxury Bali villa' },
+              { src: '/generated/mychef-invilla-hub-2.webp', alt: 'Balinese waitstaff setting an elegant table at a Bali villa' },
+              { src: '/generated/mychef-invilla-hub-3.webp', alt: 'Balinese bartender making cocktails at a Bali villa' },
+              { src: '/generated/mychef-invilla-hub-4.webp', alt: 'Indonesian villa staff team at a luxury Bali villa' },
+            ].map((g) => (
+              <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
+                <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* WERE Awards Section */}
       <section className="py-20 md:py-28 bg-[#0A0A0A]">
         <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">

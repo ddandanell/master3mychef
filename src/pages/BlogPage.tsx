@@ -4,17 +4,6 @@ import { BookOpen } from 'lucide-react'
 
 const BLOG_POSTS = [
   {
-    id: 'private-chef-cost-bali',
-    title: 'How Much Does a Private Chef in Bali Cost? Complete 2026 Price Guide',
-    excerpt: 'Real private chef prices in Bali — per-person rates, what is included, and how to budget. Pricing tiers from IDR 500k to 2M per person, with booking tips and FAQs.',
-    date: 'June 20, 2026',
-    readTime: '12 min read',
-    href: '/blog/private-chef-cost-bali',
-    image: '/generated/pricing-hero.webp',
-    category: 'Pricing',
-    keywords: ['private chef cost bali', 'private chef price bali', 'how much does a private chef cost in bali'],
-  },
-  {
     id: 'fine-dining-guide',
     title: 'Fine Dining in Bali: Ultimate Guide to Private Chef Tasting Menus',
     excerpt: 'Discover fine dining in Bali with private chefs. Curated tasting menus, wine pairings, and luxury culinary experiences for villa stays.',

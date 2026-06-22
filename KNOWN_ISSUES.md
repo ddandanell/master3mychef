@@ -28,5 +28,9 @@ _Open items found during the 2026-06-23 control audit. Status: OPEN unless noted
 ## Internal linking
 8. **`/private-chef-bali` appears underlinked** — only ~1 inbound internal link found in `src/` (vs `/pricing` 47, `/chefs` 26). It is a primary money keyword ("private chef bali"). Verify true inbound count (nav may link via a variable) and, if low, add contextual links from hubs (Skill 09). _Sitemap integrity verified clean: 0 of 151 sitemap URLs are redirect sources._
 
+## SEO — sitemap/indexability (audited 2026-06-23)
+9. **Sitemap itself is clean.** All 151 `<loc>` return **200**, all have a **self-referential canonical**, 0 redirected/4xx/5xx, 0 robots-blocked (only `/404` is Disallowed and not in sitemap), 0 soft-404s. No live page is missing from the sitemap.
+10. **PROVEN ISSUE — internally-linked routes that 404 on direct access (not prerendered, no SPA fallback).** ~32 React routes in `App.tsx` return a **hard 404** when hit directly/crawled (they only work via in-app `<Link>` click). At least 7 are linked internally, including the **sitewide Footer → `/join-our-team`**, `/villa-chef` (linked ×3, → SolPage), `/recommended-services`, plus legacy alias routes `/terms-of-service`, `/privacy-policy`, `/payment-terms` (duplicates of the canonical `/terms`, `/privacy`, `/cancellation` which ARE 200 + in sitemap). Root cause: only prerendered routes are served; others 404. Impact: Google following these internal links gets 404 (no index), and direct-access/refresh/share = 404. **Fix is architectural → owner decision (see NEXT_ACTIONS); not changed in the audit pass.**
+
 ## Process
 7. **History shows repeated rework** (add→revert pairs, USD→IDR sweeps across many commits, TS build breakages from untracked files). The skills system + agents created this sprint are the mitigation; enforce them.

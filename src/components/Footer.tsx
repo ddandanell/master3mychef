@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { Link } from 'react-router-dom'
 import { Instagram, MessageCircle, LogIn, MapPin, Mail, ChefHat, ChevronDown } from 'lucide-react'
 import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA } from '@/data/siteArchitecture'
@@ -44,7 +45,7 @@ export default function Footer() {
                 <Instagram className="w-5 h-5 text-white/70 hover:text-[#C5A028]" />
               </a>
               <a
-                href="https://wa.me/628113803488"
+                href={buildWhatsAppUrl({ serviceName: 'private chef or catering service in Bali', intent: 'help choosing the right service and getting pricing' })}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="footer-social"
@@ -60,7 +61,7 @@ export default function Footer() {
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-3 font-semibold">Contact Us</p>
               <a
-                href="https://wa.me/628113803488?text=Hi%20myCHEF"
+                href={buildWhatsAppUrl({ serviceName: 'private chef or catering service in Bali', intent: 'help choosing the right service and getting pricing' })}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="footer-top"

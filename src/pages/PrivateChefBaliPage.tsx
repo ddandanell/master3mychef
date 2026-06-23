@@ -452,7 +452,8 @@ export default function PrivateChefBaliPage() {
         pageSource="private-chef-bali"
         serviceType="private-chef"
         label="Book a Private Chef via WhatsApp"
-        message="Hi! I'd like to book a private chef for my villa in Bali. Can you help?"
+        serviceName="a private chef in Bali"
+        intent="pricing and availability"
       />
     </div>
   )

@@ -1,8 +1,7 @@
 import { MessageCircle } from 'lucide-react'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { useLocation } from 'react-router-dom'
 
-const WHATSAPP_NUMBER = '628113803488'
-const WHATSAPP_MESSAGE = "Hi myCHEF! I'd like to enquire about your services."
 
 function getPageSource(pathname: string) {
   const normalized = pathname.replace(/^\/+|\/+$/g, '')
@@ -12,7 +11,7 @@ function getPageSource(pathname: string) {
 export default function WhatsAppButton() {
   const location = useLocation()
   const source = getPageSource(location.pathname)
-  const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
+  const waUrl = buildWhatsAppUrl({ serviceName: 'private chef or catering service in Bali', intent: 'help choosing the right service and getting pricing' })
 
   return (
     <div className="fixed bottom-6 right-6 z-50 hidden items-center md:flex">

@@ -1234,7 +1234,8 @@ export default function EventsMainPage() {
         pageSource="events-main"
         serviceType="events"
         label="Plan My Event via WhatsApp"
-        message="Hi! I'd like to plan an event with myCHEF in Bali. Can you help?"
+        serviceName="an event in Bali"
+        intent="help with catering, staff, and setup"
       />
     </div>
   )

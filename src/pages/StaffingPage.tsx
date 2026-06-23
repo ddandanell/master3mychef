@@ -534,7 +534,8 @@ export default function StaffingPage() {
         pageSource="staffing-main"
         serviceType="staffing"
         label="Book Villa Staff via WhatsApp"
-        message="Hi! I'd like to book villa staff (waiters/bartenders/household) in Bali. Can you help?"
+        serviceName="villa staff in Bali"
+        intent="availability and pricing"
       />
     </div>
   )

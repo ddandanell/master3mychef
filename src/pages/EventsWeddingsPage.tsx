@@ -597,7 +597,8 @@ export default function EventsWeddingsPage() {
         pageSource="events-weddings"
         serviceType="wedding"
         label="Plan My Wedding Menu via WhatsApp"
-        message="Hi! I'd like to plan wedding catering with myCHEF in Bali. Can you help?"
+        serviceName="a wedding in Bali"
+        intent="help with catering, staff, and setup"
       />
     </div>
   )

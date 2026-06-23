@@ -1385,7 +1385,8 @@ export default function CateringMainPage() {
         pageSource="catering-main"
         serviceType="catering"
         label="Get a Catering Quote via WhatsApp"
-        message="Hi! I'd like a catering quote for my event in Bali. Can you help?"
+        serviceName="catering in Bali"
+        intent="menu options and pricing"
       />
     </div>
   )

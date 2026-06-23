@@ -260,17 +260,24 @@ export default function Navbar() {
             <X className="h-5 w-5 stroke-[1.5]" />
           </button>
 
-          <h2
-            className="text-[24px] text-gray-900 mb-1"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+          <Link
+            to="/"
+            onClick={() => { setMenuOpen(false); setExpandedItems(new Set()) }}
+            aria-label="myCHEF home"
+            className="mb-1 inline-block focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
           >
-            myCHEF
-          </h2>
+            <h2
+              className="text-[24px] text-gray-900"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              myCHEF
+            </h2>
+          </Link>
           <p className="text-[11px] uppercase tracking-[0.34em] text-[#C5A028] mb-6">Private Dining in Bali</p>
           <div className="h-px bg-gradient-to-r from-[#C5A028]/55 via-[#C5A028]/18 to-transparent mb-6" />
 
-          {/* Mobile nav items — accordion style */}
-          <div className="space-y-2 flex-1">
+          {/* Mobile nav items — accordion style (scrollable so long menus + expanded accordions never get cut off) */}
+          <div className="space-y-2 flex-1 min-h-0 overflow-y-auto overscroll-contain pr-1">
             {NAV_ITEMS.map((item) => {
               const Icon = item.icon
               const active = isActivePath(location.pathname, item.href)

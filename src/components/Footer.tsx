@@ -23,14 +23,14 @@ export default function Footer() {
         {/* Brand row - Enhanced with better visual hierarchy */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 mb-16 pb-12 border-b border-white/5">
           <div className="lg:max-w-md">
-            <div className="inline-flex items-center gap-3 mb-4">
+            <Link to="/" aria-label="myCHEF home" className="inline-flex items-center gap-3 mb-4 group focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               <div className="p-2 bg-[#C5A028]/10 rounded-lg">
                 <ChefHat className="w-6 h-6 text-[#C5A028]" />
               </div>
               <h3 className="text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>
                 my<span className="text-[#C5A028]">CHEF</span>
               </h3>
-            </div>
+            </Link>
             <p className="text-base text-white/70 leading-relaxed mb-6">
               Private chef, villa catering, and full-service events across Bali. Same-day WhatsApp confirmation.
             </p>

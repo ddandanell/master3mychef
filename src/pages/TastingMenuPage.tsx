@@ -11,12 +11,13 @@ import SeoHead, {
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
 const WA = 628113803488
-const WA_LINK = `https://wa.me/${WA}?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20private%20tasting%20menu%20in%20my%20Bali%20villa.`
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'a private tasting menu in Bali', intent: 'pricing and availability' })
 
 const ACTS = [
   {

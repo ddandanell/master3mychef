@@ -8,6 +8,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
@@ -20,7 +21,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20to%20plan%20a%20villa%20party%20in%20Bali.'
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'a villa party in Bali', intent: 'help with catering, staff, and setup' })
 const SITE = 'https://mychef.id'
 const ACCENT = '#2C5F7C'
 

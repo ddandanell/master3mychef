@@ -10,6 +10,7 @@ import SeoHead, {
   aggregateRatingSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import { Breadcrumb } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
@@ -21,10 +22,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WA_NUMBER = 628113803488
-const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
-  "Hi myCHEF, I'd like to recruit villa staff for my property in Bali.",
-)}`
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'villa staff in Bali', intent: 'availability and pricing' })
 
 const PRICING_TIERS = [
   {

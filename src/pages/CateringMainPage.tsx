@@ -15,6 +15,7 @@ import SeoHead, {
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import CateringAddOnCard from '@/components/catering/CateringAddOnCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -30,7 +31,7 @@ import { CateringRiskReversal } from '@/components/shared'
 
 import OptimizedImage from '@/components/OptimizedImage'
 
-const WA_LINK = 'https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20a%20catering%20quote.'
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'catering in Bali', intent: 'menu options and pricing' })
 const WA_DAILY_CHEF_LINK = 'https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20daily%20villa%20chef.'
 const SITE = 'https://mychef.id'
 const bookingHref = (packageName: string) => `?package=${encodeURIComponent(packageName)}#book`

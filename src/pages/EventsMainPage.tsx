@@ -8,6 +8,7 @@ import {
 import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema, howToSchema, eventSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import LocationChips from '@/components/LocationChips'
 import { Breadcrumb, PressStrip, AllInPrice, formatIDR, formatIDRShort, calculateAllIn } from '@/components/shared'
@@ -20,10 +21,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 const SITE = 'https://mychef.id'
-const WA_NUMBER = 628113803488
-const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
-  "Hi myCHEF, I'd like to plan an event in Bali. Could you walk me through the options?",
-)}`
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'an event in Bali', intent: 'help with catering, staff, and setup' })
 
 interface EventType {
   slug: string

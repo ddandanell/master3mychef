@@ -16,6 +16,7 @@ import SeoHead, {
   aggregateRatingSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
@@ -27,7 +28,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20a%20plated%20dinner%20quote%20in%20Bali.'
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'plated dinner catering in Bali', intent: 'menu options and pricing' })
 const SITE = 'https://mychef.id'
 const ACCENT = '#C5A028'
 

@@ -10,12 +10,12 @@ import SeoHead, {
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WA = 628113803488
-const WA_LINK = `https://wa.me/${WA}?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20inquire%20about%20the%20Chef%27s%20Table%20experience%20with%20Adriano.`
+const WA_LINK = buildWhatsAppUrl({ serviceName: "the Chef's Table experience in Bali", intent: 'availability and pricing' })
 
 const TIMELINE = [
   { time: '17:00', event: 'Team arrives', note: 'Kitchen assessment, equipment setup, counter arrangement.' },

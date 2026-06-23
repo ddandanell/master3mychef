@@ -15,6 +15,7 @@ import SeoHead, {
   aggregateRatingSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
@@ -25,7 +26,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20Babi%20Guling%20catering%20in%20Bali.'
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'Babi Guling catering in Bali', intent: 'menu options and pricing' })
 const SITE = 'https://mychef.id'
 
 const PACKAGES = [

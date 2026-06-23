@@ -14,6 +14,7 @@ import SeoHead, {
   aggregateRatingSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
@@ -24,7 +25,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20to%20order%20a%20grazing%20table%20in%20Bali.'
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'a grazing table in Bali', intent: 'menu options and pricing' })
 const SITE = 'https://mychef.id'
 const PAGE_URL = `${SITE}/catering/grazing-tables`
 

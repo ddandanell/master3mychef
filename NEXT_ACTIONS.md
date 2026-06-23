@@ -2,6 +2,14 @@
 
 _Prioritized. Each action names the skill to run. No new website features until structure is clean._
 
+## Conversion / lead-quality (value sprint 2026-06-23)
+- **SHIPPED (commit `c25ae8c`, live):** enriched the `PricingCalculator` WhatsApp enquiry (on `/pricing` + `/calculator`) with **When / Area / What-you-need / Notes** → fully-qualified prefilled message (e.g. "…When: this week. Guests: 2–4. Area: Canggu. Looking for: booking availability."). Reduces low-quality "price?" leads. No pricing-logic/tracking change. Verified live (fields render, message updates dynamically, `data-source` preserved).
+- **Next high-value (from Growth Blueprint `implementation_backlog.csv`, reuse don't re-plan):**
+  - TASK-017 **intent-specific CTAs** on top service pages (generic "Chat on WhatsApp" → service-aware prefilled messages). Reusable, low-risk, no owner decision. _Recommended next._
+  - TASK-018 **sticky mobile WhatsApp CTA** on service pages (confirm `StickyMobileCTA` coverage first).
+  - Surface the 9-step `/quote` funnel + the enriched calculator more prominently from high-intent service pages (internal linking to money/enquiry surfaces).
+  - TASK-007 **deposit % inconsistency** (25% vs 50% across pages) — **owner decision** on the correct figure, then standardize.
+
 ## Highest impact (next 5)
 1. **Tracking P0 — DONE (verified directly in GTM + GA4, fix applied 2026-06-23).** No double-counting; WhatsApp-conversion mapping fixed to `generate_lead` (owner-approved). Remaining owner confirmations / follow-ups:
    - **Confirm live:** in GA4 DebugView/Realtime, click a WhatsApp CTA on mychef.id and confirm **one** `generate_lead` appears (I couldn't self-confirm — this browser's events didn't register in Realtime; likely consent-mode/cookieless or a blocker).

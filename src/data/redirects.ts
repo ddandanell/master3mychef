@@ -185,6 +185,35 @@ export const REDIRECTS: Redirect[] = [
   { from: '/locations/bandung', to: '/locations/jakarta', reason: 'Java city — no dedicated page; real Jakarta hub page.' },
   { from: '/locations/surabaya', to: '/locations/jakarta', reason: 'Java city — no dedicated page; real Jakarta hub page.' },
   { from: '/locations/yogyakarta', to: '/locations/jakarta', reason: 'Java city — no dedicated page; real Jakarta hub page.' },
+
+  // --- /private-chef-bali/* + Jakarta keyword-location aliases → canonical pages (added 2026-06-23).
+  //     Were soft-404 duplicates of the LocationPages / PrivateChefBaliPage; not internally linked,
+  //     not in sitemap. Redirect each to the page it self-canonicals to (no chains). ---
+  { from: '/private-chef-bali', to: '/fine-dining/private-chef-bali', reason: 'Duplicate of PrivateChefBaliPage (canonical = /fine-dining/private-chef-bali). Safe-default redirect; not promoted.' },
+  { from: '/private-chef-bali/seminyak', to: '/locations/seminyak', reason: 'Same SeminyakPage as /locations/seminyak (its self-canonical).' },
+  { from: '/private-chef-bali/canggu', to: '/locations/canggu', reason: 'Same CangguPage as /locations/canggu (canonical).' },
+  { from: '/private-chef-bali/uluwatu', to: '/locations/uluwatu', reason: 'Same UluwatuPage as /locations/uluwatu (canonical).' },
+  { from: '/private-chef-bali/ubud', to: '/locations/ubud', reason: 'Same UbudPage as /locations/ubud (canonical).' },
+  { from: '/private-chef-bali/jimbaran', to: '/locations/jimbaran', reason: 'Same JimbaranPage as /locations/jimbaran (canonical).' },
+  { from: '/private-chef-bali/nusa-dua', to: '/locations/nusa-dua', reason: 'Same NusaDuaPage as /locations/nusa-dua (canonical).' },
+  { from: '/private-chef-bali/sanur', to: '/locations/sanur', reason: 'Same SanurPage as /locations/sanur (canonical).' },
+  { from: '/private-chef-bali/denpasar', to: '/locations/denpasar', reason: 'Same DenpasarPage as /locations/denpasar (canonical).' },
+  { from: '/private-chef-bali/berawa', to: '/locations/canggu', reason: 'Berawa is part of Canggu — real Canggu page (mirrors /berawa).' },
+  { from: '/private-chef-bali/petitenget', to: '/locations/seminyak', reason: 'Sub-neighborhood of Seminyak (mirrors /petitenget).' },
+  { from: '/private-chef-bali/legian', to: '/locations/seminyak', reason: 'Adjacent to Seminyak (mirrors /legian).' },
+  { from: '/private-chef-bali/kerobokan', to: '/locations/seminyak', reason: 'Sub-neighborhood of Seminyak (mirrors /kerobokan).' },
+  { from: '/private-chef-bali/kuta', to: '/locations/seminyak', reason: 'Adjacent to Seminyak (mirrors /kuta).' },
+  { from: '/private-chef-bali/tanah-lot', to: '/locations/canggu', reason: 'West coast cluster with Canggu (mirrors /tanah-lot).' },
+  { from: '/private-chef-bali/pecatu', to: '/locations/bukit', reason: 'Pecatu is on the Bukit peninsula (mirrors /pecatu).' },
+  { from: '/private-chef-bali/ungasan', to: '/locations/bukit', reason: 'Ungasan is on the Bukit peninsula (mirrors /ungasan).' },
+  { from: '/private-chef-bali/gianyar', to: '/locations/ubud', reason: 'Gianyar regency — Ubud base (mirrors /gianyar).' },
+  { from: '/private-chef-bali/tegallalang', to: '/locations/ubud', reason: 'Ubud regency (mirrors /tegallalang).' },
+  { from: '/private-chef-bali/tabanan', to: '/locations/canggu', reason: 'West coast — Canggu base (mirrors /tabanan).' },
+  { from: '/private-chef-bali/padang-bai', to: '/locations/sanur', reason: 'East Bali — served from Sanur base (mirrors /padang-bai).' },
+  { from: '/private-chef-bsd', to: '/locations/jakarta', reason: 'Jakarta (BSD) — real Jakarta hub page (mirrors /locations/bsd).' },
+  { from: '/private-chef-kemang', to: '/locations/jakarta', reason: 'Jakarta (Kemang) — real Jakarta hub page (mirrors /locations/kemang).' },
+  { from: '/private-chef-scbd', to: '/locations/jakarta', reason: 'Jakarta (SCBD) — real Jakarta hub page (mirrors /locations/scbd).' },
+  { from: '/private-chef-pondok-indah', to: '/locations/jakarta', reason: 'Jakarta (Pondok Indah) — real Jakarta hub page (mirrors /locations/pondok-indah).' },
 ]
 
 /** Lookup map for the React Router fallback. */

@@ -3,7 +3,7 @@
 > **AUTHORITATIVE PROTECTION LAYER.** Before making ANY change, check whether the target path, system, or concept appears below. If it does, STOP and run `project-skills/15-do-not-touch-guard.md` before acting. This is the single source of truth for protection — do not create a second protection file.
 
 **Quick checklist (every sprint):**
-1. Do **not** edit `app/`.
+1. `app/` was **REMOVED 2026-06-23** (commit `2614624`, externally backed up). Do **not** re-clone or re-create it inside the repo. (Root `/src` remains the only production tree.)
 2. Do **not** edit `Mychef Live/`.
 3. Do **not** touch GTM / GA4 / CSP in `index.html` until GA4 DebugView / GTM Preview measurement confirms the exact problem.
 4. Do **not** re-add `AggregateRating` or `Review` schema (unless backed by real, on-page, verifiable reviews).
@@ -14,7 +14,7 @@ _Protected paths/systems. Edit only to delete or document, and only after re-ver
 
 | Path / system | Why protected | Allowed action |
 |---|---|---|
-| `app/` | **Stale duplicate** of the marketing site (own `.git`, last commit `48bc7d6`, divergent), does NOT deploy. ⚠️ **106 uncommitted files** (1.2 GB) — deleting blindly loses that work. | None. Do not edit. Archive only after owner sign-off AND backing up the uncommitted work. |
+| `app/` | **REMOVED 2026-06-23** (commit `2614624`). Was a stale 1.2 GB duplicate (own `.git`, `48bc7d6` already in prod). Backed up token-free to `~/Desktop/mychef-app-archive-2026-06-23/` (working-tree tar + 107-file uncommitted patch). | Gone. Do NOT re-create/re-clone inside the repo. |
 | `Mychef Live/` | **NOT a duplicate — a SEPARATE Next.js app** (auth + chef-application + admin + notifications; `.next/`, `actions/`, own `.env.local`; last commit `90d1a8f`, 0 uncommitted, 1.3 GB). Unrelated to the mychef.id marketing site. | Do not edit during marketing-site sprints. **Do not delete** — it is a distinct project; confirm status with owner. |
 | `src/components/BlogIndexPage.tsx` | Vestigial: `/blog` 301→`/journal`, so it never serves users | Do not invest. Delete only as a deliberate decision. |
 | `index.html` GTM/GA4/CSP block | Tracking; blind edits cause data loss or double-count | Change only after Skill 06 measurement (GA4 DebugView / GTM Preview). |

@@ -1,6 +1,9 @@
 # PROJECT CONTROL STATUS
 
-_Last verified: 2026-06-23 · HEAD `cdb7bef` = `origin/main` · Vercel READY on mychef.id_
+_Last verified: 2026-06-23 · HEAD `2614624` = `origin/main` · Vercel READY on mychef.id_
+
+## Repo cleanup (2026-06-23)
+**`app/` stale duplicate REMOVED** (commit `2614624`): backed up token-free to `~/Desktop/mychef-app-archive-2026-06-23/`, gitlink deleted. Eliminated the 1.2 GB wrong-folder-edit risk and a **P0 leaked GitHub PAT** that was sitting in `app/.git/config` (local-only; never in tracked files/history). **Open security action: owner must REVOKE/ROTATE that token at GitHub** — it remains valid until then. Root repo authenticates via `osxkeychain` (no token dependency); Vercel deploys via its own GitHub integration. `Mychef Live/` remains a separate, protected Next.js app.
 
 ## Direct-access route status (CLOSED 2026-06-23 · commits `0c25cbd` + `cdb7bef`)
 All six proven-broken internally-linked routes are fixed, live, and verified:

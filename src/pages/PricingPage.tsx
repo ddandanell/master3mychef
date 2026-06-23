@@ -126,6 +126,20 @@ const SECTIONS = [
     render: <PricingCalculator hideHeader />,
   },
   {
+    id: 'what-affects-quote',
+    type: 'features' as const,
+    subtitle: 'Why Prices Vary',
+    title: 'What Affects Your Quote',
+    features: [
+      { icon: Tag, title: 'Guest count', desc: 'Most pricing is per person or scales with group size — more guests means more food, prep, and service staff.' },
+      { icon: Tag, title: 'Menu & ingredients', desc: 'Fine dining, premium cuts, seafood, and special dietary menus cost more than everyday catering. For villa chefs, groceries are billed at cost — never marked up.' },
+      { icon: Tag, title: 'Service & staff', desc: 'Waiters, bartenders, butlers, and sommeliers are added based on your guest count and the experience you want.' },
+      { icon: Tag, title: 'Area & travel', desc: 'Your villa’s location affects logistics. Most major Bali areas are standard; remote areas may add a small travel cost.' },
+      { icon: Tag, title: 'Kitchen & setup', desc: 'Villa kitchen access, equipment or grill rentals, floating-breakfast setup, and event decor can change the total.' },
+      { icon: Tag, title: 'Date & notice', desc: 'Peak dates and short-notice bookings affect availability. Last-minute bookings are confirmed differently — just ask on WhatsApp.' },
+    ],
+  },
+  {
     id: 'price-guide-cta',
     type: 'custom' as const,
     subtitle: '',
@@ -201,6 +215,18 @@ const SECTIONS = [
     <p><strong>Not included:</strong> Alcohol (except wine pairing), specialty equipment rentals, venue decorations, and transport outside standard service areas.</p>`,
     image: '/generated/luna-table.webp',
     imageAlt: 'Elegant villa dining table setup',
+  },
+  {
+    id: 'fast-quote',
+    type: 'features' as const,
+    subtitle: 'Fast & Easy',
+    title: 'How to Get Your Exact Quote in Minutes',
+    features: [
+      { icon: Tag, title: '1. Send 4 details', desc: 'On WhatsApp, tell us the service, your date, your area, and guest count — plus any notes (allergies, kids, occasion, villa kitchen). The calculator above pre-fills this for you.' },
+      { icon: Tag, title: '2. We reply fast', desc: 'A real person replies on WhatsApp — usually within a few hours — with a tailored quote. Events and catering get a detailed proposal within 24 hours.' },
+      { icon: Tag, title: '3. Adjust freely', desc: 'Change the menu, guest count, or add staff and we’ll update the quote. No obligation and no pressure — you only book when it feels right.' },
+      { icon: Tag, title: 'Not sure what you need?', desc: 'Just message us and we’ll help you choose the right service for your group, budget, and occasion. WhatsApp is the fastest way to a clear answer.' },
+    ],
   },
   {
     id: 'cta',

@@ -11,12 +11,12 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WA = 628113803488
-const WA_LINK = `https://wa.me/${WA}?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20hire%20a%20private%20chef%20for%20my%20Bali%20villa.`
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'a private chef in Bali', intent: 'pricing and availability' })
 
 const HOW_IT_WORKS = [
   { step: '01', title: 'Message Sofia on WhatsApp', body: 'Tell us your date, villa location, guest count, and menu preference. We reply within 1 hour.' },

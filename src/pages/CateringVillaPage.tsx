@@ -15,6 +15,7 @@ import SeoHead, {
   aggregateRatingSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 // import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { Breadcrumb, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
@@ -26,7 +27,7 @@ import PressStrip from '@/components/shared/PressStrip'
 import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20a%20villa%20catering%20quote%20for%20my%20Bali%20villa.'
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'villa catering in Bali', intent: 'menu options and pricing' })
 const SITE = 'https://mychef.id'
 
 /* ── DATA ── */

@@ -31,6 +31,11 @@ export const REDIRECTS: Redirect[] = [
   { from: '/join', to: '/staffing', reason: 'Systems plan: /join → /staffing/' },
   { from: '/partners', to: '/staffing/for-villa-managers', reason: 'Systems plan: /partners → /staffing/for-villa-managers/' },
 
+  // --- Legacy legal/policy aliases → canonical pages (fix direct-access 404; canonical pages are prerendered) ---
+  { from: '/terms-of-service', to: '/terms', reason: 'Legacy alias → canonical /terms (was hard 404 on direct access)' },
+  { from: '/privacy-policy', to: '/privacy', reason: 'Legacy alias → canonical /privacy (was hard 404 on direct access)' },
+  { from: '/payment-terms', to: '/cancellation', reason: 'Legacy alias → canonical /cancellation (same CancellationPage component; was hard 404)' },
+
   // --- Areas consolidation & canonicalization → /locations/[area] ---
   { from: '/seminyak', to: '/locations/seminyak', reason: 'Canonicalize to /locations/' },
   { from: '/canggu', to: '/locations/canggu', reason: 'Canonicalize to /locations/' },

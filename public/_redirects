@@ -6,6 +6,9 @@
 /service  /in-villa-service  301
 /join  /staffing  301
 /partners  /staffing/for-villa-managers  301
+/terms-of-service  /terms  301
+/privacy-policy  /privacy  301
+/payment-terms  /cancellation  301
 /seminyak  /locations/seminyak  301
 /canggu  /locations/canggu  301
 /uluwatu  /locations/uluwatu  301

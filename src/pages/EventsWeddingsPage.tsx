@@ -592,6 +592,30 @@ export default function EventsWeddingsPage() {
       </section>
 
       <PressStrip />
+
+      {/* ═══════ RELATED EVENTS ═══════ */}
+      <section className="py-16 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[960px] mx-auto">
+          <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Explore More</p>
+          <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Other Events</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { label: 'Anniversaries', href: '/events/anniversaries', desc: 'Romantic villa dinners for two.' },
+              { label: 'Birthday Parties', href: '/events/birthdays', desc: 'Milestone celebrations in your villa.' },
+              { label: 'Villa Parties', href: '/events/villa-parties', desc: 'Cocktail receptions and celebrations.' },
+              { label: 'Corporate Events', href: '/events/corporate-events', desc: 'Business retreats and offsites.' },
+              { label: 'Catering', href: '/catering', desc: 'Full-service catering for any event.' },
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
+            ].map((item) => (
+              <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+                <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TaxFooter />
       <StickyMobileCTA
         pageSource="events-weddings"

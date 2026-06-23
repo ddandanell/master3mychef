@@ -38,6 +38,26 @@ const DURATION_OPTIONS: { value: DurationKey; label: string; multiplier: number 
   { value: 'full-day', label: 'Full day', multiplier: 2 },
 ]
 
+// --- Enquiry qualifiers (no effect on the estimate; only enrich the WhatsApp message) ---
+type WhenKey = 'asap' | 'this-week' | 'this-month' | 'flexible'
+type IntentKey = 'pricing' | 'book' | 'menu' | 'choose'
+
+const WHEN_OPTIONS: { value: WhenKey; label: string; wa: string }[] = [
+  { value: 'asap', label: 'Today / tomorrow', wa: 'today or tomorrow' },
+  { value: 'this-week', label: 'This week', wa: 'this week' },
+  { value: 'this-month', label: 'This month', wa: 'this month' },
+  { value: 'flexible', label: 'Flexible', wa: 'flexible dates' },
+]
+
+const AREA_OPTIONS = ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu / Bukit', 'Jimbaran', 'Sanur', 'Nusa Dua', 'Denpasar', 'Other Bali area', 'Jakarta', 'Not sure yet']
+
+const INTENT_OPTIONS: { value: IntentKey; label: string; wa: string }[] = [
+  { value: 'pricing', label: 'Exact pricing', wa: 'exact pricing' },
+  { value: 'book', label: 'Ready to book', wa: 'booking availability' },
+  { value: 'menu', label: 'Menu ideas', wa: 'menu options' },
+  { value: 'choose', label: 'Help me choose', wa: 'help choosing the right service' },
+]
+
 function formatEstimateIDR(value: number) {
   return `IDR ${Math.round(value).toLocaleString('id-ID')}`
 }
@@ -63,6 +83,10 @@ export default function PricingCalculator({
   const [includeBartender, setIncludeBartender] = useState(false)
   const [includeSommelier, setIncludeSommelier] = useState(false)
   const [includeFloatingBreakfast, setIncludeFloatingBreakfast] = useState(false)
+  const [whenKey, setWhenKey] = useState<WhenKey>('this-week')
+  const [area, setArea] = useState<string>('Not sure yet')
+  const [intent, setIntent] = useState<IntentKey>('pricing')
+  const [notes, setNotes] = useState('')
   const [isOpen, setIsOpen] = useState(defaultOpen)
 
   const selectedService = SERVICE_OPTIONS.find((option) => option.value === serviceType) ?? SERVICE_OPTIONS[0]
@@ -108,8 +132,22 @@ export default function PricingCalculator({
     includeFloatingBreakfast ? 'floating breakfast' : null,
   ].filter(Boolean)
 
+  const selectedWhen = WHEN_OPTIONS.find((option) => option.value === whenKey) ?? WHEN_OPTIONS[1]
+  const selectedIntent = INTENT_OPTIONS.find((option) => option.value === intent) ?? INTENT_OPTIONS[0]
+
   const whatsappText = encodeURIComponent(
-    `Hi myCHEF, I'd like a quote for ${selectedService.label}. Guests: ${selectedGuests.label}. Duration: ${selectedDuration.label}.${selectedAddOns.length ? ` Add-ons: ${selectedAddOns.join(', ')}.` : ''}`,
+    [
+      `Hi myCHEF, I'm interested in ${selectedService.label}.`,
+      `When: ${selectedWhen.wa}.`,
+      `Guests: ${selectedGuests.label}.`,
+      `Duration: ${selectedDuration.label}.`,
+      `Area: ${area}.`,
+      `Looking for: ${selectedIntent.wa}.`,
+      selectedAddOns.length ? `Add-ons: ${selectedAddOns.join(', ')}.` : '',
+      notes.trim() ? `Notes: ${notes.trim()}.` : '',
+    ]
+      .filter(Boolean)
+      .join(' '),
   )
 
   const calculatorBody = (
@@ -248,6 +286,72 @@ export default function PricingCalculator({
               </label>
             </div>
           </fieldset>
+
+          <div className="rounded-2xl border border-dashed border-[#E3D4A2] bg-[#FCF8EC] p-4">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#8A6F15]">A few details = a faster, exact reply</p>
+
+            <fieldset>
+              <legend className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em] text-[#8A7A47]">When</legend>
+              <div className="grid grid-cols-2 gap-3">
+                {WHEN_OPTIONS.map((option) => {
+                  const isActive = whenKey === option.value
+                  return (
+                    <label
+                      key={option.value}
+                      className={`cursor-pointer rounded-2xl border px-4 py-3 text-sm font-semibold transition ${isActive ? 'border-[#C5A028] bg-[#FAF2D4] text-[#1A1A1A]' : 'border-[#E5DED0] bg-white text-[#4A4745] hover:border-[#C5A028]/60'}`}
+                    >
+                      <input type="radio" name="enquiry-when" value={option.value} checked={whenKey === option.value} onChange={() => setWhenKey(option.value)} className="sr-only" />
+                      {option.label}
+                    </label>
+                  )
+                })}
+              </div>
+            </fieldset>
+
+            <fieldset className="mt-4">
+              <legend className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em] text-[#8A7A47]">Area</legend>
+              <select
+                aria-label="Area or villa location"
+                value={area}
+                onChange={(event) => setArea(event.target.value)}
+                className="w-full rounded-2xl border border-[#E5DED0] bg-white px-4 py-3 text-sm font-semibold text-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              >
+                {AREA_OPTIONS.map((option) => (
+                  <option key={option} value={option}>{option}</option>
+                ))}
+              </select>
+            </fieldset>
+
+            <fieldset className="mt-4">
+              <legend className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em] text-[#8A7A47]">What do you need?</legend>
+              <div className="grid grid-cols-2 gap-3">
+                {INTENT_OPTIONS.map((option) => {
+                  const isActive = intent === option.value
+                  return (
+                    <label
+                      key={option.value}
+                      className={`cursor-pointer rounded-2xl border px-4 py-3 text-sm font-semibold transition ${isActive ? 'border-[#C5A028] bg-[#FAF2D4] text-[#1A1A1A]' : 'border-[#E5DED0] bg-white text-[#4A4745] hover:border-[#C5A028]/60'}`}
+                    >
+                      <input type="radio" name="enquiry-intent" value={option.value} checked={intent === option.value} onChange={() => setIntent(option.value)} className="sr-only" />
+                      {option.label}
+                    </label>
+                  )
+                })}
+              </div>
+            </fieldset>
+
+            <fieldset className="mt-4">
+              <legend className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em] text-[#8A7A47]">Notes <span className="font-normal normal-case tracking-normal text-[#9A9388]">(optional)</span></legend>
+              <input
+                type="text"
+                value={notes}
+                onChange={(event) => setNotes(event.target.value)}
+                maxLength={160}
+                placeholder="Allergies, kids, occasion, villa kitchen…"
+                className="w-full rounded-2xl border border-[#E5DED0] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#A8A296] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              />
+            </fieldset>
+          </div>
         </div>
 
         <div className="rounded-[28px] bg-[#1A1A1A] p-6 text-white">

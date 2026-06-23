@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import {
   Check, Phone, Calendar, Users, MapPin,
@@ -735,6 +736,31 @@ export default function CateringPlatedPage() {
             >
               <Phone className="w-4 h-4" /> WhatsApp myCHEF
             </a>
+          </div>
+        </div>
+      </section>
+
+      <TaxFooter className="py-6" />
+
+      {/* ═══════ RELATED SERVICES ═══════ */}
+      <section className="py-16 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[960px] mx-auto">
+          <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Explore More</p>
+          <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { label: 'BBQ Catering', href: '/catering/bbq-catering', desc: 'Live-fire grilling at your villa.' },
+              { label: 'Buffet Catering', href: '/catering/buffet', desc: 'Large-group buffet service.' },
+              { label: 'Grazing Tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
+              { label: 'Drop-Off Catering', href: '/catering/drop-off-catering', desc: 'Fresh food delivered to your villa.' },
+              { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
+            ].map((item) => (
+              <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+                <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

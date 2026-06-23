@@ -18,7 +18,20 @@ src/data/sitemap.ts  (SITEMAP array)
 
 **Rule for direct-access route fixes on Vercel:** to make a route return 200 on direct access / crawl, **the route MUST be present in `src/data/sitemap.ts` (`SITEMAP`)** — that is what `inject-meta.ts` reads to generate the deployed static HTML. Adding it to `scripts/prerender.ts` alone has **no effect on Vercel** (only matters for a local Playwright prerender run). The generated artifact is `dist/<route>/index.html` (nested), not `dist/<route>.html` (the flat name only comes from the skipped Chromium prerender).
 
-Legacy alias routes (e.g. `/terms-of-service` → `/terms`) are handled separately by a 301/308 redirect in `vercel.json` — they do NOT belong in `SITEMAP`.
+Legacy alias routes (e.g. `/terms-of-service` → `/terms`) are handled by redirects — see below.
+
+## ⚠️ CRITICAL — redirects are GENERATED; never hand-edit vercel.json (learned 2026-06-23)
+
+**`vercel.json` AND `public/_redirects` are generated files**, written by `scripts/generate-redirects.ts` from the single source of truth **`src/data/redirects.ts` (`REDIRECTS`)**. The `prebuild` step regenerates them on every build. `src/App.tsx` also maps `REDIRECTS` to client-side `<Navigate>` routes, and `scripts/generate-sitemap.ts` excludes `REDIRECTS` sources from the sitemap.
+
+```
+src/data/redirects.ts  (REDIRECTS — single source of truth)
+   → scripts/generate-redirects.ts  (prebuild)  → vercel.json + public/_redirects
+   → src/App.tsx  REDIRECTS.map(...)             → client-side <Navigate> routes
+   → scripts/generate-sitemap.ts                 → drops REDIRECTS sources from sitemap.xml
+```
+
+**Rule:** to add/change a redirect, edit **`src/data/redirects.ts`** then run `npx tsx scripts/generate-redirects.ts` (or `pnpm/npm run redirects`) to regenerate `vercel.json` + `public/_redirects`, and commit all changed files together. **Do NOT hand-edit `vercel.json` directly** — a later `prebuild`/regen reads only `REDIRECTS`, so a hand-added redirect missing from `REDIRECTS` will silently drift (and a manual regen+commit would drop it). _(Note: Vercel applies edge redirects from the committed `vercel.json`, so a hand-edit "works" until the next regeneration — which is the trap. The `headers`/CSP block in `vercel.json` is also emitted by this script; edit the script, not `vercel.json`, to change CSP.)_
 
 ## Checklist
 1. Routes: `grep -c "<Route " src/App.tsx` (currently ~174).

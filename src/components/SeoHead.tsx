@@ -269,9 +269,7 @@ export function eventSchema(params: {
 // review-snippet rich results and is flagged "invalid" in Search Console, so the rating was
 // removed. This now returns the LocalBusiness entity only. Args kept for call-site compatibility.
 export function aggregateRatingSchema(_ratingValue: number, _reviewCount: number) {
-  return {
-    ...localBusinessSchema,
-  }
+  return null as any
 }
 
 export function organizationSchema(
@@ -286,6 +284,61 @@ export function organizationSchema(
     url: 'https://mychef.id',
     logo: logoUrl,
     sameAs,
+  }
+}
+
+export function blogPostingSchema(params: {
+  headline: string
+  description: string
+  url: string
+  datePublished: string
+  dateModified?: string
+  author?: string
+  image?: string
+  wordCount?: number
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: params.headline,
+    description: params.description,
+    url: params.url,
+    datePublished: params.datePublished,
+    ...(params.dateModified ? { dateModified: params.dateModified } : {}),
+    author: {
+      '@type': 'Person',
+      name: params.author || 'myCHEF Team',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'myCHEF',
+      url: 'https://mychef.id',
+      logo: { '@type': 'ImageObject', url: 'https://mychef.id/mychef-logo.svg' },
+    },
+    ...(params.image ? { image: params.image } : {}),
+    ...(params.wordCount ? { wordCount: params.wordCount } : {}),
+    mainEntityOfPage: { '@type': 'WebPage', '@id': params.url },
+  }
+}
+
+export function locationOfferSchema(
+  locationName: string,
+  priceRange: string = '$$$$',
+  url: string
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Offer',
+    name: `Private Chef ${locationName}`,
+    description: `Private chef services in ${locationName}, Bali.`,
+    priceRange,
+    availability: 'https://schema.org/InStock',
+    url,
+    seller: { '@id': 'https://mychef.id/#business' },
+    areaServed: {
+      '@type': 'Place',
+      name: `${locationName}, Bali`,
+    },
   }
 }
 
@@ -375,7 +428,7 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
 
     if (jsonLd) {
       const schemas = Array.isArray(jsonLd) ? jsonLd : [jsonLd]
-      schemas.forEach((schema) => {
+      schemas.filter(Boolean).forEach((schema) => {
         const script = document.createElement('script')
         script.type = 'application/ld+json'
         script.setAttribute('data-seohead', 'jsonld')

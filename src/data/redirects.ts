@@ -158,6 +158,28 @@ export const REDIRECTS: Redirect[] = [
   { from: '/retreat-catering-bali', to: '/catering/retreat-catering', reason: 'GA4 404 (2 views). Old slug → retreat catering page.' },
   { from: '/getting-started', to: '/help/getting-started', reason: 'GA4 404 (2 views). Bare URL → help getting-started page.' },
 
+  // --- SEO audit 2026-06-28: 404 service aliases discovered by crawl ---
+  { from: '/events/corporate', to: '/events/corporate-events', reason: 'Crawl 404: /events/corporate → canonical events corporate page.' },
+  { from: '/events/proposals', to: '/events', reason: 'Crawl 404: no dedicated proposals page; redirect to events hub.' },
+  { from: '/in-villa-service/villa-chef', to: '/villa-chef', reason: 'Crawl 404: alias for villa chef service.' },
+  { from: '/in-villa-service/breakfast-service', to: '/catering/floating-breakfast', reason: 'Crawl 404: breakfast service → floating breakfast page.' },
+  { from: '/in-villa-service/cooking-class', to: '/contact', reason: 'Crawl 404: cooking classes not offered; redirect to contact.' },
+  { from: '/in-villa-service/meal-prep', to: '/villa-chef', reason: 'Crawl 404: meal prep → villa chef service.' },
+  { from: '/staffing/chef-recruitment', to: '/staffing/private-chef-placement', reason: 'Crawl 404: chef recruitment → canonical placement page.' },
+  { from: '/staffing/event-staff', to: '/staffing/villa-staff', reason: 'Crawl 404: event staff → villa staff page.' },
+
+  // --- Duplicate blog content: /blog/chef-hiring-guide is identical to /blog/chef-qualifications-credentials-bali-hiring ---
+  { from: '/blog/chef-hiring-guide', to: '/blog/chef-qualifications-credentials-bali-hiring', reason: 'Duplicate content: identical to chef-qualifications-credentials-bali-hiring. 301 to canonical.' },
+
+  // --- GA4 (25 May–21 Jun 2026): live URLs hitting the 404 page. Map each to its real equivalent.
+  { from: '/romantic-dinner', to: '/fine-dining/romantic-dinner', reason: 'GA4 404 (8 views). Bare URL → real romantic dinner page.' },
+  { from: '/corporate-events-catering-bali', to: '/blog/corporate-events-catering-bali', reason: 'GA4 404 (4 views). Page lives under /blog/.' },
+  { from: '/events/weddings-bali', to: '/events/weddings', reason: 'GA4 404 (2 views). Old slug → canonical weddings page.' },
+  { from: '/chef-placement-bali', to: '/staffing/private-chef-placement', reason: 'GA4 404 (2 views). Old slug → placement page.' },
+  { from: '/live-in-chef-bali', to: '/staffing/live-in-chef', reason: 'GA4 404 (2 views). Old slug → live-in chef page.' },
+  { from: '/retreat-catering-bali', to: '/catering/retreat-catering', reason: 'GA4 404 (2 views). Old slug → retreat catering page.' },
+  { from: '/getting-started', to: '/help/getting-started', reason: 'GA4 404 (2 views). Bare URL → help getting-started page.' },
+
   // --- Locations hub links without a dedicated /locations page → real pages (fix 404s) ---
   // The /locations hub iterates every city in LOCATIONS and links to /locations/[slug],
   // but only 12 have a page. Redirect the rest to a real, relevant page so none 404.

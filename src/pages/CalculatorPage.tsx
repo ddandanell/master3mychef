@@ -182,8 +182,9 @@ const RELATED_PAGES = [
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing breakdown for all services.' },
   { label: 'Fine Dining', href: '/fine-dining', desc: 'In-villa tasting menus.' },
   { label: 'Catering', href: '/catering', desc: 'Villa chef and catering options.' },
+  { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate events.' },
+  { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
   { label: 'Get a Quote', href: '/quote', desc: 'Detailed proposal within 24 hours.' },
-  { label: 'Book Now', href: '/book', desc: 'Reserve your experience online.' },
 ]
 
 export default function CalculatorPage() {

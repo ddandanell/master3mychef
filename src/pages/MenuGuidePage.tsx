@@ -1,4 +1,5 @@
 import { CheckCircle, ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 
@@ -199,6 +200,29 @@ export default function MenuGuidePage() {
                 <h3 className="text-lg font-semibold mb-3">{item.q}</h3>
                 <p className="text-[#666] leading-relaxed">{item.a}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ RELATED SERVICES ═══════ */}
+      <section className="py-16 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[960px] mx-auto">
+          <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Explore More</p>
+          <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Our Services</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus in your villa.' },
+              { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated & grazing tables.' },
+              { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
+              { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate events.' },
+              { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
+              { label: 'Get a Quote', href: '/quote', desc: 'Detailed proposal within 24 hours.' },
+            ].map((item) => (
+              <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+                <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+              </Link>
             ))}
           </div>
         </div>

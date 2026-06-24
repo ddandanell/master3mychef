@@ -334,7 +334,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
   'nusa-dua': {
     slug: 'nusa-dua',
     name: 'Nusa Dua',
-    title: 'Private Chef Nusa Dua | Resort Villa & Executive Dining — myCHEF',
+    title: 'Private Chef Nusa Dua | Resort Villa Dining — myCHEF',
     description: 'Hire a private chef in Nusa Dua for resort villas & executive dinners. Fine dining, plated catering & secure-estate service. WhatsApp us today.',
     h1: 'Private Chef Service in Nusa Dua',
     heroImage: '/generated/mychef-city-nusa-dua.webp',
@@ -448,7 +448,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
   denpasar: {
     slug: 'denpasar',
     name: 'Denpasar',
-    title: 'Private Chef Denpasar | Home Dining & Business Catering — myCHEF',
+    title: 'Private Chef Denpasar | Home & Business Dining — myCHEF',
     description: 'Hire a private chef in Denpasar for business lunches, family dinners & private events. Fast central logistics, same-day booking. WhatsApp us.',
     h1: 'Private Chef Service in Denpasar',
     heroImage: '/generated/mychef-city-denpasar.webp',
@@ -562,7 +562,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
   pererenan: {
     slug: 'pererenan',
     name: 'Pererenan',
-    title: 'Private Chef Pererenan | Design Villas & Private Dining — myCHEF',
+    title: 'Private Chef Pererenan | Design Villa Dining — myCHEF',
     description: 'Hire a private chef in Pererenan for design villa dinners, weekly meal plans & relaxed group feasts. Quiet Canggu enclave. WhatsApp us today.',
     h1: 'Private Chef Service in Pererenan',
     heroImage: '/generated/mychef-city-pererenan.webp',

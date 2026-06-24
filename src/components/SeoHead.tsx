@@ -60,6 +60,13 @@ export const localBusinessSchema = {
     name: 'HACCP Food Safety Certification',
     credentialCategory: 'Food Safety',
   },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '560',
+    bestRating: '5',
+    worstRating: '1',
+  },
 }
 
 

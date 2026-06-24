@@ -599,6 +599,8 @@ export const JOURNAL_POSTS: JournalPost[] = [
       <p>When you book a <a href="/fine-dining/private-chef-bali">private chef</a> through myCHEF, you are not booking a talented cook who "knows Italian food." You are booking someone who has been trained in a system that does not tolerate inconsistency at any level of service. That system travels. It works in a Seminyak villa kitchen just as well as it works on the pass of a Milan restaurant — because the standard is internal, not architectural.</p>
       
       <p>Explore our <a href="/fine-dining/menus">tasting menus</a> to see the current seasonal offerings, or message our team on WhatsApp to discuss a custom menu for your stay.</p>
+      <h2>Related Guides</h2>
+      <p><a href="/journal/sustainable-sourcing">Sustainable Sourcing</a> — how we source local ingredients for every menu.<br><a href="/journal/bali-private-chef-cost-guide-2026">Cost Guide 2026</a> — what a private chef costs in Bali.<br><a href="/journal/private-chef-vs-villa-staff-bali">Private Chef vs Villa Staff</a> — why hire a specialist.</p>
     `,
   },
   {
@@ -635,6 +637,8 @@ export const JOURNAL_POSTS: JournalPost[] = [
       <p>Because we follow what is actually available and excellent, our menus shift. If you book a <a href="/fine-dining/private-chef-bali">private chef experience</a> in the wet season, the menu will look different from the dry season — not worse, just accurately matched to what Bali is producing at that moment.</p>
       
       <p>This is the correct approach for a kitchen that claims to care about ingredients. We are happy to discuss seasonal availability when you book. Message our team on WhatsApp or use the <a href="/pricing">pricing calculator</a> to begin planning your stay.</p>
+      <h2>Related Guides</h2>
+      <p><a href="/journal/michelin-training-bali">Michelin Training in Bali</a> — how technique translates to villa kitchens.<br><a href="/journal/bali-private-chef-cost-guide-2026">Cost Guide 2026</a> — what a private chef costs in Bali.<br><a href="/journal/private-chef-vs-villa-staff-bali">Private Chef vs Villa Staff</a> — why hire a specialist.</p>
     `,
   },
   {
@@ -666,6 +670,8 @@ export const JOURNAL_POSTS: JournalPost[] = [
       <p>If you are looking for a consistent, high-standard hospitality layer for your entire stay, consider our <a href="/in-villa-service">in-villa service</a> or <a href="/catering/villa-catering">villa catering packages</a>. For birthdays, anniversaries, or proposals, our <a href="/fine-dining">fine dining</a> experiences are the definitive choice.</p>
       
       <p>Explore our <a href="/pricing">transparent pricing</a> to see how a professional chef fits into your Bali holiday budget.</p>
+      <h2>Related Guides</h2>
+      <p><a href="/journal/michelin-training-bali">Michelin Training in Bali</a> — how our chefs are trained.<br><a href="/journal/bali-private-chef-cost-guide-2026">Cost Guide 2026</a> — what a private chef costs in Bali.<br><a href="/journal/sustainable-sourcing">Sustainable Sourcing</a> — how we source local ingredients.</p>
     `,
   },
   {
@@ -708,6 +714,8 @@ export const JOURNAL_POSTS: JournalPost[] = [
       <p>To get the most value, we recommend booking a <a href="/catering/villa-catering">villa catering package</a> for your arrival night and a specialized <a href="/fine-dining/private-chef-bali">private dinner</a> for your final evening. This balances cost and extraordinary experiences perfectly.</p>
       
       <p>Ready to start planning? Use our <a href="/pricing">instant price breakdown</a> or message Putu, our AI Concierge, for a custom quote.</p>
+      <h2>Related Guides</h2>
+      <p><a href="/journal/sustainable-sourcing">Sustainable Sourcing</a> — how we source local ingredients.<br><a href="/journal/private-chef-vs-villa-staff-bali">Private Chef vs Villa Staff</a> — why hire a specialist.<br><a href="/journal/michelin-training-bali">Michelin Training in Bali</a> — how our chefs are trained.</p>
     `,
   },
   {
@@ -747,6 +755,8 @@ export const JOURNAL_POSTS: JournalPost[] = [
       <p>Planning a <a href="/events/villa-parties">villa party</a> or wedding requires a partner who knows the local terrain. myCHEF has successfully catered over 500 events in villas across Seminyak, Canggu, and Uluwatu.</p>
       
       <p>Ready to build your wedding menu? Browse our <a href="/fine-dining/menus">event menu samples</a> or message our coordinators for a direct consultation.</p>
+      <h2>Related Guides</h2>
+      <p><a href="/events/weddings">Wedding Catering</a> — villa wedding menus and service.<br><a href="/journal/yoga-retreat-meal-planning-bali">Retreat Meal Planning</a> — multi-day catering for wellness groups.<br><a href="/journal/bali-private-chef-cost-guide-2026">Cost Guide 2026</a> — what a private chef costs in Bali.</p>
     `,
   },
   {
@@ -778,6 +788,8 @@ export const JOURNAL_POSTS: JournalPost[] = [
       <p>Whether you are hosting an intensive teacher training or a gentle wellness weekend, myCHEF provides the specialized culinary support you need. We handle all grocery shopping, prep, service, and cleanup, allowing you to focus entirely on your students.</p>
       
       <p>Browse our <a href="/menus/halal">halal-certified</a> and <a href="/menus/vegan">vegan menu samples</a> or message our retreat coordinator on WhatsApp to begin your planning.</p>
+      <h2>Related Guides</h2>
+      <p><a href="/journal/sustainable-sourcing">Sustainable Sourcing</a> — how we source local ingredients.<br><a href="/journal/bali-private-chef-cost-guide-2026">Cost Guide 2026</a> — what a private chef costs in Bali.<br><a href="/journal/private-chef-vs-villa-staff-bali">Private Chef vs Villa Staff</a> — why hire a specialist.</p>
     `,
   },
   {

@@ -211,6 +211,8 @@ export function JournalPostPage() {
               logo: { '@type': 'ImageObject', url: `${SITE}/mychef-logo.svg` },
             },
             mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+            wordCount: post.content.replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length,
+            articleSection: category?.label ?? 'Private Chef Bali',
           },
         ]}
       />

@@ -284,6 +284,29 @@ export default function ServicesPage() {
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
+
+      {/* ═══════ RELATED SERVICES ═══════ */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-[960px] mx-auto">
+          <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Explore More</p>
+          <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>All Services</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus in your villa.' },
+              { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated dinners & grazing tables.' },
+              { label: 'Events', href: '/events', desc: 'Weddings, birthdays, corporate & villa parties.' },
+              { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily private chef for your villa stay.' },
+              { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, bartenders, butlers & sommelier.' },
+              { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
+            ].map((item) => (
+              <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-[#FAFAF8] border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+                <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

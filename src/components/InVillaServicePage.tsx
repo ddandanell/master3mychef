@@ -309,8 +309,8 @@ export default function InVillaServicePage() {
           {/* Award image */}
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
             <OptimizedImage
-              src="/generated/mychef-misc-bali-were-awards.webp"
-              alt="myCHEF award-winning private villa dining in Bali"
+              src="/generated/misc-trust-hosts-lg.webp"
+              alt="Private villa dinner service in Bali — host attending to guests at a candlelit table"
               className="w-full h-full object-cover"
               loading="lazy"
               decoding="async" />
@@ -319,9 +319,9 @@ export default function InVillaServicePage() {
 
           {/* Text */}
           <div className="flex flex-col justify-center">
-            <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-5">AWARD-WINNING PRIVATE DINING</p>
+            <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-5">TRUSTED ACROSS BALI</p>
             <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-white mb-6 leading-tight">
-              Recognized for Private Villa Dining in Bali
+              Trusted for Private Villa Dining in Bali
             </h2>
             <div className="w-12 h-px bg-[#C5A028] mb-8" />
             <p className="text-white/70 leading-relaxed mb-8 text-base">

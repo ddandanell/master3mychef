@@ -383,10 +383,10 @@ export default function LunaPage() {
       <section className="relative min-h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-experience-bali-luna-hero-v3.webp"
-            alt="European friends enjoying a candlelit Michelin-level dinner on a private Bali villa terrace with Indonesian staff"
-            width={1216}
-            height={832}
+            src="/generated/mychef-experience-bali-luna-hero-v4.webp"
+            alt="Candlelit private fine-dining table set beside the pool of a luxury Bali villa at dusk, plated tasting menu with warm lanterns and tropical greenery"
+            width={1408}
+            height={768}
             fetchPriority="high"
             decoding="async"
             className="w-full h-full object-cover" />

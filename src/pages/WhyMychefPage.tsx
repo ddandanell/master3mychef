@@ -191,6 +191,7 @@ export default function WhyMychefPage() {
       ]}
       ctaText="Chat on WhatsApp"
       ctaSubtext="We reply quickly and confirm fast."
+      canonicalUrl="https://mychef.id/why-mychef"
     />
   )
 }

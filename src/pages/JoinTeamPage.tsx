@@ -213,6 +213,7 @@ export default function JoinTeamPage() {
       ]}
       ctaText="Apply on WhatsApp"
       ctaSubtext="Tell us your role, experience, and availability."
+      canonicalUrl="https://mychef.id/join-our-team"
     />
   )
 }

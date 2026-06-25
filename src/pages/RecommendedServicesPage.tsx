@@ -159,6 +159,7 @@ export default function RecommendedServicesPage() {
       ]}
       ctaText="Get Guided"
       ctaSubtext="Tell us the moment you are planning. We will handle the fit."
+      canonicalUrl="https://mychef.id/recommended-services"
     />
   )
 }

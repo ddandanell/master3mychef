@@ -133,6 +133,13 @@ const ROUTES = [
   { path: '/private-chef/tanah-lot', file: 'private-chef-tanah-lot.html' },
   { path: '/private-chef/nusa-lembongan', file: 'private-chef-nusa-lembongan.html' },
   { path: '/private-chef/nusa-penida', file: 'private-chef-nusa-penida.html' },
+  // Phase 1 Tier 1 completion — Gianyar, Tabanan, Islands
+  { path: '/private-chef/mas', file: 'private-chef-mas.html' },
+  { path: '/private-chef/penestanan', file: 'private-chef-penestanan.html' },
+  { path: '/private-chef/nyanyi', file: 'private-chef-nyanyi.html' },
+  { path: '/private-chef/cemagi', file: 'private-chef-cemagi.html' },
+  { path: '/private-chef/seseh', file: 'private-chef-seseh.html' },
+  { path: '/private-chef/nusa-ceningan', file: 'private-chef-nusa-ceningan.html' },
 ]
 
 async function startPreviewServer(): Promise<ChildProcess> {

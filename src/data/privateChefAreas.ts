@@ -1408,6 +1408,272 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Book 5–7 days ahead. Fast boat, on-island transport, and ingredient logistics all confirmed on booking.',
     published: true,
   },
+
+  // ── Phase 1 Tier 1 completion — Gianyar, Tabanan & Islands ──
+
+  {
+    slug: 'mas',
+    name: 'Mas',
+    regency: 'Gianyar',
+    tier: 1,
+    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroAlt: 'Private chef serving an intimate dinner at a villa in Mas, Bali',
+    intro:
+      'Mas sits on the Ubud–Denpasar corridor — famous for its master woodcarvers and a concentration of boutique villas tucked behind stone-walled compounds. The pace is quieter than central Ubud, the gardens are spectacular, and myCHEF cooks here for retreat groups, villa families, and couples who want full Balinese fine dining without the tourist centre hustle.',
+    villaDensity: 'medium-high',
+    guestProfile: 'Boutique villa guests, art collectors, retreat participants, wellness travellers',
+    landmarks: ['Taman Rahasia', 'Mas artisan village', 'Ubud corridor road', 'Traditional woodcarving galleries'],
+    priceFrom: 'IDR 1,350,000',
+    pricingNote:
+      'Mas sits in the greater Ubud service area — standard Ubud pricing applies. Grocery cost at market rate from Pasar Ubud.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Do you cook private chef dinners in Mas, Bali?',
+        a: 'Yes — myCHEF cooks throughout Mas and the greater Ubud corridor. We shop at Pasar Ubud and arrive at your villa with everything needed. Book 48 hours ahead for weekday sessions.',
+      },
+      {
+        q: 'How much does a private chef cost in Mas?',
+        a: 'Private chef sessions in Mas start from IDR 1,350,000 plus groceries at cost. Fine dining tasting menus start from IDR 980,000 per person. Contact us for a personalised quote.',
+      },
+      {
+        q: 'Is Mas far from central Ubud for a private chef?',
+        a: 'Mas is about 10 minutes south of central Ubud — no surcharge applies. myCHEF serves all of the Ubud corridor including Mas, Pengosekan, and Nyuh Kuning.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'ubud', name: 'Ubud' },
+      { slug: 'sayan', name: 'Sayan' },
+      { slug: 'tegallalang', name: 'Tegallalang' },
+      { slug: 'sanur', name: 'Sanur' },
+    ],
+    metaTitle: 'Private Chef in Mas, Bali | Villa Dining in the Ubud Corridor | myCHEF',
+    metaDescription:
+      'Book a private chef in Mas, Bali. myCHEF cooks at your boutique villa — fine dining, Balinese feasts, and catering for retreat groups. Gianyar artisan village.',
+    coordinates: { lat: -8.5570, lng: 115.2610 },
+    bookingNote: 'Book 48 hours ahead. Grocery sourcing from Pasar Ubud included.',
+    published: true,
+  },
+
+  {
+    slug: 'penestanan',
+    name: 'Penestanan',
+    regency: 'Gianyar',
+    tier: 1,
+    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroAlt: 'Chef preparing a refined Balinese dinner at a Penestanan villa above the rice terraces',
+    intro:
+      "Penestanan perches on the ridge just west of Ubud — known to longtime Bali travellers as the artists' quarter, home to rice-terrace villas, creative residencies, and some of the most photogenic valley views on the island. myCHEF cooks here for long-stay villa guests and retreat facilitators who want unhurried, ingredients-led fine dining above the gorge.",
+    villaDensity: 'medium',
+    guestProfile: 'Long-stay villa guests, creative professionals, wellness retreat participants, honeymooners',
+    landmarks: ['Campuhan Ridge Walk', 'Penestanan rice terraces', 'Sari Organic', 'Arma Museum (nearby)', 'Tjampuhan Hotel ridge'],
+    priceFrom: 'IDR 1,350,000',
+    pricingNote:
+      'Penestanan is in the Ubud service area — standard pricing applies. Fine dining tasting menus from IDR 980,000 per person.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Can you cook at villas in Penestanan above the Campuhan ridge?',
+        a: 'Yes — myCHEF serves all of Penestanan and the Campuhan ridge area. We arrive with everything. The terrace views make for one of the best private dining settings in Bali.',
+      },
+      {
+        q: 'How much does a private chef dinner cost in Penestanan?',
+        a: 'Sessions start from IDR 1,350,000 plus groceries at cost. Fine dining tasting menus start from IDR 980,000 per person for two or more guests.',
+      },
+      {
+        q: 'How far is Penestanan from central Ubud?',
+        a: 'Penestanan is 10–15 minutes from central Ubud by scooter — we treat it as part of the Ubud service area with no travel surcharge.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'ubud', name: 'Ubud' },
+      { slug: 'sayan', name: 'Sayan' },
+      { slug: 'mas', name: 'Mas' },
+      { slug: 'tegallalang', name: 'Tegallalang' },
+    ],
+    metaTitle: 'Private Chef in Penestanan, Bali | Rice Terrace Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Penestanan, Bali. myCHEF cooks at your ridge villa above the Campuhan — fine dining, tasting menus, and retreat catering with valley views.',
+    coordinates: { lat: -8.5070, lng: 115.2530 },
+    bookingNote: 'Book 48 hours ahead. All ingredients sourced from Ubud market. No travel surcharge from Ubud.',
+    published: true,
+  },
+
+  {
+    slug: 'nyanyi',
+    name: 'Nyanyi',
+    regency: 'Tabanan',
+    tier: 1,
+    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroAlt: 'Private chef dinner on the beach terrace at a Nyanyi villa, Tabanan, Bali',
+    intro:
+      "Nyanyi is a quiet black-sand beach village on Tabanan's coast — uncrowded, dramatic, and increasingly popular with guests who want the feel of Canggu's surfside villas without the crowds. A cluster of high-end private villas faces the Indian Ocean here, and myCHEF cooks for the guests who book them: surfers, digital nomads, and families who want the coastline to themselves.",
+    villaDensity: 'medium',
+    guestProfile: 'Surfers, remote workers, families on private villa stays, guests seeking uncrowded coastline',
+    landmarks: ['Nyanyi Beach', 'Tabanan black-sand coast', 'Echo Beach (nearby)', 'Seseh–Nyanyi surf break'],
+    priceFrom: 'IDR 1,350,000',
+    pricingNote:
+      'Nyanyi is in the Canggu–Tabanan service zone — standard pricing applies. Travel is factored into the session rate.',
+    services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
+    faqs: [
+      {
+        q: 'Does myCHEF cook at villas in Nyanyi, Tabanan?',
+        a: 'Yes — myCHEF serves Nyanyi and the Tabanan coastline. We source fresh seafood from local suppliers and cook at your villa. Book 48 hours ahead for standard sessions.',
+      },
+      {
+        q: 'How much is a private chef in Nyanyi, Bali?',
+        a: 'Sessions in Nyanyi start from IDR 1,350,000 plus groceries at cost. Seafood-focused menus and BBQ packages are available. Contact us for a quote.',
+      },
+      {
+        q: 'Is Nyanyi near Canggu for a private chef?',
+        a: 'Nyanyi is about 15–20 minutes north of Canggu along the Tabanan coast. myCHEF covers both areas — same service, same quality, just a quieter stretch of coast.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'canggu', name: 'Canggu' },
+      { slug: 'cemagi', name: 'Cemagi' },
+      { slug: 'seseh', name: 'Seseh' },
+      { slug: 'pererenan', name: 'Pererenan' },
+    ],
+    metaTitle: 'Private Chef in Nyanyi, Bali | Tabanan Beach Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Nyanyi, Tabanan. myCHEF cooks at your black-sand coast villa — fresh seafood, sunset fine dining, and catering for surf retreats and families.',
+    coordinates: { lat: -8.5960, lng: 115.1070 },
+    bookingNote: 'Book 48 hours ahead. Fresh seafood sourced locally. Same-day response guaranteed.',
+    published: true,
+  },
+
+  {
+    slug: 'cemagi',
+    name: 'Cemagi',
+    regency: 'Tabanan',
+    tier: 1,
+    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroAlt: 'Chef serving sunset dinner at an ocean-view villa in Cemagi, Tabanan, Bali',
+    intro:
+      "Cemagi stretches along the Tabanan coast between Canggu and Tanah Lot — a low-density strip of luxury villas with ocean-facing infinity pools and rice fields rolling to the horizon. It is the kind of place where guests book for a week, don't leave the property, and want a chef on call. myCHEF covers Cemagi for multi-day villa stays, wedding-party weekends, and private retreats.",
+    villaDensity: 'medium',
+    guestProfile: 'Luxury villa guests on extended stays, wedding parties, retreat groups, families seeking seclusion',
+    landmarks: ['Cemagi beach', 'Tabanan rice fields', 'Tanah Lot (15 min)', 'Canggu surf coast (nearby)'],
+    priceFrom: 'IDR 1,350,000',
+    pricingNote:
+      'Cemagi is within the Canggu–Tabanan service zone. Standard pricing applies. Multi-day packages available.',
+    services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
+    faqs: [
+      {
+        q: 'Can myCHEF cook at villas in Cemagi, Tabanan?',
+        a: 'Yes — Cemagi is within our regular Tabanan service area. We handle all ingredient logistics and arrive fully equipped. Book 48 hours ahead for standard sessions.',
+      },
+      {
+        q: 'How much does private chef catering cost in Cemagi?',
+        a: 'Sessions start from IDR 1,350,000 plus groceries at cost. Multi-day packages and full-board arrangements are available for longer villa stays. Contact us for a tailored quote.',
+      },
+      {
+        q: 'Do you do events and weddings at villas in Cemagi?',
+        a: 'Yes — Cemagi villas make excellent event venues. myCHEF handles catering for villa weddings, birthday parties, and retreat celebrations. We bring the full team, all equipment, and manage setup through cleanup.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'canggu', name: 'Canggu' },
+      { slug: 'nyanyi', name: 'Nyanyi' },
+      { slug: 'seseh', name: 'Seseh' },
+      { slug: 'tanah-lot', name: 'Tanah Lot' },
+    ],
+    metaTitle: 'Private Chef in Cemagi, Bali | Luxury Villa Dining on the Tabanan Coast | myCHEF',
+    metaDescription:
+      "Book a private chef in Cemagi, Tabanan. myCHEF cooks for luxury villa stays, wedding parties, and retreats on Bali's quiet west coast. Multi-day packages available.",
+    coordinates: { lat: -8.6070, lng: 115.1000 },
+    bookingNote: 'Book 48 hours ahead. Multi-day and full-board packages available on request.',
+    published: true,
+  },
+
+  {
+    slug: 'seseh',
+    name: 'Seseh',
+    regency: 'Tabanan',
+    tier: 1,
+    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroAlt: 'Private chef preparing dinner at a cliffside villa in Seseh, Tabanan, Bali',
+    intro:
+      "Seseh is Bali's best-kept coastal secret — a black-sand stretch where a handful of architect-designed villas look out at the open Indian Ocean with no tourist infrastructure in sight. The guests who stay here know exactly what they want: complete privacy, no noise, and exceptional food. myCHEF has been cooking here since the first luxury villas opened and knows the area intimately.",
+    villaDensity: 'low-medium',
+    guestProfile: 'High-end travellers seeking privacy, honeymoon couples, family villa groups, architecture enthusiasts',
+    landmarks: ['Seseh Beach', 'Tabanan cliffside', 'Canggu surf coast (30 min)', 'Tanah Lot (20 min)'],
+    priceFrom: 'IDR 1,350,000',
+    pricingNote:
+      'Seseh is in the Tabanan coastal service area. Standard pricing applies with no travel surcharge. Groceries billed at Tabanan market rates.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Does myCHEF service villas in Seseh, Tabanan?',
+        a: 'Yes — Seseh is a regular destination for myCHEF. We serve all villa properties in the area. Same-day response, 48-hour booking lead time for standard sessions.',
+      },
+      {
+        q: 'What does a private chef cost in Seseh, Bali?',
+        a: 'Sessions start from IDR 1,350,000 plus groceries at cost. Fine dining tasting menus start from IDR 980,000 per person. Contact us for a personalised quote.',
+      },
+      {
+        q: 'Is Seseh far from Canggu for grocery sourcing?',
+        a: 'Seseh is about 20 minutes from Canggu. myCHEF handles all ingredient logistics — we source from Tabanan and Denpasar markets and arrive fully stocked.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'canggu', name: 'Canggu' },
+      { slug: 'cemagi', name: 'Cemagi' },
+      { slug: 'nyanyi', name: 'Nyanyi' },
+      { slug: 'pererenan', name: 'Pererenan' },
+    ],
+    metaTitle: 'Private Chef in Seseh, Bali | Cliffside Villa Dining on the Tabanan Coast | myCHEF',
+    metaDescription:
+      "Book a private chef in Seseh, Tabanan. myCHEF cooks at Bali's most private coastal villas — fine dining, intimate dinners, and catering on the black-sand west coast.",
+    coordinates: { lat: -8.5900, lng: 115.1020 },
+    bookingNote: 'Book 48 hours ahead. Full ingredient logistics handled. Same-day response guaranteed.',
+    published: true,
+  },
+
+  {
+    slug: 'nusa-ceningan',
+    name: 'Nusa Ceningan',
+    regency: 'Klungkung',
+    tier: 1,
+    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroAlt: 'Chef serving a sunset dinner at a clifftop villa on Nusa Ceningan',
+    intro:
+      "Nusa Ceningan is the smallest of Bali's three sister islands — a 3 km² lagoon-ringed gem connected to Nusa Lembongan by the famous Yellow Bridge. It hosts a handful of boutique clifftop villas, surf bungalows, and a blue lagoon that defines the island's character. myCHEF travels here for guests who want a private chef experience as wild and beautiful as the island itself.",
+    villaDensity: 'low',
+    guestProfile: 'Adventurous travellers, surfers, boutique villa guests, couples on romantic island escapes',
+    landmarks: ['Yellow Bridge (Lembongan link)', 'Blue Lagoon cliff jump', 'Ceningan cliffs', 'Nusa Lembongan channel'],
+    priceFrom: 'IDR 2,500,000',
+    pricingNote:
+      'Nusa Ceningan requires a fast boat from Sanur plus on-island transfer. Island transport quoted upfront. Minimum 2-person booking. All ingredients travel with the chef.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Can I book a private chef on Nusa Ceningan?',
+        a: 'Yes — myCHEF travels to Nusa Ceningan. We take the fast boat from Sanur with all ingredients and equipment. Book 5–7 days ahead to allow time for logistics confirmation.',
+      },
+      {
+        q: 'How much does a private chef cost on Nusa Ceningan?',
+        a: 'Sessions start from IDR 2,500,000 including island transport. Groceries are billed at cost. The premium covers fast boat, on-island transfer, and the extra logistical effort. Contact us for a full quote.',
+      },
+      {
+        q: 'Is Nusa Ceningan different from Nusa Lembongan for a chef booking?',
+        a: 'They are different islands connected by the Yellow Bridge — myCHEF serves both. Ceningan is smaller and more remote; Lembongan has more villa options. Same logistics and transport apply to both.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'nusa-lembongan', name: 'Nusa Lembongan' },
+      { slug: 'nusa-penida', name: 'Nusa Penida' },
+      { slug: 'sanur', name: 'Sanur' },
+      { slug: 'denpasar', name: 'Denpasar' },
+    ],
+    metaTitle: 'Private Chef on Nusa Ceningan | Island Villa Dining | myCHEF Bali',
+    metaDescription:
+      "Book a private chef on Nusa Ceningan, Bali. myCHEF travels to the sister islands — clifftop fine dining, seafood feasts, and island catering at your villa.",
+    coordinates: { lat: -8.6980, lng: 115.4520 },
+    bookingNote: 'Book 5–7 days ahead. Fast boat, on-island transport, and full ingredient logistics confirmed on booking.',
+    published: true,
+  },
 ]
 
 /** Quick lookup by slug */

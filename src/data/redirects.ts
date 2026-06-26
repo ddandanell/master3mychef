@@ -116,7 +116,7 @@ export const REDIRECTS: Redirect[] = [
   // --- Blog posts & journal ---
   { from: '/blog', to: '/journal', reason: 'Old blog hub → new journal.' },
   { from: '/blog/private-chef-bali-cost-breakdown-2026', to: '/pricing', reason: 'Cost breakdown content → pricing page.' },
-  { from: '/blog/best-bali-villas-private-chef-kitchen', to: '/partner-platform', reason: 'Villa partner content → partner platform.' },
+  // /blog/best-bali-villas-private-chef-kitchen — redirect removed 2026-06-27; content expanded to 700w, page now indexable.
   { from: '/blog/wedding-rehearsal-dinner-bali', to: '/events/weddings', reason: 'Wedding content → wedding events page.' },
   // NOTE: /blog/yoga-retreat-chef-bali-meal-planning is intentionally NOT redirected.
   // It renders a unique page (YogaRetreatChefPage) that self-canonicalises, emits

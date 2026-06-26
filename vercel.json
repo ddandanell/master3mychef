@@ -366,11 +366,6 @@
       "permanent": true
     },
     {
-      "source": "/blog/best-bali-villas-private-chef-kitchen",
-      "destination": "/partner-platform",
-      "permanent": true
-    },
-    {
       "source": "/blog/wedding-rehearsal-dinner-bali",
       "destination": "/events/weddings",
       "permanent": true

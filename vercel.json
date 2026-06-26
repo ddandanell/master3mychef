@@ -854,7 +854,27 @@
       "source": "/blog/seasonal-ingredients-bali-cooking-guide",
       "destination": "/blog/bali-catering-menu",
       "permanent": true
-    }
+    },
+    { "source": "/bali-wedding-catering-packages", "destination": "/events/weddings", "permanent": true },
+    { "source": "/best-private-chef-indonesia", "destination": "/fine-dining", "permanent": true },
+    { "source": "/butler-service-bali-daily-rate", "destination": "/in-villa-service/butlers", "permanent": true },
+    { "source": "/chef-for-hire-indonesia", "destination": "/fine-dining/private-chef-bali", "permanent": true },
+    { "source": "/corporate-retreat-catering-bali", "destination": "/catering/corporate-catering", "permanent": true },
+    { "source": "/group-villa-dinner-packages-bali", "destination": "/catering", "permanent": true },
+    { "source": "/healthy-meal-delivery-indonesia", "destination": "/villa-chef", "permanent": true },
+    { "source": "/hire-private-chef-bali-monthly", "destination": "/staffing/private-chef-placement", "permanent": true },
+    { "source": "/honeymoon-chef", "destination": "/fine-dining/romantic-dinner", "permanent": true },
+    { "source": "/luxury-birthday-party-bali", "destination": "/events/birthdays", "permanent": true },
+    { "source": "/luxury-chef-indonesia", "destination": "/fine-dining", "permanent": true },
+    { "source": "/michelin-private-chef-bali-prices", "destination": "/pricing", "permanent": true },
+    { "source": "/private-chef-for-events", "destination": "/events", "permanent": true },
+    { "source": "/private-dining-indonesia", "destination": "/fine-dining", "permanent": true },
+    { "source": "/private-tasting-menu-bali", "destination": "/fine-dining/tasting-menu", "permanent": true },
+    { "source": "/proposal-dinner", "destination": "/fine-dining/romantic-dinner", "permanent": true },
+    { "source": "/seafood-bbq-catering-bali", "destination": "/catering/bbq-catering", "permanent": true },
+    { "source": "/villa-bbq-catering-bali", "destination": "/catering/bbq-catering", "permanent": true },
+    { "source": "/villa-staff-bali-agency", "destination": "/staffing", "permanent": true },
+    { "source": "/wedding-catering-indonesia", "destination": "/events/weddings", "permanent": true }
   ],
   "headers": [
     {

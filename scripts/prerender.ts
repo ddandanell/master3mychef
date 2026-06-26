@@ -121,6 +121,18 @@ const ROUTES = [
   { path: '/private-chef/kuta', file: 'private-chef-kuta.html' },
   { path: '/private-chef/legian', file: 'private-chef-legian.html' },
   { path: '/private-chef/bukit', file: 'private-chef-bukit.html' },
+  // Phase 1 Tier 1 expansion
+  { path: '/private-chef/umalas', file: 'private-chef-umalas.html' },
+  { path: '/private-chef/batu-belig', file: 'private-chef-batu-belig.html' },
+  { path: '/private-chef/pecatu', file: 'private-chef-pecatu.html' },
+  { path: '/private-chef/ungasan', file: 'private-chef-ungasan.html' },
+  { path: '/private-chef/tanjung-benoa', file: 'private-chef-tanjung-benoa.html' },
+  { path: '/private-chef/sayan', file: 'private-chef-sayan.html' },
+  { path: '/private-chef/tegallalang', file: 'private-chef-tegallalang.html' },
+  { path: '/private-chef/renon', file: 'private-chef-renon.html' },
+  { path: '/private-chef/tanah-lot', file: 'private-chef-tanah-lot.html' },
+  { path: '/private-chef/nusa-lembongan', file: 'private-chef-nusa-lembongan.html' },
+  { path: '/private-chef/nusa-penida', file: 'private-chef-nusa-penida.html' },
 ]
 
 async function startPreviewServer(): Promise<ChildProcess> {

@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
+import EngagementTracker from './components/EngagementTracker'
 
 import { LANDING_PAGE_SLUGS, GUIDE_SLUGS, BLOG_POST_SLUGS, SERVICE_SLUGS, MENU_SLUGS, AREA_SLUGS, MICRO_AREA_SLUGS } from './data/route-slugs'
 import { REDIRECTS } from './data/redirects'
@@ -149,6 +150,7 @@ export default function App() {
 
   return (
     <Layout>
+      <EngagementTracker />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           {REDIRECTS.map((r) => (

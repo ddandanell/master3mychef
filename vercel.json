@@ -789,6 +789,21 @@
       "source": "/private-chef-pondok-indah",
       "destination": "/locations/jakarta",
       "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-bali-cost-breakdown-2026",
+      "destination": "/blog/private-chef-cost-bali",
+      "permanent": true
+    },
+    {
+      "source": "/blog/wedding-rehearsal-dinner-bali",
+      "destination": "/journal/rehearsal-dinner-planning-bali",
+      "permanent": true
+    },
+    {
+      "source": "/blog/yoga-retreat-chef-bali-meal-planning",
+      "destination": "/journal/yoga-retreat-meal-planning-bali",
+      "permanent": true
     }
   ],
   "headers": [

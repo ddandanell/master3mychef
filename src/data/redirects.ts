@@ -236,6 +236,11 @@ export const REDIRECTS: Redirect[] = [
   { from: '/private-chef-kemang', to: '/locations/jakarta', reason: 'Jakarta (Kemang) — real Jakarta hub page (mirrors /locations/kemang).' },
   { from: '/private-chef-scbd', to: '/locations/jakarta', reason: 'Jakarta (SCBD) — real Jakarta hub page (mirrors /locations/scbd).' },
   { from: '/private-chef-pondok-indah', to: '/locations/jakarta', reason: 'Jakarta (Pondok Indah) — real Jakarta hub page (mirrors /locations/pondok-indah).' },
+
+  // --- Sitemap audit 2026-06-27: thin/duplicate blog stubs → canonical full articles ---
+  { from: '/blog/private-chef-bali-cost-breakdown-2026', to: '/blog/private-chef-cost-bali', reason: 'Thin stub (18w) duplicating the full cost guide. Redirect to canonical /blog/private-chef-cost-bali.' },
+  { from: '/blog/wedding-rehearsal-dinner-bali', to: '/journal/rehearsal-dinner-planning-bali', reason: 'Thin stub (15w) covered by the full journal article on rehearsal dinner planning.' },
+  { from: '/blog/yoga-retreat-chef-bali-meal-planning', to: '/journal/yoga-retreat-meal-planning-bali', reason: 'Thin stub (16w) covered by the full journal article on yoga retreat meal planning.' },
 ]
 
 /** Lookup map for the React Router fallback. */

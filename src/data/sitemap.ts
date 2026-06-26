@@ -259,10 +259,52 @@ export const BLOG_POSTS = [
   },
   {
     slug: "blog/best-bali-villas-private-chef-kitchen",
-    title: "Best Bali Villas With a Private Chef Kitchen",
-    description: "What makes a Bali villa kitchen work for a private chef, with prep-space checks.",
+    title: "What Makes a Bali Villa Kitchen Work for a Private Chef",
+    description: "A practical guide to what private chefs actually need in a Bali villa kitchen — prep space, equipment, ventilation, and cold storage — and how to check before you book.",
     date: "2026-04-24",
-    content: `<p>A chef-friendly kitchen needs heat, prep space, and cold storage. Ventilation is critical.</p>`,
+    content: `<h2>Why the Kitchen Matters Before You Book a Villa</h2><p>Most Bali villa photos are taken from the pool deck. The kitchen, if shown at all, gets one wide-angle shot designed to make it look large. What that photo cannot tell you is whether there is enough hob space for a private chef to cook six courses simultaneously, whether the refrigeration is cold enough to hold proteins overnight, or whether the extraction is strong enough to handle an open-flame main course without smoking out the living room.</p><p>If you are booking a villa specifically to use a private chef — for a dinner party, a week-long stay, or a wedding catering event — the kitchen check is one of the most important things you can do before confirming.</p>
+
+<h2>The Four Things a Private Chef Actually Needs</h2>
+
+<h3>1. Sufficient Hob Space</h3>
+<p>A private chef running a multi-course dinner for eight or more needs at minimum four burners. Six is better. Induction hobs are workable if the chef is experienced with them; gas is universally preferred because it gives instant heat control. One-hob studio kitchens are suitable for breakfast prep and simple lunches, but not for a proper dinner service.</p>
+<p>When reviewing a villa, ask the concierge or look for photos that show the cooking surface. A single two-burner induction unit is a red flag if you are planning anything beyond the most basic meal.</p>
+
+<h3>2. Prep Counter Space</h3>
+<p>A professional chef works on multiple components in parallel. They need at least 1.5 to 2 metres of clear, cleanable counter space beside the hob. Marble and stone surfaces are standard in Bali villas and fine for cold work and plating. Problems arise when the counter is divided by a sink, cluttered with villa ornaments, or so narrow that mise en place trays do not fit beside each other.</p>
+<p>Stone surfaces heat up in tropical sun during the day and retain that heat into the evening. A good prep surface stays cool enough to work comfortably; ask whether the kitchen is air-conditioned or at least well cross-ventilated.</p>
+
+<h3>3. Refrigeration and Cold Storage</h3>
+<p>A private chef working from a villa needs to store raw proteins, prepped components, and plated desserts separately. A single household fridge is limiting for a group of eight and inadequate for twelve or more. The best villa kitchens for chef use have at minimum a large main fridge (400L+) plus a separate freezer or a secondary fridge for drinks, freeing all cold space for food.</p>
+<p>If the villa only has a small bar fridge and a combined fridge-freezer unit, the chef will manage, but it adds constraints — typically requiring same-day sourcing and limiting how far ahead cold preparation can be done. For events and larger dinners, this matters.</p>
+
+<h3>4. Ventilation and Extraction</h3>
+<p>Cooking for a private dinner involves high heat, open flame, and significant steam. Without proper extraction — a hood that genuinely draws smoke rather than just recirculating it — an evening's cooking fills the villa with food smells and residual smoke. This is particularly relevant for grill work, wok cooking, or any dish involving reduction at high heat.</p>
+<p>Look for an over-hob extraction hood connected to a duct that leads outside the building. Recirculating hoods with charcoal filters are better than nothing but will not cope with serious cooking. In open-plan villas where the kitchen flows into the dining and living area, extraction quality directly affects the guest experience.</p>
+
+<h2>Secondary Checks Worth Making</h2>
+<ul>
+<li><strong>Knife block or magnetic strip:</strong> A professional chef brings their own knives, but having a stable, accessible storage point matters for a safe working kitchen.</li>
+<li><strong>Power outlet placement:</strong> Blenders, immersion circulators, and stand mixers need power near the prep surface, not across the room.</li>
+<li><strong>Dining table clearance:</strong> The path from hob to table needs to be unobstructed. Nothing kills a plated course like a chef navigating through a narrow doorway while balancing eight hot plates.</li>
+<li><strong>Waste disposal:</strong> A private chef generates food waste through prep and service. Knowing where bins are and having clear access to outdoor disposal keeps the kitchen hygienic through a long evening.</li>
+</ul>
+
+<h2>What a Private Chef Will Adapt Around</h2>
+<p>A professional chef working in villa environments — which is almost all experienced Bali-based private chefs — is used to adapting. They pack additional equipment to cover gaps: portable induction units, extra cutting boards, their own service tools, mise en place trays, thermometers, and spare power strips. A kitchen that scores seven out of ten on the checks above is workable with some adaptation. A kitchen that scores three out of ten, with one burner, no ventilation, and a bar fridge, will limit what a chef can actually deliver.</p>
+<p>The simplest way to avoid surprises is to send the chef your villa details before booking. A short conversation about the kitchen usually surfaces any real limitations quickly, and a good chef will either adapt the menu to what is possible or flag clearly when a format needs rethinking. myCHEF does this as part of every pre-event consultation — explore the full process on our <a href="/catering">catering page</a>, or request a <a href="/quote">quote</a> with your villa details and we will advise accordingly.</p>
+
+<h2>Quick Kitchen Checklist for Villa Bookers</h2>
+<ul>
+<li>Four or more burners, ideally gas</li>
+<li>1.5m+ of clear prep counter beside the hob</li>
+<li>400L+ refrigeration for groups of eight or more</li>
+<li>Ducted extraction hood above the hob</li>
+<li>Clear path from kitchen to dining table</li>
+<li>Power outlets near the prep surface</li>
+<li>Accessible waste disposal</li>
+</ul>
+<p>A villa that ticks five or more of these boxes will support a genuinely excellent private chef experience. For further guidance on planning a private chef dinner in Bali, see our <a href="/blog/private-chef-cost-bali">cost guide</a> and <a href="/journal/private-chef-seminyak-guide">area-specific service guides</a>.</p>`,
   },
   {
     slug: 'blog/wedding-rehearsal-dinner-bali',
@@ -398,17 +440,106 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'blog/how-to-plan-villa-birthday-party-bali',
-    title: 'How to Plan a Villa Birthday Party in Bali',
-    description: 'Complete guide to planning and executing a memorable villa birthday celebration with private chef catering.',
+    title: 'How to Plan a Villa Birthday Party in Bali: The Complete Guide',
+    description: 'Step-by-step guide to planning a villa birthday party in Bali — from catering formats and guest counts to timelines, styling, and private chef logistics.',
     date: '2026-05-10',
-    content: `<h2>Villa Birthday Parties: The Complete Guide</h2><p>A villa birthday party in Bali combines the intimacy of home with the luxury of resort-level service. A private chef handles catering while you celebrate with guests in your private space.</p>`,
+    content: `<h2>Why a Villa Birthday Party in Bali Works Better Than a Restaurant</h2>
+<p>Booking out a section of a Seminyak restaurant for a birthday sounds glamorous until the logistics kick in: a strict two-hour table limit, noise from the other dining room, children who run out of patience long before dessert, and a bill that climbs once you add service charge, tax, and drinks minimums. A villa birthday party removes every one of those friction points. The space is yours for as long as you want it. The menu bends entirely around the birthday person. A private chef handles the food while you stay present for every moment worth photographing.</p>
+
+<h2>Step 1: Set the Format Before You Set the Menu</h2>
+<p>The format determines everything else — the catering style, the staffing, the timeline. For villa birthday parties, the most popular formats are:</p>
+<ul>
+<li><strong>Seated dinner:</strong> Two to four courses, plated service, works beautifully for 8–20 guests who want the event to feel like an occasion.</li>
+<li><strong>Casual feast / sharing style:</strong> Large platters served family-style, relaxed pacing, suits mixed age groups and guests who prefer to graze. Works for 10–50 guests.</li>
+<li><strong>Grazing and cocktail party:</strong> Circulating canapes, a grazing table, drinks flowing continuously. Suits large groups (30+) or events where guests will be arriving across a window of two to three hours.</li>
+<li><strong>BBQ poolside:</strong> Grills set up around the villa pool area, live cooking stations, highly social. One of the most requested formats for birthdays in the 15–40 guest range.</li>
+</ul>
+<p>Mixed formats also work well — a cocktail reception followed by a seated dinner keeps energy high through arrival and settles into something more intimate for the meal.</p>
+
+<h2>Step 2: Work Out Your Guest Count First</h2>
+<p>Staffing, equipment, and pricing all scale from guest count, so confirm your number before getting menu quotes. For private chef catering in Bali:</p>
+<ul>
+<li>Up to 12 guests: one chef, one server.</li>
+<li>12–25 guests: one chef, two servers, depending on the service style.</li>
+<li>25–60 guests: head chef, one or two kitchen assistants, two to four servers.</li>
+<li>60+ guests: full brigade with prep chef, head chef, sous chef, multiple service staff, and usually a coordinator on-site.</li>
+</ul>
+<p>Guest count also affects your villa kitchen assessment — a kitchen suited to eight guests will not run a catering operation for fifty without additional portable equipment. A professional catering team handles this planning for you, but it helps to have your number confirmed before the first conversation.</p>
+
+<h2>Step 3: Build the Timeline Backwards from the Meal</h2>
+<p>A private chef typically arrives 2–3 hours before the meal is served to begin prep. For a dinner party starting at 7pm, expect your chef on-site from 4–5pm. For larger events with more complex production, it may be earlier. Build your guest arrival time around the food timeline, not the other way round.</p>
+<p>A simple birthday dinner timeline might look like this:</p>
+<ul>
+<li>4:00pm — Chef arrives, begins prep</li>
+<li>6:30pm — Guests arrive, welcome drinks and canapes</li>
+<li>7:30pm — Seated dinner begins</li>
+<li>9:30pm — Birthday cake moment, dessert, toasts</li>
+<li>10:30pm — Chef completes cleanup, departs</li>
+</ul>
+<p>For pool parties and cocktail events, the structure is more flexible, but having a rough flow agreed with your catering team avoids food arriving too early or too late for the group's energy.</p>
+
+<h2>Step 4: Design a Menu That Works for Everyone</h2>
+<p>A birthday party typically has the most varied guest list of any event — children, grandparents, friends with different dietary requirements, and guests who don't know each other well. A good private chef anticipates this and designs a menu with built-in flexibility:</p>
+<ul>
+<li>A base protein that works for most guests, with a vegetarian equivalent as standard.</li>
+<li>Clearly labelled allergen-free options if anyone at the table has restrictions.</li>
+<li>A children's option that is simple, familiar, and properly portioned.</li>
+<li>A birthday cake or celebration dessert that works as the centrepiece moment of the evening.</li>
+</ul>
+<p>Avoid over-complicating the menu. Birthdays are about the people, not the food — aim for dishes that feel celebratory and generous rather than technically demanding. A confident BBQ spread or a well-executed three-course dinner will make a better impression than an overly ambitious tasting menu where the pacing goes wrong.</p>
+
+<h2>Step 5: Book Early for Dates That Matter</h2>
+<p>Bali in peak season (July, August, December) fills up quickly. A private chef booking for a birthday on a Saturday evening in August should ideally be confirmed four to six weeks out. Off-peak months give more flexibility, but for milestone birthdays — 30th, 40th, 50th — book early regardless of season so you have access to the right chef, the right villa, and the staffing you need.</p>
+<p>When you request a quote from myCHEF, share your date, villa name, approximate guest count, and the format you have in mind. We respond with a clear menu proposal, staffing recommendation, and pricing breakdown. Start the conversation on our <a href="/events/birthdays">birthday catering page</a> or <a href="/quote">request a quote</a> directly.</p>
+
+<h2>Common Mistakes to Avoid</h2>
+<ul>
+<li><strong>Leaving the cake to the last minute:</strong> If you want a custom celebration cake, order it at least 48 hours ahead from a Bali patisserie. Some require more notice during peak season.</li>
+<li><strong>Not briefing the chef on allergies:</strong> List all dietary restrictions — allergies, intolerances, religious requirements — when you confirm, not the day before.</li>
+<li><strong>Underestimating setup time:</strong> Table decorations, florals, and lighting take longer than expected. Allow at least two hours for setup before guests arrive.</li>
+<li><strong>Overlooking the chef's access:</strong> Make sure the villa's kitchen is accessible when the chef arrives and that there is parking nearby for their vehicle and equipment.</li>
+</ul>`,
   },
   {
     slug: 'blog/private-chef-romantic-dinners-bali',
-    title: 'Private Chef Romantic Dinners in Bali',
-    description: 'Plan an intimate, personalized romantic dinner with a private chef in your Bali villa.',
+    title: 'Private Chef Romantic Dinners in Bali: How to Plan the Perfect Evening',
+    description: 'How to plan a private chef romantic dinner in your Bali villa — from menu styles and timing to proposal setups, anniversary dinners, and what actually makes the evening work.',
     date: '2026-05-10',
-    content: `<h2>Romance Through Food</h2><p>A private chef creates an intimate dining experience tailored to your relationship. Unlike restaurants, a private chef adapts to your pace, preferences, and the magic of your villa setting.</p>`,
+    content: `<h2>Why a Private Chef Dinner Beats Any Restaurant for Romance</h2>
+<p>The most romantic restaurant in Bali still has other tables, a fixed reservation window, a front-of-house team managing multiple parties, and ambient noise you did not choose. A private chef dinner in your villa has none of those constraints. The table is set only for you. The kitchen works entirely on your timeline. The evening ends when you want it to, not when the next booking arrives.</p>
+<p>This is why private chef romantic dinners in Bali — for anniversaries, proposals, honeymoons, and milestone occasions — consistently produce better outcomes than even the most celebrated restaurants on the island. The context is entirely yours, and a skilled chef can tailor every aspect of the meal to the specific relationship sitting at that table.</p>
+
+<h2>Choosing the Right Format</h2>
+
+<h3>Multi-Course Tasting Menu</h3>
+<p>The classic format for a romantic dinner: five to nine courses that unfold over two to three hours, each building on the last. The chef controls the pacing from the kitchen while you and your partner focus entirely on each other. Courses arrive naturally rather than on demand, creating a rhythm that feels effortless even as the kitchen works precisely. This is the format best suited to proposals, significant anniversaries, and any evening where the meal is the event itself.</p>
+
+<h3>Three-Course Plated Dinner</h3>
+<p>More contained than a tasting menu but no less considered. Starter, main, dessert — three well-executed courses that allow genuine conversation between each one without the pacing demands of a longer sequence. Works particularly well for couples who prefer a relaxed, unhurried evening over a more formal culinary journey.</p>
+
+<h3>Chef's Table Experience</h3>
+<p>Rather than a separate dining area, this format puts you at the kitchen counter to watch the chef work. It is interactive, conversational, and genuinely entertaining — the chef talks through each course as they prepare it, explaining ingredients and technique. This suits couples who love food, who want something different, and who find the process of cooking as engaging as the eating.</p>
+
+<h2>Details That Make a Romantic Dinner Work</h2>
+
+<h3>The Setting</h3>
+<p>Most Bali villas offer several possible dining locations: an air-conditioned indoor dining room, a terrace overlooking the pool, a poolside setup with floating candles, or a garden area. The outdoor settings, especially poolside at sunset, tend to be the most atmospheric. Discuss with the chef or the concierge where the light is best in the evening, where mosquitoes are least likely to be a problem, and which spot allows the most privacy within the property.</p>
+
+<h3>Timing Around Sunset</h3>
+<p>Bali sunsets typically fall between 6:00pm and 6:45pm depending on the season. Building the first course arrival around 6:30–7:00pm means you can watch the sky change colour during welcome drinks and canapés, then move into the meal as the evening settles into darkness. This timing is particularly effective at villas in Uluwatu, Seminyak, and the Bukit Peninsula where western-facing terraces have a full sky view.</p>
+
+<h3>Briefing the Chef</h3>
+<p>A romantic dinner works best when the chef knows the context. Share anything relevant when you book: whether it is an anniversary and how many years, whether a proposal is planned and when during the meal you would like your cue, any dishes that carry personal significance, your partner's favourite ingredients or cuisines. This briefing changes the quality of the experience significantly — a chef who knows they are cooking for someone's fortieth anniversary will approach the menu with different intent than a generic dinner booking.</p>
+
+<h3>Menu Personalisation</h3>
+<p>The most memorable romantic dinners include at least one course built around a personal connection: the cuisine from a favourite trip, a dish from the first time you cooked together, ingredients that carry meaning for the relationship. This requires a brief conversation with the chef in advance, but it is the kind of detail that turns a good dinner into an evening someone remembers for years.</p>
+
+<h2>For Proposals Specifically</h2>
+<p>If a proposal is planned, share the timing and preferred moment with the chef and the service team. They can build the pacing of the evening to arrive naturally at the right moment — whether that is during a champagne pause between courses, at the arrival of a dessert with something written in chocolate, or at a specific signal from you. Discretion is the default: the team works quietly and stays out of the moment until you need them. Once the answer is yes, they are ready to celebrate.</p>
+<p>See our dedicated <a href="/proposal-dinner">proposal dinner</a> experience for specifics on how myCHEF handles this, and for the full range of romantic dinner formats, visit our <a href="/fine-dining/romantic-dinner">romantic dinner page</a>.</p>
+
+<h2>Pricing and What to Expect</h2>
+<p>A private chef romantic dinner for two in Bali typically runs IDR 3M–8M all-in, depending on menu complexity, course count, and ingredient quality. That includes the chef, any service support, all ingredients, full setup, and kitchen cleanup. Wine pairing can be added with a sommelier service for an additional cost. For a specific quote for your villa and dates, <a href="/quote">request a proposal</a> and the team will respond within the hour with a full breakdown.</p>`,
   },
   // Phase 5 Blog Posts
   {
@@ -681,6 +812,13 @@ export const BLOG_POSTS = [
     content: `<h2>Planning Your Event in Bali</h2><p>Bali is one of the world's premier event destinations — villa venues, open-air gardens, and beachfront settings that are impossible to replicate elsewhere. But executing a flawless event in Bali requires local knowledge: vendor lead times, permit requirements, and the logistics of moving large groups across the island.</p><h2>Event Types and Timelines</h2><p>Weddings (10–200 guests) require 3–12 months of planning. Corporate retreats need 4–8 weeks. Private celebrations and villa parties can be organised in 1–2 weeks with the right team. The earlier you lock in catering, the better: top private chefs book out 3–4 weeks in advance during high season.</p><h2>Catering and Staffing</h2><p>Catering is the single highest-impact element of any event. For plated dinners, plan for 1 server per 6 guests. Buffets require 1 server per 15 guests plus 2 kitchen staff. All myCHEF event packages include the chef, sous-chef, service staff, setup, and full cleanup. Explore <a href="/blog/bali-catering-menu" class="text-[#C5A028] hover:underline font-medium">catering menu options</a> for buffet, plated, and grazing styles.</p><h2>Related Guides</h2><p><a href="/events/weddings" class="text-[#C5A028] hover:underline font-medium">Wedding Catering</a> — villa wedding menus and service.<br><a href="/events/corporate-events" class="text-[#C5A028] hover:underline font-medium">Corporate Events</a> — business retreats and executive dinners.<br><a href="/blog/corporate-events-catering-bali" class="text-[#C5A028] hover:underline font-medium">Corporate Case Studies</a> — real events we have delivered.</p>`,
   },
   {
+    slug: 'blog/bali-wedding-catering-private-chef-timeline',
+    title: 'Bali Wedding Catering Private Chef Timeline: 6-Month Planning Guide',
+    description: 'The complete Bali wedding catering timeline — what to book, when to confirm, and how private chefs coordinate with villa venues, planners, and your full event schedule.',
+    date: '2026-06-26',
+    content: `<p>Planning a Bali villa wedding involves dozens of moving parts, and the catering timeline is one of the most consequential. Book too late and your preferred chef may be unavailable. Finalise menus too early and seasonal ingredients may have shifted. Wait too long on staffing and you will not have enough service coverage for your guest count. This guide lays out the ideal private chef and catering timeline for a Bali villa wedding, broken into six monthly phases from initial brief to post-event debrief.</p><p>Six months before the wedding, lock in your catering partner and conduct a venue kitchen assessment. Most Bali villas were not designed for full wedding-scale production, so understanding power capacity, refrigeration, and prep space early shapes every decision that follows. At five months, submit your guest count and broad format — plated dinner, buffet, cocktail reception — so the head chef can begin menu development and staffing plans. Four months out, complete a tasting session and confirm dietary requirements from all guests. Three months before, confirm final staffing numbers with your catering team: for groups of 50 or more, expect a head chef, sous chef, kitchen assistant, and three to five service staff at minimum. At six to eight weeks, lock the final menu, confirm timing sequences with your wedding planner, and arrange a final kitchen walkthrough. In the final fortnight, complete grocery pre-orders for premium items such as Wagyu or imported seafood. On the day, your catering team arrives three to four hours before service to begin prep, coordinates with the venue coordinator on timing cues, and manages every course from kitchen to table without requiring your attention. Explore the full timeline and pricing breakdowns on our <a href="/events/weddings" class="text-[#C5A028] hover:underline font-medium">wedding catering page</a>.</p>`,
+  },
+  {
     slug: 'blog/bali-catering-menu',
     title: 'Bali Catering Menus: Traditional & Modern Options for Your Villa',
     description: 'Explore Bali catering menus — traditional Indonesian, modern fusion, plated dinners, buffets, and grazing boards for villa events.',
@@ -785,8 +923,7 @@ export function buildSitemap(): SitemapEntry[] {
     { path: '/events', type: 'info', title: 'Bali Event Catering | Private Villa Celebrations — myCHEF', description: 'One team for your entire event. Weddings, birthdays, corporate retreats, and villa parties anywhere in Bali.', priority: 0.9, changefreq: 'weekly' },
     { path: '/in-villa-service', type: 'info', title: 'Hire Villa Staff Bali | Professional Waiters & Butlers — myCHEF', description: 'Uniformed, English-speaking staff for your villa. Waiters, butlers, bartenders, and coordinators available by the shift.', priority: 0.8, changefreq: 'monthly' },
     { path: '/services', type: 'info', title: 'Private Chef Services Bali | All-In Villa Experiences — myCHEF', description: 'Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit.', priority: 0.9, changefreq: 'weekly' },
-    // Conversion & utility pages
-    { path: '/quote', type: 'info', title: 'Get a Quote | Private Chef & Catering Bali — myCHEF', description: 'Get a personalised quote for private chef, catering, and event services in Bali. Fast response via WhatsApp.', priority: 0.7, changefreq: 'monthly' },
+    // Conversion & utility pages — /quote and /book intentionally excluded (noindex tags)
     { path: '/faq', type: 'info', title: 'Private Chef Bali FAQ | Booking, Pricing & Menus — myCHEF', description: 'Answers to every private chef Bali question: pricing, menus, dietary needs, staffing, weddings & booking flow. Get clarity before you confirm your date.', priority: 0.7, changefreq: 'monthly' },
     { path: '/why-mychef', type: 'info', title: 'Best Private Chef Service Bali | Why myCHEF? — 560+ Villas', description: 'Why 560+ Bali villas trust myCHEF: Michelin-trained leadership, 50+ local staff, same-day confirmation & no-stress guarantee. See the full difference.', priority: 0.7, changefreq: 'monthly' },
     { path: '/calculator', type: 'info', title: 'Pricing Calculator | Private Chef Bali | myCHEF.id', description: 'Estimate your private chef, catering, or event costs instantly. Transparent IDR pricing, no hidden fees.', priority: 0.6, changefreq: 'monthly' },
@@ -815,7 +952,7 @@ export function buildSitemap(): SitemapEntry[] {
     { path: '/corporate-case-studies', type: 'info', title: 'Corporate Catering Case Studies Bali | myCHEF', description: 'Real corporate event case studies in Bali — executive dinners, leadership offsites, retreats and conference catering. Outcomes, metrics and client results.', priority: 0.7, changefreq: 'monthly' },
     { path: '/journal', type: 'blog-index', title: 'Journal | Bali Private Chef Guides & Hosting Tips', description: 'Guides, cost breakdowns, and insights for hosting in Bali villas.', priority: 0.8, changefreq: 'weekly' },
     { path: '/pricing', type: 'info', title: 'Pricing | Private Chef Bali, Villa Catering & Events', description: 'Transparent pricing for private chef, catering & event services in Bali. Hourly rates, menu pricing & full packages. No hidden fees. Get a quote.', priority: 0.8, changefreq: 'monthly' },
-    { path: '/book', type: 'info', title: 'Book | Private Chef & Catering Bali — myCHEF', description: 'Book a private chef, catering, or event in Bali. Same-day WhatsApp confirmation.', priority: 0.8, changefreq: 'monthly' },
+    // /book removed from sitemap — noindex tag in BookPage.tsx
     { path: '/staffing', type: 'info', title: 'Chef & Villa Staff Placement Bali | Hire Hospitality Staff — myCHEF', description: 'Long-term private chef placement, villa staff, and hospitality recruitment in Bali and Jakarta.', priority: 0.8, changefreq: 'monthly' },
     { path: '/contact', type: 'info', title: 'Contact myCHEF | Private Chef & Catering Bali', description: 'Contact myCHEF for private chef bookings, catering, and event enquiries in Bali.', priority: 0.5, changefreq: 'monthly' },
     { path: '/partner-platform', type: 'info', title: 'Villa Partner Platform | myCHEF Bali', description: 'Partner with myCHEF — private chef and catering services for Bali villa managers and owners.', priority: 0.6, changefreq: 'monthly' },

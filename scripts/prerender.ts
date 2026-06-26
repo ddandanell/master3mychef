@@ -70,7 +70,6 @@ const ROUTES = [
   { path: '/guide/private-chef-bali', file: 'guide-private-chef-bali.html' },
   // Blog posts
   { path: '/blog/private-chef-bali-cost-breakdown-2026', file: 'blog-private-chef-bali-cost-breakdown-2026.html' },
-  { path: '/blog/best-bali-villas-private-chef-kitchen', file: 'blog-best-bali-villas-private-chef-kitchen.html' },
   { path: '/blog/wedding-rehearsal-dinner-bali', file: 'blog-wedding-rehearsal-dinner-bali.html' },
   { path: '/blog/yoga-retreat-chef-bali-meal-planning', file: 'blog-yoga-retreat-chef-bali-meal-planning.html' },
   { path: '/blog/private-chef-vs-restaurant-bali', file: 'blog-private-chef-vs-restaurant-bali.html' },

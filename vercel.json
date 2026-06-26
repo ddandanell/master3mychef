@@ -824,6 +824,36 @@
       "source": "/blog/private-chef-bali-preparation-12-guest-villa-dinner",
       "destination": "/blog/private-chef-cost-bali",
       "permanent": true
+    },
+    {
+      "source": "/blog/fine-dining-trends-bali-2026-innovations",
+      "destination": "/blog/fine-dining-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-roles-responsibilities-explained",
+      "destination": "/blog/how-to-hire-private-chef-bali-complete-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-hire-private-chef",
+      "destination": "/blog/how-to-hire-private-chef-bali-complete-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-romantic-dinners-bali",
+      "destination": "/blog/romantic-dinner-at-home-bali-private-chef",
+      "permanent": true
+    },
+    {
+      "source": "/blog/corporate-events-catering-bali",
+      "destination": "/blog/corporate-events-catering-bali-team-dining",
+      "permanent": true
+    },
+    {
+      "source": "/blog/seasonal-ingredients-bali-cooking-guide",
+      "destination": "/blog/bali-catering-menu",
+      "permanent": true
     }
   ],
   "headers": [

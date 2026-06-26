@@ -74,17 +74,12 @@ const ROUTES = [
   { path: '/blog/yoga-retreat-chef-bali-meal-planning', file: 'blog-yoga-retreat-chef-bali-meal-planning.html' },
   { path: '/blog/private-chef-vs-restaurant-bali', file: 'blog-private-chef-vs-restaurant-bali.html' },
   { path: '/blog/how-to-plan-villa-birthday-party-bali', file: 'blog-how-to-plan-villa-birthday-party-bali.html' },
-  { path: '/blog/private-chef-romantic-dinners-bali', file: 'blog-private-chef-romantic-dinners-bali.html' },
   { path: '/blog/how-to-hire-private-chef-bali-complete-guide', file: 'blog-how-to-hire-private-chef-bali-complete-guide.html' },
-  { path: '/blog/private-chef-bali-cost-breakdown-detailed-2026', file: 'blog-private-chef-bali-cost-breakdown-detailed-2026.html' },
   { path: '/blog/chef-qualifications-credentials-bali-hiring', file: 'blog-chef-qualifications-credentials-bali-hiring.html' },
-  { path: '/blog/private-chef-roles-responsibilities-explained', file: 'blog-private-chef-roles-responsibilities-explained.html' },
   { path: '/blog/wedding-private-chef-bali-planning-guide', file: 'blog-wedding-private-chef-bali-planning-guide.html' },
   { path: '/blog/corporate-events-catering-bali-team-dining', file: 'blog-corporate-events-catering-bali-team-dining.html' },
   { path: '/blog/romantic-dinner-at-home-bali-private-chef', file: 'blog-romantic-dinner-at-home-bali-private-chef.html' },
   { path: '/blog/dining-by-location-bali-neighborhood-guide', file: 'blog-dining-by-location-bali-neighborhood-guide.html' },
-  { path: '/blog/fine-dining-trends-bali-2026-innovations', file: 'blog-fine-dining-trends-bali-2026-innovations.html' },
-  { path: '/blog/seasonal-ingredients-bali-cooking-guide', file: 'blog-seasonal-ingredients-bali-cooking-guide.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },
   // Journal posts (all 16)

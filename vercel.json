@@ -476,6 +476,86 @@
       "permanent": true
     },
     {
+      "source": "/events/corporate",
+      "destination": "/events/corporate-events",
+      "permanent": true
+    },
+    {
+      "source": "/events/proposals",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/in-villa-service/villa-chef",
+      "destination": "/villa-chef",
+      "permanent": true
+    },
+    {
+      "source": "/in-villa-service/breakfast-service",
+      "destination": "/catering/floating-breakfast",
+      "permanent": true
+    },
+    {
+      "source": "/in-villa-service/cooking-class",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/in-villa-service/meal-prep",
+      "destination": "/villa-chef",
+      "permanent": true
+    },
+    {
+      "source": "/staffing/chef-recruitment",
+      "destination": "/staffing/private-chef-placement",
+      "permanent": true
+    },
+    {
+      "source": "/staffing/event-staff",
+      "destination": "/staffing/villa-staff",
+      "permanent": true
+    },
+    {
+      "source": "/blog/chef-hiring-guide",
+      "destination": "/blog/chef-qualifications-credentials-bali-hiring",
+      "permanent": true
+    },
+    {
+      "source": "/romantic-dinner",
+      "destination": "/fine-dining/romantic-dinner",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-events-catering-bali",
+      "destination": "/blog/corporate-events-catering-bali",
+      "permanent": true
+    },
+    {
+      "source": "/events/weddings-bali",
+      "destination": "/events/weddings",
+      "permanent": true
+    },
+    {
+      "source": "/chef-placement-bali",
+      "destination": "/staffing/private-chef-placement",
+      "permanent": true
+    },
+    {
+      "source": "/live-in-chef-bali",
+      "destination": "/staffing/live-in-chef",
+      "permanent": true
+    },
+    {
+      "source": "/retreat-catering-bali",
+      "destination": "/catering/retreat-catering",
+      "permanent": true
+    },
+    {
+      "source": "/getting-started",
+      "destination": "/help/getting-started",
+      "permanent": true
+    },
+    {
       "source": "/locations/berawa",
       "destination": "/locations/canggu",
       "permanent": true

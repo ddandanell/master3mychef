@@ -4,7 +4,6 @@ import { UniverseProvider } from '@/contexts/UniverseContext'
 import { trackWhatsAppClick, trackPhoneClick } from '@/lib/analytics'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import ConciergeWidget from './ConciergeWidget'
 import ExitIntentPopup from './ExitIntentPopup'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -61,7 +60,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · 4.9★ rated
         </div>
         <Footer />
-        <ConciergeWidget />
         <ExitIntentPopup />
       </div>
     </UniverseProvider>

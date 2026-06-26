@@ -152,6 +152,19 @@ const ROUTES = [
   { path: '/private-chef/singaraja', file: 'private-chef-singaraja.html' },
   { path: '/private-chef/pemuteran', file: 'private-chef-pemuteran.html' },
   { path: '/private-chef/kintamani', file: 'private-chef-kintamani.html' },
+  // Phase 3 Tier 3 — luxury villa villages & emerging areas
+  { path: '/private-chef/kedewatan', file: 'private-chef-kedewatan.html' },
+  { path: '/private-chef/nyuh-kuning', file: 'private-chef-nyuh-kuning.html' },
+  { path: '/private-chef/lodtunduh', file: 'private-chef-lodtunduh.html' },
+  { path: '/private-chef/tirta-gangga', file: 'private-chef-tirta-gangga.html' },
+  { path: '/private-chef/munduk', file: 'private-chef-munduk.html' },
+  { path: '/private-chef/gianyar', file: 'private-chef-gianyar.html' },
+  { path: '/private-chef/padang-bai', file: 'private-chef-padang-bai.html' },
+  { path: '/private-chef/baturiti', file: 'private-chef-baturiti.html' },
+  { path: '/private-chef/mengwi', file: 'private-chef-mengwi.html' },
+  { path: '/private-chef/ketewel', file: 'private-chef-ketewel.html' },
+  { path: '/private-chef/abiansemal', file: 'private-chef-abiansemal.html' },
+  { path: '/private-chef/cepaka', file: 'private-chef-cepaka.html' },
 ]
 
 async function startPreviewServer(): Promise<ChildProcess> {

@@ -127,7 +127,7 @@
     },
     {
       "source": "/gianyar",
-      "destination": "/locations/ubud",
+      "destination": "/private-chef/gianyar",
       "permanent": true
     },
     {
@@ -152,7 +152,7 @@
     },
     {
       "source": "/padang-bai",
-      "destination": "/locations/sanur",
+      "destination": "/private-chef/padang-bai",
       "permanent": true
     },
     {
@@ -572,7 +572,7 @@
     },
     {
       "source": "/locations/gianyar",
-      "destination": "/locations/ubud",
+      "destination": "/private-chef/gianyar",
       "permanent": true
     },
     {
@@ -602,7 +602,7 @@
     },
     {
       "source": "/locations/padang-bai",
-      "destination": "/locations/sanur",
+      "destination": "/private-chef/padang-bai",
       "permanent": true
     },
     {
@@ -747,7 +747,7 @@
     },
     {
       "source": "/private-chef-bali/gianyar",
-      "destination": "/private-chef/ubud",
+      "destination": "/private-chef/gianyar",
       "permanent": true
     },
     {
@@ -762,7 +762,7 @@
     },
     {
       "source": "/private-chef-bali/padang-bai",
-      "destination": "/private-chef/sanur",
+      "destination": "/private-chef/padang-bai",
       "permanent": true
     },
     {

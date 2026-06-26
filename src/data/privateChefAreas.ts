@@ -2568,8 +2568,590 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     bookingNote: 'Book 72 hours ahead. Caldera rim at 1,500m — cool temperatures year-round.',
     published: true,
   },
-]
 
+  // ── Phase 3 Tier 3 — luxury villa villages & emerging areas ─────────────────
+  {
+    slug: "kedewatan",
+    name: "Kedewatan",
+    regency: "Gianyar",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-city-ubud.webp",
+    heroAlt: "Private chef serving a fine dinner at a luxury villa in Kedewatan above the Ayung River gorge",
+    intro:
+      "Kedewatan sits on the western rim of the Ayung River gorge, 4 km north-west of Ubud. This is where Aman Resorts placed its first Bali property — the canyon-edge villas here remain among the most sought-after addresses on the island.",
+    villaDensity:
+      "Boutique estates and cliff-edge villa compounds are strung along the gorge. Many properties are walled, owner-occupied, and rarely appear on booking platforms. Average group sizes are small (2–8 guests) and expectations are at the top of the market.",
+    guestProfile:
+      "Couples celebrating landmark occasions, luxury-travel writers in residence, and family groups who book directly with villa owners. Budget-consciousness is not a factor — they want the best possible private dining experience.",
+    landmarks: [
+      "Amandari Resort",
+      "Como Shambhala Estate",
+      "Alaya Resort Ubud",
+      "Ayung River gorge rafting put-in",
+      "Pura Gunung Lebah temple",
+      "Kedewatan organic market garden",
+    ],
+    priceFrom: "From IDR 1,500,000 per session",
+    pricingNote:
+      "Kedewatan commands a 10% distance premium above our South Bali base. Market sourcing, gorge-side setup, and Michelin-standard expectations are reflected in the rate.",
+    services: ["private-chef", "fine-dining", "catering", "events"],
+    faqs: [
+      {
+        q: "Can myCHEF match the dining standard of Amandari or Como Shambhala?",
+        a: "Our founder Adriano trained at Michelin-starred properties in Europe. We routinely serve guests who split stays between those resorts and private villa nights — and the feedback confirms the standard.",
+      },
+      {
+        q: "Is gorge-side outdoor dining possible in Kedewatan?",
+        a: "Yes. Most villas here have open-air pavilions or infinity terrace settings above the Ayung. We bring portable induction equipment and design menus that travel and present beautifully outdoors.",
+      },
+      {
+        q: "What notice do you need for a Kedewatan booking?",
+        a: "For Michelin-level tasting menus we prefer 72 hours. Standard private-chef sessions can often be arranged within 24 hours, subject to chef availability.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "ubud", name: "Ubud" },
+      { slug: "sayan", name: "Sayan" },
+      { slug: "payangan", name: "Payangan" },
+      { slug: "lodtunduh", name: "Lodtunduh" },
+    ],
+    metaTitle: "Private Chef Kedewatan Bali | Ayung Gorge Villa Dining | myCHEF",
+    metaDescription:
+      "Book a private chef in Kedewatan, Bali. myCHEF serves Amandari-area gorge villas with Michelin-trained chefs — tasting menus, intimate dinners, and luxury catering.",
+    coordinates: { lat: -8.4744, lng: 115.2397 },
+    bookingNote: "Book 72 hours ahead for fine-dining menus. 24-hour notice available for standard sessions.",
+    published: true,
+  },
+  {
+    slug: "nyuh-kuning",
+    name: "Nyuh Kuning",
+    regency: "Gianyar",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-city-ubud.webp",
+    heroAlt: "Private chef preparing fresh Balinese ingredients at a boutique villa in Nyuh Kuning",
+    intro:
+      "Nyuh Kuning — 'yellow coconut' village — lies immediately south of the Sacred Monkey Forest, separated from central Ubud by the forest canopy. Its narrow lanes are lined with woodcarvers' workshops and intimate villa compounds that attract guests seeking quiet but with full access to Ubud's art scene.",
+    villaDensity:
+      "A dense cluster of boutique villas and owner-occupied compounds sits between the monkey forest wall and the Wos River. Properties are small (2–6 rooms) with well-equipped kitchens and tropical garden dining terraces.",
+    guestProfile:
+      "Artistic retreaters, wellness travellers doing Ubud-based programmes, and culturally-curious couples who book boutique stays rather than large resorts.",
+    landmarks: [
+      "Sacred Monkey Forest south entrance",
+      "Wos River walking trail",
+      "Nyuh Kuning woodcarving galleries",
+      "Puri Dalem temple",
+      "Museum Puri Lukisan (nearby)",
+      "Ubud market (10 min walk north)",
+    ],
+    priceFrom: "From IDR 1,350,000 per session",
+    pricingNote:
+      "Standard South Bali rate applies — Nyuh Kuning is within the Ubud radius. No distance surcharge.",
+    services: ["private-chef", "fine-dining", "catering", "bbq"],
+    faqs: [
+      {
+        q: "How far is myCHEF's ingredient sourcing from Nyuh Kuning?",
+        a: "Our chefs shop at Ubud central market and Pasar Seni 10 minutes away. Organic produce from nearby farm cooperatives is available on request.",
+      },
+      {
+        q: "Are villas in Nyuh Kuning suitable for larger group dinners?",
+        a: "Most properties here are intimate (2–8 guests). For larger events we can set up in the garden or partner with a nearby villa. Let us know your group size and we'll advise.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "ubud", name: "Ubud" },
+      { slug: "mas", name: "Mas" },
+      { slug: "penestanan", name: "Penestanan" },
+      { slug: "lodtunduh", name: "Lodtunduh" },
+    ],
+    metaTitle: "Private Chef Nyuh Kuning Bali | Monkey Forest Village Villa Dining | myCHEF",
+    metaDescription:
+      "Book a private chef in Nyuh Kuning, Bali. myCHEF serves boutique villas beside Ubud's Sacred Monkey Forest — intimate dinners, Balinese menus, and villa catering.",
+    coordinates: { lat: -8.5278, lng: 115.2622 },
+    bookingNote: "Book 24–48 hours ahead. Located within the Ubud service zone.",
+    published: true,
+  },
+  {
+    slug: "lodtunduh",
+    name: "Lodtunduh",
+    regency: "Gianyar",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-city-ubud.webp",
+    heroAlt: "Private chef preparing a Balinese feast at a villa estate surrounded by rice terraces in Lodtunduh",
+    intro:
+      "Lodtunduh is a quiet village corridor between Ubud and Mas, framed by rice-field panoramas and the Wos River valley. The area has become a discreet address for travellers seeking large-compound villas at a fraction of central Ubud prices.",
+    villaDensity:
+      "Mid-to-large villa estates with 3–7 bedrooms dominate. Most were built for the private-rental market and feature professional kitchens, garden dining gazebos, and infinity pools overlooking terraced paddies.",
+    guestProfile:
+      "Group retreats, multi-family holidays, and yoga teacher-training cohorts that need a self-contained compound with catering. Also popular with photographers and artists on long-stay residencies.",
+    landmarks: [
+      "Wos River valley views",
+      "Lodtunduh organic rice fields",
+      "Mas woodcarving village (2 km south)",
+      "Pura Gunung Kawi Sebatu (5 km north)",
+      "Ubud central market (5 km north)",
+      "Campuhan Ridge Walk (7 km)",
+    ],
+    priceFrom: "From IDR 1,350,000 per session",
+    pricingNote:
+      "Standard Ubud-zone rate. Group catering packages available for large villas hosting 10+ guests.",
+    services: ["private-chef", "fine-dining", "catering", "bbq", "events"],
+    faqs: [
+      {
+        q: "Can myCHEF handle multi-day retreat catering in Lodtunduh?",
+        a: "Absolutely — retreat catering is one of our specialties. We design daily menus with your programme in mind, accommodating dietary requirements and serving up to 30 guests.",
+      },
+      {
+        q: "Are there good local markets near Lodtunduh for fresh sourcing?",
+        a: "Yes — Mas market and the Ubud central market are both within 5 km. Our chefs source daily for maximum freshness.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "ubud", name: "Ubud" },
+      { slug: "mas", name: "Mas" },
+      { slug: "nyuh-kuning", name: "Nyuh Kuning" },
+      { slug: "kedewatan", name: "Kedewatan" },
+    ],
+    metaTitle: "Private Chef Lodtunduh Bali | Villa Estate & Retreat Catering | myCHEF",
+    metaDescription:
+      "Book a private chef in Lodtunduh, Bali. myCHEF serves large villa estates and retreat compounds between Ubud and Mas — daily catering, group dinners, and Balinese menus.",
+    coordinates: { lat: -8.5389, lng: 115.2606 },
+    bookingNote: "Book 24–48 hours ahead. Retreat multi-day packages available.",
+    published: true,
+  },
+  {
+    slug: "tirta-gangga",
+    name: "Tirta Gangga",
+    regency: "Karangasem",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-water-sunset.webp",
+    heroAlt: "Private chef serving a meal at a boutique villa near the royal water gardens of Tirta Gangga",
+    intro:
+      "Tirta Gangga — 'water of the Ganges' — is named for the royal water palace built by the last Raja of Karangasem in 1948. Surrounded by some of Bali's most dramatic rice-terrace landscapes and framed by Mount Agung, the area attracts boutique villa travellers seeking East Bali tranquillity at its purest.",
+    villaDensity:
+      "Boutique villas and small guesthouses are scattered across terraced hillsides within a 3 km radius of the water palace. Properties are intimate, architecturally thoughtful, and typically designed for 2–6 guests.",
+    guestProfile:
+      "Culture-focused travellers, honeymooners escaping the Seminyak crowds, photographers, and yoga practitioners on longer stays. A growing eco-luxury segment uses the area as a secluded retreat base.",
+    landmarks: [
+      "Tirta Gangga Royal Water Palace",
+      "Mount Agung panorama viewpoints",
+      "Taman Ujung water palace (30 km south)",
+      "Abang village rice terraces",
+      "Tenganan traditional village (40 km)",
+      "Candidasa beach (20 km south)",
+    ],
+    priceFrom: "From IDR 1,500,000 per session",
+    pricingNote:
+      "East Bali remote premium applies. 2.5–3 hour drive from South Bali — advance planning and 72-hour booking notice required.",
+    services: ["private-chef", "fine-dining", "catering", "events"],
+    faqs: [
+      {
+        q: "Will myCHEF travel to Tirta Gangga for a single dinner?",
+        a: "Yes — we cover all of Bali including remote East. For Tirta Gangga we ask for 72 hours notice and a minimum 2-hour session to justify the travel. Contact us to confirm availability.",
+      },
+      {
+        q: "What local ingredients can be sourced near Tirta Gangga?",
+        a: "The region is known for organic vegetables, fresh coconut, local tubers, and the Amed coast provides excellent fresh fish. Our chefs plan menus around East Bali's unique produce.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "candidasa", name: "Candidasa" },
+      { slug: "amed", name: "Amed" },
+      { slug: "sidemen", name: "Sidemen" },
+      { slug: "tulamben", name: "Tulamben" },
+    ],
+    metaTitle: "Private Chef Tirta Gangga Bali | Royal Water Palace Villa Dining | myCHEF",
+    metaDescription:
+      "Book a private chef in Tirta Gangga, East Bali. myCHEF serves boutique villas near the royal water gardens — intimate dinners, Balinese cuisine, and luxury villa catering.",
+    coordinates: { lat: -8.4128, lng: 115.5714 },
+    bookingNote: "Book 72 hours ahead. Remote East Bali location — distance premium applies.",
+    published: true,
+  },
+  {
+    slug: "munduk",
+    name: "Munduk",
+    regency: "Buleleng",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-locations-sunset.webp",
+    heroAlt: "Private chef serving a warming highland dinner at a clove plantation villa in Munduk",
+    intro:
+      "Munduk is a cool highland village at 800 m elevation in the Buleleng foothills, surrounded by clove, coffee, and cacao plantations. Waterfalls cascade through the jungle below the village, and the air is mountain-fresh year-round — a total contrast to the coastal heat of South Bali.",
+    villaDensity:
+      "Boutique plantation lodges and eco-luxury villas occupy converted or newly-built estate buildings above terraced valleys. Properties are intimate (2–8 guests) with fireplaces, panoramic jungle views, and private gardens.",
+    guestProfile:
+      "Active adventurers who hike to waterfalls and cycle plantation trails by day, couples retreating from Bali's tourist noise, and wellness groups doing nature-based programmes.",
+    landmarks: [
+      "Munduk Waterfall",
+      "Melanting Waterfall",
+      "Danau Tamblingan lake (10 km east)",
+      "Danau Buyan lake (15 km east)",
+      "Munduk spice and coffee plantation tours",
+      "Bali Handara Golf Course (20 km)",
+    ],
+    priceFrom: "From IDR 1,500,000 per session",
+    pricingNote:
+      "Highland North Bali premium applies. 2.5 hours from South Bali base. Warming mountain menus — slow-cooked dishes, local spice-based sauces, and hearty breakfasts — are our speciality here.",
+    services: ["private-chef", "fine-dining", "catering", "bbq"],
+    faqs: [
+      {
+        q: "What kind of menu works best in Munduk?",
+        a: "The cooler mountain climate calls for warming dishes — slow-cooked meats, spiced soups, hearty breakfasts with local coffee and cacao. We design specifically for the altitude and ambience.",
+      },
+      {
+        q: "Can myCHEF source local Munduk produce?",
+        a: "Munduk is famous for cloves, coffee, cacao, vanilla, and fresh highland vegetables. Our chefs plan menus around local ingredients wherever possible.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "lovina", name: "Lovina" },
+      { slug: "singaraja", name: "Singaraja" },
+      { slug: "bedugul", name: "Bedugul" },
+      { slug: "pemuteran", name: "Pemuteran" },
+    ],
+    metaTitle: "Private Chef Munduk Bali | Highland Plantation Villa Dining | myCHEF",
+    metaDescription:
+      "Book a private chef in Munduk, Bali. myCHEF serves clove plantation villas in the cool Buleleng highlands — warming mountain menus, waterfall-view dinners, and highland catering.",
+    coordinates: { lat: -8.2611, lng: 115.0944 },
+    bookingNote: "Book 72 hours ahead. Highland North Bali — distance premium, cool weather year-round.",
+    published: true,
+  },
+  {
+    slug: "gianyar",
+    name: "Gianyar",
+    regency: "Gianyar",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-city-ubud.webp",
+    heroAlt: "Private chef at a villa in Gianyar regency surrounded by rice fields and traditional Balinese temples",
+    intro:
+      "Gianyar is the cultural heartland of Bali — the regency that encompasses Ubud, the rice-terrace villages, and the island's greatest concentration of traditional art. The town of Gianyar itself is a compact royal capital 10 km east of Ubud, with a modest villa scene and easy access to the coast at Lebih Beach.",
+    villaDensity:
+      "Villas in and around Gianyar town are spread across suburban compounds, rice-field lanes, and the coastal strip at Siyut and Lebih. They attract guests who want a genuine local experience rather than a tourist-bubble address.",
+    guestProfile:
+      "Independent travellers, cultural researchers, expats on long stays, and visitors attending ceremonies or traditional performances in Gianyar's active palace.",
+    landmarks: [
+      "Puri Gianyar royal palace",
+      "Gianyar Night Market (babi guling capital)",
+      "Lebih Beach and Hindu sea-temple",
+      "Bali Bird Park (Singapadu)",
+      "Blahbatuh gandrung dance village",
+      "Sidan Pura Dalem temple",
+    ],
+    priceFrom: "From IDR 1,350,000 per session",
+    pricingNote:
+      "Standard Ubud-zone rate. Gianyar is 10 km from our Ubud operations base, within the standard service radius.",
+    services: ["private-chef", "fine-dining", "catering", "bbq", "events"],
+    faqs: [
+      {
+        q: "Is Gianyar known for any particular local dishes?",
+        a: "Yes — Gianyar is famous for some of the best babi guling (spit-roast suckling pig) in Bali. Our chefs can incorporate this and other Gianyar specialities into your menu.",
+      },
+      {
+        q: "Can myCHEF cater events at Puri Gianyar or traditional venues?",
+        a: "We have experience catering at ceremonial and heritage venues. Please share your venue details and we'll confirm logistics and any requirements.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "ubud", name: "Ubud" },
+      { slug: "sukawati", name: "Sukawati" },
+      { slug: "keramas", name: "Keramas" },
+      { slug: "sanur", name: "Sanur" },
+    ],
+    metaTitle: "Private Chef Gianyar Bali | Cultural Heartland Villa & Event Catering | myCHEF",
+    metaDescription:
+      "Book a private chef in Gianyar, Bali. myCHEF serves villas and events in Bali's cultural capital — babi guling feasts, Balinese menus, and villa catering near Ubud.",
+    coordinates: { lat: -8.5351, lng: 115.3314 },
+    bookingNote: "Book 24–48 hours ahead. Located in the Ubud service zone.",
+    published: true,
+  },
+  {
+    slug: "padang-bai",
+    name: "Padang Bai",
+    regency: "Karangasem",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-water-sunset.webp",
+    heroAlt: "Private chef preparing fresh seafood at a boutique villa in Padang Bai overlooking the ocean",
+    intro:
+      "Padang Bai is a natural deep-water bay on Bali's east coast, best known as the ferry port for Lombok and the Gilis. Beyond its transit reputation lies a genuinely charming fishing village with boutique villas, excellent snorkelling bays, and a laid-back character far removed from the south coast bustle.",
+    villaDensity:
+      "Small boutique villas and guesthouses are tucked along the hillsides above the main bay and the quieter Blue Lagoon Beach. Many properties have direct ocean views and are popular with divers and snorkellers.",
+    guestProfile:
+      "Divers and snorkellers who use Padang Bai as a hub for Nusa Penida and Gili dives, overland travellers crossing to Lombok, and independent travellers seeking affordable East Bali authenticity.",
+    landmarks: [
+      "Padang Bai main harbour",
+      "Blue Lagoon Beach",
+      "Bias Tugal (White Sand) Beach",
+      "Pura Silayukti sea temple",
+      "Padang Bai dive sites",
+      "Gili Islands ferry departure",
+    ],
+    priceFrom: "From IDR 1,500,000 per session",
+    pricingNote:
+      "East Bali remote premium applies. 1.5–2 hours from South Bali base — advance booking required.",
+    services: ["private-chef", "catering", "bbq", "events"],
+    faqs: [
+      {
+        q: "Can myCHEF do a fresh seafood BBQ at a Padang Bai villa?",
+        a: "Absolutely — the fresh catch landed daily at Padang Bai harbour makes this one of the best spots on the island for a seafood BBQ. We source direct and cook at your villa.",
+      },
+      {
+        q: "How do we book a chef if we're only stopping one night?",
+        a: "We can arrange short-notice sessions (18 hours) in Padang Bai when a chef is already on the east coast. WhatsApp us your date and we'll confirm availability.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "candidasa", name: "Candidasa" },
+      { slug: "amed", name: "Amed" },
+      { slug: "tirta-gangga", name: "Tirta Gangga" },
+      { slug: "sanur", name: "Sanur" },
+    ],
+    metaTitle: "Private Chef Padang Bai Bali | Harbour Village Seafood Dining | myCHEF",
+    metaDescription:
+      "Book a private chef in Padang Bai, East Bali. myCHEF serves boutique villas with fresh seafood BBQs, Balinese menus, and villa catering near the ferry port.",
+    coordinates: { lat: -8.5331, lng: 115.5094 },
+    bookingNote: "Book 48 hours ahead. East Bali — distance premium applies.",
+    published: true,
+  },
+  {
+    slug: "baturiti",
+    name: "Baturiti",
+    regency: "Tabanan",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-locations-sunset.webp",
+    heroAlt: "Private chef preparing a highland breakfast at a villa surrounded by strawberry fields in Baturiti",
+    intro:
+      "Baturiti is the gateway village to the Bedugul highlands, sitting at 1,000 m above sea level between the volcanic caldera lakes and the coastal plain. The area is famous for its strawberry farms, flower markets, and cool air — a refreshing escape that draws Balinese families and international visitors alike.",
+    villaDensity:
+      "Boutique highland villas and small eco-lodges are positioned along the Bedugul–Tabanan road and on the slopes above Lake Beratan. Properties typically cater to wellness travellers and families wanting a cool highland alternative to the beach.",
+    guestProfile:
+      "Balinese and Indonesian domestic travellers on highland retreats, wellness groups, international families with children enjoying the cooler temperatures, and couples on romantic highland getaways.",
+    landmarks: [
+      "Pura Ulun Danu Beratan (lake temple)",
+      "Bedugul Botanical Gardens",
+      "Baturiti strawberry farms",
+      "Danau Beratan lake",
+      "Danau Tamblingan (15 km north)",
+      "Bali Handara Golf Resort",
+    ],
+    priceFrom: "From IDR 1,500,000 per session",
+    pricingNote:
+      "Highland Tabanan premium applies. 1.5 hours from South Bali base — same zone as Bedugul.",
+    services: ["private-chef", "catering", "bbq", "events"],
+    faqs: [
+      {
+        q: "Can myCHEF incorporate fresh local produce from Baturiti?",
+        a: "Yes — Baturiti's farms produce exceptional strawberries, capsicums, tomatoes, corn, and flowers. We love designing menus around the highland harvest. Ask us for a seasonal menu.",
+      },
+      {
+        q: "What's a good menu for a cold Baturiti evening?",
+        a: "Warming dishes work beautifully here — cream soups, slow-braised meats, homemade pasta with mushroom sauces, and a cheese board. We'll design a menu perfectly suited to the mountain chill.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "bedugul", name: "Bedugul" },
+      { slug: "tabanan", name: "Tabanan" },
+      { slug: "jatiluwih", name: "Jatiluwih" },
+      { slug: "munduk", name: "Munduk" },
+    ],
+    metaTitle: "Private Chef Baturiti Bali | Highland Strawberry Country Villa Dining | myCHEF",
+    metaDescription:
+      "Book a private chef in Baturiti, Bali. myCHEF serves highland villas near Bedugul and Lake Beratan — farm-fresh menus, warming mountain dinners, and highland catering.",
+    coordinates: { lat: -8.2858, lng: 115.1661 },
+    bookingNote: "Book 48 hours ahead. Highland Tabanan — distance premium, cool temperatures.",
+    published: true,
+  },
+  {
+    slug: "mengwi",
+    name: "Mengwi",
+    regency: "Badung",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-locations-sunset.webp",
+    heroAlt: "Private chef at a villa in Mengwi with views toward the royal water temple Pura Taman Ayun",
+    intro:
+      "Mengwi is the former royal capital of the Mengwi kingdom, 18 km north of Kuta. The area is anchored by Pura Taman Ayun — one of Bali's most photographed royal temples — and surrounded by rice fields, craft villages, and a quiet villa corridor that appeals to culturally-motivated visitors.",
+    villaDensity:
+      "Villas in Mengwi are spread across the rice-field lanes north of the main road. Properties are mid-range to luxury, often chosen by guests who want a central Bali location equidistant from Ubud, Canggu, and the Tanah Lot coast.",
+    guestProfile:
+      "Culture-focused travellers using Mengwi as a central base, day-trippers from Seminyak and Canggu on longer stays, and families who want a quieter alternative to the south coast with good road links.",
+    landmarks: [
+      "Pura Taman Ayun royal temple",
+      "Mengwi royal palace ruins",
+      "Sangeh Monkey Forest (7 km north)",
+      "Tanah Lot Temple (15 km west)",
+      "Kapal Pura Sada temple",
+      "Bali Safari & Marine Park (25 km east)",
+    ],
+    priceFrom: "From IDR 1,350,000 per session",
+    pricingNote:
+      "Standard Badung rate. Mengwi is 25 minutes from our South Bali base — within the standard service zone.",
+    services: ["private-chef", "fine-dining", "catering", "bbq", "events"],
+    faqs: [
+      {
+        q: "Is Mengwi good for a family villa stay with private chef?",
+        a: "Yes — the central location, quieter roads, and proximity to temple sightseeing make Mengwi excellent for families. We offer family-friendly menus including kid-adapted Balinese dishes.",
+      },
+      {
+        q: "Can myCHEF cater for a function near Pura Taman Ayun?",
+        a: "We can cater for events in the Mengwi area. Please share details of your venue and we'll confirm whether the location is suitable and advise on any permits needed.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "tanah-lot", name: "Tanah Lot" },
+      { slug: "canggu", name: "Canggu" },
+      { slug: "ubud", name: "Ubud" },
+      { slug: "tabanan", name: "Tabanan" },
+    ],
+    metaTitle: "Private Chef Mengwi Bali | Royal Temple Town Villa Dining | myCHEF",
+    metaDescription:
+      "Book a private chef in Mengwi, Bali. myCHEF serves villas near Pura Taman Ayun — family dinners, Balinese feast menus, and catering in the heart of Badung regency.",
+    coordinates: { lat: -8.5428, lng: 115.1806 },
+    bookingNote: "Book 24–48 hours ahead. Central Bali location — within standard service zone.",
+    published: true,
+  },
+  {
+    slug: "ketewel",
+    name: "Ketewel",
+    regency: "Gianyar",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-water-sunset.webp",
+    heroAlt: "Private chef serving a beachside dinner at a villa in Ketewel on the black-sand Gianyar coast",
+    intro:
+      "Ketewel is a coastal village in Gianyar regency, straddling the beach road between Sanur and Keramas. The black-sand beach here is largely uncrowded, the fishing boats go out at dawn, and a growing number of luxury villas have been built to capture the ocean views without Seminyak's price tag.",
+    villaDensity:
+      "A corridor of beachfront and beach-access villas runs along the coast road. Properties range from affordable four-bedroom compounds to boutique luxury villas, all with easy beach access and ocean breezes.",
+    guestProfile:
+      "Surfers using the Keramas breaks (5 km east), beach-holiday families wanting a quieter alternative to Sanur, and couples booking longer stays at well-priced beachfront villas.",
+    landmarks: [
+      "Ketewel black-sand beach",
+      "Pura Masceti sea temple",
+      "Keramas surf break (5 km east)",
+      "Sanur beach promenade (10 km west)",
+      "Gianyar night market (15 km north)",
+      "Bali Collection Nusa Dua (30 km)",
+    ],
+    priceFrom: "From IDR 1,350,000 per session",
+    pricingNote:
+      "Standard Gianyar coast rate. Ketewel sits between Sanur and Keramas — both within our standard service zone.",
+    services: ["private-chef", "catering", "bbq", "events"],
+    faqs: [
+      {
+        q: "Can myCHEF do a beachside BBQ in Ketewel?",
+        a: "Yes — Ketewel's quiet beach is perfect for a private sunset BBQ. We set up on your villa beach terrace or directly on the sand with full equipment. Fresh seafood from Sanur market is available.",
+      },
+      {
+        q: "Is Ketewel close enough to Sanur for the same chef availability?",
+        a: "Yes — chefs based in the Sanur zone can serve Ketewel with no additional distance premium. Same-day bookings are often possible.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "sanur", name: "Sanur" },
+      { slug: "keramas", name: "Keramas" },
+      { slug: "gianyar", name: "Gianyar" },
+      { slug: "denpasar", name: "Denpasar" },
+    ],
+    metaTitle: "Private Chef Ketewel Bali | Gianyar Beachfront Villa & BBQ Catering | myCHEF",
+    metaDescription:
+      "Book a private chef in Ketewel, Bali. myCHEF serves beachfront villas on the Gianyar coast — seafood BBQs, sunset dinners, and villa catering between Sanur and Keramas.",
+    coordinates: { lat: -8.6097, lng: 115.2831 },
+    bookingNote: "Book 24–48 hours ahead. Within standard Gianyar/Sanur service zone.",
+    published: true,
+  },
+  {
+    slug: "abiansemal",
+    name: "Abiansemal",
+    regency: "Badung",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-city-ubud.webp",
+    heroAlt: "Private chef preparing a fresh farm-to-table dinner at a highland villa in Abiansemal",
+    intro:
+      "Abiansemal is an upland district in central Badung, rising into the foothills north of Mengwi. The area sits at the crossroads between the Ubud arts corridor and the highland wine country — Hatten Wines' estate is here — and attracts villa guests seeking a countryside retreat within 40 minutes of both the south coast and Ubud.",
+    villaDensity:
+      "The villa landscape is sparse but high quality — large private estates with panoramic rice-field and mountain views. Properties tend to be owner-operated or for exclusive-use rental, with well-equipped kitchens and extensive gardens.",
+    guestProfile:
+      "Wine enthusiasts visiting Hatten Estate, wellness retreaters on private programmes, and couples or small groups who want a genuinely rural Bali experience without the travel time of North Bali.",
+    landmarks: [
+      "Hatten Wines Bali estate",
+      "Pura Sadha Kapal temple",
+      "Abiansemal waterfall",
+      "Sangeh Monkey Forest (10 km east)",
+      "Ubud market (25 km north-east)",
+      "Seminyak beach (35 km south)",
+    ],
+    priceFrom: "From IDR 1,350,000 per session",
+    pricingNote:
+      "Standard Badung rate. Abiansemal is 30 minutes from our south Bali base and can be served by both our Ubud and Seminyak teams.",
+    services: ["private-chef", "fine-dining", "catering", "events"],
+    faqs: [
+      {
+        q: "Can myCHEF design a wine-pairing dinner at an Abiansemal villa?",
+        a: "Yes — with Hatten Wines on the doorstep, an Indonesian-wine-pairing dinner is a natural fit here. We design menus around Hatten's sparkling, still, and dessert wines.",
+      },
+      {
+        q: "How rural is Abiansemal — will grocery sourcing be a problem?",
+        a: "Not at all. Our chefs source from Ubud market and Badung central market before arrival. We bring everything you need.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "mengwi", name: "Mengwi" },
+      { slug: "ubud", name: "Ubud" },
+      { slug: "tanah-lot", name: "Tanah Lot" },
+      { slug: "canggu", name: "Canggu" },
+    ],
+    metaTitle: "Private Chef Abiansemal Bali | Highland Wine Estate Villa Dining | myCHEF",
+    metaDescription:
+      "Book a private chef in Abiansemal, Bali. myCHEF serves highland villa estates in central Badung — wine-pairing dinners, farm-to-table menus, and Hatten Wines country catering.",
+    coordinates: { lat: -8.5117, lng: 115.2117 },
+    bookingNote: "Book 24–48 hours ahead. Central Badung — 30 minutes from Seminyak base.",
+    published: true,
+  },
+  {
+    slug: "cepaka",
+    name: "Cepaka",
+    regency: "Tabanan",
+    tier: 3,
+    heroImage: "/generated/mychef-location-bali-water-sunset.webp",
+    heroAlt: "Private chef serving a sunset dinner at a villa in Cepaka on the Tabanan coast near Canggu",
+    intro:
+      "Cepaka is a coastal village in western Tabanan, just over the Canggu district boundary. As land prices in Canggu and Berawa have risen, villa developers moved west into Cepaka — bringing with them a new generation of luxury properties at the edge of Bali's fastest-growing surf and lifestyle corridor.",
+    villaDensity:
+      "A mix of high-spec new-build villas and converted rice-field compounds lines the coastal strip and back-lanes of Cepaka. The area is villa-dense and growing, with a similar character to early Pererenan but with more space and privacy.",
+    guestProfile:
+      "Surfers and digital nomads overflowing from Canggu, villa investors on inspection trips, and couples looking for Canggu energy at slightly less Canggu pricing.",
+    landmarks: [
+      "Cepaka beach (uncrowded black sand)",
+      "Yeh Gangga Beach (2 km west)",
+      "Echo Beach Canggu (5 km east)",
+      "Tanah Lot temple (8 km north)",
+      "Seminyak beach (18 km south-east)",
+      "Bali Zoo (25 km north)",
+    ],
+    priceFrom: "From IDR 1,350,000 per session",
+    pricingNote:
+      "Standard Canggu-zone rate. Cepaka is served by our Canggu/Pererenan team — no distance surcharge.",
+    services: ["private-chef", "fine-dining", "catering", "bbq", "events"],
+    faqs: [
+      {
+        q: "Is Cepaka too far from Canggu for myCHEF?",
+        a: "Not at all — Cepaka is within our standard Canggu service zone. We treat it the same as Pererenan or Berawa. No surcharge.",
+      },
+      {
+        q: "Can we get a sunset BBQ on the Cepaka beachfront?",
+        a: "Yes — the uncrowded Cepaka coastline is perfect for a private sunset BBQ. We set up full equipment and source fresh seafood from Jimbaran or Tabanan fish markets.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: "canggu", name: "Canggu" },
+      { slug: "pererenan", name: "Pererenan" },
+      { slug: "tanah-lot", name: "Tanah Lot" },
+      { slug: "tabanan", name: "Tabanan" },
+    ],
+    metaTitle: "Private Chef Cepaka Bali | Tabanan Coast Villa Dining near Canggu | myCHEF",
+    metaDescription:
+      "Book a private chef in Cepaka, Bali. myCHEF serves luxury villas on the Tabanan coast west of Canggu — sunset BBQs, villa dinners, and catering in Bali's newest villa corridor.",
+    coordinates: { lat: -8.6353, lng: 115.1122 },
+    bookingNote: "Book 24–48 hours ahead. Served by the Canggu team — standard service zone.",
+    published: true,
+  },
+
+]
 /** Quick lookup by slug */
 export function getPrivateChefArea(slug: string): PrivateChefArea | undefined {
   return PRIVATE_CHEF_AREAS.find((a) => a.slug === slug && a.published)

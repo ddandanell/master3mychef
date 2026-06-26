@@ -18,13 +18,21 @@
     })(window,document,'script','dataLayer','GTM-KCBNZBL9');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- gtag stub: defines window.gtag so analytics.ts custom events (scroll depth,
-         time on page, form steps) reach GA4 directly. No gtag('config') call here —
-         GTM handles GA4 configuration and page_view to prevent duplicates. -->
+    <!-- Google tag (gtag.js) — direct GA4 load for measurement ID G-W0PQH8ZKTF.
+         GTM (GTM-KCBNZBL9) was injecting the GA4 loader but no GA4 Configuration tag
+         was firing, so zero /collect hits were sent (no pageviews, no events). This
+         direct config() restores collection and makes window.gtag real so custom
+         events (generate_lead, quote_submitted, etc.) actually transmit.
+         NOTE: SPA route-change pageviews rely on GA4 Enhanced Measurement
+         ("Page changes based on browser history events" must be ON in the data stream).
+         If the GTM GA4 Configuration tag is ever re-enabled for G-W0PQH8ZKTF, set
+         send_page_view:false on exactly one path to avoid duplicate page_view counts. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0PQH8ZKTF"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      gtag('config', 'G-W0PQH8ZKTF');
     </script>
 
     <!-- Icons + PWA -->

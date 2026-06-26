@@ -110,6 +110,7 @@ const FamilyKidsMenuPage = lazy(() => import('./pages/FamilyKidsMenuPage'))
 const CorporateEventsCateringBaliPage = lazy(() => import('./pages/CorporateEventsCateringBaliPage'))
 const CorporateCaseStudiesPage = lazy(() => import('./pages/CorporateCaseStudiesPage'))
 const FoodAllergiesPage = lazy(() => import('./pages/FoodAllergiesPage'))
+const BaliWeddingCateringTimelinePage = lazy(() => import('./pages/BaliWeddingCateringTimelinePage'))
 const HowToHirePrivateChefPage = lazy(() => import('./pages/HowToHirePrivateChefPage'))
 const ChefHiringGuidePage = lazy(() => import('./pages/ChefHiringGuidePage'))
 const EventPlanningBaliPage = lazy(() => import('./pages/EventPlanningBaliPage'))
@@ -348,6 +349,7 @@ export default function App() {
           <Route path="/blog/family-kids-menu-private-chef-bali" element={<FamilyKidsMenuPage />} />
           <Route path="/blog/corporate-events-catering-bali" element={<CorporateEventsCateringBaliPage />} />
           <Route path="/blog/food-allergies-dietary-requirements-private-chef-bali" element={<FoodAllergiesPage />} />
+          <Route path="/blog/bali-wedding-catering-private-chef-timeline" element={<BaliWeddingCateringTimelinePage />} />
           <Route path="/blog/how-to-hire-private-chef-bali-complete-guide" element={<HowToHirePrivateChefPage />} />
           <Route path="/blog/how-to-hire-private-chef" element={<HowToHirePrivateChefPage />} />
           <Route path="/blog/chef-qualifications-credentials-bali-hiring" element={<ChefHiringGuidePage />} />

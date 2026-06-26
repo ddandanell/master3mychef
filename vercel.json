@@ -117,7 +117,7 @@
     },
     {
       "source": "/tabanan",
-      "destination": "/locations/canggu",
+      "destination": "/private-chef/tabanan",
       "permanent": true
     },
     {
@@ -132,22 +132,22 @@
     },
     {
       "source": "/tegallalang",
-      "destination": "/locations/ubud",
+      "destination": "/private-chef/tegallalang",
       "permanent": true
     },
     {
       "source": "/amed",
-      "destination": "/locations/sanur",
+      "destination": "/private-chef/amed",
       "permanent": true
     },
     {
       "source": "/lovina",
-      "destination": "/locations/sanur",
+      "destination": "/private-chef/lovina",
       "permanent": true
     },
     {
       "source": "/candidasa",
-      "destination": "/locations/sanur",
+      "destination": "/private-chef/candidasa",
       "permanent": true
     },
     {
@@ -577,12 +577,12 @@
     },
     {
       "source": "/locations/tegallalang",
-      "destination": "/locations/ubud",
+      "destination": "/private-chef/tegallalang",
       "permanent": true
     },
     {
       "source": "/locations/tabanan",
-      "destination": "/locations/canggu",
+      "destination": "/private-chef/tabanan",
       "permanent": true
     },
     {
@@ -607,17 +607,17 @@
     },
     {
       "source": "/locations/amed",
-      "destination": "/locations/sanur",
+      "destination": "/private-chef/amed",
       "permanent": true
     },
     {
       "source": "/locations/candidasa",
-      "destination": "/locations/sanur",
+      "destination": "/private-chef/candidasa",
       "permanent": true
     },
     {
       "source": "/locations/lovina",
-      "destination": "/locations/sanur",
+      "destination": "/private-chef/lovina",
       "permanent": true
     },
     {
@@ -757,7 +757,7 @@
     },
     {
       "source": "/private-chef-bali/tabanan",
-      "destination": "/private-chef/tanah-lot",
+      "destination": "/private-chef/tabanan",
       "permanent": true
     },
     {

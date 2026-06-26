@@ -322,6 +322,28 @@ export default function PremiumPage({
                 </div>
               )}
 
+              {/* Content text-only layout (no image) */}
+              {section.type === 'content' && !section.image && (
+                <div className="max-w-[740px] mx-auto">
+                  {section.subtitle && (
+                    <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">
+                      {section.subtitle}
+                    </p>
+                  )}
+                  {section.title && (
+                    <h2 className="font-playfair text-3xl md:text-4xl mb-6">
+                      {section.title}
+                    </h2>
+                  )}
+                  {section.body && (
+                    <div
+                      className="text-[#4A4745] leading-relaxed space-y-4"
+                      dangerouslySetInnerHTML={{ __html: section.body }}
+                    />
+                  )}
+                </div>
+              )}
+
               {/* Features grid */}
               {section.type === 'features' && section.features && (
                 <div>

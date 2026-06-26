@@ -732,17 +732,17 @@
     },
     {
       "source": "/private-chef-bali/tanah-lot",
-      "destination": "/private-chef/canggu",
+      "destination": "/private-chef/tanah-lot",
       "permanent": true
     },
     {
       "source": "/private-chef-bali/pecatu",
-      "destination": "/private-chef/bukit",
+      "destination": "/private-chef/pecatu",
       "permanent": true
     },
     {
       "source": "/private-chef-bali/ungasan",
-      "destination": "/private-chef/bukit",
+      "destination": "/private-chef/ungasan",
       "permanent": true
     },
     {
@@ -752,12 +752,12 @@
     },
     {
       "source": "/private-chef-bali/tegallalang",
-      "destination": "/private-chef/ubud",
+      "destination": "/private-chef/tegallalang",
       "permanent": true
     },
     {
       "source": "/private-chef-bali/tabanan",
-      "destination": "/private-chef/canggu",
+      "destination": "/private-chef/tanah-lot",
       "permanent": true
     },
     {

@@ -1674,6 +1674,900 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     bookingNote: 'Book 5–7 days ahead. Fast boat, on-island transport, and full ingredient logistics confirmed on booking.',
     published: true,
   },
+
+  // ─── PHASE 2: TIER 2 EXPANSION ────────────────────────────────────────────
+
+  // BADUNG — Bukit Peninsula surf/villa belt
+  {
+    slug: 'balangan',
+    name: 'Balangan',
+    regency: 'Badung',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-city-bukit.webp',
+    heroAlt: 'Private chef preparing a sunset dinner at a clifftop Balangan villa above the Indian Ocean',
+    intro:
+      "Balangan Beach sits on the southwestern tip of the Bukit Peninsula — a quiet clifftop enclave of boutique villas, reef surf breaks, and sweeping Indian Ocean views. myCHEF serves intimate couples' dinners and small group surf-trip feasts from the hillside properties here.",
+    villaDensity:
+      'Balangan has a small but growing collection of clifftop and hillside villas — mostly boutique and private, with pool decks that face due west over the Indian Ocean. Far fewer villas than Uluwatu or Jimbaran, but the ones here are genuinely secluded.',
+    guestProfile:
+      'Surfers who want a proper meal after the break, couples seeking a quieter Bukit alternative, and villa guests who found Uluwatu too busy and Balangan just right.',
+    landmarks: [
+      'Balangan Beach',
+      'Balangan cliff viewpoint',
+      'Jl. Balangan reef break',
+      'Bukit Peninsula west coast',
+      'Dreamland Beach (nearby)',
+    ],
+    priceFrom: 'From IDR 1,350,000 per session',
+    pricingNote:
+      'Same pricing structure as South Bali. 25% deposit confirms the booking. Grocery costs billed at cost.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Does myCHEF serve Balangan Beach villas?',
+        a: 'Yes — myCHEF covers the full Bukit Peninsula including Balangan. The clifftop access is no issue; our chefs arrive fully equipped with all ingredients and gear.',
+      },
+      {
+        q: 'What kind of menus work best for a Balangan villa dinner?',
+        a: "Balangan sunsets call for relaxed seafood-forward menus — grilled catch of the day, Balinese flavours, and lighter multi-course dining that lets the view do the talking. We also do surf-trip recovery feasts for groups. All dietary requirements catered.",
+      },
+      {
+        q: 'How far in advance should I book?',
+        a: 'We recommend 48 hours ahead for standard sessions, 72 hours for larger groups or bespoke menus. Contact us via WhatsApp for faster turnaround.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'uluwatu', name: 'Uluwatu' },
+      { slug: 'bingin', name: 'Bingin' },
+      { slug: 'pecatu', name: 'Pecatu' },
+      { slug: 'jimbaran', name: 'Jimbaran' },
+    ],
+    metaTitle: 'Private Chef Balangan Bali | Clifftop Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Balangan, Bali. myCHEF serves clifftop villas on the Bukit Peninsula — seafood dinners, Balinese menus, and surf-trip catering.',
+    coordinates: { lat: -8.8255, lng: 115.0847 },
+    bookingNote: 'Book 48 hours ahead for standard sessions, 72 hours for groups or bespoke menus.',
+    published: true,
+  },
+
+  {
+    slug: 'bingin',
+    name: 'Bingin',
+    regency: 'Badung',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-city-bukit.webp',
+    heroAlt: 'Private chef serving a clifftop dinner at a Bingin villa above the reef break',
+    intro:
+      "Bingin is a clifftop surf village on the Bukit Peninsula with some of Bali's most dramatic ocean views. The boutique tiered villas built into the limestone cliffs are a spectacular setting for a private chef dinner above the break.",
+    villaDensity:
+      "Bingin's villas are small, tiered down the limestone cliff face, and deliberately low-key. Think 4–12 person boutique properties with infinity pools, exposed stone, and nothing between you and the horizon. Access requires a short cliff walk — our team knows every path.",
+    guestProfile:
+      'Surf travellers who have been here before and came back for the same reason, couples seeking the most dramatic sunset setting on the Bukit, and small friend groups splitting a clifftop villa.',
+    landmarks: [
+      'Bingin Beach',
+      'Bingin cliff path',
+      'The Bukit limestone cliffs',
+      'Dreamland Beach (nearby)',
+      'Impossibles break (nearby)',
+    ],
+    priceFrom: 'From IDR 1,350,000 per session',
+    pricingNote:
+      'All ingredients, equipment, and cliff access included. 25% deposit confirms the booking. Grocery costs billed at cost.',
+    services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
+    faqs: [
+      {
+        q: 'Can a private chef reach cliff villas in Bingin?',
+        a: 'Yes — our chefs know the cliff paths and villa access in Bingin well. We carry all equipment and ingredients ourselves, so steep or narrow access is not a problem.',
+      },
+      {
+        q: 'What menus suit a Bingin surf trip?',
+        a: "We design menus around your group. Surf trips typically go for big communal dinners — fresh fish, grilled meats, Balinese sides — plenty of energy and flavour. Couples and small groups often prefer a quieter fine dining session at sunset.",
+      },
+      {
+        q: 'Is there a minimum guest number for Bingin bookings?',
+        a: 'No minimum. We cook for couples, families, and surf groups alike. Pricing is based on menu and guest count. Contact us for a quote.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'uluwatu', name: 'Uluwatu' },
+      { slug: 'balangan', name: 'Balangan' },
+      { slug: 'pecatu', name: 'Pecatu' },
+      { slug: 'ungasan', name: 'Ungasan' },
+    ],
+    metaTitle: 'Private Chef Bingin Bali | Clifftop Villa Dining | myCHEF',
+    metaDescription:
+      'Private chef in Bingin, Bali. myCHEF cooks in cliff villas above the break — sunset dinners, seafood feasts, and surf-trip catering on the Bukit Peninsula.',
+    coordinates: { lat: -8.8192, lng: 115.0906 },
+    bookingNote: 'Book 48 hours ahead. Cliff path access — our team arrives fully equipped with no fuss.',
+    published: true,
+  },
+
+  {
+    slug: 'padang-padang',
+    name: 'Padang Padang',
+    regency: 'Badung',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-city-bukit.webp',
+    heroAlt: 'Private chef plating a fresh seafood dinner at a Padang Padang villa with ocean views',
+    intro:
+      "Padang Padang is one of Bali's most photographed surf beaches — a sheltered cove beneath the Bukit Peninsula cliffs. The villas around Padang Padang attract surfers, honeymooners, and guests seeking a quieter Bali. myCHEF serves them all.",
+    villaDensity:
+      'The Padang Padang area has a mix of budget guesthouses and boutique clifftop villas, with the higher-end properties commanding unobstructed westerly views. Villa density is low compared to the main Bukit strip — it is quieter and more private.',
+    guestProfile:
+      'Surfers returning to a favourite spot, honeymooners who researched beyond the obvious choices, and villa holidaymakers who value privacy over proximity to nightlife.',
+    landmarks: [
+      'Padang Padang Beach',
+      'Padang Padang cave entrance',
+      'The Bukit cliff road',
+      'Labuan Sait (nearby)',
+      'Uluwatu Temple (10 min)',
+    ],
+    priceFrom: 'From IDR 1,350,000 per session',
+    pricingNote:
+      'Standard Bukit Peninsula pricing applies. 25% deposit confirms the booking. Grocery costs billed at cost.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Does myCHEF serve villas near Padang Padang beach?',
+        a: 'Yes — we cover the villas and properties around Padang Padang. Logistics on the Bukit are second nature to our team.',
+      },
+      {
+        q: 'What is a typical private chef dinner at Padang Padang like?',
+        a: 'Most guests opt for a relaxed sunset dinner — 3 to 4 courses, fresh local produce, and a mix of Balinese and international dishes. We set up in your villa, cook on-site, and clear up after.',
+      },
+      {
+        q: 'Can you cater for a group surf trip near Padang Padang?',
+        a: 'Absolutely. Group catering is one of our specialties — big shared meals, BBQ sessions, and day-long packages for active groups. Contact us with group size and days for a quote.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'uluwatu', name: 'Uluwatu' },
+      { slug: 'bingin', name: 'Bingin' },
+      { slug: 'balangan', name: 'Balangan' },
+      { slug: 'jimbaran', name: 'Jimbaran' },
+    ],
+    metaTitle: 'Private Chef Padang Padang Bali | Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef near Padang Padang, Bali. myCHEF serves Bukit Peninsula villas — sunset dinners, surf-trip catering, and Balinese menus by the clifftop.',
+    coordinates: { lat: -8.8118, lng: 115.0879 },
+    bookingNote: 'Book 48–72 hours ahead. Logistics confirmed on booking; we handle access and sourcing.',
+    published: true,
+  },
+
+  // GIANYAR — Ubud surrounds
+  {
+    slug: 'sukawati',
+    name: 'Sukawati',
+    regency: 'Gianyar',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroAlt: 'Private chef preparing a traditional Balinese feast at a rice-field villa in Sukawati',
+    intro:
+      'Sukawati is a traditional Balinese town in Gianyar regency — known for its art markets, dance performances, and deeply rooted Hindu culture. Villas here are immersed in authentic Bali, and the food should match. myCHEF brings genuine Balinese cooking to Sukawati stays.',
+    villaDensity:
+      'Sukawati and the surrounding Gianyar south have a modest but growing villa inventory — mostly mid-range family villas and cultural guesthouses in traditional compounds. Less built up than Ubud, more genuinely village-embedded.',
+    guestProfile:
+      'Cultural travellers who want the real Gianyar experience, families spending time at a traditional compound, and guests who prioritise authenticity over amenities.',
+    landmarks: [
+      'Sukawati Art Market',
+      'Sukawati traditional theatre',
+      'Jl. Raya Sukawati',
+      'Blahbatuh Temple (nearby)',
+      'Pasar Seni Sukawati',
+    ],
+    priceFrom: 'From IDR 1,350,000 per session',
+    pricingNote:
+      'Same pricing as Ubud and Gianyar zone. 25% deposit confirms booking. Grocery costs at cost.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Can I book a private chef for a Balinese cooking experience in Sukawati?',
+        a: "Yes — our Gianyar chefs specialise in traditional Balinese cuisine including sate lilit, lawar, and full Balinese feast spreads.",
+      },
+      {
+        q: 'Is Sukawati in the same service zone as Ubud?',
+        a: 'Yes — Sukawati falls within our Gianyar service zone. The same team that covers Ubud, Mas, and Penestanan serves Sukawati with no travel surcharge.',
+      },
+      {
+        q: 'What styles of cuisine does myCHEF offer in Sukawati?',
+        a: 'We offer traditional Balinese, modern Indonesian, Asian fusion, and international menus. Most guests here prefer a Balinese-focused experience, but we adapt to any dietary preference.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'ubud', name: 'Ubud' },
+      { slug: 'mas', name: 'Mas' },
+      { slug: 'sanur', name: 'Sanur' },
+      { slug: 'denpasar', name: 'Denpasar' },
+    ],
+    metaTitle: 'Private Chef Sukawati Bali | Balinese Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Sukawati, Bali. myCHEF serves Gianyar villas with authentic Balinese menus, traditional cooking, and private dining in rice-field settings.',
+    coordinates: { lat: -8.6295, lng: 115.2869 },
+    bookingNote: 'Book 48 hours ahead. Same logistics as Ubud and Gianyar zone.',
+    published: true,
+  },
+
+  {
+    slug: 'payangan',
+    name: 'Payangan',
+    regency: 'Gianyar',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroAlt: 'Private chef serving a healthy retreat dinner at an eco-villa in the Payangan jungle valley',
+    intro:
+      'Payangan is a highland retreat north of Ubud in Gianyar regency — jungle river valleys, eco-resorts, and some of the most secluded private villas in Bali. myCHEF serves retreat properties and private villa guests here with sessions designed for the highland setting.',
+    villaDensity:
+      'Payangan has a curated inventory of eco-lodges, jungle retreat villas, and organic farm stays. Properties are deliberately spaced out — this is not a dense villa corridor but a series of carefully placed sanctuaries in the valley above Ubud.',
+    guestProfile:
+      'Wellness retreat guests, yoga practitioners, couples on a digital detox, and long-stay travellers who discovered Payangan and extended their trip by a week.',
+    landmarks: [
+      'Sungai Ayung gorge',
+      'Payangan organic farms',
+      'Jl. Raya Payangan',
+      'Buahan village',
+      'Ayung River rafting (nearby)',
+    ],
+    priceFrom: 'From IDR 1,350,000 per session',
+    pricingNote:
+      'No additional travel surcharge within the Gianyar zone. 25% deposit confirms booking.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Does myCHEF cater for wellness retreats in Payangan?',
+        a: 'Yes — we design retreat menus that are clean, plant-forward, and flavour-led. We work with retreat organisers on multi-day menu plans, allergen protocols, and group dietary requirements.',
+      },
+      {
+        q: 'Can myCHEF source organic and local ingredients for Payangan sessions?',
+        a: 'Yes — Payangan and the upper Gianyar highlands have excellent local produce. We source organically where possible and will confirm what is in season.',
+      },
+      {
+        q: 'Is Payangan covered by the same team as Ubud?',
+        a: 'Yes — Payangan is within our Gianyar service zone. No additional travel surcharge; the same experienced team covers both areas.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'ubud', name: 'Ubud' },
+      { slug: 'tegallalang', name: 'Tegallalang' },
+      { slug: 'sayan', name: 'Sayan' },
+      { slug: 'mas', name: 'Mas' },
+    ],
+    metaTitle: 'Private Chef Payangan Bali | Retreat Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Payangan, Bali. myCHEF serves highland retreats and eco-villas north of Ubud — organic menus, wellness catering, and Balinese cooking.',
+    coordinates: { lat: -8.4050, lng: 115.2680 },
+    bookingNote: 'Book 48 hours ahead. Multi-day retreat catering welcome — contact us with full schedule.',
+    published: true,
+  },
+
+  {
+    slug: 'keramas',
+    name: 'Keramas',
+    regency: 'Gianyar',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroAlt: 'Private chef grilling fresh seafood at a Keramas black sand beach villa in east Bali',
+    intro:
+      "Keramas is a black sand beach village on Bali's east Gianyar coast — a world-class surf break and home to genuinely private luxury villas. myCHEF serves Keramas villas for surfers, families, and anyone seeking a quieter corner of Bali.",
+    villaDensity:
+      "Keramas has a small number of high-end private villas and surf camps along the east coast, attracting guests who actively seek distance from the tourist strip. Villa inventory is curated and relatively exclusive — it's not a walk-in destination.",
+    guestProfile:
+      'Experienced Bali travellers who have tried everywhere else, surfers who know the break, and couples seeking maximum privacy on the east coast.',
+    landmarks: [
+      'Keramas Beach',
+      'Keramas World Surfari',
+      'Black volcanic sand coastline',
+      'East Gianyar coast road',
+      'Pasar Gianyar market (nearby)',
+    ],
+    priceFrom: 'From IDR 1,350,000 per session',
+    pricingNote:
+      'East Gianyar coast. 25% deposit confirms booking. Grocery costs billed at cost.',
+    services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
+    faqs: [
+      {
+        q: 'Does myCHEF serve Keramas beach villas?',
+        a: 'Yes — Keramas is within our east Gianyar service area. We cover the villas and private properties along this stretch of coast.',
+      },
+      {
+        q: 'What menus suit a surf stay at Keramas?',
+        a: 'Surf groups usually prefer big, energising shared meals — grilled fish, Balinese sides, plenty of fresh fruit. Couples and families choose from our full menu. Everything is agreed in advance.',
+      },
+      {
+        q: 'How remote is Keramas from your base?',
+        a: 'Keramas is about 45 minutes from our main Gianyar operations — within our service zone and no extra travel charge.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'sanur', name: 'Sanur' },
+      { slug: 'ubud', name: 'Ubud' },
+      { slug: 'sukawati', name: 'Sukawati' },
+      { slug: 'denpasar', name: 'Denpasar' },
+    ],
+    metaTitle: 'Private Chef Keramas Bali | Black Sand Beach Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Keramas, Bali. myCHEF serves east Gianyar coast villas — surf-trip catering, Balinese menus, and private dining near the break.',
+    coordinates: { lat: -8.5726, lng: 115.3370 },
+    bookingNote: 'Book 48 hours ahead. East coast location — our team covers the full Gianyar coast.',
+    published: true,
+  },
+
+  // TABANAN — Highlands and rice terraces
+  {
+    slug: 'bedugul',
+    name: 'Bedugul',
+    regency: 'Tabanan',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroAlt: 'Private chef preparing a highland dinner at a lake-view villa in Bedugul',
+    intro:
+      "Bedugul is a highland lake district in Tabanan regency — cooler temperatures, mist-shrouded volcanic crater lakes, and the iconic Pura Ulun Danu Beratan temple on the water. myCHEF serves retreat villas and highland properties with menus suited to the mountain setting.",
+    villaDensity:
+      'Bedugul has a modest collection of highland retreat properties, eco-lodges, and lake-view villas at around 1,200 metres. The accommodation is unpretentious and oriented toward the landscape — far from the luxury villa belt of South Bali.',
+    guestProfile:
+      'Guests escaping the coast heat, highland trekkers, domestic Indonesian visitors on family holidays, and travellers combining Bedugul with a Bali full-island itinerary.',
+    landmarks: [
+      'Lake Beratan',
+      'Pura Ulun Danu Beratan',
+      'Candi Kuning market',
+      'Bali Botanic Garden',
+      'Jl. Raya Bedugul',
+      'Buyan and Tamblingan Lakes',
+    ],
+    priceFrom: 'From IDR 1,350,000 per session',
+    pricingNote:
+      'Highland sourcing from Candi Kuning market. 25% deposit confirms booking. Book 72 hours ahead.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Can myCHEF cook at a highland villa or retreat in Bedugul?',
+        a: 'Yes — our team covers Bedugul and the surrounding Tabanan highlands. We source local highland produce from Candi Kuning market and design menus suited to the cooler mountain climate.',
+      },
+      {
+        q: 'What makes a Bedugul menu different from Bali coast cooking?',
+        a: 'Highland Bali has different produce — temperate vegetables, strawberries, fresh corn, and cooler-climate ingredients. Our Bedugul menus use these for warming, flavour-led cooking that fits the mountain setting.',
+      },
+      {
+        q: 'How far in advance should I book for Bedugul?',
+        a: 'We recommend 72 hours for Bedugul due to highland market sourcing logistics. Contact us via WhatsApp and we will confirm quickly.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'jatiluwih', name: 'Jatiluwih' },
+      { slug: 'tanah-lot', name: 'Tanah Lot' },
+      { slug: 'canggu', name: 'Canggu' },
+      { slug: 'ubud', name: 'Ubud' },
+    ],
+    metaTitle: 'Private Chef Bedugul Bali | Highland Lake Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Bedugul, Bali. myCHEF serves highland villas near Lake Beratan — mountain menus with fresh local produce, retreats, and private dining.',
+    coordinates: { lat: -8.2755, lng: 115.1667 },
+    bookingNote: 'Book 72 hours ahead to allow highland market sourcing and travel logistics.',
+    published: true,
+  },
+
+  {
+    slug: 'jatiluwih',
+    name: 'Jatiluwih',
+    regency: 'Tabanan',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroAlt: 'Private chef serving a Balinese feast at a villa overlooking the Jatiluwih UNESCO rice terraces',
+    intro:
+      "Jatiluwih means 'truly marvellous' in Balinese — and the landscape earns it. The UNESCO-listed rice terraces cascade down the Tabanan highlands in an extraordinary scene. myCHEF serves private stays and eco-retreats here with menus that honour the setting.",
+    villaDensity:
+      'Jatiluwih has a very small villa inventory — a handful of eco-lodges and private retreat properties embedded in the terrace landscape. This is not a destination for villa holidaymakers looking for a full-service experience, but for those who found it and planned around it.',
+    guestProfile:
+      'UNESCO tourism visitors who extended their stay, eco-travellers seeking total immersion, and photographers or writers on working retreats in an extraordinary landscape.',
+    landmarks: [
+      'Jatiluwih UNESCO rice terraces',
+      'Subak irrigation system',
+      'Jl. Raya Jatiluwih',
+      'Pura Luhur Batukaru (nearby)',
+      'Tabanan highlands',
+    ],
+    priceFrom: 'From IDR 1,500,000 per session',
+    pricingNote:
+      'Remote highland location — small distance premium included. 25% deposit confirms booking.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Can I book a private chef at a villa near the Jatiluwih rice terraces?',
+        a: 'Yes — myCHEF serves private properties in the Jatiluwih area. We source local highland produce and design menus that reflect the extraordinary Balinese agricultural landscape.',
+      },
+      {
+        q: 'Is there a surcharge for Jatiluwih due to its remote location?',
+        a: 'Jatiluwih carries a small distance premium reflected in the starting price from IDR 1,500,000. Contact us with your villa details and group size for a full quote.',
+      },
+      {
+        q: 'What kind of menus suit a Jatiluwih stay?',
+        a: 'Traditional Balinese and Indonesian cooking suits the setting — rice-based feasts, slow-cooked dishes, local vegetables, and highland fruit. We also design full feast menus for groups celebrating something special here.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'bedugul', name: 'Bedugul' },
+      { slug: 'tabanan', name: 'Tabanan' },
+      { slug: 'tanah-lot', name: 'Tanah Lot' },
+      { slug: 'ubud', name: 'Ubud' },
+    ],
+    metaTitle: 'Private Chef Jatiluwih Bali | UNESCO Rice Terrace Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Jatiluwih, Bali. myCHEF serves highland villas near the UNESCO rice terraces — Balinese menus, local produce, and private dining in Tabanan.',
+    coordinates: { lat: -8.3600, lng: 115.1340 },
+    bookingNote: 'Book 72 hours ahead. Remote highland — logistics confirmed on booking.',
+    published: true,
+  },
+
+  {
+    slug: 'tabanan',
+    name: 'Tabanan',
+    regency: 'Tabanan',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroAlt: 'Private chef cooking with fresh produce from Tabanan market at a villa in West Bali',
+    intro:
+      "Tabanan is the capital of Tabanan regency — surrounded by the most productive agricultural land in Bali. Villas and retreat properties in this area benefit from exceptional local produce and a myCHEF team that covers the full West Bali regency.",
+    villaDensity:
+      'Tabanan town and surrounds have a modest villa inventory — rural properties, working farm stays, and family compounds. Fewer luxury villas than South Bali, more genuinely embedded in local life.',
+    guestProfile:
+      'Travellers combining Tabanan with Tanah Lot and Bedugul, families on cultural itineraries, domestic guests, and long-stay visitors based in West Bali.',
+    landmarks: [
+      'Tabanan market',
+      'Pura Tanah Lot (30 min)',
+      'Jl. Gatot Subroto Tabanan',
+      'Tabanan regency cultural sites',
+      'Subak Museum',
+    ],
+    priceFrom: 'From IDR 1,350,000 per session',
+    pricingNote:
+      'West Bali zone. 25% deposit confirms booking. Grocery costs billed at cost.',
+    services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
+    faqs: [
+      {
+        q: 'Does myCHEF serve Tabanan town and surrounds?',
+        a: 'Yes — we cover Tabanan town and the surrounding regency including villages, retreat properties, and private villas.',
+      },
+      {
+        q: 'Can you source fresh local produce from Tabanan market?',
+        a: 'Absolutely — Tabanan market is one of our preferred sourcing points for the regency. The local produce quality here is exceptional: rice, vegetables, free-range chicken, and tropical fruit.',
+      },
+      {
+        q: 'How far is Tabanan from the main tourist areas?',
+        a: 'Tabanan town is about 30–45 minutes from the main Bali tourist corridors. Our team serves the full regency and adjusts logistics around your location.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'tanah-lot', name: 'Tanah Lot' },
+      { slug: 'bedugul', name: 'Bedugul' },
+      { slug: 'jatiluwih', name: 'Jatiluwih' },
+      { slug: 'canggu', name: 'Canggu' },
+    ],
+    metaTitle: 'Private Chef Tabanan Bali | Villa Dining West Bali | myCHEF',
+    metaDescription:
+      'Book a private chef in Tabanan, Bali. myCHEF serves Tabanan regency villas — fresh local produce, Balinese menus, and private dining in West Bali.',
+    coordinates: { lat: -8.5350, lng: 115.1185 },
+    bookingNote: 'Book 48 hours ahead. Full West Bali regency coverage.',
+    published: true,
+  },
+
+  // KARANGASEM — East Bali
+  {
+    slug: 'amed',
+    name: 'Amed',
+    regency: 'Karangasem',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroAlt: 'Private chef preparing fresh seafood at an Amed villa overlooking the black sand coast',
+    intro:
+      "Amed is a string of fishing villages on Bali's northeast coast in Karangasem regency — black sand beaches, world-class snorkelling and diving, and a relaxed pace that attracts long-stay visitors. myCHEF brings private chef sessions to Amed villas and dive resorts.",
+    villaDensity:
+      "Amed stretches through several villages — Jemeluk, Bunutan, Lipah, Selang — each with its own small cluster of guesthouses and villas oriented toward the water. Properties are modest by South Bali standards but extraordinarily located.",
+    guestProfile:
+      "Serious divers and snorkellers, long-stay budget-conscious travellers who found Amed and didn't leave, and guests on a full-island Bali circuit.",
+    landmarks: [
+      'Jemeluk Bay snorkel site',
+      'Amed Beach',
+      'Japanese shipwreck',
+      'Mount Agung views',
+      'Lipah fishing village',
+      'East Bali coast road',
+    ],
+    priceFrom: 'From IDR 1,500,000 per session',
+    pricingNote:
+      'Distance premium from South Bali base included. 25% deposit confirms booking. Book 72 hours ahead.',
+    services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
+    faqs: [
+      {
+        q: 'Can myCHEF cook at a dive resort or villa in Amed?',
+        a: "Yes — we cover Amed and the surrounding Karangasem east coast. Our menus in Amed are built around the exceptional local seafood.",
+      },
+      {
+        q: 'What seafood can a private chef prepare in Amed?',
+        a: "Amed fishermen bring in fresh tuna, snapper, squid, and prawns. Our chef sources the morning's catch and builds your menu around what is freshest.",
+      },
+      {
+        q: 'Is there a travel surcharge for Amed?',
+        a: 'Amed is approximately 2 hours from South Bali. The distance premium is reflected in the starting price from IDR 1,500,000. Contact us for a full quote.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'candidasa', name: 'Candidasa' },
+      { slug: 'tulamben', name: 'Tulamben' },
+      { slug: 'sidemen', name: 'Sidemen' },
+      { slug: 'nusa-penida', name: 'Nusa Penida' },
+    ],
+    metaTitle: 'Private Chef Amed Bali | Seafood Villa Dining East Bali | myCHEF',
+    metaDescription:
+      'Book a private chef in Amed, Bali. myCHEF serves east coast villas and dive resorts — fresh local seafood, Balinese menus, and private dining in Karangasem.',
+    coordinates: { lat: -8.3465, lng: 115.6520 },
+    bookingNote: 'Book 72 hours ahead. Remote northeast Bali — advance logistics essential.',
+    published: true,
+  },
+
+  {
+    slug: 'sidemen',
+    name: 'Sidemen',
+    regency: 'Karangasem',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroAlt: 'Private chef serving a Balinese feast at a Sidemen valley villa with Mount Agung views',
+    intro:
+      "Sidemen is one of Bali's most breathtaking valleys — a lush corridor of rice terraces running toward Mount Agung in Karangasem regency. The boutique guesthouses and private villas here have extraordinary views. myCHEF serves Sidemen with private chef sessions designed for this highland setting.",
+    villaDensity:
+      'Sidemen has a small, carefully curated collection of boutique guesthouses and private villas — none more than a few buildings. The valley floor and hillsides are almost entirely agricultural, with only a handful of accommodation options embedded in the landscape.',
+    guestProfile:
+      "Guests who found Ubud too busy, travellers on extended Bali stays who wanted a genuinely remote highland experience, and visitors making the most of Karangasem's extraordinary cultural landscape.",
+    landmarks: [
+      'Sidemen valley rice terraces',
+      'Mount Agung backdrop',
+      'Jl. Raya Sidemen',
+      'Rendang village (nearby)',
+      'Pura Besakih (45 min)',
+    ],
+    priceFrom: 'From IDR 1,500,000 per session',
+    pricingNote:
+      'Remote highland — distance premium included. 25% deposit confirms booking.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Does myCHEF serve villas and guesthouses in Sidemen?',
+        a: 'Yes — Sidemen is within our Karangasem service area. We cover the valley and nearby properties with private chef sessions designed for the highland setting.',
+      },
+      {
+        q: 'What kind of menus suit a Sidemen stay?',
+        a: 'Traditional Balinese and Indonesian cooking — rice-based feasts, slow-cooked dishes, and menus built around fresh local produce. We design each session around the landscape.',
+      },
+      {
+        q: 'How far in advance should I book for Sidemen?',
+        a: 'We recommend 72 hours for Sidemen. Contact us early in your trip and we will plan logistics accordingly.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'amed', name: 'Amed' },
+      { slug: 'candidasa', name: 'Candidasa' },
+      { slug: 'ubud', name: 'Ubud' },
+      { slug: 'tegallalang', name: 'Tegallalang' },
+    ],
+    metaTitle: 'Private Chef Sidemen Bali | Rice Terrace Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Sidemen, Bali. myCHEF serves the Sidemen valley — Balinese menus, highland produce, and private dining below Mount Agung in Karangasem.',
+    coordinates: { lat: -8.4741, lng: 115.4706 },
+    bookingNote: 'Book 72 hours ahead. Remote highland valley — advance logistics planning required.',
+    published: true,
+  },
+
+  {
+    slug: 'candidasa',
+    name: 'Candidasa',
+    regency: 'Karangasem',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroAlt: 'Private chef serving a fresh seafood dinner at a Candidasa beachfront villa in East Bali',
+    intro:
+      "Candidasa is a quiet beach town on Bali's east coast in Karangasem — the gateway to East Bali's diving, snorkelling, and cultural attractions. myCHEF serves Candidasa villas and guesthouses with private chef sessions focused on East Bali's excellent seafood and produce.",
+    villaDensity:
+      'Candidasa has a low-key collection of beachfront guesthouses and a small number of private villas. It is unpretentious and genuinely local — ideal for guests who value quiet over convenience.',
+    guestProfile:
+      'Slow travellers and cultural tourists, older guests who appreciate the quieter pace, divers exploring the East Bali reefs, and travellers on an extended Bali circuit.',
+    landmarks: [
+      'Candidasa Beach',
+      'Lotus Lake Candidasa',
+      'Tenganan traditional village (nearby)',
+      'Amlapura royal palace (nearby)',
+      'East Bali coast road',
+    ],
+    priceFrom: 'From IDR 1,500,000 per session',
+    pricingNote:
+      'East Bali distance premium included. 25% deposit confirms booking.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Does myCHEF cover Candidasa beach and surrounding villas?',
+        a: 'Yes — Candidasa is within our East Bali service area. We cover the beach strip and surrounding Karangasem regency properties.',
+      },
+      {
+        q: 'What seafood is available in Candidasa?',
+        a: "East Bali has excellent fresh fish — snapper, tuna, mackerel, and squid sourced from local fishing communities. Our chef builds your menu around what's freshest on the day.",
+      },
+      {
+        q: 'Is Candidasa far from your main service area?',
+        a: 'Candidasa is approximately 90 minutes from our Ubud base. A small distance component is included in the starting price.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'amed', name: 'Amed' },
+      { slug: 'sidemen', name: 'Sidemen' },
+      { slug: 'tulamben', name: 'Tulamben' },
+      { slug: 'sanur', name: 'Sanur' },
+    ],
+    metaTitle: 'Private Chef Candidasa Bali | East Bali Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Candidasa, Bali. myCHEF serves East Bali villas and guesthouses — fresh seafood menus, Balinese cooking, and private dining in Karangasem.',
+    coordinates: { lat: -8.5085, lng: 115.5610 },
+    bookingNote: 'Book 72 hours ahead. East Bali location — logistics confirmed on booking.',
+    published: true,
+  },
+
+  {
+    slug: 'tulamben',
+    name: 'Tulamben',
+    regency: 'Karangasem',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroAlt: 'Private chef preparing a post-dive meal at a Tulamben dive resort on the northeast Bali coast',
+    intro:
+      "Tulamben is a small diving village on Bali's northeast coast — home of the USAT Liberty shipwreck, one of the most accessible wreck dives in the world. myCHEF caters to both resort groups and private villa guests here with menus designed for the dive-centred lifestyle.",
+    villaDensity:
+      "Tulamben's accommodation is almost entirely dive-oriented — small dive resorts, bungalow operations, and a handful of private villas. The community is tight-knit and the pace is entirely structured around tides and dive schedules.",
+    guestProfile:
+      'Serious scuba divers, dive course students, underwater photographers, and anyone making a dedicated trip to the Liberty wreck.',
+    landmarks: [
+      'USAT Liberty wreck dive site',
+      'Tulamben Bay',
+      'Black sand beach',
+      'Drop-off dive site',
+      'Northeast Bali coast',
+    ],
+    priceFrom: 'From IDR 1,500,000 per session',
+    pricingNote:
+      'Remote northeast Bali — distance premium included. 25% deposit confirms booking.',
+    services: ['private-chef', 'catering', 'bbq', 'events'],
+    faqs: [
+      {
+        q: 'Does myCHEF serve dive resorts and guesthouses in Tulamben?',
+        a: 'Yes — we serve Tulamben and the surrounding northeast Karangasem coast for both small group stays and private villa guests.',
+      },
+      {
+        q: 'Can you cater for a full day of diving meals in Tulamben?',
+        a: 'Yes — we design full-day catering plans including pre-dive breakfasts, post-dive lunches, and evening dinners. Contact us with your group size and dive schedule.',
+      },
+      {
+        q: 'How remote is Tulamben and does that affect the price?',
+        a: 'Tulamben is approximately 2.5 hours from South Bali. The distance premium is reflected in the starting price. Contact us for a full quote.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'amed', name: 'Amed' },
+      { slug: 'candidasa', name: 'Candidasa' },
+      { slug: 'sidemen', name: 'Sidemen' },
+      { slug: 'lovina', name: 'Lovina' },
+    ],
+    metaTitle: 'Private Chef Tulamben Bali | Dive Resort Catering | myCHEF',
+    metaDescription:
+      'Book a private chef in Tulamben, Bali. myCHEF serves dive resorts and villas near the USAT Liberty wreck — seafood menus, group catering, and private dining.',
+    coordinates: { lat: -8.2936, lng: 115.5976 },
+    bookingNote: 'Book 72–96 hours ahead. Remote northeast Bali — advance planning essential.',
+    published: true,
+  },
+
+  // BULELENG — North Bali
+  {
+    slug: 'lovina',
+    name: 'Lovina',
+    regency: 'Buleleng',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroAlt: 'Private chef serving a relaxed seafood dinner at a Lovina beachfront villa in North Bali',
+    intro:
+      "Lovina is North Bali's main beach resort — a calm stretch of black sand, famous for dolphin watching at dawn and a pace far slower than the south. myCHEF serves Lovina villas and guesthouses with private chef sessions tailored to the relaxed North Bali character.",
+    villaDensity:
+      "Lovina's accommodation ranges from basic guesthouses to mid-range villas along the black sand beach. Villa density is low and properties are unpretentious — the draw is the calm, the dolphins, and the distance from the tourist circuit.",
+    guestProfile:
+      'Guests who have done South Bali and wanted something completely different, dolphin enthusiasts, nature travellers, families seeking calm water, and long-stay visitors.',
+    landmarks: [
+      'Lovina Beach',
+      'Lovina dolphin watching point',
+      'Banjar Hot Springs (nearby)',
+      'Gitgit Waterfall (nearby)',
+      'Jl. Raya Lovina',
+    ],
+    priceFrom: 'From IDR 1,500,000 per session',
+    pricingNote:
+      'North Bali distance premium included. 25% deposit confirms booking. Book 72 hours ahead.',
+    services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
+    faqs: [
+      {
+        q: 'Does myCHEF serve Lovina villas and resorts?',
+        a: 'Yes — Lovina is in our North Bali service area. We cover the beach strip and surrounding properties in Buleleng regency.',
+      },
+      {
+        q: 'What kind of menus suit a Lovina stay?',
+        a: 'North Bali cooking is more traditional and less tourist-oriented than the south — fresh fish menus, Balinese village cooking, and relaxed communal dining. Multi-course dinners also available.',
+      },
+      {
+        q: 'Is there a surcharge for Lovina?',
+        a: 'Lovina is a long way from our South Bali base. The distance component is included in the starting price from IDR 1,500,000.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'pemuteran', name: 'Pemuteran' },
+      { slug: 'singaraja', name: 'Singaraja' },
+      { slug: 'kintamani', name: 'Kintamani' },
+      { slug: 'bedugul', name: 'Bedugul' },
+    ],
+    metaTitle: 'Private Chef Lovina Bali | North Bali Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Lovina, Bali. myCHEF serves North Bali villas and resorts — fresh local fish, Balinese menus, and private dining on the black sand coast.',
+    coordinates: { lat: -8.1585, lng: 115.0267 },
+    bookingNote: 'Book 72 hours ahead. North Bali location — advance logistics planning required.',
+    published: true,
+  },
+
+  {
+    slug: 'singaraja',
+    name: 'Singaraja',
+    regency: 'Buleleng',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroAlt: 'Private chef at a Singaraja villa event with North Bali sea views',
+    intro:
+      "Singaraja is the capital of Buleleng regency and the historical port city of North Bali — a layered urban landscape of Dutch colonial architecture, Chinese quarter streets, and Balinese royal heritage. myCHEF serves private stays and event catering in the Singaraja area.",
+    villaDensity:
+      "Singaraja is primarily an urban base rather than a villa destination — it functions as the logistics hub for North Bali tourism. Private stays tend to be guesthouses, family homes, or the occasional boutique property in the surrounding hills.",
+    guestProfile:
+      'Cultural researchers, domestic Indonesian travellers, conference and event attendees at Undiksha University, and guests using Singaraja as a base for North Bali exploration.',
+    landmarks: [
+      'Gedong Kirtya lontar library',
+      'Pasar Anyar market',
+      'Jl. Ngurah Rai Singaraja',
+      'Dutch colonial waterfront',
+      'Chinese quarter temples',
+    ],
+    priceFrom: 'From IDR 1,500,000 per session',
+    pricingNote:
+      'North Bali base. 25% deposit confirms booking. Event catering available.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
+    faqs: [
+      {
+        q: 'Does myCHEF operate in Singaraja?',
+        a: 'Yes — we cover Singaraja and the surrounding Buleleng regency for private chef sessions, villa catering, and event support.',
+      },
+      {
+        q: 'What is North Balinese cuisine like compared to South Bali cooking?',
+        a: 'North Balinese food has stronger Chinese and Dutch colonial influences, different spice blends, and fresh seafood from the Bali Sea. Our chefs can showcase this distinct regional cuisine.',
+      },
+      {
+        q: 'Can myCHEF support events or group catering in Singaraja?',
+        a: 'Yes — we handle events including corporate retreats, villa parties, and cultural celebrations in the Singaraja area. Contact us with event details for a quote.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'lovina', name: 'Lovina' },
+      { slug: 'pemuteran', name: 'Pemuteran' },
+      { slug: 'bedugul', name: 'Bedugul' },
+      { slug: 'kintamani', name: 'Kintamani' },
+    ],
+    metaTitle: 'Private Chef Singaraja Bali | North Bali Event Catering | myCHEF',
+    metaDescription:
+      'Book a private chef in Singaraja, Bali. myCHEF serves Buleleng regency — North Balinese cuisine, villa dining, and event catering in the historic port city.',
+    coordinates: { lat: -8.1120, lng: 115.0885 },
+    bookingNote: 'Book 72 hours ahead. Full North Bali event catering available.',
+    published: true,
+  },
+
+  {
+    slug: 'pemuteran',
+    name: 'Pemuteran',
+    regency: 'Buleleng',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroAlt: 'Private chef preparing an eco-conscious dinner at a Pemuteran dive resort villa in northwest Bali',
+    intro:
+      "Pemuteran is a small eco-dive village in northwest Bali — gateway to Menjangan Island and the West Bali National Park. myCHEF serves Pemuteran's dive resorts and eco-lodges with private chef sessions designed for the conservation-minded community here.",
+    villaDensity:
+      "Pemuteran has a tight cluster of dive resorts, eco-lodges, and bungalow operations around the bay. Properties are low-impact and conservation-conscious — no high-rise, no crowds, very few private villas.",
+    guestProfile:
+      'Serious divers and marine conservationists, eco-travellers, snorkellers visiting the biorock coral restoration project, and guests who drove all the way to the northwest corner of Bali with a purpose.',
+    landmarks: [
+      'Pemuteran Bay',
+      'Biorock coral restoration reef',
+      'Menjangan Island (30 min by boat)',
+      'West Bali National Park gate',
+      'Taman Sari resort area',
+    ],
+    priceFrom: 'From IDR 1,500,000 per session',
+    pricingNote:
+      'Remote northwest Bali — distance premium included. 25% deposit confirms booking.',
+    services: ['private-chef', 'fine-dining', 'catering', 'events'],
+    faqs: [
+      {
+        q: 'Can myCHEF cook at a dive resort or villa in Pemuteran?',
+        a: 'Yes — we cover Pemuteran and the northwest Bali coast. Book early: the distance requires advance logistics planning.',
+      },
+      {
+        q: 'What kind of food does myCHEF serve in Pemuteran?',
+        a: 'Fresh local fish, organic produce, and menus tailored to the eco-conscious character of the area. We handle plant-based, allergen-free, and bespoke dietary requirements.',
+      },
+      {
+        q: 'How far ahead should I book for Pemuteran?',
+        a: 'At least 96 hours ahead. Pemuteran is among the most remote areas we serve — advance planning is essential.',
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'lovina', name: 'Lovina' },
+      { slug: 'singaraja', name: 'Singaraja' },
+      { slug: 'bedugul', name: 'Bedugul' },
+    ],
+    metaTitle: 'Private Chef Pemuteran Bali | Eco-Villa Diving Resort Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Pemuteran, Bali. myCHEF serves eco-resorts and villas near Menjangan Island — fresh seafood, organic menus, and private dining in northwest Bali.',
+    coordinates: { lat: -8.1255, lng: 114.6488 },
+    bookingNote: 'Book 96 hours ahead. Northwest Bali — our most remote service location.',
+    published: true,
+  },
+
+  // BANGLI — Volcanic Highlands
+  {
+    slug: 'kintamani',
+    name: 'Kintamani',
+    regency: 'Bangli',
+    tier: 2,
+    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroAlt: 'Private chef serving a highland caldera dinner at a Kintamani villa above Lake Batur',
+    intro:
+      "Kintamani sits on the rim of the ancient Batur caldera in Bangli regency — at 1,500 metres, with views across the volcanic lake and Mount Batur. myCHEF serves private villas and boutique properties on the caldera rim for high-altitude dining experiences unlike anywhere else in Bali.",
+    villaDensity:
+      'Kintamani has a sparse but growing collection of rim-view villas, boutique guesthouses, and caldera-edge restaurants. The most sought-after properties face west across the lake to the volcano — spectacular at sunrise and dramatically lit at sunset.',
+    guestProfile:
+      'Guests completing a full-island Bali circuit, Mt Batur trekkers celebrating a summit breakfast or dinner, couples seeking the most unusual dining backdrop in Bali, and domestic Indonesian visitors to the highland.',
+    landmarks: [
+      'Mount Batur volcano',
+      'Lake Batur',
+      'Kintamani caldera rim road',
+      'Penelokan viewpoint',
+      'Toya Bungkah hot springs (below)',
+      'Batur Global Geopark',
+    ],
+    priceFrom: 'From IDR 1,500,000 per session',
+    pricingNote:
+      'Highland distance premium included. 25% deposit confirms booking. Sunrise and sunset sessions available.',
+    services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
+    faqs: [
+      {
+        q: 'Can myCHEF cook at a villa on the Kintamani caldera rim?',
+        a: 'Yes — we serve private villas and boutique properties around the Kintamani caldera. Altitude logistics are second nature to our team.',
+      },
+      {
+        q: 'What menus suit a highland Kintamani dinner?',
+        a: 'The cool mountain air calls for warming, substantial food — slow-braised meats, rich curries, wood-fire preparations, and robust Balinese flavours. Lighter menus available on request.',
+      },
+      {
+        q: 'Can myCHEF cater for a sunrise breakfast or dinner with caldera views?',
+        a: "Absolutely — a sunrise breakfast above the caldera or a sunset dinner watching Batur glow are among our most spectacular offerings. Tell us what you're imagining and we'll design around it.",
+      },
+    ],
+    nearbyAreas: [
+      { slug: 'ubud', name: 'Ubud' },
+      { slug: 'bedugul', name: 'Bedugul' },
+      { slug: 'tegallalang', name: 'Tegallalang' },
+      { slug: 'payangan', name: 'Payangan' },
+    ],
+    metaTitle: 'Private Chef Kintamani Bali | Mount Batur Caldera Villa Dining | myCHEF',
+    metaDescription:
+      'Book a private chef in Kintamani, Bali. myCHEF serves highland villas on the Mount Batur caldera rim — warming mountain menus, sunrise breakfasts, and private dining.',
+    coordinates: { lat: -8.2403, lng: 115.3693 },
+    bookingNote: 'Book 72 hours ahead. Caldera rim at 1,500m — cool temperatures year-round.',
+    published: true,
+  },
 ]
 
 /** Quick lookup by slug */

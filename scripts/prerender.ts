@@ -140,6 +140,24 @@ const ROUTES = [
   { path: '/private-chef/cemagi', file: 'private-chef-cemagi.html' },
   { path: '/private-chef/seseh', file: 'private-chef-seseh.html' },
   { path: '/private-chef/nusa-ceningan', file: 'private-chef-nusa-ceningan.html' },
+  // Phase 2 Tier 2 expansion — Badung Bukit, Gianyar, Tabanan, Karangasem, Buleleng, Bangli
+  { path: '/private-chef/balangan', file: 'private-chef-balangan.html' },
+  { path: '/private-chef/bingin', file: 'private-chef-bingin.html' },
+  { path: '/private-chef/padang-padang', file: 'private-chef-padang-padang.html' },
+  { path: '/private-chef/sukawati', file: 'private-chef-sukawati.html' },
+  { path: '/private-chef/payangan', file: 'private-chef-payangan.html' },
+  { path: '/private-chef/keramas', file: 'private-chef-keramas.html' },
+  { path: '/private-chef/bedugul', file: 'private-chef-bedugul.html' },
+  { path: '/private-chef/jatiluwih', file: 'private-chef-jatiluwih.html' },
+  { path: '/private-chef/tabanan', file: 'private-chef-tabanan.html' },
+  { path: '/private-chef/amed', file: 'private-chef-amed.html' },
+  { path: '/private-chef/sidemen', file: 'private-chef-sidemen.html' },
+  { path: '/private-chef/candidasa', file: 'private-chef-candidasa.html' },
+  { path: '/private-chef/tulamben', file: 'private-chef-tulamben.html' },
+  { path: '/private-chef/lovina', file: 'private-chef-lovina.html' },
+  { path: '/private-chef/singaraja', file: 'private-chef-singaraja.html' },
+  { path: '/private-chef/pemuteran', file: 'private-chef-pemuteran.html' },
+  { path: '/private-chef/kintamani', file: 'private-chef-kintamani.html' },
 ]
 
 async function startPreviewServer(): Promise<ChildProcess> {

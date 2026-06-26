@@ -105,6 +105,22 @@ const ROUTES = [
   { path: '/journal/bbq-catering-cost-breakdown-bali', file: 'journal-bbq-catering-cost-breakdown-bali.html' },
   { path: '/journal/italian-tasting', file: 'journal-italian-tasting.html' },
   { path: '/journal/wagyu-experience', file: 'journal-wagyu-experience.html' },
+  // /private-chef/[slug] — Bali Domination Blueprint area landing pages (TASK-027)
+  { path: '/private-chef/seminyak', file: 'private-chef-seminyak.html' },
+  { path: '/private-chef/canggu', file: 'private-chef-canggu.html' },
+  { path: '/private-chef/ubud', file: 'private-chef-ubud.html' },
+  { path: '/private-chef/uluwatu', file: 'private-chef-uluwatu.html' },
+  { path: '/private-chef/jimbaran', file: 'private-chef-jimbaran.html' },
+  { path: '/private-chef/nusa-dua', file: 'private-chef-nusa-dua.html' },
+  { path: '/private-chef/sanur', file: 'private-chef-sanur.html' },
+  { path: '/private-chef/denpasar', file: 'private-chef-denpasar.html' },
+  { path: '/private-chef/berawa', file: 'private-chef-berawa.html' },
+  { path: '/private-chef/pererenan', file: 'private-chef-pererenan.html' },
+  { path: '/private-chef/kerobokan', file: 'private-chef-kerobokan.html' },
+  { path: '/private-chef/petitenget', file: 'private-chef-petitenget.html' },
+  { path: '/private-chef/kuta', file: 'private-chef-kuta.html' },
+  { path: '/private-chef/legian', file: 'private-chef-legian.html' },
+  { path: '/private-chef/bukit', file: 'private-chef-bukit.html' },
 ]
 
 async function startPreviewServer(): Promise<ChildProcess> {

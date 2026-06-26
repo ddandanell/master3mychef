@@ -80,6 +80,7 @@ const ROUTES = [
   { path: '/blog/corporate-events-catering-bali-team-dining', file: 'blog-corporate-events-catering-bali-team-dining.html' },
   { path: '/blog/romantic-dinner-at-home-bali-private-chef', file: 'blog-romantic-dinner-at-home-bali-private-chef.html' },
   { path: '/blog/dining-by-location-bali-neighborhood-guide', file: 'blog-dining-by-location-bali-neighborhood-guide.html' },
+  { path: '/blog/buffet-vs-plated-service-bali', file: 'blog-buffet-vs-plated-service-bali.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },
   // Journal posts (all 16)

@@ -122,6 +122,7 @@ const RomanticDinnerBaliPage = lazy(() => import('./pages/RomanticDinnerBaliPage
 const VillaBirthdayPartyPage = lazy(() => import('./pages/VillaBirthdayPartyPage'))
 const YogaRetreatChefPage = lazy(() => import('./pages/YogaRetreatChefPage'))
 const DiningByLocationBaliPage = lazy(() => import('./pages/DiningByLocationBaliPage'))
+const BuffetVsPlatedPage = lazy(() => import('./pages/BuffetVsPlatedPage'))
 const ChefProfilePage = lazy(() => import('./pages/ChefProfilePage'))
 
 // Help & Guides System
@@ -362,6 +363,7 @@ export default function App() {
           <Route path="/blog/yoga-retreat-chef-bali-meal-planning" element={<YogaRetreatChefPage />} />
           <Route path="/blog/corporate-events-catering-bali-team-dining" element={<CorporateEventsCateringBaliPage />} />
           <Route path="/blog/dining-by-location-bali-neighborhood-guide" element={<DiningByLocationBaliPage />} />
+          <Route path="/blog/buffet-vs-plated-service-bali" element={<BuffetVsPlatedPage />} />
           {BLOG_POST_SLUGS.map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />
           ))}

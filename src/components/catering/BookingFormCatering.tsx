@@ -1,6 +1,7 @@
 import { useEffect, useId, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Calendar, MessageSquare, Check, Phone } from 'lucide-react'
+import { trackWhatsAppClick } from '@/lib/analytics'
 
 interface Field {
   name: string
@@ -124,6 +125,8 @@ export default function BookingFormCatering({
       .filter((line): line is string => Boolean(line))
     const intro = messageIntro ?? `Hi ${whatsappName}, I'd like help with ${title.toLowerCase()}.`
     const msg = [intro, lines.join('\n')].filter(Boolean).join('\n\n')
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    trackWhatsAppClick(`catering-form-${slug}`)
     window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer')
     setSubmitted(true)
   }

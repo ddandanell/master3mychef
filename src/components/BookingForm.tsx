@@ -1,5 +1,6 @@
 import { useId, useState } from 'react'
 import { Calendar, Users, MapPin, Utensils, Check } from 'lucide-react'
+import { trackWhatsAppClick } from '@/lib/analytics'
 
 interface BookingFormProps {
   universe: 'luna' | 'sol' | 'aura'
@@ -70,6 +71,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
       .map(([k, v]) => `${k}: ${v}`)
       .join('\n')
     const fullMsg = `Hi ${config.whatsappName}, I'm interested in booking.\n\n${msg}`
+    trackWhatsAppClick(`booking-form-${universe}`)
     window.open(`https://wa.me/${config.whatsappNumber}?text=${encodeURIComponent(fullMsg)}`, '_blank')
     setSubmitted(true)
   }

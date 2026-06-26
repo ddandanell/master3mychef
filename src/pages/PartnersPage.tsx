@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { trackWhatsAppClick } from '@/lib/analytics'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -146,6 +147,7 @@ export default function PartnersPage() {
       `Hi myCHEF, I would like to discuss the Certified Partner programme.\n\nName: ${partnerForm.name}\nEmail: ${partnerForm.email}\nProperty: ${partnerForm.property || '—'}\nProperty Type: ${partnerForm.type || '—'}\nRooms / Villas: ${partnerForm.size || '—'}\n\n${partnerForm.notes || ''}`.trim(),
     )
 
+    trackWhatsAppClick('partners-form')
     window.open(`https://wa.me/${WA}?text=${text}`, '_blank', 'noopener,noreferrer')
   }
 

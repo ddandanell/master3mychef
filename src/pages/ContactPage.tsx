@@ -5,6 +5,7 @@ import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import { ContactRiskReversal } from '@/components/shared'
+import { trackWhatsAppClick } from '@/lib/analytics'
 
 const WA = 628113803488
 
@@ -119,6 +120,7 @@ export default function ContactPage() {
       .map(([label, value]) => `${label}: ${value}`)
 
     const text = encodeURIComponent(`Hi myCHEF,\n\nI need help with a booking inquiry.\n\n${lines.join('\n')}`)
+    trackWhatsAppClick('contact-form')
     window.open(`https://wa.me/${WA}?text=${text}`, '_blank', 'noopener,noreferrer')
     setSubmitted(true)
   }

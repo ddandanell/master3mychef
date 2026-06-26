@@ -2,6 +2,7 @@
  * myCHEF — MASTER SITEMAP & CONTENT INDEX
  */
 import { LOCATIONS, PILLARS, JOURNAL_POSTS } from './siteArchitecture'
+import { PRIVATE_CHEF_AREAS } from './privateChefAreas'
 
 export interface SitemapEntry {
   path: string
@@ -963,10 +964,25 @@ export function buildSitemap(): SitemapEntry[] {
     { path: '/cancellation', type: 'legal', title: 'Cancellation Policy | myCHEF Bali', description: 'Cancellation and refund policy for myCHEF private chef and catering bookings in Bali.', priority: 0.3, changefreq: 'yearly' },
   ]
 
+  // /private-chef/[slug] — Bali Domination Blueprint area landing pages
+  const privateChefAreaPages: SitemapEntry[] = PRIVATE_CHEF_AREAS.filter((a) => a.published).map(
+    (a) => ({
+      path: `/private-chef/${a.slug}`,
+      type: 'area' as const,
+      title: a.metaTitle,
+      description: a.metaDescription,
+      priority: 0.9,
+      changefreq: 'weekly' as const,
+      area: a.name,
+      slug: a.slug,
+    })
+  )
+
   return [
     home,
     // ...areas,  // Fjernet: disse redirecter til /locations/*
     ...locationPages,
+    ...privateChefAreaPages,
     ...landing,
     ...guides,
     ...blogPosts,

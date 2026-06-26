@@ -4,6 +4,8 @@ import Layout from './components/Layout'
 import EngagementTracker from './components/EngagementTracker'
 
 import { LANDING_PAGE_SLUGS, GUIDE_SLUGS, BLOG_POST_SLUGS, SERVICE_SLUGS, MENU_SLUGS, AREA_SLUGS, MICRO_AREA_SLUGS } from './data/route-slugs'
+import { PUBLISHED_AREA_SLUGS } from './data/privateChefAreas'
+import PrivateChefAreaPage from './components/PrivateChefAreaPage'
 import { REDIRECTS } from './data/redirects'
 import { CUSTOM_LOCATION_PAGE_SLUGS } from './data/locationLandingPages'
 import { getAllSubPages, getAllLocationPaths } from './data/siteArchitecture'
@@ -316,6 +318,11 @@ export default function App() {
           <Route path="/private-chef-bali/tabanan" element={<Navigate to="/private-chef-bali/ubud" replace />} />
           {/* Far east — no dedicated page, send to main hub */}
           <Route path="/private-chef-bali/padang-bai" element={<Navigate to="/private-chef-bali" replace />} />
+
+          {/* /private-chef/[slug] — Bali Domination Blueprint area landing pages */}
+          {PUBLISHED_AREA_SLUGS.map((slug) => (
+            <Route key={slug} path={`/private-chef/${slug}`} element={<PrivateChefAreaPage slug={slug} />} />
+          ))}
 
           {/* Service detail pages */}
           {SERVICE_SLUGS.map((slug) => (

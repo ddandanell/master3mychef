@@ -81,6 +81,9 @@ const ROUTES = [
   { path: '/blog/romantic-dinner-at-home-bali-private-chef', file: 'blog-romantic-dinner-at-home-bali-private-chef.html' },
   { path: '/blog/dining-by-location-bali-neighborhood-guide', file: 'blog-dining-by-location-bali-neighborhood-guide.html' },
   { path: '/blog/buffet-vs-plated-service-bali', file: 'blog-buffet-vs-plated-service-bali.html' },
+  { path: '/blog/dry-season-menu-bali', file: 'blog-dry-season-menu-bali.html' },
+  { path: '/blog/wet-season-menu-bali', file: 'blog-wet-season-menu-bali.html' },
+  { path: '/blog/festive-season-menu-bali', file: 'blog-festive-season-menu-bali.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },
   // Journal posts (all 16)

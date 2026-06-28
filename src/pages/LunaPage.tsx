@@ -636,39 +636,6 @@ export default function LunaPage() {
         </div>
       </section>
 
-      {/* Romantic Dinner — SEO Section */}
-      <section id="romantic-dinner" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#F5F3EF' }}>
-        <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-            <div className="order-2 md:order-1 rounded-2xl overflow-hidden aspect-[4/3]">
-              <img
-                src="/generated/mychef-experience-bali-luna-gallery-4.webp"
-                alt="Romantic candlelit dinner for two at a private Bali villa"
-                width={800}
-                height={600}
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async" />
-            </div>
-            <div className="order-1 md:order-2">
-              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Romantic Dinner</p>
-              <h2 className="text-4xl md:text-5xl mb-6 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>An Evening for Two</h2>
-              <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
-              <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
-                A romantic dinner in Bali should not mean fighting for a table at a crowded restaurant. It should mean your own villa, your own chef, and an evening that moves at your pace. We design intimate dinners for couples who want privacy without compromise — the same Michelin-trained team, the same ingredients, the same attention to detail, scaled to an evening for two.
-              </p>
-              <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
-                The table is set with candles and crystal. The courses arrive unhurried. The wine is paired to your preference. And the only other voices in the room are the ones you choose to hear. Whether it is a proposal, an anniversary, or simply a night that deserves to be remembered, we build the evening around you.
-              </p>
-              <div className="flex items-center gap-3 text-[#1A1A1A]/60 text-sm">
-                <Heart className="w-4 h-4 text-[#C5A028]" />
-                <span>Minimum four guests, or arrange a two-guest romantic evening on request</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Risk Reversal — Fine Dining guarantees */}
       <FineDiningRiskReversal dark className="border-y border-white/10" />
 
@@ -1200,6 +1167,77 @@ export default function LunaPage() {
           {/* Best Partner diploma — premium credential */}
           <div className="mt-16 flex justify-center">
             <BestPartnerBadge variant="light" width={300} />
+          </div>
+        </div>
+      </section>
+
+      {/* Romantic Dinner — repositioned after Our Chefs */}
+      <section id="romantic-dinner" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#F5F3EF' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div className="order-2 md:order-1 rounded-2xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/generated/mychef-experience-bali-luna-gallery-4.webp"
+                alt="Romantic candlelit dinner for two at a private Bali villa"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async" />
+            </div>
+            <div className="order-1 md:order-2">
+              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Romantic Dinner</p>
+              <h2 className="text-4xl md:text-5xl mb-6 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>An Evening for Two</h2>
+              <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>By special arrangement</p>
+              <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
+              <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
+                A romantic dinner in Bali should not mean fighting for a table at a crowded restaurant. It should mean your own villa, your own chef, and an evening that moves at your pace. We design intimate dinners for couples who want privacy without compromise — the same Michelin-trained team, the same ingredients, the same attention to detail, scaled to an evening for two.
+              </p>
+              <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
+                The table is set with candles and crystal. The courses arrive unhurried. The wine is paired to your preference. And the only other voices in the room are the ones you choose to hear. Whether it is a proposal, an anniversary, or simply a night that deserves to be remembered, we build the evening around you.
+              </p>
+              <div className="rounded-2xl border border-[#C5A028]/25 bg-[#C5A028]/5 p-5 mb-6">
+                <p className="text-sm text-[#1A1A1A]/70 leading-relaxed">
+                  <strong>Important:</strong> Our standard fine dining menus require a minimum of 6 guests. The Romantic Dinner is available as a special arrangement for couples who prefer an intimate two-person experience.
+                </p>
+              </div>
+              <div className="mb-6">
+                <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Pricing</p>
+                <div className="space-y-2 text-sm text-[#1A1A1A]/70">
+                  <p><span className="text-[#1A1A1A]/50">Kitchen-Service:</span> <span className="text-[#1A1A1A] font-medium">IDR 2,800,000++ per couple</span></p>
+                  <p><span className="text-[#1A1A1A]/50">Full-Service:</span> <span className="text-[#1A1A1A] font-medium">IDR 3,500,000++ per couple</span></p>
+                  <p><span className="text-[#1A1A1A]/50">Wine pairing:</span> <span className="text-[#1A1A1A] font-medium">+IDR 850,000 per person</span></p>
+                </div>
+              </div>
+              <div className="mb-6">
+                <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>What&apos;s included</p>
+                <div className="space-y-2">
+                  {[
+                    'Private chef for the evening',
+                    'Multi-course tasting menu (5 courses)',
+                    'Table setting and decoration',
+                    'Full service and cleanup',
+                    'Personalised menu consultation',
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                      <span className="text-sm text-[#1A1A1A]/70">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="mb-6">
+                <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Guarantees</p>
+                <div className="space-y-2 text-sm text-[#1A1A1A]/70">
+                  <p><strong className="text-[#1A1A1A]/80">Satisfaction guarantee:</strong> Not satisfied? We refund 50% — no questions asked</p>
+                  <p><strong className="text-[#1A1A1A]/80">48-hour cancellation policy:</strong> Full refund if you cancel 48+ hours before</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 text-[#1A1A1A]/60 text-sm">
+                <Heart className="w-4 h-4 text-[#C5A028]" />
+                <span>To arrange: Contact us via WhatsApp to discuss your evening. We recommend booking at least 7 days in advance.</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

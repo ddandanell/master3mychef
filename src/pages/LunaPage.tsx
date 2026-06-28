@@ -720,17 +720,28 @@ export default function LunaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div>
               <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chef's Table</p>
-              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Watch the Kitchen Work</h2>
+              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>The Chef's Table</h2>
               <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
               <p className="text-white/[70%] mb-6 leading-relaxed">
-                Our Chef's Table experience brings the kitchen to the centre of the room. The chef cooks within metres of your guests — plating, saucing, and finishing each course while you watch. It is theatre without pretension: the open flame, the hand-rolled pasta, the precise pour of a reduction. Your guests see the discipline behind the dish.
+                The Chef's Table is our most intimate fine dining experience. Limited to exactly 6 guests, your chef prepares each course at your table — explaining techniques, sharing stories, and answering questions. This is not just dinner; it is a masterclass in flavour.
               </p>
-              <p className="text-white/[70%] mb-6 leading-relaxed">
-                This is not a demonstration. It is a working kitchen placed at the heart of your evening. The chef explains nothing unless asked. The food speaks. The fire speaks. And your guests leave with an understanding of what fine dining actually takes — skill, timing, and the quiet confidence of a team that has done this five hundred times.
-              </p>
-              <div className="flex items-center gap-3 text-white/[50%] text-sm">
-                <ChefHat className="w-4 h-4 text-[#C5A028]" />
-                <span>Available with both Mediterranean Sea and Wagyu menus</span>
+              <div className="space-y-3 mb-6">
+                {[
+                  { label: 'Format', value: 'Interactive cooking experience at your table' },
+                  { label: 'Cuisine', value: 'Italian, French, Mediterranean, or Wagyu-themed evening' },
+                  { label: 'Guests', value: 'Exactly 6 seats (no more, no fewer)' },
+                  { label: 'Duration', value: '3–3.5 hours' },
+                  { label: 'Service level', value: 'Always Full-Service (complete table setting, all equipment brought)' },
+                  { label: 'Price', value: 'IDR 3,500,000++ per person' },
+                  { label: 'Includes', value: 'All courses, ingredients, tableware, service, cleanup' },
+                  { label: 'Wine pairing', value: '+IDR 850,000 per guest' },
+                  { label: 'Minimum', value: 'Exactly 6 guests' },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-start gap-3 text-sm">
+                    <span className="text-[#C5A028] text-xs tracking-[0.15em] uppercase w-28 flex-shrink-0" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{item.label}</span>
+                    <span className="text-white/[70%]">{item.value}</span>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">

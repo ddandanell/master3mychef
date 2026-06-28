@@ -804,6 +804,91 @@ export default function LunaPage() {
         </div>
       </section>
 
+      {/* Choose Your Experience — Two-Tier Display */}
+      <section id="choose-experience" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Experience Level</p>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Choose Your Experience</h2>
+            <p className="text-white/[50%]">Same chef. Same ingredients. Two ways to enjoy.</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Card 1 — Full-Service */}
+            <div className="luna-reveal rounded-2xl border border-white/10 p-8 md:p-10" style={{ background: 'rgba(255,255,255,0.03)' }}>
+              <div className="flex items-baseline justify-between gap-4 mb-2">
+                <h3 className="text-2xl md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>We Bring Everything</h3>
+                <span className="text-[#C5A028] text-base md:text-lg whitespace-nowrap" style={{ fontFamily: "'Cormorant Garamond', serif" }}>From IDR 2,200,000++</span>
+              </div>
+              <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The complete luxury experience</p>
+              <p className="text-white/[65%] leading-relaxed mb-8">
+                We arrive with premium plates, crystal glassware, designer cutlery, and fresh linen. Your table is dressed to restaurant standard before the first guest sits down. A dedicated server handles every pour and every course. We bring our own equipment. We pack everything away when the evening ends. You simply arrive and enjoy.
+              </p>
+              <div className="mb-8">
+                <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>What&apos;s included</p>
+                <div className="space-y-3">
+                  {[
+                    'Premium plates, glassware & cutlery',
+                    'Full table setting & decoration',
+                    'Chef + dedicated service staff',
+                    'All cooking equipment',
+                    'Complete setup and cleanup',
+                    'Restaurant-standard presentation',
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                      <span className="text-sm text-white/[80%]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="pt-6 border-t border-white/10">
+                <p className="text-xs text-white/[60%] uppercase tracking-wider mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Best for</p>
+                <p className="text-sm text-white/[70%]">Villas without full kitchen setups, milestone celebrations, maximum impact evenings</p>
+              </div>
+            </div>
+
+            {/* Card 2 — Kitchen-Service */}
+            <div className="luna-reveal rounded-2xl border border-white/10 p-8 md:p-10" style={{ background: 'rgba(255,255,255,0.03)' }}>
+              <div className="flex items-baseline justify-between gap-4 mb-2">
+                <h3 className="text-2xl md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>We Use Your Villa&apos;s Kitchen</h3>
+                <span className="text-[#C5A028] text-base md:text-lg whitespace-nowrap" style={{ fontFamily: "'Cormorant Garamond', serif" }}>From IDR 1,750,000++</span>
+              </div>
+              <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Same chef, same food, exceptional value</p>
+              <p className="text-white/[65%] leading-relaxed mb-8">
+                The same Michelin-trained chef. The same ingredients, techniques, and recipes. The difference? We use your villa&apos;s plates, glassware, and kitchen. The evening feels more intimate — like having a world-class chef cook in your own home. Cleanup is included, and your kitchen is left exactly as we found it.
+              </p>
+              <div className="mb-8">
+                <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>What&apos;s included</p>
+                <div className="space-y-3">
+                  {[
+                    'Michelin-trained private chef',
+                    'All ingredients (premium, fresh)',
+                    'Multi-course tasting menu',
+                    'Service using your villa&apos;s tableware',
+                    'Kitchen cleanup',
+                    'Personal, intimate atmosphere',
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                      <span className="text-sm text-white/[80%]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="pt-6 border-t border-white/10">
+                <p className="text-xs text-white/[60%] uppercase tracking-wider mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Best for</p>
+                <p className="text-sm text-white/[70%]">Well-equipped villas, casual elegance, repeat guests, smart pricing</p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-white/[50%] text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Both experiences include the same chef, same ingredients, and same menu quality. The difference is presentation and tableware only.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Menus */}
       <section id="our-menus" className="py-24 md:py-32 px-6 scroll-mt-24">
         <div className="max-w-[1280px] mx-auto">

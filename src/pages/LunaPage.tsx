@@ -15,12 +15,71 @@ import { getPageMeta } from '@/data/page-meta'
 
 const MENUS = [
   {
+    id: 'italian',
+    name: 'Italian Experience',
+    price: 'From IDR 1,750,000++ (Full-Service: IDR 2,200,000++)',
+    duration: 'Two and a half to three hours',
+    teaser: 'Classic Italian fine dining. Handmade pasta, fresh seafood, slow-cooked meats.',
+    desc: 'The flavours of Italy, served in your Bali villa. Our pasta specialist hand-rolls every sheet in your kitchen the afternoon of your dinner.',
+    perfectFor: ['Private villa dinners', 'Celebrations', 'Romantic evenings', 'Milestone gatherings'],
+    courses: {
+      starter: [
+        { name: 'Pecorino crisp', desc: 'Pecorino crisp with truffle honey' },
+        { name: 'Burrata', desc: 'Burrata stuffed with prawn mousse, giardiniera' },
+      ],
+      main: [
+        { name: 'Handmade tagliatelle', desc: 'Handmade tagliatelle, lobster sauce, cherry tomatoes, fresh basil' },
+        { name: 'Osso buco', desc: 'Osso buco alla Milanese, saffron risotto, gremolata' },
+      ],
+      dessert: [
+        { name: 'Tiramisu', desc: 'Tiramisu — house-made lady fingers, mascarpone cream, espresso' },
+      ],
+    },
+    wine: {
+      white: 'Etna Bianco or Vermentino',
+      red: 'Light Pinot Noir or Nero d\'Avola',
+      sparkling: 'Franciacorta for aperitif',
+    },
+    accent: '#2C5F7C',
+  },
+  {
+    id: 'french',
+    name: 'French Experience',
+    price: 'From IDR 1,900,000++ (Full-Service: IDR 2,400,000++)',
+    duration: 'Two and a half to three hours',
+    teaser: 'Refined French technique. Butter, wine, and time.',
+    desc: 'Classic French cooking adapted to Bali\'s finest ingredients. Rich sauces, precise technique, and the patience that defines the French kitchen.',
+    perfectFor: ['Private villa dinners', 'Celebrations', 'Milestone gatherings'],
+    courses: {
+      starter: [
+        { name: 'Gougères', desc: 'Gougères, aged Gruyère' },
+        { name: 'Coquilles Saint-Jacques', desc: 'Coquilles Saint-Jacques, gratinéed herb butter' },
+      ],
+      main: [
+        { name: 'Barramundi en papillote', desc: 'Barramundi en papillote, white wine, shallots, fresh herbs' },
+        { name: 'Duck confit', desc: 'Duck confit, pommes dauphines, cherry sauce' },
+      ],
+      cheese: [
+        { name: 'French cheese selection', desc: 'Selection of French cheeses, honey, walnuts' },
+      ],
+      dessert: [
+        { name: 'Crème brûlée', desc: 'Crème brûlée, vanilla bean, caramelised sugar' },
+      ],
+    },
+    wine: {
+      white: 'Oaked Chardonnay',
+      red: 'Bordeaux or Burgundy',
+      sparkling: 'Champagne or Crémant for aperitif',
+    },
+    accent: '#2C5F7C',
+  },
+  {
     id: 'mediterranean',
     name: 'Mediterranean Sea Experience',
-    price: 'IDR 2,200,000++',
+    price: 'From IDR 1,750,000++ (Full-Service: IDR 2,200,000++)',
     duration: 'Two and a half to three hours',
-    teaser: 'Italian seafood, in five movements. Pasta rolled in your villa.',
-    desc: 'The coast Adriano grew up on, in five movements. The meal opens cold, sharp, and perfumed — the sea waking the palate. It moves through cream and pasta into the centre of the table: the lobster tagliatelle, rolled that afternoon in your kitchen. The main is fish, not meat — the menu\'s promise honoured. It closes on tiramisu, made the way it should be made, because by the time the dessert plate arrives the meal has earned the right to come home.',
+    teaser: 'Coastal Mediterranean flavours. The menu that built our reputation.',
+    desc: 'Italian seafood in five movements. Fresh catches, olive oil, citrus, and herbs. Pasta rolled in your villa. The original myCHEF fine dining experience.',
     perfectFor: ['Private villa dinners', 'Celebrations', 'Romantic evenings', 'Milestone gatherings'],
     courses: {
       starter: [
@@ -45,7 +104,7 @@ const MENUS = [
   {
     id: 'wagyu',
     name: 'Wagyu Experience',
-    price: 'IDR 2,400,000++',
+    price: 'From IDR 1,950,000++ (Full-Service: IDR 2,400,000++)',
     duration: 'Approximately three hours',
     teaser: 'Wagyu Tokusen in three forms. Open-flame ribeye at your table.',
     desc: 'Wagyu Tokusen in three forms — raw, enveloped, and grilled. The opening is controlled: tartare, polenta chips, cured egg, basil oil. The middle slows the meal down: an oxtail ragout sealed inside a hand-rolled ravioli, finished with Grana Padano and a foam of kale — a long-cooked ingredient hidden in a delicate envelope, the kaiseki principle in Italian form. The climax is the ribeye, grilled hard and answered by three counterpoints: topinambur cream, blue cheese, walnuts. The meal closes on dark chocolate and salted caramel — bitter, restrained, deliberately not too sweet, so the room remembers what it just ate.',
@@ -68,6 +127,32 @@ const MENUS = [
       sparkling: 'Franciacorta Rosé for aperitif and starter pairing',
     },
     accent: '#8B4513',
+  },
+  {
+    id: 'custom',
+    name: 'Custom Menu',
+    price: 'From IDR 1,600,000++ (Full-Service: IDR 2,000,000++)',
+    duration: 'Two and a half to three hours',
+    teaser: 'Your vision, our execution.',
+    desc: 'Tell us what you want. A specific cuisine, dietary requirements, a surprise for your guests, a theme that means something. Our chef designs a bespoke menu just for your evening.',
+    perfectFor: ['Special occasions', 'Dietary requirements', 'Surprise menus', 'Themed dinners'],
+    courses: {
+      starter: [
+        { name: 'Consultation', desc: 'Tell us your ideas, dietary needs, and preferences' },
+      ],
+      main: [
+        { name: 'Menu Design', desc: 'Our chef creates a bespoke menu for your approval' },
+      ],
+      dessert: [
+        { name: 'Execution', desc: 'Your private chef delivers the experience in your villa' },
+      ],
+    },
+    wine: {
+      white: 'Custom paired to your menu',
+      red: 'Custom paired to your menu',
+      sparkling: 'Custom paired to your menu',
+    },
+    accent: '#C5A028',
   },
 ]
 
@@ -713,7 +798,7 @@ export default function LunaPage() {
           <div className="text-center mt-12">
             <div className="flex items-center justify-center gap-3 text-white/[50%] text-sm">
               <UtensilsCrossed className="w-4 h-4 text-[#C5A028]" />
-              <span>Two tasting menus available: Mediterranean Sea and Wagyu Experience</span>
+              <span>Five tasting menus available: Italian, French, Mediterranean Sea, Wagyu Experience, and Custom</span>
             </div>
           </div>
         </div>
@@ -724,17 +809,21 @@ export default function LunaPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Our Menus</p>
-            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Two Experiences. One Extraordinary Evening.</h2>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Five Experiences. One Extraordinary Evening.</h2>
             <p className="text-white/[50%]">Every course is prepared in your villa. Every wine is paired by our sommelier.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {MENUS.map((menu) => (
               <div key={menu.id} className="luna-reveal rounded-2xl border border-white/10 overflow-hidden">
-                {/* Menu image — transparent PNG of the dry-aging cabinet, sits cleanly over the dark menu card */}
+                {/* Menu image */}
                 <div className="pt-8 pb-2 text-center">
                   <img
-                    src={menu.id === 'mediterranean' ? '/generated/mychef-experience-bali-luna-gallery-1.webp' : '/generated/mychef-finedining-bali-luna-plating.webp'}
-                    alt={menu.id === 'mediterranean' ? 'Mediterranean SEA Experience — certified tuna dry-aging cabinet' : 'Wagyu Experience — certified wagyu dry-aging cabinet'}
+                    src={
+                      menu.id === 'wagyu'
+                        ? '/generated/mychef-finedining-bali-luna-plating.webp'
+                        : '/generated/mychef-experience-bali-luna-gallery-1.webp'
+                    }
+                    alt={`${menu.name} — private villa fine dining`}
                     width={520}
                     height={260}
                     className="object-contain drop-shadow-2xl"
@@ -769,6 +858,17 @@ export default function LunaPage() {
                       </div>
                     ))}
                   </div>
+                  {menu.courses.cheese && (
+                    <div className="mb-8">
+                      <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Cheese</p>
+                      {menu.courses.cheese.map((c) => (
+                        <div key={c.name} className="mb-4 last:mb-0">
+                          <h4 className="text-white font-medium mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{c.name}</h4>
+                          <p className="text-white/[50%] text-sm">{c.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   <div className="mb-8">
                     <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Dessert</p>
                     {menu.courses.dessert.map((c) => (

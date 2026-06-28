@@ -1110,6 +1110,9 @@ export default function LunaPage() {
             <p className="text-white/[70%] leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
               These are the four.
             </p>
+            <p className="text-white/[50%] leading-relaxed mt-6">
+              Each chef specialises in different cuisines and techniques. I Made leads our Italian and Mediterranean menus. Bayu leads the Wagyu Experience and French grilling. Rizky handles sauces across every menu. Ni Putu creates the desserts that close every evening. One of the four will be in your kitchen — which one depends on your menu, your date, and what arrived on the morning boat.
+            </p>
           </div>
 
           {/*

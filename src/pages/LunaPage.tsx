@@ -1,6 +1,6 @@
 import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Flame, Wine, Clock, Users, Star, Check, ChevronRight, MessageCircle, Phone, Sparkles, Truck, Heart, ChefHat, UtensilsCrossed, ShieldCheck, RefreshCw } from 'lucide-react'
+import { Flame, Wine, Clock, Users, Star, Check, ChevronRight, MessageCircle, Phone, Sparkles, Truck, Heart, UtensilsCrossed, ShieldCheck, RefreshCw } from 'lucide-react'
 import BookingForm from '@/components/BookingForm'
 const OrderPanel = lazy(() => import('@/components/OrderPanel'))
 import BestPartnerBadge from '@/components/BestPartnerBadge'

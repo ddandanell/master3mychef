@@ -90,7 +90,7 @@ const WHATS_INCLUDED = [
 ]
 
 const FAQS = [
-  { question: 'What is the minimum number of guests?', answer: 'Four guests minimum. We can accommodate up to 24 for the full fine dining experience. For intimate two-guest romantic evenings, message Sofia to arrange.' },
+  { question: 'What is the minimum number of guests?', answer: 'Six guests minimum. We can accommodate up to 24 for the full fine dining experience. For intimate two-guest romantic evenings, message Sofia to arrange.' },
   { question: 'Can I mix the two menus for my group?', answer: 'Absolutely. Half your table can have Mediterranean Sea, half can have Wagyu. Just let Sofia know when booking.' },
   { question: 'What does "++" mean in the price?', answer: '"++" means service charge (typically 10%) and government tax (11%) are added to the menu price. The final per-person total is approximately IDR 2.6M (Mediterranean) and IDR 2.85M (Wagyu). Wine pairing is additional at IDR 850K per guest.' },
   { question: 'How far in advance should I book?', answer: '7+ days is ideal. Peak season (July–August, December) books 2+ weeks ahead. We can sometimes accommodate 48-hour requests — message us and we will try.' },
@@ -98,7 +98,7 @@ const FAQS = [
   { question: 'What if someone has allergies or dietary restrictions?', answer: 'We adjust every course. Gluten-free, shellfish allergy, pregnancy-friendly, halal, vegan — just tell us. No extra charge.' },
   { question: 'Where do you cook? Do I need a big kitchen?', answer: 'We cook in your villa kitchen. We bring any specialized equipment. We have worked in everything from pool villas to estates.' },
   { question: 'What time do you arrive?', answer: 'Typically 3 hours before service for setup and prep. The tasting experience itself lasts 2.5–3 hours.' },
-  { question: 'Why villa fine dining instead of a restaurant?', answer: 'Privacy, pacing, and control. No other tables. No noise. No rush. The chef cooks for you alone, and the evening moves at your speed. For groups of 4–12, the per-person cost is often comparable to a high-end restaurant once you factor in transport and wine markup.' },
+  { question: 'Why villa fine dining instead of a restaurant?', answer: 'Privacy, pacing, and control. No other tables. No noise. No rush. The chef cooks for you alone, and the evening moves at your speed. For groups of 6–24, the per-person cost is often comparable to a high-end restaurant once you factor in transport and wine markup.' },
   { question: 'Can I see the menu before booking?', answer: 'Yes. We send full menu details, wine pairings, and pricing before you commit. Sofia will walk you through each course.' },
   { question: 'What happens if I need to cancel?', answer: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date.' },
   { question: 'Is this a real Michelin-trained chef?', answer: 'Yes. Adriano, our executive chef, trained in Modena and Tokyo. He personally trains every chef on our team for 6+ months before they lead an evening.' },
@@ -410,10 +410,13 @@ export default function LunaPage() {
             className="luna-hero-title mb-8 max-w-[920px] text-[2.55rem] leading-[1.04] text-white sm:text-[3.25rem] md:text-7xl lg:text-8xl"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            A Michelin-Trained Chef, in Your Bali Villa.
+            Private Fine Dining in Your Bali Villa
           </h1>
-          <p className="luna-hero-sub mb-12 max-w-[640px] text-base leading-relaxed text-white/[85%] md:text-xl font-medium">
-            Mediterranean and Wagyu tasting menus served privately in your villa. We handle groceries, table setting, service, and cleanup. From IDR 2,200,000++ per guest.
+          <p className="luna-hero-sub mb-4 max-w-[640px] text-base leading-relaxed text-white/[85%] md:text-xl font-medium">
+            Italian, French, Mediterranean & Wagyu tasting menus prepared by a Michelin-trained team. Served privately in your villa. Minimum 6 guests.
+          </p>
+          <p className="mb-12 max-w-[640px] text-base leading-relaxed text-[#C5A028] md:text-xl font-medium">
+            From IDR 1,750,000++ per guest
           </p>
           <div className="luna-hero-cta mb-4 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button
@@ -421,12 +424,12 @@ export default function LunaPage() {
               variant="primary"
               size="brand"
               className="w-full text-xs tracking-[0.25em] sm:w-auto md:text-sm"
-              onClick={() => openOrder('Mediterranean Sea Experience')}
+              onClick={() => openOrder('Private Fine Dining')}
             >
               Reserve My Private Dinner
             </Button>
             <Button asChild variant="secondary" size="brand" className="w-full text-xs tracking-[0.25em] sm:w-auto md:text-sm">
-              <a href="#our-menus">Explore Menu</a>
+              <a href="#our-menus">Explore Menus</a>
             </Button>
           </div>
           <p className="mb-10 text-xs uppercase tracking-[0.18em] text-white/[55%]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -435,7 +438,8 @@ export default function LunaPage() {
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             {[
               { icon: Star, label: '500+ villa dinners served' },
-              { icon: Users, label: '4–24 guests' },
+              { icon: Users, label: '6–24 guests' },
+              { icon: UtensilsCrossed, label: 'Italian · French · Mediterranean · Wagyu' },
               { icon: Wine, label: 'Wine pairing +IDR 850K' },
               { icon: Clock, label: '2.5–3 hour journey' },
             ].map((badge) => (
@@ -612,7 +616,7 @@ export default function LunaPage() {
                   { icon: Flame, label: 'Open-Flame Cooking' },
                   { icon: Wine, label: 'Sommelier Pairing' },
                   { icon: Clock, label: '2.5–3 Hour Journey' },
-                  { icon: Users, label: '4–24 Guests' },
+                  { icon: Users, label: '6–24 Guests' },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-3">
                     <item.icon className="w-5 h-5 text-[#C5A028]" />
@@ -1183,7 +1187,7 @@ export default function LunaPage() {
               </div>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">Wine pairing available — IDR 850K per guest</span></div>
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">Minimum 4 guests</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">Minimum 6 guests</span></div>
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">++ adds service charge + government tax (see FAQ)</span></div>
               </div>
               <Button asChild variant="whatsapp" size="brand">

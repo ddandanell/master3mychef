@@ -514,6 +514,48 @@ export default function CateringMainPage() {
         </div>
       </section>
 
+      {/* ═══════ CROSS-PROMOTION: FINE DINING ═══════ */}
+      <section className="py-12 md:py-16 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="bg-[#FAFAF8] rounded-3xl border border-[#E8E6E3] overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="p-8 md:p-12 flex flex-col justify-center">
+                <p
+                  className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3"
+                  style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+                >
+                  Elevated Experience
+                </p>
+                <h2
+                  className="text-2xl md:text-3xl mb-4"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  Looking for a Multi-Course Tasting Menu?
+                </h2>
+                <p className="text-[#4A4745] text-sm md:text-base leading-relaxed mb-6">
+                  For groups of 6 or more, our Private Fine Dining experience offers Italian, French, Mediterranean, and Wagyu tasting menus prepared by a Michelin-trained chef in your villa.
+                </p>
+                <Link
+                  to="/fine-dining"
+                  data-source="catering-cross-promotion"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#C5A028] uppercase tracking-wider hover:text-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                >
+                  Explore Fine Dining <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <div className="relative min-h-[240px] md:min-h-full">
+                <OptimizedImage
+                  src="/generated/mychef-misc-bali-hub-fine-dining.webp"
+                  alt="Elegant fine dining plated dish at a Bali villa"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ TRUST STRIP ═══════ */}
       <TrustStrip />
 

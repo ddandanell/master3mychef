@@ -804,6 +804,38 @@ export default function LunaPage() {
         </div>
       </section>
 
+      {/* Fine Dining Overview */}
+      <section id="fine-dining-overview" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div>
+              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Fine Dining Overview</p>
+              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>A Private Restaurant, Built Inside Your Villa for One Night</h2>
+              <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
+              <p className="text-white/[70%] mb-6 leading-relaxed">
+                This is not a catering service. This is not a restaurant reservation. This is a private restaurant built inside your villa for one evening only — and every detail is designed around your group.
+              </p>
+              <p className="text-white/[70%] mb-6 leading-relaxed">
+                Your chef arrives with fresh ingredients, prepares a multi-course tasting menu in your kitchen, serves each course at your table, and leaves your kitchen spotless. The only people in the room are your guests. The only schedule is your own.
+              </p>
+              <p className="text-white/[50%] text-sm leading-relaxed">
+                Available across Bali: Seminyak, Canggu, Uluwatu, Ubud, Sanur, Nusa Dua, and beyond. Minimum 6 guests. Romantic dinner for 2 available by special arrangement.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/generated/mychef-experience-bali-luna-gallery-3.webp"
+                alt="Private chef preparing a fine dining course in a Bali villa kitchen"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Choose Your Experience — Two-Tier Display */}
       <section id="choose-experience" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
         <div className="max-w-[1280px] mx-auto">

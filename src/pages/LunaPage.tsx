@@ -752,54 +752,39 @@ export default function LunaPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Tasting Menu</p>
-            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Multi-Course Dining, Built for Your Villa</h2>
-            <p className="text-white/[50%] max-w-2xl mx-auto">A tasting menu is not a long meal. It is a structured journey — each course designed to follow the last, each flavour building toward a climax. We bring that architecture to your villa.</p>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>The Tasting Menu Journey</h2>
+            <p className="text-white/[50%] max-w-2xl mx-auto">5 or 7 courses. Your choice of Italian, French, Mediterranean, or Wagyu inspiration.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto">
-            {[
-              {
-                step: '01',
-                title: 'The Opening',
-                desc: 'Cold, sharp, and deliberate. Raw fish or tartare wakes the palate without overwhelming it. The first wine is poured — light, precise, setting the tone.',
-              },
-              {
-                step: '02',
-                title: 'The Centre',
-                desc: 'Pasta or ravioli, handmade that afternoon. This is the heart of the meal — the dish your guests will talk about tomorrow. The wine shifts to match the weight.',
-              },
-              {
-                step: '03',
-                title: 'The Climax',
-                desc: 'The main course: flame-grilled fish or Wagyu ribeye, sauced at the pass, served at temperature. The wine is bold now — Barolo, Brunello, or the best red in the room.',
-              },
-              {
-                step: '04',
-                title: 'The Close',
-                desc: 'Dessert is never an afterthought. Tiramisu with house-made lady fingers, or dark chocolate cake with salted caramel gelato — bitter, restrained, memorable.',
-              },
-              {
-                step: '05',
-                title: 'The Pace',
-                desc: 'Each course is spaced 20–30 minutes apart. The evening lasts 2.5 to 3 hours. No rush. No gaps. Just a rhythm that lets conversation breathe between bites.',
-              },
-              {
-                step: '06',
-                title: 'The Pairing',
-                desc: 'Four to five wines, selected by our sommelier to match each course. Optional at IDR 850K per guest. Non-alcoholic pairings available on request.',
-              },
-            ].map((item) => (
-              <div key={item.step} className="p-6 md:p-8 rounded-2xl border border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
-                <span className="text-[#C5A028]/60 text-sm tracking-[0.2em] uppercase mb-4 block" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{item.step}</span>
-                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-                <p className="text-white/[50%] text-sm leading-relaxed">{item.desc}</p>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <p className="text-white/[60%] leading-relaxed">
+              A tasting menu is not just dinner — it is a journey. Each course is designed to build on the last, with wine pairings that elevate every bite. Your chef explains each dish as it arrives, transforming your villa into a private chef&apos;s table.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1000px] mx-auto mb-12">
+            {/* 5-Course Journey */}
+            <div className="p-6 md:p-8 rounded-2xl border border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
+              <span className="text-[#C5A028]/60 text-sm tracking-[0.2em] uppercase mb-4 block" style={{ fontFamily: "'Cormorant Garamond', serif" }}>5-Course Journey</span>
+              <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>The Essential Experience</h3>
+              <p className="text-white/[50%] text-sm leading-relaxed mb-6">Amuse-bouche, starter, fish, main, dessert</p>
+              <div className="space-y-2 text-sm text-white/[70%]">
+                <p><span className="text-white/[50%]">Kitchen-Service:</span> <span className="text-[#C5A028]">IDR 1,750,000++</span></p>
+                <p><span className="text-white/[50%]">Full-Service:</span> <span className="text-[#C5A028]">IDR 2,200,000++</span></p>
               </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <div className="flex items-center justify-center gap-3 text-white/[50%] text-sm">
-              <UtensilsCrossed className="w-4 h-4 text-[#C5A028]" />
-              <span>Five tasting menus available: Italian, French, Mediterranean Sea, Wagyu Experience, and Custom</span>
             </div>
+            {/* 7-Course Journey */}
+            <div className="p-6 md:p-8 rounded-2xl border border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
+              <span className="text-[#C5A028]/60 text-sm tracking-[0.2em] uppercase mb-4 block" style={{ fontFamily: "'Cormorant Garamond', serif" }}>7-Course Journey</span>
+              <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>The Complete Journey</h3>
+              <p className="text-white/[50%] text-sm leading-relaxed mb-6">Amuse-bouche, starter, two intermediate courses, fish, main, cheese, dessert</p>
+              <div className="space-y-2 text-sm text-white/[70%]">
+                <p><span className="text-white/[50%]">Kitchen-Service:</span> <span className="text-[#C5A028]">IDR 2,200,000++</span></p>
+                <p><span className="text-white/[50%]">Full-Service:</span> <span className="text-[#C5A028]">IDR 2,600,000++</span></p>
+              </div>
+            </div>
+          </div>
+          <div className="text-center space-y-2">
+            <p className="text-white/[50%] text-sm">Wine pairing: <span className="text-[#C5A028]">+IDR 850,000 per guest</span></p>
+            <p className="text-white/[50%] text-sm">Minimum: <span className="text-white/[70%]">6 guests</span></p>
           </div>
         </div>
       </section>

@@ -15,12 +15,71 @@ import { getPageMeta } from '@/data/page-meta'
 
 const MENUS = [
   {
+    id: 'italian',
+    name: 'Italian Experience',
+    price: 'From IDR 1,750,000++ (Full-Service: IDR 2,200,000++)',
+    duration: 'Two and a half to three hours',
+    teaser: 'Classic Italian fine dining. Handmade pasta, fresh seafood, slow-cooked meats.',
+    desc: 'The flavours of Italy, served in your Bali villa. Our pasta specialist hand-rolls every sheet in your kitchen the afternoon of your dinner.',
+    perfectFor: ['Private villa dinners', 'Celebrations', 'Romantic evenings', 'Milestone gatherings'],
+    courses: {
+      starter: [
+        { name: 'Pecorino crisp', desc: 'Pecorino crisp with truffle honey' },
+        { name: 'Burrata', desc: 'Burrata stuffed with prawn mousse, giardiniera' },
+      ],
+      main: [
+        { name: 'Handmade tagliatelle', desc: 'Handmade tagliatelle, lobster sauce, cherry tomatoes, fresh basil' },
+        { name: 'Osso buco', desc: 'Osso buco alla Milanese, saffron risotto, gremolata' },
+      ],
+      dessert: [
+        { name: 'Tiramisu', desc: 'Tiramisu — house-made lady fingers, mascarpone cream, espresso' },
+      ],
+    },
+    wine: {
+      white: 'Etna Bianco or Vermentino',
+      red: 'Light Pinot Noir or Nero d\'Avola',
+      sparkling: 'Franciacorta for aperitif',
+    },
+    accent: '#2C5F7C',
+  },
+  {
+    id: 'french',
+    name: 'French Experience',
+    price: 'From IDR 1,900,000++ (Full-Service: IDR 2,400,000++)',
+    duration: 'Two and a half to three hours',
+    teaser: 'Refined French technique. Butter, wine, and time.',
+    desc: 'Classic French cooking adapted to Bali\'s finest ingredients. Rich sauces, precise technique, and the patience that defines the French kitchen.',
+    perfectFor: ['Private villa dinners', 'Celebrations', 'Milestone gatherings'],
+    courses: {
+      starter: [
+        { name: 'Gougères', desc: 'Gougères, aged Gruyère' },
+        { name: 'Coquilles Saint-Jacques', desc: 'Coquilles Saint-Jacques, gratinéed herb butter' },
+      ],
+      main: [
+        { name: 'Barramundi en papillote', desc: 'Barramundi en papillote, white wine, shallots, fresh herbs' },
+        { name: 'Duck confit', desc: 'Duck confit, pommes dauphines, cherry sauce' },
+      ],
+      cheese: [
+        { name: 'French cheese selection', desc: 'Selection of French cheeses, honey, walnuts' },
+      ],
+      dessert: [
+        { name: 'Crème brûlée', desc: 'Crème brûlée, vanilla bean, caramelised sugar' },
+      ],
+    },
+    wine: {
+      white: 'Oaked Chardonnay',
+      red: 'Bordeaux or Burgundy',
+      sparkling: 'Champagne or Crémant for aperitif',
+    },
+    accent: '#2C5F7C',
+  },
+  {
     id: 'mediterranean',
     name: 'Mediterranean Sea Experience',
-    price: 'IDR 2,200,000++',
+    price: 'From IDR 1,750,000++ (Full-Service: IDR 2,200,000++)',
     duration: 'Two and a half to three hours',
-    teaser: 'Italian seafood, in five movements. Pasta rolled in your villa.',
-    desc: 'The coast Adriano grew up on, in five movements. The meal opens cold, sharp, and perfumed — the sea waking the palate. It moves through cream and pasta into the centre of the table: the lobster tagliatelle, rolled that afternoon in your kitchen. The main is fish, not meat — the menu\'s promise honoured. It closes on tiramisu, made the way it should be made, because by the time the dessert plate arrives the meal has earned the right to come home.',
+    teaser: 'Coastal Mediterranean flavours. The menu that built our reputation.',
+    desc: 'Italian seafood in five movements. Fresh catches, olive oil, citrus, and herbs. Pasta rolled in your villa. The original myCHEF fine dining experience.',
     perfectFor: ['Private villa dinners', 'Celebrations', 'Romantic evenings', 'Milestone gatherings'],
     courses: {
       starter: [
@@ -45,7 +104,7 @@ const MENUS = [
   {
     id: 'wagyu',
     name: 'Wagyu Experience',
-    price: 'IDR 2,400,000++',
+    price: 'From IDR 1,950,000++ (Full-Service: IDR 2,400,000++)',
     duration: 'Approximately three hours',
     teaser: 'Wagyu Tokusen in three forms. Open-flame ribeye at your table.',
     desc: 'Wagyu Tokusen in three forms — raw, enveloped, and grilled. The opening is controlled: tartare, polenta chips, cured egg, basil oil. The middle slows the meal down: an oxtail ragout sealed inside a hand-rolled ravioli, finished with Grana Padano and a foam of kale — a long-cooked ingredient hidden in a delicate envelope, the kaiseki principle in Italian form. The climax is the ribeye, grilled hard and answered by three counterpoints: topinambur cream, blue cheese, walnuts. The meal closes on dark chocolate and salted caramel — bitter, restrained, deliberately not too sweet, so the room remembers what it just ate.',
@@ -69,6 +128,32 @@ const MENUS = [
     },
     accent: '#8B4513',
   },
+  {
+    id: 'custom',
+    name: 'Custom Menu',
+    price: 'From IDR 1,600,000++ (Full-Service: IDR 2,000,000++)',
+    duration: 'Two and a half to three hours',
+    teaser: 'Your vision, our execution.',
+    desc: 'Tell us what you want. A specific cuisine, dietary requirements, a surprise for your guests, a theme that means something. Our chef designs a bespoke menu just for your evening.',
+    perfectFor: ['Special occasions', 'Dietary requirements', 'Surprise menus', 'Themed dinners'],
+    courses: {
+      starter: [
+        { name: 'Consultation', desc: 'Tell us your ideas, dietary needs, and preferences' },
+      ],
+      main: [
+        { name: 'Menu Design', desc: 'Our chef creates a bespoke menu for your approval' },
+      ],
+      dessert: [
+        { name: 'Execution', desc: 'Your private chef delivers the experience in your villa' },
+      ],
+    },
+    wine: {
+      white: 'Custom paired to your menu',
+      red: 'Custom paired to your menu',
+      sparkling: 'Custom paired to your menu',
+    },
+    accent: '#C5A028',
+  },
 ]
 
 const HOW_IT_WORKS = [
@@ -90,7 +175,7 @@ const WHATS_INCLUDED = [
 ]
 
 const FAQS = [
-  { question: 'What is the minimum number of guests?', answer: 'Four guests minimum. We can accommodate up to 24 for the full fine dining experience. For intimate two-guest romantic evenings, message Sofia to arrange.' },
+  { question: 'What is the minimum number of guests?', answer: 'Six guests minimum. We can accommodate up to 24 for the full fine dining experience. For intimate two-guest romantic evenings, message Sofia to arrange.' },
   { question: 'Can I mix the two menus for my group?', answer: 'Absolutely. Half your table can have Mediterranean Sea, half can have Wagyu. Just let Sofia know when booking.' },
   { question: 'What does "++" mean in the price?', answer: '"++" means service charge (typically 10%) and government tax (11%) are added to the menu price. The final per-person total is approximately IDR 2.6M (Mediterranean) and IDR 2.85M (Wagyu). Wine pairing is additional at IDR 850K per guest.' },
   { question: 'How far in advance should I book?', answer: '7+ days is ideal. Peak season (July–August, December) books 2+ weeks ahead. We can sometimes accommodate 48-hour requests — message us and we will try.' },
@@ -98,7 +183,7 @@ const FAQS = [
   { question: 'What if someone has allergies or dietary restrictions?', answer: 'We adjust every course. Gluten-free, shellfish allergy, pregnancy-friendly, halal, vegan — just tell us. No extra charge.' },
   { question: 'Where do you cook? Do I need a big kitchen?', answer: 'We cook in your villa kitchen. We bring any specialized equipment. We have worked in everything from pool villas to estates.' },
   { question: 'What time do you arrive?', answer: 'Typically 3 hours before service for setup and prep. The tasting experience itself lasts 2.5–3 hours.' },
-  { question: 'Why villa fine dining instead of a restaurant?', answer: 'Privacy, pacing, and control. No other tables. No noise. No rush. The chef cooks for you alone, and the evening moves at your speed. For groups of 4–12, the per-person cost is often comparable to a high-end restaurant once you factor in transport and wine markup.' },
+  { question: 'Why villa fine dining instead of a restaurant?', answer: 'Privacy, pacing, and control. No other tables. No noise. No rush. The chef cooks for you alone, and the evening moves at your speed. For groups of 6–24, the per-person cost is often comparable to a high-end restaurant once you factor in transport and wine markup.' },
   { question: 'Can I see the menu before booking?', answer: 'Yes. We send full menu details, wine pairings, and pricing before you commit. Sofia will walk you through each course.' },
   { question: 'What happens if I need to cancel?', answer: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date.' },
   { question: 'Is this a real Michelin-trained chef?', answer: 'Yes. Adriano, our executive chef, trained in Modena and Tokyo. He personally trains every chef on our team for 6+ months before they lead an evening.' },
@@ -410,10 +495,13 @@ export default function LunaPage() {
             className="luna-hero-title mb-8 max-w-[920px] text-[2.55rem] leading-[1.04] text-white sm:text-[3.25rem] md:text-7xl lg:text-8xl"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            A Michelin-Trained Chef, in Your Bali Villa.
+            Private Fine Dining in Your Bali Villa
           </h1>
-          <p className="luna-hero-sub mb-12 max-w-[640px] text-base leading-relaxed text-white/[85%] md:text-xl font-medium">
-            Mediterranean and Wagyu tasting menus served privately in your villa. We handle groceries, table setting, service, and cleanup. From IDR 2,200,000++ per guest.
+          <p className="luna-hero-sub mb-4 max-w-[640px] text-base leading-relaxed text-white/[85%] md:text-xl font-medium">
+            Italian, French, Mediterranean & Wagyu tasting menus prepared by a Michelin-trained team. Served privately in your villa. Minimum 6 guests.
+          </p>
+          <p className="mb-12 max-w-[640px] text-base leading-relaxed text-[#C5A028] md:text-xl font-medium">
+            From IDR 1,750,000++ per guest
           </p>
           <div className="luna-hero-cta mb-4 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button
@@ -421,12 +509,12 @@ export default function LunaPage() {
               variant="primary"
               size="brand"
               className="w-full text-xs tracking-[0.25em] sm:w-auto md:text-sm"
-              onClick={() => openOrder('Mediterranean Sea Experience')}
+              onClick={() => openOrder('Private Fine Dining')}
             >
               Reserve My Private Dinner
             </Button>
             <Button asChild variant="secondary" size="brand" className="w-full text-xs tracking-[0.25em] sm:w-auto md:text-sm">
-              <a href="#our-menus">Explore Menu</a>
+              <a href="#our-menus">Explore Menus</a>
             </Button>
           </div>
           <p className="mb-10 text-xs uppercase tracking-[0.18em] text-white/[55%]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -435,7 +523,8 @@ export default function LunaPage() {
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             {[
               { icon: Star, label: '500+ villa dinners served' },
-              { icon: Users, label: '4–24 guests' },
+              { icon: Users, label: '6–24 guests' },
+              { icon: UtensilsCrossed, label: 'Italian · French · Mediterranean · Wagyu' },
               { icon: Wine, label: 'Wine pairing +IDR 850K' },
               { icon: Clock, label: '2.5–3 hour journey' },
             ].map((badge) => (
@@ -547,39 +636,6 @@ export default function LunaPage() {
         </div>
       </section>
 
-      {/* Romantic Dinner — SEO Section */}
-      <section id="romantic-dinner" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#F5F3EF' }}>
-        <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-            <div className="order-2 md:order-1 rounded-2xl overflow-hidden aspect-[4/3]">
-              <img
-                src="/generated/mychef-experience-bali-luna-gallery-4.webp"
-                alt="Romantic candlelit dinner for two at a private Bali villa"
-                width={800}
-                height={600}
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async" />
-            </div>
-            <div className="order-1 md:order-2">
-              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Romantic Dinner</p>
-              <h2 className="text-4xl md:text-5xl mb-6 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>An Evening for Two</h2>
-              <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
-              <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
-                A romantic dinner in Bali should not mean fighting for a table at a crowded restaurant. It should mean your own villa, your own chef, and an evening that moves at your pace. We design intimate dinners for couples who want privacy without compromise — the same Michelin-trained team, the same ingredients, the same attention to detail, scaled to an evening for two.
-              </p>
-              <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
-                The table is set with candles and crystal. The courses arrive unhurried. The wine is paired to your preference. And the only other voices in the room are the ones you choose to hear. Whether it is a proposal, an anniversary, or simply a night that deserves to be remembered, we build the evening around you.
-              </p>
-              <div className="flex items-center gap-3 text-[#1A1A1A]/60 text-sm">
-                <Heart className="w-4 h-4 text-[#C5A028]" />
-                <span>Minimum four guests, or arrange a two-guest romantic evening on request</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Risk Reversal — Fine Dining guarantees */}
       <FineDiningRiskReversal dark className="border-y border-white/10" />
 
@@ -612,7 +668,7 @@ export default function LunaPage() {
                   { icon: Flame, label: 'Open-Flame Cooking' },
                   { icon: Wine, label: 'Sommelier Pairing' },
                   { icon: Clock, label: '2.5–3 Hour Journey' },
-                  { icon: Users, label: '4–24 Guests' },
+                  { icon: Users, label: '6–24 Guests' },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-3">
                     <item.icon className="w-5 h-5 text-[#C5A028]" />
@@ -631,17 +687,28 @@ export default function LunaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div>
               <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Chef's Table</p>
-              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Watch the Kitchen Work</h2>
+              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>The Chef's Table</h2>
               <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
               <p className="text-white/[70%] mb-6 leading-relaxed">
-                Our Chef's Table experience brings the kitchen to the centre of the room. The chef cooks within metres of your guests — plating, saucing, and finishing each course while you watch. It is theatre without pretension: the open flame, the hand-rolled pasta, the precise pour of a reduction. Your guests see the discipline behind the dish.
+                The Chef's Table is our most intimate fine dining experience. Limited to exactly 6 guests, your chef prepares each course at your table — explaining techniques, sharing stories, and answering questions. This is not just dinner; it is a masterclass in flavour.
               </p>
-              <p className="text-white/[70%] mb-6 leading-relaxed">
-                This is not a demonstration. It is a working kitchen placed at the heart of your evening. The chef explains nothing unless asked. The food speaks. The fire speaks. And your guests leave with an understanding of what fine dining actually takes — skill, timing, and the quiet confidence of a team that has done this five hundred times.
-              </p>
-              <div className="flex items-center gap-3 text-white/[50%] text-sm">
-                <ChefHat className="w-4 h-4 text-[#C5A028]" />
-                <span>Available with both Mediterranean Sea and Wagyu menus</span>
+              <div className="space-y-3 mb-6">
+                {[
+                  { label: 'Format', value: 'Interactive cooking experience at your table' },
+                  { label: 'Cuisine', value: 'Italian, French, Mediterranean, or Wagyu-themed evening' },
+                  { label: 'Guests', value: 'Exactly 6 seats (no more, no fewer)' },
+                  { label: 'Duration', value: '3–3.5 hours' },
+                  { label: 'Service level', value: 'Always Full-Service (complete table setting, all equipment brought)' },
+                  { label: 'Price', value: 'IDR 3,500,000++ per person' },
+                  { label: 'Includes', value: 'All courses, ingredients, tableware, service, cleanup' },
+                  { label: 'Wine pairing', value: '+IDR 850,000 per guest' },
+                  { label: 'Minimum', value: 'Exactly 6 guests' },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-start gap-3 text-sm">
+                    <span className="text-[#C5A028] text-xs tracking-[0.15em] uppercase w-28 flex-shrink-0" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{item.label}</span>
+                    <span className="text-white/[70%]">{item.value}</span>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -663,54 +730,156 @@ export default function LunaPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Tasting Menu</p>
-            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Multi-Course Dining, Built for Your Villa</h2>
-            <p className="text-white/[50%] max-w-2xl mx-auto">A tasting menu is not a long meal. It is a structured journey — each course designed to follow the last, each flavour building toward a climax. We bring that architecture to your villa.</p>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>The Tasting Menu Journey</h2>
+            <p className="text-white/[50%] max-w-2xl mx-auto">5 or 7 courses. Your choice of Italian, French, Mediterranean, or Wagyu inspiration.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto">
-            {[
-              {
-                step: '01',
-                title: 'The Opening',
-                desc: 'Cold, sharp, and deliberate. Raw fish or tartare wakes the palate without overwhelming it. The first wine is poured — light, precise, setting the tone.',
-              },
-              {
-                step: '02',
-                title: 'The Centre',
-                desc: 'Pasta or ravioli, handmade that afternoon. This is the heart of the meal — the dish your guests will talk about tomorrow. The wine shifts to match the weight.',
-              },
-              {
-                step: '03',
-                title: 'The Climax',
-                desc: 'The main course: flame-grilled fish or Wagyu ribeye, sauced at the pass, served at temperature. The wine is bold now — Barolo, Brunello, or the best red in the room.',
-              },
-              {
-                step: '04',
-                title: 'The Close',
-                desc: 'Dessert is never an afterthought. Tiramisu with house-made lady fingers, or dark chocolate cake with salted caramel gelato — bitter, restrained, memorable.',
-              },
-              {
-                step: '05',
-                title: 'The Pace',
-                desc: 'Each course is spaced 20–30 minutes apart. The evening lasts 2.5 to 3 hours. No rush. No gaps. Just a rhythm that lets conversation breathe between bites.',
-              },
-              {
-                step: '06',
-                title: 'The Pairing',
-                desc: 'Four to five wines, selected by our sommelier to match each course. Optional at IDR 850K per guest. Non-alcoholic pairings available on request.',
-              },
-            ].map((item) => (
-              <div key={item.step} className="p-6 md:p-8 rounded-2xl border border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
-                <span className="text-[#C5A028]/60 text-sm tracking-[0.2em] uppercase mb-4 block" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{item.step}</span>
-                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-                <p className="text-white/[50%] text-sm leading-relaxed">{item.desc}</p>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <p className="text-white/[60%] leading-relaxed">
+              A tasting menu is not just dinner — it is a journey. Each course is designed to build on the last, with wine pairings that elevate every bite. Your chef explains each dish as it arrives, transforming your villa into a private chef&apos;s table.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1000px] mx-auto mb-12">
+            {/* 5-Course Journey */}
+            <div className="p-6 md:p-8 rounded-2xl border border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
+              <span className="text-[#C5A028]/60 text-sm tracking-[0.2em] uppercase mb-4 block" style={{ fontFamily: "'Cormorant Garamond', serif" }}>5-Course Journey</span>
+              <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>The Essential Experience</h3>
+              <p className="text-white/[50%] text-sm leading-relaxed mb-6">Amuse-bouche, starter, fish, main, dessert</p>
+              <div className="space-y-2 text-sm text-white/[70%]">
+                <p><span className="text-white/[50%]">Kitchen-Service:</span> <span className="text-[#C5A028]">IDR 1,750,000++</span></p>
+                <p><span className="text-white/[50%]">Full-Service:</span> <span className="text-[#C5A028]">IDR 2,200,000++</span></p>
               </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <div className="flex items-center justify-center gap-3 text-white/[50%] text-sm">
-              <UtensilsCrossed className="w-4 h-4 text-[#C5A028]" />
-              <span>Two tasting menus available: Mediterranean Sea and Wagyu Experience</span>
             </div>
+            {/* 7-Course Journey */}
+            <div className="p-6 md:p-8 rounded-2xl border border-white/[0.08]" style={{ background: 'rgba(255,255,255,0.02)' }}>
+              <span className="text-[#C5A028]/60 text-sm tracking-[0.2em] uppercase mb-4 block" style={{ fontFamily: "'Cormorant Garamond', serif" }}>7-Course Journey</span>
+              <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>The Complete Journey</h3>
+              <p className="text-white/[50%] text-sm leading-relaxed mb-6">Amuse-bouche, starter, two intermediate courses, fish, main, cheese, dessert</p>
+              <div className="space-y-2 text-sm text-white/[70%]">
+                <p><span className="text-white/[50%]">Kitchen-Service:</span> <span className="text-[#C5A028]">IDR 2,200,000++</span></p>
+                <p><span className="text-white/[50%]">Full-Service:</span> <span className="text-[#C5A028]">IDR 2,600,000++</span></p>
+              </div>
+            </div>
+          </div>
+          <div className="text-center space-y-2">
+            <p className="text-white/[50%] text-sm">Wine pairing: <span className="text-[#C5A028]">+IDR 850,000 per guest</span></p>
+            <p className="text-white/[50%] text-sm">Minimum: <span className="text-white/[70%]">6 guests</span></p>
+          </div>
+        </div>
+      </section>
+
+      {/* Fine Dining Overview */}
+      <section id="fine-dining-overview" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div>
+              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Fine Dining Overview</p>
+              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>A Private Restaurant, Built Inside Your Villa for One Night</h2>
+              <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
+              <p className="text-white/[70%] mb-6 leading-relaxed">
+                This is not a catering service. This is not a restaurant reservation. This is a private restaurant built inside your villa for one evening only — and every detail is designed around your group.
+              </p>
+              <p className="text-white/[70%] mb-6 leading-relaxed">
+                Your chef arrives with fresh ingredients, prepares a multi-course tasting menu in your kitchen, serves each course at your table, and leaves your kitchen spotless. The only people in the room are your guests. The only schedule is your own.
+              </p>
+              <p className="text-white/[50%] text-sm leading-relaxed">
+                Available across Bali: Seminyak, Canggu, Uluwatu, Ubud, Sanur, Nusa Dua, and beyond. Minimum 6 guests. Romantic dinner for 2 available by special arrangement.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/generated/mychef-experience-bali-luna-gallery-3.webp"
+                alt="Private chef preparing a fine dining course in a Bali villa kitchen"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Choose Your Experience — Two-Tier Display */}
+      <section id="choose-experience" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Experience Level</p>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Choose Your Experience</h2>
+            <p className="text-white/[50%]">Same chef. Same ingredients. Two ways to enjoy.</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Card 1 — Full-Service */}
+            <div className="luna-reveal rounded-2xl border border-white/10 p-8 md:p-10" style={{ background: 'rgba(255,255,255,0.03)' }}>
+              <div className="flex items-baseline justify-between gap-4 mb-2">
+                <h3 className="text-2xl md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>We Bring Everything</h3>
+                <span className="text-[#C5A028] text-base md:text-lg whitespace-nowrap" style={{ fontFamily: "'Cormorant Garamond', serif" }}>From IDR 2,200,000++</span>
+              </div>
+              <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The complete luxury experience</p>
+              <p className="text-white/[65%] leading-relaxed mb-8">
+                We arrive with premium plates, crystal glassware, designer cutlery, and fresh linen. Your table is dressed to restaurant standard before the first guest sits down. A dedicated server handles every pour and every course. We bring our own equipment. We pack everything away when the evening ends. You simply arrive and enjoy.
+              </p>
+              <div className="mb-8">
+                <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>What&apos;s included</p>
+                <div className="space-y-3">
+                  {[
+                    'Premium plates, glassware & cutlery',
+                    'Full table setting & decoration',
+                    'Chef + dedicated service staff',
+                    'All cooking equipment',
+                    'Complete setup and cleanup',
+                    'Restaurant-standard presentation',
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                      <span className="text-sm text-white/[80%]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="pt-6 border-t border-white/10">
+                <p className="text-xs text-white/[60%] uppercase tracking-wider mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Best for</p>
+                <p className="text-sm text-white/[70%]">Villas without full kitchen setups, milestone celebrations, maximum impact evenings</p>
+              </div>
+            </div>
+
+            {/* Card 2 — Kitchen-Service */}
+            <div className="luna-reveal rounded-2xl border border-white/10 p-8 md:p-10" style={{ background: 'rgba(255,255,255,0.03)' }}>
+              <div className="flex items-baseline justify-between gap-4 mb-2">
+                <h3 className="text-2xl md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>We Use Your Villa&apos;s Kitchen</h3>
+                <span className="text-[#C5A028] text-base md:text-lg whitespace-nowrap" style={{ fontFamily: "'Cormorant Garamond', serif" }}>From IDR 1,750,000++</span>
+              </div>
+              <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Same chef, same food, exceptional value</p>
+              <p className="text-white/[65%] leading-relaxed mb-8">
+                The same Michelin-trained chef. The same ingredients, techniques, and recipes. The difference? We use your villa&apos;s plates, glassware, and kitchen. The evening feels more intimate — like having a world-class chef cook in your own home. Cleanup is included, and your kitchen is left exactly as we found it.
+              </p>
+              <div className="mb-8">
+                <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>What&apos;s included</p>
+                <div className="space-y-3">
+                  {[
+                    'Michelin-trained private chef',
+                    'All ingredients (premium, fresh)',
+                    'Multi-course tasting menu',
+                    'Service using your villa&apos;s tableware',
+                    'Kitchen cleanup',
+                    'Personal, intimate atmosphere',
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                      <span className="text-sm text-white/[80%]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="pt-6 border-t border-white/10">
+                <p className="text-xs text-white/[60%] uppercase tracking-wider mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Best for</p>
+                <p className="text-sm text-white/[70%]">Well-equipped villas, casual elegance, repeat guests, smart pricing</p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-white/[50%] text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Both experiences include the same chef, same ingredients, and same menu quality. The difference is presentation and tableware only.
+            </p>
           </div>
         </div>
       </section>
@@ -720,17 +889,21 @@ export default function LunaPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Our Menus</p>
-            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Two Experiences. One Extraordinary Evening.</h2>
+            <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Five Experiences. One Extraordinary Evening.</h2>
             <p className="text-white/[50%]">Every course is prepared in your villa. Every wine is paired by our sommelier.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {MENUS.map((menu) => (
               <div key={menu.id} className="luna-reveal rounded-2xl border border-white/10 overflow-hidden">
-                {/* Menu image — transparent PNG of the dry-aging cabinet, sits cleanly over the dark menu card */}
+                {/* Menu image */}
                 <div className="pt-8 pb-2 text-center">
                   <img
-                    src={menu.id === 'mediterranean' ? '/generated/mychef-experience-bali-luna-gallery-1.webp' : '/generated/mychef-finedining-bali-luna-plating.webp'}
-                    alt={menu.id === 'mediterranean' ? 'Mediterranean SEA Experience — certified tuna dry-aging cabinet' : 'Wagyu Experience — certified wagyu dry-aging cabinet'}
+                    src={
+                      menu.id === 'wagyu'
+                        ? '/generated/mychef-finedining-bali-luna-plating.webp'
+                        : '/generated/mychef-experience-bali-luna-gallery-1.webp'
+                    }
+                    alt={`${menu.name} — private villa fine dining`}
                     width={520}
                     height={260}
                     className="object-contain drop-shadow-2xl"
@@ -765,6 +938,17 @@ export default function LunaPage() {
                       </div>
                     ))}
                   </div>
+                  {menu.courses.cheese && (
+                    <div className="mb-8">
+                      <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Cheese</p>
+                      {menu.courses.cheese.map((c) => (
+                        <div key={c.name} className="mb-4 last:mb-0">
+                          <h4 className="text-white font-medium mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{c.name}</h4>
+                          <p className="text-white/[50%] text-sm">{c.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   <div className="mb-8">
                     <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Dessert</p>
                     {menu.courses.dessert.map((c) => (
@@ -926,6 +1110,9 @@ export default function LunaPage() {
             <p className="text-white/[70%] leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
               These are the four.
             </p>
+            <p className="text-white/[50%] leading-relaxed mt-6">
+              Each chef specialises in different cuisines and techniques. I Made leads our Italian and Mediterranean menus. Bayu leads the Wagyu Experience and French grilling. Rizky handles sauces across every menu. Ni Putu creates the desserts that close every evening. One of the four will be in your kitchen — which one depends on your menu, your date, and what arrived on the morning boat.
+            </p>
           </div>
 
           {/*
@@ -983,6 +1170,77 @@ export default function LunaPage() {
           {/* Best Partner diploma — premium credential */}
           <div className="mt-16 flex justify-center">
             <BestPartnerBadge variant="light" width={300} />
+          </div>
+        </div>
+      </section>
+
+      {/* Romantic Dinner — repositioned after Our Chefs */}
+      <section id="romantic-dinner" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#F5F3EF' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div className="order-2 md:order-1 rounded-2xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/generated/mychef-experience-bali-luna-gallery-4.webp"
+                alt="Romantic candlelit dinner for two at a private Bali villa"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async" />
+            </div>
+            <div className="order-1 md:order-2">
+              <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Romantic Dinner</p>
+              <h2 className="text-4xl md:text-5xl mb-6 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>An Evening for Two</h2>
+              <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>By special arrangement</p>
+              <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
+              <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
+                A romantic dinner in Bali should not mean fighting for a table at a crowded restaurant. It should mean your own villa, your own chef, and an evening that moves at your pace. We design intimate dinners for couples who want privacy without compromise — the same Michelin-trained team, the same ingredients, the same attention to detail, scaled to an evening for two.
+              </p>
+              <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
+                The table is set with candles and crystal. The courses arrive unhurried. The wine is paired to your preference. And the only other voices in the room are the ones you choose to hear. Whether it is a proposal, an anniversary, or simply a night that deserves to be remembered, we build the evening around you.
+              </p>
+              <div className="rounded-2xl border border-[#C5A028]/25 bg-[#C5A028]/5 p-5 mb-6">
+                <p className="text-sm text-[#1A1A1A]/70 leading-relaxed">
+                  <strong>Important:</strong> Our standard fine dining menus require a minimum of 6 guests. The Romantic Dinner is available as a special arrangement for couples who prefer an intimate two-person experience.
+                </p>
+              </div>
+              <div className="mb-6">
+                <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Pricing</p>
+                <div className="space-y-2 text-sm text-[#1A1A1A]/70">
+                  <p><span className="text-[#1A1A1A]/50">Kitchen-Service:</span> <span className="text-[#1A1A1A] font-medium">IDR 2,800,000++ per couple</span></p>
+                  <p><span className="text-[#1A1A1A]/50">Full-Service:</span> <span className="text-[#1A1A1A] font-medium">IDR 3,500,000++ per couple</span></p>
+                  <p><span className="text-[#1A1A1A]/50">Wine pairing:</span> <span className="text-[#1A1A1A] font-medium">+IDR 850,000 per person</span></p>
+                </div>
+              </div>
+              <div className="mb-6">
+                <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>What&apos;s included</p>
+                <div className="space-y-2">
+                  {[
+                    'Private chef for the evening',
+                    'Multi-course tasting menu (5 courses)',
+                    'Table setting and decoration',
+                    'Full service and cleanup',
+                    'Personalised menu consultation',
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                      <span className="text-sm text-[#1A1A1A]/70">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="mb-6">
+                <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Guarantees</p>
+                <div className="space-y-2 text-sm text-[#1A1A1A]/70">
+                  <p><strong className="text-[#1A1A1A]/80">Satisfaction guarantee:</strong> Not satisfied? We refund 50% — no questions asked</p>
+                  <p><strong className="text-[#1A1A1A]/80">48-hour cancellation policy:</strong> Full refund if you cancel 48+ hours before</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 text-[#1A1A1A]/60 text-sm">
+                <Heart className="w-4 h-4 text-[#C5A028]" />
+                <span>To arrange: Contact us via WhatsApp to discuss your evening. We recommend booking at least 7 days in advance.</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1183,7 +1441,7 @@ export default function LunaPage() {
               </div>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">Wine pairing available — IDR 850K per guest</span></div>
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">Minimum 4 guests</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">Minimum 6 guests</span></div>
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">++ adds service charge + government tax (see FAQ)</span></div>
               </div>
               <Button asChild variant="whatsapp" size="brand">

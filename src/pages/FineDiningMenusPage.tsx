@@ -48,31 +48,64 @@ interface FAQItem {
 
 const MENU_CARDS: MenuCard[] = [
   {
-    name: 'La Riviera',
-    subtitle: '5-Course Mediterranean',
-    price: 'From IDR 2,200,000++ per person',
-    description: 'An elegant Riviera-style progression rooted in Italian coastal cooking. Expect handmade pasta, grilled fish, bright salads, and seasonal produce chosen for the table that day. Ideal for intimate dinners of 2 to 12 guests.',
-    image: '/generated/mychef-experience-bali-luna-wine.webp',
-    imageAlt: 'Private villa fine dining table with wine service for the La Riviera menu',
-    courses: ['Amuse-bouche', 'Cold Opener', 'Handmade Pasta', 'Grilled Protein', 'Dessert'],
-    winePairing: '+IDR 650,000 per person',
-    dataSource: 'menus-riviera-cta',
+    name: 'Italian Experience',
+    subtitle: 'Classic Italian Fine Dining',
+    price: 'Kitchen-Service IDR 1,750,000++ · Full-Service IDR 2,200,000++',
+    description: 'Handmade pasta, fresh seafood, slow-cooked meats. Our pasta specialist hand-rolls every sheet in your kitchen the afternoon of your dinner.',
+    image: '/generated/mychef-experience-bali-luna-gallery-1.webp',
+    imageAlt: 'Italian Experience — handmade tagliatelle and fine dining in a Bali villa',
+    courses: ['Pecorino crisp', 'Burrata', 'Handmade tagliatelle', 'Osso buco', 'Tiramisu'],
+    winePairing: '+IDR 850,000 per person',
+    dataSource: 'menus-italian-cta',
   },
   {
-    name: "L'Odyssée",
-    subtitle: "7-Course Chef's Selection",
-    price: 'From IDR 2,400,000++ per person',
-    description: 'A longer market-led menu with seven refined moments and optional wine pairing. Adriano selects the ingredients in the morning, then builds the dinner around what is exceptional that day. This is the fullest expression of the kitchen.',
+    name: 'French Experience',
+    subtitle: 'Refined French Technique',
+    price: 'Kitchen-Service IDR 1,900,000++ · Full-Service IDR 2,400,000++',
+    description: 'Classic French cooking adapted to Bali\'s finest ingredients. Rich sauces, precise technique, and the patience that defines the French kitchen.',
+    image: '/generated/mychef-experience-bali-luna-wine.webp',
+    imageAlt: 'French Experience — refined French dining in a Bali villa',
+    courses: ['Gougères', 'Coquilles Saint-Jacques', 'Barramundi en papillote', 'Duck confit', 'Crème brûlée'],
+    winePairing: '+IDR 850,000 per person',
+    dataSource: 'menus-french-cta',
+  },
+  {
+    name: 'Mediterranean Sea Experience',
+    subtitle: 'Coastal Mediterranean Flavours',
+    price: 'Kitchen-Service IDR 1,750,000++ · Full-Service IDR 2,200,000++',
+    description: 'Italian seafood in five movements. Fresh catches, olive oil, citrus, and herbs. Pasta rolled in your villa. The original myCHEF fine dining experience.',
     image: '/generated/mychef-experience-bali-luna-gallery-1.webp',
-    imageAlt: 'Fresh market-fresh ingredients prepared for L Odyssee private chef menu in Bali',
-    courses: ['2× Cold Opens', 'Pasta', 'Amuse', 'Protein', 'Pre-Dessert', 'Dessert'],
-    winePairing: '+IDR 1,100,000 per person',
-    dataSource: 'menus-odyssee-cta',
+    imageAlt: 'Mediterranean Sea Experience — fresh seafood in a Bali villa',
+    courses: ['Passione di Dentice', 'Burrata', 'Lobster tagliatelle', 'Barramundi', 'Tiramisu'],
+    winePairing: '+IDR 850,000 per person',
+    dataSource: 'menus-mediterranean-cta',
+  },
+  {
+    name: 'Wagyu Experience',
+    subtitle: 'Premium Wagyu Tokusen',
+    price: 'Kitchen-Service IDR 1,950,000++ · Full-Service IDR 2,400,000++',
+    description: 'Wagyu Tokusen in three forms — raw, enveloped, and grilled. From delicate tartare to flame-grilled ribeye at your table.',
+    image: '/generated/mychef-finedining-bali-luna-plating.webp',
+    imageAlt: 'Wagyu Experience — premium beef dining in a Bali villa',
+    courses: ['Beef tartare', 'Oxtail ravioli', 'Grilled ribeye', 'Tenerina cake'],
+    winePairing: '+IDR 850,000 per person',
+    dataSource: 'menus-wagyu-cta',
+  },
+  {
+    name: 'Custom Menu',
+    subtitle: 'Your Vision, Our Execution',
+    price: 'Kitchen-Service From IDR 1,600,000++ · Full-Service From IDR 2,000,000++',
+    description: 'Tell us what you want. A specific cuisine, dietary requirements, a surprise for your guests, a theme that means something. Our chef designs a bespoke menu just for your evening.',
+    image: '/generated/mychef-experience-bali-luna-gallery-3.webp',
+    imageAlt: 'Custom Menu — bespoke dining experience in a Bali villa',
+    courses: ['Consultation', 'Menu Design', 'Ingredient Sourcing', 'Execution'],
+    winePairing: 'Custom paired to your menu',
+    dataSource: 'menus-custom-cta',
   },
 ]
 
 const PHILOSOPHY_STATS: Stat[] = [
-  { value: '2', label: 'Signature Menus' },
+  { value: '5', label: 'Signature Menus' },
   { value: '12,000+', label: 'Guests Fed' },
   { value: '100%', label: 'Market-Fresh' },
 ]
@@ -107,7 +140,7 @@ const TESTIMONIALS: Testimonial[] = [
 const FAQS: FAQItem[] = [
   {
     q: 'Which menu should I choose?',
-    a: 'Choose La Riviera if you want a classic five-course Mediterranean dinner. Choose L\'Odyssée for the fullest chef-led tasting progression with a longer format and optional premium pairing.',
+    a: 'Choose Italian or Mediterranean for pasta and seafood lovers. Choose French for refined technique and rich sauces. Choose Wagyu for beef-focused evenings. Choose Custom if you have a specific vision, dietary requirements, or a theme in mind.',
   },
   {
     q: 'Can you accommodate dietary restrictions?',
@@ -115,11 +148,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'What is the minimum booking?',
-    a: 'The minimum booking is 2 guests for the menus on this page. Larger groups are welcome and we scale the kitchen and service team to match your villa and dinner format.',
+    a: 'The minimum booking is 6 guests for our fine dining menus. The Romantic Dinner for 2 is available by special arrangement — contact us to discuss.',
   },
   {
     q: 'Is wine pairing included?',
-    a: 'Wine pairing is optional. La Riviera can be paired from +IDR 650,000 per person and L\'Odyssée from +IDR 1,100,000 per person. We can also recommend bottles if you prefer to supply your own wine.',
+    a: 'Wine pairing is optional at IDR 850,000 per guest across all menus. We can also recommend bottles if you prefer to supply your own wine.',
   },
   {
     q: 'How fresh are the ingredients?',
@@ -127,7 +160,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How far in advance should I book?',
-    a: 'Three to seven days is ideal, especially for premium seafood and wine pairing requests. During peak season we recommend booking earlier, but we can often accommodate short-notice villa dinners if the date is open.',
+    a: 'Three to seven days is ideal, especially for premium seafood and wine pairing requests. Custom menus require 7 days for ingredient sourcing. During peak season we recommend booking earlier, but we can often accommodate short-notice villa dinners if the date is open.',
   },
 ]
 
@@ -207,7 +240,7 @@ export default function FineDiningMenusPage() {
             className="mb-6 text-sm uppercase tracking-[0.35em] text-[#C5A028]"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
           >
-              Riviera · L&apos;Odyssée
+            Italian · French · Mediterranean · Wagyu · Custom
           </p>
           <h1
             className="mb-6 text-5xl text-white sm:text-6xl lg:text-7xl"
@@ -219,7 +252,7 @@ export default function FineDiningMenusPage() {
             className="mx-auto mb-10 max-w-3xl text-2xl italic text-white/[80%] md:text-3xl"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Mediterranean tasting menus. Refined. Seasonal. Cooked in your villa.
+            Italian, French, Mediterranean & Wagyu tasting menus. Refined. Seasonal. Cooked in your villa.
           </p>
           <a
             href={buildWhatsAppLink('private dining')}
@@ -279,7 +312,7 @@ export default function FineDiningMenusPage() {
               Two Signature Menus
             </p>
             <h2 className="text-3xl text-white md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Choose between our two signature menus
+              Choose between our five signature menus
             </h2>
           </div>
 
@@ -351,7 +384,7 @@ export default function FineDiningMenusPage() {
           <div className="reveal mt-10 rounded-[24px] border border-[#C5A028]/25 bg-white/[0.05] p-7 text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028]">Looking for the most exclusive format?</p>
             <p className="mt-3 text-base text-white/[80%]">
-              Chef&apos;s Table is a separate Adriano-led counter experience, distinct from the two signature menus above.
+              Chef&apos;s Table is a separate Adriano-led counter experience, distinct from the five signature menus above.
             </p>
             <Link
               to="/fine-dining/chefs-table"
@@ -469,10 +502,10 @@ export default function FineDiningMenusPage() {
               How pricing works
             </h2>
             <p className="mb-4 text-base leading-relaxed text-[#4A4745]">
-              When you see IDR 2,200,000++, the ++ means a 10% service charge and 11% government tax are added on top. That makes the all-in total approximately IDR 2,618,000 per person.
+              Prices are per person and subject to a 10% service charge and 11% government tax. Choose between Kitchen-Service (we use your villa's kitchen and tableware) or Full-Service (we bring everything, including premium plates, glassware, and dedicated service staff).
             </p>
             <p className="text-base leading-relaxed text-[#4A4745]">
-              Minimum booking is 2 guests. We quote clearly before confirmation, and there are no hidden fees for standard setup, shopping, or cleanup.
+              Minimum booking is 6 guests. We quote clearly before confirmation, and there are no hidden fees for standard setup, shopping, or cleanup.
             </p>
           </div>
 
@@ -481,7 +514,9 @@ export default function FineDiningMenusPage() {
             <div className="space-y-4">
               {[
                 '10% service charge + 11% tax added to listed menu price',
-                '2 guests minimum booking',
+                '6 guests minimum for fine dining menus',
+                'Kitchen-Service uses your villa tableware',
+                'Full-Service includes premium plates, glassware & linen',
                 'No hidden fees on standard menu execution',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">

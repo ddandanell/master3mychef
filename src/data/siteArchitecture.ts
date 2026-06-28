@@ -590,17 +590,29 @@ export const JOURNAL_POSTS: JournalPost[] = [
       
       <p>We source eggs from a small farm in Tabanan, twenty minutes inland. The yolks run deep orange from the chickens' diet and the pasta they produce has a richness that imported Italian eggs simply cannot match. Local adaptation is not a compromise — it is the actual ingredient.</p>
 
+      <h3>The Knife Foundation</h3>
+      <p>Before any dish, there is knife work. In a Michelin kitchen you spend the first months doing nothing but brunoise and julienne — not because those cuts appear on every plate, but because precision at the foundational level is the only way to develop the muscle memory that holds under pressure. A 3mm brunoise means 3mm. Not 4mm on a tired Tuesday service.</p>
+      <p>In a villa kitchen, this manifests as a trained working discipline: board organized, off-cuts cleared, knives returned before a single ingredient hits heat. This is not performance. It is the behavior of someone who was never allowed to let mise en place slip, regardless of the setting.</p>
+
       <h3>The Sauce Discipline</h3>
       <p>In a Michelin kitchen you learn that a sauce is never finished — it is stopped. The moment you add the pasta water, hit the butter mount, and pull the pan, the entire dish changes in thirty seconds. Over-cooking by fifteen seconds at that point loses the emulsion. This is the kind of micro-discipline that a villa guest never sees but absolutely tastes.</p>
       
       <p>It is also the kind of discipline that produces consistency across twelve guests across one service. That is what Michelin training actually provides: the ability to replicate quality under pressure, not just demonstrate it once on a good day.</p>
 
+      <h3>Menu Architecture: How a Course Sequence Works</h3>
+      <p>A trained chef thinks about a meal architecturally. The sequence of courses follows a logic of escalation and resolution: you begin light, with acidity and brightness; build through richness and umami; resolve with sweetness and fat. Within each course, the same principle applies — the first bite sets expectation, the middle delivers on it, the finish creates the memory.</p>
+      <p>When designing a <a href="/fine-dining/tasting-menu" class="text-[#C5A028] hover:underline font-medium">bespoke tasting menu</a> for a Bali villa, this architecture accommodates the setting — the heat, the outdoor dining, the slower pace of a private dinner rather than a timed restaurant service. The technique adapts; the logic does not. A well-constructed tasting menu never leaves you heavy after the main course. That is intentional management of the guest's experience, not luck.</p>
+
+      <h3>Temperature Precision</h3>
+      <p>Professional kitchens move at temperatures that have margins measured in seconds. The skill of a trained chef includes the trained ability to feel these margins by sound, colour, and texture — to know exactly when to pull, when to rest, when to serve. This is what produces fish that flakes at the right resistance, a steak with the correct gradient from crust to centre, a sauce that coats rather than pools.</p>
+      <p>This awareness cannot be replicated by equipment alone. The most expensive villa kitchen in Seminyak, without a trained operator, will produce average results. A trained chef working in a modest kitchen will produce something worth remembering. The discipline travels. The standard is internal, not architectural.</p>
+
       <h3>What It Means for Your Dinner</h3>
-      <p>When you book a <a href="/fine-dining/private-chef-bali">private chef</a> through myCHEF, you are not booking a talented cook who "knows Italian food." You are booking someone who has been trained in a system that does not tolerate inconsistency at any level of service. That system travels. It works in a Seminyak villa kitchen just as well as it works on the pass of a Milan restaurant — because the standard is internal, not architectural.</p>
+      <p>When you book a <a href="/fine-dining/private-chef-bali" class="text-[#C5A028] hover:underline font-medium">private chef</a> through myCHEF, you are not booking a talented cook who "knows Italian food." You are booking someone who has been trained in a system that does not tolerate inconsistency at any level of service. That system travels. It works in a Seminyak villa kitchen just as well as it works on the pass of a Milan restaurant — because the standard is internal, not architectural.</p>
       
-      <p>Explore our <a href="/fine-dining/menus">tasting menus</a> to see the current seasonal offerings, or message our team on WhatsApp to discuss a custom menu for your stay.</p>
+      <p>Explore our <a href="/fine-dining/tasting-menu" class="text-[#C5A028] hover:underline font-medium">tasting menus</a> to see the current seasonal offerings, or message our team on WhatsApp to discuss a custom menu for your stay.</p>
       <h2>Related Guides</h2>
-      <p><a href="/journal/sustainable-sourcing">Sustainable Sourcing</a> — how we source local ingredients for every menu.<br><a href="/journal/bali-private-chef-cost-guide-2026">Cost Guide 2026</a> — what a private chef costs in Bali.<br><a href="/journal/private-chef-vs-villa-staff-bali">Private Chef vs Villa Staff</a> — why hire a specialist.</p>
+      <p><a href="/journal/sustainable-sourcing">Sustainable Sourcing</a> — how we source local ingredients for every menu.<br /><a href="/blog/private-chef-cost-bali">Private Chef Cost Guide 2026</a> — what a private chef costs in Bali.<br /><a href="/journal/private-chef-vs-villa-staff-bali">Private Chef vs Villa Staff</a> — why hire a specialist.</p>
     `,
   },
   {
@@ -621,24 +633,32 @@ export const JOURNAL_POSTS: JournalPost[] = [
       <h3>The Producers We Return To</h3>
       <p>We do not use a single supplier. We use a network of small producers that we have tested, visited, and maintained relationships with over years of operation in Bali.</p>
       
-      <ul>
+      <ul class="list-disc pl-6 space-y-3 my-4">
         <li><strong>Bedugul highlands:</strong> Strawberries, capsicums, brassicas, leafy greens, and tomatoes. We pick up directly from a family operation that has been farming the same plot for three generations.</li>
         <li><strong>Tabanan:</strong> Free-range eggs with deep orange yolks, used in all our fresh pasta and our breakfast programmes. The flavour difference against supermarket eggs is not subtle.</li>
         <li><strong>Jimbaran fish market:</strong> Yellowfin tuna, snapper, barramundi, and prawns landed the same morning. We buy at 5:00 AM for same-day service.</li>
         <li><strong>Ubud organic collective:</strong> Microgreens, edible flowers, fresh herbs, and specialty vegetables for fine dining plating. These are available seasonally and drive many of our tasting menu specials.</li>
       </ul>
 
+      <h3>Wet Season vs. Dry Season: What Changes on the Menu</h3>
+      <p>Bali has two distinct growing cycles. The dry season (April–October) brings the island's best tomatoes, capsicums, and highland brassicas — ideal for Mediterranean-style cooking. The wet season (November–March) shifts abundance toward tropical fruits, root vegetables, and exceptional fresh coconut. Our chefs redesign menus seasonally to follow this cycle rather than fight it.</p>
+      <p>This matters practically: a guest booking in July will eat differently from a guest booking in January, and both experiences are excellent for different reasons. If you want a specific ingredient — imported wagyu, a particular wine — we can source it, but we recommend trusting the season. What Bali grows right now is almost always the best starting point.</p>
+
+      <h3>How Ingredient Quality Changes the Chef's Job</h3>
+      <p>Premium ingredients are not just a quality signal to guests — they change what a chef can actually do in the kitchen. A tomato that tastes like a tomato requires nothing beyond salt and good olive oil. A commodity tomato requires technique to compensate. When we work with the best available ingredients, the chef's role shifts from "correcting" to "revealing" — and the result on the plate is a simplicity that is surprisingly hard to achieve any other way.</p>
+      <p>For our <a href="/fine-dining/tasting-menu" class="text-[#C5A028] hover:underline font-medium">tasting menu experiences</a>, this means that the ingredient is the hero, not the technique layered over it. For our <a href="/catering/villa-catering" class="text-[#C5A028] hover:underline font-medium">villa catering</a> events, it means that even large-group formats deliver flavour that guests notice and remember.</p>
+
       <h3>The Real Cost</h3>
       <p>Sourcing this way is not cheaper than buying from a central distributor. It requires more time, more logistics, and a willingness to change the menu when a specific ingredient is unavailable that week. We absorb that cost because the alternative — consistent mediocrity — is not a standard we are willing to operate at.</p>
       
-      <p>When you book through myCHEF, the ingredient budget you pay goes directly back to these producers. There is no margin on groceries. We work on an at-cost basis for all fresh produce, and we can provide receipts on request.</p>
+      <p>When you book through myCHEF, the ingredient budget you pay goes directly back to these producers. There is no margin on groceries. We work on an at-cost basis for all fresh produce, and we can provide receipts on request. A 4-course dinner for 6 guests will typically have an ingredient cost of IDR 480,000–800,000 per person depending on protein selection — this is transparent and itemized in our proposals.</p>
 
-      <h2>Seasonal Menu Adaptation</h2>
-      <p>Because we follow what is actually available and excellent, our menus shift. If you book a <a href="/fine-dining/private-chef-bali">private chef experience</a> in the wet season, the menu will look different from the dry season — not worse, just accurately matched to what Bali is producing at that moment.</p>
+      <h3>Seasonal Menu Adaptation</h3>
+      <p>Because we follow what is actually available and excellent, our menus shift. If you book a <a href="/fine-dining/private-chef-bali" class="text-[#C5A028] hover:underline font-medium">private chef experience</a> in the wet season, the menu will look different from the dry season — not worse, just accurately matched to what Bali is producing at that moment.</p>
       
-      <p>This is the correct approach for a kitchen that claims to care about ingredients. We are happy to discuss seasonal availability when you book. Message our team on WhatsApp or use the <a href="/pricing">pricing calculator</a> to begin planning your stay.</p>
+      <p>This is the correct approach for a kitchen that claims to care about ingredients. We are happy to discuss seasonal availability when you book. Message our team on WhatsApp or use the <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing calculator</a> to begin planning your stay.</p>
       <h2>Related Guides</h2>
-      <p><a href="/journal/michelin-training-bali">Michelin Training in Bali</a> — how technique translates to villa kitchens.<br><a href="/journal/bali-private-chef-cost-guide-2026">Cost Guide 2026</a> — what a private chef costs in Bali.<br><a href="/journal/private-chef-vs-villa-staff-bali">Private Chef vs Villa Staff</a> — why hire a specialist.</p>
+      <p><a href="/journal/michelin-training-bali">Michelin Training in Bali</a> — how technique translates to villa kitchens.<br /><a href="/blog/private-chef-cost-bali">Private Chef Cost Guide 2026</a> — what a private chef costs in Bali.<br /><a href="/journal/private-chef-vs-villa-staff-bali">Private Chef vs Villa Staff</a> — why hire a specialist.</p>
     `,
   },
   {
@@ -658,20 +678,28 @@ export const JOURNAL_POSTS: JournalPost[] = [
       <p>Villa staff are incredible multi-taskers. They manage housekeeping, gardening, pool maintenance, and guest relations. While they may have a repertoire of excellent local dishes, their primary role is the upkeep of the property. A professional private chef from myCHEF has one single focus: the culinary experience. They are Michelin-trained or come from five-star hotel backgrounds, bringing advanced techniques, plating aesthetics, and menu depth that a generalist simply cannot provide.</p>
       
       <h3>2. Sourcing and Ingredient Integrity</h3>
-      <p>A specialized chef has established relationships with Bali's best producers. They know which market has the freshest snapper at 5:00 AM and which organic farms in Bedugul are producing the best heirloom tomatoes this week. When you hire a <a href="/fine-dining/private-chef-bali">private chef in Bali</a>, you aren't just paying for the cooking; you are paying for the supply chain of premium ingredients that never reaches the average villa kitchen.</p>
+      <p>A specialized chef has established relationships with Bali's best producers. They know which market has the freshest snapper at 5:00 AM and which organic farms in Bedugul are producing the best heirloom tomatoes this week. When you hire a <a href="/fine-dining/private-chef-bali" class="text-[#C5A028] hover:underline font-medium">private chef in Bali</a>, you aren't just paying for the cooking; you are paying for the supply chain of premium ingredients that never reaches the average villa kitchen.</p>
 
       <h3>3. Professional Service and Pacing</h3>
-      <p>Cooking the food is only half the battle. In a fine-dining or large-group setting, the pacing of the meal is everything. Villa staff, often juggling other duties, may struggle to deliver a synchronized seven-course tasting menu while ensuring drinks are topped up and the table is reset. MyCHEF provides a dedicated service team—waiters and butlers—who work in harmony with the chef to ensure the rhythm of your evening is seamless.</p>
+      <p>Cooking the food is only half the battle. In a fine-dining or large-group setting, the pacing of the meal is everything. Villa staff, often juggling other duties, may struggle to deliver a synchronized seven-course tasting menu while ensuring drinks are topped up and the table is reset. myCHEF provides a dedicated service team — waiters and butlers — who work in harmony with the chef to ensure the rhythm of your evening is seamless.</p>
 
-      <h3>4. Kitchen Reset and Hygiene Standards</h3>
-      <p>One of the most overlooked aspects of villa dining is the cleanup. After a large dinner, a villa kitchen can be in a state of chaos. Expecting the regular villa staff to handle a deep kitchen reset late at night, after they've been working since dawn, is often unrealistic. Our teams handle the entire lifecycle of the event, leaving your kitchen exactly as we found it—or cleaner—before we depart.</p>
+      <h3>4. Menu Planning and Dietary Coordination</h3>
+      <p>A professional chef plans the entire experience before setting foot in the kitchen. This includes a menu consultation, dietary screening for all guests, ingredient pre-ordering, and a day-of prep schedule. Villa staff rarely have the systems or the culinary vocabulary to coordinate a group with three dietary requirements, a wine pairing, and a specific timing request. A trained chef handles this as standard practice.</p>
+      <p>For groups with complex dietary needs — gluten-free, vegan, halal, severe allergies — this coordination is not a minor administrative task. It is the difference between a guest having a memorable evening and a guest going to bed hungry because there was no option that worked for them.</p>
 
-      <h2>When to Choose a Private Chef?</h2>
-      <p>If you are looking for a consistent, high-standard hospitality layer for your entire stay, consider our <a href="/in-villa-service">in-villa service</a> or <a href="/catering/villa-catering">villa catering packages</a>. For birthdays, anniversaries, or proposals, our <a href="/fine-dining">fine dining</a> experiences are the definitive choice.</p>
+      <h3>5. Kitchen Reset and Hygiene Standards</h3>
+      <p>One of the most overlooked aspects of villa dining is the cleanup. After a large dinner, a villa kitchen can be in a state of chaos. Expecting the regular villa staff to handle a deep kitchen reset late at night, after they have been working since dawn, is often unrealistic. Our teams handle the entire lifecycle of the event, leaving your kitchen exactly as we found it — or cleaner — before we depart.</p>
+
+      <h3>6. The Live-In Chef Option</h3>
+      <p>For extended stays of one week or more, many guests choose a <a href="/staffing/live-in-chef" class="text-[#C5A028] hover:underline font-medium">live-in private chef</a> — a dedicated culinary professional who stays on property for the duration of the trip and manages all meals, groceries, and kitchen logistics. This is categorically different from asking villa staff to cook. The live-in chef brings full professional infrastructure: a personal menu repertoire, market knowledge, dietary management, and the ability to adapt daily based on guest feedback.</p>
+      <p>Live-in chef rates start from IDR 1.8M per day for stays of 5+ nights and include all meal planning and grocery management. For families with children, dietary requirements, or guests who genuinely want hospitality rather than self-catering, it is often the highest-value decision in the entire villa budget.</p>
+
+      <h3>When to Choose a Private Chef</h3>
+      <p>If you are looking for a consistent, high-standard hospitality layer for your entire stay, consider our <a href="/in-villa-service" class="text-[#C5A028] hover:underline font-medium">in-villa service</a> or <a href="/catering/villa-catering" class="text-[#C5A028] hover:underline font-medium">villa catering packages</a>. For birthdays, anniversaries, or proposals, our <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining</a> experiences are the definitive choice.</p>
       
-      <p>Explore our <a href="/pricing">transparent pricing</a> to see how a professional chef fits into your Bali holiday budget.</p>
+      <p>Explore our <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">transparent pricing</a> to see how a professional chef fits into your Bali holiday budget.</p>
       <h2>Related Guides</h2>
-      <p><a href="/journal/michelin-training-bali">Michelin Training in Bali</a> — how our chefs are trained.<br><a href="/journal/bali-private-chef-cost-guide-2026">Cost Guide 2026</a> — what a private chef costs in Bali.<br><a href="/journal/sustainable-sourcing">Sustainable Sourcing</a> — how we source local ingredients.</p>
+      <p><a href="/journal/michelin-training-bali">Michelin Training in Bali</a> — how our chefs are trained.<br /><a href="/blog/private-chef-cost-bali">Private Chef Cost Guide 2026</a> — what a private chef costs in Bali.<br /><a href="/journal/sustainable-sourcing">Sustainable Sourcing</a> — how we source local ingredients.</p>
     `,
   },
   {
@@ -729,34 +757,40 @@ export const JOURNAL_POSTS: JournalPost[] = [
     content: `
       <img src="/generated/mychef-events-bali-event-wedding.webp" alt="Elegant wedding catering setup at a private Bali villa with ocean view and candlelit tables" loading="lazy" decoding="async" fetchpriority="high" class="w-full rounded-2xl mb-8" />
       <h2>The Reality of Villa Wedding Catering</h2>
-      <p>A Bali villa wedding is the dream—Indian Ocean views, complete privacy, and a bespoke atmosphere. But unlike a hotel ballroom, a private villa is not naturally designed to serve 80 guests a synchronized three-course meal. To ensure your wedding catering runs flawlessly, you need to understand the "behind-the-scenes" logistics that make it happen.</p>
+      <p>A Bali villa wedding is the dream — Indian Ocean views, complete privacy, and a bespoke atmosphere. But unlike a hotel ballroom, a private villa is not naturally designed to serve 80 guests a synchronized three-course meal. To ensure your wedding catering runs flawlessly, you need to understand the behind-the-scenes logistics that make it possible.</p>
       
       <h3>1. The Kitchen Augmentation</h3>
-      <p>Even the most beautiful villa kitchens usually lack the commercial power and space needed for large-scale catering. At myCHEF, we often bring in mobile ovens, extra cold storage, and stainless-steel prep tables. If you are planning a <a href="/events/weddings">wedding in a Bali villa</a>, always check if your catering partner provides their own back-of-house equipment or if they expect to use the villa's existing home-grade appliances.</p>
+      <p>Even the most beautiful villa kitchens usually lack the commercial power and space needed for large-scale catering. At myCHEF, we often bring in mobile ovens, extra cold storage, and stainless-steel prep tables. If you are planning a <a href="/events/weddings" class="text-[#C5A028] hover:underline font-medium">wedding in a Bali villa</a>, always check if your catering partner provides their own back-of-house equipment or if they expect to use the villa's existing home-grade appliances.</p>
       
       <h3>2. Power and Water Reliability</h3>
-      <p>One of the most common "day-of" failures in Bali is the power grid. A catering team using multiple high-powered induction burners and ovens can easily trip a villa's main breaker. We always recommend (and often insist on) a dedicated generator for the catering and styling teams to ensure the music and the ovens never stop.</p>
+      <p>One of the most common day-of failures in Bali is the power grid. A catering team using multiple high-powered induction burners and ovens can easily trip a villa's main breaker. We always recommend — and often insist on — a dedicated generator for the catering and styling teams to ensure the music and the ovens never stop simultaneously.</p>
+      <p>Water access is equally important. A team prepping for 80+ guests will go through significant water volume for washing, blanching, and service. Confirm with your villa manager that water pressure and tank capacity are adequate before finalizing your catering approach.</p>
 
       <h3>3. The Service Flow: Buffet vs. Plated</h3>
-      <p>The layout of your villa determines your service style. If your dining area is spread across multiple levels or narrow terraces, a <a href="/catering/buffet">wedding buffet</a> might be more practical to prevent service delays. For clifftop estates with wide-open lawns, a <a href="/catering/plated-catering">plated dinner</a> provides a more formal, high-end resort feel.</p>
+      <p>The layout of your villa determines your service style. If your dining area is spread across multiple levels or narrow terraces, a <a href="/catering/buffet" class="text-[#C5A028] hover:underline font-medium">wedding buffet</a> might be more practical to prevent service delays. For clifftop estates with wide-open lawns, a <a href="/catering/plated-catering" class="text-[#C5A028] hover:underline font-medium">plated dinner</a> provides a more formal, high-end resort feel. Both formats have been executed successfully at Bali villa weddings — the decision depends on your guest count, venue geography, and the formality level you want to set.</p>
 
       <h3>4. Navigating Dietary Complexity</h3>
-      <p>Bali weddings attract international guest lists. You will likely have guests requesting vegan, gluten-free, halal, and nut-free options. Managing this in a villa environment requires a sophisticated labeling and tracking system. Our service teams use digital run sheets to ensure every guest receives their specific menu without hesitation.</p>
+      <p>Bali weddings attract international guest lists. You will likely have guests requesting vegan, gluten-free, halal, and nut-free options. Managing this in a villa environment requires a sophisticated labeling and tracking system. Our service teams use digital run sheets to ensure every guest receives their specific menu without hesitation or delay at the table.</p>
 
-      <h3>5. The Operational Checklist</h3>
-      <ul>
-        <li><strong>Load-in Access:</strong> Can a 2-tonne catering truck reach the villa entrance?</li>
-        <li><strong>Kitchen Proximity:</strong> Is the prep area close enough to the dining area to keep food at the correct temperature?</li>
-        <li><strong>Staff Break Area:</strong> Where will the 10-15 service staff reset between courses?</li>
-        <li><strong>Waste Management:</strong> Who handles the removal of event waste from the property?</li>
+      <h3>5. Staff Ratios: What You Actually Need</h3>
+      <p>For a plated dinner, the general standard is one service staff per 8–10 guests to ensure synchronized service. For a buffet with table service, one per 12–15 guests works well. For a cocktail-style wedding reception, staff requirements are different again — primarily focused on passing canapés, managing bar service, and clearing efficiently between rounds.</p>
+      <p>For a 60-guest villa wedding with plated service, expect a team of 6–8 dedicated service staff plus the kitchen team. This is not an area to understaff. Slow, unsynchronized service on a wedding night is the detail guests remember for the wrong reasons.</p>
+
+      <h3>6. The Operational Checklist</h3>
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>Load-in access:</strong> Can a 2-tonne catering truck reach the villa entrance?</li>
+        <li><strong>Kitchen proximity:</strong> Is the prep area close enough to the dining area to keep food at the correct temperature?</li>
+        <li><strong>Generator provision:</strong> Confirmed dedicated power supply for catering equipment?</li>
+        <li><strong>Staff break area:</strong> Where will the 10–15 service staff reset between courses?</li>
+        <li><strong>Waste management:</strong> Who handles the removal of event waste from the property?</li>
+        <li><strong>Dietary run sheet:</strong> Every guest's requirements confirmed and mapped to their seat?</li>
       </ul>
 
-      <h2>A Seamless Night Starts with Planning</h2>
-      <p>Planning a <a href="/events/villa-parties">villa party</a> or wedding requires a partner who knows the local terrain. myCHEF has successfully catered over 500 events in villas across Seminyak, Canggu, and Uluwatu.</p>
-      
-      <p>Ready to build your wedding menu? Browse our <a href="/fine-dining/menus">event menu samples</a> or message our coordinators for a direct consultation.</p>
+      <h3>A Seamless Night Starts with Planning</h3>
+      <p>The best villa wedding catering is invisible — guests simply experience an extraordinary evening without awareness of the logistics behind it. Getting there requires planning that begins 3–4 months before the event date: venue assessment, menu design, dietary mapping, equipment list, staffing plan, and a detailed day-of schedule that accounts for every handover.</p>
+      <p>Planning a <a href="/events/weddings" class="text-[#C5A028] hover:underline font-medium">villa wedding</a> or large celebration requires a partner who knows the local terrain. myCHEF has successfully catered over 500 events in villas across Seminyak, Canggu, and Uluwatu. Browse our <a href="/fine-dining/tasting-menu" class="text-[#C5A028] hover:underline font-medium">event menu samples</a> or message our coordinators for a direct consultation.</p>
       <h2>Related Guides</h2>
-      <p><a href="/events/weddings">Wedding Catering</a> — villa wedding menus and service.<br><a href="/journal/yoga-retreat-meal-planning-bali">Retreat Meal Planning</a> — multi-day catering for wellness groups.<br><a href="/journal/bali-private-chef-cost-guide-2026">Cost Guide 2026</a> — what a private chef costs in Bali.</p>
+      <p><a href="/events/weddings">Wedding Catering</a> — villa wedding menus and service.<br /><a href="/journal/yoga-retreat-meal-planning-bali">Retreat Meal Planning</a> — multi-day catering for wellness groups.<br /><a href="/blog/private-chef-cost-bali">Private Chef Cost Guide 2026</a> — what a private chef costs in Bali.</p>
     `,
   },
   {
@@ -773,23 +807,35 @@ export const JOURNAL_POSTS: JournalPost[] = [
       <p>A yoga retreat in Bali is a commitment to physical and mental transformation. While the yoga practice provides the movement, the food provides the fuel. Many retreat leaders struggle with the balance between "healthy" and "satisfying." At myCHEF, we believe that retreat food should never feel like a sacrifice. It should be a highlight of the guest's day.</p>
       
       <h3>1. Designing for Energy, Not Just Calories</h3>
-      <p>Retreat guests often engage in 4-6 hours of physical activity daily. Standard "detox" menus that are too light can lead to midday energy crashes. We design <a href="/catering/retreat-catering">retreat catering plans</a> around complex carbohydrates, lean plant-based proteins, and healthy fats that provide sustained energy release without the "heavy" feeling that interferes with afternoon practice.</p>
+      <p>Retreat guests often engage in 4–6 hours of physical activity daily. Standard "detox" menus that are too light can lead to midday energy crashes. We design <a href="/catering/retreat-catering" class="text-[#C5A028] hover:underline font-medium">retreat catering plans</a> around complex carbohydrates, lean plant-based proteins, and healthy fats that provide sustained energy release without the heavy feeling that interferes with afternoon practice.</p>
       
       <h3>2. The Intersection of Detox and Flavor</h3>
-      <p>You don't need refined sugar or processed oils to create incredible flavor. Our chefs use Balinese aromatics—turmeric, ginger, galangal, and lemongrass—to create vibrant, nutrient-dense menus that support the body's natural detoxification processes. By focusing on <a href="/menus/vegan">plant-based and vegan options</a>, we ensure that every meal contributes to the retreat's wellness goals.</p>
+      <p>You don't need refined sugar or processed oils to create incredible flavor. Our chefs use Balinese aromatics — turmeric, ginger, galangal, and lemongrass — to create vibrant, nutrient-dense menus that support the body's natural detoxification processes. By focusing on <a href="/menus/vegan" class="text-[#C5A028] hover:underline font-medium">plant-based and vegan options</a>, we ensure that every meal contributes to the retreat's wellness goals.</p>
 
-      <h3>3. Managing the Multi-Day Cycle</h3>
-      <p>A 7-day retreat has a specific rhythm. We typically start with "Arrival Night Comfort" (gentle, grounding Balinese food) and transition into lighter, more intensive detox menus in the middle of the week. Toward the final days, we introduce more celebratory, social sharing formats like a healthy Mediterranean feast to mark the journey's completion.</p>
+      <h3>3. A Sample 7-Day Retreat Menu Structure</h3>
+      <p>Retreat menus follow a deliberate arc across the week:</p>
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>Day 1–2 (Arrival and grounding):</strong> Warm, familiar comfort food. Balinese nasi campur with tempeh, fragrant broths, and tropical fruit bowls. Guests arrive from varied time zones and need grounding before intensity.</li>
+        <li><strong>Day 3–5 (Cleansing peak):</strong> Lighter menus — raw salads, cold-pressed juices, grain bowls, smoothie stations. Minimal cooked fats, maximum fresh produce. This is when the detox intent is strongest.</li>
+        <li><strong>Day 6–7 (Celebration and integration):</strong> Return of satisfying, celebratory formats. A shared Mediterranean feast, perhaps a BBQ with local fish, marks the journey's completion. Guests leave nourished, not depleted.</li>
+      </ul>
 
-      <h3>4. Silent Service and Morning Discipline</h3>
-      <p>Retreat hosting requires a specific service etiquette. Our teams are trained for "silent setup"—arriving at dawn to prepare fresh juices and breakfast spreads while the villa remains in its morning silence. We respect the space and the practice, ensuring the hospitality layer is supportive but never intrusive.</p>
+      <h3>4. Managing the Multi-Day Cycle</h3>
+      <p>A 7-day retreat has a specific rhythm. We typically start with arrival night comfort — gentle, grounding Balinese food — and transition into lighter, more intensive menus in the middle of the week. Toward the final days, we introduce more celebratory, social sharing formats like a healthy Mediterranean feast to mark the journey's completion.</p>
+      <p>Menu variety across multiple days matters enormously. Retreat guests notice and appreciate when the food changes daily rather than cycling the same five dishes on rotation. Our chefs plan 21+ unique meal slots for a week-long retreat, drawing on the seasonal market availability at the time of your booking.</p>
 
-      <h2>Plan Your Next Retreat Menu</h2>
+      <h3>5. Silent Service and Morning Discipline</h3>
+      <p>Retreat hosting requires a specific service etiquette. Our teams are trained for silent setup — arriving at dawn to prepare fresh juices and breakfast spreads while the villa remains in its morning silence. We respect the space and the practice, ensuring the hospitality layer is supportive but never intrusive. This includes noise discipline in the kitchen, no radio, no loud conversations during setup, and coordinated departure before the morning session begins.</p>
+
+      <h3>6. Retreat Catering Pricing</h3>
+      <p>Full-board retreat catering starts from IDR 350,000 per person per day for plant-based menus with standard complexity. Premium formats with fresh juices, smoothie bars, and specialty items typically run IDR 480,000–650,000 per person per day. For a 10-person retreat over 7 days, total catering investment typically falls in the IDR 24M–45M range, all-in including groceries, staff, and cleanup. We provide itemized quotes within 24 hours of receiving your retreat brief.</p>
+
+      <h3>Plan Your Next Retreat Menu</h3>
       <p>Whether you are hosting an intensive teacher training or a gentle wellness weekend, myCHEF provides the specialized culinary support you need. We handle all grocery shopping, prep, service, and cleanup, allowing you to focus entirely on your students.</p>
       
-      <p>Browse our <a href="/menus/halal">halal-certified</a> and <a href="/menus/vegan">vegan menu samples</a> or message our retreat coordinator on WhatsApp to begin your planning.</p>
+      <p>Browse our <a href="/menus/vegan" class="text-[#C5A028] hover:underline font-medium">vegan menu samples</a> or message our retreat coordinator on WhatsApp to begin your planning.</p>
       <h2>Related Guides</h2>
-      <p><a href="/journal/sustainable-sourcing">Sustainable Sourcing</a> — how we source local ingredients.<br><a href="/journal/bali-private-chef-cost-guide-2026">Cost Guide 2026</a> — what a private chef costs in Bali.<br><a href="/journal/private-chef-vs-villa-staff-bali">Private Chef vs Villa Staff</a> — why hire a specialist.</p>
+      <p><a href="/journal/sustainable-sourcing">Sustainable Sourcing</a> — how we source local ingredients.<br /><a href="/blog/private-chef-cost-bali">Private Chef Cost Guide 2026</a> — what a private chef costs in Bali.<br /><a href="/journal/private-chef-vs-villa-staff-bali">Private Chef vs Villa Staff</a> — why hire a specialist.</p>
     `,
   },
   {

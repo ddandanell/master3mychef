@@ -1,4 +1,5 @@
 {
+  "trailingSlash": false,
   "redirects": [
     {
       "source": "/experience",
@@ -809,7 +810,9 @@
     { "source": "/journal/bali-villa-dinner-party-guide", "destination": "/journal", "permanent": true },
     { "source": "/live-in-chef-bali", "destination": "/staffing/live-in-chef", "permanent": true },
     { "source": "/retreat-catering-bali", "destination": "/catering/retreat-catering", "permanent": true },
-    { "source": "/help/getting-started", "destination": "/guide/private-chef-bali", "permanent": true }
+    { "source": "/help/getting-started", "destination": "/guide/private-chef-bali", "permanent": true },
+    { "source": "/private-chef-kelapa-gading", "destination": "/jakarta", "permanent": true },
+    { "source": "/in-villa", "destination": "/in-villa-service", "permanent": true }
   ],
   "headers": [
     {

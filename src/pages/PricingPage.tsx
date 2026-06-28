@@ -8,7 +8,7 @@ const PRICING_OFFER_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Offer',
   name: 'myCHEF Bali services from IDR 250,000',
-  description: 'Starting prices for private chef, catering, event, and villa staffing services in Bali.',
+  description: 'Two-tier fine dining pricing (Kitchen-Service and Full-Service), plus catering, event, and villa staffing services in Bali.',
   price: '250000',
   priceCurrency: 'IDR',
   availability: 'https://schema.org/InStock',
@@ -17,7 +17,7 @@ const PRICING_OFFER_SCHEMA = {
   itemOffered: {
     '@type': 'Service',
     name: 'myCHEF pricing',
-    description: 'Starting prices across private chef, catering, events, and hospitality staffing in Bali.',
+    description: 'Two-tier fine dining pricing (Kitchen-Service and Full-Service), plus catering, events, and hospitality staffing in Bali.',
   },
 }
 
@@ -34,7 +34,7 @@ const PRICE_SPECIFICATION_SCHEMA = {
       item: {
         '@type': 'Offer',
         name: 'Fine Dining — Mediterranean Sea Experience',
-        description: '5-course Italian seafood tasting menu. Includes all ingredients, table setting, service staff, and cleanup.',
+        description: '5-course Italian seafood tasting menu. Full-Service includes all ingredients, table setting, service staff, and cleanup.',
         priceSpecification: { '@type': 'PriceSpecification', price: '2200000', priceCurrency: 'IDR', valueAddedTaxIncluded: false },
         availability: 'https://schema.org/InStock',
         seller: { '@id': 'https://mychef.id/#business' },
@@ -46,7 +46,7 @@ const PRICE_SPECIFICATION_SCHEMA = {
       item: {
         '@type': 'Offer',
         name: 'Fine Dining — Wagyu Experience',
-        description: '4-course Wagyu-focused menu with handmade pasta and grilled ribeye. Includes all ingredients and service.',
+        description: '4-course Wagyu-focused menu with handmade pasta and grilled ribeye. Full-Service includes all ingredients and service.',
         priceSpecification: { '@type': 'PriceSpecification', price: '2400000', priceCurrency: 'IDR', valueAddedTaxIncluded: false },
         availability: 'https://schema.org/InStock',
         seller: { '@id': 'https://mychef.id/#business' },
@@ -100,8 +100,196 @@ const PRICE_SPECIFICATION_SCHEMA = {
         seller: { '@id': 'https://mychef.id/#business' },
       },
     },
+    {
+      '@type': 'ListItem',
+      position: 7,
+      item: {
+        '@type': 'Offer',
+        name: 'Fine Dining — Italian Experience',
+        description: 'Classic Italian fine dining with handmade pasta and fresh seafood. Full-Service includes all ingredients, table setting, service staff, and cleanup.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '2200000', priceCurrency: 'IDR', valueAddedTaxIncluded: false },
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': 'https://mychef.id/#business' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 8,
+      item: {
+        '@type': 'Offer',
+        name: 'Fine Dining — French Experience',
+        description: 'Refined French technique with wine sauces and premium ingredients. Full-Service includes all ingredients and service.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '2400000', priceCurrency: 'IDR', valueAddedTaxIncluded: false },
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': 'https://mychef.id/#business' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 9,
+      item: {
+        '@type': 'Offer',
+        name: 'Fine Dining — Custom Menu',
+        description: 'Bespoke menu designed for your evening. Full-Service from IDR 2,000,000++ per person.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '2000000', priceCurrency: 'IDR', valueAddedTaxIncluded: false },
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': 'https://mychef.id/#business' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 10,
+      item: {
+        '@type': 'Offer',
+        name: 'Fine Dining — Chef\'s Table',
+        description: 'Interactive 6-guest cooking experience at your table. Always Full-Service with complete table setting and all equipment.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '3500000', priceCurrency: 'IDR', valueAddedTaxIncluded: false },
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': 'https://mychef.id/#business' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 11,
+      item: {
+        '@type': 'Offer',
+        name: 'Fine Dining — Romantic Dinner for Two',
+        description: 'Private candlelit dinner for couples. Full-Service includes customized menu, table setting, and service.',
+        priceSpecification: { '@type': 'PriceSpecification', price: '3500000', priceCurrency: 'IDR', valueAddedTaxIncluded: false },
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': 'https://mychef.id/#business' },
+      },
+    },
   ],
 }
+
+const FineDiningPricingTable = () => (
+  <div className="w-full overflow-x-auto">
+    <table className="w-full text-left border-collapse">
+      <thead>
+        <tr className="bg-stone-100 border-b border-stone-200">
+          <th className="px-4 py-3 text-sm font-semibold text-stone-700 uppercase tracking-wide">Menu</th>
+          <th className="px-4 py-3 text-sm font-semibold text-stone-700 uppercase tracking-wide">Kitchen-Service</th>
+          <th className="px-4 py-3 text-sm font-semibold text-stone-700 uppercase tracking-wide">Full-Service</th>
+          <th className="px-4 py-3 text-sm font-semibold text-stone-700 uppercase tracking-wide">Cuisine Style</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr className="border-b border-stone-100">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Italian Experience</td>
+          <td className="px-4 py-3 text-sm text-stone-600">IDR 1,750,000++</td>
+          <td className="px-4 py-3 text-sm text-stone-600">IDR 2,200,000++</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Pasta, seafood, classic Italian</td>
+        </tr>
+        <tr className="border-b border-stone-100 bg-stone-50">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">French Experience</td>
+          <td className="px-4 py-3 text-sm text-stone-600">IDR 1,900,000++</td>
+          <td className="px-4 py-3 text-sm text-stone-600">IDR 2,400,000++</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Refined technique, wine sauces</td>
+        </tr>
+        <tr className="border-b border-stone-100">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Mediterranean Sea</td>
+          <td className="px-4 py-3 text-sm text-stone-600">IDR 1,750,000++</td>
+          <td className="px-4 py-3 text-sm text-stone-600">IDR 2,200,000++</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Coastal flavours, our signature</td>
+        </tr>
+        <tr className="border-b border-stone-100 bg-stone-50">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Wagyu Experience</td>
+          <td className="px-4 py-3 text-sm text-stone-600">IDR 1,950,000++</td>
+          <td className="px-4 py-3 text-sm text-stone-600">IDR 2,400,000++</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Premium beef, grill-focused</td>
+        </tr>
+        <tr className="border-b border-stone-100">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Custom Menu</td>
+          <td className="px-4 py-3 text-sm text-stone-600">From IDR 1,600,000++</td>
+          <td className="px-4 py-3 text-sm text-stone-600">From IDR 2,000,000++</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Your vision, our execution</td>
+        </tr>
+        <tr className="border-b border-stone-100 bg-stone-50">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Chef's Table (6 guests)</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Not available</td>
+          <td className="px-4 py-3 text-sm text-stone-600">IDR 3,500,000++</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Interactive, always full-service</td>
+        </tr>
+        <tr className="border-b border-stone-100">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Romantic Dinner (couple)</td>
+          <td className="px-4 py-3 text-sm text-stone-600">IDR 2,800,000/couple</td>
+          <td className="px-4 py-3 text-sm text-stone-600">IDR 3,500,000/couple</td>
+          <td className="px-4 py-3 text-sm text-stone-600">2 guests by arrangement</td>
+        </tr>
+      </tbody>
+    </table>
+    <div className="mt-6 space-y-2 text-sm text-stone-600">
+      <p>Wine pairing: +IDR 850,000 per guest (optional)</p>
+      <p>Advance notice: Custom menus require 7 days. All others available with same-day confirmation.</p>
+      <p>All prices are per person and subject to 10% service charge and 11% government tax.</p>
+    </div>
+  </div>
+)
+
+const ExperienceComparisonTable = () => (
+  <div className="w-full overflow-x-auto">
+    <table className="w-full text-left border-collapse">
+      <thead>
+        <tr className="bg-stone-100 border-b border-stone-200">
+          <th className="px-4 py-3 text-sm font-semibold text-stone-700 uppercase tracking-wide">Feature</th>
+          <th className="px-4 py-3 text-sm font-semibold text-stone-700 uppercase tracking-wide">Full-Service</th>
+          <th className="px-4 py-3 text-sm font-semibold text-stone-700 uppercase tracking-wide">Kitchen-Service</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr className="border-b border-stone-100">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Plates & glassware</td>
+          <td className="px-4 py-3 text-sm text-stone-600">We bring premium set</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Your villa's items</td>
+        </tr>
+        <tr className="border-b border-stone-100 bg-stone-50">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Cutlery & linen</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Designer set included</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Your villa's items</td>
+        </tr>
+        <tr className="border-b border-stone-100">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Table decoration</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Full floral/design setup</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Simple, elegant setup</td>
+        </tr>
+        <tr className="border-b border-stone-100 bg-stone-50">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Service staff</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Chef + dedicated server</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Chef only</td>
+        </tr>
+        <tr className="border-b border-stone-100">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Equipment</td>
+          <td className="px-4 py-3 text-sm text-stone-600">All cooking equipment brought</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Uses villa kitchen</td>
+        </tr>
+        <tr className="border-b border-stone-100 bg-stone-50">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Cleanup</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Complete pack-down</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Kitchen only</td>
+        </tr>
+        <tr className="border-b border-stone-100">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Atmosphere</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Restaurant-standard</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Intimate, home-style</td>
+        </tr>
+        <tr className="border-b border-stone-100 bg-stone-50">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Price</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Premium</td>
+          <td className="px-4 py-3 text-sm text-stone-600">~20% less</td>
+        </tr>
+        <tr className="border-b border-stone-100">
+          <td className="px-4 py-3 text-sm font-medium text-stone-800">Best for</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Special celebrations, villas without full kitchens</td>
+          <td className="px-4 py-3 text-sm text-stone-600">Well-equipped villas, repeat guests, casual elegance</td>
+        </tr>
+      </tbody>
+    </table>
+    <div className="mt-6 text-sm text-stone-600">
+      <p>Both experiences include the same Michelin-trained chef, the same premium ingredients, and the same multi-course menu. The only difference is tableware, service level, and presentation.</p>
+    </div>
+  </div>
+)
 
 const SECTIONS = [
   {
@@ -110,9 +298,14 @@ const SECTIONS = [
     subtitle: 'Our Promise',
     title: 'Transparent Pricing. No Hidden Fees. No Markup on Groceries.',
     body: `<p>We believe pricing should be clear before you commit. No surprises, no hidden charges, no inflated grocery bills. Here is exactly how our pricing works:</p>
-    <p><strong>Fine Dining:</strong> Per-person menu pricing with ingredients included. Service charge (10%) and government tax (11%) are added. Wine pairing is optional at IDR 850,000 per guest.</p>
-    <p><strong>Villa Chef / Catering:</strong> Chef hourly rate plus groceries at cost. You see every receipt. We do not markup ingredients.</p>
-    <p><strong>Events:</strong> Custom quotes based on guest count, menu complexity, staffing needs, and equipment. We deliver a detailed proposal within 24 hours.</p>`,
+    <p><strong>Fine Dining (6+ guests):</strong> Per-person menu pricing with ingredients included. Choose between two experience levels:</p>
+    <p><strong>Full-Service Experience:</strong> We bring all plates, glassware, cutlery, linen, and decorations. Complete table setting and service staff included. From IDR 2,200,000++ per guest.</p>
+    <p><strong>Kitchen-Service Experience:</strong> Our chef uses your villa's kitchen, plates, and glassware. Same food, same chef, more intimate atmosphere. From IDR 1,750,000++ per guest.</p>
+    <p>Service charge (10%) and government tax (11%) are added to all prices. Wine pairing is optional at IDR 850,000 per guest.</p>
+    <p><strong>Villa Chef / Catering (5+ guests):</strong> Chef hourly rate plus groceries at cost. You see every receipt. We do not markup ingredients. Pricing depends on service style — from IDR 350,000 per person for drop-off catering to IDR 800,000 per person for plated service.</p>
+    <p><strong>Events:</strong> Custom quotes based on guest count, menu complexity, staffing needs, and equipment. We deliver a detailed proposal within 24 hours.</p>
+    <p><strong>In-Villa Staffing:</strong> Per-shift pricing from IDR 250,000/hour. Waiters, butlers, bartenders, mixologists, and sommeliers available.</p>
+    <p><strong>Staffing & Placement:</strong> 48-hour placement for private chefs and villa staff. 30-day replacement guarantee. Contact us for pricing.</p>`,
     image: '/generated/mychef-catering-bali-catering-hero.webp',
     imageAlt: 'Elegant fine dining plate',
   },
@@ -153,11 +346,31 @@ const SECTIONS = [
     subtitle: 'Fine Dining',
     title: 'In-Villa Tasting Menu Pricing',
     features: [
-      { icon: Tag, title: 'Mediterranean Sea Experience', desc: 'IDR 2,200,000++ per person. 5-course Italian seafood tasting menu. Includes all ingredients, table setting, service staff, and cleanup.' },
-      { icon: Tag, title: 'Wagyu Experience', desc: 'IDR 2,400,000++ per person. 4-course Wagyu-focused menu with handmade pasta and grilled ribeye. Includes all ingredients and service.' },
+      { icon: Tag, title: 'Mediterranean Sea Experience', desc: 'Kitchen-Service IDR 1,750,000++ / Full-Service IDR 2,200,000++ per person. 5-course Italian seafood tasting menu. Includes all ingredients, table setting, service staff, and cleanup.' },
+      { icon: Tag, title: 'Wagyu Experience', desc: 'Kitchen-Service IDR 1,950,000++ / Full-Service IDR 2,400,000++ per person. 4-course Wagyu-focused menu with handmade pasta and grilled ribeye. Includes all ingredients and service.' },
+      { icon: Tag, title: 'Italian Experience', desc: 'Kitchen-Service IDR 1,750,000++ / Full-Service IDR 2,200,000++ per person. Classic Italian fine dining with handmade pasta and fresh seafood.' },
+      { icon: Tag, title: 'French Experience', desc: 'Kitchen-Service IDR 1,900,000++ / Full-Service IDR 2,400,000++ per person. Refined French technique with wine sauces and premium ingredients.' },
+      { icon: Tag, title: 'Custom Menu', desc: 'Kitchen-Service From IDR 1,600,000++ / Full-Service From IDR 2,000,000++ per person. Your vision, our execution. Bespoke menu designed for your evening.' },
       { icon: Tag, title: 'Wine Pairing', desc: 'IDR 850,000 per person. 4–5 glasses matched to each course. Includes Franciacorta, Etna Bianco, Barolo, and more.' },
-      { icon: Tag, title: 'Romantic Dinner for Two', desc: 'From IDR 5,500,000++ total. Private candlelit dinner with customized menu. Perfect for proposals, anniversaries, and honeymoons.' },
+      { icon: Tag, title: 'Romantic Dinner for Two', desc: 'Kitchen-Service IDR 2,800,000/couple / Full-Service IDR 3,500,000/couple. Private candlelit dinner with customized menu. Perfect for proposals, anniversaries, and honeymoons.' },
+      { icon: Tag, title: 'Chef\'s Table', desc: 'Not available (Kitchen-Service) / IDR 3,500,000++ (Full-Service) per person. Interactive 6-guest cooking experience at your table. Always full-service with complete table setting.' },
     ],
+  },
+  {
+    id: 'fine-dining-pricing-table',
+    type: 'custom' as const,
+    subtitle: 'Fine Dining',
+    title: 'Fine Dining Menu Pricing',
+    body: '',
+    render: <FineDiningPricingTable />,
+  },
+  {
+    id: 'experience-comparison',
+    type: 'custom' as const,
+    subtitle: 'Compare',
+    title: 'Full-Service vs Kitchen-Service — What\'s the Difference?',
+    body: '',
+    render: <ExperienceComparisonTable />,
   },
   {
     id: 'catering-pricing',
@@ -243,7 +456,7 @@ const FAQS = [
   { question: 'Do you require a deposit?', answer: 'Yes. A 50% deposit locks your date. Balance is due 3 days before the event. We accept bank transfer (IDR or USD), Wise, and credit card via secure link.' },
   { question: 'What is your cancellation policy?', answer: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date. No-shows forfeit the deposit.' },
   { question: 'Do you charge extra for dietary restrictions?', answer: 'No. Gluten-free, vegan, halal, nut allergies, pregnancy-friendly — we accommodate all dietary needs at no extra cost. Just tell us when booking.' },
-  { question: 'Is there a minimum guest count?', answer: 'Fine dining: 4 guests minimum (2 for romantic dinners). BBQ: 10 guests. Buffet: 30 guests. Villa chef: no minimum, 4-hour minimum booking.' },
+  { question: 'Is there a minimum guest count?', answer: 'Fine dining: 6 guests minimum (2 for romantic dinners by special arrangement). BBQ: 10 guests. Buffet: 30 guests. Villa chef: no minimum, 4-hour minimum booking.' },
   { question: 'Can I get a quote before committing?', answer: 'Absolutely. Use our quote form or message us on WhatsApp. We deliver detailed proposals within 24 hours with full pricing breakdowns.' },
 ]
 

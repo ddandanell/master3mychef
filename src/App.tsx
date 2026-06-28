@@ -108,7 +108,9 @@ const PrivateChefCostBaliPageBlog = lazy(() => import('./pages/blog/PrivateChefC
 const KutaPage = lazy(() => import('./pages/KutaPage'))
 const PrivateChefVsRestaurantPage = lazy(() => import('./pages/PrivateChefVsRestaurantPage'))
 const FamilyKidsMenuPage = lazy(() => import('./pages/FamilyKidsMenuPage'))
-const CorporateEventsCateringBaliPage = lazy(() => import('./pages/CorporateEventsCateringBaliPage'))
+const CorporateEventsCateringPage = lazy(() => import('./pages/CorporateEventsCateringPage'))
+const ProposalDinnerPage = lazy(() => import('./pages/ProposalDinnerPage'))
+const HoneymoonChefPage = lazy(() => import('./pages/HoneymoonChefPage'))
 const CorporateCaseStudiesPage = lazy(() => import('./pages/CorporateCaseStudiesPage'))
 const FoodAllergiesPage = lazy(() => import('./pages/FoodAllergiesPage'))
 const BaliWeddingCateringTimelinePage = lazy(() => import('./pages/BaliWeddingCateringTimelinePage'))
@@ -123,6 +125,7 @@ const VillaBirthdayPartyPage = lazy(() => import('./pages/VillaBirthdayPartyPage
 const YogaRetreatChefPage = lazy(() => import('./pages/YogaRetreatChefPage'))
 const DiningByLocationBaliPage = lazy(() => import('./pages/DiningByLocationBaliPage'))
 const BuffetVsPlatedPage = lazy(() => import('./pages/BuffetVsPlatedPage'))
+const AnniversaryDinnerPage = lazy(() => import('./pages/AnniversaryDinnerPage'))
 const DrySeasonMenuPage = lazy(() => import('./pages/DrySeasonMenuPage'))
 const WetSeasonMenuPage = lazy(() => import('./pages/WetSeasonMenuPage'))
 const FestiveSeasonMenuPage = lazy(() => import('./pages/FestiveSeasonMenuPage'))
@@ -364,9 +367,12 @@ export default function App() {
           <Route path="/blog/romantic-dinner-at-home-bali-private-chef" element={<RomanticDinnerBaliPage />} />
           <Route path="/blog/how-to-plan-villa-birthday-party-bali" element={<VillaBirthdayPartyPage />} />
           <Route path="/blog/yoga-retreat-chef-bali-meal-planning" element={<YogaRetreatChefPage />} />
-          <Route path="/blog/corporate-events-catering-bali-team-dining" element={<CorporateEventsCateringBaliPage />} />
+          <Route path="/blog/corporate-events-catering-bali-team-dining" element={<CorporateEventsCateringPage />} />
           <Route path="/blog/dining-by-location-bali-neighborhood-guide" element={<DiningByLocationBaliPage />} />
           <Route path="/blog/buffet-vs-plated-service-bali" element={<BuffetVsPlatedPage />} />
+          <Route path="/blog/anniversary-dinner-villa-bali" element={<AnniversaryDinnerPage />} />
+          <Route path="/blog/proposal-dinner-bali-private-chef" element={<ProposalDinnerPage />} />
+          <Route path="/blog/honeymoon-private-chef-bali" element={<HoneymoonChefPage />} />
           <Route path="/blog/dry-season-menu-bali" element={<DrySeasonMenuPage />} />
           <Route path="/blog/wet-season-menu-bali" element={<WetSeasonMenuPage />} />
           <Route path="/blog/festive-season-menu-bali" element={<FestiveSeasonMenuPage />} />

@@ -123,6 +123,11 @@ const ROUTES = [
   { path: '/blog/private-chef-denpasar-guide', file: 'blog-private-chef-denpasar-guide.html' },
   { path: '/blog/chef-placement-agency-bali', file: 'blog-chef-placement-agency-bali.html' },
   { path: '/blog/event-staff-bali', file: 'blog-event-staff-bali.html' },
+  { path: '/blog/bartender-hire-bali', file: 'blog-bartender-hire-bali.html' },
+  { path: '/blog/daily-chef-service-bali', file: 'blog-daily-chef-service-bali.html' },
+  { path: '/blog/grazing-table-bali', file: 'blog-grazing-table-bali.html' },
+  { path: '/blog/villa-party-catering-bali', file: 'blog-villa-party-catering-bali.html' },
+  { path: '/blog/babi-guling-catering-bali', file: 'blog-babi-guling-catering-bali.html' },
   { path: '/partner', file: 'partner.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },

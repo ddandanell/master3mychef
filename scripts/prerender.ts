@@ -79,7 +79,7 @@ const ROUTES = [
   { path: '/blog/chef-qualifications-credentials-bali-hiring', file: 'blog-chef-qualifications-credentials-bali-hiring.html' },
   { path: '/blog/wedding-private-chef-bali-planning-guide', file: 'blog-wedding-private-chef-bali-planning-guide.html' },
   { path: '/blog/corporate-events-catering-bali-team-dining', file: 'blog-corporate-events-catering-bali-team-dining.html' },
-  { path: '/blog/romantic-dinner-at-home-bali-private-chef', file: 'blog-romantic-dinner-at-home-bali-private-chef.html' },
+  { path: '/blog/romantic-dinner-bali-private-chef', file: 'blog-romantic-dinner-bali-private-chef.html' },
   { path: '/blog/dining-by-location-bali-neighborhood-guide', file: 'blog-dining-by-location-bali-neighborhood-guide.html' },
   { path: '/blog/buffet-vs-plated-service-bali', file: 'blog-buffet-vs-plated-service-bali.html' },
   { path: '/blog/dry-season-menu-bali', file: 'blog-dry-season-menu-bali.html' },
@@ -102,6 +102,13 @@ const ROUTES = [
   { path: '/blog/villa-staff-bali-hiring-guide', file: 'blog-villa-staff-bali-hiring-guide.html' },
   { path: '/blog/bali-wellness-retreat-catering', file: 'blog-bali-wellness-retreat-catering.html' },
   { path: '/blog/private-chef-jakarta-complete-guide', file: 'blog-private-chef-jakarta-complete-guide.html' },
+  { path: '/blog/christmas-dinner-bali-villa', file: 'blog-christmas-dinner-bali-villa.html' },
+  { path: '/blog/villa-butler-bali-guide', file: 'blog-villa-butler-bali-guide.html' },
+  { path: '/blog/birthday-party-catering-bali', file: 'blog-birthday-party-catering-bali.html' },
+  { path: '/blog/bali-bbq-catering-villa-guide', file: 'blog-bali-bbq-catering-villa-guide.html' },
+  { path: '/blog/private-chef-seminyak-canggu-ubud-comparison', file: 'blog-private-chef-seminyak-canggu-ubud-comparison.html' },
+  { path: '/blog/indonesian-street-food-private-chef-bali', file: 'blog-indonesian-street-food-private-chef-bali.html' },
+  { path: '/blog/bali-wedding-catering-budget-guide', file: 'blog-bali-wedding-catering-budget-guide.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },
   // Journal posts (all 16)

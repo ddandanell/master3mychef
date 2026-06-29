@@ -1,181 +1,201 @@
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
-import { Heart, Sparkles, Clock, Wine } from 'lucide-react'
+import { Heart, Star, Sparkles, UtensilsCrossed } from 'lucide-react'
 
 const SECTIONS = [
   {
     id: 'intro',
     type: 'content' as const,
-    subtitle: 'Romantic Dining in Bali',
-    title: 'A Private Chef Changes Everything About Romantic Dining',
-    body: `<p>A romantic dinner at home differs fundamentally from a restaurant experience. With a private chef, you control every detail — ambiance, pacing, personalization, and privacy. In Bali, where villas offer oceanfront terraces, infinity pools, and tropical gardens, a private chef turns dinner into an unforgettable memory.</p>
-    <p>No crowds. No noise. No rush between courses. Just the two of you, a world-class chef in your villa kitchen, and an evening designed entirely around your relationship. Our <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining tasting menu experiences</a> are the most popular choice for romantic occasions.</p>`,
+    subtitle: 'The Experience',
+    title: 'Why a Private Chef Dinner Is the Most Romantic Thing You Can Do in Bali',
+    body: `<p>Bali has no shortage of romantic restaurants. Clifftop tables at sunset, rice-field views, candlelit terraces with live gamelan drifting through the warm air. They are beautiful. They are also shared with fifty other couples having the exact same evening.</p>
+
+    <p>A private chef dinner at your villa is something entirely different. No other tables. No waitstaff you share with strangers. No printed menu someone else designed. No turning of tables, no background noise of a dining room, no chef whose attention is divided between thirty covers. The pool lit by candles. Your favourite music playing at exactly the right volume. A five-course meal built around what you love.</p>
+
+    <p>This is intimacy as a dining philosophy. The chef is present only to serve you — invisible between courses, there only when needed. The pace of the evening is yours entirely. You can linger over a course for an hour. You can ask for seconds. You can ask the chef to pause and come back. Nothing moves until you want it to.</p>
+
+    <p>The result is an evening that feels like it was designed specifically for the two of you — because it was. Every element, from the flowers on the table to the last dessert, was chosen with your preferences in mind. This is the kind of dinner that becomes one of those evenings you talk about for years.</p>
+
+    <p><strong>Who it is perfect for:</strong> Honeymooners who want a first meal together that sets the tone for the whole trip. Couples celebrating an anniversary. Partners marking Valentine's Day without the crowds and the fixed menus. Anyone who simply wants a perfect Bali evening — no occasion required. If you have ever looked at a restaurant table and wished you could have the whole place to yourselves, this is the answer.</p>
+
+    <p>myCHEF has designed romantic private chef dinners for hundreds of couples across Bali's finest villas — from Seminyak pool villas to Ubud jungle retreats to Uluwatu clifftop hideaways. The setting changes. The intimacy is always the same.</p>`,
   },
   {
-    id: 'advantages',
+    id: 'experience',
+    type: 'content' as const,
+    subtitle: 'The Experience',
+    title: 'What a myCHEF Romantic Dinner Looks Like',
+    body: `<p>The experience begins hours before you sit down. Your chef arrives at the villa three hours ahead of the first course — quietly, without disrupting your afternoon. While you are at the pool or getting ready, the setup happens behind the scenes: candles positioned on the table, fresh flowers arranged, linen pressed and laid, the Champagne chilling in ice. If you have requested rose petals, they appear. If you have asked for a personalised menu card, it is already waiting at your place setting.</p>
+
+    <p>When you arrive at your table, the scene is complete. You were not watching it being assembled; it simply exists, waiting for you.</p>
+
+    <p>Canapés arrive first — two or three small bites that arrive with your Champagne and signal that the evening has officially begun. They are light and conversational, designed to open the palate rather than fill it.</p>
+
+    <p>Then the courses begin. A five-course tasting menu, paced entirely to your rhythm. The chef checks in silently between courses, reading the table. If you are deep in conversation, the next course waits. If you have finished and the moment is right, it arrives. There is no timer. There is no pressure. This is the opposite of a restaurant kitchen running on covers-per-hour logic.</p>
+
+    <p>Course by course: a composed starter, a clean and bright palate course, a main built around your preferences — whether that is a perfectly prepared Wagyu tenderloin, a whole Balinese fish, or a vegetarian centrepiece — followed by a pre-dessert and a final dessert moment.</p>
+
+    <p>That final dessert is where personalisation peaks. A birthday? The chef brings a single-serve cake with a candle. An anniversary? A chocolate plaque with the date. A proposal? The ring arrives with the dessert, and the moment has been rehearsed to the second. Whatever the occasion, the dessert course is the moment the chef has been building toward all evening.</p>
+
+    <p>After dessert, the cleanup begins — and you will barely notice it. Plates disappear, the kitchen is restored, and the chef and team are gone before you are ready to leave the table. What remains is the evening: the candles, the memory, and the sense that tonight was exactly what it was supposed to be.</p>`,
+  },
+  {
+    id: 'packages',
     type: 'features' as const,
-    subtitle: 'Why Private Chef',
-    title: 'What Makes This Better Than a Restaurant',
+    subtitle: 'Packages',
+    title: 'Romantic Dining Packages for Two',
     features: [
-      { icon: Heart, title: 'Complete Privacy', desc: 'Dine in your villa with zero distractions. No neighboring tables, no background noise, no rushing for reservations.' },
-      { icon: Sparkles, title: 'Full Customization', desc: 'Menu tailored to both partners\' preferences, dietary needs, and love story. Every dish designed with you in mind.' },
-      { icon: Clock, title: 'Your Pace', desc: 'Each course timed for conversation and connection — not table turnover. Linger over dessert as long as you like.' },
-      { icon: Wine, title: 'Wine & Beverage', desc: 'Bring your own bottles or ask the chef to source. Curate the perfect pairing for each course without cellar restrictions.' },
+      {
+        icon: Heart,
+        title: 'Candlelit for Two — IDR 1,800K total',
+        desc: 'Our signature romantic dinner for two. Five-course tasting menu with Champagne arrival, rose petal table display, and candlelit setup. The complete intimate experience, beautifully executed.'
+      },
+      {
+        icon: Star,
+        title: 'Grand Romance — IDR 2,800K total',
+        desc: 'Seven courses with wine pairing, dedicated butler service, and a bespoke hand-printed menu card. For the evening when nothing less than the absolute best will do. Includes full table florals.'
+      },
+      {
+        icon: Sparkles,
+        title: 'Sunset Dinner — IDR 2,200K total',
+        desc: "Timed to Bali's golden hour. Four-course outdoor pool setup, cocktail hour at sunset, canapés as the light changes. A cinematic dining experience for couples who want the Bali sky as their backdrop."
+      },
+      {
+        icon: UtensilsCrossed,
+        title: 'Weekend Romance — IDR 4,500K total',
+        desc: 'Three romantic private dinners across a five-night villa stay. Perfect for honeymooners who want multiple special evenings woven through the trip — each one different in theme and menu.'
+      },
     ],
   },
   {
-    id: 'menu-formats',
+    id: 'settings',
     type: 'content' as const,
-    subtitle: 'Menu Options',
-    title: 'Classic Fine Dining vs. Relaxed Bali Format',
-    body: `<p><strong>Classic Fine-Dining Tasting (3.5–4 hours, 5–7 courses):</strong></p>
-    <ul style="margin: 1rem 0; padding-left: 2rem;">
-      <li><strong>Aperitif & Canapés (20 min):</strong> Welcome toast, light appetizers, champagne or cocktail</li>
-      <li><strong>First Course (20 min):</strong> Seafood or vegetable starter — light, elegant, sets the tone</li>
-      <li><strong>Palate Cleanser (10 min, optional):</strong> Citrus sorbet or light intermediate course</li>
-      <li><strong>Main Course (40 min):</strong> Prime protein (filet, lobster, scallops), seasonal sides, refined presentation</li>
-      <li><strong>Cheese Course (20 min, optional):</strong> Artisanal selection with accompaniments</li>
-      <li><strong>Dessert (20 min):</strong> Personalized creation — chocolate, tropical fruit, or a surprise element</li>
-      <li><strong>Coffee & Digestif (20 min):</strong> Handcrafted coffee, petit fours, after-dinner drink</li>
-    </ul>
-    <p><strong>Relaxed Bali Format (2.5–3 hours, 3 courses):</strong></p>
-    <ul style="margin: 1rem 0; padding-left: 2rem;">
-      <li><strong>Sunset Canapés (20 min):</strong> Light passed appetizers by the pool at golden hour</li>
-      <li><strong>Main Course (45 min):</strong> A generous, memorable dish — fresh Bali fish, traditional curry, or modern fusion</li>
-      <li><strong>Dessert & Wine (30+ min):</strong> Shareable dessert (chocolate fondue, tropical fruit creation) with dessert wine — no rush</li>
-    </ul>`,
+    subtitle: 'Settings',
+    title: 'The Best Romantic Dinner Settings at a Bali Villa',
+    body: `<p>One of the advantages of a private chef dinner is that the location is yours to choose. Most Bali villas have multiple outdoor spaces, and the right one makes a significant difference to the atmosphere. Here is what each setting offers:</p>
+
+    <p><strong>Poolside:</strong> The classic Bali romantic setup — and for good reason. Candlelight reflects in the water, creating movement and warmth that no restaurant can replicate. The warm evening breeze, the sound of the pool, the privacy of your own outdoor space. Poolside works in almost every Bali villa and is the most-requested setup for couples.</p>
+
+    <p><strong>Open-air living pavilion (bale):</strong> Traditional Balinese wooden bale structures are the most atmospheric setting available in Bali. Elevated, open on all sides, surrounded by garden — they feel ancient and intimate simultaneously. If your villa has a bale, it is worth using it for at least one special dinner. The acoustics and the sense of enclosure create an almost ceremonial quality to the meal.</p>
+
+    <p><strong>Rooftop terrace:</strong> Best in Canggu and Seminyak villas where rooftop access is common. A star canopy overhead, often panoramic views across the neighbourhood, and complete privacy. The sense of being above everything — above the traffic, above the noise, above the ordinary — makes rooftop dining feel elevated in every sense. Bring a blanket if you are timing it late into the evening.</p>
+
+    <p><strong>Garden:</strong> Ubud jungle villas often have extraordinary garden spaces — fairy lights woven through the trees, the sound of water features and tropical birds, complete seclusion. Garden dining in Ubud has an atmosphere that is impossible to recreate anywhere else. The green canopy above you, the humidity, the sounds of the jungle — it is deeply Balinese.</p>
+
+    <p>When you book with myCHEF, tell us your villa's best outdoor space and whether you want the setup to be a surprise for your partner. Many clients coordinate with us while their partner thinks a regular evening is planned — we work discreetly and are experienced at this kind of coordination.</p>`,
   },
   {
-    id: 'personalization',
+    id: 'personalisation',
     type: 'content' as const,
     subtitle: 'Personal Touches',
-    title: 'How to Personalize Your Romantic Dinner',
-    body: `<p><strong>What to Tell Your Chef:</strong> Share your story — how you met, what makes the occasion special, favorite ingredients or dishes, any meaningful memories tied to food. The more context, the more intentional every detail becomes.</p>
-    <p><strong>Surprise Elements the Chef Can Coordinate:</strong></p>
-    <ul style="margin: 1rem 0; padding-left: 2rem;">
-      <li>"Will you marry me?" written in chocolate on the dessert plate</li>
-      <li>A dish that references a city or restaurant from your relationship history</li>
-      <li>Your favorite ingredient sourced specially for the evening</li>
-      <li>Wine from a region meaningful to you both</li>
-      <li>A milestone year referenced in the menu design (anniversary number, birth year)</li>
-    </ul>
-    <p><strong>Ambiance Coordination:</strong> The chef manages food; you manage décor. Coordinate: candle placement (chef needs working light), table setup (chef needs serving space), music timing (sync playlist with course pacing), and whether you want the chef visible (tableside plating) or discreet (serves and withdraws).</p>`,
+    title: 'How to Make It Truly Yours',
+    body: `<p>The difference between a beautiful dinner and an unforgettable one is usually in the specific details that signal: this was made for you. myCHEF offers a range of personalisation options that go beyond the menu.</p>
+
+    <p><strong>Menu card:</strong> A hand-printed or digitally designed menu card with your names, the date, and the evening's courses. Small, but the kind of thing couples keep. An anniversary message can be printed on the reverse.</p>
+
+    <p><strong>Table decor:</strong> Rose petals arranged on the table or around the pool edge. Photos printed and framed as table centrepiece decor — your first trip together, your engagement photo, an image that means something specific to you. The chef can collect these from you the day before and arrange them as part of the setup.</p>
+
+    <p><strong>Bespoke menu element:</strong> Your partner's favourite dish, incorporated as a course or variation. You know the dish that means the most — tell us, and the chef builds the menu around it.</p>
+
+    <p><strong>The name in petals:</strong> A name or initials spelled out in rose petals on the table or pool steps. Simple, but visually striking and deeply personal.</p>
+
+    <p><strong>Custom cocktail:</strong> A signature cocktail created and named for the couple — served as the cocktail hour drink. Something to order again someday and remember.</p>
+
+    <p><strong>Proposal dinner add-on:</strong> If this evening ends with a question, myCHEF offers a full proposal coordination service: the ring arriving with dessert, photographer referral for a candid capture of the moment, moment coordination with the chef, and optional video documentation. Tell us in advance — we have done this many times and know how to make it perfect. See our full <a href="/blog/proposal-dinner-bali-private-chef" class="text-[#C5A028] hover:underline font-medium">proposal dinner page</a> for details.</p>`,
   },
   {
-    id: 'bali-settings',
-    type: 'content' as const,
-    subtitle: 'Bali Venue Advantages',
-    title: 'Best Villa Settings for a Romantic Dinner',
-    body: `<p><strong>Oceanfront Villas (Seminyak, Jimbaran, Uluwatu):</strong> Aperitifs at sunset, dinner under stars with ocean horizon. Reserve the terrace table facing west for golden-hour cocktails, then move to a candlelit dinner position as the sky darkens. Chef sets up in the villa kitchen; service happens poolside. See our guides for <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu clifftop villas</a> and <a href="/locations/jimbaran" class="text-[#C5A028] hover:underline font-medium">Jimbaran beachside dining</a>.</p>
-    <p><strong>Garden Villas (Ubud, Canggu):</strong> Tropical flowers, lantern lighting, and natural seclusion create intimate romance. <a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud's jungle and rice field villas</a> offer added magic of rice terrace or jungle backdrop. Farm-to-table Balinese menus work beautifully here.</p>
-    <p><strong>Pool Terrace Villas (Anywhere):</strong> Candlelit reflection on the water creates naturally romantic ambiance. A floating floral arrangement in the pool requires zero extra investment and looks extraordinary in photos.</p>
-    <p><strong>Seasonal Note:</strong> Dry season (April–October) allows fully outdoor setup. Rainy season (November–March) plan for a covered terrace or indoor-with-garden-views arrangement — the chef adapts either way.</p>`,
-  },
-  {
-    id: 'cost',
-    type: 'content' as const,
-    subtitle: 'Pricing',
-    title: 'Romantic Dinner for 2: Cost in Bali',
-    body: `<p><strong>Base Pricing (per dinner for 2):</strong></p>
-    <ul style="margin: 1rem 0; padding-left: 2rem;">
-      <li>Chef Service (3–4 hours): IDR 2M–3.2M</li>
-      <li>Premium Ingredients (2 people): IDR 1M–2.4M</li>
-      <li>Wine or Beverage Allowance: IDR 500K–1.3M</li>
-    </ul>
-    <p><strong>Total: IDR 3.5M–7M</strong> depending on menu complexity and ingredient sourcing. Our <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">full pricing guide</a> has a complete breakdown of all cost components.</p>
-    <p><strong>Optional Add-Ons:</strong></p>
-    <ul style="margin: 1rem 0; padding-left: 2rem;">
-      <li>Wine Pairing (sommelier-curated per course): +IDR 500K–960K</li>
-      <li>Multi-Course Tasting Upgrade (7+ courses, premium ingredients): +IDR 800K–1.6M</li>
-      <li>Specialty Ingredients (truffle, premium Bali lobster, imported wagyu): +IDR 500K–2M depending on selection</li>
-      <li>Proposal / surprise element coordination: No extra charge — discuss with chef at booking</li>
-    </ul>
-    <p><strong>Booking Timeline:</strong> 2 weeks ahead is ideal for ingredient sourcing and menu planning. 1 week is possible for most menus. Same-day requests for specialty ingredients may not be achievable.</p>`,
+    id: 'faq',
+    type: 'faq' as const,
+    subtitle: 'FAQ',
+    title: 'Frequently Asked Questions',
   },
   {
     id: 'cta',
     type: 'cta' as const,
     subtitle: 'Book Your Evening',
-    title: 'Design Your Romantic Dinner in Bali',
-    body: 'Tell us your date, villa location, and the story behind the occasion. We match you with the right chef to make it unforgettable.',
-    primaryAction: { label: 'Contact Our Team', href: '/contact' },
-    secondaryAction: { label: 'Browse Chefs', href: '/chefs' },
+    title: 'Create Your Romantic Dinner',
+    body: 'Tell us your villa, date, and any special touches — we handle everything else.',
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20romantic%20private%20chef%20dinner%20at%20my%20Bali%20villa.' },
+    secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]
 
 const FAQS = [
   {
-    question: 'How far in advance should I book for a romantic dinner?',
-    answer: '2 weeks is ideal — it gives the chef time to source premium ingredients and design a personalized menu. 1 week is possible for most menus. If you want specialty items (imported wagyu, Bali lobster, specific wine) plan 3+ weeks ahead.',
+    question: 'Is this different from your Proposal Dinner package?',
+    answer: 'The Romantic Dinner is our general couples experience. The Proposal Dinner is a specialist package with proposal coordination built in. Both share the same high level of chef service.',
   },
   {
-    question: 'Can I keep the menu a surprise for my partner?',
-    answer: 'Absolutely. Book alone, share any dietary restrictions or allergies for your partner, and let the chef design a surprise menu around the occasion. The chef will reveal each course at the table.',
+    question: 'Can I keep the setup a surprise for my partner?',
+    answer: 'Yes — many clients coordinate with us while their partner thinks it is a regular evening. We work discreetly and are used to this.',
   },
   {
-    question: 'Does the chef stay during the entire dinner?',
-    answer: 'Yes — the chef prepares in your villa kitchen and is available throughout service to plate and time each course. You can request they stay discreet between courses or engage tableside. Discuss your preference at booking.',
+    question: 'Can you coordinate a photographer?',
+    answer: 'Yes, we can refer our preferred Bali photographers who specialise in candid romantic moments. Quote separately.',
   },
   {
-    question: 'What if my partner has dietary restrictions I forgot to mention?',
-    answer: 'Mention all known restrictions at booking. If something comes up day-of, communicate with the chef immediately — a skilled private chef can adapt within the available ingredients in most cases.',
+    question: 'What is included in the package price?',
+    answer: 'Chef, all food, table setup (candles, flowers, linen), serving equipment, and cleanup. Champagne and wine are client-supplied or quoted separately.',
   },
   {
-    question: 'Can the chef arrange a marriage proposal surprise?',
-    answer: 'Yes, and many of our chefs have orchestrated proposals. Share the plan confidentially — the chef will time the dessert reveal, coordinate with villa staff, and keep the surprise secure. This is one of the most common requests we receive.',
+    question: 'How long does the dinner last?',
+    answer: 'Typically 2.5–3 hours for a 5-course menu. We pace it entirely to your rhythm — never rushed.',
   },
   {
-    question: 'Is wine included or do I need to buy it separately?',
-    answer: 'Typically separate. You can bring your own bottles (no corkage fee with a private chef), or the chef can source wine and add it to the ingredient budget. For curated pairings per course, request this at booking and the chef builds a pairing list for your approval.',
+    question: 'Can you do this for more than two people?',
+    answer: 'Yes — the romantic dinner format works for groups of 4–8 for couples celebrating together, for example.',
   },
 ]
 
 const RELATED_PAGES = [
-  { label: 'Browse Chefs', href: '/chefs', desc: 'Meet private chefs who specialize in intimate dining.' },
-  { label: 'Fine Dining Guide', href: '/blog/fine-dining-guide', desc: 'Tasting menus, courses, and pricing explained.' },
-  { label: 'Private Chef Cost', href: '/blog/private-chef-cost-bali', desc: 'Full pricing breakdown for private chefs in Bali.' },
-  { label: 'Event Planning', href: '/blog/event-planning-bali', desc: 'Planning for larger celebrations and events.' },
-  { label: 'Contact Us', href: '/contact', desc: 'Tell us about your occasion and we\'ll find the right chef.' },
+  { label: 'Proposal Dinner Bali', href: '/blog/proposal-dinner-bali-private-chef', desc: 'Full proposal coordination with private chef dinner.' },
+  { label: 'Anniversary Dinner', href: '/blog/anniversary-dinner-villa-bali', desc: 'Private chef anniversary dinner at your Bali villa.' },
+  { label: 'Honeymoon Chef Bali', href: '/blog/honeymoon-private-chef-bali', desc: 'Private chef service for honeymooners in Bali.' },
+  { label: 'Fine Dining Bali', href: '/fine-dining/private-chef-bali', desc: 'myCHEF fine dining private chef experience in Bali.' },
+  { label: 'Floating Breakfast Bali', href: '/blog/floating-breakfast-bali', desc: 'The iconic Bali floating breakfast at your villa pool.' },
+  { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF packages and services.' },
 ]
 
 export default function RomanticDinnerBaliPage() {
   return (
     <PremiumPage
-      slug="blog/romantic-dinner-at-home-bali-private-chef"
-      title="Romantic Dinner at Home in Bali: Private Chef Experience"
-      description="Plan an unforgettable romantic dinner in your Bali villa with a private chef. Tasting menus, personalization ideas, and pricing in IDR."
-      seoTitle="Romantic Dinner Bali | Private Chef at Your Villa"
-      seoDescription="Plan an unforgettable romantic dinner in your Bali villa with a private chef. Tasting menus, personalization ideas, and pricing in IDR."
-      canonicalUrl="https://mychef.id/blog/romantic-dinner-at-home-bali-private-chef"
-      h1="Romantic Dinner at Home in Bali"
-      subtitle="Private Chef Experience for Two"
-      heroImage="/generated/mychef-misc-bali-hub-fine-dining.webp"
-      heroImageAlt="Romantic dinner table set for two in Bali villa with candlelight"
-      ogImage="https://mychef.id/generated/mychef-misc-bali-hub-fine-dining.webp"
-      keywords={['romantic dinner bali', 'private chef romantic dinner bali', 'bali villa dinner for two']}
-      highlights={['Complete Privacy', 'Custom Menus', 'Bali Settings', 'Pricing Guide']}
+      slug="blog/romantic-dinner-bali-private-chef"
+      title="Romantic Dinner Bali: Private Chef at Your Villa"
+      description="The most romantic dinner in Bali — your own private chef, candles by the pool, bespoke menu for two. Honeymoon, anniversary, or just because. From IDR 1,800K for two."
+      seoTitle="Romantic Dinner Bali | Private Chef Villa Dinner | myCHEF"
+      seoDescription="The most romantic dinner in Bali — your own private chef, candles by the pool, bespoke menu for two. Honeymoon, anniversary, or just because. From IDR 1,800K for two."
+      canonicalUrl="https://mychef.id/blog/romantic-dinner-bali-private-chef"
+      h1="Romantic Dinner Bali: Private Chef at Your Villa"
+      subtitle="The Most Romantic Dining Experience in Bali — Your Own Private Chef"
+      heroImage="/generated/mychef-experience-bali-luna-gallery-1.webp"
+      heroImageAlt="Romantic candlelit dinner for two at a Bali villa pool — private chef by myCHEF"
+      ogImage="https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp"
+      keywords={['romantic dinner bali', 'romantic dinner bali villa', 'private chef romantic dinner bali', 'bali romantic dinner for two', 'most romantic dinner bali']}
+      highlights={['The Experience', 'Menu Ideas', 'Settings', 'FAQ']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
-        breadcrumbSchema('Romantic Dinner Bali', 'https://mychef.id/blog/romantic-dinner-at-home-bali-private-chef', 'Blog', 'https://mychef.id/blog'),
-        faqPageSchema(FAQS),
+        breadcrumbSchema('Romantic Dinner Bali', 'https://mychef.id/blog/romantic-dinner-bali-private-chef', 'Blog', 'https://mychef.id/blog'),
+        faqPageSchema(FAQS.map(f => ({ question: f.question, answer: f.answer }))),
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
-          headline: 'Romantic Dinner at Home in Bali: Private Chef Experience',
-          description: 'Plan an unforgettable romantic dinner in your Bali villa with a private chef. Tasting menus, personalization ideas, and pricing in IDR.',
+          headline: 'Romantic Dinner Bali: Private Chef at Your Villa',
+          description: 'The most romantic dinner in Bali — your own private chef, candles by the pool, bespoke menu for two. Honeymoon, anniversary, or just because.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
-          datePublished: '2025-07-01',
-          dateModified: new Date().toISOString().split('T')[0],
-          image: 'https://mychef.id/generated/mychef-misc-bali-hub-fine-dining.webp',
-          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/romantic-dinner-at-home-bali-private-chef' },
-          url: 'https://mychef.id/blog/romantic-dinner-at-home-bali-private-chef',
+          datePublished: '2026-06-29',
+          dateModified: '2026-06-29',
+          image: 'https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/romantic-dinner-bali-private-chef' },
+          url: 'https://mychef.id/blog/romantic-dinner-bali-private-chef',
+          wordCount: 1400,
+          keywords: 'romantic dinner bali, romantic dinner bali villa, private chef romantic dinner bali, bali romantic dinner for two',
         },
       ]}
-      ctaText="Book Your Romantic Dinner"
-      ctaSubtext="Tell us your date and occasion — we find the perfect chef for your evening."
+      ctaText="Create Your Romantic Dinner"
+      ctaSubtext="Tell us your villa, date, and any special touches — we handle everything else."
     />
   )
 }

@@ -134,7 +134,7 @@ const FAQS = [
   {
     question: 'Can you do weekly or monthly household chef arrangements?',
     answer:
-      'Yes. We offer ongoing household chef arrangements from a minimum of one month. These cover 3–5 service days per week depending on your requirements. The arrangement includes the chef fee and standard ingredients; specialty or imported items are charged at cost. Contact us via WhatsApp to discuss your household's specific needs.',
+      "Yes. We offer ongoing household chef arrangements from a minimum of one month. These cover 3–5 service days per week depending on your requirements. The arrangement includes the chef fee and standard ingredients; specialty or imported items are charged at cost. Contact us via WhatsApp to discuss your household's specific needs.",
   },
   {
     question: 'How do you handle Jakarta traffic for chef logistics?',

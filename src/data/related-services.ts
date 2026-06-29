@@ -36,7 +36,7 @@ export const CATERING_RELATED: RelatedService[] = [
   {
     title: 'BBQ Catering',
     description: 'Live BBQ station with premium meats, seafood, and sides. Perfect for poolside gatherings.',
-    path: '/catering/bbq',
+    path: '/catering/bbq-catering',
     category: 'Catering'
   },
   {
@@ -48,13 +48,13 @@ export const CATERING_RELATED: RelatedService[] = [
   {
     title: 'Villa Catering',
     description: 'Comprehensive catering for villa stays. Breakfast, lunch, dinner, and special occasions.',
-    path: '/catering/villa',
+    path: '/catering/villa-catering',
     category: 'Catering'
   },
   {
     title: 'Corporate Catering',
     description: 'Professional catering for business retreats, team offsites, and corporate events.',
-    path: '/catering/corporate',
+    path: '/catering/corporate-catering',
     category: 'Catering'
   }
 ]
@@ -75,7 +75,7 @@ export const EVENTS_RELATED: RelatedService[] = [
   {
     title: 'Corporate Events',
     description: 'Professional event management for conferences, team buildings, and business celebrations.',
-    path: '/events/corporate',
+    path: '/events/corporate-events',
     category: 'Events'
   },
   {

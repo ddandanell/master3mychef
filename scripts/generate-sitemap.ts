@@ -49,6 +49,12 @@ const UNIQUE_URLS = FILTERED_URLS.filter((url) => {
 });
 
 function generateSitemap(): string {
+  // TODO: Improve lastmod by using actual content dates where available.
+  // SITEMAP entries carry a `date` field for blog posts, guides, journal posts,
+  // and landing pages (e.g. entry.date). JOURNAL_POSTS also expose post.date.
+  // Ideal approach: pass the date through the URL pipeline and use it here as
+  // lastmod, falling back to the build date for pages without a content date.
+  // Keeping the build date for now is safe and avoids stale-date issues.
   const now = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   
   const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq }) => `  <url>

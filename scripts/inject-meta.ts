@@ -111,6 +111,36 @@ function getOgImage(path: string): string {
   return '/og-image.webp'
 }
 
+function getOgImageAlt(path: string): string {
+  if (path === '/') {
+    return 'myCHEF private chef service in Bali — villa dining and catering'
+  }
+  if (path.startsWith('/fine-dining')) {
+    return 'myCHEF fine dining private chef experience in Bali'
+  }
+  if (path.startsWith('/catering')) {
+    return 'myCHEF villa catering service in Bali'
+  }
+  if (path.startsWith('/events')) {
+    return 'myCHEF event catering and private chef in Bali'
+  }
+  if (path.startsWith('/staffing')) {
+    return 'myCHEF hospitality staffing and chef placement in Bali'
+  }
+  if (path.startsWith('/locations/') || path.startsWith('/private-chef/')) {
+    const location = path.split('/').pop() || 'Bali'
+    const prettyLocation = location.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+    return `myCHEF private chef in ${prettyLocation}`
+  }
+  if (path.startsWith('/in-villa-service')) {
+    return 'myCHEF in-villa service staff for Bali villas'
+  }
+  if (path.startsWith('/blog/') || path.startsWith('/journal/')) {
+    return 'myCHEF private chef and villa dining experience in Bali'
+  }
+  return 'myCHEF — private chef plating a fine dining course in a Bali villa'
+}
+
 function escapeHtml(text: string): string {
   return text
     .replace(/&/g, '&amp;')
@@ -210,6 +240,12 @@ function injectMeta(html: string, path: string, title: string, description: stri
   html = html.replace(
     /<meta property="og:image" content=".*?"\s*\/?>/,
     `<meta property="og:image" content="${ogImage}" />`
+  )
+
+  // OG image alt
+  html = html.replace(
+    /<meta property="og:image:alt" content=".*?"\s*\/?>/,
+    `<meta property="og:image:alt" content="${escapeHtml(getOgImageAlt(path))}" />`
   )
 
   // Twitter title

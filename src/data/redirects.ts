@@ -171,15 +171,6 @@ export const REDIRECTS: Redirect[] = [
   // --- Duplicate blog content: /blog/chef-hiring-guide is identical to /blog/chef-qualifications-credentials-bali-hiring ---
   { from: '/blog/chef-hiring-guide', to: '/blog/chef-qualifications-credentials-bali-hiring', reason: 'Duplicate content: identical to chef-qualifications-credentials-bali-hiring. 301 to canonical.' },
 
-  // --- GA4 (25 May–21 Jun 2026): live URLs hitting the 404 page. Map each to its real equivalent.
-  { from: '/romantic-dinner', to: '/fine-dining/romantic-dinner', reason: 'GA4 404 (8 views). Bare URL → real romantic dinner page.' },
-  { from: '/corporate-events-catering-bali', to: '/blog/corporate-events-catering-bali', reason: 'GA4 404 (4 views). Page lives under /blog/.' },
-  { from: '/events/weddings-bali', to: '/events/weddings', reason: 'GA4 404 (2 views). Old slug → canonical weddings page.' },
-  { from: '/chef-placement-bali', to: '/staffing/private-chef-placement', reason: 'GA4 404 (2 views). Old slug → placement page.' },
-  { from: '/live-in-chef-bali', to: '/staffing/live-in-chef', reason: 'GA4 404 (2 views). Old slug → live-in chef page.' },
-  { from: '/retreat-catering-bali', to: '/catering/retreat-catering', reason: 'GA4 404 (2 views). Old slug → retreat catering page.' },
-  { from: '/getting-started', to: '/help/getting-started', reason: 'GA4 404 (2 views). Bare URL → help getting-started page.' },
-
   // --- Locations hub links without a dedicated /locations page → real pages (fix 404s) ---
   // The /locations hub iterates every city in LOCATIONS and links to /locations/[slug],
   // but only 12 have a page. Redirect the rest to a real, relevant page so none 404.
@@ -243,8 +234,6 @@ export const REDIRECTS: Redirect[] = [
   { from: '/private-chef-pondok-indah', to: '/locations/jakarta', reason: 'Jakarta (Pondok Indah) — real Jakarta hub page (mirrors /locations/pondok-indah).' },
 
   // --- Sitemap audit 2026-06-27: thin/duplicate blog stubs → canonical full articles ---
-  { from: '/blog/private-chef-bali-cost-breakdown-2026', to: '/blog/private-chef-cost-bali', reason: 'Thin stub (18w) duplicating the full cost guide. Redirect to canonical /blog/private-chef-cost-bali.' },
-  { from: '/blog/wedding-rehearsal-dinner-bali', to: '/journal/rehearsal-dinner-planning-bali', reason: 'Thin stub (15w) covered by the full journal article on rehearsal dinner planning.' },
   { from: '/blog/yoga-retreat-chef-bali-meal-planning', to: '/journal/yoga-retreat-meal-planning-bali', reason: 'Thin stub (16w) covered by the full journal article on yoga retreat meal planning.' },
 ]
 

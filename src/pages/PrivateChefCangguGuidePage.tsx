@@ -6,131 +6,134 @@ const SECTIONS: PageSection[] = [
     id: 'intro',
     type: 'content',
     subtitle: 'Private Chef Canggu',
-    title: "Why Canggu's Villa Scene Makes It the Best Place for a Private Chef in Bali",
-    body: `<p>Canggu is Bali's most dynamic neighbourhood — a loose constellation of surf beaches, rice field lanes, and design-forward villa developments that has become the island's leading destination for long-stay travellers, digital nomads, and villa holidaymakers. It is also, by a significant margin, myCHEF's most requested location for private chef services.</p>
-    <p>The reason is straightforward: Canggu's villa stock is exceptional. Architect-designed homes with open-plan kitchens, plunge pools, and shaded outdoor dining areas have been built to a higher specification here than almost anywhere else on the island. These spaces are made for entertaining — and a <a href="/services" class="text-[#C5A028] hover:underline font-medium">private chef</a> is the natural complement to a villa this good.</p>
-    <p>Beyond the physical environment, Canggu guests tend to have strong food preferences. The neighbourhood's café culture, internationally sourced ingredients, and health-conscious community have shaped a dining scene that expects quality, variety, and authenticity. myCHEF chefs in Canggu reflect this — they are skilled across Indonesian, Western, and fusion cuisines, source from the area's best suppliers, and bring the kind of execution you expect from a high-end restaurant, right to your villa table.</p>`,
+    title: 'Private Chef Canggu: Villa Dining, Surf Dinners & Party Catering',
+    body: `<p>Canggu is Bali\'s most energetic villa area — a dense mix of boutique surf villas, digital nomad co-living spaces, and luxury private compounds spread across the black-sand coastal strip from Batu Bolong to Seseh. A private chef in Canggu means flexible, casual-cool dining that fits the rhythm of a surf and lifestyle holiday.</p>
+    <p>myCHEF provides private chef services across the full Canggu area. Whether you are hosting a bachelor party dinner at a 10-bedroom villa in Berawa, a casual group breakfast after a morning surf session, or a low-key anniversary dinner for two at your Batu Bolong hideaway, we can build the experience around you.</p>
+    <p>Canggu guests tend to want food that is relaxed but high quality — elevated Indonesian street food, live fire cooking, fresh seafood, and sharing plates rather than formal plated service.</p>`,
   },
   {
     id: 'canggu-cuisine',
     type: 'content',
-    subtitle: 'Canggu Cuisine',
-    title: 'Surf-Inspired Menus, Indonesian Street Food, and International Dining in Your Villa',
-    body: `<p>Canggu's food culture is defined by contrast: world-class smoothie bowls sit alongside late-night nasi campur; Michelin-trained chefs cook next to warung aunties. A private chef in Canggu can draw on this full spectrum — the question is simply what kind of dining experience you want.</p>
-    <p><strong>Casual surf culture:</strong> Relaxed, generous spreads of fresh fish tacos, grilled whole barramundi, poke bowls loaded with local tuna, and tropical fruit platters. This style suits villa lunch parties, post-surf dinners, and big group gatherings where the vibe matters as much as the food.</p>
-    <p><strong>Indonesian street food elevated:</strong> myCHEF chefs are specialists in bringing Bali's street food classics — babi guling, sate lilit, nasi campur, mie goreng, jimbaran-style grilled seafood — to a private villa setting with the hygiene, quality, and presentation that street vendors cannot offer. Pair this with our <a href="/blog/indonesian-street-food-private-chef-bali" class="text-[#C5A028] hover:underline font-medium">Indonesian street food guide</a> to build your ideal menu.</p>
-    <p><strong>Clean eating and plant-based:</strong> Canggu's wellness community has made organic and plant-based dining the norm. Vibrant vegan spreads, acai and superfood breakfasts, raw desserts, and dairy-free adaptations of classic dishes are all within scope for a myCHEF chef.</p>
-    <p><strong>International fine dining:</strong> For more formal evenings — anniversaries, proposals, corporate dinners — our chefs deliver European tasting menus, Japanese-inspired omakase, and Mediterranean feasts with the plating and technique of a fine dining kitchen.</p>`,
+    subtitle: 'Food Culture',
+    title: 'The Canggu Palate: Bold Flavours, Sharing Plates & Live-Fire Cooking',
+    body: `<p>Canggu\'s food scene has shaped a distinct private dining style:</p>
+    <p><strong>Indonesian street food elevated:</strong> Nasi goreng, mie goreng, satay, babi guling — executed with chef-quality technique and premium ingredients.</p>
+    <p><strong>Live-fire and BBQ:</strong> Many Canggu villas have outdoor kitchens or BBQ setups. A myCHEF chef working a live fire is one of the best private dining formats for large casual groups. See our <a href="/blog/bali-bbq-catering-villa-guide" class="text-[#C5A028] hover:underline font-medium">Bali BBQ catering guide</a>.</p>
+    <p><strong>Fresh seafood:</strong> Canggu\'s proximity to the Jimbaran and Kedonganan fish markets means fresh catch is available daily.</p>
+    <p><strong>Long breakfast spreads:</strong> A private chef breakfast — an extended spread of tropical fruits, freshly squeezed juices, eggs made to order, avocado toast, and local pastries — sets the tone for the whole day. See our <a href="/blog/floating-breakfast-bali" class="text-[#C5A028] hover:underline font-medium">floating breakfast guide</a>.</p>`,
   },
   {
     id: 'villa-areas',
     type: 'content',
-    subtitle: 'Canggu Villa Areas',
-    title: 'Berawa, Pererenan, Batu Bolong, Echo Beach: Where We Serve in Canggu',
-    body: `<p>Canggu covers a large area of Bali's southwest coast, and the villa market spans several distinct sub-villages with different characters. myCHEF private chefs serve all of them:</p>
-    <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>Batu Bolong:</strong> The heart of Canggu — dense with cafés, surf breaks, and the famous Batu Bolong beach. Villas here range from mid-market to high-end, many with rooftop terraces and plunge pools. Excellent for villa dinner parties.</li>
-      <li><strong>Berawa:</strong> Quieter and slightly more upscale than Batu Bolong, with rice field villas and beach-adjacent compounds. Popular with families and longer-stay guests. Strong demand for multi-day chef arrangements.</li>
-      <li><strong>Pererenan:</strong> The quietest and most verdant corner of Canggu, increasingly favoured by design-conscious travellers seeking boutique villa experiences away from the Canggu crowds. Many new high-spec villa builds here.</li>
-      <li><strong>Echo Beach & Seseh:</strong> Further north along the coast, with black sand beaches and a more local, raw feel. Villas here tend to be larger and more spread out. Popular for weddings and group events.</li>
-      <li><strong>Tibubeneng & Umalas:</strong> Inland from the beach strip, with rice field villas and a local village atmosphere. Increasingly popular as central Canggu becomes more crowded.</li>
-    </ul>
-    <p style="margin-top:0.75rem;">For more details on private chef services across this area, visit our <a href="/private-chef/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu private chef page</a> and <a href="/locations/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu location guide</a>.</p>`,
+    subtitle: 'Coverage Area',
+    title: 'Canggu Villa Areas: Batu Bolong, Berawa, Pererenan, Echo Beach & More',
+    body: `<p>myCHEF covers the full Canggu strip:</p>
+    <p><strong>Batu Bolong:</strong> The original Canggu core — surfshops, cafes, and a dense cluster of villa compounds.</p>
+    <p><strong>Berawa:</strong> Canggu\'s most densely developed villa zone, home of Finns Beach Club and a major hub for bachelor parties.</p>
+    <p><strong>Pererenan:</strong> The quieter northern end of the Canggu strip, increasingly popular with longer-stay guests and families.</p>
+    <p><strong>Echo Beach:</strong> The surf-focused end of Canggu, popular with extended-stay surfers and digital nomads.</p>
+    <p><strong>Seseh and Cemagi:</strong> The far northern reaches, where luxury villas sit in relative isolation between the beach and rice fields.</p>
+    <p><strong>Tibubeneng and Umalas:</strong> The inland areas east of Canggu, popular with expat families.</p>`,
   },
   {
     id: 'group-occasions',
     type: 'content',
     subtitle: 'Occasions',
-    title: 'Private Chef for Every Canggu Occasion — From Surf Dinners to Villa Weddings',
-    body: `<p>Canggu villas host an enormous range of occasions, and myCHEF private chefs are equipped for all of them. Here are the most common booking types we fulfil in this area:</p>
-    <p><strong>Everyday villa dining:</strong> Many guests book a chef for multiple nights during their stay — a way to eat well every evening without the effort of restaurant reservations or the noise and crowds of Canggu's main dining strip. This is particularly popular for families with young children and guests on extended stays.</p>
-    <p><strong>Bachelor and bachelorette parties:</strong> Canggu is one of Bali's top hen and stag party destinations. A private chef transforms villa party catering from pizza delivery to a proper celebration feast — fire grills, cocktail-paired menus, and service staff to match. See our <a href="/blog/bachelor-party-bali-private-chef" class="text-[#C5A028] hover:underline font-medium">bachelor party chef guide</a> and <a href="/blog/bachelorette-party-bali-catering" class="text-[#C5A028] hover:underline font-medium">bachelorette catering guide</a>.</p>
-    <p><strong>Birthday dinners and villa parties:</strong> From intimate birthday dinners for six to villa parties for twenty-five, our chefs handle the full range. We can also provide <a href="/services/waiters" class="text-[#C5A028] hover:underline font-medium">waitstaff</a> and <a href="/services/bartenders" class="text-[#C5A028] hover:underline font-medium">bartenders</a> for fully staffed events.</p>
-    <p><strong>Romantic and couple dining:</strong> Honeymoon dinners, anniversary celebrations, and surprise proposal setups. Our chefs can coordinate candles, flowers, and personalised menus for couples-only experiences. Visit our <a href="/blog/romantic-dinner-bali-private-chef" class="text-[#C5A028] hover:underline font-medium">romantic dinner guide</a> for inspiration.</p>
-    <p><strong>Corporate and wellness groups:</strong> Digital nomad teams, brand retreat groups, and wellness company offsites frequently base themselves in Canggu and want a higher level of catering than local restaurants provide. We offer corporate packages with dedicated chef and staffing teams. See our <a href="/blog/corporate-events-catering-bali-team-dining" class="text-[#C5A028] hover:underline font-medium">corporate catering guide</a>.</p>`,
+    title: 'Private Chef for Canggu Occasions: Bachelor Parties, Birthdays & Group Dinners',
+    body: `<p>Canggu is Bali\'s premier destination for group villa celebrations:</p>
+    <p><strong>Bachelor and bachelorette parties:</strong> A private chef dinner for 15-30 guests anchors the villa night. See our <a href="/blog/bachelor-party-bali-private-chef" class="text-[#C5A028] hover:underline font-medium">bachelor party guide</a> and <a href="/blog/bachelorette-party-bali-catering" class="text-[#C5A028] hover:underline font-medium">bachelorette party guide</a>.</p>
+    <p><strong>Birthday parties:</strong> From intimate villa dinners for 6 to full villa party catering for 50+. See our <a href="/blog/birthday-party-catering-bali" class="text-[#C5A028] hover:underline font-medium">birthday party catering guide</a>.</p>
+    <p><strong>Corporate retreats:</strong> myCHEF provides chef services for corporate villa stays. See our <a href="/blog/corporate-events-catering-bali-team-dining" class="text-[#C5A028] hover:underline font-medium">corporate catering guide</a>.</p>
+    <p><strong>Family villa weeks:</strong> Multi-generational families often want daily chef service. Our <a href="/blog/household-chef-bali-hiring-guide" class="text-[#C5A028] hover:underline font-medium">household chef</a> arrangement is ideal.</p>`,
   },
   {
     id: 'pricing',
     type: 'content',
     subtitle: 'Pricing',
-    title: 'Private Chef Costs in Canggu — What to Expect',
-    body: `<p>Private chef pricing in Canggu is consistent with the wider Bali market. Rates are determined by menu complexity, number of courses, group size, and the experience level of the chef assigned. Indicative per-person ranges (excluding beverages):</p>
+    title: 'Private Chef Canggu Pricing',
+    body: `<p>Canggu pricing follows the standard myCHEF structure:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>Casual dining (2–3 courses):</strong> IDR 550,000 – 750,000 per person. Relaxed villa cooking, fresh local and imported ingredients, ideal for groups and everyday villa meals.</li>
-      <li><strong>Premium dining (4–5 courses):</strong> IDR 750,000 – 1,100,000 per person. Restaurant-quality plating and service, broader menu options, excellent for celebrations.</li>
-      <li><strong>Fine dining / tasting menus (6–8 courses):</strong> IDR 1,100,000 – 1,500,000 per person. Full mise en place service, premium ingredients, refined technique.</li>
+      <li><strong>Dinner service (3-4 courses, 2-8 guests):</strong> From IDR 550,000 – 800,000 per person</li>
+      <li><strong>Group dinner (10-30 guests, sharing format):</strong> From IDR 450,000 – 700,000 per person</li>
+      <li><strong>BBQ / live fire setup:</strong> From IDR 500,000 – 750,000 per person</li>
+      <li><strong>Floating breakfast:</strong> IDR 350,000 – 550,000 per person</li>
     </ul>
-    <p style="margin-top:0.75rem;">Canggu villas with well-equipped kitchens and good equipment rarely incur additional kitchen fees. Optional extras include wine pairing, cocktail service, and dedicated staffing. Read our full <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">Bali private chef cost guide</a> for a detailed breakdown, or try the <a href="/calculator" class="text-[#C5A028] hover:underline font-medium">pricing calculator</a> to estimate your booking.</p>`,
-  },
-  {
-    id: 'booking',
-    type: 'content',
-    subtitle: 'How to Book',
-    title: 'How to Book a Private Chef in Canggu',
-    body: `<p>Booking a private chef in Canggu through myCHEF is quick and straightforward:</p>
-    <p><strong>1. Send an enquiry.</strong> WhatsApp us or use the contact form. Share your villa address or Canggu neighbourhood, date, number of guests, and any food preferences or restrictions. Last-minute enquiries are welcome — we often have availability with 24–48 hours notice.</p>
-    <p><strong>2. Get matched with a chef.</strong> We confirm a chef who fits your cuisine style and is available for your date. You can also <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">browse chef profiles</a> and request a specific chef.</p>
-    <p><strong>3. Confirm the menu.</strong> Your chef reaches out to finalise the menu — either from a proposed plan or built entirely from your preferences. All dietary requirements are confirmed here.</p>
-    <p><strong>4. Pay deposit and confirm.</strong> A 25% deposit secures your booking. The balance is settled on the day of service or per agreed terms.</p>
-    <p><strong>5. Chef arrives and cooks.</strong> Your chef arrives 1.5–2 hours before service time, handles all shopping, preparation, cooking, service, and cleanup. You do nothing except enjoy it.</p>`,
+    <p style="margin-top:0.75rem;">For full cost details see our <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
   },
   {
     id: 'cta',
     type: 'cta',
-    subtitle: 'Book Now',
-    title: 'Hire a Private Chef in Canggu',
-    body: "Canggu's best villa dining starts with the right chef. Tell us your details and we'll get you matched fast.",
-    primaryAction: { label: 'View Our Chefs', href: '/chefs' },
-    secondaryAction: { label: 'Get in Touch', href: '/contact' },
+    subtitle: 'Book Your Chef',
+    title: 'Reserve a Private Chef in Canggu',
+    body: 'Tell us your villa, dates, group size, and occasion. We will match you with the right Canggu chef.',
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    secondaryAction: { label: 'View All Services', href: '/services' },
   },
 ]
 
 const FAQS = [
   {
-    question: "Can a private chef come to my Canggu villa on short notice?",
-    answer: "Yes. Canggu is our highest-traffic area and we often have chef availability with 24–48 hours notice, sometimes same-day for simple menus. For fine dining, large groups, or specific chef requests, booking 3–5 days ahead is recommended. During peak season (July–August, December–January) and over major holidays, lead times extend — book earlier to avoid disappointment."
+    question: "How far in advance do I need to book a private chef in Canggu?",
+    answer: "We recommend 48-72 hours minimum, especially for peak season and larger groups. For bachelor/bachelorette parties with 15+ guests, booking at least a week in advance is strongly recommended.",
   },
   {
-    question: "Can a private chef cater for a big villa party in Canggu with 20+ guests?",
-    answer: "Yes. We regularly cater villa parties and events for groups of 20 to 50+ guests in Canggu. For larger groups we provide a chef-and-kitchen-assistant team, and can extend service to include professional waitstaff and a bartender. Mention your group size in your enquiry and we will propose the right team and menu format — buffet, BBQ, family-style, or plated."
+    question: "Can a private chef cook for 20-30 people at a Canggu villa?",
+    answer: "Yes. For groups of 15-30, we typically provide the lead chef plus a kitchen assistant and at least one server. We design menus as sharing-format spreads.",
   },
   {
-    question: "Do private chefs in Canggu source organic or vegan ingredients?",
-    answer: "Yes. Canggu has excellent access to organic produce, vegan specialty items, plant-based proteins, and health-focused ingredients through local suppliers and the organic market. Our chefs in this area are experienced with plant-based and clean-eating menus. Please specify your preferences when booking and your chef will plan accordingly."
+    question: "Can a private chef do a BBQ at our Canggu villa?",
+    answer: "Yes. BBQ and live-fire cooking is one of our most popular formats in Canggu. We bring the equipment and design a full BBQ menu — marinated meats, fresh seafood, satay, grilled vegetables, and sauces.",
   },
   {
-    question: "Which areas of Canggu do you serve?",
-    answer: "We serve all Canggu sub-villages including Batu Bolong, Berawa, Pererenan, Echo Beach, Seseh, Tibubeneng, Umalas, and surrounding areas. We also serve the extended Canggu corridor towards Seminyak and Batu Layar. If your villa is in a less central location, send us the address and we will confirm coverage."
+    question: "Do you cover all parts of Canggu including Berawa, Pererenan, and Echo Beach?",
+    answer: "Yes. We cover the full Canggu area including Batu Bolong, Berawa, Pererenan, Echo Beach, Seseh, Cemagi, Tibubeneng, and Umalas.",
   },
   {
-    question: "Is a private chef more expensive than eating out in Canggu?",
-    answer: "Per-person, a private chef is comparable to dining at a mid-range to upscale Canggu restaurant — but the value is different. You get a personalised menu, service at your villa, no travel or restaurant queuing, and the chef handles everything including cleanup. For groups of 4+ guests, the experience is often better value than equivalent-quality restaurant dining, factoring in transport, drinks minimums, and tipping."
+    question: "Can a Canggu private chef also do the floating breakfast the next morning?",
+    answer: "Yes. Many guests book a private chef dinner one evening and a floating breakfast the following morning.",
   },
-  {
-    question: "Can a private chef also serve breakfast or lunch at my Canggu villa?",
-    answer: "Yes. We offer breakfast, brunch, lunch, and dinner services. Canggu breakfast bookings are popular — a private chef preparing eggs benedict, fresh açaí bowls, Indonesian breakfast spreads, or a full brunch beside your pool is one of the highlights of a Bali villa stay. Lunch and all-day catering packages are also available for multi-day villa stays."
-  },
-]
-
-const jsonLd = [
-  breadcrumbSchema([
-    { name: 'Home', url: 'https://mychef.id/' },
-    { name: 'Journal', url: 'https://mychef.id/journal' },
-    { name: 'Private Chef Canggu Guide', url: 'https://mychef.id/blog/private-chef-canggu-guide' },
-  ]),
-  faqPageSchema(FAQS),
 ]
 
 export default function PrivateChefCangguGuidePage() {
   return (
     <PremiumPage
+      slug="blog/private-chef-canggu-guide"
       title="Private Chef Canggu: Villa Dining, Surf Dinners & Party Catering"
-      description="Hire a private chef in Canggu for villa dinners, bachelor parties, romantic evenings, and everyday meals. Berawa, Batu Bolong, Pererenan and all Canggu areas covered."
-      heroImage="/images/hero-canggu.jpg"
-      heroAlt="Private chef cooking at a designer villa in Canggu Bali"
+      description="Book a private chef in Canggu for villa dinners, bachelor parties, group BBQs, and floating breakfasts. Covers Berawa, Pererenan, Echo Beach, Seseh and all Canggu areas."
+      h1="Private Chef Canggu — Villa Dining, Surf Dinners & Party Catering"
+      subtitle="The complete guide to private chef experiences across the full Canggu area"
+      heroImage="https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=80"
+      heroImageAlt="Private chef preparing a seafood BBQ feast for a group at a Canggu villa"
+      ogImage="https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=80"
+      keywords={['private chef canggu', 'canggu private chef', 'canggu villa chef', 'private chef bali canggu', 'canggu chef hire']}
+      highlights={['Villa BBQ', 'Group Parties', 'Surf Dinners', 'From IDR 450K/person']}
       sections={SECTIONS}
       faqs={FAQS}
-      jsonLd={jsonLd}
+      relatedPages={[
+        { label: 'Private Chef Ubud Guide', href: '/blog/private-chef-ubud-guide', desc: 'Farm-to-table dining and wellness menus in Ubud.' },
+        { label: 'Private Chef Seminyak Guide', href: '/blog/private-chef-seminyak-guide', desc: 'Luxury villa dining and fine dining in Seminyak.' },
+        { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Private chef for bachelor party villa nights in Canggu.' },
+        { label: 'Bali BBQ Catering', href: '/blog/bali-bbq-catering-villa-guide', desc: 'Live-fire BBQ catering for villa groups across Bali.' },
+        { label: 'Floating Breakfast Bali', href: '/blog/floating-breakfast-bali', desc: 'Private chef floating breakfast for your Canggu villa pool.' },
+      ]}
+      extraJsonLd={[
+        breadcrumbSchema('Private Chef Canggu Guide', 'https://mychef.id/blog/private-chef-canggu-guide', 'Blog', 'https://mychef.id/blog'),
+        faqPageSchema(FAQS.map(f => ({ question: f.question, answer: f.answer }))),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Private Chef Canggu: Villa Dining, Surf Dinners & Party Catering',
+          description: 'Book a private chef in Canggu for villa dinners, bachelor parties, group BBQs, and floating breakfasts.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2026-06-30',
+          dateModified: '2026-06-30',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/private-chef-canggu-guide' },
+          url: 'https://mychef.id/blog/private-chef-canggu-guide',
+        },
+      ]}
+      ctaText="Reserve Your Canggu Chef"
+      ctaSubtext="We match you with the right chef for your Canggu villa or group event."
     />
   )
 }

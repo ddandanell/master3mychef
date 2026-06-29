@@ -30,6 +30,8 @@ import BestPartnerBadge from '@/components/BestPartnerBadge'
 import { Button } from '@/components/ui/button'
 import { StaffingRiskReversal } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import RelatedServices from '@/components/shared/RelatedServices'
+import { STAFFING_RELATED } from '@/data/related-services'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -424,6 +426,8 @@ export default function StaffingPage() {
 
       {/* ── PRESS STRIP ─────────────────────────────────────────────────── */}
       <PressStrip />
+
+      <RelatedServices services={STAFFING_RELATED} title="Explore Staffing Services" />
 
       {/* ── FAQ ─────────────────────────────────────────────────────────── */}
       <section className="bg-white px-6 md:px-12 py-24 md:py-32">

@@ -5,7 +5,8 @@ import { getPageMeta } from '@/data/page-meta'
 import { PILLARS } from '@/data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
 import LocationChips from './LocationChips'
-
+import RelatedServices from '@/components/shared/RelatedServices'
+import { IN_VILLA_SERVICE_RELATED } from '@/data/related-services'
 import OptimizedImage from '@/components/OptimizedImage'
 const SITE = 'https://mychef.id'
 const WA = '628113803488'
@@ -376,6 +377,8 @@ export default function InVillaServicePage() {
           </div>
         </div>
       </section>
+
+      <RelatedServices services={IN_VILLA_SERVICE_RELATED} title="Explore In-Villa Service Options" />
 
       {/* FAQ */}
       <section className="py-16 md:py-24 bg-white">

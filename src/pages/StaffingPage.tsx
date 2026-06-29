@@ -210,6 +210,7 @@ export default function StaffingPage() {
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
+          loading="eager"
           decoding="async" />
         <div
           className="absolute inset-0"

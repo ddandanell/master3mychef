@@ -123,7 +123,7 @@ export default function StaffingLiveInPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/mychef-staffing-bali-staffing-kitchen.webp" alt="Live-in chef preparing meal at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+          <img src="/generated/mychef-staffing-bali-staffing-kitchen.webp" alt="Live-in chef preparing meal at Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
           <div
             className="absolute inset-0"
             style={{

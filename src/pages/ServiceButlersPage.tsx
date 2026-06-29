@@ -113,7 +113,7 @@ export default function ServiceButlersPage() {
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
   <div className="absolute inset-0">
-    <img src="/generated/mychef-staffing-bali-butler-service.webp" alt="Professional private butler in a private Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" />
+    <img src="/generated/mychef-staffing-bali-butler-service.webp" alt="Professional private butler in a private Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
     <div
       className="absolute inset-0"
       style={{

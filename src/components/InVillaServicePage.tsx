@@ -153,6 +153,7 @@ export default function InVillaServicePage() {
             width={1920}
             height={1080}
             fetchPriority="high"
+            loading="eager"
             decoding="async"
             className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/55" />

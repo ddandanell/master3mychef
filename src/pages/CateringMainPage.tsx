@@ -449,7 +449,7 @@ export default function CateringMainPage() {
             alt="Chef grilling seafood at a Bali villa poolside at sunset"
             width={1920}
             height={1080}
-            decoding="async" fetchPriority="high"
+            decoding="async" fetchPriority="high" loading="eager"
             className="w-full h-full object-cover"
           />
           <div

@@ -265,11 +265,17 @@ function injectMeta(html: string, path: string, title: string, description: stri
     /<meta name="twitter:image" content=".*?"\s*\/?>/,
     `<meta name="twitter:image" content="${ogImage}" />`
   )
-
   if (article?.date) {
+    const section = path.startsWith('/blog/') ? 'Blog' : path.startsWith('/journal/') ? 'Journal' : 'Guide'
+    const tags = path.startsWith('/blog/') ? 'private chef, Bali, villa dining' : path.startsWith('/journal/') ? 'Bali dining, private chef, villa catering' : 'Bali, private chef, guide'
     html = html.replace(
       '</head>',
-      `  <meta property="article:published_time" content="${article.date}" />\n  <meta property="article:modified_time" content="${article.date}" />\n  <meta property="article:author" content="${escapeHtml(ARTICLE_AUTHOR)}" />\n</head>`
+      `  <meta property="article:published_time" content="${article.date}" />
+  <meta property="article:modified_time" content="${article.date}" />
+  <meta property="article:author" content="${escapeHtml(ARTICLE_AUTHOR)}" />
+  <meta property="article:section" content="${section}" />
+  <meta property="article:tag" content="${tags}" />
+</head>`)
     )
   }
 

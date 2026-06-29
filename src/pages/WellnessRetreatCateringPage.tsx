@@ -19,6 +19,15 @@ const SECTIONS = [
     <p>myCHEF approaches retreat catering as a programme, not a service. Before we cook anything, we build the full menu matrix: every meal, every day, mapped to every dietary profile in the group. We work with local organic farms to plan ingredient sourcing seasonally. We brief our chef on the retreat schedule so meal timing supports, rather than disrupts, the programme flow. The result is food that functions as part of the retreat experience rather than an afterthought.</p>`,
   },
   {
+    id: 'why-mychef',
+    type: 'content' as const,
+    subtitle: 'Why myCHEF',
+    title: 'Retreat Catering Built on Programme Thinking, Not One-Off Events',
+    body: `<p>myCHEF has served more than 560 villas across Bali, and wellness retreats are where our programme-grade approach shines. We do not treat a retreat as a series of individual meals — we design a complete nutritional matrix that supports your guests from day one to day ten. Our chefs are trained in macro-balanced cooking, anti-inflammatory ingredient use, and the systematic accommodation of multiple dietary tracks running simultaneously.</p>
+
+    <p>We serve retreats across Ubud, Canggu, Uluwatu, Amed, and Munduk — the full spectrum of Bali's wellness destinations. Wherever your retreat is hosted, we establish local organic supplier relationships, build seasonal menus, and brief the chef on your programme schedule so meal timing supports rather than disrupts your flow.</p>`,
+  },
+  {
     id: 'philosophy',
     type: 'content' as const,
     subtitle: 'Menu Philosophy',
@@ -94,6 +103,17 @@ const SECTIONS = [
     <p>When a local organic option is unavailable for a specific ingredient, we substitute rather than compromise. The guest experience and nutritional integrity of the programme take precedence over menu rigidity. We communicate changes in advance, not on the plate.</p>`,
   },
   {
+    id: 'process',
+    type: 'content' as const,
+    subtitle: 'How It Works',
+    title: 'Booking Your Retreat Catering Programme in Three Steps',
+    body: `<p><strong>Step 1 — Share your programme:</strong> Message us on WhatsApp with your retreat dates, guest count, dietary philosophy, and location. We send a full programme menu proposal within 48 hours, including a day-by-day meal matrix.</p>
+
+    <p><strong>Step 2 — Map every dietary track:</strong> We use our dietary intake form to capture every guest's requirements — vegan, gluten-free, nut-free, sugar-free, and any allergies. The menu is built around these tracks from the start, not adjusted as an afterthought.</p>
+
+    <p><strong>Step 3 — Cook on-site, every day:</strong> The chef arrives at the retreat villa daily, sources fresh ingredients from local organic farms, and prepares every meal in your kitchen. Snacks, herbal tea stations, and filtered water are included as standard. You run the retreat; we run the nutrition.</p>`,
+  },
+  {
     id: 'faq',
     type: 'faq' as const,
     subtitle: 'Questions',
@@ -110,7 +130,7 @@ const SECTIONS = [
       label: 'Chat on WhatsApp',
       href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20wellness%20retreat%20in%20Bali%20and%20need%20a%20catering%20team.',
     },
-    secondaryAction: { label: 'View Pricing', href: '/pricing' },
+    secondaryAction: { label: 'Get a Quote', href: '/quote' },
   },
 ]
 
@@ -138,6 +158,18 @@ const FAQS = [
   {
     question: 'Can we visit the kitchen and see the cooking?',
     answer: 'Yes, many retreats incorporate a cooking demonstration or farmers market visit as part of the program experience. This is available as a paid add-on and can be a highlight of the retreat — guests learn about Balinese ingredients and preparation techniques directly from our chef.',
+  },
+  {
+    question: 'Can the chef accommodate a raw or fully raw food programme?',
+    answer: 'Yes — our Detox & Cleanse programme includes raw and cold-pressed options. For fully raw retreats, we design a complete menu of raw nori wraps, zucchini noodles, dehydrated crackers, and living foods. This is confirmed at the proposal stage so ingredients can be sourced accordingly.',
+  },
+  {
+    question: 'Do you provide a cooking demonstration as part of the retreat?',
+    answer: 'Yes, cooking demonstrations are available as a paid add-on. The chef leads a 60–90 minute session on Balinese ingredients and techniques, which guests consistently rate as a retreat highlight. Book this at the programme design stage.',
+  },
+  {
+    question: 'What happens if a guest joins with an unlisted dietary requirement?',
+    answer: 'We build flexibility into every programme. If a new requirement emerges during the retreat, the chef adapts the daily menu in real time. Because our chefs cook on-site, adjustments are immediate — no pre-cooked meal substitutions.',
   },
 ]
 
@@ -188,7 +220,7 @@ export default function WellnessRetreatCateringPage() {
           image: 'https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp',
           mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/bali-wellness-retreat-catering' },
           url: 'https://mychef.id/blog/bali-wellness-retreat-catering',
-          wordCount: 1400,
+          wordCount: 1700,
           keywords: 'wellness retreat catering bali, yoga retreat chef bali, plant based catering bali retreat, detox retreat chef bali',
         },
       ]}

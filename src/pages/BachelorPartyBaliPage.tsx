@@ -19,6 +19,15 @@ const SECTIONS = [
     <p>myCHEF handles groups of 8–40 for bachelor parties across all major Bali villa areas — Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, and beyond. We bring the chef, the service staff, the setup, and the energy. You bring the lads.</p>`,
   },
   {
+    id: 'why-mychef',
+    type: 'content' as const,
+    subtitle: 'Why myCHEF',
+    title: 'Bachelor Parties Are What We Do Best',
+    body: `<p>myCHEF has served more than 560 villas across Bali, and bachelor parties are one of our most frequent bookings. We know what a bucks night needs: abundant food, a grill that keeps running, and a team that understands the energy of the evening. Our chefs have handled groups from 8 to 40 lads across every major villa area in Bali — Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, and Jimbaran.</p>
+
+    <p>We arrive with everything we need: the grill, the prep tables, the bar setup, and the service staff. You do not need to lift a finger. The result is a night that flows from arrival to midnight without a single restaurant booking, Uber wait, or dress code.</p>`,
+  },
+  {
     id: 'packages',
     type: 'features' as const,
     subtitle: 'Packages',
@@ -98,6 +107,17 @@ const SECTIONS = [
     <p><strong>What to tell us when you book:</strong> Villa address and area, confirmed guest count (approximate is fine), any dietary requirements or allergies in the group, preferred service start time, and which add-ons you're interested in. That's all we need to get started.</p>`,
   },
   {
+    id: 'process',
+    type: 'content' as const,
+    subtitle: 'How It Works',
+    title: 'Booking Your Bucks Night in Three Steps',
+    body: `<p><strong>Step 1 — Send your brief:</strong> Message us on WhatsApp with your villa address, group size, date, and any dietary requirements. We confirm availability and send a custom package proposal within 2 hours.</p>
+
+    <p><strong>Step 2 — Lock it in:</strong> Choose your package and any add-ons — bartender, cocktail masterclass, midnight snack drop. One confirmation and the chef, equipment, and team are reserved.</p>
+
+    <p><strong>Step 3 — Enjoy the night:</strong> The team arrives 3 hours before service, sets up the BBQ, bar, and dining area, and runs the evening from the first canapé to final clean-up. You focus on the lads; we focus on the food.</p>`,
+  },
+  {
     id: 'faq',
     type: 'faq' as const,
     subtitle: 'Questions',
@@ -110,7 +130,7 @@ const SECTIONS = [
     title: 'Plan Your Bali Bachelor Party',
     body: 'Tell us your villa, group size, and date — we\'ll send a custom package within 2 hours.',
     primaryAction: { label: 'Message Us on WhatsApp', href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20bachelor%20party%20at%20a%20Bali%20villa%20and%20need%20catering.', external: true },
-    secondaryAction: { label: 'View Pricing', href: '/pricing' },
+    secondaryAction: { label: 'Get a Quote', href: '/quote' },
   },
 ]
 
@@ -138,6 +158,18 @@ const FAQS = [
   {
     question: 'Can you cater at any Bali villa?',
     answer: 'Yes, we serve all major Bali villa areas including Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, Jimbaran, Kerobokan, Pererenan, and beyond. If you\'re unsure whether your villa location is covered, send us the address and we\'ll confirm.',
+  },
+  {
+    question: 'Can you do a cocktail masterclass before dinner?',
+    answer: 'Yes — the cocktail masterclass add-on is a 45-minute session before the main event where the bartender teaches the group to make two or three signature drinks. It is a brilliant ice-breaker and one of our most popular add-ons for bachelor parties.',
+  },
+  {
+    question: 'What happens if the group size changes after booking?',
+    answer: 'We understand plans shift. Final guest counts are confirmed 48 hours before the event, and we adjust ingredients and staffing accordingly. Increases above 20% of the original count may require additional charges, but we always communicate this upfront.',
+  },
+  {
+    question: 'Do you handle clean-up after the party?',
+    answer: 'Full clean-up is included in every package. The team clears all equipment, washes serving ware, and leaves the villa kitchen and dining area exactly as they found it. You will not wake up to a mess.',
   },
 ]
 
@@ -184,7 +216,7 @@ export default function BachelorPartyBaliPage() {
           image: 'https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp',
           mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/bachelor-party-bali-private-chef' },
           url: 'https://mychef.id/blog/bachelor-party-bali-private-chef',
-          wordCount: 1400,
+          wordCount: 1700,
           keywords: 'bachelor party bali, bucks night bali chef, bachelor party catering bali, bali villa bachelor party food, private chef bachelor party bali',
         },
       ]}

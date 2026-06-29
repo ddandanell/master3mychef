@@ -14,7 +14,16 @@ const SECTIONS = [
 
     <p>A private chef transforms the gathering into a genuinely considered celebration. This is not just about food delivery — it is about someone who understands the occasion, who has briefed themselves on pregnancy dietary guidelines, who will lay out a grazing table that becomes the first thing guests photograph when they walk in. The myCHEF approach centres on three principles: beautiful food that is also safe for expectant mothers, themed presentation that matches your colour scheme and aesthetic, and a calm, professional service that removes logistics from the host's day entirely.</p>
 
-    <p>Groups of 8–40 guests work comfortably in a villa format. The chef and team arrive early, set up while you prepare, and manage everything from arrival through to the final dessert. You host; we handle the rest.</p>`,
+    <p>Groups of 8–40 guests work comfortably in a villa format. The chef and team arrive early, set up while you prepare, and manage everything from arrival through to the final dessert. You host; we handle the rest. We serve baby shower groups across Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, and Jimbaran.</p>`,
+  },
+  {
+    id: 'why-mychef',
+    type: 'content' as const,
+    subtitle: 'Why myCHEF',
+    title: 'Experience You Can Trust for Villa Baby Showers',
+    body: `<p>myCHEF has served more than 560 villas across Bali, and baby showers are one of our most requested celebrations. Our chefs understand that this is not just another dinner — it is a gathering built around a guest of honour who deserves special care. Every baby shower brief is reviewed with pregnancy dietary guidelines in mind, every dish is clearly labelled, and every setup is designed to photograph beautifully from the moment guests arrive.</p>
+
+    <p>We operate across Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, and Jimbaran — wherever your villa is located, we arrive early, set up quietly, and let you host without worrying about a single detail. From the first grazing table to the final clean-up, our team handles the logistics so you can focus on celebrating.</p>`,
   },
   {
     id: 'menu-safety',
@@ -82,6 +91,17 @@ const SECTIONS = [
     <p>We also set up a fresh juice bar with seasonal Bali fruits, herbal iced teas (hibiscus, lemongrass, ginger), and still and sparkling water stations with infused water options. The drinks table is styled to match the food presentation — coordinated colours, florals, and labelling. Guests who also want wine or spirits can be accommodated; we simply ensure the non-alcoholic options are equally celebrated rather than an afterthought.</p>`,
   },
   {
+    id: 'process',
+    type: 'content' as const,
+    subtitle: 'How It Works',
+    title: 'Booking Your Baby Shower Chef in Three Steps',
+    body: `<p><strong>Step 1 — Share your plans:</strong> Message us on WhatsApp with your villa location, date, guest count, and any dietary requirements. We respond within 2 hours during business hours with availability and package options.</p>
+
+    <p><strong>Step 2 — Review your proposal:</strong> We send a customised menu proposal with pregnancy-safe options, drinks station details, and styling notes. You confirm once, and we lock in the chef and team.</p>
+
+    <p><strong>Step 3 — Relax on the day:</strong> The chef and team arrive 2–3 hours before guests, build the grazing table, set up the drinks station, and manage everything from arrival through to final clean-up. You host; we handle the rest.</p>`,
+  },
+  {
     id: 'faq',
     type: 'faq' as const,
     title: 'FAQ',
@@ -97,7 +117,7 @@ const SECTIONS = [
       href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20baby%20shower%20at%20a%20Bali%20villa%20and%20need%20catering.',
       external: true,
     },
-    secondaryAction: { label: 'View Pricing', href: '/pricing' },
+    secondaryAction: { label: 'Get a Quote', href: '/quote' },
   },
 ]
 
@@ -125,6 +145,18 @@ const FAQS = [
   {
     question: 'Can guests with different dietary requirements be accommodated?',
     answer: 'Yes — vegan, gluten-free, and nut-free guests are all handled simultaneously. We label every dish clearly. When you confirm your booking, simply list all dietary requirements and we build the menu around them from the start.',
+  },
+  {
+    question: 'How far in advance should I book a baby shower chef?',
+    answer: '1–2 weeks is ideal for most dates. For peak season (July–August and December), 3–4 weeks is recommended. Same-week bookings are sometimes possible depending on chef availability — message us to check.',
+  },
+  {
+    question: 'Do you bring all the equipment and tableware?',
+    answer: 'Yes. Our team brings all cooking equipment, serving boards, grazing table props, and glassware for the drinks station. You supply the table surface; we bring everything else.',
+  },
+  {
+    question: 'Can the baby shower be set up outdoors by the pool?',
+    answer: 'Absolutely. Most villa baby showers are set up poolside or on the terrace. We assess the space on arrival and build the grazing table and drinks station to suit the natural light and breeze. Shade and temperature are always considered.',
   },
 ]
 
@@ -171,7 +203,7 @@ export default function BabyShowerCateringBaliPage() {
           image: 'https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp',
           mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/baby-shower-catering-bali' },
           url: 'https://mychef.id/blog/baby-shower-catering-bali',
-          wordCount: 1300,
+          wordCount: 1600,
           keywords: 'baby shower bali, baby shower catering bali, baby shower bali villa, private chef baby shower bali',
         },
       ]}

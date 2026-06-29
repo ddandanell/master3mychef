@@ -19,6 +19,15 @@ const SECTIONS = [
     <p>myCHEF has delivered New Year's Eve private chef dinners across Seminyak, Canggu, Ubud, Uluwatu, and beyond. It is the single most-booked date on our calendar. The chefs who do it well know how to time the evening, manage the midnight moment, and leave you with a memory that outlasts the hangover.</p>`,
   },
   {
+    id: 'why-mychef',
+    type: 'content' as const,
+    subtitle: 'Why myCHEF',
+    title: "New Year's Eve Is Our Most Important Night — And We Treat It That Way",
+    body: `<p>myCHEF has served more than 560 villas across Bali, and New Year's Eve is the single most-booked date on our calendar. The chefs who handle NYE are selected specifically for their experience with multi-course timing, midnight countdown coordination, and peak-night execution under pressure. This is not a standard dinner — it is a once-a-year event, and our team approaches it with the seriousness it deserves.</p>
+
+    <p>We serve NYE celebrations across all major Bali villa areas — Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, and Jimbaran — from intimate couples dinners to villa parties of 30+. Every booking receives a dedicated chef, full table setup, and a service team that manages the evening from the first canapé to the final petit four at midnight.</p>`,
+  },
+  {
     id: 'packages',
     type: 'features' as const,
     subtitle: 'NYE Packages',
@@ -111,6 +120,17 @@ const SECTIONS = [
     <p><strong>What's included:</strong> full menu ingredients, table setup, service staff, all kitchen equipment, chef transport. <strong>Not included:</strong> alcohol (client-supplied; we can recommend Bali wine importers and champagne sources). A 25% festive surcharge applies on December 31 and is quoted upfront.</p>`,
   },
   {
+    id: 'process',
+    type: 'content' as const,
+    subtitle: 'How It Works',
+    title: "Booking Your New Year's Eve Chef in Three Steps",
+    body: `<p><strong>Step 1 — Enquire early:</strong> Message us on WhatsApp with your villa, group size, and preferred menu style. NYE chefs book from September — the earlier you enquire, the better your chance of securing a top-tier chef.</p>
+
+    <p><strong>Step 2 — Design your menu:</strong> We work with you to build a bespoke tasting menu or feast package, confirm champagne service timing, and lock in the team. A 25% festive surcharge is quoted upfront — no surprises.</p>
+
+    <p><strong>Step 3 — Celebrate:</strong> The chef arrives at 4 PM, sets up the kitchen and dining area, and paces the evening from canapés through to the midnight countdown. Champagne is poured at exactly 11:58 PM. You ring in the New Year; we handle every detail.</p>`,
+  },
+  {
     id: 'faq',
     type: 'faq' as const,
     title: 'NYE Questions',
@@ -127,8 +147,8 @@ const SECTIONS = [
       external: true,
     },
     secondaryAction: {
-      label: 'View Pricing',
-      href: '/pricing',
+      label: 'Get a Quote',
+      href: '/quote',
     },
   },
 ]
@@ -157,6 +177,18 @@ const FAQS = [
   {
     question: 'What if I want a specific dish or cuisine?',
     answer: 'NYE menus are fully bespoke. Share your preferences — favourite ingredients, cuisines, dietary requirements, dishes you love — and the chef designs the menu around them. There is no fixed template.',
+  },
+  {
+    question: 'Can I book a NYE chef for a group of 30 or more?',
+    answer: 'Yes — our Group Feast Package is designed for large villa groups. For 30+ guests, we deploy a multi-chef team and a dedicated service coordinator. We recommend booking at least 6–8 weeks in advance for groups of this size.',
+  },
+  {
+    question: 'What happens if my villa does not have a full kitchen?',
+    answer: 'We bring portable induction burners, prep tables, and all necessary equipment. Most Bali villas have adequate kitchen space, but if yours is limited, we simply supplement with our own production kit. No problem.',
+  },
+  {
+    question: 'Can I request a specific chef I have used before?',
+    answer: 'Yes, subject to availability. If you have a preferred chef from a previous booking, let us know when you enquire and we will check their NYE schedule. We cannot guarantee specific chefs for same-week bookings, but early requests are almost always accommodated.',
   },
 ]
 
@@ -203,7 +235,7 @@ export default function NewYearsEveBaliPage() {
           image: 'https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp',
           mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/new-years-eve-bali-private-chef' },
           url: 'https://mychef.id/blog/new-years-eve-bali-private-chef',
-          wordCount: 1400,
+          wordCount: 1700,
           keywords: 'new years eve bali, nye bali private chef, new year dinner bali villa, new years eve dinner bali',
         },
       ]}

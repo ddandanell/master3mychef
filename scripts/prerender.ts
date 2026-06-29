@@ -110,6 +110,12 @@ const ROUTES = [
   { path: '/blog/private-chef-seminyak-canggu-ubud-comparison', file: 'blog-private-chef-seminyak-canggu-ubud-comparison.html' },
   { path: '/blog/indonesian-street-food-private-chef-bali', file: 'blog-indonesian-street-food-private-chef-bali.html' },
   { path: '/blog/bali-wedding-catering-budget-guide', file: 'blog-bali-wedding-catering-budget-guide.html' },
+  { path: '/blog/private-chef-nusa-dua-guide', file: 'blog-private-chef-nusa-dua-guide.html' },
+  { path: '/blog/private-chef-ubud-guide', file: 'blog-private-chef-ubud-guide.html' },
+  { path: '/blog/private-chef-canggu-guide', file: 'blog-private-chef-canggu-guide.html' },
+  { path: '/blog/private-chef-seminyak-guide', file: 'blog-private-chef-seminyak-guide.html' },
+  { path: '/blog/household-chef-bali-hiring-guide', file: 'blog-household-chef-bali-hiring-guide.html' },
+  { path: '/partner', file: 'partner.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },
   // Journal posts (all 16)

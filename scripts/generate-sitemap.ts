@@ -21,17 +21,19 @@ const __dirname = dirname(__filename);
 const SITE_URL = 'https://mychef.id';
 
 // Build URL entries from the dynamic SITEMAP
-const URLS: { path: string; priority: number; changefreq: string }[] = [
+const URLS: { path: string; priority: number; changefreq: string; lastmod?: string }[] = [
   ...SITEMAP.map((entry: SitemapEntry) => ({
     path: entry.path,
     priority: entry.priority,
     changefreq: entry.changefreq,
+    lastmod: entry.date,
   })),
   // Journal post URLs (individual journal entries under /journal/)
   ...JOURNAL_POSTS.map((post) => ({
     path: `/journal/${post.slug}`,
     priority: 0.8,
     changefreq: 'monthly' as const,
+    lastmod: post.date,
   })),
 ];
 
@@ -49,17 +51,11 @@ const UNIQUE_URLS = FILTERED_URLS.filter((url) => {
 });
 
 function generateSitemap(): string {
-  // TODO: Improve lastmod by using actual content dates where available.
-  // SITEMAP entries carry a `date` field for blog posts, guides, journal posts,
-  // and landing pages (e.g. entry.date). JOURNAL_POSTS also expose post.date.
-  // Ideal approach: pass the date through the URL pipeline and use it here as
-  // lastmod, falling back to the build date for pages without a content date.
-  // Keeping the build date for now is safe and avoids stale-date issues.
   const now = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   
-  const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq }) => `  <url>
+  const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq, lastmod }) => `  <url>
     <loc>${SITE_URL}${path}</loc>
-    <lastmod>${now}</lastmod>
+    <lastmod>${lastmod || now}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority.toFixed(1)}</priority>
   </url>`).join('\n');

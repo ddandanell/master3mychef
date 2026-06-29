@@ -145,7 +145,6 @@ const BabyShowerCateringBaliPage = lazy(() => import('./pages/BabyShowerCatering
 const VillaStaffBaliGuidePage = lazy(() => import('./pages/VillaStaffBaliGuidePage'))
 const WellnessRetreatCateringPage = lazy(() => import('./pages/WellnessRetreatCateringPage'))
 const PrivateChefJakartaGuidePage = lazy(() => import('./pages/PrivateChefJakartaGuidePage'))
-const IndonesianStreetFoodBaliPage = lazy(() => import('./pages/IndonesianStreetFoodBaliPage'))
 
 // Help & Guides System
 const HelpPage = lazy(() => import('./pages/HelpPage'))

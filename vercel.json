@@ -867,6 +867,16 @@
       "permanent": true
     }
   ],
+  "rewrites": [
+    {
+      "source": "/((?!assets/|generated/|.*\\.).*)",
+      "destination": "/$1.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

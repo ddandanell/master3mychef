@@ -303,6 +303,12 @@ function injectMeta(html: string, path: string, title: string, description: stri
     `<meta property="og:locale" content="en_US" />`
   )
 
+  // OG site_name for brand recognition in social shares
+  html = html.replace(
+    /<meta property="og:site_name" content=".*?"\s*\/?>/,
+    `<meta property="og:site_name" content="myCHEF" />`
+  )
+
   // Hreflang for international SEO
   const hrefLangTags = [
     `<link rel="alternate" hreflang="en" href="${canonical}" />`,

@@ -297,6 +297,20 @@ function injectMeta(html: string, path: string, title: string, description: stri
   ].filter(Boolean).join('\n  ')
   html = html.replace('</head>', `${structuredData}\n  </head>`)
 
+  // OG locale (all content is in English)
+  html = html.replace(
+    /<meta property="og:locale" content=".*?"\s*\/?>/,
+    `<meta property="og:locale" content="en_US" />`
+  )
+
+  // Hreflang for international SEO
+  const hrefLangTags = [
+    `<link rel="alternate" hreflang="en" href="${canonical}" />`,
+    `<link rel="alternate" hreflang="id" href="${canonical}" />`,
+    `<link rel="alternate" hreflang="x-default" href="${canonical}" />`,
+  ].join('\n  ')
+  html = html.replace('</head>', `${hrefLangTags}\n  </head>`)
+
   return html
 }
 

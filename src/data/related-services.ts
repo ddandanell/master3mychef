@@ -86,6 +86,60 @@ export const EVENTS_RELATED: RelatedService[] = [
   }
 ]
 
+export const IN_VILLA_SERVICE_RELATED: RelatedService[] = [
+  {
+    title: 'Villa Waiters',
+    description: 'Professional waiters for your villa dinner or event. English-speaking, uniformed, and experienced.',
+    path: '/in-villa-service/waiters',
+    category: 'In-Villa Service'
+  },
+  {
+    title: 'Villa Butlers',
+    description: 'Discreet butler service for villa stays and special occasions. Full household coordination.',
+    path: '/in-villa-service/butlers',
+    category: 'In-Villa Service'
+  },
+  {
+    title: 'Bartenders',
+    description: 'Skilled bartenders for villa parties and events. Cocktail creation, bar setup, and service.',
+    path: '/in-villa-service/bartenders',
+    category: 'In-Villa Service'
+  },
+  {
+    title: 'Mixology',
+    description: 'Signature cocktail creation and bespoke bar experiences for your villa gathering.',
+    path: '/in-villa-service/mixology',
+    category: 'In-Villa Service'
+  }
+]
+
+export const STAFFING_RELATED: RelatedService[] = [
+  {
+    title: 'Private Chef Placement',
+    description: 'Find and hire a full-time private chef for your villa or residence. Background-checked candidates.',
+    path: '/staffing/private-chef-placement',
+    category: 'Staffing'
+  },
+  {
+    title: 'Live-In Chef',
+    description: 'Hire a dedicated live-in chef for your Bali villa. Daily meals, menu planning, and kitchen management.',
+    path: '/staffing/live-in-chef',
+    category: 'Staffing'
+  },
+  {
+    title: 'Villa Staff',
+    description: 'Complete villa staff solutions including chefs, butlers, and house managers.',
+    path: '/staffing/villa-staff',
+    category: 'Staffing'
+  },
+  {
+    title: 'Household Staff',
+    description: 'Professional household staff for residences in Bali. Cooks, cleaners, and estate management.',
+    path: '/staffing/household-staff',
+    category: 'Staffing'
+  }
+]
+
 export const LOCATION_RELATED: RelatedService[] = [
   {
     title: 'Fine Dining in Bali',

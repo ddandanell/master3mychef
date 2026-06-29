@@ -1,0 +1,930 @@
+{
+  "buildCommand": "npm run build",
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/experience",
+      "destination": "/fine-dining",
+      "permanent": true
+    },
+    {
+      "source": "/story",
+      "destination": "/fine-dining/our-chefs",
+      "permanent": true
+    },
+    {
+      "source": "/service",
+      "destination": "/in-villa-service",
+      "permanent": true
+    },
+    {
+      "source": "/join",
+      "destination": "/staffing",
+      "permanent": true
+    },
+    {
+      "source": "/partners",
+      "destination": "/staffing/for-villa-managers",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-service",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/payment-terms",
+      "destination": "/cancellation",
+      "permanent": true
+    },
+    {
+      "source": "/seminyak",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/canggu",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/uluwatu",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/ubud",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/sanur",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/nusa-dua",
+      "destination": "/locations/nusa-dua",
+      "permanent": true
+    },
+    {
+      "source": "/jimbaran",
+      "destination": "/locations/jimbaran",
+      "permanent": true
+    },
+    {
+      "source": "/pererenan",
+      "destination": "/locations/pererenan",
+      "permanent": true
+    },
+    {
+      "source": "/bukit",
+      "destination": "/locations/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/berawa",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/kuta",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/legian",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/kerobokan",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/petitenget",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/tanah-lot",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/tabanan",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/denpasar",
+      "destination": "/locations/denpasar",
+      "permanent": true
+    },
+    {
+      "source": "/gianyar",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/tegallalang",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/amed",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/lovina",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/candidasa",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/padang-bai",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/ungasan",
+      "destination": "/locations/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/pecatu",
+      "destination": "/locations/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/jakarta",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/menteng",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/kemang",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/scbd",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/pondok-indah",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/bsd",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-puri-indah",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-kuningan",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/echo-beach-private-chef",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/batu-bolong-private-chef",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/pererenan-private-chef",
+      "destination": "/locations/pererenan",
+      "permanent": true
+    },
+    {
+      "source": "/bingin-private-chef",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/balangan-private-chef",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/dreamland-private-chef",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/nyang-nyang-private-chef",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/green-bowl-private-chef",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/medewi-private-chef",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/padang-padang-private-chef",
+      "destination": "/locations/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/sayan-private-chef",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/penestanan-private-chef",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/sanur-beach-private-chef",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/surabaya",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/bandung",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/yogyakarta",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/services/romantic-dinners",
+      "destination": "/fine-dining/romantic-dinner",
+      "permanent": true
+    },
+    {
+      "source": "/services/family-reunions",
+      "destination": "/catering",
+      "permanent": true
+    },
+    {
+      "source": "/services/cooking-classes",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/services/corporate-events",
+      "destination": "/events/corporate-events",
+      "permanent": true
+    },
+    {
+      "source": "/services/villa-parties",
+      "destination": "/events/villa-parties",
+      "permanent": true
+    },
+    {
+      "source": "/services/wedding-celebrations",
+      "destination": "/events/weddings",
+      "permanent": true
+    },
+    {
+      "source": "/services/birthday-celebrations",
+      "destination": "/events/birthdays",
+      "permanent": true
+    },
+    {
+      "source": "/services/weekly-meal-prep",
+      "destination": "/catering",
+      "permanent": true
+    },
+    {
+      "source": "/menus",
+      "destination": "/fine-dining/menus",
+      "permanent": true
+    },
+    {
+      "source": "/menus/asian-fusion",
+      "destination": "/fine-dining/menus",
+      "permanent": true
+    },
+    {
+      "source": "/menus/vegan",
+      "destination": "/fine-dining/menus",
+      "permanent": true
+    },
+    {
+      "source": "/menus/modern-european",
+      "destination": "/fine-dining/menus",
+      "permanent": true
+    },
+    {
+      "source": "/menus/halal",
+      "destination": "/fine-dining/menus",
+      "permanent": true
+    },
+    {
+      "source": "/guide/bali-cuisine-glossary",
+      "destination": "/fine-dining/menus",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-bali-cost-breakdown-2026",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/blog/wedding-rehearsal-dinner-bali",
+      "destination": "/events/weddings",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-booking-indonesia",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-breakfast-bali",
+      "destination": "/catering",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-cost-per-day-bali",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-cost-bali",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/reviews",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/retreats",
+      "destination": "/events/retreats",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-events",
+      "destination": "/events/corporate-events",
+      "permanent": true
+    },
+    {
+      "source": "/villa-partners",
+      "destination": "/partner-platform",
+      "permanent": true
+    },
+    {
+      "source": "/catering/buffet-catering",
+      "destination": "/catering/buffet",
+      "permanent": true
+    },
+    {
+      "source": "/services/private-chef",
+      "destination": "/in-villa-service",
+      "permanent": true
+    },
+    {
+      "source": "/services/private-dining",
+      "destination": "/fine-dining",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/fine-dining/our-chefs",
+      "permanent": true
+    },
+    {
+      "source": "/menu",
+      "destination": "/fine-dining/menus",
+      "permanent": true
+    },
+    {
+      "source": "/romantic-dinner",
+      "destination": "/fine-dining/romantic-dinner",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-events-catering-bali",
+      "destination": "/blog/corporate-events-catering-bali",
+      "permanent": true
+    },
+    {
+      "source": "/events/weddings-bali",
+      "destination": "/events/weddings",
+      "permanent": true
+    },
+    {
+      "source": "/chef-placement-bali",
+      "destination": "/staffing/private-chef-placement",
+      "permanent": true
+    },
+    {
+      "source": "/live-in-chef-bali",
+      "destination": "/staffing/live-in-chef",
+      "permanent": true
+    },
+    {
+      "source": "/retreat-catering-bali",
+      "destination": "/catering/retreat-catering",
+      "permanent": true
+    },
+    {
+      "source": "/getting-started",
+      "destination": "/help/getting-started",
+      "permanent": true
+    },
+    {
+      "source": "/events/corporate",
+      "destination": "/events/corporate-events",
+      "permanent": true
+    },
+    {
+      "source": "/events/proposals",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/in-villa-service/villa-chef",
+      "destination": "/villa-chef",
+      "permanent": true
+    },
+    {
+      "source": "/in-villa-service/breakfast-service",
+      "destination": "/catering/floating-breakfast",
+      "permanent": true
+    },
+    {
+      "source": "/in-villa-service/cooking-class",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/in-villa-service/meal-prep",
+      "destination": "/villa-chef",
+      "permanent": true
+    },
+    {
+      "source": "/staffing/chef-recruitment",
+      "destination": "/staffing/private-chef-placement",
+      "permanent": true
+    },
+    {
+      "source": "/staffing/event-staff",
+      "destination": "/staffing/villa-staff",
+      "permanent": true
+    },
+    {
+      "source": "/blog/chef-hiring-guide",
+      "destination": "/blog/chef-qualifications-credentials-bali-hiring",
+      "permanent": true
+    },
+    {
+      "source": "/romantic-dinner",
+      "destination": "/fine-dining/romantic-dinner",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-events-catering-bali",
+      "destination": "/blog/corporate-events-catering-bali",
+      "permanent": true
+    },
+    {
+      "source": "/events/weddings-bali",
+      "destination": "/events/weddings",
+      "permanent": true
+    },
+    {
+      "source": "/chef-placement-bali",
+      "destination": "/staffing/private-chef-placement",
+      "permanent": true
+    },
+    {
+      "source": "/live-in-chef-bali",
+      "destination": "/staffing/live-in-chef",
+      "permanent": true
+    },
+    {
+      "source": "/retreat-catering-bali",
+      "destination": "/catering/retreat-catering",
+      "permanent": true
+    },
+    {
+      "source": "/getting-started",
+      "destination": "/help/getting-started",
+      "permanent": true
+    },
+    {
+      "source": "/locations/berawa",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kerobokan",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/locations/legian",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/locations/petitenget",
+      "destination": "/locations/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/locations/gianyar",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tegallalang",
+      "destination": "/locations/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tabanan",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tanah-lot",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pecatu",
+      "destination": "/locations/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ungasan",
+      "destination": "/locations/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/locations/padang-bai",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/locations/amed",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/locations/candidasa",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/locations/lovina",
+      "destination": "/locations/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/locations/menteng",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kemang",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/scbd",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pondok-indah",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/bsd",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/bandung",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/surabaya",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/yogyakarta",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali",
+      "destination": "/fine-dining/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/seminyak",
+      "destination": "/private-chef/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/canggu",
+      "destination": "/private-chef/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/uluwatu",
+      "destination": "/private-chef/uluwatu",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/ubud",
+      "destination": "/private-chef/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/jimbaran",
+      "destination": "/private-chef/jimbaran",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/nusa-dua",
+      "destination": "/private-chef/nusa-dua",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/sanur",
+      "destination": "/private-chef/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/denpasar",
+      "destination": "/private-chef/denpasar",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/berawa",
+      "destination": "/private-chef/berawa",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/petitenget",
+      "destination": "/private-chef/petitenget",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/legian",
+      "destination": "/private-chef/legian",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/kerobokan",
+      "destination": "/private-chef/kerobokan",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/kuta",
+      "destination": "/private-chef/kuta",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/tanah-lot",
+      "destination": "/private-chef/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/pecatu",
+      "destination": "/private-chef/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/ungasan",
+      "destination": "/private-chef/bukit",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/gianyar",
+      "destination": "/private-chef/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/tegallalang",
+      "destination": "/private-chef/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/tabanan",
+      "destination": "/private-chef/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali/padang-bai",
+      "destination": "/private-chef/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bsd",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-kemang",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-scbd",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-pondok-indah",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-bali-cost-breakdown-2026",
+      "destination": "/blog/private-chef-cost-bali",
+      "permanent": true
+    },
+    {
+      "source": "/blog/wedding-rehearsal-dinner-bali",
+      "destination": "/journal/rehearsal-dinner-planning-bali",
+      "permanent": true
+    },
+    {
+      "source": "/blog/yoga-retreat-chef-bali-meal-planning",
+      "destination": "/journal/yoga-retreat-meal-planning-bali",
+      "permanent": true
+    },
+    {
+      "source": "/romantic-dinner",
+      "destination": "/fine-dining/romantic-dinner",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-events-catering-bali",
+      "destination": "/events/corporate-events",
+      "permanent": true
+    },
+    {
+      "source": "/villa-chef",
+      "destination": "/fine-dining/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/chef-placement-bali",
+      "destination": "/staffing/private-chef-placement",
+      "permanent": true
+    },
+    {
+      "source": "/events/weddings-bali",
+      "destination": "/events/weddings",
+      "permanent": true
+    },
+    {
+      "source": "/getting-started",
+      "destination": "/guide/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/journal/bali-villa-dinner-party-guide",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/live-in-chef-bali",
+      "destination": "/staffing/live-in-chef",
+      "permanent": true
+    },
+    {
+      "source": "/retreat-catering-bali",
+      "destination": "/catering/retreat-catering",
+      "permanent": true
+    },
+    {
+      "source": "/help/getting-started",
+      "destination": "/guide/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-kelapa-gading",
+      "destination": "/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/in-villa",
+      "destination": "/in-villa-service",
+      "permanent": true
+    },
+    {
+      "source": "/journal/bali-private-chef-cost-guide-2026",
+      "destination": "/blog/private-chef-cost-bali",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!assets/|generated/|.*\\.).*)",
+      "destination": "/$1.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://www.googletagmanager.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

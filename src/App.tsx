@@ -176,6 +176,11 @@ const MixologistHireBaliPage = lazy(() => import('./pages/MixologistHireBaliPage
 const SommelierHireBaliPage = lazy(() => import('./pages/SommelierHireBaliPage'))
 const RehearsalDinnerBaliPage = lazy(() => import('./pages/RehearsalDinnerBaliPage'))
 const WaiterHireBaliPage = lazy(() => import('./pages/WaiterHireBaliPage'))
+const PrivateDiningBaliPage = lazy(() => import('./pages/PrivateDiningBaliPage'))
+const ChefsTableBaliPage = lazy(() => import('./pages/ChefsTableBaliPage'))
+const BrunchCateringBaliPage = lazy(() => import('./pages/BrunchCateringBaliPage'))
+const PoolPartyCateringBaliPage = lazy(() => import('./pages/PoolPartyCateringBaliPage'))
+const VeganPrivateChefBaliPage = lazy(() => import('./pages/VeganPrivateChefBaliPage'))
 
 // Help & Guides System
 const HelpPage = lazy(() => import('./pages/HelpPage'))
@@ -467,6 +472,11 @@ export default function App() {
           <Route path="/blog/sommelier-hire-bali" element={<SommelierHireBaliPage />} />
           <Route path="/blog/rehearsal-dinner-bali" element={<RehearsalDinnerBaliPage />} />
           <Route path="/blog/waiter-hire-bali" element={<WaiterHireBaliPage />} />
+          <Route path="/blog/private-dining-bali" element={<PrivateDiningBaliPage />} />
+          <Route path="/blog/chefs-table-bali" element={<ChefsTableBaliPage />} />
+          <Route path="/blog/brunch-catering-bali" element={<BrunchCateringBaliPage />} />
+          <Route path="/blog/pool-party-catering-bali" element={<PoolPartyCateringBaliPage />} />
+          <Route path="/blog/vegan-private-chef-bali" element={<VeganPrivateChefBaliPage />} />
           <Route path="/partner" element={<VillaManagerPartnerPage />} />
           {BLOG_POST_SLUGS.map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />

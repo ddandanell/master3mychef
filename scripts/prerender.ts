@@ -133,6 +133,11 @@ const ROUTES = [
   { path: '/blog/sommelier-hire-bali', file: 'blog-sommelier-hire-bali.html' },
   { path: '/blog/rehearsal-dinner-bali', file: 'blog-rehearsal-dinner-bali.html' },
   { path: '/blog/waiter-hire-bali', file: 'blog-waiter-hire-bali.html' },
+  { path: '/blog/private-dining-bali', file: 'blog-private-dining-bali.html' },
+  { path: '/blog/chefs-table-bali', file: 'blog-chefs-table-bali.html' },
+  { path: '/blog/brunch-catering-bali', file: 'blog-brunch-catering-bali.html' },
+  { path: '/blog/pool-party-catering-bali', file: 'blog-pool-party-catering-bali.html' },
+  { path: '/blog/vegan-private-chef-bali', file: 'blog-vegan-private-chef-bali.html' },
   { path: '/partner', file: 'partner.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },

@@ -115,6 +115,9 @@ const ROUTES = [
   { path: '/blog/private-chef-canggu-guide', file: 'blog-private-chef-canggu-guide.html' },
   { path: '/blog/private-chef-seminyak-guide', file: 'blog-private-chef-seminyak-guide.html' },
   { path: '/blog/household-chef-bali-hiring-guide', file: 'blog-household-chef-bali-hiring-guide.html' },
+  { path: '/blog/private-chef-jimbaran-guide', file: 'blog-private-chef-jimbaran-guide.html' },
+  { path: '/blog/private-chef-roles-responsibilities-explained', file: 'blog-private-chef-roles-responsibilities-explained.html' },
+  { path: '/blog/fine-dining-trends-bali-2026-innovations', file: 'blog-fine-dining-trends-bali-2026-innovations.html' },
   { path: '/partner', file: 'partner.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },

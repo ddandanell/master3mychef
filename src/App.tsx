@@ -158,6 +158,9 @@ const PrivateChefCangguGuidePage = lazy(() => import('./pages/PrivateChefCangguG
 const PrivateChefSeminyakGuidePage = lazy(() => import('./pages/PrivateChefSeminyakGuidePage'))
 const VillaManagerPartnerPage = lazy(() => import('./pages/VillaManagerPartnerPage'))
 const HouseholdChefBaliGuidePage = lazy(() => import('./pages/HouseholdChefBaliGuidePage'))
+const PrivateChefJimbaranGuidePage = lazy(() => import('./pages/PrivateChefJimbaranGuidePage'))
+const PrivateChefRolesResponsibilitiesPage = lazy(() => import('./pages/PrivateChefRolesResponsibilitiesPage'))
+const FineDiningTrendsBali2026Page = lazy(() => import('./pages/FineDiningTrendsBali2026Page'))
 
 // Help & Guides System
 const HelpPage = lazy(() => import('./pages/HelpPage'))
@@ -431,6 +434,9 @@ export default function App() {
           <Route path="/blog/private-chef-canggu-guide" element={<PrivateChefCangguGuidePage />} />
           <Route path="/blog/private-chef-seminyak-guide" element={<PrivateChefSeminyakGuidePage />} />
           <Route path="/blog/household-chef-bali-hiring-guide" element={<HouseholdChefBaliGuidePage />} />
+          <Route path="/blog/private-chef-jimbaran-guide" element={<PrivateChefJimbaranGuidePage />} />
+          <Route path="/blog/private-chef-roles-responsibilities-explained" element={<PrivateChefRolesResponsibilitiesPage />} />
+          <Route path="/blog/fine-dining-trends-bali-2026-innovations" element={<FineDiningTrendsBali2026Page />} />
           <Route path="/partner" element={<VillaManagerPartnerPage />} />
           {BLOG_POST_SLUGS.map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />

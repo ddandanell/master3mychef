@@ -449,7 +449,7 @@ export default function CateringMainPage() {
             alt="Chef grilling seafood at a Bali villa poolside at sunset"
             width={1920}
             height={1080}
-            decoding="async" fetchPriority="high"
+            decoding="async" fetchPriority="high" loading="eager"
             className="w-full h-full object-cover"
           />
           <div
@@ -483,7 +483,7 @@ export default function CateringMainPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
               >
-                <MessageCircle className="w-4 h-4" /> Book on WhatsApp
+                <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
               </a>
               <Link
                 to="/villa-chef"
@@ -640,7 +640,7 @@ export default function CateringMainPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-10 py-5 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
                 >
-                  <MessageCircle className="w-4 h-4" /> Get Catering Quote for 5+ Guests
+                  <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
                 </a>
               </div>
             </div>
@@ -749,11 +749,30 @@ export default function CateringMainPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all"
                 >
-                  <MessageCircle className="w-4 h-4" /> Book Daily Chef Service
+                  <MessageCircle className="w-4 h-4" /> Get Your Daily Chef Quote in 1 Hour
                 </a>
               </div>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* MID-PAGE CTA: After service tabs */}
+      <section className="py-16 md:py-20 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="text-[#6B8E5A] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Not Sure What You Need?</p>
+          <h3 className="text-2xl md:text-3xl mb-4 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>We Will Match the Right Service to Your Stay</h3>
+          <p className="text-[#4A4745] max-w-xl mx-auto mb-6">
+            One-time BBQ for a birthday, or a daily chef for your whole holiday? Tell us your dates and guest count and we will recommend the right option — with a clear quote within the hour.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-service-tabs-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all">
+              <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
+            </a>
+            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white transition-all">
+              View All Contact Options
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -901,7 +920,7 @@ export default function CateringMainPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
             >
-              <MessageCircle className="w-4 h-4" /> Get Catering Quote for Your Guests
+              <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
             </a>
           </div>
         </div>
@@ -1356,7 +1375,7 @@ export default function CateringMainPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <MessageCircle className="w-4 h-4" /> Get Catering Quote for Your Guests
+              <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
             </a>
             <a
               href="tel:+628113803488"

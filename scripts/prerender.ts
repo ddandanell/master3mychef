@@ -38,6 +38,7 @@ const ROUTES = [
   { path: '/book', file: 'book.html' },
   { path: '/reviews', file: 'reviews.html' },
   { path: '/partner-platform', file: 'partner-platform.html' },
+  { path: '/corporate-case-studies', file: 'corporate-case-studies.html' },
   { path: '/certified-partner', file: 'certified-partner.html' },
   { path: '/press', file: 'press.html' },
   { path: '/retreats', file: 'retreats.html' },
@@ -194,6 +195,30 @@ const ROUTES = [
   { path: '/private-chef/ketewel', file: 'private-chef-ketewel.html' },
   { path: '/private-chef/abiansemal', file: 'private-chef-abiansemal.html' },
   { path: '/private-chef/cepaka', file: 'private-chef-cepaka.html' },
+  // New landing pages from latest commit
+  { path: '/baby-shower-catering-bali', file: 'baby-shower-catering-bali.html' },
+  { path: '/bachelor-party-bali', file: 'bachelor-party-bali.html' },
+  { path: '/bachelorette-party-catering', file: 'bachelorette-party-catering.html' },
+  { path: '/large-group-catering-bali', file: 'large-group-catering-bali.html' },
+  { path: '/new-years-eve-bali', file: 'new-years-eve-bali.html' },
+  { path: '/private-chef-jakarta-guide', file: 'private-chef-jakarta-guide.html' },
+  { path: '/villa-staff-bali-guide', file: 'villa-staff-bali-guide.html' },
+  { path: '/wellness-retreat-catering', file: 'wellness-retreat-catering.html' },
+  // Utility & info pages
+  { path: '/quote', file: 'quote.html' },
+  { path: '/calculator', file: 'calculator.html' },
+  { path: '/menus', file: 'menus.html' },
+  { path: '/services', file: 'services.html' },
+  { path: '/why-mychef', file: 'why-mychef.html' },
+  // Help centre guides
+  { path: '/help', file: 'help.html' },
+  { path: '/help/getting-started', file: 'help-getting-started.html' },
+  { path: '/help/pricing', file: 'help-pricing.html' },
+  { path: '/help/menu-guide', file: 'help-menu-guide.html' },
+  { path: '/help/wedding-guide', file: 'help-wedding-guide.html' },
+  { path: '/help/corporate-guide', file: 'help-corporate-guide.html' },
+  { path: '/help/staffing-guide', file: 'help-staffing-guide.html' },
+  { path: '/help/managing-booking', file: 'help-managing-booking.html' },
 ]
 
 async function startPreviewServer(): Promise<ChildProcess> {

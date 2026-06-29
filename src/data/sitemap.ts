@@ -869,6 +869,7 @@ export function buildSitemap(): SitemapEntry[] {
     changefreq: 'monthly',
     slug: l.slug,
     content: l.content,
+    date: l.date,
   }))
 
   const guides: SitemapEntry[] = GUIDES.map((g) => ({
@@ -880,6 +881,7 @@ export function buildSitemap(): SitemapEntry[] {
     changefreq: 'monthly',
     slug: g.slug,
     content: g.content,
+    date: g.date,
   }))
 
   const blogPosts: SitemapEntry[] = BLOG_POSTS.map((b) => ({
@@ -891,6 +893,7 @@ export function buildSitemap(): SitemapEntry[] {
     changefreq: 'monthly',
     slug: b.slug,
     content: b.content,
+    date: b.date,
   }))
 
   // Journal posts (newer content format)

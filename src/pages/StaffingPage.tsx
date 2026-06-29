@@ -30,6 +30,8 @@ import BestPartnerBadge from '@/components/BestPartnerBadge'
 import { Button } from '@/components/ui/button'
 import { StaffingRiskReversal } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import RelatedServices from '@/components/shared/RelatedServices'
+import { STAFFING_RELATED } from '@/data/related-services'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -208,6 +210,7 @@ export default function StaffingPage() {
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
+          loading="eager"
           decoding="async" />
         <div
           className="absolute inset-0"
@@ -235,7 +238,7 @@ export default function StaffingPage() {
             <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">
               <a href={WA_MARCO} target="_blank" rel="noopener noreferrer" data-source="staffing-hero">
                 <MessageCircle className="w-4 h-4" />
-                Book on WhatsApp
+                Get Staffing Availability & Pricing
               </a>
             </Button>
             <Button asChild variant="secondary" size="brand" className="w-full sm:w-auto">
@@ -347,6 +350,25 @@ export default function StaffingPage() {
         </div>
       </section>
 
+      {/* ── MID-PAGE CTA ────────────────────────────────────────────────── */}
+      <section className="px-6 md:px-12 py-16 md:py-20 max-w-[1280px] mx-auto">
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Not Sure What You Need?</p>
+          <h3 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>We Will Match the Right Staff to Your Villa</h3>
+          <p className="text-[#4A4745] max-w-xl mx-auto mb-6">
+            Private chef, live-in cook, or full household team? Tell us your villa size and requirements. We will recommend the right staffing mix and send availability within the hour.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href={WA_MARCO} target="_blank" rel="noopener noreferrer" data-source="staffing-mid-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#1A1A1A' }}>
+              <MessageCircle className="w-4 h-4" /> Get Staffing Availability & Pricing
+            </a>
+            <Link to="/staffing/private-chef-placement" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium tracking-widest uppercase rounded-full border border-[#E5E3E0] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: '#1A1A1A' }}>
+              View Chef Placement
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── WHY MYCHEF FOR STAFFING ─────────────────────────────────────── */}
       <section className="bg-white px-6 md:px-12 py-24 md:py-32">
         <div className="max-w-[1280px] mx-auto">
@@ -424,6 +446,8 @@ export default function StaffingPage() {
 
       {/* ── PRESS STRIP ─────────────────────────────────────────────────── */}
       <PressStrip />
+
+      <RelatedServices services={STAFFING_RELATED} title="Explore Staffing Services" />
 
       {/* ── FAQ ─────────────────────────────────────────────────────────── */}
       <section className="bg-white px-6 md:px-12 py-24 md:py-32">

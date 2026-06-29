@@ -28,7 +28,7 @@ const SITE = 'https://mychef.id'
 export const PAGE_META: Record<string, PageMeta> = {
   home: {
     path: '/',
-    title: 'Private Chef Bali | Villa Dining, Catering & Events — myCHEF',
+    title: 'Private Chef Bali | Dining, Catering & Events — myCHEF',
     description:
       'Hire a private chef in Bali for villa dining, catering & events. Michelin-trained team, all-inclusive pricing, 560+ villas served. Book via WhatsApp.',
     canonical: `${SITE}/`,
@@ -38,7 +38,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'fine-dining': {
     path: '/fine-dining',
-    title: 'Private Dining Bali | Michelin-Trained Chef in Your Villa — myCHEF',
+    title: 'Private Dining Bali | Michelin-Trained Villa Chef — myCHEF',
     description:
       'Fine dining in your Bali villa. Michelin-trained chef, Mediterranean & Wagyu tasting menus, wine pairing. From IDR 2.2M/pp. WhatsApp to book.',
     canonical: `${SITE}/fine-dining`,
@@ -58,9 +58,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   events: {
     path: '/events',
-    title: 'Private Events Bali | Weddings, Parties & Corporate — myCHEF',
+    title: 'Private Events Bali | Weddings & Corporate — myCHEF',
     description:
-      'Private events in Bali: weddings, birthdays, corporate offsites, retreats & villa parties. One team, one contract — chef, staff & setup. Book via WhatsApp.',
+      'Private events in Bali: weddings, birthdays, corporate offsites, retreats & villa parties. One team — chef, staff & setup. Book via WhatsApp.',
     canonical: `${SITE}/events`,
     h1: 'One team builds the whole evening. You just host.',
     ogImage: `${SITE}/hero-events.webp`,
@@ -68,17 +68,17 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'villa-chef': {
     path: '/villa-chef',
-    title: 'Private Chef Bali | Daily Villa Chef Service',
+    title: 'Private Chef Bali Villa | Michelin-Trained Dining',
     description:
-      'Bali villa catering with a private chef for your stay. Daily breakfast, lunch, dinner. Groceries at cost. From IDR 600K/hour.',
+      'Hire a private chef for your Bali villa: ingredients, service & Michelin-trained standards included. 560+ villas served. WhatsApp to check availability.',
     canonical: `${SITE}/villa-chef`,
-    h1: 'Your Private Villa Chef',
-    ogImage: `${SITE}/villa-aerial.webp`,
+    h1: 'Private Chef in Bali',
+    ogImage: `${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`,
   },
 
   'in-villa-service': {
     path: '/in-villa-service',
-    title: 'In-Villa Service Bali | Waiters, Butlers & Bartenders — myCHEF',
+    title: 'Villa Service Bali | Waiters, Butlers & Bartenders — myCHEF',
     description:
       'Hire villa waitstaff in Bali: waiters, butlers, bartenders, sommeliers & mixologists. Uniformed, English-speaking, same-day booking via WhatsApp.',
     canonical: `${SITE}/in-villa-service`,
@@ -108,7 +108,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   staffing: {
     path: '/staffing',
-    title: 'Chef Staffing Bali | Placement for Villas, Hotels & Homes — myCHEF',
+    title: 'Chef Staffing Bali | Villas, Hotels & Homes — myCHEF',
     description:
       'Hire vetted private chefs, live-in chefs & villa staff in Bali. 48-hour placement for hotels, villas & estates. WhatsApp us to start the search.',
     canonical: `${SITE}/staffing`,
@@ -118,7 +118,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   locations: {
     path: '/locations',
-    title: 'Private Chef Locations Bali | Seminyak, Canggu, Ubud & Uluwatu',
+    title: 'Chef Locations Bali | Seminyak, Canggu, Ubud & Uluwatu',
     description:
       'Browse private chef coverage across Bali villas, from Seminyak and Canggu to Ubud and Uluwatu. Find dining, catering and event service.',
     canonical: `${SITE}/locations`,
@@ -168,7 +168,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'catering-babi-guling': {
     path: '/catering/babi-guling',
-    title: 'Babi Guling Catering Bali | Traditional Whole Pig Feast — myCHEF',
+    title: 'Babi Guling Catering Bali | Traditional Whole Pig Feast',
     description:
       'Babi guling catering in Bali for villa feasts, weddings & birthdays. Authentic whole pig roast with Balinese sides, carving & full delivery service.',
     canonical: `${SITE}/catering/babi-guling`,
@@ -178,7 +178,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'catering-grazing-tables': {
     path: '/catering/grazing-tables',
-    title: 'Grazing Table Bali | Styled Spreads for Villa Events — myCHEF',
+    title: 'Grazing Table Bali | Styled Spreads for Villa Events',
     description:
       'Grazing tables in Bali for weddings, birthdays & villa parties. Styled cheese, charcuterie & tropical spreads designed and delivered to your villa.',
     canonical: `${SITE}/catering/grazing-tables`,
@@ -188,7 +188,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'catering-villa': {
     path: '/catering/villa-catering',
-    title: 'Villa Catering Bali | Daily Chef Service for Private Groups — myCHEF',
+    title: 'Villa Catering Bali | Daily Chef for Private Groups',
     description:
       'Villa catering in Bali for Seminyak, Canggu, Ubud & Uluwatu stays. Breakfast, lunch & dinner with chef setup, service & cleanup. WhatsApp for a quote.',
     canonical: `${SITE}/catering/villa-catering`,
@@ -198,7 +198,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'catering-corporate': {
     path: '/catering/corporate-catering',
-    title: 'Corporate Catering Bali | Offsites, Lunches & Launches — myCHEF',
+    title: 'Corporate Catering Bali | Offsites, Lunches & Launches',
     description:
       'Corporate catering in Bali for team offsites, board lunches & product launches. Buffet or plated, professional service & clear logistics. WhatsApp us.',
     canonical: `${SITE}/catering/corporate-catering`,
@@ -208,7 +208,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'catering-retreat': {
     path: '/catering/retreat-catering',
-    title: 'Retreat Catering Bali | Yoga, Wellness & Multi-Day Meals — myCHEF',
+    title: 'Retreat Catering Bali | Yoga, Wellness & Multi-Day Meals',
     description:
       'Retreat catering in Bali for yoga, wellness & creative groups. Multi-day menus, dietary planning & calm villa service. WhatsApp us to plan your retreat.',
     canonical: `${SITE}/catering/retreat-catering`,
@@ -228,7 +228,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'events-weddings': {
     path: '/events/weddings',
-    title: 'Wedding Catering Bali | Villa Weddings & Receptions — myCHEF',
+    title: 'Wedding Catering Bali | Villa Weddings & Receptions',
     description:
       'Wedding catering in Bali for villa ceremonies & receptions. Michelin-trained chefs, full staffing, multi-tier menus from IDR 600K/pp. WhatsApp us.',
     canonical: `${SITE}/events/weddings`,
@@ -258,7 +258,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'events-corporate': {
     path: '/events/corporate-events',
-    title: 'Corporate Events Bali | Offsites, Dinners & Launches — myCHEF',
+    title: 'Corporate Events Bali | Offsites, Dinners & Launches',
     description:
       'Corporate event catering in Bali for offsites, conferences & client dinners. Structured menus, staffing & on-site coordination. WhatsApp for a proposal.',
     canonical: `${SITE}/events/corporate-events`,
@@ -308,7 +308,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   canggu: {
     path: '/canggu',
-    title: 'Private Chef Canggu | Villa Dining & Retreat Catering — myCHEF',
+    title: 'Private Chef Canggu | Dining & Retreat Catering — myCHEF',
     description:
       'Hire a private chef in Canggu for villa dinners, poolside BBQs & retreat catering. Perfect for surf groups, families & long stays. WhatsApp us today.',
     canonical: `${SITE}/canggu`,
@@ -423,7 +423,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   chefs: {
     path: '/chefs',
-    title: 'Michelin-Trained Private Chefs Bali | Meet the Team — myCHEF',
+    title: 'Michelin-Trained Chefs Bali | Meet the Team — myCHEF',
     description:
       'Meet the myCHEF private chef team in Bali. Michelin-trained leadership, 50+ villa-tested chefs for fine dining, BBQs, retreats & events. Book via WhatsApp.',
     canonical: `${SITE}/chefs`,
@@ -493,7 +493,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   services: {
     path: '/services',
-    title: 'Private Chef Services Bali | All-In Villa Experiences — myCHEF',
+    title: 'Private Chef Services Bali | All-In Villa Dining — myCHEF',
     description:
       'Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit.',
     canonical: `${SITE}/services`,
@@ -533,7 +533,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   calculator: {
     path: '/calculator',
-    title: 'Private Chef Cost Calculator Bali | Instant Estimate — myCHEF',
+    title: 'Chef Cost Calculator Bali | Instant Estimate — myCHEF',
     description:
       'Estimate your private chef Bali cost in 30 seconds. Adjust guests, meals, menu style & add-ons for a realistic all-in budget. No hidden fees.',
     canonical: `${SITE}/calculator`,
@@ -613,7 +613,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'help-pricing': {
     path: '/help/pricing',
-    title: 'Private Chef Bali Pricing Guide | What It Really Costs — myCHEF',
+    title: 'Private Chef Bali Pricing Guide | What It Really Costs',
     description:
       'Understand private chef Bali pricing: what each format includes, how guest count & menu style affect cost, and how to read your myCHEF quote.',
     canonical: `${SITE}/help/pricing`,
@@ -623,7 +623,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'help-menu-guide': {
     path: '/help/menu-guide',
-    title: 'Private Chef Menu Guide Bali | Cuisines & Dietary Options — myCHEF',
+    title: 'Private Chef Menu Guide Bali | Cuisines & Dietary Options',
     description:
       'Choose the right private chef menu for your Bali villa. Guidance on cuisines, dietary needs, course styles & how to shape a meal for your group.',
     canonical: `${SITE}/help/menu-guide`,
@@ -633,7 +633,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'help-wedding-guide': {
     path: '/help/wedding-guide',
-    title: 'Wedding Catering Guide Bali | Plan Your Villa Wedding — myCHEF',
+    title: 'Wedding Catering Guide Bali | Plan Your Villa Wedding',
     description:
       'Plan Bali wedding catering step by step: guest counts, service styles, tastings, staffing & multi-day villa celebrations. Everything you need to know.',
     canonical: `${SITE}/help/wedding-guide`,
@@ -643,7 +643,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'help-corporate-guide': {
     path: '/help/corporate-guide',
-    title: 'Corporate Catering Guide Bali | Offsites & Team Retreats — myCHEF',
+    title: 'Corporate Catering Guide Bali | Offsites & Team Retreats',
     description:
       'Plan corporate catering in Bali: menu options, staffing, timing & multi-day meal flow for teams and offsites. Everything your team needs, handled.',
     canonical: `${SITE}/help/corporate-guide`,
@@ -653,7 +653,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'help-staffing-guide': {
     path: '/help/staffing-guide',
-    title: 'Villa Staffing Guide Bali | Waiters, Butlers & More — myCHEF',
+    title: 'Villa Staffing Guide Bali | Waiters, Butlers & More',
     description:
       'Find the right villa staff in Bali for dinners, parties & extended stays. Waiters, bartenders, butlers & household staff explained clearly.',
     canonical: `${SITE}/help/staffing-guide`,
@@ -693,7 +693,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'fine-dining-romantic-dinner': {
     path: '/fine-dining/romantic-dinner',
-    title: 'Romantic Dinner Bali Villa | Private Chef Date Night — myCHEF',
+    title: 'Romantic Dinner Bali Villa | Private Chef Date Night',
     description:
       'Book a romantic dinner in your Bali villa: private chef, candlelit setup, 5-course menu, flowers & champagne optional. WhatsApp us to plan your night.',
     canonical: `${SITE}/fine-dining/romantic-dinner`,
@@ -723,7 +723,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'fine-dining-chefs-table': {
     path: '/fine-dining/chefs-table',
-    title: "Chef's Table Bali | Adriano 7-Course Exclusive Dining — myCHEF",
+    title: "Chef's Table Bali | Adriano 7-Course Exclusive Dining",
     description:
       "Book Adriano's Chef's Table in Bali: 7-course market menu, counter seating, live commentary. Max 6 guests. IDR 3.5M/pp. WhatsApp to reserve.",
     canonical: `${SITE}/fine-dining/chefs-table`,
@@ -753,7 +753,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'in-villa-service-waiters': {
     path: '/in-villa-service/waiters',
-    title: 'Villa Waiters Bali | Professional Per-Shift Service — myCHEF',
+    title: 'Villa Waiters Bali | Professional Per-Shift Service',
     description:
       'Hire villa waiters in Bali for dinners, weddings & events. Uniformed, English-speaking, trained in plated service. From IDR 250K/hour. WhatsApp us.',
     canonical: `${SITE}/in-villa-service/waiters`,
@@ -783,7 +783,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'in-villa-service-mixology': {
     path: '/in-villa-service/mixology',
-    title: 'Mixology Service Bali | Signature Cocktails for Villas — myCHEF',
+    title: 'Mixology Service Bali | Signature Cocktails for Villas',
     description:
       'Private mixology in Bali: signature cocktail menus, guided tastings & cocktail classes for villa events. From IDR 1.5M/session. WhatsApp us to book.',
     canonical: `${SITE}/in-villa-service/mixology`,
@@ -863,7 +863,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'staffing-for-hotels-restaurants': {
     path: '/staffing/for-hotels-restaurants',
-    title: 'Chef Staffing Hotels Bali | Kitchen & Service Hires — myCHEF',
+    title: 'Chef Staffing Hotels Bali | Kitchen & Service Hires',
     description:
       'Hospitality staffing for Bali hotels, restaurants & beach clubs. Vetted chefs, servers & managers. Volume rates available. WhatsApp us to get started.',
     canonical: `${SITE}/staffing/for-hotels-restaurants`,
@@ -943,7 +943,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'blog-private-chef-bali-cost-breakdown-2026': {
     path: '/blog/private-chef-bali-cost-breakdown-2026',
-    title: 'Private Chef Bali Cost Breakdown 2026 | Fees, Groceries & Service',
+    title: 'Private Chef Bali Cost 2026 | Fees, Groceries & Service',
     description:
       'Private chef Bali cost breakdown for 2026, including chef fees, groceries, service charges and what changes the final villa quote.',
     canonical: `${SITE}/blog/private-chef-bali-cost-breakdown-2026`,
@@ -953,7 +953,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'blog-best-bali-villas-private-chef-kitchen': {
     path: '/blog/best-bali-villas-private-chef-kitchen',
-    title: 'Best Bali Villas with a Private Chef Kitchen | Planning Guide',
+    title: 'Best Bali Villas with Chef Kitchen | Planning Guide',
     description:
       'Best Bali villas with chef-friendly kitchens, from prep space and gas hobs to storage, staffing flow and dining-friendly layouts.',
     canonical: `${SITE}/blog/best-bali-villas-private-chef-kitchen`,
@@ -963,7 +963,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'blog-wedding-rehearsal-dinner-bali': {
     path: '/blog/wedding-rehearsal-dinner-bali',
-    title: 'Wedding Rehearsal Dinner Bali | Planning Guide for Villa Events',
+    title: 'Wedding Rehearsal Dinner Bali | Villa Events Planning Guide',
     description:
       'Wedding rehearsal dinner Bali guide covering villa formats, menu ideas, timing and how to host guests before the ceremony.',
     canonical: `${SITE}/blog/wedding-rehearsal-dinner-bali`,
@@ -973,7 +973,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'blog-yoga-retreat-chef-bali-meal-planning': {
     path: '/blog/yoga-retreat-chef-bali-meal-planning',
-    title: 'Yoga Retreat Chef Bali | Meal Planning for Multi-Day Retreats',
+    title: 'Yoga Retreat Chef Bali | Meal Planning Guide',
     description:
       'Yoga retreat chef Bali guide to meal planning, plant-forward menus, dietary requests and service for multi-day wellness stays.',
     canonical: `${SITE}/blog/yoga-retreat-chef-bali-meal-planning`,
@@ -990,6 +990,26 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef vs Restaurant in Bali — Which Is Better?',
     ogImage: `${SITE}/generated/journal-hero.webp`,
   },
+  'pricing-calculator': {
+    path: '/pricing-calculator',
+    title: 'Pricing Calculator | Private Chef Bali — myCHEF',
+    description:
+      'Calculate your private chef Bali cost in seconds. Adjust guests, menu style & add-ons for an instant estimate. No hidden fees.',
+    canonical: `${SITE}/pricing-calculator`,
+    h1: 'Private Chef Pricing Calculator',
+    ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,
+  },
+
+  'corporate-case-studies': {
+    path: '/corporate-case-studies',
+    title: 'Corporate Case Studies | myCHEF Bali Catering',
+    description:
+      'See how myCHEF delivers corporate catering in Bali for team offsites, board lunches & product launches. Real events, real results.',
+    canonical: `${SITE}/corporate-case-studies`,
+    h1: 'Corporate Case Studies',
+    ogImage: `${SITE}/generated/corp-hero.webp`,
+  },
+
 } as const
 
 /** Helper to retrieve meta by route key with strict typing */

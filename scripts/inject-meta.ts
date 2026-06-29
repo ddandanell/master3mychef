@@ -111,6 +111,36 @@ function getOgImage(path: string): string {
   return '/og-image.webp'
 }
 
+function getOgImageAlt(path: string): string {
+  if (path === '/') {
+    return 'myCHEF private chef service in Bali — villa dining and catering'
+  }
+  if (path.startsWith('/fine-dining')) {
+    return 'myCHEF fine dining private chef experience in Bali'
+  }
+  if (path.startsWith('/catering')) {
+    return 'myCHEF villa catering service in Bali'
+  }
+  if (path.startsWith('/events')) {
+    return 'myCHEF event catering and private chef in Bali'
+  }
+  if (path.startsWith('/staffing')) {
+    return 'myCHEF hospitality staffing and chef placement in Bali'
+  }
+  if (path.startsWith('/locations/') || path.startsWith('/private-chef/')) {
+    const location = path.split('/').pop() || 'Bali'
+    const prettyLocation = location.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+    return `myCHEF private chef in ${prettyLocation}`
+  }
+  if (path.startsWith('/in-villa-service')) {
+    return 'myCHEF in-villa service staff for Bali villas'
+  }
+  if (path.startsWith('/blog/') || path.startsWith('/journal/')) {
+    return 'myCHEF private chef and villa dining experience in Bali'
+  }
+  return 'myCHEF — private chef plating a fine dining course in a Bali villa'
+}
+
 function escapeHtml(text: string): string {
   return text
     .replace(/&/g, '&amp;')
@@ -212,6 +242,12 @@ function injectMeta(html: string, path: string, title: string, description: stri
     `<meta property="og:image" content="${ogImage}" />`
   )
 
+  // OG image alt
+  html = html.replace(
+    /<meta property="og:image:alt" content=".*?"\s*\/?>/,
+    `<meta property="og:image:alt" content="${escapeHtml(getOgImageAlt(path))}" />`
+  )
+
   // Twitter title
   html = html.replace(
     /<meta name="twitter:title" content=".*?"\s*\/?>/,
@@ -229,12 +265,17 @@ function injectMeta(html: string, path: string, title: string, description: stri
     /<meta name="twitter:image" content=".*?"\s*\/?>/,
     `<meta name="twitter:image" content="${ogImage}" />`
   )
-
   if (article?.date) {
+    const section = path.startsWith('/blog/') ? 'Blog' : path.startsWith('/journal/') ? 'Journal' : 'Guide'
+    const tags = path.startsWith('/blog/') ? 'private chef, Bali, villa dining' : path.startsWith('/journal/') ? 'Bali dining, private chef, villa catering' : 'Bali, private chef, guide'
     html = html.replace(
       '</head>',
-      `  <meta property="article:published_time" content="${article.date}" />\n  <meta property="article:modified_time" content="${article.date}" />\n  <meta property="article:author" content="${escapeHtml(ARTICLE_AUTHOR)}" />\n</head>`
-    )
+      `  <meta property="article:published_time" content="${article.date}" />
+  <meta property="article:modified_time" content="${article.date}" />
+  <meta property="article:author" content="${escapeHtml(ARTICLE_AUTHOR)}" />
+  <meta property="article:section" content="${section}" />
+  <meta property="article:tag" content="${tags}" />
+</head>`)
   }
 
   // Robots — noindex for thin-content pages and 404
@@ -260,6 +301,26 @@ function injectMeta(html: string, path: string, title: string, description: stri
     buildArticleJsonLd(path, title, description, ogImage),
   ].filter(Boolean).join('\n  ')
   html = html.replace('</head>', `${structuredData}\n  </head>`)
+
+  // OG locale (all content is in English)
+  html = html.replace(
+    /<meta property="og:locale" content=".*?"\s*\/?>/,
+    `<meta property="og:locale" content="en_US" />`
+  )
+
+  // OG site_name for brand recognition in social shares
+  html = html.replace(
+    /<meta property="og:site_name" content=".*?"\s*\/?>/,
+    `<meta property="og:site_name" content="myCHEF" />`
+  )
+
+  // Hreflang for international SEO
+  const hrefLangTags = [
+    `<link rel="alternate" hreflang="en" href="${canonical}" />`,
+    `<link rel="alternate" hreflang="id" href="${canonical}" />`,
+    `<link rel="alternate" hreflang="x-default" href="${canonical}" />`,
+  ].join('\n  ')
+  html = html.replace('</head>', `${hrefLangTags}\n  </head>`)
 
   return html
 }

@@ -20,7 +20,16 @@ const SECTIONS = [
       <li><strong>120–200+ guests:</strong> Event-scale deployment: 5+ chefs, 12+ servers, a full event coordinator, and venue inspection 48–72 hours before the event. We have catered up to 350 guests for villa weddings and resort functions.</li>
     </ul>
 
-    <p>The key to large group catering is not just cooking volume — it is orchestration. Every element of the event, from ingredient delivery at dawn to the last plate cleared after midnight, is sequenced. Our team briefs on arrival, assigns stations, confirms service windows, and executes with the precision that only comes from doing this at scale, repeatedly, across Bali's most demanding event venues.</p>`,
+    <p>The key to large group catering is not just cooking volume — it is orchestration. Every element of the event, from ingredient delivery at dawn to the last plate cleared after midnight, is sequenced. Our team briefs on arrival, assigns stations, confirms service windows, and executes with the precision that only comes from doing this at scale, repeatedly, across Bali's most demanding event venues. We serve large groups across Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, Jimbaran, and beyond — including beach clubs and resorts.</p>`,
+  },
+  {
+    id: 'why-mychef',
+    type: 'content' as const,
+    subtitle: 'Why myCHEF',
+    title: 'Large Group Catering Built on Real Experience',
+    body: `<p>myCHEF has served more than 560 villas across Bali, and large group events are where our operational discipline matters most. We have catered villa weddings for 350 guests, corporate retreats for 120, and family reunions for 80 — all with the same standard of food quality and service timing. Our multi-chef teams are not assembled ad hoc; they are trained together, briefed together, and deployed with a production coordinator who manages the entire event flow.</p>
+
+    <p>We serve all major Bali villa areas — Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, Jimbaran, and beyond — as well as beach clubs, resorts, and dedicated event venues. Wherever your group is gathering, we bring the equipment, the team, and the planning to execute without compromise.</p>`,
   },
   {
     id: 'formats',
@@ -106,6 +115,17 @@ const SECTIONS = [
     <p>When you contact us for a large group quote, share: guest count, date and time, venue name and location, preferred format (buffet, stations, plated, or advice needed), and any known dietary requirements. We will ask follow-up questions and, for events above 80 guests, schedule a venue call or site visit before finalizing the proposal.</p>`,
   },
   {
+    id: 'process',
+    type: 'content' as const,
+    subtitle: 'How It Works',
+    title: 'Booking Large Group Catering in Three Steps',
+    body: `<p><strong>Step 1 — Share your brief:</strong> Message us on WhatsApp with your guest count, venue, date, and preferred format. For groups above 80, we schedule a venue call or site visit before proposing. We send a detailed itemised quote within 4 hours.</p>
+
+    <p><strong>Step 2 — Lock in the team:</strong> Once you confirm, we reserve the chef team, production coordinator, equipment, and off-site prep kitchen if needed. We also conduct a dietary intake to map every guest's requirements.</p>
+
+    <p><strong>Step 3 — Execute flawlessly:</strong> The team arrives 3–6 hours before service (depending on group size), sets up production and service areas, and runs the event through to full clean-up. You host; we handle the logistics.</p>`,
+  },
+  {
     id: 'faq',
     type: 'faq' as const,
     subtitle: 'Common Questions',
@@ -121,7 +141,7 @@ const SECTIONS = [
       label: 'Chat on WhatsApp',
       href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%20need%20catering%20for%20a%20large%20group%20in%20Bali.',
     },
-    secondaryAction: { label: 'View Pricing', href: '/pricing' },
+    secondaryAction: { label: 'Get a Quote', href: '/quote' },
   },
 ]
 
@@ -149,6 +169,18 @@ const FAQS = [
   {
     question: 'Do you handle dietary requirements across a large group?',
     answer: 'Yes — we use a dietary intake form for large events to map every guest\'s requirements before menu finalization. Common requirements (vegetarian, vegan, gluten-free, nut-free, halal) are handled as standard. Complex multi-track requirements (e.g., 15+ distinct dietary combinations) are best served by a buffet or station format where guests self-select from clearly labeled dishes.',
+  },
+  {
+    question: 'Can you cater at a beach club or resort I have not booked yet?',
+    answer: 'Yes, but we recommend confirming the venue first. Some beach clubs have exclusive catering arrangements or vendor access requirements. Once you have a venue, we coordinate directly with their operations team to manage permits, access, and logistics.',
+  },
+  {
+    question: 'Do you provide tastings before the event?',
+    answer: 'For events above 100 guests, we offer a pre-event tasting at a fixed fee. This is arranged at a private villa or our prep kitchen and gives you confidence in the menu before the main event. Contact us to schedule.',
+  },
+  {
+    question: 'What if guest numbers change after booking?',
+    answer: 'Final guest counts are confirmed 72 hours before the event. Minor adjustments (up to 10%) are handled at no extra charge. Larger increases may require additional staffing and ingredients, which we quote immediately.',
   },
 ]
 
@@ -199,7 +231,7 @@ export default function LargeGroupCateringBaliPage() {
           image: 'https://mychef.id/generated/mychef-catering-bali-hero-babiguling.webp',
           mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/large-group-catering-bali' },
           url: 'https://mychef.id/blog/large-group-catering-bali',
-          wordCount: 1500,
+          wordCount: 1800,
           keywords: 'large group catering bali, catering 30 guests bali, private chef large group bali',
         },
       ]}

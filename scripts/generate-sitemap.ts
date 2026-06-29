@@ -21,17 +21,19 @@ const __dirname = dirname(__filename);
 const SITE_URL = 'https://mychef.id';
 
 // Build URL entries from the dynamic SITEMAP
-const URLS: { path: string; priority: number; changefreq: string }[] = [
+const URLS: { path: string; priority: number; changefreq: string; lastmod?: string }[] = [
   ...SITEMAP.map((entry: SitemapEntry) => ({
     path: entry.path,
     priority: entry.priority,
     changefreq: entry.changefreq,
+    lastmod: entry.date,
   })),
   // Journal post URLs (individual journal entries under /journal/)
   ...JOURNAL_POSTS.map((post) => ({
     path: `/journal/${post.slug}`,
     priority: 0.8,
     changefreq: 'monthly' as const,
+    lastmod: post.date,
   })),
 ];
 
@@ -51,9 +53,9 @@ const UNIQUE_URLS = FILTERED_URLS.filter((url) => {
 function generateSitemap(): string {
   const now = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   
-  const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq }) => `  <url>
+  const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq, lastmod }) => `  <url>
     <loc>${SITE_URL}${path}</loc>
-    <lastmod>${now}</lastmod>
+    <lastmod>${lastmod || now}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority.toFixed(1)}</priority>
   </url>`).join('\n');

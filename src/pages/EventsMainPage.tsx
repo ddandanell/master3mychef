@@ -525,7 +525,7 @@ export default function EventsMainPage() {
               data-source="events-hero"
               className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <MessageCircle className="w-4 h-4" /> Book on WhatsApp
+              <MessageCircle className="w-4 h-4" /> Plan Your Event — Reply in 1 Hour
             </a>
             <a
               href="#event-types"
@@ -646,6 +646,25 @@ export default function EventsMainPage() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MID-PAGE CTA: After event types */}
+      <section className="py-16 md:py-20 px-6 bg-white">
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4">Not Sure What You Need?</p>
+          <h3 className="font-playfair text-2xl md:text-3xl mb-4 text-[#1A1A1A]">We Will Match the Right Event Format to Your Celebration</h3>
+          <p className="text-[#4A4745] max-w-xl mx-auto mb-6">
+            Wedding, birthday, corporate retreat, or anniversary? Tell us your guest count, villa, and date. We will recommend the right format and send a clear proposal — reply within the hour.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-mid-cta" className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white">
+              <MessageCircle className="w-4 h-4" /> Plan Your Event — Reply in 1 Hour
+            </a>
+            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-7 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#FAFAF8] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <Phone className="w-4 h-4" /> Call +62 811-3803-488
+            </a>
           </div>
         </div>
       </section>
@@ -919,7 +938,7 @@ export default function EventsMainPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
+              <MessageCircle className="w-4 h-4" /> Plan Your Event — Reply in 1 Hour
             </a>
             <a
               href="tel:+628113803488"
@@ -1189,7 +1208,7 @@ export default function EventsMainPage() {
               data-source="events-cta"
               className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <MessageCircle className="w-4 h-4" /> Plan My Event — Free Consultation
+              <MessageCircle className="w-4 h-4" /> Plan Your Event — Reply in 1 Hour
             </a>
             <a
               href="tel:+628113803488"

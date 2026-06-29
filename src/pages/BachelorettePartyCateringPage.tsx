@@ -16,7 +16,16 @@ const SECTIONS = [
 
     <p>We work with hen parties of 6 to 30 guests across Seminyak, Canggu, Ubud, Uluwatu, and Nusa Dua. Whether you want a lazy bottomless brunch beside the pool, an epic grazing table that takes over the terrace, a candlelit dinner party for 12, or a styled picnic with bouquets and personalised touches — we have done it dozens of times and we know exactly how to make it exceptional.</p>
 
-    <p>Below you will find our most popular bachelorette packages, what goes into a myCHEF grazing table, how we approach food presentation for Instagram-worthy results, and all the practical answers you need to book with confidence.</p>`,
+    <p>Below you will find our most popular bachelorette packages, what goes into a myCHEF grazing table, how we approach food presentation for Instagram-worthy results, and all the practical answers you need to book with confidence. We cater hen parties across Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, and Jimbaran.</p>`,
+  },
+  {
+    id: 'why-mychef',
+    type: 'content' as const,
+    subtitle: 'Why myCHEF',
+    title: 'Hen Parties Designed by a Team That Gets It',
+    body: `<p>myCHEF has served more than 560 villas across Bali, and bachelorette parties are one of our favourite events to cater. We understand that a hen party is as much about the photographs as the food — so every grazing table, every brunch spread, and every dessert display is styled to match your aesthetic. Our chefs have built tables for bridal parties of every size, from intimate groups of 6 to full villa takeovers of 30.</p>
+
+    <p>We operate across Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, and Jimbaran, bringing the same attention to detail whether your villa is a clifftop estate in Uluwatu or a jungle retreat in Ubud. From the first setup photo to the final clean-up, we handle the logistics so the bride and her guests can simply enjoy the day.</p>`,
   },
   {
     id: 'experiences',
@@ -114,6 +123,17 @@ const SECTIONS = [
     <p>The result is food that looks as good as it tastes — and gives your villa the editorial quality that hen party memories deserve.</p>`,
   },
   {
+    id: 'process',
+    type: 'content' as const,
+    subtitle: 'How It Works',
+    title: 'Booking Your Hen Party Catering in Three Steps',
+    body: `<p><strong>Step 1 — Share your vision:</strong> Message us on WhatsApp with your villa, group size, date, and any theme or colour palette. We send package options and menu inspiration within 2 hours.</p>
+
+    <p><strong>Step 2 — Design your menu:</strong> We tailor the grazing table, brunch spread, or dinner menu to your aesthetic and dietary requirements. You confirm once, and we lock in the chef and team.</p>
+
+    <p><strong>Step 3 — Celebrate:</strong> The chef and team arrive 2–3 hours before guests, build the table, set the drinks station, and manage everything from the first photograph to the final toast. You host; we handle the rest.</p>`,
+  },
+  {
     id: 'faq',
     type: 'faq' as const,
     subtitle: 'Questions',
@@ -130,7 +150,7 @@ const SECTIONS = [
       href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20bachelorette%20party%20at%20a%20Bali%20villa%20and%20need%20catering.',
       external: true,
     },
-    secondaryAction: { label: 'View Pricing', href: '/pricing' },
+    secondaryAction: { label: 'Get a Quote', href: '/quote' },
   },
 ]
 
@@ -158,6 +178,18 @@ const FAQS = [
   {
     question: 'Can you cater if guests have dietary restrictions?',
     answer: 'Yes — all dietary requirements are handled as standard. Vegan, gluten-free, nut-free, dairy-free, and halal options are all available. Just let us know the breakdown when you confirm your booking and we will ensure every guest is well fed.',
+  },
+  {
+    question: 'Can you match a specific colour theme or aesthetic?',
+    answer: 'Absolutely. We coordinate food presentation, platter choices, garnishes, and ingredient colours with your party theme. Share your mood board or Pinterest board when you book and we will design the spread to match.',
+  },
+  {
+    question: 'How long does the grazing table setup take?',
+    answer: 'For groups of 8–15, setup takes around 1.5–2 hours. For larger groups up to 30, we allow 2.5–3 hours to build the full table with height variation, florals, and finishing details. We arrive early so everything is pristine before your first guest.',
+  },
+  {
+    question: 'Can you do a naked cake or dessert display?',
+    answer: 'Yes — we coordinate with Bali cake designers and can arrange a custom naked cake, macaron tower, or dessert display as part of your package. Dessert displays are quoted separately and confirmed at booking.',
   },
 ]
 
@@ -204,7 +236,7 @@ export default function BachelorettePartyCateringPage() {
           image: 'https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp',
           mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/bachelorette-party-bali-catering' },
           url: 'https://mychef.id/blog/bachelorette-party-bali-catering',
-          wordCount: 1400,
+          wordCount: 1700,
           keywords: 'bachelorette party bali, hen party bali catering, hens night bali chef',
         },
       ]}

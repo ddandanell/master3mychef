@@ -5,7 +5,8 @@ import { getPageMeta } from '@/data/page-meta'
 import { PILLARS } from '@/data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
 import LocationChips from './LocationChips'
-
+import RelatedServices from '@/components/shared/RelatedServices'
+import { IN_VILLA_SERVICE_RELATED } from '@/data/related-services'
 import OptimizedImage from '@/components/OptimizedImage'
 const SITE = 'https://mychef.id'
 const WA = '628113803488'
@@ -152,6 +153,7 @@ export default function InVillaServicePage() {
             width={1920}
             height={1080}
             fetchPriority="high"
+            loading="eager"
             decoding="async"
             className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/55" />
@@ -171,7 +173,7 @@ export default function InVillaServicePage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="in-villa-hero" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
-                <MessageCircle className="w-4 h-4" /> Hire Staff Now
+                <MessageCircle className="w-4 h-4" /> Get Staffing Availability & Pricing in 1 Hour
               </a>              <Link to="/quote" className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-colors">
                 Get a Quote
               </Link>
@@ -260,6 +262,27 @@ export default function InVillaServicePage() {
         </div>
       </section>
 
+      {/* MID-PAGE CTA: After service types */}
+      <section className="py-16 md:py-20 bg-[#FAFAF8]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="max-w-[800px] mx-auto text-center">
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Not Sure What You Need?</p>
+            <h3 className="font-playfair text-2xl md:text-3xl mb-4 text-[#1A1A1A]">We Will Match the Right Staff to Your Event</h3>
+            <p className="text-[#4A4745] max-w-xl mx-auto mb-6">
+              Waiters for a plated dinner, butlers for a luxury stay, or bartenders for a cocktail party? Tell us your guest count and event type. We will recommend the right team and confirm availability within the hour.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="in-villa-mid-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
+                <MessageCircle className="w-4 h-4" /> Get Staffing Availability & Pricing in 1 Hour
+              </a>
+              <Link to="/quote" className="inline-flex items-center justify-center gap-2 border border-[#E8E6E3] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white transition-colors">
+                Get a Quote
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What's Included */}
       <section className="py-16 md:py-24 bg-[#FAFAF8]">
         <div className="max-w-[1200px] mx-auto px-6">
@@ -335,7 +358,7 @@ export default function InVillaServicePage() {
                 data-source="in-villa-awards-cta"
                 className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
               >
-                <MessageCircle className="w-4 h-4" /> Plan Your Dinner
+                <MessageCircle className="w-4 h-4" /> Get Staffing Availability & Pricing in 1 Hour
               </a>
               <Link
                 to="/fine-dining"
@@ -376,6 +399,8 @@ export default function InVillaServicePage() {
           </div>
         </div>
       </section>
+
+      <RelatedServices services={IN_VILLA_SERVICE_RELATED} title="Explore In-Villa Service Options" />
 
       {/* FAQ */}
       <section className="py-16 md:py-24 bg-white">
@@ -435,7 +460,7 @@ export default function InVillaServicePage() {
           <p className="text-white/[60%] mb-8">Message us on WhatsApp. We reply within the hour with staffing ratios, availability, and clear per-shift pricing before you book.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="in-villa-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
-              <MessageCircle className="w-4 h-4" /> Hire Staff Now
+              <MessageCircle className="w-4 h-4" /> Get Staffing Availability & Pricing in 1 Hour
             </a>
             <Link to="/quote" className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-colors">
               Get a Quote

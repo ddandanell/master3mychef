@@ -388,6 +388,7 @@ export default function LunaPage() {
             width={1408}
             height={768}
             fetchPriority="high"
+            loading="eager"
             decoding="async"
             className="w-full h-full object-cover" />
           <div
@@ -422,8 +423,9 @@ export default function LunaPage() {
               size="brand"
               className="w-full text-xs tracking-[0.25em] sm:w-auto md:text-sm"
               onClick={() => openOrder('Mediterranean Sea Experience')}
+              data-source="luna-hero"
             >
-              Reserve My Private Dinner
+              Reserve Your Evening — Quote in 1 Hour
             </Button>
             <Button asChild variant="secondary" size="brand" className="w-full text-xs tracking-[0.25em] sm:w-auto md:text-sm">
               <a href="#our-menus">Explore Menu</a>
@@ -543,6 +545,25 @@ export default function LunaPage() {
                 <p className="text-[#4A4745] text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NOT SURE WHAT YOU NEED */}
+      <section className="py-16 md:py-20 px-6" style={{ background: '#F5F3EF' }}>
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Not Sure What You Need?</p>
+          <h3 className="text-2xl md:text-3xl mb-4 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>We Will Match the Right Experience to Your Evening</h3>
+          <p className="text-[#1A1A1A]/60 max-w-xl mx-auto mb-6">
+            Tell us your dates, guest count, and villa. We will recommend the perfect menu, wine pairing, and service style — and reply within the hour with a clear quote.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20reserve%20a%20fine%20dining%20evening%20in%20Bali." target="_blank" rel="noopener noreferrer" data-source="luna-not-sure-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+              <MessageCircle className="w-4 h-4" /> Get Your Fine Dining Quote in 1 Hour
+            </a>
+            <Link to="/fine-dining" className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white transition-all">
+              Explore All Experiences
+            </Link>
           </div>
         </div>
       </section>
@@ -807,6 +828,25 @@ export default function LunaPage() {
         </div>
       </section>
 
+      {/* MID-PAGE CTA: After menus */}
+      <section className="py-16 md:py-20 px-6" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Ready to Book?</p>
+          <h3 className="text-2xl md:text-3xl mb-4 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>Your Evening, Your Menu, Your Villa</h3>
+          <p className="text-white/[60%] max-w-xl mx-auto mb-6">
+            Choose Mediterranean Sea or Wagyu. Add wine pairing. Dietary needs? We adjust everything. Sofia replies within the hour with availability and a clear quote.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20reserve%20a%20fine%20dining%20evening%20in%20Bali." target="_blank" rel="noopener noreferrer" data-source="luna-menus-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
+              <MessageCircle className="w-4 h-4" /> Get Your Fine Dining Quote in 1 Hour
+            </a>
+            <a href="mailto:indonesia@mychef.id" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+              Prefer Email?
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works — Cinematic Luxury */}
       <section id="how-it-works" className="relative py-32 md:py-40 px-6 overflow-hidden scroll-mt-24">
         {/* Cinematic background layers */}
@@ -887,7 +927,7 @@ export default function LunaPage() {
             <Button asChild variant="secondary" size="brand" className="text-sm tracking-[0.2em] hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)]">
               <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="luna-howitworks-cta">
                 <Phone className="w-4 h-4" strokeWidth={1.5} />
-                Start on WhatsApp
+                Get Your Quote in 1 Hour
               </a>
             </Button>
           </div>
@@ -1068,7 +1108,7 @@ export default function LunaPage() {
             <Button asChild variant="whatsapp" size="brand">
               <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="luna-included-cta">
                 <Phone className="w-4 h-4" />
-                Book This Experience
+                Reserve Your Evening — Reply in 1 Hour
               </a>
             </Button>
           </div>
@@ -1149,7 +1189,7 @@ export default function LunaPage() {
             <Button asChild variant="whatsapp" size="brand">
               <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="luna-faq-cta">
                 <MessageCircle className="w-4 h-4" />
-                Reserve My Private Dinner
+                Reserve Your Evening — Reply in 1 Hour
               </a>
             </Button>
           </div>
@@ -1243,7 +1283,7 @@ export default function LunaPage() {
             <Button asChild variant="whatsapp" size="brand">
               <a href="https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20reserve%20a%20fine%20dining%20evening%20in%20Bali." target="_blank" rel="noopener noreferrer" data-source="luna-final-cta">
                 <Phone className="w-4 h-4" />
-                Start Planning on WhatsApp
+                Get Your Fine Dining Quote in 1 Hour
               </a>
             </Button>
             <Button asChild variant="secondary" size="brand">

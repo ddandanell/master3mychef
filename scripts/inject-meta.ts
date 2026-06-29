@@ -276,7 +276,6 @@ function injectMeta(html: string, path: string, title: string, description: stri
   <meta property="article:section" content="${section}" />
   <meta property="article:tag" content="${tags}" />
 </head>`)
-    )
   }
 
   // Robots — noindex for thin-content pages and 404

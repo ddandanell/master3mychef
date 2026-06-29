@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ChevronRight, Star } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceWithOfferSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
@@ -156,6 +156,13 @@ export default function FineDiningChefsPage() {
           localBusinessSchema,
           breadcrumbSchema('Our Chefs Bali', `${SITE}/fine-dining/our-chefs`, 'Fine Dining', `${SITE}/fine-dining`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
+          serviceWithOfferSchema({
+            name: 'Private Chef Bali — Fine Dining',
+            description: 'Hire a Michelin-trained private chef in Bali for fine dining villa experiences. Mediterranean and Wagyu tasting menus with full service and cleanup included.',
+            url: 'https://mychef.id/fine-dining/our-chefs',
+            price: '350000',
+            unitText: 'per person',
+          }),
         ]}
       />
 

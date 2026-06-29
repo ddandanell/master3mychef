@@ -187,6 +187,43 @@ export function offerSchema(
   }
 }
 
+export function serviceWithOfferSchema(params: {
+  name: string
+  description: string
+  url: string
+  price: string
+  priceCurrency?: string
+  unitText?: string
+}): Record<string, unknown> {
+  const { name, description, url, price, priceCurrency = 'IDR', unitText = 'per person' } = params
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    provider: {
+      '@type': 'Organization',
+      name: 'myCHEF.id',
+      url: 'https://mychef.id',
+    },
+    areaServed: 'Bali, Indonesia',
+    offers: {
+      '@type': 'Offer',
+      priceCurrency,
+      price,
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price,
+        priceCurrency,
+        unitText,
+      },
+      availability: 'https://schema.org/InStock',
+      url: 'https://mychef.id/pricing',
+    },
+    url,
+  }
+}
+
 export function faqPageSchema(questions: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',

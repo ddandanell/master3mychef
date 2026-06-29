@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema, offerSchema,
-  faqPageSchema, aggregateRatingSchema, detailedServiceSchema, howToSchema,
+  faqPageSchema, aggregateRatingSchema, detailedServiceSchema, howToSchema, serviceWithOfferSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
@@ -146,6 +146,13 @@ export default function PrivateChefBaliPage() {
             steps: HOW_IT_WORKS.map(s => ({ name: s.title, text: s.body })),
           }),
           breadcrumbSchema('Private Chef Bali', `${SITE}/fine-dining/private-chef-bali`, 'Fine Dining', `${SITE}/fine-dining`),
+          serviceWithOfferSchema({
+            name: 'Private Chef Bali',
+            description: 'Hire a Michelin-trained private chef for your Bali villa. Full-service including groceries, table service, and kitchen cleanup. Serving all villa areas across Bali.',
+            url: `${SITE}/fine-dining/private-chef-bali`,
+            price: '350000',
+            unitText: 'per person',
+          }),
         ]}
       />
 

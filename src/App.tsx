@@ -95,6 +95,7 @@ const JakartaPage = lazy(() => import('./pages/JakartaPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 const ChefsPage = lazy(() => import('./pages/ChefsPage'))
 const PricingPage = lazy(() => import('./pages/PricingPage'))
+const PricingCalculatorPage = lazy(() => import('./pages/PricingCalculatorPage'))
 const FAQPage = lazy(() => import('./pages/FAQPage'))
 const ReviewsPage = lazy(() => import('./pages/ReviewsPage'))
 const WhyMychefPage = lazy(() => import('./pages/WhyMychefPage'))
@@ -112,6 +113,7 @@ const CorporateEventsCateringPage = lazy(() => import('./pages/CorporateEventsCa
 const ProposalDinnerPage = lazy(() => import('./pages/ProposalDinnerPage'))
 const HoneymoonChefPage = lazy(() => import('./pages/HoneymoonChefPage'))
 const CorporateCaseStudiesPage = lazy(() => import('./pages/CorporateCaseStudiesPage'))
+const CorporateCateringCaseStudiesPage = lazy(() => import('./pages/CorporateCateringCaseStudiesPage'))
 const FoodAllergiesPage = lazy(() => import('./pages/FoodAllergiesPage'))
 const BaliWeddingCateringTimelinePage = lazy(() => import('./pages/BaliWeddingCateringTimelinePage'))
 const HowToHirePrivateChefPage = lazy(() => import('./pages/HowToHirePrivateChefPage'))
@@ -129,7 +131,12 @@ const AnniversaryDinnerPage = lazy(() => import('./pages/AnniversaryDinnerPage')
 const DrySeasonMenuPage = lazy(() => import('./pages/DrySeasonMenuPage'))
 const WetSeasonMenuPage = lazy(() => import('./pages/WetSeasonMenuPage'))
 const FestiveSeasonMenuPage = lazy(() => import('./pages/FestiveSeasonMenuPage'))
+const FloatingBreakfastBaliPage = lazy(() => import('./pages/FloatingBreakfastBaliPage'))
+const PrivateDinnerPartyBaliPage = lazy(() => import('./pages/PrivateDinnerPartyBaliPage'))
+const BaliVillaCookingClassPage = lazy(() => import('./pages/BaliVillaCookingClassPage'))
 const ChefProfilePage = lazy(() => import('./pages/ChefProfilePage'))
+const LiveInChefBaliHiringGuidePage = lazy(() => import('./pages/LiveInChefBaliHiringGuidePage'))
+const PrivateChefBaliExpatsPage = lazy(() => import('./pages/PrivateChefBaliExpatsPage'))
 
 // Help & Guides System
 const HelpPage = lazy(() => import('./pages/HelpPage'))
@@ -368,14 +375,20 @@ export default function App() {
           <Route path="/blog/how-to-plan-villa-birthday-party-bali" element={<VillaBirthdayPartyPage />} />
           <Route path="/blog/yoga-retreat-chef-bali-meal-planning" element={<YogaRetreatChefPage />} />
           <Route path="/blog/corporate-events-catering-bali-team-dining" element={<CorporateEventsCateringPage />} />
+          <Route path="/blog/corporate-catering-bali-case-studies" element={<CorporateCateringCaseStudiesPage />} />
           <Route path="/blog/dining-by-location-bali-neighborhood-guide" element={<DiningByLocationBaliPage />} />
           <Route path="/blog/buffet-vs-plated-service-bali" element={<BuffetVsPlatedPage />} />
           <Route path="/blog/anniversary-dinner-villa-bali" element={<AnniversaryDinnerPage />} />
+          <Route path="/blog/floating-breakfast-bali" element={<FloatingBreakfastBaliPage />} />
           <Route path="/blog/proposal-dinner-bali-private-chef" element={<ProposalDinnerPage />} />
           <Route path="/blog/honeymoon-private-chef-bali" element={<HoneymoonChefPage />} />
           <Route path="/blog/dry-season-menu-bali" element={<DrySeasonMenuPage />} />
           <Route path="/blog/wet-season-menu-bali" element={<WetSeasonMenuPage />} />
           <Route path="/blog/festive-season-menu-bali" element={<FestiveSeasonMenuPage />} />
+          <Route path="/blog/private-dinner-party-bali" element={<PrivateDinnerPartyBaliPage />} />
+          <Route path="/blog/bali-villa-cooking-class-private-chef" element={<BaliVillaCookingClassPage />} />
+          <Route path="/blog/live-in-chef-bali-hiring-guide" element={<LiveInChefBaliHiringGuidePage />} />
+          <Route path="/blog/private-chef-bali-expats" element={<PrivateChefBaliExpatsPage />} />
           {BLOG_POST_SLUGS.map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />
           ))}
@@ -388,6 +401,7 @@ export default function App() {
           <Route path="/why-mychef" element={<WhyMychefPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/pricing-calculator" element={<PricingCalculatorPage />} />
           <Route path="/retreats" element={<Navigate to="/events/retreats" replace />} />
           <Route path="/recommended-services" element={<RecommendedServicesPage />} />
           <Route path="/join-our-team" element={<JoinTeamPage />} />

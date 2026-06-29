@@ -13,6 +13,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  serviceWithOfferSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -164,6 +165,13 @@ export default function CateringVillaPage() {
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 312),
           cateringBreadcrumbSchema('Villa Catering Bali', `${SITE}/catering/villa-catering`),
+          serviceWithOfferSchema({
+            name: 'Villa Catering Bali',
+            description: 'Villa catering in Bali for private lunches, dinners, birthdays, and multi-day stays with chef-led menus and on-site service. Setup, service, and cleanup included.',
+            url: `${SITE}/catering/villa-catering`,
+            price: '350000',
+            unitText: 'per person',
+          }),
         ]}
       />
 

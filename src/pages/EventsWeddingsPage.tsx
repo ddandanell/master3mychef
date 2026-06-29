@@ -6,7 +6,7 @@ import {
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, serviceWithOfferSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -168,6 +168,13 @@ export default function EventsWeddingsPage() {
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           breadcrumbSchema('Wedding Catering Bali', `${SITE}/events/weddings`, 'Events', `${SITE}/events`),
+          serviceWithOfferSchema({
+            name: 'Wedding Catering Bali',
+            description: 'Private chef wedding catering in Bali for villa ceremonies and receptions. Michelin-trained chefs, full staffing, multi-tier menus, and on-site coordination.',
+            url: `${SITE}/events/weddings`,
+            price: '550000',
+            unitText: 'per person',
+          }),
         ]}
       />
 

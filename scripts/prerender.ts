@@ -31,6 +31,7 @@ const ROUTES = [
   { path: '/fine-dining/private-chef-bali', file: 'private-chef-bali.html' },
   { path: '/faq', file: 'faq.html' },
   { path: '/pricing', file: 'pricing.html' },
+  { path: '/pricing-calculator', file: 'pricing-calculator.html' },
   { path: '/chefs', file: 'chefs.html' },
   { path: '/about', file: 'about.html' },
   { path: '/contact', file: 'contact.html' },
@@ -87,6 +88,12 @@ const ROUTES = [
   { path: '/blog/proposal-dinner-bali-private-chef', file: 'blog-proposal-dinner-bali-private-chef.html' },
   { path: '/blog/honeymoon-private-chef-bali', file: 'blog-honeymoon-private-chef-bali.html' },
   { path: '/blog/anniversary-dinner-villa-bali', file: 'blog-anniversary-dinner-villa-bali.html' },
+  { path: '/blog/floating-breakfast-bali', file: 'blog-floating-breakfast-bali.html' },
+  { path: '/blog/private-dinner-party-bali', file: 'blog-private-dinner-party-bali.html' },
+  { path: '/blog/bali-villa-cooking-class-private-chef', file: 'blog-bali-villa-cooking-class-private-chef.html' },
+  { path: '/blog/corporate-catering-bali-case-studies', file: 'blog-corporate-catering-bali-case-studies.html' },
+  { path: '/blog/live-in-chef-bali-hiring-guide', file: 'blog-live-in-chef-bali-hiring-guide.html' },
+  { path: '/blog/private-chef-bali-expats', file: 'blog-private-chef-bali-expats.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },
   // Journal posts (all 16)

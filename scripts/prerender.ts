@@ -118,6 +118,11 @@ const ROUTES = [
   { path: '/blog/private-chef-jimbaran-guide', file: 'blog-private-chef-jimbaran-guide.html' },
   { path: '/blog/private-chef-roles-responsibilities-explained', file: 'blog-private-chef-roles-responsibilities-explained.html' },
   { path: '/blog/fine-dining-trends-bali-2026-innovations', file: 'blog-fine-dining-trends-bali-2026-innovations.html' },
+  { path: '/blog/private-chef-sanur-guide', file: 'blog-private-chef-sanur-guide.html' },
+  { path: '/blog/private-chef-pererenan-guide', file: 'blog-private-chef-pererenan-guide.html' },
+  { path: '/blog/private-chef-denpasar-guide', file: 'blog-private-chef-denpasar-guide.html' },
+  { path: '/blog/chef-placement-agency-bali', file: 'blog-chef-placement-agency-bali.html' },
+  { path: '/blog/event-staff-bali', file: 'blog-event-staff-bali.html' },
   { path: '/partner', file: 'partner.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },

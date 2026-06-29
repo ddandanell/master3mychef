@@ -161,6 +161,11 @@ const HouseholdChefBaliGuidePage = lazy(() => import('./pages/HouseholdChefBaliG
 const PrivateChefJimbaranGuidePage = lazy(() => import('./pages/PrivateChefJimbaranGuidePage'))
 const PrivateChefRolesResponsibilitiesPage = lazy(() => import('./pages/PrivateChefRolesResponsibilitiesPage'))
 const FineDiningTrendsBali2026Page = lazy(() => import('./pages/FineDiningTrendsBali2026Page'))
+const PrivateChefSanurGuidePage = lazy(() => import('./pages/PrivateChefSanurGuidePage'))
+const PrivateChefPererenanGuidePage = lazy(() => import('./pages/PrivateChefPererenanGuidePage'))
+const PrivateChefDenpasarGuidePage = lazy(() => import('./pages/PrivateChefDenpasarGuidePage'))
+const ChefPlacementAgencyBaliPage = lazy(() => import('./pages/ChefPlacementAgencyBaliPage'))
+const EventStaffBaliPage = lazy(() => import('./pages/EventStaffBaliPage'))
 
 // Help & Guides System
 const HelpPage = lazy(() => import('./pages/HelpPage'))
@@ -437,6 +442,11 @@ export default function App() {
           <Route path="/blog/private-chef-jimbaran-guide" element={<PrivateChefJimbaranGuidePage />} />
           <Route path="/blog/private-chef-roles-responsibilities-explained" element={<PrivateChefRolesResponsibilitiesPage />} />
           <Route path="/blog/fine-dining-trends-bali-2026-innovations" element={<FineDiningTrendsBali2026Page />} />
+          <Route path="/blog/private-chef-sanur-guide" element={<PrivateChefSanurGuidePage />} />
+          <Route path="/blog/private-chef-pererenan-guide" element={<PrivateChefPererenanGuidePage />} />
+          <Route path="/blog/private-chef-denpasar-guide" element={<PrivateChefDenpasarGuidePage />} />
+          <Route path="/blog/chef-placement-agency-bali" element={<ChefPlacementAgencyBaliPage />} />
+          <Route path="/blog/event-staff-bali" element={<EventStaffBaliPage />} />
           <Route path="/partner" element={<VillaManagerPartnerPage />} />
           {BLOG_POST_SLUGS.map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />

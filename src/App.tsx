@@ -134,9 +134,18 @@ const FestiveSeasonMenuPage = lazy(() => import('./pages/FestiveSeasonMenuPage')
 const FloatingBreakfastBaliPage = lazy(() => import('./pages/FloatingBreakfastBaliPage'))
 const PrivateDinnerPartyBaliPage = lazy(() => import('./pages/PrivateDinnerPartyBaliPage'))
 const BaliVillaCookingClassPage = lazy(() => import('./pages/BaliVillaCookingClassPage'))
+const LargeGroupCateringBaliPage = lazy(() => import('./pages/LargeGroupCateringBaliPage'))
+const BachelorPartyBaliPage = lazy(() => import('./pages/BachelorPartyBaliPage'))
 const ChefProfilePage = lazy(() => import('./pages/ChefProfilePage'))
 const LiveInChefBaliHiringGuidePage = lazy(() => import('./pages/LiveInChefBaliHiringGuidePage'))
 const PrivateChefBaliExpatsPage = lazy(() => import('./pages/PrivateChefBaliExpatsPage'))
+const BachelorettePartyCateringPage = lazy(() => import('./pages/BachelorettePartyCateringPage'))
+const NewYearsEveBaliPage = lazy(() => import('./pages/NewYearsEveBaliPage'))
+const BabyShowerCateringBaliPage = lazy(() => import('./pages/BabyShowerCateringBaliPage'))
+const VillaStaffBaliGuidePage = lazy(() => import('./pages/VillaStaffBaliGuidePage'))
+const WellnessRetreatCateringPage = lazy(() => import('./pages/WellnessRetreatCateringPage'))
+const PrivateChefJakartaGuidePage = lazy(() => import('./pages/PrivateChefJakartaGuidePage'))
+const IndonesianStreetFoodBaliPage = lazy(() => import('./pages/IndonesianStreetFoodBaliPage'))
 
 // Help & Guides System
 const HelpPage = lazy(() => import('./pages/HelpPage'))
@@ -387,8 +396,16 @@ export default function App() {
           <Route path="/blog/festive-season-menu-bali" element={<FestiveSeasonMenuPage />} />
           <Route path="/blog/private-dinner-party-bali" element={<PrivateDinnerPartyBaliPage />} />
           <Route path="/blog/bali-villa-cooking-class-private-chef" element={<BaliVillaCookingClassPage />} />
+          <Route path="/blog/bachelor-party-bali-private-chef" element={<BachelorPartyBaliPage />} />
           <Route path="/blog/live-in-chef-bali-hiring-guide" element={<LiveInChefBaliHiringGuidePage />} />
           <Route path="/blog/private-chef-bali-expats" element={<PrivateChefBaliExpatsPage />} />
+          <Route path="/blog/bachelorette-party-bali-catering" element={<BachelorettePartyCateringPage />} />
+          <Route path="/blog/new-years-eve-bali-private-chef" element={<NewYearsEveBaliPage />} />
+          <Route path="/blog/baby-shower-catering-bali" element={<BabyShowerCateringBaliPage />} />
+          <Route path="/blog/large-group-catering-bali" element={<LargeGroupCateringBaliPage />} />
+          <Route path="/blog/villa-staff-bali-hiring-guide" element={<VillaStaffBaliGuidePage />} />
+          <Route path="/blog/bali-wellness-retreat-catering" element={<WellnessRetreatCateringPage />} />
+          <Route path="/blog/private-chef-jakarta-complete-guide" element={<PrivateChefJakartaGuidePage />} />
           {BLOG_POST_SLUGS.map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />
           ))}

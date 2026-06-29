@@ -94,6 +94,14 @@ const ROUTES = [
   { path: '/blog/corporate-catering-bali-case-studies', file: 'blog-corporate-catering-bali-case-studies.html' },
   { path: '/blog/live-in-chef-bali-hiring-guide', file: 'blog-live-in-chef-bali-hiring-guide.html' },
   { path: '/blog/private-chef-bali-expats', file: 'blog-private-chef-bali-expats.html' },
+  { path: '/blog/bachelor-party-bali-private-chef', file: 'blog-bachelor-party-bali-private-chef.html' },
+  { path: '/blog/bachelorette-party-bali-catering', file: 'blog-bachelorette-party-bali-catering.html' },
+  { path: '/blog/new-years-eve-bali-private-chef', file: 'blog-new-years-eve-bali-private-chef.html' },
+  { path: '/blog/baby-shower-catering-bali', file: 'blog-baby-shower-catering-bali.html' },
+  { path: '/blog/large-group-catering-bali', file: 'blog-large-group-catering-bali.html' },
+  { path: '/blog/villa-staff-bali-hiring-guide', file: 'blog-villa-staff-bali-hiring-guide.html' },
+  { path: '/blog/bali-wellness-retreat-catering', file: 'blog-bali-wellness-retreat-catering.html' },
+  { path: '/blog/private-chef-jakarta-complete-guide', file: 'blog-private-chef-jakarta-complete-guide.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },
   // Journal posts (all 16)

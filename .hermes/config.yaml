@@ -1,4 +1,0 @@
-[tool]
-# Placeholder config if missing; approvals mode intentionally set to smart.
-[approvals]
-mode = "smart"

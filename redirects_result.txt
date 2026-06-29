@@ -1,2 +1,0 @@
-Wrote 85 redirects to public/_redirects and vercel.json
-exit:0

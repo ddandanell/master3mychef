@@ -13,7 +13,7 @@ This upgrade successfully improved the MyChef website's SEO, technical health, a
 
 **Build Status:** ✅ **PASS** — TypeScript compilation and Vite build both succeed.
 **Tests Run:** TypeScript type check (`tsc -b`), Vite build (`vite build`)
-**Commits:** 3 commits on `seo-safe-upgrade-mychef-2026-06-29`
+**Commits:** 7 commits on `seo-safe-upgrade-mychef-2026-06-29`
 
 ---
 
@@ -51,6 +51,11 @@ A comprehensive 3-agent parallel audit was conducted covering:
 | 14 | **Improved viewport meta** | `index.html` | `maximum-scale=5.0` for better mobile accessibility |
 | 15 | **Fixed TypeScript build errors** | `src/pages/PrivateChefJakartaGuidePage.tsx`, `src/App.tsx` | Removed smart dashes breaking parser; removed unused import |
 | 16 | **Added page-specific og:image:alt** | `scripts/inject-meta.ts` | Dynamic alt text based on route category (already existed, verified working) |
+| 17 | **Added hreflang to all pages** | `scripts/inject-meta.ts` | `en`, `id`, `x-default` for every prerendered page |
+| 18 | **Added og:locale to all pages** | `scripts/inject-meta.ts` | `en_US` for all pages |
+| 19 | **Added og:site_name to all pages** | `scripts/inject-meta.ts` | Brand recognition in social shares |
+| 20 | **Improved sitemap lastmod with real dates** | `scripts/generate-sitemap.ts`, `src/data/sitemap.ts` | Content dates for blog, journal, guides, landing pages; build date fallback |
+| 21 | **Added article:section and article:tag** | `scripts/inject-meta.ts` | Categorization for blog/journal/guide posts |
 
 ### Phase 2: Technical SEO Improvements
 
@@ -203,7 +208,8 @@ The following were intentionally left untouched per safety rules:
 | Test | Command | Result |
 |------|---------|--------|
 | TypeScript type check | `npx tsc -b` | ✅ **PASS** (0 errors) |
-| Vite build | `npx vite build` | ✅ **PASS** (5.89s) |
+| Vite build | `npx vite build` | ✅ **PASS** (4.09s–5.89s) |
+| Sitemap generation | `npx tsx scripts/generate-sitemap.ts` | ✅ **PASS** (213 URLs, real lastmod dates) |
 | Prerender | `npx tsx scripts/prerender.ts` | ⚠️ Skipped (Chromium not available in this env — expected) |
 
 ---
@@ -232,6 +238,11 @@ All bundles generated correctly. No errors.
 
 | Commit | Message | Files |
 |--------|---------|-------|
+| `8cfa61d` | Add article:section and article:tag meta for blog/journal/guide posts | 1 |
+| `5da4485` | Add og:site_name to all pages for brand recognition in social shares | 2 |
+| `af9ac2f` | Improve sitemap lastmod with real content dates | 3 |
+| `036af6c` | Add hreflang and og:locale to all pages via inject-meta.ts | 1 |
+| `bf43fca` | Add comprehensive final report for SEO safe upgrade | 1 |
 | `3b0b1ca` | Fix TypeScript build errors: smart dashes in Jakarta guide, remove unused IndonesianStreetFood import | 2 |
 | `857d204` | index.html SEO improvements: optimized title, description, viewport, hreflang, dns-prefetch | 1 |
 | `20488a8` | Safe MyChef SEO and technical upgrade (Phase 1-3) | 12 |

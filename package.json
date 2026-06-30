@@ -19,7 +19,8 @@
     "verify": "node scripts/verify-deployment.cjs",
     "verify:ai-skills": "npx tsx scripts/verify-ai-skills.ts",
     "verify:all": "npx tsx scripts/verify-all.ts",
-    "pre-commit": "npx tsx scripts/pre-commit-check.ts"
+    "pre-commit": "npx tsx scripts/pre-commit-check.ts",
+    "prepare": "simple-git-hooks"
   },
   "engines": {
     "node": "20.x",

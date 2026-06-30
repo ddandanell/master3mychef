@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "project": "mychef.id",
+  "description": "Approved AI skill library for mychef.id Vercel project",
+  "master_prompt": "AI_INSTRUCTIONS.md",
+  "skills_directory": "ai-skills",
+  "required_files": [
+    {
+      "path": "ai-skills/00-master-rules.md",
+      "purpose": "Production safety and main operating rules"
+    },
+    {
+      "path": "ai-skills/01-vercel-deployment-safety.md",
+      "purpose": "Build, config, and deployment checks"
+    },
+    {
+      "path": "ai-skills/02-nextjs-build-debugging.md",
+      "purpose": "Common Vercel/Next.js build failures and fixes"
+    },
+    {
+      "path": "ai-skills/03-github-pr-rules.md",
+      "purpose": "Branch and pull request rules"
+    },
+    {
+      "path": "ai-skills/04-seo-protection.md",
+      "purpose": "Routes, metadata, sitemap, CTAs protection"
+    },
+    {
+      "path": "ai-skills/05-env-vars.md",
+      "purpose": "Environment variable handling rules"
+    },
+    {
+      "path": "ai-skills/06-route-checking.md",
+      "purpose": "Pre-approval route checks"
+    },
+    {
+      "path": "ai-skills/07-error-log-debugging.md",
+      "purpose": "Error log root-cause analysis"
+    },
+    {
+      "path": "ai-skills/08-agent-swarm-roles.md",
+      "purpose": "Multi-agent role definitions"
+    }
+  ],
+  "agent_entry_points": [
+    ".kimi/AGENT_ONBOARDING.md",
+    ".ai/AGENT_ONBOARDING.md",
+    ".claude/AGENT_ONBOARDING.md",
+    ".cursorrules"
+  ],
+  "verification_script": "scripts/verify-ai-skills.ts",
+  "github_workflow": ".github/workflows/ai-skills-check.yml",
+  "rules": {
+    "no_external_skills": true,
+    "no_direct_main_push": true,
+    "build_required_before_merge": true,
+    "vercel_preview_before_production": true,
+    "seo_protection_required": true
+  }
+}

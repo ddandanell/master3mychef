@@ -32,7 +32,7 @@ export default function Footer() {
               </h3>
             </Link>
             <p className="text-base text-white/70 leading-relaxed mb-6">
-              Private chef, villa catering, and full-service events across Bali. Same-day WhatsApp confirmation.
+              Private chef, villa catering, and full-service events across Bali & Dubai. Same-day WhatsApp confirmation.
             </p>
             <div className="flex items-center gap-4">
               <a
@@ -417,6 +417,30 @@ export default function Footer() {
             <Link to="/privacy" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Privacy Policy</Link>
             <span className="text-white/20">•</span>
             <Link to="/cancellation" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Cancellation Policy</Link>
+          </div>
+        </div>
+
+        {/* Global presence */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 py-6 border-t border-white/5">
+          <span className="text-xs text-white/40 uppercase tracking-[0.15em]">Part of Global Catering</span>
+          <span className="hidden sm:block text-white/20">·</span>
+          <div className="flex items-center gap-4 text-xs">
+            <span className="flex items-center gap-1.5 text-white/50">
+              <MapPin className="w-3 h-3 text-[#C5A028]/60" />
+              Bali, Indonesia
+              <span className="text-white/30 ml-1 font-medium text-white/50">mychef.id</span>
+            </span>
+            <span className="text-white/20">·</span>
+            <a
+              href="https://www.mychef.ae/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-white/50 hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+            >
+              <MapPin className="w-3 h-3 text-[#C5A028]/60" />
+              Dubai, UAE
+              <span className="text-white/30 group-hover:text-[#C5A028] ml-1 font-medium">mychef.ae</span>
+            </a>
           </div>
         </div>
 

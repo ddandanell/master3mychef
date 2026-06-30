@@ -1,0 +1,1 @@
+import{r as t}from"./router-BQfgCx9T.js";function s(){const[n,d]=t.useState(()=>typeof window>"u"?!1:window.matchMedia("(prefers-reduced-motion: reduce)").matches);return t.useEffect(()=>{const e=window.matchMedia("(prefers-reduced-motion: reduce)"),r=c=>d(c.matches);return e.addEventListener("change",r),()=>e.removeEventListener("change",r)},[]),n}export{s as u};

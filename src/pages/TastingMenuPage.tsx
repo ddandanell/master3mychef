@@ -7,6 +7,7 @@ import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
   breadcrumbSchema, offerSchema,
   faqPageSchema, aggregateRatingSchema, detailedServiceSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
@@ -177,6 +178,15 @@ export default function TastingMenuPage() {
           aggregateRatingSchema(4.9, 560),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema('Tasting Menu Bali', `${SITE}/fine-dining/tasting-menu`, 'Fine Dining', `${SITE}/fine-dining`),
+          howToSchema({
+            name: 'How to Book a Private Tasting Menu in Bali',
+            description: 'Book a 5-course private tasting menu in your Bali villa with a Michelin-trained chef.',
+            steps: [
+              { name: 'Message Us Your Details', text: 'Tell us your date, villa location, and guest count. We confirm availability and pricing within 1 hour.' },
+              { name: 'Choose Your Menu Path', text: 'Select Mediterranean Sea (IDR 2.2M++) or Wagyu Experience (IDR 2.4M++). Half the table can have each menu.' },
+              { name: 'Chef Arrives & Prepares', text: 'The team arrives 3 hours before dinner, sets the table, sources fresh ingredients, and leaves your villa immaculate.' },
+            ],
+          }),
         ]}
       />
 

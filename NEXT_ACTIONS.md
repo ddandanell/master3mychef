@@ -46,7 +46,7 @@ _Decision 2026-06-23: no global cookie banner now; do not change consent globall
 _Candidate free/low-cost CMPs that support Google Consent Mode + region scoping: Google's own consent banner (via Tag Manager templates), CookieYes, Cookiebot (free tier), Klaro, Osano. Evaluate when needed._
 
 ## Then (only after the above)
-- Internal-linking sweep for orphaned money pages (Skill 09) — **partially done 2026-07-01** (`/recommended-services` linked from `/services` and footer; remaining orphan opportunities to review: `/quote`, `/pricing`, `/fine-dining/private-chef-bali`, journal money posts).
+- Internal-linking sweep for orphaned money pages (Skill 09) — **DONE for core commercial pages 2026-07-01** (`/recommended-services`, `/quote`, `/fine-dining/private-chef-bali`, `/blog/private-chef-cost-bali` now linked from homepage, `/services`, `/fine-dining`, `/catering`, `/events`; `/pricing` already well-linked). Optional remaining opportunities: location-page contextual links and `/blog/private-chef-cost-bali` links in FAQ answers.
 - Conversion-flow mobile pass on top commercial pages (Skill 11).
 - Low-profile trust/updates content on `/journal` only if genuinely useful (per founder guidance) — routed correctly, no noisy widgets.
 

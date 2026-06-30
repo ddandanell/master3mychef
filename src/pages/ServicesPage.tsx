@@ -299,6 +299,8 @@ export default function ServicesPage() {
               { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, bartenders, butlers & sommelier.' },
               { label: 'Recommended Services', href: '/recommended-services', desc: 'Not sure what you need? We match you to the right service.' },
               { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
+              { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Michelin-trained private chef in your villa.' },
+              { label: 'Cost Breakdown', href: '/blog/private-chef-cost-bali', desc: 'What a private chef in Bali actually costs.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-[#FAFAF8] border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>

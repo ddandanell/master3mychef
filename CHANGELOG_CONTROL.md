@@ -8,7 +8,8 @@ _One line per shipped change. Newest first. SHA = production commit on `main`._
 - `<copy fix>` — **Aligned Mixology step-card wording.** Balance now "settled before your event" (was "after"), matching site-wide terms and TrustStrip.
 - `<dead routes>` — **Removed 25 redundant explicit `<Navigate>` routes** for `/private-chef-bali/*` and Jakarta aliases; these are already handled by `REDIRECTS.map` with correct canonical targets.
 - `<internal links>` — **Linked `/recommended-services` from `/services` grid and footer**, closing the orphan found in Skill 09 audit.
-- `<build>` — `tsc -b` exit 0; Vite build + inject-meta succeeded. Pre-existing `npm run lint` errors (3,700+) and local prerender browser-crash are unchanged and out of scope.
+- `<internal links v2>` — **Added contextual internal links to high-intent commercial pages** from homepage, `/services`, `/fine-dining`, `/catering`, and `/events`: `/quote` structured-quote CTAs, `/recommended-services` recommendation links, `/fine-dining/private-chef-bali` and `/blog/private-chef-cost-bali` in `/services` "All Services" grid. Navbar already injects `/quote`; these are content-level links for SEO and conversion.
+- `<build>` — `tsc -b` exit 0; Vite build + inject-meta succeeded (250 files). Pre-existing `npm run lint` errors (3,700+) and local prerender browser-crash are unchanged and out of scope.
 
 ## 2026-06-23
 - `<sitemap audit>` — **Sitemap/canonical/indexability pass (audit only, no code change).** All 151 sitemap URLs verified live: 200, self-referential canonical, 0 redirected/4xx/5xx, 0 robots-blocked, 0 soft-404s — sitemap is clean. Found (deferred to owner): ~32 non-prerendered routes 404 on direct access; several internally linked (Footer→/join-our-team, /villa-chef ×3). Documented in KNOWN_ISSUES #10 / NEXT_ACTIONS #3.

@@ -662,8 +662,16 @@ export default function EventsMainPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-mid-cta" className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <MessageCircle className="w-4 h-4" /> Plan Your Event — Reply in 1 Hour
             </a>
-            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-7 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#FAFAF8] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <Phone className="w-4 h-4" /> Call +62 811-3803-488
+            <Link to="/quote" className="inline-flex items-center gap-2 px-7 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#FAFAF8] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              Get a Structured Quote
+            </Link>
+          </div>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[#4A4745]">
+            <Link to="/recommended-services" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Not sure? Find the right format →
+            </Link>
+            <a href="tel:+628113803488" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Call +62 811-3803-488
             </a>
           </div>
         </div>

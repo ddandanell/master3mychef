@@ -769,8 +769,16 @@ export default function CateringMainPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-service-tabs-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all">
               <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
             </a>
-            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white transition-all">
-              View All Contact Options
+            <Link to="/quote" className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white transition-all">
+              Get a Structured Quote
+            </Link>
+          </div>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[#4A4745]">
+            <Link to="/recommended-services" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">
+              Not sure? Let us recommend →
+            </Link>
+            <Link to="/contact" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">
+              View contact options
             </Link>
           </div>
         </div>

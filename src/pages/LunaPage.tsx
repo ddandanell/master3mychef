@@ -561,8 +561,16 @@ export default function LunaPage() {
             <a href="https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20reserve%20a%20fine%20dining%20evening%20in%20Bali." target="_blank" rel="noopener noreferrer" data-source="luna-not-sure-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <MessageCircle className="w-4 h-4" /> Get Your Fine Dining Quote in 1 Hour
             </a>
-            <Link to="/fine-dining" className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white transition-all">
-              Explore All Experiences
+            <Link to="/quote" className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white transition-all">
+              Get a Structured Quote
+            </Link>
+          </div>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[#1A1A1A]/60">
+            <Link to="/recommended-services" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Not sure? Let us recommend →
+            </Link>
+            <Link to="/fine-dining" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Explore all experiences
             </Link>
           </div>
         </div>

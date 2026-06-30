@@ -446,8 +446,16 @@ export default function HubPage() {
               <a href="https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-mid-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
                 <MessageCircle className="w-4 h-4" /> Get Your Quote in 1 Hour
               </a>
-              <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium tracking-widest uppercase rounded-full border transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}>
-                View All Contact Options
+              <Link to="/quote" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium tracking-widest uppercase rounded-full border transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}>
+                Get a Structured Quote
+              </Link>
+            </div>
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" style={{ color: 'var(--u-text-muted)' }}>
+              <Link to="/recommended-services" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+                Not sure? Let us recommend →
+              </Link>
+              <Link to="/contact" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+                View contact options
               </Link>
             </div>
           </div>

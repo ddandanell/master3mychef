@@ -1,0 +1,14 @@
+node_modules
+dist
+.DS_Store
+.vercel
+public/images/
+!public/images/blog/
+test-results/
+.env
+
+# Google API Credentials (NEVER COMMIT)
+.credentials/
+*.json
+google-service-account*.json
+*-credentials.json

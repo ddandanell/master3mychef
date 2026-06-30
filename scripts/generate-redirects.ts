@@ -22,6 +22,11 @@ writeFileSync(join(__dirname, '..', 'public', '_redirects'), netlifyLines.join('
 
 // 2. Vercel vercel.json (project root)
 const vercelConfig = {
+  // Deploys come from GitHub Actions via `vercel deploy --prebuilt` (CI runs the
+  // Playwright prerender that Vercel's own build container can't). Disable Vercel's
+  // auto-build-on-push so it doesn't overwrite the prerendered output with a
+  // meta-only shell. See .github/workflows/deploy.yml.
+  git: { deploymentEnabled: { main: false } },
   redirects: REDIRECTS.map((r) => ({
     source: r.from,
     destination: r.to,

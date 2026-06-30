@@ -324,6 +324,32 @@ export function organizationSchema(
   }
 }
 
+export function personSchema(params: {
+  name: string
+  jobTitle: string
+  description: string
+  url: string
+  image: string
+  knowsAbout?: string[]
+  worksFor?: Record<string, unknown>
+  birthPlace?: string
+  sameAs?: string[]
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: params.name,
+    jobTitle: params.jobTitle,
+    description: params.description,
+    url: params.url,
+    image: params.image,
+    ...(params.knowsAbout ? { knowsAbout: params.knowsAbout } : {}),
+    ...(params.worksFor ? { worksFor: params.worksFor } : {}),
+    ...(params.birthPlace ? { birthPlace: params.birthPlace } : {}),
+    ...(params.sameAs ? { sameAs: params.sameAs } : {}),
+  }
+}
+
 export function blogPostingSchema(params: {
   headline: string
   description: string

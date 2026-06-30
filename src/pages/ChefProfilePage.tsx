@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, ChevronRight, Star, Award, Users, Flame } from 'lucide-react'
-import SeoHead, { localBusinessSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, personSchema } from '@/components/SeoHead'
 import { PHONE } from '@/data/siteArchitecture'
 
 // ── Chef data ─────────────────────────────────────────────────────────────────
@@ -780,9 +780,7 @@ export default function ChefProfilePage() {
     return <Navigate to="/chefs" replace />
   }
 
-  const personSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
+  const chefPersonSchema = personSchema({
     name: chef.name,
     jobTitle: chef.role,
     description: chef.shortBio,
@@ -797,7 +795,7 @@ export default function ChefProfilePage() {
       url: 'https://mychef.id',
     },
     sameAs: ['https://mychef.id/chefs'],
-  }
+  })
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -833,7 +831,7 @@ export default function ChefProfilePage() {
         canonical={`https://mychef.id/chefs/${chef.slug}`}
         ogImage={chef.ogImage}
         ogType="article"
-        jsonLd={[localBizWithRating, personSchema, faqSchema, breadcrumbSchema]}
+        jsonLd={[localBizWithRating, chefPersonSchema, faqSchema, breadcrumbSchema]}
       />
 
       {/* ── Breadcrumb ── */}

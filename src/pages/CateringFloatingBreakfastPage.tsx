@@ -14,6 +14,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -176,6 +177,17 @@ export default function CateringFloatingBreakfastPage() {
           offerSchema('Floating Group Brunch', 750000, 'IDR', `${SITE}/catering/floating-breakfast`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Book a Floating Breakfast in Bali',
+            description: 'Book a floating breakfast or brunch delivered to your Bali villa pool in 4 easy steps.',
+            totalTime: 'PT10M',
+            steps: [
+              { name: 'Choose your floating package', text: 'Select Floating Breakfast for 2, Floating Brunch for 2, or Floating Group Brunch.' },
+              { name: 'Share villa details', text: 'Send your villa name, pool type, date, and any food allergies via WhatsApp.' },
+              { name: 'Confirm styling and timing', text: 'We confirm the tray style, flower decorations, and delivery time within 1 hour.' },
+              { name: 'Capture the moment', text: 'The styled floating tray arrives at your pool. We take photos and you enjoy an Instagram-worthy meal.' },
+            ],
+          }),
           cateringBreadcrumbSchema('Floating Breakfast Bali', `${SITE}/catering/floating-breakfast`),
         ]}
       />

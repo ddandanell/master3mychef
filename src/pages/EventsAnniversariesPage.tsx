@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -135,6 +135,17 @@ export default function EventsAnniversariesPage() {
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Plan an Anniversary Dinner in Bali',
+            description: 'Plan a romantic anniversary dinner in your Bali villa in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'Choose your dining style', text: 'Select from intimate fine dining, chef\'s table, or private BBQ based on your preference.' },
+              { name: 'Share your love story', text: 'Send your anniversary date, villa, guest count, and any special requests via WhatsApp.' },
+              { name: 'Approve the romantic menu', text: 'We design a custom menu with wine pairings, flowers, and candlelight setup within 1 hour.' },
+              { name: 'Savor the moment', text: 'The chef arrives with everything needed for an unforgettable evening. Just relax and celebrate.' },
+            ],
+          }),
           breadcrumbSchema('Anniversary Dinner Bali', `${SITE}/events/anniversaries`, 'Events', `${SITE}/events`),
         ]}
       />

@@ -6,7 +6,7 @@ import {
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, serviceWithOfferSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, serviceWithOfferSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -167,6 +167,17 @@ export default function EventsWeddingsPage() {
           offerSchema('Signature Villa Wedding', 1500000, 'IDR', `${SITE}/events/weddings`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Plan a Wedding in Bali',
+            description: 'Plan your dream Bali villa wedding with private chef catering in 4 easy steps.',
+            totalTime: 'PT30M',
+            steps: [
+              { name: 'Choose your wedding package', text: 'Select Intimate, Standard, or Signature villa wedding based on guest count and style.' },
+              { name: 'Share your vision', text: 'Send your wedding date, villa, guest count, and menu preferences via WhatsApp.' },
+              { name: 'Approve your wedding menu', text: 'We design a multi-course menu with tastings, wine pairings, and cake within 1 hour.' },
+              { name: 'Celebrate your perfect day', text: 'Chef, staff, and coordination team arrive early. You enjoy your wedding while we handle every detail.' },
+            ],
+          }),
           breadcrumbSchema('Wedding Catering Bali', `${SITE}/events/weddings`, 'Events', `${SITE}/events`),
           serviceWithOfferSchema({
             name: 'Wedding Catering Bali',

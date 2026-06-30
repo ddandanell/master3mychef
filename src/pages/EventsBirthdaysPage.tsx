@@ -8,7 +8,7 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -147,6 +147,17 @@ export default function EventsBirthdaysPage() {
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Plan a Birthday Party in Bali',
+            description: 'Plan an unforgettable birthday celebration in your Bali villa in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'Choose your birthday package', text: 'Select from villa party, fine dining, or BBQ themes based on your guest count and style.' },
+              { name: 'Share party details', text: 'Send your date, villa location, guest count, and any dietary needs via WhatsApp.' },
+              { name: 'Confirm menu and setup', text: 'We design a custom menu, cake options, and decoration plan within 1 hour.' },
+              { name: 'Celebrate stress-free', text: 'Chef, staff, and setup arrive early. You enjoy the party while we handle everything.' },
+            ],
+          }),
           breadcrumbSchema('Birthday Party Catering Bali', `${SITE}/events/birthdays`, 'Events', `${SITE}/events`),
         ]}
       />

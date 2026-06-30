@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -143,6 +143,17 @@ export default function EventsBabyShowersPage() {
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Plan a Baby Shower in Bali',
+            description: 'Plan a beautiful baby shower in your Bali villa in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'Choose your shower style', text: 'Select from brunch, high tea, or grazing table based on your guest count and theme.' },
+              { name: 'Share shower details', text: 'Send your date, villa location, guest count, and any dietary needs via WhatsApp.' },
+              { name: 'Approve the menu and setup', text: 'We design a custom menu with mocktails, pastel decor, and gift table styling within 1 hour.' },
+              { name: 'Celebrate the new arrival', text: 'Chef and staff arrive early with everything. You enjoy the shower while we handle service and cleanup.' },
+            ],
+          }),
           breadcrumbSchema('Baby Shower Catering Bali', `${SITE}/events/baby-showers`, 'Events', `${SITE}/events`),
         ]}
       />

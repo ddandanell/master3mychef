@@ -8,7 +8,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -169,6 +169,17 @@ export default function EventsCorporatePage() {
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Book Corporate Event Catering in Bali',
+            description: 'Book professional corporate event catering for your Bali team or clients in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'Share your event brief', text: 'Send your event type, dates, venue, headcount, and budget via WhatsApp.' },
+              { name: 'Receive custom proposal', text: 'We create a tailored menu with dietary options, service style, and staffing plan within 1 hour.' },
+              { name: 'Confirm and contract', text: 'Approve the proposal, sign the agreement, and pay the 50% deposit to lock your date.' },
+              { name: 'Focus on your event', text: 'We handle setup, service, and breakdown. You focus on your team and guests.' },
+            ],
+          }),
           breadcrumbSchema('Corporate Events Bali', `${SITE}/events/corporate-events`, 'Events', `${SITE}/events`),
         ]}
       />

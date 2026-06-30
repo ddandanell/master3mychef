@@ -8,6 +8,7 @@ import SeoHead, {
   detailedServiceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -92,6 +93,17 @@ export default function ServiceHostPage() {
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 78),
+          howToSchema({
+            name: 'How to Hire a Host or Hostess in Bali',
+            description: 'Book professional hosts and hostesses for your Bali villa event in 4 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Choose your host service', text: 'Select from guest welcome, event direction, or front-of-house management.' },
+              { name: 'Share event details', text: 'Send your date, villa location, guest count, and event type via WhatsApp.' },
+              { name: 'Confirm staffing plan', text: 'We match you with experienced hosts and brief them on your event flow within 1 hour.' },
+              { name: 'Welcome your guests', text: 'Hosts arrive early in professional attire, greet guests, and manage the flow throughout your event.' },
+            ],
+          }),
           breadcrumbSchema('Host & Hostess Hire Bali', `${SITE}/in-villa-service/host-hostess`, 'In-Villa Service', `${SITE}/in-villa-service`),
         ]}
       />

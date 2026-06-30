@@ -8,6 +8,7 @@ import SeoHead, {
   detailedServiceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -107,6 +108,17 @@ export default function ServiceSommelierPage() {
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 34),
+          howToSchema({
+            name: 'How to Hire a Sommelier in Bali',
+            description: 'Book a professional sommelier for your Bali villa dinner in 4 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Choose your wine experience', text: 'Select from wine pairing dinner, cellar consultation, or tasting event.' },
+              { name: 'Share dinner details', text: 'Send your date, villa location, guest count, and menu style via WhatsApp.' },
+              { name: 'Approve your wine selection', text: 'We curate a wine list matched to your menu, budget, and preferences within 1 hour.' },
+              { name: 'Savor every sip', text: 'The sommelier arrives with selected wines, glassware, and guides each pairing tableside.' },
+            ],
+          }),
           breadcrumbSchema('Sommelier Service Bali', `${SITE}/in-villa-service/sommelier`, 'In-Villa Service', `${SITE}/in-villa-service`),
         ]}
       />

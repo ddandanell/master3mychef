@@ -7,6 +7,7 @@ import SeoHead, {
   serviceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -114,6 +115,17 @@ export default function StaffingHouseholdPage() {
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 156),
+          howToSchema({
+            name: 'How to Hire Household Staff in Bali',
+            description: 'Hire reliable household staff for your Bali home in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'List your household needs', text: 'Define roles: cook, nanny, driver, housekeeper, or personal assistant.' },
+              { name: 'Share your home details', text: 'Send your location, family size, language preferences, and schedule via WhatsApp.' },
+              { name: 'Review matched candidates', text: 'We present pre-screened candidates with background checks within 48 hours.' },
+              { name: 'Build your household team', text: 'Interview, select, and onboard. We handle contracts and trial periods.' },
+            ],
+          }),
           breadcrumbSchema('Household Staff', `${SITE}/staffing/household-staff`, 'Staffing', `${SITE}/staffing`),
         ]}
       />

@@ -13,6 +13,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -161,6 +162,17 @@ export default function CateringRetreatPage() {
           offerSchema('Corporate Retreat Catering', 500000, 'IDR', `${SITE}/catering/retreat-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 156),
+          howToSchema({
+            name: 'How to Book Retreat Catering in Bali',
+            description: 'Book wellness and yoga retreat catering for your Bali group in 4 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Choose your retreat menu', text: 'Select Yoga Retreat, Wellness Retreat, or Corporate Retreat based on your group and dietary focus.' },
+              { name: 'Share retreat details', text: 'Send your retreat dates, villa location, guest count, and dietary preferences via WhatsApp.' },
+              { name: 'Approve your meal plan', text: 'We design a multi-day menu with Ayurvedic, vegan, or gluten-free options within 1 hour.' },
+              { name: 'Chef handles all meals', text: 'The chef arrives daily with fresh ingredients, prepares all meals, and leaves the kitchen clean.' },
+            ],
+          }),
           cateringBreadcrumbSchema('Retreat Catering Bali', `${SITE}/catering/retreat-catering`),
         ]}
       />

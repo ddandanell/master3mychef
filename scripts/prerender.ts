@@ -143,6 +143,11 @@ const ROUTES = [
   { path: '/blog/private-chef-surabaya-guide', file: 'blog-private-chef-surabaya-guide.html' },
   { path: '/blog/chef-for-photoshoot-bali', file: 'blog-chef-for-photoshoot-bali.html' },
   { path: '/blog/tasting-menu-bali', file: 'blog-tasting-menu-bali.html' },
+  { path: '/blog/luxury-dining-bali', file: 'blog-luxury-dining-bali.html' },
+  { path: '/blog/fine-dining-at-home-bali', file: 'blog-fine-dining-at-home-bali.html' },
+  { path: '/blog/holiday-chef-bali', file: 'blog-holiday-chef-bali.html' },
+  { path: '/blog/dietary-specific-chef-bali', file: 'blog-dietary-specific-chef-bali.html' },
+  { path: '/blog/hotel-restaurant-chef-staffing', file: 'blog-hotel-restaurant-chef-staffing.html' },
   { path: '/partner', file: 'partner.html' },
   // Journal index
   { path: '/journal', file: 'journal.html' },

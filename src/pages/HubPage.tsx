@@ -17,20 +17,20 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 const PORTALS = [
   {
-    id: 'fine-dining',
-    title: 'Fine Dining',
-    subtitle: 'A private chef cooks exclusively for you. Multi-course menu. Wine pairing. Your villa. Just your table.',
-    path: '/fine-dining',
-    image: '/generated/mychef-misc-bali-hub-fine-dining.webp',
-    accent: '#C5A028',
-  },
-  {
     id: 'catering',
     title: 'Catering',
     subtitle: 'BBQ, buffet, plated dinners. Babi guling. Drop-off or full service. We handle everything. You enjoy.',
     path: '/catering',
     image: '/generated/mychef-catering-bali-hub-catering.webp',
     accent: '#6B8E5A',
+  },
+  {
+    id: 'fine-dining',
+    title: 'Fine Dining',
+    subtitle: 'A private chef cooks exclusively for your group. Multi-course tasting menus — Italian, French, Mediterranean, Wagyu. Your villa. Just your table. From 6 guests.',
+    path: '/fine-dining',
+    image: '/generated/mychef-misc-bali-hub-fine-dining.webp',
+    accent: '#C5A028',
   },
   {
     id: 'events',
@@ -348,7 +348,7 @@ export default function HubPage() {
                   Your Villa. Our Kitchen.
                 </p>
                 <h1 className="hub-hero-title mb-4 text-[2rem] leading-[1.08] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  A Michelin-Trained Private Chef, in Your Bali Villa.
+                  Your Villa. Our Kitchen.
                 </h1>
                 <div className="gold-arc mb-6" />
                 <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>
@@ -373,7 +373,7 @@ export default function HubPage() {
         <div className="mx-auto max-w-[1280px] px-5 sm:px-6">
           <div className="mb-8 md:mb-12">
             <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-relaxed sm:text-[15px] md:text-base" style={{ color: 'var(--u-text-muted)' }}>
-              Founded by Adriano — trained under a Michelin-starred chef in Milan — myCHEF.id delivers restaurant-level private dining to Bali&apos;s finest villas with a 50+ person hospitality team.
+              Founded by Adriano — trained under a Michelin-starred chef in Milan — myCHEF.id delivers restaurant-level dining to Bali&apos;s finest villas. From intimate fine dining for 6 to catering for 200, our 50+ person hospitality team handles every detail.
             </p>
 
             <div className="mx-auto mb-8 max-w-2xl">

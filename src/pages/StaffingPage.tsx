@@ -30,6 +30,7 @@ import BestPartnerBadge from '@/components/BestPartnerBadge'
 import { Button } from '@/components/ui/button'
 import { StaffingRiskReversal } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import TrustStrip from '@/components/shared/TrustStrip'
 import RelatedServices from '@/components/shared/RelatedServices'
 import { STAFFING_RELATED } from '@/data/related-services'
 
@@ -264,6 +265,9 @@ export default function StaffingPage() {
           </div>
         </div>
       </section>
+
+      {/* TRUST STRIP */}
+      <TrustStrip />
 
       {/* ── RISK REVERSAL ───────────────────────────────────────────────── */}
       <StaffingRiskReversal />

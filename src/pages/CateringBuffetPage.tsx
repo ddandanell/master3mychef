@@ -13,6 +13,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -188,6 +189,17 @@ export default function CateringBuffetPage() {
           offerSchema('Premium Live-Station Buffet', 950000, 'IDR', `${SITE}/catering/buffet`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 186),
+          howToSchema({
+            name: 'How to Book Buffet Catering in Bali',
+            description: 'Book full-service buffet catering for your Bali villa event in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'Choose your buffet package', text: 'Select Indonesian Buffet, International Buffet, or Premium Live-Station Buffet based on guest count and style.' },
+              { name: 'Share event details', text: 'Send your event date, villa or venue, guest count, and menu preferences via WhatsApp.' },
+              { name: 'Receive custom quote', text: 'We confirm setup, staffing, and all-in pricing within the hour. Free tasting included for 40+ guests.' },
+              { name: 'Confirm and enjoy', text: '50% deposit secures your date. We arrive 2–3 hours early with tables, chafing dishes, and service staff.' },
+            ],
+          }),
           cateringBreadcrumbSchema('Buffet Catering Bali', `${SITE}/catering/buffet`),
         ]}
       />

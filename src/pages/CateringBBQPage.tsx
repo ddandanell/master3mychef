@@ -13,6 +13,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -163,6 +164,17 @@ export default function CateringBBQPage() {
           offerSchema('Premium Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Book BBQ Catering in Bali',
+            description: 'Book live-fire BBQ catering for your Bali villa in 4 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Choose your BBQ package', text: 'Pick Indonesian BBQ, International BBQ, or Premium Surf & Turf based on your group size and preferences.' },
+              { name: 'Send event details', text: 'Share your date, villa area, guest count, and any dietary needs via WhatsApp.' },
+              { name: 'Confirm your quote', text: 'We send a final all-in quote including travel fees and any add-ons within 1 hour.' },
+              { name: 'Pay deposit and relax', text: '50% deposit locks your date. The chef arrives with all equipment, grills live, and cleans up.' },
+            ],
+          }),
           cateringBreadcrumbSchema('BBQ Catering Bali', `${SITE}/catering/bbq-catering`),
         ]}
       />

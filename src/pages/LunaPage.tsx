@@ -464,6 +464,9 @@ export default function LunaPage() {
         </div>
       </section>
 
+      {/* TRUST STRIP */}
+      <TrustStrip dark />
+
       {/* ── Six Experiences Navigation ──────────────────────────────────── */}
       <section className="py-16 md:py-20 px-6" style={{ background: '#111111' }}>
         <div className="max-w-[1280px] mx-auto">
@@ -1304,6 +1307,13 @@ export default function LunaPage() {
       <Suspense fallback={null}>
         <OrderPanel open={orderOpen} onClose={() => setOrderOpen(false)} initialExperience={orderExperience} />
       </Suspense>
+      <StickyMobileCTA
+        pageSource="luna-main"
+        serviceType="fine-dining"
+        label="Get a Fine Dining Quote via WhatsApp"
+        serviceName="fine dining in Bali"
+        intent="menu and pricing"
+      />
     </div>
   )
 }

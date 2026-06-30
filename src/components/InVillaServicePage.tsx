@@ -8,6 +8,8 @@ import LocationChips from './LocationChips'
 import RelatedServices from '@/components/shared/RelatedServices'
 import { IN_VILLA_SERVICE_RELATED } from '@/data/related-services'
 import OptimizedImage from '@/components/OptimizedImage'
+import TrustStrip from '@/components/shared/TrustStrip'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 const SITE = 'https://mychef.id'
 const WA = '628113803488'
 
@@ -181,6 +183,9 @@ export default function InVillaServicePage() {
           </div>
         </div>
       </section>
+
+      {/* TRUST STRIP */}
+      <TrustStrip />
 
       {/* Trust bar */}
       <section className="bg-[#0A0A0A] py-6">
@@ -472,6 +477,13 @@ export default function InVillaServicePage() {
       <LocationChips
         title="Service Staff Across Bali"
         subtitle="Waiters in Seminyak. Bartenders in Canggu. Butlers in Uluwatu. We know every villa, every event space, every service standard."
+      />
+      <StickyMobileCTA
+        pageSource="in-villa-service"
+        serviceType="in-villa-service"
+        label="Hire Villa Staff via WhatsApp"
+        serviceName="in-villa service staff in Bali"
+        intent="availability and pricing"
       />
     </main>
   )

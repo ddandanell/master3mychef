@@ -315,7 +315,18 @@ export default function CangguPage() {
           </div>
         </div>
       </section>
-          <CityDeepDive slug="canggu" cityName="Canggu" />
+          {/* Cross-link to private-chef page */}
+      <section className="py-12 px-6">
+        <div className="max-w-[960px] mx-auto text-center">
+          <h3 className="text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Private Chef in Canggu</h3>
+          <p className="text-gray-600 mb-6">Hire a dedicated private chef for your villa in Canggu. Custom menus, full service, and seamless cleanup.</p>
+          <Link to="/private-chef/canggu" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all">
+            View Private Chef Options <ChevronRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      <CityDeepDive slug="canggu" cityName="Canggu" />
 </main>
   )
 }

@@ -12,6 +12,8 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { RiskReversal } from '@/components/shared'
 import TrustSection from '@/components/trust/TrustSection'
+import TrustStrip from '@/components/shared/TrustStrip'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 const PORTALS = [
   {
@@ -453,6 +455,9 @@ export default function HubPage() {
           </div>
         </div>
       </section>
+
+      {/* TRUST STRIP */}
+      <TrustStrip />
 
       {/* LUXURY TRUST SECTION */}
       <div className="cv-auto">
@@ -1165,6 +1170,13 @@ export default function HubPage() {
           </div>
         </div>
       </section>
+      <StickyMobileCTA
+        pageSource="home"
+        serviceType="hub"
+        label="Get a Private Chef Quote via WhatsApp"
+        serviceName="private chef in Bali"
+        intent="quote and availability"
+      />
     </div>
   )
 }

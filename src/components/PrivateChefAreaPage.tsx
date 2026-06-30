@@ -640,6 +640,22 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
         </div>
       </section>
 
+      {/* ── 10b. CROSS-LINK TO LOCATION PAGE ───────────────────────────────── */}
+      <section className="px-6 py-16 md:px-10 bg-[#FAFAF8]">
+        <div className="max-w-[1160px] mx-auto text-center">
+          <h3 className="font-playfair text-2xl mb-4">Explore {area.name} Location Guide</h3>
+          <p className="text-[#4A4745] mb-6 max-w-[640px] mx-auto leading-7">
+            See detailed neighbourhood coverage, local services, and area-specific pricing for private chef dining in {area.name}.
+          </p>
+          <Link
+            to={`/locations/${area.slug}`}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all"
+          >
+            View {area.name} Location Page <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
       {/* ── 11. FINAL CTA ────────────────────────────────────────────────────── */}
       <section className="px-6 py-24 md:px-10 bg-[#1A1A1A] text-white text-center">
         <div className="max-w-[720px] mx-auto">

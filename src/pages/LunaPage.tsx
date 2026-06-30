@@ -12,6 +12,8 @@ import Breadcrumb from '@/components/shared/Breadcrumb'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { FineDiningRiskReversal } from '@/components/shared'
 import { getPageMeta } from '@/data/page-meta'
+import TrustStrip from '@/components/shared/TrustStrip'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 const MENUS = [
   {

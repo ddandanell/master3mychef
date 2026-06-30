@@ -1,0 +1,53 @@
+# NEXT ACTIONS
+
+_Prioritized. Each action names the skill to run. No new website features until structure is clean._
+
+## Conversion / lead-quality (value sprint 2026-06-23)
+- **SHIPPED (commit `c25ae8c`, live):** enriched the `PricingCalculator` WhatsApp enquiry (on `/pricing` + `/calculator`) with **When / Area / What-you-need / Notes** → fully-qualified prefilled message (e.g. "…When: this week. Guests: 2–4. Area: Canggu. Looking for: booking availability."). Reduces low-quality "price?" leads. No pricing-logic/tracking change. Verified live (fields render, message updates dynamically, `data-source` preserved).
+- **Next high-value (from Growth Blueprint `implementation_backlog.csv`, reuse don't re-plan):**
+  - TASK-017 **intent-specific CTAs — DONE across commercial pages (commits `2b18490` + `27f1400`, live).** Reusable helper `src/lib/whatsapp.ts` (`buildWhatsAppUrl`) → qualified service-matched messages (service+date+guests+area+intent). Now on **35 commercial pages**: catering ×11, in-villa-service ×6, events ×7, staffing ×6, dining (chef's table/romantic/tasting) ×3, `/fine-dining/private-chef-bali`, plus the `/pricing` calculator. Verified live across all groups; canonical number + `data-source` preserved; no pricing/routing/schema change. _Intentionally skipped: `StaffingPage` (personalised "Hi Marco" CTA), location pages (no direct wa.me CTA), non-customer pages (partners/press/join-team/contact/why)._
+  - **Global CTA gap — CLOSED (commit `f97b8ea`, live).** Footer (×2), floating `WhatsAppButton`, and `StickyMobileCTA` (now takes `serviceName`/`intent`; 5 high-intent callers pass them) all send qualified enquiries via `src/lib/whatsapp.ts`. `ConciergeWidget` left as-is (already route-aware). Verified live (footer + sticky + service-page regression); `data-source` + number preserved; no tracking change. Measurement watch-list added: `CONVERSION_MEASUREMENT.md`.
+  - **Remaining (lower priority):** `BaliHubPage`/`LocationsHubPage` hub CTAs + per-menu CTAs (TastingMenu ~L396) could pass context into the helper — minor.
+- **Pricing trust + quote clarity — SHIPPED (commit `eeb10d9`, live).** Added two `/pricing` sections: **"What Affects Your Quote"** (guests, menu, staff, area, kitchen/setup, date) and **"How to Get Your Exact Quote in Minutes"** (send 4 details → fast WhatsApp reply / 24h proposal → adjust freely, no obligation → "not sure? we'll guide you"). Reused the existing features-card style; **no price/deposit numbers changed**, no new CTA, mobile-first. Footer already links `/pricing` sitewide (Phase-4 inline links skipped as unnecessary).
+- **Deposit % inconsistency — RESOLVED 2026-06-23 (commit `e165d2d`, live).** `ServiceMixologyPage` changed "25% deposit" → **"50% deposit"** to match the confirmed site-wide policy (50% deposit; 100% upfront only for <24h). Verified live (page shows 50%, 0× 25% remaining). Site-wide deposit is now consistent everywhere. _(The "25%" on EventsWeddingsPage is a cancellation-refund tier — legitimate.)_
+  - **Balance wording follow-up — DONE 2026-07-01.** Mixology step-card now says balance is settled **before** your event, matching the TrustStrip and site-wide terms.
+- **NEXT = MEASUREMENT, not more building.** Watch GA4 `generate_lead` + WhatsApp clicks by `data-source` and read the WhatsApp inbox for lead-quality change (see `CONVERSION_MEASUREMENT.md`). Connect GSC/GA4 if quantified data is wanted.
+  - TASK-018 **sticky mobile WhatsApp CTA** on service pages (confirm `StickyMobileCTA` coverage first).
+  - Surface the 9-step `/quote` funnel + the enriched calculator more prominently from high-intent service pages (internal linking to money/enquiry surfaces).
+  - TASK-007 **deposit % inconsistency** (25% vs 50% across pages) — **owner decision** on the correct figure, then standardize.
+
+## Highest impact (next 5)
+1. **Tracking P0 — DONE (verified directly in GTM + GA4, fix applied 2026-06-23).** No double-counting; WhatsApp-conversion mapping fixed to `generate_lead` (owner-approved). Remaining owner confirmations / follow-ups:
+   - **Confirm live:** in GA4 DebugView/Realtime, click a WhatsApp CTA on mychef.id and confirm **one** `generate_lead` appears (I couldn't self-confirm — this browser's events didn't register in Realtime; likely consent-mode/cookieless or a blocker).
+   - **Phone tracking — DONE 2026-06-23 (GTM Live v3 + GA4).** Added "Phone Click" trigger (Just Links, Click URL contains `tel:`) + "GA4 Event - phone_click" tag + GA4 modification `phone_click → generate_lead`. The 27 `tel:` CTAs now register as `generate_lead` conversions (single-fire, mirrors WhatsApp). Owner: confirm one `generate_lead` from a real device.
+   - **Activate Internal Traffic filter? (owner decision):** GA4 has an "Internal Traffic" data filter (Exclude) currently in **Testing**. Set it to **Active** if you want dev/office traffic excluded from reports (recommended once the IP list is confirmed).
+   - **Consent/collection: AUDITED 2026-06-23 — GA4 collecting fine, no banner needed for Indonesia.** Consent is unset/implicit (granted), no CMP, no denial; `/collect` not blocked; 7-day real data healthy incl. Indonesia. The 0-Realtime was internal-traffic tagging + synthetic test (an "Internal Traffic" Exclude filter exists, state: Testing). No change made.
+   - **EEA/UK/CH compliance (recommended, optional):** if meaningful EEA/UK/Switzerland traffic appears, add a region-aware Consent Mode v2 + minimal CMP (deny analytics/ad storage for those regions until consent; granted elsewhere incl. Indonesia). Do not apply globally. Smallest setup: a lightweight region-gated banner wired to GTM Consent Mode.
+   - Optional cleanup: the dead `window.gtag?.()` line in `src/lib/analytics.ts` is inert (gtag undefined) — remove only if desired; not required.
+1b. **P0 SECURITY — rotate leaked GitHub PAT (owner, do now).** A plaintext `ghp_…` token with push access is in `app/.git/config` (local-only; not in tracked files/history). Revoke/rotate at GitHub and switch to `credential.helper osxkeychain`. See KNOWN_ISSUES #0.
+2. **Archive `app/` — DONE 2026-06-23 (commit `2614624`).** Backed up token-free to `~/Desktop/mychef-app-archive-2026-06-23/` (working-tree tar + 107-file uncommitted patch, gzip-verified), then removed the gitlink. Wrong-folder risk gone; on-disk token gone. **Still open: token rotation (1b above) — the token stays valid until the owner revokes it.** `Mychef Live/` untouched.
+2c. **25 duplicate/alias routes — DONE 2026-06-23 (commit `be90620`, live); cleanup DONE 2026-07-01.** All 25 now 308→canonical via `src/data/redirects.ts` (regenerated `vercel.json`+`_redirects`); safe-default `/private-chef-bali`→`/fine-dining/private-chef-bali` (not promoted); none added to sitemap. Verified: 25×308, targets 200, 0 aliases in sitemap. The 25 now-redundant explicit `<Route>` defs were removed from `App.tsx`; routing is handled entirely by `REDIRECTS.map`.
+3. **Direct-access route fix — DONE & CLOSED 2026-06-23 (commits `0c25cbd` + `cdb7bef`, live + verified).** The six internally-linked routes are resolved: `/villa-chef`, `/recommended-services`, `/join-our-team` now serve **200** (added to `src/data/sitemap.ts` → `inject-meta.ts` emits the static HTML); `/terms-of-service`, `/privacy-policy`, `/payment-terms` now **308** → `/terms`, `/privacy`, `/cancellation` (vercel.json redirects). No SPA fallback used. **System learning recorded in Skill 05 + KNOWN_ISSUES #10:** on Vercel the deployed static route files come from `src/data/sitemap.ts` → `scripts/inject-meta.ts`, NOT `prerender.ts` (skipped on Vercel — no Chromium). _(The remaining ~26 non-internally-linked non-prerendered routes are out of scope; re-check only if a specific one is needed.)_
+4. **Resolve the two cost-guide pages — DONE 2026-07-01.** `/blog/private-chef-bali-cost-breakdown-detailed-2026` canonicalized to `/blog/private-chef-cost-bali` via 301 redirect; secondary page removed from sitemap/route-slugs; internal links on `/` and `/fine-dining/menus` point to the primary. Deleted unused duplicate `src/pages/PrivateChefCostBaliPage.tsx`.
+5. **Collapse vestigial `/blog` surface — DONE 2026-07-01.** Removed `/blog` hub from `inject-meta.ts`, `page-meta.ts`, and `App.tsx`; retired `BlogIndexPage.tsx`; `/blog` → `/journal` redirect remains; all individual `/blog/*` posts preserved. Sitemap no longer lists `/blog` hub.
+
+## Region-aware consent setup (documented future compliance task — DO NOT install now)
+_Decision 2026-06-23: no global cookie banner now; do not change consent globally; do not reduce Indonesia/Bali tracking. Current state is legal-safe for our market and GA4 is collecting fine._
+
+**If EEA / UK / Switzerland traffic becomes meaningful, implement a small, unobtrusive, region-aware consent banner or free/low-cost CMP connected to GTM Consent Mode.** Requirements:
+1. Do **not** block Indonesia traffic (and other non-restricted regions) — keep full analytics there.
+2. Do **not** apply denied consent globally.
+3. Apply stricter consent (default `analytics_storage`/`ad_storage` = denied until opt-in) **only** for EEA/UK/CH visitors.
+4. Keep the banner minimal and unobtrusive (small, dismissible, region-gated).
+5. Use **GTM Consent Mode v2** properly (consent default + update; tags gated on consent).
+6. Preserve as much analytics/conversion data as legally and technically possible (Consent Mode modeling, region scoping).
+7. Do **not** install anything now unless there is a clear compliance reason (meaningful restricted-region traffic).
+
+_Candidate free/low-cost CMPs that support Google Consent Mode + region scoping: Google's own consent banner (via Tag Manager templates), CookieYes, Cookiebot (free tier), Klaro, Osano. Evaluate when needed._
+
+## Then (only after the above)
+- Internal-linking sweep for orphaned money pages (Skill 09) — **partially done 2026-07-01** (`/recommended-services` linked from `/services` and footer; remaining orphan opportunities to review: `/quote`, `/pricing`, `/fine-dining/private-chef-bali`, journal money posts).
+- Conversion-flow mobile pass on top commercial pages (Skill 11).
+- Low-profile trust/updates content on `/journal` only if genuinely useful (per founder guidance) — routed correctly, no noisy widgets.
+
+_Rule: pick from the top; run the named skill; verify; commit; update `CHANGELOG_CONTROL.md` and this file._

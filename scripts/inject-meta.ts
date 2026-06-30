@@ -46,7 +46,6 @@ const OG_IMAGES: Record<string, string> = {
   '/faq': '/generated/faq-hero.webp',
   '/locations': '/generated/hub-villa.webp',
   '/journal': '/generated/journal-hero.webp',
-  '/blog': '/generated/journal-hero.webp',
   // Journal posts (individual OG images)
   '/journal/michelin-training-bali': '/generated/journal-hero.webp',
   '/journal/sustainable-sourcing': '/generated/journal-hero.webp',
@@ -157,7 +156,7 @@ function buildBreadcrumbJsonLd(path: string, name: string): string {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
       ...(isArticle
-        ? [{ '@type': 'ListItem', position: 2, name: path.startsWith('/blog/') || path.startsWith('/journal/') ? 'Journal' : 'Help', item: `https://mychef.id${path.startsWith('/blog/') ? '/blog' : path.startsWith('/journal/') ? '/journal' : '/help'}` }]
+        ? [{ '@type': 'ListItem', position: 2, name: path.startsWith('/blog/') || path.startsWith('/journal/') ? 'Journal' : 'Help', item: `https://mychef.id/journal` }]
         : []),
       { '@type': 'ListItem', position: isArticle ? 3 : 2, name, item: `https://mychef.id${path}` },
     ],

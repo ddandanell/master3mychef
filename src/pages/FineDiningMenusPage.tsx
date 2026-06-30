@@ -434,7 +434,7 @@ export default function FineDiningMenusPage() {
             </Link>
 
             <Link
-              to="/blog/private-chef-bali-cost-breakdown-detailed-2026"
+              to="/blog/private-chef-cost-bali"
               className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.08] transition-colors"
             >
               <h3 className="text-lg text-white font-semibold mb-2 group-hover:text-[#C5A028] transition-colors">

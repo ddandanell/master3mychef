@@ -102,7 +102,6 @@ const WhyMychefPage = lazy(() => import('./pages/WhyMychefPage'))
 const RecommendedServicesPage = lazy(() => import('./pages/RecommendedServicesPage'))
 const JoinTeamPage = lazy(() => import('./pages/JoinTeamPage'))
 const CalculatorPage = lazy(() => import('./pages/CalculatorPage'))
-const BlogIndexPage = lazy(() => import('./components/BlogIndexPage'))
 const BaliHubPage = lazy(() => import('./components/BaliHubPage'))
 const QuoteFunnel = lazy(() => import('./components/QuoteFunnel'))
 const PrivateChefCostBaliPageBlog = lazy(() => import('./pages/blog/PrivateChefCostBaliPage'))
@@ -346,40 +345,8 @@ export default function App() {
 
           {/* Jakarta */}
           <Route path="/jakarta" element={<JakartaPage />} />
-          {/* /private-chef-bali/* — hub kept; area pages 301 → /private-chef/[slug] (TASK-030) */}
+          {/* /private-chef-bali hub — area redirects are handled by REDIRECTS.map */}
           <Route path="/private-chef-bali" element={<PrivateChefBaliPage />} />
-          <Route path="/private-chef-bali/seminyak" element={<Navigate to="/private-chef/seminyak" replace />} />
-          <Route path="/private-chef-bali/canggu" element={<Navigate to="/private-chef/canggu" replace />} />
-          <Route path="/private-chef-bali/uluwatu" element={<Navigate to="/private-chef/uluwatu" replace />} />
-          <Route path="/private-chef-bali/ubud" element={<Navigate to="/private-chef/ubud" replace />} />
-          <Route path="/private-chef-bali/jimbaran" element={<Navigate to="/private-chef/jimbaran" replace />} />
-          <Route path="/private-chef-bali/nusa-dua" element={<Navigate to="/private-chef/nusa-dua" replace />} />
-          <Route path="/private-chef-bali/sanur" element={<Navigate to="/private-chef/sanur" replace />} />
-          <Route path="/private-chef-bali/denpasar" element={<Navigate to="/private-chef/denpasar" replace />} />
-
-          {/* Jakarta sub-areas — consolidated to single Jakarta page */}
-          <Route path="/private-chef-menteng" element={<Navigate to="/jakarta" replace />} />
-          <Route path="/private-chef-kemang" element={<Navigate to="/jakarta" replace />} />
-          <Route path="/private-chef-scbd" element={<Navigate to="/jakarta" replace />} />
-          <Route path="/private-chef-pondok-indah" element={<Navigate to="/jakarta" replace />} />
-          <Route path="/private-chef-bsd" element={<Navigate to="/jakarta" replace />} />
-          <Route path="/surabaya" element={<Navigate to="/jakarta" replace />} />
-          <Route path="/bandung" element={<Navigate to="/jakarta" replace />} />
-          <Route path="/yogyakarta" element={<Navigate to="/jakarta" replace />} />
-
-          {/* Bali sub-areas — point directly to /private-chef/[slug] (TASK-030, no more chains) */}
-          <Route path="/private-chef-bali/berawa" element={<Navigate to="/private-chef/berawa" replace />} />
-          <Route path="/private-chef-bali/petitenget" element={<Navigate to="/private-chef/petitenget" replace />} />
-          <Route path="/private-chef-bali/legian" element={<Navigate to="/private-chef/legian" replace />} />
-          <Route path="/private-chef-bali/kerobokan" element={<Navigate to="/private-chef/kerobokan" replace />} />
-          <Route path="/private-chef-bali/kuta" element={<Navigate to="/private-chef/kuta" replace />} />
-          <Route path="/private-chef-bali/tanah-lot" element={<Navigate to="/private-chef/tanah-lot" replace />} />
-          <Route path="/private-chef-bali/pecatu" element={<Navigate to="/private-chef/pecatu" replace />} />
-          <Route path="/private-chef-bali/ungasan" element={<Navigate to="/private-chef/ungasan" replace />} />
-          <Route path="/private-chef-bali/gianyar" element={<Navigate to="/private-chef/ubud" replace />} />
-          <Route path="/private-chef-bali/tegallalang" element={<Navigate to="/private-chef/tegallalang" replace />} />
-          <Route path="/private-chef-bali/tabanan" element={<Navigate to="/private-chef/tanah-lot" replace />} />
-          <Route path="/private-chef-bali/padang-bai" element={<Navigate to="/private-chef-bali" replace />} />
 
           {/* /private-chef/[slug] — Bali Domination Blueprint area landing pages */}
           {PUBLISHED_AREA_SLUGS.map((slug) => (
@@ -410,9 +377,7 @@ export default function App() {
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="guide" />} />
           ))}
 
-          {/* Blog (legacy) */}
-          <Route path="/blog" element={<BlogIndexPage />} />
-          {/* Dedicated blog articles */}
+          {/* Dedicated blog articles (/blog hub redirects to /journal) */}
           <Route path="/blog/private-chef-cost-bali" element={<PrivateChefCostBaliPageBlog />} />
           <Route path="/blog/private-chef-vs-restaurant-bali" element={<PrivateChefVsRestaurantPage />} />
           <Route path="/blog/family-kids-menu-private-chef-bali" element={<FamilyKidsMenuPage />} />

@@ -571,16 +571,6 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-  blog: {
-    path: '/blog',
-    title: 'myCHEF Journal | Private Chef Bali & Hosting Guides',
-    description:
-      'Read practical Bali hosting guides on private chef costs, villa kitchens, retreat menus, and event planning written by the myCHEF team.',
-    canonical: `${SITE}/blog`,
-    h1: 'myCHEF Journal',
-    ogImage: `${SITE}/og-image.webp`,
-  },
-
   journal: {
     path: '/journal',
     title: 'Bali Private Chef Journal | Tips, Menus & Guides — myCHEF',

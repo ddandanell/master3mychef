@@ -101,7 +101,7 @@ const GALLERY = [
 const BOOKING_STEPS = [
   { n: '1', t: 'Check your date', d: 'Message us on WhatsApp with your date, villa and guest count. We reply within 2 hours and hold the date for you.' },
   { n: '2', t: 'Confirm menu & spirits', d: 'We design your cocktail menu and agree how the spirits are handled — we suggest, send a shopping list, or bring them.' },
-  { n: '3', t: 'Secure with 50% deposit', d: 'A 50% deposit locks in your booking. The balance is settled after your event — simple and transparent.' },
+  { n: '3', t: 'Secure with 50% deposit', d: 'A 50% deposit locks in your booking. The balance is settled before your event — simple and transparent.' },
 ]
 
 const SAFETY = [

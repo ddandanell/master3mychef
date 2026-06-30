@@ -1101,7 +1101,7 @@ export default function HubPage() {
               </div>
             </Link>
 
-            <Link to="/blog/private-chef-bali-cost-breakdown-detailed-2026" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+            <Link to="/blog/private-chef-cost-bali" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
               <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
                 <span className="text-[#C5A028] font-serif text-3xl">💰</span>
               </div>

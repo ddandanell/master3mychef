@@ -297,6 +297,7 @@ export default function ServicesPage() {
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays, corporate & villa parties.' },
               { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily private chef for your villa stay.' },
               { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, bartenders, butlers & sommelier.' },
+              { label: 'Recommended Services', href: '/recommended-services', desc: 'Not sure what you need? We match you to the right service.' },
               { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-[#FAFAF8] border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">

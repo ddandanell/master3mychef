@@ -14,7 +14,7 @@ name: Build, Prerender & Deploy (Vercel prebuilt)
 
 on:
   push:
-    branches: [main]
+    branches: [main, 'seo/p0-prerender-fix']   # feature branch → PREVIEW (remove before/at merge)
   workflow_dispatch: {}   # manual run → safe PREVIEW deploy for testing
 
 concurrency:

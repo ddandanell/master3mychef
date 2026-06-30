@@ -25,6 +25,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a grazing table in Bali', intent: 'menu options and pricing' })
@@ -649,6 +650,11 @@ export default function CateringGrazingPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="catering-grazing"
+        serviceName="grazing table in Bali"
+        intent="grazing table options and pricing"
+      />
     </div>
   )
 }

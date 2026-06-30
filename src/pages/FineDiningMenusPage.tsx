@@ -7,6 +7,7 @@ import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceW
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -623,6 +624,11 @@ export default function FineDiningMenusPage() {
           </a>
         </div>
       </section>
+      <StickyMobileCTA
+        pageSource="fine-dining-menus"
+        serviceName="fine dining menu in Bali"
+        intent="menu and pricing"
+      />
     </div>
   )
 }

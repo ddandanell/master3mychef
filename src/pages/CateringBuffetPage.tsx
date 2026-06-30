@@ -24,6 +24,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'buffet catering in Bali', intent: 'menu options and pricing' })
@@ -783,6 +784,11 @@ export default function CateringBuffetPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="catering-buffet"
+        serviceName="buffet catering in Bali"
+        intent="buffet packages and pricing"
+      />
     </div>
   )
 }

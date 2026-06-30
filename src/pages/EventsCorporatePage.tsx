@@ -19,6 +19,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a corporate event in Bali', intent: 'help with catering, staff, and setup' })
@@ -571,6 +572,11 @@ export default function EventsCorporatePage() {
       </section>
 
       <TaxFooter />
+      <StickyMobileCTA
+        pageSource="events-corporate"
+        serviceName="corporate event catering in Bali"
+        intent="corporate event packages and pricing"
+      />
     </div>
   )
 }

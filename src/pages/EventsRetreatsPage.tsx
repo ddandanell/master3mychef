@@ -18,6 +18,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a retreat in Bali', intent: 'help with catering, staff, and setup' })
@@ -554,6 +555,11 @@ export default function EventsRetreatsPage() {
       </section>
 
       <TaxFooter />
+      <StickyMobileCTA
+        pageSource="events-retreats"
+        serviceName="wellness retreat catering in Bali"
+        intent="retreat catering packages and pricing"
+      />
     </div>
   )
 }

@@ -19,6 +19,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a baby shower in Bali', intent: 'help with catering, staff, and setup' })
@@ -523,6 +524,11 @@ export default function EventsBabyShowersPage() {
       </section>
 
       <TaxFooter />
+      <StickyMobileCTA
+        pageSource="events-baby-showers"
+        serviceName="baby shower catering in Bali"
+        intent="baby shower packages and pricing"
+      />
     </div>
   )
 }

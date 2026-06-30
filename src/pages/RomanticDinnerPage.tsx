@@ -12,6 +12,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -562,6 +563,11 @@ export default function RomanticDinnerPage() {
           ))}
         </div>
       </section>
+      <StickyMobileCTA
+        pageSource="romantic-dinner"
+        serviceName="romantic dinner in Bali"
+        intent="dinner packages and pricing"
+      />
     </div>
   )
 }

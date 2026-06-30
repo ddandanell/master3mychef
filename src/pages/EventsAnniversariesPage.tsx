@@ -19,6 +19,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'an anniversary celebration in Bali', intent: 'help with catering, staff, and setup' })
@@ -474,6 +475,11 @@ export default function EventsAnniversariesPage() {
       </section>
 
       <TaxFooter />
+      <StickyMobileCTA
+        pageSource="events-anniversaries"
+        serviceName="anniversary dinner in Bali"
+        intent="anniversary packages and pricing"
+      />
     </div>
   )
 }

@@ -20,6 +20,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a birthday party in Bali', intent: 'help with catering, staff, and setup' })
@@ -495,6 +496,11 @@ export default function EventsBirthdaysPage() {
       </section>
 
       <TaxFooter />
+      <StickyMobileCTA
+        pageSource="events-birthdays"
+        serviceName="birthday party catering in Bali"
+        intent="birthday packages and pricing"
+      />
     </div>
   )
 }

@@ -20,6 +20,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -268,6 +269,11 @@ export default function StaffingLiveInPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="staffing-live-in"
+        serviceName="live-in chef in Bali"
+        intent="live-in chef placement and pricing"
+      />
     </div>
   )
 }

@@ -20,6 +20,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -371,6 +372,11 @@ export default function ServiceWaitersPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="in-villa-waiters"
+        serviceName="villa waiters in Bali"
+        intent="waiter service and pricing"
+      />
     </div>
   )
 }

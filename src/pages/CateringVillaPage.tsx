@@ -27,6 +27,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'villa catering in Bali', intent: 'menu options and pricing' })
@@ -589,6 +590,11 @@ export default function CateringVillaPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="catering-villa"
+        serviceName="villa catering in Bali"
+        intent="villa catering packages and pricing"
+      />
     </div>
   )
 }

@@ -12,6 +12,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -433,6 +434,11 @@ export default function ChefsTablePage() {
           ))}
         </div>
       </section>
+      <StickyMobileCTA
+        pageSource="chefs-table"
+        serviceName="chef's table in Bali"
+        intent="chef's table experience and pricing"
+      />
     </div>
   )
 }

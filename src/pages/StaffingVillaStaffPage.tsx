@@ -8,6 +8,7 @@ import SeoHead, {
   serviceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -19,6 +20,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -116,6 +118,17 @@ export default function StaffingVillaStaffPage() {
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 156),
+          howToSchema({
+            name: 'How to Hire Villa Staff in Bali',
+            description: 'Hire professional villa staff for your Bali property in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'Define your staffing needs', text: 'Share the roles you need: villa manager, housekeeper, gardener, or pool maintenance.' },
+              { name: 'Share property details', text: 'Send your villa location, size, guest capacity, and current staff setup via WhatsApp.' },
+              { name: 'Review candidates', text: 'We shortlist pre-vetted candidates with relevant experience and references within 48 hours.' },
+              { name: 'Hire with confidence', text: 'Interview candidates, select the best fit, and we handle contracts and onboarding.' },
+            ],
+          }),
           breadcrumbSchema('Villa Staff', `${SITE}/staffing/villa-staff`, 'Staffing', `${SITE}/staffing`),
         ]}
       />
@@ -249,6 +262,11 @@ export default function StaffingVillaStaffPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="staffing-villa-staff"
+        serviceName="villa staff in Bali"
+        intent="villa staff hiring and pricing"
+      />
     </div>
   )
 }

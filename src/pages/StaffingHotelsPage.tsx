@@ -7,6 +7,7 @@ import SeoHead, {
   serviceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -18,6 +19,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -107,6 +109,17 @@ export default function StaffingHotelsPage() {
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 168),
+          howToSchema({
+            name: 'How to Hire Hotel & Restaurant Staff in Bali',
+            description: 'Hire professional hospitality staff for your Bali hotel or restaurant in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'Share your staffing requirements', text: 'Send your property type, roles needed, headcount, and seasonality via WhatsApp.' },
+              { name: 'Define experience level', text: 'Specify: entry-level, experienced, or management-level candidates with language skills.' },
+              { name: 'Review qualified candidates', text: 'We present pre-vetted hospitality professionals with relevant experience within 48 hours.' },
+              { name: 'Build your team', text: 'Interview, hire, and onboard. We handle contracts, visas, and ongoing HR support.' },
+            ],
+          }),
           breadcrumbSchema('Hotels & Restaurants Staffing', `${SITE}/staffing/for-hotels-restaurants`, 'Staffing', `${SITE}/staffing`),
         ]}
       />
@@ -246,6 +259,11 @@ export default function StaffingHotelsPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="staffing-hotels"
+        serviceName="hotel and restaurant staff in Bali"
+        intent="hospitality staffing and pricing"
+      />
     </div>
   )
 }

@@ -12,6 +12,8 @@ import Breadcrumb from '@/components/shared/Breadcrumb'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { FineDiningRiskReversal } from '@/components/shared'
 import { getPageMeta } from '@/data/page-meta'
+import TrustStrip from '@/components/shared/TrustStrip'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 const MENUS = [
   {
@@ -461,6 +463,9 @@ export default function LunaPage() {
           </div>
         </div>
       </section>
+
+      {/* TRUST STRIP */}
+      <TrustStrip dark />
 
       {/* ── Six Experiences Navigation ──────────────────────────────────── */}
       <section className="py-16 md:py-20 px-6" style={{ background: '#111111' }}>
@@ -1310,6 +1315,13 @@ export default function LunaPage() {
       <Suspense fallback={null}>
         <OrderPanel open={orderOpen} onClose={() => setOrderOpen(false)} initialExperience={orderExperience} />
       </Suspense>
+      <StickyMobileCTA
+        pageSource="luna-main"
+        serviceType="fine-dining"
+        label="Get a Fine Dining Quote via WhatsApp"
+        serviceName="fine dining in Bali"
+        intent="menu and pricing"
+      />
     </div>
   )
 }

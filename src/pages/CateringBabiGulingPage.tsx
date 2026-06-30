@@ -13,6 +13,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -24,6 +25,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'Babi Guling catering in Bali', intent: 'menu options and pricing' })
@@ -155,6 +157,17 @@ export default function CateringBabiGulingPage() {
           offerSchema('Large Babi Guling', 7000000, 'IDR', `${SITE}/catering/babi-guling`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Book Babi Guling Catering in Bali',
+            description: 'Order authentic Balinese Babi Guling catering for your villa event in 4 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Choose your Babi Guling size', text: 'Select Small (10-15 guests), Medium (20-30 guests), or Large (40+ guests) roast.' },
+              { name: 'Share event details', text: 'Send your villa location, event date, guest count, and any side dish preferences via WhatsApp.' },
+              { name: 'Confirm your quote', text: 'We confirm the whole roast, side dishes, sambal, and delivery timing within 1 hour.' },
+              { name: 'Chef delivers and carves', text: 'The chef arrives with the whole roasted pig, carves at your villa, and serves with traditional sides.' },
+            ],
+          }),
           cateringBreadcrumbSchema('Babi Guling Catering Bali', `${SITE}/catering/babi-guling`),
         ]}
       />
@@ -668,6 +681,11 @@ export default function CateringBabiGulingPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="catering-babi-guling"
+        serviceName="Babi Guling catering in Bali"
+        intent="Babi Guling packages and pricing"
+      />
     </div>
   )
 }

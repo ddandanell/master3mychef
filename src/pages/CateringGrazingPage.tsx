@@ -13,6 +13,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -24,6 +25,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a grazing table in Bali', intent: 'menu options and pricing' })
@@ -197,6 +199,17 @@ export default function CateringGrazingPage() {
           offerSchema('Corporate Reception Table', 300000, 'IDR', PAGE_URL),
           faqPageSchema(schemaFaq),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Book a Grazing Table in Bali',
+            description: 'Book a stunning grazing table for your Bali event in 4 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Choose your grazing table style', text: 'Select Full Event, Wedding, or Corporate Reception based on guest count and theme.' },
+              { name: 'Share event details', text: 'Send your date, venue, guest count, and any dietary needs via WhatsApp.' },
+              { name: 'Approve your design', text: 'We share a custom board layout with cheeses, charcuterie, fruits, and dips within 1 hour.' },
+              { name: 'Setup and enjoy', text: 'We arrive early to artfully arrange the grazing table at your venue. No cleanup needed.' },
+            ],
+          }),
           cateringBreadcrumbSchema('Grazing Tables Bali', PAGE_URL),
         ]}
       />
@@ -637,6 +650,11 @@ export default function CateringGrazingPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="catering-grazing"
+        serviceName="grazing table in Bali"
+        intent="grazing table options and pricing"
+      />
     </div>
   )
 }

@@ -14,6 +14,7 @@ import SeoHead, {
   faqPageSchema,
   aggregateRatingSchema,
   serviceWithOfferSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -26,6 +27,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'villa catering in Bali', intent: 'menu options and pricing' })
@@ -171,6 +173,17 @@ export default function CateringVillaPage() {
             url: `${SITE}/catering/villa-catering`,
             price: '350000',
             unitText: 'per person',
+          }),
+          howToSchema({
+            name: 'How to Book Villa Catering in Bali',
+            description: 'Book private villa catering for your Bali stay in 4 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Send villa details', text: 'Share your villa location, dates, guest count, and occasion via WhatsApp.' },
+              { name: 'Pick your format', text: 'Choose lunch, dinner, BBQ, buffet, plated, grazing, or multi-day catering.' },
+              { name: 'Approve the menu', text: 'We design a custom menu around your dietary needs and preferences. Nothing is locked until you say yes.' },
+              { name: 'Chef arrives and handles everything', text: 'Groceries, equipment, and staff come with us. Full prep, service, and kitchen cleanup included.' },
+            ],
           }),
         ]}
       />
@@ -577,6 +590,11 @@ export default function CateringVillaPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="catering-villa"
+        serviceName="villa catering in Bali"
+        intent="villa catering packages and pricing"
+      />
     </div>
   )
 }

@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -18,6 +18,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a retreat in Bali', intent: 'help with catering, staff, and setup' })
@@ -165,6 +166,17 @@ export default function EventsRetreatsPage() {
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Book Wellness Retreat Catering in Bali',
+            description: 'Book healthy catering for your Bali wellness or yoga retreat in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'Choose your retreat catering style', text: 'Select from Ayurvedic, vegan, raw, or macrobiotic based on your retreat theme.' },
+              { name: 'Share retreat details', text: 'Send your retreat dates, villa location, guest count, and dietary requirements via WhatsApp.' },
+              { name: 'Approve the meal plan', text: 'We design a multi-day nourishing menu with breakfast, lunch, dinner, and snacks within 1 hour.' },
+              { name: 'Nourish your guests', text: 'The chef prepares fresh, healthy meals daily. Dietary restrictions are handled with care.' },
+            ],
+          }),
           breadcrumbSchema('Wellness Retreat Catering Bali', `${SITE}/events/retreats`, 'Events', `${SITE}/events`),
         ]}
       />
@@ -543,6 +555,11 @@ export default function EventsRetreatsPage() {
       </section>
 
       <TaxFooter />
+      <StickyMobileCTA
+        pageSource="events-retreats"
+        serviceName="wellness retreat catering in Bali"
+        intent="retreat catering packages and pricing"
+      />
     </div>
   )
 }

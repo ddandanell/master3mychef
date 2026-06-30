@@ -14,6 +14,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -25,6 +26,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'drop-off catering in Bali', intent: 'menu options and pricing' })
@@ -226,6 +228,17 @@ export default function CateringDropOffPage() {
           offerSchema('Grazing Dinner Drop-Off', 650000, 'IDR', PAGE_URL),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Book Drop-Off Catering in Bali',
+            description: 'Order fresh drop-off catering delivered to your Bali villa in 4 easy steps.',
+            totalTime: 'PT10M',
+            steps: [
+              { name: 'Choose your drop-off package', text: 'Select Family Dinner, Dinner Party, or Grazing Dinner based on group size and occasion.' },
+              { name: 'Send villa details', text: 'Share your delivery address, date, time, and any dietary preferences via WhatsApp.' },
+              { name: 'Receive confirmation', text: 'We confirm the menu, delivery time, and reheating instructions within 1 hour.' },
+              { name: 'Enjoy hassle-free dining', text: 'Your food arrives fresh, ready-to-serve, with clear reheating guidance if needed.' },
+            ],
+          }),
           cateringBreadcrumbSchema('Drop-Off Catering Bali', PAGE_URL),
         ]}
       />
@@ -737,6 +750,11 @@ export default function CateringDropOffPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="catering-dropoff"
+        serviceName="drop-off catering in Bali"
+        intent="drop-off menu and pricing"
+      />
     </div>
   )
 }

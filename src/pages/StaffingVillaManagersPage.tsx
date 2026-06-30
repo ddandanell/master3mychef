@@ -7,6 +7,7 @@ import SeoHead, {
   serviceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -18,6 +19,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -107,6 +109,17 @@ export default function StaffingVillaManagersPage() {
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 142),
+          howToSchema({
+            name: 'How to Staff Your Villa in Bali',
+            description: 'Get professional staffing support for your Bali villa management in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'Share your villa profile', text: 'Send your villa size, location, guest capacity, and current staffing gaps via WhatsApp.' },
+              { name: 'Define roles needed', text: 'Specify: villa manager, chef, housekeepers, maintenance, or guest services staff.' },
+              { name: 'Review vetted candidates', text: 'We present experienced hospitality professionals with villa references within 48 hours.' },
+              { name: 'Scale with confidence', text: 'Hire full-time or seasonal staff. We handle contracts, training, and ongoing support.' },
+            ],
+          }),
           breadcrumbSchema('Staffing for Villa Managers', `${SITE}/staffing/for-villa-managers`, 'Staffing', `${SITE}/staffing`),
         ]}
       />
@@ -246,6 +259,11 @@ export default function StaffingVillaManagersPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="staffing-villa-managers"
+        serviceName="villa manager staffing in Bali"
+        intent="villa manager staffing and pricing"
+      />
     </div>
   )
 }

@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ChevronRight, Star } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceWithOfferSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceWithOfferSchema, howToSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -202,6 +203,15 @@ export default function FineDiningMenusPage() {
             url: 'https://mychef.id/fine-dining/menus',
             price: '350000',
             unitText: 'per person',
+          }),
+          howToSchema({
+            name: 'How to Choose & Book a Fine Dining Menu in Bali',
+            description: 'Browse myCHEF menus and book a private fine dining experience in your Bali villa.',
+            steps: [
+              { name: 'Browse the Menus', text: 'Compare Italian, French, Mediterranean Sea, Wagyu, and Custom menus. Each includes full chef service and grocery sourcing.' },
+              { name: 'Enquire on WhatsApp', text: 'Message us with your villa, guest count, and preferred menu. We confirm availability and pricing within the hour.' },
+              { name: 'We Confirm & Book', text: 'We lock your menu, chef, and arrival time. A 50% deposit may be required for premium dates. Kitchen-Service or Full-Service — your choice.' },
+            ],
           }),
         ]}
       />
@@ -614,6 +624,11 @@ export default function FineDiningMenusPage() {
           </a>
         </div>
       </section>
+      <StickyMobileCTA
+        pageSource="fine-dining-menus"
+        serviceName="fine dining menu in Bali"
+        intent="menu and pricing"
+      />
     </div>
   )
 }

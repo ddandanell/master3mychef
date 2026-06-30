@@ -8,6 +8,7 @@ import SeoHead, {
   detailedServiceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -19,6 +20,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -108,6 +110,18 @@ export default function ServiceButlersPage() {
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 67),
           breadcrumbSchema('Butler Service Bali', `${SITE}/in-villa-service/butlers`, 'In-Villa Service', `${SITE}/in-villa-service`),
+          howToSchema({
+            name: 'How to Hire a Villa Butler in Bali',
+            description: 'Book a professional butler for your Bali villa stay or event in 5 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Consultation', text: 'We discuss your household needs, guest profile, and service expectations.' },
+              { name: 'Matching', text: 'We select a butler whose experience aligns with your villa type and guest expectations.' },
+              { name: 'Briefing', text: 'Detailed walkthrough of preferences, schedules, and special requirements.' },
+              { name: 'Service', text: 'Your butler arrives prepared and anticipates needs before they are voiced.' },
+              { name: 'Review', text: 'We follow up to ensure every expectation was exceeded and adjust for future bookings.' },
+            ],
+          }),
         ]}
       />
 {/* Hero */}
@@ -352,6 +366,11 @@ export default function ServiceButlersPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="in-villa-butlers"
+        serviceName="villa butler in Bali"
+        intent="butler service and pricing"
+      />
     </div>
   )
 }

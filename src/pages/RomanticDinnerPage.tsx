@@ -6,11 +6,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema, offerSchema,
   faqPageSchema, aggregateRatingSchema, detailedServiceSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -109,6 +111,15 @@ export default function RomanticDinnerPage() {
           aggregateRatingSchema(4.9, 560),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema('Romantic Dinner Bali', `${SITE}/fine-dining/romantic-dinner`, 'Fine Dining', `${SITE}/fine-dining`),
+          howToSchema({
+            name: 'How to Book a Romantic Dinner in Bali',
+            description: 'Simple 3-step process to book a private romantic dinner with myCHEF in your Bali villa.',
+            steps: [
+              { name: 'Choose Your Date & Villa', text: 'Pick your preferred evening and confirm your villa address. We serve across Seminyak, Canggu, Ubud, Uluwatu, and all Bali areas.' },
+              { name: 'Select Your Menu', text: 'Choose between our Mediterranean Sea menu or Wagyu-focused menu. Both are 5-course tasting experiences prepared by a Michelin-trained chef.' },
+              { name: 'Chef Arrives & Prepares', text: 'Your chef arrives 3 hours before service with all ingredients, prepares the meal in your villa kitchen, and leaves everything spotless.' },
+            ],
+          }),
         ]}
       />
 
@@ -552,6 +563,11 @@ export default function RomanticDinnerPage() {
           ))}
         </div>
       </section>
+      <StickyMobileCTA
+        pageSource="romantic-dinner"
+        serviceName="romantic dinner in Bali"
+        intent="dinner packages and pricing"
+      />
     </div>
   )
 }

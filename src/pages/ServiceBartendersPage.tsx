@@ -8,6 +8,7 @@ import SeoHead, {
   detailedServiceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -93,6 +94,18 @@ export default function ServiceBartendersPage() {
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 112),
           breadcrumbSchema('Bartender Hire Bali', `${SITE}/in-villa-service/bartenders`, 'In-Villa Service', `${SITE}/in-villa-service`),
+          howToSchema({
+            name: 'How to Hire a Bartender in Bali',
+            description: 'Book a professional bartender for your Bali villa party or event in 5 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Share event details', text: 'Send your date, guest count, venue, and drink preferences via WhatsApp.' },
+              { name: 'Menu design', text: 'We create a custom cocktail menu matched to your theme and guest profile.' },
+              { name: 'Receive shopping list', text: 'We send a detailed spirits, mixers, and garnish list. You buy or we source for a 15% fee.' },
+              { name: 'Setup and service', text: 'Bartender arrives 1 hour early to build the bar. Professional service until last call.' },
+              { name: 'Breakdown', text: 'Bar packed, glassware cleaned, and space restored to original condition.' },
+            ],
+          }),
         ]}
       />
 {/* Hero */}

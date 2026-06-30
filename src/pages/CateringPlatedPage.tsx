@@ -15,6 +15,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -207,6 +208,17 @@ export default function CateringPlatedPage() {
           offerSchema('5-Course Premium', 1300000, 'IDR', `${SITE}/catering/plated-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Book a Plated Dinner in Bali',
+            description: 'Book a multi-course plated dinner for your Bali villa in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'Choose your course tier', text: 'Select 3-Course, 4-Course, or 5-Course Premium based on your occasion and guest count.' },
+              { name: 'Share event details', text: 'Send your date, villa location, guest count, cuisine preference, and dietary needs via WhatsApp or the booking form.' },
+              { name: 'Approve your custom menu', text: 'We design a personalized menu with wine pairing options and send a detailed proposal for approval.' },
+              { name: 'Confirm and enjoy', text: 'Pay the deposit to lock your date. The team arrives 3–4 hours early for setup, table styling, and service.' },
+            ],
+          }),
           cateringBreadcrumbSchema('Plated Dinner Catering Bali', `${SITE}/catering/plated-catering`),
         ]}
       />

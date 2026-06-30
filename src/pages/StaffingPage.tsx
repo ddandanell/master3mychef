@@ -21,6 +21,7 @@ import SeoHead, {
   serviceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -199,6 +200,16 @@ export default function StaffingPage() {
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 560),
           breadcrumbSchema('Staffing', `${SITE}/staffing`),
+          howToSchema({
+            name: 'How to Hire Hospitality Staff in Bali',
+            description: 'Hire vetted private chefs, live-in chefs, and villa staff in Bali in 3 easy steps.',
+            totalTime: 'PT10M',
+            steps: [
+              { name: 'Brief us', text: 'Tell us the role, schedule, cuisine direction, and household size. Takes five minutes on WhatsApp.' },
+              { name: 'We match', text: 'Within 24 hours, we shortlist 2–3 vetted candidates from our active network for your review.' },
+              { name: 'We place', text: 'Contract signed, onboarding handled, and first-week check-in included. 30-day replacement guarantee.' },
+            ],
+          }),
         ]}
       />
 

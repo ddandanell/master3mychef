@@ -8,6 +8,7 @@ import SeoHead, {
   serviceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -94,6 +95,18 @@ export default function ServiceWaitersPage() {
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 89),
           breadcrumbSchema('Waiters', `${SITE}/in-villa-service/waiters`, 'In-Villa Service', `${SITE}/in-villa-service`),
+          howToSchema({
+            name: 'How to Hire Villa Waiters in Bali',
+            description: 'Book professional waiters for your Bali villa dinner or event in 5 easy steps.',
+            totalTime: 'PT10M',
+            steps: [
+              { name: 'Share your event details', text: 'Send your date, guest count, villa location, and service style via WhatsApp.' },
+              { name: 'Team assignment', text: 'We match uniformed, English-speaking waiters to your event type and guest profile.' },
+              { name: 'Pre-event briefing', text: 'Menu walkthrough, timeline, dietary notes, and villa layout shared with the team.' },
+              { name: 'Service day', text: 'Waiters arrive early, set tables, serve courses, clear, and clean — all included.' },
+              { name: 'Follow-up', text: 'We check in after service. Feedback shapes future team assignments.' },
+            ],
+          }),
         ]}
       />
 

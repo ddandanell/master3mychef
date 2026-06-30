@@ -8,6 +8,7 @@ import SeoHead, {
   serviceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -117,6 +118,18 @@ export default function StaffingPlacementPage() {
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 156),
           breadcrumbSchema('Private Chef Placement', `${SITE}/staffing/private-chef-placement`, 'Staffing', `${SITE}/staffing`),
+          howToSchema({
+            name: 'How to Place a Private Chef in Bali',
+            description: 'Find and place a long-term private chef for your Bali villa in 5 steps.',
+            totalTime: 'P1W',
+            steps: [
+              { name: 'Brief', text: 'Share your cuisine preferences, schedule, household size, and dietary needs.' },
+              { name: 'Shortlist', text: 'We send 3–5 chef profiles matched to your requirements within 24 hours.' },
+              { name: 'Trials', text: 'Cooking sessions with your top 2 candidates to assess fit and skill.' },
+              { name: 'Placement', text: 'Contract signed, onboarding handled, and first-week support included.' },
+              { name: 'Ongoing support', text: 'Monthly check-ins, feedback, and performance reviews for six months.' },
+            ],
+          }),
         ]}
       />
 

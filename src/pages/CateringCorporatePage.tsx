@@ -13,6 +13,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -148,6 +149,17 @@ export default function CateringCorporatePage() {
           offerSchema('Conference Catering', 450000, 'IDR', `${SITE}/catering/corporate-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 89),
+          howToSchema({
+            name: 'How to Book Corporate Catering in Bali',
+            description: 'Book professional corporate catering for your Bali event in 4 easy steps.',
+            totalTime: 'PT30M',
+            steps: [
+              { name: 'Share your event brief', text: 'Send your event date, company size, schedule, venue, dietary needs, and budget via WhatsApp.' },
+              { name: 'Receive custom proposal', text: 'We respond with a tailored menu plan, staffing schedule, and detailed proposal within 24 hours.' },
+              { name: 'Confirm and contract', text: 'Approve the proposal, sign the contract, and pay the 50% deposit to secure your event date.' },
+              { name: 'Setup, service, and invoice', text: 'Our team arrives 2–3 hours early for quiet setup. Full service runs on schedule, followed by a detailed tax invoice within 48 hours.' },
+            ],
+          }),
           cateringBreadcrumbSchema('Corporate Catering Bali', `${SITE}/catering/corporate-catering`),
         ]}
       />

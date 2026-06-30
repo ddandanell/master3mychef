@@ -8,6 +8,7 @@ import SeoHead, {
   serviceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -117,6 +118,18 @@ export default function StaffingLiveInPage() {
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 156),
           breadcrumbSchema('Live-In Chef', `${SITE}/staffing/live-in-chef`, 'Staffing', `${SITE}/staffing`),
+          howToSchema({
+            name: 'How to Find a Live-In Chef in Bali',
+            description: 'Find and place a full-time live-in chef for your Bali villa in 5 steps.',
+            totalTime: 'P1W',
+            steps: [
+              { name: 'Brief', text: 'Share your cuisine preferences, household schedule, dietary needs, and accommodation details.' },
+              { name: 'Shortlist', text: 'We send 3–5 vetted chef profiles matched to your villa and family requirements.' },
+              { name: 'Trials', text: 'Cooking sessions with your top candidates to assess fit, skill, and compatibility.' },
+              { name: 'Placement', text: 'Contract signed, onboarding handled, and live-in accommodation arranged.' },
+              { name: 'Ongoing support', text: 'Monthly check-ins, feedback, and six months of ongoing guidance and support.' },
+            ],
+          }),
         ]}
       />
 

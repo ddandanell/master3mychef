@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight, Wine, Users, Shield, Clock, Star, Award } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema, howToSchema } from './SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import { PILLARS } from '@/data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
@@ -143,6 +143,17 @@ export default function InVillaServicePage() {
           },
           aggregateRatingSchema(4.9, 350),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          howToSchema({
+            name: 'How to Hire In-Villa Service Staff in Bali',
+            description: 'Book professional waiters, butlers, bartenders, and sommeliers for your Bali villa in 4 easy steps.',
+            totalTime: 'PT10M',
+            steps: [
+              { name: 'Share your event details', text: 'Tell us your guest count, event type, villa location, and desired service style via WhatsApp.' },
+              { name: 'Get matched staff', text: 'We recommend the right staffing mix and confirm availability within the hour.' },
+              { name: 'Pre-event briefing', text: 'Staff receive a full briefing on your menu, timeline, dietary notes, and villa layout.' },
+              { name: 'Enjoy polished service', text: 'Uniformed staff arrive early, run service smoothly, and leave your villa spotless.' },
+            ],
+          }),
         ]}
       />
 

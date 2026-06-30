@@ -16,7 +16,8 @@
     "audit": "npx tsx scripts/audit-quality.ts",
     "audit:images": "npx tsx scripts/audit-images.ts",
     "cleanup:images": "npx tsx scripts/cleanup-unused-images.ts",
-    "verify": "node scripts/verify-deployment.cjs"
+    "verify": "node scripts/verify-deployment.cjs",
+    "verify:ai-skills": "node -e \"const fs=require('fs'); const files=['AI_INSTRUCTIONS.md','ai-skills/00-master-rules.md','ai-skills/01-vercel-deployment-safety.md','ai-skills/02-nextjs-build-debugging.md','ai-skills/03-github-pr-rules.md','ai-skills/04-seo-protection.md','ai-skills/05-env-vars.md','ai-skills/06-route-checking.md','ai-skills/07-error-log-debugging.md','ai-skills/08-agent-swarm-roles.md']; let ok=true; files.forEach(f=>{if(!fs.existsSync(f)){console.error('MISSING: '+f);ok=false;}}); if(ok){console.log('AI-SKILLS OK: all '+files.length+' files present.'); process.exit(0);} else {console.error('AI-SKILLS FAIL: some files missing.'); process.exit(1);}\""
   },
   "engines": {
     "node": "20.x",

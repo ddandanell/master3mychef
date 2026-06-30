@@ -96,6 +96,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           : []),
         { key: 'article-author', property: 'article:author', content: AUTHOR },
         { key: 'article-section', property: 'article:section', content: articleEntry.topics[0] ?? 'Private Chef' },
+        ...(articleEntry.topics.slice(1).map((tag) => ({ key: `article-tag-${tag}`, property: 'article:tag', content: tag }))),
       ]
     : []
 

@@ -153,6 +153,34 @@ const BbqCateringBaliPage = lazy(() => import('./pages/BbqCateringBaliPage'))
 const VillaButlerBaliPage = lazy(() => import('./pages/VillaButlerBaliPage'))
 const BaliWeddingCateringBudgetPage = lazy(() => import('./pages/BaliWeddingCateringBudgetPage'))
 const PrivateChefNusaDuaGuidePage = lazy(() => import('./pages/PrivateChefNusaDuaGuidePage'))
+const PrivateChefUbudGuidePage = lazy(() => import('./pages/PrivateChefUbudGuidePage'))
+const PrivateChefCangguGuidePage = lazy(() => import('./pages/PrivateChefCangguGuidePage'))
+const PrivateChefSeminyakGuidePage = lazy(() => import('./pages/PrivateChefSeminyakGuidePage'))
+const VillaManagerPartnerPage = lazy(() => import('./pages/VillaManagerPartnerPage'))
+const HouseholdChefBaliGuidePage = lazy(() => import('./pages/HouseholdChefBaliGuidePage'))
+const PrivateChefJimbaranGuidePage = lazy(() => import('./pages/PrivateChefJimbaranGuidePage'))
+const PrivateChefRolesResponsibilitiesPage = lazy(() => import('./pages/PrivateChefRolesResponsibilitiesPage'))
+const FineDiningTrendsBali2026Page = lazy(() => import('./pages/FineDiningTrendsBali2026Page'))
+const PrivateChefSanurGuidePage = lazy(() => import('./pages/PrivateChefSanurGuidePage'))
+const PrivateChefPererenanGuidePage = lazy(() => import('./pages/PrivateChefPererenanGuidePage'))
+const PrivateChefDenpasarGuidePage = lazy(() => import('./pages/PrivateChefDenpasarGuidePage'))
+const ChefPlacementAgencyBaliPage = lazy(() => import('./pages/ChefPlacementAgencyBaliPage'))
+const EventStaffBaliPage = lazy(() => import('./pages/EventStaffBaliPage'))
+const BartenderHireBaliPage = lazy(() => import('./pages/BartenderHireBaliPage'))
+const DailyChefServiceBaliPage = lazy(() => import('./pages/DailyChefServiceBaliPage'))
+const GrazingTableBaliPage = lazy(() => import('./pages/GrazingTableBaliPage'))
+const VillaPartyCateringBaliPage = lazy(() => import('./pages/VillaPartyCateringBaliPage'))
+const BabiGulingCateringBaliPage = lazy(() => import('./pages/BabiGulingCateringBaliPage'))
+const PlatedDinnerCateringBaliPage = lazy(() => import('./pages/PlatedDinnerCateringBaliPage'))
+const MixologistHireBaliPage = lazy(() => import('./pages/MixologistHireBaliPage'))
+const SommelierHireBaliPage = lazy(() => import('./pages/SommelierHireBaliPage'))
+const RehearsalDinnerBaliPage = lazy(() => import('./pages/RehearsalDinnerBaliPage'))
+const WaiterHireBaliPage = lazy(() => import('./pages/WaiterHireBaliPage'))
+const PrivateDiningBaliPage = lazy(() => import('./pages/PrivateDiningBaliPage'))
+const ChefsTableBaliPage = lazy(() => import('./pages/ChefsTableBaliPage'))
+const BrunchCateringBaliPage = lazy(() => import('./pages/BrunchCateringBaliPage'))
+const PoolPartyCateringBaliPage = lazy(() => import('./pages/PoolPartyCateringBaliPage'))
+const VeganPrivateChefBaliPage = lazy(() => import('./pages/VeganPrivateChefBaliPage'))
 
 // Help & Guides System
 const HelpPage = lazy(() => import('./pages/HelpPage'))
@@ -422,6 +450,34 @@ export default function App() {
           <Route path="/blog/indonesian-street-food-private-chef-bali" element={<IndonesianStreetFoodBaliPage />} />
           <Route path="/blog/bali-wedding-catering-budget-guide" element={<BaliWeddingCateringBudgetPage />} />
           <Route path="/blog/private-chef-nusa-dua-guide" element={<PrivateChefNusaDuaGuidePage />} />
+          <Route path="/blog/private-chef-ubud-guide" element={<PrivateChefUbudGuidePage />} />
+          <Route path="/blog/private-chef-canggu-guide" element={<PrivateChefCangguGuidePage />} />
+          <Route path="/blog/private-chef-seminyak-guide" element={<PrivateChefSeminyakGuidePage />} />
+          <Route path="/blog/household-chef-bali-hiring-guide" element={<HouseholdChefBaliGuidePage />} />
+          <Route path="/blog/private-chef-jimbaran-guide" element={<PrivateChefJimbaranGuidePage />} />
+          <Route path="/blog/private-chef-roles-responsibilities-explained" element={<PrivateChefRolesResponsibilitiesPage />} />
+          <Route path="/blog/fine-dining-trends-bali-2026-innovations" element={<FineDiningTrendsBali2026Page />} />
+          <Route path="/blog/private-chef-sanur-guide" element={<PrivateChefSanurGuidePage />} />
+          <Route path="/blog/private-chef-pererenan-guide" element={<PrivateChefPererenanGuidePage />} />
+          <Route path="/blog/private-chef-denpasar-guide" element={<PrivateChefDenpasarGuidePage />} />
+          <Route path="/blog/chef-placement-agency-bali" element={<ChefPlacementAgencyBaliPage />} />
+          <Route path="/blog/event-staff-bali" element={<EventStaffBaliPage />} />
+          <Route path="/blog/bartender-hire-bali" element={<BartenderHireBaliPage />} />
+          <Route path="/blog/daily-chef-service-bali" element={<DailyChefServiceBaliPage />} />
+          <Route path="/blog/grazing-table-bali" element={<GrazingTableBaliPage />} />
+          <Route path="/blog/villa-party-catering-bali" element={<VillaPartyCateringBaliPage />} />
+          <Route path="/blog/babi-guling-catering-bali" element={<BabiGulingCateringBaliPage />} />
+          <Route path="/blog/plated-dinner-catering-bali" element={<PlatedDinnerCateringBaliPage />} />
+          <Route path="/blog/mixologist-hire-bali" element={<MixologistHireBaliPage />} />
+          <Route path="/blog/sommelier-hire-bali" element={<SommelierHireBaliPage />} />
+          <Route path="/blog/rehearsal-dinner-bali" element={<RehearsalDinnerBaliPage />} />
+          <Route path="/blog/waiter-hire-bali" element={<WaiterHireBaliPage />} />
+          <Route path="/blog/private-dining-bali" element={<PrivateDiningBaliPage />} />
+          <Route path="/blog/chefs-table-bali" element={<ChefsTableBaliPage />} />
+          <Route path="/blog/brunch-catering-bali" element={<BrunchCateringBaliPage />} />
+          <Route path="/blog/pool-party-catering-bali" element={<PoolPartyCateringBaliPage />} />
+          <Route path="/blog/vegan-private-chef-bali" element={<VeganPrivateChefBaliPage />} />
+          <Route path="/partner" element={<VillaManagerPartnerPage />} />
           {BLOG_POST_SLUGS.map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<LandingPage kind="blog" />} />
           ))}

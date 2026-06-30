@@ -1,0 +1,135 @@
+import PremiumPage, { type PageSection } from '@/components/PremiumPage'
+import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+
+const SECTIONS: PageSection[] = [
+  {
+    id: 'intro',
+    type: 'content',
+    subtitle: 'Private Chef Seminyak',
+    title: 'Private Chef Seminyak: Luxury Villa Dining, Sunset Dinners & Fine Dining',
+    body: `<p>Seminyak is Bali\'s original luxury villa address. A private chef in Seminyak is expected to match the standards set by the area\'s best restaurants — precise technique, premium ingredients, beautiful plating, and professional front-of-house service.</p>
+    <p>myCHEF provides private chef services across Seminyak and its adjacent luxury precincts: Oberoi, Petitenget, Kerobokan, and Batu Belig. Our Seminyak-based chefs include culinary-school graduates and former hotel kitchen professionals who bring fine dining standards to villa cooking.</p>
+    <p>The typical Seminyak private chef booking is for a couple, honeymoon, anniversary, or small intimate group (2-8 guests) who want a restaurant-quality dinner without leaving the villa.</p>`,
+  },
+  {
+    id: 'seminyak-cuisine',
+    type: 'content',
+    subtitle: 'Cuisine Style',
+    title: 'Seminyak Private Chef Cuisine: Fine Dining, Mediterranean & Premium Indonesian',
+    body: `<p>The most common cuisine requests for private chef dining in Seminyak are:</p>
+    <p><strong>Modern European / Mediterranean:</strong> Pasta, risotto, whole fish en papillote, duck breast, beef tenderloin. The most frequently requested cuisine style for romantic dinners in Seminyak.</p>
+    <p><strong>Premium Indonesian / Balinese fine dining:</strong> Classical Balinese flavour profiles presented with modern precision. A seven-course progressive Indonesian tasting menu is one of the most unique private dining experiences available.</p>
+    <p><strong>Japanese / nikkei:</strong> Raw fish, sashimi, fresh tuna and wahoo are available in Bali via premium fish suppliers. Sashimi and crudo followed by wagyu beef or grilled black cod is a popular format.</p>
+    <p><strong>Sunset cocktail spread:</strong> A mixologist and a canape spread at 5pm before a full dinner at 7:30pm is a format we often arrange for villa honeymoons and anniversaries.</p>`,
+  },
+  {
+    id: 'seminyak-areas',
+    type: 'content',
+    subtitle: 'Coverage Area',
+    title: 'Seminyak, Oberoi, Petitenget, Kerobokan & Batu Belig — Full Coverage',
+    body: `<p>myCHEF covers the full Seminyak luxury corridor:</p>
+    <p><strong>Seminyak core (Jl. Laksmana / Oberoi area):</strong> The original luxury hotel and villa strip. Many of Bali\'s most beautiful private villas are in this zone.</p>
+    <p><strong>Petitenget:</strong> The extension of Seminyak north along the beach, anchored by Potato Head Beach Club.</p>
+    <p><strong>Kerobokan:</strong> Immediately north of Seminyak, home to some of Bali\'s best fine dining restaurants and many prominent long-term expat residents.</p>
+    <p><strong>Batu Belig:</strong> A quieter beach area connecting Seminyak to Canggu, popular for honeymoons and anniversary trips.</p>`,
+  },
+  {
+    id: 'occasions',
+    type: 'content',
+    subtitle: 'Occasions',
+    title: 'Private Chef for Seminyak Occasions: Honeymoons, Proposals & Anniversaries',
+    body: `<p>Seminyak\'s romantic reputation makes it the island\'s premier destination for milestone occasion dining:</p>
+    <p><strong>Honeymoon dinners:</strong> A private chef dinner for two — candles, fresh flowers, bespoke menu, champagne. See our <a href="/blog/honeymoon-private-chef-bali" class="text-[#C5A028] hover:underline font-medium">honeymoon private chef guide</a>.</p>
+    <p><strong>Proposals:</strong> A controlled private setting — no restaurant crowds, no risk of interruptions. See our <a href="/blog/proposal-dinner-bali-private-chef" class="text-[#C5A028] hover:underline font-medium">proposal dinner guide</a>.</p>
+    <p><strong>Anniversary dinners:</strong> A dinner built around the couple\'s specific preferences. See our <a href="/blog/anniversary-dinner-villa-bali" class="text-[#C5A028] hover:underline font-medium">anniversary dinner guide</a>.</p>
+    <p><strong>Corporate dinners:</strong> A private villa dinner for 8-12 executives with a sommelier and professional waitstaff. See our <a href="/blog/corporate-events-catering-bali-team-dining" class="text-[#C5A028] hover:underline font-medium">corporate dining guide</a>.</p>`,
+  },
+  {
+    id: 'pricing',
+    type: 'content',
+    subtitle: 'Pricing',
+    title: 'Private Chef Seminyak Pricing',
+    body: `<p>Seminyak sits at the premium end of Bali private chef pricing:</p>
+    <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
+      <li><strong>Romantic dinner for 2 (4-5 courses):</strong> From IDR 1,200,000 – 1,800,000 per person.</li>
+      <li><strong>Small group dinner (4-8 guests, 4 courses):</strong> IDR 800,000 – 1,200,000 per person</li>
+      <li><strong>Fine dining tasting menu (6-7 courses with pairings):</strong> IDR 1,500,000 – 2,500,000 per person</li>
+    </ul>
+    <p style="margin-top:0.75rem;">For a full pricing breakdown see our <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
+  },
+  {
+    id: 'cta',
+    type: 'cta',
+    subtitle: 'Book Your Chef',
+    title: 'Reserve a Private Chef in Seminyak',
+    body: 'Tell us your villa, dates, occasion, and cuisine preferences. We will match you with the right Seminyak chef.',
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    secondaryAction: { label: 'View Fine Dining', href: '/fine-dining' },
+  },
+]
+
+const FAQS = [
+  {
+    question: "What type of cuisine does a Seminyak private chef typically serve?",
+    answer: "Our Seminyak chefs are versatile and can cook across cuisines, but the most common requests are modern European/Mediterranean, premium Indonesian fine dining, and Japanese-influenced menus.",
+  },
+  {
+    question: "Can a private chef set up a proposal dinner at my Seminyak villa?",
+    answer: "Yes. We handle private proposal dinners regularly. We coordinate the menu, table setup, fresh flowers, candles, and timing with your specific proposal moment in mind.",
+  },
+  {
+    question: "Does myCHEF provide a sommelier or wine pairing service in Seminyak?",
+    answer: "Yes. We can arrange a wine pairing consultation and service alongside your private chef dinner. Wine costs are additional and quoted transparently.",
+  },
+  {
+    question: "What is the typical cost for a private chef honeymoon dinner in Seminyak?",
+    answer: "A romantic private chef dinner for two in Seminyak — 4 to 5 courses, premium ingredients, full setup and service — starts from approximately IDR 1,200,000 to 1,800,000 per person, excluding wine.",
+  },
+  {
+    question: "Do you cover Kerobokan and Batu Belig as well as central Seminyak?",
+    answer: "Yes. We cover the full Seminyak luxury corridor including Seminyak core, Oberoi, Petitenget, Kerobokan, and Batu Belig.",
+  },
+]
+
+export default function PrivateChefSeminyakGuidePage() {
+  return (
+    <PremiumPage
+      slug="blog/private-chef-seminyak-guide"
+      title="Private Chef Seminyak: Luxury Villa Dining, Sunset Dinners & Fine Dining"
+      description="Book a private chef in Seminyak for honeymoon dinners, proposals, anniversaries, and fine dining tasting menus. Covers Oberoi, Petitenget, Kerobokan and Batu Belig."
+      h1="Private Chef Seminyak — Luxury Villa Dining, Sunset Dinners & Fine Dining"
+      subtitle="The complete guide to private chef experiences across Seminyak and its luxury villa precincts"
+      heroImage="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80"
+      heroImageAlt="Private chef plating a fine dining tasting menu course at a luxury Seminyak villa"
+      ogImage="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80"
+      keywords={['private chef seminyak', 'seminyak private chef', 'seminyak villa chef', 'private chef bali seminyak', 'seminyak fine dining villa']}
+      highlights={['Fine Dining', 'Romantic Dinners', 'Honeymoon & Proposals', 'From IDR 800K/person']}
+      sections={SECTIONS}
+      faqs={FAQS}
+      relatedPages={[
+        { label: 'Private Chef Canggu Guide', href: '/blog/private-chef-canggu-guide', desc: 'Surf culture dining and group parties in Canggu.' },
+        { label: 'Honeymoon Private Chef', href: '/blog/honeymoon-private-chef-bali', desc: 'Private chef experience guide for Bali honeymoons.' },
+        { label: 'Proposal Dinner Bali', href: '/blog/proposal-dinner-bali-private-chef', desc: 'Arrange a private chef proposal dinner at your villa.' },
+        { label: 'Anniversary Dinner Bali', href: '/blog/anniversary-dinner-villa-bali', desc: 'Private chef anniversary dinner at a Bali villa.' },
+      ]}
+      extraJsonLd={[
+        breadcrumbSchema('Private Chef Seminyak Guide', 'https://mychef.id/blog/private-chef-seminyak-guide', 'Blog', 'https://mychef.id/blog'),
+        faqPageSchema(FAQS.map(f => ({ question: f.question, answer: f.answer }))),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Private Chef Seminyak: Luxury Villa Dining, Sunset Dinners & Fine Dining',
+          description: 'Book a private chef in Seminyak for honeymoon dinners, proposals, anniversaries, and fine dining tasting menus.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2026-06-30',
+          dateModified: '2026-06-30',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/private-chef-seminyak-guide' },
+          url: 'https://mychef.id/blog/private-chef-seminyak-guide',
+        },
+      ]}
+      ctaText="Reserve Your Seminyak Chef"
+      ctaSubtext="We match you with the right chef for your Seminyak villa or romantic occasion."
+    />
+  )
+}

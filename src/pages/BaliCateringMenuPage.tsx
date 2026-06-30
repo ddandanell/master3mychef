@@ -1,0 +1,242 @@
+import PremiumPage from '@/components/PremiumPage'
+import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import { Utensils, Leaf, Flame, Users, ChefHat, Star } from 'lucide-react'
+
+const SECTIONS = [
+  {
+    id: 'intro',
+    type: 'content' as const,
+    subtitle: 'Bali Catering',
+    title: 'Bali Catering Menus: Traditional, Seasonal & Modern Options for Your Villa',
+    body: `<p>Balinese cuisine is a complex blend of spices, fresh herbs, and cooking techniques developed over centuries. Eating traditionally in Bali is an immersion into island identity — food carries cultural meaning, ritual, and a flavor depth rarely found in fusion interpretations.</p>
+    <p>Whether you prefer traditional Balinese, modern fusion, or international cuisine, this guide covers menu styles, Bali's seasonal ingredients, dietary accommodations, occasion-specific planning, and how to choose the right approach for your event. Visit our <a href="/catering" class="text-[#C5A028] hover:underline font-medium">catering hub</a> for full service options, or browse <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">pricing details</a> before you plan.</p>`,
+  },
+  {
+    id: 'seasonal-ingredients',
+    type: 'content' as const,
+    subtitle: 'Seasonal Sourcing',
+    title: "Bali's Seasonal Ingredients: What's Fresh and When",
+    body: `<p>Bali's equatorial climate produces exceptional year-round growing conditions, but the island has distinct wet and dry seasons that affect what's best on the plate. Our chefs source daily from Ubud market, Badung central market, Jimbaran fish market, and direct farm relationships in Kintamani, Bedugul, and Jatiluwih — the key to menus that taste genuinely Balinese rather than imported.</p>
+
+    <p><strong>Dry Season (April–October) — Peak Growing Season</strong><br/>
+    The highlands around Bedugul and Kintamani produce their best yields during the long dry months. Expect: sweet highland tomatoes, bell peppers, chillies, corn, cabbage, broccoli, cauliflower, strawberries (Baturiti farms), local mushrooms, and robust lemongrass. Fish is plentiful off the south coast, with tuna, mahi-mahi, and snapper landed fresh at Jimbaran daily. Dry season is the ideal window for whole-fish BBQ, corn-fed chicken, and vegetable-heavy Balinese ceremonial menus.</p>
+
+    <p><strong>Wet Season (November–March) — Tropical Harvest</strong><br/>
+    Rain triggers lush growth in lowland areas. Wet season brings: young coconuts, papayas, bananas, jackfruit, rambutan, mangosteens, starfruit, and Bali's prized salak (snake fruit). Rice paddies are green and flooded — new-harvest rice in January and February is noticeably sweeter. Wet season is the chef's preferred time for coconut-milk curries, fruit-forward desserts, and slow-cooked dishes that match Bali's occasional cool highland evenings.</p>
+
+    <p><strong>Year-Round Staples</strong><br/>
+    Balinese cooking relies on a core of aromatics that grow year-round: turmeric, galangal, ginger, lemongrass, kaffir lime, shallots, garlic, candlenut, and fresh chilies. These form the base of almost every sauce, marinade, and spice paste (base genep) used in traditional cooking. Our chefs blend these fresh daily rather than using pre-made pastes — the difference is immediately noticeable in depth and freshness of flavor.</p>
+
+    <p><strong>Highland vs. Coastal Sourcing</strong><br/>
+    A meal in Canggu draws very different produce from a meal in Ubud. <a href="/private-chef/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu villas</a> are close to coastal fish markets; <a href="/private-chef/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud area properties</a> sit near Kintamani's highland farms. Our chefs plan sourcing routes around your villa location to minimize transport time and maximize freshness. In <a href="/private-chef/bedugul" class="text-[#C5A028] hover:underline font-medium">Bedugul</a> or <a href="/private-chef/munduk" class="text-[#C5A028] hover:underline font-medium">Munduk</a>, the farm is sometimes 15 minutes away.</p>`,
+  },
+  {
+    id: 'balinese-tradition',
+    type: 'content' as const,
+    subtitle: 'Traditional Cuisine',
+    title: 'Balinese Traditional: Iconic Dishes & Flavors',
+    body: `<p>Traditional Balinese cooking is ceremonial food adapted for daily life. Many of the most celebrated dishes were originally prepared for temple offerings, cremation ceremonies, and harvest festivals. That heritage gives them a complexity that rewards slow preparation — not shortcuts.</p>
+
+    <p><strong>Babi Guling (Roasted Suckling Pig):</strong> Whole young pig seasoned with a base genep spice paste of turmeric, coriander, galangal, and garlic, then roasted over coconut-wood charcoal for 4–6 hours. The skin blisters into crackling. Served with rice, lawar, and sambal matah. Famous in Gianyar and Ubud — our chefs source the pig from traditional Balinese farms that free-range feed. Best for groups of 8+.</p>
+
+    <p><strong>Sate Lilit (Minced Meat Satay):</strong> Ground fish, chicken, or pork mixed with grated coconut, galangal, shallots, and kaffir lime, then moulded onto thick lemongrass stalks and grilled over charcoal. The lemongrass infuses smoke and citrus into the meat as it cooks. Served as a starter or alongside rice.</p>
+
+    <p><strong>Lawar (Minced Meat Salad):</strong> Finely chopped raw or cooked meat (pork, chicken, or jackfruit for vegetarians) mixed with grated coconut, spices, fresh blood (traditional), and raw vegetables. A ritual dish for ceremonies — the blood binds the ingredients and adds earthy depth. A vegetarian lawar substitutes jack fruit or young coconut.</p>
+
+    <p><strong>Ayam Betutu (Slow-Smoked Chicken):</strong> Whole chicken stuffed with spice paste and wrapped in banana leaves, then smoked over smoldering coconut husks for 6–8 hours. The result is intensely fragrant, fall-off-the-bone tender. Traditionally prepared for cremation ceremonies. One of the most labour-intensive dishes in Balinese cooking.</p>
+
+    <p><strong>Rijsttafel (Indonesian Rice Table):</strong> 12–20 small dishes served around a central bowl of fragrant rice — curries, salads, grilled items, sambals, pickles, and crackers. Guests assemble their own plates, sampling a range of flavors in a single sitting. Dutch-colonial in origin, now fully Balinese in execution. The ideal format for groups that enjoy variety and sharing.</p>`,
+  },
+  {
+    id: 'fusion-menus',
+    type: 'features' as const,
+    subtitle: 'Modern Fusion',
+    title: 'Modern Fusion Menus for Contemporary Tastes',
+    features: [
+      { icon: Flame, title: 'Mediterranean-Balinese', desc: 'Italian, Spanish, and Moroccan techniques applied to Balinese ingredients. Charred octopus with sambal matah, turmeric risotto with local mushrooms, wood-fired snapper with galangal butter. Popular for romantic dinners and intimate groups.' },
+      { icon: Utensils, title: 'Contemporary Balinese', desc: 'French plating and sourcing rigour applied to Balinese cooking methods. Deconstructed sate lilit, galangal-poached fish with microgreens, slow-cooked pork belly with black rice and sambal hijau. Our Michelin-trained chefs thrive here.' },
+      { icon: Users, title: 'Asian Contemporary', desc: 'Refined stir-fries, hand-folded dumplings, Japanese-inspired crudo with local fish, noodle dishes. Familiar to guests from Singapore, Hong Kong, and Tokyo. Versatile for large groups with mixed palates.' },
+      { icon: Leaf, title: 'Farm-to-Table', desc: 'Seasonal highland vegetables, simply grilled proteins, house-baked bread, cold-pressed salad dressings. Ingredient-focused with minimal intervention — the Baturiti strawberry salad or Kintamani highland mushroom toast are signature dishes in this style.' },
+    ],
+  },
+  {
+    id: 'occasion-menus',
+    type: 'features' as const,
+    subtitle: 'By Occasion',
+    title: 'Menu Planning by Event Type',
+    features: [
+      { icon: Star, title: 'Romantic Dinner (2 guests)', desc: 'Plated tasting menu of 4–6 courses. Champagne on arrival, amuse-bouche, a choice of Balinese or Mediterranean progression, petit fours. Flowers, candles, and poolside setting included. See our romantic dinner guide for full planning.' },
+      { icon: Users, title: 'Family Villa Stay (4–12)', desc: 'Hybrid approach — relaxed buffet lunches with fresh Indonesian street food, followed by a more formal plated dinner. Kid-friendly options alongside adult mains. Sunday babi guling brunch works particularly well for extended family groups.' },
+      { icon: ChefHat, title: 'Wellness / Yoga Retreat', desc: 'Plant-forward menus built around Bali\'s fresh produce: morning smoothie bowls and activated charcoal lattes, raw salads, light protein dinners, hydrating coconut-based desserts. Can be fully vegan, gluten-free, or raw — designed in consultation with your programme director.' },
+      { icon: Flame, title: 'Corporate Team Dinner', desc: 'Buffet format with 3 cuisine streams (Balinese, Asian, Western) for diverse international teams. No visible allergens in serving dishes, with separate allergen-safe platters. Full setup, service, and breakdown included. Catering for 15–100+ guests.' },
+    ],
+  },
+  {
+    id: 'dietary-accommodations',
+    type: 'content' as const,
+    subtitle: 'Dietary Options',
+    title: 'Dietary Accommodations: Vegetarian, Vegan, Gluten-Free & Allergen-Safe',
+    body: `<p>Bali is one of the world's most accommodating destinations for dietary requirements — the local cuisine is rice-based (naturally gluten-free), uses minimal dairy, and has a rich tradition of vegetable cooking in temple food. Our chefs handle dietary restrictions as a standard part of every menu briefing, not an afterthought.</p>
+
+    <p><strong>Vegetarian:</strong> Balinese vegetarian cooking is genuinely diverse — gado-gado, cap cay, pepes tahu (banana-leaf wrapped tofu), tempeh manis, and the full spectrum of vegetable sambals. International vegetarian includes pasta, risotto, grilled halloumi, and frittata. Same pricing as omnivore menus for standard vegetarian. Protein from legumes, tofu, tempeh, eggs, and dairy.</p>
+
+    <p><strong>Vegan:</strong> Plant-based Balinese with sambal vegetables, turmeric curries in coconut milk or coconut cream (naturally vegan), grilled jackfruit as a meat substitute, and Balinese black rice pudding with coconut for dessert. Cashew cream replaces dairy in Western dishes. Premium: +IDR 150,000–300,000/person for specialty sourcing.</p>
+
+    <p><strong>Gluten-Free:</strong> Balinese cooking is naturally largely gluten-free (rice-based staples, no wheat flour in traditional dishes). Watch points: kecap manis (sweet soy sauce) contains wheat — we substitute tamari or coconut aminos. Rice noodles replace pasta; polenta or potato replace bread-based elements. Minimal extra cost for most menus.</p>
+
+    <p><strong>Keto / Low-Carb:</strong> Substitute cauliflower rice or skip rice entirely. Protein-heavy Balinese (babi guling, ayam betutu, fish satay) naturally suits keto. Standard pricing or lower.</p>
+
+    <p><strong>Allergen-Safe (Nut, Shellfish, Dairy):</strong> Requires advance notice at booking. Nut-free Balinese is achievable (replace candlenut with sunflower seed in spice pastes). Shellfish-free menus exclude shrimp paste (terasi) and replace with vegetable-based umami alternatives. Dairy-free is standard in most Balinese dishes. Premium: +IDR 300,000–600,000/person for specialty sourcing and dedicated prep equipment.</p>
+
+    <p>Share all dietary requirements at booking — not after. Last-minute changes limit sourcing options and can compromise safety.</p>`,
+  },
+  {
+    id: 'menu-styles',
+    type: 'features' as const,
+    subtitle: 'Presentation Style',
+    title: 'Menu Formats: Plated, Buffet, Grazing & BBQ',
+    features: [
+      { icon: Utensils, title: 'Plated Courses (Formal)', desc: 'Each course individually plated, garnished, and served. 4–7 courses paced over 2–3 hours. Elegant, photographs beautifully for social media. Cost premium: +20–30% over buffet. Best for intimate groups of 2–8.' },
+      { icon: Users, title: 'Buffet (Group-Friendly)', desc: 'All dishes displayed on a banquet table with chafing dishes. Guests serve themselves and return for seconds. Relaxed pacing, flexible timing, handles dietary splits easily. Standard rate. Best for 8–30+ guests.' },
+      { icon: Leaf, title: 'Grazing / Sharing Boards', desc: 'Artisan cheese and charcuterie boards, seasonal fruit platters, housemade dips and breads, small plate bites. Bohemian, interactive, highly photogenic. 30–40% below standard rate. Best for pre-dinner drinks or light afternoon meals for 4–8.' },
+      { icon: Flame, title: 'BBQ / Live Fire', desc: 'Proteins grilled tableside over charcoal or wood fire. Theater element — guests watch the cook. The smoke carries into the garden and sets the atmosphere. 15–25% premium for equipment and charcoal. Best for 6–15 guests at a garden or poolside villa.' },
+    ],
+  },
+  {
+    id: 'how-to-choose',
+    type: 'content' as const,
+    subtitle: 'Selection Guide',
+    title: 'How to Choose the Right Menu for Your Event',
+    body: `<p><strong>Group Size & Composition:</strong> 2 people → <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining</a>, intimate tasting menu. 4–6 → balanced between interactive and elegant plated. 8+ → buffet or grazing for easier logistics and dietary split management.</p>
+
+    <p><strong>Cuisine Preferences:</strong> Adventurous guests who want to experience Bali → Balinese traditional or contemporary Balinese fusion. Guests who travel frequently and prefer familiar flavors → international or farm-to-table. Families with children → hybrid buffet with Balinese and Western options side by side.</p>
+
+    <p><strong>Dietary Restrictions:</strong> The more complex your dietary mix, the more a buffet format helps — separate dishes allow each guest to self-select. For plated menus with multiple dietary tracks, brief the chef at booking with all requirements.</p>
+
+    <p><strong>Occasion:</strong> Anniversary or honeymoon → <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining</a>, plated tasting menu with wine or cocktail pairings. Family reunion → Sunday rijsttafel buffet or babi guling feast. Corporate team dinner → multi-stream buffet with full service. Yoga retreat → <a href="/blog/family-kids-menu-private-chef-bali" class="text-[#C5A028] hover:underline font-medium">wellness menu</a>, plant-forward, light portions.</p>
+
+    <p><strong>Venue & Setting:</strong> Outdoor pool terrace + Bali weather risk (afternoon squalls Nov–Feb) → lighter grazing or buffet that tolerates brief delays. Covered indoor villa → any format works. Beachside (Jimbaran, <a href="/private-chef/ketewel" class="text-[#C5A028] hover:underline font-medium">Ketewel</a>, <a href="/private-chef/cepaka" class="text-[#C5A028] hover:underline font-medium">Cepaka</a>) → BBQ or sunset grazing board with fresh seafood.</p>
+
+    <p><strong>Budget Per Person</strong> — see our full <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing page</a> and <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">cost breakdown</a>:</p>
+    <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.5rem;">
+      <li>IDR 750,000–1,200,000/person → casual, local ingredients, buffet or BBQ style</li>
+      <li>IDR 1,200,000–1,800,000/person → mix of local and imported, some creative plating</li>
+      <li>IDR 1,800,000+/person → fine dining, specialty chefs, imported proteins, wine pairing</li>
+    </ul>`,
+  },
+  {
+    id: 'area-menus',
+    type: 'content' as const,
+    subtitle: 'Location-Specific Menus',
+    title: 'Menu Recommendations by Bali Area',
+    body: `<p>The best catering menus lean into what the local area does best — proximity to markets, the character of the villa, and the kind of guest who typically books there. Here's how our chefs adapt menus by location:</p>
+
+    <p><strong><a href="/private-chef/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak</a> & <a href="/private-chef/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu</a>:</strong> Lifestyle-conscious guests who know food well. Contemporary Balinese, farm-to-table, plant-forward menus perform best. Avocado toasts, smoothie bowls, and single-origin coffee for breakfast; innovative fusion for dinner. Access to excellent imported ingredients from Bali's international deli network.</p>
+
+    <p><strong><a href="/private-chef/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud</a>, <a href="/private-chef/kedewatan" class="text-[#C5A028] hover:underline font-medium">Kedewatan</a> & <a href="/private-chef/nyuh-kuning" class="text-[#C5A028] hover:underline font-medium">Nyuh Kuning</a>:</strong> Cultural travellers who want authentic Bali. Traditional Balinese rijsttafel, temple-style lawar and sate lilit, and locally-sourced Kintamani highland vegetables. The morning Ubud market is the best single source for fresh produce on the island.</p>
+
+    <p><strong><a href="/private-chef/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu</a>, <a href="/private-chef/jimbaran" class="text-[#C5A028] hover:underline font-medium">Jimbaran</a> & <a href="/private-chef/nusa-dua" class="text-[#C5A028] hover:underline font-medium">Nusa Dua</a>:</strong> Cliff and beach villas with dramatic sunset settings. Seafood BBQ and Mediterranean menus align with the setting. Jimbaran fish market provides the freshest catch — whole grilled fish with sambal matah is the signature dish of this corridor.</p>
+
+    <p><strong><a href="/private-chef/tirta-gangga" class="text-[#C5A028] hover:underline font-medium">Tirta Gangga</a>, <a href="/private-chef/amed" class="text-[#C5A028] hover:underline font-medium">Amed</a> & East Bali:</strong> Remote East Bali villas suit intimate Balinese dinners built around local produce — organic rice from Sidemen, salt from Amed's salt farms, freshwater fish from highland lakes. Less choice of imported ingredients, but unmatched authenticity.</p>
+
+    <p><strong><a href="/private-chef/munduk" class="text-[#C5A028] hover:underline font-medium">Munduk</a>, <a href="/private-chef/bedugul" class="text-[#C5A028] hover:underline font-medium">Bedugul</a> & Highlands:</strong> Cool mountain evenings call for warming menus — slow-cooked braised meats, clove-spiced soups, Baturiti strawberry desserts, and local coffee service. The highland farms supply better vegetables here than anywhere else in Bali.</p>`,
+  },
+  {
+    id: 'cta',
+    type: 'cta' as const,
+    subtitle: 'Ready to Plan',
+    title: 'Design a Custom Catering Menu for Your Villa Event',
+    body: "Tell us your group size, location, occasion, and any dietary needs — we'll design a seasonal menu around Bali's freshest produce and our chefs' specialities.",
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/6281291570014?text=Hi%20myCHEF%2C%20I%20want%20to%20plan%20a%20catering%20menu%20for%20my%20villa' },
+    secondaryAction: { label: 'View Pricing', href: '/pricing' },
+  },
+]
+
+const FAQS = [
+  {
+    question: "What's the best Balinese dish for a large villa dinner?",
+    answer: 'Babi guling (roasted suckling pig) is the crowd favourite for groups of 8 or more — it requires full-day preparation and creates a genuine ceremonial atmosphere. For groups that include non-pork eaters, a rijsttafel (rice table) with 12–15 dishes is the most versatile option.',
+  },
+  {
+    question: 'Is Balinese cuisine very spicy?',
+    answer: 'Traditional Balinese uses chilies, but heat is always customisable. We adjust sambal intensity from very mild to fiery based on guest preferences. Guests with low spice tolerance should inform us at booking — most dishes can be made mild without losing their character.',
+  },
+  {
+    question: 'What seasonal ingredients are best in Bali right now?',
+    answer: "Bali's dry season (April–October) brings the best highland vegetables: sweet tomatoes, corn, mushrooms, and strawberries from Baturiti. The wet season (November–March) is ideal for tropical fruits — rambutan, mangosteens, starfruit, and jackfruit. Fish is excellent year-round from Jimbaran market.",
+  },
+  {
+    question: 'Can I mix Balinese and international cuisine in one menu?',
+    answer: 'Absolutely — hybrid menus are popular. A typical approach: Balinese-style amuse-bouche and appetisers, then a choice of traditional or Western main, finishing with a Balinese dessert like black rice pudding or pandan panna cotta.',
+  },
+  {
+    question: 'How much advance notice is needed for dietary accommodations?',
+    answer: 'Provide all dietary requirements at booking time. Specialist sourcing for serious allergies (nuts, shellfish) requires 48+ hours minimum. Last-minute changes limit what the chef can safely prepare.',
+  },
+  {
+    question: "What's the difference between a catering menu and a fine dining tasting menu?",
+    answer: 'Catering menus focus on group service, volume, and variety — designed so a chef can serve 8–20 guests efficiently. Fine dining tasting menus are plated individually, paced over 2–3 hours, and built around a single chef showcasing artistry in 4–7 courses. See our fine dining page for the difference in detail.',
+  },
+  {
+    question: 'Do your chefs use fresh local produce or imports?',
+    answer: "Local produce is always preferred and sourced daily. Imports are used for specific ingredients not available in Bali — French cheeses, Japanese wagyu, specific wine pairings. We tell you at booking which components require import sourcing and the associated cost.",
+  },
+  {
+    question: 'Can myCHEF create a plant-based menu for a yoga retreat?',
+    answer: 'Yes — plant-forward and fully vegan menus are one of our specialties in Bali. We design around fresh highland vegetables, coconut milk, tempeh, tofu, jackfruit, and tropical fruits. Multi-day retreat catering with daily menu variety is available for groups of 4–30 guests.',
+  },
+]
+
+const RELATED_PAGES = [
+  { label: 'Private Chef Ubud', href: '/private-chef/ubud', desc: 'Best market sourcing and traditional Balinese menus.' },
+  { label: 'Private Chef Canggu', href: '/private-chef/canggu', desc: 'Contemporary and fusion menus for lifestyle villas.' },
+  { label: 'Fine Dining Guide', href: '/blog/fine-dining-guide', desc: 'Premium tasting menus and wine pairings in Bali.' },
+  { label: 'Pricing & Packages', href: '/pricing', desc: 'Full pricing for private chef and catering services.' },
+  { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Detailed cost breakdown for every budget level.' },
+  { label: 'Food Allergies Guide', href: '/blog/food-allergies-dietary-requirements-private-chef-bali', desc: 'Managing dietary restrictions with a private chef.' },
+  { label: 'Event Planning Bali', href: '/blog/event-planning-bali', desc: 'Full logistics guide for villa events.' },
+]
+
+export default function BaliCateringMenuPage() {
+  return (
+    <PremiumPage
+      slug="blog/bali-catering-menu"
+      title="Bali Catering Menus: Traditional, Seasonal & Modern Options for Your Villa"
+      description="Complete guide to Bali catering menus — traditional Balinese dishes, seasonal ingredients, fusion styles, dietary accommodations, and occasion-specific planning for villa events."
+      seoTitle="Bali Catering Menus | Seasonal Ingredients & Villa Catering Guide 2026"
+      seoDescription="Complete guide to Bali catering menus — traditional Balinese dishes, Bali's seasonal produce, fusion styles, dietary options, and planning advice for villa events of any size."
+      canonicalUrl="https://mychef.id/blog/bali-catering-menu"
+      h1="Bali Catering Menus"
+      subtitle="Traditional, Seasonal & Modern Cuisine for Your Villa"
+      heroImage="/generated/mychef-catering-bali-hero-babiguling.webp"
+      heroImageAlt="Traditional Balinese babi guling and modern fusion dishes prepared by a private chef in a Bali villa"
+      ogImage="https://mychef.id/generated/mychef-catering-bali-hero-babiguling.webp"
+      keywords={['bali catering menu', 'balinese cuisine', 'seasonal ingredients bali', 'villa catering bali', 'private chef menu bali', 'bali wedding menu']}
+      highlights={['Seasonal Sourcing', 'Traditional Balinese', 'Fusion & Modern', 'Dietary Options']}
+      sections={SECTIONS}
+      faqs={FAQS}
+      relatedPages={RELATED_PAGES}
+      extraJsonLd={[
+        breadcrumbSchema('Catering Menus Bali', 'https://mychef.id/blog/bali-catering-menu', 'Blog', 'https://mychef.id/blog'),
+        faqPageSchema(FAQS.map(f => ({ question: f.question, answer: f.answer }))),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Bali Catering Menus: Traditional, Seasonal & Modern Options for Your Villa',
+          description: 'Complete guide to Bali catering menus — traditional Balinese dishes, seasonal ingredients, fusion styles, dietary accommodations, and occasion-specific planning for villa events.',
+          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
+          publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
+          datePublished: '2025-05-01',
+          dateModified: new Date().toISOString().split('T')[0],
+          image: 'https://mychef.id/generated/mychef-catering-bali-hero-babiguling.webp',
+          mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/bali-catering-menu' },
+          url: 'https://mychef.id/blog/bali-catering-menu',
+          wordCount: 1800,
+          keywords: 'bali catering menu, seasonal ingredients bali, traditional balinese cuisine, villa catering',
+        },
+      ]}
+      ctaText="Design Your Menu"
+      ctaSubtext="Tell us your group, occasion, and dietary needs — we build a seasonal menu around Bali's freshest produce."
+    />
+  )
+}

@@ -105,7 +105,7 @@ export default function InVillaServicePage() {
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to hire in-villa service staff.')}`
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={getPageMeta('in-villa-service').title}
         description={getPageMeta('in-villa-service').description}
@@ -496,6 +496,6 @@ export default function InVillaServicePage() {
         serviceName="in-villa service staff in Bali"
         intent="availability and pricing"
       />
-    </main>
+    </div>
   )
 }

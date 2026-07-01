@@ -127,7 +127,7 @@ export default function PrivateChefCostBaliPageBlog() {
   }
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="How Much Does a Private Chef in Bali Cost? [2026 Guide] — myCHEF"
         description="Private chef costs in Bali range from IDR 600k/day for villa dining to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book."
@@ -565,6 +565,6 @@ export default function PrivateChefCostBaliPageBlog() {
         </section>
 
       </article>
-    </main>
+    </div>
   )
 }

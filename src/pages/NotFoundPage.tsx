@@ -34,7 +34,7 @@ export default function NotFoundPage() {
   )}`
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#F5F3EE] text-[#1A1916]">
+    <div className="relative min-h-screen overflow-hidden bg-[#F5F3EE] text-[#1A1916]">
       <SeoHead
         title="Page Not Found | myCHEF — Private Chef Bali"
         description="The page you are looking for does not exist. Explore fine dining, events, villa catering, and contact options with myCHEF."
@@ -135,6 +135,6 @@ export default function NotFoundPage() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

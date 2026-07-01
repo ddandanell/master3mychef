@@ -180,7 +180,7 @@ export default function ReviewsPage() {
   const canonical = `${SITE}/reviews`
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="myCHEF Bali Reviews | 4.9★ Private Chef & Catering"
         description="Read 4.9★ myCHEF Bali reviews from villa guests, weddings, retreats & events. Real hosts, real outcomes — see why 560+ villas keep coming back."
@@ -400,6 +400,6 @@ export default function ReviewsPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

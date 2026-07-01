@@ -82,7 +82,7 @@ export default function JimbaranPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Jimbaran | Seafood Villa Dining & BBQ — myCHEF"
         description="Hire a private chef in Jimbaran for seafood villa dinners, bayfront BBQs & sunset celebrations. Same-day fresh catch, Indonesian chefs, Michelin standards. WhatsApp for quotes."
@@ -268,6 +268,6 @@ export default function JimbaranPage() {
           </section>
 
           <CityDeepDive slug="jimbaran" cityName="Jimbaran" />
-</main>
+</div>
   )
 }

@@ -108,7 +108,7 @@ export default function CorporateGuidePage() {
   const canonical = `${SITE}/help/corporate-guide`
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Corporate Catering Guide Bali | Offsites & Team Retreats — myCHEF"
         description="Plan corporate catering in Bali: menu options, staffing, timing & multi-day meal flow for teams and offsites. Everything your team needs, handled."
@@ -253,6 +253,6 @@ export default function CorporateGuidePage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

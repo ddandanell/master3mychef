@@ -84,7 +84,7 @@ export default function ServicesPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#050505] text-white">
+    <div className="min-h-screen bg-[#050505] text-white">
       <SeoHead
         title="Private Chef Services Bali | All-In Villa Experiences — myCHEF"
         description="Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit."
@@ -310,6 +310,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

@@ -90,7 +90,7 @@ export default function FamilyKidsMenuPage() {
   }
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Family Private Chef Bali: Kids' Menus, Picky Eaters & Villa Dining Guide — myCHEF"
         description="Planning villa dining for a family in Bali? Our private chefs build kids' menus around your children's ages and preferences. No restaurant stress. Book in 24 hours."
@@ -551,6 +551,6 @@ export default function FamilyKidsMenuPage() {
           </div>
         </section>
       </article>
-    </main>
+    </div>
   )
 }

@@ -68,7 +68,7 @@ export default function LocationsHubPage() {
   const locations = Object.values(LOCATIONS).filter((l) => hasLocationPage(l.slug))
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Locations in Bali — myCHEF"
         description="Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Villa dining, catering and events in every region."
@@ -310,6 +310,6 @@ export default function LocationsHubPage() {
           </a>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

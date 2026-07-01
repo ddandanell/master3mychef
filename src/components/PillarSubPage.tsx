@@ -91,7 +91,7 @@ export default function PillarSubPage() {
   const ogImage = pillarOgImages[pillar.slug]
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={subPage.title}
         description={subPage.description}
@@ -209,18 +209,18 @@ export default function PillarSubPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 
 function SubPageNotFound() {
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A] px-6 pt-32 pb-16 max-w-[800px] mx-auto">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A] px-6 pt-32 pb-16 max-w-[800px] mx-auto">
       <h1 className="font-playfair text-4xl mb-4">Page not found</h1>
       <p className="text-[#4A4745] mb-8">That page doesn’t exist or may have moved.</p>
       <Link to="/" className="inline-flex items-center gap-2 text-[#C5A028] font-semibold text-sm uppercase tracking-[2px]">
         <ArrowRight className="w-4 h-4" /> Back to home
       </Link>
-    </main>
+    </div>
   )
 }

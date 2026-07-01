@@ -92,7 +92,7 @@ export default function WeddingGuidePage() {
   const canonical = `${SITE}/help/wedding-guide`
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Wedding Catering Guide Bali | Plan Your Villa Wedding — myCHEF"
         description="Plan Bali wedding catering step by step: guest counts, service styles, tastings, staffing & multi-day villa celebrations. Everything you need to know."
@@ -235,6 +235,6 @@ export default function WeddingGuidePage() {
           </a>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

@@ -30,7 +30,7 @@ export function JournalIndexPage() {
   }, [activeCategory, allPosts])
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Bali Private Chef Journal | Tips, Menus & Guides — myCHEF"
         description="Guides, cost breakdowns, and culinary insights for hosting in Bali — private chef cost, villa kitchens, retreats, and rehearsal dinners."
@@ -156,7 +156,7 @@ export function JournalIndexPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 
@@ -167,12 +167,12 @@ export function JournalPostPage() {
 
   if (!post) {
     return (
-      <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A] px-6 pt-32 pb-16 max-w-[800px] mx-auto">
+      <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A] px-6 pt-32 pb-16 max-w-[800px] mx-auto">
         <h1 className="font-playfair text-4xl mb-4">Article not found</h1>
         <Link to="/journal" className="text-[#C5A028] font-semibold text-sm uppercase tracking-[2px] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded inline-block">
           Back to Journal
         </Link>
-      </main>
+      </div>
     )
   }
 
@@ -211,7 +211,7 @@ export function JournalPostPage() {
     .slice(0, 3)
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={post.title}
         description={post.excerpt}
@@ -327,6 +327,6 @@ export function JournalPostPage() {
           </Link>
         </div>
       </article>
-    </main>
+    </div>
   )
 }

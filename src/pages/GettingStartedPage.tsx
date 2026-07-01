@@ -144,7 +144,7 @@ export default function GettingStartedPage() {
   const canonical = `${SITE}/help/getting-started`
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="How to Book a Private Chef Bali | Getting Started — myCHEF"
         description="Step-by-step guide to booking your first private chef in Bali. What to send, how quotes work & what happens after you confirm with myCHEF."
@@ -331,6 +331,6 @@ export default function GettingStartedPage() {
           <p className="mt-6 text-white/50 text-sm">No commitment. We respond in under 1 hour.</p>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

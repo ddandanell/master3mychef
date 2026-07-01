@@ -88,7 +88,7 @@ export default function PricingGuide() {
   const canonical = `${SITE}/help/pricing`
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Bali Pricing Guide | What It Really Costs — myCHEF"
         description="Understand private chef Bali pricing: what each format includes, how guest count & menu style affect cost, and how to read your myCHEF quote."
@@ -242,6 +242,6 @@ export default function PricingGuide() {
           </a>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

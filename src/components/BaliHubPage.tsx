@@ -16,7 +16,7 @@ export default function BaliHubPage() {
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent("Hi myCHEF, I'd like a private chef in Bali.")}`
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={`${title} | myCHEF`}
         description={description}
@@ -149,6 +149,6 @@ export default function BaliHubPage() {
           </Link>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

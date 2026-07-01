@@ -54,7 +54,7 @@ export default function MenuPage() {
 
   if (isIndex) {
     return (
-      <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+      <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
         <SeoHead
           title="Private Chef Menus in Bali | myCHEF"
           description="Explore myCHEF menu ideas for Bali villas — Mediterranean set menus, Indonesian feasts, BBQ nights, tasting menus, and customizable cuisine pages."
@@ -226,7 +226,7 @@ export default function MenuPage() {
             </div>
           </div>
         </section>
-      </main>
+      </div>
     )
   }
 
@@ -238,7 +238,7 @@ export default function MenuPage() {
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'd like the ${menu.name} for my villa.`)}`
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead title={`${title} | myCHEF`} description={menu.description} canonical={canonical} ogImage="/hero-fine-dining.webp" jsonLd={[aggregateRatingSchema(4.9, 560), breadcrumbSchema(menu.name, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[960px] mx-auto">
@@ -273,6 +273,6 @@ export default function MenuPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

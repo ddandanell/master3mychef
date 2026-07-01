@@ -126,7 +126,7 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={getPageMeta('contact').title}
         description={getPageMeta('contact').description}
@@ -373,7 +373,7 @@ export default function ContactPage() {
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

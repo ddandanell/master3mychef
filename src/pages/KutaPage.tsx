@@ -90,7 +90,7 @@ export default function KutaPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Kuta Bali | Villa Dining & Event Catering — myCHEF"
         description="Hire a private chef in Kuta Bali for villa dinners, BBQ parties, and celebrations. myCHEF serves Kuta, Legian, and Tuban from IDR 600k/day."
@@ -321,6 +321,6 @@ export default function KutaPage() {
         </div>
       </section>
           <CityDeepDive slug="kuta" cityName="Kuta" />
-</main>
+</div>
   )
 }

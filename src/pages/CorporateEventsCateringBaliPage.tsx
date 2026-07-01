@@ -240,7 +240,7 @@ export default function CorporateEventsCateringBaliPage() {
   }
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Corporate Event Catering Bali 2026 | Case Studies & Real Costs — myCHEF"
         description="Real corporate catering case studies from Bali: tech retreat (38 people, 5 days), bank exec dinner (22 guests), fashion launch (74 guests), wellness retreat (24 people, 7 days). Costs, menus, and outcomes."
@@ -563,6 +563,6 @@ export default function CorporateEventsCateringBaliPage() {
           <p className="text-white/30 text-sm mt-4">Responds within 4 hours · Available 7 days a week</p>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

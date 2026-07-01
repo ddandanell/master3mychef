@@ -119,7 +119,7 @@ export default function PrivateChefVsRestaurantPage() {
   }
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef vs Restaurant Bali: Which Is Better for Groups? — myCHEF"
         description="Private chef or restaurant in Bali? Full cost comparison, menu control, and comfort breakdown for groups, families, and villa stays. Find out which wins."
@@ -447,6 +447,6 @@ export default function PrivateChefVsRestaurantPage() {
           </div>
         </section>
       </article>
-    </main>
+    </div>
   )
 }

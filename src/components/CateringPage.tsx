@@ -19,7 +19,7 @@ export default function CateringPage() {
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like a catering quote for my villa.')}`
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={pillar.title}
         description={pillar.description}
@@ -124,6 +124,6 @@ export default function CateringPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

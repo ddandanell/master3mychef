@@ -82,7 +82,7 @@ export default function SanurPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Sanur | Family Villa Dining & Catering — myCHEF"
         description="Hire a private chef in Sanur for family villa dinners, sunrise breakfasts & celebration catering. Indonesian chefs, multi-generational menus, calm east-coast setting. WhatsApp us."
@@ -268,6 +268,6 @@ export default function SanurPage() {
           </section>
 
           <CityDeepDive slug="sanur" cityName="Sanur" />
-</main>
+</div>
   )
 }

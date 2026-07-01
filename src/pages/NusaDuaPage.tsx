@@ -82,7 +82,7 @@ export default function NusaDuaPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Nusa Dua | Resort Villa & Executive Dining — myCHEF"
         description="Hire a private chef in Nusa Dua for resort-grade villa dining, corporate offsites & celebration events. Indonesian chefs, five-star precision, full logistics. WhatsApp for quotes."
@@ -269,6 +269,6 @@ export default function NusaDuaPage() {
           </section>
 
           <CityDeepDive slug="nusa-dua" cityName="Nusa Dua" />
-</main>
+</div>
   )
 }

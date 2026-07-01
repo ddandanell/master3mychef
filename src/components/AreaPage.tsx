@@ -103,7 +103,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
   ])
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={locationPage?.title ?? `${title} | myCHEF`}
         description={description}
@@ -329,6 +329,6 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
           </p>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

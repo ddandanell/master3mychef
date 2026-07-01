@@ -103,7 +103,7 @@ export default function JakartaPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Jakarta | Corporate & Villa Dining — myCHEF"
         description="Book a private chef in Jakarta for villa dinners, corporate events & weddings. IDR 450K/person. Indonesian chefs, Michelin standards. Request a quote on WhatsApp."
@@ -335,6 +335,6 @@ export default function JakartaPage() {
         </div>
       </section>
           <CityDeepDive slug="jakarta" cityName="Jakarta" />
-</main>
+</div>
   )
 }

@@ -85,7 +85,7 @@ export default function PererenanPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Pererenan | Design Villas & Private Dining — myCHEF"
         description="Hire a private chef in Pererenan for designer villa dinners, weekly chef service & group feasts. Indonesian chefs, Michelin standards, quiet Canggu enclave. WhatsApp for quotes."
@@ -291,6 +291,6 @@ export default function PererenanPage() {
         </div>
       </section>
           <CityDeepDive slug="pererenan" cityName="Pererenan" />
-</main>
+</div>
   )
 }

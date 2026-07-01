@@ -165,7 +165,7 @@ export default function CorporateCaseStudiesPage() {
   const canonical = `${SITE}/corporate-case-studies`
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Corporate Catering Case Studies Bali | myCHEF"
         description="Real corporate event case studies in Bali — executive dinners, leadership offsites, team retreats and conference catering. Outcomes, metrics and client results from myCHEF."
@@ -356,6 +356,6 @@ export default function CorporateCaseStudiesPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

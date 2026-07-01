@@ -63,7 +63,7 @@ const HOW_IT_WORKS = [
 
 export default function BookPage() {
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={getPageMeta('book').title}
         description={getPageMeta('book').description}
@@ -212,6 +212,6 @@ export default function BookPage() {
           </a>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

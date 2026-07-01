@@ -82,7 +82,7 @@ export default function MenuGuidePage() {
   const canonical = `${SITE}/help/menu-guide`
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Menu Guide Bali | Cuisines & Dietary Options — myCHEF"
         description="Choose the right private chef menu for your Bali villa. Guidance on cuisines, dietary needs, course styles & how to shape a meal for your group."
@@ -243,6 +243,6 @@ export default function MenuGuidePage() {
           </a>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

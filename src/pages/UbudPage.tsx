@@ -85,7 +85,7 @@ export default function UbudPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Ubud | Jungle Villa & Retreat Dining — myCHEF"
         description="Book a private chef in Ubud for jungle villa dinners, wellness retreat catering & Balinese feasts. Organic menus, Indonesian chefs. WhatsApp to book."
@@ -327,6 +327,6 @@ export default function UbudPage() {
       </section>
 
       <CityDeepDive slug="ubud" cityName="Ubud" />
-</main>
+</div>
   )
 }

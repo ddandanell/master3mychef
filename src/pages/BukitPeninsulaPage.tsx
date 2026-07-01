@@ -82,7 +82,7 @@ export default function BukitPeninsulaPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Bukit Peninsula Bali | Clifftop Villas — myCHEF"
         description="Hire a private chef on the Bukit Peninsula for clifftop dinners, surf retreat catering & wedding events. Covers Pecatu, Ungasan, Bingin, Padang-Padang. WhatsApp for quotes."
@@ -257,6 +257,6 @@ export default function BukitPeninsulaPage() {
         </div>
       </section>
           <CityDeepDive slug="bukit" cityName="Bukit" />
-</main>
+</div>
   )
 }

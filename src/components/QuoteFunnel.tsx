@@ -166,7 +166,7 @@ export default function QuoteFunnel() {
   }, [step])
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Get a Custom Quote — Private Chef in Bali | myCHEF"
         description="Tell us about your event in 9 quick steps. Get a personalised private chef quote within 24 hours. Fine dining, villa catering, weddings, retreats — all priced transparently."
@@ -447,7 +447,7 @@ export default function QuoteFunnel() {
           </div>
         )}
       </section>
-    </main>
+    </div>
   )
 }
 

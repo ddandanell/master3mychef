@@ -179,7 +179,7 @@ export default function PremiumPage({
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={metaTitle}
         description={metaDescription}
@@ -648,6 +648,6 @@ export default function PremiumPage({
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

@@ -146,7 +146,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
   const nearby = area.nearbyAreas.filter((n) => publishedSlugs.has(n.slug)).slice(0, 6)
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={area.metaTitle}
         description={area.metaDescription}
@@ -695,6 +695,6 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
           </p>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

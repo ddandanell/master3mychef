@@ -968,6 +968,106 @@
       "source": "/blog/vegan-private-chef-bali",
       "destination": "/blog/dietary-specific-chef-bali",
       "permanent": true
+    },
+    {
+      "source": "/services/catering",
+      "destination": "/catering",
+      "permanent": true
+    },
+    {
+      "source": "/services/events",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/services/fine-dining",
+      "destination": "/fine-dining",
+      "permanent": true
+    },
+    {
+      "source": "/services/in-villa-service",
+      "destination": "/in-villa-service",
+      "permanent": true
+    },
+    {
+      "source": "/services/staffing",
+      "destination": "/staffing",
+      "permanent": true
+    },
+    {
+      "source": "/cancellation-policy",
+      "destination": "/cancellation",
+      "permanent": true
+    },
+    {
+      "source": "/event-planning",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/how-it-works",
+      "destination": "/why-mychef",
+      "permanent": true
+    },
+    {
+      "source": "/blog/anniversary-dinner-villa-bali",
+      "destination": "/events/anniversaries",
+      "permanent": true
+    },
+    {
+      "source": "/blog/honeymoon-private-chef-bali",
+      "destination": "/honeymoon-chef",
+      "permanent": true
+    },
+    {
+      "source": "/blog/proposal-dinner-bali-private-chef",
+      "destination": "/proposal-dinner",
+      "permanent": true
+    },
+    {
+      "source": "/blog/romantic-dinner-bali-private-chef",
+      "destination": "/fine-dining/romantic-dinner",
+      "permanent": true
+    },
+    {
+      "source": "/blog/buffet-vs-plated-service-bali",
+      "destination": "/catering",
+      "permanent": true
+    },
+    {
+      "source": "/blog/floating-breakfast-bali",
+      "destination": "/catering/floating-breakfast",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bali-villa-cooking-class-private-chef",
+      "destination": "/fine-dining",
+      "permanent": true
+    },
+    {
+      "source": "/blog/food-allergies-dietary-requirements-bali",
+      "destination": "/blog/dietary-specific-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/blog/live-in-chef-bali-hiring-guide",
+      "destination": "/staffing",
+      "permanent": true
+    },
+    {
+      "source": "/journal/bali-villa-dinner-party-guide",
+      "destination": "/private-dining-indonesia",
+      "permanent": true
+    },
+    {
+      "source": "/journal/floating-breakfast-bali",
+      "destination": "/catering/floating-breakfast",
+      "permanent": true
+    },
+    {
+      "source": "/journal/wedding-catering-bali-cost",
+      "destination": "/bali-wedding-catering-packages",
+      "permanent": true
     }
   ],
   "headers": [

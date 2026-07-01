@@ -279,6 +279,29 @@ export const REDIRECTS: Redirect[] = [
   { from: '/blog/private-dining-bali', to: '/private-dining-indonesia', reason: 'Duplicate of live private-dining page.' },
   { from: '/blog/chefs-table-bali', to: '/fine-dining/chefs-table', reason: "Duplicate of live chef's-table experience page." },
   { from: '/blog/vegan-private-chef-bali', to: '/blog/dietary-specific-chef-bali', reason: 'Vegan = dietary-specific chef; live guide exists.' },
+
+  // --- 2026-07-01 (pass 2): remaining broken internal links found by link crawl → 301 to nearest live page.
+  //     /services/<pillar> came from ServicePage related-links using pillar slugs (no such /services page). ---
+  { from: '/services/catering', to: '/catering', reason: 'Pillar link used /services/ prefix; real page is /catering.' },
+  { from: '/services/events', to: '/events', reason: 'Pillar link used /services/ prefix; real page is /events.' },
+  { from: '/services/fine-dining', to: '/fine-dining', reason: 'Pillar link used /services/ prefix; real page is /fine-dining.' },
+  { from: '/services/in-villa-service', to: '/in-villa-service', reason: 'Pillar link used /services/ prefix; real page is /in-villa-service.' },
+  { from: '/services/staffing', to: '/staffing', reason: 'Pillar link used /services/ prefix; real page is /staffing.' },
+  { from: '/cancellation-policy', to: '/cancellation', reason: 'Old link; real page is /cancellation.' },
+  { from: '/event-planning', to: '/events', reason: 'Old link; event planning → events pillar.' },
+  { from: '/how-it-works', to: '/why-mychef', reason: 'Old link; process/why explained on /why-mychef.' },
+  { from: '/blog/anniversary-dinner-villa-bali', to: '/events/anniversaries', reason: 'Dead blog link → live anniversaries event page.' },
+  { from: '/blog/honeymoon-private-chef-bali', to: '/honeymoon-chef', reason: 'Dead blog link → live honeymoon chef page.' },
+  { from: '/blog/proposal-dinner-bali-private-chef', to: '/proposal-dinner', reason: 'Dead blog link → live proposal dinner page.' },
+  { from: '/blog/romantic-dinner-bali-private-chef', to: '/fine-dining/romantic-dinner', reason: 'Dead blog link → live romantic dinner page.' },
+  { from: '/blog/buffet-vs-plated-service-bali', to: '/catering', reason: 'Dead blog link → catering (service styles).' },
+  { from: '/blog/floating-breakfast-bali', to: '/catering/floating-breakfast', reason: 'Dead blog link → live floating breakfast page.' },
+  { from: '/blog/bali-villa-cooking-class-private-chef', to: '/fine-dining', reason: 'Dead blog link → fine-dining (chef experience).' },
+  { from: '/blog/food-allergies-dietary-requirements-bali', to: '/blog/dietary-specific-chef-bali', reason: 'Dead blog link → live dietary-specific guide.' },
+  { from: '/blog/live-in-chef-bali-hiring-guide', to: '/staffing', reason: 'Dead blog link → staffing (live-in chef placement).' },
+  { from: '/journal/bali-villa-dinner-party-guide', to: '/private-dining-indonesia', reason: 'Dead journal link → live private dining page.' },
+  { from: '/journal/floating-breakfast-bali', to: '/catering/floating-breakfast', reason: 'Dead journal link → live floating breakfast page.' },
+  { from: '/journal/wedding-catering-bali-cost', to: '/bali-wedding-catering-packages', reason: 'Dead journal link → live wedding catering packages page.' },
 ]
 
 /** Lookup map for the React Router fallback. */

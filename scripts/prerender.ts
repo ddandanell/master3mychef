@@ -84,19 +84,19 @@ async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolea
   })
   try {
     // Block resources that don't affect the rendered DOM (images, fonts, media) and
-    // third-party scripts (GTM, analytics, Tidio chat). These are slow/flaky in CI and
-    // were causing the prerender to hang. We only need the app's own JS to run React.
+    // third-party scripts (GTM, analytics). These are slow/flaky in CI and were
+    // causing the prerender to hang. We only need the app's own JS to run React.
     await page.route('**/*', (r) => {
       const type = r.request().resourceType()
       const url = r.request().url()
       if (type === 'image' || type === 'media' || type === 'font') return r.abort()
-      if (/googletagmanager|google-analytics|analytics\.google|tidio|vercel-scripts|vercel-insights|fonts\.googleapis|fonts\.gstatic|doubleclick|facebook|hotjar/i.test(url)) return r.abort()
+      if (/googletagmanager|google-analytics|analytics\.google|vercel-scripts|vercel-insights|fonts\.googleapis|fonts\.gstatic|doubleclick|facebook|hotjar/i.test(url)) return r.abort()
       return r.continue()
     })
     await page.goto(`${BASE_URL}${route.path}`, { waitUntil: 'domcontentloaded', timeout: 20000 })
     // Wait for the React app to actually render content into #root.
     await page.waitForSelector('#root > *', { timeout: 10000 })
-    // Brief settle for headings / above-the-fold content (no networkidle — GSAP/Tidio never idle).
+    // Brief settle for headings / above-the-fold content (no networkidle — GSAP never idles).
     await page.waitForTimeout(400)
 
     const rootHtml = await page.$eval('#root', (el) => el.innerHTML)

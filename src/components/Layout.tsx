@@ -6,6 +6,8 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 // Deferred: only shows on exit intent, not first-paint critical — keep it out of the index chunk.
 const ExitIntentPopup = lazy(() => import('./ExitIntentPopup'))
+// AI concierge chat launcher → hands off to WhatsApp. Deferred like Tidio was (async, post-paint).
+const ConciergeWidget = lazy(() => import('./ConciergeWidget'))
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
@@ -61,6 +63,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · 4.9★ rated
         </section>
         <Footer />
+        <Suspense fallback={null}><ConciergeWidget /></Suspense>
         <Suspense fallback={null}><ExitIntentPopup /></Suspense>
       </div>
     </UniverseProvider>

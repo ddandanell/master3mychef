@@ -54,7 +54,7 @@ export default function GroupTotalCalculator({
             background: `linear-gradient(to right, ${accent} 0%, ${accent} ${((guests - minGuests) / (maxGuests - minGuests)) * 100}%, #E8E6E3 ${((guests - minGuests) / (maxGuests - minGuests)) * 100}%, #E8E6E3 100%)`,
           }}
         />
-        <div className="flex justify-between text-xs text-[#4A4745]/60 mt-1">
+        <div className="flex justify-between text-xs text-[#4A4745]/80 mt-1">
           <span>{minGuests}</span>
           <span>{maxGuests}</span>
         </div>
@@ -63,8 +63,8 @@ export default function GroupTotalCalculator({
       <div className="border-t border-[#E8E6E3] pt-4">
         {showPlusPlus && (
           <div className="flex justify-between items-center mb-1">
-            <span className="text-sm text-[#4A4745]/60">Subtotal (++)</span>
-            <span className="text-sm text-[#4A4745]/60 line-through">{formatIDR(totalPlusPlus)}</span>
+            <span className="text-sm text-[#4A4745]/80">Subtotal (++)</span>
+            <span className="text-sm text-[#4A4745]/80 line-through">{formatIDR(totalPlusPlus)}</span>
           </div>
         )}
         <div className="flex justify-between items-center">

@@ -161,7 +161,7 @@ export default function ConciergeWidget() {
                 {persona === 'ai' ? 'myCHEF AI' : 'Adriano (Founder)'}
               </span>
               <button
-                className="ml-auto p-0.5 text-white/40 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+                className="ml-auto p-0.5 text-white/55 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
                 onClick={(e) => { e.stopPropagation(); setShowNotification(false) }}
               >
                 <X className="h-3 w-3" />
@@ -240,7 +240,7 @@ export default function ConciergeWidget() {
 
         {/* Content */}
         <div className="px-4 py-3 space-y-3">
-          <div className="space-y-1 text-[10px] text-white/40 uppercase tracking-widest font-bold px-1">
+          <div className="space-y-1 text-[10px] text-white/55 uppercase tracking-widest font-bold px-1">
             Choose a service
           </div>
 

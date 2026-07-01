@@ -220,7 +220,7 @@ export default function BookingFormCatering({
             />
           )}
         </div>
-        <p id={hintId} className="mt-2 text-xs text-[#4A4745]/70">
+        <p id={hintId} className="mt-2 text-xs text-[#4A4745]/80">
           {hint} {field.required ? 'Required field.' : 'Optional field.'}
         </p>
         {fieldError && (
@@ -250,7 +250,7 @@ export default function BookingFormCatering({
       >
         <MessageSquare className="h-4 w-4" /> {resolvedSubmitLabel}
       </button>
-      <p className="mt-3 text-center text-xs text-[#4A4745]/60">
+      <p className="mt-3 text-center text-xs text-[#4A4745]/80">
         No payment required now. We will confirm availability first.
       </p>
     </form>

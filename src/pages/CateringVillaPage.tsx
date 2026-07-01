@@ -394,7 +394,7 @@ export default function CateringVillaPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-xs text-[#4A4745]/70 mb-4">Best for: {pkg.bestFor}</p>
+                <p className="text-xs text-[#4A4745]/80 mb-4">Best for: {pkg.bestFor}</p>
                 <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-catering-package" className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#C5A028] text-black text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
                   <Calendar className="w-4 h-4" /> Book This Package
                 </a>

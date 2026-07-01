@@ -134,7 +134,7 @@ export default function HelpPage() {
             <input
               type="text"
               placeholder="Search for pricing, menus, service areas..."
-              className="bg-transparent text-white placeholder:text-white/40 flex-1 outline-none text-lg"
+              className="bg-transparent text-white placeholder:text-white/55 flex-1 outline-none text-lg"
             />
           </div>
         </div>

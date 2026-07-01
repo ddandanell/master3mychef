@@ -21,7 +21,7 @@ export default function Breadcrumb({ items, className = '', theme = 'light', dec
   const linkClass =
     theme === 'dark'
       ? 'text-white/[60%] hover:text-white'
-      : 'text-[#4A4745]/60 hover:text-[#1A1A1A]'
+      : 'text-[#4A4745]/80 hover:text-[#1A1A1A]'
   const currentClass = theme === 'dark' ? 'text-white font-medium' : 'text-[#1A1A1A] font-medium'
   const separatorClass = theme === 'dark' ? 'text-white/[30%]' : 'text-[#4A4745]/30'
 

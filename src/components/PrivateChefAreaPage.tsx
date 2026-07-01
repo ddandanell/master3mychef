@@ -690,7 +690,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               Request a quote online
             </Link>
           </div>
-          <p className="text-white/40 text-xs mt-8">
+          <p className="text-white/55 text-xs mt-8">
             Same-day response · HACCP certified · 500+ events served · 4.9 ★ rating
           </p>
         </div>

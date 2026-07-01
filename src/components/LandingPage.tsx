@@ -293,7 +293,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                       to={post.path}
                       className="group block rounded-[28px] border border-black/5 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#C5A028]/30 hover:shadow-xl hover:shadow-black/5"
                     >
-                      <div className="mb-4 flex flex-wrap items-center gap-3 text-xs text-[#4A4745]/70">
+                      <div className="mb-4 flex flex-wrap items-center gap-3 text-xs text-[#4A4745]/80">
                         <span className={`rounded-full border px-2.5 py-1 text-[10px] font-bold uppercase tracking-[2px] ${post.kind === 'guide' ? 'border-[#6B8E5A]/20 bg-[#6B8E5A]/10 text-[#6B8E5A]' : 'border-[#2C5F7C]/20 bg-[#2C5F7C]/10 text-[#2C5F7C]'}`}>
                           {post.label}
                         </span>

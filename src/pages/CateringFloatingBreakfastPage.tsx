@@ -606,7 +606,7 @@ export default function CateringFloatingBreakfastPage() {
             ))}
           </div>
           <div className="mt-6 text-center">
-            <p className="text-sm text-[#4A4745]/70">
+            <p className="text-sm text-[#4A4745]/80">
               All-in fixed pricing:{' '}
               <AllInPrice price={950000} showPlusPlus={false} suffix="/couple" className="inline" /> ·{' '}
               <AllInPrice price={1400000} showPlusPlus={false} suffix="/couple" className="inline" /> ·{' '}

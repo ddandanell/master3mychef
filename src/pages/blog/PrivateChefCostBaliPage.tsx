@@ -146,7 +146,7 @@ export default function PrivateChefCostBaliPageBlog() {
       <section className="bg-gradient-to-b from-[#0D0D0D] to-[#1A1A1A] text-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-white/40 mb-8" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-sm text-white/55 mb-8" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#C5A028] transition-colors">Home</Link>
             <ChevronRight size={14} />
             <Link to="/blog" className="hover:text-[#C5A028] transition-colors">Blog</Link>

@@ -67,7 +67,7 @@ export default function EventPackageCard({
               </div>
             ))}
             {includes.length > 4 && (
-              <p className="text-xs text-[#4A4745]/60 pl-6">+{includes.length - 4} more</p>
+              <p className="text-xs text-[#4A4745]/80 pl-6">+{includes.length - 4} more</p>
             )}
           </div>
         )}

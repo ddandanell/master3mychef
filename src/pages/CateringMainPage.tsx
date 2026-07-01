@@ -709,7 +709,7 @@ export default function CateringMainPage() {
                     <h4 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h4>
                     <p className="text-[#C5A028] font-semibold text-lg mb-1">{pkg.price}<span className="text-sm">{pkg.period}</span></p>
                     <p className="text-[#4A4745] text-sm mb-4 flex-1">{pkg.desc}</p>
-                    <p className="text-xs text-[#4A4745]/70 mb-4">Best for: {pkg.bestFor}</p>
+                    <p className="text-xs text-[#4A4745]/80 mb-4">Best for: {pkg.bestFor}</p>
                     <a
                       href={WA_DAILY_CHEF_LINK}
                       target="_blank"
@@ -1373,7 +1373,7 @@ export default function CateringMainPage() {
             }}
             messageIntro="Hi myCHEF, I'd like a catering quote for my stay in Bali."
           />
-          <p className="text-center text-xs text-[#4A4745]/60 mt-6">
+          <p className="text-center text-xs text-[#4A4745]/80 mt-6">
             No spam. No calls unless you ask. Just a clear quote you can book or ignore.
           </p>
         </div>

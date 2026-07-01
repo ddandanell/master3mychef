@@ -383,7 +383,7 @@ export default function InVillaServicePage() {
                 View Dining Options
               </Link>
             </div>
-            <p className="text-white/40 text-sm">560+ villas served · 12,000+ guests · 4.9 average rating</p>
+            <p className="text-white/55 text-sm">560+ villas served · 12,000+ guests · 4.9 average rating</p>
           </div>
         </div>
       </section>

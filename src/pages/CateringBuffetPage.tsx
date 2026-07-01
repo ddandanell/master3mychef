@@ -488,7 +488,7 @@ export default function CateringBuffetPage() {
                   <div className="mb-1">
                     <AllInPrice price={pkg.price} />
                   </div>
-                  <p className="text-xs text-[#4A4745]/70 mb-4">{pkg.minGuests}</p>
+                  <p className="text-xs text-[#4A4745]/80 mb-4">{pkg.minGuests}</p>
                   <p className="text-sm text-[#4A4745] mb-4">{pkg.description}</p>
                   <ul className="space-y-1.5 mb-6 flex-1">
                     {pkg.includes.map((item) => (

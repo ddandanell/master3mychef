@@ -115,7 +115,7 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
           <button
             onClick={onClose}
             aria-label="Close search (Escape)"
-            className="p-2 text-white/40 hover:text-white transition-colors"
+            className="p-2 text-white/55 hover:text-white transition-colors"
           >
             <X size={24} />
           </button>
@@ -131,7 +131,7 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search services, areas, guides..."
-              className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-white/30 focus:outline-none focus:border-[#C5A028]/50 focus:bg-white/[0.08] transition-all"
+              className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-white/55 focus:outline-none focus:border-[#C5A028]/50 focus:bg-white/[0.08] transition-all"
             />
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
         <div className="flex-1 overflow-y-auto px-6 pb-6 space-y-6">
           {query && results.length === 0 && (
             <div className="text-center py-10">
-              <p className="text-white/40 text-sm">No results found for "{query}"</p>
+              <p className="text-white/55 text-sm">No results found for "{query}"</p>
               <button 
                 onClick={() => setQuery('')}
                 className="text-[#C5A028] text-xs uppercase tracking-widest font-bold mt-4"
@@ -152,7 +152,7 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
 
           {!query && (
             <div className="space-y-4">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold px-2">Popular Searches</p>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-white/55 font-bold px-2">Popular Searches</p>
               <div className="flex flex-wrap gap-2">
                 {['Villa BBQ', 'Wedding Menus', 'Canggu', 'Ubud', 'Staffing', 'Pricing'].map(tag => (
                   <button 
@@ -184,9 +184,9 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between mb-0.5">
                         <h4 className="text-white font-medium text-sm truncate">{item.title}</h4>
-                        <span className="text-[9px] uppercase tracking-widest text-white/30 font-bold">{item.category}</span>
+                        <span className="text-[9px] uppercase tracking-widest text-white/55 font-bold">{item.category}</span>
                       </div>
-                      <p className="text-[11px] text-white/40 truncate">{item.subtitle}</p>
+                      <p className="text-[11px] text-white/55 truncate">{item.subtitle}</p>
                     </div>
                     <ArrowRight className="w-4 h-4 text-[#C5A028] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
                   </div>
@@ -198,7 +198,7 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
 
         {/* Footer */}
         <div className="p-6 border-t border-white/10 bg-white/[0.02] text-center">
-          <p className="text-[10px] text-white/30 uppercase tracking-widest mb-4">Immediate Support</p>
+          <p className="text-[10px] text-white/55 uppercase tracking-widest mb-4">Immediate Support</p>
           <a
             href="https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%20have%20a%20question..."
             target="_blank"

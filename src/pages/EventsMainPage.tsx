@@ -38,7 +38,7 @@ function CardPrice({ price, suffix = '/pp' }: { price: number; suffix?: string }
   return (
     <>
       <span className="text-[#C5A028] font-semibold">From {formatIDRShort(price)}++{suffix}</span>
-      <span className="block text-[11px] font-normal text-[#4A4745]/70 mt-0.5">
+      <span className="block text-[11px] font-normal text-[#4A4745]/80 mt-0.5">
         ≈ {formatIDR(calculateAllIn(price))} all-in{suffix}
       </span>
     </>
@@ -914,7 +914,7 @@ export default function EventsMainPage() {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-center text-xs text-[#4A4745]/70">
+          <p className="mt-6 text-center text-xs text-[#4A4745]/80">
             All prices ++ (10% government service charge and 11% VAT added at proposal). Groceries billed at cost — no
             markup. 50% deposit to confirm.
           </p>
@@ -986,7 +986,7 @@ export default function EventsMainPage() {
               </span>
             ))}
           </div>
-          <p className="mt-8 text-xs text-[#4A4745]/70">
+          <p className="mt-8 text-xs text-[#4A4745]/80">
             Not on the list? We travel anywhere in Bali. Outer-island referrals on request.
           </p>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 max-w-3xl mx-auto gap-3">

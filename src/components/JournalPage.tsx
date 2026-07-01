@@ -2,7 +2,14 @@ import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, Calendar, Tag } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema, localBusinessSchema } from './SeoHead'
 import { JOURNAL_POSTS, JOURNAL_CATEGORIES, type JournalPost } from '@/data/siteArchitecture'
-import { BLOG_POSTS, GUIDES } from '@/data/sitemap'
+import { SITEMAP } from '@/data/sitemap'
+
+// Every article route (data-driven BLOG_POSTS + standalone /blog & /guide page
+// components) so none get orphaned — sourced from the sitemap, sorted by title.
+const ARTICLE_LINKS = SITEMAP
+  .filter((e) => e.path.startsWith('/blog/') || e.path.startsWith('/guide/'))
+  .slice()
+  .sort((a, b) => a.title.localeCompare(b.title))
 
 import { useState, useMemo } from 'react'
 
@@ -137,10 +144,10 @@ export function JournalIndexPage() {
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-2">More Guides &amp; Articles</p>
           <h2 className="font-playfair text-2xl mb-4">Browse Every Guide</h2>
           <div className="flex flex-wrap gap-2.5">
-            {[...GUIDES, ...BLOG_POSTS].map((a) => (
+            {ARTICLE_LINKS.map((a) => (
               <Link
-                key={a.slug}
-                to={`/${a.slug}`}
+                key={a.path}
+                to={a.path}
                 className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-medium text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-white"
               >
                 {a.title}

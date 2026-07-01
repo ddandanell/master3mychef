@@ -82,7 +82,7 @@ export default function TestimonialBlock({
                 className="flex flex-col rounded-2xl border border-[#E8E6E3] border-l-4 border-l-[#C5A028] bg-[#FAFAF8] p-6 shadow-[0_18px_40px_rgba(26,25,22,0.06)] md:p-8"
               >
                 <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-                  <div className="flex gap-1" aria-label={`${rating} star review`}>
+                  <div className="flex gap-1" role="img" aria-label={`${rating} star review`}>
                     {Array.from({ length: 5 }).map((_, j) => (
                       <Star
                         key={j}

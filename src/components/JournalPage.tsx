@@ -111,15 +111,15 @@ export function JournalIndexPage() {
                     {category && (
                       <>
                         <span>·</span>
-                        <span className="text-[#C5A028] font-medium">{category.label}</span>
+                        <span className="text-[#7E6410] font-medium">{category.label}</span>
                       </>
                     )}
                   </div>
-                  <h3 className="font-playfair text-xl mb-3 group-hover:text-[#C5A028] transition-colors">
+                  <h3 className="font-playfair text-xl mb-3 group-hover:text-[#7E6410] transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-sm text-[#4A4745] leading-relaxed flex-1">{post.excerpt}</p>
-                  <div className="mt-4 flex items-center gap-1 text-sm font-semibold text-[#C5A028]">
+                  <div className="mt-4 flex items-center gap-1 text-sm font-semibold text-[#7E6410]">
                     Read <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </div>
                 </Link>
@@ -132,7 +132,7 @@ export function JournalIndexPage() {
             <p className="text-[#4A4745]">No articles found in this category yet.</p>
             <button
               onClick={() => setActiveCategory(null)}
-              className="mt-4 text-[#C5A028] font-semibold uppercase tracking-[2px] text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+              className="mt-4 text-[#7E6410] font-semibold uppercase tracking-[2px] text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
             >
               Show all articles
             </button>
@@ -143,7 +143,7 @@ export function JournalIndexPage() {
       {/* Complete guides & articles index — makes every /blog and /guide article reachable in 2 clicks (fixes orphaned posts, Ch 7.1.2) */}
       <section className="max-w-[1200px] mx-auto px-6 pb-20">
         <div className="rounded-2xl border border-[#E8E6E3] bg-white px-6 py-8">
-          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-2">More Guides &amp; Articles</p>
+          <p className="font-cormorant text-[#7E6410] text-sm uppercase tracking-[4px] mb-2">More Guides &amp; Articles</p>
           <h2 className="font-playfair text-2xl mb-4">Browse Every Guide</h2>
           <div className="flex flex-wrap gap-2.5">
             {ARTICLE_LINKS.map((a) => (
@@ -171,7 +171,7 @@ export function JournalPostPage() {
     return (
       <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A] px-6 pt-32 pb-16 max-w-[800px] mx-auto">
         <h1 className="font-playfair text-4xl mb-4">Article not found</h1>
-        <Link to="/journal" className="text-[#C5A028] font-semibold text-sm uppercase tracking-[2px] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded inline-block">
+        <Link to="/journal" className="text-[#7E6410] font-semibold text-sm uppercase tracking-[2px] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded inline-block">
           Back to Journal
         </Link>
       </div>
@@ -253,7 +253,7 @@ export function JournalPostPage() {
           <Calendar className="w-3.5 h-3.5" />
           <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
           <span>· {post.readTime}</span>
-          {category && <span className="text-[#C5A028]">· {category.label}</span>}
+          {category && <span className="text-[#7E6410]">· {category.label}</span>}
         </div>
         <h1 className="font-playfair text-3xl md:text-4xl leading-tight mb-6">{post.title}</h1>
         <p className="text-lg text-[#4A4745] mb-10">{post.excerpt}</p>
@@ -273,7 +273,7 @@ export function JournalPostPage() {
               <span className="text-[10px] uppercase tracking-[2px] text-[#8A8785] mb-2 flex items-center gap-1">
                 <ArrowRight className="w-3 h-3 rotate-180" /> Previous Article
               </span>
-              <span className="font-playfair text-lg group-hover:text-[#C5A028] transition-colors line-clamp-2">
+              <span className="font-playfair text-lg group-hover:text-[#7E6410] transition-colors line-clamp-2">
                 {prevPost.title}
               </span>
             </Link>
@@ -287,7 +287,7 @@ export function JournalPostPage() {
               <span className="text-[10px] uppercase tracking-[2px] text-[#8A8785] mb-2 flex items-center gap-1">
                 Next Article <ArrowRight className="w-3 h-3" />
               </span>
-              <span className="font-playfair text-lg group-hover:text-[#C5A028] transition-colors line-clamp-2">
+              <span className="font-playfair text-lg group-hover:text-[#7E6410] transition-colors line-clamp-2">
                 {nextPost.title}
               </span>
             </Link>
@@ -297,12 +297,12 @@ export function JournalPostPage() {
         <div className="mt-12 rounded-2xl border border-[#E8E6E3] bg-white p-6 md:p-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-2">Continue Reading</p>
+              <p className="font-cormorant text-[#7E6410] text-sm uppercase tracking-[4px] mb-2">Continue Reading</p>
               <h2 className="font-playfair text-2xl">Related Articles</h2>
             </div>
             <Link
               to="/journal"
-              className="inline-flex items-center gap-2 text-[#C5A028] font-semibold text-sm uppercase tracking-[2px] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+              className="inline-flex items-center gap-2 text-[#7E6410] font-semibold text-sm uppercase tracking-[2px] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
             >
               View all articles <ArrowRight className="w-4 h-4" />
             </Link>
@@ -314,7 +314,7 @@ export function JournalPostPage() {
                 to={`/journal/${relatedPost.slug}`}
                 className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
-                <p className="text-xs uppercase tracking-[2px] text-[#C5A028] mb-2">{relatedPost.readTime}</p>
+                <p className="text-xs uppercase tracking-[2px] text-[#7E6410] mb-2">{relatedPost.readTime}</p>
                 <h3 className="font-playfair text-xl mb-2">{relatedPost.title}</h3>
                 <p className="text-sm text-[#4A4745] leading-relaxed">{relatedPost.excerpt}</p>
               </Link>
@@ -325,7 +325,7 @@ export function JournalPostPage() {
         <div className="mt-8 pt-8 border-t border-[#E8E6E3]">
           <Link
             to="/journal"
-            className="inline-flex items-center gap-2 text-[#C5A028] font-semibold text-sm uppercase tracking-[2px] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+            className="inline-flex items-center gap-2 text-[#7E6410] font-semibold text-sm uppercase tracking-[2px] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
           >
             <ArrowRight className="w-4 h-4 rotate-180" /> All articles
           </Link>

@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
+import { useEffect, lazy, Suspense } from 'react'
 import { useLocation } from 'react-router-dom'
 import { UniverseProvider } from '@/contexts/UniverseContext'
 import { trackWhatsAppClick, trackPhoneClick } from '@/lib/analytics'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import ExitIntentPopup from './ExitIntentPopup'
+// Deferred: only shows on exit intent, not first-paint critical — keep it out of the index chunk.
+const ExitIntentPopup = lazy(() => import('./ExitIntentPopup'))
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
@@ -60,7 +61,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · 4.9★ rated
         </section>
         <Footer />
-        <ExitIntentPopup />
+        <Suspense fallback={null}><ExitIntentPopup /></Suspense>
       </div>
     </UniverseProvider>
   )

@@ -151,7 +151,7 @@ export default function BookingFormCatering({
           target="_blank"
           rel="noopener noreferrer"
           data-source="booking-form-catering-cta"
-          className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-[#D4B43A]"
+          className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-[#1A1A1A] transition-colors hover:bg-[#D4B43A]"
         >
           <Phone className="h-4 w-4" /> Open WhatsApp
         </a>

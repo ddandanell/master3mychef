@@ -204,7 +204,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
                 rel="noopener noreferrer"
                 data-source={`area-${area.slug}-hero-wa`}
                 onClick={() => trackWhatsAppClick(`area-${area.slug}-hero`)}
-                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
               >
                 <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
               </a>
@@ -241,7 +241,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               target="_blank"
               rel="noopener noreferrer"
               data-source={`area-${area.slug}-hero-price`}
-              className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-6 py-3 rounded-full hover:bg-[#D4B43A] transition-all"
+              className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-6 py-3 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <MessageCircle className="w-4 h-4" /> Get a free quote
             </a>
@@ -535,7 +535,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               rel="noopener noreferrer"
               data-source={`area-${area.slug}-pricing-wa`}
               onClick={() => trackWhatsAppClick(`area-${area.slug}-pricing`)}
-              className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <MessageCircle className="w-4 h-4" /> Get a free itemised quote
             </a>
@@ -651,7 +651,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             </p>
             <Link
               to={`/locations/${area.slug}`}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-[#1A1A1A] rounded-full hover:bg-[#D4B43A] transition-all"
             >
               View {area.name} Location Page <ArrowRight className="w-4 h-4" />
             </Link>
@@ -679,7 +679,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               rel="noopener noreferrer"
               data-source={`area-${area.slug}-final-cta`}
               onClick={() => trackWhatsAppClick(`area-${area.slug}-final`)}
-              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-10 py-5 rounded-full hover:bg-[#D4B43A] transition-all text-base"
+              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-10 py-5 rounded-full hover:bg-[#D4B43A] transition-all text-base"
             >
               <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
             </a>

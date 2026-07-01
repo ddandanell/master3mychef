@@ -481,7 +481,7 @@ export default function CateringMainPage() {
                 target="_blank"
                 data-source="catering-hero"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
               </a>
@@ -591,7 +591,7 @@ export default function CateringMainPage() {
                 onClick={() => setActiveTab('daily')}
                 className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
                   activeTab === 'daily'
-                    ? 'bg-[#C5A028] text-white shadow-md'
+                    ? 'bg-[#C5A028] text-[#1A1A1A] shadow-md'
                     : 'text-[#4A4745] hover:text-[#1A1A1A]'
                 }`}
               >

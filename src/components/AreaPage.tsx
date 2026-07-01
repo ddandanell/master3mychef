@@ -145,7 +145,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source={`area-${slug}-hero`}
-                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
               >
                 <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
               </a>
@@ -171,7 +171,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
               target="_blank"
               rel="noopener noreferrer"
               data-source={`area-${slug}-cta`}
-              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
             </a>

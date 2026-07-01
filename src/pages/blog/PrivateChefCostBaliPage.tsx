@@ -169,7 +169,7 @@ export default function PrivateChefCostBaliPageBlog() {
               href={`https://wa.me/${PHONE.digits}?text=${WA_MSG}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
+              className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
             >
               <MessageCircle size={16} />
               Get Your Custom Quote
@@ -185,7 +185,7 @@ export default function PrivateChefCostBaliPageBlog() {
       </section>
 
       {/* Quick Summary Bar */}
-      <section className="bg-[#C5A028] text-white py-10">
+      <section className="bg-[#C5A028] text-[#1A1A1A] py-10">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-xl font-semibold mb-4">2026 Private Chef Cost Summary — Bali</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -390,7 +390,7 @@ export default function PrivateChefCostBaliPageBlog() {
               },
             ].map((item) => (
               <div key={item.step} className="flex gap-6 items-start">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C5A028] text-white flex items-center justify-center font-bold text-sm">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C5A028] text-[#1A1A1A] flex items-center justify-center font-bold text-sm">
                   {item.step}
                 </div>
                 <div>
@@ -443,7 +443,7 @@ export default function PrivateChefCostBaliPageBlog() {
             href={`https://wa.me/${PHONE.digits}?text=${WA_MSG}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold px-8 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
+            className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold px-8 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
           >
             <MessageCircle size={16} />
             WhatsApp Us for a Quote

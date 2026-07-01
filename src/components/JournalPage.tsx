@@ -72,7 +72,7 @@ export function JournalIndexPage() {
             onClick={() => setActiveCategory(null)}
             className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded ${
               activeCategory === null
-                ? 'bg-[#C5A028] border-[#C5A028] text-white shadow-md'
+                ? 'bg-[#C5A028] border-[#C5A028] text-[#1A1A1A] shadow-md'
                 : 'bg-white border-[#E8E6E3] text-[#4A4745] hover:border-[#C5A028]'
             }`}
           >
@@ -84,7 +84,7 @@ export function JournalIndexPage() {
               onClick={() => setActiveCategory(cat.slug)}
               className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded ${
                 activeCategory === cat.slug
-                  ? 'bg-[#C5A028] border-[#C5A028] text-white shadow-md'
+                  ? 'bg-[#C5A028] border-[#C5A028] text-[#1A1A1A] shadow-md'
                   : 'bg-white border-[#E8E6E3] text-[#4A4745] hover:border-[#C5A028]'
               }`}
             >
@@ -148,7 +148,7 @@ export function JournalIndexPage() {
               <Link
                 key={a.path}
                 to={a.path}
-                className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-medium text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-white"
+                className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-medium text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-[#1A1A1A]"
               >
                 {a.title}
               </Link>

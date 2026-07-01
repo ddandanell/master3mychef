@@ -238,7 +238,7 @@ export default function LocationsHubPage() {
                 <Link
                   key={loc.slug}
                   to={`/locations/${loc.slug}`}
-                  className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-white"
+                  className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-[#1A1A1A]"
                 >
                   {loc.label}
                 </Link>
@@ -262,7 +262,7 @@ export default function LocationsHubPage() {
                   <Link
                     key={area.slug}
                     to={`/private-chef/${area.slug}`}
-                    className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-white"
+                    className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-[#1A1A1A]"
                   >
                     {area.name}
                   </Link>
@@ -304,7 +304,7 @@ export default function LocationsHubPage() {
             target="_blank"
             rel="noopener noreferrer"
             data-source="locations-hub-cta"
-            className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
           >
             <MapPin className="w-4 h-4" /> Book for Your Location
           </a>

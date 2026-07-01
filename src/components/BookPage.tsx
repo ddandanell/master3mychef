@@ -161,7 +161,7 @@ export default function BookPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       data-source={`book-page-${card.href.replace(/\//g, '')}`}
-                      className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-xs uppercase tracking-[2px] px-5 py-3 rounded-full hover:bg-[#D4B43A] transition-colors"
+                      className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-xs uppercase tracking-[2px] px-5 py-3 rounded-full hover:bg-[#D4B43A] transition-colors"
                     >
                       <MessageCircle className="w-3.5 h-3.5" /> Book via WhatsApp
                     </a>
@@ -206,7 +206,7 @@ export default function BookPage() {
             target="_blank"
             rel="noopener noreferrer"
             data-source="book-page-help-cta"
-            className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
           >
             <MessageCircle className="w-4 h-4" /> Get Personalized Advice
           </a>

@@ -261,7 +261,7 @@ export default function SanurPage() {
             <div className="max-w-[960px] mx-auto text-center">
               <h3 className="text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Private Chef in Sanur</h3>
               <p className="text-gray-600 mb-6">Hire a dedicated private chef for your villa in Sanur. Custom menus, full service, and seamless cleanup.</p>
-              <Link to="/private-chef/sanur" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all">
+              <Link to="/private-chef/sanur" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-[#1A1A1A] rounded-full hover:bg-[#D4B43A] transition-all">
                 View Private Chef Options <ChevronRight className="w-4 h-4" />
               </Link>
             </div>

@@ -41,7 +41,7 @@ export default function StickyMobileCTA({
         target="_blank"
         rel="noopener noreferrer"
         data-source={`${pageSource}--sticky-mobile-cta`}
-        className="flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[1.5px] h-14 w-full hover:bg-[#B08F20] active:bg-[#9A7E1C] transition-colors"
+        className="flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[1.5px] h-14 w-full hover:bg-[#B08F20] active:bg-[#9A7E1C] transition-colors"
         aria-label={label}
       >
         <MessageCircle className="w-5 h-5 flex-shrink-0" aria-hidden="true" />

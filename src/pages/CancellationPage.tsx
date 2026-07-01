@@ -154,7 +154,7 @@ export default function CancellationPage() {
           <div className="mt-12 p-8 rounded-2xl border border-white/10 text-center">
             <p className="text-[#C5A028] text-sm tracking-widest uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Need to Cancel or Change?</p>
             <p className="text-white/[60%] text-sm mb-6">Contact us directly. We will handle your request within 24 hours.</p>
-            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="cancellation-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="cancellation-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> WhatsApp +62 811-3803-488
             </a>
           </div>

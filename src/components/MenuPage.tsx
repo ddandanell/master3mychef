@@ -92,7 +92,7 @@ export default function MenuPage() {
               <a
                 href={`https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like help choosing the right menu for my villa stay.')}`}
                 target="_blank" data-source="menu-hero" rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
               >
                 <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
               </a>
@@ -130,7 +130,7 @@ export default function MenuPage() {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3">
-                <Link to="/fine-dining" className="inline-flex items-center gap-2 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase px-7 py-3.5 rounded-full hover:bg-[#D4B43A] transition-all">
+                <Link to="/fine-dining" className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase px-7 py-3.5 rounded-full hover:bg-[#D4B43A] transition-all">
                   The Full Experience <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link to="/fine-dining/tasting-menu" className="inline-flex items-center gap-2 border border-white/20 text-white text-sm tracking-widest uppercase px-7 py-3.5 rounded-full hover:bg-white/10 transition-all">
@@ -175,7 +175,7 @@ export default function MenuPage() {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Link
                       to="/book"
-                      className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-6 py-3 rounded-full hover:bg-[#D4B43A] transition-colors"
+                      className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-6 py-3 rounded-full hover:bg-[#D4B43A] transition-colors"
                     >
                       Book This Menu
                     </Link>
@@ -247,7 +247,7 @@ export default function MenuPage() {
         <p className="text-lg text-[#4A4745] max-w-[640px] mb-4">{menu.description}</p>
         <p className="text-[#C5A028] font-semibold mb-8">{MENU_PRICE_GUIDE[menu.slug] || 'Custom pricing available on request'}</p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="menu-detail" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
+          <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="menu-detail" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
           </a>
           <Link

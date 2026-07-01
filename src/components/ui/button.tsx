@@ -9,8 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-[#C5A028] text-white shadow-sm hover:bg-[#A8841E]",
-        default: "bg-[#C5A028] text-white shadow-sm hover:bg-[#A8841E]",
+        primary: "bg-[#C5A028] text-[#1A1A1A] shadow-sm hover:bg-[#A8841E]",
+        default: "bg-[#C5A028] text-[#1A1A1A] shadow-sm hover:bg-[#A8841E]",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
@@ -19,7 +19,7 @@ const buttonVariants = cva(
           "border border-[#C5A028] bg-transparent text-[#C5A028] hover:border-[#A8841E] hover:bg-[#C5A028]/10 hover:text-[#A8841E]",
         ghost:
           "bg-transparent text-[#C5A028] hover:bg-[#C5A028]/10 hover:text-[#A8841E]",
-        whatsapp: "bg-[#C5A028] text-white shadow-sm hover:bg-[#A8841E]",
+        whatsapp: "bg-[#C5A028] text-[#1A1A1A] shadow-sm hover:bg-[#A8841E]",
         link: "text-[#C5A028] underline-offset-4 hover:underline",
       },
       size: {

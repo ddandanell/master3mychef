@@ -404,7 +404,7 @@ function SubmittedView({ waLink, onClose }: { waLink: string; onClose: () => voi
         target="_blank"
         rel="noopener noreferrer"
         data-source="order-panel-confirm"
-        className="inline-flex items-center gap-2 bg-[#C5A028] text-white text-xs tracking-[0.2em] uppercase font-semibold px-7 py-3.5 rounded-full hover:bg-[#D4B43A] transition-colors"
+        className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] text-xs tracking-[0.2em] uppercase font-semibold px-7 py-3.5 rounded-full hover:bg-[#D4B43A] transition-colors"
       >
         <MessageCircle className="w-4 h-4" /> Confirm on WhatsApp
       </a>

@@ -285,7 +285,7 @@ export default function CorporateEventsCateringBaliPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="corporate-events-cta"
-              className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
+              className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
             >
               <MessageCircle size={16} />
               Request a Corporate Quote
@@ -409,7 +409,7 @@ export default function CorporateEventsCateringBaliPage() {
             href={`https://wa.me/${PHONE.digits}?text=${WA_MSG}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
+            className="shrink-0 inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
           >
             <MessageCircle size={16} />
             Get a Quote
@@ -555,7 +555,7 @@ export default function CorporateEventsCateringBaliPage() {
             href={`https://wa.me/${PHONE.digits}?text=${WA_MSG}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold px-8 py-4 rounded hover:bg-[#B08F20] transition-colors uppercase tracking-wider"
+            className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold px-8 py-4 rounded hover:bg-[#B08F20] transition-colors uppercase tracking-wider"
           >
             <MessageCircle size={18} />
             Send Your Corporate Brief

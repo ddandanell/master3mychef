@@ -187,7 +187,7 @@ export default function PricingCalculator({
                     <div className="flex items-start justify-between gap-3">
                       <span>{option.label}</span>
                       {option.badge && (
-                        <span className="rounded-full bg-[#C5A028] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white">
+                        <span className="rounded-full bg-[#C5A028] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A]">
                           {option.badge}
                         </span>
                       )}

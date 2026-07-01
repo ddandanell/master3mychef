@@ -315,7 +315,7 @@ export default function AuraPage() {
             From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 15M total event minimum. Olivia replies within 24 hours.
           </p>
           <div className="aura-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Get Event Quote — 24h Reply
             </a>
             <a href="#packages" className="inline-block px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -359,7 +359,7 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="text-center">
-            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Start on WhatsApp
             </a>
           </div>
@@ -540,7 +540,7 @@ export default function AuraPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="aura-custom-party-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <Phone className="w-4 h-4" /> Design a custom party
             </a>
@@ -565,7 +565,7 @@ export default function AuraPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Get Your Quote
             </a>
           </div>
@@ -666,7 +666,7 @@ export default function AuraPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Ask Olivia on WhatsApp
             </a>
           </div>
@@ -699,7 +699,7 @@ export default function AuraPage() {
               <p className="text-xs mb-6" style={{ color: '#4A4745' }}>
                 * Custom quotes include catering, bar, staffing, and basic décor. AV, floral, and specialty items quoted separately.
               </p>
-              <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+              <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 <Phone className="w-4 h-4" /> Get a Quote on WhatsApp
               </a>
             </div>

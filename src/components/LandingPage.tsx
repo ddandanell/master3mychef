@@ -199,14 +199,14 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         <div className={`gap-12 ${articleEntry && articleEntry.headings.length >= 3 ? 'lg:grid lg:grid-cols-[250px_minmax(0,1fr)]' : ''}`}>
           {articleEntry && articleEntry.headings.length >= 3 && (
             <aside className="mb-10 self-start rounded-[28px] border border-black/5 bg-white p-6 shadow-sm lg:sticky lg:top-24 lg:mb-0">
-              <p className="text-xs font-semibold uppercase tracking-[3px] text-[#C5A028]">On this page</p>
+              <p className="text-xs font-semibold uppercase tracking-[3px] text-[#7E6410]">On this page</p>
               <h2 className="mt-3 font-playfair text-2xl">Table of contents</h2>
               <nav aria-label="Table of contents" className="mt-6 space-y-3">
                 {articleEntry.headings.map((heading: EnrichedPost['headings'][number]) => (
                   <a
                     key={heading.id}
                     href={`#${heading.id}`}
-                    className={`block text-sm leading-relaxed text-[#4A4745]/80 transition-colors hover:text-[#C5A028] ${heading.level === 3 ? 'pl-4' : ''}`}
+                    className={`block text-sm leading-relaxed text-[#4A4745]/80 transition-colors hover:text-[#7E6410] ${heading.level === 3 ? 'pl-4' : ''}`}
                   >
                     {heading.text}
                   </a>
@@ -218,7 +218,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           <div>
             {enhancedContent ? (
               <article
-                className="prose prose-stone max-w-none text-[#4A4745] prose-headings:font-playfair prose-headings:text-[#1A1A1A] prose-h2:mb-6 prose-h2:mt-16 prose-h2:text-3xl prose-h3:mt-10 prose-h3:text-2xl prose-p:mb-6 prose-p:text-lg prose-p:leading-relaxed prose-li:text-lg prose-li:leading-relaxed prose-strong:text-[#1A1A1A] prose-a:font-medium prose-a:text-[#C5A028] prose-a:no-underline hover:prose-a:underline prose-blockquote:rounded-r-2xl prose-blockquote:border-l-[#C5A028] prose-blockquote:bg-[#FAFAF8] prose-blockquote:p-6 [&_h2]:scroll-mt-28 [&_h3]:scroll-mt-28"
+                className="prose prose-stone max-w-none text-[#4A4745] prose-headings:font-playfair prose-headings:text-[#1A1A1A] prose-h2:mb-6 prose-h2:mt-16 prose-h2:text-3xl prose-h3:mt-10 prose-h3:text-2xl prose-p:mb-6 prose-p:text-lg prose-p:leading-relaxed prose-li:text-lg prose-li:leading-relaxed prose-strong:text-[#1A1A1A] prose-a:font-medium prose-a:text-[#7E6410] prose-a:no-underline hover:prose-a:underline prose-blockquote:rounded-r-2xl prose-blockquote:border-l-[#C5A028] prose-blockquote:bg-[#FAFAF8] prose-blockquote:p-6 [&_h2]:scroll-mt-28 [&_h3]:scroll-mt-28"
                 dangerouslySetInnerHTML={{ __html: enhancedContent }}
               />
             ) : (
@@ -227,9 +227,9 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                   Full article content for this page is being prepared. In the meantime, here is what you can do right now:
                 </p>
                 <ul className="mt-8 space-y-4">
-                  <li className="flex items-start gap-3"><div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#C5A028]/10"><Check className="h-4 w-4 text-[#C5A028]" strokeWidth={2.5} /></div> <span className="text-lg">Message us on WhatsApp for an immediate answer from our guest relations team.</span></li>
-                  <li className="flex items-start gap-3"><div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#C5A028]/10"><Check className="h-4 w-4 text-[#C5A028]" strokeWidth={2.5} /></div> <span className="text-lg">Request a personalized quote — we respond within 24 hours with a full proposal.</span></li>
-                  <li className="flex items-start gap-3"><div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#C5A028]/10"><Check className="h-4 w-4 text-[#C5A028]" strokeWidth={2.5} /></div> <span className="text-lg">Browse our sample menus to see exactly what our Michelin-trained chefs can cook.</span></li>
+                  <li className="flex items-start gap-3"><div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#C5A028]/10"><Check className="h-4 w-4 text-[#7E6410]" strokeWidth={2.5} /></div> <span className="text-lg">Message us on WhatsApp for an immediate answer from our guest relations team.</span></li>
+                  <li className="flex items-start gap-3"><div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#C5A028]/10"><Check className="h-4 w-4 text-[#7E6410]" strokeWidth={2.5} /></div> <span className="text-lg">Request a personalized quote — we respond within 24 hours with a full proposal.</span></li>
+                  <li className="flex items-start gap-3"><div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#C5A028]/10"><Check className="h-4 w-4 text-[#7E6410]" strokeWidth={2.5} /></div> <span className="text-lg">Browse our sample menus to see exactly what our Michelin-trained chefs can cook.</span></li>
                 </ul>
               </div>
             )}
@@ -257,19 +257,19 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
               <div className="mt-16 grid gap-4 border-t border-black/5 pt-12 md:grid-cols-2">
                 {previousEntry ? (
                   <Link to={previousEntry.path} className="group rounded-[28px] border border-black/5 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#C5A028]/30 hover:shadow-xl hover:shadow-black/5">
-                    <p className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[3px] text-[#C5A028]">
+                    <p className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[3px] text-[#7E6410]">
                       <ChevronLeft size={14} /> Previous Post
                     </p>
-                    <h2 className="font-playfair text-2xl transition-colors group-hover:text-[#C5A028]">{previousEntry.title}</h2>
+                    <h2 className="font-playfair text-2xl transition-colors group-hover:text-[#7E6410]">{previousEntry.title}</h2>
                   </Link>
                 ) : <div />}
 
                 {nextEntry ? (
                   <Link to={nextEntry.path} className="group rounded-[28px] border border-black/5 bg-white p-6 text-left shadow-sm transition-all duration-300 hover:border-[#C5A028]/30 hover:shadow-xl hover:shadow-black/5 md:text-right">
-                    <p className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[3px] text-[#C5A028] md:ml-auto">
+                    <p className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[3px] text-[#7E6410] md:ml-auto">
                       Next Post <ChevronRight size={14} />
                     </p>
-                    <h2 className="font-playfair text-2xl transition-colors group-hover:text-[#C5A028]">{nextEntry.title}</h2>
+                    <h2 className="font-playfair text-2xl transition-colors group-hover:text-[#7E6410]">{nextEntry.title}</h2>
                   </Link>
                 ) : <div />}
               </div>
@@ -279,10 +279,10 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
               <div className="mt-20 border-t border-[#1A1A1A]/10 pt-16">
                 <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[3px] text-[#C5A028]">Related Posts</p>
+                    <p className="text-xs font-semibold uppercase tracking-[3px] text-[#7E6410]">Related Posts</p>
                     <h2 className="mt-3 font-playfair text-3xl">Keep reading</h2>
                   </div>
-                  <Link to={hubPath} className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[3px] text-[#C5A028] transition-colors hover:text-black">
+                  <Link to={hubPath} className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[3px] text-[#7E6410] transition-colors hover:text-black">
                     {hubCtaLabel} <ArrowRight size={14} />
                   </Link>
                 </div>
@@ -299,7 +299,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                         </span>
                         <span>{post.readTimeMinutes} min read</span>
                       </div>
-                      <h3 className="mb-3 font-playfair text-2xl transition-colors group-hover:text-[#C5A028]">{post.title}</h3>
+                      <h3 className="mb-3 font-playfair text-2xl transition-colors group-hover:text-[#7E6410]">{post.title}</h3>
                       <p className="text-base leading-relaxed text-[#4A4745]/75">{post.description}</p>
                     </Link>
                   ))}

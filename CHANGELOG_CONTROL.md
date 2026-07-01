@@ -2,6 +2,16 @@
 
 _One line per shipped change. Newest first. SHA = production commit on `main`._
 
+## 2026-07-01 — GSC "perfection" pass (post-P0)
+- **Internal linking:** built the real link graph (now possible post-prerender). Orphans **39→0**, pages at depth ≥4 **22→0** (all ≤3 clicks). Added complete area index to `/locations`, article index to `/journal`, footer link for `/certified-partner`.
+- **Broken internal links: 82→0.** Gated all `/locations/[area]` links to real pages (new `LOCATION_PAGE_SLUGS`/`hasLocationPage`), fixed `/services/*` paths, and 301-redirected ~60 dead links to live pages (2 passes).
+- **39 duplicate `/blog` pages retired** (routed but not in sitemap = 404; agent-assessed as dupes) → 301 to canonical. **1 unique page served** (`indonesian-street-food`).
+- **`/book` + `/quote`** now served with noindex (were 404 on direct access); noindex pages (`/book /quote /calculator /join-our-team`) removed from `sitemap.xml` (§2.2.2).
+- **WebPage JSON-LD** added to every non-article page (§5.1.3).
+- **Sitemap `lastmod`:** varied real dates + frozen spread (`sitemap-lastmod.ts`); future pages omit (policy A).
+- **Technical:** `www`→apex 308 rule added (Vercel edge still 307 — dashboard item); HSTS preload left as owner decision.
+- **Docs:** `SEO_OWNER_ACTIONS.md` (GBP + backlinks + prune + 404-list — the non-code levers). **Image skill** added (`scripts/generate-image.ts`, Vercel AI Gateway, cheapest model).
+
 ## 2026-07-01 — GSC P0: SPA prerendering — MERGED & LIVE (`d9b49e9a`)
 - **GSC Blueprint Ch 9.3.1 fix, shipped.** Production served a meta-only shell (empty `<div id="root">`, 0 body words, 0 crawlable `<a href>`). Now every route ships fully-prerendered HTML. Verified on the CI preview via `vercel curl`: homepage body 0→**341,178 bytes**, H1 0→**1** ("Your Villa. Our Kitchen."), internal links 0→**178**, canonical + 9× JSON-LD preserved.
 - **prerender.ts** rewritten: SITEMAP-driven, writes `dist/<route>/index.html`, merges rendered `#root` into the inject-meta `<head>`. Resource-safe pool (concurrency 8, fresh page/route). Blocks external assets during render (fonts/GTM/Tidio/images) → 250 routes in ~57s. Fail-fast preview health check. `process.exit(0)` on done (a lingering vite-preview child was hanging the build for 14 min after "Prerender complete"). Defensive Chromium skip.

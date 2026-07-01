@@ -4,6 +4,17 @@
   },
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.mychef.id"
+        }
+      ],
+      "destination": "https://mychef.id/$1",
+      "permanent": true
+    },
+    {
       "source": "/experience",
       "destination": "/fine-dining",
       "permanent": true

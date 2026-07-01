@@ -29,15 +29,22 @@ const vercelConfig = {
   // Chromium (which Vercel's build container lacks). CLI `--prebuilt` deploys are
   // unaffected. See .github/workflows/deploy.yml.
   git: { deploymentEnabled: false },
-  redirects: REDIRECTS.map((r) => ({
-    source: r.from,
-    destination: r.to,
-    permanent: true,
-  })),
+  redirects: [
+    // Force www → apex as a permanent 308 (was 307 temporary — §2.3.3 canonicalization).
+    { source: '/(.*)', has: [{ type: 'host', value: 'www.mychef.id' }], destination: 'https://mychef.id/$1', permanent: true },
+    ...REDIRECTS.map((r) => ({
+      source: r.from,
+      destination: r.to,
+      permanent: true,
+    })),
+  ],
   headers: [
     {
       source: '/(.*)',
       headers: [
+        // NOTE: HSTS is Vercel-managed (max-age=63072000, apex). includeSubDomains+preload
+        // (§6.2.3) intentionally NOT forced here — it's a hard-to-reverse commitment across
+        // ALL subdomains (e.g. the separate "Mychef Live" app). Owner decision.
         { key: 'X-Content-Type-Options', value: 'nosniff' },
         { key: 'X-Frame-Options', value: 'DENY' },
         { key: 'X-XSS-Protection', value: '1; mode=block' },

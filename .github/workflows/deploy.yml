@@ -15,6 +15,15 @@ name: Build, Prerender & Deploy (Vercel prebuilt)
 on:
   push:
     branches: [main]      # push to main → PRODUCTION prebuilt deploy
+    paths-ignore:         # docs/tooling-only commits don't need a rebuild+deploy
+      - '**.md'
+      - 'project-skills/**'
+      - 'docs/**'
+      - 'reports/**'
+      - '.claude/**'
+      - '.kimi/**'
+      - '.ai/**'
+      - 'scripts/generate-image.ts'
   workflow_dispatch: {}   # manual run → safe PREVIEW deploy for testing
 
 concurrency:

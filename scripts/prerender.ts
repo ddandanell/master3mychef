@@ -189,15 +189,19 @@ async function main(): Promise<void> {
       }
     }
   } finally {
-    if (browser) await browser.close()
-    if (server) {
-      server.kill('SIGTERM')
-      setTimeout(() => { if (server && !server.killed) server.kill('SIGKILL') }, 2000)
-    }
+    if (browser) await browser.close().catch(() => {})
+    // SIGKILL the preview server outright — SIGTERM + a timer left the child (and
+    // thus the event loop) alive, so `npm run prerender` never returned and the
+    // whole build hung after "Prerender complete". Force-kill, then hard-exit below.
+    if (server) server.kill('SIGKILL')
   }
 }
 
-main().catch((err) => {
-  console.error('Fatal prerender error:', err)
-  process.exit(1)
-})
+// Explicit exit: lingering handles (preview-server child, Playwright internals)
+// otherwise keep Node alive and hang the build. Success = 0, failure = 1.
+main()
+  .then(() => process.exit(0))
+  .catch((err) => {
+    console.error('Fatal prerender error:', err)
+    process.exit(1)
+  })

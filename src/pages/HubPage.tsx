@@ -426,7 +426,7 @@ export default function HubPage() {
                 <div className="absolute inset-0 bg-black/55" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                 <div className="pointer-events-none absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-                  <h3 className="text-3xl md:text-4xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{portal.title}</h3>
+                  <h2 className="text-3xl md:text-4xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{portal.title}</h2>
                   <p className="text-sm text-white/[70%] mb-5 leading-relaxed">{portal.subtitle}</p>
                   <span className="flex items-center gap-2 text-sm font-medium transition-all group-hover:gap-4" style={{ color: portal.accent }}>
                     Explore <ArrowRight className="w-4 h-4" />

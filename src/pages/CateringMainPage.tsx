@@ -1183,7 +1183,7 @@ export default function CateringMainPage() {
                   <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Price</th>
                   <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Min. Guests</th>
                   <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Best For</th>
-                  <th className="pb-3"></th>
+                  <th className="pb-3"><span className="sr-only">Action</span></th>
                 </tr>
               </thead>
               <tbody>

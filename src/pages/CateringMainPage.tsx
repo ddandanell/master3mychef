@@ -462,7 +462,7 @@ export default function CateringMainPage() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
           <div className="bg-black/60 rounded-3xl px-8 md:px-12 py-12 md:py-16 backdrop-blur-sm">
-            <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-8" />
+            <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-8" decorative />
             <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
               myCHEF Events & Catering
             </p>

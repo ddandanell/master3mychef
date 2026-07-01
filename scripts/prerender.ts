@@ -32,7 +32,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST_DIR = join(__dirname, '..', 'dist')
 const BASE_URL = 'http://127.0.0.1:4173'
 const ROOT_EMPTY = '<div id="root"></div>'
-const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY ?? 5)
+const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY ?? 8)
 const LIMIT = process.env.PRERENDER_LIMIT ? Number(process.env.PRERENDER_LIMIT) : Infinity
 
 type Route = { path: string; index: number }
@@ -83,9 +83,9 @@ async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolea
     viewport: { width: 1280, height: 1024 },
   })
   try {
-    await page.goto(`${BASE_URL}${route.path}`, { waitUntil: 'domcontentloaded', timeout: 30000 })
+    await page.goto(`${BASE_URL}${route.path}`, { waitUntil: 'domcontentloaded', timeout: 20000 })
     // Wait for the React app to actually render content into #root.
-    await page.waitForSelector('#root > *', { timeout: 15000 })
+    await page.waitForSelector('#root > *', { timeout: 10000 })
     // Brief settle for headings / above-the-fold content (no networkidle — GSAP/Tidio never idle).
     await page.waitForTimeout(400)
 
@@ -150,9 +150,21 @@ async function main(): Promise<void> {
   let browser: Browser | null = null
   try {
     server = await startPreviewServer()
-    console.log('  ✅ Preview server ready\n')
+    // Fail fast if the preview server isn't actually reachable (turns a silent
+    // 250×timeout hang into an instant, clear failure).
+    const health = await fetch(`${BASE_URL}/`).then((r) => r.status).catch((e) => `ERR ${(e as Error).message}`)
+    console.log(`  ✅ Preview server ready (GET / → ${health})\n`)
+    if (health !== 200) throw new Error(`Preview server not serving (GET / → ${health})`)
 
-    browser = await chromium.launch({ headless: true })
+    try {
+      browser = await chromium.launch({ headless: true })
+    } catch (e) {
+      // No Chromium available (e.g. a build env without browser support) — skip
+      // rather than hard-fail the whole build. CI installs Chromium, so it runs there;
+      // the workflow's verify step still guards against shipping an unprerendered build.
+      console.log(`  ⏭  Chromium unavailable — skipping prerender (${(e as Error).message})`)
+      return
+    }
 
     const { success, failures } = await runPool(browser, routes)
 

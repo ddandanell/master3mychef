@@ -24,9 +24,11 @@ writeFileSync(join(__dirname, '..', 'public', '_redirects'), netlifyLines.join('
 const vercelConfig = {
   // Deploys come from GitHub Actions via `vercel deploy --prebuilt` (CI runs the
   // Playwright prerender that Vercel's own build container can't). Disable Vercel's
-  // auto-build-on-push so it doesn't overwrite the prerendered output with a
-  // meta-only shell. See .github/workflows/deploy.yml.
-  git: { deploymentEnabled: { main: false } },
+  // Git-integration auto-build entirely so it never (a) overwrites the prerendered
+  // output with a meta-only shell, nor (b) errors because the new prerender needs
+  // Chromium (which Vercel's build container lacks). CLI `--prebuilt` deploys are
+  // unaffected. See .github/workflows/deploy.yml.
+  git: { deploymentEnabled: false },
   redirects: REDIRECTS.map((r) => ({
     source: r.from,
     destination: r.to,

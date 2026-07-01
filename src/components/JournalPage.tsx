@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, Calendar, Tag } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema, localBusinessSchema } from './SeoHead'
 import { JOURNAL_POSTS, JOURNAL_CATEGORIES, type JournalPost } from '@/data/siteArchitecture'
+import { BLOG_POSTS, GUIDES } from '@/data/sitemap'
 
 import { useState, useMemo } from 'react'
 
@@ -128,6 +129,25 @@ export function JournalIndexPage() {
             </button>
           </div>
         )}
+      </section>
+
+      {/* Complete guides & articles index — makes every /blog and /guide article reachable in 2 clicks (fixes orphaned posts, Ch 7.1.2) */}
+      <section className="max-w-[1200px] mx-auto px-6 pb-20">
+        <div className="rounded-2xl border border-[#E8E6E3] bg-white px-6 py-8">
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-2">More Guides &amp; Articles</p>
+          <h2 className="font-playfair text-2xl mb-4">Browse Every Guide</h2>
+          <div className="flex flex-wrap gap-2.5">
+            {[...GUIDES, ...BLOG_POSTS].map((a) => (
+              <Link
+                key={a.slug}
+                to={`/${a.slug}`}
+                className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-medium text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-white"
+              >
+                {a.title}
+              </Link>
+            ))}
+          </div>
+        </div>
       </section>
     </main>
   )

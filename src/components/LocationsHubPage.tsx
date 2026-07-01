@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { MapPin, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from './SeoHead'
 import { LOCATIONS } from '@/data/siteArchitecture'
+import { PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
 import Breadcrumb from './shared/Breadcrumb'
 
 import OptimizedImage from '@/components/OptimizedImage'
@@ -240,6 +241,30 @@ export default function LocationsHubPage() {
                   {loc.label}
                 </Link>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Private chef by area — complete index so every area page is reachable in 2 clicks (SEO: fixes orphaned/deep area pages) */}
+      <section className="py-10 bg-[#FAFAF8]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="rounded-2xl border border-black/5 bg-white px-6 py-8">
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-2">Private Chef by Area</p>
+            <h2 className="font-playfair text-2xl mb-4">Every Bali Area We Cover</h2>
+            <div className="flex flex-wrap gap-2.5">
+              {PRIVATE_CHEF_AREAS.filter((a) => a.published)
+                .slice()
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .map((area) => (
+                  <Link
+                    key={area.slug}
+                    to={`/private-chef/${area.slug}`}
+                    className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-white"
+                  >
+                    {area.name}
+                  </Link>
+                ))}
             </div>
           </div>
         </div>

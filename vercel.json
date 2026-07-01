@@ -762,6 +762,201 @@
       "source": "/blog/yoga-retreat-chef-bali-meal-planning",
       "destination": "/journal/yoga-retreat-meal-planning-bali",
       "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-seminyak-guide",
+      "destination": "/private-chef/seminyak",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-canggu-guide",
+      "destination": "/private-chef/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-ubud-guide",
+      "destination": "/private-chef/ubud",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-jimbaran-guide",
+      "destination": "/private-chef/jimbaran",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-sanur-guide",
+      "destination": "/private-chef/sanur",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-pererenan-guide",
+      "destination": "/private-chef/pererenan",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-denpasar-guide",
+      "destination": "/private-chef/denpasar",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-nusa-dua-guide",
+      "destination": "/private-chef/nusa-dua",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-jakarta-complete-guide",
+      "destination": "/journal/private-chef-jakarta-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-bali-expats",
+      "destination": "/hire-private-chef-bali-monthly",
+      "permanent": true
+    },
+    {
+      "source": "/blog/daily-chef-service-bali",
+      "destination": "/hire-private-chef-bali-monthly",
+      "permanent": true
+    },
+    {
+      "source": "/blog/household-chef-bali-hiring-guide",
+      "destination": "/staffing/household-staff",
+      "permanent": true
+    },
+    {
+      "source": "/blog/villa-staff-bali-hiring-guide",
+      "destination": "/staffing/villa-staff",
+      "permanent": true
+    },
+    {
+      "source": "/blog/chef-placement-agency-bali",
+      "destination": "/staffing/private-chef-placement",
+      "permanent": true
+    },
+    {
+      "source": "/blog/villa-butler-bali-guide",
+      "destination": "/in-villa-service/butlers",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bartender-hire-bali",
+      "destination": "/in-villa-service/bartenders",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mixologist-hire-bali",
+      "destination": "/in-villa-service/mixology",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sommelier-hire-bali",
+      "destination": "/in-villa-service/sommelier",
+      "permanent": true
+    },
+    {
+      "source": "/blog/waiter-hire-bali",
+      "destination": "/in-villa-service/waiters",
+      "permanent": true
+    },
+    {
+      "source": "/blog/event-staff-bali",
+      "destination": "/in-villa-service",
+      "permanent": true
+    },
+    {
+      "source": "/blog/large-group-catering-bali",
+      "destination": "/group-villa-dinner-packages-bali",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bachelorette-party-bali-catering",
+      "destination": "/events/villa-parties",
+      "permanent": true
+    },
+    {
+      "source": "/blog/villa-party-catering-bali",
+      "destination": "/events/villa-parties",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pool-party-catering-bali",
+      "destination": "/events/villa-parties",
+      "permanent": true
+    },
+    {
+      "source": "/blog/baby-shower-catering-bali",
+      "destination": "/events/baby-showers",
+      "permanent": true
+    },
+    {
+      "source": "/blog/birthday-party-catering-bali",
+      "destination": "/events/birthdays",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bali-wellness-retreat-catering",
+      "destination": "/catering/retreat-catering",
+      "permanent": true
+    },
+    {
+      "source": "/blog/new-years-eve-bali-private-chef",
+      "destination": "/blog/holiday-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/blog/christmas-dinner-bali-villa",
+      "destination": "/blog/holiday-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bali-bbq-catering-villa-guide",
+      "destination": "/catering/bbq-catering",
+      "permanent": true
+    },
+    {
+      "source": "/blog/grazing-table-bali",
+      "destination": "/catering/grazing-tables",
+      "permanent": true
+    },
+    {
+      "source": "/blog/plated-dinner-catering-bali",
+      "destination": "/catering/plated-catering",
+      "permanent": true
+    },
+    {
+      "source": "/blog/babi-guling-catering-bali",
+      "destination": "/catering/babi-guling",
+      "permanent": true
+    },
+    {
+      "source": "/blog/brunch-catering-bali",
+      "destination": "/catering",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bali-wedding-catering-budget-guide",
+      "destination": "/bali-wedding-catering-packages",
+      "permanent": true
+    },
+    {
+      "source": "/blog/rehearsal-dinner-bali",
+      "destination": "/journal/rehearsal-dinner-planning-bali",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-dining-bali",
+      "destination": "/private-dining-indonesia",
+      "permanent": true
+    },
+    {
+      "source": "/blog/chefs-table-bali",
+      "destination": "/fine-dining/chefs-table",
+      "permanent": true
+    },
+    {
+      "source": "/blog/vegan-private-chef-bali",
+      "destination": "/blog/dietary-specific-chef-bali",
+      "permanent": true
     }
   ],
   "headers": [

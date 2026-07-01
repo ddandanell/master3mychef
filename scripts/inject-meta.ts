@@ -191,6 +191,23 @@ function buildArticleJsonLd(path: string, title: string, description: string, og
   return `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
 }
 
+// WebPage schema for every non-article page (§5.1.3). Article pages already reference
+// a WebPage via the article schema's mainEntityOfPage, so we skip them to avoid duplicates.
+function buildWebPageJsonLd(path: string, name: string, description: string): string {
+  if (ARTICLE_ROUTES.has(path)) return ''
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE}${path}#webpage`,
+    url: `${SITE}${path}`,
+    name,
+    description,
+    isPartOf: { '@type': 'WebSite', '@id': `${SITE}/#website`, url: SITE, name: 'myCHEF' },
+    inLanguage: 'en',
+  }
+  return `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
+}
+
 function injectMeta(html: string, path: string, title: string, description: string): string {
   const canonical = `${SITE}${path}`
   const ogImage = `${SITE}${getOgImage(path)}`
@@ -298,6 +315,7 @@ function injectMeta(html: string, path: string, title: string, description: stri
   const structuredData = [
     buildBreadcrumbJsonLd(path, title.split('|')[0].trim()),
     buildArticleJsonLd(path, title, description, ogImage),
+    buildWebPageJsonLd(path, title.split('|')[0].trim(), description),
   ].filter(Boolean).join('\n  ')
   html = html.replace('</head>', `${structuredData}\n  </head>`)
 

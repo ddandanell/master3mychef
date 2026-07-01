@@ -14,7 +14,8 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { BLOG_POSTS, GUIDES, SITEMAP } from '../src/data/sitemap'
-import { JOURNAL_POSTS } from '../src/data/siteArchitecture'
+import { JOURNAL_POSTS } from '../src/data/content/journalPosts'
+import { ARTICLE_CONTENT } from '../src/data/content/articleContent'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = join(__dirname, '..', 'dist')
@@ -167,6 +168,8 @@ function buildBreadcrumbJsonLd(path: string, name: string): string {
 function buildArticleJsonLd(path: string, title: string, description: string, ogImage: string): string {
   const article = ARTICLE_ROUTES.get(path)
   if (!article) return ''
+  // Bodies live in the split content store now — hydrate for articleBody/wordCount.
+  const body: string = article.content ?? ARTICLE_CONTENT[path] ?? ''
 
   const schema = {
     '@context': 'https://schema.org',
@@ -184,7 +187,7 @@ function buildArticleJsonLd(path: string, title: string, description: string, og
       logo: { '@type': 'ImageObject', url: `${SITE}/mychef-logo.svg` },
     },
     image: ogImage,
-    ...(article.content ? { articleBody: stripHtml(article.content), wordCount: stripHtml(article.content).split(/\s+/).filter(Boolean).length } : {}),
+    ...(body ? { articleBody: stripHtml(body), wordCount: stripHtml(body).split(/\s+/).filter(Boolean).length } : {}),
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE}${path}` },
   }
 

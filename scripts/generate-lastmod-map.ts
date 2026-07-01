@@ -23,7 +23,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { SITEMAP, type SitemapEntry } from '../src/data/sitemap'
-import { JOURNAL_POSTS } from '../src/data/siteArchitecture'
+import { JOURNAL_POSTS } from '../src/data/content/journalPosts'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 

@@ -1,7 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, Calendar, Tag } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema, localBusinessSchema } from './SeoHead'
-import { JOURNAL_POSTS, JOURNAL_CATEGORIES, type JournalPost } from '@/data/siteArchitecture'
+import { JOURNAL_CATEGORIES, type JournalPost } from '@/data/siteArchitecture'
+import { JOURNAL_POSTS } from '@/data/content/journalPosts'
+import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import { SITEMAP } from '@/data/sitemap'
 
 // Every article route (data-driven BLOG_POSTS + standalone /blog & /guide page
@@ -176,12 +178,14 @@ export function JournalPostPage() {
     )
   }
 
+  // Body moved to the lazy content store — hydrate once for schema + render.
+  const postContent = post.content ?? ARTICLE_CONTENT[`/journal/${post.slug}`] ?? ''
   const canonical = `${SITE}/journal/${post.slug}`
   const category = JOURNAL_CATEGORIES.find((c) => c.slug === post.category)
 
   // Article schema: image (Google-recommended field). Use the first image in the
   // post body if present (made absolute), else the site OG fallback.
-  const firstImgMatch = post.content.match(/<img[^>]+src="([^"]+)"/)
+  const firstImgMatch = postContent.match(/<img[^>]+src="([^"]+)"/)
   const rawImg = firstImgMatch?.[1] ?? '/mychef-misc-bali-og-image.webp'
   const articleImage = rawImg.startsWith('http') ? rawImg : `${SITE}${rawImg}`
 
@@ -238,7 +242,7 @@ export function JournalPostPage() {
               logo: { '@type': 'ImageObject', url: `${SITE}/mychef-logo.svg` },
             },
             mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
-            wordCount: post.content.replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length,
+            wordCount: postContent.replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length,
             articleSection: category?.label ?? 'Private Chef Bali',
           },
         ]}
@@ -256,7 +260,7 @@ export function JournalPostPage() {
 
         <div
           className="prose prose-lg max-w-none text-[#4A4745] prose-p:leading-relaxed prose-p:text-[#4A4745] prose-p:mb-6"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: postContent }}
         />
 
         {/* Prev/Next Navigation */}

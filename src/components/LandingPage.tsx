@@ -3,6 +3,7 @@ import { Link, Navigate, useLocation } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Calendar, Check, ChevronLeft, ChevronRight, Clock3, MessageCircle, Utensils } from 'lucide-react'
 import SeoHead, { aggregateRatingSchema, breadcrumbSchema, faqPageSchema, serviceSchema } from './SeoHead'
 import { BLOG_POSTS, GUIDES, LANDING_PAGES } from '@/data/sitemap'
+import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import Breadcrumb from './shared/Breadcrumb'
 import { type EnrichedPost, enrichPost, formatBlogDate, getRelatedPosts, injectContentEnhancements, sortPostsByDate } from '@/lib/blog'
 
@@ -47,7 +48,9 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   const previousEntry = currentIndex > 0 ? orderedEntries[currentIndex - 1] : null
   const nextEntry = currentIndex >= 0 && currentIndex < orderedEntries.length - 1 ? orderedEntries[currentIndex + 1] : null
   const relatedEntries = articleEntry ? getRelatedPosts(RELATED_ENTRIES, articleEntry, 3) : []
-  const enhancedContent = articleEntry?.content ? injectContentEnhancements(articleEntry.content, articleEntry.headings) : entry.content
+  const enhancedContent = articleEntry?.content
+    ? injectContentEnhancements(articleEntry.content, articleEntry.headings)
+    : (ARTICLE_CONTENT[`/${entry.slug}`] ?? entry.content)
 
   const articleSchema =
     articleEntry

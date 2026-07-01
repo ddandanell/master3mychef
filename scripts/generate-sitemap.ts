@@ -11,7 +11,7 @@ import * as path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { SITEMAP, type SitemapEntry } from '../src/data/sitemap';
-import { JOURNAL_POSTS } from '../src/data/siteArchitecture';
+import { JOURNAL_POSTS } from '../src/data/content/journalPosts';
 
 import { REDIRECTS } from '../src/data/redirects';
 import { SITEMAP_LASTMOD } from '../src/data/sitemap-lastmod';

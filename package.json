@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "sideEffects": ["**/*.css"],
   "scripts": {
     "dev": "vite",
     "prebuild": "npx tsx scripts/validate-hero-images.ts && npx tsx scripts/validate-critical-assets.ts && npx tsx scripts/generate-sitemap.ts && npx tsx scripts/generate-redirects.ts",

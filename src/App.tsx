@@ -5,7 +5,7 @@ import EngagementTracker from './components/EngagementTracker'
 
 import { LANDING_PAGE_SLUGS, GUIDE_SLUGS, BLOG_POST_SLUGS, SERVICE_SLUGS, MENU_SLUGS, AREA_SLUGS, MICRO_AREA_SLUGS } from './data/route-slugs'
 import { PUBLISHED_AREA_SLUGS } from './data/privateChefAreas'
-import PrivateChefAreaPage from './components/PrivateChefAreaPage'
+const PrivateChefAreaPage = lazy(() => import('./components/PrivateChefAreaPage'))
 import { REDIRECTS } from './data/redirects'
 import { CUSTOM_LOCATION_PAGE_SLUGS } from './data/locationLandingPages'
 import { getAllSubPages, getAllLocationPaths } from './data/siteArchitecture'

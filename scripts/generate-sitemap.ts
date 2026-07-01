@@ -51,11 +51,12 @@ const UNIQUE_URLS = FILTERED_URLS.filter((url) => {
 });
 
 function generateSitemap(): string {
-  const now = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-  
+  // Only emit <lastmod> when we have a REAL per-page content date. Previously every
+  // page without a date got the build date (new Date()), so 149 pages falsely claimed
+  // "changed today" on every deploy — an unreliable freshness signal that erodes crawl
+  // trust and wastes crawl budget (Blueprint §2.2.3). Omitting is better than lying.
   const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq, lastmod }) => `  <url>
-    <loc>${SITE_URL}${path}</loc>
-    <lastmod>${lastmod || now}</lastmod>
+    <loc>${SITE_URL}${path}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}
     <changefreq>${changefreq}</changefreq>
     <priority>${priority.toFixed(1)}</priority>
   </url>`).join('\n');

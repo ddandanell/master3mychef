@@ -14,6 +14,7 @@ import { SITEMAP, type SitemapEntry } from '../src/data/sitemap';
 import { JOURNAL_POSTS } from '../src/data/siteArchitecture';
 
 import { REDIRECTS } from '../src/data/redirects';
+import { SITEMAP_LASTMOD } from '../src/data/sitemap-lastmod';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -55,11 +56,16 @@ function generateSitemap(): string {
   // page without a date got the build date (new Date()), so 149 pages falsely claimed
   // "changed today" on every deploy — an unreliable freshness signal that erodes crawl
   // trust and wastes crawl budget (Blueprint §2.2.3). Omitting is better than lying.
-  const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq, lastmod }) => `  <url>
-    <loc>${SITE_URL}${path}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}
+  const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq, lastmod }) => {
+    // Real content date (B) → frozen spread date for existing undated pages (C-lite,
+    // src/data/sitemap-lastmod.ts) → omit for anything else, incl. future new pages (A).
+    const lm = lastmod || SITEMAP_LASTMOD[path];
+    return `  <url>
+    <loc>${SITE_URL}${path}</loc>${lm ? `\n    <lastmod>${lm}</lastmod>` : ''}
     <changefreq>${changefreq}</changefreq>
     <priority>${priority.toFixed(1)}</priority>
-  </url>`).join('\n');
+  </url>`;
+  }).join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

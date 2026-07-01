@@ -9,7 +9,7 @@ const SECTIONS = [
     subtitle: 'Bali Dry Season Dining',
     title: 'The Best Private Chef Menu for Bali\'s Dry Season (April–October)',
     body: `<p>Bali's dry season — April through October — is when the island runs at full throttle. Villa occupancy peaks, wedding season is in full swing, and every evening feels designed for outdoor dining. The skies are clear, the air is warm but not oppressive, and Bali's markets overflow with the best produce of the year.</p>
-    <p>A private chef who understands the dry season doesn't just cook — they source. The difference between a memorable dry-season dinner and a generic hotel buffet lies almost entirely in what arrives from the market at 5am. This guide covers which ingredients are at their peak, which dishes make the most of them, and how to structure a menu that takes full advantage of Bali at its best. See our <a href="/blog/bali-catering-menu" class="text-[#C5A028] hover:underline font-medium">complete Bali catering menu guide</a> for year-round context.</p>`,
+    <p>A private chef who understands the dry season doesn't just cook — they source. The difference between a memorable dry-season dinner and a generic hotel buffet lies almost entirely in what arrives from the market at 5am. This guide covers which ingredients are at their peak, which dishes make the most of them, and how to structure a menu that takes full advantage of Bali at its best. See our <a href="/blog/bali-catering-menu" class="text-[#7E6410] hover:underline font-medium">complete Bali catering menu guide</a> for year-round context.</p>`,
   },
   {
     id: 'ingredients',
@@ -76,7 +76,7 @@ const SECTIONS = [
       <li>Dessert grazing table: tropical tarts, chocolate bark with local fruit, mini pavlovas</li>
     </ul>
 
-    <p>For pricing on each format, see our <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">private chef pricing guide</a> or the <a href="/catering" class="text-[#C5A028] hover:underline font-medium">catering service overview</a>.</p>`,
+    <p>For pricing on each format, see our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">private chef pricing guide</a> or the <a href="/catering" class="text-[#7E6410] hover:underline font-medium">catering service overview</a>.</p>`,
   },
   {
     id: 'by-occasion',
@@ -133,7 +133,7 @@ const SECTIONS = [
 
     <p><strong>Consider a Balinese market tour the morning before.</strong> myCHEF chefs can take small groups to the Ubud market (morning) or Jimbaran fish market (pre-dawn) before preparing the day's menu. This is a popular add-on for guests who want to understand where their food comes from.</p>
 
-    <p>Ready to plan your dry season dinner? <a href="/catering" class="text-[#C5A028] hover:underline font-medium">View catering options</a> or <a href="/blog/buffet-vs-plated-service-bali" class="text-[#C5A028] hover:underline font-medium">choose between buffet and plated service</a> before you book.</p>`,
+    <p>Ready to plan your dry season dinner? <a href="/catering" class="text-[#7E6410] hover:underline font-medium">View catering options</a> or <a href="/blog/buffet-vs-plated-service-bali" class="text-[#7E6410] hover:underline font-medium">choose between buffet and plated service</a> before you book.</p>`,
   },
   {
     id: 'cta',

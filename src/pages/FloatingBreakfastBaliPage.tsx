@@ -74,9 +74,9 @@ const SECTIONS = [
     title: 'Floating Breakfast by Bali Location',
     body: `<p>myCHEF provides floating breakfast services across all major Bali villa areas. While the experience is consistent wherever you are, each area has its own character worth knowing before you book.</p>
 
-    <p><strong>Canggu:</strong> Bali's most popular villa area for younger couples and digital nomads. Canggu villas typically feature sleek, modern pools with rice-field backdrops or rooftop terraces. The floating breakfast at a Canggu villa benefits from the area's effortless cool-aesthetic — the kind of morning you'd see on a travel influencer's feed. <a href="/private-chef/canggu" class="text-[#C5A028] hover:underline font-medium">Private chef services in Canggu →</a></p>
+    <p><strong>Canggu:</strong> Bali's most popular villa area for younger couples and digital nomads. Canggu villas typically feature sleek, modern pools with rice-field backdrops or rooftop terraces. The floating breakfast at a Canggu villa benefits from the area's effortless cool-aesthetic — the kind of morning you'd see on a travel influencer's feed. <a href="/private-chef/canggu" class="text-[#7E6410] hover:underline font-medium">Private chef services in Canggu →</a></p>
 
-    <p><strong>Seminyak:</strong> Bali's original luxury villa district. Seminyak villas tend toward lavish pool designs — wide, deep, surrounded by lush tropical gardens. The floating breakfast setup here photographs exceptionally well with the mature garden backdrop. <a href="/private-chef/seminyak" class="text-[#C5A028] hover:underline font-medium">Private chef services in Seminyak →</a></p>
+    <p><strong>Seminyak:</strong> Bali's original luxury villa district. Seminyak villas tend toward lavish pool designs — wide, deep, surrounded by lush tropical gardens. The floating breakfast setup here photographs exceptionally well with the mature garden backdrop. <a href="/private-chef/seminyak" class="text-[#7E6410] hover:underline font-medium">Private chef services in Seminyak →</a></p>
 
     <p><strong>Uluwatu:</strong> Clifftop villas with ocean or jungle views. The morning light in Uluwatu — particularly in the dry season (May–October) — is extraordinary. A floating breakfast at an Uluwatu infinity pool with the Indian Ocean in the background is one of the most photographed experiences on the island.</p>
 

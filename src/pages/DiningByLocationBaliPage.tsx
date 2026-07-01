@@ -16,8 +16,8 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Seminyak',
     title: 'Seminyak: Beach Sophistication & International Dining',
-    body: `<p><strong>Character:</strong> Upscale, cosmopolitan beach resort — fine-dining restaurants on every corner, luxury villas with pools and ocean views, international traveler profile. Bali's most developed tourist area. See our full <a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak private chef guide</a>.</p>
-    <p><strong>Private Chef Advantage:</strong> Escape crowded restaurants while staying in the sophisticated hub. Oceanfront or poolside dining without reservation hassles. A private chef delivers <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">restaurant-quality fine dining</a> in a setting restaurants can't replicate.</p>
+    body: `<p><strong>Character:</strong> Upscale, cosmopolitan beach resort — fine-dining restaurants on every corner, luxury villas with pools and ocean views, international traveler profile. Bali's most developed tourist area. See our full <a href="/locations/seminyak" class="text-[#7E6410] hover:underline font-medium">Seminyak private chef guide</a>.</p>
+    <p><strong>Private Chef Advantage:</strong> Escape crowded restaurants while staying in the sophisticated hub. Oceanfront or poolside dining without reservation hassles. A private chef delivers <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">restaurant-quality fine dining</a> in a setting restaurants can't replicate.</p>
     <p><strong>Best Menu Style:</strong> Mediterranean, modern Asian fusion, fine-dining European. Emphasis on fresh seafood, premium ingredient sourcing, and Instagram-worthy plating.</p>
     <p><strong>Ingredient Sourcing:</strong> Excellent — multiple suppliers, imported options available, excellent fresh fish access. Chefs can source almost anything with 48 hours' notice.</p>
     <p><strong>Guest Profile:</strong> International travelers, affluent families, destination wedding groups. High expectations — guests compare the experience to restaurants they've visited globally.</p>
@@ -28,7 +28,7 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Canggu',
     title: 'Canggu: Creative, Health-Conscious, Artisanal',
-    body: `<p><strong>Character:</strong> Trendy, creative hub — digital nomads, yoga practitioners, surf culture, cafés with pour-over coffee, design-forward boutique villas. Younger, more health-conscious crowd than Seminyak. See our <a href="/locations/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu private chef guide</a>.</p>
+    body: `<p><strong>Character:</strong> Trendy, creative hub — digital nomads, yoga practitioners, surf culture, cafés with pour-over coffee, design-forward boutique villas. Younger, more health-conscious crowd than Seminyak. See our <a href="/locations/canggu" class="text-[#7E6410] hover:underline font-medium">Canggu private chef guide</a>.</p>
     <p><strong>Private Chef Advantage:</strong> Escape the increasingly crowded health-café scene. Host curated dining experiences tailored to specific dietary trends (plant-based, keto, macro-balanced, raw). Small-group intimate dinners preferred.</p>
     <p><strong>Best Menu Style:</strong> Modern vegetable-forward, locally-sourced, organic, health-conscious. Emphasis on ingredient provenance, sustainable sourcing, and artisanal presentations. Avoid formal "fine dining" framing — Canggu guests prefer relaxed excellence.</p>
     <p><strong>Ingredient Sourcing:</strong> Strong network of organic suppliers and health-focused markets. Green markets and local farmers accessible. Specialty health ingredients (adaptogens, superfoods) more available here than elsewhere.</p>
@@ -40,8 +40,8 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Uluwatu',
     title: 'Uluwatu: Clifftop Luxury & Dramatic Dining',
-    body: `<p><strong>Character:</strong> Clifftop location with dramatic Indian Ocean and sunset views. Quieter, more exclusive than beach areas. Spacious luxury villas with infinity pools and gardens. The most photogenic location in Bali for dining. See our <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu private chef guide</a>.</p>
-    <p><strong>Private Chef Advantage:</strong> Host world-class dinners in a natural amphitheater setting. The backdrop does half the work — a skilled chef with quality ingredients creates an experience no restaurant can match. Highly exclusive, completely private. Browse our <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining tasting menu experiences</a> to see what's possible.</p>
+    body: `<p><strong>Character:</strong> Clifftop location with dramatic Indian Ocean and sunset views. Quieter, more exclusive than beach areas. Spacious luxury villas with infinity pools and gardens. The most photogenic location in Bali for dining. See our <a href="/locations/uluwatu" class="text-[#7E6410] hover:underline font-medium">Uluwatu private chef guide</a>.</p>
+    <p><strong>Private Chef Advantage:</strong> Host world-class dinners in a natural amphitheater setting. The backdrop does half the work — a skilled chef with quality ingredients creates an experience no restaurant can match. Highly exclusive, completely private. Browse our <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">fine dining tasting menu experiences</a> to see what's possible.</p>
     <p><strong>Best Menu Style:</strong> Fine dining with global influences, often featuring Balinese tradition elevated with modern technique. Theater matters here — tableside finishing, dramatic plating, open-concept cooking. Premium proteins, rare ingredients, wine pairing.</p>
     <p><strong>Ingredient Sourcing:</strong> More challenging — 30–45 minute drive from Denpasar suppliers. Plan 2–3 weeks ahead for specialty items. Chef may need to pre-position ingredients. Quality still achievable; just requires planning.</p>
     <p><strong>Guest Profile:</strong> High-net-worth travelers, honeymooners, corporate executives, exclusive group retreats. Highest dining expectations in Bali.</p>
@@ -52,8 +52,8 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Ubud',
     title: 'Ubud: Cultural Immersion & Farm-to-Table',
-    body: `<p><strong>Character:</strong> Spiritual, artistic, agrarian heart of Bali. Rice paddies, traditional culture, yoga retreats, temples, healers. Villas immersed in nature — often rustic-luxury, smaller than coastal areas. The most authentically Balinese experience for guests. See our <a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud private chef guide</a>.</p>
-    <p><strong>Private Chef Advantage:</strong> Celebrate Balinese cuisine authentically with chefs who have direct relationships with local farmers. Access to farm-fresh ingredients picked the same morning. <a href="/catering" class="text-[#C5A028] hover:underline font-medium">Retreat catering</a> with nutritional and cultural focus.</p>
+    body: `<p><strong>Character:</strong> Spiritual, artistic, agrarian heart of Bali. Rice paddies, traditional culture, yoga retreats, temples, healers. Villas immersed in nature — often rustic-luxury, smaller than coastal areas. The most authentically Balinese experience for guests. See our <a href="/locations/ubud" class="text-[#7E6410] hover:underline font-medium">Ubud private chef guide</a>.</p>
+    <p><strong>Private Chef Advantage:</strong> Celebrate Balinese cuisine authentically with chefs who have direct relationships with local farmers. Access to farm-fresh ingredients picked the same morning. <a href="/catering" class="text-[#7E6410] hover:underline font-medium">Retreat catering</a> with nutritional and cultural focus.</p>
     <p><strong>Best Menu Style:</strong> Balinese traditional, plant-forward, farm-to-table. Emphasis on spice balance (hot/cool, sour/sweet), ceremonial dishes like lawar, and holistic wellness principles. The most authentic expression of Balinese food culture.</p>
     <p><strong>Ingredient Sourcing:</strong> Outstanding for local produce. Direct relationships with farmers and markets. Slower-paced supply chain — better for planned menus, less ideal for last-minute requests. Organic produce most accessible here.</p>
     <p><strong>Guest Profile:</strong> Wellness-focused travelers, cultural explorers, yoga practitioners, artists, retreat participants. Authenticity-seeking, culturally curious.</p>
@@ -64,10 +64,10 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Sanur & Jimbaran',
     title: 'Sanur & Jimbaran: Seafood, Beach, and Local Flavor',
-    body: `<p><strong>Sanur Character:</strong> Quiet, local beach community. Fishing villages, relaxed pace, fewer tourists than Seminyak. Families and long-term residents. Villas: mid-range, casual, beach-adjacent. See our <a href="/locations/sanur" class="text-[#C5A028] hover:underline font-medium">Sanur private chef guide</a>.</p>
+    body: `<p><strong>Sanur Character:</strong> Quiet, local beach community. Fishing villages, relaxed pace, fewer tourists than Seminyak. Families and long-term residents. Villas: mid-range, casual, beach-adjacent. See our <a href="/locations/sanur" class="text-[#7E6410] hover:underline font-medium">Sanur private chef guide</a>.</p>
     <p><strong>Sanur Dining:</strong> Outstanding fresh seafood from daily morning fishing boats. Simple preparations that highlight fish quality. Balinese traditional with some international options. Best for families seeking authentic local food without the Seminyak price tag.</p>
     <p><strong>Sanur Budget:</strong> IDR 560K–1.2M/person. Seafood-focused, local ingredients, relaxed atmosphere.</p>
-    <p><strong>Jimbaran Character:</strong> Beach fishing village famous for sunset seafood culture. Mix of local and tourist. Villas: mid-range, beach-adjacent, casual. See our <a href="/locations/jimbaran" class="text-[#C5A028] hover:underline font-medium">Jimbaran private chef guide</a>.</p>
+    <p><strong>Jimbaran Character:</strong> Beach fishing village famous for sunset seafood culture. Mix of local and tourist. Villas: mid-range, beach-adjacent, casual. See our <a href="/locations/jimbaran" class="text-[#7E6410] hover:underline font-medium">Jimbaran private chef guide</a>.</p>
     <p><strong>Jimbaran Dining:</strong> Private beachside dinners capturing Jimbaran's sunset magic without the crowded beach restaurant scene. Outstanding fresh fish and seafood from morning boats. Grilled preparations, tropical fruits, Balinese-casual with international options.</p>
     <p><strong>Jimbaran Budget:</strong> IDR 650K–1.3M/person. Casual luxury, fresh seafood focus, sunset timing premium.</p>`,
   },

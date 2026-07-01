@@ -30,11 +30,11 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Services Available',
     title: 'What myCHEF Offers Your Villa Guests',
     body: `<p>As a partner villa, your guests have access to myCHEF\'s full service portfolio:</p>
-    <p><strong>Private chef dining:</strong> From casual family meals to eight-course fine dining tasting menus. <a href="/services" class="text-[#C5A028] hover:underline font-medium">View our service packages</a>.</p>
-    <p><strong>Floating breakfast:</strong> One of Bali\'s most-requested villa experiences. See our <a href="/blog/floating-breakfast-bali" class="text-[#C5A028] hover:underline font-medium">floating breakfast guide</a>.</p>
+    <p><strong>Private chef dining:</strong> From casual family meals to eight-course fine dining tasting menus. <a href="/services" class="text-[#7E6410] hover:underline font-medium">View our service packages</a>.</p>
+    <p><strong>Floating breakfast:</strong> One of Bali\'s most-requested villa experiences. See our <a href="/blog/floating-breakfast-bali" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a>.</p>
     <p><strong>In-villa staffing:</strong> Professional waiters, bartenders, mixologists, sommeliers, and butlers for events and extended villa stays.</p>
     <p><strong>Cooking classes:</strong> Interactive culinary experiences led by a myCHEF chef.</p>
-    <p><strong>Staffing placements:</strong> Monthly chef arrangements, live-in chef placements. See our <a href="/staffing" class="text-[#C5A028] hover:underline font-medium">staffing services</a>.</p>`,
+    <p><strong>Staffing placements:</strong> Monthly chef arrangements, live-in chef placements. See our <a href="/staffing" class="text-[#7E6410] hover:underline font-medium">staffing services</a>.</p>`,
   },
   {
     id: 'how-it-works',

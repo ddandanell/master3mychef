@@ -9,7 +9,7 @@ const SECTIONS = [
     subtitle: 'Bali Wet Season Dining',
     title: 'Dining in Bali\'s Wet Season (November–March): What to Eat',
     body: `<p>Bali's wet season runs November through March, peaking in January and February. It doesn't mean constant rain — it means afternoon and evening tropical downpours, emerald-green landscapes, and a very different set of produce on market stalls. Visitor numbers drop, villa rates are lower, and the island feels intimate and unhurried.</p>
-    <p>Wet season dining is a different experience — heavier warming dishes, distinct ingredients that only appear at this time of year, and indoor or covered terrace setups that feel cosy rather than compromised. A skilled private chef adapts the menu to what the season genuinely offers rather than fighting it. This guide covers what to expect, what's in season, and how to get the best private dining experience during Bali's rainy months. For year-round context, see our <a href="/blog/bali-catering-menu" class="text-[#C5A028] hover:underline font-medium">complete Bali catering menu guide</a>.</p>`,
+    <p>Wet season dining is a different experience — heavier warming dishes, distinct ingredients that only appear at this time of year, and indoor or covered terrace setups that feel cosy rather than compromised. A skilled private chef adapts the menu to what the season genuinely offers rather than fighting it. This guide covers what to expect, what's in season, and how to get the best private dining experience during Bali's rainy months. For year-round context, see our <a href="/blog/bali-catering-menu" class="text-[#7E6410] hover:underline font-medium">complete Bali catering menu guide</a>.</p>`,
   },
   {
     id: 'ingredients',
@@ -74,7 +74,7 @@ const SECTIONS = [
       <li>Fresh highland fruit platter: strawberries, avocado dishes, soursop drinks</li>
     </ul>
 
-    <p>For format guidance (buffet vs plated), see our <a href="/blog/buffet-vs-plated-service-bali" class="text-[#C5A028] hover:underline font-medium">buffet vs plated comparison</a>. For pricing, see the <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">private chef pricing guide</a>.</p>`,
+    <p>For format guidance (buffet vs plated), see our <a href="/blog/buffet-vs-plated-service-bali" class="text-[#7E6410] hover:underline font-medium">buffet vs plated comparison</a>. For pricing, see the <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">private chef pricing guide</a>.</p>`,
   },
   {
     id: 'by-occasion',
@@ -131,7 +131,7 @@ const SECTIONS = [
 
     <p><strong>Consider a morning cooking class.</strong> Wet-season mornings are almost always clear and sunny. A market visit and cooking class before an afternoon lunch is one of the most popular experiences for wet-season guests — and the morning's market finds often dictate the best menu options for the afternoon meal.</p>
 
-    <p>Ready to plan your wet season dining? <a href="/catering" class="text-[#C5A028] hover:underline font-medium">Explore catering options</a> or <a href="/blog/dry-season-menu-bali" class="text-[#C5A028] hover:underline font-medium">compare with the dry season menu guide</a>.</p>`,
+    <p>Ready to plan your wet season dining? <a href="/catering" class="text-[#7E6410] hover:underline font-medium">Explore catering options</a> or <a href="/blog/dry-season-menu-bali" class="text-[#7E6410] hover:underline font-medium">compare with the dry season menu guide</a>.</p>`,
   },
   {
     id: 'cta',

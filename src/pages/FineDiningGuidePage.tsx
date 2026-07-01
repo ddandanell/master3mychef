@@ -9,7 +9,7 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Fine Dining in Bali',
     title: 'The Art of the Tasting Menu in Your Private Villa',
-    body: `<p>Fine dining is more than a meal — it's a curated, multi-course culinary journey. In Bali, fine dining takes on a unique character. Rather than rigid fine dining establishments, you can experience Michelin-caliber cuisine in the intimate setting of a <a href="/in-villa-service" class="text-[#C5A028] hover:underline font-medium">private villa</a>, with a dedicated chef tailoring every course to your preferences.</p>
+    body: `<p>Fine dining is more than a meal — it's a curated, multi-course culinary journey. In Bali, fine dining takes on a unique character. Rather than rigid fine dining establishments, you can experience Michelin-caliber cuisine in the intimate setting of a <a href="/in-villa-service" class="text-[#7E6410] hover:underline font-medium">private villa</a>, with a dedicated chef tailoring every course to your preferences.</p>
     <p>Your villa becomes a private restaurant. No formal dress codes, no tables inches apart, no time pressure between courses. Just you, your guests, and world-class cooking in bare feet by your pool.</p>`,
   },
   {
@@ -51,11 +51,11 @@ const SECTIONS = [
     title: 'Perfect Fine Dining Occasions at Your Villa',
     body: `<p>A private fine dining experience in Bali elevates any special occasion. Here are the celebrations guests love most:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>Honeymoon Dinner:</strong> The most intimate meal of your marriage. Your chef sets the table, dims the lights, and creates a menu that tells the story of your first days together. <a href="/events/anniversaries" class="text-[#C5A028] hover:underline font-medium">Learn about romantic events</a>.</li>
-      <li><strong>Proposal Dinner:</strong> Propose over a candlelit 7-course menu designed for the moment — flowers, champagne, and a chef who disappears after each course so you have complete privacy. <a href="/events" class="text-[#C5A028] hover:underline font-medium">Browse our events services</a>.</li>
+      <li><strong>Honeymoon Dinner:</strong> The most intimate meal of your marriage. Your chef sets the table, dims the lights, and creates a menu that tells the story of your first days together. <a href="/events/anniversaries" class="text-[#7E6410] hover:underline font-medium">Learn about romantic events</a>.</li>
+      <li><strong>Proposal Dinner:</strong> Propose over a candlelit 7-course menu designed for the moment — flowers, champagne, and a chef who disappears after each course so you have complete privacy. <a href="/events" class="text-[#7E6410] hover:underline font-medium">Browse our events services</a>.</li>
       <li><strong>Anniversary Celebration:</strong> Mark the years with a dining experience that matches the milestone. Recreate a dish from a past trip, or explore something entirely new together.</li>
-      <li><strong>Birthday Dinner:</strong> Gift the birthday guest a bespoke tasting menu centred on their favourite cuisines, with a dedicated chef and sommelier for the evening. <a href="/events/birthdays" class="text-[#C5A028] hover:underline font-medium">Birthday catering options</a>.</li>
-      <li><strong>Corporate Entertaining:</strong> Impress clients or reward a leadership team with a private chef dinner in your villa — far more memorable than any restaurant booking. <a href="/events/corporate-events" class="text-[#C5A028] hover:underline font-medium">Corporate events in Bali</a>.</li>
+      <li><strong>Birthday Dinner:</strong> Gift the birthday guest a bespoke tasting menu centred on their favourite cuisines, with a dedicated chef and sommelier for the evening. <a href="/events/birthdays" class="text-[#7E6410] hover:underline font-medium">Birthday catering options</a>.</li>
+      <li><strong>Corporate Entertaining:</strong> Impress clients or reward a leadership team with a private chef dinner in your villa — far more memorable than any restaurant booking. <a href="/events/corporate-events" class="text-[#7E6410] hover:underline font-medium">Corporate events in Bali</a>.</li>
     </ul>`,
   },
   {
@@ -65,11 +65,11 @@ const SECTIONS = [
     title: 'Fine Dining Available Across Bali',
     body: `<p>Our fine dining chefs are available throughout the island, coming directly to your villa no matter where you are staying:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak</a> — The original luxury heartland of Bali. Boutique villas, sophisticated guests, and the highest density of fine dining requests on the island.</li>
-      <li><a href="/locations/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu</a> — Modern, creative, and increasingly upscale. Canggu villa guests love progressive and fusion tasting menus.</li>
-      <li><a href="/locations/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud</a> — Jungle retreats and rice terrace villas. Fine dining in Ubud often features Balinese-inspired menus and farm-to-table ingredients sourced from local markets.</li>
+      <li><a href="/locations/seminyak" class="text-[#7E6410] hover:underline font-medium">Seminyak</a> — The original luxury heartland of Bali. Boutique villas, sophisticated guests, and the highest density of fine dining requests on the island.</li>
+      <li><a href="/locations/canggu" class="text-[#7E6410] hover:underline font-medium">Canggu</a> — Modern, creative, and increasingly upscale. Canggu villa guests love progressive and fusion tasting menus.</li>
+      <li><a href="/locations/ubud" class="text-[#7E6410] hover:underline font-medium">Ubud</a> — Jungle retreats and rice terrace villas. Fine dining in Ubud often features Balinese-inspired menus and farm-to-table ingredients sourced from local markets.</li>
     </ul>
-    <p style="margin-top:0.75rem;">We also cover Nusa Dua, Uluwatu, Jimbaran, and beyond. <a href="/help/getting-started" class="text-[#C5A028] hover:underline font-medium">See how to get started</a> and check availability for your villa address.</p>`,
+    <p style="margin-top:0.75rem;">We also cover Nusa Dua, Uluwatu, Jimbaran, and beyond. <a href="/help/getting-started" class="text-[#7E6410] hover:underline font-medium">See how to get started</a> and check availability for your villa address.</p>`,
   },
   {
     id: 'price-guide-cta',
@@ -85,7 +85,7 @@ const SECTIONS = [
     subtitle: 'Planning Your Experience',
     title: 'Steps to a Perfect Tasting Menu',
     body: `<p><strong>1. Define Your Vision:</strong> How many guests? What cuisines excite you? Do you want interactive cooking or surprise courses?</p>
-    <p><strong>2. Choose Your Chef:</strong> <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">Browse chef portfolios</a>, ask about past clients, schedule a consultation.</p>
+    <p><strong>2. Choose Your Chef:</strong> <a href="/chefs" class="text-[#7E6410] hover:underline font-medium">Browse chef portfolios</a>, ask about past clients, schedule a consultation.</p>
     <p><strong>3. Co-Create the Menu:</strong> Discuss themes, preferences, and story arc. Agree on pacing and wine pairings.</p>
     <p><strong>4. Handle Logistics:</strong> Confirm head count, kitchen access, service timing, and payment.</p>
     <p><strong>5. Day-Of:</strong> Chef arrives early for prep. You relax and experience the meal.</p>`,
@@ -100,7 +100,7 @@ const SECTIONS = [
     <p><strong>Celebrity Chef:</strong> IDR 2.7M–4.8M+ per person for 8–10 courses. Michelin stars, international fame.</p>
     <p>Group size discounts apply — 4 guests cost ~IDR 8M total; 8 guests cost ~IDR 13M (price per person drops as numbers rise).</p>
     <p>Additional costs: wine pairing (+IDR 400K–800K/person), ingredient upgrades like truffle or caviar (+IDR 300K–1.5M), multi-day events (negotiate per-day rates).</p>
-    <p><a href="/pricing" class="text-[#C5A028] hover:underline font-medium">Pricing and availability</a>: booking timeline 4–6 weeks ahead. Acceptable: 2–3 weeks. Rush: 1 week (premium surcharge may apply).</p>`,
+    <p><a href="/pricing" class="text-[#7E6410] hover:underline font-medium">Pricing and availability</a>: booking timeline 4–6 weeks ahead. Acceptable: 2–3 weeks. Rush: 1 week (premium surcharge may apply).</p>`,
   },
   {
     id: 'cta',

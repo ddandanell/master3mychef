@@ -89,7 +89,7 @@ const SECTIONS = [
 
     <p><strong>BBQ is not the ideal format for:</strong> Formal anniversary dinners where a curated plated tasting menu, candlelight, and choreographed service create the right atmosphere. Intimate proposals where the setting and pace matter more than a social spread. Fine dining clients who want a multi-course menu with wine pairings and composed plates. Small groups of two to four guests on a romantic occasion — the energy of a grill is social and generous rather than intimate and quiet.</p>
 
-    <p>For those occasions, myCHEF offers plated private chef dinners, tasting menus, and dedicated <a href="/blog/romantic-dinner-bali-private-chef" class="text-[#C5A028] hover:underline font-medium">romantic dinner</a> and <a href="/blog/anniversary-dinner-villa-bali" class="text-[#C5A028] hover:underline font-medium">anniversary</a> formats that are better suited. The right format for the right occasion always produces a better result than trying to make one format do everything.</p>`,
+    <p>For those occasions, myCHEF offers plated private chef dinners, tasting menus, and dedicated <a href="/blog/romantic-dinner-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">romantic dinner</a> and <a href="/blog/anniversary-dinner-villa-bali" class="text-[#7E6410] hover:underline font-medium">anniversary</a> formats that are better suited. The right format for the right occasion always produces a better result than trying to make one format do everything.</p>`,
   },
   {
     id: 'faq',

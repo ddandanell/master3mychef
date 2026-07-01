@@ -31,7 +31,7 @@ const SECTIONS: PageSection[] = [
     <p><strong>Jimbaran Bay:</strong> The bay itself and the villa compounds along Jalan Yoga Perkanthi and the beach road. Home to several large luxury hotels and villa complexes. A relaxed, family-friendly area popular with couples and multi-generational groups.</p>
     <p><strong>Kedonganan:</strong> The northern extension of the Jimbaran area, known for the fish market and a dense collection of seafood restaurants. Some villa compounds here offer direct bay access.</p>
     <p><strong>Pecatu and Ungasan:</strong> The clifftop areas above Jimbaran Bay on the Bukit Peninsula, home to some of Bali's most spectacular luxury villas. Many properties here are large (6-12 bedrooms) with infinity pools that appear to merge with the ocean horizon. The prime venue for high-end private chef tasting menus.</p>
-    <p><strong>Uluwatu:</strong> The far southern tip of the Bukit, famous for the sea temple and world-class surf breaks. An increasingly popular villa area for couples and surf groups. We also cover this area with a dedicated <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu location page</a>.</p>
+    <p><strong>Uluwatu:</strong> The far southern tip of the Bukit, famous for the sea temple and world-class surf breaks. An increasingly popular villa area for couples and surf groups. We also cover this area with a dedicated <a href="/locations/uluwatu" class="text-[#7E6410] hover:underline font-medium">Uluwatu location page</a>.</p>
     <p><strong>Balangan and Dreamland:</strong> The surf beaches on the western Bukit cliff face, accessible from Jimbaran and popular with villa guests seeking a quieter, more secluded setting.</p>`,
   },
   {
@@ -40,10 +40,10 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Occasions',
     title: 'What Jimbaran Private Chef Clients Book For',
     body: `<p>The most common occasions for private chef bookings in the Jimbaran and Bukit area:</p>
-    <p><strong>Romantic seafood dinner for two:</strong> A private seafood spread at sunset for a couple on a Jimbaran Bay villa terrace. Candles, fresh flowers, champagne, and a chef who handles everything from sourcing to cleanup. One of the most natural and beautiful private dining experiences in Bali. See our <a href="/blog/romantic-dinner-bali-private-chef" class="text-[#C5A028] hover:underline font-medium">romantic dinner guide</a>.</p>
+    <p><strong>Romantic seafood dinner for two:</strong> A private seafood spread at sunset for a couple on a Jimbaran Bay villa terrace. Candles, fresh flowers, champagne, and a chef who handles everything from sourcing to cleanup. One of the most natural and beautiful private dining experiences in Bali. See our <a href="/blog/romantic-dinner-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">romantic dinner guide</a>.</p>
     <p><strong>Cliff sunset tasting menu:</strong> A fine dining tasting menu served on an Uluwatu or Pecatu clifftop terrace at sunset. 6 to 8 courses, matched wines, full waitstaff, and the Indian Ocean as backdrop. The premium version of Jimbaran/Bukit private chef dining.</p>
-    <p><strong>Family or group seafood BBQ:</strong> For groups of 8-20 staying at a Bukit villa compound, a live-fire seafood BBQ on the villa deck is the ideal format. The chef sets up the grill, handles all sourcing and preparation, and creates the atmosphere of a Jimbaran beach warung in your private villa space. See our <a href="/blog/bali-bbq-catering-villa-guide" class="text-[#C5A028] hover:underline font-medium">BBQ catering guide</a>.</p>
-    <p><strong>Honeymoon experience:</strong> Jimbaran and the Bukit Peninsula are among Bali's most popular honeymoon destinations. We provide tailored private chef honeymoon experiences including floating breakfasts, sunset cocktail spreads, and romantic dinners. See our <a href="/blog/honeymoon-private-chef-bali" class="text-[#C5A028] hover:underline font-medium">honeymoon chef guide</a>.</p>`,
+    <p><strong>Family or group seafood BBQ:</strong> For groups of 8-20 staying at a Bukit villa compound, a live-fire seafood BBQ on the villa deck is the ideal format. The chef sets up the grill, handles all sourcing and preparation, and creates the atmosphere of a Jimbaran beach warung in your private villa space. See our <a href="/blog/bali-bbq-catering-villa-guide" class="text-[#7E6410] hover:underline font-medium">BBQ catering guide</a>.</p>
+    <p><strong>Honeymoon experience:</strong> Jimbaran and the Bukit Peninsula are among Bali's most popular honeymoon destinations. We provide tailored private chef honeymoon experiences including floating breakfasts, sunset cocktail spreads, and romantic dinners. See our <a href="/blog/honeymoon-private-chef-bali" class="text-[#7E6410] hover:underline font-medium">honeymoon chef guide</a>.</p>`,
   },
   {
     id: 'pricing',
@@ -57,7 +57,7 @@ const SECTIONS: PageSection[] = [
       <li><strong>Cliff tasting menu (2-6 guests, 6-7 courses):</strong> IDR 1,200,000 – 2,000,000 per person. Includes premium seafood, matched wine service, and full setup.</li>
       <li><strong>Romantic dinner for 2 (4-5 courses):</strong> IDR 1,000,000 – 1,600,000 per person. Includes full table setup, flowers, and personalized service.</li>
     </ul>
-    <p style="margin-top:0.75rem;">Premium fresh seafood (whole lobster, large tiger prawns, live crab) are priced at market rate and itemised transparently. For a full pricing overview see our <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
+    <p style="margin-top:0.75rem;">Premium fresh seafood (whole lobster, large tiger prawns, live crab) are priced at market rate and itemised transparently. For a full pricing overview see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
   },
   {
     id: 'cta',

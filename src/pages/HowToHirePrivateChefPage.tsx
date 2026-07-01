@@ -154,7 +154,7 @@ const SECTIONS = [
 
     <h3 style="font-family: var(--font-playfair, serif); font-size: 1.2rem; margin: 1.5rem 0 0.5rem; color: #1A1A1A;">How Grocery Pricing Works</h3>
     <p>At myCHEF, groceries are always charged at-cost — meaning you pay exactly what the chef paid at market or from the supplier, with receipts. There is no ingredient mark-up. The service fee covers the chef's time, skill, and logistics. This model is more transparent than a bundled "all-in" rate, and almost always saves you money compared to providers who bake ingredient costs into a flat fee at inflated rates.</p>
-    <p>For reference on detailed cost breakdowns by occasion, see our <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">complete private chef cost guide</a> or <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">view our pricing page</a>.</p>`,
+    <p>For reference on detailed cost breakdowns by occasion, see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">complete private chef cost guide</a> or <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">view our pricing page</a>.</p>`,
   },
   {
     id: 'cta-mid',

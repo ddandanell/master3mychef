@@ -39,10 +39,10 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Occasions',
     title: 'Private Chef for Seminyak Occasions: Honeymoons, Proposals & Anniversaries',
     body: `<p>Seminyak\'s romantic reputation makes it the island\'s premier destination for milestone occasion dining:</p>
-    <p><strong>Honeymoon dinners:</strong> A private chef dinner for two — candles, fresh flowers, bespoke menu, champagne. See our <a href="/blog/honeymoon-private-chef-bali" class="text-[#C5A028] hover:underline font-medium">honeymoon private chef guide</a>.</p>
-    <p><strong>Proposals:</strong> A controlled private setting — no restaurant crowds, no risk of interruptions. See our <a href="/blog/proposal-dinner-bali-private-chef" class="text-[#C5A028] hover:underline font-medium">proposal dinner guide</a>.</p>
-    <p><strong>Anniversary dinners:</strong> A dinner built around the couple\'s specific preferences. See our <a href="/blog/anniversary-dinner-villa-bali" class="text-[#C5A028] hover:underline font-medium">anniversary dinner guide</a>.</p>
-    <p><strong>Corporate dinners:</strong> A private villa dinner for 8-12 executives with a sommelier and professional waitstaff. See our <a href="/blog/corporate-events-catering-bali-team-dining" class="text-[#C5A028] hover:underline font-medium">corporate dining guide</a>.</p>`,
+    <p><strong>Honeymoon dinners:</strong> A private chef dinner for two — candles, fresh flowers, bespoke menu, champagne. See our <a href="/blog/honeymoon-private-chef-bali" class="text-[#7E6410] hover:underline font-medium">honeymoon private chef guide</a>.</p>
+    <p><strong>Proposals:</strong> A controlled private setting — no restaurant crowds, no risk of interruptions. See our <a href="/blog/proposal-dinner-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">proposal dinner guide</a>.</p>
+    <p><strong>Anniversary dinners:</strong> A dinner built around the couple\'s specific preferences. See our <a href="/blog/anniversary-dinner-villa-bali" class="text-[#7E6410] hover:underline font-medium">anniversary dinner guide</a>.</p>
+    <p><strong>Corporate dinners:</strong> A private villa dinner for 8-12 executives with a sommelier and professional waitstaff. See our <a href="/blog/corporate-events-catering-bali-team-dining" class="text-[#7E6410] hover:underline font-medium">corporate dining guide</a>.</p>`,
   },
   {
     id: 'pricing',
@@ -55,7 +55,7 @@ const SECTIONS: PageSection[] = [
       <li><strong>Small group dinner (4-8 guests, 4 courses):</strong> IDR 800,000 – 1,200,000 per person</li>
       <li><strong>Fine dining tasting menu (6-7 courses with pairings):</strong> IDR 1,500,000 – 2,500,000 per person</li>
     </ul>
-    <p style="margin-top:0.75rem;">For a full pricing breakdown see our <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
+    <p style="margin-top:0.75rem;">For a full pricing breakdown see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
   },
   {
     id: 'cta',

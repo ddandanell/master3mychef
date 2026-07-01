@@ -98,15 +98,15 @@ const SECTIONS: PageSection[] = [
     title: 'The Best Bali Villa Settings for a Proposal Dinner',
     body: `<p>The location shapes the proposal as much as any other element. Bali's distinct villa landscapes each offer a different kind of beauty — here are the four settings our clients choose most often.</p>
 
-    <p><strong>Uluwatu — Clifftop Drama:</strong> The Bukit Peninsula's limestone clifftops deliver some of the most cinematically dramatic private villa settings in Southeast Asia. An infinity pool that appears to pour directly into the Indian Ocean. Sunset that turns the sky coral and gold. Uluwatu proposal dinners tend to be the most visually striking — and the most photographed. See our <a href="/private-chef/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu private chef page</a> for villa options in this area.</p>
+    <p><strong>Uluwatu — Clifftop Drama:</strong> The Bukit Peninsula's limestone clifftops deliver some of the most cinematically dramatic private villa settings in Southeast Asia. An infinity pool that appears to pour directly into the Indian Ocean. Sunset that turns the sky coral and gold. Uluwatu proposal dinners tend to be the most visually striking — and the most photographed. See our <a href="/private-chef/uluwatu" class="text-[#7E6410] hover:underline font-medium">Uluwatu private chef page</a> for villa options in this area.</p>
 
-    <p><strong>Seminyak — Garden Elegance:</strong> Seminyak's mature villa estates — many set around centuries-old frangipani trees and walled tropical gardens — offer a more contained, deeply intimate setting. The lighting is warmer, the sound profile quieter, and the garden-table setup achievable even in smaller villas. See our <a href="/private-chef/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak private chef page</a> for details.</p>
+    <p><strong>Seminyak — Garden Elegance:</strong> Seminyak's mature villa estates — many set around centuries-old frangipani trees and walled tropical gardens — offer a more contained, deeply intimate setting. The lighting is warmer, the sound profile quieter, and the garden-table setup achievable even in smaller villas. See our <a href="/private-chef/seminyak" class="text-[#7E6410] hover:underline font-medium">Seminyak private chef page</a> for details.</p>
 
-    <p><strong>Ubud — Jungle Pavilion:</strong> Ubud's jungle villas sit above river gorges and rice terrace valleys, surrounded by the sound of water and birdsong. A candlelit pavilion set against a backdrop of tropical forest, with mist moving through the valley below, creates a proposal setting unlike anything else on the island. See our <a href="/private-chef/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud private chef page</a>.</p>
+    <p><strong>Ubud — Jungle Pavilion:</strong> Ubud's jungle villas sit above river gorges and rice terrace valleys, surrounded by the sound of water and birdsong. A candlelit pavilion set against a backdrop of tropical forest, with mist moving through the valley below, creates a proposal setting unlike anything else on the island. See our <a href="/private-chef/ubud" class="text-[#7E6410] hover:underline font-medium">Ubud private chef page</a>.</p>
 
-    <p><strong>Canggu — Beachside Warmth:</strong> Canggu's villa scene has evolved into one of Bali's most design-forward — modern architecture, open-plan living spaces, and direct beach access. A Canggu beachside proposal dinner works particularly well for couples who want a more contemporary, less traditional Bali aesthetic. See our <a href="/private-chef/canggu" class="text-[#C5A028] hover:underline font-medium">Canggu private chef page</a>.</p>
+    <p><strong>Canggu — Beachside Warmth:</strong> Canggu's villa scene has evolved into one of Bali's most design-forward — modern architecture, open-plan living spaces, and direct beach access. A Canggu beachside proposal dinner works particularly well for couples who want a more contemporary, less traditional Bali aesthetic. See our <a href="/private-chef/canggu" class="text-[#7E6410] hover:underline font-medium">Canggu private chef page</a>.</p>
 
-    <p>We work across all of Bali's villa regions — if your villa is not listed here, <a href="https://wa.me/628113803488" class="text-[#C5A028] hover:underline font-medium">message us on WhatsApp</a> and we will confirm availability at your specific location.</p>`,
+    <p>We work across all of Bali's villa regions — if your villa is not listed here, <a href="https://wa.me/628113803488" class="text-[#7E6410] hover:underline font-medium">message us on WhatsApp</a> and we will confirm availability at your specific location.</p>`,
   },
   {
     id: 'pricing',
@@ -124,7 +124,7 @@ const SECTIONS: PageSection[] = [
       <li>Champagne and wine service coordination (beverages billed separately at cost)</li>
     </ul>
 
-    <p>Floral décor packages, rose petal arrangements, and photographer coordination are available as add-ons. For full pricing across all tiers, see our <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing page</a>. To discuss a bespoke package for your specific vision, <a href="https://wa.me/628113803488" class="text-[#C5A028] hover:underline font-medium">message us directly on WhatsApp</a> — we respond within the hour.</p>`,
+    <p>Floral décor packages, rose petal arrangements, and photographer coordination are available as add-ons. For full pricing across all tiers, see our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing page</a>. To discuss a bespoke package for your specific vision, <a href="https://wa.me/628113803488" class="text-[#7E6410] hover:underline font-medium">message us directly on WhatsApp</a> — we respond within the hour.</p>`,
   },
   {
     id: 'faq',

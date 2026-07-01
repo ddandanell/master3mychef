@@ -79,7 +79,7 @@ const SECTIONS = [
     title: 'Where myCHEF Serves Retreat Catering Across Bali',
     body: `<p>myCHEF operates retreat catering across all of Bali's major retreat destinations, each with its own food culture and logistical character.</p>
 
-    <p><strong>Ubud</strong> is Bali's retreat heartland and our most active location for programme catering. The surrounding rice terraces and jungle valleys host dozens of dedicated wellness villas and retreat centres. Crucially, Ubud sits close to Bali's strongest organic farming community — direct access to fresh, seasonal, chemical-free produce that forms the backbone of every wellness menu. The <a href="/private-chef/ubud" class="text-[#C5A028] hover:underline font-medium">Ubud private chef</a> team knows local suppliers by name.</p>
+    <p><strong>Ubud</strong> is Bali's retreat heartland and our most active location for programme catering. The surrounding rice terraces and jungle valleys host dozens of dedicated wellness villas and retreat centres. Crucially, Ubud sits close to Bali's strongest organic farming community — direct access to fresh, seasonal, chemical-free produce that forms the backbone of every wellness menu. The <a href="/private-chef/ubud" class="text-[#7E6410] hover:underline font-medium">Ubud private chef</a> team knows local suppliers by name.</p>
 
     <p><strong>Canggu</strong> has evolved into Bali's surf-and-yoga hub, attracting active retreats with a younger, health-conscious crowd. Our Canggu catering leans toward active programme menus — higher protein, smoothie bars, açaí-style bowls — in line with the neighbourhood's food culture and retreat demographic.</p>
 

@@ -9,7 +9,7 @@ const SECTIONS = [
     subtitle: 'Festive Season Dining',
     title: 'Private Chef Christmas & New Year Menus in Bali',
     body: `<p>Bali at Christmas and New Year is an experience unlike anywhere else. The villas are full, the energy is electric, and sunset cocktail hours stretch into long communal dinners under the stars — or under covered pavilions when December rains arrive. It is the single busiest dining period of the year for private chefs on the island.</p>
-    <p>Whether you're planning an intimate Christmas Eve dinner for four, a villa Christmas Day feast for twenty, or a New Year's Eve event for fifty guests, the approach is different from a standard booking. This guide covers what makes a great festive menu in Bali, which formats work for which event sizes, and how to ensure your holiday dinner is the memory you came here to make. For year-round menu context, see our <a href="/blog/bali-catering-menu" class="text-[#C5A028] hover:underline font-medium">complete Bali catering menu guide</a>.</p>`,
+    <p>Whether you're planning an intimate Christmas Eve dinner for four, a villa Christmas Day feast for twenty, or a New Year's Eve event for fifty guests, the approach is different from a standard booking. This guide covers what makes a great festive menu in Bali, which formats work for which event sizes, and how to ensure your holiday dinner is the memory you came here to make. For year-round menu context, see our <a href="/blog/bali-catering-menu" class="text-[#7E6410] hover:underline font-medium">complete Bali catering menu guide</a>.</p>`,
   },
   {
     id: 'what-makes-festive',
@@ -22,7 +22,7 @@ const SECTIONS = [
 
     <p><strong>What season brings:</strong> December and January are wet-season months. Peak wet-season produce (durian, jackfruit, Highland strawberries, Kintamani avocados, wild mushrooms, fresh soursop) is available and at its best. A Christmas dessert featuring fresh Bedugul strawberries and durian cream alongside a classic Yule log is a genuinely special combination — ingredients you cannot get at this quality anywhere else in the world.</p>
 
-    <p><strong>The format question:</strong> Festive events run across the full size range. Christmas Eve dinner is typically intimate — 2–12 guests, plated. Christmas Day is more communal — 8–30 guests, buffet or family-style. New Year's Eve skews large — 20–80 guests, reception format with passed canapés, dinner buffet, and midnight dessert station. See our <a href="/blog/buffet-vs-plated-service-bali" class="text-[#C5A028] hover:underline font-medium">buffet vs plated guide</a> for the full format comparison.</p>`,
+    <p><strong>The format question:</strong> Festive events run across the full size range. Christmas Eve dinner is typically intimate — 2–12 guests, plated. Christmas Day is more communal — 8–30 guests, buffet or family-style. New Year's Eve skews large — 20–80 guests, reception format with passed canapés, dinner buffet, and midnight dessert station. See our <a href="/blog/buffet-vs-plated-service-bali" class="text-[#7E6410] hover:underline font-medium">buffet vs plated guide</a> for the full format comparison.</p>`,
   },
   {
     id: 'menus',
@@ -64,7 +64,7 @@ const SECTIONS = [
       <li>Balinese offering: nasi goreng station with crispy egg, prawn crackers, pickles</li>
     </ul>
 
-    <p>For <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">festive pricing details</a> or to discuss a custom menu, <a href="/catering" class="text-[#C5A028] hover:underline font-medium">contact the catering team</a>.</p>`,
+    <p>For <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">festive pricing details</a> or to discuss a custom menu, <a href="/catering" class="text-[#7E6410] hover:underline font-medium">contact the catering team</a>.</p>`,
   },
   {
     id: 'by-occasion',
@@ -121,7 +121,7 @@ const SECTIONS = [
 
     <p><strong>Confirm the event setup.</strong> Covered or open-air? Pool deck or indoor villa dining room? Sound system for music? Festive decorations (some chefs partner with decorating services)? The more your chef knows about the venue and setup, the better they can plan mise-en-place, service flow, and plating logistics.</p>
 
-    <p><strong>Budget for a premium.</strong> Festive pricing reflects the demand, the complexity of events, and the premium produce involved. A standard private chef dinner runs IDR 800,000–1,300,000/person; festive menus typically run IDR 1,200,000–2,500,000/person depending on courses, occasion, and group size. See the <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">full pricing guide</a> for details. New Year's Eve gala format (cocktail hour + dinner) is priced as an event, not per-course — discuss directly with the team.</p>`,
+    <p><strong>Budget for a premium.</strong> Festive pricing reflects the demand, the complexity of events, and the premium produce involved. A standard private chef dinner runs IDR 800,000–1,300,000/person; festive menus typically run IDR 1,200,000–2,500,000/person depending on courses, occasion, and group size. See the <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">full pricing guide</a> for details. New Year's Eve gala format (cocktail hour + dinner) is priced as an event, not per-course — discuss directly with the team.</p>`,
   },
   {
     id: 'cta',

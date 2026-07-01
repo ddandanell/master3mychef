@@ -101,7 +101,7 @@ const SECTIONS = [
 
     <p><strong>Custom cocktail:</strong> A signature cocktail created and named for the couple — served as the cocktail hour drink. Something to order again someday and remember.</p>
 
-    <p><strong>Proposal dinner add-on:</strong> If this evening ends with a question, myCHEF offers a full proposal coordination service: the ring arriving with dessert, photographer referral for a candid capture of the moment, moment coordination with the chef, and optional video documentation. Tell us in advance — we have done this many times and know how to make it perfect. See our full <a href="/blog/proposal-dinner-bali-private-chef" class="text-[#C5A028] hover:underline font-medium">proposal dinner page</a> for details.</p>`,
+    <p><strong>Proposal dinner add-on:</strong> If this evening ends with a question, myCHEF offers a full proposal coordination service: the ring arriving with dessert, photographer referral for a candid capture of the moment, moment coordination with the chef, and optional video documentation. Tell us in advance — we have done this many times and know how to make it perfect. See our full <a href="/blog/proposal-dinner-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">proposal dinner page</a> for details.</p>`,
   },
   {
     id: 'faq',

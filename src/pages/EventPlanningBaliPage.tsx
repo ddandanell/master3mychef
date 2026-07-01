@@ -9,7 +9,7 @@ const SECTIONS = [
     subtitle: 'Event Planning',
     title: 'Event Planning in Bali: Complete Guide for Weddings & Celebrations',
     body: `<p>Bali's infinity-pool villas and year-round weather make it a prime destination for hosted events. The key is understanding logistics: vendor coordination, cultural considerations, and weather contingencies.</p>
-    <p>This guide walks you through event types, venue selection, <a href="/catering" class="text-[#C5A028] hover:underline font-medium">catering</a>, staffing, budgeting, and timelines for weddings, corporate retreats, and private celebrations.</p>`,
+    <p>This guide walks you through event types, venue selection, <a href="/catering" class="text-[#7E6410] hover:underline font-medium">catering</a>, staffing, budgeting, and timelines for weddings, corporate retreats, and private celebrations.</p>`,
   },
   {
     id: 'event-types',
@@ -28,7 +28,7 @@ const SECTIONS = [
     subtitle: 'Venues',
     title: 'Venue Selection: Villa, Beach, Garden Setup',
     body: `<p><strong>Private Villa (Most Popular):</strong> Intimate, all-in-one accommodation + event space, kitchen access, privacy, flexible timing. Limited capacity (20–40 people comfortably). Weather risk (indoor backup required). Best for weddings under 50 guests, intimate celebrations, multi-day events.</p>
-    <p><strong>Beach Venue (Sunset Views):</strong> Photographic backdrop, flexible setup. Popular in <a href="/locations/seminyak" class="text-[#C5A028] hover:underline font-medium">Seminyak</a> and <a href="/locations/uluwatu" class="text-[#C5A028] hover:underline font-medium">Uluwatu</a>. Tide and weather contingencies, sand logistics, noise restrictions. Best for afternoon/evening celebrations, 20–100 guests.</p>
+    <p><strong>Beach Venue (Sunset Views):</strong> Photographic backdrop, flexible setup. Popular in <a href="/locations/seminyak" class="text-[#7E6410] hover:underline font-medium">Seminyak</a> and <a href="/locations/uluwatu" class="text-[#7E6410] hover:underline font-medium">Uluwatu</a>. Tide and weather contingencies, sand logistics, noise restrictions. Best for afternoon/evening celebrations, 20–100 guests.</p>
     <p><strong>Villa Garden + Pavilion (Optimal Balance):</strong> Garden ceremony/cocktails, pavilion for weather protection, villa kitchens for prep. Weather flexibility, intimate feel with event infrastructure. Best for 40–100 guests.</p>`,
   },
   {
@@ -42,7 +42,7 @@ const SECTIONS = [
       <li><strong>50–100 guests:</strong> 2–3 chefs, 4–6 service staff, 1–2 coordinators</li>
       <li><strong>100+ guests:</strong> 4–6 chefs, 8–12 service staff, 2–3 coordinators, bar manager</li>
     </ul>
-    <p><strong>Menu by Event Type:</strong> <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">Wedding fine dining</a> (3–5 courses, IDR 1.5M–3M/person), Corporate Retreat (casual breakfast/lunch, themed dinner, IDR 600K–1.2M/day), Birthday/Anniversary (personalized, IDR 1.2M–2.25M/person).</p>`,
+    <p><strong>Menu by Event Type:</strong> <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">Wedding fine dining</a> (3–5 courses, IDR 1.5M–3M/person), Corporate Retreat (casual breakfast/lunch, themed dinner, IDR 600K–1.2M/day), Birthday/Anniversary (personalized, IDR 1.2M–2.25M/person).</p>`,
   },
   {
     id: 'timeline',
@@ -64,7 +64,7 @@ const SECTIONS = [
     subtitle: 'Budget',
     title: 'Budget Planning & Cost Breakdown',
     body: `<p><strong>50-Person Event Budget Tiers:</strong></p>
-    <p><strong>Budget:</strong> <a href="/catering" class="text-[#C5A028] hover:underline font-medium">Catering</a> IDR 750K/person, Staff IDR 300K/person, Venue IDR 7.5M–30M, Coordinator IDR 4.5M, Decor IDR 4.5M, Music IDR 3M, Photography IDR 4.5M = IDR 53M–68M total for 50 guests.</p>
+    <p><strong>Budget:</strong> <a href="/catering" class="text-[#7E6410] hover:underline font-medium">Catering</a> IDR 750K/person, Staff IDR 300K/person, Venue IDR 7.5M–30M, Coordinator IDR 4.5M, Decor IDR 4.5M, Music IDR 3M, Photography IDR 4.5M = IDR 53M–68M total for 50 guests.</p>
     <p><strong>Mid-Range:</strong> Catering IDR 1.5M/person, Staff IDR 600K/person, Venue IDR 30M–75M, Coordinator IDR 9M, Decor IDR 15M, Music IDR 7.5M, Photography IDR 12M = IDR 103M–133M total.</p>
     <p><strong>Luxury:</strong> Catering IDR 3M/person, Staff IDR 1.2M/person, Venue IDR 75M+, Coordinator IDR 18M, Decor IDR 45M+, Music IDR 22.5M+, Photography IDR 30M+ = IDR 208M+ total.</p>
     <p><strong>Money-Saving Tips:</strong> Daytime events cost less than evening. Buffet or BBQ < plated service. Single menu option < multiple choices. Local ingredients < imported. Weekday < weekend. Group catering < à la carte.</p>`,

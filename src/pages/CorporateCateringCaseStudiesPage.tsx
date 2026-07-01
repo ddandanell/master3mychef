@@ -134,7 +134,7 @@ const SECTIONS = [
     body: 'Tell us your group size, dates, and event type — we\'ll send a tailored proposal within 4 hours.',
     primaryAction: {
       label: 'Get a Corporate Quote',
-      href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20corporate%20catering%20for%20our%20Bali%20event.',
+      href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20corporate%20catering%20for%20our%20Bali%20event.',
       external: true,
     },
     secondaryAction: { label: 'View Corporate Services', href: '/catering/corporate-catering' },

@@ -128,7 +128,7 @@ const SECTIONS = [
     body: 'Share your retreat dates, guest count, and dietary philosophy — we\'ll design a full program menu within 48 hours.',
     primaryAction: {
       label: 'Chat on WhatsApp',
-      href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20wellness%20retreat%20in%20Bali%20and%20need%20a%20catering%20team.',
+      href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20wellness%20retreat%20in%20Bali%20and%20need%20a%20catering%20team.',
     },
     secondaryAction: { label: 'Get a Quote', href: '/quote' },
   },

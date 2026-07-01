@@ -138,7 +138,7 @@ const SECTIONS = [
     type: 'cta' as const,
     title: 'Plan Your Wet Season Menu',
     body: "Durian, jackfruit, Highland strawberries — let's build a menu around what's actually in season.",
-    primaryAction: { label: 'Get a Menu Proposal', href: 'https://wa.me/6281291570014?text=Hi%20myCHEF%2C%20I%20want%20to%20plan%20a%20wet%20season%20dinner%20menu' },
+    primaryAction: { label: 'Get a Menu Proposal', href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%20want%20to%20plan%20a%20wet%20season%20dinner%20menu' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

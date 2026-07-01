@@ -106,7 +106,7 @@ const SECTIONS = [
     body: 'Tell us your villa, preferred class type, and group size — we\'ll confirm your chef and date within 2 hours.',
     primaryAction: {
       label: 'Book a Cooking Class',
-      href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20private%20cooking%20class%20at%20my%20Bali%20villa.'
+      href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20private%20cooking%20class%20at%20my%20Bali%20villa.'
     },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },

@@ -101,7 +101,7 @@ const SECTIONS = [
     subtitle: 'Ready to Book',
     title: 'Book Your Bali BBQ',
     body: 'Tell us your group, villa, and vibe — we\'ll send a BBQ menu and quote within 2 hours.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20organise%20a%20BBQ%20at%20my%20Bali%20villa.' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20organise%20a%20BBQ%20at%20my%20Bali%20villa.' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

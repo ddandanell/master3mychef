@@ -113,7 +113,7 @@ const SECTIONS = [
     subtitle: 'Get a Detailed Quote',
     title: 'Get Your Wedding Catering Quote',
     body: 'Share your guest count, date, and vision — we send a detailed proposal within 24 hours.',
-    primaryAction: { label: 'Request a Quote on WhatsApp', href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20wedding%20in%20Bali%20and%20would%20like%20a%20catering%20quote.' },
+    primaryAction: { label: 'Request a Quote on WhatsApp', href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20wedding%20in%20Bali%20and%20would%20like%20a%20catering%20quote.' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

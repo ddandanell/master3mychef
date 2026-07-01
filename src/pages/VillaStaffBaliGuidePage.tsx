@@ -125,7 +125,7 @@ const SECTIONS = [
     body: "Tell us which roles you need, your villa location, and start date — we'll present vetted candidates within 3 business days.",
     primaryAction: {
       label: 'Chat on WhatsApp',
-      href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27m%20looking%20to%20hire%20villa%20staff%20in%20Bali%20and%20would%20like%20to%20discuss%20options.',
+      href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27m%20looking%20to%20hire%20villa%20staff%20in%20Bali%20and%20would%20like%20to%20discuss%20options.',
     },
     secondaryAction: { label: 'View Staffing Page', href: '/staffing/villa-staff' },
   },

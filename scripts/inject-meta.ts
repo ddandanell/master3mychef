@@ -371,6 +371,26 @@ for (const entry of SITEMAP) {
   }
 }
 
+// Serve noindex utility pages that aren't in SITEMAP (they were 404 on direct access /
+// share / crawl, even though they work via client-side nav). injectMeta noindexes them
+// (they're in noindexPaths), and they're excluded from sitemap.xml (see generate-sitemap).
+const EXTRA_NOINDEX_PAGES = [
+  { path: '/book', title: 'Book myCHEF | Private Chef & Catering Bali', description: 'Book your private chef, villa catering, or event in Bali. Send your date, villa, and guest count for a fast quote.' },
+  { path: '/quote', title: 'Get a Quote | myCHEF Private Chef Bali', description: 'Get a fast, itemised quote for private chef, villa catering, or event staffing in Bali. No obligation.' },
+]
+for (const p of EXTRA_NOINDEX_PAGES) {
+  try {
+    const html = injectMeta(baseHtml, p.path, p.title, p.description)
+    const outDir = join(DIST, p.path)
+    mkdirSync(outDir, { recursive: true })
+    writeFileSync(join(outDir, 'index.html'), html)
+    success++
+  } catch (err) {
+    console.error(`  ✗ ${p.path}:`, err)
+    fail++
+  }
+}
+
 // Create 404.html with noindex
 const notFoundHtml = baseHtml.replace(
   /<meta name="robots" content=".*?"\s*\/?>/,

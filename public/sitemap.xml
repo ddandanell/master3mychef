@@ -1075,12 +1075,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mychef.id/calculator</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://mychef.id/help</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -1097,12 +1091,6 @@
     <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mychef.id/join-our-team</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mychef.id/help/getting-started</loc>
@@ -1328,6 +1316,12 @@
   </url>
   <url>
     <loc>https://mychef.id/blog/hotel-restaurant-chef-staffing</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/blog/indonesian-street-food-private-chef-bali</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

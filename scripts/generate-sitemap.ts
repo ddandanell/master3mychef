@@ -38,9 +38,13 @@ const URLS: { path: string; priority: number; changefreq: string; lastmod?: stri
   })),
 ];
 
+// Noindex utility pages must NOT be in the sitemap (§2.2.2 — sitemap = indexable URLs only).
+// They are still served (inject-meta) with a noindex tag; they just don't belong here.
+const NOINDEX_PATHS = new Set(['/404', '/book', '/quote', '/calculator', '/join-our-team']);
+
 // Fjern redirects fra sitemap
 const REDIRECT_PATHS = new Set(REDIRECTS.map(r => r.from));
-const FILTERED_URLS = URLS.filter(url => !REDIRECT_PATHS.has(url.path));
+const FILTERED_URLS = URLS.filter(url => !REDIRECT_PATHS.has(url.path) && !NOINDEX_PATHS.has(url.path));
 
 // Deduplicate by path (sitemap already includes journal posts, but this ensures no duplicates)
 const seen = new Set<string>();

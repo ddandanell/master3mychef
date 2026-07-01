@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { hasLocationPage } from '@/data/siteArchitecture'
 import { MessageCircle, Check, MapPin, ChevronRight, Star } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -369,7 +370,7 @@ export default function PrivateChefBaliPage() {
             Bali-Wide. Your Villa.
           </h2>
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {LOCATIONS.map((loc) => {
+            {LOCATIONS.filter((loc) => hasLocationPage(loc.toLowerCase().replace(/\s+/g, '-'))).map((loc) => {
               const slug = loc.toLowerCase().replace(/\s+/g, '-')
               return (
                 <Link

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MapPin, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from './SeoHead'
-import { LOCATIONS } from '@/data/siteArchitecture'
+import { LOCATIONS, hasLocationPage } from '@/data/siteArchitecture'
 import { PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
 import Breadcrumb from './shared/Breadcrumb'
 
@@ -63,7 +63,9 @@ const LOCATION_DETAILS = [
 
 export default function LocationsHubPage() {
   const canonical = `${SITE}/locations`
-  const locations = Object.values(LOCATIONS)
+  // Only locations that have a real /locations/<slug> page (LOCATIONS holds more
+  // entries than there are pages — linking the rest would 404).
+  const locations = Object.values(LOCATIONS).filter((l) => hasLocationPage(l.slug))
 
   return (
     <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">

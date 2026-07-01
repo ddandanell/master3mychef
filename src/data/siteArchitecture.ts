@@ -486,6 +486,18 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
   },
 }
 
+/**
+ * Slugs that have a REAL /locations/<slug> page (routed in App.tsx). LOCATIONS data
+ * holds more entries than there are pages, so link generators MUST gate on this set
+ * or they emit /locations/<slug> links that 404 (crawl waste). Keep in sync with
+ * the /locations routes in App.tsx.
+ */
+export const LOCATION_PAGE_SLUGS: ReadonlySet<string> = new Set([
+  'bukit', 'canggu', 'denpasar', 'jakarta', 'jimbaran', 'kuta',
+  'nusa-dua', 'pererenan', 'sanur', 'seminyak', 'ubud', 'uluwatu',
+])
+export const hasLocationPage = (slug: string): boolean => LOCATION_PAGE_SLUGS.has(slug)
+
 /* -----------------------------------------------------------------------
  * JOURNAL (HELPERS REMOVED FOR BREVITY IN EXPORT)
  * --------------------------------------------------------------------- */

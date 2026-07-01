@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { Link } from 'react-router-dom'
 import { Instagram, MessageCircle, LogIn, MapPin, Mail, ChefHat, ChevronDown } from 'lucide-react'
-import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA } from '@/data/siteArchitecture'
+import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA, hasLocationPage } from '@/data/siteArchitecture'
 
 // Top Bali locations shown by default — chosen by traffic + villa density
 const TOP_LOCATION_SLUGS = ['seminyak', 'canggu', 'uluwatu', 'ubud', 'nusa-dua']
@@ -248,7 +248,7 @@ export default function Footer() {
                   All Areas
                 </Link>
               </li>
-              {visibleLocations.map((loc) => loc && (
+              {visibleLocations.filter((loc): loc is NonNullable<typeof loc> => !!loc && hasLocationPage(loc.slug)).map((loc) => (
                 <li key={loc.slug}>
                   <Link
                     to={`/locations/${loc.slug}`}

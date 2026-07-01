@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPrivateChefArea, PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
+import { hasLocationPage } from '@/data/siteArchitecture'
 import { trackWhatsAppClick } from '@/lib/analytics'
 
 const SITE = 'https://mychef.id'
@@ -618,7 +619,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               { label: 'Villa Catering', href: '/catering', icon: Utensils },
               { label: 'Events & Weddings', href: '/events', icon: Sparkles },
               { label: 'Staffing', href: '/staffing', icon: Users },
-              { label: 'Private Chef Bali', href: '/private-chef-bali', icon: ChefHat },
+              { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', icon: ChefHat },
               { label: 'Pricing Guide', href: '/pricing', icon: Check },
               { label: 'Book myCHEF', href: '/book', icon: CalendarCheck },
               { label: 'Get a Quote', href: '/quote', icon: MessageCircle },
@@ -640,21 +641,23 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* ── 10b. CROSS-LINK TO LOCATION PAGE ───────────────────────────────── */}
-      <section className="px-6 py-16 md:px-10 bg-[#FAFAF8]">
-        <div className="max-w-[1160px] mx-auto text-center">
-          <h3 className="font-playfair text-2xl mb-4">Explore {area.name} Location Guide</h3>
-          <p className="text-[#4A4745] mb-6 max-w-[640px] mx-auto leading-7">
-            See detailed neighbourhood coverage, local services, and area-specific pricing for private chef dining in {area.name}.
-          </p>
-          <Link
-            to={`/locations/${area.slug}`}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all"
-          >
-            View {area.name} Location Page <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
+      {/* ── 10b. CROSS-LINK TO LOCATION PAGE (only if a real /locations page exists) ── */}
+      {hasLocationPage(area.slug) && (
+        <section className="px-6 py-16 md:px-10 bg-[#FAFAF8]">
+          <div className="max-w-[1160px] mx-auto text-center">
+            <h3 className="font-playfair text-2xl mb-4">Explore {area.name} Location Guide</h3>
+            <p className="text-[#4A4745] mb-6 max-w-[640px] mx-auto leading-7">
+              See detailed neighbourhood coverage, local services, and area-specific pricing for private chef dining in {area.name}.
+            </p>
+            <Link
+              to={`/locations/${area.slug}`}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all"
+            >
+              View {area.name} Location Page <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* ── 11. FINAL CTA ────────────────────────────────────────────────────── */}
       <section className="px-6 py-24 md:px-10 bg-[#1A1A1A] text-white text-center">

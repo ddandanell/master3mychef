@@ -32,7 +32,7 @@ export default function Footer() {
               </h3>
             </Link>
             <p className="text-base text-white/70 leading-relaxed mb-6">
-              Private chef, villa catering, and full-service events across Bali & Dubai. Same-day WhatsApp confirmation.
+              Private chef, villa catering, and full-service events across Bali & Jakarta. Same-day WhatsApp confirmation.
             </p>
             <div className="flex items-center gap-4">
               <a

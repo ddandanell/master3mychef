@@ -129,7 +129,7 @@ const SECTIONS = [
     subtitle: 'Get a Custom Package',
     title: 'Plan Your Bali Bachelor Party',
     body: 'Tell us your villa, group size, and date — we\'ll send a custom package within 2 hours.',
-    primaryAction: { label: 'Message Us on WhatsApp', href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20bachelor%20party%20at%20a%20Bali%20villa%20and%20need%20catering.', external: true },
+    primaryAction: { label: 'Message Us on WhatsApp', href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20bachelor%20party%20at%20a%20Bali%20villa%20and%20need%20catering.', external: true },
     secondaryAction: { label: 'Get a Quote', href: '/quote' },
   },
 ]

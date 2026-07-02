@@ -53,7 +53,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Book Your Chef',
     title: 'Reserve a Private Chef in Pererenan',
     body: 'Tell us your villa address, dates, guest count, and whether you want a single dinner, a multi-day arrangement, or retreat meal service. We match you with the right chef.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

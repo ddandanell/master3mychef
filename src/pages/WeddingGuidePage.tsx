@@ -227,7 +227,7 @@ export default function WeddingGuidePage() {
           <h2 className="text-3xl font-light mb-6">Let's plan your wedding</h2>
           <p className="text-white/70 mb-8">Message us with your wedding date and venue details. We'll send a full proposal within 24 hours. Or <Link to="/pricing" className="text-[#C5A028] hover:underline">view our pricing</Link> first.</p>
           <a
-            href="https://wa.me/628113803488?text=I%20want%20to%20plan%20a%20wedding%20at%20my%20villa..."
+            href="https://wa.me/62089674072020?text=I%20want%20to%20plan%20a%20wedding%20at%20my%20villa..."
             className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5" aria-label="Start planning your wedding"
           >
             Start Planning

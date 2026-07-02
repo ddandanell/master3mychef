@@ -111,7 +111,7 @@ const SECTIONS = [
     body: 'Tell us your guest count, date, and villa — we will send a bespoke menu proposal and quote within 2 hours.',
     primaryAction: {
       label: 'Plan Your Dinner Party',
-      href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20plan%20a%20private%20dinner%20party%20at%20my%20Bali%20villa.',
+      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20plan%20a%20private%20dinner%20party%20at%20my%20Bali%20villa.',
       external: true,
     },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },

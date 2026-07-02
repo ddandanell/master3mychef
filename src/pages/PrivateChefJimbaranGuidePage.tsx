@@ -65,7 +65,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Book Your Chef',
     title: 'Reserve a Private Chef in Jimbaran',
     body: 'Tell us your villa, dates, group size, and whether you want a seafood spread, BBQ, or tasting menu. We match you with the right Jimbaran chef.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

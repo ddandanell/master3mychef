@@ -77,7 +77,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Book a Chef',
     title: 'Ready to Book a Private Chef?',
     body: 'Tell us your villa, dates, and group size. We match you with the right chef for your occasion — from a simple family dinner to a full fine-dining tasting menu.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

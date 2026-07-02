@@ -61,7 +61,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Start a Placement',
     title: 'Find the Right Chef Placement for Your Household or Villa',
     body: 'Tell us your location, household size, meal requirements, and preferred arrangement. We match you with a shortlist of appropriate chefs and guide the full placement process.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020' },
     secondaryAction: { label: 'Staffing Page', href: '/staffing' },
   },
 ]

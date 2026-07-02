@@ -4,7 +4,7 @@ import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from 
 import { SERVICES } from '@/data/sitemap'
 
 const SITE = 'https://mychef.id'
-const WA = '628113803488'
+const WA = '62089674072020'
 
 export default function ServicePage() {
   const { pathname } = useLocation()
@@ -44,7 +44,7 @@ export default function ServicePage() {
     },
     {
       question: `How do I book ${service.name} with myCHEF?`,
-      answer: `WhatsApp us at +62 811-3803-488 with your date, villa location, guest count, and any dietary requirements. We respond within 1 hour and confirm same-day.`,
+      answer: `WhatsApp us at +62089674072020 with your date, villa location, guest count, and any dietary requirements. We respond within 1 hour and confirm same-day.`,
     },
     {
       question: `Does myCHEF handle grocery shopping for ${service.name}?`,

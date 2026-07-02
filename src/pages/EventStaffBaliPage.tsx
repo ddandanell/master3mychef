@@ -67,7 +67,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Book Event Staff',
     title: 'Book Event Staff for Your Bali Villa Event',
     body: 'Tell us your event date, guest count, service format, and whether you also need a private chef. We build the right team for your event.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020' },
     secondaryAction: { label: 'View Large Group Catering', href: '/blog/large-group-catering-bali' },
   },
 ]

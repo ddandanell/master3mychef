@@ -114,7 +114,7 @@ const SECTIONS = [
     body: "Message us with your address, date, and group size — we'll confirm availability and send a menu within 2 hours.",
     primaryAction: {
       label: 'Book Your Jakarta Chef',
-      href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27m%20in%20Jakarta%20and%20looking%20for%20a%20private%20chef.',
+      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27m%20in%20Jakarta%20and%20looking%20for%20a%20private%20chef.',
     },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },

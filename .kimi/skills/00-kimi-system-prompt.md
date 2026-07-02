@@ -34,7 +34,7 @@ Postbuild: `validate-critical-assets.ts` → `inject-meta.ts` → prerender
 
 **Sitemap source of truth:** `src/data/sitemap.ts` (SITEMAP array) — drives both `public/sitemap.xml` and static HTML generation via `inject-meta.ts`.
 
-**WhatsApp (single conversion action):** `wa.me/628113803488` (display: `+62 811-3803-488`)
+**WhatsApp (single conversion action):** `wa.me/62089674072020` (display: `+62089674072020`)
 
 **Deposit standard:** 25% deposit (NOT 50%)
 

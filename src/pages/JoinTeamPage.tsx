@@ -24,7 +24,7 @@ const JOB_POSTING_SCHEMA = {
   employmentType: 'CONTRACTOR',
 }
 
-const WA = 628113803488
+const WA = 62089674072020
 
 const ROLES = [
   {

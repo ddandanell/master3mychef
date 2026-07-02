@@ -115,7 +115,7 @@ const SECTIONS = [
     subtitle: 'Book Your Evening',
     title: 'Create Your Romantic Dinner',
     body: 'Tell us your villa, date, and any special touches — we handle everything else.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20romantic%20private%20chef%20dinner%20at%20my%20Bali%20villa.' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20romantic%20private%20chef%20dinner%20at%20my%20Bali%20villa.' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

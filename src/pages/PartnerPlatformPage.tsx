@@ -18,7 +18,7 @@ import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 import OptimizedImage from '@/components/OptimizedImage'
-const WA = 628113803488
+const WA = 62089674072020
 const SITE = 'https://mychef.id'
 
 // /partner-platform — the deep "why partner with us" page for villa groups,

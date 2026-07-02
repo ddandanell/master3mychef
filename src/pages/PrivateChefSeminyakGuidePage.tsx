@@ -63,7 +63,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Book Your Chef',
     title: 'Reserve a Private Chef in Seminyak',
     body: 'Tell us your villa, dates, occasion, and cuisine preferences. We will match you with the right Seminyak chef.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020' },
     secondaryAction: { label: 'View Fine Dining', href: '/fine-dining' },
   },
 ]

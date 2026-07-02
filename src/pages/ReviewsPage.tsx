@@ -17,7 +17,7 @@ interface Review {
 }
 
 const SITE = 'https://mychef.id'
-const WHATSAPP_URL = 'https://wa.me/628113803488'
+const WHATSAPP_URL = 'https://wa.me/62089674072020'
 
 
 const STATS = [

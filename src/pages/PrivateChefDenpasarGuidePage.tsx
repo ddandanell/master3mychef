@@ -64,7 +64,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Book Your Chef',
     title: 'Reserve a Private Chef in Denpasar',
     body: 'Corporate team dinner, official reception, executive household, or private celebration — tell us your venue, date, and guest count. We match you with the right Denpasar chef.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

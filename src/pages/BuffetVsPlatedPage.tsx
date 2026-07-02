@@ -153,7 +153,7 @@ const SECTIONS = [
     subtitle: 'Get Expert Advice',
     title: 'Not Sure Which Format Fits Your Event? Ask Us.',
     body: "Tell us your group size, occasion, and budget — we will recommend the right format and send a sample menu within a few hours.",
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%20want%20advice%20on%20buffet%20vs%20plated%20service%20for%20my%20event' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%20want%20advice%20on%20buffet%20vs%20plated%20service%20for%20my%20event' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

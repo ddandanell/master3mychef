@@ -300,7 +300,7 @@ export default function LocationsHubPage() {
           <h2 className="font-playfair text-3xl md:text-5xl mb-4">Wherever Your Villa Is</h2>
           <p className="text-white/[60%] mb-8">We have chefs across Bali. Message us with your location and we will confirm availability within the hour.</p>
           <a
-            href={`https://wa.me/628113803488?text=${encodeURIComponent('Hi myCHEF, I would like to book a private chef. My villa is in: ')}`}
+            href={`https://wa.me/62089674072020?text=${encodeURIComponent('Hi myCHEF, I would like to book a private chef. My villa is in: ')}`}
             target="_blank"
             rel="noopener noreferrer"
             data-source="locations-hub-cta"

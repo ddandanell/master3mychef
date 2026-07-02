@@ -7,15 +7,15 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // PHONE / WHATSAPP — SINGLE SOURCE OF TRUTH
 // To change the number site-wide, run: node scripts/change-phone.js <new>
-// e.g.  node scripts/change-phone.js 628113803488
+// e.g.  node scripts/change-phone.js 62089674072020
 // ─────────────────────────────────────────────────────────────────────────────
 export const PHONE = {
-  /** Digits only — used in wa.me links and tel: href   e.g. 628113803488 */
-  digits:   '628113803488',
-  /** Display format with spaces                        e.g. +62 811-3803-488 */
-  display:  '+62 811-3803-488',
-  /** Hyphenated — used in schema.org telephone field   e.g. +62-811-3803-488 */
-  schema:   '+62-811-3803-488',
+  /** Digits only — used in wa.me links and tel: href   e.g. 62089674072020 */
+  digits:   '62089674072020',
+  /** Display format                                    e.g. +62089674072020 */
+  display:  '+62089674072020',
+  /** Schema.org telephone field                        e.g. +62089674072020 */
+  schema:   '+62089674072020',
 }
 
 export const SITE = {

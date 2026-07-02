@@ -18,7 +18,7 @@ interface FAQCategory {
 }
 
 const SITE = 'https://mychef.id'
-const WHATSAPP_URL = 'https://wa.me/628113803488'
+const WHATSAPP_URL = 'https://wa.me/62089674072020'
 
 const QUICK_FACTS = [
   { label: 'Reply time', value: 'Within 1 hour', icon: Clock3 },
@@ -36,7 +36,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     items: [
       {
         q: 'How do I book a private chef in Bali?',
-        a: 'Message us on WhatsApp at +62 811-3803-488 with your date, villa area, guest count and preferred service. We usually respond within 1 hour and confirm availability within 24 hours.',
+        a: 'Message us on WhatsApp at +62089674072020 with your date, villa area, guest count and preferred service. We usually respond within 1 hour and confirm availability within 24 hours.',
       },
       {
         q: 'How far in advance should I book?',
@@ -235,7 +235,7 @@ export default function FAQPage() {
             </div>
             <div className="mt-6 rounded-2xl bg-[#1A1A1A] p-5 text-white">
               <p className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-2">Need a fast answer?</p>
-              <p className="text-sm text-white/[75%] leading-relaxed">WhatsApp +62 811-3803-488 and our team will usually reply within 1 hour.</p>
+              <p className="text-sm text-white/[75%] leading-relaxed">WhatsApp +62089674072020 and our team will usually reply within 1 hour.</p>
             </div>
           </div>
         </div>
@@ -283,7 +283,7 @@ export default function FAQPage() {
                 className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
               >
                 <MessageCircle className="h-4 w-4" />
-                Message +62 811-3803-488
+                Message +62089674072020
               </a>
               <Link to="/pricing" className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 View pricing

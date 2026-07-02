@@ -5,7 +5,7 @@ import { MENUS, type Menu } from '@/data/siteArchitecture'
 import TrustStrip from '@/components/shared/TrustStrip'
 
 const SITE = 'https://mychef.id'
-const WA = '628113803488'
+const WA = '62089674072020'
 
 const FEATURED_MENUS = [
   {

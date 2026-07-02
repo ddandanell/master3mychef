@@ -19,7 +19,7 @@ authority, and it drives Maps + local-pack visibility (where your buyers actuall
 
 - [ ] Create/claim the Google Business Profile for myCHEF (category: **Personal Chef** / **Caterer**).
 - [ ] Verify it (postcard/phone/video as Google offers).
-- [ ] NAP consistency: use the EXACT same business name, the WhatsApp/phone `+62 811-3803-488`, and service-area (Bali / your regencies) everywhere.
+- [ ] NAP consistency: use the EXACT same business name, the WhatsApp/phone `+62089674072020`, and service-area (Bali / your registries) everywhere.
 - [ ] Add: website `https://mychef.id`, services, 10–20 real photos (food, chefs, villa setups), hours.
 - [ ] Turn on messaging; add the WhatsApp link.
 - [ ] Get **5–10 real reviews** from past clients (message happy customers a direct review link). Reviews = ranking + trust.

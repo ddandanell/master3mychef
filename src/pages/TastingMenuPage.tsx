@@ -18,7 +18,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WA = 628113803488
+const WA = 62089674072020
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a private tasting menu in Bali', intent: 'pricing and availability' })
 
 const ACTS = [

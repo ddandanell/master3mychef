@@ -6,7 +6,7 @@
  *   node scripts/change-phone.js <new-digits>
  *
  * Example:
- *   node scripts/change-phone.js 628113803488
+ *   node scripts/change-phone.js 62089674072020
  *
  * The script:
  *  1. Reads the current number from src/data/siteArchitecture.ts  (PHONE.digits)
@@ -44,7 +44,7 @@ function variants(digits) {
     display = `+${cc} ${net} ${sub}`
     schema  = `+${cc}-${net}-${sub}`
   } else if (raw.startsWith('62')) {
-    // Indonesia: +62 811-3803-488
+    // Indonesia: +62089674072020
     const cc   = raw.slice(0, 2)
     const rest = raw.slice(2)
     display = `+${cc} ${rest.slice(0,3)}-${rest.slice(3,7)}-${rest.slice(7)}`
@@ -87,7 +87,7 @@ function replaceAll(content, from, to) {
 
 const newDigits = process.argv[2]
 if (!newDigits || !/^\d{10,15}$/.test(newDigits)) {
-  console.error('Usage: node scripts/change-phone.js <digits>\nExample: node scripts/change-phone.js 628113803488')
+  console.error('Usage: node scripts/change-phone.js <digits>\nExample: node scripts/change-phone.js 62089674072020')
   process.exit(1)
 }
 

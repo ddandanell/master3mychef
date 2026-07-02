@@ -8,7 +8,7 @@
 // Usage:
 //   const WA_LINK = buildWhatsAppUrl({ serviceName: 'BBQ catering in Bali', intent: 'menu options and pricing' })
 
-export const WHATSAPP_NUMBER = '628113803488'
+export const WHATSAPP_NUMBER = '62089674072020'
 
 export interface WhatsAppEnquiry {
   /** What the visitor is interested in, e.g. "BBQ catering in Bali". */

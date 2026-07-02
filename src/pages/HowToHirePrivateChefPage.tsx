@@ -3,7 +3,7 @@ import { breadcrumbSchema, faqPageSchema, howToSchema } from '@/components/SeoHe
 import { CheckCircle, Clock, Users, Star, Shield, MessageCircle } from 'lucide-react'
 
 const CANONICAL = 'https://mychef.id/blog/how-to-hire-private-chef-bali-complete-guide'
-const WA_LINK = 'https://wa.me/628113803488?text=' + encodeURIComponent('Hi myCHEF, I\'d like to hire a private chef in Bali. Can you help me?')
+const WA_LINK = 'https://wa.me/62089674072020?text=' + encodeURIComponent('Hi myCHEF, I\'d like to hire a private chef in Bali. Can you help me?')
 
 const FAQS = [
   {

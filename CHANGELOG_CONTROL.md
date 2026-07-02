@@ -2,6 +2,11 @@
 
 _One line per shipped change. Newest first. SHA = production commit on `main`._
 
+## 2026-07-02 — Phone/WhatsApp number updated sitewide
+- Changed canonical phone/WhatsApp number from `+62 811-3803-488` to `+62089674072020` across all production source files (`src/`, `index.html`, `public/llms.txt`), legal/contact docs, project skills, and AI agent prompts.
+- Ran `node scripts/change-phone.js 62089674072020` (210 replacements), then normalized display/schema to the exact E.164 format provided.
+- `tsc -b` green.
+
 ## 2026-07-01 — GSC "perfection" pass (post-P0)
 - **Internal linking:** built the real link graph (now possible post-prerender). Orphans **39→0**, pages at depth ≥4 **22→0** (all ≤3 clicks). Added complete area index to `/locations`, article index to `/journal`, footer link for `/certified-partner`.
 - **Broken internal links: 82→0.** Gated all `/locations/[area]` links to real pages (new `LOCATION_PAGE_SLUGS`/`hasLocationPage`), fixed `/services/*` paths, and 301-redirected ~60 dead links to live pages (2 passes).

@@ -117,7 +117,7 @@ const SECTIONS = [
     body: 'Tell us your villa location and preferred date — we\'ll confirm availability and send the setup details within the hour.',
     primaryAction: {
       label: 'Book on WhatsApp',
-      href: 'https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20floating%20breakfast%20in%20Bali.',
+      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20floating%20breakfast%20in%20Bali.',
       external: true,
     },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },

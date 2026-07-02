@@ -670,8 +670,8 @@ export default function EventsMainPage() {
             <Link to="/recommended-services" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Not sure? Find the right format →
             </Link>
-            <a href="tel:+628113803488" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Call +62 811-3803-488
+            <a href="tel:+62089674072020" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Call +62089674072020
             </a>
           </div>
         </div>
@@ -949,10 +949,10 @@ export default function EventsMainPage() {
               <MessageCircle className="w-4 h-4" /> Plan Your Event — Reply in 1 Hour
             </a>
             <a
-              href="tel:+628113803488"
+              href="tel:+62089674072020"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <Phone className="w-4 h-4" /> Call +62 811-3803-488
+              <Phone className="w-4 h-4" /> Call +62089674072020
             </a>
           </div>
         </div>
@@ -1219,10 +1219,10 @@ export default function EventsMainPage() {
               <MessageCircle className="w-4 h-4" /> Plan Your Event — Reply in 1 Hour
             </a>
             <a
-              href="tel:+628113803488"
+              href="tel:+62089674072020"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <Phone className="w-4 h-4" /> Call +62 811-3803-488
+              <Phone className="w-4 h-4" /> Call +62089674072020
             </a>
           </div>
         </div>

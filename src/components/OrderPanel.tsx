@@ -6,7 +6,7 @@ import { X, ChevronLeft, MessageCircle, Check } from 'lucide-react'
 // Submission builds a wa.me/...?text=... message containing the full request,
 // same backend-less pattern as the main /quote funnel.
 
-const WA = '628113803488'
+const WA = '62089674072020'
 
 interface OrderPanelProps {
   open: boolean

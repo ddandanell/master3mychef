@@ -11,7 +11,7 @@ Thank you for reaching out to myCHEF about your upcoming plans in Bali.
 We'd be happy to confirm availability for your preferred date and help you choose the best option for your villa dining, catering, or event. If helpful, we can also send you a sample menu and a few tailored recommendations based on your group size and occasion.
 
 You can reply to this email, or continue the conversation directly on WhatsApp here:
-https://wa.me/628113803488
+https://wa.me/62089674072020
 
 Warm regards,  
 myCHEF Bali  
@@ -34,7 +34,7 @@ As a thank you, we'd also be happy to offer you a loyalty discount on your next 
 
 Warm regards,  
 myCHEF Bali  
-https://wa.me/628113803488
+https://wa.me/62089674072020
 
 ## 3. Re-engagement
 **Send:** 30 days after the last booking  
@@ -49,7 +49,7 @@ As a returning guest, we'd be happy to offer you a 10% loyalty discount on your 
 If you'd like, we can suggest a new menu, help plan a different format, or put together something special based on your last event.
 
 Message us anytime on WhatsApp to start planning:
-https://wa.me/628113803488
+https://wa.me/62089674072020
 
 Warm regards,  
 myCHEF Bali  

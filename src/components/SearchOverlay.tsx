@@ -200,7 +200,7 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
         <div className="p-6 border-t border-white/10 bg-white/[0.02] text-center">
           <p className="text-[10px] text-white/55 uppercase tracking-widest mb-4">Immediate Support</p>
           <a
-            href="https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%20have%20a%20question..."
+            href="https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%20have%20a%20question..."
             target="_blank"
             rel="noopener noreferrer"
             data-source="search-overlay-cta"

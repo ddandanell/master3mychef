@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { MessageCircle } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema } from '@/components/SeoHead'
+import PriceDisclaimer from '@/components/PriceDisclaimer'
 
 const SOFTWARE_APPLICATION_SCHEMA = {
   '@context': 'https://schema.org',
@@ -118,9 +119,12 @@ function PricingCalculator() {
             <span className="text-[#C5A028]">IDR {total.toLocaleString()}</span>
           </div>
           <p className="text-xs text-[#4A4745] mt-2">
-            * This is an estimate. Final pricing depends on menu customization, 
+            * This is an estimate. Final pricing depends on menu customization,
             location, and specific requirements. Contact us for a precise quote.
           </p>
+          <div className="mt-4">
+            <PriceDisclaimer />
+          </div>
         </div>
 
         <a

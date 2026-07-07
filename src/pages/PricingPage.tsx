@@ -3,6 +3,7 @@ import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, aggregateRatingSchema, serviceWithOfferSchema } from '@/components/SeoHead'
 import PricingCalculator from '@/components/PricingCalculator'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
+import PriceDisclaimer from '@/components/PriceDisclaimer'
 
 const PRICING_OFFER_SCHEMA = {
   '@context': 'https://schema.org',
@@ -316,7 +317,14 @@ const SECTIONS = [
     title: 'Build Your Estimate in Seconds',
     body: 'Choose a service type, guest range, duration and any add-ons to see a live starting price before you message us on WhatsApp.',
     bg: 'accent' as const,
-    render: <PricingCalculator hideHeader />,
+    render: (
+      <>
+        <PricingCalculator hideHeader />
+        <div className="mt-6 max-w-[600px] mx-auto">
+          <PriceDisclaimer />
+        </div>
+      </>
+    ),
   },
   {
     id: 'what-affects-quote',

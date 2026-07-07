@@ -3,6 +3,7 @@ import { ArrowRight, MessageCircle, Check } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { MENUS, type Menu } from '@/data/siteArchitecture'
 import TrustStrip from '@/components/shared/TrustStrip'
+import PriceDisclaimer from './PriceDisclaimer'
 
 const SITE = 'https://mychef.id'
 const WA = '628113803488'
@@ -158,6 +159,9 @@ export default function MenuPage() {
           <div className="mb-10">
             <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Most Booked</p>
             <h2 className="text-3xl md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>Villa Catering Menus</h2>
+            <div className="mt-4">
+              <PriceDisclaimer />
+            </div>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {FEATURED_MENUS.map((menu) => {
@@ -199,6 +203,9 @@ export default function MenuPage() {
                 </article>
               )
             })}
+          </div>
+          <div className="mt-8">
+            <PriceDisclaimer />
           </div>
         </section>
 
@@ -245,7 +252,10 @@ export default function MenuPage() {
         <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Menu</p>
         <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-6">{menu.name}</h1>
         <p className="text-lg text-[#4A4745] max-w-[640px] mb-4">{menu.description}</p>
-        <p className="text-[#C5A028] font-semibold mb-8">{MENU_PRICE_GUIDE[menu.slug] || 'Custom pricing available on request'}</p>
+        <p className="text-[#C5A028] font-semibold mb-3">{MENU_PRICE_GUIDE[menu.slug] || 'Custom pricing available on request'}</p>
+        <div className="mb-8">
+          <PriceDisclaimer />
+        </div>
         <div className="flex flex-col sm:flex-row gap-4">
           <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="menu-detail" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp

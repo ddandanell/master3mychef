@@ -26,6 +26,7 @@ import SeoHead, {
 import FAQAccordion from './catering/FAQAccordion'
 import { Button } from '@/components/ui/button'
 import Breadcrumb from '@/components/shared/Breadcrumb'
+import PriceDisclaimer from './PriceDisclaimer'
 
 const SITE = 'https://mychef.id'
 const WA = '628113803488'
@@ -251,6 +252,9 @@ export default function PremiumPage({
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
+            </div>
+            <div className="mt-6">
+              <PriceDisclaimer />
             </div>
           </div>
         </div>
@@ -637,6 +641,9 @@ export default function PremiumPage({
                 Book Online
               </Link>
             </Button>
+          </div>
+          <div className="mt-6 flex justify-center">
+            <PriceDisclaimer className="text-white/[60%]" />
           </div>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/[40%]">
             <a href={`tel:${WA}`} className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">

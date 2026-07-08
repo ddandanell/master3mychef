@@ -7,7 +7,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import { ContactRiskReversal } from '@/components/shared'
 import { trackWhatsAppClick } from '@/lib/analytics'
 
-const WA = 628113803488
+const WA = 6289674072020
 
 interface Concierge {
   id: 'sofia' | 'daniel' | 'olivia' | 'marco'
@@ -22,10 +22,10 @@ interface Concierge {
 }
 
 const FAQS = [
-  { q: 'How do I contact myCHEF?', a: 'The fastest way is WhatsApp at +62 811-3803-488. You can also email indonesia@mychef.id or call the same number. We usually reply within minutes on WhatsApp.' },
+  { q: 'How do I contact myCHEF?', a: 'The fastest way is WhatsApp at +62 896-7407-2020. You can also email indonesia@mychef.id or call the same number. We usually reply within minutes on WhatsApp.' },
   { q: 'Who is Sofia and what does she handle?', a: 'Sofia is our Fine Dining Concierge. She handles tasting-menu reservations, dietary preferences, wine pairings, and fine-dining experiences at your villa.' },
   { q: 'How quickly will myCHEF respond?', a: 'We typically reply within minutes on WhatsApp. For email enquiries, expect a response within a few hours during business hours.' },
-  { q: 'Can I call instead of using WhatsApp?', a: 'Yes. You can call +62 811-3803-488 directly. Our lines are open daily from 08:00 to 22:00 WITA.' },
+  { q: 'Can I call instead of using WhatsApp?', a: 'Yes. You can call +62 896-7407-2020 directly. Our lines are open daily from 08:00 to 22:00 WITA.' },
   { q: 'What information should I include in my first message?', a: 'Let us know your name, the service you are interested in, your villa or location in Bali, group size, and preferred date. The more detail, the faster we can help.' },
   { q: 'Do you have an office I can visit in Bali?', a: 'Yes. Our office is at Jl. Tukad Barito Timur III No.16, Denpasar Selatan, Bali. We serve all of Bali including Seminyak, Canggu, Ubud, Uluwatu, and Sanur.' },
   { q: 'Can I email myCHEF instead?', a: 'Absolutely. Send detailed proposals or longer enquiries to indonesia@mychef.id and we will route them to the right concierge.' },
@@ -239,9 +239,9 @@ export default function ContactPage() {
       {/* ── DIRECT CONTACT STRIP ──────────────────────────────────────── */}
       <section className="bg-white px-6 md:px-12 py-16 md:py-20 border-y border-[#E5E3E0]">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-          <ContactItem icon={MessageCircle} label="WhatsApp" value="+62 811-3803-488" href={`https://wa.me/${WA}`} hint="Fastest — typically within minutes" dataSource="contact-info-whatsapp" />
+          <ContactItem icon={MessageCircle} label="WhatsApp" value="+62 896-7407-2020" href={`https://wa.me/${WA}`} hint="Fastest — typically within minutes" dataSource="contact-info-whatsapp" />
           <ContactItem icon={Mail} label="Email" value="indonesia@mychef.id" href="mailto:indonesia@mychef.id" hint="For detailed proposals" />
-          <ContactItem icon={Phone} label="Phone" value="+62 811-3803-488" href="tel:+628113803488" hint="08:00 – 22:00 WITA, daily" />
+          <ContactItem icon={Phone} label="Phone" value="+62 896-7407-2020" href="tel:+6289674072020" hint="08:00 – 22:00 WITA, daily" />
           <ContactItem icon={MapPin} label="Office" value="Jl. Tukad Barito Timur III No.16, Denpasar Selatan, Bali" hint="Serving all of Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur" />
         </div>
       </section>

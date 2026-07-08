@@ -5,7 +5,7 @@ import FAQAccordion from './catering/FAQAccordion'
 import { getSubPage, getPillarBySlug, type Pillar, type SubPage } from '@/data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
-const WA = '628113803488'
+const WA = '6289674072020'
 
 function getWhatsAppText(pillar: Pillar, subPage: SubPage): string {
   const base = `Hi myCHEF, I'm interested in ${subPage.label.toLowerCase()}.`

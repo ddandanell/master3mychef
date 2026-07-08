@@ -64,7 +64,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Book Your Chef',
     title: 'Reserve a Private Chef in Sanur',
     body: 'Tell us your villa, dates, number of adults and children, and what kind of dining experience you want. We match you with the right Sanur chef.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/6289674072020' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

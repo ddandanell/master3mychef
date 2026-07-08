@@ -261,7 +261,7 @@ export default function TermsPage() {
                     <MessageCircle className="w-5 h-5 text-[#C5A028]" />
                     <div>
                       <p className="text-white/[80%] text-sm">WhatsApp</p>
-                      <p className="text-white/[50%] text-sm">+62 811-3803-488</p>
+                      <p className="text-white/[50%] text-sm">+62 896-7407-2020</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">

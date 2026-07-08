@@ -6,7 +6,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import PriceDisclaimer from './PriceDisclaimer'
 
 const SITE = 'https://mychef.id'
-const WA = '628113803488'
+const WA = '6289674072020'
 
 const FEATURED_MENUS = [
   {

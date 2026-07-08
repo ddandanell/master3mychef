@@ -273,7 +273,7 @@ export default function ManagingBookingPage() {
           <h2 className="text-3xl font-light mb-6">Questions about your booking?</h2>
           <p className="text-white/70 mb-8">Message us on WhatsApp with any questions or changes needed. We respond within 15 minutes.</p>
           <a
-            href="https://wa.me/628113803488?text=Hi%20myCHEF%2C%20I%20have%20a%20question%20about%20my%20booking..."
+            href="https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%20have%20a%20question%20about%20my%20booking..."
             className="inline-flex items-center gap-2 px-8 py-3 bg-[#C5A028] text-black rounded-full font-semibold hover:bg-[#D4B833] transition focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
           >
             Message on WhatsApp

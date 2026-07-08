@@ -38,7 +38,7 @@ import { STAFFING_RELATED } from '@/data/related-services'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WA_NUMBER = 628113803488
+const WA_NUMBER = 6289674072020
 const WA_MARCO = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
   "Hi Marco, I'm looking to hire hospitality staff for my villa/hotel in Bali. Can you help?",
 )}`

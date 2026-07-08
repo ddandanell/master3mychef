@@ -662,8 +662,8 @@ export default function EventsMainPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-mid-cta" className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <MessageCircle className="w-4 h-4" /> Plan Your Event — Reply in 1 Hour
             </a>
-            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-7 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#FAFAF8] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <Phone className="w-4 h-4" /> Call +62 811-3803-488
+            <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-7 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#FAFAF8] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <Phone className="w-4 h-4" /> Call +62 896-7407-2020
             </a>
           </div>
         </div>
@@ -941,10 +941,10 @@ export default function EventsMainPage() {
               <MessageCircle className="w-4 h-4" /> Plan Your Event — Reply in 1 Hour
             </a>
             <a
-              href="tel:+628113803488"
+              href="tel:+6289674072020"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <Phone className="w-4 h-4" /> Call +62 811-3803-488
+              <Phone className="w-4 h-4" /> Call +62 896-7407-2020
             </a>
           </div>
         </div>
@@ -1211,10 +1211,10 @@ export default function EventsMainPage() {
               <MessageCircle className="w-4 h-4" /> Plan Your Event — Reply in 1 Hour
             </a>
             <a
-              href="tel:+628113803488"
+              href="tel:+6289674072020"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <Phone className="w-4 h-4" /> Call +62 811-3803-488
+              <Phone className="w-4 h-4" /> Call +62 896-7407-2020
             </a>
           </div>
         </div>

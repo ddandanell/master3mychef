@@ -29,7 +29,7 @@ import Breadcrumb from '@/components/shared/Breadcrumb'
 import PriceDisclaimer from './PriceDisclaimer'
 
 const SITE = 'https://mychef.id'
-const WA = '628113803488'
+const WA = '6289674072020'
 
 export interface PageAction {
   label: string
@@ -647,7 +647,7 @@ export default function PremiumPage({
           </div>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/[40%]">
             <a href={`tel:${WA}`} className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Phone className="w-4 h-4" /> +62 811-3803-488
+              <Phone className="w-4 h-4" /> +62 896-7407-2020
             </a>
             <a href="mailto:indonesia@mychef.id" className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Mail className="w-4 h-4" /> indonesia@mychef.id

@@ -11,7 +11,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 const SITE = 'https://mychef.id'
-const WA = '628113803488'
+const WA = '6289674072020'
 
 const SERVICE_TYPES = [
   {

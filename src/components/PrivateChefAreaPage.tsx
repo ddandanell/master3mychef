@@ -27,7 +27,7 @@ import { getPrivateChefArea, PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
 import { trackWhatsAppClick } from '@/lib/analytics'
 
 const SITE = 'https://mychef.id'
-const WA = '628113803488'
+const WA = '6289674072020'
 const wa = (msg: string) => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`
 
 // ── Service grid data ─────────────────────────────────────────────────────────
@@ -110,7 +110,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       '@id': `${SITE}/#business`,
       name: 'myCHEF.id',
       url: SITE,
-      telephone: '+628113803488',
+      telephone: '+6289674072020',
       priceRange: 'IDR 1,350,000 – IDR 10,000,000',
       image: `${SITE}/og-image.webp`,
       aggregateRating: {

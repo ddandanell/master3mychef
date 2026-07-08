@@ -5,7 +5,7 @@ import CityDeepDive from '@/components/CityDeepDive'
 import { CITY_CONTENT } from '@/data/cityContent'
 
 const SITE = 'https://mychef.id'
-const WA = '628113803488'
+const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I want to book a private chef in Seminyak. Can you send me pricing?')
 
 const FAQS = [

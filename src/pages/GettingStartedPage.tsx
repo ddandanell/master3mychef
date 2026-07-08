@@ -3,7 +3,7 @@ import { MessageCircle, Calendar, Clock, CheckCircle, ArrowRight, ChefHat } from
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 
 const SITE = 'https://mychef.id'
-const WA_NUMBER = '628113803488'
+const WA_NUMBER = '6289674072020'
 const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Hi myCHEF, I want to get started booking a private chef in Bali.')}`
 
 const QUICK_STEPS = [

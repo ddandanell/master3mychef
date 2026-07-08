@@ -233,7 +233,7 @@ export default function HubPage() {
     ...localBusinessSchema,
     '@type': 'FoodEstablishment',
     url: 'https://mychef.id/',
-    telephone: '+62 811-3803-488',
+    telephone: '+62 896-7407-2020',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',
@@ -355,7 +355,7 @@ export default function HubPage() {
                   Private dining, catering, and events across Bali. We shop, we cook, we serve, we clean. You just enjoy.
                 </p>
                 <div className="hub-hero-cta mb-4 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-                  <a href="https://wa.me/628113803488?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
+                  <a href="https://wa.me/6289674072020?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
                     <MessageCircle className="w-4 h-4" /> Get Your Private Chef Quote in 1 Hour <span aria-hidden="true">→</span>
                   </a>
                   <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-8 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
@@ -397,7 +397,7 @@ export default function HubPage() {
             </div>
             <div className="mx-auto mb-12 text-center">
               <a
-                href="https://wa.me/628113803488"
+                href="https://wa.me/6289674072020"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="homepage-pricing-strip"
@@ -445,7 +445,7 @@ export default function HubPage() {
               Tell us your dates, villa, and guest count. We will match you to the right service and send a clear quote within the hour — no pressure, no deposit required to enquire.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-mid-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
+              <a href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-mid-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
                 <MessageCircle className="w-4 h-4" /> Get Your Quote in 1 Hour
               </a>
               <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium tracking-widest uppercase rounded-full border transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}>
@@ -591,7 +591,7 @@ export default function HubPage() {
           {/* CTA Button and trust line */}
           <div className="flex flex-col items-center">
             <a
-              href="https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa"
+              href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa"
               target="_blank"
               rel="noopener noreferrer"
               data-source="homepage-hiw-cta"
@@ -663,7 +663,7 @@ export default function HubPage() {
               </div>
               {/* CTA after Who We Are section */}
               <div className="mt-8">
-                <a href="https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-who-we-are-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
+                <a href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-who-we-are-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
                   <MessageCircle className="w-4 h-4" /> Get Your Free Quote in 1 Hour
                 </a>
               </div>
@@ -691,7 +691,7 @@ export default function HubPage() {
           </div>
           {/* CTA after differentiators */}
           <div className="mt-12 text-center">
-            <a href="https://wa.me/628113803488?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-diff-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
+            <a href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-diff-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
               <MessageCircle className="w-4 h-4" /> Get Your Quote in 1 Hour
             </a>
           </div>
@@ -1016,7 +1016,7 @@ export default function HubPage() {
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
-            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="homepage-faq-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
+            <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="homepage-faq-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
               <MessageCircle className="w-4 h-4" /> Get a Free Quote on WhatsApp
             </a>
           </div>
@@ -1161,7 +1161,7 @@ export default function HubPage() {
             Most inquiries are answered within the hour. No deposit required to start planning.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/628113803488" target="_blank" rel="noopener noreferrer" data-source="homepage-final-cta" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+            <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="homepage-final-cta" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
               <Phone className="w-4 h-4" /> Get Your Private Chef Quote in 1 Hour <span aria-hidden="true">→</span>
             </a>
             <Link to="/contact" className="inline-block px-10 py-5 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">

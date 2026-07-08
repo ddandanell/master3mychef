@@ -12,7 +12,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WHATSAPP_NUMBER = 628113803488
+const WHATSAPP_NUMBER = 6289674072020
 
 const buildWhatsAppLink = (message: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`

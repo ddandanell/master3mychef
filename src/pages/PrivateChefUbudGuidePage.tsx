@@ -67,7 +67,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Book Your Chef',
     title: 'Reserve a Private Chef in Ubud',
     body: 'Tell us your dates, villa area, and dining preferences. We will match you with an available Ubud chef and share a menu proposal.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/6289674072020' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

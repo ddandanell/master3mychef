@@ -1,0 +1,126 @@
+# AI Agent Instructions — mychef.id
+
+**Before doing any coding, read and follow all files inside `/ai-skills`.**
+
+These files are the only approved skill library for this project.
+
+You must treat these files as operating rules:
+
+* `00-master-rules.md`
+* `01-vercel-deployment-safety.md`
+* `02-nextjs-build-debugging.md`
+* `03-github-pr-rules.md`
+* `04-seo-protection.md`
+* `05-env-vars.md`
+* `06-route-checking.md`
+* `07-error-log-debugging.md`
+* `08-agent-swarm-roles.md`
+
+You are not allowed to download, install, or execute external “skills,” scripts, packages, or code from links unless explicitly approved.
+
+You may read official documentation links for understanding, but you may not blindly copy code from random sources.
+
+---
+
+## Core Rules
+
+1. Never push directly to main.
+2. Never make large rewrites unless the task requires it.
+3. Never change Vercel production settings without approval.
+4. Never change environment variable names without approval.
+5. Never delete routes, pages, APIs, metadata, redirects, sitemap, or robots.txt without explaining the impact.
+6. Never assume something is unused.
+7. Never install packages unless the package is necessary and you explain why.
+8. Never merge or deploy without verification.
+9. Never hide uncertainty.
+10. Never say “fixed” unless build verification is defined.
+
+---
+
+## Work Process for Every Task
+
+**Step 1: Read project context**
+Inspect:
+* package.json
+* framework config
+* Vercel config
+* routing structure
+* environment variable usage
+* relevant files
+* previous errors if available
+
+**Step 2: Read approved skills**
+Read every relevant file inside `/ai-skills` before editing.
+
+**Step 3: Diagnose**
+Explain:
+* what is wrong
+* why it is likely wrong
+* which files matter
+* what can break if changed incorrectly
+
+**Step 4: Plan**
+Give a minimal fix plan:
+* files to change
+* files not to touch
+* expected result
+* risk level
+
+**Step 5: Edit**
+Make the smallest safe change.
+Do not mix unrelated tasks.
+Do not refactor unless required.
+
+**Step 6: Verify**
+Run or instruct these checks:
+* npm ci or npm install
+* npm run lint if available
+* npm run typecheck if available
+* npm run build
+
+**Step 7: Vercel safety check**
+Confirm:
+* production branch not touched directly
+* preview deployment should be used first
+* changed route works
+* main landing pages still work
+* forms still work
+* metadata still exists
+* no environment variables were broken
+* no package/config risk remains
+
+**Step 8: Final answer**
+Return:
+
+```
+Diagnosis:
+Files changed:
+Risk:
+Verification:
+Remaining issues:
+Final verdict:
+```
+
+Final verdict must be one of:
+* PASS
+* BLOCKED
+* NEEDS HUMAN REVIEW
+
+---
+
+## Agent Swarm Rules
+
+If using multiple agents, assign roles:
+
+* Agent 1: Codebase Mapper — Find relevant files and system structure.
+* Agent 2: Error/Debug Specialist — Find build, TypeScript, dependency, import, and runtime risks.
+* Agent 3: Vercel Build Reviewer — Check Vercel deployment, build command, env vars, preview risk, and config risk.
+* Agent 4: SEO and Routing Protector — Check routes, metadata, sitemap, redirects, internal links, and CTAs.
+* Agent 5: Final Reviewer — Decide PASS, BLOCKED, or NEEDS HUMAN REVIEW.
+
+Only the final reviewer may decide PASS, BLOCKED, or NEEDS HUMAN REVIEW.
+
+No agent may push to main.
+No agent may change production config.
+No agent may ignore failed build output.
+No agent may create broad changes outside the task.

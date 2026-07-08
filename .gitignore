@@ -1,0 +1,36 @@
+# Build outputs
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI skills MUST NEVER be ignored — these are project operating rules
+!ai-skills/
+!AI_INSTRUCTIONS.md
+!README.md
+
+# Playwright
+playwright-report/
+test-results/

@@ -14,6 +14,7 @@ import SeoHead, {
   faqPageSchema,
   aggregateRatingSchema,
   serviceWithOfferSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -26,6 +27,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'villa catering in Bali', intent: 'menu options and pricing' })
@@ -171,6 +173,17 @@ export default function CateringVillaPage() {
             url: `${SITE}/catering/villa-catering`,
             price: '350000',
             unitText: 'per person',
+          }),
+          howToSchema({
+            name: 'How to Book Villa Catering in Bali',
+            description: 'Book private villa catering for your Bali stay in 4 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Send villa details', text: 'Share your villa location, dates, guest count, and occasion via WhatsApp.' },
+              { name: 'Pick your format', text: 'Choose lunch, dinner, BBQ, buffet, plated, grazing, or multi-day catering.' },
+              { name: 'Approve the menu', text: 'We design a custom menu around your dietary needs and preferences. Nothing is locked until you say yes.' },
+              { name: 'Chef arrives and handles everything', text: 'Groceries, equipment, and staff come with us. Full prep, service, and kitchen cleanup included.' },
+            ],
           }),
         ]}
       />
@@ -564,8 +577,8 @@ export default function CateringVillaPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-catering-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> Get Villa Menu & Quote
             </a>
-            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Phone className="w-4 h-4" /> Call +62 811-3803-488
+            <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <Phone className="w-4 h-4" /> Call +62 896-7407-2020
             </a>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
@@ -577,6 +590,11 @@ export default function CateringVillaPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="catering-villa"
+        serviceName="villa catering in Bali"
+        intent="villa catering packages and pricing"
+      />
     </div>
   )
 }

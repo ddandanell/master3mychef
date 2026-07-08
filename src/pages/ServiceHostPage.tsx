@@ -8,6 +8,7 @@ import SeoHead, {
   detailedServiceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -19,6 +20,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -92,6 +94,17 @@ export default function ServiceHostPage() {
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 78),
+          howToSchema({
+            name: 'How to Hire a Host or Hostess in Bali',
+            description: 'Book professional hosts and hostesses for your Bali villa event in 4 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Choose your host service', text: 'Select from guest welcome, event direction, or front-of-house management.' },
+              { name: 'Share event details', text: 'Send your date, villa location, guest count, and event type via WhatsApp.' },
+              { name: 'Confirm staffing plan', text: 'We match you with experienced hosts and brief them on your event flow within 1 hour.' },
+              { name: 'Welcome your guests', text: 'Hosts arrive early in professional attire, greet guests, and manage the flow throughout your event.' },
+            ],
+          }),
           breadcrumbSchema('Host & Hostess Hire Bali', `${SITE}/in-villa-service/host-hostess`, 'In-Villa Service', `${SITE}/in-villa-service`),
         ]}
       />
@@ -304,7 +317,7 @@ export default function ServiceHostPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-host-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
-            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
+            <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
@@ -337,6 +350,11 @@ export default function ServiceHostPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="in-villa-host"
+        serviceName="host and hostess in Bali"
+        intent="host service and pricing"
+      />
     </div>
   )
 }

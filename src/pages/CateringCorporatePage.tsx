@@ -13,6 +13,7 @@ import SeoHead, {
   offerSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -23,6 +24,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'corporate catering in Bali', intent: 'menu options and pricing' })
@@ -148,6 +150,17 @@ export default function CateringCorporatePage() {
           offerSchema('Conference Catering', 450000, 'IDR', `${SITE}/catering/corporate-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 89),
+          howToSchema({
+            name: 'How to Book Corporate Catering in Bali',
+            description: 'Book professional corporate catering for your Bali event in 4 easy steps.',
+            totalTime: 'PT30M',
+            steps: [
+              { name: 'Share your event brief', text: 'Send your event date, company size, schedule, venue, dietary needs, and budget via WhatsApp.' },
+              { name: 'Receive custom proposal', text: 'We respond with a tailored menu plan, staffing schedule, and detailed proposal within 24 hours.' },
+              { name: 'Confirm and contract', text: 'Approve the proposal, sign the contract, and pay the 50% deposit to secure your event date.' },
+              { name: 'Setup, service, and invoice', text: 'Our team arrives 2–3 hours early for quiet setup. Full service runs on schedule, followed by a detailed tax invoice within 48 hours.' },
+            ],
+          }),
           cateringBreadcrumbSchema('Corporate Catering Bali', `${SITE}/catering/corporate-catering`),
         ]}
       />
@@ -575,8 +588,8 @@ export default function CateringCorporatePage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               <MessageCircle className="w-4 h-4" /> Plan Corporate Catering
             </a>
-            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Phone className="w-4 h-4" /> Call +62 811-3803-488
+            <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <Phone className="w-4 h-4" /> Call +62 896-7407-2020
             </a>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
@@ -588,6 +601,11 @@ export default function CateringCorporatePage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="catering-corporate"
+        serviceName="corporate catering in Bali"
+        intent="corporate catering packages and pricing"
+      />
     </div>
   )
 }

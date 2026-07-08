@@ -1,6 +1,8 @@
 import { ChefHat, Flame, Fish, Sparkles } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
-import { aggregateRatingSchema, breadcrumbSchema } from '@/components/SeoHead'
+import { aggregateRatingSchema, breadcrumbSchema, personSchema } from '@/components/SeoHead'
+
+const SITE = 'https://mychef.id'
 
 const CHEFS = [
   {
@@ -109,17 +111,128 @@ const CHEFS = [
   },
 ]
 
-const CHEF_PERSON_SCHEMAS = CHEFS.map((chef) => ({
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: chef.name,
-  jobTitle: chef.role,
-  description: chef.bio,
-  image: `https://mychef.id${chef.image}`,
-  url: `https://mychef.id/chefs/${chef.slug}`,
-  worksFor: { '@id': 'https://mychef.id/#business' },
-  knowsAbout: [chef.specialty, ...chef.achievements],
-}))
+const CHEF_PERSON_SCHEMAS = [
+  personSchema({
+    name: 'Adriano',
+    jobTitle: 'Executive Chef & Founder',
+    description:
+      'Adriano built myCHEF after years in Michelin-level kitchens in northern Italy and a formative stretch in Tokyo. He still leads menu development, chef training, and every signature tasting experience we serve in Bali villas.',
+    url: `${SITE}/chefs/adriano`,
+    image: `${SITE}/generated/chef-adriano-portrait.webp`,
+    worksFor: { '@id': 'https://mychef.id/#business' },
+    knowsAbout: [
+      'Mediterranean Fine Dining',
+      'Michelin-trained in Modena',
+      'Leads chef training for every new hire',
+      'Trusted for proposals, anniversaries, and VIP dinners',
+    ],
+  }),
+  personSchema({
+    name: 'I Made Surya',
+    jobTitle: 'Head Chef — Mediterranean',
+    description:
+      "Surya is the calm hand behind many of our Mediterranean set menus. He combines Adriano's technique with Balinese market knowledge, turning just-caught seafood, handmade pasta, and clean sauces into elegant villa dinners.",
+    url: `${SITE}/chefs/made-surya`,
+    image: `${SITE}/generated/chef-made-surya-portrait.webp`,
+    worksFor: { '@id': 'https://mychef.id/#business' },
+    knowsAbout: [
+      'Handmade Pasta & Seafood',
+      'Leads Mediterranean villa menus',
+      'Known for fresh pasta and seafood timing',
+      'Guest favourite for intimate 6–12 person dinners',
+    ],
+  }),
+  personSchema({
+    name: 'Bayu Pranata',
+    jobTitle: 'Head Chef — BBQ & Grill',
+    description:
+      'Bayu runs our BBQ and grill experiences with the confidence of someone who grew up cooking over live fire. From wagyu and lobster to whole fish and satay, he keeps the energy relaxed while every protein lands perfectly cooked.',
+    url: `${SITE}/chefs/bayu-pranata`,
+    image: `${SITE}/generated/chef-bayu-pranata-portrait.webp`,
+    worksFor: { '@id': 'https://mychef.id/#business' },
+    knowsAbout: [
+      'Open-Flame Cooking',
+      'Leads poolside BBQ events across Bali',
+      'Specialist in seafood, wagyu, and family-style spreads',
+      'Experienced with celebrations from 10 to 80 guests',
+    ],
+  }),
+  personSchema({
+    name: 'Ni Putu Asri',
+    jobTitle: 'Head Chef — Balinese & Asian Fusion',
+    description:
+      'Asri protects the local soul of the myCHEF menu. She leads Indonesian feasts, ceremonial dishes, and Asian fusion menus with a balance of authenticity, polish, and warmth that villa guests immediately feel.',
+    url: `${SITE}/chefs/ni-putu-asri`,
+    image: `${SITE}/generated/chef-ni-putu-asri-portrait.webp`,
+    worksFor: { '@id': 'https://mychef.id/#business' },
+    knowsAbout: [
+      'Balinese Classics & Modern Asian',
+      'Leads Indonesian feast menus',
+      'Balances tradition with modern plating',
+      'Trusted for family celebrations and cultural dinners',
+    ],
+  }),
+  personSchema({
+    name: 'Wayan Suarjana',
+    jobTitle: 'Head Pastry Chef',
+    description:
+      'Wayan brings precision and patience to every dessert course. Trained in Seminyak hotel pastry kitchens before joining myCHEF, he leads all our dessert menus from chocolate tasting plates to tropical fruit pavlovas and Balinese rice pudding variations.',
+    url: `${SITE}/chefs/wayan-suarjana`,
+    image: `${SITE}/generated/chef-wayan-suarjana-portrait.webp`,
+    worksFor: { '@id': 'https://mychef.id/#business' },
+    knowsAbout: [
+      'Pastry, Desserts & Petit Fours',
+      'Leads all pastry and dessert menus',
+      'Creates custom celebration cakes for villa events',
+      'Specialist in chocolate work and plated desserts',
+    ],
+  }),
+  personSchema({
+    name: 'Ketut Mahardika',
+    jobTitle: 'Head Chef — Seafood & Japanese',
+    description:
+      'Ketut specialises in Japanese-influenced preparations and Bali seafood. He sources directly from Jimbaran each morning and builds menus around what arrived. His sashimi boards, grilled fish with yuzu, and local prawn tempura are consistently the most requested dishes across our Japanese-leaning bookings.',
+    url: `${SITE}/chefs/ketut-mahardika`,
+    image: `${SITE}/generated/chef-ketut-mahardika-portrait.webp`,
+    worksFor: { '@id': 'https://mychef.id/#business' },
+    knowsAbout: [
+      'Japanese Technique & Fresh Seafood',
+      'Japanese knife skills and fish butchery',
+      'Sashimi and crudo menus',
+      'Manages seafood sourcing for large events',
+    ],
+  }),
+  personSchema({
+    name: 'Sari Dewi Kusuma',
+    jobTitle: 'Wellness & Retreat Chef',
+    description:
+      'Sari leads our wellness kitchen — retreat catering, detox programmes, and the kind of Balinese whole-food cooking that leaves guests feeling genuinely restored. She understands the rhythms of yoga retreat schedules, works around complex dietary combinations, and turns healthy eating into something guests actually look forward to.',
+    url: `${SITE}/chefs/sari-dewi-kusuma`,
+    image: `${SITE}/generated/chef-sari-dewi-portrait.webp`,
+    worksFor: { '@id': 'https://mychef.id/#business' },
+    knowsAbout: [
+      'Plant-Based, Ayurvedic & Raw Cuisine',
+      'Leads retreat and wellness bookings across Ubud',
+      'Specialist in raw, vegan, and Ayurvedic menus',
+      'Trusted by wellness retreat operators across Bali',
+    ],
+  }),
+  personSchema({
+    name: 'Komang Artha',
+    jobTitle: 'Senior Event Chef',
+    description:
+      'Komang has the calmness of someone who has cooked through everything — power outages, rain-cancelled outdoor setups, last-minute dietary changes at 150-person weddings. He leads our larger events and catering programmes with a team coordination skill that keeps the kitchen and front-of-house moving in sync regardless of what changes.',
+    url: `${SITE}/chefs/komang-artha`,
+    image: `${SITE}/generated/chef-komang-artha-portrait.webp`,
+    worksFor: { '@id': 'https://mychef.id/#business' },
+    knowsAbout: [
+      'Large-Scale Villa Events & Buffets',
+      'Runs events from 20 to 200+ guests',
+      'Specialist in wedding and corporate catering logistics',
+      'Mentors junior kitchen staff across myCHEF',
+    ],
+  }),
+]
 
 const SECTIONS = [
   {

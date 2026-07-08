@@ -9,7 +9,7 @@ import { trackEvent } from '@/lib/analytics'
 // message from the form and links to wa.me/...?text=… — same submission
 // model as the production site (no backend, all done over WhatsApp).
 
-const WA = '628113803488'
+const WA = '6289674072020'
 
 type ServiceType = 'single-event' | 'recurring' | 'fulltime'
 type Cuisine = 'indonesian' | 'thai' | 'japanese' | 'chinese' | 'indian' | 'western' | 'asian-fusion' | 'chef-choice'

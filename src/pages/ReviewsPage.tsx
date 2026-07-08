@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CalendarDays, MessageCircle, Star } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, localBusinessSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 type ReviewCategory = 'All' | 'Weddings' | 'Private Dinners' | 'Catering' | 'Retreats'
@@ -17,7 +17,7 @@ interface Review {
 }
 
 const SITE = 'https://mychef.id'
-const WHATSAPP_URL = 'https://wa.me/628113803488'
+const WHATSAPP_URL = 'https://wa.me/6289674072020'
 
 
 const STATS = [
@@ -150,11 +150,46 @@ const REVIEWS: Review[] = [
 ]
 
 const aggregateRatingSchema = {
-  ...localBusinessSchema,
+  '@context': 'https://schema.org',
+  '@type': 'AggregateRating',
+  itemReviewed: {
+    '@type': 'LocalBusiness',
+    name: 'myCHEF Bali',
+    '@id': 'https://mychef.id/#business',
+  },
+  ratingValue: '4.9',
+  bestRating: '5',
+  reviewCount: '560',
+}
+
+const reviewListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: REVIEWS.slice(0, 5).map((review, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    item: {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: review.name },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: review.rating.toString(),
+        bestRating: '5',
+      },
+      reviewBody: review.review,
+      datePublished: review.date,
+      itemReviewed: {
+        '@type': 'LocalBusiness',
+        name: 'myCHEF Bali',
+        '@id': 'https://mychef.id/#business',
+      },
+    },
+  })),
 }
 
 const REVIEWS_SCHEMAS = [
   aggregateRatingSchema,
+  reviewListSchema,
   breadcrumbSchema('Reviews', `${SITE}/reviews`),
   faqPageSchema([
     { question: 'How do guests rate myCHEF private chef services?', answer: 'myCHEF holds a 4.9-star average rating across 560+ verified reviews from villa guests, wedding parties, corporate retreats, and catering events throughout Bali.' },

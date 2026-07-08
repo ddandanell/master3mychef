@@ -27,7 +27,7 @@ interface BookingFormCateringProps {
   messageIntro?: string
 }
 
-const WA_NUMBER = 628113803488
+const WA_NUMBER = 6289674072020
 
 function getFieldHint(field: Field) {
   if (field.placeholder) return field.placeholder

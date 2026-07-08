@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -19,6 +19,7 @@ import TaxFooter from '@/components/shared/TaxFooter'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a villa party in Bali', intent: 'help with catering, staff, and setup' })
@@ -167,6 +168,17 @@ export default function EventsVillaPartiesPage() {
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
+          howToSchema({
+            name: 'How to Plan a Villa Party in Bali',
+            description: 'Plan an unforgettable villa party in Bali with private chef and full service in 4 easy steps.',
+            totalTime: 'PT20M',
+            steps: [
+              { name: 'Choose your party style', text: 'Select from pool party, sunset dinner, or themed celebration based on your vibe.' },
+              { name: 'Share party details', text: 'Send your date, villa location, guest count, and music or decoration needs via WhatsApp.' },
+              { name: 'Approve menu and setup', text: 'We design a custom menu, bar package, and service plan within 1 hour.' },
+              { name: 'Party without worries', text: 'Chef, bartenders, and service staff arrive early. You enjoy the party while we handle everything.' },
+            ],
+          }),
           breadcrumbSchema('Villa Party Catering Bali', `${SITE}/events/villa-parties`, 'Events', `${SITE}/events`),
         ]}
       />
@@ -563,6 +575,11 @@ export default function EventsVillaPartiesPage() {
       </section>
 
       <TaxFooter />
+      <StickyMobileCTA
+        pageSource="events-villa-parties"
+        serviceName="villa party catering in Bali"
+        intent="party packages and pricing"
+      />
     </div>
   )
 }

@@ -8,6 +8,7 @@ import SeoHead, {
   serviceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -19,6 +20,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -117,6 +119,18 @@ export default function StaffingLiveInPage() {
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 156),
           breadcrumbSchema('Live-In Chef', `${SITE}/staffing/live-in-chef`, 'Staffing', `${SITE}/staffing`),
+          howToSchema({
+            name: 'How to Find a Live-In Chef in Bali',
+            description: 'Find and place a full-time live-in chef for your Bali villa in 5 steps.',
+            totalTime: 'P1W',
+            steps: [
+              { name: 'Brief', text: 'Share your cuisine preferences, household schedule, dietary needs, and accommodation details.' },
+              { name: 'Shortlist', text: 'We send 3–5 vetted chef profiles matched to your villa and family requirements.' },
+              { name: 'Trials', text: 'Cooking sessions with your top candidates to assess fit, skill, and compatibility.' },
+              { name: 'Placement', text: 'Contract signed, onboarding handled, and live-in accommodation arranged.' },
+              { name: 'Ongoing support', text: 'Monthly check-ins, feedback, and six months of ongoing guidance and support.' },
+            ],
+          }),
         ]}
       />
 
@@ -247,7 +261,7 @@ export default function StaffingLiveInPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-live-in-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
-            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+            <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
@@ -255,6 +269,11 @@ export default function StaffingLiveInPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="staffing-live-in"
+        serviceName="live-in chef in Bali"
+        intent="live-in chef placement and pricing"
+      />
     </div>
   )
 }

@@ -8,6 +8,7 @@ import SeoHead, {
   detailedServiceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -19,6 +20,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -107,6 +109,17 @@ export default function ServiceSommelierPage() {
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 34),
+          howToSchema({
+            name: 'How to Hire a Sommelier in Bali',
+            description: 'Book a professional sommelier for your Bali villa dinner in 4 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Choose your wine experience', text: 'Select from wine pairing dinner, cellar consultation, or tasting event.' },
+              { name: 'Share dinner details', text: 'Send your date, villa location, guest count, and menu style via WhatsApp.' },
+              { name: 'Approve your wine selection', text: 'We curate a wine list matched to your menu, budget, and preferences within 1 hour.' },
+              { name: 'Savor every sip', text: 'The sommelier arrives with selected wines, glassware, and guides each pairing tableside.' },
+            ],
+          }),
           breadcrumbSchema('Sommelier Service Bali', `${SITE}/in-villa-service/sommelier`, 'In-Villa Service', `${SITE}/in-villa-service`),
         ]}
       />
@@ -319,7 +332,7 @@ export default function ServiceSommelierPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-sommelier-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
-            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
+            <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
@@ -352,6 +365,11 @@ export default function ServiceSommelierPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="in-villa-sommelier"
+        serviceName="sommelier service in Bali"
+        intent="sommelier service and pricing"
+      />
     </div>
   )
 }

@@ -8,7 +8,7 @@ import SeoHead, {
 } from '@/components/SeoHead'
 
 const SITE = 'https://mychef.id'
-const WHATSAPP_URL = 'https://wa.me/628113803488'
+const WHATSAPP_URL = 'https://wa.me/6289674072020'
 
 interface CaseStudy {
   client: string

@@ -1,6 +1,4 @@
 {
-  "buildCommand": "npm run build",
-  "trailingSlash": false,
   "redirects": [
     {
       "source": "/experience",
@@ -518,41 +516,6 @@
       "permanent": true
     },
     {
-      "source": "/romantic-dinner",
-      "destination": "/fine-dining/romantic-dinner",
-      "permanent": true
-    },
-    {
-      "source": "/corporate-events-catering-bali",
-      "destination": "/blog/corporate-events-catering-bali",
-      "permanent": true
-    },
-    {
-      "source": "/events/weddings-bali",
-      "destination": "/events/weddings",
-      "permanent": true
-    },
-    {
-      "source": "/chef-placement-bali",
-      "destination": "/staffing/private-chef-placement",
-      "permanent": true
-    },
-    {
-      "source": "/live-in-chef-bali",
-      "destination": "/staffing/live-in-chef",
-      "permanent": true
-    },
-    {
-      "source": "/retreat-catering-bali",
-      "destination": "/catering/retreat-catering",
-      "permanent": true
-    },
-    {
-      "source": "/getting-started",
-      "destination": "/help/getting-started",
-      "permanent": true
-    },
-    {
       "source": "/locations/berawa",
       "destination": "/locations/canggu",
       "permanent": true
@@ -788,94 +751,9 @@
       "permanent": true
     },
     {
-      "source": "/blog/private-chef-bali-cost-breakdown-2026",
-      "destination": "/blog/private-chef-cost-bali",
-      "permanent": true
-    },
-    {
-      "source": "/blog/wedding-rehearsal-dinner-bali",
-      "destination": "/journal/rehearsal-dinner-planning-bali",
-      "permanent": true
-    },
-    {
       "source": "/blog/yoga-retreat-chef-bali-meal-planning",
       "destination": "/journal/yoga-retreat-meal-planning-bali",
       "permanent": true
-    },
-    {
-      "source": "/romantic-dinner",
-      "destination": "/fine-dining/romantic-dinner",
-      "permanent": true
-    },
-    {
-      "source": "/corporate-events-catering-bali",
-      "destination": "/events/corporate-events",
-      "permanent": true
-    },
-    {
-      "source": "/villa-chef",
-      "destination": "/fine-dining/private-chef-bali",
-      "permanent": true
-    },
-    {
-      "source": "/chef-placement-bali",
-      "destination": "/staffing/private-chef-placement",
-      "permanent": true
-    },
-    {
-      "source": "/events/weddings-bali",
-      "destination": "/events/weddings",
-      "permanent": true
-    },
-    {
-      "source": "/getting-started",
-      "destination": "/guide/private-chef-bali",
-      "permanent": true
-    },
-    {
-      "source": "/journal/bali-villa-dinner-party-guide",
-      "destination": "/journal",
-      "permanent": true
-    },
-    {
-      "source": "/live-in-chef-bali",
-      "destination": "/staffing/live-in-chef",
-      "permanent": true
-    },
-    {
-      "source": "/retreat-catering-bali",
-      "destination": "/catering/retreat-catering",
-      "permanent": true
-    },
-    {
-      "source": "/help/getting-started",
-      "destination": "/guide/private-chef-bali",
-      "permanent": true
-    },
-    {
-      "source": "/private-chef-kelapa-gading",
-      "destination": "/jakarta",
-      "permanent": true
-    },
-    {
-      "source": "/in-villa",
-      "destination": "/in-villa-service",
-      "permanent": true
-    },
-    {
-      "source": "/journal/bali-private-chef-cost-guide-2026",
-      "destination": "/blog/private-chef-cost-bali",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/((?!assets/|generated/|.*\\.).*)",
-      "destination": "/$1.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ],
   "headers": [

@@ -67,7 +67,7 @@ export default function Footer() {
                 data-source="footer-top"
                 className="inline-flex items-center gap-2.5 text-sm font-semibold bg-[#C5A028] text-black px-6 py-3.5 rounded-full hover:bg-[#D4B033] transition-all shadow-lg shadow-[#C5A028]/20 hover:shadow-xl hover:shadow-[#C5A028]/30 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
               >
-                <MessageCircle className="w-4 h-4" /> +62 811-3803-488
+                <MessageCircle className="w-4 h-4" /> +62 896-7407-2020
               </a>
             </div>
             <div className="space-y-2">

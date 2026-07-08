@@ -1,0 +1,24 @@
+# CODEOWNERS — mychef.id
+# Require human review for all ai-skills infrastructure changes
+
+# AI skill library — any change requires human review
+/ai-skills/              @ddandanell
+AI_INSTRUCTIONS.md       @ddandanell
+.ai-skills-manifest.json @ddandanell
+
+# Verification scripts
+scripts/verify-ai-skills.ts      @ddandanell
+scripts/verify-all.ts            @ddandanell
+scripts/pre-commit-check.ts      @ddandanell
+
+# GitHub workflow that enforces ai-skills
+/.github/workflows/ai-skills-check.yml @ddandanell
+/.github/CODEOWNERS                  @ddandanell
+
+# Agent onboarding files (all route to AI_INSTRUCTIONS.md)
+/.kimi/    @ddandanell
+/.ai/      @ddandanell
+/.claude/  @ddandanell
+/.cursorrules @ddandanell
+
+# All other files can be changed by any team member with normal PR review

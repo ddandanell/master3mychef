@@ -6,11 +6,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema, offerSchema,
   faqPageSchema, aggregateRatingSchema, detailedServiceSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -111,6 +113,16 @@ export default function ChefsTablePage() {
           aggregateRatingSchema(4.9, 560),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema("Chef's Table Bali", `${SITE}/fine-dining/chefs-table`, 'Fine Dining', `${SITE}/fine-dining`),
+          howToSchema({
+            name: "How to Book Adriano's Chef's Table in Bali",
+            description: 'Reserve the most exclusive myCHEF experience: a 7-course market-led menu with live commentary at your villa counter.',
+            steps: [
+              { name: 'Check Availability', text: "Message Sofia with your preferred Friday or Saturday date. Only 2 Chef's Table evenings happen per weekend — availability is limited." },
+              { name: 'Villa Assessment & Menu', text: 'We confirm your villa kitchen is suitable and Adriano builds the 7-course menu around that morning\'s market selection.' },
+              { name: 'Deposit & Confirmation', text: 'A 50% deposit secures your date. The remaining balance is settled before the evening. Maximum 6 guests.' },
+              { name: 'The Evening Arrives', text: 'Adriano and the team arrive at 17:00. Counter seating, live commentary, 7 courses, and the kitchen is immaculate when they leave.' },
+            ],
+          }),
         ]}
       />
 
@@ -422,6 +434,11 @@ export default function ChefsTablePage() {
           ))}
         </div>
       </section>
+      <StickyMobileCTA
+        pageSource="chefs-table"
+        serviceName="chef's table in Bali"
+        intent="chef's table experience and pricing"
+      />
     </div>
   )
 }

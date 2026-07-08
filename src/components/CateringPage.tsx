@@ -4,7 +4,7 @@ import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema, servic
 import { PILLARS } from '@/data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
-const WA = '628113803488'
+const WA = '6289674072020'
 
 const CATERING_FAQS = faqPageSchema([
   { question: 'How much does villa catering cost in Bali?', answer: 'Villa catering in Bali starts from IDR 350,000 per person for drop-off catering, IDR 450,000 for buffet, IDR 550,000 for BBQ, and IDR 600,000 per hour for a private villa chef. All prices are transparent — no markup on groceries.' },

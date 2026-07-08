@@ -8,6 +8,7 @@ import SeoHead, {
   detailedServiceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -19,6 +20,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -93,6 +95,18 @@ export default function ServiceBartendersPage() {
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 112),
           breadcrumbSchema('Bartender Hire Bali', `${SITE}/in-villa-service/bartenders`, 'In-Villa Service', `${SITE}/in-villa-service`),
+          howToSchema({
+            name: 'How to Hire a Bartender in Bali',
+            description: 'Book a professional bartender for your Bali villa party or event in 5 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Share event details', text: 'Send your date, guest count, venue, and drink preferences via WhatsApp.' },
+              { name: 'Menu design', text: 'We create a custom cocktail menu matched to your theme and guest profile.' },
+              { name: 'Receive shopping list', text: 'We send a detailed spirits, mixers, and garnish list. You buy or we source for a 15% fee.' },
+              { name: 'Setup and service', text: 'Bartender arrives 1 hour early to build the bar. Professional service until last call.' },
+              { name: 'Breakdown', text: 'Bar packed, glassware cleaned, and space restored to original condition.' },
+            ],
+          }),
         ]}
       />
 {/* Hero */}
@@ -304,7 +318,7 @@ export default function ServiceBartendersPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-bartenders-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
-            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
+            <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
@@ -337,6 +351,11 @@ export default function ServiceBartendersPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="in-villa-bartenders"
+        serviceName="bartender in Bali"
+        intent="bartender service and pricing"
+      />
     </div>
   )
 }

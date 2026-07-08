@@ -8,6 +8,7 @@ import SeoHead, {
   serviceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -19,6 +20,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -94,6 +96,18 @@ export default function ServiceWaitersPage() {
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 89),
           breadcrumbSchema('Waiters', `${SITE}/in-villa-service/waiters`, 'In-Villa Service', `${SITE}/in-villa-service`),
+          howToSchema({
+            name: 'How to Hire Villa Waiters in Bali',
+            description: 'Book professional waiters for your Bali villa dinner or event in 5 easy steps.',
+            totalTime: 'PT10M',
+            steps: [
+              { name: 'Share your event details', text: 'Send your date, guest count, villa location, and service style via WhatsApp.' },
+              { name: 'Team assignment', text: 'We match uniformed, English-speaking waiters to your event type and guest profile.' },
+              { name: 'Pre-event briefing', text: 'Menu walkthrough, timeline, dietary notes, and villa layout shared with the team.' },
+              { name: 'Service day', text: 'Waiters arrive early, set tables, serve courses, clear, and clean — all included.' },
+              { name: 'Follow-up', text: 'We check in after service. Feedback shapes future team assignments.' },
+            ],
+          }),
         ]}
       />
 
@@ -325,7 +339,7 @@ export default function ServiceWaitersPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-waiters-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
-            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
+            <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
@@ -358,6 +372,11 @@ export default function ServiceWaitersPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="in-villa-waiters"
+        serviceName="villa waiters in Bali"
+        intent="waiter service and pricing"
+      />
     </div>
   )
 }

@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "node_modules": true,
+    "dist": true
+  },
+  "files.watcherExclude": {
+    "node_modules/**": true,
+    "dist/**": true
+  },
+  "workbench.startupEditor": "readme",
+  "editor.rulers": [80, 120]
+}

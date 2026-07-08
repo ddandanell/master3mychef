@@ -8,6 +8,7 @@ import SeoHead, {
   detailedServiceSchema,
   faqPageSchema,
   aggregateRatingSchema,
+  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -19,6 +20,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -157,6 +159,17 @@ export default function ServiceMixologyPage() {
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 45),
+          howToSchema({
+            name: 'How to Book a Mixologist in Bali',
+            description: 'Book a private mixologist for your Bali villa event in 4 easy steps.',
+            totalTime: 'PT15M',
+            steps: [
+              { name: 'Choose your cocktail experience', text: 'Select from signature cocktail menu, interactive mixology class, or premium open bar.' },
+              { name: 'Share event details', text: 'Send your date, villa location, guest count, and preferred spirits via WhatsApp.' },
+              { name: 'Approve your cocktail menu', text: 'We design a custom cocktail list with garnishes, glassware, and setup plan within 1 hour.' },
+              { name: 'Shake and celebrate', text: 'The mixologist arrives with premium spirits, fresh ingredients, and bar tools. You enjoy crafted cocktails.' },
+            ],
+          }),
           breadcrumbSchema('Mixology Experience Bali', `${SITE}/in-villa-service/mixology`, 'In-Villa Service', `${SITE}/in-villa-service`),
         ]}
       />
@@ -456,7 +469,7 @@ export default function ServiceMixologyPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-mixology-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
-            <a href="tel:+628113803488" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
+            <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
@@ -489,6 +502,11 @@ export default function ServiceMixologyPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <StickyMobileCTA
+        pageSource="in-villa-mixology"
+        serviceName="mixology experience in Bali"
+        intent="mixology packages and pricing"
+      />
     </div>
   )
 }

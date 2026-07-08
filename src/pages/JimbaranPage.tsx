@@ -5,7 +5,7 @@ import CityDeepDive from '@/components/CityDeepDive'
 import { CITY_CONTENT } from '@/data/cityContent'
 
 const SITE = 'https://mychef.id'
-const WA = '628113803488'
+const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I want to book a private chef in Jimbaran. Can you send me pricing?')
 
 const FAQS = [
@@ -256,6 +256,17 @@ export default function JimbaranPage() {
           </div>
         </div>
       </section>
+          {/* Cross-link to private-chef page */}
+          <section className="py-12 px-6">
+            <div className="max-w-[960px] mx-auto text-center">
+              <h3 className="text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Private Chef in Jimbaran</h3>
+              <p className="text-gray-600 mb-6">Hire a dedicated private chef for your villa in Jimbaran. Custom menus, full service, and seamless cleanup.</p>
+              <Link to="/private-chef/jimbaran" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all">
+                View Private Chef Options <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </section>
+
           <CityDeepDive slug="jimbaran" cityName="Jimbaran" />
 </main>
   )

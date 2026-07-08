@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ChevronRight, Star } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceWithOfferSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceWithOfferSchema, howToSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WHATSAPP_NUMBER = 628113803488
+const WHATSAPP_NUMBER = 6289674072020
 
 const buildWhatsAppLink = (message: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
@@ -162,6 +163,15 @@ export default function FineDiningChefsPage() {
             url: 'https://mychef.id/fine-dining/our-chefs',
             price: '350000',
             unitText: 'per person',
+          }),
+          howToSchema({
+            name: 'How to Hire a Private Chef in Bali',
+            description: 'Request a specific myCHEF chef for your Bali villa dinner in 3 simple steps.',
+            steps: [
+              { name: 'Tell Us Your Date & Guest Count', text: 'Message us with your villa area, dinner style, and whether you have a preferred chef in mind.' },
+              { name: 'We Check Availability', text: 'Our team confirms which chefs are open for your date and recommends the closest fit if your first choice is booked.' },
+              { name: 'Confirm Your Chef', text: 'Once the deposit is in, we lock your chef, menu direction, and arrival plan for the evening.' },
+            ],
           }),
         ]}
       />
@@ -529,6 +539,11 @@ export default function FineDiningChefsPage() {
           <TrustStrip dark />
         </div>
       </section>
+      <StickyMobileCTA
+        pageSource="fine-dining-chefs"
+        serviceName="fine dining chef in Bali"
+        intent="chef profiles and pricing"
+      />
     </div>
   )
 }

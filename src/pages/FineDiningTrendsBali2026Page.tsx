@@ -82,7 +82,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Book a Fine Dining Experience',
     title: 'Experience These Trends at Your Villa',
     body: 'Whether you want a hyperlocal Indonesian tasting menu, a zero-waste dinner, or a collaborative multi-dietary feast, our chefs can create it. Tell us your villa, dates, and vision.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/6289674072020' },
     secondaryAction: { label: 'Fine Dining Services', href: '/fine-dining' },
   },
 ]

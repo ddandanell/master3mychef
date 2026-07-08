@@ -66,7 +66,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Book Your Chef',
     title: 'Reserve a Private Chef in Canggu',
     body: 'Tell us your villa, dates, group size, and occasion. We will match you with the right Canggu chef.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/628113803488' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/6289674072020' },
     secondaryAction: { label: 'View All Services', href: '/services' },
   },
 ]

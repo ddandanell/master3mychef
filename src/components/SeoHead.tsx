@@ -14,6 +14,12 @@ interface SeoHeadProps {
     property?: string
     content: string
   }>
+  /** Article meta — only used when ogType="article" */
+  articleAuthor?: string
+  articleSection?: string
+  articleTags?: string[]
+  articlePublishedTime?: string
+  twitterImageAlt?: string
 }
 
 export const localBusinessSchema = {
@@ -23,7 +29,7 @@ export const localBusinessSchema = {
   name: 'myCHEF.id',
   description: 'Private chef, catering, events, and staffing services in Bali',
   url: 'https://mychef.id',
-  telephone: '+62 811-3803-488',
+  telephone: '+62 896-7407-2020',
   email: 'indonesia@mychef.id',
   address: {
     '@type': 'PostalAddress',
@@ -67,7 +73,7 @@ const cateringProviderSchema = {
   '@type': 'FoodEstablishment',
   name: 'myCHEF.id',
   url: 'https://mychef.id',
-  telephone: '+62 811-3803-488',
+  telephone: '+62 896-7407-2020',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Bali',
@@ -159,7 +165,7 @@ export function detailedServiceSchema(
       '@type': 'Organization',
       name: 'myCHEF.id',
       url: 'https://mychef.id',
-      telephone: '+62 811-3803-488',
+      telephone: '+62 896-7407-2020',
     },
     areaServed: {
       '@type': 'Place',
@@ -324,6 +330,32 @@ export function organizationSchema(
   }
 }
 
+export function personSchema(params: {
+  name: string
+  jobTitle: string
+  description: string
+  url: string
+  image: string
+  knowsAbout?: string[]
+  worksFor?: Record<string, unknown>
+  birthPlace?: string
+  sameAs?: string[]
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: params.name,
+    jobTitle: params.jobTitle,
+    description: params.description,
+    url: params.url,
+    image: params.image,
+    ...(params.knowsAbout ? { knowsAbout: params.knowsAbout } : {}),
+    ...(params.worksFor ? { worksFor: params.worksFor } : {}),
+    ...(params.birthPlace ? { birthPlace: params.birthPlace } : {}),
+    ...(params.sameAs ? { sameAs: params.sameAs } : {}),
+  }
+}
+
 export function blogPostingSchema(params: {
   headline: string
   description: string
@@ -402,7 +434,7 @@ export function menuSchema(
 // Sets per-route document.title, meta description, canonical, OG tags, and an
 // optional robots noindex directive. Works for a Vite SPA — Google executes JS.
 // For first-contentful-html SEO add vite-plugin-ssg later (see SEO-PAGES-PLAN.md).
-export default function SeoHead({ title, description, canonical, ogImage, ogType = 'website', noindex, jsonLd, extraMeta = [] }: SeoHeadProps) {
+export default function SeoHead({ title, description, canonical, ogImage, ogType = 'website', noindex, jsonLd, extraMeta = [], articleAuthor, articleSection, articleTags, articlePublishedTime, twitterImageAlt }: SeoHeadProps) {
   useEffect(() => {
     document.title = title
 
@@ -436,6 +468,27 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
     if (ogImage) {
       setMeta(`meta[property="og:image"]`, 'property', 'og:image', ogImage)
       setMeta(`meta[name="twitter:image"]`, 'name', 'twitter:image', ogImage)
+      if (twitterImageAlt) {
+        setMeta(`meta[name="twitter:image:alt"]`, 'name', 'twitter:image:alt', twitterImageAlt)
+      }
+    }
+
+    // Article meta (for blog/guide pages)
+    if (ogType === 'article') {
+      if (articleAuthor) {
+        setMeta(`meta[property="article:author"]`, 'property', 'article:author', articleAuthor)
+      }
+      if (articleSection) {
+        setMeta(`meta[property="article:section"]`, 'property', 'article:section', articleSection)
+      }
+      if (articlePublishedTime) {
+        setMeta(`meta[property="article:published_time"]`, 'property', 'article:published_time', articlePublishedTime)
+      }
+      if (articleTags && articleTags.length > 0) {
+        articleTags.forEach((tag) => {
+          setMeta(`meta[property="article:tag"][content="${tag}"]`, 'property', 'article:tag', tag)
+        })
+      }
     }
 
     if (canonical) {
@@ -477,7 +530,7 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
     return () => {
       document.head.querySelectorAll('script[data-seohead="jsonld"]').forEach((el) => el.remove())
     }
-  }, [title, description, canonical, ogImage, ogType, noindex, jsonLd, extraMeta])
+  }, [title, description, canonical, ogImage, ogType, noindex, jsonLd, extraMeta, articleAuthor, articleSection, articleTags, articlePublishedTime, twitterImageAlt])
 
   return null
 }

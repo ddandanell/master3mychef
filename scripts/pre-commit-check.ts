@@ -10,7 +10,7 @@
  */
 
 import { execSync } from "child_process";
-import { existsSync, readFileSync } from "fs";
+import { existsSync } from "fs";
 import { resolve } from "path";
 
 const REQUIRED_FILES = [

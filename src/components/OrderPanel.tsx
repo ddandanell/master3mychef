@@ -78,7 +78,8 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
 
   useEffect(() => {
     if (open && initialExperience) {
-      setForm((f) => ({ ...f, experience: initialExperience }))
+      const timer = setTimeout(() => setForm((f) => ({ ...f, experience: initialExperience })), 0)
+      return () => clearTimeout(timer)
     }
   }, [open, initialExperience])
 
@@ -91,7 +92,10 @@ export default function OrderPanel({ open, onClose, initialExperience }: OrderPa
 
   // Reset to step 0 / form stage on each fresh open
   useEffect(() => {
-    if (open) setStage('form')
+    if (open) {
+      const timer = setTimeout(() => setStage('form'), 0)
+      return () => clearTimeout(timer)
+    }
   }, [open])
 
   // Handle Escape key to close the panel

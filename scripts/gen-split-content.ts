@@ -36,7 +36,7 @@ collect(BLOG_POSTS as AnyPost[], (p) => `/${p.slug}`)
 collect(JOURNAL_POSTS as AnyPost[], (p) => `/journal/${p.slug}`)
 
 const stripContent = (posts: AnyPost[]) =>
-  posts.map(({ content: _drop, ...rest }) => rest)
+  posts.map(({ content: _, ...rest }) => rest)
 
 writeFileSync(
   resolve(OUT, 'articleContent.ts'),

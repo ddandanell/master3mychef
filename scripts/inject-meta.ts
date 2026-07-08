@@ -16,6 +16,8 @@ import { fileURLToPath } from 'node:url'
 import { BLOG_POSTS, GUIDES, SITEMAP } from '../src/data/sitemap'
 import { JOURNAL_POSTS } from '../src/data/content/journalPosts'
 import { ARTICLE_CONTENT } from '../src/data/content/articleContent'
+import type { ContentEntry } from '../src/lib/blog'
+import type { JournalPost } from '../src/data/siteArchitecture'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = join(__dirname, '..', 'dist')
@@ -82,10 +84,12 @@ const PILLAR_OG_IMAGES: Record<string, string> = {
 
 const ARTICLE_AUTHOR = 'myCHEF Team'
 const ARTICLE_ROUTES = new Map(
-  [...GUIDES.filter((guide) => guide.slug !== 'guide/private-chef-bali'), ...BLOG_POSTS, ...JOURNAL_POSTS].map((entry: any) => [
-    entry.slug.startsWith('blog/') || entry.slug.startsWith('guide/') ? `/${entry.slug}` : `/journal/${entry.slug}`,
-    entry,
-  ])
+  [...GUIDES.filter((guide) => guide.slug !== 'guide/private-chef-bali'), ...BLOG_POSTS, ...JOURNAL_POSTS].map(
+    (entry: ContentEntry | JournalPost) => [
+      entry.slug.startsWith('blog/') || entry.slug.startsWith('guide/') ? `/${entry.slug}` : `/journal/${entry.slug}`,
+      entry,
+    ]
+  )
 )
 
 function stripHtml(text = ''): string {
@@ -359,8 +363,8 @@ for (const entry of SITEMAP) {
     success++
 
     // Also write alias paths
-    if ((entry as any).aliases) {
-      for (const alias of (entry as any).aliases) {
+    if (entry.aliases) {
+      for (const alias of entry.aliases) {
         const aliasHtml = injectMeta(baseHtml, alias, entry.title, entry.description)
         const aliasDir = join(DIST, alias)
         mkdirSync(aliasDir, { recursive: true })

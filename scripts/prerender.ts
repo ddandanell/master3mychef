@@ -35,7 +35,8 @@ const ROOT_EMPTY = '<div id="root"></div>'
 const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY ?? 8)
 const LIMIT = process.env.PRERENDER_LIMIT ? Number(process.env.PRERENDER_LIMIT) : Infinity
 
-// Critical pages to prerender
+// Critical pages to prerender (kept for reference; rendered dynamically from sitemap)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ROUTES = [
   { path: '/', file: 'index.html' },
   { path: '/fine-dining', file: 'fine-dining.html' },

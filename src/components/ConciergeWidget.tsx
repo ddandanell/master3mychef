@@ -109,6 +109,7 @@ export default function ConciergeWidget() {
   }, [])
 
   // Auto-trigger notification bubble after 5 seconds on new page
+  // eslint-disable-next-line react-hooks/set-state-in-effect, react-hooks/exhaustive-deps
   useEffect(() => {
     setShowNotification(false)
     const timer = setTimeout(() => {

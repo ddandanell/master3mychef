@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { MessageCircle, X, FileText } from 'lucide-react'
 
 const WA_NUMBER = '6289674072020'
@@ -6,13 +6,13 @@ const WA_TEXT = "Hi, I'd like the free Bali Private Chef Price Guide please"
 const STORAGE_KEY = 'priceguide_dismissed'
 
 export default function EmailCaptureBar() {
-  const [dismissed, setDismissed] = useState<boolean>(false)
+  const [dismissed, setDismissed] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false
+    return localStorage.getItem(STORAGE_KEY) === 'true'
+  })
 
-  useEffect(() => {
-    if (typeof window !== 'undefined' && localStorage.getItem(STORAGE_KEY) === 'true') {
-      setDismissed(true)
-    }
-  }, [])
+  // Remove unused useEffect import if no longer needed
+  // (useEffect is intentionally removed here; state is initialized from localStorage directly)
 
   const handleDismiss = () => {
     if (typeof window !== 'undefined') {

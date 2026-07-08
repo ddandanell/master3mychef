@@ -240,7 +240,7 @@ export default function CorporateEventsCateringBaliPage() {
   }
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Corporate Event Catering Bali 2026 | Case Studies & Real Costs — myCHEF"
         description="Real corporate catering case studies from Bali: tech retreat (38 people, 5 days), bank exec dinner (22 guests), fashion launch (74 guests), wellness retreat (24 people, 7 days). Costs, menus, and outcomes."
@@ -258,7 +258,7 @@ export default function CorporateEventsCateringBaliPage() {
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#0D0D0D] to-[#1A1A1A] text-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
-          <nav className="flex items-center gap-2 text-sm text-white/40 mb-8" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-sm text-white/55 mb-8" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#C5A028] transition-colors">Home</Link>
             <ChevronRight size={14} />
             <Link to="/blog" className="hover:text-[#C5A028] transition-colors">Blog</Link>
@@ -285,7 +285,7 @@ export default function CorporateEventsCateringBaliPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="corporate-events-cta"
-              className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
+              className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
             >
               <MessageCircle size={16} />
               Request a Corporate Quote
@@ -409,7 +409,7 @@ export default function CorporateEventsCateringBaliPage() {
             href={`https://wa.me/${PHONE.digits}?text=${WA_MSG}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
+            className="shrink-0 inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
           >
             <MessageCircle size={16} />
             Get a Quote
@@ -555,14 +555,14 @@ export default function CorporateEventsCateringBaliPage() {
             href={`https://wa.me/${PHONE.digits}?text=${WA_MSG}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold px-8 py-4 rounded hover:bg-[#B08F20] transition-colors uppercase tracking-wider"
+            className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold px-8 py-4 rounded hover:bg-[#B08F20] transition-colors uppercase tracking-wider"
           >
             <MessageCircle size={18} />
             Send Your Corporate Brief
           </a>
-          <p className="text-white/30 text-sm mt-4">Responds within 4 hours · Available 7 days a week</p>
+          <p className="text-white/55 text-sm mt-4">Responds within 4 hours · Available 7 days a week</p>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

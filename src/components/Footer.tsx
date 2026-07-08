@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { Link } from 'react-router-dom'
 import { Instagram, MessageCircle, LogIn, MapPin, Mail, ChefHat, ChevronDown } from 'lucide-react'
-import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA } from '@/data/siteArchitecture'
+import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA, hasLocationPage } from '@/data/siteArchitecture'
 
 // Top Bali locations shown by default — chosen by traffic + villa density
 const TOP_LOCATION_SLUGS = ['seminyak', 'canggu', 'uluwatu', 'ubud', 'nusa-dua']
@@ -32,7 +32,7 @@ export default function Footer() {
               </h3>
             </Link>
             <p className="text-base text-white/70 leading-relaxed mb-6">
-              Private chef, villa catering, and full-service events across Bali. Same-day WhatsApp confirmation.
+              Private chef, villa catering, and full-service events across Bali & Jakarta. Same-day WhatsApp confirmation.
             </p>
             <div className="flex items-center gap-4">
               <a
@@ -248,7 +248,7 @@ export default function Footer() {
                   All Areas
                 </Link>
               </li>
-              {visibleLocations.map((loc) => loc && (
+              {visibleLocations.filter((loc): loc is NonNullable<typeof loc> => !!loc && hasLocationPage(loc.slug)).map((loc) => (
                 <li key={loc.slug}>
                   <Link
                     to={`/locations/${loc.slug}`}
@@ -384,6 +384,7 @@ export default function Footer() {
             </Link>
           ))}
           <Link to="/services" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Services</Link>
+          <Link to="/recommended-services" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Recommended</Link>
           <Link to="/pricing" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Pricing</Link>
           <Link to="/calculator" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Price Calculator</Link>
           <Link to="/faq" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">FAQ</Link>
@@ -392,6 +393,7 @@ export default function Footer() {
           <Link to="/press" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Press</Link>
           <Link to="/join-our-team" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Join the Team</Link>
           <Link to="/partner-platform" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Partner Platform</Link>
+          <Link to="/certified-partner" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Certified Partner</Link>
           <Link to="/journal" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Journal</Link>
           <Link to="/blog" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Blog & Guides</Link>
           <Link
@@ -406,12 +408,12 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 py-8">
           <Link
             to="/partner-platform"
-            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/40 hover:text-[#C5A028] transition-all px-5 py-2.5 rounded-full border border-white/10 hover:border-[#C5A028]/30 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/55 hover:text-[#C5A028] transition-all px-5 py-2.5 rounded-full border border-white/10 hover:border-[#C5A028]/30 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white"
           >
             <LogIn className="w-4 h-4" /> Staff Login
           </Link>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/40">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/55">
             <Link to="/terms" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Terms of Service</Link>
             <span className="text-white/20">•</span>
             <Link to="/privacy" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Privacy Policy</Link>
@@ -420,10 +422,34 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Global presence */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 py-6 border-t border-white/5">
+          <span className="text-xs text-white/55 uppercase tracking-[0.15em]">Part of Global Catering</span>
+          <span className="hidden sm:block text-white/20">·</span>
+          <div className="flex items-center gap-4 text-xs">
+            <span className="flex items-center gap-1.5 text-white/50">
+              <MapPin className="w-3 h-3 text-[#C5A028]/60" />
+              Bali, Indonesia
+              <span className="text-white/55 ml-1 font-medium text-white/50">mychef.id</span>
+            </span>
+            <span className="text-white/20">·</span>
+            <a
+              href="https://www.mychef.ae/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-white/50 hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+            >
+              <MapPin className="w-3 h-3 text-[#C5A028]/60" />
+              Dubai, UAE
+              <span className="text-white/55 group-hover:text-[#C5A028] ml-1 font-medium">mychef.ae</span>
+            </a>
+          </div>
+        </div>
+
         {/* Copyright - Enhanced with decorative element */}
         <div className="relative py-6">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-[#C5A028]/20 to-transparent" />
-          <p className="text-xs text-white/30 text-center">
+          <p className="text-xs text-white/55 text-center">
             &copy; {new Date().getFullYear()} myCHEF.id. All rights reserved.
           </p>
         </div>

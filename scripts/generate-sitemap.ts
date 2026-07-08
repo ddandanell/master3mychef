@@ -11,9 +11,10 @@ import * as path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { SITEMAP, type SitemapEntry } from '../src/data/sitemap';
-import { JOURNAL_POSTS } from '../src/data/siteArchitecture';
+import { JOURNAL_POSTS } from '../src/data/content/journalPosts';
 
 import { REDIRECTS } from '../src/data/redirects';
+import { SITEMAP_LASTMOD } from '../src/data/sitemap-lastmod';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -37,9 +38,13 @@ const URLS: { path: string; priority: number; changefreq: string; lastmod?: stri
   })),
 ];
 
+// Noindex utility pages must NOT be in the sitemap (§2.2.2 — sitemap = indexable URLs only).
+// They are still served (inject-meta) with a noindex tag; they just don't belong here.
+const NOINDEX_PATHS = new Set(['/404', '/book', '/quote', '/calculator', '/join-our-team']);
+
 // Fjern redirects fra sitemap
 const REDIRECT_PATHS = new Set(REDIRECTS.map(r => r.from));
-const FILTERED_URLS = URLS.filter(url => !REDIRECT_PATHS.has(url.path));
+const FILTERED_URLS = URLS.filter(url => !REDIRECT_PATHS.has(url.path) && !NOINDEX_PATHS.has(url.path));
 
 // Deduplicate by path (sitemap already includes journal posts, but this ensures no duplicates)
 const seen = new Set<string>();
@@ -51,14 +56,20 @@ const UNIQUE_URLS = FILTERED_URLS.filter((url) => {
 });
 
 function generateSitemap(): string {
-  const now = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-  
-  const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq, lastmod }) => `  <url>
-    <loc>${SITE_URL}${path}</loc>
-    <lastmod>${lastmod || now}</lastmod>
+  // Only emit <lastmod> when we have a REAL per-page content date. Previously every
+  // page without a date got the build date (new Date()), so 149 pages falsely claimed
+  // "changed today" on every deploy — an unreliable freshness signal that erodes crawl
+  // trust and wastes crawl budget (Blueprint §2.2.3). Omitting is better than lying.
+  const urlEntries = UNIQUE_URLS.map(({ path, priority, changefreq, lastmod }) => {
+    // Real content date (B) → frozen spread date for existing undated pages (C-lite,
+    // src/data/sitemap-lastmod.ts) → omit for anything else, incl. future new pages (A).
+    const lm = lastmod || SITEMAP_LASTMOD[path];
+    return `  <url>
+    <loc>${SITE_URL}${path}</loc>${lm ? `\n    <lastmod>${lm}</lastmod>` : ''}
     <changefreq>${changefreq}</changefreq>
     <priority>${priority.toFixed(1)}</priority>
-  </url>`).join('\n');
+  </url>`;
+  }).join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

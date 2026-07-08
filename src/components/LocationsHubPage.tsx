@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import { MapPin, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from './SeoHead'
-import { LOCATIONS } from '@/data/siteArchitecture'
+import { LOCATIONS, hasLocationPage } from '@/data/siteArchitecture'
+import { PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
 import Breadcrumb from './shared/Breadcrumb'
 
 import OptimizedImage from '@/components/OptimizedImage'
@@ -62,10 +63,12 @@ const LOCATION_DETAILS = [
 
 export default function LocationsHubPage() {
   const canonical = `${SITE}/locations`
-  const locations = Object.values(LOCATIONS)
+  // Only locations that have a real /locations/<slug> page (LOCATIONS holds more
+  // entries than there are pages — linking the rest would 404).
+  const locations = Object.values(LOCATIONS).filter((l) => hasLocationPage(l.slug))
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Locations in Bali — myCHEF"
         description="Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Villa dining, catering and events in every region."
@@ -235,11 +238,35 @@ export default function LocationsHubPage() {
                 <Link
                   key={loc.slug}
                   to={`/locations/${loc.slug}`}
-                  className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-white"
+                  className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-[#1A1A1A]"
                 >
                   {loc.label}
                 </Link>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Private chef by area — complete index so every area page is reachable in 2 clicks (SEO: fixes orphaned/deep area pages) */}
+      <section className="py-10 bg-[#FAFAF8]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="rounded-2xl border border-black/5 bg-white px-6 py-8">
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-2">Private Chef by Area</p>
+            <h2 className="font-playfair text-2xl mb-4">Every Bali Area We Cover</h2>
+            <div className="flex flex-wrap gap-2.5">
+              {PRIVATE_CHEF_AREAS.filter((a) => a.published)
+                .slice()
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .map((area) => (
+                  <Link
+                    key={area.slug}
+                    to={`/private-chef/${area.slug}`}
+                    className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-[#1A1A1A]"
+                  >
+                    {area.name}
+                  </Link>
+                ))}
             </div>
           </div>
         </div>
@@ -277,12 +304,12 @@ export default function LocationsHubPage() {
             target="_blank"
             rel="noopener noreferrer"
             data-source="locations-hub-cta"
-            className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
           >
             <MapPin className="w-4 h-4" /> Book for Your Location
           </a>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

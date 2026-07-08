@@ -55,7 +55,7 @@ export default function MenuPage() {
 
   if (isIndex) {
     return (
-      <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+      <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
         <SeoHead
           title="Private Chef Menus in Bali | myCHEF"
           description="Explore myCHEF menu ideas for Bali villas — Mediterranean set menus, Indonesian feasts, BBQ nights, tasting menus, and customizable cuisine pages."
@@ -93,7 +93,7 @@ export default function MenuPage() {
               <a
                 href={`https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like help choosing the right menu for my villa stay.')}`}
                 target="_blank" data-source="menu-hero" rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
               >
                 <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
               </a>
@@ -131,7 +131,7 @@ export default function MenuPage() {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3">
-                <Link to="/fine-dining" className="inline-flex items-center gap-2 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase px-7 py-3.5 rounded-full hover:bg-[#D4B43A] transition-all">
+                <Link to="/fine-dining" className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase px-7 py-3.5 rounded-full hover:bg-[#D4B43A] transition-all">
                   The Full Experience <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link to="/fine-dining/tasting-menu" className="inline-flex items-center gap-2 border border-white/20 text-white text-sm tracking-widest uppercase px-7 py-3.5 rounded-full hover:bg-white/10 transition-all">
@@ -179,7 +179,7 @@ export default function MenuPage() {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Link
                       to="/book"
-                      className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-6 py-3 rounded-full hover:bg-[#D4B43A] transition-colors"
+                      className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-6 py-3 rounded-full hover:bg-[#D4B43A] transition-colors"
                     >
                       Book This Menu
                     </Link>
@@ -233,7 +233,7 @@ export default function MenuPage() {
             </div>
           </div>
         </section>
-      </main>
+      </div>
     )
   }
 
@@ -245,7 +245,7 @@ export default function MenuPage() {
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'd like the ${menu.name} for my villa.`)}`
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead title={`${title} | myCHEF`} description={menu.description} canonical={canonical} ogImage="/hero-fine-dining.webp" jsonLd={[aggregateRatingSchema(4.9, 560), breadcrumbSchema(menu.name, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[960px] mx-auto">
@@ -257,7 +257,7 @@ export default function MenuPage() {
           <PriceDisclaimer />
         </div>
         <div className="flex flex-col sm:flex-row gap-4">
-          <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="menu-detail" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
+          <a href={waLink} target="_blank" rel="noopener noreferrer" data-source="menu-detail" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors">
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
           </a>
           <Link
@@ -283,6 +283,6 @@ export default function MenuPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

@@ -64,7 +64,7 @@ export default function EmailCaptureBar() {
           <button
             type="button"
             onClick={handleDismiss}
-            className="flex h-7 w-7 items-center justify-center rounded-full text-white/40 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A028] focus-visible:ring-offset-1 focus-visible:ring-offset-black"
+            className="flex h-7 w-7 items-center justify-center rounded-full text-white/55 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A028] focus-visible:ring-offset-1 focus-visible:ring-offset-black"
             aria-label="Dismiss this offer"
           >
             <X className="h-4 w-4" aria-hidden="true" />

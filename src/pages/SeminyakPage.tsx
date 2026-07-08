@@ -85,7 +85,7 @@ export default function SeminyakPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Seminyak | Beachfront Villa Dining — myCHEF"
         description="Book a private chef in Seminyak for beachfront villa dinners, events & birthday parties. Indonesian chefs, Michelin standards, same-day availability. Get a quote."

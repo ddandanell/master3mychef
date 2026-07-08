@@ -22,15 +22,29 @@ writeFileSync(join(__dirname, '..', 'public', '_redirects'), netlifyLines.join('
 
 // 2. Vercel vercel.json (project root)
 const vercelConfig = {
-  redirects: REDIRECTS.map((r) => ({
-    source: r.from,
-    destination: r.to,
-    permanent: true,
-  })),
+  // Deploys come from GitHub Actions via `vercel deploy --prebuilt` (CI runs the
+  // Playwright prerender that Vercel's own build container can't). Disable Vercel's
+  // Git-integration auto-build entirely so it never (a) overwrites the prerendered
+  // output with a meta-only shell, nor (b) errors because the new prerender needs
+  // Chromium (which Vercel's build container lacks). CLI `--prebuilt` deploys are
+  // unaffected. See .github/workflows/deploy.yml.
+  git: { deploymentEnabled: false },
+  redirects: [
+    // Force www → apex as a permanent 308 (was 307 temporary — §2.3.3 canonicalization).
+    { source: '/(.*)', has: [{ type: 'host', value: 'www.mychef.id' }], destination: 'https://mychef.id/$1', permanent: true },
+    ...REDIRECTS.map((r) => ({
+      source: r.from,
+      destination: r.to,
+      permanent: true,
+    })),
+  ],
   headers: [
     {
       source: '/(.*)',
       headers: [
+        // NOTE: HSTS is Vercel-managed (max-age=63072000, apex). includeSubDomains+preload
+        // (§6.2.3) intentionally NOT forced here — it's a hard-to-reverse commitment across
+        // ALL subdomains (e.g. the separate "Mychef Live" app). Owner decision.
         { key: 'X-Content-Type-Options', value: 'nosniff' },
         { key: 'X-Frame-Options', value: 'DENY' },
         { key: 'X-XSS-Protection', value: '1; mode=block' },
@@ -38,7 +52,7 @@ const vercelConfig = {
         { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
         {
           key: 'Content-Security-Policy',
-          value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://www.googletagmanager.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
+          value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://www.googletagmanager.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://analytics.google.com https://stats.g.doubleclick.net https://www.google.com; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
         },
       ],
     },

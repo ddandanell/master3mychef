@@ -14,7 +14,8 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { BLOG_POSTS, GUIDES, SITEMAP } from '../src/data/sitemap'
-import { JOURNAL_POSTS } from '../src/data/siteArchitecture'
+import { JOURNAL_POSTS } from '../src/data/content/journalPosts'
+import { ARTICLE_CONTENT } from '../src/data/content/articleContent'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = join(__dirname, '..', 'dist')
@@ -46,7 +47,6 @@ const OG_IMAGES: Record<string, string> = {
   '/faq': '/generated/faq-hero.webp',
   '/locations': '/generated/hub-villa.webp',
   '/journal': '/generated/journal-hero.webp',
-  '/blog': '/generated/journal-hero.webp',
   // Journal posts (individual OG images)
   '/journal/michelin-training-bali': '/generated/journal-hero.webp',
   '/journal/sustainable-sourcing': '/generated/journal-hero.webp',
@@ -157,7 +157,7 @@ function buildBreadcrumbJsonLd(path: string, name: string): string {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
       ...(isArticle
-        ? [{ '@type': 'ListItem', position: 2, name: path.startsWith('/blog/') || path.startsWith('/journal/') ? 'Journal' : 'Help', item: `https://mychef.id${path.startsWith('/blog/') ? '/blog' : path.startsWith('/journal/') ? '/journal' : '/help'}` }]
+        ? [{ '@type': 'ListItem', position: 2, name: path.startsWith('/blog/') || path.startsWith('/journal/') ? 'Journal' : 'Help', item: `https://mychef.id/journal` }]
         : []),
       { '@type': 'ListItem', position: isArticle ? 3 : 2, name, item: `https://mychef.id${path}` },
     ],
@@ -168,6 +168,8 @@ function buildBreadcrumbJsonLd(path: string, name: string): string {
 function buildArticleJsonLd(path: string, title: string, description: string, ogImage: string): string {
   const article = ARTICLE_ROUTES.get(path)
   if (!article) return ''
+  // Bodies live in the split content store now — hydrate for articleBody/wordCount.
+  const body: string = article.content ?? ARTICLE_CONTENT[path] ?? ''
 
   const schema = {
     '@context': 'https://schema.org',
@@ -185,10 +187,27 @@ function buildArticleJsonLd(path: string, title: string, description: string, og
       logo: { '@type': 'ImageObject', url: `${SITE}/mychef-logo.svg` },
     },
     image: ogImage,
-    ...(article.content ? { articleBody: stripHtml(article.content), wordCount: stripHtml(article.content).split(/\s+/).filter(Boolean).length } : {}),
+    ...(body ? { articleBody: stripHtml(body), wordCount: stripHtml(body).split(/\s+/).filter(Boolean).length } : {}),
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE}${path}` },
   }
 
+  return `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
+}
+
+// WebPage schema for every non-article page (§5.1.3). Article pages already reference
+// a WebPage via the article schema's mainEntityOfPage, so we skip them to avoid duplicates.
+function buildWebPageJsonLd(path: string, name: string, description: string): string {
+  if (ARTICLE_ROUTES.has(path)) return ''
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE}${path}#webpage`,
+    url: `${SITE}${path}`,
+    name,
+    description,
+    isPartOf: { '@type': 'WebSite', '@id': `${SITE}/#website`, url: SITE, name: 'myCHEF' },
+    inLanguage: 'en',
+  }
   return `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
 }
 
@@ -299,6 +318,7 @@ function injectMeta(html: string, path: string, title: string, description: stri
   const structuredData = [
     buildBreadcrumbJsonLd(path, title.split('|')[0].trim()),
     buildArticleJsonLd(path, title, description, ogImage),
+    buildWebPageJsonLd(path, title.split('|')[0].trim(), description),
   ].filter(Boolean).join('\n  ')
   html = html.replace('</head>', `${structuredData}\n  </head>`)
 
@@ -350,6 +370,26 @@ for (const entry of SITEMAP) {
     }
   } catch (err) {
     console.error(`  ✗ ${entry.path}:`, err)
+    fail++
+  }
+}
+
+// Serve noindex utility pages that aren't in SITEMAP (they were 404 on direct access /
+// share / crawl, even though they work via client-side nav). injectMeta noindexes them
+// (they're in noindexPaths), and they're excluded from sitemap.xml (see generate-sitemap).
+const EXTRA_NOINDEX_PAGES = [
+  { path: '/book', title: 'Book myCHEF | Private Chef & Catering Bali', description: 'Book your private chef, villa catering, or event in Bali. Send your date, villa, and guest count for a fast quote.' },
+  { path: '/quote', title: 'Get a Quote | myCHEF Private Chef Bali', description: 'Get a fast, itemised quote for private chef, villa catering, or event staffing in Bali. No obligation.' },
+]
+for (const p of EXTRA_NOINDEX_PAGES) {
+  try {
+    const html = injectMeta(baseHtml, p.path, p.title, p.description)
+    const outDir = join(DIST, p.path)
+    mkdirSync(outDir, { recursive: true })
+    writeFileSync(join(outDir, 'index.html'), html)
+    success++
+  } catch (err) {
+    console.error(`  ✗ ${p.path}:`, err)
     fail++
   }
 }

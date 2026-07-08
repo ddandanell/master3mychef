@@ -166,7 +166,7 @@ export default function QuoteFunnel() {
   }, [step])
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Get a Custom Quote — Private Chef in Bali | myCHEF"
         description="Tell us about your event in 9 quick steps. Get a personalised private chef quote within 24 hours. Fine dining, villa catering, weddings, retreats — all priced transparently."
@@ -404,7 +404,7 @@ export default function QuoteFunnel() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="quote-funnel-submit"
-              className="inline-flex items-center justify-center gap-2 w-full bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center justify-center gap-2 w-full bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
               onClick={() => trackEvent('quote_submitted', { service_type: form.serviceType, source: 'quote_funnel' })}
             >
               <MessageCircle className="w-4 h-4" /> Send Request via WhatsApp
@@ -447,7 +447,7 @@ export default function QuoteFunnel() {
           </div>
         )}
       </section>
-    </main>
+    </div>
   )
 }
 

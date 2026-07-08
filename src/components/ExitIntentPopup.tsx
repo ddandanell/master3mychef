@@ -125,7 +125,7 @@ export default function ExitIntentPopup() {
           rel="noopener noreferrer"
           data-source="exit-intent-popup"
           onClick={handleClose}
-          className="flex items-center justify-center gap-2 w-full px-6 py-4 text-white font-semibold text-sm uppercase tracking-widest rounded-full transition-colors mb-3"
+          className="flex items-center justify-center gap-2 w-full px-6 py-4 text-[#1A1A1A] font-semibold text-sm uppercase tracking-widest rounded-full transition-colors mb-3"
           style={{ background: '#C5A028' }}
           onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = '#B08F20')}
           onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = '#C5A028')}

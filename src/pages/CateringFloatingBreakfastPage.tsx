@@ -581,7 +581,7 @@ export default function CateringFloatingBreakfastPage() {
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
             {DELIVERY_STEPS.map((s) => (
               <div key={s.step} className="text-center">
-                <div className="w-12 h-12 rounded-full bg-[#C5A028] text-white flex items-center justify-center mx-auto mb-4 text-lg font-semibold">
+                <div className="w-12 h-12 rounded-full bg-[#C5A028] text-[#1A1A1A] flex items-center justify-center mx-auto mb-4 text-lg font-semibold">
                   {s.step}
                 </div>
                 <h4 className="font-medium text-sm mb-1">{s.title}</h4>
@@ -606,7 +606,7 @@ export default function CateringFloatingBreakfastPage() {
             ))}
           </div>
           <div className="mt-6 text-center">
-            <p className="text-sm text-[#4A4745]/70">
+            <p className="text-sm text-[#4A4745]/80">
               All-in fixed pricing:{' '}
               <AllInPrice price={950000} showPlusPlus={false} suffix="/couple" className="inline" /> ·{' '}
               <AllInPrice price={1400000} showPlusPlus={false} suffix="/couple" className="inline" /> ·{' '}

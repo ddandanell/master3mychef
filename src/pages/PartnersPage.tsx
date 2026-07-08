@@ -175,7 +175,7 @@ export default function PartnersPage() {
   }, { scope: pageRef })
 
   return (
-    <main ref={pageRef} className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div ref={pageRef} className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Villa Partner Program Bali | Press & Partners — myCHEF"
         description="myCHEF villa partner program: co-branded chef service, certified partner benefits & press kit details for villa managers in Bali. WhatsApp us to join."
@@ -479,6 +479,6 @@ export default function PartnersPage() {
           </a>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

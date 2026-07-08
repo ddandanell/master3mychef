@@ -17,20 +17,20 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 const PORTALS = [
   {
-    id: 'fine-dining',
-    title: 'Fine Dining',
-    subtitle: 'A private chef cooks exclusively for you. Multi-course menu. Wine pairing. Your villa. Just your table.',
-    path: '/fine-dining',
-    image: '/generated/mychef-misc-bali-hub-fine-dining.webp',
-    accent: '#C5A028',
-  },
-  {
     id: 'catering',
     title: 'Catering',
     subtitle: 'BBQ, buffet, plated dinners. Babi guling. Drop-off or full service. We handle everything. You enjoy.',
     path: '/catering',
     image: '/generated/mychef-catering-bali-hub-catering.webp',
     accent: '#6B8E5A',
+  },
+  {
+    id: 'fine-dining',
+    title: 'Fine Dining',
+    subtitle: 'A private chef cooks exclusively for your group. Multi-course tasting menus — Italian, French, Mediterranean, Wagyu. Your villa. Just your table. From 6 guests.',
+    path: '/fine-dining',
+    image: '/generated/mychef-misc-bali-hub-fine-dining.webp',
+    accent: '#C5A028',
   },
   {
     id: 'events',
@@ -348,7 +348,7 @@ export default function HubPage() {
                   Your Villa. Our Kitchen.
                 </p>
                 <h1 className="hub-hero-title mb-4 text-[2rem] leading-[1.08] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  A Michelin-Trained Private Chef, in Your Bali Villa.
+                  Your Villa. Our Kitchen.
                 </h1>
                 <div className="gold-arc mb-6" />
                 <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>
@@ -373,7 +373,7 @@ export default function HubPage() {
         <div className="mx-auto max-w-[1280px] px-5 sm:px-6">
           <div className="mb-8 md:mb-12">
             <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-relaxed sm:text-[15px] md:text-base" style={{ color: 'var(--u-text-muted)' }}>
-              Founded by Adriano — trained under a Michelin-starred chef in Milan — myCHEF.id delivers restaurant-level private dining to Bali&apos;s finest villas with a 50+ person hospitality team.
+              Founded by Adriano — trained under a Michelin-starred chef in Milan — myCHEF.id delivers restaurant-level dining to Bali&apos;s finest villas. From intimate fine dining for 6 to catering for 200, our 50+ person hospitality team handles every detail.
             </p>
 
             <div className="mx-auto mb-8 max-w-2xl">
@@ -426,7 +426,7 @@ export default function HubPage() {
                 <div className="absolute inset-0 bg-black/55" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                 <div className="pointer-events-none absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-                  <h3 className="text-3xl md:text-4xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{portal.title}</h3>
+                  <h2 className="text-3xl md:text-4xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{portal.title}</h2>
                   <p className="text-sm text-white/[70%] mb-5 leading-relaxed">{portal.subtitle}</p>
                   <span className="flex items-center gap-2 text-sm font-medium transition-all group-hover:gap-4" style={{ color: portal.accent }}>
                     Explore <ArrowRight className="w-4 h-4" />
@@ -448,8 +448,16 @@ export default function HubPage() {
               <a href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-mid-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
                 <MessageCircle className="w-4 h-4" /> Get Your Quote in 1 Hour
               </a>
-              <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium tracking-widest uppercase rounded-full border transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}>
-                View All Contact Options
+              <Link to="/quote" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium tracking-widest uppercase rounded-full border transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}>
+                Get a Structured Quote
+              </Link>
+            </div>
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" style={{ color: 'var(--u-text-muted)' }}>
+              <Link to="/recommended-services" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+                Not sure? Let us recommend →
+              </Link>
+              <Link to="/contact" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+                View contact options
               </Link>
             </div>
           </div>
@@ -1106,7 +1114,7 @@ export default function HubPage() {
               </div>
             </Link>
 
-            <Link to="/blog/private-chef-bali-cost-breakdown-detailed-2026" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+            <Link to="/blog/private-chef-cost-bali" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
               <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
                 <span className="text-[#C5A028] font-serif text-3xl">💰</span>
               </div>
@@ -1129,7 +1137,7 @@ export default function HubPage() {
             </Link>
           </div>
           <div className="text-center mt-12">
-            <Link to="/blog" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
+            <Link to="/blog" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#1A1A1A' }}>
               View All Articles <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

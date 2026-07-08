@@ -231,7 +231,7 @@ export default function FineDiningChefsPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-source="chefs-hero-cta"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition-all hover:scale-[1.02] hover:bg-[#D2AE34] focus:outline-none focus:ring-2 focus:ring-white rounded"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-[#1A1A1A] transition-all hover:scale-[1.02] hover:bg-[#D2AE34] focus:outline-none focus:ring-2 focus:ring-white rounded"
                 >
                   <MessageCircle className="h-4 w-4" />
                   Book via WhatsApp
@@ -346,7 +346,7 @@ export default function FineDiningChefsPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="chefs-adriano-cta"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition-colors hover:bg-[#D2AE34] focus:outline-none focus:ring-2 focus:ring-white rounded"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-[#1A1A1A] transition-colors hover:bg-[#D2AE34] focus:outline-none focus:ring-2 focus:ring-white rounded"
               >
                 <MessageCircle className="h-4 w-4" />
                 Reserve with Adriano
@@ -520,7 +520,7 @@ export default function FineDiningChefsPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="chefs-final-cta"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition-colors hover:bg-[#D2AE34] focus:outline-none focus:ring-2 focus:ring-white rounded"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-[#1A1A1A] transition-colors hover:bg-[#D2AE34] focus:outline-none focus:ring-2 focus:ring-white rounded"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp myCHEF

@@ -91,7 +91,7 @@ export default function HelpPage() {
   const canonical = `${SITE}/help`
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Bali Guide | Help Centre — myCHEF"
         description="Your complete guide to booking a private chef in Bali. From first enquiry to menus, pricing, staffing & on-the-day logistics. Get answers fast."
@@ -134,7 +134,7 @@ export default function HelpPage() {
             <input
               type="text"
               placeholder="Search for pricing, menus, service areas..."
-              className="bg-transparent text-white placeholder:text-white/40 flex-1 outline-none text-lg"
+              className="bg-transparent text-white placeholder:text-white/55 flex-1 outline-none text-lg"
             />
           </div>
         </div>
@@ -209,6 +209,6 @@ export default function HelpPage() {
           </a>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

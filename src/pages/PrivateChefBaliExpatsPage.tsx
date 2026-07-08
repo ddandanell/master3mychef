@@ -103,7 +103,7 @@ const SECTIONS = [
     body: 'Share your location, household size, and preferred arrangement — we\'ll match you with the right chef within 48 hours.',
     primaryAction: {
       label: 'Chat on WhatsApp',
-      href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27m%20an%20expat%20in%20Bali%20and%20I%27m%20interested%20in%20a%20long-term%20private%20chef%20arrangement.',
+      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27m%20an%20expat%20in%20Bali%20and%20I%27m%20interested%20in%20a%20long-term%20private%20chef%20arrangement.',
       external: true,
     },
     secondaryAction: {

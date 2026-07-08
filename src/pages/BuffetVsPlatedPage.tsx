@@ -9,7 +9,7 @@ const SECTIONS = [
     subtitle: 'Catering Format Guide',
     title: 'Buffet vs Plated Service: Choosing the Right Style for Your Bali Event',
     body: `<p>The single most common catering decision point for villa events in Bali is also the one guests most frequently get wrong: buffet or plated service? The answer changes dramatically based on group size, occasion, budget, and how formal you want the evening to feel.</p>
-    <p>This guide covers what each format actually delivers, where each works best, what they cost, and a simple three-question framework for making the right call. Whether you're planning a <a href="/events/weddings" class="text-[#C5A028] hover:underline font-medium">villa wedding</a>, a <a href="/events/corporate-events" class="text-[#C5A028] hover:underline font-medium">corporate dinner</a>, or a <a href="/events/birthdays" class="text-[#C5A028] hover:underline font-medium">birthday celebration</a>, the format shapes every other decision that follows.</p>`,
+    <p>This guide covers what each format actually delivers, where each works best, what they cost, and a simple three-question framework for making the right call. Whether you're planning a <a href="/events/weddings" class="text-[#7E6410] hover:underline font-medium">villa wedding</a>, a <a href="/events/corporate-events" class="text-[#7E6410] hover:underline font-medium">corporate dinner</a>, or a <a href="/events/birthdays" class="text-[#7E6410] hover:underline font-medium">birthday celebration</a>, the format shapes every other decision that follows.</p>`,
   },
   {
     id: 'plated',
@@ -92,7 +92,7 @@ const SECTIONS = [
       {
         icon: Utensils,
         title: 'Romantic Dinners & Anniversaries',
-        desc: 'Plated, always. For 2–6 guests, plated service is the format. The chef choreographs each course, pacing the evening. A 5-course tasting menu with wine pairings is the signature myCHEF romantic dinner format. See our <a href="/fine-dining/romantic-dinner" class="text-[#C5A028] hover:underline font-medium">romantic dinner page</a> for full details.'
+        desc: 'Plated, always. For 2–6 guests, plated service is the format. The chef choreographs each course, pacing the evening. A 5-course tasting menu with wine pairings is the signature myCHEF romantic dinner format. See our <a href="/fine-dining/romantic-dinner" class="text-[#7E6410] hover:underline font-medium">romantic dinner page</a> for full details.'
       },
       {
         icon: CheckCircle,
@@ -102,7 +102,7 @@ const SECTIONS = [
       {
         icon: Clock,
         title: 'Yoga & Wellness Retreats',
-        desc: 'Buffet for group meals — guests have varied appetites and timing after sessions. Emphasis on labeling (gluten-free, vegan, raw) and visual presentation. Sharing-board format works particularly well for plant-forward wellness retreats. See our <a href="/catering/retreat-catering" class="text-[#C5A028] hover:underline font-medium">retreat catering page</a> for dedicated options.'
+        desc: 'Buffet for group meals — guests have varied appetites and timing after sessions. Emphasis on labeling (gluten-free, vegan, raw) and visual presentation. Sharing-board format works particularly well for plant-forward wellness retreats. See our <a href="/catering/retreat-catering" class="text-[#7E6410] hover:underline font-medium">retreat catering page</a> for dedicated options.'
       },
     ],
   },
@@ -145,7 +145,7 @@ const SECTIONS = [
 
     <p>For most Bali villa events, the answer arrives quickly. Two couples on honeymoon → plated, no question. Family of 12 with mixed dietary needs → buffet with family-style sharing elements. Twenty colleagues at a company offsite → buffet with a live satay station. The framework surfaces the trade-offs; our team helps you execute whichever you choose.</p>
 
-    <p>See our full <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing page</a> and <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">cost breakdown guide</a> for format-specific pricing at different group sizes.</p>`,
+    <p>See our full <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing page</a> and <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">cost breakdown guide</a> for format-specific pricing at different group sizes.</p>`,
   },
   {
     id: 'cta',
@@ -153,7 +153,7 @@ const SECTIONS = [
     subtitle: 'Get Expert Advice',
     title: 'Not Sure Which Format Fits Your Event? Ask Us.',
     body: "Tell us your group size, occasion, and budget — we will recommend the right format and send a sample menu within a few hours.",
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/6281291570014?text=Hi%20myCHEF%2C%20I%20want%20advice%20on%20buffet%20vs%20plated%20service%20for%20my%20event' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%20want%20advice%20on%20buffet%20vs%20plated%20service%20for%20my%20event' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

@@ -91,7 +91,7 @@ const SECTIONS = [
 
     <p><strong>Company retreats and team dinners:</strong> A shared meal at a private villa does more for team cohesion than any activity. The relaxed setting, family-style serving, and absence of a restaurant environment breaks down the formality that corporate dining usually carries. Menu suggestion: sharing boards and a mixed Indonesian-Western menu that accommodates varied dietary requirements across a diverse team.</p>
 
-    <p><strong>Anniversary dinners:</strong> Our most refined format. A five-course plated menu with wine pairings, candles, and a villa that belongs entirely to you for the evening. No other diners, no background noise, no interruptions. See our <a href="/blog/anniversary-dinner-villa-bali" class="text-[#C5A028] hover:underline font-medium">anniversary dinner guide</a> for full details and menu inspiration.</p>
+    <p><strong>Anniversary dinners:</strong> Our most refined format. A five-course plated menu with wine pairings, candles, and a villa that belongs entirely to you for the evening. No other diners, no background noise, no interruptions. See our <a href="/blog/anniversary-dinner-villa-bali" class="text-[#7E6410] hover:underline font-medium">anniversary dinner guide</a> for full details and menu inspiration.</p>
 
     <p><strong>Milestone celebrations:</strong> Promotions, engagements, a completed project, a personal achievement — moments that deserve more than a restaurant dinner but less than a full event. A villa dinner sits perfectly in that space: elevated and personal, without the scale or formality of a large event.</p>
 
@@ -111,7 +111,7 @@ const SECTIONS = [
     body: 'Tell us your guest count, date, and villa — we will send a bespoke menu proposal and quote within 2 hours.',
     primaryAction: {
       label: 'Plan Your Dinner Party',
-      href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20plan%20a%20private%20dinner%20party%20at%20my%20Bali%20villa.',
+      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20plan%20a%20private%20dinner%20party%20at%20my%20Bali%20villa.',
       external: true,
     },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },

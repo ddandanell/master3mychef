@@ -124,7 +124,7 @@ export default function ManagingBookingPage() {
   const canonical = `${SITE}/help/managing-booking`
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Manage Your Chef Booking Bali | After You Confirm — myCHEF"
         description="Everything that happens after booking your myCHEF private chef in Bali: menu sign-off, villa setup, chef arrival, changes & day-of coordination."
@@ -281,6 +281,6 @@ export default function ManagingBookingPage() {
           </a>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

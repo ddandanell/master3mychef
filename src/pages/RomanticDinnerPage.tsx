@@ -163,7 +163,7 @@ export default function RomanticDinnerPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="romantic-dinner-hero"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Plan Our Romantic Dinner
             </a>
@@ -301,7 +301,7 @@ export default function RomanticDinnerPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="romantic-dinner-menu-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Book This Menu
             </a>
@@ -422,7 +422,7 @@ export default function RomanticDinnerPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="romantic-dinner-howitworks-cta"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               <MessageCircle className="w-4 h-4" /> Start Planning
             </a>
@@ -496,7 +496,7 @@ export default function RomanticDinnerPage() {
                 href={WA_LINK}
                 target="_blank" rel="noopener noreferrer"
                 data-source="romantic-dinner-pricing-cta"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
               >
                 <MessageCircle className="w-4 h-4" /> Get a Quote
               </a>
@@ -539,7 +539,7 @@ export default function RomanticDinnerPage() {
             href={WA_LINK}
             target="_blank" rel="noopener noreferrer"
             data-source="romantic-dinner-final-cta"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
           >
             <MessageCircle className="w-5 h-5" /> Message Sofia on WhatsApp
           </a>

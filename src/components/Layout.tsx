@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, lazy, Suspense } from 'react'
 import { useLocation } from 'react-router-dom'
 import { UniverseProvider } from '@/contexts/UniverseContext'
 import { trackWhatsAppClick, trackPhoneClick } from '@/lib/analytics'
@@ -57,14 +57,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </a>
         <Navbar />
         <main id="main-content" className="flex-1">{children}</main>
-        <div className="bg-[#1A1916] text-[#C5A028] text-xs py-2 text-center">
+        <section aria-label="myCHEF highlights" className="bg-[#1A1916] text-[#C5A028] text-xs py-2 text-center">
           ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · 4.9★ rated
         </div>
         <div className="bg-[#F5F5F3] border-t border-black/5 py-3 px-6 text-center">
           <PriceDisclaimer className="max-w-[900px] mx-auto" showIcon={false} />
         </div>
         <Footer />
-        <ExitIntentPopup />
+        <Suspense fallback={null}><ConciergeWidget /></Suspense>
+        <Suspense fallback={null}><ExitIntentPopup /></Suspense>
       </div>
     </UniverseProvider>
   )

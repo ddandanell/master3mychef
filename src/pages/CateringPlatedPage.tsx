@@ -535,7 +535,7 @@ export default function CateringPlatedPage() {
             ))}
           </div>
           <div className="mt-6 text-center">
-            <p className="text-sm text-[#4A4745]/70">
+            <p className="text-sm text-[#4A4745]/80">
               All-in prices include 21% service charge and tax:{' '}
               <AllInPrice price={800000} className="inline" /> ·{' '}
               <AllInPrice price={1000000} className="inline" /> ·{' '}

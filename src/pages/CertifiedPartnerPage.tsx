@@ -20,7 +20,7 @@ export default function CertifiedPartnerPage() {
   const canonical = `${SITE}/certified/${slug}`
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={`${niceName} — myCHEF Certified Partner`}
         description={`${niceName} is an officially certified myCHEF villa dining partner. Verified for Michelin-level private dining execution in Bali.`}
@@ -139,6 +139,6 @@ export default function CertifiedPartnerPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

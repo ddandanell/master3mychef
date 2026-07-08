@@ -462,7 +462,7 @@ export default function CateringMainPage() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
           <div className="bg-black/60 rounded-3xl px-8 md:px-12 py-12 md:py-16 backdrop-blur-sm">
-            <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-8" />
+            <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-8" decorative />
             <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
               myCHEF Events & Catering
             </p>
@@ -481,7 +481,7 @@ export default function CateringMainPage() {
                 target="_blank"
                 data-source="catering-hero"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
               </a>
@@ -510,6 +510,48 @@ export default function CateringMainPage() {
               items={['500+ villa events served', '4.9★ Google Reviews', 'Chef + staff included', 'Same-day quotes', 'Bali-wide service']}
               dark
             />
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ CROSS-PROMOTION: FINE DINING ═══════ */}
+      <section className="py-12 md:py-16 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="bg-[#FAFAF8] rounded-3xl border border-[#E8E6E3] overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="p-8 md:p-12 flex flex-col justify-center">
+                <p
+                  className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3"
+                  style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+                >
+                  Elevated Experience
+                </p>
+                <h2
+                  className="text-2xl md:text-3xl mb-4"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  Looking for a Multi-Course Tasting Menu?
+                </h2>
+                <p className="text-[#4A4745] text-sm md:text-base leading-relaxed mb-6">
+                  For groups of 6 or more, our Private Fine Dining experience offers Italian, French, Mediterranean, and Wagyu tasting menus prepared by a Michelin-trained chef in your villa.
+                </p>
+                <Link
+                  to="/fine-dining"
+                  data-source="catering-cross-promotion"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#C5A028] uppercase tracking-wider hover:text-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                >
+                  Explore Fine Dining <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <div className="relative min-h-[240px] md:min-h-full">
+                <OptimizedImage
+                  src="/generated/mychef-misc-bali-hub-fine-dining.webp"
+                  alt="Elegant fine dining plated dish at a Bali villa"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -549,7 +591,7 @@ export default function CateringMainPage() {
                 onClick={() => setActiveTab('daily')}
                 className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wider uppercase transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
                   activeTab === 'daily'
-                    ? 'bg-[#C5A028] text-white shadow-md'
+                    ? 'bg-[#C5A028] text-[#1A1A1A] shadow-md'
                     : 'text-[#4A4745] hover:text-[#1A1A1A]'
                 }`}
               >
@@ -667,7 +709,7 @@ export default function CateringMainPage() {
                     <h4 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h4>
                     <p className="text-[#C5A028] font-semibold text-lg mb-1">{pkg.price}<span className="text-sm">{pkg.period}</span></p>
                     <p className="text-[#4A4745] text-sm mb-4 flex-1">{pkg.desc}</p>
-                    <p className="text-xs text-[#4A4745]/70 mb-4">Best for: {pkg.bestFor}</p>
+                    <p className="text-xs text-[#4A4745]/80 mb-4">Best for: {pkg.bestFor}</p>
                     <a
                       href={WA_DAILY_CHEF_LINK}
                       target="_blank"
@@ -769,8 +811,16 @@ export default function CateringMainPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-service-tabs-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all">
               <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
             </a>
-            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white transition-all">
-              View All Contact Options
+            <Link to="/quote" className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white transition-all">
+              Get a Structured Quote
+            </Link>
+          </div>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[#4A4745]">
+            <Link to="/recommended-services" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">
+              Not sure? Let us recommend →
+            </Link>
+            <Link to="/contact" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">
+              View contact options
             </Link>
           </div>
         </div>
@@ -1133,7 +1183,7 @@ export default function CateringMainPage() {
                   <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Price</th>
                   <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Min. Guests</th>
                   <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Best For</th>
-                  <th className="pb-3"></th>
+                  <th className="pb-3"><span className="sr-only">Action</span></th>
                 </tr>
               </thead>
               <tbody>
@@ -1323,7 +1373,7 @@ export default function CateringMainPage() {
             }}
             messageIntro="Hi myCHEF, I'd like a catering quote for my stay in Bali."
           />
-          <p className="text-center text-xs text-[#4A4745]/60 mt-6">
+          <p className="text-center text-xs text-[#4A4745]/80 mt-6">
             No spam. No calls unless you ask. Just a clear quote you can book or ignore.
           </p>
         </div>

@@ -488,7 +488,7 @@ export default function CateringBabiGulingPage() {
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-[#4A4745]/70 pt-3 border-t border-[#E8E6E3]">
+                <p className="text-xs text-[#4A4745]/80 pt-3 border-t border-[#E8E6E3]">
                   <strong>Best for:</strong> {pkg.bestFor}
                 </p>
               </div>

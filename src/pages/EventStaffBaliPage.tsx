@@ -32,7 +32,7 @@ const SECTIONS: PageSection[] = [
     <p><strong>8-12 guests (dinner party):</strong> 1 head waiter + 1 server + kitchen runner. The chef focuses on cooking, the head waiter manages all front-of-house, the server carries plates and tops up drinks, the runner manages kitchen flow. Add a bartender if a cocktail hour is included.</p>
     <p><strong>14-20 guests (large villa dinner):</strong> 1 head waiter + 2 servers + 1 kitchen runner + 1 bartender. This size requires the chef to have genuine kitchen support — the runner is essential. The second server allows simultaneous service of all tables without delay.</p>
     <p><strong>20-40 guests (corporate or celebration event):</strong> 1 event coordinator + 1 head waiter + 3-4 servers + 1-2 kitchen crew + 1-2 bartenders. At this scale, coordination between kitchen and floor becomes complex. An event coordinator is strongly recommended.</p>
-    <p><strong>40-80 guests (wedding or large corporate):</strong> Full event team — event coordinator, head waiter, 6-8 servers, 2 kitchen crew, 2 bartenders. This requires advance planning and a site visit to plan the service flow. Contact us at least 2 weeks in advance for events of this size. See our <a href="/blog/bali-wedding-catering-budget-guide" class="text-[#C5A028] hover:underline font-medium">wedding catering guide</a>.</p>`,
+    <p><strong>40-80 guests (wedding or large corporate):</strong> Full event team — event coordinator, head waiter, 6-8 servers, 2 kitchen crew, 2 bartenders. This requires advance planning and a site visit to plan the service flow. Contact us at least 2 weeks in advance for events of this size. See our <a href="/blog/bali-wedding-catering-budget-guide" class="text-[#7E6410] hover:underline font-medium">wedding catering guide</a>.</p>`,
   },
   {
     id: 'costs',
@@ -47,7 +47,7 @@ const SECTIONS: PageSection[] = [
       <li><strong>Kitchen Runner / Commis:</strong> IDR 200,000 – 280,000 per event.</li>
       <li><strong>Event Coordinator / Floor Manager:</strong> IDR 600,000 – 1,000,000 per event depending on scale and complexity.</li>
     </ul>
-    <p style="margin-top:0.75rem;">All staff arrive uniform-ready and briefed on the event format. Overtime rates apply for events running beyond the agreed service period. For the full cost picture including chef and food see our <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">private chef cost guide</a>.</p>`,
+    <p style="margin-top:0.75rem;">All staff arrive uniform-ready and briefed on the event format. Overtime rates apply for events running beyond the agreed service period. For the full cost picture including chef and food see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">private chef cost guide</a>.</p>`,
   },
   {
     id: 'briefing',

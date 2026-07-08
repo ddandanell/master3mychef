@@ -7,7 +7,7 @@ const SECTIONS: PageSection[] = [
     type: 'content',
     subtitle: 'Nusa Dua Private Chef',
     title: 'Why Nusa Dua Is Bali\'s Premier Destination for Private Chef Dining',
-    body: `<p>Nusa Dua is unlike anywhere else in Bali. A purpose-built luxury enclave on the southern Bukit Peninsula, it hosts the island\'s highest concentration of five-star resort hotels, gated villa compounds, and world-class beach clubs. Guests here arrive expecting the finest — and a <a href="/services" class="text-[#C5A028] hover:underline font-medium">private chef</a> delivers exactly that, bringing restaurant-calibre cuisine directly into your villa or resort suite.</p>
+    body: `<p>Nusa Dua is unlike anywhere else in Bali. A purpose-built luxury enclave on the southern Bukit Peninsula, it hosts the island\'s highest concentration of five-star resort hotels, gated villa compounds, and world-class beach clubs. Guests here arrive expecting the finest — and a <a href="/services" class="text-[#7E6410] hover:underline font-medium">private chef</a> delivers exactly that, bringing restaurant-calibre cuisine directly into your villa or resort suite.</p>
     <p>The area is defined by its exclusivity. Wide boulevards, manicured grounds, and international hotel brands sit alongside private residential villas that regularly host honeymooners, corporate retreats, and multi-generational family holidays. A private chef experience fits this environment perfectly — it matches the standard of service guests already expect, while adding a level of personalisation no hotel restaurant can match.</p>
     <p>Whether you are staying in a beachfront villa, a resort-managed bungalow, or a private compound within the BTDC zone, myCHEF chefs are fully briefed on working within Nusa Dua properties and coordinating with villa managers and resort concierge teams to deliver a seamless service.</p>`,
   },
@@ -34,8 +34,8 @@ const SECTIONS: PageSection[] = [
     body: `<p>myCHEF private chefs in Nusa Dua serve groups of all sizes — from an intimate dinner for two to a full villa feast for twenty. The service scales smoothly: a solo chef handles up to eight guests with ease, while larger groups are supported by a chef-and-kitchen-assistant team to maintain quality and timing across every plate.</p>
     <p><strong>Couples and small groups (2–4):</strong> Intimate fine dining, romantic anniversary dinners, and honeymoon experiences. The chef can create a surprise menu or work closely with guests to co-design every course.</p>
     <p><strong>Family groups (5–10):</strong> Flexible menus that accommodate multiple generations — adult tasting menus alongside kid-friendly options cooked by the same chef from the same kitchen.</p>
-    <p><strong>Villa parties and corporate groups (10–20):</strong> Buffet, family-style, or plated service for larger gatherings. Staffing can be extended to include <a href="/services/waiters" class="text-[#C5A028] hover:underline font-medium">professional waiters</a>, <a href="/services/bartenders" class="text-[#C5A028] hover:underline font-medium">bartenders</a>, and a <a href="/services/sommelier" class="text-[#C5A028] hover:underline font-medium">sommelier</a> for a fully staffed event.</p>
-    <p>Nusa Dua villas typically feature large, well-equipped kitchens and generous outdoor dining terraces — ideal for both formal plated dinners and relaxed open-air feasts. <a href="/locations/nusa-dua" class="text-[#C5A028] hover:underline font-medium">Learn more about private chef services in Nusa Dua</a>.</p>`,
+    <p><strong>Villa parties and corporate groups (10–20):</strong> Buffet, family-style, or plated service for larger gatherings. Staffing can be extended to include <a href="/in-villa-service/waiters" class="text-[#7E6410] hover:underline font-medium">professional waiters</a>, <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">bartenders</a>, and a <a href="/in-villa-service/sommelier" class="text-[#7E6410] hover:underline font-medium">sommelier</a> for a fully staffed event.</p>
+    <p>Nusa Dua villas typically feature large, well-equipped kitchens and generous outdoor dining terraces — ideal for both formal plated dinners and relaxed open-air feasts. <a href="/locations/nusa-dua" class="text-[#7E6410] hover:underline font-medium">Learn more about private chef services in Nusa Dua</a>.</p>`,
   },
   {
     id: 'pricing',
@@ -49,7 +49,7 @@ const SECTIONS: PageSection[] = [
       <li><strong>Fine dining / tasting menus (6–8 courses):</strong> IDR 1,200,000 – 1,500,000 per person. Michelin-calibre technique, premium ingredients including local seafood and imported produce, paired with wine recommendations.</li>
     </ul>
     <p style="margin-top:0.75rem;">Pricing per person decreases as group size increases — the fixed cost of the chef\'s time is spread across more guests. Additional costs include ingredient upgrades (truffle, wagyu, fresh lobster), wine and cocktail service, and optional staffing such as a dedicated waiter or sommelier.</p>
-    <p>For a detailed breakdown, visit our <a href="/pricing" class="text-[#C5A028] hover:underline font-medium">pricing guide</a> or use the <a href="/calculator" class="text-[#C5A028] hover:underline font-medium">cost calculator</a> to estimate your specific booking.</p>`,
+    <p>For a detailed breakdown, visit our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing guide</a> or use the <a href="/calculator" class="text-[#7E6410] hover:underline font-medium">cost calculator</a> to estimate your specific booking.</p>`,
   },
   {
     id: 'how-to-book',
@@ -58,11 +58,11 @@ const SECTIONS: PageSection[] = [
     title: 'Booking a Private Chef in Nusa Dua — Step by Step',
     body: `<p>Booking a private chef in Nusa Dua through myCHEF is straightforward. Here is the typical process:</p>
     <p><strong>1. Submit your enquiry.</strong> Tell us your dates, villa address, number of guests, and any cuisine preferences or dietary requirements. You can do this via WhatsApp, the contact form, or directly through your villa concierge if they have a myCHEF partnership.</p>
-    <p><strong>2. Receive chef recommendations.</strong> We match you with available chefs who specialise in your preferred cuisine style and have experience with Nusa Dua properties. <a href="/chefs" class="text-[#C5A028] hover:underline font-medium">Browse chef profiles</a> to get a sense of who is available.</p>
+    <p><strong>2. Receive chef recommendations.</strong> We match you with available chefs who specialise in your preferred cuisine style and have experience with Nusa Dua properties. <a href="/chefs" class="text-[#7E6410] hover:underline font-medium">Browse chef profiles</a> to get a sense of who is available.</p>
     <p><strong>3. Confirm the menu.</strong> Your chef will consult with you on the menu — either following a proposed plan or co-designing it from scratch. Dietary restrictions, allergies, and preferences are locked in at this stage.</p>
     <p><strong>4. Confirm booking and pay deposit.</strong> A deposit secures your booking. The balance is due on the day of service or per agreed terms.</p>
     <p><strong>5. Sit back and enjoy.</strong> Your chef arrives at the agreed time — typically 1.5–2 hours before your dinner — handles all preparation, cooking, and cleanup, and leaves your kitchen as they found it.</p>
-    <p style="margin-top:0.75rem;">We recommend booking at least 3–5 days in advance for standard requests, and 1–2 weeks ahead for fine dining, large groups, or special occasions. <a href="/contact" class="text-[#C5A028] hover:underline font-medium">Contact our team</a> to check availability for your dates.</p>`,
+    <p style="margin-top:0.75rem;">We recommend booking at least 3–5 days in advance for standard requests, and 1–2 weeks ahead for fine dining, large groups, or special occasions. <a href="/contact" class="text-[#7E6410] hover:underline font-medium">Contact our team</a> to check availability for your dates.</p>`,
   },
   {
     id: 'cta',

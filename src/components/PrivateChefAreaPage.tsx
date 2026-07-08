@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPrivateChefArea, PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
+import { hasLocationPage } from '@/data/siteArchitecture'
 import { trackWhatsAppClick } from '@/lib/analytics'
 
 const SITE = 'https://mychef.id'
@@ -145,7 +146,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
   const nearby = area.nearbyAreas.filter((n) => publishedSlugs.has(n.slug)).slice(0, 6)
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={area.metaTitle}
         description={area.metaDescription}
@@ -203,7 +204,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
                 rel="noopener noreferrer"
                 data-source={`area-${area.slug}-hero-wa`}
                 onClick={() => trackWhatsAppClick(`area-${area.slug}-hero`)}
-                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
               >
                 <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
               </a>
@@ -240,7 +241,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               target="_blank"
               rel="noopener noreferrer"
               data-source={`area-${area.slug}-hero-price`}
-              className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-6 py-3 rounded-full hover:bg-[#D4B43A] transition-all"
+              className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-6 py-3 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <MessageCircle className="w-4 h-4" /> Get a free quote
             </a>
@@ -534,7 +535,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               rel="noopener noreferrer"
               data-source={`area-${area.slug}-pricing-wa`}
               onClick={() => trackWhatsAppClick(`area-${area.slug}-pricing`)}
-              className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <MessageCircle className="w-4 h-4" /> Get a free itemised quote
             </a>
@@ -618,7 +619,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               { label: 'Villa Catering', href: '/catering', icon: Utensils },
               { label: 'Events & Weddings', href: '/events', icon: Sparkles },
               { label: 'Staffing', href: '/staffing', icon: Users },
-              { label: 'Private Chef Bali', href: '/private-chef-bali', icon: ChefHat },
+              { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', icon: ChefHat },
               { label: 'Pricing Guide', href: '/pricing', icon: Check },
               { label: 'Book myCHEF', href: '/book', icon: CalendarCheck },
               { label: 'Get a Quote', href: '/quote', icon: MessageCircle },
@@ -676,7 +677,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               rel="noopener noreferrer"
               data-source={`area-${area.slug}-final-cta`}
               onClick={() => trackWhatsAppClick(`area-${area.slug}-final`)}
-              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-10 py-5 rounded-full hover:bg-[#D4B43A] transition-all text-base"
+              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-10 py-5 rounded-full hover:bg-[#D4B43A] transition-all text-base"
             >
               <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
             </a>
@@ -687,11 +688,11 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               Request a quote online
             </Link>
           </div>
-          <p className="text-white/40 text-xs mt-8">
+          <p className="text-white/55 text-xs mt-8">
             Same-day response · HACCP certified · 500+ events served · 4.9 ★ rating
           </p>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

@@ -22,7 +22,7 @@ export default function InfoPage({ title, description, slug, highlights, heroIma
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'd like to know more about ${title}.`)}`
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead title={`${title} | myCHEF`} description={description} canonical={canonical} ogImage={heroImage || "/mychef-misc-bali-og-image.webp"} jsonLd={[aggregateRatingSchema(4.9, 560), breadcrumbSchema(title, canonical), faqPageSchema([
         { question: `Does myCHEF offer private chef services in ${title.replace(' | myCHEF', '').replace('Private Chef in ', '')}?`, answer: `Yes — myCHEF offers private chef dining, villa catering, and event services including ${title.replace('Private Chef in ', '').replace(' | myCHEF', '')}. Contact us via WhatsApp to discuss availability.` },
         { question: 'How do I book a private chef?', answer: 'Send a WhatsApp message to +62 896-7407-2020 with your date, location, and guest count. We reply within the hour and send a proposal within 24 hours.' },
@@ -100,6 +100,6 @@ export default function InfoPage({ title, description, slug, highlights, heroIma
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

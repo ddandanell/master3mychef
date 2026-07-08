@@ -19,7 +19,7 @@ export default function CateringPage() {
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like a catering quote for my villa.')}`
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={pillar.title}
         description={pillar.description}
@@ -39,7 +39,7 @@ export default function CateringPage() {
             target="_blank"
             rel="noopener noreferrer"
             data-source="catering-hero"
-            className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors"
           >
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
           </a>
@@ -124,6 +124,6 @@ export default function CateringPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

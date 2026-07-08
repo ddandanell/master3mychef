@@ -12,18 +12,23 @@ interface BreadcrumbProps {
   items: Crumb[]
   className?: string
   theme?: 'light' | 'dark'
+  /** Visual-only copy (no nav landmark, hidden from a11y tree). Use when a page shows
+   *  the breadcrumb twice — keep one as the real landmark, mark the other decorative. */
+  decorative?: boolean
 }
 
-export default function Breadcrumb({ items, className = '', theme = 'light' }: BreadcrumbProps) {
+export default function Breadcrumb({ items, className = '', theme = 'light', decorative = false }: BreadcrumbProps) {
   const linkClass =
     theme === 'dark'
       ? 'text-white/[60%] hover:text-white'
-      : 'text-[#4A4745]/60 hover:text-[#1A1A1A]'
+      : 'text-[#4A4745]/80 hover:text-[#1A1A1A]'
   const currentClass = theme === 'dark' ? 'text-white font-medium' : 'text-[#1A1A1A] font-medium'
   const separatorClass = theme === 'dark' ? 'text-white/[30%]' : 'text-[#4A4745]/30'
 
+  const Wrapper = (decorative ? 'div' : 'nav') as 'div'
+
   return (
-    <nav aria-label="Breadcrumb" className={cn('py-4 px-6', className)}>
+    <Wrapper aria-label={decorative ? undefined : 'Breadcrumb'} aria-hidden={decorative || undefined} className={cn('py-4 px-6', className)}>
       <ol className="flex items-center gap-2 text-sm flex-wrap">
         <li>
           <Link to="/" className={cn('inline-flex items-center gap-1 transition-colors', linkClass)}>
@@ -44,6 +49,6 @@ export default function Breadcrumb({ items, className = '', theme = 'light' }: B
           </li>
         ))}
       </ol>
-    </nav>
+    </Wrapper>
   )
 }

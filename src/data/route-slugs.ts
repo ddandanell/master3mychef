@@ -48,7 +48,6 @@ export const BLOG_POST_SLUGS: string[] = [
   'blog/private-chef-romantic-dinners-bali',
   // Phase 5 (new content)
   'blog/how-to-hire-private-chef-bali-complete-guide',
-  'blog/private-chef-bali-cost-breakdown-detailed-2026',
   'blog/chef-qualifications-credentials-bali-hiring',
   'blog/private-chef-roles-responsibilities-explained',
   'blog/wedding-private-chef-bali-planning-guide',

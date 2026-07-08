@@ -173,7 +173,7 @@ export default function PricingCalculatorPage() {
 
     const message = `Hi myCHEF, I used your pricing calculator. I need ${serviceName} for ${guestRange} guests at ${menuName} level. Estimated budget: ${budget}. Can you send a detailed quote?`
 
-    return `https://wa.me/4915234561712?text=${encodeURIComponent(message)}`
+    return `https://wa.me/62089674072020?text=${encodeURIComponent(message)}`
   }
 
   // ── Toggle add-on ────────────────────────────────────────────────────────────
@@ -317,7 +317,7 @@ export default function PricingCalculatorPage() {
                       For 80+ guests we prepare a custom proposal tailored to your venue and requirements.
                     </p>
                     <a
-                      href="https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%20need%20catering%20for%2080%2B%20guests.%20Can%20you%20send%20a%20custom%20quote%3F"
+                      href="https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%20need%20catering%20for%2080%2B%20guests.%20Can%20you%20send%20a%20custom%20quote%3F"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full transition-colors duration-200"
@@ -515,7 +515,7 @@ export default function PricingCalculatorPage() {
             <p className="text-xl font-bold text-stone-900 mb-2">Ready to book your private chef?</p>
             <p className="text-stone-500 mb-6">Tell us your date and we'll confirm availability within the hour.</p>
             <a
-              href="https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%20would%20like%20to%20enquire%20about%20booking%20a%20private%20chef%20in%20Bali."
+              href="https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%20would%20like%20to%20enquire%20about%20booking%20a%20private%20chef%20in%20Bali."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white font-bold px-8 py-4 rounded-full transition-colors duration-200"

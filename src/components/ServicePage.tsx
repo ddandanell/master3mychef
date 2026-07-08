@@ -53,7 +53,7 @@ export default function ServicePage() {
   ])
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead title={`${title} | myCHEF`} description={service.description} canonical={canonical} ogImage="/mychef-misc-bali-og-image.webp" jsonLd={[serviceSchema, aggregateRatingSchema(4.9, 560), serviceFaq, breadcrumbSchema(service.name, canonical)]} />
 
       <section className="px-8 pt-32 pb-16 max-w-[960px] mx-auto">
@@ -61,7 +61,7 @@ export default function ServicePage() {
         <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-6">{service.name}</h1>
         <p className="text-lg text-[#4A4745] max-w-[640px] mb-8">{service.description}</p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <a href={waLink} data-source={`service-${slug}-cta`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
+          <a href={waLink} data-source={`service-${slug}-cta`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
             <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
           </a>
           <Link to="/quote" className="inline-flex items-center justify-center bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full">
@@ -89,6 +89,6 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

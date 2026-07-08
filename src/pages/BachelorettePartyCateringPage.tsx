@@ -147,7 +147,7 @@ const SECTIONS = [
     body: 'Tell us your villa, group size, and vision — we will send menu inspiration and a quote within 2 hours.',
     primaryAction: {
       label: 'Plan Your Hen Party Feast',
-      href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20bachelorette%20party%20at%20a%20Bali%20villa%20and%20need%20catering.',
+      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20bachelorette%20party%20at%20a%20Bali%20villa%20and%20need%20catering.',
       external: true,
     },
     secondaryAction: { label: 'Get a Quote', href: '/quote' },

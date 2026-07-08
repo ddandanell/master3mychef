@@ -85,7 +85,7 @@ export default function UluwatuPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Uluwatu | Seafood BBQ & Wedding Catering — myCHEF"
         description="Book a private chef in Uluwatu for clifftop villa dinners, seafood BBQs & weddings. Indonesian chefs, Indian Ocean views, Michelin standards. Request a quote."

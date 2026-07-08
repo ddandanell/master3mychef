@@ -2,7 +2,7 @@ import { useLocation, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check, Utensils, Flame, Sparkles, Building2, Users, ChefHat, PartyPopper } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from './SeoHead'
 import { AREAS, MICRO_AREAS } from '@/data/sitemap'
-import { getLocationBySlug } from '@/data/siteArchitecture'
+import { getLocationBySlug, hasLocationPage } from '@/data/siteArchitecture'
 import { TOP_CITIES } from '@/data/topCities'
 
 const SITE = 'https://mychef.id'
@@ -103,7 +103,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
   ])
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title={locationPage?.title ?? `${title} | myCHEF`}
         description={description}
@@ -145,7 +145,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source={`area-${slug}-hero`}
-                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
               >
                 <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
               </a>
@@ -171,7 +171,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
               target="_blank"
               rel="noopener noreferrer"
               data-source={`area-${slug}-cta`}
-              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
             </a>
@@ -314,7 +314,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
             same team, same standards, same WhatsApp number.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {TOP_CITIES.filter((c) => c.slug !== slug && (isJakarta ? ['jakarta', 'menteng', 'kemang', 'scbd', 'pondok-indah'].includes(c.slug) : !['jakarta', 'menteng', 'kemang', 'scbd', 'pondok-indah'].includes(c.slug))).map((c) => (
+            {TOP_CITIES.filter((c) => c.slug !== slug && hasLocationPage(c.slug) && (isJakarta ? ['jakarta', 'menteng', 'kemang', 'scbd', 'pondok-indah'].includes(c.slug) : !['jakarta', 'menteng', 'kemang', 'scbd', 'pondok-indah'].includes(c.slug))).map((c) => (
               <Link
                 key={c.slug}
                 to={`/locations/${c.slug}`}
@@ -329,6 +329,6 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
           </p>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

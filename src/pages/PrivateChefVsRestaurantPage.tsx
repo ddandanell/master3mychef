@@ -119,7 +119,7 @@ export default function PrivateChefVsRestaurantPage() {
   }
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef vs Restaurant Bali: Which Is Better for Groups? — myCHEF"
         description="Private chef or restaurant in Bali? Full cost comparison, menu control, and comfort breakdown for groups, families, and villa stays. Find out which wins."
@@ -137,7 +137,7 @@ export default function PrivateChefVsRestaurantPage() {
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#0D0D0D] to-[#1A1A1A] text-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
-          <nav className="flex items-center gap-2 text-sm text-white/40 mb-8" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-sm text-white/55 mb-8" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#C5A028] transition-colors">Home</Link>
             <ChevronRight size={14} />
             <Link to="/blog" className="hover:text-[#C5A028] transition-colors">Blog</Link>
@@ -160,7 +160,7 @@ export default function PrivateChefVsRestaurantPage() {
               href={`https://wa.me/${PHONE.digits}?text=${WA_MSG}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
+              className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold px-6 py-3 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
             >
               <MessageCircle size={16} />
               Get a Chef Quote in 2 Hours
@@ -176,7 +176,7 @@ export default function PrivateChefVsRestaurantPage() {
       </section>
 
       {/* Quick Answer Banner */}
-      <section className="bg-[#C5A028] text-white py-8">
+      <section className="bg-[#C5A028] text-[#1A1A1A] py-8">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-lg font-medium">
             <strong>Short answer:</strong> For groups of 6+, private chef wins on cost, logistics, and experience. For 2–3 people wanting a casual night out, the restaurant wins. For families with children, private chef — every time.
@@ -404,7 +404,7 @@ export default function PrivateChefVsRestaurantPage() {
             href={`https://wa.me/${PHONE.digits}?text=${WA_MSG}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#C5A028] text-white font-semibold px-8 py-4 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
+            className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold px-8 py-4 rounded hover:bg-[#B08F20] transition-colors text-sm uppercase tracking-wider"
           >
             <MessageCircle size={18} />
             WhatsApp Us — Quote in 2 Hours
@@ -447,6 +447,6 @@ export default function PrivateChefVsRestaurantPage() {
           </div>
         </section>
       </article>
-    </main>
+    </div>
   )
 }

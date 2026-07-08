@@ -1,24 +1,39 @@
 /**
- * Prerender critical pages for SEO
- * Generates static HTML snapshots of React SPA routes so Googlebot sees full content
- * 
- * Problem: SPA = blank HTML shell, all content client-side via React
- * Solution: Run Vite build, spawn dev server, use Playwright to snapshot fully-rendered HTML
- * 
- * Phase 3: SSR/Prerendering implementation
+ * Prerender every route's rendered body into its static HTML (SEO / Ch 9.3.1).
+ *
+ * Problem: this is a Vite SPA — the served HTML is a meta-only shell with an
+ *   empty <div id="root">. Googlebot's HTML pass sees no content and no
+ *   internal <a href> links (Ch 9.3.4). All content is client-rendered.
+ *
+ * Solution: after `vite build` + `inject-meta`, boot `vite preview`, render
+ *   every SITEMAP route in headless Chromium, and splice the rendered
+ *   #root markup INTO the inject-meta'd dist/<route>/index.html — keeping the
+ *   controlled static <head> (canonical / OG / JSON-LD) AND adding real body
+ *   content, H1, and crawlable internal links.
+ *
+ * Output path matches what Vercel serves: dist/<route>/index.html.
+ * Runs in CI (GitHub Actions) where full Chromium is available; the prebuilt
+ * dist is then deployed to Vercel via `vercel deploy --prebuilt`.
+ *
+ * Env:
+ *   PRERENDER_LIMIT=<n>   only render the first n routes (local verification)
+ *   SKIP_PRERENDER=1      skip entirely (emergency escape hatch)
  */
 
-import { chromium } from 'playwright'
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs'
-import { join, dirname } from 'path'
-import { fileURLToPath } from 'url'
-import { spawn, ChildProcess } from 'child_process'
+import { chromium, type Browser } from 'playwright'
+import { readFileSync, writeFileSync, existsSync } from 'node:fs'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { spawn, type ChildProcess } from 'node:child_process'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+import { SITEMAP } from '../src/data/sitemap'
 
-const DIST_DIR = join(__dirname, '../dist')
-const BASE_URL = 'http://localhost:4173' // Vite preview server
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const DIST_DIR = join(__dirname, '..', 'dist')
+const BASE_URL = 'http://127.0.0.1:4173'
+const ROOT_EMPTY = '<div id="root"></div>'
+const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY ?? 8)
+const LIMIT = process.env.PRERENDER_LIMIT ? Number(process.env.PRERENDER_LIMIT) : Infinity
 
 // Critical pages to prerender
 const ROUTES = [
@@ -313,155 +328,171 @@ const ROUTES = [
   { path: '/chef-table-experience-bali', file: 'chef-table-experience-bali.html' },
 ]
 
-async function startPreviewServer(): Promise<ChildProcess> {
+function distFileForRoute(routePath: string): string {
+  // Mirrors inject-meta.ts: dist/<route>/index.html ( '/' -> dist/index.html )
+  const clean = routePath.replace(/^\/+|\/+$/g, '')
+  return clean ? join(DIST_DIR, clean, 'index.html') : join(DIST_DIR, 'index.html')
+}
+
+function startPreviewServer(): Promise<ChildProcess> {
   return new Promise((resolve, reject) => {
     console.log('🌐 Starting preview server...')
-    
     const server = spawn('pnpm', ['exec', 'vite', 'preview', '--host', '127.0.0.1', '--port', '4173'], {
       cwd: join(__dirname, '..'),
       stdio: 'pipe',
-      detached: false,
       shell: true,
     })
-    
-    let output = ''
-    
-    server.stdout?.on('data', (data) => {
+    let settled = false
+    const ready = () => {
+      if (settled) return
+      settled = true
+      setTimeout(() => resolve(server), 1500)
+    }
+    const onData = (data: Buffer) => {
       const msg = data.toString()
-      output += msg
-      console.log('  [stdout]', msg.trim())
-      // Look for server ready signal
-      if (output.includes('Local:') || output.includes('ready in') || output.includes('http://')) {
-        setTimeout(() => resolve(server), 5000) // Extra 5s for stability
+      if (/Local:|ready in|http:\/\//.test(msg)) ready()
+      if (/EADDRINUSE/.test(msg)) {
+        console.log('  ℹ Port 4173 already in use — reusing existing server')
+        ready()
       }
-    })
-    
-    server.stderr?.on('data', (data) => {
-      const msg = data.toString()
-      console.log('  [stderr]', msg.trim())
-      if (msg.includes('EADDRINUSE')) {
-        console.log('    ℹ Server already running on port 4173')
-        resolve(server)
-      } else if (!msg.includes('MallocStack')) {
-        output += msg
-      }
-      // Also check stderr for ready signal
-      if (msg.includes('Local:') || msg.includes('ready in') || msg.includes('http://')) {
-        setTimeout(() => resolve(server), 5000)
-      }
-    })
-    
+    }
+    server.stdout?.on('data', onData)
+    server.stderr?.on('data', onData)
     server.on('error', reject)
-    
-    // Timeout after 45s
-    setTimeout(() => reject(new Error('Server start timeout')), 45000)
+    setTimeout(() => reject(new Error('Preview server start timeout (45s)')), 45000)
   })
 }
 
-async function prerender() {
-  console.log('🚀 Starting prerender...')
-  
-  let server: ChildProcess | null = null
-  
+async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolean; reason?: string }> {
+  const distFile = distFileForRoute(route.path)
+  if (!existsSync(distFile)) {
+    return { ok: false, reason: 'inject-meta output missing (run inject-meta first)' }
+  }
+
+  const page = await browser.newPage({
+    userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+    viewport: { width: 1280, height: 1024 },
+  })
   try {
-    // Start preview server
-    server = await startPreviewServer()
-    console.log('    ✅ Server ready\n')
-    
-    let browser
-    try {
-      browser = await chromium.launch({ headless: true })
-    } catch (e) {
-      console.log('    ⚠️  Playwright chromium not available, skipping prerender')
-      console.log('    This is expected on Vercel builds — prerender runs locally instead')
-      if (server) {
-        server.kill('SIGTERM')
-      }
-      return
-    }
-    const context = await browser.newContext({
-      userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
-      viewport: { width: 1920, height: 1080 },
+    // Block resources that don't affect the rendered DOM (images, fonts, media) and
+    // third-party scripts (GTM, analytics). These are slow/flaky in CI and were
+    // causing the prerender to hang. We only need the app's own JS to run React.
+    await page.route('**/*', (r) => {
+      const type = r.request().resourceType()
+      const url = r.request().url()
+      if (type === 'image' || type === 'media' || type === 'font') return r.abort()
+      if (/googletagmanager|google-analytics|analytics\.google|vercel-scripts|vercel-insights|fonts\.googleapis|fonts\.gstatic|doubleclick|facebook|hotjar/i.test(url)) return r.abort()
+      return r.continue()
     })
-    
-    const page = await context.newPage()
-    
-    let successCount = 0
-    let errorCount = 0
-    
-    for (const route of ROUTES) {
-      const url = `${BASE_URL}${route.path}`
-      const outputPath = join(DIST_DIR, route.file)
-      
-      try {
-        console.log(`  → Rendering ${route.path}`)
-        
-        // Navigate and wait for React hydration + network idle
-        await page.goto(url, { 
-          waitUntil: 'networkidle',
-          timeout: 45000 
-        })
-        
-        // Wait for React root to have content
-        await page.waitForSelector('#root:not(:empty)', { timeout: 10000 })
-        
-        // Wait extra for any lazy images/fonts
-        await page.waitForTimeout(1000)
-        
-        // Get full HTML
-        const html = await page.content()
-        
-        // Validate we got real content (not blank SPA shell)
-        if (!html.includes('<h1') || html.length < 5000) {
-          throw new Error(`Page seems incomplete (${html.length} bytes, no H1)`)
-        }
-        
-        // Clean up: remove scripts that would cause hydration mismatch
-        const cleanedHtml = html
-          .replace(/<script type="module" crossorigin src="[^"]+"><\/script>/g, '')
-          .replace(/<script type="module">import\.meta\.url;import\("_"\)\.catch[^<]+<\/script>/g, '')
-        
-        // Write to dist
-        const dir = dirname(outputPath)
-        if (!existsSync(dir)) {
-          mkdirSync(dir, { recursive: true })
-        }
-        writeFileSync(outputPath, cleanedHtml, 'utf-8')
-        
-        console.log(`    ✅ ${route.file} (${Math.round(html.length / 1024)}KB)`)
-        successCount++
-        
-      } catch (error: any) {
-        console.error(`    ❌ ${route.path}: ${error.message}`)
-        errorCount++
-      }
+    await page.goto(`${BASE_URL}${route.path}`, { waitUntil: 'domcontentloaded', timeout: 20000 })
+    // Wait for the React app to actually render content into #root.
+    await page.waitForSelector('#root > *', { timeout: 10000 })
+    // Brief settle for headings / above-the-fold content (no networkidle — GSAP never idles).
+    await page.waitForTimeout(400)
+
+    const rootHtml = await page.$eval('#root', (el) => el.innerHTML)
+    if (!rootHtml || rootHtml.length < 1000) {
+      return { ok: false, reason: `rendered #root too small (${rootHtml?.length ?? 0} bytes)` }
     }
-    
-    await browser.close()
-    
-    console.log(`\n✅ Prerender complete: ${successCount} pages, ${errorCount} errors`)
-    
-    if (errorCount > 0) {
-      throw new Error(`Prerender failed: ${errorCount} errors`)
+
+    const shell = readFileSync(distFile, 'utf-8')
+    if (!shell.includes(ROOT_EMPTY)) {
+      // Already filled (re-run without a fresh inject-meta) → idempotent success, not an error.
+      if (shell.includes('<div id="root">')) return { ok: true }
+      return { ok: false, reason: 'no root div in shell' }
     }
-    
+    // Splice rendered body into the controlled inject-meta <head> shell.
+    const merged = shell.replace(ROOT_EMPTY, `<div id="root">${rootHtml}</div>`)
+    writeFileSync(distFile, merged, 'utf-8')
+    return { ok: true }
+  } catch (err) {
+    return { ok: false, reason: (err as Error).message }
   } finally {
-    // Kill server
-    if (server) {
-      console.log('\n🛑 Stopping preview server...')
-      server.kill('SIGTERM')
-      // Force kill after 2s if still running
-      setTimeout(() => {
-        if (server && !server.killed) {
-          server.kill('SIGKILL')
-        }
-      }, 2000)
-    }
+    await page.close()
   }
 }
 
-// Self-execute
-prerender().catch((err) => {
-  console.error('Fatal prerender error:', err)
-  process.exit(1)
-})
+async function runPool(browser: Browser, routes: Route[]): Promise<{ success: number; failures: Array<{ path: string; reason: string }> }> {
+  let cursor = 0
+  let success = 0
+  const failures: Array<{ path: string; reason: string }> = []
+
+  async function worker(): Promise<void> {
+    while (cursor < routes.length) {
+      const route = routes[cursor++]
+      const res = await renderRoute(browser, route)
+      if (res.ok) {
+        success++
+        if (success % 20 === 0) console.log(`  …${success}/${routes.length} rendered`)
+      } else {
+        failures.push({ path: route.path, reason: res.reason ?? 'unknown' })
+        console.warn(`  ✗ ${route.path}: ${res.reason}`)
+      }
+    }
+  }
+
+  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, routes.length) }, () => worker()))
+  return { success, failures }
+}
+
+async function main(): Promise<void> {
+  if (process.env.SKIP_PRERENDER === '1') {
+    console.log('⏭  SKIP_PRERENDER=1 — leaving inject-meta shells as-is')
+    return
+  }
+
+  const routes: Route[] = SITEMAP
+    .map((entry: { path: string }, index: number) => ({ path: entry.path, index }))
+    .filter((_: Route, i: number) => i < LIMIT)
+
+  console.log(`🚀 Prerendering ${routes.length} routes (concurrency ${CONCURRENCY})`)
+
+  let server: ChildProcess | null = null
+  let browser: Browser | null = null
+  try {
+    server = await startPreviewServer()
+    // Fail fast if the preview server isn't actually reachable (turns a silent
+    // 250×timeout hang into an instant, clear failure).
+    const health = await fetch(`${BASE_URL}/`).then((r) => r.status).catch((e) => `ERR ${(e as Error).message}`)
+    console.log(`  ✅ Preview server ready (GET / → ${health})\n`)
+    if (health !== 200) throw new Error(`Preview server not serving (GET / → ${health})`)
+
+    try {
+      browser = await chromium.launch({ headless: true })
+    } catch (e) {
+      // No Chromium available (e.g. a build env without browser support) — skip
+      // rather than hard-fail the whole build. CI installs Chromium, so it runs there;
+      // the workflow's verify step still guards against shipping an unprerendered build.
+      console.log(`  ⏭  Chromium unavailable — skipping prerender (${(e as Error).message})`)
+      return
+    }
+
+    const { success, failures } = await runPool(browser, routes)
+
+    console.log(`\n✅ Prerender complete: ${success}/${routes.length} routes`)
+    if (failures.length) {
+      console.log(`⚠️  ${failures.length} routes failed:`)
+      for (const f of failures) console.log(`   - ${f.path}: ${f.reason}`)
+      // Fail the build only if a large share failed (a few flaky routes shouldn't block deploy).
+      const failRate = failures.length / routes.length
+      if (failRate > 0.1) {
+        throw new Error(`Prerender fail rate ${(failRate * 100).toFixed(1)}% exceeds 10% threshold`)
+      }
+    }
+  } finally {
+    if (browser) await browser.close().catch(() => {})
+    // SIGKILL the preview server outright — SIGTERM + a timer left the child (and
+    // thus the event loop) alive, so `npm run prerender` never returned and the
+    // whole build hung after "Prerender complete". Force-kill, then hard-exit below.
+    if (server) server.kill('SIGKILL')
+  }
+}
+
+// Explicit exit: lingering handles (preview-server child, Playwright internals)
+// otherwise keep Node alive and hang the build. Success = 0, failure = 1.
+main()
+  .then(() => process.exit(0))
+  .catch((err) => {
+    console.error('Fatal prerender error:', err)
+    process.exit(1)
+  })

@@ -30,9 +30,9 @@ const SECTIONS: PageSection[] = [
     body: `<p>myCHEF offers the following chef experiences for Ubud villas and retreats:</p>
     <p><strong>Single dinner service:</strong> A private chef for one evening — ideal for a birthday dinner, anniversary, family reunion, or special occasion. From a simple 3-course Balinese feast to a 7-course tasting menu with wine pairings. Minimum 2 guests.</p>
     <p><strong>Retreat catering:</strong> Ubud hosts many yoga retreats, healing retreats, and wellness programmes. myCHEF provides full daily meal service for retreat groups — breakfast, lunch, dinner, and snacks — with menus designed around the retreat\'s dietary philosophy. From 8 to 40 guests.</p>
-    <p><strong>Cooking class experience:</strong> A private chef-led Balinese cooking class, visiting the morning market to source ingredients, then cooking traditional dishes together in your villa kitchen. Suitable for couples, families, and small groups up to 8 people. See our <a href="/blog/bali-villa-cooking-class-private-chef" class="text-[#C5A028] hover:underline font-medium">cooking class guide</a>.</p>
-    <p><strong>Weekly household chef arrangement:</strong> For long-stay guests and expats in Ubud, a recurring private chef who cooks 3-5 days per week. See the <a href="/blog/household-chef-bali-hiring-guide" class="text-[#C5A028] hover:underline font-medium">household chef guide</a>.</p>
-    <p><strong>Floating breakfast:</strong> A floating breakfast in the villa pool. See our <a href="/blog/floating-breakfast-bali" class="text-[#C5A028] hover:underline font-medium">floating breakfast guide</a>.</p>`,
+    <p><strong>Cooking class experience:</strong> A private chef-led Balinese cooking class, visiting the morning market to source ingredients, then cooking traditional dishes together in your villa kitchen. Suitable for couples, families, and small groups up to 8 people. See our <a href="/blog/bali-villa-cooking-class-private-chef" class="text-[#7E6410] hover:underline font-medium">cooking class guide</a>.</p>
+    <p><strong>Weekly household chef arrangement:</strong> For long-stay guests and expats in Ubud, a recurring private chef who cooks 3-5 days per week. See the <a href="/blog/household-chef-bali-hiring-guide" class="text-[#7E6410] hover:underline font-medium">household chef guide</a>.</p>
+    <p><strong>Floating breakfast:</strong> A floating breakfast in the villa pool. See our <a href="/blog/floating-breakfast-bali" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a>.</p>`,
   },
   {
     id: 'where-to-stay',
@@ -59,7 +59,7 @@ const SECTIONS: PageSection[] = [
       <li><strong>Wellness/retreat menus (plant-based, organic):</strong> IDR 600,000 – 1,000,000 per person per day.</li>
       <li><strong>Cooking class experience:</strong> IDR 800,000 – 1,200,000 per person including market tour.</li>
     </ul>
-    <p style="margin-top:0.75rem;">For a detailed cost breakdown, see our <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
+    <p style="margin-top:0.75rem;">For a detailed cost breakdown, see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
   },
   {
     id: 'cta',

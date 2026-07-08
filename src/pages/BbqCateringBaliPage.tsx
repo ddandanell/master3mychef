@@ -89,7 +89,7 @@ const SECTIONS = [
 
     <p><strong>BBQ is not the ideal format for:</strong> Formal anniversary dinners where a curated plated tasting menu, candlelight, and choreographed service create the right atmosphere. Intimate proposals where the setting and pace matter more than a social spread. Fine dining clients who want a multi-course menu with wine pairings and composed plates. Small groups of two to four guests on a romantic occasion — the energy of a grill is social and generous rather than intimate and quiet.</p>
 
-    <p>For those occasions, myCHEF offers plated private chef dinners, tasting menus, and dedicated <a href="/blog/romantic-dinner-bali-private-chef" class="text-[#C5A028] hover:underline font-medium">romantic dinner</a> and <a href="/blog/anniversary-dinner-villa-bali" class="text-[#C5A028] hover:underline font-medium">anniversary</a> formats that are better suited. The right format for the right occasion always produces a better result than trying to make one format do everything.</p>`,
+    <p>For those occasions, myCHEF offers plated private chef dinners, tasting menus, and dedicated <a href="/blog/romantic-dinner-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">romantic dinner</a> and <a href="/blog/anniversary-dinner-villa-bali" class="text-[#7E6410] hover:underline font-medium">anniversary</a> formats that are better suited. The right format for the right occasion always produces a better result than trying to make one format do everything.</p>`,
   },
   {
     id: 'faq',
@@ -101,7 +101,7 @@ const SECTIONS = [
     subtitle: 'Ready to Book',
     title: 'Book Your Bali BBQ',
     body: 'Tell us your group, villa, and vibe — we\'ll send a BBQ menu and quote within 2 hours.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20organise%20a%20BBQ%20at%20my%20Bali%20villa.' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20organise%20a%20BBQ%20at%20my%20Bali%20villa.' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

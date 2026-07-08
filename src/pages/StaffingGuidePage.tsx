@@ -113,7 +113,7 @@ export default function StaffingGuidePage() {
   const canonical = `${SITE}/help/staffing-guide`
 
   return (
-    <main className="bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Villa Staffing Guide Bali | Waiters, Butlers & More — myCHEF"
         description="Find the right villa staff in Bali for dinners, parties & extended stays. Waiters, bartenders, butlers & household staff explained clearly."
@@ -262,6 +262,6 @@ export default function StaffingGuidePage() {
           </a>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

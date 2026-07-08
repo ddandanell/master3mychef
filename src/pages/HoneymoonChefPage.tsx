@@ -212,7 +212,7 @@ export default function HoneymoonChefPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="honeymoon-chef-hero"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Plan Our Honeymoon Dining
             </a>
@@ -364,7 +364,7 @@ export default function HoneymoonChefPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="honeymoon-chef-menu-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-white"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Book This Menu
             </a>
@@ -555,7 +555,7 @@ export default function HoneymoonChefPage() {
                 href={WA_LINK}
                 target="_blank" rel="noopener noreferrer"
                 data-source="honeymoon-chef-pricing-cta"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-white"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <MessageCircle className="w-4 h-4" /> Get a Quote
               </a>
@@ -608,7 +608,7 @@ export default function HoneymoonChefPage() {
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               data-source="honeymoon-chef-howitworks-cta"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
             >
               <MessageCircle className="w-4 h-4" /> Start Planning
             </a>
@@ -650,7 +650,7 @@ export default function HoneymoonChefPage() {
             href={WA_LINK}
             target="_blank" rel="noopener noreferrer"
             data-source="honeymoon-chef-final-cta"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
           >
             <MessageCircle className="w-5 h-5" /> Plan Our Honeymoon Dining
           </a>

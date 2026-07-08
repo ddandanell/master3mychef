@@ -1,3 +1,5 @@
+import { ARTICLE_CONTENT } from '@/data/content/articleContent'
+
 export interface ContentEntry {
   slug: string
   title: string
@@ -139,15 +141,18 @@ export function inferTopics(entry: ContentEntry) {
 }
 
 export function enrichPost(entry: ContentEntry, kind: PostKind = entry.slug.startsWith('guide/') ? 'guide' : 'blog'): EnrichedPost {
-  const headings = extractHeadings(entry.content)
+  // Article bodies now live in the lazy-loaded content store, not the eager
+  // metadata array — hydrate here so downstream consumers see full content.
+  const hydrated: ContentEntry = { ...entry, content: entry.content ?? ARTICLE_CONTENT[`/${entry.slug}`] ?? '' }
+  const headings = extractHeadings(hydrated.content)
 
   return {
-    ...entry,
+    ...hydrated,
     kind,
     label: kind === 'guide' ? 'Guide' : 'Article',
     path: `/${entry.slug}`,
-    readTimeMinutes: getReadTimeMinutes(entry),
-    topics: inferTopics(entry),
+    readTimeMinutes: getReadTimeMinutes(hydrated),
+    topics: inferTopics(hydrated),
     headings,
   }
 }

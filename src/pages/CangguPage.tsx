@@ -85,7 +85,7 @@ export default function CangguPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Canggu | Villa Dining & Surf Retreats — myCHEF"
         description="Book a private chef in Canggu for villa dinners, poolside BBQs & surf retreat catering. Indonesian chefs, healthy menus, same-day availability. Get a quote."

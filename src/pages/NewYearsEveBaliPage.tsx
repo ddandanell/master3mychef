@@ -143,7 +143,7 @@ const SECTIONS = [
     body: 'NYE dates fill before December. Message us to check availability and hold your preferred chef.',
     primaryAction: {
       label: 'Reserve Your NYE Chef',
-      href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20New%20Year%27s%20Eve%20at%20my%20Bali%20villa.',
+      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20New%20Year%27s%20Eve%20at%20my%20Bali%20villa.',
       external: true,
     },
     secondaryAction: {

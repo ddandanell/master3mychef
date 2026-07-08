@@ -220,7 +220,7 @@ export default function CateringCorporatePage() {
       {/* ═══════ CORPORATE TRUST STRIP ═══════ */}
       <section className="py-8 px-6 bg-white border-b border-[#E8E6E3]">
         <div className="max-w-[1000px] mx-auto text-center">
-          <p className="text-xs text-[#4A4745]/60 uppercase tracking-widest mb-6">Trusted by teams from</p>
+          <p className="text-xs text-[#4A4745]/80 uppercase tracking-widest mb-6">Trusted by teams from</p>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[#4A4745]/40">
             {['Microsoft', 'Google', 'Airbnb', 'GoTo', 'Shopee', 'Bukalapak', 'Traveloka', 'BCA', 'Mandiri'].map((company) => (
               <span key={company} className="text-sm font-semibold tracking-wide">{company}</span>
@@ -492,7 +492,7 @@ export default function CateringCorporatePage() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-xs text-[#4A4745]/70 mb-4">Best for: {pkg.bestFor}</p>
+                <p className="text-xs text-[#4A4745]/80 mb-4">Best for: {pkg.bestFor}</p>
                 <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#C5A028] text-black text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
                   <Calendar className="w-4 h-4" /> Request Corporate Quote
                 </a>

@@ -38,8 +38,8 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { label: 'Fine Dining', href: '/fine-dining', icon: UtensilsCrossed, accent: '#C5A028' },
   { label: 'Catering', href: '/catering', icon: Users, accent: '#C5A028' },
+  { label: 'Fine Dining', href: '/fine-dining', icon: UtensilsCrossed, accent: '#C5A028' },
   { label: 'Events', href: '/events', icon: CalendarDays, accent: '#C5A028' },
   { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
   { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
@@ -160,7 +160,7 @@ export default function Navbar() {
                       
                       <div className="rounded-2xl border border-[#C5A028]/15 bg-white/95 p-3 shadow-2xl shadow-black/35 backdrop-blur-md">
                         <p
-                          className="px-3 pb-2 text-[10px] uppercase tracking-[0.28em] text-[#C5A028]"
+                          className="px-3 pb-2 text-[10px] uppercase tracking-[0.28em] text-[#7E6410]"
                           style={{ fontFamily: "'Cormorant Garamond', serif" }}
                         >
                           {item.label} Pages
@@ -174,8 +174,8 @@ export default function Navbar() {
                                 to={subpage.href}
                                 className={`flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm transition-all duration-200 ${
                                   subpageActive
-                                    ? 'bg-[#C5A028]/12 text-[#C5A028]'
-                                    : 'text-gray-700 hover:bg-[#C5A028]/8 hover:text-[#C5A028] hover:translate-x-1'
+                                    ? 'bg-[#C5A028]/12 text-[#7E6410]'
+                                    : 'text-gray-700 hover:bg-[#C5A028]/8 hover:text-[#7E6410] hover:translate-x-1'
                                 }`}
                                 style={{ 
                                   fontFamily: "'Playfair Display', serif",

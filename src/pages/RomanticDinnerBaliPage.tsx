@@ -101,7 +101,7 @@ const SECTIONS = [
 
     <p><strong>Custom cocktail:</strong> A signature cocktail created and named for the couple — served as the cocktail hour drink. Something to order again someday and remember.</p>
 
-    <p><strong>Proposal dinner add-on:</strong> If this evening ends with a question, myCHEF offers a full proposal coordination service: the ring arriving with dessert, photographer referral for a candid capture of the moment, moment coordination with the chef, and optional video documentation. Tell us in advance — we have done this many times and know how to make it perfect. See our full <a href="/blog/proposal-dinner-bali-private-chef" class="text-[#C5A028] hover:underline font-medium">proposal dinner page</a> for details.</p>`,
+    <p><strong>Proposal dinner add-on:</strong> If this evening ends with a question, myCHEF offers a full proposal coordination service: the ring arriving with dessert, photographer referral for a candid capture of the moment, moment coordination with the chef, and optional video documentation. Tell us in advance — we have done this many times and know how to make it perfect. See our full <a href="/blog/proposal-dinner-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">proposal dinner page</a> for details.</p>`,
   },
   {
     id: 'faq',
@@ -115,7 +115,7 @@ const SECTIONS = [
     subtitle: 'Book Your Evening',
     title: 'Create Your Romantic Dinner',
     body: 'Tell us your villa, date, and any special touches — we handle everything else.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20romantic%20private%20chef%20dinner%20at%20my%20Bali%20villa.' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20romantic%20private%20chef%20dinner%20at%20my%20Bali%20villa.' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

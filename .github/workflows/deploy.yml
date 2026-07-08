@@ -1,0 +1,87 @@
+name: Build, Prerender & Deploy (Vercel prebuilt)
+
+# Why this exists:
+#   This is a Vite SPA. Vercel's own build container cannot run headless Chromium,
+#   so the Playwright prerender (scripts/prerender.ts) is skipped there and the site
+#   ships a meta-only shell with an empty <div id="root"> (no body, no crawlable
+#   links — bad for SEO/indexing, Blueprint Ch 9.3.1).
+#   GitHub Actions HAS full Chromium, so we build + prerender here and ship the
+#   fully-rendered output to Vercel with `vercel deploy --prebuilt`.
+#
+# Required repo secret:
+#   VERCEL_TOKEN  — a Vercel access token (Account Settings → Tokens).
+# Org/Project IDs are public identifiers (already in .vercel/project.json).
+
+on:
+  push:
+    branches: [main]      # push to main → PRODUCTION prebuilt deploy
+    paths-ignore:         # docs/tooling-only commits don't need a rebuild+deploy
+      - '**.md'
+      - 'project-skills/**'
+      - 'docs/**'
+      - 'reports/**'
+      - '.claude/**'
+      - '.kimi/**'
+      - '.ai/**'
+      - 'scripts/generate-image.ts'
+  workflow_dispatch: {}   # manual run → safe PREVIEW deploy for testing
+
+concurrency:
+  group: vercel-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  VERCEL_ORG_ID: team_WumSlShMHjkfsJtedvxDTaDd
+  VERCEL_PROJECT_ID: prj_VkMbGIUciFBk2VE0EUy2SikfWOgK
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4   # version read from package.json "packageManager"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Install Playwright Chromium (with system deps)
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Install Vercel CLI
+        run: pnpm add -g vercel@latest
+
+      - name: Pull Vercel project settings
+        run: vercel pull --yes --environment=${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }} --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build + prerender (runs inject-meta + Playwright prerender in CI)
+        run: vercel build ${{ github.ref == 'refs/heads/main' && '--prod' || '' }} --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Verify prerender actually produced body content
+        run: |
+          f=.vercel/output/static/index.html
+          [ -f "$f" ] || f=dist/index.html
+          echo "Checking $f"
+          h1=$(grep -c '<h1' "$f" || true)
+          links=$(grep -oE '<a [^>]*href="/' "$f" | wc -l | tr -d ' ')
+          echo "H1 count: $h1 | internal links: $links"
+          if [ "$h1" -lt 1 ] || [ "$links" -lt 10 ]; then
+            echo "::error::Prerender verification failed — homepage has no body content. Aborting deploy."
+            exit 1
+          fi
+
+      - name: Deploy prebuilt to Vercel
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+          else
+            url=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})
+            echo "Preview deployed: $url"
+            echo "### 🔍 Preview: $url" >> "$GITHUB_STEP_SUMMARY"
+          fi

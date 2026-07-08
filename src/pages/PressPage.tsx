@@ -61,7 +61,7 @@ const TRUSTED_VILLAS = [
 
 export default function PressPage() {
   return (
-    <main className="min-h-screen bg-[#F5F3EE] text-[#1A1916]">
+    <div className="min-h-screen bg-[#F5F3EE] text-[#1A1916]">
       <SeoHead
         title="myCHEF Bali Press & Media | Private Chef Coverage"
         description="myCHEF Bali press kit, brand facts & media contact. Access coverage, imagery & PR details for stories on private chef dining & villa catering in Bali."
@@ -298,6 +298,6 @@ export default function PressPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

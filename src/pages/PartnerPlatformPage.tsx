@@ -110,7 +110,7 @@ export default function PartnerPlatformPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Villa Management Catering Bali | Partner Platform — myCHEF"
         description="Co-branded private chef & catering for Bali villa managers. Live booking visibility, commission sharing & white-label dining offers for your guests."
@@ -551,7 +551,7 @@ export default function PartnerPlatformPage() {
           </p>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

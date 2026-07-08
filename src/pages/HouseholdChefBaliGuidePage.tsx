@@ -8,7 +8,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Household Chef Bali',
     title: 'Household Chef Bali: How to Hire a Personal Chef for Your Villa or Home',
     body: `<p>A household chef is a private culinary professional engaged on an ongoing basis — cooking for a household, villa, or residence on a recurring schedule. In Bali, this arrangement has become increasingly common among long-term residents, villa owners, expatriate families, and extended-stay guests who want the convenience of freshly prepared meals without the complexity of employing a full-time staff member.</p>
-    <p>Unlike a <a href="/blog/live-in-chef-bali-hiring-guide" class="text-[#C5A028] hover:underline font-medium">live-in chef</a>, a household chef typically visits on a service schedule — a set number of days per week — rather than residing at the property. myCHEF\'s household chef service is designed for exactly this market. We place experienced, background-checked, English-speaking chefs with households across Bali\'s expat and villa communities on monthly rolling arrangements.</p>`,
+    <p>Unlike a <a href="/blog/live-in-chef-bali-hiring-guide" class="text-[#7E6410] hover:underline font-medium">live-in chef</a>, a household chef typically visits on a service schedule — a set number of days per week — rather than residing at the property. myCHEF\'s household chef service is designed for exactly this market. We place experienced, background-checked, English-speaking chefs with households across Bali\'s expat and villa communities on monthly rolling arrangements.</p>`,
   },
   {
     id: 'who-needs',
@@ -18,7 +18,7 @@ const SECTIONS: PageSection[] = [
     body: `<p><strong>Long-term villa residents:</strong> After the first week or two of eating out daily, residents typically want a more sustainable, healthier, and more cost-effective solution. A household chef provides home-cooked quality at a fraction of the cost of daily restaurant meals.</p>
     <p><strong>Expatriate families:</strong> Bali\'s growing expatriate community — particularly around Canggu, Seminyak, and Ubud — includes many families who prioritise wholesome, consistent home cooking. A household chef on a 3 to 5 day weekly schedule handles breakfast prep, school lunch boxes, family dinners, and batch-cooking.</p>
     <p><strong>Remote workers and digital nomads:</strong> Professionals working remotely from Bali for 1 to 6 months find that a household chef is one of the most impactful quality-of-life additions to their stay.</p>
-    <p>Read more about Bali long-term private chef options in our <a href="/blog/private-chef-bali-expats" class="text-[#C5A028] hover:underline font-medium">guide for expats</a>.</p>`,
+    <p>Read more about Bali long-term private chef options in our <a href="/blog/private-chef-bali-expats" class="text-[#7E6410] hover:underline font-medium">guide for expats</a>.</p>`,
   },
   {
     id: 'service-structure',
@@ -40,7 +40,7 @@ const SECTIONS: PageSection[] = [
       <li><strong>5 days/week arrangement:</strong> From IDR 11,000,000 to 15,000,000 per month (chef fee only, excluding groceries).</li>
       <li><strong>Daily rate (ad hoc):</strong> IDR 650,000 to 1,000,000 per service day.</li>
     </ul>
-    <p style="margin-top:0.75rem;">Grocery costs add IDR 150,000 to 400,000 per person per day. For a full comparison see our <a href="/blog/private-chef-cost-bali" class="text-[#C5A028] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
+    <p style="margin-top:0.75rem;">Grocery costs add IDR 150,000 to 400,000 per person per day. For a full comparison see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
   },
   {
     id: 'placement',
@@ -48,7 +48,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Managed vs Placement',
     title: 'Managed Chef vs. Direct Chef Placement — What Is the Difference?',
     body: `<p><strong>Managed household chef service:</strong> myCHEF manages the relationship — we assign a qualified chef, handle scheduling and substitutions, ensure consistent quality, and act as your point of contact. The chef is employed and insured through myCHEF. This is the recommended option for most clients.</p>
-    <p><strong>Chef placement:</strong> myCHEF sources and vets a chef for your household. Once you choose a chef and confirm the placement, the working relationship is directly between you and the chef. Suitable for households who want to employ a dedicated private chef directly. See our full <a href="/staffing" class="text-[#C5A028] hover:underline font-medium">staffing and placement services</a> page.</p>`,
+    <p><strong>Chef placement:</strong> myCHEF sources and vets a chef for your household. Once you choose a chef and confirm the placement, the working relationship is directly between you and the chef. Suitable for households who want to employ a dedicated private chef directly. See our full <a href="/staffing" class="text-[#7E6410] hover:underline font-medium">staffing and placement services</a> page.</p>`,
   },
   {
     id: 'cta',

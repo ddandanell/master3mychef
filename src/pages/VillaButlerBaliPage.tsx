@@ -74,7 +74,7 @@ const SECTIONS = [
 
     <p><strong>Live-in butler:</strong> IDR 8,000,000–14,000,000 per month (with accommodation value factored in). A live-in butler is on the property and available outside standard working hours. The accommodation value is effectively part of the compensation package — total cost to the employer should be assessed against the live-out equivalent plus transport and availability premium.</p>
 
-    <p><strong>Event butler (specific dinner or party):</strong> IDR 750,000–1,200,000 for a 6-hour service. Suitable for a private dinner party, a birthday evening, or a celebration where professional table service is needed for one event without an ongoing placement. See our <a href="/blog/private-dinner-party-bali" class="text-[#C5A028] hover:underline font-medium">private dinner party guide</a> for how event butler service integrates with private chef bookings.</p>
+    <p><strong>Event butler (specific dinner or party):</strong> IDR 750,000–1,200,000 for a 6-hour service. Suitable for a private dinner party, a birthday evening, or a celebration where professional table service is needed for one event without an ongoing placement. See our <a href="/blog/private-dinner-party-bali" class="text-[#7E6410] hover:underline font-medium">private dinner party guide</a> for how event butler service integrates with private chef bookings.</p>
 
     <p>What determines the price within these bands: English level is the largest single variable. A butler with hotel-trained, near-native English commands a significant premium over a candidate with functional but limited English. Training background (formal hotel vs. villa-trained vs. self-taught) is the second variable. Experience with high-end properties specifically — where discretion, anticipation, and standards of presentation are institutional, not improvised — justifies rates toward the upper end of each range.</p>`,
   },
@@ -107,7 +107,7 @@ const SECTIONS = [
     body: 'Tell us your villa, requirements, and start date — we present vetted candidates within 3 days.',
     primaryAction: {
       label: 'Chat on WhatsApp',
-      href: 'https://wa.me/4915234561712?text=Hi%20myCHEF%2C%20I%27m%20looking%20to%20hire%20a%20villa%20butler%20in%20Bali.',
+      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27m%20looking%20to%20hire%20a%20villa%20butler%20in%20Bali.',
     },
     secondaryAction: { label: 'View Staffing Services', href: '/staffing/villa-staff' },
   },

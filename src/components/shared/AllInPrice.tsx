@@ -34,7 +34,7 @@ export default function AllInPrice({ price, suffix = '/person', showPlusPlus = t
   return (
     <span className={`inline-flex items-baseline gap-1.5 flex-wrap ${className}`}>
       {showPlusPlus && (
-        <span className="text-[#4A4745]/60 line-through text-sm">
+        <span className="text-[#4A4745]/80 line-through text-sm">
           {formatIDR(price)}++{suffix}
         </span>
       )}

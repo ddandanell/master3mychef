@@ -327,6 +327,6 @@ export default function UluwatuPage() {
       </section>
 
       <CityDeepDive slug="uluwatu" cityName="Uluwatu" />
-</main>
+    </div>
   )
 }

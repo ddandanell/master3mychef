@@ -4,8 +4,10 @@ import { UniverseProvider } from '@/contexts/UniverseContext'
 import { trackWhatsAppClick, trackPhoneClick } from '@/lib/analytics'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import ExitIntentPopup from './ExitIntentPopup'
 import PriceDisclaimer from './PriceDisclaimer'
+
+const ExitIntentPopup = lazy(() => import('./ExitIntentPopup'))
+const ConciergeWidget = lazy(() => import('./ConciergeWidget'))
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
@@ -57,7 +59,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </a>
         <Navbar />
         <main id="main-content" className="flex-1">{children}</main>
-        <section aria-label="myCHEF highlights" className="bg-[#1A1916] text-[#C5A028] text-xs py-2 text-center">
+        <div aria-label="myCHEF highlights" className="bg-[#1A1916] text-[#C5A028] text-xs py-2 text-center">
           ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · 4.9★ rated
         </div>
         <div className="bg-[#F5F5F3] border-t border-black/5 py-3 px-6 text-center">

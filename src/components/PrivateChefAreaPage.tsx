@@ -24,7 +24,6 @@ import {
 } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPrivateChefArea, PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
-import { hasLocationPage } from '@/data/siteArchitecture'
 import { trackWhatsAppClick } from '@/lib/analytics'
 
 const SITE = 'https://mychef.id'

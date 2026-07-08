@@ -496,6 +496,6 @@ export default function InVillaServicePage() {
         serviceName="in-villa service staff in Bali"
         intent="availability and pricing"
       />
-    </main>
+    </div>
   )
 }

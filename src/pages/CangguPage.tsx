@@ -327,6 +327,6 @@ export default function CangguPage() {
       </section>
 
       <CityDeepDive slug="canggu" cityName="Canggu" />
-</main>
+    </div>
   )
 }

@@ -327,6 +327,6 @@ export default function SeminyakPage() {
       </section>
 
       <CityDeepDive slug="seminyak" cityName="Seminyak" />
-</main>
+    </div>
   )
 }

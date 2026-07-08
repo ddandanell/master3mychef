@@ -327,6 +327,6 @@ export default function UbudPage() {
       </section>
 
       <CityDeepDive slug="ubud" cityName="Ubud" />
-</main>
+    </div>
   )
 }

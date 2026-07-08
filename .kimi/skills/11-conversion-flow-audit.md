@@ -5,7 +5,7 @@
 **When to use:** Any sprint touching CTAs, contact, service, pricing, or mobile layout.
 
 ## Current state
-- Primary CTA: WhatsApp `wa.me/62089674072020` (display `+62089674072020`), consistent sitewide.
+- Primary CTA: WhatsApp `wa.me/6289674072020` (display `+6289674072020`), consistent sitewide.
 - Lead magnets: `ExitIntentPopup` (Bali Price Guide) + `EmailCaptureBar` on key pages.
 - Sticky mobile CTA exists (`5107cab`).
 

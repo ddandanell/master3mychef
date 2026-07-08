@@ -139,7 +139,7 @@ const SECTIONS = [
     body: 'Share your guest count, venue, and event type — we\'ll send a detailed proposal within 4 hours.',
     primaryAction: {
       label: 'Chat on WhatsApp',
-      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%20need%20catering%20for%20a%20large%20group%20in%20Bali.',
+      href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%20need%20catering%20for%20a%20large%20group%20in%20Bali.',
     },
     secondaryAction: { label: 'Get a Quote', href: '/quote' },
   },

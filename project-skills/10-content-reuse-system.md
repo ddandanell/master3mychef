@@ -10,7 +10,7 @@
 - **Lead capture:** `EmailCaptureBar`, `ExitIntentPopup` — already built; drop in, don't recreate.
 - **Data sources:** `src/data/sitemap.ts`, `redirects.ts` — register new routes here.
 - **Images:** `/public/generated/*.webp` — search before generating new (Skill 03). WebP q~82, hero ≥1200px <300KB, Indonesian service staff (see CLAUDE.md IMAGE RULES).
-- **CTA:** WhatsApp `wa.me/62089674072020` is the single conversion action — reuse the existing CTA component/label patterns.
+- **CTA:** WhatsApp `wa.me/6289674072020` is the single conversion action — reuse the existing CTA component/label patterns.
 
 ## Checklist
 1. Identify the closest existing page/section; copy its structure.

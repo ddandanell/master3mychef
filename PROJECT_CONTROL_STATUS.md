@@ -49,7 +49,7 @@ All six proven-broken internally-linked routes are fixed, live, and verified:
   - **FINAL TRACKING CLOSEOUT (2026-06-23): Tracking working by GTM/GA4 configuration, pending owner real-device confirmation.** Server-side GA4 Realtime/DebugView could not be self-tested because this session is filtered as Internal Traffic. Owner: on a phone via mobile data, open mychef.id, click one WhatsApp CTA + one phone CTA, and confirm each yields exactly one `generate_lead` (no duplicate) in GA4 DebugView/Realtime.
 - `robots.txt` present (allows Googlebot/Bingbot + AI crawlers); `sitemap.xml` = **151** URLs.
 - `AggregateRating` present only in the **neutralized** `src/components/SeoHead.tsx` helper (no per-page rating; no legal-page review markup).
-- Conversion: WhatsApp `wa.me/62089674072020` (`+62089674072020`) sitewide; `ExitIntentPopup` + `EmailCaptureBar` live.
+- Conversion: WhatsApp `wa.me/6289674072020` (`+6289674072020`) sitewide; `ExitIntentPopup` + `EmailCaptureBar` live.
 
 ## Content hub
 - Live blog hub = **`/journal`** (`src/components/JournalPage.tsx`). `/blog` 301 → `/journal`. `src/components/BlogIndexPage.tsx` is vestigial behind that redirect. `src/pages/BlogPage.tsx` was deleted (`1bd1e65`).

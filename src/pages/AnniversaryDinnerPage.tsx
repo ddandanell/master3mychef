@@ -136,7 +136,7 @@ const SECTIONS = [
     subtitle: 'Reserve Your Anniversary Dinner',
     title: 'Make This Anniversary Unforgettable',
     body: 'Tell us your villa, your date, and your milestone — we will design a menu and evening that reflects exactly that. WhatsApp response within a few hours.',
-    primaryAction: { label: 'Plan Your Anniversary Dinner', href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%20would%20like%20to%20book%20an%20anniversary%20dinner%20at%20my%20Bali%20villa' },
+    primaryAction: { label: 'Plan Your Anniversary Dinner', href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%20would%20like%20to%20book%20an%20anniversary%20dinner%20at%20my%20Bali%20villa' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

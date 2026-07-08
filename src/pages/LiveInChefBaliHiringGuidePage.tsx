@@ -125,7 +125,7 @@ const SECTIONS = [
     body: 'Tell us your location, household size, and cuisine preferences — we\'ll present vetted candidates within 5 business days.',
     primaryAction: {
       label: 'Chat on WhatsApp',
-      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20hiring%20a%20live-in%20chef%20for%20my%20Bali%20villa.',
+      href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20hiring%20a%20live-in%20chef%20for%20my%20Bali%20villa.',
       external: true,
     },
     secondaryAction: { label: 'Get a Quote', href: '/quote' },

@@ -130,7 +130,7 @@ const SECTIONS = [
     body: 'Wherever you stay in Bali — we cover every area. Message us your villa location.',
     primaryAction: {
       label: 'Chat on WhatsApp',
-      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20villa%20dinner%20in%20Bali%20and%20would%20like%20to%20discuss%20options.',
+      href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20villa%20dinner%20in%20Bali%20and%20would%20like%20to%20discuss%20options.',
     },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },

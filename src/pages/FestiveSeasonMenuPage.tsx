@@ -128,7 +128,7 @@ const SECTIONS = [
     type: 'cta' as const,
     title: 'Book Your Festive Chef in Bali',
     body: "Christmas Eve, Christmas Day, New Year's Eve — slots fill weeks in advance. Don't leave it too late.",
-    primaryAction: { label: 'Check Festive Availability', href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%20want%20to%20book%20a%20festive%20season%20private%20chef' },
+    primaryAction: { label: 'Check Festive Availability', href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%20want%20to%20book%20a%20festive%20season%20private%20chef' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

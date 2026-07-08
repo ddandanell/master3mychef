@@ -107,7 +107,7 @@ const SECTIONS = [
     subtitle: 'Plan Your Birthday',
     title: 'Plan Your Birthday Celebration',
     body: 'Tell us the date, how many guests, and what vibe you want — we handle the rest.',
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20birthday%20at%20a%20Bali%20villa%20and%20need%20catering.' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20birthday%20at%20a%20Bali%20villa%20and%20need%20catering.' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

@@ -147,7 +147,7 @@ const SECTIONS = [
     subtitle: 'Ready to Plan',
     title: 'Design a Custom Catering Menu for Your Villa Event',
     body: "Tell us your group size, location, occasion, and any dietary needs — we'll design a seasonal menu around Bali's freshest produce and our chefs' specialities.",
-    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%20want%20to%20plan%20a%20catering%20menu%20for%20my%20villa' },
+    primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%20want%20to%20plan%20a%20catering%20menu%20for%20my%20villa' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

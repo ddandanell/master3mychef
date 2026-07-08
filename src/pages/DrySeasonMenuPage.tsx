@@ -140,7 +140,7 @@ const SECTIONS = [
     type: 'cta' as const,
     title: 'Plan Your Dry Season Menu',
     body: "Bali's best produce is waiting — let's build your menu around it.",
-    primaryAction: { label: 'Get a Menu Proposal', href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%20want%20to%20plan%20a%20dry%20season%20dinner%20menu' },
+    primaryAction: { label: 'Get a Menu Proposal', href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%20want%20to%20plan%20a%20dry%20season%20dinner%20menu' },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },
 ]

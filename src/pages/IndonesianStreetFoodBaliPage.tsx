@@ -116,7 +116,7 @@ const SECTIONS = [
     body: "Tell us your group size and which dishes you're excited about — we'll build your Indonesian menu.",
     primaryAction: {
       label: 'Chat on WhatsApp',
-      href: "https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20an%20authentic%20Indonesian%20feast%20at%20my%20Bali%20villa.",
+      href: "https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20an%20authentic%20Indonesian%20feast%20at%20my%20Bali%20villa.",
     },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
   },

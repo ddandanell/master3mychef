@@ -106,7 +106,7 @@ const SECTIONS: PageSection[] = [
 
     <p><strong>Canggu — Beachside Warmth:</strong> Canggu's villa scene has evolved into one of Bali's most design-forward — modern architecture, open-plan living spaces, and direct beach access. A Canggu beachside proposal dinner works particularly well for couples who want a more contemporary, less traditional Bali aesthetic. See our <a href="/private-chef/canggu" class="text-[#7E6410] hover:underline font-medium">Canggu private chef page</a>.</p>
 
-    <p>We work across all of Bali's villa regions — if your villa is not listed here, <a href="https://wa.me/62089674072020" class="text-[#7E6410] hover:underline font-medium">message us on WhatsApp</a> and we will confirm availability at your specific location.</p>`,
+    <p>We work across all of Bali's villa regions — if your villa is not listed here, <a href="https://wa.me/6289674072020" class="text-[#7E6410] hover:underline font-medium">message us on WhatsApp</a> and we will confirm availability at your specific location.</p>`,
   },
   {
     id: 'pricing',
@@ -124,7 +124,7 @@ const SECTIONS: PageSection[] = [
       <li>Champagne and wine service coordination (beverages billed separately at cost)</li>
     </ul>
 
-    <p>Floral décor packages, rose petal arrangements, and photographer coordination are available as add-ons. For full pricing across all tiers, see our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing page</a>. To discuss a bespoke package for your specific vision, <a href="https://wa.me/62089674072020" class="text-[#7E6410] hover:underline font-medium">message us directly on WhatsApp</a> — we respond within the hour.</p>`,
+    <p>Floral décor packages, rose petal arrangements, and photographer coordination are available as add-ons. For full pricing across all tiers, see our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing page</a>. To discuss a bespoke package for your specific vision, <a href="https://wa.me/6289674072020" class="text-[#7E6410] hover:underline font-medium">message us directly on WhatsApp</a> — we respond within the hour.</p>`,
   },
   {
     id: 'faq',
@@ -140,7 +140,7 @@ const SECTIONS: PageSection[] = [
     body: 'Tell us your date, villa location, and vision — we will respond within the hour with a custom proposal.',
     primaryAction: {
       label: 'Message Us on WhatsApp',
-      href: 'https://wa.me/62089674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20proposal%20dinner%20in%20Bali%20and%20would%20love%20to%20discuss%20options.',
+      href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20proposal%20dinner%20in%20Bali%20and%20would%20love%20to%20discuss%20options.',
       external: true,
     },
     secondaryAction: {

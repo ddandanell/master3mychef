@@ -3,8 +3,8 @@
 _One line per shipped change. Newest first. SHA = production commit on `main`._
 
 ## 2026-07-02 — Phone/WhatsApp number updated sitewide
-- Changed canonical phone/WhatsApp number from `+62 811-3803-488` to `+62089674072020` across all production source files (`src/`, `index.html`, `public/llms.txt`), legal/contact docs, project skills, and AI agent prompts.
-- Ran `node scripts/change-phone.js 62089674072020` (210 replacements), then normalized display/schema to the exact E.164 format provided.
+- Changed canonical phone/WhatsApp number from `+62 811-3803-488` to `+6289674072020` across all production source files (`src/`, `index.html`, `public/llms.txt`), legal/contact docs, project skills, and AI agent prompts.
+- Ran `node scripts/change-phone.js 6289674072020` (210 replacements), then normalized display/schema to the exact E.164 format provided.
 - `tsc -b` green.
 
 ## 2026-07-01 — GSC "perfection" pass (post-P0)

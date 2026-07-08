@@ -34,7 +34,7 @@ jobs:
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm run build
       - run: pnpm run verify:ai-skills
-      - run: pnpm exec tsx scripts/verify-all.ts
+      - run: npx tsx scripts/verify-all.ts
 
   ai-skills-check:
     runs-on: ubuntu-latest

@@ -8,7 +8,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
-import { MenuCard, MenuFilterTabs } from '@/components/menus'
+import { MenuFilterTabs, MenuOverview } from '@/components/menus'
 import type { MenuFilterOption } from '@/components/menus'
 import { CLASSIC_MENUS, formatIdr } from '@/data/menus'
 
@@ -285,11 +285,7 @@ export default function FineDiningMenusPage() {
             <MenuFilterTabs options={MENU_FILTER_OPTIONS} active={activeFilter} onChange={setActiveFilter} />
           </div>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {filteredMenus.map((menu) => (
-              <MenuCard key={menu.code} menu={menu} dataSource="finedining-menus" />
-            ))}
-          </div>
+          <MenuOverview menus={filteredMenus} grouped={activeFilter === 'all'} dataSource="finedining-menus" />
 
           <div className="reveal mt-10 rounded-[24px] border border-[#C5A028]/25 bg-white/[0.05] p-7 text-center md:p-10">
             <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028]">Custom / Bespoke Menu</p>

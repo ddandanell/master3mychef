@@ -19,6 +19,11 @@ const PrivateChefBaliPage = lazy(() => import('./pages/PrivateChefBaliPage'))
 const ChefsTablePage = lazy(() => import('./pages/ChefsTablePage'))
 const FineDiningMenusPage = lazy(() => import('./pages/FineDiningMenusPage'))
 const FineDiningChefsPage = lazy(() => import('./pages/FineDiningChefsPage'))
+const ThreeCoursePage = lazy(() => import('./pages/ThreeCoursePage'))
+const KidsMenusPage = lazy(() => import('./pages/KidsMenusPage'))
+const BbqGrillPage = lazy(() => import('./pages/BbqGrillPage'))
+const FamiliesPage = lazy(() => import('./pages/FamiliesPage'))
+const FamilyStylingPage = lazy(() => import('./pages/FamilyStylingPage'))
 const SolPage = lazy(() => import('./pages/SolPage'))
 // const AuraPage = lazy(() => import('./pages/AuraPage'))
 const PartnersPage = lazy(() => import('./pages/PartnersPage'))
@@ -235,6 +240,13 @@ export default function App() {
           <Route path="/fine-dining/chefs-table" element={<ChefsTablePage />} />
           <Route path="/fine-dining/menus" element={<FineDiningMenusPage />} />
           <Route path="/fine-dining/our-chefs" element={<FineDiningChefsPage />} />
+
+          {/* Menu family pages — static routes, must precede the data-driven catch-alls below */}
+          <Route path="/three-course" element={<ThreeCoursePage />} />
+          <Route path="/kids-menus" element={<KidsMenusPage />} />
+          <Route path="/bbq-grill" element={<BbqGrillPage />} />
+          <Route path="/families" element={<FamiliesPage />} />
+          <Route path="/family-styling" element={<FamilyStylingPage />} />
           <Route path="/events" element={<EventsMainPage />} />
           <Route path="/contact" element={<ContactPage />} />
 

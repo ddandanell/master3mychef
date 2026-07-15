@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Search, X, ArrowRight, Utensils, MapPin, ChefHat, Sparkles } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
@@ -38,6 +38,42 @@ const SEARCH_INDEX: SearchResult[] = [
     category: 'Location' as const,
     icon: MapPin,
   })),
+  // Standalone menu pages — not part of PILLARS/LOCATIONS
+  {
+    title: 'Three-Course Dining',
+    subtitle: 'Three course set menus for relaxed villa dining — from IDR 850K',
+    url: '/three-course',
+    category: 'Service',
+    icon: Utensils,
+  },
+  {
+    title: "Kids' Menus",
+    subtitle: "Fun, healthy kids' party menus — nut-free, from IDR 250K per child",
+    url: '/kids-menus',
+    category: 'Service',
+    icon: Utensils,
+  },
+  {
+    title: 'BBQ Grill Experience',
+    subtitle: 'Live bbq grill station at your villa — bbq menus from IDR 950K',
+    url: '/bbq-grill',
+    category: 'Service',
+    icon: Utensils,
+  },
+  {
+    title: 'Menu Families',
+    subtitle: 'Browse all 50 menus across six menu collections',
+    url: '/families',
+    category: 'Service',
+    icon: ChefHat,
+  },
+  {
+    title: 'Family Styling Guide',
+    subtitle: 'How each menu family is styled and served in your villa',
+    url: '/family-styling',
+    category: 'Guide',
+    icon: Sparkles,
+  },
 ]
 
 interface Props {
@@ -47,9 +83,25 @@ interface Props {
 
 export default function SearchOverlay({ isOpen, onClose }: Props) {
   const [query, setQuery] = useState('')
-  const [results, setResults] = useState<SearchResult[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
   const navigate = useNavigate()
+
+  // Reset the query whenever the overlay closes — derived-state-during-render pattern
+  const [prevIsOpen, setPrevIsOpen] = useState(isOpen)
+  if (prevIsOpen !== isOpen) {
+    setPrevIsOpen(isOpen)
+    if (!isOpen) setQuery('')
+  }
+
+  const results = useMemo<SearchResult[]>(() => {
+    if (!query.trim()) return []
+
+    const q = query.toLowerCase()
+    return SEARCH_INDEX.filter(item =>
+      item.title.toLowerCase().includes(q) ||
+      item.subtitle.toLowerCase().includes(q)
+    ).slice(0, 8)
+  }, [query])
 
   useEffect(() => {
     if (isOpen) {
@@ -57,7 +109,6 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = ''
-      setQuery('')
     }
   }, [isOpen])
 
@@ -73,21 +124,6 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
     document.addEventListener('keydown', handleEscape)
     return () => document.removeEventListener('keydown', handleEscape)
   }, [isOpen, onClose])
-
-  useEffect(() => {
-    if (!query.trim()) {
-      setResults([])
-      return
-    }
-
-    const q = query.toLowerCase()
-    const filtered = SEARCH_INDEX.filter(item => 
-      item.title.toLowerCase().includes(q) || 
-      item.subtitle.toLowerCase().includes(q)
-    ).slice(0, 8)
-    
-    setResults(filtered)
-  }, [query])
 
   const handleItemClick = (url: string) => {
     navigate(url)

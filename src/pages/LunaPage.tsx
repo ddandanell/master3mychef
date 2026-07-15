@@ -16,7 +16,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { CLASSIC_MENUS, FAMILY_LABEL, formatIdr } from '@/data/menus'
 import type { MenuFamily } from '@/data/menus'
-import { MenuCard, MenuFilterTabs } from '@/components/menus'
+import { MenuFilterTabs, MenuOverview } from '@/components/menus'
 
 const MENU_FILTER_OPTIONS = [
   { value: 'all', label: 'All' },
@@ -804,11 +804,7 @@ export default function LunaPage() {
           <div className="mb-12 flex justify-center">
             <MenuFilterTabs options={MENU_FILTER_OPTIONS} active={menuFilter} onChange={setMenuFilter} />
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredMenus.map((menu) => (
-              <MenuCard key={menu.code} menu={menu} dataSource="luna-menus" />
-            ))}
-          </div>
+          <MenuOverview menus={filteredMenus} grouped={menuFilter === 'all'} dataSource="luna-menus" />
           {/* Custom / Bespoke Menu callout */}
           <div className="mt-8 flex flex-col items-center rounded-[28px] border border-white/10 bg-white/[0.04] p-8 text-center md:p-10">
             <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Custom / Bespoke Menu</p>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, Search, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, type LucideIcon } from 'lucide-react'
 import { PILLARS, PRIMARY_CTA } from '@/data/siteArchitecture'
@@ -68,6 +68,38 @@ NAV_SUBPAGES['/families'] = [
   { label: "Kids'", href: '/kids-menus', icon: 'Baby' },
 ]
 
+// Preview images shown beside desktop dropdown links; the picture swaps as subpages are hovered
+const PILLAR_PREVIEW_IMAGES: Record<string, string> = {
+  '/catering': '/generated/mychef-families-bali-catering-events.webp',
+  '/fine-dining': '/generated/mychef-families-bali-fine-dining-experience.webp',
+  '/families': '/generated/mychef-families-bali-classic-set-menus.webp',
+  '/events': '/generated/mychef-events-bali-hero-events-new.webp',
+  '/in-villa-service': '/generated/in-villa-service-hero.webp',
+  '/staffing': '/generated/mychef-butlers-1.webp',
+}
+
+const SUBPAGE_PREVIEW_IMAGES: Record<string, string> = {
+  '/fine-dining/menus': '/generated/mychef-families-bali-classic-set-menus.webp',
+  '/three-course': '/generated/mychef-families-bali-three-course.webp',
+  '/bbq-grill': '/generated/mychef-families-bali-bbq-grill.webp',
+  '/kids-menus': '/generated/mychef-families-bali-kids-menus.webp',
+  '/fine-dining/our-chefs': '/generated/chef-made-surya-portrait-bw.webp',
+  '/fine-dining/chefs-table': '/generated/mychef-experience-bali-luna-gallery-2.webp',
+  '/fine-dining/romantic-dinner': '/generated/mychef-events-bali-anniversary-romantic.webp',
+  '/fine-dining/tasting-menu': '/generated/mychef-experience-bali-luna-collage.webp',
+  '/fine-dining/private-chef-bali': '/generated/mychef-finedining-bali-luna-plating.webp',
+}
+
+interface DropdownPreview {
+  src: string
+  caption: string
+}
+
+function defaultPreviewFor(item: NavItem): DropdownPreview | null {
+  const src = PILLAR_PREVIEW_IMAGES[item.href]
+  return src ? { src, caption: `${item.label} · Bali` } : null
+}
+
 function isActivePath(current: string, target: string): boolean {
   if (current === target) return true
   if (target !== '/' && current.startsWith(target + '/')) return true
@@ -79,6 +111,58 @@ export default function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false)
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
   const location = useLocation()
+
+  // Desktop dropdown hover-intent — short open/close delays stop the panel
+  // flickering when the cursor travels between the trigger and the panel
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [dropdownPreviews, setDropdownPreviews] = useState<Record<string, DropdownPreview>>({})
+  const [openedOnce, setOpenedOnce] = useState<Set<string>>(new Set())
+  const openTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const clearDropdownTimers = () => {
+    if (openTimer.current) clearTimeout(openTimer.current)
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+  }
+
+  const openDropdownNow = (href: string) => {
+    clearDropdownTimers()
+    setOpenedOnce((prev) => {
+      if (prev.has(href)) return prev
+      const next = new Set(prev)
+      next.add(href)
+      return next
+    })
+    setOpenDropdown(href)
+  }
+
+  const scheduleOpen = (href: string) => {
+    clearDropdownTimers()
+    openTimer.current = setTimeout(() => openDropdownNow(href), 100)
+  }
+
+  const scheduleClose = () => {
+    clearDropdownTimers()
+    closeTimer.current = setTimeout(() => setOpenDropdown(null), 250)
+  }
+
+  const setPreviewFor = (item: NavItem, subpage: { label: string; href: string }) => {
+    const src = SUBPAGE_PREVIEW_IMAGES[subpage.href] ?? PILLAR_PREVIEW_IMAGES[item.href]
+    if (!src) return
+    setDropdownPreviews((prev) => ({ ...prev, [item.href]: { src, caption: subpage.label } }))
+  }
+
+  // Close any open dropdown on Escape
+  useEffect(() => {
+    if (!openDropdown) return undefined
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpenDropdown(null)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [openDropdown])
+
+  useEffect(() => () => clearDropdownTimers(), [])
 
   const toggleExpanded = (href: string) => {
     const newSet = new Set(expandedItems)
@@ -120,7 +204,7 @@ export default function Navbar() {
         className="fixed top-0 left-0 right-0 z-[70] bg-[#0D0C0A]/95 border-b border-[#C5A028]/15"
         style={{ backdropFilter: 'blur(12px)' }}
       >
-        <div className="mx-auto px-8 py-4 flex items-center justify-between gap-8">
+        <div className="mx-auto px-8 py-3 flex items-center justify-between gap-8">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group">
             <ChefHat className="w-6 h-6 text-[#C5A028] transition-transform group-hover:rotate-12" strokeWidth={1.5} />
@@ -133,75 +217,128 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav — hidden on mobile/tablet */}
-          <div className="hidden lg:flex items-center gap-10 flex-1 justify-center">
-            {NAV_ITEMS.map((item) => {
+          <div className="hidden lg:flex items-center gap-6 flex-1 justify-center">
+            {NAV_ITEMS.map((item, index) => {
               const Icon = item.icon
               const active = isActivePath(location.pathname, item.href)
               const subpages = NAV_SUBPAGES[item.href] ?? []
+              const hasDropdown = subpages.length > 0
+              const isOpen = openDropdown === item.href
+              const preview = dropdownPreviews[item.href] ?? defaultPreviewFor(item)
               return (
-                <div key={item.href} className="relative group">
+                <div
+                  key={item.href}
+                  className="relative group"
+                  onMouseEnter={() => hasDropdown && scheduleOpen(item.href)}
+                  onMouseLeave={() => hasDropdown && scheduleClose()}
+                  onFocus={(e) => {
+                    if (hasDropdown && !e.currentTarget.contains(e.relatedTarget as Node | null)) {
+                      openDropdownNow(item.href)
+                    }
+                  }}
+                  onBlur={(e) => {
+                    if (hasDropdown && !e.currentTarget.contains(e.relatedTarget as Node | null)) {
+                      scheduleClose()
+                    }
+                  }}
+                >
                   <Link
                     to={item.href}
-                    className={`relative flex flex-col items-center gap-1.5 transition-all duration-300 group ${
-                      active ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
+                    onClick={() => setOpenDropdown(null)}
+                    aria-haspopup={hasDropdown || undefined}
+                    aria-expanded={hasDropdown ? isOpen : undefined}
+                    className={`relative flex items-center gap-1.5 py-1 transition-colors duration-200 ${
+                      active || isOpen ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
                     }`}
                   >
-                    <Icon 
-                      className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" 
-                      strokeWidth={1.5} 
+                    <Icon
+                      className="w-4 h-4 transition-transform duration-300 group-hover:scale-110"
+                      strokeWidth={1.5}
                     />
                     <span
-                      className="text-[11px] uppercase tracking-[0.1em] font-medium"
+                      className="text-[12px] uppercase tracking-[0.12em] font-medium"
                       style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       {item.label}
                     </span>
+                    {hasDropdown && (
+                      <ChevronDown
+                        className={`w-3 h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                        strokeWidth={1.5}
+                      />
+                    )}
                     {/* Animated underline */}
-                    <span className={`absolute -bottom-1 left-0 right-0 h-px bg-[#C5A028] transition-all duration-300 origin-left ${
-                      active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    <span className={`absolute -bottom-0.5 left-0 right-0 h-px bg-[#C5A028] transition-all duration-300 origin-left ${
+                      active || isOpen ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                     }`} />
                   </Link>
 
-                  {subpages.length > 0 && (
-                    <div className="absolute left-1/2 top-full z-20 mt-4 w-72 -translate-x-1/2 origin-top pointer-events-none opacity-0 scale-95 blur-[2px] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:pointer-events-auto group-hover:opacity-100 group-hover:scale-100 group-hover:blur-0 group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:scale-100 group-focus-within:blur-0">
-                      {/* Top accent line */}
-                      <div className="absolute -top-px left-1/2 -translate-x-1/2 w-16 h-px bg-[#C5A028]" />
-                      
-                      <div className="rounded-2xl border border-[#C5A028]/15 bg-white/95 p-3 shadow-2xl shadow-black/35 backdrop-blur-md">
-                        <p
-                          className="px-3 pb-2 text-[10px] uppercase tracking-[0.28em] text-[#7E6410]"
-                          style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                        >
-                          {item.label} Pages
-                        </p>
-                        <div className="max-h-[70vh] space-y-1 overflow-y-auto pr-1">
-                          {subpages.map((subpage, i) => {
-                            const subpageActive = isActivePath(location.pathname, subpage.href)
-                            return (
-                              <Link
-                                key={subpage.href}
-                                to={subpage.href}
-                                className={`flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm transition-all duration-200 ${
-                                  subpageActive
-                                    ? 'bg-[#C5A028]/12 text-[#7E6410]'
-                                    : 'text-gray-700 hover:bg-[#C5A028]/8 hover:text-[#7E6410] hover:translate-x-1'
-                                }`}
-                                style={{ 
-                                  fontFamily: "'Playfair Display', serif",
-                                  animationDelay: `${i * 50}ms`
-                                }}
-                              >
-                                {subpage.icon && getIconComponent(subpage.icon) && 
-                                  (() => {
-                                    const Icon = getIconComponent(subpage.icon)
-                                    return Icon ? <Icon className="w-4 h-4 flex-shrink-0 transition-transform hover:scale-110" strokeWidth={1.5} /> : null
-                                  })()
-                                }
-                                {subpage.label}
-                              </Link>
-                            )
-                          })}
+                  {hasDropdown && (
+                    <div
+                      className={`absolute top-full z-20 pt-3 transition-all duration-200 ease-out ${
+                        index === 0 ? 'left-0' : index >= 4 ? 'right-0' : 'left-1/2 -translate-x-1/2'
+                      } ${
+                        isOpen
+                          ? 'pointer-events-auto translate-y-0 opacity-100'
+                          : 'pointer-events-none invisible -translate-y-1 opacity-0'
+                      }`}
+                    >
+                      <div className="flex overflow-hidden rounded-2xl border border-[#C5A028]/20 bg-[#0F0E0C]/95 shadow-2xl shadow-black/50 backdrop-blur-xl">
+                        {/* Links column */}
+                        <div className="w-64 p-3">
+                          <p
+                            className="px-3 pb-2 pt-1 text-[10px] uppercase tracking-[0.28em] text-[#C5A028]/80"
+                            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                          >
+                            {item.label} Pages
+                          </p>
+                          <div className="max-h-[70vh] space-y-0.5 overflow-y-auto pr-1">
+                            {subpages.map((subpage) => {
+                              const subpageActive = isActivePath(location.pathname, subpage.href)
+                              return (
+                                <Link
+                                  key={subpage.href}
+                                  to={subpage.href}
+                                  onClick={() => setOpenDropdown(null)}
+                                  onMouseEnter={() => setPreviewFor(item, subpage)}
+                                  onFocus={() => setPreviewFor(item, subpage)}
+                                  className={`flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm transition-all duration-200 ${
+                                    subpageActive
+                                      ? 'bg-[#C5A028]/15 text-[#C5A028]'
+                                      : 'text-white/70 hover:bg-white/5 hover:text-[#C5A028] hover:translate-x-0.5'
+                                  }`}
+                                  style={{ fontFamily: "'Playfair Display', serif" }}
+                                >
+                                  {subpage.icon && getIconComponent(subpage.icon) &&
+                                    (() => {
+                                      const SubIcon = getIconComponent(subpage.icon)
+                                      return SubIcon ? <SubIcon className="w-4 h-4 flex-shrink-0 opacity-70" strokeWidth={1.5} /> : null
+                                    })()
+                                  }
+                                  {subpage.label}
+                                </Link>
+                              )
+                            })}
+                          </div>
                         </div>
+
+                        {/* Preview image — mounted lazily after first open so initial page load stays light */}
+                        {preview && openedOnce.has(item.href) && (
+                          <div className="relative w-52 overflow-hidden">
+                            <img
+                              key={preview.src}
+                              src={preview.src}
+                              alt=""
+                              aria-hidden="true"
+                              loading="lazy"
+                              className="absolute inset-0 h-full w-full object-cover animate-[nav-image-fade_0.4s_ease]"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
+                            <p className="absolute inset-x-3 bottom-3 text-[10px] font-medium uppercase tracking-[0.2em] text-white/85">
+                              {preview.caption}
+                            </p>
+                          </div>
+                        )}
                       </div>
                     </div>
                   )}
@@ -225,7 +362,7 @@ export default function Navbar() {
             {/* Book Now Button */}
             <Link
               to={PRIMARY_CTA.href}
-              className="hidden md:flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#C5A028] text-black font-semibold text-[12px] uppercase tracking-[0.08em] transition-all hover:bg-[#D4B43A] hover:shadow-lg hover:shadow-[#C5A028]/30 flex-shrink-0"
+              className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full bg-[#C5A028] text-black font-semibold text-[12px] uppercase tracking-[0.08em] transition-all hover:bg-[#D4B43A] hover:shadow-lg hover:shadow-[#C5A028]/30 flex-shrink-0"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Book Now

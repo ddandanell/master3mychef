@@ -1,30 +1,29 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ChevronRight, Star } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceWithOfferSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceWithOfferSchema, howToSchema, menuSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { MenuCard, MenuFilterTabs } from '@/components/menus'
+import type { MenuFilterOption } from '@/components/menus'
+import { CLASSIC_MENUS, formatIdr } from '@/data/menus'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE_URL = 'https://mychef.id'
 const WHATSAPP_NUMBER = 6289674072020
 
-interface MenuCard {
-  name: string
-  subtitle: string
-  price: string
-  description: string
-  image: string
-  imageAlt: string
-  courses?: string[]
-  winePairing?: string
-  dataSource: string
-}
+const MENU_FILTER_OPTIONS: MenuFilterOption[] = [
+  { value: 'all', label: 'All' },
+  { value: 'vegetarian', label: 'Vegetarian' },
+  { value: 'seafood', label: 'Seafood' },
+  { value: 'mixed-meats', label: 'Mixed Meats' },
+  { value: 'single-meat', label: 'Single-Meat' },
+]
 
 interface Testimonial {
   name: string
@@ -47,66 +46,8 @@ interface FAQItem {
   a: string
 }
 
-const MENU_CARDS: MenuCard[] = [
-  {
-    name: 'Italian Experience',
-    subtitle: 'Classic Italian Fine Dining',
-    price: 'Kitchen-Service IDR 1,750,000++ · Full-Service IDR 2,200,000++',
-    description: 'Handmade pasta, fresh seafood, slow-cooked meats. Our pasta specialist hand-rolls every sheet in your kitchen the afternoon of your dinner.',
-    image: '/generated/mychef-experience-bali-luna-gallery-1.webp',
-    imageAlt: 'Italian Experience — handmade tagliatelle and fine dining in a Bali villa',
-    courses: ['Pecorino crisp', 'Burrata', 'Handmade tagliatelle', 'Osso buco', 'Tiramisu'],
-    winePairing: '+IDR 850,000 per person',
-    dataSource: 'menus-italian-cta',
-  },
-  {
-    name: 'French Experience',
-    subtitle: 'Refined French Technique',
-    price: 'Kitchen-Service IDR 1,900,000++ · Full-Service IDR 2,400,000++',
-    description: 'Classic French cooking adapted to Bali\'s finest ingredients. Rich sauces, precise technique, and the patience that defines the French kitchen.',
-    image: '/generated/mychef-experience-bali-luna-wine.webp',
-    imageAlt: 'French Experience — refined French dining in a Bali villa',
-    courses: ['Gougères', 'Coquilles Saint-Jacques', 'Barramundi en papillote', 'Duck confit', 'Crème brûlée'],
-    winePairing: '+IDR 850,000 per person',
-    dataSource: 'menus-french-cta',
-  },
-  {
-    name: 'Mediterranean Sea Experience',
-    subtitle: 'Coastal Mediterranean Flavours',
-    price: 'Kitchen-Service IDR 1,750,000++ · Full-Service IDR 2,200,000++',
-    description: 'Italian seafood in five movements. Fresh catches, olive oil, citrus, and herbs. Pasta rolled in your villa. The original myCHEF fine dining experience.',
-    image: '/generated/mychef-experience-bali-luna-gallery-1.webp',
-    imageAlt: 'Mediterranean Sea Experience — fresh seafood in a Bali villa',
-    courses: ['Passione di Dentice', 'Burrata', 'Lobster tagliatelle', 'Barramundi', 'Tiramisu'],
-    winePairing: '+IDR 850,000 per person',
-    dataSource: 'menus-mediterranean-cta',
-  },
-  {
-    name: 'Wagyu Experience',
-    subtitle: 'Premium Wagyu Tokusen',
-    price: 'Kitchen-Service IDR 1,950,000++ · Full-Service IDR 2,400,000++',
-    description: 'Wagyu Tokusen in three forms — raw, enveloped, and grilled. From delicate tartare to flame-grilled ribeye at your table.',
-    image: '/generated/mychef-finedining-bali-luna-plating.webp',
-    imageAlt: 'Wagyu Experience — premium beef dining in a Bali villa',
-    courses: ['Beef tartare', 'Oxtail ravioli', 'Grilled ribeye', 'Tenerina cake'],
-    winePairing: '+IDR 850,000 per person',
-    dataSource: 'menus-wagyu-cta',
-  },
-  {
-    name: 'Custom Menu',
-    subtitle: 'Your Vision, Our Execution',
-    price: 'Kitchen-Service From IDR 1,600,000++ · Full-Service From IDR 2,000,000++',
-    description: 'Tell us what you want. A specific cuisine, dietary requirements, a surprise for your guests, a theme that means something. Our chef designs a bespoke menu just for your evening.',
-    image: '/generated/mychef-experience-bali-luna-gallery-3.webp',
-    imageAlt: 'Custom Menu — bespoke dining experience in a Bali villa',
-    courses: ['Consultation', 'Menu Design', 'Ingredient Sourcing', 'Execution'],
-    winePairing: 'Custom paired to your menu',
-    dataSource: 'menus-custom-cta',
-  },
-]
-
 const PHILOSOPHY_STATS: Stat[] = [
-  { value: '5', label: 'Signature Menus' },
+  { value: '24', label: 'Signature Set Menus' },
   { value: '12,000+', label: 'Guests Fed' },
   { value: '100%', label: 'Market-Fresh' },
 ]
@@ -141,7 +82,7 @@ const TESTIMONIALS: Testimonial[] = [
 const FAQS: FAQItem[] = [
   {
     q: 'Which menu should I choose?',
-    a: 'Choose Italian or Mediterranean for pasta and seafood lovers. Choose French for refined technique and rich sauces. Choose Wagyu for beef-focused evenings. Choose Custom if you have a specific vision, dietary requirements, or a theme in mind.',
+    a: 'Choose Seafood for the morning catch and lighter evenings. Choose Single-Meat when one protein deserves the spotlight. Choose Mixed Meats for variety across the table, or Vegetarian for a garden-led menu. Choose Bespoke if you have a specific vision, dietary requirements, or a theme in mind.',
   },
   {
     q: 'Can you accommodate dietary restrictions?',
@@ -170,6 +111,12 @@ const buildWhatsAppLink = (menuName: string) =>
 
 export default function FineDiningMenusPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const [activeFilter, setActiveFilter] = useState<string>('all')
+
+  const filteredMenus = useMemo(
+    () => (activeFilter === 'all' ? CLASSIC_MENUS : CLASSIC_MENUS.filter((menu) => menu.family === activeFilter)),
+    [activeFilter],
+  )
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -189,8 +136,8 @@ export default function FineDiningMenusPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Chef Menu Bali | Mediterranean & Wagyu — myCHEF"
-        description="Browse myCHEF private chef menus for Bali villas. Compare Mediterranean & Wagyu tasting paths, signature dishes & wine pairing add-ons before you book."
+        title="Classic Set Menus — Private Fine Dining Bali | myCHEF.id"
+        description="Browse 24 classic set menus for private villa dining in Bali. Vegetarian, seafood, mixed meats & single-meat. From IDR 1.25M per guest."
         canonical="https://mychef.id/fine-dining/menus"
         ogImage="/generated/mychef-finedining-bali-luna-plating.webp"
         jsonLd={[
@@ -199,20 +146,29 @@ export default function FineDiningMenusPage() {
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           serviceWithOfferSchema({
             name: 'Private Chef Menu Bali',
-            description: 'Browse myCHEF private chef menus for Bali villas. Mediterranean and Wagyu tasting paths, signature dishes, and wine pairing add-ons with full villa service.',
+            description: 'Browse myCHEF private chef menus for Bali villas. 24 classic set menus across vegetarian, seafood, mixed-meat and single-meat families, with wine pairing add-ons and full villa service.',
             url: 'https://mychef.id/fine-dining/menus',
-            price: '350000',
+            price: '1250000',
             unitText: 'per person',
           }),
           howToSchema({
             name: 'How to Choose & Book a Fine Dining Menu in Bali',
             description: 'Browse myCHEF menus and book a private fine dining experience in your Bali villa.',
             steps: [
-              { name: 'Browse the Menus', text: 'Compare Italian, French, Mediterranean Sea, Wagyu, and Custom menus. Each includes full chef service and grocery sourcing.' },
+              { name: 'Browse the Menus', text: 'Compare 24 classic set menus across four families — vegetarian, seafood, mixed meats, and single-meat. Each includes full chef service and grocery sourcing.' },
               { name: 'Enquire on WhatsApp', text: 'Message us with your villa, guest count, and preferred menu. We confirm availability and pricing within the hour.' },
               { name: 'We Confirm & Book', text: 'We lock your menu, chef, and arrival time. A 50% deposit may be required for premium dates. Kitchen-Service or Full-Service — your choice.' },
             ],
           }),
+          menuSchema(
+            'Classic Set Menus',
+            '24 classic set menus for private villa dining in Bali — vegetarian, seafood, mixed meats and single-meat. From IDR 1.25M per guest.',
+            'https://mychef.id/fine-dining/menus',
+            CLASSIC_MENUS.map((menu) => ({
+              name: menu.name,
+              description: `From ${formatIdr(menu.priceIdr)} per ${menu.guestNoun}`,
+            })),
+          ),
         ]}
       />
 
@@ -244,20 +200,12 @@ export default function FineDiningMenusPage() {
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">Michelin-Trained Chefs</p>
         </div>
 
-        <div className="absolute inset-x-0 top-0 z-20">
-          <Breadcrumb
-            items={[{ label: 'Fine Dining', href: '/fine-dining' }, { label: 'Our Menus' }]}
-            theme="dark"
-            className="mx-auto max-w-7xl"
-          />
-        </div>
-
         <div className="relative z-10 mx-auto max-w-5xl px-6 pt-28 text-center">
           <p
             className="mb-6 text-sm uppercase tracking-[0.35em] text-[#C5A028]"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
           >
-            Italian · French · Mediterranean · Wagyu · Custom
+            Vegetarian · Seafood · Mixed Meats · Single-Meat · Bespoke
           </p>
           <h1
             className="mb-6 text-5xl text-white sm:text-6xl lg:text-7xl"
@@ -269,7 +217,7 @@ export default function FineDiningMenusPage() {
             className="mx-auto mb-10 max-w-3xl text-2xl italic text-white/[80%] md:text-3xl"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Italian, French, Mediterranean & Wagyu tasting menus. Refined. Seasonal. Cooked in your villa.
+            24 classic set menus across four families. Refined. Seasonal. Cooked in your villa.
           </p>
           <a
             href={buildWhatsAppLink('private dining')}
@@ -321,87 +269,116 @@ export default function FineDiningMenusPage() {
 
       <section className="bg-[#1A1916] px-6 py-24 md:py-28">
         <div className="mx-auto max-w-6xl">
-          <div className="reveal mb-14 text-center">
+          <div className="reveal mb-10 text-center">
             <p
               className="mb-4 text-xs uppercase tracking-[0.35em] text-[#C5A028]"
               style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
             >
-              Two Signature Menus
+              Classic Set Menus
             </p>
             <h2 className="text-3xl text-white md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Choose between our five signature menus
+              Choose between our 24 signature set menus
             </h2>
           </div>
 
-          <div className="space-y-8">
-            {MENU_CARDS.map((menu, index) => (
-              <article
-                key={menu.name}
-                className={`reveal overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex flex-col`}
-              >
-                <div className="lg:w-1/2">
-                  <img
-                    src={menu.image}
-                    alt={menu.imageAlt}
-                    width={960}
-                    height={720}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-full min-h-[320px] w-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col justify-center p-8 md:p-10 lg:p-12">
-                  <p
-                    className="mb-3 text-xs uppercase tracking-[0.3em] text-[#C5A028]"
-                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
-                  >
-                    {menu.subtitle}
-                  </p>
-                  <h3 className="mb-3 text-3xl text-white md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {menu.name}
-                  </h3>
-                  <p className="mb-5 text-sm uppercase tracking-[0.18em] text-white/[55%]">{menu.price}</p>
-                  <p className="mb-6 max-w-2xl text-base leading-relaxed text-white/[75%]">{menu.description}</p>
+          <div className="reveal mb-12">
+            <MenuFilterTabs options={MENU_FILTER_OPTIONS} active={activeFilter} onChange={setActiveFilter} />
+          </div>
 
-                  {menu.courses && (
-                    <div className="mb-6 flex flex-wrap gap-2">
-                      {menu.courses.map((course) => (
-                        <span
-                          key={course}
-                          className="rounded-full border border-white/12 bg-white/[0.03] px-4 py-2 text-xs uppercase tracking-[0.18em] text-white/[75%]"
-                        >
-                          {course}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                  {menu.winePairing && (
-                    <p className="mb-8 text-sm text-white/[60%]">
-                      Wine pairing available: <span className="text-[#C5A028]">{menu.winePairing}</span>
-                    </p>
-                  )}
-
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                    <a
-                      href={buildWhatsAppLink(menu.name)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-source={menu.dataSource}
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] transition-colors hover:bg-[#d0ab33] focus:outline-none focus:ring-2 focus:ring-white rounded"
-                    >
-                      <MessageCircle className="h-4 w-4" />
-                      Enquire on WhatsApp
-                    </a>
-                  </div>
-                </div>
-              </article>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            {filteredMenus.map((menu) => (
+              <MenuCard key={menu.code} menu={menu} dataSource="finedining-menus" />
             ))}
           </div>
+
+          <div className="reveal mt-10 rounded-[24px] border border-[#C5A028]/25 bg-white/[0.05] p-7 text-center md:p-10">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028]">Custom / Bespoke Menu</p>
+            <h3 className="mt-3 text-2xl text-white md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Your menu, designed from scratch…
+            </h3>
+            <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-white/[80%]">
+              A specific cuisine, dietary requirements, a surprise for your guests, a theme that means something. Tell us the occasion and our chefs will design a bespoke menu around your evening.
+            </p>
+            <Link
+              to="/quote"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#1A1A1A] transition-colors hover:bg-[#d0ab33] focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              Design Your Menu
+              <ChevronRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="reveal mt-16">
+            <h3 className="mb-8 text-center text-2xl text-white md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Explore More Menu Collections
+            </h3>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              <Link
+                to="/three-course"
+                className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 transition-colors hover:bg-white/[0.08]"
+              >
+                <h4 className="mb-2 text-lg font-semibold text-white transition-colors group-hover:text-[#C5A028]">
+                  Three-Course Dining
+                </h4>
+                <p className="mb-4 text-sm text-white/[70%]">
+                  Lighter 3-course menus from IDR 850K
+                </p>
+                <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] transition-all group-hover:gap-3">
+                  Explore <ChevronRight className="h-4 w-4" />
+                </span>
+              </Link>
+
+              <Link
+                to="/bbq-grill"
+                className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 transition-colors hover:bg-white/[0.08]"
+              >
+                <h4 className="mb-2 text-lg font-semibold text-white transition-colors group-hover:text-[#C5A028]">
+                  BBQ Grill Experience
+                </h4>
+                <p className="mb-4 text-sm text-white/[70%]">
+                  Live grill station from IDR 950K
+                </p>
+                <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] transition-all group-hover:gap-3">
+                  Explore <ChevronRight className="h-4 w-4" />
+                </span>
+              </Link>
+
+              <Link
+                to="/kids-menus"
+                className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 transition-colors hover:bg-white/[0.08]"
+              >
+                <h4 className="mb-2 text-lg font-semibold text-white transition-colors group-hover:text-[#C5A028]">
+                  Kids&apos; Menus
+                </h4>
+                <p className="mb-4 text-sm text-white/[70%]">
+                  Fun, nut-free menus from IDR 250K/child
+                </p>
+                <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] transition-all group-hover:gap-3">
+                  Explore <ChevronRight className="h-4 w-4" />
+                </span>
+              </Link>
+
+              <Link
+                to="/families"
+                className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 transition-colors hover:bg-white/[0.08]"
+              >
+                <h4 className="mb-2 text-lg font-semibold text-white transition-colors group-hover:text-[#C5A028]">
+                  Browse All Families
+                </h4>
+                <p className="mb-4 text-sm text-white/[70%]">
+                  50 menus across 6 collections
+                </p>
+                <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] transition-all group-hover:gap-3">
+                  Explore <ChevronRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </div>
+          </div>
+
           <div className="reveal mt-10 rounded-[24px] border border-[#C5A028]/25 bg-white/[0.05] p-7 text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028]">Looking for the most exclusive format?</p>
             <p className="mt-3 text-base text-white/[80%]">
-              Chef&apos;s Table is a separate Adriano-led counter experience, distinct from the five signature menus above.
+              Chef&apos;s Table is a separate Adriano-led counter experience, distinct from the 24 signature set menus above.
             </p>
             <Link
               to="/fine-dining/chefs-table"

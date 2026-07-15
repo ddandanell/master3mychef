@@ -27,6 +27,11 @@ const SITE = 'https://mychef.id'
 const OG_IMAGES: Record<string, string> = {
   '/': '/hero-home.webp',
   '/fine-dining': '/hero-fine-dining.webp',
+  '/three-course': '/generated/mychef-catering-bali-plated-3course-table.webp',
+  '/kids-menus': '/generated/mychef-events-bali-party-birthday.webp',
+  '/bbq-grill': '/generated/mychef-catering-bali-bbq-grill-satay.webp',
+  '/families': '/generated/mychef-catering-bali-plated-menus.webp',
+  '/family-styling': '/generated/mychef-catering-bali-plated-menus.webp',
   '/villa-chef': '/villa-aerial.webp',
   '/events': '/hero-events.webp',
   '/events/weddings': '/event-wedding.webp',

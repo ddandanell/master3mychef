@@ -84,6 +84,30 @@ function getContextData(pathname: string) {
       triggerMsg: 'Need help calculating a budget for your event? Just let me know.',
     }
   }
+  if (normalized.startsWith('/three-course')) {
+    return {
+      prefix: 'I\'m interested in a lighter 3-course dinner. ',
+      triggerMsg: 'Looking for a lighter 3-course villa dinner? I can send over our 8 menu options.',
+    }
+  }
+  if (normalized.startsWith('/kids-menus')) {
+    return {
+      prefix: 'I\'m interested in your kids\' party menus. ',
+      triggerMsg: 'Planning a kids\' party? Ask me about our fun, nut-free menus from IDR 250K per child.',
+    }
+  }
+  if (normalized.startsWith('/bbq-grill')) {
+    return {
+      prefix: 'I\'m interested in your BBQ grill experience. ',
+      triggerMsg: 'Want a live grill station at your villa? I can walk you through our BBQ experiences.',
+    }
+  }
+  if (normalized.startsWith('/families') || normalized.startsWith('/family-styling')) {
+    return {
+      prefix: 'I need help choosing between your menus. ',
+      triggerMsg: 'Not sure which of our 50 menus fits your group? I can help you pick the right one.',
+    }
+  }
 
   return {
     prefix: '',
@@ -109,7 +133,7 @@ export default function ConciergeWidget() {
   }, [])
 
   // Auto-trigger notification bubble after 5 seconds on new page
-  // eslint-disable-next-line react-hooks/set-state-in-effect, react-hooks/exhaustive-deps
+  /* eslint-disable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
   useEffect(() => {
     setShowNotification(false)
     const timer = setTimeout(() => {
@@ -117,6 +141,7 @@ export default function ConciergeWidget() {
     }, 5000)
     return () => clearTimeout(timer)
   }, [location.pathname])
+  /* eslint-enable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
 
   const handleServiceClick = (option: ServiceOption) => {
     const fullMessage = prefix + option.baseMessage

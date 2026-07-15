@@ -238,6 +238,37 @@ export default function Footer() {
           </div>
 
           <div className="group">
+            <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Menus</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/three-course" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Three-Course Dining
+                </Link>
+              </li>
+              <li>
+                <Link to="/bbq-grill" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  BBQ Grill Experience
+                </Link>
+              </li>
+              <li>
+                <Link to="/kids-menus" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Kids' Menus
+                </Link>
+              </li>
+              <li>
+                <Link to="/families" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Menu Families
+                </Link>
+              </li>
+              <li>
+                <Link to="/family-styling" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Family Styling Guide
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="group">
             <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Locations</h4>
             <ul className="space-y-3">
               <li>

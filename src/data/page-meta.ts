@@ -38,9 +38,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'fine-dining': {
     path: '/fine-dining',
-    title: 'Private Dining Bali | Michelin-Trained Villa Chef — myCHEF',
+    title: 'Private Fine Dining Bali — 24 Set Menus | myCHEF.id',
     description:
-      'Fine dining in your Bali villa. Michelin-trained chef, Mediterranean & Wagyu tasting menus, wine pairing. From IDR 2.2M/pp. WhatsApp to book.',
+      '24 premium set menus for private villa dining in Bali. Vegetarian, seafood, mixed meats & single-meat. From IDR 1.25M per guest. Book your chef.',
     canonical: `${SITE}/fine-dining`,
     h1: 'Private Chef Bali — Fine Dining Tasting Menu in Your Villa',
     ogImage: `${SITE}/hero-fine-dining.webp`,

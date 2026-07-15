@@ -40,6 +40,7 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { label: 'Catering', href: '/catering', icon: Users, accent: '#C5A028' },
   { label: 'Fine Dining', href: '/fine-dining', icon: UtensilsCrossed, accent: '#C5A028' },
+  { label: 'Menus', href: '/families', icon: BookOpen, accent: '#C5A028' },
   { label: 'Events', href: '/events', icon: CalendarDays, accent: '#C5A028' },
   { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
   { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
@@ -58,6 +59,14 @@ const NAV_SUBPAGES = Object.values(PILLARS).reduce<Record<string, { label: strin
   },
   {},
 )
+
+// Menu family dropdown — hand-written (menu families are not a PILLARS pillar)
+NAV_SUBPAGES['/families'] = [
+  { label: 'Fine Dining Menus', href: '/fine-dining/menus', icon: 'Crown' },
+  { label: 'Three-Course', href: '/three-course', icon: 'Utensils' },
+  { label: 'BBQ Grill', href: '/bbq-grill', icon: 'Flame' },
+  { label: "Kids'", href: '/kids-menus', icon: 'Baby' },
+]
 
 function isActivePath(current: string, target: string): boolean {
   if (current === target) return true

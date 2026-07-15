@@ -90,7 +90,7 @@ export default function MenuOverview({ menus, grouped = false, dataSource, accen
         <div className={open ? 'block' : 'hidden'}>
           <div className="px-0 py-6 md:px-4">
             <div className="mx-auto max-w-4xl">
-              <MenuCard menu={menu} dataSource={dataSource} accent={accent} />
+              <MenuCard menu={menu} dataSource={dataSource} accent={accent} hideImage />
             </div>
           </div>
         </div>

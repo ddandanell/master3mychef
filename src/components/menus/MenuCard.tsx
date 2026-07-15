@@ -10,6 +10,8 @@ export interface MenuCardProps {
   accent?: 'gold' | 'warm'
   /** Tracking source for the CTA, e.g. 'fine-dining-menus'. Sent as data-source + menu code. */
   dataSource: string
+  /** Hide the image (and render badges inline) — used for the overview accordion's expanded view. */
+  hideImage?: boolean
 }
 
 interface AccentStyles {
@@ -48,7 +50,7 @@ const FAMILY_COLLECTION_HREF: Record<MenuFamily, string> = {
   'bbq-specialty': '/bbq-grill',
 }
 
-export default function MenuCard({ menu, accent = 'gold', dataSource }: MenuCardProps) {
+export default function MenuCard({ menu, accent = 'gold', dataSource, hideImage = false }: MenuCardProps) {
   const styles = ACCENTS[accent]
   const pluralNoun = menu.guestNoun === 'child' ? 'children' : 'guests'
 
@@ -61,18 +63,35 @@ export default function MenuCard({ menu, accent = 'gold', dataSource }: MenuCard
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04]">
-      <div className="relative aspect-[4/3] overflow-hidden">
-        <img
-          src={menu.image}
-          alt={menu.imageAlt}
-          width={960}
-          height={720}
-          loading="lazy"
-          decoding="async"
-          className="h-full w-full object-cover"
-        />
-        {badges.length > 0 && (
-          <div className="absolute left-4 top-4 flex flex-wrap gap-2">
+      {!hideImage && (
+        <div className="relative aspect-[4/3] overflow-hidden">
+          <img
+            src={menu.image}
+            alt={menu.imageAlt}
+            width={960}
+            height={720}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
+          {badges.length > 0 && (
+            <div className="absolute left-4 top-4 flex flex-wrap gap-2">
+              {badges.map((badge) => (
+                <span
+                  key={badge}
+                  className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] ${styles.badge}`}
+                >
+                  {badge}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      <div className="flex flex-1 flex-col p-6 md:p-7">
+        {hideImage && badges.length > 0 && (
+          <div className="mb-4 flex flex-wrap gap-2">
             {badges.map((badge) => (
               <span
                 key={badge}
@@ -83,9 +102,6 @@ export default function MenuCard({ menu, accent = 'gold', dataSource }: MenuCard
             ))}
           </div>
         )}
-      </div>
-
-      <div className="flex flex-1 flex-col p-6 md:p-7">
         <h3 className="mb-2 font-playfair text-2xl text-white md:text-3xl">{menu.name}</h3>
         <p className={`mb-1 text-sm font-semibold uppercase tracking-[0.16em] ${styles.text}`}>
           From {formatIdr(menu.priceIdr)} per {menu.guestNoun}

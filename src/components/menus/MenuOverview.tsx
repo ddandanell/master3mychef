@@ -13,6 +13,8 @@ export interface MenuOverviewProps {
   dataSource: string
   /** 'gold' (#C5A028) is the default; 'warm' (#E8985E) matches the kids' page. */
   accent?: 'gold' | 'warm'
+  /** Helper line above the rows. Pass null to hide it (e.g. repeated sections on one page). */
+  intro?: string | null
 }
 
 interface AccentStyles {
@@ -40,7 +42,13 @@ const ACCENTS: Record<'gold' | 'warm', AccentStyles> = {
  * first render (toggled with `hidden`, never unmounted) so the prerendered
  * HTML keeps all courses and dish descriptions for search engines.
  */
-export default function MenuOverview({ menus, grouped = false, dataSource, accent = 'gold' }: MenuOverviewProps) {
+export default function MenuOverview({
+  menus,
+  grouped = false,
+  dataSource,
+  accent = 'gold',
+  intro = 'Select a menu to view the full courses, dietary options and add-ons.',
+}: MenuOverviewProps) {
   const [openCode, setOpenCode] = useState<string | null>(null)
   const styles = ACCENTS[accent]
 
@@ -100,9 +108,9 @@ export default function MenuOverview({ menus, grouped = false, dataSource, accen
 
   return (
     <div>
-      <p className="mb-6 text-center text-sm text-white/[45%]">
-        Select a menu to view the full courses, dietary options and add-ons.
-      </p>
+      {intro !== null && intro !== '' && (
+        <p className="mb-6 text-center text-sm text-white/[45%]">{intro}</p>
+      )}
       {showGroupHeaders
         ? familiesInOrder.map((family) => {
             const familyMenus = menus.filter((menu) => menu.family === family)

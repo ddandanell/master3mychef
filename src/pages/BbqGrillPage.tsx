@@ -21,7 +21,7 @@ import Breadcrumb from '@/components/shared/Breadcrumb'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { MenuCard } from '@/components/menus'
+import { MenuOverview } from '@/components/menus'
 import { BBQ_MENUS, BBQ_MIXED_MENUS, BBQ_SEAFOOD_MENUS, BBQ_SPECIALTY_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
@@ -287,17 +287,13 @@ export default function BbqGrillPage() {
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4 text-center">The Grill Menus</p>
           <h2 className="font-playfair text-3xl md:text-4xl mb-14 text-center">Choose Your Fire</h2>
           <div className="space-y-16">
-            {MENU_SECTIONS.map((section) => (
+            {MENU_SECTIONS.map((section, index) => (
               <div key={section.label}>
                 <div className="mb-8 text-center">
                   <h3 className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-3">{section.label}</h3>
                   <p className="text-white/[60%] text-sm max-w-xl mx-auto leading-relaxed">{section.intro}</p>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {section.menus.map((menu) => (
-                    <MenuCard key={menu.code} menu={menu} dataSource="bbq-grill" />
-                  ))}
-                </div>
+                <MenuOverview menus={section.menus} dataSource="bbq-grill" intro={index === 0 ? undefined : null} />
               </div>
             ))}
           </div>

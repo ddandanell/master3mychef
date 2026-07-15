@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/shared/Breadcrumb'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
-import { MenuCard } from '@/components/menus'
+import { MenuOverview } from '@/components/menus'
 import { KIDS_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
@@ -135,11 +135,7 @@ export default function KidsMenusPage() {
               Pizza parties, build-your-own burger bars and a gentle taste of Bali — every menu is cooked fresh in your villa by our private chefs.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {KIDS_MENUS.map((menu) => (
-              <MenuCard key={menu.code} menu={menu} accent="warm" dataSource="kids-menus" />
-            ))}
-          </div>
+          <MenuOverview menus={KIDS_MENUS} dataSource="kids-menus" accent="warm" />
         </div>
       </section>
 

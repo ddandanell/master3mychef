@@ -13,7 +13,7 @@ import { Breadcrumb } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { MenuCard, MenuFilterTabs } from '@/components/menus'
+import { MenuFilterTabs, MenuOverview } from '@/components/menus'
 import { THREE_COURSE_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
@@ -198,11 +198,7 @@ export default function ThreeCoursePage() {
           <div className="mb-12 flex justify-center">
             <MenuFilterTabs options={FILTER_OPTIONS} active={activeTier} onChange={setActiveTier} accent="gold" />
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {visibleMenus.map((menu) => (
-              <MenuCard key={menu.code} menu={menu} accent="gold" dataSource="three-course" />
-            ))}
-          </div>
+          <MenuOverview menus={visibleMenus} dataSource="three-course" accent="gold" />
         </div>
       </section>
 

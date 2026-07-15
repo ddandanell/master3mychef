@@ -10,14 +10,12 @@ export interface MenuCardProps {
   accent?: 'gold' | 'warm'
   /** Tracking source for the CTA, e.g. 'fine-dining-menus'. Sent as data-source + menu code. */
   dataSource: string
-  /** Hide the image (and render badges inline) — used for the overview accordion's expanded view. */
-  hideImage?: boolean
 }
 
 interface AccentStyles {
   /** Accent text colour (price line, course labels, check marks). */
   text: string
-  /** Badge pills over the image. */
+  /** Badge pills above the menu name. */
   badge: string
   /** Primary CTA button. */
   cta: string
@@ -50,7 +48,7 @@ const FAMILY_COLLECTION_HREF: Record<MenuFamily, string> = {
   'bbq-specialty': '/bbq-grill',
 }
 
-export default function MenuCard({ menu, accent = 'gold', dataSource, hideImage = false }: MenuCardProps) {
+export default function MenuCard({ menu, accent = 'gold', dataSource }: MenuCardProps) {
   const styles = ACCENTS[accent]
   const pluralNoun = menu.guestNoun === 'child' ? 'children' : 'guests'
 
@@ -61,36 +59,13 @@ export default function MenuCard({ menu, accent = 'gold', dataSource, hideImage 
   if (menu.oysters === 'optional') badges.push('Oysters Optional')
   if (menu.family.startsWith('bbq')) badges.push('Live Grill')
 
+  // Menus are text-only by design: with 50 menus there are no per-menu photos,
+  // and a wrong photo hurts more than no photo. The image/imageAlt fields stay
+  // in the catalogue data (unused by the UI) in case photos return one day.
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04]">
-      {!hideImage && (
-        <div className="relative aspect-[4/3] overflow-hidden">
-          <img
-            src={menu.image}
-            alt={menu.imageAlt}
-            width={960}
-            height={720}
-            loading="lazy"
-            decoding="async"
-            className="h-full w-full object-cover"
-          />
-          {badges.length > 0 && (
-            <div className="absolute left-4 top-4 flex flex-wrap gap-2">
-              {badges.map((badge) => (
-                <span
-                  key={badge}
-                  className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] ${styles.badge}`}
-                >
-                  {badge}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-      )}
-
       <div className="flex flex-1 flex-col p-6 md:p-7">
-        {hideImage && badges.length > 0 && (
+        {badges.length > 0 && (
           <div className="mb-4 flex flex-wrap gap-2">
             {badges.map((badge) => (
               <span

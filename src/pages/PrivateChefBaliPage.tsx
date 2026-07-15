@@ -281,10 +281,6 @@ export default function PrivateChefBaliPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {MENUS.map((menu) => (
               <div key={menu.id} className="pcb-reveal rounded-[28px] overflow-hidden border border-[#E5E3E0]">
-                <div className="aspect-[16/9] overflow-hidden">
-                  <img src={menu.image} alt={menu.name} width={800} height={450} loading="lazy" decoding="async"
-                    className="w-full h-full object-cover" />
-                </div>
                 <div className="p-8 md:p-10">
                   <p className="text-xs uppercase tracking-[0.3em] mb-2 font-semibold" style={{ color: menu.accent, fontFamily: "'Cormorant Garamond', serif" }}>
                     {menu.tagline}

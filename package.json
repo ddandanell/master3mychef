@@ -8,7 +8,7 @@
     "dev": "vite",
     "prebuild": "npx tsx scripts/validate-hero-images.ts && npx tsx scripts/validate-critical-assets.ts && npx tsx scripts/generate-sitemap.ts && npx tsx scripts/generate-redirects.ts",
     "build": "npx playwright install chromium && tsc -b && vite build",
-    "postbuild": "npx tsx scripts/validate-critical-assets.ts && npx tsx scripts/inject-meta.ts && npm run prerender",
+    "postbuild": "npx tsx scripts/validate-critical-assets.ts && npx tsx scripts/inject-meta.ts && npm run prerender && npx tsx scripts/check-price-floor.ts",
     "prerender": "npx tsx scripts/prerender.ts",
     "sitemap": "npx tsx scripts/generate-sitemap.ts",
     "redirects": "npx tsx scripts/generate-redirects.ts",

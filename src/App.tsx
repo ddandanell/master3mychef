@@ -22,7 +22,7 @@ const FineDiningChefsPage = lazy(() => import('./pages/FineDiningChefsPage'))
 const ThreeCoursePage = lazy(() => import('./pages/ThreeCoursePage'))
 const KidsMenusPage = lazy(() => import('./pages/KidsMenusPage'))
 const BbqGrillPage = lazy(() => import('./pages/BbqGrillPage'))
-const FamiliesPage = lazy(() => import('./pages/FamiliesPage'))
+const DiningStylesPage = lazy(() => import('./pages/DiningStylesPage'))
 const FamilyStylingPage = lazy(() => import('./pages/FamilyStylingPage'))
 const SolPage = lazy(() => import('./pages/SolPage'))
 // const AuraPage = lazy(() => import('./pages/AuraPage'))
@@ -245,7 +245,7 @@ export default function App() {
           <Route path="/three-course" element={<ThreeCoursePage />} />
           <Route path="/kids-menus" element={<KidsMenusPage />} />
           <Route path="/bbq-grill" element={<BbqGrillPage />} />
-          <Route path="/families" element={<FamiliesPage />} />
+          <Route path="/dining-styles" element={<DiningStylesPage />} />
           <Route path="/family-styling" element={<FamilyStylingPage />} />
           <Route path="/events" element={<EventsMainPage />} />
           <Route path="/contact" element={<ContactPage />} />

@@ -40,7 +40,7 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { label: 'Catering', href: '/catering', icon: Users, accent: '#C5A028' },
   { label: 'Fine Dining', href: '/fine-dining', icon: UtensilsCrossed, accent: '#C5A028' },
-  { label: 'Menus', href: '/families', icon: BookOpen, accent: '#C5A028' },
+  { label: 'Dining Styles', href: '/dining-styles', icon: BookOpen, accent: '#C5A028' },
   { label: 'Events', href: '/events', icon: CalendarDays, accent: '#C5A028' },
   { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
   { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
@@ -60,8 +60,8 @@ const NAV_SUBPAGES = Object.values(PILLARS).reduce<Record<string, { label: strin
   {},
 )
 
-// Menu family dropdown — hand-written (menu families are not a PILLARS pillar)
-NAV_SUBPAGES['/families'] = [
+// Dining styles dropdown — hand-written (menu collections are not a PILLARS pillar)
+NAV_SUBPAGES['/dining-styles'] = [
   { label: 'Fine Dining Menus', href: '/fine-dining/menus', icon: 'Crown' },
   { label: 'Three-Course', href: '/three-course', icon: 'Utensils' },
   { label: 'BBQ Grill', href: '/bbq-grill', icon: 'Flame' },
@@ -72,7 +72,7 @@ NAV_SUBPAGES['/families'] = [
 const PILLAR_PREVIEW_IMAGES: Record<string, string> = {
   '/catering': '/generated/mychef-families-bali-catering-events.webp',
   '/fine-dining': '/generated/mychef-families-bali-fine-dining-experience.webp',
-  '/families': '/generated/mychef-families-bali-classic-set-menus.webp',
+  '/dining-styles': '/generated/mychef-families-bali-classic-set-menus.webp',
   '/events': '/generated/mychef-events-bali-hero-events-new.webp',
   '/in-villa-service': '/generated/in-villa-service-hero.webp',
   '/staffing': '/generated/mychef-butlers-1.webp',
@@ -204,12 +204,12 @@ export default function Navbar() {
         className="fixed top-0 left-0 right-0 z-[70] bg-[#0D0C0A]/95 border-b border-[#C5A028]/15"
         style={{ backdropFilter: 'blur(12px)' }}
       >
-        <div className="mx-auto px-8 py-3 flex items-center justify-between gap-8">
+        <div className="mx-auto px-8 py-3 flex items-center justify-between gap-8 lg:px-4 lg:gap-3 xl:gap-4 2xl:px-8 2xl:gap-8">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group">
-            <ChefHat className="w-6 h-6 text-[#C5A028] transition-transform group-hover:rotate-12" strokeWidth={1.5} />
+            <ChefHat className="w-6 h-6 lg:w-5 lg:h-5 2xl:w-6 2xl:h-6 text-[#C5A028] transition-transform group-hover:rotate-12" strokeWidth={1.5} />
             <span
-              className="text-[18px] tracking-wide"
+              className="text-[18px] lg:text-[16px] 2xl:text-[18px] tracking-wide"
               style={{ fontFamily: "'Playfair Display', serif", color: '#fff' }}
             >
               my<span className="text-[#C5A028]">CHEF</span>
@@ -217,7 +217,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav — hidden on mobile/tablet */}
-          <div className="hidden lg:flex items-center gap-6 flex-1 justify-center">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-4 2xl:gap-6 flex-1 justify-center">
             {NAV_ITEMS.map((item, index) => {
               const Icon = item.icon
               const active = isActivePath(location.pathname, item.href)
@@ -247,23 +247,23 @@ export default function Navbar() {
                     onClick={() => setOpenDropdown(null)}
                     aria-haspopup={hasDropdown || undefined}
                     aria-expanded={hasDropdown ? isOpen : undefined}
-                    className={`relative flex items-center gap-1.5 py-1 transition-colors duration-200 ${
+                    className={`relative flex items-center gap-1 xl:gap-1.5 py-1 whitespace-nowrap transition-colors duration-200 ${
                       active || isOpen ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
                     }`}
                   >
                     <Icon
-                      className="w-4 h-4 transition-transform duration-300 group-hover:scale-110"
+                      className="hidden xl:block xl:w-3.5 xl:h-3.5 2xl:w-4 2xl:h-4 transition-transform duration-300 group-hover:scale-110"
                       strokeWidth={1.5}
                     />
                     <span
-                      className="text-[12px] uppercase tracking-[0.12em] font-medium"
+                      className="text-[10.5px] xl:text-[11px] 2xl:text-[12px] uppercase tracking-[0.06em] 2xl:tracking-[0.12em] font-medium"
                       style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       {item.label}
                     </span>
                     {hasDropdown && (
                       <ChevronDown
-                        className={`w-3 h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                        className={`w-2.5 h-2.5 xl:w-3 xl:h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
                         strokeWidth={1.5}
                       />
                     )}
@@ -351,7 +351,7 @@ export default function Navbar() {
             {/* Search Trigger */}
             <button
               onClick={() => setSearchOpen(true)}
-              className="group relative p-2 text-white/70 hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+              className="group relative p-2 lg:p-1.5 2xl:p-2 text-white/70 hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
               aria-label="Search myCHEF"
             >
               <Search className="w-5 h-5 transition-transform group-hover:scale-110" strokeWidth={1.5} />
@@ -362,11 +362,11 @@ export default function Navbar() {
             {/* Book Now Button */}
             <Link
               to={PRIMARY_CTA.href}
-              className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full bg-[#C5A028] text-black font-semibold text-[12px] uppercase tracking-[0.08em] transition-all hover:bg-[#D4B43A] hover:shadow-lg hover:shadow-[#C5A028]/30 flex-shrink-0"
+              className="hidden md:flex items-center gap-2 px-5 py-2 lg:px-3.5 lg:py-1.5 lg:text-[11px] xl:px-4 2xl:px-5 2xl:py-2 2xl:text-[12px] rounded-full bg-[#C5A028] text-black font-semibold text-[12px] uppercase tracking-[0.08em] transition-all hover:bg-[#D4B43A] hover:shadow-lg hover:shadow-[#C5A028]/30 flex-shrink-0 whitespace-nowrap"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Book Now
-              <span className="text-[14px]">→</span>
+              <span className="hidden xl:inline text-[14px]">→</span>
             </Link>
 
             {/* Hamburger — mobile/tablet (hidden on lg+) */}

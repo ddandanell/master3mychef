@@ -24,6 +24,9 @@ export interface Redirect {
 }
 
 export const REDIRECTS: Redirect[] = [
+  // --- Renames ---
+  { from: '/families', to: '/dining-styles', reason: 'Page renamed 2026-07: menu families hub → /dining-styles (same content, new canonical URL)' },
+
   // --- Systems-plan canonical redirects ---
   { from: '/experience', to: '/fine-dining', reason: 'Systems plan: /experience → /fine-dining/' },
   { from: '/story', to: '/fine-dining/our-chefs', reason: 'Systems plan: /story → /fine-dining/our-chefs/' },

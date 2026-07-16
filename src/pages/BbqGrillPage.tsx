@@ -145,8 +145,8 @@ const RELATED_COLLECTIONS = [
     note: 'From IDR 250K per child',
   },
   {
-    to: '/families',
-    label: 'Menu Families',
+    to: '/dining-styles',
+    label: 'Dining Styles',
     title: 'Browse All 50 Menus',
     note: 'Every collection in one place',
   },
@@ -162,7 +162,7 @@ export default function BbqGrillPage() {
         ogImage="/generated/mychef-catering-bali-bbq-grill-satay.webp"
         jsonLd={[
           localBusinessSchema,
-          breadcrumbSchema('BBQ Grill Experience', CANONICAL, 'Menu Families', 'https://mychef.id/families'),
+          breadcrumbSchema('BBQ Grill Experience', CANONICAL, 'Dining Styles', 'https://mychef.id/dining-styles'),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           serviceWithOfferSchema({
             name: 'BBQ Grill Experience',

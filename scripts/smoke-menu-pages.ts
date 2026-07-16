@@ -75,14 +75,18 @@ async function main() {
   check('min 8 guests', (await page.locator('text=Minimum 8 guests').count()) >= 12)
   check('catering cross-link', (await page.locator('a[href="/catering/bbq-catering"]').count()) >= 1)
 
-  // ---- /families ----
-  console.log('\n/families')
-  await page.goto(`${BASE}/families`, { waitUntil: 'networkidle' })
+  // ---- /dining-styles ----
+  console.log('\n/dining-styles')
+  await page.goto(`${BASE}/dining-styles`, { waitUntil: 'networkidle' })
   check('H1', (await page.locator('h1').first().textContent())?.includes('Find Your Perfect Menu') ?? false)
   for (const href of ['/fine-dining/menus', '/three-course', '/bbq-grill', '/kids-menus', '/fine-dining', '/catering']) {
     check(`card link ${href}`, (await page.locator(`a[href="${href}"]`).count()) >= 1)
   }
   check('recommender link', (await page.locator('a[href="/recommended-services"]').count()) >= 1)
+
+  // ---- /families → /dining-styles (client-side redirect; host 301 verified via curl) ----
+  await page.goto(`${BASE}/families`, { waitUntil: 'networkidle' })
+  check('/families redirects to /dining-styles', page.url().includes('/dining-styles'), `got ${page.url()}`)
 
   // ---- /family-styling ----
   console.log('\n/family-styling')
@@ -101,7 +105,7 @@ async function main() {
   check('quote CTA visible in open card', (await page.locator('#our-menus article:visible a[data-source^="luna-menus-"]').count()) >= 1)
   await page.locator('#our-menus').getByRole('button', { name: 'Seafood', exact: true }).click()
   check('Seafood filter → 6 rows', (await page.locator('#our-menus button[data-menu-code]').count()) === 6, `got ${await page.locator('#our-menus button[data-menu-code]').count()}`)
-  check('families cross-link', (await page.locator('#our-menus a[href="/families"]').count()) >= 1)
+  check('dining-styles cross-link', (await page.locator('#our-menus a[href="/dining-styles"]').count()) >= 1)
   check('bespoke callout', (await page.locator('a[href="/quote"]').count()) >= 1)
 
   // ---- /fine-dining/menus ----
@@ -113,7 +117,7 @@ async function main() {
   await page.waitForTimeout(300)
   check('row click → MenuCard visible', (await page.locator('article:has(a[data-source^="finedining-menus-"]):visible').count()) >= 1, `got ${await page.locator('article:has(a[data-source^="finedining-menus-"]):visible').count()}`)
   check('single breadcrumb', (await page.locator('nav[aria-label*="readcrumb"], ol').count()) >= 1)
-  check('card families link', (await page.locator('article a[href="/families"]').count()) >= 1)
+  check('card dining-styles link', (await page.locator('article a[href="/dining-styles"]').count()) >= 1)
 
   // ---- Nav dropdown (desktop) ----
   console.log('\nNav (desktop)')
@@ -127,8 +131,8 @@ async function main() {
     check('dropdown: Kids', (await page.locator('a[href="/kids-menus"]').count()) >= 1)
   } else {
     // maybe it's a link not a button
-    const menusLink = page.locator('nav a[href="/families"]').first()
-    check('Menus nav item present', (await menusLink.count()) >= 1)
+    const menusLink = page.locator('nav a[href="/dining-styles"]').first()
+    check('Dining Styles nav item present', (await menusLink.count()) >= 1)
     await menusLink.hover()
     await page.waitForTimeout(400)
     check('dropdown: Three-Course', (await page.locator('a[href="/three-course"]').count()) >= 1)

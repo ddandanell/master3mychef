@@ -831,7 +831,7 @@ export default function LunaPage() {
                 { label: 'Three-Course from IDR 850K', href: '/three-course' },
                 { label: 'BBQ Grill from IDR 950K', href: '/bbq-grill' },
                 { label: "Kids' from IDR 250K/child", href: '/kids-menus' },
-                { label: 'Browse all 50 menus', href: '/families' },
+                { label: 'Browse all 50 menus', href: '/dining-styles' },
               ].map((item) => (
                 <Link
                   key={item.href}

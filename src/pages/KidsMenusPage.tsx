@@ -35,7 +35,7 @@ const RELATED_COLLECTIONS = [
   { label: 'Classic Set Menus', href: '/fine-dining/menus', price: 'From IDR 1.25M' },
   { label: 'Three-Course', href: '/three-course', price: 'From IDR 850K' },
   { label: 'BBQ Grill', href: '/bbq-grill', price: 'From IDR 950K' },
-  { label: 'All Menu Families', href: '/families', price: '50 menus' },
+  { label: 'All Dining Styles', href: '/dining-styles', price: '50 menus' },
 ]
 
 const WHY_PARENTS = [
@@ -59,7 +59,7 @@ export default function KidsMenusPage() {
         ogImage="/generated/mychef-events-bali-party-birthday.webp"
         jsonLd={[
           localBusinessSchema,
-          breadcrumbSchema("Kids' Menus", canonical, 'Menu Families', `${SITE}/families`),
+          breadcrumbSchema("Kids' Menus", canonical, 'Dining Styles', `${SITE}/dining-styles`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           serviceWithOfferSchema({
             name: "Kids' Party Menus",

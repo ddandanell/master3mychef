@@ -15,6 +15,11 @@
       "permanent": true
     },
     {
+      "source": "/families",
+      "destination": "/dining-styles",
+      "permanent": true
+    },
+    {
       "source": "/experience",
       "destination": "/fine-dining",
       "permanent": true

@@ -355,11 +355,11 @@ export default function FineDiningMenusPage() {
               </Link>
 
               <Link
-                to="/families"
+                to="/dining-styles"
                 className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-8 transition-colors hover:bg-white/[0.08]"
               >
                 <h4 className="mb-2 text-lg font-semibold text-white transition-colors group-hover:text-[#C5A028]">
-                  Browse All Families
+                  Browse All Dining Styles
                 </h4>
                 <p className="mb-4 text-sm text-white/[70%]">
                   50 menus across 6 collections

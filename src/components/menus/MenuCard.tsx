@@ -178,10 +178,10 @@ export default function MenuCard({ menu, accent = 'gold', dataSource }: MenuCard
           </a>
           <div className="mt-4 flex items-center justify-between gap-3 border-t border-white/10 pt-4 text-xs text-white/[55%]">
             <Link
-              to="/families"
+              to="/dining-styles"
               className="transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
             >
-              All families →
+              All dining styles →
             </Link>
             <Link
               to={FAMILY_COLLECTION_HREF[menu.family]}

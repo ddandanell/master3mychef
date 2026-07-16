@@ -214,7 +214,7 @@ export default function EventsVillaPartiesPage() {
             </a>
           </div>
           <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em] text-left">
-            From IDR 650K++/guest · Bar, staffing, and cleanup handled
+            From IDR 700K++/guest · Bar, staffing, and cleanup handled
           </p>
         </div>
       </section>

@@ -76,12 +76,12 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Villa catering for groups starts from IDR 560,000 per person. Fine dining tasting menus from IDR 980,000 per person. 25% deposit confirms the booking.',
+      'Villa catering for groups starts from IDR 700,000 per person. Fine dining tasting menus from IDR 980,000 per person. 25% deposit confirms the booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Seminyak?',
-        a: 'A private chef session in Seminyak starts from IDR 1,350,000 and covers grocery shopping, cooking, serving, and clean-up. Villa catering for groups of 8–30 guests starts from IDR 560,000 per person. Request a free itemised quote via WhatsApp.',
+        a: 'A private chef session in Seminyak starts from IDR 1,350,000 and covers grocery shopping, cooking, serving, and clean-up. Villa catering for groups of 8–30 guests starts from IDR 700,000 per person. Request a free itemised quote via WhatsApp.',
       },
       {
         q: 'Can I book a private chef at my Seminyak villa for one evening?',
@@ -138,12 +138,12 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Weekly meal prep packages from IDR 4,500,000 per week for 2 people. Group catering from IDR 560,000 per person. No travel surcharge within Canggu–Berawa.',
+      'Weekly meal prep packages from IDR 4,500,000 per week for 2 people. Group catering from IDR 700,000 per person. No travel surcharge within Canggu–Berawa.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Canggu?',
-        a: 'Private chef sessions in Canggu start from IDR 1,350,000 (groceries billed at cost). Weekly meal prep packages for 2 people from IDR 4,500,000. Group catering from IDR 560,000 per person. Free quote via WhatsApp.',
+        a: 'Private chef sessions in Canggu start from IDR 1,350,000 (groceries billed at cost). Weekly meal prep packages for 2 people from IDR 4,500,000. Group catering from IDR 700,000 per person. Free quote via WhatsApp.',
       },
       {
         q: 'Can I hire a chef for my entire stay in Canggu?',
@@ -447,12 +447,12 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Weekly meal prep for 2–4 people from IDR 4,500,000 per week. Family catering for larger groups from IDR 560,000 per person. No travel surcharge within Sanur.',
+      'Weekly meal prep for 2–4 people from IDR 4,500,000 per week. Family catering for larger groups from IDR 700,000 per person. No travel surcharge within Sanur.',
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Sanur?',
-        a: 'Private chef sessions in Sanur start from IDR 1,350,000 with no travel surcharge. Weekly meal prep for 2–4 people from IDR 4,500,000 per week. Family catering from IDR 560,000 per person. Free quote via WhatsApp.',
+        a: 'Private chef sessions in Sanur start from IDR 1,350,000 with no travel surcharge. Weekly meal prep for 2–4 people from IDR 4,500,000 per week. Family catering from IDR 700,000 per person. Free quote via WhatsApp.',
       },
       {
         q: 'Do you offer weekly meal prep in Sanur?',
@@ -567,12 +567,12 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'No travel surcharge within Berawa. Weekly meal prep from IDR 4,500,000 per week. Group catering from IDR 560,000 per person.',
+      'No travel surcharge within Berawa. Weekly meal prep from IDR 4,500,000 per week. Group catering from IDR 700,000 per person.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Berawa?',
-        a: 'Private chef sessions in Berawa start from IDR 1,350,000 with no travel surcharge. Group catering from IDR 560,000 per person. Free quote via WhatsApp.',
+        a: 'Private chef sessions in Berawa start from IDR 1,350,000 with no travel surcharge. Group catering from IDR 700,000 per person. Free quote via WhatsApp.',
       },
       {
         q: 'Is Berawa the same as Canggu?',
@@ -895,7 +895,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Umalas is within our standard service zone — no travel surcharge. Villa catering from IDR 560,000 per person.',
+      'Umalas is within our standard service zone — no travel surcharge. Villa catering from IDR 700,000 per person.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
@@ -1089,7 +1089,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Tanjung Benoa is adjacent to Nusa Dua — no travel surcharge. Villa catering from IDR 560,000 per person, family menus available.',
+      'Tanjung Benoa is adjacent to Nusa Dua — no travel surcharge. Villa catering from IDR 700,000 per person, family menus available.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {

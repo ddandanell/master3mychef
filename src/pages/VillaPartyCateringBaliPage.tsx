@@ -17,19 +17,19 @@ myCHEF operates across all major Bali villa areas: Seminyak, Canggu, Uluwatu, Ji
     type: 'content',
     title: 'Villa Party Catering Formats',
     body: `**Poolside Cocktail Party**
-Light bites, canapés, and grazing boards served while guests mingle. Bartender included. No formal seating required. Ideal for 15–80 guests, 2–4 hours. From IDR 350,000/person.
+Light bites, canapés, and grazing boards served while guests mingle. Bartender included. No formal seating required. Ideal for 15–80 guests, 2–4 hours. From IDR 700,000/person.
 
 **BBQ and Grill Party**
-Wood-fire or gas grill setup with a dedicated BBQ chef. Whole fish, prawns, satay, wagyu cuts, vegetables, and loaded sides. Casual, social, and crowd-pleasing. From IDR 400,000/person.
+Wood-fire or gas grill setup with a dedicated BBQ chef. Whole fish, prawns, satay, wagyu cuts, vegetables, and loaded sides. Casual, social, and crowd-pleasing. From IDR 700,000/person.
 
 **Sit-Down Dinner Party**
-Multi-course table service with a private chef cooking live in your villa kitchen. Formal or informal. Works for 6–30 guests. From IDR 550,000/person for a 3-course menu.
+Multi-course table service with a private chef cooking live in your villa kitchen. Formal or informal. Works for 6–30 guests. From IDR 700,000/person for a 3-course menu.
 
 **Buffet Reception**
-Warm and cold buffet stations with a mix of cuisines: Indonesian, Western, and Asian. Staff manage replenishment and clearing. Best for 30–150 guests. From IDR 350,000/person.
+Warm and cold buffet stations with a mix of cuisines: Indonesian, Western, and Asian. Staff manage replenishment and clearing. Best for 30–150 guests. From IDR 700,000/person.
 
 **Brunch Party**
-Weekend brunch with egg stations, fresh pastries, tropical fruits, smoked salmon platters, and cocktails. Popular for bachelorette events and birthdays. From IDR 380,000/person.
+Weekend brunch with egg stations, fresh pastries, tropical fruits, smoked salmon platters, and cocktails. Popular for bachelorette events and birthdays. From IDR 700,000/person.
 
 **Full Event Package**
 Chef + bar staff + waiters + equipment + setup and cleanup. We act as your single point of contact and execute the full food and beverage programme. Priced per event.`,
@@ -76,10 +76,10 @@ These are starting points. Event format, service style, and villa layout all aff
     title: 'Villa Party Catering Pricing in Bali',
     body: `Catering costs depend on menu complexity, guest count, service style, and team requirements. As a guide:
 
-- **Light cocktail/canapé packages**: from IDR 250,000–350,000/person
-- **Buffet receptions**: from IDR 350,000–500,000/person
-- **BBQ party**: from IDR 400,000–600,000/person
-- **Sit-down dinner (3-course)**: from IDR 550,000–850,000/person
+- **Light cocktail/canapé packages**: from IDR 700,000/person
+- **Buffet receptions**: from IDR 700,000/person
+- **BBQ party**: from IDR 700,000/person
+- **Sit-down dinner (3-course)**: from IDR 700,000–850,000/person
 - **Full event packages (food + staff + equipment)**: from IDR 7,500,000 for 20 guests, scaling with group size
 
 Ingredient costs are billed at market rate. Staff fees are charged separately unless included in an all-in package. myCHEF requires a 25% deposit to hold your date, with the balance due 48 hours before the event.
@@ -138,7 +138,7 @@ export default function VillaPartyCateringBaliPage() {
       title="Villa Party Catering Bali — Food and Staff for Private Celebrations"
       seoTitle="Villa Party Catering Bali — Private Chef, Bar Staff & Waiters for Villa Events"
       description="Full villa party catering in Bali — private chef, bartender, and event staff for poolside parties, birthdays, and celebrations. BBQ, buffet, sit-down dinner, and cocktail formats."
-      seoDescription="Villa party catering in Bali for 10–200+ guests. Private chef, bar staff, waiters. BBQ, buffet, sit-down dinner & cocktail formats. From IDR 250K/person. Same-day replacement guarantee."
+      seoDescription="Villa party catering in Bali for 10–200+ guests. Private chef, bar staff, waiters. BBQ, buffet, sit-down dinner & cocktail formats. From IDR 700K/person. Same-day replacement guarantee."
       h1="Villa Party Catering Bali — Private Chef, Bar Staff & Waiters for Your Celebration"
       subtitle="End-to-end catering for villa parties across Bali — poolside BBQs, birthday dinners, cocktail receptions, and full event packages."
       heroImage="/images/blog/villa-party-catering-bali.jpg"
@@ -157,7 +157,7 @@ export default function VillaPartyCateringBaliPage() {
         'villa catering bali',
         'party chef bali',
       ]}
-      highlights={['10–200+ Guests', 'All Villa Areas', 'Full Event Packages', 'From IDR 250K/person']}
+      highlights={['10–200+ Guests', 'All Villa Areas', 'Full Event Packages', 'From IDR 700K/person']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

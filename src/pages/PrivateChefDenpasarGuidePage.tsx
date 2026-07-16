@@ -51,9 +51,9 @@ const SECTIONS: PageSection[] = [
     title: 'Private Chef Denpasar Pricing',
     body: `<p>Denpasar pricing reflects the city's business-oriented demand profile:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>Corporate team dinner (8-20 guests):</strong> From IDR 500,000 – 800,000 per person. Full service including waitstaff available.</li>
-      <li><strong>Executive private dinner (2-8 guests):</strong> From IDR 600,000 – 1,000,000 per person. Includes plated service and full kitchen-to-table management.</li>
-      <li><strong>Official reception catering (20-60 guests, standing/canape):</strong> From IDR 300,000 – 500,000 per person. Includes full setup, service, and cleanup.</li>
+      <li><strong>Corporate team dinner (8-20 guests):</strong> From IDR 700,000 – 800,000 per person. Full service including waitstaff available.</li>
+      <li><strong>Executive private dinner (2-8 guests):</strong> From IDR 700,000 – 1,000,000 per person. Includes plated service and full kitchen-to-table management.</li>
+      <li><strong>Official reception catering (20-60 guests, standing/canape):</strong> From IDR 700,000 per person. Includes full setup, service, and cleanup.</li>
       <li><strong>Household regular meal service:</strong> From IDR 7,000,000–12,000,000/month depending on frequency. See household chef guide for scope details.</li>
     </ul>
     <p style="margin-top:0.75rem;">All pricing includes ingredient sourcing at cost. Full pricing overview at our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
@@ -104,7 +104,7 @@ export default function PrivateChefDenpasarGuidePage() {
       heroImageAlt="Professional private chef preparing a formal corporate dinner in a Denpasar executive villa"
       ogImage="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=1400&q=80"
       keywords={['private chef denpasar', 'denpasar private chef', 'chef denpasar bali', 'catering denpasar', 'corporate chef denpasar']}
-      highlights={['Corporate Events', 'Executive Dining', 'Pasar Badung Sourcing', 'From IDR 300K/person']}
+      highlights={['Corporate Events', 'Executive Dining', 'Pasar Badung Sourcing', 'From IDR 700K/person']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[

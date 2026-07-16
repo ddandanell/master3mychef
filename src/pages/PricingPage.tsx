@@ -72,7 +72,7 @@ const PRICE_SPECIFICATION_SCHEMA = {
         '@type': 'Offer',
         name: 'BBQ Catering',
         description: 'BBQ catering for villa parties. Includes grill setup, meats, sides, sauces, and service staff.',
-        priceSpecification: { '@type': 'PriceSpecification', price: '450000', priceCurrency: 'IDR', unitText: 'PERSON' },
+        priceSpecification: { '@type': 'PriceSpecification', price: '700000', priceCurrency: 'IDR', unitText: 'PERSON' },
         availability: 'https://schema.org/InStock',
         seller: { '@id': 'https://mychef.id/#business' },
       },
@@ -84,7 +84,7 @@ const PRICE_SPECIFICATION_SCHEMA = {
         '@type': 'Offer',
         name: 'Drop-Off Catering',
         description: 'Pre-plated meals delivered to your villa. Minimum 4 guests.',
-        priceSpecification: { '@type': 'PriceSpecification', price: '350000', priceCurrency: 'IDR', unitText: 'PERSON' },
+        priceSpecification: { '@type': 'PriceSpecification', price: '700000', priceCurrency: 'IDR', unitText: 'PERSON' },
         availability: 'https://schema.org/InStock',
         seller: { '@id': 'https://mychef.id/#business' },
       },
@@ -303,7 +303,7 @@ const SECTIONS = [
     <p><strong>Full-Service Experience:</strong> We bring all plates, glassware, cutlery, linen, and decorations. Complete table setting and service staff included. From IDR 2,200,000++ per guest.</p>
     <p><strong>Kitchen-Service Experience:</strong> Our chef uses your villa's kitchen, plates, and glassware. Same food, same chef, more intimate atmosphere. From IDR 1,750,000++ per guest.</p>
     <p>Service charge (10%) and government tax (11%) are added to all prices. Wine pairing is optional at IDR 850,000 per guest.</p>
-    <p><strong>Villa Chef / Catering (5+ guests):</strong> Chef hourly rate plus groceries at cost. You see every receipt. We do not markup ingredients. Pricing depends on service style — from IDR 350,000 per person for drop-off catering to IDR 800,000 per person for plated service.</p>
+    <p><strong>Villa Chef / Catering (5+ guests):</strong> Chef hourly rate plus groceries at cost. You see every receipt. We do not markup ingredients. Pricing depends on service style — from IDR 700,000 per person for drop-off catering to IDR 800,000 per person for plated service.</p>
     <p><strong>Events:</strong> Custom quotes based on guest count, menu complexity, staffing needs, and equipment. We deliver a detailed proposal within 24 hours.</p>
     <p><strong>In-Villa Staffing:</strong> Per-shift pricing from IDR 250,000/hour. Waiters, butlers, bartenders, mixologists, and sommeliers available.</p>
     <p><strong>Staffing & Placement:</strong> 48-hour placement for private chefs and villa staff. 30-day replacement guarantee. Contact us for pricing.</p>`,
@@ -387,9 +387,9 @@ const SECTIONS = [
     title: 'Villa Chef & Catering Rates',
     features: [
       { icon: Tag, title: 'Private Villa Chef', desc: 'From IDR 600,000 per hour. Minimum 4 hours. Groceries billed at cost with receipts provided. Breakfast, lunch, dinner, or full-board available.' },
-      { icon: Tag, title: 'BBQ Catering', desc: 'From IDR 550,000 per person. Minimum 10 guests. Includes grill setup, meats, sides, sauces, and service staff.' },
-      { icon: Tag, title: 'Buffet Catering', desc: 'From IDR 450,000 per person. Minimum 30 guests. Multiple stations, hot and cold options, full service team.' },
-      { icon: Tag, title: 'Drop-Off Catering', desc: 'From IDR 350,000 per person. Minimum 4 guests. Pre-plated meals delivered to your villa. No service staff included.' },
+      { icon: Tag, title: 'BBQ Catering', desc: 'From IDR 700,000 per person. Minimum 10 guests. Includes grill setup, meats, sides, sauces, and service staff.' },
+      { icon: Tag, title: 'Buffet Catering', desc: 'From IDR 700,000 per person. Minimum 30 guests. Multiple stations, hot and cold options, full service team.' },
+      { icon: Tag, title: 'Drop-Off Catering', desc: 'From IDR 700,000 per person. Minimum 4 guests. Pre-plated meals delivered to your villa. No service staff included.' },
       { icon: Tag, title: 'Floating Breakfast', desc: 'From IDR 950,000 per couple. Minimum 2 guests. Delivered to your pool at your chosen time. Also available as an add-on: +IDR 350,000 per person on any catering package.' },
       { icon: Tag, title: 'Grazing Table', desc: 'From IDR 4,500,000 total. Artisan cheeses, cured meats, fresh fruits, and accompaniments. Serves 10–15 guests.' },
     ],
@@ -400,10 +400,10 @@ const SECTIONS = [
     subtitle: 'Events',
     title: 'Event & Wedding Pricing',
     features: [
-      { icon: Tag, title: 'Wedding Catering', desc: 'From IDR 450,000 per person. Custom menus, full service team, bar setup, and coordination. Quotes tailored to guest count and complexity.' },
+      { icon: Tag, title: 'Wedding Catering', desc: 'From IDR 700,000 per person. Custom menus, full service team, bar setup, and coordination. Quotes tailored to guest count and complexity.' },
       { icon: Tag, title: 'Corporate Events', desc: 'From IDR 15,000,000 total. Executive dinners, team-building meals, and corporate retreats. Full proposal within 24 hours.' },
       { icon: Tag, title: 'Birthday Celebrations', desc: 'From IDR 8,000,000 total. Custom cake, themed menu, decorations, and service. Scales from intimate dinners to 50-guest parties.' },
-      { icon: Tag, title: 'Retreat Catering', desc: 'From IDR 350,000 per person per day. Multi-day full-board packages for yoga and wellness retreats. Dietary flexibility included.' },
+      { icon: Tag, title: 'Retreat Catering', desc: 'From IDR 700,000 per person per day. Multi-day full-board packages for yoga and wellness retreats. Dietary flexibility included.' },
     ],
   },
   {

@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     question: 'Can I hire a chef for just breakfast in Bali?',
-    answer: 'Yes. Daily breakfast service is available from IDR 500,000++ per person. We also offer breakfast-only weekly packages for extended villa stays. Whether you want a full cooked spread, fresh tropical juices, eggs to order, or a healthy wellness breakfast, we\'ll tailor it to your preferences and schedule.',
+    answer: 'Yes. Daily breakfast service is available from IDR 700,000++ per person. We also offer breakfast-only weekly packages for extended villa stays. Whether you want a full cooked spread, fresh tropical juices, eggs to order, or a healthy wellness breakfast, we\'ll tailor it to your preferences and schedule.',
   },
   {
     question: 'Is a private chef worth it compared to restaurant dining in Bali?',

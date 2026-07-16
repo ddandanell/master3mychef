@@ -42,7 +42,7 @@ const SECTIONS = [
       <li><strong>50–100 guests:</strong> 2–3 chefs, 4–6 service staff, 1–2 coordinators</li>
       <li><strong>100+ guests:</strong> 4–6 chefs, 8–12 service staff, 2–3 coordinators, bar manager</li>
     </ul>
-    <p><strong>Menu by Event Type:</strong> <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">Wedding fine dining</a> (3–5 courses, IDR 1.5M–3M/person), Corporate Retreat (casual breakfast/lunch, themed dinner, IDR 600K–1.2M/day), Birthday/Anniversary (personalized, IDR 1.2M–2.25M/person).</p>`,
+    <p><strong>Menu by Event Type:</strong> <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">Wedding fine dining</a> (3–5 courses, IDR 1.5M–3M/person), Corporate Retreat (casual breakfast/lunch, themed dinner, IDR 700K–1.2M/day), Birthday/Anniversary (personalized, IDR 1.2M–2.25M/person).</p>`,
   },
   {
     id: 'timeline',

@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does a private chef cost in Sanur?',
-    a: 'Family villa dinners in Sanur start at IDR 400K–700K per person for 4–20 guests. Breakfast and brunch service is priced at IDR 250K–450K per person. Group feasts and birthday catering range from IDR 450K–800K per person depending on complexity. All prices subject to 11% tax + 10% service charge.',
+    a: 'Family villa dinners in Sanur start from IDR 700K per person for 4–20 guests. Breakfast and brunch service is priced from IDR 700K per person. Group feasts and birthday catering range from IDR 700K–800K per person depending on complexity. All prices subject to 11% tax + 10% service charge.',
   },
   {
     q: 'Can you do a sunrise breakfast or morning brunch in Sanur?',
@@ -47,25 +47,25 @@ const AREAS = [
 const SERVICES = [
   {
     name: 'Family Villa Dining',
-    range: 'IDR 400K–700K / person',
+    range: 'From IDR 700K / person',
     for: '4–20 guests',
     detail: 'Dinners designed for multi-generational groups — Indonesian sharing plates, fresh seafood, and menu variety that works for every age from children to grandparents. Warm, generous, and unhurried.',
   },
   {
     name: 'Sunrise Breakfast Service',
-    range: 'IDR 250K–450K / person',
+    range: 'From IDR 700K / person',
     for: '2–15 guests',
     detail: 'A fully prepared hot breakfast as the sun rises over the Lombok Strait. Our chef arrives before dawn, sets your table, and serves the first meal of the day with the same care as a fine-dining dinner.',
   },
   {
     name: 'Seafood & Indonesian Feast',
-    range: 'IDR 450K–800K / person',
+    range: 'IDR 700K–800K / person',
     for: '6–30 guests',
     detail: 'A generous multi-dish spread of grilled seafood, Indonesian classics, and fresh tropical sides. Sourced from Sindhu Market and prepared on your villa terrace or lawn for a social, flavour-forward evening.',
   },
   {
     name: 'Birthday & Celebration Catering',
-    range: 'IDR 450K–800K / person',
+    range: 'IDR 700K–800K / person',
     for: '8–40 guests',
     detail: 'Milestone lunches and birthday dinners with full service. Chefs cook, waitstaff serve, and our team handles setup and cleanup — so the person being celebrated actually gets to relax.',
   },

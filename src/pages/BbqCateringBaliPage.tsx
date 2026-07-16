@@ -43,7 +43,7 @@ const SECTIONS = [
     features: [
       {
         icon: Flame,
-        title: 'Classic BBQ — IDR 420K/person',
+        title: 'Classic BBQ — IDR 700K/person',
         desc: 'The full myCHEF grill selection — meat, seafood, and Indonesian grill items — paired with three sides and a live sambal bar. Includes a nasi goreng wok station. The go-to package for groups who want a complete, satisfying BBQ without the premium add-ons. Minimum 8 guests.',
       },
       {
@@ -53,12 +53,12 @@ const SECTIONS = [
       },
       {
         icon: Users,
-        title: 'Big Group BBQ (15+) — IDR 380K/person',
+        title: 'Big Group BBQ (15+) — IDR 700K/person',
         desc: 'Designed for large groups — live grill and wok stations, unlimited grill replenishment throughout service, four sides including nasi goreng, and the full sambal bar. The per-head cost is lower because the format is optimised for volume. Best for group holidays, corporate team events, and large family gatherings.',
       },
       {
         icon: Leaf,
-        title: 'Plant-Based BBQ — IDR 350K/person',
+        title: 'Plant-Based BBQ — IDR 700K/person',
         desc: 'A complete vegetarian grill menu built to impress everyone at the table — not just the vegetarians. Whole cauliflower centrepiece, tempeh satay, grilled seasonal vegetables, stuffed portobello mushrooms, live nasi goreng wok, and sambal station. Full flavour, no compromise.',
       },
     ],
@@ -147,9 +147,9 @@ export default function BbqCateringBaliPage() {
     <PremiumPage
       slug="blog/bali-bbq-catering-villa-guide"
       title="BBQ Catering Bali: The Complete Villa Guide"
-      description="The ultimate guide to BBQ catering at your Bali villa. Equipment, menus, staffing, IDR pricing, which occasions it suits. Private chef BBQ from IDR 400K/person."
+      description="The ultimate guide to BBQ catering at your Bali villa. Equipment, menus, staffing, IDR pricing, which occasions it suits. Private chef BBQ from IDR 700K/person."
       seoTitle="BBQ Catering Bali | Villa BBQ Private Chef Guide | myCHEF"
-      seoDescription="The ultimate guide to BBQ catering at your Bali villa. Equipment, menus, staffing, IDR pricing, which occasions it suits. Private chef BBQ from IDR 400K/person."
+      seoDescription="The ultimate guide to BBQ catering at your Bali villa. Equipment, menus, staffing, IDR pricing, which occasions it suits. Private chef BBQ from IDR 700K/person."
       canonicalUrl="https://mychef.id/blog/bali-bbq-catering-villa-guide"
       h1="BBQ Catering Bali: The Complete Villa Guide"
       subtitle="Everything You Need to Know About BBQ at Your Bali Villa"

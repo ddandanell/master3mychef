@@ -513,7 +513,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {[
               { label: 'Private Chef Session', price: 'From IDR 1,350,000', note: 'Per session · up to 6 guests · 3–4 courses' },
-              { label: 'Villa Catering', price: 'From IDR 560,000 pp', note: 'Per person · 8–30 guests · buffet or plated' },
+              { label: 'Villa Catering', price: 'From IDR 700,000 pp', note: 'Per person · 8–30 guests · buffet or plated' },
               { label: 'Fine Dining Tasting Menu', price: 'From IDR 980,000 pp', note: 'Per person · 5–7 courses · wine pairing available' },
               { label: 'BBQ & Seafood Grill', price: 'From IDR 720,000 pp', note: 'Per person · charcoal grill · full service' },
               { label: 'Events & Weddings', price: 'Custom quote', note: 'Group size, menu, staffing level — quoted per event' },

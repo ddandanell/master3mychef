@@ -19,7 +19,7 @@ const SECTIONS = [
     features: [
       { icon: Users, title: 'Intimate (10–20 Guests)', desc: 'Plated dinner or grazing table. 1 chef + 1–2 staff. Full personalization. IDR 900K–1.8M/person. Best for milestone birthdays.' },
       { icon: Cake, title: 'Medium (25–50 Guests)', desc: 'Buffet or stations + cocktail hour. 1–2 chefs + 3–4 staff. Mix of cuisines possible. IDR 750K–1.5M/person.' },
-      { icon: ChefHat, title: 'Large (50–100 Guests)', desc: 'Full buffet or multi-station setup. 2–3 chefs + 5–8 staff. Requires villa garden or pavilion space. IDR 600K–1.2M/person.' },
+      { icon: ChefHat, title: 'Large (50–100 Guests)', desc: 'Full buffet or multi-station setup. 2–3 chefs + 5–8 staff. Requires villa garden or pavilion space. IDR 700K–1.2M/person.' },
       { icon: Calendar, title: 'Multi-Day Celebration', desc: 'Pre-party dinner + main event + day-after brunch. Same chef team for consistency. Negotiate per-day rates for multi-event booking.' },
     ],
   },
@@ -67,7 +67,7 @@ const SECTIONS = [
     <ul style="margin: 1rem 0; padding-left: 2rem;">
       <li>10–20 guests (plated dinner): IDR 18M–36M total (IDR 900K–1.8M/person)</li>
       <li>25–50 guests (buffet): IDR 19M–75M total (IDR 750K–1.5M/person)</li>
-      <li>50–100 guests (multi-station): IDR 30M–120M total (IDR 600K–1.2M/person)</li>
+      <li>50–100 guests (multi-station): IDR 35M–120M total (IDR 700K–1.2M/person)</li>
     </ul>
     <p>For a full breakdown of what drives these costs, see our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">private chef pricing guide</a>.</p>
     <p><strong>What's Included:</strong> Chef service, kitchen team, all food preparation, service staff, kitchen cleanup.</p>
@@ -94,7 +94,7 @@ const SECTIONS = [
 const FAQS = [
   {
     question: 'How much does a private chef cost for a birthday party in Bali?',
-    answer: 'Budget IDR 600K–1.8M per person for catering depending on menu style, guest count, and service format. Smaller intimate dinners (10–20 guests) tend to cost more per person than larger buffet-style parties. Contact us for a custom quote based on your headcount and vision.',
+    answer: 'Budget IDR 700K–1.8M per person for catering depending on menu style, guest count, and service format. Smaller intimate dinners (10–20 guests) tend to cost more per person than larger buffet-style parties. Contact us for a custom quote based on your headcount and vision.',
   },
   {
     question: 'Can the chef do a surprise birthday dinner?',

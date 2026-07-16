@@ -21,7 +21,7 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Class Menu',
     title: 'Private Cooking Class Experiences',
-    body: `<p>Each class is led by a professional myCHEF chef and held at your villa. All classes include ingredient sourcing, hands-on instruction, and a full sit-down meal of what you cooked. Starting from IDR 600,000 per person.</p>
+    body: `<p>Each class is led by a professional myCHEF chef and held at your villa. All classes include ingredient sourcing, hands-on instruction, and a full sit-down meal of what you cooked. Starting from IDR 700,000 per person.</p>
 
     <p><strong>Balinese Heritage Class — 3 hours</strong><br/>
     The heart of Balinese cooking: learning to make the foundational spice pastes by hand. Your chef will guide you through <em>base gede</em> (the great paste — shallots, garlic, galangal, lemongrass, turmeric, ginger, candlenuts, shrimp paste) and <em>base wangi</em> (the aromatic paste used in lighter preparations). From there you build dishes: a mock-up of the ceremonial <em>babi guling</em> (slow-roasted spiced pork), <em>lawar</em> (the finely chopped vegetable, coconut, and spice salad central to Balinese ceremonial cuisine), and hand-rolled <em>sate lilit</em> on lemongrass skewers. This class teaches the underlying logic of Balinese flavour — understand the pastes and you can build any dish.</p>
@@ -38,7 +38,7 @@ const SECTIONS = [
     <p><strong>Plant-Based Bali — 2.5 hours</strong><br/>
     Indonesian and Balinese cuisine has a rich tradition of vegetable-forward cooking — this class explores it fully. Proper <em>tempeh</em> techniques (tempeh goreng, tempeh manis, tempeh as a protein-forward main), jackfruit preparations both green and ripe, coconut-based vegetable curries, and vegan sambal. All dishes are naturally plant-based — no substitution required. Ideal for vegan or vegetarian groups, and eye-opening for omnivores who assume plant-based cooking means compromise.</p>
 
-    <p>All classes: from <strong>IDR 600,000 per person</strong>. Groups 2–12. Book via WhatsApp and your chef will confirm ingredients and timing within 2 hours.</p>`,
+    <p>All classes: from <strong>IDR 700,000 per person</strong>. Groups 2–12. Book via WhatsApp and your chef will confirm ingredients and timing within 2 hours.</p>`,
   },
   {
     id: 'market-trip',
@@ -153,9 +153,9 @@ export default function BaliVillaCookingClassPage() {
     <PremiumPage
       slug="blog/bali-villa-cooking-class-private-chef"
       title="Private Cooking Classes at Your Bali Villa"
-      description="Skip the tourist cooking school. Have a professional myCHEF chef come to your Bali villa and teach you authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 600,000/person."
+      description="Skip the tourist cooking school. Have a professional myCHEF chef come to your Bali villa and teach you authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 700,000/person."
       seoTitle="Bali Villa Cooking Class | Private Chef Cooking Lessons at Your Villa | myCHEF"
-      seoDescription="Skip the tourist cooking school. Have a professional myCHEF chef come to your Bali villa and teach you authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 600,000/person."
+      seoDescription="Skip the tourist cooking school. Have a professional myCHEF chef come to your Bali villa and teach you authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 700,000/person."
       canonicalUrl="https://mychef.id/blog/bali-villa-cooking-class-private-chef"
       h1="Private Cooking Classes at Your Bali Villa"
       subtitle="Learn Balinese & Indonesian Cuisine with a Professional Private Chef"
@@ -191,7 +191,7 @@ export default function BaliVillaCookingClassPage() {
           '@context': 'https://schema.org',
           '@type': 'Event',
           name: 'Private Cooking Class at Your Bali Villa',
-          description: 'A professional myCHEF chef comes to your Bali villa to teach authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 600,000/person.',
+          description: 'A professional myCHEF chef comes to your Bali villa to teach authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 700,000/person.',
           url: 'https://mychef.id/blog/bali-villa-cooking-class-private-chef',
           image: 'https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp',
           eventStatus: 'https://schema.org/EventScheduled',

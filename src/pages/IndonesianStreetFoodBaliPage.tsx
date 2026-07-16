@@ -80,13 +80,13 @@ const SECTIONS = [
     title: 'Three Indonesian Feast Menus',
     body: `<p>We offer three curated Indonesian feast formats, each designed to give a coherent journey through a particular dimension of the cuisine. All menus include rice, condiments, sambal bar and non-alcoholic drinks. Prices are per person; minimum 4 guests.</p>
 
-    <p><strong>Balinese Village Feast — IDR 420K/person</strong><br/>
+    <p><strong>Balinese Village Feast — IDR 700K/person</strong><br/>
     The full Balinese ceremonial experience: sate lilit on lemongrass skewers over charcoal, a proper babi guling with kulit (crispy skin) and all accompaniments, nasi campur assembled with eight components, lawar (spiced minced meat salad), jamu shots (turmeric-ginger-tamarind wellness tonic) before eating, and es cendol to finish. This menu is designed around Bali's specific food culture — the dishes you would eat at a Balinese family ceremony, cooked with the same ingredients and techniques.</p>
 
-    <p><strong>Indonesian Archipelago — IDR 380K/person</strong><br/>
+    <p><strong>Indonesian Archipelago — IDR 700K/person</strong><br/>
     A journey through the islands: West Sumatran rendang (4-hour slow braise), Jakarta's gado-gado with freshly ground peanut sauce, nasi goreng with fried egg, tempeh goreng (crispy fried tempeh with palm sugar glaze), mie goreng wok-fried to order, and soto ayam (Javanese chicken broth with turmeric, lime and crispy shallots). This menu shows the breadth of Indonesian cooking beyond Bali — six distinct regional dishes in one feast.</p>
 
-    <p><strong>Street Food Night — IDR 350K/person</strong><br/>
+    <p><strong>Street Food Night — IDR 700K/person</strong><br/>
     Eight small plates served sharing-style, a live satay station grilling continuously, a sambal bar with four house sambals (matah, terasi, ijo, kecap), a wok station for nasi goreng and mie goreng cooked to order, and fresh young coconut drinks. This is the most social and interactive format — guests move between the satay station and their seats, the wok is in motion throughout, and the sambal bar encourages experimentation. Ideal for groups of 8–20.</p>`,
   },
   {
@@ -163,9 +163,9 @@ export default function IndonesianStreetFoodBaliPage() {
     <PremiumPage
       slug="blog/indonesian-street-food-private-chef-bali"
       title="Indonesian Street Food at Your Bali Villa"
-      description="Experience authentic Indonesian street food classics at your Bali villa — nasi goreng, satay lilit, babi guling, gado-gado. Private chef. From IDR 350K/person."
+      description="Experience authentic Indonesian street food classics at your Bali villa — nasi goreng, satay lilit, babi guling, gado-gado. Private chef. From IDR 700K/person."
       seoTitle="Indonesian Street Food Bali | Private Chef Authentic Indonesian Cuisine | myCHEF"
-      seoDescription="Experience authentic Indonesian street food classics at your Bali villa — nasi goreng, satay lilit, babi guling, gado-gado. Private chef. From IDR 350K/person."
+      seoDescription="Experience authentic Indonesian street food classics at your Bali villa — nasi goreng, satay lilit, babi guling, gado-gado. Private chef. From IDR 700K/person."
       canonicalUrl="https://mychef.id/blog/indonesian-street-food-private-chef-bali"
       h1="Indonesian Street Food at Your Bali Villa"
       subtitle="Authentic Nasi Goreng, Satay & Babi Guling Made by a Private Chef"
@@ -184,7 +184,7 @@ export default function IndonesianStreetFoodBaliPage() {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
           headline: 'Indonesian Street Food at Your Bali Villa',
-          description: 'Experience authentic Indonesian street food classics at your Bali villa — nasi goreng, satay lilit, babi guling, gado-gado. Private chef. From IDR 350K/person.',
+          description: 'Experience authentic Indonesian street food classics at your Bali villa — nasi goreng, satay lilit, babi guling, gado-gado. Private chef. From IDR 700K/person.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
           datePublished: '2026-06-29',

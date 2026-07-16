@@ -535,7 +535,7 @@ export default function EventsMainPage() {
             </a>
           </div>
           <p className="hero-fade mt-4 text-sm text-white/[60%]">
-            From IDR 600K++/guest · Free consultation · Typical same-day WhatsApp reply · Transparent proposal before deposit
+            From IDR 700K++/guest · Free consultation · Typical same-day WhatsApp reply · Transparent proposal before deposit
           </p>
         </div>
       </section>

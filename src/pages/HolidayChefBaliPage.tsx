@@ -68,7 +68,7 @@ We cover all major villa areas across Bali during the festive season. Book early
 
 **Daily festive chef service (December 20--January 5):** Quoted as a complete package for the period. Generally 30--50% more efficient than booking individual meals separately.
 
-**Canapes and cocktail party catering (20--50 guests):** From IDR 150,000--250,000 per person for canapé service, with separate bartender quote.
+**Canapes and cocktail party catering (20--50 guests):** From IDR 700,000 per person for canapé service, with separate bartender quote.
 
 All festive bookings require a 50% deposit to confirm.`,
   },

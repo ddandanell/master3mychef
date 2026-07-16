@@ -33,7 +33,7 @@ const SECTIONS = [
     <p><strong>Best Menu Style:</strong> Modern vegetable-forward, locally-sourced, organic, health-conscious. Emphasis on ingredient provenance, sustainable sourcing, and artisanal presentations. Avoid formal "fine dining" framing — Canggu guests prefer relaxed excellence.</p>
     <p><strong>Ingredient Sourcing:</strong> Strong network of organic suppliers and health-focused markets. Green markets and local farmers accessible. Specialty health ingredients (adaptogens, superfoods) more available here than elsewhere.</p>
     <p><strong>Guest Profile:</strong> International creatives, wellness travelers, digital nomads, influencers. Value-conscious but quality-obsessed. Know their ingredients.</p>
-    <p><strong>Budget Expectation:</strong> IDR 650K–1.3M/person. Value-driven but won't compromise on quality or sourcing ethics.</p>`,
+    <p><strong>Budget Expectation:</strong> IDR 700K–1.3M/person. Value-driven but won't compromise on quality or sourcing ethics.</p>`,
   },
   {
     id: 'uluwatu',
@@ -57,7 +57,7 @@ const SECTIONS = [
     <p><strong>Best Menu Style:</strong> Balinese traditional, plant-forward, farm-to-table. Emphasis on spice balance (hot/cool, sour/sweet), ceremonial dishes like lawar, and holistic wellness principles. The most authentic expression of Balinese food culture.</p>
     <p><strong>Ingredient Sourcing:</strong> Outstanding for local produce. Direct relationships with farmers and markets. Slower-paced supply chain — better for planned menus, less ideal for last-minute requests. Organic produce most accessible here.</p>
     <p><strong>Guest Profile:</strong> Wellness-focused travelers, cultural explorers, yoga practitioners, artists, retreat participants. Authenticity-seeking, culturally curious.</p>
-    <p><strong>Budget Expectation:</strong> IDR 500K–960K/person. Value-oriented but deep appreciation for quality, authenticity, and ingredient provenance.</p>`,
+    <p><strong>Budget Expectation:</strong> IDR 700K–960K/person. Value-oriented but deep appreciation for quality, authenticity, and ingredient provenance.</p>`,
   },
   {
     id: 'sanur-jimbaran',
@@ -66,10 +66,10 @@ const SECTIONS = [
     title: 'Sanur & Jimbaran: Seafood, Beach, and Local Flavor',
     body: `<p><strong>Sanur Character:</strong> Quiet, local beach community. Fishing villages, relaxed pace, fewer tourists than Seminyak. Families and long-term residents. Villas: mid-range, casual, beach-adjacent. See our <a href="/locations/sanur" class="text-[#7E6410] hover:underline font-medium">Sanur private chef guide</a>.</p>
     <p><strong>Sanur Dining:</strong> Outstanding fresh seafood from daily morning fishing boats. Simple preparations that highlight fish quality. Balinese traditional with some international options. Best for families seeking authentic local food without the Seminyak price tag.</p>
-    <p><strong>Sanur Budget:</strong> IDR 560K–1.2M/person. Seafood-focused, local ingredients, relaxed atmosphere.</p>
+    <p><strong>Sanur Budget:</strong> IDR 700K–1.2M/person. Seafood-focused, local ingredients, relaxed atmosphere.</p>
     <p><strong>Jimbaran Character:</strong> Beach fishing village famous for sunset seafood culture. Mix of local and tourist. Villas: mid-range, beach-adjacent, casual. See our <a href="/locations/jimbaran" class="text-[#7E6410] hover:underline font-medium">Jimbaran private chef guide</a>.</p>
     <p><strong>Jimbaran Dining:</strong> Private beachside dinners capturing Jimbaran's sunset magic without the crowded beach restaurant scene. Outstanding fresh fish and seafood from morning boats. Grilled preparations, tropical fruits, Balinese-casual with international options.</p>
-    <p><strong>Jimbaran Budget:</strong> IDR 650K–1.3M/person. Casual luxury, fresh seafood focus, sunset timing premium.</p>`,
+    <p><strong>Jimbaran Budget:</strong> IDR 700K–1.3M/person. Casual luxury, fresh seafood focus, sunset timing premium.</p>`,
   },
   {
     id: 'location-chef-match',
@@ -113,7 +113,7 @@ const FAQS = [
   },
   {
     question: 'What is the typical cost range for a private dinner across Bali neighborhoods?',
-    answer: 'Budget IDR 500K–3.2M/person depending on location and menu style. Ubud and Sanur are most affordable (IDR 500K–1.2M). Seminyak and Canggu mid-range (IDR 650K–2.4M). Uluwatu commands a premium (IDR 1.9M–3.2M+) due to logistics and guest expectations. All-in pricing includes chef service and ingredients.',
+    answer: 'Budget IDR 700K–3.2M/person depending on location and menu style. Ubud and Sanur are most affordable (IDR 700K–1.2M). Seminyak and Canggu mid-range (IDR 700K–2.4M). Uluwatu commands a premium (IDR 1.9M–3.2M+) due to logistics and guest expectations. All-in pricing includes chef service and ingredients.',
   },
 ]
 

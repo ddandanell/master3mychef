@@ -53,22 +53,22 @@ const SECTIONS = [
       {
         icon: Leaf,
         title: 'Plant-Based Program',
-        desc: '100% vegan, whole food, seasonal. Every meal built around Bali\'s extraordinary plant diversity — from jackfruit curries and tempeh satay to raw cacao smoothie bowls and coconut-braised black rice. IDR 380K/person/day (3 meals + 2 snacks).',
+        desc: '100% vegan, whole food, seasonal. Every meal built around Bali\'s extraordinary plant diversity — from jackfruit curries and tempeh satay to raw cacao smoothie bowls and coconut-braised black rice. IDR 700K/person/day (3 meals + 2 snacks).',
       },
       {
         icon: Droplets,
         title: 'Detox & Cleanse Program',
-        desc: 'Raw, cold-pressed juiced, and lightly cooked meals designed to minimise digestive load while maximising micronutrient density. Morning green juice, raw nori wraps, lightly steamed vegetables with miso broth. IDR 420K/person/day.',
+        desc: 'Raw, cold-pressed juiced, and lightly cooked meals designed to minimise digestive load while maximising micronutrient density. Morning green juice, raw nori wraps, lightly steamed vegetables with miso broth. IDR 700K/person/day.',
       },
       {
         icon: Heart,
         title: 'Balanced Wellness',
-        desc: 'Plant-forward with optional fish and eggs for guests who want broader protein sources. The most popular programme for mixed groups — satisfies vegan purists and flexitarians simultaneously with smart menu design. IDR 350K/person/day.',
+        desc: 'Plant-forward with optional fish and eggs for guests who want broader protein sources. The most popular programme for mixed groups — satisfies vegan purists and flexitarians simultaneously with smart menu design. IDR 700K/person/day.',
       },
       {
         icon: Dumbbell,
         title: 'Active Retreat Fuel',
-        desc: 'High-protein, performance-focused menus designed for surf, yoga, CrossFit, or active training retreats. Higher protein density at every meal, complex carbohydrates timed around sessions, mineral-rich post-workout recovery options. IDR 400K/person/day.',
+        desc: 'High-protein, performance-focused menus designed for surf, yoga, CrossFit, or active training retreats. Higher protein density at every meal, complex carbohydrates timed around sessions, mineral-rich post-workout recovery options. IDR 700K/person/day.',
       },
     ],
   },
@@ -187,9 +187,9 @@ export default function WellnessRetreatCateringPage() {
     <PremiumPage
       slug="blog/bali-wellness-retreat-catering"
       title="Wellness Retreat Catering Bali | Plant-Based & Nourishing Meals for Retreat Guests"
-      description="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 350K/person/day. Ubud, Canggu, Uluwatu."
+      description="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 700K/person/day. Ubud, Canggu, Uluwatu."
       seoTitle="Wellness Retreat Catering Bali | Private Chef for Yoga Retreats | myCHEF"
-      seoDescription="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 350K/person/day. Ubud, Canggu, Uluwatu."
+      seoDescription="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 700K/person/day. Ubud, Canggu, Uluwatu."
       canonicalUrl="https://mychef.id/blog/bali-wellness-retreat-catering"
       h1="Wellness Retreat Catering Bali"
       subtitle="Plant-Based, Nourishing & Macro-Conscious Meals for Bali Retreat Guests"
@@ -208,7 +208,7 @@ export default function WellnessRetreatCateringPage() {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
           headline: 'Wellness Retreat Catering Bali: Plant-Based, Nourishing & Macro-Conscious Meals',
-          description: 'Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals from IDR 350K/person/day.',
+          description: 'Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals from IDR 700K/person/day.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: {
             '@type': 'Organization',

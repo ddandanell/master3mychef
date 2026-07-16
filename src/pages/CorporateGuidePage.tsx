@@ -25,7 +25,7 @@ const CORPORATE_OPTIONS = [
     description: 'Light breakfasts, working lunches, and coffee breaks during meetings',
     details: ['Flexible timing', 'Fresh and healthy options', 'Professional setup and cleanup'],
     bestFor: 'Any group size',
-    price: 'IDR 300K–800K per person per meal',
+    price: 'IDR 700K–800K per person per meal',
   },
   {
     name: 'Live-In Chef Support',

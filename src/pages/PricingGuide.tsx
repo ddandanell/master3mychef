@@ -25,7 +25,7 @@ const WHAT_IS_NOT_INCLUDED = [
 const PRICING_TIERS = [
   {
     name: 'Villa Dinner',
-    price: 'IDR 450K–800K',
+    price: 'IDR 700K–800K',
     perPerson: 'per guest',
     bestFor: '2–8 guests',
     description: 'Private chef cooking at your villa with table service',
@@ -33,7 +33,7 @@ const PRICING_TIERS = [
   },
   {
     name: 'Event Catering',
-    price: 'IDR 600K–1.2M',
+    price: 'IDR 700K–1.2M',
     perPerson: 'per guest',
     bestFor: '10–50 guests',
     description: 'Full catering team with multiple services',
@@ -190,7 +190,7 @@ export default function PricingGuide() {
         <div className="space-y-6">
           <div>
             <h3 className="text-xl font-semibold mb-2">For Dinners (2–8 guests)</h3>
-            <p className="text-[#666]">Budget IDR 500K–1M per guest for a full chef team, menu, and service. This is all-inclusive.</p>
+            <p className="text-[#666]">Budget IDR 700K–1M per guest for a full chef team, menu, and service. This is all-inclusive.</p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">For Events (10–50 guests)</h3>

@@ -70,13 +70,13 @@ For birthday parties and milestone celebrations: premium sharing platters elevat
     id: 'pricing',
     type: 'content',
     title: 'Pool Party Catering Prices in Bali',
-    body: `**Small Pool Party (up to 15 guests)**: From IDR 400,000/person -- includes chef, finger food menu (3--4 items), grazing spread, and basic service.
+    body: `**Small Pool Party (up to 15 guests)**: From IDR 700,000/person -- includes chef, finger food menu (3--4 items), grazing spread, and basic service.
 
-**Mid-Size Pool Party (15--30 guests)**: From IDR 450,000/person -- includes chef, second chef, finger food rotation, grazing table, and 2 service staff.
+**Mid-Size Pool Party (15--30 guests)**: From IDR 700,000/person -- includes chef, second chef, finger food rotation, grazing table, and 2 service staff.
 
-**Large Pool Party (30--60 guests)**: From IDR 500,000/person -- full service team, multiple food stations, BBQ or live cook option, dedicated service management. Quoted in full on enquiry.
+**Large Pool Party (30--60 guests)**: From IDR 700,000/person -- full service team, multiple food stations, BBQ or live cook option, dedicated service management. Quoted in full on enquiry.
 
-**Premium Birthday or Celebration Party (any size)**: From IDR 600,000/person -- elevated menu, centrepiece dishes, dessert service, full service team, and event coordination support.
+**Premium Birthday or Celebration Party (any size)**: From IDR 700,000/person -- elevated menu, centrepiece dishes, dessert service, full service team, and event coordination support.
 
 All pricing includes chef, ingredients, and service staff. Alcohol and cocktail bar are additional. Add a mixologist for IDR 1,500,000 flat (client supplies alcohol). Minimum booking: 8 guests.`,
   },
@@ -132,7 +132,7 @@ export default function PoolPartyCateringBaliPage() {
       title="Pool Party Catering Bali -- Private Chef and Full Service for Villa Pool Parties"
       seoTitle="Pool Party Catering Bali -- Private Chef & Full Service for Villa Pool Parties"
       description="Professional pool party catering for Bali villas. Finger food, grazing tables, live BBQ stations, and full service teams for 8--100 guests. All villa areas covered."
-      seoDescription="Pool party catering in Bali for 8--100 guests. Private chef, finger food, grazing tables, BBQ stations, and cocktail bar add-on. From IDR 400K/person. All villa areas."
+      seoDescription="Pool party catering in Bali for 8--100 guests. Private chef, finger food, grazing tables, BBQ stations, and cocktail bar add-on. From IDR 700K/person. All villa areas."
       h1="Pool Party Catering Bali -- Private Chef and Full Service for Villa Pool Parties"
       subtitle="From small group afternoon parties to 60-guest celebrations -- professional catering designed specifically for the Bali villa pool party format."
       heroImage="/images/blog/pool-party-catering-bali.jpg"
@@ -151,7 +151,7 @@ export default function PoolPartyCateringBaliPage() {
         'bali pool party food',
         'villa party catering bali',
       ]}
-      highlights={['8 to 100 Guests', 'Live BBQ Stations', 'Cocktail Bar Add-on', 'From IDR 400K/person']}
+      highlights={['8 to 100 Guests', 'Live BBQ Stations', 'Cocktail Bar Add-on', 'From IDR 700K/person']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

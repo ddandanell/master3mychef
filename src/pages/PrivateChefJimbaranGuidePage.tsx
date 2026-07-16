@@ -53,7 +53,7 @@ const SECTIONS: PageSection[] = [
     body: `<p>Jimbaran private chef pricing reflects the area's premium coastal positioning and the quality of fresh seafood sourcing:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
       <li><strong>Seafood spread dinner (2-6 guests):</strong> From IDR 700,000 – 950,000 per person. Includes market sourcing, full preparation, service, and cleanup.</li>
-      <li><strong>Group seafood BBQ (8-20 guests):</strong> From IDR 550,000 – 800,000 per person at scale.</li>
+      <li><strong>Group seafood BBQ (8-20 guests):</strong> From IDR 700,000 – 800,000 per person at scale.</li>
       <li><strong>Cliff tasting menu (2-6 guests, 6-7 courses):</strong> IDR 1,200,000 – 2,000,000 per person. Includes premium seafood, matched wine service, and full setup.</li>
       <li><strong>Romantic dinner for 2 (4-5 courses):</strong> IDR 1,000,000 – 1,600,000 per person. Includes full table setup, flowers, and personalized service.</li>
     </ul>

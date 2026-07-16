@@ -40,7 +40,7 @@ const SECTIONS = [
       "The food was the most-mentioned highlight in our post-retreat survey. People kept saying it felt like Bali, not like a conference." — Head of People Operations
     </blockquote>
 
-    <p><strong>Total investment:</strong> IDR 185,000,000 for 3 days, 45 guests, 7 services. Approximately IDR 590,000 per person per day — significantly below comparable hotel retreat packages with full privacy and customisation.</p>`,
+    <p><strong>Total investment:</strong> IDR 185,000,000 for 3 days, 45 guests, 7 services. Approximately IDR 700,000 per person per day — significantly below comparable hotel retreat packages with full privacy and customisation.</p>`,
   },
   {
     id: 'case2',

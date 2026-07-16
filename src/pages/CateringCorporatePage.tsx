@@ -42,14 +42,14 @@ const CORP_PACKAGES = [
   },
   {
     title: 'Team Offsite Catering',
-    price: 550000,
+    price: 700000,
     people: '15 to 80 people',
     format: ['Buffet or plated', '2-3 menu options', 'Dietary accommodation', 'Service staff', 'Invoiced'],
     bestFor: 'Company offsites, team building, strategy retreats, department dinners',
   },
   {
     title: 'Conference Catering',
-    price: 450000,
+    price: 700000,
     people: '30 to 200 people',
     format: ['Coffee breaks', 'Working lunch', 'Buffet dinner', 'All-day service', 'Setup & breakdown'],
     bestFor: 'Conferences, seminars, product launches, corporate events',
@@ -113,7 +113,7 @@ const CORP_ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'What does corporate catering cost?', a: 'Three per-person tiers: Standard IDR 450,000, Premium IDR 750,000, and Luxury IDR 1,200,000 (subject to 10% service charge + 11% government tax). Minimum spend is IDR 7,500,000.' },
+  { q: 'What does corporate catering cost?', a: 'Three per-person tiers: Standard IDR 700,000, Premium IDR 750,000, and Luxury IDR 1,200,000 (subject to 10% service charge + 11% government tax). Minimum spend is IDR 7,500,000.' },
   { q: 'Can you invoice companies?', a: 'Yes. We provide full tax invoices (NPWP-registered) with detailed breakdowns of food costs, service charges, and applicable taxes. Net-14 payment terms available for regular corporate clients.' },
   { q: 'Can you handle multi-day events?', a: 'Absolutely. Multi-day offsites and conferences are a specialty. We assign a dedicated team and event manager who stays with your group for the full duration.' },
   { q: 'Do you serve in villas or venues?', a: 'Both. We cater at private villas, hotels, conference centers, co-working spaces, and outdoor venues across Bali. We coordinate with venue managers for kitchen access and logistics.' },
@@ -147,7 +147,7 @@ export default function CateringCorporatePage() {
           cateringServiceSchema('Corporate Catering Bali', 'Corporate catering in Bali for business lunches, workshops, offsites, launches, and executive dinners with reliable timing and professional presentation. myCHEF.id handles menu planning, staffing, invoicing, and service across Bali.', `${SITE}/catering/corporate-catering`),
           offerSchema('Board Dinner', 850000, 'IDR', `${SITE}/catering/corporate-catering`),
           offerSchema('Team Offsite Catering', 550000, 'IDR', `${SITE}/catering/corporate-catering`),
-          offerSchema('Conference Catering', 450000, 'IDR', `${SITE}/catering/corporate-catering`),
+          offerSchema('Conference Catering', 700000, 'IDR', `${SITE}/catering/corporate-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 89),
           howToSchema({
@@ -196,7 +196,7 @@ export default function CateringCorporatePage() {
             Reliable catering for business lunches, workshops, retreats, company dinners, product launches, and executive gatherings across Bali.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 450,000/person · Min. spend IDR 7,500,000 · Tax invoiced · Dedicated event manager · Bali-wide
+            From IDR 700,000/person · Min. spend IDR 7,500,000 · Tax invoiced · Dedicated event manager · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
@@ -503,8 +503,8 @@ export default function CateringCorporatePage() {
           {/* Group Total Calculators */}
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             <GroupTotalCalculator pricePerPerson={850000} minGuests={6} maxGuests={20} defaultGuests={12} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={550000} minGuests={15} maxGuests={80} defaultGuests={30} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={450000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={700000} minGuests={15} maxGuests={80} defaultGuests={30} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={700000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
           </div>
           <TaxFooter className="mt-6" />
         </div>

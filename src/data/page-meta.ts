@@ -465,7 +465,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/pricing',
     title: 'Private Chef Bali Price Guide | All-In Rates — myCHEF',
     description:
-      'See private chef Bali pricing before you book. Tasting menus from IDR 2.2M, catering from IDR 350K/pp. No hidden fees, no grocery markup.',
+      'See private chef Bali pricing before you book. Tasting menus from IDR 2.2M, catering from IDR 700K/pp. No hidden fees, no grocery markup.',
     canonical: `${SITE}/pricing`,
     h1: 'Pricing',
     ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,

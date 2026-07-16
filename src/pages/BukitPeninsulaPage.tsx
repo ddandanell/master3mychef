@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does a private chef cost on the Bukit Peninsula?',
-    a: 'Intimate clifftop dinners start at IDR 450K–800K per person for 2–12 guests. Surf-group and retreat catering ranges from IDR 400K–700K per person for 6–30 guests. Celebration and event packages range from IDR 600K–1.8M per person depending on production. All prices subject to 11% tax + 10% service charge.',
+    a: 'Intimate clifftop dinners start at IDR 700K–800K per person for 2–12 guests. Surf-group and retreat catering starts from IDR 700K per person for 6–30 guests. Celebration and event packages range from IDR 700K–1.8M per person depending on production. All prices subject to 11% tax + 10% service charge.',
   },
   {
     q: 'Can you cater weddings and elopements on the Bukit?',
@@ -47,25 +47,25 @@ const AREAS = [
 const SERVICES = [
   {
     name: 'Clifftop Tasting Menu',
-    range: 'IDR 450K–800K / person',
+    range: 'IDR 700K–800K / person',
     for: '2–12 guests',
     detail: 'Multi-course dinners paced around the Bukit sunset. First courses land as the sun drops, mains served under stars, dessert with the sound of the Indian Ocean below. Seafood-forward or balanced menus available.',
   },
   {
     name: 'Surf Group & Retreat Feast',
-    range: 'IDR 400K–700K / person',
+    range: 'From IDR 700K / person',
     for: '6–30 guests',
     detail: 'Multi-day catering for surf groups, yoga retreats, and wellness communities. Fuelling breakfasts, light working lunches, and generous shared evening dinners. Dietary flexibility built in — plant-based, gluten-free, high-protein.',
   },
   {
     name: 'Wedding & Elopement Dining',
-    range: 'IDR 650K–1.8M / person',
+    range: 'IDR 700K–1.8M / person',
     for: '2–80 guests',
     detail: 'Clifftop elopements, rehearsal dinners, and intimate villa weddings with full F&B production. Chefs, waitstaff, bar service, linen, florals coordination, and complete cleanup. Ceremony-to-brunch packages available.',
   },
   {
     name: 'Villa BBQ Celebration',
-    range: 'IDR 500K–900K / person',
+    range: 'IDR 700K–900K / person',
     for: '10–50 guests',
     detail: 'Live-fire BBQ for groups — whole fish from Padang-Padang, grilled meats, and sharing sides on the terrace. The social format of a seafood beach restaurant, elevated and entirely private.',
   },

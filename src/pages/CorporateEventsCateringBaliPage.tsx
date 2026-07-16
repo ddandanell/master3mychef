@@ -138,7 +138,7 @@ const PRICING_TABLE = [
   {
     type: 'Working Lunches & Coffee Breaks',
     guests: '10–50 guests',
-    perPerson: 'IDR 300K – 700K',
+    perPerson: 'from IDR 700K',
     includes: 'Chef, light menu, setup & cleanup',
   },
   {
@@ -162,7 +162,7 @@ const PRICING_TABLE = [
   {
     type: 'Conference Catering (buffet)',
     guests: '50–200 guests',
-    perPerson: 'IDR 400K – 900K',
+    perPerson: 'IDR 700K – 900K',
     includes: 'Buffet stations, chefs, service crew, setup',
   },
 ]
@@ -170,7 +170,7 @@ const PRICING_TABLE = [
 const FAQS = [
   {
     q: 'How much does corporate event catering cost in Bali?',
-    a: 'Corporate catering in Bali costs IDR 300,000–700,000 per person for working lunches, IDR 900,000–2,000,000 per person per day for full-board retreats, and IDR 1,500,000–3,500,000+ per person for executive plated dinners. All prices vary by guest count, menu complexity, and event duration. We provide detailed quotes within 4 hours of your enquiry.',
+    a: 'Corporate catering in Bali costs from IDR 700,000 per person for working lunches, IDR 900,000–2,000,000 per person per day for full-board retreats, and IDR 1,500,000–3,500,000+ per person for executive plated dinners. All prices vary by guest count, menu complexity, and event duration. We provide detailed quotes within 4 hours of your enquiry.',
   },
   {
     q: 'Can myCHEF handle large corporate events in Bali?',
@@ -276,7 +276,7 @@ export default function CorporateEventsCateringBaliPage() {
           </h1>
           <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
             From a 38-person tech retreat in Canggu to a 74-guest fashion launch in Uluwatu — how myCHEF
-            handles corporate events in Bali from IDR 300K to 4M per person.
+            handles corporate events in Bali from IDR 700K to 4M per person.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">

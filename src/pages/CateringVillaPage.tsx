@@ -220,7 +220,7 @@ export default function CateringVillaPage() {
             You stay by the pool. Your group eats well. We handle shopping, prep, service, and cleanup in your villa kitchen.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 450,000/person · Chef + team included · Groceries at cost · Bali-wide
+            From IDR 700,000/person · Chef + team included · Groceries at cost · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-catering-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">

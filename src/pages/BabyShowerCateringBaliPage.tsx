@@ -47,17 +47,17 @@ const SECTIONS = [
       {
         icon: Heart,
         title: 'Grazing & Bubbles',
-        desc: 'An elegant grazing table spread paired with a mocktail and sparkling station. Artisan boards of seasonal fruits, house-baked pastries, savoury bites, and dips — the ultimate social centrepiece. IDR 420K/person.',
+        desc: 'An elegant grazing table spread paired with a mocktail and sparkling station. Artisan boards of seasonal fruits, house-baked pastries, savoury bites, and dips — the ultimate social centrepiece. IDR 700K/person.',
       },
       {
         icon: Star,
         title: 'Afternoon Tea Party',
-        desc: 'Classic afternoon tea format: finger sandwiches, freshly baked scones with clotted cream and jam, mini pastries, a celebration cake, and a selection of herbal and iced teas. Seated and elegant. IDR 380K/person.',
+        desc: 'Classic afternoon tea format: finger sandwiches, freshly baked scones with clotted cream and jam, mini pastries, a celebration cake, and a selection of herbal and iced teas. Seated and elegant. IDR 700K/person.',
       },
       {
         icon: UtensilsCrossed,
         title: 'Full Luncheon',
-        desc: 'A three-course seated lunch with themed presentation. Starter, main, and dessert, all pregnancy-safe and beautifully plated. Table styling coordinated with your colour scheme. IDR 550K/person.',
+        desc: 'A three-course seated lunch with themed presentation. Starter, main, and dessert, all pregnancy-safe and beautifully plated. Table styling coordinated with your colour scheme. IDR 700K/person.',
       },
       {
         icon: Sparkles,

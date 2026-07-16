@@ -209,7 +209,7 @@ export default function CateringRetreatPage() {
             Consistent, healthy, chef-led catering for multi-day retreats where the food needs to support energy, rhythm, and the full guest experience.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 400,000/person/day · Plant-forward · Full board · Bali-wide
+            From IDR 700,000/person/day · Plant-forward · Full board · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-retreat-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">

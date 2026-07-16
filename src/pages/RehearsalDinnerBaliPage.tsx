@@ -70,9 +70,9 @@ For couples who want to give their guests an authentically Balinese experience b
     title: 'Rehearsal Dinner Catering Pricing',
     body: `Cost depends on the format, guest count, menu complexity, and staff requirements:
 
-- **Casual shared dinner (10--20 guests)**: from IDR 500,000/person including chef, ingredients, and 2 service staff
+- **Casual shared dinner (10--20 guests)**: from IDR 700,000/person including chef, ingredients, and 2 service staff
 - **Plated multi-course dinner (up to 20 guests)**: from IDR 750,000/person
-- **Welcome cocktail party (20--50 guests)**: from IDR 400,000/person including grazing table, bar staff, and 2 waiters
+- **Welcome cocktail party (20--50 guests)**: from IDR 700,000/person including grazing table, bar staff, and 2 waiters
 - **Full Balinese feast (any size)**: from IDR 7,500,000 for 20 guests, scaling with group
 
 All pricing includes chef, ingredients, service staff, and cleanup. Alcohol is supplied by the client. Bar staff and sommelier are available as add-ons.
@@ -131,7 +131,7 @@ export default function RehearsalDinnerBaliPage() {
       title="Rehearsal Dinner Bali -- Private Chef Catering for the Night Before Your Wedding"
       seoTitle="Rehearsal Dinner Bali -- Private Chef Catering for Wedding Week Events"
       description="Private chef catering for Bali rehearsal dinners. Intimate villa dinners, garden feasts, and cocktail welcome parties for 10--50 guests. Full service coordination included."
-      seoDescription="Rehearsal dinner catering in Bali for 10--50 guests. Private chef, service staff, and full coordination for the night before your villa wedding. From IDR 500K/person."
+      seoDescription="Rehearsal dinner catering in Bali for 10--50 guests. Private chef, service staff, and full coordination for the night before your villa wedding. From IDR 700K/person."
       h1="Rehearsal Dinner Bali -- Private Chef Catering for the Night Before Your Wedding"
       subtitle="Intimate villa dinners and garden feasts for the wedding party -- the most personal evening of your wedding week."
       heroImage="/images/blog/rehearsal-dinner-bali.jpg"
@@ -150,7 +150,7 @@ export default function RehearsalDinnerBaliPage() {
         'bali rehearsal dinner ideas',
         'wedding week dinner bali',
       ]}
-      highlights={['10--50 Guests', 'Custom Menu Design', 'Full Event Coordination', 'From IDR 500K/person']}
+      highlights={['10--50 Guests', 'Custom Menu Design', 'Full Event Coordination', 'From IDR 700K/person']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

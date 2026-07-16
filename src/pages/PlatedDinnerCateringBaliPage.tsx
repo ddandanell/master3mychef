@@ -17,7 +17,7 @@ We operate across Seminyak, Canggu, Uluwatu, Jimbaran, Sanur, Nusa Dua, Ubud, an
     type: 'content',
     title: 'Plated Dinner Menu Formats',
     body: `**3-Course Plated Dinner**
-The most popular format for villa dinner parties and intimate celebrations. Entrée, main course, and dessert. Typically 1.5--2 hours of table service. From IDR 550,000/person (menu and ingredient cost included; staff quoted separately).
+The most popular format for villa dinner parties and intimate celebrations. Entrée, main course, and dessert. Typically 1.5--2 hours of table service. From IDR 700,000/person (menu and ingredient cost included; staff quoted separately).
 
 **4-Course Plated Dinner**
 Adds an intermediate course -- typically a soup or intermediate between entrée and main. Popular for milestone birthdays, anniversary dinners, and villa wedding receptions. From IDR 750,000/person.
@@ -154,7 +154,7 @@ export default function PlatedDinnerCateringBaliPage() {
         'formal catering bali',
         'table service bali',
       ]}
-      highlights={['3--7 Course Menus', 'Formal Table Service', 'From 6 Guests', 'From IDR 550K/person']}
+      highlights={['3--7 Course Menus', 'Formal Table Service', 'From 6 Guests', 'From IDR 700K/person']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

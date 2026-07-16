@@ -30,13 +30,13 @@ We cover all major villa areas across Bali: Canggu, Seminyak, Uluwatu, Jimbaran,
     id: 'menu-formats',
     type: 'content',
     title: 'Drop-Off Menu Formats',
-    body: `**Casual Indonesian Feast** -- A spread of classic Balinese and Indonesian dishes delivered ready to share: nasi goreng, mie goreng, satay with peanut sauce, gado-gado, sambal, tempeh, and fresh tropical fruit. Perfect for groups who want an authentic local spread without restaurant prices. From IDR 150,000--200,000/person.
+    body: `**Casual Indonesian Feast** -- A spread of classic Balinese and Indonesian dishes delivered ready to share: nasi goreng, mie goreng, satay with peanut sauce, gado-gado, sambal, tempeh, and fresh tropical fruit. Perfect for groups who want an authentic local spread without restaurant prices. From IDR 700,000/person.
 
-**Western Comfort** -- Pasta in sauce, roast chicken pieces, potato salad, green salad, freshly baked focaccia, and a simple dessert. Familiar food done properly, great for families with children or groups who have been eating Indonesian food all week and want something different. From IDR 180,000--250,000/person.
+**Western Comfort** -- Pasta in sauce, roast chicken pieces, potato salad, green salad, freshly baked focaccia, and a simple dessert. Familiar food done properly, great for families with children or groups who have been eating Indonesian food all week and want something different. From IDR 700,000/person.
 
-**Grazing and Sharing Platters** -- A collection of boards and platters designed for continuous grazing: cheese, charcuterie, vegetables and dips, bread, bruschetta, pickles, and seasonal fruit. Social food that works from arrival drinks through to late evening without formal plating. From IDR 200,000/person.
+**Grazing and Sharing Platters** -- A collection of boards and platters designed for continuous grazing: cheese, charcuterie, vegetables and dips, bread, bruschetta, pickles, and seasonal fruit. Social food that works from arrival drinks through to late evening without formal plating. From IDR 700,000/person.
 
-**Healthy and Nutritional** -- Grain bowls, roasted vegetables, plant-based proteins, fresh salads with made-from-scratch dressings, and house-prepared overnight oats or smoothie bowls for breakfast delivery. Good for wellness-oriented stays or groups watching what they eat. From IDR 160,000--220,000/person.
+**Healthy and Nutritional** -- Grain bowls, roasted vegetables, plant-based proteins, fresh salads with made-from-scratch dressings, and house-prepared overnight oats or smoothie bowls for breakfast delivery. Good for wellness-oriented stays or groups watching what they eat. From IDR 700,000/person.
 
 **Single-Course Additions** -- A fresh salad, a dessert tray, a soup, or a fruit platter added onto a meal you are partly preparing yourself. Drop-off catering does not have to be the whole meal; it can fill the gaps.`,
   },
@@ -133,7 +133,7 @@ export default function DropOffCateringBaliPage() {
       title="Drop-Off Catering Bali -- Ready-to-Serve Villa Food Delivered | myCHEF"
       seoTitle="Drop-Off Catering Bali -- Fresh Villa Food Delivered Ready to Serve"
       description="Drop-off catering for Bali villas. Professional kitchen preparation, delivered to your villa ready to serve. Indonesian feasts, Western comfort, grazing platters, and breakfast delivery."
-      seoDescription="Drop-off catering in Bali for villa stays. Fresh food prepared professionally and delivered ready to serve. From IDR 150K/person. All areas covered: Canggu, Seminyak, Ubud, Uluwatu."
+      seoDescription="Drop-off catering in Bali for villa stays. Fresh food prepared professionally and delivered ready to serve. From IDR 700K/person. All areas covered: Canggu, Seminyak, Ubud, Uluwatu."
       h1="Drop-Off Catering in Bali -- Ready-to-Serve Villa Food Delivered"
       subtitle="Professional food prepared fresh and delivered to your villa. No chef on-site required."
       heroImage="/images/blog/drop-off-catering-bali.jpg"
@@ -152,7 +152,7 @@ export default function DropOffCateringBaliPage() {
         'simple catering bali',
         'food delivery villa bali',
       ]}
-      highlights={['Fresh Daily Preparation', 'All Villa Areas', 'From IDR 150K/person', 'No Staff Required']}
+      highlights={['Fresh Daily Preparation', 'All Villa Areas', 'From IDR 700K/person', 'No Staff Required']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

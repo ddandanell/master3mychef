@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does a private chef cost in Jakarta?',
-    a: 'Private chef pricing in Jakarta follows the same structure as Bali: IDR 450K–800K per person for intimate villa dinners, IDR 600K–1.2M for corporate events, and IDR 1.5M–3M+ for weddings. All prices are subject to 11% government tax + 10% service charge.',
+    a: 'Private chef pricing in Jakarta follows the same structure as Bali: IDR 700K–800K per person for intimate villa dinners, IDR 700K–1.2M for corporate events, and IDR 1.5M–3M+ for weddings. All prices are subject to 11% government tax + 10% service charge.',
   },
   {
     q: 'How quickly can you arrange a chef in Jakarta?',
@@ -47,19 +47,19 @@ const NEIGHBORHOODS = [
 const SERVICES = [
   {
     name: 'Villa & Residence Dinners',
-    range: 'IDR 450K–800K / person',
+    range: 'IDR 700K–800K / person',
     for: '2–12 guests',
     detail: 'A dedicated chef cooks at your Jakarta home or villa — from a 4-course modern Indonesian dinner to a full tasting menu experience.',
   },
   {
     name: 'Corporate Events & Board Dinners',
-    range: 'IDR 600K–1.5M / person',
+    range: 'IDR 700K–1.5M / person',
     for: '10–100 guests',
     detail: 'Executive dining, team-building lunches, and formal board dinners delivered to your corporate venue or suite in SCBD or Sudirman.',
   },
   {
     name: 'Private Event Catering',
-    range: 'IDR 600K–1.2M / person',
+    range: 'IDR 700K–1.2M / person',
     for: '15–80 guests',
     detail: 'Birthday celebrations, engagement parties, and milestone events. Full team, full setup, full cleanup — you focus on your guests.',
   },
@@ -106,7 +106,7 @@ export default function JakartaPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Jakarta | Corporate & Villa Dining — myCHEF"
-        description="Book a private chef in Jakarta for villa dinners, corporate events & weddings. IDR 450K/person. Indonesian chefs, Michelin standards. Request a quote on WhatsApp."
+        description="Book a private chef in Jakarta for villa dinners, corporate events & weddings. IDR 700K/person. Indonesian chefs, Michelin standards. Request a quote on WhatsApp."
         canonical={canonical}
         ogImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
         jsonLd={[

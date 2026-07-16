@@ -64,11 +64,11 @@ We operate across Seminyak, Canggu, Uluwatu, Jimbaran, Sanur, Nusa Dua, Ubud, an
     id: 'pricing',
     type: 'content',
     title: 'Brunch Catering Prices in Bali',
-    body: `**Daily Villa Brunch (up to 8 guests)**: From IDR 400,000/person including chef, fresh ingredients, and basic service. Covers a generous spread or cooked-to-order breakfast.
+    body: `**Daily Villa Brunch (up to 8 guests)**: From IDR 700,000/person including chef, fresh ingredients, and basic service. Covers a generous spread or cooked-to-order breakfast.
 
-**Occasion Brunch (8--20 guests)**: From IDR 500,000/person including chef, full spread, 2 service staff, setup, and cleanup.
+**Occasion Brunch (8--20 guests)**: From IDR 700,000/person including chef, full spread, 2 service staff, setup, and cleanup.
 
-**Celebration Brunch with Full Service (20--50 guests)**: From IDR 600,000/person including multiple stations, full service team, and cleanup. Beverage packages (cocktail brunch with mixologist) from IDR 200,000/person additional.
+**Celebration Brunch with Full Service (20--50 guests)**: From IDR 700,000/person including multiple stations, full service team, and cleanup. Beverage packages (cocktail brunch with mixologist) from IDR 200,000/person additional.
 
 **Bespoke Large Group Brunch (50+ guests)**: Quoted on enquiry.
 
@@ -126,7 +126,7 @@ export default function BrunchCateringBaliPage() {
       title="Brunch Catering Bali -- Private Chef Brunch for Villa Events & Group Stays"
       seoTitle="Brunch Catering Bali -- Private Chef Villa Brunch for Events & Holidays"
       description="Private chef brunch catering for Bali villa events and stays. From casual daily morning spreads to celebration brunches for 50+ guests. Full service, fresh ingredients, all villa areas."
-      seoDescription="Brunch catering in Bali for villa events and group stays. Private chef brunch from IDR 400K/person. Post-wedding, birthday, hen party, and daily villa brunch options. All Bali areas."
+      seoDescription="Brunch catering in Bali for villa events and group stays. Private chef brunch from IDR 700K/person. Post-wedding, birthday, hen party, and daily villa brunch options. All Bali areas."
       h1="Brunch Catering Bali -- Private Chef Brunch for Villa Events & Group Stays"
       subtitle="From lazy poolside morning spreads to celebration brunches for 50 guests -- a private chef makes every morning in Bali exceptional."
       heroImage="/images/blog/brunch-catering-bali.jpg"
@@ -145,7 +145,7 @@ export default function BrunchCateringBaliPage() {
         'post wedding brunch bali',
         'morning catering bali',
       ]}
-      highlights={['Casual to Formal Formats', 'Cocktail Brunch Option', 'Up to 50+ Guests', 'From IDR 400K/person']}
+      highlights={['Casual to Formal Formats', 'Cocktail Brunch Option', 'Up to 50+ Guests', 'From IDR 700K/person']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

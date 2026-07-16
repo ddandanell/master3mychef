@@ -36,12 +36,12 @@ const SECTIONS = [
       {
         icon: Flame,
         title: 'Epic BBQ Night',
-        desc: 'Whole beast BBQ centrepiece, full satay station, sharing platters, cold beer service, and grill-side service from a dedicated chef. The classic bucks night format — standing, social, maximum meat. IDR 450,000/person. Minimum 10 guests.',
+        desc: 'Whole beast BBQ centrepiece, full satay station, sharing platters, cold beer service, and grill-side service from a dedicated chef. The classic bucks night format — standing, social, maximum meat. IDR 700,000/person. Minimum 10 guests.',
       },
       {
         icon: UtensilsCrossed,
         title: 'Feast & Drinks Package',
-        desc: '5-course banquet served seated around the villa table, plus a cocktail welcome on arrival. Coursed service from dedicated staff. Built for groups who want the party to feel like a proper occasion before the night kicks off. IDR 650,000/person.',
+        desc: '5-course banquet served seated around the villa table, plus a cocktail welcome on arrival. Coursed service from dedicated staff. Built for groups who want the party to feel like a proper occasion before the night kicks off. IDR 700,000/person.',
       },
       {
         icon: Star,
@@ -51,7 +51,7 @@ const SECTIONS = [
       {
         icon: Pizza,
         title: 'Casual Pack',
-        desc: 'Shared plates, grill station, unlimited nasi goreng and mie goreng from a live wok station, bottomless rice and sides. Perfect for larger groups keeping costs lean without sacrificing quality or quantity. IDR 350,000/person.',
+        desc: 'Shared plates, grill station, unlimited nasi goreng and mie goreng from a live wok station, bottomless rice and sides. Perfect for larger groups keeping costs lean without sacrificing quality or quantity. IDR 700,000/person.',
       },
     ],
   },

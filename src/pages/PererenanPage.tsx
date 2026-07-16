@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does a private chef cost in Pererenan?',
-    a: 'Designer villa dinners in Pererenan start at IDR 400K–700K per person for 2–10 guests. Weekly chef service is priced per day based on meal count and household size. Group feasts for 8–30 guests range from IDR 450K–800K per person. All prices are subject to 11% tax + 10% service charge.',
+    a: 'Designer villa dinners in Pererenan start from IDR 700K per person for 2–10 guests. Weekly chef service is priced per day based on meal count and household size. Group feasts for 8–30 guests range from IDR 700K–800K per person. All prices are subject to 11% tax + 10% service charge.',
   },
   {
     q: 'Can you do weekly chef service for longer stays in Pererenan?',
@@ -47,7 +47,7 @@ const AREAS = [
 const SERVICES = [
   {
     name: 'Designer Villa Fine Dining',
-    range: 'IDR 400K–700K / person',
+    range: 'From IDR 700K / person',
     for: '2–10 guests',
     detail: 'Intimate tasting menus and chef-table dinners calibrated to Pererenan\'s design-led villa aesthetic. Clean plating, premium local ingredients, and quiet professional service — nothing performative.',
   },
@@ -59,13 +59,13 @@ const SERVICES = [
   },
   {
     name: 'Relaxed Group Feast',
-    range: 'IDR 450K–800K / person',
+    range: 'IDR 700K–800K / person',
     for: '8–30 guests',
     detail: 'Arrival dinners, birthday celebrations, and group lunches for villas gathering family or friends. Generous shared-plate formats, local and international dishes, and full cleanup by our team.',
   },
   {
     name: 'Healthy Retreat Catering',
-    range: 'IDR 350K–600K / person',
+    range: 'From IDR 700K / person',
     for: '6–20 guests',
     detail: 'Multi-day catering for wellness retreats, yoga groups, and remote-work communities. Whole-food menus, plant-based options, and portion structures designed to energise rather than slow guests down.',
   },

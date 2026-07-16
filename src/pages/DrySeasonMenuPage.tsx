@@ -164,7 +164,7 @@ const FAQS = [
   },
   {
     question: 'How much does a dry season private chef dinner cost in Bali?',
-    answer: 'Dry season pricing does not differ from standard rates. A plated private chef dinner starts from IDR 800,000–1,300,000/person depending on courses and complexity. A Balinese buffet feast starts from IDR 450,000–750,000/person. See our full pricing guide for details.',
+    answer: 'Dry season pricing does not differ from standard rates. A plated private chef dinner starts from IDR 800,000–1,300,000/person depending on courses and complexity. A Balinese buffet feast starts from IDR 700,000–750,000/person. See our full pricing guide for details.',
   },
   {
     question: 'What is the most popular dry season menu at a Bali villa?',

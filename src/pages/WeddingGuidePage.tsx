@@ -10,25 +10,21 @@ const WEDDING_SERVICES = [
     name: 'Pre-Wedding Dinners',
     description: 'Intimate welcome dinners for rehearsal or welcome events',
     bestFor: '20–50 guests',
-    price: 'IDR 1.2M–2M++',
   },
   {
     name: 'Wedding Reception Dinner',
     description: 'Full multi-course wedding dinner with waiters and bar service',
     bestFor: '30–200 guests',
-    price: 'IDR 1.5M–3M++',
   },
   {
     name: 'Destination Wedding Package',
     description: 'Multiple events over a weekend (welcome, rehearsal, main reception)',
     bestFor: 'Multi-day events',
-    price: 'Custom quote',
   },
   {
     name: 'Post-Wedding Brunch',
     description: 'Casual brunch or day-after gathering',
     bestFor: '20–100 guests',
-    price: 'IDR 800K–1.5M++',
   },
 ]
 
@@ -144,7 +140,7 @@ export default function WeddingGuidePage() {
               <p className="text-[#666] mb-6">{service.description}</p>
               <div className="space-y-2">
                 <p className="text-sm text-[#666]"><strong>Best for:</strong> {service.bestFor}</p>
-                <p className="text-lg font-semibold text-[#C5A028]">{service.price}</p>
+                <p className="text-sm text-[#666]">Quoted individually in your proposal</p>
               </div>
             </div>
           ))}

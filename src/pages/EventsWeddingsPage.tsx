@@ -379,7 +379,7 @@ export default function EventsWeddingsPage() {
             ))}
           </div>
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mt-10">
-            Still selecting your venue? We work with villa partners and management companies across Bali and can advise on properties that suit your guest count, event format, and service requirements — based on real experience of which villas deliver both beauty and practicality.
+            Still selecting your venue? We work with villa partners and management companies across Bali and can advise on properties that suit your guest count, event format, and service requirements — based on real experience of which villas deliver both beauty and practicality. Planning more than a single day? Our <Link to="/villa-event-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Bali villa event packages</Link> wrap the whole stay — chef, staff, bar, transport and cleanup — into one tailored quotation.
           </p>
         </div>
       </section>

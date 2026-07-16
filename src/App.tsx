@@ -45,6 +45,8 @@ const EventsCorporatePage = lazy(() => import('./pages/EventsCorporatePage'))
 const EventsRetreatsPage = lazy(() => import('./pages/EventsRetreatsPage'))
 const EventsBabyShowersPage = lazy(() => import('./pages/EventsBabyShowersPage'))
 const EventsVillaPartiesPage = lazy(() => import('./pages/EventsVillaPartiesPage'))
+const VillaEventPackagesPage = lazy(() => import('./pages/VillaEventPackagesPage'))
+const VipTransportBaliPage = lazy(() => import('./pages/VipTransportBaliPage'))
 
 // New system-plan pages
 const CateringPage = lazy(() => import('./pages/CateringMainPage'))
@@ -270,6 +272,8 @@ export default function App() {
           <Route path="/events/retreats" element={<EventsRetreatsPage />} />
           <Route path="/events/baby-showers" element={<EventsBabyShowersPage />} />
           <Route path="/events/villa-parties" element={<EventsVillaPartiesPage />} />
+          <Route path="/villa-event-packages" element={<VillaEventPackagesPage />} />
+          <Route path="/vip-transport-bali" element={<VipTransportBaliPage />} />
           <Route path="/in-villa-service" element={<InVillaServicePage />} />
           <Route path="/in-villa-service/waiters" element={<ServiceWaitersPage />} />
           <Route path="/in-villa-service/butlers" element={<ServiceButlersPage />} />

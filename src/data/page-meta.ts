@@ -236,6 +236,26 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/events-event-wedding-xl.webp`,
   },
 
+  'villa-event-packages': {
+    path: '/villa-event-packages',
+    title: 'Bali Villa Event Packages | All-Inclusive — myCHEF',
+    description:
+      'All-inclusive villa experience in Bali: airport pickup, daily private chef, event planning, bar service, staffing & cleanup. Tailored quotes.',
+    canonical: `${SITE}/villa-event-packages`,
+    h1: 'Bali Villa Event Packages — Everything, Arranged',
+    ogImage: `${SITE}/generated/mychef-events-bali-villa-party-night.webp`,
+  },
+
+  'vip-transport-bali': {
+    path: '/vip-transport-bali',
+    title: 'VIP Transport Bali | Luxury Cars & Yachts — myCHEF',
+    description:
+      'VIP transport in Bali: luxury car hire, minibuses, yacht charters & event logistics with English-speaking drivers. Enquire via WhatsApp.',
+    canonical: `${SITE}/vip-transport-bali`,
+    h1: 'VIP Transport Bali — Luxury Cars, Yachts & Private Transfers',
+    ogImage: `${SITE}/generated/mychef-city-uluwatu.webp`,
+  },
+
   'events-birthdays': {
     path: '/events/birthdays',
     title: 'Birthday Party Bali Villa | Catering & Events — myCHEF',

@@ -461,9 +461,12 @@ export default function InVillaServicePage() {
               <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
             </Link>
           </div>
-          <div className="text-center">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-center">
             <Link to="/blog/how-to-hire-private-chef" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Complete hiring guide: how to hire a private chef in Bali →
+            </Link>
+            <Link to="/vip-transport-bali" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Arriving in Bali? VIP airport transfers, yachts & event transport →
             </Link>
           </div>
         </div>

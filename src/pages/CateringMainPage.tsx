@@ -819,6 +819,9 @@ export default function CateringMainPage() {
             <Link to="/recommended-services" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">
               Not sure? Let us recommend →
             </Link>
+            <Link to="/villa-event-packages" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">
+              Want it all handled? See villa event packages →
+            </Link>
             <Link to="/contact" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">
               View contact options
             </Link>

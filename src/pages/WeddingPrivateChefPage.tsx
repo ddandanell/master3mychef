@@ -9,7 +9,7 @@ const SECTIONS = [
     subtitle: 'Wedding Catering in Bali',
     title: 'Why a Private Chef Makes Your Bali Villa Wedding',
     body: `<p>A villa wedding in Bali offers intimacy, privacy, and beauty that hotels and event venues can't match. But catering logistics — kitchen access, group dietary needs, service timing, and staff coordination — require professional management. A private chef handles all of it, allowing you to focus entirely on celebrating.</p>
-    <p>Unlike hotel packages with rigid menus, a private chef adapts your catering to your vision. Balinese-inspired courses for the rehearsal dinner, a Mediterranean spread for the welcome lunch, a formal <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">fine dining reception</a> — all possible in your villa kitchen, on your timeline. For full pricing guidance, see our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">private chef pricing guide</a>.</p>`,
+    <p>Unlike hotel packages with rigid menus, a private chef adapts your catering to your vision. Balinese-inspired courses for the rehearsal dinner, a Mediterranean spread for the welcome lunch, a formal <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">fine dining reception</a> — all possible in your villa kitchen, on your timeline. Every wedding is quoted individually with a detailed, itemised proposal.</p>`,
   },
   {
     id: 'event-types',
@@ -17,10 +17,10 @@ const SECTIONS = [
     subtitle: 'Event Coverage',
     title: 'Catering for Every Wedding Event',
     features: [
-      { icon: Calendar, title: 'Rehearsal Dinner', desc: 'Intimate 20–40 guests. 2–3 courses, plated or family-style. IDR 650K–960K/person. Sets the tone for the weekend.' },
-      { icon: Users, title: 'Welcome Lunch / Brunch', desc: 'Casual 30–60 guests. Buffet or grazing stations: tropical fruit, pastries, local dishes. IDR 500K–720K/person.' },
-      { icon: ChefHat, title: 'Main Reception', desc: 'Semi-formal 50–150 guests. 3–4 courses with cocktail hour, first course, main, dessert. IDR 1M–2.4M/person.' },
-      { icon: CheckCircle, title: 'After-Party Food', desc: 'Late-night casual. Sliders, tacos, pizza bites, dessert boards. IDR 250K–400K/person. High-energy, minimal fuss.' },
+      { icon: Calendar, title: 'Rehearsal Dinner', desc: 'Intimate 20–40 guests. 2–3 courses, plated or family-style. Sets the tone for the weekend.' },
+      { icon: Users, title: 'Welcome Lunch / Brunch', desc: 'Casual 30–60 guests. Buffet or grazing stations: tropical fruit, pastries, local dishes.' },
+      { icon: ChefHat, title: 'Main Reception', desc: 'Semi-formal 50–150 guests. 3–4 courses with cocktail hour, first course, main, dessert.' },
+      { icon: CheckCircle, title: 'After-Party Food', desc: 'Late-night casual. Sliders, tacos, pizza bites, dessert boards. High-energy, minimal fuss.' },
     ],
   },
   {
@@ -39,9 +39,9 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Service Options',
     title: 'Service Styles: Plated, Buffet, Cocktail',
-    body: `<p><strong>Plated Service (Most Formal):</strong> Chef plates individually in kitchen; waitstaff serves each course. Requires 3–5 dedicated service staff for 50–100 guests. Ideal for the main reception when formality and photography matter. Cost: add IDR 1.5M–3M for service staff team.</p>
+    body: `<p><strong>Plated Service (Most Formal):</strong> Chef plates individually in kitchen; waitstaff serves each course. Requires 3–5 dedicated service staff for 50–100 guests. Ideal for the main reception when formality and photography matter. An expanded service team is scoped into your proposal.</p>
     <p><strong>Buffet Service (Flexible, Casual):</strong> All dishes arranged on stations; guests serve themselves or staff assists. Works well for welcome lunches, rehearsal dinners with a relaxed vibe, and large guest counts. Lower service cost, more flexible pacing.</p>
-    <p><strong>Cocktail Reception (Social, Interactive):</strong> Passed appetizers, stationary food stations, open bar. No formal seating — guests mingle. Great for pre-ceremony cocktail hour or post-ceremony celebrations. Requires mobile service staff and constant replenishment. Add IDR 2.5M–5M for passing staff.</p>
+    <p><strong>Cocktail Reception (Social, Interactive):</strong> Passed appetizers, stationary food stations, open bar. No formal seating — guests mingle. Great for pre-ceremony cocktail hour or post-ceremony celebrations. Requires mobile service staff and constant replenishment, scoped into your proposal.</p>
     <p><strong>Hybrid Approach (Recommended):</strong> Cocktail canapés on arrival → plated first course → buffet-style main → plated dessert. Balances formality with guest interaction. Works for 40–100 guests with 3–4 service staff.</p>`,
   },
   {
@@ -56,7 +56,7 @@ const SECTIONS = [
       <li>Adequate prep counter space and power supply</li>
       <li>Strong water pressure and sink access near prep area</li>
     </ul>
-    <p><strong>Equipment Often Rented:</strong> Additional ovens or warming boxes, industrial-size pots and pans, serving platters and chafing dishes, glassware and cutlery. Equipment rental typically IDR 5M–8M for a full weekend wedding.</p>
+    <p><strong>Equipment Often Rented:</strong> Additional ovens or warming boxes, industrial-size pots and pans, serving platters and chafing dishes, glassware and cutlery. Equipment rental is arranged per event and included as a line item in your proposal.</p>
     <p><strong>Villa Assessment Checklist:</strong> Before finalizing menus, your chef should visit (or receive detailed photos of) the kitchen to assess capacity, flag limitations, and plan around them. A skilled catering chef adapts — but surprises on the day hurt execution.</p>`,
   },
   {
@@ -76,18 +76,17 @@ const SECTIONS = [
   {
     id: 'budget',
     type: 'content' as const,
-    subtitle: 'Budget Breakdown',
-    title: 'Full Wedding Weekend Cost: 60-Guest Example',
-    body: `<p><strong>60-Guest Villa Wedding (Rehearsal Dinner + Welcome Lunch + Main Reception):</strong></p>
+    subtitle: 'Scoping & Quotes',
+    title: 'How a Full Wedding Weekend Is Scoped',
+    body: `<p><strong>Every wedding weekend is quoted individually.</strong> For a 60-guest villa wedding spanning a rehearsal dinner, welcome lunch, and main reception, your itemised proposal covers:</p>
     <ul style="margin: 1rem 0; padding-left: 2rem;">
-      <li>Head Chef (3 days, ~8 hours/day): IDR 16M–19M</li>
-      <li>Sous Chef (3 days): IDR 4.8M–6.4M</li>
-      <li>Service Staff (4 servers, 2 event days): IDR 6.5M–9.6M</li>
-      <li>Ingredients (3 meals × 60 guests, premium sourcing): IDR 40M–56M</li>
-      <li>Equipment Rental (ovens, serving ware, warmers): IDR 5M–8M</li>
-      <li>Delivery & Setup: IDR 1.6M–3.2M</li>
+      <li>Chef and kitchen team across all event days</li>
+      <li>Service staff matched to each event's format and guest count</li>
+      <li>Ingredients with premium sourcing and market shopping</li>
+      <li>Equipment rental (ovens, serving ware, warmers)</li>
+      <li>Delivery, setup, and full cleanup after every event</li>
     </ul>
-    <p><strong>Total: IDR 73M–104M</strong> (~IDR 1.2M–1.7M per person for full weekend catering)</p>
+    <p><strong>What shapes the quote:</strong> guest count, number of service days, menu complexity, staffing ratio, and bar service. You receive a transparent, line-by-line proposal before any deposit is requested.</p>
     <p><strong>Cost-Saving Options:</strong> Book during low season (Nov–Mar). Prioritize buffet over plated for rehearsal/lunch. Use local Balinese ingredients over imported. Combine lunch and cocktail hour into one continuous service. Book same chef team for all events to reduce coordination cost.</p>`,
   },
   {
@@ -124,7 +123,7 @@ const FAQS = [
   },
   {
     question: 'Can a private chef do a tasting menu before the wedding to confirm the food?',
-    answer: 'Yes, and we strongly recommend it for main reception menus. A tasting session (typically 2–3 months before the event) lets you approve each course, adjust flavors, and finalize wine pairings. Tasting sessions usually cost IDR 1.5M–3M for 2 people and are worth every rupiah for a wedding.',
+    answer: 'Yes, and we strongly recommend it for main reception menus. A tasting session (typically 2–3 months before the event) lets you approve each course, adjust flavors, and finalize wine pairings. Tastings for two people are billed separately and are worth it for a wedding.',
   },
 ]
 
@@ -141,9 +140,9 @@ export default function WeddingPrivateChefPage() {
     <PremiumPage
       slug="blog/wedding-private-chef-bali-planning-guide"
       title="Wedding Private Chef in Bali: Planning & Catering Guide"
-      description="Plan your Bali villa wedding catering with a private chef. Menus, timelines, service styles, and full budget breakdown in IDR."
+      description="Plan your Bali villa wedding catering with a private chef. Menus, timelines, service styles, and planning guidance."
       seoTitle="Wedding Private Chef Bali | Villa Catering Planning Guide"
-      seoDescription="Plan your Bali villa wedding catering with a private chef. Menus, timelines, service styles, and full budget breakdown in IDR."
+      seoDescription="Plan your Bali villa wedding catering with a private chef. Menus, timelines, service styles, and planning guidance."
       canonicalUrl="https://mychef.id/blog/wedding-private-chef-bali-planning-guide"
       h1="Wedding Private Chef in Bali"
       subtitle="Planning & Catering Guide for Your Villa Wedding"
@@ -151,7 +150,7 @@ export default function WeddingPrivateChefPage() {
       heroImageAlt="Private chef elegantly serving a multi-course wedding dinner at a luxury Bali villa"
       ogImage="https://mychef.id/generated/mychef-blog-wedding-private-chef.webp"
       keywords={['wedding private chef bali', 'bali villa wedding catering', 'private chef wedding bali']}
-      highlights={['Wedding Events', 'Planning Timeline', 'Service Styles', 'Budget Guide']}
+      highlights={['Wedding Events', 'Planning Timeline', 'Service Styles', 'Scoping & Quotes']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
@@ -162,7 +161,7 @@ export default function WeddingPrivateChefPage() {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
           headline: 'Wedding Private Chef in Bali: Planning & Catering Guide',
-          description: 'Plan your Bali villa wedding catering with a private chef. Menus, timelines, service styles, and full budget breakdown in IDR.',
+          description: 'Plan your Bali villa wedding catering with a private chef. Menus, timelines, service styles, and planning guidance.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
           datePublished: '2025-05-01',

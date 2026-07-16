@@ -230,7 +230,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/events/weddings',
     title: 'Wedding Catering Bali | Villa Weddings & Receptions',
     description:
-      'Wedding catering in Bali for villa ceremonies & receptions. Michelin-trained chefs, full staffing, multi-tier menus from IDR 600K/pp. WhatsApp us.',
+      'Wedding catering in Bali for villa ceremonies & receptions. Michelin-trained chefs, full staffing, bespoke menus, and complete coordination. WhatsApp us.',
     canonical: `${SITE}/events/weddings`,
     h1: 'Wedding Catering in Bali — Villa Weddings & Receptions',
     ogImage: `${SITE}/events-event-wedding-xl.webp`,

@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: 'What does Bali wedding catering cost with a private chef?',
-    a: 'Wedding catering costs depend on guest count, menu complexity, service hours, and staffing. A seated fine-dining wedding dinner for 20 guests typically starts from IDR 8–12 million for food and chef fees. Add service staff, bar setup, and equipment rental for larger events. See our full pricing guide for a detailed breakdown.',
+    a: 'Wedding catering costs depend on guest count, menu complexity, service hours, and staffing. Every wedding is quoted individually — you receive a detailed, itemised proposal before any deposit. Message us on WhatsApp with your date and guest count for a tailored quote.',
   },
   {
     q: 'Can we have a menu tasting before the wedding?',
@@ -264,7 +264,7 @@ export default function BaliWeddingCateringTimelinePage() {
           <div className="bg-white border-l-4 border-[#C5A028] p-6 rounded-r-lg shadow-sm">
             <p className="text-xs font-semibold text-[#C5A028] tracking-widest uppercase mb-2">Quick Answer</p>
             <p className="text-[#1A1A1A] text-base leading-relaxed">
-              For a Bali wedding with a private chef, the planning timeline runs from 6 months out (date hold and concept) through a tasting at 4–8 weeks, final logistics at 2–3 weeks, prep-cook the day before, and full on-site service on the wedding day. The key milestones are: deposit to hold the date, menu finalisation after the tasting, and final guest count 2–3 weeks out. Budget IDR 8–20 million for a seated dinner of 20 guests depending on menu complexity and staffing.
+              For a Bali wedding with a private chef, the planning timeline runs from 6 months out (date hold and concept) through a tasting at 4–8 weeks, final logistics at 2–3 weeks, prep-cook the day before, and full on-site service on the wedding day. The key milestones are: deposit to hold the date, menu finalisation after the tasting, and final guest count 2–3 weeks out. Every wedding is scoped and quoted individually, with an itemised proposal confirmed before any deposit.
             </p>
           </div>
         </div>
@@ -374,49 +374,45 @@ export default function BaliWeddingCateringTimelinePage() {
         </div>
       </section>
 
-      {/* Pricing Context */}
+      {/* Quote Context */}
       <section className="bg-[#F9F6EF] px-4 py-14">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-6">
-            Bali Wedding Catering Costs: What to Budget
+            What Shapes Your Wedding Quote
           </h2>
           <div className="prose prose-lg max-w-none text-[#444] space-y-4 mb-8">
             <p>
-              Bali wedding catering costs are not fixed — they depend on guest count, menu complexity, number of service staff, and whether you need bar service and alcohol procurement. Here are realistic budget anchors for 2025–2026:
+              Bali wedding catering is not one-size-fits-all — every celebration is quoted individually, and you always receive a transparent, itemised proposal before any deposit. Three things shape the quote:
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
               {
-                label: 'Intimate Wedding',
-                guests: 'Up to 20 guests',
-                range: 'IDR 8–15 million',
-                detail: '4-course plated dinner, 1 chef, 2 waiters, full kitchen prep and cleanup',
+                label: 'Guest Count & Event Days',
+                guests: 'Scale of service',
+                detail: 'A single reception dinner for 20 is a very different operation from a three-day wedding weekend with rehearsal dinner, welcome lunch, and recovery brunch.',
               },
               {
-                label: 'Mid-Size Reception',
-                guests: '20–50 guests',
-                range: 'IDR 18–35 million',
-                detail: '5-course dinner with cocktail hour, lead chef + commis, 4 service staff, bar service',
+                label: 'Menu Complexity & Sourcing',
+                guests: 'What is on the plate',
+                detail: 'Course count, premium ingredients such as Wagyu or imported seafood, and the number of separate dietary preparations all shape the kitchen plan.',
               },
               {
-                label: 'Full Production Wedding',
-                guests: '50–100 guests',
-                range: 'IDR 40–80 million',
-                detail: 'Multi-course event with canape hour, full kitchen brigade, 6–8 service staff, bar team, equipment hire',
+                label: 'Staffing, Bar & Equipment',
+                guests: 'The service around the food',
+                detail: 'Waiter ratios, bartenders and sommeliers, plus any portable kitchen equipment, marquees, or furniture the villa cannot provide.',
               },
             ].map((tier, i) => (
               <div key={i} className="bg-white rounded-lg p-6 shadow-sm border border-[#E8E4DC]">
                 <p className="text-[#C5A028] text-xs font-semibold tracking-widest uppercase mb-1">{tier.label}</p>
                 <p className="text-sm text-[#666] mb-2">{tier.guests}</p>
-                <p className="text-2xl font-bold text-[#1A1A1A] mb-3">{tier.range}</p>
                 <p className="text-xs text-[#666]">{tier.detail}</p>
               </div>
             ))}
           </div>
           <div className="bg-[#FDF8EE] border border-[#E8DDB5] rounded-lg px-6 py-4">
             <p className="text-sm text-[#8A6F20]">
-              <strong>Note:</strong> Prices are for food preparation, chef and kitchen team fees, and service staff. Alcohol and beverage costs are billed at market rate separately. Equipment hire (marquee, additional furniture, portable kitchen) is quoted case-by-case.{' '}
+              <strong>Note:</strong> Your proposal covers food preparation, chef and kitchen team fees, and service staff. Alcohol and beverages are billed at market rate separately. Equipment hire (marquee, additional furniture, portable kitchen) is quoted case-by-case.{' '}
               <Link to="/blog/private-chef-cost-bali" className="underline hover:text-[#C5A028]">
                 See the full private chef cost guide for Bali →
               </Link>

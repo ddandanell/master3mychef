@@ -81,7 +81,7 @@ export default function VipTransportBaliPage() {
         title="VIP Transport Bali | Luxury Cars & Yachts — myCHEF"
         description="VIP transport in Bali: luxury car hire, minibuses, yacht charters & event logistics with English-speaking drivers. Enquire via WhatsApp."
         canonical={`${SITE}/vip-transport-bali`}
-        ogImage={`${SITE}/generated/mychef-city-uluwatu.webp`}
+        ogImage={`${SITE}/generated/mychef-vip-transport-bali-hero.webp`}
         jsonLd={[
           detailedServiceSchema('VIP Transport Bali', 'myCHEF.id provides VIP transport in Bali: luxury car hire, minibuses and buses, yacht charters and landing boats, plus integrated catering and event logistics — with English-speaking drivers and coordination with our culinary teams.', `${SITE}/vip-transport-bali`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
@@ -92,9 +92,9 @@ export default function VipTransportBaliPage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-city-uluwatu.webp"
-            alt="Sunset over the Bukit Peninsula cliffs and ocean in Uluwatu, Bali"
-            width={1536}
+            src="/generated/mychef-vip-transport-bali-hero.webp"
+            alt="Uniformed myCHEF chauffeur opening the door of a black luxury VIP van at a Bali villa entrance"
+            width={1024}
             height={1024}
             loading="eager"
             fetchPriority="high"
@@ -185,7 +185,7 @@ export default function VipTransportBaliPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/mychef-experience-bali-hero-retreats.webp" alt="Group of guests dining together at a Bali retreat villa" width={1440} height={800} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-vip-minibus-bali.webp" alt="Uniformed myCHEF driver beside a white air-conditioned minibus with open sliding door at a Bali villa" width={1024} height={1024} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -233,7 +233,7 @@ export default function VipTransportBaliPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-city-seminyak.webp" alt="Sunset over the ocean in Seminyak, Bali — yacht charter horizon" width={1536} height={1024} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-bali-yacht-charter.webp" alt="Champagne and canapés on the deck of a myCHEF charter yacht off the Nusa Penida cliffs, Bali" width={1024} height={1024} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

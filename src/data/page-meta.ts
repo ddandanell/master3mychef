@@ -243,7 +243,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'All-inclusive villa experience in Bali: airport pickup, daily private chef, event planning, bar service, staffing & cleanup. Tailored quotes.',
     canonical: `${SITE}/villa-event-packages`,
     h1: 'Bali Villa Event Packages — Everything, Arranged',
-    ogImage: `${SITE}/generated/mychef-events-bali-villa-party-night.webp`,
+    ogImage: `${SITE}/generated/mychef-villa-event-packages-hero.webp`,
   },
 
   'vip-transport-bali': {
@@ -253,7 +253,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'VIP transport in Bali: luxury car hire, minibuses, yacht charters & event logistics with English-speaking drivers. Enquire via WhatsApp.',
     canonical: `${SITE}/vip-transport-bali`,
     h1: 'VIP Transport Bali — Luxury Cars, Yachts & Private Transfers',
-    ogImage: `${SITE}/generated/mychef-city-uluwatu.webp`,
+    ogImage: `${SITE}/generated/mychef-vip-transport-bali-hero.webp`,
   },
 
   'events-birthdays': {

@@ -108,7 +108,7 @@ export default function VillaEventPackagesPage() {
         title="Bali Villa Event Packages | All-Inclusive — myCHEF"
         description="All-inclusive villa experience in Bali: airport pickup, daily private chef, event planning, bar service, staffing & cleanup. Tailored quotes."
         canonical={`${SITE}/villa-event-packages`}
-        ogImage={`${SITE}/generated/mychef-events-bali-villa-party-night.webp`}
+        ogImage={`${SITE}/generated/mychef-villa-event-packages-hero.webp`}
         jsonLd={[
           detailedServiceSchema('Bali Villa Event Packages', 'myCHEF.id provides all-inclusive villa event packages in Bali: airport pickup, daily private chef service, event planning, bar and bottle service, professional staffing, post-event cleanup and concierge-level care — one tailored package for your entire villa stay.', `${SITE}/villa-event-packages`),
           breadcrumbSchema('Villa Event Packages', `${SITE}/villa-event-packages`),
@@ -118,10 +118,10 @@ export default function VillaEventPackagesPage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-events-bali-villa-party-night.webp"
-            alt="Private evening celebration around a Bali villa pool with bar service"
-            width={1440}
-            height={800}
+            src="/generated/mychef-villa-event-packages-hero.webp"
+            alt="Long banquet table with floral runners and candles set for a private event on a Bali villa lawn at dusk"
+            width={1024}
+            height={1024}
             loading="eager"
             fetchPriority="high"
             decoding="async"

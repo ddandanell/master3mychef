@@ -256,8 +256,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/families" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
-                  Menu Families
+                <Link to="/dining-styles" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Dining Styles
                 </Link>
               </li>
               <li>

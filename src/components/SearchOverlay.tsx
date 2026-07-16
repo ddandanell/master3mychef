@@ -61,9 +61,9 @@ const SEARCH_INDEX: SearchResult[] = [
     icon: Utensils,
   },
   {
-    title: 'Menu Families',
+    title: 'Dining Styles',
     subtitle: 'Browse all 50 menus across six menu collections',
-    url: '/families',
+    url: '/dining-styles',
     category: 'Service',
     icon: ChefHat,
   },

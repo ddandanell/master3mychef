@@ -7,7 +7,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { CLASSIC_MENUS, THREE_COURSE_MENUS, KIDS_MENUS, BBQ_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
-const canonical = 'https://mychef.id/families'
+const canonical = 'https://mychef.id/dining-styles'
 
 const WA_LINK = buildWhatsAppUrl({
   serviceName: 'a private chef menu in Bali',
@@ -93,15 +93,15 @@ const FAMILIES: FamilyCard[] = [
   },
 ]
 
-export default function FamiliesPage() {
+export default function DiningStylesPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
       <SeoHead
-        title="Browse Menu Families — Find Your Perfect Menu | myCHEF.id"
-        description="Browse myCHEF.id menus by family. 50 menus across 6 collections. Find your perfect dining experience."
+        title="Dining Styles — Find Your Perfect Menu | myCHEF.id"
+        description="Browse myCHEF.id menus by dining style. 50 menus across 6 collections. Find your perfect dining experience."
         canonical={canonical}
         ogImage="/generated/mychef-catering-bali-plated-menus.webp"
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Menu Families', canonical)]}
+        jsonLd={[localBusinessSchema, breadcrumbSchema('Dining Styles', canonical)]}
       />
 
       {/* Hero */}
@@ -124,16 +124,16 @@ export default function FamiliesPage() {
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <Breadcrumb
-            items={[{ label: 'Menu Families' }]}
+            items={[{ label: 'Dining Styles' }]}
             theme="dark"
             className="px-0 pt-0 pb-8 flex justify-center"
           />
-          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF &middot; Menu Families</p>
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF &middot; Dining Styles</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
             Find Your Perfect Menu
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Browse by dining style, occasion, or family.
+            Browse by dining style or occasion.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -146,10 +146,10 @@ export default function FamiliesPage() {
               <MessageCircle className="w-4 h-4" /> Get a Recommendation
             </a>
             <a
-              href="#families"
+              href="#dining-styles"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-all"
             >
-              Browse Families
+              Browse Dining Styles
             </a>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default function FamiliesPage() {
       <TrustStrip dark />
 
       {/* Family cards */}
-      <section id="families" className="py-20 px-6">
+      <section id="dining-styles" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Six Collections</p>

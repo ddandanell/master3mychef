@@ -88,8 +88,8 @@ const RELATED_COLLECTIONS = [
     note: 'From IDR 250K per child',
   },
   {
-    to: '/families',
-    label: 'Menu Families',
+    to: '/dining-styles',
+    label: 'Dining Styles',
     title: 'Browse All 50 Menus',
     note: 'Every collection in one place',
   },
@@ -112,7 +112,7 @@ export default function ThreeCoursePage() {
         ogImage="/generated/mychef-catering-bali-plated-3course-table.webp"
         jsonLd={[
           localBusinessSchema,
-          breadcrumbSchema('Three-Course Dining', CANONICAL, 'Menu Families', 'https://mychef.id/families'),
+          breadcrumbSchema('Three-Course Dining', CANONICAL, 'Dining Styles', 'https://mychef.id/dining-styles'),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           serviceWithOfferSchema({
             name: 'Three-Course Villa Dining',
@@ -173,7 +173,7 @@ export default function ThreeCoursePage() {
               <MessageCircle className="w-4 h-4" /> Get Your Quote in 1 Hour
             </a>
             <Link
-              to="/families"
+              to="/dining-styles"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-all"
             >
               Browse all menus

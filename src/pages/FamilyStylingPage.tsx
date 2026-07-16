@@ -121,7 +121,7 @@ export default function FamilyStylingPage() {
         ogImage="/generated/mychef-catering-bali-plated-menus.webp"
         jsonLd={[
           localBusinessSchema,
-          breadcrumbSchema('Family Styling Guide', CANONICAL, 'Menu Families', `${SITE}/families`),
+          breadcrumbSchema('Family Styling Guide', CANONICAL, 'Dining Styles', `${SITE}/dining-styles`),
         ]}
       />
 
@@ -168,11 +168,11 @@ export default function FamilyStylingPage() {
               <MessageCircle className="w-4 h-4" /> Get Your Quote
             </a>
             <Link
-              to="/families"
+              to="/dining-styles"
               data-source="family-styling-hero-families"
               className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-all"
             >
-              Browse All Families
+              Browse All Dining Styles
             </Link>
           </div>
         </div>
@@ -249,11 +249,11 @@ export default function FamilyStylingPage() {
               <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
             </a>
             <Link
-              to="/families"
+              to="/dining-styles"
               data-source="family-styling-final-families"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-all"
             >
-              Browse all families
+              Browse all dining styles
             </Link>
             <Link
               to="/recommended-services"

@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 /**
- * Generate the six collection-card images for /families ("Browse by Dining Style").
- * Each prompt is written to match the actual collection content — super realistic
- * editorial hospitality photography, luxury Bali villa setting, Indonesian staff
- * when people are shown.
+ * Generate the six collection-card images for /dining-styles ("Browse by Dining Style").
+ * Each prompt describes the general scene for that collection — a generic luxury
+ * catering-company look (modern villa, no Indonesian styling) and NO people.
  *
  * Provider: OpenAI gpt-image-1, quality=high (user requested a higher tier for
  * these), 1536x1024. Output is cropped to 4:3 (the card aspect) and compressed
@@ -11,7 +10,7 @@
  *
  * Auth: OPENAI_API_KEY must be set in the environment.
  *
- * Usage: npx tsx scripts/generate-family-cards.ts [--only kids]
+ * Usage: npx tsx scripts/generate-family-cards.ts [--only kids] [--force]
  */
 
 import { existsSync, writeFileSync } from 'node:fs'
@@ -26,9 +25,9 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
 const RULES =
   'Ultra-realistic professional photograph, natural light, shallow depth of field, ' +
-  'candid editorial hospitality style, looks 100% real (not AI-generated). ' +
-  'Luxury Bali villa setting. Any service staff shown must look Indonesian/Balinese. ' +
-  'No text, no watermark, no logo.'
+  'editorial hospitality style, looks 100% real (not AI-generated). Modern luxury ' +
+  'villa setting, neutral international styling. Absolutely no people, no hands, ' +
+  'no text, no watermark, no logo.'
 
 interface Job {
   out: string
@@ -39,53 +38,44 @@ const JOBS: Job[] = [
   {
     out: 'mychef-families-bali-classic-set-menus',
     prompt:
-      'Editorial food photograph: a candlelit fine dining table on the covered terrace of a luxury Bali villa at ' +
-      'night, white linen and gold-rimmed porcelain. In the foreground a just-served course — seared duck breast ' +
-      'fanned over dark cherry gastrique with micro herbs on a hand-thrown ceramic plate, precise sauce dots. ' +
-      'Wine glasses catch the candlelight, a second plated course softly blurred further down the table. Tropical ' +
-      'garden and the dark silhouette of a private pool behind. Warm gold and deep shadow tones, 85mm lens. ' + RULES,
+      'Wide shot of an elegant dining table inside a modern luxury villa at dusk, soft candles glowing along ' +
+      'the table, white linen and gold-rimmed porcelain, a just-plated gourmet course in the foreground, wine ' +
+      'glasses catching the warm candlelight, sophisticated intimate evening mood. ' + RULES,
   },
   {
     out: 'mychef-families-bali-three-course',
     prompt:
-      'Editorial food photograph: a relaxed three-course lunch table for two beside a private pool at a Bali villa, ' +
-      'late-afternoon natural light. On the light linen tablecloth: a starter bowl of grilled halloumi salad with ' +
-      'cherry tomatoes, a plated main of herb-crusted chicken with roasted vegetables, and a small lemon tart with ' +
-      'a mint leaf. Simple elegant tableware, two wine glasses, a few frangipani flowers on the table. Pool water ' +
-      'and tropical plants soft-focus behind. Bright, airy, relaxed. ' + RULES,
+      'Early-evening poolside scene at a modern luxury villa, a relaxed table for two beside the water set ' +
+      'with a light three-course dinner — a fresh starter, an elegant main and a small dessert — gentle ambient ' +
+      'lighting, casual upscale mood, calm pool reflections. ' + RULES,
   },
   {
     out: 'mychef-families-bali-bbq-grill',
     prompt:
-      'Editorial photograph: an Indonesian chef in a dark apron tending a live charcoal grill station in a Bali ' +
-      'villa garden at dusk. Satay skewers, tiger prawns and a whole butterflied fish sizzle over glowing coals, ' +
-      'thin smoke drifting through the warm light. Glowing embers in the foreground, the chef’s hands turning ' +
-      'skewers with tongs, a set dinner table with wine glasses softly blurred behind him. Cinematic, candid. ' + RULES,
+      'Outdoor terrace of a tropical villa at night, a live charcoal grill station with assorted seafood and ' +
+      'meats sizzling over glowing coals — prawns, fish and skewers — thin smoke drifting through the warm ' +
+      'flame light, a set dinner table with wine glasses softly blurred in the background. ' + RULES,
   },
   {
     out: 'mychef-families-bali-kids-menus',
     prompt:
-      'Editorial photograph: a cheerful kids’ party lunch table on the sunny terrace of a Bali villa, styled ' +
-      'tastefully. On the table: mini burger sliders on small brioche buns, small wood-fired pizzas on wooden ' +
-      'boards, colourful fresh fruit cups, vegetable sticks with dip in individual cups, and cupcakes with light ' +
-      'frosting. Bright natural daylight, a turquoise pool and tropical garden soft-focus behind, a few pastel ' +
-      'balloons barely visible and out of focus. Fresh, fun but elegant. No people. ' + RULES,
+      'Bright daylight garden at a modern luxury villa, a colourful children’s party table set with small bites ' +
+      '— mini burger sliders, small pizzas, fresh fruit cups and cupcakes — playful decorations and a few ' +
+      'pastel balloons, joyful family-party vibe, fresh and inviting. ' + RULES,
   },
   {
     out: 'mychef-families-bali-fine-dining-experience',
     prompt:
-      'Editorial photograph: an Indonesian private chef in a white chef jacket carefully plating an elegant course ' +
-      'at the open kitchen counter of a luxury Bali villa in the evening — tweezers placing a micro herb on seared ' +
-      'tuna crudo. Behind him, softly blurred, a candlelit dinner table with wine glasses waits on the terrace, ' +
-      'tropical night garden beyond. Warm focused light on his hands and the plate, cinematic warm tones. ' + RULES,
+      'Spacious open-plan villa kitchen and dining area in the evening, several elegant plated fine-dining ' +
+      'courses arranged on a wide island counter — precise plating, micro herbs, sauce dots — sophisticated ' +
+      'yet intimate atmosphere, warm focused light on the counter. ' + RULES,
   },
   {
     out: 'mychef-families-bali-catering-events',
     prompt:
-      'Editorial photograph: a long banquet table styled for a private celebration in a Bali villa garden at golden ' +
-      'hour — white linen, tropical flower runners, gold cutlery and glassware catching the warm light. Two ' +
-      'Indonesian service staff in black uniforms arrange plates at the far end of the table. Frangipani trees and ' +
-      'soft string lights in the background, gentle bokeh, warm golden tones. ' + RULES,
+      'Long banquet table on a manicured lawn overlooking the ocean at sunset, white linen, floral runners ' +
+      'and crystal glassware catching the golden light, candles ready to be lit, everything styled and ' +
+      'prepared for an elegant private celebration. ' + RULES,
   },
 ]
 

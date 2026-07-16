@@ -102,7 +102,7 @@ function getContextData(pathname: string) {
       triggerMsg: 'Want a live grill station at your villa? I can walk you through our BBQ experiences.',
     }
   }
-  if (normalized.startsWith('/families') || normalized.startsWith('/family-styling')) {
+  if (normalized.startsWith('/dining-styles') || normalized.startsWith('/family-styling')) {
     return {
       prefix: 'I need help choosing between your menus. ',
       triggerMsg: 'Not sure which of our 50 menus fits your group? I can help you pick the right one.',

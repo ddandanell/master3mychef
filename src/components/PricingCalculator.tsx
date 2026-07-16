@@ -100,9 +100,9 @@ export default function PricingCalculator({
 
     switch (serviceType) {
       case 'private-chef-dinner':
-        return (guestCount * 450_000 + 500_000) * multiplier
+        return (guestCount * 700_000 + 500_000) * multiplier
       case 'catering-event':
-        return (guestCount * 350_000 + 1_500_000) * multiplier
+        return (guestCount * 700_000 + 1_500_000) * multiplier
       case 'fine-dining-experience':
         return (guestCount * 850_000 + 750_000) * multiplier
       case 'staffing':

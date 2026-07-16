@@ -54,9 +54,9 @@ const SECTIONS: PageSection[] = [
     title: 'Private Chef Ubud Pricing: What to Expect',
     body: `<p>Private chef pricing in Ubud:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>Standard dinner (3 courses, 2-6 guests):</strong> From IDR 550,000 – 750,000 per person.</li>
+      <li><strong>Standard dinner (3 courses, 2-6 guests):</strong> From IDR 700,000 – 750,000 per person.</li>
       <li><strong>Premium/tasting menu (5-7 courses, 2-8 guests):</strong> IDR 850,000 – 1,200,000 per person.</li>
-      <li><strong>Wellness/retreat menus (plant-based, organic):</strong> IDR 600,000 – 1,000,000 per person per day.</li>
+      <li><strong>Wellness/retreat menus (plant-based, organic):</strong> IDR 700,000 – 1,000,000 per person per day.</li>
       <li><strong>Cooking class experience:</strong> IDR 800,000 – 1,200,000 per person including market tour.</li>
     </ul>
     <p style="margin-top:0.75rem;">For a detailed cost breakdown, see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
@@ -107,7 +107,7 @@ export default function PrivateChefUbudGuidePage() {
       heroImageAlt="Private chef preparing a farm-to-table Balinese feast in an Ubud villa kitchen"
       ogImage="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80"
       keywords={['private chef ubud', 'ubud private chef', 'private chef bali ubud', 'ubud villa chef', 'ubud retreat catering']}
-      highlights={['Farm-to-Table', 'Balinese Cuisine', 'Wellness Menus', 'From IDR 550K/person']}
+      highlights={['Farm-to-Table', 'Balinese Cuisine', 'Wellness Menus', 'From IDR 700K/person']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[

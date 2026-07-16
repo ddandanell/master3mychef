@@ -14,7 +14,7 @@ const SECTIONS = [
 
     <p>That flexibility matters because birthdays are not all the same. A 30th birthday dinner for twelve close friends has a completely different energy from a 50th milestone feast for three generations of family. A kids' birthday pool party requires different thinking from an intimate 40th dinner for a couple and their closest circle. myCHEF works across all of these — adapting the chef team, the menu style, the service format, and the add-ons to match the occasion.</p>
 
-    <p>We work with groups of 6 to 50+ guests, across Seminyak, Canggu, Uluwatu, Ubud, Jimbaran, Nusa Dua, and every corner of Bali where villas have a proper kitchen. Pricing starts from IDR 380,000 per person for buffet-style group celebrations, with plated tasting experiences from IDR 750,000 per person.</p>
+    <p>We work with groups of 6 to 50+ guests, across Seminyak, Canggu, Uluwatu, Ubud, Jimbaran, Nusa Dua, and every corner of Bali where villas have a proper kitchen. Pricing starts from IDR 700,000 per person for buffet-style group celebrations, with plated tasting experiences from IDR 750,000 per person.</p>
 
     <p>The process is straightforward: tell us the date, the number of guests, the birthday person's food preferences and any dietary requirements, and what kind of atmosphere you want to create. We respond within a few hours with a menu proposal tailored to them — not a generic set menu, but a menu built around what they actually love to eat.</p>`,
   },
@@ -32,7 +32,7 @@ const SECTIONS = [
       {
         icon: Flame,
         title: 'BBQ Birthday Bash',
-        desc: 'Live BBQ with sharing platters, cocktails, and a relaxed, social atmosphere. Grilled proteins, fresh salads, satay, and tropical desserts. The format encourages mingling and works beautifully for groups of 10–25 at the villa pool. From IDR 450,000/person.'
+        desc: 'Live BBQ with sharing platters, cocktails, and a relaxed, social atmosphere. Grilled proteins, fresh salads, satay, and tropical desserts. The format encourages mingling and works beautifully for groups of 10–25 at the villa pool. From IDR 700,000/person.'
       },
       {
         icon: Sparkles,
@@ -42,7 +42,7 @@ const SECTIONS = [
       {
         icon: Users,
         title: 'Big Group Party',
-        desc: 'Buffet or live stations for 15 or more guests. High-energy, generous, and designed for groups where variety matters and guests have mixed dietary preferences. Multiple cuisine stations, grazing boards, and live cooking elements available. From IDR 380,000/person.'
+        desc: 'Buffet or live stations for 15 or more guests. High-energy, generous, and designed for groups where variety matters and guests have mixed dietary preferences. Multiple cuisine stations, grazing boards, and live cooking elements available. From IDR 700,000/person.'
       },
     ],
   },
@@ -153,9 +153,9 @@ export default function BirthdayPartyCateringBaliPage() {
     <PremiumPage
       slug="blog/birthday-party-catering-bali"
       title="Birthday Party Catering Bali | Private Chef Birthday Villa | myCHEF"
-      description="Make your Bali birthday unforgettable with private chef catering. Villa setups, themed menus, cake service, groups 6–50. From IDR 400K/person."
+      description="Make your Bali birthday unforgettable with private chef catering. Villa setups, themed menus, cake service, groups 6–50. From IDR 700K/person."
       seoTitle="Birthday Party Catering Bali | Private Chef Birthday Villa | myCHEF"
-      seoDescription="Make your Bali birthday unforgettable with private chef catering. Villa setups, themed menus, cake service, groups 6–50. From IDR 400K/person."
+      seoDescription="Make your Bali birthday unforgettable with private chef catering. Villa setups, themed menus, cake service, groups 6–50. From IDR 700K/person."
       canonicalUrl="https://mychef.id/blog/birthday-party-catering-bali"
       h1="Birthday Party Catering Bali"
       subtitle="Private Chef Celebrations for Any Age at Your Bali Villa"
@@ -174,7 +174,7 @@ export default function BirthdayPartyCateringBaliPage() {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
           headline: 'Birthday Party Catering Bali — Private Chef Celebrations for Any Age at Your Bali Villa',
-          description: 'Make your Bali birthday unforgettable with private chef catering. Villa setups, themed menus, cake service, groups 6–50. From IDR 400K/person.',
+          description: 'Make your Bali birthday unforgettable with private chef catering. Villa setups, themed menus, cake service, groups 6–50. From IDR 700K/person.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
           datePublished: '2026-06-29',

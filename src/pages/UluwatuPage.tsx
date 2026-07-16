@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does a private chef cost in Uluwatu?',
-    a: 'Private chef pricing in Uluwatu starts at IDR 450K–750K per person for intimate villa dinners (2–10 guests). Wedding rehearsal dinners and event catering typically range from IDR 600K–1.5M per person depending on menu, staffing, and guest count. All prices are subject to 11% tax + 10% service charge.',
+    a: 'Private chef pricing in Uluwatu starts at IDR 700K–750K per person for intimate villa dinners (2–10 guests). Wedding rehearsal dinners and event catering typically range from IDR 700K–1.5M per person depending on menu, staffing, and guest count. All prices are subject to 11% tax + 10% service charge.',
   },
   {
     q: 'Can you cater weddings and rehearsal dinners in Uluwatu?',
@@ -47,13 +47,13 @@ const AREAS = [
 const SERVICES = [
   {
     name: 'Clifftop Villa Dining',
-    range: 'IDR 450K–750K / person',
+    range: 'IDR 700K–750K / person',
     for: '2–12 guests',
     detail: 'Multi-course plated dinners designed for Uluwatu\'s open-air terraces. Sunset timing included — first course as the sun drops, mains under the stars. Seafood-forward menus available.',
   },
   {
     name: 'Seafood BBQ Feast',
-    range: 'IDR 550K–900K / person',
+    range: 'IDR 700K–900K / person',
     for: '8–40 guests',
     detail: 'Live-fire seafood BBQ using lobster, whole snapper, and jumbo prawns sourced from local landings. Our chefs manage the fire, the timing, and the cleanup. No restaurants can match this freshness.',
   },
@@ -65,7 +65,7 @@ const SERVICES = [
   },
   {
     name: 'Surf Retreat Catering',
-    range: 'IDR 400K–700K / person',
+    range: 'From IDR 700K / person',
     for: '6–30 guests',
     detail: 'Multi-day catering packages for surf retreats, wellness groups, and yoga retreat guests. Three meals a day, dietary flexibility, and a menu that fuels active days in the water.',
   },

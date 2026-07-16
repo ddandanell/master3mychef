@@ -40,9 +40,9 @@ const SECTIONS: PageSection[] = [
     title: 'Private Chef Pererenan Pricing',
     body: `<p>Pererenan pricing is consistent with the broader Canggu/west coast market:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>Dinner for 2-6 guests (3-4 courses):</strong> From IDR 500,000 – 800,000 per person.</li>
-      <li><strong>Plant-based or vegan tasting menu:</strong> From IDR 600,000 – 900,000 per person. Plant-based cooking requires sourcing specialty ingredients and more creative menu construction.</li>
-      <li><strong>Wellness retreat group meal (6-15 guests, sharing style):</strong> From IDR 350,000 – 550,000 per person. Volume discount at 8+ guests.</li>
+      <li><strong>Dinner for 2-6 guests (3-4 courses):</strong> From IDR 700,000 – 800,000 per person.</li>
+      <li><strong>Plant-based or vegan tasting menu:</strong> From IDR 700,000 – 900,000 per person. Plant-based cooking requires sourcing specialty ingredients and more creative menu construction.</li>
+      <li><strong>Wellness retreat group meal (6-15 guests, sharing style):</strong> From IDR 700,000 per person. Volume discount at 8+ guests.</li>
       <li><strong>Multi-day booking (4+ sessions):</strong> 10% discount applied to per-session rates.</li>
     </ul>
     <p style="margin-top:0.75rem;">Groceries at cost, no markup. For the full picture see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
@@ -93,7 +93,7 @@ export default function PrivateChefPererenanGuidePage() {
       heroImageAlt="Private chef setting a dinner table overlooking Pererenan rice fields at sunset"
       ogImage="https://images.unsplash.com/photo-1476224203421-9ac39bcb3df1?w=1400&q=80"
       keywords={['private chef pererenan', 'pererenan private chef', 'pererenan villa chef', 'private chef bali pererenan', 'chef pererenan bali']}
-      highlights={['Rice Field Sunset Dining', 'Wellness Retreat Catering', 'Vegan Menus', 'From IDR 350K/person']}
+      highlights={['Rice Field Sunset Dining', 'Wellness Retreat Catering', 'Vegan Menus', 'From IDR 700K/person']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[

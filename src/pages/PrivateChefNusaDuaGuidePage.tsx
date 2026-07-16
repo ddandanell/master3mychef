@@ -44,7 +44,7 @@ const SECTIONS: PageSection[] = [
     title: 'Private Chef Costs in Nusa Dua — What to Budget',
     body: `<p>Private chef pricing in Nusa Dua is based on menu complexity, the number of courses, group size, and the experience level of the chef. Indicative ranges per person (excluding beverages) are as follows:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>Everyday dining (2–3 courses):</strong> IDR 650,000 – 850,000 per person. Home-cooked style, fresh local ingredients, ideal for families and casual villa dinners.</li>
+      <li><strong>Everyday dining (2–3 courses):</strong> IDR 700,000 – 850,000 per person. Home-cooked style, fresh local ingredients, ideal for families and casual villa dinners.</li>
       <li><strong>Premium dining (4–5 courses):</strong> IDR 850,000 – 1,200,000 per person. Restaurant-quality plated service, broader menu selection, suitable for couples and celebrations.</li>
       <li><strong>Fine dining / tasting menus (6–8 courses):</strong> IDR 1,200,000 – 1,500,000 per person. Michelin-calibre technique, premium ingredients including local seafood and imported produce, paired with wine recommendations.</li>
     </ul>
@@ -82,7 +82,7 @@ const FAQS = [
   },
   {
     question: "How much does a private chef cost per person in Nusa Dua?",
-    answer: "Pricing ranges from IDR 650,000 per person for everyday 2–3 course dining up to IDR 1,500,000 per person for a premium 6–8 course fine dining experience. The exact cost depends on the number of courses, the complexity of the menu, group size, and any premium ingredient upgrades. Use our online calculator for a tailored estimate.",
+    answer: "Pricing ranges from IDR 700,000 per person for everyday 2–3 course dining up to IDR 1,500,000 per person for a premium 6–8 course fine dining experience. The exact cost depends on the number of courses, the complexity of the menu, group size, and any premium ingredient upgrades. Use our online calculator for a tailored estimate.",
   },
   {
     question: "What cuisines are available from private chefs in Nusa Dua?",
@@ -107,9 +107,9 @@ export default function PrivateChefNusaDuaGuidePage() {
     <PremiumPage
       slug="blog/private-chef-nusa-dua-guide"
       title="Private Chef Nusa Dua | Villa Dining at Your Resort | myCHEF"
-      description="Book a private chef in Nusa Dua for your villa or resort stay. Fresh seafood, Indonesian cuisine, and international fine dining. Groups of 2–20. From IDR 650,000 per person."
+      description="Book a private chef in Nusa Dua for your villa or resort stay. Fresh seafood, Indonesian cuisine, and international fine dining. Groups of 2–20. From IDR 700,000 per person."
       seoTitle="Private Chef Nusa Dua | Villa Dining at Your Resort | myCHEF"
-      seoDescription="Book a private chef in Nusa Dua for your villa or resort stay. Fresh seafood, Indonesian cuisine, and international fine dining. Groups of 2–20. From IDR 650,000 per person."
+      seoDescription="Book a private chef in Nusa Dua for your villa or resort stay. Fresh seafood, Indonesian cuisine, and international fine dining. Groups of 2–20. From IDR 700,000 per person."
       canonicalUrl="https://mychef.id/blog/private-chef-nusa-dua-guide"
       h1="Private Chef Nusa Dua — Villa & Resort Dining"
       subtitle="Dedicated chef service for Nusa Dua villas, beach clubs, and resort escapes"
@@ -117,7 +117,7 @@ export default function PrivateChefNusaDuaGuidePage() {
       heroImageAlt="Private chef plating a fresh seafood dish for villa guests in Nusa Dua Bali"
       ogImage="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=1400&q=80"
       keywords={['private chef nusa dua', 'nusa dua villa chef', 'private chef bali nusa dua', 'nusa dua private dining']}
-      highlights={['Nusa Dua Villas', 'Fresh Seafood', 'Groups 2–20', 'From IDR 650K/person']}
+      highlights={['Nusa Dua Villas', 'Fresh Seafood', 'Groups 2–20', 'From IDR 700K/person']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[

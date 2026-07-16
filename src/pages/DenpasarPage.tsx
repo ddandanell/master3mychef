@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does a private chef cost in Denpasar?',
-    a: 'Private home dining in Denpasar starts at IDR 350K–650K per person for 2–15 guests. Business and corporate catering ranges from IDR 400K–750K per person for 10–60 guests. All prices subject to 11% tax + 10% service charge.',
+    a: 'Private home dining in Denpasar starts from IDR 700K per person for 2–15 guests. Business and corporate catering ranges from IDR 700K–750K per person for 10–60 guests. All prices subject to 11% tax + 10% service charge.',
   },
   {
     q: 'How quickly can you deploy a private chef in Denpasar?',
@@ -47,19 +47,19 @@ const AREAS = [
 const SERVICES = [
   {
     name: 'Private Chef Home Dining',
-    range: 'IDR 350K–650K / person',
+    range: 'From IDR 700K / person',
     for: '2–15 guests',
     detail: 'Chef-led lunches and dinners for homes, family compounds, and private residences. Premium Indonesian and international menus, full service, and cleanup — the restaurant experience without leaving the house.',
   },
   {
     name: 'Business Lunch Catering',
-    range: 'IDR 400K–750K / person',
+    range: 'IDR 700K–750K / person',
     for: '10–60 guests',
     detail: 'Working lunches, client entertainment, and executive dining tailored to a professional agenda. Efficient setup, clean service timing, and menus that impress without disrupting the meeting flow.',
   },
   {
     name: 'Family Celebration Dinner',
-    range: 'IDR 400K–700K / person',
+    range: 'From IDR 700K / person',
     for: '6–30 guests',
     detail: 'Birthday dinners, milestone celebrations, and family gathering feasts at your Denpasar compound. Our team handles every detail — from menu design to final cleanup — so you focus on the moment.',
   },

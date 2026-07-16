@@ -86,7 +86,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
   const areaFaq = faqPageSchema([
     {
       question: `How much does a private chef cost in ${entry.name}?`,
-      answer: `Private chef services in ${entry.name} start from IDR 1.3M per session. Villa catering for groups starts from IDR 560K per person. Full pricing depends on group size, menu complexity, and duration. Request a free quote via WhatsApp.`,
+      answer: `Private chef services in ${entry.name} start from IDR 1.3M per session. Villa catering for groups starts from IDR 700K per person. Full pricing depends on group size, menu complexity, and duration. Request a free quote via WhatsApp.`,
     },
     {
       question: `Can I hire a private chef for my villa in ${entry.name}?`,

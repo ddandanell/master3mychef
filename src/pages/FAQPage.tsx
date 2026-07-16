@@ -24,7 +24,7 @@ const QUICK_FACTS = [
   { label: 'Reply time', value: 'Within 1 hour', icon: Clock3 },
   { label: 'Booking confirm', value: 'Within 24 hours', icon: MessageCircle },
   { label: 'Areas covered', value: 'All of Bali', icon: MapPin },
-  { label: 'Private dining', value: 'From IDR 450K/pax', icon: Wallet },
+  { label: 'Private dining', value: 'From IDR 700K/pax', icon: Wallet },
 ]
 
 const FAQ_CATEGORIES: FAQCategory[] = [
@@ -60,7 +60,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     items: [
       {
         q: 'How much does a private chef in Bali cost?',
-        a: 'Private chef dinners start from IDR 450K per person. You can see full pricing and package guidance at /pricing.',
+        a: 'Private chef dinners start from IDR 700K per person. You can see full pricing and package guidance at /pricing.',
       },
       {
         q: 'Are ingredients included in the price?',

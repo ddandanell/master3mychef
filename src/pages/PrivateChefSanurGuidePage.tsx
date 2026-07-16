@@ -51,10 +51,10 @@ const SECTIONS: PageSection[] = [
     title: 'Private Chef Sanur Pricing',
     body: `<p>Sanur pricing reflects the area's predominantly family and mid-tier luxury positioning:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>Family villa dinner (4-8 guests, including children's menu):</strong> From IDR 400,000 – 650,000 per adult. Children's menu surcharge IDR 150,000–200,000 per child.</li>
+      <li><strong>Family villa dinner (4-8 guests, including children's menu):</strong> From IDR 700,000 per adult. Children's menu surcharge IDR 150,000–200,000 per child.</li>
       <li><strong>Multi-day booking (3+ sessions):</strong> 10% discount on per-session rates for confirmed multi-day bookings.</li>
       <li><strong>Weekly household arrangement:</strong> From IDR 6,000,000–10,000,000/month depending on frequency and scope. See our household chef guide for full details.</li>
-      <li><strong>Corporate team dinner (10-20 guests):</strong> From IDR 450,000–700,000 per person depending on menu complexity.</li>
+      <li><strong>Corporate team dinner (10-20 guests):</strong> From IDR 700,000 per person depending on menu complexity.</li>
     </ul>
     <p style="margin-top:0.75rem;">Groceries are charged at market cost with no markup. For a full cost overview see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">private chef cost guide</a>.</p>`,
   },
@@ -104,7 +104,7 @@ export default function PrivateChefSanurGuidePage() {
       heroImageAlt="Private chef preparing a fresh family dinner in a Sanur villa kitchen with local market ingredients"
       ogImage="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80"
       keywords={['private chef sanur', 'sanur private chef', 'sanur villa chef', 'private chef bali sanur', 'family chef sanur bali']}
-      highlights={['Family Menus', 'Multi-Day Stays', 'Sindhu Market Sourcing', 'From IDR 400K/person']}
+      highlights={['Family Menus', 'Multi-Day Stays', 'Sindhu Market Sourcing', 'From IDR 700K/person']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[

@@ -53,10 +53,10 @@ const SECTIONS: PageSection[] = [
     title: 'Private Chef Canggu Pricing',
     body: `<p>Canggu pricing follows the standard myCHEF structure:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>Dinner service (3-4 courses, 2-8 guests):</strong> From IDR 550,000 – 800,000 per person</li>
-      <li><strong>Group dinner (10-30 guests, sharing format):</strong> From IDR 450,000 – 700,000 per person</li>
-      <li><strong>BBQ / live fire setup:</strong> From IDR 500,000 – 750,000 per person</li>
-      <li><strong>Floating breakfast:</strong> IDR 350,000 – 550,000 per person</li>
+      <li><strong>Dinner service (3-4 courses, 2-8 guests):</strong> From IDR 700,000 – 800,000 per person</li>
+      <li><strong>Group dinner (10-30 guests, sharing format):</strong> From IDR 700,000 per person</li>
+      <li><strong>BBQ / live fire setup:</strong> From IDR 700,000 – 750,000 per person</li>
+      <li><strong>Floating breakfast:</strong> From IDR 700,000 per person</li>
     </ul>
     <p style="margin-top:0.75rem;">For full cost details see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
   },
@@ -106,7 +106,7 @@ export default function PrivateChefCangguGuidePage() {
       heroImageAlt="Private chef preparing a seafood BBQ feast for a group at a Canggu villa"
       ogImage="https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=80"
       keywords={['private chef canggu', 'canggu private chef', 'canggu villa chef', 'private chef bali canggu', 'canggu chef hire']}
-      highlights={['Villa BBQ', 'Group Parties', 'Surf Dinners', 'From IDR 450K/person']}
+      highlights={['Villa BBQ', 'Group Parties', 'Surf Dinners', 'From IDR 700K/person']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[

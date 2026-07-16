@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does a private chef cost in Jimbaran?',
-    a: 'Seafood villa dinners in Jimbaran start at IDR 450K–750K per person for 2–12 guests. Live-fire bayfront BBQs range from IDR 500K–850K per person for 8–40 guests. Celebration and event menus range from IDR 600K–1.5M per person depending on complexity. All prices subject to 11% tax + 10% service charge.',
+    a: 'Seafood villa dinners in Jimbaran start at IDR 700K–750K per person for 2–12 guests. Live-fire bayfront BBQs range from IDR 700K–850K per person for 8–40 guests. Celebration and event menus range from IDR 700K–1.5M per person depending on complexity. All prices subject to 11% tax + 10% service charge.',
   },
   {
     q: 'Can you do a bayfront or outdoor BBQ in Jimbaran?',
@@ -47,25 +47,25 @@ const AREAS = [
 const SERVICES = [
   {
     name: 'Seafood Villa Dinner',
-    range: 'IDR 450K–750K / person',
+    range: 'IDR 700K–750K / person',
     for: '2–12 guests',
     detail: "Multi-course plated dinners built around the morning's best catch from Kedonganan. Whole snapper, local prawns, lobster bisque, and Indonesian-inspired seafood courses served on your villa terrace.",
   },
   {
     name: 'Bayfront Seafood BBQ',
-    range: 'IDR 500K–850K / person',
+    range: 'IDR 700K–850K / person',
     for: '8–40 guests',
     detail: 'Live-fire grilling on your villa lawn or terrace. Lobster, whole fish, and shellfish sourced from the Jimbaran landing, cooked and served by our team. The closest thing to the famous beach fish restaurants — but completely private.',
   },
   {
     name: 'Celebration & Proposal Dinners',
-    range: 'IDR 600K–1.5M / person',
+    range: 'IDR 700K–1.5M / person',
     for: '2–30 guests',
     detail: "Sunset timed to your milestone moment. We coordinate the run sheet around your villa's view, pacing the arrival of courses as the horizon dims. Chefs, waitstaff, florals on request, and cleanup included.",
   },
   {
     name: 'Family Arrival Feast',
-    range: 'IDR 400K–700K / person',
+    range: 'From IDR 700K / person',
     for: '6–25 guests',
     detail: 'A generous welcome dinner for groups arriving from long flights. Indonesian sharing plates, grilled seafood, and warm hospitality — the first meal that sets the tone for the whole stay.',
   },

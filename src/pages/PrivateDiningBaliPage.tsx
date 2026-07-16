@@ -72,9 +72,9 @@ myCHEF delivers both -- and everything in between.
 
 **Casual Daily Chef Service** -- From IDR 750,000/day for 2--4 guests (all meals). The chef cooks breakfast, lunch, and dinner using client-supplied grocery budget. Ingredients billed at market cost.
 
-**Single Occasion Dinner (2--8 guests)** -- From IDR 450,000/person for a 3-course dinner including chef, ingredients, and light service. Add a sommelier or dedicated service staff for larger or more formal occasions.
+**Single Occasion Dinner (2--8 guests)** -- From IDR 700,000/person for a 3-course dinner including chef, ingredients, and light service. Add a sommelier or dedicated service staff for larger or more formal occasions.
 
-**Occasion Dinner with Full Service (8--20 guests)** -- From IDR 600,000/person including chef, 3--4 courses, 2 service staff, and full setup and cleanup.
+**Occasion Dinner with Full Service (8--20 guests)** -- From IDR 700,000/person including chef, 3--4 courses, 2 service staff, and full setup and cleanup.
 
 **Fine Dining Tasting Menu (4--12 guests)** -- From IDR 1,100,000/person for a 5-course menu with formal service. Includes amuse-bouche, matched course sequencing, and professional presentation.
 
@@ -134,7 +134,7 @@ export default function PrivateDiningBaliPage() {
       title="Private Dining Bali -- In-Villa Dining Experiences for Every Occasion"
       seoTitle="Private Dining Bali -- In-Villa Chef Experiences for Couples, Groups & Events"
       description="Private dining experiences in Bali villas. From intimate dinners for two to formal group receptions -- a private chef, tailored menu, and complete in-villa service for your occasion."
-      seoDescription="Private dining in Bali. In-villa chef experiences for couples, families, and events. Custom menus, professional service, full cleanup. From IDR 450K/person. All villa areas covered."
+      seoDescription="Private dining in Bali. In-villa chef experiences for couples, families, and events. Custom menus, professional service, full cleanup. From IDR 700K/person. All villa areas covered."
       h1="Private Dining Bali -- In-Villa Chef Experiences for Every Occasion"
       subtitle="A private chef, a menu designed for you, and a setting that is entirely yours -- the finest way to dine in Bali."
       heroImage="/images/blog/private-dining-bali.jpg"
@@ -153,7 +153,7 @@ export default function PrivateDiningBaliPage() {
         'private dining experience bali',
         'exclusive dining bali',
       ]}
-      highlights={['Custom Menu Design', 'Professional Service', 'All Villa Areas', 'From IDR 450K/person']}
+      highlights={['Custom Menu Design', 'Professional Service', 'All Villa Areas', 'From IDR 700K/person']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

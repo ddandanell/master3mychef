@@ -63,7 +63,7 @@ myCHEF makes this possible. We match Bali villa guests with chefs whose training
 **Indicative ranges (chef service, ingredients billed separately):**
 
 - **3-course private fine dining, 2--4 guests:** From IDR 800,000--1,500,000 per person
-- **4-course set menu, 4--8 guests:** From IDR 600,000--1,200,000 per person
+- **4-course set menu, 4--8 guests:** From IDR 700,000--1,200,000 per person
 - **6-course progressive menu:** From IDR 1,000,000--1,800,000 per person
 - **Full tasting menu (9--11 courses) with beverage pairing:** From IDR 1,800,000--3,500,000 per person
 

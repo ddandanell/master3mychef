@@ -141,7 +141,7 @@ const FAQS = [
   },
   {
     question: 'What does a private villa dinner party cost in Bali?',
-    answer: 'Private villa dinner parties start from IDR 550,000 per person for a 3-course menu, and from IDR 750,000 per person for a 5-course menu. Final pricing depends on guest count, menu complexity, and any additional service staff required. We send a detailed quote with your bespoke menu proposal — typically within 2 hours of your enquiry.',
+    answer: 'Private villa dinner parties start from IDR 700,000 per person for a 3-course menu, and from IDR 750,000 per person for a 5-course menu. Final pricing depends on guest count, menu complexity, and any additional service staff required. We send a detailed quote with your bespoke menu proposal — typically within 2 hours of your enquiry.',
   },
 ]
 
@@ -159,9 +159,9 @@ export default function PrivateDinnerPartyBaliPage() {
     <PremiumPage
       slug="blog/private-dinner-party-bali"
       title="Private Dinner Party Bali | Villa Dinner Parties with a Private Chef"
-      description="Host a private dinner party at your Bali villa with a professional chef. Menu planning, setup, service — all handled. Groups of 4–30. From IDR 550,000/person."
+      description="Host a private dinner party at your Bali villa with a professional chef. Menu planning, setup, service — all handled. Groups of 4–30. From IDR 700,000/person."
       seoTitle="Private Dinner Party Bali | Villa Dinner Parties with a Private Chef | myCHEF"
-      seoDescription="Host a private dinner party at your Bali villa with a professional chef. Menu planning, setup, service — all handled. Groups of 4–30. From IDR 550,000/person."
+      seoDescription="Host a private dinner party at your Bali villa with a professional chef. Menu planning, setup, service — all handled. Groups of 4–30. From IDR 700,000/person."
       canonicalUrl="https://mychef.id/blog/private-dinner-party-bali"
       h1="Private Dinner Party Bali"
       subtitle="How to Host a Memorable Villa Dinner Party with a Private Chef"

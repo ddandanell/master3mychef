@@ -47,7 +47,7 @@ const AREAS = [
 const SERVICES = [
   {
     name: 'Poolside BBQ Party',
-    range: 'IDR 600K – 1.2M / person',
+    range: 'IDR 700K – 1.2M / person',
     for: '10–50 guests',
     detail: 'Live-fire seafood and grill BBQs at your Kuta villa pool. Fresh prawns, barramundi, chicken satay, and sides. Full setup, chef, servers, and cleanup included.',
   },
@@ -59,7 +59,7 @@ const SERVICES = [
   },
   {
     name: 'Family Villa Dining',
-    range: 'IDR 600K – 1M / person',
+    range: 'IDR 700K – 1M / person',
     for: '4–20 guests',
     detail: 'Multi-course villa dinners and casual family feasts with kids-friendly options. Healthy menus, allergy management, and flexible meal timings to suit every family member.',
   },

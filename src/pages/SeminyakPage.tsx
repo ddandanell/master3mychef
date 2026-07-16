@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does a private chef cost in Seminyak?',
-    a: 'Dinner for 2–8 guests starts at IDR 450K–800K per person for a 4–5 course tasting menu. Cocktail parties and events typically range from IDR 550K–1.2M per person depending on staffing and menu. All prices subject to 11% tax + 10% service charge.',
+    a: 'Dinner for 2–8 guests starts at IDR 700K–800K per person for a 4–5 course tasting menu. Cocktail parties and events typically range from IDR 700K–1.2M per person depending on staffing and menu. All prices subject to 11% tax + 10% service charge.',
   },
   {
     q: 'Can you cater birthday parties and events in Seminyak villas?',
@@ -47,13 +47,13 @@ const AREAS = [
 const SERVICES = [
   {
     name: 'Beachfront Villa Fine Dining',
-    range: 'IDR 450K–800K / person',
+    range: 'IDR 700K–800K / person',
     for: '2–10 guests',
     detail: 'Multi-course tasting menus and plated dinners that rival Seminyak\'s best restaurants — served at your villa pool or terrace. Seafood-forward menus and European classics our specialty.',
   },
   {
     name: 'Villa Party & Event Catering',
-    range: 'IDR 550K–1.2M / person',
+    range: 'IDR 700K–1.2M / person',
     for: '15–80 guests',
     detail: 'Birthday parties, bachelorette celebrations, anniversary events, and corporate cocktail evenings with full chef brigade, waitstaff, and bar service.',
   },
@@ -65,7 +65,7 @@ const SERVICES = [
   },
   {
     name: 'Cocktail Reception Catering',
-    range: 'IDR 400K–700K / person',
+    range: 'From IDR 700K / person',
     for: '20–60 guests',
     detail: 'Passed canapés, live stations, and sharing platters for standing events. Perfect for pre-dinner cocktail hours, welcome parties, and villa launch events.',
   },

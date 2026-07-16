@@ -26,8 +26,8 @@ const SECTIONS = [
     <p><strong>Budget Range: IDR 350K–500K per person</strong></p>
     <p>At this tier, you're working with a simple buffet format — shared platters, 3–4 dishes, designed for receptions of 50 or more guests where cost management is essential. What's typically included at this price: the chef, food and ingredients, basic serving staff, and disposable or hire crockery. What's not included: linen, proper glassware, a dedicated service team, equipment rental, or any table styling. This is functional catering that feeds guests adequately. It is not the catering your guests will talk about at brunch the next morning.</p>
 
-    <p><strong>Mid-Range: IDR 550K–800K per person</strong></p>
-    <p>This is the professional event catering tier and represents the core of myCHEF's wedding service. At this price point you receive: professional seated service with 4–5 courses (or a well-staffed, well-styled buffet), a dedicated head chef with culinary experience suited to the event, a service ratio of one server per 10 guests, real crockery and linen (typically included or at marginal add-on cost), and a kitchen operation that is set up to professional standards. The difference between IDR 550K and IDR 800K within this tier largely reflects menu complexity, protein quality (line-caught fish vs frozen, wagyu vs standard beef), and whether setup and breakdown staffing is included.</p>
+    <p><strong>Mid-Range: IDR 700K–800K per person</strong></p>
+    <p>This is the professional event catering tier and represents the core of myCHEF's wedding service. At this price point you receive: professional seated service with 4–5 courses (or a well-staffed, well-styled buffet), a dedicated head chef with culinary experience suited to the event, a service ratio of one server per 10 guests, real crockery and linen (typically included or at marginal add-on cost), and a kitchen operation that is set up to professional standards. The difference between IDR 700K and IDR 800K within this tier largely reflects menu complexity, protein quality (line-caught fish vs frozen, wagyu vs standard beef), and whether setup and breakdown staffing is included.</p>
 
     <p><strong>Premium: IDR 900K–1,400K per person</strong></p>
     <p>Reserved for weddings of up to 80 guests where the culinary experience is the centrepiece rather than the backdrop. At this tier: a full tasting menu of 5–7 courses with composed amuse-bouche, sommelier-guided wine service, butler-per-table service, fine crockery and crystal, and a kitchen team of sufficient depth to plate simultaneously for every guest. The chef at this tier brings genuine fine dining training — many myCHEF chefs at this price point have trained in Michelin-starred environments. This is the tier where the catering becomes a permanent memory.</p>
@@ -97,7 +97,7 @@ const SECTIONS = [
 
     <p><strong>What private chef catering at your villa gives you:</strong> A menu designed entirely around your preferences and dietary requirements, exclusive chef and service team attention for the full duration of your event, no corkage (you supply your own alcohol and the chef team serves it), no minimum spend beyond the agreed package, and an intimate setting that you have complete control over — your music, your lighting, your timeline.</p>
 
-    <p><strong>The cost comparison:</strong> A mid-range restaurant wedding package in Seminyak or Canggu typically runs IDR 600K–900K per person before corkage, private hire fees, and overtime. A myCHEF private chef wedding at the same quality tier runs IDR 550K–800K per person all-inclusive. Once corkage is factored (30 bottles at IDR 200K corkage = IDR 6M extra), the restaurant package typically costs more — and delivers less.</p>
+    <p><strong>The cost comparison:</strong> A mid-range restaurant wedding package in Seminyak or Canggu typically runs IDR 600K–900K per person before corkage, private hire fees, and overtime. A myCHEF private chef wedding at the same quality tier runs IDR 700K–800K per person all-inclusive. Once corkage is factored (30 bottles at IDR 200K corkage = IDR 6M extra), the restaurant package typically costs more — and delivers less.</p>
 
     <p>The exception: if your villa has no kitchen and you cannot install a temporary kitchen, a restaurant venue solves the infrastructure problem. But for villas with any kitchen capability, private chef catering is almost always the better value and the better experience.</p>`,
   },
@@ -121,7 +121,7 @@ const SECTIONS = [
 const FAQS = [
   {
     question: 'What is a realistic wedding catering budget per head in Bali in 2026?',
-    answer: 'For quality private chef catering with proper service: IDR 550K–800K/person for food. Add IDR 200K–500K/person if you want beverage service included.',
+    answer: 'For quality private chef catering with proper service: IDR 700K–800K/person for food. Add IDR 200K–500K/person if you want beverage service included.',
   },
   {
     question: 'Does myCHEF include a service charge in the quote?',
@@ -159,9 +159,9 @@ export default function BaliWeddingCateringBudgetPage() {
     <PremiumPage
       slug="blog/bali-wedding-catering-budget-guide"
       title="Bali Wedding Catering Cost: The Complete Budget Guide"
-      description="Full breakdown of Bali wedding catering costs in 2026. Price per head IDR, hidden costs, how to save without cutting quality. Private chef weddings from IDR 550K/person."
+      description="Full breakdown of Bali wedding catering costs in 2026. Price per head IDR, hidden costs, how to save without cutting quality. Private chef weddings from IDR 700K/person."
       seoTitle="Bali Wedding Catering Cost | Budget Guide 2026 | myCHEF"
-      seoDescription="Full breakdown of Bali wedding catering costs in 2026. Price per head IDR, hidden costs, how to save without cutting quality. Private chef weddings from IDR 550K/person."
+      seoDescription="Full breakdown of Bali wedding catering costs in 2026. Price per head IDR, hidden costs, how to save without cutting quality. Private chef weddings from IDR 700K/person."
       canonicalUrl="https://mychef.id/blog/bali-wedding-catering-budget-guide"
       h1="Bali Wedding Catering Cost: The Complete Budget Guide"
       subtitle="What Does Wedding Catering Actually Cost in Bali? A Transparent Breakdown"

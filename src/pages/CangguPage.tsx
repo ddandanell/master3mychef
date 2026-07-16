@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does a private chef cost in Canggu?',
-    a: 'Villa dinners start at IDR 400K–700K per person for a 3–4 course dinner (2–10 guests). Poolside BBQs for larger groups run IDR 450K–800K per person. Multi-day retreat packages have dedicated pricing. All prices are subject to 11% tax + 10% service charge.',
+    a: 'Villa dinners start from IDR 700K per person for a 3–4 course dinner (2–10 guests). Poolside BBQs for larger groups run IDR 700K–800K per person. Multi-day retreat packages have dedicated pricing. All prices are subject to 11% tax + 10% service charge.',
   },
   {
     q: 'Can I book a chef for a surf retreat or group stay in Canggu?',
@@ -47,25 +47,25 @@ const AREAS = [
 const SERVICES = [
   {
     name: 'Villa & Pool Dinners',
-    range: 'IDR 400K–700K / person',
+    range: 'From IDR 700K / person',
     for: '2–12 guests',
     detail: 'Casual-luxury private dinners at your Canggu villa — fresh seafood, modern Asian fusion, or a classic BBQ. Relaxed service, chef in residence, full cleanup included.',
   },
   {
     name: 'Surf Retreat Catering',
-    range: 'IDR 350K–600K / person',
+    range: 'From IDR 700K / person',
     for: '6–30 guests',
     detail: 'High-protein, recovery-focused meal programmes for surf groups and active retreat guests. Breakfast, lunch, and dinner daily packages with full dietary accommodation.',
   },
   {
     name: 'Poolside BBQ Feast',
-    range: 'IDR 450K–800K / person',
+    range: 'IDR 700K–800K / person',
     for: '10–40 guests',
     detail: 'Live-fire grilling of whole seafood, local beef cuts, and vegetable skewers. Best for the social energy of Canggu\'s large villa pools. Full bar service available on request.',
   },
   {
     name: 'Weekly Meal Prep & Hosting',
-    range: 'IDR 300K–550K / person',
+    range: 'From IDR 700K / person',
     for: 'Daily for 1–10 guests',
     detail: 'Daily breakfast, lunches, and dinners for long-stay digital nomads, families, or wellness travellers. Grocery management and fridge stocking included in all packages.',
   },

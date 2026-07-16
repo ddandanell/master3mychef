@@ -46,7 +46,7 @@ const SECTIONS = [
       {
         icon: Users,
         title: 'Group Feast Package',
-        desc: 'Family-style 3-course feast designed for 10+ guests. Sharing platters, abundant servings, multiple protein options, and communal dessert. Perfect for large villa groups celebrating together. IDR 650,000 per person.',
+        desc: 'Family-style 3-course feast designed for 10+ guests. Sharing platters, abundant servings, multiple protein options, and communal dessert. Perfect for large villa groups celebrating together. IDR 700,000 per person.',
       },
       {
         icon: Heart,

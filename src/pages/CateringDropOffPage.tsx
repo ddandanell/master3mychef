@@ -38,7 +38,7 @@ const ACCENT = '#C5A028'
 const DROPOFF_PACKAGES = [
   {
     title: 'Family Dinner Drop-Off',
-    price: 'IDR 350,000/person',
+    price: 'IDR 700,000/person',
     priceNum: 350000,
     people: '4 to 8 people',
     format: ['Hot main', '2 sides', 'Dessert', 'Bread', 'Ready to reheat'],
@@ -46,7 +46,7 @@ const DROPOFF_PACKAGES = [
   },
   {
     title: 'Dinner Party Drop-Off',
-    price: 'IDR 500,000/person',
+    price: 'IDR 700,000/person',
     priceNum: 500000,
     people: '8 to 16 people',
     format: ['Starter', 'Main', '3 sides', 'Dessert', 'Plating instructions included'],
@@ -54,7 +54,7 @@ const DROPOFF_PACKAGES = [
   },
   {
     title: 'Grazing Dinner Drop-Off',
-    price: 'IDR 650,000/person',
+    price: 'IDR 700,000/person',
     priceNum: 650000,
     people: '8+ people',
     format: ['Charcuterie', 'Cheese board', '2 hot mains', 'Sides', 'Dessert'],
@@ -289,7 +289,7 @@ export default function CateringDropOffPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp availability
             </a>
           </div>
-          <p className="text-white/[60%] text-sm">From IDR 350,000/person · No staff · Next-day delivery</p>
+          <p className="text-white/[60%] text-sm">From IDR 700,000/person · No staff · Next-day delivery</p>
         </div>
       </section>
 

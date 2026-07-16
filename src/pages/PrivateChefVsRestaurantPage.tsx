@@ -9,7 +9,7 @@ const CANONICAL = `${SITE}/blog/private-chef-vs-restaurant-bali`
 const COMPARISON_ROWS = [
   {
     factor: 'Cost (8+ guests)',
-    privateChef: 'IDR 400K–700K/person all-in',
+    privateChef: 'from IDR 700K/person all-in',
     restaurant: 'IDR 300K–700K + 21% tax + transfers + drinks',
     winner: 'chef' as const,
   },
@@ -60,7 +60,7 @@ const COMPARISON_ROWS = [
 const FAQS = [
   {
     q: 'Is a private chef in Bali more expensive than a restaurant?',
-    a: 'Not necessarily — especially for groups. For 8+ guests, a private chef dinner (IDR 400K–700K per person, all-inclusive) is often comparable to or cheaper than a quality restaurant when you factor in transfers, drinks margins, and the 21% service and tax most restaurants charge. For 2–3 people at a casual meal, the restaurant is usually the more economical option.',
+    a: 'Not necessarily — especially for groups. For 8+ guests, a private chef dinner (from IDR 700K per person, all-inclusive) is often comparable to or cheaper than a quality restaurant when you factor in transfers, drinks margins, and the 21% service and tax most restaurants charge. For 2–3 people at a casual meal, the restaurant is usually the more economical option.',
   },
   {
     q: 'What does a private chef in Bali include that a restaurant doesn\'t?',
@@ -236,7 +236,7 @@ export default function PrivateChefVsRestaurantPage() {
             Here is why. Restaurant pricing in Bali at any establishment worth booking for a special evening runs IDR 300K–700K per person for food, before service charge and tax. Once you add 21% combined service and tax, drinks, transfers to and from the villa, and any surprises (corking fees, minimum spends, table charges for large groups), a dinner for ten at a well-regarded Seminyak or Ubud restaurant easily reaches IDR 8M–12M total.
           </p>
           <p className="text-base leading-relaxed text-[#444] mb-4">
-            A private chef dinner for ten through <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">myCHEF's pricing structure</Link> runs IDR 400K–700K per person for food, which includes the chef, a dedicated server, all ingredients, setup, and full cleanup. The same group pays IDR 4M–7M total — with a chef cooking specifically for them, in their own villa, with no restaurant noise, no table restrictions, and no minimum spend.
+            A private chef dinner for ten through <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">myCHEF's pricing structure</Link> runs from IDR 700K per person for food, which includes the chef, a dedicated server, all ingredients, setup, and full cleanup. The same group pays IDR 7M total — with a chef cooking specifically for them, in their own villa, with no restaurant noise, no table restrictions, and no minimum spend.
           </p>
           <div className="bg-[#F5F3EE] rounded-xl p-6 mb-4">
             <h3 className="font-semibold text-[#1A1A1A] mb-3">The calculation shifts further toward private chef when you add:</h3>

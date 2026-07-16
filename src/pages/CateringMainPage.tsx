@@ -42,7 +42,7 @@ const CATERING_STYLES = [
   {
     image: '/generated/mychef-catering-style-bbq.webp',
     title: 'BBQ Catering',
-    price: 'From IDR 550,000/person',
+    price: 'From IDR 700,000/person',
     description: 'Best for villa dinners, birthdays, and relaxed group meals. Chef grills live at your villa.',
     href: '/catering/bbq-catering',
     accent: '#C5A028',
@@ -50,7 +50,7 @@ const CATERING_STYLES = [
   {
     image: '/generated/mychef-catering-style-buffet.webp',
     title: 'Buffet Catering',
-    price: 'From IDR 450,000/person',
+    price: 'From IDR 700,000/person',
     description: 'Best for weddings, larger events, and 30+ guests. Full buffet line with service staff.',
     href: '/catering/buffet',
     accent: '#6B8E5A',
@@ -66,7 +66,7 @@ const CATERING_STYLES = [
   {
     image: '/generated/mychef-catering-style-dropoff.webp',
     title: 'Drop-Off Catering',
-    price: 'From IDR 350,000/person',
+    price: 'From IDR 700,000/person',
     description: 'Best for villa guests who want food delivered without staff inside. Reheating instructions included.',
     href: '/catering/drop-off-catering',
     accent: '#8B5A2B',
@@ -74,7 +74,7 @@ const CATERING_STYLES = [
   {
     image: '/generated/mychef-catering-style-villa.webp',
     title: 'Villa Catering',
-    price: 'From IDR 450,000/person',
+    price: 'From IDR 700,000/person',
     description: 'Best for villa lunches, dinners, and multi-day stays. Chef comes to your villa.',
     href: '/catering/villa-catering',
     accent: '#2C5F7C',
@@ -82,7 +82,7 @@ const CATERING_STYLES = [
   {
     image: '/generated/mychef-catering-style-corporate.webp',
     title: 'Corporate Catering',
-    price: 'From IDR 450,000/person',
+    price: 'From IDR 700,000/person',
     description: 'Best for offsites, board dinners, and conference catering. Tax invoiced.',
     href: '/catering/corporate-catering',
     accent: '#2C5F7C',
@@ -106,7 +106,7 @@ const CATERING_STYLES = [
   {
     image: '/generated/mychef-catering-style-retreat.webp',
     title: 'Retreat Catering',
-    price: 'From IDR 400,000/person/day',
+    price: 'From IDR 700,000/person/day',
     description: 'Best for yoga retreats, wellness centers, and multi-day group stays. Plant-forward menus.',
     href: '/catering/retreat-catering',
     accent: '#6B8E5A',
@@ -125,7 +125,7 @@ const BBQ_PACKAGES = [
   {
     image: '/generated/pkg-bbq.webp',
     title: 'Indonesian BBQ',
-    price: 'IDR 550,000/person',
+    price: 'IDR 700,000/person',
     description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Setup & cleanup'],
     minGuests: 'Min. 10 guests',
@@ -160,7 +160,7 @@ const BUFFET_PACKAGES = [
   {
     image: '/generated/aura-buffet.webp',
     title: 'Indonesian Buffet',
-    price: 'IDR 550,000/person',
+    price: 'IDR 700,000/person',
     description: '8 hot dishes, 4 cold dishes, dessert, fresh fruit, sambals, rice, noodles, breads.',
     includes: ['Chef', '3 service staff', 'Chafing dishes', 'Setup & cleanup'],
     minGuests: 'Min. 30 guests',
@@ -190,9 +190,9 @@ const PLATED_PACKAGES = [
 ]
 
 const DROPOFF_PACKAGES = [
-  { title: 'Family Dinner Drop-Off', price: 'IDR 350,000/person', description: '4 to 8 people. Hot main, 2 sides, dessert, bread.' },
-  { title: 'Dinner Party Drop-Off', price: 'IDR 500,000/person', description: '8 to 16 people. Starter, main, 3 sides, dessert.' },
-  { title: 'Grazing Dinner Drop-Off', price: 'IDR 650,000/person', description: '8+ people. Charcuterie, cheese board, 2 hot mains, sides, dessert.' },
+  { title: 'Family Dinner Drop-Off', price: 'IDR 700,000/person', description: '4 to 8 people. Hot main, 2 sides, dessert, bread.' },
+  { title: 'Dinner Party Drop-Off', price: 'IDR 700,000/person', description: '8 to 16 people. Starter, main, 3 sides, dessert.' },
+  { title: 'Grazing Dinner Drop-Off', price: 'IDR 700,000/person', description: '8+ people. Charcuterie, cheese board, 2 hot mains, sides, dessert.' },
 ]
 
 const BABIGULING_PACKAGES = [
@@ -204,7 +204,7 @@ const BABIGULING_PACKAGES = [
 const GRAZING_PACKAGES = [
   { title: 'Mini Grazing Box', price: 'IDR 650,000', description: '2 pax. Perfect for couples or small welcome.' },
   { title: 'Cheese & Cold Cuts Platter', price: 'IDR 2,700,000', description: '10 pax. 4-6 cheeses, 3-4 cured meats, dips, fruit, nuts.' },
-  { title: 'Wedding-Scale Grazing', price: 'IDR 350,000/person', description: '20 to 50 pax. Full visual spread with edible flowers.' },
+  { title: 'Wedding-Scale Grazing', price: 'IDR 700,000/person', description: '20 to 50 pax. Full visual spread with edible flowers.' },
 ]
 
 const FLOATING_PACKAGES = [
@@ -265,17 +265,17 @@ const DAILY_CHEF_ADDONS = [
 ]
 
 const PRICING_TABLE = [
-  { name: 'Indonesian BBQ', price: 'IDR 550,000/person', min: '10 guests', bestFor: 'Villa BBQ' },
+  { name: 'Indonesian BBQ', price: 'IDR 700,000/person', min: '10 guests', bestFor: 'Villa BBQ' },
   { name: 'International BBQ', price: 'IDR 700,000/person', min: '10 guests', bestFor: 'Villa BBQ' },
   { name: 'Surf & Turf BBQ', price: 'IDR 850,000/person', min: '10 guests', bestFor: 'Special occasions' },
-  { name: 'Indonesian Buffet', price: 'IDR 450,000/person', min: '30 guests', bestFor: 'Weddings & events' },
+  { name: 'Indonesian Buffet', price: 'IDR 700,000/person', min: '30 guests', bestFor: 'Weddings & events' },
   { name: 'International Buffet', price: 'IDR 750,000/person', min: '30 guests', bestFor: 'Weddings & events' },
   { name: 'Live-Station Buffet', price: 'IDR 950,000/person', min: '30 guests', bestFor: 'Larger-format events' },
   { name: '3-Course Plated', price: 'IDR 800,000/person', min: '10 guests', bestFor: 'Seated dinners' },
   { name: '4-Course Plated', price: 'IDR 1,000,000/person', min: '10 guests', bestFor: 'Milestone dinners' },
   { name: '5-Course Dinner', price: 'IDR 1,300,000/person', min: '10 guests', bestFor: 'Fine dining' },
-  { name: 'Family Drop-Off', price: 'IDR 350,000/person', min: '4 guests', bestFor: 'Private meals' },
-  { name: 'Dinner Party Drop-Off', price: 'IDR 500,000/person', min: '8 guests', bestFor: 'Small parties' },
+  { name: 'Family Drop-Off', price: 'IDR 700,000/person', min: '4 guests', bestFor: 'Private meals' },
+  { name: 'Dinner Party Drop-Off', price: 'IDR 700,000/person', min: '8 guests', bestFor: 'Small parties' },
   { name: 'Babi Guling Small', price: 'IDR 3,700,000 total', min: '10 guests', bestFor: 'Traditional events' },
 ]
 
@@ -612,7 +612,7 @@ export default function CateringMainPage() {
                 <p className="text-[#4A4745] mb-2">
                   For events, parties, special occasions, and single meals. The chef arrives, cooks, serves, and cleans up — then leaves.
                 </p>
-                <p className="text-[#6B8E5A] font-semibold">Starting from IDR 450,000 per person</p>
+                <p className="text-[#6B8E5A] font-semibold">Starting from IDR 700,000 per person</p>
               </div>
 
               {/* Styles grid */}
@@ -936,7 +936,7 @@ export default function CateringMainPage() {
           <SectionHeader
             eyebrow="CHAPTER 3 — THE COMPARISON"
             title="Skip the Restaurant. Eat at Your Villa."
-            subtitle="A restaurant dinner for 10 in Seminyak costs IDR 8–12M with drinks and transport. Our Indonesian BBQ for 10: IDR 4.5M. At your villa. With a chef."
+            subtitle="A restaurant dinner for 10 in Seminyak costs IDR 8–12M with drinks and transport. Our Indonesian BBQ for 10: IDR 7M. At your villa. With a chef."
           />
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8">

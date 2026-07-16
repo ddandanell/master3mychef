@@ -13,21 +13,21 @@ const FEATURED_MENUS = [
     name: 'Mediterranean Set Menu',
     subtitle: '3-course villa favourite',
     description: 'Burrata or seafood to start, handmade pasta or grilled catch for the main, and a classic Italian dessert to finish.',
-    price: 'From IDR 650K/person',
+    price: 'From IDR 700K/person',
     detailHref: '/menus/mediterranean',
   },
   {
     name: 'Indonesian Feast',
     subtitle: 'Family-style sharing menu',
     description: 'A generous spread of Indonesian favourites with sambals, grilled proteins, vegetables, rice, and tropical sweets for the table.',
-    price: 'From IDR 450K/person',
+    price: 'From IDR 700K/person',
     detailHref: '/menus/balinese',
   },
   {
     name: 'BBQ & Grill',
     subtitle: 'Poolside crowd-pleaser',
     description: 'Live-fire seafood, satay, wagyu, grilled vegetables, and bright sauces designed for relaxed villa evenings with a group.',
-    price: 'From IDR 550K/person',
+    price: 'From IDR 700K/person',
     detailHref: '/catering',
   },
   {
@@ -40,12 +40,12 @@ const FEATURED_MENUS = [
 ] as const
 
 const MENU_PRICE_GUIDE: Record<string, string> = {
-  mediterranean: 'From IDR 650K/person',
-  balinese: 'From IDR 450K/person',
-  'asian-fusion': 'From IDR 550K/person',
-  vegan: 'From IDR 450K/person',
+  mediterranean: 'From IDR 700K/person',
+  balinese: 'From IDR 700K/person',
+  'asian-fusion': 'From IDR 700K/person',
+  vegan: 'From IDR 700K/person',
   'modern-european': 'From IDR 1.2M/person',
-  halal: 'From IDR 450K/person',
+  halal: 'From IDR 700K/person',
 }
 
 export default function MenuPage() {

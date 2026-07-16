@@ -40,7 +40,7 @@ export default function ServicePage() {
   const serviceFaq = faqPageSchema([
     {
       question: `How much does ${service.name} cost in Bali?`,
-      answer: `Pricing for ${service.name} in Bali depends on guest count, menu selection, and duration. Starting from IDR 250,000 per person. Request a free custom quote via WhatsApp.`,
+      answer: `Pricing for ${service.name} in Bali depends on guest count, menu selection, and duration. Starting from IDR 700,000 per person. Request a free custom quote via WhatsApp.`,
     },
     {
       question: `How do I book ${service.name} with myCHEF?`,

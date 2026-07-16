@@ -188,10 +188,10 @@ After service, we conduct full cleanup and restore the venue to its original con
     body: `<p>Corporate catering pricing is based on format, course count, service level, and group size. All prices are in Indonesian Rupiah (IDR) and shown as per-person rates excluding 11% VAT. Volume discounts apply for groups of 50 persons and above.</p>
 
 <p><strong>Working Lunches and Daily Retreat Meals</strong><br>
-IDR 350,000–600,000 per person. Covers buffet or set-menu format for breakfast, lunch, or single-meal service during a multi-day programme. Suited to full-day workshops, morning sessions, or afternoon breakouts where food is functional but still needs to be excellent.</p>
+From IDR 700,000 per person. Covers buffet or set-menu format for breakfast, lunch, or single-meal service during a multi-day programme. Suited to full-day workshops, morning sessions, or afternoon breakouts where food is functional but still needs to be excellent.</p>
 
 <p><strong>Corporate Dinner — Plated, 3 Courses</strong><br>
-IDR 600,000–1,200,000 per person. Formal seated dinner with synchronized plated service, a trained front-of-house team, and a menu reviewed and approved in advance. Suitable for leadership dinners, client entertainment, and end-of-programme events.</p>
+IDR 700,000–1,200,000 per person. Formal seated dinner with synchronized plated service, a trained front-of-house team, and a menu reviewed and approved in advance. Suitable for leadership dinners, client entertainment, and end-of-programme events.</p>
 
 <p><strong>Gala Incentive Dinner — 5+ Courses with Wine Service</strong><br>
 IDR 1,200,000–2,500,000 per person. The full-scale event format. Includes multi-course progression, wine pairings, sommelier or beverage service, and the highest level of presentation and synchronization. Designed for incentive trip headlines, major company milestones, or client entertainment at the executive level.</p>
@@ -249,9 +249,9 @@ export default function CorporateEventsCateringPage() {
     <PremiumPage
       slug="blog/corporate-events-catering-bali-team-dining"
       title="Corporate Events Catering Bali"
-      description="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups from 10–200. From IDR 450,000++ per person."
+      description="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups from 10–200. From IDR 700,000++ per person."
       seoTitle="Corporate Events Catering Bali | Team Dining & Incentive Meals | myCHEF"
-      seoDescription="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups from 10–200. From IDR 450,000++ per person."
+      seoDescription="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups from 10–200. From IDR 700,000++ per person."
       canonicalUrl={CANONICAL}
       h1="Corporate Events Catering in Bali — Team Dinners, Retreats & Incentive Meals"
       subtitle="HACCP certified. International menus. 10–200 guests. Bali and Jakarta."

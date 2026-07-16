@@ -65,7 +65,7 @@ This approach works well for groups of 6--30 where dietary requirements are genu
 
 **Yoga and Wellness Retreat Catering** -- Bali is a major yoga retreat destination. We provide plant-based catering for multi-day and week-long retreats -- typically 2--3 meals per day for 8--30 participants, with a focus on nutrition and ingredient quality. Menus are designed in consultation with retreat facilitators.
 
-**Single Occasion Vegan Dinner** -- A vegan dinner party or celebration for a group at a villa. Multi-course plant-based menu, professional service, and presentation that matches the finest vegan restaurants. From IDR 600,000/person.
+**Single Occasion Vegan Dinner** -- A vegan dinner party or celebration for a group at a villa. Multi-course plant-based menu, professional service, and presentation that matches the finest vegan restaurants. From IDR 700,000/person.
 
 **Plant-Based Cooking Class** -- A half-day session with a vegan specialist chef covering Balinese plant-based techniques, fermentation, coconut-based cooking, and Indonesian spice blends. Practical, engaging, and delicious. From IDR 800,000/person.
 

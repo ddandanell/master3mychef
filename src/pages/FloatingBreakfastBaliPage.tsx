@@ -16,7 +16,7 @@ const SECTIONS = [
 
     <p>The result is a breakfast that takes 20 minutes of your time to arrange (one WhatsApp message) and creates memories that outlast the trip. Guests who book the myCHEF floating breakfast consistently describe it as the single most special morning of their Bali stay — whether that's a honeymoon couple on their first morning, a family marking a birthday at sunrise, or solo travellers who decided they deserved something extraordinary.</p>
 
-    <p>We operate across all major Bali villa areas: Canggu, Seminyak, Uluwatu, Ubud, Nusa Dua, and Jimbaran. Pricing starts at <strong>IDR 450,000 per person</strong> for the Classic package and scales with the level of curation you want. Every booking includes full pool setup, fresh flowers, and a personally served breakfast — no self-assembly, no compromise.</p>`,
+    <p>We operate across all major Bali villa areas: Canggu, Seminyak, Uluwatu, Ubud, Nusa Dua, and Jimbaran. Pricing starts at <strong>IDR 700,000 per person</strong> for the Classic package and scales with the level of curation you want. Every booking includes full pool setup, fresh flowers, and a personally served breakfast — no self-assembly, no compromise.</p>`,
   },
   {
     id: 'what-included',
@@ -47,22 +47,22 @@ const SECTIONS = [
     features: [
       {
         icon: UtensilsCrossed,
-        title: 'Classic Bali — IDR 450,000/person',
+        title: 'Classic Bali — IDR 700,000/person',
         desc: 'The signature experience: full tropical fruit selection, eggs your way, fresh juice, Balinese coffee, croissant or toast, rose petal pool setup, and service. Perfect for couples and small groups who want the complete floating breakfast without additional add-ons. Minimum 2 guests.',
       },
       {
         icon: Heart,
-        title: 'Honeymoon Edition — IDR 650,000/person',
+        title: 'Honeymoon Edition — IDR 700,000/person',
         desc: 'Elevated for couples celebrating a honeymoon or anniversary. Adds a chilled bottle of sparkling wine or Bali rosé on the tray, champagne flutes, a custom "Just Married" floating sign, additional rose petals, and a 3-course breakfast sequence (fruit → savoury → pastry and dessert). Photography-optimised setup.',
       },
       {
         icon: Users,
-        title: 'Family Edition — IDR 400,000/person',
+        title: 'Family Edition — IDR 700,000/person',
         desc: 'Designed for families with children. Uses a pool-ledge setup (trays positioned at the pool edge, not free-floating) for safety with young children. Includes a dedicated kids\' smoothie bowl, banana pancakes with honey, and a simplified fruit plate alongside the full adult menu. Up to 6 guests across both trays.',
       },
       {
         icon: Leaf,
-        title: 'Wellness Bowl Edition — IDR 500,000/person',
+        title: 'Wellness Bowl Edition — IDR 700,000/person',
         desc: 'Plant-forward and nutrient-dense: two smoothie bowls (choice of acai or dragon fruit base), raw granola, seasonal tropical fruit, cold-pressed juice, herbal Bali tea, chia pudding, and avocado toast on gluten-free sourdough. Fully vegan and gluten-free by default. Ideal for wellness retreat guests and health-conscious travellers.',
       },
     ],
@@ -165,9 +165,9 @@ export default function FloatingBreakfastBaliPage() {
     <PremiumPage
       slug="blog/floating-breakfast-bali"
       title="Floating Breakfast Bali — Private Chef In-Villa Experience"
-      description="Book a private chef floating breakfast in Bali. Rose-petal pool setup, tropical fruits, eggs your way. From IDR 450,000/person. Seminyak, Canggu, Uluwatu, Ubud."
+      description="Book a private chef floating breakfast in Bali. Rose-petal pool setup, tropical fruits, eggs your way. From IDR 700,000/person. Seminyak, Canggu, Uluwatu, Ubud."
       seoTitle="Floating Breakfast Bali | Private Chef In-Villa Experience | myCHEF"
-      seoDescription="Book a private chef floating breakfast in Bali. Rose-petal pool setup, tropical fruits, eggs your way. From IDR 450,000/person. Seminyak, Canggu, Uluwatu, Ubud."
+      seoDescription="Book a private chef floating breakfast in Bali. Rose-petal pool setup, tropical fruits, eggs your way. From IDR 700,000/person. Seminyak, Canggu, Uluwatu, Ubud."
       canonicalUrl="https://mychef.id/blog/floating-breakfast-bali"
       h1="Floating Breakfast Bali"
       subtitle="The Ultimate Private Chef Floating Breakfast Experience"
@@ -186,7 +186,7 @@ export default function FloatingBreakfastBaliPage() {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
           headline: 'Floating Breakfast Bali — The Ultimate Private Chef In-Villa Experience',
-          description: 'Book a private chef floating breakfast in Bali. Rose-petal pool setup, tropical fruits, eggs your way. From IDR 450,000/person.',
+          description: 'Book a private chef floating breakfast in Bali. Rose-petal pool setup, tropical fruits, eggs your way. From IDR 700,000/person.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: {
             '@type': 'Organization',

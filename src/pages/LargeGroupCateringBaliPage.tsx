@@ -85,13 +85,13 @@ const SECTIONS = [
     title: 'Team Size and Pricing Guide by Group Scale',
     body: `<p>The table below provides our standard staffing model for large group events in Bali. These are starting points — specific menus, venue complexity, service format, and event duration all affect the final team composition.</p>
 
-    <p><strong>30–50 guests:</strong> 2 chefs + 3 servers. This team handles family-style sharing or a simple live station with confidence. Setup time: 2–3 hours. From IDR 400,000/person for sharing buffet format.</p>
+    <p><strong>30–50 guests:</strong> 2 chefs + 3 servers. This team handles family-style sharing or a simple live station with confidence. Setup time: 2–3 hours. From IDR 700,000/person for sharing buffet format.</p>
 
-    <p><strong>50–80 guests:</strong> 3 chefs + 5 servers. Multiple concurrent stations or a full buffet with live-top service. A dedicated service captain manages flow between kitchen and dining area. Setup time: 3–4 hours. From IDR 400,000/person (buffet) to IDR 550,000/person (stations).</p>
+    <p><strong>50–80 guests:</strong> 3 chefs + 5 servers. Multiple concurrent stations or a full buffet with live-top service. A dedicated service captain manages flow between kitchen and dining area. Setup time: 3–4 hours. From IDR 700,000/person (buffet or stations).</p>
 
-    <p><strong>80–120 guests:</strong> 4 chefs + 8 servers + 1 production coordinator. Off-site prep begins the morning of the event. The production coordinator manages timing between prep kitchen, transport, and venue setup. This scale requires a site visit or detailed venue brief in advance. Setup time: 4–5 hours. From IDR 450,000/person (buffet) to IDR 600,000/person (stations).</p>
+    <p><strong>80–120 guests:</strong> 4 chefs + 8 servers + 1 production coordinator. Off-site prep begins the morning of the event. The production coordinator manages timing between prep kitchen, transport, and venue setup. This scale requires a site visit or detailed venue brief in advance. Setup time: 4–5 hours. From IDR 700,000/person (buffet or stations).</p>
 
-    <p><strong>120–200 guests:</strong> 5+ chefs + 12+ servers + event coordinator. Full event-scale deployment. The event coordinator manages all vendor touchpoints (equipment rentals, linen, staffing schedule, dietary tracking). A venue inspection is conducted 48–72 hours before the event. Setup time: 5–6 hours minimum. From IDR 500,000/person (buffet) to IDR 750,000/person (plated with full silver service).</p>
+    <p><strong>120–200 guests:</strong> 5+ chefs + 12+ servers + event coordinator. Full event-scale deployment. The event coordinator manages all vendor touchpoints (equipment rentals, linen, staffing schedule, dietary tracking). A venue inspection is conducted 48–72 hours before the event. Setup time: 5–6 hours minimum. From IDR 700,000/person (buffet) to IDR 750,000/person (plated with full silver service).</p>
 
     <p>All pricing is indicative and subject to menu complexity, service duration, and venue logistics. We provide itemized quotes within 4 hours of receiving your brief. For events above 150 guests, contact us directly for a dedicated event consultation.</p>`,
   },
@@ -164,7 +164,7 @@ const FAQS = [
   },
   {
     question: "What's the cost for catering 50 people in Bali?",
-    answer: 'From IDR 400K/person for buffet-style, IDR 600K+ for seated plated service. Final pricing depends on menu complexity, service duration, and venue logistics. We provide detailed itemized quotes within 4 hours of receiving your brief.',
+    answer: 'From IDR 700K/person for buffet-style or seated plated service. Final pricing depends on menu complexity, service duration, and venue logistics. We provide detailed itemized quotes within 4 hours of receiving your brief.',
   },
   {
     question: 'Do you handle dietary requirements across a large group?',

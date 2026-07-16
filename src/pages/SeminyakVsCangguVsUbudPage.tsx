@@ -31,7 +31,7 @@ const SECTIONS = [
 
     <p><strong>Key dishes and menu styles:</strong> Tasting menus with Indonesian-fusion courses, fresh seafood presentations (whole fish, prawn bisque, ceviche), Wagyu beef with local accompaniments, and multi-course dessert finales. The aesthetic is refined plating with local ingredients at the centre.</p>
 
-    <p><strong>Price range:</strong> IDR 550,000–950,000 per person for a private chef dinner, depending on menu level and group size. The premium reflects both the formality and the villa kitchen setups that support more complex plated service.</p>`,
+    <p><strong>Price range:</strong> IDR 700,000–950,000 per person for a private chef dinner, depending on menu level and group size. The premium reflects both the formality and the villa kitchen setups that support more complex plated service.</p>`,
   },
   {
     id: 'canggu',
@@ -48,7 +48,7 @@ const SECTIONS = [
 
     <p><strong>Key dishes and menu styles:</strong> Live BBQ stations (whole fish, prawns, chicken satay, corn), plant-based and bowl food setups (poke, grain bowls, raw spreads), sharing platters with Indonesian street food influences, and dessert stations. The visual presentation matters in Canggu — guests photograph everything, so colourful, abundant spreads are right at home.</p>
 
-    <p><strong>Price range:</strong> IDR 400,000–750,000 per person. Sharing and BBQ formats are generally more efficient at scale, so larger groups in Canggu often find the best value per head of the three areas.</p>`,
+    <p><strong>Price range:</strong> IDR 700,000–750,000 per person. Sharing and BBQ formats are generally more efficient at scale, so larger groups in Canggu often find the best value per head of the three areas.</p>`,
   },
   {
     id: 'ubud',
@@ -65,7 +65,7 @@ const SECTIONS = [
 
     <p><strong>Key dishes and menu styles:</strong> Plant-based and vegan menus using local organic produce, Balinese ceremonial dishes (lawar, babi guling for non-vegetarians, jukut urab), healing ingredient menus (turmeric, ginger, moringa, coconut), and traditional rice-table formats. The cooking class add-on typically covers market visits and traditional technique with local produce.</p>
 
-    <p><strong>Price range:</strong> IDR 400,000–800,000 per person. The wellness and organic focus can push menus toward the mid-range; cooking class add-ons are priced separately and typically run IDR 350,000–600,000 per person for a half-day experience.</p>`,
+    <p><strong>Price range:</strong> IDR 700,000–800,000 per person. The wellness and organic focus can push menus toward the mid-range; cooking class add-ons are priced separately and typically run IDR 350,000–600,000 per person for a half-day experience.</p>`,
   },
   {
     id: 'comparison',

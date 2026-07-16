@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does a private chef cost in Ubud?',
-    a: 'Jungle villa dinners start at IDR 400K–700K per person for a 3–4 course menu (2–10 guests). Wellness retreat full-board programmes are priced as daily per-person packages. Traditional Babi Guling feasts have dedicated pricing based on guest count. All prices subject to 11% tax + 10% service charge.',
+    a: 'Jungle villa dinners start from IDR 700K per person for a 3–4 course menu (2–10 guests). Wellness retreat full-board programmes are priced as daily per-person packages. Traditional Babi Guling feasts have dedicated pricing based on guest count. All prices subject to 11% tax + 10% service charge.',
   },
   {
     q: 'Can you cater for a yoga or wellness retreat in Ubud?',
@@ -47,7 +47,7 @@ const AREAS = [
 const SERVICES = [
   {
     name: 'Jungle Villa Fine Dining',
-    range: 'IDR 400K–700K / person',
+    range: 'From IDR 700K / person',
     for: '2–10 guests',
     detail: 'Private dinners in your Ubud jungle villa — Balinese market-to-table menus, modern Indonesian tasting courses, or plant-forward wellness cooking. Quiet, professional service matching the Ubud pace.',
   },
@@ -59,13 +59,13 @@ const SERVICES = [
   },
   {
     name: 'Traditional Balinese Feast',
-    range: 'IDR 450K–800K / person',
+    range: 'IDR 700K–800K / person',
     for: '8–50 guests',
     detail: 'Authentic Babi Guling whole-roasted pig, Megibung communal feasts, and traditional Balinese rijsttafel. Sourced from morning Ubud markets and prepared with traditional methods.',
   },
   {
     name: 'Romantic Couple Dinners',
-    range: 'IDR 550K–950K / person',
+    range: 'IDR 700K–950K / person',
     for: '2 guests',
     detail: 'Intimate multi-course dinners for couples — anniversary, honeymoon, or proposal settings. Rice terrace view positioning, floral setup, and personalised menu available on request.',
   },

@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does a private chef cost in Nusa Dua?',
-    a: 'Fine-dining dinners in Nusa Dua start at IDR 500K–900K per person for 2–20 guests. Corporate and executive dining formats range from IDR 450K–800K per person. Event and celebration packages from IDR 700K–2M per person depending on production complexity. All prices subject to 11% tax + 10% service charge.',
+    a: 'Fine-dining dinners in Nusa Dua start at IDR 700K–900K per person for 2–20 guests. Corporate and executive dining formats range from IDR 700K–800K per person. Event and celebration packages from IDR 700K–2M per person depending on production complexity. All prices subject to 11% tax + 10% service charge.',
   },
   {
     q: 'Do you cater for corporate offsites and executive groups in Nusa Dua?',
@@ -47,13 +47,13 @@ const AREAS = [
 const SERVICES = [
   {
     name: 'Resort-Style Villa Fine Dining',
-    range: 'IDR 500K–900K / person',
+    range: 'IDR 700K–900K / person',
     for: '2–20 guests',
     detail: 'Multi-course tasting menus executed with hotel-grade precision. Polished waitstaff, refined plating, and quiet professional service — the experience of a five-star restaurant inside your private villa.',
   },
   {
     name: 'Corporate & Executive Catering',
-    range: 'IDR 450K–800K / person',
+    range: 'IDR 700K–800K / person',
     for: '10–60 guests',
     detail: 'Structured breakfasts, working lunches, and plated executive dinners with precise run sheets. We coordinate security entry, villa setup, and service timing to match your business agenda exactly.',
   },
@@ -65,7 +65,7 @@ const SERVICES = [
   },
   {
     name: 'Polished Brunch & Breakfast',
-    range: 'IDR 350K–600K / person',
+    range: 'From IDR 700K / person',
     for: '2–30 guests',
     detail: 'Recovery brunches after long event nights, team breakfasts to open an offsite, or family mornings for multi-generational villa stays. Premium but relaxed — the perfect counterpoint to the evening before.',
   },

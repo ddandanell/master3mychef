@@ -23,7 +23,7 @@ const BOOKING_CARDS = [
     icon: PartyPopper,
     accent: '#6B8E5A',
     waText: 'Hi myCHEF, I would like a catering quote.',
-    features: ['BBQ, buffet, plated', 'Drop-off or full service', 'Custom menus', 'From IDR 250K pp'],
+    features: ['BBQ, buffet, plated', 'Drop-off or full service', 'Custom menus', 'From IDR 700K pp'],
   },
   {
     label: 'Events',

@@ -36,12 +36,12 @@ const SECTIONS = [
       {
         icon: Sparkles,
         title: 'Bottomless Brunch',
-        desc: 'Mimosas, eggs benedict, tropical fruit platters, acai bowls, avocado toast, crêpe station, fresh juice bar, and a grazing spread to keep things flowing. The ultimate lazy-morning-by-the-pool experience. IDR 450K/person — alcohol client-supplied or we advise local suppliers.',
+        desc: 'Mimosas, eggs benedict, tropical fruit platters, acai bowls, avocado toast, crêpe station, fresh juice bar, and a grazing spread to keep things flowing. The ultimate lazy-morning-by-the-pool experience. IDR 700K/person — alcohol client-supplied or we advise local suppliers.',
       },
       {
         icon: Heart,
         title: 'Grazing Table Goddess',
-        desc: 'An epic styled grazing table built around the villa aesthetic: aged cheeses, cured meats, seasonal fruits, honeycomb, artisan crackers, dips, sweets, and fresh flowers woven throughout. A centrepiece that doubles as content. IDR 380K/person for groups of 8–30.',
+        desc: 'An epic styled grazing table built around the villa aesthetic: aged cheeses, cured meats, seasonal fruits, honeycomb, artisan crackers, dips, sweets, and fresh flowers woven throughout. A centrepiece that doubles as content. IDR 700K/person for groups of 8–30.',
       },
       {
         icon: Star,
@@ -51,7 +51,7 @@ const SECTIONS = [
       {
         icon: Camera,
         title: 'Insta-Perfect Picnic',
-        desc: 'A fully styled poolside or garden picnic spread with low cushion seating, wicker baskets, fresh bouquets, personalised name tags, and a curated grazing and charcuterie spread. Built for content, built for memories. IDR 500K/person.',
+        desc: 'A fully styled poolside or garden picnic spread with low cushion seating, wicker baskets, fresh bouquets, personalised name tags, and a curated grazing and charcuterie spread. Built for content, built for memories. IDR 700K/person.',
       },
     ],
   },
@@ -207,9 +207,9 @@ export default function BachelorettePartyCateringPage() {
     <PremiumPage
       slug="blog/bachelorette-party-bali-catering"
       title="Bachelorette Party Bali: Catering & Private Chef"
-      description="Gorgeous catering for your Bali bachelorette party. Bottomless brunch, grazing tables, champagne setups, themed dessert bars. Groups 6–30. From IDR 400K/person."
+      description="Gorgeous catering for your Bali bachelorette party. Bottomless brunch, grazing tables, champagne setups, themed dessert bars. Groups 6–30. From IDR 700K/person."
       seoTitle="Bachelorette Party Bali | Catering, Grazing Tables & Brunch | myCHEF"
-      seoDescription="Gorgeous catering for your Bali bachelorette party. Bottomless brunch, grazing tables, champagne setups, themed dessert bars. Groups 6–30. From IDR 400K/person."
+      seoDescription="Gorgeous catering for your Bali bachelorette party. Bottomless brunch, grazing tables, champagne setups, themed dessert bars. Groups 6–30. From IDR 700K/person."
       canonicalUrl="https://mychef.id/blog/bachelorette-party-bali-catering"
       h1="Bachelorette Party Bali: Catering & Private Chef"
       subtitle="Gorgeous Food, Bottomless Brunch & Grazing Tables for Your Hen Party"
@@ -228,7 +228,7 @@ export default function BachelorettePartyCateringPage() {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
           headline: 'Bachelorette Party Bali: Catering & Private Chef',
-          description: 'Gorgeous catering for your Bali bachelorette party. Bottomless brunch, grazing tables, champagne setups, themed dessert bars. Groups 6–30. From IDR 400K/person.',
+          description: 'Gorgeous catering for your Bali bachelorette party. Bottomless brunch, grazing tables, champagne setups, themed dessert bars. Groups 6–30. From IDR 700K/person.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
           datePublished: '2026-06-29',

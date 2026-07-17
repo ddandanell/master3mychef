@@ -16,6 +16,7 @@ export const IMAGE_DIMENSIONS = {
   "/generated/mychef-catering-bali-catering-hero.webp": { width: 1440, height: 800 },
   "/generated/generated/mychef-catering-bali-floating-breakfast.webp": { width: 1440, height: 800 },
   "/generated/mychef-catering-bali-plated-menus.webp": { width: 1440, height: 800 },
+  "/generated/mychef-dining-styles-bali-hero.webp": { width: 1536, height: 1024 },
   "/generated/mychef-finedining-bali-chefs-hero.webp": { width: 1440, height: 800 },
   "/generated/mychef-misc-bali-chefs-table-hero-luxury.webp": { width: 1535, height: 1024 },
   "/generated/mychef-misc-bali-contact-concierge.webp": { width: 1200, height: 1044 },

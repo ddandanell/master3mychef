@@ -171,9 +171,9 @@ export default function FloatingBreakfastBaliPage() {
       canonicalUrl="https://mychef.id/blog/floating-breakfast-bali"
       h1="Floating Breakfast Bali"
       subtitle="The Ultimate Private Chef Floating Breakfast Experience"
-      heroImage="/generated/mychef-experience-bali-luna-gallery-1.webp"
-      heroImageAlt="Floating breakfast tray in a Bali villa pool — private chef experience by myCHEF"
-      ogImage="https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp"
+      heroImage="/generated/mychef-catering-bali-hero-floating-breakfast.webp"
+      heroImageAlt="Floating breakfast tray in a Bali villa pool with tropical fruit and fresh pastries"
+      ogImage="https://mychef.id/generated/mychef-catering-bali-hero-floating-breakfast.webp"
       keywords={['floating breakfast bali', 'bali floating breakfast', 'private chef floating breakfast', 'villa floating breakfast bali', 'floating breakfast pool bali']}
       highlights={['Packages', 'Locations', 'How It Works', 'FAQ']}
       sections={SECTIONS}
@@ -195,7 +195,7 @@ export default function FloatingBreakfastBaliPage() {
           },
           datePublished: '2026-06-29',
           dateModified: new Date().toISOString().split('T')[0],
-          image: 'https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp',
+          image: 'https://mychef.id/generated/mychef-catering-bali-hero-floating-breakfast.webp',
           mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/floating-breakfast-bali' },
           url: 'https://mychef.id/blog/floating-breakfast-bali',
           wordCount: 1300,

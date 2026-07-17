@@ -158,7 +158,7 @@ export default function CateringVillaPage() {
         title="Villa Catering Bali | Daily Chef Service for Private Groups — myCHEF"
         description="Villa catering in Bali for Seminyak, Canggu, Ubud & Uluwatu stays. Breakfast, lunch & dinner with chef setup, service & cleanup. WhatsApp for a quote."
         canonical={`${SITE}/catering/villa-catering`}
-        ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet-catering.webp`}
+        ogImage={`${SITE}/generated/mychef-catering-bali-hero-villa.webp`}
         jsonLd={[
           cateringServiceSchema('Villa Catering Bali', 'Villa catering in Bali for private lunches, dinners, birthdays, and multi-day stays with chef-led menus and on-site service. myCHEF.id brings the kitchen team, setup, service, and cleanup to your villa across Bali.', `${SITE}/catering/villa-catering`),
           offerSchema('Villa Lunch', 450000, 'IDR', `${SITE}/catering/villa-catering`),
@@ -194,8 +194,8 @@ export default function CateringVillaPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-catering-bali-hero-buffet-catering.webp"
-            alt="Long villa dining table by pool at sunset with chef-prepared Bali catering"
+            src="/generated/mychef-catering-bali-hero-villa.webp"
+            alt="Long villa dining table by the pool at sunset with chef-prepared Bali catering"
             width={1920}
             height={1080}
             decoding="async" fetchPriority="high"
@@ -554,7 +554,7 @@ export default function CateringVillaPage() {
       {/* ═══════ SECTION 13: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-catering-bali-catering-hero.webp" alt="Villa catering setup with chef and team at Bali villa" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-catering-bali-villa-final.webp" alt="Indonesian chef and team preparing multi-day villa catering in a Bali villa kitchen" className="w-full h-full object-cover" loading="lazy" />
           <div
             className="absolute inset-0"
             style={{

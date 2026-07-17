@@ -308,7 +308,7 @@ const SECTIONS = [
     <p><strong>In-Villa Staffing:</strong> Per-shift pricing from IDR 250,000/hour. Waiters, butlers, bartenders, mixologists, and sommeliers available.</p>
     <p><strong>Staffing & Placement:</strong> 48-hour placement for private chefs and villa staff. 30-day replacement guarantee. Contact us for pricing.</p>`,
     image: '/generated/mychef-catering-bali-catering-hero.webp',
-    imageAlt: 'Elegant fine dining plate',
+    imageAlt: 'Plated private chef fine dining course served in a Bali villa',
   },
   {
     id: 'pricing-calculator',
@@ -435,7 +435,7 @@ const SECTIONS = [
     </ul>
     <p><strong>Not included:</strong> Alcohol (except wine pairing), specialty equipment rentals, venue decorations, and transport outside standard service areas.</p>`,
     image: '/generated/luna-table.webp',
-    imageAlt: 'Elegant villa dining table setup',
+    imageAlt: 'Candlelit private dining table set for service in a luxury Bali villa',
   },
   {
     id: 'fast-quote',

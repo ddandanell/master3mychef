@@ -249,7 +249,7 @@ export default function SolPage() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden max-w-[75%] mx-auto">
               <img
                 src="/generated/mychef-finedining-bali-sol-chef-portrait.webp"
-                alt="Chef Daniel"
+                alt="Chef Daniel — myCHEF private villa chef for daily dining in Bali"
                 width={800}
                 height={1000}
                 className="w-full h-full object-cover"

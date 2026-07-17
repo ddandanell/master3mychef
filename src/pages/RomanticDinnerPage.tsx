@@ -520,7 +520,7 @@ export default function RomanticDinnerPage() {
       <section className="relative py-28 px-6 overflow-hidden">
         <img
           src="/generated/mychef-experience-bali-luna-detail.webp"
-          alt="Private fine dining in Bali villa"
+          alt="Romantic private fine dining table set for two in a Bali villa"
           width={1920} height={800}
           loading="lazy" decoding="async"
           className="absolute inset-0 w-full h-full object-cover" />

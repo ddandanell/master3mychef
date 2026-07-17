@@ -58,7 +58,7 @@ export default function CertifiedPartnerPage() {
             <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
               <img
                 src={HERO_IMAGE}
-                alt={`${niceName} villa dining verification imagery`}
+                alt={`${niceName} — verified myCHEF partner villa for private dining in Bali`}
                 className="h-full min-h-[280px] w-full object-cover"
                 loading="lazy"
               />

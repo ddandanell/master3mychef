@@ -616,7 +616,7 @@ export default function CateringDropOffPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {DROPOFF_GALLERY.map((src, i) => (
               <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <OptimizedImage src={src} alt={`Drop-off catering setup ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                <OptimizedImage src={src} alt={`Drop-off catering setup ${i + 1} at a Bali villa`} className="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>

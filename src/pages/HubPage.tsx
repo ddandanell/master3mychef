@@ -329,7 +329,7 @@ export default function HubPage() {
           <div className="relative min-h-screen overflow-hidden">
             <img
               src="/generated/mychef-location-bali-hub-hero.webp"
-              alt="Luxury private dining table in a Bali villa at sunset"
+              alt="Elegant private dining table set at sunset in a luxury Bali villa by myCHEF"
               width={1536}
               height={1024}
               className="absolute inset-0 h-full w-full object-cover object-[center_52%]"
@@ -636,7 +636,7 @@ export default function HubPage() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <img
                 src="/generated/mychef-misc-bali-about-team-photo.webp"
-                alt="The myCHEF team"
+                alt="myCHEF hospitality team gathered for villa service in Bali"
                 width={800}
                 height={1000}
                 className="w-full h-full object-cover"
@@ -845,7 +845,7 @@ export default function HubPage() {
           >
             <img
               src="/generated/mychef-misc-bali-hub-villa.webp"
-              alt="Family enjoying private villa dinner in Bali"
+              alt="Family served a private chef dinner in a Bali villa"
               width={600}
               height={450}
               className="w-full h-full object-cover"
@@ -943,7 +943,7 @@ export default function HubPage() {
               >
                 <img
                   src={city.image}
-                  alt={`Private chef in ${city.name}, Bali`}
+                  alt={`Private chef service in ${city.name}, Bali by myCHEF`}
                   width={800}
                   height={600}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -1001,7 +1001,7 @@ export default function HubPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <img
                 src="/generated/mychef-misc-bali-hub-villa.webp"
-                alt="Luxury villa partnership"
+                alt="myCHEF villa partnership — private chef service for luxury Bali properties"
                 width={800}
                 height={600}
                 className="w-full h-full object-cover"
@@ -1149,7 +1149,7 @@ export default function HubPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-hub-bali.webp"
-            alt="Bali landscape"
+            alt="Sunset over Bali landscape — myCHEF private villa dining experiences across the island"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"

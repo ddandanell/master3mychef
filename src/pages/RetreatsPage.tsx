@@ -11,7 +11,7 @@ const SECTIONS = [
     body: `<p>Retreats are not single events — they are journeys. And the food should support that journey. We provide <a href="/catering" class="text-[#7E6410] hover:underline font-medium">multi-day catering</a> for yoga retreats, wellness retreats, and corporate offsites across <a href="/locations/ubud" class="text-[#7E6410] hover:underline font-medium">Ubud</a> and across Bali — full-board menus, dietary flexibility, and on-site coordination.</p>
     <p>We understand retreat dynamics: early morning yoga sessions require light, energizing breakfasts. Long workshop days need sustaining lunches. Evening ceremonies call for nourishing, communal dinners. Our <a href="/chefs" class="text-[#7E6410] hover:underline font-medium">retreat specialist chefs</a> design menus that match the rhythm of your retreat.</p>`,
     image: '/generated/mychef-experience-bali-hero-retreats.webp',
-    imageAlt: 'Wellness retreat dining in Bali',
+    imageAlt: 'Wellness retreat dining table with healthy food in a Bali villa',
   },
   {
     id: 'offerings',
@@ -38,7 +38,7 @@ const SECTIONS = [
     <p><strong>Afternoon Tea (4:00 PM):</strong> Raw energy balls, herbal infusions, and fresh tropical fruits.</p>
     <p><strong>Dinner (7:00 PM):</strong> Communal long-table dining — <a href="/blog/bali-catering-menu" class="text-[#7E6410] hover:underline font-medium">Balinese nasi campur</a> with vegan options, grilled local fish, seasonal vegetables, and coconut sambal. Dessert: black rice pudding with mango.</p>`,
     image: '/generated/mychef-events-bali-retreat-table.webp',
-    imageAlt: 'Retreat dining table with healthy food',
+    imageAlt: 'Healthy plant-forward retreat lunch served at a long table in a Bali villa',
   },
   {
     id: 'testimonials',
@@ -89,7 +89,7 @@ export default function RetreatsPage() {
       h1="Retreat Catering in Bali"
       subtitle="Full-board menus, dietary flexibility, and on-site coordination for yoga, wellness, and corporate retreats."
       heroImage="/generated/mychef-experience-bali-hero-retreats.webp"
-      heroImageAlt="Wellness retreat dining in Bali"
+      heroImageAlt="Sunrise retreat breakfast spread by a Bali villa pool"
       ogImage="https://mychef.id/generated/mychef-experience-bali-hero-retreats.webp"
       keywords={['retreat catering bali', 'yoga retreat food bali', 'wellness retreat catering']}
       highlights={['Full-Board Packages', 'Plant-Forward Menus', 'Dietary Flexibility', 'On-Site Coordination']}

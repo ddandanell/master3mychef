@@ -701,7 +701,7 @@ export default function LunaPage() {
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
                 src="/generated/mychef-experience-bali-luna-gallery-3.webp"
-                alt="Private chef preparing a fine dining course in a Bali villa kitchen"
+                alt="Chef garnishing a fine dining course before service in a Bali villa kitchen"
                 width={800}
                 height={600}
                 className="w-full h-full object-cover"
@@ -1141,7 +1141,7 @@ export default function LunaPage() {
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
                 src="/generated/mychef-experience-bali-luna-gallery-1.webp"
-                alt="Sommelier presenting wine"
+                alt="Sommelier pouring wine during a private fine dining dinner in a Bali villa"
                 width={800}
                 height={600}
                 sizes="(min-width: 768px) 50vw, 100vw"
@@ -1153,7 +1153,7 @@ export default function LunaPage() {
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
                 src="/generated/mychef-experience-bali-luna-gallery-2.webp"
-                alt="Chef flambe at open kitchen"
+                alt="Chef flambéing a course at an open kitchen station during a villa dinner"
                 width={800}
                 height={600}
                 sizes="(min-width: 768px) 50vw, 100vw"
@@ -1165,7 +1165,7 @@ export default function LunaPage() {
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
                 src="/generated/mychef-experience-bali-luna-gallery-3.webp"
-                alt="Chef plating with guest"
+                alt="Private chef plating a course with guests watching at a Bali villa dinner"
                 width={800}
                 height={600}
                 sizes="(min-width: 768px) 50vw, 100vw"
@@ -1177,7 +1177,7 @@ export default function LunaPage() {
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img
                 src="/generated/mychef-experience-bali-luna-gallery-4.webp"
-                alt="Group dining at sunset"
+                alt="Group of guests dining at sunset during a private villa event in Bali"
                 width={800}
                 height={600}
                 sizes="(min-width: 768px) 50vw, 100vw"

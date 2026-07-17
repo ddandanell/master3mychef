@@ -154,7 +154,7 @@ export default function LocationsHubPage() {
                   <div className="h-56 overflow-hidden bg-[#E5E3E0]">
                     <OptimizedImage
                       src={details?.image || '/generated/mychef-location-bali-water-sunset.webp'}
-                      alt={loc.label}
+                      alt={`Private chef and villa dining in ${loc.label}, Bali by myCHEF`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
@@ -220,7 +220,7 @@ export default function LocationsHubPage() {
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
               <OptimizedImage
                 src="/generated/mychef-location-bali-water-sunset.webp"
-                alt="Dramatic skyline at dusk — myCHEF private chef expansion to Jakarta"
+                alt="Sunset over Bali waters — myCHEF private chef service areas across the island"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

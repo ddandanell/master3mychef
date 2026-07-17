@@ -100,7 +100,7 @@ export default function ServiceSommelierPage() {
         title="Sommelier Hire Bali | Villa Wine Pairings — myCHEF"
         description="Hire a sommelier in Bali for villa dinners & tasting menus. Expert wine pairings, bottle selection & tableside service. WhatsApp us to add wine service."
         canonical={`${SITE}/in-villa-service/sommelier`}
-        ogImage={`${SITE}/generated/luna-wine.webp`}
+        ogImage={`${SITE}/generated/mychef-service-bali-hero-sommelier.webp`}
         jsonLd={[
           detailedServiceSchema(
             'Sommelier Service Bali',
@@ -126,7 +126,7 @@ export default function ServiceSommelierPage() {
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
   <div className="absolute inset-0">
-    <img src="/generated/mychef-misc-bali-chefs-table-hero-luxury.webp" alt="Sommelier presenting wine at private Bali villa dinner" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
+    <img src="/generated/mychef-service-bali-hero-sommelier.webp" alt="Indonesian sommelier pouring red wine at a candlelit Bali villa dinner table" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
     <div
       className="absolute inset-0"
       style={{
@@ -223,10 +223,10 @@ export default function ServiceSommelierPage() {
           <SectionHeader eyebrow="Gallery" title="The wine moment" subtitle="Pairings and pours at Bali villas." />
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
             {[
-              { src: '/generated/mychef-sommelier-1.webp', alt: 'Balinese sommelier presenting wine to guests at a Bali villa dinner' },
-              { src: '/generated/mychef-sommelier-2.webp', alt: 'Balinese sommelier pouring wine at a candlelit Bali villa table' },
-              { src: '/generated/mychef-sommelier-3.webp', alt: 'Balinese sommelier decanting wine at a Bali villa' },
-              { src: '/generated/mychef-sommelier-4.webp', alt: 'Balinese sommelier guiding a wine tasting on a Bali villa terrace' },
+              { src: '/generated/mychef-service-bali-sommelier-gallery-1.webp', alt: 'Indonesian sommelier presenting a wine bottle to guests at a Bali villa dinner' },
+              { src: '/generated/mychef-service-bali-sommelier-gallery-2.webp', alt: 'Indonesian sommelier pouring wine at a candlelit Bali villa table' },
+              { src: '/generated/mychef-service-bali-sommelier-gallery-3.webp', alt: 'Indonesian sommelier decanting wine at a Bali villa' },
+              { src: '/generated/mychef-service-bali-sommelier-gallery-4.webp', alt: 'Indonesian sommelier guiding a wine tasting on a Bali villa terrace' },
             ].map((g) => (
               <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
                 <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
@@ -319,7 +319,7 @@ export default function ServiceSommelierPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-experience-bali-luna-wine.webp" alt="Wine pairing at Bali villa dinner" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-service-bali-sommelier-cta.webp" alt="Elegant wine glasses and decanter on a candlelit Bali villa dining table" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

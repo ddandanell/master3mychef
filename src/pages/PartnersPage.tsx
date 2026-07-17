@@ -24,7 +24,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA = 6289674072020
-const PRESS_EMAIL = 'press@mychef.id'
+const PRESS_EMAIL = 'bali@mychef.id'
 
 const heroStats = ['50+ staff', '560+ villas', '12,000+ guests']
 
@@ -48,7 +48,7 @@ const pressResources = [
   {
     icon: Mail,
     title: 'Fast press contact',
-    desc: 'Email press@mychef.id for interview requests, quote approvals, and publication timelines.',
+    desc: 'Email bali@mychef.id for interview requests, quote approvals, and publication timelines.',
   },
 ]
 
@@ -125,7 +125,7 @@ const faqs = [
   },
   {
     q: 'Can journalists request founder commentary?',
-    a: 'Yes. Press can request Adriano commentary, company background, service facts, and approved images by emailing press@mychef.id.',
+    a: 'Yes. Press can request Adriano commentary, company background, service facts, and approved images by emailing bali@mychef.id.',
   },
   {
     q: 'What types of properties do you work with?',

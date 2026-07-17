@@ -868,7 +868,7 @@ export default function LunaPage() {
             <a href="https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20reserve%20a%20fine%20dining%20evening%20in%20Bali." target="_blank" rel="noopener noreferrer" data-source="luna-menus-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all">
               <MessageCircle className="w-4 h-4" /> Get Your Fine Dining Quote in 1 Hour
             </a>
-            <a href="mailto:indonesia@mychef.id" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
+            <a href="mailto:bali@mychef.id" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all">
               Prefer Email?
             </a>
           </div>
@@ -1386,7 +1386,7 @@ export default function LunaPage() {
               </a>
             </Button>
             <Button asChild variant="secondary" size="brand">
-              <a href="mailto:indonesia@mychef.id">Prefer Email? indonesia@mychef.id</a>
+              <a href="mailto:bali@mychef.id">Prefer Email? bali@mychef.id</a>
             </Button>
           </div>
         </div>

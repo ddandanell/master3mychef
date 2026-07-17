@@ -72,11 +72,11 @@ export default function Footer() {
             </div>
             <div className="space-y-2">
               <a
-                href="mailto:indonesia@mychef.id"
+                href="mailto:bali@mychef.id"
                 className="flex items-center gap-2 text-sm text-white/60 hover:text-[#C5A028] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
               >
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                indonesia@mychef.id
+                bali@mychef.id
               </a>
               <div className="flex items-center gap-2 text-sm text-white/60">
                 <MapPin className="w-4 h-4" />

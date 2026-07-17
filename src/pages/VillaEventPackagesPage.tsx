@@ -470,8 +470,8 @@ export default function VillaEventPackagesPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-event-packages-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> WhatsApp +62 896 7407 2020
             </a>
-            <a href="mailto:hello@mychef.id" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Mail className="w-4 h-4" /> hello@mychef.id
+            <a href="mailto:bali@mychef.id" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <Mail className="w-4 h-4" /> bali@mychef.id
             </a>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left mb-10">
@@ -483,7 +483,7 @@ export default function VillaEventPackagesPage() {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <Mail className="w-5 h-5 text-[#C5A028] mb-3" />
               <p className="text-white text-sm font-semibold mb-1">Email</p>
-              <a href="mailto:hello@mychef.id" className="text-white/[65%] text-sm hover:text-white transition-colors">hello@mychef.id</a>
+              <a href="mailto:bali@mychef.id" className="text-white/[65%] text-sm hover:text-white transition-colors">bali@mychef.id</a>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <Instagram className="w-5 h-5 text-[#C5A028] mb-3" />

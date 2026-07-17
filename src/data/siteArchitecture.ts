@@ -21,7 +21,7 @@ export const PHONE = {
 export const SITE = {
   name: 'myCHEF',
   url: 'https://mychef.id',
-  email: 'indonesia@mychef.id',
+  email: 'bali@mychef.id',
   /** @deprecated use PHONE.digits */
   whatsapp: PHONE.digits,
 }

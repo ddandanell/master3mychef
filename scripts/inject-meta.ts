@@ -36,6 +36,7 @@ const OG_IMAGES: Record<string, string> = {
   '/events': '/hero-events.webp',
   '/villa-event-packages': '/generated/mychef-villa-event-packages-hero.webp',
   '/vip-transport-bali': '/generated/mychef-vip-transport-bali-hero.webp',
+  '/complete-villa-experience': '/generated/mychef-catering-bali-catering-hero.webp',
   '/events/weddings': '/generated/mychef-events-bali-hero-weddings.webp',
   '/events/weddings-bali': '/generated/mychef-events-bali-hero-weddings.webp',
   '/events/birthdays': '/generated/mychef-events-bali-hero-birthdays.webp',

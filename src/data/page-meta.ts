@@ -256,6 +256,16 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-vip-transport-bali-hero.webp`,
   },
 
+  'complete-villa-experience': {
+    path: '/complete-villa-experience',
+    title: 'Complete Villa Experience Bali | End-to-End Hospitality — myCHEF',
+    description:
+      'Full-service villa hospitality in Bali: airport transfers, daily private chef, events, staff, concierge & cleanup. One team from arrival to departure.',
+    canonical: `${SITE}/complete-villa-experience`,
+    h1: 'Complete Villa Experience Bali — We Handle Everything, From Arrival to Departure',
+    ogImage: `${SITE}/generated/mychef-catering-bali-catering-hero.webp`,
+  },
+
   'events-birthdays': {
     path: '/events/birthdays',
     title: 'Birthday Party Bali Villa | Catering & Events — myCHEF',

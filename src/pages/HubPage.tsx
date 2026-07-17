@@ -22,6 +22,7 @@ const PORTALS = [
     subtitle: 'BBQ, buffet, plated dinners. Babi guling. Drop-off or full service. We handle everything. You enjoy.',
     path: '/catering',
     image: '/generated/mychef-catering-bali-hub-catering.webp',
+    imageAlt: 'Villa catering spread with BBQ, buffet and plated dishes at a Bali property by myCHEF',
     accent: '#6B8E5A',
   },
   {
@@ -30,6 +31,7 @@ const PORTALS = [
     subtitle: 'A private chef cooks exclusively for your group. Multi-course tasting menus — Italian, French, Mediterranean, Wagyu. Your villa. Just your table. From 6 guests.',
     path: '/fine-dining',
     image: '/generated/mychef-misc-bali-hub-fine-dining.webp',
+    imageAlt: 'Private fine dining table set for an intimate dinner in a Bali villa by myCHEF',
     accent: '#C5A028',
   },
   {
@@ -38,6 +40,7 @@ const PORTALS = [
     subtitle: 'Full-service hospitality for weddings, corporate offsites, and celebrations. Chef, staff, setup, cleanup.',
     path: '/events',
     image: '/generated/mychef-events-bali-hub-events.webp',
+    imageAlt: 'Full-service private event setup at a Bali villa with dining and bar by myCHEF',
     accent: '#2C5F7C',
   },
 ]
@@ -413,7 +416,7 @@ export default function HubPage() {
                 <Link to={portal.path} className="absolute inset-0 z-10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" aria-label={portal.title} />
                 <img
                   src={portal.image}
-                  alt={portal.title}
+                  alt={portal.imageAlt}
                   width={600}
                   height={800}
                   fetchPriority={idx === 0 ? 'high' : undefined}
@@ -636,7 +639,7 @@ export default function HubPage() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <img
                 src="/generated/mychef-misc-bali-about-team-photo.webp"
-                alt="myCHEF hospitality team gathered for villa service in Bali"
+                alt="myCHEF hospitality team gathered for villa service across Bali"
                 width={800}
                 height={1000}
                 className="w-full h-full object-cover"
@@ -824,7 +827,7 @@ export default function HubPage() {
             >
               <img
                 src="/generated/mychef-misc-bali-hub-villa.webp"
-                alt="Family enjoying private villa dinner in Bali"
+                alt="Family enjoying a private chef dinner in a Bali villa by myCHEF"
                 width={500}
                 height={625}
                 className="w-full h-full object-contain"
@@ -845,7 +848,7 @@ export default function HubPage() {
           >
             <img
               src="/generated/mychef-misc-bali-hub-villa.webp"
-              alt="Family served a private chef dinner in a Bali villa"
+              alt="Family served a private chef dinner in a Bali villa by myCHEF"
               width={600}
               height={450}
               className="w-full h-full object-cover"

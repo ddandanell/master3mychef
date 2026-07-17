@@ -108,7 +108,7 @@ export default function BukitPeninsulaPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-bukit.webp"
-            alt="Dramatic clifftop villa on Bali's Bukit Peninsula set for a sunset private chef dinner over the Indian Ocean"
+            alt="Private chef service in Bukit Peninsula, Bali by myCHEF — clifftop sunset dinner"
             width={1920} height={1080}
             className="w-full h-full object-cover"
             fetchPriority="high" decoding="async"

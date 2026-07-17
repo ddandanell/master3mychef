@@ -108,7 +108,7 @@ export default function NusaDuaPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-nusa-dua.webp"
-            alt="Luxury resort-style villa in Nusa Dua, Bali prepared for a private chef fine-dining dinner"
+            alt="Private chef service in Nusa Dua, Bali by myCHEF — resort villa fine dining"
             width={1920} height={1080}
             className="w-full h-full object-cover"
             fetchPriority="high" decoding="async"

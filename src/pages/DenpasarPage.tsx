@@ -108,7 +108,7 @@ export default function DenpasarPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-denpasar.webp"
-            alt="Urban villa dining room in Denpasar, Bali prepared for a private chef business lunch or family dinner"
+            alt="Private chef service in Denpasar, Bali by myCHEF — urban villa lunch or dinner"
             width={1920} height={1080}
             className="w-full h-full object-cover"
             fetchPriority="high" decoding="async"

@@ -139,7 +139,7 @@ export default function ContactPage() {
       <section className="relative w-full min-h-[68vh] flex items-end overflow-hidden">
         <img
           src="/generated/mychef-misc-bali-contact-hero.webp"
-          alt="Luxury Bali villa terrace at golden hour with a concierge desk"
+          alt="Contact myCHEF for private chef and villa dining service in Bali"
           width={1920}
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"

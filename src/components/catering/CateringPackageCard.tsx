@@ -33,7 +33,7 @@ export default function CateringPackageCard({
       <div className="relative aspect-[4/3] overflow-hidden">
         <OptimizedImage
           src={image}
-          alt={title}
+          alt={`${title} catering setup at a Bali villa by myCHEF`}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
         />

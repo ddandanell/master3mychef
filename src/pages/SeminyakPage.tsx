@@ -112,7 +112,7 @@ export default function SeminyakPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-seminyak.webp"
-            alt="Luxury beachfront villa in Seminyak, Bali set for a private chef sunset dinner"
+            alt="Private chef service in Seminyak, Bali by myCHEF — beachfront villa sunset dinner"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"

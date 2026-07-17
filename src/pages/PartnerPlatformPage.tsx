@@ -123,7 +123,7 @@ export default function PartnerPlatformPage() {
       <section className="relative w-full min-h-[88vh] flex items-end overflow-hidden">
         <img
           src="/generated/mychef-misc-bali-partner-platform-hero.webp"
-          alt="Private Bali villa private dining setup at golden hour"
+          alt="Private villa dining setup at golden hour for myCHEF Bali partners"
           width={1920}
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"

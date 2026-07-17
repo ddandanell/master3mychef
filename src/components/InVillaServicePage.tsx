@@ -162,7 +162,7 @@ export default function InVillaServicePage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-staffing-bali-butler-service.webp"
-            alt="Professional butler serving luxury villa dinner in Bali"
+            alt="Professional butler serving a luxury villa dinner in Bali by myCHEF"
             width={1920}
             height={1080}
             fetchPriority="high"

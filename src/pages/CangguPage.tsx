@@ -112,7 +112,7 @@ export default function CangguPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-canggu.webp"
-            alt="Modern pool villa in Canggu, Bali set for a casual private chef BBQ dinner"
+            alt="Private chef service in Canggu, Bali by myCHEF — poolside BBQ dinner setup"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"

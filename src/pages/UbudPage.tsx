@@ -112,7 +112,7 @@ export default function UbudPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-ubud.webp"
-            alt="Jungle valley villa in Ubud, Bali set for a traditional Balinese private chef dinner"
+            alt="Private chef service in Ubud, Bali by myCHEF — jungle villa Balinese dinner"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"

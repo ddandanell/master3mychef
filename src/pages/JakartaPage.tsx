@@ -130,7 +130,7 @@ export default function JakartaPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-misc-bali-jakarta-skyline.webp"
-            alt="Jakarta city skyline at dusk — myCHEF private chef services in Indonesia's capital"
+            alt="Private chef service in Jakarta by myCHEF — city skyline at dusk"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"

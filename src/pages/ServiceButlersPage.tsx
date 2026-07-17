@@ -127,7 +127,7 @@ export default function ServiceButlersPage() {
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
   <div className="absolute inset-0">
-    <img src="/generated/mychef-service-bali-hero-butlers.webp" alt="Professional Indonesian butler welcoming guests at a luxury Bali villa entrance" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
+    <img src="/generated/mychef-service-bali-hero-butlers.webp" alt="Private villa butler Bali welcoming guests at a luxury villa entrance" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
     <div
       className="absolute inset-0"
       style={{
@@ -224,10 +224,10 @@ export default function ServiceButlersPage() {
           <SectionHeader eyebrow="Gallery" title="The butler's touch" subtitle="Seamless villa hospitality across Bali." />
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
             {[
-              { src: '/generated/mychef-service-bali-butlers-gallery-1.webp', alt: 'Indonesian butler serving breakfast on a private Bali villa terrace' },
-              { src: '/generated/mychef-service-bali-butlers-gallery-2.webp', alt: 'Indonesian butler welcoming guests at the entrance of a luxury Bali villa' },
-              { src: '/generated/mychef-service-bali-butlers-gallery-3.webp', alt: 'Indonesian butler attending to guests by a Bali villa pool' },
-              { src: '/generated/mychef-service-bali-butlers-gallery-4.webp', alt: 'Indonesian butler arranging an elegant welcome amenity inside a Bali villa' },
+              { src: '/generated/mychef-service-bali-butlers-gallery-1.webp', alt: 'Villa butler in Bali serving breakfast on a private villa terrace' },
+              { src: '/generated/mychef-service-bali-butlers-gallery-2.webp', alt: 'Private butler in Bali welcoming guests at the entrance of a luxury villa' },
+              { src: '/generated/mychef-service-bali-butlers-gallery-3.webp', alt: 'Villa butler in Bali attending to guests by a private pool' },
+              { src: '/generated/mychef-service-bali-butlers-gallery-4.webp', alt: 'Villa butler in Bali arranging an elegant welcome amenity inside a private villa' },
             ].map((g) => (
               <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
                 <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
@@ -320,7 +320,7 @@ export default function ServiceButlersPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-service-bali-butlers-cta.webp" alt="Discreet Indonesian butler in a beautifully appointed Bali villa living area" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-service-bali-butlers-cta.webp" alt="Private villa butler Bali in a beautifully appointed villa living area" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

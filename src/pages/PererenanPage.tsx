@@ -112,7 +112,7 @@ export default function PererenanPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-pererenan.webp"
-            alt="Architect-designed villa in Pererenan, Bali set up for a private chef dinner with rice-field views"
+            alt="Private chef service in Pererenan, Bali by myCHEF — rice-field villa dinner"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"

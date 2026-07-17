@@ -108,7 +108,7 @@ export default function JimbaranPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-jimbaran.webp"
-            alt="Jimbaran Bay villa terrace in Bali set for a private chef seafood dinner at sunset"
+            alt="Private chef service in Jimbaran, Bali by myCHEF — seafood dinner at sunset"
             width={1920} height={1080}
             className="w-full h-full object-cover"
             fetchPriority="high" decoding="async"

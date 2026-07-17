@@ -112,7 +112,7 @@ export default function UluwatuPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-uluwatu.webp"
-            alt="Clifftop villa terrace in Uluwatu, Bali styled for a sunset private chef dinner overlooking the Indian Ocean"
+            alt="Private chef service in Uluwatu, Bali by myCHEF — clifftop sunset dinner over the ocean"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"

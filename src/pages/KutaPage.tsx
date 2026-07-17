@@ -117,7 +117,7 @@ export default function KutaPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-kuta.webp"
-            alt="Luxury villa pool in Kuta Bali set up for a private chef BBQ party"
+            alt="Private chef service in Kuta, Bali by myCHEF — villa pool BBQ party setup"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"

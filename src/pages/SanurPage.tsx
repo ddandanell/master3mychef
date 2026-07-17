@@ -108,7 +108,7 @@ export default function SanurPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-sanur.webp"
-            alt="Calm beachfront villa in Sanur, Bali set for a private chef breakfast at sunrise over the Lombok Strait"
+            alt="Private chef service in Sanur, Bali by myCHEF — sunrise breakfast by the Lombok Strait"
             width={1920} height={1080}
             className="w-full h-full object-cover"
             fetchPriority="high" decoding="async"

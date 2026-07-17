@@ -83,7 +83,7 @@ export default function BookPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-ui-bali-book-hero.webp"
-            alt="Book your experience"
+            alt="Private chef booking page for Bali villa dining and events by myCHEF"
             width={1920}
             height={1080}
             fetchPriority="high"

@@ -481,7 +481,7 @@ export default function CateringBuffetPage() {
             {BUFFET_PACKAGES.map((pkg) => (
               <div key={pkg.title} className="buffet-reveal bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden flex flex-col">
                 <div className="aspect-[16/10] overflow-hidden">
-                  <OptimizedImage src={pkg.image} alt={`${pkg.title} setup at Bali villa`} className="w-full h-full object-cover" loading="lazy" />
+                  <OptimizedImage src={pkg.image} alt={`${pkg.title} catering setup at a Bali villa`} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-6 md:p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>

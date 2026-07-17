@@ -1389,7 +1389,7 @@ export default function CateringMainPage() {
         <div className="absolute inset-0">
           <OptimizedImage
             src="/generated/mychef-catering-bali-hub-catering.webp"
-            alt="Completed villa dinner table with food ready"
+            alt="Completed private villa dinner table with chef-prepared dishes ready to serve in Bali"
             className="w-full h-full object-cover"
             loading="lazy" />
           <div

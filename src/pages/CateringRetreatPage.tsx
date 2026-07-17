@@ -496,7 +496,7 @@ export default function CateringRetreatPage() {
       {/* ═══════ SECTION 12: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-catering-bali-hero-retreat.webp" alt="Healthy retreat catering in Bali" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-catering-bali-hero-retreat.webp" alt="Healthy retreat catering breakfast spread by a Bali villa pool at sunrise" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/68" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

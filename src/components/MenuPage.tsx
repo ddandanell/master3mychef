@@ -141,10 +141,10 @@ export default function MenuPage() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               {[
-                { src: '/generated/mychef-finedining-bali-luna-plating.webp', alt: 'Fine dining plating' },
-                { src: '/generated/mychef-experience-bali-luna-gallery-2.webp', alt: 'Dessert course' },
-                { src: '/generated/mychef-experience-bali-luna-wine.webp', alt: 'Wine pairing service' },
-                { src: '/generated/mychef-experience-bali-luna-table.webp', alt: 'Villa table setting' },
+                { src: '/generated/mychef-finedining-bali-luna-plating.webp', alt: 'Private chef plating a fine dining course in a Bali villa kitchen' },
+                { src: '/generated/mychef-experience-bali-luna-gallery-2.webp', alt: 'Plated dessert course from a myCHEF fine dining menu in Bali' },
+                { src: '/generated/mychef-experience-bali-luna-wine.webp', alt: 'Wine pairing service during a private villa dinner in Bali' },
+                { src: '/generated/mychef-experience-bali-luna-table.webp', alt: 'Elegant candlelit table setting for fine dining in a Bali villa' },
               ].map((img) => (
                 <div key={img.src} className="aspect-square overflow-hidden rounded-[16px]">
                   <img src={img.src} alt={img.alt} width={400} height={400} loading="lazy" decoding="async"

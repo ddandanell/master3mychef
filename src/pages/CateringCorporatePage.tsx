@@ -376,7 +376,7 @@ export default function CateringCorporatePage() {
               <div key={i} className={`rounded-2xl overflow-hidden ${i === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}>
                 <img
                   src={src}
-                  alt={`Corporate catering moment ${i + 1}`}
+                  alt={`Corporate catering setup ${i + 1} at a Bali villa event by myCHEF`}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   width={i === 0 ? 800 : 400}

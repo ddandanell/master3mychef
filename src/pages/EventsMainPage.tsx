@@ -1181,7 +1181,7 @@ export default function EventsMainPage() {
         <div className="absolute inset-0 opacity-40">
           <img
             src="/generated/mychef-experience-bali-aura-tablescape.webp"
-            alt="Aura restaurant/service at myCHEF fine dining"
+            alt="Aura private dining and event service by myCHEF in Bali"
             aria-hidden
             width={1920}
             height={1080}

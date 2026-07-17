@@ -207,7 +207,7 @@ export default function EventsAnniversariesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-events-bali-hero-anniversaries.webp" alt="Romantic candlelit anniversary dinner for two by a Bali villa pool" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-hero-anniversaries.webp" alt="Intimate anniversary dinner table set for two by a Bali villa pool at sunset" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

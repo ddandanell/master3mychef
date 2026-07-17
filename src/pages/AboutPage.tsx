@@ -24,7 +24,7 @@ const SECTIONS = [
     <p>So he built a company around one idea: <strong>Your Villa. Our Kitchen.</strong> That meant designing menus that work in real villa kitchens, creating service systems that feel effortless for hosts, and training a team that treats every private space with total respect.</p>
     <p>Today, myCHEF is trusted for romantic dinners, family celebrations, full-service events, and longer in-villa stays across the island — still guided by Adriano’s standards, but delivered by a deeply local Bali team.</p>`,
     image: '/generated/luna-team.webp',
-    imageAlt: 'myCHEF team preparing for private dining in Bali',
+    imageAlt: 'myCHEF hospitality team preparing for private villa dining service in Bali',
   },
   {
     id: 'stats',

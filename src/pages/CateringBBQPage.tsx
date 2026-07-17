@@ -36,21 +36,21 @@ const BBQ_PACKAGES = [
     description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 10 guests',
-    image: '/generated/mychef-catering-bali-bbq-grill-satay.webp',
+    image: '/generated/mychef-catering-bali-bbq-package-indonesian.webp',
   },
   {
     title: 'International BBQ',
     description: 'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread, fresh fruit.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 10 guests',
-    image: '/generated/mychef-finedining-bali-sol-bbq.webp',
+    image: '/generated/mychef-catering-bali-bbq-package-international.webp',
   },
   {
     title: 'Premium Surf & Turf BBQ',
     description: 'Wagyu steak, whole lobster tail, king prawns, salmon, Mahi-mahi, premium sides, signature sauces, chocolate dessert station.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Ingredients', 'Setup', '2-3h service', 'Plated service', 'Pack-up & cleanup'],
     minGuests: 'Min. 10 guests',
-    image: '/generated/mychef-catering-bali-bbq-grill-surfturf.webp',
+    image: '/generated/mychef-catering-bali-bbq-package-surfturf.webp',
   },
 ]
 
@@ -144,7 +144,7 @@ export default function CateringBBQPage() {
         title="BBQ Catering Bali | Live-Fire Villa BBQ for Groups — myCHEF"
         description="BBQ catering in Bali: chef grills live at your villa. Seafood, Wagyu & Indonesian menus for birthdays, parties & groups. WhatsApp for instant quote."
         canonical={`${SITE}/catering/bbq-catering`}
-        ogImage={`${SITE}/bbq-poolside.webp`}
+        ogImage={`${SITE}/generated/mychef-catering-bali-hero-bbq.webp`}
         jsonLd={[
           cateringServiceSchema('BBQ Catering Bali', 'Live-fire BBQ catering for Bali villas, birthdays, weddings, and relaxed private events with chefs grilling on site. myCHEF.id handles ingredients, setup, service, and cleanup across Bali.', `${SITE}/catering/bbq-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
@@ -170,8 +170,8 @@ export default function CateringBBQPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-catering-bali-hero-buffet-catering.webp"
-            alt="Chef grilling seafood and meat at a Bali villa BBQ by the pool"
+            src="/generated/mychef-catering-bali-hero-bbq.webp"
+            alt="Private chef grilling seafood and meat at a Bali villa BBQ by the pool"
             width={1920}
             height={1080}
             decoding="async" fetchPriority="high"
@@ -330,8 +330,8 @@ export default function CateringBBQPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/mychef-finedining-bali-sol-bbq.webp"
-                alt="Chef grilling at live BBQ station by Bali villa pool with guests watching"
+                src="/generated/mychef-catering-bali-bbq-package-international.webp"
+                alt="International BBQ platter with grilled meats, prawns and salads at a Bali villa"
                 width={800}
                 height={600}
                 loading="lazy"
@@ -566,7 +566,7 @@ export default function CateringBBQPage() {
       {/* ═══════ SECTION 14: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/mychef-finedining-bali-sol-bbq.webp" alt="Finished BBQ table with grilled food at Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+          <img src="/generated/mychef-catering-bali-bbq-package-surfturf.webp" alt="Premium surf and turf BBQ spread with Wagyu and lobster at a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
           <div
             className="absolute inset-0"
             style={{

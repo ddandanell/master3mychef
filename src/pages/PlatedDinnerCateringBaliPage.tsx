@@ -138,9 +138,9 @@ export default function PlatedDinnerCateringBaliPage() {
       seoDescription="Plated dinner catering in Bali for 6--120+ guests. Multi-course menus designed by senior chefs. Formal table service for villa weddings, anniversary dinners, and milestone events."
       h1="Plated Dinner Catering Bali -- Formal Multi-Course Service for Villa Events"
       subtitle="Multi-course plated menus with professional table service -- the refined choice for villa weddings, milestone dinners, and formal occasions in Bali."
-      heroImage="/images/blog/plated-dinner-catering-bali.jpg"
-      heroImageAlt="Elegant plated dinner course being served by a uniformed waiter at a luxury Bali villa event"
-      ogImage="/images/blog/plated-dinner-catering-bali.jpg"
+      heroImage="/generated/mychef-catering-bali-hero-plated.webp"
+      heroImageAlt="Elegant plated dinner course being served by a uniformed Indonesian waiter at a luxury Bali villa event"
+      ogImage="/generated/mychef-catering-bali-hero-plated.webp"
       canonicalUrl="https://mychef.id/blog/plated-dinner-catering-bali"
       keywords={[
         'plated dinner bali',
@@ -174,7 +174,7 @@ export default function PlatedDinnerCateringBaliPage() {
           dateModified: '2026-06-30',
           author: { '@type': 'Organization', name: 'myCHEF Bali', url: 'https://mychef.id' },
           publisher: { '@type': 'Organization', name: 'myCHEF Bali', url: 'https://mychef.id' },
-          image: 'https://mychef.id/images/blog/plated-dinner-catering-bali.jpg',
+          image: 'https://mychef.id/generated/mychef-catering-bali-hero-plated.webp',
         },
       ]}
     />

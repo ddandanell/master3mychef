@@ -39,7 +39,7 @@ const BUFFET_PACKAGES = [
     description: '8 hot dishes, 4 cold dishes, dessert, fresh fruit, 5 sambals, rice, noodles, breads.',
     includes: ['Chef', 'Service team (1 per 12 guests)', 'Full chafing setup', 'Serving tables', 'Linens', 'Cutlery', '2.5h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 30 guests',
-    image: '/generated/mychef-catering-bali-hero-buffet-catering.webp',
+    image: '/generated/mychef-catering-bali-buffet-package-indonesian.webp',
   },
   {
     title: 'International Buffet',
@@ -47,7 +47,7 @@ const BUFFET_PACKAGES = [
     description: 'Mediterranean dishes, Asian fusion, roast station, pasta station, global salads, dessert table.',
     includes: ['Chef', 'Service team (1 per 12 guests)', 'Full buffet setup', 'Tables', 'Linens', 'Cutlery', 'Serving equipment', '2.5h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 30 guests',
-    image: '/generated/pkg-italian.webp',
+    image: '/generated/mychef-catering-bali-buffet-package-international.webp',
   },
   {
     title: 'Premium Live-Station Buffet',
@@ -55,7 +55,7 @@ const BUFFET_PACKAGES = [
     description: '3 live food stations, chef\'s choice options, premium roast, full dessert bar.',
     includes: ['Chef', 'Live-station chefs', 'Service team (1 per 12 guests)', 'Full buffet & station setup', 'Premium serving equipment', 'Tables', 'Linens', 'Cutlery', '2.5h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 30 guests',
-    image: '/generated/aura-corporate.webp',
+    image: '/generated/mychef-catering-bali-buffet-package-premium.webp',
   },
 ]
 
@@ -182,7 +182,7 @@ export default function CateringBuffetPage() {
         title="Buffet Catering Bali | Villa & Event Buffets — myCHEF"
         description="Buffet catering in Bali for villas, weddings & retreats. Indonesian, international & live-station menus with chef, staff & cleanup. WhatsApp for pricing."
         canonical={`${SITE}/catering/buffet`}
-        ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet-catering.webp`}
+        ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet.webp`}
         jsonLd={[
           cateringServiceSchema('Buffet Catering Bali', 'Full-service buffet catering for Bali villas, weddings, retreats, and large private events with Indonesian and international menu options. myCHEF.id brings chefs, service staff, buffet equipment, and cleanup across Bali.', `${SITE}/catering/buffet`),
           offerSchema('Indonesian Buffet', 700000, 'IDR', `${SITE}/catering/buffet`),
@@ -211,8 +211,8 @@ export default function CateringBuffetPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-catering-bali-hero-buffet-catering.webp"
-            alt="Styled buffet table in Bali villa garden with chafing dishes and floral arrangements"
+            src="/generated/mychef-catering-bali-hero-buffet.webp"
+            alt="Elegant buffet setup in a Bali villa garden with chafing dishes and tropical flowers"
             width={1920}
             height={1080}
             decoding="async" fetchPriority="high"
@@ -457,8 +457,8 @@ export default function CateringBuffetPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/mychef-experience-bali-aura-tablescape.webp"
-                alt="Styled buffet table in Bali villa garden with linens, flowers, and chafing dishes"
+                src="/generated/mychef-catering-bali-buffet-styling.webp"
+                alt="Crisp buffet linens, tropical flowers, and polished chafing dishes at a Bali villa"
                 width={800}
                 height={600}
                 loading="lazy"
@@ -721,7 +721,7 @@ export default function CateringBuffetPage() {
       {/* ═══════ SECTION 17: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/mychef-experience-bali-aura-corporate.webp" alt="Completed buffet table with food ready and staff at Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+          <img src="/generated/mychef-catering-bali-buffet-final.webp" alt="Completed buffet dinner at a Bali villa poolside at dusk" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
           <div
             className="absolute inset-0"
             style={{

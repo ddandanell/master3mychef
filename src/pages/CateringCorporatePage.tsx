@@ -142,7 +142,7 @@ export default function CateringCorporatePage() {
         title="Corporate Catering Bali | Offsites, Lunches & Launches — myCHEF"
         description="Corporate catering in Bali for team offsites, board lunches & product launches. Buffet or plated, professional service & clear logistics. WhatsApp us."
         canonical={`${SITE}/catering/corporate-catering`}
-        ogImage={`${SITE}/generated/mychef-events-bali-corporate-events.webp`}
+        ogImage={`${SITE}/generated/mychef-catering-bali-hero-corporate.webp`}
         jsonLd={[
           cateringServiceSchema('Corporate Catering Bali', 'Corporate catering in Bali for business lunches, workshops, offsites, launches, and executive dinners with reliable timing and professional presentation. myCHEF.id handles menu planning, staffing, invoicing, and service across Bali.', `${SITE}/catering/corporate-catering`),
           offerSchema('Board Dinner', 850000, 'IDR', `${SITE}/catering/corporate-catering`),
@@ -169,8 +169,8 @@ export default function CateringCorporatePage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-events-bali-corporate-events.webp"
-            alt="Professional corporate event catering setup at Bali villa"
+            src="/generated/mychef-catering-bali-hero-corporate.webp"
+            alt="Professional corporate event catering setup at a Bali villa"
             width={1920}
             height={1280}
             decoding="async" fetchPriority="high"
@@ -235,8 +235,8 @@ export default function CateringCorporatePage() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="/generated/mychef-finedining-bali-sol-chef-portrait.webp"
-                alt="Professional Indonesian chef at myCHEF"
+                src="/generated/mychef-catering-bali-corporate-chef.webp"
+                alt="Professional Indonesian executive chef at myCHEF"
                 width={600}
                 height={800}
                 loading="lazy"
@@ -368,10 +368,10 @@ export default function CateringCorporatePage() {
           />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
             {[
-              '/generated/mychef-events-bali-corp-conference.webp',
-              '/generated/mychef-events-bali-corp-plated.webp',
-              '/generated/mychef-events-bali-corporate-team.webp',
-              '/generated/mychef-events-bali-corp-networking.webp',
+              '/generated/mychef-catering-bali-corporate-gallery-conference.webp',
+              '/generated/mychef-catering-bali-corporate-gallery-plated.webp',
+              '/generated/mychef-catering-bali-corporate-gallery-team.webp',
+              '/generated/mychef-catering-bali-corporate-gallery-networking.webp',
             ].map((src, i) => (
               <div key={i} className={`rounded-2xl overflow-hidden ${i === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}>
                 <img
@@ -571,7 +571,7 @@ export default function CateringCorporatePage() {
       {/* ═══════ SECTION 13: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-events-bali-corporate-events.webp" alt="Corporate event catering at Bali villa" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-catering-bali-hero-corporate.webp" alt="Corporate event catering at a Bali villa" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

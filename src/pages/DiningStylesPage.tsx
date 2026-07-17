@@ -100,7 +100,7 @@ export default function DiningStylesPage() {
         title="Dining Styles — Find Your Perfect Menu | myCHEF.id"
         description="Browse myCHEF.id menus by dining style. 50 menus across 6 collections. Find your perfect dining experience."
         canonical={canonical}
-        ogImage="/generated/mychef-catering-bali-plated-menus.webp"
+        ogImage="/generated/mychef-dining-styles-bali-hero.webp"
         jsonLd={[localBusinessSchema, breadcrumbSchema('Dining Styles', canonical)]}
       />
 
@@ -108,8 +108,8 @@ export default function DiningStylesPage() {
       <section className="relative flex items-center overflow-hidden" style={{ minHeight: '80vh' }}>
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-catering-bali-plated-menus.webp"
-            alt="Silver cloche revealing a plated course on a candlelit private dining table in a tropical Bali garden"
+            src="/generated/mychef-dining-styles-bali-hero.webp"
+            alt="Private villa dining in Bali with chef service, grilled sharing platters, plated courses and a live grill station"
             width={1440}
             height={800}
             className="w-full h-full object-cover"

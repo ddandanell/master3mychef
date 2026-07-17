@@ -94,10 +94,10 @@ const SIGNATURE_COCKTAILS = [
 ]
 
 const GALLERY = [
-  { src: '/generated/mychef-mixology-bali-bar-setup.webp', alt: 'Balinese mixologist shaking a cocktail at a Bali villa bar at golden hour' },
-  { src: '/generated/mychef-mixology-bali-poolside-guests.webp', alt: 'Guests enjoying cocktails by a Bali villa pool while an Indonesian server presents a drinks tray' },
-  { src: '/generated/mychef-mixology-bali-class.webp', alt: 'Balinese mixologist leading a hands-on cocktail-shaking class for guests at a Bali villa' },
-  { src: '/generated/mychef-mixology-bali-cocktail-craft.webp', alt: 'Balinese bartender garnishing signature butterfly-pea cocktails at a Bali villa bar' },
+  { src: '/generated/mychef-service-bali-mixology-gallery-1.webp', alt: 'Indonesian mixologist shaking a cocktail at a Bali villa bar at golden hour' },
+  { src: '/generated/mychef-service-bali-mixology-gallery-2.webp', alt: 'Guests enjoying cocktails by a Bali villa pool while an Indonesian server presents a drinks tray' },
+  { src: '/generated/mychef-service-bali-mixology-gallery-3.webp', alt: 'Indonesian mixologist leading a hands-on cocktail-shaking class for guests at a Bali villa' },
+  { src: '/generated/mychef-service-bali-mixology-gallery-4.webp', alt: 'Indonesian bartender garnishing signature butterfly-pea cocktails at a Bali villa bar' },
 ]
 
 const BOOKING_STEPS = [
@@ -150,7 +150,7 @@ export default function ServiceMixologyPage() {
         title="Mixology Service Bali | Signature Cocktails for Villas — myCHEF"
         description="Private mixology in Bali: signature cocktail menus, guided tastings & cocktail classes for villa events. From IDR 1.5M/session (spirits separate — we suggest, send a shopping list, or bring them). WhatsApp us to book."
         canonical={`${SITE}/in-villa-service/mixology`}
-        ogImage="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1600&q=80"
+        ogImage={`${SITE}/generated/mychef-service-bali-hero-mixology.webp`}
         jsonLd={[
           detailedServiceSchema(
             'Mixology Experience Bali',
@@ -177,7 +177,7 @@ export default function ServiceMixologyPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/mychef-experience-bali-aura-bartender.webp" alt="Cocktail-focused mixology experience at a Bali villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
+          <img src="/generated/mychef-service-bali-hero-mixology.webp" alt="Indonesian mixologist garnishing a vibrant signature cocktail at a Bali villa bar" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
           <div
             className="absolute inset-0"
             style={{
@@ -456,7 +456,7 @@ export default function ServiceMixologyPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-events-bali-party-ultimate.webp" alt="Mixology experience at Bali villa" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-service-bali-mixology-cta.webp" alt="Indonesian mixologist hands garnishing a craft cocktail with tropical flowers and herbs" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

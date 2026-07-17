@@ -571,7 +571,7 @@ export default function CateringCorporatePage() {
       {/* ═══════ SECTION 13: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-catering-bali-hero-corporate.webp" alt="Corporate event catering at a Bali villa" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-catering-bali-hero-corporate.webp" alt="Corporate event catering setup at a Bali villa by myCHEF" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

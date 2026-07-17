@@ -446,7 +446,7 @@ export default function CateringMainPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-catering-hero.webp"
-            alt="Chef grilling seafood at a Bali villa poolside at sunset"
+            alt="Private chef grilling seafood at a Bali villa poolside sunset catering by myCHEF"
             width={1920}
             height={1080}
             decoding="async" fetchPriority="high" loading="eager"
@@ -546,7 +546,7 @@ export default function CateringMainPage() {
               <div className="relative min-h-[240px] md:min-h-full">
                 <OptimizedImage
                   src="/generated/mychef-misc-bali-hub-fine-dining.webp"
-                  alt="Elegant fine dining plated dish at a Bali villa"
+                  alt="Elegant plated fine dining course served at a Bali villa by myCHEF"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -1389,7 +1389,7 @@ export default function CateringMainPage() {
         <div className="absolute inset-0">
           <OptimizedImage
             src="/generated/mychef-catering-bali-hub-catering.webp"
-            alt="Completed private villa dinner table with chef-prepared dishes ready to serve in Bali"
+            alt="Completed villa catering table with chef-prepared dishes ready to serve in Bali by myCHEF"
             className="w-full h-full object-cover"
             loading="lazy" />
           <div

@@ -111,7 +111,7 @@ export default function ServiceHostPage() {
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
   <div className="absolute inset-0">
-    <img src="/generated/mychef-staffing-bali-staffing-hero.webp" alt="Professional villa host greeting guests in Bali" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
+    <img src="/generated/mychef-staffing-bali-staffing-hero.webp" alt="Villa host and hostess hire Bali greeting guests at a private villa event" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
     <div
       className="absolute inset-0"
       style={{
@@ -208,10 +208,10 @@ export default function ServiceHostPage() {
           <SectionHeader eyebrow="Gallery" title="Hosting done right" subtitle="Warm welcomes at Bali villa events." />
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
             {[
-              { src: '/generated/mychef-host-1.webp', alt: 'Balinese hostess welcoming guests at a Bali villa event' },
-              { src: '/generated/mychef-host-2.webp', alt: 'Balinese host coordinating a Bali villa dinner party' },
-              { src: '/generated/mychef-host-3.webp', alt: 'Balinese hostess guiding guests at a Bali villa celebration' },
-              { src: '/generated/mychef-host-4.webp', alt: 'Balinese host and hostess greeting arriving guests at a Bali villa' },
+              { src: '/generated/mychef-host-1.webp', alt: 'Villa hostess in Bali welcoming guests at a private villa event' },
+              { src: '/generated/mychef-host-2.webp', alt: 'Villa host in Bali coordinating a private villa dinner party' },
+              { src: '/generated/mychef-host-3.webp', alt: 'Villa hostess in Bali guiding guests at a private villa celebration' },
+              { src: '/generated/mychef-host-4.webp', alt: 'Villa hosts in Bali greeting arriving guests at a private villa entrance' },
             ].map((g) => (
               <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
                 <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
@@ -304,7 +304,7 @@ export default function ServiceHostPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-staffing-bali-staffing-hero.webp" alt="Professional hosts at Bali villa event" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-staffing-bali-staffing-hero.webp" alt="Professional villa hosts in Bali managing a private villa event" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

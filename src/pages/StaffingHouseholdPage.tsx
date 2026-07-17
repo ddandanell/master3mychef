@@ -134,7 +134,7 @@ export default function StaffingHouseholdPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/mychef-staffing-bali-staffing-table.webp" alt="Household staff serving at private Bali residence" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
+          <img src="/generated/mychef-staffing-bali-staffing-table.webp" alt="Household staff Bali serving at a private residence" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
           <div
             className="absolute inset-0"
             style={{
@@ -246,7 +246,7 @@ export default function StaffingHouseholdPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-staffing-bali-staffing-table.webp" alt="Household staff at private Bali residence" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-staffing-bali-staffing-table.webp" alt="Household staff Bali team at a private residence" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

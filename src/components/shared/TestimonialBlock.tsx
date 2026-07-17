@@ -104,7 +104,7 @@ export default function TestimonialBlock({
                   {t.image ? (
                     <OptimizedImage
                       src={t.image}
-                      alt={t.name}
+                      alt={`${t.name} — myCHEF guest review from ${t.location}`}
                       className="h-12 w-12 rounded-full object-cover"
                       loading="lazy"
                     />

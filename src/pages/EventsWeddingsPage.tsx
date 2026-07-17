@@ -52,10 +52,10 @@ const ADDONS = [
 ]
 
 const REAL_WEDDINGS = [
-  { names: 'Emma & James', date: 'March 2026', villa: 'Villa Aria, Uluwatu', image: '/generated/mychef-events-bali-event-wedding.webp' },
-  { names: 'Anya & Mark', date: 'January 2026', villa: 'Villa Soma, Canggu', image: '/generated/mychef-events-bali-wedding-reception.webp' },
-  { names: 'Sarah & David', date: 'December 2025', villa: 'Villa Kali, Seminyak', image: '/generated/mychef-experience-bali-aura-toast.webp' },
-  { names: 'Priya & Raj', date: 'November 2025', villa: 'Villa Tirta, Uluwatu', image: '/generated/mychef-experience-bali-aura-setup.webp' },
+  { names: 'Emma & James', date: 'March 2026', villa: 'Villa Aria, Uluwatu', image: '/generated/mychef-events-bali-hero-weddings.webp' },
+  { names: 'Anya & Mark', date: 'January 2026', villa: 'Villa Soma, Canggu', image: '/generated/mychef-events-bali-weddings-reception.webp' },
+  { names: 'Sarah & David', date: 'December 2025', villa: 'Villa Kali, Seminyak', image: '/generated/mychef-events-bali-weddings-cocktail.webp' },
+  { names: 'Priya & Raj', date: 'November 2025', villa: 'Villa Tirta, Uluwatu', image: '/generated/mychef-events-bali-weddings-ceremony.webp' },
 ]
 
 const LEAD_TIMES = [
@@ -163,14 +163,14 @@ export default function EventsWeddingsPage() {
         title="Wedding Catering Bali | Villa Weddings & Receptions — myCHEF"
         description="Wedding catering in Bali for villa ceremonies & receptions. Michelin-trained chefs, full staffing, bespoke menus, and complete coordination. Request a proposal on WhatsApp."
         canonical={`${SITE}/events/weddings`}
-        ogImage={`${SITE}/generated/mychef-events-bali-event-wedding.webp`}
+        ogImage={`${SITE}/generated/mychef-events-bali-hero-weddings.webp`}
         jsonLd={[
           detailedServiceSchema('Wedding Catering Bali', 'myCHEF.id provides wedding catering in Bali with private chef menus, service staff, and full villa coordination. We support intimate ceremonies and reception dinners with setup, timing, and cleanup managed by one team.', `${SITE}/events/weddings`),
           eventSchema({
             name: 'Private Wedding Catering in Bali',
             description: 'myCHEF.id provides private chef and catering services for intimate wedding celebrations across Bali villas.',
             url: `${SITE}/events/weddings`,
-            image: `${SITE}/generated/mychef-events-bali-event-wedding.webp`,
+            image: `${SITE}/generated/mychef-events-bali-hero-weddings.webp`,
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
@@ -192,8 +192,8 @@ export default function EventsWeddingsPage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-events-bali-event-wedding.webp"
-            alt="Bali villa wedding ceremony at a tropical altar"
+            src="/generated/mychef-events-bali-hero-weddings.webp"
+            alt="Elegant Bali villa wedding reception at sunset by myCHEF"
             width={1920}
             height={1080}
             loading="eager"
@@ -253,7 +253,7 @@ export default function EventsWeddingsPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-events-bali-event-wedding.webp" alt="Luxury Bali villa wedding ceremony setup by myCHEF" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-hero-weddings.webp" alt="Elegant Bali villa wedding reception at sunset by myCHEF" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -303,7 +303,7 @@ export default function EventsWeddingsPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-experience-bali-aura-toast.webp" alt="Champagne service during Bali wedding cocktail hour" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-weddings-cocktail.webp" alt="Champagne and canapé service during a Bali villa wedding cocktail hour" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -313,7 +313,7 @@ export default function EventsWeddingsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/mychef-experience-bali-aura-setup.webp" alt="Wedding reception setup inside a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-weddings-ceremony.webp" alt="Elegant Bali villa wedding ceremony setup in a tropical garden" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -356,7 +356,7 @@ export default function EventsWeddingsPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-experience-bali-aura-bartender.webp" alt="myCHEF bartender preparing signature cocktails at a Bali villa wedding" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-weddings-bartender.webp" alt="myCHEF bartender preparing signature cocktails at a Bali villa wedding" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -428,7 +428,7 @@ export default function EventsWeddingsPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-events-bali-wedding-reception.webp" alt="Wedding reception table with candles and plated dinner service" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-weddings-reception.webp" alt="Long wedding reception dinner table with candles and florals in a Bali villa garden" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -472,7 +472,7 @@ export default function EventsWeddingsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/mychef-experience-bali-aura-setup.webp" alt="Intimate Bali wedding dinner for a small group" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-weddings-ceremony.webp" alt="Elegant Bali villa wedding ceremony setup in a tropical garden" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -527,7 +527,7 @@ export default function EventsWeddingsPage() {
               </a>
             </div>
             <div className="h-full min-h-[320px]">
-              <img src="/generated/mychef-experience-bali-aura-toast.webp" alt="Wedding couple toasting during a Bali villa celebration" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-weddings-cocktail.webp" alt="Champagne and canapé service during a Bali villa wedding cocktail hour" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

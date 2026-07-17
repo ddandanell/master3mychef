@@ -71,10 +71,10 @@ const THEMED_SETUPS = [
 ]
 
 const REAL_BIRTHDAYS = [
-  { title: 'Milestone 40th Pool Dinner', location: 'Canggu Villa', image: '/generated/mychef-events-bali-birthday-pool.webp' },
-  { title: 'Birthday Welcome Setup', location: 'Seminyak Villa', image: '/generated/mychef-events-bali-party-birthday.webp' },
-  { title: 'Sunset BBQ Bash', location: 'Uluwatu Villa', image: '/generated/mychef-finedining-bali-sol-bbq.webp' },
-  { title: 'Birthday Brunch Recovery', location: 'Berawa Villa', image: '/generated/mychef-events-bali-party-brunch.webp' },
+  { title: 'Milestone 40th Pool Dinner', location: 'Canggu Villa', image: '/generated/mychef-events-bali-hero-birthdays.webp' },
+  { title: 'Birthday Welcome Setup', location: 'Seminyak Villa', image: '/generated/mychef-events-bali-birthdays-table.webp' },
+  { title: 'Sunset BBQ Bash', location: 'Uluwatu Villa', image: '/generated/mychef-events-bali-birthdays-bbq.webp' },
+  { title: 'Birthday Brunch Recovery', location: 'Berawa Villa', image: '/generated/mychef-events-bali-birthdays-brunch.webp' },
 ]
 
 const ADDONS = [
@@ -135,7 +135,7 @@ export default function EventsBirthdaysPage() {
         title="Birthday Party Bali Villa | Catering & Events — myCHEF"
         description="Birthday party catering in Bali for villa dinners, BBQs & milestone events. Private chefs, cocktails & staff for 10–100 guests. WhatsApp to plan yours."
         canonical={`${SITE}/events/birthdays`}
-        ogImage={`${SITE}/generated/mychef-events-bali-birthday-pool.webp`}
+        ogImage={`${SITE}/generated/mychef-events-bali-hero-birthdays.webp`}
         jsonLd={[
           detailedServiceSchema('Birthday Party Catering Bali', 'myCHEF.id caters birthday parties in Bali with private chef menus, buffet or plated service, drinks, and event staffing. We manage setup, flow, and cleanup for everything from intimate dinners to full villa parties.', `${SITE}/events/birthdays`),
           offerSchema('Intimate Birthday Dinner', 1500000, 'IDR', `${SITE}/events/birthdays`),
@@ -165,7 +165,7 @@ export default function EventsBirthdaysPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-events-bali-birthday-pool.webp" alt="Birthday pool party dinner at a Bali villa" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/mychef-events-bali-hero-birthdays.webp" alt="Sunset birthday pool party setup at a premium Bali villa" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
@@ -222,7 +222,7 @@ export default function EventsBirthdaysPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-events-bali-party-birthday.webp" alt="Birthday celebration dining setup in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-birthdays-table.webp" alt="Styled birthday dinner table in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -262,7 +262,7 @@ export default function EventsBirthdaysPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-finedining-bali-sol-bbq.webp" alt="BBQ catering spread for a Bali birthday villa party" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-birthdays-bbq.webp" alt="Live BBQ station at a Bali villa birthday party" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -294,7 +294,7 @@ export default function EventsBirthdaysPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/mychef-events-bali-party-brunch.webp" alt="Birthday brunch desserts and cake styling in a villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-birthdays-brunch.webp" alt="Bright birthday brunch spread with tropical fruit and pastries in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -323,7 +323,7 @@ export default function EventsBirthdaysPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-events-bali-party-pool.webp" alt="Poolside birthday setup with staff and table styling in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-birthdays-poolside.webp" alt="Poolside birthday setup with decor and staff at a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -333,7 +333,7 @@ export default function EventsBirthdaysPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/mychef-events-bali-party-festival.webp" alt="Themed birthday party styling inspiration for Bali villa events" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-birthdays-festival.webp" alt="Themed milestone birthday party styling in a Bali villa garden" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -416,7 +416,7 @@ export default function EventsBirthdaysPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/mychef-events-bali-party-white.webp" alt="Premium birthday party styling with decor and lighting in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-birthdays-glam.webp" alt="Glamorous white and gold birthday evening setup at a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

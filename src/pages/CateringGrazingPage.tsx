@@ -189,7 +189,7 @@ export default function CateringGrazingPage() {
         title="Grazing Table Bali | Styled Spreads for Villa Events — myCHEF"
         description="Grazing tables in Bali for weddings, birthdays & villa parties. Styled cheese, charcuterie & tropical spreads designed and delivered to your villa."
         canonical={PAGE_URL}
-        ogImage={`${SITE}/generated/pkg-grazing.webp`}
+        ogImage={`${SITE}/generated/mychef-catering-bali-hero-grazing.webp`}
         jsonLd={[
           cateringServiceSchema('Grazing Tables Bali', 'Styled grazing tables in Bali for villa parties, weddings, poolside events, and welcome receptions with cheese, charcuterie, fruit, and breads. myCHEF.id designs, delivers, and sets each table across Bali.', PAGE_URL),
           offerSchema('Small Grazing Board', 650000, 'IDR', PAGE_URL),
@@ -222,8 +222,8 @@ export default function CateringGrazingPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-catering-bali-pkg-grazing.webp"
-            alt="Grazing table Bali with cheese, charcuterie, fresh fruit, and edible flowers styled for a villa event"
+            src="/generated/mychef-catering-bali-hero-grazing.webp"
+            alt="Luxurious grazing table with cheese, charcuterie and tropical fruit at a Bali villa event"
             width={1920}
             height={1080}
             decoding="async" fetchPriority="high"
@@ -298,8 +298,8 @@ export default function CateringGrazingPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <OptimizedImage
-                src="/generated/mychef-catering-bali-pkg-grazing.webp"
-                alt="Grazing table setup at a Bali villa with cheese, charcuterie, and tropical fruit"
+                src="/generated/mychef-catering-bali-grazing-detail.webp"
+                alt="Close-up of a premium grazing board with cheeses, cured meats and tropical fruit"
                 className="w-full h-full object-cover aspect-[4/3]"
                 loading="lazy" />
             </div>
@@ -593,7 +593,7 @@ export default function CateringGrazingPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <OptimizedImage
-            src="/generated/mychef-catering-bali-pkg-grazing.webp"
+            src="/generated/mychef-catering-bali-hero-grazing.webp"
             alt="Beautiful grazing table at a Bali villa event with cheese, charcuterie, and tropical styling"
             className="w-full h-full object-cover"
             loading="lazy" />

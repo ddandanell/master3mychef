@@ -194,11 +194,11 @@ const FAQS = [
 
 const DROPOFF_GALLERY = [
   '/generated/mychef-catering-bali-hero-dropoff.webp',
+  '/generated/mychef-catering-bali-dropoff-family.webp',
+  '/generated/mychef-catering-bali-dropoff-dinner-party.webp',
+  '/generated/mychef-catering-bali-dropoff-grazing.webp',
   '/generated/mychef-catering-bali-hero-dropoff.webp',
-  '/generated/mychef-catering-bali-hub-catering.webp',
-  '/generated/mychef-catering-bali-hero-buffet-catering.webp',
-  '/generated/mychef-catering-bali-pkg-roast.webp',
-  '/generated/mychef-catering-bali-pkg-grazing.webp',
+  '/generated/mychef-catering-bali-dropoff-family.webp',
 ]
 
 export default function CateringDropOffPage() {
@@ -250,7 +250,7 @@ export default function CateringDropOffPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-hero-dropoff.webp"
-            alt="Drop-off catering boxes with prepared food on a Bali villa dining table"
+            alt="Premium drop-off catering containers arranged on a Bali villa kitchen island"
             width={1920}
             height={1080}
             decoding="async" fetchPriority="high"
@@ -318,8 +318,8 @@ export default function CateringDropOffPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/mychef-catering-bali-hub-catering.webp"
-                alt="Calm villa dining table with drop-off food served family-style"
+                src="/generated/mychef-catering-bali-dropoff-family.webp"
+                alt="Family dinner drop-off spread served on a calm Bali villa dining table"
                 width={800}
                 height={600}
                 loading="lazy"
@@ -682,8 +682,8 @@ export default function CateringDropOffPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-catering-bali-hub-catering.webp"
-            alt="Beautiful finished villa table after drop-off catering"
+            src="/generated/mychef-catering-bali-dropoff-dinner-party.webp"
+            alt="Dinner party drop-off spread arranged on a Bali villa dining table"
             width={1920}
             height={1080}
             loading="lazy"

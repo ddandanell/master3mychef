@@ -42,6 +42,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Fine Dining', href: '/fine-dining', icon: UtensilsCrossed, accent: '#C5A028' },
   { label: 'Dining Styles', href: '/dining-styles', icon: BookOpen, accent: '#C5A028' },
   { label: 'Events', href: '/events', icon: CalendarDays, accent: '#C5A028' },
+  { label: 'Experience', href: '/complete-villa-experience', icon: MapPin, accent: '#C5A028' },
   { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
   { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
   { label: 'Locations', href: '/locations', icon: MapPin, accent: '#C5A028' },
@@ -68,12 +69,20 @@ NAV_SUBPAGES['/dining-styles'] = [
   { label: "Kids'", href: '/kids-menus', icon: 'Baby' },
 ]
 
+// Experience dropdown — hand-written (umbrella pillar for end-to-end villa stays)
+NAV_SUBPAGES['/complete-villa-experience'] = [
+  { label: 'Complete Villa Experience', href: '/complete-villa-experience', icon: 'Heart' },
+  { label: 'Villa Event Packages', href: '/villa-event-packages', icon: 'Wine' },
+  { label: 'VIP Transport Bali', href: '/vip-transport-bali', icon: 'Truck' },
+]
+
 // Preview images shown beside desktop dropdown links; the picture swaps as subpages are hovered
 const PILLAR_PREVIEW_IMAGES: Record<string, string> = {
   '/catering': '/generated/mychef-families-bali-catering-events.webp',
   '/fine-dining': '/generated/mychef-families-bali-fine-dining-experience.webp',
   '/dining-styles': '/generated/mychef-families-bali-classic-set-menus.webp',
   '/events': '/generated/mychef-events-bali-hero-events-new.webp',
+  '/complete-villa-experience': '/generated/mychef-catering-bali-catering-hero.webp',
   '/in-villa-service': '/generated/in-villa-service-hero.webp',
   '/staffing': '/generated/mychef-butlers-1.webp',
 }
@@ -88,6 +97,9 @@ const SUBPAGE_PREVIEW_IMAGES: Record<string, string> = {
   '/fine-dining/romantic-dinner': '/generated/mychef-events-bali-anniversary-romantic.webp',
   '/fine-dining/tasting-menu': '/generated/mychef-experience-bali-luna-collage.webp',
   '/fine-dining/private-chef-bali': '/generated/mychef-finedining-bali-luna-plating.webp',
+  '/complete-villa-experience': '/generated/mychef-catering-bali-catering-hero.webp',
+  '/villa-event-packages': '/generated/mychef-villa-event-packages-hero.webp',
+  '/vip-transport-bali': '/generated/mychef-vip-transport-bali-hero.webp',
 }
 
 interface DropdownPreview {

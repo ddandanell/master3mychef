@@ -268,7 +268,7 @@ export default function TermsPage() {
                     <Mail className="w-5 h-5 text-[#C5A028]" />
                     <div>
                       <p className="text-white/[80%] text-sm">Email</p>
-                      <p className="text-white/[50%] text-sm">indonesia@mychef.id</p>
+                      <p className="text-white/[50%] text-sm">bali@mychef.id</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">

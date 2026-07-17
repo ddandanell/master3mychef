@@ -649,8 +649,8 @@ export default function PremiumPage({
             <a href={`tel:${WA}`} className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Phone className="w-4 h-4" /> +62 896-7407-2020
             </a>
-            <a href="mailto:indonesia@mychef.id" className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Mail className="w-4 h-4" /> indonesia@mychef.id
+            <a href="mailto:bali@mychef.id" className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <Mail className="w-4 h-4" /> bali@mychef.id
             </a>
           </div>
         </div>

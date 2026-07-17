@@ -111,12 +111,12 @@ const AREAS = [
 ]
 
 const BABI_GULING_GALLERY = [
-  '/generated/mychef-catering-bali-hero-babiguling.webp',
-  '/generated/mychef-catering-bali-pkg-roast.webp',
-  '/generated/mychef-catering-bali-hub-catering.webp',
-  '/generated/mychef-catering-bali-hero-buffet-catering.webp',
-  '/generated/mychef-catering-bali-pkg-roast.webp',
-  '/generated/mychef-events-bali-event-wedding.webp',
+  '/generated/mychef-catering-bali-hero-babiguling-new.webp',
+  '/generated/mychef-catering-bali-pkg-roast-new.webp',
+  '/generated/mychef-catering-bali-hub-catering-new.webp',
+  '/generated/mychef-catering-bali-hero-buffet-catering-new.webp',
+  '/generated/mychef-catering-bali-pkg-roast-new.webp',
+  '/generated/mychef-catering-bali-event-wedding-new.webp',
 ]
 
 const FAQS = [
@@ -149,7 +149,7 @@ export default function CateringBabiGulingPage() {
         title="Babi Guling Catering Bali | Traditional Whole Pig Feast — myCHEF"
         description="Babi guling catering in Bali for villa feasts, weddings & birthdays. Authentic whole pig roast with Balinese sides, carving & full delivery service."
         canonical={`${SITE}/catering/babi-guling`}
-        ogImage={`${SITE}/generated/mychef-catering-bali-hero-babiguling.webp`}
+        ogImage={`${SITE}/generated/mychef-catering-bali-hero-babiguling-new.webp`}
         jsonLd={[
           cateringServiceSchema('Babi Guling Catering Bali', 'Traditional babi guling catering for Bali villas, birthdays, weddings, and cultural celebrations with full Balinese sides. myCHEF.id roasts, carves, and serves the feast on site across Bali.', `${SITE}/catering/babi-guling`),
           offerSchema('Small Babi Guling', 3700000, 'IDR', `${SITE}/catering/babi-guling`),
@@ -178,7 +178,7 @@ export default function CateringBabiGulingPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-catering-bali-hero-babiguling.webp"
+            src="/generated/mychef-catering-bali-hero-babiguling-new.webp"
             alt="Traditional Balinese Babi Guling whole-pig catering setup with crispy skin, rice, sambal, and lawar for a villa party in Bali"
             width={1920}
             height={1080}
@@ -250,7 +250,7 @@ export default function CateringBabiGulingPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/generated/mychef-catering-bali-pkg-roast.webp"
+                src="/generated/mychef-catering-bali-pkg-roast-new.webp"
                 alt="Chef carving traditional Babi Guling with Balinese sides at a villa event"
                 width={800}
                 height={600}
@@ -401,7 +401,7 @@ export default function CateringBabiGulingPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-2xl overflow-hidden order-2 md:order-1">
               <img
-                src="/generated/mychef-catering-bali-hub-catering.webp"
+                src="/generated/mychef-catering-bali-hub-catering-new.webp"
                 alt="Professional Babi Guling catering team serving at a Bali villa event"
                 width={800}
                 height={600}
@@ -641,7 +641,7 @@ export default function CateringBabiGulingPage() {
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-catering-bali-pkg-roast.webp"
+            src="/generated/mychef-catering-bali-pkg-roast-new.webp"
             alt="Complete Babi Guling catering table with guests at a Bali villa"
             width={1920}
             height={1080}

@@ -74,10 +74,10 @@ const MUSIC_OPTIONS = [
 ]
 
 const DECOR_GALLERY = [
-  { title: 'Festoon Lighting', desc: 'String lights across terraces and gardens.', image: '/generated/mychef-experience-bali-aura-setup.webp' },
-  { title: 'Pool Floats & Decor', desc: 'Themed inflatables, flower arrangements, lanterns.', image: '/generated/mychef-events-bali-party-pool.webp' },
-  { title: 'Lounge Areas', desc: 'Low tables, cushions, rugs for relaxed seating.', image: '/generated/mychef-events-bali-party-rooftop.webp' },
-  { title: 'Bar Styling', desc: 'Custom bar setup with branded menus and garnishes.', image: '/generated/mychef-events-bali-party-beer.webp' },
+  { title: 'Festoon Lighting', desc: 'String lights across terraces and gardens.', image: '/generated/mychef-events-bali-villa-parties-festoon.webp' },
+  { title: 'Pool Floats & Decor', desc: 'Themed inflatables, flower arrangements, lanterns.', image: '/generated/mychef-events-bali-villa-parties-pool.webp' },
+  { title: 'Lounge Areas', desc: 'Low tables, cushions, rugs for relaxed seating.', image: '/generated/mychef-events-bali-villa-parties-rooftop.webp' },
+  { title: 'Bar Styling', desc: 'Custom bar setup with branded menus and garnishes.', image: '/generated/mychef-events-bali-villa-parties-bar.webp' },
 ]
 
 const HENS_BUCKS = [
@@ -154,7 +154,7 @@ export default function EventsVillaPartiesPage() {
         title="Villa Party Bali | BBQ, Cocktails & Private Events — myCHEF"
         description="Villa party catering in Bali for birthdays, sunset BBQs & private celebrations. Chef stations, cocktail bar & full event staffing. WhatsApp to plan yours."
         canonical={`${SITE}/events/villa-parties`}
-        ogImage={`${SITE}/bbq-poolside.webp`}
+        ogImage={`${SITE}/generated/mychef-events-bali-hero-villa-parties.webp`}
         jsonLd={[
           detailedServiceSchema('Villa Party Catering Bali', 'myCHEF.id caters villa parties in Bali with BBQ menus, canapés, cocktails, bartenders, and service staff. We handle setup, live service, and cleanup so hosts can focus on the guest experience.', `${SITE}/events/villa-parties`),
           offerSchema('Cocktail Reception', 650000, 'IDR', `${SITE}/events/villa-parties`),
@@ -185,7 +185,7 @@ export default function EventsVillaPartiesPage() {
 
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-events-bali-villa-party-night.webp" alt="Night-time villa party with bar and pool lighting in Bali" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <OptimizedImage src="/generated/mychef-events-bali-hero-villa-parties.webp" alt="Night-time Bali villa party with bar, pool and festoon lighting" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div
             className="absolute inset-0"
             style={{
@@ -239,7 +239,7 @@ export default function EventsVillaPartiesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <OptimizedImage src="/generated/mychef-events-bali-villa-party-night.webp" alt="Bali villa party setup with bar and long-table dining" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-events-bali-hero-villa-parties.webp" alt="Bali villa party setup with bar and long-table dining" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
           <SectionHeader eyebrow="Chapter 2 — Formats" title="Party Types & Formats" subtitle="Choose the structure first, then we dial the food, bar, and entertainment around it." />
@@ -274,7 +274,7 @@ export default function EventsVillaPartiesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <OptimizedImage src="/generated/mychef-finedining-bali-sol-bbq.webp" alt="Live BBQ station for a Bali villa party" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-events-bali-villa-parties-bbq.webp" alt="Live BBQ station for a Bali villa party" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -284,7 +284,7 @@ export default function EventsVillaPartiesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <OptimizedImage src="/generated/mychef-events-bali-party-beer.webp" alt="Party bartender service and drinks at a Bali villa event" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-events-bali-villa-parties-bar.webp" alt="Bartender serving cocktails at an illuminated Bali villa party bar" className="w-full h-full object-cover" loading="lazy" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -343,7 +343,7 @@ export default function EventsVillaPartiesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <OptimizedImage src="/generated/mychef-events-bali-party-pool.webp" alt="Poolside villa party staffing and setup in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-events-bali-villa-parties-pool.webp" alt="Poolside villa party staffing and setup in Bali" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -372,7 +372,7 @@ export default function EventsVillaPartiesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <OptimizedImage src="/generated/mychef-events-bali-party-rooftop.webp" alt="Late-night rooftop style villa party in Bali" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/generated/mychef-events-bali-villa-parties-rooftop.webp" alt="Late-night rooftop style villa party in Bali" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -444,10 +444,10 @@ export default function EventsVillaPartiesPage() {
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Night Pool Party', image: '/generated/mychef-events-bali-villa-party-night.webp' },
-              { title: 'Poolside Dinner Party', image: '/generated/mychef-events-bali-party-pool.webp' },
-              { title: 'Rooftop Mood', image: '/generated/mychef-events-bali-party-rooftop.webp' },
-              { title: 'Live BBQ Station', image: '/generated/mychef-finedining-bali-sol-bbq.webp' },
+              { title: 'Night Pool Party', image: '/generated/mychef-events-bali-hero-villa-parties.webp' },
+              { title: 'Poolside Dinner Party', image: '/generated/mychef-events-bali-villa-parties-pool.webp' },
+              { title: 'Rooftop Mood', image: '/generated/mychef-events-bali-villa-parties-rooftop.webp' },
+              { title: 'Live BBQ Station', image: '/generated/mychef-events-bali-villa-parties-bbq.webp' },
             ].map((party) => (
               <div key={party.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden">

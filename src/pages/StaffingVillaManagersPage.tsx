@@ -127,7 +127,7 @@ export default function StaffingVillaManagersPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/mychef-events-bali-corp-villa.webp" alt="Luxury Bali villa with professional hospitality staff" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
+          <img src="/generated/mychef-events-bali-corp-villa.webp" alt="Villa manager staffing Bali hospitality team at a luxury villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
           <div
             className="absolute inset-0"
             style={{
@@ -239,7 +239,7 @@ export default function StaffingVillaManagersPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-staffing-bali-staffing-kitchen.webp" alt="Professional hospitality team in Bali villa kitchen" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-staffing-bali-staffing-kitchen.webp" alt="Villa manager staffing Bali professional hospitality team in a villa kitchen" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

@@ -126,7 +126,7 @@ export default function ServiceSommelierPage() {
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
   <div className="absolute inset-0">
-    <img src="/generated/mychef-service-bali-hero-sommelier.webp" alt="Indonesian sommelier pouring red wine at a candlelit Bali villa dinner table" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
+    <img src="/generated/mychef-service-bali-hero-sommelier.webp" alt="Sommelier hire Bali pouring red wine at a candlelit private villa dinner table" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
     <div
       className="absolute inset-0"
       style={{
@@ -223,10 +223,10 @@ export default function ServiceSommelierPage() {
           <SectionHeader eyebrow="Gallery" title="The wine moment" subtitle="Pairings and pours at Bali villas." />
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
             {[
-              { src: '/generated/mychef-service-bali-sommelier-gallery-1.webp', alt: 'Indonesian sommelier presenting a wine bottle to guests at a Bali villa dinner' },
-              { src: '/generated/mychef-service-bali-sommelier-gallery-2.webp', alt: 'Indonesian sommelier pouring wine at a candlelit Bali villa table' },
-              { src: '/generated/mychef-service-bali-sommelier-gallery-3.webp', alt: 'Indonesian sommelier decanting wine at a Bali villa' },
-              { src: '/generated/mychef-service-bali-sommelier-gallery-4.webp', alt: 'Indonesian sommelier guiding a wine tasting on a Bali villa terrace' },
+              { src: '/generated/mychef-service-bali-sommelier-gallery-1.webp', alt: 'Sommelier hire Bali presenting a wine bottle to guests at a private villa dinner' },
+              { src: '/generated/mychef-service-bali-sommelier-gallery-2.webp', alt: 'Sommelier hire Bali pouring wine at a candlelit private villa dinner table' },
+              { src: '/generated/mychef-service-bali-sommelier-gallery-3.webp', alt: 'Sommelier hire Bali decanting wine at a private villa' },
+              { src: '/generated/mychef-service-bali-sommelier-gallery-4.webp', alt: 'Sommelier hire Bali guiding a wine tasting on a private villa terrace' },
             ].map((g) => (
               <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
                 <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
@@ -319,7 +319,7 @@ export default function ServiceSommelierPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-service-bali-sommelier-cta.webp" alt="Elegant wine glasses and decanter on a candlelit Bali villa dining table" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-service-bali-sommelier-cta.webp" alt="Sommelier hire Bali wine glasses and decanter on a candlelit private villa dining table" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

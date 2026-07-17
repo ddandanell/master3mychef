@@ -114,7 +114,7 @@ export default function ServiceWaitersPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/mychef-service-bali-hero-waiters.webp" alt="Professional Indonesian waiter serving a plated course at an elegant Bali villa dinner" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
+          <img src="/generated/mychef-service-bali-hero-waiters.webp" alt="Villa waiters Bali serving a plated course at an elegant private villa dinner" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
           <div
             className="absolute inset-0"
             style={{
@@ -228,10 +228,10 @@ export default function ServiceWaitersPage() {
           <SectionHeader eyebrow="Gallery" title="At your service" subtitle="Polished villa service across Bali." />
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
             {[
-              { src: '/generated/mychef-service-bali-waiters-gallery-1.webp', alt: 'Indonesian waiter placing a fine dining plate on a candlelit Bali villa table' },
-              { src: '/generated/mychef-service-bali-waiters-gallery-2.webp', alt: 'Indonesian waiters carrying champagne and canapés to guests by a Bali villa pool' },
-              { src: '/generated/mychef-service-bali-waiters-gallery-3.webp', alt: 'Indonesian waiter pouring red wine at an intimate Bali villa dinner' },
-              { src: '/generated/mychef-service-bali-waiters-gallery-4.webp', alt: 'Indonesian waiters setting an elegant long dining table on a Bali villa terrace' },
+              { src: '/generated/mychef-service-bali-waiters-gallery-1.webp', alt: 'Villa waiter in Bali placing a fine dining plate on a candlelit private dining table' },
+              { src: '/generated/mychef-service-bali-waiters-gallery-2.webp', alt: 'Villa waiters in Bali carrying champagne and canapés to guests by a private pool' },
+              { src: '/generated/mychef-service-bali-waiters-gallery-3.webp', alt: 'Villa waiter in Bali pouring red wine at an intimate private dinner' },
+              { src: '/generated/mychef-service-bali-waiters-gallery-4.webp', alt: 'Villa waiters in Bali setting an elegant long dining table on a private terrace' },
             ].map((g) => (
               <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
                 <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
@@ -326,7 +326,7 @@ export default function ServiceWaitersPage() {
       {/* Final CTA */}
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-service-bali-waiters-cta.webp" alt="Professional Indonesian waiters beside a beautifully set Bali villa dining table" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-service-bali-waiters-cta.webp" alt="Villa waiters Bali beside a beautifully set private dining table" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

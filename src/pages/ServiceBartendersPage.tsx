@@ -112,7 +112,7 @@ export default function ServiceBartendersPage() {
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
   <div className="absolute inset-0">
-    <img src="/generated/mychef-service-bali-hero-bartenders.webp" alt="Indonesian bartender shaking a cocktail at a premium Bali villa poolside bar" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
+    <img src="/generated/mychef-service-bali-hero-bartenders.webp" alt="Bartender hire Bali shaking a cocktail at a premium villa poolside bar" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
     <div
       className="absolute inset-0"
       style={{
@@ -209,10 +209,10 @@ export default function ServiceBartendersPage() {
           <SectionHeader eyebrow="Gallery" title="In the mix" subtitle="Real villa-bar moments across Bali." />
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
             {[
-              { src: '/generated/mychef-service-bali-bartenders-gallery-1.webp', alt: 'Indonesian bartender pouring a craft cocktail at a Bali villa party' },
-              { src: '/generated/mychef-service-bali-bartenders-gallery-2.webp', alt: 'Indonesian bartender shaking drinks at a poolside villa bar at dusk' },
-              { src: '/generated/mychef-service-bali-bartenders-gallery-3.webp', alt: 'Indonesian bartender serving cocktails to guests at a Bali villa event' },
-              { src: '/generated/mychef-service-bali-bartenders-gallery-4.webp', alt: 'Premium bar setup with copper tools and tropical garnishes at a Bali villa' },
+              { src: '/generated/mychef-service-bali-bartenders-gallery-1.webp', alt: 'Bartender hire Bali pouring a craft cocktail at a private villa party' },
+              { src: '/generated/mychef-service-bali-bartenders-gallery-2.webp', alt: 'Bartender hire Bali shaking drinks at a poolside villa bar at dusk' },
+              { src: '/generated/mychef-service-bali-bartenders-gallery-3.webp', alt: 'Bartender hire Bali serving cocktails to guests at a private villa event' },
+              { src: '/generated/mychef-service-bali-bartenders-gallery-4.webp', alt: 'Premium bar setup with copper tools and tropical garnishes at a private Bali villa' },
             ].map((g) => (
               <div key={g.src} className="aspect-square overflow-hidden rounded-xl">
                 <OptimizedImage src={g.src} alt={g.alt} className="w-full h-full object-cover" loading="lazy" />
@@ -305,7 +305,7 @@ export default function ServiceBartendersPage() {
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <OptimizedImage src="/generated/mychef-service-bali-bartenders-cta.webp" alt="Indonesian bartender working at an illuminated villa bar at night in Bali" className="w-full h-full object-cover" loading="lazy" />
+          <OptimizedImage src="/generated/mychef-service-bali-bartenders-cta.webp" alt="Bartender hire Bali working at an illuminated private villa bar at night" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">

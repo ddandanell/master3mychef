@@ -6,8 +6,6 @@ export interface BarService {
   h1: string
   heroImage: string
   heroAlt: string
-  bodyImage: string
-  bodyAlt: string
   problemImage?: string
   problemAlt?: string
   deliverablesImage?: string

@@ -3,7 +3,7 @@ import SeoHead, { breadcrumbSchema, serviceSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
-import { BarServiceGallery } from '@/components/bar-services'
+import { BarServiceGallery, BarServiceSubNav } from '@/components/bar-services'
 import { getPageMeta } from '@/data/page-meta'
 import { BAR_SERVICES_HUB, getBarServiceBySlug } from '@/data/bar-services'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -98,6 +98,7 @@ export default function BarServicesHubPage() {
           </div>
         </div>
       </section>
+      <BarServiceSubNav />
 
       {/* Expanded copy */}
       {expandedCopy && (

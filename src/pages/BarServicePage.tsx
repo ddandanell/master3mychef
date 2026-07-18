@@ -19,6 +19,7 @@ import {
   BarServiceResources,
   BarServiceEnquiryForm,
   BarServiceLeadMagnet,
+  BarServiceSubNav,
 } from '@/components/bar-services'
 
 const SITE = 'https://mychef.id'
@@ -64,6 +65,7 @@ export default function BarServicePage() {
         ]}
       />
       <BarServiceHero service={service} />
+      <BarServiceSubNav />
       <BarServiceProblem problem={service.problem} />
       <BarServiceDeliverables deliverables={service.deliverables} />
       <BarServiceProcess process={service.process} />

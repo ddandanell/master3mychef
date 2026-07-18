@@ -879,6 +879,82 @@ export default function HubPage() {
         </div>
       </section>
 
+      {/* BAR SERVICES FOR VENUES */}
+      <section className="py-16 md:py-24 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">New: Bar Services for Venues</p>
+              <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1A1A1A] mb-6">
+                Bar Services for Venues
+              </h2>
+              <div className="space-y-4 text-[#4A4745] max-w-xl">
+                <p className="text-lg leading-relaxed">
+                  The same team Bali's villa owners trust with their kitchens now fixes, staffs and manages bars. From a leaking pour cost to a full pre-opening build, we bring the same discipline to the other side of the pass.
+                </p>
+                <p className="leading-relaxed">
+                  Audit first. Numbers in writing. One accountable partner.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-8">
+                <div>
+                  <p className="font-playfair text-3xl text-[#1A1A1A]">560+</p>
+                  <p className="text-sm text-[#4A4745]">villas served</p>
+                </div>
+                <div>
+                  <p className="font-playfair text-3xl text-[#1A1A1A]">500+</p>
+                  <p className="text-sm text-[#4A4745]">events delivered</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { title: 'Consulting', href: '/bar-services/#consulting', description: 'Audit, costing, menu development, signatures and new bar setup.' },
+                { title: 'Staffing', href: '/bar-services/#staffing', description: 'Temporary bartenders, permanent recruitment and equipment rental.' },
+                { title: 'Management', href: '/bar-services/#management', description: 'Training and monthly fractional bar management support.' },
+                { title: 'Flagship', href: '/bar-services/complete-bar-performance-programme/', description: 'The complete annual bar performance programme.' },
+              ].map((card) => (
+                <Link
+                  key={card.title}
+                  to={card.href}
+                  className="group block bg-white p-6 rounded-2xl border border-black/5 shadow-sm transition-all hover:border-[#C5A028]/30 hover:shadow-lg"
+                >
+                  <h3 className="font-playfair text-xl text-[#1A1A1A] mb-2 group-hover:text-[#C5A028] transition-colors">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-[#4A4745] mb-4 leading-relaxed">
+                    {card.description}
+                  </p>
+                  <span className="inline-flex items-center text-xs font-semibold uppercase tracking-wider text-[#C5A028]">
+                    Learn more <ArrowRight className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://wa.me/6289674072020?text=Hi%20MyChef%2C%20I%20manage%20a%20venue%20in%20Bali%20and%20saw%20your%20new%20bar%20services.%20Can%20we%20talk%3F"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-source="homepage-bar-services-cta"
+              className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+              style={{ background: '#C5A028', color: '#fff' }}
+            >
+              <MessageCircle className="w-4 h-4" /> Talk to Our Bar Team on WhatsApp
+            </a>
+            <Link
+              to="/bar-services/"
+              className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full border border-[#1A1A1A]/10 text-[#1A1A1A] transition-all hover:bg-black/5"
+            >
+              See All Bar Services <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <TestimonialBlock
         title="Guest moments worth repeating"
         subtitle="Private dinners, wedding weekends and hosted events — the details guests remember most."

@@ -215,7 +215,7 @@ export default function BarServicesHubPage() {
 
           <div className="space-y-16">
             {groupedServices.map((group) => (
-              <div key={group.title}>
+              <div key={group.title} id={group.title.toLowerCase()}>
                 <h3 className="text-2xl font-serif text-gray-900 mb-6">{group.title}</h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {group.items.map((service) => (

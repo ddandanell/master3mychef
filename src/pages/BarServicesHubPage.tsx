@@ -1,0 +1,226 @@
+import { ArrowRight, MessageCircle } from 'lucide-react'
+import SeoHead, { breadcrumbSchema, serviceSchema } from '@/components/SeoHead'
+import { Breadcrumb } from '@/components/shared'
+import OptimizedImage from '@/components/OptimizedImage'
+import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getPageMeta } from '@/data/page-meta'
+import { BAR_SERVICES_HUB, getBarServiceBySlug } from '@/data/bar-services'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
+
+const SITE = 'https://mychef.id'
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'bar consulting in Bali', intent: 'a bar services consultation' })
+
+export default function BarServicesHubPage() {
+  const meta = getPageMeta('bar-services-hub')
+  const { hero, groups, whyUs, process, proof } = BAR_SERVICES_HUB
+
+  const groupedServices = groups.map((group) => ({
+    ...group,
+    items: group.services
+      .map((slug) => getBarServiceBySlug(slug))
+      .filter((service): service is NonNullable<ReturnType<typeof getBarServiceBySlug>> => Boolean(service)),
+  }))
+
+  return (
+    <>
+      <SeoHead
+        title={meta.title}
+        description={meta.description}
+        canonical={meta.canonical}
+        ogImage={meta.ogImage}
+        jsonLd={[
+          breadcrumbSchema('Bar Services', meta.canonical ?? `${SITE}/bar-services/`),
+          serviceSchema(hero.h1, meta.description, meta.canonical ?? `${SITE}/bar-services/`),
+        ]}
+      />
+      <Breadcrumb items={[{ label: 'Bar Services', href: '/bar-services/' }]} />
+
+      {/* Hero */}
+      <section className="relative min-h-[75vh] flex items-center overflow-hidden">
+        <OptimizedImage
+          src={hero.heroImage}
+          alt={hero.heroAlt}
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+        <div className="relative container mx-auto px-4 py-24">
+          <span className="text-sm uppercase tracking-widest text-amber-400 mb-4 block">
+            {hero.eyebrow}
+          </span>
+          <h1 className="text-4xl md:text-6xl font-serif text-white mb-6 max-w-3xl">
+            {hero.h1}
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-8">
+            {hero.description}
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-medium rounded"
+            >
+              <MessageCircle className="w-4 h-4" />
+              WhatsApp Us
+            </a>
+            <a
+              href="#service-groups"
+              className="inline-flex items-center justify-center px-6 py-3 border border-white text-white hover:bg-white/10 font-medium rounded"
+            >
+              Explore Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Service groups */}
+      <section id="service-groups" className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+              What we offer
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif text-gray-900">
+              Bar services built for Bali venues
+            </h2>
+          </div>
+
+          <div className="space-y-16">
+            {groupedServices.map((group) => (
+              <div key={group.title}>
+                <h3 className="text-2xl font-serif text-gray-900 mb-6">{group.title}</h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {group.items.map((service) => (
+                    <a
+                      key={service.slug}
+                      href={service.route}
+                      className="group block bg-stone-50 p-6 rounded-lg hover:shadow-md transition"
+                    >
+                      <h4 className="text-xl font-semibold mb-2 group-hover:text-amber-600">
+                        {service.eyebrow}
+                      </h4>
+                      <p className="text-gray-600 text-sm mb-4">{service.valueProp}</p>
+                      <span className="inline-flex items-center text-sm font-medium text-amber-600">
+                        Learn more
+                        <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why us */}
+      <section className="py-16 md:py-24 bg-stone-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+              Why us
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif text-gray-900">{whyUs.title}</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {whyUs.items.map((item) => (
+              <div key={item.title} className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+              How we work
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif text-gray-900">Our process</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            {process.map((step) => (
+              <div key={step.step} className="relative">
+                <span className="text-5xl font-serif text-amber-200 absolute -top-6 -left-2">
+                  {step.step}
+                </span>
+                <div className="relative pt-8">
+                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Proof */}
+      <section className="py-16 md:py-24 bg-gray-900 text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-serif mb-8 text-center">{proof.title}</h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {proof.items.map((item, i) => (
+              <div key={i} className="border-l-4 border-amber-500 pl-6">
+                <p className="text-lg">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Resources teaser */}
+      <section className="py-16 md:py-24 bg-stone-50">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+            Resources
+          </span>
+          <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-4">
+            Free guides for Bali bar operators
+          </h2>
+          <p className="text-gray-600 mb-8">
+            Benchmarks, checklists and how-to guides to help you run a tighter bar.
+          </p>
+          <a
+            href="/bar-services/resources/"
+            className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded"
+          >
+            Browse Resources
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </a>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 md:py-24 bg-amber-500">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-serif text-black mb-4">
+            Ready to improve your bar?
+          </h2>
+          <p className="text-black/80 mb-8">
+            Tell us about your venue and we will match you to the right service.
+          </p>
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-black hover:bg-gray-900 text-white font-medium rounded"
+          >
+            <MessageCircle className="w-4 h-4" />
+            WhatsApp Us
+          </a>
+        </div>
+      </section>
+
+      <StickyMobileCTA
+        pageSource="bar-services-hub"
+        serviceName="bar consulting in Bali"
+        intent="a bar services consultation"
+      />
+    </>
+  )
+}

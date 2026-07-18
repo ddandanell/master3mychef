@@ -1,0 +1,854 @@
+{
+  "generatedAt": "2026-07-18T14:54:10.838Z",
+  "total": 120,
+  "succeeded": 120,
+  "failed": 0,
+  "galleryCount": 66,
+  "gallerySucceeded": 66,
+  "providers": {
+    "openai": 78,
+    "pollinations": 42
+  },
+  "files": [
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-hub.webp",
+      "provider": "openai",
+      "sizeKB": 104.8,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-bar-staff-training.webp",
+      "provider": "openai",
+      "sizeKB": 105.3,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-staff-training-body.webp",
+      "provider": "openai",
+      "sizeKB": 70.8,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-cocktail-menu-development.webp",
+      "provider": "openai",
+      "sizeKB": 106,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-cocktail-menu-development-body.webp",
+      "provider": "openai",
+      "sizeKB": 54.9,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-signature-cocktail-creation.webp",
+      "provider": "openai",
+      "sizeKB": 124.3,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-signature-cocktail-creation-body.webp",
+      "provider": "openai",
+      "sizeKB": 62.8,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-temporary-bartender-staffing.webp",
+      "provider": "openai",
+      "sizeKB": 117.6,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-temporary-bartender-staffing-body.webp",
+      "provider": "openai",
+      "sizeKB": 74.5,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-permanent-bar-staff-recruitment.webp",
+      "provider": "openai",
+      "sizeKB": 95.6,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-permanent-bar-staff-recruitment-body.webp",
+      "provider": "openai",
+      "sizeKB": 75.4,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-new-bar-setup.webp",
+      "provider": "openai",
+      "sizeKB": 82.4,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-new-bar-setup-body.webp",
+      "provider": "openai",
+      "sizeKB": 56,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-bar-audit-improvement.webp",
+      "provider": "openai",
+      "sizeKB": 85,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-audit-improvement-body.webp",
+      "provider": "openai",
+      "sizeKB": 62.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-bar-costing-inventory-control.webp",
+      "provider": "openai",
+      "sizeKB": 84.9,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-costing-inventory-control-body.webp",
+      "provider": "openai",
+      "sizeKB": 71.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-bar-equipment-supply-rental.webp",
+      "provider": "openai",
+      "sizeKB": 63.8,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-equipment-supply-rental-body.webp",
+      "provider": "openai",
+      "sizeKB": 94.7,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-monthly-bar-management-support.webp",
+      "provider": "openai",
+      "sizeKB": 74.9,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-monthly-bar-management-support-body.webp",
+      "provider": "openai",
+      "sizeKB": 51.7,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hero-complete-bar-performance-programme.webp",
+      "provider": "openai",
+      "sizeKB": 134.7,
+      "dims": "1440x961"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-complete-bar-performance-programme-body.webp",
+      "provider": "openai",
+      "sizeKB": 69,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-resource-how-much-does-a-bartender-cost-bali.webp",
+      "provider": "openai",
+      "sizeKB": 47.3,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-resource-bartender-salary-benchmarks-bali.webp",
+      "provider": "openai",
+      "sizeKB": 33.8,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-resource-how-many-bartenders-per-guest.webp",
+      "provider": "openai",
+      "sizeKB": 83.7,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-resource-beverage-cost-percentage-guide.webp",
+      "provider": "openai",
+      "sizeKB": 43.8,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-resource-how-to-open-a-bar-in-bali.webp",
+      "provider": "openai",
+      "sizeKB": 53.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-resource-how-to-create-a-cocktail-menu.webp",
+      "provider": "openai",
+      "sizeKB": 46.8,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-resource-how-to-reduce-bar-shrinkage-bali.webp",
+      "provider": "openai",
+      "sizeKB": 47.9,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-contact-hero.webp",
+      "provider": "openai",
+      "sizeKB": 73,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-consultant.webp",
+      "provider": "openai",
+      "sizeKB": 44.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-hub.jpg",
+      "provider": "openai",
+      "sizeKB": 25.1,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-bar-staff-training.jpg",
+      "provider": "openai",
+      "sizeKB": 26.5,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-cocktail-menu-development.jpg",
+      "provider": "openai",
+      "sizeKB": 32.5,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-signature-cocktail-creation.jpg",
+      "provider": "openai",
+      "sizeKB": 32.9,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-temporary-bartender-staffing.jpg",
+      "provider": "openai",
+      "sizeKB": 24.5,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-permanent-bar-staff-recruitment.jpg",
+      "provider": "openai",
+      "sizeKB": 29,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-new-bar-setup.jpg",
+      "provider": "openai",
+      "sizeKB": 25.2,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-bar-audit-improvement.jpg",
+      "provider": "openai",
+      "sizeKB": 21.6,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-bar-costing-inventory-control.jpg",
+      "provider": "openai",
+      "sizeKB": 34.7,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-bar-equipment-supply-rental.jpg",
+      "provider": "openai",
+      "sizeKB": 28.4,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-monthly-bar-management-support.jpg",
+      "provider": "openai",
+      "sizeKB": 31.2,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-complete-bar-performance-programme.jpg",
+      "provider": "openai",
+      "sizeKB": 32.7,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-faq.jpg",
+      "provider": "openai",
+      "sizeKB": 24.5,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-contact.jpg",
+      "provider": "openai",
+      "sizeKB": 31.9,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-resources.jpg",
+      "provider": "openai",
+      "sizeKB": 28.5,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-how-much-does-a-bartender-cost-bali.jpg",
+      "provider": "openai",
+      "sizeKB": 26.7,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-bartender-salary-benchmarks-bali.jpg",
+      "provider": "openai",
+      "sizeKB": 34.1,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-how-many-bartenders-per-guest.jpg",
+      "provider": "openai",
+      "sizeKB": 30.5,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-beverage-cost-percentage-guide.jpg",
+      "provider": "openai",
+      "sizeKB": 34.4,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-how-to-open-a-bar-in-bali.jpg",
+      "provider": "openai",
+      "sizeKB": 27.4,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-how-to-create-a-cocktail-menu.jpg",
+      "provider": "openai",
+      "sizeKB": 27.3,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-og-how-to-reduce-bar-shrinkage-bali.jpg",
+      "provider": "openai",
+      "sizeKB": 29.9,
+      "dims": "1200x630"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hub-gallery-1.webp",
+      "provider": "openai",
+      "sizeKB": 70.6,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hub-gallery-2.webp",
+      "provider": "openai",
+      "sizeKB": 57.8,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-hub-gallery-3.webp",
+      "provider": "openai",
+      "sizeKB": 50.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-staff-training-gallery-1.webp",
+      "provider": "openai",
+      "sizeKB": 71.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-staff-training-gallery-2.webp",
+      "provider": "openai",
+      "sizeKB": 63.3,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-staff-training-gallery-3.webp",
+      "provider": "openai",
+      "sizeKB": 70,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-cocktail-menu-development-gallery-1.webp",
+      "provider": "openai",
+      "sizeKB": 62.7,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-cocktail-menu-development-gallery-2.webp",
+      "provider": "openai",
+      "sizeKB": 62.8,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-cocktail-menu-development-gallery-3.webp",
+      "provider": "openai",
+      "sizeKB": 57.9,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-signature-cocktail-creation-gallery-1.webp",
+      "provider": "openai",
+      "sizeKB": 44.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-signature-cocktail-creation-gallery-2.webp",
+      "provider": "openai",
+      "sizeKB": 64.6,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-signature-cocktail-creation-gallery-3.webp",
+      "provider": "openai",
+      "sizeKB": 60.1,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-temporary-bartender-staffing-gallery-1.webp",
+      "provider": "openai",
+      "sizeKB": 72.8,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-temporary-bartender-staffing-gallery-2.webp",
+      "provider": "openai",
+      "sizeKB": 56.9,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-temporary-bartender-staffing-gallery-3.webp",
+      "provider": "openai",
+      "sizeKB": 75.7,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-1.webp",
+      "provider": "openai",
+      "sizeKB": 55.1,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-2.webp",
+      "provider": "openai",
+      "sizeKB": 48.5,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-3.webp",
+      "provider": "openai",
+      "sizeKB": 55.1,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-new-bar-setup-gallery-1.webp",
+      "provider": "openai",
+      "sizeKB": 90.4,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-new-bar-setup-gallery-2.webp",
+      "provider": "openai",
+      "sizeKB": 84.5,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-new-bar-setup-gallery-3.webp",
+      "provider": "openai",
+      "sizeKB": 82,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-audit-improvement-gallery-1.webp",
+      "provider": "openai",
+      "sizeKB": 57.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-audit-improvement-gallery-2.webp",
+      "provider": "openai",
+      "sizeKB": 51.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-audit-improvement-gallery-3.webp",
+      "provider": "openai",
+      "sizeKB": 68,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-costing-inventory-control-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 69.9,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-costing-inventory-control-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 64,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-costing-inventory-control-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 64.3,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-equipment-supply-rental-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 87.1,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-equipment-supply-rental-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 73.4,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bar-equipment-supply-rental-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 82.6,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-monthly-bar-management-support-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 66.5,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-monthly-bar-management-support-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 65.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-monthly-bar-management-support-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 77.4,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-complete-bar-performance-programme-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 75.9,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-complete-bar-performance-programme-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 77.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-complete-bar-performance-programme-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 74.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-faq-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 63.7,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-faq-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 67.8,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-faq-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 59.6,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-contact-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 58.9,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-contact-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 56.4,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-contact-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 53.3,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-resources-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 59,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-resources-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 74,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-resources-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 53.1,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-much-does-a-bartender-cost-bali-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 84.5,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-much-does-a-bartender-cost-bali-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 63.7,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-much-does-a-bartender-cost-bali-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 58.7,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bartender-salary-benchmarks-bali-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 50.2,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bartender-salary-benchmarks-bali-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 65.6,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-bartender-salary-benchmarks-bali-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 60.1,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-many-bartenders-per-guest-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 70.7,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-many-bartenders-per-guest-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 61.6,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-many-bartenders-per-guest-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 67.6,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-beverage-cost-percentage-guide-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 52.5,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-beverage-cost-percentage-guide-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 55.5,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-beverage-cost-percentage-guide-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 58.3,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-to-open-a-bar-in-bali-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 86,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-to-open-a-bar-in-bali-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 76.8,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-to-open-a-bar-in-bali-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 86,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-to-create-a-cocktail-menu-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 51.7,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-to-create-a-cocktail-menu-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 71.5,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-to-create-a-cocktail-menu-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 61,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-to-reduce-bar-shrinkage-bali-gallery-1.webp",
+      "provider": "pollinations",
+      "sizeKB": 68.4,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-to-reduce-bar-shrinkage-bali-gallery-2.webp",
+      "provider": "pollinations",
+      "sizeKB": 73.5,
+      "dims": "1200x800"
+    },
+    {
+      "ok": true,
+      "filename": "mychef-bar-services-bali-how-to-reduce-bar-shrinkage-bali-gallery-3.webp",
+      "provider": "pollinations",
+      "sizeKB": 63.6,
+      "dims": "1200x800"
+    }
+  ]
+}

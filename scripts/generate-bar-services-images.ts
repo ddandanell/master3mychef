@@ -444,9 +444,11 @@ async function fetchWithTimeout(url: string, timeoutMs: number): Promise<Respons
 
 async function generateWithPollinations(prompt: string, seed: number): Promise<Buffer> {
   const encoded = encodeURIComponent(`${prompt}. ${BRAND_RULES} ${NEGATIVE}`)
-  const url = `${POLLINATIONS_URL}/${encoded}?width=1536&height=1024&seed=${seed}&nologo=true&negative_prompt=text,logo,watermark,religious,plastic,neon,flair`
-  // Pollinations free endpoint can occasionally hang; cap wait at 45s.
-  const res = await fetchWithTimeout(url, 45_000)
+  // Use a smaller SDXL-friendly size so Pollinations returns faster; final
+  // output is still resized/cropped to 1200x800 with sharp.
+  const url = `${POLLINATIONS_URL}/${encoded}?width=1024&height=768&seed=${seed}&nologo=true&negative_prompt=text,logo,watermark,religious,plastic,neon,flair`
+  // Pollinations free endpoint can occasionally hang; cap wait at 90s.
+  const res = await fetchWithTimeout(url, 90_000)
   if (!res.ok) throw new Error(`Pollinations ${res.status}`)
   return Buffer.from(await res.arrayBuffer())
 }
@@ -600,7 +602,7 @@ async function main(): Promise<void> {
   for (let i = 0; i < jobs.length; i++) {
     results.push(await processJob(jobs[i], i, jobs.length))
     // Polite delay to avoid rate-limiting the free Pollinations endpoint
-    if (i < jobs.length - 1) await sleep(1000)
+    if (i < jobs.length - 1) await sleep(500)
   }
 
   const ok = results.filter((r) => r.ok)

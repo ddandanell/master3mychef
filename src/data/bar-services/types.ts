@@ -75,6 +75,10 @@ export interface BarService {
       paragraphs: string[]
     }
   }
+  expandedImages?: Partial<Record<
+    'whyBali' | 'whoFor' | 'commonMistakes' | 'successKpis' | 'connections',
+    { src: string; alt: string }
+  >>
   /** @deprecated Keep for backward compatibility; use section image fields instead. */
   galleryImages?: {
     src: string

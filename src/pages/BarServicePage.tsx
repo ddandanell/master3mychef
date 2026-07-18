@@ -13,7 +13,6 @@ import {
   BarServiceIncluded,
   BarServiceProof,
   BarServiceExpandedContent,
-  BarServiceGallery,
   BarServiceQuoteBlock,
   BarServiceCrossSells,
   BarServiceResources,
@@ -66,17 +65,26 @@ export default function BarServicePage() {
       />
       <BarServiceHero service={service} />
       <BarServiceSubNav />
-      <BarServiceProblem problem={service.problem} />
-      <BarServiceDeliverables deliverables={service.deliverables} />
-      <BarServiceProcess process={service.process} />
+      <BarServiceProblem
+        problem={service.problem}
+        image={service.problemImage ? { src: service.problemImage, alt: service.problemAlt || '' } : undefined}
+      />
+      <BarServiceDeliverables
+        deliverables={service.deliverables}
+        image={service.deliverablesImage ? { src: service.deliverablesImage, alt: service.deliverablesAlt || '' } : undefined}
+      />
+      <BarServiceProcess
+        process={service.process}
+        image={service.processImage ? { src: service.processImage, alt: service.processAlt || '' } : undefined}
+      />
       <BarServiceIncluded included={service.included} />
-      <BarServiceProof proof={service.proof} />
+      <BarServiceProof
+        proof={service.proof}
+        image={service.proofImage ? { src: service.proofImage, alt: service.proofAlt || '' } : undefined}
+      />
       {service.expandedSections && (
-        <BarServiceExpandedContent sections={service.expandedSections} />
+        <BarServiceExpandedContent sections={service.expandedSections} images={service.expandedImages} />
       )}
-      {service.galleryImages?.length ? (
-        <BarServiceGallery images={service.galleryImages} />
-      ) : null}
       <BarServiceQuoteBlock service={service} />
       <BarServiceCrossSells slugs={service.relatedServices} />
       <section className="py-16 md:py-24 bg-white">

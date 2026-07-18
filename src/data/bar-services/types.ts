@@ -95,6 +95,8 @@ export interface BarResource {
   summary: string
   content: { heading?: string; paragraphs: string[] }[]
   relatedServices: string[]
+  /** Optional path to the canonical markdown source file for this resource. */
+  contentPath?: string
   keywords?: {
     primary: string
     secondary: string[]

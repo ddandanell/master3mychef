@@ -100,7 +100,8 @@ export const BAR_RESOURCES: BarResource[] = [
       { src: '/generated/mychef-service-bali-bartenders-gallery-2.webp', alt: 'Mobile bar setup for a Bali wedding reception' },
       { src: '/generated/mychef-events-bali-weddings-bartender.webp', alt: 'Wedding bartender serving guests in Bali' }
     ],
-    relatedServices: ['temporary-bartender-staffing', 'permanent-bar-staff-recruitment', 'bar-staff-training']
+    relatedServices: ['temporary-bartender-staffing', 'permanent-bar-staff-recruitment', 'bar-staff-training'],
+    contentPath: 'src/content/bar-services/resources/how-much-does-a-bartender-cost-bali.md'
   },
   {
     slug: 'bartender-salary-benchmarks-bali',
@@ -203,7 +204,8 @@ export const BAR_RESOURCES: BarResource[] = [
       { src: '/generated/mychef-bartenders-2.webp', alt: 'Bar team training session in a Bali venue' },
       { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-body.webp', alt: 'Bar manager reviewing rosters with a MyChef consultant' }
     ],
-    relatedServices: ['permanent-bar-staff-recruitment', 'bar-costing-inventory-control', 'monthly-bar-management-support']
+    relatedServices: ['permanent-bar-staff-recruitment', 'bar-costing-inventory-control', 'monthly-bar-management-support'],
+    contentPath: 'src/content/bar-services/resources/bartender-salary-benchmarks-bali.md'
   },
   {
     slug: 'how-many-bartenders-per-guest',
@@ -306,7 +308,8 @@ export const BAR_RESOURCES: BarResource[] = [
       { src: '/generated/mychef-events-bali-villa-parties-bar.webp', alt: 'Villa party bar setup in Bali' },
       { src: '/generated/mychef-service-bali-bartenders-gallery-4.webp', alt: 'Bali wedding bar team in action' }
     ],
-    relatedServices: ['temporary-bartender-staffing', 'bar-equipment-supply-rental']
+    relatedServices: ['temporary-bartender-staffing', 'bar-equipment-supply-rental'],
+    contentPath: 'src/content/bar-services/resources/how-many-bartenders-per-guest.md'
   },
   {
     slug: 'beverage-cost-percentage-guide',
@@ -409,7 +412,8 @@ export const BAR_RESOURCES: BarResource[] = [
       { src: '/generated/mychef-mixology-bali-bar-setup.webp', alt: 'Well-organised Bali bar backbar with labelled bottles' },
       { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-body.webp', alt: 'MyChef consultant reviewing stock variance with a bar manager' }
     ],
-    relatedServices: ['bar-costing-inventory-control', 'bar-audit-improvement', 'complete-bar-performance-programme']
+    relatedServices: ['bar-costing-inventory-control', 'bar-audit-improvement', 'complete-bar-performance-programme'],
+    contentPath: 'src/content/bar-services/resources/beverage-cost-percentage-guide.md'
   },
   {
     slug: 'how-to-open-a-bar-in-bali',
@@ -512,7 +516,8 @@ export const BAR_RESOURCES: BarResource[] = [
       { src: '/generated/mychef-mixology-bali-bar-setup.webp', alt: 'Bali bar design and equipment layout' },
       { src: '/generated/mychef-bar-services-bali-consultant.webp', alt: 'MyChef consultant reviewing bar layout plans' }
     ],
-    relatedServices: ['new-bar-setup', 'permanent-bar-staff-recruitment', 'bar-staff-training']
+    relatedServices: ['new-bar-setup', 'permanent-bar-staff-recruitment', 'bar-staff-training'],
+    contentPath: 'src/content/bar-services/resources/how-to-open-a-bar-in-bali.md'
   },
   {
     slug: 'how-to-create-a-cocktail-menu',
@@ -615,7 +620,8 @@ export const BAR_RESOURCES: BarResource[] = [
       { src: '/generated/mychef-mixology-bali-bar-setup.webp', alt: 'Fresh cocktail ingredients and bar tools in Bali' },
       { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-body.webp', alt: 'Signature cocktail presentation for a Bali venue' }
     ],
-    relatedServices: ['cocktail-menu-development', 'signature-cocktail-creation', 'bar-costing-inventory-control']
+    relatedServices: ['cocktail-menu-development', 'signature-cocktail-creation', 'bar-costing-inventory-control'],
+    contentPath: 'src/content/bar-services/resources/how-to-create-a-cocktail-menu.md'
   },
   {
     slug: 'how-to-reduce-bar-shrinkage-bali',

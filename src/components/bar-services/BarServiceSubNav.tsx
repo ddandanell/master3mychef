@@ -27,20 +27,22 @@ export function BarServiceSubNav() {
   const { pathname } = useLocation()
 
   return (
-    <div className="sticky top-[52px] z-40 bg-[#0F0E0C]/95 border-b border-[#C5A028]/15 backdrop-blur-md">
-      <div className="container mx-auto px-4 py-2">
-        <nav aria-label="Bar services" className="flex items-center gap-4 overflow-x-auto no-scrollbar">
+    <div className="sticky top-14 z-40 bg-[#0F0E0C]/95 border-b border-[#C5A028]/15 backdrop-blur-md">
+      <div className="container mx-auto px-4">
+        <nav aria-label="Bar services" className="flex items-center gap-1 overflow-x-auto no-scrollbar py-2.5">
           <Link
             to="/bar-services/"
-            className={`text-xs uppercase tracking-wider font-medium whitespace-nowrap transition-colors ${
-              pathname === '/bar-services/' ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
+            className={`shrink-0 px-3 py-1.5 text-xs uppercase tracking-wider font-medium rounded transition-colors ${
+              pathname === '/bar-services/'
+                ? 'text-[#C5A028] bg-[#C5A028]/10'
+                : 'text-white/70 hover:text-[#C5A028] hover:bg-white/5'
             }`}
           >
             Overview
           </Link>
           {GROUPS.map((group) => (
-            <div key={group.label} className="flex items-center gap-3 border-l border-white/10 pl-4">
-              <span className="text-[10px] uppercase tracking-wider text-[#C5A028]/70 whitespace-nowrap">
+            <div key={group.label} className="flex items-center gap-1 border-l border-white/10 pl-2 ml-1">
+              <span className="hidden md:block text-[10px] uppercase tracking-wider text-[#C5A028]/60 whitespace-nowrap px-2">
                 {group.label}
               </span>
               {group.slugs.map((slug) => {
@@ -51,8 +53,10 @@ export function BarServiceSubNav() {
                   <Link
                     key={slug}
                     to={service.route}
-                    className={`text-xs whitespace-nowrap transition-colors ${
-                      active ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
+                    className={`shrink-0 px-3 py-1.5 text-xs whitespace-nowrap rounded transition-colors ${
+                      active
+                        ? 'text-[#C5A028] bg-[#C5A028]/10'
+                        : 'text-white/70 hover:text-[#C5A028] hover:bg-white/5'
                     }`}
                   >
                     {service.eyebrow}

@@ -68,19 +68,23 @@ export default function BarServicePage() {
       <BarServiceProblem
         problem={service.problem}
         image={service.problemImage ? { src: service.problemImage, alt: service.problemAlt || '' } : undefined}
+        imagePosition="right"
       />
       <BarServiceDeliverables
         deliverables={service.deliverables}
         image={service.deliverablesImage ? { src: service.deliverablesImage, alt: service.deliverablesAlt || '' } : undefined}
+        imagePosition="left"
       />
       <BarServiceProcess
         process={service.process}
         image={service.processImage ? { src: service.processImage, alt: service.processAlt || '' } : undefined}
+        imagePosition="right"
       />
       <BarServiceIncluded included={service.included} />
       <BarServiceProof
         proof={service.proof}
         image={service.proofImage ? { src: service.proofImage, alt: service.proofAlt || '' } : undefined}
+        imagePosition="left"
       />
       {service.expandedSections && (
         <BarServiceExpandedContent sections={service.expandedSections} images={service.expandedImages} />

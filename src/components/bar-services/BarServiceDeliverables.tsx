@@ -5,9 +5,10 @@ import type { BarService } from '@/data/bar-services'
 interface Props {
   deliverables: BarService['deliverables']
   image?: { src: string; alt: string }
+  imagePosition?: 'left' | 'right'
 }
 
-export function BarServiceDeliverables({ deliverables, image }: Props) {
+export function BarServiceDeliverables({ deliverables, image, imagePosition = 'right' }: Props) {
   const content = (
     <>
       <BarServiceSectionHeader eyebrow="What you get" title="What we deliver" />
@@ -26,7 +27,7 @@ export function BarServiceDeliverables({ deliverables, image }: Props) {
     <section className="py-16 md:py-24 bg-stone-50">
       <div className="container mx-auto px-4">
         {image ? (
-          <BarServiceImageSection image={image} imagePosition="right">
+          <BarServiceImageSection image={image} imagePosition={imagePosition}>
             {content}
           </BarServiceImageSection>
         ) : (

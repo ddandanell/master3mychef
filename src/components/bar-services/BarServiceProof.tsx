@@ -5,9 +5,10 @@ import type { BarService } from '@/data/bar-services'
 interface Props {
   proof: BarService['proof']
   image?: { src: string; alt: string }
+  imagePosition?: 'left' | 'right'
 }
 
-export function BarServiceProof({ proof, image }: Props) {
+export function BarServiceProof({ proof, image, imagePosition = 'right' }: Props) {
   const content = (
     <>
       <BarServiceSectionHeader title={proof.title} />
@@ -25,7 +26,7 @@ export function BarServiceProof({ proof, image }: Props) {
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         {image ? (
-          <BarServiceImageSection image={image} imagePosition="right">
+          <BarServiceImageSection image={image} imagePosition={imagePosition}>
             {content}
           </BarServiceImageSection>
         ) : (

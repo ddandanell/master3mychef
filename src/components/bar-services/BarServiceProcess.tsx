@@ -5,9 +5,10 @@ import type { BarService } from '@/data/bar-services'
 interface Props {
   process: BarService['process']
   image?: { src: string; alt: string }
+  imagePosition?: 'left' | 'right'
 }
 
-export function BarServiceProcess({ process, image }: Props) {
+export function BarServiceProcess({ process, image, imagePosition = 'right' }: Props) {
   const content = (
     <>
       <BarServiceSectionHeader eyebrow="How it works" title="Our process" />
@@ -31,7 +32,7 @@ export function BarServiceProcess({ process, image }: Props) {
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         {image ? (
-          <BarServiceImageSection image={image} imagePosition="right">
+          <BarServiceImageSection image={image} imagePosition={imagePosition}>
             {content}
           </BarServiceImageSection>
         ) : (

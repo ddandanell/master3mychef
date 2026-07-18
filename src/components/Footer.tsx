@@ -3,6 +3,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { Link } from 'react-router-dom'
 import { Instagram, MessageCircle, LogIn, MapPin, Mail, ChefHat, ChevronDown } from 'lucide-react'
 import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA, hasLocationPage } from '@/data/siteArchitecture'
+import { BAR_SERVICES_HUB, BAR_SERVICES } from '@/data/bar-services'
 
 // Top Bali locations shown by default — chosen by traffic + villa density
 const TOP_LOCATION_SLUGS = ['seminyak', 'canggu', 'uluwatu', 'ubud', 'nusa-dua']
@@ -397,6 +398,53 @@ export default function Footer() {
                   className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   myCHEF Journal
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="group">
+            <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Bar Services</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  to="/bar-services/"
+                  className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                >
+                  Overview
+                </Link>
+              </li>
+              {BAR_SERVICES_HUB.groups.flatMap((g) =>
+                g.services.flatMap((slug) => {
+                  const service = BAR_SERVICES.find((s) => s.slug === slug)
+                  return service
+                    ? [
+                        <li key={service.slug}>
+                          <Link
+                            to={service.route}
+                            className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                          >
+                            {service.eyebrow}
+                          </Link>
+                        </li>,
+                      ]
+                    : []
+                })
+              )}
+              <li>
+                <Link
+                  to="/bar-services/faq/"
+                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/bar-services/contact/"
+                  className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>

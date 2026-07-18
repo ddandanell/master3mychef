@@ -1,9 +1,9 @@
-import { MessageCircle, Mail, MapPin, Phone, Clock } from 'lucide-react'
+import { MessageCircle, Mail, MapPin, Phone, Clock, CheckCircle2, ClipboardList } from 'lucide-react'
 import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
-import { BarServiceEnquiryForm } from '@/components/bar-services'
+import { BarServiceEnquiryForm, BarServiceGallery } from '@/components/bar-services'
 import { getPageMeta } from '@/data/page-meta'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
@@ -40,6 +40,20 @@ const CONTACT_DETAILS = [
   },
 ]
 
+const WHAT_TO_PREPARE = [
+  'Venue type and name — hotel, villa, beach club, restaurant or event.',
+  'Location in Bali and whether it is inside our core zone or remote.',
+  'The service you are interested in, or your biggest current pain point.',
+  'Your preferred dates or timeline, especially for events and peak season.',
+  'Guest count or expected covers, if relevant to staffing or menu work.',
+]
+
+const CONTACT_GALLERY = [
+  { src: '/generated/mychef-bar-services-bali-consultant.webp', alt: 'MyChef bar consultant reviewing a venue programme' },
+  { src: '/generated/mychef-bar-services-bali-contact-hero.webp', alt: 'Bar specialist meeting with a Bali venue owner' },
+  { src: '/generated/mychef-bar-services-bali-new-bar-setup-body.webp', alt: 'MyChef team on-site during a new bar setup' },
+]
+
 export default function BarServicesContactPage() {
   const meta = getPageMeta('bar-services-contact')
   const canonical = meta.canonical ?? `${SITE}/bar-services/contact/`
@@ -74,10 +88,10 @@ export default function BarServicesContactPage() {
             Contact
           </span>
           <h1 className="text-4xl md:text-6xl font-serif text-white mb-4 max-w-3xl">
-            Talk to a bar specialist
+            Let&apos;s talk about your bar
           </h1>
           <p className="text-lg text-white/80 max-w-2xl mb-8">
-            Tell us about your venue and we will match you to the right bar consulting, staffing or management service.
+            Whether your pour cost is creeping up, your team needs training, or you are opening something new — the fastest way to an answer is a message. We reply to every B2B enquiry within four business hours, Monday to Saturday.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -130,8 +144,51 @@ export default function BarServicesContactPage() {
         </div>
       </section>
 
-      {/* Coverage + response time */}
+      {/* What happens after you contact us */}
       <section className="py-16 md:py-24 bg-stone-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+              Our process
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif text-gray-900">
+              What happens after you contact us
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+                <Clock className="w-6 h-6 text-amber-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">1. We reply within four business hours</h3>
+              <p className="text-gray-700">
+                Every B2B enquiry is read by a bar specialist, not a call centre. We respond Monday to Saturday, Bali time, and urgent venue cover requests are prioritised.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+                <MessageCircle className="w-6 h-6 text-amber-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">2. Short discovery call or WhatsApp exchange</h3>
+              <p className="text-gray-700">
+                We ask about your venue, your biggest pain point and your timeline. If you are not sure what you need, we guide you to the right service or tell you honestly if a paid engagement is not worth it yet.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+                <CheckCircle2 className="w-6 h-6 text-amber-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">3. Written proposal before any commitment</h3>
+              <p className="text-gray-700">
+                You receive a clear scope, timeline and pricing in writing. No retainers sprung on you, no vague day rates. If we quote it, it is in writing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Coverage + response time */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div>
@@ -139,11 +196,10 @@ export default function BarServicesContactPage() {
                 Coverage
               </span>
               <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-4">
-                All of Bali, one point of contact
+                Where we work in Bali
               </h2>
               <p className="text-gray-700 mb-6">
-                From Seminyak beach clubs to Ubud retreats and Uluwatu resorts, our bar team travels across Bali.
-                Remote locations are quoted with travel built in — no surprises.
+                From Seminyak beach clubs to Ubud retreats and Uluwatu resorts, our bar team travels across Bali. Our core consulting zones are Badung, Gianyar (including Ubud) and the Bukit/Uluwatu peninsula. Events and temporary staffing are covered island-wide, including Tabanan, Candidasa, Sidemen, Lovina and the Nusa islands. Remote locations are quoted with travel built in — no surprises.
               </p>
               <ul className="space-y-2 text-gray-700">
                 {['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Denpasar'].map((area) => (
@@ -154,19 +210,18 @@ export default function BarServicesContactPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-stone-50 p-8 rounded-lg">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center">
                   <Clock className="w-6 h-6 text-amber-600" />
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-gray-500">Response time</p>
-                  <p className="text-2xl font-serif text-gray-900">Within 1 business day</p>
+                  <p className="text-2xl font-serif text-gray-900">Within 4 business hours</p>
                 </div>
               </div>
               <p className="text-gray-700 mb-6">
-                Most enquiries receive a tailored proposal or next-step recommendation within one business day.
-                Urgent venue cover requests are prioritised.
+                Most enquiries receive a tailored proposal or next-step recommendation within four business hours. Urgent venue cover requests are prioritised.
               </p>
               <a
                 href={WA_LINK}
@@ -176,6 +231,53 @@ export default function BarServicesContactPage() {
               >
                 <MessageCircle className="w-4 h-4" />
                 Start on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What to prepare */}
+      <section className="py-16 md:py-24 bg-stone-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+              <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+                Get a faster answer
+              </span>
+              <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-4">
+                What to prepare before you message
+              </h2>
+              <p className="text-gray-700 mb-6">
+                You do not need a formal brief. A few details are enough for us to point you to the right service and give you a realistic estimate. The more specific you can be about your venue, timeline and goals, the faster we can move to a written proposal.
+              </p>
+              <ul className="space-y-3 text-gray-700">
+                {WHAT_TO_PREPARE.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <ClipboardList className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <h3 className="text-xl font-serif text-gray-900 mb-4">
+                Not sure what you need? Start with a free bar health call
+              </h3>
+              <p className="text-gray-700 mb-6">
+                Book a free 30-minute bar health call. We will ask a few questions about your operation, give you an honest read on where your bar stands, and tell you plainly whether a paid engagement is worth it. If it is not, we will say so.
+              </p>
+              <p className="text-gray-700 mb-6">
+                Mention &quot;bar health call&quot; in your WhatsApp message or the form, and we will send two or three time slots.
+              </p>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-medium rounded"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Book a Bar Health Call
               </a>
             </div>
           </div>
@@ -194,8 +296,7 @@ export default function BarServicesContactPage() {
                 Your bar programme starts here
               </h2>
               <p className="text-gray-700 mb-8">
-                Our bar lead reviews every enquiry and recommends the right mix of audit, training, menu work or staffing.
-                No hard sell — just clear next steps.
+                Our bar lead reviews every enquiry and recommends the right mix of audit, training, menu work or staffing. No hard sell — just clear next steps.
               </p>
               <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
                 <OptimizedImage
@@ -211,6 +312,8 @@ export default function BarServicesContactPage() {
           </div>
         </div>
       </section>
+
+      <BarServiceGallery images={CONTACT_GALLERY} />
 
       <StickyMobileCTA
         pageSource="bar-services-contact"

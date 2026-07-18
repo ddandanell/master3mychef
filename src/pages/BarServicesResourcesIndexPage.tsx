@@ -1,12 +1,42 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, BookOpen, Lightbulb, TrendingUp, Users } from 'lucide-react'
 import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
 import { BAR_RESOURCES } from '@/data/bar-services'
+import { BarServiceGallery } from '@/components/bar-services'
 
 const SITE = 'https://mychef.id'
+
+const VALUE_PROPS = [
+  {
+    icon: BookOpen,
+    title: 'Practical guides',
+    description: 'Each resource is written for operators, not theorists. You get ratios, benchmarks and checklists you can use today.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Bali market data',
+    description: 'Salary bands, pour-cost targets and staffing ratios are grounded in the current Bali hospitality market.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Decision frameworks',
+    description: 'Learn when to hire permanent vs temporary staff, how to price a cocktail, and when to outsource control systems.',
+  },
+  {
+    icon: Users,
+    title: 'Connected to our services',
+    description: 'Every guide links to the MyChef service that can help you implement what you have read.',
+  },
+]
+
+const RESOURCES_GALLERY = [
+  { src: '/generated/mychef-service-bali-bartenders-gallery-2.webp', alt: 'Bali bartenders at a professional event' },
+  { src: '/generated/mychef-mixology-bali-bar-setup.webp', alt: 'Bali cocktail bar setup and ingredients' },
+  { src: '/generated/mychef-events-bali-villa-parties-bar.webp', alt: 'Villa party bar service in Bali' },
+]
 
 export default function BarServicesResourcesIndexPage() {
   const meta = getPageMeta('bar-services-resources')
@@ -44,6 +74,34 @@ export default function BarServicesResourcesIndexPage() {
       </section>
 
       <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-3xl mb-16">
+          <div className="prose prose-lg max-w-none text-center md:text-left">
+            <p>
+              Running a profitable bar in Bali means making dozens of interconnected decisions: how many bartenders to roster, what to pay them, how to price a cocktail, how to control shrinkage, and how to design a menu that guests remember. Our resource library is built to give venue owners, managers and event organisers clear, actionable answers to those questions.
+            </p>
+            <p>
+              Each guide combines operational frameworks with Bali-specific context — local salary bands, licensing notes, seasonal demand patterns and supplier realities. Whether you are opening a new bar, refreshing a cocktail list, hiring event staff or trying to stop inventory losses, these resources are designed to move you from question to decision faster.
+            </p>
+            <p>
+              The guides below are connected to the MyChef services that can help you implement what you read. If a topic raises a bigger question for your venue, WhatsApp us and a bar specialist will reply within four business hours.
+            </p>
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {VALUE_PROPS.map((prop) => (
+              <div key={prop.title} className="bg-stone-50 p-6 rounded-lg">
+                <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mb-4">
+                  <prop.icon className="w-5 h-5 text-amber-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">{prop.title}</h3>
+                <p className="text-sm text-gray-600">{prop.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {BAR_RESOURCES.map((resource) => (
@@ -76,6 +134,8 @@ export default function BarServicesResourcesIndexPage() {
           </div>
         </div>
       </section>
+
+      <BarServiceGallery images={RESOURCES_GALLERY} />
 
       <StickyMobileCTA
         pageSource="bar-services-resources"

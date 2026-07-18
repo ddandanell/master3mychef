@@ -5,9 +5,13 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
 import { getBarResourceBySlug, BAR_RESOURCE_SLUGS } from '@/data/bar-services'
-import { BarServiceCrossSells } from '@/components/bar-services'
+import { BarServiceCrossSells, BarServiceGallery } from '@/components/bar-services'
 
 const SITE = 'https://mychef.id'
+
+function countWords(text: string): number {
+  return text.trim().split(/\s+/).filter(Boolean).length
+}
 
 export default function BarServicesResourcePage() {
   const { slug } = useParams<{ slug: string }>()
@@ -29,10 +33,26 @@ export default function BarServicesResourcePage() {
 
   const meta = getPageMeta(resource.metaKey)
   const canonical = `${SITE}${resource.route}`
-  const wordCount = resource.content.reduce(
-    (count, section) => count + section.paragraphs.reduce((c, p) => c + p.split(/\s+/).length, 0),
+
+  const contentWordCount = resource.content.reduce(
+    (count, section) => count + section.paragraphs.reduce((c, p) => c + countWords(p), 0),
     0
   )
+  const expandedWordCount = resource.expandedSections
+    ? countWords(
+        [
+          resource.expandedSections.context.title,
+          ...resource.expandedSections.context.paragraphs,
+          resource.expandedSections.deepDive.title,
+          ...resource.expandedSections.deepDive.paragraphs,
+          resource.expandedSections.mistakes.title,
+          ...resource.expandedSections.mistakes.items,
+          resource.expandedSections.actionableTips.title,
+          ...resource.expandedSections.actionableTips.items,
+        ].join(' ')
+      )
+    : 0
+  const wordCount = contentWordCount + expandedWordCount
 
   return (
     <>
@@ -99,8 +119,73 @@ export default function BarServicesResourcePage() {
               </div>
             ))}
           </div>
+
+          {resource.expandedSections && (
+            <div className="mt-16 md:mt-24 space-y-16 md:space-y-24">
+              <div>
+                <h2 className="text-2xl font-serif text-gray-900 mb-4">
+                  {resource.expandedSections.context.title}
+                </h2>
+                {resource.expandedSections.context.paragraphs.map((p, i) => (
+                  <p key={i} className="text-gray-700 mb-4 leading-relaxed">
+                    {p}
+                  </p>
+                ))}
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-serif text-gray-900 mb-4">
+                  {resource.expandedSections.deepDive.title}
+                </h2>
+                {resource.expandedSections.deepDive.paragraphs.map((p, i) => (
+                  <p key={i} className="text-gray-700 mb-4 leading-relaxed">
+                    {p}
+                  </p>
+                ))}
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-serif text-gray-900 mb-4">
+                  {resource.expandedSections.mistakes.title}
+                </h2>
+                <ul className="space-y-3 text-gray-700">
+                  {resource.expandedSections.mistakes.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span
+                        className="w-2 h-2 rounded-full mt-2 flex-shrink-0"
+                        style={{ backgroundColor: '#C5A028' }}
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-serif text-gray-900 mb-4">
+                  {resource.expandedSections.actionableTips.title}
+                </h2>
+                <ul className="space-y-3 text-gray-700">
+                  {resource.expandedSections.actionableTips.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span
+                        className="w-2 h-2 rounded-full mt-2 flex-shrink-0"
+                        style={{ backgroundColor: '#C5A028' }}
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
         </div>
       </article>
+
+      {resource.galleryImages && resource.galleryImages.length > 0 && (
+        <BarServiceGallery images={resource.galleryImages} />
+      )}
+
       <BarServiceCrossSells slugs={resource.relatedServices} />
       <StickyMobileCTA
         pageSource={`bar-services-resource-${resource.slug}`}

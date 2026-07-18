@@ -2,10 +2,8 @@
 /**
  * Batch image generator for MyChef Bar Services pages.
  *
- * Preferred providers (in order):
- *   1. OpenAI gpt-image-2 (via OPENAI_API_KEY)
- *   2. BFL FLUX.2 [klein-9b] (via BFL_API_KEY)
- *   3. Pollinations.ai free image endpoint (fallback)
+ * Primary provider: Pollinations.ai (OpenAI key in this environment points to a
+ * chat-only Kimi endpoint and has no image endpoint).
  *
  * Generates:
  *   - 11 service hero WebP images
@@ -14,6 +12,7 @@
  *   - 7 resource featured WebP images
  *   - 2 contact WebP images
  *   - 22 OG JPG images (1200x630 with text overlay)
+ *   - 66 gallery WebP images (3 per page across 22 pages)
  *
  * Uses sharp for resizing, compression and OG text overlay.
  * Resumable: skips files that already exist.
@@ -41,7 +40,7 @@ const BRAND_RULES =
 
 const NEGATIVE = 'No text, no logos, no watermarks, no religious symbols, no plastic/disposable ware, no neon signs, no generic stock cocktails, no flair bartending.'
 
-type ImageType = 'hero' | 'body' | 'resource' | 'contact' | 'og'
+type ImageType = 'hero' | 'body' | 'resource' | 'contact' | 'og' | 'gallery'
 type Provider = 'openai' | 'bfl' | 'pollinations'
 
 interface ImageJob {
@@ -119,6 +118,119 @@ const SERVICE_PROMPTS: Record<string, { hero: string; body: string }> = {
     hero: 'Bali venue leadership team reviewing a quarterly bar scorecard in a bright restaurant office. Warm light, professional meeting, charts on screen softly blurred.',
     body: 'Bartenders executing a newly launched cocktail menu behind a busy Bali bar. Warm evening light, coordinated team, guests in soft background.',
   },
+}
+
+const GALLERY_PROMPTS: Record<string, string[]> = {
+  'hub': [
+    'Bali villa bar at golden hour with Indonesian bartender shaking a cocktail. Warm natural light, tropical pool and greenery softly blurred, premium hospitality aesthetic.',
+    'Close-up of a polished Bali bar counter with fresh tropical garnishes, copper jiggers and crystal glassware. Warm ambient light, shallow depth of field.',
+    'Indonesian bartender smiling while serving guests at an open-air Bali beach club bar. Warm sunset light, candid professional moment.',
+  ],
+  'bar-staff-training': [
+    'Indonesian bartender training a junior team member behind a modern Bali villa bar at golden hour. Warm natural light, candid teaching moment, professional but relaxed.',
+    'Two Indonesian bartenders practising cocktail-making during a hands-on training session at a Bali venue. Warm light, focused expressions, professional bar tools and recipe cards on the counter.',
+    'Bali bar trainer demonstrating free-pour technique to a small group of Indonesian bartenders. Warm light, attentive faces, polished back-bar.',
+  ],
+  'cocktail-menu-development': [
+    'Balinese bartender presenting a costed cocktail menu on a venue tablet behind a polished back-bar. Warm ambient light, professional working moment, premium Bali restaurant interior.',
+    'Cocktail spec sheets, ingredient audit and fresh tropical garnishes spread across a dark bar counter in a Bali venue. Warm light, organised flat-lay, no hands.',
+    'Bartender tasting a new cocktail creation with a small panel at a Bali villa bar. Warm light, focused expressions, flight of glasses on the counter.',
+  ],
+  'signature-cocktail-creation': [
+    'A named signature cocktail being carefully poured at a Bali beach club bar at sunset. Indonesian bartender focused on the serve, warm golden light, tropical backdrop softly blurred.',
+    'Indonesian bartender garnishing a bespoke signature cocktail for a tasting panel at a Bali villa bar. Warm light, small glasses lined up, fresh botanical garnish.',
+    'Close-up of a signature cocktail in an elegant glass on a Bali bar counter, with tropical flowers and a copper straw. Warm sunset light, shallow depth of field.',
+  ],
+  'temporary-bartender-staffing': [
+    'Uniformed Indonesian bartenders setting up a professional event bar at a Bali villa wedding. Warm late-afternoon light, polished mobile bar, tropical garden in the background.',
+    'Bartender pouring cocktails at a high-volume Bali wedding reception bar. Warm evening light, guests softly blurred in background, professional working moment.',
+    'Team of Indonesian event bartenders briefing before a Bali villa party. Warm light, professional uniforms, mobile bar in background.',
+  ],
+  'permanent-bar-staff-recruitment': [
+    'Indonesian bartender completing a practical trial behind a modern Bali restaurant bar. Warm light, focused expression, bar manager observing in soft background.',
+    'Bar manager interviewing a trade-tested candidate at a Bali restaurant table. Warm light, professional but relaxed, tablet with notes visible.',
+    'Newly recruited Indonesian bartender in uniform receiving a welcome briefing at a Bali hotel bar. Warm light, professional atmosphere.',
+  ],
+  'new-bar-setup': [
+    'New Bali restaurant bar being fitted out before opening, with copper tools, glassware and tropical plants on a polished counter. Warm daylight, empty but ready for service.',
+    'Bar layout plan and equipment specification spread on a venue desk next to material samples and a tablet. Warm light, clean organisation, no people.',
+    'Freshly installed back-bar shelving with glassware and premium spirits at a new Bali venue. Warm light, clean lines, tropical accent.',
+  ],
+  'bar-audit-improvement': [
+    'Auditor reviewing bar inventory records at a Bali venue bar during quiet morning light. Warm natural light, clipboard and bottles in soft background, professional concentration.',
+    'Mystery guest assessment form next to a freshly built cocktail on a Bali bar counter. Warm ambient light, shallow depth of field, discreet documentation.',
+    'Bar manager and auditor comparing stock sheets behind a Bali restaurant bar. Warm morning light, professional discussion.',
+  ],
+  'bar-costing-inventory-control': [
+    'Indonesian bar manager reviewing costing cards and par levels at a Bali bar before service. Warm light, focused working moment, organised back-bar.',
+    'Inventory count sheets and recipe costing cards arranged on a bar back counter next to jiggers and a calculator. Warm light, professional flat-lay.',
+    'Bar manager checking par levels on a clipboard in a Bali venue store room. Warm light, neatly arranged bottles, professional concentration.',
+  ],
+  'bar-equipment-supply-rental': [
+    'Mobile bar unit, glassware and bartender toolkit being loaded for a Bali event. Warm daylight, professional preparation, tropical villa driveway in background.',
+    'Professional bartender toolkit, polished glassware and copper jiggers prepared for rental on a dark counter. Warm light, clean arrangement.',
+    'Rental mobile bar counter assembled in a Bali villa garden for an event. Warm afternoon light, tropical greenery, ready for service.',
+  ],
+  'monthly-bar-management-support': [
+    'Indonesian bar manager reviewing KPIs with a Bali venue owner at a restaurant table. Warm light, professional discussion, tablet with charts visible.',
+    'Bar manager supervising a stocktake behind a Bali restaurant bar in the morning. Warm light, clipboard in hand, bottles neatly arranged.',
+    'Bar manager coaching a bartender during pre-service setup at a Bali hotel bar. Warm light, professional interaction.',
+  ],
+  'complete-bar-performance-programme': [
+    'Bali venue leadership team reviewing a quarterly bar scorecard in a bright restaurant office. Warm light, professional meeting, charts on screen softly blurred.',
+    'Bartenders executing a newly launched cocktail menu behind a busy Bali bar. Warm evening light, coordinated team, guests in soft background.',
+    'Celebration moment after a successful bar programme launch at a Bali venue. Warm light, team of Indonesian bartenders, polished bar.',
+  ],
+  'faq': [
+    'Indonesian bartender answering questions while polishing glassware behind a Bali bar. Warm light, friendly professional expression.',
+    'Bali bar manager consulting with a venue owner over a drink menu at a restaurant table. Warm light, relaxed professional discussion.',
+    'Close-up of commonly used bar tools and glassware on a Bali bar counter with soft warm light. Clean, organised, inviting.',
+  ],
+  'contact': [
+    'MyChef bar consultant discussing a Bali venue programme with a bar manager at golden hour. Warm light, professional discussion, villa bar interior softly blurred.',
+    'Professional Indonesian bar consultant reviewing a venue programme in Bali. Warm natural light, confident expression, tablet in hand, tropical bar interior.',
+    'Bar consultant shaking hands with a Bali venue owner after a programme review. Warm light, professional agreement, tropical bar backdrop.',
+  ],
+  'resources': [
+    'Bali bar manager browsing resources on a tablet at a venue desk. Warm light, organised workspace, cocktail recipe cards nearby.',
+    'Collection of bar management guides, costing sheets and menu templates spread on a Bali venue table. Warm light, flat-lay, professional.',
+    'Indonesian bartender reading a training guide during a quiet moment at a Bali bar. Warm light, focused expression, premium interior.',
+  ],
+  'how-much-does-a-bartender-cost-bali': [
+    'Indonesian bartender preparing drinks at a polished Bali villa bar. Warm golden-hour light, professional working moment, tropical greenery visible.',
+    'Bali venue owner reviewing staffing costs on a tablet at a restaurant table. Warm light, thoughtful expression, calculator nearby.',
+    'Close-up of a bartender pouring a premium spirit at a Bali bar. Warm light, professional technique, shallow depth of field.',
+  ],
+  'bartender-salary-benchmarks-bali': [
+    'Bali bar manager reviewing rosters and salary benchmarks on a tablet at a restaurant table. Warm light, focused professional moment.',
+    'Indonesian bartender team in uniform briefing before service at a Bali hotel bar. Warm light, professional atmosphere.',
+    'Bar manager and accountant reviewing payroll documents at a Bali venue office. Warm light, organised paperwork, laptop open.',
+  ],
+  'how-many-bartenders-per-guest': [
+    'Event bartenders serving guests at a Bali villa wedding reception bar. Warm evening light, professional service, guests in soft background.',
+    'Bali event planner and bar manager calculating staff ratios on a clipboard. Warm light, tropical garden venue in background.',
+    'Busy Bali beach club bar with multiple bartenders working in sync. Warm sunset light, guests waiting, coordinated team.',
+  ],
+  'beverage-cost-percentage-guide': [
+    'Bar manager calculating beverage cost percentage on a calculator next to cocktail specs and inventory notes. Warm light, organised desk.',
+    'Close-up of cocktail costing cards and jiggers on a Bali bar counter. Warm light, professional flat-lay.',
+    'Bar manager reviewing pour costs on a tablet behind a Bali restaurant bar. Warm light, focused expression.',
+  ],
+  'how-to-open-a-bar-in-bali': [
+    'New Bali restaurant bar being fitted out before opening, with clean counter, glassware and tropical plants. Warm daylight, empty and ready.',
+    'Bali entrepreneur reviewing bar floor plans and permits at a cafe table. Warm light, laptop and blueprints visible.',
+    'Freshly stocked back-bar at a new Bali venue with tropical plants and warm lighting. Clean, modern, inviting.',
+  ],
+  'how-to-create-a-cocktail-menu': [
+    'Balinese bartender presenting a costed cocktail menu on a venue tablet behind a modern back-bar. Warm ambient light, professional moment.',
+    'Cocktail menu design sketches and ingredient lists spread on a Bali bar counter. Warm light, creative flat-lay.',
+    'Bartender garnishing a menu-featured cocktail during a tasting session at a Bali villa bar. Warm light, small tasting glasses.',
+  ],
+  'how-to-reduce-bar-shrinkage-bali': [
+    'Bar manager checking stock variance after a busy service in Bali, clipboard in hand, bottles neatly arranged. Warm light, focused expression.',
+    'Indonesian bartender measuring spirits with a jigger at a Bali bar. Warm light, precise technique, organised back-bar.',
+    'Bar manager reviewing CCTV and inventory records at a Bali venue office. Warm light, professional concentration.',
+  ],
 }
 
 const RESOURCE_SLUGS = [
@@ -220,6 +332,17 @@ function buildJobs(): ImageJob[] {
     })
   }
 
+  // Task 9: 3 gallery images per page across all 22 pages.
+  for (const [slug, prompts] of Object.entries(GALLERY_PROMPTS)) {
+    for (let i = 0; i < prompts.length; i++) {
+      jobs.push({
+        type: 'gallery',
+        filename: `mychef-bar-services-bali-${slug}-gallery-${i + 1}.webp`,
+        prompt: prompts[i],
+      })
+    }
+  }
+
   return jobs
 }
 
@@ -308,10 +431,22 @@ async function generateWithBfl(prompt: string): Promise<Buffer | null> {
   throw new Error('BFL polling timed out')
 }
 
+async function fetchWithTimeout(url: string, timeoutMs: number): Promise<Response> {
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), timeoutMs)
+  try {
+    const res = await fetch(url, { signal: controller.signal })
+    return res
+  } finally {
+    clearTimeout(timer)
+  }
+}
+
 async function generateWithPollinations(prompt: string, seed: number): Promise<Buffer> {
   const encoded = encodeURIComponent(`${prompt}. ${BRAND_RULES} ${NEGATIVE}`)
   const url = `${POLLINATIONS_URL}/${encoded}?width=1536&height=1024&seed=${seed}&nologo=true&negative_prompt=text,logo,watermark,religious,plastic,neon,flair`
-  const res = await fetch(url)
+  // Pollinations free endpoint can occasionally hang; cap wait at 45s.
+  const res = await fetchWithTimeout(url, 45_000)
   if (!res.ok) throw new Error(`Pollinations ${res.status}`)
   return Buffer.from(await res.arrayBuffer())
 }
@@ -319,7 +454,24 @@ async function generateWithPollinations(prompt: string, seed: number): Promise<B
 async function generateRaw(job: ImageJob, seed: number): Promise<{ buffer: Buffer; provider: Provider }> {
   const fullPrompt = `${job.prompt}. ${BRAND_RULES}. ${NEGATIVE}`
 
-  // Try OpenAI first
+  // Pollinations is the primary provider for this run because the OpenAI key
+  // points to a chat-only endpoint and BFL credits are not guaranteed.
+  let lastPollErr: unknown
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const buf = await generateWithPollinations(job.prompt, seed + attempt)
+      return { buffer: buf, provider: 'pollinations' }
+    } catch (pollErr) {
+      lastPollErr = pollErr
+      const pollMsg = pollErr instanceof Error ? pollErr.message : String(pollErr)
+      console.warn(`   Pollinations attempt ${attempt}/3 failed (${pollMsg})`)
+      if (attempt < 3) await sleep(2000 * attempt)
+    }
+  }
+
+  console.warn(`   Pollinations failed after 3 attempts, trying OpenAI/BFL...`)
+
+  // Try OpenAI second
   try {
     const buf = await generateWithOpenAI(fullPrompt)
     if (buf) return { buffer: buf, provider: 'openai' }
@@ -327,7 +479,7 @@ async function generateRaw(job: ImageJob, seed: number): Promise<{ buffer: Buffe
     // fall through
   }
 
-  // Try BFL second
+  // Try BFL last
   try {
     const buf = await generateWithBfl(fullPrompt)
     if (buf) return { buffer: buf, provider: 'bfl' }
@@ -335,9 +487,7 @@ async function generateRaw(job: ImageJob, seed: number): Promise<{ buffer: Buffe
     // fall through
   }
 
-  // Fallback to Pollinations
-  const buf = await generateWithPollinations(job.prompt, seed)
-  return { buffer: buf, provider: 'pollinations' }
+  throw new Error(`All providers failed. Last Pollinations error: ${lastPollErr instanceof Error ? lastPollErr.message : String(lastPollErr)}`)
 }
 
 async function processJob(job: ImageJob, index: number, total: number): Promise<JobResult> {
@@ -383,6 +533,26 @@ async function processJob(job: ImageJob, index: number, total: number): Promise<
       }
 
       finalMeta = await sharp(outputBuffer).metadata()
+    } else if (job.type === 'gallery') {
+      // Gallery images: 1200x800 WebP, max 100 KB.
+      const targetWidth = 1200
+      const targetHeight = 800
+      const maxSizeKB = 100
+
+      pipeline = pipeline.resize(targetWidth, targetHeight, { fit: 'cover', position: 'centre' })
+
+      let quality = 78
+      outputBuffer = await pipeline.webp({ quality }).toBuffer()
+
+      while (outputBuffer.length > maxSizeKB * 1024 && quality > 50) {
+        quality -= 3
+        outputBuffer = await sharp(raw)
+          .resize(targetWidth, targetHeight, { fit: 'cover', position: 'centre' })
+          .webp({ quality })
+          .toBuffer()
+      }
+
+      finalMeta = await sharp(outputBuffer).metadata()
     } else {
       const targetWidth = job.type === 'hero' ? 1440 : 1200
       const maxSizeKB = job.type === 'hero' ? 150 : 100
@@ -422,14 +592,15 @@ async function main(): Promise<void> {
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true })
 
   const jobs = buildJobs()
-  console.log(`\n🚀 Generating ${jobs.length} bar-services images...`)
-  console.log(`Providers: OpenAI → BFL → Pollinations (fallback)\n`)
+  const galleryCount = jobs.filter((j) => j.type === 'gallery').length
+  console.log(`\n🚀 Generating ${jobs.length} bar-services images (${galleryCount} gallery images across 22 pages)...`)
+  console.log(`Providers: Pollinations → OpenAI → BFL\n`)
 
   const results: JobResult[] = []
   for (let i = 0; i < jobs.length; i++) {
     results.push(await processJob(jobs[i], i, jobs.length))
     // Polite delay to avoid rate-limiting the free Pollinations endpoint
-    if (i < jobs.length - 1) await sleep(1500)
+    if (i < jobs.length - 1) await sleep(1000)
   }
 
   const ok = results.filter((r) => r.ok)
@@ -439,7 +610,10 @@ async function main(): Promise<void> {
     return acc
   }, {} as Record<Provider, number>)
 
+  const galleryOk = results.filter((r) => r.ok && r.filename.includes('-gallery-')).length
+
   console.log(`\n📊 Summary: ${ok.length}/${jobs.length} succeeded, ${failed.length} failed`)
+  console.log(`Gallery images: ${galleryOk}/${galleryCount}`)
   console.log('Providers used:', providers)
   if (failed.length > 0) {
     console.log('\nMissing files:')
@@ -451,6 +625,8 @@ async function main(): Promise<void> {
     total: jobs.length,
     succeeded: ok.length,
     failed: failed.length,
+    galleryCount,
+    gallerySucceeded: galleryOk,
     providers,
     files: results,
   }

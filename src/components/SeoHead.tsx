@@ -230,6 +230,41 @@ export function serviceWithOfferSchema(params: {
   }
 }
 
+export function professionalServiceSchema(
+  url: string,
+  image: string,
+  services: Array<{ name: string; url: string }>,
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `${url}#localbusiness`,
+    name: 'MyChef Bar Services',
+    image,
+    url,
+    telephone: '+62 896-7407-2020',
+    priceRange: 'IDR 2,500,000 - IDR 132,000,000',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Denpasar Selatan',
+      addressRegion: 'Bali',
+      addressCountry: 'ID',
+    },
+    areaServed: [
+      { '@type': 'State', name: 'Bali' },
+      { '@type': 'Country', name: 'Indonesia' },
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'B2B Bar Services',
+      itemListElement: services.map((s) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: s.name, url: s.url },
+      })),
+    },
+  }
+}
+
 export function faqPageSchema(questions: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',

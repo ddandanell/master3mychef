@@ -1,5 +1,5 @@
 import { ArrowRight, HelpCircle, MessageCircle, BookOpen } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, professionalServiceSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -85,6 +85,11 @@ export default function BarServicesHubPage() {
         ogImage={meta.ogImage}
         jsonLd={[
           breadcrumbSchema('Bar Services', meta.canonical ?? `${SITE}/bar-services/`),
+          professionalServiceSchema(
+            meta.canonical ?? `${SITE}/bar-services/`,
+            meta.ogImage ?? `${SITE}/generated/mychef-bar-services-bali-og-hub.jpg`,
+            groupedServices.flatMap((g) => g.items.map((s) => ({ name: s.eyebrow, url: `${SITE}${s.route}` }))),
+          ),
           serviceSchema(hero.h1, meta.description, meta.canonical ?? `${SITE}/bar-services/`),
           faqPageSchema(HUB_FAQS),
         ]}

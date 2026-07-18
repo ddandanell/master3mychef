@@ -8,6 +8,14 @@ export interface BarService {
   heroAlt: string
   bodyImage: string
   bodyAlt: string
+  problemImage?: string
+  problemAlt?: string
+  deliverablesImage?: string
+  deliverablesAlt?: string
+  processImage?: string
+  processAlt?: string
+  proofImage?: string
+  proofAlt?: string
   valueProp: string
   whatsappMessage: string
   problem: {
@@ -67,6 +75,7 @@ export interface BarService {
       paragraphs: string[]
     }
   }
+  /** @deprecated Keep for backward compatibility; use section image fields instead. */
   galleryImages?: {
     src: string
     alt: string

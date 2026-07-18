@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, barServiceSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
@@ -53,6 +53,14 @@ export default function BarServicePage() {
         ogImage={meta.ogImage}
         jsonLd={[
           breadcrumbSchema(service.eyebrow, canonical, 'Bar Services', `${SITE}/bar-services/`),
+          barServiceSchema(
+            service.h1,
+            meta.description,
+            canonical,
+            service.eyebrow,
+            service.fromPrice.value,
+            service.fromPrice.label,
+          ),
           serviceSchema(service.h1, meta.description, canonical),
           faqPageSchema(service.faqs),
         ]}

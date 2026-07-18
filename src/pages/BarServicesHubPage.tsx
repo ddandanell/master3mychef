@@ -201,8 +201,60 @@ export default function BarServicesHubPage() {
         </section>
       )}
 
+      {/* Who we serve */}
+      <section className="py-16 md:py-24 bg-stone-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+              Who we serve
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif text-gray-900">
+              Bar services built for Bali venue operators
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                id: 'hotels',
+                title: 'Hotels & Resorts',
+                description: 'Beverage manager cover, bar audits and menu refreshes for boutique and luxury properties.',
+              },
+              {
+                id: 'villas',
+                title: 'Villas & Estates',
+                description: 'In-villa bar setups, bartender staffing and butler training for private villa experiences.',
+              },
+              {
+                id: 'beach-clubs',
+                title: 'Beach Clubs',
+                description: 'High-volume costing controls, speed training and event bartender crews for day clubs.',
+              },
+              {
+                id: 'restaurants',
+                title: 'Restaurants & Cafés',
+                description: 'Profitable cocktail menus, pour-cost systems and staff training for restaurant bars.',
+              },
+              {
+                id: 'events',
+                title: 'Events & Weddings',
+                description: 'Vetted event bartenders, signature cocktails and mobile bar rental for one-off occasions.',
+              },
+            ].map((segment) => (
+              <div
+                key={segment.id}
+                id={segment.id}
+                className="bg-white p-6 rounded-lg scroll-mt-24"
+              >
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{segment.title}</h3>
+                <p className="text-gray-600 text-sm">{segment.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* All Bar Services discovery grid */}
-      <section id="all-services" className="py-16 md:py-24 bg-stone-50">
+      <section id="all-services" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">

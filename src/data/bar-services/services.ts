@@ -17,6 +17,7 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'Bar team receiving MyChef certificates after completing responsible service training',
     valueProp: 'Turn your bar team into consistent, confident operators who protect margins and elevate guest experience.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Bar Staff Training for my venue in Bali.",
+    fromPrice: { value: 2750000, label: 'From IDR 2,750,000 per participant (2-day foundation course)' },
     problem: {
       title: 'Untrained staff cost you more than you think',
       paragraphs: [
@@ -145,6 +146,7 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'Bartenders executing a newly launched cocktail menu during team training',
     valueProp: 'Design or re-engineer your cocktail menu so it fits your concept, excites your guests and protects your margin.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Cocktail Menu Development for my venue in Bali.",
+    fromPrice: { value: 25000000, label: 'From IDR 25,000,000 per core menu package' },
     problem: {
       title: 'A menu that looks good can still destroy your margin',
       paragraphs: [
@@ -191,7 +193,7 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'How do we start the menu development process?', answer: 'Message us through WhatsApp with your venue type, current menu size and what you want to fix. We will schedule a discovery call, review your concept, guest profile and price band, then send a fixed proposal and project timeline for your approval.' }
     ],
     relatedServices: ['signature-cocktail-creation', 'bar-staff-training', 'permanent-bar-staff-recruitment'],
-    relatedResources: ['how-to-price-cocktails-bali', 'bar-menu-engineering-bali'],
+    relatedResources: ['how-to-create-a-cocktail-menu', 'beverage-cost-percentage-guide'],
     keywords: {
       primary: 'cocktail menu development Bali',
       secondary: ['beverage menu development Bali', 'cocktail menu engineering', 'bar menu development', 'drinks menu design Bali']
@@ -274,6 +276,7 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'Wedding couple\'s signature cocktail being poured at a Bali reception bar',
     valueProp: 'Build a named, story-driven signature serve that guests photograph and reviewers name.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Signature Cocktail Creation for my venue in Bali.",
+    fromPrice: { value: 2500000, label: 'From IDR 2,500,000 per signature serve' },
     problem: {
       title: 'A forgettable signature is money poured down the drain',
       paragraphs: [
@@ -322,7 +325,7 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'How do we get started?', answer: 'Send us a brief description of your venue or event, the story you want the serve to tell, and your target launch date. We will arrange a story workshop, draft concept directions, and provide a fixed quote, development timeline and tasting schedule.' }
     ],
     relatedServices: ['cocktail-menu-development', 'temporary-bartender-staffing', 'bar-staff-training'],
-    relatedResources: ['how-to-create-signature-cocktail-bali', 'wedding-bar-service-bali'],
+    relatedResources: ['how-to-create-a-cocktail-menu', 'how-much-does-a-bartender-cost-bali'],
     keywords: {
       primary: 'signature cocktail creation',
       secondary: ['signature cocktail creation Bali', 'bespoke cocktail menu', 'resort signature drink', 'custom wedding cocktail Bali']
@@ -405,6 +408,7 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'Temporary bartender pouring cocktails at a high-volume Bali reception',
     valueProp: 'Vetted, insured bartenders and barbacks for events, weddings and venue cover — employed by us, zero employment-law risk to you.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Temporary Bartender Staffing for my venue in Bali.",
+    fromPrice: { value: 250000, label: 'From IDR 250,000 per hour per bartender (4-hour minimum)' },
     problem: {
       title: 'Freelance staffing is a gamble with no recourse',
       paragraphs: [
@@ -534,6 +538,7 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'Newly placed MyChef bartender receiving onboarding documents and a responsible-service briefing',
     valueProp: 'Search, vet and place permanent bartenders and bar managers — every candidate has poured in front of us first.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Permanent Bar Staff Recruitment for my venue in Bali.",
+    fromPrice: { value: 4000000, label: 'From IDR 4,000,000 flat placement fee' },
     problem: {
       title: 'A CV cannot pour a drink',
       paragraphs: [
@@ -581,7 +586,7 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'How do we start the recruitment process?', answer: 'Contact us with the role title, venue location, salary band and start date. We will run a structured intake, confirm the search plan and timeline, and begin sourcing from our talent pool, active market search and industry referral network immediately.' }
     ],
     relatedServices: ['temporary-bartender-staffing', 'bar-staff-training', 'cocktail-menu-development'],
-    relatedResources: ['how-much-does-a-bartender-cost-bali', 'hiring-a-bar-manager-bali'],
+    relatedResources: ['bartender-salary-benchmarks-bali', 'how-much-does-a-bartender-cost-bali'],
     keywords: {
       primary: 'bar staff recruitment Bali',
       secondary: ['bartender recruitment agency Bali', 'hospitality recruitment Bali', 'hire bar manager Bali', 'head bartender placement']
@@ -662,6 +667,7 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'MyChef bar lead coaching opening-week staff behind a newly launched Bali bar',
     valueProp: 'Take your venue from empty room to revenue-ready bar in 6–10 weeks with concept, layout, equipment, menu and launch support.',
     whatsappMessage: "Hi MyChef — I'd like to discuss New Bar Setup for my venue in Bali.",
+    fromPrice: { value: 35000000, label: 'From IDR 35,000,000 per setup project' },
     problem: {
       title: 'Most first-year bar failures are avoidable',
       paragraphs: [
@@ -709,7 +715,7 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'How do we get started?', answer: 'Send us the venue address, target opening date, concept description and any architectural drawings. We will conduct a site visit, run a concept workshop, and issue a fixed proposal, project plan and clear next steps before any work begins on your project.' }
     ],
     relatedServices: ['cocktail-menu-development', 'permanent-bar-staff-recruitment', 'monthly-bar-management-support'],
-    relatedResources: ['bar-equipment-checklist-bali', 'bar-licensing-bali-guide'],
+    relatedResources: ['how-to-open-a-bar-in-bali', 'how-much-does-a-bartender-cost-bali'],
     keywords: {
       primary: 'bar setup consultant Bali',
       secondary: ['new bar setup Bali', 'bar opening consultant Bali', 'bar design Bali', 'pre-opening bar consultancy Bali']
@@ -791,6 +797,7 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'Senior bar consultant presenting a board-ready audit report to a Bali venue owner',
     valueProp: 'A four-pillar operational audit that finds what your bar is losing, prices it in rupiah and hands you a prioritised 90-day fix plan.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Bar Audit & Improvement for my venue in Bali.",
+    fromPrice: { value: 16500000, label: 'From IDR 16,500,000 per full audit' },
     problem: {
       title: 'You cannot fix a margin you cannot see',
       paragraphs: [
@@ -835,7 +842,7 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'How do we book an audit?', answer: 'Message us with your venue name, number of bars, approximate monthly beverage revenue and what you suspect is going wrong. We will confirm scope, request the documents we need, and schedule fieldwork with a fixed fee and report delivery date.' }
     ],
     relatedServices: ['bar-costing-inventory-control', 'bar-staff-training', 'complete-bar-performance-programme'],
-    relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-costing-guide-bali'],
+    relatedResources: ['beverage-cost-percentage-guide', 'how-to-open-a-bar-in-bali'],
     keywords: {
       primary: 'bar audit Bali',
       secondary: ['bar operations audit Bali', 'bar profit audit Bali', 'mystery guest bar Bali', 'bar shrinkage audit Bali']
@@ -917,6 +924,7 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'Bar team training on variance tolerance bands and count sheets during costing rollout',
     valueProp: 'Install the measurement and accountability system that pulls pour cost into the 18–24% target band within 60 days.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Bar Costing & Inventory Control for my venue in Bali.",
+    fromPrice: { value: 18000000, label: 'From IDR 18,000,000 per costing project' },
     problem: {
       title: 'Hope is not a costing strategy',
       paragraphs: [
@@ -962,7 +970,7 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'How do we get started?', answer: 'Send us your venue details, current menu size and a description of your biggest inventory or margin challenge. We will review your POS and purchasing data, conduct a baseline stocktake, and submit a fixed proposal with a clear implementation timeline and expected outcomes.' }
     ],
     relatedServices: ['bar-audit-improvement', 'monthly-bar-management-support', 'cocktail-menu-development'],
-    relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-costing-guide-bali'],
+    relatedResources: ['beverage-cost-percentage-guide', 'how-to-create-a-cocktail-menu'],
     keywords: {
       primary: 'bar costing service Bali',
       secondary: ['bar inventory control Bali', 'pour cost engineering Bali', 'shrinkage control Bali', 'bar costing consultant Bali']
@@ -1045,6 +1053,7 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'MyChef team delivering and setting up a mobile bar at a Bali villa event',
     valueProp: 'Spec, supply or rent the bar equipment your menu and volume actually need — with three quotes and no markup games.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Bar Equipment Supply & Rental for my venue in Bali.",
+    fromPrice: { value: 2500000, label: 'From IDR 2,500,000 per mobile bar rental' },
     problem: {
       title: 'Bar equipment in Bali runs on supplier roulette',
       paragraphs: [
@@ -1091,7 +1100,7 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'How do we book equipment or request a quote?', answer: 'Send us the event date, venue location, estimated guest count, menu style and whether you need supply, rental or both. We will confirm availability, issue a written quote, and arrange delivery, setup, collection or supplier order tracking for your booking.' }
     ],
     relatedServices: ['temporary-bartender-staffing', 'new-bar-setup', 'signature-cocktail-creation'],
-    relatedResources: ['bar-equipment-checklist-bali', 'mobile-bar-rental-bali'],
+    relatedResources: ['how-to-open-a-bar-in-bali', 'how-many-bartenders-per-guest'],
     keywords: {
       primary: 'bar equipment supplier and rental Bali',
       secondary: ['mobile bar hire Bali', 'bar equipment supply Bali', 'glassware rental Bali', 'bartender tool kit rental Bali']
@@ -1173,6 +1182,7 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'Monthly training refresher on pour standards with a Bali bar team',
     valueProp: 'Senior bar leadership on retainer — stock control, menu reviews, training refreshers and owner-grade reporting.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Monthly Bar Management Support for my venue in Bali.",
+    fromPrice: { value: 4500000, label: 'From IDR 4,500,000 per month (retainer)' },
     problem: {
       title: 'A full-time bar manager is hard to find and expensive to keep',
       paragraphs: [
@@ -1218,7 +1228,7 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'How do we start?', answer: 'Contact us with your venue size, current bar setup and the biggest problem you want solved. We will run a baseline review, agree KPI targets, fix the visit calendar, and issue a fixed monthly retainer proposal for a six-month initial term.' }
     ],
     relatedServices: ['bar-costing-inventory-control', 'bar-staff-training', 'complete-bar-performance-programme'],
-    relatedResources: ['hiring-a-bar-manager-bali', 'bar-costing-guide-bali'],
+    relatedResources: ['beverage-cost-percentage-guide', 'bartender-salary-benchmarks-bali'],
     keywords: {
       primary: 'outsourced bar manager Bali',
       secondary: ['fractional bar manager Bali', 'bar management retainer Bali', 'monthly bar support Bali', 'bar supervisor Bali']
@@ -1300,6 +1310,7 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'MyChef programme director presenting an annual rupiah impact summary to an owner',
     valueProp: 'One 12-month programme that transforms your bar into a measured, trained, controlled and continuously managed operation.',
     whatsappMessage: "Hi MyChef — I'd like to discuss the Complete Bar Performance Programme for my venue in Bali.",
+    fromPrice: { value: 132000000, label: 'From IDR 132,000,000 per year (annual programme)' },
     problem: {
       title: 'Fixing one piece at a time does not work',
       paragraphs: [
@@ -1343,7 +1354,7 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'How do we start?', answer: 'Send us an overview of your venue or group, current bar challenges and your target outcomes. We will conduct a discovery call, run a high-level diagnostic, and submit a fixed annual proposal with a twelve-month roadmap, success metrics and clear milestones.' }
     ],
     relatedServices: ['bar-audit-improvement', 'monthly-bar-management-support', 'bar-staff-training'],
-    relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-menu-engineering-bali'],
+    relatedResources: ['beverage-cost-percentage-guide', 'how-to-create-a-cocktail-menu', 'how-to-open-a-bar-in-bali'],
     keywords: {
       primary: 'bar consulting Bali',
       secondary: ['outsourced beverage department Bali', 'bar performance programme Bali', 'bar transformation Bali', 'bar audit programme Bali']

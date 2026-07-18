@@ -5,7 +5,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
-import { BAR_RESOURCES } from '@/data/bar-services'
+import { BAR_RESOURCES, getBarServiceBySlug } from '@/data/bar-services'
 
 const SITE = 'https://mychef.id'
 
@@ -168,33 +168,63 @@ export default function BarServicesResourcesIndexPage() {
               </h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {BAR_RESOURCES.map((resource) => (
-                <a
-                  key={resource.slug}
-                  href={resource.route}
-                  className="group flex flex-col bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition"
-                >
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <OptimizedImage
-                      src={resource.featuredImage}
-                      alt={resource.featuredAlt}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
+              {BAR_RESOURCES.map((resource) => {
+                const primaryService = getBarServiceBySlug(resource.relatedServices[0])
+                const siblingResources = BAR_RESOURCES.filter((r) => r.slug !== resource.slug).slice(0, 2)
+                return (
+                  <div
+                    key={resource.slug}
+                    className="group flex flex-col bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition"
+                  >
+                    <a href={resource.route} className="block aspect-[16/10] overflow-hidden">
+                      <OptimizedImage
+                        src={resource.featuredImage}
+                        alt={resource.featuredAlt}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                    </a>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <a href={resource.route}>
+                        <h3 className="text-xl font-semibold mb-3 group-hover:text-amber-600 transition-colors">
+                          {resource.title}
+                        </h3>
+                      </a>
+                      <p className="text-gray-600 text-sm flex-grow mb-4">
+                        {resource.summary}
+                      </p>
+                      {primaryService && (
+                        <div className="mb-4">
+                          <span className="text-xs uppercase tracking-wider text-gray-400 block mb-1">Related service</span>
+                          <a
+                            href={primaryService.route}
+                            className="text-sm font-medium text-amber-600 hover:underline"
+                          >
+                            {primaryService.eyebrow}
+                          </a>
+                        </div>
+                      )}
+                      <div className="mb-4">
+                        <span className="text-xs uppercase tracking-wider text-gray-400 block mb-1">Related guides</span>
+                        <div className="flex flex-col gap-1">
+                          {siblingResources.map((r) => (
+                            <a
+                              key={r.slug}
+                              href={r.route}
+                              className="text-sm text-gray-600 hover:text-amber-600 hover:underline"
+                            >
+                              {r.h1}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                      <a href={resource.route} className="inline-flex items-center text-sm font-medium text-amber-600 mt-auto">
+                        Read guide
+                        <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                      </a>
+                    </div>
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-amber-600 transition-colors">
-                      {resource.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm flex-grow mb-4">
-                      {resource.summary}
-                    </p>
-                    <span className="inline-flex items-center text-sm font-medium text-amber-600">
-                      Read guide
-                      <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </div>
-                </a>
-              ))}
+                )
+              })}
             </div>
           </div>
 

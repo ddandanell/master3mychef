@@ -151,6 +151,46 @@ export function serviceSchema(
   }
 }
 
+export function barServiceSchema(
+  name: string,
+  description: string,
+  url: string,
+  serviceType: string,
+  price: number,
+  priceLabel: string,
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${url}#service`,
+    name,
+    serviceType,
+    description,
+    provider: { '@id': 'https://mychef.id/#organization' },
+    areaServed: [
+      { '@type': 'State', name: 'Bali' },
+      { '@type': 'Country', name: 'Indonesia' },
+    ],
+    audience: {
+      '@type': 'BusinessAudience',
+      audienceType: 'Hotels, villas, beach clubs, restaurants, event and wedding organisers in Bali',
+    },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'IDR',
+      price: String(price),
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'IDR',
+        minPrice: String(price),
+        description: priceLabel,
+      },
+      availability: 'https://schema.org/InStock',
+      url,
+    },
+  }
+}
+
 export function detailedServiceSchema(
   name: string,
   description: string,

@@ -16,6 +16,10 @@ export interface BarService {
   proofAlt?: string
   valueProp: string
   whatsappMessage: string
+  fromPrice: {
+    value: number
+    label: string
+  }
   problem: {
     title: string
     paragraphs: string[]

@@ -55,7 +55,70 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'Is the training conducted in English or Bahasa Indonesia?', answer: 'We deliver in English with Bahasa Indonesia support where needed.' }
     ],
     relatedServices: ['temporary-bartender-staffing', 'bar-audit-improvement', 'monthly-bar-management-support'],
-    relatedResources: ['how-much-does-a-bartender-cost-bali', 'how-many-bartenders-per-guest']
+    relatedResources: ['how-much-does-a-bartender-cost-bali', 'how-many-bartenders-per-guest'],
+    keywords: {
+      primary: 'bar staff training Bali',
+      secondary: ['bartender training Bali', 'mixology training Bali', 'hospitality training Bali', 'in-house bar training']
+    },
+    expandedSections: {
+      whyBali: {
+        title: 'Why bar staff training matters in Bali',
+        paragraphs: [
+          "Bali's hospitality market runs on a structural talent constraint: Indonesian law does not issue work permits for front-line bartenders, so the experienced mixologist you would like to import is not an option. Most formal bar training available on the island is either consumer-grade or non-existent, which means your local team is learning on the job while guests post reviews. In a market where a weak cocktail mention can undo a five-star accommodation experience, practical, venue-based training is the only durable edge.",
+          'The turnover economics make training even more critical. Bartenders in Bali typically earn Rp 3.3–3.9 million per month and will move for a small pay rise, taking whatever consistency your bar had with them. A documented training system turns individual know-how into institutional capability, so a resignation becomes a manageable handover instead of a quality collapse.',
+          'The seasonal rhythm of Bali also rewards readiness. A well-trained core team absorbs peak-season pressure without the quality drop that produces one-star reviews, and it reduces the panic hiring that leads to compliance mistakes and guest complaints. Training therefore pays for itself in lower turnover, fewer incidents and stronger review language.'
+        ]
+      },
+      whoFor: {
+        title: 'Venues that benefit from training',
+        items: [
+          { label: 'Boutique & luxury hotels/resorts', description: 'Beverage Manager vacancies are chronic and flagship reviews are dragged down by bar quality.' },
+          { label: 'Villas & villa-management companies', description: 'Butlers double as bartenders with no formal training while guests expect resort-standard in-villa drinks.' },
+          { label: 'Beach clubs & day clubs', description: 'Volume exposes every inconsistency; weak, watery cocktails and slow rounds damage the brand.' },
+          { label: 'Restaurants & cafés', description: 'Untrained front-of-house staff and inconsistent drinks are repeatedly cited as top F&B failure drivers.' },
+          { label: 'Expat/foreign-owned venues', description: 'Owners cannot legally work the bar themselves and need English-delivered training for local teams.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common mistakes venues make',
+        items: [
+          'Hiring for "experience" without verifying practical skills or service standards.',
+          'Relying on a senior bartender to train everyone informally, then losing that knowledge when they resign.',
+          'Sending staff to consumer mixology classes that do not transfer to your venue, menu, or volume.',
+          'Ignoring Responsible Service of Alcohol until an incident creates licence exposure.',
+          'Treating training as a one-off event instead of an ongoing system with refreshers.'
+        ]
+      },
+      compliance: {
+        title: 'Compliance and responsible service',
+        paragraphs: [
+          'Every MyChef training level includes a mandatory Responsible Service of Alcohol module. Under Indonesia\'s updated criminal code, serving an intoxicated guest can expose staff to criminal penalties and the venue to licence consequences, so refusal-of-service technique, ID checking, and incident logging are trained and assessed before any certificate is issued.',
+          'We also align the curriculum with SKKNI national bartender competencies and can arrange optional BNSP national assessment through a licensed assessor. Training alcohol remains the venue\'s stock under its own SIUP-MB, and MyChef never takes title to or sells alcohol.'
+        ]
+      },
+      successKpis: {
+        title: 'Training success KPIs',
+        items: [
+          '≥85% first-time pass rate with one free re-sit within 30 days.',
+          '≥90% of graduates still pouring to spec at the 30-day check-in.',
+          'RSA module completed by 100% of certified participants.',
+          'Client NPS of 8/10 or higher after the programme.',
+          'Reduction in guest complaints mentioning weak cocktails or slow service within 60 days.'
+        ]
+      },
+      connections: {
+        title: 'How training connects to other MyChef services',
+        paragraphs: [
+          'Training is the foundation that makes every other bar service work. Graduates who excel can be fast-tracked into our Permanent Bar Staff Recruitment pipeline or deployed through Temporary Bartender Staffing while your own team continues to develop. Venues that train often discover they also need a menu their team can execute to spec, which leads naturally into Cocktail Menu Development or Signature Cocktail Creation.',
+          'For operators who want the result without the day-to-day management, training feeds into Monthly Bar Management Support and the Complete Bar Performance Programme. The 30-day check-in findings give us a clear handover point, so coaching continues instead of stopping the moment the certificate is handed over.'
+        ]
+      }
+    },
+    galleryImages: [
+      { src: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-1.webp', alt: 'Indonesian bartenders practising measured pours during a MyChef training session in Bali' },
+      { src: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-2.webp', alt: 'Trainer demonstrating cocktail build technique behind a venue bar in Bali' },
+      { src: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-3.webp', alt: 'Bar team receiving MyChef certificates after completing responsible service training' }
+    ]
   },
   {
     slug: 'cocktail-menu-development',
@@ -113,7 +176,70 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'Who owns the recipes after launch?', answer: 'Recipe IP transfers to you on final payment.' }
     ],
     relatedServices: ['signature-cocktail-creation', 'bar-staff-training', 'permanent-bar-staff-recruitment'],
-    relatedResources: ['how-to-price-cocktails-bali', 'bar-menu-engineering-bali']
+    relatedResources: ['how-to-price-cocktails-bali', 'bar-menu-engineering-bali'],
+    keywords: {
+      primary: 'cocktail menu development Bali',
+      secondary: ['beverage menu development Bali', 'cocktail menu engineering', 'bar menu development', 'drinks menu design Bali']
+    },
+    expandedSections: {
+      whyBali: {
+        title: 'Why cocktail menu development matters in Bali',
+        paragraphs: [
+          "Bali's guest expectations have outpaced beverage programme maturity. Reviewers now describe drinks with the same vocabulary they use for rooms and service, and the phrase 'weak, watery and overpriced' appears often enough to hurt bookings. At the same time, distributor 'free menu' programmes quietly push product lists that may not suit your concept or margin, leaving you with a pretty list that costs more than it earns.",
+          "The island's supply chain also rewards careful engineering. Local spirits such as arak and brem can add genuine differentiation when sourced from licensed Balinese producers, but they must be written into specs that survive high-volume service. A costed, trainable menu is not a luxury in this market; it is the difference between a beverage programme that funds itself and one that silently drains your P&L.",
+          'Operators who ignore menu engineering often discover that their most popular drink is also their least profitable. In a destination where repeat visitation and online reputation drive occupancy, that is a slow-motion crisis. MyChef builds the economics first and the aesthetics alongside, so every serve on the list earns its place.'
+        ]
+      },
+      whoFor: {
+        title: 'Venues that benefit from menu development',
+        items: [
+          { label: 'Boutique & luxury hotels/resorts', description: 'Need consistent, brand-standard drinks across multiple outlets.' },
+          { label: 'Beach clubs & day clubs', description: 'The menu must differentiate at volume and survive a Saturday night.' },
+          { label: 'Restaurants & cafés', description: 'Over-complicated or uncosted lists that do not know their true pour cost.' },
+          { label: 'Villas & villa-management companies', description: 'Wanting a compact, executable cocktail card for butler service.' },
+          { label: 'Yacht charters & private estates', description: 'Needing short, robust menus that work with limited back-bar space.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common mistakes venues make',
+        items: [
+          'Letting a distributor write your menu around their product list instead of your concept and margin.',
+          'Building recipes that live in one bartender\'s head, then watching consistency collapse on their day off.',
+          'Pricing drinks by gut feel rather than measured costing against supplier invoices.',
+          'Launching a menu without training the team to execute every serve blind to spec.',
+          'Failing to include low-ABV and zero-proof options, which excludes a growing share of guests.'
+        ]
+      },
+      compliance: {
+        title: 'Compliance and responsible menu design',
+        paragraphs: [
+          'MyChef never takes title to or sells alcohol. All stock is purchased by the venue under its own SIUP-MB from licensed distributors, and we verify excise-stamped, label-edar stock during the audit while flagging counterfeit or oplosan risk. Every menu is designed with responsible-service architecture: low-ABV and zero-proof options on every list and no serves engineered to disguise strength.',
+          'Local spirits are specified only from producers licensed under Pergub Bali 1/2020, and menu copy is drafted for on-premise and owned-channel use, respecting the prohibition on mass-media alcohol advertising. Recipe IP transfers to you on final payment, so the spec library becomes a genuine business asset.'
+        ]
+      },
+      successKpis: {
+        title: 'Menu development success KPIs',
+        items: [
+          '100% of menu drinks costed at actual supplier prices.',
+          'Blended pour cost modelled inside the 18–24% target band.',
+          'Every drink executable to spec by every rostered bartender at training sign-off.',
+          'Zero returned-as-undrinkable incidents attributable to spec errors at launch.',
+          'Top-five sellers identified within the two-week post-launch feedback loop.'
+        ]
+      },
+      connections: {
+        title: 'How menu development connects to other MyChef services',
+        paragraphs: [
+          'Menu development creates the specification library that makes Bar Staff Training far more effective, because new joiners train against your actual recipes rather than generic drills. If the audit reveals hero serves with PR potential, we can spin out Signature Cocktail Creation to give your venue a named, story-driven flagship.',
+          'For venues that need help holding the margin after launch, Bar Costing & Inventory Control installs the measurement discipline, while Monthly Bar Management Support keeps the menu refreshed seasonally. The same data also feeds Bar Audit & Improvement when you want a board-ready view of what the bar is losing.'
+        ]
+      }
+    },
+    galleryImages: [
+      { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-1.webp', alt: 'MyChef mixologist cost-testing a new cocktail recipe on a Bali venue bar' },
+      { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-2.webp', alt: 'Photo-illustrated cocktail spec sheets spread across a bar counter in Bali' },
+      { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-3.webp', alt: 'Bartenders executing a newly launched cocktail menu during team training' }
+    ]
   },
   {
     slug: 'signature-cocktail-creation',
@@ -173,7 +299,70 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'Do we own the recipe?', answer: 'Recipe IP transfers to you on final payment.' }
     ],
     relatedServices: ['cocktail-menu-development', 'temporary-bartender-staffing', 'bar-staff-training'],
-    relatedResources: ['how-to-create-signature-cocktail-bali', 'wedding-bar-service-bali']
+    relatedResources: ['how-to-create-signature-cocktail-bali', 'wedding-bar-service-bali'],
+    keywords: {
+      primary: 'signature cocktail creation',
+      secondary: ['signature cocktail creation Bali', 'bespoke cocktail menu', 'resort signature drink', 'custom wedding cocktail Bali']
+    },
+    expandedSections: {
+      whyBali: {
+        title: 'Why signature cocktail creation matters in Bali',
+        paragraphs: [
+          "Bali's most talked-about venues do not win reviews with a generic list; they win with a named drink that guests photograph, remember and mention by name. In a destination where daybed demand and wedding packages are increasingly competitive, a signature serve acts as a credential that generic cocktail programmes cannot match.",
+          'Too many venues call whatever was improvised in a quiet week their "signature". The result is inconsistent presentation, no PR hook, and marketing budget spent promoting a drink that looks identical to a hundred others on the island. A properly built signature is a brand asset: rooted in your story, costed to margin, and executable by any trained bartender.',
+          "The opportunity is particularly strong for weddings, launches and charter seasons. A couple's serve or brand-ritual cocktail gives guests a shareable moment and organisers a sellable upgrade, but only if it can be batched and poured reliably at scale. Without that operational discipline, even the most creative serve becomes a service bottleneck."
+        ]
+      },
+      whoFor: {
+        title: 'Venues and events that benefit from a signature serve',
+        items: [
+          { label: 'Boutique & luxury hotels/resorts', description: 'Needing a hero serve worthy of the property\'s story.' },
+          { label: 'Beach clubs & day clubs', description: 'Looking for visible differentiation as new supply enters the market.' },
+          { label: 'Villas, private estates and yachts', description: 'Wanting a "house cocktail" moment for in-villa dining.' },
+          { label: 'Event & wedding organisers', description: 'Wanting event-exclusive serves as a package upgrade.' },
+          { label: 'Restaurants and expat-owned venues', description: 'Needing an identity drink that anchors the brand.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common mistakes venues make',
+        items: [
+          'Letting staff improvise a "signature" without brand story, costing or consistency standards.',
+          'Designing a drink that looks good on camera but takes too long to execute during peak service.',
+          'Promoting a signature before training the team to pour the ritual correctly.',
+          'Ignoring responsible-service design and creating serves that encourage rapid consumption.',
+          'Treating photography and PR as afterthoughts rather than built into the serve ritual.'
+        ]
+      },
+      compliance: {
+        title: 'Compliance and responsible signature design',
+        paragraphs: [
+          'MyChef never takes title to or sells alcohol. Development stock is purchased by the client or reimbursed under the client\'s SIUP-MB posture, and tasting panels occur on licensed premises. Serve rituals are designed to avoid encouraging rapid or excessive consumption, and every staff briefing covers KUHP Article 424 exposure and the 21+ rule.',
+          'Local spirits such as arak and brem are sourced only from producers licensed under Pergub Bali 1/2020. PR and social angles are drafted for on-premise and owned-channel use, respecting the prohibition on mass-media alcohol advertising. Recipe IP transfers to you on final payment, so your signature becomes a fully owned brand asset.'
+        ]
+      },
+      successKpis: {
+        title: 'Signature creation success KPIs',
+        items: [
+          'Every serve verified by blind taste test with your own staff before handover.',
+          'Spec completed to the same standard as full menu development: photo, build, garnish, glass, cost, margin.',
+          'Client sign-off at story, direction and final serve gates.',
+          'Serve on menu and recording sales at the day-14 post-launch check.',
+          'Social or review mentions of the named serve within 90 days of launch.'
+        ]
+      },
+      connections: {
+        title: 'How signature creation connects to other MyChef services',
+        paragraphs: [
+          'Signature Cocktail Creation is most powerful when it sits inside a broader menu strategy. We hand off specs to Cocktail Menu Development or Bar Costing & Inventory Control so the signature lands in your live costing workbook and does not drift. To launch the serve with confidence, Temporary Bartender Staffing can provide vetted bartenders for events and Bar Staff Training embeds the ritual into your permanent team.',
+          'For venues building a credentials-led bar identity, the signature becomes the centrepiece of the Complete Bar Performance Programme. We monitor sales mix, cost drift and review mentions under Monthly Bar Management Support, then refresh the signature annually so it stays current rather than becoming stale.'
+        ]
+      }
+    },
+    galleryImages: [
+      { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-1.webp', alt: 'Bespoke signature cocktail being garnished for a Bali beach club tasting panel' },
+      { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-2.webp', alt: 'Professional photo session of a named signature serve with story card' },
+      { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-3.webp', alt: 'Wedding couple\'s signature cocktail being poured at a Bali reception bar' }
+    ]
   },
   {
     slug: 'temporary-bartender-staffing',
@@ -230,7 +419,70 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'What happens if someone does not show up?', answer: 'A standby pool is held for every confirmed block; no-shows are replaced within 90 minutes or the fee is waived.' }
     ],
     relatedServices: ['signature-cocktail-creation', 'permanent-bar-staff-recruitment', 'bar-staff-training'],
-    relatedResources: ['how-much-does-a-bartender-cost-bali', 'how-many-bartenders-per-guest']
+    relatedResources: ['how-much-does-a-bartender-cost-bali', 'how-many-bartenders-per-guest'],
+    keywords: {
+      primary: 'bartender hire Bali',
+      secondary: ['event bartender Bali', 'wedding bartender Bali', 'temporary bartender Bali', 'mobile bar hire Bali']
+    },
+    expandedSections: {
+      whyBali: {
+        title: 'Why temporary bartender staffing matters in Bali',
+        paragraphs: [
+          "Bali's event and hospitality calendar is intensely seasonal, with peaks in July-August, December-New Year and wedding season that can triple demand overnight. At the same time, the permanent bartender labour pool is small and churn is structural, which means the Friday-afternoon no-show is a recurring operational risk rather than a rare emergency.",
+          'Freelance staffing is the default response, but it is a gamble with no recourse. A bartender who looks capable on social media may pour slowly under pressure, and a casual hire can accidentally make you their employer under Indonesian outsourcing law, triggering PKWT, BPJS and wage-floor obligations you never budgeted for.',
+          'MyChef solves this by employing every bartender, barback and server we deploy. You receive trade-tested, briefed professionals and a single clean invoice, while we carry the contracts, wages and compliance risk. That structure is especially valuable for weddings, corporate events and multi-week venue cover where reliability is non-negotiable.'
+        ]
+      },
+      whoFor: {
+        title: 'Venues and events that benefit from temp staffing',
+        items: [
+          { label: 'Event & wedding organisers', description: 'Need reliable crewed bars instead of juggling uneven freelancers.' },
+          { label: 'Hotels & resorts', description: 'Covering occupancy spikes, banquets, leave or maternity gaps.' },
+          { label: 'Villa managers and yacht/estate operators', description: 'Needing in-villa bartenders or charter crew on request.' },
+          { label: 'Beach clubs', description: 'Facing event nights and DJ-calendar demand spikes.' },
+          { label: 'Restaurants and expat-owned venues', description: 'Dealing with sudden resignations in a thin labour market.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common mistakes venues make',
+        items: [
+          'Booking staff on a handshake and discovering they are unvetted or uninsured when the event starts.',
+          'Paying casual staff directly and unknowingly creating an employment relationship.',
+          'Assuming a bartender\'s social media following equals speed, hygiene and guest-handling skill.',
+          'Leaving briefing to the day of the event instead of sharing menu specs and floor plans 24 hours ahead.',
+          'Skipping responsible-service rules and risking licence exposure when a guest is overserved.'
+        ]
+      },
+      compliance: {
+        title: 'Compliance and employment-law safety',
+        paragraphs: [
+          'Every deployment is structured under PP 35/2021 outsourcing rules. MyChef is a licensed outsourcing supplier, the employment relationship is solely between MyChef and the worker, and every client agreement includes the mandatory transfer-of-protection clause. Clients do not direct discipline, set wages, or pay staff directly, which removes co-employment risk.',
+          'Pool staff are on registered PKWT fixed-term contracts with BPJS Kesehatan and Ketenagakerjaan registration, THR accrual, and wages at or above the relevant regency minimum. Alcohol is always owned and supplied by the venue under its own SIUP-MB; MyChef supplies labour and service only and never invoices alcohol.'
+        ]
+      },
+      successKpis: {
+        title: 'Temporary staffing success KPIs',
+        items: [
+          '≥97% fill rate on confirmed bookings.',
+          'No-show replacement within 90 minutes or the shift fee waived.',
+          'Average client rating of 4.5/5 or higher.',
+          'Skills re-verified every six months per pool member.',
+          'Staff punctuality of 98% or higher at the briefed arrival time.'
+        ]
+      },
+      connections: {
+        title: 'How temp staffing connects to other MyChef services',
+        paragraphs: [
+          'Temporary Bartender Staffing is the fastest way to protect service levels, but recurring cover requests often reveal a deeper need. When the same gap appears week after week, we flag it as a Permanent Bar Staff Recruitment opportunity or propose Monthly Bar Management Support for ongoing oversight. The pool also gives you the confidence to accept last-minute bookings and larger events knowing the bar will not be the failure point.',
+          'For events, the staffing pairs naturally with Signature Cocktail Creation for bespoke serves and Bar Equipment Supply & Rental for mobile bars and glassware. We also use Bar Staff Training graduates to replenish the pool continuously, so clients benefit from a talent pipeline that freelance agencies cannot replicate.'
+        ]
+      }
+    },
+    galleryImages: [
+      { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-1.webp', alt: 'Uniformed MyChef bartenders setting up an event bar before a Bali wedding' },
+      { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-2.webp', alt: 'MyChef supervisor briefing a temporary bar crew at a Bali beach club event' },
+      { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-3.webp', alt: 'Temporary bartender pouring cocktails at a high-volume Bali reception' }
+    ]
   },
   {
     slug: 'permanent-bar-staff-recruitment',

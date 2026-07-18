@@ -98,6 +98,29 @@ const OG_IMAGES: Record<string, string> = {
   '/calculator': '/generated/pricing-hero.webp',
   '/book': '/generated/book-hero.webp',
   '/quote': '/og-image.webp',
+  // Bar Services
+  '/bar-services/': '/generated/mychef-bar-services-bali-og-hub.jpg',
+  '/bar-services/bar-staff-training/': '/generated/mychef-bar-services-bali-og-bar-staff-training.jpg',
+  '/bar-services/cocktail-menu-development/': '/generated/mychef-bar-services-bali-og-cocktail-menu-development.jpg',
+  '/bar-services/signature-cocktail-creation/': '/generated/mychef-bar-services-bali-og-signature-cocktail-creation.jpg',
+  '/bar-services/temporary-bartender-staffing/': '/generated/mychef-bar-services-bali-og-temporary-bartender-staffing.jpg',
+  '/bar-services/permanent-bar-staff-recruitment/': '/generated/mychef-bar-services-bali-og-permanent-bar-staff-recruitment.jpg',
+  '/bar-services/new-bar-setup/': '/generated/mychef-bar-services-bali-og-new-bar-setup.jpg',
+  '/bar-services/bar-audit-improvement/': '/generated/mychef-bar-services-bali-og-bar-audit-improvement.jpg',
+  '/bar-services/bar-costing-inventory-control/': '/generated/mychef-bar-services-bali-og-bar-costing-inventory-control.jpg',
+  '/bar-services/bar-equipment-supply-rental/': '/generated/mychef-bar-services-bali-og-bar-equipment-supply-rental.jpg',
+  '/bar-services/monthly-bar-management-support/': '/generated/mychef-bar-services-bali-og-monthly-bar-management-support.jpg',
+  '/bar-services/complete-bar-performance-programme/': '/generated/mychef-bar-services-bali-og-complete-bar-performance-programme.jpg',
+  '/bar-services/faq/': '/generated/mychef-bar-services-bali-og-faq.jpg',
+  '/bar-services/contact/': '/generated/mychef-bar-services-bali-og-contact.jpg',
+  '/bar-services/resources/': '/generated/mychef-bar-services-bali-og-resources.jpg',
+  '/bar-services/resources/how-much-does-a-bartender-cost-bali/': '/generated/mychef-bar-services-bali-og-how-much-does-a-bartender-cost-bali.jpg',
+  '/bar-services/resources/bartender-salary-benchmarks-bali/': '/generated/mychef-bar-services-bali-og-bartender-salary-benchmarks-bali.jpg',
+  '/bar-services/resources/how-many-bartenders-per-guest/': '/generated/mychef-bar-services-bali-og-how-many-bartenders-per-guest.jpg',
+  '/bar-services/resources/beverage-cost-percentage-guide/': '/generated/mychef-bar-services-bali-og-beverage-cost-percentage-guide.jpg',
+  '/bar-services/resources/how-to-open-a-bar-in-bali/': '/generated/mychef-bar-services-bali-og-how-to-open-a-bar-in-bali.jpg',
+  '/bar-services/resources/how-to-create-a-cocktail-menu/': '/generated/mychef-bar-services-bali-og-how-to-create-a-cocktail-menu.jpg',
+  '/bar-services/resources/how-to-reduce-bar-shrinkage-bali/': '/generated/mychef-bar-services-bali-og-how-to-reduce-bar-shrinkage-bali.jpg',
 }
 
 const PILLAR_OG_IMAGES: Record<string, string> = {
@@ -164,6 +187,9 @@ function getOgImageAlt(path: string): string {
   }
   if (path.startsWith('/in-villa-service')) {
     return 'myCHEF in-villa service staff for Bali villas'
+  }
+  if (path.startsWith('/bar-services')) {
+    return 'myCHEF Bar Services — B2B bar consultancy, staffing and management in Bali'
   }
   if (path.startsWith('/blog/') || path.startsWith('/journal/')) {
     return 'myCHEF private chef and villa dining experience in Bali'

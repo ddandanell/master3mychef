@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, Mail, type LucideIcon } from 'lucide-react'
 import { PILLARS, LOCATIONS } from '@/data/siteArchitecture'
-import { BAR_SERVICES_HUB, BAR_SERVICES } from '@/data/bar-services'
 
 
 // Map icon names to Lucide React icon components
@@ -46,7 +45,6 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Experience', href: '/complete-villa-experience', icon: MapPin, accent: '#C5A028' },
   { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
   { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
-  { label: 'Bar Services', href: '/bar-services/', icon: Wine, accent: '#C5A028' },
   { label: 'Contact', href: '/contact', icon: Mail, accent: '#C5A028' },
   { label: 'Help', href: '/help', icon: HelpCircle, accent: '#C5A028' },
 ]
@@ -98,23 +96,6 @@ NAV_SUBPAGES['/locations'] = [
   })),
 ]
 
-// Bar Services dropdown — grouped by hub categories (Overview, Consulting, Staffing, Management, Flagship, Support)
-NAV_SUBPAGES['/bar-services/'] = [
-  { label: 'Overview', href: '/bar-services/', group: 'Overview' },
-  ...BAR_SERVICES_HUB.groups.flatMap((g) =>
-    g.services.map((slug) => {
-      const service = BAR_SERVICES.find((s) => s.slug === slug)
-      return {
-        label: service?.eyebrow ?? slug,
-        href: service?.route ?? `/bar-services/${slug}/`,
-        group: g.title,
-      }
-    })
-  ),
-  { label: 'FAQ', href: '/bar-services/faq/', group: 'Support' },
-  { label: 'Contact', href: '/bar-services/contact/', group: 'Support' },
-]
-
 // Preview images shown beside desktop dropdown links; the picture swaps as subpages are hovered
 const PILLAR_PREVIEW_IMAGES: Record<string, string> = {
   '/catering': '/generated/mychef-families-bali-catering-events.webp',
@@ -124,7 +105,6 @@ const PILLAR_PREVIEW_IMAGES: Record<string, string> = {
   '/complete-villa-experience': '/generated/mychef-catering-bali-catering-hero.webp',
   '/in-villa-service': '/generated/in-villa-service-hero.webp',
   '/staffing': '/generated/mychef-butlers-1.webp',
-  '/bar-services/': '/generated/mychef-bar-services-bali-hero-hub.webp',
 }
 
 const SUBPAGE_PREVIEW_IMAGES: Record<string, string> = {
@@ -141,10 +121,6 @@ const SUBPAGE_PREVIEW_IMAGES: Record<string, string> = {
   '/villa-event-packages': '/generated/mychef-villa-event-packages-hero.webp',
   '/vip-transport-bali': '/generated/mychef-vip-transport-bali-hero.webp',
 }
-
-BAR_SERVICES.forEach((service) => {
-  SUBPAGE_PREVIEW_IMAGES[service.route] = service.heroImage
-})
 
 interface DropdownPreview {
   src: string

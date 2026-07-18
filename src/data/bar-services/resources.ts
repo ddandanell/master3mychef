@@ -9,20 +9,20 @@ export const BAR_RESOURCES: BarResource[] = [
     h1: 'How Much Does a Bartender Cost in Bali?',
     featuredImage: '/generated/mychef-bar-services-bali-resource-how-much-does-a-bartender-cost-bali.webp',
     featuredAlt: 'Indonesian bartender preparing drinks at a Bali villa bar',
-    summary: 'Real 2026 prices: event bartenders from IDR 250k/hour, packages from IDR 9M. What drives cost, what is included and how to budget.',
+    summary: 'Hiring a bartender in Bali depends on experience, service style, event length and season. This guide explains what drives cost and how to budget without locking in outdated figures. Request a quote for current rates.',
     content: [
       {
         heading: 'Typical bartender costs in Bali',
         paragraphs: [
-          'Bartender costs in Bali vary by venue type, experience, and whether you hire full-time, part-time, or for events. Entry-level bar staff typically start around Rp 3.8–4.5M per month, while experienced bartenders or shift leaders can command Rp 6–10M or more.',
-          'For one-off events or temporary coverage, hourly rates usually range from Rp 35,000 to Rp 100,000 per hour for in-house casuals, or from Rp 250,000 per hour for fully vetted, insured event bartenders supplied by a specialist agency.'
+          'Bartender costs in Bali vary by venue type, experience, and whether you hire full-time, part-time, or for events. Entry-level bar staff typically fall in the low-to-mid single-digit millions per month, while experienced bartenders or shift leaders can move into the mid-to-high single-digit millions or more.',
+          'For one-off events or temporary coverage, hourly rates are usually higher than a pro-rata monthly salary because the supplier carries recruitment, insurance, transport and replacement risk. Most venues prefer a tailored quote based on the date, duration, location and service style.'
         ]
       },
       {
         heading: 'Event bartender pricing in 2026',
         paragraphs: [
-          'Most Bali event organisers price bartender staffing in one of two ways: hourly per head, or as a fixed event package. Hourly event bartenders from MyChef start at Rp 250,000 per hour with a four-hour minimum per staff member. Barbacks, servers and senior mixologists are quoted separately.',
-          'A full-service wedding or villa event bar package typically starts from Rp 9,000,000, depending on guest count, menu complexity, glassware, mobile bar rental and travel zone. Packages are useful when you want one invoice and no staffing surprises on the day.'
+          'Most Bali event organisers price bartender staffing in one of two ways: hourly per head, or as a fixed event package. Hourly event bartenders from MyChef are quoted per hour per staff member, with minimums that reflect travel, setup and standby cover. Barbacks, servers and senior mixologists are quoted separately.',
+          'A full-service wedding or villa event bar package is built around guest count, menu complexity, glassware, mobile bar rental and travel zone. Packages are useful when you want one invoice and no staffing surprises on the day. Request a quote for your event date and guest count.'
         ]
       },
       {
@@ -35,7 +35,7 @@ export const BAR_RESOURCES: BarResource[] = [
       {
         heading: 'Hidden costs to budget for',
         paragraphs: [
-          'If you hire directly, remember on-costs: BPJS, THR, uniforms, toolkits, transport and replacement cover during leave. These can add 25–40% on top of base salary. A no-show on event day can cost you more than the shift fee in lost guest goodwill.',
+          'If you hire directly, remember on-costs: BPJS, THR, uniforms, toolkits, transport and replacement cover during leave. These can add a meaningful percentage on top of base salary. A no-show on event day can cost you more than the shift fee in lost guest goodwill.',
           'Outsourced temporary bartender staffing wraps most of these risks into one service invoice. MyChef employs the staff, handles payroll and BPJS, and holds backup bartenders for confirmed blocks.'
         ]
       },
@@ -43,7 +43,7 @@ export const BAR_RESOURCES: BarResource[] = [
         heading: 'When to hire permanent vs temporary',
         paragraphs: [
           'Permanent bartenders make sense for venues with predictable weekly covers and a long-term roster. Temporary bartenders are better for events, peak nights, seasonal spikes, maternity or sick-leave cover, and soft openings where a permanent contract is not justified.',
-          'Many Bali venues use a hybrid: a lean permanent core supplemented by vetted temporary staff during high season. That keeps fixed labour low without sacrificing service quality when demand spikes.'
+          'Many Bali venues use a hybrid: a lean permanent core supplemented by vetted temporary staff during high season. That keeps fixed labour low without sacrificing service quality when demand spikes. Request a quote for either model.'
         ]
       }
     ],
@@ -57,41 +57,41 @@ export const BAR_RESOURCES: BarResource[] = [
     h1: 'Bartender Salary & Staffing Costs in Bali — 2026 Benchmarks',
     featuredImage: '/generated/mychef-bar-services-bali-resource-bartender-salary-benchmarks-bali.webp',
     featuredAlt: 'Bali bar manager reviewing rosters and salary benchmarks on a tablet',
-    summary: '2026 benchmarks: bartender pay from IDR 3.8M/month, on-costs, and the real maths of in-house hiring vs outsourced bar staffing.',
+    summary: 'Bartender pay in Bali varies by location, venue type and experience. This guide covers the factors that shape salaries, true in-house hiring costs, and when outsourced staffing is the lower-risk option. Request a quote for current market guidance.',
     content: [
       {
         heading: '2026 bartender salary benchmarks in Bali',
         paragraphs: [
-          'Front-line bartender salaries in Bali start around Rp 3,800,000 per month for entry-level roles in Seminyak, Canggu and southern tourist zones. In Ubud and quieter areas the floor can be closer to UMK levels, while high-volume beach clubs and luxury resorts in Uluwatu often pay a premium for experience.',
-          'Senior bartenders and head bartenders with three to five years of experience typically earn Rp 6,000,000–10,000,000 per month. Bar managers and F&B supervisors who oversee stock, costing and rosters usually fall in the Rp 8,000,000–20,000,000 range depending on outlet size and bonus structure.'
+          'Front-line bartender salaries in Bali for entry-level roles in Seminyak, Canggu and southern tourist zones often sit in the low single-digit millions per month. In Ubud and quieter areas the floor can be closer to local minimum-wage thresholds, while high-volume beach clubs and luxury resorts in Uluwatu often pay a premium for experience.',
+          'Senior bartenders and head bartenders with three to five years of experience typically move into the mid-to-high single-digit millions per month. Bar managers and F&B supervisors who oversee stock, costing and rosters often reach the low tens of millions, depending on outlet size, bonus structure and responsibilities. Request a quote for current salary guidance.'
         ]
       },
       {
         heading: 'True cost of an in-house hire',
         paragraphs: [
-          'Base salary is only part of the picture. Indonesian labour rules add BPJS Ketenagakerjaan and Kesehatan, annual THR, leave provisions, uniforms, transport or accommodation allowances, and recruitment advertising or agency fees. For many venues the loaded cost runs 25–40% above base pay.',
+          'Base salary is only part of the picture. Indonesian labour rules add BPJS Ketenagakerjaan and Kesehatan, annual THR, leave provisions, uniforms, transport or accommodation allowances, and recruitment advertising or agency fees. For many venues the loaded cost runs a meaningful premium above base pay.',
           'Then there is turnover cost. If a bartender leaves in month three, you lose training investment, recruitment time and roster continuity. A realistic 90-day cost model includes sourcing, onboarding, uniform, training and the productivity dip while the new hire finds their speed.'
         ]
       },
       {
         heading: 'Outsourced staffing vs in-house',
         paragraphs: [
-          'Outsourced temporary bartender staffing removes payroll, BPJS, scheduling and replacement risk from your ledger. You receive one invoice per event or per month, and the supplier carries employer obligations. Hourly rates start from Rp 250,000 for event bartenders.',
+          'Outsourced temporary bartender staffing removes payroll, BPJS, scheduling and replacement risk from your ledger. You receive one invoice per event or per month, and the supplier carries employer obligations. Rates are quoted per hour or per month depending on the role and coverage needed. Request a quote for event or recurring coverage.',
           'The break-even point depends on how variable your demand is. If your bar has steady nightly covers, permanent staff are usually cheaper per hour. If your volume spikes around events, weddings, charter seasons and holidays, outsourcing the swing capacity is almost always more cost-efficient.'
         ]
       },
       {
         heading: 'Training as a cost lever',
         paragraphs: [
-          'Untrained staff increase pour cost, waste and breakage. A foundation bar training programme, typically from Rp 2,750,000 per person, can pay back within weeks through tighter pours and faster service. Custom programmes for your menu and venue are quoted after a short scoping call.',
-          'Training also reduces turnover. Bartenders who feel competent and see a career path stay longer, which lowers your annual recruitment spend.'
+          'Untrained staff increase pour cost, waste and breakage. A foundation bar training programme can pay back within weeks through tighter pours and faster service. Custom programmes for your menu and venue are scoped and quoted after a short discovery call.',
+          'Training also reduces turnover. Bartenders who feel competent and see a career path stay longer, which lowers your annual recruitment spend. Request a quote for foundation or custom bar training.'
         ]
       },
       {
         heading: 'How to use these benchmarks',
         paragraphs: [
-          'Use the salary ranges to sanity-check your current payroll and to budget a new outlet. Compare your loaded monthly cost per bartender against the equivalent outsourced rate for the same number of shifts. If the gap is small but your roster is unstable, outsourcing may still be the lower-risk option.',
-          'For permanent roles, validate the salary band against current Bali market data before you advertise. Underpaying lengthens time-to-hire and increases early turnover; overpaying without clear accountability erodes margin.'
+          'Use the salary bands to sanity-check your current payroll and to budget a new outlet. Compare your loaded monthly cost per bartender against the equivalent outsourced rate for the same number of shifts. If the gap is small but your roster is unstable, outsourcing may still be the lower-risk option.',
+          'For permanent roles, validate the salary band against current Bali market data before you advertise. Underpaying lengthens time-to-hire and increases early turnover; overpaying without clear accountability erodes margin. Request a quote if you want a market-aligned salary band for your next hire.'
         ]
       }
     ],
@@ -153,17 +153,17 @@ export const BAR_RESOURCES: BarResource[] = [
     h1: 'Beverage Cost Percentage — The Complete Guide',
     featuredImage: '/generated/mychef-bar-services-bali-resource-beverage-cost-percentage-guide.webp',
     featuredAlt: 'Bar manager calculating beverage cost percentage on a calculator',
-    summary: 'What beverage cost percentage is, the 18–24% benchmark, how shrinkage erodes it, and the controls that bring it back in line.',
+    summary: 'What beverage cost percentage is, the common target band, how shrinkage erodes it, and the controls that bring it back in line.',
     content: [
       {
         heading: 'What is beverage cost percentage?',
         paragraphs: [
-          'Beverage cost percentage, also called pour cost, is the ratio of what you spend on beverage ingredients to what you sell them for. The formula is simple: divide the cost of the ingredients in a drink by its selling price, then multiply by 100. A Rp 35,000 gin and tonic sold for Rp 175,000 has a 20% beverage cost.',
+          'Beverage cost percentage, also called pour cost, is the ratio of what you spend on beverage ingredients to what you sell them for. The formula is simple: divide the cost of the ingredients in a drink by its selling price, then multiply by 100. A drink that costs a small fraction of its menu price to make might have a 20% beverage cost.',
           'You can measure it per drink, per category or across the whole bar. Category-level measurement is usually the most useful because beer, wine, spirits and cocktails behave differently.'
         ]
       },
       {
-        heading: 'The 18–24% benchmark',
+        heading: 'The common target band',
         paragraphs: [
           'For most Bali bars, a healthy beverage cost percentage sits between 18% and 24%. Beer and wine often run lower, while craft cocktails with fresh produce and premium spirits can run higher but should be balanced by high-margin, batchable options.',
           'If your overall pour cost is above 26%, you are likely leaving money on the table. If it is below 15%, check whether your prices are too high for the market or whether your recipes are being followed consistently.'
@@ -172,7 +172,7 @@ export const BAR_RESOURCES: BarResource[] = [
       {
         heading: 'How shrinkage erodes pour cost',
         paragraphs: [
-          'Shrinkage is the gap between theoretical cost and actual cost. Typical sources include over-pouring, spillage, comps, voids, unrecorded staff drinks, theft and bottle giveaway. In Bali, bars commonly lose 20–25% of inventory value to shrinkage before the first guest is served.',
+          'Shrinkage is the gap between theoretical cost and actual cost. Typical sources include over-pouring, spillage, comps, voids, unrecorded staff drinks, theft and bottle giveaway. In Bali, bars commonly lose a significant share of inventory value to shrinkage before the first guest is served.',
           'Shrinkage does not usually show up in your POS. It shows up when your monthly stocktake reveals bottles that disappeared without matching sales. Without measurement, you cannot fix it.'
         ]
       },
@@ -186,7 +186,7 @@ export const BAR_RESOURCES: BarResource[] = [
       {
         heading: 'Using pour cost to price drinks',
         paragraphs: [
-          'Target pricing works backwards from your desired pour cost. If a drink costs Rp 40,000 to make and you target 22%, the sell price should be around Rp 182,000. Round to a price-ladder point that fits your guest profile.',
+          'Target pricing works backwards from your desired pour cost. If a drink costs you 22% of the target sell price in ingredients, then your menu price is roughly the ingredient cost divided by 0.22. Round to a price-ladder point that fits your guest profile.',
           'Do not price only by competitor comparison. A competitor may have lower rent, different supplier terms or a higher-volume model. Your own numbers should drive the final decision.'
         ]
       }
@@ -220,8 +220,8 @@ export const BAR_RESOURCES: BarResource[] = [
       {
         heading: 'Budgeting a new bar setup',
         paragraphs: [
-          'A modest restaurant bar in Bali can be fitted out from around Rp 250–400 million, while a high-volume beach club or resort bar can run into billions. Budget for design, bar fabrication, refrigeration, glasswasher, ice machine, sound and lighting, glassware, tools, opening stock, licensing, marketing and three months of working capital.',
-          'MyChef New Bar Setup packages start from Rp 35,000,000 for the bar-programme layer: concept, layout, equipment specification, supplier onboarding, SOP library and opening-week support. Construction and equipment are paid directly by you to contractors and suppliers.'
+          'A modest restaurant bar in Bali can be fitted out from the low hundreds of millions of rupiah, while a high-volume beach club or resort bar can run into billions. Budget for design, bar fabrication, refrigeration, glasswasher, ice machine, sound and lighting, glassware, tools, opening stock, licensing, marketing and three months of working capital.',
+          'MyChef New Bar Setup packages cover the bar-programme layer: concept, layout, equipment specification, supplier onboarding, SOP library and opening-week support. Construction and equipment are paid directly by you to contractors and suppliers. Request a quote for a package tailored to your concept.'
         ]
       },
       {
@@ -262,7 +262,7 @@ export const BAR_RESOURCES: BarResource[] = [
         heading: 'Engineer for margin first',
         paragraphs: [
           'Every drink on the menu should be costed to a target pour cost, typically 18–24%. Build a costing card for each recipe with exact millilitre measures, garnish, ice and glassware cost. If a drink cannot hit the target without an unacceptable price, redesign it or drop it.',
-          'Contribution margin matters more than pour cost alone. A cocktail with a 25% pour cost but a Rp 120,000 contribution can be more valuable than a 18% drink with only Rp 40,000 contribution.'
+          'Contribution margin matters more than pour cost alone. A cocktail with a slightly higher pour cost but a much higher contribution can be more valuable than a lower-pour-cost drink with a small contribution.'
         ]
       },
       {
@@ -330,7 +330,7 @@ export const BAR_RESOURCES: BarResource[] = [
       {
         heading: 'When to bring in outside help',
         paragraphs: [
-          'If shrinkage stays above 5–7% after 60 days of internal controls, an external bar audit or costing project can find the leaks you are too close to see. MyChef audits quantify shrinkage in rupiah and hand over a prioritised 90-day fix plan.',
+          'If shrinkage stays high after 60 days of internal controls, an external bar audit or costing project can find the leaks you are too close to see. MyChef audits quantify shrinkage in rupiah and hand over a prioritised 90-day fix plan.',
           'For ongoing protection, a monthly bar management retainer keeps stock counts, recipe standards and accountability systems honest long after the initial project ends.'
         ]
       }

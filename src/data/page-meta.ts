@@ -1030,6 +1030,205 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/corp-hero.webp`,
   },
 
+  'bar-services-hub': {
+    path: '/bar-services/',
+    title: 'Bar Consultant Bali | B2B Bar Services | MyChef',
+    description:
+      "Bali's B2B bar consultancy: training, menus, staffing, audits and management for hotels, villas and beach clubs. Training from IDR 2.75M per pax.",
+    canonical: `${SITE}/bar-services/`,
+    h1: 'Bar Consultant Bali: The Dedicated Bar-Operations Partner for Your Venue',
+    ogImage: '/generated/mychef-bar-services-bali-og-hub.jpg',
+  },
+  'bar-services-bar-staff-training': {
+    path: '/bar-services/bar-staff-training/',
+    title: 'Bar Staff Training Bali | Venue Mixology Courses | MyChef',
+    description:
+      'On-site bar staff training for Bali hotels, villas and restaurants — basics to advanced mixology. Foundation course from IDR 2.75M per pax.',
+    canonical: `${SITE}/bar-services/bar-staff-training/`,
+    h1: 'Bar Staff Training Bali: Build the Team You Can\'t Import',
+    ogImage: '/generated/mychef-bar-services-bali-og-bar-staff-training.jpg',
+  },
+  'bar-services-cocktail-menu-development': {
+    path: '/bar-services/cocktail-menu-development/',
+    title: 'Cocktail Menu Development Bali | MyChef Bar Services',
+    description:
+      'Profitable, venue-ready cocktail menus with costing, specs and supplier lists. Menu development packages from IDR 25M across Bali.',
+    canonical: `${SITE}/bar-services/cocktail-menu-development/`,
+    h1: 'Cocktail Menu Development Bali: A Menu Engineered for Margin, Not Just Taste',
+    ogImage: '/generated/mychef-bar-services-bali-og-cocktail-menu-development.jpg',
+  },
+  'bar-services-signature-cocktail-creation': {
+    path: '/bar-services/signature-cocktail-creation/',
+    title: 'Signature Cocktail Creation Bali | MyChef Bar Services',
+    description:
+      'Bespoke signature cocktails that tell your venue\'s story — R&D, tastings and specs included. Signature serves from IDR 2.5M each.',
+    canonical: `${SITE}/bar-services/signature-cocktail-creation/`,
+    h1: 'Signature Cocktail Creation: The Serve Guests Photograph and Reviewers Name',
+    ogImage: '/generated/mychef-bar-services-bali-og-signature-cocktail-creation.jpg',
+  },
+  'bar-services-temporary-bartender-staffing': {
+    path: '/bar-services/temporary-bartender-staffing/',
+    title: 'Bartender Hire Bali | Temporary Bar Staffing | MyChef',
+    description:
+      'Vetted, insured bartenders and barbacks for events, weddings and venue cover across Bali. Event bartenders from IDR 250k per hour.',
+    canonical: `${SITE}/bar-services/temporary-bartender-staffing/`,
+    h1: 'Bartender Hire Bali: Vetted Professionals, On Demand, Zero Employment Risk',
+    ogImage: '/generated/mychef-bar-services-bali-og-temporary-bartender-staffing.jpg',
+  },
+  'bar-services-permanent-bar-staff-recruitment': {
+    path: '/bar-services/permanent-bar-staff-recruitment/',
+    title: 'Bar Staff Recruitment Bali | MyChef Bar Services',
+    description:
+      'Permanent bartender, head bartender and bar manager placement with trade testing and replacement guarantee. Flat fees from IDR 4M.',
+    canonical: `${SITE}/bar-services/permanent-bar-staff-recruitment/`,
+    h1: 'Bar Staff Recruitment Bali: Stop Gambling on CVs',
+    ogImage: '/generated/mychef-bar-services-bali-og-permanent-bar-staff-recruitment.jpg',
+  },
+  'bar-services-new-bar-setup': {
+    path: '/bar-services/new-bar-setup/',
+    title: 'New Bar Setup Consultant Bali | MyChef Bar Services',
+    description:
+      'Concept-to-launch bar setup: layout, equipment, menu, hiring, SOPs and opening support. Setup packages from IDR 35M.',
+    canonical: `${SITE}/bar-services/new-bar-setup/`,
+    h1: 'Bar Setup Consultant in Bali: Open Once, Open Right',
+    ogImage: '/generated/mychef-bar-services-bali-og-new-bar-setup.jpg',
+  },
+  'bar-services-bar-audit-improvement': {
+    path: '/bar-services/bar-audit-improvement/',
+    title: 'Bar Audit Bali | Operations & Profit Audit | MyChef',
+    description:
+      'Mystery visits, pour-cost analysis and a fix plan that finds the margin your bar is leaking. Full audits from IDR 16.5M.',
+    canonical: `${SITE}/bar-services/bar-audit-improvement/`,
+    h1: 'Bar Audit in Bali: We Quantify the Leak in Rupiah',
+    ogImage: '/generated/mychef-bar-services-bali-og-bar-audit-improvement.jpg',
+  },
+  'bar-services-bar-costing-inventory-control': {
+    path: '/bar-services/bar-costing-inventory-control/',
+    title: 'Bar Costing & Inventory Control Bali | MyChef',
+    description:
+      'Pour-cost engineering, inventory SOPs and shrinkage control for Bali bars. Costing projects from IDR 18M with 30-day follow-up.',
+    canonical: `${SITE}/bar-services/bar-costing-inventory-control/`,
+    h1: 'Bar Costing Service in Bali: Turn Your Biggest Invisible Loss Into a Managed Number',
+    ogImage: '/generated/mychef-bar-services-bali-og-bar-costing-inventory-control.jpg',
+  },
+  'bar-services-bar-equipment-supply-rental': {
+    path: '/bar-services/bar-equipment-supply-rental/',
+    title: 'Bar Equipment Supplier & Rental Bali | MyChef',
+    description:
+      'Bar tools, mobile bars, glassware and machines — supplied or rented for venues and events. Mobile bar rental from IDR 2.5M per event.',
+    canonical: `${SITE}/bar-services/bar-equipment-supply-rental/`,
+    h1: 'Bar Equipment Rental & Supply in Bali: Buy Right, Hire Right',
+    ogImage: '/generated/mychef-bar-services-bali-og-bar-equipment-supply-rental.jpg',
+  },
+  'bar-services-monthly-bar-management-support': {
+    path: '/bar-services/monthly-bar-management-support/',
+    title: 'Monthly Bar Management Support Bali | MyChef',
+    description:
+      'A fractional bar manager for your venue: oversight, stock control, training refreshers and reporting. Retainers from IDR 4.5M per month.',
+    canonical: `${SITE}/bar-services/monthly-bar-management-support/`,
+    h1: 'Outsourced Bar Management in Bali: A Fractional Bar Manager From Rp4.5M/Month',
+    ogImage: '/generated/mychef-bar-services-bali-og-monthly-bar-management-support.jpg',
+  },
+  'bar-services-complete-bar-performance-programme': {
+    path: '/bar-services/complete-bar-performance-programme/',
+    title: 'Bar Performance Programme Bali | MyChef Bar Services',
+    description:
+      'One annual programme — audit, costing, training, menu refresh and monthly management — to lift bar profit. From IDR 132M per year.',
+    canonical: `${SITE}/bar-services/complete-bar-performance-programme/`,
+    h1: 'Bar Consulting in Bali: Your Outsourced Beverage Department',
+    ogImage: '/generated/mychef-bar-services-bali-og-complete-bar-performance-programme.jpg',
+  },
+  'bar-services-faq': {
+    path: '/bar-services/faq/',
+    title: 'Bar Services FAQ | Pricing, Staffing & Licences | MyChef',
+    description:
+      'Straight answers on bartender rates, staffing ratios, licences, packages and what\'s included — Bali bar services, explained.',
+    canonical: `${SITE}/bar-services/faq/`,
+    h1: 'FAQ — MyChef Bar Services',
+    ogImage: '/generated/mychef-bar-services-bali-og-faq.jpg',
+  },
+  'bar-services-contact': {
+    path: '/bar-services/contact/',
+    title: 'Contact MyChef Bar Services | Bar Consultancy Bali',
+    description:
+      'Request a proposal, book a site survey or check staff availability. WhatsApp, phone or enquiry form — response within four business hours.',
+    canonical: `${SITE}/bar-services/contact/`,
+    h1: 'Let\'s Talk About Your Bar',
+    ogImage: '/generated/mychef-bar-services-bali-og-contact.jpg',
+  },
+  'bar-services-resources': {
+    path: '/bar-services/resources/',
+    title: 'Bar Services Resources | Bali Venue Guides | MyChef',
+    description:
+      'Free bar management guides for Bali venues: staffing ratios, pour costs, cocktail menus, salaries and setup. Practical advice from MyChef Bar Services.',
+    canonical: `${SITE}/bar-services/resources/`,
+    h1: 'Bar Services Resources for Bali Venues',
+    ogImage: '/generated/mychef-bar-services-bali-og-resources.jpg',
+  },
+  'bar-services-resources-how-much-does-a-bartender-cost-bali': {
+    path: '/bar-services/resources/how-much-does-a-bartender-cost-bali/',
+    title: 'How Much Does a Bartender Cost in Bali? 2026 Guide | MyChef',
+    description:
+      'Real 2026 prices: event bartenders from IDR 250k/hour, packages from IDR 9M. What drives cost, what\'s included and how to budget.',
+    canonical: `${SITE}/bar-services/resources/how-much-does-a-bartender-cost-bali/`,
+    h1: 'How Much Does a Bartender Cost in Bali?',
+    ogImage: '/generated/mychef-bar-services-bali-og-how-much-does-a-bartender-cost-bali.jpg',
+  },
+  'bar-services-resources-bartender-salary-benchmarks-bali': {
+    path: '/bar-services/resources/bartender-salary-benchmarks-bali/',
+    title: 'Bartender Salary & Staffing Costs Bali 2026 | MyChef',
+    description:
+      '2026 benchmarks: bartender pay from IDR 3.8M/month, on-costs, and the real maths of in-house hiring vs outsourced bar staffing.',
+    canonical: `${SITE}/bar-services/resources/bartender-salary-benchmarks-bali/`,
+    h1: 'Bartender Salaries & Bar Staffing Costs in Bali — 2026',
+    ogImage: '/generated/mychef-bar-services-bali-og-bartender-salary-benchmarks-bali.jpg',
+  },
+  'bar-services-resources-how-many-bartenders-per-guest': {
+    path: '/bar-services/resources/how-many-bartenders-per-guest/',
+    title: 'How Many Bartenders Per Guest? Bali Event Guide | MyChef',
+    description:
+      'Staffing ratios for 20 to 300 guests: the 1:15–20 rule, when to add barbacks, and how ratios affect queue times and drink quality.',
+    canonical: `${SITE}/bar-services/resources/how-many-bartenders-per-guest/`,
+    h1: 'How Many Bartenders Do You Need Per Guest?',
+    ogImage: '/generated/mychef-bar-services-bali-og-how-many-bartenders-per-guest.jpg',
+  },
+  'bar-services-resources-beverage-cost-percentage-guide': {
+    path: '/bar-services/resources/beverage-cost-percentage-guide/',
+    title: 'Beverage Cost Percentage Explained | Bali Bar Guide | MyChef',
+    description:
+      'What beverage cost percentage is, the 18–24% benchmark, how shrinkage erodes it, and the controls that bring it back in line.',
+    canonical: `${SITE}/bar-services/resources/beverage-cost-percentage-guide/`,
+    h1: 'Beverage Cost Percentage — The Complete Guide',
+    ogImage: '/generated/mychef-bar-services-bali-og-beverage-cost-percentage-guide.jpg',
+  },
+  'bar-services-resources-how-to-open-a-bar-in-bali': {
+    path: '/bar-services/resources/how-to-open-a-bar-in-bali/',
+    title: 'How to Open a Bar in Bali: Licences & Costs | MyChef',
+    description:
+      'Step-by-step guide to opening a Bali bar: TDUP and SIUP-MB licences, PT PMA rules, setup budgets and realistic timelines.',
+    canonical: `${SITE}/bar-services/resources/how-to-open-a-bar-in-bali/`,
+    h1: 'How to Open a Bar in Bali — Licences, Costs, Timeline',
+    ogImage: '/generated/mychef-bar-services-bali-og-how-to-open-a-bar-in-bali.jpg',
+  },
+  'bar-services-resources-how-to-create-a-cocktail-menu': {
+    path: '/bar-services/resources/how-to-create-a-cocktail-menu/',
+    title: 'How to Create a Cocktail Menu: Venue Guide | MyChef',
+    description:
+      'Menu engineering for Bali venues: pricing to a pour-cost target, spec cards, seasonality and local ingredients that guests remember.',
+    canonical: `${SITE}/bar-services/resources/how-to-create-a-cocktail-menu/`,
+    h1: 'How to Create a Cocktail Menu That Sells',
+    ogImage: '/generated/mychef-bar-services-bali-og-how-to-create-a-cocktail-menu.jpg',
+  },
+  'bar-services-resources-how-to-reduce-bar-shrinkage-bali': {
+    path: '/bar-services/resources/how-to-reduce-bar-shrinkage-bali/',
+    title: 'How to Reduce Bar Shrinkage in Bali | MyChef',
+    description:
+      'Cut bar inventory loss in Bali with recipe standards, stock controls, comp policies and accountability systems that protect pour cost.',
+    canonical: `${SITE}/bar-services/resources/how-to-reduce-bar-shrinkage-bali/`,
+    h1: 'How to Reduce Bar Shrinkage in Bali',
+    ogImage: '/generated/mychef-bar-services-bali-og-how-to-reduce-bar-shrinkage-bali.jpg',
+  },
+
 } as const
 
 /** Helper to retrieve meta by route key with strict typing */

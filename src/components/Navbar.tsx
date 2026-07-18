@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, Search, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, type LucideIcon } from 'lucide-react'
-import { PILLARS, PRIMARY_CTA } from '@/data/siteArchitecture'
-import SearchOverlay from './SearchOverlay'
+import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, type LucideIcon } from 'lucide-react'
+import { PILLARS, LOCATIONS } from '@/data/siteArchitecture'
 
 
 // Map icon names to Lucide React icon components
@@ -40,12 +39,12 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { label: 'Catering', href: '/catering', icon: Users, accent: '#C5A028' },
   { label: 'Fine Dining', href: '/fine-dining', icon: UtensilsCrossed, accent: '#C5A028' },
+  { label: 'Locations', href: '/locations', icon: MapPin, accent: '#C5A028' },
   { label: 'Dining Styles', href: '/dining-styles', icon: BookOpen, accent: '#C5A028' },
   { label: 'Events', href: '/events', icon: CalendarDays, accent: '#C5A028' },
   { label: 'Experience', href: '/complete-villa-experience', icon: MapPin, accent: '#C5A028' },
   { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
   { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
-  { label: 'Locations', href: '/locations', icon: MapPin, accent: '#C5A028' },
   { label: 'Help', href: '/help', icon: HelpCircle, accent: '#C5A028' },
 ]
 
@@ -74,6 +73,19 @@ NAV_SUBPAGES['/complete-villa-experience'] = [
   { label: 'Complete Villa Experience', href: '/complete-villa-experience', icon: 'Heart' },
   { label: 'Villa Event Packages', href: '/villa-event-packages', icon: 'Wine' },
   { label: 'VIP Transport Bali', href: '/vip-transport-bali', icon: 'Truck' },
+]
+
+// Locations dropdown — compact view of main areas + link to full directory
+const LOCATION_DROPDOWN_ORDER: Array<keyof typeof LOCATIONS> = [
+  'seminyak', 'canggu', 'uluwatu', 'ubud', 'nusa-dua', 'jimbaran', 'sanur', 'berawa', 'pererenan', 'bukit',
+]
+NAV_SUBPAGES['/locations'] = [
+  { label: 'All Locations', href: '/locations', icon: 'MapPin' },
+  ...LOCATION_DROPDOWN_ORDER.map((slug) => ({
+    label: LOCATIONS[slug].label,
+    href: `/locations/${slug}`,
+    icon: 'MapPin',
+  })),
 ]
 
 // Preview images shown beside desktop dropdown links; the picture swaps as subpages are hovered
@@ -120,7 +132,6 @@ function isActivePath(current: string, target: string): boolean {
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [searchOpen, setSearchOpen] = useState(false)
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
   const location = useLocation()
 
@@ -189,27 +200,25 @@ export default function Navbar() {
   }
 
   useEffect(() => {
-    document.body.style.overflow = (menuOpen || searchOpen) ? 'hidden' : ''
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
-  }, [menuOpen, searchOpen])
+  }, [menuOpen])
 
   useEffect(() => {
-    if (!menuOpen && !searchOpen) return undefined
+    if (!menuOpen) return undefined
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setMenuOpen(false)
-        setSearchOpen(false)
       }
     }
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [menuOpen, searchOpen])
+  }, [menuOpen])
 
   return (
     <>
-      <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
       {/* ── Full-width luxury navbar at top ── */}
       <nav
         aria-label="Main navigation"
@@ -359,28 +368,7 @@ export default function Navbar() {
             })}
           </div>
 
-          <div className="flex items-center gap-4">
-            {/* Search Trigger */}
-            <button
-              onClick={() => setSearchOpen(true)}
-              className="group relative p-2 lg:p-1.5 2xl:p-2 text-white/70 hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
-              aria-label="Search myCHEF"
-            >
-              <Search className="w-5 h-5 transition-transform group-hover:scale-110" strokeWidth={1.5} />
-              {/* Subtle border circle on hover */}
-              <span className="absolute inset-0 rounded-full border border-transparent group-hover:border-[#C5A028]/30 transition-colors duration-300" />
-            </button>
-
-            {/* Book Now Button */}
-            <Link
-              to={PRIMARY_CTA.href}
-              className="hidden md:flex items-center gap-2 px-5 py-2 lg:px-3.5 lg:py-1.5 lg:text-[11px] xl:px-4 2xl:px-5 2xl:py-2 2xl:text-[12px] rounded-full bg-[#C5A028] text-black font-semibold text-[12px] uppercase tracking-[0.08em] transition-all hover:bg-[#D4B43A] hover:shadow-lg hover:shadow-[#C5A028]/30 flex-shrink-0 whitespace-nowrap"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
-            >
-              Book Now
-              <span className="hidden xl:inline text-[14px]">→</span>
-            </Link>
-
+          <div className="flex items-center">
             {/* Hamburger — mobile/tablet (hidden on lg+) */}
             <button
               type="button"
@@ -527,15 +515,6 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Book Now in mobile menu */}
-          <Link
-            to={PRIMARY_CTA.href}
-            onClick={() => setMenuOpen(false)}
-            className="mt-6 w-full px-6 py-3 rounded-full bg-[#C5A028] text-black font-semibold text-[12px] uppercase tracking-[0.1em] transition-all hover:bg-[#D4B43A] text-center"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
-          >
-            Book Now
-          </Link>
         </div>
       </div>
 

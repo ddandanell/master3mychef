@@ -1,8 +1,9 @@
-import { ArrowRight, MessageCircle } from 'lucide-react'
+import { ArrowRight, HelpCircle, MessageCircle, BookOpen } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, serviceSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { BarServiceGallery } from '@/components/bar-services'
 import { getPageMeta } from '@/data/page-meta'
 import { BAR_SERVICES_HUB, getBarServiceBySlug } from '@/data/bar-services'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -10,9 +11,33 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'bar consulting in Bali', intent: 'a bar services consultation' })
 
+const UTILITY_CARDS = [
+  {
+    eyebrow: 'Questions',
+    title: 'Bar Services FAQ',
+    description: 'Answers about pricing, staffing laws, licences, events and more.',
+    href: '/bar-services/faq/',
+    icon: HelpCircle,
+  },
+  {
+    eyebrow: 'Talk to us',
+    title: 'Contact',
+    description: 'WhatsApp, email or enquiry form — get a reply within one business day.',
+    href: '/bar-services/contact/',
+    icon: MessageCircle,
+  },
+  {
+    eyebrow: 'Free guides',
+    title: 'Resources',
+    description: 'Benchmarks, checklists and how-to guides for Bali bar operators.',
+    href: '/bar-services/resources/',
+    icon: BookOpen,
+  },
+]
+
 export default function BarServicesHubPage() {
   const meta = getPageMeta('bar-services-hub')
-  const { hero, groups, whyUs, process, proof } = BAR_SERVICES_HUB
+  const { hero, groups, expandedCopy, galleryImages, whyUs, process, proof } = BAR_SERVICES_HUB
 
   const groupedServices = groups.map((group) => ({
     ...group,
@@ -65,7 +90,7 @@ export default function BarServicesHubPage() {
               WhatsApp Us
             </a>
             <a
-              href="#service-groups"
+              href="#all-services"
               className="inline-flex items-center justify-center px-6 py-3 border border-white text-white hover:bg-white/10 font-medium rounded"
             >
               Explore Services
@@ -74,15 +99,80 @@ export default function BarServicesHubPage() {
         </div>
       </section>
 
-      {/* Service groups */}
-      <section id="service-groups" className="py-16 md:py-24 bg-white">
+      {/* Expanded copy */}
+      {expandedCopy && (
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-4 space-y-16 md:space-y-24">
+            <div>
+              <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">Bar consultant Bali</span>
+              <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
+                {expandedCopy.intro.title}
+              </h2>
+              <div className="max-w-3xl space-y-4 text-[#4A4745]">
+                {expandedCopy.intro.paragraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 max-w-5xl">
+              <div>
+                <h3 className="text-2xl font-serif text-gray-900 mb-4">{expandedCopy.whyNow.title}</h3>
+                <div className="space-y-4 text-[#4A4745]">
+                  {expandedCopy.whyNow.paragraphs.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-serif text-gray-900 mb-4">{expandedCopy.whyMyChef.title}</h3>
+                <div className="space-y-4 text-[#4A4745]">
+                  {expandedCopy.whyMyChef.paragraphs.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-stone-50 p-6 md:p-10 rounded-lg">
+              <h3 className="text-2xl font-serif text-gray-900 mb-6">{expandedCopy.howWeWork.title}</h3>
+              <div className="max-w-3xl space-y-4 text-[#4A4745]">
+                {expandedCopy.howWeWork.paragraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center max-w-3xl mx-auto">
+              <h3 className="text-2xl md:text-3xl font-serif text-gray-900 mb-6">{expandedCopy.cta.title}</h3>
+              <div className="space-y-4 text-[#4A4745] mb-8">
+                {expandedCopy.cta.paragraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-medium rounded"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* All Bar Services discovery grid */}
+      <section id="all-services" className="py-16 md:py-24 bg-stone-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
-              What we offer
+              All services
             </span>
             <h2 className="text-3xl md:text-4xl font-serif text-gray-900">
-              Bar services built for Bali venues
+              Every bar service your venue might need
             </h2>
           </div>
 
@@ -95,7 +185,7 @@ export default function BarServicesHubPage() {
                     <a
                       key={service.slug}
                       href={service.route}
-                      className="group block bg-stone-50 p-6 rounded-lg hover:shadow-md transition"
+                      className="group block bg-white p-6 rounded-lg hover:shadow-md transition"
                     >
                       <h4 className="text-xl font-semibold mb-2 group-hover:text-amber-600">
                         {service.eyebrow}
@@ -110,12 +200,41 @@ export default function BarServicesHubPage() {
                 </div>
               </div>
             ))}
+
+            <div>
+              <h3 className="text-2xl font-serif text-gray-900 mb-6">Help & guidance</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {UTILITY_CARDS.map((card) => (
+                  <a
+                    key={card.title}
+                    href={card.href}
+                    className="group block bg-white p-6 rounded-lg hover:shadow-md transition"
+                  >
+                    <div className="flex items-center gap-2 mb-3">
+                      <card.icon className="w-5 h-5 text-amber-600" />
+                      <span className="text-xs uppercase tracking-wider text-amber-600">{card.eyebrow}</span>
+                    </div>
+                    <h4 className="text-xl font-semibold mb-2 group-hover:text-amber-600">
+                      {card.title}
+                    </h4>
+                    <p className="text-gray-600 text-sm mb-4">{card.description}</p>
+                    <span className="inline-flex items-center text-sm font-medium text-amber-600">
+                      Open
+                      <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Gallery */}
+      {galleryImages && galleryImages.length > 0 && <BarServiceGallery images={galleryImages} />}
+
       {/* Why us */}
-      <section className="py-16 md:py-24 bg-stone-50">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
@@ -125,7 +244,7 @@ export default function BarServicesHubPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {whyUs.items.map((item) => (
-              <div key={item.title} className="bg-white p-6 rounded-lg shadow-sm">
+              <div key={item.title} className="bg-stone-50 p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
               </div>
@@ -135,7 +254,7 @@ export default function BarServicesHubPage() {
       </section>
 
       {/* Process */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-stone-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">

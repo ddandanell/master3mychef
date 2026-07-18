@@ -133,8 +133,11 @@ export interface BarServicesHubData {
   process: { step: number; title: string; description: string }[]
   proof: { title: string; items: string[] }
   expandedCopy?: {
-    title: string
-    paragraphs: string[]
+    intro: { title: string; paragraphs: string[] }
+    whyNow: { title: string; paragraphs: string[] }
+    whyMyChef: { title: string; paragraphs: string[] }
+    howWeWork: { title: string; paragraphs: string[] }
+    cta: { title: string; paragraphs: string[] }
   }
   galleryImages?: {
     src: string

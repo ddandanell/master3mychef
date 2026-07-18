@@ -411,9 +411,10 @@ async function processJob(job: ImageJob, index: number, total: number): Promise<
     const sizeKB = Math.round((outputBuffer.length / 1024) * 10) / 10
     console.log(`✅ [${index + 1}/${total}] ${provider} → ${job.filename} (${finalMeta.width}x${finalMeta.height}, ${sizeKB} KB)`)
     return { ok: true, filename: job.filename, provider, sizeKB, dims: `${finalMeta.width}x${finalMeta.height}` }
-  } catch (err: any) {
-    console.error(`❌ [${index + 1}/${total}] failed ${job.filename}: ${err.message}`)
-    return { ok: false, filename: job.filename, provider: 'pollinations', error: err.message }
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err)
+    console.error(`❌ [${index + 1}/${total}] failed ${job.filename}: ${message}`)
+    return { ok: false, filename: job.filename, provider: 'pollinations', error: message }
   }
 }
 

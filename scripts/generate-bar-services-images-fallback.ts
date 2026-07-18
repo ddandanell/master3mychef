@@ -16,7 +16,7 @@
  *   - OG JPG ≤ 120 KB
  */
 
-import { writeFileSync, existsSync, mkdirSync, readFileSync } from 'node:fs'
+import { writeFileSync, existsSync, mkdirSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
@@ -223,9 +223,10 @@ async function processJob(job: ImageJob, index: number, total: number): Promise<
     const sizeKB = Math.round((output.length / 1024) * 10) / 10
     console.log(`✅ [${index + 1}/${total}] ${job.filename} (${meta.width}x${meta.height}, ${sizeKB} KB)`)
     return { ok: true, filename: job.filename, sizeKB, dims: `${meta.width}x${meta.height}` }
-  } catch (err: any) {
-    console.error(`❌ [${index + 1}/${total}] failed ${job.filename}: ${err.message}`)
-    return { ok: false, filename: job.filename, error: err.message }
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err)
+    console.error(`❌ [${index + 1}/${total}] failed ${job.filename}: ${message}`)
+    return { ok: false, filename: job.filename, error: message }
   }
 }
 

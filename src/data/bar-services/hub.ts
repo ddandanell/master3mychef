@@ -29,17 +29,16 @@ export const BAR_SERVICES_HUB: BarServicesHubData = {
   whyUs: {
     title: 'Why venues choose MyChef Bar Services',
     items: [
-      { title: 'The first dedicated specialist', description: 'Bali has event bartender vendors and generalist consultants. We built the integrated stack — audit, training, staffing, costing and management — as a permanent local B2B service.' },
-      { title: 'A trust base you can verify', description: 'MyChef\'s existing villa and event operations run on the same vetting, scheduling and quality systems that now power our bar services.' },
-      { title: 'We grow local talent, not fly-ins', description: 'We turn your existing Indonesian team into the bar staff you wish you could hire — and build a pipeline that survives turnover.' },
-      { title: 'Radical price transparency', description: 'Every service publishes a "from" anchor. You\'ll never wonder what a proposal is hiding.' }
+      { title: 'Bali-focused', description: 'We understand local staffing laws, supply chains, and guest expectations.' },
+      { title: 'Margin-first', description: 'Every recommendation is measured against your cost structure and revenue goals.' },
+      { title: 'End-to-end', description: 'From audit and setup to training and ongoing management — one partner.' }
     ]
   },
   process: [
-    { step: 1, title: 'Diagnose', description: 'We observe service, run pour tests, review stock records and guest feedback. You get a written scorecard and fix plan.' },
-    { step: 2, title: 'Design', description: 'Costing controls, menu engineering, training or staffing — sequenced by payback, not by what we would like to sell.' },
-    { step: 3, title: 'Deliver', description: 'We implement the fixes inside your venue: SOPs, training, spec libraries and systems your team can use from day one.' },
-    { step: 4, title: 'Optimise', description: 'Monthly oversight keeps the gains locked in, with reporting you can forward to ownership.' }
+    { step: 1, title: 'Diagnose', description: 'Audit your bar\'s operations, costs, and service flow.' },
+    { step: 2, title: 'Design', description: 'Build a tailored plan for menu, staffing, and controls.' },
+    { step: 3, title: 'Deliver', description: 'Implement systems, training, and standards in your venue.' },
+    { step: 4, title: 'Optimise', description: 'Monitor performance and refine for lasting results.' }
   ],
   proof: {
     title: 'Built on the same standards as Bali\'s best private dining experiences',

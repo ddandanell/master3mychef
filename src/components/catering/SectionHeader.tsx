@@ -1,7 +1,9 @@
+import type { ReactNode } from 'react'
+
 interface SectionHeaderProps {
   eyebrow?: string
   title: string
-  subtitle?: string
+  subtitle?: ReactNode
   align?: 'left' | 'center'
   dark?: boolean
 }

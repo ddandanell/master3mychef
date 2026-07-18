@@ -541,7 +541,70 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'Can foreign bartenders be placed?', answer: 'Front-line bar roles are Indonesian-only under current manpower rules; we screen accordingly.' }
     ],
     relatedServices: ['temporary-bartender-staffing', 'bar-staff-training', 'cocktail-menu-development'],
-    relatedResources: ['how-much-does-a-bartender-cost-bali', 'hiring-a-bar-manager-bali']
+    relatedResources: ['how-much-does-a-bartender-cost-bali', 'hiring-a-bar-manager-bali'],
+    keywords: {
+      primary: 'bar staff recruitment Bali',
+      secondary: ['bartender recruitment agency Bali', 'hospitality recruitment Bali', 'hire bar manager Bali', 'head bartender placement']
+    },
+    expandedSections: {
+      whyBali: {
+        title: 'Why permanent bar recruitment matters in Bali',
+        paragraphs: [
+          'Bali\'s hospitality pipeline is under pressure: roughly a hundred new hotels are opening in 2025-26, all hiring from the same small local talent pool. Front-line bar roles must be filled by Indonesian nationals under current manpower rules, so every venue competes for the same experienced bartenders, senior bartenders, head bartenders, bar supervisors and bar managers. A wrong hire at rising bartender wages or bar-manager salaries of Rp 7-20 million per month is not just a payroll mistake; it becomes a quality, training and rota problem that can take months to undo.',
+          'Turnover is structural. Bartenders in Bali frequently move for a small pay rise, and without pre-assessed candidates a venue hires on interview charm only to discover in week three that the new bartender cannot free-pour, build spec drinks or handle guest complaints. MyChef Permanent Bar Staff Recruitment uses candidates we have already watched pour — Bar Staff Training graduates and rated Temporary Bartender Staffing pool members — so our recommendations are based on evidence rather than CV claims.',
+          'The compliance layer adds risk. Foreign candidates cannot fill front-line bar roles; only managerial-level positions such as bar manager or beverage director may be considered, and only with verified RPTKA and work KITAS. Misclassification, co-employment or wage-floor errors expose venues to manpower, BPJS and licence risk. A structured, Indonesian-law-compliant placement process protects the venue as much as the hire improves it.'
+        ]
+      },
+      whoFor: {
+        title: 'Venues that benefit from permanent bar recruitment',
+        items: [
+          { label: 'Boutique & luxury hotels/resorts', description: 'Chronic Beverage or Bar Manager vacancies and pressure to open or maintain flagship outlets.' },
+          { label: 'Beach clubs & day clubs', description: 'Head bartender and bar manager hires that make or break the beverage programme at volume.' },
+          { label: 'Restaurants & cafés', description: 'Owner-operators with thin margins who cannot afford a bad bartender hire.' },
+          { label: 'Villas, private estates & yachts', description: 'Permanent private-bar staff for staffed properties and charter programmes.' },
+          { label: 'Expat/foreign-owned venues', description: 'Owners who cannot legally work the bar themselves and need trustworthy local leadership.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common mistakes venues make',
+        items: [
+          'Hiring from a CV and interview without a practical, timed trial behind a real bar.',
+          'Setting salary bands by guesswork instead of current Bali market data, causing offers to fail or overpay.',
+          'Trying to place a foreign front-line bartender despite Indonesian manpower restrictions.',
+          'Skipping reference checks or accepting written references that are never verified by phone.',
+          'Treating onboarding as day one only instead of following a structured 30/60/90-day plan.'
+        ]
+      },
+      compliance: {
+        title: 'Compliance and lawful placement',
+        paragraphs: [
+          'Indonesian manpower rules do not issue work permits for front-line bartenders or servers, so every candidate we shortlist for bartender, senior bartender, head bartender or bar supervisor roles is an Indonesian national with verified documents. For managerial roles we require valid RPTKA and work KITAS before the candidate reaches your shortlist, and we flag the 4:1 local-to-foreign staffing expectation. The placement is fee-for-service under KBLI 78101 posture; the candidate is employed by you under PKWT/PKWTT, at wages meeting the regency UMK and with BPJS registration guided by our onboarding checklist.',
+          'Candidate data is handled under Indonesian PDP Law with consent before any CV or reference is shared. Every placed candidate holds or is scheduled for Responsible Service of Alcohol training, because KUHP Article 424 makes serving an intoxicated guest a criminal matter for your staff and a licence matter for your venue.'
+        ]
+      },
+      successKpis: {
+        title: 'Permanent recruitment success KPIs',
+        items: [
+          'Shortlist of three qualified candidates within 10 working days in ≥90% of engagements.',
+          '100% of shortlisted candidates have completed a timed practical trial and two verbal references.',
+          'Interview-to-offer conversion ≥50% and offer acceptance ≥80%.',
+          '90-day retention target ≥90%; replacement guarantee claim rate ≤10%.',
+          'Client NPS ≥8/10 at the 90-day follow-up call.'
+        ]
+      },
+      connections: {
+        title: 'How permanent recruitment connects to other MyChef services',
+        paragraphs: [
+          'Recruitment rarely stands alone. While we search, Temporary Bartender Staffing can provide vetted cover so your rota does not suffer; once the hire starts, Bar Staff Training embeds your SOPs and RSA standards into the new team. If the new bar manager inherits an unclear menu or margin problem, Cocktail Menu Development or Bar Costing & Inventory Control create the spec and costing system they need to succeed.',
+          'For venues that repeatedly lose bar leadership, the real fix may be Monthly Bar Management Support rather than another hire, and large pre-opening team builds can be bundled into New Bar Setup or the Complete Bar Performance Programme. Recruitment is therefore the entry point to a stable bar function, not just a single placement.'
+        ]
+      }
+    },
+    galleryImages: [
+      { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-1.webp', alt: 'Bali bartender completing a timed practical trial during a MyChef recruitment assessment' },
+      { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-2.webp', alt: 'Bar manager interviewing a trade-tested candidate with trial scores in a Bali venue' },
+      { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-3.webp', alt: 'Newly placed MyChef bartender receiving onboarding documents and a responsible-service briefing' }
+    ]
   },
   {
     slug: 'new-bar-setup',
@@ -600,7 +663,70 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'Is post-launch support included?', answer: 'Yes — seven days on-site during opening week plus a 30-day post-open review.' }
     ],
     relatedServices: ['cocktail-menu-development', 'permanent-bar-staff-recruitment', 'monthly-bar-management-support'],
-    relatedResources: ['bar-equipment-checklist-bali', 'bar-licensing-bali-guide']
+    relatedResources: ['bar-equipment-checklist-bali', 'bar-licensing-bali-guide'],
+    keywords: {
+      primary: 'bar setup consultant Bali',
+      secondary: ['new bar setup Bali', 'bar opening consultant Bali', 'bar design Bali', 'pre-opening bar consultancy Bali']
+    },
+    expandedSections: {
+      whyBali: {
+        title: 'Why new bar setup matters in Bali',
+        paragraphs: [
+          'Bali is in an opening wave: around a hundred new hotels are expected in 2025-26, plus beach clubs, villa resorts and restaurant bars. Each needs a bar that works from day one, but the island has no shortage of cautionary tales — equipment bought on a supplier\'s commission, untrained staff on opening night, menus priced by gut feel, and stock channels that are not label-edar compliant. A bar setup consultant closes the gap between architectural drawings and a revenue-ready operation.',
+          'Many owners cannot legally work the bar themselves; they must build a local team before the first guest arrives. That makes layout, equipment, SOPs, supplier onboarding and training all interdependent: a badly positioned ice well slows service for the life of the venue, and missing SOPs turn opening-week mistakes into permanent habits. MyChef treats setup as an operating-system build, not just a fit-out checklist.',
+          'The first 30 days set the trajectory. Venues that open with a costed menu, trained staff and licensed suppliers reach the 18-24% pour-cost band faster and avoid the reputational damage of early one-star reviews. Setup is therefore the highest-leverage moment in a bar\'s lifecycle, and the most expensive time to cut corners.'
+        ]
+      },
+      whoFor: {
+        title: 'Venues that benefit from new bar setup',
+        items: [
+          { label: 'Boutique & luxury hotels/resorts', description: 'Pre-opening outlets that need a professional bar programme before the soft launch.' },
+          { label: 'Beach clubs & day clubs', description: 'New-build flagships where speed of service and volume throughput define the season.' },
+          { label: 'Restaurants & cafés adding a bar', description: 'First-time operators with no bar systems and limited back-bar space.' },
+          { label: 'Villas, private estates & yacht charters', description: 'Owners creating a staffed private bar for in-house dining and events.' },
+          { label: 'Expat/foreign-owned venues', description: 'First-time Bali operators who cannot personally run the bar and need local compliance guidance.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common mistakes venues make',
+        items: [
+          'Letting an equipment supplier write the specification around their own inventory rather than menu, volume and workflow.',
+          'Ordering equipment before the scaled bar layout and workflow plan are signed off.',
+          'Opening with staff who have never trained on the menu or SOP library.',
+          'Sourcing opening stock from unlicensed channels to save money and creating compliance exposure.',
+          'Treating licensing as a back-office task instead of sequencing SIUP-MB and NPPBKC applications before opening.'
+        ]
+      },
+      compliance: {
+        title: 'Compliance and licensed openings',
+        paragraphs: [
+          'MyChef never holds the alcohol licences. The venue must hold its own SIUP-MB and, where retailing above 5% ABV, NPPBKC registration. We provide advisory and document checklists, sequence the paperwork, and build label-edar verification into the receiving SOP. Every stock line must carry the correct provincial sticker and excise stamp; arak and brem come only from producers licensed under Pergub Bali 1/2020.',
+          'Responsible service is embedded from day one: the SOP library includes 21+ ID checks, refusal-of-service scripts and an incident register to mitigate KUHP Article 424 exposure. Construction and MEP remain with the client\'s contractors; we review layouts and recommend, but we do not build.'
+        ]
+      },
+      successKpis: {
+        title: 'New bar setup success KPIs',
+        items: [
+          'Soft launch within 10 weeks of kick-off, excluding client-side construction delay.',
+          'Day-30 pour cost trending into the 18-24% target band.',
+          '100% of opening stock sourced from licensed, label-edar-compliant distributors.',
+          'Every opening team member trained and assessed against the SOP library before day one.',
+          'Soft-launch punch list closed within 14 days of opening.'
+        ]
+      },
+      connections: {
+        title: 'How new bar setup connects to other MyChef services',
+        paragraphs: [
+          'New Bar Setup is the natural parent of several MyChef lines. Cocktail Menu Development receives the design intent, price ladder and station capability so the menu is executable from opening week. Permanent Bar Staff Recruitment and Bar Staff Training deliver the team and the SOPs they need before soft launch. Equipment procurement can be executed through Bar Equipment Supply & Rental, and Monthly Bar Management Support picks up the baton from day 31.',
+          'For large multi-outlet openings or owners who want a single accountable contract, the project converts into the Complete Bar Performance Programme, which adds audit, costing, training and managed operations across the first year. Done well, setup becomes the foundation for every subsequent bar decision.'
+        ]
+      }
+    },
+    galleryImages: [
+      { src: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-1.webp', alt: 'New Bali restaurant bar being fitted out before opening under MyChef supervision' },
+      { src: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-2.webp', alt: 'Scaled bar layout plan and equipment specification on a venue desk' },
+      { src: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-3.webp', alt: 'MyChef bar lead coaching opening-week staff behind a newly launched Bali bar' }
+    ]
   },
   {
     slug: 'bar-audit-improvement',
@@ -656,7 +782,70 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'Can the audit fee be credited to follow-on work?', answer: 'Part of the audit fee can be credited against implementation started within 60 days.' }
     ],
     relatedServices: ['bar-costing-inventory-control', 'bar-staff-training', 'complete-bar-performance-programme'],
-    relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-costing-guide-bali']
+    relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-costing-guide-bali'],
+    keywords: {
+      primary: 'bar audit Bali',
+      secondary: ['bar operations audit Bali', 'bar profit audit Bali', 'mystery guest bar Bali', 'bar shrinkage audit Bali']
+    },
+    expandedSections: {
+      whyBali: {
+        title: 'Why a bar audit matters in Bali',
+        paragraphs: [
+          'Bali\'s bar market is a cost-pressure market: arrivals are flat, wages are rising, and beverage margins are being squeezed from both sides. In this environment, invisible losses become existential. Most bars lose 20-25% of inventory to shrinkage, and roughly three in four never measure it. A bar audit turns that invisible loss into a number the owner can act on. Without an independent audit, owners manage by gut feel while the bar silently loses 10-15 points of margin.',
+          'Online reputation is unforgiving. A weak cocktail mention or a complaint about slow, watery drinks travels faster than word-of-mouth ever did. Because Bali\'s guest mix is global and review-sensitive, operational gaps show up publicly before they show up in the P&L. The audit\'s anonymous mystery-serve visit captures the guest experience as data, not anecdote.',
+          'The island\'s supply chain complexity makes compliance part of profitability. Grey-market stock, missing label-edar stickers and excise-stamp gaps are not just legal risks; they distort the true pour cost. A proper audit flags both the financial leak and the compliance exposure in rupiah terms.'
+        ]
+      },
+      whoFor: {
+        title: 'Venues that benefit from a bar audit',
+        items: [
+          { label: 'Restaurants & cafés', description: 'Owner-operators who cannot watch the till every night and suspect margins are drifting.' },
+          { label: 'Beach clubs & day clubs', description: 'High-volume venues receiving complaints about pour integrity or consistency.' },
+          { label: 'Boutique & luxury hotels/resorts', description: 'F&B directors under cost-controller pressure and review-damage risk.' },
+          { label: 'Villa-resorts with staffed bars', description: 'Honesty bars and in-villa setups with no regular stock discipline.' },
+          { label: 'New owners & GMs', description: 'Buyers taking over an existing bar and needing an objective baseline before investment.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common mistakes venues make',
+        items: [
+          'Treating a shrinking margin as a pricing problem before measuring pour cost and variance.',
+          'Relying on anecdotal feedback instead of a structured mystery-guest scorecard.',
+          'Asking the bar manager to audit their own team and outputs.',
+          'Ignoring comp, void and discount patterns that hide systemic loss.',
+          'Starting expensive menu or equipment changes before quantifying the real leak.'
+        ]
+      },
+      compliance: {
+        title: 'Compliance and risk visibility',
+        paragraphs: [
+          'The audit verifies label-edar stickers and excise-stamped stock during the storage review, and flags grey-market findings as compliance risks with rupiah impact. Licensing gaps such as SIUP-MB validity and NPPBKC registration are reported as advisory flags so the venue\'s counsel or accountant can act. The audit also reviews whether responsible-service training records and incident logs are current, because a single KUHP Article 424 incident can turn a profitable month into a legal and reputational crisis. We never promise to fix licences; we make the risk visible.',
+          'The mystery-serve visit observes responsible service: 21+ ID practice and refusal-of-service behaviour under KUHP Article 424. Any serve to a visibly intoxicated guest is reported as a critical legal-risk finding. Staff assessments are developmental, documented and shared only with the owner, respecting privacy and employment-law boundaries.'
+        ]
+      },
+      successKpis: {
+        title: 'Bar audit success KPIs',
+        items: [
+          'Board-ready report delivered within 14 days of the on-site visit; executive briefing within 21 days.',
+          'Every finding carries evidence, a monthly rupiah impact estimate and a named fix owner.',
+          'Mystery-serve scorecard independently second-checked by a second assessor.',
+          'Leak estimate stated as low/expected/high range with assumptions printed, not invented revenue promises.',
+          '≥50% of audits convert to at least one implementation service, and test-count variance stays within 3% of the client\'s next supervised count.'
+        ]
+      },
+      connections: {
+        title: 'How a bar audit connects to other MyChef services',
+        paragraphs: [
+          'Bar Audit & Improvement is designed as the diagnosis before the cure. The default first fix for shrinkage and pour-cost findings is Bar Costing & Inventory Control; people-pillar gaps are closed through Bar Staff Training, and structural vacancies are filled through Permanent Bar Staff Recruitment. If the product pillar shows a broken menu, Cocktail Menu Development re-engineers the list.',
+          'For venues that need the audit findings implemented and sustained, Monthly Bar Management Support provides monthly verification, while the Complete Bar Performance Programme bundles audit, implementation and management into one 12-month contract. Part of the audit fee can be credited against follow-on work started within 60 days.'
+        ]
+      }
+    },
+    galleryImages: [
+      { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-1.webp', alt: 'MyChef auditor reviewing bar inventory records and label-edar stickers at a Bali venue' },
+      { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-2.webp', alt: 'Mystery guest assessing cocktail build quality during an anonymous bar audit in Bali' },
+      { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-3.webp', alt: 'Senior bar consultant presenting a board-ready audit report to a Bali venue owner' }
+    ]
   },
   {
     slug: 'bar-costing-inventory-control',
@@ -713,7 +902,70 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'Do you take rebates from suppliers?', answer: 'No — we never take product rebates; savings are quantified for you.' }
     ],
     relatedServices: ['bar-audit-improvement', 'monthly-bar-management-support', 'cocktail-menu-development'],
-    relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-costing-guide-bali']
+    relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-costing-guide-bali'],
+    keywords: {
+      primary: 'bar costing service Bali',
+      secondary: ['bar inventory control Bali', 'pour cost engineering Bali', 'shrinkage control Bali', 'bar costing consultant Bali']
+    },
+    expandedSections: {
+      whyBali: {
+        title: 'Why bar costing and inventory control matters in Bali',
+        paragraphs: [
+          'Bali\'s beverage economics punish guesswork. With distributor prices, seasonal demand and a labour market that turns over quickly, pour cost drifts unless it is measured. Industry research is consistent: bars typically lose 20-25% of inventory to shrinkage, over-pouring accounts for 40-50% of those losses, and around 75% of bars never measure any of it. In a market where a single weak-review mention can hurt bookings, costing is both a margin tool and a reputation safeguard.',
+          'The island\'s supply chain adds noise. Price anomalies below distributor floor often signal counterfeit or oplosan risk, not a bargain, and arak or brem must come from licensed Balinese producers. Without recipe costing cards and supplier benchmarking, venues cannot tell whether a "good deal" is actually a compliance trap. MyChef builds costing discipline on licensed, label-edar-compliant distributors so savings are real and legal.',
+          'Accountability is hard when there are no numbers. Staff cannot be expected to pour to spec if the spec is not written, and managers cannot investigate variance if counts are informal. A formal system — costing cards, par levels, tolerance bands and a shrinkage investigation protocol — turns opinion into process and protects both the venue and its team.'
+        ]
+      },
+      whoFor: {
+        title: 'Venues that benefit from costing and inventory control',
+        items: [
+          { label: 'Restaurants & cafés', description: 'Owner-operators on thin 3-5% net margins who need every basis point of beverage profit.' },
+          { label: 'Expat/foreign-owned venues', description: 'Owners who cannot watch the till and need a trusted system they can read from abroad.' },
+          { label: 'Beach clubs & day clubs', description: 'High-volume venues where pour integrity and comp/void discipline make or break the month.' },
+          { label: 'Boutique hotels/resorts', description: 'Cost-controller pressure and multi-outlet beverage P&L accountability.' },
+          { label: 'Villa-resorts & private estates', description: 'Honesty bars and staffed bars with irregular stock counts and unexplained shrinkage.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common mistakes venues make',
+        items: [
+          'Guessing pour cost instead of measuring it against actual purchasing and sales data.',
+          'Building recipes by intuition so no two bartenders pour the same serve.',
+          'Letting supplier relationships sit for years without benchmarking against other licensed distributors.',
+          'Running stock counts alone, without a two-person count rule or variance tolerance bands.',
+          'Treating comp and void buttons as harmless instead of writing a signed policy and reviewing patterns weekly.'
+        ]
+      },
+      compliance: {
+        title: 'Compliance and accountable costing',
+        paragraphs: [
+          'Every supplier benchmark and ordering recommendation is restricted to Bali-registered distributors supplying label-edar-stickered stock, and the receiving SOP includes excise-stamp checks. Counterfeit and oplosan risks are treated as red flags, not opportunities. Arak and traditional Balinese products are sourced only from producers licensed under Pergub Bali 1/2020.',
+          'Stock ownership and trading licences — SIUP-MB and NPPBKC where applicable — remain with the venue at all times; MyChef never takes title to alcohol. Accountability measures are drafted within employment-law boundaries, and any wage-deduction scheme is flagged for HR or legal review before adoption, ensuring the system protects the business without creating new liability.'
+        ]
+      },
+      successKpis: {
+        title: 'Bar costing success KPIs',
+        items: [
+          'Pour cost into the 18-24% band within 60 days of go-live.',
+          'Shrinkage below 5% of beverage cost by the second full monthly count.',
+          'Count variance within the <3% green band by close-out on top-20 SKUs.',
+          '100% of menu items on costing cards; zero uncosted POS buttons.',
+          'Supplier benchmark completed across at least three licensed distributors with savings quantified.'
+        ]
+      },
+      connections: {
+        title: 'How costing connects to other MyChef services',
+        paragraphs: [
+          'Bar Costing & Inventory Control often follows Bar Audit & Improvement, which supplies the baseline leak estimate and prioritised fix plan, but it can also stand alone for venues that already know their numbers are broken. Where variance traces to technique or pour discipline, Bar Staff Training closes the gap; where costing cards reveal a structurally unprofitable menu, Cocktail Menu Development re-engineers the list.',
+          'After handover, Monthly Bar Management Support supervises counts and reports variance monthly, while the Complete Bar Performance Programme bundles the control build with audit, menu redevelopment and nine months of management. For venues that need scales, POS hardware or storage, Bar Equipment Supply & Rental completes the tooling.'
+        ]
+      }
+    },
+    galleryImages: [
+      { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-1.webp', alt: 'Bar manager reviewing recipe costing cards and par levels at a Bali bar' },
+      { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-2.webp', alt: 'MyChef consultant supervising a baseline stocktake behind a Bali venue bar' },
+      { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-3.webp', alt: 'Bar team training on variance tolerance bands and count sheets during costing rollout' }
+    ]
   },
   {
     slug: 'bar-equipment-supply-rental',

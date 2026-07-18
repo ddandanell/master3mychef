@@ -1034,7 +1034,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/',
     title: 'Bar Consultant Bali | B2B Bar Services | MyChef',
     description:
-      "Bali's B2B bar consultancy: training, menus, staffing, audits and management for hotels, villas and beach clubs. Training from IDR 2.75M per pax.",
+      "Bali's B2B bar consultancy: training, menus, staffing, audits and management for hotels, villas and beach clubs. Request a quote.",
     canonical: `${SITE}/bar-services/`,
     h1: 'Bar Consultant Bali: The Dedicated Bar-Operations Partner for Your Venue',
     ogImage: '/generated/mychef-bar-services-bali-og-hub.jpg',
@@ -1043,7 +1043,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/bar-staff-training/',
     title: 'Bar Staff Training Bali | Venue Mixology Courses | MyChef',
     description:
-      'On-site bar staff training for Bali hotels, villas and restaurants — basics to advanced mixology. Foundation course from IDR 2.75M per pax.',
+      'On-site bar staff training for Bali hotels, villas and restaurants — basics to advanced mixology. Tailored packages. Request a quote.',
     canonical: `${SITE}/bar-services/bar-staff-training/`,
     h1: 'Bar Staff Training Bali: Build the Team You Can\'t Import',
     ogImage: '/generated/mychef-bar-services-bali-og-bar-staff-training.jpg',
@@ -1052,7 +1052,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/cocktail-menu-development/',
     title: 'Cocktail Menu Development Bali | MyChef Bar Services',
     description:
-      'Profitable, venue-ready cocktail menus with costing, specs and supplier lists. Menu development packages from IDR 25M across Bali.',
+      'Profitable, venue-ready cocktail menus with costing, specs and supplier lists. Custom pricing across Bali. Request a quote.',
     canonical: `${SITE}/bar-services/cocktail-menu-development/`,
     h1: 'Cocktail Menu Development Bali: A Menu Engineered for Margin, Not Just Taste',
     ogImage: '/generated/mychef-bar-services-bali-og-cocktail-menu-development.jpg',
@@ -1061,7 +1061,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/signature-cocktail-creation/',
     title: 'Signature Cocktail Creation Bali | MyChef Bar Services',
     description:
-      'Bespoke signature cocktails that tell your venue\'s story — R&D, tastings and specs included. Signature serves from IDR 2.5M each.',
+      'Bespoke signature cocktails that tell your venue\'s story — R&D, tastings and specs included. Request a quote.',
     canonical: `${SITE}/bar-services/signature-cocktail-creation/`,
     h1: 'Signature Cocktail Creation: The Serve Guests Photograph and Reviewers Name',
     ogImage: '/generated/mychef-bar-services-bali-og-signature-cocktail-creation.jpg',
@@ -1070,7 +1070,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/temporary-bartender-staffing/',
     title: 'Bartender Hire Bali | Temporary Bar Staffing | MyChef',
     description:
-      'Vetted, insured bartenders and barbacks for events, weddings and venue cover across Bali. Event bartenders from IDR 250k per hour.',
+      'Vetted, insured bartenders and barbacks for events, weddings and venue cover across Bali. Request a quote.',
     canonical: `${SITE}/bar-services/temporary-bartender-staffing/`,
     h1: 'Bartender Hire Bali: Vetted Professionals, On Demand, Zero Employment Risk',
     ogImage: '/generated/mychef-bar-services-bali-og-temporary-bartender-staffing.jpg',
@@ -1079,7 +1079,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/permanent-bar-staff-recruitment/',
     title: 'Bar Staff Recruitment Bali | MyChef Bar Services',
     description:
-      'Permanent bartender, head bartender and bar manager placement with trade testing and replacement guarantee. Flat fees from IDR 4M.',
+      'Permanent bartender, head bartender and bar manager placement with trade testing and replacement guarantee. Request a quote.',
     canonical: `${SITE}/bar-services/permanent-bar-staff-recruitment/`,
     h1: 'Bar Staff Recruitment Bali: Stop Gambling on CVs',
     ogImage: '/generated/mychef-bar-services-bali-og-permanent-bar-staff-recruitment.jpg',
@@ -1088,7 +1088,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/new-bar-setup/',
     title: 'New Bar Setup Consultant Bali | MyChef Bar Services',
     description:
-      'Concept-to-launch bar setup: layout, equipment, menu, hiring, SOPs and opening support. Setup packages from IDR 35M.',
+      'Concept-to-launch bar setup: layout, equipment, menu, hiring, SOPs and opening support. Custom packages. Request a quote.',
     canonical: `${SITE}/bar-services/new-bar-setup/`,
     h1: 'Bar Setup Consultant in Bali: Open Once, Open Right',
     ogImage: '/generated/mychef-bar-services-bali-og-new-bar-setup.jpg',
@@ -1097,7 +1097,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/bar-audit-improvement/',
     title: 'Bar Audit Bali | Operations & Profit Audit | MyChef',
     description:
-      'Mystery visits, pour-cost analysis and a fix plan that finds the margin your bar is leaking. Full audits from IDR 16.5M.',
+      'Mystery visits, pour-cost analysis and a fix plan that finds the margin your bar is leaking. Request a quote.',
     canonical: `${SITE}/bar-services/bar-audit-improvement/`,
     h1: 'Bar Audit in Bali: We Quantify the Leak in Rupiah',
     ogImage: '/generated/mychef-bar-services-bali-og-bar-audit-improvement.jpg',
@@ -1106,7 +1106,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/bar-costing-inventory-control/',
     title: 'Bar Costing & Inventory Control Bali | MyChef',
     description:
-      'Pour-cost engineering, inventory SOPs and shrinkage control for Bali bars. Costing projects from IDR 18M with 30-day follow-up.',
+      'Pour-cost engineering, inventory SOPs and shrinkage control for Bali bars. Tailored projects with 30-day follow-up. Request a quote.',
     canonical: `${SITE}/bar-services/bar-costing-inventory-control/`,
     h1: 'Bar Costing Service in Bali: Turn Your Biggest Invisible Loss Into a Managed Number',
     ogImage: '/generated/mychef-bar-services-bali-og-bar-costing-inventory-control.jpg',
@@ -1115,7 +1115,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/bar-equipment-supply-rental/',
     title: 'Bar Equipment Supplier & Rental Bali | MyChef',
     description:
-      'Bar tools, mobile bars, glassware and machines — supplied or rented for venues and events. Mobile bar rental from IDR 2.5M per event.',
+      'Bar tools, mobile bars, glassware and machines — supplied or rented for venues and events. Custom quotes for every event.',
     canonical: `${SITE}/bar-services/bar-equipment-supply-rental/`,
     h1: 'Bar Equipment Rental & Supply in Bali: Buy Right, Hire Right',
     ogImage: '/generated/mychef-bar-services-bali-og-bar-equipment-supply-rental.jpg',
@@ -1124,16 +1124,16 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/monthly-bar-management-support/',
     title: 'Monthly Bar Management Support Bali | MyChef',
     description:
-      'A fractional bar manager for your venue: oversight, stock control, training refreshers and reporting. Retainers from IDR 4.5M per month.',
+      'A fractional bar manager for your venue: oversight, stock control, training refreshers and reporting. Custom monthly retainers.',
     canonical: `${SITE}/bar-services/monthly-bar-management-support/`,
-    h1: 'Outsourced Bar Management in Bali: A Fractional Bar Manager From Rp4.5M/Month',
+    h1: 'Outsourced Bar Management in Bali: A Fractional Bar Manager for Your Venue',
     ogImage: '/generated/mychef-bar-services-bali-og-monthly-bar-management-support.jpg',
   },
   'bar-services-complete-bar-performance-programme': {
     path: '/bar-services/complete-bar-performance-programme/',
     title: 'Bar Performance Programme Bali | MyChef Bar Services',
     description:
-      'One annual programme — audit, costing, training, menu refresh and monthly management — to lift bar profit. From IDR 132M per year.',
+      'One annual programme — audit, costing, training, menu refresh and monthly management — to lift bar profit. Request a quote.',
     canonical: `${SITE}/bar-services/complete-bar-performance-programme/`,
     h1: 'Bar Consulting in Bali: Your Outsourced Beverage Department',
     ogImage: '/generated/mychef-bar-services-bali-og-complete-bar-performance-programme.jpg',
@@ -1169,7 +1169,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/resources/how-much-does-a-bartender-cost-bali/',
     title: 'How Much Does a Bartender Cost in Bali? 2026 Guide | MyChef',
     description:
-      'Real 2026 prices: event bartenders from IDR 250k/hour, packages from IDR 9M. What drives cost, what\'s included and how to budget.',
+      'Bartender cost guide for Bali events: rates, packages, what\'s included and how to budget. Request a custom quote.',
     canonical: `${SITE}/bar-services/resources/how-much-does-a-bartender-cost-bali/`,
     h1: 'How Much Does a Bartender Cost in Bali?',
     ogImage: '/generated/mychef-bar-services-bali-og-how-much-does-a-bartender-cost-bali.jpg',
@@ -1178,7 +1178,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bar-services/resources/bartender-salary-benchmarks-bali/',
     title: 'Bartender Salary & Staffing Costs Bali 2026 | MyChef',
     description:
-      '2026 benchmarks: bartender pay from IDR 3.8M/month, on-costs, and the real maths of in-house hiring vs outsourced bar staffing.',
+      'Bartender salary benchmarks for Bali venues. Understand pay ranges, on-costs and the real maths of in-house vs outsourced staffing. Request a quote.',
     canonical: `${SITE}/bar-services/resources/bartender-salary-benchmarks-bali/`,
     h1: 'Bartender Salaries & Bar Staffing Costs in Bali — 2026',
     ogImage: '/generated/mychef-bar-services-bali-og-bartender-salary-benchmarks-bali.jpg',

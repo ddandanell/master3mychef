@@ -209,6 +209,14 @@ const CorporateGuide = lazy(() => import('./pages/CorporateGuidePage'))
 const StaffingGuide = lazy(() => import('./pages/StaffingGuidePage'))
 const ManagingBooking = lazy(() => import('./pages/ManagingBookingPage'))
 
+// Bar Services pages
+const BarServicesHubPage = lazy(() => import('./pages/BarServicesHubPage'))
+const BarServicePage = lazy(() => import('./pages/BarServicePage'))
+const BarServicesFAQPage = lazy(() => import('./pages/BarServicesFAQPage'))
+const BarServicesContactPage = lazy(() => import('./pages/BarServicesContactPage'))
+const BarServicesResourcesIndexPage = lazy(() => import('./pages/BarServicesResourcesIndexPage'))
+const BarServicesResourcePage = lazy(() => import('./pages/BarServicesResourcePage'))
+
 // Minimal brand-aligned fallback — dark screen with subtle gold pulse
 function PageLoader() {
   return (
@@ -509,6 +517,14 @@ export default function App() {
           <Route path="/help/corporate-guide" element={<CorporateGuide />} />
           <Route path="/help/staffing-guide" element={<StaffingGuide />} />
           <Route path="/help/managing-booking" element={<ManagingBooking />} />
+
+          {/* Bar Services */}
+          <Route path="/bar-services/" element={<BarServicesHubPage />} />
+          <Route path="/bar-services/faq/" element={<BarServicesFAQPage />} />
+          <Route path="/bar-services/contact/" element={<BarServicesContactPage />} />
+          <Route path="/bar-services/resources/" element={<BarServicesResourcesIndexPage />} />
+          <Route path="/bar-services/resources/:slug/" element={<BarServicesResourcePage />} />
+          <Route path="/bar-services/:slug/" element={<BarServicePage />} />
 
           {/* 404 */}
           <Route path="/404" element={<NotFoundPage />} />

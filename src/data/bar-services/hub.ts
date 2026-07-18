@@ -4,7 +4,7 @@ export const BAR_SERVICES_HUB: BarServicesHubData = {
   hero: {
     eyebrow: 'Bar Services for Venues',
     h1: 'Bar Consultant Bali',
-    description: 'The dedicated bar-operations partner for Bali venues: audit, costing, menu development, training, staffing and ongoing management — one accountable team for the life of your bar.',
+    description: 'The team behind Bali\'s private dining standard — now building world-class bar programmes for the island\'s venues.',
     heroImage: '/generated/mychef-bar-services-bali-hero-hub.webp',
     heroAlt: 'Bali villa bar setup with professional bartender preparing drinks at golden hour'
   },
@@ -29,16 +29,17 @@ export const BAR_SERVICES_HUB: BarServicesHubData = {
   whyUs: {
     title: 'Why venues choose MyChef Bar Services',
     items: [
-      { title: 'Dedicated specialist', description: 'Bali has event bartender vendors and generalist consultants. We built the integrated stack — audit, training, staffing, costing and management — as a permanent local B2B service.' },
-      { title: 'Trusted operations base', description: 'MyChef already serves 560+ villas and has delivered 500+ events. The same vetting, scheduling and quality systems now run our bar operations.' },
-      { title: 'Local talent pipeline', description: 'We turn your existing Indonesian team into the bar staff you wish you could hire — and build a pipeline that survives turnover.' }
+      { title: 'The first dedicated specialist', description: 'Bali has event bartender vendors and generalist consultants. We built the integrated stack — audit, training, staffing, costing and management — as a permanent local B2B service.' },
+      { title: 'A trust base you can verify', description: 'MyChef\'s existing villa and event operations run on the same vetting, scheduling and quality systems that now power our bar services.' },
+      { title: 'We grow local talent, not fly-ins', description: 'We turn your existing Indonesian team into the bar staff you wish you could hire — and build a pipeline that survives turnover.' },
+      { title: 'Radical price transparency', description: 'Every service publishes a "from" anchor. You\'ll never wonder what a proposal is hiding.' }
     ]
   },
   process: [
-    { step: 1, title: 'Free bar health call', description: 'You describe the venue and the pain; we tell you honestly whether we can help.' },
-    { step: 2, title: 'Audit & measurement', description: 'We observe service, pour tests, stock records and reviews. You get a written scorecard and fix plan.' },
-    { step: 3, title: 'Prioritised fixes', description: 'Costing controls, menu engineering, training or staffing — sequenced by payback, not by what we would like to sell.' },
-    { step: 4, title: 'Ongoing management', description: 'Monthly oversight keeps the gains locked in, with reporting you can forward to ownership.' }
+    { step: 1, title: 'Diagnose', description: 'We observe service, run pour tests, review stock records and guest feedback. You get a written scorecard and fix plan.' },
+    { step: 2, title: 'Design', description: 'Costing controls, menu engineering, training or staffing — sequenced by payback, not by what we would like to sell.' },
+    { step: 3, title: 'Deliver', description: 'We implement the fixes inside your venue: SOPs, training, spec libraries and systems your team can use from day one.' },
+    { step: 4, title: 'Optimise', description: 'Monthly oversight keeps the gains locked in, with reporting you can forward to ownership.' }
   ],
   proof: {
     title: 'Built on the same standards as Bali\'s best private dining experiences',

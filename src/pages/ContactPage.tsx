@@ -99,10 +99,13 @@ const INITIAL_FORM = {
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [emailStatus, setEmailStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [form, setForm] = useState(INITIAL_FORM)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setEmailStatus('sending')
+
     const lines = [
       ['Service Needed', form.service],
       ['Name', form.name],
@@ -118,6 +121,34 @@ export default function ContactPage() {
     ]
       .filter(([, value]) => value.trim())
       .map(([label, value]) => `${label}: ${value}`)
+
+    // Send email notification to the team via Google SMTP
+    try {
+      await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          form: 'contact',
+          name: form.name || 'Website visitor',
+          email: form.email || 'no-reply@mychef.id',
+          phone: form.whatsapp,
+          subject: `Contact form enquiry from ${form.name || 'website'}`,
+          message: `Hi myCHEF,\n\nI need help with a booking inquiry.\n\n${lines.join('\n')}`,
+          metadata: {
+            'Service Needed': form.service,
+            'Company / Planner': form.company,
+            'Preferred Date(s)': form.dates,
+            'Villa / Venue': form.location,
+            'Group Size': form.guests,
+            'Stay Length / Event Duration': form.duration,
+            'Dietary / Cuisine Notes': form.dietary,
+          },
+        }),
+      })
+      setEmailStatus('sent')
+    } catch {
+      setEmailStatus('error')
+    }
 
     const text = encodeURIComponent(`Hi myCHEF,\n\nI need help with a booking inquiry.\n\n${lines.join('\n')}`)
     trackWhatsAppClick('contact-form')
@@ -302,9 +333,15 @@ export default function ContactPage() {
               <div className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-8">
                 <p className="font-playfair text-2xl mb-2">Message ready in WhatsApp.</p>
                 <p className="text-sm text-[#4A4745] mb-6">Open WhatsApp on your device to hit send. We will reply shortly.</p>
+                {emailStatus === 'sent' && (
+                  <p className="text-sm text-green-700 mb-4">A copy has also been emailed to our team.</p>
+                )}
+                {emailStatus === 'error' && (
+                  <p className="text-sm text-amber-700 mb-4">We could not email a copy automatically — please send your message in WhatsApp and we will have it.</p>
+                )}
                 <button
                   type="button"
-                  onClick={() => { setSubmitted(false); setForm(INITIAL_FORM) }}
+                  onClick={() => { setSubmitted(false); setEmailStatus('idle'); setForm(INITIAL_FORM) }}
                   className="text-xs uppercase tracking-[0.2em] text-[#8A8785] hover:text-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                 >
                   Send another →
@@ -355,9 +392,10 @@ export default function ContactPage() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black text-xs uppercase tracking-[0.25em] font-semibold px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+                  disabled={emailStatus === 'sending'}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black text-xs uppercase tracking-[0.25em] font-semibold px-8 py-4 rounded-full hover:bg-[#D4B43A] disabled:bg-[#C5A028]/60 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
                 >
-                  Send Details via WhatsApp
+                  {emailStatus === 'sending' ? 'Sending...' : 'Send Details via WhatsApp'}
                 </button>
                 <p className="text-xs text-[#8A8785] text-center">Opens WhatsApp with your note pre-filled.</p>
               </form>

@@ -15,6 +15,7 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
     message: '',
     preferredChannel: 'WhatsApp',
   })
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
   const handleServiceToggle = (slug: string) => {
     setFormData((prev) => ({
@@ -25,12 +26,35 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
     }))
   }
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nVenue: ${formData.venue}\nVenue type: ${formData.venueType}\nServices: ${formData.services.join(', ')}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nPreferred channel: ${formData.preferredChannel}\n\nMessage:\n${formData.message}`
-    )
-    window.location.href = `mailto:info@mychef.id?subject=Bar Services Enquiry&body=${body}`
+    setStatus('sending')
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          form: 'bar-services',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: `Bar Services Enquiry from ${formData.name}`,
+          message: formData.message,
+          metadata: {
+            Venue: formData.venue,
+            'Venue type': formData.venueType,
+            Services: formData.services.join(', '),
+            'Preferred reply channel': formData.preferredChannel,
+          },
+        }),
+      })
+
+      if (!response.ok) throw new Error('Email request failed')
+      setStatus('sent')
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -133,11 +157,23 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
               <option>Email</option>
             </select>
           </div>
+          {status === 'sent' && (
+            <div className="p-4 bg-green-50 text-green-800 rounded">
+              Thank you — your enquiry has been sent. We will reply within four business hours.
+            </div>
+          )}
+          {status === 'error' && (
+            <div className="p-4 bg-red-50 text-red-800 rounded">
+              Something went wrong. Please email us directly at{' '}
+              <a href="mailto:bali@mychef.id" className="underline">bali@mychef.id</a>.
+            </div>
+          )}
           <button
             type="submit"
-            className="w-full px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-medium rounded"
+            disabled={status === 'sending'}
+            className="w-full px-6 py-3 bg-amber-500 hover:bg-amber-600 disabled:bg-amber-300 text-black font-medium rounded"
           >
-            Request a Quote
+            {status === 'sending' ? 'Sending...' : 'Request a Quote'}
           </button>
         </form>
       </div>

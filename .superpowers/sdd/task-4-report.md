@@ -1,63 +1,28 @@
-# Task 4 Report: Expand Hub Page Content & Discovery
+# Task 4 Report: Update BarService types to support section images
 
-## Summary
+## Status
 
-Expanded the `/bar-services/` hub page into a canonical discovery page with unique, 1,000+ word body copy, an "All Bar Services" discovery grid, and a gallery block.
+DONE
 
-## Files changed
+## What changed
 
-- `src/data/bar-services/types.ts`
-  - Extended `BarServicesHubData.expandedCopy` from a single `{ title, paragraphs }` block to a structured object with `intro`, `whyNow`, `whyMyChef`, `howWeWork`, and `cta` sections.
-- `src/data/bar-services/hub.ts`
-  - Added `expandedCopy` with five sections totalling **1,165 words**.
-  - Added `galleryImages` with three image assets and alt text.
-  - Kept the existing `groups` array (Consulting, Staffing, Management, Flagship).
-- `src/pages/BarServicesHubPage.tsx`
-  - Imported and rendered `BarServiceGallery`.
-  - Rendered the new `expandedCopy` sections between the hero and service discovery grid.
-  - Converted the existing service-groups section into the canonical "All Bar Services" discovery grid.
-  - Added FAQ, Contact, and Resources utility cards under a "Help & guidance" group.
+- Added optional section image fields to the `BarService` interface in `src/data/bar-services/types.ts`:
+  - `problemImage?`, `problemAlt?`
+  - `deliverablesImage?`, `deliverablesAlt?`
+  - `processImage?`, `processAlt?`
+  - `proofImage?`, `proofAlt?`
+- Kept `galleryImages` unchanged for backward compatibility and added a `@deprecated` JSDoc comment directing future use to the section image fields.
+- Expanded-section images are intentionally left for Task 5.
 
-## Word-count verification
+## Commits made
 
-Verified by extracting all paragraph strings from `expandedCopy` in `src/data/bar-services/hub.ts`:
+- `abfc3d81` — types: section image fields on BarService
 
-| Section      | Words | Target | Status |
-|--------------|-------|--------|--------|
-| intro        | 284   | ≥250   | ✓      |
-| whyNow       | 256   | ≥200   | ✓      |
-| whyMyChef    | 242   | ≥200   | ✓      |
-| howWeWork    | 236   | ≥200   | ✓      |
-| cta          | 147   | ≥100   | ✓      |
-| **Total**    | **1,165** | **≥1,000** | **✓** |
+## Verification
 
-## Discovery grid coverage
+- `npx tsc --noEmit` passed with no errors.
+- Pre-commit checks passed (AI skills, secret scan, branch safety).
 
-The discovery grid surfaces:
+## Concerns
 
-- **Consulting (5):** Bar Audit & Improvement, Bar Costing & Inventory Control, Cocktail Menu Development, Signature Cocktail Creation, New Bar Setup
-- **Staffing (3):** Temporary Bartender Staffing, Permanent Bar Staff Recruitment, Bar Equipment Supply & Rental
-- **Management (2):** Bar Staff Training, Monthly Bar Management Support
-- **Flagship (1):** Complete Bar Performance Programme
-- **Help & guidance (3):** FAQ, Contact, Resources
-
-Total: **11 services + FAQ + Contact + Resources** ✓
-
-## Verification commands
-
-```bash
-npx eslint src/pages/BarServicesHubPage.tsx src/data/bar-services/hub.ts src/data/bar-services/types.ts
-# → passed
-
-npx tsc --noEmit
-# → passed
-
-pnpm build
-# → passed (281/281 routes prerendered)
-```
-
-## Notes
-
-- Copy was written from the blueprint themes but rewritten and expanded to be unique to the hub page.
-- The primary keyword "bar consultant Bali" is present in the H1 and the first paragraph of the expanded copy.
-- Gallery images reuse existing generated assets already validated by the build pipeline.
+None.

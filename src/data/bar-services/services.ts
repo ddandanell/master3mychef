@@ -55,10 +55,12 @@ export const BAR_SERVICES: BarService[] = [
       ]
     },
     faqs: [
-      { question: 'How long is a typical training programme?', answer: 'Most programmes run 1–3 days depending on team size and scope. We tailor the length to your needs.' },
-      { question: 'Can you train existing staff or only new hires?', answer: 'Both. We can upskill current teams and create onboarding programmes for new staff.' },
-      { question: 'Do you provide training materials?', answer: 'Yes — recipe cards, checklists, and SOPs are included so knowledge stays in the business.' },
-      { question: 'Is the training conducted in English or Bahasa Indonesia?', answer: 'We deliver in English with Bahasa Indonesia support where needed.' }
+      { question: 'Who is Bar Staff Training designed for?', answer: 'It is designed for hotels, beach clubs, restaurants, villas and expat-owned venues in Bali that employ Indonesian bar teams and need consistent service standards. Whether you are pre-opening, recovering from high turnover or upgrading an existing team, the programme is built around your venue type, volume and guest expectations.' },
+      { question: 'What topics and materials are included?', answer: 'The programme covers practical bartending skills, measured pouring, cocktail builds, speed of service, guest interaction, hygiene, and Responsible Service of Alcohol aligned to Indonesian law. Every participant receives recipe cards, checklists and SOPs so the knowledge stays in the business after we leave.' },
+      { question: 'How long does a typical training programme run?', answer: 'Most programmes run between one and three days, depending on team size, starting ability and the scope you choose. We begin with a skills assessment and build a tailored schedule so your team is not pulled off the floor any longer than necessary.' },
+      { question: 'How is the programme priced and quoted?', answer: 'Pricing is based on the number of participants, the number of training days, and any custom modules such as train-the-trainer or BNSP assessment preparation. We provide a fixed written quote after the initial venue briefing so there are no surprise charges.' },
+      { question: 'Can you train existing staff as well as new hires?', answer: 'Yes. We run upskilling programmes for current teams and onboarding tracks for new joiners. The content is always adapted to your live menu and equipment so both groups learn practical skills they can use on their very next shift in your venue.' },
+      { question: 'How do we get started?', answer: 'Send us a WhatsApp or email with your venue name, team size and the biggest challenge you are facing. We will arrange a short briefing, conduct a skills assessment, and propose a tailored training plan with a fixed quote, available dates and clear outcomes.' }
     ],
     relatedServices: ['temporary-bartender-staffing', 'bar-audit-improvement', 'monthly-bar-management-support'],
     relatedResources: ['how-much-does-a-bartender-cost-bali', 'how-many-bartenders-per-guest'],
@@ -182,10 +184,12 @@ export const BAR_SERVICES: BarService[] = [
       ]
     },
     faqs: [
-      { question: 'How long does menu development take?', answer: 'A typical single-outlet menu runs 3–4 weeks from discovery to handover.' },
-      { question: 'Do you use our existing suppliers?', answer: 'Yes — costing is built against your actual supplier prices.' },
-      { question: 'Is staff training included?', answer: 'Yes. Every bartender is trained to execute every drink blind to spec before launch.' },
-      { question: 'Who owns the recipes after launch?', answer: 'Recipe IP transfers to you on final payment.' }
+      { question: 'Who is Cocktail Menu Development for?', answer: 'It is for Bali hotels, beach clubs, restaurants, villas and yacht charters that need a costed, trainable cocktail list rather than a pretty but unprofitable collection of drinks. The service suits new openings, seasonal refreshes and venues that suspect their current menu is silently eroding margin.' },
+      { question: 'What is included in the menu development process?', answer: 'You receive a guest-profile and architecture brief, a full spirit and ingredient audit, recipe engineering and costing, batch and prep plans, photo-illustrated spec sheets, sell-price recommendations, team training before launch, and a two-week post-launch feedback loop with agreed adjustments and quick fixes.' },
+      { question: 'How long does menu development take from start to launch?', answer: 'A typical single-outlet menu takes three to four weeks from discovery to final handover. Larger venues, multi-outlet rollouts or menus requiring extensive local-ingredient sourcing can extend this timeline, and we will confirm an exact schedule in the written proposal before work starts.' },
+      { question: 'How do you price menu development?', answer: 'Fees are based on the number of drinks, outlet count, complexity of sourcing, and whether training and photography are bundled. After the discovery call we issue a fixed proposal with payment milestones tied to architecture sign-off, recipe handover and launch training completion.' },
+      { question: 'Do you use our existing suppliers and cost against them?', answer: 'Yes. We cost every drink against your actual supplier invoices and current pricing, not generic market assumptions. If better pricing or quality is available from licensed distributors, we flag the option, but the final purchasing decision always sits with you.' },
+      { question: 'How do we start the menu development process?', answer: 'Message us through WhatsApp with your venue type, current menu size and what you want to fix. We will schedule a discovery call, review your concept, guest profile and price band, then send a fixed proposal and project timeline for your approval.' }
     ],
     relatedServices: ['signature-cocktail-creation', 'bar-staff-training', 'permanent-bar-staff-recruitment'],
     relatedResources: ['how-to-price-cocktails-bali', 'bar-menu-engineering-bali'],
@@ -311,10 +315,12 @@ export const BAR_SERVICES: BarService[] = [
       ]
     },
     faqs: [
-      { question: 'Can you create a serve just for one event?', answer: 'Yes — event-exclusive serves are designed for batch execution and a memorable table ritual.' },
-      { question: 'How long does it take?', answer: 'A single hero serve typically takes 3–4 weeks from story workshop to handover.' },
-      { question: 'Is photography included?', answer: 'Yes — professional photography of each final serve is part of the handover.' },
-      { question: 'Do we own the recipe?', answer: 'Recipe IP transfers to you on final payment.' }
+      { question: 'Who should invest in Signature Cocktail Creation?', answer: 'The service is ideal for Bali beach clubs, luxury hotels, restaurants, villas, private estates and event organisers that want a named, story-driven serve guests remember and photograph. It is especially valuable for launches, weddings and venues competing on differentiation rather than discounting.' },
+      { question: 'What is included in the signature creation process?', answer: 'We run a brand story workshop, present three written concept directions, develop and taste recipes with your team, refine the chosen serve through two rounds, lock the serve ritual, produce professional photography, and hand over full specs, menu story cards and recipe IP.' },
+      { question: 'How long does it take to create a signature cocktail?', answer: 'A single hero serve typically takes three to four weeks from story workshop to handover. A three-serve collection or event-exclusive batch serve may take five to six weeks, depending on the number of refinement rounds and tasting panels you require.' },
+      { question: 'How is Signature Cocktail Creation priced?', answer: 'Pricing depends on the number of serves, complexity of ingredients, batch requirements and whether professional photography is included. We quote a fixed fee after the story workshop so the scope, deliverables and payment milestones are clear before any development begins.' },
+      { question: 'Can you create a serve for a single event or wedding?', answer: 'Yes. Event-exclusive serves are designed for reliable batch execution and a memorable table ritual, so they can be poured consistently by any trained bartender during high-pressure events such as weddings, brand launches and large-scale milestone private celebrations across your full guest list.' },
+      { question: 'How do we get started?', answer: 'Send us a brief description of your venue or event, the story you want the serve to tell, and your target launch date. We will arrange a story workshop, draft concept directions, and provide a fixed quote, development timeline and tasting schedule.' }
     ],
     relatedServices: ['cocktail-menu-development', 'temporary-bartender-staffing', 'bar-staff-training'],
     relatedResources: ['how-to-create-signature-cocktail-bali', 'wedding-bar-service-bali'],
@@ -437,10 +443,12 @@ export const BAR_SERVICES: BarService[] = [
       ]
     },
     faqs: [
-      { question: 'How much notice do you need?', answer: '48+ hours is preferred; 2–4 weeks ahead for peak season and weddings.' },
-      { question: 'Are staff legally employed by MyChef?', answer: 'Yes — we carry employer obligations, contracts, wages and BPJS registration.' },
-      { question: 'Do staff arrive in uniform?', answer: 'Yes — uniform to MyChef standard or your dress code, plus a professional toolkit.' },
-      { question: 'What happens if someone does not show up?', answer: 'A standby pool is held for every confirmed block; no-shows are replaced within 90 minutes or the fee is waived.' }
+      { question: 'Who can use Temporary Bartender Staffing?', answer: 'The service is for hotels, beach clubs, restaurants, villas, event organisers and private estates in Bali that need reliable bar cover for events, seasonal spikes, leave gaps or emergency no-shows. It is also used by wedding planners and corporate organisers who cannot afford a freelancer gamble.' },
+      { question: 'What is included in a staffing booking?', answer: 'Every booking includes trade-tested bartenders and barbacks, a pre-shift briefing pack tailored to your menu and venue, uniform and professional toolkit, backup standby pool for confirmed blocks, a MyChef supervisor on crews of four or more, and full public liability insurance.' },
+      { question: 'How much notice do you need?', answer: 'We prefer forty-eight hours notice for standard shifts and two to four weeks for peak-season events, weddings and large crews. Last-minute requests are accepted whenever pool availability allows, and we will confirm or decline within four business hours of your request.' },
+      { question: 'How is temporary staffing priced?', answer: 'Pricing is per shift, per role, based on hours, skill tier and whether a supervisor is required. Events outside central Bali or requiring overnight accommodation may carry a travel supplement. You receive a written quote before any booking is confirmed.' },
+      { question: 'Are staff legally employed by MyChef?', answer: 'Yes. Every deployed bartender and barback is employed by MyChef under Indonesian outsourcing law. We carry the contracts, wages, BPJS registration and employer obligations, so you receive a single clean invoice without any co-employment or outsourcing-law risk to your venue.' },
+      { question: 'How do we book temporary staff?', answer: 'Send us the date, venue, start time, expected guest count, roles needed and any dress-code requirements. We will match candidates from the vetted pool, share profiles for your approval, and confirm the booking with a detailed shift brief and invoice.' }
     ],
     relatedServices: ['signature-cocktail-creation', 'permanent-bar-staff-recruitment', 'bar-staff-training'],
     relatedResources: ['how-much-does-a-bartender-cost-bali', 'how-many-bartenders-per-guest'],
@@ -565,10 +573,12 @@ export const BAR_SERVICES: BarService[] = [
       ]
     },
     faqs: [
-      { question: 'How quickly can you provide candidates?', answer: 'A shortlist of three within 10 working days in most engagements.' },
-      { question: 'What roles do you place?', answer: 'Bartenders, senior bartenders, head bartenders, bar supervisors and bar managers.' },
-      { question: 'What does the replacement guarantee cover?', answer: 'If the hire leaves or is dismissed for performance within 90 days, we replace them once at no extra fee.' },
-      { question: 'Can foreign bartenders be placed?', answer: 'Front-line bar roles are Indonesian-only under current manpower rules; we screen accordingly.' }
+      { question: 'Who is Permanent Bar Staff Recruitment for?', answer: 'The service is for Bali hotels, beach clubs, restaurants, villa operators and expat-owned venues that need permanent bartenders, senior bartenders, head bartenders, bar supervisors or bar managers. It is especially useful when internal candidates lack practical skill or when a critical leadership seat keeps falling vacant.' },
+      { question: 'What does the recruitment service include?', answer: 'We write the role specification, benchmark salary against current Bali market data, run a three-channel search, screen and conduct timed practical trials, take two verbal references, shortlist three candidates within ten working days, manage the offer, and provide a ninety-day replacement guarantee.' },
+      { question: 'How quickly can you provide candidates?', answer: 'We typically deliver a shortlist of three qualified candidates within ten working days of the intake briefing. Roles requiring rare senior leadership or bilingual skills may take longer, and we will set honest expectations and a revised timeline during the initial briefing.' },
+      { question: 'How is recruitment priced?', answer: 'We charge a placement fee calculated as a percentage of the candidate\'s first-year fixed remuneration, payable in stages tied to shortlist delivery, start date and completion of the guarantee period. Replacement within ninety days is included at no extra fee.' },
+      { question: 'Can foreign bartenders be placed?', answer: 'No. Indonesian manpower rules do not issue work permits for front-line bartenders, servers or bar supervisors. We only shortlist Indonesian nationals for operational roles and verify valid RPTKA and work KITAS for any rare managerial foreign candidate before introduction to you.' },
+      { question: 'How do we start the recruitment process?', answer: 'Contact us with the role title, venue location, salary band and start date. We will run a structured intake, confirm the search plan and timeline, and begin sourcing from our talent pool, active market search and industry referral network immediately.' }
     ],
     relatedServices: ['temporary-bartender-staffing', 'bar-staff-training', 'cocktail-menu-development'],
     relatedResources: ['how-much-does-a-bartender-cost-bali', 'hiring-a-bar-manager-bali'],
@@ -693,10 +703,12 @@ export const BAR_SERVICES: BarService[] = [
       ]
     },
     faqs: [
-      { question: 'How long does a new bar setup take?', answer: 'Typically 6–10 weeks from kick-off to soft launch, depending on construction progress.' },
-      { question: 'Do you hold the liquor licence?', answer: 'No — you hold the SIUP-MB and NPPBKC. We advise on sequencing and paperwork only.' },
-      { question: 'Who buys the equipment?', answer: 'You pay suppliers directly; we spec, quote and supervise installation and commissioning.' },
-      { question: 'Is post-launch support included?', answer: 'Yes — seven days on-site during opening week plus a 30-day post-open review.' }
+      { question: 'Who should use New Bar Setup?', answer: 'The service is for new hotels, beach clubs, restaurants, villas and private estates in Bali that are building or refreshing a bar, as well as first-time expat operators who cannot run the bar themselves. It is also valuable for restaurants adding a bar for the first time.' },
+      { question: 'What is included in a new bar setup?', answer: 'We deliver a feasibility note, concept positioning, scaled bar layout, workflow design, equipment specification with three written quotes, licensed supplier onboarding, a full SOP library, licensing advisory, seven days of on-site soft-launch support and a thirty-day post-open review with full handover.' },
+      { question: 'How long does a new bar setup take?', answer: 'Typically six to ten weeks from kick-off to soft launch, depending on construction progress, supplier lead times and how quickly decisions are made. We keep a critical-path tracker and flag client-side delays so the timeline stays transparent and achievable for everyone involved.' },
+      { question: 'How is the setup service priced?', answer: 'Fees are scoped by venue size, outlet count, menu complexity and the level of on-site support required. We issue a fixed proposal after the site visit and concept workshop, with milestones tied to layout sign-off, procurement, training and opening-week support.' },
+      { question: 'Who buys the equipment and holds the licences?', answer: 'You pay suppliers directly and hold your own SIUP-MB and NPPBKC licences. We advise on specification, quote comparison, installation supervision and licensing paperwork, but we never take title to equipment, stock or act as the licence holder for your venue.' },
+      { question: 'How do we get started?', answer: 'Send us the venue address, target opening date, concept description and any architectural drawings. We will conduct a site visit, run a concept workshop, and issue a fixed proposal, project plan and clear next steps before any work begins on your project.' }
     ],
     relatedServices: ['cocktail-menu-development', 'permanent-bar-staff-recruitment', 'monthly-bar-management-support'],
     relatedResources: ['bar-equipment-checklist-bali', 'bar-licensing-bali-guide'],
@@ -818,10 +830,12 @@ export const BAR_SERVICES: BarService[] = [
       ]
     },
     faqs: [
-      { question: 'Will the audit disrupt service?', answer: 'No — fieldwork is designed to run without operational downtime.' },
-      { question: 'Is our data kept confidential?', answer: 'Yes — all POS, purchasing and stock data is handled under strict confidentiality.' },
-      { question: 'Is there an express audit option?', answer: 'Yes — an express option is available on enquiry.' },
-      { question: 'Can the audit fee be credited to follow-on work?', answer: 'Part of the audit fee can be credited against implementation started within 60 days.' }
+      { question: 'Who should commission a bar audit?', answer: 'The audit is for Bali venue owners, GMs and F&B directors who suspect their bar is losing margin but cannot pinpoint where. It suits restaurants, beach clubs, hotels, villa-resorts and new buyers who want an objective baseline before investing in changes.' },
+      { question: 'What does the audit include?', answer: 'We deliver a four-pillar assessment covering product, people, process and profit, an anonymous mystery-serve visit, quantified leak estimates in monthly rupiah, compliance flags for label-edar and licensing gaps, and a prioritised ninety-day fix plan with named owners and realistic timelines.' },
+      { question: 'Will the audit disrupt service?', answer: 'No. Fieldwork is designed to run alongside normal operations, with a mystery visit and two announced on-site days. We observe, conduct spot counts and pour tests without closing stations, and we brief your team in advance so service continues smoothly.' },
+      { question: 'How is the audit priced?', answer: 'Pricing is based on outlet size, number of bars, data complexity and whether you choose the standard or express report option. A portion of the audit fee can be credited against implementation work started within sixty days of report delivery.' },
+      { question: 'Is our data kept confidential?', answer: 'Yes. All POS, purchasing, stock and roster data is handled under strict confidentiality and used only for the audit. Reports are shared only with the owner or designated leadership, and staff assessments are developmental, documented and confidential rather than disciplinary.' },
+      { question: 'How do we book an audit?', answer: 'Message us with your venue name, number of bars, approximate monthly beverage revenue and what you suspect is going wrong. We will confirm scope, request the documents we need, and schedule fieldwork with a fixed fee and report delivery date.' }
     ],
     relatedServices: ['bar-costing-inventory-control', 'bar-staff-training', 'complete-bar-performance-programme'],
     relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-costing-guide-bali'],
@@ -944,10 +958,12 @@ export const BAR_SERVICES: BarService[] = [
       ]
     },
     faqs: [
-      { question: 'Do we need a specific POS system?', answer: 'No — the process works with most POS setups; maturity affects speed but not feasibility.' },
-      { question: 'How long until we see results?', answer: 'Initial improvement is usually visible by week 6, with target band typically reached within 60 days.' },
-      { question: 'Is team training included?', answer: 'Yes — a full team session covers why the system exists and how counts run.' },
-      { question: 'Do you take rebates from suppliers?', answer: 'No — we never take product rebates; savings are quantified for you.' }
+      { question: 'Who needs Bar Costing & Inventory Control?', answer: 'The service is for Bali restaurants, beach clubs, hotels, villas and expat-owned venues that do not know their true pour cost, suffer unexplained shrinkage, or want to hold a high-turnover team accountable with clear numbers rather than gut feel alone.' },
+      { question: 'What is included in the costing build?', answer: 'We conduct a supervised baseline stocktake, build recipe costing cards for every menu item, set par levels and ordering calendars, define variance tolerance bands, write a shrinkage investigation protocol, benchmark at least three licensed suppliers, and train the team on the new system.' },
+      { question: 'How long until we see results?', answer: 'Initial improvement is usually visible by week six, with pour cost typically reaching the eighteen to twenty-four percent target band within sixty days. Variance tolerance bands and monthly count discipline then keep the numbers stable long after our handover to your team.' },
+      { question: 'Do we need a specific POS system?', answer: 'No. The process works with most POS setups, including manual systems and spreadsheet-based records. More mature POS data lets us move faster, but we can build costing cards and count discipline even where reports are currently extracted manually from spreadsheets or tills.' },
+      { question: 'How is the service priced?', answer: 'Fees are scoped by outlet size, number of menu items, stock complexity and whether you need us on-site for the run-in counts. We quote a fixed implementation fee after reviewing your POS and purchasing data, with no product rebates or hidden commissions.' },
+      { question: 'How do we get started?', answer: 'Send us your venue details, current menu size and a description of your biggest inventory or margin challenge. We will review your POS and purchasing data, conduct a baseline stocktake, and submit a fixed proposal with a clear implementation timeline and expected outcomes.' }
     ],
     relatedServices: ['bar-audit-improvement', 'monthly-bar-management-support', 'cocktail-menu-development'],
     relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-costing-guide-bali'],
@@ -1071,10 +1087,12 @@ export const BAR_SERVICES: BarService[] = [
       ]
     },
     faqs: [
-      { question: 'What areas do you deliver to?', answer: 'We offer zone-based delivery windows across Bali.' },
-      { question: 'How are breakages handled?', answer: 'Breakages are logged with photo evidence and priced against a pre-agreed schedule.' },
-      { question: 'Is there a markup on equipment supply?', answer: 'No hidden commissions — service fee is disclosed upfront and you pay suppliers directly.' },
-      { question: 'Can you supply alcohol with the rental?', answer: 'No — all hires are dry-hire / BYOB so you remain compliant with your own licences.' }
+      { question: 'Who can use Bar Equipment Supply & Rental?', answer: 'The service is for Bali hotels, beach clubs, restaurants, wedding organisers, villa managers, yacht charters and private estates that need to buy bar equipment or rent mobile bars, glassware and bartender kits for events, renovations, pop-up activations and temporary bar infrastructure.' },
+      { question: 'What is included in a supply or rental booking?', answer: 'Supply includes an itemised equipment specification matched to your menu and volume, three written supplier quotes, order tracking and on-site commissioning by our team. Rental includes delivery, setup, collection, inventory checklists, polished, function-tested equipment, zone-based delivery windows and photo-evidenced breakage logging.' },
+      { question: 'What areas do you deliver to?', answer: 'We offer zone-based delivery windows across Bali, from South Bali hubs such as Seminyak, Canggu and Uluwatu to Ubud and surrounding regencies. Remote areas or events requiring ferry logistics may need additional lead time and a modest travel supplement on top.' },
+      { question: 'How are supply and rental priced?', answer: 'Supply is priced through a disclosed service fee with you paying suppliers directly. Rental is priced per item per day, with package rates for multi-day events and delivery fees based on your zone. All quotes are issued in writing before confirmation.' },
+      { question: 'Can you supply alcohol with the rental?', answer: 'No. All hires are dry-hire and BYOB so you remain the licensed owner of the beverages. This keeps your event compliant with SIUP-MB and NPPBKC rules and avoids the licensing and legal exposure of wet-hire alcohol supply at your event.' },
+      { question: 'How do we book equipment or request a quote?', answer: 'Send us the event date, venue location, estimated guest count, menu style and whether you need supply, rental or both. We will confirm availability, issue a written quote, and arrange delivery, setup, collection or supplier order tracking for your booking.' }
     ],
     relatedServices: ['temporary-bartender-staffing', 'new-bar-setup', 'signature-cocktail-creation'],
     relatedResources: ['bar-equipment-checklist-bali', 'mobile-bar-rental-bali'],
@@ -1197,10 +1215,12 @@ export const BAR_SERVICES: BarService[] = [
       ]
     },
     faqs: [
-      { question: 'Is there a minimum contract length?', answer: 'Six-month minimum, then monthly rolling — long enough to prove the numbers, short enough to stay honest.' },
-      { question: 'How are the two visits scheduled?', answer: 'The visit calendar is fixed at onboarding and adjusted around your operational needs.' },
-      { question: 'Do you need access to our POS?', answer: 'Yes — POS and stock-record access is set during onboarding so we can compute variance and sales mix.' },
-      { question: 'What venue sizes do you support?', answer: 'Three tiers by venue size: Essential, Professional and Premium.' }
+      { question: 'Who is Monthly Bar Management Support for?', answer: 'The service is for Bali restaurants, hotels, beach clubs, villa-management companies and expat-owned venues that need senior bar leadership without the cost and risk of a full-time bar manager. It is ideal when a manager seat is vacant or the owner cannot watch the bar daily.' },
+      { question: 'What is included each month?', answer: 'Each month includes two scheduled site visits, a supervised stocktake, supplier and ordering oversight with price-drift flagging, one rolling training refresher, a one-page owner KPI report, a WhatsApp hotline with escalation, and optional quarterly seasonal menu updates based on sales data.' },
+      { question: 'Is there a minimum contract length?', answer: 'Yes, there is a six-month minimum commitment, then monthly rolling terms after that initial period. The six-month minimum is long enough to prove the numbers and embed habits, while the rolling terms keep both sides accountable for ongoing value and continuous improvement.' },
+      { question: 'How is the monthly retainer priced?', answer: 'Pricing follows three tiers by venue size and complexity: Essential, Professional and Premium. The retainer is a fixed monthly fee agreed at onboarding, and it is typically a fraction of the fully loaded cost of hiring a full-time bar manager in Bali.' },
+      { question: 'Do you need access to our POS?', answer: 'Yes. POS and stock-record access is agreed during onboarding so we can compute variance, sales mix and pour cost accurately each month. We treat the data as confidential and report only to the owner or nominated leadership team every month.' },
+      { question: 'How do we start?', answer: 'Contact us with your venue size, current bar setup and the biggest problem you want solved. We will run a baseline review, agree KPI targets, fix the visit calendar, and issue a fixed monthly retainer proposal for a six-month initial term.' }
     ],
     relatedServices: ['bar-costing-inventory-control', 'bar-staff-training', 'complete-bar-performance-programme'],
     relatedResources: ['hiring-a-bar-manager-bali', 'bar-costing-guide-bali'],
@@ -1321,10 +1341,12 @@ export const BAR_SERVICES: BarService[] = [
       ]
     },
     faqs: [
-      { question: 'Who is this programme for?', answer: 'Boutique and luxury resorts, beach clubs, villa portfolios, restaurant groups and owners who want the whole bar function handled.' },
-      { question: 'Can it cover multiple outlets?', answer: 'Yes — pricing is scoped to outlets and baseline condition.' },
-      { question: 'What do we have to commit to?', answer: 'You commit to implementing audit findings, sponsor at owner/GM level and grant POS and data access.' },
-      { question: 'Do you promise revenue or review improvements?', answer: 'No — we commit to process, measurement and agreed improvement targets, not invented revenue promises.' }
+      { question: 'Who is the Complete Bar Performance Programme for?', answer: 'It is for boutique and luxury resorts, beach clubs, villa-management portfolios, restaurant groups and expat-owned venues in Bali that want the entire bar function transformed under one accountable contract rather than patched with disconnected one-off fixes over many years of operation.' },
+      { question: 'What is included in the programme?', answer: 'The programme includes a full four-pillar diagnostic audit, a costing and inventory-control build, full-team training, cocktail menu redevelopment, nine months of managed operations, quarterly re-audit scoring, a KPI dashboard and a month-twelve annual review with a full rupiah impact summary.' },
+      { question: 'How long is the programme?', answer: 'It is a twelve-month engagement in total. The first three months focus on diagnosis, control and training, followed by menu redevelopment and nine months of monthly management, verification and quarterly re-scoring against the original month-one baseline score and KPI targets.' },
+      { question: 'How is the programme priced?', answer: 'Pricing is scoped by outlets, baseline condition, menu size and the level of on-site management required. We issue a fixed annual proposal with payment milestones tied to audit delivery, control build, menu launch and the four quarterly reviews throughout the year.' },
+      { question: 'Can it cover multiple outlets?', answer: 'Yes. Pricing and resourcing are scoped to the number of outlets and their baseline condition. Multi-outlet programmes include standardised reporting so owners and GMs can compare outlet performance across the portfolio in one dashboard and one unified set of KPIs.' },
+      { question: 'How do we start?', answer: 'Send us an overview of your venue or group, current bar challenges and your target outcomes. We will conduct a discovery call, run a high-level diagnostic, and submit a fixed annual proposal with a twelve-month roadmap, success metrics and clear milestones.' }
     ],
     relatedServices: ['bar-audit-improvement', 'monthly-bar-management-support', 'bar-staff-training'],
     relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-menu-engineering-bali'],

@@ -7,6 +7,8 @@ import { LANDING_PAGES } from './content/landingPages'
 import { GUIDES } from './content/guides'
 import { BLOG_POSTS } from './content/blogPosts'
 import { JOURNAL_POSTS } from './content/journalPosts'
+import { BAR_SERVICES, BAR_RESOURCES } from './bar-services'
+import { PAGE_META } from './page-meta'
 
 // Re-export the (content-free) metadata arrays so existing importers of
 // `@/data/sitemap` keep working. Article bodies live in ./content/articleContent.
@@ -156,6 +158,60 @@ export function buildSitemap(): SitemapEntry[] {
     }))
   )
 
+  // Bar Services pages
+  const barServicesPages: SitemapEntry[] = [
+    {
+      path: '/bar-services/',
+      type: 'info',
+      title: PAGE_META['bar-services-hub'].title,
+      description: PAGE_META['bar-services-hub'].description,
+      priority: 0.9,
+      changefreq: 'weekly',
+    },
+    {
+      path: '/bar-services/faq/',
+      type: 'info',
+      title: PAGE_META['bar-services-faq'].title,
+      description: PAGE_META['bar-services-faq'].description,
+      priority: 0.7,
+      changefreq: 'monthly',
+    },
+    {
+      path: '/bar-services/contact/',
+      type: 'info',
+      title: PAGE_META['bar-services-contact'].title,
+      description: PAGE_META['bar-services-contact'].description,
+      priority: 0.6,
+      changefreq: 'monthly',
+    },
+    {
+      path: '/bar-services/resources/',
+      type: 'info',
+      title: PAGE_META['bar-services-resources'].title,
+      description: PAGE_META['bar-services-resources'].description,
+      priority: 0.8,
+      changefreq: 'weekly',
+    },
+    ...BAR_SERVICES.map((s) => ({
+      path: s.route,
+      type: 'service' as const,
+      title: PAGE_META[s.metaKey].title,
+      description: PAGE_META[s.metaKey].description,
+      priority: 0.8,
+      changefreq: 'monthly' as const,
+      slug: s.slug,
+    })),
+    ...BAR_RESOURCES.map((r) => ({
+      path: r.route,
+      type: 'guide' as const,
+      title: PAGE_META[r.metaKey].title,
+      description: PAGE_META[r.metaKey].description,
+      priority: 0.8,
+      changefreq: 'monthly' as const,
+      slug: r.slug,
+    })),
+  ]
+
   // Supporting info pages
   const infoPages: SitemapEntry[] = [
     // Pillar hub pages — must be here or inject-meta.ts skips them → 404
@@ -251,6 +307,7 @@ export function buildSitemap(): SitemapEntry[] {
     ...blogPosts,
     ...journalPosts,
     ...pillarSubPages,
+    ...barServicesPages,
     ...infoPages,
   ]
 }

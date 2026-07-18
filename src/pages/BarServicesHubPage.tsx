@@ -3,7 +3,7 @@ import SeoHead, { breadcrumbSchema, serviceSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
-import { BarServiceGallery, BarServiceSubNav } from '@/components/bar-services'
+import { BarServiceImageSection, BarServiceSubNav } from '@/components/bar-services'
 import { getPageMeta } from '@/data/page-meta'
 import { BAR_SERVICES_HUB, getBarServiceBySlug } from '@/data/bar-services'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -38,6 +38,7 @@ const UTILITY_CARDS = [
 export default function BarServicesHubPage() {
   const meta = getPageMeta('bar-services-hub')
   const { hero, groups, expandedCopy, galleryImages, whyUs, process, proof } = BAR_SERVICES_HUB
+  const hubImages = galleryImages ?? []
 
   const groupedServices = groups.map((group) => ({
     ...group,
@@ -118,7 +119,7 @@ export default function BarServicesHubPage() {
 
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl">
               <div>
-                <h3 className="text-2xl font-serif text-gray-900 mb-4">{expandedCopy.whyNow.title}</h3>
+                <h2 className="text-2xl font-serif text-gray-900 mb-4">{expandedCopy.whyNow.title}</h2>
                 <div className="space-y-4 text-[#4A4745]">
                   {expandedCopy.whyNow.paragraphs.map((p, i) => (
                     <p key={i}>{p}</p>
@@ -126,7 +127,7 @@ export default function BarServicesHubPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-serif text-gray-900 mb-4">{expandedCopy.whyMyChef.title}</h3>
+                <h2 className="text-2xl font-serif text-gray-900 mb-4">{expandedCopy.whyMyChef.title}</h2>
                 <div className="space-y-4 text-[#4A4745]">
                   {expandedCopy.whyMyChef.paragraphs.map((p, i) => (
                     <p key={i}>{p}</p>
@@ -136,7 +137,7 @@ export default function BarServicesHubPage() {
             </div>
 
             <div className="bg-stone-50 p-6 md:p-10 rounded-lg">
-              <h3 className="text-2xl font-serif text-gray-900 mb-6">{expandedCopy.howWeWork.title}</h3>
+              <h2 className="text-2xl font-serif text-gray-900 mb-6">{expandedCopy.howWeWork.title}</h2>
               <div className="max-w-3xl space-y-4 text-[#4A4745]">
                 {expandedCopy.howWeWork.paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
@@ -145,7 +146,7 @@ export default function BarServicesHubPage() {
             </div>
 
             <div className="text-center max-w-3xl mx-auto">
-              <h3 className="text-2xl md:text-3xl font-serif text-gray-900 mb-6">{expandedCopy.cta.title}</h3>
+              <h2 className="text-2xl md:text-3xl font-serif text-gray-900 mb-6">{expandedCopy.cta.title}</h2>
               <div className="space-y-4 text-[#4A4745] mb-8">
                 {expandedCopy.cta.paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
@@ -231,9 +232,6 @@ export default function BarServicesHubPage() {
         </div>
       </section>
 
-      {/* Gallery */}
-      {galleryImages && galleryImages.length > 0 && <BarServiceGallery images={galleryImages} />}
-
       {/* Why us */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
@@ -243,14 +241,16 @@ export default function BarServicesHubPage() {
             </span>
             <h2 className="text-3xl md:text-4xl font-serif text-gray-900">{whyUs.title}</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {whyUs.items.map((item) => (
-              <div key={item.title} className="bg-stone-50 p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            ))}
-          </div>
+          <BarServiceImageSection image={hubImages[0]} imagePosition="right" bgColor="white">
+            <div className="space-y-6">
+              {whyUs.items.map((item) => (
+                <div key={item.title} className="bg-stone-50 p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </BarServiceImageSection>
         </div>
       </section>
 
@@ -263,19 +263,21 @@ export default function BarServicesHubPage() {
             </span>
             <h2 className="text-3xl md:text-4xl font-serif text-gray-900">Our process</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {process.map((step) => (
-              <div key={step.step} className="relative">
-                <span className="text-5xl font-serif text-amber-200 absolute -top-6 -left-2">
-                  {step.step}
-                </span>
-                <div className="relative pt-8">
-                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+          <BarServiceImageSection image={hubImages[1]} imagePosition="left" bgColor="stone">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {process.map((step) => (
+                <div key={step.step} className="relative">
+                  <span className="text-5xl font-serif text-amber-200 absolute -top-6 -left-2">
+                    {step.step}
+                  </span>
+                  <div className="relative pt-8">
+                    <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                    <p className="text-gray-600">{step.description}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </BarServiceImageSection>
         </div>
       </section>
 
@@ -289,6 +291,14 @@ export default function BarServicesHubPage() {
                 <p className="text-lg">{item}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-12 max-w-4xl mx-auto">
+            <OptimizedImage
+              src={hubImages[2].src}
+              alt={hubImages[2].alt}
+              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-sm"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>

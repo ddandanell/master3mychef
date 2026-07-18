@@ -1023,7 +1023,70 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'Can you supply alcohol with the rental?', answer: 'No — all hires are dry-hire / BYOB so you remain compliant with your own licences.' }
     ],
     relatedServices: ['temporary-bartender-staffing', 'new-bar-setup', 'signature-cocktail-creation'],
-    relatedResources: ['bar-equipment-checklist-bali', 'mobile-bar-rental-bali']
+    relatedResources: ['bar-equipment-checklist-bali', 'mobile-bar-rental-bali'],
+    keywords: {
+      primary: 'bar equipment supplier and rental Bali',
+      secondary: ['mobile bar hire Bali', 'bar equipment supply Bali', 'glassware rental Bali', 'bartender tool kit rental Bali']
+    },
+    expandedSections: {
+      whyBali: {
+        title: 'Why bar equipment supply and rental matters in Bali',
+        paragraphs: [
+          "Bali's event economy has evolved far beyond the traditional July-August and December peaks. Villas, yachts, beach clubs and private estates now host launches, weddings and brand activations across most of the year, which means venues need bar infrastructure that can appear one day and disappear the next. At the same time, permanent outlets refresh or expand their bars constantly, yet the island has no established specialist bar-equipment supply chain. The result is supplier roulette: one vendor's quote becomes the specification, warranty follow-up vanishes into logistics, and event organisers end up hiring generic glassware from companies that have never run a service bar.",
+          'Equipment decisions in Bali are also compliance decisions. Wet hire — supplying alcohol with the kit — would make MyChef the seller of record and trigger SIUP-MB, NPPBKC and location-permit requirements that most off-site events cannot satisfy. Our dry-hire, BYOB structure keeps the venue or organiser as the licensed owner of the beverages while we deliver the equipment and, if needed, the staff. That separation is why hotels, wedding planners and yacht charters can run a professional bar without licensing headaches.',
+          'The tropical climate and logistics environment punish poorly maintained kit. Glassware arrives chipped, ice solutions leak, and mobile bars wobble on uneven villa lawns unless the fleet is inspected and function-tested between every hire. A bar-specialist rental service is not generic furniture hire with bottles on top; it is a logistics operation where every item has a checklist, a delivery window and a count-back protocol.'
+        ]
+      },
+      whoFor: {
+        title: 'Venues and events that benefit from equipment supply and rental',
+        items: [
+          { label: 'Hotels & resorts', description: 'Refreshing permanent bars or adding temporary event bars during peak occupancy and banquet seasons.' },
+          { label: 'Wedding & event organisers', description: 'Needing mobile bars, glassware and tool kits delivered as a complete professional package.' },
+          { label: 'Beach clubs & day clubs', description: 'Covering renovation periods, pop-up takeovers and peak nights beyond permanent bar capacity.' },
+          { label: 'Villa-management companies', description: 'Providing in-villa cocktail experiences and private-event bars across a portfolio of properties.' },
+          { label: 'Yacht charters & private estates', description: 'Requiring compact, robust bar setups where no permanent infrastructure exists.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common mistakes venues make',
+        items: [
+          'Letting a single equipment supplier write the specification around their own inventory rather than your menu, volume and workflow.',
+          'Hiring generic event-rental companies that treat glassware and bars as furniture rather than service-critical equipment.',
+          'Assuming alcohol can be supplied with the rental, which creates licensing exposure for off-site events.',
+          'Running event kit without a signed inventory checklist, leading to post-event disputes over breakages and missing items.',
+          'Ignoring zone-based delivery windows and venue access constraints until the day of the event.'
+        ]
+      },
+      compliance: {
+        title: 'Compliance and dry-hire structure',
+        paragraphs: [
+          'All MyChef equipment hires are dry hire / BYOB. The client supplies and owns all beverages under its own licences, and MyChef supplies only equipment and, where separately booked, labour. This structure deliberately avoids wet-hire classification, which would require SIUP-MB trading authorisation and, for retail above 5% ABV, NPPBKC registration under PMK 66/PMK.04/2018, as well as compliance with location rules such as Perda Kabupaten Badung 11/2017 for off-site venues.',
+          'Rental agreements include a client warranty that alcohol service is legal and restricted to guests aged 21 and over, plus refusal-of-service rights aligned to KUHP UU No. 1/2023 Pasal 424 where MyChef staff are deployed. Off-site events must secure banjar or desa adat permissions and respect Nyepi and saka-calendar closures; these are flagged at booking and remain the client\'s responsibility.'
+        ]
+      },
+      successKpis: {
+        title: 'Equipment supply and rental success KPIs',
+        items: [
+          'Three written supplier quotes on file for 100% of procurement packages.',
+          '100% inventory checklist accuracy out-and-back with photo evidence for any breakage or loss.',
+          'Delivery inside the agreed zone-based window at least 95% of the time.',
+          'Warranty cards registered and handover note issued within 7 days of supply installation.',
+          'Breakage and loss disputes resolved within 5 working days with photographic evidence.'
+        ]
+      },
+      connections: {
+        title: 'How equipment supply and rental connects to other MyChef services',
+        paragraphs: [
+          'Bar Equipment Supply & Rental sits at the practical centre of several MyChef service lines. For new openings, it executes the procurement module inside New Bar Setup, turning the layout and specification into delivered, commissioned equipment. For events, it pairs with Temporary Bartender Staffing to create staffed packages where the crew and the kit arrive together, briefed and ready.',
+          'It also supports venues after a Bar Costing & Inventory Control engagement, supplying the scales, POS peripherals, glasswashers and storage solutions that make a new control system stick. Repeat rental clients and organisers often graduate to a B2B rate agreement, while supply-only clients with ongoing needs move naturally into Monthly Bar Management Support.'
+        ]
+      }
+    },
+    galleryImages: [
+      { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-1.webp', alt: 'Mobile bar unit and glassware being prepared for a Bali wedding rental delivery' },
+      { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-2.webp', alt: 'Professional bartender tool kits laid out for inventory check before an event' },
+      { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-3.webp', alt: 'MyChef team delivering and setting up a mobile bar at a Bali villa event' }
+    ]
   },
   {
     slug: 'monthly-bar-management-support',
@@ -1080,7 +1143,70 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'What venue sizes do you support?', answer: 'Three tiers by venue size: Essential, Professional and Premium.' }
     ],
     relatedServices: ['bar-costing-inventory-control', 'bar-staff-training', 'complete-bar-performance-programme'],
-    relatedResources: ['hiring-a-bar-manager-bali', 'bar-costing-guide-bali']
+    relatedResources: ['hiring-a-bar-manager-bali', 'bar-costing-guide-bali'],
+    keywords: {
+      primary: 'outsourced bar manager Bali',
+      secondary: ['fractional bar manager Bali', 'bar management retainer Bali', 'monthly bar support Bali', 'bar supervisor Bali']
+    },
+    expandedSections: {
+      whyBali: {
+        title: 'Why outsourced bar management matters in Bali',
+        paragraphs: [
+          "Bali's bar-manager labour market is structurally tight. A competent bar manager costs Rp7–20 million per month fully loaded, and vacancies often sit open for months while venues operate with a senior bartender and hope. The gap is felt fastest in the numbers: par levels drift, pour cost creeps, supplier invoices are not benchmarked, and the menu that looked good at launch goes stale by the second season. By the time the problem appears in a guest review, the margin has already bled.",
+          "The island's seasonality makes the problem worse. A venue that runs lean in low season can find itself without trained leadership when high-season demand triples overnight. A fractional bar manager on retainer gives the operation continuity across the cycle — someone who knows the venue, the team and the numbers without being another full-time payroll line that disappears on leave or resigns with three months' notice.",
+          'Outsourced management is also a governance solution for expat owners, villa-management portfolios and restaurant groups who cannot watch every outlet personally. Instead of relying on WhatsApp updates from a head bartender, they receive a monthly one-page KPI report written for an owner, with pour cost, variance, sales trend and actions taken. The arrangement turns anecdotal management into measured management.'
+        ]
+      },
+      whoFor: {
+        title: 'Venues that benefit from monthly bar management support',
+        items: [
+          { label: 'Restaurants & cafés', description: 'Owner-operators who need bar leadership but cannot carry a full-time bar-manager salary.' },
+          { label: 'Boutique hotels & resorts', description: 'Properties without a dedicated beverage manager that still need professional bar oversight.' },
+          { label: 'Mid-tier beach clubs', description: 'Venues between permanent bar managers that must keep controls alive during the search.' },
+          { label: 'Villa-management companies', description: 'Portfolio operators wanting a white-label bar management layer across multiple staffed properties.' },
+          { label: 'Expat/foreign-owned venues', description: 'Owners who cannot run the bar themselves and need trusted local leadership with regular reporting.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common mistakes venues make',
+        items: [
+          'Promoting a senior bartender and expecting them to manage stock, margins and suppliers without systems or authority.',
+          'Running the bar with no monthly numbers, so problems surface only in guest reviews or P&L surprises.',
+          'Treating training as a one-off course instead of a monthly refresher tied to live findings.',
+          'Letting supplier relationships drift for years without benchmarking prices or spotting invoice drift.',
+          'Operating without an escalation path, so urgent stock or staffing crises land on the owner at midnight.'
+        ]
+      },
+      compliance: {
+        title: 'Compliance and advisory scope',
+        paragraphs: [
+          "MyChef acts as a consultant and outsourced service provider only. The venue remains the employer of its bar staff and the holder of all alcohol licences — SIUP-MB under Permendag 20/M-DAG/PER/4/2014 jo 25/2019 and NPPBKC under PMK 66/PMK.04/2018 where applicable. We do not take title to stock, handle cash custody or appear as seller of record.",
+          'Monthly spot-checks include label-edar verification under Perda Provinsi Bali 5/2012 and Pergub 68/2012, with grey-market stock reported as a legal-risk item. Training refreshers cover responsible service, 21+ ID checks and refusal of service aligned to KUHP UU No. 1/2023 Pasal 424. Where MyChef-supplied staff ever work in-venue, that deployment is kept contractually separate under outsourcing-compliant terms per PP 35/2021.'
+        ]
+      },
+      successKpis: {
+        title: 'Monthly management success KPIs',
+        items: [
+          'Both scheduled site visits delivered every month with zero missed stocktakes.',
+          'WhatsApp hotline first response inside the agreed window at least 95% of the time.',
+          'Pour cost within or trending towards the 18–24% target band.',
+          'Stock variance inside the <3% green band with investigated exceptions.',
+          'All 12 monthly owner reports delivered on time with documented actions and follow-through.'
+        ]
+      },
+      connections: {
+        title: 'How monthly management connects to other MyChef services',
+        paragraphs: [
+          'Monthly Bar Management Support is the natural continuation of Bar Costing & Inventory Control and New Bar Setup: once the system is built, the retainer keeps it honest. Where the monthly cycle finds skill gaps that a refresher cannot close, Bar Staff Training supplies structured courses, and persistent vacancies escalate to Permanent Bar Staff Recruitment.',
+          'The retainer is also the step-down path from the Complete Bar Performance Programme after the intensive first-year build, and the step-up path for venues that have completed an audit and costing project. It is designed to be the recurring backbone of a profitable bar function, catching drift before it becomes damage.'
+        ]
+      }
+    },
+    galleryImages: [
+      { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-1.webp', alt: 'MyChef bar manager reviewing KPIs with a Bali venue owner over a one-page report' },
+      { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-2.webp', alt: 'Bar manager supervising a monthly stocktake behind a Bali restaurant bar' },
+      { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-3.webp', alt: 'Monthly training refresher on pour standards with a Bali bar team' }
+    ]
   },
   {
     slug: 'complete-bar-performance-programme',
@@ -1135,7 +1261,70 @@ export const BAR_SERVICES: BarService[] = [
       { question: 'Do you promise revenue or review improvements?', answer: 'No — we commit to process, measurement and agreed improvement targets, not invented revenue promises.' }
     ],
     relatedServices: ['bar-audit-improvement', 'monthly-bar-management-support', 'bar-staff-training'],
-    relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-menu-engineering-bali']
+    relatedResources: ['how-to-reduce-bar-shrinkage-bali', 'bar-menu-engineering-bali'],
+    keywords: {
+      primary: 'bar consulting Bali',
+      secondary: ['outsourced beverage department Bali', 'bar performance programme Bali', 'bar transformation Bali', 'bar audit programme Bali']
+    },
+    expandedSections: {
+      whyBali: {
+        title: 'Why a complete bar performance programme matters in Bali',
+        paragraphs: [
+          "Bali's competitive set has never been denser. New beach clubs, boutique hotels and villa resorts open every season, and guests arrive with global expectations shaped by London, Singapore and Sydney bars. Yet no local competitor offers an integrated bar transformation programme that combines audit, costing, training, menu redevelopment and year-round management. Venues are left buying one-off fixes that fail together because the underlying system never changes.",
+          'The cost of a disjointed approach is measurable. Untrained staff produce inconsistent drinks that show up in reviews; unmeasured inventory leaks 20–25% of beverage value; an empty bar-manager seat costs the equivalent of Rp7–20 million per month in lost leadership; and a menu that has not been re-engineered in two seasons quietly erodes margin. The Complete Bar Performance Programme treats these as symptoms of one problem — the absence of a professional beverage function — and fixes them under a single accountable contract.',
+          "Bali's regulatory and operational environment also rewards the integrated structure. Because the venue always holds the licences and stock, and MyChef supplies only services, the programme stays compliant while still delivering the discipline of an in-house beverage director. Quarterly re-audit scoring gives owners a board-ready view of progress in a market where many operators manage by feel."
+        ]
+      },
+      whoFor: {
+        title: 'Venues that benefit from the complete bar performance programme',
+        items: [
+          { label: 'Boutique & luxury resorts', description: 'Properties without a beverage director that need flagship-level bar discipline across outlets.' },
+          { label: 'Beach clubs & day clubs', description: 'Venues whose business model is built on beverage volume and reputation.' },
+          { label: 'Villa-management portfolios', description: 'Groups wanting a white-label beverage department across multiple staffed villas.' },
+          { label: 'Restaurant groups', description: 'Multi-outlet operators standardising bar quality, costing and training across locations.' },
+          { label: 'Expat/foreign-owned venues', description: 'Owners who want the entire bar function handled by a single accountable partner.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common mistakes venues make',
+        items: [
+          'Buying audit, training and menu services from different providers with no one accountable for the overall result.',
+          'Starting transformation without owner or GM sponsorship, so implementation stalls at the first obstacle.',
+          'Wanting monthly reports without committing to the operational changes the reports recommend.',
+          'Refusing POS and data access, which makes measurement impossible and hides the real leak.',
+          'Choosing consultants who promise revenue, review or occupancy outcomes that no credible operator can guarantee.'
+        ]
+      },
+      compliance: {
+        title: 'Compliance and programme governance',
+        paragraphs: [
+          'The venue always holds the alcohol licences and stock: SIUP-MB under Permendag 20/M-DAG/PER/4/2014 jo 25/2019 and NPPBKC under PMK 66/PMK.04/2018 where retailing above 5% ABV. MyChef supplies services only and never takes title to alcohol. All sourcing is channelled through licensed, label-edar-compliant distributors under Perda Provinsi Bali 5/2012 and Pergub 68/2012, with excise compliance per PMK 160/PMK.010/2023 and arak or brem sourced only under Pergub Bali 1/2020.',
+          'Training records include responsible-service coverage aligned to KUHP UU No. 1/2023 Pasal 424, and any employment-related recommendations are flagged for client HR or counsel under UU 13/2003 jo UU 6/2023. Programme contracts are bilingual under UU 24/2009, and improvement-commitment wording is reviewed by counsel before signing so commitments are binding but never invented.'
+        ]
+      },
+      successKpis: {
+        title: 'Complete bar performance programme success KPIs',
+        items: [
+          'Measurable audit-score uplift by the month-6 re-audit, with targets set from baseline at month 1.',
+          'Pour cost inside the 18–24% band by months 3–4 and held through month 12.',
+          'Stock variance below 3% from month 3 onward, with shrinkage sustained under 5%.',
+          'All four quarterly owner reviews held on schedule with scorecards versus baseline.',
+          'Twelve monthly owner reports delivered on time and backed by documented actions.'
+        ]
+      },
+      connections: {
+        title: 'How the complete programme connects to other MyChef services',
+        paragraphs: [
+          'The Complete Bar Performance Programme is essentially an integrated bundle of MyChef\'s strongest lines. The diagnostic month uses Bar Audit & Improvement, the control build uses Bar Costing & Inventory Control, the training phase uses Bar Staff Training, and the menu redevelopment uses Cocktail Menu Development. From month four onward the managed-operation cycle follows the Monthly Bar Management Support playbook.',
+          'That means clients can step into the programme from a standalone audit or step down to Monthly Bar Management Support after year one. Additional capacity needs can be met through Temporary Bartender Staffing and Bar Equipment Supply & Rental at programme-client terms, while Signature Cocktail Creation adds seasonal hero serves. The programme is the top of the service ladder, but it expands sideways as the venue grows.'
+        ]
+      }
+    },
+    galleryImages: [
+      { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-1.webp', alt: 'Bali venue leadership team reviewing a quarterly bar scorecard with MyChef' },
+      { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-2.webp', alt: 'Bartenders executing a newly launched cocktail menu behind a Bali bar' },
+      { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-3.webp', alt: 'MyChef programme director presenting an annual rupiah impact summary to an owner' }
+    ]
   }
 ]
 

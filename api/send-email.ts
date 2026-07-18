@@ -29,17 +29,25 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const origin = req.headers.origin || ''
   const corsHeaders = getCorsHeaders(origin)
 
+  function setCorsHeaders() {
+    Object.entries(corsHeaders).forEach(([key, value]) => {
+      res.setHeader(key, value)
+    })
+  }
+
+  setCorsHeaders()
+
   if (req.method === 'OPTIONS') {
-    return res.status(204).set(corsHeaders).end()
+    return res.status(204).end()
   }
 
   if (req.method !== 'POST') {
-    return res.status(405).set(corsHeaders).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   const payload = req.body as EmailPayload | undefined
   if (!payload || !payload.name || !payload.email || !payload.message) {
-    return res.status(400).set(corsHeaders).json({ error: 'Missing required fields' })
+    return res.status(400).json({ error: 'Missing required fields' })
   }
 
   const smtpHost = process.env.SMTP_HOST
@@ -49,7 +57,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const smtpTo = process.env.SMTP_TO
 
   if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !smtpTo) {
-    return res.status(500).set(corsHeaders).json({ error: 'Email service is not configured' })
+    return res.status(500).json({ error: 'Email service is not configured' })
   }
 
   const transporter = nodemailer.createTransport({
@@ -107,10 +115,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       html: htmlBody,
     })
 
-    return res.status(200).set(corsHeaders).json({ success: true })
+    return res.status(200).json({ success: true })
   } catch (error) {
     console.error('Failed to send email:', error)
-    return res.status(500).set(corsHeaders).json({ error: 'Failed to send email' })
+    return res.status(500).json({ error: 'Failed to send email' })
   }
 }
 

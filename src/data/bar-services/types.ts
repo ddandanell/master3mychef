@@ -34,6 +34,43 @@ export interface BarService {
   }[]
   relatedServices: string[]
   relatedResources: string[]
+  keywords?: {
+    primary: string
+    secondary: string[]
+  }
+  expandedSections?: {
+    whyBali: {
+      title: string
+      paragraphs: string[]
+    }
+    whoFor: {
+      title: string
+      items: {
+        label: string
+        description: string
+      }[]
+    }
+    commonMistakes: {
+      title: string
+      items: string[]
+    }
+    compliance?: {
+      title: string
+      paragraphs: string[]
+    }
+    successKpis: {
+      title: string
+      items: string[]
+    }
+    connections: {
+      title: string
+      paragraphs: string[]
+    }
+  }
+  galleryImages?: {
+    src: string
+    alt: string
+  }[]
 }
 
 export interface BarResource {
@@ -47,6 +84,32 @@ export interface BarResource {
   summary: string
   content: { heading?: string; paragraphs: string[] }[]
   relatedServices: string[]
+  keywords?: {
+    primary: string
+    secondary: string[]
+  }
+  expandedSections?: {
+    context: {
+      title: string
+      paragraphs: string[]
+    }
+    deepDive: {
+      title: string
+      paragraphs: string[]
+    }
+    mistakes: {
+      title: string
+      items: string[]
+    }
+    actionableTips: {
+      title: string
+      items: string[]
+    }
+  }
+  galleryImages?: {
+    src: string
+    alt: string
+  }[]
 }
 
 export interface BarServiceGroup {
@@ -69,4 +132,12 @@ export interface BarServicesHubData {
   }
   process: { step: number; title: string; description: string }[]
   proof: { title: string; items: string[] }
+  expandedCopy?: {
+    title: string
+    paragraphs: string[]
+  }
+  galleryImages?: {
+    src: string
+    alt: string
+  }[]
 }

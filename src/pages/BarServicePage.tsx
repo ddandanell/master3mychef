@@ -12,6 +12,8 @@ import {
   BarServiceProcess,
   BarServiceIncluded,
   BarServiceProof,
+  BarServiceExpandedContent,
+  BarServiceGallery,
   BarServiceQuoteBlock,
   BarServiceCrossSells,
   BarServiceResources,
@@ -67,6 +69,12 @@ export default function BarServicePage() {
       <BarServiceProcess process={service.process} />
       <BarServiceIncluded included={service.included} />
       <BarServiceProof proof={service.proof} />
+      {service.expandedSections && (
+        <BarServiceExpandedContent sections={service.expandedSections} />
+      )}
+      {service.galleryImages?.length ? (
+        <BarServiceGallery images={service.galleryImages} />
+      ) : null}
       <BarServiceQuoteBlock service={service} />
       <BarServiceCrossSells slugs={service.relatedServices} />
       <section className="py-16 md:py-24 bg-white">

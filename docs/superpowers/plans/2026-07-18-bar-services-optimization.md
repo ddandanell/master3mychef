@@ -33,7 +33,7 @@
 - Consumes: existing `BarService` type and `BAR_SERVICES` array
 - Produces: written audit list of image file sizes and current `galleryImages` mapping
 
-- [ ] **Step 1: List all bar-services image files with sizes**
+- [x] **Step 1: List all bar-services image files with sizes**
 
 ```bash
 cd /Users/openclaw/Movies/LIve\ website/master3mychef
@@ -42,16 +42,307 @@ find public/generated -name 'mychef-bar-services-bali-*' -type f -exec ls -lh {}
 
 Expected: a list of hero, body, gallery, and OG images with file sizes.
 
-- [ ] **Step 2: Record the current `galleryImages` assignments for every service**
+- [x] **Step 2: Record the current `galleryImages` assignments for every service**
 
 Read `src/data/bar-services/services.ts` and list, for each service slug, which images are currently in `galleryImages`.
 
-- [ ] **Step 3: Commit the audit notes**
+- [x] **Step 3: Commit the audit notes**
 
 ```bash
 git add docs/superpowers/plans/2026-07-18-bar-services-optimization.md
 git commit -m "docs: bar-services optimization plan and image audit"
 ```
+
+## Task 1 Audit Results
+
+### Summary
+
+- **Total bar-services image files:** 120
+- **All files match:** `public/generated/mychef-bar-services-bali-*.{webp,jpg}`
+- **File types present:** `.webp` and `.jpg` only
+- **Source code inspected:** `src/data/bar-services/services.ts`, `src/data/bar-services/types.ts`
+- **Service entries in `BAR_SERVICES`:** 11
+
+### File counts by category
+
+| Category | Count | Notes |
+|----------|-------|-------|
+| Hero images (`-hero-*.webp`) | 13 | Includes `hub`, `contact`, and service heroes |
+| Body images (`-body.webp`) | 11 | One per service in `BAR_SERVICES` + consultant |
+| Gallery images (`-gallery-*.webp`) | 66 | 3 per slug across multiple slugs |
+| OG images (`-og-*.jpg`) | 22 | Social/open-graph images |
+| Resource images (`-resource-*.webp`) | 7 | Featured images for resource pages |
+| Consultant image | 1 | `mychef-bar-services-bali-consultant.webp` |
+| **Total** | **120** | — |
+
+### Full file list (with sizes)
+
+```
+-rw-r--r--@ 1 openclaw  staff    22K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-bar-audit-improvement.jpg
+-rw-r--r--@ 1 openclaw  staff    24K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-temporary-bartender-staffing.jpg
+-rw-r--r--@ 1 openclaw  staff    25K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-faq.jpg
+-rw-r--r--@ 1 openclaw  staff    25K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-hub.jpg
+-rw-r--r--@ 1 openclaw  staff    25K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-new-bar-setup.jpg
+-rw-r--r--@ 1 openclaw  staff    27K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-bar-staff-training.jpg
+-rw-r--r--@ 1 openclaw  staff    27K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-how-much-does-a-bartender-cost-bali.jpg
+-rw-r--r--@ 1 openclaw  staff    27K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-how-to-create-a-cocktail-menu.jpg
+-rw-r--r--@ 1 openclaw  staff    27K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-how-to-open-a-bar-in-bali.jpg
+-rw-r--r--@ 1 openclaw  staff    28K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-bar-equipment-supply-rental.jpg
+-rw-r--r--@ 1 openclaw  staff    29K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-permanent-bar-staff-recruitment.jpg
+-rw-r--r--@ 1 openclaw  staff    29K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-resources.jpg
+-rw-r--r--@ 1 openclaw  staff    30K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-how-many-bartenders-per-guest.jpg
+-rw-r--r--@ 1 openclaw  staff    30K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-how-to-reduce-bar-shrinkage-bali.jpg
+-rw-r--r--@ 1 openclaw  staff    31K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-monthly-bar-management-support.jpg
+-rw-r--r--@ 1 openclaw  staff    32K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-contact.jpg
+-rw-r--r--@ 1 openclaw  staff    33K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-cocktail-menu-development.jpg
+-rw-r--r--@ 1 openclaw  staff    33K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-complete-bar-performance-programme.jpg
+-rw-r--r--@ 1 openclaw  staff    33K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-signature-cocktail-creation.jpg
+-rw-r--r--@ 1 openclaw  staff    34K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-bartender-salary-benchmarks-bali.jpg
+-rw-r--r--@ 1 openclaw  staff    34K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-beverage-cost-percentage-guide.jpg
+-rw-r--r--@ 1 openclaw  staff    34K Jul 18 18:58 public/generated/mychef-bar-services-bali-resource-bartender-salary-benchmarks-bali.webp
+-rw-r--r--@ 1 openclaw  staff    35K Jul 18 18:58 public/generated/mychef-bar-services-bali-og-bar-costing-inventory-control.jpg
+-rw-r--r--@ 1 openclaw  staff    44K Jul 18 18:58 public/generated/mychef-bar-services-bali-consultant.webp
+-rw-r--r--@ 1 openclaw  staff    44K Jul 18 18:58 public/generated/mychef-bar-services-bali-resource-beverage-cost-percentage-guide.webp
+-rw-r--r--@ 1 openclaw  staff    44K Jul 18 22:07 public/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    47K Jul 18 18:58 public/generated/mychef-bar-services-bali-resource-how-much-does-a-bartender-cost-bali.webp
+-rw-r--r--@ 1 openclaw  staff    47K Jul 18 18:58 public/generated/mychef-bar-services-bali-resource-how-to-create-a-cocktail-menu.webp
+-rw-r--r--@ 1 openclaw  staff    48K Jul 18 18:58 public/generated/mychef-bar-services-bali-resource-how-to-reduce-bar-shrinkage-bali.webp
+-rw-r--r--@ 1 openclaw  staff    49K Jul 18 22:13 public/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    50K Jul 18 22:00 public/generated/mychef-bar-services-bali-hub-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    50K Jul 18 22:41 public/generated/mychef-bar-services-bali-bartender-salary-benchmarks-bali-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    51K Jul 18 22:20 public/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    52K Jul 18 18:58 public/generated/mychef-bar-services-bali-monthly-bar-management-support-body.webp
+-rw-r--r--@ 1 openclaw  staff    52K Jul 18 22:46 public/generated/mychef-bar-services-bali-beverage-cost-percentage-guide-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    52K Jul 18 22:50 public/generated/mychef-bar-services-bali-how-to-create-a-cocktail-menu-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    53K Jul 18 18:58 public/generated/mychef-bar-services-bali-resource-how-to-open-a-bar-in-bali.webp
+-rw-r--r--@ 1 openclaw  staff    53K Jul 18 22:36 public/generated/mychef-bar-services-bali-contact-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    53K Jul 18 22:38 public/generated/mychef-bar-services-bali-resources-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    55K Jul 18 18:58 public/generated/mychef-bar-services-bali-cocktail-menu-development-body.webp
+-rw-r--r--@ 1 openclaw  staff    55K Jul 18 22:12 public/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    55K Jul 18 22:15 public/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    55K Jul 18 22:46 public/generated/mychef-bar-services-bali-beverage-cost-percentage-guide-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    56K Jul 18 18:58 public/generated/mychef-bar-services-bali-new-bar-setup-body.webp
+-rw-r--r--@ 1 openclaw  staff    56K Jul 18 22:35 public/generated/mychef-bar-services-bali-contact-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    57K Jul 18 22:10 public/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    57K Jul 18 22:19 public/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    58K Jul 18 21:59 public/generated/mychef-bar-services-bali-hub-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    58K Jul 18 22:07 public/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    58K Jul 18 22:47 public/generated/mychef-bar-services-bali-beverage-cost-percentage-guide-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    59K Jul 18 22:34 public/generated/mychef-bar-services-bali-contact-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    59K Jul 18 22:37 public/generated/mychef-bar-services-bali-resources-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    59K Jul 18 22:40 public/generated/mychef-bar-services-bali-how-much-does-a-bartender-cost-bali-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    60K Jul 18 22:09 public/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    60K Jul 18 22:34 public/generated/mychef-bar-services-bali-faq-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    60K Jul 18 22:43 public/generated/mychef-bar-services-bali-bartender-salary-benchmarks-bali-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    61K Jul 18 22:52 public/generated/mychef-bar-services-bali-how-to-create-a-cocktail-menu-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    62K Jul 18 18:58 public/generated/mychef-bar-services-bali-bar-audit-improvement-body.webp
+-rw-r--r--@ 1 openclaw  staff    62K Jul 18 22:44 public/generated/mychef-bar-services-bali-how-many-bartenders-per-guest-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    63K Jul 18 18:58 public/generated/mychef-bar-services-bali-signature-cocktail-creation-body.webp
+-rw-r--r--@ 1 openclaw  staff    63K Jul 18 22:02 public/generated/mychef-bar-services-bali-bar-staff-training-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    63K Jul 18 22:03 public/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    63K Jul 18 22:04 public/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    64K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-bar-equipment-supply-rental.webp
+-rw-r--r--@ 1 openclaw  staff    64K Jul 18 22:24 public/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    64K Jul 18 22:24 public/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    64K Jul 18 22:32 public/generated/mychef-bar-services-bali-faq-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    64K Jul 18 22:40 public/generated/mychef-bar-services-bali-how-much-does-a-bartender-cost-bali-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    64K Jul 18 22:54 public/generated/mychef-bar-services-bali-how-to-reduce-bar-shrinkage-bali-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    65K Jul 18 22:08 public/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    65K Jul 18 22:28 public/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    66K Jul 18 22:27 public/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    66K Jul 18 22:42 public/generated/mychef-bar-services-bali-bartender-salary-benchmarks-bali-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    68K Jul 18 22:22 public/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    68K Jul 18 22:33 public/generated/mychef-bar-services-bali-faq-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    68K Jul 18 22:45 public/generated/mychef-bar-services-bali-how-many-bartenders-per-guest-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    68K Jul 18 22:52 public/generated/mychef-bar-services-bali-how-to-reduce-bar-shrinkage-bali-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    69K Jul 18 18:58 public/generated/mychef-bar-services-bali-complete-bar-performance-programme-body.webp
+-rw-r--r--@ 1 openclaw  staff    70K Jul 18 22:03 public/generated/mychef-bar-services-bali-bar-staff-training-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    70K Jul 18 22:23 public/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    71K Jul 18 18:58 public/generated/mychef-bar-services-bali-bar-costing-inventory-control-body.webp
+-rw-r--r--@ 1 openclaw  staff    71K Jul 18 18:58 public/generated/mychef-bar-services-bali-bar-staff-training-body.webp
+-rw-r--r--@ 1 openclaw  staff    71K Jul 18 21:59 public/generated/mychef-bar-services-bali-hub-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    71K Jul 18 22:01 public/generated/mychef-bar-services-bali-bar-staff-training-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    71K Jul 18 22:43 public/generated/mychef-bar-services-bali-how-many-bartenders-per-guest-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    72K Jul 18 22:51 public/generated/mychef-bar-services-bali-how-to-create-a-cocktail-menu-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    73K Jul 18 18:58 public/generated/mychef-bar-services-bali-contact-hero.webp
+-rw-r--r--@ 1 openclaw  staff    73K Jul 18 22:09 public/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    73K Jul 18 22:26 public/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    73K Jul 18 22:53 public/generated/mychef-bar-services-bali-how-to-reduce-bar-shrinkage-bali-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    74K Jul 18 22:31 public/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    74K Jul 18 22:37 public/generated/mychef-bar-services-bali-resources-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    75K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-monthly-bar-management-support.webp
+-rw-r--r--@ 1 openclaw  staff    75K Jul 18 18:58 public/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-body.webp
+-rw-r--r--@ 1 openclaw  staff    75K Jul 18 18:58 public/generated/mychef-bar-services-bali-temporary-bartender-staffing-body.webp
+-rw-r--r--@ 1 openclaw  staff    76K Jul 18 22:11 public/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    76K Jul 18 22:30 public/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    77K Jul 18 22:29 public/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    77K Jul 18 22:31 public/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    77K Jul 18 22:49 public/generated/mychef-bar-services-bali-how-to-open-a-bar-in-bali-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    82K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-new-bar-setup.webp
+-rw-r--r--@ 1 openclaw  staff    82K Jul 18 22:17 public/generated/mychef-bar-services-bali-new-bar-setup-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    83K Jul 18 22:27 public/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    84K Jul 18 18:58 public/generated/mychef-bar-services-bali-resource-how-many-bartenders-per-guest.webp
+-rw-r--r--@ 1 openclaw  staff    84K Jul 18 22:39 public/generated/mychef-bar-services-bali-how-much-does-a-bartender-cost-bali-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    85K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-bar-audit-improvement.webp
+-rw-r--r--@ 1 openclaw  staff    85K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-bar-costing-inventory-control.webp
+-rw-r--r--@ 1 openclaw  staff    85K Jul 18 22:16 public/generated/mychef-bar-services-bali-new-bar-setup-gallery-2.webp
+-rw-r--r--@ 1 openclaw  staff    86K Jul 18 22:48 public/generated/mychef-bar-services-bali-how-to-open-a-bar-in-bali-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    86K Jul 18 22:49 public/generated/mychef-bar-services-bali-how-to-open-a-bar-in-bali-gallery-3.webp
+-rw-r--r--@ 1 openclaw  staff    87K Jul 18 22:25 public/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    90K Jul 18 22:15 public/generated/mychef-bar-services-bali-new-bar-setup-gallery-1.webp
+-rw-r--r--@ 1 openclaw  staff    95K Jul 18 18:58 public/generated/mychef-bar-services-bali-bar-equipment-supply-rental-body.webp
+-rw-r--r--@ 1 openclaw  staff    96K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-permanent-bar-staff-recruitment.webp
+-rw-r--r--@ 1 openclaw  staff   105K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-bar-staff-training.webp
+-rw-r--r--@ 1 openclaw  staff   105K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-hub.webp
+-rw-r--r--@ 1 openclaw  staff   106K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-cocktail-menu-development.webp
+-rw-r--r--@ 1 openclaw  staff   118K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-temporary-bartender-staffing.webp
+-rw-r--r--@ 1 openclaw  staff   124K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-signature-cocktail-creation.webp
+-rw-r--r--@ 1 openclaw  staff   135K Jul 18 18:58 public/generated/mychef-bar-services-bali-hero-complete-bar-performance-programme.webp
+```
+
+### Current `galleryImages` mapping per service
+
+All 11 entries in `BAR_SERVICES` (`src/data/bar-services/services.ts`) define a `galleryImages` array. Each has exactly 3 gallery images.
+
+#### 1. `bar-staff-training`
+
+```ts
+galleryImages: [
+  { src: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-1.webp', alt: 'Indonesian bartenders practising measured pours during a MyChef training session in Bali' },
+  { src: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-2.webp', alt: 'Trainer demonstrating cocktail build technique behind a venue bar in Bali' },
+  { src: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-3.webp', alt: 'Bar team receiving MyChef certificates after completing responsible service training' }
+]
+```
+
+#### 2. `cocktail-menu-development`
+
+```ts
+galleryImages: [
+  { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-1.webp', alt: 'MyChef mixologist cost-testing a new cocktail recipe on a Bali venue bar' },
+  { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-2.webp', alt: 'Photo-illustrated cocktail spec sheets spread across a bar counter in Bali' },
+  { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-3.webp', alt: 'Bartenders executing a newly launched cocktail menu during team training' }
+]
+```
+
+#### 3. `signature-cocktail-creation`
+
+```ts
+galleryImages: [
+  { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-1.webp', alt: 'Bespoke signature cocktail being garnished for a Bali beach club tasting panel' },
+  { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-2.webp', alt: 'Professional photo session of a named signature serve with story card' },
+  { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-3.webp', alt: 'Wedding couple\'s signature cocktail being poured at a Bali reception bar' }
+]
+```
+
+#### 4. `temporary-bartender-staffing`
+
+```ts
+galleryImages: [
+  { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-1.webp', alt: 'Uniformed MyChef bartenders setting up an event bar before a Bali wedding' },
+  { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-2.webp', alt: 'MyChef supervisor briefing a temporary bar crew at a Bali beach club event' },
+  { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-3.webp', alt: 'Temporary bartender pouring cocktails at a high-volume Bali reception' }
+]
+```
+
+#### 5. `permanent-bar-staff-recruitment`
+
+```ts
+galleryImages: [
+  { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-1.webp', alt: 'Bali bartender completing a timed practical trial during a MyChef recruitment assessment' },
+  { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-2.webp', alt: 'Bar manager interviewing a trade-tested candidate with trial scores in a Bali venue' },
+  { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-3.webp', alt: 'Newly placed MyChef bartender receiving onboarding documents and a responsible-service briefing' }
+]
+```
+
+#### 6. `new-bar-setup`
+
+```ts
+galleryImages: [
+  { src: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-1.webp', alt: 'New Bali restaurant bar being fitted out before opening under MyChef supervision' },
+  { src: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-2.webp', alt: 'Scaled bar layout plan and equipment specification on a venue desk' },
+  { src: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-3.webp', alt: 'MyChef bar lead coaching opening-week staff behind a newly launched Bali bar' }
+]
+```
+
+#### 7. `bar-audit-improvement`
+
+```ts
+galleryImages: [
+  { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-1.webp', alt: 'MyChef auditor reviewing bar inventory records and label-edar stickers at a Bali venue' },
+  { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-2.webp', alt: 'Mystery guest assessing cocktail build quality during an anonymous bar audit in Bali' },
+  { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-3.webp', alt: 'Senior bar consultant presenting a board-ready audit report to a Bali venue owner' }
+]
+```
+
+#### 8. `bar-costing-inventory-control`
+
+```ts
+galleryImages: [
+  { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-1.webp', alt: 'Bar manager reviewing recipe costing cards and par levels at a Bali bar' },
+  { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-2.webp', alt: 'MyChef consultant supervising a baseline stocktake behind a Bali venue bar' },
+  { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-3.webp', alt: 'Bar team training on variance tolerance bands and count sheets during costing rollout' }
+]
+```
+
+#### 9. `bar-equipment-supply-rental`
+
+```ts
+galleryImages: [
+  { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-1.webp', alt: 'Mobile bar unit and glassware being prepared for a Bali wedding rental delivery' },
+  { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-2.webp', alt: 'Professional bartender tool kits laid out for inventory check before an event' },
+  { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-3.webp', alt: 'MyChef team delivering and setting up a mobile bar at a Bali villa event' }
+]
+```
+
+#### 10. `monthly-bar-management-support`
+
+```ts
+galleryImages: [
+  { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-1.webp', alt: 'MyChef bar manager reviewing KPIs with a Bali venue owner over a one-page report' },
+  { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-2.webp', alt: 'Bar manager supervising a monthly stocktake behind a Bali restaurant bar' },
+  { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-3.webp', alt: 'Monthly training refresher on pour standards with a Bali bar team' }
+]
+```
+
+#### 11. `complete-bar-performance-programme`
+
+```ts
+galleryImages: [
+  { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-1.webp', alt: 'Bali venue leadership team reviewing a quarterly bar scorecard with MyChef' },
+  { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-2.webp', alt: 'Bartenders executing a newly launched cocktail menu behind a Bali bar' },
+  { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-3.webp', alt: 'MyChef programme director presenting an annual rupiah impact summary to an owner' }
+]
+```
+
+### Observations / Concerns
+
+1. **Orphan gallery images exist for slugs not in `BAR_SERVICES`.**
+   The following slugs have generated gallery/hero/body/OG images but are not listed as services in `BAR_SERVICES`:
+   - `hub`
+   - `contact`
+   - `faq`
+   - `resources`
+   - `bartender-salary-benchmarks-bali`
+   - `beverage-cost-percentage-guide`
+   - `how-many-bartenders-per-guest`
+   - `how-much-does-a-bartender-cost-bali`
+   - `how-to-create-a-cocktail-menu`
+   - `how-to-open-a-bar-in-bali`
+   - `how-to-reduce-bar-shrinkage-bali`
+
+   These are likely hub/resource/contact pages defined elsewhere, but Task 1 only audited `BAR_SERVICES` gallery mapping. If those pages also expect `galleryImages`, their mapping is in separate data files and was not inspected here.
+
+2. **All 11 `BAR_SERVICES` entries have exactly 3 gallery images.**
+   No service has a missing or oversized `galleryImages` array.
+
+3. **File sizes are reasonable for web delivery.**
+   - Smallest: 22K (OG images)
+   - Largest hero: 135K (`complete-bar-performance-programme`)
+   - Largest gallery: 90K (`new-bar-setup-gallery-1`)
+   - All images are under 150KB.
+
+4. **No source code was modified.**
+   This audit only read files and recorded findings.
 
 ---
 

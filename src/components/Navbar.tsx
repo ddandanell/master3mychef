@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, type LucideIcon } from 'lucide-react'
+import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, Mail, type LucideIcon } from 'lucide-react'
 import { PILLARS, LOCATIONS } from '@/data/siteArchitecture'
+import { BAR_SERVICES_HUB, BAR_SERVICES } from '@/data/bar-services'
 
 
 // Map icon names to Lucide React icon components
@@ -45,10 +46,19 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Experience', href: '/complete-villa-experience', icon: MapPin, accent: '#C5A028' },
   { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
   { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
+  { label: 'Bar Services', href: '/bar-services/', icon: Wine, accent: '#C5A028' },
+  { label: 'Contact', href: '/contact', icon: Mail, accent: '#C5A028' },
   { label: 'Help', href: '/help', icon: HelpCircle, accent: '#C5A028' },
 ]
 
-const NAV_SUBPAGES = Object.values(PILLARS).reduce<Record<string, { label: string; href: string; icon?: string }[]>>(
+interface NavSubpage {
+  label: string
+  href: string
+  icon?: string
+  group?: string
+}
+
+const NAV_SUBPAGES: Record<string, NavSubpage[]> = Object.values(PILLARS).reduce<Record<string, NavSubpage[]>>(
   (acc, pillar) => {
     acc[pillar.url] = pillar.subPages.map((page) => ({
       label: page.label,
@@ -88,6 +98,23 @@ NAV_SUBPAGES['/locations'] = [
   })),
 ]
 
+// Bar Services dropdown — grouped by hub categories (Overview, Consulting, Staffing, Management, Flagship, Support)
+NAV_SUBPAGES['/bar-services/'] = [
+  { label: 'Overview', href: '/bar-services/', group: 'Overview' },
+  ...BAR_SERVICES_HUB.groups.flatMap((g) =>
+    g.services.map((slug) => {
+      const service = BAR_SERVICES.find((s) => s.slug === slug)
+      return {
+        label: service?.eyebrow ?? slug,
+        href: service?.route ?? `/bar-services/${slug}/`,
+        group: g.title,
+      }
+    })
+  ),
+  { label: 'FAQ', href: '/bar-services/faq/', group: 'Support' },
+  { label: 'Contact', href: '/bar-services/contact/', group: 'Support' },
+]
+
 // Preview images shown beside desktop dropdown links; the picture swaps as subpages are hovered
 const PILLAR_PREVIEW_IMAGES: Record<string, string> = {
   '/catering': '/generated/mychef-families-bali-catering-events.webp',
@@ -97,6 +124,7 @@ const PILLAR_PREVIEW_IMAGES: Record<string, string> = {
   '/complete-villa-experience': '/generated/mychef-catering-bali-catering-hero.webp',
   '/in-villa-service': '/generated/in-villa-service-hero.webp',
   '/staffing': '/generated/mychef-butlers-1.webp',
+  '/bar-services/': '/generated/mychef-bar-services-bali-hero-hub.webp',
 }
 
 const SUBPAGE_PREVIEW_IMAGES: Record<string, string> = {
@@ -114,6 +142,10 @@ const SUBPAGE_PREVIEW_IMAGES: Record<string, string> = {
   '/vip-transport-bali': '/generated/mychef-vip-transport-bali-hero.webp',
 }
 
+BAR_SERVICES.forEach((service) => {
+  SUBPAGE_PREVIEW_IMAGES[service.route] = service.heroImage
+})
+
 interface DropdownPreview {
   src: string
   caption: string
@@ -128,6 +160,16 @@ function isActivePath(current: string, target: string): boolean {
   if (current === target) return true
   if (target !== '/' && current.startsWith(target + '/')) return true
   return false
+}
+
+function groupSubpages(subpages: NavSubpage[]): { group: string; items: NavSubpage[] }[] {
+  const map = new Map<string, NavSubpage[]>()
+  for (const s of subpages) {
+    const g = s.group ?? ''
+    if (!map.has(g)) map.set(g, [])
+    map.get(g)!.push(s)
+  }
+  return Array.from(map.entries()).map(([group, items]) => ({ group, items }))
 }
 
 export default function Navbar() {
@@ -307,39 +349,45 @@ export default function Navbar() {
                       <div className="flex overflow-hidden rounded-2xl border border-[#C5A028]/20 bg-[#0F0E0C]/95 shadow-2xl shadow-black/50 backdrop-blur-xl">
                         {/* Links column */}
                         <div className="w-64 p-3">
-                          <p
-                            className="px-3 pb-2 pt-1 text-[10px] uppercase tracking-[0.28em] text-[#C5A028]/80"
-                            style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                          >
-                            {item.label} Pages
-                          </p>
-                          <div className="max-h-[70vh] space-y-0.5 overflow-y-auto pr-1">
-                            {subpages.map((subpage) => {
-                              const subpageActive = isActivePath(location.pathname, subpage.href)
-                              return (
-                                <Link
-                                  key={subpage.href}
-                                  to={subpage.href}
-                                  onClick={() => setOpenDropdown(null)}
-                                  onMouseEnter={() => setPreviewFor(item, subpage)}
-                                  onFocus={() => setPreviewFor(item, subpage)}
-                                  className={`flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm transition-all duration-200 ${
-                                    subpageActive
-                                      ? 'bg-[#C5A028]/15 text-[#C5A028]'
-                                      : 'text-white/70 hover:bg-white/5 hover:text-[#C5A028] hover:translate-x-0.5'
-                                  }`}
-                                  style={{ fontFamily: "'Playfair Display', serif" }}
+                          <div className="max-h-[70vh] space-y-3 overflow-y-auto pr-1">
+                            {groupSubpages(subpages).map(({ group, items }) => (
+                              <div key={group}>
+                                <p
+                                  className="px-3 pb-1.5 pt-1 text-[10px] uppercase tracking-[0.22em] text-[#C5A028]/80"
+                                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                                 >
-                                  {subpage.icon && getIconComponent(subpage.icon) &&
-                                    (() => {
-                                      const SubIcon = getIconComponent(subpage.icon)
-                                      return SubIcon ? <SubIcon className="w-4 h-4 flex-shrink-0 opacity-70" strokeWidth={1.5} /> : null
-                                    })()
-                                  }
-                                  {subpage.label}
-                                </Link>
-                              )
-                            })}
+                                  {group === '' ? `${item.label} Pages` : group}
+                                </p>
+                                <div className="space-y-0.5">
+                                  {items.map((subpage) => {
+                                    const subpageActive = isActivePath(location.pathname, subpage.href)
+                                    return (
+                                      <Link
+                                        key={subpage.href}
+                                        to={subpage.href}
+                                        onClick={() => setOpenDropdown(null)}
+                                        onMouseEnter={() => setPreviewFor(item, subpage)}
+                                        onFocus={() => setPreviewFor(item, subpage)}
+                                        className={`flex items-center gap-2.5 rounded-xl px-3 py-2 text-sm transition-all duration-200 ${
+                                          subpageActive
+                                            ? 'bg-[#C5A028]/15 text-[#C5A028]'
+                                            : 'text-white/70 hover:bg-white/5 hover:text-[#C5A028] hover:translate-x-0.5'
+                                        }`}
+                                        style={{ fontFamily: "'Playfair Display', serif" }}
+                                      >
+                                        {subpage.icon && getIconComponent(subpage.icon) &&
+                                          (() => {
+                                            const SubIcon = getIconComponent(subpage.icon)
+                                            return SubIcon ? <SubIcon className="w-4 h-4 flex-shrink-0 opacity-70" strokeWidth={1.5} /> : null
+                                          })()
+                                        }
+                                        {subpage.label}
+                                      </Link>
+                                    )
+                                  })}
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         </div>
 
@@ -458,34 +506,43 @@ export default function Navbar() {
 
                       {/* Accordion content — visible only when expanded */}
                       {isExpanded && (
-                        <div className="ml-6 border-l border-[#C5A028]/20 pl-4 space-y-2 mt-2">
-                          {subpages.map((subpage) => {
-                            const subpageActive = isActivePath(location.pathname, subpage.href)
-                            return (
-                              <Link
-                                key={subpage.href}
-                                to={subpage.href}
-                                onClick={() => {
-                                  setMenuOpen(false)
-                                  setExpandedItems(new Set())
-                                }}
-                                className={`flex items-center gap-2 rounded-xl px-3 py-2 text-sm transition-colors ${
-                                  subpageActive
-                                    ? 'bg-[#C5A028]/10 text-[#C5A028]'
-                                    : 'text-gray-600 hover:bg-gray-100 hover:text-[#C5A028]'
-                                }`}
-                                style={{ fontFamily: "'Playfair Display', serif" }}
-                              >
-                                {subpage.icon && getIconComponent(subpage.icon) && 
-                                  (() => {
-                                    const Icon = getIconComponent(subpage.icon)
-                                    return Icon ? <Icon className="w-4 h-4 text-[#C5A028] flex-shrink-0" strokeWidth={1.5} /> : null
-                                  })()
-                                }
-                                {subpage.label}
-                              </Link>
-                            )
-                          })}
+                        <div className="ml-6 border-l border-[#C5A028]/20 pl-4 space-y-4 mt-2">
+                          {groupSubpages(subpages).map(({ group, items }) => (
+                            <div key={group} className="space-y-2">
+                              {group !== '' && (
+                                <p className="px-3 text-[10px] uppercase tracking-[0.2em] text-[#C5A028]/80">
+                                  {group}
+                                </p>
+                              )}
+                              {items.map((subpage) => {
+                                const subpageActive = isActivePath(location.pathname, subpage.href)
+                                return (
+                                  <Link
+                                    key={subpage.href}
+                                    to={subpage.href}
+                                    onClick={() => {
+                                      setMenuOpen(false)
+                                      setExpandedItems(new Set())
+                                    }}
+                                    className={`flex items-center gap-2 rounded-xl px-3 py-2 text-sm transition-colors ${
+                                      subpageActive
+                                        ? 'bg-[#C5A028]/10 text-[#C5A028]'
+                                        : 'text-gray-600 hover:bg-gray-100 hover:text-[#C5A028]'
+                                    }`}
+                                    style={{ fontFamily: "'Playfair Display', serif" }}
+                                  >
+                                    {subpage.icon && getIconComponent(subpage.icon) && 
+                                      (() => {
+                                        const Icon = getIconComponent(subpage.icon)
+                                        return Icon ? <Icon className="w-4 h-4 text-[#C5A028] flex-shrink-0" strokeWidth={1.5} /> : null
+                                      })()
+                                    }
+                                    {subpage.label}
+                                  </Link>
+                                )
+                              })}
+                            </div>
+                          ))}
                         </div>
                       )}
                     </>

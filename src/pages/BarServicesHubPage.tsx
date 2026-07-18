@@ -1,7 +1,8 @@
 import { ArrowRight, HelpCircle, MessageCircle, BookOpen } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, serviceSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { BarServiceImageSection, BarServiceSubNav } from '@/components/bar-services'
 import { getPageMeta } from '@/data/page-meta'
@@ -35,6 +36,34 @@ const UTILITY_CARDS = [
   },
 ]
 
+const HUB_FAQS = [
+  {
+    question: 'What bar services does MyChef offer in Bali?',
+    answer:
+      'We offer bar audits, costing and inventory control, cocktail menu development, signature cocktail creation, bar staff training, temporary bartender staffing, permanent bar staff recruitment, new bar setup, monthly bar management support, bar equipment supply and rental, and the complete bar performance programme.',
+  },
+  {
+    question: 'Do you only work with hotels and restaurants?',
+    answer:
+      'No. We work with boutique hotels, luxury villas, beach clubs, restaurants, cafés, wedding organisers, villa-management companies, yacht charters and private estates across Bali.',
+  },
+  {
+    question: 'How quickly can you respond to a bar staffing emergency?',
+    answer:
+      'For temporary bartender staffing we can usually confirm availability within a few hours and deploy vetted staff for events with reasonable lead time. Urgent venue cover requests are prioritised and handled through WhatsApp.',
+  },
+  {
+    question: 'Are your bartenders employed by MyChef or by the venue?',
+    answer:
+      'Temporary staff are employed by MyChef, so payroll, BPJS and compliance sit with us. Permanent recruitment places a candidate as a direct venue hire once the trial period is complete.',
+  },
+  {
+    question: 'How do I get a proposal for my venue?',
+    answer:
+      'Message us on WhatsApp with your venue type, location, the service you need and your preferred timeline. A bar specialist will reply within four business hours with tailored next steps or a written proposal.',
+  },
+]
+
 export default function BarServicesHubPage() {
   const meta = getPageMeta('bar-services-hub')
   const { hero, groups, expandedCopy, galleryImages, whyUs, process, proof } = BAR_SERVICES_HUB
@@ -57,6 +86,7 @@ export default function BarServicesHubPage() {
         jsonLd={[
           breadcrumbSchema('Bar Services', meta.canonical ?? `${SITE}/bar-services/`),
           serviceSchema(hero.h1, meta.description, meta.canonical ?? `${SITE}/bar-services/`),
+          faqPageSchema(HUB_FAQS),
         ]}
       />
       <Breadcrumb items={[{ label: 'Bar Services', href: '/bar-services/' }]} />
@@ -322,6 +352,30 @@ export default function BarServicesHubPage() {
             Browse Resources
             <ArrowRight className="w-4 h-4 ml-2" />
           </a>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <div className="text-center mb-12">
+            <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+              FAQ
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif text-gray-900">
+              Common questions about bar services in Bali
+            </h2>
+          </div>
+          <FAQAccordion items={HUB_FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} />
+          <div className="mt-10 text-center">
+            <a
+              href="/bar-services/faq/"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-gray-900 text-gray-900 hover:bg-gray-50 font-medium rounded"
+            >
+              <HelpCircle className="w-4 h-4" />
+              View all FAQs
+            </a>
+          </div>
         </div>
       </section>
 

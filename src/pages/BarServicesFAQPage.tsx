@@ -2,11 +2,11 @@ import { MessageCircle, ShieldCheck, Clock, MapPin, Award, Users } from 'lucide-
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
 import { BAR_SERVICES } from '@/data/bar-services'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
-import { BarServiceGallery } from '@/components/bar-services'
 
 const SITE = 'https://mychef.id'
 
@@ -119,37 +119,48 @@ export default function BarServicesFAQPage() {
       </section>
 
       <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <div className="prose prose-lg max-w-none mb-12">
-            <p>
-              Running a bar in Bali means juggling staffing, licensing, costing, menu design and guest experience all at once. Whether you are opening a new venue, planning a villa wedding, or trying to bring a drifting pour cost back under control, the same questions tend to come up. We have collected the answers here so you can plan with confidence.
-            </p>
-            <p>
-              The questions below cover pricing, staffing, consulting, legal and logistics. Each answer is written to be self-contained, so you can scan for what matters to you. If your question is not here, WhatsApp us and we will reply within four business hours.
-            </p>
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+            <div className="prose prose-lg max-w-none">
+              <p>
+                Running a bar in Bali means juggling staffing, licensing, costing, menu design and guest experience all at once. Whether you are opening a new venue, planning a villa wedding, or trying to bring a drifting pour cost back under control, the same questions tend to come up. We have collected the answers here so you can plan with confidence.
+              </p>
+              <p>
+                The questions below cover pricing, staffing, consulting, legal and logistics. Each answer is written to be self-contained, so you can scan for what matters to you. If your question is not here, WhatsApp us and we will reply within four business hours.
+              </p>
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+              <OptimizedImage
+                src={FAQ_GALLERY[0].src}
+                alt={FAQ_GALLERY[0].alt}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
 
-          <FAQAccordion items={allFaqs.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} />
-
-          <div className="mt-12 p-6 bg-stone-50 rounded-lg text-center">
-            <p className="text-gray-700 mb-4">
-              Still have questions? We usually reply within one business day.
-            </p>
-            <a
-              href={buildWhatsAppUrl({ serviceName: 'bar services in Bali', intent: 'answers to a few questions' })}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-medium rounded"
-            >
-              <MessageCircle className="w-4 h-4" />
-              WhatsApp Us
-            </a>
+          <div className="max-w-3xl mx-auto mb-16">
+            <FAQAccordion items={allFaqs.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} />
+            <div className="mt-12 p-6 bg-stone-50 rounded-lg text-center">
+              <p className="text-gray-700 mb-4">
+                Still have questions? We usually reply within one business day.
+              </p>
+              <a
+                href={buildWhatsAppUrl({ serviceName: 'bar services in Bali', intent: 'answers to a few questions' })}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-medium rounded"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp Us
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-stone-50">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
               Why venues choose us
@@ -158,22 +169,32 @@ export default function BarServicesFAQPage() {
               Trust signals that matter
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {TRUST_SIGNALS.map((signal) => (
-              <div key={signal.title} className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mb-4">
-                  <signal.icon className="w-5 h-5 text-amber-600" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid sm:grid-cols-2 gap-6">
+              {TRUST_SIGNALS.map((signal) => (
+                <div key={signal.title} className="bg-white p-6 rounded-lg shadow-sm">
+                  <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mb-4">
+                    <signal.icon className="w-5 h-5 text-amber-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">{signal.title}</h3>
+                  <p className="text-sm text-gray-600">{signal.description}</p>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{signal.title}</h3>
-                <p className="text-sm text-gray-600">{signal.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+              <OptimizedImage
+                src={FAQ_GALLERY[1].src}
+                alt={FAQ_GALLERY[1].alt}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
@@ -194,20 +215,28 @@ export default function BarServicesFAQPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-stone-50 p-8 rounded-lg">
-              <h3 className="text-xl font-serif text-gray-900 mb-4">What to expect</h3>
-              <p className="text-gray-700 mb-4">
-                When you contact us, a bar specialist — not a call centre — reviews your enquiry. Most questions are answered within four business hours. For larger projects, we arrange a short discovery call, then issue a written proposal with scope, timeline and pricing before any commitment.
-              </p>
-              <p className="text-gray-700">
-                Our services include bar audits, costing and inventory control, cocktail menu development, signature cocktail creation, bar staff training, temporary bartender staffing, permanent bar staff recruitment, new bar setup, monthly bar management support, bar equipment supply and rental, and the complete bar performance programme.
-              </p>
+            <div className="space-y-6">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <OptimizedImage
+                  src={FAQ_GALLERY[2].src}
+                  alt={FAQ_GALLERY[2].alt}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="bg-stone-50 p-8 rounded-lg">
+                <h3 className="text-xl font-serif text-gray-900 mb-4">What to expect</h3>
+                <p className="text-gray-700 mb-4">
+                  When you contact us, a bar specialist — not a call centre — reviews your enquiry. Most questions are answered within four business hours. For larger projects, we arrange a short discovery call, then issue a written proposal with scope, timeline and pricing before any commitment.
+                </p>
+                <p className="text-gray-700">
+                  Our services include bar audits, costing and inventory control, cocktail menu development, signature cocktail creation, bar staff training, temporary bartender staffing, permanent bar staff recruitment, new bar setup, monthly bar management support, bar equipment supply and rental, and the complete bar performance programme.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      <BarServiceGallery images={FAQ_GALLERY} />
 
       <StickyMobileCTA
         pageSource="bar-services-faq"

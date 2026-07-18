@@ -182,9 +182,9 @@ export default function BarServicesResourcesIndexPage() {
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <h2 className="text-xl font-semibold mb-3 group-hover:text-amber-600 transition-colors">
+                    <h3 className="text-xl font-semibold mb-3 group-hover:text-amber-600 transition-colors">
                       {resource.title}
-                    </h2>
+                    </h3>
                     <p className="text-gray-600 text-sm flex-grow mb-4">
                       {resource.summary}
                     </p>

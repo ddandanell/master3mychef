@@ -235,6 +235,17 @@ export default function StaffingVillaManagersPage() {
         </div>
       </section>
 
+      <section className="py-12 px-6 bg-white border-y border-[#E8E6E3]">
+        <div className="max-w-[1000px] mx-auto text-center">
+          <p className="text-sm text-[#4A4745]">
+            Need bar staff, menu development or bar management for your properties?{' '}
+            <Link to="/bar-services/" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Explore MyChef Bar Services
+            </Link>.
+          </p>
+        </div>
+      </section>
+
       <PressStrip />
 
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">

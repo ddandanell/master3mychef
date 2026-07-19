@@ -57,6 +57,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const smtpTo = process.env.SMTP_TO
 
   if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !smtpTo) {
+    console.error(
+      'SMTP is not configured. Set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS (Google App Password), and SMTP_TO. See docs/superpowers/google-smtp-setup.md.'
+    )
     return res.status(500).json({ error: 'Email service is not configured' })
   }
 

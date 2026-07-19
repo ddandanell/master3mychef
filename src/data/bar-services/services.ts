@@ -9,11 +9,11 @@ export const BAR_SERVICES: BarService[] = [
     h1: 'Bar Staff Training Bali',
     heroImage: '/generated/mychef-bar-services-bali-hero-bar-staff-training.webp',
     heroAlt: 'Indonesian bartender training staff behind a villa bar in Bali',
-    problemImage: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-1.webp',
+    problemImage: '/generated/mychef-bar-services-bali-bar-staff-training-body.webp',
     problemAlt: 'Indonesian bartenders practising measured pours during a MyChef training session in Bali',
-    deliverablesImage: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-2.webp',
+    deliverablesImage: '/generated/mychef-bar-services-bali-bar-staff-training-body.webp',
     deliverablesAlt: 'Trainer demonstrating cocktail build technique behind a venue bar in Bali',
-    processImage: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-3.webp',
+    processImage: '/generated/mychef-bar-services-bali-bar-staff-training-body.webp',
     processAlt: 'Bar team receiving MyChef certificates after completing responsible service training',
     valueProp: 'Turn your bar team into consistent, confident operators who protect margins and elevate guest experience.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Bar Staff Training for my venue in Bali.",
@@ -125,9 +125,9 @@ export const BAR_SERVICES: BarService[] = [
       }
     },
     galleryImages: [
-      { src: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-1.webp', alt: 'Indonesian bartenders practising measured pours during a MyChef training session in Bali' },
-      { src: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-2.webp', alt: 'Trainer demonstrating cocktail build technique behind a venue bar in Bali' },
-      { src: '/generated/mychef-bar-services-bali-bar-staff-training-gallery-3.webp', alt: 'Bar team receiving MyChef certificates after completing responsible service training' }
+      { src: '/generated/mychef-bar-services-bali-bar-staff-training-body.webp', alt: 'Indonesian bartenders practising measured pours during a MyChef training session in Bali' },
+      { src: '/generated/mychef-bar-services-bali-bar-staff-training-body.webp', alt: 'Trainer demonstrating cocktail build technique behind a venue bar in Bali' },
+      { src: '/generated/mychef-bar-services-bali-bar-staff-training-body.webp', alt: 'Bar team receiving MyChef certificates after completing responsible service training' }
     ]
   },
   {
@@ -138,11 +138,11 @@ export const BAR_SERVICES: BarService[] = [
     h1: 'Cocktail Menu Development Bali',
     heroImage: '/generated/mychef-bar-services-bali-hero-cocktail-menu-development.webp',
     heroAlt: 'Bali bartender presenting a costed cocktail menu on a venue tablet',
-    problemImage: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-1.webp',
+    problemImage: '/generated/mychef-bar-services-bali-cocktail-menu-development-body.webp',
     problemAlt: 'MyChef mixologist cost-testing a new cocktail recipe on a Bali venue bar',
-    deliverablesImage: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-2.webp',
+    deliverablesImage: '/generated/mychef-bar-services-bali-cocktail-menu-development-body.webp',
     deliverablesAlt: 'Photo-illustrated cocktail spec sheets spread across a bar counter in Bali',
-    processImage: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-3.webp',
+    processImage: '/generated/mychef-bar-services-bali-cocktail-menu-development-body.webp',
     processAlt: 'Bartenders executing a newly launched cocktail menu during team training',
     valueProp: 'Design or re-engineer your cocktail menu so it fits your concept, excites your guests and protects your margin.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Cocktail Menu Development for my venue in Bali.",
@@ -255,9 +255,9 @@ export const BAR_SERVICES: BarService[] = [
       }
     },
     galleryImages: [
-      { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-1.webp', alt: 'MyChef mixologist cost-testing a new cocktail recipe on a Bali venue bar' },
-      { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-2.webp', alt: 'Photo-illustrated cocktail spec sheets spread across a bar counter in Bali' },
-      { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-gallery-3.webp', alt: 'Bartenders executing a newly launched cocktail menu during team training' }
+      { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-body.webp', alt: 'MyChef mixologist cost-testing a new cocktail recipe on a Bali venue bar' },
+      { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-body.webp', alt: 'Photo-illustrated cocktail spec sheets spread across a bar counter in Bali' },
+      { src: '/generated/mychef-bar-services-bali-cocktail-menu-development-body.webp', alt: 'Bartenders executing a newly launched cocktail menu during team training' }
     ]
   },
   {
@@ -268,11 +268,11 @@ export const BAR_SERVICES: BarService[] = [
     h1: 'Signature Cocktail Creation Bali',
     heroImage: '/generated/mychef-bar-services-bali-hero-signature-cocktail-creation.webp',
     heroAlt: 'A named signature cocktail being poured at a Bali beach club bar',
-    problemImage: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-1.webp',
+    problemImage: '/generated/mychef-bar-services-bali-signature-cocktail-creation-body.webp',
     problemAlt: 'Bespoke signature cocktail being garnished for a Bali beach club tasting panel',
-    deliverablesImage: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-2.webp',
+    deliverablesImage: '/generated/mychef-bar-services-bali-signature-cocktail-creation-body.webp',
     deliverablesAlt: 'Professional photo session of a named signature serve with story card',
-    processImage: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-3.webp',
+    processImage: '/generated/mychef-bar-services-bali-signature-cocktail-creation-body.webp',
     processAlt: 'Wedding couple\'s signature cocktail being poured at a Bali reception bar',
     valueProp: 'Build a named, story-driven signature serve that guests photograph and reviewers name.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Signature Cocktail Creation for my venue in Bali.",
@@ -387,9 +387,9 @@ export const BAR_SERVICES: BarService[] = [
       }
     },
     galleryImages: [
-      { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-1.webp', alt: 'Bespoke signature cocktail being garnished for a Bali beach club tasting panel' },
-      { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-2.webp', alt: 'Professional photo session of a named signature serve with story card' },
-      { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-gallery-3.webp', alt: 'Wedding couple\'s signature cocktail being poured at a Bali reception bar' }
+      { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-body.webp', alt: 'Bespoke signature cocktail being garnished for a Bali beach club tasting panel' },
+      { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-body.webp', alt: 'Professional photo session of a named signature serve with story card' },
+      { src: '/generated/mychef-bar-services-bali-signature-cocktail-creation-body.webp', alt: 'Wedding couple\'s signature cocktail being poured at a Bali reception bar' }
     ]
   },
   {
@@ -400,11 +400,11 @@ export const BAR_SERVICES: BarService[] = [
     h1: 'Bartender Hire Bali',
     heroImage: '/generated/mychef-bar-services-bali-hero-temporary-bartender-staffing.webp',
     heroAlt: 'Uniformed MyChef bartenders setting up a Bali event bar',
-    problemImage: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-1.webp',
+    problemImage: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-body.webp',
     problemAlt: 'Uniformed MyChef bartenders setting up an event bar before a Bali wedding',
-    deliverablesImage: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-2.webp',
+    deliverablesImage: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-body.webp',
     deliverablesAlt: 'MyChef supervisor briefing a temporary bar crew at a Bali beach club event',
-    processImage: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-3.webp',
+    processImage: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-body.webp',
     processAlt: 'Temporary bartender pouring cocktails at a high-volume Bali reception',
     valueProp: 'Vetted, insured bartenders and barbacks for events, weddings and venue cover — employed by us, zero employment-law risk to you.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Temporary Bartender Staffing for my venue in Bali.",
@@ -517,9 +517,9 @@ export const BAR_SERVICES: BarService[] = [
       }
     },
     galleryImages: [
-      { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-1.webp', alt: 'Uniformed MyChef bartenders setting up an event bar before a Bali wedding' },
-      { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-2.webp', alt: 'MyChef supervisor briefing a temporary bar crew at a Bali beach club event' },
-      { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-3.webp', alt: 'Temporary bartender pouring cocktails at a high-volume Bali reception' }
+      { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-body.webp', alt: 'Uniformed MyChef bartenders setting up an event bar before a Bali wedding' },
+      { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-body.webp', alt: 'MyChef supervisor briefing a temporary bar crew at a Bali beach club event' },
+      { src: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-body.webp', alt: 'Temporary bartender pouring cocktails at a high-volume Bali reception' }
     ]
   },
   {
@@ -530,11 +530,11 @@ export const BAR_SERVICES: BarService[] = [
     h1: 'Bar Staff Recruitment Bali',
     heroImage: '/generated/mychef-bar-services-bali-hero-permanent-bar-staff-recruitment.webp',
     heroAlt: 'Bali bartender completing a practical trial behind a venue bar',
-    problemImage: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-1.webp',
+    problemImage: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-body.webp',
     problemAlt: 'Bali bartender completing a timed practical trial during a MyChef recruitment assessment',
-    deliverablesImage: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-2.webp',
+    deliverablesImage: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-body.webp',
     deliverablesAlt: 'Bar manager interviewing a trade-tested candidate with trial scores in a Bali venue',
-    processImage: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-3.webp',
+    processImage: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-body.webp',
     processAlt: 'Newly placed MyChef bartender receiving onboarding documents and a responsible-service briefing',
     valueProp: 'Search, vet and place permanent bartenders and bar managers — every candidate has poured in front of us first.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Permanent Bar Staff Recruitment for my venue in Bali.",
@@ -646,9 +646,9 @@ export const BAR_SERVICES: BarService[] = [
       }
     },
     galleryImages: [
-      { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-1.webp', alt: 'Bali bartender completing a timed practical trial during a MyChef recruitment assessment' },
-      { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-2.webp', alt: 'Bar manager interviewing a trade-tested candidate with trial scores in a Bali venue' },
-      { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-gallery-3.webp', alt: 'Newly placed MyChef bartender receiving onboarding documents and a responsible-service briefing' }
+      { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-body.webp', alt: 'Bali bartender completing a timed practical trial during a MyChef recruitment assessment' },
+      { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-body.webp', alt: 'Bar manager interviewing a trade-tested candidate with trial scores in a Bali venue' },
+      { src: '/generated/mychef-bar-services-bali-permanent-bar-staff-recruitment-body.webp', alt: 'Newly placed MyChef bartender receiving onboarding documents and a responsible-service briefing' }
     ]
   },
   {
@@ -659,11 +659,11 @@ export const BAR_SERVICES: BarService[] = [
     h1: 'New Bar Setup Bali',
     heroImage: '/generated/mychef-bar-services-bali-hero-new-bar-setup.webp',
     heroAlt: 'New Bali restaurant bar being fitted out before opening',
-    problemImage: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-1.webp',
+    problemImage: '/generated/mychef-bar-services-bali-new-bar-setup-body.webp',
     problemAlt: 'New Bali restaurant bar being fitted out before opening under MyChef supervision',
-    deliverablesImage: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-2.webp',
+    deliverablesImage: '/generated/mychef-bar-services-bali-new-bar-setup-body.webp',
     deliverablesAlt: 'Scaled bar layout plan and equipment specification on a venue desk',
-    processImage: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-3.webp',
+    processImage: '/generated/mychef-bar-services-bali-new-bar-setup-body.webp',
     processAlt: 'MyChef bar lead coaching opening-week staff behind a newly launched Bali bar',
     valueProp: 'Take your venue from empty room to revenue-ready bar in 6–10 weeks with concept, layout, equipment, menu and launch support.',
     whatsappMessage: "Hi MyChef — I'd like to discuss New Bar Setup for my venue in Bali.",
@@ -776,9 +776,9 @@ export const BAR_SERVICES: BarService[] = [
       }
     },
     galleryImages: [
-      { src: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-1.webp', alt: 'New Bali restaurant bar being fitted out before opening under MyChef supervision' },
-      { src: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-2.webp', alt: 'Scaled bar layout plan and equipment specification on a venue desk' },
-      { src: '/generated/mychef-bar-services-bali-new-bar-setup-gallery-3.webp', alt: 'MyChef bar lead coaching opening-week staff behind a newly launched Bali bar' }
+      { src: '/generated/mychef-bar-services-bali-new-bar-setup-body.webp', alt: 'New Bali restaurant bar being fitted out before opening under MyChef supervision' },
+      { src: '/generated/mychef-bar-services-bali-new-bar-setup-body.webp', alt: 'Scaled bar layout plan and equipment specification on a venue desk' },
+      { src: '/generated/mychef-bar-services-bali-new-bar-setup-body.webp', alt: 'MyChef bar lead coaching opening-week staff behind a newly launched Bali bar' }
     ]
   },
   {
@@ -789,11 +789,11 @@ export const BAR_SERVICES: BarService[] = [
     h1: 'Bar Audit & Improvement Bali',
     heroImage: '/generated/mychef-bar-services-bali-hero-bar-audit-improvement.webp',
     heroAlt: 'Auditor reviewing bar inventory records at a Bali venue',
-    problemImage: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-1.webp',
+    problemImage: '/generated/mychef-bar-services-bali-bar-audit-improvement-body.webp',
     problemAlt: 'MyChef auditor reviewing bar inventory records and label-edar stickers at a Bali venue',
-    deliverablesImage: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-2.webp',
+    deliverablesImage: '/generated/mychef-bar-services-bali-bar-audit-improvement-body.webp',
     deliverablesAlt: 'Mystery guest assessing cocktail build quality during an anonymous bar audit in Bali',
-    processImage: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-3.webp',
+    processImage: '/generated/mychef-bar-services-bali-bar-audit-improvement-body.webp',
     processAlt: 'Senior bar consultant presenting a board-ready audit report to a Bali venue owner',
     valueProp: 'A four-pillar operational audit that finds what your bar is losing, prices it in rupiah and hands you a prioritised 90-day fix plan.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Bar Audit & Improvement for my venue in Bali.",
@@ -903,9 +903,9 @@ export const BAR_SERVICES: BarService[] = [
       }
     },
     galleryImages: [
-      { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-1.webp', alt: 'MyChef auditor reviewing bar inventory records and label-edar stickers at a Bali venue' },
-      { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-2.webp', alt: 'Mystery guest assessing cocktail build quality during an anonymous bar audit in Bali' },
-      { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-gallery-3.webp', alt: 'Senior bar consultant presenting a board-ready audit report to a Bali venue owner' }
+      { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-body.webp', alt: 'MyChef auditor reviewing bar inventory records and label-edar stickers at a Bali venue' },
+      { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-body.webp', alt: 'Mystery guest assessing cocktail build quality during an anonymous bar audit in Bali' },
+      { src: '/generated/mychef-bar-services-bali-bar-audit-improvement-body.webp', alt: 'Senior bar consultant presenting a board-ready audit report to a Bali venue owner' }
     ]
   },
   {
@@ -916,11 +916,11 @@ export const BAR_SERVICES: BarService[] = [
     h1: 'Bar Costing & Inventory Control Bali',
     heroImage: '/generated/mychef-bar-services-bali-hero-bar-costing-inventory-control.webp',
     heroAlt: 'Bar manager reviewing costing cards and par levels at a Bali bar',
-    problemImage: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-1.webp',
+    problemImage: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-body.webp',
     problemAlt: 'Bar manager reviewing recipe costing cards and par levels at a Bali bar',
-    deliverablesImage: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-2.webp',
+    deliverablesImage: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-body.webp',
     deliverablesAlt: 'MyChef consultant supervising a baseline stocktake behind a Bali venue bar',
-    processImage: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-3.webp',
+    processImage: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-body.webp',
     processAlt: 'Bar team training on variance tolerance bands and count sheets during costing rollout',
     valueProp: 'Install the measurement and accountability system that pulls pour cost into the 18–24% target band within 60 days.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Bar Costing & Inventory Control for my venue in Bali.",
@@ -1032,9 +1032,9 @@ export const BAR_SERVICES: BarService[] = [
       }
     },
     galleryImages: [
-      { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-1.webp', alt: 'Bar manager reviewing recipe costing cards and par levels at a Bali bar' },
-      { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-2.webp', alt: 'MyChef consultant supervising a baseline stocktake behind a Bali venue bar' },
-      { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-gallery-3.webp', alt: 'Bar team training on variance tolerance bands and count sheets during costing rollout' }
+      { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-body.webp', alt: 'Bar manager reviewing recipe costing cards and par levels at a Bali bar' },
+      { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-body.webp', alt: 'MyChef consultant supervising a baseline stocktake behind a Bali venue bar' },
+      { src: '/generated/mychef-bar-services-bali-bar-costing-inventory-control-body.webp', alt: 'Bar team training on variance tolerance bands and count sheets during costing rollout' }
     ]
   },
   {
@@ -1045,11 +1045,11 @@ export const BAR_SERVICES: BarService[] = [
     h1: 'Bar Equipment Supply & Rental Bali',
     heroImage: '/generated/mychef-bar-services-bali-hero-bar-equipment-supply-rental.webp',
     heroAlt: 'Mobile bar unit and glassware being loaded for a Bali event',
-    problemImage: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-1.webp',
+    problemImage: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-body.webp',
     problemAlt: 'Mobile bar unit and glassware being prepared for a Bali wedding rental delivery',
-    deliverablesImage: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-2.webp',
+    deliverablesImage: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-body.webp',
     deliverablesAlt: 'Professional bartender tool kits laid out for inventory check before an event',
-    processImage: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-3.webp',
+    processImage: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-body.webp',
     processAlt: 'MyChef team delivering and setting up a mobile bar at a Bali villa event',
     valueProp: 'Spec, supply or rent the bar equipment your menu and volume actually need — with three quotes and no markup games.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Bar Equipment Supply & Rental for my venue in Bali.",
@@ -1161,9 +1161,9 @@ export const BAR_SERVICES: BarService[] = [
       }
     },
     galleryImages: [
-      { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-1.webp', alt: 'Mobile bar unit and glassware being prepared for a Bali wedding rental delivery' },
-      { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-2.webp', alt: 'Professional bartender tool kits laid out for inventory check before an event' },
-      { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-gallery-3.webp', alt: 'MyChef team delivering and setting up a mobile bar at a Bali villa event' }
+      { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-body.webp', alt: 'Mobile bar unit and glassware being prepared for a Bali wedding rental delivery' },
+      { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-body.webp', alt: 'Professional bartender tool kits laid out for inventory check before an event' },
+      { src: '/generated/mychef-bar-services-bali-bar-equipment-supply-rental-body.webp', alt: 'MyChef team delivering and setting up a mobile bar at a Bali villa event' }
     ]
   },
   {
@@ -1174,11 +1174,11 @@ export const BAR_SERVICES: BarService[] = [
     h1: 'Monthly Bar Management Support Bali',
     heroImage: '/generated/mychef-bar-services-bali-hero-monthly-bar-management-support.webp',
     heroAlt: 'MyChef bar manager reviewing KPIs with a Bali venue owner',
-    problemImage: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-1.webp',
+    problemImage: '/generated/mychef-bar-services-bali-monthly-bar-management-support-body.webp',
     problemAlt: 'MyChef bar manager reviewing KPIs with a Bali venue owner over a one-page report',
-    deliverablesImage: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-2.webp',
+    deliverablesImage: '/generated/mychef-bar-services-bali-monthly-bar-management-support-body.webp',
     deliverablesAlt: 'Bar manager supervising a monthly stocktake behind a Bali restaurant bar',
-    processImage: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-3.webp',
+    processImage: '/generated/mychef-bar-services-bali-monthly-bar-management-support-body.webp',
     processAlt: 'Monthly training refresher on pour standards with a Bali bar team',
     valueProp: 'Senior bar leadership on retainer — stock control, menu reviews, training refreshers and owner-grade reporting.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Monthly Bar Management Support for my venue in Bali.",
@@ -1289,9 +1289,9 @@ export const BAR_SERVICES: BarService[] = [
       }
     },
     galleryImages: [
-      { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-1.webp', alt: 'MyChef bar manager reviewing KPIs with a Bali venue owner over a one-page report' },
-      { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-2.webp', alt: 'Bar manager supervising a monthly stocktake behind a Bali restaurant bar' },
-      { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-gallery-3.webp', alt: 'Monthly training refresher on pour standards with a Bali bar team' }
+      { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-body.webp', alt: 'MyChef bar manager reviewing KPIs with a Bali venue owner over a one-page report' },
+      { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-body.webp', alt: 'Bar manager supervising a monthly stocktake behind a Bali restaurant bar' },
+      { src: '/generated/mychef-bar-services-bali-monthly-bar-management-support-body.webp', alt: 'Monthly training refresher on pour standards with a Bali bar team' }
     ]
   },
   {
@@ -1302,11 +1302,11 @@ export const BAR_SERVICES: BarService[] = [
     h1: 'Complete Bar Performance Programme Bali',
     heroImage: '/generated/mychef-bar-services-bali-hero-complete-bar-performance-programme.webp',
     heroAlt: 'Bali venue leadership team reviewing a quarterly bar scorecard',
-    problemImage: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-1.webp',
+    problemImage: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-body.webp',
     problemAlt: 'Bali venue leadership team reviewing a quarterly bar scorecard with MyChef',
-    deliverablesImage: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-2.webp',
+    deliverablesImage: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-body.webp',
     deliverablesAlt: 'Bartenders executing a newly launched cocktail menu behind a Bali bar',
-    processImage: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-3.webp',
+    processImage: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-body.webp',
     processAlt: 'MyChef programme director presenting an annual rupiah impact summary to an owner',
     valueProp: 'One 12-month programme that transforms your bar into a measured, trained, controlled and continuously managed operation.',
     whatsappMessage: "Hi MyChef — I'd like to discuss the Complete Bar Performance Programme for my venue in Bali.",
@@ -1415,9 +1415,9 @@ export const BAR_SERVICES: BarService[] = [
       }
     },
     galleryImages: [
-      { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-1.webp', alt: 'Bali venue leadership team reviewing a quarterly bar scorecard with MyChef' },
-      { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-2.webp', alt: 'Bartenders executing a newly launched cocktail menu behind a Bali bar' },
-      { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-gallery-3.webp', alt: 'MyChef programme director presenting an annual rupiah impact summary to an owner' }
+      { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-body.webp', alt: 'Bali venue leadership team reviewing a quarterly bar scorecard with MyChef' },
+      { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-body.webp', alt: 'Bartenders executing a newly launched cocktail menu behind a Bali bar' },
+      { src: '/generated/mychef-bar-services-bali-complete-bar-performance-programme-body.webp', alt: 'MyChef programme director presenting an annual rupiah impact summary to an owner' }
     ]
   }
 ]

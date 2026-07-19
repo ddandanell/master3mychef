@@ -27,7 +27,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const OUT_DIR = join(__dirname, '..', 'public', 'generated')
 
 const OPENAI_API_URL = 'https://api.openai.com/v1/images/generations'
-const OPENAI_MODEL = 'gpt-image-1'
+const OPENAI_MODEL = 'gpt-image-2'
 const OPENAI_SIZE = '1536x1024'
 
 const BFL_API_URL = 'https://api.bfl.ai/v1/flux-2-klein-9b'

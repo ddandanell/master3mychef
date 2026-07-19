@@ -284,9 +284,9 @@ export default function SolPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { slug: 'sol-breakfast', alt: 'Private villa chef breakfast spread in a Bali villa' },
-              { slug: 'sol-lunch', alt: 'Bali villa catering lunch table served by a private chef' },
-              { slug: 'sol-sunset', alt: 'Sunset villa dining set up by myCHEF in Bali' },
+              { slug: 'mychef-catering-bali-floating-breakfast', alt: 'Private villa chef breakfast spread in a Bali villa' },
+              { slug: 'mychef-catering-bali-villa-final', alt: 'Bali villa catering lunch table served by a private chef' },
+              { slug: 'mychef-location-bali-locations-sunset', alt: 'Sunset villa dining set up by myCHEF in Bali' },
               { slug: 'sol-bbq', alt: 'Poolside BBQ catering in a private Bali villa' },
             ].map((img) => (
               <div key={img.slug} className="aspect-square rounded-xl overflow-hidden">

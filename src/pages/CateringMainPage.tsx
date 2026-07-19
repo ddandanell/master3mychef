@@ -22,6 +22,8 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import LocationChips from '@/components/LocationChips'
 import TrustRow from '@/components/catering/TrustRow'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import StaffingInfo from '@/components/catering/StaffingInfo'
+import BookingProcess from '@/components/catering/BookingProcess'
 import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
@@ -1466,6 +1468,9 @@ export default function CateringMainPage() {
           />
         </div>
       </section>
+
+      <StaffingInfo />
+      <BookingProcess />
 
       <LocationChips
         title="Catering Across Bali"

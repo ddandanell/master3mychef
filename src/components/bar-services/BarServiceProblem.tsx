@@ -11,8 +11,12 @@ interface Props {
 export function BarServiceProblem({ problem, image, imagePosition = 'right' }: Props) {
   const content = (
     <>
-      <BarServiceSectionHeader title={problem.title} />
-      <div className="max-w-3xl space-y-4 text-gray-700">
+      <BarServiceSectionHeader
+        eyebrow="The challenge"
+        title={problem.title}
+        variant="dark"
+      />
+      <div className="max-w-3xl space-y-5 text-[#F5F2EB]/80 text-base md:text-lg leading-relaxed">
         {problem.paragraphs.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
@@ -21,10 +25,10 @@ export function BarServiceProblem({ problem, image, imagePosition = 'right' }: P
   )
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="content" className="py-20 md:py-28 bg-[#0A0A0A]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {image ? (
-          <BarServiceImageSection image={image} imagePosition={imagePosition}>
+          <BarServiceImageSection image={image} imagePosition={imagePosition} bgColor="charcoal">
             {content}
           </BarServiceImageSection>
         ) : (

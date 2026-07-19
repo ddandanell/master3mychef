@@ -99,10 +99,20 @@ export default function BarServicePage() {
       )}
       <BarServiceQuoteBlock service={service} />
       <BarServiceCrossSells slugs={service.relatedServices} />
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-serif mb-8">Frequently asked questions</h2>
-          <FAQAccordion items={service.faqs.map((f) => ({ q: f.question, a: f.answer }))} />
+      <section className="py-20 md:py-28 bg-[#0F0E0C]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+          <div className="text-center mb-12">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 block">
+              FAQ
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-[#F5F2EB] mb-4">
+              Questions about {service.eyebrow}
+            </h2>
+            <p className="text-[#F5F2EB]/60 leading-relaxed">
+              Straight answers to help you decide if this service fits your venue.
+            </p>
+          </div>
+          <FAQAccordion items={service.faqs.map((f) => ({ q: f.question, a: f.answer }))} dark />
         </div>
       </section>
       <BarServiceResources slugs={service.relatedResources} />

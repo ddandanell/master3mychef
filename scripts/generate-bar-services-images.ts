@@ -27,7 +27,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const OUT_DIR = join(__dirname, '..', 'public', 'generated')
 
 const OPENAI_API_URL = 'https://api.openai.com/v1/images/generations'
-const OPENAI_MODEL = 'gpt-image-2'
+const OPENAI_MODEL = 'gpt-image-1'
 const OPENAI_SIZE = '1536x1024'
 
 const BFL_API_URL = 'https://api.bfl.ai/v1/flux-2-klein-9b'
@@ -383,7 +383,7 @@ async function generateWithOpenAI(prompt: string): Promise<Buffer | null> {
   const res = await fetch(OPENAI_API_URL, {
     method: 'POST',
     headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ model: OPENAI_MODEL, prompt, n: 1, size: OPENAI_SIZE, quality: 'medium' }),
+    body: JSON.stringify({ model: OPENAI_MODEL, prompt, n: 1, size: OPENAI_SIZE, quality: 'high' }),
   })
 
   if (!res.ok) {
@@ -453,11 +453,30 @@ async function generateWithPollinations(prompt: string, seed: number): Promise<B
   return Buffer.from(await res.arrayBuffer())
 }
 
+// Set to true once OpenAI returns a billing-limit error so we stop wasting
+// time (and failed-request budget) on subsequent jobs.
+let openAiBillingLimited = false
+
 async function generateRaw(job: ImageJob, seed: number): Promise<{ buffer: Buffer; provider: Provider }> {
   const fullPrompt = `${job.prompt}. ${BRAND_RULES}. ${NEGATIVE}`
 
-  // Pollinations is the primary provider for this run because the OpenAI key
-  // points to a chat-only endpoint and BFL credits are not guaranteed.
+  // Try OpenAI first only while the key still has quota.
+  if (!openAiBillingLimited) {
+    try {
+      const buf = await generateWithOpenAI(fullPrompt)
+      if (buf) return { buffer: buf, provider: 'openai' }
+    } catch (openaiErr) {
+      const openaiMsg = openaiErr instanceof Error ? openaiErr.message : String(openaiErr)
+      if (openaiMsg.includes('billing') || openaiMsg.includes('Billing hard limit')) {
+        openAiBillingLimited = true
+        console.warn('   OpenAI billing limit reached — switching to Pollinations for remaining images.')
+      } else if (!openaiMsg.includes('520')) {
+        console.warn(`   OpenAI failed (${openaiMsg}), trying Pollinations...`)
+      }
+    }
+  }
+
+  // Pollinations primary / fallback
   let lastPollErr: unknown
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
@@ -466,19 +485,14 @@ async function generateRaw(job: ImageJob, seed: number): Promise<{ buffer: Buffe
     } catch (pollErr) {
       lastPollErr = pollErr
       const pollMsg = pollErr instanceof Error ? pollErr.message : String(pollErr)
+      const is429 = pollMsg.includes('429')
+      const is500 = pollMsg.includes('500')
       console.warn(`   Pollinations attempt ${attempt}/3 failed (${pollMsg})`)
-      if (attempt < 3) await sleep(2000 * attempt)
+      if (attempt < 3) {
+        // Back off more aggressively on rate-limit / server errors.
+        await sleep(is429 || is500 ? 10000 * attempt : 2000 * attempt)
+      }
     }
-  }
-
-  console.warn(`   Pollinations failed after 3 attempts, trying OpenAI/BFL...`)
-
-  // Try OpenAI second
-  try {
-    const buf = await generateWithOpenAI(fullPrompt)
-    if (buf) return { buffer: buf, provider: 'openai' }
-  } catch {
-    // fall through
   }
 
   // Try BFL last
@@ -490,6 +504,43 @@ async function generateRaw(job: ImageJob, seed: number): Promise<{ buffer: Buffe
   }
 
   throw new Error(`All providers failed. Last Pollinations error: ${lastPollErr instanceof Error ? lastPollErr.message : String(lastPollErr)}`)
+}
+
+function limitConcurrency<T>(tasks: (() => Promise<T>)[], limit: number): Promise<T[]> {
+  return new Promise((resolve, reject) => {
+    const results = new Array<T>(tasks.length)
+    let running = 0
+    let index = 0
+    let completed = 0
+    let rejected = false
+
+    function runNext() {
+      if (rejected) return
+      if (completed >= tasks.length) {
+        resolve(results)
+        return
+      }
+      while (running < limit && index < tasks.length) {
+        const i = index++
+        running++
+        tasks[i]()
+          .then((result) => {
+            results[i] = result
+          })
+          .catch((err) => {
+            rejected = true
+            reject(err)
+          })
+          .finally(() => {
+            running--
+            completed++
+            runNext()
+          })
+      }
+    }
+
+    runNext()
+  })
 }
 
 async function processJob(job: ImageJob, index: number, total: number): Promise<JobResult> {
@@ -596,13 +647,14 @@ async function main(): Promise<void> {
   const jobs = buildJobs()
   const galleryCount = jobs.filter((j) => j.type === 'gallery').length
   console.log(`\n🚀 Generating ${jobs.length} bar-services images (${galleryCount} gallery images across 22 pages)...`)
-  console.log(`Providers: Pollinations → OpenAI → BFL\n`)
+  console.log(`Providers: OpenAI (${OPENAI_MODEL}, 1536x1024, quality: high) → Pollinations → BFL\n`)
 
+  // Sequential processing keeps the free Pollinations endpoint stable.
+  // A short pause between jobs reduces rate-limit risk.
   const results: JobResult[] = []
   for (let i = 0; i < jobs.length; i++) {
     results.push(await processJob(jobs[i], i, jobs.length))
-    // Polite delay to avoid rate-limiting the free Pollinations endpoint
-    if (i < jobs.length - 1) await sleep(500)
+    if (i < jobs.length - 1) await sleep(1500)
   }
 
   const ok = results.filter((r) => r.ok)

@@ -11,12 +11,25 @@ interface Props {
 export function BarServiceDeliverables({ deliverables, image, imagePosition = 'right' }: Props) {
   const content = (
     <>
-      <BarServiceSectionHeader eyebrow="What you get" title="What we deliver" />
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <BarServiceSectionHeader
+        eyebrow="What you get"
+        title="What we deliver"
+        variant="dark"
+      />
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {deliverables.map((d, i) => (
-          <div key={i} className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-2">{d.title}</h3>
-            <p className="text-gray-600">{d.description}</p>
+          <div
+            key={i}
+            className="group relative p-6 rounded-xl bg-[#1A1A1A]/60 border border-[#C5A028]/20 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C5A028]/50 hover:bg-[#1A1A1A]/80 hover:shadow-[0_8px_30px_rgba(197,160,40,0.08)]"
+          >
+            {/* Gold top accent */}
+            <div className="absolute top-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-[#C5A028]/40 to-transparent" />
+            <h3 className="text-lg font-semibold text-[#F5F2EB] mb-3">
+              {d.title}
+            </h3>
+            <p className="text-[#F5F2EB]/65 text-sm leading-relaxed">
+              {d.description}
+            </p>
           </div>
         ))}
       </div>
@@ -24,10 +37,10 @@ export function BarServiceDeliverables({ deliverables, image, imagePosition = 'r
   )
 
   return (
-    <section className="py-16 md:py-24 bg-stone-50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 md:py-28 bg-[#0F0E0C]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {image ? (
-          <BarServiceImageSection image={image} imagePosition={imagePosition}>
+          <BarServiceImageSection image={image} imagePosition={imagePosition} bgColor="stoneDark">
             {content}
           </BarServiceImageSection>
         ) : (

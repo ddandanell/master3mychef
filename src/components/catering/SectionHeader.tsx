@@ -30,9 +30,9 @@ export default function SectionHeader({ eyebrow, title, subtitle, align = 'cente
         {title}
       </h2>
       {subtitle && (
-        <p className={`${mutedColor} text-base md:text-lg max-w-xl ${align === 'center' ? 'mx-auto' : ''}`}>
+        <div className={`${mutedColor} text-base md:text-lg max-w-xl ${align === 'center' ? 'mx-auto' : ''}`}>
           {subtitle}
-        </p>
+        </div>
       )}
     </div>
   )

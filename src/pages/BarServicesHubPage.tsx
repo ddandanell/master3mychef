@@ -1,12 +1,26 @@
-import { ArrowRight, HelpCircle, MessageCircle, BookOpen } from 'lucide-react'
+import {
+  ArrowRight,
+  HelpCircle,
+  MessageCircle,
+  BookOpen,
+  Building2,
+  Home,
+  Waves,
+  UtensilsCrossed,
+  PartyPopper,
+  ChevronDown,
+  Star,
+  ShieldCheck,
+  TrendingUp,
+} from 'lucide-react'
 import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, professionalServiceSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
-import { BarServiceImageSection, BarServiceSubNav } from '@/components/bar-services'
+import { BarServiceSubNav } from '@/components/bar-services'
 import { getPageMeta } from '@/data/page-meta'
-import { BAR_SERVICES_HUB, getBarServiceBySlug } from '@/data/bar-services'
+import { BAR_SERVICES_HUB, BAR_RESOURCES, getBarServiceBySlug } from '@/data/bar-services'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 const SITE = 'https://mychef.id'
@@ -33,6 +47,39 @@ const UTILITY_CARDS = [
     description: 'Benchmarks, checklists and how-to guides for Bali bar operators.',
     href: '/bar-services/resources/',
     icon: BookOpen,
+  },
+]
+
+const SEGMENTS = [
+  {
+    id: 'hotels',
+    title: 'Hotels & Resorts',
+    description: 'Beverage manager cover, bar audits and menu refreshes for boutique and luxury properties.',
+    icon: Building2,
+  },
+  {
+    id: 'villas',
+    title: 'Villas & Estates',
+    description: 'In-villa bar setups, bartender staffing and butler training for private villa experiences.',
+    icon: Home,
+  },
+  {
+    id: 'beach-clubs',
+    title: 'Beach Clubs',
+    description: 'High-volume costing controls, speed training and event bartender crews for day clubs.',
+    icon: Waves,
+  },
+  {
+    id: 'restaurants',
+    title: 'Restaurants & Cafés',
+    description: 'Profitable cocktail menus, pour-cost systems and staff training for restaurant bars.',
+    icon: UtensilsCrossed,
+  },
+  {
+    id: 'events',
+    title: 'Events & Weddings',
+    description: 'Vetted event bartenders, signature cocktails and mobile bar rental for one-off occasions.',
+    icon: PartyPopper,
   },
 ]
 
@@ -64,10 +111,13 @@ const HUB_FAQS = [
   },
 ]
 
+function formatPriceLabel(label: string): string {
+  return label.replace('From ', '').trim()
+}
+
 export default function BarServicesHubPage() {
   const meta = getPageMeta('bar-services-hub')
-  const { hero, groups, expandedCopy, galleryImages, whyUs, process, proof } = BAR_SERVICES_HUB
-  const hubImages = galleryImages ?? []
+  const { hero, groups, expandedCopy, whyUs, process, proof } = BAR_SERVICES_HUB
 
   const groupedServices = groups.map((group) => ({
     ...group,
@@ -75,6 +125,8 @@ export default function BarServicesHubPage() {
       .map((slug) => getBarServiceBySlug(slug))
       .filter((service): service is NonNullable<ReturnType<typeof getBarServiceBySlug>> => Boolean(service)),
   }))
+
+  const featuredResources = BAR_RESOURCES.slice(0, 4)
 
   return (
     <>
@@ -97,22 +149,23 @@ export default function BarServicesHubPage() {
       <Breadcrumb items={[{ label: 'Bar Services', href: '/bar-services/' }]} />
 
       {/* Hero */}
-      <section className="relative min-h-[75vh] flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0A0A0A]">
         <OptimizedImage
           src={hero.heroImage}
           alt={hero.heroAlt}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-90"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
-        <div className="relative container mx-auto px-4 py-24">
-          <span className="text-sm uppercase tracking-widest text-amber-400 mb-4 block">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/95 via-[#0A0A0A]/70 to-[#0A0A0A]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C5A028]/10 border border-[#C5A028]/30 text-[#C5A028] text-xs uppercase tracking-[0.2em] font-semibold mb-6">
             {hero.eyebrow}
           </span>
-          <h1 className="text-4xl md:text-6xl font-serif text-white mb-6 max-w-3xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playfair text-[#F5F2EB] mb-6 max-w-4xl leading-[1.1]">
             {hero.h1}
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-8">
+          <p className="text-lg md:text-xl text-[#F5F2EB]/80 max-w-2xl mb-10 leading-relaxed">
             {hero.description}
           </p>
           <div className="flex flex-wrap gap-4">
@@ -120,50 +173,64 @@ export default function BarServicesHubPage() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-medium rounded"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] hover:bg-[#C5A028]/90 text-[#0A0A0A] font-semibold rounded-lg transition-all duration-300 hover:shadow-[0_10px_30px_rgba(197,160,40,0.3)]"
             >
-              <MessageCircle className="w-4 h-4" />
+              <MessageCircle className="w-5 h-5" />
               WhatsApp Us
             </a>
             <a
               href="#all-services"
-              className="inline-flex items-center justify-center px-6 py-3 border border-white text-white hover:bg-white/10 font-medium rounded"
+              className="inline-flex items-center justify-center px-8 py-4 border border-[#F5F2EB]/30 text-[#F5F2EB] hover:bg-[#F5F2EB]/10 font-medium rounded-lg transition-all duration-300"
             >
               Explore Services
             </a>
           </div>
         </div>
+        <a
+          href="#who-we-serve"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-[#F5F2EB]/50 hover:text-[#C5A028] transition-colors"
+          aria-label="Scroll down"
+        >
+          <span className="text-[10px] uppercase tracking-[0.2em] mb-2">Scroll</span>
+          <ChevronDown className="w-5 h-5 animate-bounce" />
+        </a>
       </section>
       <BarServiceSubNav />
 
       {/* Expanded copy */}
       {expandedCopy && (
-        <section className="py-16 md:py-24 bg-white">
-          <div className="container mx-auto px-4 space-y-16 md:space-y-24">
-            <div>
-              <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">Bar consultant Bali</span>
-              <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
+        <section className="py-20 md:py-32 bg-[#0A0A0A]">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-24 md:space-y-32">
+            <div className="max-w-4xl">
+              <span className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 block">
+                Bar consultant Bali
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-[#F5F2EB] mb-8 leading-tight">
                 {expandedCopy.intro.title}
               </h2>
-              <div className="max-w-3xl space-y-4 text-[#4A4745]">
+              <div className="space-y-5 text-[#F5F2EB]/70 text-base md:text-lg leading-relaxed">
                 {expandedCopy.intro.paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 max-w-5xl">
-              <div>
-                <h2 className="text-2xl font-serif text-gray-900 mb-4">{expandedCopy.whyNow.title}</h2>
-                <div className="space-y-4 text-[#4A4745]">
+            <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+              <div className="bg-[#1A1A1A]/60 border border-[#F5F2EB]/10 p-8 md:p-10 rounded-2xl backdrop-blur-sm">
+                <h2 className="text-2xl md:text-3xl font-playfair text-[#F5F2EB] mb-6">
+                  {expandedCopy.whyNow.title}
+                </h2>
+                <div className="space-y-4 text-[#F5F2EB]/70 leading-relaxed">
                   {expandedCopy.whyNow.paragraphs.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
                 </div>
               </div>
-              <div>
-                <h2 className="text-2xl font-serif text-gray-900 mb-4">{expandedCopy.whyMyChef.title}</h2>
-                <div className="space-y-4 text-[#4A4745]">
+              <div className="bg-[#1A1A1A]/60 border border-[#F5F2EB]/10 p-8 md:p-10 rounded-2xl backdrop-blur-sm">
+                <h2 className="text-2xl md:text-3xl font-playfair text-[#F5F2EB] mb-6">
+                  {expandedCopy.whyMyChef.title}
+                </h2>
+                <div className="space-y-4 text-[#F5F2EB]/70 leading-relaxed">
                   {expandedCopy.whyMyChef.paragraphs.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
@@ -171,9 +238,11 @@ export default function BarServicesHubPage() {
               </div>
             </div>
 
-            <div className="bg-stone-50 p-6 md:p-10 rounded-lg">
-              <h2 className="text-2xl font-serif text-gray-900 mb-6">{expandedCopy.howWeWork.title}</h2>
-              <div className="max-w-3xl space-y-4 text-[#4A4745]">
+            <div className="bg-[#0F0E0C] border border-[#C5A028]/15 p-8 md:p-12 lg:p-16 rounded-2xl">
+              <h2 className="text-2xl md:text-3xl font-playfair text-[#F5F2EB] mb-6">
+                {expandedCopy.howWeWork.title}
+              </h2>
+              <div className="max-w-3xl space-y-4 text-[#F5F2EB]/70 leading-relaxed">
                 {expandedCopy.howWeWork.paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}
@@ -181,8 +250,10 @@ export default function BarServicesHubPage() {
             </div>
 
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-serif text-gray-900 mb-6">{expandedCopy.cta.title}</h2>
-              <div className="space-y-4 text-[#4A4745] mb-8">
+              <h2 className="text-2xl md:text-4xl font-playfair text-[#F5F2EB] mb-6">
+                {expandedCopy.cta.title}
+              </h2>
+              <div className="space-y-4 text-[#F5F2EB]/70 mb-10 leading-relaxed">
                 {expandedCopy.cta.paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}
@@ -191,9 +262,9 @@ export default function BarServicesHubPage() {
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-medium rounded"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] hover:bg-[#C5A028]/90 text-[#0A0A0A] font-semibold rounded-lg transition-all duration-300 hover:shadow-[0_10px_30px_rgba(197,160,40,0.3)]"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-5 h-5" />
                 WhatsApp Us
               </a>
             </div>
@@ -202,51 +273,28 @@ export default function BarServicesHubPage() {
       )}
 
       {/* Who we serve */}
-      <section className="py-16 md:py-24 bg-stone-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+      <section id="who-we-serve" className="py-20 md:py-32 bg-[#0F0E0C]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 block">
               Who we serve
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif text-gray-900">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-[#F5F2EB]">
               Bar services built for Bali venue operators
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              {
-                id: 'hotels',
-                title: 'Hotels & Resorts',
-                description: 'Beverage manager cover, bar audits and menu refreshes for boutique and luxury properties.',
-              },
-              {
-                id: 'villas',
-                title: 'Villas & Estates',
-                description: 'In-villa bar setups, bartender staffing and butler training for private villa experiences.',
-              },
-              {
-                id: 'beach-clubs',
-                title: 'Beach Clubs',
-                description: 'High-volume costing controls, speed training and event bartender crews for day clubs.',
-              },
-              {
-                id: 'restaurants',
-                title: 'Restaurants & Cafés',
-                description: 'Profitable cocktail menus, pour-cost systems and staff training for restaurant bars.',
-              },
-              {
-                id: 'events',
-                title: 'Events & Weddings',
-                description: 'Vetted event bartenders, signature cocktails and mobile bar rental for one-off occasions.',
-              },
-            ].map((segment) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {SEGMENTS.map((segment) => (
               <div
                 key={segment.id}
                 id={segment.id}
-                className="bg-white p-6 rounded-lg scroll-mt-24"
+                className="group bg-[#1A1A1A]/60 border border-[#F5F2EB]/10 p-8 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C5A028]/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] scroll-mt-32"
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{segment.title}</h3>
-                <p className="text-gray-600 text-sm">{segment.description}</p>
+                <div className="w-12 h-12 rounded-xl bg-[#C5A028]/10 border border-[#C5A028]/20 flex items-center justify-center mb-5 transition-colors group-hover:bg-[#C5A028]/20">
+                  <segment.icon className="w-6 h-6 text-[#C5A028]" />
+                </div>
+                <h3 className="text-xl font-semibold text-[#F5F2EB] mb-3">{segment.title}</h3>
+                <p className="text-[#F5F2EB]/60 text-sm leading-relaxed">{segment.description}</p>
               </div>
             ))}
           </div>
@@ -254,36 +302,52 @@ export default function BarServicesHubPage() {
       </section>
 
       {/* All Bar Services discovery grid */}
-      <section id="all-services" className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+      <section id="all-services" className="py-20 md:py-32 bg-[#0A0A0A]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 block">
               All services
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif text-gray-900">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-[#F5F2EB]">
               Every bar service your venue might need
             </h2>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-20">
             {groupedServices.map((group) => (
               <div key={group.title} id={group.title.toLowerCase()}>
-                <h3 className="text-2xl font-serif text-gray-900 mb-6">{group.title}</h3>
+                <h3 className="text-2xl md:text-3xl font-playfair text-[#F5F2EB] mb-8 border-b border-[#F5F2EB]/10 pb-4">
+                  {group.title}
+                </h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {group.items.map((service) => (
                     <a
                       key={service.slug}
                       href={service.route}
-                      className="group block bg-white p-6 rounded-lg hover:shadow-md transition"
+                      className="group relative flex flex-col min-h-[280px] overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
                     >
-                      <h4 className="text-xl font-semibold mb-2 group-hover:text-amber-600">
-                        {service.eyebrow}
-                      </h4>
-                      <p className="text-gray-600 text-sm mb-4">{service.valueProp}</p>
-                      <span className="inline-flex items-center text-sm font-medium text-amber-600">
-                        Learn more
-                        <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-                      </span>
+                      <div
+                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                        style={{ backgroundImage: `url(${service.heroImage})` }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/80 to-[#0A0A0A]/40" />
+                      <div className="absolute inset-0 bg-[#C5A028]/5 mix-blend-overlay" />
+                      <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-[#F5F2EB]/10 group-hover:ring-[#C5A028]/30 transition-colors" />
+                      <div className="relative flex flex-col justify-end h-full p-6 md:p-7 mt-auto">
+                        <span className="text-[#C5A028] text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">
+                          {service.eyebrow}
+                        </span>
+                        <p className="text-[#F5F2EB]/80 text-sm leading-relaxed mb-4 line-clamp-2">
+                          {service.valueProp}
+                        </p>
+                        <div className="flex items-center justify-between mt-auto">
+                          <span className="text-[#F5F2EB]/60 text-xs">{formatPriceLabel(service.fromPrice.label)}</span>
+                          <span className="inline-flex items-center text-[#C5A028] text-sm font-medium">
+                            Learn more
+                            <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                          </span>
+                        </div>
+                      </div>
                     </a>
                   ))}
                 </div>
@@ -291,23 +355,29 @@ export default function BarServicesHubPage() {
             ))}
 
             <div>
-              <h3 className="text-2xl font-serif text-gray-900 mb-6">Help & guidance</h3>
+              <h3 className="text-2xl md:text-3xl font-playfair text-[#F5F2EB] mb-8 border-b border-[#F5F2EB]/10 pb-4">
+                Help & guidance
+              </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {UTILITY_CARDS.map((card) => (
                   <a
                     key={card.title}
                     href={card.href}
-                    className="group block bg-white p-6 rounded-lg hover:shadow-md transition"
+                    className="group bg-[#1A1A1A]/60 border border-[#F5F2EB]/10 p-7 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C5A028]/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
                   >
-                    <div className="flex items-center gap-2 mb-3">
-                      <card.icon className="w-5 h-5 text-amber-600" />
-                      <span className="text-xs uppercase tracking-wider text-amber-600">{card.eyebrow}</span>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-lg bg-[#C5A028]/10 border border-[#C5A028]/20 flex items-center justify-center">
+                        <card.icon className="w-5 h-5 text-[#C5A028]" />
+                      </div>
+                      <span className="text-[10px] uppercase tracking-[0.2em] text-[#C5A028] font-semibold">
+                        {card.eyebrow}
+                      </span>
                     </div>
-                    <h4 className="text-xl font-semibold mb-2 group-hover:text-amber-600">
+                    <h4 className="text-xl font-semibold text-[#F5F2EB] mb-2 group-hover:text-[#C5A028] transition-colors">
                       {card.title}
                     </h4>
-                    <p className="text-gray-600 text-sm mb-4">{card.description}</p>
-                    <span className="inline-flex items-center text-sm font-medium text-amber-600">
+                    <p className="text-[#F5F2EB]/60 text-sm mb-4 leading-relaxed">{card.description}</p>
+                    <span className="inline-flex items-center text-sm font-medium text-[#C5A028]">
                       Open
                       <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                     </span>
@@ -320,114 +390,172 @@ export default function BarServicesHubPage() {
       </section>
 
       {/* Why us */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+      <section className="py-20 md:py-32 bg-[#0F0E0C]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 block">
               Why us
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif text-gray-900">{whyUs.title}</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-[#F5F2EB]">{whyUs.title}</h2>
           </div>
-          <BarServiceImageSection image={hubImages[0]} imagePosition="right" bgColor="white">
-            <div className="space-y-6">
-              {whyUs.items.map((item) => (
-                <div key={item.title} className="bg-stone-50 p-6 rounded-lg shadow-sm">
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </BarServiceImageSection>
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {whyUs.items.map((item) => (
+              <div
+                key={item.title}
+                className="bg-[#1A1A1A]/60 border border-[#F5F2EB]/10 p-8 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C5A028]/30"
+              >
+                <h3 className="text-xl font-semibold text-[#F5F2EB] mb-3">{item.title}</h3>
+                <p className="text-[#F5F2EB]/60 text-sm leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Process */}
-      <section className="py-16 md:py-24 bg-stone-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+      <section className="py-20 md:py-32 bg-[#0A0A0A]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 block">
               How we work
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif text-gray-900">Our process</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-[#F5F2EB]">Our process</h2>
           </div>
-          <BarServiceImageSection image={hubImages[1]} imagePosition="left" bgColor="stone">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute left-5 md:left-8 top-0 bottom-0 w-px bg-[#C5A028]/20" />
+            <div className="space-y-10">
               {process.map((step) => (
-                <div key={step.step} className="relative">
-                  <span className="text-5xl font-serif text-amber-200 absolute -top-6 -left-2">
-                    {step.step}
-                  </span>
-                  <div className="relative pt-8">
-                    <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
+                <div key={step.step} className="relative flex gap-6 md:gap-10">
+                  <div className="relative z-10 flex-shrink-0 w-10 h-10 md:w-16 md:h-16 rounded-full bg-[#0F0E0C] border border-[#C5A028]/40 flex items-center justify-center">
+                    <span className="text-sm md:text-lg font-playfair text-[#C5A028]">{step.step}</span>
+                  </div>
+                  <div className="pt-1 md:pt-3">
+                    <h3 className="text-xl md:text-2xl font-semibold text-[#F5F2EB] mb-2">{step.title}</h3>
+                    <p className="text-[#F5F2EB]/60 leading-relaxed">{step.description}</p>
                   </div>
                 </div>
               ))}
             </div>
-          </BarServiceImageSection>
+          </div>
         </div>
       </section>
 
       {/* Proof */}
-      <section className="py-16 md:py-24 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-serif mb-8 text-center">{proof.title}</h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {proof.items.map((item, i) => (
-              <div key={i} className="border-l-4 border-amber-500 pl-6">
-                <p className="text-lg">{item}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-12 max-w-4xl mx-auto">
-            <OptimizedImage
-              src={hubImages[2].src}
-              alt={hubImages[2].alt}
-              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-sm"
-              loading="lazy"
-            />
+      <section className="py-20 md:py-32 bg-[#0F0E0C]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair mb-16 text-center text-[#F5F2EB]">
+            {proof.title}
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {proof.items.map((item, i) => {
+              const icons = [Star, ShieldCheck, TrendingUp]
+              const Icon = icons[i] ?? Star
+              return (
+                <div
+                  key={i}
+                  className="bg-[#1A1A1A]/60 border border-[#F5F2EB]/10 p-8 rounded-2xl backdrop-blur-sm text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#C5A028]/30"
+                >
+                  <div className="w-12 h-12 rounded-full bg-[#C5A028]/10 border border-[#C5A028]/20 flex items-center justify-center mx-auto mb-5">
+                    <Icon className="w-6 h-6 text-[#C5A028]" />
+                  </div>
+                  <p className="text-lg md:text-xl text-[#F5F2EB] font-medium leading-snug">{item}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
 
       {/* Resources teaser */}
-      <section className="py-16 md:py-24 bg-stone-50">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
-            Resources
-          </span>
-          <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-4">
-            Free guides for Bali bar operators
-          </h2>
-          <p className="text-gray-600 mb-8">
-            Benchmarks, checklists and how-to guides to help you run a tighter bar.
-          </p>
-          <a
-            href="/bar-services/resources/"
-            className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded"
-          >
-            Browse Resources
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
+      <section className="py-20 md:py-32 bg-[#0A0A0A]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+            <div className="max-w-2xl">
+              <span className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 block">
+                Resources
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-[#F5F2EB] mb-4">
+                Free guides for Bali bar operators
+              </h2>
+              <p className="text-[#F5F2EB]/60 leading-relaxed">
+                Benchmarks, checklists and how-to guides to help you run a tighter bar.
+              </p>
+            </div>
+            <a
+              href="/bar-services/resources/"
+              className="inline-flex items-center justify-center px-6 py-3 border border-[#F5F2EB]/30 text-[#F5F2EB] hover:bg-[#F5F2EB]/10 font-medium rounded-lg transition-all duration-300"
+            >
+              Browse Resources
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          {/* Mobile horizontal scroll */}
+          <div className="flex md:hidden gap-4 overflow-x-auto no-scrollbar pb-4 -mx-4 px-4">
+            {featuredResources.map((resource) => (
+              <a
+                key={resource.slug}
+                href={resource.route}
+                className="group flex-shrink-0 w-[80vw] sm:w-[60vw] min-h-[280px] relative overflow-hidden rounded-2xl"
+              >
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  style={{ backgroundImage: `url(${resource.featuredImage})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/70 to-transparent" />
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-[#F5F2EB]/10 group-hover:ring-[#C5A028]/30 transition-colors" />
+                <div className="relative h-full flex flex-col justify-end p-6">
+                  <h3 className="text-lg font-semibold text-[#F5F2EB] mb-2 group-hover:text-[#C5A028] transition-colors">
+                    {resource.h1}
+                  </h3>
+                  <p className="text-[#F5F2EB]/70 text-sm line-clamp-2">{resource.summary}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Desktop grid */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredResources.map((resource) => (
+              <a
+                key={resource.slug}
+                href={resource.route}
+                className="group relative flex flex-col min-h-[320px] overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+              >
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  style={{ backgroundImage: `url(${resource.featuredImage})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/70 to-[#0A0A0A]/30" />
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-[#F5F2EB]/10 group-hover:ring-[#C5A028]/30 transition-colors" />
+                <div className="relative flex flex-col justify-end h-full p-6 mt-auto">
+                  <h3 className="text-lg font-semibold text-[#F5F2EB] mb-2 group-hover:text-[#C5A028] transition-colors">
+                    {resource.h1}
+                  </h3>
+                  <p className="text-[#F5F2EB]/70 text-sm line-clamp-2">{resource.summary}</p>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-3xl">
+      <section className="py-20 md:py-32 bg-[#0F0E0C]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           <div className="text-center mb-12">
-            <span className="text-sm uppercase tracking-widest text-amber-600 mb-2 block">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 block">
               FAQ
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif text-gray-900">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-[#F5F2EB]">
               Common questions about bar services in Bali
             </h2>
           </div>
-          <FAQAccordion items={HUB_FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} />
+          <FAQAccordion items={HUB_FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} dark />
           <div className="mt-10 text-center">
             <a
               href="/bar-services/faq/"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-gray-900 text-gray-900 hover:bg-gray-50 font-medium rounded"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#F5F2EB]/30 text-[#F5F2EB] hover:bg-[#F5F2EB]/10 font-medium rounded-lg transition-all duration-300"
             >
               <HelpCircle className="w-4 h-4" />
               View all FAQs
@@ -437,21 +565,21 @@ export default function BarServicesHubPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24 bg-amber-500">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-serif text-black mb-4">
+      <section className="py-20 md:py-32 bg-[#C5A028]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-[#0A0A0A] mb-6">
             Ready to improve your bar?
           </h2>
-          <p className="text-black/80 mb-8">
+          <p className="text-[#0A0A0A]/80 mb-10 text-lg">
             Tell us about your venue and we will match you to the right service.
           </p>
           <a
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-black hover:bg-gray-900 text-white font-medium rounded"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0A0A0A] hover:bg-[#1A1A1A] text-[#F5F2EB] font-semibold rounded-lg transition-all duration-300"
           >
-            <MessageCircle className="w-4 h-4" />
+            <MessageCircle className="w-5 h-5" />
             WhatsApp Us
           </a>
         </div>

@@ -16,6 +16,7 @@ import {
 import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, professionalServiceSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
+import { Button } from '@/components/ui/button'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { BarServiceSubNav } from '@/components/bar-services'
@@ -110,10 +111,6 @@ const HUB_FAQS = [
       'Message us on WhatsApp with your venue type, location, the service you need and your preferred timeline. A bar specialist will reply within four business hours with tailored next steps or a written proposal.',
   },
 ]
-
-function formatPriceLabel(label: string): string {
-  return label.replace('From ', '').trim()
-}
 
 export default function BarServicesHubPage() {
   const meta = getPageMeta('bar-services-hub')
@@ -302,9 +299,9 @@ export default function BarServicesHubPage() {
       </section>
 
       {/* All Bar Services discovery grid */}
-      <section id="all-services" className="py-20 md:py-32 bg-[#0A0A0A]">
+      <section id="all-services" className="py-16 md:py-24 bg-[#0A0A0A]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
             <span className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-4 block">
               All services
             </span>
@@ -313,57 +310,58 @@ export default function BarServicesHubPage() {
             </h2>
           </div>
 
-          <div className="space-y-20">
+          <div className="space-y-16 md:space-y-20">
             {groupedServices.map((group) => (
               <div key={group.title} id={group.title.toLowerCase()}>
-                <h3 className="text-2xl md:text-3xl font-playfair text-[#F5F2EB] mb-8 border-b border-[#F5F2EB]/10 pb-4">
+                <h3 className="text-xl md:text-2xl font-playfair text-[#F5F2EB] mb-6 md:mb-8 border-b border-[#F5F2EB]/10 pb-3">
                   {group.title}
                 </h3>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
                   {group.items.map((service) => (
-                    <a
+                    <article
                       key={service.slug}
-                      href={service.route}
-                      className="group relative flex flex-col min-h-[280px] overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+                      className="group flex flex-col bg-[#141312] border border-[#F5F2EB]/10 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#C5A028]/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
                     >
-                      <div
-                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                        style={{ backgroundImage: `url(${service.heroImage})` }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/80 to-[#0A0A0A]/40" />
-                      <div className="absolute inset-0 bg-[#C5A028]/5 mix-blend-overlay" />
-                      <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-[#F5F2EB]/10 group-hover:ring-[#C5A028]/30 transition-colors" />
-                      <div className="relative flex flex-col justify-end h-full p-6 md:p-7 mt-auto">
+                      <div className="relative overflow-hidden">
+                        <OptimizedImage
+                          src={service.heroImage}
+                          alt={service.heroAlt}
+                          className="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/80 via-transparent to-transparent" />
+                      </div>
+                      <div className="flex flex-col flex-1 p-5 md:p-6">
                         <span className="text-[#C5A028] text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">
                           {service.eyebrow}
                         </span>
-                        <p className="text-[#F5F2EB]/80 text-sm leading-relaxed mb-4 line-clamp-2">
+                        <h4 className="text-lg md:text-xl font-semibold text-[#F5F2EB] mb-2 leading-tight">
+                          {service.h1}
+                        </h4>
+                        <p className="text-[#F5F2EB]/60 text-sm leading-relaxed mb-5 flex-1">
                           {service.valueProp}
                         </p>
-                        <div className="flex items-center justify-between mt-auto">
-                          <span className="text-[#F5F2EB]/60 text-xs">{formatPriceLabel(service.fromPrice.label)}</span>
-                          <span className="inline-flex items-center text-[#C5A028] text-sm font-medium">
-                            Learn more
+                        <Button asChild variant="primary" className="w-full rounded-lg">
+                          <a href={service.route}>
+                            View service
                             <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-                          </span>
-                        </div>
+                          </a>
+                        </Button>
                       </div>
-                    </a>
+                    </article>
                   ))}
                 </div>
               </div>
             ))}
 
             <div>
-              <h3 className="text-2xl md:text-3xl font-playfair text-[#F5F2EB] mb-8 border-b border-[#F5F2EB]/10 pb-4">
+              <h3 className="text-xl md:text-2xl font-playfair text-[#F5F2EB] mb-6 md:mb-8 border-b border-[#F5F2EB]/10 pb-3">
                 Help & guidance
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
                 {UTILITY_CARDS.map((card) => (
-                  <a
+                  <article
                     key={card.title}
-                    href={card.href}
-                    className="group bg-[#1A1A1A]/60 border border-[#F5F2EB]/10 p-7 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C5A028]/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+                    className="group flex flex-col bg-[#141312] border border-[#F5F2EB]/10 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-[#C5A028]/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 rounded-lg bg-[#C5A028]/10 border border-[#C5A028]/20 flex items-center justify-center">
@@ -373,15 +371,19 @@ export default function BarServicesHubPage() {
                         {card.eyebrow}
                       </span>
                     </div>
-                    <h4 className="text-xl font-semibold text-[#F5F2EB] mb-2 group-hover:text-[#C5A028] transition-colors">
+                    <h4 className="text-lg md:text-xl font-semibold text-[#F5F2EB] mb-2">
                       {card.title}
                     </h4>
-                    <p className="text-[#F5F2EB]/60 text-sm mb-4 leading-relaxed">{card.description}</p>
-                    <span className="inline-flex items-center text-sm font-medium text-[#C5A028]">
-                      Open
-                      <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </a>
+                    <p className="text-[#F5F2EB]/60 text-sm leading-relaxed mb-5 flex-1">
+                      {card.description}
+                    </p>
+                    <Button asChild variant="secondary" className="w-full rounded-lg">
+                      <a href={card.href}>
+                        Open
+                        <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                      </a>
+                    </Button>
+                  </article>
                 ))}
               </div>
             </div>

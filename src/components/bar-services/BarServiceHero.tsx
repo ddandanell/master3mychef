@@ -5,7 +5,7 @@ import type { BarService } from '@/data/bar-services'
 
 export function BarServiceHero({ service }: { service: BarService }) {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-start overflow-hidden pt-16 md:pt-20">
       {/* Cinematic background image */}
       <OptimizedImage
         src={service.heroImage}
@@ -26,7 +26,7 @@ export function BarServiceHero({ service }: { service: BarService }) {
         }}
       />
 
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32">
         {/* Amber eyebrow pill */}
         <span className="inline-flex items-center px-4 py-1.5 mb-6 text-xs font-medium uppercase tracking-[0.2em] text-[#0A0A0A] bg-[#C5A028] rounded-full">
           {service.eyebrow}

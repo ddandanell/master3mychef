@@ -406,6 +406,11 @@ export default function Footer() {
             <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Who We Serve</h4>
             <ul className="space-y-3">
               <li>
+                <Link to="/bar-services/" className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  B2B Bar Services
+                </Link>
+              </li>
+              <li>
                 <Link to="/bar-services/#hotels" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Hotels & Resorts
                 </Link>

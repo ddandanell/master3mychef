@@ -243,7 +243,7 @@ export default function Navbar() {
         className="fixed top-0 left-0 right-0 z-[70] bg-[#0D0C0A]/95 border-b border-[#C5A028]/15"
         style={{ backdropFilter: 'blur(12px)' }}
       >
-        <div className="mx-auto px-8 py-3 flex items-center justify-between gap-8 lg:px-4 lg:gap-3 xl:gap-4 2xl:px-8 2xl:gap-8">
+        <div className="mx-auto px-8 py-2 h-14 flex items-center justify-between gap-8 lg:px-4 lg:gap-3 xl:gap-4 2xl:px-8 2xl:gap-8">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group">
             <ChefHat className="w-6 h-6 lg:w-5 lg:h-5 2xl:w-6 2xl:h-6 text-[#C5A028] transition-transform group-hover:rotate-12" strokeWidth={1.5} />

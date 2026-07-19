@@ -230,7 +230,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'nusa-dua', name: 'Nusa Dua' },
     ],
-    metaTitle: 'Private Chef in Ubud, Bali | Villa Dining & Retreat Catering | myCHEF',
+    metaTitle: 'Private Chef in Ubud, Bali | Villa Dining, Retreat Catering | myCHEF',
     metaDescription:
       'Hire a private chef in Ubud, Bali. Balinese tasting menus, plant-based retreat catering, and villa dinners. HACCP chefs. WhatsApp myCHEF.',
     coordinates: { lat: -8.5069, lng: 115.2625 },
@@ -416,7 +416,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'kuta', name: 'Kuta' },
     ],
-    metaTitle: 'Private Chef Nusa Dua, Bali | Corporate & Luxury Villa Dining | myCHEF',
+    metaTitle: 'Private Chef Nusa Dua, Bali | Corporate, Luxury Villa Dining | myCHEF',
     metaDescription:
       'Hire a private chef in Nusa Dua, Bali. Corporate retreat catering, executive fine dining, and villa events. Five-star service. WhatsApp myCHEF.',
     coordinates: { lat: -8.8007, lng: 115.2302 },
@@ -478,7 +478,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'canggu', name: 'Canggu' },
     ],
-    metaTitle: 'Private Chef in Sanur, Bali | Family Villa Dining & Meal Prep | myCHEF',
+    metaTitle: 'Private Chef in Sanur, Bali | Family Villa Dining, Meal Prep | myCHEF',
     metaDescription:
       'Book a private chef in Sanur, Bali. Family villa dinners, weekly meal prep, and event catering. HACCP-certified chefs, transparent pricing. WhatsApp myCHEF.',
     coordinates: { lat: -8.7042, lng: 115.2607 },
@@ -535,7 +535,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'nusa-dua', name: 'Nusa Dua' },
       { slug: 'canggu', name: 'Canggu' },
     ],
-    metaTitle: 'Private Chef Denpasar, Bali | Executive & Residential Dining | myCHEF',
+    metaTitle: 'Private Chef Denpasar, Bali | Executive, Residential Dining | myCHEF',
     metaDescription:
       'Hire a private chef in Denpasar, Bali. Executive dinner parties, corporate catering, and household meal prep. HACCP-certified. WhatsApp myCHEF.',
     coordinates: { lat: -8.6705, lng: 115.2126 },
@@ -589,7 +589,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'kerobokan', name: 'Kerobokan' },
     ],
-    metaTitle: 'Private Chef Berawa, Bali | Villa Dining & Birthday Catering | myCHEF',
+    metaTitle: 'Private Chef Berawa, Bali | Villa Dining, Birthday Catering | myCHEF',
     metaDescription:
       'Book a private chef in Berawa, Bali. Villa birthday parties, weekly meal prep, and fine dining. HACCP-certified chefs, transparent pricing. WhatsApp myCHEF.',
     coordinates: { lat: -8.6437, lng: 115.1261 },
@@ -636,7 +636,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'ubud', name: 'Ubud' },
     ],
-    metaTitle: 'Private Chef in Pererenan, Bali | Villa Dining & Meal Prep | myCHEF',
+    metaTitle: 'Private Chef in Pererenan, Bali | Villa Dining, Meal Prep | myCHEF',
     metaDescription:
       'Book a private chef in Pererenan, Bali. Private villa dinners, meal prep, and small-group fine dining. HACCP-certified, transparent pricing. WhatsApp myCHEF.',
     coordinates: { lat: -8.6338, lng: 115.1140 },
@@ -683,7 +683,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'berawa', name: 'Berawa' },
       { slug: 'petitenget', name: 'Petitenget' },
     ],
-    metaTitle: 'Private Chef Kerobokan, Bali | Residential Dining & Meal Prep | myCHEF',
+    metaTitle: 'Private Chef Kerobokan, Bali | Residential Dining, Meal Prep | myCHEF',
     metaDescription:
       'Book a private chef in Kerobokan, Bali. Regular household meal prep, dinner parties, and villa events. Transparent pricing, HACCP-certified. WhatsApp myCHEF.',
     coordinates: { lat: -8.6631, lng: 115.1542 },
@@ -865,7 +865,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Bukit Peninsula, Bali | Clifftop Villa Dining | myCHEF',
     metaDescription:
-      'Book a private chef at Bukit Peninsula, Bali. Clifftop fine dining, elopement dinners, and villa events in Bingin, Padang Padang & Dreamland. WhatsApp myCHEF.',
+      'Book a private chef at Bukit Peninsula, Bali. Clifftop fine dining, elopement dinners, and villa events in Bingin, Padang Padang, Dreamland. WhatsApp myCHEF.',
     coordinates: { lat: -8.8100, lng: 115.1000 },
     bookingNote:
       'Book 2–3 days ahead. Access to steep clifftop villas confirmed on booking — travel time and allowance quoted per address.',
@@ -1107,7 +1107,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'sanur', name: 'Sanur' },
       { slug: 'bukit', name: 'Bukit Peninsula' },
     ],
-    metaTitle: 'Private Chef in Tanjung Benoa, Bali | Villa Dining & Catering | myCHEF',
+    metaTitle: 'Private Chef in Tanjung Benoa, Bali | Villa Dining, Catering | myCHEF',
     metaDescription:
       'Book a private chef in Tanjung Benoa, Bali. Family villa dinners, catering, and fine dining near Nusa Dua. No travel surcharge. WhatsApp myCHEF.',
     coordinates: { lat: -8.7580, lng: 115.2280 },
@@ -1252,7 +1252,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'nusa-dua', name: 'Nusa Dua' },
       { slug: 'seminyak', name: 'Seminyak' },
     ],
-    metaTitle: 'Private Chef Renon, Denpasar Bali | Corporate & Villa Dining | myCHEF',
+    metaTitle: 'Private Chef Renon, Denpasar Bali | Corporate, Villa Dining | myCHEF',
     metaDescription:
       'Book a private chef in Renon, Denpasar. Corporate dinners, expat villa dining, and catering in Bali\'s diplomatic and business quarter. WhatsApp myCHEF.',
     coordinates: { lat: -8.6720, lng: 115.2230 },
@@ -2711,7 +2711,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: "nyuh-kuning", name: "Nyuh Kuning" },
       { slug: "kedewatan", name: "Kedewatan" },
     ],
-    metaTitle: "Private Chef Lodtunduh Bali | Villa Estate & Retreat Catering | myCHEF",
+    metaTitle: "Private Chef Lodtunduh Bali | Villa Estate, Retreat Catering | myCHEF",
     metaDescription:
       "Hire a private chef in Lodtunduh. myCHEF serves estates between Ubud and Mas — daily catering, group dinners, and Balinese menus.",
     coordinates: { lat: -8.5389, lng: 115.2606 },
@@ -2855,7 +2855,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: "keramas", name: "Keramas" },
       { slug: "sanur", name: "Sanur" },
     ],
-    metaTitle: "Private Chef Gianyar Bali | Gianyar Villa & Event Catering | myCHEF",
+    metaTitle: "Private Chef Gianyar Bali | Gianyar Villa, Event Catering | myCHEF",
     metaDescription:
       "Hire a private chef in Gianyar. myCHEF serves villas and events in Bali's cultural capital — babi guling feasts, Balinese menus, and villa catering near Ubud.",
     coordinates: { lat: -8.5351, lng: 115.3314 },

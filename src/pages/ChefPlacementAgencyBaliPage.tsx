@@ -50,9 +50,9 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Placement Types',
     title: 'Types of Chef Placement Available Through myCHEF',
     body: `<p>We offer several placement formats depending on your situation:</p>
-    <p><strong>Live-in household chef:</strong> A chef who resides at the villa or property and is available for all household meals on a daily basis. Full-time, live-in role. See our <a href="/blog/live-in-chef-bali-hiring-guide" class="text-[#7E6410] hover:underline font-medium">live-in chef guide</a> for detailed scope and contract terms.</p>
+    <p><strong>Live-in household chef:</strong> A chef who resides at the villa or property and is available for all household meals on a daily basis. Full-time, live-in role. See our <a href="/staffing" class="text-[#7E6410] hover:underline font-medium">live-in chef guide</a> for detailed scope and contract terms.</p>
     <p><strong>Live-out daily chef:</strong> A chef who comes to the property each day to cook meals, then returns to their own accommodation. Most common for established residences where accommodation is not available or preferred for staff.</p>
-    <p><strong>Part-time household chef (several days per week):</strong> A chef who comes 3-4 days per week. Common for smaller households or those with mixed cooking arrangements (some meals at home, some dining out). See our <a href="/blog/household-chef-bali-hiring-guide" class="text-[#7E6410] hover:underline font-medium">household chef guide</a> for this format.</p>
+    <p><strong>Part-time household chef (several days per week):</strong> A chef who comes 3-4 days per week. Common for smaller households or those with mixed cooking arrangements (some meals at home, some dining out). See our <a href="/staffing/household-staff" class="text-[#7E6410] hover:underline font-medium">household chef guide</a> for this format.</p>
     <p><strong>Villa property chef (for commercial or rental villa):</strong> A chef placed with a villa rental property to serve guests during their stays. The chef is part of the property's staff rather than a personal household hire. Pricing and contract terms differ for this format.</p>`,
   },
   {
@@ -105,9 +105,9 @@ export default function ChefPlacementAgencyBaliPage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Live-in Chef Bali Guide', href: '/blog/live-in-chef-bali-hiring-guide', desc: 'Everything about hiring a live-in chef in Bali.' },
-        { label: 'Household Chef Guide', href: '/blog/household-chef-bali-hiring-guide', desc: 'Hiring a long-term household chef in Bali.' },
-        { label: 'Villa Staff Bali Guide', href: '/blog/villa-staff-bali-hiring-guide', desc: 'Hiring all villa staff categories in Bali.' },
+        { label: 'Live-in Chef Bali Guide', href: '/staffing', desc: 'Everything about hiring a live-in chef in Bali.' },
+        { label: 'Household Chef Guide', href: '/staffing/household-staff', desc: 'Hiring a long-term household chef in Bali.' },
+        { label: 'Villa Staff Bali Guide', href: '/staffing/villa-staff', desc: 'Hiring all villa staff categories in Bali.' },
         { label: 'Private Chef Roles Explained', href: '/blog/private-chef-roles-responsibilities-explained', desc: 'What a private chef does and what they are responsible for.' },
         { label: 'Staffing Services', href: '/staffing', desc: 'myCHEF staffing and placement services overview.' },
         { label: 'Contact Us', href: '/contact', desc: 'Start a placement inquiry.' },

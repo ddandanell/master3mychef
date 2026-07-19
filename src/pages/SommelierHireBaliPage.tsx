@@ -122,12 +122,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Plated Dinner Catering', href: '/blog/plated-dinner-catering-bali', desc: 'Formal multi-course dinner service' },
-  { label: 'Mixologist Hire Bali', href: '/blog/mixologist-hire-bali', desc: 'Craft cocktail bar for villa events' },
+  { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },
+  { label: 'Mixologist Hire Bali', href: '/in-villa-service/mixology', desc: 'Craft cocktail bar for villa events' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa fine dining experience' },
-  { label: 'Romantic Dinner Bali', href: '/blog/romantic-dinner-bali-private-chef', desc: 'Intimate private dinners for couples' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Professional event crew hire' },
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'End-to-end villa event catering' },
+  { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Intimate private dinners for couples' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Professional event crew hire' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'End-to-end villa event catering' },
 ]
 
 export default function SommelierHireBaliPage() {

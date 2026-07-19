@@ -125,10 +125,10 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Bartender Hire Bali', href: '/blog/bartender-hire-bali', desc: 'Bar staff hire for events' },
-  { label: 'Sommelier Hire Bali', href: '/blog/sommelier-hire-bali', desc: 'Wine service and pairing expertise' },
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'Full catering for villa celebrations' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Waiters and event crew hire' },
+  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Bar staff hire for events' },
+  { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine service and pairing expertise' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full catering for villa celebrations' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters and event crew hire' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
   { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Private chef for bachelor parties' },
 ]

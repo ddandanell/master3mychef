@@ -133,7 +133,7 @@ const SECTIONS = [
 
     <p><strong>Consider a Balinese market tour the morning before.</strong> myCHEF chefs can take small groups to the Ubud market (morning) or Jimbaran fish market (pre-dawn) before preparing the day's menu. This is a popular add-on for guests who want to understand where their food comes from.</p>
 
-    <p>Ready to plan your dry season dinner? <a href="/catering" class="text-[#7E6410] hover:underline font-medium">View catering options</a> or <a href="/blog/buffet-vs-plated-service-bali" class="text-[#7E6410] hover:underline font-medium">choose between buffet and plated service</a> before you book.</p>`,
+    <p>Ready to plan your dry season dinner? <a href="/catering" class="text-[#7E6410] hover:underline font-medium">View catering options</a> or <a href="/catering" class="text-[#7E6410] hover:underline font-medium">choose between buffet and plated service</a> before you book.</p>`,
   },
   {
     id: 'cta',
@@ -174,7 +174,7 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { href: '/blog/bali-catering-menu', label: 'Bali Catering Menu Guide', desc: 'Year-round Bali catering menu ideas, seasonal ingredients, and pricing.' },
-  { href: '/blog/buffet-vs-plated-service-bali', label: 'Buffet vs Plated Service', desc: 'Which catering format is right for your Bali villa event?' },
+  { href: '/catering', label: 'Buffet vs Plated Service', desc: 'Which catering format is right for your Bali villa event?' },
   { href: '/pricing', label: 'Private Chef Pricing', desc: 'Full pricing guide for private chefs and catering in Bali.' },
   { href: '/catering', label: 'Catering Services', desc: 'Full-service catering for villa events, weddings, and retreats.' },
 ]

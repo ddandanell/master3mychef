@@ -1053,7 +1053,7 @@ export default function ChefProfilePage() {
           <div className="grid sm:grid-cols-3 gap-4">
             {[
               { label: 'Meet All Chefs', href: '/chefs', desc: 'See the full myCHEF culinary team.' },
-              { label: 'View Menus', href: '/menus', desc: 'Browse menu styles for every occasion.' },
+              { label: 'View Menus', href: '/fine-dining/menus', desc: 'Browse menu styles for every occasion.' },
               { label: 'Pricing Guide', href: '/help/pricing', desc: 'Understand what a private chef costs in Bali.' },
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Tasting menus and Michelin-style villa experiences.' },
               { label: 'Catering', href: '/catering', desc: 'Group events, BBQs, and buffet catering in Bali.' },

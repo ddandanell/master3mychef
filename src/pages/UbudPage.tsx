@@ -276,7 +276,7 @@ export default function UbudPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { label: 'How to hire a private chef in Bali', path: '/blog/how-to-hire-private-chef', desc: 'Complete step-by-step hiring guide — vetting, pricing, what to expect' },
-              { label: 'Chef hiring & credentials guide', path: '/blog/chef-hiring-guide', desc: 'What qualifications to look for and red flags to avoid' },
+              { label: 'Chef hiring & credentials guide', path: '/blog/chef-qualifications-credentials-bali-hiring', desc: 'What qualifications to look for and red flags to avoid' },
               { label: 'Yoga retreat chef services', path: '/events', desc: 'Full-board retreat catering: breakfast, lunch, and dinner daily' },
               { label: 'Private chef pricing', path: '/pricing', desc: 'Transparent starting prices for every Ubud service format' },
             ].map((link) => (

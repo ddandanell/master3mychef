@@ -121,12 +121,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'Full catering for villa celebrations' },
-  { label: 'BBQ Catering Bali', href: '/blog/bali-bbq-catering-villa-guide', desc: 'Poolside and garden BBQ packages' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Waiters and service staff for your event' },
-  { label: 'Baby Shower Catering', href: '/blog/baby-shower-catering-bali', desc: 'Relaxed catering for baby showers' },
-  { label: 'Bartender Hire Bali', href: '/blog/bartender-hire-bali', desc: 'Professional bar staff for events' },
-  { label: 'Large Group Catering', href: '/blog/large-group-catering-bali', desc: 'Catering solutions for 30+ guests' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full catering for villa celebrations' },
+  { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Poolside and garden BBQ packages' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters and service staff for your event' },
+  { label: 'Baby Shower Catering', href: '/events/baby-showers', desc: 'Relaxed catering for baby showers' },
+  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Professional bar staff for events' },
+  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering solutions for 30+ guests' },
 ]
 
 export default function GrazingTableBaliPage() {

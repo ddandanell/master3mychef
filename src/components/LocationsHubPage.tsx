@@ -196,7 +196,7 @@ export default function LocationsHubPage() {
               </p>
               <div className="space-y-4">
                 <Link
-                  to="/jakarta"
+                  to="/locations/jakarta"
                   className="flex items-center justify-between p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
                 >
                   <div>

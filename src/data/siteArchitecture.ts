@@ -544,7 +544,7 @@ export const PRIMARY_NAV: Array<{ label: string; href: string }> = [
   { label: 'Staffing', href: '/staffing' },
   { label: 'Locations', href: '/locations' },
   { label: 'Help', href: '/help' },
-  { label: 'About', href: '/about' },
+  { label: 'About', href: '/fine-dining/our-chefs' },
 ]
 
 export const PRIMARY_CTA = {

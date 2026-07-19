@@ -120,7 +120,7 @@ const FAQS = [
 const RELATED_PAGES = [
   { label: 'Browse Chefs', href: '/chefs', desc: 'Filter by cuisine style and location experience.' },
   { label: 'Private Chef Cost', href: '/blog/private-chef-cost-bali', desc: 'Full pricing breakdown by service type.' },
-  { label: 'Yoga Retreat Catering', href: '/blog/yoga-retreat-chef-bali-meal-planning', desc: 'Wellness retreat meal planning in Ubud and beyond.' },
+  { label: 'Yoga Retreat Catering', href: '/journal/yoga-retreat-meal-planning-bali', desc: 'Wellness retreat meal planning in Ubud and beyond.' },
   { label: 'Event Planning', href: '/blog/event-planning-bali', desc: 'Full event logistics for any Bali location.' },
   { label: 'Contact Us', href: '/contact', desc: 'Tell us your location and we find the right chef.' },
 ]

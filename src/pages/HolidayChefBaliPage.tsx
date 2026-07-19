@@ -119,16 +119,16 @@ const faqs = [
   {
     question: 'Can you provide bartenders and cocktail service for a festive party at the villa?',
     answer:
-      "Yes. We can arrange bartenders, mixologists, and canape service teams for festive villa parties and cocktail hours. Our [Bartender Hire Bali](/blog/bartender-hire-bali) and [Mixologist Hire Bali](/blog/mixologist-hire-bali) pages cover this in more detail.",
+      "Yes. We can arrange bartenders, mixologists, and canape service teams for festive villa parties and cocktail hours. Our [Bartender Hire Bali](/in-villa-service/bartenders) and [Mixologist Hire Bali](/in-villa-service/mixology) pages cover this in more detail.",
   },
 ]
 
 const relatedPages = [
-  { label: 'Christmas Dinner Bali', href: '/blog/christmas-dinner-bali-villa', desc: 'Christmas dinner at your Bali villa' },
-  { label: 'New Year\'s Eve Bali Private Chef', href: '/blog/new-years-eve-bali-private-chef', desc: 'NYE celebration dinner and catering' },
-  { label: 'Villa Party Catering Bali', href: '/blog/villa-party-catering-bali', desc: 'Full villa party catering service' },
-  { label: 'Bartender Hire Bali', href: '/blog/bartender-hire-bali', desc: 'Professional bartender service for events' },
-  { label: 'Large Group Catering Bali', href: '/blog/large-group-catering-bali', desc: 'Catering for 30+ guests' },
+  { label: 'Christmas Dinner Bali', href: '/blog/holiday-chef-bali', desc: 'Christmas dinner at your Bali villa' },
+  { label: 'New Year\'s Eve Bali Private Chef', href: '/blog/holiday-chef-bali', desc: 'NYE celebration dinner and catering' },
+  { label: 'Villa Party Catering Bali', href: '/events/villa-parties', desc: 'Full villa party catering service' },
+  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Professional bartender service for events' },
+  { label: 'Large Group Catering Bali', href: '/group-villa-dinner-packages-bali', desc: 'Catering for 30+ guests' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Complete pricing guide' },
 ]
 

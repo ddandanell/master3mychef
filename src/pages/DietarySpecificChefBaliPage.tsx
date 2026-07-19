@@ -110,12 +110,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Vegan Private Chef Bali', href: '/blog/vegan-private-chef-bali', desc: 'Specialist plant-based chef service in Bali' },
-  { label: 'Bali Wellness Retreat Catering', href: '/blog/bali-wellness-retreat-catering', desc: 'Healthy catering for retreats and studios' },
-  { label: 'Daily Chef Service Bali', href: '/blog/daily-chef-service-bali', desc: 'Daily household chef service' },
-  { label: 'Food Allergies Guide', href: '/blog/food-allergies-dietary-requirements-bali', desc: 'Managing dietary requirements in Bali' },
-  { label: 'Private Chef Ubud', href: '/blog/private-chef-ubud-guide', desc: 'Private chef service in Ubud' },
-  { label: 'Private Chef Bali Expats', href: '/blog/private-chef-bali-expats', desc: 'Long-term private chef for Bali residents' },
+  { label: 'Vegan Private Chef Bali', href: '/blog/dietary-specific-chef-bali', desc: 'Specialist plant-based chef service in Bali' },
+  { label: 'Bali Wellness Retreat Catering', href: '/catering/retreat-catering', desc: 'Healthy catering for retreats and studios' },
+  { label: 'Daily Chef Service Bali', href: '/hire-private-chef-bali-monthly', desc: 'Daily household chef service' },
+  { label: 'Food Allergies Guide', href: '/blog/dietary-specific-chef-bali', desc: 'Managing dietary requirements in Bali' },
+  { label: 'Private Chef Ubud', href: '/private-chef/ubud', desc: 'Private chef service in Ubud' },
+  { label: 'Private Chef Bali Expats', href: '/hire-private-chef-bali-monthly', desc: 'Long-term private chef for Bali residents' },
 ]
 
 export default function DietarySpecificChefBaliPage() {

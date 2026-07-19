@@ -122,12 +122,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Chef Placement Agency Bali', href: '/blog/chef-placement-agency-bali', desc: 'Private household chef placement' },
-  { label: 'Live-In Chef Bali Hiring Guide', href: '/blog/live-in-chef-bali-hiring-guide', desc: 'Guide to hiring a live-in private chef' },
-  { label: 'Villa Staff Bali', href: '/blog/villa-staff-bali-hiring-guide', desc: 'Full villa staff hiring guide' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Event staffing for Bali functions' },
+  { label: 'Chef Placement Agency Bali', href: '/staffing/private-chef-placement', desc: 'Private household chef placement' },
+  { label: 'Live-In Chef Bali Hiring Guide', href: '/staffing', desc: 'Guide to hiring a live-in private chef' },
+  { label: 'Villa Staff Bali', href: '/staffing/villa-staff', desc: 'Full villa staff hiring guide' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Event staffing for Bali functions' },
   { label: 'Staffing', href: '/staffing', desc: 'myCHEF staffing and placement services' },
-  { label: 'Private Chef Jakarta', href: '/blog/private-chef-jakarta-complete-guide', desc: 'Private chef and staffing in Jakarta' },
+  { label: 'Private Chef Jakarta', href: '/journal/private-chef-jakarta-guide', desc: 'Private chef and staffing in Jakarta' },
 ]
 
 export default function HotelRestaurantChefStaffingPage() {

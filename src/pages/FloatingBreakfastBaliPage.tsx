@@ -155,8 +155,8 @@ const RELATED_PAGES = [
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private chef romantic dinner at your Bali villa — candles, flowers, a tailored menu.' },
   { label: 'Private Chef Canggu', href: '/private-chef/canggu', desc: 'Private chef services across Canggu — daily cooking, events, and experiences.' },
   { label: 'Private Chef Seminyak', href: '/private-chef/seminyak', desc: 'Seminyak villa private chef hire — all occasions, all group sizes.' },
-  { label: 'Honeymoon Private Chef Bali', href: '/blog/honeymoon-private-chef-bali', desc: 'Complete guide to planning a private chef honeymoon experience in Bali.' },
-  { label: 'Proposal Dinner Bali', href: '/blog/proposal-dinner-bali-private-chef', desc: 'Private chef proposal dinner planning guide — rings, menus, locations.' },
+  { label: 'Honeymoon Private Chef Bali', href: '/honeymoon-chef', desc: 'Complete guide to planning a private chef honeymoon experience in Bali.' },
+  { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Private chef proposal dinner planning guide — rings, menus, locations.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF services in Bali.' },
 ]
 

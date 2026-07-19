@@ -120,11 +120,11 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full in-villa private chef service' },
-  { label: "Chef's Table Bali", href: '/blog/chefs-table-bali', desc: 'Interactive chef dinner experience' },
-  { label: 'Romantic Dinner Bali', href: '/blog/romantic-dinner-bali-private-chef', desc: 'Intimate dinners for couples' },
-  { label: 'Plated Dinner Catering', href: '/blog/plated-dinner-catering-bali', desc: 'Formal multi-course table service' },
-  { label: 'Proposal Dinner Bali', href: '/blog/proposal-dinner-bali-private-chef', desc: 'Private chef for proposals' },
-  { label: 'Sommelier Hire Bali', href: '/blog/sommelier-hire-bali', desc: 'Wine pairing and table service' },
+  { label: "Chef's Table Bali", href: '/fine-dining/chefs-table', desc: 'Interactive chef dinner experience' },
+  { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Intimate dinners for couples' },
+  { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course table service' },
+  { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Private chef for proposals' },
+  { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine pairing and table service' },
 ]
 
 export default function PrivateDiningBaliPage() {

@@ -144,7 +144,7 @@ export default function BaliHubPage() {
             If you own or manage a villa in any of the ten regions above, our partner programme lets you offer on-demand
             fine dining as part of your guest experience — at preferred partner pricing.
           </p>
-          <Link to="/partners" className="inline-flex items-center justify-center bg-[#2C5F7C] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1E4A5E] transition-all">
+          <Link to="/staffing/for-villa-managers" className="inline-flex items-center justify-center bg-[#2C5F7C] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1E4A5E] transition-all">
             See the Partner Programme
           </Link>
         </div>

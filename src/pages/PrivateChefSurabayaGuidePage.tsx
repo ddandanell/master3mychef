@@ -114,11 +114,11 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Private Chef Jakarta', href: '/blog/private-chef-jakarta-complete-guide', desc: 'Private chef service in Jakarta' },
+  { label: 'Private Chef Jakarta', href: '/journal/private-chef-jakarta-guide', desc: 'Private chef service in Jakarta' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa chef service across Bali' },
-  { label: 'Chef Placement Agency Bali', href: '/blog/chef-placement-agency-bali', desc: 'Long-term chef recruitment and placement' },
-  { label: 'Live-In Chef Bali', href: '/blog/live-in-chef-bali-hiring-guide', desc: 'Full-time live-in chef guide' },
-  { label: 'Household Chef Bali', href: '/blog/household-chef-bali-hiring-guide', desc: 'Household chef hiring in Bali' },
+  { label: 'Chef Placement Agency Bali', href: '/staffing/private-chef-placement', desc: 'Long-term chef recruitment and placement' },
+  { label: 'Live-In Chef Bali', href: '/staffing', desc: 'Full-time live-in chef guide' },
+  { label: 'Household Chef Bali', href: '/staffing/household-staff', desc: 'Household chef hiring in Bali' },
   { label: 'Corporate Events Catering', href: '/blog/corporate-events-catering-bali-team-dining', desc: 'Corporate dining and event catering' },
 ]
 

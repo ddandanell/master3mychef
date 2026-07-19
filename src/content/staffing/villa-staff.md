@@ -439,7 +439,7 @@ Whether you are opening a new villa, replacing a departing team member, or movin
 - [/staffing/private-chef](/staffing/private-chef) — Private chef and live-in cook placement
 - [/staffing/villa-manager](/staffing/villa-manager) — Villa manager and estate manager recruitment
 - [/staffing/housekeeping-cleaning](/staffing/housekeeping-cleaning) — Housekeeping and villa cleaning services
-- [/staffing/event-staff](/staffing/event-staff) — Temporary staff for villa events and celebrations
+- [/staffing/villa-staff](/staffing/villa-staff) — Temporary staff for villa events and celebrations
 
 ## CTAs Used
 

@@ -136,10 +136,10 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'New Year\'s Eve Bali', href: '/blog/new-years-eve-bali-private-chef', desc: 'Private chef for New Year\'s Eve at your Bali villa.' },
-  { label: 'Proposal Dinner Bali', href: '/blog/proposal-dinner-bali-private-chef', desc: 'Plan a perfect proposal dinner at a Bali villa.' },
+  { label: 'New Year\'s Eve Bali', href: '/blog/holiday-chef-bali', desc: 'Private chef for New Year\'s Eve at your Bali villa.' },
+  { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Plan a perfect proposal dinner at a Bali villa.' },
   { label: 'Fine Dining Bali', href: '/fine-dining/private-chef-bali', desc: 'Fine dining private chef experiences in Bali.' },
-  { label: 'Anniversary Dinner', href: '/blog/anniversary-dinner-villa-bali', desc: 'Private chef anniversary dinner at your Bali villa.' },
+  { label: 'Anniversary Dinner', href: '/events/anniversaries', desc: 'Private chef anniversary dinner at your Bali villa.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF packages and group sizes.' },
   { label: 'Festive Menu Bali', href: '/blog/festive-season-menu-bali', desc: 'Festive season menus and catering for Bali villas.' },
 ]

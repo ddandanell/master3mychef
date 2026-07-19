@@ -116,12 +116,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Bali Wedding Catering', href: '/blog/bali-wedding-catering-budget-guide', desc: 'Full guide to wedding catering costs' },
+  { label: 'Bali Wedding Catering', href: '/bali-wedding-catering-packages', desc: 'Full guide to wedding catering costs' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Plated Dinner Catering', href: '/blog/plated-dinner-catering-bali', desc: 'Formal multi-course dinner service' },
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'End-to-end villa event catering' },
-  { label: 'Sommelier Hire Bali', href: '/blog/sommelier-hire-bali', desc: 'Wine service and pairing for events' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Professional event crew hire' },
+  { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'End-to-end villa event catering' },
+  { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine service and pairing for events' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Professional event crew hire' },
 ]
 
 export default function RehearsalDinnerBaliPage() {

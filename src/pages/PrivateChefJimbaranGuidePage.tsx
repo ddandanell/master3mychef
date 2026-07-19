@@ -40,10 +40,10 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Occasions',
     title: 'What Jimbaran Private Chef Clients Book For',
     body: `<p>The most common occasions for private chef bookings in the Jimbaran and Bukit area:</p>
-    <p><strong>Romantic seafood dinner for two:</strong> A private seafood spread at sunset for a couple on a Jimbaran Bay villa terrace. Candles, fresh flowers, champagne, and a chef who handles everything from sourcing to cleanup. One of the most natural and beautiful private dining experiences in Bali. See our <a href="/blog/romantic-dinner-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">romantic dinner guide</a>.</p>
+    <p><strong>Romantic seafood dinner for two:</strong> A private seafood spread at sunset for a couple on a Jimbaran Bay villa terrace. Candles, fresh flowers, champagne, and a chef who handles everything from sourcing to cleanup. One of the most natural and beautiful private dining experiences in Bali. See our <a href="/fine-dining/romantic-dinner" class="text-[#7E6410] hover:underline font-medium">romantic dinner guide</a>.</p>
     <p><strong>Cliff sunset tasting menu:</strong> A fine dining tasting menu served on an Uluwatu or Pecatu clifftop terrace at sunset. 6 to 8 courses, matched wines, full waitstaff, and the Indian Ocean as backdrop. The premium version of Jimbaran/Bukit private chef dining.</p>
-    <p><strong>Family or group seafood BBQ:</strong> For groups of 8-20 staying at a Bukit villa compound, a live-fire seafood BBQ on the villa deck is the ideal format. The chef sets up the grill, handles all sourcing and preparation, and creates the atmosphere of a Jimbaran beach warung in your private villa space. See our <a href="/blog/bali-bbq-catering-villa-guide" class="text-[#7E6410] hover:underline font-medium">BBQ catering guide</a>.</p>
-    <p><strong>Honeymoon experience:</strong> Jimbaran and the Bukit Peninsula are among Bali's most popular honeymoon destinations. We provide tailored private chef honeymoon experiences including floating breakfasts, sunset cocktail spreads, and romantic dinners. See our <a href="/blog/honeymoon-private-chef-bali" class="text-[#7E6410] hover:underline font-medium">honeymoon chef guide</a>.</p>`,
+    <p><strong>Family or group seafood BBQ:</strong> For groups of 8-20 staying at a Bukit villa compound, a live-fire seafood BBQ on the villa deck is the ideal format. The chef sets up the grill, handles all sourcing and preparation, and creates the atmosphere of a Jimbaran beach warung in your private villa space. See our <a href="/catering/bbq-catering" class="text-[#7E6410] hover:underline font-medium">BBQ catering guide</a>.</p>
+    <p><strong>Honeymoon experience:</strong> Jimbaran and the Bukit Peninsula are among Bali's most popular honeymoon destinations. We provide tailored private chef honeymoon experiences including floating breakfasts, sunset cocktail spreads, and romantic dinners. See our <a href="/honeymoon-chef" class="text-[#7E6410] hover:underline font-medium">honeymoon chef guide</a>.</p>`,
   },
   {
     id: 'pricing',
@@ -109,10 +109,10 @@ export default function PrivateChefJimbaranGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Private Chef Nusa Dua Guide', href: '/blog/private-chef-nusa-dua-guide', desc: 'Private chef for Nusa Dua villas and resort properties.' },
-        { label: 'Bali BBQ Catering', href: '/blog/bali-bbq-catering-villa-guide', desc: 'Live-fire BBQ catering for villa groups across Bali.' },
-        { label: 'Romantic Dinner Bali', href: '/blog/romantic-dinner-bali-private-chef', desc: 'Private chef romantic dinners for couples in Bali.' },
-        { label: 'Honeymoon Private Chef', href: '/blog/honeymoon-private-chef-bali', desc: 'Private chef experience for Bali honeymoons.' },
+        { label: 'Private Chef Nusa Dua Guide', href: '/private-chef/nusa-dua', desc: 'Private chef for Nusa Dua villas and resort properties.' },
+        { label: 'Bali BBQ Catering', href: '/catering/bbq-catering', desc: 'Live-fire BBQ catering for villa groups across Bali.' },
+        { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private chef romantic dinners for couples in Bali.' },
+        { label: 'Honeymoon Private Chef', href: '/honeymoon-chef', desc: 'Private chef experience for Bali honeymoons.' },
         { label: 'Pricing Guide', href: '/pricing', desc: 'Full breakdown of private chef costs across all Bali areas.' },
         { label: 'Book a Chef', href: '/contact', desc: 'Check availability for your Jimbaran dates.' },
       ]}

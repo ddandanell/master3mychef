@@ -108,12 +108,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Waiter Hire Bali', href: '/blog/waiter-hire-bali', desc: 'Professional service staff for events' },
-  { label: 'Bartender Hire Bali', href: '/blog/bartender-hire-bali', desc: 'Event bartenders and mobile bar' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Full event staffing solutions' },
-  { label: 'Villa Butler Bali', href: '/blog/villa-butler-bali-guide', desc: 'Personal butler service for villas' },
+  { label: 'Waiter Hire Bali', href: '/in-villa-service/waiters', desc: 'Professional service staff for events' },
+  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Event bartenders and mobile bar' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Full event staffing solutions' },
+  { label: 'Villa Butler Bali', href: '/in-villa-service/butlers', desc: 'Personal butler service for villas' },
   { label: 'Corporate Events Catering', href: '/blog/corporate-events-catering-bali-team-dining', desc: 'Corporate dining and events in Bali' },
-  { label: 'Event Planning Bali', href: '/event-planning', desc: 'Full event management in Bali' },
+  { label: 'Event Planning Bali', href: '/events', desc: 'Full event management in Bali' },
 ]
 
 export default function HostessHireBaliPage() {

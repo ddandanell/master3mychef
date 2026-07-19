@@ -18,9 +18,9 @@ const SECTIONS: PageSection[] = [
     title: 'The Canggu Palate: Bold Flavours, Sharing Plates & Live-Fire Cooking',
     body: `<p>Canggu\'s food scene has shaped a distinct private dining style:</p>
     <p><strong>Indonesian street food elevated:</strong> Nasi goreng, mie goreng, satay, babi guling — executed with chef-quality technique and premium ingredients.</p>
-    <p><strong>Live-fire and BBQ:</strong> Many Canggu villas have outdoor kitchens or BBQ setups. A myCHEF chef working a live fire is one of the best private dining formats for large casual groups. See our <a href="/blog/bali-bbq-catering-villa-guide" class="text-[#7E6410] hover:underline font-medium">Bali BBQ catering guide</a>.</p>
+    <p><strong>Live-fire and BBQ:</strong> Many Canggu villas have outdoor kitchens or BBQ setups. A myCHEF chef working a live fire is one of the best private dining formats for large casual groups. See our <a href="/catering/bbq-catering" class="text-[#7E6410] hover:underline font-medium">Bali BBQ catering guide</a>.</p>
     <p><strong>Fresh seafood:</strong> Canggu\'s proximity to the Jimbaran and Kedonganan fish markets means fresh catch is available daily.</p>
-    <p><strong>Long breakfast spreads:</strong> A private chef breakfast — an extended spread of tropical fruits, freshly squeezed juices, eggs made to order, avocado toast, and local pastries — sets the tone for the whole day. See our <a href="/blog/floating-breakfast-bali" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a>.</p>`,
+    <p><strong>Long breakfast spreads:</strong> A private chef breakfast — an extended spread of tropical fruits, freshly squeezed juices, eggs made to order, avocado toast, and local pastries — sets the tone for the whole day. See our <a href="/catering/floating-breakfast" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a>.</p>`,
   },
   {
     id: 'villa-areas',
@@ -41,10 +41,10 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Occasions',
     title: 'Private Chef for Canggu Occasions: Bachelor Parties, Birthdays & Group Dinners',
     body: `<p>Canggu is Bali\'s premier destination for group villa celebrations:</p>
-    <p><strong>Bachelor and bachelorette parties:</strong> A private chef dinner for 15-30 guests anchors the villa night. See our <a href="/blog/bachelor-party-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">bachelor party guide</a> and <a href="/blog/bachelorette-party-bali-catering" class="text-[#7E6410] hover:underline font-medium">bachelorette party guide</a>.</p>
-    <p><strong>Birthday parties:</strong> From intimate villa dinners for 6 to full villa party catering for 50+. See our <a href="/blog/birthday-party-catering-bali" class="text-[#7E6410] hover:underline font-medium">birthday party catering guide</a>.</p>
+    <p><strong>Bachelor and bachelorette parties:</strong> A private chef dinner for 15-30 guests anchors the villa night. See our <a href="/blog/bachelor-party-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">bachelor party guide</a> and <a href="/events/villa-parties" class="text-[#7E6410] hover:underline font-medium">bachelorette party guide</a>.</p>
+    <p><strong>Birthday parties:</strong> From intimate villa dinners for 6 to full villa party catering for 50+. See our <a href="/events/birthdays" class="text-[#7E6410] hover:underline font-medium">birthday party catering guide</a>.</p>
     <p><strong>Corporate retreats:</strong> myCHEF provides chef services for corporate villa stays. See our <a href="/blog/corporate-events-catering-bali-team-dining" class="text-[#7E6410] hover:underline font-medium">corporate catering guide</a>.</p>
-    <p><strong>Family villa weeks:</strong> Multi-generational families often want daily chef service. Our <a href="/blog/household-chef-bali-hiring-guide" class="text-[#7E6410] hover:underline font-medium">household chef</a> arrangement is ideal.</p>`,
+    <p><strong>Family villa weeks:</strong> Multi-generational families often want daily chef service. Our <a href="/staffing/household-staff" class="text-[#7E6410] hover:underline font-medium">household chef</a> arrangement is ideal.</p>`,
   },
   {
     id: 'pricing',
@@ -110,11 +110,11 @@ export default function PrivateChefCangguGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Private Chef Ubud Guide', href: '/blog/private-chef-ubud-guide', desc: 'Farm-to-table dining and wellness menus in Ubud.' },
-        { label: 'Private Chef Seminyak Guide', href: '/blog/private-chef-seminyak-guide', desc: 'Luxury villa dining and fine dining in Seminyak.' },
+        { label: 'Private Chef Ubud Guide', href: '/private-chef/ubud', desc: 'Farm-to-table dining and wellness menus in Ubud.' },
+        { label: 'Private Chef Seminyak Guide', href: '/private-chef/seminyak', desc: 'Luxury villa dining and fine dining in Seminyak.' },
         { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Private chef for bachelor party villa nights in Canggu.' },
-        { label: 'Bali BBQ Catering', href: '/blog/bali-bbq-catering-villa-guide', desc: 'Live-fire BBQ catering for villa groups across Bali.' },
-        { label: 'Floating Breakfast Bali', href: '/blog/floating-breakfast-bali', desc: 'Private chef floating breakfast for your Canggu villa pool.' },
+        { label: 'Bali BBQ Catering', href: '/catering/bbq-catering', desc: 'Live-fire BBQ catering for villa groups across Bali.' },
+        { label: 'Floating Breakfast Bali', href: '/catering/floating-breakfast', desc: 'Private chef floating breakfast for your Canggu villa pool.' },
       ]}
       extraJsonLd={[
         breadcrumbSchema('Private Chef Canggu Guide', 'https://mychef.id/blog/private-chef-canggu-guide', 'Blog', 'https://mychef.id/blog'),

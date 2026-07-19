@@ -50,7 +50,7 @@ const MENU_PRICE_GUIDE: Record<string, string> = {
 
 export default function MenuPage() {
   const { pathname } = useLocation()
-  const isIndex = pathname === '/menus' || pathname === '/menus/'
+  const isIndex = pathname === '/fine-dining/menus' || pathname === '/fine-dining/menus'
   const slug = pathname.replace(/^\/menus\//, '').replace(/\/$/, '')
 
   if (isIndex) {

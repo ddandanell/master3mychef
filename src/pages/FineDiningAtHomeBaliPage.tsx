@@ -36,7 +36,7 @@ myCHEF makes this possible. We match Bali villa guests with chefs whose training
 
 **Progressive Tasting Menu (6--11 courses)** -- For occasions where the dinner is the event, not simply the meal. A sequence of small courses that builds through the evening, each designed in relation to the others. The chef's fullest expression of what is possible in your villa kitchen. See our [Private Tasting Menu](/blog/tasting-menu-bali) page for more detail.
 
-**Interactive Chef's Table** -- The chef cooks in front of you, explains the dishes, and turns the dinner into an experience as well as a meal. A counter or open kitchen setup allows guests to engage directly with the cooking. See our [Chef's Table Bali](/blog/chefs-table-bali) page for this format.
+**Interactive Chef's Table** -- The chef cooks in front of you, explains the dishes, and turns the dinner into an experience as well as a meal. A counter or open kitchen setup allows guests to engage directly with the cooking. See our [Chef's Table Bali](/fine-dining/chefs-table) page for this format.
 
 **Sharing Plates Fine Dining** -- High-quality dishes designed to be shared across the table rather than plated individually. The informality of sharing format combined with fine dining ingredient quality and technique. Works particularly well for groups of 6--12 who want excellent food with a relaxed rather than formal atmosphere.`,
   },
@@ -123,9 +123,9 @@ const faqs = [
 const relatedPages = [
   { label: 'Luxury Dining Bali', href: '/blog/luxury-dining-bali', desc: 'Ultra-premium in-villa chef experiences' },
   { label: 'Private Tasting Menu Bali', href: '/blog/tasting-menu-bali', desc: '7--11 course multi-course chef\'s dinner' },
-  { label: 'Chef\'s Table Bali', href: '/blog/chefs-table-bali', desc: 'Interactive dining at the chef\'s counter' },
-  { label: 'Private Dining Bali', href: '/blog/private-dining-bali', desc: 'Complete in-villa dining experiences' },
-  { label: 'Romantic Dinner Bali', href: '/blog/romantic-dinner-bali-private-chef', desc: 'Private romantic dinner for two' },
+  { label: 'Chef\'s Table Bali', href: '/fine-dining/chefs-table', desc: 'Interactive dining at the chef\'s counter' },
+  { label: 'Private Dining Bali', href: '/private-dining-indonesia', desc: 'Complete in-villa dining experiences' },
+  { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private romantic dinner for two' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Complete pricing guide for private chef services' },
 ]
 

@@ -88,7 +88,7 @@ Discreet, trained professionals who maintain villa standards across daily cleani
 The finishing touch that separates a rental from a luxury experience. English-proficient, culturally aware, and trained in anticipatory service.
 
 **Event Staff — Waiters, Bartenders & Service Crew**
-Uniformed, English-speaking teams for weddings, private dinners, retreats, and villa parties. We handle staff-to-guest ratios and event-day coordination. [View event staffing](/staffing/event-staff)
+Uniformed, English-speaking teams for weddings, private dinners, retreats, and villa parties. We handle staff-to-guest ratios and event-day coordination. [View event staffing](/staffing/villa-staff)
 
 **Maintenance & Technical Staff**
 Pool technicians, gardeners, handymen, AC technicians, and preventive maintenance coordinators. We emphasize prevention over emergency repairs. [Explore maintenance support](/staffing/maintenance)
@@ -425,7 +425,7 @@ A12: We serve properties across Bali — from two-bedroom rentals and Airbnb apa
 - [/staffing/private-chef](/staffing/private-chef) — Private chef placement service
 - [/staffing/villa-manager](/staffing/villa-manager) — Villa manager recruitment
 - [/staffing/housekeeping-cleaning](/staffing/housekeeping-cleaning) — Villa housekeeping services
-- [/staffing/event-staff](/staffing/event-staff) — Event staffing
+- [/staffing/villa-staff](/staffing/villa-staff) — Event staffing
 - [/staffing/maintenance](/staffing/maintenance) — Maintenance support
 - [/staffing/recruitment](/staffing/recruitment) — Full recruitment process
 - [/staffing/how-it-works](/staffing/how-it-works) — How the staffing process works

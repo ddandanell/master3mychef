@@ -141,8 +141,8 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full private chef dinner service at your Bali villa.' },
-  { label: 'Floating Breakfast Bali', href: '/blog/floating-breakfast-bali', desc: 'The iconic Bali villa floating breakfast — how to book it.' },
-  { label: 'Honeymoon Chef Bali', href: '/blog/honeymoon-private-chef-bali', desc: 'Private chef experiences for honeymoon couples in Bali.' },
+  { label: 'Floating Breakfast Bali', href: '/catering/floating-breakfast', desc: 'The iconic Bali villa floating breakfast — how to book it.' },
+  { label: 'Honeymoon Chef Bali', href: '/honeymoon-chef', desc: 'Private chef experiences for honeymoon couples in Bali.' },
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Candlelit private chef dinner at your villa — full romantic dining experience.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF services and group sizes.' },
   { label: 'Event Planning Bali', href: '/blog/event-planning-bali', desc: 'Complete logistics guide for Bali villa events and activities.' },

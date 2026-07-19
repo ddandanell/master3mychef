@@ -111,11 +111,11 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Chef\'s Table Bali', href: '/blog/chefs-table-bali', desc: 'Interactive dining at the chef\'s counter' },
-  { label: 'Romantic Dinner Bali', href: '/blog/romantic-dinner-bali-private-chef', desc: 'Private romantic dinner for two' },
-  { label: 'Private Dining Bali', href: '/blog/private-dining-bali', desc: 'Complete in-villa dining experiences' },
-  { label: 'Proposal Dinner Bali', href: '/blog/proposal-dinner-bali-private-chef', desc: 'Private proposal dinner setup' },
-  { label: 'Anniversary Dinner Bali', href: '/blog/anniversary-dinner-villa-bali', desc: 'Villa anniversary dinner experience' },
+  { label: 'Chef\'s Table Bali', href: '/fine-dining/chefs-table', desc: 'Interactive dining at the chef\'s counter' },
+  { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private romantic dinner for two' },
+  { label: 'Private Dining Bali', href: '/private-dining-indonesia', desc: 'Complete in-villa dining experiences' },
+  { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Private proposal dinner setup' },
+  { label: 'Anniversary Dinner Bali', href: '/events/anniversaries', desc: 'Villa anniversary dinner experience' },
 ]
 
 export default function TastingMenuBaliPage() {

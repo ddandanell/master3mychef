@@ -161,7 +161,7 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Bachelorette Party Catering', href: '/blog/bachelorette-party-bali-catering', desc: 'Private chef catering for bachelorette parties at Bali villas.' },
+  { label: 'Bachelorette Party Catering', href: '/events/villa-parties', desc: 'Private chef catering for bachelorette parties at Bali villas.' },
   { label: 'Villa Dinner Party', href: '/blog/private-dinner-party-bali', desc: 'How to host an elegant private dinner party at your Bali villa.' },
   { label: 'Kids Birthday Party', href: '/blog/how-to-plan-villa-birthday-party-bali', desc: 'Complete guide to planning a villa birthday party in Bali.' },
   { label: 'Grazing Tables', href: '/catering/grazing-tables', desc: 'Signature grazing table catering for Bali villa events.' },

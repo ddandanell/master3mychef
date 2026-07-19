@@ -16,8 +16,8 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Area Character',
     title: 'Pererenan Dining Culture: What Guests Request',
     body: `<p>Pererenan's guest profile shapes the kind of private chef experiences that are most requested in this area:</p>
-    <p><strong>Surf and wellness retreat groups:</strong> Pererenan is a hub for surf retreats and yoga/wellness programs that use villa properties as their base. These groups often have specific dietary structures — typically plant-forward, frequently vegan or mostly plant-based, with attention to whole foods and nutrient density. A myCHEF chef supporting a surf retreat group produces communal-style meals (large spreads served sharing-style) that match the retreat's food philosophy. See our <a href="/blog/bali-wellness-retreat-catering" class="text-[#7E6410] hover:underline font-medium">wellness retreat catering guide</a>.</p>
-    <p><strong>Rice field sunset dinners:</strong> The rice terraces between Pererenan and Cemagi create the same photographic and atmospheric quality that Ubud is famous for — but at the beach. A private dinner table set on a villa terrace overlooking working rice fields at sunset is among the most distinctive private dining settings in Bali. Guests in Pererenan villas regularly request this format for romantic dinners, small group celebrations, and photographer-documented occasions. See our <a href="/blog/romantic-dinner-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">romantic dinner guide</a>.</p>
+    <p><strong>Surf and wellness retreat groups:</strong> Pererenan is a hub for surf retreats and yoga/wellness programs that use villa properties as their base. These groups often have specific dietary structures — typically plant-forward, frequently vegan or mostly plant-based, with attention to whole foods and nutrient density. A myCHEF chef supporting a surf retreat group produces communal-style meals (large spreads served sharing-style) that match the retreat's food philosophy. See our <a href="/catering/retreat-catering" class="text-[#7E6410] hover:underline font-medium">wellness retreat catering guide</a>.</p>
+    <p><strong>Rice field sunset dinners:</strong> The rice terraces between Pererenan and Cemagi create the same photographic and atmospheric quality that Ubud is famous for — but at the beach. A private dinner table set on a villa terrace overlooking working rice fields at sunset is among the most distinctive private dining settings in Bali. Guests in Pererenan villas regularly request this format for romantic dinners, small group celebrations, and photographer-documented occasions. See our <a href="/fine-dining/romantic-dinner" class="text-[#7E6410] hover:underline font-medium">romantic dinner guide</a>.</p>
     <p><strong>Long-stay couple and small group cooking:</strong> Pererenan's slower pace and quieter setting attract couples and small groups (4-8 people) on 10-14 day stays. Multi-session chef bookings across a long stay are common — a chef who cooks dinner every other evening over two weeks, sourcing fresh from Canggu market each morning and varying the menu based on what's in season and what the guests enjoyed previously.</p>
     <p><strong>Boutique villa retreat catering:</strong> Several boutique eco-villa and retreat properties in the Pererenan-Cemagi corridor operate semi-commercially, hosting yoga and wellness programs. Some engage myCHEF on a per-program basis to provide all meal service during the retreat week. This is a regular commercial format for our Pererenan chefs.</p>`,
   },
@@ -31,7 +31,7 @@ const SECTIONS: PageSection[] = [
     <p><strong>Rice field corridor (Pererenan to Cemagi):</strong> The lane network running inland from the beach through active rice paddies. Some of Bali's most architecturally interesting villas sit here — glass-walled pavilions, open-sided structures, and compounds designed to integrate with the agrarian landscape around them.</p>
     <p><strong>Cemagi:</strong> The village immediately north of Pererenan, increasingly popular with villa developers and retreat operators. Some excellent large-format villa compounds here. Included in our standard coverage.</p>
     <p><strong>Seseh:</strong> The quiet coastal village further north, beyond Cemagi. More remote and deliberately less developed. A handful of exceptional luxury villas, extremely private. myCHEF serves this area with advance notice.</p>
-    <p><strong>Connection to Canggu:</strong> Pererenan is a 5-10 minute drive from central Canggu (Batu Bolong, Berawa) and shares its market access, including Canggu's organic and specialty grocery suppliers. Our Canggu and Pererenan chefs share sourcing networks. See our <a href="/blog/private-chef-canggu-guide" class="text-[#7E6410] hover:underline font-medium">Canggu guide</a> for context on the broader area.</p>`,
+    <p><strong>Connection to Canggu:</strong> Pererenan is a 5-10 minute drive from central Canggu (Batu Bolong, Berawa) and shares its market access, including Canggu's organic and specialty grocery suppliers. Our Canggu and Pererenan chefs share sourcing networks. See our <a href="/private-chef/canggu" class="text-[#7E6410] hover:underline font-medium">Canggu guide</a> for context on the broader area.</p>`,
   },
   {
     id: 'pricing',
@@ -97,10 +97,10 @@ export default function PrivateChefPererenanGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Private Chef Canggu Guide', href: '/blog/private-chef-canggu-guide', desc: 'Private chef services in Canggu and the surrounding west coast area.' },
-        { label: 'Wellness Retreat Catering', href: '/blog/bali-wellness-retreat-catering', desc: 'Private chef catering for yoga and wellness retreats in Bali.' },
-        { label: 'Romantic Dinner Bali', href: '/blog/romantic-dinner-bali-private-chef', desc: 'Private chef romantic dinners for couples in Bali.' },
-        { label: 'Floating Breakfast Bali', href: '/blog/floating-breakfast-bali', desc: 'Floating breakfast and villa breakfast experiences.' },
+        { label: 'Private Chef Canggu Guide', href: '/private-chef/canggu', desc: 'Private chef services in Canggu and the surrounding west coast area.' },
+        { label: 'Wellness Retreat Catering', href: '/catering/retreat-catering', desc: 'Private chef catering for yoga and wellness retreats in Bali.' },
+        { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private chef romantic dinners for couples in Bali.' },
+        { label: 'Floating Breakfast Bali', href: '/catering/floating-breakfast', desc: 'Floating breakfast and villa breakfast experiences.' },
         { label: 'Pricing Guide', href: '/pricing', desc: 'Full breakdown of private chef costs across Bali.' },
         { label: 'Book a Chef', href: '/contact', desc: 'Check availability for your Pererenan villa.' },
       ]}

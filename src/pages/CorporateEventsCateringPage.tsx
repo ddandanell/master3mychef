@@ -207,7 +207,7 @@ IDR 1,200,000–2,500,000 per person. The full-scale event format. Includes mult
 
 <p>In <strong>Jakarta</strong>, we cater executive club settings, residential event spaces, and corporate function rooms for high-end client entertainment and leadership dinners where a private chef team elevates the occasion beyond restaurant dining.</p>
 
-<p>For full coverage and venue-specific logistics, explore our <a href="/catering/corporate-catering" class="text-[#7E6410] hover:underline font-medium">corporate catering service page</a>, our <a href="/events/corporate-events" class="text-[#7E6410] hover:underline font-medium">corporate events overview</a>, or our dedicated <a href="/jakarta" class="text-[#7E6410] hover:underline font-medium">Jakarta catering page</a>. To begin planning, reach out via WhatsApp with your dates, group size, and venue — we will respond within the hour.</p>`,
+<p>For full coverage and venue-specific logistics, explore our <a href="/catering/corporate-catering" class="text-[#7E6410] hover:underline font-medium">corporate catering service page</a>, our <a href="/events/corporate-events" class="text-[#7E6410] hover:underline font-medium">corporate events overview</a>, or our dedicated <a href="/locations/jakarta" class="text-[#7E6410] hover:underline font-medium">Jakarta catering page</a>. To begin planning, reach out via WhatsApp with your dates, group size, and venue — we will respond within the hour.</p>`,
   },
 ]
 
@@ -234,12 +234,12 @@ const RELATED_PAGES = [
   },
   {
     label: 'Jakarta Catering',
-    href: '/jakarta',
+    href: '/locations/jakarta',
     desc: 'Executive and corporate catering services for events in Jakarta.',
   },
   {
     label: 'About myCHEF',
-    href: '/about',
+    href: '/fine-dining/our-chefs',
     desc: 'Michelin-trained founder, HACCP certification, and 50+ professional staff.',
   },
 ]

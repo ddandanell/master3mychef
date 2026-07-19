@@ -175,7 +175,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/private-chef-breakfast-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                <Link to="/catering" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Private Chef Breakfast
                 </Link>
               </li>
@@ -305,7 +305,7 @@ export default function Footer() {
                 <>
                   <li className="pt-2 border-t border-white/5">
                     <Link
-                      to="/jakarta"
+                      to="/locations/jakarta"
                       className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                     >
                       Jakarta
@@ -313,7 +313,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      to="/surabaya"
+                      to="/locations/jakarta"
                       className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                     >
                       Surabaya
@@ -321,7 +321,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      to="/bandung"
+                      to="/locations/jakarta"
                       className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                     >
                       Bandung
@@ -329,7 +329,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      to="/yogyakarta"
+                      to="/locations/jakarta"
                       className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                     >
                       Yogyakarta
@@ -457,14 +457,14 @@ export default function Footer() {
           <Link to="/pricing" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Pricing</Link>
           <Link to="/calculator" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Price Calculator</Link>
           <Link to="/faq" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">FAQ</Link>
-          <Link to="/reviews" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Reviews</Link>
+          <Link to="/" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Reviews</Link>
           <Link to="/why-mychef" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Why myCHEF</Link>
           <Link to="/press" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Press</Link>
           <Link to="/join-our-team" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Join the Team</Link>
           <Link to="/partner-platform" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Partner Platform</Link>
           <Link to="/certified-partner" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Certified Partner</Link>
           <Link to="/journal" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Journal</Link>
-          <Link to="/blog" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Blog & Guides</Link>
+          <Link to="/journal" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Blog & Guides</Link>
           <Link
             to={PRIMARY_CTA.href}
             className="px-4 py-1.5 bg-[#C5A028]/10 text-[#C5A028] font-semibold rounded-full hover:bg-[#C5A028] hover:text-black transition-all focus:outline-none focus:ring-2 focus:ring-white"

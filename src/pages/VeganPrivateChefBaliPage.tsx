@@ -109,11 +109,11 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full in-villa private chef service' },
-  { label: 'Daily Chef Service', href: '/blog/daily-chef-service-bali', desc: 'All-day chef hire for villa stays' },
-  { label: 'Cooking Class Bali', href: '/blog/bali-villa-cooking-class-private-chef', desc: 'Hands-on cooking with a private chef' },
-  { label: 'Wellness Retreat Catering', href: '/blog/bali-wellness-retreat-catering', desc: 'Plant-based retreat catering' },
+  { label: 'Daily Chef Service', href: '/hire-private-chef-bali-monthly', desc: 'All-day chef hire for villa stays' },
+  { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Hands-on cooking with a private chef' },
+  { label: 'Wellness Retreat Catering', href: '/catering/retreat-catering', desc: 'Plant-based retreat catering' },
   { label: 'Dietary Requirements Guide', href: '/blog/food-allergies-dietary-requirements-bali-private-chef', desc: 'Handling dietary requirements in Bali' },
-  { label: 'Brunch Catering Bali', href: '/blog/brunch-catering-bali', desc: 'Private chef brunch for villa stays' },
+  { label: 'Brunch Catering Bali', href: '/catering', desc: 'Private chef brunch for villa stays' },
 ]
 
 export default function VeganPrivateChefBaliPage() {

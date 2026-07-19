@@ -39,9 +39,9 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Occasions',
     title: 'Private Chef for Seminyak Occasions: Honeymoons, Proposals & Anniversaries',
     body: `<p>Seminyak\'s romantic reputation makes it the island\'s premier destination for milestone occasion dining:</p>
-    <p><strong>Honeymoon dinners:</strong> A private chef dinner for two — candles, fresh flowers, bespoke menu, champagne. See our <a href="/blog/honeymoon-private-chef-bali" class="text-[#7E6410] hover:underline font-medium">honeymoon private chef guide</a>.</p>
-    <p><strong>Proposals:</strong> A controlled private setting — no restaurant crowds, no risk of interruptions. See our <a href="/blog/proposal-dinner-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">proposal dinner guide</a>.</p>
-    <p><strong>Anniversary dinners:</strong> A dinner built around the couple\'s specific preferences. See our <a href="/blog/anniversary-dinner-villa-bali" class="text-[#7E6410] hover:underline font-medium">anniversary dinner guide</a>.</p>
+    <p><strong>Honeymoon dinners:</strong> A private chef dinner for two — candles, fresh flowers, bespoke menu, champagne. See our <a href="/honeymoon-chef" class="text-[#7E6410] hover:underline font-medium">honeymoon private chef guide</a>.</p>
+    <p><strong>Proposals:</strong> A controlled private setting — no restaurant crowds, no risk of interruptions. See our <a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">proposal dinner guide</a>.</p>
+    <p><strong>Anniversary dinners:</strong> A dinner built around the couple\'s specific preferences. See our <a href="/events/anniversaries" class="text-[#7E6410] hover:underline font-medium">anniversary dinner guide</a>.</p>
     <p><strong>Corporate dinners:</strong> A private villa dinner for 8-12 executives with a sommelier and professional waitstaff. See our <a href="/blog/corporate-events-catering-bali-team-dining" class="text-[#7E6410] hover:underline font-medium">corporate dining guide</a>.</p>`,
   },
   {
@@ -107,10 +107,10 @@ export default function PrivateChefSeminyakGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Private Chef Canggu Guide', href: '/blog/private-chef-canggu-guide', desc: 'Surf culture dining and group parties in Canggu.' },
-        { label: 'Honeymoon Private Chef', href: '/blog/honeymoon-private-chef-bali', desc: 'Private chef experience guide for Bali honeymoons.' },
-        { label: 'Proposal Dinner Bali', href: '/blog/proposal-dinner-bali-private-chef', desc: 'Arrange a private chef proposal dinner at your villa.' },
-        { label: 'Anniversary Dinner Bali', href: '/blog/anniversary-dinner-villa-bali', desc: 'Private chef anniversary dinner at a Bali villa.' },
+        { label: 'Private Chef Canggu Guide', href: '/private-chef/canggu', desc: 'Surf culture dining and group parties in Canggu.' },
+        { label: 'Honeymoon Private Chef', href: '/honeymoon-chef', desc: 'Private chef experience guide for Bali honeymoons.' },
+        { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Arrange a private chef proposal dinner at your villa.' },
+        { label: 'Anniversary Dinner Bali', href: '/events/anniversaries', desc: 'Private chef anniversary dinner at a Bali villa.' },
       ]}
       extraJsonLd={[
         breadcrumbSchema('Private Chef Seminyak Guide', 'https://mychef.id/blog/private-chef-seminyak-guide', 'Blog', 'https://mychef.id/blog'),

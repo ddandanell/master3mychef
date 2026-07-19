@@ -481,7 +481,7 @@ export default function EventsRetreatsPage() {
               { to: '/events', label: 'All Events' },
               { to: '/catering', label: 'Villa Catering' },
               { to: '/fine-dining', label: 'Fine Dining' },
-              { to: '/menus', label: 'Menus' }
+              { to: '/fine-dining/menus', label: 'Menus' }
             ].map((link) => (
               <Link
                 key={link.to}

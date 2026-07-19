@@ -119,22 +119,22 @@ const TESTIMONIALS = [
 const AREAS = [
   {
     name: 'Uluwatu',
-    href: '/uluwatu',
+    href: '/locations/uluwatu',
     desc: 'Clifftop infinity pools with Indian Ocean views. The most dramatic setting for a candlelit poolside dinner.',
   },
   {
     name: 'Seminyak',
-    href: '/seminyak',
+    href: '/locations/seminyak',
     desc: 'Garden villas with lush tropical grounds. Ideal for couples who want to be close to Bali\'s energy but completely private at home.',
   },
   {
     name: 'Ubud',
-    href: '/ubud',
+    href: '/locations/ubud',
     desc: 'Jungle seclusion and rice terrace views. Breakfast with birdsong, dinner under a canopy of stars.',
   },
   {
     name: 'Jimbaran',
-    href: '/jimbaran',
+    href: '/locations/jimbaran',
     desc: 'Beach-facing villas with sunset views across Jimbaran Bay. Perfect for an evening dinner timed to the golden hour.',
   },
 ]
@@ -191,7 +191,7 @@ export default function HoneymoonChefPage() {
           <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="absolute top-0 left-0 z-10 w-full">
-          <Breadcrumb items={[{ label: 'Blog', href: '/blog' }, { label: 'Honeymoon Private Chef Bali' }]} theme="dark" className="py-6" />
+          <Breadcrumb items={[{ label: 'Blog', href: '/journal' }, { label: 'Honeymoon Private Chef Bali' }]} theme="dark" className="py-6" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24">
           <p className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>

@@ -186,7 +186,7 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Corporate Catering', href: '/blog/corporate-events-catering-bali-team-dining', desc: 'Team dinners, offsites, and corporate event catering in Bali.' },
-  { label: 'Buffet vs Plated', href: '/blog/buffet-vs-plated-service-bali', desc: 'Which catering format works best for your event and group size.' },
+  { label: 'Buffet vs Plated', href: '/catering', desc: 'Which catering format works best for your event and group size.' },
   { label: 'Wedding Catering', href: '/events/weddings', desc: 'Private chef and catering for Bali villa weddings.' },
   { label: 'Pricing Guide', href: '/pricing', desc: 'Full pricing for all catering formats and group sizes.' },
   { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Private chef catering for bachelor party groups at Bali villas.' },

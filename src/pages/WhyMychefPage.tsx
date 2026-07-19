@@ -58,7 +58,7 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'About myCHEF', href: '/about', desc: 'Meet Adriano and the story behind the brand.' },
+  { label: 'About myCHEF', href: '/fine-dining/our-chefs', desc: 'Meet Adriano and the story behind the brand.' },
   { label: 'Fine Dining', href: '/fine-dining', desc: 'Private tasting menus for special evenings.' },
   { label: 'Catering', href: '/catering', desc: 'Relaxed chef service for groups and families.' },
   { label: 'Events', href: '/events', desc: 'Villa parties, weddings, and celebrations.' },

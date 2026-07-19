@@ -3,7 +3,7 @@ import OptimizedImage from '@/components/OptimizedImage'
  * PremiumPage — Full-featured page template for myCHEF
  * 
  * Use this for all info/utility pages that need 8-12 sections:
- * /about, /chefs, /faq, /pricing, /reviews, /why-mychef, /retreats, etc.
+ * /fine-dining/our-chefs, /chefs, /faq, /pricing, /, /why-mychef, /events/retreats, etc.
  * 
  * Each page gets:
  * - Hero with background image

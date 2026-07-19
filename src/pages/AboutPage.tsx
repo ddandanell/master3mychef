@@ -98,7 +98,7 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Our Chefs', href: '/chefs', desc: 'Meet Adriano and the lead chefs behind the myCHEF experience.' },
-  { label: 'Menus', href: '/menus', desc: 'Browse menu styles for villa dinners, feasts, BBQs, and tasting menus.' },
+  { label: 'Menus', href: '/fine-dining/menus', desc: 'Browse menu styles for villa dinners, feasts, BBQs, and tasting menus.' },
   { label: 'Fine Dining', href: '/fine-dining', desc: 'Explore premium tasting menus and intimate villa experiences.' },
   { label: 'Catering', href: '/catering', desc: 'Planning a larger group, buffet, BBQ, or staffed event?' },
   { label: 'Pricing', href: '/pricing', desc: 'See starting prices and the structure behind our offers.' },

@@ -107,11 +107,11 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Cooking Class Bali', href: '/blog/bali-villa-cooking-class-private-chef', desc: 'Private chef-led cooking classes' },
+  { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Private chef-led cooking classes' },
   { label: 'Fine Dining Bali', href: '/fine-dining', desc: 'Luxury private dining experiences' },
   { label: 'Tasting Menu Bali', href: '/blog/tasting-menu-bali', desc: 'Multi-course private tasting menus' },
   { label: 'Indonesian Street Food Guide', href: '/blog/indonesian-street-food-private-chef-bali', desc: 'Authentic Indonesian street food by private chef' },
-  { label: 'Chef Placement Bali', href: '/blog/chef-placement-agency-bali', desc: 'Permanent chef hire and placement' },
+  { label: 'Chef Placement Bali', href: '/staffing/private-chef-placement', desc: 'Permanent chef hire and placement' },
 ]
 
 export default function ChefForPhotoshootBaliPage() {

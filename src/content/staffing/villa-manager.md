@@ -426,7 +426,7 @@ A great villa manager transforms ownership from a logistical burden into a genui
 - [Main staffing services](/staffing)
 - [Private chef placement](/staffing/private-chef)
 - [Housekeeping and villa cleaning](/staffing/housekeeping-cleaning)
-- [Event staff for villa parties and weddings](/staffing/event-staff)
+- [Event staff for villa parties and weddings](/staffing/villa-staff)
 - [Full villa staff team structure](/staffing/villa-staff)
 - [Our structured recruitment and vetting process](/staffing/recruitment)
 - [Contact myCHEF](/contact)

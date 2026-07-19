@@ -89,7 +89,7 @@ const SECTIONS = [
 
     <p><strong>BBQ is not the ideal format for:</strong> Formal anniversary dinners where a curated plated tasting menu, candlelight, and choreographed service create the right atmosphere. Intimate proposals where the setting and pace matter more than a social spread. Fine dining clients who want a multi-course menu with wine pairings and composed plates. Small groups of two to four guests on a romantic occasion — the energy of a grill is social and generous rather than intimate and quiet.</p>
 
-    <p>For those occasions, myCHEF offers plated private chef dinners, tasting menus, and dedicated <a href="/blog/romantic-dinner-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">romantic dinner</a> and <a href="/blog/anniversary-dinner-villa-bali" class="text-[#7E6410] hover:underline font-medium">anniversary</a> formats that are better suited. The right format for the right occasion always produces a better result than trying to make one format do everything.</p>`,
+    <p>For those occasions, myCHEF offers plated private chef dinners, tasting menus, and dedicated <a href="/fine-dining/romantic-dinner" class="text-[#7E6410] hover:underline font-medium">romantic dinner</a> and <a href="/events/anniversaries" class="text-[#7E6410] hover:underline font-medium">anniversary</a> formats that are better suited. The right format for the right occasion always produces a better result than trying to make one format do everything.</p>`,
   },
   {
     id: 'faq',
@@ -135,8 +135,8 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Private chef for bachelor parties at Bali villas.' },
-  { label: 'Large Group Catering', href: '/blog/large-group-catering-bali', desc: 'Catering solutions for groups of 20 to 100+ in Bali.' },
-  { label: 'Birthday Party Bali', href: '/blog/birthday-party-catering-bali', desc: 'Private chef birthday catering at Bali villas.' },
+  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering solutions for groups of 20 to 100+ in Bali.' },
+  { label: 'Birthday Party Bali', href: '/events/birthdays', desc: 'Private chef birthday catering at Bali villas.' },
   { label: 'Catering BBQ', href: '/catering/bbq', desc: 'Browse all myCHEF BBQ catering options.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF catering packages.' },
   { label: 'Private Dinner Party', href: '/blog/private-dinner-party-bali', desc: 'Intimate private dinner party catering at Bali villas.' },

@@ -101,15 +101,15 @@ const FAQS = [
 const JOURNAL_LINKS = [
   {
     title: 'How to Host a Villa Dinner Party in Bali (Complete Guide)',
-    path: '/journal/bali-villa-dinner-party-guide',
+    path: '/private-dining-indonesia',
   },
   {
     title: 'Bali Wedding Catering Cost: What to Budget in 2026',
-    path: '/journal/wedding-catering-bali-cost',
+    path: '/bali-wedding-catering-packages',
   },
   {
     title: 'The Bali Floating Breakfast: History, Recipes & How to Order One',
-    path: '/journal/floating-breakfast-bali',
+    path: '/catering/floating-breakfast',
   },
 ]
 
@@ -987,7 +987,7 @@ export default function HubPage() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/reviews" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
+            <Link to="/" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               Read All Reviews <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -1073,7 +1073,7 @@ export default function HubPage() {
                   </div>
                 ))}
               </div>
-              <Link to="/partners" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
+              <Link to="/staffing/for-villa-managers" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
                 Partner With myCHEF <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -1216,7 +1216,7 @@ export default function HubPage() {
             </Link>
           </div>
           <div className="text-center mt-12">
-            <Link to="/blog" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#1A1A1A' }}>
+            <Link to="/journal" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#1A1A1A' }}>
               View All Articles <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

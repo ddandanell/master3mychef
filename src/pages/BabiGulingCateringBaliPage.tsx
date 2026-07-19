@@ -124,12 +124,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'Full catering for villa celebrations' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full catering for villa celebrations' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Large Group Catering', href: '/blog/large-group-catering-bali', desc: 'Catering solutions for 30+ guests' },
+  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering solutions for 30+ guests' },
   { label: 'Indonesian Street Food', href: '/blog/indonesian-street-food-private-chef-bali', desc: 'Authentic Indonesian cuisine at your villa' },
-  { label: 'BBQ Catering Bali', href: '/blog/bali-bbq-catering-villa-guide', desc: 'Outdoor grill and BBQ packages' },
-  { label: 'Grazing Table Bali', href: '/blog/grazing-table-bali', desc: 'Styled boards and charcuterie for events' },
+  { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Outdoor grill and BBQ packages' },
+  { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Styled boards and charcuterie for events' },
 ]
 
 export default function BabiGulingCateringBaliPage() {

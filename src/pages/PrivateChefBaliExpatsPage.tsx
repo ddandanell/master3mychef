@@ -141,7 +141,7 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Live-In Chef Bali', href: '/blog/live-in-chef-bali-hiring-guide', desc: 'Complete guide to live-in chef arrangements for Bali villas and households.' },
+  { label: 'Live-In Chef Bali', href: '/staffing', desc: 'Complete guide to live-in chef arrangements for Bali villas and households.' },
   { label: 'Staffing Placement', href: '/staffing/placement', desc: 'myCHEF private chef placement and long-term staffing services.' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Full pricing breakdown for private chef services in Bali.' },
   { label: 'Private Chef Canggu', href: '/private-chef/canggu', desc: 'Private chef services in Canggu — the expat heartland of Bali.' },

@@ -151,9 +151,9 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Bali Catering Menu', href: '/blog/bali-catering-menu', desc: 'Seasonal ingredients and full menu options for Bali villa catering.' },
-  { label: 'Cooking Class Bali', href: '/blog/bali-villa-cooking-class-private-chef', desc: 'Learn to cook Indonesian food with a private chef at your Bali villa.' },
+  { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Learn to cook Indonesian food with a private chef at your Bali villa.' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Full pricing guide for private chef services across Bali.' },
-  { label: 'Floating Breakfast', href: '/blog/floating-breakfast-bali', desc: 'The iconic Bali floating breakfast experience at your villa pool.' },
+  { label: 'Floating Breakfast', href: '/catering/floating-breakfast', desc: 'The iconic Bali floating breakfast experience at your villa pool.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF services and feast formats.' },
   { label: 'Private Chef Ubud', href: '/private-chef/ubud', desc: 'Private chef services in Ubud — jungle villas and rice terrace estates.' },
 ]

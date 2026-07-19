@@ -122,12 +122,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Full event crew hire including setup and breakdown' },
-  { label: 'Bartender Hire Bali', href: '/blog/bartender-hire-bali', desc: 'Bar staff and mobile bar packages' },
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'End-to-end villa party catering' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Full event crew hire including setup and breakdown' },
+  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Bar staff and mobile bar packages' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'End-to-end villa party catering' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Plated Dinner Catering', href: '/blog/plated-dinner-catering-bali', desc: 'Formal multi-course dinner service' },
-  { label: 'Large Group Catering', href: '/blog/large-group-catering-bali', desc: 'Catering for 30+ guests' },
+  { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },
+  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering for 30+ guests' },
 ]
 
 export default function WaiterHireBaliPage() {

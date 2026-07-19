@@ -123,10 +123,10 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Live-In Chef Bali', href: '/blog/live-in-chef-bali-hiring-guide', desc: 'Full-time residential chef placement' },
-  { label: 'Household Chef Bali', href: '/blog/household-chef-bali-hiring-guide', desc: 'Long-term household chef arrangements' },
-  { label: 'Chef Placement Agency', href: '/blog/chef-placement-agency-bali', desc: 'How placement and vetting works' },
-  { label: 'Private Chef Bali Expats', href: '/blog/private-chef-bali-expats', desc: 'Chef services for Bali residents' },
+  { label: 'Live-In Chef Bali', href: '/staffing', desc: 'Full-time residential chef placement' },
+  { label: 'Household Chef Bali', href: '/staffing/household-staff', desc: 'Long-term household chef arrangements' },
+  { label: 'Chef Placement Agency', href: '/staffing/private-chef-placement', desc: 'How placement and vetting works' },
+  { label: 'Private Chef Bali Expats', href: '/hire-private-chef-bali-monthly', desc: 'Chef services for Bali residents' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Full breakdown of chef pricing' },
   { label: 'How to Hire a Private Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Complete hiring guide' },
 ]

@@ -140,9 +140,9 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Bachelorette Party Catering', href: '/blog/bachelorette-party-bali-catering', desc: 'Private chef catering for bachelorette parties at Bali villas.' },
+  { label: 'Bachelorette Party Catering', href: '/events/villa-parties', desc: 'Private chef catering for bachelorette parties at Bali villas.' },
   { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Bachelor party catering with private chef and bartender service.' },
-  { label: 'Large Group Catering', href: '/blog/large-group-catering-bali', desc: 'Catering for groups of 20–100+ at Bali villas and venues.' },
+  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering for groups of 20–100+ at Bali villas and venues.' },
   { label: 'Villa Dinner Party', href: '/blog/private-dinner-party-bali', desc: 'Private dinner party catering at Bali villas.' },
   { label: 'Kids Menu Guide', href: '/blog/family-kids-private-chef-menu-guide-bali', desc: 'Family-friendly and kids menu options for Bali villa stays.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing guide for all myCHEF services.' },

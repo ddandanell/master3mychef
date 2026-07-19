@@ -18,7 +18,7 @@ const SECTIONS: PageSection[] = [
     body: `<p>Denpasar private chef bookings follow a different pattern from resort areas:</p>
     <p><strong>Corporate team dinners and executive functions:</strong> Denpasar's commercial district hosts a significant number of large Indonesian and multinational companies with offices in Renon and the surrounding areas. Corporate team dinners, executive lunches, quarterly functions, and client entertainment events are common. A private chef dinner in an executive's residence or a corporate villa is often preferred over restaurant booking for privacy and flexibility. See our <a href="/blog/corporate-events-catering-bali-team-dining" class="text-[#7E6410] hover:underline font-medium">corporate catering guide</a>.</p>
     <p><strong>Embassy and government official entertaining:</strong> Denpasar's Renon district is home to numerous consulates and government offices. Official entertainment functions — receptions, working dinners, cultural events — represent a regular segment of Denpasar catering demand. myCHEF provides certified, professionally trained chefs with HACCP food safety credentials appropriate for official functions.</p>
-    <p><strong>Executive residence regular meal service:</strong> Senior executives, government officials, and business owners resident in Denpasar's better residential areas (Renon, Gatot Subroto, the area around Inna Grand Bali Beach) increasingly use private chef services for regular household meal preparation. This is the household chef format: a chef who visits the residence regularly, sources fresh ingredients, and cooks meals on a pre-agreed schedule. See our <a href="/blog/household-chef-bali-hiring-guide" class="text-[#7E6410] hover:underline font-medium">household chef guide</a>.</p>
+    <p><strong>Executive residence regular meal service:</strong> Senior executives, government officials, and business owners resident in Denpasar's better residential areas (Renon, Gatot Subroto, the area around Inna Grand Bali Beach) increasingly use private chef services for regular household meal preparation. This is the household chef format: a chef who visits the residence regularly, sources fresh ingredients, and cooks meals on a pre-agreed schedule. See our <a href="/staffing/household-staff" class="text-[#7E6410] hover:underline font-medium">household chef guide</a>.</p>
     <p><strong>Celebration events at city venues:</strong> Birthday celebrations, graduation dinners, wedding anniversary events in private city villas, and similar personal celebrations. Denpasar residents who want a high-quality private dining experience at home rather than at a restaurant.</p>`,
   },
   {
@@ -108,10 +108,10 @@ export default function PrivateChefDenpasarGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Private Chef Sanur Guide', href: '/blog/private-chef-sanur-guide', desc: 'Private chef services in Sanur, Denpasar\'s beach suburb.' },
+        { label: 'Private Chef Sanur Guide', href: '/private-chef/sanur', desc: 'Private chef services in Sanur, Denpasar\'s beach suburb.' },
         { label: 'Corporate Catering Bali', href: '/blog/corporate-events-catering-bali-team-dining', desc: 'Corporate team dinners and event catering across Bali.' },
-        { label: 'Household Chef Guide', href: '/blog/household-chef-bali-hiring-guide', desc: 'Hiring a live-in or long-term household chef in Bali.' },
-        { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Hiring waiters, bartenders and kitchen crew for Bali events.' },
+        { label: 'Household Chef Guide', href: '/staffing/household-staff', desc: 'Hiring a live-in or long-term household chef in Bali.' },
+        { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Hiring waiters, bartenders and kitchen crew for Bali events.' },
         { label: 'Pricing Guide', href: '/pricing', desc: 'Full breakdown of private chef costs across Bali.' },
         { label: 'Book a Chef', href: '/contact', desc: 'Check availability for your Denpasar event.' },
       ]}

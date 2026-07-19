@@ -1,7 +1,7 @@
 /**
  * myCHEF — MASTER SITEMAP & CONTENT INDEX
  */
-import { LOCATIONS, PILLARS } from './siteArchitecture'
+import { LOCATIONS, PILLARS, LOCATION_PAGE_SLUGS } from './siteArchitecture'
 import { PRIVATE_CHEF_AREAS } from './privateChefAreas'
 import { LANDING_PAGES } from './content/landingPages'
 import { GUIDES } from './content/guides'
@@ -9,6 +9,7 @@ import { BLOG_POSTS } from './content/blogPosts'
 import { JOURNAL_POSTS } from './content/journalPosts'
 import { BAR_SERVICES, BAR_RESOURCES } from './bar-services'
 import { PAGE_META } from './page-meta'
+import { REDIRECT_MAP } from './redirects'
 
 // Re-export the (content-free) metadata arrays so existing importers of
 // `@/data/sitemap` keep working. Article bodies live in ./content/articleContent.
@@ -91,16 +92,21 @@ export function buildSitemap(): SitemapEntry[] {
   //   slug: a.slug,
   // }))
 
-  const locationPages: SitemapEntry[] = Object.values(LOCATIONS).map((l) => ({
-    path: `/locations/${l.slug}`,
-    type: 'area',
-    title: l.title,
-    description: l.description,
-    priority: 0.7,
-    changefreq: 'monthly',
-    area: l.label,
-    slug: l.slug,
-  }))
+  // Only the slugs with a real /locations/<slug> page belong in the sitemap.
+  // The rest are redirect sources (e.g. /locations/berawa → /locations/canggu);
+  // prerendering them creates duplicate/conflicting HTML and "not in sitemap" noise.
+  const locationPages: SitemapEntry[] = Object.values(LOCATIONS)
+    .filter((l) => LOCATION_PAGE_SLUGS.has(l.slug))
+    .map((l) => ({
+      path: `/locations/${l.slug}`,
+      type: 'area',
+      title: l.title,
+      description: l.description,
+      priority: 0.7,
+      changefreq: 'monthly',
+      area: l.label,
+      slug: l.slug,
+    }))
 
   const landing: SitemapEntry[] = LANDING_PAGES.map((l) => ({
     path: `/${l.slug}`,
@@ -256,7 +262,7 @@ export function buildSitemap(): SitemapEntry[] {
     { path: '/chefs/sari-dewi-kusuma', type: 'info', title: 'Sari Dewi Kusuma — Wellness Chef | Vegan Retreats | myCHEF', description: 'Book Sari Dewi Kusuma for wellness and retreat catering in Bali. Vegan, raw, Ayurvedic menus. Yoga retreat specialist. Detox and wellness dinners.', priority: 0.7, changefreq: 'monthly' },
     { path: '/chefs/komang-artha', type: 'info', title: 'Komang Artha — Event Chef | Villa Events & Weddings | myCHEF', description: 'Book Komang Artha for villa events, weddings and corporate catering in Bali. 15 years experience, groups 30–200+ guests. Indonesian feast and buffet specialist.', priority: 0.7, changefreq: 'monthly' },
     { path: '/corporate-case-studies', type: 'info', title: 'Corporate Catering Case Studies Bali | myCHEF', description: 'Real corporate event case studies in Bali — executive dinners, leadership offsites, retreats and conference catering. Outcomes, metrics and client results.', priority: 0.7, changefreq: 'monthly' },
-    { path: '/journal', type: 'blog-index', title: 'Journal | Bali Private Chef Guides & Hosting Tips', description: 'Guides, cost breakdowns, and insights for hosting in Bali villas.', priority: 0.8, changefreq: 'weekly' },
+    { path: '/journal', type: 'blog-index', title: 'Journal | Bali Private Chef Guides & Hosting Tips', description: 'Expert guides, cost breakdowns, and insider tips for hosting private chefs, villa dinners, weddings, and events in Bali.', priority: 0.8, changefreq: 'weekly' },
     { path: '/pricing', type: 'info', title: 'Pricing | Private Chef Bali, Villa Catering & Events', description: 'Transparent pricing for private chef, catering & event services in Bali. Hourly rates, menu pricing & full packages. No hidden fees. Get a quote.', priority: 0.8, changefreq: 'monthly' },
     // /book removed from sitemap — noindex tag in BookPage.tsx
     { path: '/staffing', type: 'info', title: 'Villa Staff Placement Bali | Hire Hospitality Staff — myCHEF', description: 'Long-term private chef placement, villa staff, and hospitality recruitment in Bali and Jakarta.', priority: 0.8, changefreq: 'monthly' },
@@ -264,7 +270,7 @@ export function buildSitemap(): SitemapEntry[] {
     { path: '/partner-platform', type: 'info', title: 'Villa Partner Platform | myCHEF Bali', description: 'Partner with myCHEF — private chef and catering services for Bali villa managers and owners.', priority: 0.6, changefreq: 'monthly' },
     { path: '/certified-partner', type: 'info', title: 'Certified Partner Programme | myCHEF Bali', description: 'Become a myCHEF certified partner — preferred private chef and staffing services for Bali villas.', priority: 0.5, changefreq: 'monthly' },
     { path: '/press', type: 'info', title: 'Press & Media | myCHEF Bali Private Chef', description: 'Press coverage, media kit, and brand story for myCHEF — Bali private chef and catering service.', priority: 0.3, changefreq: 'monthly' },
-    { path: '/privacy', type: 'legal', title: 'Privacy Policy | myCHEF Bali', description: 'Privacy policy for myCHEF private chef and catering services in Bali.', priority: 0.3, changefreq: 'yearly' },
+    { path: '/privacy', type: 'legal', title: 'Privacy Policy | myCHEF.id Private Chef & Catering Services Bali', description: 'Read the myCHEF.id privacy policy: how we collect, store, and protect your data when you book private chef, catering, or event services in Bali.', priority: 0.3, changefreq: 'yearly' },
     { path: '/terms', type: 'legal', title: 'Terms of Service | myCHEF Bali', description: 'Terms of service for myCHEF private chef bookings, catering, and events in Bali.', priority: 0.3, changefreq: 'yearly' },
     { path: '/cancellation', type: 'legal', title: 'Cancellation Policy | myCHEF Bali', description: 'Cancellation and refund policy for myCHEF private chef and catering bookings in Bali.', priority: 0.3, changefreq: 'yearly' },
     // Batch #143–147 blog pages (PremiumPage format, dedicated routes)
@@ -297,7 +303,7 @@ export function buildSitemap(): SitemapEntry[] {
     })
   )
 
-  return [
+  const entries = [
     home,
     // ...areas,  // Fjernet: disse redirecter til /locations/*
     ...locationPages,
@@ -310,6 +316,10 @@ export function buildSitemap(): SitemapEntry[] {
     ...barServicesPages,
     ...infoPages,
   ]
+
+  // Safety net: never index redirect sources. A path that has a 301 rule should
+  // not appear in the sitemap, inject-meta, or prerender output.
+  return entries.filter((entry) => !REDIRECT_MAP[entry.path])
 }
 
 export const SERVICES = Object.values(PILLARS).map((pillar) => ({

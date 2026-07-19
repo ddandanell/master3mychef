@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { getLocationCanonical } from '@/data/siteArchitecture'
 import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw, UsersRound, ConciergeBell } from 'lucide-react'
 import SeoHead, {
   serviceSchema,
@@ -1017,7 +1018,7 @@ export default function HubPage() {
             ].map((city) => (
               <Link
                 key={city.slug}
-                to={`/${city.slug}`}
+                to={getLocationCanonical(city.slug)}
                 className="group relative rounded-2xl overflow-hidden aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <img

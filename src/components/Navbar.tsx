@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, Mail, type LucideIcon } from 'lucide-react'
-import { PILLARS, LOCATIONS } from '@/data/siteArchitecture'
+import { PILLARS, LOCATIONS, hasLocationPage } from '@/data/siteArchitecture'
 
 
 // Map icon names to Lucide React icon components
@@ -83,13 +83,14 @@ NAV_SUBPAGES['/complete-villa-experience'] = [
   { label: 'VIP Transport Bali', href: '/vip-transport-bali', icon: 'Truck' },
 ]
 
-// Locations dropdown — compact view of main areas + link to full directory
+// Locations dropdown — compact view of main areas + link to full directory.
+// Filter to slugs that have a real /locations/<slug> page to avoid redirect-source links.
 const LOCATION_DROPDOWN_ORDER: Array<keyof typeof LOCATIONS> = [
   'seminyak', 'canggu', 'uluwatu', 'ubud', 'nusa-dua', 'jimbaran', 'sanur', 'berawa', 'pererenan', 'bukit',
 ]
 NAV_SUBPAGES['/locations'] = [
   { label: 'All Locations', href: '/locations', icon: 'MapPin' },
-  ...LOCATION_DROPDOWN_ORDER.map((slug) => ({
+  ...LOCATION_DROPDOWN_ORDER.filter((slug) => hasLocationPage(slug)).map((slug) => ({
     label: LOCATIONS[slug].label,
     href: `/locations/${slug}`,
     icon: 'MapPin',

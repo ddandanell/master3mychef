@@ -86,7 +86,7 @@ export default function PrivacyPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
       <SeoHead
-        title="Privacy Policy | myCHEF.id"
+        title="Privacy Policy | myCHEF.id Private Chef & Catering Services"
         description="myCHEF.id privacy policy — how we collect, store and use your data when you book private chef or catering services in Bali."
         ogImage="/og-image.webp"
         canonical="https://mychef.id/privacy"

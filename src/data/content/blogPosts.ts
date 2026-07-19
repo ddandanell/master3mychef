@@ -160,7 +160,7 @@ export const BLOG_POSTS: ContentEntry[] = [
   },
   {
     "slug": "blog/chef-hiring-guide",
-    "title": "Chef Qualifications & Credentials: Hiring Guide for Bali",
+    "title": "How to Hire a Private Chef in Bali: Quick-Start Guide",
     "description": "Hire the right private chef in Bali. Learn what credentials to check, how to interview, key questions, and red flags when vetting a chef.",
     "date": "2026-05-18"
   },

@@ -4,7 +4,7 @@ import type { ContentEntry } from '@/lib/blog'
 export const GUIDES: ContentEntry[] = [
   {
     "slug": "guide/bali-cuisine-glossary",
-    "title": "Bali Cuisine Glossary",
+    "title": "Bali Cuisine Glossary — Balinese Ingredients, Dishes & Techniques",
     "description": "A complete glossary of Balinese cuisine — ingredients, dishes, and cooking techniques.",
     "date": "2025-01-15"
   },

@@ -6,9 +6,9 @@ import EngagementTracker from './components/EngagementTracker'
 import { LANDING_PAGE_SLUGS, GUIDE_SLUGS, BLOG_POST_SLUGS, SERVICE_SLUGS, MENU_SLUGS, AREA_SLUGS, MICRO_AREA_SLUGS } from './data/route-slugs'
 import { PUBLISHED_AREA_SLUGS } from './data/privateChefAreas'
 const PrivateChefAreaPage = lazy(() => import('./components/PrivateChefAreaPage'))
-import { REDIRECTS } from './data/redirects'
+import { REDIRECTS, REDIRECT_MAP } from './data/redirects'
 import { CUSTOM_LOCATION_PAGE_SLUGS } from './data/locationLandingPages'
-import { getAllSubPages, getAllLocationPaths } from './data/siteArchitecture'
+import { getAllSubPages, getAllLocationPaths, LOCATION_PAGE_SLUGS } from './data/siteArchitecture'
 
 // ── Page components (code-split into per-route chunks) ───────────────────────
 const HubPage = lazy(() => import('./pages/HubPage'))
@@ -318,9 +318,11 @@ export default function App() {
           <Route path="/locations/pererenan" element={<PererenanPage />} />
           <Route path="/locations/kuta" element={<KutaPage />} />
           <Route path="/locations/jakarta" element={<JakartaPage />} />
-          {locationPaths.filter(({ location }) => !customLocationSlugs.has(location.slug)).map(({ path }) => (
-            <Route key={path} path={path} element={<AreaPage kind="area" />} />
-          ))}
+          {locationPaths
+            .filter(({ location }) => LOCATION_PAGE_SLUGS.has(location.slug) && !customLocationSlugs.has(location.slug))
+            .map(({ path }) => (
+              <Route key={path} path={path} element={<AreaPage kind="area" />} />
+            ))}
 
           {/* Journal */}
           <Route path="/journal" element={<JournalIndexPage />} />
@@ -362,7 +364,7 @@ export default function App() {
           <Route path="/bukit" element={<BukitPeninsulaPage />} />
           <Route path="/pererenan" element={<PererenanPage />} />
           <Route path="/kuta" element={<KutaPage />} />
-          {AREA_SLUGS.filter((a) => !customLocationSlugs.has(a.slug)).map((a) => (
+          {AREA_SLUGS.filter((a) => !customLocationSlugs.has(a.slug) && !REDIRECT_MAP[`/${a.slug}`]).map((a) => (
             <Route key={a.slug} path={`/${a.slug}`} element={<AreaPage kind="area" />} />
           ))}
           {MICRO_AREA_SLUGS.map((m) => (

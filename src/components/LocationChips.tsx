@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MapPin } from 'lucide-react'
+import { getLocationCanonical } from '@/data/siteArchitecture'
 
 const CITIES = [
   { name: 'Seminyak', slug: 'seminyak' },
@@ -49,7 +50,7 @@ export default function LocationChips({
           {CITIES.map((city) => (
             <Link
               key={city.slug}
-              to={`/${city.slug}`}
+              to={getLocationCanonical(city.slug)}
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm transition-all ${
                 dark
                   ? 'border-white/10 text-white/[60%] hover:border-[#C5A028]/50 hover:text-[#C5A028]'

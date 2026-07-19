@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Utensils, Flame, Sparkles } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { TOP_CITIES } from '@/data/topCities'
+import { getLocationCanonical } from '@/data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -93,7 +94,7 @@ export default function BaliHubPage() {
             {TOP_CITIES.map((c) => (
               <Link
                 key={c.slug}
-                to={`/${c.slug}`}
+                to={getLocationCanonical(c.slug)}
                 className="block bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#C5A028] transition-all"
               >
                 <div className="flex items-baseline justify-between mb-3">

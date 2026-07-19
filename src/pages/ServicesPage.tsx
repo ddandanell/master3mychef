@@ -3,7 +3,8 @@ import { MessageCircle, ArrowRight, PartyPopper, Heart, Cake, Users, Briefcase, 
 import SeoHead, { breadcrumbSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
-import { SERVICES } from '@/data/sitemap'
+import { getLocationCanonical } from '@/data/siteArchitecture'
+import { PILLARS } from '@/data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
 const WA = 6289674072020
@@ -71,14 +72,14 @@ export default function ServicesPage() {
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    itemListElement: SERVICES.map((s, i) => ({
+    itemListElement: Object.values(PILLARS).map((s, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       item: {
         '@type': 'Service',
-        name: s.name,
+        name: s.label,
         description: s.description,
-        url: `${SITE}/services/${s.slug}`,
+        url: `${SITE}${s.url}`,
       },
     })),
   }
@@ -162,13 +163,13 @@ export default function ServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {SERVICES.map((service, i) => {
+          {Object.values(PILLARS).map((service, i) => {
             const Icon = ICONS[service.slug] || PartyPopper
             const accent = ACCENTS[i]
             return (
               <Link
                 key={service.slug}
-                to={`/services/${service.slug}`}
+                to={service.url}
                 className="group relative rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8 transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04] focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <div
@@ -181,7 +182,7 @@ export default function ServicesPage() {
                   className="text-xl mb-3 transition-colors duration-300 group-hover:text-[#C5A028]"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
-                  {service.name}
+                  {service.label}
                 </h3>
                 <p className="text-white/[50%] text-sm leading-relaxed mb-6">
                   {service.description}
@@ -233,7 +234,7 @@ export default function ServicesPage() {
             ].map((city) => (
               <Link
                 key={city.slug}
-                to={`/${city.slug}`}
+                to={getLocationCanonical(city.slug)}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-sm text-white/[70%] hover:border-[#C5A028]/50 hover:text-[#C5A028] transition-all focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <MapPin className="w-3.5 h-3.5" /> {city.name}

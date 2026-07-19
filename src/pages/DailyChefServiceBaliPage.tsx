@@ -136,9 +136,9 @@ export default function DailyChefServiceBaliPage() {
     <PremiumPage
       slug="blog/daily-chef-service-bali"
       title="Daily Chef Service Bali — Part-Time Cook Hire for Villa Stays & Expat Life"
-      seoTitle="Daily Chef Service Bali — Regular In-Villa Cooking for Expats & Long Stays"
-      description="Hire a daily chef in Bali for consistent home-cooked meals. Part-time and full-day options for villa stays, expat families, and digital nomads. Market sourcing included."
-      seoDescription="Daily chef service in Bali for expats, long-stay villa guests and families. Part-time or full-day. Market sourcing included. From IDR 400K/day. Same-day replacement guarantee."
+      seoTitle="Daily Chef Service Bali — Regular In-Villa Cooking | myCHEF"
+      description="Hire a daily chef in Bali for consistent home-cooked meals. Part-time and full-day options for villa stays, expat families, and digital nomads."
+      seoDescription="Daily chef service in Bali for expats, long-stay villa guests and families. Part-time or full-day. Market sourcing included. From IDR 400K/day."
       h1="Daily Chef Service Bali — Part-Time In-Villa Chef for Extended Stays & Expat Life"
       subtitle="Regular home cooking for villa renters, expat families, and digital nomads — without the complexity of full-time staff."
       heroImage="/images/blog/daily-chef-service-bali.jpg"

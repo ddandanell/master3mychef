@@ -85,7 +85,7 @@ export default function VillaManagerPartnerPage() {
     <PremiumPage
       slug="partner"
       title="Villa Manager Partnership — Earn Commission With myCHEF Private Chef Referrals"
-      description="Bali villa managers: partner with myCHEF to offer guests private chef dining, floating breakfasts, and event staffing. Earn referral commission. No setup cost, no exclusivity required."
+      description="Bali villa managers: partner with myCHEF to offer guests private chef dining, floating breakfasts, and event staffing. Earn referral commission."
       h1="Villa Manager Partnership — Earn Commission With myCHEF Private Chef Referrals"
       subtitle="A free-to-join referral programme for Bali villa managers and property management companies"
       heroImage="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1400&q=80"

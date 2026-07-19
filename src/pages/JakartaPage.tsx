@@ -106,7 +106,7 @@ export default function JakartaPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Jakarta | Corporate & Villa Dining — myCHEF"
-        description="Book a private chef in Jakarta for villa dinners, corporate events & weddings. IDR 700K/person. Indonesian chefs, Michelin standards. Request a quote on WhatsApp."
+        description="Book a private chef in Jakarta for villa dinners, corporate events & weddings. IDR 700K/person. Indonesian chefs, Michelin standards. WhatsApp for a quote."
         canonical={canonical}
         ogImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
         jsonLd={[

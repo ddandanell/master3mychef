@@ -111,7 +111,7 @@ export default function FineDiningTrendsBali2026Page() {
     <PremiumPage
       slug="blog/fine-dining-trends-bali-2026-innovations"
       title="Fine Dining Trends Bali 2026: What's Shaping Luxury Villa Dining"
-      description="The 7 trends shaping fine dining in Bali in 2026 — from hyperlocal Indonesian tasting menus to zero-waste cooking, natural wine pairings, and experience-led villa dinners."
+      description="The 7 trends shaping fine dining in Bali in 2026 — from hyperlocal Indonesian tasting menus to zero-waste cooking, natural wine pairings, and experience-led."
       h1="Fine Dining Trends Bali 2026 — What's Shaping Luxury Villa Dining"
       subtitle="Seven trends driving how high-end villa guests eat in Bali right now"
       heroImage="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80"

@@ -169,7 +169,7 @@ export default function PrivateChefJakartaGuidePage() {
       title="Private Chef Jakarta: The Complete Guide"
       description="Everything you need to know about hiring a private chef in Jakarta — areas, costs, services, and how to book."
       seoTitle="Private Chef Jakarta | Hire a Private Chef in Jakarta | myCHEF"
-      seoDescription="Hire a private chef in Jakarta for dinner parties, corporate events, and in-home dining. South Jakarta, SCBD, Kemang, Menteng. From IDR 700,000/person. Same-day WhatsApp."
+      seoDescription="Hire a private chef in Jakarta for dinner parties, corporate events and in-home dining. South Jakarta, SCBD, Kemang, Menteng. From IDR 700K/person."
       canonicalUrl="https://mychef.id/blog/private-chef-jakarta-complete-guide"
       h1="Private Chef Jakarta: The Complete Guide"
       subtitle="Everything You Need to Know About Hiring a Private Chef in Jakarta"

@@ -136,9 +136,9 @@ export default function VillaPartyCateringBaliPage() {
     <PremiumPage
       slug="blog/villa-party-catering-bali"
       title="Villa Party Catering Bali — Food and Staff for Private Celebrations"
-      seoTitle="Villa Party Catering Bali — Private Chef, Bar Staff & Waiters for Villa Events"
-      description="Full villa party catering in Bali — private chef, bartender, and event staff for poolside parties, birthdays, and celebrations. BBQ, buffet, sit-down dinner, and cocktail formats."
-      seoDescription="Villa party catering in Bali for 10–200+ guests. Private chef, bar staff, waiters. BBQ, buffet, sit-down dinner & cocktail formats. From IDR 700K/person. Same-day replacement guarantee."
+      seoTitle="Villa Party Catering Bali — Chef, Bar Staff & Waiters | myCHEF"
+      description="Full villa party catering in Bali — private chef, bartender, and event staff for poolside parties, birthdays, and celebrations."
+      seoDescription="Villa party catering in Bali for 10–200+ guests. Private chef, bar staff, waiters. BBQ, buffet, sit-down dinner & cocktails. From IDR 700K/person."
       h1="Villa Party Catering Bali — Private Chef, Bar Staff & Waiters for Your Celebration"
       subtitle="End-to-end catering for villa parties across Bali — poolside BBQs, birthday dinners, cocktail receptions, and full event packages."
       heroImage="/images/blog/villa-party-catering-bali.jpg"
@@ -169,7 +169,7 @@ export default function VillaPartyCateringBaliPage() {
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
-          headline: 'Villa Party Catering Bali — Private Chef, Bar Staff & Waiters for Villa Events',
+          headline: 'Villa Party Catering Bali — Chef, Bar Staff & Waiters | myCHEF',
           description:
             'Full villa party catering in Bali for 10–200+ guests. Private chef, bartenders, event staff. BBQ, buffet, cocktail, and sit-down dinner formats. Same-day replacement guarantee.',
           url: 'https://mychef.id/blog/villa-party-catering-bali',

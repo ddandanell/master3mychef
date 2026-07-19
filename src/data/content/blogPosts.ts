@@ -17,7 +17,7 @@ export const BLOG_POSTS: ContentEntry[] = [
   {
     "slug": "blog/best-bali-villas-private-chef-kitchen",
     "title": "What Makes a Bali Villa Kitchen Work for a Private Chef",
-    "description": "A practical guide to what private chefs actually need in a Bali villa kitchen — prep space, equipment, ventilation, and cold storage — and how to check before you book.",
+    "description": "What private chefs need in a Bali villa kitchen — prep space, equipment, ventilation, cold storage — and how to check before booking.",
     "date": "2026-04-24"
   },
   {
@@ -34,20 +34,20 @@ export const BLOG_POSTS: ContentEntry[] = [
   },
   {
     "slug": "blog/private-chef-vs-restaurant-bali",
-    "title": "Private Chef vs Restaurant Bali: Which Is Actually Better for Groups?",
+    "title": "Private Chef vs Restaurant Bali: Which Is Actually Better",
     "description": "Private chef or restaurant in Bali? Full cost comparison, menu control, and comfort breakdown for groups, families, and villa stays. Find out which wins.",
     "date": "2026-03-05"
   },
   {
     "slug": "blog/how-to-plan-villa-birthday-party-bali",
-    "title": "How to Plan a Villa Birthday Party in Bali: The Complete Guide",
+    "title": "How to Plan a Villa Birthday Party in Bali: The Complete",
     "description": "Step-by-step guide to planning a villa birthday party in Bali — from catering formats and guest counts to timelines, styling, and private chef logistics.",
     "date": "2026-05-10"
   },
   {
     "slug": "blog/private-chef-romantic-dinners-bali",
-    "title": "Private Chef Romantic Dinners in Bali: How to Plan the Perfect Evening",
-    "description": "How to plan a private chef romantic dinner in your Bali villa — from menu styles and timing to proposal setups, anniversary dinners, and what actually makes the evening work.",
+    "title": "Private Chef Romantic Dinners in Bali: How to Plan the",
+    "description": "How to plan a romantic private chef dinner in your Bali villa — menu styles, timing, proposal setups, anniversaries & what makes the evening work.",
     "date": "2026-05-10"
   },
   {
@@ -58,13 +58,13 @@ export const BLOG_POSTS: ContentEntry[] = [
   },
   {
     "slug": "blog/chef-qualifications-credentials-bali-hiring",
-    "title": "Chef Qualifications & Credentials: What to Look For When Hiring in Bali",
+    "title": "Chef Qualifications & Credentials: Hiring Guide for Bali",
     "description": "Essential qualifications, certifications, and experience markers for hiring a qualified private chef in Bali.",
     "date": "2026-05-18"
   },
   {
     "slug": "blog/fine-dining-guide",
-    "title": "Fine Dining in Bali: Ultimate Guide to Private Chef Tasting Menus",
+    "title": "Fine Dining in Bali: Ultimate Guide to Private Chef Tasting",
     "description": "Discover fine dining in Bali with private chefs. Curated tasting menus, wine pairings, and luxury culinary experiences for villa stays.",
     "date": "2026-05-18"
   },
@@ -82,7 +82,7 @@ export const BLOG_POSTS: ContentEntry[] = [
   },
   {
     "slug": "blog/corporate-events-catering-bali-team-dining",
-    "title": "Corporate Events & Team Dining in Bali: Private Chef Catering",
+    "title": "Corporate Events & Team Dining in Bali: Private Chef",
     "description": "How to plan corporate events, team meals, and executive dinners in Bali with private chef catering.",
     "date": "2026-05-18"
   },
@@ -94,19 +94,19 @@ export const BLOG_POSTS: ContentEntry[] = [
   },
   {
     "slug": "blog/dining-by-location-bali-neighborhood-guide",
-    "title": "Dining by Location in Bali: Private Chef Experiences by Neighborhood",
+    "title": "Dining by Location in Bali: Private Chef Experiences by",
     "description": "Region-specific dining guide for Bali, including neighborhood profiles and how private chefs adapt to each area.",
     "date": "2026-05-18"
   },
   {
     "slug": "blog/fine-dining-trends-bali-2026-innovations",
-    "title": "Fine Dining Trends in Bali 2026: Modern Innovations & Dining Futures",
+    "title": "Fine Dining Trends in Bali 2026: Modern Innovations &",
     "description": "Emerging culinary trends in Bali for 2026, including sustainability, technique innovation, and what sophisticated diners expect.",
     "date": "2026-05-18"
   },
   {
     "slug": "blog/seasonal-ingredients-bali-cooking-guide",
-    "title": "Seasonal Ingredients in Bali: Cooking & Sourcing Guide for 2026",
+    "title": "Seasonal Ingredients in Bali: Cooking & Sourcing Guide for",
     "description": "Complete guide to Bali seasonal ingredients, what is available when, and how to plan menus around the seasons.",
     "date": "2026-05-18"
   },
@@ -130,26 +130,26 @@ export const BLOG_POSTS: ContentEntry[] = [
   },
   {
     "slug": "blog/private-chef-bali-preparation-12-guest-villa-dinner",
-    "title": "Private Chef Bali Preparation: Behind a 12-Guest Villa Dinner",
+    "title": "Private Chef Bali Preparation: Behind a 12-Guest Villa",
     "description": "See how myCHEF prepares a 12-guest villa dinner in Bali, from market runs and packing lists to service timing, plating, and cleanup.",
     "date": "2026-05-17"
   },
   {
     "slug": "blog/family-kids-menu-private-chef-bali",
-    "title": "Family Dining with a Private Chef in Bali: A Complete Guide for Parents",
-    "description": "Planning villa dining for a family in Bali? Our private chefs build kids' menus around your children's ages and preferences. No restaurant stress. Book in 24 hours.",
+    "title": "Family Dining with a Private Chef in Bali: A Parent's Guide",
+    "description": "Planning villa dining for a family in Bali? Our chefs build kids' menus around ages and preferences. No restaurant stress. Book in 24 hours.",
     "date": "2026-04-10"
   },
   {
     "slug": "blog/corporate-events-catering-bali",
     "title": "Corporate Event Catering in Bali: 4 Real Case Studies (2025)",
-    "description": "How myCHEF handled a 38-person tech retreat, a Singapore bank executive dinner, a fashion label product launch, and a 7-day wellness retreat in Bali. Real costs, menus, and outcomes.",
+    "description": "How myCHEF handled a 38-person tech retreat, bank executive dinner, fashion launch, and 7-day wellness retreat in Bali. Real costs, menus & outcomes.",
     "date": "2026-04-25"
   },
   {
     "slug": "blog/food-allergies-dietary-requirements-private-chef-bali",
-    "title": "Food Allergies & Dietary Requirements with a Private Chef in Bali: The Complete Safety Guide",
-    "description": "How myCHEF handles food allergies and special diets in Bali: HACCP protocols, cross-contamination controls, and custom menus for vegan, gluten-free, halal, keto, nut-free & dairy-free guests.",
+    "title": "Food Allergies & Dietary Requirements in Bali: Safety Guide",
+    "description": "How myCHEF handles food allergies and special diets in Bali: HACCP protocols, cross-contamination controls, and custom menus for vegan, gluten-free, halal.",
     "date": "2026-04-20"
   },
   {
@@ -160,25 +160,25 @@ export const BLOG_POSTS: ContentEntry[] = [
   },
   {
     "slug": "blog/chef-hiring-guide",
-    "title": "Chef Qualifications & Credentials: Hiring Guide for Bali Villas",
+    "title": "Chef Qualifications & Credentials: Hiring Guide for Bali",
     "description": "Hire the right private chef in Bali. Learn what credentials to check, how to interview, key questions, and red flags when vetting a chef.",
     "date": "2026-05-18"
   },
   {
     "slug": "blog/event-planning-bali",
-    "title": "Event Planning in Bali: Complete Guide for Weddings & Private Celebrations",
+    "title": "Event Planning in Bali: Weddings & Celebrations Guide",
     "description": "Complete Bali event planning guide. Catering, staffing, venue setup, and timeline for weddings, corporate events, and celebrations.",
     "date": "2026-05-18"
   },
   {
     "slug": "blog/bali-wedding-catering-private-chef-timeline",
-    "title": "Bali Wedding Catering Private Chef Timeline: 6-Month Planning Guide",
-    "description": "The complete Bali wedding catering timeline — what to book, when to confirm, and how private chefs coordinate with villa venues, planners, and your full event schedule.",
+    "title": "Bali Wedding Catering Private Chef Timeline: 6-Month",
+    "description": "The complete Bali wedding catering timeline — what to book, when to confirm, and how chefs coordinate with venues, planners and your event schedule.",
     "date": "2026-06-26"
   },
   {
     "slug": "blog/bali-catering-menu",
-    "title": "Bali Catering Menus: Traditional & Modern Options for Your Villa",
+    "title": "Bali Catering Menus: Traditional & Modern Options for Your",
     "description": "Explore Bali catering menus — traditional Indonesian, modern fusion, plated dinners, buffets, and grazing boards for villa events.",
     "date": "2026-05-18"
   }

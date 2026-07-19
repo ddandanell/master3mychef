@@ -89,7 +89,7 @@ export default function HouseholdChefBaliGuidePage() {
     <PremiumPage
       slug="blog/household-chef-bali-hiring-guide"
       title="Household Chef Bali: How to Hire a Personal Chef for Your Villa or Home"
-      description="Hire a household chef in Bali for recurring weekly cooking. Monthly arrangements, daily rates, managed service and direct placement options for expats, villa residents, and long-stay guests."
+      description="Hire a household chef in Bali for recurring weekly cooking. Monthly arrangements, daily rates, managed service and direct placement options for expats."
       h1="Household Chef Bali — How to Hire a Personal Chef for Your Villa or Home"
       subtitle="The complete guide to household chef arrangements for Bali expats, villa residents, and long-stay guests"
       heroImage="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=80"

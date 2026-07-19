@@ -206,9 +206,9 @@ export default function NewYearsEveBaliPage() {
     <PremiumPage
       slug="blog/new-years-eve-bali-private-chef"
       title="New Year's Eve Bali: Private Chef Villa Dinner"
-      description="Book a private chef for New Year's Eve at your Bali villa. Tasting menus, midnight champagne, bespoke celebrations. Groups 2–30. Book early — dates sell out fast."
+      description="Book a private chef for New Year's Eve at your Bali villa. Tasting menus, midnight champagne, bespoke celebrations. Groups 2–30. Book early — sells out fast."
       seoTitle="New Year's Eve Bali | Private Chef Villa Dinner | myCHEF"
-      seoDescription="Book a private chef for New Year's Eve at your Bali villa. Tasting menus, midnight champagne, bespoke celebrations. Groups 2–30. Book early — dates sell out fast."
+      seoDescription="Book a private chef for New Year's Eve at your Bali villa. Tasting menus, midnight champagne, bespoke celebrations. Groups 2–30. Book early — sells out fast."
       canonicalUrl="https://mychef.id/blog/new-years-eve-bali-private-chef"
       h1="New Year's Eve Bali: Private Chef Villa Dinner"
       subtitle="Ring in the New Year with a Private Chef at Your Bali Villa"

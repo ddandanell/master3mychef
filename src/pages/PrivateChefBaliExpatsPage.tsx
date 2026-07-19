@@ -154,9 +154,9 @@ export default function PrivateChefBaliExpatsPage() {
     <PremiumPage
       slug="blog/private-chef-bali-expats"
       title="Private Chef in Bali for Expats & Long-Stay Residents"
-      description="Expat or long-term Bali resident? Hire a private chef for weekly meal prep, dinner parties, and daily cooking. Flexible contracts from 1 month. Transparent pricing."
+      description="Expat or long-term Bali resident? Hire a private chef for weekly meal prep, dinner parties and daily cooking. Flexible contracts from 1 month."
       seoTitle="Private Chef Bali for Expats | Long-Term Chef Services | myCHEF"
-      seoDescription="Expat or long-term Bali resident? Hire a private chef for weekly meal prep, dinner parties, and daily cooking. Flexible contracts from 1 month. Transparent pricing."
+      seoDescription="Expat or long-term Bali resident? Hire a private chef for weekly meal prep, dinner parties and daily cooking. Flexible contracts from 1 month."
       canonicalUrl="https://mychef.id/blog/private-chef-bali-expats"
       h1="Private Chef in Bali for Expats & Long-Stay Residents"
       subtitle="Everything You Need to Know About Hiring a Chef for Your Bali Life"
@@ -175,7 +175,7 @@ export default function PrivateChefBaliExpatsPage() {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
           headline: 'Private Chef in Bali for Expats & Long-Stay Residents',
-          description: 'Expat or long-term Bali resident? Hire a private chef for weekly meal prep, dinner parties, and daily cooking. Flexible contracts from 1 month. Transparent pricing.',
+          description: 'Expat or long-term Bali resident? Hire a private chef for weekly meal prep, dinner parties and daily cooking. Flexible contracts from 1 month. Transparent pricing.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: {
             '@type': 'Organization',

@@ -200,9 +200,9 @@ export default function BuffetVsPlatedPage() {
     <PremiumPage
       slug="blog/buffet-vs-plated-service-bali"
       title="Buffet vs Plated Service: Choosing the Right Style for Your Bali Event"
-      description="Complete guide to buffet vs plated catering in Bali. Compare costs, formality, group size, dietary flexibility, and occasion suitability to choose the right format for your villa event."
-      seoTitle="Buffet vs Plated Service Bali | Which Catering Format Is Right for Your Event?"
-      seoDescription="Buffet or plated service for your Bali villa event? Compare costs, group size thresholds, formality, and dietary flexibility. Expert guide from myCHEF private chefs."
+      description="Complete guide to buffet vs plated catering in Bali. Compare costs, formality, group size, dietary flexibility, and occasion suitability to choose the right."
+      seoTitle="Buffet vs Plated Service Bali | Which Format Is Right? | myCHEF"
+      seoDescription="Buffet or plated service for your Bali villa event? Compare costs, group size thresholds, formality and dietary flexibility. Expert guide from myCHEF chefs."
       canonicalUrl="https://mychef.id/blog/buffet-vs-plated-service-bali"
       h1="Buffet vs Plated Service"
       subtitle="Choosing the Right Catering Style for Your Bali Villa Event"

@@ -148,7 +148,7 @@ export default function ServiceMixologyPage() {
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Mixology Service Bali | Signature Cocktails for Villas — myCHEF"
-        description="Private mixology in Bali: signature cocktail menus, guided tastings & cocktail classes for villa events. From IDR 1.5M/session (spirits separate — we suggest, send a shopping list, or bring them). WhatsApp us to book."
+        description="Private mixology in Bali: signature cocktails, guided tastings & classes for villa events. From IDR 1.5M/session (spirits separate). WhatsApp us to book."
         canonical={`${SITE}/in-villa-service/mixology`}
         ogImage={`${SITE}/generated/mychef-service-bali-hero-mixology.webp`}
         jsonLd={[

@@ -242,8 +242,8 @@ export default function CorporateEventsCateringBaliPage() {
   return (
     <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Corporate Event Catering Bali 2026 | Case Studies & Real Costs — myCHEF"
-        description="Real corporate catering case studies from Bali: tech retreat (38 people, 5 days), bank exec dinner (22 guests), fashion launch (74 guests), wellness retreat (24 people, 7 days). Costs, menus, and outcomes."
+        title="Corporate Event Catering Bali 2026 | Case Studies | myCHEF"
+        description="Real corporate catering case studies from Bali: tech retreat (38, 5 days), bank exec dinner (22), fashion launch (74), wellness retreat (24, 7 days)."
         canonical={CANONICAL}
         ogType="article"
         ogImage="/og-image.webp"

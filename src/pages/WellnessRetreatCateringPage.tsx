@@ -187,9 +187,9 @@ export default function WellnessRetreatCateringPage() {
     <PremiumPage
       slug="blog/bali-wellness-retreat-catering"
       title="Wellness Retreat Catering Bali | Plant-Based & Nourishing Meals for Retreat Guests"
-      description="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 700K/person/day. Ubud, Canggu, Uluwatu."
-      seoTitle="Wellness Retreat Catering Bali | Private Chef for Yoga Retreats | myCHEF"
-      seoDescription="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 700K/person/day. Ubud, Canggu, Uluwatu."
+      description="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 700K/person/day."
+      seoTitle="Wellness Retreat Catering Bali | Yoga Retreat Chef | myCHEF"
+      seoDescription="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 700K/person/day."
       canonicalUrl="https://mychef.id/blog/bali-wellness-retreat-catering"
       h1="Wellness Retreat Catering Bali"
       subtitle="Plant-Based, Nourishing & Macro-Conscious Meals for Bali Retreat Guests"

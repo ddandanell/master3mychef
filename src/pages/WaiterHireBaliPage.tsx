@@ -135,9 +135,9 @@ export default function WaiterHireBaliPage() {
     <PremiumPage
       slug="blog/waiter-hire-bali"
       title="Waiter Hire Bali -- Professional Service Staff for Villa Events & Dinners"
-      seoTitle="Waiter Hire Bali -- Professional Table Service Staff for Villa Events & Weddings"
-      description="Hire professional waiters and service staff for villa events in Bali. Trained hospitality staff for dinner parties, wedding receptions, and private celebrations. Same-day replacement guarantee."
-      seoDescription="Waiter hire in Bali for villa events. Trained hospitality service staff for dinner parties, weddings, and private celebrations. From IDR 350K/waiter. Same-day replacement guarantee."
+      seoTitle="Waiter Hire Bali -- Table Service Staff | myCHEF"
+      description="Hire professional waiters and service staff for villa events in Bali. Trained hospitality staff for dinner parties, wedding receptions, and private."
+      seoDescription="Waiter hire in Bali for villa events. Trained hospitality staff for dinner parties, weddings and private celebrations. From IDR 350K/waiter."
       h1="Waiter Hire Bali -- Professional Service Staff for Villa Events & Dinners"
       subtitle="Trained hospitality waiters for villa dinner parties, weddings, and private celebrations -- from casual garden dinners to formal plated receptions."
       heroImage="/images/blog/waiter-hire-bali.jpg"

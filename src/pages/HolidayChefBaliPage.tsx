@@ -136,11 +136,11 @@ export default function HolidayChefBaliPage() {
   return (
     <PremiumPage
       slug="blog/holiday-chef-bali"
-      title="Holiday Chef Bali -- Private Chef for Christmas, New Year and Festive Season | myCHEF"
-      seoTitle="Holiday Chef Bali -- Private Chef for Christmas, New Year and Festive Season"
-      description="Holiday chef service in Bali for Christmas, New Year, and the festive season. Traditional roast, seafood feast, Balinese spread, or bespoke. All villa areas covered. Book early."
-      seoDescription="Holiday chef Bali. Private chef for Christmas dinner, New Year's Eve, and festive season catering in Bali villas. Traditional roast, seafood, Balinese feasts. Book early -- fills fast."
-      h1="Holiday Chef Bali -- Private Chef for Christmas, New Year and Festive Season"
+      title="Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF | myCHEF"
+      seoTitle="Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF"
+      description="Holiday chef service in Bali for Christmas, New Year, and the festive season. Traditional roast, seafood feast, Balinese spread, or bespoke."
+      seoDescription="Holiday chef Bali. Private chef for Christmas dinner, New Year's Eve and festive season catering. Traditional roast, seafood, Balinese feasts. Book early."
+      h1="Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF"
       subtitle="Festive dinners. Christmas roasts. New Year's Eve countdowns. All at your villa."
       heroImage="/images/blog/holiday-chef-bali.jpg"
       heroImageAlt="Indonesian private chef preparing a festive Christmas dinner spread in a Bali villa kitchen"
@@ -170,7 +170,7 @@ export default function HolidayChefBaliPage() {
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
-          headline: 'Holiday Chef Bali -- Private Chef for Christmas, New Year and Festive Season',
+          headline: 'Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF',
           description: 'Holiday chef service in Bali for Christmas, New Year, and the festive season. All villa areas.',
           url: 'https://mychef.id/blog/holiday-chef-bali',
           datePublished: '2026-06-30',

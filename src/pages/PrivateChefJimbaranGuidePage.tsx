@@ -98,7 +98,7 @@ export default function PrivateChefJimbaranGuidePage() {
     <PremiumPage
       slug="blog/private-chef-jimbaran-guide"
       title="Private Chef Jimbaran: Seafood Dinners, Beach BBQ & Cliff Dining"
-      description="Book a private chef in Jimbaran for fresh seafood spreads, sunset BBQs, cliff tasting menus, and romantic villa dinners. Covers Jimbaran Bay, Kedonganan, Pecatu, Ungasan and Uluwatu."
+      description="Book a private chef in Jimbaran for fresh seafood spreads, sunset BBQs, cliff tasting menus, and romantic villa dinners."
       h1="Private Chef Jimbaran — Seafood Dinners, Beach BBQ & Cliff Dining"
       subtitle="The complete guide to private chef experiences in Jimbaran and the Bukit Peninsula"
       heroImage="https://images.unsplash.com/photo-1559847844-5315695dadae?w=1400&q=80"

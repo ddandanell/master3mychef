@@ -100,7 +100,7 @@ export default function EventStaffBaliPage() {
     <PremiumPage
       slug="blog/event-staff-bali"
       title="Event Staff Bali: Hiring Waiters, Bartenders & Kitchen Crew for Villa Events"
-      description="How to hire event staff for Bali villa events — waiters, bartenders, kitchen crew, and event coordinators. Staffing ratios, costs, and briefing guide for events of 6 to 80 guests."
+      description="How to hire event staff for Bali villa events — waiters, bartenders, kitchen crew, and event coordinators. Staffing ratios, costs and briefing tips."
       h1="Event Staff Bali — Hiring Waiters, Bartenders & Kitchen Crew for Villa Events"
       subtitle="The complete guide to event staffing for Bali villa dinners, celebrations, and corporate events"
       heroImage="https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=80"

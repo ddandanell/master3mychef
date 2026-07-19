@@ -249,9 +249,9 @@ export default function CorporateEventsCateringPage() {
     <PremiumPage
       slug="blog/corporate-events-catering-bali-team-dining"
       title="Corporate Events Catering Bali"
-      description="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups from 10–200. From IDR 700,000++ per person."
-      seoTitle="Corporate Events Catering Bali | Team Dining & Incentive Meals | myCHEF"
-      seoDescription="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups from 10–200. From IDR 700,000++ per person."
+      description="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups 10–200."
+      seoTitle="Corporate Events Catering Bali | Team & Incentive Dining | myCHEF"
+      seoDescription="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups 10–200."
       canonicalUrl={CANONICAL}
       h1="Corporate Events Catering in Bali — Team Dinners, Retreats & Incentive Meals"
       subtitle="HACCP certified. International menus. 10–200 guests. Bali and Jakarta."

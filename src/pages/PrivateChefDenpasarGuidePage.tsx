@@ -97,7 +97,7 @@ export default function PrivateChefDenpasarGuidePage() {
     <PremiumPage
       slug="blog/private-chef-denpasar-guide"
       title="Private Chef Denpasar: Corporate Events, Executive Dining & Household Chefs"
-      description="Book a private chef in Denpasar for corporate team dinners, official receptions, executive household cooking, and private celebrations. Covers Renon, Sanglah, and all Denpasar areas."
+      description="Book a private chef in Denpasar for corporate team dinners, official receptions, executive household cooking, and private celebrations."
       h1="Private Chef Denpasar — Corporate Events, Executive Dining & Household Chefs"
       subtitle="The complete guide to private chef and catering services in Denpasar, Bali's capital city"
       heroImage="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=1400&q=80"

@@ -124,9 +124,9 @@ export default function BrunchCateringBaliPage() {
     <PremiumPage
       slug="blog/brunch-catering-bali"
       title="Brunch Catering Bali -- Private Chef Brunch for Villa Events & Group Stays"
-      seoTitle="Brunch Catering Bali -- Private Chef Villa Brunch for Events & Holidays"
-      description="Private chef brunch catering for Bali villa events and stays. From casual daily morning spreads to celebration brunches for 50+ guests. Full service, fresh ingredients, all villa areas."
-      seoDescription="Brunch catering in Bali for villa events and group stays. Private chef brunch from IDR 700K/person. Post-wedding, birthday, hen party, and daily villa brunch options. All Bali areas."
+      seoTitle="Brunch Catering Bali -- Private Chef Villa Brunch | myCHEF"
+      description="Private chef brunch catering for Bali villa events and stays. From casual daily morning spreads to celebration brunches for 50+ guests."
+      seoDescription="Brunch catering in Bali for villa events and group stays. Private chef brunch from IDR 700K/person. Post-wedding, birthday and daily villa brunch options."
       h1="Brunch Catering Bali -- Private Chef Brunch for Villa Events & Group Stays"
       subtitle="From lazy poolside morning spreads to celebration brunches for 50 guests -- a private chef makes every morning in Bali exceptional."
       heroImage="/images/blog/brunch-catering-bali.jpg"

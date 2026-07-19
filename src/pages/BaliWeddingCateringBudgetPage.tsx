@@ -159,9 +159,9 @@ export default function BaliWeddingCateringBudgetPage() {
     <PremiumPage
       slug="blog/bali-wedding-catering-budget-guide"
       title="Bali Wedding Catering Cost: The Complete Budget Guide"
-      description="Full breakdown of Bali wedding catering costs in 2026. Price per head IDR, hidden costs, how to save without cutting quality. Private chef weddings from IDR 700K/person."
+      description="Full breakdown of Bali wedding catering costs in 2026. Price per head, hidden costs, how to save without cutting quality."
       seoTitle="Bali Wedding Catering Cost | Budget Guide 2026 | myCHEF"
-      seoDescription="Full breakdown of Bali wedding catering costs in 2026. Price per head IDR, hidden costs, how to save without cutting quality. Private chef weddings from IDR 700K/person."
+      seoDescription="Full breakdown of Bali wedding catering costs in 2026. Price per head, hidden costs, how to save without cutting quality."
       canonicalUrl="https://mychef.id/blog/bali-wedding-catering-budget-guide"
       h1="Bali Wedding Catering Cost: The Complete Budget Guide"
       subtitle="What Does Wedding Catering Actually Cost in Bali? A Transparent Breakdown"

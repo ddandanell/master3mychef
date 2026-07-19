@@ -137,9 +137,9 @@ export default function BabiGulingCateringBaliPage() {
     <PremiumPage
       slug="blog/babi-guling-catering-bali"
       title="Babi Guling Catering Bali — Traditional Balinese Suckling Pig Feast for Events"
-      seoTitle="Babi Guling Catering Bali — Whole Roasted Suckling Pig for Villa Events"
-      description="Authentic babi guling catering for villa events in Bali. Traditional Balinese suckling pig feast with lawar, sate lilit, and ceremonial accompaniments. 20–120+ guests."
-      seoDescription="Babi guling catering for villa events in Bali. Authentic whole-roasted suckling pig by Balinese specialists. Full feast spread: lawar, sate lilit, nasi kuning. From IDR 5.5M."
+      seoTitle="Babi Guling Catering Bali — Whole Roasted Suckling Pig | myCHEF"
+      description="Authentic babi guling catering for villa events in Bali. Traditional Balinese suckling pig feast with lawar, sate lilit, and ceremonial accompaniments."
+      seoDescription="Babi guling catering for villa events in Bali. Authentic whole-roasted suckling pig by Balinese specialists. Feast spread: lawar, sate lilit, nasi kuning."
       h1="Babi Guling Catering Bali — Authentic Suckling Pig Feast for Villa Events"
       subtitle="Traditional Balinese suckling pig, slow-roasted by specialists and served with a full ceremonial feast spread — the ultimate cultural dining experience for villa guests."
       heroImage="/images/blog/babi-guling-catering-bali.jpg"

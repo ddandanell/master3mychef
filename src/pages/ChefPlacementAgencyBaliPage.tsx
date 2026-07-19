@@ -94,7 +94,7 @@ export default function ChefPlacementAgencyBaliPage() {
     <PremiumPage
       slug="blog/chef-placement-agency-bali"
       title="Chef Placement Agency Bali: How to Place a Chef for Your Villa or Household"
-      description="How chef placement in Bali works — the difference between a placement and a booking, the matching process, trial sessions, and what a placement agreement covers. myCHEF places chefs for households, villas, and retreats."
+      description="How chef placement in Bali works — the difference between a placement and a booking, the matching process, trial sessions, and what a placement agreement."
       h1="Chef Placement Agency Bali — How to Place a Chef for Your Villa or Household"
       subtitle="The complete guide to finding and placing a long-term chef in Bali"
       heroImage="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=1400&q=80"

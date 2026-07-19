@@ -86,7 +86,7 @@ export default function PrivateChefPererenanGuidePage() {
     <PremiumPage
       slug="blog/private-chef-pererenan-guide"
       title="Private Chef Pererenan: Surf Retreats, Rice Field Dinners & Villa Dining"
-      description="Book a private chef in Pererenan for surf retreat catering, romantic rice field dinners, vegan wellness menus, and long-stay villa cooking. Covers Pererenan, Cemagi and Seseh."
+      description="Book a private chef in Pererenan for surf retreat catering, romantic rice field dinners, vegan wellness menus, and long-stay villa cooking."
       h1="Private Chef Pererenan — Surf Retreats, Rice Field Dinners & Villa Dining"
       subtitle="The complete guide to private chef services in Pererenan and the Cemagi corridor"
       heroImage="https://images.unsplash.com/photo-1476224203421-9ac39bcb3df1?w=1400&q=80"

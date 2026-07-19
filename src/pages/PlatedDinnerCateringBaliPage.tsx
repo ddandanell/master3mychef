@@ -133,9 +133,9 @@ export default function PlatedDinnerCateringBaliPage() {
     <PremiumPage
       slug="blog/plated-dinner-catering-bali"
       title="Plated Dinner Catering Bali -- Formal Multi-Course Service for Villa Events"
-      seoTitle="Plated Dinner Catering Bali -- Formal Table Service for Villa Weddings & Events"
-      description="Professional plated dinner catering for villa events in Bali. Multi-course menus, trained service staff, and formal table service for weddings, anniversaries, and milestone dinners."
-      seoDescription="Plated dinner catering in Bali for 6--120+ guests. Multi-course menus designed by senior chefs. Formal table service for villa weddings, anniversary dinners, and milestone events."
+      seoTitle="Plated Dinner Catering Bali -- Formal Table Service | myCHEF"
+      description="Professional plated dinner catering for villa events in Bali. Multi-course menus, trained service staff, and formal table service for weddings, anniversaries."
+      seoDescription="Plated dinner catering in Bali for 6--120+ guests. Multi-course menus designed by senior chefs. Formal table service for villa weddings, anniversaries and."
       h1="Plated Dinner Catering Bali -- Formal Multi-Course Service for Villa Events"
       subtitle="Multi-course plated menus with professional table service -- the refined choice for villa weddings, milestone dinners, and formal occasions in Bali."
       heroImage="/generated/mychef-catering-bali-hero-plated.webp"

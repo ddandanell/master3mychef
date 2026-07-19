@@ -484,7 +484,7 @@ export default function PricingPage() {
       title="Pricing"
       description="Transparent pricing for private chef services in Bali — hourly rates, menu pricing, and full-event packages. No hidden fees. No markup on groceries."
       seoTitle="Private Chef Pricing Bali | Transparent Rates | myCHEF.id"
-      seoDescription="Transparent pricing for private chef, catering & event services in Bali. Hourly rates, per-person menus, event packages & staffing. No hidden fees. Get a custom quote."
+      seoDescription="Transparent pricing for private chef, catering & event services in Bali. Hourly rates, per-person menus, event packages & staffing. No hidden fees."
       canonicalUrl="https://mychef.id/pricing"
       h1="Transparent Pricing for Every Experience"
       subtitle="You see every cost before you book. No hidden fees. No grocery markup."

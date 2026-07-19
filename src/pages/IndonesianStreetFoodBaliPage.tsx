@@ -164,7 +164,7 @@ export default function IndonesianStreetFoodBaliPage() {
       slug="blog/indonesian-street-food-private-chef-bali"
       title="Indonesian Street Food at Your Bali Villa"
       description="Experience authentic Indonesian street food classics at your Bali villa — nasi goreng, satay lilit, babi guling, gado-gado. Private chef. From IDR 700K/person."
-      seoTitle="Indonesian Street Food Bali | Private Chef Authentic Indonesian Cuisine | myCHEF"
+      seoTitle="Indonesian Street Food Bali | Authentic Indonesian Cuisine | myCHEF"
       seoDescription="Experience authentic Indonesian street food classics at your Bali villa — nasi goreng, satay lilit, babi guling, gado-gado. Private chef. From IDR 700K/person."
       canonicalUrl="https://mychef.id/blog/indonesian-street-food-private-chef-bali"
       h1="Indonesian Street Food at Your Bali Villa"

@@ -100,7 +100,7 @@ export default function PrivateChefUbudGuidePage() {
     <PremiumPage
       slug="blog/private-chef-ubud-guide"
       title="Private Chef Ubud: Farm-to-Table Dining, Balinese Feasts & Wellness Menus"
-      description="Book a private chef in Ubud for villa dinners, yoga retreat catering, cooking classes, and farm-to-table menus. Covers Penestanan, Tegalalang, Payangan, Campuhan and all Ubud areas."
+      description="Book a private chef in Ubud for villa dinners, yoga retreat catering, cooking classes, and farm-to-table menus. Covers Penestanan, Tegalalang, Payangan."
       h1="Private Chef Ubud — Farm-to-Table Dining, Balinese Feasts & Wellness Menus"
       subtitle="The complete guide to private chef experiences in Ubud and the surrounding village areas"
       heroImage="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80"

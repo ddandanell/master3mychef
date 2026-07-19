@@ -92,8 +92,8 @@ export default function FamilyKidsMenuPage() {
   return (
     <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Family Private Chef Bali: Kids' Menus, Picky Eaters & Villa Dining Guide — myCHEF"
-        description="Planning villa dining for a family in Bali? Our private chefs build kids' menus around your children's ages and preferences. No restaurant stress. Book in 24 hours."
+        title="Family Private Chef Bali: Kids' Menus & Villa Dining | myCHEF"
+        description="Planning villa dining for a family in Bali? Our private chefs build kids' menus around ages and preferences. No restaurant stress. Book in 24 hours."
         canonical={CANONICAL}
         ogType="article"
         ogImage="/generated/mychef-location-bali-hub-hero.webp"

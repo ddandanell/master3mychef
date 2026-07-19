@@ -96,7 +96,7 @@ export default function PrivateChefSeminyakGuidePage() {
     <PremiumPage
       slug="blog/private-chef-seminyak-guide"
       title="Private Chef Seminyak: Luxury Villa Dining, Sunset Dinners & Fine Dining"
-      description="Book a private chef in Seminyak for honeymoon dinners, proposals, anniversaries, and fine dining tasting menus. Covers Oberoi, Petitenget, Kerobokan and Batu Belig."
+      description="Book a private chef in Seminyak for honeymoon dinners, proposals, anniversaries, and fine dining tasting menus. Covers Oberoi, Petitenget, Kerobokan and Batu."
       h1="Private Chef Seminyak — Luxury Villa Dining, Sunset Dinners & Fine Dining"
       subtitle="The complete guide to private chef experiences across Seminyak and its luxury villa precincts"
       heroImage="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80"

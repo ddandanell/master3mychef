@@ -127,9 +127,9 @@ export default function PrivateChefSurabayaGuidePage() {
     <PremiumPage
       slug="blog/private-chef-surabaya-guide"
       title="Private Chef Surabaya -- In-Home Chef Service for East Java | myCHEF"
-      seoTitle="Private Chef Surabaya -- In-Home Chef Service and Corporate Catering in East Java"
-      description="Private chef service in Surabaya. In-home dinners, weekly household cooking, live-in chef placement, and corporate event catering. Halal available. All Surabaya areas covered."
-      seoDescription="Hire a private chef in Surabaya for in-home dinners, weekly household service, or corporate entertaining. Halal available. European, Indonesian, and Asian menus. Fast inquiry response."
+      seoTitle="Private Chef Surabaya -- In-Home & Corporate Catering | myCHEF"
+      description="Private chef service in Surabaya. In-home dinners, weekly household cooking, live-in chef placement, and corporate event catering. Halal available."
+      seoDescription="Hire a private chef in Surabaya for in-home dinners, weekly household service or corporate entertaining. Halal available. European, Indonesian and Asian menus."
       h1="Private Chef in Surabaya -- In-Home Chef Service for East Java"
       subtitle="Professional private chef and catering service across Surabaya's residential and corporate districts."
       heroImage="/images/blog/private-chef-surabaya.jpg"

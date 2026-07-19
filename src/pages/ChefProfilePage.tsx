@@ -116,7 +116,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     ],
     seoTitle: "Adriano — Private Chef Bali | Michelin-Trained Founder | myCHEF",
     seoDescription:
-      "Book Adriano, Executive Chef & Founder of myCHEF Bali. Michelin-trained in Modena, Italy. Italian tasting menus, romantic dinners, VIP villa experiences. WhatsApp to book.",
+      "Book Adriano, Executive Chef & Founder of myCHEF Bali. Michelin-trained in Modena. Italian tasting menus, romantic dinners, VIP villa experiences. WhatsApp.",
     ogImage: 'https://mychef.id/generated/chef-adriano-portrait.webp',
   },
 
@@ -204,9 +204,9 @@ const CHEFS_DATA: Record<string, ChefData> = {
           'Yes — gluten-free pasta alternatives, pescatarian menus, halal ingredients, and dairy-free adaptations are all handled. Let us know at booking and the menu is adjusted from the start.',
       },
     ],
-    seoTitle: "I Made Surya — Private Chef Bali | Mediterranean & Pasta Specialist | myCHEF",
+    seoTitle: "I Made Surya — Private Chef Bali | Mediterranean & Pasta | myCHEF",
     seoDescription:
-      "Book I Made Surya, myCHEF Bali Head Chef for Mediterranean villa dinners and handmade pasta. Ubud-born, trained under Adriano. Perfect for 2–15 guests. Book via WhatsApp.",
+      "Book I Made Surya, myCHEF Head Chef for Mediterranean villa dinners and handmade pasta. Ubud-born, trained under Adriano. Perfect for 2–15 guests. WhatsApp.",
     ogImage: 'https://mychef.id/generated/chef-made-surya-portrait.webp',
   },
 
@@ -296,7 +296,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     ],
     seoTitle: "Bayu Pranata — BBQ Chef Bali | Live-Fire Grill Specialist | myCHEF",
     seoDescription:
-      "Book Bayu Pranata for BBQ and grill events in Bali. Poolside BBQ dinners, wagyu nights, large group celebrations (10–80+ guests). Jimbaran-born live-fire specialist. Book via WhatsApp.",
+      "Book Bayu Pranata for BBQ and grill events in Bali. Poolside BBQ dinners, wagyu nights, large groups (10–80+). Jimbaran live-fire specialist. WhatsApp.",
     ogImage: 'https://mychef.id/generated/chef-bayu-pranata-portrait.webp',
   },
 
@@ -385,9 +385,9 @@ const CHEFS_DATA: Record<string, ChefData> = {
           'Asri regularly cooks for 4–20 guests. For larger groups (20–50), she leads a small team. Indonesian feast menus actually scale particularly well to larger groups — the shared-plate format is natural for big villa tables.',
       },
     ],
-    seoTitle: "Ni Putu Asri — Balinese Chef Bali | Indonesian Feast Specialist | myCHEF",
+    seoTitle: "Ni Putu Asri — Balinese Chef Bali | Indonesian Feast | myCHEF",
     seoDescription:
-      "Book Ni Putu Asri for authentic Balinese and Indonesian feast menus in your villa. Gianyar-born, ceremonial cooking heritage, Asian fusion specialist. Book via WhatsApp.",
+      "Book Ni Putu Asri for authentic Balinese and Indonesian feast menus. Gianyar-born, ceremonial cooking heritage, Asian fusion specialist. WhatsApp.",
     ogImage: 'https://mychef.id/generated/chef-ni-putu-asri-portrait.webp',
   },
 
@@ -475,9 +475,9 @@ const CHEFS_DATA: Record<string, ChefData> = {
           'Wayan serves villas across Seminyak, Canggu, Ubud, Uluwatu, and Nusa Dua. For villa locations outside central Bali, please message us and we will confirm logistics and any travel requirements.',
       },
     ],
-    seoTitle: "Wayan Suarjana — Pastry Chef Bali | Custom Cakes & Plated Desserts | myCHEF",
+    seoTitle: "Wayan Suarjana — Pastry Chef Bali | Cakes & Desserts | myCHEF",
     seoDescription:
-      "Book Wayan Suarjana, myCHEF Head Pastry Chef in Bali. Custom celebration cakes, plated desserts, chocolate tasting courses. Hotel-trained pastry specialist. Book via WhatsApp.",
+      "Book Wayan Suarjana, myCHEF Head Pastry Chef in Bali. Custom cakes, plated desserts, chocolate tasting courses. Hotel-trained pastry specialist. WhatsApp.",
     ogImage: 'https://mychef.id/generated/chef-wayan-suarjana-portrait.webp',
   },
 
@@ -565,9 +565,9 @@ const CHEFS_DATA: Record<string, ChefData> = {
           'Absolutely. Ketut regularly prepares sashimi sharing boards and raw seafood spreads for groups of 15–30 guests at villa parties. He coordinates volume and variety directly with Jimbaran suppliers.',
       },
     ],
-    seoTitle: "Ketut Mahardika — Seafood & Japanese Chef Bali | Sashimi Specialist | myCHEF",
+    seoTitle: "Ketut Mahardika — Seafood & Japanese Chef Bali | Sashimi | myCHEF",
     seoDescription:
-      "Book Ketut Mahardika for Japanese seafood and sashimi dinners in your Bali villa. Jimbaran-born, knife-trained, daily market sourcing. Omakase and feast menus. Book via WhatsApp.",
+      "Book Ketut Mahardika for Japanese seafood and sashimi in your Bali villa. Jimbaran-born, knife-trained, daily market sourcing. Omakase & feast menus. WhatsApp.",
     ogImage: 'https://mychef.id/generated/chef-ketut-mahardika-portrait.webp',
   },
 
@@ -655,9 +655,9 @@ const CHEFS_DATA: Record<string, ChefData> = {
           'Yes. Many of Sari\'s bookings are simply villa guests who want vibrant, health-focused food during their stay — not a formal retreat programme. She adapts her menus to any setting or occasion.',
       },
     ],
-    seoTitle: "Sari Dewi Kusuma — Wellness Chef Bali | Vegan & Retreat Catering | myCHEF",
+    seoTitle: "Sari Dewi Kusuma — Wellness Chef Bali | Vegan Retreats | myCHEF",
     seoDescription:
-      "Book Sari Dewi Kusuma for wellness and retreat catering in Bali. Vegan, raw, Ayurvedic menus. Yoga retreat specialist in Ubud. Detox programmes and villa wellness dinners. Book via WhatsApp.",
+      "Book Sari Dewi Kusuma for wellness and retreat catering in Bali. Vegan, raw, Ayurvedic menus. Yoga retreat specialist. Detox & wellness dinners. WhatsApp.",
     ogImage: 'https://mychef.id/generated/chef-sari-dewi-portrait.webp',
   },
 
@@ -745,9 +745,9 @@ const CHEFS_DATA: Record<string, ChefData> = {
           'Komang specialises in Indonesian and Balinese cuisine but has the experience to execute international formats — Mediterranean buffets, BBQ feasts, and mixed-cuisine corporate menus are all within his range. Tell us your brief and we will design around it.',
       },
     ],
-    seoTitle: "Komang Artha — Event Chef Bali | Large Villa Events & Wedding Catering | myCHEF",
+    seoTitle: "Komang Artha — Event Chef Bali | Villa Events & Weddings | myCHEF",
     seoDescription:
-      "Book Komang Artha for large villa events, weddings, and corporate catering in Bali. 15 years experience, groups from 30 to 200+ guests. Indonesian feast and buffet specialist. Book via WhatsApp.",
+      "Book Komang Artha for villa events, weddings & corporate catering in Bali. 15 years exp, groups 30–200+. Indonesian feast & buffet specialist. WhatsApp.",
     ogImage: 'https://mychef.id/generated/chef-komang-artha-portrait.webp',
   },
 }

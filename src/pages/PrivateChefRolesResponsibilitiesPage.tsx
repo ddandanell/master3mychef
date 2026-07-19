@@ -114,7 +114,7 @@ export default function PrivateChefRolesResponsibilitiesPage() {
     <PremiumPage
       slug="blog/private-chef-roles-responsibilities-explained"
       title="Private Chef Roles & Responsibilities Explained | myCHEF"
-      description="Understand exactly what a private chef does: menu planning, market sourcing, cooking, service, and cleanup. How a private chef differs from a villa cook, household chef, and personal chef."
+      description="Understand exactly what a private chef does: menu planning, market sourcing, cooking, service, and cleanup. How a private chef differs from a villa cook."
       h1="Private Chef Roles & Responsibilities Explained"
       subtitle="What a private chef does, what's included in the role, and how it differs from a villa cook or household chef"
       heroImage="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1400&q=80"

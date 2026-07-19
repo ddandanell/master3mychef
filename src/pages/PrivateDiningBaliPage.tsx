@@ -132,9 +132,9 @@ export default function PrivateDiningBaliPage() {
     <PremiumPage
       slug="blog/private-dining-bali"
       title="Private Dining Bali -- In-Villa Dining Experiences for Every Occasion"
-      seoTitle="Private Dining Bali -- In-Villa Chef Experiences for Couples, Groups & Events"
-      description="Private dining experiences in Bali villas. From intimate dinners for two to formal group receptions -- a private chef, tailored menu, and complete in-villa service for your occasion."
-      seoDescription="Private dining in Bali. In-villa chef experiences for couples, families, and events. Custom menus, professional service, full cleanup. From IDR 700K/person. All villa areas covered."
+      seoTitle="Private Dining Bali -- In-Villa Chef Experiences | myCHEF"
+      description="Private dining experiences in Bali villas. From intimate dinners for two to formal group receptions -- a private chef, tailored menu, and complete in-villa."
+      seoDescription="Private dining in Bali. In-villa chef experiences for couples, families and events. Custom menus, professional service, full cleanup. From IDR 700K/person."
       h1="Private Dining Bali -- In-Villa Chef Experiences for Every Occasion"
       subtitle="A private chef, a menu designed for you, and a setting that is entirely yours -- the finest way to dine in Bali."
       heroImage="/images/blog/private-dining-bali.jpg"

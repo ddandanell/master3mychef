@@ -160,7 +160,7 @@ export default function PrivateDinnerPartyBaliPage() {
       slug="blog/private-dinner-party-bali"
       title="Private Dinner Party Bali | Villa Dinner Parties with a Private Chef"
       description="Host a private dinner party at your Bali villa with a professional chef. Menu planning, setup, service — all handled. Groups of 4–30. From IDR 700,000/person."
-      seoTitle="Private Dinner Party Bali | Villa Dinner Parties with a Private Chef | myCHEF"
+      seoTitle="Private Dinner Party Bali | Villa Dinner Parties | myCHEF"
       seoDescription="Host a private dinner party at your Bali villa with a professional chef. Menu planning, setup, service — all handled. Groups of 4–30. From IDR 700,000/person."
       canonicalUrl="https://mychef.id/blog/private-dinner-party-bali"
       h1="Private Dinner Party Bali"

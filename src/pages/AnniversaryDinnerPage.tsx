@@ -182,9 +182,9 @@ export default function AnniversaryDinnerPage() {
   return (
     <PremiumPage
       slug="blog/anniversary-dinner-villa-bali"
-      title="Anniversary Dinner Bali Villa | Private Chef for Milestone Celebrations | myCHEF"
+      title="Anniversary Dinner Bali Villa | Private Chef Celebrations | myCHEF"
       description="Celebrate your anniversary with a private chef dinner at your Bali villa. Custom menu, intimate setup, Michelin-trained team. From IDR 2,500,000++ per person."
-      seoTitle="Anniversary Dinner Bali Villa | Private Chef for Milestone Celebrations | myCHEF"
+      seoTitle="Anniversary Dinner Bali Villa | Private Chef Celebrations | myCHEF"
       seoDescription="Celebrate your anniversary with a private chef dinner at your Bali villa. Custom menu, intimate setup, Michelin-trained team. From IDR 2,500,000++ per person."
       canonicalUrl="https://mychef.id/blog/anniversary-dinner-villa-bali"
       h1="Anniversary Dinner Bali Villa"

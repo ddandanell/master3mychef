@@ -127,7 +127,7 @@ export default function ChefsTableBaliPage() {
       title="Chef's Table Bali -- Private Interactive Dining Experience at Your Villa"
       seoTitle="Chef's Table Bali -- Exclusive In-Villa Interactive Dining Experiences"
       description="Book a chef's table experience in Bali. A private chef cooks live at your villa, presenting each course with technique narration and ingredient storytelling. 4--10 guests, from IDR 1.5M/person."
-      seoDescription="Chef's table experience in Bali for 4--10 guests. Private chef cooks live at your villa with course narration, ingredient stories, and optional wine pairing. From IDR 1.5M/person."
+      seoDescription="Chef's table in Bali for 4--10 guests. Private chef cooks live at your villa with narration, ingredient stories and optional wine pairing. From IDR 1.5M/person."
       h1="Chef's Table Bali -- Private Interactive Dining at Your Villa"
       subtitle="Watch your private chef cook every course, understand the techniques behind each dish, and eat the finest meal of your Bali trip."
       heroImage="/images/blog/chefs-table-bali.jpg"

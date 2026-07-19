@@ -88,7 +88,7 @@ export default function SeminyakPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Seminyak | Beachfront Villa Dining — myCHEF"
-        description="Book a private chef in Seminyak for beachfront villa dinners, events & birthday parties. Indonesian chefs, Michelin standards, same-day availability. Get a quote."
+        description="Book a private chef in Seminyak for beachfront villa dinners, events & birthday parties. Indonesian chefs, Michelin standards, same-day availability. WhatsApp."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-seminyak.webp"
         jsonLd={[

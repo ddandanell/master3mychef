@@ -134,9 +134,9 @@ export default function GrazingTableBaliPage() {
     <PremiumPage
       slug="blog/grazing-table-bali"
       title="Grazing Table Bali — Styled Boards for Villa Weddings, Parties & Events"
-      seoTitle="Grazing Table Bali — Custom Styled Boards for Weddings, Parties & Events"
-      description="Custom grazing tables and charcuterie boards for villa events in Bali. Weddings, birthday parties, baby showers, corporate events. Vegan and halal options available."
-      seoDescription="Grazing tables and charcuterie boards for villa events in Bali. Styled with local and imported ingredients. From IDR 1.2M. Delivery & setup included. Halal and vegan options."
+      seoTitle="Grazing Table Bali — Custom Boards for Weddings & Parties | myCHEF"
+      description="Custom grazing tables and charcuterie boards for villa events in Bali. Weddings, birthday parties, baby showers, corporate events."
+      seoDescription="Grazing tables and charcuterie boards for villa events in Bali. Styled with local and imported ingredients. From IDR 1.2M. Delivery & setup included."
       h1="Grazing Table Bali — Styled Charcuterie Boards for Villa Events & Weddings"
       subtitle="Custom grazing boards for villa weddings, birthday parties, baby showers, and corporate events — built fresh, styled beautifully, delivered to your door."
       heroImage="/images/blog/grazing-table-bali.jpg"

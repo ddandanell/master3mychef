@@ -85,7 +85,7 @@ export default function BukitPeninsulaPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Bukit Peninsula Bali | Clifftop Villas — myCHEF"
-        description="Hire a private chef on the Bukit Peninsula for clifftop dinners, surf retreat catering & wedding events. Covers Pecatu, Ungasan, Bingin, Padang-Padang. WhatsApp for quotes."
+        description="Hire a private chef on the Bukit Peninsula for clifftop dinners, surf retreat catering & wedding events. Covers Pecatu, Ungasan, Bingin, Padang-Padang."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-bukit.webp"
         jsonLd={[

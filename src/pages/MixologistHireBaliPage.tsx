@@ -138,9 +138,9 @@ export default function MixologistHireBaliPage() {
     <PremiumPage
       slug="blog/mixologist-hire-bali"
       title="Mixologist Hire Bali -- Craft Cocktail Experts for Villa Events & Weddings"
-      seoTitle="Mixologist Hire Bali -- Signature Cocktails for Villa Weddings & Events"
-      description="Hire a professional mixologist in Bali for villa events and weddings. Signature cocktail design, mocktail menus, flair bartending, and craft bar service for private celebrations."
-      seoDescription="Mixologist hire in Bali for villa weddings and events. Signature cocktail menus, mocktail programmes, and flair bartending. From IDR 1.2M. Covering all Bali villa areas."
+      seoTitle="Mixologist Hire Bali -- Signature Cocktails | myCHEF"
+      description="Hire a professional mixologist in Bali for villa events and weddings. Signature cocktails, mocktail menus, flair bartending and craft bar service."
+      seoDescription="Mixologist hire in Bali for villa weddings and events. Signature cocktail menus, mocktail programmes and flair bartending. From IDR 1.2M. All Bali villa areas."
       h1="Mixologist Hire Bali -- Craft Cocktail Experts for Villa Events & Weddings"
       subtitle="Signature cocktail menus, custom bar programmes, and showmanship for villa weddings, birthday parties, and corporate events in Bali."
       heroImage="/images/blog/mixologist-hire-bali.jpg"

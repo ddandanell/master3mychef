@@ -135,9 +135,9 @@ export default function SommelierHireBaliPage() {
     <PremiumPage
       slug="blog/sommelier-hire-bali"
       title="Sommelier Hire Bali -- Wine Service and Pairing for Villa Events"
-      seoTitle="Sommelier Hire Bali -- Wine Pairing and Table Service for Villa Events & Weddings"
-      description="Hire a certified sommelier in Bali for villa weddings, tasting menus, and formal dinners. Wine pairing design, table-side service, and wine sourcing advice for private events."
-      seoDescription="Sommelier hire in Bali for villa weddings, chef's table dinners, and corporate receptions. WSET-certified specialists. Wine pairing, table service, and sourcing advice. From IDR 1.5M."
+      seoTitle="Sommelier Hire Bali -- Wine Pairing & Table Service | myCHEF"
+      description="Hire a certified sommelier in Bali for villa weddings, tasting menus, and formal dinners. Wine pairing design, table-side service and sourcing advice."
+      seoDescription="Sommelier hire in Bali for villa weddings, chef's table dinners and corporate receptions. WSET-certified. Wine pairing and sourcing advice. From IDR 1.5M."
       h1="Sommelier Hire Bali -- Wine Pairing and Table Service for Villa Events"
       subtitle="Certified wine specialists for villa weddings, tasting menus, and corporate dinners -- from pairing design to tableside service."
       heroImage="/images/blog/sommelier-hire-bali.jpg"

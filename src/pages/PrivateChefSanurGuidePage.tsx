@@ -97,7 +97,7 @@ export default function PrivateChefSanurGuidePage() {
     <PremiumPage
       slug="blog/private-chef-sanur-guide"
       title="Private Chef Sanur: Family Villa Dining, Expat Meals & Corporate Events"
-      description="Book a private chef in Sanur for family villa dinners, multi-day meal service, expat household cooking, and corporate team events. Covers all Sanur neighbourhoods."
+      description="Book a private chef in Sanur for family villa dinners, multi-day meal service, expat household cooking, and corporate team events."
       h1="Private Chef Sanur — Family Villa Dining, Expat Meals & Corporate Events"
       subtitle="The complete guide to private chef services in Sanur and its surrounding neighbourhoods"
       heroImage="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80"

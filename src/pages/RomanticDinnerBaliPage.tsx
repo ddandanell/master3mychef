@@ -161,9 +161,9 @@ export default function RomanticDinnerBaliPage() {
     <PremiumPage
       slug="blog/romantic-dinner-bali-private-chef"
       title="Romantic Dinner Bali: Private Chef at Your Villa"
-      description="The most romantic dinner in Bali — your own private chef, candles by the pool, bespoke menu for two. Honeymoon, anniversary, or just because. From IDR 1,800K for two."
+      description="The most romantic dinner in Bali — your own private chef, candles by the pool, bespoke menu for two. Honeymoon, anniversary, or just because."
       seoTitle="Romantic Dinner Bali | Private Chef Villa Dinner | myCHEF"
-      seoDescription="The most romantic dinner in Bali — your own private chef, candles by the pool, bespoke menu for two. Honeymoon, anniversary, or just because. From IDR 1,800K for two."
+      seoDescription="The most romantic dinner in Bali — your own private chef, candles by the pool, bespoke menu for two. Honeymoon, anniversary, or just because."
       canonicalUrl="https://mychef.id/blog/romantic-dinner-bali-private-chef"
       h1="Romantic Dinner Bali: Private Chef at Your Villa"
       subtitle="The Most Romantic Dining Experience in Bali — Your Own Private Chef"

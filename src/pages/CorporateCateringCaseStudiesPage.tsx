@@ -178,7 +178,7 @@ export default function CorporateCateringCaseStudiesPage() {
       slug="blog/corporate-catering-bali-case-studies"
       title="Corporate Catering Bali: 3 Real Case Studies"
       description="See how myCHEF has delivered corporate catering for tech retreats, product launches, and leadership dinners in Bali. Results, menus, and real outcomes."
-      seoTitle="Corporate Catering Bali Case Studies | Private Chef for Corporate Events | myCHEF"
+      seoTitle="Corporate Catering Bali Case Studies | Private Chef Events | myCHEF"
       seoDescription="See how myCHEF has delivered corporate catering for tech retreats, product launches, and leadership dinners in Bali. Results, menus, and real outcomes."
       canonicalUrl="https://mychef.id/blog/corporate-catering-bali-case-studies"
       h1="Corporate Catering Bali: 3 Real Case Studies"

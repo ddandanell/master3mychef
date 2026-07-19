@@ -85,7 +85,7 @@ export default function NusaDuaPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Nusa Dua | Resort Villa & Executive Dining — myCHEF"
-        description="Hire a private chef in Nusa Dua for resort-grade villa dining, corporate offsites & celebration events. Indonesian chefs, five-star precision, full logistics. WhatsApp for quotes."
+        description="Hire a private chef in Nusa Dua for resort-grade villa dining, corporate offsites & celebration events. Indonesian chefs, five-star precision, full logistics."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-nusa-dua.webp"
         jsonLd={[

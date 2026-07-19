@@ -156,7 +156,7 @@ export default function HoneymoonChefPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Honeymoon Private Chef Bali | Romantic Villa Dining | myCHEF"
-        description="A private chef for your Bali honeymoon. Sunset dinners, breakfast in bed, custom romantic menus. Michelin-trained team. From IDR 2,500,000++ per person. WhatsApp us."
+        description="A private chef for your Bali honeymoon. Sunset dinners, breakfast in bed, custom romantic menus. Michelin-trained team. From IDR 2.5M++ per person. WhatsApp us."
         canonical={`${SITE}/blog/honeymoon-private-chef-bali`}
         ogImage={`${SITE}/generated/mychef-experience-bali-luna-gallery-1.webp`}
         jsonLd={[

@@ -153,9 +153,9 @@ export default function BaliVillaCookingClassPage() {
     <PremiumPage
       slug="blog/bali-villa-cooking-class-private-chef"
       title="Private Cooking Classes at Your Bali Villa"
-      description="Skip the tourist cooking school. Have a professional myCHEF chef come to your Bali villa and teach you authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 700,000/person."
-      seoTitle="Bali Villa Cooking Class | Private Chef Cooking Lessons at Your Villa | myCHEF"
-      seoDescription="Skip the tourist cooking school. Have a professional myCHEF chef come to your Bali villa and teach you authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 700,000/person."
+      description="Skip the tourist cooking school. A professional myCHEF chef comes to your Bali villa to teach authentic Indonesian and Balinese cuisine. Groups 2–12."
+      seoTitle="Bali Villa Cooking Class | Private Chef Lessons at Your Villa | myCHEF"
+      seoDescription="Skip the tourist cooking school. A professional myCHEF chef comes to your Bali villa to teach authentic Indonesian and Balinese cuisine. Groups 2–12."
       canonicalUrl="https://mychef.id/blog/bali-villa-cooking-class-private-chef"
       h1="Private Cooking Classes at Your Bali Villa"
       subtitle="Learn Balinese & Indonesian Cuisine with a Professional Private Chef"

@@ -121,9 +121,9 @@ export default function VeganPrivateChefBaliPage() {
     <PremiumPage
       slug="blog/vegan-private-chef-bali"
       title="Vegan Private Chef in Bali -- Plant-Based Chef Service for Villa Stays & Events"
-      seoTitle="Vegan Private Chef Bali -- Plant-Based Chef Service for Villas, Retreats & Events"
-      description="Specialist vegan and plant-based private chef service in Bali. Daily villa meals, yoga retreat catering, occasion dinners, and mixed-group accommodation. All villa areas covered."
-      seoDescription="Vegan private chef in Bali for villa stays, retreats, and events. Whole food, Indonesian, fine dining, or raw menus. From IDR 750K/day (all meals). Specialist plant-based chefs."
+      seoTitle="Vegan Private Chef Bali -- Plant-Based Villa Service | myCHEF"
+      description="Specialist vegan and plant-based private chef service in Bali. Daily villa meals, yoga retreat catering, occasion dinners, and mixed-group accommodation."
+      seoDescription="Vegan private chef in Bali for villa stays, retreats and events. Whole food, Indonesian, fine dining or raw menus. From IDR 750K/day (all meals)."
       h1="Vegan Private Chef in Bali -- Plant-Based Chef Service for Villa Stays and Events"
       subtitle="Bali is one of the finest places in the world to eat plant-based food. A specialist vegan chef makes the most of it."
       heroImage="/images/blog/vegan-private-chef-bali.jpg"

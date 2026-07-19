@@ -154,9 +154,9 @@ export default function VillaButlerBaliPage() {
     <PremiumPage
       slug="blog/villa-butler-bali-guide"
       title="Villa Butler Bali: The Complete Hiring Guide"
-      description="Complete guide to hiring a villa butler in Bali. Roles, responsibilities, cost IDR, vetting standards, short vs long-term placement. Free consultation with myCHEF."
+      description="Complete guide to hiring a villa butler in Bali. Roles, responsibilities, costs, vetting standards, short vs long-term placement. Free consultation with myCHEF."
       seoTitle="Villa Butler Bali | Hire a Villa Butler in Bali | myCHEF"
-      seoDescription="Complete guide to hiring a villa butler in Bali. Roles, responsibilities, cost IDR, vetting standards, short vs long-term placement. Free consultation with myCHEF."
+      seoDescription="Complete guide to hiring a villa butler in Bali. Roles, responsibilities, costs, vetting standards, short vs long-term placement. Free consultation with myCHEF."
       canonicalUrl="https://mychef.id/blog/villa-butler-bali-guide"
       h1="Villa Butler Bali: The Complete Hiring Guide"
       subtitle="What a Bali Villa Butler Does, What They Cost, and How to Find the Right One"

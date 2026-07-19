@@ -99,7 +99,7 @@ export default function PrivateChefCangguGuidePage() {
     <PremiumPage
       slug="blog/private-chef-canggu-guide"
       title="Private Chef Canggu: Villa Dining, Surf Dinners & Party Catering"
-      description="Book a private chef in Canggu for villa dinners, bachelor parties, group BBQs, and floating breakfasts. Covers Berawa, Pererenan, Echo Beach, Seseh and all Canggu areas."
+      description="Book a private chef in Canggu for villa dinners, bachelor parties, group BBQs, and floating breakfasts. Covers Berawa, Pererenan, Echo Beach and Seseh."
       h1="Private Chef Canggu — Villa Dining, Surf Dinners & Party Catering"
       subtitle="The complete guide to private chef experiences across the full Canggu area"
       heroImage="https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=80"

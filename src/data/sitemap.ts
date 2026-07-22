@@ -75,8 +75,8 @@ export function buildSitemap(): SitemapEntry[] {
   const home: SitemapEntry = {
     path: '/',
     type: 'home',
-    title: 'myCHEF.id — Private Chef & Event Experiences in Bali',
-    description: 'Private chefs, villa catering, and full-service events in Bali. Italian fine dining and Michelin-trained leadership.',
+    title: 'Private Chef Bali | Dining, Catering & Events — myCHEF',
+    description: 'Hire a private chef in Bali for villa dining, catering & events. Michelin-trained team, all-inclusive pricing, 560+ villas served. Book via WhatsApp.',
     priority: 1.0,
     changefreq: 'weekly',
   }

@@ -112,12 +112,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Private Dining Bali', href: '/blog/private-dining-bali', desc: 'Full in-villa private dining guide' },
+  { label: 'Private Dining Bali', href: '/private-dining-indonesia', desc: 'Full in-villa private dining guide' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Plated Dinner Catering', href: '/blog/plated-dinner-catering-bali', desc: 'Formal multi-course dinner service' },
-  { label: 'Sommelier Hire Bali', href: '/blog/sommelier-hire-bali', desc: 'Wine pairing for fine dining events' },
-  { label: 'Romantic Dinner Bali', href: '/blog/romantic-dinner-bali-private-chef', desc: 'Intimate couples dining experiences' },
-  { label: 'Cooking Class Bali', href: '/blog/bali-villa-cooking-class-private-chef', desc: 'Hands-on cooking with a private chef' },
+  { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },
+  { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine pairing for fine dining events' },
+  { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Intimate couples dining experiences' },
+  { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Hands-on cooking with a private chef' },
 ]
 
 export default function ChefsTableBaliPage() {
@@ -127,7 +127,7 @@ export default function ChefsTableBaliPage() {
       title="Chef's Table Bali -- Private Interactive Dining Experience at Your Villa"
       seoTitle="Chef's Table Bali -- Exclusive In-Villa Interactive Dining Experiences"
       description="Book a chef's table experience in Bali. A private chef cooks live at your villa, presenting each course with technique narration and ingredient storytelling. 4--10 guests, from IDR 1.5M/person."
-      seoDescription="Chef's table experience in Bali for 4--10 guests. Private chef cooks live at your villa with course narration, ingredient stories, and optional wine pairing. From IDR 1.5M/person."
+      seoDescription="Chef's table in Bali for 4--10 guests. Private chef cooks live at your villa with narration, ingredient stories and optional wine pairing. From IDR 1.5M/person."
       h1="Chef's Table Bali -- Private Interactive Dining at Your Villa"
       subtitle="Watch your private chef cook every course, understand the techniques behind each dish, and eat the finest meal of your Bali trip."
       heroImage="/images/blog/chefs-table-bali.jpg"

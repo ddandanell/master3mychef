@@ -121,12 +121,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'Full catering for villa celebrations' },
-  { label: 'BBQ Catering Bali', href: '/blog/bali-bbq-catering-villa-guide', desc: 'Poolside and garden BBQ packages' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Waiters and service staff for your event' },
-  { label: 'Baby Shower Catering', href: '/blog/baby-shower-catering-bali', desc: 'Relaxed catering for baby showers' },
-  { label: 'Bartender Hire Bali', href: '/blog/bartender-hire-bali', desc: 'Professional bar staff for events' },
-  { label: 'Large Group Catering', href: '/blog/large-group-catering-bali', desc: 'Catering solutions for 30+ guests' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full catering for villa celebrations' },
+  { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Poolside and garden BBQ packages' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters and service staff for your event' },
+  { label: 'Baby Shower Catering', href: '/events/baby-showers', desc: 'Relaxed catering for baby showers' },
+  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Professional bar staff for events' },
+  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering solutions for 30+ guests' },
 ]
 
 export default function GrazingTableBaliPage() {
@@ -134,9 +134,9 @@ export default function GrazingTableBaliPage() {
     <PremiumPage
       slug="blog/grazing-table-bali"
       title="Grazing Table Bali — Styled Boards for Villa Weddings, Parties & Events"
-      seoTitle="Grazing Table Bali — Custom Styled Boards for Weddings, Parties & Events"
-      description="Custom grazing tables and charcuterie boards for villa events in Bali. Weddings, birthday parties, baby showers, corporate events. Vegan and halal options available."
-      seoDescription="Grazing tables and charcuterie boards for villa events in Bali. Styled with local and imported ingredients. From IDR 1.2M. Delivery & setup included. Halal and vegan options."
+      seoTitle="Grazing Table Bali — Custom Boards for Weddings & Parties | myCHEF"
+      description="Custom grazing tables and charcuterie boards for villa events in Bali. Weddings, birthday parties, baby showers, corporate events."
+      seoDescription="Grazing tables and charcuterie boards for villa events in Bali. Styled with local and imported ingredients. From IDR 1.2M. Delivery & setup included."
       h1="Grazing Table Bali — Styled Charcuterie Boards for Villa Events & Weddings"
       subtitle="Custom grazing boards for villa weddings, birthday parties, baby showers, and corporate events — built fresh, styled beautifully, delivered to your door."
       heroImage="/images/blog/grazing-table-bali.jpg"

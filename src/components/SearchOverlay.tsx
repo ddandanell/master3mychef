@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Search, X, ArrowRight, Utensils, MapPin, ChefHat, Sparkles } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
-import { PILLARS, LOCATIONS } from '@/data/siteArchitecture'
+import { PILLARS, LOCATIONS, hasLocationPage } from '@/data/siteArchitecture'
 
 interface SearchResult {
   title: string
@@ -30,14 +30,16 @@ const SEARCH_INDEX: SearchResult[] = [
     category: 'Service' as const,
     icon: Utensils,
   }))),
-  // Locations
-  ...Object.values(LOCATIONS).map(l => ({
-    title: l.label,
-    subtitle: `Private chef services in ${l.label}, Bali`,
-    url: `/locations/${l.slug}`,
-    category: 'Location' as const,
-    icon: MapPin,
-  })),
+  // Locations — only index slugs with a real /locations/<slug> page to avoid redirect-source results.
+  ...Object.values(LOCATIONS)
+    .filter((l) => hasLocationPage(l.slug))
+    .map((l) => ({
+      title: l.label,
+      subtitle: `Private chef services in ${l.label}, Bali`,
+      url: `/locations/${l.slug}`,
+      category: 'Location' as const,
+      icon: MapPin,
+    })),
   // Standalone menu pages — not part of PILLARS/LOCATIONS
   {
     title: 'Three-Course Dining',

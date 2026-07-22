@@ -148,7 +148,7 @@ const FAQS = [
 const RELATED_PAGES = [
   { label: 'Wedding Catering Timeline', href: '/blog/bali-wedding-catering-private-chef-timeline', desc: 'Step-by-step planning timeline for your Bali wedding catering.' },
   { label: 'Weddings & Events', href: '/events/weddings', desc: 'Full details on myCHEF wedding catering services in Bali.' },
-  { label: 'Large Group Catering Bali', href: '/blog/large-group-catering-bali', desc: 'Catering for 30+ guests at Bali villas — logistics and pricing.' },
+  { label: 'Large Group Catering Bali', href: '/group-villa-dinner-packages-bali', desc: 'Catering for 30+ guests at Bali villas — logistics and pricing.' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Complete 2026 pricing guide for private chef hire in Bali.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full myCHEF pricing for all events and group sizes.' },
   { label: 'Corporate Catering Case Studies', href: '/blog/corporate-catering-bali-case-studies', desc: 'Real case studies from myCHEF large event catering in Bali.' },
@@ -159,9 +159,9 @@ export default function BaliWeddingCateringBudgetPage() {
     <PremiumPage
       slug="blog/bali-wedding-catering-budget-guide"
       title="Bali Wedding Catering Cost: The Complete Budget Guide"
-      description="Full breakdown of Bali wedding catering costs in 2026. Price per head IDR, hidden costs, how to save without cutting quality. Private chef weddings from IDR 700K/person."
+      description="Full breakdown of Bali wedding catering costs in 2026. Price per head, hidden costs, how to save without cutting quality."
       seoTitle="Bali Wedding Catering Cost | Budget Guide 2026 | myCHEF"
-      seoDescription="Full breakdown of Bali wedding catering costs in 2026. Price per head IDR, hidden costs, how to save without cutting quality. Private chef weddings from IDR 700K/person."
+      seoDescription="Full breakdown of Bali wedding catering costs in 2026. Price per head, hidden costs, how to save without cutting quality."
       canonicalUrl="https://mychef.id/blog/bali-wedding-catering-budget-guide"
       h1="Bali Wedding Catering Cost: The Complete Budget Guide"
       subtitle="What Does Wedding Catering Actually Cost in Bali? A Transparent Breakdown"

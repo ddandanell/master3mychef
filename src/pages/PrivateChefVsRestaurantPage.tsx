@@ -140,7 +140,7 @@ export default function PrivateChefVsRestaurantPage() {
           <nav className="flex items-center gap-2 text-sm text-white/55 mb-8" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#C5A028] transition-colors">Home</Link>
             <ChevronRight size={14} />
-            <Link to="/blog" className="hover:text-[#C5A028] transition-colors">Blog</Link>
+            <Link to="/journal" className="hover:text-[#C5A028] transition-colors">Blog</Link>
             <ChevronRight size={14} />
             <span className="text-white/60">Private Chef vs Restaurant Bali</span>
           </nav>

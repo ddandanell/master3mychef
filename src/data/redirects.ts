@@ -137,7 +137,7 @@ export const REDIRECTS: Redirect[] = [
 
   // --- Contact & info pages ---
   // (Jakarta and service redirects removed to allow dedicated canonical pages)
-  { from: '/reviews', to: '/', reason: 'Old reviews page → homepage (testimonials integrated everywhere).' },
+  // /reviews kept as a real indexable page — ReviewsPage.tsx route exists and is prerendered.
 
   // --- Legacy utility pages ---
   { from: '/retreats', to: '/events/retreats', reason: 'Consolidate retreat traffic into the dedicated retreats event page.' },

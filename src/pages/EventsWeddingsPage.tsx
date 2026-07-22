@@ -6,7 +6,7 @@ import {
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, faqPageSchema, aggregateRatingSchema, eventSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, faqPageSchema, aggregateRatingSchema, serviceEventSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -161,12 +161,12 @@ export default function EventsWeddingsPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Wedding Catering Bali | Villa Weddings & Receptions — myCHEF"
-        description="Wedding catering in Bali for villa ceremonies & receptions. Michelin-trained chefs, full staffing, bespoke menus, and complete coordination. Request a proposal on WhatsApp."
+        description="Wedding catering in Bali for villa ceremonies & receptions. Michelin-trained chefs, full staffing, bespoke menus and complete coordination."
         canonical={`${SITE}/events/weddings`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-weddings.webp`}
         jsonLd={[
           detailedServiceSchema('Wedding Catering Bali', 'myCHEF.id provides wedding catering in Bali with private chef menus, service staff, and full villa coordination. We support intimate ceremonies and reception dinners with setup, timing, and cleanup managed by one team.', `${SITE}/events/weddings`),
-          eventSchema({
+          serviceEventSchema({
             name: 'Private Wedding Catering in Bali',
             description: 'myCHEF.id provides private chef and catering services for intimate wedding celebrations across Bali villas.',
             url: `${SITE}/events/weddings`,

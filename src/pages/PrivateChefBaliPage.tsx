@@ -202,7 +202,7 @@ export default function PrivateChefBaliPage() {
               <MessageCircle className="w-4 h-4" /> Book on WhatsApp
             </a>
             <Link
-              to="/menus"
+              to="/fine-dining/menus"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
               Browse Menus <ChevronRight className="w-4 h-4" />
@@ -451,7 +451,7 @@ export default function PrivateChefBaliPage() {
             { label: 'Tasting Menu', href: '/fine-dining/tasting-menu' },
             { label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner' },
             { label: "Chef's Table", href: '/fine-dining/chefs-table' },
-            { label: 'Our Menus', href: '/menus' },
+            { label: 'Our Menus', href: '/fine-dining/menus' },
           ].map((l) => (
             <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               {l.label}

@@ -1,3 +1,5 @@
+import { REDIRECT_MAP } from './redirects'
+
 /**
  * myCHEF — MASTER SITE ARCHITECTURE (Vite SPA)
  *
@@ -498,6 +500,20 @@ export const LOCATION_PAGE_SLUGS: ReadonlySet<string> = new Set([
 ])
 export const hasLocationPage = (slug: string): boolean => LOCATION_PAGE_SLUGS.has(slug)
 
+/**
+ * Returns the canonical internal URL for a location slug.
+ *
+ * Only the slugs in LOCATION_PAGE_SLUGS have a real /locations/<slug> page.
+ * Linking to /locations/<slug> for any other slug hits a redirect rule,
+ * which wastes crawl budget and dilutes internal link equity. For slugs
+ * without a dedicated location page, follow the redirect map to the real
+ * canonical target (e.g. berawa -> /locations/canggu).
+ */
+export function getLocationCanonical(slug: string): string {
+  if (hasLocationPage(slug)) return `/locations/${slug}`
+  return REDIRECT_MAP[`/${slug}`] ?? `/${slug}`
+}
+
 /* -----------------------------------------------------------------------
  * JOURNAL (HELPERS REMOVED FOR BREVITY IN EXPORT)
  * --------------------------------------------------------------------- */
@@ -544,7 +560,7 @@ export const PRIMARY_NAV: Array<{ label: string; href: string }> = [
   { label: 'Staffing', href: '/staffing' },
   { label: 'Locations', href: '/locations' },
   { label: 'Help', href: '/help' },
-  { label: 'About', href: '/about' },
+  { label: 'About', href: '/fine-dining/our-chefs' },
 ]
 
 export const PRIMARY_CTA = {

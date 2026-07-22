@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, serviceEventSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -128,7 +128,7 @@ export default function EventsAnniversariesPage() {
           offerSchema('Couple Intimate Dinner', 1500000, 'IDR', `${SITE}/events/anniversaries`),
           offerSchema('Small-Group Anniversary', 1200000, 'IDR', `${SITE}/events/anniversaries`),
           offerSchema('Renewal of Vows + Dinner', 2500000, 'IDR', `${SITE}/events/anniversaries`),
-          eventSchema({
+          serviceEventSchema({
             name: 'Private Anniversary Dinner in Bali',
             description: 'Romantic private chef anniversary dinners at Bali villas — chef-led menus, elegant service, full setup.',
             url: `${SITE}/events/anniversaries`,

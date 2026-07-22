@@ -207,7 +207,7 @@ IDR 1,200,000–2,500,000 per person. The full-scale event format. Includes mult
 
 <p>In <strong>Jakarta</strong>, we cater executive club settings, residential event spaces, and corporate function rooms for high-end client entertainment and leadership dinners where a private chef team elevates the occasion beyond restaurant dining.</p>
 
-<p>For full coverage and venue-specific logistics, explore our <a href="/catering/corporate-catering" class="text-[#7E6410] hover:underline font-medium">corporate catering service page</a>, our <a href="/events/corporate-events" class="text-[#7E6410] hover:underline font-medium">corporate events overview</a>, or our dedicated <a href="/jakarta" class="text-[#7E6410] hover:underline font-medium">Jakarta catering page</a>. To begin planning, reach out via WhatsApp with your dates, group size, and venue — we will respond within the hour.</p>`,
+<p>For full coverage and venue-specific logistics, explore our <a href="/catering/corporate-catering" class="text-[#7E6410] hover:underline font-medium">corporate catering service page</a>, our <a href="/events/corporate-events" class="text-[#7E6410] hover:underline font-medium">corporate events overview</a>, or our dedicated <a href="/locations/jakarta" class="text-[#7E6410] hover:underline font-medium">Jakarta catering page</a>. To begin planning, reach out via WhatsApp with your dates, group size, and venue — we will respond within the hour.</p>`,
   },
 ]
 
@@ -234,12 +234,12 @@ const RELATED_PAGES = [
   },
   {
     label: 'Jakarta Catering',
-    href: '/jakarta',
+    href: '/locations/jakarta',
     desc: 'Executive and corporate catering services for events in Jakarta.',
   },
   {
     label: 'About myCHEF',
-    href: '/about',
+    href: '/fine-dining/our-chefs',
     desc: 'Michelin-trained founder, HACCP certification, and 50+ professional staff.',
   },
 ]
@@ -249,9 +249,9 @@ export default function CorporateEventsCateringPage() {
     <PremiumPage
       slug="blog/corporate-events-catering-bali-team-dining"
       title="Corporate Events Catering Bali"
-      description="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups from 10–200. From IDR 700,000++ per person."
-      seoTitle="Corporate Events Catering Bali | Team Dining & Incentive Meals | myCHEF"
-      seoDescription="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups from 10–200. From IDR 700,000++ per person."
+      description="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups 10–200."
+      seoTitle="Corporate Events Catering Bali | Team & Incentive Dining | myCHEF"
+      seoDescription="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups 10–200."
       canonicalUrl={CANONICAL}
       h1="Corporate Events Catering in Bali — Team Dinners, Retreats & Incentive Meals"
       subtitle="HACCP certified. International menus. 10–200 guests. Bali and Jakarta."

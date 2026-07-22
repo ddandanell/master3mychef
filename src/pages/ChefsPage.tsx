@@ -313,8 +313,8 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'About myCHEF', href: '/about', desc: 'Read the founder story and the standards behind the team.' },
-  { label: 'Menus', href: '/menus', desc: 'See the menu styles each chef can execute in your villa.' },
+  { label: 'About myCHEF', href: '/fine-dining/our-chefs', desc: 'Read the founder story and the standards behind the team.' },
+  { label: 'Menus', href: '/fine-dining/menus', desc: 'See the menu styles each chef can execute in your villa.' },
   { label: 'Fine Dining', href: '/fine-dining', desc: 'Explore tasting menus and premium in-villa dining.' },
   { label: 'Catering', href: '/catering', desc: 'Planning a bigger group, BBQ, or buffet-style event?' },
   { label: 'Pricing', href: '/pricing', desc: 'Understand starting prices and what is included.' },

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, type LucideIcon } from 'lucide-react'
-import { PILLARS, LOCATIONS } from '@/data/siteArchitecture'
+import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, Mail, type LucideIcon } from 'lucide-react'
+import { PILLARS, LOCATIONS, hasLocationPage } from '@/data/siteArchitecture'
 
 
 // Map icon names to Lucide React icon components
@@ -45,10 +45,18 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Experience', href: '/complete-villa-experience', icon: MapPin, accent: '#C5A028' },
   { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
   { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
+  { label: 'Contact', href: '/contact', icon: Mail, accent: '#C5A028' },
   { label: 'Help', href: '/help', icon: HelpCircle, accent: '#C5A028' },
 ]
 
-const NAV_SUBPAGES = Object.values(PILLARS).reduce<Record<string, { label: string; href: string; icon?: string }[]>>(
+interface NavSubpage {
+  label: string
+  href: string
+  icon?: string
+  group?: string
+}
+
+const NAV_SUBPAGES: Record<string, NavSubpage[]> = Object.values(PILLARS).reduce<Record<string, NavSubpage[]>>(
   (acc, pillar) => {
     acc[pillar.url] = pillar.subPages.map((page) => ({
       label: page.label,
@@ -75,13 +83,14 @@ NAV_SUBPAGES['/complete-villa-experience'] = [
   { label: 'VIP Transport Bali', href: '/vip-transport-bali', icon: 'Truck' },
 ]
 
-// Locations dropdown — compact view of main areas + link to full directory
+// Locations dropdown — compact view of main areas + link to full directory.
+// Filter to slugs that have a real /locations/<slug> page to avoid redirect-source links.
 const LOCATION_DROPDOWN_ORDER: Array<keyof typeof LOCATIONS> = [
   'seminyak', 'canggu', 'uluwatu', 'ubud', 'nusa-dua', 'jimbaran', 'sanur', 'berawa', 'pererenan', 'bukit',
 ]
 NAV_SUBPAGES['/locations'] = [
   { label: 'All Locations', href: '/locations', icon: 'MapPin' },
-  ...LOCATION_DROPDOWN_ORDER.map((slug) => ({
+  ...LOCATION_DROPDOWN_ORDER.filter((slug) => hasLocationPage(slug)).map((slug) => ({
     label: LOCATIONS[slug].label,
     href: `/locations/${slug}`,
     icon: 'MapPin',
@@ -128,6 +137,16 @@ function isActivePath(current: string, target: string): boolean {
   if (current === target) return true
   if (target !== '/' && current.startsWith(target + '/')) return true
   return false
+}
+
+function groupSubpages(subpages: NavSubpage[]): { group: string; items: NavSubpage[] }[] {
+  const map = new Map<string, NavSubpage[]>()
+  for (const s of subpages) {
+    const g = s.group ?? ''
+    if (!map.has(g)) map.set(g, [])
+    map.get(g)!.push(s)
+  }
+  return Array.from(map.entries()).map(([group, items]) => ({ group, items }))
 }
 
 export default function Navbar() {
@@ -225,7 +244,7 @@ export default function Navbar() {
         className="fixed top-0 left-0 right-0 z-[70] bg-[#0D0C0A]/95 border-b border-[#C5A028]/15"
         style={{ backdropFilter: 'blur(12px)' }}
       >
-        <div className="mx-auto px-8 py-3 flex items-center justify-between gap-8 lg:px-4 lg:gap-3 xl:gap-4 2xl:px-8 2xl:gap-8">
+        <div className="mx-auto px-8 py-2 h-14 flex items-center justify-between gap-8 lg:px-4 lg:gap-3 xl:gap-4 2xl:px-8 2xl:gap-8">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group">
             <ChefHat className="w-6 h-6 lg:w-5 lg:h-5 2xl:w-6 2xl:h-6 text-[#C5A028] transition-transform group-hover:rotate-12" strokeWidth={1.5} />
@@ -307,39 +326,45 @@ export default function Navbar() {
                       <div className="flex overflow-hidden rounded-2xl border border-[#C5A028]/20 bg-[#0F0E0C]/95 shadow-2xl shadow-black/50 backdrop-blur-xl">
                         {/* Links column */}
                         <div className="w-64 p-3">
-                          <p
-                            className="px-3 pb-2 pt-1 text-[10px] uppercase tracking-[0.28em] text-[#C5A028]/80"
-                            style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                          >
-                            {item.label} Pages
-                          </p>
-                          <div className="max-h-[70vh] space-y-0.5 overflow-y-auto pr-1">
-                            {subpages.map((subpage) => {
-                              const subpageActive = isActivePath(location.pathname, subpage.href)
-                              return (
-                                <Link
-                                  key={subpage.href}
-                                  to={subpage.href}
-                                  onClick={() => setOpenDropdown(null)}
-                                  onMouseEnter={() => setPreviewFor(item, subpage)}
-                                  onFocus={() => setPreviewFor(item, subpage)}
-                                  className={`flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm transition-all duration-200 ${
-                                    subpageActive
-                                      ? 'bg-[#C5A028]/15 text-[#C5A028]'
-                                      : 'text-white/70 hover:bg-white/5 hover:text-[#C5A028] hover:translate-x-0.5'
-                                  }`}
-                                  style={{ fontFamily: "'Playfair Display', serif" }}
+                          <div className="max-h-[70vh] space-y-3 overflow-y-auto pr-1">
+                            {groupSubpages(subpages).map(({ group, items }) => (
+                              <div key={group}>
+                                <p
+                                  className="px-3 pb-1.5 pt-1 text-[10px] uppercase tracking-[0.22em] text-[#C5A028]/80"
+                                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                                 >
-                                  {subpage.icon && getIconComponent(subpage.icon) &&
-                                    (() => {
-                                      const SubIcon = getIconComponent(subpage.icon)
-                                      return SubIcon ? <SubIcon className="w-4 h-4 flex-shrink-0 opacity-70" strokeWidth={1.5} /> : null
-                                    })()
-                                  }
-                                  {subpage.label}
-                                </Link>
-                              )
-                            })}
+                                  {group === '' ? `${item.label} Pages` : group}
+                                </p>
+                                <div className="space-y-0.5">
+                                  {items.map((subpage) => {
+                                    const subpageActive = isActivePath(location.pathname, subpage.href)
+                                    return (
+                                      <Link
+                                        key={subpage.href}
+                                        to={subpage.href}
+                                        onClick={() => setOpenDropdown(null)}
+                                        onMouseEnter={() => setPreviewFor(item, subpage)}
+                                        onFocus={() => setPreviewFor(item, subpage)}
+                                        className={`flex items-center gap-2.5 rounded-xl px-3 py-2 text-sm transition-all duration-200 ${
+                                          subpageActive
+                                            ? 'bg-[#C5A028]/15 text-[#C5A028]'
+                                            : 'text-white/70 hover:bg-white/5 hover:text-[#C5A028] hover:translate-x-0.5'
+                                        }`}
+                                        style={{ fontFamily: "'Playfair Display', serif" }}
+                                      >
+                                        {subpage.icon && getIconComponent(subpage.icon) &&
+                                          (() => {
+                                            const SubIcon = getIconComponent(subpage.icon)
+                                            return SubIcon ? <SubIcon className="w-4 h-4 flex-shrink-0 opacity-70" strokeWidth={1.5} /> : null
+                                          })()
+                                        }
+                                        {subpage.label}
+                                      </Link>
+                                    )
+                                  })}
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         </div>
 
@@ -458,34 +483,43 @@ export default function Navbar() {
 
                       {/* Accordion content — visible only when expanded */}
                       {isExpanded && (
-                        <div className="ml-6 border-l border-[#C5A028]/20 pl-4 space-y-2 mt-2">
-                          {subpages.map((subpage) => {
-                            const subpageActive = isActivePath(location.pathname, subpage.href)
-                            return (
-                              <Link
-                                key={subpage.href}
-                                to={subpage.href}
-                                onClick={() => {
-                                  setMenuOpen(false)
-                                  setExpandedItems(new Set())
-                                }}
-                                className={`flex items-center gap-2 rounded-xl px-3 py-2 text-sm transition-colors ${
-                                  subpageActive
-                                    ? 'bg-[#C5A028]/10 text-[#C5A028]'
-                                    : 'text-gray-600 hover:bg-gray-100 hover:text-[#C5A028]'
-                                }`}
-                                style={{ fontFamily: "'Playfair Display', serif" }}
-                              >
-                                {subpage.icon && getIconComponent(subpage.icon) && 
-                                  (() => {
-                                    const Icon = getIconComponent(subpage.icon)
-                                    return Icon ? <Icon className="w-4 h-4 text-[#C5A028] flex-shrink-0" strokeWidth={1.5} /> : null
-                                  })()
-                                }
-                                {subpage.label}
-                              </Link>
-                            )
-                          })}
+                        <div className="ml-6 border-l border-[#C5A028]/20 pl-4 space-y-4 mt-2">
+                          {groupSubpages(subpages).map(({ group, items }) => (
+                            <div key={group} className="space-y-2">
+                              {group !== '' && (
+                                <p className="px-3 text-[10px] uppercase tracking-[0.2em] text-[#C5A028]/80">
+                                  {group}
+                                </p>
+                              )}
+                              {items.map((subpage) => {
+                                const subpageActive = isActivePath(location.pathname, subpage.href)
+                                return (
+                                  <Link
+                                    key={subpage.href}
+                                    to={subpage.href}
+                                    onClick={() => {
+                                      setMenuOpen(false)
+                                      setExpandedItems(new Set())
+                                    }}
+                                    className={`flex items-center gap-2 rounded-xl px-3 py-2 text-sm transition-colors ${
+                                      subpageActive
+                                        ? 'bg-[#C5A028]/10 text-[#C5A028]'
+                                        : 'text-gray-600 hover:bg-gray-100 hover:text-[#C5A028]'
+                                    }`}
+                                    style={{ fontFamily: "'Playfair Display', serif" }}
+                                  >
+                                    {subpage.icon && getIconComponent(subpage.icon) && 
+                                      (() => {
+                                        const Icon = getIconComponent(subpage.icon)
+                                        return Icon ? <Icon className="w-4 h-4 text-[#C5A028] flex-shrink-0" strokeWidth={1.5} /> : null
+                                      })()
+                                    }
+                                    {subpage.label}
+                                  </Link>
+                                )
+                              })}
+                            </div>
+                          ))}
                         </div>
                       )}
                     </>

@@ -85,7 +85,7 @@ export default function SanurPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Sanur | Family Villa Dining & Catering — myCHEF"
-        description="Hire a private chef in Sanur for family villa dinners, sunrise breakfasts & celebration catering. Indonesian chefs, multi-generational menus, calm east-coast setting. WhatsApp us."
+        description="Hire a private chef in Sanur for family villa dinners, sunrise breakfasts & celebration catering. Indonesian chefs, multi-generational menus, calm east-coast."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-sanur.webp"
         jsonLd={[

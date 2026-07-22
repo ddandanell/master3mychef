@@ -122,12 +122,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Chef Placement Agency Bali', href: '/blog/chef-placement-agency-bali', desc: 'Private household chef placement' },
-  { label: 'Live-In Chef Bali Hiring Guide', href: '/blog/live-in-chef-bali-hiring-guide', desc: 'Guide to hiring a live-in private chef' },
-  { label: 'Villa Staff Bali', href: '/blog/villa-staff-bali-hiring-guide', desc: 'Full villa staff hiring guide' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Event staffing for Bali functions' },
+  { label: 'Chef Placement Agency Bali', href: '/staffing/private-chef-placement', desc: 'Private household chef placement' },
+  { label: 'Live-In Chef Bali Hiring Guide', href: '/staffing', desc: 'Guide to hiring a live-in private chef' },
+  { label: 'Villa Staff Bali', href: '/staffing/villa-staff', desc: 'Full villa staff hiring guide' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Event staffing for Bali functions' },
   { label: 'Staffing', href: '/staffing', desc: 'myCHEF staffing and placement services' },
-  { label: 'Private Chef Jakarta', href: '/blog/private-chef-jakarta-complete-guide', desc: 'Private chef and staffing in Jakarta' },
+  { label: 'Private Chef Jakarta', href: '/journal/private-chef-jakarta-guide', desc: 'Private chef and staffing in Jakarta' },
 ]
 
 export default function HotelRestaurantChefStaffingPage() {
@@ -136,8 +136,8 @@ export default function HotelRestaurantChefStaffingPage() {
       slug="blog/hotel-restaurant-chef-staffing"
       title="Hotel and Restaurant Chef Staffing Bali -- F&B Culinary Recruitment | myCHEF"
       seoTitle="Hotel and Restaurant Chef Staffing Bali -- F&B Culinary Recruitment"
-      description="Chef staffing for hotels, resorts, and restaurants in Bali. Executive chefs, sous chefs, pastry chefs, line cooks. Temporary, contract, and permanent placement. Fast mobilisation."
-      seoDescription="Hotel restaurant chef staffing Bali. Culinary recruitment for F&B operations in Bali. Executive chefs, sous chefs, pastry chefs, specialist cuisine talent. Temporary and permanent placement."
+      description="Chef staffing for hotels, resorts, and restaurants in Bali. Executive chefs, sous chefs, pastry chefs, line cooks."
+      seoDescription="Hotel restaurant chef staffing Bali. Culinary recruitment for F&B operations. Executive chefs, sous chefs, pastry chefs, specialist cuisine talent."
       h1="Hotel and Restaurant Chef Staffing Bali -- F&B Culinary Recruitment"
       subtitle="Executive chefs to line cooks. Temporary coverage to permanent placement. Bali's hospitality staffing specialists."
       heroImage="/images/blog/hotel-restaurant-chef-staffing.jpg"

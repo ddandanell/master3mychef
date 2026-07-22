@@ -85,7 +85,7 @@ export default function DenpasarPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Denpasar | Home Dining & Business Catering — myCHEF"
-        description="Hire a private chef in Denpasar for business lunches, home dining & recurring meal service. Fast central logistics, Indonesian chefs, same-day availability. WhatsApp us today."
+        description="Hire a private chef in Denpasar for business lunches, home dining & recurring meal service. Fast logistics, Indonesian chefs, same-day availability."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-denpasar.webp"
         jsonLd={[

@@ -33,16 +33,12 @@ export const LANDING_PAGE_SLUGS: string[] = [
 ]
 
 export const GUIDE_SLUGS: string[] = [
-  'guide/bali-cuisine-glossary',
   'guide/private-chef-bali',
 ]
 
 export const BLOG_POST_SLUGS: string[] = [
-  // Phase 4 (existing)
-  'blog/private-chef-bali-cost-breakdown-2026',
+  // Phase 4 (existing) — note: removed redirect-source slugs
   'blog/best-bali-villas-private-chef-kitchen',
-  'blog/wedding-rehearsal-dinner-bali',
-  'blog/yoga-retreat-chef-bali-meal-planning',
   'blog/private-chef-vs-restaurant-bali',
   'blog/how-to-plan-villa-birthday-party-bali',
   'blog/private-chef-romantic-dinners-bali',

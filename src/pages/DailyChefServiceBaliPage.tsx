@@ -123,10 +123,10 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Live-In Chef Bali', href: '/blog/live-in-chef-bali-hiring-guide', desc: 'Full-time residential chef placement' },
-  { label: 'Household Chef Bali', href: '/blog/household-chef-bali-hiring-guide', desc: 'Long-term household chef arrangements' },
-  { label: 'Chef Placement Agency', href: '/blog/chef-placement-agency-bali', desc: 'How placement and vetting works' },
-  { label: 'Private Chef Bali Expats', href: '/blog/private-chef-bali-expats', desc: 'Chef services for Bali residents' },
+  { label: 'Live-In Chef Bali', href: '/staffing', desc: 'Full-time residential chef placement' },
+  { label: 'Household Chef Bali', href: '/staffing/household-staff', desc: 'Long-term household chef arrangements' },
+  { label: 'Chef Placement Agency', href: '/staffing/private-chef-placement', desc: 'How placement and vetting works' },
+  { label: 'Private Chef Bali Expats', href: '/hire-private-chef-bali-monthly', desc: 'Chef services for Bali residents' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Full breakdown of chef pricing' },
   { label: 'How to Hire a Private Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Complete hiring guide' },
 ]
@@ -136,9 +136,9 @@ export default function DailyChefServiceBaliPage() {
     <PremiumPage
       slug="blog/daily-chef-service-bali"
       title="Daily Chef Service Bali — Part-Time Cook Hire for Villa Stays & Expat Life"
-      seoTitle="Daily Chef Service Bali — Regular In-Villa Cooking for Expats & Long Stays"
-      description="Hire a daily chef in Bali for consistent home-cooked meals. Part-time and full-day options for villa stays, expat families, and digital nomads. Market sourcing included."
-      seoDescription="Daily chef service in Bali for expats, long-stay villa guests and families. Part-time or full-day. Market sourcing included. From IDR 400K/day. Same-day replacement guarantee."
+      seoTitle="Daily Chef Service Bali — Regular In-Villa Cooking | myCHEF"
+      description="Hire a daily chef in Bali for consistent home-cooked meals. Part-time and full-day options for villa stays, expat families, and digital nomads."
+      seoDescription="Daily chef service in Bali for expats, long-stay villa guests and families. Part-time or full-day. Market sourcing included. From IDR 400K/day."
       h1="Daily Chef Service Bali — Part-Time In-Villa Chef for Extended Stays & Expat Life"
       subtitle="Regular home cooking for villa renters, expat families, and digital nomads — without the complexity of full-time staff."
       heroImage="/images/blog/daily-chef-service-bali.jpg"

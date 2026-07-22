@@ -109,7 +109,7 @@ export default function CompleteVillaExperiencePage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Complete Villa Experience Bali | End-to-End Hospitality — myCHEF"
-        description="Full-service villa hospitality in Bali: airport transfers, daily private chef, events, staff, concierge & cleanup. One team handles everything from arrival to departure."
+        description="Full-service villa hospitality in Bali: airport transfers, daily chef, events, staff, concierge & cleanup. One team handles everything end to end."
         canonical={`${SITE}/complete-villa-experience`}
         ogImage={`${SITE}/generated/mychef-catering-bali-catering-hero.webp`}
         jsonLd={[

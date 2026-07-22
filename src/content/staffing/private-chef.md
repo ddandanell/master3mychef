@@ -280,12 +280,7 @@ We conduct quarterly performance reviews and maintain open feedback channels wit
     "@type": "Place",
     "name": "Bali, Indonesia"
   },
-  "priceRange": "$$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "560"
-  }
+  "priceRange": "$$$"
 }
 </script>
 

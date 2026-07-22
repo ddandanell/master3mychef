@@ -5,7 +5,7 @@ import {
   Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music,
   Globe2, ClipboardCheck, ArrowRight, Check,
 } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema, howToSchema, eventSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema, howToSchema, serviceEventSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -450,7 +450,7 @@ export default function EventsMainPage() {
           offerSchema('Wellness & Yoga Retreats', 1500000, 'IDR', `${SITE}/events/retreats`),
           offerSchema('Baby Showers', 750000, 'IDR', `${SITE}/events/baby-showers`),
           offerSchema('Villa Parties', 650000, 'IDR', `${SITE}/events/villa-parties`),
-          eventSchema({
+          serviceEventSchema({
             name: 'Private Events and Celebrations in Bali',
             description: 'Private chef events, weddings, birthdays, corporate dinners, and villa parties across Bali — managed end-to-end.',
             url: `${SITE}/events`,

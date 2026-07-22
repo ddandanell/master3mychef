@@ -8,7 +8,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, serviceEventSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -162,7 +162,7 @@ export default function EventsCorporatePage() {
           detailedServiceSchema('Corporate Events Bali', 'myCHEF.id delivers corporate event catering in Bali for conferences, offsites, launches, and executive dinners. We coordinate food, staffing, setup, and service so your event runs smoothly from arrival to final cleanup.', `${SITE}/events/corporate-events`),
           offerSchema('Corporate Day Event', 1200000, 'IDR', `${SITE}/events/corporate-events`),
           offerSchema('Multi-Day Retreat', 2500000, 'IDR', `${SITE}/events/corporate-events`),
-          eventSchema({
+          serviceEventSchema({
             name: 'Corporate Event Catering in Bali',
             description: 'Corporate catering at Bali villas and venues — private chef menus, service staff, team dinners, and offsite events.',
             url: `${SITE}/events/corporate-events`,

@@ -121,11 +121,11 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Sommelier Hire Bali', href: '/blog/sommelier-hire-bali', desc: 'Wine service and pairing for events' },
-  { label: 'Romantic Dinner Bali', href: '/blog/romantic-dinner-bali-private-chef', desc: 'Intimate private dinners for couples' },
-  { label: 'Proposal Dinner Bali', href: '/blog/proposal-dinner-bali-private-chef', desc: 'Private proposal dinner planning' },
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'Full catering for villa celebrations' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Professional waiters and event crew' },
+  { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine service and pairing for events' },
+  { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Intimate private dinners for couples' },
+  { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Private proposal dinner planning' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full catering for villa celebrations' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Professional waiters and event crew' },
 ]
 
 export default function PlatedDinnerCateringBaliPage() {
@@ -133,9 +133,9 @@ export default function PlatedDinnerCateringBaliPage() {
     <PremiumPage
       slug="blog/plated-dinner-catering-bali"
       title="Plated Dinner Catering Bali -- Formal Multi-Course Service for Villa Events"
-      seoTitle="Plated Dinner Catering Bali -- Formal Table Service for Villa Weddings & Events"
-      description="Professional plated dinner catering for villa events in Bali. Multi-course menus, trained service staff, and formal table service for weddings, anniversaries, and milestone dinners."
-      seoDescription="Plated dinner catering in Bali for 6--120+ guests. Multi-course menus designed by senior chefs. Formal table service for villa weddings, anniversary dinners, and milestone events."
+      seoTitle="Plated Dinner Catering Bali -- Formal Table Service | myCHEF"
+      description="Professional plated dinner catering for villa events in Bali. Multi-course menus, trained service staff, and formal table service for weddings, anniversaries."
+      seoDescription="Plated dinner catering in Bali for 6--120+ guests. Multi-course menus designed by senior chefs. Formal table service for villa weddings, anniversaries and."
       h1="Plated Dinner Catering Bali -- Formal Multi-Course Service for Villa Events"
       subtitle="Multi-course plated menus with professional table service -- the refined choice for villa weddings, milestone dinners, and formal occasions in Bali."
       heroImage="/generated/mychef-catering-bali-hero-plated.webp"

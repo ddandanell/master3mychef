@@ -161,7 +161,7 @@ const RELATED_PAGES = [
   { label: 'Fine Dining in Ubud', href: '/locations/ubud', desc: 'Farm-to-table and Balinese-inspired fine dining in Ubud.' },
   { label: 'How to Hire a Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Complete guide to vetting and booking private chefs.' },
   { label: 'Catering Menus', href: '/blog/bali-catering-menu', desc: 'Explore menu styles beyond fine dining.' },
-  { label: 'Menus', href: '/menus', desc: 'Browse all available menu options.' },
+  { label: 'Menus', href: '/fine-dining/menus', desc: 'Browse all available menu options.' },
   { label: 'Contact', href: '/contact', desc: 'Chat with our team about your preferences.' },
 ]
 

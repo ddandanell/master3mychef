@@ -144,7 +144,7 @@ Whatever role your villa requires, we recruit and place against the same documen
 - Pool Technicians, Gardeners, Handymen, Maintenance Staff, Security & Drivers
 
 **Event & Temporary Staff**
-- **Waiters, Bartenders & Event Crew:** Uniformed, English-speaking, villa-event experienced. [Professional event staff for your villa](/staffing/event-staff)
+- **Waiters, Bartenders & Event Crew:** Uniformed, English-speaking, villa-event experienced. [Professional event staff for your villa](/staffing/villa-staff)
 - Temporary cover staff for peak season, leave, or short-term needs
 
 For a complete overview of how we support villas across Bali, visit our [main staffing overview](/staffing).
@@ -260,12 +260,7 @@ No obligation. No pressure. Just a professional conversation about what your vil
     "@type": "Place",
     "name": "Bali, Indonesia"
   },
-  "priceRange": "$$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "560"
-  }
+  "priceRange": "$$$"
 }
 </script>
 
@@ -427,7 +422,7 @@ No obligation. No pressure. Just a professional conversation about what your vil
 - [/staffing/villa-staff](/staffing/villa-staff) — Villa staff roles
 - [/staffing/villa-manager](/staffing/villa-manager) — Villa manager placement
 - [/staffing/housekeeping-cleaning](/staffing/housekeeping-cleaning) — Housekeeping staff standards
-- [/staffing/event-staff](/staffing/event-staff) — Event staffing
+- [/staffing/villa-staff](/staffing/villa-staff) — Event staffing
 - [/staffing/how-it-works](/staffing/how-it-works) — How the staffing process works
 
 ## CTAs Used

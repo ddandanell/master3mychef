@@ -1,12 +1,15 @@
 /**
  * myCHEF — MASTER SITEMAP & CONTENT INDEX
  */
-import { LOCATIONS, PILLARS } from './siteArchitecture'
+import { LOCATIONS, PILLARS, LOCATION_PAGE_SLUGS } from './siteArchitecture'
 import { PRIVATE_CHEF_AREAS } from './privateChefAreas'
 import { LANDING_PAGES } from './content/landingPages'
 import { GUIDES } from './content/guides'
 import { BLOG_POSTS } from './content/blogPosts'
 import { JOURNAL_POSTS } from './content/journalPosts'
+import { BAR_SERVICES, BAR_RESOURCES } from './bar-services'
+import { PAGE_META } from './page-meta'
+import { REDIRECT_MAP } from './redirects'
 
 // Re-export the (content-free) metadata arrays so existing importers of
 // `@/data/sitemap` keep working. Article bodies live in ./content/articleContent.
@@ -89,16 +92,21 @@ export function buildSitemap(): SitemapEntry[] {
   //   slug: a.slug,
   // }))
 
-  const locationPages: SitemapEntry[] = Object.values(LOCATIONS).map((l) => ({
-    path: `/locations/${l.slug}`,
-    type: 'area',
-    title: l.title,
-    description: l.description,
-    priority: 0.7,
-    changefreq: 'monthly',
-    area: l.label,
-    slug: l.slug,
-  }))
+  // Only the slugs with a real /locations/<slug> page belong in the sitemap.
+  // The rest are redirect sources (e.g. /locations/berawa → /locations/canggu);
+  // prerendering them creates duplicate/conflicting HTML and "not in sitemap" noise.
+  const locationPages: SitemapEntry[] = Object.values(LOCATIONS)
+    .filter((l) => LOCATION_PAGE_SLUGS.has(l.slug))
+    .map((l) => ({
+      path: `/locations/${l.slug}`,
+      type: 'area',
+      title: l.title,
+      description: l.description,
+      priority: 0.7,
+      changefreq: 'monthly',
+      area: l.label,
+      slug: l.slug,
+    }))
 
   const landing: SitemapEntry[] = LANDING_PAGES.map((l) => ({
     path: `/${l.slug}`,
@@ -156,6 +164,60 @@ export function buildSitemap(): SitemapEntry[] {
     }))
   )
 
+  // Bar Services pages
+  const barServicesPages: SitemapEntry[] = [
+    {
+      path: '/bar-services/',
+      type: 'info',
+      title: PAGE_META['bar-services-hub'].title,
+      description: PAGE_META['bar-services-hub'].description,
+      priority: 0.9,
+      changefreq: 'weekly',
+    },
+    {
+      path: '/bar-services/faq/',
+      type: 'info',
+      title: PAGE_META['bar-services-faq'].title,
+      description: PAGE_META['bar-services-faq'].description,
+      priority: 0.7,
+      changefreq: 'monthly',
+    },
+    {
+      path: '/bar-services/contact/',
+      type: 'info',
+      title: PAGE_META['bar-services-contact'].title,
+      description: PAGE_META['bar-services-contact'].description,
+      priority: 0.6,
+      changefreq: 'monthly',
+    },
+    {
+      path: '/bar-services/resources/',
+      type: 'info',
+      title: PAGE_META['bar-services-resources'].title,
+      description: PAGE_META['bar-services-resources'].description,
+      priority: 0.8,
+      changefreq: 'weekly',
+    },
+    ...BAR_SERVICES.map((s) => ({
+      path: s.route,
+      type: 'service' as const,
+      title: PAGE_META[s.metaKey].title,
+      description: PAGE_META[s.metaKey].description,
+      priority: 0.8,
+      changefreq: 'monthly' as const,
+      slug: s.slug,
+    })),
+    ...BAR_RESOURCES.map((r) => ({
+      path: r.route,
+      type: 'guide' as const,
+      title: PAGE_META[r.metaKey].title,
+      description: PAGE_META[r.metaKey].description,
+      priority: 0.8,
+      changefreq: 'monthly' as const,
+      slug: r.slug,
+    })),
+  ]
+
   // Supporting info pages
   const infoPages: SitemapEntry[] = [
     // Pillar hub pages — must be here or inject-meta.ts skips them → 404
@@ -176,6 +238,7 @@ export function buildSitemap(): SitemapEntry[] {
     // Conversion & utility pages — /quote and /book intentionally excluded (noindex tags)
     { path: '/faq', type: 'info', title: 'Private Chef Bali FAQ | Booking, Pricing & Menus — myCHEF', description: 'Answers to every private chef Bali question: pricing, menus, dietary needs, staffing, weddings & booking flow. Get clarity before you confirm your date.', priority: 0.7, changefreq: 'monthly' },
     { path: '/why-mychef', type: 'info', title: 'Best Private Chef Service Bali | Why myCHEF? — 560+ Villas', description: 'Why 560+ Bali villas trust myCHEF: Michelin-trained leadership, 50+ local staff, same-day confirmation & no-stress guarantee. See the full difference.', priority: 0.7, changefreq: 'monthly' },
+    { path: '/reviews', type: 'info', title: 'myCHEF Bali Reviews | 4.9★ Private Chef & Catering', description: 'Read 4.9★ myCHEF Bali reviews from villa guests, weddings, retreats & events. Real hosts, real outcomes — see why 560+ villas keep coming back.', priority: 0.7, changefreq: 'monthly' },
     { path: '/calculator', type: 'info', title: 'Pricing Calculator | Private Chef Bali | myCHEF.id', description: 'Estimate your private chef, catering, or event costs instantly. Transparent IDR pricing, no hidden fees.', priority: 0.6, changefreq: 'monthly' },
     { path: '/help', type: 'info', title: 'Help Centre | Private Chef & Catering Bali — myCHEF', description: 'Answers to your questions about booking a private chef or catering service in Bali. Guides, pricing, and planning support.', priority: 0.6, changefreq: 'monthly' },
     // Internally-linked pages restored from direct-access 404 (prerendered 2026-06-23)
@@ -191,38 +254,38 @@ export function buildSitemap(): SitemapEntry[] {
     { path: '/help/managing-booking', type: 'guide', title: 'Manage Your Chef Booking Bali | After You Confirm — myCHEF', description: 'Everything that happens after booking your myCHEF private chef in Bali: menu sign-off, villa setup, chef arrival, changes & day-of coordination.', priority: 0.6, changefreq: 'monthly' },
     { path: '/locations', type: 'info', title: 'Private Chef Locations Bali | myCHEF', description: 'Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, and beyond.', priority: 0.8, changefreq: 'monthly' },
     { path: '/chefs', type: 'info', title: 'Our Chefs | Michelin-Trained Private Chefs Bali — myCHEF', description: 'Meet Adriano and the myCHEF culinary team — Michelin-trained leadership and villa-tested specialists in Bali.', priority: 0.8, changefreq: 'monthly' },
-    { path: '/chefs/adriano', type: 'info', title: 'Adriano — Private Chef Bali | Michelin-Trained Founder | myCHEF', description: 'Book Adriano, Executive Chef & Founder of myCHEF Bali. Michelin-trained in Modena. Italian tasting menus, romantic dinners, VIP villa experiences.', priority: 0.7, changefreq: 'monthly' },
-    { path: '/chefs/made-surya', type: 'info', title: 'I Made Surya — Mediterranean & Pasta Chef Bali | myCHEF', description: 'Book I Made Surya for Mediterranean villa dinners and handmade pasta in Bali. Ubud-born, trained under Adriano. Perfect for 2–15 guests.', priority: 0.7, changefreq: 'monthly' },
-    { path: '/chefs/bayu-pranata', type: 'info', title: 'Bayu Pranata — BBQ Grill Chef Bali | Live-Fire Specialist | myCHEF', description: 'Book Bayu Pranata for poolside BBQ and grill events in Bali. Wagyu nights, large group celebrations (10–80+ guests). Jimbaran live-fire specialist.', priority: 0.7, changefreq: 'monthly' },
-    { path: '/chefs/ni-putu-asri', type: 'info', title: 'Ni Putu Asri — Balinese Chef Bali | Indonesian Feast Specialist | myCHEF', description: 'Book Ni Putu Asri for authentic Balinese and Indonesian feast menus in your villa. Gianyar-born, ceremonial cooking heritage, Asian fusion specialist.', priority: 0.7, changefreq: 'monthly' },
-    { path: '/chefs/wayan-suarjana', type: 'info', title: 'Wayan Suarjana — Pastry Chef Bali | Custom Cakes & Plated Desserts | myCHEF', description: 'Book Wayan Suarjana, myCHEF Head Pastry Chef in Bali. Custom celebration cakes, plated desserts, chocolate tasting courses. Hotel-trained pastry specialist.', priority: 0.7, changefreq: 'monthly' },
-    { path: '/chefs/ketut-mahardika', type: 'info', title: 'Ketut Mahardika — Seafood & Japanese Chef Bali | Sashimi Specialist | myCHEF', description: 'Book Ketut Mahardika for Japanese seafood and sashimi dinners in your Bali villa. Jimbaran-born, knife-trained, daily market sourcing. Omakase and feast menus.', priority: 0.7, changefreq: 'monthly' },
-    { path: '/chefs/sari-dewi-kusuma', type: 'info', title: 'Sari Dewi Kusuma — Wellness Chef Bali | Vegan & Retreat Catering | myCHEF', description: 'Book Sari Dewi Kusuma for wellness and retreat catering in Bali. Vegan, raw, Ayurvedic menus. Yoga retreat specialist in Ubud. Detox programmes and villa wellness dinners.', priority: 0.7, changefreq: 'monthly' },
-    { path: '/chefs/komang-artha', type: 'info', title: 'Komang Artha — Event Chef Bali | Large Villa Events & Wedding Catering | myCHEF', description: 'Book Komang Artha for large villa events, weddings, and corporate catering in Bali. 15 years experience, groups from 30 to 200+ guests. Indonesian feast and buffet specialist.', priority: 0.7, changefreq: 'monthly' },
+    { path: '/chefs/adriano', type: 'info', title: 'Adriano — Private Chef Bali | Michelin-Trained Founder | myCHEF', description: 'Book Adriano, Executive Chef & Founder of myCHEF Bali. Michelin-trained in Modena. Italian tasting menus, romantic dinners and VIP villa experiences.', priority: 0.7, changefreq: 'monthly' },
+    { path: '/chefs/made-surya', type: 'info', title: 'I Made Surya — Mediterranean & Pasta Chef | myCHEF', description: 'Book I Made Surya for Mediterranean villa dinners and handmade pasta in Bali. Ubud-born, trained under Adriano. Perfect for 2–15 guests.', priority: 0.7, changefreq: 'monthly' },
+    { path: '/chefs/bayu-pranata', type: 'info', title: 'Bayu Pranata — BBQ Grill Chef | Live-Fire Specialist | myCHEF', description: 'Book Bayu Pranata for poolside BBQ and grill events in Bali. Wagyu nights, large group celebrations (10–80+ guests). Jimbaran live-fire specialist.', priority: 0.7, changefreq: 'monthly' },
+    { path: '/chefs/ni-putu-asri', type: 'info', title: 'Ni Putu Asri — Balinese Chef | Indonesian Feast Specialist | myCHEF', description: 'Book Ni Putu Asri for authentic Balinese and Indonesian feast menus. Gianyar-born, ceremonial cooking heritage, Asian fusion specialist.', priority: 0.7, changefreq: 'monthly' },
+    { path: '/chefs/wayan-suarjana', type: 'info', title: 'Wayan Suarjana — Pastry Chef | Cakes & Desserts | myCHEF', description: 'Book Wayan Suarjana, myCHEF Head Pastry Chef in Bali. Custom cakes, plated desserts and chocolate tasting courses. Hotel-trained pastry specialist.', priority: 0.7, changefreq: 'monthly' },
+    { path: '/chefs/ketut-mahardika', type: 'info', title: 'Ketut Mahardika — Seafood & Japanese Chef | Sashimi | myCHEF', description: 'Book Ketut Mahardika for Japanese seafood and sashimi in your Bali villa. Jimbaran-born, knife-trained, daily market sourcing. Omakase & feast menus.', priority: 0.7, changefreq: 'monthly' },
+    { path: '/chefs/sari-dewi-kusuma', type: 'info', title: 'Sari Dewi Kusuma — Wellness Chef | Vegan Retreats | myCHEF', description: 'Book Sari Dewi Kusuma for wellness and retreat catering in Bali. Vegan, raw, Ayurvedic menus. Yoga retreat specialist. Detox and wellness dinners.', priority: 0.7, changefreq: 'monthly' },
+    { path: '/chefs/komang-artha', type: 'info', title: 'Komang Artha — Event Chef | Villa Events & Weddings | myCHEF', description: 'Book Komang Artha for villa events, weddings and corporate catering in Bali. 15 years experience, groups 30–200+ guests. Indonesian feast and buffet specialist.', priority: 0.7, changefreq: 'monthly' },
     { path: '/corporate-case-studies', type: 'info', title: 'Corporate Catering Case Studies Bali | myCHEF', description: 'Real corporate event case studies in Bali — executive dinners, leadership offsites, retreats and conference catering. Outcomes, metrics and client results.', priority: 0.7, changefreq: 'monthly' },
-    { path: '/journal', type: 'blog-index', title: 'Journal | Bali Private Chef Guides & Hosting Tips', description: 'Guides, cost breakdowns, and insights for hosting in Bali villas.', priority: 0.8, changefreq: 'weekly' },
+    { path: '/journal', type: 'blog-index', title: 'Journal | Bali Private Chef Guides & Hosting Tips', description: 'Expert guides, cost breakdowns, and insider tips for hosting private chefs, villa dinners, weddings, and events in Bali.', priority: 0.8, changefreq: 'weekly' },
     { path: '/pricing', type: 'info', title: 'Pricing | Private Chef Bali, Villa Catering & Events', description: 'Transparent pricing for private chef, catering & event services in Bali. Hourly rates, menu pricing & full packages. No hidden fees. Get a quote.', priority: 0.8, changefreq: 'monthly' },
     // /book removed from sitemap — noindex tag in BookPage.tsx
-    { path: '/staffing', type: 'info', title: 'Chef & Villa Staff Placement Bali | Hire Hospitality Staff — myCHEF', description: 'Long-term private chef placement, villa staff, and hospitality recruitment in Bali and Jakarta.', priority: 0.8, changefreq: 'monthly' },
+    { path: '/staffing', type: 'info', title: 'Villa Staff Placement Bali | Hire Hospitality Staff — myCHEF', description: 'Long-term private chef placement, villa staff, and hospitality recruitment in Bali and Jakarta.', priority: 0.8, changefreq: 'monthly' },
     { path: '/contact', type: 'info', title: 'Contact myCHEF | Private Chef & Catering Bali', description: 'Contact myCHEF for private chef bookings, catering, and event enquiries in Bali.', priority: 0.5, changefreq: 'monthly' },
     { path: '/partner-platform', type: 'info', title: 'Villa Partner Platform | myCHEF Bali', description: 'Partner with myCHEF — private chef and catering services for Bali villa managers and owners.', priority: 0.6, changefreq: 'monthly' },
     { path: '/certified-partner', type: 'info', title: 'Certified Partner Programme | myCHEF Bali', description: 'Become a myCHEF certified partner — preferred private chef and staffing services for Bali villas.', priority: 0.5, changefreq: 'monthly' },
     { path: '/press', type: 'info', title: 'Press & Media | myCHEF Bali Private Chef', description: 'Press coverage, media kit, and brand story for myCHEF — Bali private chef and catering service.', priority: 0.3, changefreq: 'monthly' },
-    { path: '/privacy', type: 'legal', title: 'Privacy Policy | myCHEF Bali', description: 'Privacy policy for myCHEF private chef and catering services in Bali.', priority: 0.3, changefreq: 'yearly' },
+    { path: '/privacy', type: 'legal', title: 'Privacy Policy | myCHEF.id Private Chef & Catering Services Bali', description: 'Read the myCHEF.id privacy policy: how we collect, store, and protect your data when you book private chef, catering, or event services in Bali.', priority: 0.3, changefreq: 'yearly' },
     { path: '/terms', type: 'legal', title: 'Terms of Service | myCHEF Bali', description: 'Terms of service for myCHEF private chef bookings, catering, and events in Bali.', priority: 0.3, changefreq: 'yearly' },
     { path: '/cancellation', type: 'legal', title: 'Cancellation Policy | myCHEF Bali', description: 'Cancellation and refund policy for myCHEF private chef and catering bookings in Bali.', priority: 0.3, changefreq: 'yearly' },
     // Batch #143–147 blog pages (PremiumPage format, dedicated routes)
-    { path: '/blog/drop-off-catering-bali', type: 'blog-post', title: 'Drop-Off Catering Bali -- Fresh Villa Food Delivered Ready to Serve', description: 'Drop-off catering in Bali for villa stays. Fresh food prepared professionally and delivered ready to serve. From IDR 700K/person. All areas covered.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
-    { path: '/blog/hostess-hire-bali', type: 'blog-post', title: 'Hostess Hire Bali -- Professional Event Hostess and Host Greeter Service', description: 'Hire a professional hostess in Bali for corporate events, villa parties, brand activations, and VIP gatherings. English-fluent, luxury-trained. All areas covered.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
-    { path: '/blog/private-chef-surabaya-guide', type: 'blog-post', title: 'Private Chef Surabaya -- In-Home Chef Service and Corporate Catering in East Java', description: 'Hire a private chef in Surabaya for in-home dinners, weekly household service, or corporate entertaining. Halal available. European, Indonesian, and Asian menus.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
-    { path: '/blog/chef-for-photoshoot-bali', type: 'blog-post', title: 'Chef for Food Photoshoot Bali -- Content Creation, Brand Photography and Video Production', description: 'Hire a chef for food photoshoots and content creation in Bali. Hotels, brands, influencers, and publications. Market-fresh sourcing, food styling experience.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
-    { path: '/blog/tasting-menu-bali', type: 'blog-post', title: 'Private Tasting Menu Bali -- Multi-Course Chef\'s Dinner at Your Villa', description: 'Private tasting menu in Bali. 7--11 progressive courses by an executive chef in your villa. Market-led menus, dietary adaptation, wine pairing available. From IDR 750K/person.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
+    { path: '/blog/drop-off-catering-bali', type: 'blog-post', title: 'Drop-Off Catering Bali -- Fresh Villa Food Delivered Ready', description: 'Drop-off catering in Bali for villa stays. Fresh food prepared professionally and delivered ready to serve. From IDR 700K/person. All areas covered.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
+    { path: '/blog/hostess-hire-bali', type: 'blog-post', title: 'Hostess Hire Bali -- Event Hostess & Greeter Service', description: 'Hire a professional hostess in Bali for corporate events, villa parties, brand activations and VIP gatherings. English-fluent, luxury-trained.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
+    { path: '/blog/private-chef-surabaya-guide', type: 'blog-post', title: 'Private Chef Surabaya -- In-Home & Corporate Catering', description: 'Hire a private chef in Surabaya for in-home dinners, weekly household service or corporate entertaining. Halal available. European, Indonesian and Asian menus.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
+    { path: '/blog/chef-for-photoshoot-bali', type: 'blog-post', title: 'Chef for Food Photoshoot Bali -- Content Creation & Video', description: 'Hire a chef for food photoshoots and content creation in Bali. Hotels, brands, influencers and publications. Market-fresh sourcing and food styling.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
+    { path: '/blog/tasting-menu-bali', type: 'blog-post', title: 'Private Tasting Menu Bali -- Multi-Course Villa Dinner', description: 'Private tasting menu in Bali. 7--11 progressive courses by an executive chef in your villa. Market-led menus, dietary adaptation and wine pairing.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
     // Batch #148–152 blog pages (PremiumPage format, dedicated routes)
-    { path: '/blog/luxury-dining-bali', type: 'blog-post', title: 'Luxury Private Dining Bali -- Ultra-Premium In-Villa Chef Experience', description: 'Luxury private dining in Bali delivered by executive chefs with Michelin and international fine dining credentials. Bespoke menus, premium ingredients, full front-of-house service.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
-    { path: '/blog/fine-dining-at-home-bali', type: 'blog-post', title: 'Fine Dining at Home Bali -- Restaurant Quality Delivered to Your Villa', description: 'Fine dining at home in Bali -- restaurant-quality menus, plating, and service delivered to your villa by professional private chefs. All areas covered.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
-    { path: '/blog/holiday-chef-bali', type: 'blog-post', title: 'Holiday Chef Bali -- Private Chef for Christmas, New Year and Festive Season', description: 'Holiday chef service in Bali for Christmas, New Year, and the festive season. Traditional roast, seafood feast, Balinese spread, or bespoke. All villa areas covered.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
-    { path: '/blog/dietary-specific-chef-bali', type: 'blog-post', title: 'Dietary Specific Private Chef Bali -- Vegan, Gluten-Free, Halal, Keto', description: 'Dietary-specific private chef in Bali. Vegan, gluten-free, halal, keto, allergen-free menus in your villa. Specialist chefs, multi-requirement groups. All Bali areas.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
-    { path: '/blog/hotel-restaurant-chef-staffing', type: 'blog-post', title: 'Hotel and Restaurant Chef Staffing Bali -- F&B Culinary Recruitment', description: 'Chef staffing for hotels, resorts, and restaurants in Bali. Executive chefs, sous chefs, pastry chefs, line cooks. Temporary, contract, and permanent placement.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
+    { path: '/blog/luxury-dining-bali', type: 'blog-post', title: 'Luxury Private Dining Bali -- Ultra-Premium Villa Experience', description: 'Luxury private dining in Bali delivered by executive chefs with Michelin credentials. Bespoke menus, premium ingredients and full front-of-house service.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
+    { path: '/blog/fine-dining-at-home-bali', type: 'blog-post', title: 'Fine Dining at Home Bali -- Restaurant Quality to Your Villa', description: 'Fine dining at home in Bali -- restaurant-quality menus, plating, and service delivered to your villa by professional private chefs. All areas covered.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
+    { path: '/blog/holiday-chef-bali', type: 'blog-post', title: 'Holiday Chef Bali -- Christmas, New Year & Festive Season', description: 'Holiday chef service in Bali for Christmas, New Year, and the festive season. Roast, seafood, Balinese spread, or bespoke menus. All villa areas.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
+    { path: '/blog/dietary-specific-chef-bali', type: 'blog-post', title: 'Dietary Specific Private Chef Bali -- Vegan, Gluten-Free & More', description: 'Dietary-specific private chef in Bali. Vegan, gluten-free, halal, keto, allergen-free menus. Specialist chefs and multi-requirement groups. All Bali areas.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
+    { path: '/blog/hotel-restaurant-chef-staffing', type: 'blog-post', title: 'Hotel & Restaurant Chef Staffing Bali -- F&B Recruitment', description: 'Chef staffing for hotels, resorts and restaurants in Bali. Executive, sous, pastry and line chefs. Temporary, contract and permanent placement.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
     // 2026-07-01: unique cultural content (2.4k words), no live equivalent → served (was routed but unregistered).
     { path: '/blog/indonesian-street-food-private-chef-bali', type: 'blog-post', title: 'Indonesian Street Food at Your Bali Villa -- Private Chef', description: 'Authentic Indonesian street food classics at your Bali villa -- nasi goreng, satay lilit, babi guling, gado-gado -- by a private chef. From IDR 700K/person.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
   ]
@@ -241,7 +304,7 @@ export function buildSitemap(): SitemapEntry[] {
     })
   )
 
-  return [
+  const entries = [
     home,
     // ...areas,  // Fjernet: disse redirecter til /locations/*
     ...locationPages,
@@ -251,8 +314,13 @@ export function buildSitemap(): SitemapEntry[] {
     ...blogPosts,
     ...journalPosts,
     ...pillarSubPages,
+    ...barServicesPages,
     ...infoPages,
   ]
+
+  // Safety net: never index redirect sources. A path that has a 301 rule should
+  // not appear in the sitemap, inject-meta, or prerender output.
+  return entries.filter((entry) => !REDIRECT_MAP[entry.path])
 }
 
 export const SERVICES = Object.values(PILLARS).map((pillar) => ({

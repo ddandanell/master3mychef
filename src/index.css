@@ -325,6 +325,15 @@
     contain-intrinsic-size: auto 900px;
   }
 
+  /* Hide scrollbar for horizontally-scrolling sub-navs etc. */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   /* Critical hero image fallback — ensures homepage never looks completely broken */
   img[src*="/generated/mychef-misc-bali-hub-hero.webp"],
   img[src*="/generated/mychef-finedining-bali-hub-fine-dining.webp"],

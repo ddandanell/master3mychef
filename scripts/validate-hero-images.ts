@@ -56,6 +56,15 @@ const HERO_IMAGES: HeroImageConfig[] = [
     minWidth: 1200,
     maxSize: 300,
     description: 'How it works guide hero image'
+  },
+  {
+    pageName: 'Bar Services Hub',
+    pageRoute: '/bar-services',
+    imagePath: 'public/generated/mychef-bar-services-bali-hero-hub.webp',
+    requiredFormat: 'webp',
+    minWidth: 1200,
+    maxSize: 300,
+    description: 'Bar services hub hero image'
   }
 ]
 

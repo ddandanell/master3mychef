@@ -174,12 +174,12 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Yoga Retreat Chef', href: '/blog/yoga-retreat-chef-bali-meal-planning', desc: 'Dedicated meal planning guide for yoga retreat organisers in Bali.' },
+  { label: 'Yoga Retreat Chef', href: '/journal/yoga-retreat-meal-planning-bali', desc: 'Dedicated meal planning guide for yoga retreat organisers in Bali.' },
   { label: 'Private Chef Ubud', href: '/private-chef/ubud', desc: 'Ubud private chef service — the heart of Bali\'s wellness scene.' },
   { label: 'Food Allergies Guide', href: '/blog/food-allergies-dietary-requirements-private-chef-bali', desc: 'How myCHEF handles dietary requirements and food allergies.' },
-  { label: 'Cooking Class Bali', href: '/blog/bali-villa-cooking-class-private-chef', desc: 'Add a Balinese cooking class experience to your retreat programme.' },
+  { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Add a Balinese cooking class experience to your retreat programme.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all catering formats and programme types.' },
-  { label: 'Floating Breakfast', href: '/blog/floating-breakfast-bali', desc: 'The iconic Bali floating breakfast — add it to your retreat stay.' },
+  { label: 'Floating Breakfast', href: '/catering/floating-breakfast', desc: 'The iconic Bali floating breakfast — add it to your retreat stay.' },
 ]
 
 export default function WellnessRetreatCateringPage() {
@@ -187,9 +187,9 @@ export default function WellnessRetreatCateringPage() {
     <PremiumPage
       slug="blog/bali-wellness-retreat-catering"
       title="Wellness Retreat Catering Bali | Plant-Based & Nourishing Meals for Retreat Guests"
-      description="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 700K/person/day. Ubud, Canggu, Uluwatu."
-      seoTitle="Wellness Retreat Catering Bali | Private Chef for Yoga Retreats | myCHEF"
-      seoDescription="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 700K/person/day. Ubud, Canggu, Uluwatu."
+      description="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 700K/person/day."
+      seoTitle="Wellness Retreat Catering Bali | Yoga Retreat Chef | myCHEF"
+      seoDescription="Private chef catering for wellness and yoga retreats in Bali. Plant-based menus, detox programs, macro-balanced meals. From IDR 700K/person/day."
       canonicalUrl="https://mychef.id/blog/bali-wellness-retreat-catering"
       h1="Wellness Retreat Catering Bali"
       subtitle="Plant-Based, Nourishing & Macro-Conscious Meals for Bali Retreat Guests"

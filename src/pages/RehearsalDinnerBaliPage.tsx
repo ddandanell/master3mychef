@@ -116,12 +116,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Bali Wedding Catering', href: '/blog/bali-wedding-catering-budget-guide', desc: 'Full guide to wedding catering costs' },
+  { label: 'Bali Wedding Catering', href: '/bali-wedding-catering-packages', desc: 'Full guide to wedding catering costs' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Plated Dinner Catering', href: '/blog/plated-dinner-catering-bali', desc: 'Formal multi-course dinner service' },
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'End-to-end villa event catering' },
-  { label: 'Sommelier Hire Bali', href: '/blog/sommelier-hire-bali', desc: 'Wine service and pairing for events' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Professional event crew hire' },
+  { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'End-to-end villa event catering' },
+  { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine service and pairing for events' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Professional event crew hire' },
 ]
 
 export default function RehearsalDinnerBaliPage() {
@@ -130,8 +130,8 @@ export default function RehearsalDinnerBaliPage() {
       slug="blog/rehearsal-dinner-bali"
       title="Rehearsal Dinner Bali -- Private Chef Catering for the Night Before Your Wedding"
       seoTitle="Rehearsal Dinner Bali -- Private Chef Catering for Wedding Week Events"
-      description="Private chef catering for Bali rehearsal dinners. Intimate villa dinners, garden feasts, and cocktail welcome parties for 10--50 guests. Full service coordination included."
-      seoDescription="Rehearsal dinner catering in Bali for 10--50 guests. Private chef, service staff, and full coordination for the night before your villa wedding. From IDR 700K/person."
+      description="Private chef catering for Bali rehearsal dinners. Intimate villa dinners, garden feasts, and cocktail welcome parties for 10--50 guests."
+      seoDescription="Rehearsal dinner catering in Bali for 10--50 guests. Private chef, service staff and full coordination for the night before your villa wedding."
       h1="Rehearsal Dinner Bali -- Private Chef Catering for the Night Before Your Wedding"
       subtitle="Intimate villa dinners and garden feasts for the wedding party -- the most personal evening of your wedding week."
       heroImage="/images/blog/rehearsal-dinner-bali.jpg"

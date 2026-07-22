@@ -42,7 +42,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Trend 4',
     title: 'Breakfast as a Fine Dining Occasion',
     body: `<p>Floating breakfasts were everywhere in 2019-2022. In 2026, the request has evolved: guests still want a beautiful villa breakfast experience, but the format has become more elaborate and dinner-quality in its ambition. We're seeing requests for full cooked brunches with multiple courses — fresh-pressed juices, house-made granola, eggs three ways, Indonesian breakfast dishes (nasi jinggo, tipat cantok, bubuh injin), and a pastry course — treated with the same care and presentation as an evening meal.</p>
-    <p>This is partly driven by the rise of longer villa stays: with a week in Bali rather than a long weekend, breakfast becomes a daily dining experience worth investing in rather than something to rush through before a day of activities. Our <a href="/blog/floating-breakfast-bali" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a> covers this in more detail.</p>`,
+    <p>This is partly driven by the rise of longer villa stays: with a week in Bali rather than a long weekend, breakfast becomes a daily dining experience worth investing in rather than something to rush through before a day of activities. Our <a href="/catering/floating-breakfast" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a> covers this in more detail.</p>`,
   },
   {
     id: 'trend-dietary',
@@ -51,7 +51,7 @@ const SECTIONS: PageSection[] = [
     title: 'Complex Multi-Dietary Group Menus',
     body: `<p>Multi-dietary group dinners — where a table of 8 includes a vegan, a pescatarian, a coeliac, and someone keeping halal, all expecting equally compelling food — have become one of the most technically demanding and most common requests in the Bali villa dining market in 2026.</p>
     <p>This reflects the composition of the travel groups arriving: mixed-diet families, corporate wellness retreats, and friend groups from major Western cities where dietary diversity at a dinner table is the norm, not the exception. A private chef who can produce a 6-course dinner that reads as thoughtful and high-quality across all four dietary constraints simultaneously is genuinely skilled — and increasingly expected.</p>
-    <p>Our <a href="/blog/food-allergies-dietary-requirements-bali" class="text-[#7E6410] hover:underline font-medium">dietary requirements guide</a> explains how we handle this and what to specify when booking.</p>`,
+    <p>Our <a href="/blog/dietary-specific-chef-bali" class="text-[#7E6410] hover:underline font-medium">dietary requirements guide</a> explains how we handle this and what to specify when booking.</p>`,
   },
   {
     id: 'trend-wine',
@@ -74,7 +74,7 @@ const SECTIONS: PageSection[] = [
       <li>Cooking class followed by the dinner the guests helped prepare</li>
       <li>Pre-dinner tour of a local market with the chef, then cooking together at the villa</li>
     </ul>
-    <p style="margin-top:0.75rem;">This shift toward experiential dining is directly connected to why villa guests prefer a private chef over a restaurant: the setting and the personalisation are not available in any restaurant at any price point. Our <a href="/blog/bali-villa-cooking-class-private-chef" class="text-[#7E6410] hover:underline font-medium">cooking class guide</a> covers the interactive format in more detail.</p>`,
+    <p style="margin-top:0.75rem;">This shift toward experiential dining is directly connected to why villa guests prefer a private chef over a restaurant: the setting and the personalisation are not available in any restaurant at any price point. Our <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">cooking class guide</a> covers the interactive format in more detail.</p>`,
   },
   {
     id: 'cta',
@@ -111,7 +111,7 @@ export default function FineDiningTrendsBali2026Page() {
     <PremiumPage
       slug="blog/fine-dining-trends-bali-2026-innovations"
       title="Fine Dining Trends Bali 2026: What's Shaping Luxury Villa Dining"
-      description="The 7 trends shaping fine dining in Bali in 2026 — from hyperlocal Indonesian tasting menus to zero-waste cooking, natural wine pairings, and experience-led villa dinners."
+      description="The 7 trends shaping fine dining in Bali in 2026 — from hyperlocal Indonesian tasting menus to zero-waste cooking, natural wine pairings, and experience-led."
       h1="Fine Dining Trends Bali 2026 — What's Shaping Luxury Villa Dining"
       subtitle="Seven trends driving how high-end villa guests eat in Bali right now"
       heroImage="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80"
@@ -123,10 +123,10 @@ export default function FineDiningTrendsBali2026Page() {
       faqs={FAQS}
       relatedPages={[
         { label: 'Fine Dining Private Chef', href: '/fine-dining', desc: 'Full-service fine dining with dedicated waitstaff and matched wines.' },
-        { label: 'Private Chef Ubud Guide', href: '/blog/private-chef-ubud-guide', desc: 'Private chef for rice field villas and forest retreat properties.' },
-        { label: 'Private Chef Seminyak Guide', href: '/blog/private-chef-seminyak-guide', desc: 'Fine dining private chef for Seminyak luxury villas.' },
-        { label: 'Romantic Dinner Bali', href: '/blog/romantic-dinner-bali-private-chef', desc: 'Private romantic dinners for couples in Bali.' },
-        { label: 'Cooking Class Bali', href: '/blog/bali-villa-cooking-class-private-chef', desc: 'Interactive private cooking classes at your villa.' },
+        { label: 'Private Chef Ubud Guide', href: '/private-chef/ubud', desc: 'Private chef for rice field villas and forest retreat properties.' },
+        { label: 'Private Chef Seminyak Guide', href: '/private-chef/seminyak', desc: 'Fine dining private chef for Seminyak luxury villas.' },
+        { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private romantic dinners for couples in Bali.' },
+        { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Interactive private cooking classes at your villa.' },
         { label: 'Book a Chef', href: '/contact', desc: 'Check availability for your fine dining experience.' },
       ]}
       extraJsonLd={[

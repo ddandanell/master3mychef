@@ -124,11 +124,11 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Bartender Hire Bali', href: '/blog/bartender-hire-bali', desc: 'Professional bar staff for your party' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Waiters and event crew hire' },
-  { label: 'Grazing Table Bali', href: '/blog/grazing-table-bali', desc: 'Styled grazing boards for events' },
-  { label: 'BBQ Catering Bali', href: '/blog/bali-bbq-catering-villa-guide', desc: 'Poolside and garden BBQ packages' },
-  { label: 'Large Group Catering', href: '/blog/large-group-catering-bali', desc: 'Catering for 30+ guests' },
+  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Professional bar staff for your party' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters and event crew hire' },
+  { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Styled grazing boards for events' },
+  { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Poolside and garden BBQ packages' },
+  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering for 30+ guests' },
 ]
 
 export default function VillaPartyCateringBaliPage() {
@@ -136,9 +136,9 @@ export default function VillaPartyCateringBaliPage() {
     <PremiumPage
       slug="blog/villa-party-catering-bali"
       title="Villa Party Catering Bali — Food and Staff for Private Celebrations"
-      seoTitle="Villa Party Catering Bali — Private Chef, Bar Staff & Waiters for Villa Events"
-      description="Full villa party catering in Bali — private chef, bartender, and event staff for poolside parties, birthdays, and celebrations. BBQ, buffet, sit-down dinner, and cocktail formats."
-      seoDescription="Villa party catering in Bali for 10–200+ guests. Private chef, bar staff, waiters. BBQ, buffet, sit-down dinner & cocktail formats. From IDR 700K/person. Same-day replacement guarantee."
+      seoTitle="Villa Party Catering Bali — Chef, Bar Staff & Waiters | myCHEF"
+      description="Full villa party catering in Bali — private chef, bartender, and event staff for poolside parties, birthdays, and celebrations."
+      seoDescription="Villa party catering in Bali for 10–200+ guests. Private chef, bar staff, waiters. BBQ, buffet, sit-down dinner & cocktails. From IDR 700K/person."
       h1="Villa Party Catering Bali — Private Chef, Bar Staff & Waiters for Your Celebration"
       subtitle="End-to-end catering for villa parties across Bali — poolside BBQs, birthday dinners, cocktail receptions, and full event packages."
       heroImage="/images/blog/villa-party-catering-bali.jpg"
@@ -169,7 +169,7 @@ export default function VillaPartyCateringBaliPage() {
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
-          headline: 'Villa Party Catering Bali — Private Chef, Bar Staff & Waiters for Villa Events',
+          headline: 'Villa Party Catering Bali — Chef, Bar Staff & Waiters | myCHEF',
           description:
             'Full villa party catering in Bali for 10–200+ guests. Private chef, bartenders, event staff. BBQ, buffet, cocktail, and sit-down dinner formats. Same-day replacement guarantee.',
           url: 'https://mychef.id/blog/villa-party-catering-bali',

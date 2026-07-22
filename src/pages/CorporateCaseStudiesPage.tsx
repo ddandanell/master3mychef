@@ -168,7 +168,7 @@ export default function CorporateCaseStudiesPage() {
     <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Corporate Catering Case Studies Bali | myCHEF"
-        description="Real corporate event case studies in Bali — executive dinners, leadership offsites, team retreats and conference catering. Outcomes, metrics and client results from myCHEF."
+        description="Real corporate event case studies in Bali — executive dinners, leadership offsites, team retreats and conference catering. Outcomes, metrics and client results."
         canonical={canonical}
         jsonLd={SCHEMAS}
       />

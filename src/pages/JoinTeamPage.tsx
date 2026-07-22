@@ -91,7 +91,7 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'About myCHEF', href: '/about', desc: 'Learn about the brand and Adriano’s standards.' },
+  { label: 'About myCHEF', href: '/fine-dining/our-chefs', desc: 'Learn about the brand and Adriano’s standards.' },
   { label: 'Our Chefs', href: '/chefs', desc: 'See the caliber of team we are building.' },
   { label: 'Staffing', href: '/staffing', desc: 'The hospitality services we deliver to villas.' },
   { label: 'Contact', href: '/contact', desc: 'Speak directly with the team.' },

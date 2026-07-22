@@ -169,7 +169,7 @@ const RELATED_PAGES = [
   { label: 'Private Chef Ubud', href: '/private-chef/ubud', desc: 'Ubud private chef page — organic menus, cooking classes, jungle villas.' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Full breakdown of private chef pricing across formats and group sizes.' },
   { label: 'Pricing', href: '/pricing', desc: 'All myCHEF packages and pricing at a glance.' },
-  { label: 'Honeymoon Private Chef', href: '/blog/honeymoon-private-chef-bali', desc: 'Planning a honeymoon chef experience in Bali — everything you need to know.' },
+  { label: 'Honeymoon Private Chef', href: '/honeymoon-chef', desc: 'Planning a honeymoon chef experience in Bali — everything you need to know.' },
 ]
 
 export default function SeminyakVsCangguVsUbudPage() {

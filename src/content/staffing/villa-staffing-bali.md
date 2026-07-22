@@ -53,7 +53,7 @@ Complete villa staffing means we handle every aspect of building, verifying, and
 
 **Security & Drivers.** Gate and perimeter security, guest transfers, airport runs, and local logistics. Every candidate is identity-verified, reference-checked, and locally licensed.
 
-**Event & Service Staff.** Waiters, bartenders, and service crew for villa dinners, weddings, and private celebrations — professional, presentable, and guest-experience trained. View our [event staff for villa parties](/staffing/event-staff).
+**Event & Service Staff.** Waiters, bartenders, and service crew for villa dinners, weddings, and private celebrations — professional, presentable, and guest-experience trained. View our [event staff for villa parties](/staffing/villa-staff).
 
 But finding the right people is only half the equation. We also employ, manage, and continuously support your team:
 
@@ -277,12 +277,7 @@ Whether you are opening a new villa, replacing an unreliable team, or upgrading 
     "@type": "Place",
     "name": "Bali, Indonesia"
   },
-  "priceRange": "$$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "560"
-  }
+  "priceRange": "$$$"
 }
 </script>
 
@@ -442,7 +437,7 @@ Whether you are opening a new villa, replacing an unreliable team, or upgrading 
 - [/staffing/villa-manager](/staffing/villa-manager) — Villa manager recruitment
 - [/staffing/housekeeping-cleaning](/staffing/housekeeping-cleaning) — Housekeeping and villa cleaning
 - [/staffing/maintenance](/staffing/maintenance) — Villa maintenance support
-- [/staffing/event-staff](/staffing/event-staff) — Event staff for villa parties
+- [/staffing/villa-staff](/staffing/villa-staff) — Event staff for villa parties
 - [/staffing/recruitment](/staffing/recruitment) — Recruitment and vetting process
 - [/staffing/how-it-works](/staffing/how-it-works) — How villa staffing works
 

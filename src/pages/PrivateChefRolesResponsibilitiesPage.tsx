@@ -42,8 +42,8 @@ const SECTIONS: PageSection[] = [
     title: 'Private Chef vs Household Chef vs Personal Chef',
     body: `<p>These three terms are sometimes used interchangeably but have distinct meanings in the context of hiring:</p>
     <p><strong>Private chef (single occasion or short term):</strong> A chef hired for a specific event or villa stay — a dinner party, a week in Bali, a corporate event. The engagement has a defined start and end. This is the most common format for villa and holiday bookings.</p>
-    <p><strong>Household chef (live-in or long-term placement):</strong> A chef hired on a permanent or semi-permanent basis to cook daily meals for a household or estate. In Bali, this usually means a live-in chef who prepares breakfast and dinner for a family or long-term resident, often with grocery purchasing and kitchen management responsibilities. See our <a href="/blog/household-chef-bali-hiring-guide" class="text-[#7E6410] hover:underline font-medium">household chef hiring guide</a> for what this involves.</p>
-    <p><strong>Personal chef (ongoing flexible contract):</strong> A chef who visits regularly — several times per week — to prepare meals in batches or cook specific meals on a schedule. Less common in Bali but increasingly requested by expat residents and long-stay villa guests who want regular high-quality cooking without a full-time hire. See our <a href="/blog/private-chef-bali-expats" class="text-[#7E6410] hover:underline font-medium">expat private chef guide</a>.</p>`,
+    <p><strong>Household chef (live-in or long-term placement):</strong> A chef hired on a permanent or semi-permanent basis to cook daily meals for a household or estate. In Bali, this usually means a live-in chef who prepares breakfast and dinner for a family or long-term resident, often with grocery purchasing and kitchen management responsibilities. See our <a href="/staffing/household-staff" class="text-[#7E6410] hover:underline font-medium">household chef hiring guide</a> for what this involves.</p>
+    <p><strong>Personal chef (ongoing flexible contract):</strong> A chef who visits regularly — several times per week — to prepare meals in batches or cook specific meals on a schedule. Less common in Bali but increasingly requested by expat residents and long-stay villa guests who want regular high-quality cooking without a full-time hire. See our <a href="/hire-private-chef-bali-monthly" class="text-[#7E6410] hover:underline font-medium">expat private chef guide</a>.</p>`,
   },
   {
     id: 'what-not-included',
@@ -69,7 +69,7 @@ const SECTIONS: PageSection[] = [
       <li><strong>Chef arrival:</strong> The chef arrives at the villa at the agreed time with all ingredients sourced and ready to begin mise en place.</li>
       <li><strong>Service and cleanup:</strong> Full service through to kitchen cleanup. The chef leaves the kitchen as they found it.</li>
     </ol>
-    <p style="margin-top:0.75rem;">For our full service overview see the <a href="/how-it-works" class="text-[#7E6410] hover:underline font-medium">how it works page</a>.</p>`,
+    <p style="margin-top:0.75rem;">For our full service overview see the <a href="/why-mychef" class="text-[#7E6410] hover:underline font-medium">how it works page</a>.</p>`,
   },
   {
     id: 'cta',
@@ -114,7 +114,7 @@ export default function PrivateChefRolesResponsibilitiesPage() {
     <PremiumPage
       slug="blog/private-chef-roles-responsibilities-explained"
       title="Private Chef Roles & Responsibilities Explained | myCHEF"
-      description="Understand exactly what a private chef does: menu planning, market sourcing, cooking, service, and cleanup. How a private chef differs from a villa cook, household chef, and personal chef."
+      description="Understand exactly what a private chef does: menu planning, market sourcing, cooking, service, and cleanup. How a private chef differs from a villa cook."
       h1="Private Chef Roles & Responsibilities Explained"
       subtitle="What a private chef does, what's included in the role, and how it differs from a villa cook or household chef"
       heroImage="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1400&q=80"
@@ -127,7 +127,7 @@ export default function PrivateChefRolesResponsibilitiesPage() {
       relatedPages={[
         { label: 'How to Hire a Private Chef Bali', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Step-by-step guide to hiring a private chef in Bali.' },
         { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Full pricing breakdown — what a private chef costs in Bali.' },
-        { label: 'Household Chef Hiring Guide', href: '/blog/household-chef-bali-hiring-guide', desc: 'How to hire a live-in or long-term household chef in Bali.' },
+        { label: 'Household Chef Hiring Guide', href: '/staffing/household-staff', desc: 'How to hire a live-in or long-term household chef in Bali.' },
         { label: 'Fine Dining Private Chef', href: '/fine-dining', desc: 'Full-service fine dining experiences with dedicated waitstaff.' },
         { label: 'Our Chef Profiles', href: '/chefs', desc: 'Meet our team of trained private chefs.' },
         { label: 'Book a Chef', href: '/contact', desc: 'Check availability and get a quote.' },

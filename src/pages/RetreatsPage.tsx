@@ -72,7 +72,7 @@ const RELATED_PAGES = [
   { label: 'Catering', href: '/catering', desc: 'Full-service villa catering options.' },
   { label: 'Events', href: '/events', desc: 'Weddings, birthdays, and celebrations.' },
   { label: 'Corporate Events', href: '/events/corporate-events', desc: 'Executive dining and team events.' },
-  { label: 'Wellness Menus', href: '/menus/vegan', desc: 'Plant-based and wellness-focused menus.' },
+  { label: 'Wellness Menus', href: '/fine-dining/menus', desc: 'Plant-based and wellness-focused menus.' },
   { label: 'Get a Quote', href: '/quote', desc: 'Custom proposal within 24 hours.' },
   { label: 'Contact', href: '/contact', desc: 'Speak with our retreat specialist.' },
 ]

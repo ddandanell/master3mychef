@@ -1,4 +1,5 @@
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
+import { REDIRECT_MAP } from '@/data/redirects'
 
 export interface ContentEntry {
   slug: string
@@ -150,7 +151,7 @@ export function enrichPost(entry: ContentEntry, kind: PostKind = entry.slug.star
     ...hydrated,
     kind,
     label: kind === 'guide' ? 'Guide' : 'Article',
-    path: `/${entry.slug}`,
+    path: REDIRECT_MAP[`/${entry.slug}`] ?? `/${entry.slug}`,
     readTimeMinutes: getReadTimeMinutes(hydrated),
     topics: inferTopics(hydrated),
     headings,

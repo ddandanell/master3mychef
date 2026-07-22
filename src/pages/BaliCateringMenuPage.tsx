@@ -202,9 +202,9 @@ export default function BaliCateringMenuPage() {
     <PremiumPage
       slug="blog/bali-catering-menu"
       title="Bali Catering Menus: Traditional, Seasonal & Modern Options for Your Villa"
-      description="Complete guide to Bali catering menus — traditional Balinese dishes, seasonal ingredients, fusion styles, dietary accommodations, and occasion-specific planning for villa events."
+      description="Complete guide to Bali catering menus — traditional Balinese dishes, seasonal ingredients, fusion styles, dietary accommodations, and occasion-specific."
       seoTitle="Bali Catering Menus | Seasonal Ingredients & Villa Catering Guide 2026"
-      seoDescription="Complete guide to Bali catering menus — traditional Balinese dishes, Bali's seasonal produce, fusion styles, dietary options, and planning advice for villa events of any size."
+      seoDescription="Complete guide to Bali catering menus — traditional Balinese dishes, seasonal produce, fusion styles, dietary options, and planning advice for villa events."
       canonicalUrl="https://mychef.id/blog/bali-catering-menu"
       h1="Bali Catering Menus"
       subtitle="Traditional, Seasonal & Modern Cuisine for Your Villa"

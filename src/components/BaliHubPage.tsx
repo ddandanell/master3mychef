@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Utensils, Flame, Sparkles } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
 import { TOP_CITIES } from '@/data/topCities'
+import { getLocationCanonical } from '@/data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -12,7 +13,7 @@ const WA = '6289674072020'
 export default function BaliHubPage() {
   const canonical = `${SITE}/guide/private-chef-bali`
   const title = 'Private Chef in Bali — Every Villa Region We Serve'
-  const description = 'myCHEF serves the ten most-visited villa regions in Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan, and Bukit. Catering, events, and fine dining at every address.'
+  const description='myCHEF serves the ten most-visited villa regions in Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan, and Bukit.'
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent("Hi myCHEF, I'd like a private chef in Bali.")}`
 
   return (
@@ -93,7 +94,7 @@ export default function BaliHubPage() {
             {TOP_CITIES.map((c) => (
               <Link
                 key={c.slug}
-                to={`/${c.slug}`}
+                to={getLocationCanonical(c.slug)}
                 className="block bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#C5A028] transition-all"
               >
                 <div className="flex items-baseline justify-between mb-3">
@@ -144,7 +145,7 @@ export default function BaliHubPage() {
             If you own or manage a villa in any of the ten regions above, our partner programme lets you offer on-demand
             fine dining as part of your guest experience — at preferred partner pricing.
           </p>
-          <Link to="/partners" className="inline-flex items-center justify-center bg-[#2C5F7C] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1E4A5E] transition-all">
+          <Link to="/staffing/for-villa-managers" className="inline-flex items-center justify-center bg-[#2C5F7C] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1E4A5E] transition-all">
             See the Partner Programme
           </Link>
         </div>

@@ -224,12 +224,7 @@ We place maintenance staff across all major villa regions: Seminyak, Canggu, Ubu
     "@type": "Place",
     "name": "Bali, Indonesia"
   },
-  "priceRange": "$$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "560"
-  }
+  "priceRange": "$$$"
 }
 </script>
 

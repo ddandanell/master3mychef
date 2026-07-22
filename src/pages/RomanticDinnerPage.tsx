@@ -554,7 +554,7 @@ export default function RomanticDinnerPage() {
             { label: 'Fine Dining Overview', href: '/fine-dining' },
             { label: 'Tasting Menu', href: '/fine-dining/tasting-menu' },
             { label: "Chef's Table", href: '/fine-dining/chefs-table' },
-            { label: 'Our Menus', href: '/menus' },
+            { label: 'Our Menus', href: '/fine-dining/menus' },
             { label: 'Pricing', href: '/pricing' },
           ].map((l) => (
             <Link key={l.href} to={l.href} className="text-white/[50%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">

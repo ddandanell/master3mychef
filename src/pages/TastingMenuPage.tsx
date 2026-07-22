@@ -536,7 +536,7 @@ export default function TastingMenuPage() {
             { label: 'Fine Dining Overview', href: '/fine-dining' },
             { label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner' },
             { label: "Chef's Table", href: '/fine-dining/chefs-table' },
-            { label: 'Our Menus', href: '/menus' },
+            { label: 'Our Menus', href: '/fine-dining/menus' },
             { label: 'Our Chefs', href: '/chefs' },
           ].map((l) => (
             <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">

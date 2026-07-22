@@ -107,9 +107,9 @@ export default function PrivateChefNusaDuaGuidePage() {
     <PremiumPage
       slug="blog/private-chef-nusa-dua-guide"
       title="Private Chef Nusa Dua | Villa Dining at Your Resort | myCHEF"
-      description="Book a private chef in Nusa Dua for your villa or resort stay. Fresh seafood, Indonesian cuisine, and international fine dining. Groups of 2–20. From IDR 700,000 per person."
+      description="Book a private chef in Nusa Dua for your villa or resort stay. Fresh seafood, Indonesian cuisine and international fine dining. Groups 2–20."
       seoTitle="Private Chef Nusa Dua | Villa Dining at Your Resort | myCHEF"
-      seoDescription="Book a private chef in Nusa Dua for your villa or resort stay. Fresh seafood, Indonesian cuisine, and international fine dining. Groups of 2–20. From IDR 700,000 per person."
+      seoDescription="Book a private chef in Nusa Dua for your villa or resort stay. Fresh seafood, Indonesian cuisine and international fine dining. Groups 2–20."
       canonicalUrl="https://mychef.id/blog/private-chef-nusa-dua-guide"
       h1="Private Chef Nusa Dua — Villa & Resort Dining"
       subtitle="Dedicated chef service for Nusa Dua villas, beach clubs, and resort escapes"

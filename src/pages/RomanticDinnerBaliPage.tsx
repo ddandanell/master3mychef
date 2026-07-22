@@ -101,7 +101,7 @@ const SECTIONS = [
 
     <p><strong>Custom cocktail:</strong> A signature cocktail created and named for the couple — served as the cocktail hour drink. Something to order again someday and remember.</p>
 
-    <p><strong>Proposal dinner add-on:</strong> If this evening ends with a question, myCHEF offers a full proposal coordination service: the ring arriving with dessert, photographer referral for a candid capture of the moment, moment coordination with the chef, and optional video documentation. Tell us in advance — we have done this many times and know how to make it perfect. See our full <a href="/blog/proposal-dinner-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">proposal dinner page</a> for details.</p>`,
+    <p><strong>Proposal dinner add-on:</strong> If this evening ends with a question, myCHEF offers a full proposal coordination service: the ring arriving with dessert, photographer referral for a candid capture of the moment, moment coordination with the chef, and optional video documentation. Tell us in advance — we have done this many times and know how to make it perfect. See our full <a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">proposal dinner page</a> for details.</p>`,
   },
   {
     id: 'faq',
@@ -148,11 +148,11 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Proposal Dinner Bali', href: '/blog/proposal-dinner-bali-private-chef', desc: 'Full proposal coordination with private chef dinner.' },
-  { label: 'Anniversary Dinner', href: '/blog/anniversary-dinner-villa-bali', desc: 'Private chef anniversary dinner at your Bali villa.' },
-  { label: 'Honeymoon Chef Bali', href: '/blog/honeymoon-private-chef-bali', desc: 'Private chef service for honeymooners in Bali.' },
+  { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Full proposal coordination with private chef dinner.' },
+  { label: 'Anniversary Dinner', href: '/events/anniversaries', desc: 'Private chef anniversary dinner at your Bali villa.' },
+  { label: 'Honeymoon Chef Bali', href: '/honeymoon-chef', desc: 'Private chef service for honeymooners in Bali.' },
   { label: 'Fine Dining Bali', href: '/fine-dining/private-chef-bali', desc: 'myCHEF fine dining private chef experience in Bali.' },
-  { label: 'Floating Breakfast Bali', href: '/blog/floating-breakfast-bali', desc: 'The iconic Bali floating breakfast at your villa pool.' },
+  { label: 'Floating Breakfast Bali', href: '/catering/floating-breakfast', desc: 'The iconic Bali floating breakfast at your villa pool.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF packages and services.' },
 ]
 
@@ -161,9 +161,9 @@ export default function RomanticDinnerBaliPage() {
     <PremiumPage
       slug="blog/romantic-dinner-bali-private-chef"
       title="Romantic Dinner Bali: Private Chef at Your Villa"
-      description="The most romantic dinner in Bali — your own private chef, candles by the pool, bespoke menu for two. Honeymoon, anniversary, or just because. From IDR 1,800K for two."
+      description="The most romantic dinner in Bali — your own private chef, candles by the pool, bespoke menu for two. Honeymoon, anniversary, or just because."
       seoTitle="Romantic Dinner Bali | Private Chef Villa Dinner | myCHEF"
-      seoDescription="The most romantic dinner in Bali — your own private chef, candles by the pool, bespoke menu for two. Honeymoon, anniversary, or just because. From IDR 1,800K for two."
+      seoDescription="The most romantic dinner in Bali — your own private chef, candles by the pool, bespoke menu for two. Honeymoon, anniversary, or just because."
       canonicalUrl="https://mychef.id/blog/romantic-dinner-bali-private-chef"
       h1="Romantic Dinner Bali: Private Chef at Your Villa"
       subtitle="The Most Romantic Dining Experience in Bali — Your Own Private Chef"

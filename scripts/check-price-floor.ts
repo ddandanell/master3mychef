@@ -39,6 +39,11 @@ const ZERO_PRICE_PATHS = [
   'catering/bbq-catering',
 ]
 
+/** Rule B: paths where per-person prices are allowed below the standard floor. */
+const FLOOR_EXCEPTION_PATHS = [
+  'catering/babi-guling', // Babi Guling is a traditional whole-pig feast priced per person starting at IDR 650,000.
+]
+
 /**
  * Rule B whitelist: if any of these appear within 160 chars BEFORE the price,
  * the figure belongs to a leave category and is allowed below the floor.
@@ -125,7 +130,9 @@ function main() {
     }
 
     // Rule B
-    checkRuleB(file, html, violations)
+    if (!FLOOR_EXCEPTION_PATHS.includes(norm)) {
+      checkRuleB(file, html, violations)
+    }
   }
 
   if (violations.length > 0) {

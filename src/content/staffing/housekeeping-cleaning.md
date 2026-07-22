@@ -253,7 +253,7 @@ Your villa deserves housekeeping staff who understand hospitality standards, res
 
 **[Get a Confidential Consultation on WhatsApp]**
 
-Or explore more of our staffing services: [villa staff](/staffing/villa-staff), [villa manager placement](/staffing/villa-manager), [private chef staffing](/staffing/private-chef), [event staff](/staffing/event-staff), and [our complete recruitment process](/staffing/recruitment).
+Or explore more of our staffing services: [villa staff](/staffing/villa-staff), [villa manager placement](/staffing/villa-manager), [private chef staffing](/staffing/private-chef), [event staff](/staffing/villa-staff), and [our complete recruitment process](/staffing/recruitment).
 
 ---
 
@@ -285,12 +285,7 @@ Or explore more of our staffing services: [villa staff](/staffing/villa-staff), 
     "@type": "Place",
     "name": "Bali, Indonesia"
   },
-  "priceRange": "$$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "560"
-  }
+  "priceRange": "$$$"
 }
 </script>
 
@@ -452,7 +447,7 @@ Or explore more of our staffing services: [villa staff](/staffing/villa-staff), 
 - /staffing/villa-staff — full villa team placement
 - /staffing/private-chef — private chef placement
 - /staffing/villa-manager — villa manager placement
-- /staffing/event-staff — event staff for villa parties and weddings
+- /staffing/villa-staff — event staff for villa parties and weddings
 - /staffing/maintenance — maintenance support coordination
 - /staffing/recruitment — detailed vetting and placement process
 - /staffing/villa-staffing-bali — complete villa staffing solutions

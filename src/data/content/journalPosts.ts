@@ -40,7 +40,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
   },
   {
     "slug": "villa-wedding-catering-logistics-bali",
-    "title": "Planning a Villa Wedding in Bali? The Essential Catering Logistics Guide",
+    "title": "Villa Wedding Catering Logistics Guide for Bali",
     "category": "events",
     "author": "myCHEF Team",
     "date": "2026-05-17",
@@ -85,7 +85,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
   },
   {
     "slug": "bali-wedding-catering-complete-guide",
-    "title": "The Complete Bali Wedding Catering Guide: Budgets, Logistics & Vendor Coordination",
+    "title": "Bali Wedding Catering Guide: Budgets, Logistics & Vendors",
     "category": "events",
     "author": "Adriano",
     "date": "2026-05-18",

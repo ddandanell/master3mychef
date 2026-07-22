@@ -111,11 +111,11 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Chef\'s Table Bali', href: '/blog/chefs-table-bali', desc: 'Interactive dining at the chef\'s counter' },
-  { label: 'Romantic Dinner Bali', href: '/blog/romantic-dinner-bali-private-chef', desc: 'Private romantic dinner for two' },
-  { label: 'Private Dining Bali', href: '/blog/private-dining-bali', desc: 'Complete in-villa dining experiences' },
-  { label: 'Proposal Dinner Bali', href: '/blog/proposal-dinner-bali-private-chef', desc: 'Private proposal dinner setup' },
-  { label: 'Anniversary Dinner Bali', href: '/blog/anniversary-dinner-villa-bali', desc: 'Villa anniversary dinner experience' },
+  { label: 'Chef\'s Table Bali', href: '/fine-dining/chefs-table', desc: 'Interactive dining at the chef\'s counter' },
+  { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private romantic dinner for two' },
+  { label: 'Private Dining Bali', href: '/private-dining-indonesia', desc: 'Complete in-villa dining experiences' },
+  { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Private proposal dinner setup' },
+  { label: 'Anniversary Dinner Bali', href: '/events/anniversaries', desc: 'Villa anniversary dinner experience' },
 ]
 
 export default function TastingMenuBaliPage() {
@@ -124,8 +124,8 @@ export default function TastingMenuBaliPage() {
       slug="blog/tasting-menu-bali"
       title="Private Tasting Menu Bali -- Multi-Course Chef\'s Dinner at Your Villa | myCHEF"
       seoTitle="Private Tasting Menu Bali -- Multi-Course Chef\'s Dinner at Your Villa"
-      description="Private tasting menus delivered to Bali villas by executive chefs. 7 to 11 progressive courses, market-fresh Balinese ingredients, dietary adaptation, and optional wine pairing."
-      seoDescription="Private tasting menu in Bali. 7--11 progressive courses by an executive chef in your villa. Market-led menus, dietary adaptation, wine pairing available. From IDR 750K/person."
+      description="Private tasting menus delivered to Bali villas by executive chefs. 7 to 11 progressive courses with market-fresh Balinese ingredients."
+      seoDescription="Private tasting menu in Bali. 7--11 progressive courses by an executive chef in your villa. Market-led menus, dietary adaptation and wine pairing."
       h1="Private Tasting Menu in Bali -- Multi-Course Chef's Dinner at Your Villa"
       subtitle="Seven to eleven courses. Market-fresh ingredients. A complete evening built around your group."
       heroImage="/images/blog/tasting-menu-bali.jpg"

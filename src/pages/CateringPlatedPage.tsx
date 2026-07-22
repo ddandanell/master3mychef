@@ -22,6 +22,8 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
+import StaffingInfo from '@/components/catering/StaffingInfo'
+import BookingProcess from '@/components/catering/BookingProcess'
 import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
@@ -712,6 +714,9 @@ export default function CateringPlatedPage() {
       </section>
 
       <PressStrip />
+
+      <StaffingInfo />
+      <BookingProcess />
 
       <CateringDiscoverySection page="plated" />
 

@@ -91,7 +91,7 @@ const SECTIONS = [
 
     <p><strong>Company retreats and team dinners:</strong> A shared meal at a private villa does more for team cohesion than any activity. The relaxed setting, family-style serving, and absence of a restaurant environment breaks down the formality that corporate dining usually carries. Menu suggestion: sharing boards and a mixed Indonesian-Western menu that accommodates varied dietary requirements across a diverse team.</p>
 
-    <p><strong>Anniversary dinners:</strong> Our most refined format. A five-course plated menu with wine pairings, candles, and a villa that belongs entirely to you for the evening. No other diners, no background noise, no interruptions. See our <a href="/blog/anniversary-dinner-villa-bali" class="text-[#7E6410] hover:underline font-medium">anniversary dinner guide</a> for full details and menu inspiration.</p>
+    <p><strong>Anniversary dinners:</strong> Our most refined format. A five-course plated menu with wine pairings, candles, and a villa that belongs entirely to you for the evening. No other diners, no background noise, no interruptions. See our <a href="/events/anniversaries" class="text-[#7E6410] hover:underline font-medium">anniversary dinner guide</a> for full details and menu inspiration.</p>
 
     <p><strong>Milestone celebrations:</strong> Promotions, engagements, a completed project, a personal achievement — moments that deserve more than a restaurant dinner but less than a full event. A villa dinner sits perfectly in that space: elevated and personal, without the scale or formality of a large event.</p>
 
@@ -148,8 +148,8 @@ const FAQS = [
 const RELATED_PAGES = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full private chef service for villa stays, events, and special occasions.' },
   { label: 'Catering Villa Bali', href: '/catering/villa-catering', desc: 'Complete villa catering for groups and events of all sizes.' },
-  { label: 'Buffet vs Plated Service', href: '/blog/buffet-vs-plated-service-bali', desc: 'Compare service formats to find the right fit for your dinner party.' },
-  { label: 'Anniversary Dinner Bali', href: '/blog/anniversary-dinner-villa-bali', desc: 'Private chef anniversary dinner guide: menus, timing, and romantic setup.' },
+  { label: 'Buffet vs Plated Service', href: '/catering', desc: 'Compare service formats to find the right fit for your dinner party.' },
+  { label: 'Anniversary Dinner Bali', href: '/events/anniversaries', desc: 'Private chef anniversary dinner guide: menus, timing, and romantic setup.' },
   { label: 'Pricing Guide', href: '/pricing', desc: 'Full pricing for private chef dinners, catering, and event service.' },
   { label: 'Event Planning Bali', href: '/blog/event-planning-bali', desc: 'Complete logistics guide for planning Bali villa events.' },
 ]
@@ -160,7 +160,7 @@ export default function PrivateDinnerPartyBaliPage() {
       slug="blog/private-dinner-party-bali"
       title="Private Dinner Party Bali | Villa Dinner Parties with a Private Chef"
       description="Host a private dinner party at your Bali villa with a professional chef. Menu planning, setup, service — all handled. Groups of 4–30. From IDR 700,000/person."
-      seoTitle="Private Dinner Party Bali | Villa Dinner Parties with a Private Chef | myCHEF"
+      seoTitle="Private Dinner Party Bali | Villa Dinner Parties | myCHEF"
       seoDescription="Host a private dinner party at your Bali villa with a professional chef. Menu planning, setup, service — all handled. Groups of 4–30. From IDR 700,000/person."
       canonicalUrl="https://mychef.id/blog/private-dinner-party-bali"
       h1="Private Dinner Party Bali"

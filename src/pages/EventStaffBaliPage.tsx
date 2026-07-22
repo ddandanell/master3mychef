@@ -32,7 +32,7 @@ const SECTIONS: PageSection[] = [
     <p><strong>8-12 guests (dinner party):</strong> 1 head waiter + 1 server + kitchen runner. The chef focuses on cooking, the head waiter manages all front-of-house, the server carries plates and tops up drinks, the runner manages kitchen flow. Add a bartender if a cocktail hour is included.</p>
     <p><strong>14-20 guests (large villa dinner):</strong> 1 head waiter + 2 servers + 1 kitchen runner + 1 bartender. This size requires the chef to have genuine kitchen support — the runner is essential. The second server allows simultaneous service of all tables without delay.</p>
     <p><strong>20-40 guests (corporate or celebration event):</strong> 1 event coordinator + 1 head waiter + 3-4 servers + 1-2 kitchen crew + 1-2 bartenders. At this scale, coordination between kitchen and floor becomes complex. An event coordinator is strongly recommended.</p>
-    <p><strong>40-80 guests (wedding or large corporate):</strong> Full event team — event coordinator, head waiter, 6-8 servers, 2 kitchen crew, 2 bartenders. This requires advance planning and a site visit to plan the service flow. Contact us at least 2 weeks in advance for events of this size. See our <a href="/blog/bali-wedding-catering-budget-guide" class="text-[#7E6410] hover:underline font-medium">wedding catering guide</a>.</p>`,
+    <p><strong>40-80 guests (wedding or large corporate):</strong> Full event team — event coordinator, head waiter, 6-8 servers, 2 kitchen crew, 2 bartenders. This requires advance planning and a site visit to plan the service flow. Contact us at least 2 weeks in advance for events of this size. See our <a href="/bali-wedding-catering-packages" class="text-[#7E6410] hover:underline font-medium">wedding catering guide</a>.</p>`,
   },
   {
     id: 'costs',
@@ -68,7 +68,7 @@ const SECTIONS: PageSection[] = [
     title: 'Book Event Staff for Your Bali Villa Event',
     body: 'Tell us your event date, guest count, service format, and whether you also need a private chef. We build the right team for your event.',
     primaryAction: { label: 'Chat on WhatsApp', href: 'https://wa.me/6289674072020' },
-    secondaryAction: { label: 'View Large Group Catering', href: '/blog/large-group-catering-bali' },
+    secondaryAction: { label: 'View Large Group Catering', href: '/group-villa-dinner-packages-bali' },
   },
 ]
 
@@ -100,7 +100,7 @@ export default function EventStaffBaliPage() {
     <PremiumPage
       slug="blog/event-staff-bali"
       title="Event Staff Bali: Hiring Waiters, Bartenders & Kitchen Crew for Villa Events"
-      description="How to hire event staff for Bali villa events — waiters, bartenders, kitchen crew, and event coordinators. Staffing ratios, costs, and briefing guide for events of 6 to 80 guests."
+      description="How to hire event staff for Bali villa events — waiters, bartenders, kitchen crew, and event coordinators. Staffing ratios, costs and briefing tips."
       h1="Event Staff Bali — Hiring Waiters, Bartenders & Kitchen Crew for Villa Events"
       subtitle="The complete guide to event staffing for Bali villa dinners, celebrations, and corporate events"
       heroImage="https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=80"
@@ -111,10 +111,10 @@ export default function EventStaffBaliPage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Large Group Catering Bali', href: '/blog/large-group-catering-bali', desc: 'Private chef catering for groups of 20+ guests in Bali.' },
+        { label: 'Large Group Catering Bali', href: '/group-villa-dinner-packages-bali', desc: 'Private chef catering for groups of 20+ guests in Bali.' },
         { label: 'Corporate Catering Bali', href: '/blog/corporate-events-catering-bali-team-dining', desc: 'Full catering and staffing for corporate events in Bali.' },
-        { label: 'Villa Staff Bali Guide', href: '/blog/villa-staff-bali-hiring-guide', desc: 'Hiring all villa staff categories in Bali.' },
-        { label: 'Wedding Catering Bali', href: '/blog/bali-wedding-catering-budget-guide', desc: 'Full catering and staffing for Bali weddings.' },
+        { label: 'Villa Staff Bali Guide', href: '/staffing/villa-staff', desc: 'Hiring all villa staff categories in Bali.' },
+        { label: 'Wedding Catering Bali', href: '/bali-wedding-catering-packages', desc: 'Full catering and staffing for Bali weddings.' },
         { label: 'Pricing Guide', href: '/pricing', desc: 'Full cost breakdown for private chefs and event staffing.' },
         { label: 'Book Event Staff', href: '/contact', desc: 'Get a quote for your event.' },
       ]}

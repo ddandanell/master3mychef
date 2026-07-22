@@ -19,7 +19,10 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
+import BabiGulingPricing from '@/components/catering/BabiGulingPricing'
+import StaffingInfo from '@/components/catering/StaffingInfo'
+import BookingProcess from '@/components/catering/BookingProcess'
+import { Breadcrumb, PressStrip, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -30,33 +33,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'Babi Guling catering in Bali', intent: 'menu options and pricing' })
 const SITE = 'https://mychef.id'
-
-const PACKAGES = [
-  {
-    title: 'Small Babi Guling',
-    guests: '10 to 15 guests',
-    price: 'IDR 3,700,000 total',
-    priceNum: 3700000,
-    includes: ['Whole roasted pig', 'Lawar', 'Nasi kuning', 'Sate lilit', 'Sambals', 'Dessert', 'Fresh fruit'],
-    bestFor: 'Small villa parties, family gatherings, birthday dinners, local food experience',
-  },
-  {
-    title: 'Medium Babi Guling',
-    guests: '25 to 30 guests',
-    price: 'IDR 5,000,000 total',
-    priceNum: 5000000,
-    includes: ['Whole roasted pig', 'Lawar', 'Nasi kuning', 'Sate lilit', 'Sambals', 'Dessert', 'Fresh fruit', 'Extended sides', 'Kuah Balung soup'],
-    bestFor: 'Medium villa events, birthdays, group holiday dinners, casual wedding recovery',
-  },
-  {
-    title: 'Large Babi Guling',
-    guests: '40 to 50 guests',
-    price: 'IDR 7,000,000 total',
-    priceNum: 7000000,
-    includes: ['Premium suckling pig', 'Lawar', 'Nasi kuning', 'Sate lilit', 'Sambals', 'Dessert', 'Fresh fruit', 'Extended sides', 'Kuah Balung soup', 'Bonfire setup option'],
-    bestFor: 'Large villa parties, weddings, corporate events, big birthdays, group celebrations',
-  },
-]
 
 const BEST_FOR = [
   { icon: Heart, title: 'Villa parties', desc: 'Celebrate with tradition' },
@@ -152,9 +128,7 @@ export default function CateringBabiGulingPage() {
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-babiguling-new.webp`}
         jsonLd={[
           cateringServiceSchema('Babi Guling Catering Bali', 'Traditional babi guling catering for Bali villas, birthdays, weddings, and cultural celebrations with full Balinese sides. myCHEF.id roasts, carves, and serves the feast on site across Bali.', `${SITE}/catering/babi-guling`),
-          offerSchema('Small Babi Guling', 3700000, 'IDR', `${SITE}/catering/babi-guling`),
-          offerSchema('Medium Babi Guling', 5000000, 'IDR', `${SITE}/catering/babi-guling`),
-          offerSchema('Large Babi Guling', 7000000, 'IDR', `${SITE}/catering/babi-guling`),
+          offerSchema('Babi Guling Catering', 475000, 'IDR', `${SITE}/catering/babi-guling`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 127),
           howToSchema({
@@ -162,7 +136,7 @@ export default function CateringBabiGulingPage() {
             description: 'Order authentic Balinese Babi Guling catering for your villa event in 4 easy steps.',
             totalTime: 'PT15M',
             steps: [
-              { name: 'Choose your Babi Guling size', text: 'Select Small (10-15 guests), Medium (20-30 guests), or Large (40+ guests) roast.' },
+              { name: 'Choose your Babi Guling size', text: 'Select your guest count. Pricing starts at IDR 650,000 per person for 6-15 guests and scales down for larger groups.' },
               { name: 'Share event details', text: 'Send your villa location, event date, guest count, and any side dish preferences via WhatsApp.' },
               { name: 'Confirm your quote', text: 'We confirm the whole roast, side dishes, sambal, and delivery timing within 1 hour.' },
               { name: 'Chef delivers and carves', text: 'The chef arrives with the whole roasted pig, carves at your villa, and serves with traditional sides.' },
@@ -466,36 +440,9 @@ export default function CateringBabiGulingPage() {
         </div>
       </section>
 
-      {/* ═══════ PACKAGES ═══════ */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="Packages"
-            title="Babi Guling Catering Packages"
-            subtitle="Fixed-price packages for small, medium, and large groups. No hidden fees."
-          />
-          <div className="grid md:grid-cols-3 gap-6">
-            {PACKAGES.map((pkg) => (
-              <div key={pkg.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 hover:shadow-lg transition-all">
-                <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
-                <p className="text-[#C5A028] font-semibold text-lg mb-1">{pkg.price}</p>
-                <p className="text-sm text-[#4A4745] mb-1"><AllInPrice price={pkg.priceNum} showPlusPlus={false} suffix=" total" /></p>
-                <p className="text-sm text-[#4A4745] mb-4">{pkg.guests}</p>
-                <div className="space-y-2 mb-4">
-                  {pkg.includes.map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-sm text-[#4A4745]">
-                      <Check className="w-4 h-4 text-[#C5A028]" /> {item}
-                    </div>
-                  ))}
-                </div>
-                <p className="text-xs text-[#4A4745]/80 pt-3 border-t border-[#E8E6E3]">
-                  <strong>Best for:</strong> {pkg.bestFor}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BabiGulingPricing />
+      <StaffingInfo />
+      <BookingProcess />
 
       {/* ═══════ ADD-ONS ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
@@ -629,7 +576,7 @@ export default function CateringBabiGulingPage() {
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
               { name: 'email', label: 'Email', type: 'text' },
             ]}
-            packageOptions={['Small (10-15 guests)', 'Medium (25-30 guests)', 'Large (40-50 guests)']}
+            packageOptions={['6–15 guests', '16–30 guests', '31–50 guests', '51–100 guests', '101–200 guests', '201–450 guests', '450+ guests']}
             accent="#C5A028"
           />
         </div>

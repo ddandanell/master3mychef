@@ -175,7 +175,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/private-chef-breakfast-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                <Link to="/catering" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Private Chef Breakfast
                 </Link>
               </li>
@@ -305,7 +305,7 @@ export default function Footer() {
                 <>
                   <li className="pt-2 border-t border-white/5">
                     <Link
-                      to="/jakarta"
+                      to="/locations/jakarta"
                       className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                     >
                       Jakarta
@@ -313,7 +313,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      to="/surabaya"
+                      to="/locations/jakarta"
                       className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                     >
                       Surabaya
@@ -321,7 +321,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      to="/bandung"
+                      to="/locations/jakarta"
                       className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                     >
                       Bandung
@@ -329,7 +329,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      to="/yogyakarta"
+                      to="/locations/jakarta"
                       className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                     >
                       Yogyakarta
@@ -401,6 +401,43 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          <div className="group">
+            <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Who We Serve</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/bar-services/" className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  B2B Bar Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/bar-services/#hotels" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Hotels & Resorts
+                </Link>
+              </li>
+              <li>
+                <Link to="/bar-services/#villas" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Villas & Estates
+                </Link>
+              </li>
+              <li>
+                <Link to="/bar-services/#beach-clubs" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Beach Clubs
+                </Link>
+              </li>
+              <li>
+                <Link to="/bar-services/#restaurants" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Restaurants & Cafés
+                </Link>
+              </li>
+              <li>
+                <Link to="/bar-services/#events" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Events & Weddings
+                </Link>
+              </li>
+            </ul>
+          </div>
+
         </div>
 
         {/* Secondary nav row - Enhanced with better visual separation */}
@@ -415,18 +452,19 @@ export default function Footer() {
             </Link>
           ))}
           <Link to="/services" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Services</Link>
+          <Link to="/bar-services/" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">B2B Bar Service</Link>
           <Link to="/recommended-services" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Recommended</Link>
           <Link to="/pricing" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Pricing</Link>
           <Link to="/calculator" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Price Calculator</Link>
           <Link to="/faq" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">FAQ</Link>
-          <Link to="/reviews" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Reviews</Link>
+          <Link to="/" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Reviews</Link>
           <Link to="/why-mychef" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Why myCHEF</Link>
           <Link to="/press" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Press</Link>
           <Link to="/join-our-team" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Join the Team</Link>
           <Link to="/partner-platform" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Partner Platform</Link>
           <Link to="/certified-partner" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Certified Partner</Link>
           <Link to="/journal" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Journal</Link>
-          <Link to="/blog" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Blog & Guides</Link>
+          <Link to="/journal" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Blog & Guides</Link>
           <Link
             to={PRIMARY_CTA.href}
             className="px-4 py-1.5 bg-[#C5A028]/10 text-[#C5A028] font-semibold rounded-full hover:bg-[#C5A028] hover:text-black transition-all focus:outline-none focus:ring-2 focus:ring-white"

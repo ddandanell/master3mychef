@@ -31,7 +31,7 @@ const SECTIONS: PageSection[] = [
     title: 'What myCHEF Offers Your Villa Guests',
     body: `<p>As a partner villa, your guests have access to myCHEF\'s full service portfolio:</p>
     <p><strong>Private chef dining:</strong> From casual family meals to eight-course fine dining tasting menus. <a href="/services" class="text-[#7E6410] hover:underline font-medium">View our service packages</a>.</p>
-    <p><strong>Floating breakfast:</strong> One of Bali\'s most-requested villa experiences. See our <a href="/blog/floating-breakfast-bali" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a>.</p>
+    <p><strong>Floating breakfast:</strong> One of Bali\'s most-requested villa experiences. See our <a href="/catering/floating-breakfast" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a>.</p>
     <p><strong>In-villa staffing:</strong> Professional waiters, bartenders, mixologists, sommeliers, and butlers for events and extended villa stays.</p>
     <p><strong>Cooking classes:</strong> Interactive culinary experiences led by a myCHEF chef.</p>
     <p><strong>Staffing placements:</strong> Monthly chef arrangements, live-in chef placements. See our <a href="/staffing" class="text-[#7E6410] hover:underline font-medium">staffing services</a>.</p>`,
@@ -85,7 +85,7 @@ export default function VillaManagerPartnerPage() {
     <PremiumPage
       slug="partner"
       title="Villa Manager Partnership — Earn Commission With myCHEF Private Chef Referrals"
-      description="Bali villa managers: partner with myCHEF to offer guests private chef dining, floating breakfasts, and event staffing. Earn referral commission. No setup cost, no exclusivity required."
+      description="Bali villa managers: partner with myCHEF to offer guests private chef dining, floating breakfasts, and event staffing. Earn referral commission."
       h1="Villa Manager Partnership — Earn Commission With myCHEF Private Chef Referrals"
       subtitle="A free-to-join referral programme for Bali villa managers and property management companies"
       heroImage="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1400&q=80"
@@ -97,7 +97,7 @@ export default function VillaManagerPartnerPage() {
       faqs={FAQS}
       relatedPages={[
         { label: 'Private Chef Services', href: '/services', desc: 'Full overview of myCHEF service packages for villa guests.' },
-        { label: 'Floating Breakfast', href: '/blog/floating-breakfast-bali', desc: 'The most-requested villa experience for international guests.' },
+        { label: 'Floating Breakfast', href: '/catering/floating-breakfast', desc: 'The most-requested villa experience for international guests.' },
         { label: 'Staffing Services', href: '/staffing', desc: 'Long-term chef and villa staff placement services.' },
         { label: 'Pricing Guide', href: '/pricing', desc: 'Full pricing breakdown for all myCHEF services.' },
       ]}

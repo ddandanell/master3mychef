@@ -122,12 +122,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Plated Dinner Catering', href: '/blog/plated-dinner-catering-bali', desc: 'Formal multi-course dinner service' },
-  { label: 'Mixologist Hire Bali', href: '/blog/mixologist-hire-bali', desc: 'Craft cocktail bar for villa events' },
+  { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },
+  { label: 'Mixologist Hire Bali', href: '/in-villa-service/mixology', desc: 'Craft cocktail bar for villa events' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa fine dining experience' },
-  { label: 'Romantic Dinner Bali', href: '/blog/romantic-dinner-bali-private-chef', desc: 'Intimate private dinners for couples' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Professional event crew hire' },
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'End-to-end villa event catering' },
+  { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Intimate private dinners for couples' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Professional event crew hire' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'End-to-end villa event catering' },
 ]
 
 export default function SommelierHireBaliPage() {
@@ -135,9 +135,9 @@ export default function SommelierHireBaliPage() {
     <PremiumPage
       slug="blog/sommelier-hire-bali"
       title="Sommelier Hire Bali -- Wine Service and Pairing for Villa Events"
-      seoTitle="Sommelier Hire Bali -- Wine Pairing and Table Service for Villa Events & Weddings"
-      description="Hire a certified sommelier in Bali for villa weddings, tasting menus, and formal dinners. Wine pairing design, table-side service, and wine sourcing advice for private events."
-      seoDescription="Sommelier hire in Bali for villa weddings, chef's table dinners, and corporate receptions. WSET-certified specialists. Wine pairing, table service, and sourcing advice. From IDR 1.5M."
+      seoTitle="Sommelier Hire Bali -- Wine Pairing & Table Service | myCHEF"
+      description="Hire a certified sommelier in Bali for villa weddings, tasting menus, and formal dinners. Wine pairing design, table-side service and sourcing advice."
+      seoDescription="Sommelier hire in Bali for villa weddings, chef's table dinners and corporate receptions. WSET-certified. Wine pairing and sourcing advice. From IDR 1.5M."
       h1="Sommelier Hire Bali -- Wine Pairing and Table Service for Villa Events"
       subtitle="Certified wine specialists for villa weddings, tasting menus, and corporate dinners -- from pairing design to tableside service."
       heroImage="/images/blog/sommelier-hire-bali.jpg"

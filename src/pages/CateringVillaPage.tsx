@@ -19,6 +19,8 @@ import SeoHead, {
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import StaffingInfo from '@/components/catering/StaffingInfo'
+import BookingProcess from '@/components/catering/BookingProcess'
 // import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { Breadcrumb, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
@@ -548,6 +550,9 @@ export default function CateringVillaPage() {
       </section>
 
       <PressStrip />
+
+      <StaffingInfo />
+      <BookingProcess />
 
       <CateringDiscoverySection page="villa" />
 

@@ -30,9 +30,9 @@ const SECTIONS: PageSection[] = [
     body: `<p>myCHEF offers the following chef experiences for Ubud villas and retreats:</p>
     <p><strong>Single dinner service:</strong> A private chef for one evening — ideal for a birthday dinner, anniversary, family reunion, or special occasion. From a simple 3-course Balinese feast to a 7-course tasting menu with wine pairings. Minimum 2 guests.</p>
     <p><strong>Retreat catering:</strong> Ubud hosts many yoga retreats, healing retreats, and wellness programmes. myCHEF provides full daily meal service for retreat groups — breakfast, lunch, dinner, and snacks — with menus designed around the retreat\'s dietary philosophy. From 8 to 40 guests.</p>
-    <p><strong>Cooking class experience:</strong> A private chef-led Balinese cooking class, visiting the morning market to source ingredients, then cooking traditional dishes together in your villa kitchen. Suitable for couples, families, and small groups up to 8 people. See our <a href="/blog/bali-villa-cooking-class-private-chef" class="text-[#7E6410] hover:underline font-medium">cooking class guide</a>.</p>
-    <p><strong>Weekly household chef arrangement:</strong> For long-stay guests and expats in Ubud, a recurring private chef who cooks 3-5 days per week. See the <a href="/blog/household-chef-bali-hiring-guide" class="text-[#7E6410] hover:underline font-medium">household chef guide</a>.</p>
-    <p><strong>Floating breakfast:</strong> A floating breakfast in the villa pool. See our <a href="/blog/floating-breakfast-bali" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a>.</p>`,
+    <p><strong>Cooking class experience:</strong> A private chef-led Balinese cooking class, visiting the morning market to source ingredients, then cooking traditional dishes together in your villa kitchen. Suitable for couples, families, and small groups up to 8 people. See our <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">cooking class guide</a>.</p>
+    <p><strong>Weekly household chef arrangement:</strong> For long-stay guests and expats in Ubud, a recurring private chef who cooks 3-5 days per week. See the <a href="/staffing/household-staff" class="text-[#7E6410] hover:underline font-medium">household chef guide</a>.</p>
+    <p><strong>Floating breakfast:</strong> A floating breakfast in the villa pool. See our <a href="/catering/floating-breakfast" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a>.</p>`,
   },
   {
     id: 'where-to-stay',
@@ -100,7 +100,7 @@ export default function PrivateChefUbudGuidePage() {
     <PremiumPage
       slug="blog/private-chef-ubud-guide"
       title="Private Chef Ubud: Farm-to-Table Dining, Balinese Feasts & Wellness Menus"
-      description="Book a private chef in Ubud for villa dinners, yoga retreat catering, cooking classes, and farm-to-table menus. Covers Penestanan, Tegalalang, Payangan, Campuhan and all Ubud areas."
+      description="Book a private chef in Ubud for villa dinners, yoga retreat catering, cooking classes, and farm-to-table menus. Covers Penestanan, Tegalalang, Payangan."
       h1="Private Chef Ubud — Farm-to-Table Dining, Balinese Feasts & Wellness Menus"
       subtitle="The complete guide to private chef experiences in Ubud and the surrounding village areas"
       heroImage="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80"
@@ -111,9 +111,9 @@ export default function PrivateChefUbudGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Private Chef Canggu Guide', href: '/blog/private-chef-canggu-guide', desc: 'Surf culture dining, villa parties, and casual chef experiences in Canggu.' },
-        { label: 'Private Chef Seminyak Guide', href: '/blog/private-chef-seminyak-guide', desc: 'Luxury villa dining and fine dining experiences in Seminyak.' },
-        { label: 'Bali Villa Cooking Class', href: '/blog/bali-villa-cooking-class-private-chef', desc: 'Learn to cook Balinese dishes with a private chef in your villa.' },
+        { label: 'Private Chef Canggu Guide', href: '/private-chef/canggu', desc: 'Surf culture dining, villa parties, and casual chef experiences in Canggu.' },
+        { label: 'Private Chef Seminyak Guide', href: '/private-chef/seminyak', desc: 'Luxury villa dining and fine dining experiences in Seminyak.' },
+        { label: 'Bali Villa Cooking Class', href: '/fine-dining', desc: 'Learn to cook Balinese dishes with a private chef in your villa.' },
         { label: 'Pricing Guide', href: '/pricing', desc: 'Full breakdown of private chef costs across all Bali areas.' },
       ]}
       extraJsonLd={[

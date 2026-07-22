@@ -165,7 +165,7 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Live-In Chef Guide', href: '/blog/live-in-chef-bali-hiring-guide', desc: 'How to hire, vet, and manage a live-in private chef for your Bali villa.' },
+  { label: 'Live-In Chef Guide', href: '/staffing', desc: 'How to hire, vet, and manage a live-in private chef for your Bali villa.' },
   { label: 'Staffing Placement', href: '/staffing/placement', desc: 'myCHEF permanent and temporary staffing placement service.' },
   { label: 'Staffing: Villa Staff', href: '/staffing/villa-staff', desc: 'Full villa team staffing — chefs, butlers, housekeepers, drivers.' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Private chef service for Bali villa guests and residents.' },
@@ -178,9 +178,9 @@ export default function VillaStaffBaliGuidePage() {
     <PremiumPage
       slug="blog/villa-staff-bali-hiring-guide"
       title="Villa Staff Bali: Complete Hiring Guide"
-      description="Complete guide to hiring villa staff in Bali. Chef, butler, waiter, housekeeper roles explained. Costs IDR, vetting process, myCHEF staffing service. Free consultation."
+      description="Complete guide to hiring villa staff in Bali. Chef, butler, waiter and housekeeper roles explained. Costs, vetting process and myCHEF staffing service."
       seoTitle="Villa Staff Bali | Hiring Guide: Chefs, Butlers, Waiters | myCHEF"
-      seoDescription="Complete guide to hiring villa staff in Bali. Chef, butler, waiter, housekeeper roles explained. Costs IDR, vetting process, myCHEF staffing service. Free consultation."
+      seoDescription="Complete guide to hiring villa staff in Bali. Chef, butler, waiter and housekeeper roles explained. Costs, vetting process and myCHEF staffing service."
       canonicalUrl="https://mychef.id/blog/villa-staff-bali-hiring-guide"
       h1="Villa Staff Bali: Complete Hiring Guide"
       subtitle="Chefs, Butlers, Waiters &amp; Housekeepers — How to Hire the Right Villa Team"

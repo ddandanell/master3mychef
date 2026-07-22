@@ -173,9 +173,9 @@ export default function LiveInChefBaliHiringGuidePage() {
     <PremiumPage
       slug="blog/live-in-chef-bali-hiring-guide"
       title="Live-In Chef Bali: The Complete Hiring Guide"
-      description="Considering a live-in chef for your Bali villa or home? Learn about costs (IDR 8M–18M/month), contracts, vetting, duties, and how myCHEF's placement service works."
+      description="Considering a live-in chef for your Bali villa or home? Learn about costs (IDR 8M–18M/month), contracts, vetting, duties and myCHEF's placement service."
       seoTitle="Live-In Chef Bali: Hiring Guide, Costs & What to Expect | myCHEF"
-      seoDescription="Considering a live-in chef for your Bali villa or home? Learn about costs (IDR 8M–18M/month), contracts, vetting, duties, and how myCHEF's placement service works."
+      seoDescription="Considering a live-in chef for your Bali villa or home? Learn about costs (IDR 8M–18M/month), contracts, vetting, duties and myCHEF's placement service."
       canonicalUrl="https://mychef.id/blog/live-in-chef-bali-hiring-guide"
       h1="Live-In Chef Bali: The Complete Hiring Guide"
       subtitle="Everything You Need to Know Before Hiring a Live-In Private Chef in Bali"

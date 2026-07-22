@@ -125,10 +125,10 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Bartender Hire Bali', href: '/blog/bartender-hire-bali', desc: 'Bar staff hire for events' },
-  { label: 'Sommelier Hire Bali', href: '/blog/sommelier-hire-bali', desc: 'Wine service and pairing expertise' },
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'Full catering for villa celebrations' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Waiters and event crew hire' },
+  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Bar staff hire for events' },
+  { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine service and pairing expertise' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full catering for villa celebrations' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters and event crew hire' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
   { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Private chef for bachelor parties' },
 ]
@@ -138,9 +138,9 @@ export default function MixologistHireBaliPage() {
     <PremiumPage
       slug="blog/mixologist-hire-bali"
       title="Mixologist Hire Bali -- Craft Cocktail Experts for Villa Events & Weddings"
-      seoTitle="Mixologist Hire Bali -- Signature Cocktails for Villa Weddings & Events"
-      description="Hire a professional mixologist in Bali for villa events and weddings. Signature cocktail design, mocktail menus, flair bartending, and craft bar service for private celebrations."
-      seoDescription="Mixologist hire in Bali for villa weddings and events. Signature cocktail menus, mocktail programmes, and flair bartending. From IDR 1.2M. Covering all Bali villa areas."
+      seoTitle="Mixologist Hire Bali -- Signature Cocktails | myCHEF"
+      description="Hire a professional mixologist in Bali for villa events and weddings. Signature cocktails, mocktail menus, flair bartending and craft bar service."
+      seoDescription="Mixologist hire in Bali for villa weddings and events. Signature cocktail menus, mocktail programmes and flair bartending. From IDR 1.2M. All Bali villa areas."
       h1="Mixologist Hire Bali -- Craft Cocktail Experts for Villa Events & Weddings"
       subtitle="Signature cocktail menus, custom bar programmes, and showmanship for villa weddings, birthday parties, and corporate events in Bali."
       heroImage="/images/blog/mixologist-hire-bali.jpg"

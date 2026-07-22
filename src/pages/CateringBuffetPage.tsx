@@ -18,6 +18,8 @@ import SeoHead, {
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import StaffingInfo from '@/components/catering/StaffingInfo'
+import BookingProcess from '@/components/catering/BookingProcess'
 import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
@@ -755,6 +757,9 @@ export default function CateringBuffetPage() {
           </div>
         </div>
       </section>
+
+      <StaffingInfo />
+      <BookingProcess />
 
       <CateringDiscoverySection page="buffet" />
 

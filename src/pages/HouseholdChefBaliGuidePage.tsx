@@ -8,7 +8,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Household Chef Bali',
     title: 'Household Chef Bali: How to Hire a Personal Chef for Your Villa or Home',
     body: `<p>A household chef is a private culinary professional engaged on an ongoing basis — cooking for a household, villa, or residence on a recurring schedule. In Bali, this arrangement has become increasingly common among long-term residents, villa owners, expatriate families, and extended-stay guests who want the convenience of freshly prepared meals without the complexity of employing a full-time staff member.</p>
-    <p>Unlike a <a href="/blog/live-in-chef-bali-hiring-guide" class="text-[#7E6410] hover:underline font-medium">live-in chef</a>, a household chef typically visits on a service schedule — a set number of days per week — rather than residing at the property. myCHEF\'s household chef service is designed for exactly this market. We place experienced, background-checked, English-speaking chefs with households across Bali\'s expat and villa communities on monthly rolling arrangements.</p>`,
+    <p>Unlike a <a href="/staffing" class="text-[#7E6410] hover:underline font-medium">live-in chef</a>, a household chef typically visits on a service schedule — a set number of days per week — rather than residing at the property. myCHEF\'s household chef service is designed for exactly this market. We place experienced, background-checked, English-speaking chefs with households across Bali\'s expat and villa communities on monthly rolling arrangements.</p>`,
   },
   {
     id: 'who-needs',
@@ -18,7 +18,7 @@ const SECTIONS: PageSection[] = [
     body: `<p><strong>Long-term villa residents:</strong> After the first week or two of eating out daily, residents typically want a more sustainable, healthier, and more cost-effective solution. A household chef provides home-cooked quality at a fraction of the cost of daily restaurant meals.</p>
     <p><strong>Expatriate families:</strong> Bali\'s growing expatriate community — particularly around Canggu, Seminyak, and Ubud — includes many families who prioritise wholesome, consistent home cooking. A household chef on a 3 to 5 day weekly schedule handles breakfast prep, school lunch boxes, family dinners, and batch-cooking.</p>
     <p><strong>Remote workers and digital nomads:</strong> Professionals working remotely from Bali for 1 to 6 months find that a household chef is one of the most impactful quality-of-life additions to their stay.</p>
-    <p>Read more about Bali long-term private chef options in our <a href="/blog/private-chef-bali-expats" class="text-[#7E6410] hover:underline font-medium">guide for expats</a>.</p>`,
+    <p>Read more about Bali long-term private chef options in our <a href="/hire-private-chef-bali-monthly" class="text-[#7E6410] hover:underline font-medium">guide for expats</a>.</p>`,
   },
   {
     id: 'service-structure',
@@ -89,7 +89,7 @@ export default function HouseholdChefBaliGuidePage() {
     <PremiumPage
       slug="blog/household-chef-bali-hiring-guide"
       title="Household Chef Bali: How to Hire a Personal Chef for Your Villa or Home"
-      description="Hire a household chef in Bali for recurring weekly cooking. Monthly arrangements, daily rates, managed service and direct placement options for expats, villa residents, and long-stay guests."
+      description="Hire a household chef in Bali for recurring weekly cooking. Monthly arrangements, daily rates, managed service and direct placement options for expats."
       h1="Household Chef Bali — How to Hire a Personal Chef for Your Villa or Home"
       subtitle="The complete guide to household chef arrangements for Bali expats, villa residents, and long-stay guests"
       heroImage="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=80"
@@ -100,8 +100,8 @@ export default function HouseholdChefBaliGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Live-In Chef Bali Guide', href: '/blog/live-in-chef-bali-hiring-guide', desc: 'Hiring a live-in private chef for your Bali villa or home.' },
-        { label: 'Private Chef for Expats', href: '/blog/private-chef-bali-expats', desc: 'Long-term private chef options for Bali expats and residents.' },
+        { label: 'Live-In Chef Bali Guide', href: '/staffing', desc: 'Hiring a live-in private chef for your Bali villa or home.' },
+        { label: 'Private Chef for Expats', href: '/hire-private-chef-bali-monthly', desc: 'Long-term private chef options for Bali expats and residents.' },
         { label: 'Staffing Services', href: '/staffing', desc: 'Direct placement and managed staffing for Bali households.' },
         { label: 'Pricing Guide', href: '/pricing', desc: 'Full breakdown of private chef and staffing costs in Bali.' },
       ]}

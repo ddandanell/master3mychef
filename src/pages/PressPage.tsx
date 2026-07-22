@@ -286,7 +286,7 @@ export default function PressPage() {
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus in your villa.' },
               { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated & grazing tables.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate events.' },
-              { label: 'Reviews', href: '/reviews', desc: 'What 560+ villa clients say about us.' },
+              { label: 'Reviews', href: '/', desc: 'What 560+ villa clients say about us.' },
               { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
               { label: 'Get a Quote', href: '/quote', desc: 'Detailed proposal within 24 hours.' },
             ].map((item) => (

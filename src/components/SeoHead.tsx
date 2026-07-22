@@ -151,6 +151,46 @@ export function serviceSchema(
   }
 }
 
+export function barServiceSchema(
+  name: string,
+  description: string,
+  url: string,
+  serviceType: string,
+  price: number,
+  priceLabel: string,
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${url}#service`,
+    name,
+    serviceType,
+    description,
+    provider: { '@id': 'https://mychef.id/#organization' },
+    areaServed: [
+      { '@type': 'State', name: 'Bali' },
+      { '@type': 'Country', name: 'Indonesia' },
+    ],
+    audience: {
+      '@type': 'BusinessAudience',
+      audienceType: 'Hotels, villas, beach clubs, restaurants, event and wedding organisers in Bali',
+    },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'IDR',
+      price: String(price),
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'IDR',
+        minPrice: String(price),
+        description: priceLabel,
+      },
+      availability: 'https://schema.org/InStock',
+      url,
+    },
+  }
+}
+
 export function detailedServiceSchema(
   name: string,
   description: string,
@@ -230,6 +270,41 @@ export function serviceWithOfferSchema(params: {
   }
 }
 
+export function professionalServiceSchema(
+  url: string,
+  image: string,
+  services: Array<{ name: string; url: string }>,
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `${url}#localbusiness`,
+    name: 'MyChef Bar Services',
+    image,
+    url,
+    telephone: '+62 896-7407-2020',
+    priceRange: 'IDR 2,500,000 - IDR 132,000,000',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Denpasar Selatan',
+      addressRegion: 'Bali',
+      addressCountry: 'ID',
+    },
+    areaServed: [
+      { '@type': 'State', name: 'Bali' },
+      { '@type': 'Country', name: 'Indonesia' },
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'B2B Bar Services',
+      itemListElement: services.map((s) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: s.name, url: s.url },
+      })),
+    },
+  }
+}
+
 export function faqPageSchema(questions: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',
@@ -293,6 +368,39 @@ export function eventSchema(params: {
       },
     },
     organizer: { '@id': 'https://mychef.id/#business' },
+    ...(params.image ? { image: params.image } : {}),
+    ...(params.lowPrice
+      ? {
+          offers: {
+            '@type': 'AggregateOffer',
+            lowPrice: params.lowPrice.toString(),
+            priceCurrency: params.priceCurrency ?? 'IDR',
+            availability: 'https://schema.org/InStock',
+            url: params.url,
+          },
+        }
+      : {}),
+  }
+}
+
+// Service schema for recurring event offerings (weddings, birthdays, etc.)
+// Use this instead of Event when the page describes a service, not a specific calendar event.
+export function serviceEventSchema(params: {
+  name: string
+  description: string
+  url: string
+  lowPrice?: number
+  priceCurrency?: string
+  image?: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: params.name,
+    description: params.description,
+    url: params.url,
+    provider: { '@id': 'https://mychef.id/#business' },
+    areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
     ...(params.image ? { image: params.image } : {}),
     ...(params.lowPrice
       ? {
@@ -501,6 +609,17 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
       link.setAttribute('href', canonical)
       setMeta(`meta[property="og:url"]`, 'property', 'og:url', canonical)
       setMeta(`meta[name="twitter:url"]`, 'name', 'twitter:url', canonical)
+
+      // Inject per-page hreflang tags (x-default + en + id)
+      document.head.querySelectorAll('link[data-seohead="hreflang"]').forEach((el) => el.remove())
+      for (const lang of ['en', 'id', 'x-default']) {
+        const hreflangLink = document.createElement('link')
+        hreflangLink.setAttribute('rel', 'alternate')
+        hreflangLink.setAttribute('hreflang', lang)
+        hreflangLink.setAttribute('href', canonical)
+        hreflangLink.setAttribute('data-seohead', 'hreflang')
+        document.head.appendChild(hreflangLink)
+      }
     }
 
     extraMeta.forEach(({ name, property, content }) => {
@@ -529,6 +648,7 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
 
     return () => {
       document.head.querySelectorAll('script[data-seohead="jsonld"]').forEach((el) => el.remove())
+      document.head.querySelectorAll('link[data-seohead="hreflang"]').forEach((el) => el.remove())
     }
   }, [title, description, canonical, ogImage, ogType, noindex, jsonLd, extraMeta, articleAuthor, articleSection, articleTags, articlePublishedTime, twitterImageAlt])
 

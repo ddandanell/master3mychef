@@ -193,12 +193,12 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Proposal Dinner Bali', href: '/blog/proposal-dinner-bali-private-chef', desc: 'Plan the perfect proposal dinner at your Bali villa with a private chef.' },
-  { label: 'Anniversary Dinner Bali', href: '/blog/anniversary-dinner-villa-bali', desc: 'Private chef anniversary dinner experiences at Bali villas.' },
+  { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Plan the perfect proposal dinner at your Bali villa with a private chef.' },
+  { label: 'Anniversary Dinner Bali', href: '/events/anniversaries', desc: 'Private chef anniversary dinner experiences at Bali villas.' },
   { label: 'Fine Dining Bali', href: '/fine-dining/private-chef-bali', desc: 'Full-service fine dining with a private chef at your Bali villa.' },
   { label: 'Festive Season Menu', href: '/blog/festive-season-menu-bali', desc: 'Festive menus for Christmas and New Year celebrations at Bali villas.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all private chef packages and group sizes.' },
-  { label: 'Honeymoon Chef Bali', href: '/blog/honeymoon-private-chef-bali', desc: 'Private chef honeymoon experiences — romantic, bespoke, unforgettable.' },
+  { label: 'Honeymoon Chef Bali', href: '/honeymoon-chef', desc: 'Private chef honeymoon experiences — romantic, bespoke, unforgettable.' },
 ]
 
 export default function NewYearsEveBaliPage() {
@@ -206,9 +206,9 @@ export default function NewYearsEveBaliPage() {
     <PremiumPage
       slug="blog/new-years-eve-bali-private-chef"
       title="New Year's Eve Bali: Private Chef Villa Dinner"
-      description="Book a private chef for New Year's Eve at your Bali villa. Tasting menus, midnight champagne, bespoke celebrations. Groups 2–30. Book early — dates sell out fast."
+      description="Book a private chef for New Year's Eve at your Bali villa. Tasting menus, midnight champagne, bespoke celebrations. Groups 2–30. Book early — sells out fast."
       seoTitle="New Year's Eve Bali | Private Chef Villa Dinner | myCHEF"
-      seoDescription="Book a private chef for New Year's Eve at your Bali villa. Tasting menus, midnight champagne, bespoke celebrations. Groups 2–30. Book early — dates sell out fast."
+      seoDescription="Book a private chef for New Year's Eve at your Bali villa. Tasting menus, midnight champagne, bespoke celebrations. Groups 2–30. Book early — sells out fast."
       canonicalUrl="https://mychef.id/blog/new-years-eve-bali-private-chef"
       h1="New Year's Eve Bali: Private Chef Villa Dinner"
       subtitle="Ring in the New Year with a Private Chef at Your Bali Villa"

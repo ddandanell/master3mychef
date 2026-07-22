@@ -92,8 +92,8 @@ export default function FamilyKidsMenuPage() {
   return (
     <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Family Private Chef Bali: Kids' Menus, Picky Eaters & Villa Dining Guide — myCHEF"
-        description="Planning villa dining for a family in Bali? Our private chefs build kids' menus around your children's ages and preferences. No restaurant stress. Book in 24 hours."
+        title="Family Private Chef Bali: Kids' Menus & Villa Dining | myCHEF"
+        description="Planning villa dining for a family in Bali? Our private chefs build kids' menus around ages and preferences. No restaurant stress. Book in 24 hours."
         canonical={CANONICAL}
         ogType="article"
         ogImage="/generated/mychef-location-bali-hub-hero.webp"
@@ -111,7 +111,7 @@ export default function FamilyKidsMenuPage() {
           <nav className="flex items-center gap-2 text-sm text-white/55 mb-8" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#C5A028] transition-colors">Home</Link>
             <ChevronRight size={14} />
-            <Link to="/blog" className="hover:text-[#C5A028] transition-colors">Blog</Link>
+            <Link to="/journal" className="hover:text-[#C5A028] transition-colors">Blog</Link>
             <ChevronRight size={14} />
             <span className="text-white/60">Family Private Chef Bali</span>
           </nav>

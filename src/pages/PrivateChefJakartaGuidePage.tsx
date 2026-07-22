@@ -57,7 +57,7 @@ const SECTIONS = [
       {
         icon: Users,
         title: 'Expat Household Chef',
-        desc: 'Weekly or daily meal service for expat families in Kemang, Pondok Indah, and BSD. Minimum one-month arrangement. The chef works within your kitchen, sources ingredients per your dietary requirements, and prepares family meals on a set schedule. Equivalent to our <a href="/blog/live-in-chef-bali-hiring-guide" class="text-[#7E6410] hover:underline font-medium">live-in chef service</a> in Bali.',
+        desc: 'Weekly or daily meal service for expat families in Kemang, Pondok Indah, and BSD. Minimum one-month arrangement. The chef works within your kitchen, sources ingredients per your dietary requirements, and prepares family meals on a set schedule. Equivalent to our <a href="/staffing" class="text-[#7E6410] hover:underline font-medium">live-in chef service</a> in Bali.',
       },
       {
         icon: Star,
@@ -154,11 +154,11 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Jakarta Page', href: '/jakarta', desc: 'myCHEF Jakarta service overview.' },
+  { label: 'Jakarta Page', href: '/locations/jakarta', desc: 'myCHEF Jakarta service overview.' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Our flagship Bali private chef service.' },
   { label: 'Corporate Catering', href: '/blog/corporate-events-catering-bali-team-dining', desc: 'Corporate and team dining guide.' },
-  { label: 'Live-In Chef Guide', href: '/blog/live-in-chef-bali-hiring-guide', desc: 'How to hire a live-in or household chef.' },
-  { label: 'Private Chef for Expats', href: '/blog/private-chef-bali-expats', desc: 'Private chef guide for long-term residents.' },
+  { label: 'Live-In Chef Guide', href: '/staffing', desc: 'How to hire a live-in or household chef.' },
+  { label: 'Private Chef for Expats', href: '/hire-private-chef-bali-monthly', desc: 'Private chef guide for long-term residents.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing guide for all myCHEF services.' },
 ]
 
@@ -169,7 +169,7 @@ export default function PrivateChefJakartaGuidePage() {
       title="Private Chef Jakarta: The Complete Guide"
       description="Everything you need to know about hiring a private chef in Jakarta — areas, costs, services, and how to book."
       seoTitle="Private Chef Jakarta | Hire a Private Chef in Jakarta | myCHEF"
-      seoDescription="Hire a private chef in Jakarta for dinner parties, corporate events, and in-home dining. South Jakarta, SCBD, Kemang, Menteng. From IDR 700,000/person. Same-day WhatsApp."
+      seoDescription="Hire a private chef in Jakarta for dinner parties, corporate events and in-home dining. South Jakarta, SCBD, Kemang, Menteng. From IDR 700K/person."
       canonicalUrl="https://mychef.id/blog/private-chef-jakarta-complete-guide"
       h1="Private Chef Jakarta: The Complete Guide"
       subtitle="Everything You Need to Know About Hiring a Private Chef in Jakarta"

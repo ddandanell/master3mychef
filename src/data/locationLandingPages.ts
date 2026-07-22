@@ -120,7 +120,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     serviceAvailability: [
       {
         title: 'Weekly meal prep & hosting',
-        href: '/services/weekly-meal-prep',
+        href: '/catering',
         summary: 'Daily healthy lunches, family dinners, and breakfast service for long-stay nomads and families.',
         availability: 'Flexible daily and multi-day packages.',
       },
@@ -582,7 +582,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
       },
       {
         title: 'Weekly chef service',
-        href: '/services/weekly-meal-prep',
+        href: '/catering',
         summary: 'Breakfast prep, healthy lunches, kids\' meals, and recurring villa cooking for longer bookings north of Canggu.',
         availability: 'Best for multi-day and family stays.',
       },

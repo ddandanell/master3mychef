@@ -88,7 +88,7 @@ export default function PererenanPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Pererenan | Design Villas & Private Dining — myCHEF"
-        description="Hire a private chef in Pererenan for designer villa dinners, weekly chef service & group feasts. Indonesian chefs, Michelin standards, quiet Canggu enclave. WhatsApp for quotes."
+        description="Hire a private chef in Pererenan for designer villa dinners, weekly chef service & group feasts. Indonesian chefs, Michelin standards, quiet Canggu enclave."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-pererenan.webp"
         jsonLd={[

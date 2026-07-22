@@ -117,12 +117,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'Full-service villa event catering' },
-  { label: 'Brunch Catering Bali', href: '/blog/brunch-catering-bali', desc: 'Private chef morning brunches' },
-  { label: 'Grazing Table Bali', href: '/blog/grazing-table-bali', desc: 'Artisan sharing boards for events' },
-  { label: 'Mixologist Hire Bali', href: '/blog/mixologist-hire-bali', desc: 'Cocktail bar for pool parties' },
-  { label: 'Large Group Catering', href: '/blog/large-group-catering-bali', desc: 'Catering for 30+ guests' },
-  { label: 'Barbeque Catering Bali', href: '/blog/bali-bbq-catering-villa-guide', desc: 'BBQ catering for villa events' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full-service villa event catering' },
+  { label: 'Brunch Catering Bali', href: '/catering', desc: 'Private chef morning brunches' },
+  { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Artisan sharing boards for events' },
+  { label: 'Mixologist Hire Bali', href: '/in-villa-service/mixology', desc: 'Cocktail bar for pool parties' },
+  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering for 30+ guests' },
+  { label: 'Barbeque Catering Bali', href: '/catering/bbq-catering', desc: 'BBQ catering for villa events' },
 ]
 
 export default function PoolPartyCateringBaliPage() {
@@ -130,9 +130,9 @@ export default function PoolPartyCateringBaliPage() {
     <PremiumPage
       slug="blog/pool-party-catering-bali"
       title="Pool Party Catering Bali -- Private Chef and Full Service for Villa Pool Parties"
-      seoTitle="Pool Party Catering Bali -- Private Chef & Full Service for Villa Pool Parties"
-      description="Professional pool party catering for Bali villas. Finger food, grazing tables, live BBQ stations, and full service teams for 8--100 guests. All villa areas covered."
-      seoDescription="Pool party catering in Bali for 8--100 guests. Private chef, finger food, grazing tables, BBQ stations, and cocktail bar add-on. From IDR 700K/person. All villa areas."
+      seoTitle="Pool Party Catering Bali -- Private Chef & Full Service | myCHEF"
+      description="Professional pool party catering for Bali villas. Finger food, grazing tables, live BBQ stations, and full service teams for 8--100 guests."
+      seoDescription="Pool party catering in Bali for 8--100 guests. Private chef, finger food, grazing tables, BBQ stations and cocktail bar add-on. From IDR 700K/person."
       h1="Pool Party Catering Bali -- Private Chef and Full Service for Villa Pool Parties"
       subtitle="From small group afternoon parties to 60-guest celebrations -- professional catering designed specifically for the Bali villa pool party format."
       heroImage="/images/blog/pool-party-catering-bali.jpg"

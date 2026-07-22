@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Building2, CalendarClock, Check, ChefHat, Clock3, MapPin, MessageCircle, Sparkles, UtensilsCrossed, Users } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import type { LocationLandingPageConfig } from '@/data/locationLandingPages'
+import { getLocationCanonical } from '@/data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
 const WHATSAPP_NUMBER = '6289674072020'
@@ -273,7 +274,7 @@ export default function LocationLandingPage({ config }: { config: LocationLandin
               .map((location) => (
                 <Link
                   key={location.slug}
-                  to={`/${location.slug}`}
+                  to={getLocationCanonical(location.slug)}
                   className="group flex flex-col rounded-[24px] border border-black/5 bg-[#FAFAF8] p-6 transition hover:border-[#C5A028] hover:-translate-y-0.5 hover:shadow-[0_10px_40px_rgba(197,160,40,0.12)] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 >
                   <div className="flex items-center gap-2">

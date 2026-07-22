@@ -137,8 +137,8 @@ export default function FoodAllergiesPage() {
   return (
     <>
       <SeoHead
-        title="Food Allergies & Dietary Requirements with a Private Chef Bali | myCHEF"
-        description="How myCHEF handles food allergies and special diets in Bali: HACCP protocols, cross-contamination controls, and custom menus for vegan, gluten-free, halal, keto, nut-free & dairy-free guests."
+        title="Food Allergies & Dietary Requirements | Private Chef Bali | myCHEF"
+        description="How myCHEF handles food allergies and special diets in Bali: HACCP protocols, cross-contamination controls, and custom menus for vegan, gluten-free, halal."
         canonical={CANONICAL}
         ogType="article"
         jsonLd={[localBizWithRating, articleSchema, breadcrumbs, faqSchema]}

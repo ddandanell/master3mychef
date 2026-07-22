@@ -120,12 +120,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Waiters, kitchen crew and full event teams' },
-  { label: 'Villa Party Catering', href: '/blog/villa-party-catering-bali', desc: 'Food and drinks for villa celebrations' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters, kitchen crew and full event teams' },
+  { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Food and drinks for villa celebrations' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa chef for dinner and events' },
-  { label: 'Grazing Tables Bali', href: '/blog/grazing-table-bali', desc: 'Grazing boards and charcuterie for events' },
+  { label: 'Grazing Tables Bali', href: '/catering/grazing-tables', desc: 'Grazing boards and charcuterie for events' },
   { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Full-service catering for buck\'s parties' },
-  { label: 'Large Group Catering', href: '/blog/large-group-catering-bali', desc: 'Catering solutions for 30+ guests' },
+  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering solutions for 30+ guests' },
 ]
 
 export default function BartenderHireBaliPage() {
@@ -134,8 +134,8 @@ export default function BartenderHireBaliPage() {
       slug="blog/bartender-hire-bali"
       title="Bartender Hire Bali — Private Villa Bar Staff for Events & Parties"
       seoTitle="Bartender Hire Bali — Professional Bar Staff for Villa Events"
-      description="Hire a professional bartender in Bali for your villa party, wedding, or corporate event. Vetted bar staff, mobile bar packages, and same-day replacement guarantee."
-      seoDescription="Hire vetted bartenders in Bali for villa parties, weddings & corporate events. Standard, mixologist, and mobile bar packages. Same-day replacement guarantee. From IDR 650K."
+      description="Hire a professional bartender in Bali for your villa party, wedding, or corporate event. Vetted bar staff, mobile bar packages, and same-day replacement."
+      seoDescription="Hire vetted bartenders in Bali for villa parties, weddings & corporate events. Standard, mixologist, and mobile bar packages. Same-day replacement."
       h1="Bartender Hire Bali — Professional Bar Staff for Villa Parties & Events"
       subtitle="Vetted bartenders and mixologists for villa parties, weddings, corporate events, and private dinners across Bali."
       heroImage="/images/blog/bartender-hire-bali.jpg"

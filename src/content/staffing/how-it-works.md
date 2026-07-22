@@ -304,12 +304,7 @@ No spam, no pressure. We are here when you are ready.
     "@type": "Place",
     "name": "Bali, Indonesia"
   },
-  "priceRange": "$$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "560"
-  }
+  "priceRange": "$$$"
 }
 </script>
 
@@ -471,7 +466,7 @@ No spam, no pressure. We are here when you are ready.
 - [/staffing/private-chef](/staffing/private-chef) — Private Chef Placement
 - [/staffing/villa-staff](/staffing/villa-staff) — Villa Staff (housekeepers, butlers, drivers)
 - [/staffing/villa-manager](/staffing/villa-manager) — Villa Manager Recruitment
-- [/staffing/event-staff](/staffing/event-staff) — Event Staff for Weddings & Parties
+- [/staffing/villa-staff](/staffing/villa-staff) — Event Staff for Weddings & Parties
 - [/staffing/housekeeping-cleaning](/staffing/housekeeping-cleaning) — Housekeeping & Cleaning Services
 - [/about-us](/about-us) — Meet the Team
 - [/contact](/contact) — General Contact Page

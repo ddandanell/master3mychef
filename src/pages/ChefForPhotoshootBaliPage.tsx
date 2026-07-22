@@ -107,11 +107,11 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Cooking Class Bali', href: '/blog/bali-villa-cooking-class-private-chef', desc: 'Private chef-led cooking classes' },
+  { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Private chef-led cooking classes' },
   { label: 'Fine Dining Bali', href: '/fine-dining', desc: 'Luxury private dining experiences' },
   { label: 'Tasting Menu Bali', href: '/blog/tasting-menu-bali', desc: 'Multi-course private tasting menus' },
   { label: 'Indonesian Street Food Guide', href: '/blog/indonesian-street-food-private-chef-bali', desc: 'Authentic Indonesian street food by private chef' },
-  { label: 'Chef Placement Bali', href: '/blog/chef-placement-agency-bali', desc: 'Permanent chef hire and placement' },
+  { label: 'Chef Placement Bali', href: '/staffing/private-chef-placement', desc: 'Permanent chef hire and placement' },
 ]
 
 export default function ChefForPhotoshootBaliPage() {
@@ -119,9 +119,9 @@ export default function ChefForPhotoshootBaliPage() {
     <PremiumPage
       slug="blog/chef-for-photoshoot-bali"
       title="Chef for Food Photoshoot in Bali -- Content Creation and Brand Photography | myCHEF"
-      seoTitle="Chef for Food Photoshoot Bali -- Content Creation, Brand Photography and Video Production"
-      description="Specialist chef hire for food photoshoots, content creation, and brand photography in Bali. Hotels, brands, creators, and editorial publications. Balinese and international cuisine specialists."
-      seoDescription="Hire a chef for food photoshoots and content creation in Bali. Hotels, brands, influencers, and publications. Market-fresh sourcing, food styling experience, and Balinese cuisine specialists."
+      seoTitle="Chef for Food Photoshoot Bali -- Content Creation & Video | myCHEF"
+      description="Specialist chef hire for food photoshoots, content creation, and brand photography in Bali. Hotels, brands, creators, and editorial publications."
+      seoDescription="Hire a chef for food photoshoots and content creation in Bali. Hotels, brands, influencers and publications. Market-fresh sourcing, food styling, Balinese."
       h1="Chef for Food Photoshoot and Content Creation in Bali"
       subtitle="Bali is where the world makes food content. We provide the chef who makes it right."
       heroImage="/images/blog/chef-photoshoot-bali.jpg"

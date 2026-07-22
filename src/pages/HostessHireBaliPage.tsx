@@ -108,12 +108,12 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Waiter Hire Bali', href: '/blog/waiter-hire-bali', desc: 'Professional service staff for events' },
-  { label: 'Bartender Hire Bali', href: '/blog/bartender-hire-bali', desc: 'Event bartenders and mobile bar' },
-  { label: 'Event Staff Bali', href: '/blog/event-staff-bali', desc: 'Full event staffing solutions' },
-  { label: 'Villa Butler Bali', href: '/blog/villa-butler-bali-guide', desc: 'Personal butler service for villas' },
+  { label: 'Waiter Hire Bali', href: '/in-villa-service/waiters', desc: 'Professional service staff for events' },
+  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Event bartenders and mobile bar' },
+  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Full event staffing solutions' },
+  { label: 'Villa Butler Bali', href: '/in-villa-service/butlers', desc: 'Personal butler service for villas' },
   { label: 'Corporate Events Catering', href: '/blog/corporate-events-catering-bali-team-dining', desc: 'Corporate dining and events in Bali' },
-  { label: 'Event Planning Bali', href: '/event-planning', desc: 'Full event management in Bali' },
+  { label: 'Event Planning Bali', href: '/events', desc: 'Full event management in Bali' },
 ]
 
 export default function HostessHireBaliPage() {
@@ -121,9 +121,9 @@ export default function HostessHireBaliPage() {
     <PremiumPage
       slug="blog/hostess-hire-bali"
       title="Hostess Hire Bali -- Professional Event Host and Greeter Service | myCHEF"
-      seoTitle="Hostess Hire Bali -- Professional Event Hostess and Host Greeter Service"
-      description="Professional hostess and host hire for events in Bali. Corporate dinners, brand activations, villa parties, and VIP gatherings. English-fluent, luxury-trained staff across all Bali areas."
-      seoDescription="Hire a professional hostess in Bali for corporate events, villa parties, brand activations, and VIP gatherings. English-fluent, luxury-trained. All areas covered."
+      seoTitle="Hostess Hire Bali -- Event Hostess & Greeter Service | myCHEF"
+      description="Professional hostess and host hire for events in Bali. Corporate dinners, brand activations, villa parties, and VIP gatherings."
+      seoDescription="Hire a professional hostess in Bali for corporate events, villa parties, brand activations and VIP gatherings. English-fluent, luxury-trained."
       h1="Hostess Hire in Bali -- Professional Event Host and Greeter Service"
       subtitle="The first impression of any event is shaped by who guests meet at the door."
       heroImage="/images/blog/hostess-hire-bali.jpg"

@@ -208,7 +208,7 @@ export default function PricingCalculatorPage() {
     <>
       <SeoHead
         title="Private Chef Pricing Calculator Bali | Instant Cost Estimate | myCHEF"
-        description="Get an instant private chef cost estimate for your Bali villa. Select service type, guest count, and menu level — see your price in seconds. From IDR 700K/person."
+        description="Get an instant private chef cost estimate for your Bali villa. Select service type, guest count and menu level — see your price in seconds."
         canonical="https://mychef.id/pricing-calculator"
       />
 

@@ -106,7 +106,7 @@ export default function JakartaPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Chef Jakarta | Corporate & Villa Dining — myCHEF"
-        description="Book a private chef in Jakarta for villa dinners, corporate events & weddings. IDR 700K/person. Indonesian chefs, Michelin standards. Request a quote on WhatsApp."
+        description="Book a private chef in Jakarta for villa dinners, corporate events & weddings. IDR 700K/person. Indonesian chefs, Michelin standards. WhatsApp for a quote."
         canonical={canonical}
         ogImage="/generated/mychef-misc-bali-jakarta-skyline.webp"
         jsonLd={[
@@ -295,7 +295,7 @@ export default function JakartaPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { label: 'How to hire a private chef', path: '/blog/how-to-hire-private-chef', desc: 'Complete step-by-step hiring guide — vetting, pricing, what to expect' },
-              { label: 'Chef hiring & credentials guide', path: '/blog/chef-hiring-guide', desc: 'What qualifications to look for and red flags to avoid' },
+              { label: 'Chef hiring & credentials guide', path: '/blog/chef-qualifications-credentials-bali-hiring', desc: 'What qualifications to look for and red flags to avoid' },
               { label: 'Jakarta catering services', path: '/catering', desc: 'Corporate events, villa dinners, and large-scale galas' },
               { label: 'Private chef pricing', path: '/pricing', desc: 'Transparent starting prices for every Jakarta service format' },
             ].map((link) => (

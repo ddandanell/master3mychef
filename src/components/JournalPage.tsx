@@ -6,10 +6,10 @@ import { JOURNAL_POSTS } from '@/data/content/journalPosts'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import { SITEMAP } from '@/data/sitemap'
 
-// Every article route (data-driven BLOG_POSTS + standalone /blog & /guide page
+// Every article route (data-driven BLOG_POSTS + standalone /journal & /guide page
 // components) so none get orphaned — sourced from the sitemap, sorted by title.
 const ARTICLE_LINKS = SITEMAP
-  .filter((e) => e.path.startsWith('/blog/') || e.path.startsWith('/guide/'))
+  .filter((e) => e.path.startsWith('/journal') || e.path.startsWith('/guide/'))
   .slice()
   .sort((a, b) => a.title.localeCompare(b.title))
 
@@ -140,7 +140,7 @@ export function JournalIndexPage() {
         )}
       </section>
 
-      {/* Complete guides & articles index — makes every /blog and /guide article reachable in 2 clicks (fixes orphaned posts, Ch 7.1.2) */}
+      {/* Complete guides & articles index — makes every /journal and /guide article reachable in 2 clicks (fixes orphaned posts, Ch 7.1.2) */}
       <section className="max-w-[1200px] mx-auto px-6 pb-20">
         <div className="rounded-2xl border border-[#E8E6E3] bg-white px-6 py-8">
           <p className="font-cormorant text-[#7E6410] text-sm uppercase tracking-[4px] mb-2">More Guides &amp; Articles</p>

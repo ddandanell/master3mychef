@@ -22,7 +22,7 @@ const SECTIONS = [
 
     <p><strong>What season brings:</strong> December and January are wet-season months. Peak wet-season produce (durian, jackfruit, Highland strawberries, Kintamani avocados, wild mushrooms, fresh soursop) is available and at its best. A Christmas dessert featuring fresh Bedugul strawberries and durian cream alongside a classic Yule log is a genuinely special combination — ingredients you cannot get at this quality anywhere else in the world.</p>
 
-    <p><strong>The format question:</strong> Festive events run across the full size range. Christmas Eve dinner is typically intimate — 2–12 guests, plated. Christmas Day is more communal — 8–30 guests, buffet or family-style. New Year's Eve skews large — 20–80 guests, reception format with passed canapés, dinner buffet, and midnight dessert station. See our <a href="/blog/buffet-vs-plated-service-bali" class="text-[#7E6410] hover:underline font-medium">buffet vs plated guide</a> for the full format comparison.</p>`,
+    <p><strong>The format question:</strong> Festive events run across the full size range. Christmas Eve dinner is typically intimate — 2–12 guests, plated. Christmas Day is more communal — 8–30 guests, buffet or family-style. New Year's Eve skews large — 20–80 guests, reception format with passed canapés, dinner buffet, and midnight dessert station. See our <a href="/catering" class="text-[#7E6410] hover:underline font-medium">buffet vs plated guide</a> for the full format comparison.</p>`,
   },
   {
     id: 'menus',
@@ -163,7 +163,7 @@ const FAQS = [
 const RELATED_PAGES = [
   { href: '/blog/bali-catering-menu', label: 'Bali Catering Menu Guide', desc: 'Year-round Bali catering menu ideas, seasonal ingredients, and pricing.' },
   { href: '/blog/wet-season-menu-bali', label: 'Wet Season Menu Guide', desc: 'Durian, jackfruit, and Highland produce — November to March dining.' },
-  { href: '/blog/buffet-vs-plated-service-bali', label: 'Buffet vs Plated Service', desc: 'Which catering format is right for your Bali villa event?' },
+  { href: '/catering', label: 'Buffet vs Plated Service', desc: 'Which catering format is right for your Bali villa event?' },
   { href: '/pricing', label: 'Private Chef Pricing', desc: 'Full pricing guide for private chefs and catering in Bali.' },
 ]
 

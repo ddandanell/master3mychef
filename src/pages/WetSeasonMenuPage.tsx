@@ -74,7 +74,7 @@ const SECTIONS = [
       <li>Fresh highland fruit platter: strawberries, avocado dishes, soursop drinks</li>
     </ul>
 
-    <p>For format guidance (buffet vs plated), see our <a href="/blog/buffet-vs-plated-service-bali" class="text-[#7E6410] hover:underline font-medium">buffet vs plated comparison</a>. For pricing, see the <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">private chef pricing guide</a>.</p>`,
+    <p>For format guidance (buffet vs plated), see our <a href="/catering" class="text-[#7E6410] hover:underline font-medium">buffet vs plated comparison</a>. For pricing, see the <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">private chef pricing guide</a>.</p>`,
   },
   {
     id: 'by-occasion',

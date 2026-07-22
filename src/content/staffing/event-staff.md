@@ -1,6 +1,6 @@
 # Event Staff — Final Content
 
-## URL: /staffing/event-staff
+## URL: /staffing/villa-staff
 ## Meta Title: Premium Event Staff Bali | Waiters, Bartenders & Crew
 ## Meta Description: Hire professional event staff in Bali for weddings, villa parties & corporate events. Vetted waiters, bartenders & crew. WhatsApp us for a custom quote.
 ## WhatsApp: +62 896-7407-2020
@@ -281,12 +281,7 @@ The easiest way is to WhatsApp us your event details: date, venue, guest count, 
     "@type": "Place",
     "name": "Bali, Indonesia"
   },
-  "priceRange": "$$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "560"
-  }
+  "priceRange": "$$$"
 }
 </script>
 

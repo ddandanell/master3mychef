@@ -119,16 +119,16 @@ const faqs = [
   {
     question: 'Can you provide bartenders and cocktail service for a festive party at the villa?',
     answer:
-      "Yes. We can arrange bartenders, mixologists, and canape service teams for festive villa parties and cocktail hours. Our [Bartender Hire Bali](/blog/bartender-hire-bali) and [Mixologist Hire Bali](/blog/mixologist-hire-bali) pages cover this in more detail.",
+      "Yes. We can arrange bartenders, mixologists, and canape service teams for festive villa parties and cocktail hours. Our [Bartender Hire Bali](/in-villa-service/bartenders) and [Mixologist Hire Bali](/in-villa-service/mixology) pages cover this in more detail.",
   },
 ]
 
 const relatedPages = [
-  { label: 'Christmas Dinner Bali', href: '/blog/christmas-dinner-bali-villa', desc: 'Christmas dinner at your Bali villa' },
-  { label: 'New Year\'s Eve Bali Private Chef', href: '/blog/new-years-eve-bali-private-chef', desc: 'NYE celebration dinner and catering' },
-  { label: 'Villa Party Catering Bali', href: '/blog/villa-party-catering-bali', desc: 'Full villa party catering service' },
-  { label: 'Bartender Hire Bali', href: '/blog/bartender-hire-bali', desc: 'Professional bartender service for events' },
-  { label: 'Large Group Catering Bali', href: '/blog/large-group-catering-bali', desc: 'Catering for 30+ guests' },
+  { label: 'Christmas Dinner Bali', href: '/blog/holiday-chef-bali', desc: 'Christmas dinner at your Bali villa' },
+  { label: 'New Year\'s Eve Bali Private Chef', href: '/blog/holiday-chef-bali', desc: 'NYE celebration dinner and catering' },
+  { label: 'Villa Party Catering Bali', href: '/events/villa-parties', desc: 'Full villa party catering service' },
+  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Professional bartender service for events' },
+  { label: 'Large Group Catering Bali', href: '/group-villa-dinner-packages-bali', desc: 'Catering for 30+ guests' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Complete pricing guide' },
 ]
 
@@ -136,11 +136,11 @@ export default function HolidayChefBaliPage() {
   return (
     <PremiumPage
       slug="blog/holiday-chef-bali"
-      title="Holiday Chef Bali -- Private Chef for Christmas, New Year and Festive Season | myCHEF"
-      seoTitle="Holiday Chef Bali -- Private Chef for Christmas, New Year and Festive Season"
-      description="Holiday chef service in Bali for Christmas, New Year, and the festive season. Traditional roast, seafood feast, Balinese spread, or bespoke. All villa areas covered. Book early."
-      seoDescription="Holiday chef Bali. Private chef for Christmas dinner, New Year's Eve, and festive season catering in Bali villas. Traditional roast, seafood, Balinese feasts. Book early -- fills fast."
-      h1="Holiday Chef Bali -- Private Chef for Christmas, New Year and Festive Season"
+      title="Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF | myCHEF"
+      seoTitle="Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF"
+      description="Holiday chef service in Bali for Christmas, New Year, and the festive season. Traditional roast, seafood feast, Balinese spread, or bespoke."
+      seoDescription="Holiday chef Bali. Private chef for Christmas dinner, New Year's Eve and festive season catering. Traditional roast, seafood, Balinese feasts. Book early."
+      h1="Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF"
       subtitle="Festive dinners. Christmas roasts. New Year's Eve countdowns. All at your villa."
       heroImage="/images/blog/holiday-chef-bali.jpg"
       heroImageAlt="Indonesian private chef preparing a festive Christmas dinner spread in a Bali villa kitchen"
@@ -170,7 +170,7 @@ export default function HolidayChefBaliPage() {
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
-          headline: 'Holiday Chef Bali -- Private Chef for Christmas, New Year and Festive Season',
+          headline: 'Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF',
           description: 'Holiday chef service in Bali for Christmas, New Year, and the festive season. All villa areas.',
           url: 'https://mychef.id/blog/holiday-chef-bali',
           datePublished: '2026-06-30',

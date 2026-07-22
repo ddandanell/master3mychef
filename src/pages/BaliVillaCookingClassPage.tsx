@@ -141,8 +141,8 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full private chef dinner service at your Bali villa.' },
-  { label: 'Floating Breakfast Bali', href: '/blog/floating-breakfast-bali', desc: 'The iconic Bali villa floating breakfast — how to book it.' },
-  { label: 'Honeymoon Chef Bali', href: '/blog/honeymoon-private-chef-bali', desc: 'Private chef experiences for honeymoon couples in Bali.' },
+  { label: 'Floating Breakfast Bali', href: '/catering/floating-breakfast', desc: 'The iconic Bali villa floating breakfast — how to book it.' },
+  { label: 'Honeymoon Chef Bali', href: '/honeymoon-chef', desc: 'Private chef experiences for honeymoon couples in Bali.' },
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Candlelit private chef dinner at your villa — full romantic dining experience.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF services and group sizes.' },
   { label: 'Event Planning Bali', href: '/blog/event-planning-bali', desc: 'Complete logistics guide for Bali villa events and activities.' },
@@ -153,9 +153,9 @@ export default function BaliVillaCookingClassPage() {
     <PremiumPage
       slug="blog/bali-villa-cooking-class-private-chef"
       title="Private Cooking Classes at Your Bali Villa"
-      description="Skip the tourist cooking school. Have a professional myCHEF chef come to your Bali villa and teach you authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 700,000/person."
-      seoTitle="Bali Villa Cooking Class | Private Chef Cooking Lessons at Your Villa | myCHEF"
-      seoDescription="Skip the tourist cooking school. Have a professional myCHEF chef come to your Bali villa and teach you authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 700,000/person."
+      description="Skip the tourist cooking school. A professional myCHEF chef comes to your Bali villa to teach authentic Indonesian and Balinese cuisine. Groups 2–12."
+      seoTitle="Bali Villa Cooking Class | Private Chef Lessons at Your Villa | myCHEF"
+      seoDescription="Skip the tourist cooking school. A professional myCHEF chef comes to your Bali villa to teach authentic Indonesian and Balinese cuisine. Groups 2–12."
       canonicalUrl="https://mychef.id/blog/bali-villa-cooking-class-private-chef"
       h1="Private Cooking Classes at Your Bali Villa"
       subtitle="Learn Balinese & Indonesian Cuisine with a Professional Private Chef"

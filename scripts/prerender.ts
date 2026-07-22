@@ -364,6 +364,17 @@ function startPreviewServer(): Promise<ChildProcess> {
   })
 }
 
+// Routes that are intentionally client-only forms; they never carry prerendered body content.
+const CLIENT_ONLY_ROUTES = new Set(['/book', '/quote'])
+
+function isValidPrerender(routePath: string, rootHtml: string | null | undefined): boolean {
+  if (!rootHtml || rootHtml.length < 1000) return false
+  if (CLIENT_ONLY_ROUTES.has(routePath)) return true
+  // Most indexable pages should have an H1 after React renders. A missing H1 is a strong
+  // signal that only the Layout/Navbar shell hydrated and the page body never mounted.
+  return /<h1[\s>]/i.test(rootHtml)
+}
+
 async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolean; reason?: string }> {
   const distFile = distFileForRoute(route.path)
   if (!existsSync(distFile)) {
@@ -374,6 +385,16 @@ async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolea
     userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
     viewport: { width: 1280, height: 1024 },
   })
+
+  async function captureRoot(timeoutMs: number): Promise<string | null> {
+    await page.goto(`${BASE_URL}${route.path}`, { waitUntil: 'domcontentloaded', timeout: 20000 })
+    // Wait for the React app to actually render content into #root.
+    await page.waitForSelector('#root > *', { timeout: 10000 })
+    // Settle for headings / above-the-fold content (no networkidle — GSAP never idles).
+    await page.waitForTimeout(timeoutMs)
+    return page.$eval('#root', (el) => el.innerHTML).catch(() => null)
+  }
+
   try {
     // Block resources that don't affect the rendered DOM (images, fonts, media) and
     // third-party scripts (GTM, analytics). These are slow/flaky in CI and were
@@ -385,21 +406,31 @@ async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolea
       if (/googletagmanager|google-analytics|analytics\.google|vercel-scripts|vercel-insights|fonts\.googleapis|fonts\.gstatic|doubleclick|facebook|hotjar/i.test(url)) return r.abort()
       return r.continue()
     })
-    await page.goto(`${BASE_URL}${route.path}`, { waitUntil: 'domcontentloaded', timeout: 20000 })
-    // Wait for the React app to actually render content into #root.
-    await page.waitForSelector('#root > *', { timeout: 10000 })
-    // Brief settle for headings / above-the-fold content (no networkidle — GSAP never idles).
-    await page.waitForTimeout(400)
 
-    const rootHtml = await page.$eval('#root', (el) => el.innerHTML)
-    if (!rootHtml || rootHtml.length < 1000) {
-      return { ok: false, reason: `rendered #root too small (${rootHtml?.length ?? 0} bytes)` }
+    let rootHtml = await captureRoot(400)
+    if (!isValidPrerender(route.path, rootHtml)) {
+      // Retry once with a longer settle window; some routes mount their main content after
+      // secondary data/layout effects resolve.
+      rootHtml = await captureRoot(1500)
+    }
+    if (!isValidPrerender(route.path, rootHtml)) {
+      return { ok: false, reason: `rendered #root too small or missing H1 (${rootHtml?.length ?? 0} bytes)` }
     }
 
     const shell = readFileSync(distFile, 'utf-8')
     if (!shell.includes(ROOT_EMPTY)) {
-      // Already filled (re-run without a fresh inject-meta) → idempotent success, not an error.
-      if (shell.includes('<div id="root">')) return { ok: true }
+      // Already filled (re-run without a fresh inject-meta). Validate existing content and
+      // overwrite if it is only a shell render from a previous flaky run.
+      if (shell.includes('<div id="root">')) {
+        const existingRoot = shell.match(/<div\b[^>]*\bid=["']root["'][^>]*>([\s\S]*)<\/div>\s*<\/body>/)?.[1] ?? ''
+        if (isValidPrerender(route.path, existingRoot)) {
+          return { ok: true }
+        }
+        // Overwrite with the newly captured content.
+        const merged = shell.replace(/<div\b[^>]*\bid=["']root["'][^>]*>[\s\S]*<\/div>/, `<div id="root">${rootHtml}</div>`)
+        writeFileSync(distFile, merged, 'utf-8')
+        return { ok: true }
+      }
       return { ok: false, reason: 'no root div in shell' }
     }
     // Splice rendered body into the controlled inject-meta <head> shell.

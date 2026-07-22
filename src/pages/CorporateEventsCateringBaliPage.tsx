@@ -242,8 +242,8 @@ export default function CorporateEventsCateringBaliPage() {
   return (
     <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Corporate Event Catering Bali 2026 | Case Studies & Real Costs — myCHEF"
-        description="Real corporate catering case studies from Bali: tech retreat (38 people, 5 days), bank exec dinner (22 guests), fashion launch (74 guests), wellness retreat (24 people, 7 days). Costs, menus, and outcomes."
+        title="Corporate Event Catering Bali 2026 | Case Studies | myCHEF"
+        description="Real corporate catering case studies from Bali: tech retreat (38, 5 days), bank exec dinner (22), fashion launch (74), wellness retreat (24, 7 days)."
         canonical={CANONICAL}
         ogType="article"
         ogImage="/og-image.webp"
@@ -261,7 +261,7 @@ export default function CorporateEventsCateringBaliPage() {
           <nav className="flex items-center gap-2 text-sm text-white/55 mb-8" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#C5A028] transition-colors">Home</Link>
             <ChevronRight size={14} />
-            <Link to="/blog" className="hover:text-[#C5A028] transition-colors">Blog</Link>
+            <Link to="/journal" className="hover:text-[#C5A028] transition-colors">Blog</Link>
             <ChevronRight size={14} />
             <span className="text-white/60">Corporate Events Catering Bali</span>
           </nav>

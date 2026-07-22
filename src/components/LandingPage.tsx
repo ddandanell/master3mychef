@@ -30,7 +30,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   const articleEntry: EnrichedPost | null = isArticle && 'readTimeMinutes' in entry ? (entry as EnrichedPost) : null
   const canonical = `${SITE}/${entry.slug}`
   const heroImage = kind === 'landing' ? '/generated/hero-how-it-works.webp' : '/generated/luna-hero-v3.webp'
-  const hubPath = kind === 'blog' ? '/blog' : kind === 'guide' ? '/help' : '/'
+  const hubPath = kind === 'blog' ? '/journal' : kind === 'guide' ? '/help' : '/'
   const hubLabel = kind === 'blog' ? 'Journal' : kind === 'guide' ? 'Help' : 'Home'
   const hubCtaLabel = kind === 'blog' ? 'View All Journal Entries' : kind === 'guide' ? 'View All Help Guides' : 'View All Pages'
   const backLabel = kind === 'blog' ? 'Back to Blog' : kind === 'guide' ? 'Back to Help' : 'Back to Home'
@@ -248,7 +248,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
               <Link to="/quote" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-10 py-5 text-sm font-semibold uppercase tracking-[2px] text-black transition-all hover:bg-[#D4B43A]">
                 Get My Free Quote
               </Link>
-              <Link to="/menus" className="inline-flex items-center justify-center gap-2 rounded-full border border-black/10 px-10 py-5 text-sm font-semibold uppercase tracking-[2px] text-[#1A1A1A] transition-all hover:bg-black/5">
+              <Link to="/fine-dining/menus" className="inline-flex items-center justify-center gap-2 rounded-full border border-black/10 px-10 py-5 text-sm font-semibold uppercase tracking-[2px] text-[#1A1A1A] transition-all hover:bg-black/5">
                 <Utensils size={18} /> Browse Menus
               </Link>
             </div>

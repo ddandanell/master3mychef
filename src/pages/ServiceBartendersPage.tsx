@@ -298,6 +298,12 @@ export default function ServiceBartendersPage() {
               <p className="text-xs text-[#4A4745]">Plan the full event experience around your bar concept and guest count.</p>
             </Link>
           </div>
+          <p className="mt-8 text-sm text-[#4A4745]">
+            Looking for bar training, cocktail menu development or venue consultancy?{' '}
+            <Link to="/bar-services/" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Explore MyChef Bar Services
+            </Link>.
+          </p>
         </div>
       </section>
 

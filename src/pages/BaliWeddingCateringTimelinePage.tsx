@@ -211,8 +211,8 @@ export default function BaliWeddingCateringTimelinePage() {
   return (
     <>
       <SeoHead
-        title="Bali Wedding Catering Private Chef Timeline: Complete Planning Guide | myCHEF"
-        description="The full timeline for hiring a private chef for your Bali wedding — from 6 months out to the day itself. Menu tastings, staffing, dietary requirements, and what to confirm at each stage."
+        title="Bali Wedding Catering Timeline: Complete Guide | myCHEF"
+        description="The full timeline for hiring a private chef for your Bali wedding — from 6 months out to the day itself. Menu tastings, staffing and dietary planning."
         canonical={CANONICAL}
         ogType="article"
         jsonLd={[localBizWithRating, articleSchema, breadcrumbs, faqSchema]}

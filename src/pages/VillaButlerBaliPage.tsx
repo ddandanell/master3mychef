@@ -141,8 +141,8 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Villa Staff Hiring Guide', href: '/blog/villa-staff-bali-hiring-guide', desc: 'Complete guide to building a full villa team in Bali.' },
-  { label: 'Live-In Chef Guide', href: '/blog/live-in-chef-bali-hiring-guide', desc: 'How to hire a live-in private chef for your Bali villa.' },
+  { label: 'Villa Staff Hiring Guide', href: '/staffing/villa-staff', desc: 'Complete guide to building a full villa team in Bali.' },
+  { label: 'Live-In Chef Guide', href: '/staffing', desc: 'How to hire a live-in private chef for your Bali villa.' },
   { label: 'Staffing Villa Staff', href: '/staffing/villa-staff', desc: 'Browse all villa staff placement services from myCHEF.' },
   { label: 'Staffing Placement', href: '/staffing/placement', desc: 'How the myCHEF placement process works end to end.' },
   { label: 'Private Dinner Party Bali', href: '/blog/private-dinner-party-bali', desc: 'How to plan a private dinner party at a Bali villa.' },
@@ -154,9 +154,9 @@ export default function VillaButlerBaliPage() {
     <PremiumPage
       slug="blog/villa-butler-bali-guide"
       title="Villa Butler Bali: The Complete Hiring Guide"
-      description="Complete guide to hiring a villa butler in Bali. Roles, responsibilities, cost IDR, vetting standards, short vs long-term placement. Free consultation with myCHEF."
+      description="Complete guide to hiring a villa butler in Bali. Roles, responsibilities, costs, vetting standards, short vs long-term placement. Free consultation with myCHEF."
       seoTitle="Villa Butler Bali | Hire a Villa Butler in Bali | myCHEF"
-      seoDescription="Complete guide to hiring a villa butler in Bali. Roles, responsibilities, cost IDR, vetting standards, short vs long-term placement. Free consultation with myCHEF."
+      seoDescription="Complete guide to hiring a villa butler in Bali. Roles, responsibilities, costs, vetting standards, short vs long-term placement. Free consultation with myCHEF."
       canonicalUrl="https://mychef.id/blog/villa-butler-bali-guide"
       h1="Villa Butler Bali: The Complete Hiring Guide"
       subtitle="What a Bali Villa Butler Does, What They Cost, and How to Find the Right One"

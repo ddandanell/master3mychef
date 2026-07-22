@@ -614,8 +614,17 @@ function injectMeta(html: string, path: string, title: string, description: stri
   return html
 }
 
+function injectCssPreload(html: string): string {
+  const cssLinkMatch = html.match(/<link rel="stylesheet"[^>]*href="(\/assets\/css\/[^"]+)"[^>]*>/)
+  if (!cssLinkMatch) return html
+  const href = cssLinkMatch[1]
+  const preload = `<link rel="preload" as="style" href="${href}" crossorigin="anonymous" />`
+  return html.replace(cssLinkMatch[0], `${preload}\n  ${cssLinkMatch[0]}`)
+}
+
 // ── Main ─────────────────────────────────────────────────────────────────────
-const baseHtml = readFileSync(join(DIST, 'index.html'), 'utf-8')
+let baseHtml = readFileSync(join(DIST, 'index.html'), 'utf-8')
+baseHtml = injectCssPreload(baseHtml)
 let success = 0
 let fail = 0
 

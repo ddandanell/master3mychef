@@ -132,6 +132,60 @@ const PILLAR_OG_IMAGES: Record<string, string> = {
   'staffing': '/chef-portrait.webp',
 }
 
+// Per-route LCP hero image preloads. Mirrors the actual <img> rendered above the fold
+// on each page so the browser can start fetching it before React hydrates.
+// For unknown routes the default homepage preload is removed to avoid wasting bandwidth.
+const HERO_PRELOADS: Record<string, string> = {
+  '/': '/generated/mychef-location-bali-hub-hero.webp',
+  '/reviews': '/generated/mychef-ui-bali-testimonials-bg.webp',
+  '/locations/canggu': '/generated/mychef-location-bali-city-canggu.webp',
+  '/locations/seminyak': '/generated/mychef-location-bali-city-seminyak.webp',
+  '/locations/ubud': '/generated/mychef-location-bali-city-ubud.webp',
+  '/locations/uluwatu': '/generated/mychef-location-bali-city-uluwatu.webp',
+  '/locations/nusa-dua': '/generated/mychef-location-bali-city-nusa-dua.webp',
+  '/locations/jimbaran': '/generated/mychef-location-bali-city-jimbaran.webp',
+  '/locations/sanur': '/generated/mychef-location-bali-city-sanur.webp',
+  '/locations/pererenan': '/generated/mychef-location-bali-city-pererenan.webp',
+  '/locations/bukit': '/generated/mychef-location-bali-city-bukit.webp',
+  '/locations/kuta': '/generated/mychef-location-bali-city-kuta.webp',
+  '/locations/denpasar': '/generated/mychef-location-bali-city-denpasar.webp',
+  '/locations/jakarta': '/generated/mychef-location-bali-city-jakarta.webp',
+  '/fine-dining': '/generated/mychef-experience-bali-luna-hero-v4.webp',
+  '/fine-dining/romantic-dinner': '/generated/mychef-experience-bali-luna-hero-v4.webp',
+  '/fine-dining/tasting-menu': '/generated/mychef-experience-bali-luna-hero-v4.webp',
+  '/fine-dining/private-chef-bali': '/generated/mychef-experience-bali-luna-hero-v4.webp',
+  '/fine-dining/chefs-table': '/generated/mychef-experience-bali-luna-hero-v4.webp',
+  '/fine-dining/menus': '/generated/mychef-experience-bali-luna-hero-v4.webp',
+  '/fine-dining/our-chefs': '/generated/mychef-experience-bali-luna-hero-v4.webp',
+  '/bali-wedding-catering-packages': '/generated/hero-how-it-works.webp',
+  '/private-chef/canggu': '/generated/mychef-location-bali-city-canggu.webp',
+  '/private-chef/seminyak': '/generated/mychef-location-bali-city-seminyak.webp',
+  '/private-chef/ubud': '/generated/mychef-location-bali-city-ubud.webp',
+  '/private-chef/uluwatu': '/generated/mychef-location-bali-city-uluwatu.webp',
+  '/catering/floating-breakfast': '/generated/mychef-location-bali-floating-breakfast-bali.webp',
+  '/catering/bbq-catering': '/generated/mychef-catering-bali-hero-bbq.webp',
+  '/catering/buffet': '/generated/mychef-catering-bali-hero-buffet.webp',
+  '/catering/plated-catering': '/generated/mychef-catering-bali-hero-plated.webp',
+  '/catering/drop-off-catering': '/generated/mychef-catering-bali-hero-dropoff.webp',
+  '/catering/grazing-tables': '/generated/mychef-catering-bali-hero-grazing.webp',
+  '/catering/villa-catering': '/generated/mychef-catering-bali-hero-villa.webp',
+  '/catering/corporate-catering': '/generated/mychef-catering-bali-hero-corporate.webp',
+  '/catering/retreat-catering': '/generated/mychef-catering-bali-hero-retreat.webp',
+  '/book': '/generated/mychef-ui-bali-book-hero.webp',
+  '/bbq-grill': '/generated/mychef-catering-bali-bbq-grill-satay.webp',
+  '/bar-services': '/generated/mychef-bar-services-bali-hero-hub.webp',
+  '/bar-services/': '/generated/mychef-bar-services-bali-hero-hub.webp',
+  '/services': '/generated/mychef-location-bali-hub-hero.webp',
+  '/events/weddings': '/generated/mychef-events-bali-hero-weddings.webp',
+  '/events/birthdays': '/generated/mychef-events-bali-hero-birthdays.webp',
+  '/events/anniversaries': '/generated/mychef-events-bali-hero-anniversaries.webp',
+  '/events/corporate-events': '/generated/mychef-events-bali-hero-corporate.webp',
+  '/events/retreats': '/generated/mychef-events-bali-hero-retreats.webp',
+  '/events/baby-showers': '/generated/mychef-events-bali-hero-baby-showers.webp',
+  '/events/villa-parties': '/generated/mychef-events-bali-hero-villa-parties.webp',
+  '/events': '/generated/mychef-events-bali-hero-events.webp',
+}
+
 const ARTICLE_AUTHOR = 'myCHEF Team'
 const ARTICLE_ROUTES = new Map(
   [...GUIDES.filter((guide) => guide.slug !== 'guide/private-chef-bali'), ...BLOG_POSTS, ...JOURNAL_POSTS].map(
@@ -424,6 +478,21 @@ function injectMeta(html: string, path: string, title: string, description: stri
     /<link rel="canonical" href=".*?"\s*\/?>/,
     `<link rel="canonical" href="${canonical}" />`
   )
+
+  // Per-route LCP hero preload: replace the default homepage preload with the
+  // actual above-the-fold image for this route, or remove it when unknown.
+  const heroPreload = HERO_PRELOADS[path]
+  if (heroPreload) {
+    html = html.replace(
+      /<link rel="preload" as="image" href=".*?" fetchpriority="high"\s*\/?>/,
+      `<link rel="preload" as="image" href="${heroPreload}" fetchpriority="high" />`
+    )
+  } else {
+    html = html.replace(
+      /\s*<link rel="preload" as="image" href=".*?" fetchpriority="high"\s*\/>/,
+      ''
+    )
+  }
 
   // OG type
   html = html.replace(

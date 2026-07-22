@@ -5,6 +5,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { getLocationCanonical } from '@/data/siteArchitecture'
 import { PILLARS } from '@/data/siteArchitecture'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 const WA = 6289674072020
@@ -98,6 +99,8 @@ export default function ServicesPage() {
       <section className="relative min-h-[75vh] flex items-end overflow-hidden">
         <img
           src="/generated/mychef-location-bali-hub-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-location-bali-hub-hero.webp')}
+        sizes="100vw"
           alt="Luxury villa dinner overlooking Bali rice terraces at sunset"
           width={1920}
           height={1080}

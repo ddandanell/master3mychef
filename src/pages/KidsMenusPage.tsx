@@ -8,6 +8,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { MenuOverview } from '@/components/menus'
 import { KIDS_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 const WA_KIDS = buildWhatsAppUrl({ serviceName: "Kids' Party Menus" })
@@ -82,6 +83,8 @@ export default function KidsMenusPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-events-bali-party-birthday.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-events-bali-party-birthday.webp')}
+        sizes="100vw"
             alt="Children's birthday party table in a Bali villa with cake, candles and warm golden lights"
             width={1280}
             height={800}

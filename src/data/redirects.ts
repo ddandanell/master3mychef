@@ -313,6 +313,18 @@ export const REDIRECTS: Redirect[] = [
   { from: '/journal/bali-villa-dinner-party-guide', to: '/private-dining-indonesia', reason: 'Dead journal link → live private dining page.' },
   { from: '/journal/floating-breakfast-bali', to: '/catering/floating-breakfast', reason: 'Dead journal link → live floating breakfast page.' },
   { from: '/journal/wedding-catering-bali-cost', to: '/bali-wedding-catering-packages', reason: 'Dead journal link → live wedding catering packages page.' },
+
+  // --- High-impression query defensive redirects (GSC Jul 2026) ---
+  { from: '/private-chef-bali-villa', to: '/fine-dining/private-chef-bali', reason: 'Exact-match query "private chef bali villa" → canonical private chef page.' },
+  { from: '/private-chef-villa-menu', to: '/fine-dining/menus', reason: 'Exact-match query "private chef villa menu" → menus page.' },
+  { from: '/eat-and-cook-villa', to: '/fine-dining', reason: 'Exact-match query "eat and cook villa" → fine dining pillar.' },
+  { from: '/bali-private-chef', to: '/fine-dining/private-chef-bali', reason: 'Exact-match query "bali private chef" → canonical private chef page.' },
+  { from: '/canggu-private-chef', to: '/locations/canggu', reason: 'Exact-match query "canggu private chef" → canonical Canggu location page.' },
+  { from: '/private-chef-bali-canggu', to: '/locations/canggu', reason: 'Exact-match query "private chef bali canggu" → canonical Canggu location page.' },
+  { from: '/bali-villa-with-private-chef', to: '/fine-dining/private-chef-bali', reason: 'Exact-match query "bali villa with private chef" → canonical private chef page.' },
+  { from: '/bali-private-chef-villa', to: '/fine-dining/private-chef-bali', reason: 'Exact-match query "bali private chef villa" → canonical private chef page.' },
+  { from: '/villa-with-private-chef-bali', to: '/fine-dining/private-chef-bali', reason: 'Exact-match query "villa with private chef bali" → canonical private chef page.' },
+  { from: '/private-chef-near-me', to: '/locations', reason: 'Generic "near me" query → locations hub.' },
 ]
 
 /** Lookup map for the React Router fallback. */

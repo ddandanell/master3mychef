@@ -21,6 +21,7 @@ import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -128,7 +129,9 @@ export default function StaffingVillaManagersPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/mychef-events-bali-corp-villa.webp" alt="Villa manager staffing Bali hospitality team at a luxury villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
+          <img src="/generated/mychef-events-bali-corp-villa.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-events-bali-corp-villa.webp')}
+        sizes="100vw" alt="Villa manager staffing Bali hospitality team at a luxury villa" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
           <div
             className="absolute inset-0"
             style={{

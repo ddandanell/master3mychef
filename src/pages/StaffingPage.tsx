@@ -34,6 +34,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import TrustStrip from '@/components/shared/TrustStrip'
 import RelatedServices from '@/components/shared/RelatedServices'
 import { STAFFING_RELATED } from '@/data/related-services'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -217,6 +218,8 @@ export default function StaffingPage() {
       <section className="relative w-full flex items-end overflow-hidden" style={{ minHeight: '88vh' }}>
         <img
           src="/generated/mychef-staffing-bali-staffing-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-staffing-bali-staffing-hero.webp')}
+        sizes="100vw"
           alt="Professional hospitality staff at a private Bali villa"
           width={1920}
           height={1080}

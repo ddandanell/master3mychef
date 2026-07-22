@@ -1098,6 +1098,56 @@
       "source": "/journal/wedding-catering-bali-cost",
       "destination": "/bali-wedding-catering-packages",
       "permanent": true
+    },
+    {
+      "source": "/private-chef-bali-villa",
+      "destination": "/fine-dining/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-villa-menu",
+      "destination": "/fine-dining/menus",
+      "permanent": true
+    },
+    {
+      "source": "/eat-and-cook-villa",
+      "destination": "/fine-dining",
+      "permanent": true
+    },
+    {
+      "source": "/bali-private-chef",
+      "destination": "/fine-dining/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/canggu-private-chef",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-bali-canggu",
+      "destination": "/locations/canggu",
+      "permanent": true
+    },
+    {
+      "source": "/bali-villa-with-private-chef",
+      "destination": "/fine-dining/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/bali-private-chef-villa",
+      "destination": "/fine-dining/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/villa-with-private-chef-bali",
+      "destination": "/fine-dining/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-near-me",
+      "destination": "/locations",
+      "permanent": true
     }
   ],
   "headers": [

@@ -19,6 +19,7 @@ import { EventsRiskReversal } from '@/components/shared'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'an event in Bali', intent: 'help with catering, staff, and setup' })
@@ -484,6 +485,8 @@ export default function EventsMainPage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0A0A0A] text-white">
         <img
           src="/generated/mychef-events-bali-hero-events-new.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-events-bali-hero-events-new.webp')}
+        sizes="100vw"
           alt="Luxury villa event in Bali with styled dining and celebration setup"
           width={1920}
           height={1080}

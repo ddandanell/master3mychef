@@ -13,6 +13,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'VIP transport in Bali', intent: 'a tailored quotation' })
@@ -93,6 +94,8 @@ export default function VipTransportBaliPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-vip-transport-bali-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-vip-transport-bali-hero.webp')}
+        sizes="100vw"
             alt="Uniformed myCHEF chauffeur opening the door of a black luxury VIP van at a Bali villa entrance"
             width={1024}
             height={1024}

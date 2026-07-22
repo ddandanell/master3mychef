@@ -2,6 +2,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 
@@ -99,6 +100,8 @@ export default function MenuGuidePage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-ui-bali-guide-menu.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-ui-bali-guide-menu.webp')}
+        sizes="100vw"
             alt="Indonesian chef discussing a menu with guests in a private Bali villa — myCHEF"
             className="w-full h-full object-cover"
             width={1344}

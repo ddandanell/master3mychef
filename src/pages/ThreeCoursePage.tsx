@@ -16,6 +16,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import { MenuFilterTabs, MenuOverview } from '@/components/menus'
 import { THREE_COURSE_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const CANONICAL = 'https://mychef.id/three-course'
 const WA_QUOTE = buildWhatsAppUrl({ serviceName: 'Three-Course Dining' })
@@ -141,6 +142,8 @@ export default function ThreeCoursePage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-plated-3course-table.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-catering-bali-plated-3course-table.webp')}
+        sizes="100vw"
             alt="Plated three-course dinner table set in a Bali villa by myCHEF.id private chefs"
             width={1440}
             height={810}

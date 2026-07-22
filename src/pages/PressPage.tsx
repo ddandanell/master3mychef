@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import { Button } from '@/components/ui/button'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 const WA_NUMBER = 6289674072020
@@ -112,6 +113,8 @@ export default function PressPage() {
           <aside className="rounded-[32px] border border-[#C5A028]/25 bg-white/[0.85] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.08)] backdrop-blur-sm md:p-10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
             <img
               src="/generated/mychef-misc-bali-partner-platform-dashboard.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-misc-bali-partner-platform-dashboard.webp')}
+        sizes="100vw"
               alt="myCHEF media kit dashboard and press-ready brand assets"
               className="h-56 w-full rounded-[24px] object-cover"
               loading="eager"

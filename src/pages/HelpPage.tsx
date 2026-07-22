@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Search, BookOpen, Zap, Settings, Users, Heart, MessageCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 
@@ -107,6 +108,8 @@ export default function HelpPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-misc-bali-help-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-misc-bali-help-hero.webp')}
+        sizes="100vw"
             alt="Professional guest relations in a Bali villa — myCHEF help center"
             className="w-full h-full object-cover"
             width={1344}

@@ -24,6 +24,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import { MenuOverview } from '@/components/menus'
 import { BBQ_MENUS, BBQ_MIXED_MENUS, BBQ_SEAFOOD_MENUS, BBQ_SPECIALTY_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const CANONICAL = 'https://mychef.id/bbq-grill'
 
@@ -191,6 +192,8 @@ export default function BbqGrillPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-bbq-grill-satay.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-catering-bali-bbq-grill-satay.webp')}
+        sizes="100vw"
             alt="Satay skewers grilling over glowing charcoal at a live BBQ grill station in a Bali villa"
             width={1440}
             height={800}

@@ -6,6 +6,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { CLASSIC_MENUS, THREE_COURSE_MENUS, KIDS_MENUS, BBQ_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const canonical = 'https://mychef.id/dining-styles'
 
@@ -109,6 +110,8 @@ export default function DiningStylesPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-dining-styles-bali-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-dining-styles-bali-hero.webp')}
+        sizes="100vw"
             alt="Private villa dining in Bali with chef service, grilled sharing platters, plated courses and a live grill station"
             width={1440}
             height={800}

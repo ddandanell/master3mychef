@@ -6,6 +6,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import { ContactRiskReversal } from '@/components/shared'
 import { trackWhatsAppClick } from '@/lib/analytics'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const WA = 6289674072020
 
@@ -170,6 +171,8 @@ export default function ContactPage() {
       <section className="relative w-full min-h-[68vh] flex items-end overflow-hidden">
         <img
           src="/generated/mychef-misc-bali-contact-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-misc-bali-contact-hero.webp')}
+        sizes="100vw"
           alt="Contact myCHEF for private chef and villa dining service in Bali"
           width={1920}
           height={1080}

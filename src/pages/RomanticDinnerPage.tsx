@@ -13,6 +13,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -129,6 +130,8 @@ export default function RomanticDinnerPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-misc-bali-section-romantic-dinner.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-misc-bali-section-romantic-dinner.webp')}
+        sizes="100vw"
             alt="Candlelit romantic dinner table in a Bali villa at dusk with flowers and wine"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"

@@ -30,6 +30,7 @@ import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'villa catering in Bali', intent: 'menu options and pricing' })
@@ -197,6 +198,8 @@ export default function CateringVillaPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-hero-villa.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-catering-bali-hero-villa.webp')}
+        sizes="100vw"
             alt="Long villa dining table by the pool at sunset with chef-prepared Bali catering"
             width={1920}
             height={1080}

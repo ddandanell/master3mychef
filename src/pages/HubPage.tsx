@@ -15,6 +15,7 @@ import { RiskReversal } from '@/components/shared'
 import TrustSection from '@/components/trust/TrustSection'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const PORTALS = [
   {
@@ -333,6 +334,8 @@ export default function HubPage() {
           <div className="relative min-h-screen overflow-hidden">
             <img
               src="/generated/mychef-location-bali-hub-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-location-bali-hub-hero.webp')}
+        sizes="100vw"
               alt="Elegant private dining table set at sunset in a luxury Bali villa by myCHEF"
               width={1536}
               height={1024}

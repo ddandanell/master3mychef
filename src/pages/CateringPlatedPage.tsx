@@ -31,6 +31,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'plated dinner catering in Bali', intent: 'menu options and pricing' })
@@ -231,6 +232,8 @@ export default function CateringPlatedPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-plated-menus.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-catering-bali-plated-menus.webp')}
+        sizes="100vw"
             alt="Elegant plated dinner course served at a Bali villa for private fine dining"
             width={1920}
             height={1080}

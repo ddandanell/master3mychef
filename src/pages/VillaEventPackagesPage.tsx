@@ -13,6 +13,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'an all-inclusive villa event package in Bali', intent: 'a tailored quotation' })
@@ -119,6 +120,8 @@ export default function VillaEventPackagesPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-villa-event-packages-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-villa-event-packages-hero.webp')}
+        sizes="100vw"
             alt="Long banquet table with floral runners and candles set for a private event on a Bali villa lawn at dusk"
             width={1024}
             height={1024}

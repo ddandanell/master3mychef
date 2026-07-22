@@ -27,6 +27,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'buffet catering in Bali', intent: 'menu options and pricing' })
@@ -214,6 +215,8 @@ export default function CateringBuffetPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-hero-buffet.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-catering-bali-hero-buffet.webp')}
+        sizes="100vw"
             alt="Elegant buffet setup in a Bali villa garden with chafing dishes and tropical flowers"
             width={1920}
             height={1080}

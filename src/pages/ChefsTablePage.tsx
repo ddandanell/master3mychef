@@ -13,6 +13,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -132,6 +133,8 @@ export default function ChefsTablePage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-misc-bali-chefs-table-hero-luxury.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-misc-bali-chefs-table-hero-luxury.webp')}
+        sizes="100vw"
             alt="Fine dining private villa dinner service in Bali with candlelight and wine pairing"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"

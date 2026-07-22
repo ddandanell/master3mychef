@@ -21,6 +21,7 @@ import PressStrip from '@/components/shared/PressStrip'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
@@ -114,7 +115,9 @@ export default function ServiceWaitersPage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/generated/mychef-service-bali-hero-waiters.webp" alt="Villa waiters Bali serving a plated course at an elegant private villa dinner" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
+          <img src="/generated/mychef-service-bali-hero-waiters.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-service-bali-hero-waiters.webp')}
+        sizes="100vw" alt="Villa waiters Bali serving a plated course at an elegant private villa dinner" className="w-full h-full object-cover" width={1920} height={1080} decoding="async" fetchPriority="high" loading="eager" />
           <div
             className="absolute inset-0"
             style={{

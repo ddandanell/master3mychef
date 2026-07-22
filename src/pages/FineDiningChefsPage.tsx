@@ -8,6 +8,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -180,6 +181,8 @@ export default function FineDiningChefsPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-finedining-bali-chefs-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-finedining-bali-chefs-hero.webp')}
+        sizes="100vw"
             alt="myCHEF chefs preparing a fine dining private service in Bali"
             width={1920}
             height={1080}

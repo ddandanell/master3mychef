@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Heart } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 
@@ -105,6 +106,8 @@ export default function WeddingGuidePage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-ui-bali-guide-wedding.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-ui-bali-guide-wedding.webp')}
+        sizes="100vw"
             alt="Elegant Bali villa wedding reception at sunset — myCHEF"
             className="w-full h-full object-cover"
             width={1344}

@@ -14,6 +14,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -178,6 +179,8 @@ export default function HoneymoonChefPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-experience-bali-luna-gallery-1.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-experience-bali-luna-gallery-1.webp')}
+        sizes="100vw"
             alt="Private chef serving a romantic candlelit dinner for two at a Bali villa poolside"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"

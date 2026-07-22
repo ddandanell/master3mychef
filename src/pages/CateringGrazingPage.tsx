@@ -28,6 +28,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a grazing table in Bali', intent: 'menu options and pricing' })
@@ -225,6 +226,8 @@ export default function CateringGrazingPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-hero-grazing.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-catering-bali-hero-grazing.webp')}
+        sizes="100vw"
             alt="Luxurious grazing table with cheese, charcuterie and tropical fruit at a Bali villa event"
             width={1920}
             height={1080}

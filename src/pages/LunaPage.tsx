@@ -17,6 +17,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { CLASSIC_MENUS, FAMILY_LABEL, formatIdr } from '@/data/menus'
 import type { MenuFamily } from '@/data/menus'
 import { MenuFilterTabs, MenuOverview } from '@/components/menus'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const MENU_FILTER_OPTIONS = [
   { value: 'all', label: 'All' },
@@ -350,6 +351,8 @@ export default function LunaPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-experience-bali-luna-hero-v4.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-experience-bali-luna-hero-v4.webp')}
+        sizes="100vw"
             alt="Candlelit private fine-dining table set beside the pool of a luxury Bali villa at dusk, plated tasting menu with warm lanterns and tropical greenery"
             width={1408}
             height={768}

@@ -28,9 +28,9 @@ const SITE = 'https://mychef.id'
 export const PAGE_META: Record<string, PageMeta> = {
   home: {
     path: '/',
-    title: 'Private Chef Bali | Dining, Catering & Events — myCHEF',
+    title: 'Private Chef Bali | Hire Villa Dining & Catering — myCHEF',
     description:
-      'Hire a private chef in Bali for villa dining, catering & events. Michelin-trained team, all-inclusive pricing, 560+ villas served. Book via WhatsApp.',
+      'Hire a private chef in Bali for villa dining, catering & events. Michelin-trained team, all-inclusive pricing, 560+ villas served. WhatsApp us for a quote in 1 hour.',
     canonical: `${SITE}/`,
     h1: 'A Michelin-Trained Private Chef, in Your Bali Villa.',
     ogImage: `${SITE}/hero-home.webp`,
@@ -40,7 +40,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/fine-dining',
     title: 'Private Fine Dining Bali — Book a Michelin-Trained Chef | myCHEF',
     description:
-      '24 premium set menus for private villa dining in Bali. Vegetarian, seafood, mixed meats & single-meat. From IDR 1.25M per guest. Book your chef.',
+      '24 premium set menus for private villa dining in Bali. Vegetarian, seafood, mixed meats & single-meat. From IDR 1.25M per guest. WhatsApp for same-day quote.',
     canonical: `${SITE}/fine-dining`,
     h1: 'Private Chef Bali — Fine Dining Tasting Menu in Your Villa',
     ogImage: `${SITE}/hero-fine-dining.webp`,
@@ -50,7 +50,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/catering',
     title: 'Villa Catering Bali | BBQ, Buffet, Plated & Babi Guling — myCHEF',
     description:
-      'Bali catering for villas & events: BBQ, buffet, plated dinners, Babi Guling, grazing tables. Chef, staff & cleanup included. WhatsApp for a quote.',
+      'Bali catering for villas & events: BBQ, buffet, plated dinners, Babi Guling, grazing tables. Chef, staff & cleanup included. WhatsApp for a quote in 1 hour.',
     canonical: `${SITE}/catering`,
     h1: 'Villa Catering Bali. Chef, Staff & Setup Included.',
     ogImage: `${SITE}/hero-catering.webp`,
@@ -733,9 +733,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'fine-dining-private-chef-bali': {
     path: '/fine-dining/private-chef-bali',
-    title: 'Private Chef Bali Villa | Michelin-Trained Dining — myCHEF',
+    title: 'Private Chef Bali Villa | Hire Michelin-Trained Chef — myCHEF',
     description:
-      'Hire a private chef for your Bali villa: ingredients, service & Michelin-trained standards included. 560+ villas served. WhatsApp to check availability.',
+      'Hire a private chef for your Bali villa. Ingredients, service & Michelin-trained standards included. Same-day quotes. 560+ villas served. WhatsApp us now.',
     canonical: `${SITE}/fine-dining/private-chef-bali`,
     h1: 'Private Chef in Bali',
     ogImage: `${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`,

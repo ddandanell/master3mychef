@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import BookingForm from '@/components/BookingForm'
 import SeoHead, { breadcrumbSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -283,6 +284,8 @@ export default function AuraPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-experience-bali-aura-hero-v2.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-experience-bali-aura-hero-v2.webp')}
+        sizes="100vw"
             alt="Luxury Bali villa event with long dining table, gold styling, and candlelight"
             width={1920}
             height={1080}

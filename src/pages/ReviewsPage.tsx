@@ -4,6 +4,7 @@ import { CalendarDays, MessageCircle, Star } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { REVIEWS, toIsoDate } from '@/data/reviews'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 type ReviewCategory = 'All' | 'Weddings' | 'Private Dinners' | 'Catering' | 'Retreats'
 
@@ -119,6 +120,8 @@ export default function ReviewsPage() {
           <div className="overflow-hidden rounded-[32px] border border-[#E8E2CF] bg-white shadow-[0_24px_80px_rgba(0,0,0,0.06)]">
             <img
               src="/generated/mychef-ui-bali-testimonials-bg.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-ui-bali-testimonials-bg.webp')}
+        sizes="100vw"
               alt="myCHEF Bali guest testimonials and social proof"
               className="h-56 w-full object-cover"
               loading="eager"

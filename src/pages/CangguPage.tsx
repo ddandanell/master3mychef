@@ -3,6 +3,7 @@ import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
 import { CITY_CONTENT } from '@/data/cityContent'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -112,6 +113,8 @@ export default function CangguPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-canggu.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-location-bali-city-canggu.webp')}
+        sizes="100vw"
             alt="Private chef service in Canggu, Bali by myCHEF — poolside BBQ dinner setup"
             width={1920}
             height={1080}

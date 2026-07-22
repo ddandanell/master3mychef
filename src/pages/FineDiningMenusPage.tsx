@@ -11,6 +11,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { MenuFilterTabs, MenuOverview } from '@/components/menus'
 import type { MenuFilterOption } from '@/components/menus'
 import { CLASSIC_MENUS, formatIdr } from '@/data/menus'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -176,6 +177,8 @@ export default function FineDiningMenusPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-finedining-bali-luna-plating.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-finedining-bali-luna-plating.webp')}
+        sizes="100vw"
             alt="Luxury private chef plating in a Bali villa for myCHEF fine dining menus"
             width={1920}
             height={1080}

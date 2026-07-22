@@ -14,6 +14,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -123,6 +124,8 @@ export default function CompleteVillaExperiencePage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-catering-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-catering-bali-catering-hero.webp')}
+        sizes="100vw"
             alt="Private chef preparing food in a warm, modern Bali villa kitchen for a complete villa hospitality experience"
             width={1440}
             height={800}

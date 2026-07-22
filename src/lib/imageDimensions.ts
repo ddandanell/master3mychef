@@ -316,3 +316,16 @@ export function getImageDimensions(src?: string) {
   if (!src) return undefined
   return IMAGE_DIMENSIONS[src as KnownImagePath]
 }
+
+/**
+ * Build a responsive srcSet for a generated hero image.
+ * Returns undefined when no mobile variant exists, so existing <img> tags keep
+ * working exactly as before.
+ */
+export function getHeroSrcSet(src?: string): string | undefined {
+  if (!src || !src.startsWith('/generated/') || !src.endsWith('.webp')) return undefined
+  const mobileSrc = src.replace(/\.webp$/i, '-mobile.webp')
+  const desktop = getImageDimensions(src)
+  const desktopWidth = desktop?.width ?? 1536
+  return `${mobileSrc} 768w, ${src} ${desktopWidth}w`
+}

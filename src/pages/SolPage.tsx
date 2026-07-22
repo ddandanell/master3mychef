@@ -5,6 +5,7 @@ import BookingForm from '@/components/BookingForm'
 import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, aggregateRatingSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const HOW_IT_WORKS = [
   { step: '01', title: 'Message Daniel on WhatsApp', desc: 'Tell us your villa, dates, and how many people. Most replies within the hour.', icon: MessageCircle },
@@ -110,6 +111,8 @@ export default function SolPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-catering-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-catering-bali-catering-hero.webp')}
+        sizes="100vw"
             alt="Villa chef plating a family-style brunch at a Bali villa, golden morning light"
             width={1920}
             height={1080}

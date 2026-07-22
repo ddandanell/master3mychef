@@ -106,8 +106,8 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
   canggu: {
     slug: 'canggu',
     name: 'Canggu',
-    title: 'Private Chef Canggu | Surf Villas & Family Feasts — myCHEF',
-    description: 'Hire a private chef in Canggu for villa dinners, poolside BBQs & retreat catering. Perfect for surf groups, families & long stays. WhatsApp us.',
+    title: 'Private Chef Canggu | Book Same-Day Villa Dining — myCHEF',
+    description: 'Hire a private chef in Canggu and get a same-day quote. Villa dinners, poolside BBQs & retreat catering for surf groups, families & long stays.',
     h1: 'Private Chef Service in Canggu',
     heroImage: '/generated/mychef-city-canggu.webp',
     heroAlt: 'Modern pool villa in Canggu, Bali prepared for a casual private chef BBQ',

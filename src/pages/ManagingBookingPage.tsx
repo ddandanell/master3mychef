@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MessageSquare, AlertCircle, CheckCircle, Phone, FileText } from 'lucide-react'
 import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 
@@ -148,6 +149,8 @@ export default function ManagingBookingPage() {
           <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
             <img
               src="/generated/mychef-misc-bali-contact-concierge.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-misc-bali-contact-concierge.webp')}
+        sizes="100vw"
               alt="myCHEF concierge coordinating a booking for a Bali villa"
               className="h-full min-h-[280px] w-full object-cover"
               loading="eager"

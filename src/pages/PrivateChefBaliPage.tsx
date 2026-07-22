@@ -13,6 +13,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -163,6 +164,8 @@ export default function PrivateChefBaliPage() {
         <div className="absolute inset-0">
           <img
               src="/generated/mychef-experience-bali-luna-hero-v2.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-experience-bali-luna-hero-v2.webp')}
+        sizes="100vw"
             alt="Michelin-trained private chef preparing dinner in a Bali villa — myCHEF"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"

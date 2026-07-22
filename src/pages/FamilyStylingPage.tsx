@@ -3,6 +3,7 @@ import { Check, MessageCircle } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, localBusinessSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 const CANONICAL = `${SITE}/family-styling`
@@ -130,6 +131,8 @@ export default function FamilyStylingPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-plated-menus.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-catering-bali-plated-menus.webp')}
+        sizes="100vw"
             alt="Silver cloche lifted over a plated course on a candlelit table with crystal glassware, styled by myCHEF in a Bali villa"
             width={1440}
             height={800}

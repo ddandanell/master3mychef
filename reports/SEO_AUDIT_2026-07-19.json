@@ -2499,18 +2499,18 @@
       ],
       "images": [
         {
-          "src": "/generated/mychef-bar-services-bali-faq-gallery-1.webp",
-          "alt": "Indonesian bartender answering questions while polishing glassware behind a Bali bar",
+          "src": "/generated/mychef-bar-services-bali-consultant.webp",
+          "alt": "myCHEF bar consultant advising a Bali venue owner",
           "missingAlt": false
         },
         {
-          "src": "/generated/mychef-bar-services-bali-faq-gallery-2.webp",
-          "alt": "Bali bar manager consulting with a venue owner over a drink menu at a restaurant table",
+          "src": "/generated/mychef-bar-services-bali-hero-hub.webp",
+          "alt": "Bali bar setup with professional bartender and equipment",
           "missingAlt": false
         },
         {
-          "src": "/generated/mychef-bar-services-bali-faq-gallery-3.webp",
-          "alt": "Close-up of commonly used bar tools and glassware on a Bali bar counter with soft warm light",
+          "src": "/generated/aura-bartender.webp",
+          "alt": "Indonesian bartender preparing drinks at a Bali bar",
           "missingAlt": false
         },
         {
@@ -6158,48 +6158,13 @@
       ],
       "images": [
         {
-          "src": "/generated/mychef-bar-services-bali-resources-gallery-1.webp",
-          "alt": "Bali bar manager browsing resources on a tablet at a venue desk",
+          "src": "/generated/mychef-bar-services-bali-consultant.webp",
+          "alt": "myCHEF bar consultant advising a Bali venue owner",
           "missingAlt": false
         },
         {
-          "src": "/generated/mychef-bar-services-bali-resources-gallery-2.webp",
-          "alt": "Collection of bar management guides, costing sheets and menu templates spread on a Bali venue table",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-bar-services-bali-resource-how-much-does-a-bartender-cost-bali.webp",
-          "alt": "Indonesian bartender preparing drinks at a Bali villa bar",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-bar-services-bali-resource-bartender-salary-benchmarks-bali.webp",
-          "alt": "Bali bar manager reviewing rosters and salary benchmarks on a tablet",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-bar-services-bali-resource-how-many-bartenders-per-guest.webp",
-          "alt": "Event bartenders serving guests at a Bali villa wedding reception",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-bar-services-bali-resource-beverage-cost-percentage-guide.webp",
-          "alt": "Bar manager calculating beverage cost percentage on a calculator",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-bar-services-bali-resource-how-to-open-a-bar-in-bali.webp",
-          "alt": "New Bali restaurant bar being fitted out before opening",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-bar-services-bali-resource-how-to-create-a-cocktail-menu.webp",
-          "alt": "Bali bartender presenting a costed cocktail menu on a venue tablet",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-bar-services-bali-resource-how-to-reduce-bar-shrinkage-bali.webp",
-          "alt": "Bar manager checking stock variance after a busy service in Bali",
+          "src": "/generated/mychef-bar-services-bali-hero-hub.webp",
+          "alt": "Bali bar setup with professional bartender and equipment",
           "missingAlt": false
         },
         {
@@ -6238,8 +6203,43 @@
           "missingAlt": false
         },
         {
-          "src": "/generated/mychef-bar-services-bali-resources-gallery-3.webp",
-          "alt": "Indonesian bartender reading a training guide during a quiet moment at a Bali bar",
+          "src": "/generated/mychef-bar-services-bali-resource-how-much-does-a-bartender-cost-bali.webp",
+          "alt": "Indonesian bartender preparing drinks at a Bali villa bar",
+          "missingAlt": false
+        },
+        {
+          "src": "/generated/mychef-bar-services-bali-resource-bartender-salary-benchmarks-bali.webp",
+          "alt": "Bali bar manager reviewing rosters and salary benchmarks on a tablet",
+          "missingAlt": false
+        },
+        {
+          "src": "/generated/mychef-bar-services-bali-resource-how-many-bartenders-per-guest.webp",
+          "alt": "Event bartenders serving guests at a Bali villa wedding reception",
+          "missingAlt": false
+        },
+        {
+          "src": "/generated/mychef-bar-services-bali-resource-beverage-cost-percentage-guide.webp",
+          "alt": "Bar manager calculating beverage cost percentage on a calculator",
+          "missingAlt": false
+        },
+        {
+          "src": "/generated/mychef-bar-services-bali-resource-how-to-open-a-bar-in-bali.webp",
+          "alt": "New Bali restaurant bar being fitted out before opening",
+          "missingAlt": false
+        },
+        {
+          "src": "/generated/mychef-bar-services-bali-resource-how-to-create-a-cocktail-menu.webp",
+          "alt": "Bali bartender presenting a costed cocktail menu on a venue tablet",
+          "missingAlt": false
+        },
+        {
+          "src": "/generated/mychef-bar-services-bali-resource-how-to-reduce-bar-shrinkage-bali.webp",
+          "alt": "Bar manager checking stock variance after a busy service in Bali",
+          "missingAlt": false
+        },
+        {
+          "src": "/generated/aura-bartender.webp",
+          "alt": "Indonesian bartender preparing drinks at a Bali bar",
           "missingAlt": false
         },
         {
@@ -19044,11 +19044,6 @@
           "src": "/generated/mychef-catering-bali-pkg-roast-new.webp",
           "alt": "Complete Babi Guling catering table with guests at a Bali villa",
           "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-misc-bali-avatar-ai.webp",
-          "alt": "myCHEF AI",
-          "missingAlt": false
         }
       ],
       "internalLinks": [
@@ -19280,7 +19275,7 @@
         "https://www.mychef.ae/"
       ],
       "redirectSourceLinks": [],
-      "wordCount": 2864,
+      "wordCount": 2829,
       "inSitemap": true
     },
     {
@@ -20313,11 +20308,6 @@
           "src": "/generated/mychef-catering-bali-dropoff-dinner-party.webp",
           "alt": "Dinner party drop-off spread arranged on a Bali villa dining table",
           "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-misc-bali-avatar-ai.webp",
-          "alt": "myCHEF AI",
-          "missingAlt": false
         }
       ],
       "internalLinks": [
@@ -20554,7 +20544,7 @@
         "https://www.mychef.ae/"
       ],
       "redirectSourceLinks": [],
-      "wordCount": 2800,
+      "wordCount": 2765,
       "inSitemap": true
     },
     {
@@ -32898,6 +32888,11 @@
           "src": "/generated/mychef-experience-bali-luna-wine.webp",
           "alt": "Wine pairing for private tasting menu in Bali villa",
           "missingAlt": false
+        },
+        {
+          "src": "/generated/mychef-misc-bali-avatar-ai.webp",
+          "alt": "myCHEF AI",
+          "missingAlt": false
         }
       ],
       "internalLinks": [
@@ -33129,7 +33124,7 @@
         "https://www.mychef.ae/"
       ],
       "redirectSourceLinks": [],
-      "wordCount": 2001,
+      "wordCount": 2036,
       "inSitemap": true
     },
     {
@@ -38054,6 +38049,11 @@
           "src": "/generated/mychef-service-bali-mixology-cta.webp",
           "alt": "Mixology service Bali hands garnishing a craft cocktail with tropical flowers and herbs",
           "missingAlt": false
+        },
+        {
+          "src": "/generated/mychef-misc-bali-avatar-ai.webp",
+          "alt": "myCHEF AI",
+          "missingAlt": false
         }
       ],
       "internalLinks": [
@@ -38286,7 +38286,7 @@
         "https://www.mychef.ae/"
       ],
       "redirectSourceLinks": [],
-      "wordCount": 2208,
+      "wordCount": 2243,
       "inSitemap": true
     },
     {
@@ -39156,6 +39156,12 @@
         "/quote",
         "/recommended-services",
         "/contact",
+        "/fine-dining",
+        "/catering/bbq-catering",
+        "/events/weddings",
+        "/locations/canggu",
+        "/locations/seminyak",
+        "/pricing",
         "/bar-services/#consulting",
         "/bar-services/#staffing",
         "/bar-services/#management",
@@ -39328,7 +39334,7 @@
         "https://www.mychef.ae/"
       ],
       "redirectSourceLinks": [],
-      "wordCount": 3222,
+      "wordCount": 3249,
       "inSitemap": true
     },
     {
@@ -45325,6 +45331,14 @@
         "/locations/seminyak",
         "/locations/ubud",
         "/locations/uluwatu",
+        "/fine-dining",
+        "/catering",
+        "/events/weddings",
+        "/events/birthdays",
+        "/events/corporate-events",
+        "/catering/bbq-catering",
+        "/staffing",
+        "/pricing",
         "/private-chef/abiansemal",
         "/private-chef/amed",
         "/private-chef/balangan",
@@ -45519,7 +45533,7 @@
         "https://www.mychef.ae/"
       ],
       "redirectSourceLinks": [],
-      "wordCount": 1502,
+      "wordCount": 1517,
       "inSitemap": true
     },
     {
@@ -70709,7 +70723,7 @@
       "description": "Read 4.9★ myCHEF Bali reviews from villa guests, weddings, retreats &amp; events. Real hosts, real outcomes — see why 560+ villas keep coming back.",
       "descriptionLength": 147,
       "h1s": [
-        "Your Villa. Our Kitchen."
+        "What Our Guests Say"
       ],
       "canonical": "https://mychef.id/reviews",
       "ogTitle": "myCHEF Bali Reviews | 4.9★ Private Chef &amp; Catering",
@@ -70766,118 +70780,8 @@
       ],
       "images": [
         {
-          "src": "/generated/mychef-location-bali-hub-hero.webp",
-          "alt": "Elegant private dining table set at sunset in a luxury Bali villa by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-catering-bali-hub-catering.webp",
-          "alt": "Villa catering spread with BBQ, buffet and plated dishes at a Bali property by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-misc-bali-hub-fine-dining.webp",
-          "alt": "Private fine dining table set for an intimate dinner in a Bali villa by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-events-bali-hub-events.webp",
-          "alt": "Full-service private event setup at a Bali villa with dining and bar by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-misc-bali-about-team-photo.webp",
-          "alt": "myCHEF hospitality team gathered for villa service across Bali",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-misc-bali-hub-villa.webp",
-          "alt": "Family enjoying a private chef dinner in a Bali villa by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-misc-bali-hub-villa.webp",
-          "alt": "Family served a private chef dinner in a Bali villa by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-home-1.webp",
-          "alt": "Balinese private chef cooking for a family at a luxury Bali villa",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-home-2.webp",
-          "alt": "Guests dining on a Bali villa terrace served by a Balinese waiter",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-home-3.webp",
-          "alt": "Balinese private chef presenting a dish to guests at a Bali villa",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-home-4.webp",
-          "alt": "Couple enjoying a private villa dinner with a Balinese chef in Bali",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-location-bali-city-seminyak.webp",
-          "alt": "Private chef service in Seminyak, Bali by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-location-bali-city-canggu.webp",
-          "alt": "Private chef service in Canggu, Bali by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-location-bali-city-ubud.webp",
-          "alt": "Private chef service in Ubud, Bali by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-location-bali-city-uluwatu.webp",
-          "alt": "Private chef service in Uluwatu, Bali by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-location-bali-city-sanur.webp",
-          "alt": "Private chef service in Sanur, Bali by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-location-bali-city-nusa-dua.webp",
-          "alt": "Private chef service in Nusa Dua, Bali by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-location-bali-city-jimbaran.webp",
-          "alt": "Private chef service in Jimbaran, Bali by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-location-bali-city-berawa.webp",
-          "alt": "Private chef service in Berawa, Bali by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-location-bali-city-pererenan.webp",
-          "alt": "Private chef service in Pererenan, Bali by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-location-bali-city-bukit.webp",
-          "alt": "Private chef service in Bukit, Bali by myCHEF",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-misc-bali-hub-villa.webp",
-          "alt": "myCHEF villa partnership — private chef service for luxury Bali properties",
-          "missingAlt": false
-        },
-        {
-          "src": "/generated/mychef-location-bali-hub-bali.webp",
-          "alt": "Sunset over Bali landscape — myCHEF private villa dining experiences across the island",
+          "src": "/generated/mychef-ui-bali-testimonials-bg.webp",
+          "alt": "myCHEF Bali guest testimonials and social proof",
           "missingAlt": false
         },
         {
@@ -70970,42 +70874,13 @@
         "/contact",
         "/help",
         "/pricing",
-        "/catering",
+        "/book",
         "/fine-dining",
+        "/catering",
         "/events",
+        "/villa-chef",
+        "/pricing",
         "/quote",
-        "/recommended-services",
-        "/contact",
-        "/bar-services/#consulting",
-        "/bar-services/#staffing",
-        "/bar-services/#management",
-        "/bar-services/complete-bar-performance-programme/",
-        "/bar-services/",
-        "/",
-        "/locations/seminyak",
-        "/locations/canggu",
-        "/locations/ubud",
-        "/locations/uluwatu",
-        "/locations/sanur",
-        "/locations/nusa-dua",
-        "/locations/jimbaran",
-        "/locations/canggu",
-        "/locations/pererenan",
-        "/locations/bukit",
-        "/locations",
-        "/staffing/for-villa-managers",
-        "/journal",
-        "/private-dining-indonesia",
-        "/bali-wedding-catering-packages",
-        "/catering/floating-breakfast",
-        "/blog/how-to-hire-private-chef-bali-complete-guide",
-        "/blog/wedding-private-chef-bali-planning-guide",
-        "/blog/corporate-events-catering-bali-team-dining",
-        "/blog/chef-qualifications-credentials-bali-hiring",
-        "/blog/private-chef-cost-bali",
-        "/blog/fine-dining-trends-bali-2026-innovations",
-        "/journal",
-        "/contact",
         "/",
         "/fine-dining",
         "/fine-dining/romantic-dinner",
@@ -71132,23 +71007,15 @@
         "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap",
         "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap",
         "https://www.googletagmanager.com",
-        "https://wa.me/6289674072020?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa.",
-        "https://wa.me/6289674072020",
-        "https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa",
-        "https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa",
-        "https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa",
-        "https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa",
-        "https://wa.me/6289674072020?text=Hi%20MyChef%2C%20I%20manage%20a%20venue%20in%20Bali%20and%20saw%20your%20new%20bar%20services.%20Can%20we%20talk%3F",
         "https://wa.me/6289674072020",
         "https://wa.me/6289674072020",
-        "https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I",
         "https://instagram.com/mychef.id",
         "https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I",
         "https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I",
         "https://www.mychef.ae/"
       ],
       "redirectSourceLinks": [],
-      "wordCount": 3467,
+      "wordCount": 2295,
       "inSitemap": true
     },
     {

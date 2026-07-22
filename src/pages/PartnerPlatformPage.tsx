@@ -18,6 +18,7 @@ import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 const WA = 6289674072020
 const SITE = 'https://mychef.id'
 
@@ -123,6 +124,8 @@ export default function PartnerPlatformPage() {
       <section className="relative w-full min-h-[88vh] flex items-end overflow-hidden">
         <img
           src="/generated/mychef-misc-bali-partner-platform-hero.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-misc-bali-partner-platform-hero.webp')}
+        sizes="100vw"
           alt="Private villa dining setup at golden hour for myCHEF Bali partners"
           width={1920}
           height={1080}

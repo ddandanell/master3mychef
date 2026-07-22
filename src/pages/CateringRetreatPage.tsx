@@ -27,6 +27,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'retreat catering in Bali', intent: 'menu options and pricing' })
@@ -185,6 +186,8 @@ export default function CateringRetreatPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-hero-retreat.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-catering-bali-hero-retreat.webp')}
+        sizes="100vw"
             alt="Healthy retreat catering breakfast spread by a Bali villa pool at sunrise"
             width={1920}
             height={1080}

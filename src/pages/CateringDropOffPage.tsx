@@ -29,6 +29,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getHeroSrcSet } from '@/lib/imageDimensions'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'drop-off catering in Bali', intent: 'menu options and pricing' })
@@ -252,6 +253,8 @@ export default function CateringDropOffPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-hero-dropoff.webp"
+        srcSet={getHeroSrcSet('/generated/mychef-catering-bali-hero-dropoff.webp')}
+        sizes="100vw"
             alt="Premium drop-off catering containers arranged on a Bali villa kitchen island"
             width={1920}
             height={1080}

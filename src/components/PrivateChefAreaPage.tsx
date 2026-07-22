@@ -114,11 +114,6 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       telephone: '+6289674072020',
       priceRange: 'IDR 1,350,000 – IDR 10,000,000',
       image: `${SITE}/og-image.webp`,
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '500',
-      },
       areaServed: { '@type': 'Place', name: `${area.name}, Bali, Indonesia` },
       geo: {
         '@type': 'GeoCoordinates',

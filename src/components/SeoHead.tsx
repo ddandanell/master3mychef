@@ -543,6 +543,14 @@ export function menuSchema(
 // optional robots noindex directive. Works for a Vite SPA — Google executes JS.
 // For first-contentful-html SEO add vite-plugin-ssg later (see SEO-PAGES-PLAN.md).
 export default function SeoHead({ title, description, canonical, ogImage, ogType = 'website', noindex, jsonLd, extraMeta = [], articleAuthor, articleSection, articleTags, articlePublishedTime, twitterImageAlt }: SeoHeadProps) {
+  // Serialize array/object props so inline arrays created during render don't
+  // trigger the effect on every re-render. This stops the head from being
+  // cleared and re-injected mid-render, which was causing prerender snapshots
+  // to miss JSON-LD scripts on pages with rich schema (events, catering, etc.).
+  const jsonLdKey = JSON.stringify(jsonLd)
+  const extraMetaKey = JSON.stringify(extraMeta)
+  const articleTagsKey = JSON.stringify(articleTags)
+
   useEffect(() => {
     document.title = title
 
@@ -650,7 +658,7 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
       document.head.querySelectorAll('script[data-seohead="jsonld"]').forEach((el) => el.remove())
       document.head.querySelectorAll('link[data-seohead="hreflang"]').forEach((el) => el.remove())
     }
-  }, [title, description, canonical, ogImage, ogType, noindex, jsonLd, extraMeta, articleAuthor, articleSection, articleTags, articlePublishedTime, twitterImageAlt])
+  }, [title, description, canonical, ogImage, ogType, noindex, jsonLdKey, extraMetaKey, articleAuthor, articleSection, articleTagsKey, articlePublishedTime, twitterImageAlt])
 
   return null
 }

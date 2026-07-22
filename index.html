@@ -83,8 +83,9 @@
     <!-- Analytics: GA4 (G-W0PQH8ZKTF) is now loaded and configured exclusively via Google Tag Manager (GTM-KCBNZBL9).
          The previous hardcoded gtag config + manual SPA page_view were removed to prevent duplicate page views. -->
 
-    <!-- Preload the actual homepage LCP image so the hero starts fetching before React bootstraps. -->
-    <link rel="preload" as="image" href="/generated/mychef-location-bali-hub-hero.webp" fetchpriority="high" />
+    <!-- Preload the correct homepage LCP image for each viewport so the hero starts fetching before React bootstraps. -->
+    <link rel="preload" as="image" href="/generated/mychef-location-bali-hub-hero-mobile.webp" fetchpriority="high" media="(max-width: 767px)" />
+    <link rel="preload" as="image" href="/generated/mychef-location-bali-hub-hero.webp" fetchpriority="high" media="(min-width: 768px)" />
 
     <!-- Preload favicon for faster first paint -->
     <link rel="preload" as="image" href="/favicon.svg" type="image/svg+xml" />

@@ -46,6 +46,8 @@ https://www.mychef.id/*  https://mychef.id/:splat  301!
 /bsd  /locations/jakarta  301
 /private-chef-puri-indah  /locations/jakarta  301
 /private-chef-kuningan  /locations/jakarta  301
+/private-chef-kelapa-gading  /locations/jakarta  301
+/private-chef-senayan  /locations/jakarta  301
 /echo-beach-private-chef  /locations/canggu  301
 /batu-bolong-private-chef  /locations/canggu  301
 /pererenan-private-chef  /locations/pererenan  301

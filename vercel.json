@@ -225,6 +225,16 @@
       "permanent": true
     },
     {
+      "source": "/private-chef-kelapa-gading",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-senayan",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
       "source": "/echo-beach-private-chef",
       "destination": "/locations/canggu",
       "permanent": true

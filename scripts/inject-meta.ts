@@ -16,6 +16,7 @@ import { fileURLToPath } from 'node:url'
 import { BLOG_POSTS, GUIDES, SITEMAP } from '../src/data/sitemap'
 import { JOURNAL_POSTS } from '../src/data/content/journalPosts'
 import { ARTICLE_CONTENT } from '../src/data/content/articleContent'
+import { REVIEWS, toIsoDate } from '../src/data/reviews'
 import type { ContentEntry } from '../src/lib/blog'
 import type { JournalPost } from '../src/data/siteArchitecture'
 
@@ -359,6 +360,46 @@ function buildLocationServiceJsonLd(path: string, title: string, description: st
   return `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
 }
 
+// Review + AggregateRating schema for /reviews. Standalone Review entities are
+// emitted (not wrapped in ItemList) because Google review snippets reject
+// ListItem parents and require an explicit itemReviewed field.
+function buildReviewsJsonLd(path: string): string {
+  if (path !== '/reviews') return ''
+  const reviewedBusiness = {
+    '@type': 'LocalBusiness',
+    name: 'myCHEF Bali',
+    '@id': `${SITE}/#business`,
+    url: SITE,
+  }
+  const aggregateRating = {
+    '@context': 'https://schema.org',
+    '@type': 'AggregateRating',
+    itemReviewed: reviewedBusiness,
+    ratingValue: '4.9',
+    bestRating: '5',
+    reviewCount: '560',
+  }
+  const reviewSchemas = REVIEWS.slice(0, 5).map((review) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    author: { '@type': 'Person', name: review.name },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: review.rating.toString(),
+      bestRating: '5',
+    },
+    reviewBody: review.review,
+    datePublished: toIsoDate(review.date),
+    itemReviewed: reviewedBusiness,
+  }))
+  return [
+    `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(aggregateRating)}</script>`,
+    ...reviewSchemas.map(
+      (schema) => `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
+    ),
+  ].join('\n  ')
+}
+
 function injectMeta(html: string, path: string, title: string, description: string): string {
   const canonical = `${SITE}${path}`
   const ogImage = `${SITE}${getOgImage(path)}`
@@ -475,6 +516,7 @@ function injectMeta(html: string, path: string, title: string, description: stri
     buildWebPageJsonLd(path, title.split('|')[0].trim(), description),
     buildServiceJsonLd(path),
     buildLocationServiceJsonLd(path, title, description),
+    buildReviewsJsonLd(path),
   ].filter(Boolean).join('\n  ')
   // Use a replacer callback so literal '$' characters in JSON-LD (e.g. priceRange
   // '$$$$') are not interpreted as replacement patterns by String.prototype.replace.

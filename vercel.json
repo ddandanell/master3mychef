@@ -970,6 +970,36 @@
       "permanent": true
     },
     {
+      "source": "/private-chef",
+      "destination": "/fine-dining/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-bali",
+      "destination": "/fine-dining/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/journal/private-chef-bali",
+      "destination": "/fine-dining/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/wedding-catering",
+      "destination": "/bali-wedding-catering-packages",
+      "permanent": true
+    },
+    {
+      "source": "/bali-wedding-catering",
+      "destination": "/bali-wedding-catering-packages",
+      "permanent": true
+    },
+    {
+      "source": "/wedding-private-chef-bali",
+      "destination": "/bali-wedding-catering-packages",
+      "permanent": true
+    },
+    {
       "source": "/services/catering",
       "destination": "/catering",
       "permanent": true

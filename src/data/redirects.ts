@@ -283,6 +283,14 @@ export const REDIRECTS: Redirect[] = [
   { from: '/blog/chefs-table-bali', to: '/fine-dining/chefs-table', reason: "Duplicate of live chef's-table experience page." },
   { from: '/blog/vegan-private-chef-bali', to: '/blog/dietary-specific-chef-bali', reason: 'Vegan = dietary-specific chef; live guide exists.' },
 
+  // --- 2026-07-22: GSC Coverage / crawl 404s — common legacy and bare URLs → canonical live pages ---
+  { from: '/private-chef', to: '/fine-dining/private-chef-bali', reason: 'Bare /private-chef URL has no page; canonical private chef Bali page is under /fine-dining.' },
+  { from: '/blog/private-chef-bali', to: '/fine-dining/private-chef-bali', reason: 'GSC 404: old blog alias → canonical private chef Bali page.' },
+  { from: '/journal/private-chef-bali', to: '/fine-dining/private-chef-bali', reason: 'GSC 404: old journal alias → canonical private chef Bali page.' },
+  { from: '/wedding-catering', to: '/bali-wedding-catering-packages', reason: 'GSC 404: legacy wedding catering alias → canonical wedding packages page.' },
+  { from: '/bali-wedding-catering', to: '/bali-wedding-catering-packages', reason: 'GSC 404: legacy wedding catering alias → canonical wedding packages page.' },
+  { from: '/wedding-private-chef-bali', to: '/bali-wedding-catering-packages', reason: 'GSC 404: legacy wedding private chef alias → canonical wedding packages page.' },
+
   // --- 2026-07-01 (pass 2): remaining broken internal links found by link crawl → 301 to nearest live page.
   //     /services/<pillar> came from ServicePage related-links using pillar slugs (no such /services page). ---
   { from: '/services/catering', to: '/catering', reason: 'Pillar link used /services/ prefix; real page is /catering.' },

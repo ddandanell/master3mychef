@@ -195,6 +195,12 @@ https://www.mychef.id/*  https://mychef.id/:splat  301!
 /blog/private-dining-bali  /private-dining-indonesia  301
 /blog/chefs-table-bali  /fine-dining/chefs-table  301
 /blog/vegan-private-chef-bali  /blog/dietary-specific-chef-bali  301
+/private-chef  /fine-dining/private-chef-bali  301
+/blog/private-chef-bali  /fine-dining/private-chef-bali  301
+/journal/private-chef-bali  /fine-dining/private-chef-bali  301
+/wedding-catering  /bali-wedding-catering-packages  301
+/bali-wedding-catering  /bali-wedding-catering-packages  301
+/wedding-private-chef-bali  /bali-wedding-catering-packages  301
 /services/catering  /catering  301
 /services/events  /events  301
 /services/fine-dining  /fine-dining  301

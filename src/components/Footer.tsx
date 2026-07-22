@@ -39,7 +39,7 @@ export default function Footer() {
                 href="https://instagram.com/mychef.id"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 bg-white/5 hover:bg-[#C5A028]/20 rounded-full transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+                className="inline-flex items-center justify-center min-w-12 min-h-12 p-3 bg-white/5 hover:bg-[#C5A028]/20 rounded-full transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 text-white/70 hover:text-[#C5A028]" />
@@ -49,7 +49,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="footer-social"
-                className="p-2.5 bg-white/5 hover:bg-[#C5A028]/20 rounded-full transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+                className="inline-flex items-center justify-center min-w-12 min-h-12 p-3 bg-white/5 hover:bg-[#C5A028]/20 rounded-full transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="w-5 h-5 text-white/70 hover:text-[#C5A028]" />

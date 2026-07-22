@@ -196,7 +196,8 @@ export default function HubPage() {
         const tl = gsap.timeline({ delay: 0.3 })
         tl.fromTo('.hub-hero-label', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
         tl.fromTo('.hub-hero-title', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5')
-        tl.fromTo('.hub-hero-subtitle', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+        // Keep subtitle visible from the first paint to protect mobile LCP.
+        tl.fromTo('.hub-hero-subtitle', { y: 16, opacity: 1 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.6')
         tl.fromTo('.hub-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
 
         gsap.fromTo('.portal-card', { y: 60, opacity: 0 }, {

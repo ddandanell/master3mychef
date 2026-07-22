@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, serviceEventSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -158,7 +158,7 @@ export default function EventsRetreatsPage() {
           offerSchema('Wellness Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
           offerSchema('Yoga Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
           offerSchema('Corporate-Style Retreat', 2500000, 'IDR', `${SITE}/events/retreats`),
-          eventSchema({
+          serviceEventSchema({
             name: 'Corporate Retreat Catering in Bali',
             description: 'Full-board private chef catering for corporate retreats in Bali — daily menus, dietary accommodation, team dining.',
             url: `${SITE}/events/retreats`,

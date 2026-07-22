@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, eventSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, serviceEventSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -160,7 +160,7 @@ export default function EventsVillaPartiesPage() {
           offerSchema('Cocktail Reception', 650000, 'IDR', `${SITE}/events/villa-parties`),
           offerSchema('Sundowner Party', 850000, 'IDR', `${SITE}/events/villa-parties`),
           offerSchema('Casual Mixer', 950000, 'IDR', `${SITE}/events/villa-parties`),
-          eventSchema({
+          serviceEventSchema({
             name: 'Villa Party Catering in Bali',
             description: 'Private chef villa parties in Bali — BBQ, poolside, buffet, plated dinner, cocktail service, and full staff.',
             url: `${SITE}/events/villa-parties`,

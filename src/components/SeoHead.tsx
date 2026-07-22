@@ -383,6 +383,39 @@ export function eventSchema(params: {
   }
 }
 
+// Service schema for recurring event offerings (weddings, birthdays, etc.)
+// Use this instead of Event when the page describes a service, not a specific calendar event.
+export function serviceEventSchema(params: {
+  name: string
+  description: string
+  url: string
+  lowPrice?: number
+  priceCurrency?: string
+  image?: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: params.name,
+    description: params.description,
+    url: params.url,
+    provider: { '@id': 'https://mychef.id/#business' },
+    areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+    ...(params.image ? { image: params.image } : {}),
+    ...(params.lowPrice
+      ? {
+          offers: {
+            '@type': 'AggregateOffer',
+            lowPrice: params.lowPrice.toString(),
+            priceCurrency: params.priceCurrency ?? 'IDR',
+            availability: 'https://schema.org/InStock',
+            url: params.url,
+          },
+        }
+      : {}),
+  }
+}
+
 // NOTE: Self-serving AggregateRating on LocalBusiness/Organization is ineligible for Google
 // review-snippet rich results and is flagged "invalid" in Search Console, so the rating was
 // removed. This now returns the LocalBusiness entity only. Args kept for call-site compatibility.

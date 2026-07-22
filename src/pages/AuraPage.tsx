@@ -203,59 +203,51 @@ export default function AuraPage() {
   const eventSchemas = [
     {
       '@context': 'https://schema.org',
-      '@type': 'Event',
+      '@type': 'Service',
       name: 'Bali Villa Wedding by myCHEF',
       description: 'Intimate villa ceremonies to 200-guest garden receptions. Full-service wedding catering, bar, décor, and coordination.',
-      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-      eventStatus: 'https://schema.org/EventScheduled',
-      location: {
+      areaServed: {
         '@type': 'Place',
         name: 'Luxury Villa in Bali',
         address: { '@type': 'PostalAddress', addressLocality: 'Bali', addressCountry: 'ID' },
       },
-      organizer: { '@id': 'https://mychef.id/#business' },
+      provider: { '@id': 'https://mychef.id/#business' },
     },
     {
       '@context': 'https://schema.org',
-      '@type': 'Event',
+      '@type': 'Service',
       name: 'Corporate Event in Bali by myCHEF',
       description: 'Executive dinners, conference catering, gala nights, and full corporate productions in Bali villas.',
-      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-      eventStatus: 'https://schema.org/EventScheduled',
-      location: {
+      areaServed: {
         '@type': 'Place',
         name: 'Luxury Villa in Bali',
         address: { '@type': 'PostalAddress', addressLocality: 'Bali', addressCountry: 'ID' },
       },
-      organizer: { '@id': 'https://mychef.id/#business' },
+      provider: { '@id': 'https://mychef.id/#business' },
     },
     {
       '@context': 'https://schema.org',
-      '@type': 'Event',
+      '@type': 'Service',
       name: 'Private Celebration in Bali by myCHEF',
       description: 'Birthdays, anniversaries, reunions, and milestone celebrations with custom themes and menus.',
-      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-      eventStatus: 'https://schema.org/EventScheduled',
-      location: {
+      areaServed: {
         '@type': 'Place',
         name: 'Luxury Villa in Bali',
         address: { '@type': 'PostalAddress', addressLocality: 'Bali', addressCountry: 'ID' },
       },
-      organizer: { '@id': 'https://mychef.id/#business' },
+      provider: { '@id': 'https://mychef.id/#business' },
     },
     {
       '@context': 'https://schema.org',
-      '@type': 'Event',
+      '@type': 'Service',
       name: 'Wellness Retreat Catering in Bali by myCHEF',
       description: 'Multi-day retreat catering for yoga, wellness, and corporate offsites across Bali.',
-      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-      eventStatus: 'https://schema.org/EventScheduled',
-      location: {
+      areaServed: {
         '@type': 'Place',
         name: 'Luxury Villa in Bali',
         address: { '@type': 'PostalAddress', addressLocality: 'Bali', addressCountry: 'ID' },
       },
-      organizer: { '@id': 'https://mychef.id/#business' },
+      provider: { '@id': 'https://mychef.id/#business' },
     },
   ]
 

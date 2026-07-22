@@ -267,13 +267,110 @@ function buildWebPageJsonLd(path: string, name: string, description: string): st
   return `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
 }
 
+
+const SERVICE_SCHEMA_CONFIG: Record<string, { name: string; description: string; priceRange?: string; image?: string }> = {
+  '/fine-dining': {
+    name: 'Private Fine Dining Bali',
+    description: 'Michelin-trained private chef tasting menus in your Bali villa. Italian, Mediterranean, Wagyu and seafood paths for 6+ guests.',
+    priceRange: '$$$$',
+    image: `${SITE}/hero-fine-dining.webp`,
+  },
+  '/catering': {
+    name: 'Villa Catering Bali',
+    description: 'BBQ, buffet, plated dinners, Babi Guling, grazing tables and drop-off catering for Bali villas and events.',
+    priceRange: '$$$',
+    image: `${SITE}/hero-catering.webp`,
+  },
+  '/events': {
+    name: 'Private Event Catering Bali',
+    description: 'Full-service hospitality for weddings, birthdays, corporate offsites and villa celebrations in Bali.',
+    priceRange: '$$$$',
+    image: `${SITE}/hero-events.webp`,
+  },
+  '/in-villa-service': {
+    name: 'In-Villa Service Staff Bali',
+    description: 'Uniformed waiters, butlers, bartenders, mixologists and sommeliers for villa dining and events in Bali.',
+    priceRange: '$$$',
+    image: `${SITE}/bartender.webp`,
+  },
+  '/staffing': {
+    name: 'Hospitality Staffing Bali',
+    description: 'Hire vetted private chefs, live-in chefs, villa staff and household staff across Bali with 48-hour placement.',
+    priceRange: '$$$',
+    image: `${SITE}/chef-portrait.webp`,
+  },
+  '/services': {
+    name: 'Private Chef Services Bali',
+    description: 'Compare all private chef services in Bali: fine dining, catering, events, staffing and villa experiences.',
+    image: `${SITE}/generated/bali-hub-hero.webp`,
+  },
+  '/villa-chef': {
+    name: 'Private Chef for Bali Villas',
+    description: 'Daily private chef service for Bali villa stays — breakfast, lunch and dinner with groceries at cost.',
+    priceRange: '$$$',
+    image: `${SITE}/villa-aerial.webp`,
+  },
+}
+
+const BALI_AREAS = [
+  { '@type': 'Place', name: 'Seminyak, Bali' },
+  { '@type': 'Place', name: 'Canggu, Bali' },
+  { '@type': 'Place', name: 'Ubud, Bali' },
+  { '@type': 'Place', name: 'Uluwatu, Bali' },
+  { '@type': 'Place', name: 'Nusa Dua, Bali' },
+  { '@type': 'Place', name: 'Jimbaran, Bali' },
+  { '@type': 'Place', name: 'Sanur, Bali' },
+]
+
+function buildServiceJsonLd(path: string): string {
+  const config = SERVICE_SCHEMA_CONFIG[path]
+  if (!config) return ''
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: config.name,
+    description: config.description,
+    url: `${SITE}${path}`,
+    provider: { '@id': `${SITE}/#business` },
+    areaServed: BALI_AREAS,
+  }
+  if (config.priceRange) {
+    schema.priceRange = config.priceRange
+  }
+  if (config.image) {
+    schema.image = config.image
+  }
+  return `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
+}
+
+function buildLocationServiceJsonLd(path: string, title: string, description: string): string {
+  if (!path.startsWith('/locations/')) return ''
+  const location = path.replace('/locations/', '').replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `Private Chef ${location}`,
+    description,
+    url: `${SITE}${path}`,
+    provider: { '@id': `${SITE}/#business` },
+    areaServed: { '@type': 'Place', name: `${location}, Bali` },
+    serviceType: 'Private Chef & Villa Catering',
+  }
+  return `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
+}
+
 function injectMeta(html: string, path: string, title: string, description: string): string {
   const canonical = `${SITE}${path}`
   const ogImage = `${SITE}${getOgImage(path)}`
   const article = ARTICLE_ROUTES.get(path)
 
+  // Replacement-string-safe wrapper: a callback prevents literal '$' characters
+  // in titles, descriptions, JSON-LD, etc. from being interpreted as replacement
+  // patterns (e.g. priceRange '$$$$' must stay as four dollars, not collapse to '$$').
+  const r = (search: string | RegExp, replacement: string): string => html.replace(search, () => replacement)
+
   // Title
-  html = html.replace(/<title>.*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
+  html = r(/<title>.*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
 
   // Description
   html = html.replace(
@@ -375,8 +472,12 @@ function injectMeta(html: string, path: string, title: string, description: stri
     buildBreadcrumbJsonLd(path, title.split('|')[0].trim()),
     buildArticleJsonLd(path, title, description, ogImage),
     buildWebPageJsonLd(path, title.split('|')[0].trim(), description),
+    buildServiceJsonLd(path),
+    buildLocationServiceJsonLd(path, title, description),
   ].filter(Boolean).join('\n  ')
-  html = html.replace('</head>', `${structuredData}\n  </head>`)
+  // Use a replacer callback so literal '$' characters in JSON-LD (e.g. priceRange
+  // '$$$$') are not interpreted as replacement patterns by String.prototype.replace.
+  html = html.replace('</head>', () => `${structuredData}\n  </head>`)
 
   // OG locale (all content is in English)
   html = html.replace(

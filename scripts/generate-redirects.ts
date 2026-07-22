@@ -16,6 +16,9 @@ const netlifyLines = [
   '# 301 redirects generated from src/data/redirects.ts',
   '# Do not edit by hand — edit the source and re-run `pnpm redirects`.',
   '',
+  '# Force www → apex canonicalization (host-level redirect).',
+  'https://www.mychef.id/*  https://mychef.id/:splat  301!',
+  '',
   ...REDIRECTS.map((r) => `${r.from}  ${r.to}  301`),
 ]
 writeFileSync(join(__dirname, '..', 'public', '_redirects'), netlifyLines.join('\n') + '\n')

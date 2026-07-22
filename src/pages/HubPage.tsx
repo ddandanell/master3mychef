@@ -464,6 +464,22 @@ export default function HubPage() {
                 View contact options
               </Link>
             </div>
+            <div className="mt-6 pt-6 border-t" style={{ borderColor: 'var(--u-border)' }}>
+              <p className="text-xs uppercase tracking-wider mb-3" style={{ color: 'var(--u-text-muted)' }}>Popular next steps</p>
+              <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm">
+                <Link to="/fine-dining" className="hover:text-[#C5A028] hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Private fine dining Bali</Link>
+                <span style={{ color: 'var(--u-border)' }}>·</span>
+                <Link to="/catering/bbq-catering" className="hover:text-[#C5A028] hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">BBQ catering Bali</Link>
+                <span style={{ color: 'var(--u-border)' }}>·</span>
+                <Link to="/events/weddings" className="hover:text-[#C5A028] hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Wedding catering Bali</Link>
+                <span style={{ color: 'var(--u-border)' }}>·</span>
+                <Link to="/locations/canggu" className="hover:text-[#C5A028] hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Private chef Canggu</Link>
+                <span style={{ color: 'var(--u-border)' }}>·</span>
+                <Link to="/locations/seminyak" className="hover:text-[#C5A028] hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Private chef Seminyak</Link>
+                <span style={{ color: 'var(--u-border)' }}>·</span>
+                <Link to="/pricing" className="hover:text-[#C5A028] hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Pricing & menus</Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

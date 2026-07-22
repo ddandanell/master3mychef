@@ -38,7 +38,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'fine-dining': {
     path: '/fine-dining',
-    title: 'Private Fine Dining Bali — 24 Set Menus | myCHEF.id',
+    title: 'Private Fine Dining Bali — Book a Michelin-Trained Chef | myCHEF',
     description:
       '24 premium set menus for private villa dining in Bali. Vegetarian, seafood, mixed meats & single-meat. From IDR 1.25M per guest. Book your chef.',
     canonical: `${SITE}/fine-dining`,
@@ -48,7 +48,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   catering: {
     path: '/catering',
-    title: 'Catering Bali | BBQ, Buffet, Plated & Babi Guling — myCHEF',
+    title: 'Villa Catering Bali | BBQ, Buffet, Plated & Babi Guling — myCHEF',
     description:
       'Bali catering for villas & events: BBQ, buffet, plated dinners, Babi Guling, grazing tables. Chef, staff & cleanup included. WhatsApp for a quote.',
     canonical: `${SITE}/catering`,
@@ -58,7 +58,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   events: {
     path: '/events',
-    title: 'Private Events Bali | Weddings & Corporate — myCHEF',
+    title: 'Private Events Bali | Weddings, Corporate & Villa Parties — myCHEF',
     description:
       'Private events in Bali: weddings, birthdays, corporate offsites, retreats & villa parties. One team — chef, staff & setup. Book via WhatsApp.',
     canonical: `${SITE}/events`,
@@ -118,7 +118,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   locations: {
     path: '/locations',
-    title: 'Chef Locations Bali | Seminyak, Canggu, Ubud & Uluwatu',
+    title: 'Private Chef Bali | Seminyak, Canggu, Ubud & Uluwatu — myCHEF',
     description:
       'Browse private chef coverage across Bali villas, from Seminyak and Canggu to Ubud and Uluwatu. Find dining, catering and event service.',
     canonical: `${SITE}/locations`,
@@ -338,7 +338,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   canggu: {
     path: '/canggu',
-    title: 'Private Chef Canggu | Dining & Retreat Catering — myCHEF',
+    title: 'Private Chef Canggu | Same-Day Villa Dining & BBQ — myCHEF',
     description:
       'Hire a private chef in Canggu for villa dinners, poolside BBQs & retreat catering. Perfect for surf groups, families & long stays. WhatsApp us today.',
     canonical: `${SITE}/canggu`,

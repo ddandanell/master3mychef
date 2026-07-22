@@ -248,6 +248,34 @@ export default function LocationsHubPage() {
         </div>
       </section>
 
+      <section className="py-10 bg-[#FAFAF8]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="rounded-2xl border border-black/5 bg-white px-6 py-8">
+            <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Services by Need</p>
+            <div className="flex flex-wrap gap-2.5">
+              {[
+                { label: 'Fine Dining', href: '/fine-dining' },
+                { label: 'Villa Catering', href: '/catering' },
+                { label: 'Weddings', href: '/events/weddings' },
+                { label: 'Birthdays', href: '/events/birthdays' },
+                { label: 'Corporate Events', href: '/events/corporate-events' },
+                { label: 'BBQ Catering', href: '/catering/bbq-catering' },
+                { label: 'Staffing', href: '/staffing' },
+                { label: 'Pricing', href: '/pricing' },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="inline-flex items-center rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition-all hover:border-[#C5A028] hover:bg-[#C5A028] hover:text-[#1A1A1A]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Private chef by area — complete index so every area page is reachable in 2 clicks (SEO: fixes orphaned/deep area pages) */}
       <section className="py-10 bg-[#FAFAF8]">
         <div className="max-w-[1200px] mx-auto px-6">

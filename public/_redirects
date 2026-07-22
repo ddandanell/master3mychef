@@ -1,6 +1,9 @@
 # 301 redirects generated from src/data/redirects.ts
 # Do not edit by hand — edit the source and re-run `pnpm redirects`.
 
+# Force www → apex canonicalization (host-level redirect).
+https://www.mychef.id/*  https://mychef.id/:splat  301!
+
 /families  /dining-styles  301
 /experience  /fine-dining  301
 /story  /fine-dining/our-chefs  301
@@ -81,7 +84,6 @@
 /private-chef-breakfast-bali  /catering  301
 /private-chef-cost-per-day-bali  /pricing  301
 /private-chef-cost-bali  /pricing  301
-/reviews  /  301
 /retreats  /events/retreats  301
 /corporate-events  /events/corporate-events  301
 /villa-partners  /partner-platform  301

@@ -837,11 +837,25 @@ export default function ChefProfilePage() {
       {/* ── Breadcrumb ── */}
       <nav className="max-w-4xl mx-auto px-6 pt-8 pb-2" aria-label="Breadcrumb">
         <ol className="flex items-center gap-1 text-sm text-gray-400">
-          <li><Link to="/" className="hover:text-[#C5A028] transition-colors">Home</Link></li>
+          <li>
+            <Link
+              to="/"
+              className="inline-flex items-center min-h-[48px] lg:min-h-[32px] px-1 rounded hover:text-[#C5A028] transition-colors"
+            >
+              Home
+            </Link>
+          </li>
           <li><ChevronRight className="w-3 h-3" /></li>
-          <li><Link to="/chefs" className="hover:text-[#C5A028] transition-colors">Our Chefs</Link></li>
+          <li>
+            <Link
+              to="/chefs"
+              className="inline-flex items-center min-h-[48px] lg:min-h-[32px] px-1 rounded hover:text-[#C5A028] transition-colors"
+            >
+              Our Chefs
+            </Link>
+          </li>
           <li><ChevronRight className="w-3 h-3" /></li>
-          <li className="text-white">{chef.name}</li>
+          <li className="inline-flex items-center min-h-[48px] lg:min-h-[32px] px-1 text-white">{chef.name}</li>
         </ol>
       </nav>
 

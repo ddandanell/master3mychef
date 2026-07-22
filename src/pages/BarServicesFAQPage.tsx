@@ -62,9 +62,9 @@ const TRUST_SIGNALS = [
 ]
 
 const FAQ_GALLERY = [
-  { src: '/generated/mychef-bar-services-bali-faq-gallery-1.webp', alt: 'Indonesian bartender answering questions while polishing glassware behind a Bali bar' },
-  { src: '/generated/mychef-bar-services-bali-faq-gallery-2.webp', alt: 'Bali bar manager consulting with a venue owner over a drink menu at a restaurant table' },
-  { src: '/generated/mychef-bar-services-bali-faq-gallery-3.webp', alt: 'Close-up of commonly used bar tools and glassware on a Bali bar counter with soft warm light' },
+  { src: '/generated/mychef-bar-services-bali-consultant.webp', alt: 'myCHEF bar consultant advising a Bali venue owner' },
+  { src: '/generated/mychef-bar-services-bali-hero-hub.webp', alt: 'Bali bar setup with professional bartender and equipment' },
+  { src: '/generated/aura-bartender.webp', alt: 'Indonesian bartender preparing drinks at a Bali bar' },
 ]
 
 function uniqueFaqs(faqs: { question: string; answer: string }[]) {

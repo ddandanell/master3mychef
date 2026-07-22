@@ -189,14 +189,12 @@ export default function BaliVillaCookingClassPage() {
         },
         {
           '@context': 'https://schema.org',
-          '@type': 'Event',
+          '@type': 'Service',
           name: 'Private Cooking Class at Your Bali Villa',
           description: 'A professional myCHEF chef comes to your Bali villa to teach authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 700,000/person.',
           url: 'https://mychef.id/blog/bali-villa-cooking-class-private-chef',
           image: 'https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp',
-          eventStatus: 'https://schema.org/EventScheduled',
-          eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-          location: {
+          areaServed: {
             '@type': 'Place',
             name: 'Your Bali Villa',
             address: {
@@ -205,7 +203,7 @@ export default function BaliVillaCookingClassPage() {
               addressCountry: 'ID',
             },
           },
-          organizer: {
+          provider: {
             '@type': 'Organization',
             name: 'myCHEF.id',
             url: 'https://mychef.id',

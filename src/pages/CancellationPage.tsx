@@ -76,7 +76,7 @@ export default function CancellationPage() {
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-[800px] mx-auto">
-          <Link to="/" className="inline-flex items-center gap-2 text-[#C5A028] text-sm tracking-wider uppercase mb-8 hover:text-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <Link to="/" className="inline-flex min-h-[48px] lg:min-h-[44px] items-center gap-2 text-[#C5A028] text-sm tracking-wider uppercase mb-8 hover:text-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>

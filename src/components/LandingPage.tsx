@@ -136,7 +136,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         </div>
         <div className="relative z-10 mx-auto w-full max-w-4xl px-6 py-20 text-left text-white md:px-12">
           <div className="max-w-[760px]">
-            <Link to={hubPath} className="mb-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[3px] text-white/75 transition-colors hover:text-[#C5A028]">
+            <Link to={hubPath} className="mb-6 inline-flex items-center min-h-[48px] lg:min-h-[44px] gap-2 text-xs font-bold uppercase tracking-[3px] text-white/75 transition-colors hover:text-[#C5A028]">
               <ArrowLeft size={14} /> {backLabel}
             </Link>
             <Breadcrumb
@@ -171,13 +171,13 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
             {articleEntry && shareLinks && (
               <div className="mb-10 flex flex-wrap items-center gap-3 text-sm text-white/80">
                 <span className="font-medium text-white">Share:</span>
-                <a href={shareLinks.whatsapp} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
+                <a href={shareLinks.whatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-[48px] lg:min-h-[32px] rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
                   WhatsApp
                 </a>
-                <a href={shareLinks.facebook} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
+                <a href={shareLinks.facebook} target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-[48px] lg:min-h-[32px] rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
                   Facebook
                 </a>
-                <a href={shareLinks.twitter} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
+                <a href={shareLinks.twitter} target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-[48px] lg:min-h-[32px] rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
                   X / Twitter
                 </a>
               </div>
@@ -206,7 +206,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                   <a
                     key={heading.id}
                     href={`#${heading.id}`}
-                    className={`block text-sm leading-relaxed text-[#4A4745]/80 transition-colors hover:text-[#7E6410] ${heading.level === 3 ? 'pl-4' : ''}`}
+                    className={`flex items-center min-h-[48px] lg:min-h-[32px] text-sm leading-relaxed text-[#4A4745]/80 transition-colors hover:text-[#7E6410] ${heading.level === 3 ? 'pl-4' : ''}`}
                   >
                     {heading.text}
                   </a>

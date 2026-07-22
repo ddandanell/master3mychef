@@ -3,9 +3,9 @@ import { join, relative } from 'node:path'
 
 const DIST = './dist'
 
-// Routes that are intentionally client-only (forms). They will stay as SPA shells
+// Routes that are intentionally client-only (forms / calculators). They will stay as SPA shells
 // and are not expected to carry prerendered body content.
-const CLIENT_ONLY_ROUTES = new Set(['book/index.html', 'quote/index.html'])
+const CLIENT_ONLY_ROUTES = new Set(['book/index.html', 'quote/index.html', 'calculator/index.html', 'pricing-calculator/index.html'])
 
 // SEO-critical routes that must have a real <h1> and rendered body text.
 const CRITICAL_ROUTES = new Set([

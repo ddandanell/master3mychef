@@ -10,7 +10,7 @@ export function BarServiceHero({ service }: { service: BarService }) {
       <OptimizedImage
         src={service.heroImage}
         alt={service.heroAlt}
-        className="absolute inset-0 w-full h-full object-cover scale-105"
+        className="absolute inset-0 w-full h-full object-cover md:scale-105"
         loading="eager"
       />
 
@@ -61,7 +61,7 @@ export function BarServiceHero({ service }: { service: BarService }) {
       {/* Scroll-down chevron */}
       <a
         href="#content"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#F5F2EB]/60 hover:text-[#C5A028] transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center gap-2 min-h-[48px] text-[#F5F2EB]/60 hover:text-[#C5A028] transition-colors"
         aria-label="Scroll down"
       >
         <span className="text-[10px] uppercase tracking-[0.2em]">Explore</span>

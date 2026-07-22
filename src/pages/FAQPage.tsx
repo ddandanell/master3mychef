@@ -214,7 +214,7 @@ export default function FAQPage() {
                 <a
                   key={category.id}
                   href={`#${category.id}`}
-                  className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-[#E2DDD2] bg-white px-4 py-2.5 text-sm font-semibold text-[#4A4745] transition-colors hover:border-[#C5A028] sm:px-5 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
+                  className="inline-flex min-h-[48px] lg:min-h-[44px] items-center justify-center rounded-full border border-[#E2DDD2] bg-white px-4 py-2.5 text-sm font-semibold text-[#4A4745] transition-colors hover:border-[#C5A028] sm:px-5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 >
                   {category.title}
                 </a>
@@ -279,13 +279,13 @@ export default function FAQPage() {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-source="faq-cta" 
-                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
+                href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-source="faq-cta"
+                className="inline-flex min-h-[48px] lg:min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <MessageCircle className="h-4 w-4" />
                 Message +62 896-7407-2020
               </a>
-              <Link to="/pricing" className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+              <Link to="/pricing" className="inline-flex min-h-[48px] lg:min-h-[44px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white">
                 View pricing
               </Link>
             </div>

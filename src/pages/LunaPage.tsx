@@ -327,7 +327,7 @@ export default function LunaPage() {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className={`flex-shrink-0 text-[10px] tracking-[0.15em] uppercase px-3 py-1.5 rounded-full border transition-all duration-300 whitespace-nowrap ${
+              className={`flex-shrink-0 text-[10px] tracking-[0.15em] uppercase px-3 py-1.5 rounded-full border transition-all duration-300 whitespace-nowrap min-h-[48px] lg:min-h-[36px] inline-flex items-center ${
                 activeSection === link.id
                   ? 'text-[#C5A028] border-[#C5A028]/60 bg-[#C5A028]/10'
                   : 'text-white/[50%] border-white/10 hover:text-white/[70%] hover:border-white/20'

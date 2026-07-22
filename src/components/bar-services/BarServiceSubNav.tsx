@@ -27,7 +27,7 @@ export function BarServiceSubNav() {
   const { pathname } = useLocation()
 
   const baseLinkClasses =
-    'relative shrink-0 px-3 py-2 text-xs uppercase tracking-wider font-medium rounded transition-colors min-h-[44px] inline-flex items-center'
+    'relative shrink-0 px-3 py-2 text-xs uppercase tracking-wider font-medium rounded transition-colors min-h-[48px] lg:min-h-[44px] inline-flex items-center'
 
   return (
     <div className="sticky top-14 z-40 bg-[#0F0E0C]/95 border-b border-[#C5A028]/15 backdrop-blur-md">

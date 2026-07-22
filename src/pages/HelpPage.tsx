@@ -134,7 +134,7 @@ export default function HelpPage() {
             <input
               type="text"
               placeholder="Search for pricing, menus, service areas..."
-              className="bg-transparent text-white placeholder:text-white/55 flex-1 outline-none text-lg"
+              className="bg-transparent text-white placeholder:text-white/55 flex-1 outline-none text-lg min-h-[48px] lg:min-h-[44px]"
             />
           </div>
         </div>
@@ -149,7 +149,7 @@ export default function HelpPage() {
               <Link
                 key={i}
                 to={item.link}
-                className="p-6 border border-[#DDD] rounded-lg hover:border-[#C5A028] hover:bg-[#FAFAF8] transition group focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
+                className="p-6 border border-[#DDD] rounded-lg hover:border-[#C5A028] hover:bg-[#FAFAF8] transition group focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <h3 className="font-semibold text-lg mb-2 flex items-center gap-2 text-[#1A1A1A]">
                   {item.q}
@@ -175,7 +175,7 @@ export default function HelpPage() {
                 <Link
                   key={i}
                   to={guide.link}
-                  className="p-8 border border-[#DDD] rounded-lg hover:border-[#C5A028] hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
+                  className="p-8 border border-[#DDD] rounded-lg hover:border-[#C5A028] hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-12 h-12 rounded-lg bg-[#F5F5F5] flex items-center justify-center">

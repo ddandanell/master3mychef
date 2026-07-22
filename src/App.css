@@ -4,3 +4,77 @@
   width: 100%;
   min-height: 100vh;
 }
+
+/* Mobile minimum readable text size + touch targets.
+   Bump 9–11 px utility classes to 12 px on small screens and expand every
+   interactive element to at least a 48 px hit area.
+   Desktop layouts stay unchanged at lg+. */
+@media (max-width: 1023px) {
+  html body .text-\[9px\],
+  html body .text-\[10px\],
+  html body .text-\[10\.5px\],
+  html body .text-\[11px\] {
+    font-size: 12px !important;
+  }
+
+  /* Minimum 48 px touch target for all buttons, inputs, selects and textareas. */
+  button:not([data-size="icon-sm"]):not([data-size="sm"]),
+  [role="button"]:not([data-size="icon-sm"]):not([data-size="sm"]),
+  input,
+  select,
+  textarea {
+    min-height: 48px !important;
+    min-width: 48px !important;
+  }
+
+  /* Any explicit 44 px min-height utility should be 48 px on mobile. */
+  .min-h-\[44px\] {
+    min-height: 48px !important;
+  }
+
+  /* Flex / inline-flex / inline-block links and category/filter chips. */
+  a[href].flex,
+  a[href].inline-flex,
+  a[href].inline-block,
+  button.flex,
+  button.inline-flex,
+  button.inline-block,
+  [role="button"].flex,
+  [role="button"].inline-flex,
+  [role="button"].inline-block {
+    min-height: 48px !important;
+  }
+
+  /* Nav / breadcrumb / table-of-contents links: every anchor inside a nav
+     landmark should be an easy mobile tap target. */
+  nav a[href],
+  [aria-label="Breadcrumb"] a {
+    display: inline-flex !important;
+    align-items: center;
+    min-height: 48px !important;
+    min-width: 48px !important;
+  }
+
+  /* Inline body and heading links: expand the real bounding box to a 48px mobile
+     tap target while keeping paragraph/heading flow visually unchanged. Padding
+     grows the element, negative margin pulls surrounding text back. */
+  p a[href],
+  .prose a[href],
+  .u-body a[href],
+  article a[href],
+  [class*="leading-relaxed"] a[href],
+  h1 a[href],
+  h2 a[href],
+  h3 a[href],
+  h4 a[href],
+  h5 a[href],
+  h6 a[href] {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px !important;
+    min-width: 48px !important;
+    padding: 16px 4px !important;
+    margin: -16px -4px !important;
+  }
+}

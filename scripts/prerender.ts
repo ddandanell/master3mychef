@@ -364,8 +364,8 @@ function startPreviewServer(): Promise<ChildProcess> {
   })
 }
 
-// Routes that are intentionally client-only forms; they never carry prerendered body content.
-const CLIENT_ONLY_ROUTES = new Set(['/book', '/quote'])
+// Routes that are intentionally client-only forms/calculators; they never carry prerendered body content.
+const CLIENT_ONLY_ROUTES = new Set(['/book', '/quote', '/calculator', '/pricing-calculator'])
 
 function isValidPrerender(routePath: string, rootHtml: string | null | undefined): boolean {
   if (!rootHtml || rootHtml.length < 1000) return false

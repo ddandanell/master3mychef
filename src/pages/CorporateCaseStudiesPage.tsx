@@ -193,14 +193,14 @@ export default function CorporateCaseStudiesPage() {
               target="_blank"
               rel="noopener noreferrer"
               data-source="corporate-case-studies-hero"
-              className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              className="inline-flex min-h-[48px] lg:min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
             >
               <MessageCircle className="h-4 w-4" />
               Plan your corporate event
             </a>
             <Link
               to="/events/corporate-events"
-              className="text-sm font-semibold text-[#1A1A1A] underline decoration-[#C5A028] underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              className="inline-flex min-h-[48px] lg:min-h-[44px] items-center text-sm font-semibold text-[#1A1A1A] underline decoration-[#C5A028] underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
             >
               See corporate event services
             </Link>

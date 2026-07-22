@@ -34,9 +34,9 @@ const VALUE_PROPS = [
 ]
 
 const RESOURCES_GALLERY = [
-  { src: '/generated/mychef-bar-services-bali-resources-gallery-1.webp', alt: 'Bali bar manager browsing resources on a tablet at a venue desk' },
-  { src: '/generated/mychef-bar-services-bali-resources-gallery-2.webp', alt: 'Collection of bar management guides, costing sheets and menu templates spread on a Bali venue table' },
-  { src: '/generated/mychef-bar-services-bali-resources-gallery-3.webp', alt: 'Indonesian bartender reading a training guide during a quiet moment at a Bali bar' },
+  { src: '/generated/mychef-bar-services-bali-consultant.webp', alt: 'myCHEF bar consultant advising a Bali venue owner' },
+  { src: '/generated/mychef-bar-services-bali-hero-hub.webp', alt: 'Bali bar setup with professional bartender and equipment' },
+  { src: '/generated/aura-bartender.webp', alt: 'Indonesian bartender preparing drinks at a Bali bar' },
 ]
 
 const RESOURCES_FAQS = [

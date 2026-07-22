@@ -272,7 +272,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
                   <div className="mt-5 flex flex-col gap-3">
                     <Link
                       to={svc.href}
-                      className="text-xs uppercase tracking-[2px] font-semibold hover:text-[#1A1A1A] transition-colors"
+                      className="inline-flex items-center min-h-[48px] lg:min-h-[32px] text-xs uppercase tracking-[2px] font-semibold hover:text-[#1A1A1A] transition-colors"
                       style={{ color: svc.color }}
                     >
                       Explore {svc.label} →
@@ -429,7 +429,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               >
                 <CalendarCheck className="w-6 h-6 text-[#C5A028]" />
                 <p className="font-semibold text-sm text-[#1A1A1A]">{occasion.label}</p>
-                <p className="text-xs uppercase tracking-[2px] font-semibold text-[#C5A028] group-hover:text-[#1A1A1A] transition-colors">
+                <p className="inline-flex items-center min-h-[48px] lg:min-h-[32px] text-xs uppercase tracking-[2px] font-semibold text-[#C5A028] group-hover:text-[#1A1A1A] transition-colors">
                   View →
                 </p>
               </Link>

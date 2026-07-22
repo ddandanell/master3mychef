@@ -231,7 +231,7 @@ export default function BarServicesContactPage() {
                       href={item.href}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
                       rel="noopener noreferrer"
-                      className="text-sm font-medium text-[#F5F2EB] hover:text-[#C5A028] transition-colors"
+                      className="inline-flex items-center min-h-[48px] lg:min-h-[32px] text-sm font-medium text-[#F5F2EB] hover:text-[#C5A028] transition-colors"
                     >
                       {item.value}
                     </a>

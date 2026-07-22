@@ -72,7 +72,7 @@ export function JournalIndexPage() {
         <div className="flex flex-wrap gap-2 mb-10">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded ${
+            className={`min-h-[48px] lg:min-h-[36px] px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
               activeCategory === null
                 ? 'bg-[#C5A028] border-[#C5A028] text-[#1A1A1A] shadow-md'
                 : 'bg-white border-[#E8E6E3] text-[#4A4745] hover:border-[#C5A028]'
@@ -84,7 +84,7 @@ export function JournalIndexPage() {
             <button
               key={cat.slug}
               onClick={() => setActiveCategory(cat.slug)}
-              className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded ${
+              className={`min-h-[48px] lg:min-h-[36px] px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
                 activeCategory === cat.slug
                   ? 'bg-[#C5A028] border-[#C5A028] text-[#1A1A1A] shadow-md'
                   : 'bg-white border-[#E8E6E3] text-[#4A4745] hover:border-[#C5A028]'

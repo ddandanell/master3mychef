@@ -359,10 +359,10 @@ export default function HubPage() {
                   Private dining, catering, and events across Bali. We shop, we cook, we serve, we clean. You just enjoy.
                 </p>
                 <div className="hub-hero-cta mb-4 flex flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
-                  <a href="https://wa.me/6289674072020?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
+                  <a href="https://wa.me/6289674072020?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[48px] lg:min-h-[44px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
                     <MessageCircle className="w-4 h-4" /> Get Your Quote in 1 Hour <span aria-hidden="true">→</span>
                   </a>
-                  <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
+                  <Link to="/pricing" className="inline-flex min-h-[48px] lg:min-h-[44px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
                     Browse Menus &amp; Pricing <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -405,9 +405,9 @@ export default function HubPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="homepage-pricing-strip"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+                className="inline-flex min-h-[48px] lg:min-h-[40px] items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
-                Message us with date, guest count, and villa area <ArrowRight className="h-4 w-4" />
+                <span>Message us with date, guest count, and villa area</span> <ArrowRight className="h-4 w-4" />
               </a>
             </div>
           </div>

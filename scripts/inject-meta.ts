@@ -450,8 +450,9 @@ function injectMeta(html: string, path: string, title: string, description: stri
 </head>`)
   }
 
-  // Robots — noindex for thin-content pages and 404
-  const noindexPaths = ['/404', '/book', '/quote', '/calculator', '/join-our-team']
+  // Robots — noindex for thin-content/conversion pages and 404.
+  // /join-our-team now has real JobPosting + FAQ content and is indexable.
+  const noindexPaths = ['/404', '/book', '/quote', '/calculator', '/pricing-calculator']
   if (noindexPaths.includes(path)) {
     html = html.replace(
       /<meta name="robots" content=".*?"\s*\/?>/,
@@ -537,6 +538,8 @@ for (const entry of SITEMAP) {
 const EXTRA_NOINDEX_PAGES = [
   { path: '/book', title: 'Book myCHEF | Private Chef & Catering Bali', description: 'Book your private chef, villa catering, or event in Bali. Send your date, villa, and guest count for a fast quote.' },
   { path: '/quote', title: 'Get a Quote | myCHEF Private Chef Bali', description: 'Get a fast, itemised quote for private chef, villa catering, or event staffing in Bali. No obligation.' },
+  { path: '/calculator', title: 'Pricing Calculator | Private Chef Bali | myCHEF.id', description: 'Estimate your private chef, catering, or event costs instantly. Transparent IDR pricing, no hidden fees.' },
+  { path: '/pricing-calculator', title: 'Pricing Calculator | Private Chef Bali — myCHEF', description: 'Calculate your private chef Bali cost in seconds. Adjust guests, menu style & add-ons for an instant estimate. No hidden fees.' },
 ]
 for (const p of EXTRA_NOINDEX_PAGES) {
   try {

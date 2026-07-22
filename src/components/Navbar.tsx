@@ -246,7 +246,10 @@ export default function Navbar() {
       >
         <div className="mx-auto px-8 py-2 h-14 flex items-center justify-between gap-8 lg:px-4 lg:gap-3 xl:gap-4 2xl:px-8 2xl:gap-8">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group">
+          <Link
+            to="/"
+            className="flex items-center gap-2.5 flex-shrink-0 group min-h-[48px] min-w-[48px] px-2 -ml-2"
+          >
             <ChefHat className="w-6 h-6 lg:w-5 lg:h-5 2xl:w-6 2xl:h-6 text-[#C5A028] transition-transform group-hover:rotate-12" strokeWidth={1.5} />
             <span
               className="text-[18px] lg:text-[16px] 2xl:text-[18px] tracking-wide"
@@ -401,7 +404,7 @@ export default function Navbar() {
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="flex h-10 w-10 items-center justify-center text-white transition-colors hover:text-[#C5A028] lg:hidden flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+              className="flex h-12 w-12 items-center justify-center text-white transition-colors hover:text-[#C5A028] lg:hidden flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
             >
               {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

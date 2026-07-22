@@ -241,8 +241,8 @@ export default function ReviewsPage() {
                 <span className="text-sm font-semibold text-[#1A1A1A]">4.9 / 5 guest rating</span>
               </div>
               <a
-                href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-source="reviews-cta" 
-                className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+                href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-source="reviews-cta"
+                className="inline-flex min-h-[48px] lg:min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp us
@@ -313,7 +313,7 @@ export default function ReviewsPage() {
                 Weddings, private dinners, retreat catering and villa celebrations — filter by the type of experience you want to book.
               </p>
             </div>
-            <Link to="/pricing" className="text-sm font-semibold text-[#1A1A1A] underline decoration-[#C5A028] underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+            <Link to="/pricing" className="inline-flex min-h-[48px] lg:min-h-[44px] items-center text-sm font-semibold text-[#1A1A1A] underline decoration-[#C5A028] underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               See pricing guide
             </Link>
           </div>
@@ -326,7 +326,7 @@ export default function ReviewsPage() {
                   key={filter}
                   type="button"
                   onClick={() => setActiveFilter(filter)}
-                  className={`min-h-[44px] rounded-full px-4 py-2.5 text-sm font-semibold transition-colors sm:px-5 ${isActive ? 'bg-[#C5A028] text-black' : 'border border-[#E2DDD2] bg-white text-[#4A4745] hover:border-[#C5A028]'}`}
+                  className={`min-h-[48px] lg:min-h-[44px] rounded-full px-4 py-2.5 text-sm font-semibold transition-colors sm:px-5 ${isActive ? 'bg-[#C5A028] text-black' : 'border border-[#E2DDD2] bg-white text-[#4A4745] hover:border-[#C5A028]'}`}
                 >
                   {filter}
                 </button>
@@ -399,13 +399,13 @@ export default function ReviewsPage() {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-source="reviews-cta" 
-                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+                href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-source="reviews-cta"
+                className="inline-flex min-h-[48px] lg:min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
                 <MessageCircle className="h-4 w-4" />
                 Chat on WhatsApp
               </a>
-              <Link to="/book" className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white">
+              <Link to="/book" className="inline-flex min-h-[48px] lg:min-h-[44px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white">
                 Start booking
               </Link>
             </div>

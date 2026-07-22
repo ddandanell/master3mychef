@@ -576,6 +576,17 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
       link.setAttribute('href', canonical)
       setMeta(`meta[property="og:url"]`, 'property', 'og:url', canonical)
       setMeta(`meta[name="twitter:url"]`, 'name', 'twitter:url', canonical)
+
+      // Inject per-page hreflang tags (x-default + en + id)
+      document.head.querySelectorAll('link[data-seohead="hreflang"]').forEach((el) => el.remove())
+      for (const lang of ['en', 'id', 'x-default']) {
+        const hreflangLink = document.createElement('link')
+        hreflangLink.setAttribute('rel', 'alternate')
+        hreflangLink.setAttribute('hreflang', lang)
+        hreflangLink.setAttribute('href', canonical)
+        hreflangLink.setAttribute('data-seohead', 'hreflang')
+        document.head.appendChild(hreflangLink)
+      }
     }
 
     extraMeta.forEach(({ name, property, content }) => {
@@ -604,6 +615,7 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
 
     return () => {
       document.head.querySelectorAll('script[data-seohead="jsonld"]').forEach((el) => el.remove())
+      document.head.querySelectorAll('link[data-seohead="hreflang"]').forEach((el) => el.remove())
     }
   }, [title, description, canonical, ogImage, ogType, noindex, jsonLd, extraMeta, articleAuthor, articleSection, articleTags, articlePublishedTime, twitterImageAlt])
 

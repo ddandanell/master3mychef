@@ -59,7 +59,7 @@ export const localBusinessSchema = {
     { '@type': 'Place', name: 'Denpasar, Bali', geo: { '@type': 'GeoCoordinates', latitude: -8.6705, longitude: 115.2126 } },
   ],
   priceRange: '$$$$',
-  openingHours: 'Mo-Su 07:00-23:00',
+  openingHours: 'Mo-Su 07:00-22:00',
   image: 'https://mychef.id/generated/hub-hero-v3.webp',
   hasCredential: {
     '@type': 'EducationalOccupationalCredential',
@@ -279,7 +279,7 @@ export function professionalServiceSchema(
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${url}#localbusiness`,
-    name: 'MyChef Bar Services',
+    name: 'myCHEF.id Bar Services',
     image,
     url,
     telephone: '+62 896-7407-2020',
@@ -493,7 +493,7 @@ export function blogPostingSchema(params: {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'myCHEF',
+      name: 'myCHEF.id',
       url: 'https://mychef.id',
       logo: { '@type': 'ImageObject', url: 'https://mychef.id/mychef-logo-512.png', width: 512, height: 512 },
     },

@@ -173,7 +173,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               Private Chef · {area.regency} · Bali
             </p>
             <h1 className="font-playfair text-4xl md:text-6xl leading-tight text-white mb-5">
-              Private Chef in {area.name}, Bali
+              {`Private Chef in ${area.name}, Bali`}
             </h1>
             <p className="text-white/85 text-lg leading-relaxed max-w-[600px] mb-8">
               {area.intro}
@@ -182,7 +182,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             {/* Trust strip */}
             <div className="flex flex-wrap gap-4 text-sm text-white/75 mb-8">
               <span className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-[#C5A028] fill-[#C5A028]" /> 4.9 rating · 500+ events
+                <Star className="w-4 h-4 text-[#C5A028] fill-[#C5A028]" /> 500+ events served
               </span>
               <span className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#C5A028]" /> HACCP certified
@@ -686,7 +686,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             </Link>
           </div>
           <p className="text-white/55 text-xs mt-8">
-            Same-day response · HACCP certified · 500+ events served · 4.9 ★ rating
+            Same-day response · HACCP certified · 500+ events served · Guest-loved service
           </p>
         </div>
       </section>

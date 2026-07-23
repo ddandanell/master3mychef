@@ -438,7 +438,7 @@ export default function RomanticDinnerPage() {
               What Guests Say
             </p>
             <h2 className="text-3xl md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-              560+ villas · 4.9 ★ average rating
+              560+ villas · Guest-loved service
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">

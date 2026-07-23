@@ -538,7 +538,7 @@ export default function BaliWeddingCateringTimelinePage() {
             Plan your Bali wedding catering with myCHEF
           </h2>
           <p className="text-[#CCC] mb-3 text-sm">
-            500+ events catered · 4.9★ rated · HACCP-certified chefs · Same-day WhatsApp response
+            500+ events catered · Guest-loved service · HACCP-certified chefs · Same-day WhatsApp response
           </p>
           <p className="text-[#999] mb-8 text-sm">
             Tell us your date, villa, and guest count — we'll confirm availability and send a concept overview within a few hours.

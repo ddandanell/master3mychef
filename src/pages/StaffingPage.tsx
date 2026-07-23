@@ -159,7 +159,7 @@ const STATS = [
   { icon: Users, value: '50+', label: 'Active Staff' },
   { icon: Home, value: '560+', label: 'Villas Served' },
   { icon: Clock, value: '48h', label: 'Avg. Placement Time' },
-  { icon: Star, value: '4.9 ★', label: 'Client Rating' },
+  { icon: Star, value: '98%', label: 'Client Satisfaction' }
 ]
 
 export default function StaffingPage() {
@@ -266,7 +266,7 @@ export default function StaffingPage() {
               { icon: ShieldCheck, label: 'Background Checked' },
               { icon: Clock, label: '48h Placement' },
               { icon: RefreshCw, label: '30-Day Replacement Guarantee' },
-              { icon: Star, label: '4.9 Client Rating' },
+              { icon: Star, label: 'Guest-Loved Service' },
             ].map((badge) => (
               <div key={badge.label} className="flex items-center gap-2 text-white/[55%]">
                 <badge.icon className="w-4 h-4 text-[#C5A028]" strokeWidth={1.5} />

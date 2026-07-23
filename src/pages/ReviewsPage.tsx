@@ -22,7 +22,6 @@ const WHATSAPP_URL = 'https://wa.me/6289674072020'
 
 const STATS = [
   '560+ events',
-  '4.9★ rating',
   '12,000+ guests',
   '98% repeat bookings',
 ]
@@ -149,57 +148,17 @@ const REVIEWS: Review[] = [
   },
 ]
 
-const aggregateRatingSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'AggregateRating',
-  itemReviewed: {
-    '@type': 'LocalBusiness',
-    name: 'myCHEF Bali',
-    '@id': 'https://mychef.id/#business',
-  },
-  ratingValue: '4.9',
-  bestRating: '5',
-  reviewCount: '560',
-}
-
-const reviewListSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  itemListElement: REVIEWS.slice(0, 5).map((review, index) => ({
-    '@type': 'ListItem',
-    position: index + 1,
-    item: {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: review.name },
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: review.rating.toString(),
-        bestRating: '5',
-      },
-      reviewBody: review.review,
-      datePublished: review.date,
-      itemReviewed: {
-        '@type': 'LocalBusiness',
-        name: 'myCHEF Bali',
-        '@id': 'https://mychef.id/#business',
-      },
-    },
-  })),
-}
-
 const REVIEWS_SCHEMAS = [
-  aggregateRatingSchema,
-  reviewListSchema,
   breadcrumbSchema('Reviews', `${SITE}/reviews`),
   faqPageSchema([
-    { question: 'How do guests rate myCHEF private chef services?', answer: 'myCHEF holds a 4.9-star average rating across 560+ verified reviews from villa guests, wedding parties, corporate retreats, and catering events throughout Bali.' },
-    { question: 'Where can I read myCHEF reviews?', answer: 'Guest reviews are collected from Google, TripAdvisor, and direct feedback from villa owners and event planners. Our rating reflects 560+ experiences delivered across Bali.' },
+    { question: 'How do guests rate myCHEF private chef services?', answer: 'myCHEF is rated highly by villa guests, wedding parties, corporate retreats, and catering events throughout Bali. Featured reviews are published on this page.' },
+    { question: 'Where can I read myCHEF reviews?', answer: 'Guest reviews and feedback from villa owners and event planners are shared on this page and through our booking communications.' },
     { question: 'Are the reviews from real guests?', answer: 'Yes — all reviews on this page are from real guests who experienced myCHEF private chef dinners, catering, and hospitality staffing at their Bali villas and events.' },
   ]),
 ]
 
 const SOCIAL_PROOF = [
-  { name: 'Google', detail: '4.9★ local service rating' },
+  { name: 'Guest Feedback', detail: 'Verified villa & event reviews' },
   { name: 'TripAdvisor', detail: 'Villa dining and event feedback' },
   { name: 'Airbnb Experiences', detail: 'Guest-loved private chef moments' },
 ]
@@ -217,8 +176,8 @@ export default function ReviewsPage() {
   return (
     <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="myCHEF Bali Reviews | 4.9★ Private Chef & Catering"
-        description="Read 4.9★ myCHEF Bali reviews from villa guests, weddings, retreats & events. Real hosts, real outcomes — see why 560+ villas keep coming back."
+        title="myCHEF Bali Reviews | Private Chef & Catering Feedback"
+        description="Read guest reviews from myCHEF Bali villa dinners, weddings, retreats & events. Real hosts, real outcomes — see why 560+ villas keep coming back."
         canonical={canonical}
         ogImage={`${SITE}/dining-table.webp`}
         jsonLd={REVIEWS_SCHEMAS}
@@ -229,7 +188,7 @@ export default function ReviewsPage() {
             <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028] font-semibold mb-4">Guest reviews</p>
             <h1 className="mb-5 font-playfair text-3xl leading-tight sm:text-4xl md:text-6xl">What Our Guests Say</h1>
             <p className="text-lg md:text-xl text-[#4A4745] max-w-3xl leading-relaxed">
-              4.9★ average across 560+ villa dinners, catering events and private chef bookings in Bali.
+              Featured feedback from 560+ villa dinners, catering events and private chef bookings in Bali.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-[#E4D7A8] bg-white px-5 py-3 shadow-sm">

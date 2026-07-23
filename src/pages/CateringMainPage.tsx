@@ -509,7 +509,7 @@ export default function CateringMainPage() {
               </Link>
             </div>
             <TrustRow
-              items={['500+ villa events served', '4.9★ Google Reviews', 'Chef + staff included', 'Same-day quotes', 'Bali-wide service']}
+              items={['500+ villa events served', 'Guest-loved service', 'Chef + staff included', 'Same-day quotes', 'Bali-wide service']}
               dark
             />
           </div>
@@ -1463,7 +1463,7 @@ export default function CateringMainPage() {
             No booking fee · Free consultation · Exact quote within 2 hours
           </p>
           <TrustRow
-            items={['4.9★ from 180+ reviews', '500+ villa events served', '8 years in Bali', 'Same-day quotes when possible']}
+            items={['Guest-loved service', '500+ villa events served', '8 years in Bali', 'Same-day quotes when possible']}
             dark
           />
         </div>

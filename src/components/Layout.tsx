@@ -60,7 +60,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Navbar />
         <main id="main-content" className="flex-1">{children}</main>
         <div aria-label="myCHEF highlights" className="bg-[#1A1916] text-[#C5A028] text-xs py-2 text-center">
-          ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · 4.9★ rated
+          ⭐ 560+ villas served · 12,000+ happy guests · 500+ events · Guest-loved service
         </div>
         <div className="bg-[#F5F5F3] border-t border-black/5 py-3 px-6 text-center">
           <PriceDisclaimer className="max-w-[900px] mx-auto" showIcon={false} />

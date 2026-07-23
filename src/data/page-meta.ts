@@ -483,9 +483,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   reviews: {
     path: '/reviews',
-    title: 'myCHEF Bali Reviews | 4.9★ Private Chef & Catering',
+    title: 'myCHEF Bali Reviews | Private Chef & Catering Feedback',
     description:
-      'Read 4.9★ myCHEF Bali reviews from villa guests, weddings, retreats & events. Real hosts, real outcomes — see why 560+ villas keep coming back.',
+      'Read guest reviews from myCHEF Bali villa dinners, weddings, retreats & events. Real hosts, real outcomes — see why 560+ villas keep coming back.',
     canonical: `${SITE}/reviews`,
     h1: 'What Our Guests Say',
     ogImage: `${SITE}/dining-table.webp`,

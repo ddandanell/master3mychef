@@ -202,7 +202,7 @@ export default function InVillaServicePage() {
       <section className="bg-[#0A0A0A] py-6">
         <div className="max-w-[1200px] mx-auto px-6 flex flex-wrap justify-center gap-6 md:gap-10">
           {[
-            { icon: Star, text: '4.9 Rating (350+ Reviews)' },
+            { icon: Star, text: 'Guest-Loved Service' },
             { icon: Users, text: '500+ Events Staffed' },
             { icon: Shield, text: 'Background-Checked Team' },
             { icon: Clock, text: 'Same-Day Response' },
@@ -383,7 +383,7 @@ export default function InVillaServicePage() {
                 View Dining Options
               </Link>
             </div>
-            <p className="text-white/55 text-sm">560+ villas served · 12,000+ guests · 4.9 average rating</p>
+            <p className="text-white/55 text-sm">560+ villas served · 12,000+ guests · Guest-loved service</p>
           </div>
         </div>
       </section>

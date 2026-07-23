@@ -113,7 +113,7 @@ const CASE_STUDIES: CaseStudy[] = [
 
 const STATS = [
   { label: 'Corporate events delivered', value: '180+' },
-  { label: 'Average client rating', value: '4.9★' },
+  { label: 'Client satisfaction', value: '98%' },
   { label: 'NPWP-compliant invoicing', value: '100%' },
   { label: 'Repeat & referred clients', value: '85%' },
 ]
@@ -326,7 +326,7 @@ export default function CorporateCaseStudiesPage() {
       {/* Final CTA */}
       <section className="px-6 pb-20 md:pb-28">
         <div className="max-w-[1000px] mx-auto rounded-[32px] bg-[#1A1A1A] px-8 py-12 text-center text-[#FAFAF8] md:px-16 md:py-16">
-          <div className="mb-4 flex items-center justify-center gap-1" aria-label="4.9 star rating">
+          <div className="mb-4 flex items-center justify-center gap-1" aria-label="5 star guest satisfaction">
             {Array.from({ length: 5 }).map((_, index) => (
               <Star key={index} className="h-5 w-5 fill-[#C5A028] text-[#C5A028]" />
             ))}

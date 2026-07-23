@@ -206,6 +206,9 @@ function escapeHtml(text: string): string {
 }
 
 function buildBreadcrumbJsonLd(path: string, name: string): string {
+  // Homepage breadcrumbs are pointless and self-referential; skip them per audit H-11.
+  if (path === '/') return ''
+
   const isArticle = ARTICLE_ROUTES.has(path)
   const schema = {
     '@context': 'https://schema.org',
@@ -240,7 +243,7 @@ function buildArticleJsonLd(path: string, title: string, description: string, og
       '@type': 'Organization',
       name: 'myCHEF',
       url: SITE,
-      logo: { '@type': 'ImageObject', url: `${SITE}/mychef-logo.svg` },
+      logo: { '@type': 'ImageObject', url: `${SITE}/mychef-logo-512.png`, width: 512, height: 512 },
     },
     image: ogImage,
     ...(body ? { articleBody: stripHtml(body), wordCount: stripHtml(body).split(/\s+/).filter(Boolean).length } : {}),

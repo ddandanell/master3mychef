@@ -112,8 +112,8 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "chef-for-hire-indonesia",
-    "title": "Chef for Hire Indonesia | Personal Chef Services",
-    "description": "Hire a personal chef in Indonesia for your villa or residence. Vetted professional chefs for daily or occasional service.",
+    "title": "Chef for Hire Indonesia | Private Chef Services",
+    "description": "Hire a vetted private or personal chef in Indonesia for one dinner, daily villa service, recurring meals, or full-time placement in Bali and Jakarta.",
     "date": "2026-05-17"
   },
   {

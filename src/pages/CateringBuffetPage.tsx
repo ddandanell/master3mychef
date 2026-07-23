@@ -134,11 +134,11 @@ const AREA_MINIMUMS = [
 ]
 
 const GROUP_SIZE_GUIDE = [
-  { guests: 30, indonesian: 'IDR 25.41M', international: 'IDR 27.23M', premium: 'IDR 34.49M' },
-  { guests: 50, indonesian: 'IDR 42.35M', international: 'IDR 45.38M', premium: 'IDR 57.48M' },
-  { guests: 80, indonesian: 'IDR 67.76M', international: 'IDR 72.60M', premium: 'IDR 91.97M' },
-  { guests: 120, indonesian: 'IDR 101.64M', international: 'IDR 108.90M', premium: 'IDR 137.97M' },
-  { guests: 200, indonesian: 'IDR 169.40M', international: 'IDR 181.50M', premium: 'IDR 229.95M' },
+  { guests: 30, indonesian: 'IDR 17.24M', international: 'IDR 20.87M', premium: 'IDR 28.12M' },
+  { guests: 50, indonesian: 'IDR 28.74M', international: 'IDR 34.78M', premium: 'IDR 46.87M' },
+  { guests: 80, indonesian: 'IDR 45.98M', international: 'IDR 55.65M', premium: 'IDR 75.00M' },
+  { guests: 120, indonesian: 'IDR 68.97M', international: 'IDR 83.48M', premium: 'IDR 112.50M' },
+  { guests: 200, indonesian: 'IDR 114.95M', international: 'IDR 139.13M', premium: 'IDR 187.50M' },
 ]
 
 const BUFFET_VS_PLATED = [
@@ -560,9 +560,9 @@ export default function CateringBuffetPage() {
               <thead>
                 <tr className="border-b-2 border-[#1A1A1A]">
                   <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Guests</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Indonesian <span className="text-xs font-normal opacity-70">(700K)</span></th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">International <span className="text-xs font-normal opacity-70">(750K)</span></th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Live-Station <span className="text-xs font-normal opacity-70">(950K)</span></th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Indonesian <span className="text-xs font-normal opacity-70">(475K)</span></th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">International <span className="text-xs font-normal opacity-70">(575K)</span></th>
+                  <th className="pb-3 text-sm font-semibold uppercase tracking-normal tabular-nums">Live-Station <span className="text-xs font-normal opacity-70">(775K)</span></th>
                 </tr>
               </thead>
               <tbody>

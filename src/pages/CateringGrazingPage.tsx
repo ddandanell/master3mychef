@@ -9,10 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  cateringServiceSchema,
-  offerSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -193,14 +191,15 @@ export default function CateringGrazingPage() {
         canonical={PAGE_URL}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-grazing.webp`}
         jsonLd={[
-          cateringServiceSchema('Grazing Tables Bali', 'Styled grazing tables in Bali for villa parties, weddings, poolside events, and welcome receptions with cheese, charcuterie, fruit, and breads. myCHEF.id designs, delivers, and sets each table across Bali.', PAGE_URL),
-          offerSchema('Small Grazing Board', 650000, 'IDR', PAGE_URL),
-          offerSchema('Medium Villa Table', 2700000, 'IDR', PAGE_URL),
-          offerSchema('Full Event Grazing Table', 350000, 'IDR', PAGE_URL),
-          offerSchema('Wedding Grazing Table', 325000, 'IDR', PAGE_URL),
-          offerSchema('Corporate Reception Table', 300000, 'IDR', PAGE_URL),
+          serviceWithAggregateOfferSchema({
+            name: 'Grazing Tables Bali',
+            description: 'Styled grazing tables in Bali for villa parties, weddings, poolside events, and welcome receptions with cheese, charcuterie, fruit, and breads. myCHEF.id designs, delivers, and sets each table across Bali.',
+            url: PAGE_URL,
+            lowPrice: '300000',
+            highPrice: '2700000',
+            unitText: 'per person or per table',
+          }),
           faqPageSchema(schemaFaq),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Book a Grazing Table in Bali',
             description: 'Book a stunning grazing table for your Bali event in 4 easy steps.',

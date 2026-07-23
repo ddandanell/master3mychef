@@ -13,7 +13,7 @@ import {
   ShieldCheck,
   TrendingUp,
 } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, professionalServiceSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, serviceWithOfferSchema, faqPageSchema, professionalServiceSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
 import { Button } from '@/components/ui/button'
@@ -139,7 +139,13 @@ export default function BarServicesHubPage() {
             meta.ogImage ?? `${SITE}/generated/mychef-bar-services-bali-og-hub.jpg`,
             groupedServices.flatMap((g) => g.items.map((s) => ({ name: s.eyebrow, url: `${SITE}${s.route}` }))),
           ),
-          serviceSchema(hero.h1, meta.description, meta.canonical ?? `${SITE}/bar-services/`),
+          serviceWithOfferSchema({
+            name: hero.h1,
+            description: meta.description,
+            url: meta.canonical ?? `${SITE}/bar-services/`,
+            price: '2750000',
+            unitText: 'per person',
+          }),
           faqPageSchema(HUB_FAQS),
         ]}
       />

@@ -10,10 +10,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  cateringServiceSchema,
-  offerSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -224,12 +222,14 @@ export default function CateringDropOffPage() {
         canonical={PAGE_URL}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-dropoff.webp`}
         jsonLd={[
-          cateringServiceSchema('Drop-Off Catering Bali', 'Prepared catering delivered to Bali villas and venues for low-effort lunches, staff meals, and casual group dining. myCHEF.id sends ready-to-serve dishes with delivery coordination and reheating guidance across Bali.', PAGE_URL),
-          offerSchema('Family Dinner Drop-Off', 350000, 'IDR', PAGE_URL),
-          offerSchema('Dinner Party Drop-Off', 500000, 'IDR', PAGE_URL),
-          offerSchema('Grazing Dinner Drop-Off', 650000, 'IDR', PAGE_URL),
+          serviceWithAggregateOfferSchema({
+            name: 'Drop-Off Catering Bali',
+            description: 'Prepared catering delivered to Bali villas and venues for low-effort lunches, staff meals, and casual group dining. myCHEF.id sends ready-to-serve dishes with delivery coordination and reheating guidance across Bali.',
+            url: PAGE_URL,
+            lowPrice: '350000',
+            highPrice: '650000',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Book Drop-Off Catering in Bali',
             description: 'Order fresh drop-off catering delivered to your Bali villa in 4 easy steps.',

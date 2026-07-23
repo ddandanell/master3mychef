@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { MessageCircle, Mail, MapPin, Phone, ArrowRight } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -163,7 +163,7 @@ export default function ContactPage() {
         description={getPageMeta('contact').description}
         canonical={getPageMeta('contact').canonical}
         ogImage={getPageMeta('contact').ogImage}
-        jsonLd={[aggregateRatingSchema(4.9, 560), breadcrumbSchema('Contact', getPageMeta('contact').canonical), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={[breadcrumbSchema('Contact', getPageMeta('contact').canonical), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* ── HERO ─────────────────────────────────────────────────────── */}

@@ -4,8 +4,9 @@ import { MessageCircle, Check, ChevronRight, Star, Lock, Clock, Users } from 'lu
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  breadcrumbSchema, offerSchema,
-  faqPageSchema, aggregateRatingSchema, detailedServiceSchema,
+  breadcrumbSchema,
+  faqPageSchema,
+  serviceWithOfferSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -104,13 +105,13 @@ export default function ChefsTablePage() {
         canonical={`${SITE}/fine-dining/chefs-table`}
         ogImage={`${SITE}/generated/mychef-misc-bali-chefs-table-hero-luxury.webp`}
         jsonLd={[
-          detailedServiceSchema(
-            "Chef's Table Bali — Adriano's Private 7-Course Experience",
-            "The most exclusive myCHEF experience. Counter seating at your Bali villa with Adriano, live 7-course market-led tasting menu with commentary between each course. Maximum 6 guests. Available Friday and Saturday evenings only.",
-            `${SITE}/fine-dining/chefs-table`
-          ),
-          offerSchema("Chef's Table — Adriano Private Experience", 3500000, 'IDR', `${SITE}/fine-dining/chefs-table`),
-          aggregateRatingSchema(4.9, 560),
+          serviceWithOfferSchema({
+            name: "Chef's Table Bali — Adriano's Private 7-Course Experience",
+            description: "The most exclusive myCHEF experience. Counter seating at your Bali villa with Adriano, live 7-course market-led tasting menu with commentary between each course. Maximum 6 guests. Available Friday and Saturday evenings only.",
+            url: `${SITE}/fine-dining/chefs-table`,
+            price: '3500000',
+            unitText: 'per 6 seats',
+          }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema("Chef's Table Bali", `${SITE}/fine-dining/chefs-table`, 'Fine Dining', `${SITE}/fine-dining`),
           howToSchema({

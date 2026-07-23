@@ -11,10 +11,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  cateringServiceSchema,
-  offerSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -205,12 +203,14 @@ export default function CateringPlatedPage() {
         canonical={`${SITE}/catering/plated-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-plated-menus.webp`}
         jsonLd={[
-          cateringServiceSchema('Plated Dinner Catering Bali', 'Plated dinner catering in Bali for villas, anniversaries, weddings, and premium private events with multi-course menus. myCHEF.id provides chefs, service staff, elegant plating, and cleanup across Bali.', `${SITE}/catering/plated-catering`),
-          offerSchema('3-Course Plated', 800000, 'IDR', `${SITE}/catering/plated-catering`),
-          offerSchema('4-Course Plated', 1000000, 'IDR', `${SITE}/catering/plated-catering`),
-          offerSchema('5-Course Premium', 1300000, 'IDR', `${SITE}/catering/plated-catering`),
+          serviceWithAggregateOfferSchema({
+            name: 'Plated Dinner Catering Bali',
+            description: 'Plated dinner catering in Bali for villas, anniversaries, weddings, and premium private events with multi-course menus. myCHEF.id provides chefs, service staff, elegant plating, and cleanup across Bali.',
+            url: `${SITE}/catering/plated-catering`,
+            lowPrice: '800000',
+            highPrice: '1300000',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Book a Plated Dinner in Bali',
             description: 'Book a multi-course plated dinner for your Bali villa in 4 easy steps.',

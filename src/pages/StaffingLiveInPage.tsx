@@ -5,9 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
   breadcrumbSchema,
-  serviceSchema,
+  serviceWithOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -110,14 +109,14 @@ export default function StaffingLiveInPage() {
         canonical={`${SITE}/staffing/live-in-chef`}
         ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-kitchen.webp`}
         jsonLd={[
-          serviceSchema(
-            'Live-In Chef Bali',
-            'Full-time live-in chef placement for villas in Bali. Vetted candidates, cooking trials, contracts, and ongoing support.',
-            `${SITE}/staffing/live-in-chef`,
-            'IDR',
-          ),
+          serviceWithOfferSchema({
+            name: 'Live-In Chef Bali',
+            description: 'Full-time live-in chef placement for villas in Bali. Vetted candidates, cooking trials, contracts, and ongoing support.',
+            url: `${SITE}/staffing/live-in-chef`,
+            price: '8000000',
+            unitText: 'per month',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 156),
           breadcrumbSchema('Live-In Chef', `${SITE}/staffing/live-in-chef`, 'Staffing', `${SITE}/staffing`),
           howToSchema({
             name: 'How to Find a Live-In Chef in Bali',

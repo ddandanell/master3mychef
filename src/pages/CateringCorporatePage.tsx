@@ -9,10 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  cateringServiceSchema,
-  offerSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -146,12 +144,14 @@ export default function CateringCorporatePage() {
         canonical={`${SITE}/catering/corporate-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-corporate.webp`}
         jsonLd={[
-          cateringServiceSchema('Corporate Catering Bali', 'Corporate catering in Bali for business lunches, workshops, offsites, launches, and executive dinners with reliable timing and professional presentation. myCHEF.id handles menu planning, staffing, invoicing, and service across Bali.', `${SITE}/catering/corporate-catering`),
-          offerSchema('Board Dinner', 850000, 'IDR', `${SITE}/catering/corporate-catering`),
-          offerSchema('Team Offsite Catering', 550000, 'IDR', `${SITE}/catering/corporate-catering`),
-          offerSchema('Conference Catering', 700000, 'IDR', `${SITE}/catering/corporate-catering`),
+          serviceWithAggregateOfferSchema({
+            name: 'Corporate Catering Bali',
+            description: 'Corporate catering in Bali for business lunches, workshops, offsites, launches, and executive dinners with reliable timing and professional presentation. myCHEF.id handles menu planning, staffing, invoicing, and service across Bali.',
+            url: `${SITE}/catering/corporate-catering`,
+            lowPrice: '550000',
+            highPrice: '850000',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 89),
           howToSchema({
             name: 'How to Book Corporate Catering in Bali',
             description: 'Book professional corporate catering for your Bali event in 4 easy steps.',

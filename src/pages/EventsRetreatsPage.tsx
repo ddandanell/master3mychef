@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, serviceEventSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -154,18 +154,15 @@ export default function EventsRetreatsPage() {
         canonical={`${SITE}/events/retreats`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-retreats.webp`}
         jsonLd={[
-          detailedServiceSchema('Wellness Retreat Catering Bali', 'myCHEF.id provides retreat catering in Bali with wellness-focused menus, dietary planning, and on-site chef support. We manage multi-day meal service, kitchen operations, and cleanup for private villas and retreat venues.', `${SITE}/events/retreats`),
-          offerSchema('Wellness Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
-          offerSchema('Yoga Retreat', 1500000, 'IDR', `${SITE}/events/retreats`),
-          offerSchema('Corporate-Style Retreat', 2500000, 'IDR', `${SITE}/events/retreats`),
-          serviceEventSchema({
-            name: 'Corporate Retreat Catering in Bali',
-            description: 'Full-board private chef catering for corporate retreats in Bali — daily menus, dietary accommodation, team dining.',
+          serviceWithAggregateOfferSchema({
+            name: 'Wellness Retreat Catering Bali',
+            description: 'myCHEF.id provides retreat catering in Bali with wellness-focused menus, dietary planning, and on-site chef support. We manage multi-day meal service, kitchen operations, and cleanup for private villas and retreat venues.',
             url: `${SITE}/events/retreats`,
-            lowPrice: 1500000,
+            lowPrice: '1500000',
+            highPrice: '2500000',
+            unitText: 'per person per day',
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Book Wellness Retreat Catering in Bali',
             description: 'Book healthy catering for your Bali wellness or yoga retreat in 4 easy steps.',

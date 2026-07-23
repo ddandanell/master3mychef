@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, Calendar, Tag } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema, localBusinessSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from './SeoHead'
 import { JOURNAL_CATEGORIES, type JournalPost } from '@/data/siteArchitecture'
 import { JOURNAL_POSTS } from '@/data/content/journalPosts'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
@@ -39,7 +39,6 @@ export function JournalIndexPage() {
         ogImage="/mychef-misc-bali-og-image.webp"
         canonical={canonical}
         jsonLd={[
-          aggregateRatingSchema(4.9, 560),
           breadcrumbSchema('Journal', canonical),
           faqPageSchema([
             { question: 'What topics does the myCHEF journal cover?', answer: 'The myCHEF journal covers practical guides for hosting in Bali — private chef costs, villa kitchen setups, event planning, retreat catering, rehearsal dinners, menu showcases, and location guides.' },

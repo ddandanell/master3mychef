@@ -7,10 +7,8 @@ import {
 } from 'lucide-react'
 import SeoHead, {
   breadcrumbSchema,
-  cateringServiceSchema,
-  offerSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
@@ -389,48 +387,15 @@ export default function CateringMainPage() {
         canonical={getPageMeta('catering').canonical}
         ogImage={getPageMeta('catering').ogImage}
         jsonLd={[
-          cateringServiceSchema('Villa Catering Bali', 'Chef-led catering for Bali villas, events, BBQ nights, and private gatherings with flexible formats from buffet to plated service. myCHEF.id manages menus, staffing, setup, and cleanup across Bali.', `${SITE}/catering`, 'FoodService'),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'Catering Services in Bali',
-            description: 'Professional catering for villa parties, BBQ nights, buffets, plated dinners, and corporate events across Bali. Full setup, staffing, and cleanup included.',
-            provider: {
-              '@type': 'LocalBusiness',
-              name: 'myCHEF.id',
-              url: 'https://mychef.id',
-            },
-            areaServed: {
-              '@type': 'Place',
-              name: 'Bali, Indonesia',
-            },
-            serviceType: 'Catering Service',
-            offers: {
-              '@type': 'Offer',
-              priceCurrency: 'IDR',
-              price: '450000',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                minPrice: '350000',
-                maxPrice: '3700000',
-                priceCurrency: 'IDR',
-              },
-            },
-          },
-          offerSchema('Indonesian BBQ', 550000, 'IDR', `${SITE}/catering/bbq-catering`),
-          offerSchema('International BBQ', 700000, 'IDR', `${SITE}/catering/bbq-catering`),
-          offerSchema('Surf & Turf BBQ', 850000, 'IDR', `${SITE}/catering/bbq-catering`),
-          offerSchema('Indonesian Buffet', 450000, 'IDR', `${SITE}/catering/buffet`),
-          offerSchema('International Buffet', 750000, 'IDR', `${SITE}/catering/buffet`),
-          offerSchema('Live-Station Buffet', 950000, 'IDR', `${SITE}/catering/buffet`),
-          offerSchema('3-Course Plated', 800000, 'IDR', `${SITE}/catering/plated-catering`),
-          offerSchema('4-Course Plated', 1000000, 'IDR', `${SITE}/catering/plated-catering`),
-          offerSchema('5-Course Dinner', 1300000, 'IDR', `${SITE}/catering/plated-catering`),
-          offerSchema('Family Drop-Off', 350000, 'IDR', `${SITE}/catering/drop-off-catering`),
-          offerSchema('Dinner Party Drop-Off', 500000, 'IDR', `${SITE}/catering/drop-off-catering`),
-          offerSchema('Babi Guling Small', 3700000, 'IDR', `${SITE}/catering/babi-guling`),
+          serviceWithAggregateOfferSchema({
+            name: 'Villa Catering Bali',
+            description: 'Chef-led catering for Bali villas, events, BBQ nights, and private gatherings with flexible formats from buffet to plated service. myCHEF.id manages menus, staffing, setup, and cleanup across Bali.',
+            url: `${SITE}/catering`,
+            lowPrice: '350000',
+            highPrice: '3700000',
+            unitText: 'per person',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Book Catering in Bali',
             description: 'Book professional catering for your Bali villa or event in 6 easy steps.',

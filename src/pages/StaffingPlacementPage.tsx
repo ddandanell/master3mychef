@@ -5,9 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
   breadcrumbSchema,
-  serviceSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -110,14 +109,15 @@ export default function StaffingPlacementPage() {
         canonical={`${SITE}/staffing/private-chef-placement`}
         ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-hero.webp`}
         jsonLd={[
-          serviceSchema(
-            'Private Chef Placement Bali',
-            'Long-term private chef placement for villas in Bali. Vetted candidates, cooking trials, contracts, and ongoing support.',
-            `${SITE}/staffing/private-chef-placement`,
-            'IDR',
-          ),
+          serviceWithAggregateOfferSchema({
+            name: 'Private Chef Placement Bali',
+            description: 'Long-term private chef placement for villas in Bali. Vetted candidates, cooking trials, contracts, and ongoing support.',
+            url: `${SITE}/staffing/private-chef-placement`,
+            lowPrice: '5500000',
+            highPrice: '15000000',
+            unitText: 'per placement',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 156),
           breadcrumbSchema('Private Chef Placement', `${SITE}/staffing/private-chef-placement`, 'Staffing', `${SITE}/staffing`),
           howToSchema({
             name: 'How to Place a Private Chef in Bali',

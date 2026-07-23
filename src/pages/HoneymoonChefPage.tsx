@@ -6,7 +6,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   detailedServiceSchema,
   offerSchema,
 } from '@/components/SeoHead'
@@ -167,7 +166,6 @@ export default function HoneymoonChefPage() {
           ),
           offerSchema('Honeymoon Dinner — per person', 2500000, 'IDR', `${SITE}/blog/honeymoon-private-chef-bali`),
           offerSchema('7-Night Full-Stay Honeymoon Package', 18000000, 'IDR', `${SITE}/blog/honeymoon-private-chef-bali`),
-          aggregateRatingSchema(4.9, 560),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema('Honeymoon Private Chef Bali', `${SITE}/blog/honeymoon-private-chef-bali`, 'Blog', `${SITE}/blog`),
         ]}

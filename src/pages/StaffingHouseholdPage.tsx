@@ -4,9 +4,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema,
-  serviceSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -108,14 +107,15 @@ export default function StaffingHouseholdPage() {
         canonical={`${SITE}/staffing/household-staff`}
         ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-table.webp`}
         jsonLd={[
-          serviceSchema(
-            'Household Staff Bali',
-            'Household staff recruitment in Bali for private residences — nannies, drivers, housekeepers, and estate managers. Vetted candidates and ongoing support.',
-            `${SITE}/staffing/household-staff`,
-            'IDR',
-          ),
+          serviceWithAggregateOfferSchema({
+            name: 'Household Staff Bali',
+            description: 'Household staff recruitment in Bali for private residences — nannies, drivers, housekeepers, and estate managers. Vetted candidates and ongoing support.',
+            url: `${SITE}/staffing/household-staff`,
+            lowPrice: '4000000',
+            highPrice: '15000000',
+            unitText: 'per month',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 156),
           howToSchema({
             name: 'How to Hire Household Staff in Bali',
             description: 'Hire reliable household staff for your Bali home in 4 easy steps.',

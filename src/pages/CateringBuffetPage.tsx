@@ -9,10 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  cateringServiceSchema,
-  offerSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -186,12 +184,14 @@ export default function CateringBuffetPage() {
         canonical={`${SITE}/catering/buffet`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet.webp`}
         jsonLd={[
-          cateringServiceSchema('Buffet Catering Bali', 'Full-service buffet catering for Bali villas, weddings, retreats, and large private events with Indonesian and international menu options. myCHEF.id brings chefs, service staff, buffet equipment, and cleanup across Bali.', `${SITE}/catering/buffet`),
-          offerSchema('Indonesian Buffet', 475000, 'IDR', `${SITE}/catering/buffet`),
-          offerSchema('International Buffet', 575000, 'IDR', `${SITE}/catering/buffet`),
-          offerSchema('Premium Live-Station Buffet', 775000, 'IDR', `${SITE}/catering/buffet`),
+          serviceWithAggregateOfferSchema({
+            name: 'Buffet Catering Bali',
+            description: 'Full-service buffet catering for Bali villas, weddings, retreats, and large private events with Indonesian and international menu options. myCHEF.id brings chefs, service staff, buffet equipment, and cleanup across Bali.',
+            url: `${SITE}/catering/buffet`,
+            lowPrice: '475000',
+            highPrice: '775000',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 186),
           howToSchema({
             name: 'How to Book Buffet Catering in Bali',
             description: 'Book full-service buffet catering for your Bali villa event in 4 easy steps.',

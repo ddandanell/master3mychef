@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, ChevronLeft, MessageCircle, Minus, Plus } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema } from './SeoHead'
 import { trackEvent } from '@/lib/analytics'
 
 // 9-step quote funnel ported from production mychef.id/quote.
@@ -173,7 +173,7 @@ export default function QuoteFunnel() {
         canonical="https://mychef.id/quote"
         ogImage="https://mychef.id/mychef-misc-bali-og-image.webp"
         noindex
-        jsonLd={[aggregateRatingSchema(4.9, 560), breadcrumbSchema('Quote', 'https://mychef.id/quote')]}
+        jsonLd={[breadcrumbSchema('Quote', 'https://mychef.id/quote')]}
       />
       <section className="px-8 pt-24 pb-16 max-w-[800px] mx-auto">
         {/* Progress strip */}

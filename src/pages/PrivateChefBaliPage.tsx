@@ -6,7 +6,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema, offerSchema,
-  faqPageSchema, aggregateRatingSchema, detailedServiceSchema, howToSchema, serviceWithOfferSchema,
+  faqPageSchema, detailedServiceSchema, howToSchema, serviceWithOfferSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
@@ -138,7 +138,6 @@ export default function PrivateChefBaliPage() {
           ),
           offerSchema('Private Chef Bali — Mediterranean Sea', 2200000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
           offerSchema('Private Chef Bali — Wagyu Experience', 2400000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
-          aggregateRatingSchema(4.9, 560),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           howToSchema({
             name: 'How to Book a Private Chef in Bali',

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight, Wine, Users, Shield, Clock, Star, Award } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema, howToSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, howToSchema } from './SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import { PILLARS } from '@/data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
@@ -130,18 +130,14 @@ export default function InVillaServicePage() {
             },
             serviceType: 'Villa Staffing Service',
             offers: {
-              '@type': 'Offer',
+              '@type': 'AggregateOffer',
+              lowPrice: '250000',
+              highPrice: '1500000',
               priceCurrency: 'IDR',
-              price: '250000',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                minPrice: '250000',
-                maxPrice: '1500000',
-                priceCurrency: 'IDR',
-              },
+              availability: 'https://schema.org/InStock',
+              url: canonical,
             },
           },
-          aggregateRatingSchema(4.9, 350),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           howToSchema({
             name: 'How to Hire In-Villa Service Staff in Bali',

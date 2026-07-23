@@ -9,10 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  cateringServiceSchema,
-  offerSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -159,12 +157,14 @@ export default function CateringRetreatPage() {
         canonical={`${SITE}/catering/retreat-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-retreat.webp`}
         jsonLd={[
-          cateringServiceSchema('Retreat Catering Bali', 'Retreat catering in Bali for yoga, wellness, business, and creative retreats with plant-forward menus and dietary planning. myCHEF.id runs consistent multi-day meal service, timing, and kitchen operations across Bali.', `${SITE}/catering/retreat-catering`),
-          offerSchema('Yoga Retreat Catering', 400000, 'IDR', `${SITE}/catering/retreat-catering`),
-          offerSchema('Wellness Retreat Catering', 450000, 'IDR', `${SITE}/catering/retreat-catering`),
-          offerSchema('Corporate Retreat Catering', 500000, 'IDR', `${SITE}/catering/retreat-catering`),
+          serviceWithAggregateOfferSchema({
+            name: 'Retreat Catering Bali',
+            description: 'Retreat catering in Bali for yoga, wellness, business, and creative retreats with plant-forward menus and dietary planning. myCHEF.id runs consistent multi-day meal service, timing, and kitchen operations across Bali.',
+            url: `${SITE}/catering/retreat-catering`,
+            lowPrice: '400000',
+            highPrice: '500000',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 156),
           howToSchema({
             name: 'How to Book Retreat Catering in Bali',
             description: 'Book wellness and yoga retreat catering for your Bali group in 4 easy steps.',

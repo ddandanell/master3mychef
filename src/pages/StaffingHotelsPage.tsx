@@ -4,9 +4,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema,
-  serviceSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -101,14 +100,15 @@ export default function StaffingHotelsPage() {
         canonical={`${SITE}/staffing/for-hotels-restaurants`}
         ogImage={`${SITE}/generated/aura-corporate.webp`}
         jsonLd={[
-          serviceSchema(
-            'Hotels & Restaurants Staffing Bali',
-            'Hospitality recruitment for boutique hotels, restaurants and resorts in Bali. Kitchen staff, service staff, and management placements with volume rates.',
-            `${SITE}/staffing/for-hotels-restaurants`,
-            'IDR',
-          ),
+          serviceWithAggregateOfferSchema({
+            name: 'Hotels & Restaurants Staffing Bali',
+            description: 'Hospitality recruitment for boutique hotels, restaurants and resorts in Bali. Kitchen staff, service staff, and management placements with volume rates.',
+            url: `${SITE}/staffing/for-hotels-restaurants`,
+            lowPrice: '2500000',
+            highPrice: '6000000',
+            unitText: 'per month',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 168),
           howToSchema({
             name: 'How to Hire Hotel & Restaurant Staff in Bali',
             description: 'Hire professional hospitality staff for your Bali hotel or restaurant in 4 easy steps.',

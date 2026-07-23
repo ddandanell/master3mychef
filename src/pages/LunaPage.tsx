@@ -6,7 +6,7 @@ const OrderPanel = lazy(() => import('@/components/OrderPanel'))
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import LocationChips from '@/components/LocationChips'
-import SeoHead, { breadcrumbSchema, serviceSchema, offerSchema, faqPageSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
 import { Button } from '@/components/ui/button'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -262,51 +262,13 @@ export default function LunaPage() {
         canonical={getPageMeta('fine-dining').canonical}
         ogImage={getPageMeta('fine-dining').ogImage}
         jsonLd={[
-          serviceSchema(
-            'Private Chef Fine Dining Bali',
-            '24 classic set menus served privately in your Bali villa — vegetarian, seafood, mixed meats, and single-meat. Michelin-trained chef, sommelier wine pairing, open-flame cooking.',
-            'https://mychef.id/fine-dining',
-            '$$$$'
-          ),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'Private Chef Fine Dining in Bali',
-            description: 'Curated tasting menus, wine pairings, and luxury culinary experiences delivered to your Bali villa.',
-            provider: {
-              '@type': 'LocalBusiness',
-              name: 'myCHEF.id',
-              url: 'https://mychef.id',
-            },
-            areaServed: {
-              '@type': 'Place',
-              name: 'Bali, Indonesia',
-            },
-            serviceType: 'Private Chef Service',
-            offers: {
-              '@type': 'Offer',
-              priceCurrency: 'IDR',
-              price: '1250000',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                minPrice: '1250000',
-                maxPrice: '3600000',
-                priceCurrency: 'IDR',
-              },
-            },
-          },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'AggregateOffer',
-            name: 'Classic Set Menus — 24 Signature Set Menus',
+          serviceWithAggregateOfferSchema({
+            name: 'Private Chef Fine Dining Bali',
+            description: '24 classic set menus served privately in your Bali villa — vegetarian, seafood, mixed meats, and single-meat. Michelin-trained chef, sommelier wine pairing, open-flame cooking.',
+            url: 'https://mychef.id/fine-dining',
             lowPrice: '1250000',
             highPrice: '3600000',
-            priceCurrency: 'IDR',
-            availability: 'https://schema.org/InStock',
-            url: 'https://mychef.id/fine-dining',
-            seller: { '@id': 'https://mychef.id/#business' },
-          },
-          offerSchema('Wine Pairing', 850000, 'IDR', 'https://mychef.id/fine-dining'),
+          }),
           faqPageSchema(FAQS),
           howToSchema({
             name: 'How to Book a Private Fine Dining Experience in Bali',

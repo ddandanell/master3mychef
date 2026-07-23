@@ -5,9 +5,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema,
-  serviceSchema,
+  serviceWithOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -87,14 +86,14 @@ export default function ServiceWaitersPage() {
         canonical={`${SITE}/in-villa-service/waiters`}
         ogImage={`${SITE}/generated/mychef-service-bali-hero-waiters.webp`}
         jsonLd={[
-          serviceSchema(
-            'Waiter Hire Bali',
-            'Professional per-shift waiters for villa events in Bali. Uniformed, English-speaking, trained in plated and buffet service.',
-            `${SITE}/in-villa-service/waiters`,
-            'IDR',
-          ),
+          serviceWithOfferSchema({
+            name: 'Waiter Hire Bali',
+            description: 'Professional per-shift waiters for villa events in Bali. Uniformed, English-speaking, trained in plated and buffet service.',
+            url: `${SITE}/in-villa-service/waiters`,
+            price: '250000',
+            unitText: 'per hour',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 89),
           breadcrumbSchema('Waiters', `${SITE}/in-villa-service/waiters`, 'In-Villa Service', `${SITE}/in-villa-service`),
           howToSchema({
             name: 'How to Hire Villa Waiters in Bali',

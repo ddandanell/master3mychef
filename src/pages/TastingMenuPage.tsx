@@ -5,8 +5,9 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import SeoHead, {
-  breadcrumbSchema, offerSchema,
-  faqPageSchema, aggregateRatingSchema, detailedServiceSchema,
+  breadcrumbSchema,
+  faqPageSchema,
+  serviceWithAggregateOfferSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -169,14 +170,13 @@ export default function TastingMenuPage() {
         canonical={`${SITE}/fine-dining/tasting-menu`}
         ogImage={`${SITE}/generated/mychef-finedining-bali-luna-plating.webp`}
         jsonLd={[
-          detailedServiceSchema(
-            'Private Tasting Menu Bali',
-            'A private multi-course tasting menu experience in your Bali villa. Choose Mediterranean Sea or Wagyu Experience — Michelin-trained chefs, handmade pasta, premium ingredients, and full service in your villa. myCHEF.id serves across all Bali villa areas.',
-            `${SITE}/fine-dining/tasting-menu`
-          ),
-          offerSchema('Mediterranean Sea Tasting Menu', 2200000, 'IDR', `${SITE}/fine-dining/tasting-menu`),
-          offerSchema('Wagyu Tasting Experience', 2400000, 'IDR', `${SITE}/fine-dining/tasting-menu`),
-          aggregateRatingSchema(4.9, 560),
+          serviceWithAggregateOfferSchema({
+            name: 'Private Tasting Menu Bali',
+            description: 'A private multi-course tasting menu experience in your Bali villa. Choose Mediterranean Sea or Wagyu Experience — Michelin-trained chefs, handmade pasta, premium ingredients, and full service in your villa. myCHEF.id serves across all Bali villa areas.',
+            url: `${SITE}/fine-dining/tasting-menu`,
+            lowPrice: '2200000',
+            highPrice: '2400000',
+          }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema('Tasting Menu Bali', `${SITE}/fine-dining/tasting-menu`, 'Fine Dining', `${SITE}/fine-dining`),
           howToSchema({

@@ -6,7 +6,7 @@ import {
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, faqPageSchema, aggregateRatingSchema, serviceEventSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithOfferSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -159,15 +159,14 @@ export default function EventsWeddingsPage() {
         canonical={`${SITE}/events/weddings`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-weddings.webp`}
         jsonLd={[
-          detailedServiceSchema('Wedding Catering Bali', 'myCHEF.id provides wedding catering in Bali with private chef menus, service staff, and full villa coordination. We support intimate ceremonies and reception dinners with setup, timing, and cleanup managed by one team.', `${SITE}/events/weddings`),
-          serviceEventSchema({
-            name: 'Private Wedding Catering in Bali',
-            description: 'myCHEF.id provides private chef and catering services for intimate wedding celebrations across Bali villas.',
+          serviceWithOfferSchema({
+            name: 'Wedding Catering Bali',
+            description: 'myCHEF.id provides wedding catering in Bali with private chef menus, service staff, and full villa coordination. We support intimate ceremonies and reception dinners with setup, timing, and cleanup managed by one team.',
             url: `${SITE}/events/weddings`,
-            image: `${SITE}/generated/mychef-events-bali-hero-weddings.webp`,
+            price: '600000',
+            unitText: 'per person',
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Plan a Wedding in Bali',
             description: 'Plan your dream Bali villa wedding with private chef catering in 4 easy steps.',

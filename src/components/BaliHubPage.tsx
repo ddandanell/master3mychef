@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Utensils, Flame, Sparkles } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from './SeoHead'
 import { TOP_CITIES } from '@/data/topCities'
 import { getLocationCanonical } from '@/data/siteArchitecture'
 
@@ -25,7 +25,6 @@ export default function BaliHubPage() {
         ogType="article"
         ogImage={`${SITE}/generated/mychef-location-bali-hub-hero.webp`}
         jsonLd={[
-          aggregateRatingSchema(4.9, 560),
           breadcrumbSchema('Bali Guide', canonical),
           faqPageSchema([
             { question: 'How much does a private chef in Bali cost?', answer: 'Private chef services in Bali start from IDR 700,000 per person for set-menu dining. myCHEF.id offers transparent all-inclusive pricing covering ingredients, preparation, service, and cleanup.' },

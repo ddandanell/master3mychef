@@ -1,7 +1,7 @@
-import { Award, BadgeCheck, Camera, Clock3, FileText, Mail, MessageCircle, Newspaper, Sparkles } from 'lucide-react'
+import { BadgeCheck, Camera, Clock3, FileText, Mail, MessageCircle, Newspaper, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import { Button } from '@/components/ui/button'
 
@@ -10,66 +10,31 @@ const WA_NUMBER = 6289674072020
 const PRESS_KIT_MESSAGE = "Hi, I'm a journalist/blogger and would like to request the myCHEF.id press kit."
 const PRESS_KIT_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(PRESS_KIT_MESSAGE)}`
 
-const PRESS_MENTIONS = [
-  {
-    publication: 'Bali Travel Guide',
-    quote:
-      'myCHEF.id has become the go-to recommendation for villa guests who want restaurant-level dining without leaving the property. The service feels polished, private, and unmistakably premium.',
-    year: '2024',
-  },
-  {
-    publication: 'The Jakarta Post',
-    quote:
-      'Led by Michelin-trained founder Adriano, myCHEF.id has built a rare combination of culinary discipline and Bali hospitality scale — from intimate villa dinners to major celebrations.',
-    year: '2024',
-  },
-  {
-    publication: 'Luxury Escapes Asia',
-    quote:
-      'For travelers booking Bali villas, myCHEF.id stands out for reliability, beautiful presentation, and a team large enough to execute flawlessly for groups, families, and events.',
-    year: '2023',
-  },
-  {
-    publication: 'Villas of Bali',
-    quote:
-      'Trusted by high-end hosts and villa managers, myCHEF.id consistently delivers the kind of private dining guests remember long after checkout.',
-    year: '2023',
-  },
-]
-
 const MEDIA_STATS = [
   '560+ Villas Served',
   '12,000+ Guests',
   '500+ Events',
-  'Michelin-Trained Chef',
+  'Bali-Wide Service',
 ]
 
 const PRESS_KIT_ITEMS = [
   'High-resolution logo (PNG + SVG)',
-  "Founder bio — Adriano's story",
-  'Company fact sheet (founding year 2019, Bali HQ, 50+ staff)',
+  'Founder background and Bali growth journey',
+  'Company fact sheet (Bali HQ, 50+ staff)',
   'High-res food photography',
-]
-
-const TRUSTED_VILLAS = [
-  'Seminyak Signature Villas',
-  'Bukit Clifftop Collection',
-  'Ubud Sanctuary Estates',
-  'Canggu House Collection',
-  'Nusa Dua Grand Villas',
 ]
 
 export default function PressPage() {
   return (
     <div className="min-h-screen bg-[#F5F3EE] text-[#1A1916]">
       <SeoHead
-        title="myCHEF Bali Press & Media | Private Chef Coverage"
-        description="myCHEF Bali press kit, brand facts & media contact. Access coverage, imagery & PR details for stories on private chef dining & villa catering in Bali."
+        title="myCHEF Bali Press & Media Kit | Private Chef & Villa Catering"
+        description="myCHEF Bali press kit, brand facts and media contact. Request imagery, founder background and PR details for stories on private chef dining and villa catering in Bali."
         canonical={`${SITE}/press`}
         ogImage={`${SITE}/generated/partner-platform-hero.webp`}
-        jsonLd={[aggregateRatingSchema(4.9, 560), breadcrumbSchema('Press & Media', `${SITE}/press`), faqPageSchema([
+        jsonLd={[breadcrumbSchema('Press & Media', `${SITE}/press`), faqPageSchema([
           { question: 'How do I request a press kit for myCHEF.id?', answer: 'Press kits, high-resolution imagery, and interview requests can be arranged via WhatsApp at +62 896-7407-2020 or email bali@mychef.id. We respond within 24 hours.' },
-          { question: 'Has myCHEF.id been featured in the press?', answer: 'myCHEF.id has been covered by travel and lifestyle media for its Michelin-trained private chef service in Bali, serving 12,000+ guests across 560+ villas and delivering 500+ events.' },
+          { question: 'How can media cover myCHEF.id?', answer: 'We are happy to provide press materials, coordinate interviews, and arrange villa dining previews or chef demonstrations in Bali. Contact our communications team via WhatsApp or email to discuss coverage arrangements.' },
           { question: 'Can myCHEF.id arrange chef demonstrations for media?', answer: 'Yes — we can arrange live cooking demonstrations, villa dining press previews, and media experiences. Contact our team via WhatsApp to discuss coverage arrangements.' },
         ])]}
       />
@@ -95,9 +60,9 @@ export default function PressPage() {
         <div className="relative mx-auto grid max-w-[1240px] gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.4em] text-[#8A857D]">Press &amp; Media</p>
-            <h1 className="mt-6 font-playfair text-5xl leading-tight md:text-7xl">myCHEF.id in the Press</h1>
+            <h1 className="mt-6 font-playfair text-5xl leading-tight md:text-7xl">myCHEF.id Media Kit</h1>
             <p className="mt-6 max-w-[760px] text-lg leading-8 text-[#4A4745] md:text-xl">
-              Bali&apos;s most-trusted private chef service — featured in travel media, lifestyle publications, and hospitality guides.
+              Bali&apos;s private chef and villa catering team — serving 560+ villas across the island. Press kits, brand assets, and media enquiries available on request.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Button asChild variant="primary" size="brand" className="w-full sm:w-auto">
@@ -123,7 +88,7 @@ export default function PressPage() {
             <h2 className="mt-4 font-playfair text-3xl text-[#1A1916]">What journalists need fast</h2>
             <div className="mt-8 space-y-4">
               {[
-                'Michelin-trained founder story and Bali growth journey',
+                'Founder background and Bali growth journey',
                 'Verified company stats: 50+ staff, 560+ villas, 12,000+ guests',
                 'Fast WhatsApp coordination for quotes, logos, and photos',
               ].map((item) => (
@@ -157,38 +122,6 @@ export default function PressPage() {
               {stat}
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="px-6 py-16 md:px-12 md:py-24">
-        <div className="mx-auto max-w-[1240px]">
-          <div className="max-w-[780px]">
-            <p className="text-xs uppercase tracking-[0.4em] text-[#8A857D]">Media Coverage</p>
-            <h2 className="mt-4 font-playfair text-4xl text-[#1A1916] md:text-5xl">Recent mention highlights</h2>
-            <p className="mt-4 text-lg leading-8 text-[#4A4745]">
-              A press-ready overview of the editorial positioning myCHEF.id belongs in, with story angles for food, travel, villa, and hospitality coverage.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {PRESS_MENTIONS.map((item) => (
-              <article
-                key={`${item.publication}-${item.year}`}
-                className="flex h-full flex-col rounded-[28px] border border-[#C5A028]/50 bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.05)] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.35em] text-[#8A857D]">Publication</p>
-                    <h3 className="mt-2 text-xl font-semibold text-[#1A1916]">{item.publication}</h3>
-                  </div>
-                  <span className="rounded-full border border-[#C5A028]/40 bg-[#F8F2DE] px-3 py-1 text-xs font-semibold text-[#8D7422]">
-                    {item.year}
-                  </span>
-                </div>
-                <p className="mt-6 text-base leading-7 text-[#4A4745]">“{item.quote}”</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -226,8 +159,8 @@ export default function PressPage() {
       </section>
 
       <section className="px-6 py-16 md:px-12 md:py-24">
-        <div className="mx-auto grid max-w-[1240px] gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-[32px] border border-[#E7E1D4] bg-white p-8 shadow-[0_18px_50px_rgba(0,0,0,0.05)] md:p-10">
+        <div className="mx-auto max-w-[1240px]">
+          <div className="rounded-[32px] border border-[#E7E1D4] bg-white p-8 shadow-[0_18px_50px_rgba(0,0,0,0.05)] md:p-10 max-w-[640px]">
             <div className="flex items-center gap-3 text-[#C5A028]">
               <Mail className="h-5 w-5" />
               <span className="text-xs uppercase tracking-[0.35em] text-[#8A857D]">PR Contact</span>
@@ -251,27 +184,6 @@ export default function PressPage() {
                 <dd className="mt-2 text-lg font-semibold text-[#1A1916]">Within 24 hours</dd>
               </div>
             </dl>
-          </div>
-
-          <div className="rounded-[32px] border border-[#C5A028]/30 bg-[#FCFBF8] p-8 md:p-10">
-            <div className="flex items-center gap-3 text-[#C5A028]">
-              <Award className="h-5 w-5" />
-              <span className="text-xs uppercase tracking-[0.35em] text-[#8A857D]">Social proof / Awards</span>
-            </div>
-            <h2 className="mt-4 font-playfair text-4xl text-[#1A1916]">Trusted by Bali&apos;s Best Villas</h2>
-            <p className="mt-4 max-w-[640px] text-lg leading-8 text-[#4A4745]">
-              Selected outlets and partner groups are listed as text for now, and will be swapped to approved brand marks when licensing is finalized.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-              {TRUSTED_VILLAS.map((villa) => (
-                <div
-                  key={villa}
-                  className="flex min-h-[88px] items-center justify-center rounded-[24px] border border-[#E7E1D4] bg-white px-5 py-4 text-center text-sm font-semibold uppercase tracking-[0.24em] text-[#6B675F]"
-                >
-                  {villa}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

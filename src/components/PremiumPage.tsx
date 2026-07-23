@@ -264,7 +264,7 @@ export default function PremiumPage({
       <section className="bg-[#0A0A0A] py-6">
         <div className="max-w-[1200px] mx-auto px-6 flex flex-wrap justify-center gap-6 md:gap-10">
           {[
-            { icon: Star, text: '4.9 Rating (500+ Reviews)' },
+            { icon: Star, text: 'Guest-Loved Service' },
             { icon: Users, text: '12,000+ Guests Served' },
             { icon: Shield, text: 'Background-Checked Team' },
             { icon: Clock, text: 'Same-Day Response' },

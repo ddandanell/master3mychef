@@ -433,7 +433,12 @@ export function organizationSchema(
     '@id': 'https://mychef.id/#organization',
     name: 'myCHEF.id',
     url: 'https://mychef.id',
-    logo: logoUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: logoUrl,
+      width: 512,
+      height: 512,
+    },
     sameAs,
   }
 }
@@ -490,7 +495,7 @@ export function blogPostingSchema(params: {
       '@type': 'Organization',
       name: 'myCHEF',
       url: 'https://mychef.id',
-      logo: { '@type': 'ImageObject', url: 'https://mychef.id/mychef-logo.svg' },
+      logo: { '@type': 'ImageObject', url: 'https://mychef.id/mychef-logo-512.png', width: 512, height: 512 },
     },
     ...(params.image ? { image: params.image } : {}),
     ...(params.wordCount ? { wordCount: params.wordCount } : {}),

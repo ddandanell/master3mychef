@@ -85,7 +85,7 @@ const DIFFERENTIATORS = [
   { icon: Shield, title: 'We Handle Everything', desc: 'Groceries, cooking, service, cleanup. You lift nothing. Not even a planning call.' },
   { icon: MapPin, title: 'We Know Bali', desc: '8 years serving villas across Seminyak, Canggu, Ubud, Uluwatu, Sanur. We know the kitchens and the markets.' },
   { icon: Clock, title: 'Same-Day Response', desc: 'Inquiries confirmed within one hour. Proposals delivered within 24 hours. No delays.' },
-  { icon: Star, title: '12,000+ Happy Guests', desc: 'Families, couples, CEOs, wedding parties. 4.9★ across 560+ villa experiences.' },
+  { icon: Star, title: '12,000+ Happy Guests', desc: 'Families, couples, CEOs, wedding parties. Loved across 560+ villa experiences.' }
 ]
 
 const FAQS = [
@@ -142,7 +142,7 @@ const REVIEWS = [
   { name: 'Yuki & Kenji', location: 'Osaka', dept: 'Events', text: 'Traditional Japanese wedding ceremony followed by a Western-style reception. The team respected every ritual while delivering world-class cuisine.' },
 ]
 
-const HERO_STATS = ['560+ Villas Served', '12,000+ Happy Guests', '4.9 ★ Rating', '8+ Years in Bali']
+const HERO_STATS = ['560+ Villas Served', '12,000+ Happy Guests', 'Guest-Loved Service', '8+ Years in Bali']
 
 const FEATURED_TESTIMONIALS = [
   {
@@ -262,26 +262,12 @@ export default function HubPage() {
     url: 'https://mychef.id/',
     inLanguage: 'en',
     publisher: { '@id': 'https://mychef.id/#organization' },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: 'https://mychef.id/?s={search_term_string}' },
-      'query-input': 'required name=search_term_string',
-    },
-  }
-
-  const homeBreadcrumb = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
-    ],
   }
 
   const homeSchemas: Record<string, unknown>[] = [
     homeLocalBusinessSchema,
     websiteSchema,
-    homeBreadcrumb,
-    organizationSchema('https://mychef.id/og-image.webp', [
+    organizationSchema('https://mychef.id/mychef-logo-512.png', [
       'https://www.instagram.com/mychef.id',
       'https://www.facebook.com/mychef.id',
     ]),
@@ -816,7 +802,7 @@ export default function HubPage() {
               className="text-sm uppercase tracking-[0.1em]"
               style={{ color: '#9d8d78' }}
             >
-              ✓ 560+ villas served  ✓ 12,000+ happy guests  ✓ 4.9 average rating
+              ✓ 560+ villas served  ✓ 12,000+ happy guests  ✓ Guest-loved service
             </p>
           </div>
 

@@ -219,8 +219,8 @@ function StatsGrid() {
     },
     {
       icon: Star,
-      number: '4.9',
-      label: 'Google Rating',
+      number: '98%',
+      label: 'Guest Satisfaction',
     },
     {
       icon: MapPin,

@@ -429,7 +429,7 @@ export default function HoneymoonChefPage() {
               What Honeymooners Say
             </p>
             <h2 className="text-3xl md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-              560+ events · 4.9 ★ average rating
+              560+ events · Guest-loved service
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">

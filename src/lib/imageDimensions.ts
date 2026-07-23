@@ -308,6 +308,28 @@ export const IMAGE_DIMENSIONS = {
   "/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-1.webp": { width: 1200, height: 800 },
   "/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-2.webp": { width: 1200, height: 800 },
   "/generated/mychef-bar-services-bali-temporary-bartender-staffing-gallery-3.webp": { width: 1200, height: 800 },
+
+  /* Catering package card images — explicit dimensions prevent CLS on /catering */
+  "/generated/mychef-catering-style-babi-guling.webp": { width: 1440, height: 1072 },
+  "/generated/mychef-catering-style-bbq.webp": { width: 1440, height: 1072 },
+  "/generated/mychef-catering-style-buffet.webp": { width: 1440, height: 1072 },
+  "/generated/mychef-catering-style-corporate.webp": { width: 1440, height: 1072 },
+  "/generated/mychef-catering-style-dropoff.webp": { width: 1440, height: 1072 },
+  "/generated/mychef-catering-style-floating.webp": { width: 1440, height: 1072 },
+  "/generated/mychef-catering-style-grazing.webp": { width: 1440, height: 1072 },
+  "/generated/mychef-catering-style-plated.webp": { width: 1440, height: 1072 },
+  "/generated/mychef-catering-style-retreat.webp": { width: 1440, height: 1072 },
+  "/generated/mychef-catering-style-villa.webp": { width: 1440, height: 1072 },
+  "/generated/pkg-bbq.webp": { width: 1280, height: 800 },
+  "/generated/pkg-grazing.webp": { width: 1280, height: 800 },
+  "/generated/pkg-italian.webp": { width: 1440, height: 800 },
+  "/generated/pkg-seafood.webp": { width: 1440, height: 800 },
+
+  /* Plated & floating breakfast package cards */
+  "/generated/mychef-catering-bali-floating-breakfast.webp": { width: 1440, height: 800 },
+  "/generated/mychef-catering-bali-plated-3course-table.webp": { width: 1440, height: 810 },
+  "/generated/mychef-catering-bali-plated-4course-table.webp": { width: 1440, height: 810 },
+  "/generated/mychef-catering-bali-plated-5course-premium-table.webp": { width: 1440, height: 810 },
 } as const
 
 export type KnownImagePath = keyof typeof IMAGE_DIMENSIONS

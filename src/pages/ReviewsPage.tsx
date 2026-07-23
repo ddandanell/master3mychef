@@ -158,7 +158,7 @@ const REVIEWS_SCHEMAS = [
 ]
 
 const SOCIAL_PROOF = [
-  { name: 'Guest Feedback', detail: 'Verified villa & event reviews' }
+  { name: 'Guest Feedback', detail: 'Verified villa & event reviews' },
   { name: 'TripAdvisor', detail: 'Villa dining and event feedback' },
   { name: 'Airbnb Experiences', detail: 'Guest-loved private chef moments' },
 ]

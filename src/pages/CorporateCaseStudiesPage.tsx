@@ -113,7 +113,7 @@ const CASE_STUDIES: CaseStudy[] = [
 
 const STATS = [
   { label: 'Corporate events delivered', value: '180+' },
-  { label: 'Client satisfaction', value: '98%' }
+  { label: 'Client satisfaction', value: '98%' },
   { label: 'NPWP-compliant invoicing', value: '100%' },
   { label: 'Repeat & referred clients', value: '85%' },
 ]

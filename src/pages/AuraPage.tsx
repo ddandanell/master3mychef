@@ -317,7 +317,7 @@ export default function AuraPage() {
           <div className="flex flex-wrap gap-x-6 gap-y-3 justify-center">
             {[
               { label: '200+ events produced' },
-              { label: 'Guest-loved service' }
+              { label: 'Guest-loved service' },
               { label: '15-person events team' },
               { label: '200+ villas across Bali' },
             ].map((badge) => (

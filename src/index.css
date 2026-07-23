@@ -344,3 +344,15 @@
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   }
 }
+
+/* Respect user motion preferences: disable non-essential animations/transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

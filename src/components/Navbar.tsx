@@ -287,6 +287,7 @@ export default function Navbar() {
                     onClick={() => setOpenDropdown(null)}
                     aria-haspopup={hasDropdown || undefined}
                     aria-expanded={hasDropdown ? isOpen : undefined}
+                    aria-current={active ? 'page' : undefined}
                     className={`relative flex items-center gap-1 xl:gap-1.5 py-1 whitespace-nowrap transition-colors duration-200 ${
                       active || isOpen ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
                     }`}
@@ -437,12 +438,12 @@ export default function Navbar() {
             aria-label="myCHEF home"
             className="mb-1 inline-block focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
           >
-            <h2
+            <span
               className="text-[24px] text-gray-900"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               myCHEF
-            </h2>
+            </span>
           </Link>
           <p className="text-[11px] uppercase tracking-[0.34em] text-[#C5A028] mb-6">Private Dining in Bali</p>
           <div className="h-px bg-gradient-to-r from-[#C5A028]/55 via-[#C5A028]/18 to-transparent mb-6" />
@@ -501,6 +502,7 @@ export default function Navbar() {
                                       setMenuOpen(false)
                                       setExpandedItems(new Set())
                                     }}
+                                    aria-current={subpageActive ? 'page' : undefined}
                                     className={`flex items-center gap-2 rounded-xl px-3 py-2 text-sm transition-colors ${
                                       subpageActive
                                         ? 'bg-[#C5A028]/10 text-[#C5A028]'
@@ -531,6 +533,7 @@ export default function Navbar() {
                         setMenuOpen(false)
                         setExpandedItems(new Set())
                       }}
+                      aria-current={active ? 'page' : undefined}
                       className={`flex items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors ${
                         active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-gray-100'
                       }`}

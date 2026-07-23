@@ -68,6 +68,18 @@ const vercelConfig = {
         { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
       ],
     },
+    {
+      source: '/quote',
+      headers: [
+        { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+      ],
+    },
+    {
+      source: '/calculator',
+      headers: [
+        { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+      ],
+    },
   ],
 }
 writeFileSync(join(__dirname, '..', 'vercel.json'), JSON.stringify(vercelConfig, null, 2) + '\n')

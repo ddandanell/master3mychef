@@ -44,7 +44,7 @@ export default function Breadcrumb({ items, className = '', theme = 'light', dec
                 {item.label}
               </Link>
             ) : (
-              <span className={currentClass}>{item.label}</span>
+              <span className={currentClass} aria-current="page">{item.label}</span>
             )}
           </li>
         ))}

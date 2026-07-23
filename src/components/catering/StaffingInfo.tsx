@@ -3,7 +3,7 @@ import { Users, ChefHat, UserPlus } from 'lucide-react'
 function calcStaff(guests: number) {
   if (guests >= 450) return { chefs: 'Custom brigade', assistants: 'Custom team' }
   const chefs = Math.ceil(guests / 50)
-  const assistants = Math.ceil(guests / 10)
+  const assistants = Math.ceil(guests / 12)
   return { chefs, assistants }
 }
 
@@ -42,7 +42,7 @@ export default function StaffingInfo() {
             <UserPlus className="w-8 h-8 text-[#C5A028] mb-4" />
             <h3 className="font-medium text-lg mb-2">Assistants</h3>
             <p className="text-sm text-[#4A4745]">
-              <strong>1 assistant per 10 guests.</strong> Assistants help with setup, carving, serving, and cleanup so service runs smoothly.
+              <strong>1 assistant per 12 guests.</strong> Assistants help with setup, carving, serving, and cleanup so service runs smoothly.
             </p>
           </div>
         </div>

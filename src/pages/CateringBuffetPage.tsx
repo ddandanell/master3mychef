@@ -148,7 +148,7 @@ const BUFFET_VS_PLATED = [
   { aspect: 'Service style', buffet: 'Self-serve with staff assistance', plated: 'Individual courses to each guest' },
   { aspect: 'Setup time', buffet: '2–3 hours before service', plated: '3–4 hours before service' },
   { aspect: 'Staff needed', buffet: '1 per 12 guests + chef', plated: '1 per 8 guests + chef + kitchen team' },
-  { aspect: 'Price range', buffet: 'IDR 700K–950K/pp', plated: 'IDR 800K–1.3M/pp' },
+  { aspect: 'Price range', buffet: 'IDR 475K–775K/pp', plated: 'IDR 800K–1.3M/pp' },
   { aspect: 'Dietary flexibility', buffet: 'High — guests choose what they want', plated: 'Medium — pre-selected courses with substitutions' },
 ]
 
@@ -187,9 +187,9 @@ export default function CateringBuffetPage() {
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet.webp`}
         jsonLd={[
           cateringServiceSchema('Buffet Catering Bali', 'Full-service buffet catering for Bali villas, weddings, retreats, and large private events with Indonesian and international menu options. myCHEF.id brings chefs, service staff, buffet equipment, and cleanup across Bali.', `${SITE}/catering/buffet`),
-          offerSchema('Indonesian Buffet', 700000, 'IDR', `${SITE}/catering/buffet`),
-          offerSchema('International Buffet', 750000, 'IDR', `${SITE}/catering/buffet`),
-          offerSchema('Premium Live-Station Buffet', 950000, 'IDR', `${SITE}/catering/buffet`),
+          offerSchema('Indonesian Buffet', 475000, 'IDR', `${SITE}/catering/buffet`),
+          offerSchema('International Buffet', 575000, 'IDR', `${SITE}/catering/buffet`),
+          offerSchema('Premium Live-Station Buffet', 775000, 'IDR', `${SITE}/catering/buffet`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           aggregateRatingSchema(4.9, 186),
           howToSchema({
@@ -238,7 +238,7 @@ export default function CateringBuffetPage() {
             Three buffet tiers — from Indonesian classics to live-station premium with sushi, pasta, and carving. Minimum 30 guests. Sample tasting at 40+.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 700,000/person · Min. 30 guests · Chef & staff included · Bali-wide
+            From IDR 475,000++ per guest · Min. 30 guests · Food, chef, staff & cleanup included · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
@@ -539,9 +539,9 @@ export default function CateringBuffetPage() {
 
           {/* Group Total Calculators */}
           <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <GroupTotalCalculator pricePerPerson={700000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={750000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={950000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={475000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={575000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={775000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
           </div>
           <TaxFooter className="mt-6" />
         </div>

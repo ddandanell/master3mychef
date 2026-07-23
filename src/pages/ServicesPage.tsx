@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, ArrowRight, PartyPopper, Heart, Cake, Users, Briefcase, Gem, ChefHat, CalendarCheck, MapPin } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema, aggregateRatingSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { getLocationCanonical } from '@/data/siteArchitecture'
@@ -91,7 +91,7 @@ export default function ServicesPage() {
         description="Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit."
         canonical={`${SITE}/services`}
         ogImage={`${SITE}/generated/mychef-location-bali-hub-hero.webp`}
-        jsonLd={[itemListSchema, aggregateRatingSchema(4.9, 560), breadcrumbSchema('Services', `${SITE}/services`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={[itemListSchema, breadcrumbSchema('Services', `${SITE}/services`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* ── HERO ── */}

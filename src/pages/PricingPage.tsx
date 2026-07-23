@@ -1,6 +1,6 @@
 import { Tag } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
-import { breadcrumbSchema, aggregateRatingSchema, serviceWithOfferSchema } from '@/components/SeoHead'
+import { breadcrumbSchema, serviceWithOfferSchema } from '@/components/SeoHead'
 import PricingCalculator from '@/components/PricingCalculator'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import PriceDisclaimer from '@/components/PriceDisclaimer'
@@ -500,7 +500,6 @@ export default function PricingPage() {
         breadcrumbSchema('Pricing', 'https://mychef.id/pricing'),
         PRICING_OFFER_SCHEMA,
         PRICE_SPECIFICATION_SCHEMA,
-        aggregateRatingSchema(4.9, 320),
         serviceWithOfferSchema({
           name: 'Private Chef & Catering Bali',
           description: 'Transparent pricing for private chef, villa catering, events, and hospitality staffing in Bali. Two-tier fine dining, BBQ, drop-off, and wedding catering.',

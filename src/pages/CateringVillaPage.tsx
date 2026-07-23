@@ -12,7 +12,6 @@ import SeoHead, {
   cateringServiceSchema,
   offerSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   serviceWithOfferSchema,
   howToSchema,
 } from '@/components/SeoHead'
@@ -167,7 +166,6 @@ export default function CateringVillaPage() {
           offerSchema('Villa Dinner', 650000, 'IDR', `${SITE}/catering/villa-catering`),
           offerSchema('Multi-Day Villa Catering', 550000, 'IDR', `${SITE}/catering/villa-catering`),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 312),
           cateringBreadcrumbSchema('Villa Catering Bali', `${SITE}/catering/villa-catering`),
           serviceWithOfferSchema({
             name: 'Villa Catering Bali',

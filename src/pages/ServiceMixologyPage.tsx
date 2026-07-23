@@ -5,9 +5,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema,
-  detailedServiceSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -152,13 +151,15 @@ export default function ServiceMixologyPage() {
         canonical={`${SITE}/in-villa-service/mixology`}
         ogImage={`${SITE}/generated/mychef-service-bali-hero-mixology.webp`}
         jsonLd={[
-          detailedServiceSchema(
-            'Mixology Experience Bali',
-            'myCHEF.id creates private mixology experiences in Bali with signature cocktail menus, demonstrations, and premium bar service. We design the drinks, setup, and guest interaction for villa events and celebrations.',
-            `${SITE}/in-villa-service/mixology`,
-          ),
+          serviceWithAggregateOfferSchema({
+            name: 'Mixology Experience Bali',
+            description: 'myCHEF.id creates private mixology experiences in Bali with signature cocktail menus, demonstrations, and premium bar service. We design the drinks, setup, and guest interaction for villa events and celebrations.',
+            url: `${SITE}/in-villa-service/mixology`,
+            lowPrice: '1500000',
+            highPrice: '4000000',
+            unitText: 'per session',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 45),
           howToSchema({
             name: 'How to Book a Mixologist in Bali',
             description: 'Book a private mixologist for your Bali villa event in 4 easy steps.',

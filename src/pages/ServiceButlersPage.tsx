@@ -5,9 +5,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema,
-  detailedServiceSchema,
+  serviceWithOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -102,13 +101,14 @@ export default function ServiceButlersPage() {
         canonical={`${SITE}/in-villa-service/butlers`}
         ogImage={`${SITE}/generated/mychef-service-bali-hero-butlers.webp`}
         jsonLd={[
-          detailedServiceSchema(
-            'Butler Service Bali',
-            'myCHEF.id provides private butler service in Bali for villa stays, events, and private guest hosting. Our team manages service flow, guest requests, and discreet household coordination throughout the booking.',
-            `${SITE}/in-villa-service/butlers`,
-          ),
+          serviceWithOfferSchema({
+            name: 'Butler Service Bali',
+            description: 'myCHEF.id provides private butler service in Bali for villa stays, events, and private guest hosting. Our team manages service flow, guest requests, and discreet household coordination throughout the booking.',
+            url: `${SITE}/in-villa-service/butlers`,
+            price: '1200000',
+            unitText: 'per day',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 67),
           breadcrumbSchema('Butler Service Bali', `${SITE}/in-villa-service/butlers`, 'In-Villa Service', `${SITE}/in-villa-service`),
           howToSchema({
             name: 'How to Hire a Villa Butler in Bali',

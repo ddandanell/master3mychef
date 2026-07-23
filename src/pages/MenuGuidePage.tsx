@@ -1,6 +1,6 @@
 import { CheckCircle, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 
 const SITE = 'https://mychef.id'
@@ -90,7 +90,6 @@ export default function MenuGuidePage() {
         ogImage="/og-image.webp"
         jsonLd={[
           breadcrumbSchema('Menu Guide', canonical, 'Help', `${SITE}/help`),
-          aggregateRatingSchema(4.9, 142),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />

@@ -5,7 +5,7 @@ import {
   Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music,
   Globe2, ClipboardCheck, ArrowRight, Check,
 } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, offerSchema, aggregateRatingSchema, howToSchema, serviceEventSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -415,49 +415,15 @@ export default function EventsMainPage() {
         ogImage={getPageMeta('events').ogImage}
         jsonLd={[
           breadcrumbSchema('Events', `${SITE}/events`),
-          serviceSchema('Bali Event Catering & Coordination', 'Villa weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties in Bali. One team, one bill.', `${SITE}/events`, 'IDR'),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'Private Events & Celebrations in Bali',
-            description: 'Full-service event hospitality for weddings, birthdays, corporate offsites, retreats, and villa parties in Bali. Chef, staff, setup, and cleanup — one team, one bill.',
-            provider: {
-              '@type': 'LocalBusiness',
-              name: 'myCHEF.id',
-              url: 'https://mychef.id',
-            },
-            areaServed: {
-              '@type': 'Place',
-              name: 'Bali, Indonesia',
-            },
-            serviceType: 'Event Catering & Coordination',
-            offers: {
-              '@type': 'Offer',
-              priceCurrency: 'IDR',
-              price: '600000',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                minPrice: '600000',
-                maxPrice: '8000000',
-                priceCurrency: 'IDR',
-              },
-            },
-          },
-          offerSchema('Villa Weddings', 600000, 'IDR', `${SITE}/events/weddings`),
-          offerSchema('Birthday Parties', 850000, 'IDR', `${SITE}/events/birthdays`),
-          offerSchema('Anniversary Dinners', 1200000, 'IDR', `${SITE}/events/anniversaries`),
-          offerSchema('Corporate Events', 1200000, 'IDR', `${SITE}/events/corporate-events`),
-          offerSchema('Wellness & Yoga Retreats', 1500000, 'IDR', `${SITE}/events/retreats`),
-          offerSchema('Baby Showers', 750000, 'IDR', `${SITE}/events/baby-showers`),
-          offerSchema('Villa Parties', 650000, 'IDR', `${SITE}/events/villa-parties`),
-          serviceEventSchema({
-            name: 'Private Events and Celebrations in Bali',
-            description: 'Private chef events, weddings, birthdays, corporate dinners, and villa parties across Bali — managed end-to-end.',
+          serviceWithAggregateOfferSchema({
+            name: 'Bali Event Catering & Coordination',
+            description: 'Villa weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties in Bali. One team, one bill.',
             url: `${SITE}/events`,
-            lowPrice: 600000,
+            lowPrice: '600000',
+            highPrice: '1500000',
+            unitText: 'per person',
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Book an Event in Bali with myCHEF',
             description: 'Plan your Bali villa event — wedding, birthday, corporate retreat — in 3 simple steps.',

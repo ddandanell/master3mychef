@@ -4,8 +4,9 @@ import { MessageCircle, Check, Heart, Star, Flower2, Camera, Music2, Wine, Chevr
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
-  breadcrumbSchema, offerSchema,
-  faqPageSchema, aggregateRatingSchema, detailedServiceSchema,
+  breadcrumbSchema,
+  faqPageSchema,
+  serviceWithAggregateOfferSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -101,14 +102,13 @@ export default function RomanticDinnerPage() {
         canonical={`${SITE}/fine-dining/romantic-dinner`}
         ogImage={`${SITE}/generated/section-romantic-dinner.webp`}
         jsonLd={[
-          detailedServiceSchema(
-            'Romantic Private Dinner Bali',
-            'A private candlelit villa dinner in Bali for two — Michelin-trained chef, five-course tasting menu, table setting, flowers on request, and full cleanup. myCHEF.id serves romantic dinners across Seminyak, Canggu, Ubud, Uluwatu, and all Bali villa areas.',
-            `${SITE}/fine-dining/romantic-dinner`
-          ),
-          offerSchema('Mediterranean Sea Romantic Dinner', 2200000, 'IDR', `${SITE}/fine-dining/romantic-dinner`),
-          offerSchema('Wagyu Romantic Dinner', 2400000, 'IDR', `${SITE}/fine-dining/romantic-dinner`),
-          aggregateRatingSchema(4.9, 560),
+          serviceWithAggregateOfferSchema({
+            name: 'Romantic Private Dinner Bali',
+            description: 'A private candlelit villa dinner in Bali for two — Michelin-trained chef, five-course tasting menu, table setting, flowers on request, and full cleanup. myCHEF.id serves romantic dinners across Seminyak, Canggu, Ubud, Uluwatu, and all Bali villa areas.',
+            url: `${SITE}/fine-dining/romantic-dinner`,
+            lowPrice: '2200000',
+            highPrice: '2400000',
+          }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema('Romantic Dinner Bali', `${SITE}/fine-dining/romantic-dinner`, 'Fine Dining', `${SITE}/fine-dining`),
           howToSchema({

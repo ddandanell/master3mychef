@@ -4,7 +4,6 @@ import SeoHead, {
   breadcrumbSchema,
   detailedServiceSchema,
   faqPageSchema,
-  aggregateRatingSchema,
 } from '@/components/SeoHead'
 
 const SITE = 'https://mychef.id'
@@ -157,7 +156,6 @@ const SCHEMAS = [
     `${SITE}/corporate-case-studies`,
   ),
   breadcrumbSchema('Corporate Case Studies', `${SITE}/corporate-case-studies`, 'Events', `${SITE}/events`),
-  aggregateRatingSchema(4.9, 180),
   faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
 ]
 

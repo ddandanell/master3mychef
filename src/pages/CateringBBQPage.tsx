@@ -9,9 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  cateringServiceSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -148,9 +147,14 @@ export default function CateringBBQPage() {
         canonical={`${SITE}/catering/bbq-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-bbq.webp`}
         jsonLd={[
-          cateringServiceSchema('BBQ Catering Bali', 'Live-fire BBQ catering for Bali villas, birthdays, weddings, and relaxed private events with chefs grilling on site. myCHEF.id handles ingredients, setup, service, and cleanup across Bali.', `${SITE}/catering/bbq-catering`),
+          serviceWithAggregateOfferSchema({
+            name: 'BBQ Catering Bali',
+            description: 'Live-fire BBQ catering for Bali villas, birthdays, weddings, and relaxed private events with chefs grilling on site. myCHEF.id handles ingredients, setup, service, and cleanup across Bali.',
+            url: `${SITE}/catering/bbq-catering`,
+            lowPrice: '550000',
+            highPrice: '850000',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Book BBQ Catering in Bali',
             description: 'Book live-fire BBQ catering for your Bali villa in 4 easy steps.',

@@ -5,9 +5,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema,
-  serviceSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -102,14 +101,15 @@ export default function StaffingVillaManagersPage() {
         canonical={`${SITE}/staffing/for-villa-managers`}
         ogImage={`${SITE}/generated/corp-villa.webp`}
         jsonLd={[
-          serviceSchema(
-            'Staffing for Villa Managers Bali',
-            'Hospitality staffing partnerships for villa managers in Bali. Pre-vetted chefs and front-of-house staff with partnership rates.',
-            `${SITE}/staffing/for-villa-managers`,
-            'IDR',
-          ),
+          serviceWithAggregateOfferSchema({
+            name: 'Staffing for Villa Managers Bali',
+            description: 'Hospitality staffing partnerships for villa managers in Bali. Pre-vetted chefs and front-of-house staff with partnership rates.',
+            url: `${SITE}/staffing/for-villa-managers`,
+            lowPrice: '8000000',
+            highPrice: '15000000',
+            unitText: 'per month',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 142),
           howToSchema({
             name: 'How to Staff Your Villa in Bali',
             description: 'Get professional staffing support for your Bali villa management in 4 easy steps.',

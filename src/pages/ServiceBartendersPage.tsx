@@ -5,9 +5,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema,
-  detailedServiceSchema,
+  serviceWithOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -87,13 +86,14 @@ export default function ServiceBartendersPage() {
         canonical={`${SITE}/in-villa-service/bartenders`}
         ogImage={`${SITE}/generated/mychef-service-bali-hero-bartenders.webp`}
         jsonLd={[
-          detailedServiceSchema(
-            'Bartender Hire Bali',
-            'myCHEF.id provides professional bartender hire in Bali for villa dinners, weddings, and private parties. We handle cocktail service, bar setup, glassware, and smooth event execution from first pour to last call.',
-            `${SITE}/in-villa-service/bartenders`,
-          ),
+          serviceWithOfferSchema({
+            name: 'Bartender Hire Bali',
+            description: 'myCHEF.id provides professional bartender hire in Bali for villa dinners, weddings, and private parties. We handle cocktail service, bar setup, glassware, and smooth event execution from first pour to last call.',
+            url: `${SITE}/in-villa-service/bartenders`,
+            price: '350000',
+            unitText: 'per hour',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 112),
           breadcrumbSchema('Bartender Hire Bali', `${SITE}/in-villa-service/bartenders`, 'In-Villa Service', `${SITE}/in-villa-service`),
           howToSchema({
             name: 'How to Hire a Bartender in Bali',

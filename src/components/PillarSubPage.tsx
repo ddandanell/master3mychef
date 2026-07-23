@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, aggregateRatingSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema } from './SeoHead'
 import FAQAccordion from './catering/FAQAccordion'
 import { getSubPage, getPillarBySlug, type Pillar, type SubPage } from '@/data/siteArchitecture'
 
@@ -100,7 +100,6 @@ export default function PillarSubPage() {
         jsonLd={[
           breadcrumbSchema(subPage.label, canonical, pillar.navLabel, `${SITE}${pillar.url}`),
           serviceSchema(subPage.label, subPage.description, canonical),
-          aggregateRatingSchema(4.9, 127),
           faqPageSchema(faqs.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />

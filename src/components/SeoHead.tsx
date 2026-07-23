@@ -180,10 +180,10 @@ export function barServiceSchema(
       priceCurrency: 'IDR',
       price: String(price),
       priceSpecification: {
-        '@type': 'PriceSpecification',
+        '@type': 'UnitPriceSpecification',
         priceCurrency: 'IDR',
-        minPrice: String(price),
-        description: priceLabel,
+        price: String(price),
+        unitText: priceLabel,
       },
       availability: 'https://schema.org/InStock',
       url,
@@ -264,7 +264,41 @@ export function serviceWithOfferSchema(params: {
         unitText,
       },
       availability: 'https://schema.org/InStock',
-      url: 'https://mychef.id/pricing',
+      url,
+    },
+    url,
+  }
+}
+
+export function serviceWithAggregateOfferSchema(params: {
+  name: string
+  description: string
+  url: string
+  lowPrice: string
+  highPrice: string
+  priceCurrency?: string
+  unitText?: string
+}): Record<string, unknown> {
+  const { name, description, url, lowPrice, highPrice, priceCurrency = 'IDR', unitText = 'per person' } = params
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    provider: {
+      '@type': 'Organization',
+      name: 'myCHEF.id',
+      url: 'https://mychef.id',
+    },
+    areaServed: 'Bali, Indonesia',
+    offers: {
+      '@type': 'AggregateOffer',
+      lowPrice,
+      highPrice,
+      priceCurrency,
+      availability: 'https://schema.org/InStock',
+      url,
+      unitText,
     },
     url,
   }

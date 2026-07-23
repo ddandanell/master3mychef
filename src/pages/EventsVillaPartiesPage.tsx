@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, serviceEventSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -156,18 +156,15 @@ export default function EventsVillaPartiesPage() {
         canonical={`${SITE}/events/villa-parties`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-villa-parties.webp`}
         jsonLd={[
-          detailedServiceSchema('Villa Party Catering Bali', 'myCHEF.id caters villa parties in Bali with BBQ menus, canapés, cocktails, bartenders, and service staff. We handle setup, live service, and cleanup so hosts can focus on the guest experience.', `${SITE}/events/villa-parties`),
-          offerSchema('Cocktail Reception', 650000, 'IDR', `${SITE}/events/villa-parties`),
-          offerSchema('Sundowner Party', 850000, 'IDR', `${SITE}/events/villa-parties`),
-          offerSchema('Casual Mixer', 950000, 'IDR', `${SITE}/events/villa-parties`),
-          serviceEventSchema({
-            name: 'Villa Party Catering in Bali',
-            description: 'Private chef villa parties in Bali — BBQ, poolside, buffet, plated dinner, cocktail service, and full staff.',
+          serviceWithAggregateOfferSchema({
+            name: 'Villa Party Catering Bali',
+            description: 'myCHEF.id caters villa parties in Bali with BBQ menus, canapés, cocktails, bartenders, and service staff. We handle setup, live service, and cleanup so hosts can focus on the guest experience.',
             url: `${SITE}/events/villa-parties`,
-            lowPrice: 650000,
+            lowPrice: '650000',
+            highPrice: '950000',
+            unitText: 'per person',
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Plan a Villa Party in Bali',
             description: 'Plan an unforgettable villa party in Bali with private chef and full service in 4 easy steps.',

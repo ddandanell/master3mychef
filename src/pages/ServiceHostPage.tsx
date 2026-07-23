@@ -5,9 +5,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema,
-  detailedServiceSchema,
+  serviceWithOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -87,13 +86,14 @@ export default function ServiceHostPage() {
         canonical={`${SITE}/in-villa-service/host-hostess`}
         ogImage={`${SITE}/generated/misc-trust-hosts-lg.webp`}
         jsonLd={[
-          detailedServiceSchema(
-            'Host & Hostess Hire Bali',
-            'myCHEF.id provides hosts and hostesses in Bali for villa events, weddings, and brand activations. We manage guest welcome, direction, and front-of-house flow with polished professional service.',
-            `${SITE}/in-villa-service/host-hostess`,
-          ),
+          serviceWithOfferSchema({
+            name: 'Host & Hostess Hire Bali',
+            description: 'myCHEF.id provides hosts and hostesses in Bali for villa events, weddings, and brand activations. We manage guest welcome, direction, and front-of-house flow with polished professional service.',
+            url: `${SITE}/in-villa-service/host-hostess`,
+            price: '300000',
+            unitText: 'per hour',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 78),
           howToSchema({
             name: 'How to Hire a Host or Hostess in Bali',
             description: 'Book professional hosts and hostesses for your Bali villa event in 4 easy steps.',

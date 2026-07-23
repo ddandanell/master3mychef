@@ -8,7 +8,7 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, serviceEventSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -137,17 +137,15 @@ export default function EventsBirthdaysPage() {
         canonical={`${SITE}/events/birthdays`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-birthdays.webp`}
         jsonLd={[
-          detailedServiceSchema('Birthday Party Catering Bali', 'myCHEF.id caters birthday parties in Bali with private chef menus, buffet or plated service, drinks, and event staffing. We manage setup, flow, and cleanup for everything from intimate dinners to full villa parties.', `${SITE}/events/birthdays`),
-          offerSchema('Intimate Birthday Dinner', 1500000, 'IDR', `${SITE}/events/birthdays`),
-          offerSchema('Birthday Villa Party', 850000, 'IDR', `${SITE}/events/birthdays`),
-          serviceEventSchema({
-            name: 'Private Birthday Celebration in Bali',
-            description: 'Private chef and catering for birthday parties at Bali villas — menus, service staff, setup, and cleanup.',
+          serviceWithAggregateOfferSchema({
+            name: 'Birthday Party Catering Bali',
+            description: 'myCHEF.id caters birthday parties in Bali with private chef menus, buffet or plated service, drinks, and event staffing. We manage setup, flow, and cleanup for everything from intimate dinners to full villa parties.',
             url: `${SITE}/events/birthdays`,
-            lowPrice: 850000,
+            lowPrice: '850000',
+            highPrice: '1500000',
+            unitText: 'per person',
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Plan a Birthday Party in Bali',
             description: 'Plan an unforgettable birthday celebration in your Bali villa in 4 easy steps.',

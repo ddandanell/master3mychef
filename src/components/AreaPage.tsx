@@ -43,10 +43,26 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: 'Private Chef',
+    '@id': `${canonical}#service`,
+    name: `Private Chef ${entry.name}`,
+    description: `Private chef services in ${entry.name} — villa dinners, weekly meal prep, events, and weddings.`,
+    serviceType: 'Private Chef & Villa Dining',
     areaServed: { '@type': 'Place', name: `${entry.name}, Bali` },
     provider: { '@id': `${SITE}/#business` },
     url: canonical,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'IDR',
+      price: '1300000',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        priceCurrency: 'IDR',
+        price: '1300000',
+        unitText: 'per session, from',
+      },
+      availability: 'https://schema.org/InStock',
+      url: canonical,
+    },
   }
 
   const jakartaLocalBusinessOverrides = isJakarta ? {

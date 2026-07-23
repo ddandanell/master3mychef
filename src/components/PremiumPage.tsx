@@ -21,7 +21,6 @@ import SeoHead, {
   breadcrumbSchema,
   serviceSchema,
   faqPageSchema,
-  aggregateRatingSchema,
 } from './SeoHead'
 import FAQAccordion from './catering/FAQAccordion'
 import { Button } from '@/components/ui/button'
@@ -122,7 +121,6 @@ export default function PremiumPage({
   const schemas: Record<string, unknown>[] = [
     breadcrumbSchema(title, canonical),
     serviceSchema(title, metaDescription, canonical),
-    aggregateRatingSchema(4.9, 560),
   ]
   if (faqs && faqs.length > 0) {
     schemas.push(faqPageSchema(faqs))

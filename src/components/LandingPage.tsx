@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Calendar, Check, ChevronLeft, ChevronRight, Clock3, MessageCircle, Utensils } from 'lucide-react'
-import SeoHead, { aggregateRatingSchema, breadcrumbSchema, faqPageSchema, serviceSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema } from './SeoHead'
 import { BLOG_POSTS, GUIDES, LANDING_PAGES } from '@/data/sitemap'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import Breadcrumb from './shared/Breadcrumb'
@@ -80,7 +80,6 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   const landingServiceSchema = kind === 'landing' ? serviceSchema(entry.title, entry.description, canonical) : null
   const breadcrumbJsonLd = isArticle ? breadcrumbSchema(entry.title, canonical, hubLabel, `${SITE}${hubPath}`) : breadcrumbSchema(entry.title, canonical)
   const jsonLdArr = [
-    aggregateRatingSchema(4.9, 560),
     breadcrumbJsonLd,
     faqPageSchema([
       { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },

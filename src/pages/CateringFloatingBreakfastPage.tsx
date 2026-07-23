@@ -10,10 +10,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  cateringServiceSchema,
-  offerSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -174,12 +172,14 @@ export default function CateringFloatingBreakfastPage() {
         canonical={`${SITE}/catering/floating-breakfast`}
         ogImage={`${SITE}/breakfast-spread.webp`}
         jsonLd={[
-          cateringServiceSchema('Floating Breakfast Bali', 'Floating breakfast service in Bali for villa pools, honeymoons, birthdays, and private mornings with tropical dishes and styled presentation. myCHEF.id prepares, delivers, and sets the experience across Bali.', `${SITE}/catering/floating-breakfast`),
-          offerSchema('Floating Breakfast for 2', 950000, 'IDR', `${SITE}/catering/floating-breakfast`),
-          offerSchema('Floating Brunch for 2', 1400000, 'IDR', `${SITE}/catering/floating-breakfast`),
-          offerSchema('Floating Group Brunch', 750000, 'IDR', `${SITE}/catering/floating-breakfast`),
+          serviceWithAggregateOfferSchema({
+            name: 'Floating Breakfast Bali',
+            description: 'Floating breakfast service in Bali for villa pools, honeymoons, birthdays, and private mornings with tropical dishes and styled presentation. myCHEF.id prepares, delivers, and sets the experience across Bali.',
+            url: `${SITE}/catering/floating-breakfast`,
+            lowPrice: '750000',
+            highPrice: '1400000',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Book a Floating Breakfast in Bali',
             description: 'Book a floating breakfast or brunch delivered to your Bali villa pool in 4 easy steps.',

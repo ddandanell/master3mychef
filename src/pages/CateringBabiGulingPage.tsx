@@ -9,10 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  cateringServiceSchema,
-  offerSchema,
+  serviceWithOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -127,10 +125,13 @@ export default function CateringBabiGulingPage() {
         canonical={`${SITE}/catering/babi-guling`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-babiguling-new.webp`}
         jsonLd={[
-          cateringServiceSchema('Babi Guling Catering Bali', 'Traditional babi guling catering for Bali villas, birthdays, weddings, and cultural celebrations with full Balinese sides. myCHEF.id roasts, carves, and serves the feast on site across Bali.', `${SITE}/catering/babi-guling`),
-          offerSchema('Babi Guling Catering', 475000, 'IDR', `${SITE}/catering/babi-guling`),
+          serviceWithOfferSchema({
+            name: 'Babi Guling Catering Bali',
+            description: 'Traditional babi guling catering for Bali villas, birthdays, weddings, and cultural celebrations with full Balinese sides. myCHEF.id roasts, carves, and serves the feast on site across Bali.',
+            url: `${SITE}/catering/babi-guling`,
+            price: '475000',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Book Babi Guling Catering in Bali',
             description: 'Order authentic Balinese Babi Guling catering for your villa event in 4 easy steps.',

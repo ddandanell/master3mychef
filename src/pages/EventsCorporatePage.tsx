@@ -8,7 +8,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, offerSchema, faqPageSchema, aggregateRatingSchema, serviceEventSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -159,17 +159,15 @@ export default function EventsCorporatePage() {
         canonical={`${SITE}/events/corporate-events`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-corporate.webp`}
         jsonLd={[
-          detailedServiceSchema('Corporate Events Bali', 'myCHEF.id delivers corporate event catering in Bali for conferences, offsites, launches, and executive dinners. We coordinate food, staffing, setup, and service so your event runs smoothly from arrival to final cleanup.', `${SITE}/events/corporate-events`),
-          offerSchema('Corporate Day Event', 1200000, 'IDR', `${SITE}/events/corporate-events`),
-          offerSchema('Multi-Day Retreat', 2500000, 'IDR', `${SITE}/events/corporate-events`),
-          serviceEventSchema({
-            name: 'Corporate Event Catering in Bali',
-            description: 'Corporate catering at Bali villas and venues — private chef menus, service staff, team dinners, and offsite events.',
+          serviceWithAggregateOfferSchema({
+            name: 'Corporate Events Bali',
+            description: 'myCHEF.id delivers corporate event catering in Bali for conferences, offsites, launches, and executive dinners. We coordinate food, staffing, setup, and service so your event runs smoothly from arrival to final cleanup.',
             url: `${SITE}/events/corporate-events`,
-            lowPrice: 1200000,
+            lowPrice: '1200000',
+            highPrice: '2500000',
+            unitText: 'per person per day',
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 127),
           howToSchema({
             name: 'How to Book Corporate Event Catering in Bali',
             description: 'Book professional corporate event catering for your Bali team or clients in 4 easy steps.',

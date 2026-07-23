@@ -5,9 +5,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema,
-  detailedServiceSchema,
+  serviceWithOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -102,13 +101,14 @@ export default function ServiceSommelierPage() {
         canonical={`${SITE}/in-villa-service/sommelier`}
         ogImage={`${SITE}/generated/mychef-service-bali-hero-sommelier.webp`}
         jsonLd={[
-          detailedServiceSchema(
-            'Sommelier Service Bali',
-            'myCHEF.id provides sommelier service in Bali for villa dinners, celebrations, and private events. We curate wine pairings, guide bottle selections, and deliver polished tableside service throughout the experience.',
-            `${SITE}/in-villa-service/sommelier`,
-          ),
+          serviceWithOfferSchema({
+            name: 'Sommelier Service Bali',
+            description: 'myCHEF.id provides sommelier service in Bali for villa dinners, celebrations, and private events. We curate wine pairings, guide bottle selections, and deliver polished tableside service throughout the experience.',
+            url: `${SITE}/in-villa-service/sommelier`,
+            price: '450000',
+            unitText: 'per hour',
+          }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 34),
           howToSchema({
             name: 'How to Hire a Sommelier in Bali',
             description: 'Book a professional sommelier for your Bali villa dinner in 4 easy steps.',

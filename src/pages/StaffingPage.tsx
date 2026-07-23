@@ -18,9 +18,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema,
-  serviceSchema,
+  serviceWithAggregateOfferSchema,
   faqPageSchema,
-  aggregateRatingSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
@@ -191,14 +190,15 @@ export default function StaffingPage() {
         canonical={getPageMeta('staffing').canonical}
         ogImage={getPageMeta('staffing').ogImage}
         jsonLd={[
-          serviceSchema(
-            'Hospitality Staffing Bali',
-            'Private chef, live-in chef, and villa household staff placement across Bali. Vetted network, 48h confirmation, 30-day replacement guarantee.',
-            `${SITE}/staffing`,
-            'IDR',
-          ),
+          serviceWithAggregateOfferSchema({
+            name: 'Hospitality Staffing Bali',
+            description: 'Private chef, live-in chef, and villa household staff placement across Bali. Vetted network, 48h confirmation, 30-day replacement guarantee.',
+            url: `${SITE}/staffing`,
+            lowPrice: '5500000',
+            highPrice: '8000000',
+            unitText: 'per month',
+          }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          aggregateRatingSchema(4.9, 560),
           breadcrumbSchema('Staffing', `${SITE}/staffing`),
           howToSchema({
             name: 'How to Hire Hospitality Staff in Bali',

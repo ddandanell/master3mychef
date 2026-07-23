@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, ChefHat, PartyPopper, Users, Briefcase, Wine, Star, Shield, Clock, Check } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, aggregateRatingSchema, faqPageSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from './SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import { ContactRiskReversal } from '@/components/shared'
 
@@ -70,7 +70,7 @@ export default function BookPage() {
         canonical={getPageMeta('book').canonical}
         ogImage={getPageMeta('book').ogImage}
         noindex
-        jsonLd={[aggregateRatingSchema(4.9, 560), breadcrumbSchema('Book', getPageMeta('book').canonical), faqPageSchema([
+        jsonLd={[breadcrumbSchema('Book', getPageMeta('book').canonical), faqPageSchema([
           { question: 'How do I book a private chef in Bali?', answer: 'Simply send us a WhatsApp message with your date, villa location, and number of guests. We reply within the hour and send a full proposal within 24 hours.' },
           { question: 'How far in advance do I need to book?', answer: 'We require a minimum of 48 hours advance notice. Bookings within 24 hours require 100% payment upfront. For events and catering, 3–7 days ahead is recommended.' },
           { question: 'Do you serve villas outside Seminyak and Canggu?', answer: 'Yes — we cover all of Bali including Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond. Just let us know your location when booking.' },

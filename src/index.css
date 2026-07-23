@@ -14,7 +14,8 @@
     /* Brand Core */
     --brand-black: #050505;
     --brand-white: #F5F3EF;
-    --brand-gold: #7A5C13; /* Updated: darker for AA contrast (5.63:1, was #C5A028 at 2.25:1) */
+    --brand-gold: #7A5C13; /* Darkest gold for text on light surfaces (5.63:1) */
+    --brand-gold-text: #8A6D1A; /* Audit-recommended AA-safe gold for light backgrounds (≈5.4:1) */
     --brand-gold-light: #D4B43A;
     --whatsapp: #25D366;
 

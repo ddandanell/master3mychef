@@ -28,6 +28,11 @@ export default function CateringPackageCard({
   cta = 'View details',
   accent = '#6B8E5A',
 }: CateringPackageCardProps) {
+  // Map light gold accents to AA-safe darker gold for text/badges on light card surfaces
+  const isLightGold = accent.toLowerCase() === '#c5a028'
+  const accessibleAccent = isLightGold ? 'var(--brand-gold-text)' : accent
+  const badgeBg = isLightGold ? 'var(--brand-gold)' : accent
+
   const inner = (
     <>
       <div className="relative aspect-[4/3] overflow-hidden">
@@ -40,7 +45,7 @@ export default function CateringPackageCard({
         {minGuests && (
           <span
             className="absolute top-3 left-3 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full"
-            style={{ background: accent }}
+            style={{ background: badgeBg }}
           >
             {minGuests}
           </span>
@@ -53,14 +58,14 @@ export default function CateringPackageCard({
         >
           {title}
         </h3>
-        <p className="text-[#6B8E5A] font-semibold text-lg mb-3">{price}</p>
+        <p className="font-semibold text-lg mb-3" style={{ color: accessibleAccent }}>{price}</p>
         <p className="text-[#4A4745] text-sm mb-4 leading-relaxed">{description}</p>
 
         {includes && includes.length > 0 && (
           <div className="space-y-2 mb-5">
             {includes.slice(0, 4).map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm text-[#4A4745]">
-                <Check className="w-4 h-4 flex-shrink-0" style={{ color: accent }} />
+                <Check className="w-4 h-4 flex-shrink-0" style={{ color: accessibleAccent }} />
                 <span>{item}</span>
               </div>
             ))}
@@ -73,7 +78,7 @@ export default function CateringPackageCard({
         {href && (
           <span
             className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider transition-colors"
-            style={{ color: accent }}
+            style={{ color: accessibleAccent }}
           >
             {cta}
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

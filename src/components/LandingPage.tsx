@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Calendar, Check, ChevronLeft, ChevronRight, Cloc
 import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema } from './SeoHead'
 import { BLOG_POSTS, GUIDES, LANDING_PAGES } from '@/data/sitemap'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
+import { CHEF_FOR_HIRE_INDONESIA_CONTENT } from '@/data/content/chefForHireIndonesia'
 import Breadcrumb from './shared/Breadcrumb'
 import { type EnrichedPost, enrichPost, formatBlogDate, getRelatedPosts, injectContentEnhancements, sortPostsByDate } from '@/lib/blog'
 
@@ -28,6 +29,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   if (!entry) return <Navigate to="/404" replace />
 
   const articleEntry: EnrichedPost | null = isArticle && 'readTimeMinutes' in entry ? (entry as EnrichedPost) : null
+  const isChefForHireIndonesia = kind === 'landing' && entry.slug === 'chef-for-hire-indonesia'
   const canonical = `${SITE}/${entry.slug}`
   const heroImage = kind === 'landing' ? '/generated/hero-how-it-works.webp' : '/generated/luna-hero-v3.webp'
   const hubPath = kind === 'blog' ? '/journal' : kind === 'guide' ? '/help' : '/'
@@ -48,9 +50,11 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   const previousEntry = currentIndex > 0 ? orderedEntries[currentIndex - 1] : null
   const nextEntry = currentIndex >= 0 && currentIndex < orderedEntries.length - 1 ? orderedEntries[currentIndex + 1] : null
   const relatedEntries = articleEntry ? getRelatedPosts(RELATED_ENTRIES, articleEntry, 3) : []
-  const enhancedContent = articleEntry?.content
-    ? injectContentEnhancements(articleEntry.content, articleEntry.headings)
-    : (ARTICLE_CONTENT[`/${entry.slug}`] ?? entry.content)
+  const enhancedContent = isChefForHireIndonesia
+    ? CHEF_FOR_HIRE_INDONESIA_CONTENT
+    : articleEntry?.content
+      ? injectContentEnhancements(articleEntry.content, articleEntry.headings)
+      : (ARTICLE_CONTENT[`/${entry.slug}`] ?? entry.content)
 
   const articleSchema =
     articleEntry
@@ -79,12 +83,22 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
 
   const landingServiceSchema = kind === 'landing' ? serviceSchema(entry.title, entry.description, canonical) : null
   const breadcrumbJsonLd = isArticle ? breadcrumbSchema(entry.title, canonical, hubLabel, `${SITE}${hubPath}`) : breadcrumbSchema(entry.title, canonical)
+  const faqItems = isChefForHireIndonesia
+    ? [
+        { question: 'Can I hire a chef in Indonesia for only one dinner?', answer: 'Yes. myCHEF arranges one-off private dinners, villa BBQs, family meals, birthdays, proposals, and tasting menus. Send the date, exact location, guest count, and preferred service style.' },
+        { question: 'Can I hire a chef for several days or an entire villa stay?', answer: 'Yes. A villa chef can cover selected meals or daily service. The schedule, number of meals, groceries, service hours, days off, and any supporting staff are agreed before confirmation.' },
+        { question: 'Are groceries included when I hire a private chef?', answer: 'It depends on the service. Fine-dining and event packages may include ingredients. Time-based villa chef services normally bill groceries at cost with receipts and no markup. The written quote confirms the exact model.' },
+        { question: 'Can a private chef handle allergies and special diets?', answer: 'Yes, when requirements are shared before menu approval. Tell myCHEF about allergies, cross-contact risks, religious requirements, children, pregnancy, and other dietary needs.' },
+        { question: 'Can myCHEF find a full-time or live-in chef?', answer: 'Yes. Permanent roles use a placement process with a household brief, matched profiles, interviews, cooking trials, contract support, and ongoing follow-up.' },
+        { question: 'Where in Indonesia can I hire a myCHEF chef?', answer: 'Regular service is available across Bali and Jakarta. Assignments in Lombok, on yachts, at remote estates, and in other Indonesian locations are assessed individually based on schedule and logistics.' },
+      ]
+    : [
+        { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
+        { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond, covering 560+ villas across the island.' },
+      ]
   const jsonLdArr = [
     breadcrumbJsonLd,
-    faqPageSchema([
-      { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
-      { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond — covering 560+ villas across the island.' },
-    ]),
+    faqPageSchema(faqItems),
     ...(landingServiceSchema ? [landingServiceSchema] : []),
     ...(articleSchema ? [articleSchema] : []),
   ]

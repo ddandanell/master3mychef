@@ -320,10 +320,13 @@ export const IMAGE_DIMENSIONS = {
   "/generated/mychef-catering-style-plated.webp": { width: 1440, height: 1072 },
   "/generated/mychef-catering-style-retreat.webp": { width: 1440, height: 1072 },
   "/generated/mychef-catering-style-villa.webp": { width: 1440, height: 1072 },
+  "/generated/aura-buffet.webp": { width: 1440, height: 800 },
+  "/generated/aura-corporate.webp": { width: 1024, height: 576 },
   "/generated/pkg-bbq.webp": { width: 1280, height: 800 },
   "/generated/pkg-grazing.webp": { width: 1280, height: 800 },
   "/generated/pkg-italian.webp": { width: 1440, height: 800 },
   "/generated/pkg-seafood.webp": { width: 1440, height: 800 },
+  "/generated/sol-bbq.webp": { width: 1024, height: 576 },
 
   /* Plated & floating breakfast package cards */
   "/generated/mychef-catering-bali-floating-breakfast.webp": { width: 1440, height: 800 },

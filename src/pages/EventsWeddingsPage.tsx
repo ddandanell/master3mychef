@@ -65,12 +65,6 @@ const LEAD_TIMES = [
   { phase: '1 month', label: 'Minimum off-peak', note: 'Intimate weddings only. Subject to availability.' },
 ]
 
-const PRESS_FEATURES = [
-  { name: 'Honeycombers Weddings', desc: 'Featured in Bali wedding guide as top villa catering pick.' },
-  { name: 'Hello Bali Weddings', desc: 'Listed as recommended full-service villa wedding vendor.' },
-  { name: 'Bridestory', desc: 'Vendor profile with 50+ real wedding reviews and portfolio.' },
-]
-
 const FAQS = [
   { q: 'How far in advance should I book?', a: 'Three to ten months for peak season (July–September, December–January). One month minimum for off-peak celebrations. Full planning and coordination requires at least three months\u2019 lead time.' },
   { q: 'Do you do the wedding planning?', a: 'Yes — full planning and coordination is included for weddings of 80+ guests and available for any celebration on request. Intimate weddings include day-of coordination as standard.' },
@@ -529,21 +523,6 @@ export default function EventsWeddingsPage() {
             <div className="h-full min-h-[320px]">
               <img src="/generated/mychef-events-bali-weddings-cocktail.webp" alt="Wedding guests enjoying champagne and canapés at a Bali villa cocktail hour" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-white wedding-reveal">
-        <div className="max-w-4xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 5 — Press" title="As Featured In" subtitle="Recognised by Bali wedding publications that care about food, execution, and real guest experience." />
-          <div className="grid sm:grid-cols-3 gap-6">
-            {PRESS_FEATURES.map((feature) => (
-              <div key={feature.name} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 text-center">
-                <Newspaper className="w-8 h-8 text-[#C5A028] mx-auto mb-4" />
-                <h3 className="text-[#1A1A1A] text-sm font-semibold mb-2">{feature.name}</h3>
-                <p className="text-[#4A4745] text-sm leading-relaxed">{feature.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

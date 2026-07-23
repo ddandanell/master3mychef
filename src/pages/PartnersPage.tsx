@@ -84,10 +84,6 @@ const partnerSupport = [
 
 const logoGroups = [
   {
-    title: 'Recent media coverage',
-    items: ['Travel and lifestyle media', 'Hospitality business publications', 'Bali destination editors'],
-  },
-  {
     title: 'Active partner segments',
     items: ['Seminyak villa portfolios', 'Uluwatu retreat operators', 'Canggu boutique stays'],
   },

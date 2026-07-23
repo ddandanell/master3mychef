@@ -100,7 +100,12 @@
         "@id": "https://mychef.id/#organization",
         "name": "myCHEF.id",
         "url": "https://mychef.id",
-        "logo": "https://mychef.id/generated/hub-hero-v3.webp",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mychef.id/mychef-logo-512.png",
+          "width": 512,
+          "height": 512
+        },
         "sameAs": [
           "https://www.instagram.com/mychef.id",
           "https://www.facebook.com/mychef.id"
@@ -174,21 +179,16 @@
       }
     </script>
 
-    <!-- WebSite + Sitelinks Searchbox -->
+    <!-- WebSite entity referenced by every WebPage via #website @id -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
+        "@id": "https://mychef.id/#website",
         "name": "myCHEF",
         "url": "https://mychef.id",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://mychef.id/?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
+        "inLanguage": "en",
+        "publisher": { "@id": "https://mychef.id/#organization" }
       }
     </script>
 

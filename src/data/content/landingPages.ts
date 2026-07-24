@@ -202,9 +202,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "@id": "https://mychef.id/#business"
           },
           "areaServed": [
-            "Bali",
-            "Jakarta",
-            "Indonesia"
+            "Bali"
           ],
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -240,10 +238,10 @@ export const LANDING_PAGES: ContentEntry[] = [
             },
             {
               "@type": "Question",
-              "name": "Do you serve both Bali and Jakarta?",
+              "name": "Which areas of Bali do you serve?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes — across Bali's main villa areas and Jakarta's premium districts including Menteng, SCBD, Kemang and Pondok Indah, at the same standard. Other destinations are assessed on request."
+                "text": "We serve villas and residences across Bali's main areas including Seminyak, Canggu, Pererenan, Sanur, Ubud and Uluwatu, to the same standard in each location."
               }
             },
             {
@@ -314,9 +312,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "@id": "https://mychef.id/#business"
           },
           "areaServed": [
-            "Bali",
-            "Jakarta",
-            "Indonesia"
+            "Bali"
           ],
           "offers": {
             "@type": "AggregateOffer",
@@ -339,10 +335,10 @@ export const LANDING_PAGES: ContentEntry[] = [
             },
             {
               "@type": "Question",
-              "name": "Can you serve an estate or residence outside Bali?",
+              "name": "Can you serve an estate or residence anywhere in Bali?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Jakarta's premium districts are a core service area; other Indonesian destinations — yachts, private islands, remote estates — are planned individually with travel and sourcing built into the proposal."
+                "text": "Yes. We cover Bali's main villa areas and can travel to more remote estates and clifftop residences across the island, with travel and sourcing built into the proposal."
               }
             },
             {
@@ -394,7 +390,7 @@ export const LANDING_PAGES: ContentEntry[] = [
 {
     "slug": "wedding-catering-indonesia",
     "title": "Wedding Catering Indonesia | Villa Wedding Specialists",
-    "description": "Premium wedding catering across Indonesia — Bali, Jakarta & beyond. Custom menus, full service teams and event coordination. WhatsApp myCHEF.",
+    "description": "Premium wedding catering across Bali. Custom menus, full service teams and event coordination. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
   {
@@ -413,9 +409,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "@id": "https://mychef.id/#business"
           },
           "areaServed": [
-            "Bali",
-            "Jakarta",
-            "Indonesia"
+            "Bali"
           ],
           "offers": {
             "@type": "AggregateOffer",
@@ -446,10 +440,10 @@ export const LANDING_PAGES: ContentEntry[] = [
             },
             {
               "@type": "Question",
-              "name": "Do you serve private dining outside Bali?",
+              "name": "Do you serve private dining across all of Bali?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Jakarta's premium residential districts are a core service area, and other Indonesian destinations are arranged on request."
+                "text": "Yes. We serve private dining throughout Bali's main villa areas and can arrange service at more remote estates and residences across the island."
               }
             },
             {
@@ -501,7 +495,7 @@ export const LANDING_PAGES: ContentEntry[] = [
   {
     "slug": "healthy-meal-delivery-indonesia",
     "title": "Healthy Meal Delivery Bali | Chef-Prepared Meal Plans",
-    "description": "Healthy meal delivery in Bali & Jakarta: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.",
+    "description": "Healthy meal delivery in Bali: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Healthy Meal Delivery in Bali — Chef-Prepared, Not Factory-Made",
     "jsonLd": [{
@@ -521,13 +515,9 @@ export const LANDING_PAGES: ContentEntry[] = [
             {
               "@type": "Place",
               "name": "Bali"
-            },
-            {
-              "@type": "Place",
-              "name": "Jakarta"
             }
           ],
-          "description": "Chef-prepared healthy meal delivery and weekly in-villa meal prep in Bali and Jakarta: personalised menus, fresh local ingredients, dietary-exact cooking.",
+          "description": "Chef-prepared healthy meal delivery and weekly in-villa meal prep in Bali: personalised menus, fresh local ingredients, dietary-exact cooking.",
           "offers": {
             "@type": "Offer",
             "priceCurrency": "IDR",
@@ -566,7 +556,7 @@ export const LANDING_PAGES: ContentEntry[] = [
               "name": "Which areas are covered?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Bali-wide including Canggu, Berawa, Seminyak, Sanur, Ubud and Uluwatu, plus Jakarta. No travel surcharge within Canggu-Berawa and Sanur."
+                "text": "Bali-wide including Canggu, Berawa, Seminyak, Sanur, Ubud and Uluwatu. No travel surcharge within Canggu-Berawa and Sanur."
               }
             },
             {
@@ -626,7 +616,7 @@ export const LANDING_PAGES: ContentEntry[] = [
   {
     "slug": "chef-for-hire-indonesia",
     "title": "Chef for Hire Indonesia | Private & Personal Chefs",
-    "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali & Jakarta. WhatsApp myCHEF.",
+    "description": "Hire a vetted private chef in Bali — one dinner, daily villa service, recurring meals or full-time placement across Bali. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Chef for Hire Indonesia — Private Chef Services",
     "jsonLd": [{
@@ -639,9 +629,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "@id": "https://mychef.id/#business"
           },
           "areaServed": [
-            "Bali",
-            "Jakarta",
-            "Indonesia"
+            "Bali"
           ],
           "offers": {
             "@type": "AggregateOffer",
@@ -667,7 +655,7 @@ export const LANDING_PAGES: ContentEntry[] = [
               "name": "Can you travel between islands or to remote villas?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Within Bali and Jakarta travel is routine. Remote and inter-island assignments are confirmed individually with transport, accommodation and ingredient planning built into the quote."
+                "text": "Within Bali, travel is routine. Remote and inter-island assignments are confirmed individually with transport, accommodation and ingredient planning built into the quote."
               }
             },
             {

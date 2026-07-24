@@ -34,7 +34,7 @@ const briefJsonLd = {
         url: 'https://mychef.id',
         telephone: '+62 896-7407-2020',
       },
-      areaServed: ['Bali', 'Jakarta'],
+      areaServed: ['Bali'],
       description: 'Household staff recruitment for private residences in Bali — housekeepers, nannies, drivers and estate managers. Reference-checked candidates, contracts and payroll guidance, 30-day replacement guarantee.',
       offers: {
         '@type': 'AggregateOffer',
@@ -166,7 +166,7 @@ const FAQS = [
   { q: 'What household roles can you fill?', a: 'Housekeepers, nannies, drivers, estate managers, personal assistants and heads of house for private residences.' },
   { q: 'Can you provide a full household team?', a: 'Yes. We recruit and coordinate complete household teams — housekeepers, nannies, drivers and an estate manager — for large residences and estates.' },
   { q: 'Do you verify references for household staff?', a: 'Yes. Every candidate undergoes thorough reference checks, background verification and in-person interviews before placement.' },
-  { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions. We also place household staff for residences in Jakarta.' },
+  { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
   { q: 'What is your placement fee?', a: "The fee equals one month of the hired person's salary — a single charge that includes the search, in-person interviews, background verification, contract preparation and six months of support after placement." },
 ]
 

@@ -35,7 +35,7 @@ const BRIEF_JSON_LD = {
         url: 'https://mychef.id',
         telephone: '+62 896-7407-2020',
       },
-      areaServed: ['Bali', 'Jakarta', 'Lombok'],
+      areaServed: ['Bali'],
       description: 'Live-in chefs in Bali who manage all meals, groceries and kitchen logistics for families and guests. From IDR 8,000,000 per month with trial dinners and a 30-day replacement guarantee.',
       offers: {
         '@type': 'AggregateOffer',
@@ -86,14 +86,6 @@ const BRIEF_JSON_LD = {
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'Yes. Estate and family placements include event cooking. Additional event coverage can be arranged at separate rates.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do you place live-in chefs outside Bali?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. We have placed chefs in Jakarta, Lombok and on private yachts. International placements are available on request.',
           },
         },
       ],
@@ -161,7 +153,6 @@ const FAQS = [
   { q: 'What cuisines can your live-in chefs cook?', a: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal and kosher — we match cuisine to your preference.' },
   { q: 'Can the live-in chef cook for events as well?', a: 'Yes. Estate and family placements include event cooking. Additional event coverage can be arranged at separate rates.' },
   { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
-  { q: 'Do you place live-in chefs outside Bali?', a: 'Yes. We have placed chefs in Jakarta, Lombok and on private yachts. International placements are available on request.' },
 ]
 
 export default function StaffingLiveInPage() {

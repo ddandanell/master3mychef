@@ -150,7 +150,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
     label: 'Staffing',
     url: '/staffing',
     h1: 'Hire Vetted Hospitality Staff for Your Villa, Hotel or Home',
-    description: 'Long-term villa staff placement in Bali and Jakarta — private chefs, live-in chefs, villa managers, butlers, housekeepers and full household teams.',
+    description: 'Long-term villa staff placement in Bali — private chefs, live-in chefs, villa managers, butlers, housekeepers and full household teams.',
     title: 'Staff Placement Bali | Hire Chefs & Household Staff — myCHEF',
     intro: 'Permanent and seasonal staffing solutions. Private chef placement, villa managers, household teams, and specialized hospitality roles.',
     navLabel: 'Staffing',

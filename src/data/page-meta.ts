@@ -110,7 +110,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/staffing',
     title: 'Villa Staff Placement Bali | Hospitality Staffing Agency',
     description:
-      'Villa staff placement in Bali & Jakarta: long-term private chefs, villa managers, butlers & hospitality teams. Vetted, guaranteed. WhatsApp myCHEF.',
+      'Villa staff placement in Bali: long-term private chefs, villa managers, butlers & hospitality teams. Vetted, guaranteed. WhatsApp myCHEF.',
     canonical: `${SITE}/staffing`,
     h1: 'Hire Vetted Hospitality Staff for Your Villa, Hotel or Home',
     ogImage: `${SITE}/generated/luna-chef-portrait.webp`,

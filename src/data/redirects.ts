@@ -254,7 +254,6 @@ export const REDIRECTS: Redirect[] = [
   // --- SEO rebuild 2026-07-24: canonical consolidation redirects ---
   { from: '/blog/corporate-events-catering-bali', to: '/corporate-case-studies', reason: 'Soft-404 consolidation: thin blog page → canonical case-studies page.' },
   { from: '/blog/how-to-hire-private-chef', to: '/blog/how-to-hire-private-chef-bali-complete-guide', reason: 'Soft-404 consolidation: old slug → canonical complete guide.' },
-  { from: '/partner-platform', to: '/certified-partner', reason: 'Duplicate pair consolidation: partner-platform → certified-partner.' },
   { from: '/blog/romantic-dinner-at-home-bali-private-chef', to: '/fine-dining/romantic-dinner', reason: 'Duplicate blog content → canonical fine-dining romantic dinner page.' },
 
   // --- 2026-07-01 (pass 2): remaining broken internal links found by link crawl → 301 to nearest live page.

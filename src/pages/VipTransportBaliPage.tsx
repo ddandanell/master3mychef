@@ -114,7 +114,7 @@ export default function VipTransportBaliPage() {
             Your Journey. Our Detail.
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-            VIP Transport in Bali — Arrival, Arranged
+            VIP Transport Bali — Luxury Cars, Yachts & Private Transfers
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
             The first and last hour of a Bali trip sets the tone for everything between. myCHEF arranges private transfers for our chef and event clients — airport pickups, group shuttles, day drivers and event-night transport — coordinated through our trusted partner driver network and folded into the same WhatsApp thread as your booking.

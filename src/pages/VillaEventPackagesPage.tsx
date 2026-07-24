@@ -151,7 +151,7 @@ export default function VillaEventPackagesPage() {
             All-Inclusive Villa Events
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Bali Villa Event Packages — One Event, Everything Arranged
+            Bali Villa Event Packages — Everything, Arranged
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
             One occasion. One team. One fixed quote. A myCHEF villa event package bundles everything a single celebration needs — chef, bar, staff, decor coordination, entertainment, setup and handback — so you brief us once and simply host.

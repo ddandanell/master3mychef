@@ -860,11 +860,6 @@
       "permanent": true
     },
     {
-      "source": "/partner-platform",
-      "destination": "/certified-partner",
-      "permanent": true
-    },
-    {
       "source": "/blog/romantic-dinner-at-home-bali-private-chef",
       "destination": "/fine-dining/romantic-dinner",
       "permanent": true

@@ -145,7 +145,7 @@ export default function CompleteVillaExperiencePage() {
             Arrival to Departure
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Complete Villa Experience Bali — We Handle Everything, From Arrival to Departure
+            Complete Villa Experience — We Handle Everything
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
             One team, one WhatsApp thread, one perfectly orchestrated stay. VIP transport, villa preparation, daily private chef, events, staffing, concierge and cleanup — all managed for you.

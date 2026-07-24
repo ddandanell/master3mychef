@@ -141,6 +141,15 @@ const WetSeasonMenuPage = lazy(() => import('./pages/WetSeasonMenuPage'))
 const FestiveSeasonMenuPage = lazy(() => import('./pages/FestiveSeasonMenuPage'))
 const FloatingBreakfastBaliPage = lazy(() => import('./pages/FloatingBreakfastBaliPage'))
 const PrivateDinnerPartyBaliPage = lazy(() => import('./pages/PrivateDinnerPartyBaliPage'))
+
+// Experience pages
+const ExperiencesHubPage = lazy(() => import('./pages/ExperiencesHubPage'))
+const ExperiencePrivateCocktailPartyPage = lazy(() => import('./pages/ExperiencePrivateCocktailPartyPage'))
+const ExperienceSushiMasterclassPage = lazy(() => import('./pages/ExperienceSushiMasterclassPage'))
+const ExperiencePrivateCookingClassPage = lazy(() => import('./pages/ExperiencePrivateCookingClassPage'))
+const ExperienceKidsBirthdayChefPartyPage = lazy(() => import('./pages/ExperienceKidsBirthdayChefPartyPage'))
+const ExperienceChampagneOysterExperiencePage = lazy(() => import('./pages/ExperienceChampagneOysterExperiencePage'))
+const ExperienceRomanticProposalDinnerPage = lazy(() => import('./pages/ExperienceRomanticProposalDinnerPage'))
 const BaliVillaCookingClassPage = lazy(() => import('./pages/BaliVillaCookingClassPage'))
 const LargeGroupCateringBaliPage = lazy(() => import('./pages/LargeGroupCateringBaliPage'))
 const BachelorPartyBaliPage = lazy(() => import('./pages/BachelorPartyBaliPage'))
@@ -273,6 +282,16 @@ export default function App() {
           <Route path="/catering/retreat-catering" element={<CateringRetreatPage />} />
           <Route path="/catering/plated-catering" element={<CateringPlatedPage />} />
           <Route path="/catering/floating-breakfast" element={<CateringFloatingBreakfastPage />} />
+
+          {/* Experience pages */}
+          <Route path="/experiences" element={<ExperiencesHubPage />} />
+          <Route path="/experiences/private-cocktail-party" element={<ExperiencePrivateCocktailPartyPage />} />
+          <Route path="/experiences/sushi-masterclass" element={<ExperienceSushiMasterclassPage />} />
+          <Route path="/experiences/private-cooking-class" element={<ExperiencePrivateCookingClassPage />} />
+          <Route path="/experiences/kids-birthday-chef-party" element={<ExperienceKidsBirthdayChefPartyPage />} />
+          <Route path="/experiences/champagne-oyster-experience" element={<ExperienceChampagneOysterExperiencePage />} />
+          <Route path="/experiences/romantic-proposal-dinner" element={<ExperienceRomanticProposalDinnerPage />} />
+
           <Route path="/events/weddings" element={<EventsWeddingsPage />} />
           <Route path="/events/birthdays" element={<EventsBirthdaysPage />} />
           <Route path="/events/anniversaries" element={<EventsAnniversariesPage />} />

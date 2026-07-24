@@ -2,55 +2,55 @@
 import type { ContentEntry } from '@/lib/blog'
 
 export const LANDING_PAGES: ContentEntry[] = [
-  {
+{
     "slug": "villa-bbq-catering-bali",
     "title": "Villa BBQ Catering Bali | In-Villa BBQ Party Packages",
     "description": "In-villa BBQ party packages in Bali: chef, grill, setup & cleanup at your villa poolside. Packages for 6-80 guests with per-pax pricing. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
-  {
+{
     "slug": "bali-wedding-catering-packages",
     "title": "Bali Wedding Catering Packages & Prices 2026",
     "description": "Transparent Bali wedding catering packages: plated, buffet & cocktail reception pricing by guest count for private villa weddings. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
-  {
+{
     "slug": "michelin-private-chef-bali-prices",
     "title": "Michelin Private Chef Bali Prices | 2026 Cost Guide",
     "description": "Transparent pricing for Michelin-standard private chef experiences in Bali. Cost breakdowns for menus and groceries.",
     "date": "2026-05-17"
   },
-  {
+{
     "slug": "private-tasting-menu-bali",
     "title": "Private Tasting Menu Bali | Michelin-Standard Villa Dining",
     "description": "Experience 7-11 course private tasting menus in your Bali villa. Italian technique met with Balinese ingredients.",
     "date": "2026-05-17"
   },
-  {
+{
     "slug": "chef-table-experience-bali",
     "title": "Chef Table Experience Bali | Interactive Fine Dining",
     "description": "An interactive, counter-side private dining experience. Watch our Michelin-trained chefs work course-by-course.",
     "date": "2026-05-17"
   },
-  {
+{
     "slug": "seafood-bbq-catering-bali",
     "title": "Seafood BBQ Bali | Market-Fresh Grill at Your Villa | myCHEF",
     "description": "Fresh seafood BBQs for Bali villas: snapper, prawns, lobster grilled live poolside, sourced direct from Jimbaran market. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
-  {
+{
     "slug": "group-villa-dinner-packages-bali",
     "title": "Group Villa Dinner Packages Bali | Easy Booking for 10-150 Guests",
     "description": "All-inclusive villa dinner packages for large groups in Bali. Perfect for family reunions and social gatherings.",
     "date": "2026-05-17"
   },
-  {
+{
     "slug": "corporate-retreat-catering-bali",
     "title": "Corporate Retreat Catering Bali | Offsite Meal Programs",
     "description": "Multi-day catering for corporate retreats & offsites in Bali: full-day meal structures, NPWP invoices, executive service. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
-  {
+{
     "slug": "luxury-birthday-party-bali",
     "title": "Luxury Birthday Party Bali | Milestone Celebrations | myCHEF",
     "description": "Luxury milestone birthday parties in Bali: private chef, premium menus, drinks & styling for 30th/40th/50th celebrations. WhatsApp myCHEF.",
@@ -58,11 +58,94 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "hire-private-chef-bali-monthly",
-    "title": "Hire Private Chef Bali Monthly | Long-Stay Villa Hosting",
-    "description": "Monthly and long-term private chef placements for Bali villas and residences. Vetted, professional culinary teams.",
-    "date": "2026-05-17"
+    "title": "Monthly Private Chef Bali | Long-Stay Chef Service",
+    "description": "Monthly & long-term private chef service for Bali villas and residences — recurring meal plans by vetted chefs. WhatsApp myCHEF.",
+    "date": "2026-05-17",
+    "h1": "Hire a Private Chef in Bali by the Month",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "serviceType": "Monthly and long-stay private chef hire in Bali",
+          "provider": {
+            "@id": "https://mychef.id/#business"
+          },
+          "areaServed": [
+            "Seminyak",
+            "Canggu",
+            "Pererenan",
+            "Sanur",
+            "Ubud",
+            "Uluwatu",
+            "Bali"
+          ],
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "IDR",
+            "lowPrice": "4500000",
+            "highPrice": "8000000",
+            "description": "Weekly meal prep from IDR 4.5M/week (2 people); live-in chef from IDR 8M/month. Groceries billed at cost."
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much does a monthly private chef cost in Bali?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Weekly meal prep starts from IDR 4.5M per week for two people; a full-time live-in chef starts from IDR 8M per month. Recurring arrangements are quoted as one fixed monthly figure."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are groceries included in a monthly chef arrangement?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Groceries are billed at cost with receipts and never marked up."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between monthly hire and a live-in chef?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Monthly hire is a recurring service schedule on agreed days. A live-in chef is a full-time placement who stays on-site, suited to residences and staffed villas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long can a monthly chef arrangement run?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most arrangements start at one month and extend for the length of the stay or season, with multi-month rates tailored to your dates."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://mychef.id/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Hire a Private Chef Monthly",
+              "item": "https://mychef.id/hire-private-chef-bali-monthly"
+            }
+          ]
+        }
+      ]
+    }
   },
-  {
+{
     "slug": "villa-staff-bali-agency",
     "title": "Villa Staff Placement Has Moved",
     "h1": "Looking for a Villa Staff Agency in Bali?",
@@ -97,7 +180,7 @@ export const LANDING_PAGES: ContentEntry[] = [
       }
     ]
   },
-  {
+{
     "slug": "butler-service-bali-daily-rate",
     "title": "Butler Service Bali Daily Rate | Professional Villa Hosting",
     "description": "Hire professional, English-speaking butlers in Bali by the day or shift. Discreet and anticipatory guest service.",
@@ -105,11 +188,111 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "best-private-chef-indonesia",
-    "title": "Best Private Chef Indonesia | Michelin-Standard Villa Dining",
-    "description": "The premier private chef service in Indonesia. Michelin-trained leadership, local sourcing, and world-class service standards.",
-    "date": "2026-05-17"
+    "title": "Best Private Chef Indonesia | Michelin-Standard Team",
+    "description": "How to judge the best private chef service in Indonesia — and the proof behind myCHEF: Michelin-trained leadership, 560+ villas, 4.9/5 rating. WhatsApp us.",
+    "date": "2026-05-17",
+    "h1": "The Best Private Chef Service in Indonesia",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "serviceType": "Private chef service in Indonesia",
+          "provider": {
+            "@id": "https://mychef.id/#business"
+          },
+          "areaServed": [
+            "Bali",
+            "Jakarta",
+            "Indonesia"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5"
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "IDR",
+            "lowPrice": "700000",
+            "highPrice": "980000",
+            "description": "Private chef dinners from IDR 700K per person; tasting menus from IDR 950–980K per person, quoted ++ (11% tax + 10% service)."
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Who is the best private chef in Indonesia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Judge by verifiable criteria: named culinary leadership, track record, independent reviews, professional standards and transparent pricing. myCHEF offers Michelin-trained leadership, 560+ villas served, 12,000+ guests, a 4.9/5 guest rating and upfront per-person pricing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a top private chef cost in Indonesia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Private chef dinners start from IDR 700K per person; fine-dining tasting menus from IDR 950–980K per person, quoted ++ (11% government tax + 10% service charge) as one fixed figure."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you serve both Bali and Jakarta?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — across Bali's main villa areas and Jakarta's premium districts including Menteng, SCBD, Kemang and Pondok Indah, at the same standard. Other destinations are assessed on request."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can the chef handle dietary requirements?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Halal, vegan, vegetarian, gluten-free, allergies and children's menus are built into every menu plan at no extra charge."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens if our chef can't make it?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A verified replacement of equivalent calibre is dispatched within 2 hours, or you receive a 100% refund. Your event does not get cancelled."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How far ahead should we book?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A few days' notice is usually enough for an intimate dinner; larger events and peak season deserve one to two weeks. WhatsApp replies arrive within about two hours."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://mychef.id/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Best Private Chef Indonesia",
+              "item": "https://mychef.id/best-private-chef-indonesia"
+            }
+          ]
+        }
+      ]
+    }
   },
-  {
+{
     "slug": "private-chef-for-events",
     "title": "Private Chef for Events Bali | Hire a Chef for Your Event",
     "description": "Hire a private chef for your Bali event — villa parties, birthdays & celebrations. Transparent chef-fee model, optional service staff. WhatsApp myCHEF.",
@@ -117,11 +300,98 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "luxury-chef-indonesia",
-    "title": "Luxury Chef Indonesia | Premium Private Dining Experiences",
-    "description": "Exclusive private chef services for high-end residences and estates in Indonesia. Discreet, professional, and refined.",
-    "date": "2026-05-17"
+    "title": "Luxury Private Chef Indonesia | Estates & Residences",
+    "description": "Luxury private chef services for high-end residences and estates across Indonesia — discreet, professional, refined. Enquire via WhatsApp.",
+    "date": "2026-05-17",
+    "h1": "Luxury Chef Indonesia — Premium Private Dining",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "serviceType": "Luxury private chef service for residences and estates in Indonesia",
+          "provider": {
+            "@id": "https://mychef.id/#business"
+          },
+          "areaServed": [
+            "Bali",
+            "Jakarta",
+            "Indonesia"
+          ],
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "IDR",
+            "lowPrice": "950000",
+            "highPrice": "3500000",
+            "description": "Refined private dinners from IDR 950K++ per person; signature tasting menus from IDR 2.2M++; Chef's Table IDR 3.5M++ per guest (Fri & Sat, 6 guests max). Prices ++ (11% tax + 10% service)."
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What distinguishes a luxury private chef service from a standard one?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Named Michelin-trained leadership, menus built around daily market sourcing, a trained front-of-house team, and a discretion standard suited to significant households — each a bookable artefact with a published price."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you serve an estate or residence outside Bali?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Jakarta's premium districts are a core service area; other Indonesian destinations — yachts, private islands, remote estates — are planned individually with travel and sourcing built into the proposal."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you staff a full formal event?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Chef brigades, waiters, bartenders, butlers and sommeliers scale from an intimate dinner to a 300-guest reception under one accountable team and one itemised proposal."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is confidentiality handled?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Enquiries are handled personally by the senior team, proposals are private, and staff are trained for diplomatic and high-profile households. Specific confidentiality arrangements can be built into engagement terms."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How far in advance should we enquire?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Chef's Table runs Friday and Saturday only with six seats — enquire early. Residences and estates are best served with one to two weeks' notice; WhatsApp responses arrive within 2 hours."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://mychef.id/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Luxury Chef Indonesia",
+              "item": "https://mychef.id/luxury-chef-indonesia"
+            }
+          ]
+        }
+      ]
+    }
   },
-  {
+{
     "slug": "wedding-catering-indonesia",
     "title": "Wedding Catering Indonesia | Villa Wedding Specialists",
     "description": "Premium wedding catering across Indonesia — Bali, Jakarta & beyond. Custom menus, full service teams and event coordination. WhatsApp myCHEF.",
@@ -129,38 +399,347 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "private-dining-indonesia",
-    "title": "Private Dining Indonesia | At-Home Fine Dining Services",
-    "description": "Experience at-home fine dining across Indonesia. Michelin-trained chefs, premium ingredients, and professional service.",
-    "date": "2026-05-17"
+    "title": "Private Dining Indonesia | At-Home Fine Dining",
+    "description": "At-home fine dining across Indonesia: Michelin-trained chefs, premium ingredients and professional service in your home or villa. WhatsApp myCHEF.",
+    "date": "2026-05-17",
+    "h1": "Private Dining Indonesia — At-Home Fine Dining",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "serviceType": "At-home private dining and fine dining service in Indonesia",
+          "provider": {
+            "@id": "https://mychef.id/#business"
+          },
+          "areaServed": [
+            "Bali",
+            "Jakarta",
+            "Indonesia"
+          ],
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "IDR",
+            "lowPrice": "700000",
+            "highPrice": "980000",
+            "description": "Private dining from IDR 700K per person; fine dining and tasting menus from IDR 950–980K per person, quoted ++ (11% tax + 10% service)."
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is at-home private dining?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A professional chef and service team deliver a complete restaurant-grade evening in your home or villa — menu design, fresh shopping, on-site cooking, plated service and full cleanup."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is the kitchen really left clean?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Always. Full cleanup and kitchen reset are part of every private dining booking."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you serve private dining outside Bali?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Jakarta's premium residential districts are a core service area, and other Indonesian destinations are arranged on request."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you handle dietary requirements?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — halal, vegan, vegetarian, gluten-free, allergies and children's menus are built into the menu design at no extra charge."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How far ahead should we book private dining?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A few days' notice usually works for an intimate dinner; larger celebrations and peak dates deserve one to two weeks. WhatsApp replies arrive within about two hours."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How many guests can you serve?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "From an intimate dinner for two upwards — larger celebrations add chefs and service staff to the same standard."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://mychef.id/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Private Dining Indonesia",
+              "item": "https://mychef.id/private-dining-indonesia"
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "slug": "healthy-meal-delivery-indonesia",
-    "title": "Healthy Meal Delivery Indonesia | Chef-Prepared Villa Food",
-    "description": "Gourmet healthy meal delivery and prep for Bali villas. Organic ingredients and nutrient-dense menus.",
-    "date": "2026-05-17"
+    "title": "Healthy Meal Delivery Bali | Chef-Prepared Meal Plans",
+    "description": "Healthy meal delivery in Bali & Jakarta: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.",
+    "date": "2026-05-17",
+    "h1": "Healthy Meal Delivery in Bali — Chef-Prepared, Not Factory-Made",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Healthy Meal Delivery & In-Villa Meal Prep",
+          "provider": {
+            "@type": "Organization",
+            "name": "myCHEF.id",
+            "url": "https://mychef.id",
+            "telephone": "+62 896-7407-2020",
+            "email": "bali@mychef.id"
+          },
+          "areaServed": [
+            {
+              "@type": "Place",
+              "name": "Bali"
+            },
+            {
+              "@type": "Place",
+              "name": "Jakarta"
+            }
+          ],
+          "description": "Chef-prepared healthy meal delivery and weekly in-villa meal prep in Bali and Jakarta: personalised menus, fresh local ingredients, dietary-exact cooking.",
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "IDR",
+            "price": "4500000",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "4500000",
+              "priceCurrency": "IDR",
+              "unitText": "per week for 2-4 people"
+            },
+            "description": "Weekly in-villa meal prep from IDR 4,500,000 per week"
+          },
+          "url": "https://mychef.id/healthy-meal-delivery-indonesia"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much does healthy meal delivery cost in Bali?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Weekly in-villa meal prep starts from IDR 4,500,000 per week for 2-4 people. One-off chef sessions start from IDR 1,350,000 with groceries billed at cost."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this meal delivery or cooking in the villa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Both. A chef can prep the week's meals fresh in your kitchen, or ready meals can be delivered to your villa or residence."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which areas are covered?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bali-wide including Canggu, Berawa, Seminyak, Sanur, Ubud and Uluwatu, plus Jakarta. No travel surcharge within Canggu-Berawa and Sanur."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can myCHEF follow macros, calories or a nutrition program?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Meals are regularly prepared to specific nutritional targets, working alongside your coach or program."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are vegan, gluten-free, halal and allergy requirements catered?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Dietary-exact cooking is the core of the service; menus are built around your requirements from day one."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is there a minimum commitment?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Weekly plans run week by week with no long subscription lock-ins. Most guests book for the length of their stay."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is this different from meal-prep subscription apps?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Subscription services batch-cook fixed menus in a central kitchen. myCHEF is a personal chef service: your menu, cooked fresh in your kitchen or delivered, adapted to you daily."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://mychef.id/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Healthy Meal Delivery Indonesia",
+              "item": "https://mychef.id/healthy-meal-delivery-indonesia"
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "slug": "chef-for-hire-indonesia",
-    "title": "Chef for Hire Indonesia | Private Chef Services",
-    "description": "Hire a vetted private or personal chef in Indonesia for one dinner, daily villa service, recurring meals, or full-time placement in Bali.",
-    "date": "2026-05-17"
+    "title": "Chef for Hire Indonesia | Private & Personal Chefs",
+    "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali & Jakarta. WhatsApp myCHEF.",
+    "date": "2026-05-17",
+    "h1": "Chef for Hire Indonesia — Private Chef Services",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "serviceType": "Private chef hire in Indonesia — one-off dinners, daily villa service, recurring personal chef, full-time placement",
+          "provider": {
+            "@id": "https://mychef.id/#business"
+          },
+          "areaServed": [
+            "Bali",
+            "Jakarta",
+            "Indonesia"
+          ],
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "IDR",
+            "lowPrice": "700000",
+            "highPrice": "8000000",
+            "description": "Dinners from IDR 700K pp; chef sessions from IDR 1.35M; weekly meal prep from IDR 4.5M/week; live-in placement from IDR 8M/month. Prices ++ (11% tax + 10% service)."
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Can I hire a chef for just one dinner in Indonesia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — one-off dinners, BBQs, birthdays and tasting menus are the most common booking. Send the date, location, guest count and preferred style."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you travel between islands or to remote villas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Within Bali and Jakarta travel is routine. Remote and inter-island assignments are confirmed individually with transport, accommodation and ingredient planning built into the quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are groceries included in the price?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fine-dining and event menus include ingredients. Time-based services bill groceries at cost with receipts and no markup. The written quote states which model applies."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How far in advance should I book a chef?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Earlier is better for holidays, large groups and multi-day service, but same-week and sometimes same-day bookings are often possible. WhatsApp replies arrive within 2 hours."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can the chef handle halal, vegan, allergies and kids' meals?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — share requirements before menu approval, including allergy severity and cross-contact concerns, and the menu is built around them at no extra charge."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if the chef can't make it on the day?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A verified replacement of equivalent calibre is dispatched within 2 hours, or you receive a 100% refund. Your event does not get cancelled."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://mychef.id/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Chef for Hire Indonesia",
+              "item": "https://mychef.id/chef-for-hire-indonesia"
+            }
+          ]
+        }
+      ]
+    }
   },
-  {
+{
     "slug": "proposal-dinner",
     "title": "Proposal Dinner Bali | Private Chef Proposal Experience",
     "description": "Plan the perfect proposal with a private chef dinner in your Bali villa — intimate, styled and unforgettable. Confidential planning. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
-  {
+{
     "slug": "honeymoon-chef",
     "title": "Honeymoon Private Chef Bali | Villa Dining for Couples",
     "description": "Private chef experiences for honeymooners in Bali: romantic breakfasts, sunset dinners and intimate in-villa hosting. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
-  {
+{
     "slug": "private-chef-breakfast-bali",
     "title": "Private Chef Breakfast Bali | Poolside Villa Service",
     "description": "Wake up to a chef-prepared breakfast in your Bali villa. Floating trays, fresh juices, and international spreads.",
     "date": "2026-05-17"
-  },
+  }
 ]

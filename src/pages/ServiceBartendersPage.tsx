@@ -225,7 +225,7 @@ export default function ServiceBartendersPage() {
       <TestimonialBlock
         testimonials={[
           { name: 'Tom & Lisa', location: 'Melbourne', quote: 'The bartender created a signature cocktail for our wedding. Guests are still talking about it six months later. Absolute professional.', rating: 5 },
-          { name: 'Corporate Team', location: 'Jakarta', quote: 'Hired two bartenders for our 80-person offsite. Service was seamless, cocktails were outstanding, and the bar looked incredible.', rating: 5 },
+          { name: 'Corporate Team', location: 'Nusa Dua', quote: 'Hired two bartenders for our 80-person offsite. Service was seamless, cocktails were outstanding, and the bar looked incredible.', rating: 5 },
           { name: 'The Patel Family', location: 'Mumbai', quote: 'Bartender for our villa reunion. Made amazing mocktails for the kids and proper cocktails for the adults. Everyone was happy.', rating: 5 },
         ]}
         title="What Clients Say"

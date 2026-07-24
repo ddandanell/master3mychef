@@ -93,15 +93,6 @@ export const JOURNAL_POSTS: JournalPost[] = [
     "excerpt": "Everything you need to know about catering a destination wedding in Bali—from menu design to cultural considerations."
   },
   {
-    "slug": "private-chef-jakarta-guide",
-    "title": "Private Chef Services in Jakarta: What to Expect in 2026",
-    "category": "travel",
-    "author": "myCHEF Team",
-    "date": "2026-05-20",
-    "readTime": 9,
-    "excerpt": "The complete guide to hiring a private chef in Jakarta—from Menteng estates to SCBD boardrooms."
-  },
-  {
     "slug": "rehearsal-dinner-planning-bali",
     "title": "Planning Your Bali Rehearsal Dinner: The Complete Guide",
     "category": "events",

@@ -19,7 +19,7 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Signature Dishes',
     title: '8 Iconic Indonesian Dishes — With the Stories Behind Them',
-    body: `<p>Indonesia spans 17,000 islands and 300 distinct ethnic groups, each with its own culinary tradition. These eight dishes represent the breadth of the archipelago — from Bali's ceremonial cooking to Javanese street food, West Sumatran slow braises to Jakarta's iconic salad.</p>
+    body: `<p>Indonesia spans 17,000 islands and 300 distinct ethnic groups, each with its own culinary tradition. These eight dishes represent the breadth of the archipelago — from Bali's ceremonial cooking to Javanese street food, West Sumatran slow braises to Java's iconic salad.</p>
 
     <p><strong>Nasi Goreng — Indonesia's National Dish</strong><br/>
     Every Indonesian household has its own nasi goreng. The dish is built on cold leftover rice — fresh rice steams and clumps in the wok — tossed over extreme heat with kecap manis (sweet soy sauce) that caramelises against the hot metal and gives the rice its characteristic dark, slightly sticky coating. The wok technique matters: the rice must contact the surface at high heat, not steam in sauce. A fried egg is placed on top, the yolk just set, the white crispy at the edges. Restaurant versions rarely taste like home-cooked nasi goreng because they cannot replicate the residual heat from a family wok that has never been washed — a surface seasoned by years of cooking. Our chefs bring that instinct. Every plate is finished with kerupuk (prawn crackers), sliced cucumber and a small dish of sambal.</p>
@@ -30,7 +30,7 @@ const SECTIONS = [
     <p><strong>Babi Guling — Bali's Ceremonial Suckling Pig</strong><br/>
     In a country that is 87% Muslim, Bali's Hindu-majority culture means pork is central to ceremonial cooking in a way found nowhere else in Indonesia. Babi guling — literally "rolling pig" — is rubbed inside the cavity and all over the skin with base wangi gede, a complex Balinese spice paste that includes turmeric, ginger, galangal, coriander, lemongrass and white pepper. It is then slow-roasted on a spit over wood or charcoal until the skin blisters into sheets of pale crackling. The obsession with the skin (kulit) is cultural — at a proper warung babi guling, the queue forms before opening and the kulit sells out first. We serve it with lawar (spiced minced meat and vegetables), steamed rice and sambal matah.</p>
 
-    <p><strong>Gado-Gado — Jakarta's Street Salad</strong><br/>
+    <p><strong>Gado-Gado — Java's Street Salad</strong><br/>
     Gado-gado is not a side dish — it is a complete meal of blanched vegetables (long beans, bean sprouts, cabbage, spinach), boiled egg, tofu, tempeh and compressed rice cakes, served under a peanut sauce made fresh from roasted peanuts ground with palm sugar, garlic, chilli, kaffir lime and tamarind. The difference between commercial peanut sauce and freshly made is not subtle — fresh sauce is aromatic, slightly chunky, with a complexity that no jarred version approaches. Our chefs roast and grind the peanuts to order. The dish lands at the table as a composed arrangement, the sauce poured tableside.</p>
 
     <p><strong>Rendang — West Sumatra's Slow-Braised Beef</strong><br/>
@@ -84,7 +84,7 @@ const SECTIONS = [
     The full Balinese ceremonial experience: sate lilit on lemongrass skewers over charcoal, a proper babi guling with kulit (crispy skin) and all accompaniments, nasi campur assembled with eight components, lawar (spiced minced meat salad), jamu shots (turmeric-ginger-tamarind wellness tonic) before eating, and es cendol to finish. This menu is designed around Bali's specific food culture — the dishes you would eat at a Balinese family ceremony, cooked with the same ingredients and techniques.</p>
 
     <p><strong>Indonesian Archipelago — IDR 700K/person</strong><br/>
-    A journey through the islands: West Sumatran rendang (4-hour slow braise), Jakarta's gado-gado with freshly ground peanut sauce, nasi goreng with fried egg, tempeh goreng (crispy fried tempeh with palm sugar glaze), mie goreng wok-fried to order, and soto ayam (Javanese chicken broth with turmeric, lime and crispy shallots). This menu shows the breadth of Indonesian cooking beyond Bali — six distinct regional dishes in one feast.</p>
+    A journey through the islands: West Sumatran rendang (4-hour slow braise), Java's gado-gado with freshly ground peanut sauce, nasi goreng with fried egg, tempeh goreng (crispy fried tempeh with palm sugar glaze), mie goreng wok-fried to order, and soto ayam (Javanese chicken broth with turmeric, lime and crispy shallots). This menu shows the breadth of Indonesian cooking beyond Bali — six distinct regional dishes in one feast.</p>
 
     <p><strong>Street Food Night — IDR 700K/person</strong><br/>
     Eight small plates served sharing-style, a live satay station grilling continuously, a sambal bar with four house sambals (matah, terasi, ijo, kecap), a wok station for nasi goreng and mie goreng cooked to order, and fresh young coconut drinks. This is the most social and interactive format — guests move between the satay station and their seats, the wok is in motion throughout, and the sambal bar encourages experimentation. Ideal for groups of 8–20.</p>`,

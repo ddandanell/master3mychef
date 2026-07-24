@@ -7,7 +7,7 @@ const SECTIONS: PageSection[] = [
     type: 'content',
     subtitle: 'Villa Manager Partnerships',
     title: 'Partner With myCHEF — Elevate Your Guest Experience and Earn Commission',
-    body: `<p>If you manage a villa, villa complex, or accommodation portfolio in Bali or Jakarta, partnering with myCHEF gives your guests access to the island\'s premium private chef and in-villa staffing service — while generating a consistent commission revenue stream for your business.</p>
+    body: `<p>If you manage a villa, villa complex, or accommodation portfolio in Bali, partnering with myCHEF gives your guests access to the island\'s premium private chef and in-villa staffing service — while generating a consistent commission revenue stream for your business.</p>
     <p>Our partnership programme is designed for villa managers who care about guest experience as much as we do. We are not a marketplace platform — we are an operations-focused service company with trained chefs, rigorous quality standards, and a team that coordinates directly with your property.</p>`,
   },
   {

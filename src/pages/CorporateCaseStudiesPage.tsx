@@ -145,7 +145,7 @@ const FAQS = [
   },
   {
     q: 'Do you travel to our villa or resort anywhere in Bali?',
-    a: 'Yes. We operate across Bali — Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, Jimbaran and beyond — as well as Jakarta. We handle ingredient sourcing and logistics for remote locations as part of the planning.',
+    a: 'Yes. We operate across Bali — Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, Jimbaran and beyond. We handle ingredient sourcing and logistics for remote locations as part of the planning.',
   },
 ]
 

@@ -90,7 +90,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         { question: 'Are groceries included when I hire a private chef?', answer: 'It depends on the service. Fine-dining and event packages may include ingredients. Time-based villa chef services normally bill groceries at cost with receipts and no markup. The written quote confirms the exact model.' },
         { question: 'Can a private chef handle allergies and special diets?', answer: 'Yes, when requirements are shared before menu approval. Tell myCHEF about allergies, cross-contact risks, religious requirements, children, pregnancy, and other dietary needs.' },
         { question: 'Can myCHEF find a full-time or live-in chef?', answer: 'Yes. Permanent roles use a placement process with a household brief, matched profiles, interviews, cooking trials, contract support, and ongoing follow-up.' },
-        { question: 'Where in Indonesia can I hire a myCHEF chef?', answer: 'Regular service is available across Bali and Jakarta. Assignments in Lombok, on yachts, at remote estates, and in other Indonesian locations are assessed individually based on schedule and logistics.' },
+        { question: 'Where in Indonesia can I hire a myCHEF chef?', answer: 'Regular service is available across Bali. Assignments in Lombok, on yachts, at remote estates, and in other Indonesian locations are assessed individually based on schedule and logistics.' },
       ]
     : [
         { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },

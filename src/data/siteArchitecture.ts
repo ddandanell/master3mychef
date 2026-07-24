@@ -97,7 +97,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       { slug: 'babi-guling', label: 'Babi Guling', h1: 'Traditional Babi Guling Catering', title: 'Babi Guling Catering Bali | Whole-Pig Roast — myCHEF', description: 'The ultimate Balinese celebration feast. Traditional whole-pig roast served at your villa for 10-50 guests.' },
       { slug: 'grazing-tables', label: 'Grazing Tables', h1: 'Styled Grazing Tables', title: 'Grazing Table Bali | Styled Event Platters — myCHEF', description: 'Artisan cheese, charcuterie, and fresh fruit spreads. Styled grazing tables for welcome drinks and poolside events.' },
       { slug: 'villa-catering', label: 'Villa Catering', h1: 'Catering for Villa Stays', title: 'Villa Catering Bali | Group & Family Dining — myCHEF', description: 'Reliable group catering for multi-day villa stays. Breakfast, lunch, and dinner plans for families and groups.' },
-      { slug: 'corporate-catering', label: 'Corporate', h1: 'Jakarta & Bali Corporate Catering', title: 'Corporate Catering Bali | Business Event Hospitality — myCHEF', description: 'Professional catering for offsites, boardroom dinners, and conferences. Tax invoices (NPWP) and executive service.' },
+      { slug: 'corporate-catering', label: 'Corporate', h1: 'Bali Corporate Catering', title: 'Corporate Catering Bali | Business Event Hospitality — myCHEF', description: 'Professional catering for offsites, boardroom dinners, and conferences. Tax invoices (NPWP) and executive service.' },
       { slug: 'retreat-catering', label: 'Retreats', h1: 'Wellness & Yoga Retreat Catering', title: 'Retreat Catering Bali | Healthy Group Meal Plans — myCHEF', description: 'Plant-forward, nutrient-dense menus for multi-day retreats. Specializing in vegan, raw, and gluten-free diets.' },
       { slug: 'floating-breakfast', label: 'Floating Breakfast', h1: 'Bali Floating Breakfast Service', title: 'Floating Breakfast Bali | Private Villa Pool Service — myCHEF', description: 'The signature Bali villa ritual. Chef-prepared breakfast styled and served on a floating tray in your pool.' },
     ],
@@ -194,15 +194,6 @@ export type LocationSlug =
   | 'padang-bai'
   | 'ungasan'
   | 'pecatu'
-  | 'jakarta'
-  | 'menteng'
-  | 'kemang'
-  | 'scbd'
-  | 'pondok-indah'
-  | 'bsd'
-  | 'surabaya'
-  | 'bandung'
-  | 'yogyakarta'
 
 export interface LocationPage {
   slug: LocationSlug
@@ -414,78 +405,6 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
     description: 'Private chef services in Pecatu. Sunset BBQs and recovery brunches.',
     intro: 'In Pecatu, myCHEF provides the perfect culinary accompaniment to a day on the waves, with high-protein brunches and celebratory sunset dinners.',
   },
-  jakarta: {
-    slug: 'jakarta',
-    label: 'Jakarta',
-    h1: 'Private Chef Jakarta — Urban Fine Dining & Catering',
-    title: 'Private Chef Jakarta | Urban Fine Dining — myCHEF',
-    description: 'Premium private chef and corporate catering in Jakarta. Michelin-trained standards for residences and offices.',
-    intro: 'myCHEF brings our signature Bali standards to Jakarta, serving Menteng, Kemang, SCBD, and Pondok Indah with discreet, professional hospitality.',
-  },
-  menteng: {
-    slug: 'menteng',
-    label: 'Menteng',
-    h1: 'Private Chef Menteng — Diplomatic & Estate Dining',
-    title: 'Private Chef Menteng | Diplomatic & Estate Dining — myCHEF',
-    description: 'Specialized private chef services for Jakarta’s premier residential district.',
-    intro: 'In Menteng, we deliver high-security, discreet service tailored to embassy hospitality and elite family residences.',
-  },
-  kemang: {
-    slug: 'kemang',
-    label: 'Kemang',
-    h1: 'Private Chef Kemang — Social & Family Catering',
-    title: 'Private Chef Kemang | Social & Family Catering — myCHEF',
-    description: 'Sophisticated private dining for Kemang’s international and creative community.',
-    intro: 'Kemang’s social energy calls for flexible, high-quality catering. We provide everything from intimate dinners to larger social gatherings.',
-  },
-  scbd: {
-    slug: 'scbd',
-    label: 'SCBD',
-    h1: 'Private Chef SCBD — Executive Corporate Dining',
-    title: 'Private Chef SCBD | Executive Corporate Dining — myCHEF',
-    description: 'Premium corporate catering and boardroom private dining in Jakarta’s heart.',
-    intro: 'Serving SCBD’s high-rises, we provide seamless executive lunches and corporate hospitality with a focus on precision and timing.',
-  },
-  'pondok-indah': {
-    slug: 'pondok-indah',
-    label: 'Pondok Indah',
-    h1: 'Private Chef Pondok Indah — Premier Family Estate Dining',
-    title: 'Private Chef Pondok Indah | Family Estate Dining — myCHEF',
-    description: 'Exclusive private chef services for Jakarta’s iconic family estates.',
-    intro: 'We specialize in multi-generational family dining and milestone celebrations inside Pondok Indah’s premier residences.',
-  },
-  bsd: {
-    slug: 'bsd',
-    label: 'BSD City',
-    h1: 'Private Chef BSD City — Modern Residential Dining',
-    title: 'Private Chef BSD City | Modern Residential Dining — myCHEF',
-    description: 'Convenient private dining and group catering for the hubs of BSD.',
-    intro: 'myCHEF serves the modern residences and offices of BSD with fresh, reliable private chef services.',
-  },
-  surabaya: {
-    slug: 'surabaya',
-    label: 'Surabaya',
-    h1: 'Private Chef Surabaya — Indonesia\'s Second City',
-    title: 'Private Chef Surabaya | Corporate & Residential Dining — myCHEF',
-    description: 'Premium private chef and corporate catering in Surabaya. Michelin-trained chefs for business events and expat families.',
-    intro: 'Surabaya, Indonesia\'s bustling second city and East Java\'s economic heart, demands the same professional hospitality standards as Jakarta. myCHEF brings Michelin-trained private chefs to serve corporate clients, expat families, and high-net-worth residents across Surabaya\'s business and residential districts.',
-  },
-  bandung: {
-    slug: 'bandung',
-    label: 'Bandung',
-    h1: 'Private Chef Bandung — Weekend Villa & Estate Dining',
-    title: 'Private Chef Bandung | Villa Dining & Retreats — myCHEF',
-    description: 'Private chef services in Bandung for weekend villas, highland estates, and corporate retreats.',
-    intro: 'Just three hours from Jakarta, Bandung\'s cool highland climate has made it Indonesia\'s premier weekend escape destination. Our private chef service caters to luxury villa stays, family estate gatherings, and corporate offsites in Dago, Lembang, and Bandung\'s scenic highland areas.',
-  },
-  yogyakarta: {
-    slug: 'yogyakarta',
-    label: 'Yogyakarta',
-    h1: 'Private Chef Yogyakarta — Cultural & Heritage Dining',
-    title: 'Private Chef Yogyakarta | Cultural & Wellness Catering — myCHEF',
-    description: 'Private chef and retreat catering in Yogyakarta. Authentic Javanese cuisine and wellness-focused menus.',
-    intro: 'Yogyakarta, Java\'s cultural capital, attracts travelers seeking authentic Indonesian heritage and spiritual wellness. myCHEF provides private chef services for heritage estate stays, yoga retreats, and cultural tour groups, specializing in traditional Javanese court cuisine and modern wellness menus.',
-  },
 }
 
 /**
@@ -495,7 +414,7 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
  * the /locations routes in App.tsx.
  */
 export const LOCATION_PAGE_SLUGS: ReadonlySet<string> = new Set([
-  'bukit', 'canggu', 'denpasar', 'jakarta', 'jimbaran', 'kuta',
+  'bukit', 'canggu', 'denpasar', 'jimbaran', 'kuta',
   'nusa-dua', 'pererenan', 'sanur', 'seminyak', 'ubud', 'uluwatu',
 ])
 export const hasLocationPage = (slug: string): boolean => LOCATION_PAGE_SLUGS.has(slug)

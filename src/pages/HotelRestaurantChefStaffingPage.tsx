@@ -66,7 +66,7 @@ Our network covers chefs with backgrounds in international luxury hotels, Michel
 
 **International talent:** Our network includes chefs who relocated to Bali from Europe, Australia, Japan, the United States, and across Asia. International culinary talent looking for the Bali lifestyle is abundant; our job is to match that talent with the right F&B operation.
 
-**Indonesian culinary talent:** Balinese and Indonesian chefs with professional training -- Hotel and Tourism School graduates, chefs who have worked through the ranks at international hotel properties in Bali, Jakarta, and abroad. The island has a deep pool of trained professional Indonesian culinary talent.
+**Indonesian culinary talent:** Balinese and Indonesian chefs with professional training -- Hotel and Tourism School graduates, chefs who have worked through the ranks at international hotel properties in Bali and abroad. The island has a deep pool of trained professional Indonesian culinary talent.
 
 **Specialist networks:** For specific requirements -- a certified sushi chef, a chocolatier, a pastry chef with hotel experience -- we go beyond our active network to source from the broader professional hospitality community across Indonesia.`,
   },
@@ -127,7 +127,6 @@ const relatedPages = [
   { label: 'Villa Staff Bali', href: '/staffing/villa-staff', desc: 'Full villa staff hiring guide' },
   { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Event staffing for Bali functions' },
   { label: 'Staffing', href: '/staffing', desc: 'myCHEF staffing and placement services' },
-  { label: 'Private Chef Jakarta', href: '/journal/private-chef-jakarta-guide', desc: 'Private chef and staffing in Jakarta' },
 ]
 
 export default function HotelRestaurantChefStaffingPage() {

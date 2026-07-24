@@ -76,7 +76,7 @@ const FAQS = [
   { q: 'What cuisines can your chefs cook?', a: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal, kosher — we match cuisine to your preference.' },
   { q: 'Can the chef cook for events as well?', a: 'Yes. Full-time and executive placements include event cooking. Part-time chefs can be booked for events at additional rates.' },
   { q: 'What areas do you cover?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'Do you place chefs outside Bali?', a: 'Yes. We have placed chefs in Jakarta, Lombok, and on private yachts. International placements available on request.' },
+  { q: 'Do you place chefs outside Bali?', a: 'Yes. We have placed chefs in Lombok and on private yachts. International placements available on request.' },
   { q: 'What is your placement fee?', a: 'One month of the chef salary as a placement fee. This covers sourcing, trials, contract, and 6 months of ongoing support.' },
 ]
 

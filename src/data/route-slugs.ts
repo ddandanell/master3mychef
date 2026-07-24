@@ -29,7 +29,6 @@ export const LANDING_PAGE_SLUGS: string[] = [
   'private-chef-breakfast-bali',
   'private-chef-cost-per-day-bali',
   'private-chef-cost-bali',
-  'private-chef-menteng',
 ]
 
 export const GUIDE_SLUGS: string[] = [

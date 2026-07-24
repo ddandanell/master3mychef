@@ -31,7 +31,7 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
 <section aria-labelledby="chef-hire-overview">
   <h2 id="chef-hire-overview">Chef for Hire in Indonesia: A Complete Overview</h2>
   <p>A professional chef gives you more than food preparation. The chef can plan menus around your tastes, shop or coordinate ingredients, manage timing, cook in your kitchen, present the meal, and leave the working area clean. For longer arrangements, the role can also include inventory control, school lunches, nutritional planning, vendor coordination, kitchen organisation, and cooking for guests or events.</p>
-  <p>myCHEF helps clients hire vetted chefs for villas, private residences, holiday homes, retreats, yachts, and corporate hospitality. Our strongest active coverage is in Bali and Jakarta. Placements in Lombok and other Indonesian locations can be considered after we confirm the schedule, travel, accommodation, and local sourcing requirements.</p>
+  <p>myCHEF helps clients hire vetted chefs for villas, private residences, holiday homes, retreats, yachts, and corporate hospitality. Our strongest active coverage is in Bali. Placements in Lombok and other Indonesian locations can be considered after we confirm the schedule, travel, accommodation, and local sourcing requirements.</p>
   <div class="not-prose my-10 rounded-[28px] bg-[#1A1A1A] p-7 text-white md:p-9">
     <p class="text-xs font-bold uppercase tracking-[3px] text-[#D4B43A]">Important distinction</p>
     <h3 class="mt-3 font-playfair text-3xl">Booking a chef is not the same as hiring an employee</h3>
@@ -169,7 +169,6 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
 <section aria-labelledby="chef-coverage">
   <h2 id="chef-coverage">Where Can You Hire a myCHEF Chef?</h2>
   <p>In Bali, regular service areas include Seminyak, Canggu, Pererenan, Ubud, Sanur, Uluwatu, Jimbaran, Nusa Dua, Denpasar, and surrounding villa areas. Explore all <a href="/locations">Bali service locations</a> to find the most relevant local page.</p>
-  <p>In Jakarta, we support private residences, executive households, and events in areas including Menteng, Kemang, Pondok Indah, SCBD, and other central districts. Visit the <a href="/locations/jakarta">private chef Jakarta page</a> for city-specific information.</p>
   <p>For Lombok, yachts, remote estates, and other Indonesian destinations, availability is confirmed individually. Longer travel can require transport, accommodation, an adjusted schedule, and earlier ingredient planning. Send the precise location rather than only the island or city name, so we can assess the assignment correctly.</p>
 </section>
 

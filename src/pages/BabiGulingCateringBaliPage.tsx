@@ -119,7 +119,7 @@ const faqs = [
   {
     question: 'Do you serve babi guling outside of Bali?',
     answer:
-      'Our babi guling catering currently operates within Bali (including Ubud, Seminyak, Canggu, Uluwatu, Nusa Dua, and Sanur). For events in Jakarta, Lombok, or other islands, contact us to discuss feasibility — we can sometimes coordinate with specialist partners in other locations.',
+      'Our babi guling catering currently operates within Bali (including Ubud, Seminyak, Canggu, Uluwatu, Nusa Dua, and Sanur). For events in Lombok or other islands, contact us to discuss feasibility — we can sometimes coordinate with specialist partners in other locations.',
   },
 ]
 

@@ -26,8 +26,6 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
 
   const top = TOP_CITIES.find((c) => c.slug === slug)
   const locationPage = kind === 'area' ? getLocationBySlug(slug) : undefined
-  const isJakarta = ['jakarta', 'menteng', 'kemang', 'scbd', 'pondok-indah', 'bsd'].includes(slug)
-  const region = isJakarta ? 'Jakarta' : 'Bali'
   const title = locationPage?.h1 ?? `Private Chef in ${entry.name}, Bali`
   const description = locationPage?.description ?? (
     top
@@ -65,38 +63,9 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
     },
   }
 
-  const jakartaLocalBusinessOverrides = isJakarta ? {
-    '@id': `https://mychef.id/locations/${slug}`,
-    name: `myCHEF.id ${entry.name}`,
-    description: `Private chef services in ${entry.name} — villa dinners, corporate events, and household staffing.`,
-    url: `https://mychef.id/locations/${slug}`,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: entry.name,
-      addressRegion: 'DKI Jakarta',
-      addressCountry: 'ID',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: -6.2088,
-      longitude: 106.8456,
-    },
-    areaServed: [
-      { '@type': 'City', name: 'Jakarta' },
-      { '@type': 'Place', name: 'Menteng' },
-      { '@type': 'Place', name: 'Kemang' },
-      { '@type': 'Place', name: 'SCBD' },
-      { '@type': 'Place', name: 'Pondok Indah' },
-    ],
-    priceRange: 'IDR 1,500,000 – IDR 8,000,000',
-    image: 'https://mychef.id/og-image.webp',
-  } : {
-    areaServed: { '@type': 'Place', name: `${entry.name}, Bali` },
-  }
-
   const localBusiness = {
     ...localBusinessSchema,
-    ...jakartaLocalBusinessOverrides,
+    areaServed: { '@type': 'Place', name: `${entry.name}, Bali` },
   }
 
   const areaFaq = faqPageSchema([
@@ -323,14 +292,14 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
       {/* Cross-city linking — siblings in the same region */}
       <section className="px-8 py-16 bg-[#FAFAF8]">
         <div className="max-w-[960px] mx-auto">
-          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-2">Explore {region}</p>
+          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-2">Explore Bali</p>
           <h2 className="font-playfair text-3xl mb-6">We cook across every primary region</h2>
           <p className="text-[#4A4745] mb-6 max-w-[640px]">
-            myCHEF serves the most-visited areas in {region}. Browse the location closest to where you are staying —
+            myCHEF serves the most-visited areas in Bali. Browse the location closest to where you are staying —
             same team, same standards, same WhatsApp number.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {TOP_CITIES.filter((c) => c.slug !== slug && hasLocationPage(c.slug) && (isJakarta ? ['jakarta', 'menteng', 'kemang', 'scbd', 'pondok-indah'].includes(c.slug) : !['jakarta', 'menteng', 'kemang', 'scbd', 'pondok-indah'].includes(c.slug))).map((c) => (
+            {TOP_CITIES.filter((c) => c.slug !== slug && hasLocationPage(c.slug)).map((c) => (
               <Link
                 key={c.slug}
                 to={`/locations/${c.slug}`}
@@ -341,7 +310,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
             ))}
           </div>
           <p className="text-xs text-[#8A8785] mt-6">
-            See <Link to="/locations" className="underline hover:text-[#C5A028]">our full {region} coverage map</Link>.
+            See <Link to="/locations" className="underline hover:text-[#C5A028]">our full Bali coverage map</Link>.
           </p>
         </div>
       </section>

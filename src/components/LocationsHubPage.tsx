@@ -105,13 +105,13 @@ export default function LocationsHubPage() {
             <Breadcrumb items={[{ label: 'Locations' }]} theme="dark" className="px-0 pt-0 pb-8" />
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF Coverage</p>
             <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8">
-              Private Chef & Hospitality<br /><span className="italic">Across Bali & Jakarta</span>
+              Private Chef & Hospitality<br /><span className="italic">Across Bali</span>
             </h1>
             <p className="text-lg md:text-xl text-white/[85%] leading-relaxed mb-10 max-w-[600px]">
-              From Seminyak's beachfront estates to Menteng's diplomatic residences — myCHEF serves every major region with vetted teams and local operations.
+              From Seminyak's beachfront estates to Ubud's jungle retreats — myCHEF serves every major Bali region with vetted teams and local operations.
             </p>
             <div className="flex flex-wrap gap-3">
-              {['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Jakarta'].map((loc) => (
+              {['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur'].map((loc) => (
                 <span key={loc} className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-[11px] font-bold uppercase tracking-wider px-4 py-2 rounded-full border border-white/10">
                   <MapPin className="w-3 h-3 text-[#C5A028]" /> {loc}
                 </span>
@@ -181,50 +181,6 @@ export default function LocationsHubPage() {
                 </Link>
               )
             })}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Beyond Bali</p>
-              <h2 className="font-playfair text-3xl md:text-5xl mb-6">Jakarta Expansion</h2>
-              <p className="text-lg text-white/70 mb-8 leading-relaxed">
-                myCHEF has expanded to Indonesia's capital, bringing the same Michelin-trained standards to private residences and corporate suites in Jakarta.
-              </p>
-              <div className="space-y-4">
-                <Link
-                  to="/locations/jakarta"
-                  className="flex items-center justify-between p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
-                >
-                  <div>
-                    <h3 className="font-playfair text-xl mb-1">Private Chef Jakarta</h3>
-                    <p className="text-sm text-white/50">Full-service fine dining and weekly meal prep.</p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-[#C5A028] transition-transform group-hover:translate-x-1" />
-                </Link>
-                <Link
-                  to="/private-chef-menteng"
-                  className="flex items-center justify-between p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
-                >
-                  <div>
-                    <h3 className="font-playfair text-xl mb-1">Chef in Menteng</h3>
-                    <p className="text-sm text-white/50">Discreet service for Jakarta's primary diplomatic district.</p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-[#C5A028] transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
-            </div>
-            <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
-              <OptimizedImage
-                src="/generated/mychef-location-bali-water-sunset.webp"
-                alt="Sunset over Bali waters — myCHEF private chef service areas across the island"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            </div>
           </div>
         </div>
       </section>

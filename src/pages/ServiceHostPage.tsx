@@ -225,7 +225,7 @@ export default function ServiceHostPage() {
         testimonials={[
           { name: 'Wedding Couple', location: 'Melbourne', quote: 'Our host team of 4 managed 120 guests flawlessly. Registration, seating, timeline — everything ran like clockwork. We did not worry about a thing.', rating: 5 },
           { name: 'Corporate Event Manager', location: 'Singapore', quote: 'Hired 6 hosts for our annual dinner. Bilingual team, professional, and incredibly organised. Guest feedback was outstanding.', rating: 5 },
-          { name: 'Private Party Host', location: 'Jakarta', quote: 'Two hosts for our 50th birthday. They greeted every guest by name, managed the flow, and kept the evening on track. Essential service.', rating: 5 },
+          { name: 'Private Party Host', location: 'Canggu', quote: 'Two hosts for our 50th birthday. They greeted every guest by name, managed the flow, and kept the evening on track. Essential service.', rating: 5 },
         ]}
         title="What Clients Say"
         subtitle="Real reviews from events across Bali."

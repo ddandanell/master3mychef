@@ -80,7 +80,7 @@ const FAQS = [
   },
   {
     question: "Is a household chef available outside of Canggu and Seminyak?",
-    answer: "Yes. We place household chefs across Bali including Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, Berawa, Pererenan, and the wider expat belt. We also operate in Jakarta.",
+    answer: "Yes. We place household chefs across Bali including Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, Berawa, Pererenan, and the wider expat belt.",
   },
 ]
 

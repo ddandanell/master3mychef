@@ -32,7 +32,7 @@ export default function Footer() {
               </h3>
             </Link>
             <p className="text-base text-white/70 leading-relaxed mb-6">
-              Private chef, villa catering, and full-service events across Bali & Jakarta. Same-day WhatsApp confirmation.
+              Private chef, villa catering, and full-service events across Bali. Same-day WhatsApp confirmation.
             </p>
             <div className="flex items-center gap-4">
               <a
@@ -229,11 +229,6 @@ export default function Footer() {
                   Chef for Hire Indonesia
                 </Link>
               </li>
-              <li>
-                <Link to="/private-chef-menteng" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
-                  Private Chef Menteng (Jakarta)
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -304,36 +299,9 @@ export default function Footer() {
               {showAllLocations && (
                 <>
                   <li className="pt-2 border-t border-white/5">
-                    <Link
-                      to="/locations/jakarta"
-                      className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
-                    >
-                      Jakarta
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/locations/jakarta"
-                      className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
-                    >
-                      Surabaya
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/locations/jakarta"
-                      className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
-                    >
-                      Bandung
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/locations/jakarta"
-                      className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
-                    >
-                      Yogyakarta
-                    </Link>
+                    <span className="text-sm text-white/40">
+                      All Bali areas served
+                    </span>
                   </li>
                 </>
               )}

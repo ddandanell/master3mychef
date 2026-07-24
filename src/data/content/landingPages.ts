@@ -747,7 +747,7 @@ export const LANDING_PAGES: ContentEntry[] = [
 {
     "slug": "private-chef-menteng",
     "title": "Private Chef Menteng | Diplomatic District Dining | myCHEF",
-    "description": "Discreet private chef services for Jakarta's Menteng district — elite residential hospitality by Michelin-trained chefs. WhatsApp myCHEF.",
+    "description": "Discreet private chef services for Jakarta’s Menteng district — elite residential hospitality by Michelin-trained chefs. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Private Chef in Menteng, Jakarta"
 }

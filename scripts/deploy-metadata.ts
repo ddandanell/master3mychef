@@ -374,8 +374,12 @@ function main() {
     newBody = `${prefix}${inserted}\n}${suffix}`
   }
 
-  const newFile =
+  let newFile =
     pageMetaText.slice(0, bodyStart) + newBody + pageMetaText.slice(bodyEnd)
+
+  // The replacement preserves the original trailing comma after each entry;
+  // formatEntry also appends one. Collapse any doubled commas that result.
+  newFile = newFile.replace(/},\s*,/g, '},')
 
   fs.writeFileSync(PAGE_META_PATH, newFile, 'utf8')
 

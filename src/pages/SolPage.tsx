@@ -2,12 +2,12 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, Utensils, Star, MessageCircle, Phone, ShoppingBag, Sparkles } from 'lucide-react'
 import BookingForm from '@/components/BookingForm'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithOfferSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const HOW_IT_WORKS = [
-  { step: '01', title: 'Message Daniel on WhatsApp', desc: 'Tell us your villa, dates, and how many people. Most replies within the hour.', icon: MessageCircle },
+  { step: '01', title: 'Message Us on WhatsApp', desc: 'Tell us your villa, dates, and how many people. We reply within 2 hours.', icon: MessageCircle },
   { step: '02', title: 'We Design Your Meal Plan', desc: 'Menus tailored to your preferences, dietary needs, and schedule. You approve everything.', icon: Utensils },
   { step: '03', title: 'Chef Shops & Cooks Fresh', desc: 'Groceries sourced that morning. Chef arrives, cooks, serves, and handles everything.', icon: ShoppingBag },
   { step: '04', title: 'You Relax. We Clean.', desc: 'No grocery runs. No dishes. No planning. Just great food, every day of your stay.', icon: Sparkles },
@@ -37,13 +37,13 @@ const FAQS = [
   { q: 'Can the chef cook for dietary restrictions?', a: 'Absolutely. Gluten-free, vegan, halal, keto, allergies — our chefs are trained for all dietary needs. No extra charge.' },
   { q: 'Do I need to buy groceries?', a: 'No. Your chef shops for everything and brings receipts. You only pay what the market charges.' },
   { q: 'Will the chef use my kitchen equipment?', a: 'Yes, your kitchen. We bring any specialized tools we need. We have worked in every type of villa kitchen.' },
-  { q: 'Can I request specific dishes?', a: 'Of course. Before your stay, Daniel will ask about your favorites, allergies, and must-haves. Every menu is customized.' },
+  { q: 'Can I request specific dishes?', a: 'Of course. Before your stay, your chef will ask about your favorites, allergies, and must-haves. Every menu is customized.' },
   { q: 'What if I want to eat out one night?', a: 'No problem. You only pay for the days and meals you use. Flexibility is the whole point.' },
   { q: 'How far in advance should I book?', a: '3+ days for villa chef. For peak season (July–August, December), 2+ weeks is recommended.' },
 ]
 
 const TESTIMONIALS = [
-  { name: 'The Chen Family', location: 'Singapore', text: 'Having Daniel as our villa chef changed our entire holiday. The kids looked forward to every meal. We did not cook once, shop once, or clean once. Pure bliss.' },
+  { name: 'The Chen Family', location: 'Singapore', text: 'Having a dedicated villa chef changed our entire holiday. The kids looked forward to every meal. We did not cook once, shop once, or clean once. Pure bliss.' },
   { name: 'Marco & Elena', location: 'Milan', text: 'We came for a week and extended to ten days just because of the food. Fresh, healthy, and always surprising. It felt like having a friend who happens to be an incredible chef.' },
 ]
 
@@ -103,7 +103,7 @@ export default function SolPage() {
         description={getPageMeta('villa-chef').description}
         canonical={getPageMeta('villa-chef').canonical}
         ogImage={getPageMeta('villa-chef').ogImage}
-        jsonLd={[serviceWithOfferSchema({ name: 'Villa Chef Bali', description: getPageMeta('villa-chef').description, url: getPageMeta('villa-chef').canonical, price: '600000', unitText: 'per hour' }), breadcrumbSchema('Villa Chef', getPageMeta('villa-chef').canonical), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={[serviceWithAggregateOfferSchema({ name: 'Villa Chef Bali', description: getPageMeta('villa-chef').description, url: getPageMeta('villa-chef').canonical, lowPrice: '600000', highPrice: '1500000', priceCurrency: 'IDR', unitText: 'per hour' }), breadcrumbSchema('Villa Chef', getPageMeta('villa-chef').canonical), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -121,10 +121,10 @@ export default function SolPage() {
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="sol-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Private Villa Dining</p>
           <h1 className="sol-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 " style={{ fontFamily: "'Playfair Display', serif" }}>
-            Your Private Chef<br /><span className="italic">for Everyday Villa Dining</span>
+            Your Villa Chef<br /><span className="italic">for Everyday Dining in Bali</span>
           </h1>
           <p className="sol-hero-sub text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
-            This page is for couples, families, and villa guests who want breakfast, lunch, or dinner cooked in their villa. Best for 1–4 guests and longer stays — not parties, weddings, or large catered events.
+            The best part of a Bali villa stay should not be the daily logistics of eating. A villa chef changes that: breakfast appears after your swim, lunch when the kids are hungry, dinner when the light turns golden — all cooked fresh in your kitchen, every day of your stay, with the shopping, cooking and cleaning completely handled. (Hosting a party or event for 10+ guests? That's our <Link to="/events" className="underline hover:text-[#C5A028]">events &amp; catering</Link> team.)
           </p>
           <div className="sol-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="sol-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -139,10 +139,10 @@ export default function SolPage() {
               Not sure which service?
             </p>
             <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
-              Choose <span className="font-semibold text-white">Private Villa Dining</span> if you want a chef dedicated to your villa stay, daily meals, or an intimate dinner at home. Choose Events & Catering if you are hosting 5+ guests, a celebration, or need buffet, BBQ, plated service, or wedding-style setup.
+              Daily villa dining is designed for everyday meals for up to about 10 guests. For celebrations, BBQs and events, our <Link to="/events" className="font-semibold text-white hover:text-[#C5A028]">events &amp; catering team</Link> is the right fit.
             </p>
-            <Link to="/catering" className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
-              View Events & Catering →
+            <Link to="/events" className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+              Explore events &amp; catering →
             </Link>
           </div>
         </div>
@@ -242,14 +242,14 @@ export default function SolPage() {
         </div>
       </section>
 
-      {/* Chef */}
+      {/* What a Villa Chef Does */}
       <section id="team" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FFFFFF' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden max-w-[75%] mx-auto">
               <img
                 src="/generated/mychef-finedining-bali-sol-chef-portrait.webp"
-                alt="Chef Daniel — myCHEF private villa chef for daily dining in Bali"
+                alt="myCHEF villa chef preparing a family meal in a Bali villa kitchen"
                 width={800}
                 height={1000}
                 className="w-full h-full object-cover"
@@ -257,17 +257,17 @@ export default function SolPage() {
                 decoding="async" />
             </div>
             <div>
-              <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Your Chef</p>
-              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Chef <span className="italic">Daniel</span></h2>
+              <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Daily Service</p>
+              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>What a Villa Chef Does</h2>
               <div className="w-12 h-[2px] bg-[#6B8E5A] mb-8" />
               <p className="mb-6 leading-relaxed" style={{ color: '#8A7B6B' }}>
-                Daniel has been a private villa chef in Bali for 12 years. He knows every market, every villa kitchen, and exactly how to make a family feel at home.
+                Your chef is dedicated to your villa for the hours you book. They plan menus around your tastes, shop fresh each morning, cook in your kitchen, serve at your table, and leave the kitchen spotless after every meal.
               </p>
               <p className="mb-8 leading-relaxed" style={{ color: '#8A7B6B' }}>
-                His team of 6 rotating chefs covers Seminyak, Canggu, Ubud, Uluwatu, and Sanur. Every chef is trained in hygiene, presentation, and the art of invisible service.
+                You approve every menu in advance — dietary needs, allergies, kids' favourites and must-have dishes included at no extra charge. It is everyday dining, done beautifully, by a vetted myCHEF team member.
               </p>
               <div className="space-y-3">
-                {['12 years villa chef experience', '6-chef rotating team', 'All dietary requirements accommodated', 'Groceries sourced fresh daily'].map((item) => (
+                {['Dedicated chef for your villa stay', 'Fresh daily shopping with receipts', 'All dietary requirements accommodated', 'Groceries billed at cost — no markup'].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <Check className="w-4 h-4 text-[#6B8E5A]" />
                     <span className="text-sm" style={{ color: '#2C2419' }}>{item}</span>
@@ -332,12 +332,12 @@ export default function SolPage() {
           <div className="text-center mb-16">
             <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Frequently Asked</h2>
-            <p style={{ color: '#8A7B6B' }}>Still unsure? Message Daniel on WhatsApp — he responds within the hour.</p>
+            <p style={{ color: '#8A7B6B' }}>Still unsure? Message us on WhatsApp — we reply within 2 hours.</p>
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
             <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="sol-testimonials" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
-              <MessageCircle className="w-4 h-4" /> Ask Daniel on WhatsApp
+              <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
             </a>
           </div>
         </div>
@@ -352,7 +352,7 @@ export default function SolPage() {
               <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Start Your<br />Effortless Stay</h2>
               <div className="w-12 h-[2px] bg-[#6B8E5A] mb-8" />
               <p className="mb-8 leading-relaxed" style={{ color: '#8A7B6B' }}>
-                Daniel will match you with the perfect chef for your villa and dates. Most bookings confirmed within 2 hours.
+                Send your villa, dates and how many people are eating. We will match the right chef and confirm your plan — most bookings are confirmed within 2 hours.
               </p>
               <div className="space-y-4 mb-8">
                 {[

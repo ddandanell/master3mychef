@@ -28,11 +28,11 @@ const SITE = 'https://mychef.id'
 export const PAGE_META: Record<string, PageMeta> = {
   home: {
     path: '/',
-    title: 'Private Chef Bali | Dining, Catering & Events — myCHEF',
+    title: 'Private Chef Bali | Michelin-Trained Villa Dining & Events',
     description:
-      'Hire a private chef in Bali for villa dining, catering & events. Michelin-trained team, all-inclusive pricing, 560+ villas served. Book via WhatsApp.',
+      'Hire a private chef in Bali for villa dining, BBQs, weddings & events. Michelin-trained team, 560+ villas served, transparent pricing. WhatsApp myCHEF.',
     canonical: `${SITE}/`,
-    h1: 'A Michelin-Trained Private Chef, in Your Bali Villa.',
+    h1: 'Private Chef in Bali — Your Villa. Our Kitchen.',
     ogImage: `${SITE}/hero-home.webp`,
   },
 
@@ -68,11 +68,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'villa-chef': {
     path: '/villa-chef',
-    title: 'Private Chef Bali Villa | Michelin-Trained Dining',
+    title: 'Villa Chef Bali | Daily Chef Service for Your Stay | myCHEF',
     description:
-      'Hire a private chef for your Bali villa: ingredients, service & Michelin-trained standards included. 560+ villas served. WhatsApp to check availability.',
+      'A dedicated villa chef in Bali for breakfast, lunch & dinner every day of your stay. Groceries at cost, from IDR 600K/hour. WhatsApp myCHEF.',
     canonical: `${SITE}/villa-chef`,
-    h1: 'Private Chef in Bali',
+    h1: 'Your Villa Chef for Everyday Dining in Bali',
     ogImage: `${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`,
   },
 

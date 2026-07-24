@@ -6,25 +6,22 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   breadcrumbSchema, offerSchema,
-  faqPageSchema, detailedServiceSchema, howToSchema, serviceWithOfferSchema,
+  faqPageSchema, detailedServiceSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
-import { buildWhatsAppUrl } from '@/lib/whatsapp'
-import { siteFacts } from '@/data/siteFacts'
-
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
-const WA_LINK = buildWhatsAppUrl({ serviceName: 'a private chef in Bali', intent: 'pricing and availability' })
+const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20check%20availability%20for%20a%20private%20chef%20fine-dining%20evening.%20Date%3A%20%20Guests%3A%20%20Villa%3A%20'
 
 const HOW_IT_WORKS = [
-  { step: '01', title: 'Message Sofia on WhatsApp', body: 'Tell us your date, villa location, guest count, and menu preference. We reply within 1 hour.' },
-  { step: '02', title: 'Choose your menu', body: 'Mediterranean Sea (IDR 2.2M++) or Wagyu Experience (IDR 2.4M++). Both include full grocery sourcing.' },
-  { step: '03', title: 'We arrive 3 hours early', body: 'A team of 6–10 professionals sets up your dining experience while you relax elsewhere in the villa.' },
-  { step: '04', title: 'You dine. We clean.', body: 'The meal, the service, the cleanup. You walk back into a spotless kitchen.' },
+  { step: '01', title: 'Message the team on WhatsApp', body: 'Tell us your date, villa, guest count, and menu preference. We reply within 2 hours with a fixed quote.' },
+  { step: '02', title: 'Confirm your menu', body: 'A 50% deposit locks your date, your chef, and your arrival plan.' },
+  { step: '03', title: 'We arrive three hours early', body: 'The brigade sets the table, preps the kitchen, and sources nothing you haven\'t approved.' },
+  { step: '04', title: 'You dine. We clean.', body: 'Courses at your pace; the kitchen restored before we leave.' },
 ]
 
 const MENUS = [
@@ -100,7 +97,7 @@ const TESTIMONIALS = [
 
 const FAQS = [
   { q: 'What does a private chef cost in Bali?', a: 'myCHEF private chef dinners start at IDR 2,200,000 per person for the Mediterranean Sea menu, or IDR 2,400,000 for the Wagyu Experience. Both prices include the full chef team, all groceries, table service, and kitchen cleanup. Add-ons like wine pairing (IDR 850K/person) are optional.' },
-  { q: 'Is there a minimum number of guests?', a: 'Our standard minimum is 4 guests. For 2-person romantic dinners, message Sofia — we can usually accommodate with a small premium for the setup cost.' },
+  { q: 'What is the minimum group size?', a: 'Four guests for the signature menus. For two-person dinners, message us — we arrange them with a small setup premium. See our <a href="/fine-dining/romantic-dinner">romantic dinner for two →</a>' },
   { q: 'Do you come to any villa in Bali?', a: 'Yes — we cover all major villa areas: Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur, and surrounding areas. There may be a small travel surcharge for very remote locations.' },
   { q: 'How far in advance do I need to book?', a: '7+ days is ideal. Peak season (July–August, December) often books 2 weeks out. For last-minute needs, message us — we sometimes accommodate 48-hour requests.' },
   { q: 'What kitchen equipment do you need?', a: 'Any villa kitchen works. We bring specialized equipment when needed — induction burners, sous vide, plating tools. We assess every villa before confirming.' },
@@ -127,33 +124,20 @@ export default function PrivateChefBaliPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Private Chef Bali Villa | Fine Dining in Your Villa — myCHEF"
-        description={`Hire a private chef for your Bali villa: ingredients, service & fine-dining standards included. ${siteFacts.reviewFraming}. WhatsApp to check availability.`}
+        title="Michelin Private Chef Bali | Fine Dining at Your Villa"
+        description="Book a Michelin-trained private chef for your Bali villa. Tasting menus, wine pairing & full chef team. Transparent pricing. WhatsApp myCHEF."
         canonical={`${SITE}/fine-dining/private-chef-bali`}
         ogImage={`${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`}
         jsonLd={[
           detailedServiceSchema(
-            'Private Chef Bali',
-            'Hire a Michelin-trained private chef for your Bali villa. myCHEF serves all villa areas across Bali including Seminyak, Canggu, Ubud, Uluwatu, and Nusa Dua. From IDR 2,200,000 per person including all groceries, table service, and kitchen cleanup.',
+            'Michelin-Trained Private Chef Bali',
+            'A Michelin-trained executive chef and full brigade serve two signature five-course menus — Mediterranean Sea and Wagyu Experience — privately in Bali villas.',
             `${SITE}/fine-dining/private-chef-bali`
           ),
-          offerSchema('Private Chef Bali — Mediterranean Sea', 2200000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
-          offerSchema('Private Chef Bali — Wagyu Experience', 2400000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
+          offerSchema('Mediterranean Sea (5 courses)', 2200000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
+          offerSchema('Wagyu Experience (5 courses)', 2400000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Book a Private Chef in Bali',
-            description: 'Book a Michelin-trained private chef for your Bali villa in 4 simple steps.',
-            totalTime: 'PT30M',
-            steps: HOW_IT_WORKS.map(s => ({ name: s.title, text: s.body })),
-          }),
-          breadcrumbSchema('Private Chef Bali', `${SITE}/fine-dining/private-chef-bali`, 'Fine Dining', `${SITE}/fine-dining`),
-          serviceWithOfferSchema({
-            name: 'Private Chef Bali',
-            description: 'Hire a Michelin-trained private chef for your Bali villa. Full-service including groceries, table service, and kitchen cleanup. Serving all villa areas across Bali.',
-            url: `${SITE}/fine-dining/private-chef-bali`,
-            price: '350000',
-            unitText: 'per person',
-          }),
+          breadcrumbSchema('Michelin Private Chef Bali', `${SITE}/fine-dining/private-chef-bali`, 'Fine Dining', `${SITE}/fine-dining`),
         ]}
       />
 
@@ -184,7 +168,7 @@ export default function PrivateChefBaliPage() {
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             A Michelin-Trained Private Chef.<br />
-            <span className="italic">At Your Space.</span>
+            <span className="italic">At Your Villa.</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-3 max-w-2xl mx-auto leading-relaxed">
             We arrive at your villa 3 hours early. We cook, serve every course, and leave your kitchen spotless.
@@ -199,7 +183,7 @@ export default function PrivateChefBaliPage() {
               data-source="private-chef-bali-hero"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
-              <MessageCircle className="w-4 h-4" /> Book on WhatsApp
+              <MessageCircle className="w-4 h-4" /> Check Availability with the Fine-Dining Team
             </a>
             <Link
               to="/fine-dining/menus"
@@ -316,7 +300,7 @@ export default function PrivateChefBaliPage() {
               He left Italy with a knife, a notebook, and a decade in Michelin kitchens.
             </h2>
             <p className="text-white/[70%] text-base leading-relaxed mb-4">
-              Adriano trained under Michelin-level standards in {siteFacts.founderTrainingCity}, staged in Tokyo, and opened in Bali in {siteFacts.foundingYear} not to build a restaurant — but to take restaurant-quality technique directly into the homes of people who deserved it.
+              Adriano, myCHEF's founder and executive chef, trained under a Michelin-starred chef in Milan and spent over a decade in fine-dining kitchens across Italy and Japan — including Modena and a formative stage in Tokyo — before moving to Bali.
             </p>
             <p className="text-white/[70%] text-base leading-relaxed mb-8">
               He still leads every tasting menu, every Chef's Table, and every training session for the team of 50+ Indonesian hospitality professionals he has built.
@@ -428,10 +412,10 @@ export default function PrivateChefBaliPage() {
           Bali-Wide Private Chef Service
         </p>
         <h2 className="text-white text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-          Ready to Book Your Private Chef?
+          Book Your Michelin-Trained Chef
         </h2>
         <p className="text-white/[60%] text-lg mb-10 max-w-[540px] mx-auto">
-          Tell us your date, villa area, guest count, and menu preference. We confirm availability within 1 hour.
+          Tell us your date, villa, and guest count. Availability confirmed within 2 hours — fixed quote, no booking fee, no obligation.
         </p>
         <a
           href={WA_LINK}
@@ -439,9 +423,9 @@ export default function PrivateChefBaliPage() {
           data-source="private-chef-bali-final-cta"
           className="inline-flex items-center gap-3 px-10 py-5 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
         >
-          <MessageCircle className="w-5 h-5" /> Hire a Private Chef — WhatsApp
+          <MessageCircle className="w-5 h-5" /> Check Availability on WhatsApp
         </a>
-        <p className="text-white/[30%] text-xs mt-6">Replies within 1 hour · No booking fee · Bali-wide</p>
+        <p className="text-white/[30%] text-xs mt-6">Replies within 2 hours · No booking fee · Bali-wide</p>
       </section>
 
       <section className="py-10 px-6 bg-[#141414]">

@@ -69,6 +69,11 @@ const NAV_SUBPAGES: Record<string, NavSubpage[]> = Object.values(PILLARS).reduce
   {},
 )
 
+// SEO rebuild 2026-07-24: consolidate "Private Chef Bali" anchor equity onto homepage.
+NAV_SUBPAGES['/fine-dining'] = (NAV_SUBPAGES['/fine-dining'] ?? []).map((page) =>
+  page.href === '/fine-dining/private-chef-bali' ? { ...page, href: '/' } : page
+)
+
 // Dining styles dropdown — hand-written (menu collections are not a PILLARS pillar)
 NAV_SUBPAGES['/dining-styles'] = [
   { label: 'Fine Dining Menus', href: '/fine-dining/menus', icon: 'Crown' },

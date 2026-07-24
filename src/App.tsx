@@ -431,7 +431,7 @@ export default function App() {
           <Route path="/blog/bali-catering-menu" element={<BaliCateringMenuPage />} />
           <Route path="/blog/fine-dining-guide" element={<FineDiningGuidePage />} />
           <Route path="/blog/wedding-private-chef-bali-planning-guide" element={<WeddingPrivateChefPage />} />
-          <Route path="/blog/romantic-dinner-at-home-bali-private-chef" element={<Navigate to="/blog/romantic-dinner-bali-private-chef" replace />} />
+          <Route path="/blog/romantic-dinner-at-home-bali-private-chef" element={<Navigate to="/fine-dining/romantic-dinner" replace />} />
           <Route path="/blog/romantic-dinner-bali-private-chef" element={<RomanticDinnerBaliPage />} />
           <Route path="/blog/how-to-plan-villa-birthday-party-bali" element={<VillaBirthdayPartyPage />} />
           <Route path="/blog/yoga-retreat-chef-bali-meal-planning" element={<YogaRetreatChefPage />} />

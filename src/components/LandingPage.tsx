@@ -10,6 +10,12 @@ import { type EnrichedPost, enrichPost, formatBlogDate, getRelatedPosts, injectC
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
+
+/** Canonical overrides for legacy SEO landing pages that consolidate onto pillar pages. */
+const CANONICAL_OVERRIDES: Record<string, string> = {
+  'private-tasting-menu-bali': `${SITE}/fine-dining/tasting-menu`,
+  'chef-table-experience-bali': `${SITE}/fine-dining/chefs-table`,
+}
 const AUTHOR = 'myCHEF Team'
 const GUIDE_ENTRIES = sortPostsByDate(GUIDES.filter((guide) => guide.slug !== 'guide/private-chef-bali').map((guide) => enrichPost(guide, 'guide')))
 const BLOG_ENTRIES = sortPostsByDate(BLOG_POSTS.map((post) => enrichPost(post, 'blog')))
@@ -30,7 +36,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
 
   const articleEntry: EnrichedPost | null = isArticle && 'readTimeMinutes' in entry ? (entry as EnrichedPost) : null
   const isChefForHireIndonesia = kind === 'landing' && entry.slug === 'chef-for-hire-indonesia'
-  const canonical = `${SITE}/${entry.slug}`
+  const canonical = CANONICAL_OVERRIDES[entry.slug] ?? `${SITE}/${entry.slug}`
   const heroImage = kind === 'landing' ? '/generated/hero-how-it-works.webp' : '/generated/luna-hero-v3.webp'
   const hubPath = kind === 'blog' ? '/journal' : kind === 'guide' ? '/help' : '/'
   const hubLabel = kind === 'blog' ? 'Journal' : kind === 'guide' ? 'Help' : 'Home'

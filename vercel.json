@@ -850,6 +850,26 @@
       "permanent": true
     },
     {
+      "source": "/blog/corporate-events-catering-bali",
+      "destination": "/corporate-case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-hire-private-chef",
+      "destination": "/blog/how-to-hire-private-chef-bali-complete-guide",
+      "permanent": true
+    },
+    {
+      "source": "/partner-platform",
+      "destination": "/certified-partner",
+      "permanent": true
+    },
+    {
+      "source": "/blog/romantic-dinner-at-home-bali-private-chef",
+      "destination": "/fine-dining/romantic-dinner",
+      "permanent": true
+    },
+    {
       "source": "/services/catering",
       "destination": "/catering",
       "permanent": true

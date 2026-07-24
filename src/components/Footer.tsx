@@ -436,7 +436,7 @@ export default function Footer() {
           <Link to="/why-mychef" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Why myCHEF</Link>
           <Link to="/press" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Press</Link>
           <Link to="/join-our-team" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Join the Team</Link>
-          <Link to="/partner-platform" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Partner Platform</Link>
+          <Link to="/certified-partner" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Partner Platform</Link>
           <Link to="/certified-partner" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Certified Partner</Link>
           <Link to="/journal" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Journal</Link>
           <Link to="/journal" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Blog & Guides</Link>
@@ -451,7 +451,7 @@ export default function Footer() {
         {/* Staff login + legal - Enhanced layout */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 py-8">
           <Link
-            to="/partner-platform"
+            to="/certified-partner"
             className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/55 hover:text-[#C5A028] transition-all px-5 py-2.5 rounded-full border border-white/10 hover:border-[#C5A028]/30 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white"
           >
             <LogIn className="w-4 h-4" /> Staff Login

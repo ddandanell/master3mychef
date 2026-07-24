@@ -8,7 +8,7 @@ import {
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -17,7 +17,6 @@ import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
-import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
@@ -32,27 +31,27 @@ const FORMATS = [
     title: 'Intimate Birthday Dinner',
     price: <AllInPrice price={1500000} />,
     guestRange: '4–12 guests',
-    description: '5-course plated dinner, birthday cake, styling, and photographer for 1 hour. Perfect for milestone birthdays.',
-    features: ['5-course menu', 'Birthday cake', 'Table styling', 'Photographer 1h', 'Dedicated waiter'],
+    description: 'A restaurant-grade evening in your own villa: a five-course plated dinner cooked fresh by your private chef, a birthday cake, table styling, a dedicated waiter and a photographer for one hour.',
+    features: ['5-course plated dinner', 'Birthday cake', 'Table styling', 'Photographer 1h', 'Dedicated waiter'],
   },
   {
     title: 'Birthday Villa Party',
     price: <AllInPrice price={850000} />,
     guestRange: '15–40 guests',
-    description: 'BBQ buffet, bartender, open bar, DJ, decor, cake, and photographer. The full villa party experience.',
-    features: ['BBQ buffet (B2)', 'Bartender + open bar 3h', 'DJ 4h', 'Decor + cake', 'Photographer 2h', 'Day-of coordinator'],
+    description: 'The full villa party: BBQ buffet cooked live on site, a bartender running a three-hour open bar, DJ for four hours, decor and birthday cake, a photographer for two hours and a day-of coordinator.',
+    features: ['BBQ buffet cooked live', 'Bartender + open bar 3h', 'DJ 4h', 'Decor + cake', 'Photographer 2h', 'Day-of coordinator'],
     highlighted: true,
   },
   {
-    title: 'Kids Birthday Party',
-    price: 'IDR 350K child / IDR 250K adult',
-    guestRange: '10–30 kids',
-    description: 'Kids menu, adult food, entertainment, themed decor, balloons, goodie bags, and photographer.',
-    features: ['Kids menu + adult food', 'Entertainment', 'Themed decor', 'Balloons', 'Goodie bags', 'Photographer 2h'],
+    title: 'Family Birthdays',
+    price: 'Custom quote',
+    guestRange: '2–40 guests',
+    description: 'Combined family events with a separate kids menu, an adult menu and a coordinated entertainment area, so nobody is managing the flow instead of celebrating.',
+    features: ['Adult menu + kids menu', 'Coordinated entertainment area', 'Flexible timing for all ages', 'Add-on entertainment & decor'],
   },
 ]
 
-const THEMES = ['Tropical', 'Glam', 'Surfer', 'Kids Unicorn', 'Milestone 30/40/50', 'Custom']
+const THEMES = ['Tropical', 'Glam', 'Surfer', 'Milestone 30/40/50', 'Custom']
 
 const CAKE_STYLES = [
   { name: 'Classic Buttercream', desc: 'Smooth finish, custom colour, name in icing.', colour: 'from-[#F5E6D3] to-[#E8D5C4]' },
@@ -63,23 +62,9 @@ const CAKE_STYLES = [
   { name: 'Custom Tiered', desc: '2–3 tiers, any theme, toppers, and detailing.', colour: 'from-[#F3E5F5] to-[#E1BEE7]' },
 ]
 
-const THEMED_SETUPS = [
-  { name: 'Tropical', desc: 'Palm leaves, pineapples, bright colours, pool floats.', colour: 'from-[#C5A028]/20 to-[#C5A028]/5' },
-  { name: 'Glam', desc: 'Black and gold, sequins, champagne tower, sparkle.', colour: 'from-[#1A1A1A]/10 to-[#C5A028]/10' },
-  { name: 'Surfer', desc: 'Beach casual, board shorts, sunset tones, acoustic.', colour: 'from-[#E8913A]/20 to-[#E8913A]/5' },
-  { name: 'Kids Unicorn', desc: 'Pastel rainbow, glitter, balloons, magic backdrop.', colour: 'from-[#F8BBD0]/20 to-[#E1BEE7]/20' },
-]
-
-const REAL_BIRTHDAYS = [
-  { title: 'Milestone 40th Pool Dinner', location: 'Canggu Villa', image: '/generated/mychef-events-bali-hero-birthdays.webp' },
-  { title: 'Birthday Welcome Setup', location: 'Seminyak Villa', image: '/generated/mychef-events-bali-birthdays-table.webp' },
-  { title: 'Sunset BBQ Bash', location: 'Uluwatu Villa', image: '/generated/mychef-events-bali-birthdays-bbq.webp' },
-  { title: 'Birthday Brunch Recovery', location: 'Berawa Villa', image: '/generated/mychef-events-bali-birthdays-brunch.webp' },
-]
-
 const ADDONS = [
   { icon: Cake, title: 'Custom 3-Tier Cake', price: '+IDR 2M – 4M' },
-  { icon: Camera, title: 'Photographer Extended', price: '+IDR 4.8M (4h)' },
+  { icon: Camera, title: 'Photographer (extended, 4h)', price: '+IDR 4.8M' },
   { icon: Music, title: 'Live Band 3h', price: '+IDR 8M – 15M' },
   { icon: Sparkles, title: 'Fire Dancer 30min', price: '+IDR 4.5M' },
   { icon: Gift, title: 'Themed Premium Decor', price: '+IDR 3.5M – 7.5M' },
@@ -87,22 +72,48 @@ const ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'How far in advance to book?', a: 'Intimate dinner: 7 days. Villa party: 10–14 days. Kids party: 14 days (custom decor/entertainment booking).' },
-  { q: 'Can you do a milestone theme?', a: 'Yes — signature themes for milestones included. Custom themes from +IDR 3,500,000.' },
-  { q: 'Are you good with kids parties?', a: 'Yes — we have a dedicated kids party coordinator who handles entertainment booking, dietary needs, and decor.' },
-  { q: 'Do you provide the cake?', a: 'Standard cake (chocolate or vanilla, single tier, with name in icing) is included. Custom 3-tier or signature cake is +IDR 2M–4M.' },
-  { q: 'Can guests bring their own alcohol?', a: 'Yes — BYO welcome. We charge a corkage waiver fee of IDR 250,000 per villa party. Or we manage open bar through our bartender package.' },
-  { q: 'What\'s the cancellation policy?', a: '7+ days before event: 75% refund. 48h+: 50% credit. Under 48h: no refund.' },
-  { q: 'Can you do a surprise birthday?', a: 'Yes — we\'ll coordinate with one party member discreetly. Tell us the surprise level at booking.' },
-  { q: 'Do you handle adult + kids parties simultaneously?', a: 'Yes — combined family events with separate kids menu + adult food + separate kids entertainment area.' },
+  { q: 'How much does birthday catering in Bali cost?', a: 'Two published formats: the Intimate Birthday Dinner at IDR 1.5M++/person (4–12 guests) and the Birthday Villa Party at IDR 850K++/person (15–40 guests). "++" adds 11% government tax + 10% service charge. Group totals: 8 guests ~IDR 14.5M all-in; 24 guests ~IDR 24.7M all-in. Villa catering for groups across Bali starts from IDR 700K/person for simpler menus.' },
+  { q: 'What\'s the minimum guest count?', a: 'Four guests for the intimate dinner, fifteen for the villa party. Smaller dinners for 2–6 can be arranged as a private chef booking.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes. Vegetarian, vegan, gluten-free, halal-friendly and allergy-aware menus are planned at the briefing stage, and kids\' menus run alongside adult food at family events. Tell us the dietary list when you enquire.' },
+  { q: 'Do we need the villa\'s permission for a birthday party?', a: 'For anything beyond a quiet dinner, yes — most villas require event approval, and some neighbourhoods have noise expectations or banjar notification requirements. We coordinate with your villa manager before confirming the format, DJ and bar plan.' },
+  { q: 'Do you provide the cake and decorations?', a: 'A standard cake (chocolate or vanilla, single tier, name in icing) is included in both formats. Custom tiered cakes (+IDR 2–4M), themed decor (+IDR 3.5–7.5M) and entertainment are add-ons — we coordinate trusted suppliers so everything arrives on one timeline.' },
+  { q: 'What happens if it rains?', a: 'We plan a covered or indoor fallback for every outdoor setup — same menu, same styling, moved inside the villa or under cover. BBQ service shifts to a sheltered area; the party continues.' },
+  { q: 'How do deposits and cancellation work?', a: 'A 50% deposit confirms your date and locks your chef team (aligned to live page figure; sitewide unification pending business decision). Cancellation: 7+ days before the event, 75% refund; 48 hours or more, 50% credit; under 48 hours, no refund. Booking lead times: 7 days for dinners, 10–14 days for villa parties.' },
 ]
 
 const STAFFING_POINTS = [
-  'For seated birthday dinners we normally plan 1 waiter for every 8–10 guests so plates land together and glasses stay topped up.',
-  'Pool parties usually include a bartender, floor staff, and a setup crew that arrives roughly 3 hours before guest arrival.',
+  'For seated dinners we plan one waiter per 8–10 guests so plates land together and glasses stay topped up.',
+  'Pool parties add a bartender, floor staff and a setup crew that arrives roughly 3 hours before guest arrival.',
   'If you have a DJ, live music, cake surprise, or speech moment, our coordinator cues those transitions so the food timing stays intact.',
   'Cleanup is part of the service plan — glassware, rubbish, buffet breakdown, and kitchen reset are handled before we leave the villa.',
 ]
+
+const birthdayServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Birthday Catering Bali',
+  serviceType: 'Birthday party catering and private chef dinners',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'myCHEF.id',
+    url: 'https://mychef.id/',
+    telephone: '+62 896-7407-2020',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan',
+      addressLocality: 'Denpasar',
+      addressRegion: 'Bali',
+      postalCode: '80226',
+      addressCountry: 'ID',
+    },
+  },
+  areaServed: 'Bali, Indonesia',
+  description: 'Birthday catering for Bali villas: intimate chef dinners (4–12 guests) and full villa birthday parties (15–40 guests) with BBQ, bar service, cake, styling and cleanup.',
+  offers: [
+    { '@type': 'Offer', name: 'Intimate Birthday Dinner', price: '1500000', priceCurrency: 'IDR', description: 'Per person, 4–12 guests, 5-course plated dinner, cake, styling, photographer 1h. ++ 11% tax + 10% service.' },
+    { '@type': 'Offer', name: 'Birthday Villa Party', price: '850000', priceCurrency: 'IDR', description: 'Per person, 15–40 guests, BBQ buffet, bartender + open bar 3h, DJ 4h, decor + cake, photographer 2h, coordinator. ++ 11% tax + 10% service.' },
+  ],
+}
 
 export default function EventsBirthdaysPage() {
   const ref = useRef<HTMLDivElement>(null)
@@ -132,32 +143,14 @@ export default function EventsBirthdaysPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Birthday Party Bali Villa | Catering & Events — myCHEF"
-        description="Birthday party catering in Bali for villa dinners, BBQs & milestone events. Private chefs, cocktails & staff for 10–100 guests. WhatsApp to plan yours."
+        title="Birthday Catering Bali | Private Villa Celebrations | myCHEF"
+        description="Birthday catering for Bali villas: live chef BBQs or fine-dining menus with food, drinks, cake & styling handled. WhatsApp myCHEF."
         canonical={`${SITE}/events/birthdays`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-birthdays.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Birthday Party Catering Bali',
-            description: 'myCHEF.id caters birthday parties in Bali with private chef menus, buffet or plated service, drinks, and event staffing. We manage setup, flow, and cleanup for everything from intimate dinners to full villa parties.',
-            url: `${SITE}/events/birthdays`,
-            lowPrice: '850000',
-            highPrice: '1500000',
-            unitText: 'per person',
-          }),
+          birthdayServiceSchema,
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Plan a Birthday Party in Bali',
-            description: 'Plan an unforgettable birthday celebration in your Bali villa in 4 easy steps.',
-            totalTime: 'PT20M',
-            steps: [
-              { name: 'Choose your birthday package', text: 'Select from villa party, fine dining, or BBQ themes based on your guest count and style.' },
-              { name: 'Share party details', text: 'Send your date, villa location, guest count, and any dietary needs via WhatsApp.' },
-              { name: 'Confirm menu and setup', text: 'We design a custom menu, cake options, and decoration plan within 1 hour.' },
-              { name: 'Celebrate stress-free', text: 'Chef, staff, and setup arrive early. You enjoy the party while we handle everything.' },
-            ],
-          }),
-          breadcrumbSchema('Birthday Party Catering Bali', `${SITE}/events/birthdays`, 'Events', `${SITE}/events`),
+          breadcrumbSchema('Birthdays', `${SITE}/events/birthdays`, 'Events', `${SITE}/events`),
         ]}
       />
 
@@ -175,66 +168,51 @@ export default function EventsBirthdaysPage() {
         <div className="relative z-10 px-6 md:px-8 py-12 md:py-20 max-w-2xl mx-auto md:mx-0 md:ml-auto md:mr-auto md:flex md:flex-col md:justify-center h-full w-full">
           <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Birthdays' }]} theme="dark" className="mb-8" />
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Chapter 1 — Birthday Parties
+            Birthday Catering Bali
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Birthday Parties in Bali — Villa Catering & Events
+            Birthday Catering in Bali — Dinners & Villa Parties, Fully Run
           </h1>
-          <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
-            Food, drinks, bar service, decor, entertainment coordination, and full cleanup for birthdays that actually run smoothly — from intimate milestone dinners to high-energy villa pool parties.
+          <p className="text-lg md:text-xl text-white/[85%] mb-6 max-w-xl">
+            A great birthday in a Bali villa needs more than a menu. Someone has to time the food around the pool, land the cake moment after the speeches, keep the bar moving, and hand the villa back spotless when the last guest leaves. That&apos;s what myCHEF&apos;s birthday catering does: food, drinks, service staff, styling coordination and cleanup, run as one operation — so the host gets to be a guest at their own party.
+          </p>
+          <p className="text-base md:text-lg text-white/[85%] mb-8 max-w-xl">
+            We&apos;ve cooked celebrations in 560+ villas across Bali over 8+ years, from six-person plated dinners to 40-guest BBQ and bar nights. Two formats, published prices, one WhatsApp message to start.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
             <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Calendar className="w-4 h-4" /> Book a Birthday
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-birthdays-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
+              <MessageCircle className="w-4 h-4" /> Plan Your Birthday on WhatsApp
             </a>
           </div>
+          <p className="text-sm md:text-base text-white/80 mb-2 text-left">
+            Send your date, guest count and villa area — we reply within the hour with a clear, fixed quote. No payment required to enquire.
+          </p>
           <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left">
-            From IDR 350K/child or 850K++/guest · Cake, staff, and cleanup handled
+            Intimate dinner IDR 1.5M++/person · Villa party IDR 850K++/person
           </p>
           <p className="text-xs text-white/[60%] mt-2 text-left">
-            All prices marked {'"++"'} are subject to 10% service charge + 11% government tax.
+            All prices marked {'"++"'} are subject to 11% government tax + 10% service charge.
           </p>
         </div>
       </section>
 
       <TrustStrip dark />
 
-      <section className="py-20 md:py-28 bg-white birthday-content birthday-reveal">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] birthday-content birthday-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
-              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                What We Do
-              </p>
-              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                myCHEF runs the whole birthday, not just the food drop
-              </h2>
-              <p className="text-[#4A4745] leading-relaxed mb-4">
-                Birthday hosts usually need more than a menu. They need someone to think about the actual flow of the celebration: when food comes out, where the cake moment lands, how drinks are served around the pool, who resets the table after speeches, and how the villa gets handed back after the last guest leaves. That is where our team is useful. We handle food, drinks, service staff, setup coordination, and cleanup as one operation, so the event feels joined up instead of stitched together from separate vendors.
-              </p>
-              <p className="text-[#4A4745] leading-relaxed">
-                We can build birthdays around different energies — a 6-person plated dinner, a 30-person BBQ and bar night, or a family party where adults want proper food while the kids need entertainment and easy timing. The planning starts with guest count, villa layout, and vibe, then we recommend the format, staffing level, cake style, and add-ons that make sense operationally and visually.
-              </p>
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-events-bali-birthdays-table.webp" alt="Styled birthday dinner table in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-[#FAFAF8] birthday-reveal">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 2 — Formats" title="Three Birthday Formats" subtitle="Choose the structure that fits your guest count, villa layout, and how lively you want the celebration to feel." />
+          <SectionHeader eyebrow="Chapter 2 — Formats" title="Birthday Formats & Prices" subtitle="Two published formats plus combined family celebrations. Every quote shows the all-in total upfront." />
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
-            These formats are designed around how birthdays are actually hosted in Bali villas. The intimate dinner format gives you restaurant-style pacing and a quieter atmosphere. The villa party format is built for movement, drinks, BBQ, and entertainment. The kids format keeps food and coordination family-friendly, with separate attention for younger guests so adults can relax instead of managing the flow themselves.
+            These formats are designed around how birthdays are actually hosted in Bali villas. The intimate dinner gives you restaurant-style pacing and a quieter atmosphere. The villa party is built for movement, drinks, BBQ, and entertainment. Family birthdays keep food and coordination multi-generational, with separate attention for younger guests so adults can relax. For a BBQ-led version in more depth, see our <Link to="/villa-bbq-catering-bali" className="text-[#2C5F7C] hover:underline">villa BBQ catering</Link> page; for cocktail-forward formats, see <Link to="/events/villa-parties" className="text-[#2C5F7C] hover:underline">villa party formats</Link>.
           </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}
           </div>
+          <p className="text-[#4A4745] text-center max-w-3xl mx-auto leading-relaxed mt-10">
+            <strong>What group totals look like:</strong> 8 guests at the intimate dinner runs IDR 12M++ (~IDR 14.5M all-in). 24 guests at the villa party runs IDR 20.4M++ (~IDR 24.7M all-in). Your quote is fixed before you commit.
+          </p>
           <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <GroupTotalCalculator pricePerPerson={1500000} minGuests={4} maxGuests={12} defaultGuests={8} accent={ACCENT} />
             <GroupTotalCalculator pricePerPerson={850000} minGuests={15} maxGuests={40} defaultGuests={24} accent={ACCENT} />
@@ -247,17 +225,32 @@ export default function EventsBirthdaysPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Party Food Showcase
+                What&apos;s Included
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                The food that keeps a birthday moving, not queueing
+                What a myCHEF Birthday Includes
               </h2>
-              <p className="text-[#4A4745] leading-relaxed mb-4">
-                Great birthday food should support the mood of the night. For villa parties, that usually means hot BBQ coming off the grill in waves, trays of finger food that can circulate while people mingle, and grazing-style tables that guests can return to without losing the energy of the room. We use those formats because they work in real life: people are swimming, chatting, taking photos, and moving between the pool, bar, and dining area. Food needs to be generous and easy to access.
+              <p className="text-[#4A4745] leading-relaxed mb-6">
+                Every format is scoped to your villa, guest count and energy — then delivered by one team:
               </p>
-              <p className="text-[#4A4745] leading-relaxed">
-                For more formal birthdays, we shift to plated menus or family-style courses so the birthday speech, cake moment, and photography feel more intentional. Either way, we make sure there is enough savoury food behind the drinks service, enough late-night comfort food if the party runs long, and enough variation that both adults and younger guests stay happy.
-              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Food cooked fresh on site</strong> by our Indonesian chefs — plated courses, live BBQ, grazing and finger food in waves, plus late-night comfort food (sliders, satay, skewers) if the party runs long.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Bar service</strong> — a staffed open bar in the villa party format, or add a <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] hover:underline">private bartender</Link> from IDR 250K/hour to any dinner.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Cake and styling</strong> — a standard birthday cake is included; signature cakes and decor sit in the add-on menu below.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Setup and full cleanup</strong> — glassware, rubbish, buffet breakdown and kitchen reset are handled before we leave.</p>
+                </div>
+              </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <img src="/generated/mychef-events-bali-birthdays-bbq.webp" alt="Live BBQ station at a Bali villa birthday party" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
@@ -271,15 +264,15 @@ export default function EventsBirthdaysPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Cake & Desserts
+                Cake & Styling
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Cakes that photograph well, portion cleanly, and match the party mood
+                Cakes, Styling & Add-Ons
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                The birthday cake is usually the one part every guest remembers, so we plan it like a real service moment rather than a last-minute add-on. We look at guest count, whether the cake is for display only or full serving, how long it needs to sit out in Bali heat, and whether the tone is elegant, playful, milestone-led, or family-friendly. Dessert tables can also include mini pastries, tropical fruit, gelato cups, and lighter sweets for daytime birthdays or brunch-style celebrations.
+                The cake is the one moment every guest remembers, so we plan it like a service moment — sized to the group, built to hold in Bali heat, styled to the party.
               </p>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-4 mb-8">
                 {CAKE_STYLES.map((cakeStyle) => (
                   <div key={cakeStyle.name} className="rounded-2xl border border-[#E8E6E3] bg-white overflow-hidden">
                     <div className={`h-16 bg-gradient-to-br ${cakeStyle.colour}`} />
@@ -290,6 +283,33 @@ export default function EventsBirthdaysPage() {
                   </div>
                 ))}
               </div>
+              <div className="overflow-hidden rounded-2xl border border-[#E8E6E3] bg-white">
+                <table className="w-full text-sm text-left">
+                  <thead className="bg-[#F5F5F3] text-[#1A1A1A] font-semibold">
+                    <tr>
+                      <th className="px-4 py-3">Add-on</th>
+                      <th className="px-4 py-3">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {ADDONS.map((addon) => (
+                      <tr key={addon.title} className="border-t border-[#E8E6E3]">
+                        <td className="px-4 py-3 text-[#4A4745]">{addon.title}</td>
+                        <td className="px-4 py-3 font-semibold text-[#2C5F7C]">{addon.price}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-[#4A4745] leading-relaxed mt-6">
+                Themes are designed around the villa&apos;s real footprint — one strong visual idea that photographs well, not twenty props blocking the service path. <span className="inline-flex flex-wrap gap-2 mt-2">
+                  {THEMES.map((theme) => (
+                    <span key={theme} className="px-3 py-1 rounded-full border border-[#E8E6E3] bg-white text-sm text-[#1A1A1A]">
+                      {theme}
+                    </span>
+                  ))}
+                </span>
+              </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
               <img src="/generated/mychef-events-bali-birthdays-brunch.webp" alt="Bright birthday brunch spread with tropical fruit and pastries in a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
@@ -306,10 +326,10 @@ export default function EventsBirthdaysPage() {
                 Staffing & Setup
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Enough hands on site to keep the party feeling easy
+                Staffing, Setup & Cleanup
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                The difference between a good birthday and a stressful one is usually invisible to guests. It is the number of staff on the floor, how early the setup starts, how cleanly the bar is reset, and whether someone is actively managing the transitions between dinner, speeches, cake, music, and cleanup. We plan those details from the start so the host is not pulled into solving them on the day.
+                The difference between a relaxed birthday and a stressful one is invisible to guests: enough staff, setup three hours before arrival, and a coordinator cueing DJ, speeches and cake so food timing stays intact. For seated dinners we plan one waiter per 8–10 guests; pool parties add a bartender, floor staff and a setup crew. Cleanup is part of the service plan, not an extra.
               </p>
               <div className="space-y-3">
                 {STAFFING_POINTS.map((item) => (
@@ -329,106 +349,31 @@ export default function EventsBirthdaysPage() {
 
       <section className="py-20 md:py-28 bg-[#FAFAF8] birthday-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
               <img src="/generated/mychef-events-bali-birthdays-festival.webp" alt="Themed milestone birthday party styling in a Bali villa garden" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Themes
+                Practicalities
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Styled themes that still work inside a real villa footprint
+                Villa Rules, Noise & Practicalities
               </h2>
-              <p className="text-[#4A4745] leading-relaxed mb-6">
-                Themes only look good when they suit the property and the guest flow. We design around where guests will enter, where the food will sit, how the bar is positioned, and what photographs well in daylight or after sunset. That is why our setups focus on practical signature looks instead of over-building the space and blocking service paths. Milestone birthdays often need one strong visual idea, not twenty small props.
+              <p className="text-[#4A4745] leading-relaxed">
+                Before we confirm a format, we check what your villa can realistically support: house rules, event permission from the villa manager or owner, noise expectations and neighbourhood considerations. Some villas and local banjar (community councils) require advance notice or an event fee for larger parties — we flag this during planning so there are no surprises on the day. If your villa has strict limits, we recommend a format that fits — a plated dinner carries further than a DJ set.
               </p>
-              <div className="grid sm:grid-cols-2 gap-4 mb-6">
-                {THEMED_SETUPS.map((setup) => (
-                  <div key={setup.name} className="rounded-2xl border border-[#E8E6E3] bg-white overflow-hidden">
-                    <div className={`h-16 bg-gradient-to-br ${setup.colour}`} />
-                    <div className="p-4">
-                      <h3 className="text-sm font-semibold text-[#1A1A1A] mb-1">{setup.name}</h3>
-                      <p className="text-sm text-[#4A4745] leading-relaxed">{setup.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="flex flex-wrap gap-3">
-                {THEMES.map((theme) => (
-                  <span key={theme} className="px-4 py-2 rounded-full border border-[#E8E6E3] bg-white text-sm text-[#1A1A1A]">
-                    {theme}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section className="py-20 md:py-28 bg-white birthday-reveal">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 3 — Real Birthdays" title="Celebration Gallery" subtitle="Recent birthday formats across Bali villas, from daytime setups to high-energy night events." />
-          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
-            The gallery shows the range we are actually asked to deliver: long-table pool dinners, milestone setups with stronger decor, BBQ-led food service, and recovery brunches the next day. That variety matters because birthdays are rarely one-size-fits-all. Some hosts want a polished dinner; some want a villa party that can stretch late without losing control.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {REAL_BIRTHDAYS.map((birthday) => (
-              <div key={birthday.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <OptimizedImage src={birthday.image} alt={birthday.title} className="w-full h-full object-cover" loading="lazy" />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{birthday.title}</h3>
-                  <p className="text-[#4A4745] text-xs">{birthday.location}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-3xl mx-auto px-6">
+          <SectionHeader eyebrow="Questions" title="Birthday Catering Bali — FAQ" subtitle="Common questions about booking birthday parties with myCHEF." />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
-
-      <section className="py-20 md:py-28 bg-[#FAFAF8] birthday-reveal">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            <div>
-              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Add-Ons
-              </p>
-              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Extra pieces that lift the party once the core operation is locked
-              </h2>
-              <p className="text-[#4A4745] leading-relaxed mb-6">
-                Add-ons work best when they support the format instead of fighting it. A live band suits a sunset dinner better than a kids pool party. A photographer is valuable when you have a defined cake or speech moment. Premium decor is worth it when the villa has one area that can take a strong visual treatment. We help hosts choose the upgrades that will actually show up well in the event rather than selling everything by default.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {ADDONS.map((addon) => (
-                  <div key={addon.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-5 flex items-start gap-4">
-                    <div className="bg-[#2C5F7C]/10 rounded-xl p-2.5 shrink-0"><addon.icon className="w-5 h-5 text-[#2C5F7C]" /></div>
-                    <div>
-                      <h3 className="text-sm font-semibold text-[#1A1A1A]">{addon.title}</h3>
-                      <p className="text-sm font-semibold text-[#2C5F7C]">{addon.price}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/mychef-events-bali-birthdays-glam.webp" alt="Glamorous white and gold birthday evening setup at a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <TestimonialBlock
-        title="What Birthday Hosts Say"
-        subtitle="Fun to guests, organised behind the scenes."
-        testimonials={[
-          { name: 'Lisa M.', location: 'Canggu Villa Party', quote: 'We booked the villa party package for my 40th and the team handled BBQ, bar service, decor, and the cake reveal without me having to brief anyone twice.', rating: 5 },
-          { name: 'The Johnson Family', location: 'Seminyak Kids Party', quote: 'The kids had entertainment, the adults had proper food, and cleanup was handled before the villa manager even came by. Huge relief.', rating: 5 },
-          { name: 'Marcus & Friends', location: 'Uluwatu Dinner', quote: 'The intimate dinner felt polished and warm at the same time. Service was attentive without making the evening feel formal.', rating: 5 },
-        ]}
-      />
 
       <section className="py-10 bg-[#0a0a0a]">
         <div className="max-w-3xl mx-auto px-6">
@@ -436,19 +381,12 @@ export default function EventsBirthdaysPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white birthday-reveal">
-        <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader eyebrow="Questions" title="Birthday FAQ" subtitle="Common questions about booking birthday parties with myCHEF." />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
-        </div>
-      </section>
-
       <section className="py-20 md:py-28 bg-[#FAFAF8] birthday-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
-            title="Book a Birthday Party"
-            subtitle="Tell us about your birthday and we will recommend the right format, staffing, and production level."
-            packageOptions={['Intimate Birthday Dinner', 'Birthday Villa Party', 'Kids Birthday Party']}
+            title="Book Your Birthday"
+            subtitle="Tell us the date, the guest count, the villa and the vibe — we'll recommend the format, staffing level and add-ons that make sense, and send a fixed quote with nothing hidden."
+            packageOptions={['Intimate Birthday Dinner', 'Birthday Villa Party', 'Family Birthdays']}
             fields={[
               { name: 'format', label: 'Format', type: 'select', required: true },
               { name: 'date', label: 'Date', type: 'date', required: true },
@@ -465,6 +403,12 @@ export default function EventsBirthdaysPage() {
             whatsappName="Sofia"
             accent={ACCENT}
           />
+          <p className="text-[#4A4745] text-center mt-8">
+            Celebrating a 30th, 40th or 50th at full production level? See our <Link to="/luxury-birthday-party-bali" className="text-[#2C5F7C] hover:underline">milestone and luxury birthday production</Link> page.
+          </p>
+          <p className="text-[#4A4745] text-center mt-4">
+            For a dedicated chef-led kids&apos; party, see our <Link to="/experiences/kids-birthday-chef-party" className="text-[#2C5F7C] hover:underline">kids&apos; birthday chef party</Link> and <Link to="/kids-menus" className="text-[#2C5F7C] hover:underline">kids&apos; menus</Link>.
+          </p>
         </div>
       </section>
 

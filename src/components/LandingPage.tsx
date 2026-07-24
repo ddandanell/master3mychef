@@ -191,6 +191,62 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       ]
       return schema
     }
+    if (entry.slug === 'luxury-birthday-party-bali') {
+      const schema = serviceSchema(
+        'Luxury Birthday Party Bali',
+        'Luxury milestone birthday parties in Bali villas — 30th, 40th, 50th and 60th celebrations with private chef, premium menus, decor, bar, staff and coordination bundled for one occasion.',
+        canonical,
+      )
+      // @ts-expect-error extend service schema with serviceType and detailed provider
+      schema.serviceType = 'Luxury milestone birthday party production'
+      // @ts-expect-error provider override for detailed LocalBusiness
+      schema.provider = {
+        '@type': 'LocalBusiness',
+        name: 'myCHEF.id',
+        url: `${SITE}/`,
+        telephone: '+62 896-7407-2020',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan',
+          addressLocality: 'Denpasar',
+          addressRegion: 'Bali',
+          postalCode: '80226',
+          addressCountry: 'ID',
+        },
+      }
+      // @ts-expect-error areaServed override
+      schema.areaServed = 'Bali, Indonesia'
+      // @ts-expect-error offers override for multiple named offers
+      schema.offers = [
+        { '@type': 'Offer', name: 'Signature Milestone Dinner', price: '1500000', priceCurrency: 'IDR', description: 'From IDR 1.5M++/person, 4–12 guests. 5-course plated dinner, cake, styling, photographer.' },
+        { '@type': 'Offer', name: 'Fine-Dining Tasting Menu', price: '2200000', priceCurrency: 'IDR', description: 'Mediterranean IDR 2.2M++ / Wagyu IDR 2.4M++ per person. Wine pairing +IDR 850K.' },
+        { '@type': 'Offer', name: 'Milestone Villa Production', price: '850000', priceCurrency: 'IDR', description: 'From IDR 850K++/person, 15–40+ guests, plus production add-ons quoted as one bundle.' },
+      ]
+      return schema
+    }
+    if (entry.slug === 'corporate-retreat-catering-bali') {
+      const schema = serviceWithOfferSchema({
+        name: 'Corporate Retreat Catering Bali',
+        description: 'Multi-day corporate retreat catering in Bali: full-board meal programs for offsites and company retreats with dietary management at scale and NPWP-registered invoicing.',
+        url: canonical,
+        price: '500000',
+        unitText: 'per person per day, before 11% government tax + 10% service charge',
+      })
+      // @ts-expect-error provider override with email
+      schema.provider = {
+        '@type': 'Organization',
+        name: 'myCHEF.id',
+        url: SITE,
+        telephone: '+62 896-7407-2020',
+        email: 'bali@mychef.id',
+      }
+      // @ts-expect-error areaServed override for Bali and Jakarta
+      schema.areaServed = [
+        { '@type': 'Place', name: 'Bali' },
+        { '@type': 'Place', name: 'Jakarta' },
+      ]
+      return schema
+    }
     return serviceSchema(entry.title, entry.description, canonical)
   })()
   const breadcrumbJsonLd = isArticle ? breadcrumbSchema(entry.title, canonical, hubLabel, `${SITE}${hubPath}`) : breadcrumbSchema(entry.title, canonical)
@@ -274,10 +330,32 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
             { question: 'How far ahead should we book?', answer: 'Peak-season Bali dates: 3–10 months. Jakarta and off-peak: 1–3 months. Large multi-event weddings should start earlier.' },
             { question: 'What deposit is required?', answer: 'A deposit confirms the date (deposit level pending business confirmation), with the balance due before the event and written cancellation tiers.' },
           ]
-        : [
-            { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
-            { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond, covering 560+ villas across the island.' },
-          ]
+        : entry.slug === 'luxury-birthday-party-bali'
+          ? [
+              { question: 'What does a luxury milestone birthday in Bali cost?', answer: 'Signature dinners from IDR 1.5M++/person (4–12 guests); fine-dining tasting menus IDR 950K–2.4M++/person; full villa productions from IDR 850K++/person plus production add-ons, quoted as one fixed bundle. \'++\' adds 11% government tax + 10% service charge.' },
+              { question: 'What\'s the minimum group size?', answer: 'Four guests for the signature dinner, six maximum for the chef\'s table, fifteen for a full villa production.' },
+              { question: 'Can you plan it as a complete surprise?', answer: 'Yes — one point of contact, covert setup windows, a timed reveal and staff briefed on discretion, backed by a discretion guarantee for high-profile guests.' },
+              { question: 'Can you handle dietary requirements across a big group?', answer: 'Yes — vegan, gluten-free, halal-friendly and allergy-aware menus are built into the plan, with kids\' menus alongside adult courses.' },
+              { question: 'Do luxury villas allow parties like this?', answer: 'Most premium villas allow private events with approval. myCHEF confirms event permission, noise expectations and any banjar notification with the villa manager before locking the format.' },
+              { question: 'Who provides the decor, flowers, DJ and photography?', answer: 'myCHEF coordinates trusted suppliers on one timeline — one brief, one team managing everything on the day.' },
+              { question: 'What if it rains?', answer: 'Every outdoor production has a covered fallback planned in advance — same menu, same styling, moved inside or under cover.' },
+              { question: 'How do deposits, payment and cancellation work?', answer: 'A deposit confirms the date and locks the chef and production team. Cancellation: 7+ days 75% refund; 48 hours or more 50% credit; under 48 hours no refund. Book 3–4 weeks ahead for peak-season milestones.' },
+            ]
+          : entry.slug === 'corporate-retreat-catering-bali'
+            ? [
+                { question: 'What does corporate retreat catering in Bali cost per day?', answer: 'Catering-only full board starts from IDR 500,000++ per person per day (from-price pending business confirmation); full retreat support with a coordinator starts from IDR 2,500,000++ per person per day, plus 11% government tax + 10% service charge.' },
+                { question: 'Can myCHEF invoice companies with proper tax documentation?', answer: 'Yes. myCHEF is NPWP-registered and issues full tax invoices (faktur pajak on request) with itemised per-head breakdowns.' },
+                { question: 'How are dietary requirements handled across large groups for several days?', answer: 'A pre-retreat dietary intake form, kitchen briefing against the attendee list, labelled dishes and separate prep for allergy-critical guests. Halal, vegan, gluten-free and medical diets are integrated into the main service.' },
+                { question: 'Can myCHEF cater a retreat across multiple villas?', answer: 'Yes. Groups split across villa compounds and neighbouring properties are regularly served, with logistics coordinated directly with villa and venue management.' },
+                { question: 'What is the alcohol policy for corporate retreats?', answer: 'The company sets the policy; service ranges from fully dry programmes to beer-and-wine dinners or a cocktail reception, with bartenders as an add-on.' },
+                { question: 'Can a retreat include one special elevated dinner?', answer: 'Yes. A plated fine-dining evening mid-retreat is the most common upgrade, quoted as a per-person add-on.' },
+                { question: 'How far in advance should a corporate retreat be booked?', answer: 'Two to four weeks for most retreats; one to three months for peak season or groups above 50.' },
+                { question: 'What deposit is required?', answer: 'Deposit schedule pending business confirmation for multi-day corporate retreat programmes.' },
+              ]
+            : [
+                { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
+                { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond, covering 560+ villas across the island.' },
+              ]
   const jsonLdArr = [
     breadcrumbJsonLd,
     faqPageSchema(faqItems),

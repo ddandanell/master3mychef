@@ -26,6 +26,7 @@ import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPrivateChefArea, PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
 import { hasLocationPage } from '@/data/siteArchitecture'
 import { trackWhatsAppClick } from '@/lib/analytics'
+import { siteFacts } from '@/data/siteFacts'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -197,7 +198,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             {/* Trust strip */}
             <div className="flex flex-wrap gap-4 text-sm text-white/75 mb-8">
               <span className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-[#C5A028] fill-[#C5A028]" /> 500+ events served
+                <Star className="w-4 h-4 text-[#C5A028] fill-[#C5A028]" /> {siteFacts.eventsServed}
               </span>
               <span className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#C5A028]" /> HACCP certified
@@ -235,11 +236,11 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             <div className="space-y-3 text-sm text-white/75 mb-6">
               <div className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" />
-                Groceries billed at cost (receipts provided)
+                {siteFacts.groceryPolicy} (receipts provided)
               </div>
               <div className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" />
-                25% deposit to confirm · balance on the day
+                {siteFacts.depositPercent}% deposit to confirm · balance on the day
               </div>
               <div className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-[#C5A028] mt-0.5 flex-shrink-0" />
@@ -396,7 +397,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             <ul className="space-y-3 text-[#4A4745]">
               {[
                 `Chef and team travel to your ${area.name} villa`,
-                'Fresh-that-morning grocery shopping (billed at cost with receipts)',
+                `Fresh-that-morning grocery shopping (${siteFacts.groceryPolicy.toLowerCase()}, receipts provided)`,
                 'Menu planning and custom dietary accommodations',
                 'Full table setting and presentation',
                 'Cooking, plating, and table service',
@@ -517,8 +518,8 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             Pricing for {area.name}
           </h2>
           <p className="text-white/70 max-w-[640px] mx-auto text-center leading-7 mb-12">
-            No hidden fees. Groceries are billed at cost with receipts. The quote you receive is the
-            price you pay. 25% deposit confirms the booking; the balance is due on the day.
+            No hidden fees. {siteFacts.groceryPolicy} with receipts. The quote you receive is the
+            price you pay. {siteFacts.depositPercent}% deposit confirms the booking; the balance is due {siteFacts.balanceTiming}.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
@@ -701,7 +702,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             </Link>
           </div>
           <p className="text-white/55 text-xs mt-8">
-            Same-day response · HACCP certified · 500+ events served · Guest-loved service
+            Same-day response · HACCP certified · {siteFacts.reviewFraming}
           </p>
         </div>
       </section>

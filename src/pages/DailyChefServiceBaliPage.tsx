@@ -1,5 +1,6 @@
 import PremiumPage, { type PageSection } from '@/components/PremiumPage'
 import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 
 const sections: PageSection[] = [
   {
@@ -20,7 +21,7 @@ This service is popular among digital nomads on extended stays, expat families m
 
 **2. Chef matching** — We match you with a chef whose experience and cooking style fits your needs. For families: a chef comfortable with children's meals and diverse menus. For health-conscious clients: a chef skilled in organic, plant-based, and therapeutic diets. For adventurous eaters: a chef who can move confidently between Indonesian, Western, and Asian cuisines.
 
-**3. Market sourcing** — Your chef handles grocery shopping from Bali's fresh markets and trusted suppliers. They know where to source quality ingredients, seasonal produce, and specialty items. Shopping costs are billed at cost — no markups.
+**3. Market sourcing** — Your chef handles grocery shopping from Bali's fresh markets and trusted suppliers. They know where to source quality ingredients, seasonal produce, and specialty items. ${siteFacts.groceryPolicy}.
 
 **4. Daily preparation** — Your chef arrives at an agreed time, prepares your meals, and leaves the kitchen clean. Some clients prefer a prep-and-reheat model (chef cooks in the morning, you reheat at mealtimes). Others want live cooking and table service. We accommodate both.
 
@@ -50,7 +51,7 @@ Committing to 5–7 days/week reduces the daily rate by 10–15%. Many expats op
 **Monthly Packages**
 Structured monthly arrangements with consistent schedules receive further discounts and include a dedicated account manager to ensure quality and continuity.
 
-A 25% deposit confirms your booking. Market/ingredient costs are billed separately at cost.`,
+A ${siteFacts.depositPercent}% deposit confirms your booking. Market/ingredient costs are billed separately at cost.`,
   },
   {
     id: 'who-its-for',
@@ -108,7 +109,7 @@ const faqs = [
   {
     question: 'Does the chef do the grocery shopping?',
     answer:
-      'Yes. Market sourcing is included in the service. Your chef shops at local Bali markets and trusted suppliers. Ingredient costs are billed at cost with receipts — no markups. If you have specific brands or dietary requirements, share them in advance and your chef will source accordingly.',
+      `Yes. Market sourcing is included in the service. Your chef shops at local Bali markets and trusted suppliers. ${siteFacts.groceryPolicy} with receipts. If you have specific brands or dietary requirements, share them in advance and your chef will source accordingly.`,
   },
   {
     question: 'Can the daily chef cook for guests who are visiting?',

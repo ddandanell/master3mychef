@@ -46,7 +46,7 @@ const CASE_STUDIES: CaseStudy[] = [
       'Day 5 Farewell Feast: 5-course plated dinner, wine service, dessert bar',
     ],
     result:
-      'Zero food incidents. 100% of dietary requirements accommodated. The team rated catering 4.9/5 in their post-retreat survey. The company re-booked for the following year within two weeks of returning to Berlin.',
+      'Zero food incidents. 100% of dietary requirements accommodated. Post-retreat feedback was overwhelmingly positive and the company re-booked for the following year within two weeks of returning to Berlin.',
     quote:
       'We have done retreats in Portugal, Thailand, and Mexico. The myCHEF team in Bali was by far the most organised and capable we have worked with. Every meal was on time, the food was exceptional, and we never had to think about logistics. That is priceless on a working retreat.',
     quoteName: 'Head of People Operations, SaaS Company (Berlin)',
@@ -126,7 +126,7 @@ const CASE_STUDIES: CaseStudy[] = [
       'Snacks: Fresh coconut, mixed nuts, Balinese jamu shots, raw energy balls',
     ],
     result:
-      'Guest satisfaction score: 4.95/5 for food across the week. Multiple guests reported it was the best sustained plant-based eating experience of their lives. The retreat organiser hired myCHEF for two subsequent corporate wellness retreats within three months.',
+      'Guest feedback across the week was consistently strong. Multiple guests reported it was the best sustained plant-based eating experience of their lives. The retreat organiser hired myCHEF for two subsequent corporate wellness retreats within three months.',
     quote:
       'Our guests included doctors and nutritionists who would have immediately noticed if the food quality fell short. Not only did no one complain — several said it was the best week of eating they had experienced. The chef understood the nutritional brief as well as the culinary one.',
     quoteName: 'Chief People Officer, Global Wellness Platform',

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import { Button } from '@/components/ui/button'
+import { siteFacts } from '@/data/siteFacts'
 
 const SITE = 'https://mychef.id'
 const WA_NUMBER = 6289674072020
@@ -11,15 +12,15 @@ const PRESS_KIT_MESSAGE = "Hi, I'm a journalist/blogger and would like to reques
 const PRESS_KIT_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(PRESS_KIT_MESSAGE)}`
 
 const MEDIA_STATS = [
-  '560+ Villas Served',
-  '12,000+ Guests',
-  '500+ Events',
+  siteFacts.eventsServed,
+  siteFacts.guestsServed,
+  siteFacts.villaBookings,
   'Bali-Wide Service',
 ]
 
 const PRESS_KIT_ITEMS = [
   'High-resolution logo (PNG + SVG)',
-  'Founder background and Bali growth journey',
+  `Founder background — trained in ${siteFacts.founderTrainingCity}, Bali-grown since ${siteFacts.foundingYear}`,
   'Company fact sheet (Bali HQ, 50+ staff)',
   'High-res food photography',
 ]
@@ -33,7 +34,7 @@ export default function PressPage() {
         canonical={`${SITE}/press`}
         ogImage={`${SITE}/generated/partner-platform-hero.webp`}
         jsonLd={[breadcrumbSchema('Press & Media', `${SITE}/press`), faqPageSchema([
-          { question: 'How do I request a press kit for myCHEF.id?', answer: 'Press kits, high-resolution imagery, and interview requests can be arranged via WhatsApp at +62 896-7407-2020 or email bali@mychef.id. We respond within 24 hours.' },
+          { question: 'How do I request a press kit for myCHEF.id?', answer: `Press kits, high-resolution imagery, and interview requests can be arranged via WhatsApp at ${siteFacts.phoneDisplay} or email ${siteFacts.email}. We respond within 24 hours.` },
           { question: 'How can media cover myCHEF.id?', answer: 'We are happy to provide press materials, coordinate interviews, and arrange villa dining previews or chef demonstrations in Bali. Contact our communications team via WhatsApp or email to discuss coverage arrangements.' },
           { question: 'Can myCHEF.id arrange chef demonstrations for media?', answer: 'Yes — we can arrange live cooking demonstrations, villa dining press previews, and media experiences. Contact our team via WhatsApp to discuss coverage arrangements.' },
         ])]}
@@ -62,7 +63,7 @@ export default function PressPage() {
             <p className="text-xs uppercase tracking-[0.4em] text-[#8A857D]">Press &amp; Media</p>
             <h1 className="mt-6 font-playfair text-5xl leading-tight md:text-7xl">myCHEF.id Media Kit</h1>
             <p className="mt-6 max-w-[760px] text-lg leading-8 text-[#4A4745] md:text-xl">
-              Bali&apos;s private chef and villa catering team — serving 560+ villas across the island. Press kits, brand assets, and media enquiries available on request.
+              Bali&apos;s private chef and villa catering team — {siteFacts.reviewFraming}. Founded in {siteFacts.foundingYear} by a chef trained in {siteFacts.founderTrainingCity}, myCHEF.id delivers private dining, catering, events, and staffing across the island. Press kits, brand assets, and media enquiries available on request.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Button asChild variant="primary" size="brand" className="w-full sm:w-auto">
@@ -88,8 +89,8 @@ export default function PressPage() {
             <h2 className="mt-4 font-playfair text-3xl text-[#1A1916]">What journalists need fast</h2>
             <div className="mt-8 space-y-4">
               {[
-                'Founder background and Bali growth journey',
-                'Verified company stats: 50+ staff, 560+ villas, 12,000+ guests',
+                `Founder background and Bali growth journey since ${siteFacts.foundingYear}`,
+                `Verified company stats: ${siteFacts.reviewFraming}`,
                 'Fast WhatsApp coordination for quotes, logos, and photos',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 rounded-2xl border border-[#ECE6D8] bg-[#FCFBF8] px-5 py-4">
@@ -131,7 +132,7 @@ export default function PressPage() {
             <p className="text-xs uppercase tracking-[0.4em] text-[#C5A028]">Press Kit Download Section</p>
             <h2 className="mt-4 font-playfair text-4xl md:text-5xl">Press Kit &amp; Media Assets</h2>
             <p className="mt-5 max-w-[680px] text-lg leading-8 text-white/[70%]">
-              Everything a journalist, blogger, or producer needs to cover the brand quickly — from logos and founder background to fact-sheet details and polished food imagery.
+              Everything a journalist, blogger, or producer needs to cover the brand quickly — from logos and founder background to fact-sheet details and polished food imagery. No third-party coverage claims are listed unless linked to a verifiable source.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button asChild variant="primary" size="brand" className="w-full sm:w-auto">
@@ -198,7 +199,7 @@ export default function PressPage() {
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus in your villa.' },
               { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated & grazing tables.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate events.' },
-              { label: 'Reviews', href: '/', desc: 'What 560+ villa clients say about us.' },
+              { label: 'Reviews', href: '/reviews', desc: `${siteFacts.reviewFraming}` },
               { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
               { label: 'Get a Quote', href: '/quote', desc: 'Detailed proposal within 24 hours.' },
             ].map((item) => (

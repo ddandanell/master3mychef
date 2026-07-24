@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { siteFacts } from '@/data/siteFacts'
 
 interface SeoHeadProps {
   title: string
@@ -31,6 +32,8 @@ export const localBusinessSchema = {
   url: 'https://mychef.id',
   telephone: '+62 896-7407-2020',
   email: 'bali@mychef.id',
+  sameAs: [siteFacts.googleBusinessProfileUrl],
+  hasMap: siteFacts.googleBusinessProfileUrl,
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',

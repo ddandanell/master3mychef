@@ -4,6 +4,8 @@
  * `published: false` gates a page from routing until supply is confirmed.
  */
 
+import { siteFacts } from './siteFacts'
+
 export interface NearbyArea {
   slug: string
   name: string
@@ -76,7 +78,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Villa catering for groups starts from IDR 700,000 per person. Fine dining tasting menus from IDR 980,000 per person. 25% deposit confirms the booking.',
+      'Villa catering for groups starts from IDR 700,000 per person. Fine dining tasting menus from IDR 980,000 per person. 50% deposit confirms the booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
@@ -143,7 +145,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     faqs: [
       {
         q: 'How much does a private chef cost in Canggu?',
-        a: 'Private chef sessions in Canggu start from IDR 1,350,000 (groceries billed at cost). Weekly meal prep packages for 2 people from IDR 4,500,000. Group catering from IDR 700,000 per person. Free quote via WhatsApp.',
+        a: `Private chef sessions in Canggu start from IDR 1,350,000 (${siteFacts.groceryPolicy.toLowerCase()}). Weekly meal prep packages for 2 people from IDR 4,500,000. Group catering from IDR 700,000 per person. Free quote via WhatsApp.`,
       },
       {
         q: 'Can I hire a chef for my entire stay in Canggu?',
@@ -200,7 +202,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'A small travel allowance applies to villas beyond Ubud central — always quoted upfront. Retreat full-board packages quoted per head per day. 25% deposit confirms the booking.',
+      'A small travel allowance applies to villas beyond Ubud central — always quoted upfront. Retreat full-board packages quoted per head per day. 50% deposit confirms the booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
       {
@@ -385,7 +387,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Corporate retreat catering quoted per person per day (full board available). Executive fine dining from IDR 1,200,000 per person. 25% deposit confirms the booking.',
+      'Corporate retreat catering quoted per person per day (full board available). Executive fine dining from IDR 1,200,000 per person. 50% deposit confirms the booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
@@ -1654,7 +1656,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'How much does a private chef cost on Nusa Ceningan?',
-        a: 'Sessions start from IDR 2,500,000 including island transport. Groceries are billed at cost. The premium covers fast boat, on-island transfer, and the extra logistical effort. Contact us for a full quote.',
+        a: `Sessions start from IDR 2,500,000 including island transport. ${siteFacts.groceryPolicy}. The premium covers fast boat, on-island transfer, and the extra logistical effort. Contact us for a full quote.`,
       },
       {
         q: 'Is Nusa Ceningan different from Nusa Lembongan for a chef booking?',
@@ -1700,7 +1702,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Same pricing structure as South Bali. 25% deposit confirms the booking. Grocery costs billed at cost.',
+      `Same pricing structure as South Bali. 50% deposit confirms the booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -1752,7 +1754,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'All ingredients, equipment, and cliff access included. 25% deposit confirms the booking. Grocery costs billed at cost.',
+      `All ingredients, equipment, and cliff access included. 50% deposit confirms the booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -1804,7 +1806,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Standard Bukit Peninsula pricing applies. 25% deposit confirms the booking. Grocery costs billed at cost.',
+      `Standard Bukit Peninsula pricing applies. 50% deposit confirms the booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -1857,7 +1859,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Same pricing as Ubud and Gianyar zone. 25% deposit confirms booking. Grocery costs at cost.',
+      `Same pricing as Ubud and Gianyar zone. 50% deposit confirms booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -1909,7 +1911,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'No additional travel surcharge within the Gianyar zone. 25% deposit confirms booking.',
+      'No additional travel surcharge within the Gianyar zone. 50% deposit confirms booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -1961,7 +1963,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'East Gianyar coast. 25% deposit confirms booking. Grocery costs billed at cost.',
+      `East Gianyar coast. 50% deposit confirms booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -2015,7 +2017,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Highland sourcing from Candi Kuning market. 25% deposit confirms booking. Book 72 hours ahead.',
+      'Highland sourcing from Candi Kuning market. 50% deposit confirms booking. Book 72 hours ahead.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2067,7 +2069,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'Remote highland location — small distance premium included. 25% deposit confirms booking.',
+      'Remote highland location — small distance premium included. 50% deposit confirms booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2119,7 +2121,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'West Bali zone. 25% deposit confirms booking. Grocery costs billed at cost.',
+      `West Bali zone. 50% deposit confirms booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -2173,7 +2175,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'Distance premium from South Bali base included. 25% deposit confirms booking. Book 72 hours ahead.',
+      'Distance premium from South Bali base included. 50% deposit confirms booking. Book 72 hours ahead.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -2225,7 +2227,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'Remote highland — distance premium included. 25% deposit confirms booking.',
+      'Remote highland — distance premium included. 50% deposit confirms booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2277,7 +2279,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'East Bali distance premium included. 25% deposit confirms booking.',
+      'East Bali distance premium included. 50% deposit confirms booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2329,7 +2331,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'Remote northeast Bali — distance premium included. 25% deposit confirms booking.',
+      'Remote northeast Bali — distance premium included. 50% deposit confirms booking.',
     services: ['private-chef', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -2382,7 +2384,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'North Bali distance premium included. 25% deposit confirms booking. Book 72 hours ahead.',
+      'North Bali distance premium included. 50% deposit confirms booking. Book 72 hours ahead.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -2434,7 +2436,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'North Bali base. 25% deposit confirms booking. Event catering available.',
+      'North Bali base. 50% deposit confirms booking. Event catering available.',
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
       {
@@ -2486,7 +2488,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'Remote northwest Bali — distance premium included. 25% deposit confirms booking.',
+      'Remote northwest Bali — distance premium included. 50% deposit confirms booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2539,7 +2541,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'Highland distance premium included. 25% deposit confirms booking. Sunrise and sunset sessions available.',
+      'Highland distance premium included. 50% deposit confirms booking. Sunrise and sunset sessions available.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {

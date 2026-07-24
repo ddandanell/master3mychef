@@ -3,17 +3,18 @@ import { ArrowLeft, MessageCircle, Mail, MapPin, CreditCard, Calendar, AlertCirc
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
+import { siteFacts } from '@/data/siteFacts'
 
 const PAYMENT_RULES = [
   {
     icon: CreditCard,
-    title: 'Deposit: 50% to Confirm',
-    desc: 'A 50% deposit of the total amount is required to confirm and secure your booking. This locks your date and chef.',
+    title: `Deposit: ${siteFacts.depositPercent}% to Confirm`,
+    desc: `A ${siteFacts.depositPercent}% deposit of the total amount is required to confirm and secure your booking. This locks your date and chef.`,
   },
   {
     icon: CheckCircle,
     title: 'Full Payment on Arrival',
-    desc: 'The remaining balance is paid in full when the chef arrives at your villa, before service begins. No surprises.',
+    desc: `The remaining balance is paid in full ${siteFacts.balanceTiming}. No surprises.`,
   },
   {
     icon: Calendar,
@@ -36,7 +37,7 @@ const CANCELLATION_TIERS = [
 const FAQS = [
   {
     q: 'What are myCHEF terms of service?',
-    a: 'Our terms cover booking deposits, payment schedules, cancellation and refund policies, changes to bookings, and legal terms governed by Indonesian law. A 50% deposit is required to confirm your booking, with the balance paid on arrival. Bookings within 24 hours require 100% payment upfront.',
+    a: `Our terms cover booking deposits, payment schedules, cancellation and refund policies, changes to bookings, and legal terms governed by Indonesian law. A ${siteFacts.depositPercent}% deposit is required to confirm your booking, with the balance paid ${siteFacts.balanceTiming}. Bookings within 24 hours require 100% payment upfront.`,
   },
   {
     q: 'What happens if I break the terms?',
@@ -119,7 +120,7 @@ export default function TermsPage() {
               <div className="text-white/[60%] text-sm leading-relaxed space-y-4">
                 <div className="flex items-start gap-4 p-4 rounded-xl border border-[#C5A028]/20" style={{ background: 'rgba(212,175,55,0.05)' }}>
                   <div className="w-10 h-10 rounded-full bg-[#C5A028]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#C5A028] text-sm font-bold">50%</span>
+                    <span className="text-[#C5A028] text-sm font-bold">{siteFacts.depositPercent}%</span>
                   </div>
                   <div>
                     <p className="text-white/[80%] font-medium mb-1">Deposit to Confirm</p>
@@ -128,11 +129,11 @@ export default function TermsPage() {
                 </div>
                 <div className="flex items-start gap-4 p-4 rounded-xl border border-white/10">
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-white/[60%] text-sm font-bold">50%</span>
+                    <span className="text-white/[60%] text-sm font-bold">{100 - siteFacts.depositPercent}%</span>
                   </div>
                   <div>
                     <p className="text-white/[80%] font-medium mb-1">Balance on Arrival</p>
-                    <p className="text-white/[50%]">The remaining balance is paid when the chef arrives at your villa, before service begins.</p>
+                    <p className="text-white/[50%]">The remaining balance is paid {siteFacts.balanceTiming}.</p>
                   </div>
                 </div>
                 <p className="text-white/[60%] text-xs italic mt-4">Payment is considered valid only once MyChef confirms receipt.</p>

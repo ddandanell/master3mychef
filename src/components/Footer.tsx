@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { Link } from 'react-router-dom'
-import { Instagram, MessageCircle, LogIn, MapPin, Mail, ChefHat, ChevronDown } from 'lucide-react'
+import { Instagram, MessageCircle, LogIn, MapPin, Mail, ChefHat, ChevronDown, ExternalLink } from 'lucide-react'
 import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA, hasLocationPage } from '@/data/siteArchitecture'
+import { siteFacts } from '@/data/siteFacts'
 
 // Top Bali locations shown by default — chosen by traffic + villa density
 const TOP_LOCATION_SLUGS = ['seminyak', 'canggu', 'uluwatu', 'ubud', 'nusa-dua']
@@ -78,10 +79,16 @@ export default function Footer() {
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 bali@mychef.id
               </a>
-              <div className="flex items-center gap-2 text-sm text-white/60">
-                <MapPin className="w-4 h-4" />
+              <a
+                href={siteFacts.googleBusinessProfileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-white/60 hover:text-[#C5A028] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+              >
+                <MapPin className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 Bali, Indonesia
-              </div>
+                <ExternalLink className="w-3 h-3 opacity-60" />
+              </a>
             </div>
           </div>
         </div>

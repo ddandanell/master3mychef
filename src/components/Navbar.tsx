@@ -43,8 +43,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Locations', href: '/locations', icon: MapPin, accent: '#C5A028' },
   { label: 'Dining Styles', href: '/dining-styles', icon: BookOpen, accent: '#C5A028' },
   { label: 'Events', href: '/events', icon: CalendarDays, accent: '#C5A028' },
-  { label: 'Experiences', href: '/experiences', icon: Heart, accent: '#C5A028' },
-  { label: 'Experience', href: '/complete-villa-experience', icon: MapPin, accent: '#C5A028' },
+  { label: 'Experience', href: '/experiences', icon: Heart, accent: '#C5A028' },
   { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
   { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
   { label: 'Contact', href: '/contact', icon: Mail, accent: '#C5A028' },
@@ -87,20 +86,6 @@ NAV_SUBPAGES['/experiences'] = [
   { label: 'Kids Birthday Chef Party', href: '/experiences/kids-birthday-chef-party', icon: 'Baby' },
   { label: 'Champagne & Oyster Experience', href: '/experiences/champagne-oyster-experience', icon: 'Crown' },
   { label: 'Romantic Proposal Dinner', href: '/experiences/romantic-proposal-dinner', icon: 'Heart' },
-]
-
-// Experience dropdown — hand-written (umbrella pillar for end-to-end villa stays)
-NAV_SUBPAGES['/complete-villa-experience'] = [
-  { label: 'All Experiences', href: '/experiences', icon: 'Heart' },
-  { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', icon: 'Wine' },
-  { label: 'Sushi Masterclass', href: '/experiences/sushi-masterclass', icon: 'Utensils' },
-  { label: 'Private Cooking Class', href: '/experiences/private-cooking-class', icon: 'ChefHat' },
-  { label: 'Kids Birthday Chef Party', href: '/experiences/kids-birthday-chef-party', icon: 'Baby' },
-  { label: 'Champagne & Oyster Experience', href: '/experiences/champagne-oyster-experience', icon: 'Crown' },
-  { label: 'Romantic Proposal Dinner', href: '/experiences/romantic-proposal-dinner', icon: 'Heart' },
-  { label: 'Complete Villa Experience', href: '/complete-villa-experience', icon: 'Heart' },
-  { label: 'Villa Event Packages', href: '/villa-event-packages', icon: 'Wine' },
-  { label: 'VIP Transport Bali', href: '/vip-transport-bali', icon: 'Truck' },
 ]
 
 // Locations dropdown — compact view of main areas + link to full directory.

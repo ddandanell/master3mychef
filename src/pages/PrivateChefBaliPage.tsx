@@ -13,6 +13,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { siteFacts } from '@/data/siteFacts'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -126,8 +127,8 @@ export default function PrivateChefBaliPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Private Chef Bali Villa | Michelin-Trained Dining — myCHEF"
-        description="Hire a private chef for your Bali villa: ingredients, service & Michelin-trained standards included. 560+ villas served. WhatsApp to check availability."
+        title="Private Chef Bali Villa | Fine Dining in Your Villa — myCHEF"
+        description={`Hire a private chef for your Bali villa: ingredients, service & fine-dining standards included. ${siteFacts.reviewFraming}. WhatsApp to check availability.`}
         canonical={`${SITE}/fine-dining/private-chef-bali`}
         ogImage={`${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`}
         jsonLd={[
@@ -235,7 +236,7 @@ export default function PrivateChefBaliPage() {
               No other table.<br />No other guests.
             </h2>
             <p className="text-white/[70%] text-base leading-relaxed mb-6">
-              Just your space, your people, and a chef who trained for a decade in Michelin kitchens in Milan and Modena. The menu is Italian in technique, Balinese in setting — adapted to your preferences, your dietary needs, and the season.
+              Just your space, your people, and a chef who trained for a decade in fine-dining kitchens in {siteFacts.founderTrainingCity}. The menu is Italian in technique, Balinese in setting — adapted to your preferences, your dietary needs, and the season.
             </p>
             <p className="text-white/[70%] text-base leading-relaxed mb-8">
               We bring the kitchen to you. The team arrives 3 hours before your first course — setting the table, preparing the mise en place, sourcing that morning's freshest catch. You arrive to a table already set.
@@ -315,7 +316,7 @@ export default function PrivateChefBaliPage() {
               He left Italy with a knife, a notebook, and a decade in Michelin kitchens.
             </h2>
             <p className="text-white/[70%] text-base leading-relaxed mb-4">
-              Adriano trained under a Michelin-starred chef in Milan. He worked in Modena, staged in Tokyo, and opened in Bali not to build a restaurant — but to take restaurant-quality technique directly into the homes of people who deserved it.
+              Adriano trained under Michelin-level standards in {siteFacts.founderTrainingCity}, staged in Tokyo, and opened in Bali in {siteFacts.foundingYear} not to build a restaurant — but to take restaurant-quality technique directly into the homes of people who deserved it.
             </p>
             <p className="text-white/[70%] text-base leading-relaxed mb-8">
               He still leads every tasting menu, every Chef's Table, and every training session for the team of 50+ Indonesian hospitality professionals he has built.
@@ -387,7 +388,7 @@ export default function PrivateChefBaliPage() {
         <div className="max-w-[1080px] mx-auto">
           <div className="mb-12 text-center pcb-reveal">
             <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              560+ Villas Served
+              {siteFacts.eventsServed}
             </p>
             <h2 className="text-3xl md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>What Guests Say</h2>
           </div>

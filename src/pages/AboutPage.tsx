@@ -1,6 +1,7 @@
 import { Award, ChefHat, Globe, Heart, House, Shield, Users, UtensilsCrossed } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 
 const ADRIANO_PERSON_SCHEMA = {
   '@context': 'https://schema.org',
@@ -11,7 +12,7 @@ const ADRIANO_PERSON_SCHEMA = {
     '@type': 'Organization',
     name: 'myCHEF.id',
   },
-  description: 'Michelin-trained chef, trained in Milan. Founded myCHEF.id in Bali.',
+  description: `Fine-dining-trained chef, trained in ${siteFacts.founderTrainingCity}. Founded myCHEF.id in Bali in ${siteFacts.foundingYear}.`,
 }
 
 const SECTIONS = [
@@ -19,8 +20,8 @@ const SECTIONS = [
     id: 'story',
     type: 'content' as const,
     subtitle: 'Our Story',
-    title: 'From Milan and Modena to Villa Kitchens Across Bali',
-    body: `<p>myCHEF was founded by Adriano, a chef from Milan who trained under Michelin-level standards in Modena before sharpening his discipline in Tokyo kitchens. When he arrived in Bali, he saw a gap: beautiful villas, incredible guests, but private dining that often felt improvised rather than world-class.</p>
+    title: `From ${siteFacts.founderTrainingCity} to Villa Kitchens Across Bali`,
+    body: `<p>myCHEF was founded by Adriano, a chef who trained under Michelin-level standards in ${siteFacts.founderTrainingCity} before sharpening his discipline in Tokyo kitchens. When he arrived in Bali in ${siteFacts.foundingYear}, he saw a gap: beautiful villas, incredible guests, but private dining that often felt improvised rather than world-class.</p>
     <p>So he built a company around one idea: <strong>Your Villa. Our Kitchen.</strong> That meant designing menus that work in real villa kitchens, creating service systems that feel effortless for hosts, and training a team that treats every private space with total respect.</p>
     <p>Today, myCHEF is trusted for romantic dinners, family celebrations, full-service events, and longer in-villa stays across the island — still guided by Adriano’s standards, but delivered by a deeply local Bali team.</p>`,
     image: '/generated/luna-team.webp',
@@ -35,7 +36,7 @@ const SECTIONS = [
       { icon: Users, title: '50+ Staff', desc: 'Chefs, service professionals, coordinators, and support staff trained for private hospitality in Bali villas.' },
       { icon: House, title: '560+ Villas', desc: 'Trusted by guests, villa managers, and hosts across Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, and beyond.' },
       { icon: UtensilsCrossed, title: '12,000+ Guests', desc: 'Served through intimate dinners, family stays, birthdays, weddings, retreats, and premium catered events.' },
-      { icon: Award, title: '8+ Years', desc: 'Operating in Bali since 2016 with systems refined around reliability, presentation, and guest comfort.' },
+      { icon: Award, title: `Since ${siteFacts.foundingYear}`, desc: `Operating in Bali since ${siteFacts.foundingYear} with systems refined around reliability, presentation, and guest comfort.` },
     ],
   },
   {
@@ -76,7 +77,7 @@ const SECTIONS = [
 const FAQS = [
   {
     question: 'Who founded myCHEF?',
-    answer: 'myCHEF was founded by Adriano, a Milan-born chef who trained under Michelin-level standards in Modena before bringing that discipline to Bali villa hospitality.',
+    answer: `myCHEF was founded by Adriano, a chef who trained under Michelin-level standards in ${siteFacts.founderTrainingCity} before bringing that discipline to Bali villa hospitality in ${siteFacts.foundingYear}.`,
   },
   {
     question: 'How large is the myCHEF team?',
@@ -110,17 +111,17 @@ export default function AboutPage() {
     <PremiumPage
       slug="about"
       title="About myCHEF"
-      description="Learn how Adriano built myCHEF in Bali — Michelin-trained roots, 50+ staff, 560+ villas served, and 12,000+ guests hosted across the island."
-      seoTitle="About myCHEF Bali | Michelin-Trained Private Chef Team"
-      seoDescription="Meet the myCHEF Bali team: Michelin-trained founder Adriano, 50+ local professionals, 560+ villas served. See how we make villa dining exceptional."
+      description={`Learn how Adriano built myCHEF in Bali — fine-dining-trained roots, 50+ staff, ${siteFacts.reviewFraming}.`}
+      seoTitle="About myCHEF Bali | Fine-Dining Private Chef Team"
+      seoDescription={`Meet the myCHEF Bali team: fine-dining-trained founder Adriano, 50+ local professionals, ${siteFacts.reviewFraming}. See how we make villa dining exceptional.`}
       canonicalUrl="https://mychef.id/about"
       h1="The Story Behind myCHEF in Bali"
-      subtitle="Michelin-trained origin. Bali-built team. Trusted in 560+ villas across the island."
+      subtitle={`Fine-dining-trained origin. Bali-built team. ${siteFacts.reviewFraming}.`}
       heroImage="/generated/mychef-misc-bali-section-villa-kitchen.webp"
       heroImageAlt="Indonesian private chef preparing a fine dining dinner in a private Bali villa"
       ogImage="https://mychef.id/generated/mychef-finedining-bali-luna-chef-portrait.webp"
       keywords={['private chef bali', 'about mychef', 'bali catering company']}
-      highlights={['Michelin-Trained Founder', '50+ Staff', '560+ Villas Served', '12,000+ Guests Hosted']}
+      highlights={['Fine-Dining-Trained Founder', '50+ Staff', siteFacts.eventsServed, siteFacts.guestsServed]}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}

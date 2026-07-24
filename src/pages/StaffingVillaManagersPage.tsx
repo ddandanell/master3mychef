@@ -3,12 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, Briefcase, ClipboardList } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, {
-  breadcrumbSchema,
-  serviceWithAggregateOfferSchema,
-  faqPageSchema,
-  howToSchema,
-} from '@/components/SeoHead'
+import SeoHead from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -17,16 +12,106 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
+import { getPageMeta } from '@/data/page-meta'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a villa-staffing partnership in Bali', intent: 'availability and pricing' })
+
+const briefJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://mychef.id/staffing/for-villa-managers#service',
+      name: 'Staffing for Villa Managers Bali',
+      serviceType: 'B2B hospitality staffing for villa management companies',
+      provider: {
+        '@type': 'Organization',
+        name: 'myCHEF',
+        url: 'https://mychef.id',
+        telephone: '+62 896-7407-2020',
+      },
+      areaServed: 'Bali',
+      description:
+        'Outsourced hospitality staffing for Bali villa managers: pre-vetted chefs and front-of-house staff, 48–72 hour fills, retainer pools and tiered partnership rates for portfolios.',
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'IDR',
+        lowPrice: '2000000',
+        highPrice: '8000000',
+        offerCount: '3',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Do you offer partnership rates for multiple properties?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Villa managers with three or more properties receive tiered partnership discounts. Contact us for a custom rate sheet based on your portfolio size.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How quickly can you fill a last-minute staffing gap?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Our pool of pre-vetted candidates allows us to fill most roles within 48–72 hours. Emergency placements are available for retainer clients.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What happens if a placed staff member leaves?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'All placements include a replacement guarantee. Retainer clients receive priority re-matching at no additional placement fee.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you staff for events and high-season surges?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. The Full Hospitality Package includes event staffing, and retainer clients can request additional staff for peak periods.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is your vetting process?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Every candidate passes identity verification, reference checks, a skills assessment and a trial session before joining our pool.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What areas of Bali do you cover?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'All major areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.',
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
+        { '@type': 'ListItem', position: 2, name: 'Staffing', item: 'https://mychef.id/staffing' },
+        { '@type': 'ListItem', position: 3, name: 'For Villa Managers', item: 'https://mychef.id/staffing/for-villa-managers' },
+      ],
+    },
+  ],
+}
 
 const PRICING_TIERS = [
   {
+    // [BUSINESS CONFIRMATION REQUIRED: this IDR 4,000,000 flat rate conflicts with the cluster-wide "placement fee = one month's salary" model (≥ IDR 5.5M for a chef). Confirm that the partnership-tier rate officially replaces the standard model for villa-manager accounts before publishing.]
     title: 'Chef Placement',
     price: 'IDR 4,000,000',
     unit: 'one-time',
@@ -70,14 +155,15 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'Do you offer partnership rates for multiple properties?', a: 'Yes. Villa managers with 3+ properties receive tiered partnership discounts. Contact us for a custom rate sheet based on your portfolio size.' },
+  { q: 'Do you offer partnership rates for multiple properties?', a: 'Yes. Villa managers with three or more properties receive tiered partnership discounts. Contact us for a custom rate sheet based on your portfolio size.' },
   { q: 'How quickly can you fill a last-minute staffing gap?', a: 'Our pool of pre-vetted candidates allows us to fill most roles within 48–72 hours. Emergency placements are available for retainer clients.' },
   { q: 'What happens if a placed staff member leaves?', a: 'All placements include a replacement guarantee. Retainer clients receive priority re-matching at no additional placement fee.' },
-  { q: 'Do you handle payroll and contracts for our team?', a: 'We prepare standard employment contracts and provide payroll guidance. For larger portfolios, we can recommend integrated payroll partners.' },
-  { q: 'Can you staff for events and high-season surges?', a: 'Yes. Our Full Hospitality Package includes event staffing. Retainer clients can request additional staff for peak periods.' },
-  { q: 'What areas of Bali do you cover?', a: 'All major areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
+  // [BUSINESS CONFIRMATION REQUIRED: whether myCHEF administers BPJS registration directly for portfolio placements.]
+  { q: 'Do you handle payroll and contracts for our team?', a: 'Every portfolio placement includes a standard Indonesian employment contract plus payroll guidance covering BPJS and THR. For larger portfolios, we can recommend integrated payroll partners.' },
+  { q: 'Can you staff for events and high-season surges?', a: 'Yes. The Full Hospitality Package includes event staffing, and retainer clients can request additional staff for peak periods. For one-off guest events, our shift-based in-villa staff are available by the hour.' },
   { q: 'Do you place staff for short-term rentals?', a: 'Yes. We work with villa management companies handling short-term rentals, providing flexible staffing that scales with occupancy.' },
-  { q: 'What is your vetting process?', a: 'Every candidate passes identity verification, reference checks, skills assessment, and a trial session before joining our pool.' },
+  { q: 'What is your vetting process?', a: 'Every candidate passes identity verification, reference checks, a skills assessment and a trial session before joining our pool.' },
+  { q: 'What areas of Bali do you cover?', a: 'All major areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
 ]
 
 export default function StaffingVillaManagersPage() {
@@ -96,33 +182,11 @@ export default function StaffingVillaManagersPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Villa Manager Staffing Bali | Chef & Service Hires — myCHEF"
-        description="Outsource hospitality hiring to myCHEF for your Bali villa properties. Pre-vetted chefs & service staff, partnership rates, 48-hour placement. WhatsApp us."
-        canonical={`${SITE}/staffing/for-villa-managers`}
-        ogImage={`${SITE}/generated/corp-villa.webp`}
-        jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Staffing for Villa Managers Bali',
-            description: 'Hospitality staffing partnerships for villa managers in Bali. Pre-vetted chefs and front-of-house staff with partnership rates.',
-            url: `${SITE}/staffing/for-villa-managers`,
-            lowPrice: '8000000',
-            highPrice: '15000000',
-            unitText: 'per month',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Staff Your Villa in Bali',
-            description: 'Get professional staffing support for your Bali villa management in 4 easy steps.',
-            totalTime: 'PT20M',
-            steps: [
-              { name: 'Share your villa profile', text: 'Send your villa size, location, guest capacity, and current staffing gaps via WhatsApp.' },
-              { name: 'Define roles needed', text: 'Specify: villa manager, chef, housekeepers, maintenance, or guest services staff.' },
-              { name: 'Review vetted candidates', text: 'We present experienced hospitality professionals with villa references within 48 hours.' },
-              { name: 'Scale with confidence', text: 'Hire full-time or seasonal staff. We handle contracts, training, and ongoing support.' },
-            ],
-          }),
-          breadcrumbSchema('Staffing for Villa Managers', `${SITE}/staffing/for-villa-managers`, 'Staffing', `${SITE}/staffing`),
-        ]}
+        title={getPageMeta('staffing-for-villa-managers').title}
+        description={getPageMeta('staffing-for-villa-managers').description}
+        canonical={getPageMeta('staffing-for-villa-managers').canonical}
+        ogImage={getPageMeta('staffing-for-villa-managers').ogImage}
+        jsonLd={briefJsonLd}
       />
 
       {/* Hero */}
@@ -144,11 +208,13 @@ export default function StaffingVillaManagersPage() {
           ]} theme="dark" className="px-0 pt-0 pb-8" />
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">Staffing</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
-            Staffing for Villa Managers
+            Staffing & Partnerships for Villa Managers
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Outsource your hospitality hiring to myCHEF. Pre-vetted chefs and front-of-house staff 
-            for your properties. Partnership rates available for portfolio managers.
+            Your guests judge your properties by the people in them. myCHEF acts as the hospitality
+            hiring arm for Bali's villa managers — pre-vetted chefs and front-of-house staff, urgent
+            gaps filled in 48–72 hours, and partnership rates that scale with your portfolio. One
+            WhatsApp message replaces weeks of recruiting.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-villa-managers-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -216,6 +282,13 @@ export default function StaffingVillaManagersPage() {
               </div>
             ))}
           </div>
+          <p className="text-center text-sm text-[#4A4745] mt-12 max-w-[800px] mx-auto">
+            For villa managers who also want to offer guests private dining, our{' '}
+            <Link to="/certified-partner" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              certified partner programme
+            </Link>{' '}
+            formalises referrals — while this page covers the staffing side of your operation.
+          </p>
         </div>
       </section>
 
@@ -239,10 +312,11 @@ export default function StaffingVillaManagersPage() {
       <section className="py-12 px-6 bg-white border-y border-[#E8E6E3]">
         <div className="max-w-[1000px] mx-auto text-center">
           <p className="text-sm text-[#4A4745]">
-            Need bar staff, menu development or bar management for your properties?{' '}
-            <Link to="/bar-services/" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore MyChef Bar Services
-            </Link>.
+            Need bar staff, cocktail menus or bar management for your properties?{' '}
+            <Link to="/bar-services" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              bar services
+            </Link>{' '}
+            division covers the beverage side.
           </p>
         </div>
       </section>
@@ -267,6 +341,21 @@ export default function StaffingVillaManagersPage() {
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
+          <p className="text-white/[60%] text-sm mt-8">
+            Part of myCHEF{' '}
+            <Link to="/staffing" className="text-white hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded">
+              staffing & placement
+            </Link>
+            . Single-property needs? See{' '}
+            <Link to="/staffing/private-chef-placement" className="text-white hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded">
+              private chef placement
+            </Link>{' '}
+            and{' '}
+            <Link to="/staffing/villa-staff" className="text-white hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded">
+              villa staff placement
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

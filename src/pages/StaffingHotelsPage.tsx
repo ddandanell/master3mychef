@@ -1,13 +1,9 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, Briefcase, ClipboardList } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, {
-  breadcrumbSchema,
-  serviceWithAggregateOfferSchema,
-  faqPageSchema,
-  howToSchema,
-} from '@/components/SeoHead'
+import SeoHead from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -16,12 +12,12 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import PressStrip from '@/components/shared/PressStrip'
+import { getPageMeta } from '@/data/page-meta'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'hotel & restaurant staffing in Bali', intent: 'availability and pricing' })
 
 const PRICING_TIERS = [
@@ -61,23 +57,111 @@ const WHAT_INCLUDED = [
 ]
 
 const HOW_IT_WORKS = [
-  { step: '01', title: 'Brief', desc: 'Share your establishment needs, team structure, and culture.', icon: ClipboardList },
-  { step: '02', title: 'Shortlist', desc: 'Receive matched candidates for your kitchen or front-of-house.', icon: Users },
-  { step: '03', title: 'Trials', desc: 'Trial shifts with your top candidates at your venue.', icon: Briefcase },
-  { step: '04', title: 'Placement', desc: 'Contracts, onboarding, and first-week support.', icon: ShieldCheck },
-  { step: '05', title: 'Support', desc: 'Ongoing check-ins, replacements, and volume planning.', icon: Award },
+  { step: '01', title: 'Brief', desc: 'Your establishment\'s needs, team structure and culture.', icon: ClipboardList },
+  { step: '02', title: 'Shortlist', desc: 'Matched candidates for your kitchen or front-of-house — typically within 48 hours.', icon: Users },
+  { step: '03', title: 'Trials', desc: 'Your top candidates work a shift at your venue.', icon: Briefcase },
+  { step: '04', title: 'Placement', desc: 'Contracts, onboarding and first-week support.', icon: ShieldCheck },
+  { step: '05', title: 'Support', desc: 'Ongoing check-ins, replacements and volume planning.', icon: Award },
 ]
 
 const FAQS = [
-  { q: 'Do you offer volume rates for multiple hires?', a: 'Yes. Our Volume Package offers custom pricing for 10+ placements. Contact us for a tailored rate card based on your hiring forecast.' },
-  { q: 'What types of hospitality roles do you place?', a: 'Kitchen staff (sous chef, line cook, pastry), service staff (waiter, bartender, host), and management (restaurant manager, F&B director, head chef).' },
-  { q: 'How does the trial shift process work?', a: 'Candidates complete a paid trial shift at your establishment. You assess their skills, attitude, and fit before making a hiring decision.' },
-  { q: 'What is your replacement guarantee?', a: 'Kitchen and service placements include a 60-day replacement guarantee. Management placements include 90 days. We re-match at no additional fee.' },
-  { q: 'Can you handle seasonal or high-season staffing?', a: 'Yes. We maintain a pool of pre-vetted seasonal staff. Volume clients receive priority access for peak periods and event coverage.' },
+  { q: 'Do you offer volume rates for multiple hires?', a: 'Yes. Our volume package offers custom pricing for ten or more placements. Contact us for a tailored rate card based on your hiring forecast.' },
+  { q: 'What types of hospitality roles do you place?', a: 'Kitchen staff (sous chef, line cook, pastry), service staff (waiter, bartender, host) and management (restaurant manager, F&B director, head chef). For dedicated bar recruitment and training, see our temporary bar staffing and bar staff training services.' },
+  { q: 'How does the trial shift process work?', a: 'Candidates complete a paid trial shift at your establishment. You assess their skills, attitude and fit before making a hiring decision.' },
+  { q: 'What is your replacement guarantee?', a: 'Kitchen and service placements include a 60-day replacement guarantee; management placements include 90 days. We re-match at no additional fee.' },
+  { q: 'Can you handle seasonal or high-season staffing?', a: 'Yes. We maintain a pool of pre-vetted seasonal staff, and volume clients receive priority access for peak periods and event coverage.' },
   { q: 'Do you place staff for new restaurant openings?', a: 'Yes. We provide full team build-outs for new openings, including recruitment timeline planning and batch hiring coordination.' },
-  { q: 'What areas of Bali do you cover?', a: 'All major hospitality zones: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding areas.' },
-  { q: 'How do you ensure candidate quality?', a: 'Every candidate passes skills assessment, reference checks, background verification, and a trial shift before placement at your establishment.' },
+  { q: 'What areas of Bali do you cover?', a: 'All major hospitality zones — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding areas.' },
+  { q: 'How do you ensure candidate quality?', a: 'Every candidate passes a skills assessment, reference checks, background verification and a trial shift before placement at your establishment.' },
 ]
+
+const briefJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://mychef.id/staffing/for-hotels-restaurants#service',
+      name: 'Hotel & Restaurant Staffing Bali',
+      serviceType: 'Hospitality recruitment for venues',
+      provider: {
+        '@type': 'Organization',
+        name: 'myCHEF',
+        url: 'https://mychef.id',
+        telephone: '+62 896-7407-2020',
+      },
+      areaServed: 'Bali',
+      description: 'Kitchen, service and management recruitment for Bali hotels, restaurants, beach clubs and resorts. Trial shifts, volume rates and replacement guarantees up to 90 days.',
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'IDR',
+        lowPrice: '2500000',
+        highPrice: '6000000',
+        offerCount: '3',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Do you offer volume rates for multiple hires?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Our volume package offers custom pricing for ten or more placements. Contact us for a tailored rate card based on your hiring forecast.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What types of hospitality roles do you place?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Kitchen staff (sous chef, line cook, pastry), service staff (waiter, bartender, host) and management (restaurant manager, F&B director, head chef).',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does the trial shift process work?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Candidates complete a paid trial shift at your establishment. You assess their skills, attitude and fit before making a hiring decision.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is your replacement guarantee?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Kitchen and service placements include a 60-day replacement guarantee; management placements include 90 days. We re-match at no additional fee.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you handle seasonal or high-season staffing?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. We maintain a pool of pre-vetted seasonal staff, and volume clients receive priority access for peak periods and event coverage.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you place staff for new restaurant openings?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. We provide full team build-outs for new openings, including recruitment timeline planning and batch hiring coordination.',
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
+        { '@type': 'ListItem', position: 2, name: 'Staffing', item: 'https://mychef.id/staffing' },
+        { '@type': 'ListItem', position: 3, name: 'For Hotels & Restaurants', item: 'https://mychef.id/staffing/for-hotels-restaurants' },
+      ],
+    },
+  ],
+}
 
 export default function StaffingHotelsPage() {
   const ref = useRef<HTMLDivElement>(null)
@@ -95,33 +179,11 @@ export default function StaffingHotelsPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Chef Staffing Hotels Bali | Kitchen & Service Hires — myCHEF"
-        description="Hospitality staffing for Bali hotels, restaurants & beach clubs. Vetted chefs, servers & managers. Volume rates available. WhatsApp us to get started."
-        canonical={`${SITE}/staffing/for-hotels-restaurants`}
-        ogImage={`${SITE}/generated/aura-corporate.webp`}
-        jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Hotels & Restaurants Staffing Bali',
-            description: 'Hospitality recruitment for boutique hotels, restaurants and resorts in Bali. Kitchen staff, service staff, and management placements with volume rates.',
-            url: `${SITE}/staffing/for-hotels-restaurants`,
-            lowPrice: '2500000',
-            highPrice: '6000000',
-            unitText: 'per month',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Hire Hotel & Restaurant Staff in Bali',
-            description: 'Hire professional hospitality staff for your Bali hotel or restaurant in 4 easy steps.',
-            totalTime: 'PT20M',
-            steps: [
-              { name: 'Share your staffing requirements', text: 'Send your property type, roles needed, headcount, and seasonality via WhatsApp.' },
-              { name: 'Define experience level', text: 'Specify: entry-level, experienced, or management-level candidates with language skills.' },
-              { name: 'Review qualified candidates', text: 'We present pre-vetted hospitality professionals with relevant experience within 48 hours.' },
-              { name: 'Build your team', text: 'Interview, hire, and onboard. We handle contracts, visas, and ongoing HR support.' },
-            ],
-          }),
-          breadcrumbSchema('Hotels & Restaurants Staffing', `${SITE}/staffing/for-hotels-restaurants`, 'Staffing', `${SITE}/staffing`),
-        ]}
+        title={getPageMeta('staffing-for-hotels-restaurants').title}
+        description={getPageMeta('staffing-for-hotels-restaurants').description}
+        canonical={getPageMeta('staffing-for-hotels-restaurants').canonical}
+        ogImage={getPageMeta('staffing-for-hotels-restaurants').ogImage}
+        jsonLd={briefJsonLd}
       />
 
       {/* Hero */}
@@ -146,8 +208,7 @@ export default function StaffingHotelsPage() {
             Hotels & Restaurants Staffing
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Hospitality recruitment in Bali for boutique hotels, restaurants and resorts. 
-            Kitchen, service, management. Volume rates available.
+            Hospitality recruitment in Bali for boutique hotels, restaurants, beach clubs and resorts — kitchen brigades, front-of-house teams and F&B management, vetted by people who run kitchens and dining rooms themselves. Trial shifts before you hire, replacement guarantees up to 90 days, and volume rates for multi-hire briefs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-hotels-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -237,6 +298,14 @@ export default function StaffingHotelsPage() {
 
       <PressStrip />
 
+      <section className="py-12 md:py-16 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="text-[#4A4745] text-sm">
+            Part of myCHEF <Link to="/staffing" className="text-[#C5A028] hover:underline">staffing & placement</Link>. Read our <Link to="/blog/hotel-restaurant-chef-staffing" className="text-[#C5A028] hover:underline">guide to hospitality staffing in Bali</Link>, or see <Link to="/staffing/for-villa-managers" className="text-[#C5A028] hover:underline">staffing for villa managers</Link> if you operate villa portfolios.
+          </p>
+        </div>
+      </section>
+
       <section id="book" className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <OptimizedImage src="/generated/mychef-staffing-bali-staffing-kitchen.webp" alt="Professional myCHEF kitchen team at a Bali restaurant" className="w-full h-full object-cover" loading="lazy" />
@@ -245,7 +314,7 @@ export default function StaffingHotelsPage() {
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="font-playfair text-3xl md:text-5xl text-white mb-6">Staff Your Establishment</h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Tell us about your team needs and we will send matched candidates within 48 hours.
+            Tell us about your team needs and we will send matched candidates within 48 hours — with trial shifts before you commit and guarantees after you do.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-hotels-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">

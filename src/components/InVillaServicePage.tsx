@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight, Wine, Users, Shield, Clock, Star, Award } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema, howToSchema } from './SeoHead'
+import SeoHead from './SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import { PILLARS } from '@/data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
@@ -25,7 +25,7 @@ const SERVICE_TYPES = [
     slug: 'butlers',
     label: 'Butlers',
     desc: 'Discreet, professional villa service for luxury estates. Anticipatory service, etiquette-trained, and detail-oriented.',
-    price: 'From IDR 400,000/hour',
+    price: 'From IDR 1,200,000/day',
     icon: Award,
   },
   {
@@ -39,14 +39,14 @@ const SERVICE_TYPES = [
     slug: 'mixology',
     label: 'Mixology Service',
     desc: 'Signature cocktail creation, menu design, and bar consultancy for special events and villa parties.',
-    price: 'From IDR 500,000/hour',
+    price: 'From IDR 1,500,000/session',
     icon: Wine,
   },
   {
     slug: 'sommelier',
     label: 'Sommelier',
     desc: 'Wine pairing, selection, and service for fine dining experiences. Expert knowledge of Italian and international wines.',
-    price: 'From IDR 450,000/hour',
+    price: 'From IDR 1,200,000/dinner',
     icon: Wine,
   },
   {
@@ -91,18 +91,67 @@ const SERVICE_EXPLAINERS = [
 ]
 
 const FAQS = [
-  { q: 'How many staff do I need for my event?', a: 'For plated dinners, we recommend 1 waiter per 8–10 guests. For buffet service, 1 per 15 guests. For cocktail parties, 1 bartender per 25 guests. We will advise based on your event details.' },
-  { q: 'Can I hire staff without booking catering?', a: 'Yes. Our in-villa service staff can be hired independently for events where you have your own catering or are hosting a self-catered gathering.' },
-  { q: 'What do your staff wear?', a: 'All service staff wear professional uniforms — black and white for formal events, branded myCHEF attire for casual settings. We can adapt to your event dress code.' },
-  { q: 'How far in advance should I book service staff?', a: '3+ days for small teams (1–4 staff). 2+ weeks for large events (10+ staff) or peak season. Last-minute bookings possible subject to availability.' },
-  { q: 'Are your staff trained in wine service?', a: 'Our premium waiters and sommeliers are trained in wine service, including decanting, pouring, and basic pairing knowledge. For advanced wine pairing, book our sommelier service.' },
-  { q: 'Do you provide bar equipment and glassware?', a: 'Basic bar tools are included with bartender bookings. Specialty glassware, ice, and garnishes can be arranged. Let us know your requirements when booking.' },
+  { q: 'How much does it cost to hire villa service staff in Bali?', a: 'Waiters from IDR 250,000/hour, hosts from IDR 300,000/hour, bartenders from IDR 350,000/hour (all 3-hour minimums). Butlers from IDR 1,200,000/day, sommelier from IDR 1,200,000/dinner, mixology from IDR 1,500,000/session. All rates ++ (11% tax + 10% service).' },
+  { q: 'Is there a minimum booking?', a: 'Hourly roles carry a 3-hour minimum; waiter bookings start at two waiters. Butler, sommelier and mixology are priced per day, dinner or session.' },
+  { q: 'Can I hire staff without booking catering?', a: 'Yes — our teams regularly support self-catered events and other caterers.' },
+  { q: 'What do staff wear and bring?', a: 'Professional uniforms matched to your event\'s formality, plus all role-specific tools — bar kits for bartenders, service equipment for waiters. Specialty glassware, ice and garnishes are arranged during briefing.' },
+  { q: 'Are your staff vetted and supervised?', a: 'All staff are background-checked, employed and supervised by myCHEF, and covered by our replacement-or-refund guarantee if anyone cannot make it on the day.' },
+  { q: 'What is the cancellation policy?', a: 'Cancel 14 or more days before service for a full refund, 7–13 days for a 50% refund; less than 7 days is non-refundable, and the deposit follows the same tiers. Full terms are on our <a href="/cancellation">cancellation policy</a> page.' },
+  { q: 'Which areas do you cover?', a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may carry a modest travel fee, quoted upfront.' },
+  { q: 'How far ahead should I book?', a: '3+ days for small teams, 2+ weeks for 10+ staff or peak season. Last-minute is frequently possible.' },
 ]
 
 export default function InVillaServicePage() {
   const pillar = PILLARS['in-villa-service']
   const canonical = `${SITE}/in-villa-service`
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to hire in-villa service staff.')}`
+
+  const briefJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        name: 'In-Villa Service Staff Bali',
+        serviceType: 'Villa service staff hire',
+        provider: {
+          '@type': 'Organization',
+          name: 'myCHEF',
+          url: 'https://mychef.id',
+          telephone: '+62 896-7407-2020',
+          email: 'bali@mychef.id',
+        },
+        areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Berawa', 'Pererenan', 'Bali'],
+        description: 'Uniformed, English-speaking villa service staff in Bali — waiters, butlers, bartenders, mixologists, sommeliers and hosts hired by the shift, from IDR 250,000 per hour.',
+        offers: {
+          '@type': 'AggregateOffer',
+          priceCurrency: 'IDR',
+          lowPrice: '250000',
+          offerCount: '6',
+        },
+        url: canonical,
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'How much does it cost to hire villa service staff in Bali?', acceptedAnswer: { '@type': 'Answer', text: 'Waiters from IDR 250,000/hour, hosts from IDR 300,000/hour, bartenders from IDR 350,000/hour (3-hour minimums). Butlers from IDR 1,200,000/day, sommelier from IDR 1,200,000/dinner, mixology from IDR 1,500,000/session. Rates are subject to 11% tax + 10% service charge.' } },
+          { '@type': 'Question', name: 'Is there a minimum booking?', acceptedAnswer: { '@type': 'Answer', text: 'Hourly roles carry a 3-hour minimum; waiter bookings start at two waiters. Butler, sommelier and mixology services are priced per day, dinner or session.' } },
+          { '@type': 'Question', name: 'Can I hire staff without booking catering?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. In-villa service staff can be hired independently for self-catered events or to support another caterer.' } },
+          { '@type': 'Question', name: 'What do staff wear and bring?', acceptedAnswer: { '@type': 'Answer', text: 'Professional uniforms matched to event formality plus all role-specific service tools; specialty glassware, ice and garnishes are arranged at briefing.' } },
+          { '@type': 'Question', name: 'Are your staff vetted and supervised?', acceptedAnswer: { '@type': 'Answer', text: 'All staff are background-checked, employed and supervised by myCHEF, with a replacement-or-refund guarantee if anyone cannot make it on the day.' } },
+          { '@type': 'Question', name: 'What is the cancellation policy?', acceptedAnswer: { '@type': 'Answer', text: 'Cancellations 14 or more days before service receive a full refund, 7-13 days a 50% refund, and less than 7 days is non-refundable; the deposit follows the same tiers.' } },
+          { '@type': 'Question', name: 'Which areas do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may carry a modest travel fee quoted upfront.' } },
+          { '@type': 'Question', name: 'How far ahead should I book?', acceptedAnswer: { '@type': 'Answer', text: '3+ days for small teams, 2+ weeks for 10+ staff or peak season. Last-minute bookings are frequently possible via WhatsApp.' } },
+        ],
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id' },
+          { '@type': 'ListItem', position: 2, name: 'In-Villa Service', item: canonical },
+        ],
+      },
+    ],
+  }
 
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
@@ -111,46 +160,7 @@ export default function InVillaServicePage() {
         description={getPageMeta('in-villa-service').description}
         canonical={getPageMeta('in-villa-service').canonical}
         ogImage={getPageMeta('in-villa-service').ogImage}
-        jsonLd={[
-          breadcrumbSchema('In-Villa Service', canonical),
-          serviceSchema('In-Villa Service Staff', pillar.description, canonical),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'In-Villa Service Staff Bali',
-            description: 'Professional waiters, butlers, bartenders, mixologists, and sommeliers for Bali villas. Per-shift hire with same-day availability, fully briefed and uniformed.',
-            provider: {
-              '@type': 'LocalBusiness',
-              name: 'myCHEF.id',
-              url: 'https://mychef.id',
-            },
-            areaServed: {
-              '@type': 'Place',
-              name: 'Bali, Indonesia',
-            },
-            serviceType: 'Villa Staffing Service',
-            offers: {
-              '@type': 'AggregateOffer',
-              lowPrice: '250000',
-              highPrice: '1500000',
-              priceCurrency: 'IDR',
-              availability: 'https://schema.org/InStock',
-              url: canonical,
-            },
-          },
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Hire In-Villa Service Staff in Bali',
-            description: 'Book professional waiters, butlers, bartenders, and sommeliers for your Bali villa in 4 easy steps.',
-            totalTime: 'PT10M',
-            steps: [
-              { name: 'Share your event details', text: 'Tell us your guest count, event type, villa location, and desired service style via WhatsApp.' },
-              { name: 'Get matched staff', text: 'We recommend the right staffing mix and confirm availability within the hour.' },
-              { name: 'Pre-event briefing', text: 'Staff receive a full briefing on your menu, timeline, dietary notes, and villa layout.' },
-              { name: 'Enjoy polished service', text: 'Uniformed staff arrive early, run service smoothly, and leave your villa spotless.' },
-            ],
-          }),
-        ]}
+        jsonLd={briefJsonLd}
       />
 
       {/* Hero */}
@@ -172,7 +182,7 @@ export default function InVillaServicePage() {
           <div className="max-w-[900px]">
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF</p>
             <h1 className="font-playfair text-4xl md:text-6xl text-white leading-[1.1] mb-6">{pillar.h1}</h1>
-            <p className="text-lg md:text-xl text-white/[80%] max-w-[640px] mb-8">Per-shift waiters, butlers, bartenders, mixologists, and sommeliers for Bali villas. From IDR 250,000/hour, briefed to your event and ready for dinners, parties, and full-service hosting.</p>
+            <p className="text-lg md:text-xl text-white/[80%] max-w-[640px] mb-8">Waiters, butlers, bartenders, mixologists, sommeliers and event hosts for Bali villas — booked by the hour, the shift or the day. Uniformed, English-speaking, background-checked, and briefed to your event before they arrive. Rates start from IDR 250,000 per hour.</p>
             <div className="flex flex-wrap gap-3 mb-8">
               {['Uniformed Staff', 'Same-Day Booking', 'English-Speaking', 'Background-Checked'].map((h) => (
                 <span key={h} className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full">
@@ -218,12 +228,10 @@ export default function InVillaServicePage() {
               <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">What In-Villa Service Means</p>
               <h2 className="font-playfair text-3xl md:text-5xl leading-[1.1] mb-6">Hotel-level front-of-house service, booked per shift for your villa.</h2>
               <p className="text-[#4A4745] text-base md:text-lg leading-relaxed mb-5">
-                In-villa service means short-term hospitality staff for the moments when your villa needs more than food alone.
-                We send waiters for plated dinners and breakfasts, butlers for discreet guest care, and bartenders or sommeliers for drinks-led hosting.
+                A beautiful villa and a great menu are only half of a memorable evening. In-villa service is the other half: professional front-of-house staff, hired for exactly as long as you need them — one dinner, one poolside party, one wedding weekend, or every day of a two-week stay.
               </p>
               <p className="text-[#4A4745] text-base md:text-lg leading-relaxed mb-8">
-                You tell us the guest count, timing, and tone. We tell you how many people you need, what each role costs,
-                and which staffing mix keeps the service smooth without overbooking the team.
+                You tell us the guest count, occasion and tone. We tell you how many staff you need, which roles matter, and what it costs — confirmed on WhatsApp within the hour. No long-term contracts, no employment admin on your side. (Need permanent staff for a villa you own or manage? See our <Link to="/staffing/villa-staff" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">long-term villa staff placement</Link> service.) Staff can also be hired <strong>without catering</strong> — for self-catered gatherings or to support another caterer.
               </p>
               <div className="flex flex-wrap gap-3">
                 {['Per-shift pricing', 'Staffing ratios advised before booking', 'Same-day confirmation via WhatsApp'].map((item) => (
@@ -453,16 +461,19 @@ export default function InVillaServicePage() {
               to="/pricing"
               className="group flex items-center justify-between p-4 rounded-xl bg-[#FAFAF8] border border-black/5 hover:border-[#C5A028] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
             >
-              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">In-villa chef pricing</span>
+              <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">Full pricing guide</span>
               <ArrowRight className="w-4 h-4 text-[#C5A028] transition-transform group-hover:translate-x-1 flex-shrink-0 ml-3" />
             </Link>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-center">
-            <Link to="/blog/how-to-hire-private-chef" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Complete hiring guide: how to hire a private chef in Bali →
+            <Link to="/catering" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Pair your staff with villa catering →
             </Link>
-            <Link to="/vip-transport-bali" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Arriving in Bali? VIP airport transfers, yachts & event transport →
+            <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Full pricing guide →
+            </Link>
+            <Link to="/bar-services/temporary-bartender-staffing/" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              Temporary bar staffing for venues →
             </Link>
           </div>
         </div>

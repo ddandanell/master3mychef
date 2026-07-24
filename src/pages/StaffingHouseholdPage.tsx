@@ -1,13 +1,10 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, ChefHat } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, {
-  breadcrumbSchema,
-  serviceWithAggregateOfferSchema,
-  faqPageSchema,
-  howToSchema,
-} from '@/components/SeoHead'
+import SeoHead from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -21,8 +18,95 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'household staff in Bali', intent: 'availability and pricing' })
+
+const briefJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://mychef.id/staffing/household-staff#service',
+      name: 'Household Staff Placement Bali',
+      serviceType: 'Household and estate staff recruitment',
+      provider: {
+        '@type': 'Organization',
+        name: 'myCHEF',
+        url: 'https://mychef.id',
+        telephone: '+62 896-7407-2020',
+      },
+      areaServed: ['Bali', 'Jakarta'],
+      description: 'Household staff recruitment for private residences in Bali — housekeepers, nannies, drivers and estate managers. Reference-checked candidates, contracts and payroll guidance, 30-day replacement guarantee.',
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'IDR',
+        lowPrice: '4000000',
+        highPrice: '15000000',
+        offerCount: '4',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How long does household staff placement take?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Typically one to two weeks from brief to placement. Interviews are scheduled within three to five days of shortlist approval.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What if the staff member is not the right fit?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What household roles can you fill?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Housekeepers, nannies, drivers, estate managers, personal assistants and heads of house for private residences.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you verify references for household staff?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Every candidate undergoes thorough reference checks, background verification and in-person interviews before placement.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you handle contracts and payroll for household staff?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes — every household placement comes with a standard Indonesian employment contract and payroll guidance covering BPJS and THR employer obligations; complex arrangements are referred to trusted local payroll partners.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is your placement fee?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "The fee equals one month of the hired person's salary — a single charge that includes the search, in-person interviews, background verification, contract preparation and six months of support after placement.",
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
+        { '@type': 'ListItem', position: 2, name: 'Staffing', item: 'https://mychef.id/staffing' },
+        { '@type': 'ListItem', position: 3, name: 'Household Staff', item: 'https://mychef.id/staffing/household-staff' },
+      ],
+    },
+  ],
+}
 
 const PRICING_TIERS = [
   {
@@ -76,14 +160,14 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'How long does household staff placement take?', a: 'Typically 1–2 weeks from brief to placement. Interviews are scheduled within 3–5 days of shortlist approval.' },
-  { q: 'What if the household staff member is not the right fit?', a: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.' },
-  { q: 'Do you handle contracts and payroll for household staff?', a: 'We prepare standard employment contracts and provide payroll guidance. For complex arrangements, we can recommend local payroll partners.' },
-  { q: 'What household roles can you fill?', a: 'Housekeepers, nannies, drivers, estate managers, personal assistants, and head of house for private residences.' },
-  { q: 'Can you provide a full household team?', a: 'Yes. We can recruit and coordinate a complete household team including housekeepers, nannies, drivers, and an estate manager.' },
-  { q: 'What areas do you cover for household staff?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'Do you verify references for household staff?', a: 'Yes. Every candidate undergoes thorough reference checks, background verification, and in-person interviews before placement.' },
-  { q: 'What is your household staff placement fee?', a: 'One month of the staff salary as a placement fee. This covers sourcing, interviews, contract, and 6 months of ongoing support.' },
+  { q: 'How long does household staff placement take?', a: 'Typically one to two weeks from brief to placement. Interviews are scheduled within three to five days of shortlist approval.' },
+  { q: 'What if the staff member is not the right fit?', a: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.' },
+  { q: 'Do you handle contracts and payroll for household staff?', a: 'Yes — every household placement comes with a standard Indonesian employment contract and payroll guidance covering BPJS and THR employer obligations; complex arrangements are referred to trusted local payroll partners.' },
+  { q: 'What household roles can you fill?', a: 'Housekeepers, nannies, drivers, estate managers, personal assistants and heads of house for private residences.' },
+  { q: 'Can you provide a full household team?', a: 'Yes. We recruit and coordinate complete household teams — housekeepers, nannies, drivers and an estate manager — for large residences and estates.' },
+  { q: 'Do you verify references for household staff?', a: 'Yes. Every candidate undergoes thorough reference checks, background verification and in-person interviews before placement.' },
+  { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions. We also place household staff for residences in Jakarta.' },
+  { q: 'What is your placement fee?', a: "The fee equals one month of the hired person's salary — a single charge that includes the search, in-person interviews, background verification, contract preparation and six months of support after placement." },
 ]
 
 export default function StaffingHouseholdPage() {
@@ -102,33 +186,11 @@ export default function StaffingHouseholdPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Household Staff Bali | Private Estate Recruitment — myCHEF"
-        description="Recruit household staff in Bali for private residences & estates. Housekeepers, drivers, nannies & heads of house. Vetted & placed in 48 hours."
-        canonical={`${SITE}/staffing/household-staff`}
-        ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-table.webp`}
-        jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Household Staff Bali',
-            description: 'Household staff recruitment in Bali for private residences — nannies, drivers, housekeepers, and estate managers. Vetted candidates and ongoing support.',
-            url: `${SITE}/staffing/household-staff`,
-            lowPrice: '4000000',
-            highPrice: '15000000',
-            unitText: 'per month',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Hire Household Staff in Bali',
-            description: 'Hire reliable household staff for your Bali home in 4 easy steps.',
-            totalTime: 'PT20M',
-            steps: [
-              { name: 'List your household needs', text: 'Define roles: cook, nanny, driver, housekeeper, or personal assistant.' },
-              { name: 'Share your home details', text: 'Send your location, family size, language preferences, and schedule via WhatsApp.' },
-              { name: 'Review matched candidates', text: 'We present pre-screened candidates with background checks within 48 hours.' },
-              { name: 'Build your household team', text: 'Interview, select, and onboard. We handle contracts and trial periods.' },
-            ],
-          }),
-          breadcrumbSchema('Household Staff', `${SITE}/staffing/household-staff`, 'Staffing', `${SITE}/staffing`),
-        ]}
+        title={getPageMeta('staffing-household-staff').title}
+        description={getPageMeta('staffing-household-staff').description}
+        canonical={getPageMeta('staffing-household-staff').canonical}
+        ogImage={getPageMeta('staffing-household-staff').ogImage}
+        jsonLd={briefJsonLd}
       />
 
       {/* Hero */}
@@ -150,11 +212,10 @@ export default function StaffingHouseholdPage() {
           ]} theme="dark" className="px-0 pt-0 pb-8" />
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">Staffing</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
-            Household Staff in Bali
+            Household Staff in Bali — Estate Operations
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Household staff recruitment for private residences — nannies, drivers, 
-            housekeepers, head of house. From IDR 4,000,000 per month.
+            Running a large private residence takes a team you can trust inside your home. myCHEF recruits household staff for private residences and estates across Bali — housekeepers, nannies, drivers, personal assistants and estate managers — with thorough reference checks, proper contracts and a 30-day replacement guarantee. Salaries from IDR 4,000,000 per month.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-household-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -252,7 +313,7 @@ export default function StaffingHouseholdPage() {
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="font-playfair text-3xl md:text-5xl text-white mb-6">Hire Your Household Team</h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Tell us your household requirements and we will send matched candidate profiles within 48 hours.
+            Tell us your household's requirements and we will send matched candidate profiles within 48 hours — referenced, background-checked and ready to meet your family.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-household-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -262,6 +323,9 @@ export default function StaffingHouseholdPage() {
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
+          <p className="text-white/[60%] text-sm mt-8 italic">
+            Part of myCHEF <Link to="/staffing" className="text-[#C5A028] hover:underline">staffing & placement</Link>. Staffing a rental villa rather than a private home? See <Link to="/staffing/villa-staff" className="text-[#C5A028] hover:underline">villa staff placement</Link>. Need a chef for the household? See <Link to="/staffing/private-chef-placement" className="text-[#C5A028] hover:underline">private chef placement</Link> or our <Link to="/staffing/live-in-chef" className="text-[#C5A028] hover:underline">live-in chef</Link> service.
+          </p>
         </div>
       </section>
 

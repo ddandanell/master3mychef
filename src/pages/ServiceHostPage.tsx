@@ -3,12 +3,8 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, Star, ShieldCheck, HandHeart } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, {
-  breadcrumbSchema,
-  serviceWithOfferSchema,
-  faqPageSchema,
-  howToSchema,
-} from '@/components/SeoHead'
+import SeoHead, { howToSchema } from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -24,6 +20,55 @@ gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'host & hostess service in Bali', intent: 'availability and pricing' })
+
+const HOST_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      name: 'Host & Hostess Hire Bali',
+      serviceType: 'Event host and hostess hire',
+      provider: {
+        '@type': 'Organization',
+        name: 'myCHEF',
+        url: 'https://mychef.id',
+        telephone: '+62 896-7407-2020',
+        email: 'bali@mychef.id',
+      },
+      areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
+      description: 'Professional event hosts and hostesses in Bali for guest reception, registration, seating coordination and event flow at weddings, corporate functions and villa events — from IDR 300,000 per hour.',
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'IDR',
+        price: '300000',
+        unitText: 'per hour',
+        description: 'Event host/hostess, 3-hour minimum. Subject to 11% tax + 10% service charge.',
+      },
+      url: 'https://mychef.id/in-villa-service/host-hostess',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'How much does it cost to hire event hosts or hostesses in Bali?', acceptedAnswer: { '@type': 'Answer', text: 'IDR 300,000 per hour per host with a 3-hour minimum, subject to 11% tax + 10% service charge. Scale by adding hosts at the same rate.' } },
+        { '@type': 'Question', name: 'What is the difference between a hostess and a waiter?', acceptedAnswer: { '@type': 'Answer', text: 'Hosts manage guest experience and event flow — arrivals, registration, seating, timing and VIP care. Waiters manage food and beverage service at the table.' } },
+        { '@type': 'Question', name: 'How many hosts do I need?', acceptedAnswer: { '@type': 'Answer', text: 'One per 25 seated guests, one per 40 standing, plus a senior host above 50 guests.' } },
+        { '@type': 'Question', name: 'Can hosts handle registration and check-in?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — guest lists, badges, gift tables and arrival dietary confirmations are standard inclusions.' } },
+        { '@type': 'Question', name: 'What do hosts wear?', acceptedAnswer: { '@type': 'Answer', text: 'Professional attire — black suit or elegant dress depending on formality; custom branded uniforms available for corporate events.' } },
+        { '@type': 'Question', name: 'Do your hosts speak multiple languages?', acceptedAnswer: { '@type': 'Answer', text: 'All hosts speak fluent English; many speak Mandarin, Japanese, French or Arabic.' } },
+        { '@type': 'Question', name: 'Can hosts manage VIP guests?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Senior hosts handle discreet VIP arrivals, dedicated seating, special requests and privacy protection.' } },
+        { '@type': 'Question', name: 'How far in advance should I book, and where do you operate?', acceptedAnswer: { '@type': 'Answer', text: '3–7 days standard; 2–4 weeks for large peak-season events. All of Bali covered — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and beyond.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id' },
+        { '@type': 'ListItem', position: 2, name: 'In-Villa Service', item: 'https://mychef.id/in-villa-service' },
+        { '@type': 'ListItem', position: 3, name: 'Host & Hostess', item: 'https://mychef.id/in-villa-service/host-hostess' },
+      ],
+    },
+  ],
+}
 
 const PRICING_TIERS = [
   {
@@ -55,14 +100,14 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'What do hosts and hostesses do at an event?', a: 'They are the face of your event — greeting guests, managing registration, directing traffic, coordinating with vendors, and ensuring the timeline runs smoothly. They solve problems before guests notice them.' },
-  { q: 'How many hosts do I need?', a: 'One host per 25 guests for seated events, or one per 40 guests for standing receptions. We recommend a senior host for events over 50 guests to manage the team.' },
-  { q: 'Can hosts speak multiple languages?', a: 'Yes. All hosts speak fluent English. Many speak Mandarin, Japanese, French, or Arabic. Let us know your guest demographics and we will match accordingly.' },
-  { q: 'What do hosts wear?', a: 'Professional attire: black suit or elegant dress, depending on event formality. Custom uniforms available for branded events.' },
-  { q: 'Can hosts manage VIP guests?', a: 'Absolutely. Our senior hosts are experienced in VIP management — discreet arrivals, private areas, special requests, and privacy protection.' },
-  { q: 'What areas do you cover?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'How far in advance should I book?', a: '3–7 days for standard events. 2–4 weeks for large events during peak season.' },
-  { q: 'Can hosts also do registration and check-in?', a: 'Yes. Registration, guest list management, badge printing, and check-in are standard services included in every booking.' },
+  { q: 'How much does it cost to hire event hosts or hostesses in Bali?', a: 'IDR 300,000 per hour per host, with a 3-hour minimum. Rates are ++ (11% tax + 10% service charge). Scale simply by adding hosts at the same rate.' },
+  { q: 'What is the difference between a hostess and a waiter?', a: 'Hosts manage the guest experience and the event\'s flow — arrivals, registration, seating, timing and VIP care. Waiters manage food and beverage service at the table. Larger events typically need <a href="/in-villa-service/waiters">both a host team and waiter teams</a>.' },
+  { q: 'How many hosts do I need?', a: 'One per 25 seated guests, one per 40 standing. Add a senior host above 50 guests to lead the team.' },
+  { q: 'Can hosts handle registration and check-in?', a: 'Yes — guest lists, badges, gift tables and arrival dietary confirmations are standard inclusions.' },
+  { q: 'What do hosts wear?', a: 'Professional attire — black suit or elegant dress depending on formality. Custom branded uniforms are available for corporate events.' },
+  { q: 'Do your hosts speak multiple languages?', a: 'All hosts speak fluent English; many speak Mandarin, Japanese, French or Arabic. Share your guest demographics and we will match accordingly.' },
+  { q: 'Can hosts manage VIP guests?', a: 'Yes. Senior hosts are experienced in discreet VIP handling — private arrivals, dedicated seating, special requests and privacy protection.' },
+  { q: 'How far in advance should I book, and where do you operate?', a: '3–7 days for standard events; 2–4 weeks for large events in peak season. We cover all of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
 ]
 
 export default function ServiceHostPage() {
@@ -81,19 +126,12 @@ export default function ServiceHostPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Event Host Hire Bali Villa | Host & Hostess — myCHEF"
-        description="Hire event hosts & hostesses in Bali for villa weddings, corporate events & parties. Guest greeting, arrival flow & reception management. WhatsApp us."
-        canonical={`${SITE}/in-villa-service/host-hostess`}
-        ogImage={`${SITE}/generated/misc-trust-hosts-lg.webp`}
+        title={getPageMeta('in-villa-service-host-hostess').title}
+        description={getPageMeta('in-villa-service-host-hostess').description}
+        canonical={getPageMeta('in-villa-service-host-hostess').canonical}
+        ogImage={getPageMeta('in-villa-service-host-hostess').ogImage}
         jsonLd={[
-          serviceWithOfferSchema({
-            name: 'Host & Hostess Hire Bali',
-            description: 'myCHEF.id provides hosts and hostesses in Bali for villa events, weddings, and brand activations. We manage guest welcome, direction, and front-of-house flow with polished professional service.',
-            url: `${SITE}/in-villa-service/host-hostess`,
-            price: '300000',
-            unitText: 'per hour',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          HOST_JSON_LD,
           howToSchema({
             name: 'How to Hire a Host or Hostess in Bali',
             description: 'Book professional hosts and hostesses for your Bali villa event in 4 easy steps.',
@@ -105,7 +143,6 @@ export default function ServiceHostPage() {
               { name: 'Welcome your guests', text: 'Hosts arrive early in professional attire, greet guests, and manage the flow throughout your event.' },
             ],
           }),
-          breadcrumbSchema('Host & Hostess Hire Bali', `${SITE}/in-villa-service/host-hostess`, 'In-Villa Service', `${SITE}/in-villa-service`),
         ]}
       />
 {/* Hero */}
@@ -127,11 +164,12 @@ export default function ServiceHostPage() {
     ]} theme="dark" className="px-0 pt-0 pb-8" />
     <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
-            Host & Hostess Hire in Bali
+            Host & Hostess Hire in Bali — Professional Event Reception
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Professional hosts and hostesses for your villa event, wedding, or corporate function. 
-            Welcome service, guest direction, event coordination. From IDR 300,000 per hour, 3-hour minimum.
+            Professional hosts and hostesses for weddings, corporate functions and villa events across Bali. 
+            Guest welcome, registration, seating coordination and event flow — the first and last impression of your event. 
+            From IDR 300,000 per hour, 3-hour minimum.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-host-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">

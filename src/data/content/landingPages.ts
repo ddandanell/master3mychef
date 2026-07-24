@@ -64,9 +64,37 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "villa-staff-bali-agency",
-    "title": "Villa Staff Placement Has Moved | myCHEF Bali",
+    "title": "Villa Staff Placement Has Moved",
     "description": "Our villa staff agency services now live on one page: vetted long-term villa staff placement in Bali — managers, housekeepers, chefs. See myCHEF.",
-    "date": "2026-05-17"
+    "date": "2026-05-17",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://mychef.id/villa-staff-bali-agency",
+            "name": "Villa Staff Placement Has Moved | myCHEF Bali",
+            "description": "myCHEF's villa staff agency services now live on the villa staff placement page: vetted long-term villa staff for Bali villas and estates.",
+            "isPartOf": { "@type": "WebSite", "name": "myCHEF", "url": "https://mychef.id" },
+            "about": {
+              "@type": "Organization",
+              "name": "myCHEF",
+              "url": "https://mychef.id",
+              "telephone": "+62 896-7407-2020"
+            },
+            "mainEntity": { "@id": "https://mychef.id/staffing/villa-staff" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mychef.id/" },
+              { "@type": "ListItem", "position": 2, "name": "Villa Staff Bali Agency", "item": "https://mychef.id/villa-staff-bali-agency" }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "butler-service-bali-daily-rate",

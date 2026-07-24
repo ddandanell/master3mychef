@@ -1,14 +1,11 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, ChefHat } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
-import SeoHead, {
-  breadcrumbSchema,
-  serviceWithOfferSchema,
-  faqPageSchema,
-  howToSchema,
-} from '@/components/SeoHead'
+import SeoHead, { howToSchema } from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -24,6 +21,94 @@ gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a live-in chef in Bali', intent: 'availability and pricing' })
+
+const BRIEF_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://mychef.id/staffing/live-in-chef#service',
+      name: 'Live-In Chef Bali',
+      serviceType: 'Live-in private chef placement',
+      provider: {
+        '@type': 'Organization',
+        name: 'myCHEF',
+        url: 'https://mychef.id',
+        telephone: '+62 896-7407-2020',
+      },
+      areaServed: ['Bali', 'Jakarta', 'Lombok'],
+      description: 'Live-in chefs in Bali who manage all meals, groceries and kitchen logistics for families and guests. From IDR 8,000,000 per month with trial dinners and a 30-day replacement guarantee.',
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'IDR',
+        lowPrice: '8000000',
+        highPrice: '12000000',
+        offerCount: '3',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How long does live-in chef placement take?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Typically one to two weeks from brief to placement. Trial sessions are scheduled within three to five days of shortlist approval.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What if the live-in chef is not the right fit?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you handle contracts and payroll for live-in chefs?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. A standard Indonesian employment contract is part of every live-in placement, and we guide you on payroll, BPJS and THR; households with more complex arrangements are referred to local payroll partners.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Where does the chef live?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'On-site, in your property\'s staff accommodation, defined in the employment contract including working hours, days off and house rules.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can the live-in chef cook for events as well?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Estate and family placements include event cooking. Additional event coverage can be arranged at separate rates.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you place live-in chefs outside Bali?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. We have placed chefs in Jakarta, Lombok and on private yachts. International placements are available on request.',
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
+        { '@type': 'ListItem', position: 2, name: 'Staffing', item: 'https://mychef.id/staffing' },
+        { '@type': 'ListItem', position: 3, name: 'Live-In Chef', item: 'https://mychef.id/staffing/live-in-chef' },
+      ],
+    },
+  ],
+}
 
 const PRICING_TIERS = [
   {
@@ -70,14 +155,14 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'How long does live-in chef placement take?', a: 'Typically 1–2 weeks from brief to placement. Trial sessions are scheduled within 3–5 days of shortlist approval.' },
+  { q: 'How long does live-in chef placement take?', a: 'Typically one to two weeks from brief to placement. Trial sessions are scheduled within three to five days of shortlist approval.' },
   { q: 'What if the live-in chef is not the right fit?', a: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.' },
-  { q: 'Do you handle contracts and payroll for live-in chefs?', a: 'We prepare standard employment contracts and provide payroll guidance. For complex arrangements, we can recommend local payroll partners.' },
-  { q: 'What cuisines can your live-in chefs cook?', a: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal, kosher — we match cuisine to your preference.' },
+  { q: 'Do you handle contracts and payroll for live-in chefs?', a: 'Yes. A standard Indonesian employment contract is part of every live-in placement, and we guide you on payroll, BPJS and THR; households with more complex arrangements are referred to local payroll partners.' },
+  { q: 'Where does the chef live?', a: 'On-site, in your property\'s staff accommodation, which we help you define in the employment contract — including working hours, days off and house rules.' },
+  { q: 'What cuisines can your live-in chefs cook?', a: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal and kosher — we match cuisine to your preference.' },
   { q: 'Can the live-in chef cook for events as well?', a: 'Yes. Estate and family placements include event cooking. Additional event coverage can be arranged at separate rates.' },
-  { q: 'What areas do you cover for live-in chefs?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'Do you place live-in chefs outside Bali?', a: 'Yes. We have placed chefs in Lombok and on private yachts. International placements available on request.' },
-  { q: 'What is your live-in chef placement fee?', a: 'One month of the chef salary as a placement fee. This covers sourcing, trials, contract, and 6 months of ongoing support.' },
+  { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
+  { q: 'Do you place live-in chefs outside Bali?', a: 'Yes. We have placed chefs in Jakarta, Lombok and on private yachts. International placements are available on request.' },
 ]
 
 export default function StaffingLiveInPage() {
@@ -104,20 +189,12 @@ export default function StaffingLiveInPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Live-In Chef Bali | Full-Time Villa Chef Placement — myCHEF"
-        description="Find a live-in chef in Bali for daily family meals, estate stays & full-time kitchen coverage. Vetted placements from IDR 8M/month. WhatsApp us."
-        canonical={`${SITE}/staffing/live-in-chef`}
-        ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-kitchen.webp`}
+        title={getPageMeta('staffing-live-in-chef').title}
+        description={getPageMeta('staffing-live-in-chef').description}
+        canonical={getPageMeta('staffing-live-in-chef').canonical}
+        ogImage={getPageMeta('staffing-live-in-chef').ogImage}
         jsonLd={[
-          serviceWithOfferSchema({
-            name: 'Live-In Chef Bali',
-            description: 'Full-time live-in chef placement for villas in Bali. Vetted candidates, cooking trials, contracts, and ongoing support.',
-            url: `${SITE}/staffing/live-in-chef`,
-            price: '8000000',
-            unitText: 'per month',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          breadcrumbSchema('Live-In Chef', `${SITE}/staffing/live-in-chef`, 'Staffing', `${SITE}/staffing`),
+          BRIEF_JSON_LD,
           howToSchema({
             name: 'How to Find a Live-In Chef in Bali',
             description: 'Find and place a full-time live-in chef for your Bali villa in 5 steps.',
@@ -155,8 +232,7 @@ export default function StaffingLiveInPage() {
             Live-In Chef in Bali
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Find a live-in chef for your villa. Pre-vetted candidates, trial dinners, 
-            structured onboarding. From IDR 8,000,000 per month.
+            A live-in chef is the closest thing to a private restaurant in your villa. Breakfast appears as your family wakes, lunch and dinner are planned around your day, the fridge stays stocked and the kitchen runs itself. myCHEF places pre-vetted live-in chefs into Bali villas and residences from IDR 8,000,000 per month — with trial dinners, contracts and onboarding handled for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-live-in-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -173,7 +249,7 @@ export default function StaffingLiveInPage() {
 
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
-          <SectionHeader eyebrow="Placement Tiers" title="Live-In Chef Options" subtitle="From live-in to estate chef — find the right full-time chef for your villa." />
+          <SectionHeader eyebrow="Placement Tiers" title="Live-In Chef Options" subtitle="Three tiers for villas, families and estates." />
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {PRICING_TIERS.map((tier) => (
               <div key={tier.title} className={`rounded-2xl p-8 ${tier.highlight ? 'bg-[#1A1A1A] text-white' : 'bg-white border border-[#E8E6E3]'}`}>
@@ -211,7 +287,7 @@ export default function StaffingLiveInPage() {
 
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
-          <SectionHeader eyebrow="Process" title="How It Works" subtitle="From brief to placement — five careful steps." />
+          <SectionHeader eyebrow="Process" title="The Placement Process" subtitle="From brief to placement — five careful steps." />
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
             {HOW_IT_WORKS.map((step) => (
               <div key={step.step} className="text-center p-6">
@@ -224,6 +300,29 @@ export default function StaffingLiveInPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader eyebrow="Compare" title="Live-In vs Other Chef Formats" />
+          <ul className="mt-12 space-y-4 max-w-3xl mx-auto text-[#4A4745]">
+            <li className="flex items-start gap-3">
+              <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
+              <span><strong>Live-in chef (this page):</strong> chef lives on-site; all meals, groceries and kitchen logistics included. From IDR 8M/month. Best for full-time households.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
+              <span><Link to="/staffing/private-chef-placement" className="text-[#C5A028] hover:underline">Permanent chef placement</Link>: a salaried chef who works set days but lives off-site. From IDR 5.5M/month part-time.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
+              <span><Link to="/hire-private-chef-bali-monthly" className="text-[#C5A028] hover:underline">Monthly chef hire</Link>: recurring chef service without an employment contract — suits long-stay guests and seasonal residents.</span>
+            </li>
+          </ul>
+          <p className="mt-8 text-center text-[#4A4745] max-w-2xl mx-auto">
+            Not sure which fits? Our <Link to="/journal/live-in-chef-vs-daily-service" className="text-[#C5A028] hover:underline">live-in vs daily chef comparison</Link> walks through the maths, or message us and we will recommend the right structure for your household.
+          </p>
         </div>
       </section>
 
@@ -254,7 +353,7 @@ export default function StaffingLiveInPage() {
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="font-playfair text-3xl md:text-5xl text-white mb-6">Find Your Live-In Chef</h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Tell us your requirements and we will send matched chef profiles within 48 hours.
+            Tell us your household's requirements and we will send matched live-in chef profiles within 48 hours. Trial dinner before you decide; 30-day replacement guarantee after you do.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-live-in-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -264,6 +363,9 @@ export default function StaffingLiveInPage() {
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
+          <p className="mt-8 text-white/[70%] text-sm italic">
+            Part of myCHEF <Link to="/staffing" className="text-[#C5A028] hover:underline">staffing & placement</Link>. Need more than a chef? We also place <Link to="/staffing/villa-staff" className="text-[#C5A028] hover:underline">complete villa teams</Link> — housekeepers, villa managers, gardeners and security.
+          </p>
         </div>
       </section>
 

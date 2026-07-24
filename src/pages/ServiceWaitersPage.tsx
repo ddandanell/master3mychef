@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, Star, ShieldCheck, Award } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { getPageMeta } from '@/data/page-meta'
 import SeoHead, {
-  breadcrumbSchema,
-  serviceWithOfferSchema,
-  faqPageSchema,
   howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -22,7 +20,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const SITE = 'https://mychef.id'
+const meta = getPageMeta('in-villa-service-waiters')
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'professional waiters in Bali', intent: 'availability and pricing' })
 
 const PRICING_TIERS = [
@@ -55,15 +53,64 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'How many waiters do I need?', a: 'One waiter per 8–10 guests for plated service, or one per 15 guests for buffet. We recommend adding a head waiter for events over 20 guests.' },
-  { q: 'What do the waiters wear?', a: 'Standard uniform is black trousers, white shirt, black apron. Premium service includes white-glove service. Custom uniforms available on request.' },
-  { q: 'Can waiters handle dietary restrictions?', a: 'Absolutely. Every waiter is briefed on dietary requirements, allergies, and preferences before service begins.' },
-  { q: 'How far in advance should I book?', a: '3–7 days for standard service. 2–4 weeks for premium events during peak season (July–August, December).' },
-  { q: 'Do you provide wine service?', a: 'Yes. Premium and head waiter tiers include wine service — pouring, timing, and basic pairing guidance.' },
-  { q: 'What areas do you cover?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'Is there a minimum booking?', a: 'Minimum 2 waiters per booking, 3-hour minimum per waiter.' },
-  { q: 'Can I request the same waiters again?', a: 'Yes. We keep records of your preferred team and do our best to reassign them for future events.' },
+  { q: 'How much does it cost to hire waiters in Bali?', a: 'IDR 250,000 per hour per waiter, with a 3-hour minimum and a two-waiter minimum per booking. Rates are ++ (plus 11% tax and 10% service charge).' },
+  { q: 'How many waiters do I need for my event?', a: 'One per 8–10 guests for plated dinners, one per 15 for buffets, one per 15–20 for canapé service. Add a head waiter above 20 guests.' },
+  { q: 'What do the waiters wear?', a: 'Standard uniform is black trousers, white shirt and black apron. White-glove service is available for formal occasions, and custom dress codes can be arranged.' },
+  { q: 'Can waiters handle dietary restrictions and allergies?', a: 'Yes — dietary requirements are mapped per guest during briefing and handled discreetly at the table. Our teams operate within a HACCP-certified food-safety operation.' },
+  { q: 'Do your waiters provide wine service?', a: 'Yes — pouring, timing and temperature management are included. For pairing design and tableside storytelling, add our <a href="/in-villa-service/sommelier">sommelier wine service</a>.' },
+  { q: 'How far in advance should I book?', a: '3–7 days for standard service; 2–4 weeks for premium events in peak season (July–August, December). Same-week and even same-day bookings are often possible — message us.' },
+  { q: 'Can I request the same waiters again?', a: 'Yes. We keep records of your preferred team and do our best to reassign them for future bookings.' },
+  { q: 'What areas do you cover?', a: 'All of Bali: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may incur a modest travel fee, quoted upfront.' },
 ]
+
+const briefJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      'name': 'Waiter Hire Bali',
+      'serviceType': 'Waiter hire',
+      'provider': {
+        '@type': 'Organization',
+        'name': 'myCHEF',
+        'url': 'https://mychef.id',
+        'telephone': '+62 896-7407-2020',
+        'email': 'bali@mychef.id',
+      },
+      'areaServed': ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Berawa', 'Pererenan', 'Bali'],
+      'description': 'Professional, uniformed waiters for villa dinners, weddings and events in Bali. English-speaking, fine-dining trained, from IDR 250,000 per hour with a 3-hour minimum.',
+      'offers': {
+        '@type': 'Offer',
+        'priceCurrency': 'IDR',
+        'price': '250000',
+        'unitText': 'per hour',
+        'description': 'Waiter service, 3-hour minimum, two-waiter minimum per booking. Subject to 11% tax + 10% service charge.',
+      },
+      'url': 'https://mychef.id/in-villa-service/waiters',
+    },
+    {
+      '@type': 'FAQPage',
+      'mainEntity': [
+        { '@type': 'Question', 'name': 'How much does it cost to hire waiters in Bali?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'IDR 250,000 per hour per waiter, with a 3-hour minimum and a two-waiter minimum per booking. Rates are subject to 11% tax + 10% service charge.' } },
+        { '@type': 'Question', 'name': 'How many waiters do I need for my event?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'One waiter per 8–10 guests for plated dinners, one per 15 for buffets, one per 15–20 for canapé service. Add a head waiter above 20 guests.' } },
+        { '@type': 'Question', 'name': 'What do the waiters wear?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Black trousers, white shirt and black apron as standard; white-glove service for formal occasions and custom dress codes on request.' } },
+        { '@type': 'Question', 'name': 'Can waiters handle dietary restrictions and allergies?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Dietary requirements are mapped per guest during briefing and handled discreetly at the table within a HACCP-certified food-safety operation.' } },
+        { '@type': 'Question', 'name': 'Do your waiters provide wine service?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — pouring, timing and temperature management are included. For pairing design, book the sommelier service.' } },
+        { '@type': 'Question', 'name': 'How far in advance should I book?', 'acceptedAnswer': { '@type': 'Answer', 'text': '3–7 days for standard service; 2–4 weeks for premium events in peak season. Same-week and same-day bookings are often possible.' } },
+        { '@type': 'Question', 'name': 'Can I request the same waiters again?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. We keep records of your preferred team and do our best to reassign them for future bookings.' } },
+        { '@type': 'Question', 'name': 'What areas do you cover?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'All of Bali: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may incur a modest travel fee.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://mychef.id' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'In-Villa Service', 'item': 'https://mychef.id/in-villa-service' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Waiters', 'item': 'https://mychef.id/in-villa-service/waiters' },
+      ],
+    },
+  ],
+}
 
 export default function ServiceWaitersPage() {
   const ref = useRef<HTMLDivElement>(null)
@@ -81,20 +128,12 @@ export default function ServiceWaitersPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Villa Waiters Bali | Professional Hourly Service — myCHEF"
-        description="Hire villa waiters in Bali for dinners, weddings & events. Uniformed, English-speaking, trained in plated service. From IDR 250K/hour. WhatsApp us."
-        canonical={`${SITE}/in-villa-service/waiters`}
-        ogImage={`${SITE}/generated/mychef-service-bali-hero-waiters.webp`}
+        title={meta.title}
+        description={meta.description}
+        canonical={meta.canonical}
+        ogImage={meta.ogImage}
         jsonLd={[
-          serviceWithOfferSchema({
-            name: 'Waiter Hire Bali',
-            description: 'Professional per-shift waiters for villa events in Bali. Uniformed, English-speaking, trained in plated and buffet service.',
-            url: `${SITE}/in-villa-service/waiters`,
-            price: '250000',
-            unitText: 'per hour',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          breadcrumbSchema('Waiters', `${SITE}/in-villa-service/waiters`, 'In-Villa Service', `${SITE}/in-villa-service`),
+          briefJsonLd,
           howToSchema({
             name: 'How to Hire Villa Waiters in Bali',
             description: 'Book professional waiters for your Bali villa dinner or event in 5 easy steps.',
@@ -129,11 +168,10 @@ export default function ServiceWaitersPage() {
           ]} theme="dark" className="px-0 pt-0 pb-8" />
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
-            Waiter Hire in Bali
+            {meta.h1}
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Professional, uniformed waiters for your villa dinner, wedding, or event.
-            English-speaking, trained in fine service. From IDR 250,000 per hour, minimum 3 hours.
+            Uniformed, English-speaking waiters for villa dinners, weddings and events across Bali. Trained in fine-dining service, briefed on your menu before they arrive, and priced at one transparent rate: IDR 250,000 per hour, 3-hour minimum.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-waiters-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -170,6 +208,9 @@ export default function ServiceWaitersPage() {
               </div>
             ))}
           </div>
+          <p className="text-sm text-[#4A4745] text-center mt-8 max-w-2xl mx-auto">
+            All rates are subject to 11% government tax + 10% service charge. A 50% deposit confirms your date; the balance is due before the event. Cancellations follow our standard tiers — see our <Link to="/cancellation">cancellation policy</Link>.
+          </p>
         </div>
       </section>
 
@@ -301,19 +342,19 @@ export default function ServiceWaitersPage() {
           <h3 className="font-playfair text-3xl text-[#1A1A1A] mb-6">You might also need</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link to="/in-villa-service/bartenders" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Bartender Hire</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Add a Bar Team</h4>
               <p className="text-xs text-[#4A4745]">Add a polished bar team for cocktails, wine, and event flow.</p>
             </Link>
             <Link to="/in-villa-service/host-hostess" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Host &amp; Hostess</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Event Hosts for Guest Reception</h4>
               <p className="text-xs text-[#4A4745]">Welcome guests, manage arrivals, and keep the event moving smoothly.</p>
             </Link>
             <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">In-Villa Service</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Full In-Villa Service Hub</h4>
               <p className="text-xs text-[#4A4745]">Browse the full staffing hub for dinners, parties, and private events.</p>
             </Link>
             <Link to="/catering" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Catering</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Menus and Catering to Match</h4>
               <p className="text-xs text-[#4A4745]">Pair service staff with menus and food planning for your group.</p>
             </Link>
           </div>
@@ -354,12 +395,12 @@ export default function ServiceWaitersPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Bartenders', href: '/in-villa-service/bartenders', desc: 'Cocktail and bar service.' },
+              { label: 'Add a Bar Team', href: '/in-villa-service/bartenders', desc: 'Cocktail and bar service.' },
               { label: 'Butlers', href: '/in-villa-service/butlers', desc: 'Discreet villa hosting.' },
-              { label: 'Sommelier', href: '/in-villa-service/sommelier', desc: 'Wine pairing and service.' },
+              { label: 'Sommelier Wine Service', href: '/in-villa-service/sommelier', desc: 'Wine pairing and service.' },
               { label: 'Mixology', href: '/in-villa-service/mixology', desc: 'Signature cocktail programs.' },
-              { label: 'Events', href: '/events', desc: 'Full-service event production.' },
-              { label: 'Catering', href: '/catering', desc: 'Full-service catering for any event.' },
+              { label: 'Wedding Catering & Service', href: '/events/weddings', desc: 'Full-service event production.' },
+              { label: 'Menus and Catering to Match', href: '/catering', desc: 'Full-service catering for any event.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>

@@ -1,14 +1,11 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, ChefHat } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
-import SeoHead, {
-  breadcrumbSchema,
-  serviceWithAggregateOfferSchema,
-  faqPageSchema,
-  howToSchema,
-} from '@/components/SeoHead'
+import SeoHead, { howToSchema } from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -22,7 +19,6 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'private chef placement in Bali', intent: 'availability and pricing' })
 
 const PRICING_TIERS = [
@@ -70,15 +66,103 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'How long does chef placement take?', a: 'Typically 1–2 weeks from brief to placement. Trial sessions are scheduled within 3–5 days of shortlist approval.' },
-  { q: 'What if the chef is not the right fit?', a: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.' },
-  { q: 'Do you handle contracts and payroll?', a: 'We prepare standard employment contracts and provide payroll guidance. For complex arrangements, we can recommend local payroll partners.' },
-  { q: 'What cuisines can your chefs cook?', a: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal, kosher — we match cuisine to your preference.' },
+  { q: 'How long does chef placement take?', a: 'Typically one to two weeks from brief to placement. Trial sessions are scheduled within three to five days of shortlist approval, and profiles are delivered within 48 hours.' },
+  { q: 'What is your placement fee?', a: 'One month of the chef\'s salary, covering sourcing, cooking trials, background verification, contract preparation and six months of ongoing support. [See fee-model conflict note above — BUSINESS CONFIRMATION REQUIRED.]' },
+  { q: 'What if the chef is not the right fit?', a: 'Every placement carries a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost — and we keep vetted backup candidates for every active placement.' },
+  { q: 'Do you handle contracts and payroll?', a: 'Yes. We prepare standard Indonesian employment contracts and provide payroll guidance, including BPJS and THR obligations. For complex arrangements, we recommend local payroll partners.' },
+  { q: 'What cuisines can your chefs cook?', a: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal and kosher — matched to your preference before shortlisting.' },
   { q: 'Can the chef cook for events as well?', a: 'Yes. Full-time and executive placements include event cooking. Part-time chefs can be booked for events at additional rates.' },
-  { q: 'What areas do you cover?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'Do you place chefs outside Bali?', a: 'Yes. We have placed chefs in Lombok and on private yachts. International placements available on request.' },
-  { q: 'What is your placement fee?', a: 'One month of the chef salary as a placement fee. This covers sourcing, trials, contract, and 6 months of ongoing support.' },
+  { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
+  { q: 'Do you place chefs outside Bali?', a: 'Yes. We have placed chefs in Jakarta, Lombok and on private yachts. International placements are available on request.' },
 ]
+
+const briefJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://mychef.id/staffing/private-chef-placement#service',
+      name: 'Private Chef Placement Bali',
+      serviceType: 'Private chef recruitment and placement',
+      provider: {
+        '@type': 'Organization',
+        name: 'myCHEF',
+        url: 'https://mychef.id',
+        telephone: '+62 896-7407-2020',
+      },
+      areaServed: ['Bali', 'Jakarta', 'Lombok'],
+      description: 'Permanent and seasonal private chef placement for Bali villas and residences. Vetting, cooking trials, contracts and payroll guidance included; 30-day replacement guarantee.',
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'IDR',
+        lowPrice: '5500000',
+        highPrice: '15000000',
+        offerCount: '3',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How long does chef placement take?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Typically one to two weeks from brief to placement. Trial sessions are scheduled within three to five days of shortlist approval, and profiles are delivered within 48 hours.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is your placement fee?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'One month of the chef\'s salary, covering sourcing, cooking trials, background verification, contract preparation and six months of ongoing support.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What if the chef is not the right fit?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Every placement carries a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you handle contracts and payroll?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. We prepare standard Indonesian employment contracts and provide payroll guidance, including BPJS and THR obligations. For complex arrangements, we recommend local payroll partners.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What cuisines can your chefs cook?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal and kosher — matched to your preference before shortlisting.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you place chefs outside Bali?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. We have placed chefs in Jakarta, Lombok and on private yachts. International placements are available on request.',
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
+        { '@type': 'ListItem', position: 2, name: 'Staffing', item: 'https://mychef.id/staffing' },
+        { '@type': 'ListItem', position: 3, name: 'Private Chef Placement', item: 'https://mychef.id/staffing/private-chef-placement' },
+      ],
+    },
+  ],
+}
 
 export default function StaffingPlacementPage() {
   const ref = useRef<HTMLDivElement>(null)
@@ -104,28 +188,19 @@ export default function StaffingPlacementPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Chef Placement Bali | Villa Recruitment — myCHEF"
-        description="Fill long-term kitchen roles in Bali fast. Vetted private chef candidates, cooking trials, contracts & onboarding support. WhatsApp to start the search."
-        canonical={`${SITE}/staffing/private-chef-placement`}
-        ogImage={`${SITE}/generated/mychef-staffing-bali-staffing-hero.webp`}
+        title={getPageMeta('staffing-private-chef-placement').title}
+        description={getPageMeta('staffing-private-chef-placement').description}
+        canonical={getPageMeta('staffing-private-chef-placement').canonical}
+        ogImage={getPageMeta('staffing-private-chef-placement').ogImage}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Private Chef Placement Bali',
-            description: 'Long-term private chef placement for villas in Bali. Vetted candidates, cooking trials, contracts, and ongoing support.',
-            url: `${SITE}/staffing/private-chef-placement`,
-            lowPrice: '5500000',
-            highPrice: '15000000',
-            unitText: 'per placement',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          breadcrumbSchema('Private Chef Placement', `${SITE}/staffing/private-chef-placement`, 'Staffing', `${SITE}/staffing`),
+          briefJsonLd,
           howToSchema({
             name: 'How to Place a Private Chef in Bali',
             description: 'Find and place a long-term private chef for your Bali villa in 5 steps.',
             totalTime: 'P1W',
             steps: [
               { name: 'Brief', text: 'Share your cuisine preferences, schedule, household size, and dietary needs.' },
-              { name: 'Shortlist', text: 'We send 3–5 chef profiles matched to your requirements within 24 hours.' },
+              { name: 'Shortlist', text: 'We send 3–5 chef profiles matched to your requirements within 48 hours.' },
               { name: 'Trials', text: 'Cooking sessions with your top 2 candidates to assess fit and skill.' },
               { name: 'Placement', text: 'Contract signed, onboarding handled, and first-week support included.' },
               { name: 'Ongoing support', text: 'Monthly check-ins, feedback, and performance reviews for six months.' },
@@ -156,8 +231,11 @@ export default function StaffingPlacementPage() {
             Private Chef Placement in Bali
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Long-term private chef placement for your villa. Vetted candidates, cooking trials, 
-            contracts, and ongoing support. From IDR 5,500,000 per month.
+            A permanent private chef changes how a household eats — and how it lives. myCHEF places
+            vetted, background-checked chefs into Bali villas, family homes and private estates,
+            handling everything from sourcing and cooking trials to contracts and payroll guidance.
+            Long-term private chef placement starts from IDR 5,500,000 per month, with profiles
+            delivered within 48 hours of your brief.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-placement-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -228,6 +306,26 @@ export default function StaffingPlacementPage() {
         </div>
       </section>
 
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[800px] mx-auto">
+          <SectionHeader eyebrow="Compare" title="Placement, Live-In or Monthly?" subtitle="Three ways to keep a chef long-term — pick the structure that fits." />
+          <ul className="mt-12 space-y-6">
+            <li className="flex items-start gap-3">
+              <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
+              <span className="text-[#4A4745]"><strong>Permanent placement (this page):</strong> a salaried chef employed by your household, found and guaranteed by us. Best long-term value for full-time residents.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
+              <span className="text-[#4A4745]"><Link to="/staffing/live-in-chef" className="text-[#C5A028] hover:underline">Live-in chef</Link>: the chef lives on-site and runs all meals, groceries and kitchen logistics — from IDR 8,000,000/month.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
+              <span className="text-[#4A4745]"><Link to="/hire-private-chef-bali-monthly" className="text-[#C5A028] hover:underline">Monthly chef hire</Link>: a recurring chef service without an employment contract — ideal for long-stay guests and seasonal residents.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <TestimonialBlock
         testimonials={[
           { name: 'The Williams Family', location: 'London', quote: 'We found our chef through myCHEF two years ago. He has become part of the family. The placement process was thorough and professional.', rating: 5 },
@@ -255,7 +353,7 @@ export default function StaffingPlacementPage() {
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="font-playfair text-3xl md:text-5xl text-white mb-6">Find Your Chef</h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Tell us your requirements and we will send matched chef profiles within 48 hours.
+            Tell us your requirements and we will send matched chef profiles within 48 hours. Your top two candidates cook for you before you decide — and your placement is guaranteed for 30 days.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-placement-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -265,6 +363,12 @@ export default function StaffingPlacementPage() {
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
+          <p className="text-white/[70%] text-sm mt-8">
+            ✅ Background-checked chefs · ✅ Trial cooking session included · ✅ 30-day replacement guarantee · ✅ Profiles within 48 hours
+          </p>
+          <p className="text-white/[60%] text-sm mt-4 italic">
+            Part of the myCHEF <Link to="/staffing" className="text-[#C5A028] hover:underline">staffing & placement</Link> network — 50+ active staff, 560+ villas served. Managing multiple properties? See <Link to="/staffing/for-villa-managers" className="text-[#C5A028] hover:underline">portfolio staffing for villa managers</Link>.
+          </p>
         </div>
       </section>
 

@@ -356,12 +356,14 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                 { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
                 { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond, covering 560+ villas across the island.' },
               ]
-  const jsonLdArr = [
-    breadcrumbJsonLd,
-    faqPageSchema(faqItems),
-    ...(landingServiceSchema ? [landingServiceSchema] : []),
-    ...(articleSchema ? [articleSchema] : []),
-  ]
+  const jsonLdArr = entry.jsonLd
+    ? entry.jsonLd
+    : [
+        breadcrumbJsonLd,
+        faqPageSchema(faqItems),
+        ...(landingServiceSchema ? [landingServiceSchema] : []),
+        ...(articleSchema ? [articleSchema] : []),
+      ]
   const extraMeta = articleEntry
     ? [
         ...(articleEntry.date

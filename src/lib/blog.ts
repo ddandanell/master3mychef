@@ -7,6 +7,9 @@ export interface ContentEntry {
   description: string
   date?: string
   content?: string
+  /** Optional per-entry JSON-LD schemas. When provided, LandingPage uses these
+   *  instead of its auto-generated breadcrumb/FAQ/service schemas. */
+  jsonLd?: Record<string, unknown>[]
 }
 
 export type PostKind = 'guide' | 'blog'

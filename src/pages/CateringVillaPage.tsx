@@ -18,7 +18,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import StaffingInfo from '@/components/catering/StaffingInfo'
 import BookingProcess from '@/components/catering/BookingProcess'
 // import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -606,6 +606,8 @@ export default function CateringVillaPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <ArticleContentSection />
+
       <StickyMobileCTA
         pageSource="catering-villa"
         serviceName="villa catering in Bali"

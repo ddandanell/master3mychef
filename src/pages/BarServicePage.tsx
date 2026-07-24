@@ -5,6 +5,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
 import { getBarServiceBySlug, BAR_SERVICE_SLUGS } from '@/data/bar-services'
+import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import {
   BarServiceHero,
   BarServiceProblem,
@@ -43,6 +44,7 @@ export default function BarServicePage() {
 
   const meta = getPageMeta(service.metaKey)
   const canonical = `${SITE}${service.route}`
+  const articleHtml = ARTICLE_CONTENT[service.route]
 
   return (
     <>
@@ -98,6 +100,16 @@ export default function BarServicePage() {
       )}
       <BarServiceQuoteBlock service={service} />
       <BarServiceCrossSells slugs={service.relatedServices} />
+      {articleHtml && (
+        <section className="py-20 md:py-28 bg-[#FAFAF8]">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+            <div
+              className="prose prose-stone max-w-none text-[#4A4745] prose-headings:font-playfair prose-headings:text-[#1A1A1A] prose-h2:mb-6 prose-h2:mt-16 prose-h2:text-3xl prose-h3:mt-10 prose-h3:text-2xl prose-p:mb-6 prose-p:text-lg prose-p:leading-relaxed prose-li:text-lg prose-li:leading-relaxed prose-strong:text-[#1A1A1A] prose-a:font-medium prose-a:text-[#7E6410] prose-a:no-underline hover:prose-a:underline prose-blockquote:rounded-r-2xl prose-blockquote:border-l-[#C5A028] prose-blockquote:bg-[#FAFAF8] prose-blockquote:p-6 [&_h2]:scroll-mt-28 [&_h3]:scroll-mt-28"
+              dangerouslySetInnerHTML={{ __html: articleHtml }}
+            />
+          </div>
+        </section>
+      )}
       <section className="py-20 md:py-28 bg-[#0F0E0C]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           <div className="text-center mb-12">

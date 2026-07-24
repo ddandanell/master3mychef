@@ -6,8 +6,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceWithOfferSchema, howToSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
-import { Breadcrumb } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { siteFacts } from '@/data/siteFacts'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -304,7 +305,7 @@ export default function FineDiningChefsPage() {
                 He brings an Italian discipline to every menu: clean flavors, exact technique, and the belief that a plate should say only what it needs to say.
               </p>
               <p>
-                After falling in love with Bali in 2018, he founded myCHEF to build a private dining brand that respected local sourcing while holding international standards.
+                {`After falling in love with Bali in ${siteFacts.foundingYear}, he founded myCHEF to build a private dining brand that respected local sourcing while holding international standards.`}
               </p>
               <p>
                 Today he still leads the signature tasting menus, trains the chef team, and takes the bookings where the cooking needs his personal hand.
@@ -555,6 +556,8 @@ export default function FineDiningChefsPage() {
           ))}
         </div>
       </section>
+      <ArticleContentSection />
+
       <StickyMobileCTA
         pageSource="fine-dining-chefs"
         serviceName="fine dining chef in Bali"

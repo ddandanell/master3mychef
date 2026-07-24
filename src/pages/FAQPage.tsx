@@ -65,7 +65,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     items: [
       {
         q: 'How do I book?',
-        a: 'Message us on WhatsApp with your date, villa area, guest count and the service you have in mind. We reply within about an hour and send a menu proposal within 24 hours. <a href="/">How our private chef service works →</a>',
+        a: 'Message us on WhatsApp with your date, villa area, guest count and the service you have in mind. We reply within 2 hours and send a menu proposal within 24 hours. <a href="/">How our private chef service works →</a>',
       },
       {
         q: 'How far in advance should I book?',
@@ -77,7 +77,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Which areas do you serve?',
-        a: "We serve the whole island of Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and the Bukit. Remote areas may add a small travel allowance, always quoted upfront.",
+        a: "All of Bali's main villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and the Bukit — plus Jakarta. Remote areas may add a small travel allowance, always quoted upfront.",
       },
     ],
   },

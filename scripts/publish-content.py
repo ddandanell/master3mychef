@@ -141,7 +141,8 @@ def read_article_content(path: Path) -> dict[str, str]:
         return {}
     data: dict[str, str] = {}
     for km in re.finditer(r'"([^"]+)"\s*:\s*"((?:[^"\\]|\\.)*)"', m.group(1)):
-        data[km.group(1)] = km.group(2).encode("utf-8").decode("unicode_escape")
+        # Parse the captured JSON string literal properly so UTF-8 content is preserved.
+        data[km.group(1)] = json.loads('"' + km.group(2) + '"')
     return data
 
 

@@ -18,7 +18,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import StaffingInfo from '@/components/catering/StaffingInfo'
 import BookingProcess from '@/components/catering/BookingProcess'
-import { Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -36,10 +36,9 @@ const GOLD = '#C5A028'
 /* ═══════════════════════════════════════════════════════════════
    PACKAGES — Grazing Table Sizes
 
-   [BUSINESS CONFIRMATION REQUIRED] Grazing from-price (IDR 650K small
-   board, traceable to this URL's crawl) conflicts with /pricing's
-   'grazing from IDR 4,500,000' — sitewide price reconciliation pending
-   business decision.
+   Pricing reflects the current page brief: small boards from IDR 650,000
+   and villa tables scaled to guest count. Confirm the latest all-in quote
+   for your event size on WhatsApp.
    ═══════════════════════════════════════════════════════════════ */
 const PACKAGES = [
   {
@@ -667,6 +666,8 @@ export default function CateringGrazingPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <ArticleContentSection />
+
       <StickyMobileCTA
         pageSource="catering-grazing"
         serviceName="grazing table in Bali"

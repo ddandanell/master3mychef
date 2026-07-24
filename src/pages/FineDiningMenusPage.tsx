@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema, serviceWithOfferSchema, howToSchema, menuSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
-import { Breadcrumb } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { MenuFilterTabs, MenuOverview } from '@/components/menus'
 import type { MenuFilterOption } from '@/components/menus'
@@ -610,6 +610,8 @@ export default function FineDiningMenusPage() {
           </a>
         </div>
       </section>
+      <ArticleContentSection />
+
       <StickyMobileCTA
         pageSource="fine-dining-menus"
         serviceName="fine dining menu in Bali"

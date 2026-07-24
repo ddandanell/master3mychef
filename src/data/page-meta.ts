@@ -1920,11 +1920,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   services: {
     path: '/services',
-    title: 'Private Chef Services Bali | Compare All Services | myCHEF',
+    title: 'Private Chef Services in Bali | Compare Every myCHEF Service',
     description:
       'Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit.',
     canonical: `${SITE}/services`,
-    h1: 'Our Services',
+    h1: 'Private Chef Services in Bali — Every Experience, One Team',
     ogImage: `${SITE}/generated/bali-hub-hero.webp`,
   },
 
@@ -1985,9 +1985,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'why-mychef': {
     path: '/why-mychef',
-    title: 'Best Private Chef Service Bali | Why Villas Choose myCHEF',
+    title: 'Why myCHEF | The Private Chef Company 560+ Bali Villas Trust',
     description:
-      'Why 560+ Bali villas trust myCHEF: Michelin-trained leadership, 50+ local staff, same-day confirmation & no-stress guarantee. See the full difference.',
+      'Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing. See the evidence.',
     canonical: `${SITE}/why-mychef`,
     h1: 'Why 560+ Villas Choose myCHEF',
     ogImage: `${SITE}/generated/misc-hub-bali-lg.webp`,
@@ -2017,9 +2017,9 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/villa-chef',
     title: 'Villa Chef Bali | Daily Chef Service for Your Stay | myCHEF',
     description:
-      'A dedicated villa chef in Bali for breakfast, lunch & dinner every day of your stay. Groceries at cost, from IDR 600K/hour. WhatsApp myCHEF.',
+      'A dedicated villa chef in Bali for breakfast, lunch & dinner every day of your stay. Half-day from IDR 2M, full-day from IDR 4M. Groceries at cost. WhatsApp myCHEF.',
     canonical: `${SITE}/villa-chef`,
-    h1: 'Your Private Chef for Everyday Villa Dining',
+    h1: 'Your Villa Chef for Everyday Dining in Bali',
     ogImage: `${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`,
   },
 
@@ -2219,9 +2219,9 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/pricing',
     title: 'Private Chef Bali Prices | Catering & Event Pricing | myCHEF',
     description:
-      'Transparent myCHEF pricing: private chef rates, menu prices, catering & event packages in Bali. No hidden fees. Get a quote in 1 hour.',
+      'Transparent myCHEF pricing: private chef rates, menu prices, catering & event packages in Bali. No hidden fees. Get a quote within 2 hours.',
     canonical: `${SITE}/pricing`,
-    h1: 'Transparent Pricing for Every Experience',
+    h1: 'Private Chef Bali Prices — Every Number, Upfront',
     ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,
   },
 

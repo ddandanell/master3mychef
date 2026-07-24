@@ -11,7 +11,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
@@ -52,8 +52,8 @@ const FAQS = [
   { q: 'How much does wedding catering in Bali cost?', a: 'Full wedding receptions typically range IDR 1.5M–3M++ per person, with intimate formats from around IDR 700K++ per person. ++ adds 11% government tax and 10% service charge; every proposal shows the all-in total. See our wedding catering packages and per-person prices for tier breakdowns and guest-count scenarios.' },
   { q: 'How many guests can you cater?', a: 'From 10-guest micro-weddings to 250+ guest receptions. Buffet and live-station formats typically work from 30 guests; across Bali, set-menu wedding catering commonly carries 20–25 guest minimums — intimate weddings below that are usually better served by our private chef dinner formats.' },
   { q: 'Do you offer tastings?', a: 'Yes — a pre-event tasting is included in every wedding booking, scheduled 2–4 weeks before the day. We taste three dishes per course and finalise the menu together afterwards.' },
-  { q: 'What about banjar fees and villa permission?', a: 'Most Bali villages (banjar) charge a function fee for events — around USD 300 is market guidance from Bali venue norms, not a myCHEF charge [BUSINESS CONFIRMATION REQUIRED] — and many villas require outside-vendor approval and have noise curfews. We confirm all of it with your villa manager during planning and list every fee in your proposal.' },
-  { q: 'Can we bring our own alcohol?', a: 'Yes. Choose full bar service (bartenders, stock, ice, glassware managed by us) or BYO with service only. Where venues charge corkage, market guidance from Bali venue norms runs USD 35–47 per bottle [BUSINESS CONFIRMATION REQUIRED]; myCHEF\'s own corkage waiver for villa parties is a flat IDR 250,000 — we will tell you honestly which option costs less for your guest count.' },
+  { q: 'What about banjar fees and villa permission?', a: 'Most Bali villages (banjar) charge a function fee for events — around USD 300 is market guidance from Bali venue norms, not a myCHEF charge — and many villas require outside-vendor approval and have noise curfews. We confirm all of it with your villa manager during planning and list every fee in your proposal.' },
+  { q: 'Can we bring our own alcohol?', a: 'Yes. Choose full bar service (bartenders, stock, ice, glassware managed by us) or BYO with service only. Where venues charge corkage, market guidance from Bali venue norms runs USD 35–47 per bottle; myCHEF\'s own corkage waiver for villa parties is a flat IDR 250,000 — we will tell you honestly which option costs less for your guest count.' },
   { q: 'What happens if it rains?', a: 'Every wedding has a wet-weather backup in the booking: marquee hire and an indoor relocation plan. Wet season runs roughly November–March, and plan B is non-negotiable for outdoor receptions then.' },
   { q: 'Can you cater dietary, halal or multicultural weddings?', a: 'Yes — halal-friendly lines, vegan and gluten-free menus, allergy protocols with separate prep, and multi-cuisine service (for example an Indonesian buffet alongside Western plated). Cultural and religious ceremony requirements are mapped at the consult.' },
   { q: 'What does "++" mean, and what deposit is required?', a: '"++" means 11% government tax plus 10% service charge are added to the quoted price — we always show you the all-in figure. A 50% deposit confirms your date, with the balance due before the event. Cancellations follow written tiers: more than 90 days out, 50% of the deposit is refunded; 60–90 days, 25%; inside 60 days the deposit converts to credit toward a rescheduled date within 12 months.' },
@@ -348,10 +348,10 @@ export default function EventsWeddingsPage() {
           </div>
           <div className="mt-10 max-w-4xl mx-auto text-[#4A4745] leading-relaxed space-y-4">
             <p>
-              <strong>Banjar (village) fees.</strong> Most Bali villages charge a function fee for events; around USD 300 is market guidance from Bali venue norms, not a myCHEF charge [BUSINESS CONFIRMATION REQUIRED]. We identify it early and include it in your budget planning.
+              <strong>Banjar (village) fees.</strong> Most Bali villages charge a function fee for events; around USD 300 is market guidance from Bali venue norms, not a myCHEF charge. We identify it early and include it in your budget planning.
             </p>
             <p>
-              <strong>Drinks your way.</strong> Full bar service with our wedding bartenders, or BYO: market guidance from Bali venue norms puts corkage at roughly USD 35–47 per bottle at venues that charge it [BUSINESS CONFIRMATION REQUIRED] — myCHEF's own published corkage waiver for villa parties is a flat IDR 250,000. We will tell you honestly which option costs less for your guest count.
+              <strong>Drinks your way.</strong> Full bar service with our wedding bartenders, or BYO: market guidance from Bali venue norms puts corkage at roughly USD 35–47 per bottle at venues that charge it — myCHEF's own published corkage waiver for villa parties is a flat IDR 250,000. We will tell you honestly which option costs less for your guest count.
             </p>
             <p>
               For a deeper dive, read our <Link to="/journal/villa-wedding-catering-logistics-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">villa wedding logistics guide</Link>.
@@ -610,6 +610,9 @@ export default function EventsWeddingsPage() {
           </div>
         </div>
       </section>
+
+      <ArticleContentSection />
+
 
       <StickyMobileCTA
         pageSource="events-weddings"

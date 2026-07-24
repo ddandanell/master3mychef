@@ -28,7 +28,7 @@ const TRUST_PILLARS = [
   {
     emoji: '🛡️',
     title: 'Guarantees in writing',
-    desc: 'Chef replacement guarantee — if your chef can\'t make it, a verified replacement arrives within 2 hours or you receive a 100% refund. Transparent terms — a deposit confirms your booking [BUSINESS CONFIRMATION REQUIRED — live page states no figure], prices always quoted ++ (11% government tax + 10% service charge), groceries at cost with receipts.',
+    desc: 'Chef replacement guarantee — if your chef can\'t make it, a verified replacement arrives within 2 hours or you receive a 100% refund. Transparent terms — a 50% deposit confirms your booking, prices always quoted ++ (11% government tax + 10% service charge), groceries at cost with receipts.',
     link: { label: 'transparent pricing', href: '/pricing' },
   },
 ]
@@ -55,7 +55,7 @@ const FAQS = [
   },
   {
     question: 'Do you only do fine dining?',
-    answer: 'No — the same team cooks poolside BBQs, family dinners, retreat meal plans and weddings for up to 200 guests.',
+    answer: 'No — the same team cooks poolside BBQs, family dinners, retreat meal plans and weddings for up to 200 guests. <a href="/services">See all services →</a>',
   },
 ]
 

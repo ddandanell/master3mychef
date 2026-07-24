@@ -11,7 +11,7 @@ import SeoHead, {
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
-import { Breadcrumb } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb } from '@/components/shared'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
@@ -446,6 +446,8 @@ export default function ChefsTablePage() {
           ))}
         </div>
       </section>
+      <ArticleContentSection />
+
       <StickyMobileCTA
         pageSource="chefs-table"
         serviceName="chef's table in Bali"

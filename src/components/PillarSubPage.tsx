@@ -3,6 +3,11 @@ import { MessageCircle, Check, ArrowRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema } from './SeoHead'
 import FAQAccordion from './catering/FAQAccordion'
 import { getSubPage, getPillarBySlug, type Pillar, type SubPage } from '@/data/siteArchitecture'
+import { ARTICLE_CONTENT } from '@/data/content/articleContent'
+
+function stripFirstH1(html: string): string {
+  return html.replace(/<h1[\s\S]*?<\/h1>/i, '').trim()
+}
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -44,6 +49,7 @@ export default function PillarSubPage() {
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(getWhatsAppText(pillar, subPage))}`
 
   const related = pillar.subPages.filter((s) => s.slug !== subPage.slug).slice(0, 4)
+  const articleHtml = ARTICLE_CONTENT[path]
 
   // Pillar-specific FAQ fallback content
   const pillarFaqs: Record<string, { q: string; a: string }[]> = {
@@ -134,6 +140,16 @@ export default function PillarSubPage() {
           </Link>
         </div>
       </section>
+
+      {/* Article body from mychef-seo content */}
+      {articleHtml && (
+        <section className="px-6 py-16 border-t border-[#E8E6E3]">
+          <div
+            className="max-w-[900px] mx-auto prose prose-stone"
+            dangerouslySetInnerHTML={{ __html: stripFirstH1(articleHtml) }}
+          />
+        </section>
+      )}
 
       {/* What's included */}
       <section className="px-6 py-16 border-t border-[#E8E6E3]">

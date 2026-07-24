@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, ChevronRight, Star, Award, Users, Flame } from 'lucide-react'
 import SeoHead, { localBusinessSchema, personSchema } from '@/components/SeoHead'
 import { PHONE } from '@/data/siteArchitecture'
+import { siteFacts } from '@/data/siteFacts'
 
 // ── Chef data ─────────────────────────────────────────────────────────────────
 
@@ -35,7 +36,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     name: 'Adriano',
     role: 'Executive Chef & Founder',
     origin: 'Milan, Italy',
-    badge: 'Michelin-trained in Modena · Founded myCHEF in Bali 2016',
+    badge: `Michelin-trained in Modena · Founded myCHEF in Bali ${siteFacts.foundingYear}`,
     portrait: '/generated/chef-adriano-portrait.webp',
     portraitAlt: 'Adriano — Executive Chef and Founder of myCHEF Bali',
     specialty: 'Mediterranean Fine Dining',
@@ -45,12 +46,12 @@ const CHEFS_DATA: Record<string, ChefData> = {
     fullBio: [
       'Adriano grew up in Milan surrounded by the discipline of Italian home cooking before earning his formal training at a Michelin-starred restaurant in Modena — the same region that gave the world Massimo Bottura and the foundations of modern Italian cuisine. What he took from that experience was not just technique, but philosophy: that the best meal is always honest, seasonal, and never over-complicated.',
       'His path then took him east. A season in Tokyo introduced him to a completely different kind of culinary precision — the Japanese obsession with texture, temperature, and the small rituals that surround a meal. That contrast — Mediterranean warmth against Japanese exactness — became the engine behind what myCHEF has grown into.',
-      'Adriano arrived in Bali in 2015 and saw something nobody had done well yet: private dining for villa guests that matched the quality of a fine restaurant, delivered inside someone\'s home. He founded myCHEF in 2016 and has grown the team to over 50 hospitality professionals since then.',
+      `Adriano arrived in Bali in 2015 and saw something nobody had done well yet: private dining for villa guests that matched the quality of a fine restaurant, delivered inside someone's home. He founded myCHEF in ${siteFacts.foundingYear} and has grown the team to over 50 hospitality professionals since then.`,
       'Today, Adriano still leads every signature tasting experience, manages recipe development across the full menu catalogue, and personally trains each new head chef before they run a booking on their own. If you are booking a milestone anniversary, a VIP dinner, or a romantic proposal in Bali, there is a strong chance Adriano is the one standing in your villa kitchen.',
     ],
     achievements: [
       'Michelin-trained in Modena, northern Italy',
-      'Founded myCHEF in Bali in 2016',
+      `Founded myCHEF in Bali in ${siteFacts.foundingYear}`,
       'Trained and mentored 50+ hospitality professionals',
       'Leads VIP dinners, proposals, and milestone occasions',
       'Developed the full myCHEF recipe and training playbook',

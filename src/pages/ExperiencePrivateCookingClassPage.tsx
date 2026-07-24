@@ -9,6 +9,7 @@ import {
   ShoppingBasket,
 } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
+import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20a%20private%20cooking%20class%20in%20my%20Bali%20villa.%20Please%20send%20class%20options%20and%20pricing.'
 const CANONICAL = 'https://mychef.id/experiences/private-cooking-class'
@@ -63,6 +64,12 @@ const SECTIONS: PageSection[] = [
     image: '/generated/luna-ingredients.webp',
     imageAlt: 'Fresh Balinese market ingredients and tropical produce selected for a private cooking class',
     body: `<p>For IDR 250K per person, the class starts before sunrise. Your chef collects you at 6am and walks you through the local <em>pasar</em> the professionals use — choosing shallots by variety, judging turmeric, spotting the day's best fish, meeting ingredients that rarely leave the island. By 8am you're back at the villa with a basket you understand and a menu taking shape. It adds roughly two hours and is the single best upgrade for anyone curious about food culture, not just technique.</p>`,
+  },
+  {
+    id: 'seo-content',
+    type: 'content' as const,
+    title: "Private Cooking Class in Bali — The Chef Comes to Your Villa",
+    body: ARTICLE_CONTENT['/experiences/private-cooking-class'],
   },
   {
     id: 'features',

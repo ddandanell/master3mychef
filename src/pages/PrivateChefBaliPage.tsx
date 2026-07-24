@@ -11,7 +11,7 @@ import SeoHead, {
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
-import { Breadcrumb } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
@@ -447,6 +447,8 @@ export default function PrivateChefBaliPage() {
           ))}
         </div>
       </section>
+      <ArticleContentSection />
+
       <StickyMobileCTA
         pageSource="private-chef-bali"
         serviceType="private-chef"

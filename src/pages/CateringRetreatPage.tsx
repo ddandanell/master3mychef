@@ -20,7 +20,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import StaffingInfo from '@/components/catering/StaffingInfo'
 import BookingProcess from '@/components/catering/BookingProcess'
-import { Breadcrumb, PressStrip, CateringDiscoverySection } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, PressStrip, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -629,7 +629,7 @@ export default function CateringRetreatPage() {
             Normal groceries are included in every plan. Premium upgrades — imported superfoods, oyster or seafood nights, an elevated closing dinner — are quoted separately in advance. See our <Link to="/pricing" className="text-[#C5A028] hover:underline">transparent pricing</Link> page for a broader pricing overview.
           </p>
           <p className="text-xs text-[#4A4745]/70 mt-4 text-center">
-            [BUSINESS CONFIRMATION REQUIRED] Retreat from-price (IDR 400K++/person/day on this page) conflicts with /pricing's 'retreat from 700K/person/day' — sitewide price reconciliation pending business decision.
+            Retreat programmes are priced per group, length and menu. Contact us for a fixed quote.
           </p>
         </div>
       </section>
@@ -1022,6 +1022,8 @@ export default function CateringRetreatPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <ArticleContentSection />
+
       <StickyMobileCTA
         pageSource="catering-retreat"
         serviceName="retreat catering in Bali"

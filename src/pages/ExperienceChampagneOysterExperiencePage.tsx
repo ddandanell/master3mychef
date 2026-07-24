@@ -2,6 +2,7 @@ import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, faqPageSchema, serviceSchema } from '@/components/SeoHead'
 import { Wine, Shell, Clock, Shield, Users, Sparkles } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
+import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20adding%20the%20Champagne%20%26%20Oyster%20Hour%20to%20my%20Bali%20villa%20dinner%20or%20event.%20Can%20you%20send%20details%20and%20pricing%3F'
 const CANONICAL = 'https://mychef.id/experiences/champagne-oyster-experience'
@@ -28,6 +29,12 @@ const SECTIONS: PageSection[] = [
     body: `<p>We source the freshest oysters available for your date and serve them simply, the way oysters are best: classic mignonette, fresh lemon, crushed ice. Champagne is your call — a crisp Blanc de Blancs is our usual suggestion, and bottles are billed at cost plus sourcing, always quoted transparently before you commit.</p>
 
     <p>Most guests book it as the first hour of something else: the pre-dinner reception before a <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">private chef dinner</a>, <a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">add it to a proposal dinner</a>, or the poolside opener for a birthday or <a href="/events/weddings" class="text-[#7E6410] hover:underline font-medium">pre-reception oyster bar</a>. We time the station so it flows straight into whatever comes next.</p>`,
+  },
+  {
+    id: 'seo-content',
+    type: 'content' as const,
+    title: "Champagne & Oyster Hour at Your Bali Villa",
+    body: ARTICLE_CONTENT['/experiences/champagne-oyster-experience'],
   },
   {
     id: 'offerings',

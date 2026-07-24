@@ -9,6 +9,7 @@ import {
   Shield,
 } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
+import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20kids%20birthday%20chef%20party%20in%20Bali.%20Please%20send%20menus%2C%20pricing%20and%20availability.'
 const CANONICAL = 'https://mychef.id/experiences/kids-birthday-chef-party'
@@ -99,6 +100,12 @@ const SECTIONS: PageSection[] = [
     </table>
 
     <p>Add-ons — extra protein, fresh juice, chef hats and aprons, birthday cake slices — run IDR 5K–50K per child. For full ingredient and allergen detail, see the <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">full kids</a> menu collection.</p>`,
+  },
+  {
+    id: 'seo-content',
+    type: 'content' as const,
+    title: "Kids Birthday Chef Party in Bali — They Cook, You Relax",
+    body: ARTICLE_CONTENT['/experiences/kids-birthday-chef-party'],
   },
   {
     id: 'features',

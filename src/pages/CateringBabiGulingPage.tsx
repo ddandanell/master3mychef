@@ -20,7 +20,7 @@ import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import BabiGulingPricing from '@/components/catering/BabiGulingPricing'
 import StaffingInfo from '@/components/catering/StaffingInfo'
 import BookingProcess from '@/components/catering/BookingProcess'
-import { Breadcrumb, PressStrip, CateringDiscoverySection } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, PressStrip, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -681,6 +681,8 @@ export default function CateringBabiGulingPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <ArticleContentSection />
+
       <StickyMobileCTA
         pageSource="catering-babi-guling"
         serviceName="Babi Guling catering in Bali"

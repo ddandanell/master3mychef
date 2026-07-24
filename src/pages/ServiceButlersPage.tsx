@@ -8,7 +8,7 @@ import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { Breadcrumb } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -400,6 +400,8 @@ export default function ServiceButlersPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <ArticleContentSection />
+
       <StickyMobileCTA
         pageSource="in-villa-butlers"
         serviceName="villa butler in Bali"

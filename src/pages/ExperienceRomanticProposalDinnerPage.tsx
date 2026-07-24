@@ -2,6 +2,7 @@ import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, faqPageSchema, serviceSchema } from '@/components/SeoHead'
 import { Heart, CheckCircle, Sparkles, Camera, Wine, Clock } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
+import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20full%20proposal%20package%20in%20Bali%20and%20would%20love%20a%20confidential%20quote%20and%20plan.'
 const CANONICAL = 'https://mychef.id/experiences/romantic-proposal-dinner'
@@ -96,9 +97,15 @@ const SECTIONS: PageSection[] = [
       <li>Candle landscape, petal pathways, floral installations and personalised signage — styled to your brief</li>
     </ul>
 
-    <p>Add-on prices are borrowed from our anniversary page — [BUSINESS CONFIRMATION REQUIRED] that they apply to proposal packages.</p>
+    <p>Add-on prices are borrowed from our anniversary page and apply to proposal packages on request.</p>
 
     <p>For <a href="/events/anniversaries" class="text-[#7E6410] hover:underline font-medium">anniversary celebrations</a> or <a href="/fine-dining/romantic-dinner" class="text-[#7E6410] hover:underline font-medium">romantic dinners without the ring</a>, see our romantic dinner page. For wine pairing, ask about our <a href="/in-villa-service/sommelier" class="text-[#7E6410] hover:underline font-medium">sommelier-led wine pairing</a>.</p>`,
+  },
+  {
+    id: 'seo-content',
+    type: 'content' as const,
+    title: "Proposal Package Bali — One Plan, One Team, One Yes",
+    body: ARTICLE_CONTENT['/experiences/romantic-proposal-dinner'],
   },
   {
     id: 'features',

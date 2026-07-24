@@ -8,10 +8,10 @@
 
 export const siteFacts = {
   /** Defensible founding year used across the site. */
-  foundingYear: 2018,
+  foundingYear: 2019,
 
   /** City where the founder completed formal Michelin-kitchen training. */
-  founderTrainingCity: 'Modena',
+  founderTrainingCity: 'Milan',
 
   /** Deposit percentage required to confirm a booking. */
   depositPercent: 50,

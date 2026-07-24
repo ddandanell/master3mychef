@@ -18,7 +18,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import StaffingInfo from '@/components/catering/StaffingInfo'
 import BookingProcess from '@/components/catering/BookingProcess'
-import { Breadcrumb, PressStrip, CateringDiscoverySection } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, PressStrip, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
@@ -656,6 +656,9 @@ export default function CateringBBQPage() {
           </div>
         </div>
       </section>
+
+      <ArticleContentSection />
+
 
       <StickyMobileCTA
         pageSource="catering-bbq"

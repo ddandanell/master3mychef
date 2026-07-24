@@ -26,20 +26,20 @@ const WHATS_INCLUDED = [
 
 const MEAL_PLANS = [
   { name: 'Breakfast Only', price: 'IDR 600K', period: '/hour', desc: 'Fresh tropical fruits, pastries, eggs any style, Balinese coffee' },
-  { name: 'Half Board', price: 'IDR 1.1M', period: '/hour', desc: 'Breakfast + dinner — ideal for families who lunch out' },
-  { name: 'Full Board', price: 'IDR 1.5M', period: '/hour', desc: 'Breakfast, lunch and dinner — the complete villa experience' },
+  { name: 'Half Board', price: 'IDR 2M', period: '/half-day', desc: 'Breakfast + dinner — ideal for families who lunch out' },
+  { name: 'Full Board', price: 'IDR 4M', period: '/full-day', desc: 'Breakfast, lunch and dinner — the complete villa experience' },
   { name: 'Custom', price: 'Quoted', period: '', desc: 'Dietary programmes, special occasions, extended stays' },
 ]
 
 const FAQS = [
-  { q: 'What does the hourly rate include?', a: 'Chef time, cooking, service, and cleanup. Groceries are billed separately at cost — no markup. You see every receipt.' },
-  { q: 'How many hours per day do I need?', a: 'Breakfast takes ~2 hours. Dinner ~3 hours. For full board, most families book 6–8 hours per day.' },
-  { q: 'Can the chef cook for dietary restrictions?', a: 'Absolutely. Gluten-free, vegan, halal, keto, allergies — our chefs are trained for all dietary needs. No extra charge.' },
-  { q: 'Do I need to buy groceries?', a: 'No. Your chef shops for everything and brings receipts. You only pay what the market charges.' },
+  { q: 'What does the villa chef rate include?', a: 'Chef time, menu planning, cooking, table service and a full kitchen cleanup after every meal. Groceries are billed separately at cost with receipts — no markup.' },
+  { q: 'How many hours per day should we book?', a: 'Breakfast runs about 2 hours and dinner about 3. Most full-board families book 6–8 hours per day; the minimum booking is 4 hours.' },
+  { q: 'Can the chef handle dietary requirements and kids\' meals?', a: 'Yes — halal, vegan, gluten-free, keto, allergies and children\'s menus are part of the service at no extra charge.' },
+  { q: 'Do we need to buy groceries or equipment?', a: 'No. Your chef shops for everything and works in your villa kitchen, bringing any specialist tools the menu needs.' },
   { q: 'Will the chef use my kitchen equipment?', a: 'Yes, your kitchen. We bring any specialized tools we need. We have worked in every type of villa kitchen.' },
   { q: 'Can I request specific dishes?', a: 'Of course. Before your stay, your chef will ask about your favorites, allergies, and must-haves. Every menu is customized.' },
-  { q: 'What if I want to eat out one night?', a: 'No problem. You only pay for the days and meals you use. Flexibility is the whole point.' },
-  { q: 'How far in advance should I book?', a: '3+ days for villa chef. For peak season (July–August, December), 2+ weeks is recommended.' },
+  { q: 'What if we want to eat out one night?', a: 'No problem. You only pay for the days and meals you use. Flexibility is the whole point.' },
+  { q: 'How far ahead should we book?', a: 'Three or more days is comfortable for daily service; for peak season (July–August and December), two weeks ahead is recommended. A 50% deposit confirms your dates.' },
 ]
 
 const TESTIMONIALS = [
@@ -376,9 +376,6 @@ export default function SolPage() {
           </div>
           <p className="text-center text-sm mb-4" style={{ color: '#8A7B6B' }}>
             Your written quote states exactly which model applies, shown ++ (11% government tax + 10% service charge) — a 50% deposit confirms your dates.
-          </p>
-          <p className="text-center text-xs" style={{ color: '#8A7B6B' }}>
-            [BUSINESS CONFIRMATION REQUIRED] on per-hour vs per-day model.
           </p>
         </div>
       </section>

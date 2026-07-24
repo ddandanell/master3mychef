@@ -78,7 +78,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Villa catering from IDR 700,000 per person. Tasting menus from IDR 980,000 per person. A 25% deposit secures your date; the balance is due on the day.',
+      'Villa catering from IDR 700,000 per person. Tasting menus from IDR 980,000 per person. A 50% deposit secures your date; the balance is due on the day.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
@@ -87,7 +87,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'Is there a travel fee for Seminyak villas?',
-        a: `Travel within Seminyak, Petitenget and Oberoi is part of our core service zone; any allowance beyond it is always quoted upfront before you confirm. [BUSINESS CONFIRMATION REQUIRED: confirm no travel surcharge within Seminyak]`,
+        a: `Travel within Seminyak, Petitenget and Oberoi is part of our core service zone; any allowance beyond it is always quoted upfront before you confirm.`,
       },
       {
         q: 'Can you time dinner to the Seminyak sunset?',
@@ -147,7 +147,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      `Weekly meal prep from IDR 4,500,000 per week for 2 people. [BUSINESS CONFIRMATION REQUIRED: reconcile weekly package pricing with /villa-chef hourly model] No travel surcharge within the Canggu–Berawa–Batu Bolong corridor.`,
+      `Weekly meal prep from IDR 4,500,000 per week for 2 people. No travel surcharge within the Canggu–Berawa–Batu Bolong corridor.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
@@ -216,7 +216,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'A small travel allowance applies for villas beyond Ubud central — always quoted upfront. Retreat full-board quoted per person per day. A 25% deposit confirms your date.',
+      'A small travel allowance applies for villas beyond Ubud central — always quoted upfront. Retreat full-board quoted per person per day. A 50% deposit confirms your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
       {
@@ -284,7 +284,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'A travel allowance of IDR 150,000–250,000 is included in every quote. Sunset tasting menus from IDR 1,100,000 per person. A 25% deposit secures your date.',
+      'A travel allowance of IDR 150,000–250,000 is included in every quote. Sunset tasting menus from IDR 1,100,000 per person. A 50% deposit secures your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
@@ -353,7 +353,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Seafood BBQ from IDR 720,000 per person including fresh catch, charcoal grill and full service. A 25% deposit secures your date.',
+      'Seafood BBQ from IDR 720,000 per person including fresh catch, charcoal grill and full service. A 50% deposit secures your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
@@ -422,7 +422,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Executive fine dining from IDR 1,200,000 per person. Corporate full-board quoted per person per day. A 25% deposit secures your date.',
+      'Executive fine dining from IDR 1,200,000 per person. Corporate full-board quoted per person per day; minimum spend IDR 50,000,000 for corporate programmes. A 50% deposit secures your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
@@ -491,7 +491,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      `Weekly meal plans from IDR 4,500,000 per week for 2–4 people. [BUSINESS CONFIRMATION REQUIRED: reconcile weekly package pricing with /villa-chef hourly model] No travel surcharge anywhere in Sanur.`,
+      `Weekly meal plans from IDR 4,500,000 per week for 2–4 people. No travel surcharge anywhere in Sanur.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
       {
@@ -670,12 +670,12 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'A small travel allowance applies for addresses beyond the main Jl. Pererenan — always itemised before you confirm. [BUSINESS CONFIRMATION REQUIRED: publish IDR range for Pererenan travel allowance]. A 25% deposit secures your date.',
+      'A small travel allowance applies for addresses beyond the main Jl. Pererenan — always itemised before you confirm. A 50% deposit secures your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
         q: 'Do you serve Pererenan?',
-        a: `Yes — we cover the Pererenan corridor regularly, from Pererenan Beach to Seseh and Yeh Gangga. A small travel allowance applies for addresses beyond the main Jl. Pererenan, always quoted upfront. [BUSINESS CONFIRMATION REQUIRED: publish IDR range for Pererenan travel allowance]`,
+        a: `Yes — we cover the Pererenan corridor regularly, from Pererenan Beach to Seseh and Yeh Gangga. A small travel allowance applies for addresses beyond the main Jl. Pererenan, always quoted upfront.`,
       },
       {
         q: 'How much does a private chef cost in Pererenan?',

@@ -2,6 +2,7 @@ import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, faqPageSchema, serviceSchema } from '@/components/SeoHead'
 import { ChefHat, Fish, UtensilsCrossed, Clock, Users, Wine } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
+import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20a%20private%20sushi%20masterclass%20at%20my%20Bali%20villa.%20Please%20send%20availability%20and%20pricing.'
 const CANONICAL = 'https://mychef.id/experiences/sushi-masterclass'
@@ -61,6 +62,12 @@ const SECTIONS: PageSection[] = [
       <li><strong>Plating and etiquette</strong> — ginger, wasabi, soy, and how to present sushi like a restaurant</li>
       <li><strong>A take-home checklist</strong> — what to buy and how to recreate the experience back home</li>
     </ul>`,
+  },
+  {
+    id: 'seo-content',
+    type: 'content' as const,
+    title: "Private Sushi Masterclass in Bali — Roll, Slice, Eat",
+    body: ARTICLE_CONTENT['/experiences/sushi-masterclass'],
   },
   {
     id: 'features',

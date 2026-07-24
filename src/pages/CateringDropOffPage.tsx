@@ -19,7 +19,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import StaffingInfo from '@/components/catering/StaffingInfo'
 import BookingProcess from '@/components/catering/BookingProcess'
-import { Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -34,10 +34,8 @@ const PAGE_URL = `${SITE}/catering/drop-off-catering`
 const ACCENT = '#C5A028'
 
 /* ───────── Packages ─────────
- * NOTE: [BUSINESS CONFIRMATION REQUIRED] — per-package all-in figures previously
- * showed inconsistent math. All packages are now listed at the brief's stated
- * IDR 700,000/person base; final all-in totals (11% tax + 10% service) are
- * confirmed in the guest quote. Do not adjust all-in math without business sign-off.
+ * All packages are listed at the brief's stated IDR 700,000/person base;
+ * final all-in totals (11% tax + 10% service) are confirmed in the guest quote.
  */
 const DROPOFF_PACKAGES = [
   {
@@ -774,6 +772,8 @@ export default function CateringDropOffPage() {
       </section>
 
       <TaxFooter className="py-6" />
+      <ArticleContentSection />
+
       <StickyMobileCTA
         pageSource="catering-dropoff"
         serviceName="drop-off catering in Bali"

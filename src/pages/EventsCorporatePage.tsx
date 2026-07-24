@@ -14,7 +14,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 
@@ -577,6 +577,8 @@ export default function EventsCorporatePage() {
       </section>
 
       <TaxFooter />
+      <ArticleContentSection />
+
       <StickyMobileCTA
         pageSource="events-corporate"
         serviceName="corporate event catering in Bali"

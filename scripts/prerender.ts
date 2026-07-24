@@ -118,7 +118,6 @@ const ROUTES = [
   { path: '/blog/large-group-catering-bali', file: 'blog-large-group-catering-bali.html' },
   { path: '/blog/villa-staff-bali-hiring-guide', file: 'blog-villa-staff-bali-hiring-guide.html' },
   { path: '/blog/bali-wellness-retreat-catering', file: 'blog-bali-wellness-retreat-catering.html' },
-  { path: '/blog/private-chef-jakarta-complete-guide', file: 'blog-private-chef-jakarta-complete-guide.html' },
   { path: '/blog/christmas-dinner-bali-villa', file: 'blog-christmas-dinner-bali-villa.html' },
   { path: '/blog/villa-butler-bali-guide', file: 'blog-villa-butler-bali-guide.html' },
   { path: '/blog/birthday-party-catering-bali', file: 'blog-birthday-party-catering-bali.html' },
@@ -168,7 +167,6 @@ const ROUTES = [
   { path: '/journal/private-chef-canggu-guide', file: 'journal-private-chef-canggu-guide.html' },
   { path: '/journal/private-chef-ubud-villa-dining', file: 'journal-private-chef-ubud-villa-dining.html' },
   { path: '/journal/bali-wedding-catering-complete-guide', file: 'journal-bali-wedding-catering-complete-guide.html' },
-  { path: '/journal/private-chef-jakarta-guide', file: 'journal-private-chef-jakarta-guide.html' },
   { path: '/journal/rehearsal-dinner-planning-bali', file: 'journal-rehearsal-dinner-planning-bali.html' },
   { path: '/journal/live-in-chef-vs-daily-service', file: 'journal-live-in-chef-vs-daily-service.html' },
   { path: '/journal/bbq-catering-cost-breakdown-bali', file: 'journal-bbq-catering-cost-breakdown-bali.html' },
@@ -246,7 +244,6 @@ const ROUTES = [
   { path: '/bachelorette-party-catering', file: 'bachelorette-party-catering.html' },
   { path: '/large-group-catering-bali', file: 'large-group-catering-bali.html' },
   { path: '/new-years-eve-bali', file: 'new-years-eve-bali.html' },
-  { path: '/private-chef-jakarta-guide', file: 'private-chef-jakarta-guide.html' },
   { path: '/villa-staff-bali-guide', file: 'villa-staff-bali-guide.html' },
   { path: '/wellness-retreat-catering', file: 'wellness-retreat-catering.html' },
   // Utility & info pages
@@ -314,7 +311,6 @@ const ROUTES = [
   { path: '/locations/bukit', file: 'locations-bukit.html' },
   { path: '/locations/kuta', file: 'locations-kuta.html' },
   { path: '/locations/denpasar', file: 'locations-denpasar.html' },
-  { path: '/locations/jakarta', file: 'locations-jakarta.html' },
   // Private-chef area pages (top 25 completion)
   { path: '/private-chef/echo-beach', file: 'private-chef-echo-beach.html' },
   { path: '/private-chef/batu-bolong', file: 'private-chef-batu-bolong.html' },

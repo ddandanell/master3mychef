@@ -208,12 +208,12 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'catering-retreat': {
     path: '/catering/retreat-catering',
-    title: 'Retreat Catering Bali | Yoga, Wellness & Multi-Day Meals',
+    title: 'Luxury Retreat Catering Bali | Yoga, Wellness & Corporate Retreat Hospitality | myCHEF',
     description:
-      'Retreat catering in Bali for yoga, wellness & creative groups. Multi-day menus, dietary planning & calm villa service. WhatsApp us to plan your retreat.',
+      'Premium retreat catering across Bali for yoga, wellness, corporate and luxury retreats. Multi-day menu planning, healthy chef-prepared meals, dietary specialists and professional hospitality teams. Custom proposals for retreats of every size.',
     canonical: `${SITE}/catering/retreat-catering`,
-    h1: 'Retreat Catering Bali — Yoga, Wellness & Group Meals',
-    ogImage: `${SITE}/generated/hero-retreats.jpg`,
+    h1: 'Luxury Retreat Catering & Hospitality in Bali',
+    ogImage: `${SITE}/generated/mychef-catering-bali-hero-retreat.webp`,
   },
 
   'catering-floating-breakfast': {

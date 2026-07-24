@@ -30,7 +30,7 @@ const SECTIONS: PageSection[] = [
     <p><strong>Pasar Badung:</strong> Bali's largest and most important fresh market, at the heart of Denpasar. Wholesale and retail fresh produce, spices, herbs, and Balinese ingredients unavailable anywhere else in comparable quality and variety. A myCHEF chef based in Denpasar can reach Pasar Badung in minutes for morning sourcing — the standard for any serious kitchen in Bali.</p>
     <p><strong>Pasar Kumbasari:</strong> The arts, crafts, and specialty goods market across the river from Badung. Also carries specialty food items, Balinese ceremonial ingredients, and hard-to-find spices.</p>
     <p><strong>Wholesale protein and seafood markets:</strong> Several wholesale fish, meat, and poultry suppliers operate from the Denpasar industrial and port area. For large corporate events requiring significant quantities of specific proteins, direct wholesale access matters for both price and quality.</p>
-    <p><strong>Jakarta import suppliers:</strong> Denpasar's status as a commercial hub means it has the best selection of imported and specialty food items on the island — European cheeses, Japanese ingredients, specialty wines, and premium imports are all available via Denpasar-based distributors that our chefs have established relationships with.</p>`,
+    <p><strong>Import suppliers:</strong> Denpasar's status as a commercial hub means it has the best selection of imported and specialty food items on the island — European cheeses, Japanese ingredients, specialty wines, and premium imports are all available via Denpasar-based distributors that our chefs have established relationships with.</p>`,
   },
   {
     id: 'coverage',

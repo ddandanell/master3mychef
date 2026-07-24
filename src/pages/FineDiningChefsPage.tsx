@@ -66,7 +66,7 @@ const TEAM_CHEFS: ChefCard[] = [
   },
   {
     name: 'Bayu Pranata',
-    background: 'Trained in Jakarta under a French-trained Indonesian chef, Bayu moved to Bali in 2020 and became known for dessert precision. He is methodical, quietly brilliant, and the chef guests remember when the final course lands.',
+    background: 'Trained under a French-trained Indonesian chef, Bayu moved to Bali in 2020 and became known for dessert precision. He is methodical, quietly brilliant, and the chef guests remember when the final course lands.',
     specialties: ['Plated desserts', 'Petit fours', 'Chocolate work', 'Pastry courses'],
     style: 'Methodical. Quiet talent. Guests always ask about the dessert.',
     signatureDish: 'Pandan crème brûlée with coconut tuile and mango gel',
@@ -77,7 +77,7 @@ const TEAM_CHEFS: ChefCard[] = [
   },
   {
     name: 'Ni Putu Asri',
-    background: 'Born in Ubud and trained in Jakarta and Singapore, Asri returned to Bali with global technique and deep local ingredient knowledge. Her cooking is creative, grounded, and deeply connected to Bali\'s food culture.',
+    background: 'Born in Ubud and trained across Indonesia and Singapore, Asri returned to Bali with global technique and deep local ingredient knowledge. Her cooking is creative, grounded, and deeply connected to Bali\'s food culture.',
     specialties: ['Plant-forward menus', 'Balinese ceremonial-inspired dishes', 'Dietary-inclusive cooking'],
     style: 'Creative, grounded, deeply connected to Bali\'s food culture.',
     signatureDish: 'Jackfruit rendang with tempeh crust and sambal matah',

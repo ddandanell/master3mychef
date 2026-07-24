@@ -73,12 +73,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mychef.id/locations/jakarta</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://mychef.id/private-chef/seminyak</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -571,12 +565,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mychef.id/private-chef-menteng</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://mychef.id/guide/private-chef-bali</loc>
     <lastmod>2025-02-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -795,12 +783,6 @@
   <url>
     <loc>https://mychef.id/journal/bali-wedding-catering-complete-guide</loc>
     <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mychef.id/journal/private-chef-jakarta-guide</loc>
-    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1458,12 +1440,6 @@
   </url>
   <url>
     <loc>https://mychef.id/blog/hostess-hire-bali</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mychef.id/blog/private-chef-surabaya-guide</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

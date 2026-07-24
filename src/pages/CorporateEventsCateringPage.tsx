@@ -36,7 +36,7 @@ const FAQS = [
   {
     question: 'What is your minimum group size for corporate catering?',
     answer:
-      'The minimum group size for corporate catering is 10 persons. We cater groups up to 200 guests across Bali and Jakarta, with volume pricing available for groups of 50 or more.',
+      'The minimum group size for corporate catering is 10 persons. We cater groups up to 200 guests across Bali, with volume pricing available for groups of 50 or more.',
   },
   {
     question: 'Are you HACCP certified?',
@@ -202,12 +202,10 @@ IDR 1,200,000–2,500,000 per person. The full-scale event format. Includes mult
     id: 'locations',
     type: 'content',
     subtitle: 'Where We Operate',
-    title: 'Bali and Jakarta — Corporate Catering Across Indonesia\'s Key Business Destinations',
+    title: 'Bali — Corporate Catering Across Indonesia\'s Premier Island Destination',
     body: `<p>myCHEF operates across Bali's full corporate event geography. <strong>Nusa Dua</strong> is Bali's primary convention and incentive corridor — we regularly cater resort-adjacent villas and private venues throughout the area. <strong>Seminyak and Canggu</strong> host the largest concentration of creative and technology company retreats, where villa capacity ranges from intimate team dinners to 80-person outdoor events. <strong>Ubud</strong> is the preferred destination for wellness-focused retreats and leadership programmes, with jungle resort venues and traditional estate settings. <strong>Uluwatu</strong> offers clifftop settings ideal for gala dinners with dramatic sunset backdrops.</p>
 
-<p>In <strong>Jakarta</strong>, we cater executive club settings, residential event spaces, and corporate function rooms for high-end client entertainment and leadership dinners where a private chef team elevates the occasion beyond restaurant dining.</p>
-
-<p>For full coverage and venue-specific logistics, explore our <a href="/catering/corporate-catering" class="text-[#7E6410] hover:underline font-medium">corporate catering service page</a>, our <a href="/events/corporate-events" class="text-[#7E6410] hover:underline font-medium">corporate events overview</a>, or our dedicated <a href="/locations/jakarta" class="text-[#7E6410] hover:underline font-medium">Jakarta catering page</a>. To begin planning, reach out via WhatsApp with your dates, group size, and venue — we will respond within the hour.</p>`,
+<p>For full coverage and venue-specific logistics, explore our <a href="/catering/corporate-catering" class="text-[#7E6410] hover:underline font-medium">corporate catering service page</a> or our <a href="/events/corporate-events" class="text-[#7E6410] hover:underline font-medium">corporate events overview</a>. To begin planning, reach out via WhatsApp with your dates, group size, and venue — we will respond within the hour.</p>`,
   },
 ]
 
@@ -215,7 +213,7 @@ const RELATED_PAGES = [
   {
     label: 'Corporate Catering',
     href: '/catering/corporate-catering',
-    desc: 'Full overview of myCHEF corporate catering services across Bali and Jakarta.',
+    desc: 'Full overview of myCHEF corporate catering services across Bali.',
   },
   {
     label: 'Corporate Events',
@@ -231,11 +229,6 @@ const RELATED_PAGES = [
     label: 'Pricing',
     href: '/pricing',
     desc: 'Transparent per-person pricing across all event formats and group sizes.',
-  },
-  {
-    label: 'Jakarta Catering',
-    href: '/locations/jakarta',
-    desc: 'Executive and corporate catering services for events in Jakarta.',
   },
   {
     label: 'About myCHEF',
@@ -254,7 +247,7 @@ export default function CorporateEventsCateringPage() {
       seoDescription="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups 10–200."
       canonicalUrl={CANONICAL}
       h1="Corporate Events Catering in Bali — Team Dinners, Retreats & Incentive Meals"
-      subtitle="HACCP certified. International menus. 10–200 guests. Bali and Jakarta."
+      subtitle="HACCP certified. International menus. 10–200 guests. Bali only."
       heroImage="/generated/mychef-catering-bali-hub-catering.webp"
       heroImageAlt="Professional Indonesian chef team preparing a corporate gala dinner at a Bali villa with elegant table settings and synchronized service"
       ogImage={`${SITE}/generated/mychef-catering-bali-hub-catering.webp`}

@@ -55,12 +55,6 @@ export const AREAS: { slug: string; name: string }[] = [
   { slug: 'padang-bai', name: 'Padang Bai' },
   { slug: 'ungasan', name: 'Ungasan' },
   { slug: 'pecatu', name: 'Pecatu' },
-  { slug: 'jakarta', name: 'Jakarta' },
-  { slug: 'menteng', name: 'Menteng' },
-  { slug: 'kemang', name: 'Kemang' },
-  { slug: 'scbd', name: 'SCBD' },
-  { slug: 'pondok-indah', name: 'Pondok Indah' },
-  { slug: 'bsd', name: 'BSD City' },
 ]
 
 export const MICRO_AREAS: { slug: string; name: string }[] = [
@@ -323,7 +317,7 @@ export function buildSitemap(): SitemapEntry[] {
     { path: '/journal', type: 'blog-index', title: 'Journal | Bali Private Chef Guides & Hosting Tips', description: 'Expert guides, cost breakdowns, and insider tips for hosting private chefs, villa dinners, weddings, and events in Bali.', priority: 0.8, changefreq: 'weekly' },
     { path: '/pricing', type: 'info', title: 'Pricing | Private Chef Bali, Villa Catering & Events', description: 'Transparent pricing for private chef, catering & event services in Bali. Hourly rates, menu pricing & full packages. No hidden fees. Get a quote.', priority: 0.8, changefreq: 'monthly' },
     // /book removed from sitemap — noindex tag in BookPage.tsx
-    { path: '/staffing', type: 'info', title: 'Villa Staff Placement Bali | Hire Hospitality Staff — myCHEF', description: 'Long-term private chef placement, villa staff, and hospitality recruitment in Bali and Jakarta.', priority: 0.8, changefreq: 'monthly' },
+    { path: '/staffing', type: 'info', title: 'Villa Staff Placement Bali | Hire Hospitality Staff — myCHEF', description: 'Long-term private chef placement, villa staff, and hospitality recruitment in Bali.', priority: 0.8, changefreq: 'monthly' },
     { path: '/contact', type: 'info', title: 'Contact myCHEF | Private Chef & Catering Bali', description: 'Contact myCHEF for private chef bookings, catering, and event enquiries in Bali.', priority: 0.5, changefreq: 'monthly' },
     { path: '/partner-platform', type: 'info', title: 'Villa Partner Platform | myCHEF Bali', description: 'Partner with myCHEF — private chef and catering services for Bali villa managers and owners.', priority: 0.6, changefreq: 'monthly' },
     { path: '/certified-partner', type: 'info', title: 'Certified Partner Programme | myCHEF Bali', description: 'Become a myCHEF certified partner — preferred private chef and staffing services for Bali villas.', priority: 0.5, changefreq: 'monthly' },
@@ -334,7 +328,6 @@ export function buildSitemap(): SitemapEntry[] {
     // Batch #143–147 blog pages (PremiumPage format, dedicated routes)
     { path: '/blog/drop-off-catering-bali', type: 'blog-post', title: 'Drop-Off Catering Bali -- Fresh Villa Food Delivered Ready', description: 'Drop-off catering in Bali for villa stays. Fresh food prepared professionally and delivered ready to serve. From IDR 700K/person. All areas covered.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
     { path: '/blog/hostess-hire-bali', type: 'blog-post', title: 'Hostess Hire Bali -- Event Hostess & Greeter Service', description: 'Hire a professional hostess in Bali for corporate events, villa parties, brand activations and VIP gatherings. English-fluent, luxury-trained.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
-    { path: '/blog/private-chef-surabaya-guide', type: 'blog-post', title: 'Private Chef Surabaya -- In-Home & Corporate Catering', description: 'Hire a private chef in Surabaya for in-home dinners, weekly household service or corporate entertaining. Halal available. European, Indonesian and Asian menus.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
     { path: '/blog/chef-for-photoshoot-bali', type: 'blog-post', title: 'Chef for Food Photoshoot Bali -- Content Creation & Video', description: 'Hire a chef for food photoshoots and content creation in Bali. Hotels, brands, influencers and publications. Market-fresh sourcing and food styling.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
     { path: '/blog/tasting-menu-bali', type: 'blog-post', title: 'Private Tasting Menu Bali -- Multi-Course Villa Dinner', description: 'Private tasting menu in Bali. 7--11 progressive courses by an executive chef in your villa. Market-led menus, dietary adaptation and wine pairing.', priority: 0.8, changefreq: 'monthly', date: '2026-06-30' },
     // Batch #148–152 blog pages (PremiumPage format, dedicated routes)

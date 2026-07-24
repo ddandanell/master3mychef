@@ -80,7 +80,6 @@ export const IMAGE_DIMENSIONS = {
   "/generated/mychef-events-bali-hub-events.webp": { width: 896, height: 1184 },
   "/generated/mychef-misc-bali-hub-fine-dining.webp": { width: 896, height: 1200 },
   "/generated/mychef-misc-bali-hub-villa.webp": { width: 1024, height: 576 },
-  "/generated/mychef-misc-bali-jakarta-skyline.webp": { width: 1344, height: 768 },
   "/generated/mychef-finedining-bali-luna-chef-portrait.webp": { width: 768, height: 1024 },
   "/generated/mychef-experience-bali-luna-detail.webp": { width: 1024, height: 1024 },
   "/generated/mychef-experience-bali-luna-collage.webp": { width: 1402, height: 1122 },

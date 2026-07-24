@@ -107,13 +107,13 @@ export const LANDING_PAGES: ContentEntry[] = [
   {
     "slug": "healthy-meal-delivery-indonesia",
     "title": "Healthy Meal Delivery Indonesia | Chef-Prepared Villa Food",
-    "description": "Gourmet healthy meal delivery and prep for Bali and Jakarta. Organic ingredients and nutrient-dense menus.",
+    "description": "Gourmet healthy meal delivery and prep for Bali villas. Organic ingredients and nutrient-dense menus.",
     "date": "2026-05-17"
   },
   {
     "slug": "chef-for-hire-indonesia",
     "title": "Chef for Hire Indonesia | Private Chef Services",
-    "description": "Hire a vetted private or personal chef in Indonesia for one dinner, daily villa service, recurring meals, or full-time placement in Bali and Jakarta.",
+    "description": "Hire a vetted private or personal chef in Indonesia for one dinner, daily villa service, recurring meals, or full-time placement in Bali.",
     "date": "2026-05-17"
   },
   {
@@ -134,10 +134,4 @@ export const LANDING_PAGES: ContentEntry[] = [
     "description": "Wake up to a chef-prepared breakfast in your Bali villa. Floating trays, fresh juices, and international spreads.",
     "date": "2026-05-17"
   },
-  {
-    "slug": "private-chef-menteng",
-    "title": "Private Chef Menteng | Diplomatic District Fine Dining",
-    "description": "Discreet and professional private chef services for Jakarta’s Menteng district. Elite residential hospitality.",
-    "date": "2026-05-17"
-  }
 ]

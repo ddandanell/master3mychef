@@ -76,7 +76,7 @@ const FAQS = [
   { q: 'What cuisines can your live-in chefs cook?', a: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal, kosher — we match cuisine to your preference.' },
   { q: 'Can the live-in chef cook for events as well?', a: 'Yes. Estate and family placements include event cooking. Additional event coverage can be arranged at separate rates.' },
   { q: 'What areas do you cover for live-in chefs?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'Do you place live-in chefs outside Bali?', a: 'Yes. We have placed chefs in Jakarta, Lombok, and on private yachts. International placements available on request.' },
+  { q: 'Do you place live-in chefs outside Bali?', a: 'Yes. We have placed chefs in Lombok and on private yachts. International placements available on request.' },
   { q: 'What is your live-in chef placement fee?', a: 'One month of the chef salary as a placement fee. This covers sourcing, trials, contract, and 6 months of ongoing support.' },
 ]
 

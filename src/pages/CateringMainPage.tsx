@@ -336,7 +336,7 @@ const FAQS = [
   { q: 'Do you offer tastings before a wedding or large event?', a: 'Yes. Complimentary tastings are available for events over 40 guests. Smaller tastings can be arranged for a fee that is credited against your booking.' },
   { q: 'What payment methods do you accept?', a: 'We accept bank transfer, credit card, and Wise. Deposits confirm your date; balances are settled on or before the event day.' },
   { q: 'Can I book last-minute catering?', a: 'Drop-off catering can often be arranged next-day if ordered by 4pm. BBQ and buffet require 3 to 7 days notice. Weddings and large events should be booked 2+ weeks ahead.' },
-  { q: 'Do you cater outside Bali?', a: 'Our primary service area is Bali. Large or special events in Jakarta, Surabaya, or Lombok can sometimes be arranged by request.' },
+  { q: 'Do you cater outside Bali?', a: 'Our primary service area is Bali. Large or special events in Lombok can sometimes be arranged by request.' },
   { q: 'What if a guest has a severe allergy?', a: 'Tell us when booking. We prepare allergy-safe meals separately, use clean utensils, and label dishes. For severe allergies we may ask to confirm an emergency plan with the guest.' },
   { q: 'Do you provide waiting staff?', a: 'Yes. Waiters are included or available for buffet, plated, and canape service. We typically provide one waiter per ten guests for seated events.' },
   { q: 'Can you arrange a butler for a formal dinner?', a: 'Yes. We can provide trained butlers for formal villa dinners, wine service, and VIP events. See our Butler Service page.' },

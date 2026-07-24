@@ -67,17 +67,6 @@ export const REDIRECTS: Redirect[] = [
   { from: '/ungasan', to: '/locations/bukit', reason: 'Sub-area of the Bukit Peninsula.' },
   { from: '/pecatu', to: '/locations/bukit', reason: 'Sub-area of the Bukit Peninsula.' },
 
-  { from: '/jakarta', to: '/locations/jakarta', reason: 'Canonicalize to /locations/' },
-  { from: '/menteng', to: '/locations/jakarta', reason: 'No /locations/menteng page; /private-chef-menteng is itself a redirect — go straight to the real Jakarta hub.' },
-  { from: '/kemang', to: '/locations/jakarta', reason: 'No /locations/kemang page; go straight to the real Jakarta hub (no chain).' },
-  { from: '/scbd', to: '/locations/jakarta', reason: 'No /locations/scbd page; go straight to the real Jakarta hub (no chain).' },
-  { from: '/pondok-indah', to: '/locations/jakarta', reason: 'No /locations/pondok-indah page; go straight to the real Jakarta hub (no chain).' },
-  { from: '/bsd', to: '/locations/jakarta', reason: 'No /locations/bsd page; go straight to the real Jakarta hub (no chain).' },
-
-  // --- Jakarta area (private-chef variant) → /locations/ ---
-  { from: '/private-chef-puri-indah', to: '/locations/jakarta', reason: 'Puri Indah is a West Jakarta neighborhood — no dedicated page, redirect to Jakarta hub.' },
-  { from: '/private-chef-kuningan', to: '/locations/jakarta', reason: 'Kuningan is a Central Jakarta business district — no dedicated page. Redirect to Jakarta hub (fixes GSC "duplicate, Google chose different canonical").' },
-
   // --- Micro-areas (private-chef variant) → /locations/ ---
   { from: '/echo-beach-private-chef', to: '/locations/canggu', reason: 'Echo Beach is in Canggu.' },
   { from: '/batu-bolong-private-chef', to: '/locations/canggu', reason: 'Batu Bolong is in Canggu.' },
@@ -92,11 +81,6 @@ export const REDIRECTS: Redirect[] = [
   { from: '/sayan-private-chef', to: '/locations/ubud', reason: 'Sayan is in Ubud.' },
   { from: '/penestanan-private-chef', to: '/locations/ubud', reason: 'Penestanan is in Ubud.' },
   { from: '/sanur-beach-private-chef', to: '/locations/sanur', reason: 'Sanur private chef page.' },
-
-  // --- Indonesia cities that were 404 (footer links) → Jakarta hub ---
-  { from: '/surabaya', to: '/locations/jakarta', reason: 'Java city — no dedicated page, redirect to Jakarta hub.' },
-  { from: '/bandung', to: '/locations/jakarta', reason: 'Java city — no dedicated page, redirect to Jakarta hub.' },
-  { from: '/yogyakarta', to: '/locations/jakarta', reason: 'Java city — no dedicated page, redirect to Jakarta hub.' },
 
   // --- Services / menus we don't lead with ---
   { from: '/services/romantic-dinners', to: '/fine-dining/romantic-dinner', reason: 'Romantic dinners now under fine-dining pillar.' },
@@ -136,7 +120,6 @@ export const REDIRECTS: Redirect[] = [
   { from: '/private-chef-cost-bali', to: '/pricing', reason: 'Cost inquiry → pricing page.' },
 
   // --- Contact & info pages ---
-  // (Jakarta and service redirects removed to allow dedicated canonical pages)
   // /reviews kept as a real indexable page — ReviewsPage.tsx route exists and is prerendered.
 
   // --- Legacy utility pages ---
@@ -179,7 +162,7 @@ export const REDIRECTS: Redirect[] = [
   // The /locations hub iterates every city in LOCATIONS and links to /locations/[slug],
   // but only 12 have a page. Redirect the rest to a real, relevant page so none 404.
   // Targets are all REAL dedicated pages (SeminyakPage/CangguPage/UbudPage/UluwatuPage/
-  // SanurPage/BukitPeninsulaPage/JakartaPage) — chosen to avoid redirect chains.
+  // SanurPage/BukitPeninsulaPage) — chosen to avoid redirect chains.
   { from: '/locations/berawa', to: '/locations/canggu', reason: 'Berawa is part of Canggu — real Canggu page.' },
   { from: '/locations/kerobokan', to: '/locations/seminyak', reason: 'Kerobokan is part of Seminyak — real Seminyak page.' },
   { from: '/locations/legian', to: '/locations/seminyak', reason: 'Legian is adjacent to Seminyak — real Seminyak page.' },
@@ -194,16 +177,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/locations/amed', to: '/locations/sanur', reason: 'East Bali — served from Sanur base (real Sanur page).' },
   { from: '/locations/candidasa', to: '/locations/sanur', reason: 'East Bali — served from Sanur base (real Sanur page).' },
   { from: '/locations/lovina', to: '/locations/sanur', reason: 'North Bali — served from Sanur base (real Sanur page).' },
-  { from: '/locations/menteng', to: '/locations/jakarta', reason: 'Jakarta district — real Jakarta hub page.' },
-  { from: '/locations/kemang', to: '/locations/jakarta', reason: 'Jakarta district — real Jakarta hub page.' },
-  { from: '/locations/scbd', to: '/locations/jakarta', reason: 'Jakarta district — real Jakarta hub page.' },
-  { from: '/locations/pondok-indah', to: '/locations/jakarta', reason: 'Jakarta district — real Jakarta hub page.' },
-  { from: '/locations/bsd', to: '/locations/jakarta', reason: 'Jakarta district — real Jakarta hub page.' },
-  { from: '/locations/bandung', to: '/locations/jakarta', reason: 'Java city — no dedicated page; real Jakarta hub page.' },
-  { from: '/locations/surabaya', to: '/locations/jakarta', reason: 'Java city — no dedicated page; real Jakarta hub page.' },
-  { from: '/locations/yogyakarta', to: '/locations/jakarta', reason: 'Java city — no dedicated page; real Jakarta hub page.' },
-
-  // --- /private-chef-bali/* + Jakarta keyword-location aliases → canonical pages (added 2026-06-23).
+  // --- /private-chef-bali/* + Bali keyword-location aliases → canonical pages (added 2026-06-23).
   //     Were soft-404 duplicates of the LocationPages / PrivateChefBaliPage; not internally linked,
   //     not in sitemap. Redirect each to the page it self-canonicals to (no chains). ---
   { from: '/private-chef-bali', to: '/fine-dining/private-chef-bali', reason: 'Duplicate of PrivateChefBaliPage (canonical = /fine-dining/private-chef-bali). Safe-default redirect; not promoted.' },
@@ -232,11 +206,6 @@ export const REDIRECTS: Redirect[] = [
   { from: '/private-chef-bali/tegallalang', to: '/private-chef/ubud', reason: 'Ubud regency — nearest is /private-chef/ubud.' },
   { from: '/private-chef-bali/tabanan', to: '/private-chef/canggu', reason: 'West coast — nearest is /private-chef/canggu.' },
   { from: '/private-chef-bali/padang-bai', to: '/private-chef/sanur', reason: 'East Bali — nearest served area is /private-chef/sanur.' },
-  { from: '/private-chef-bsd', to: '/locations/jakarta', reason: 'Jakarta (BSD) — real Jakarta hub page (mirrors /locations/bsd).' },
-  { from: '/private-chef-kemang', to: '/locations/jakarta', reason: 'Jakarta (Kemang) — real Jakarta hub page (mirrors /locations/kemang).' },
-  { from: '/private-chef-scbd', to: '/locations/jakarta', reason: 'Jakarta (SCBD) — real Jakarta hub page (mirrors /locations/scbd).' },
-  { from: '/private-chef-pondok-indah', to: '/locations/jakarta', reason: 'Jakarta (Pondok Indah) — real Jakarta hub page (mirrors /locations/pondok-indah).' },
-
   // --- Sitemap audit 2026-06-27: thin/duplicate blog stubs → canonical full articles ---
   { from: '/blog/yoga-retreat-chef-bali-meal-planning', to: '/journal/yoga-retreat-meal-planning-bali', reason: 'Thin stub (16w) covered by the full journal article on yoga retreat meal planning.' },
 
@@ -251,7 +220,6 @@ export const REDIRECTS: Redirect[] = [
   { from: '/blog/private-chef-pererenan-guide', to: '/private-chef/pererenan', reason: 'Duplicate of live Pererenan private-chef page.' },
   { from: '/blog/private-chef-denpasar-guide', to: '/private-chef/denpasar', reason: 'Duplicate of live Denpasar private-chef page.' },
   { from: '/blog/private-chef-nusa-dua-guide', to: '/private-chef/nusa-dua', reason: 'Duplicate of live Nusa Dua private-chef page.' },
-  { from: '/blog/private-chef-jakarta-complete-guide', to: '/journal/private-chef-jakarta-guide', reason: 'Duplicate of live Jakarta private-chef journal guide.' },
   { from: '/blog/private-chef-bali-expats', to: '/hire-private-chef-bali-monthly', reason: 'Expat long-stay recurring chef = monthly hire page.' },
   { from: '/blog/daily-chef-service-bali', to: '/hire-private-chef-bali-monthly', reason: 'Regular/recurring home cooking = monthly chef intent.' },
   { from: '/blog/household-chef-bali-hiring-guide', to: '/staffing/household-staff', reason: 'Duplicate of live household-staff staffing page.' },

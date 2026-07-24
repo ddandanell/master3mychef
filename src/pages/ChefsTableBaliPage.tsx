@@ -71,7 +71,7 @@ All formats include ingredients, menu design, service, and cleanup. Minimum 72-h
     title: "The Chefs Who Lead Chef's Table Experiences",
     body: `Not every chef is suited to a chef's table format. The role requires not only cooking skill but confidence with narration, genuine enthusiasm for food knowledge, and the ability to cook at a high level while simultaneously engaging with guests.
 
-myCHEF's chef's table specialists have backgrounds in fine dining kitchens in Bali, Jakarta, Singapore, and Australia. They have trained under head chefs with Michelin experience, worked in open-kitchen restaurant formats, and built the communication skills to make complex cooking techniques accessible and interesting to non-cooks.
+myCHEF's chef's table specialists have backgrounds in fine dining kitchens in Bali, Singapore, and Australia. They have trained under head chefs with Michelin experience, worked in open-kitchen restaurant formats, and built the communication skills to make complex cooking techniques accessible and interesting to non-cooks.
 
 For bookings that specify a cuisine style -- French, Japanese, Balinese, modern Asian, or fusion -- we match the group with a chef whose specialty aligns. For guests who prefer flexibility, we recommend our best all-round chef's table specialists.`,
   },

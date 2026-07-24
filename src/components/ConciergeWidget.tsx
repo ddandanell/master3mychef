@@ -297,7 +297,7 @@ export default function ConciergeWidget() {
             </div>
             <div className="flex items-center gap-2">
               <div className="h-1.5 w-1.5 rounded-full bg-[#C5A028]" />
-              <span>Available across Bali & Jakarta</span>
+              <span>Available across Bali</span>
             </div>
           </div>
         </div>

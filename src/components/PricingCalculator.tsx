@@ -49,7 +49,7 @@ const WHEN_OPTIONS: { value: WhenKey; label: string; wa: string }[] = [
   { value: 'flexible', label: 'Flexible', wa: 'flexible dates' },
 ]
 
-const AREA_OPTIONS = ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu / Bukit', 'Jimbaran', 'Sanur', 'Nusa Dua', 'Denpasar', 'Other Bali area', 'Jakarta', 'Not sure yet']
+const AREA_OPTIONS = ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu / Bukit', 'Jimbaran', 'Sanur', 'Nusa Dua', 'Denpasar', 'Other Bali area', 'Not sure yet']
 
 const INTENT_OPTIONS: { value: IntentKey; label: string; wa: string }[] = [
   { value: 'pricing', label: 'Exact pricing', wa: 'exact pricing' },

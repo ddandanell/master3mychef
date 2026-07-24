@@ -891,66 +891,6 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/aura-corporate.webp`,
   },
 
-  jakarta: {
-    path: '/jakarta',
-    title: 'Private Chef in Jakarta | Residence & Corporate Dining',
-    description:
-      'Bring the myCHEF private chef standard to Jakarta for residence dinners, business hosting, and discreet service in premium homes and suites.',
-    canonical: `${SITE}/jakarta`,
-    h1: 'Private Chef in Jakarta',
-    ogImage: `${SITE}/og-image.webp`,
-  },
-
-  'private-chef-menteng': {
-    path: '/private-chef-menteng',
-    title: 'Private Chef in Menteng | Residence Dining & Hosting',
-    description:
-      "Book a private chef in Menteng for embassy dinners, family hosting, and polished in-home service in one of Jakarta's top districts.",
-    canonical: `${SITE}/private-chef-menteng`,
-    h1: 'Private Chef in Menteng',
-    ogImage: `${SITE}/og-image.webp`,
-  },
-
-  'private-chef-kemang': {
-    path: '/private-chef-kemang',
-    title: 'Private Chef in Kemang | Home Dining & Social Hosting',
-    description:
-      'Hire a private chef in Kemang for expat homes, creative gatherings, birthdays, and relaxed private dining without restaurant travel.',
-    canonical: `${SITE}/private-chef-kemang`,
-    h1: 'Private Chef in Kemang',
-    ogImage: `${SITE}/og-image.webp`,
-  },
-
-  'private-chef-scbd': {
-    path: '/private-chef-scbd',
-    title: 'Private Chef in SCBD | Executive Dining & Hosting',
-    description:
-      'Book a private chef in SCBD for executive dinners, apartment hosting, and business entertainment with polished service and timing.',
-    canonical: `${SITE}/private-chef-scbd`,
-    h1: 'Private Chef in SCBD',
-    ogImage: `${SITE}/og-image.webp`,
-  },
-
-  'private-chef-pondok-indah': {
-    path: '/private-chef-pondok-indah',
-    title: 'Private Chef in Pondok Indah | Family Estate Dining',
-    description:
-      'Hire a private chef in Pondok Indah for family estates, weekend entertaining, and private dining with discreet in-home service.',
-    canonical: `${SITE}/private-chef-pondok-indah`,
-    h1: 'Private Chef in Pondok Indah',
-    ogImage: `${SITE}/og-image.webp`,
-  },
-
-  'private-chef-bsd': {
-    path: '/private-chef-bsd',
-    title: 'Private Chef in BSD City | Home Dining & Group Catering',
-    description:
-      "Book a private chef in BSD City for home dinners, company gatherings, and polished catering across Jakarta's fast-growing west side.",
-    canonical: `${SITE}/private-chef-bsd`,
-    h1: 'Private Chef in BSD City',
-    ogImage: `${SITE}/og-image.webp`,
-  },
-
   kuta: {
     path: '/kuta',
     title: 'Private Chef Kuta | Villa Dinners, Surf Trips & Catering',

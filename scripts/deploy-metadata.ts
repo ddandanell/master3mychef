@@ -128,18 +128,19 @@ function findEntries(body: string): ParsedEntry[] {
         ? rawKey.slice(1, -1)
         : rawKey
 
-    const start = body.indexOf('{', match.index)
-    const end = findClosingBrace(body, start)
+    const blockStart = body.indexOf('{', match.index)
+    const keyStart = match.index
+    const end = findClosingBrace(body, blockStart)
     if (end === -1) {
       throw new Error(`Could not find closing brace for PAGE_META key "${key}"`)
     }
 
-    const block = body.slice(start, end + 1)
+    const block = body.slice(blockStart, end + 1)
     const pathMatch = block.match(/path:\s*(['"`])(.*?)\1,/s)
 
     entries.push({
       key,
-      start,
+      start: keyStart,
       end: end + 1,
       text: block,
       path: pathMatch?.[2] ?? '',
@@ -244,7 +245,7 @@ function formatEntry(key: string, meta: MetaUpdate): string {
   if (meta.ogImageExpr) {
     lines.push(`    ogImage: ${meta.ogImageExpr},`)
   }
-  lines.push(`  }`)
+  lines.push(`  },`)
   return lines.join('\n')
 }
 

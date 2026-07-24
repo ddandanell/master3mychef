@@ -6,7 +6,7 @@ export const BAR_RESOURCES: BarResource[] = [
     route: '/bar-services/resources/how-much-does-a-bartender-cost-bali/',
     metaKey: 'bar-services-resources-how-much-does-a-bartender-cost-bali',
     title: 'How Much Does a Bartender Cost in Bali? 2026 Guide | MyChef',
-    h1: 'How Much Does a Bartender Cost in Bali?',
+    h1: 'How Much Does a Bartender Cost in Bali? (2026)',
     featuredImage: '/generated/mychef-bar-services-bali-resource-how-much-does-a-bartender-cost-bali.webp',
     featuredAlt: 'Indonesian bartender preparing drinks at a Bali villa bar',
     summary: 'Hiring a bartender in Bali depends on experience, service style, event length and season. This guide explains what drives cost and how to budget without locking in outdated figures. Request a quote for current rates.',

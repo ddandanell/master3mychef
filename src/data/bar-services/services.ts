@@ -400,7 +400,7 @@ export const BAR_SERVICES: BarService[] = [
     route: '/bar-services/temporary-bartender-staffing/',
     metaKey: 'bar-services-temporary-bartender-staffing',
     eyebrow: 'Temporary Bartender Staffing',
-    h1: 'Bartender Hire Bali',
+    h1: 'Bartender Hire Bali — Temporary Bar Staffing',
     heroImage: '/generated/mychef-bar-services-bali-hero-temporary-bartender-staffing.webp',
     heroAlt: 'Uniformed MyChef bartenders setting up a Bali event bar',
     problemImage: '/generated/mychef-bar-services-bali-temporary-bartender-staffing-body.webp',

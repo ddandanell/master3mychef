@@ -212,7 +212,7 @@ export default function ExperienceRomanticProposalDinnerPage() {
       seoTitle="Proposal Package Bali | Full-Service Villa Proposal | myCHEF"
       seoDescription="Complete Bali proposal packages: private chef dinner, flowers, candles, styling, photographer & musician — fully coordinated. Confidential quote."
       canonicalUrl={CANONICAL}
-      h1="Proposal Package Bali — One Plan, One Team, One Yes"
+      h1="Romantic Proposal Dinner Bali — Everything Arranged"
       subtitle="A Private Chef Experience for the Moment You Say Yes"
       heroImage="/generated/mychef-proposal-dinner-table-setting-bali-landscape.webp"
       heroImageAlt="Candlelit proposal package Bali romantic dinner at a private villa by myCHEF"

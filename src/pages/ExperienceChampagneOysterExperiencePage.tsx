@@ -133,7 +133,7 @@ export default function ExperienceChampagneOysterExperiencePage() {
       seoTitle="Champagne & Oyster Experience Bali | Villa Oyster Bar"
       seoDescription="Add a private oyster bar & champagne hour to your Bali villa dinner or event — fresh oysters, shucked on-site, champagne at cost. WhatsApp myCHEF."
       canonicalUrl={CANONICAL}
-      h1="Champagne & Oyster Hour at Your Bali Villa"
+      h1="Champagne & Oyster Experience Bali"
       subtitle="Fresh Oysters, Curated Champagne and Private Villa Service"
       heroImage="/generated/mychef-oyster-champagne-station-pour-bali-landscape.webp"
       heroImageAlt="Champagne toast and fresh oysters at an elegant private villa experience in Bali"

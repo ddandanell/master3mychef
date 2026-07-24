@@ -71,7 +71,7 @@ export default function RecommendedServicesPage() {
       type: 'custom',
       subtitle: 'Start here',
       title: 'Build Your Perfect Villa Experience',
-      body: 'You should not need to learn our service categories before you can ask a question. Start with what you are planning — we will handle the fit. Prefer to browse first? <a href="/services">Compare all services</a> or <a href="/dining-styles">browse menus by style</a>.'
+      body: 'You should not need to learn our service categories before you can ask a question. Start with what you are planning — we will handle the fit. Prefer to browse first? <a href="/services">Compare all services</a> or <a href="/dining-styles">browse menus by style</a>.',
       render: (
         <div className="grid gap-6 md:grid-cols-2">
           {SCENARIOS.map((scenario) => (

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PremiumPage, { type PageSection } from '@/components/PremiumPage'
 import { breadcrumbSchema } from '@/components/SeoHead'
+import { ArticleContentSection } from '@/components/shared'
 
 const WA = 6289674072020
 
@@ -159,8 +160,9 @@ export default function RecommendedServicesPage() {
   ]
 
   return (
-    <PremiumPage
-      slug="recommended-services"
+    <>
+      <PremiumPage
+        slug="recommended-services"
       title="Build Your Perfect Villa Experience"
       seoTitle="Build Your Perfect Villa Experience | myCHEF Bali"
       description="Tell myCHEF what you are hosting and get matched to the right service — guest count, mood and budget."
@@ -185,9 +187,11 @@ export default function RecommendedServicesPage() {
           isPartOf: { '@type': 'WebSite', name: 'myCHEF', url: 'https://mychef.id' },
         },
       ]}
-      ctaText="Get Guided"
-      ctaSubtext="Tell us the moment you are planning. We will handle the fit."
-      canonicalUrl="https://mychef.id/recommended-services"
-    />
+        ctaText="Get Guided"
+        ctaSubtext="Tell us the moment you are planning. We will handle the fit."
+        canonicalUrl="https://mychef.id/recommended-services"
+      />
+      <ArticleContentSection />
+    </>
   )
 }

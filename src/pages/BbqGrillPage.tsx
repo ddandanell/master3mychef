@@ -18,6 +18,7 @@ import { MenuOverview } from '@/components/menus'
 import type { Menu } from '@/data/menus'
 import { BBQ_MIXED_MENUS, BBQ_SEAFOOD_MENUS, BBQ_SPECIALTY_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { ArticleContentSection } from '@/components/shared'
 
 const BEST_VALUE_GRILLS: Menu[] = [
   BBQ_SPECIALTY_MENUS.find((m) => m.name === 'Sunset Pool Party BBQ')!,
@@ -482,6 +483,7 @@ export default function BbqGrillPage() {
         serviceName="a BBQ grill experience at our villa"
         intent="a quote for a live grill night"
       />
+    <ArticleContentSection />
     </div>
   )
 }

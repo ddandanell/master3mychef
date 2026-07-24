@@ -14,6 +14,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { ArticleContentSection } from '@/components/shared'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -523,6 +524,7 @@ export default function CompleteVillaExperiencePage() {
         serviceName="Complete Villa Experience Bali"
         intent="a tailored quotation"
       />
+    <ArticleContentSection />
     </div>
   )
 }

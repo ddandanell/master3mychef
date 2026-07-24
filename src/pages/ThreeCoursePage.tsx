@@ -14,6 +14,7 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import { MenuFilterTabs, MenuOverview } from '@/components/menus'
 import { THREE_COURSE_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { ArticleContentSection } from '@/components/shared'
 
 const CANONICAL = 'https://mychef.id/three-course'
 const WA_QUOTE = buildWhatsAppUrl({ serviceName: 'Three-Course Dining' })
@@ -367,6 +368,7 @@ export default function ThreeCoursePage() {
         serviceName="three-course villa dining in Bali"
         intent="menus and pricing"
       />
+    <ArticleContentSection />
     </div>
   )
 }

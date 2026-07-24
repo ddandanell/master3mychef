@@ -3,6 +3,7 @@ import { Check, MessageCircle } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, localBusinessSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { ArticleContentSection } from '@/components/shared'
 
 const SITE = 'https://mychef.id'
 const CANONICAL = `${SITE}/family-styling`
@@ -285,6 +286,7 @@ export default function FamilyStylingPage() {
           </div>
         </div>
       </section>
+    <ArticleContentSection />
     </div>
   )
 }

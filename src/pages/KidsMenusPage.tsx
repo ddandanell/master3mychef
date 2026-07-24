@@ -8,6 +8,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { MenuOverview } from '@/components/menus'
 import { KIDS_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { ArticleContentSection } from '@/components/shared'
 
 const SITE = 'https://mychef.id'
 const WA_KIDS = buildWhatsAppUrl({ serviceName: "Kids' Party Menus" })
@@ -260,6 +261,7 @@ export default function KidsMenusPage() {
         serviceName="kids' party menu in Bali"
         intent="menu and pricing"
       />
+    <ArticleContentSection />
     </div>
   )
 }

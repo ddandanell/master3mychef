@@ -5,6 +5,7 @@ import SeoHead, {
   breadcrumbSchema,
   faqPageSchema,
 } from '@/components/SeoHead'
+import { ArticleContentSection } from '@/components/shared'
 
 const SITE = 'https://mychef.id'
 const WHATSAPP_URL = 'https://wa.me/6289674072020'
@@ -431,6 +432,7 @@ export default function CorporateCaseStudiesPage() {
           </div>
         </div>
       </section>
+    <ArticleContentSection />
     </div>
   )
 }

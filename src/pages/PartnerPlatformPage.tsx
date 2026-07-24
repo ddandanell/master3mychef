@@ -18,6 +18,7 @@ import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import { ArticleContentSection } from '@/components/shared'
 const WA = 6289674072020
 const SITE = 'https://mychef.id'
 
@@ -563,6 +564,7 @@ export default function PartnerPlatformPage() {
           </p>
         </div>
       </section>
+      <ArticleContentSection />
     </div>
   )
 }

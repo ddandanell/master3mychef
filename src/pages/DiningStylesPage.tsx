@@ -6,6 +6,7 @@ import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { CLASSIC_MENUS, THREE_COURSE_MENUS, KIDS_MENUS, BBQ_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { ArticleContentSection } from '@/components/shared'
 
 const canonical = 'https://mychef.id/dining-styles'
 
@@ -328,6 +329,7 @@ export default function DiningStylesPage() {
         serviceName="a private chef menu in Bali"
         intent="a menu recommendation for my event"
       />
+    <ArticleContentSection />
     </div>
   )
 }

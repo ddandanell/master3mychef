@@ -13,6 +13,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { ArticleContentSection } from '@/components/shared'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'an all-inclusive villa event package in Bali', intent: 'a tailored quotation' })
@@ -434,6 +435,7 @@ export default function VillaEventPackagesPage() {
         serviceName="an all-inclusive villa event package in Bali"
         intent="a tailored quotation"
       />
+    <ArticleContentSection />
     </div>
   )
 }

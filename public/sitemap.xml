@@ -1053,6 +1053,41 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mychef.id/experiences</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/experiences/private-cocktail-party</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/experiences/sushi-masterclass</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/experiences/private-cooking-class</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/experiences/kids-birthday-chef-party</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/experiences/champagne-oyster-experience</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mychef.id/experiences/romantic-proposal-dinner</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mychef.id/bar-services/bar-staff-training/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -78,7 +78,7 @@ export const IMAGE_DIMENSIONS = {
   "/generated/mychef-location-bali-hub-bali.webp": { width: 1024, height: 576 },
   "/generated/mychef-catering-bali-hub-catering.webp": { width: 896, height: 1184 },
   "/generated/mychef-events-bali-hub-events.webp": { width: 896, height: 1184 },
-  "/generated/mychef-misc-bali-hub-fine-dining.webp": { width: 896, height: 1184 },
+  "/generated/mychef-misc-bali-hub-fine-dining.webp": { width: 896, height: 1200 },
   "/generated/mychef-misc-bali-hub-villa.webp": { width: 1024, height: 576 },
   "/generated/mychef-misc-bali-jakarta-skyline.webp": { width: 1344, height: 768 },
   "/generated/mychef-finedining-bali-luna-chef-portrait.webp": { width: 768, height: 1024 },

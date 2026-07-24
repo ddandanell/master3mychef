@@ -10,6 +10,7 @@ import { IN_VILLA_SERVICE_RELATED } from '@/data/related-services'
 import OptimizedImage from '@/components/OptimizedImage'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { ArticleContentSection } from '@/components/shared'
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
 
@@ -506,6 +507,7 @@ export default function InVillaServicePage() {
         serviceName="in-villa service staff in Bali"
         intent="availability and pricing"
       />
+    <ArticleContentSection />
     </div>
   )
 }

@@ -2,6 +2,7 @@ import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema } from '@/components/SeoHead'
 import { Wine, ChefHat, UtensilsCrossed, PartyPopper, Shell, Heart } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
+import { ArticleContentSection } from '@/components/shared'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20a%20private%20experience%20in%20Bali.%20Please%20help%20me%20choose%20the%20right%20one.'
 const CANONICAL = 'https://mychef.id/experiences'
@@ -217,8 +218,9 @@ const RELATED_PAGES = [
 
 export default function ExperiencesHubPage() {
   return (
-    <PremiumPage
-      slug="experiences"
+    <>
+      <PremiumPage
+        slug="experiences"
       title="Private Experiences Bali | Culinary & Celebration Experiences | myCHEF"
       description="Discover private culinary and celebration experiences in Bali. Cocktail parties, sushi classes, cooking classes, kids’ parties, oyster bars and proposal dinners at your villa."
       seoTitle="Private Experiences Bali | Culinary & Celebration Experiences | myCHEF"
@@ -261,8 +263,10 @@ export default function ExperiencesHubPage() {
           })),
         },
       ]}
-      ctaText="Plan Your Experience"
-      ctaSubtext="Tell us which experience, your date and villa — we will reply within the hour."
-    />
+        ctaText="Plan Your Experience"
+        ctaSubtext="Tell us which experience, your date and villa — we will reply within the hour."
+      />
+      <ArticleContentSection />
+    </>
   )
 }

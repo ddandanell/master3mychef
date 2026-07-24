@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CalendarDays, MessageCircle, Star } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
+import { ArticleContentSection } from '@/components/shared'
 
 type ReviewCategory = 'All' | 'Private Dinners' | 'Weddings' | 'Retreats & Corporate' | 'Celebrations & BBQs'
 
@@ -382,6 +383,7 @@ export default function ReviewsPage() {
           </div>
         </div>
       </section>
+    <ArticleContentSection />
     </div>
   )
 }

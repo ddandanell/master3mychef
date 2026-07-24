@@ -5,6 +5,7 @@ import BookingForm from '@/components/BookingForm'
 import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import { ArticleContentSection } from '@/components/shared'
 
 const HOW_IT_WORKS = [
   { step: '01', title: 'Message Us on WhatsApp', desc: 'Tell us your villa, dates, and how many people. We reply within 2 hours.', icon: MessageCircle },
@@ -523,6 +524,7 @@ export default function SolPage() {
           </div>
         </div>
       </section>
+    <ArticleContentSection />
     </div>
   )
 }

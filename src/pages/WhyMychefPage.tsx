@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PremiumPage, { type PageSection } from '@/components/PremiumPage'
+import { ArticleContentSection } from '@/components/shared'
 
 const WA = 6289674072020
 
@@ -220,8 +221,9 @@ export default function WhyMychefPage() {
   ]
 
   return (
-    <PremiumPage
-      slug="why-mychef"
+    <>
+      <PremiumPage
+        slug="why-mychef"
       title="Why 560+ Villas Choose myCHEF"
       description="Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing. See the evidence."
       seoTitle="Why myCHEF | The Private Chef Company 560+ Bali Villas Trust"
@@ -246,9 +248,11 @@ export default function WhyMychefPage() {
           description: 'The evidence behind myCHEF: Michelin-trained leadership, a 50+ Indonesian hospitality team, guarantees in writing and 12,000+ guests served.',
         },
       ]}
-      ctaText="Chat on WhatsApp"
-      ctaSubtext="We reply quickly and confirm fast."
-      canonicalUrl="https://mychef.id/why-mychef"
-    />
+        ctaText="Chat on WhatsApp"
+        ctaSubtext="We reply quickly and confirm fast."
+        canonicalUrl="https://mychef.id/why-mychef"
+      />
+      <ArticleContentSection />
+    </>
   )
 }

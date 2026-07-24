@@ -42,6 +42,7 @@ import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { CateringRiskReversal } from '@/components/shared'
 
 import OptimizedImage from '@/components/OptimizedImage'
+import { ArticleContentSection } from '@/components/shared'
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'catering in Bali', intent: 'menu options and pricing' })
 const WA_DAILY_CHEF_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20book%20a%20daily%20villa%20chef.'
@@ -1856,6 +1857,7 @@ export default function CateringMainPage() {
         serviceName="catering in Bali"
         intent="menu options and pricing"
       />
+    <ArticleContentSection />
     </div>
   )
 }

@@ -16,6 +16,7 @@ import { RiskReversal } from '@/components/shared'
 import TrustSection from '@/components/trust/TrustSection'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { ArticleContentSection } from '@/components/shared'
 
 const PORTALS = [
   {
@@ -1459,6 +1460,7 @@ export default function HubPage() {
         serviceName="private chef in Bali"
         intent="quote and availability"
       />
+    <ArticleContentSection />
     </div>
   )
 }

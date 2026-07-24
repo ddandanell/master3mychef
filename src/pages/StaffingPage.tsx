@@ -28,6 +28,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import TrustStrip from '@/components/shared/TrustStrip'
 import RelatedServices from '@/components/shared/RelatedServices'
 import { STAFFING_RELATED } from '@/data/related-services'
+import { ArticleContentSection } from '@/components/shared'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -665,6 +666,7 @@ export default function StaffingPage() {
         serviceName="villa staff in Bali"
         intent="availability and pricing"
       />
+    <ArticleContentSection />
     </div>
   )
 }

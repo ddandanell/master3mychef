@@ -19,6 +19,7 @@ import { EventsRiskReversal } from '@/components/shared'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { ArticleContentSection } from '@/components/shared'
 
 const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'an event in Bali', intent: 'help with catering, staff, and setup' })
@@ -1284,6 +1285,7 @@ export default function EventsMainPage() {
         serviceName="an event in Bali"
         intent="help with catering, staff, and setup"
       />
+    <ArticleContentSection />
     </div>
   )
 }

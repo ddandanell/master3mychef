@@ -2,6 +2,7 @@ import PremiumPage from '@/components/PremiumPage'
 import PricingCalculator from '@/components/PricingCalculator'
 import PriceDisclaimer from '@/components/PriceDisclaimer'
 import { siteFacts } from '@/data/siteFacts'
+import { ArticleContentSection } from '@/components/shared'
 
 const PRICING_SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
@@ -214,8 +215,9 @@ const RELATED_PAGES = [
 
 export default function PricingPage() {
   return (
-    <PremiumPage
-      slug="pricing"
+    <>
+      <PremiumPage
+        slug="pricing"
       title="Pricing"
       description="Transparent myCHEF pricing: private chef rates, menu prices, catering & event packages in Bali. No hidden fees. Get a quote within 2 hours."
       seoTitle="Private Chef Bali Prices | Catering & Event Pricing | myCHEF"
@@ -232,8 +234,10 @@ export default function PricingPage() {
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       extraJsonLd={[PRICING_SERVICE_SCHEMA]}
-      ctaText="Get My Fixed Quote"
-      ctaSubtext="Send four details and receive an itemised proposal within 24 hours."
-    />
+        ctaText="Get My Fixed Quote"
+        ctaSubtext="Send four details and receive an itemised proposal within 24 hours."
+      />
+      <ArticleContentSection />
+    </>
   )
 }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Clock3, MapPin, MessageCircle, PartyPopper, UtensilsCrossed, Wallet } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import { ArticleContentSection } from '@/components/shared'
 
 interface FAQItem {
   q: string
@@ -275,6 +276,7 @@ export default function FAQPage() {
           </div>
         </div>
       </section>
+    <ArticleContentSection />
     </div>
   )
 }

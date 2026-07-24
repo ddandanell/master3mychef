@@ -1,4 +1,5 @@
 import { Suspense, lazy, useEffect, useRef, useState } from 'react'
+import { ArticleContentSection } from '@/components/shared'
 import { Link } from 'react-router-dom'
 import { Flame, Wine, Clock, Users, Star, Check, ChevronRight, MessageCircle, Phone, Sparkles, Truck, Heart, UtensilsCrossed, ShieldCheck, RefreshCw } from 'lucide-react'
 import BookingForm from '@/components/BookingForm'
@@ -1371,6 +1372,7 @@ export default function LunaPage() {
         serviceName="fine dining in Bali"
         intent="menu and pricing"
       />
+    <ArticleContentSection />
     </div>
   )
 }

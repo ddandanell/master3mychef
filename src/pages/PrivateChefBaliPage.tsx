@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { hasLocationPage } from '@/data/siteArchitecture'
+import { siteFacts } from '@/data/siteFacts'
 import { MessageCircle, Check, MapPin, ChevronRight, Star } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

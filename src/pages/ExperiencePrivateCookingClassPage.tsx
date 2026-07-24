@@ -1,5 +1,5 @@
 import PremiumPage from '@/components/PremiumPage'
-import { breadcrumbSchema, faqPageSchema, serviceSchema } from '@/components/SeoHead'
+import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import {
   GraduationCap,
   Home,

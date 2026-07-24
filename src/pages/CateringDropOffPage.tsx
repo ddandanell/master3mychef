@@ -12,7 +12,6 @@ import SeoHead, {
   cateringBreadcrumbSchema,
   serviceWithAggregateOfferSchema,
   faqPageSchema,
-  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'

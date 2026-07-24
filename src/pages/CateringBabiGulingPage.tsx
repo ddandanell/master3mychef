@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
-  MessageCircle, Check, Phone, Calendar, Users, MapPin,
+  Check, Calendar, Users, MapPin,
   Utensils, Flame, Heart, Truck, ShieldCheck, Sparkles, Package, CreditCard, ChefHat,
   ArrowRight,
 } from 'lucide-react'

@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Calendar, Check, ChevronLeft, ChevronRight, Clock3, MessageCircle, Utensils } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, serviceWithAggregateOfferSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, serviceWithAggregateOfferSchema, serviceWithOfferSchema } from './SeoHead'
 import { BLOG_POSTS, GUIDES, LANDING_PAGES } from '@/data/sitemap'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import { CHEF_FOR_HIRE_INDONESIA_CONTENT } from '@/data/content/chefForHireIndonesia'
@@ -155,14 +155,12 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         lowPrice: '700000',
         highPrice: '3000000',
       })
-      // @ts-expect-error provider object supports areaServed override
       schema.provider = {
         '@type': 'LocalBusiness',
         name: 'myCHEF',
         url: SITE,
         telephone: '+62 896-7407-2020',
       }
-      // @ts-expect-error extend service schema with multi-region areaServed
       schema.areaServed = [
         { '@type': 'Place', name: 'Bali, Indonesia' },
         { '@type': 'Place', name: 'Jakarta, Indonesia' },
@@ -178,7 +176,6 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         highPrice: '7000000',
         unitText: 'per couple ++ (11% government tax + 10% service charge); add-ons itemised',
       })
-      // @ts-expect-error provider object supports telephone override
       schema.provider = {
         '@type': 'LocalBusiness',
         name: 'myCHEF',
@@ -207,14 +204,12 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         highPrice: '1500000',
         unitText: 'per day chef hire; event menus from IDR 700K–1.2M per person; service staff from IDR 250K/hour. Prices ++ (11% tax + 10% service)',
       })
-      // @ts-expect-error provider object supports telephone override
       schema.provider = {
         '@type': 'Organization',
         name: 'myCHEF',
         url: SITE,
         telephone: '+62 896-7407-2020',
       }
-      // @ts-expect-error extend service schema with multi-region areaServed
       schema.areaServed = [
         { '@type': 'Place', name: 'Bali, Indonesia' },
         { '@type': 'Place', name: 'Jakarta, Indonesia' },
@@ -226,10 +221,8 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         'Luxury Birthday Party Bali',
         'Luxury milestone birthday parties in Bali villas — 30th, 40th, 50th and 60th celebrations with private chef, premium menus, decor, bar, staff and coordination bundled for one occasion.',
         canonical,
-      )
-      // @ts-expect-error extend service schema with serviceType and detailed provider
+      ) as Record<string, unknown>
       schema.serviceType = 'Luxury milestone birthday party production'
-      // @ts-expect-error provider override for detailed LocalBusiness
       schema.provider = {
         '@type': 'LocalBusiness',
         name: 'myCHEF.id',
@@ -244,9 +237,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           addressCountry: 'ID',
         },
       }
-      // @ts-expect-error areaServed override
       schema.areaServed = 'Bali, Indonesia'
-      // @ts-expect-error offers override for multiple named offers
       schema.offers = [
         { '@type': 'Offer', name: 'Signature Milestone Dinner', price: '1500000', priceCurrency: 'IDR', description: 'From IDR 1.5M++/person, 4–12 guests. 5-course plated dinner, cake, styling, photographer.' },
         { '@type': 'Offer', name: 'Fine-Dining Tasting Menu', price: '2200000', priceCurrency: 'IDR', description: 'Mediterranean IDR 2.2M++ / Wagyu IDR 2.4M++ per person. Wine pairing +IDR 850K.' },
@@ -262,7 +253,6 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         price: '500000',
         unitText: 'per person per day, before 11% government tax + 10% service charge',
       })
-      // @ts-expect-error provider override with email
       schema.provider = {
         '@type': 'Organization',
         name: 'myCHEF.id',
@@ -270,7 +260,6 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         telephone: '+62 896-7407-2020',
         email: 'bali@mychef.id',
       }
-      // @ts-expect-error areaServed override for Bali and Jakarta
       schema.areaServed = [
         { '@type': 'Place', name: 'Bali' },
         { '@type': 'Place', name: 'Jakarta' },

@@ -19,7 +19,6 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a live-in chef in Bali', intent: 'availability and pricing' })
 
 const BRIEF_JSON_LD = {

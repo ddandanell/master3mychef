@@ -13,8 +13,6 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
-
-import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
@@ -48,13 +46,6 @@ const ADDONS = [
   { icon: MessageCircle, title: 'Live Band 4h', desc: 'Jazz, acoustic, or DJ' },
   { icon: Check, title: 'Ceremony Florals', desc: 'Arch + aisle + table' },
   { icon: Clock, title: 'Guest Transport', desc: 'Per 50-guest coach' },
-]
-
-const LEAD_TIMES = [
-  { phase: '3–10 months', label: 'Peak season booking', note: 'Jul–Sep, Dec–Jan. Full planning service requires 3+ months.' },
-  { phase: '1–3 months', label: 'Standard booking', note: 'Off-peak dates, subject to availability.' },
-  { phase: '2–4 weeks', note: 'Pre-event tasting', label: 'Tasting window' },
-  { phase: '1 month', label: 'Minimum off-peak', note: 'Intimate weddings only. Subject to availability.' },
 ]
 
 const FAQS = [

@@ -62,7 +62,7 @@ export const LANDING_PAGES: ContentEntry[] = [
     "description": "Monthly & long-term private chef service for Bali villas and residences — recurring meal plans by vetted chefs. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Hire a Private Chef in Bali by the Month",
-    "jsonLd": {
+    "jsonLd": [{
       "@context": "https://schema.org",
       "@graph": [
         {
@@ -143,7 +143,7 @@ export const LANDING_PAGES: ContentEntry[] = [
           ]
         }
       ]
-    }
+    }]
   },
 {
     "slug": "villa-staff-bali-agency",
@@ -192,7 +192,7 @@ export const LANDING_PAGES: ContentEntry[] = [
     "description": "How to judge the best private chef service in Indonesia — and the proof behind myCHEF: Michelin-trained leadership, 560+ villas, 4.9/5 rating. WhatsApp us.",
     "date": "2026-05-17",
     "h1": "The Best Private Chef Service in Indonesia",
-    "jsonLd": {
+    "jsonLd": [{
       "@context": "https://schema.org",
       "@graph": [
         {
@@ -290,7 +290,7 @@ export const LANDING_PAGES: ContentEntry[] = [
           ]
         }
       ]
-    }
+    }]
   },
 {
     "slug": "private-chef-for-events",
@@ -304,7 +304,7 @@ export const LANDING_PAGES: ContentEntry[] = [
     "description": "Luxury private chef services for high-end residences and estates across Indonesia — discreet, professional, refined. Enquire via WhatsApp.",
     "date": "2026-05-17",
     "h1": "Luxury Chef Indonesia — Premium Private Dining",
-    "jsonLd": {
+    "jsonLd": [{
       "@context": "https://schema.org",
       "@graph": [
         {
@@ -389,7 +389,7 @@ export const LANDING_PAGES: ContentEntry[] = [
           ]
         }
       ]
-    }
+    }]
   },
 {
     "slug": "wedding-catering-indonesia",
@@ -403,7 +403,7 @@ export const LANDING_PAGES: ContentEntry[] = [
     "description": "At-home fine dining across Indonesia: Michelin-trained chefs, premium ingredients and professional service in your home or villa. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Private Dining Indonesia — At-Home Fine Dining",
-    "jsonLd": {
+    "jsonLd": [{
       "@context": "https://schema.org",
       "@graph": [
         {
@@ -496,7 +496,7 @@ export const LANDING_PAGES: ContentEntry[] = [
           ]
         }
       ]
-    }
+    }]
   },
   {
     "slug": "healthy-meal-delivery-indonesia",
@@ -504,7 +504,7 @@ export const LANDING_PAGES: ContentEntry[] = [
     "description": "Healthy meal delivery in Bali & Jakarta: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Healthy Meal Delivery in Bali — Chef-Prepared, Not Factory-Made",
-    "jsonLd": {
+    "jsonLd": [{
       "@context": "https://schema.org",
       "@graph": [
         {
@@ -621,7 +621,7 @@ export const LANDING_PAGES: ContentEntry[] = [
           ]
         }
       ]
-    }
+    }]
   },
   {
     "slug": "chef-for-hire-indonesia",
@@ -629,7 +629,7 @@ export const LANDING_PAGES: ContentEntry[] = [
     "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali & Jakarta. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Chef for Hire Indonesia — Private Chef Services",
-    "jsonLd": {
+    "jsonLd": [{
       "@context": "https://schema.org",
       "@graph": [
         {
@@ -722,7 +722,7 @@ export const LANDING_PAGES: ContentEntry[] = [
           ]
         }
       ]
-    }
+    }]
   },
 {
     "slug": "proposal-dinner",

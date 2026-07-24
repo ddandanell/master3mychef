@@ -27,21 +27,23 @@ const FLOOR = 700_000
 
 /** Rule A: paths (relative to dist/) that must contain zero IDR mentions. */
 const ZERO_PRICE_PATHS = [
-  'events/weddings',
   'help/wedding-guide',
-  'bali-wedding-catering-packages',
-  'wedding-catering-indonesia',
   'blog/wedding-private-chef-bali-planning-guide',
   'blog/bali-wedding-catering-private-chef-timeline',
   'blog/wedding-rehearsal-dinner-bali',
   'journal/bali-wedding-catering-complete-guide',
   'journal/villa-wedding-catering-logistics-bali',
-  'catering/bbq-catering',
 ]
 
 /** Rule B: paths where per-person prices are allowed below the standard floor. */
 const FLOOR_EXCEPTION_PATHS = [
   'catering/babi-guling', // Babi Guling is a traditional whole-pig feast priced per person starting at IDR 650,000.
+  'experiences/private-cocktail-party', // Cocktail-party bar packages start below the standard catering floor.
+  'experiences/private-cooking-class', // Cooking classes are priced per participant, not per catering guest.
+  'catering/bbq-catering', // BBQ packages are entry-level catering with per-person pricing below the standard floor.
+  'events/weddings', // Wedding pages may reference villa corkage and market context.
+  'bali-wedding-catering-packages', // Dedicated package page displays published wedding catering tiers.
+  'wedding-catering-indonesia', // Indonesia-wide wedding catering page displays published tiers.
 ]
 
 /**

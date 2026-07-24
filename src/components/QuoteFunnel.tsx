@@ -172,7 +172,6 @@ export default function QuoteFunnel() {
         description="Tell us about your event in 9 quick steps. Get a personalised private chef quote within 24 hours. Fine dining, villa catering, weddings and retreats."
         canonical="https://mychef.id/quote"
         ogImage="https://mychef.id/mychef-misc-bali-og-image.webp"
-        noindex
         jsonLd={[breadcrumbSchema('Quote', 'https://mychef.id/quote')]}
       />
       <section className="px-8 pt-24 pb-16 max-w-[800px] mx-auto">

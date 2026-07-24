@@ -356,7 +356,7 @@ function injectMeta(html: string, path: string, title: string, description: stri
   }
 
   // Robots — noindex for thin-content pages and 404
-  const noindexPaths = ['/404', '/book', '/quote', '/calculator', '/join-our-team']
+  const noindexPaths = ['/404', '/book', '/calculator', '/join-our-team']
   if (noindexPaths.includes(path)) {
     html = html.replace(
       /<meta name="robots" content=".*?"\s*\/?>/,

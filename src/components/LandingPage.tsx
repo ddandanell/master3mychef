@@ -98,6 +98,25 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         highPrice: '3000000',
       })
     }
+    if (entry.slug === 'villa-bbq-catering-bali') {
+      return serviceWithAggregateOfferSchema({
+        name: 'Villa BBQ Catering Bali — In-Villa BBQ Party Packages',
+        description: 'In-villa BBQ party packages in Bali: private chef, live grill, service staff and full cleanup at your villa poolside. Packages for 8–80 guests.',
+        url: canonical,
+        lowPrice: '700000',
+        highPrice: '850000',
+        unitText: 'per person ++ (11% government tax + 10% service charge); min. 10 guests (8–9 on request)',
+      })
+    }
+    if (entry.slug === 'seafood-bbq-catering-bali') {
+      return serviceWithOfferSchema({
+        name: 'Seafood BBQ Bali',
+        description: 'Market-fresh seafood BBQs for Bali villas: snapper, prawns, squid and lobster sourced at dawn from Jimbaran markets and grilled live at your villa.',
+        url: canonical,
+        price: '700000',
+        unitText: 'from price per person ++ (11% government tax + 10% service charge); premium catch at market price; min. 8 guests',
+      })
+    }
     if (entry.slug === 'wedding-catering-indonesia') {
       const schema = serviceWithAggregateOfferSchema({
         name: 'Wedding Catering Indonesia',
@@ -132,7 +151,27 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         { question: 'Can myCHEF find a full-time or live-in chef?', answer: 'Yes. Permanent roles use a placement process with a household brief, matched profiles, interviews, cooking trials, contract support, and ongoing follow-up.' },
         { question: 'Where in Indonesia can I hire a myCHEF chef?', answer: 'Regular service is available across Bali. Assignments in Lombok, on yachts, at remote estates, and in other Indonesian locations are assessed individually based on schedule and logistics.' },
       ]
-    : entry.slug === 'bali-wedding-catering-packages'
+    : entry.slug === 'villa-bbq-catering-bali'
+      ? [
+          { question: 'How much does a villa BBQ party in Bali cost?', answer: 'Party packages run IDR 700,000–850,000 per person ++, all-inclusive: chef, two service staff, grill, equipment, ingredients, setup, and cleanup. Add-ons (bartender, Wagyu upgrade, grazing table) are itemised in your quote.' },
+          { question: 'What is the minimum group size for a villa BBQ party?', answer: 'Ten guests in most areas; groups of 8–9 are sometimes possible in Seminyak–Canggu on request.' },
+          { question: 'Do we need our own grill at the villa?', answer: 'No. We bring professional charcoal and gas grills and manage the fuel ourselves — though we\'re happy to use your villa\'s built-in BBQ if you\'d prefer.' },
+          { question: 'Do villas allow outside BBQ catering?', answer: 'Most villas welcome outside catering with advance notice. We coordinate access and house rules with your villa manager and flag any banjar function fee in your quote upfront.' },
+          { question: 'What happens if it rains during the party?', answer: 'Wet-season BBQs relocate under covered terraces, verandas or pop-up tents. Gas grills work under cover where open flame is not allowed — the party goes ahead.' },
+          { question: 'How far ahead should I book and what is the cancellation policy?', answer: 'One to two weeks ahead in peak season; three to seven days otherwise. A deposit locks your date (deposit level pending business confirmation). Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+          { question: 'Can you provide drinks and a bartender?', answer: 'Yes. Add a private bartender with a 3-hour open bar for IDR 4,000,000 flat, or wine, beer and soft-drink packages as itemised add-ons.' },
+        ]
+      : entry.slug === 'seafood-bbq-catering-bali'
+      ? [
+          { question: 'Is the seafood really bought the same day?', answer: 'Yes. Our chefs shop the Jimbaran and Kedonganan morning markets and keep everything chilled until it hits your grill. Freshness is the entire product.' },
+          { question: 'Can we definitely have lobster?', answer: 'Lobster is subject to the day\'s market availability and price. Tell us you want it when booking and we\'ll confirm options and cost before you commit.' },
+          { question: 'What does a seafood BBQ cost per person?', answer: 'From IDR 700,000 per person ++ for the signature package. Premium spreads with lobster run higher — every figure is confirmed in your itemised quote.' },
+          { question: 'How do you handle shellfish allergies or halal guests?', answer: 'We plan separate grills and prep zones for shellfish-allergic guests, and pork-free, halal-friendly menus as standard. Non-seafood eaters get proper alternatives, not an afterthought.' },
+          { question: 'What is the minimum group size?', answer: 'Eight guests in the Jimbaran/Bukit area; ten to twenty elsewhere depending on travel. Smaller groups can book via our private chef in Jimbaran service.' },
+          { question: 'What happens if it rains?', answer: 'Covered terraces, verandas, or pop-up tents — the grill goes ahead. We monitor the forecast and set the plan B before the day.' },
+          { question: 'How far ahead should I book?', answer: 'Three to seven days is ideal so we can plan the market run around your date. A deposit confirms (deposit level pending business confirmation); cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+        ]
+      : entry.slug === 'bali-wedding-catering-packages'
       ? [
           { question: 'What is the minimum spend or guest count?', answer: 'Intimate packages start from 10 guests; buffet and live-station formats from 30. Below 20 guests a private chef dinner format is often better value.' },
           { question: 'Are these prices really all-in?', answer: 'Prices are quoted ++ (11% government tax + 10% service charge) with the all-in equivalent shown. Proposals state one final total with groceries at cost and no markups.' },

@@ -12,6 +12,18 @@ import SeoHead, {
   howToSchema,
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
+import {
+  CATERING_STYLES,
+  WHAT_IS_CATERING_SECTIONS,
+  CATERING_BY_EVENT_TYPES,
+  CATERING_BY_GUEST_NUMBERS,
+  COMPLETE_BOOKING_PROCESS,
+  BALI_LOCATIONS,
+  FOOD_PHILOSOPHY_CARDS,
+  MENU_STYLES,
+  OPTIONAL_SERVICES,
+  CATERING_FAQS,
+} from '@/data/cateringPillarContent'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import CateringPackageCard from '@/components/catering/CateringPackageCard'
@@ -38,88 +50,10 @@ const bookingHref = (packageName: string) => `?package=${encodeURIComponent(pack
 
 /* ── DATA ── */
 
-const CATERING_STYLES = [
-  {
-    image: '/generated/mychef-catering-style-bbq.webp',
-    title: 'BBQ Catering',
-    price: 'From IDR 700,000/person',
-    description: 'BBQ catering is the most social, flexible format for villa dinners, birthday groups, family holidays, and relaxed celebrations in Bali. A myCHEF chef arrives at your villa three hours before service, sets up a live grill by the pool or garden, and cooks meats, seafood, satay, and vegetarian options to order while guests mingle. It works beautifully for 10 to 60 guests, needs only basic outdoor space, and creates a relaxed party atmosphere where people can eat at their own pace. We provide the grill, fuel, utensils, serving platters, napkins, and cleanup crew. Popular upgrades include Wagyu beef, lobster tails, whole fish, and live sate stations. For villa BBQ catering Bali, this is the crowd-pleasing choice that keeps the kitchen out of the house and the energy high.',
-    href: '/catering/bbq-catering',
-    accent: '#C5A028',
-  },
-  {
-    image: '/generated/mychef-catering-style-buffet.webp',
-    title: 'Buffet Catering',
-    price: 'From IDR 700,000/person',
-    description: 'Buffet catering is the practical, elegant way to feed larger groups at weddings, villa events, corporate dinners, and milestone celebrations. With a minimum of 30 guests, we set up a full buffet line at your venue, keep dishes at the correct temperature in chafing units, and serve guests through a smooth queue so the party never stops. Menus range from Indonesian classics such as nasi kuning, sate lilit, rendang, and gado-gado to international roasts, pasta stations, carved meats, and live cooking counters. Every buffet package includes a head chef, service staff, all equipment, linens, porcelain, glassware, setup, service, and full cleanup. Buffet catering Bali is ideal when you want variety, predictable portions, and a structured flow for 30 to 250 guests.',
-    href: '/catering/buffet',
-    accent: '#6B8E5A',
-  },
-  {
-    image: '/generated/mychef-catering-style-plated.webp',
-    title: 'Plated Set Menus',
-    price: 'From IDR 800,000/person',
-    description: 'Plated set menus turn your villa dinner, anniversary, engagement party, or intimate wedding into a fine-dining experience. Guests remain seated while our chef and service team deliver each course with precise timing, polished presentation, and attentive table service. Choose a 3-course, 4-course, or 5-course menu built around Mediterranean, Italian, French, Japanese, Indonesian, or seafood themes. Plated catering suits 10 to 80 guests and works best when you want a slower, more controlled pace, elegant plating, and a sense of occasion. We supply English-speaking chefs, a service manager, one waiter per ten guests, tables, linens, cutlery, porcelain, glassware, and a kitchen tent if required. For luxury catering Bali with a restaurant feel in your own space, plated service is hard to beat.',
-    href: '/catering/plated-catering',
-    accent: '#2C5F7C',
-  },
-  {
-    image: '/generated/mychef-catering-style-dropoff.webp',
-    title: 'Drop-Off Catering',
-    price: 'From IDR 700,000/person',
-    description: 'Drop-off catering is designed for villa guests who want restaurant-quality food without any staff staying in the property. We prepare your menu in our commissary kitchen, pack it in recyclable containers with clear reheating instructions, and deliver it within a 90-minute window so you can serve yourself when it suits you. This option suits 4 to 16 guests for family dinners, small celebrations, honeymoon meals, or relaxed nights when the group wants privacy. Choose from family dinner drop-off, dinner party drop-off, or grazing dinner drop-off with charcuterie, cheese, hot mains, sides, and dessert. Drop-off catering Bali is also popular with guests who want to plate the food themselves and create a private, intimate atmosphere without the cost of full service.',
-    href: '/catering/drop-off-catering',
-    accent: '#8B5A2B',
-  },
-  {
-    image: '/generated/mychef-catering-style-villa.webp',
-    title: 'Villa Catering',
-    price: 'From IDR 700,000/person',
-    description: 'Villa catering is our core service: a professional chef and service team come to your Bali villa to prepare and serve lunch, dinner, or a multi-day dining program. Whether you are hosting a casual poolside lunch, a formal anniversary dinner, or a week of meals for an extended family, villa catering Bali adapts to your kitchen, your schedule, and your guest count. We handle grocery shopping, menu planning, dietary restrictions, equipment, table setup, service, and cleanup, so you never have to think about where to eat. It is the perfect middle ground between restaurant dining and a full-time private chef: restaurant-quality food, but served in your own space, on your own timeline, with no transport or tipping complications.',
-    href: '/catering/villa-catering',
-    accent: '#2C5F7C',
-  },
-  {
-    image: '/generated/mychef-catering-style-corporate.webp',
-    title: 'Corporate Catering',
-    price: 'From IDR 700,000/person',
-    description: 'Corporate catering Bali supports offsites, board dinners, conference lunches, team-building events, product launches, and seminar catering with menus, staffing, and invoicing designed for business groups. We understand that corporate events need punctuality, dietary flexibility, clear pricing, and tax documentation. Our corporate packages include breakfast spreads, working lunches, buffet dinners, plated board meals, coffee stations, and grazing setups. We can brand the service, provide uniformed staff, and coordinate with your event schedule. Whether you are hosting twenty executives in a Seminyak villa or two hundred delegates at a Ubud conference venue, corporate catering Bali from myCHEF keeps the food professional, the service discreet, and the accounting simple.',
-    href: '/catering/corporate-catering',
-    accent: '#2C5F7C',
-  },
-  {
-    image: '/generated/mychef-catering-style-babi-guling.webp',
-    title: 'Babi Guling',
-    price: 'From IDR 3,700,000 total',
-    description: 'Babi Guling is the iconic Balinese whole-pig roast, served with lawar, nasi kuning, sate, crackling, sambals, and fresh fruit. It is a dramatic, culturally rich centerpiece for villa parties, birthdays, anniversaries, and group celebrations of 10 to 50 guests. Our team prepares the pig in the traditional style and serves it buffet-style so guests can build their own plates. Babi Guling contains pork and is not suitable for halal groups, but we can provide halal alternatives such as Nasi Campur or Ayam Betutu upon request. If you want an authentic Balinese food experience that guests talk about for years, Babi Guling catering Bali is the unmistakable choice for traditional celebrations.',
-    href: '/catering/babi-guling',
-    accent: '#C5A028',
-  },
-  {
-    image: '/generated/mychef-catering-style-grazing.webp',
-    title: 'Grazing Tables',
-    price: 'From IDR 650,000',
-    description: 'Grazing tables and charcuterie platters create an instant visual focal point for weddings, welcome drinks, poolside parties, bridal showers, and villa entertaining. We arrange artisan cheeses, cured meats, marinated vegetables, dips, honeycomb, fresh and dried fruit, nuts, crackers, sourdough, and edible flowers across a styled surface so guests can graze throughout the event. Options range from a mini grazing box for two to wedding-scale spreads for fifty or more. Vegan, vegetarian, and halal-friendly versions are available. Grazing tables Bali work especially well as a pre-dinner starter, a cocktail-hour companion, or a relaxed alternative to a formal sit-down meal when you want guests to mingle freely.',
-    href: '/catering/grazing-tables',
-    accent: '#6B8E5A',
-  },
-  {
-    image: '/generated/mychef-catering-style-retreat.webp',
-    title: 'Retreat Catering',
-    price: 'From IDR 700,000/person/day',
-    description: 'Retreat catering Bali is built for yoga retreats, wellness centers, corporate wellness trips, and multi-day group stays where nutrition, consistency, and dietary inclusivity matter. We design plant-forward menus with abundant vegetables, whole grains, lean proteins, fermented foods, and low-sugar options, while still offering indulgent treats for guests who want them. Pricing is typically per person per day and covers breakfast, lunch, dinner, snacks, and drinks across the full retreat. Our team understands retreat rhythms: early breakfasts, light lunches, nourishing dinners, and flexibility for fasting or ayurvedic preferences. We also provide buffet, family-style, or plated service depending on your schedule and group size.',
-    href: '/catering/retreat-catering',
-    accent: '#6B8E5A',
-  },
-  {
-    image: '/generated/mychef-catering-style-floating.webp',
-    title: 'Floating Breakfast',
-    price: 'From IDR 950,000/couple',
-    description: 'Floating breakfast Bali brings the island\'s most Instagram-famous dining experience directly to your private villa pool. We prepare a beautifully styled tray loaded with tropical fruit, eggs, pastries, granola, yogurt, Balinese coffee, fresh juice, and flowers, then set it floating in the water for couples, honeymooners, birthday celebrants, or small groups. Packages start for two people and can scale up to group brunches for four to ten guests on larger floating setups. Delivery, styling, and retrieval are all included, and we request 48 hours notice to arrange the freshest flowers and produce. It is a memorable, photo-ready way to start a special day in Bali without leaving your villa.',
-    href: '/catering/floating-breakfast',
-    accent: '#2C5F7C',
-  },
-]
+// CATERING_STYLES, WHAT_IS_CATERING_SECTIONS, CATERING_BY_EVENT_TYPES,
+// CATERING_BY_GUEST_NUMBERS, COMPLETE_BOOKING_PROCESS, BALI_LOCATIONS,
+// FOOD_PHILOSOPHY_CARDS, MENU_STYLES, OPTIONAL_SERVICES, and CATERING_FAQS
+// are imported from @/data/cateringPillarContent.
 
 const BBQ_PACKAGES = [
   {
@@ -293,61 +227,7 @@ const AREAS = [
   'Nusa Dua', 'Sanur', 'Jimbaran', 'Tanah Lot', 'Kerobokan', 'Kuta', 'Legian', 'Denpasar',
 ]
 
-const FAQS = [
-  { q: 'Do your prices include chef and staff?', a: 'Yes. All BBQ, buffet, and plated packages include a private chef and service staff. Drop-off catering does not include on-site staff — that is the point.' },
-  { q: 'Do you provide catering at villas?', a: 'Yes. We specialize in villa catering across Bali. We bring all equipment, set up in your villa garden or pool area, and clean up after.' },
-  { q: 'Can I book only drop-off food?', a: 'Absolutely. Our drop-off catering is designed for guests who want great food without staff staying in the villa.' },
-  { q: 'What is the minimum guest count?', a: 'BBQ: 10 guests (Seminyak/Canggu & Ubud), 20 (Uluwatu). Buffet: 30 guests. Plated: 10 guests. Drop-off: 4 guests. Babi Guling: 10 guests.' },
-  { q: 'Do you offer halal or pork-free menus?', a: 'Yes. We offer fully halal and pork-free BBQ, buffet, and plated menus. Babi Guling contains pork and is not halal.' },
-  { q: 'Does Babi Guling contain pork?', a: 'Yes. Babi Guling is a traditional Balinese whole-pig roast and contains pork. It is not suitable for halal groups.' },
-  { q: 'Can you handle gluten-free or allergies?', a: 'Yes. We accommodate gluten-free, nut-free, dairy-free, shellfish-free, and other allergies. Please tell us when booking.' },
-  { q: 'Do you bring equipment?', a: 'Yes. We bring grills, chafing dishes, tables, linens, cutlery, glassware, and everything needed for service.' },
-  { q: 'Do you clean up after the event?', a: 'Yes. Full cleanup is included in all serviced packages (BBQ, buffet, plated). Drop-off does not include cleanup.' },
-  { q: 'Do you charge travel fees?', a: 'Travel fees apply for areas outside Seminyak/Canggu: IDR 250,000 to 700,000 depending on distance and event size.' },
-  { q: 'How much deposit is required?', a: 'A 50% deposit is required to confirm your booking. The balance is due on the day of the event.' },
-  { q: 'How far in advance should I book?', a: 'We recommend 3-7 days for BBQ and buffet. 2+ weeks for weddings and large events. Drop-off can often be arranged next-day if ordered by 4pm.' },
-  { q: 'Is this a real chef or just delivered food?', a: 'A real chef grills at your villa. Not pre-cooked. Not delivered from a kitchen. Live fire, your pool, your garden. The chef arrives 3 hours early, preps everything on site, and serves course by course.' },
-  { q: 'How do I know the food is safe?', a: 'All chefs are food-safety certified. We use separate prep for allergies. We have served 500+ villa events with a strong safety record. Every ingredient is purchased fresh the morning of your event.' },
-  { q: 'What if it rains?', a: 'We bring a kitchen tent for outdoor setups. Or we move indoors if your villa has covered space. We plan for Bali weather — it is part of the service, not an extra charge.' },
-  { q: 'Can I see a menu before booking?', a: 'Yes. We send a full menu proposal with exact pricing before you pay anything. No commitment required to review. Most quotes are sent within 2 hours.' },
-  { q: 'What if my guest count changes?', a: 'Final headcount is due 48 hours before your event. We adjust portions and staffing. No penalty for small changes. Large increases may affect minimums.' },
-  { q: 'Why myCHEF and not another caterer?', a: 'We own the full stack — chefs, equipment, logistics, staff training. No middlemen. That is why we can quote fast, deliver consistently, and fix issues immediately. Most other caterers outsource at least one layer.' },
-  { q: 'What is the difference between One-Time Catering and Daily Chef Service?', a: 'One-Time Catering is for a single event — a BBQ night, a birthday dinner, a wedding buffet. The chef arrives, cooks, serves, and leaves. Daily Chef Service is for ongoing stays — the same chef comes to your villa every day for breakfast, lunch, and dinner throughout your holiday. Daily chef is billed hourly; one-time catering is billed per person.' },
-  { q: 'Which service is right for me?', a: 'If you are celebrating one special occasion, choose One-Time Catering. If you are staying in a villa for multiple days and want every meal handled, choose Daily Chef Service. Not sure? Message us on WhatsApp and we will guide you in under 2 minutes.' },
-  { q: 'How much does catering in Bali cost?', a: 'Most of our catering packages start around IDR 700,000 per person for BBQ, buffet, and drop-off options. Plated set menus start at IDR 800,000 per person, live-station buffets around IDR 950,000 per person, and premium add-ons such as Wagyu or lobster increase the price. All quotes include chef, staff, ingredients, equipment, setup, service, cleanup, and 21% tax. Travel fees are added for areas outside Canggu and Seminyak.' },
-  { q: 'Is the 21% tax included in your published prices?', a: 'Yes. The prices shown on our website include tax and service charge. The quote you receive before paying is the final price, unless you add guests or upgrade ingredients after booking.' },
-  { q: 'Can I get a quote without committing?', a: 'Yes. We send menu proposals and quotes with no obligation. You can review, request changes, or decline without any pressure.' },
-  { q: 'Do you cater for children?', a: 'Yes. We can prepare milder spice levels, smaller portions, familiar dishes such as pasta or chicken, and early meal times for children. Let us know ages and preferences when booking.' },
-  { q: 'Do you offer vegetarian catering?', a: 'Yes. We offer fully vegetarian BBQ, buffet, plated, and grazing menus. Dishes are designed as complete meals, not just side salads.' },
-  { q: 'Do you offer vegan catering?', a: 'Yes. Our vegan menus use plant proteins, coconut-based sauces, dairy alternatives, and creative vegetables. We also label dishes clearly so vegan guests can eat with confidence.' },
-  { q: 'Can you provide halal-friendly catering?', a: 'Yes. We offer halal and pork-free menus. Please note that Babi Guling contains pork and is not halal. For halal groups we suggest Indonesian BBQ, Nasi Campur, or Ayam Betutu.' },
-  { q: 'Can we bring our own alcohol?', a: 'Yes. You can supply your own alcohol. We can also arrange bartenders, mixologists, glassware, and ice as add-ons.' },
-  { q: 'Do you provide bar service and cocktails?', a: 'Yes. We offer bartender packages, mixology services, open-bar setups, and signature cocktail design. See our Bartender Service page for details.' },
-  { q: 'What kitchen facilities does my villa need?', a: 'For drop-off catering, a basic kitchen is enough. For BBQ, buffet, and plated service, we bring our own grills, burners, chafing dishes, and prep tables. We just need access to water, power, and enough outdoor or covered space for setup.' },
-  { q: 'Can you cater on the beach or at a venue without a kitchen?', a: 'Yes. We can build a mobile kitchen at beach clubs, gardens, and event spaces. Larger off-site events may require a generator and advance planning.' },
-  { q: 'Do you cater weddings in Bali?', a: 'Yes. We cater rehearsal dinners, welcome drinks, wedding receptions, and post-wedding brunches across Bali. See our Wedding Catering options for package details.' },
-  { q: 'Do you cater corporate retreats and offsites?', a: 'Yes. We provide multi-day retreat catering, corporate dinners, conference lunches, and team-building BBQs with tax invoicing.' },
-  { q: 'Can you cater a small dinner for 4 to 6 guests?', a: 'Yes. For very small groups we recommend drop-off catering, a private chef dinner, or a romantic dining experience. plated menus can also work for intimate celebrations.' },
-  { q: 'What is the largest event you can cater?', a: 'We regularly cater events for 100 to 250 guests and can scale beyond that for large weddings, conferences, and celebrations with sufficient lead time.' },
-  { q: 'Do I need to provide plates, cutlery, and glassware?', a: 'No. We bring all necessary plates, cutlery, glassware, napkins, and serving equipment as part of serviced packages.' },
-  { q: 'What happens to leftovers?', a: 'We pack safe leftovers in containers for you to keep. Perishable items that have been sitting out too long are discarded for food safety reasons.' },
-  { q: 'How long does setup and cleanup take?', a: 'Setup usually takes 2 to 3 hours before service. Cleanup takes 1 to 2 hours after the last guest finishes. For large events we may arrive earlier.' },
-  { q: 'Can I change the menu after booking?', a: 'Yes, within reason. Final menus are confirmed several days before the event. Small adjustments are usually free; major ingredient changes may affect pricing.' },
-  { q: 'Do you offer tastings before a wedding or large event?', a: 'Yes. Complimentary tastings are available for events over 40 guests. Smaller tastings can be arranged for a fee that is credited against your booking.' },
-  { q: 'What payment methods do you accept?', a: 'We accept bank transfer, credit card, and Wise. Deposits confirm your date; balances are settled on or before the event day.' },
-  { q: 'Can I book last-minute catering?', a: 'Drop-off catering can often be arranged next-day if ordered by 4pm. BBQ and buffet require 3 to 7 days notice. Weddings and large events should be booked 2+ weeks ahead.' },
-  { q: 'Do you cater outside Bali?', a: 'Our primary service area is Bali. Large or special events in Lombok can sometimes be arranged by request.' },
-  { q: 'What if a guest has a severe allergy?', a: 'Tell us when booking. We prepare allergy-safe meals separately, use clean utensils, and label dishes. For severe allergies we may ask to confirm an emergency plan with the guest.' },
-  { q: 'Do you provide waiting staff?', a: 'Yes. Waiters are included or available for buffet, plated, and canape service. We typically provide one waiter per ten guests for seated events.' },
-  { q: 'Can you arrange a butler for a formal dinner?', a: 'Yes. We can provide trained butlers for formal villa dinners, wine service, and VIP events. See our Butler Service page.' },
-  { q: 'Do you do floating breakfast outside villas?', a: 'Floating breakfast is designed for private villa pools. We can also create styled brunch setups for garden or terrace locations.' },
-  { q: 'Can you create a themed menu?', a: 'Yes. We can design menus around Italian, French, Japanese, Indonesian, Mexican, Middle Eastern, or fully customised themes.' },
-  { q: 'How do I confirm my booking?', a: 'Confirm by paying the 50% deposit. We then send a booking summary with date, menu, guest count, location, and balance due.' },
-  { q: 'What information do you need for a quote?', a: 'Date, location, number of guests, event type, preferred cuisine, dietary needs, and whether you want full service or drop-off.' },
-  { q: 'Can you provide event planning as well as catering?', a: 'Yes. For complex events we coordinate timeline, furniture, flowers, entertainment, photography, and additional staff. See our Event Planning and Optional Services sections.' },
-  { q: 'Do you cater breakfast and brunch?', a: 'Yes. We offer villa breakfast service, floating breakfast, brunch buffets, and healthy retreat breakfast spreads.' },
-  { q: 'What makes villa catering better than going to a restaurant?', a: 'No transport, no fixed menu, no closing time, no splitting the group, and no surprises. You get privacy, custom menus, and full service in your own space.' },
-]
+// CATERING_FAQS imported from @/data/cateringPillarContent
 
 /* ── Decision Helper Data ── */
 const DECISION_QUESTIONS = [
@@ -510,7 +390,7 @@ export default function CateringMainPage() {
             highPrice: '3700000',
             unitText: 'per person',
           }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          faqPageSchema(CATERING_FAQS.map(f => ({ question: f.q, answer: f.a }))),
           howToSchema({
             name: 'How to Book Catering in Bali',
             description: 'Book professional catering for your Bali villa or event in 6 easy steps.',
@@ -549,15 +429,15 @@ export default function CateringMainPage() {
               myCHEF Events & Catering
             </p>
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Events & Catering Services<br />
-              <span className="italic">Built for Groups, Parties & Hosted Dinners.</span>
+              Premium Catering in Bali<br />
+              <span className="italic">For Every Occasion.</span>
             </h1>
             <div className="text-base md:text-lg text-white/[85%] max-w-3xl mx-auto space-y-4">
               <p>
-                myCHEF is Bali's premium catering partner for villas, weddings, corporate events, wellness retreats, and private celebrations. From an intimate poolside BBQ for ten in Canggu to a multi-course plated wedding reception for two hundred in Uluwatu, we bring the entire kitchen, service team, and dining experience to your location. Our chef-led catering covers every detail: menu design, ingredient sourcing, on-site cooking, professional service, full cleanup, and even bartenders, waiters, and grazing tables if your event calls for more.
+                Premium catering across Bali for private villas, luxury holidays, weddings, corporate events, retreats and celebrations. From intimate private chef experiences for two guests to events with hundreds of guests, myCHEF delivers complete hospitality tailored to every occasion. Our chef-led team brings the kitchen, service staff, ingredients, and equipment to your villa or venue, then handles menu design, on-site cooking, table service, and full cleanup so you can host without stress.
               </p>
               <p>
-                What makes our Catering Bali service different is that we own the full stack. We employ and train our own chefs, service staff, and logistics team. There are no middlemen, no outsourced crews, and no last-minute surprises. Every dish is cooked fresh at your villa, every allergy is logged, and every quote is confirmed in writing before you pay a deposit. Whether you need luxury catering Bali for a high-end villa holiday, event catering Bali for a product launch, or private catering Bali for a family birthday, we match the service style, menu, and staffing to your guest count and venue.
+                What makes our catering Bali service different is that we own the full stack. We employ and train our own chefs, service staff, and logistics crew — no middlemen, no outsourced teams, and no last-minute surprises. Every dish is cooked fresh at your location, every allergy is logged, and every quote is confirmed in writing before you pay a deposit. Whether you need luxury catering Bali for a high-end villa holiday, wedding catering Bali for your reception, corporate catering Bali for an offsite, or private catering Bali for a family celebration, we match the format and staffing to your guest count and venue.
               </p>
               <p>
                 We operate across Seminyak, Canggu, Berawa, Pererenan, Ubud, Sanur, Nusa Dua, Jimbaran, Uluwatu, Ungasan, Kerobokan, Sidemen, Munduk, and North Bali. Travel fees are disclosed upfront, menus are customised to your group, and our team has delivered over five hundred villa events since we started. Browse our catering styles below, use the decision guide to choose the right format, or message us on WhatsApp for a same-day quote.
@@ -928,30 +808,23 @@ export default function CateringMainPage() {
             subtitle="Catering means bringing prepared food, service staff, equipment, and the full dining experience to a location of your choice. In Bali, that usually means your villa, event space, retreat venue, or beach club."
           />
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="space-y-4 text-[#4A4745]">
-              <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Catering vs Restaurants</h3>
-              <p className="text-sm leading-relaxed">
-                A restaurant fixes the menu, the pace, the seating, and the noise level. You travel to it, wait for a table, and split large groups across several tables. Catering flips that model: the restaurant comes to you. You choose the location, the menu, the timing, and the service style. The kitchen is built on-site, the staff works only for your guests, and the event moves at your pace. For villa holidays, weddings, and corporate events in Bali, catering is usually more relaxed, more private, and often more cost-effective for groups of eight or more.
-              </p>
-            </div>
-            <div className="space-y-4 text-[#4A4745]">
-              <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Private Chef vs Catering</h3>
-              <p className="text-sm leading-relaxed">
-                A private chef typically works inside your villa kitchen for a small group or daily service, buying groceries and cooking meals throughout your stay. Catering is event-based: a larger team arrives for a specific occasion, brings additional equipment, and handles service and cleanup for a one-off meal or multi-day program. A private chef is perfect for 2–8 guests who want everyday meals; catering is the right choice when you have a larger group, a special occasion, or when you want a full service team rather than one chef.
-              </p>
-            </div>
-            <div className="space-y-4 text-[#4A4745]">
-              <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Buffet vs Plated Service</h3>
-              <p className="text-sm leading-relaxed">
-                Buffet catering lets guests serve themselves from a decorated line of hot and cold dishes. It is efficient for large groups, offers variety, and keeps the kitchen separate from the dining area. Plated service means guests remain seated and each course is brought to them by waiters. It feels more formal, controls portion sizes, and creates a slower, restaurant-style experience. Buffets suit weddings and big celebrations; plated menus suit anniversaries, board dinners, and milestone events. Both can be combined: a grazing table starter followed by a seated main course is a popular hybrid.
-              </p>
-            </div>
-            <div className="space-y-4 text-[#4A4745]">
-              <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Drop-Off vs Full-Service</h3>
-              <p className="text-sm leading-relaxed">
-                Drop-off catering delivers ready-to-eat food in packaging with reheating instructions. No staff stays at your villa, which is ideal for small, private meals or guests who want total solitude. Full-service catering includes chefs, waiters, equipment, setup, service during the meal, and complete cleanup. It costs more than drop-off but removes every operational burden. Many clients choose drop-off for quiet family nights and full-service for birthdays, weddings, and corporate events. Whatever format you prefer, myCHEF can provide the right level of support.
-              </p>
-            </div>
+            {WHAT_IS_CATERING_SECTIONS.map((section) => (
+              <div key={section.title} className="space-y-4 text-[#4A4745]">
+                <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{section.title}</h3>
+                <div
+                  className="text-sm leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
+                  dangerouslySetInnerHTML={{ __html: section.body }}
+                />
+                {section.link && (
+                  <Link
+                    to={section.link.href}
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1"
+                  >
+                    {section.link.text} <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                )}
+              </div>
+            ))}
           </div>
           <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 max-w-4xl mx-auto">
             <p className="text-sm text-[#4A4745] leading-relaxed">
@@ -1135,114 +1008,26 @@ export default function CateringMainPage() {
             subtitle="Every event has its own rhythm. Here is how we match catering style, menu, and staffing to the occasion."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Birthdays',
-                style: 'BBQ, buffet, or grazing table',
-                menu: 'Live grill stations, satay, sliders, tropical fruit, birthday cake.',
-                staffing: 'Chef + 2–4 staff for setup, service, and cleanup.',
-                experience: 'Birthday catering Bali should feel like a party, not a restaurant reservation. A live BBQ by the pool, a grazing table for arrival, and a styled cake create the right energy. We handle the food so you can focus on candles, speeches, and dancing.',
-              },
-              {
-                title: 'Weddings',
-                style: 'Buffet, plated dinner, or live stations',
-                menu: 'Welcome canapes, 3–5 course meal or buffet, wedding cake, late-night snacks.',
-                staffing: 'Head chef, service manager, waiters 1:10, bartenders optional.',
-                experience: 'Wedding catering Bali from myCHEF covers rehearsal dinners, welcome drinks, the reception, and post-wedding brunch. We coordinate timings with your planner, serve on your schedule, and adapt menus for guests with allergies, vegetarians, and children.',
-              },
-              {
-                title: 'Corporate Events',
-                style: 'Buffet, plated board dinner, or drop-off lunch',
-                menu: 'International buffet, working lunch boxes, coffee stations, dietary-friendly options.',
-                staffing: 'Uniformed chef and service team; tax invoicing provided.',
-                experience: 'Corporate catering Bali needs punctuality, dietary flexibility, and discreet service. Whether it is a board dinner in a Seminyak villa or a conference lunch for 200 in Ubud, we deliver professional food and clear accounting.',
-              },
-              {
-                title: 'Retreats',
-                style: 'Plant-forward buffet or family-style',
-                menu: 'Breakfast smoothie bowls, grain salads, grilled proteins, vegan desserts, herbal drinks.',
-                staffing: 'Retreat chef + service team for multi-day coverage.',
-                experience: 'Retreat catering Bali is about consistency and nourishment. We design menus around yoga schedules, fasting windows, and wellness goals, then serve the same quality across every meal of the retreat.',
-              },
-              {
-                title: 'Luxury Villa Holidays',
-                style: 'Daily chef or villa catering',
-                menu: 'Mixed cuisine across the stay: Indonesian, Mediterranean, seafood, BBQ, healthy breakfasts.',
-                staffing: 'Dedicated chef; additional waiters for dinner events.',
-                experience: 'A luxury villa holiday is not complete without effortless meals. Our team shops, cooks, and cleans daily so you can enjoy poolside lunches, sunset dinners, and late brunches without leaving the property.',
-              },
-              {
-                title: 'Family Gatherings',
-                style: 'BBQ, buffet, or family-style sharing',
-                menu: 'Shared plates, rice dishes, grilled meats, fresh vegetables, kid-friendly options.',
-                staffing: 'Chef + 2–3 staff depending on group size.',
-                experience: 'Family gatherings often span generations and eating times. We create flexible menus with early kids portions, adult courses, and relaxed service so everyone eats when they are hungry and what they like.',
-              },
-              {
-                title: 'Christmas & NYE',
-                style: 'Festive buffet, plated dinner, or grazing',
-                menu: 'Roasted meats, seafood, holiday sides, desserts, champagne pairings.',
-                staffing: 'Full service team for peak-season events.',
-                experience: 'Christmas and New Year in Bali deserve a celebration that feels familiar and special. We build festive menus, source premium ingredients, and provide full staffing so you can toast under the stars.',
-              },
-              {
-                title: 'Baby Showers',
-                style: 'Grazing table, high tea, or light buffet',
-                menu: 'Finger sandwiches, fruit platters, pastries, mocktails, themed cake.',
-                staffing: 'Chef + 1–2 staff for a relaxed afternoon.',
-                experience: 'Baby shower catering Bali is usually daytime, elegant, and social. Grazing tables and high-tea setups let guests nibble, chat, and move around while the mother-to-be is celebrated.',
-              },
-              {
-                title: 'Bridal Showers',
-                style: 'Grazing table, canapes, or plated brunch',
-                menu: 'Artisan cheeses, charcuterie, champagne, salads, desserts.',
-                staffing: 'Chef + service staff for styled presentation.',
-                experience: 'Bridal showers call for beautiful food and a light atmosphere. We style grazing tables with flowers, provide elegant glassware, and keep the menu fresh and photogenic.',
-              },
-              {
-                title: 'Anniversaries',
-                style: 'Private chef or plated set menu',
-                menu: 'Multi-course tasting menu, wine pairings, personalized dessert.',
-                staffing: 'Chef and dedicated waiter for intimate service.',
-                experience: 'Anniversary catering is about intimacy and attention. A private chef prepares a tasting menu at your villa while a waiter ensures every course arrives at the perfect moment.',
-              },
-              {
-                title: 'Engagement Parties',
-                style: 'Grazing + BBQ or buffet',
-                menu: 'Canapes, grazing table, live grill or buffet, dessert.',
-                staffing: 'Chef + 2–4 staff for mixed service.',
-                experience: 'Engagement parties are celebratory and social. A grazing table for arrival followed by a BBQ or buffet lets guests mingle early and eat heartily later.',
-              },
-              {
-                title: 'Networking Events',
-                style: 'Canapes, grazing, or standing buffet',
-                menu: 'Bite-sized finger food, sliders, skewers, desserts, coffee and cocktails.',
-                staffing: 'Waiters with trays and bar staff as needed.',
-                experience: 'Networking events need food that can be eaten standing up while conversations flow. Canapes and grazing tables keep guests circulating and make introductions easier.',
-              },
-              {
-                title: 'Product Launches',
-                style: 'Branded grazing, buffet, or plated dinner',
-                menu: 'Custom menu aligned with brand theme, logo cake, signature drinks.',
-                staffing: 'Chef, service team, and bartenders for polished presentation.',
-                experience: 'Product launch catering Bali should reflect your brand. We can style the food display, coordinate colours, and create signature dishes or drinks that reinforce your message.',
-              },
-              {
-                title: 'Seminars & Training',
-                style: 'Working lunch buffet or boxed meals',
-                menu: 'Light, energising dishes: salads, proteins, vegetarian options, fruit, coffee.',
-                staffing: 'Drop-off or full service depending on venue and schedule.',
-                experience: 'Seminar catering needs to be efficient, healthy, and on time. Boxed lunches keep sessions moving; buffets give attendees choice during longer breaks.',
-              },
-            ].map((event) => (
+            {CATERING_BY_EVENT_TYPES.map((event) => (
               <div key={event.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
                 <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{event.title}</h3>
                 <div className="space-y-3 text-sm text-[#4A4745]">
                   <p><span className="font-semibold text-[#1A1A1A]">Recommended style:</span> {event.style}</p>
                   <p><span className="font-semibold text-[#1A1A1A]">Typical menu:</span> {event.menu}</p>
                   <p><span className="font-semibold text-[#1A1A1A]">Staffing:</span> {event.staffing}</p>
-                  <p className="leading-relaxed">{event.experience}</p>
+                  <div
+                    className="leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
+                    dangerouslySetInnerHTML={{ __html: event.experience }}
+                  />
                 </div>
+                {event.href && (
+                  <Link
+                    to={event.href}
+                    className="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1"
+                  >
+                    Learn more <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                )}
               </div>
             ))}
           </div>
@@ -1263,57 +1048,7 @@ export default function CateringMainPage() {
             subtitle="The right format depends on how many people you are feeding. Here is how we scale service, kitchen, and staffing."
           />
           <div className="space-y-6">
-            {[
-              {
-                range: '2–4 guests',
-                style: 'Private chef, drop-off, or romantic dinner',
-                kitchen: 'Uses your villa kitchen or delivered ready-to-serve.',
-                staffing: 'One chef, optional waiter.',
-                menus: 'Tasting menus, seafood grills, intimate BBQs, floating breakfast.',
-              },
-              {
-                range: '5–10 guests',
-                style: 'BBQ, plated dinner, or grazing table',
-                kitchen: 'Small outdoor grill or villa kitchen.',
-                staffing: 'Chef + 1–2 service staff.',
-                menus: 'Shared starters, grilled mains, salads, dessert. Family-style service works well.',
-              },
-              {
-                range: '10–20 guests',
-                style: 'BBQ, plated set menu, or grazing + hot mains',
-                kitchen: 'Mobile grill and prep tables; villa kitchen for finishing.',
-                staffing: 'Chef + 2–3 staff, one waiter per 10 guests.',
-                menus: 'Live satay, ribs, whole fish, pasta, plated courses, or buffet line.',
-              },
-              {
-                range: '20–50 guests',
-                style: 'BBQ, buffet, plated, or Babi Guling',
-                kitchen: 'Full mobile kitchen tent, grill station, chafing dishes.',
-                staffing: 'Head chef + 3–5 staff, dedicated service manager.',
-                menus: 'Indonesian or international buffet, live carving, dessert table.',
-              },
-              {
-                range: '50–100 guests',
-                style: 'Buffet or live-station catering',
-                kitchen: 'Expanded outdoor kitchen, multiple heat sources, refrigeration.',
-                staffing: 'Head chef, sous chef, 6–10 service staff, event manager.',
-                menus: 'Multi-station buffet with live cooking, salads, roasts, vegetarian station, desserts.',
-              },
-              {
-                range: '100–250 guests',
-                style: 'Large-format buffet with live stations or plated service',
-                kitchen: 'Full off-site prep + on-site finishing kitchen, generator if needed.',
-                staffing: 'Brigade of chefs, service manager, 15–25 front-of-house staff, bartenders.',
-                menus: 'Extensive buffet lines, themed stations, plated starter + buffet main, late-night snacks.',
-              },
-              {
-                range: '250+ guests',
-                style: 'Bespoke large-event catering',
-                kitchen: 'Custom kitchen build, dedicated logistics team, refrigerated transport.',
-                staffing: 'Full culinary brigade, event coordinator, service captains, bar team, runners.',
-                menus: 'Fully customised menu with multiple cuisines, dietary stations, VIP plated options.',
-              },
-            ].map((row) => (
+            {CATERING_BY_GUEST_NUMBERS.map((row) => (
               <div key={row.range} className="grid md:grid-cols-12 gap-4 bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
                 <div className="md:col-span-2">
                   <h3 className="text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>{row.range}</h3>
@@ -1336,6 +1071,14 @@ export default function CateringMainPage() {
                     <p>{row.menus}</p>
                   </div>
                 </div>
+                {row.notes && (
+                  <div className="md:col-span-12">
+                    <div
+                      className="text-sm text-[#4A4745] leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
+                      dangerouslySetInnerHTML={{ __html: row.notes }}
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -1703,20 +1446,7 @@ export default function CateringMainPage() {
             subtitle="We keep the process transparent so you always know what happens next."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { step: '01', title: 'Initial enquiry', desc: 'Message us on WhatsApp with your date, location, guest count, and event type. Most replies arrive within minutes during Bali business hours.' },
-              { step: '02', title: 'Needs assessment', desc: 'We ask about dietary needs, allergies, preferred cuisine, budget, and villa access so we can match the right chef and format.' },
-              { step: '03', title: 'Menu proposal', desc: 'You receive a tailored menu with options for starters, mains, desserts, service style, and add-ons such as bartenders or grazing tables.' },
-              { step: '04', title: 'Quote confirmation', desc: 'We send a written quote covering food, chef, staff, equipment, travel fees, and taxes. No hidden costs.' },
-              { step: '05', title: 'Contract & deposit', desc: 'Confirm your booking with a 50% deposit. The deposit locks your date and chef team.' },
-              { step: '06', title: 'Final headcount', desc: 'Guest numbers are confirmed 48 hours before the event. We adjust portions, staffing, and ingredients accordingly.' },
-              { step: '07', title: 'Grocery sourcing', desc: 'We shop fresh the morning of your event, selecting local produce and imported items needed for your menu.' },
-              { step: '08', title: 'On-site setup', desc: 'The team arrives early, builds the mobile kitchen, sets tables, arranges décor, and briefs villa staff if needed.' },
-              { step: '09', title: 'Cooking & service', desc: 'The chef cooks live while waiters serve courses, refill stations, and attend to guest requests throughout the meal.' },
-              { step: '10', title: 'Dietary management', desc: 'We serve allergy-safe plates separately and label buffet dishes so every guest eats with confidence.' },
-              { step: '11', title: 'Cleanup', desc: 'After service we clear tables, wash equipment, remove rubbish, and leave your villa kitchen as we found it.' },
-              { step: '12', title: 'Follow-up', desc: 'We check in after the event, settle the balance, and gather feedback so we can keep improving.' },
-            ].map((item) => (
+            {COMPLETE_BOOKING_PROCESS.map((item) => (
               <div key={item.step} className="bg-white rounded-2xl border border-[#E8E6E3] p-6">
                 <span className="text-[#6B8E5A] text-xs font-bold tracking-widest">STEP {item.step}</span>
                 <h3 className="text-lg mt-1 mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
@@ -1785,98 +1515,24 @@ export default function CateringMainPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[
-              {
-                area: 'Seminyak',
-                events: 'Birthdays, bachelorette parties, corporate dinners, romantic dinners.',
-                villas: 'Designer villas with open kitchens and pool decks close to restaurants and beach clubs.',
-                notes: 'No travel fee. Same-day BBQ and drop-off often possible. Ideal for first-time Bali catering clients.',
-              },
-              {
-                area: 'Canggu',
-                events: 'Villa parties, family holidays, surf trips, wellness retreats, influencer events.',
-                villas: 'Rice-field view villas, bamboo architecture, large gardens, and poolside decks.',
-                notes: 'No travel fee. Very high demand; book 3–7 days ahead for weekends.',
-              },
-              {
-                area: 'Berawa',
-                events: 'Beachfront birthdays, family brunches, sunset BBQs.',
-                villas: 'Modern villas near Finns and Berawa Beach, often with rooftop terraces.',
-                notes: 'Treated as Canggu zone for travel. Great for beach-club style events at home.',
-              },
-              {
-                area: 'Pererenan',
-                events: 'Intimate weddings, yoga retreats, small villa dinners.',
-                villas: 'Quieter rice-field villas and boutique estates with space for ceremonies.',
-                notes: 'Rural roads can affect large-truck access; we scout access before big events.',
-              },
-              {
-                area: 'Ubud',
-                events: 'Retreats, jungle weddings, corporate offsites, wellness programs.',
-                villas: 'Jungle villas, rice-paddy estates, and riverside resorts with dramatic views.',
-                notes: 'Travel fee IDR 250K–500K. Jungle humidity affects outdoor setups; we plan covered kitchens.',
-              },
-              {
-                area: 'Sanur',
-                events: 'Family reunions, expat dinners, seminar catering, long-stay villa meals.',
-                villas: 'Calm beachside villas, older-established estates, and family-friendly compounds.',
-                notes: 'Travel fee IDR 400K–700K. Preferred by guests who want a quieter, more local atmosphere.',
-              },
-              {
-                area: 'Nusa Dua',
-                events: 'Weddings, corporate events, golf resort gatherings, luxury villa dinners.',
-                villas: 'Gated resort villas, cliff-top estates, and beachfront compounds.',
-                notes: 'Travel fee IDR 400K–700K. Security gates require advance guest-list coordination.',
-              },
-              {
-                area: 'Jimbaran',
-                events: 'Seafood dinners, family gatherings, beach celebrations, rehearsal dinners.',
-                villas: 'Hillside villas with ocean views and beachfront compounds.',
-                notes: 'Travel fee IDR 400K–700K. Seafood is a natural menu choice here; we source fresh daily.',
-              },
-              {
-                area: 'Uluwatu',
-                events: 'Cliff-top weddings, sunset parties, luxury villa holidays, milestone birthdays.',
-                villas: 'Cliff-front villas with infinity pools and panoramic ocean views.',
-                notes: 'Travel fee IDR 250K–500K. Wind and access stairs can affect setup; we arrive early.',
-              },
-              {
-                area: 'Ungasan',
-                events: 'Large villa weddings, multi-day retreats, private celebrations.',
-                villas: 'Spacious estates on the Bukit peninsula with big gardens and parking.',
-                notes: 'Travel fee IDR 250K–500K. Great for events that need space and privacy.',
-              },
-              {
-                area: 'Kerobokan',
-                events: 'Villa dinners, birthday BBQs, family gatherings.',
-                villas: 'A mix of budget and luxury villas between Seminyak and Canggu.',
-                notes: 'Treated as Seminyak/Canggu zone for travel. Quick access to most villa clusters.',
-              },
-              {
-                area: 'Sidemen',
-                events: 'Retreats, intimate weddings, photography dinners, cultural experiences.',
-                villas: 'Rice-terrace villas and boutique eco-lodges with mountain views.',
-                notes: 'Travel fee applies. Remote location suits multi-day retreats and exclusive small events.',
-              },
-              {
-                area: 'Munduk',
-                events: 'Retreats, nature escapes, small group dinners.',
-                villas: 'Cool-climate mountain lodges and jungle cabins.',
-                notes: 'Travel fee applies. Cooler weather is ideal for hot buffets and plated comfort food.',
-              },
-              {
-                area: 'North Bali',
-                events: 'Beachfront weddings, diving groups, family reunions, fishing-villa dinners.',
-                villas: 'Black-sand beach villas, quiet coastal estates, and traditional compounds.',
-                notes: 'Travel fee applies and may require overnight crew for large events. Book early.',
-              },
-            ].map((loc) => (
+            {BALI_LOCATIONS.map((loc) => (
               <div key={loc.area} className="bg-white rounded-2xl border border-[#E8E6E3] p-6">
-                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{loc.area}</h3>
+                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {loc.href ? (
+                    <Link to={loc.href} className="hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">
+                      {loc.area}
+                    </Link>
+                  ) : (
+                    loc.area
+                  )}
+                </h3>
                 <div className="space-y-2 text-sm text-[#4A4745]">
                   <p><span className="font-semibold text-[#1A1A1A]">Popular events:</span> {loc.events}</p>
                   <p><span className="font-semibold text-[#1A1A1A]">Villa styles:</span> {loc.villas}</p>
-                  <p><span className="font-semibold text-[#1A1A1A]">Catering notes:</span> {loc.notes}</p>
+                  <div
+                    className="[&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
+                    dangerouslySetInnerHTML={{ __html: `<span class="font-semibold text-[#1A1A1A]">Catering notes:</span> ${loc.notes}` }}
+                  />
                 </div>
               </div>
             ))}
@@ -1904,30 +1560,15 @@ export default function CateringMainPage() {
             subtitle="Great catering starts with great ingredients, handled by people who care about every plate."
           />
           <div className="grid md:grid-cols-2 gap-8 mb-10">
-            <div className="space-y-4 text-[#4A4745]">
-              <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Fresh Ingredients & Seasonal Sourcing</h3>
-              <p className="text-sm leading-relaxed">
-                We shop for most ingredients on the day of your event. Produce comes from local markets in Denpasar and Ubud, seafood is selected daily from Jimbaran and Kedonganan suppliers, and meats are sourced from trusted butchers who understand our quality standards. Seasonality matters in Bali: mangoes, passion fruit, snake fruit, and tropical greens change throughout the year, and we let those rhythms shape the menu.
-              </p>
-            </div>
-            <div className="space-y-4 text-[#4A4745]">
-              <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Local Produce Meets Imported Specialties</h3>
-              <p className="text-sm leading-relaxed">
-                Balinese ingredients form the backbone of our Indonesian and BBQ menus, while imported cheeses, cured meats, olive oils, wines, and specialty proteins support Mediterranean, French, and Italian dishes. We balance cost and authenticity: if a local ingredient is superior, we use it; if an imported product is essential for the dish, we source it properly.
-              </p>
-            </div>
-            <div className="space-y-4 text-[#4A4745]">
-              <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Presentation & Food Safety</h3>
-              <p className="text-sm leading-relaxed">
-                Every dish is plated or arranged to suit the event style. Buffets are garnished and kept at safe temperatures. Plated courses are timed and wiped before leaving the pass. All chefs are trained in food safety, allergens are segregated during prep, and we maintain cold-chain discipline from market to table.
-              </p>
-            </div>
-            <div className="space-y-4 text-[#4A4745]">
-              <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Menu Customisation & Dietary Flexibility</h3>
-              <p className="text-sm leading-relaxed">
-                Menus are not fixed. We adjust for vegan, vegetarian, gluten-free, dairy-free, nut-free, shellfish-free, halal-friendly, and low-sodium diets. We also adapt spice levels, portion sizes, and children's meals. Your final menu is confirmed in writing before the event so there are no surprises for you or your guests.
-              </p>
-            </div>
+            {FOOD_PHILOSOPHY_CARDS.map((card) => (
+              <div key={card.title} className="space-y-4 text-[#4A4745]">
+                <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
+                <div
+                  className="text-sm leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
+                  dangerouslySetInnerHTML={{ __html: card.body }}
+                />
+              </div>
+            ))}
           </div>
           <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 max-w-4xl mx-auto">
             <p className="text-sm text-[#4A4745] leading-relaxed">
@@ -1946,24 +1587,18 @@ export default function CateringMainPage() {
             subtitle="Mix and match cuisines, courses, and service styles to create a menu that fits your event and your guests."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: 'Mediterranean', desc: 'Olive oil, grilled fish, mezze, fresh salads, flatbreads, and herbs. Light, colourful, and perfect for daytime events.' },
-              { title: 'Italian', desc: 'Homemade pasta, risotto, antipasti, wood-fired flavours, and classic desserts like tiramisu.' },
-              { title: 'French', desc: 'Refined sauces, elegant plating, cheese courses, and pastry-led desserts for milestone dinners.' },
-              { title: 'Japanese', desc: 'Sashimi, sushi, teriyaki, miso, and delicate small plates. Ideal for tasting menus and cocktail hours.' },
-              { title: 'Indonesian', desc: 'Satay, rendang, nasi goreng, gado-gado, sambals, and Balinese specialities. Always a crowd favourite.' },
-              { title: 'Seafood', desc: 'Grilled prawns, lobster, snapper, barramundi, squid, and ocean-fresh platters by the pool.' },
-              { title: 'BBQ', desc: 'Live-fire grilling with global flavours: Indonesian, Australian, American, and surf-and-turf combinations.' },
-              { title: 'Healthy', desc: 'Lean proteins, whole grains, fermented foods, low-sugar options, and abundant vegetables.' },
-              { title: 'Vegetarian', desc: 'Creative plant-based menus that do not feel like an afterthought. Cheese, grains, vegetables, and pulses.' },
-              { title: 'Vegan', desc: 'Fully plant-based dishes with balanced proteins, dairy alternatives, and bold flavours.' },
-              { title: 'Buffet', desc: 'A service format rather than a cuisine, available in Indonesian, international, or themed stations.' },
-              { title: 'Fine Dining', desc: 'Multi-course tasting menus with precise plating, wine pairings, and dedicated service.' },
-              { title: 'Family Style', desc: 'Large sharing plates passed around the table. Relaxed, social, and great for mixed groups.' },
-            ].map((style) => (
+            {MENU_STYLES.map((style) => (
               <div key={style.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6">
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{style.title}</h3>
-                <p className="text-sm text-[#4A4745] leading-relaxed">{style.desc}</p>
+                <div
+                  className="text-sm text-[#4A4745] leading-relaxed mb-3 [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
+                  dangerouslySetInnerHTML={{ __html: style.desc }}
+                />
+                {style.href && (
+                  <Link to={style.href} className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
+                    Learn more <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                )}
               </div>
             ))}
           </div>
@@ -1993,24 +1628,13 @@ export default function CateringMainPage() {
             subtitle="Build a complete event experience by adding service staff, drinks, styling, and entertainment."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: 'Private Chefs', desc: 'A dedicated chef for daily meals, tasting menus, or special occasions in your villa.', href: '/villa-chef' },
-              { title: 'Bartenders', desc: 'Professional bartenders with full bar setup, cocktail menus, and responsible service.', href: '/in-villa-service/bartenders' },
-              { title: 'Mixologists', desc: 'Signature cocktails, molecular techniques, and premium spirits for upscale events.', href: '/in-villa-service/mixology' },
-              { title: 'Waiters', desc: 'Uniformed waiters for plated service, tray canapes, and buffet assistance.', href: '/in-villa-service/waiters' },
-              { title: 'Butlers', desc: 'Discreet, polished butlers for formal dinners, villa hosting, and VIP service.', href: '/in-villa-service/butlers' },
-              { title: 'Coffee Stations', desc: 'Barista-style coffee, teas, and pastries for morning events and conference breaks.' },
-              { title: 'Dessert Tables', desc: 'Styled cakes, pastries, tropical fruit, and sweet stations for weddings and birthdays.' },
-              { title: 'Furniture Rental', desc: 'Tables, chairs, lounge setups, and dining furniture for outdoor villa events.' },
-              { title: 'Glassware & Tableware', desc: 'Wine glasses, champagne flutes, porcelain, and cutlery to match your event style.' },
-              { title: 'Decoration & Flowers', desc: 'Table florals, candles, linens, and styling to transform your villa into an event venue.' },
-              { title: 'Entertainment', desc: 'DJ, acoustic musicians, fire dancers, and cultural performers coordinated through our network.' },
-              { title: 'Photography', desc: 'Event photographers who understand villa lighting and candid celebration moments.' },
-              { title: 'Event Planning', desc: 'Full coordination of timeline, vendors, setup, and guest flow for complex events.', href: '/events' },
-            ].map((service) => (
+            {OPTIONAL_SERVICES.map((service) => (
               <div key={service.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6">
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{service.title}</h3>
-                <p className="text-sm text-[#4A4745] leading-relaxed mb-3">{service.desc}</p>
+                <div
+                  className="text-sm text-[#4A4745] leading-relaxed mb-3 [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
+                  dangerouslySetInnerHTML={{ __html: service.desc }}
+                />
                 {service.href && (
                   <Link to={service.href} className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
                     Learn more <ArrowRight className="w-3.5 h-3.5" />
@@ -2103,7 +1727,7 @@ export default function CateringMainPage() {
             eyebrow="Questions"
             title="Catering FAQ"
           />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={CATERING_FAQS} defaultOpenCount={4} />
         </div>
       </section>
 

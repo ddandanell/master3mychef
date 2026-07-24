@@ -48,11 +48,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   catering: {
     path: '/catering',
-    title: 'Catering Bali | BBQ, Buffet, Plated & Babi Guling — myCHEF',
+    title: 'Catering Bali | Premium Villa, Wedding & Corporate Catering | myCHEF',
     description:
-      'Bali catering for villas & events: BBQ, buffet, plated dinners, Babi Guling, grazing tables. Chef, staff & cleanup included. WhatsApp for a quote.',
+      'Premium catering across Bali for private villas, weddings, corporate events, retreats and celebrations. Chef-led hospitality, full setup and tailored menus by myCHEF.',
     canonical: `${SITE}/catering`,
-    h1: 'Villa Catering Bali. Chef, Staff & Setup Included.',
+    h1: 'Premium Catering in Bali for Every Occasion',
     ogImage: `${SITE}/hero-catering.webp`,
   },
 

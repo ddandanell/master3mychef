@@ -64,9 +64,10 @@ export default function FAQAccordion({ items, dark = false, defaultOpenCount = 0
               aria-labelledby={buttonId}
               className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[640px] opacity-100' : 'max-h-0 opacity-0'}`}
             >
-              <p className={`${mutedColor} text-sm px-4 md:px-5 pb-4 md:pb-5 leading-relaxed`}>
-                {item.a}
-              </p>
+              <div
+                className={`${mutedColor} text-sm px-4 md:px-5 pb-4 md:pb-5 leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5`}
+                dangerouslySetInnerHTML={{ __html: item.a }}
+              />
             </div>
           </div>
         )

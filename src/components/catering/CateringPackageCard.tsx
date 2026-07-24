@@ -12,6 +12,7 @@ interface CateringPackageCardProps {
   href?: string
   cta?: string
   accent?: string
+  details?: string
 }
 
 const cardClass = (linked: boolean, base: string) =>
@@ -27,6 +28,7 @@ export default function CateringPackageCard({
   href,
   cta = 'View details',
   accent = '#6B8E5A',
+  details,
 }: CateringPackageCardProps) {
   // Map light gold accents to AA-safe darker gold for text/badges on light card surfaces
   const isLightGold = accent.toLowerCase() === '#c5a028'
@@ -60,6 +62,13 @@ export default function CateringPackageCard({
         </h3>
         <p className="font-semibold text-lg mb-3" style={{ color: accessibleAccent }}>{price}</p>
         <p className="text-[#4A4745] text-sm mb-4 leading-relaxed">{description}</p>
+
+        {details && (
+          <div
+            className="text-[#4A4745] text-sm leading-relaxed mb-4 [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
+            dangerouslySetInnerHTML={{ __html: details }}
+          />
+        )}
 
         {includes && includes.length > 0 && (
           <div className="space-y-2 mb-5">

@@ -1,0 +1,483 @@
+Progress: 20/259 OK=16 mismatch=4 error=0
+Progress: 40/259 OK=36 mismatch=4 error=0
+Progress: 60/259 OK=56 mismatch=4 error=0
+Progress: 80/259 OK=76 mismatch=4 error=0
+Progress: 100/259 OK=94 mismatch=6 error=0
+Progress: 120/259 OK=107 mismatch=13 error=0
+Progress: 140/259 OK=122 mismatch=18 error=0
+Progress: 160/259 OK=129 mismatch=31 error=0
+Progress: 180/259 OK=139 mismatch=41 error=0
+Progress: 200/259 OK=150 mismatch=50 error=0
+Progress: 220/259 OK=159 mismatch=61 error=0
+Progress: 240/259 OK=177 mismatch=63 error=0
+
+=== Audit Summary ===
+Total: 259  OK: 184  Mismatch: 75  Errors: 0
+
+=== Mismatches ===
+
+/locations/bukit
+  live title: Private Dining in Bukit | Dining Guide & Chef Services
+  live desc:  Where to eat in Bukit: the area dining guide — restaurants, private dining and in-villa chef services for your Bukit stay. By myCHEF.
+  live h1:    Private ChefBukit Peninsula
+  ! h1: live='Private ChefBukit Peninsula' expected='Private Dining in Bukit: Where to Eat & In-Villa Chef Options'
+
+/locations/kuta
+  live title: Private Dining in Kuta | Dining Guide & Chef Services
+  live desc:  Where to eat in Kuta: the area dining guide — restaurants, private dining and in-villa chef services for your Kuta stay. By myCHEF.
+  live h1:    Private Chefin Kuta Bali
+  ! h1: live='Private Chefin Kuta Bali' expected='Private Dining in Kuta: Where to Eat & In-Villa Chef Options'
+
+/locations/denpasar
+  live title: Private Dining in Denpasar | Dining Guide & Chef Services
+  live desc:  Where to eat in Denpasar: the area dining guide — restaurants, private dining and in-villa chef services for your Denpasar stay. By myCHEF.
+  live h1:    Private Chefin Denpasar
+  ! h1: live='Private Chefin Denpasar' expected='Private Dining in Denpasar: Where to Eat & In-Villa Chef Options'
+
+/locations/jakarta
+  live title: Page Not Found | myCHEF — Private Chef Bali
+  live desc:  The page you are looking for does not exist. Explore private chef, Bali villa catering, fine dining, and event experiences with myCHEF.
+  live h1:    
+  ! title: live='Page Not Found | myCHEF — Private Chef Bali' expected='Private Chef Jakarta | Residences & Corporate Dining'
+  ! desc mismatch
+  ! h1: live='' expected='Private Chef in Jakarta'
+
+/private-chef-menteng
+  live title: Page Not Found | myCHEF — Private Chef Bali
+  live desc:  The page you are looking for does not exist. Explore private chef, Bali villa catering, fine dining, and event experiences with myCHEF.
+  live h1:    
+  ! title: live='Page Not Found | myCHEF — Private Chef Bali' expected='Private Chef Menteng | Diplomatic District Dining | myCHEF'
+  ! desc mismatch
+  ! h1: live='' expected='Private Chef in Menteng, Jakarta'
+
+/guide/private-chef-bali
+  live title: Private Chef in Bali | Complete Guide | myCHEF
+  live desc:  Everything you need to know about hiring a private chef in Bali — costs, what to expect, areas covered and how booking works.
+  live h1:    Private Chef in Bali — Every Villa Region We Serve
+  ! h1: live='Private Chef in Bali — Every Villa Region We Serve' expected='Private Chef in Bali — The Complete Guide'
+
+/blog/how-to-plan-villa-birthday-party-bali
+  live title: How to Plan a Villa Birthday Party in Bali: Complete Guide
+  live desc:  Step-by-step guide to planning a villa birthday party in Bali — catering formats, guest counts, timelines, styling & chef logistics.
+  live h1:    Villa Birthday Party in Bali
+  ! h1: live='Villa Birthday Party in Bali' expected='How to Plan a Villa Birthday Party in Bali'
+
+/blog/fine-dining-guide
+  live title: Fine Dining in Bali: Ultimate Guide (Restaurants & In-Villa)
+  live desc:  Discover fine dining in Bali — curated tasting menus, wine pairings and luxury culinary experiences, from restaurants to your villa.
+  live h1:    Fine Dining in Bali
+  ! h1: live='Fine Dining in Bali' expected='Fine Dining in Bali: The Ultimate Guide'
+
+/blog/wedding-private-chef-bali-planning-guide
+  live title: Wedding Private Chef in Bali: Planning & Logistics Guide
+  live desc:  How to plan catering for a Bali villa wedding with a private chef — menu planning, logistics and cost expectations.
+  live h1:    Wedding Private Chef in Bali
+  ! h1: live='Wedding Private Chef in Bali' expected='Wedding Private Chef in Bali: Planning & Logistics Guide'
+
+/blog/corporate-events-catering-bali-team-dining
+  live title: Corporate Events & Team Dining in Bali: Private Chef Guide
+  live desc:  How to plan corporate events, team meals and executive dinners in Bali with private chef catering.
+  live h1:    Corporate Events Catering in Bali — Team Dinners, Retreats & Incentive Meals
+  ! h1: live='Corporate Events Catering in Bali — Team Dinners, Retreats & Incentive Meals' expected='Corporate Events Catering in Bali — Team Dinners & Incentive Meals'
+
+/blog/romantic-dinner-at-home-bali-private-chef
+  live title: Romantic Dinner Bali | Private Villa Chef for Two | myCHEF
+  live desc:  Intimate five-course romantic dinners for two in your Bali villa: candlelight, flowers, sommelier pairing & Michelin-trained service. WhatsApp myCHEF.
+  live h1:    A Private DinnerBuilt for Two
+  ! title: live='Romantic Dinner Bali | Private Villa Chef for Two | myCHEF' expected='Romantic Dinner at Home in Bali with a Private Chef | myCHEF'
+  ! desc mismatch
+  ! h1: live='A Private DinnerBuilt for Two' expected='Romantic Dinner at Home in Bali with a Private Chef'
+
+/blog/corporate-events-catering-bali
+  live title: Corporate Catering Case Studies Bali | Real Events & Costs
+  live desc:  Real corporate event case studies in Bali — executive dinners, offsites, retreats & conference catering with outcomes and budgets.
+  live h1:    How Companies Run Flawless Corporate Events in Bali
+  ! title: live='Corporate Catering Case Studies Bali | Real Events & Costs' expected='Corporate Event Catering in Bali: 4 Real Case Studies'
+  ! desc mismatch
+  ! h1: live='How Companies Run Flawless Corporate Events in Bali' expected='Corporate Event Catering in Bali: Real Case Studies'
+
+/blog/how-to-hire-private-chef
+  live title: How to Hire a Private Chef in Bali: Complete Guide | myCHEF
+  live desc:  Step-by-step guide to hiring a private chef in Bali — qualifications, vetting, costs and the full booking process.
+  live h1:    How to Hire a Private Chef in Bali
+  ! title: live='How to Hire a Private Chef in Bali: Complete Guide | myCHEF' expected='How to Hire a Private Chef in Bali | Redirects to Full Guide'
+  ! desc mismatch
+
+/blog/bali-wedding-catering-private-chef-timeline
+  live title: Bali Wedding Catering Timeline: 6-Month Planning Guide
+  live desc:  The complete Bali wedding catering timeline — what to book, when to confirm, and how chefs coordinate with venues, planners and your schedule.
+  live h1:    Bali Wedding Catering with a Private Chef: Complete Timeline & Planning Guide
+  ! h1: live='Bali Wedding Catering with a Private Chef: Complete Timeline & Planning Guide' expected='Bali Wedding Catering with a Private Chef: Timeline & Planning Guide'
+
+/journal/private-chef-jakarta-guide
+  live title: Page Not Found | myCHEF — Private Chef Bali
+  live desc:  The page you are looking for does not exist. Explore private chef, Bali villa catering, fine dining, and event experiences with myCHEF.
+  live h1:    
+  ! title: live='Page Not Found | myCHEF — Private Chef Bali' expected='Private Chef Jakarta Guide: What to Expect (2026) | myCHEF'
+  ! desc mismatch
+  ! h1: live='' expected='Private Chef Services in Jakarta: What to Expect in 2026'
+
+/fine-dining/romantic-dinner
+  live title: Romantic Dinner Bali | Private Villa Chef for Two | myCHEF
+  live desc:  Intimate five-course romantic dinners for two in your Bali villa: candlelight, flowers, sommelier pairing & Michelin-trained service. WhatsApp myCHEF.
+  live h1:    A Private DinnerBuilt for Two
+  ! h1: live='A Private DinnerBuilt for Two' expected='A Private Dinner Built for Two'
+
+/fine-dining/tasting-menu
+  live title: Private Tasting Menu Bali | 5 & 7 Course Villa Degustation
+  live desc:  Signature 5 & 7 course private tasting menus in your Bali villa — Italian technique, Balinese ingredients, optional wine pairing. WhatsApp myCHEF.
+  live h1:    A Private Tasting MenuIn Your Bali Villa
+  ! h1: live='A Private Tasting MenuIn Your Bali Villa' expected='A Private Tasting Menu in Your Bali Villa'
+
+/fine-dining/chefs-table
+  live title: Chef Table Experience Bali | Private Counter Dining | myCHEF
+  live desc:  A private chef table at your Bali villa: counter-side seating, course-by-course commentary from Michelin-trained chefs. WhatsApp myCHEF.
+  live h1:    The Chef's Table
+  ! h1: live='The Chef's Table' expected='The Chef's Table — At Your Villa'
+
+/fine-dining/private-chef-bali
+  live title: Michelin Private Chef Bali | Fine Dining at Your Villa
+  live desc:  Book a Michelin-trained private chef for your Bali villa. Tasting menus, wine pairing, 5-act dining experiences. Transparent pricing. WhatsApp myCHEF.
+  live h1:    A Michelin-Trained Private Chef.At Your Villa.
+  ! h1: live='A Michelin-Trained Private Chef.At Your Villa.' expected='A Michelin-Trained Private Chef. At Your Space.'
+
+/catering/buffet
+  live title: Buffet Catering Bali | Large Group & Event Buffets | myCHEF
+  live desc:  Buffet catering in Bali for weddings, corporate retreats & large villa parties — full setup, service & cleanup included. WhatsApp myCHEF.
+  live h1:    Buffet Catering Bali for Weddings, Retreats & Large Groups
+  ! h1: live='Buffet Catering Bali for Weddings, Retreats & Large Groups' expected='Buffet Catering for Bali Villa Events'
+
+/catering/plated-catering
+  live title: Plated Catering Bali | Formal Villa Dinner Service | myCHEF
+  live desc:  Plated catering in Bali: formal 3-5 course table service tailored to your occasion and group size. WhatsApp myCHEF.
+  live h1:    Plated Dinner Catering Bali — Formal Multi-Course Service at Your Villa
+  ! h1: live='Plated Dinner Catering Bali — Formal Multi-Course Service at Your Villa' expected='Plated Dinner Bali for Private Villa Fine Dining'
+
+/catering/drop-off-catering
+  live title: Drop-Off Catering Bali | Chef Food Delivered to Your Villa
+  live desc:  Drop-off catering in Bali: premium chef-prepared food delivered to your villa, ready to serve. From per-person pricing. WhatsApp myCHEF.
+  live h1:    Drop-Off Catering Bali — Chef-Prepared Dinners, Delivered. No Staff, No Fuss.
+  ! h1: live='Drop-Off Catering Bali — Chef-Prepared Dinners, Delivered. No Staff, No Fuss.' expected='Drop-Off Catering — Bali Villa Dinners Delivered'
+
+/catering/babi-guling
+  live title: Babi Guling Catering Bali | Whole-Pig Roast at Your Villa
+  live desc:  Babi guling catering for Bali villas: traditional whole-pig roast for 10-50 guests, with halal alternatives. Celebration feasts. WhatsApp myCHEF.
+  live h1:    Babi Guling Catering Bali — The Island's Celebration Roast, at Your Villa
+  ! h1: live='Babi Guling Catering Bali — The Island's Celebration Roast, at Your Villa' expected='Babi Guling Catering Bali — A Proper Balinese Feast'
+
+/catering/grazing-tables
+  live title: Grazing Table Bali | Styled Event Platters & Spreads
+  live desc:  Grazing tables in Bali: artisan cheese, charcuterie & fresh fruit spreads styled for welcome drinks, weddings & poolside events. WhatsApp myCHEF.
+  live h1:    Grazing Tables Bali — Styled Spreads for Events, Weddings & Villas
+  ! h1: live='Grazing Tables Bali — Styled Spreads for Events, Weddings & Villas' expected='Grazing Tables Bali for Events, Villas & Parties'
+
+/catering/villa-catering
+  live title: Villa Catering Bali | Multi-Day Meal Plans for Groups
+  live desc:  Reliable in-villa catering for multi-day Bali stays: breakfast, lunch & dinner plans for families and groups of 10-150. From per-guest pricing. WhatsApp.
+  live h1:    Villa Catering Bali —Multi-Day Meal Plans & Group Stays
+  ! h1: live='Villa Catering Bali —Multi-Day Meal Plans & Group Stays' expected='Villa Catering Bali — Easy Lunches, Dinners & Long Stays'
+
+/catering/corporate-catering
+  live title: Corporate Catering Bali | Boardroom to Conference | myCHEF
+  live desc:  Corporate catering in Bali for offsites, boardroom dinners & conferences. Tax invoices (NPWP), executive service, dietary-exact menus. WhatsApp myCHEF.
+  live h1:    Corporate Catering Bali— The Catering Line for Teams, Meetings & Conferences
+  ! h1: live='Corporate Catering Bali— The Catering Line for Teams, Meetings & Conferences' expected='Corporate Catering Bali for Teams, Meetings & Events'
+
+/catering/retreat-catering
+  live title: Retreat Catering Bali | Healthy Group Meal Plans | myCHEF
+  live desc:  Retreat catering in Bali: plant-forward, nutrient-dense meal plans for multi-day retreats. Vegan, raw & gluten-free specialists. WhatsApp myCHEF.
+  live h1:    Retreat Catering Bali — Per-Day Meal Plans for Multi-Day Retreats
+  ! h1: live='Retreat Catering Bali — Per-Day Meal Plans for Multi-Day Retreats' expected='Retreat Catering Bali for Wellness, Yoga & Group Stays'
+
+/catering/floating-breakfast
+  live title: Floating Breakfast Bali | Chef-Prepared, Island-Wide
+  live desc:  Floating breakfast in your Bali villa pool — chef-prepared and styled, delivered island-wide incl. Ubud, Uluwatu & Nusa Dua. WhatsApp myCHEF.
+  live h1:    Floating Breakfast in Bali — Chef-Prepared, Served in Your Villa Pool
+  ! h1: live='Floating Breakfast in Bali — Chef-Prepared, Served in Your Villa Pool' expected='Floating Breakfast — In Your Bali Villa Pool'
+
+/events/birthdays
+  live title: Birthday Catering Bali | Private Villa Celebrations | myCHEF
+  live desc:  Birthday catering for Bali villas: live chef BBQs or fine-dining menus with food, drinks, cake & styling handled. WhatsApp myCHEF.
+  live h1:    Birthday Catering in Bali — Dinners & Villa Parties, Fully Run
+  ! h1: live='Birthday Catering in Bali — Dinners & Villa Parties, Fully Run' expected='Birthday Parties in Bali — Villa Catering & Events'
+
+/events/anniversaries
+  live title: Anniversary Dinner Bali | Private Romantic Catering | myCHEF
+  live desc:  Celebrate your anniversary with an intimate styled dinner under the stars — custom menus and sommelier pairing at your Bali villa. WhatsApp myCHEF.
+  live h1:    Anniversary Dinners in Bali — Built Around Your Story
+  ! h1: live='Anniversary Dinners in Bali — Built Around Your Story' expected='Anniversary Celebrations in Bali — Private Chef Dinners'
+
+/events/villa-parties
+  live title: Villa Party Catering Bali | Social Events Done Right
+  live desc:  Villa party catering in Bali: cocktail receptions, pool parties & BBQs with food, bar staff and coordination. WhatsApp myCHEF.
+  live h1:    Villa Party Catering in Bali — Food, Bar, Staff & Cleanup, One Team
+  ! h1: live='Villa Party Catering in Bali — Food, Bar, Staff & Cleanup, One Team' expected='Villa Parties in Bali — BBQ, Pool, Cocktail & Night Events'
+
+/in-villa-service/butlers
+  live title: Hire a Butler in Bali | From IDR 1.2M/Day | myCHEF
+  live desc:  Hire a professional butler in Bali by the day or shift — discreet, anticipatory guest service for villas & estates. WhatsApp myCHEF.
+  live h1:    Hire a Private Butler in Bali
+  ! h1: live='Hire a Private Butler in Bali' expected='Hire a Butler in Bali'
+
+/in-villa-service/bartenders
+  live title: Private Bartender Bali | Hire for Your Villa Party | myCHEF
+  live desc:  Hire a private bartender for your Bali villa party or wedding — classic cocktails, full bar setup, premium service. WhatsApp myCHEF.
+  live h1:    Private Bartender Hire for Villas & Events in Bali
+  ! h1: live='Private Bartender Hire for Villas & Events in Bali' expected='Private Bartender Hire for Villas & Events'
+
+/in-villa-service/mixology
+  live title: Mixologist Hire Bali | Custom Cocktail Programs | myCHEF
+  live desc:  Hire a mixologist in Bali: signature cocktail creation and custom bar programs for villa events & weddings. Premium ingredients. WhatsApp myCHEF.
+  live h1:    Mixology in Bali — Custom Cocktail Programs at Your Villa
+  ! h1: live='Mixology in Bali — Custom Cocktail Programs at Your Villa' expected='Mixology in Bali — Custom Cocktail Programs'
+
+/in-villa-service/sommelier
+  live title: Private Sommelier Hire Bali | Wine Service at Your Villa
+  live desc:  Hire a private sommelier for your Bali villa dinner — pairings, sourcing advice and professional cellar service. WhatsApp myCHEF.
+  live h1:    Private Sommelier Hire in Bali — Wine Service at Your Villa
+  ! h1: live='Private Sommelier Hire in Bali — Wine Service at Your Villa' expected='Sommelier Service in Bali — At Your Villa'
+
+/in-villa-service/host-hostess
+  live title: Hostess Hire Bali | Professional Event Reception | myCHEF
+  live desc:  Hire professional event hosts & hostesses in Bali for guest reception and event flow at weddings and corporate events. WhatsApp myCHEF.
+  live h1:    Host & Hostess Hire in Bali — Professional Event Reception
+  ! h1: live='Host & Hostess Hire in Bali — Professional Event Reception' expected='Host & Hostess Hire in Bali'
+
+/bar-services/
+  live title: Bar Consultant Bali | B2B Bar Services & Consulting | MyChef
+  live desc:  Bali’s B2B bar consultancy: staff training, cocktail menus, staffing, audits & bar management for hotels, villas and beach clubs. Request a proposal.
+  live h1:    Bar Consultant Bali
+  ! h1: live='Bar Consultant Bali' expected='Bar Consultant Bali — B2B Bar Services'
+
+/bar-services/contact/
+  live title: Contact MyChef Bar Services | Bar Consultancy Bali
+  live desc:  Request a proposal, book a site survey or check staff availability — WhatsApp, phone or enquiry form. Response within four business hours.
+  live h1:    Let's talk about your bar
+  ! h1: live='Let's talk about your bar' expected='Let’s Talk About Your Bar'
+
+/experiences/private-cocktail-party
+  live title: Private Cocktail Party Bali | Chef & Bartender at Your Villa
+  live desc:  Host a private cocktail party at your Bali villa: personal chef, bartender, canapes, custom cocktails & full bar setup. WhatsApp myCHEF.
+  live h1:    Private Cocktail Party Bali — Your Villa, Our Bar
+  ! h1: live='Private Cocktail Party Bali — Your Villa, Our Bar' expected='Private Cocktail Party Bali'
+
+/experiences/sushi-masterclass
+  live title: Sushi Masterclass Bali | Private Villa Sushi Class | myCHEF
+  live desc:  Book a private sushi masterclass at your Bali villa — maki, nigiri & hand rolls with a sushi chef. Ingredients & equipment included. WhatsApp myCHEF.
+  live h1:    Private Sushi Masterclass in Bali — Roll, Slice, Eat
+  ! h1: live='Private Sushi Masterclass in Bali — Roll, Slice, Eat' expected='Sushi Masterclass Bali'
+
+/experiences/private-cooking-class
+  live title: Private Cooking Class Bali | Chef Comes to Your Villa
+  live desc:  Book a private cooking class at your Bali villa — Italian, Indonesian, Japanese, French, healthy or kids. Ingredients included. WhatsApp myCHEF.
+  live h1:    Private Cooking Class in Bali — The Chef Comes to Your Villa
+  ! h1: live='Private Cooking Class in Bali — The Chef Comes to Your Villa' expected='Private Cooking Class Bali'
+
+/experiences/kids-birthday-chef-party
+  live title: Kids Birthday Party Bali | Chef-Led Cooking Party | myCHEF
+  live desc:  Kids cooking birthday parties at your Bali villa: pizza making, cupcakes, mocktails, chef hats, entertainment & cleanup. WhatsApp myCHEF.
+  live h1:    Kids Birthday Chef Party in Bali — They Cook, You Relax
+  ! h1: live='Kids Birthday Chef Party in Bali — They Cook, You Relax' expected='Kids Birthday Chef Party Bali'
+
+/experiences/champagne-oyster-experience
+  live title: Champagne & Oyster Experience Bali | Villa Oyster Bar
+  live desc:  Private oyster bar & champagne reception at your Bali villa, wedding or event — fresh oysters, service staff, premium upgrades. WhatsApp myCHEF.
+  live h1:    Champagne & Oyster Hour at Your Bali Villa
+  ! h1: live='Champagne & Oyster Hour at Your Bali Villa' expected='Champagne & Oyster Experience Bali'
+
+/experiences/romantic-proposal-dinner
+  live title: Proposal Package Bali | Full-Service Villa Proposal | myCHEF
+  live desc:  Complete Bali proposal packages: private chef dinner, flowers, candles, styling, photographer & musician — fully coordinated. Confidential quote.
+  live h1:    Proposal Package Bali — One Plan, One Team, One Yes
+  ! h1: live='Proposal Package Bali — One Plan, One Team, One Yes' expected='Romantic Proposal Dinner Bali — Everything Arranged'
+
+/bar-services/temporary-bartender-staffing/
+  live title: Bartender Hire Bali | Temporary Bar Staffing for Venues
+  live desc:  Temporary bartender & barback staffing for Bali venues, weddings and events — vetted, insured, from IDR 250K/hour. WhatsApp MyChef Bar Services.
+  live h1:    Bartender Hire Bali
+  ! h1: live='Bartender Hire Bali' expected='Bartender Hire Bali — Temporary Bar Staffing'
+
+/bar-services/resources/how-much-does-a-bartender-cost-bali/
+  live title: How Much Does a Bartender Cost in Bali? (2026) | MyChef
+  live desc:  Real 2026 prices: event bartenders from IDR 250K/hour, packages from IDR 9M — what drives cost and how to budget.
+  live h1:    How Much Does a Bartender Cost in Bali?
+  ! h1: live='How Much Does a Bartender Cost in Bali?' expected='How Much Does a Bartender Cost in Bali? (2026)'
+
+/bar-services/resources/bartender-salary-benchmarks-bali/
+  live title: Bartender Salary & Staffing Costs in Bali — 2026 | MyChef
+  live desc:  2026 benchmarks: bartender pay from IDR 3.8M/month, on-costs, and the real maths of in-house hiring vs outsourced staffing.
+  live h1:    Bartender Salary & Staffing Costs in Bali — 2026 Benchmarks
+  ! h1: live='Bartender Salary & Staffing Costs in Bali — 2026 Benchmarks' expected='Bartender Salary & Staffing Costs in Bali — 2026'
+
+/bar-services/resources/how-many-bartenders-per-guest/
+  live title: How Many Bartenders Per Guest? Bali Event Guide | MyChef
+  live desc:  Bar staffing ratios for 20-300 guests: the 1:15-20 rule, when to add barbacks, and how ratios affect service.
+  live h1:    How Many Bartenders Do You Need Per Guest?
+  ! h1: live='How Many Bartenders Do You Need Per Guest?' expected='How Many Bartenders Per Guest? Bali Event Guide'
+
+/bar-services/resources/beverage-cost-percentage-guide/
+  live title: Beverage Cost Percentage Explained | MyChef
+  live desc:  What beverage cost percentage is, the 18-24% benchmark, how shrinkage erodes it and the controls that fix it.
+  live h1:    Beverage Cost Percentage — The Complete Guide
+  ! h1: live='Beverage Cost Percentage — The Complete Guide' expected='Beverage Cost Percentage Explained'
+
+/bar-services/resources/how-to-open-a-bar-in-bali/
+  live title: How to Open a Bar in Bali: Licences & Costs | MyChef
+  live desc:  Step-by-step guide to opening a Bali bar: TDUP and SIUP-MB licences, PT PMA rules, budgets and timelines.
+  live h1:    How to Open a Bar in Bali — Licences, Costs, Timeline
+  ! h1: live='How to Open a Bar in Bali — Licences, Costs, Timeline' expected='How to Open a Bar in Bali: Licences & Costs'
+
+/catering
+  live title: Catering Bali | Villa & Event Catering by Private Chefs
+  live desc:  Full-service catering in Bali: BBQ nights, buffets, plated dinners, babi guling & grazing for groups of 10-150. Transparent pricing. WhatsApp myCHEF.
+  live h1:    Premium Catering in BaliFor Every Occasion.
+  ! h1: live='Premium Catering in BaliFor Every Occasion.' expected='Catering in Bali — Built for Groups, Parties & Hosted Dinners'
+
+/events
+  live title: Event Catering Bali | One Team for Your Entire Event
+  live desc:  Bali event catering for weddings, birthdays, corporate retreats & villa parties — one team for food, staff, bar & coordination. WhatsApp myCHEF.
+  live h1:    Event Catering in Bali — One Team, Your Villa, Zero Stress
+  ! h1: live='Event Catering in Bali — One Team, Your Villa, Zero Stress' expected='Events in Bali, Run by One Team. You Just Host.'
+
+/villa-event-packages
+  live title: Bali Villa Event Packages | All-Inclusive Events | myCHEF
+  live desc:  All-inclusive Bali villa event packages: private chef, bar service, staffing, transport & cleanup in one bundle. Tailored quotes. WhatsApp myCHEF.
+  live h1:    Bali Villa Event Packages — One Event, Everything Arranged
+  ! h1: live='Bali Villa Event Packages — One Event, Everything Arranged' expected='Bali Villa Event Packages — Everything, Arranged'
+
+/vip-transport-bali
+  live title: VIP Transport Bali | Luxury Cars & Yachts | myCHEF
+  live desc:  VIP transport in Bali: luxury car hire, minibuses, yacht charters & event logistics with English-speaking drivers. Enquire via WhatsApp.
+  live h1:    VIP Transport in Bali — Arrival, Arranged
+  ! h1: live='VIP Transport in Bali — Arrival, Arranged' expected='VIP Transport Bali — Luxury Cars, Yachts & Private Transfers'
+
+/complete-villa-experience
+  live title: Complete Villa Experience Bali | End-to-End Hospitality
+  live desc:  Full-service villa hospitality in Bali: airport transfers, daily private chef, events, staff, concierge & cleanup — one team, arrival to departure.
+  live h1:    Complete Villa Experience Bali — We Handle Everything, From Arrival to Departure
+  ! h1: live='Complete Villa Experience Bali — We Handle Everything, From Arrival to Departure' expected='Complete Villa Experience — We Handle Everything'
+
+/services
+  live title: Private Chef Services Bali | Compare All Services | myCHEF
+  live desc:  Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit.
+  live h1:    Private Chef Services in Bali — Every Experience, One Team
+  ! h1: live='Private Chef Services in Bali — Every Experience, One Team' expected='Our Services'
+
+/kids-menus
+  live title: Kids' Party Menus Bali | 6 Fun Options | myCHEF
+  live desc:  Fun, healthy kids' party menus in Bali — pizza, pasta, burgers, seafood & Indonesian. From IDR 250K/child. Nut-free options.
+  live h1:    Kids' Menus in Bali — Six Menus Children Actually Finish
+  ! h1: live='Kids' Menus in Bali — Six Menus Children Actually Finish' expected='Little Guests. Big Flavours.'
+
+/bbq-grill
+  live title: BBQ Grill Menu Bali | Live Grill Station & Prices | myCHEF
+  live desc:  Browse myCHEF BBQ grill menus: live grill station, seafood, Wagyu & ribs at your Bali villa. Menus from IDR 950K. WhatsApp to book.
+  live h1:    The BBQ Grill Menu — Fire, Smoke & Live Grilling at Your Villa
+  ! h1: live='The BBQ Grill Menu — Fire, Smoke & Live Grilling at Your Villa' expected='The BBQ Grill Menu — Fire. Smoke. Flavour.'
+
+/help
+  live title: Help Centre | Private Chef & Catering Bali | myCHEF
+  live desc:  Answers to your questions about booking a private chef or catering service in Bali — guides, pricing and planning support.
+  live h1:    How can we help?
+  ! h1: live='How can we help?' expected='How Can We Help?'
+
+/villa-chef
+  live title: Villa Chef Bali | Daily Chef Service for Your Stay | myCHEF
+  live desc:  A dedicated villa chef in Bali for breakfast, lunch & dinner every day of your stay. Half day IDR 2M, full day IDR 4M. Groceries at cost. WhatsApp myCHEF.
+  live h1:    Your Villa Cheffor Everyday Dining in Bali
+  ! desc mismatch
+  ! h1: live='Your Villa Cheffor Everyday Dining in Bali' expected='Your Private Chef for Everyday Villa Dining'
+
+/recommended-services
+  live title: Build Your Perfect Villa Experience | myCHEF Bali
+  live desc:  Tell myCHEF what you are hosting and get matched to the right service — guest count, mood and budget.
+  live h1:    Not Sure What You Need? We'll Help.
+  ! h1: live='Not Sure What You Need? We'll Help.' expected='Not Sure What You Need? We’ll Help.'
+
+/locations
+  live title: Private Chef Locations Bali | All Areas We Serve | myCHEF
+  live desc:  Private chef coverage across Bali & Jakarta — Seminyak, Canggu, Ubud, Uluwatu and 60+ areas. Find your location. WhatsApp myCHEF.
+  live h1:    Private Chef & HospitalityAcross Bali
+  ! h1: live='Private Chef & HospitalityAcross Bali' expected='Private Chef & Hospitality Across Bali & Jakarta'
+
+/pricing
+  live title: Private Chef Bali Prices | Catering & Event Pricing | myCHEF
+  live desc:  Transparent myCHEF pricing: private chef rates, menu prices, catering & event packages in Bali. No hidden fees. Get a quote in 1 hour.
+  live h1:    Private Chef Bali Prices — Every Number, Upfront
+  ! h1: live='Private Chef Bali Prices — Every Number, Upfront' expected='Transparent Pricing for Every Experience'
+
+/contact
+  live title: Contact myCHEF | Private Chef & Catering Bali
+  live desc:  Contact myCHEF for private chef bookings, catering and event enquiries in Bali — replies within 1 hour on WhatsApp.
+  live h1:    We’ll reply within 1 hour on WhatsApp.
+  ! h1: live='We’ll reply within 1 hour on WhatsApp.' expected='Contact Us'
+
+/partner-platform
+  live title: Certified Partner Programme Bali | myCHEF for Villas
+  live desc:  Become a myCHEF certified partner — preferred private chef and staffing services for Bali villas, with partner rates and priority booking.
+  live h1:    The myCHEF Certified Partner Programme
+  ! title: live='Certified Partner Programme Bali | myCHEF for Villas' expected='Partner Platform | myCHEF for Villas & Venues'
+  ! desc mismatch
+  ! h1: live='The myCHEF Certified Partner Programme' expected='Partner Platform'
+
+/press
+  live title: Press & Media | myCHEF Bali
+  live desc:  Press coverage, media kit and brand story for myCHEF — Bali private chef and catering service.
+  live h1:    myCHEF.id Media Kit
+  ! h1: live='myCHEF.id Media Kit' expected='myCHEF Media Kit'
+
+/terms
+  live title: Terms of Service | myCHEF
+  live desc:  Terms of service for myCHEF private chef bookings, catering and events in Bali.
+  live h1:    Payment & Booking Terms
+  ! h1: live='Payment & Booking Terms' expected='Terms of Service'
+
+/blog/drop-off-catering-bali
+  live title: Drop-Off Catering in Bali: How Villa Food Delivery Works
+  live desc:  How drop-off catering works in Bali — what is delivered, areas covered, pricing and when to choose it over a full chef service.
+  live h1:    Drop-Off Catering in Bali -- Ready-to-Serve Villa Food Delivered
+  ! h1: live='Drop-Off Catering in Bali -- Ready-to-Serve Villa Food Delivered' expected='Drop-Off Catering in Bali: What to Know Before You Order'
+
+/blog/hostess-hire-bali
+  live title: Hiring an Event Hostess in Bali: What to Know
+  live desc:  What professional event hostesses do, when you need one, and how hiring works for Bali villa parties and corporate events.
+  live h1:    Hostess Hire in Bali -- Professional Event Host and Greeter Service
+  ! h1: live='Hostess Hire in Bali -- Professional Event Host and Greeter Service' expected='Event Hostess Hire in Bali — A Practical Guide'
+
+/blog/private-chef-surabaya-guide
+  live title: Page Not Found | myCHEF — Private Chef Bali
+  live desc:  The page you are looking for does not exist. Explore private chef, Bali villa catering, fine dining, and event experiences with myCHEF.
+  live h1:    
+  ! title: live='Page Not Found | myCHEF — Private Chef Bali' expected='Private Chef Surabaya | In-Home & Corporate Catering'
+  ! desc mismatch
+  ! h1: live='' expected='Private Chef in Surabaya — In-Home Chef Service for East Java'
+
+/blog/tasting-menu-bali
+  live title: Private Tasting Menus in Bali: What to Expect
+  live desc:  What a private tasting menu in Bali involves — courses, market-led menus, dietary adaptation and wine pairing, explained.
+  live h1:    Private Tasting Menu in Bali -- Multi-Course Chef's Dinner at Your Villa
+  ! h1: live='Private Tasting Menu in Bali -- Multi-Course Chef's Dinner at Your Villa' expected='Private Tasting Menus in Bali — What to Expect'
+
+/blog/luxury-dining-bali
+  live title: Luxury Private Dining Bali: Ultra-Premium Villa Experiences
+  live desc:  Luxury private dining in Bali by executive chefs with Michelin credentials — bespoke menus, premium ingredients, full front-of-house service.
+  live h1:    Luxury Private Dining in Bali -- Ultra-Premium In-Villa Chef Experiences
+  ! h1: live='Luxury Private Dining in Bali -- Ultra-Premium In-Villa Chef Experiences' expected='Luxury Private Dining in Bali'
+
+/blog/fine-dining-at-home-bali
+  live title: Fine Dining at Home in Bali: How It Works
+  live desc:  Fine dining at home in Bali — how restaurant-quality menus, plating and service are delivered to your villa by professional private chefs.
+  live h1:    Fine Dining at Home in Bali -- Restaurant Quality Delivered to Your Villa
+  ! h1: live='Fine Dining at Home in Bali -- Restaurant Quality Delivered to Your Villa' expected='Fine Dining at Home in Bali — What to Expect'
+
+/blog/holiday-chef-bali
+  live title: Holiday Chef Bali | Christmas, New Year & Festive Season
+  live desc:  Holiday chef service in Bali for Christmas, New Year, and the festive season. Roast, seafood, Balinese spread, or bespoke menus. All villa areas.
+  live h1:    Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF
+  ! h1: live='Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF' expected='Holiday Chef Bali -- Christmas, New Year & Festive Season  myCHEF'
+
+/blog/hotel-restaurant-chef-staffing
+  live title: Hotel & Restaurant Chef Staffing in Bali: F&B Hiring Guide
+  live desc:  How chef staffing works for Bali hotels, resorts & restaurants — roles, contracts, salaries and placement options.
+  live h1:    Hotel and Restaurant Chef Staffing Bali -- F&B Culinary Recruitment
+  ! h1: live='Hotel and Restaurant Chef Staffing Bali -- F&B Culinary Recruitment' expected='Hotel & Restaurant Chef Staffing Bali — F&B Hiring Guide'

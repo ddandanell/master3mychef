@@ -743,5 +743,12 @@ export const LANDING_PAGES: ContentEntry[] = [
     "title": "Private Chef Breakfast Bali | Poolside Villa Service",
     "description": "Wake up to a chef-prepared breakfast in your Bali villa. Floating trays, fresh juices, and international spreads.",
     "date": "2026-05-17"
-  }
+  },
+{
+    "slug": "private-chef-menteng",
+    "title": "Private Chef Menteng | Diplomatic District Dining | myCHEF",
+    "description": "Discreet private chef services for Jakarta's Menteng district — elite residential hospitality by Michelin-trained chefs. WhatsApp myCHEF.",
+    "date": "2026-05-17",
+    "h1": "Private Chef in Menteng, Jakarta"
+}
 ]

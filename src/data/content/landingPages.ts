@@ -4,14 +4,14 @@ import type { ContentEntry } from '@/lib/blog'
 export const LANDING_PAGES: ContentEntry[] = [
   {
     "slug": "villa-bbq-catering-bali",
-    "title": "Villa BBQ Catering Bali | Best Private BBQ Experiences",
-    "description": "The #1 villa BBQ catering service in Bali. Fresh grills, chef-led service, and full setup for your villa poolside party.",
+    "title": "Villa BBQ Catering Bali | In-Villa BBQ Party Packages",
+    "description": "In-villa BBQ party packages in Bali: chef, grill, setup & cleanup at your villa poolside. Packages for 6-80 guests with per-pax pricing. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
   {
     "slug": "bali-wedding-catering-packages",
-    "title": "Bali Wedding Catering Packages 2026 | Private Estate Weddings",
-    "description": "Transparent wedding catering packages for Bali villa weddings. Plated dinners, buffets, and cocktail receptions.",
+    "title": "Bali Wedding Catering Packages & Prices 2026",
+    "description": "Transparent Bali wedding catering packages: plated, buffet & cocktail reception pricing by guest count for private villa weddings. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
   {
@@ -34,8 +34,8 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "seafood-bbq-catering-bali",
-    "title": "Seafood BBQ Catering Bali | Direct-from-Market Freshness",
-    "description": "Fresh seafood BBQs for Bali villas. Snapper, prawns, lobster, and more grilled live at your poolside.",
+    "title": "Seafood BBQ Bali | Market-Fresh Grill at Your Villa | myCHEF",
+    "description": "Fresh seafood BBQs for Bali villas: snapper, prawns, lobster grilled live poolside, sourced direct from Jimbaran market. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
   {
@@ -95,7 +95,7 @@ export const LANDING_PAGES: ContentEntry[] = [
   {
     "slug": "wedding-catering-indonesia",
     "title": "Wedding Catering Indonesia | Villa Wedding Specialists",
-    "description": "Premium wedding catering for villa weddings in Indonesia. Customized menus, full service teams, and event coordination.",
+    "description": "Premium wedding catering across Indonesia — Bali, Jakarta & beyond. Custom menus, full service teams and event coordination. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
   {

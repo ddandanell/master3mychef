@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Calendar, Check, ChevronLeft, ChevronRight, Clock3, MessageCircle, Utensils } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, serviceWithAggregateOfferSchema } from './SeoHead'
 import { BLOG_POSTS, GUIDES, LANDING_PAGES } from '@/data/sitemap'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import { CHEF_FOR_HIRE_INDONESIA_CONTENT } from '@/data/content/chefForHireIndonesia'
@@ -87,7 +87,41 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         }
       : null
 
-  const landingServiceSchema = kind === 'landing' ? serviceSchema(entry.title, entry.description, canonical) : null
+  const landingServiceSchema = (() => {
+    if (kind !== 'landing') return null
+    if (entry.slug === 'bali-wedding-catering-packages') {
+      return serviceWithAggregateOfferSchema({
+        name: 'Bali Wedding Catering Packages',
+        description: 'Transparent per-guest wedding catering packages for Bali villa weddings: intimate dinners from IDR 700K++/person, full receptions IDR 1.5M–3M++/person, all-inclusive of chefs, service staff, equipment and cleanup.',
+        url: canonical,
+        lowPrice: '700000',
+        highPrice: '3000000',
+      })
+    }
+    if (entry.slug === 'wedding-catering-indonesia') {
+      const schema = serviceWithAggregateOfferSchema({
+        name: 'Wedding Catering Indonesia',
+        description: 'Premium wedding catering across Indonesia with confirmed teams in Bali and Jakarta: villa and private-estate weddings, custom menus, full service brigades and coordination, from IDR 700K–3M++/person.',
+        url: canonical,
+        lowPrice: '700000',
+        highPrice: '3000000',
+      })
+      // @ts-expect-error provider object supports areaServed override
+      schema.provider = {
+        '@type': 'LocalBusiness',
+        name: 'myCHEF',
+        url: SITE,
+        telephone: '+62 896-7407-2020',
+      }
+      // @ts-expect-error extend service schema with multi-region areaServed
+      schema.areaServed = [
+        { '@type': 'Place', name: 'Bali, Indonesia' },
+        { '@type': 'Place', name: 'Jakarta, Indonesia' },
+      ]
+      return schema
+    }
+    return serviceSchema(entry.title, entry.description, canonical)
+  })()
   const breadcrumbJsonLd = isArticle ? breadcrumbSchema(entry.title, canonical, hubLabel, `${SITE}${hubPath}`) : breadcrumbSchema(entry.title, canonical)
   const faqItems = isChefForHireIndonesia
     ? [
@@ -98,10 +132,31 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         { question: 'Can myCHEF find a full-time or live-in chef?', answer: 'Yes. Permanent roles use a placement process with a household brief, matched profiles, interviews, cooking trials, contract support, and ongoing follow-up.' },
         { question: 'Where in Indonesia can I hire a myCHEF chef?', answer: 'Regular service is available across Bali. Assignments in Lombok, on yachts, at remote estates, and in other Indonesian locations are assessed individually based on schedule and logistics.' },
       ]
-    : [
-        { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
-        { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond, covering 560+ villas across the island.' },
-      ]
+    : entry.slug === 'bali-wedding-catering-packages'
+      ? [
+          { question: 'What is the minimum spend or guest count?', answer: 'Intimate packages start from 10 guests; buffet and live-station formats from 30. Below 20 guests a private chef dinner format is often better value.' },
+          { question: 'Are these prices really all-in?', answer: 'Prices are quoted ++ (11% government tax + 10% service charge) with the all-in equivalent shown. Proposals state one final total with groceries at cost and no markups.' },
+          { question: 'Do packages include staff, equipment and cleanup?', answer: 'Yes — chefs, waiters, setup crew, coordinator, mobile kitchen equipment, service ware and full cleanup are included. Rentals and bar stock are itemised separately.' },
+          { question: 'Can we split the weekend into different packages?', answer: 'Yes — welcome dinner, reception and recovery brunch are quoted as separate lines in one proposal.' },
+          { question: 'When do we pay?', answer: 'A deposit confirms the date (deposit level pending business confirmation); the balance is due before the event, with tiered written cancellation terms.' },
+          { question: 'Do you cater dietary and halal weddings?', answer: 'Yes — halal-friendly, vegan, vegetarian, gluten-free and allergy protocols are standard, with separate prep lines where required.' },
+          { question: 'Do packages change for peak season?', answer: 'Package prices do not change by season, but peak dates (July–September, December–January) book 3–10 months ahead.' },
+          { question: 'What if it rains on an outdoor reception?', answer: 'Every outdoor package includes a wet-weather plan: marquee coordination and an agreed indoor relocation layout.' },
+        ]
+      : entry.slug === 'wedding-catering-indonesia'
+        ? [
+            { question: 'Which cities do you cover?', answer: 'Bali and Jakarta are confirmed service regions with local teams. Weddings elsewhere in Indonesia are reviewed case by case.' },
+            { question: 'Is pricing different outside Bali?', answer: 'Jakarta follows the same structure — IDR 1.5M–3M++ per person for receptions, intimate dinners from IDR 700K++. Other regions add travel and logistics as transparent line items.' },
+            { question: 'Can you cater large Indonesian weddings?', answer: 'Yes — from 10 to 250+ guests, with buffet and live-station formats and multi-event programmes quoted in one proposal.' },
+            { question: 'Do you offer halal wedding catering?', answer: 'Yes — halal-friendly menus with separate preparation are standard; full halal certification requirements can be discussed at the consult.' },
+            { question: 'How do tastings work if we are planning remotely?', answer: 'Tastings are scheduled around your travel in the weeks before the wedding; menu development happens remotely by WhatsApp and video call.' },
+            { question: 'How far ahead should we book?', answer: 'Peak-season Bali dates: 3–10 months. Jakarta and off-peak: 1–3 months. Large multi-event weddings should start earlier.' },
+            { question: 'What deposit is required?', answer: 'A deposit confirms the date (deposit level pending business confirmation), with the balance due before the event and written cancellation tiers.' },
+          ]
+        : [
+            { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
+            { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond, covering 560+ villas across the island.' },
+          ]
   const jsonLdArr = [
     breadcrumbJsonLd,
     faqPageSchema(faqItems),

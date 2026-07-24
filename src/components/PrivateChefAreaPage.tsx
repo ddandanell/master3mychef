@@ -27,6 +27,7 @@ import { getPrivateChefArea, PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
 import { hasLocationPage } from '@/data/siteArchitecture'
 import { trackWhatsAppClick } from '@/lib/analytics'
 import { siteFacts } from '@/data/siteFacts'
+import { ArticleContentSection } from '@/components/shared'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -745,6 +746,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
           </p>
         </div>
       </section>
+    <ArticleContentSection />
     </div>
   )
 }

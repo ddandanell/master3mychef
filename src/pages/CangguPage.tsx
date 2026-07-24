@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
+import { ArticleContentSection } from '@/components/shared'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -353,6 +354,7 @@ export default function CangguPage() {
       </section>
 
       <CityDeepDive slug="canggu" cityName="Canggu" />
+    <ArticleContentSection />
     </div>
   )
 }

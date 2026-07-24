@@ -87,8 +87,38 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         }
       : null
 
+  const isGroupVillaDinner = kind === 'landing' && entry.slug === 'group-villa-dinner-packages-bali'
   const landingServiceSchema = (() => {
     if (kind !== 'landing') return null
+    if (entry.slug === 'group-villa-dinner-packages-bali') {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Group Villa Dinner Packages Bali',
+        provider: {
+          '@type': 'Organization',
+          name: 'myCHEF.id',
+          url: SITE,
+          telephone: '+62 896-7407-2020',
+          email: 'bali@mychef.id',
+        },
+        areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+        description: 'All-inclusive villa dinner packages for groups of 10 to 150 in Bali: menu, chefs, service staff, equipment and cleanup at one fixed per-person price.',
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'IDR',
+          price: '700000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '700000',
+            priceCurrency: 'IDR',
+            unitText: 'per person, before 11% government tax + 10% service charge',
+          },
+          description: 'Group villa dinner packages from IDR 700,000++/person for groups of 10-150',
+        },
+        url: canonical,
+      }
+    }
     if (entry.slug === 'bali-wedding-catering-packages') {
       return serviceWithAggregateOfferSchema({
         name: 'Bali Wedding Catering Packages',
@@ -352,10 +382,21 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                 { question: 'How far in advance should a corporate retreat be booked?', answer: 'Two to four weeks for most retreats; one to three months for peak season or groups above 50.' },
                 { question: 'What deposit is required?', answer: 'Deposit schedule pending business confirmation for multi-day corporate retreat programmes.' },
               ]
-            : [
-                { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
-                { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond, covering 560+ villas across the island.' },
-              ]
+            : isGroupVillaDinner
+              ? [
+                  { question: 'How much does a group villa dinner in Bali cost?', answer: 'Packages start from IDR 700,000++ per person for groups of 10-60 (larger events custom quoted), plus 11% government tax + 10% service charge, including menu, chefs, service staff, setup and cleanup.' },
+                  { question: 'What group sizes can myCHEF handle for villa dinners?', answer: 'From 10 to 150 guests. Above 60 guests, temporary prep stations and a full brigade are set up; above 30, a second chef is added.' },
+                  { question: 'Can kids be catered within a group dinner?', answer: "Yes — dedicated kids' menus from IDR 250,000 per child, served early and separately if preferred." },
+                  { question: 'How are dietary needs handled across a large group?', answer: 'Requirements are collected in advance; vegetarian, vegan, halal-sensitive, gluten-free and allergy-managed guests are covered in the main menu with every dish labelled.' },
+                  { question: 'Is a villa kitchen big enough for 20+ guests?', answer: 'Almost always. Kitchen capacity, power and serving space are assessed before the date and missing equipment is brought in.' },
+                  { question: 'Do villas charge extra for large gatherings?', answer: 'Some villas charge function fees and some neighbourhoods require a banjar permit for events beyond sleeping capacity. myCHEF flags this early and coordinates with the villa manager.' },
+                  { question: 'What deposit is required?', answer: 'A 50% deposit confirms the date and team; the balance is due before the event.' },
+                  { question: 'How far ahead should a group dinner be booked?', answer: 'A few days to a week is usually enough; earlier in peak season. Travel fees may apply for remote areas and are quoted upfront.' },
+                ]
+              : [
+                  { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
+                  { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond, covering 560+ villas across the island.' },
+                ]
   const jsonLdArr = entry.jsonLd
     ? entry.jsonLd
     : [

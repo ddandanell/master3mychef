@@ -31,7 +31,7 @@ const FAMILIES: FamilyCard[] = [
     name: 'Classic Set Menus',
     menuCount: CLASSIC_MENUS.length,
     price: 'From IDR 1.25M',
-    line: 'Six-course fine dining, cooked and served in your villa.',
+    line: 'Our most formal format. Six-course fine dining, cooked and served in your villa.',
     href: '/fine-dining/menus',
     image: '/generated/mychef-families-bali-classic-set-menus.webp',
     imageWidth: 960,
@@ -97,11 +97,34 @@ export default function DiningStylesPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
       <SeoHead
-        title="Dining Styles — Find Your Perfect Menu | myCHEF.id"
-        description="Browse myCHEF.id menus by dining style. 50 menus across 6 collections. Find your perfect dining experience."
+        title="Dining Styles Bali | Menus by Format & Occasion | myCHEF"
+        description="50 villa dining menus across 6 collections — plated fine dining, three-course, live BBQ, kids' menus & more. Compare dining styles and find your format."
         canonical={canonical}
         ogImage="/generated/mychef-dining-styles-bali-hero.webp"
-        jsonLd={[localBusinessSchema, breadcrumbSchema('Dining Styles', canonical)]}
+        jsonLd={[
+          localBusinessSchema,
+          breadcrumbSchema('Dining Styles', canonical),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: 'Dining Styles Bali — Menus by Format & Occasion',
+            description: "Fifty villa dining menus across six collections — plated fine dining, three-course, live BBQ, kids' menus and event catering — with format guidance and starting prices.",
+            url: canonical,
+            isPartOf: { '@type': 'WebSite', name: 'myCHEF', url: 'https://mychef.id' },
+            mainEntity: {
+              '@type': 'ItemList',
+              numberOfItems: 6,
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Classic Set Menus (24 menus, from IDR 1.25M/guest)', url: 'https://mychef.id/fine-dining/menus' },
+                { '@type': 'ListItem', position: 2, name: 'Three-Course (8 menus, from IDR 850K/guest)', url: 'https://mychef.id/three-course' },
+                { '@type': 'ListItem', position: 3, name: 'BBQ Grill (12 menus, from IDR 950K/guest)', url: 'https://mychef.id/bbq-grill' },
+                { '@type': 'ListItem', position: 4, name: "Kids' Menus (6 menus, from IDR 250K/child)", url: 'https://mychef.id/kids-menus' },
+                { '@type': 'ListItem', position: 5, name: 'Fine Dining Experience (from IDR 1.25M/guest)', url: 'https://mychef.id/fine-dining' },
+                { '@type': 'ListItem', position: 6, name: 'Catering & Events (custom quotes)', url: 'https://mychef.id/catering' },
+              ],
+            },
+          },
+        ]}
       />
 
       {/* Hero */}
@@ -132,9 +155,10 @@ export default function DiningStylesPage() {
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
             Find Your Perfect Menu
           </h1>
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Browse by dining style or occasion.
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-4 leading-relaxed">
+            Fifty menus across six collections — from six-course fine dining to poolside BBQs and nut-free kids' favourites. Every menu is cooked fresh in your villa by our own chefs, with starting prices shown up front.
           </p>
+          <p className="text-sm text-white/60 mb-10">All prices ++ (11% government tax + 10% service charge)</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href={WA_LINK}
@@ -204,13 +228,80 @@ export default function DiningStylesPage() {
         </div>
       </section>
 
+      {/* How to Choose a Dining Style */}
+      <section className="py-20 px-6 border-t border-white/10" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">How to Choose</p>
+            <h2 className="font-playfair text-3xl md:text-4xl mb-4">How to Choose a Dining Style</h2>
+            <p className="text-white/60 max-w-2xl mx-auto leading-relaxed">
+              The menu is only half the decision — the <em>format</em> is what shapes the evening. Here is how the five service formats compare, and when to choose each.
+            </p>
+          </div>
+          <div className="space-y-8">
+            <div>
+              <h3 className="font-playfair text-xl text-white mb-2">Plated (course-by-course)</h3>
+              <p className="text-white/70 leading-relaxed">
+                Each guest receives their own plate, served in sequence. Choose plated when the dinner <em>is</em> the event: anniversaries, client dinners, celebrations where you want restaurant pacing and presentation. Found in our <Link to="/fine-dining/menus" className="text-[#C5A028] hover:underline">classic set menus</Link> and <Link to="/three-course" className="text-[#C5A028] hover:underline">three-course</Link> collections.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-playfair text-xl text-white mb-2">Family-style (shared platters)</h3>
+              <p className="text-white/70 leading-relaxed">
+                Generous platters land in the middle of the table and guests help themselves. Choose family-style for groups who know each other — reunions, birthdays, long-table villa dinners. It is generous, social and relaxed.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-playfair text-xl text-white mb-2">Buffet</h3>
+              <p className="text-white/70 leading-relaxed">
+                Guests serve themselves from a styled spread. Choose buffet for headcounts above ~15, mixed dietary needs, or events where people eat in waves. The most cost-efficient way to feed a big group well.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-playfair text-xl text-white mb-2">Grazing</h3>
+              <p className="text-white/70 leading-relaxed">
+                A continuous table of boards, bites and small plates guests return to over hours. Choose grazing for cocktail-style events, sunset drinks, poolside afternoons and any gathering where standing and mingling matters more than sitting down.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-playfair text-xl text-white mb-2">Live-fire (BBQ grill station)</h3>
+              <p className="text-white/70 leading-relaxed">
+                The chef cooks over open flame at a grill station built at your villa. Choose live-fire when you want theatre: smoke, aroma and a chef in action become part of the entertainment. See the <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">BBQ Grill collection</Link>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Picker */}
+      <section className="py-20 px-6" style={{ background: '#050505' }}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Quick Picker</p>
+            <h2 className="font-playfair text-3xl md:text-4xl mb-4">Match the Occasion to the Style</h2>
+          </div>
+          <ul className="space-y-4 text-white/80">
+            <li><strong>Romantic dinner or anniversary</strong> &rarr; Plated, from the <Link to="/fine-dining" className="text-[#C5A028] hover:underline">Fine Dining</Link> collection</li>
+            <li><strong>Family holiday dinner, 6&ndash;14 guests</strong> &rarr; <Link to="/three-course" className="text-[#C5A028] hover:underline">Three-course</Link> or family-style</li>
+            <li><strong>Villa birthday or reunion, 15+</strong> &rarr; Buffet or family-style feast</li>
+            <li><strong>Sunset drinks &amp; canap&eacute;s</strong> &rarr; Grazing</li>
+            <li><strong>Casual pool party</strong> &rarr; <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">Live-fire BBQ</Link></li>
+            <li><strong>Kids at the table</strong> &rarr; Add a <Link to="/kids-menus" className="text-[#C5A028] hover:underline">Kids' Menu</Link> alongside any adult format</li>
+            <li><strong>Wedding or corporate event</strong> &rarr; <Link to="/catering" className="text-[#C5A028] hover:underline">Catering &amp; Events</Link>, custom-quoted per head</li>
+          </ul>
+          <p className="mt-8 text-white/60 text-center">
+            Want to see exactly how each format looks on the table? Read <Link to="/family-styling" className="text-[#C5A028] hover:underline">how we style each experience</Link>.
+          </p>
+        </div>
+      </section>
+
       {/* Not sure? CTA */}
       <section className="py-20 px-6 border-t border-white/10" style={{ background: '#0B0B0B' }}>
         <div className="max-w-3xl mx-auto text-center">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Not Sure?</p>
-          <h2 className="font-playfair text-3xl md:text-4xl mb-4">Tell Us About Your Event</h2>
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Still Not Sure?</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-4">Tell Us the Occasion</h2>
           <p className="text-white/60 mb-10 leading-relaxed">
-            Tell us about your event and we will recommend the perfect menu.
+            Tell us the occasion, guest count and the mood you want, and we will point you to the right collection in one WhatsApp message. A 50% deposit secures your date once you have chosen.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

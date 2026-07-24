@@ -24,6 +24,7 @@ interface FamilyStyle {
   bullets: string[]
   image: { src: string; alt: string; width: number; height: number }
   link: { to: string; label: string }
+  price: string
 }
 
 const STYLES: FamilyStyle[] = [
@@ -46,7 +47,8 @@ const STYLES: FamilyStyle[] = [
       width: 1440,
       height: 810,
     },
-    link: { to: '/fine-dining/menus', label: 'Browse Classic menus' },
+    link: { to: '/fine-dining/menus', label: 'Browse Classic Set Menus' },
+    price: 'from IDR 1.25M per guest',
   },
   {
     id: 'three-course',
@@ -67,6 +69,7 @@ const STYLES: FamilyStyle[] = [
       height: 810,
     },
     link: { to: '/three-course', label: 'Browse Three-Course menus' },
+    price: 'from IDR 850K per guest',
   },
   {
     id: 'bbq-grill',
@@ -88,6 +91,7 @@ const STYLES: FamilyStyle[] = [
       height: 800,
     },
     link: { to: '/bbq-grill', label: 'Browse BBQ Grill menus' },
+    price: 'from IDR 950K per guest',
   },
   {
     id: 'kids',
@@ -108,6 +112,7 @@ const STYLES: FamilyStyle[] = [
       height: 800,
     },
     link: { to: '/kids-menus', label: "Browse Kids' menus" },
+    price: 'from IDR 250K per child',
   },
 ]
 
@@ -115,13 +120,27 @@ export default function FamilyStylingPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
       <SeoHead
-        title="How We Style Each Dining Experience | myCHEF.id"
-        description="Discover how each myCHEF.id menu family is styled and served. From fine dining to BBQ grill to kids' parties."
+        title="How We Style Each Dining Experience | myCHEF Bali"
+        description="How each myCHEF menu family is styled and served — from fine dining to BBQ grill to kids parties."
         canonical={CANONICAL}
         ogImage="/generated/mychef-catering-bali-plated-menus.webp"
         jsonLd={[
           localBusinessSchema,
           breadcrumbSchema('Family Styling Guide', CANONICAL, 'Dining Styles', `${SITE}/dining-styles`),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'How We Style Each Dining Experience',
+            description: "How each myCHEF menu family is styled and served — from formal classic set menus to relaxed three-course, live BBQ grill stations and playful kids' menus.",
+            url: CANONICAL,
+            isPartOf: { '@type': 'WebSite', name: 'myCHEF', url: SITE },
+            about: {
+              '@type': 'Service',
+              name: 'myCHEF villa dining styling',
+              provider: { '@type': 'Organization', name: 'myCHEF', url: SITE },
+              areaServed: 'Bali, Indonesia',
+            },
+          },
         ]}
       />
 
@@ -155,7 +174,7 @@ export default function FamilyStylingPage() {
             How We Style Each Experience
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] max-w-2xl mb-10 leading-relaxed">
-            Every family has its own look, feel, and service style.
+            Every myCHEF menu family has its own look, feel and service style. The food changes from menu to menu — but the way an evening is <em>dressed, paced and served</em> is decided by which family you choose.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -220,6 +239,7 @@ export default function FamilyStylingPage() {
               >
                 {style.link.label} <span aria-hidden="true">&rarr;</span>
               </Link>
+              <p className="mt-3 text-sm text-white/50">{style.price}</p>
             </div>
           </div>
         </section>

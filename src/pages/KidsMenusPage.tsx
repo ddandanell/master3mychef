@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, localBusinessSchema, serviceWithOfferSchema, faqPageSchema, menuSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema, serviceWithOfferSchema, faqPageSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
@@ -14,28 +14,42 @@ const WA_KIDS = buildWhatsAppUrl({ serviceName: "Kids' Party Menus" })
 
 const FAQS = [
   {
+    q: 'How much do kids' menus cost?',
+    a: 'From IDR 250,000 to IDR 350,000 per child depending on the menu, including starter, main, dessert, the chef, ingredients and cleanup. Prices are subject to 11% government tax + 10% service charge.',
+  },
+  {
     q: 'What is the minimum number of children?',
-    a: "Six children minimum per booking. Every menu is portioned and priced per child, so you only pay for the little guests at the table. Bigger celebration? We regularly cater parties of 20+ children with advance notice.",
+    a: 'Six children per booking. We regularly cater parties of 20+ children with advance notice.',
   },
   {
     q: 'How do you handle allergies?',
-    a: "Every kids' menu is nut-free as standard. Tell us about any allergy — gluten, dairy, egg, shellfish — and our chefs will adapt the menu to keep every child safe. There is no extra charge for dietary adjustments.",
+    a: 'Every menu is nut-free as standard. For any other allergy — gluten, dairy, egg, shellfish — our chefs adapt the menu in advance, at no extra charge.',
   },
   {
     q: 'Are the menus halal?',
-    a: "Yes. All of our kids' menus are halal adaptable. Let us know your requirements when booking and our chefs will source and prepare everything accordingly.",
+    a: 'Yes, all kids' menus are halal adaptable. Tell us your requirements when booking and we source and prepare accordingly. (Any non-halal add-on, such as bacon, is always clearly marked.)',
   },
   {
-    q: 'What are the interactive options?',
-    a: "Several menus are built around hands-on fun — build-your-own pizza, burger bars and dessert stations where children assemble their own plates. It keeps them entertained and turns dinner into the party activity.",
+    q: 'What ages are the menus designed for?',
+    a: 'Roughly 3–12, with mild flavours and child-sized portions throughout. Younger children can be served simpler plates from the same menus — just ask.',
+  },
+  {
+    q: 'Can adults eat at the same event?',
+    a: 'Absolutely. Kids are usually served first from these menus; adults order separately from our main menu collections, and one team runs both.',
+  },
+  {
+    q: 'What deposit is required?',
+    a: 'A 50% deposit confirms your booking; the balance is due before the event.',
   },
 ]
 
 const RELATED_COLLECTIONS = [
-  { label: 'Classic Set Menus', href: '/fine-dining/menus', price: 'From IDR 1.25M' },
-  { label: 'Three-Course', href: '/three-course', price: 'From IDR 850K' },
-  { label: 'BBQ Grill', href: '/bbq-grill', price: 'From IDR 950K' },
-  { label: 'All Dining Styles', href: '/dining-styles', price: '50 menus' },
+  { label: "Kids' Birthday Chef Party", href: '/experiences/kids-birthday-chef-party', price: 'Full party planning' },
+  { label: 'Family Cooking Class', href: '/experiences/private-cooking-class', price: 'Holiday activity' },
+  { label: 'Birthday Catering', href: '/events/birthdays', price: 'Parties & milestones' },
+  { label: 'Group Villa Dinners', href: '/group-villa-dinner-packages-bali', price: 'Kids table within groups' },
+  { label: 'BBQ Grill Menus', href: '/bbq-grill', price: 'From IDR 950K' },
+  { label: 'Transparent Pricing', href: '/pricing', price: 'See all rates' },
 ]
 
 const WHY_PARENTS = [
@@ -53,8 +67,8 @@ export default function KidsMenusPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050505', color: '#F5F3EF' }}>
       <SeoHead
-        title="Kids' Party Menus Bali — 6 Fun Options | myCHEF.id"
-        description="Fun, healthy kids' party menus in Bali. Pizza, pasta, burgers, seafood & Indonesian. From IDR 250K/child. Nut-free."
+        title="Kids' Party Menus Bali | 6 Chef-Cooked Options | myCHEF"
+        description="Fun, healthy kids' party menus in Bali — pizza, pasta, burgers, seafood & Indonesian. From IDR 250K/child. Nut-free options."
         canonical={canonical}
         ogImage="/generated/mychef-events-bali-party-birthday.webp"
         jsonLd={[
@@ -68,12 +82,23 @@ export default function KidsMenusPage() {
             price: '250000',
             unitText: 'per child',
           }),
-          menuSchema(
-            "Kids' Party Menus",
-            "Six fun, healthy kids' party menus cooked fresh in your Bali villa — pizza, pasta, burgers, seafood and Indonesian favourites. Nut-free as standard, from IDR 250,000 per child.",
-            canonical,
-            KIDS_MENUS.map((menu) => ({ name: menu.name, description: menu.description })),
-          ),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Menu',
+            name: "myCHEF Kids' Menus Bali",
+            hasMenuSection: [
+              {
+                '@type': 'MenuSection',
+                name: "Kids' Collection",
+                hasMenuItem: KIDS_MENUS.map((menu) => ({
+                  '@type': 'MenuItem',
+                  name: menu.name,
+                  description: menu.description,
+                  offers: { '@type': 'Offer', price: String(menu.priceIdr), priceCurrency: 'IDR' },
+                })),
+              },
+            ],
+          },
         ]}
       />
 
@@ -95,13 +120,13 @@ export default function KidsMenusPage() {
           <Breadcrumb items={[{ label: "Kids' Menus" }]} theme="dark" className="px-0 pt-0 pb-8" />
           <p className="font-cormorant text-[#E8985E] text-sm uppercase tracking-[4px] mb-4">Kids&apos; Villa Dining</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Little Guests.<br />Big Flavours.
+            Kids' Menus in Bali &mdash; Six Menus Children Actually Finish
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-4 leading-relaxed">
-            Fun, healthy menus designed just for children.
+            Fun, healthy menus designed just for children — cooked fresh in your villa by our private chefs. Pizza parties, build-your-own burger bars and a gentle taste of Bali, every one nut-free as standard.
           </p>
           <p className="text-base md:text-xl text-[#E8985E] font-medium mb-10">
-            From IDR 250,000 per child
+            From IDR 250,000 per child &middot; Minimum 6 children &middot; Nut-free as standard &middot; Halal adaptable
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -111,14 +136,14 @@ export default function KidsMenusPage() {
               data-source="kids-hero"
               className="inline-flex items-center gap-2 bg-[#E8985E] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#f0a76f] transition-all"
             >
-              <MessageCircle className="w-4 h-4" /> Plan a Kids&apos; Party
+              <MessageCircle className="w-4 h-4" /> Get a Kids&apos; Menu Quote
             </a>
-            <a
-              href="#menus"
+            <Link
+              to="/experiences/kids-birthday-chef-party"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-all"
             >
-              Explore the Menus
-            </a>
+              Plan a Kids&apos; Birthday Chef Party
+            </Link>
           </div>
         </div>
       </section>
@@ -132,7 +157,7 @@ export default function KidsMenusPage() {
             <p className="font-cormorant text-[#E8985E] text-xs uppercase tracking-[4px] mb-4">The Kids&apos; Collection</p>
             <h2 className="font-playfair text-3xl md:text-4xl text-white mb-4">Six Menus Children Actually Finish</h2>
             <p className="text-white/60 max-w-2xl mx-auto leading-relaxed">
-              Pizza parties, build-your-own burger bars and a gentle taste of Bali — every menu is cooked fresh in your villa by our private chefs.
+              Every menu includes starter, main and dessert, cooked fresh in your villa kitchen, with ingredients, equipment and full cleanup included. Optional add-ons per child include extra portions, juice boxes, smoothies and a birthday cake slice (+IDR 50,000).
             </p>
           </div>
           <MenuOverview menus={KIDS_MENUS} dataSource="kids-menus" accent="warm" />
@@ -160,10 +185,10 @@ export default function KidsMenusPage() {
       {/* Allergen Note */}
       <section className="py-16 px-6" style={{ background: '#111111' }}>
         <div className="max-w-3xl mx-auto text-center">
-          <p className="font-cormorant text-[#E8985E] text-xs uppercase tracking-[4px] mb-4">Allergies &amp; Dietary Needs</p>
+          <p className="font-cormorant text-[#E8985E] text-xs uppercase tracking-[4px] mb-4">Allergy Safety: Nut-Free as Standard</p>
           <h2 className="font-playfair text-3xl text-white mb-6">Nut-Free as Standard</h2>
           <p className="text-white/70 leading-relaxed">
-            Every kids&apos; menu is nut-free as standard and halal adaptable. Tell us about any allergy and our chefs will adapt the menu.
+            Every kids&apos; menu is nut-free as standard and halal adaptable. Tell us about any allergy — gluten, dairy, egg, shellfish — and our chefs adapt the menu before your date. There is <strong>no extra charge for dietary adjustments</strong>. Our pesto uses sunflower seeds instead of pine nuts to protect nut-free status, and every allergen is listed per menu so you can choose with confidence.
           </p>
         </div>
       </section>
@@ -202,10 +227,10 @@ export default function KidsMenusPage() {
       {/* Final CTA */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="font-cormorant text-[#E8985E] text-sm uppercase tracking-[4px] mb-4">Ready to Plan?</p>
-          <h2 className="font-playfair text-3xl md:text-4xl text-white mb-4">Book Your Kids&apos; Party Chef</h2>
+          <p className="font-cormorant text-[#E8985E] text-sm uppercase tracking-[4px] mb-4">Book a Kids&apos; Chef</p>
+          <h2 className="font-playfair text-3xl md:text-4xl text-white mb-4">Book a Kids&apos; Chef</h2>
           <p className="text-white/60 mb-8 leading-relaxed">
-            From IDR 250,000 per child &middot; Minimum 6 children
+            Send your date, number of children, ages and any allergies. We confirm your menu and chef on WhatsApp within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -215,7 +240,7 @@ export default function KidsMenusPage() {
               data-source="kids-final-cta"
               className="inline-flex items-center gap-2 bg-[#E8985E] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#f0a76f] transition-all"
             >
-              <MessageCircle className="w-4 h-4" /> Plan a Kids&apos; Party
+              <MessageCircle className="w-4 h-4" /> Get a Kids&apos; Menu Quote on WhatsApp
             </a>
             <Link
               to="/recommended-services"
@@ -224,6 +249,9 @@ export default function KidsMenusPage() {
               Not sure? Let us recommend
             </Link>
           </div>
+          <p className="mt-6 text-white/40 text-sm">
+            Prefer email? <a href="mailto:bali@mychef.id" className="text-[#E8985E] hover:underline">bali@mychef.id</a> &middot; Or call +62 896-7407-2020
+          </p>
         </div>
       </section>
 

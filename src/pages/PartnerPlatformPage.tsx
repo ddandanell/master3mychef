@@ -95,28 +95,35 @@ export default function PartnerPlatformPage() {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'Villa Dining Partner Platform',
-    name: 'myCHEF Partner Platform',
-    provider: {
-      '@type': 'LocalBusiness',
-      '@id': `${SITE}/#business`,
-      name: 'myCHEF Indonesia',
-      url: SITE,
-    },
-    areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
-    description: 'A villa dining partner platform that turns private Bali villas into Michelin-level private dining destinations — co-branded or fully white-label, with monthly commission and a transparent operational dashboard.',
-    url: `${SITE}/partner-platform`,
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Certified Partner Programme', item: `${SITE}/certified-partner` },
+        ],
+      },
+      {
+        '@type': 'Service',
+        name: 'myCHEF Certified Partner Programme',
+        description: 'B2B partner programme for Bali villas, villa management companies and hospitality operators: myCHEF runs Michelin-level private dining inside partner properties on a co-branded (12% commission) or white-label (7% commission) basis, with monthly settlement.',
+        provider: { '@type': 'Organization', name: 'myCHEF', url: SITE },
+        areaServed: 'Bali, Indonesia',
+        serviceType: 'Villa dining partner programme',
+        url: `${SITE}/certified-partner`,
+      },
+      faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
+    ],
   }
 
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Villa Management Catering Bali | Partner Platform — myCHEF"
-        description="Co-branded private chef & catering for Bali villa managers. Live booking visibility, commission sharing & white-label dining offers for your guests."
-        canonical={`${SITE}/partner-platform`}
+        title="Certified Partner Programme Bali | myCHEF for Villas"
+        description="Become a myCHEF certified partner — preferred private chef and staffing services for Bali villas, with partner rates and priority booking."
+        canonical={`${SITE}/certified-partner`}
         ogImage={`${SITE}/generated/mychef-misc-bali-partner-platform-hero.webp`}
-        jsonLd={[breadcrumbSchema('Partner Platform', `${SITE}/partner-platform`), jsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={jsonLd}
       />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
@@ -134,13 +141,13 @@ export default function PartnerPlatformPage() {
         />
         <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-28 pt-28 md:pt-36 max-w-[1280px] mx-auto w-full text-white">
           <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            myCHEF Partner Platform
+            myCHEF Certified Partner Programme
           </p>
           <h1 className="text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] mb-7 max-w-[1000px]" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Michelin-Level Private Dining for Bali Villas
+            The myCHEF Certified Partner Programme
           </h1>
           <p className="text-base md:text-xl text-white/[80%] mb-10 max-w-[720px] leading-relaxed">
-            A villa dining partner platform built for private villas, villa management companies, boutique hospitality brands, and premium operators across Bali.
+            Most villas compete on view, pool, bedrooms and location. Very few compete on what guests actually remember. The Certified Partner Programme turns your villa — or your whole portfolio — into a Michelin-level private dining destination, without building a restaurant operation.
           </p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
@@ -315,7 +322,7 @@ export default function PartnerPlatformPage() {
             <div className="bg-[#0A0A0A] text-white border border-white/10 rounded-2xl p-8 md:p-10 flex flex-col">
               <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[0.3em] mb-3">Option B</p>
               <h3 className="font-playfair text-3xl mb-3">White-Label Partnership</h3>
-              <p className="text-white/[65%] mb-6">myCHEF operates invisibly. Neutral uniforms, no visible branding, unmarked equipment. The experience appears fully owned by the villa. Sell it as your own, use the photos freely.</p>
+              <p className="text-white/[65%] mb-6">myCHEF operates invisibly. Neutral uniforms, no visible branding, unmarked equipment. The experience appears fully owned by the villa. Sell it as your own, use the photos freely. For multi-day stays this can extend to full <Link to="/catering/villa-catering" className="text-[#C5A028] hover:underline">white-label catering capability</Link>.</p>
               <div className="mb-6">
                 <p className="text-5xl font-playfair text-[#C5A028]">7<span className="text-2xl">%</span></p>
                 <p className="text-xs uppercase tracking-[0.2em] text-white/[45%] mt-1">Commission per order</p>
@@ -406,7 +413,7 @@ export default function PartnerPlatformPage() {
               Certified partners receive an official myCHEF certification, a public verification page, a digital and printable badge, marketing assets, in-villa display assets, and a QR verification code. Display it on your website, booking pages, presentation decks, reception, and concierge material.
             </p>
             <p className="text-[#4A4745] leading-relaxed mb-6">
-              Every certified partner has a public page at <span className="font-medium text-[#1A1A1A]">mychef.id/certified/your-villa-name</span> — verifying partner status, certification validity, villa information, and authenticity. Guests and direct-booking platforms can verify in one click.
+              Every certified partner has a public page at <span className="font-medium text-[#1A1A1A]">mychef.id/certified/your-villa-name</span> — verifying partner status, certification validity, villa information, and authenticity. Guests and direct-booking platforms can verify in one click. See what guests say in our <Link to="/reviews" className="text-[#2C5F7C] hover:underline">guest reviews</Link>.
             </p>
             <ul className="space-y-2 text-[#4A4745]">
               {['Guest trust', 'Premium positioning', 'Direct-booking credibility'].map((b) => (
@@ -467,8 +474,13 @@ export default function PartnerPlatformPage() {
       {/* ── WHO THIS WORKS BEST FOR ──────────────────────────────────── */}
       <section className="bg-[#FAFAF8] px-6 md:px-12 py-24 md:py-32">
         <div className="max-w-[1280px] mx-auto">
-          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">11 — Who it works for</p>
+          <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">11 — Who it's for</p>
           <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-12 max-w-[820px]">Built for premium hospitality operators across Bali.</h2>
+          <p className="text-[#4A4745] text-lg leading-relaxed mb-10 max-w-[820px]">
+            Luxury villas · Villa management companies · Boutique resorts · Hospitality groups · Concierge operators · Luxury travel agencies · Premium short-term rental hosts.
+            <br /><br />
+            Managing a villa portfolio and prefer a simple referral arrangement instead? See our <Link to="/staffing/for-villa-managers" className="text-[#2C5F7C] hover:underline">referral programme for villa managers</Link>. Curious about the team behind the programme? <Link to="/why-mychef" className="text-[#2C5F7C] hover:underline">Why myCHEF</Link>.
+          </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {AUDIENCE.map((a) => (
               <div key={a.name} className="bg-white border border-[#E5E3E0] rounded-2xl p-6">
@@ -523,7 +535,7 @@ export default function PartnerPlatformPage() {
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.35em] mb-5">The next step</p>
           <h2 className="font-playfair text-3xl md:text-5xl leading-tight mb-5">The experience speaks better than the presentation ever can.</h2>
           <p className="text-white/[65%] text-lg mb-12 max-w-[640px] mx-auto">
-            Large villa groups can request a private tasting, an investor dinner, or an owner showcase evening. Smaller partners can join the monthly showcase dinners and invitation-only events.
+            Large villa groups can request a private tasting, an investor dinner, or an owner showcase evening. Smaller partners can join the monthly showcase dinners and invitation-only events. Rather message first? <Link to="/contact" className="text-[#C5A028] hover:underline">Talk to the partnerships team</Link>.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -544,7 +556,7 @@ export default function PartnerPlatformPage() {
             </a>
           </div>
           <p className="text-xs text-white/[45%] mt-10 italic">
-            myCHEF Partner Platform — controlled premium hospitality, the leading private villa dining network in Bali.
+            myCHEF Certified Partner Programme — controlled premium hospitality, the leading private villa dining network in Bali.
           </p>
           <p className="text-xs text-white/[60%] mt-6">
             Already a guest looking to book? <Link to="/quote" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Get a quote</Link>.

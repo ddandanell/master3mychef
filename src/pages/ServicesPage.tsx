@@ -32,7 +32,7 @@ const SERVICES = [
     description: 'Poolside seafood grills, satay and slow-cooked meats with full setup and service.',
     price: 'From IDR 700K++ per person (min. 10 guests).',
     url: '/catering/bbq-catering',
-    cta: 'Explore BBQ catering',
+    cta: 'BBQ catering',
     icon: Flame,
   },
   {
@@ -50,7 +50,7 @@ const SERVICES = [
     description: 'Breakfast, lunch and dinner across your whole stay. Groceries at cost, receipts provided.',
     price: 'Sessions from IDR 1,350K; daily hire from IDR 600K–1,500K/day.',
     url: '/villa-chef',
-    cta: 'Explore the daily villa chef service',
+    cta: 'daily villa chef service',
     icon: ChefHat,
   },
   {
@@ -59,7 +59,7 @@ const SERVICES = [
     description: 'Recurring chef days and meal-prep plans for long stays and residents.',
     price: 'From IDR 4.5M/week (2 people); live-in from IDR 8M/month.',
     url: '/hire-private-chef-bali-monthly',
-    cta: 'Explore monthly chef hire',
+    cta: 'monthly chef arrangements',
     icon: CalendarCheck,
   },
   {
@@ -68,7 +68,7 @@ const SERVICES = [
     description: 'Waiters, bartenders, butlers and sommeliers by the shift — restaurant-grade front-of-house in your villa.',
     price: 'From IDR 250K/hour.',
     url: '/in-villa-service',
-    cta: 'Explore in-villa service',
+    cta: 'in-villa service staff',
     icon: Heart,
   },
   {
@@ -77,7 +77,7 @@ const SERVICES = [
     description: 'Long-term chefs and household teams for villas, hotels and residences — sourced, vetted and placed.',
     price: 'Placement from IDR 15M fee.',
     url: '/staffing',
-    cta: 'Explore staffing',
+    cta: 'villa staff placement',
     icon: Briefcase,
   },
 ]
@@ -209,7 +209,7 @@ export default function ServicesPage() {
               to="/pricing"
               className="inline-flex items-center justify-center gap-2 px-10 py-4 border border-white/30 text-white text-xs md:text-sm tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
             >
-              Full Pricing <ArrowRight className="w-4 h-4" />
+              full pricing <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -398,14 +398,14 @@ export default function ServicesPage() {
             {[
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus in your villa.' },
               { label: 'Catering', href: '/catering', desc: 'Buffets, plated dinners & grazing tables.' },
-              { label: 'BBQ Catering', href: '/catering/bbq-catering', desc: 'Poolside grills, satay & live fire.' },
+              { label: 'BBQ catering', href: '/catering/bbq-catering', desc: 'Poolside grills, satay & live fire.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays, corporate & villa parties.' },
-              { label: 'Wedding Catering', href: '/events/weddings', desc: 'Full-service wedding hospitality.' },
-              { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily private chef for your villa stay.' },
-              { label: 'Monthly Chef', href: '/hire-private-chef-bali-monthly', desc: 'Recurring chef days & meal prep.' },
-              { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, bartenders, butlers & sommelier.' },
-              { label: 'Staffing & Placement', href: '/staffing', desc: 'Long-term chefs & household teams.' },
-              { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
+              { label: 'wedding catering', href: '/events/weddings', desc: 'Full-service wedding hospitality.' },
+              { label: 'daily villa chef service', href: '/villa-chef', desc: 'Daily private chef for your villa stay.' },
+              { label: 'monthly chef arrangements', href: '/hire-private-chef-bali-monthly', desc: 'Recurring chef days & meal prep.' },
+              { label: 'in-villa service staff', href: '/in-villa-service', desc: 'Waiters, bartenders, butlers & sommelier.' },
+              { label: 'villa staff placement', href: '/staffing', desc: 'Long-term chefs & household teams.' },
+              { label: 'full pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
               { label: 'Private Chef Seminyak', href: '/private-chef/seminyak', desc: 'Private chef services in Seminyak.' },
               { label: 'Private Chef Canggu', href: '/private-chef/canggu', desc: 'Private chef services in Canggu.' },
             ].map((item) => (

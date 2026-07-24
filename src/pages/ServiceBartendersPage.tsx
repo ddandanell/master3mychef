@@ -328,22 +328,34 @@ export default function ServiceBartendersPage() {
         <div className="max-w-[1000px] mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>
           <h3 className="font-playfair text-3xl text-[#1A1A1A] mb-6">You might also need</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Link to="/in-villa-service/mixology" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Mixology</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">mixologist for custom cocktail programs</h4>
               <p className="text-xs text-[#4A4745]">Go beyond service with signature cocktails and interactive masterclasses.</p>
             </Link>
-            <Link to="/in-villa-service/waiters" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Waiter Hire</h4>
-              <p className="text-xs text-[#4A4745]">Add smooth floor service for plated dinners, parties, and receptions.</p>
+            <Link to="/experiences/private-cocktail-party" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">full cocktail party experience</h4>
+              <p className="text-xs text-[#4A4745]">A dedicated cocktail party package with menu, bar, and service.</p>
+            </Link>
+            <Link to="/bar-services/temporary-bartender-staffing/" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">temporary bar staffing for venues</h4>
+              <p className="text-xs text-[#4A4745]">Bars, hotels, and event venues: vetted bartenders on demand.</p>
             </Link>
             <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">In-Villa Service</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">in-villa service hub</h4>
               <p className="text-xs text-[#4A4745]">Browse the full staffing hub for drinks, dining, and guest-facing support.</p>
             </Link>
-            <Link to="/events" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Events</h4>
+            <Link to="/in-villa-service/waiters" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">floor service waiters</h4>
+              <p className="text-xs text-[#4A4745]">Add smooth floor service for plated dinners, parties, and receptions.</p>
+            </Link>
+            <Link to="/events/villa-parties" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">villa party catering</h4>
               <p className="text-xs text-[#4A4745]">Plan the full event experience around your bar concept and guest count.</p>
+            </Link>
+            <Link to="/fine-dining" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">chef-led dinners with cocktail hour</h4>
+              <p className="text-xs text-[#4A4745]">Pair your bartender with a private chef-led dinner.</p>
             </Link>
           </div>
           <p className="mt-8 text-sm text-[#4A4745]">

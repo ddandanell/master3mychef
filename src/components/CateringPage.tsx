@@ -64,7 +64,7 @@ export default function CateringPage() {
             to="/catering/bbq-catering"
             className="inline-flex items-center justify-center gap-2 bg-[#6B8E5A] text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
           >
-            Compare Catering Styles
+            BBQ catering
           </Link>
         </div>
         <p className="text-xs text-[#4A4745]/70 mt-4">Free to enquire — no deposit until your menu and date are confirmed. We reply within the hour (07:00–22:00 WITA).</p>
@@ -78,13 +78,13 @@ export default function CateringPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { slug: 'bbq-catering', label: 'BBQ Catering', desc: 'From IDR 700,000/person · min. 10 guests. Live grill at your villa poolside, garden, or terrace.', price: 'IDR 700K/person' },
-              { slug: 'buffet', label: 'Buffet Catering', desc: 'From IDR 475,000++/person · min. 30 guests. Practical, elegant way to feed bigger groups.', price: 'IDR 475K++/person' },
-              { slug: 'plated-catering', label: 'Plated Dinner Catering', desc: 'From IDR 800,000++/person · min. spend IDR 5M. Multi-course fine dining with white-glove service.', price: 'IDR 800K++/person' },
-              { slug: 'villa-catering', label: 'Villa Catering', desc: 'From IDR 450,000++/person · 8–200 guests. Multi-day meal plans for villa stays.', price: 'IDR 450K++/person' },
-              { slug: 'babi-guling', label: 'Babi Guling Feast', desc: 'From IDR 3,900,000 total · 6–50 guests. Whole pig slow-roasted and carved at your villa.', price: 'IDR 3.9M total' },
-              { slug: 'grazing-tables', label: 'Grazing Tables', desc: 'From IDR 650,000 · 2–150 guests. Styled artisan spreads for welcome drinks and events.', price: 'From IDR 650K' },
-              { slug: 'drop-off-catering', label: 'Drop-Off Catering', desc: 'From IDR 700,000/person · 4–40 guests. Chef-prepared food delivered ready to serve.', price: 'IDR 700K/person' },
+              { slug: 'bbq-catering', label: 'BBQ catering', desc: 'From IDR 700,000/person · min. 10 guests. Live grill at your villa poolside, garden, or terrace.', price: 'IDR 700K/person' },
+              { slug: 'buffet', label: 'buffet catering', desc: 'From IDR 475,000++/person · min. 30 guests. Practical, elegant way to feed bigger groups.', price: 'IDR 475K++/person' },
+              { slug: 'plated-catering', label: 'plated dinner catering', desc: 'From IDR 800,000++/person · min. spend IDR 5M. Multi-course fine dining with white-glove service.', price: 'IDR 800K++/person' },
+              { slug: 'villa-catering', label: 'villa catering for multi-day stays', desc: 'From IDR 450,000++/person · 8–200 guests. Multi-day meal plans for villa stays.', price: 'IDR 450K++/person' },
+              { slug: 'babi-guling', label: 'babi guling feast', desc: 'From IDR 3,900,000 total · 6–50 guests. Whole pig slow-roasted and carved at your villa.', price: 'IDR 3.9M total' },
+              { slug: 'grazing-tables', label: 'grazing tables', desc: 'From IDR 650,000 · 2–150 guests. Styled artisan spreads for welcome drinks and events.', price: 'From IDR 650K' },
+              { slug: 'drop-off-catering', label: 'drop-off catering', desc: 'From IDR 700,000/person · 4–40 guests. Chef-prepared food delivered ready to serve.', price: 'IDR 700K/person' },
             ].map((sub) => (
               <Link
                 key={sub.slug}
@@ -193,7 +193,7 @@ export default function CateringPage() {
           </p>
           <p className="text-sm text-[#4A4745]">
             For larger villa events, check with your villa manager about outside-vendor permission and any banjar (village) function fee — we coordinate directly with villa management and flag these costs upfront. Planning a full event with production support? See our{' '}
-            <Link to="/events" className="text-[#C5A028] hover:underline font-medium">event catering services</Link>.
+            <Link to="/events" className="text-[#C5A028] hover:underline font-medium">event production</Link>.
           </p>
         </div>
       </section>

@@ -430,22 +430,30 @@ export default function ServiceMixologyPage() {
         <div className="max-w-[1000px] mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>
           <h3 className="font-playfair text-3xl text-[#1A1A1A] mb-6">You might also need</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Link to="/in-villa-service/bartenders" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Bartender Hire</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">bartender service for high-volume events</h4>
               <p className="text-xs text-[#4A4745]">Bring in a service-led bar team for parties, receptions, and fast pours.</p>
             </Link>
             <Link to="/in-villa-service/sommelier" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Sommelier Service</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">sommelier wine pairing</h4>
               <p className="text-xs text-[#4A4745]">Layer in wine pairings and tableside storytelling for dinner service.</p>
             </Link>
+            <Link to="/experiences/private-cocktail-party" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">full private cocktail party package</h4>
+              <p className="text-xs text-[#4A4745]">A dedicated cocktail party package with menu, bar, and service.</p>
+            </Link>
             <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">In-Villa Service</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">in-villa service hub</h4>
               <p className="text-xs text-[#4A4745]">Explore the full staffing hub for drinks, dining, and guest experience support.</p>
             </Link>
-            <Link to="/events" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Events</h4>
-              <p className="text-xs text-[#4A4745]">Connect your cocktail program to weddings, retreats, and celebrations.</p>
+            <Link to="/bar-services/cocktail-menu-development/" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">cocktail menu development for venues</h4>
+              <p className="text-xs text-[#4A4745]">Bar and restaurant menu design for operators.</p>
+            </Link>
+            <Link to="/events/weddings" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">wedding events</h4>
+              <p className="text-xs text-[#4A4745]">Connect your cocktail program to weddings and celebrations.</p>
             </Link>
           </div>
         </div>

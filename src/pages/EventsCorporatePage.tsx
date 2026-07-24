@@ -235,7 +235,7 @@ export default function EventsCorporatePage() {
                 Corporate hosts usually need one supplier who can think beyond a lunch menu. We cover breakfast service, coffee stations, plated or buffet lunches, networking drinks, dietary mapping, floor staff, and the practical realities of running hospitality inside a villa, private venue, or temporary conference setup. That matters because timing is not driven by diners — it is driven by agenda blocks, speakers, registration, workshops, and transport windows.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                We are particularly useful when the event needs to feel polished without becoming hotel-heavy. You get a service team that understands guest movement, a proposal that can sit next to procurement requirements, and menus that can flex between healthy conference food and more celebratory evening service. If you need a narrower food-only brief, our <a href="/catering/corporate-catering" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">corporate catering page</a> covers that too.
+                We are particularly useful when the event needs to feel polished without becoming hotel-heavy. You get a service team that understands guest movement, a proposal that can sit next to procurement requirements, and menus that can flex between healthy conference food and more celebratory evening service. If you need a narrower food-only brief, our <a href="/catering/corporate-catering" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">catering-only corporate service</a> covers that too.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -506,6 +506,13 @@ export default function EventsCorporatePage() {
               </Link>
             ))}
           </div>
+          <p className="text-[#4A4745] text-center max-w-3xl mx-auto mt-8 leading-relaxed">
+            Explore <Link to="/catering/corporate-catering" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">catering-only corporate service</Link>,{' '}
+            <Link to="/corporate-retreat-catering-bali" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">multi-day corporate retreat catering</Link>,{' '}
+            <Link to="/corporate-case-studies" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">corporate event case studies</Link>,{' '}
+            <Link to="/in-villa-service" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">event staff, waiters and bartenders</Link>, and{' '}
+            <Link to="/bar-services" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">bar programs for corporate events</Link>.
+          </p>
         </div>
       </section>
 

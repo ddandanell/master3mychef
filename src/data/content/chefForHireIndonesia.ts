@@ -5,7 +5,7 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
   <p>Hiring a chef in Indonesia can mean one unforgettable dinner — or a permanent member of your household. Those are completely different arrangements, and choosing the right one is the only decision you need to make first. myCHEF provides vetted, professional chefs across all four formats, with our strongest active coverage in Bali and Jakarta.</p>
   <div class="not-prose mt-8 flex flex-col gap-4 sm:flex-row">
     <a href="https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20hire%20a%20chef.%20Please%20help%20me%20choose%20the%20right%20format." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-[#C5A028] px-8 py-4 text-sm font-bold uppercase tracking-[2px] text-black transition hover:bg-[#D4B43A]">Tell Us What You Need on WhatsApp</a>
-    <a href="/pricing" class="inline-flex items-center justify-center rounded-full border border-black/10 px-8 py-4 text-sm font-bold uppercase tracking-[2px] text-[#1A1A1A] transition hover:bg-black/5">See Current Pricing</a>
+    <a href="/pricing" class="inline-flex items-center justify-center rounded-full border border-black/10 px-8 py-4 text-sm font-bold uppercase tracking-[2px] text-[#1A1A1A] transition hover:bg-black/5">current pricing</a>
   </div>
 </section>
 
@@ -74,7 +74,7 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
 
 <section aria-labelledby="vetting">
   <h2 id="vetting">How Vetting and Matching Works</h2>
-  <p>A strong restaurant CV is not enough for private service. A household chef works close to guests, children and other staff — so we select for reliability, hygiene, discretion, calm communication and adaptability alongside technique. Matching considers cuisine specialisation, references, language, dietary experience and household fit; for permanent roles, trial cooking shows you how the chef plans, communicates and responds to feedback before anyone signs.</p>
+  <p>A strong restaurant CV is not enough for private service. A household chef works close to guests, children and other staff — so we select for reliability, hygiene, discretion, calm communication and adaptability alongside technique. Matching considers cuisine specialisation, references, language, dietary experience and household fit; for permanent roles, trial cooking shows you how the chef plans, communicates and responds to feedback before anyone signs. Read our guide on <a href="/best-private-chef-indonesia">how to judge quality</a> before booking.</p>
 </section>
 
 <section aria-labelledby="costs">
@@ -87,7 +87,7 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
     <li><strong>Live-in placement:</strong> from IDR 8,000,000 per month</li>
     <li><strong>Service staff:</strong> waiters, bartenders and sommeliers from IDR 250K per hour</li>
   </ul>
-  <p>Prices are quoted ++ (11% government tax + 10% service charge) as one fixed figure before you commit — a deposit confirms your date. Full detail lives on the <a href="/pricing">pricing page</a>.</p>
+  <p>Prices are quoted ++ (11% government tax + 10% service charge) as one fixed figure before you commit — a deposit confirms your date. Full detail lives on the <a href="/pricing">current pricing</a>.</p>
 </section>
 
 <section aria-labelledby="coverage">

@@ -412,6 +412,7 @@ export default function LunaPage() {
               { href: '/fine-dining/chefs-table', label: "Chef's Table", sub: 'IDR 3,500,000++ · 6 seats', icon: '👨‍🍳' },
               { href: '/fine-dining/menus', label: 'Our Menus', sub: '24 Signature Set Menus', icon: '📋' },
               { href: '/fine-dining/our-chefs', label: 'Our Chefs', sub: 'Adriano & the team', icon: '⭐' },
+              { href: '/chefs', label: 'All Chefs', sub: 'Meet the full team', icon: '🌟' },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -1229,7 +1230,7 @@ export default function LunaPage() {
             </Link>
             <span className="text-white/20">·</span>
             <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              See fine dining pricing →
+              full pricing guide →
             </Link>
           </div>
         </div>

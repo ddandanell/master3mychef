@@ -335,22 +335,30 @@ export default function ServiceSommelierPage() {
         <div className="max-w-[1000px] mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>
           <h3 className="font-playfair text-3xl text-[#1A1A1A] mb-6">You might also need</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/in-villa-service/mixology" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Mixology</h4>
-              <p className="text-xs text-[#4A4745]">Add a cocktail moment before dinner or a creative after-party pour.</p>
-            </Link>
-            <Link to="/fine-dining" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Fine Dining</h4>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link to="/fine-dining/tasting-menu" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">chef-led tasting menus with wine pairing</h4>
               <p className="text-xs text-[#4A4745]">Pair your sommelier with a chef-led tasting menu for a full experience.</p>
             </Link>
+            <Link to="/fine-dining" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">fine dining at your villa</h4>
+              <p className="text-xs text-[#4A4745]">Private chef-led fine dining across Bali.</p>
+            </Link>
+            <Link to="/in-villa-service/mixology" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">mixology for pre-dinner cocktails</h4>
+              <p className="text-xs text-[#4A4745]">Add a cocktail moment before dinner or a creative after-party pour.</p>
+            </Link>
             <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">In-Villa Service</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">in-villa service hub</h4>
               <p className="text-xs text-[#4A4745]">Explore the full staffing hub for tableside service and guest support.</p>
             </Link>
-            <Link to="/catering" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Catering</h4>
-              <p className="text-xs text-[#4A4745]">Explore menus and formats for villa dinners, receptions, and larger groups.</p>
+            <Link to="/in-villa-service/waiters" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">waiters for tableside support</h4>
+              <p className="text-xs text-[#4A4745]">Add polished table service for seated dinners and receptions.</p>
+            </Link>
+            <Link to="/events/weddings" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">wedding wine service</h4>
+              <p className="text-xs text-[#4A4745]">Wine service and pairings for villa weddings.</p>
             </Link>
           </div>
         </div>

@@ -305,8 +305,8 @@ export default function PrivateChefBaliPage() {
             <p className="text-white/[70%] text-base leading-relaxed mb-8">
               He still leads every tasting menu, every Chef's Table, and every training session for the team of 50+ Indonesian hospitality professionals he has built.
             </p>
-            <Link to="/chefs" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
-              Meet all our chefs <ChevronRight className="w-4 h-4" />
+            <Link to="/chefs/adriano" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
+              Meet Adriano <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
           <div className="pcb-reveal order-1 md:order-2">
@@ -436,6 +436,9 @@ export default function PrivateChefBaliPage() {
             { label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner' },
             { label: "Chef's Table", href: '/fine-dining/chefs-table' },
             { label: 'Our Menus', href: '/fine-dining/menus' },
+            { label: 'Our Chefs', href: '/fine-dining/our-chefs' },
+            { label: 'Meet Adriano', href: '/chefs/adriano' },
+            { label: 'Pricing', href: '/pricing' },
           ].map((l) => (
             <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               {l.label}

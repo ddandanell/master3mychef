@@ -53,7 +53,7 @@ const SECTIONS: PageSection[] = [
 
     <p><strong>Plant-Based Bali — 2.5 hours.</strong> Proper tempeh technique, young jackfruit, coconut curries and vegan sambal. No substitutions needed — Indonesian cuisine has always cooked this way.</p>
 
-    <p>Want something else entirely? With a week's notice we'll build a bespoke class around it. Love Japanese food? There's a whole <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">private sushi masterclass</a> for that.</p>`,
+    <p>Want something else entirely? With a week's notice we'll build a bespoke class around it. Love Japanese food? There's a whole <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">dedicated private sushi masterclass</a> for that.</p>`,
   },
   {
     id: 'market-trip',
@@ -111,7 +111,7 @@ const SECTIONS: PageSection[] = [
 
     <p>For a group of four, that's a private chef, a hands-on class, a full meal and recipes to take home — often less per person than a tasting-menu dinner out, with far more of the day in it.</p>
 
-    <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Get My Class Quote — WhatsApp +62 896-7407-2020</a></p>`,
+    <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Get My Class Quote — WhatsApp +62 896-7407-2020</a>. See our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">full pricing guide</a>.</p>`,
   },
   {
     id: 'occasions',
@@ -120,9 +120,9 @@ const SECTIONS: PageSection[] = [
     title: 'Who a Private Cooking Class Is For',
     image: '/generated/mychef-experience-bali-luna-table.webp',
     imageAlt: 'Guests enjoying the meal they cooked during a private Balinese cooking class',
-    body: `<p><strong>Couples and honeymoons</strong> book it as the anti-restaurant date. <strong>Friends and birthday groups</strong> make it the centrepiece of a villa afternoon that flows into a long dinner. <strong>Families</strong> get a family-friendly version of every class — children from around six take on age-appropriate tasks while adults handle knives and heat. Children who cook their own dinner tend to eat it without negotiation. Retreat hosts can slot a class into a wellness programme — see our <a href="/events/retreats" class="text-[#7E6410] hover:underline font-medium">retreat catering</a> page.</p>
+    body: `<p><strong>Couples and honeymoons</strong> book it as the anti-restaurant date. <strong>Friends and birthday groups</strong> make it the centrepiece of a villa afternoon that flows into a long dinner. <strong>Families</strong> get a family-friendly version of every class — children from around six take on age-appropriate tasks while adults handle knives and heat. Children who cook their own dinner tend to eat it without negotiation. Retreat hosts can <a href="/events/retreats" class="text-[#7E6410] hover:underline font-medium">add a class to a retreat programme</a>.</p>
 
-    <p>Staying in Ubud? Our <a href="/private-chef/ubud" class="text-[#7E6410] hover:underline font-medium">Ubud private chef</a> team runs classes in the island's market heartland.</p>`,
+    <p>Staying in Ubud? Our <a href="/private-chef/ubud" class="text-[#7E6410] hover:underline font-medium">private chef in Ubud — market country</a> team runs classes in the island's market heartland.</p>`,
   },
   {
     id: 'faq',
@@ -135,14 +135,14 @@ const SECTIONS: PageSection[] = [
     type: 'cta' as const,
     subtitle: 'Book Your Class',
     title: 'Ready to Cook Like a Local in Bali?',
-    body: 'Tell us your villa, your class, your group size and your date — we will confirm your chef and send an itemised quote within 2 hours.',
+    body: `Tell us your villa, your class, your group size and your date — we will confirm your chef and send an itemised quote within 2 hours. Also see our <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">dedicated private sushi masterclass</a>, <a href="/experiences/kids-birthday-chef-party" class="text-[#7E6410] hover:underline font-medium">kids</a> cooking parties and <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">all private experiences</a>`,
     primaryAction: {
       label: 'Book a Cooking Class',
       href: WA_LINK,
       external: true,
     },
     secondaryAction: {
-      label: 'View Pricing',
+      label: 'Full Pricing Guide',
       href: '/pricing',
     },
   },

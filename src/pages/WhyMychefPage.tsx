@@ -8,7 +8,7 @@ const TRUST_PILLARS = [
     emoji: '🎓',
     title: 'Michelin-trained leadership',
     desc: 'Adriano trained under a Michelin-starred chef in Milan, and his standards set the floor for every dish. The team includes eight named chefs, each with a published speciality, from live-fire BBQ to wellness retreat menus.',
-    link: { label: 'Meet every chef', href: '/chefs' },
+    link: { label: 'meet the chef team', href: '/chefs' },
   },
   {
     emoji: '👥',
@@ -29,7 +29,7 @@ const TRUST_PILLARS = [
     emoji: '🛡️',
     title: 'Guarantees in writing',
     desc: 'Chef replacement guarantee — if your chef can\'t make it, a verified replacement arrives within 2 hours or you receive a 100% refund. Transparent terms — a deposit confirms your booking [BUSINESS CONFIRMATION REQUIRED — live page states no figure], prices always quoted ++ (11% government tax + 10% service charge), groceries at cost with receipts.',
-    link: { label: 'Transparent pricing', href: '/pricing' },
+    link: { label: 'transparent pricing', href: '/pricing' },
   },
 ]
 
@@ -60,11 +60,11 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Guest Reviews', href: '/reviews', desc: 'Read dated, located reviews from Bali villa guests.' },
-  { label: 'Meet the Chefs', href: '/chefs', desc: 'Meet Adriano and the named chef team.' },
-  { label: 'Transparent Pricing', href: '/pricing', desc: 'Full price tables published online.' },
-  { label: 'All Services', href: '/services', desc: 'Private chef, catering, events and staffing.' },
-  { label: 'Common Questions', href: '/faq', desc: 'Answers to booking, menus and dietary requests.' },
+  { label: 'read dated guest reviews', href: '/reviews', desc: 'Read dated, located reviews from Bali villa guests.' },
+  { label: 'meet the chef team', href: '/chefs', desc: 'Meet Adriano and the named chef team.' },
+  { label: 'transparent pricing', href: '/pricing', desc: 'Full price tables published online.' },
+  { label: 'all services', href: '/services', desc: 'Private chef, catering, events and staffing.' },
+  { label: 'common questions', href: '/faq', desc: 'Answers to booking, menus and dietary requests.' },
   { label: 'Private Chef in Bali', href: '/', desc: 'Start with the myCHEF homepage.' },
 ]
 

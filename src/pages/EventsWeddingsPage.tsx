@@ -252,7 +252,7 @@ export default function EventsWeddingsPage() {
             ))}
           </div>
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mt-10">
-            For per-guest prices and guest-count scenarios, see our <Link to="/bali-wedding-catering-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wedding catering packages and per-person prices</Link>. Marrying outside Bali? See <Link to="/wedding-catering-indonesia" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wedding catering across Indonesia</Link>.
+            For per-guest prices and guest-count scenarios: <Link to="/bali-wedding-catering-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">see wedding catering packages & per-person prices</Link>. Marrying outside Bali? See <Link to="/wedding-catering-indonesia" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wedding catering across Indonesia</Link>.
           </p>
         </div>
       </section>
@@ -329,7 +329,7 @@ export default function EventsWeddingsPage() {
                 Our bar service extends far beyond standard wine and beer. We design a bespoke drinks menu that reflects your tastes, your heritage, or your wedding theme — perhaps a tropical gin creation that captures the spirit of Bali, a classic European cocktail with a local twist, or a non-alcoholic masterpiece that ensures every guest feels included.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                We curate wine selections and champagne service to complement your menu, and can arrange professional sommelier service with pairings designed for each course. Bar logistics are managed with the same rigour as the kitchen — consumption rates calculated in advance, stock, ice, glassware, and garnishes managed throughout — so the bar never runs dry and never looks dishevelled. See our dedicated <Link to="/in-villa-service/bartenders" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wedding bartenders</Link> service.
+                We curate wine selections and champagne service to complement your menu, and can arrange professional sommelier service with pairings designed for each course. Bar logistics are managed with the same rigour as the kitchen — consumption rates calculated in advance, stock, ice, glassware, and garnishes managed throughout — so the bar never runs dry and never looks dishevelled. See our dedicated <Link to="/in-villa-service/bartenders" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wedding bar service</Link>.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -363,7 +363,7 @@ export default function EventsWeddingsPage() {
               <strong>Drinks your way.</strong> Full bar service with our wedding bartenders, or BYO: market guidance from Bali venue norms puts corkage at roughly USD 35–47 per bottle at venues that charge it [BUSINESS CONFIRMATION REQUIRED] — myCHEF's own published corkage waiver for villa parties is a flat IDR 250,000. We will tell you honestly which option costs less for your guest count.
             </p>
             <p>
-              For a deeper dive, read our <Link to="/journal/villa-wedding-catering-logistics-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">villa wedding catering logistics guide</Link>.
+              For a deeper dive, read our <Link to="/journal/villa-wedding-catering-logistics-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">villa wedding logistics guide</Link>.
             </p>
           </div>
         </div>
@@ -453,7 +453,7 @@ export default function EventsWeddingsPage() {
                 </div>
                 <div className="flex items-start gap-4 rounded-2xl border border-[#E8E6E3] bg-white px-5 py-4">
                   <div className="w-8 h-8 rounded-full bg-[#C5A028]/10 flex items-center justify-center shrink-0 text-sm font-bold text-[#C5A028]">2</div>
-                  <p className="text-[#4A4745] leading-relaxed"><strong>Proposal.</strong> One itemised document: menus, staffing, rentals, bar, timing and the all-in cost. See our <Link to="/bali-wedding-catering-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wedding catering packages and per-person prices</Link> for the frameworks we quote from.</p>
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Proposal.</strong> One itemised document: menus, staffing, rentals, bar, timing and the all-in cost. For package frameworks: <Link to="/bali-wedding-catering-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">see wedding catering packages & per-person prices</Link>.</p>
                 </div>
                 <div className="flex items-start gap-4 rounded-2xl border border-[#E8E6E3] bg-white px-5 py-4">
                   <div className="w-8 h-8 rounded-full bg-[#C5A028]/10 flex items-center justify-center shrink-0 text-sm font-bold text-[#C5A028]">3</div>
@@ -553,6 +553,10 @@ export default function EventsWeddingsPage() {
               </Link>
             ))}
           </div>
+          <p className="text-[#4A4745] text-center max-w-3xl mx-auto mt-8 leading-relaxed">
+            Browse <Link to="/events" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">all event catering</Link> or see the{' '}
+            <Link to="/pricing" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">full pricing guide</Link>.
+          </p>
         </div>
       </section>
 

@@ -320,10 +320,10 @@ export default function CateringBuffetPage() {
                 When the guest count climbs past thirty, buffet catering Bali is the format that keeps the villa calm and the food moving. Guests eat what they want, at their own pace, while our team keeps every station full, hot, and tidy — from first plate to last.
               </p>
               <p className="text-[#4A4745]">
-                Villa weddings and garden receptions, corporate dinners and retreats, milestone birthdays, family reunions, and any gathering of 30–200+ where variety and pace matter. Planning a wedding? See our dedicated <Link to="/events/weddings" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">wedding catering</Link> service. Multi-day programmes? <Link to="/catering/retreat-catering" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Retreat catering</Link> is priced per person per day.
+                Villa weddings and garden receptions, corporate dinners and retreats, milestone birthdays, family reunions, and any gathering of 30–200+ where variety and pace matter. Planning a wedding? See our dedicated <Link to="/events/weddings" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">wedding catering</Link> service. Multi-day programmes? <Link to="/catering/retreat-catering" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">retreat catering</Link> is priced per person per day.
               </p>
               <p className="text-[#4A4745]">
-                <strong>Buffet or plated?</strong> Buffet suits larger groups, mixed diets, and relaxed timelines. <Link to="/catering/plated-catering" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Plated dinners</Link> suit formal evenings up to 60 guests where pacing and presentation lead. Tell us your event and we'll recommend honestly — browse all <Link to="/catering" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">catering services</Link>.
+                <strong>Buffet or plated?</strong> Buffet suits larger groups, mixed diets, and relaxed timelines. <Link to="/catering/plated-catering" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">plated dinners</Link> suit formal evenings up to 60 guests where pacing and presentation lead. Tell us your event and we'll recommend honestly — browse all <Link to="/catering" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">catering services</Link>.
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {['Wedding buffet Bali', 'Corporate buffet Bali', 'Villa buffet Bali', 'Retreat catering', 'Birthday celebrations', 'Family gatherings'].map((tag) => (
@@ -758,7 +758,7 @@ export default function CateringBuffetPage() {
           </div>
           <div className="mt-8 text-center">
             <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore Plated Dinners <ArrowRight className="w-4 h-4" />
+              plated dinners <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -898,8 +898,8 @@ export default function CateringBuffetPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'BBQ Catering', href: '/catering/bbq-catering', desc: 'Live-fire grilling at your villa.' },
-              { label: 'Plated Dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
+              { label: 'BBQ catering', href: '/catering/bbq-catering', desc: 'Live-fire grilling at your villa.' },
+              { label: 'plated dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
               { label: 'Grazing Tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
               { label: 'Drop-Off Catering', href: '/catering/drop-off-catering', desc: 'Fresh food delivered to your villa.' },
               { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },

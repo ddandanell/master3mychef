@@ -23,7 +23,10 @@ export function BarServiceProcess({ process, image, imagePosition = 'right' }: P
                 {step.step}
               </span>
               <h3 className="text-lg font-semibold text-[#F5F2EB] mb-2">{step.title}</h3>
-              <p className="text-[#F5F2EB]/60 text-sm leading-relaxed">{step.description}</p>
+              <p
+                className="text-[#F5F2EB]/60 text-sm leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: step.description }}
+              />
             </div>
           ))}
         </div>
@@ -37,7 +40,10 @@ export function BarServiceProcess({ process, image, imagePosition = 'right' }: P
               {String(step.step).padStart(2, '0')}
             </span>
             <h3 className="text-xl font-semibold text-[#F5F2EB] mb-3">{step.title}</h3>
-            <p className="text-[#F5F2EB]/60 leading-relaxed">{step.description}</p>
+            <p
+              className="text-[#F5F2EB]/60 leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: step.description }}
+            />
             {i < process.length - 1 && (
               <div className="hidden lg:block absolute top-8 -right-4 w-8 h-px bg-gradient-to-r from-[#C5A028]/30 to-transparent" />
             )}

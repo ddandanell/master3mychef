@@ -340,22 +340,34 @@ export default function ServiceWaitersPage() {
         <div className="max-w-[1000px] mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>
           <h3 className="font-playfair text-3xl text-[#1A1A1A] mb-6">You might also need</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/in-villa-service/bartenders" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Add a Bar Team</h4>
-              <p className="text-xs text-[#4A4745]">Add a polished bar team for cocktails, wine, and event flow.</p>
-            </Link>
-            <Link to="/in-villa-service/host-hostess" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Event Hosts for Guest Reception</h4>
-              <p className="text-xs text-[#4A4745]">Welcome guests, manage arrivals, and keep the event moving smoothly.</p>
-            </Link>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Full In-Villa Service Hub</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">full in-villa service hub</h4>
               <p className="text-xs text-[#4A4745]">Browse the full staffing hub for dinners, parties, and private events.</p>
             </Link>
+            <Link to="/in-villa-service/bartenders" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">add a bar team</h4>
+              <p className="text-xs text-[#4A4745]">Add a polished bar team for cocktails, wine, and event flow.</p>
+            </Link>
+            <Link to="/in-villa-service/sommelier" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">sommelier wine service</h4>
+              <p className="text-xs text-[#4A4745]">Add wine pairing and tableside storytelling to dinner service.</p>
+            </Link>
+            <Link to="/in-villa-service/host-hostess" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">event hosts for guest reception</h4>
+              <p className="text-xs text-[#4A4745]">Welcome guests, manage arrivals, and keep the event moving smoothly.</p>
+            </Link>
+            <Link to="/events/weddings" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">wedding catering & service</h4>
+              <p className="text-xs text-[#4A4745]">Full-service wedding catering and service across Bali.</p>
+            </Link>
             <Link to="/catering" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Menus and Catering to Match</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">menus and catering to match</h4>
               <p className="text-xs text-[#4A4745]">Pair service staff with menus and food planning for your group.</p>
+            </Link>
+            <Link to="/pricing" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">pricing guide</h4>
+              <p className="text-xs text-[#4A4745]">See transparent per-person pricing across all myCHEF services.</p>
             </Link>
           </div>
         </div>

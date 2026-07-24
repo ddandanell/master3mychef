@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import {
   MessageCircle, Check, Phone, Calendar, Users,
   ChefHat, ShieldCheck, Sparkles,
@@ -383,7 +384,9 @@ const LOCATIONS = [
   {
     slug: 'ubud',
     title: 'Ubud',
-    desc: 'Ubud is the spiritual and wellness centre of Bali, home to the island\u2019s densest concentration of yoga and meditation retreats. Our Ubud retreat catering Bali service handles jungle logistics, early morning yoga schedules, and access to organic produce from the surrounding highlands. We regularly cook in open-air villas overlooking rice terraces, bamboo shalas, and riverside estates where groups practise sunrise asana before a nourishing brunch. Most of our retreat work is in Ubud and the surrounding villages — see our <a href="/private-chef/ubud" className="text-[#C5A028] hover:underline">private chef in Ubud</a> page for jungle-villa logistics — and we cater retreats island-wide.</>,
+    desc: 'Ubud is the spiritual and wellness centre of Bali, home to the island\u2019s densest concentration of yoga and meditation retreats. Our Ubud retreat catering Bali service handles jungle logistics, early morning yoga schedules, and access to organic produce from the surrounding highlands. We regularly cook in open-air villas overlooking rice terraces, bamboo shalas, and riverside estates where groups practise sunrise asana before a nourishing brunch. Most of our retreat work is in Ubud and the surrounding villages — see our ',
+    link: { to: '/private-chef/ubud', anchor: 'private chef in Ubud' },
+    descAfter: ' page for jungle-villa logistics — and we cater retreats island-wide.',
   },
   {
     slug: 'canggu',
@@ -531,9 +534,9 @@ export default function CateringRetreatPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-retreat-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> Request a Retreat Meal Plan
             </a>
-            <a href="/events/retreats" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              Full Wellness Retreat Support
-            </a>
+            <Link to="/events/retreats" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              full wellness retreat support
+            </Link>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Bali-wide coverage</span>
@@ -559,7 +562,7 @@ export default function CateringRetreatPage() {
                 Feeding a retreat is a system, not a series of meals. Multi-day groups need planned shopping cycles, prep schedules adapted to the villa kitchen, menus that never repeat, and food timed to the programme — light before morning practice, stronger after training, clean before workshops, comforting at night.
               </p>
               <p className="text-[#4A4745]">
-                We assign a dedicated chef for your full retreat duration, supported by assistants scaled to your group. Before arrival, every guest's dietary profile is collected through our intake process. During the retreat, menus rotate daily, the kitchen is reset spotless after every service, and your organiser has one point of contact for any schedule change. If you also need ceremony coordination, experience add-ons and full event support around the meals, that is our <a href="/events/retreats" className="text-[#C5A028] hover:underline">full wellness retreat support</a> service. Running a company offsite instead? See <a href="/corporate-retreat-catering-bali" className="text-[#C5A028] hover:underline">corporate retreat catering</a>.
+                We assign a dedicated chef for your full retreat duration, supported by assistants scaled to your group. Before arrival, every guest's dietary profile is collected through our intake process. During the retreat, menus rotate daily, the kitchen is reset spotless after every service, and your organiser has one point of contact for any schedule change. If you also need ceremony coordination, experience add-ons and full event support around the meals, that is our <Link to="/events/retreats" className="text-[#C5A028] hover:underline">full wellness retreat support</Link> service. Running a company offsite instead? See <Link to="/corporate-retreat-catering-bali" className="text-[#C5A028] hover:underline">corporate retreat catering</Link>.
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {['Multi-day system', 'Energy-focused menus', 'Digestion-aware', 'Dietary control', 'Consistent quality', 'Villa kitchen adapted'].map((tag) => (
@@ -623,7 +626,7 @@ export default function CateringRetreatPage() {
             </div>
           </div>
           <p className="text-sm text-[#4A4745] mt-8 text-center">
-            Normal groceries are included in every plan. Premium upgrades — imported superfoods, oyster or seafood nights, an elevated closing dinner — are quoted separately in advance. See our <a href="/pricing" className="text-[#C5A028] hover:underline">transparent pricing</a> page for a broader pricing overview.
+            Normal groceries are included in every plan. Premium upgrades — imported superfoods, oyster or seafood nights, an elevated closing dinner — are quoted separately in advance. See our <Link to="/pricing" className="text-[#C5A028] hover:underline">transparent pricing</Link> page for a broader pricing overview.
           </p>
           <p className="text-xs text-[#4A4745]/70 mt-4 text-center">
             [BUSINESS CONFIRMATION REQUIRED] Retreat from-price (IDR 400K++/person/day on this page) conflicts with /pricing's 'retreat from 700K/person/day' — sitewide price reconciliation pending business decision.
@@ -797,7 +800,7 @@ export default function CateringRetreatPage() {
             ))}
           </div>
           <p className="text-sm text-[#4A4745] mt-8 text-center">
-            For guests who want chef-prepared nourishment outside the retreat schedule, we also offer <a href="/healthy-meal-delivery-indonesia" className="text-[#C5A028] hover:underline">chef-prepared healthy meal delivery</a> across Indonesia.
+            For guests who want chef-prepared nourishment outside the retreat schedule, we also offer <Link to="/healthy-meal-delivery-indonesia" className="text-[#C5A028] hover:underline">chef-prepared healthy meal delivery</Link> across Indonesia.
           </p>
         </div>
       </section>
@@ -825,7 +828,7 @@ export default function CateringRetreatPage() {
             ))}
           </div>
           <p className="text-sm text-[#4A4745] mt-8 text-center">
-            For lighter-touch programmes, combine an on-site chef for key meals with <a href="/catering/drop-off-catering" className="text-[#C5A028] hover:underline">drop-off catering</a> for the rest.
+            For lighter-touch programmes, combine an on-site chef for key meals with <Link to="/catering/drop-off-catering" className="text-[#C5A028] hover:underline">drop-off catering</Link> for the rest.
           </p>
         </div>
       </section>
@@ -920,7 +923,13 @@ export default function CateringRetreatPage() {
                   <MapPin className="w-4 h-4 text-[#C5A028]" />
                   <h3 className="font-semibold text-base">{loc.title}</h3>
                 </div>
-                <p className="text-sm text-[#4A4745] leading-relaxed mb-4">{loc.desc}</p>
+                <p className="text-sm text-[#4A4745] leading-relaxed mb-4">
+                  {loc.desc}
+                  {loc.link && (
+                    <Link to={loc.link.to} className="text-[#C5A028] hover:underline">{loc.link.anchor}</Link>
+                  )}
+                  {loc.descAfter}
+                </p>
                 <a href={`/locations/${loc.slug}`} className="inline-flex items-center gap-1 text-xs font-medium text-[#1A1A1A] hover:text-[#C5A028] transition-colors">
                   Retreat catering in {loc.title} <ArrowRight className="w-3 h-3" />
                 </a>

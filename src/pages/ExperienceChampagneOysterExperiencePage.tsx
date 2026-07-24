@@ -25,7 +25,7 @@ const SECTIONS: PageSection[] = [
     title: 'A Golden-Hour Prelude to Dinner',
     body: `<p>We source the freshest oysters available for your date and serve them simply, the way oysters are best: classic mignonette, fresh lemon, crushed ice. Champagne is your call — a crisp Blanc de Blancs is our usual suggestion, and bottles are billed at cost plus sourcing, always quoted transparently before you commit.</p>
 
-    <p>Most guests book it as the first hour of something else: the pre-dinner reception before a <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">private chef dinner</a>, the golden-hour prelude to a <a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">proposal dinner</a>, the poolside opener for a birthday or <a href="/events/weddings" class="text-[#7E6410] hover:underline font-medium">wedding welcome evening</a>. We time the station so it flows straight into whatever comes next.</p>`,
+    <p>Most guests book it as the first hour of something else: the pre-dinner reception before a <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">private chef dinner</a>, <a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">add it to a proposal dinner</a>, or the poolside opener for a birthday or <a href="/events/weddings" class="text-[#7E6410] hover:underline font-medium">pre-reception oyster bar</a>. We time the station so it flows straight into whatever comes next.</p>`,
   },
   {
     id: 'offerings',
@@ -72,7 +72,7 @@ const SECTIONS: PageSection[] = [
     title: 'Add the Hour to Your Evening',
     body: `<p>The experience suits 2 to 30+ guests and works poolside, on a terrace or in the garden. We arrive 60–90 minutes before service. Book at least 5–7 days ahead for the best oyster selection — more in peak season — and mention any shellfish allergies: we'll run an alternative seafood or canapé station for those guests alongside. Every hour is quoted individually, itemised and confirmed before a deposit secures the date [BUSINESS CONFIRMATION REQUIRED: deposit level — crawl for this URL is silent; live pages elsewhere show 50%].</p>
 
-    <p>Popular pairings: a <a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">chef-led proposal dinner</a>, the <a href="/experiences/romantic-proposal-dinner" class="text-[#7E6410] hover:underline font-medium">full proposal package</a>, or a <a href="/fine-dining/romantic-dinner" class="text-[#7E6410] hover:underline font-medium">romantic dinner for two</a>.</p>
+    <p>Popular pairings: <a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">add it to a proposal dinner</a>, the <a href="/experiences/romantic-proposal-dinner" class="text-[#7E6410] hover:underline font-medium">full proposal package</a>, or a <a href="/fine-dining/romantic-dinner" class="text-[#7E6410] hover:underline font-medium">romantic dinner for two</a>.</p>
 
     <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Add the Oyster Hour — WhatsApp +62 896-7407-2020</a></p>`,
   },
@@ -105,7 +105,7 @@ const FAQS = [
   { question: 'How many guests does it suit?', answer: 'From 2 to 30+. It scales from a romantic table for two to a full pre-dinner reception.' },
   { question: 'How long does it run?', answer: 'Typically one to two hours — designed as the opening act to a dinner or celebration.' },
   { question: 'What about shellfish allergies?', answer: 'We plan an alternative seafood or canapé station for allergic guests so nobody is left out.' },
-  { question: 'What does it pair with?', answer: 'A private chef dinner, a proposal dinner, a full proposal package, or a wedding pre-reception — we coordinate timing with the main kitchen team.' },
+  { question: 'What does it pair with?', answer: 'A private chef dinner, a proposal dinner, a full proposal package, or a <a href="/events/weddings" class="text-[#7E6410] hover:underline font-medium">pre-reception oyster bar</a> — we coordinate timing with the main kitchen team.' },
 ]
 
 const RELATED_PAGES = [

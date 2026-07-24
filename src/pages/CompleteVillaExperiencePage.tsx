@@ -222,7 +222,7 @@ export default function CompleteVillaExperiencePage() {
                 VIP Transport Bali — From Terminal to Villa Without Friction
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Your experience begins before customs. We track your flight, dispatch a luxury vehicle and brief your driver on the exact villa entrance. Whether you choose a premium SUV for two or a minibus for a group, every arrival is handled by our <Link to="/vip-transport-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">VIP transport Bali</Link> team.
+                Your experience begins before customs. We track your flight, dispatch a luxury vehicle and brief your driver on the exact villa entrance. Whether you choose a premium SUV for two or a minibus for a group, every arrival is handled by our <Link to="/vip-transport-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">arrival transfers, arranged</Link> team.
               </p>
               <div className="space-y-3">
                 {ARRIVAL_POINTS.map((item) => (
@@ -254,7 +254,7 @@ export default function CompleteVillaExperiencePage() {
                 Villa Preparation & Daily Private Chef Service
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                Imagine arriving to a villa that already feels like home — beds dressed, fridges stocked, flowers arranged, and your first refreshments waiting. Then, each morning, a private chef arrives to prepare breakfast while the housekeeping team quietly resets the space.
+                Imagine arriving to a villa that already feels like home — beds dressed, fridges stocked, flowers arranged, and your first refreshments waiting. Then, each morning, a <Link to="/villa-chef" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">private villa chef service</Link> arrives to prepare breakfast while the housekeeping team quietly resets the space.
               </p>
               <div className="space-y-3">
                 {CHEF_POINTS.map((item) => (
@@ -280,7 +280,7 @@ export default function CompleteVillaExperiencePage() {
                 Event Planning & Villa Celebrations
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                A private villa is the most extraordinary venue Bali offers — if the event is planned with precision. Our team transforms your residence into a celebration space, coordinating every supplier and timeline so you can simply arrive and enjoy. Explore dedicated options through our <Link to="/events" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">events</Link> hub or learn about bundled <Link to="/villa-event-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">villa event packages</Link>.
+                A private villa is the most extraordinary venue Bali offers — if the event is planned with precision. Our team transforms your residence into a celebration space, coordinating every supplier and timeline so you can simply arrive and enjoy. Explore dedicated options through our <Link to="/events" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">events during your stay</Link> hub, or learn about the <Link to="/villa-event-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">one-event version</Link>.
               </p>
               <div className="space-y-3">
                 {EVENT_POINTS.map((item) => (
@@ -312,7 +312,7 @@ export default function CompleteVillaExperiencePage() {
                 In-Villa Service Staff — Waiters, Butlers, Bartenders & Cleaners
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                The difference between a rented villa and a true private residence is the quality of the people who run it. Our <Link to="/in-villa-service" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">in-villa service</Link> team provides uniformed, English-speaking professionals who make hospitality feel effortless.
+                The difference between a rented villa and a true private residence is the quality of the people who run it. Our <Link to="/in-villa-service" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">in-villa staff</Link> team provides uniformed, English-speaking professionals who make hospitality feel effortless. For placements beyond the stay, see our <Link to="/staffing" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">longer-term staff placement</Link> service.
               </p>
               <div className="space-y-3">
                 {STAFF_POINTS.map((item) => (

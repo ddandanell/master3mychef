@@ -39,7 +39,7 @@ const OCCASIONS = [
     title: 'Villa Party',
     desc: 'From IDR 650K++/person for cocktail receptions (20–80 guests) and IDR 850K++/person for sundowner BBQ parties (15–50). Pool parties, hens, bucks, reunions.',
     href: '/events/villa-parties',
-    linkText: 'villa party catering',
+    linkText: 'villa party formats',
   },
   {
     title: 'Baby Shower',
@@ -185,7 +185,7 @@ export default function VillaEventPackagesPage() {
                 No chasing five vendors, no stitched-together timelines, no surprises on the invoice. Tell us the occasion, date and guest count — we reply within the hour with a detailed proposal, no obligation.
               </p>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Planning more than one event — a whole stay with daily chef and concierge? That is our <Link to="/complete-villa-experience" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Complete Villa Experience</Link>. This page is for the single occasion, done completely.
+                Planning more than one event — a whole stay with daily chef and concierge? That is our <Link to="/complete-villa-experience" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">whole-stay version: multi-day concierge</Link>. This page is for the single occasion, done completely.
               </p>
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-event-packages-intro-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
                 <MessageCircle className="w-4 h-4" /> Request a Tailored Quotation
@@ -267,7 +267,7 @@ export default function VillaEventPackagesPage() {
                 ))}
               </div>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                <strong>Total: ~IDR 54M++ (~IDR 65.3M all-in)</strong> — one proposal, one team, one point of contact across all three services. Guest <Link to="/vip-transport-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">arrival transfers can be arranged</Link> as an add-on through our partner network.
+                <strong>Total: ~IDR 54M++ (~IDR 65.3M all-in)</strong> — one proposal, one team, one point of contact across all three services. Guest <Link to="/vip-transport-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">arrival transfers, arranged</Link> as an add-on through our partner network.
               </p>
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-event-packages-sample-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
                 <MessageCircle className="w-4 h-4" /> Request Your Package Quote
@@ -358,12 +358,12 @@ export default function VillaEventPackagesPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Complete the Experience</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Complete Villa Experience', href: '/complete-villa-experience', desc: 'Whole-stay daily chef & concierge.' },
-              { label: 'All Event Types', href: '/events', desc: 'Birthdays, parties, weddings & more.' },
-              { label: 'Birthdays', href: '/events/birthdays', desc: 'Birthday catering formats.' },
-              { label: 'Villa Parties', href: '/events/villa-parties', desc: 'Villa party catering packages.' },
-              { label: 'VIP Transport', href: '/vip-transport-bali', desc: 'Arrival transfers, arranged.' },
-              { label: 'In-Villa Staff', href: '/in-villa-service', desc: 'Extra villa staff & service.' },
+              { label: 'whole-stay version: multi-day concierge', href: '/complete-villa-experience', desc: 'Whole-stay daily chef & concierge.' },
+              { label: 'all event types', href: '/events', desc: 'Birthdays, parties, weddings & more.' },
+              { label: 'birthday catering formats', href: '/events/birthdays', desc: 'Birthday catering formats.' },
+              { label: 'villa party formats', href: '/events/villa-parties', desc: 'Villa party catering packages.' },
+              { label: 'arrival transfers, arranged', href: '/vip-transport-bali', desc: 'Arrival transfers, arranged.' },
+              { label: 'additional villa staff', href: '/in-villa-service', desc: 'Extra villa staff & service.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>
@@ -389,7 +389,7 @@ export default function VillaEventPackagesPage() {
             We'll reply within the hour and follow with a detailed, itemised proposal — every service line priced, nothing hidden, no obligation.
           </p>
           <p className="text-white/[70%] leading-relaxed mb-10 max-w-2xl mx-auto">
-            Need extra hands for a longer stay? See our <Link to="/in-villa-service" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">villa staffing services</Link>.
+            Need extra hands for a longer stay? See our <Link to="/in-villa-service" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">additional villa staff</Link>.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-event-packages-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">

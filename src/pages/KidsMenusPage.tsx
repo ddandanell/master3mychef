@@ -44,12 +44,12 @@ const FAQS = [
 ]
 
 const RELATED_COLLECTIONS = [
-  { label: "Kids' Birthday Chef Party", href: '/experiences/kids-birthday-chef-party', price: 'Full party planning' },
-  { label: 'Family Cooking Class', href: '/experiences/private-cooking-class', price: 'Holiday activity' },
-  { label: 'Birthday Catering', href: '/events/birthdays', price: 'Parties & milestones' },
-  { label: 'Group Villa Dinners', href: '/group-villa-dinner-packages-bali', price: 'Kids table within groups' },
-  { label: 'BBQ Grill Menus', href: '/bbq-grill', price: 'From IDR 950K' },
-  { label: 'Transparent Pricing', href: '/pricing', price: 'See all rates' },
+  { label: 'kids', href: '/experiences/kids-birthday-chef-party', price: 'Full party planning' },
+  { label: 'family cooking class', href: '/experiences/private-cooking-class', price: 'Holiday activity' },
+  { label: 'birthday catering', href: '/events/birthdays', price: 'Parties & milestones' },
+  { label: 'group villa dinner packages', href: '/group-villa-dinner-packages-bali', price: 'Kids table within groups' },
+  { label: 'BBQ grill menus', href: '/bbq-grill', price: 'From IDR 950K' },
+  { label: 'transparent pricing', href: '/pricing', price: 'See all rates' },
 ]
 
 const WHY_PARENTS = [

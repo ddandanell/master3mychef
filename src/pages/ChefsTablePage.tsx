@@ -288,14 +288,22 @@ export default function ChefsTablePage() {
             <p className="text-[#4A4745] text-base leading-relaxed mb-8">
               If Adriano is unavailable on your date, we will offer to rebook — not replace him. Two of these evenings happen per weekend. That is all.
             </p>
-            <a
-              href={WA_LINK}
-              target="_blank" rel="noopener noreferrer"
-              data-source="chefs-table-adriano-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
-            >
-              <MessageCircle className="w-4 h-4" /> Check Adriano's Availability
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={WA_LINK}
+                target="_blank" rel="noopener noreferrer"
+                data-source="chefs-table-adriano-cta"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
+              >
+                <MessageCircle className="w-4 h-4" /> Check Adriano's Availability
+              </a>
+              <Link
+                to="/chefs/adriano"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-[#1A1A1A]/20 text-[#1A1A1A] text-sm tracking-widest uppercase rounded-full hover:bg-[#1A1A1A]/5 transition-all focus:outline-none focus:ring-2 focus:ring-[#1A1A1A] rounded px-0.5"
+              >
+                Meet Adriano <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -426,8 +434,11 @@ export default function ChefsTablePage() {
         <div className="max-w-[960px] mx-auto flex flex-wrap justify-center gap-x-8 gap-y-3">
           {[
             { label: 'Fine Dining Overview', href: '/fine-dining' },
+            { label: 'Tasting Menu', href: '/fine-dining/tasting-menu' },
             { label: 'Our Menus', href: '/fine-dining/menus' },
             { label: 'Our Chefs', href: '/fine-dining/our-chefs' },
+            { label: 'Meet Adriano', href: '/chefs/adriano' },
+            { label: 'Pricing', href: '/pricing' },
           ].map((l) => (
             <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               {l.label}

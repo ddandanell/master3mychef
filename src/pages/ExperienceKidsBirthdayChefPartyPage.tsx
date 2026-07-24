@@ -98,7 +98,7 @@ const SECTIONS: PageSection[] = [
       </tbody>
     </table>
 
-    <p>Add-ons — extra protein, fresh juice, chef hats and aprons, birthday cake slices — run IDR 5K–50K per child. For full ingredient and allergen detail, see the <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">kids' menus collection</a>.</p>`,
+    <p>Add-ons — extra protein, fresh juice, chef hats and aprons, birthday cake slices — run IDR 5K–50K per child. For full ingredient and allergen detail, see the <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">full kids</a> menu collection.</p>`,
   },
   {
     id: 'features',
@@ -124,7 +124,7 @@ const SECTIONS: PageSection[] = [
       {
         icon: UtensilsCrossed,
         title: 'Adult Food Available',
-        desc: 'Add a separate adult menu, a grazing table, a BBQ, or a bartender for the grown-ups.',
+        desc: 'Add a separate adult menu, a grazing table for the parents, a BBQ, or a cocktail bar for the adults.',
       },
       {
         icon: Clock,
@@ -143,7 +143,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'What the Parents Get',
     title: 'You Do Not Have to Eat from the Kids Menu',
-    body: `<p>You don't have to eat from the kids' menu. Add a separate adult menu, a <a href="/catering/grazing-tables" class="text-[#7E6410] hover:underline font-medium">grazing table</a>, a BBQ, or <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">a bartender for the grown-ups</a>. We also coordinate the extras — a custom cake from a trusted Bali designer, themed décor through villa party stylists, kids' entertainers, a photographer — each quoted separately and timed so nothing clashes with the cooking or the cake.</p>`,
+    body: `<p>You don't have to eat from the kids' menu. Add a separate adult menu, <a href="/catering/grazing-tables" class="text-[#7E6410] hover:underline font-medium">a grazing table for the parents</a>, a BBQ, or <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">a cocktail bar for the adults</a>. We also coordinate the extras — a custom cake from a trusted Bali designer, themed décor through villa party stylists, kids' entertainers, a photographer — each quoted separately and timed so nothing clashes with the cooking or the cake.</p>`,
   },
   {
     id: 'pricing',
@@ -165,7 +165,7 @@ const SECTIONS: PageSection[] = [
     type: 'cta' as const,
     subtitle: 'Plan the Party',
     title: 'Ready to Plan a Kids Birthday Chef Party?',
-    body: 'Tell us your villa, date, number of children and the menu they would love — we will reply within the hour with a plan and an itemised quote.',
+    body: `Tell us your villa, date, number of children and the menu they would love — we will reply within the hour with a plan and an itemised quote. Planning for mixed ages? See <a href="/events/birthdays" class="text-[#7E6410] hover:underline font-medium">birthday catering for adults and mixed-age groups</a>. Holidaying with the kids? <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">a family cooking class for the holiday</a> makes a great second act. See our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">full pricing guide</a>.`,
     primaryAction: {
       label: 'Plan a Kids Chef Party',
       href: WA_LINK,

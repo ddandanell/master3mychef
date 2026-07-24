@@ -21,9 +21,10 @@ export function BarServiceIncluded({ included }: { included: BarService['include
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#C5A028]/10 border border-[#C5A028]/30 flex-shrink-0 mt-0.5">
                 <Check className="w-4 h-4 text-[#C5A028]" strokeWidth={2.5} />
               </span>
-              <span className="text-[#F5F2EB]/90 text-sm md:text-base leading-relaxed pt-1">
-                {item}
-              </span>
+              <span
+                className="text-[#F5F2EB]/90 text-sm md:text-base leading-relaxed pt-1"
+                dangerouslySetInnerHTML={{ __html: item }}
+              />
             </div>
           ))}
         </div>

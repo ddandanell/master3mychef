@@ -250,7 +250,7 @@ export default function CangguPage() {
           <h2 className="font-playfair text-3xl md:text-4xl mb-6">Eating Well on a Long Canggu Stay</h2>
           <div className="prose prose-lg text-[#4A4745] max-w-none">
             <p className="mb-0 leading-relaxed">
-              If you're here for weeks, eating out twice a day gets old — and expensive — fast. The pattern that works for most long-stay households: cafés and warungs for spontaneous lunches, and a <Link to="/villa-chef" className="text-[#C5A028] hover:underline font-medium">daily villa chef service</Link> for the meals that matter. A consistent chef learns your household's preferences, manages the shopping and fridge, and builds menus that evolve across the stay. Staying further north? <Link to="/locations/pererenan" className="text-[#C5A028] hover:underline font-medium">The quieter Pererenan dining guide</Link> covers that end of the neighbourhood.
+              If you're here for weeks, eating out twice a day gets old — and expensive — fast. The pattern that works for most long-stay households: cafés and warungs for spontaneous lunches, and a <Link to="/villa-chef" className="text-[#C5A028] hover:underline font-medium">daily villa chef service</Link> for the meals that matter. A consistent chef learns your household's preferences, manages the shopping and fridge, and builds menus that evolve across the stay. For the quieter end of the neighbourhood, see <Link to="/locations/pererenan" className="text-[#C5A028] hover:underline font-medium">the quieter Pererenan dining guide</Link>.
             </p>
           </div>
         </div>
@@ -284,7 +284,7 @@ export default function CangguPage() {
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Ready to Book?</p>
           <h2 className="font-playfair text-3xl mb-4">Plan Your Canggu Table</h2>
           <p className="text-white/60 mb-8 leading-relaxed">
-            Skip the Batu Bolong queue once this trip. Read <Link to="/journal/private-chef-canggu-guide" className="text-[#C5A028] hover:underline font-medium">our Canggu local's guide</Link> for more area detail — or message +62 896-7407-2020 on WhatsApp with your date and headcount, and we'll send a menu proposal within 24 hours.
+            Skip the Batu Bolong queue once this trip. Read <Link to="/journal/private-chef-canggu-guide" className="text-[#C5A028] hover:underline font-medium">our Canggu local</Link> for more area detail — or message +62 896-7407-2020 on WhatsApp with your date and headcount, and we'll send a menu proposal within 24 hours.
           </p>
           <a
             href={`https://wa.me/${WA}?text=${WA_MSG}`}

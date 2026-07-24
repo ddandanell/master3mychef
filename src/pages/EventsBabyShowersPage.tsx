@@ -485,6 +485,13 @@ export default function EventsBabyShowersPage() {
               </Link>
             ))}
           </div>
+          <p className="text-[#4A4745] text-center max-w-3xl mx-auto mt-8 leading-relaxed">
+            See our <Link to="/catering/grazing-tables" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">grazing tables</Link>,{' '}
+            <Link to="/events/birthdays" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">birthday catering</Link>,{' '}
+            <Link to="/events/villa-parties" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa party catering</Link>,{' '}
+            <Link to="/in-villa-service" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">service staff</Link>, and{' '}
+            <Link to="/catering" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">all catering services</Link>.
+          </p>
         </div>
       </section>
 

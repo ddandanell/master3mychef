@@ -27,7 +27,7 @@ const SECTIONS: PageSection[] = [
     title: 'The Full-Service Villa Proposal',
     body: `<p>Resort proposal packages give you a fixed script in a hotel you don't live in. A villa proposal package gives you the stage you're already staying on — the clifftop terrace, the jungle pavilion, the garden bale — with every layer built around it: a bespoke chef's menu, candle and floral styling set before you return, champagne breathing on ice, a hidden photographer briefed on your signal, and a service team that knows precisely when to appear and when to vanish.</p>
 
-    <p>Want just the dinner itself? Our <a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">chef-led proposal dinner</a> is the food-first version of the evening. This page is for couples who want everything handled.</p>`,
+    <p><a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">Just want the dinner? See our chef-led proposal dinner</a>. This page is for couples who want everything handled.</p>`,
   },
   {
     id: 'planning',
@@ -78,7 +78,7 @@ const SECTIONS: PageSection[] = [
       </tbody>
     </table>
 
-    <p>All prices ++ (11% government tax + 10% service charge); every package quote is itemised line by line before you commit.</p>`,
+    <p>All prices ++ (11% government tax + 10% service charge); every package quote is itemised line by line before you commit. See our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">full pricing guide</a>.</p>`,
   },
   {
     id: 'addons',
@@ -90,13 +90,13 @@ const SECTIONS: PageSection[] = [
       <li><strong>Acoustic musician</strong> — from IDR 2.4M for the first hour</li>
       <li><strong>Champagne on ice</strong> — Veuve Clicquot IDR 2.5M · Krug IDR 5.5M</li>
       <li><strong>Celebration cake</strong> — IDR 1.5–3M, personalised</li>
-      <li><strong>Champagne & oyster hour</strong> — <a href="/experiences/champagne-oyster-experience" class="text-[#7E6410] hover:underline font-medium">a golden-hour prelude</a> before the dinner begins</li>
+      <li><strong>Champagne & oyster hour</strong> — <a href="/experiences/champagne-oyster-experience" class="text-[#7E6410] hover:underline font-medium">add a champagne & oyster hour</a> before the dinner begins</li>
       <li>Candle landscape, petal pathways, floral installations and personalised signage — styled to your brief</li>
     </ul>
 
     <p>Add-on prices are borrowed from our anniversary page — [BUSINESS CONFIRMATION REQUIRED] that they apply to proposal packages.</p>
 
-    <p>For <a href="/events/anniversaries" class="text-[#7E6410] hover:underline font-medium">anniversary celebrations</a> or romantic dinners without a ring, see our <a href="/fine-dining/romantic-dinner" class="text-[#7E6410] hover:underline font-medium">romantic dinner for two</a> page. For wine pairing, ask about our <a href="/in-villa-service/sommelier" class="text-[#7E6410] hover:underline font-medium">sommelier-led wine pairing</a>.</p>`,
+    <p>For <a href="/events/anniversaries" class="text-[#7E6410] hover:underline font-medium">anniversary celebrations</a> or <a href="/fine-dining/romantic-dinner" class="text-[#7E6410] hover:underline font-medium">romantic dinners without the ring</a>, see our romantic dinner page. For wine pairing, ask about our <a href="/in-villa-service/sommelier" class="text-[#7E6410] hover:underline font-medium">sommelier-led wine pairing</a>.</p>`,
   },
   {
     id: 'features',
@@ -161,14 +161,14 @@ const SECTIONS: PageSection[] = [
     type: 'cta' as const,
     subtitle: 'Start Planning in Confidence',
     title: 'Ready to Plan Your Proposal Package?',
-    body: 'One message is all it takes: the date, the villa, and how you imagine the moment. We will take it from there — quietly.',
+    body: `One message is all it takes: the date, the villa, and how you imagine the moment. We will take it from there — quietly. <a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">Just want the dinner? See our chef-led proposal dinner</a>. For the days after the yes, book <a href="/honeymoon-chef" class="text-[#7E6410] hover:underline font-medium">a private chef for the days after the yes</a>. For <a href="/fine-dining/romantic-dinner" class="text-[#7E6410] hover:underline font-medium">romantic dinners without the ring</a>, see our romantic dinner page.`,
     primaryAction: {
       label: 'Plan My Proposal Package',
       href: WA_LINK,
       external: true,
     },
     secondaryAction: {
-      label: 'View Pricing',
+      label: 'Full Pricing Guide',
       href: '/pricing',
     },
   },

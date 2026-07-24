@@ -18,7 +18,7 @@ export function BarServiceProblem({ problem, image, imagePosition = 'right' }: P
       />
       <div className="max-w-3xl space-y-5 text-[#F5F2EB]/80 text-base md:text-lg leading-relaxed">
         {problem.paragraphs.map((p, i) => (
-          <p key={i}>{p}</p>
+          <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
         ))}
       </div>
     </>

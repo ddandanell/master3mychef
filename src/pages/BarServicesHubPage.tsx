@@ -213,7 +213,7 @@ export default function BarServicesHubPage() {
               </h2>
               <div className="space-y-5 text-[#F5F2EB]/70 text-base md:text-lg leading-relaxed">
                 {expandedCopy.intro.paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
+                  <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                 ))}
               </div>
             </div>
@@ -225,7 +225,7 @@ export default function BarServicesHubPage() {
                 </h2>
                 <div className="space-y-4 text-[#F5F2EB]/70 leading-relaxed">
                   {expandedCopy.whyNow.paragraphs.map((p, i) => (
-                    <p key={i}>{p}</p>
+                    <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                   ))}
                 </div>
               </div>
@@ -235,7 +235,7 @@ export default function BarServicesHubPage() {
                 </h2>
                 <div className="space-y-4 text-[#F5F2EB]/70 leading-relaxed">
                   {expandedCopy.whyMyChef.paragraphs.map((p, i) => (
-                    <p key={i}>{p}</p>
+                    <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                   ))}
                 </div>
               </div>
@@ -247,7 +247,7 @@ export default function BarServicesHubPage() {
               </h2>
               <div className="max-w-3xl space-y-4 text-[#F5F2EB]/70 leading-relaxed">
                 {expandedCopy.howWeWork.paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
+                  <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                 ))}
               </div>
             </div>
@@ -258,7 +258,7 @@ export default function BarServicesHubPage() {
               </h2>
               <div className="space-y-4 text-[#F5F2EB]/70 mb-10 leading-relaxed">
                 {expandedCopy.cta.paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
+                  <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                 ))}
               </div>
               <a

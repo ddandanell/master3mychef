@@ -256,7 +256,7 @@ export default function BbqGrillPage() {
             From IDR 950,000 per guest · Minimum 8 guests · Full grill station, chef and cleanup included
           </p>
           <p className="text-white/50 text-xs mb-8 max-w-2xl mx-auto">
-            Price-model note: this page is the named grill-menu catalogue (from IDR 950K/guest, min. 8). Our <Link to="/catering/bbq-catering" className="text-[#C5A028] hover:underline">BBQ catering service packages</Link> are priced differently (from IDR 700K/person, min. 10) — different products, different entry floors.
+            Price-model note: this page is the named grill-menu catalogue (from IDR 950K/guest, min. 8). Our <Link to="/catering/bbq-catering" className="text-[#C5A028] hover:underline">BBQ catering in Bali</Link> is priced differently (from IDR 700K/person, min. 10) — different products, different entry floors.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -272,7 +272,7 @@ export default function BbqGrillPage() {
               to="/catering/bbq-catering"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-all"
             >
-              Full BBQ Catering Service
+              BBQ catering in Bali
             </Link>
           </div>
         </div>
@@ -362,7 +362,7 @@ export default function BbqGrillPage() {
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Dietary</p>
           <h2 className="font-playfair text-3xl md:text-4xl mb-6 text-white">Dietary Options on the Grill</h2>
           <p className="text-white/[65%] leading-relaxed">
-            Most grill menus adapt to vegetarian, vegan, gluten-free and halal requirements, and mixed menus let seafood-lovers and meat-lovers eat at the same party. Younger guests are covered too — our <Link to="/kids-menus" className="text-[#C5A028] hover:underline">kids' menus</Link> run from IDR 250,000 per child alongside any grill night.
+            Most grill menus adapt to vegetarian, vegan, gluten-free and halal requirements, and mixed menus let seafood-lovers and meat-lovers eat at the same party. Younger guests are covered too — our <Link to="/kids-menus" className="text-[#C5A028] hover:underline">kids</Link> menu runs from IDR 250,000 per child alongside any grill night.
           </p>
         </div>
       </section>
@@ -377,7 +377,7 @@ export default function BbqGrillPage() {
             <div>
               <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-2">Full-Event BBQ</p>
               <h3 className="font-playfair text-2xl text-white group-hover:text-[#C5A028] transition-colors mb-2">
-                Looking for full-event BBQ catering instead?
+                BBQ catering in Bali
               </h3>
               <p className="text-sm text-white/[60%] leading-relaxed">
                 Servers, buffet styling, bar service and full event staffing for larger celebrations.
@@ -393,7 +393,7 @@ export default function BbqGrillPage() {
               className="group rounded-2xl border border-white/10 bg-white/[0.04] p-7 hover:border-[#C5A028]/60 transition-colors"
             >
               <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-2">Villa Parties</p>
-              <h3 className="font-playfair text-xl text-white group-hover:text-[#C5A028] transition-colors mb-2">Villa BBQ Party Packages</h3>
+              <h3 className="font-playfair text-xl text-white group-hover:text-[#C5A028] transition-colors mb-2">villa BBQ party packages</h3>
               <p className="text-sm text-white/[60%] leading-relaxed">In-villa BBQ party packages with setup, staff and cleanup.</p>
             </Link>
             <Link
@@ -401,7 +401,7 @@ export default function BbqGrillPage() {
               className="group rounded-2xl border border-white/10 bg-white/[0.04] p-7 hover:border-[#C5A028]/60 transition-colors"
             >
               <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-2">Seafood</p>
-              <h3 className="font-playfair text-xl text-white group-hover:text-[#C5A028] transition-colors mb-2">Seafood BBQ Catering</h3>
+              <h3 className="font-playfair text-xl text-white group-hover:text-[#C5A028] transition-colors mb-2">seafood BBQ catering</h3>
               <p className="text-sm text-white/[60%] leading-relaxed">Market-fresh seafood grilled live at your villa.</p>
             </Link>
           </div>
@@ -469,7 +469,7 @@ export default function BbqGrillPage() {
               to="/pricing"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-all"
             >
-              View Pricing
+              transparent pricing
             </Link>
           </div>
           <p className="text-white/50 text-sm">

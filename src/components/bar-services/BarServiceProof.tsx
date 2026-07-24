@@ -23,9 +23,10 @@ export function BarServiceProof({ proof, image, imagePosition = 'right' }: Props
             className="relative pl-7 py-2"
           >
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#C5A028] to-[#C5A028]/20 rounded-full" />
-            <p className="text-lg md:text-xl font-medium text-[#F5F2EB] leading-snug">
-              {item}
-            </p>
+            <p
+              className="text-lg md:text-xl font-medium text-[#F5F2EB] leading-snug"
+              dangerouslySetInnerHTML={{ __html: item }}
+            />
           </div>
         ))}
       </div>

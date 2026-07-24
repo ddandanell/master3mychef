@@ -356,7 +356,7 @@ export default function CateringBabiGulingPage() {
               Indonesian BBQ
             </Link>
             <Link to="/catering/buffet" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Buffet Catering
+              buffet catering
             </Link>
             <Link to="/catering/drop-off-catering" className="px-5 py-2.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745] hover:border-[#C5A028] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               Drop-Off Catering
@@ -484,10 +484,10 @@ export default function CateringBabiGulingPage() {
               to="/catering"
               className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
             >
-              View all catering options <ArrowRight className="w-4 h-4" />
+              catering services <ArrowRight className="w-4 h-4" />
             </Link>
             <p className="text-sm text-[#4A4745]">
-              Babi guling works for <Link to="/events/villa-parties" className="text-[#C5A028] hover:underline">villa parties</Link>, birthdays, <Link to="/events/weddings" className="text-[#C5A028] hover:underline">wedding recovery lunches</Link>, and multi-day <Link to="/catering/villa-catering" className="text-[#C5A028] hover:underline">villa catering</Link> stays.
+              Babi guling works for <Link to="/events/villa-parties" className="text-[#C5A028] hover:underline">villa party catering</Link>, birthdays, <Link to="/events/weddings" className="text-[#C5A028] hover:underline">wedding catering</Link>, and multi-day <Link to="/catering/villa-catering" className="text-[#C5A028] hover:underline">villa catering</Link> stays.
             </p>
           </div>
         </div>

@@ -203,7 +203,7 @@ export default function VipTransportBaliPage() {
                 Our most-booked combination: airport pickup, straight to a villa where the fridge is stocked and a private chef is preparing your first-night dinner. No restaurant hunt after a long flight, no decisions — you swim, you shower, you sit down to a cooked meal.
               </p>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                Arrival dinners start from IDR 700K++ per person (plus 11% government tax + 10% service charge), and the whole first evening arrives on one quote. It's the natural first chapter of a <Link to="/complete-villa-experience" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">complete villa stay</Link> or a <Link to="/villa-event-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">villa event weekend</Link>.
+                Arrival dinners start from IDR 700K++ per person (plus 11% government tax + 10% service charge), and the whole first evening arrives on one quote. It's the natural first chapter of <Link to="/complete-villa-experience" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">complete villa stays</Link> or <Link to="/villa-event-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">villa event packages</Link>.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
@@ -244,9 +244,9 @@ export default function VipTransportBaliPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Complete the Experience</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: 'Villa Event Packages', href: '/villa-event-packages', desc: 'The all-inclusive villa experience.' },
-              { label: 'Villa Catering', href: '/catering', desc: 'BBQ, buffet & plated catering.' },
-              { label: 'Villa Weddings', href: '/events/weddings', desc: 'Ceremony & reception catering.' },
+              { label: 'villa event packages', href: '/villa-event-packages', desc: 'The all-inclusive villa experience.' },
+              { label: 'complete villa stays', href: '/complete-villa-experience', desc: 'Whole-stay daily chef & concierge.' },
+              { label: 'wedding guest logistics', href: '/events/weddings', desc: 'Ceremony & reception catering.' },
               { label: 'In-Villa Staff', href: '/in-villa-service', desc: 'Waiters, butlers & bartenders.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
@@ -270,7 +270,7 @@ export default function VipTransportBaliPage() {
             One thread for the road and the table
           </h2>
           <p className="text-white/[70%] leading-relaxed mb-10 max-w-2xl mx-auto">
-            Transport is available as an add-on to chef, event and stay bookings — <Link to="/contact" className="text-[#C5A028] underline underline-offset-4">contact the team</Link> with your flight details, or simply mention it when you book your chef. Planning guest logistics for a wedding? See how we coordinate arrivals on our <Link to="/events/weddings" className="text-[#C5A028] underline underline-offset-4">wedding catering</Link> page.
+            Transport is available as an add-on to chef, event and stay bookings — <Link to="/contact" className="text-[#C5A028] underline underline-offset-4">contact the team</Link> with your flight details, or simply mention it when you book your chef. Planning guest logistics for a wedding? See how we coordinate arrivals on our <Link to="/events/weddings" className="text-[#C5A028] underline underline-offset-4">wedding guest logistics</Link> page.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="vip-transport-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">

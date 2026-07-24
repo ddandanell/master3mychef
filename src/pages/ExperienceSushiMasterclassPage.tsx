@@ -107,7 +107,7 @@ const SECTIONS: PageSection[] = [
 
     <p>Classes suit 2–6 guests best so everyone gets direct, hands-on guidance; larger groups can be arranged with advance notice and additional chefs. Beverages are quoted separately so you choose exactly what you want.</p>
 
-    <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Reserve My Sushi Masterclass — WhatsApp +62 896-7407-2020</a></p>`,
+    <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Reserve My Sushi Masterclass — WhatsApp +62 896-7407-2020</a>. See our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">full pricing guide</a>.</p>`,
   },
   {
     id: 'who-is-it-for',
@@ -118,7 +118,7 @@ const SECTIONS: PageSection[] = [
     imageAlt: 'Guests enjoying a private dining experience at a Bali villa table',
     body: `<p>This experience works for almost any small group that enjoys food and wants to do something together. Couples on a romantic Bali trip often book it as a memorable afternoon before a private dinner. Families use it as a hands-on activity that keeps both adults and older children engaged. Groups of friends treat it as a relaxed prelude to a villa party.</p>
 
-    <p>Want to keep cooking? See our <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">private cooking classes in more cuisines</a>, or browse <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">all private experiences</a>. Pair the evening with <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">custom cocktails in your villa</a>.</p>`,
+    <p>Want to keep cooking? See our <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">private cooking classes in more cuisines</a>, or browse <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">all private experiences</a>. Pair the evening with <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">add a cocktail class to the same evening</a>. For a full dinner, see <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">private chef fine dining</a>.</p>`,
   },
   {
     id: 'faq',
@@ -138,7 +138,7 @@ const SECTIONS: PageSection[] = [
       external: true,
     },
     secondaryAction: {
-      label: 'View Pricing',
+      label: 'Full Pricing Guide',
       href: '/pricing',
     },
   },

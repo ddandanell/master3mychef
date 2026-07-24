@@ -419,6 +419,15 @@ export default function EventsAnniversariesPage() {
               </Link>
             ))}
           </div>
+          <p className="text-[#4A4745] text-center max-w-3xl mx-auto mt-8 leading-relaxed">
+            For <Link to="/fine-dining/romantic-dinner" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">romantic dinners for two</Link>,{' '}
+            <Link to="/proposal-dinner" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">planning a proposal instead?</Link>,{' '}
+            or a <Link to="/honeymoon-chef" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">honeymoon private chef</Link>. Browse{' '}
+            <Link to="/events" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">all event catering</Link>,{' '}
+            <Link to="/events/weddings" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa wedding catering</Link>,{' '}
+            <Link to="/in-villa-service/sommelier" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">sommelier & wine pairing</Link>, and our{' '}
+            <Link to="/pricing" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">full pricing guide</Link>.
+          </p>
         </div>
       </section>
 

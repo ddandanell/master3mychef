@@ -237,6 +237,9 @@ export default function CateringBBQPage() {
               <p className="text-[#4A4745]">
                 Every package includes a private chef who grills live, two service staff who manage plating and drinks, and full cleanup afterward. We handle propane, charcoal, equipment transport, and waste disposal.
               </p>
+              <p className="text-[#4A4745]">
+                See <Link to="/catering" className="text-[#C5A028] hover:underline">all catering options</Link> to compare BBQ with buffet, plated, and grazing formats.
+              </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {['Villa gardens', 'Poolside decks', 'Terraces', 'Beach setups', 'Rooftops', 'Covered patios'].map((tag) => (
                   <span key={tag} className="px-3 py-1.5 bg-white rounded-full text-xs text-[#4A4745] border border-[#E8E6E3]">{tag}</span>
@@ -304,8 +307,8 @@ export default function CateringBBQPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/bbq-grill" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Browse our BBQ menus <ArrowRight className="w-4 h-4" />
+            Browse our <Link to="/bbq-grill" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              full BBQ menus <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -339,7 +342,7 @@ export default function CateringBBQPage() {
                   ))}
                 </ul>
                 <p className="text-[#4A4745] pt-2">
-                  Looking for the full menu list? Browse our <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">BBQ menus</Link>.
+                  Looking for the full menu list? Browse our <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">full BBQ menus</Link>.
                 </p>
               </div>
             </div>
@@ -395,7 +398,7 @@ export default function CateringBBQPage() {
           />
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             <p className="text-sm text-[#4A4745]/80 text-center max-w-3xl mx-auto mb-8">
-              Price-model note: these are service packages (from IDR 700K/person, min. 10). Our <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">BBQ grill menu catalogue</Link> lists named signature menus priced per guest (from IDR 950K/guest, min. 8) — a different product, so the entry floors differ.
+              Price-model note: these are service packages (from IDR 700K/person, min. 10). Our <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">full BBQ menus</Link> list named signature menus priced per guest (from IDR 950K/guest, min. 8) — a different product, so the entry floors differ.
             </p>
             {BBQ_PACKAGES.map((pkg) => (
               <div key={pkg.title} className="bbq-reveal bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden flex flex-col">
@@ -495,12 +498,12 @@ export default function CateringBBQPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/catering/buffet" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore Buffet Catering <ArrowRight className="w-4 h-4" />
+            Explore <Link to="/catering/buffet" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              buffet catering <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
-            <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore Plated Dinners <ArrowRight className="w-4 h-4" />
+            Explore <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              plated dinners <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -638,10 +641,10 @@ export default function CateringBBQPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Buffet Catering', href: '/catering/buffet', desc: 'Large-group buffet service.' },
-              { label: 'Plated Dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
+              { label: 'buffet catering', href: '/catering/buffet', desc: 'Large-group buffet service.' },
+              { label: 'plated dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
               { label: 'Grazing Tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
-              { label: 'Pricing', href: '/pricing', desc: 'Transparent catering and service pricing.' },
+              { label: 'catering pricing', href: '/pricing', desc: 'Transparent catering and service pricing.' },
               { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
             ].map((item) => (

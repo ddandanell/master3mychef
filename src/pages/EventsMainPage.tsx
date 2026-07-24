@@ -559,6 +559,20 @@ export default function EventsMainPage() {
               </Link>
             ))}
           </div>
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed">
+            We cover the main event formats:{' '}
+            <Link to="/events/weddings" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">wedding catering in Bali</Link>,{' '}
+            <Link to="/events/birthdays" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">birthday catering</Link>,{' '}
+            <Link to="/events/anniversaries" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">anniversary dinners</Link>,{' '}
+            <Link to="/events/corporate-events" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">corporate event catering</Link>,{' '}
+            <Link to="/events/retreats" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">wellness retreat catering</Link>,{' '}
+            <Link to="/events/villa-parties" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa party catering</Link>, and{' '}
+            <Link to="/events/baby-showers" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">baby shower catering</Link>. For deeper pricing, see our{' '}
+            <Link to="/bali-wedding-catering-packages" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">wedding catering packages & prices</Link>, the{' '}
+            <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">full pricing guide</Link>,{' '}
+            <Link to="/catering" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa catering services</Link>, and{' '}
+            <Link to="/in-villa-service" className="text-[#C5A028] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">event staff hire</Link>.
+          </p>
         </div>
       </section>
 

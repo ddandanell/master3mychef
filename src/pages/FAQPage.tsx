@@ -37,7 +37,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     items: [
       {
         q: 'How much does a private chef in Bali cost?',
-        a: 'Villa dinners start from IDR 700K per person and fine-dining tasting menus from IDR 950K–980K per person, ++ (11% government tax + 10% service charge). Your fixed quote depends on menu, group size and staffing. <a href="/pricing">Full price tables →</a>',
+        a: 'Villa dinners start from IDR 700K per person and fine-dining tasting menus from IDR 950K–980K per person, ++ (11% government tax + 10% service charge). Your fixed quote depends on menu, group size and staffing. <a href="/pricing">full price tables</a>',
       },
       {
         q: 'What does "++" mean?',
@@ -53,7 +53,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'What is the cancellation policy?',
-        a: 'Full refund 14 or more days before your event, 50% refund at 7–13 days, and no refund inside 7 days — the deposit follows the same tiers. <a href="/cancellation">Full cancellation policy →</a>',
+        a: 'Full refund 14 or more days before your event, 50% refund at 7–13 days, and no refund inside 7 days — the deposit follows the same tiers. <a href="/cancellation">full cancellation policy</a>',
       },
     ],
   },
@@ -97,7 +97,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Do you cook Indonesian food?',
-        a: 'Yes — alongside Italian, French, Mediterranean, Japanese and BBQ. Chef Ni Putu Asri leads our Balinese and Indonesian feast menus. <a href="/services">See all services →</a>',
+        a: 'Yes — alongside Italian, French, Mediterranean, Japanese and BBQ. Chef Ni Putu Asri leads our Balinese and Indonesian feast menus. <a href="/services">all services</a>',
       },
     ],
   },
@@ -133,7 +133,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Do you offer weekly or monthly chef service?',
-        a: 'Yes — weekly meal prep from IDR 4.5M/week for two people, recurring chef days, and monthly arrangements for long stays. <a href="/hire-private-chef-bali-monthly">Monthly chef hire →</a> · <a href="/staffing/live-in-chef">Live-in chef placement →</a>',
+        a: 'Yes — weekly meal prep from IDR 4.5M/week for two people, recurring chef days, and monthly arrangements for long stays. <a href="/hire-private-chef-bali-monthly">monthly arrangements</a> · <a href="/staffing/live-in-chef">live-in chef</a>',
       },
       {
         q: "What if my chef can't make it?",

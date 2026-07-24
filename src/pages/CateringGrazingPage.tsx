@@ -295,6 +295,9 @@ export default function CateringGrazingPage() {
                 title="Instant Visual Impact That Reduces Formal Service Pressure"
                 subtitle="Grazing tables are built for events where people want beautiful food without a heavy meal structure. They create an immediate focal point, encourage mingling, and eliminate the need for passed service or plated courses."
               />
+              <p className="text-[#4A4745] mb-6">
+                As part of our broader <Link to="/catering" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">catering services</Link>, grazing tables work for everything from villa welcomes to corporate receptions.
+              </p>
               <div className="grid grid-cols-2 gap-3">
                 {['Villa welcome food', 'Poolside events', 'Wedding cocktail hour', 'Birthday celebrations', 'Wine nights', 'Corporate receptions', 'Pre-dinner grazing', 'Photo-ready brunch'].map((item) => (
                   <div key={item} className="flex items-center gap-2">
@@ -303,6 +306,9 @@ export default function CateringGrazingPage() {
                   </div>
                 ))}
               </div>
+              <p className="text-[#4A4745] text-sm mt-6">
+                Hosts often pair grazing with <Link to="/events/weddings" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">wedding catering</Link> for cocktail hour, add a <Link to="/catering/bbq-catering" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">BBQ night</Link> for heartier appetites, or choose <Link to="/catering/drop-off-catering" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">drop-off catering</Link> when they want fresh food without on-site staff.
+              </p>
             </div>
             <div className="rounded-2xl overflow-hidden">
               <OptimizedImage
@@ -498,7 +504,7 @@ export default function CateringGrazingPage() {
           </div>
           <div className="mt-8 p-6 rounded-2xl border border-[#E8E6E3] bg-white text-center">
             <p className="text-[#4A4745] text-sm">
-              <strong>Many events need both.</strong> Grazing tables work beautifully as a welcome display while canapés are passed during cocktails. We can design a combined package that gives you the best of both worlds.
+              <strong>Many events need both.</strong> Grazing tables work beautifully as a welcome display while canapés are passed during cocktails. For a full seated meal, pair grazing with our <Link to="/catering/plated-catering" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">plated dinner</Link> service. We can design a combined package — complete with a <Link to="/in-villa-service/bartenders" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">private bartender</Link> if you want drinks handled — that gives you the best of both worlds.
             </p>
           </div>
         </div>

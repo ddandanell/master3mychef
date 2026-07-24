@@ -130,7 +130,7 @@ function ExpandedWhyBali({
       <BarServiceSectionHeader title={section.title} variant="dark" />
       <div className="max-w-3xl space-y-5 text-[#F5F2EB]/80 text-base md:text-lg leading-relaxed">
         {section.paragraphs.map((p, i) => (
-          <p key={i}>{p}</p>
+          <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
         ))}
       </div>
     </>
@@ -171,7 +171,10 @@ function ExpandedWhoFor({
             className="p-6 rounded-xl bg-[#1A1A1A]/40 border border-[#F5F2EB]/10 backdrop-blur-sm transition-all duration-300 hover:border-[#C5A028]/30 hover:bg-[#1A1A1A]/60"
           >
             <h3 className="text-lg font-semibold text-[#F5F2EB] mb-2">{item.label}</h3>
-            <p className="text-[#F5F2EB]/65 text-sm leading-relaxed">{item.description}</p>
+            <p
+              className="text-[#F5F2EB]/65 text-sm leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: item.description }}
+            />
           </div>
         ))}
       </div>
@@ -213,7 +216,10 @@ function ExpandedCommonMistakes({
               className="w-2 h-2 rounded-full mt-2.5 flex-shrink-0"
               style={{ backgroundColor: '#C5A028' }}
             />
-            <span className="text-[#F5F2EB]/80 text-base md:text-lg leading-relaxed">{item}</span>
+            <span
+              className="text-[#F5F2EB]/80 text-base md:text-lg leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: item }}
+            />
           </li>
         ))}
       </ul>
@@ -248,7 +254,7 @@ function ExpandedCompliance({
         <BarServiceSectionHeader title={section.title} variant="dark" align="center" />
         <div className="max-w-3xl mx-auto space-y-5 text-[#F5F2EB]/80 text-base md:text-lg leading-relaxed text-center">
           {section.paragraphs.map((p, i) => (
-            <p key={i}>{p}</p>
+            <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
           ))}
         </div>
       </div>
@@ -275,7 +281,10 @@ function ExpandedSuccessKpis({
             className="flex items-start gap-4 p-5 rounded-xl bg-[#1A1A1A]/40 border border-[#F5F2EB]/10 backdrop-blur-sm"
           >
             <Check className="w-5 h-5 text-[#C5A028] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-            <span className="text-[#F5F2EB]/90 leading-relaxed">{item}</span>
+            <span
+              className="text-[#F5F2EB]/90 leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: item }}
+            />
           </div>
         ))}
       </div>

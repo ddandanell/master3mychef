@@ -259,7 +259,7 @@ export default function CateringVillaPage() {
               { title: 'Wedding Parties', desc: 'Pre-wedding dinners, rehearsal meals, and post-wedding brunches for villa-staying guests.' },
               { title: 'Corporate Retreats', desc: 'Multi-day catering for offsites, team buildings, and executive dinners.' },
               { title: 'Holiday Renters', desc: 'Airbnb and villa rental guests who want a private chef experience during their stay.' },
-              { title: 'Villa Managers', desc: <>Concierge-level catering for your guests. <Link to="/certified-partner" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Villa manager partnerships</Link> and white-label available.</> },
+              { title: 'Villa Managers', desc: <>Concierge-level catering for your guests. <Link to="/certified-partner" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa manager partnerships</Link> and white-label available.</> },
               { title: 'Retreat Hosts', desc: 'Yoga, wellness, and surf retreats needing consistent, healthy multi-day catering.' },
               { title: 'Celebrations', desc: 'Anniversaries, reunions, graduations — any reason to gather and eat well.' },
             ].map((item) => (
@@ -293,7 +293,7 @@ export default function CateringVillaPage() {
           </div>
           <div className="mt-8 text-center">
             <Link to="/catering/bbq-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore BBQ Catering <ArrowRight className="w-4 h-4" />
+              a BBQ night <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
             <Link to="/catering/buffet" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
@@ -333,7 +333,7 @@ export default function CateringVillaPage() {
             ))}
           </div>
           <p className="mt-8 text-sm text-[#4A4745] text-center max-w-3xl mx-auto">
-            Most groups build a rhythm around the stay: arrival-night welcome dinner, dinner-only middle days, and a big night that can be a <Link to="/villa-bbq-catering-bali" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa BBQ party</Link> or <Link to="/catering/bbq-catering" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">BBQ night</Link>. For a single big dinner, see our <Link to="/group-villa-dinner-packages-bali" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">group dinner packages</Link>. Staying a month or more? <Link to="/hire-private-chef-bali-monthly" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Long-stay chef hire</Link> may suit better.
+            Most groups build a rhythm around the stay: arrival-night welcome dinner, dinner-only middle days, and a big night that can be a <Link to="/villa-bbq-catering-bali" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa BBQ party</Link> or <Link to="/catering/bbq-catering" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">a BBQ night</Link>. For a single big dinner, see our <Link to="/group-villa-dinner-packages-bali" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">group dinner packages</Link>. Staying a month or more? <Link to="/hire-private-chef-bali-monthly" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">long-stay chef hire</Link> may suit better. For nights when you want chef-prepared food without staff in the villa, try our <Link to="/catering/drop-off-catering" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">drop-off dinners</Link>.
           </p>
           <div className="mt-10 bg-[#FAFAF8] rounded-2xl p-6 md:p-8 border border-[#E8E6E3]">
             <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>What You Need to Provide</h3>

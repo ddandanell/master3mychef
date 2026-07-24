@@ -389,7 +389,7 @@ export default function RomanticDinnerPage() {
               How to Plan Your Romantic Dinner
             </h2>
             <p className="text-white/[50%] text-sm mt-4">
-              Explore our <Link to="/fine-dining" className="text-[#C5A028] hover:underline">full fine dining menu</Link> or <Link to="/chefs" className="text-[#C5A028] hover:underline">meet our chefs</Link> before you book.
+              Explore our <Link to="/fine-dining" className="text-[#C5A028] hover:underline">full fine dining menu</Link>, <Link to="/fine-dining/menus" className="text-[#C5A028] hover:underline">signature set menus</Link>, or <Link to="/chefs" className="text-[#C5A028] hover:underline">meet our chefs</Link>. Planning a proposal? See our <Link to="/proposal-dinner" className="text-[#C5A028] hover:underline">proposal dinner</Link> options, or book a <Link to="/private-chef/uluwatu" className="text-[#C5A028] hover:underline">private chef in Uluwatu</Link>.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -555,6 +555,9 @@ export default function RomanticDinnerPage() {
             { label: 'Tasting Menu', href: '/fine-dining/tasting-menu' },
             { label: "Chef's Table", href: '/fine-dining/chefs-table' },
             { label: 'Our Menus', href: '/fine-dining/menus' },
+            { label: 'Our Chefs', href: '/fine-dining/our-chefs' },
+            { label: 'Proposal Dinner', href: '/proposal-dinner' },
+            { label: 'Private Chef Uluwatu', href: '/private-chef/uluwatu' },
             { label: 'Pricing', href: '/pricing' },
           ].map((l) => (
             <Link key={l.href} to={l.href} className="text-white/[50%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">

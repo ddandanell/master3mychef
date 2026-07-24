@@ -194,7 +194,7 @@ export default function ReviewsPage() {
                 WhatsApp us
               </a>
               <Link to="/pricing" className="text-sm font-semibold text-[#1A1A1A] underline decoration-[#C5A028] underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-                See pricing
+                see pricing
               </Link>
             </div>
           </div>
@@ -265,7 +265,7 @@ export default function ReviewsPage() {
               </p>
             </div>
             <Link to="/pricing" className="text-sm font-semibold text-[#1A1A1A] underline decoration-[#C5A028] underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              See pricing guide
+              see pricing
             </Link>
           </div>
 
@@ -350,7 +350,7 @@ export default function ReviewsPage() {
                 Chat on WhatsApp
               </a>
               <Link to="/why-mychef" className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white">
-                Why villas choose myCHEF
+                why villas choose myCHEF
               </Link>
             </div>
           </div>
@@ -370,8 +370,8 @@ export default function ReviewsPage() {
               { label: 'Private chef in Uluwatu', href: '/private-chef/uluwatu', desc: 'Clifftop villa dining in Uluwatu.' },
               { label: 'Private chef in Canggu', href: '/private-chef/canggu', desc: 'Private dining & BBQs in Canggu.' },
               { label: 'Private chef in Ubud', href: '/private-chef/ubud', desc: 'Retreats & villa dinners in Ubud.' },
-              { label: 'Wedding catering', href: '/events/weddings', desc: 'Wedding catering & villa receptions.' },
-              { label: 'Retreat catering', href: '/catering/retreat-catering', desc: 'Wellness & corporate retreat catering.' },
+              { label: 'wedding catering', href: '/events/weddings', desc: 'Wedding catering & villa receptions.' },
+              { label: 'retreat catering', href: '/catering/retreat-catering', desc: 'Wellness & corporate retreat catering.' },
               { label: 'Contact', href: '/contact', desc: 'Talk to the team about your event.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">

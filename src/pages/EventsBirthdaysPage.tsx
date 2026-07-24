@@ -240,7 +240,7 @@ export default function EventsBirthdaysPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
-                  <p className="text-[#4A4745] leading-relaxed"><strong>Bar service</strong> — a staffed open bar in the villa party format, or add a <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] hover:underline">private bartender</Link> from IDR 250K/hour to any dinner.</p>
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Bar service</strong> — a staffed open bar in the villa party format, or add a <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] hover:underline">private bartender hire</Link> from IDR 250K/hour to any dinner.</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
@@ -407,7 +407,7 @@ export default function EventsBirthdaysPage() {
             Celebrating a 30th, 40th or 50th at full production level? See our <Link to="/luxury-birthday-party-bali" className="text-[#2C5F7C] hover:underline">milestone and luxury birthday production</Link> page.
           </p>
           <p className="text-[#4A4745] text-center mt-4">
-            For a dedicated chef-led kids&apos; party, see our <Link to="/experiences/kids-birthday-chef-party" className="text-[#2C5F7C] hover:underline">kids&apos; birthday chef party</Link> and <Link to="/kids-menus" className="text-[#2C5F7C] hover:underline">kids&apos; menus</Link>.
+            For a dedicated chef-led <Link to="/experiences/kids-birthday-chef-party" className="text-[#2C5F7C] hover:underline">kids</Link> birthday chef party, see our kids birthday chef party page and <Link to="/kids-menus" className="text-[#2C5F7C] hover:underline">kids</Link> menus.
           </p>
         </div>
       </section>

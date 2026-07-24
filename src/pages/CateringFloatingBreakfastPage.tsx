@@ -582,9 +582,9 @@ export default function CateringFloatingBreakfastPage() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { label: 'Private Chef', href: '/fine-dining/private-chef-bali', desc: 'Live chef cooking at your villa.' },
-              { label: 'Breakfast Catering', href: '/catering/villa-catering', desc: 'Daily villa breakfast service.' },
-              { label: 'Villa Catering', href: '/catering/villa-catering', desc: 'Group meals for multi-day stays.' },
-              { label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner', desc: 'Candlelit private chef dinners.' },
+              { label: 'villa catering for the rest of your stay', href: '/catering/villa-catering', desc: 'Daily villa breakfast service.' },
+              { label: 'villa catering for the rest of your stay', href: '/catering/villa-catering', desc: 'Group meals for multi-day stays.' },
+              { label: 'romantic private dinner', href: '/fine-dining/romantic-dinner', desc: 'Candlelit private chef dinners.' },
               { label: 'Wedding Catering', href: '/events/weddings', desc: 'Full villa wedding catering.' },
               { label: 'Retreat Catering', href: '/catering/retreat-catering', desc: 'Multi-day wellness retreat meals.' },
               { label: 'Drop-Off Breakfast', href: '/catering/drop-off-catering', desc: 'Fresh food delivered to your villa.' },
@@ -593,7 +593,7 @@ export default function CateringFloatingBreakfastPage() {
               { label: 'Flowers', href: '/fine-dining/romantic-dinner', desc: 'Romantic floral styling.' },
               { label: 'Decoration', href: '/events/birthdays', desc: 'Themed villa celebration décor.' },
             ].map((item) => (
-              <Link key={item.href + item.label} to={item.href} className="block p-5 rounded-2xl bg-[#FAFAF8] border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <Link key={item.href + item.label + item.desc} to={item.href} className="block p-5 rounded-2xl bg-[#FAFAF8] border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>
                 <p className="text-xs text-[#4A4745]">{item.desc}</p>
               </Link>

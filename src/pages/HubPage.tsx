@@ -347,11 +347,21 @@ export default function HubPage() {
                     <MessageCircle className="w-4 h-4" /> Get Your Quote within 2 Hours <span aria-hidden="true">→</span>
                   </a>
                   <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
-                    Browse Menus &amp; Pricing <ArrowRight className="w-4 h-4" />
+                    see transparent pricing <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
                 <p className="text-sm uppercase tracking-[0.18em] text-white/60" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   560+ villas served · 12,000+ happy guests · Same-day confirmation
+                </p>
+                <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70">
+                  <Link to="/services" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">explore all private chef services in Bali</Link>,{' '}
+                  <Link to="/fine-dining" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">fine dining tasting menus</Link>,{' '}
+                  <Link to="/villa-chef" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">daily villa chef service</Link>,{' '}
+                  <Link to="/hire-private-chef-bali-monthly" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">monthly private chef arrangements</Link>,{' '}
+                  <Link to="/chefs" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">meet our chefs</Link>,{' '}
+                  <Link to="/reviews" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">read guest reviews</Link>,{' '}
+                  <Link to="/why-mychef" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">why 560+ villas choose myCHEF</Link>, or{' '}
+                  <Link to="/faq" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">booking questions answered</Link>.
                 </p>
               </div>
             </div>
@@ -972,8 +982,8 @@ export default function HubPage() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
-              Read All Reviews <ArrowRight className="w-4 h-4" />
+            <Link to="/reviews" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
+              read guest reviews <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

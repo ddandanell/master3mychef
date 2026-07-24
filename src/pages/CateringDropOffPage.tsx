@@ -409,6 +409,10 @@ export default function CateringDropOffPage() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-center text-[#4A4745] text-sm max-w-2xl mx-auto">
+            For daily nutrition-focused plans, see our{' '}
+            <Link to="/healthy-meal-delivery-indonesia" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">healthy meal plans</Link>.
+          </p>
         </div>
       </section>
 
@@ -752,7 +756,7 @@ export default function CateringDropOffPage() {
             {[
               { label: 'Private Chef Villa', href: '/villa-chef', desc: 'Daily chef service for your stay.' },
               { label: 'BBQ Catering', href: '/catering/bbq-catering', desc: 'Live-fire grilling at your villa.' },
-              { label: 'Grazing Tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
+              { label: 'grazing boxes & tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
               { label: 'Buffet Catering', href: '/catering/buffet', desc: 'Large-group buffet service.' },
               { label: 'Plated Dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },

@@ -275,6 +275,10 @@ export default function CateringCorporatePage() {
                 Our team arrives 2–3 hours before service, sets up quietly, and serves without disrupting presentations or discussions. After the event, we handle full cleanup and provide a detailed tax invoice within 48 hours.
               </p>
               <p className="text-[#4A4745]">
+                For recurring office lunches and smaller team meals without full service, see our{' '}
+                <Link to="/catering/drop-off-catering" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">drop-off catering for office lunches</Link>.
+              </p>
+              <p className="text-[#4A4745]">
                 Need AV, staging, branded builds or a full event producer on top of the food? That is our{' '}
                 <Link to="/events/corporate-events" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">full corporate event production in Bali</Link>.{' '}
                 Planning a multi-day offsite with every meal covered? See{' '}

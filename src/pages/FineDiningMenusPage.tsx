@@ -372,17 +372,30 @@ export default function FineDiningMenusPage() {
           </div>
 
           <div className="reveal mt-10 rounded-[24px] border border-[#C5A028]/25 bg-white/[0.05] p-7 text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028]">Looking for the most exclusive format?</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028]">Explore other fine dining formats</p>
             <p className="mt-3 text-base text-white/[80%]">
-              Chef&apos;s Table is a separate Adriano-led counter experience, distinct from the 24 signature set menus above.
+              Beyond the 24 signature set menus, we also offer tasting menus, romantic dinners for two, and Adriano&apos;s exclusive Chef&apos;s Table.
             </p>
-            <Link
-              to="/fine-dining/chefs-table"
-              className="mt-5 inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-white/[85%] transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
-            >
-              Explore Chef&apos;s Table
-              <ChevronRight className="h-4 w-4" />
-            </Link>
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
+              <Link
+                to="/fine-dining/tasting-menu"
+                className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-white/[85%] transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
+              >
+                Tasting Menu <ChevronRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/fine-dining/romantic-dinner"
+                className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-white/[85%] transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
+              >
+                Romantic Dinner <ChevronRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/fine-dining/chefs-table"
+                className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-white/[85%] transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
+              >
+                Chef&apos;s Table <ChevronRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

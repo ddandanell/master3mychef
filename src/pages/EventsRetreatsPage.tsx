@@ -230,7 +230,7 @@ export default function EventsRetreatsPage() {
                 Retreat food planning is different from normal event catering because guests are not just attending a dinner. They are waking up together, moving through sessions, practicing, resting, and eating multiple times a day for several days in a row. That changes everything: the menu has to feel nourishing without becoming repetitive, portions need to support the rhythm of the programme, and dietary complexity builds quickly as the guest list gets bigger. We design around those realities from day one.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                myCHEF specialises in balanced villa retreat operations — breakfast setups that are ready before the first session, communal lunches that keep the day moving, evening dinners that feel satisfying without weighing guests down, and kitchen systems that hold quality across the full week. For organisers who need a more service-specific breakdown, our <a href="/catering/retreat-catering" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">retreat catering page</a> shows the dedicated catering version of this offer.
+                myCHEF specialises in balanced villa retreat operations — breakfast setups that are ready before the first session, communal lunches that keep the day moving, evening dinners that feel satisfying without weighing guests down, and kitchen systems that hold quality across the full week. For organisers who need a more service-specific breakdown, our <a href="/catering/retreat-catering" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">retreat meal plans (catering-only)</a> show the dedicated catering version of this offer.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -489,6 +489,13 @@ export default function EventsRetreatsPage() {
               </Link>
             ))}
           </div>
+          <p className="text-[#4A4745] text-center max-w-3xl mx-auto mt-8 leading-relaxed">
+            Explore <Link to="/catering/retreat-catering" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">retreat meal plans (catering-only)</Link>,{' '}
+            <Link to="/corporate-retreat-catering-bali" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">corporate retreat catering</Link>,{' '}
+            <Link to="/experiences/private-cooking-class" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">private cooking class</Link>,{' '}
+            <Link to="/healthy-meal-delivery-indonesia" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">chef-prepared meal plans</Link>, and{' '}
+            <Link to="/private-chef/ubud" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">private chef in Ubud</Link>.
+          </p>
         </div>
       </section>
 

@@ -88,27 +88,39 @@ export const EVENTS_RELATED: RelatedService[] = [
 
 export const IN_VILLA_SERVICE_RELATED: RelatedService[] = [
   {
-    title: 'Villa Waiters',
+    title: 'Waiter hire from IDR 250K/hour',
     description: 'Professional waiters for your villa dinner or event. English-speaking, uniformed, and experienced.',
     path: '/in-villa-service/waiters',
     category: 'In-Villa Service'
   },
   {
-    title: 'Villa Butlers',
+    title: 'Butler hire by the day',
     description: 'Discreet butler service for villa stays and special occasions. Full household coordination.',
     path: '/in-villa-service/butlers',
     category: 'In-Villa Service'
   },
   {
-    title: 'Bartenders',
+    title: 'Private bartender for your villa',
     description: 'Skilled bartenders for villa parties and events. Cocktail creation, bar setup, and service.',
     path: '/in-villa-service/bartenders',
     category: 'In-Villa Service'
   },
   {
-    title: 'Mixology',
+    title: 'Mixology & custom cocktail programs',
     description: 'Signature cocktail creation and bespoke bar experiences for your villa gathering.',
     path: '/in-villa-service/mixology',
+    category: 'In-Villa Service'
+  },
+  {
+    title: 'Private sommelier service',
+    description: 'Wine pairing, selection and tableside service for fine dining experiences.',
+    path: '/in-villa-service/sommelier',
+    category: 'In-Villa Service'
+  },
+  {
+    title: 'Event hosts & hostesses',
+    description: 'Guest reception, seating coordination and event flow management.',
+    path: '/in-villa-service/host-hostess',
     category: 'In-Villa Service'
   }
 ]

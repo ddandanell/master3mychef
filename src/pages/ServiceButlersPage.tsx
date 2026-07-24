@@ -320,11 +320,11 @@ export default function ServiceButlersPage() {
           <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link to="/butler-service-bali-daily-rate" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1">butler daily-rate breakdown</h4>
+              <h4 className="font-semibold text-sm mb-1">full butler daily-rate breakdown</h4>
               <p className="text-xs text-[#4A4745]">Full line-by-line butler pricing.</p>
             </Link>
             <Link to="/in-villa-service" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1">in-villa service hub</h4>
+              <h4 className="font-semibold text-sm mb-1">all in-villa service staff</h4>
               <p className="text-xs text-[#4A4745]">All in-villa service staff.</p>
             </Link>
             <Link to="/in-villa-service/waiters" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
@@ -340,7 +340,7 @@ export default function ServiceButlersPage() {
               <p className="text-xs text-[#4A4745]">Reception and event-flow hosts.</p>
             </Link>
             <Link to="/catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1">villa catering</h4>
+              <h4 className="font-semibold text-sm mb-1">villa catering to match</h4>
               <p className="text-xs text-[#4A4745]">Full-service catering to match your butler.</p>
             </Link>
             <Link to="/staffing/household-staff" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">

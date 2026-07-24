@@ -99,7 +99,7 @@ const GROUP_TOTALS = [
 ]
 
 const PLATED_GALLERY = [
-  '/generated/mychef-catering-bali-plated-menus.webp',
+  '/generated/mychef-catering-bali-corporate-gallery-plated.webp',
   '/generated/mychef-events-bali-corp-plated.webp',
   '/generated/mychef-misc-bali-hub-fine-dining.webp',
   '/generated/mychef-experience-bali-aura-toast.webp',
@@ -201,7 +201,7 @@ export default function CateringPlatedPage() {
         title="Plated Dinner Bali | 3–5 Course Villa Catering — myCHEF"
         description="Plated dinner catering in Bali for villa events, weddings & anniversaries. 3–5 course set menus with private chef, waiters & full service included."
         canonical={`${SITE}/catering/plated-catering`}
-        ogImage={`${SITE}/generated/mychef-catering-bali-plated-menus.webp`}
+        ogImage={`${SITE}/generated/mychef-events-bali-anniversaries-plated.webp`}
         jsonLd={[
           serviceWithAggregateOfferSchema({
             name: 'Plated Dinner Catering Bali',
@@ -230,7 +230,7 @@ export default function CateringPlatedPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-catering-bali-plated-menus.webp"
+            src="/generated/mychef-events-bali-anniversaries-plated.webp"
             alt="Elegant plated dinner course served at a Bali villa for private fine dining"
             width={1920}
             height={1080}

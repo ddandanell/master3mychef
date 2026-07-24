@@ -1,6 +1,15 @@
 import { readdirSync, readFileSync } from 'node:fs'
 import { join, relative } from 'node:path'
 
+// Prerender requires a full Chromium environment. Vercel's build image lacks the
+// system libraries Playwright needs, so the production build prerenders in CI
+// (GitHub Actions) and deploys the prebuilt dist. Skip validation here to avoid
+// failing preview deployments that build directly on Vercel.
+if (process.env.VERCEL || process.env.SKIP_PRERENDER === '1') {
+  console.log('⏭  validate-prerender: skipped (Vercel build or SKIP_PRERENDER=1)')
+  process.exit(0)
+}
+
 const DIST = './dist'
 
 // Routes that are intentionally client-only (forms). They will stay as SPA shells

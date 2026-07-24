@@ -139,6 +139,58 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       ]
       return schema
     }
+    if (entry.slug === 'proposal-dinner') {
+      const schema = serviceWithAggregateOfferSchema({
+        name: 'Proposal Dinner Bali',
+        description: 'A chef-led proposal dinner for two in your Bali villa: bespoke menu, discreet service, table styling and confidential surprise planning, from IDR 2.8M++ per couple.',
+        url: canonical,
+        lowPrice: '2800000',
+        highPrice: '7000000',
+        unitText: 'per couple ++ (11% government tax + 10% service charge); add-ons itemised',
+      })
+      // @ts-expect-error provider object supports telephone override
+      schema.provider = {
+        '@type': 'LocalBusiness',
+        name: 'myCHEF',
+        url: SITE,
+        telephone: '+62 896-7407-2020',
+        areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+      }
+      return schema
+    }
+    if (entry.slug === 'honeymoon-chef') {
+      return serviceWithAggregateOfferSchema({
+        name: 'Honeymoon Private Chef Bali',
+        description: 'Multi-night private chef dining for honeymooners in Bali villas: arrival dinners, floating breakfasts, signature romantic evenings and full-stay chef service for two.',
+        url: canonical,
+        lowPrice: '700000',
+        highPrice: '4500000',
+        unitText: 'per person/per couple/per week depending on experience; ++ (11% tax + 10% service)',
+      })
+    }
+    if (entry.slug === 'private-chef-for-events') {
+      const schema = serviceWithAggregateOfferSchema({
+        name: 'Private Chef for Events Bali',
+        description: 'One-off event chef hire in Bali and Jakarta: a professional chef (with optional service staff) who designs the menu, sources ingredients, cooks at your venue and cleans up — for villa parties, birthdays, seated dinners and cocktail receptions.',
+        url: canonical,
+        lowPrice: '600000',
+        highPrice: '1500000',
+        unitText: 'per day chef hire; event menus from IDR 700K–1.2M per person; service staff from IDR 250K/hour. Prices ++ (11% tax + 10% service)',
+      })
+      // @ts-expect-error provider object supports telephone override
+      schema.provider = {
+        '@type': 'Organization',
+        name: 'myCHEF',
+        url: SITE,
+        telephone: '+62 896-7407-2020',
+      }
+      // @ts-expect-error extend service schema with multi-region areaServed
+      schema.areaServed = [
+        { '@type': 'Place', name: 'Bali, Indonesia' },
+        { '@type': 'Place', name: 'Jakarta, Indonesia' },
+      ]
+      return schema
+    }
     return serviceSchema(entry.title, entry.description, canonical)
   })()
   const breadcrumbJsonLd = isArticle ? breadcrumbSchema(entry.title, canonical, hubLabel, `${SITE}${hubPath}`) : breadcrumbSchema(entry.title, canonical)
@@ -151,7 +203,37 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         { question: 'Can myCHEF find a full-time or live-in chef?', answer: 'Yes. Permanent roles use a placement process with a household brief, matched profiles, interviews, cooking trials, contract support, and ongoing follow-up.' },
         { question: 'Where in Indonesia can I hire a myCHEF chef?', answer: 'Regular service is available across Bali. Assignments in Lombok, on yachts, at remote estates, and in other Indonesian locations are assessed individually based on schedule and logistics.' },
       ]
-    : entry.slug === 'villa-bbq-catering-bali'
+    : entry.slug === 'proposal-dinner'
+      ? [
+          { question: 'How much does a proposal dinner in Bali cost?', answer: 'From IDR 2.8M++ per couple for a private chef dinner, or from IDR 3.5M++ per couple for full service with styling and waitstaff. Add-ons are itemised.' },
+          { question: 'Can you keep it a complete surprise?', answer: 'Yes — coordination happens only with the planning partner, setup is staged while the couple is out, and the service team works to an agreed cue.' },
+          { question: 'Can you arrange a photographer?', answer: 'Yes — discreet proposal photographers from IDR 2.4M for two hours, briefed on positioning and the signal to shoot. Quoted separately.' },
+          { question: 'Where can the dinner happen?', answer: 'At your villa — terrace, poolside or garden — across Uluwatu, Ubud, Seminyak, Canggu, Jimbaran, Nusa Dua and the rest of Bali.' },
+          { question: 'What if my partner has dietary requirements?', answer: 'The entire menu is designed privately around allergies, vegetarian, halal or any other requirement, without raising the subject at the table.' },
+          { question: 'How far in advance should I book?', answer: 'As early as possible for peak season, but short-notice proposals are often possible — message us and we will confirm what can be arranged.' },
+          { question: 'What if it rains?', answer: 'A covered fallback position is planned in advance for outdoor setups.' },
+          { question: 'What deposit is required?', answer: 'A deposit confirms the date and the team (deposit level pending business confirmation), with the balance due before the evening.' },
+        ]
+      : entry.slug === 'honeymoon-chef'
+        ? [
+            { question: 'How much does a honeymoon private chef in Bali cost?', answer: 'Dinners from IDR 700K++ per person; full-service romantic evenings from IDR 3.5M++ per couple; daily chef service from IDR 600K/hour plus groceries at cost; weekly arrangements from IDR 4.5M++ for two. ++ adds 11% government tax and 10% service charge.' },
+            { question: 'Can we book the chef for our whole stay?', answer: 'Yes — a single dinner, selected days, or full daily hosting, quoted as one package around your itinerary.' },
+            { question: 'What\'s included in the price?', answer: 'Menu design, shopping, cooking, serving and cleanup. Full-service evenings add table setting, candles and waitstaff. Groceries are billed at cost on daily formats.' },
+            { question: 'Can you handle dietary preferences?', answer: 'Yes — vegan, gluten-free, halal-friendly and allergy requirements are planned into every meal.' },
+            { question: 'Is the floating breakfast included?', answer: 'It\'s an add-on from IDR 950K++ per couple, served at your pool at your chosen time.' },
+            { question: 'How far ahead should we book?', answer: 'As soon as flights and villa are confirmed — peak-season chef days book out early.' },
+            { question: 'Can family book this as a wedding gift?', answer: 'Yes — honeymoon dining plans can be arranged and paid for by family or friends, coordinated as a surprise.' },
+            { question: 'What deposit is required?', answer: 'A deposit confirms the dates (deposit level pending business confirmation), with the balance due before service and written cancellation terms.' },
+          ]
+        : entry.slug === 'private-chef-for-events'
+          ? [
+              { question: 'How many guests can you handle?', answer: 'From small private dinners to large villa parties. Share your numbers and venue and we build the right team around it — one chef for an intimate dinner, a full culinary crew for a large celebration.' },
+              { question: 'What is the difference between hiring an event chef and booking catering?', answer: 'Chef hire puts a professional chef (and optional staff) inside your event with a menu built for you. Catering lines are structured service formats for scale, and the events team adds full production — same company, different scope.' },
+              { question: 'Do you handle drinks and styling too?', answer: 'Yes — bar service and table styling can be added alongside the food. Bartenders and sommeliers are available from IDR 250K per hour.' },
+              { question: 'How far ahead should I book?', answer: 'Single dinners: two to three weeks is usually comfortable. Peak-season dates and large events should be booked earlier. Availability is usually confirmed within 2 hours on WhatsApp.' },
+              { question: 'Which areas do you cover?', answer: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua and beyond — plus Jakarta. Any travel fee is confirmed upfront.' },
+            ]
+          : entry.slug === 'villa-bbq-catering-bali'
       ? [
           { question: 'How much does a villa BBQ party in Bali cost?', answer: 'Party packages run IDR 700,000–850,000 per person ++, all-inclusive: chef, two service staff, grill, equipment, ingredients, setup, and cleanup. Add-ons (bartender, Wagyu upgrade, grazing table) are itemised in your quote.' },
           { question: 'What is the minimum group size for a villa BBQ party?', answer: 'Ten guests in most areas; groups of 8–9 are sometimes possible in Seminyak–Canggu on request.' },

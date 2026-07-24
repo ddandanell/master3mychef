@@ -3,12 +3,16 @@ import { breadcrumbSchema } from '@/components/SeoHead'
 import { Wine, ChefHat, UtensilsCrossed, PartyPopper, Shell, Heart } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 
+const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20a%20private%20experience%20in%20Bali.%20Please%20help%20me%20choose%20the%20right%20one.'
+const CANONICAL = 'https://mychef.id/experiences'
+
 const EXPERIENCES = [
   {
     slug: 'private-cocktail-party',
     title: 'Private Cocktail Party',
-    keyword: 'bartender hire Bali',
-    desc: 'Hire a professional bartender and complete mobile cocktail bar for your Bali villa, wedding, birthday or private event. Bar setup, staff, mixers and a custom cocktail menu included.',
+    hook: 'A full bar, professional bartenders and chef-made canapés at your villa.',
+    price: 'IDR 700K–1.2M per person ++',
+    linkText: 'Explore the private cocktail party at your villa',
     icon: Wine,
     href: '/experiences/private-cocktail-party',
     image: '/generated/bartender-hire-bali-cocktail-party.webp',
@@ -17,8 +21,9 @@ const EXPERIENCES = [
   {
     slug: 'sushi-masterclass',
     title: 'Sushi Masterclass',
-    keyword: 'sushi making class Bali',
-    desc: 'Book a private sushi making class Bali experience at your villa. Learn maki, nigiri and hand rolls with a sushi chef, then enjoy the meal you created together.',
+    hook: 'Learn maki, nigiri and hand rolls with a private sushi chef, then eat everything you made.',
+    price: 'From IDR 700K per person ++',
+    linkText: 'Book a private sushi masterclass',
     icon: UtensilsCrossed,
     href: '/experiences/sushi-masterclass',
     image: '/generated/sushi-making-class-bali-masterclass.webp',
@@ -27,8 +32,9 @@ const EXPERIENCES = [
   {
     slug: 'private-cooking-class',
     title: 'Private Cooking Class',
-    keyword: 'private cooking class Bali',
-    desc: 'Choose your cuisine and learn from a private chef in your own villa. Italian, Indonesian, Japanese, French, healthy or kids’ cooking classes with ingredients included.',
+    hook: 'Your chef, your kitchen, your choice of cuisine — ingredients and recipes included.',
+    price: 'From IDR 700K per person ++',
+    linkText: 'Book a private cooking class in your villa',
     icon: ChefHat,
     href: '/experiences/private-cooking-class',
     image: '/generated/private-cooking-class-bali-villa.webp',
@@ -37,8 +43,9 @@ const EXPERIENCES = [
   {
     slug: 'kids-birthday-chef-party',
     title: 'Kids Birthday Chef Party',
-    keyword: 'kids birthday party Bali',
-    desc: 'Turn your villa into a fully hosted children’s cooking party. Pizza making, cupcake decorating, kids’ sushi, mocktails, chef hats and cleanup handled by our team.',
+    hook: 'The children cook, you relax. Six interactive menus, nut-free as standard.',
+    price: 'IDR 250K–350K per child',
+    linkText: 'Plan a kids birthday chef party',
     icon: PartyPopper,
     href: '/experiences/kids-birthday-chef-party',
     image: '/generated/kids-birthday-party-bali-chef.webp',
@@ -46,9 +53,10 @@ const EXPERIENCES = [
   },
   {
     slug: 'champagne-oyster-experience',
-    title: 'Champagne & Oyster Experience',
-    keyword: 'oyster bar Bali',
-    desc: 'Book a private oyster bar Bali experience and champagne reception at your villa, wedding or event. Fresh oysters on ice, live shucking, premium glassware and professional service.',
+    title: 'Champagne & Oyster Hour',
+    hook: 'Fresh oysters shucked on-site and chilled champagne as the opening act to a private dinner.',
+    price: 'Quoted individually',
+    linkText: 'See the champagne & oyster experience',
     icon: Shell,
     href: '/experiences/champagne-oyster-experience',
     image: '/generated/oyster-bar-bali-champagne.webp',
@@ -56,9 +64,10 @@ const EXPERIENCES = [
   },
   {
     slug: 'romantic-proposal-dinner',
-    title: 'Romantic Proposal Dinner',
-    keyword: 'proposal package Bali',
-    desc: 'Plan a complete proposal package Bali experience with dinner, flowers, candles, styling, photographer and confidential coordination through one dedicated team.',
+    title: 'Proposal Experiences',
+    hook: 'The chef-led proposal dinner or the full proposal package with styling, flowers and hidden photographer.',
+    price: 'From IDR 3.5M++ per couple',
+    linkText: 'See the full proposal package',
     icon: Heart,
     href: '/experiences/romantic-proposal-dinner',
     image: '/generated/proposal-package-bali-dinner.webp',
@@ -71,19 +80,19 @@ const SECTIONS: PageSection[] = [
     id: 'intro',
     type: 'content' as const,
     subtitle: 'Private Experiences Bali',
-    title: 'Curated Culinary & Celebration Experiences in Your Villa',
+    title: 'Private Experiences in Bali — The Villa Is the Venue',
     image: '/generated/private-experiences-bali-hub.webp',
     imageAlt: 'Private experiences Bali collection at a luxury villa by myCHEF',
-    body: `<p>Some moments deserve more than a restaurant reservation. The myCHEF <strong>private experiences Bali</strong> collection brings chefs, bartenders, teachers and event specialists directly to your villa, turning a normal evening into something your guests will remember long after the holiday ends.</p>
+    body: `<p>Some moments deserve more than a restaurant reservation. myCHEF private experiences bring chefs, sushi masters, mixologists and party teams directly to your Bali villa — so the occasion happens where you're actually staying, on your schedule, with nobody else's table six feet away.</p>
 
-    <p>Every experience is designed around the setting you already have: your villa, your pool, your kitchen, your view. You choose the occasion and the mood, and we build the rest — ingredients, equipment, service staff, styling and cleanup. The result feels personal, seamless and unmistakably Bali.</p>
+    <p>Every experience is built around the setting you already have: your pool, your kitchen, your view. You choose the occasion; we bring the ingredients, equipment, staff and styling — and leave the villa exactly as we found it.</p>
 
-    <p>Whether you want a hands-on sushi class with friends, a floating cocktail bar by the pool, a stress-free kids’ cooking party, or a confidential proposal dinner planned down to the last candle, these experiences are built for guests who expect privacy, quality and attention to detail.</p>`,
+    <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Plan Your Experience — WhatsApp +62 896-7407-2020</a>. Tell us the experience, date, villa and guest count — we reply within the hour.</p>`,
   },
   {
     id: 'collection',
     type: 'custom' as const,
-    subtitle: 'Explore the Collection',
+    subtitle: 'Explore the Experiences',
     title: 'Private Experiences in Bali by myCHEF',
     render: (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
@@ -110,9 +119,10 @@ const SECTIONS: PageSection[] = [
                   </div>
                   <h3 className="text-lg font-semibold text-[#F5F1E8] group-hover:text-[#C5A028] transition-colors">{e.title}</h3>
                 </div>
-                <p className="text-sm text-stone-400 leading-relaxed mb-4">{e.desc}</p>
+                <p className="text-sm text-stone-400 leading-relaxed mb-2">{e.hook}</p>
+                <p className="text-sm text-[#C5A028] font-medium mb-4">{e.price}</p>
                 <span className="inline-flex items-center text-sm font-medium text-[#C5A028] group-hover:underline">
-                  Explore {e.title}
+                  {e.linkText}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 </span>
               </div>
@@ -125,117 +135,111 @@ const SECTIONS: PageSection[] = [
   {
     id: 'why-private',
     type: 'content' as const,
-    subtitle: 'Why Book a Private Experience',
-    title: 'The Difference Between a Reservation and an Experience',
-    body: `<p>Private experiences solve the problems that come with group travel and special occasions. There is no need to coordinate transport, no shared restaurant space, no fixed menu that does not suit everyone, and no pressure to leave when the evening is just getting started.</p>
+    subtitle: 'Why an Experience Beats a Reservation',
+    title: 'The Villa Is the Venue',
+    body: `<p>Group travel has a logistics problem: coordinating transport for twelve, fixed menus nobody fully loves, shared space, and a bill that arrives just as the evening gets good. A private villa experience deletes all of it. A proposal can be timed to the sunset. A kids' party can start after nap time. A sushi class can <em>become</em> dinner. A cocktail party never has a closing time.</p>
 
-    <p>When the experience comes to your villa, the schedule is yours. A proposal can be timed to sunset. A kids’ party can start after nap time. A cocktail class can flow into dinner. A sushi lesson can become the meal. Everything adapts to your group rather than the other way around.</p>
-
-    <p>Our team handles the logistics that would normally fall to you: sourcing fresh ingredients, bringing equipment that villa kitchens may not have, setting up stations, managing dietary requirements, serving drinks and restoring the space afterwards. You are the host, but you are never the event manager.</p>`,
+    <p>And you're the host without being the event manager — we source, set up, serve and clean down. You've already found the best venue in Bali. You're sleeping in it.</p>`,
   },
   {
     id: 'how-it-works',
     type: 'content' as const,
     subtitle: 'How It Works',
     title: 'From Idea to Experience in Four Steps',
-    body: `<p><strong>1. Choose your experience.</strong> Browse the <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">private experiences Bali</a> collection and pick the activity or occasion that matches your group. Each page explains what is included, typical duration, group size and how it fits with other myCHEF services.</p>
+    body: `<p><strong>1. Choose your experience.</strong> Each page shows what's included, typical duration, group sizes and pricing anchors.</p>
 
-    <p><strong>2. Send a brief.</strong> A short WhatsApp message is enough to begin. Include your preferred date, villa location, number of guests and any dietary requests or special occasion details.</p>
+    <p><strong>2. Send a short brief.</strong> One WhatsApp message: date, villa, guests, occasion, dietary needs.</p>
 
-    <p><strong>3. Receive a tailored plan.</strong> We confirm availability, design the menu or activity, and send a written proposal with all inclusions, staffing and investment summary. Nothing is hidden.</p>
+    <p><strong>3. Receive a tailored plan.</strong> Menu or activity design, staffing and an itemised investment summary — nothing hidden, all-in figures shown.</p>
 
-    <p><strong>4. Enjoy the experience.</strong> Our team arrives ahead of time with everything needed, runs the experience from start to finish, and leaves the villa tidy. You simply turn up.</p>`,
+    <p><strong>4. Just turn up.</strong> The team arrives early, runs everything, and restores the villa afterwards.</p>`,
   },
   {
-    id: 'who-for',
+    id: 'includes',
     type: 'content' as const,
-    subtitle: 'Who Private Experiences Are For',
-    title: 'Villa Holidays, Celebrations & Corporate Groups',
-    body: `<p><strong>Families and friends on villa holidays</strong> use private experiences to turn a regular dinner into an event. A sushi class entertains teenagers. A cocktail party celebrates a birthday. A cooking class becomes the highlight of a reunion.</p>
+    subtitle: 'What Every Experience Includes',
+    title: 'Inclusions You Can Count On',
+    body: `<ul style="list-style:disc;padding-left:1.5rem;margin-top:0.5rem;margin-bottom:0.5rem;">
+      <li>Professional chef or specialist instructor, plus service staff scaled to your group</li>
+      <li>All ingredients sourced fresh for your date, and all specialist equipment</li>
+      <li>Setup, service and full clean-down of the space</li>
+      <li>Dietary adaptations (vegetarian, vegan, gluten-free, halal-friendly, allergies) planned in advance</li>
+      <li>Transparent quoting: prices shown ++ (11% government tax + 10% service charge), with the all-in total always confirmed before you commit</li>
+    </ul>
 
-    <p><strong>Couples</strong> book the proposal dinner and champagne experiences for moments that need to feel private and perfect. These are not add-ons; they are the memory itself.</p>
-
-    <p><strong>Corporate groups and retreats</strong> use team-building cooking classes, cocktail competitions and oyster receptions to create shared experiences without leaving the villa.</p>
-
-    <p><strong>Parents</strong> book kids’ chef parties because they want a structured, safe, fully hosted activity that leaves the villa clean and the children happy.</p>`,
+    <p>myCHEF has served 12,000+ guests across 560+ Bali villas over 8+ years — these experiences are run by the same hospitality team behind our private chef and event services.</p>`,
   },
   {
     id: 'locations',
     type: 'content' as const,
-    subtitle: 'Bali-Wide Service',
-    title: 'Where We Host Private Experiences',
-    body: `<p>We host private experiences across all major Bali villa regions. Most bookings take place in <a href="/private-chef/seminyak" class="text-[#7E6410] hover:underline font-medium">Seminyak</a>, <a href="/private-chef/canggu" class="text-[#7E6410] hover:underline font-medium">Canggu</a>, <a href="/private-chef/uluwatu" class="text-[#7E6410] hover:underline font-medium">Uluwatu</a>, <a href="/private-chef/ubud" class="text-[#7E6410] hover:underline font-medium">Ubud</a>, <a href="/private-chef/sanur" class="text-[#7E6410] hover:underline font-medium">Sanur</a>, <a href="/private-chef/nusa-dua" class="text-[#7E6410] hover:underline font-medium">Nusa Dua</a> and <a href="/private-chef/jimbaran" class="text-[#7E6410] hover:underline font-medium">Jimbaran</a>. If your villa has a suitable kitchen or pool area, we can usually make it work.</p>
-
-    <p>For larger equipment such as mobile bars, oyster stations or proposal styling, we confirm logistics during the planning stage. Travel beyond the main villa areas may incur a transport fee, which we disclose upfront in the proposal.</p>`,
+    subtitle: 'Where We Host',
+    title: 'Bali-Wide Private Experiences',
+    body: `<p>We host experiences across all major villa regions: Seminyak, Canggu, Uluwatu, Ubud, Sanur, Nusa Dua and Jimbaran. If your villa has a workable kitchen or pool area, we can almost always make it happen; larger setups (mobile bars, oyster stations, proposal styling) are confirmed during planning, and any travel fee for outlying areas is disclosed upfront.</p>`,
   },
   {
     id: 'faq',
     type: 'faq' as const,
-    subtitle: 'Common Questions',
-    title: 'Private Experiences FAQ',
+    subtitle: 'Private Experiences Bali — FAQ',
+    title: 'Common Questions',
   },
   {
     id: 'cta',
     type: 'cta' as const,
-    subtitle: 'Start Planning',
+    subtitle: 'Plan Your Experience',
     title: 'Which Experience Are You Planning?',
-    body: 'Tell us the experience, date, villa location and guest count — we will reply within the hour with availability and a tailored plan.',
+    body: 'Tell us which experience, your date, your villa and your group size — we will reply within the hour with availability and a tailored plan.',
     primaryAction: {
       label: 'Message Us on WhatsApp',
-      href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20one%20of%20your%20private%20experiences%20in%20Bali.%20Please%20help%20me%20choose%20the%20right%20one.',
+      href: WA_LINK,
       external: true,
     },
     secondaryAction: {
-      label: 'View All Services',
-      href: '/services',
+      label: 'View Full Pricing Guide',
+      href: '/pricing',
     },
   },
 ]
 
 const FAQS = [
-  { question: 'What private experiences do you offer in Bali?', answer: 'We offer six curated experiences: Private Cocktail Party, Sushi Masterclass, Private Cooking Class, Kids Birthday Chef Party, Champagne & Oyster Experience, and Romantic Proposal Dinner.' },
-  { question: 'Can experiences be combined or customised?', answer: 'Yes. Many clients combine a cocktail party with canapés, a sushi class followed by dinner, or a proposal dinner with champagne and oysters. We design the flow around your occasion.' },
-  { question: 'Do you bring all ingredients and equipment?', answer: 'Yes. Every experience includes the ingredients, tools and equipment needed. For cooking classes and sushi masterclasses we bring aprons, knives, boards and everything your group needs.' },
-  { question: 'How many guests can join a private experience?', answer: 'It depends on the experience. Couples’ experiences work from two guests. Cooking classes and cocktail parties scale comfortably to 20 or more. Kids’ parties are tailored to the age group and villa space.' },
-  { question: 'Can dietary requirements be accommodated?', answer: 'Yes. We plan menus around allergies, vegetarian, vegan, gluten-free, halal-friendly and religious requirements. Mention them when you enquire so we build them into the experience from the start.' },
-  { question: 'How far in advance should I book?', answer: 'We recommend 2–4 weeks ahead for most experiences. Proposal dinners, peak-season dates and larger groups benefit from earlier planning. Last-minute bookings may be possible depending on availability.' },
-  { question: 'Do you handle setup and cleanup?', answer: 'Yes. Our team sets up the experience, runs it from start to finish, and restores the villa afterwards. You should not need to manage logistics.' },
-  { question: 'Can you host experiences at hotels or event venues?', answer: 'Most experiences are designed for private villas, but we can adapt to hotels, retreat centres and event venues with suitable facilities. Venue permission and logistics are confirmed during planning.' },
-  { question: 'Are your experiences only available in Bali?', answer: 'Yes. Our private experiences are designed for Bali villas and estates across all major regions of the island.' },
-  { question: 'How do I get a quote for a private experience?', answer: 'Send us a WhatsApp message with your preferred experience, date, villa location and guest count. We reply within the hour with availability and a tailored quote.' },
+  { question: 'What private experiences does myCHEF offer in Bali?', answer: 'Six: private cocktail parties, a sushi masterclass, private in-villa cooking classes, kids birthday chef parties, champagne & oyster hours, and proposal experiences (dinner-led or full package).' },
+  { question: 'How much do private experiences cost?', answer: 'Anchors: cooking classes from IDR 700K per person ++; cocktail parties typically IDR 700K–1.2M per person ++; kids chef party menus IDR 250K–350K per child (min. 6 children); additional staff from IDR 250K per hour. Every quote is itemised with the all-in total before you commit.' },
+  { question: 'Can experiences be combined?', answer: 'Yes — a sushi class that becomes dinner, a champagne & oyster hour before a proposal, a cocktail party with canapé service. We design the flow around your occasion.' },
+  { question: 'What group sizes work?', answer: 'Couples\' experiences start from two guests. Classes and cocktail parties scale to 20+; kids parties need a minimum of six children. Larger groups get additional chefs and staff.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes — allergies, vegetarian, vegan, gluten-free and halal-friendly requirements are built into the menu from the start. Mention them in your first message.' },
+  { question: 'Do you bring everything?', answer: 'Yes — ingredients, tools, equipment, glassware and service staff. You provide the villa; we bring the rest and take it all away again.' },
+  { question: 'How far in advance should I book?', answer: 'Two to four weeks is comfortable for most experiences; proposals and peak-season dates (July–August, December) benefit from earlier planning. Last-minute requests are often possible — ask.' },
+  { question: 'What deposit is required?', answer: 'A deposit confirms your date and team [BUSINESS CONFIRMATION REQUIRED: deposit level — crawl for this URL is silent; live pages elsewhere show 50%]; the balance is due before the event.' },
 ]
 
 const RELATED_PAGES = [
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full overview of private chef and dining experiences across Bali.' },
-  { label: 'Villa Catering', href: '/catering/villa-catering', desc: 'Full-service catering for villa celebrations and group dining.' },
-  { label: 'Event Catering', href: '/events', desc: 'Weddings, birthdays, corporate events and villa parties handled end-to-end.' },
-  { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF packages and event types.' },
+  { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', desc: 'A full bar, bartenders and chef-made canapés at your villa.' },
+  { label: 'Private Cooking Class', href: '/experiences/private-cooking-class', desc: 'Hands-on cooking classes in your Bali villa.' },
+  { label: 'Sushi Masterclass', href: '/experiences/sushi-masterclass', desc: 'Private sushi rolling class at your villa.' },
+  { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF experiences and services.' },
 ]
 
 export default function ExperiencesHubPage() {
   return (
     <PremiumPage
       slug="experiences"
-      title="Private Experiences Bali | Culinary & Celebration Experiences | myCHEF"
-      description="Discover private culinary and celebration experiences in Bali. Cocktail parties, sushi classes, cooking classes, kids’ parties, oyster bars and proposal dinners at your villa."
-      seoTitle="Private Experiences Bali | Culinary & Celebration Experiences | myCHEF"
-      seoDescription="Discover private culinary and celebration experiences in Bali. Cocktail parties, sushi classes, cooking classes, kids’ parties, oyster bars and proposal dinners at your villa."
-      canonicalUrl="https://mychef.id/experiences"
-      h1="Private Experiences in Bali"
+      title="Private Experiences Bali | Culinary & Celebration | myCHEF"
+      description="Private culinary & celebration experiences in Bali: cocktail parties, sushi classes, cooking classes, kids parties & proposal dinners at your villa."
+      seoTitle="Private Experiences Bali | Culinary & Celebration | myCHEF"
+      seoDescription="Private culinary & celebration experiences in Bali: cocktail parties, sushi classes, cooking classes, kids parties & proposal dinners at your villa."
+      canonicalUrl={CANONICAL}
+      h1="Private Experiences in Bali — The Villa Is the Venue"
       subtitle="Curated Culinary & Celebration Experiences at Your Villa"
       heroImage="/generated/private-experiences-bali-hub.webp"
       heroImageAlt="Private experiences Bali collection at a luxury villa by myCHEF"
       ogImage="https://mychef.id/generated/private-experiences-bali-hub.webp"
       keywords={[
-        'private experiences Bali',
-        'villa experiences Bali',
-        'food experiences Bali',
-        'private dining experiences Bali',
-        'Bali culinary experiences',
-        'things to do at your villa Bali',
-        'private group activities Bali',
-        'luxury experiences Bali',
-        'Bali celebration experiences',
+        'private experiences bali',
+        'culinary experiences bali',
+        'villa experiences bali',
+        'celebration experiences bali',
+        'things to do in villa bali',
+        'private dining experiences bali',
+        'bali culinary experiences',
       ]}
       highlights={['At Your Villa', 'Chef-Led', 'All Equipment Included', 'Bali-Wide']}
       sections={SECTIONS}
@@ -244,18 +248,41 @@ export default function ExperiencesHubPage() {
       extraJsonLd={[
         breadcrumbSchema(
           'Private Experiences in Bali',
-          'https://mychef.id/experiences'
+          CANONICAL
         ),
         {
           '@context': 'https://schema.org',
-          '@type': 'ItemList',
-          name: 'Private Experiences in Bali by myCHEF',
-          itemListElement: EXPERIENCES.map((e, i) => ({
-            '@type': 'ListItem',
-            position: i + 1,
-            name: e.title,
-            url: `https://mychef.id${e.href}`,
-          })),
+          '@graph': [
+            {
+              '@type': 'CollectionPage',
+              name: 'Private Experiences Bali',
+              description: 'Private culinary and celebration experiences at your Bali villa: cocktail parties, sushi masterclasses, cooking classes, kids chef parties, champagne & oyster hours and proposal experiences.',
+              url: CANONICAL,
+              provider: {
+                '@type': 'LocalBusiness',
+                name: 'myCHEF',
+                url: 'https://mychef.id',
+                telephone: '+62 896-7407-2020',
+                areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+              },
+              hasPart: [
+                { '@type': 'Service', name: 'Private Cocktail Party Bali', url: 'https://mychef.id/experiences/private-cocktail-party' },
+                { '@type': 'Service', name: 'Sushi Masterclass Bali', url: 'https://mychef.id/experiences/sushi-masterclass' },
+                { '@type': 'Service', name: 'Private Cooking Class Bali', url: 'https://mychef.id/experiences/private-cooking-class' },
+                { '@type': 'Service', name: 'Kids Birthday Chef Party Bali', url: 'https://mychef.id/experiences/kids-birthday-chef-party' },
+                { '@type': 'Service', name: 'Champagne & Oyster Experience Bali', url: 'https://mychef.id/experiences/champagne-oyster-experience' },
+                { '@type': 'Service', name: 'Romantic Proposal Package Bali', url: 'https://mychef.id/experiences/romantic-proposal-dinner' },
+              ],
+            },
+            {
+              '@type': 'FAQPage',
+              mainEntity: FAQS.map((f) => ({
+                '@type': 'Question',
+                name: f.question,
+                acceptedAnswer: { '@type': 'Answer', text: f.answer },
+              })),
+            },
+          ],
         },
       ]}
       ctaText="Plan Your Experience"

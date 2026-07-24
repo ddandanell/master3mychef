@@ -46,14 +46,14 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "corporate-retreat-catering-bali",
-    "title": "Corporate Retreat Catering Bali | Professional Event Hospitality",
-    "description": "Professional catering for corporate retreats and offsites in Bali. NPWP-ready invoices and executive service standards.",
+    "title": "Corporate Retreat Catering Bali | Offsite Meal Programs",
+    "description": "Multi-day catering for corporate retreats & offsites in Bali: full-day meal structures, NPWP invoices, executive service. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
   {
     "slug": "luxury-birthday-party-bali",
-    "title": "Luxury Birthday Party Bali | Private Chef & Event Planning",
-    "description": "Celebrate your birthday with a luxury private chef experience in Bali. We handle food, drinks, and styling.",
+    "title": "Luxury Birthday Party Bali | Milestone Celebrations | myCHEF",
+    "description": "Luxury milestone birthday parties in Bali: private chef, premium menus, drinks & styling for 30th/40th/50th celebrations. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
   {
@@ -64,8 +64,8 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "villa-staff-bali-agency",
-    "title": "Villa Staff Bali Agency | Professional Household Placement",
-    "description": "The premier agency for villa staff in Bali. We source and vet housekeepers, butlers, and villa managers.",
+    "title": "Villa Staff Placement Has Moved | myCHEF Bali",
+    "description": "Our villa staff agency services now live on one page: vetted long-term villa staff placement in Bali — managers, housekeepers, chefs. See myCHEF.",
     "date": "2026-05-17"
   },
   {
@@ -82,8 +82,8 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "private-chef-for-events",
-    "title": "Private Chef for Events | Bali Villa Party Catering",
-    "description": "Hire a private chef for your next Bali villa event. From small birthdays to large celebrations, we provide the culinary team.",
+    "title": "Private Chef for Events Bali | Hire a Chef for Your Event",
+    "description": "Hire a private chef for your Bali event — villa parties, birthdays & celebrations. Transparent chef-fee model, optional service staff. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
   {
@@ -118,14 +118,14 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "proposal-dinner",
-    "title": "Proposal Dinner Bali | Romantic Private Chef Experiences",
-    "description": "Plan the perfect proposal with a private chef dinner in your Bali villa. Intimate, styled, and unforgettable.",
+    "title": "Proposal Dinner Bali | Private Chef Proposal Experience",
+    "description": "Plan the perfect proposal with a private chef dinner in your Bali villa — intimate, styled and unforgettable. Confidential planning. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
   {
     "slug": "honeymoon-chef",
-    "title": "Honeymoon Chef Bali | Private Villa Dining for Couples",
-    "description": "Exclusive private chef services for honeymooners in Bali. Romantic breakfasts, sunset dinners, and intimate hosting.",
+    "title": "Honeymoon Private Chef Bali | Villa Dining for Couples",
+    "description": "Private chef experiences for honeymooners in Bali: romantic breakfasts, sunset dinners and intimate in-villa hosting. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
   {

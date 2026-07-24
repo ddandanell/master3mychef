@@ -1,0 +1,360 @@
+{
+  "started_at": "2026-07-24T08:56:04.988Z",
+  "updated_at": "2026-07-24T09:44:39.953Z",
+  "total": 35,
+  "completed": 35,
+  "failed": 0,
+  "total_cost_usd": 2.674999999999998,
+  "results": [
+    {
+      "image_id": "img-001",
+      "filename": "img-001.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success",
+      "generated_at": "2026-07-24T08:58:21.353Z"
+    },
+    {
+      "image_id": "img-002+img-009",
+      "filename": "img-002-img-009.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success",
+      "generated_at": "2026-07-24T09:00:43.728Z"
+    },
+    {
+      "image_id": "img-003+img-014",
+      "filename": "img-003-img-014.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success",
+      "generated_at": "2026-07-24T09:02:48.943Z"
+    },
+    {
+      "image_id": "img-004+img-019",
+      "filename": "img-004-img-019.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success",
+      "generated_at": "2026-07-24T09:05:03.524Z"
+    },
+    {
+      "image_id": "img-005+img-024",
+      "filename": "img-005-img-024.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success",
+      "generated_at": "2026-07-24T09:07:05.383Z"
+    },
+    {
+      "image_id": "img-006+img-028",
+      "filename": "img-006-img-028.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success",
+      "generated_at": "2026-07-24T09:09:10.687Z"
+    },
+    {
+      "image_id": "img-007+img-032",
+      "filename": "img-007-img-032.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success",
+      "generated_at": "2026-07-24T09:11:25.592Z"
+    },
+    {
+      "image_id": "img-010",
+      "filename": "img-010.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:12:16.638Z"
+    },
+    {
+      "image_id": "img-011",
+      "filename": "img-011.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "896x1200",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:13:13.872Z"
+    },
+    {
+      "image_id": "img-012",
+      "filename": "img-012.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:14:06.976Z"
+    },
+    {
+      "image_id": "img-015",
+      "filename": "img-015.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:15:05.621Z"
+    },
+    {
+      "image_id": "img-016",
+      "filename": "img-016.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "896x1200",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:16:05.427Z"
+    },
+    {
+      "image_id": "img-017",
+      "filename": "img-017.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:17:02.000Z"
+    },
+    {
+      "image_id": "img-020",
+      "filename": "img-020.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:19:00.442Z"
+    },
+    {
+      "image_id": "img-021",
+      "filename": "img-021.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "896x1200",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:20:07.405Z"
+    },
+    {
+      "image_id": "img-022",
+      "filename": "img-022.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:21:18.720Z"
+    },
+    {
+      "image_id": "img-025",
+      "filename": "img-025.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:22:12.261Z"
+    },
+    {
+      "image_id": "img-026",
+      "filename": "img-026.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:23:16.434Z"
+    },
+    {
+      "image_id": "img-029",
+      "filename": "img-029.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:24:23.636Z"
+    },
+    {
+      "image_id": "img-030",
+      "filename": "img-030.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "896x1200",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:25:18.122Z"
+    },
+    {
+      "image_id": "img-033+img-034",
+      "filename": "img-033-img-034.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "896x1200",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:26:15.121Z"
+    },
+    {
+      "image_id": "img-036",
+      "filename": "img-036.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success",
+      "generated_at": "2026-07-24T09:28:35.950Z"
+    },
+    {
+      "image_id": "img-037+img-045",
+      "filename": "img-037-img-045.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:29:31.885Z"
+    },
+    {
+      "image_id": "img-038+img-052",
+      "filename": "img-038-img-052.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success",
+      "generated_at": "2026-07-24T09:32:01.866Z"
+    },
+    {
+      "image_id": "img-039",
+      "filename": "img-039.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:33:07.251Z"
+    },
+    {
+      "image_id": "img-040",
+      "filename": "img-040.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:34:06.188Z"
+    },
+    {
+      "image_id": "img-041+img-046",
+      "filename": "img-041-img-046.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:34:58.243Z"
+    },
+    {
+      "image_id": "img-042+img-050",
+      "filename": "img-042-img-050.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:35:52.028Z"
+    },
+    {
+      "image_id": "img-044",
+      "filename": "img-044.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success",
+      "generated_at": "2026-07-24T09:38:03.333Z"
+    },
+    {
+      "image_id": "img-047",
+      "filename": "img-047.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:39:12.957Z"
+    },
+    {
+      "image_id": "img-048",
+      "filename": "img-048.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:40:15.214Z"
+    },
+    {
+      "image_id": "img-049",
+      "filename": "img-049.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:41:27.577Z"
+    },
+    {
+      "image_id": "img-053",
+      "filename": "img-053.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:42:19.371Z"
+    },
+    {
+      "image_id": "img-054",
+      "filename": "img-054.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:43:46.920Z"
+    },
+    {
+      "image_id": "img-055",
+      "filename": "img-055.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success",
+      "generated_at": "2026-07-24T09:44:39.953Z"
+    }
+  ]
+}

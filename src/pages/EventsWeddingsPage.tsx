@@ -576,22 +576,17 @@ export default function EventsWeddingsPage() {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <p className="text-sm uppercase tracking-widest text-[#C5A028] mb-3">Also available</p>
           <h2 className="text-2xl font-semibold text-[#1A1916] mb-8">Explore More myCHEF Services</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { to: '/events/anniversaries', label: 'Anniversaries' },
-              { to: '/catering', label: 'Villa Catering' },
-              { to: '/fine-dining', label: 'Fine Dining' },
-              { to: '/in-villa-service', label: 'In-Villa Staff' }
-            ].map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+          <p className="text-[#4A4745] leading-relaxed max-w-4xl mx-auto">
+            Explore <Link to="/bali-wedding-catering-packages" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">see wedding catering packages & per-person prices</Link>,{' '}
+            <Link to="/wedding-catering-indonesia" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">wedding catering across Indonesia</Link>, or{' '}
+            <Link to="/events" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">all event catering</Link>. Plan supporting moments with our{' '}
+            <Link to="/journal/rehearsal-dinner-planning-bali" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">rehearsal dinner planning guide</Link> and{' '}
+            <Link to="/journal/villa-wedding-catering-logistics-bali" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa wedding logistics guide</Link>. Add a{' '}
+            <Link to="/catering/babi-guling" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">babi guling wedding feast</Link>,{' '}
+            <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">wedding bar service</Link>, or host{' '}
+            <Link to="/events/villa-parties" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">the after-party</Link>. See the{' '}
+            <Link to="/pricing" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">full pricing guide</Link>.
+          </p>
         </div>
       </section>
 

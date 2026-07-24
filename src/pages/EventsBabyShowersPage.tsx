@@ -455,10 +455,11 @@ export default function EventsBabyShowersPage() {
           <h2 className="text-2xl font-semibold text-[#1A1916] mb-8">Explore More myCHEF Services</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { to: '/events/birthdays', label: 'Birthdays' },
-              { to: '/catering', label: 'Villa Catering' },
-              { to: '/in-villa-service', label: 'In-Villa Staff' },
-              { to: '/book', label: 'Book myCHEF' }
+              { to: '/catering/grazing-tables', label: 'grazing tables' },
+              { to: '/events/birthdays', label: 'birthday catering' },
+              { to: '/events/villa-parties', label: 'villa party catering' },
+              { to: '/in-villa-service', label: 'service staff' },
+              { to: '/catering', label: 'all catering services' }
             ].map((link) => (
               <Link
                 key={link.to}

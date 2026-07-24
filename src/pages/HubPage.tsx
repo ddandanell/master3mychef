@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getLocationCanonical } from '@/data/siteArchitecture'
-import { ArrowRight, Star, MapPin, Users, Clock, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, Shield, ShieldCheck, RefreshCw, UsersRound, ConciergeBell } from 'lucide-react'
+import { ArrowRight, Star, ChefHat, MessageCircle, Check, Phone, Utensils, Sparkles, ShieldCheck, RefreshCw, UsersRound, ConciergeBell } from 'lucide-react'
 import SeoHead, {
   serviceSchema,
   faqPageSchema,
@@ -19,27 +19,27 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 const PORTALS = [
   {
-    id: 'catering',
-    title: 'Catering',
-    subtitle: 'BBQ, buffet, plated dinners. Babi guling. Drop-off or full service. We handle everything. You enjoy.',
-    path: '/catering',
-    image: '/generated/mychef-catering-bali-hub-catering.webp',
-    imageAlt: 'Villa catering spread with BBQ, buffet and plated dishes at a Bali property by myCHEF',
-    accent: '#6B8E5A',
-  },
-  {
     id: 'fine-dining',
     title: 'Fine Dining',
-    subtitle: 'A private chef cooks exclusively for your group. Multi-course tasting menus — Italian, French, Mediterranean, Wagyu. Your villa. Just your table. From 6 guests.',
+    subtitle: 'Multi-course tasting menus — Italian, French, Mediterranean, Wagyu — plated in your villa, from 6 guests.',
     path: '/fine-dining',
     image: '/generated/mychef-misc-bali-hub-fine-dining.webp',
     imageAlt: 'Private fine dining table set for an intimate dinner in a Bali villa by myCHEF',
     accent: '#C5A028',
   },
   {
+    id: 'catering',
+    title: 'Catering & BBQ',
+    subtitle: 'Buffets, live-fire grills, grazing tables and babi guling for groups of 10 to 150.',
+    path: '/catering',
+    image: '/generated/mychef-catering-bali-hub-catering.webp',
+    imageAlt: 'Villa catering spread with BBQ, buffet and plated dishes at a Bali property by myCHEF',
+    accent: '#6B8E5A',
+  },
+  {
     id: 'events',
-    title: 'Events',
-    subtitle: 'Full-service hospitality for weddings, corporate offsites, and celebrations. Chef, staff, setup, cleanup.',
+    title: 'Events & Weddings',
+    subtitle: 'Full-service hospitality: chef, staff, setup and cleanup for celebrations up to 200 guests.',
     path: '/events',
     image: '/generated/mychef-events-bali-hub-events.webp',
     imageAlt: 'Full-service private event setup at a Bali villa with dining and bar by myCHEF',
@@ -53,50 +53,48 @@ const HOW_IT_WORKS = [
   {
     step: '01',
     title: 'Message Us',
-    desc: 'Your dates, villa, guest count. We reply within the hour.',
+    desc: 'Your date, villa area and guest count. We reply within 2 hours.',
     icon: MessageCircle,
     color: '#C5A028',
   },
   {
     step: '02',
     title: 'We Design Your Menu',
-    desc: 'Choose from our menus or create a custom experience. You approve every detail.',
+    desc: 'Choose from our menus or build something custom. You approve every dish.',
     icon: Utensils,
     color: '#6B8E5A',
   },
   {
     step: '03',
     title: 'We Shop & Cook',
-    desc: 'Fresh ingredients sourced that morning. We arrive ready to execute.',
+    desc: 'Fresh ingredients sourced the same day, cooked in your villa kitchen.',
     icon: ChefHat,
     color: '#2C5F7C',
   },
   {
     step: '04',
     title: 'You Enjoy. We Disappear.',
-    desc: 'Sit back. Eat. Laugh. When you are done, your kitchen is spotless.',
+    desc: 'Full service, then a spotless kitchen — you just enjoy.',
     icon: Sparkles,
     color: '#C5734D',
   },
 ]
 
-const DIFFERENTIATORS = [
-  { icon: ChefHat, title: 'Fine-Dining-Trained Leadership', desc: `Adriano trained under Michelin-level standards in ${siteFacts.founderTrainingCity}. His standards are the minimum for every dish.` },
-  { icon: Users, title: '50+ Professional Staff', desc: 'Chefs, servers, bartenders, mixologists. All trained in-house. All hospitality focused.' },
-  { icon: Shield, title: 'We Handle Everything', desc: 'Groceries, cooking, service, cleanup. You lift nothing. Not even a planning call.' },
-  { icon: MapPin, title: 'We Know Bali', desc: `Since ${siteFacts.foundingYear} serving villas across Seminyak, Canggu, Ubud, Uluwatu, Sanur. We know the kitchens and the markets.` },
-  { icon: Clock, title: 'Same-Day Response', desc: 'Inquiries confirmed within one hour. Proposals delivered within 24 hours. No delays.' },
-  { icon: Star, title: siteFacts.guestsServed, desc: `Families, couples, CEOs, wedding parties. ${siteFacts.reviewFraming}.` }
+const COMPARISON_ROWS = [
+  { feature: 'Vetted, background-checked team', freelance: 'Varies', marketplace: 'Varies', mychef: 'Always' },
+  { feature: 'Backup if your chef falls ill', freelance: 'None', marketplace: 'Rebooking', mychef: 'Replacement within 2 hours or 100% refund' },
+  { feature: 'Full staffing (waiters, bar, sommelier)', freelance: 'Rarely', marketplace: 'No', mychef: 'From IDR 250K/hour' },
+  { feature: 'Itemised fixed quote before you pay', freelance: 'Sometimes', marketplace: 'Platform estimate', mychef: 'Always, within 24 hours' },
+  { feature: 'Kitchen left spotless', freelance: 'Hopefully', marketplace: '—', mychef: 'Guaranteed' },
 ]
 
 const FAQS = [
-  { q: 'How far in advance should I book?', a: 'For fine dining, 7+ days is ideal. For villa chefs, 3+ days. For events, 4+ weeks. But message us anyway — we accommodate last-minute requests whenever possible.' },
-  { q: 'Do you serve all areas of Bali?', a: 'Yes. Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, and everywhere in between. We have chefs based across the island.' },
-  { q: 'What about dietary restrictions?', a: 'Every menu is tailored. Gluten-free, vegan, halal, nut allergies, pregnancy-friendly — just tell us. We have done it all.' },
-  { q: 'Are groceries included in the price?', a: 'For fine dining and events, ingredients are included. For villa chef catering, groceries are billed at cost with no markup — you see every receipt.' },
-  { q: 'How many staff will come to my villa?', a: 'Fine dining: 6–10 staff (chef, sous chef, servers, sommelier). Villa chef: 1–2 chefs. Events: depends on scale, quoted in your proposal.' },
-  { q: 'What is the cancellation policy?', a: siteFacts.cancellationPolicy },
-  { q: 'How does payment work?', a: `A ${siteFacts.depositPercent}% deposit confirms your booking and locks your chef. Bookings within 24 hours require 100% payment upfront. The remaining ${100 - siteFacts.depositPercent}% is paid ${siteFacts.balanceTiming}.` },
+  { q: 'How much does a private chef in Bali cost?', a: 'Villa dinners start from IDR 700K per person and tasting menus from IDR 950K per person, ++ (11% government tax + 10% service charge). Your fixed quote depends on menu, guest count and staffing.' },
+  { q: 'What\'s included in the price?', a: 'Menu planning, fresh ingredient shopping, cooking, serving and a full kitchen clean-up. Daily villa chef service bills groceries at cost with receipts. Waiters, bartenders and sommeliers can be added from IDR 250K/hour.' },
+  { q: 'How far in advance should I book?', a: 'A few days is ideal for dinners; weddings and large events deserve weeks. Same-day and next-day requests are often possible — message us and we\'ll tell you honestly.' },
+  { q: 'Which areas do you serve?', a: 'All of Bali\'s main villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and the Bukit — plus Jakarta. Remote-area travel is always quoted upfront.' },
+  { q: 'Do you handle dietary requirements?', a: 'Yes — vegan, gluten-free, halal, allergies and kids\' menus at no extra charge. Tell us when you enquire and the menu is built around it.' },
+  { q: 'What if my chef can\'t make it?', a: 'We send a verified replacement within 2 hours or refund 100%. Your evening is protected either way.' },
 ]
 
 
@@ -143,31 +141,23 @@ const REVIEWS = [
   { name: 'Yuki & Kenji', location: 'Osaka', dept: 'Events', text: 'Traditional Japanese wedding ceremony followed by a Western-style reception. The team respected every ritual while delivering world-class cuisine.' },
 ]
 
-const HERO_STATS = [siteFacts.eventsServed, siteFacts.guestsServed, siteFacts.villaBookings, `Since ${siteFacts.foundingYear}`]
+const HERO_STATS = ['560+ villas served', '12,000+ happy guests', 'Same-day confirmation']
 
 const FEATURED_TESTIMONIALS = [
   {
-    name: 'James & Sarah',
-    location: 'Seminyak Villa',
-    eventType: 'Private Dinner',
-    date: 'March 2026',
-    quote: REVIEWS[0].text,
-    rating: 5,
-  },
-  {
-    name: 'The Harrisons',
-    location: 'Ubud Estate',
-    eventType: 'Anniversary Dinner',
-    date: 'February 2026',
-    quote: REVIEWS[1].text,
-    rating: 5,
-  },
-  {
     name: 'The Garcias',
-    location: 'Canggu Garden Villa',
+    location: 'Canggu',
     eventType: 'Wedding Dinner',
     date: 'January 2026',
-    quote: REVIEWS[12].text,
+    quote: 'Our wedding dinner for 40 guests. Every plate came out perfect. Every server knew our names. It felt like a five-star restaurant in our garden.',
+    rating: 5,
+  },
+  {
+    name: 'The Wilson Family',
+    location: 'Singapore',
+    eventType: 'Fine Dining',
+    date: 'February 2026',
+    quote: 'We booked the Wagyu Experience for my father\'s 70th. He has eaten at three Michelin stars. He said this was better because it was ours.',
     rating: 5,
   },
 ]
@@ -236,23 +226,25 @@ export default function HubPage() {
 
   const homeLocalBusinessSchema: Record<string, unknown> = {
     ...localBusinessSchema,
-    '@type': 'FoodEstablishment',
+    '@type': ['LocalBusiness', 'FoodEstablishment'],
+    '@id': 'https://mychef.id/#business',
+    name: 'myCHEF.id',
+    description: 'Private chef company in Bali delivering Michelin-trained villa dining, catering and event hospitality.',
     url: 'https://mychef.id/',
     telephone: '+62 896-7407-2020',
+    email: 'bali@mychef.id',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',
-      addressLocality: 'Denpasar Selatan',
+      streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan',
+      addressLocality: 'Denpasar',
       addressRegion: 'Bali',
       postalCode: '80226',
       addressCountry: 'ID',
     },
-    areaServed: {
-      '@type': 'Place',
-      name: 'Bali, Indonesia',
-    },
-    priceRange: '$$$$',
+    areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Sanur', 'Nusa Dua', 'Jimbaran', 'Berawa', 'Pererenan', 'Bukit', 'Jakarta'],
+    priceRange: 'IDR 700,000 - IDR 3,000,000+ per person',
     servesCuisine: ['Italian', 'Mediterranean', 'Indonesian', 'International'],
+    founder: { '@type': 'Person', name: 'Adriano' },
   }
 
   const websiteSchema: Record<string, unknown> = {
@@ -336,25 +328,25 @@ export default function HubPage() {
             <div className="relative z-10 mx-auto flex min-h-screen max-w-[1280px] items-center px-5 pb-10 pt-20 sm:px-6 md:pb-14 md:pt-24">
               <div className="max-w-2xl md:max-w-[46%]">
                 <p className="hub-hero-label mb-4 text-xs uppercase tracking-[0.34em] text-[#C5A028] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                  Your Villa. Our Kitchen.
+                  Private Chef in Bali
                 </p>
                 <h1 className="hub-hero-title mb-4 text-[2rem] leading-[1.08] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Your Villa. Our Kitchen.
+                  Private Chef in Bali — Your Villa. Our Kitchen.
                 </h1>
                 <div className="gold-arc mb-6" />
                 <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>
-                  Private dining, catering, and events across Bali. We shop, we cook, we serve, we clean. You just enjoy.
+                  Restaurant-level dining, cooked fresh in your villa by a Michelin-trained team. We shop, we cook, we serve, we clean — you just enjoy. From intimate dinners for two to weddings for 200, across Seminyak, Canggu, Ubud, Uluwatu and beyond.
                 </p>
                 <div className="hub-hero-cta mb-4 flex flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
                   <a href="https://wa.me/6289674072020?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
-                    <MessageCircle className="w-4 h-4" /> Get Your Quote in 1 Hour <span aria-hidden="true">→</span>
+                    <MessageCircle className="w-4 h-4" /> Get Your Quote within 2 Hours <span aria-hidden="true">→</span>
                   </a>
                   <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
                     Browse Menus &amp; Pricing <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
                 <p className="text-sm uppercase tracking-[0.18em] text-white/60" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                  Replies within 1 hour · Weekends fill fast
+                  560+ villas served · 12,000+ happy guests · Same-day confirmation
                 </p>
               </div>
             </div>
@@ -364,7 +356,7 @@ export default function HubPage() {
         <div className="mx-auto max-w-[1280px] px-5 sm:px-6">
           <div className="mb-8 md:mb-12">
             <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-relaxed sm:text-[15px] md:text-base" style={{ color: 'var(--u-text-muted)' }}>
-              Founded by Adriano — trained under Michelin-level standards in {siteFacts.founderTrainingCity} — myCHEF.id delivers restaurant-level dining to Bali&apos;s finest villas. From intimate fine dining for 6 to catering for 200, our 50+ person hospitality team handles every detail.
+              Founded by Adriano — trained under a Michelin-starred chef in {siteFacts.founderTrainingCity} — myCHEF.id delivers restaurant-level dining to Bali&apos;s finest villas. From intimate fine dining for 6 to catering for 200, our 50+ person hospitality team handles every detail.
             </p>
 
             <div className="mx-auto mb-8 max-w-2xl">
@@ -375,7 +367,7 @@ export default function HubPage() {
                 ]}
               />
             </div>
-            <div className="mx-auto mb-6 grid max-w-3xl grid-cols-2 gap-3 md:grid-cols-4">
+            <div className="mx-auto mb-6 grid max-w-3xl grid-cols-2 gap-3 md:grid-cols-3">
               {HERO_STATS.map((stat) => (
                 <div
                   key={stat}
@@ -433,11 +425,11 @@ export default function HubPage() {
             <p className="u-label mb-3">Not Sure What You Need?</p>
             <h3 className="u-heading text-2xl md:text-3xl mb-4">Private Dining, Catering, or Full Event Production?</h3>
             <p className="max-w-2xl mx-auto mb-6 text-sm" style={{ color: 'var(--u-text-muted)' }}>
-              Tell us your dates, villa, and guest count. We will match you to the right service and send a clear quote within the hour — no pressure, no deposit required to enquire.
+              Tell us your dates, villa, and guest count. We will match you to the right service and send a clear quote within 2 hours — no pressure, no deposit required to enquire.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-mid-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
-                <MessageCircle className="w-4 h-4" /> Get Your Quote in 1 Hour
+                <MessageCircle className="w-4 h-4" /> Get Your Quote within 2 Hours
               </a>
               <Link to="/quote" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium tracking-widest uppercase rounded-full border transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}>
                 Get a Structured Quote
@@ -452,6 +444,57 @@ export default function HubPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* PRICE STRIP */}
+      <section className="py-16 md:py-20 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+        <div className="max-w-[900px] mx-auto">
+          <div className="text-center mb-10">
+            <p className="u-label mb-4">Transparent Pricing</p>
+            <h2 className="u-heading text-3xl md:text-4xl mb-4">A Private Chef, Without the Guesswork</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              Most private chef sites in Bali hide their prices. We publish ours.
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b" style={{ borderColor: 'var(--u-border)', background: 'var(--u-bg)' }}>
+                  <th className="px-5 py-3 text-left font-semibold" style={{ color: 'var(--u-text)' }}>Experience</th>
+                  <th className="px-5 py-3 text-right font-semibold" style={{ color: 'var(--u-text)' }}>From</th>
+                </tr>
+              </thead>
+              <tbody style={{ color: 'var(--u-text-muted)' }}>
+                <tr className="border-b" style={{ borderColor: 'var(--u-border)' }}>
+                  <td className="px-5 py-3">Villa dinner (3–4 courses, 2–10 guests)</td>
+                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 700K / person</td>
+                </tr>
+                <tr className="border-b" style={{ borderColor: 'var(--u-border)' }}>
+                  <td className="px-5 py-3">Fine-dining tasting menu</td>
+                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 950K / person</td>
+                </tr>
+                <tr className="border-b" style={{ borderColor: 'var(--u-border)' }}>
+                  <td className="px-5 py-3">BBQ &amp; group catering</td>
+                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 700K / person</td>
+                </tr>
+                <tr className="border-b" style={{ borderColor: 'var(--u-border)' }}>
+                  <td className="px-5 py-3">Wedding catering</td>
+                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 1.5M / person</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3">Waiters, bartenders &amp; sommeliers</td>
+                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 250K / hour</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-sm text-center" style={{ color: 'var(--u-text-muted)' }}>
+            All prices ++ (11% government tax + 10% service charge). Every quote is fixed and itemised before you commit — a {siteFacts.depositPercent}% deposit confirms your date, and groceries for daily chef service are billed at cost with receipts.{' '}
+            <Link to="/pricing" className="font-semibold underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              See the full price tables →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -608,14 +651,99 @@ export default function HubPage() {
               }}
             >
               <MessageCircle className="w-5 h-5" />
-              Get Your Quote in 1 Hour
+              Get Your Quote within 2 Hours
             </a>
             <p
               className="text-base"
               style={{ color: '#6D5F55', fontFamily: "'Inter', sans-serif" }}
             >
-              Replies within 1 hour · Available across Bali
+              Replies within 2 hours · Available across Bali
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* OUR PRIVATE CHEF SERVICES IN BALI */}
+      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-14">
+            <p className="u-label mb-4">Services</p>
+            <h2 className="u-heading text-4xl md:text-5xl mb-4">Our Private Chef Services in Bali</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              One team for every format — from a single dinner to a full month of villa dining.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            {[
+              { title: 'Fine dining', desc: 'Multi-course tasting menus (Italian, French, Mediterranean, Wagyu) plated in your villa, from 6 guests.', href: '/fine-dining', cta: 'Explore fine dining →' },
+              { title: 'Catering & BBQ', desc: 'Buffets, live-fire grills, grazing tables and babi guling for groups of 10 to 150.', href: '/catering', cta: 'Explore catering →' },
+              { title: 'Events & weddings', desc: 'Full-service hospitality: chef, staff, setup and cleanup for celebrations up to 200 guests.', href: '/events', cta: 'Explore events →' },
+              { title: 'Daily & weekly villa chef', desc: 'Breakfast, lunch and dinner across your whole stay, groceries at cost.', href: '/villa-chef', cta: 'Explore the daily villa chef service →' },
+              { title: 'Monthly & long-stay chefs', desc: 'Recurring arrangements for long-stay guests and residents.', href: '/hire-private-chef-bali-monthly', cta: 'Explore monthly hire →' },
+              { title: 'In-villa staff', desc: 'Waiters, bartenders, butlers and sommeliers by the shift.', href: '/in-villa-service', cta: 'Explore in-villa service →' },
+            ].map((service) => (
+              <div key={service.href} className="p-8 rounded-2xl border transition-all hover:shadow-lg" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+                <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>{service.title}</h3>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--u-text-muted)' }}>{service.desc}</p>
+                <Link to={service.href} className="text-sm font-semibold hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>
+                  {service.cta}
+                </Link>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link to="/services" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
+              Compare all private chef services in Bali <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* PRIVATE CHEF OR PERSONAL CHEF? */}
+      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="u-label mb-4">The Difference</p>
+          <h2 className="u-heading text-4xl md:text-5xl mb-6">Private Chef or Personal Chef?</h2>
+          <p className="leading-relaxed mb-8" style={{ color: 'var(--u-text-muted)' }}>
+            A <strong style={{ color: 'var(--u-text)' }}>private chef</strong> cooks for one occasion or group at a time — a dinner, a BBQ, a wedding. A <strong style={{ color: 'var(--u-text)' }}>personal chef</strong> is the same craft on a recurring rhythm: daily meals, weekly prep, or a monthly arrangement for your household. We do both. Most guests start with a single dinner; many long-stay guests move to a{' '}
+            <Link to="/hire-private-chef-bali-monthly" className="font-semibold hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>
+              weekly or monthly arrangement
+            </Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* MEET THE CHEFS */}
+      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-14">
+            <p className="u-label mb-4">The Team</p>
+            <h2 className="u-heading text-4xl md:text-5xl mb-4">Meet the Chefs</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              Every booking is cooked by our in-house team — matched to your cuisine and occasion.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+            {[
+              { name: 'Adriano', role: 'founder, Michelin-trained in Milan' },
+              { name: 'I Made Surya', role: 'Mediterranean & handmade pasta' },
+              { name: 'Bayu Pranata', role: 'BBQ & live-fire specialist' },
+              { name: 'Ni Putu Asri', role: 'Balinese & Indonesian feasts' },
+              { name: 'Wayan Suarjana', role: 'pastry, cakes & desserts' },
+              { name: 'Ketut Mahardika', role: 'seafood & Japanese' },
+              { name: 'Sari Dewi Kusuma', role: 'wellness & vegan retreat menus' },
+              { name: 'Komang Artha', role: 'large events & weddings' },
+            ].map((chef) => (
+              <div key={chef.name} className="p-6 rounded-2xl border text-center" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+                <p className="font-semibold mb-1" style={{ color: 'var(--u-text)' }}>{chef.name}</p>
+                <p className="text-sm" style={{ color: 'var(--u-text-muted)' }}>{chef.role}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link to="/chefs" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
+              Meet the full team <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -641,7 +769,7 @@ export default function HubPage() {
               <h2 className="u-heading text-4xl md:text-5xl mb-6">A Team Built on Passion, Not Pitch Decks</h2>
               <div className="gold-arc mb-8" />
               <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
-                myCHEF.id was born when Adriano — trained under Michelin-level standards in {siteFacts.founderTrainingCity} — arrived in Bali in {siteFacts.foundingYear} and saw a gap.
+                myCHEF.id was born when Adriano — trained under Michelin-level standards in {siteFacts.founderTrainingCity} — arrived in Bali and saw a gap.
                 The island had world-class villas. It had incredible ingredients. But the connection between them was missing.
               </p>
               <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
@@ -653,7 +781,7 @@ export default function HubPage() {
                 We are not a marketplace. We are not an app. We are a kitchen that travels — and we take that seriously.
               </p>
               <div className="flex flex-wrap gap-4">
-                {[siteFacts.eventsServed, siteFacts.guestsServed, siteFacts.villaBookings, '50+ staff'].map((item) => (
+                {['560+ villas served', '12,000+ happy guests', 'Same-day confirmation', '50+ staff'].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <Check className="w-4 h-4" style={{ color: 'var(--u-accent)' }} />
                     <span className="text-sm font-medium" style={{ color: 'var(--u-text)' }}>{item}</span>
@@ -663,7 +791,7 @@ export default function HubPage() {
               {/* CTA after Who We Are section */}
               <div className="mt-8">
                 <a href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-who-we-are-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
-                  <MessageCircle className="w-4 h-4" /> Get Your Free Quote in 1 Hour
+                  <MessageCircle className="w-4 h-4" /> Get Your Quote within 2 Hours
                 </a>
               </div>
             </div>
@@ -671,27 +799,41 @@ export default function HubPage() {
         </div>
       </section>
 
-      {/* WHAT MAKES US DIFFERENT */}
+      {/* WHY BOOK myCHEF */}
       <section className="cv-auto diff-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
-            <p className="u-label mb-4">Why Choose Us</p>
-            <h2 className="u-heading text-4xl md:text-5xl mb-3">What Makes Us Different</h2>
-            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Anyone can cook. We build experiences.</p>
+          <div className="text-center mb-10">
+            <p className="u-label mb-4">Why Book myCHEF</p>
+            <h2 className="u-heading text-4xl md:text-5xl mb-4">Why Book myCHEF</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              myCHEF was founded by Adriano, trained under a Michelin-starred chef in {siteFacts.founderTrainingCity}, after he saw the gap between Bali&apos;s world-class villas and the dining served inside them. Today we are a 50+ person Indonesian hospitality team — not a freelancer, not a marketplace.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {DIFFERENTIATORS.map((d) => (
-              <div key={d.title} className="diff-card p-8 rounded-2xl border transition-all hover:shadow-lg" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-                <d.icon className="w-6 h-6 mb-4" style={{ color: 'var(--u-accent)' }} />
-                <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>{d.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>{d.desc}</p>
-              </div>
-            ))}
+          <div className="overflow-x-auto mb-10">
+            <table className="w-full min-w-[640px] text-sm border rounded-2xl overflow-hidden" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <thead>
+                <tr className="border-b" style={{ borderColor: 'var(--u-border)', background: 'var(--u-bg)' }}>
+                  <th className="px-5 py-3 text-left font-semibold" style={{ color: 'var(--u-text)' }}></th>
+                  <th className="px-5 py-3 text-left font-semibold" style={{ color: 'var(--u-text)' }}>Freelance chef</th>
+                  <th className="px-5 py-3 text-left font-semibold" style={{ color: 'var(--u-text)' }}>Marketplace</th>
+                  <th className="px-5 py-3 text-left font-semibold" style={{ color: 'var(--u-text)' }}>myCHEF</th>
+                </tr>
+              </thead>
+              <tbody style={{ color: 'var(--u-text-muted)' }}>
+                {COMPARISON_ROWS.map((row) => (
+                  <tr key={row.feature} className="border-b last:border-0" style={{ borderColor: 'var(--u-border)' }}>
+                    <td className="px-5 py-3 font-medium" style={{ color: 'var(--u-text)' }}>{row.feature}</td>
+                    <td className="px-5 py-3">{row.freelance}</td>
+                    <td className="px-5 py-3">{row.marketplace}</td>
+                    <td className="px-5 py-3 font-semibold" style={{ color: 'var(--u-accent)' }}>{row.mychef}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          {/* CTA after differentiators */}
-          <div className="mt-12 text-center">
+          <div className="text-center">
             <a href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-diff-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
-              <MessageCircle className="w-4 h-4" /> Get Your Quote in 1 Hour
+              <MessageCircle className="w-4 h-4" /> Get Your Quote within 2 Hours
             </a>
           </div>
         </div>
@@ -787,13 +929,13 @@ export default function HubPage() {
                   className="mb-2 text-sm font-semibold uppercase tracking-widest"
                   style={{ color: '#1a1714' }}
                 >
-                  1-Hour Response
+                  2-Hour Response
                 </h3>
                 <p
                   className="text-xs leading-relaxed"
                   style={{ color: '#7d7470' }}
                 >
-                  Same-day confirmation or same-day replacement guarantee.
+                  Replacement within 2 hours or 100% refund guarantee.
                 </p>
               </div>
             </div>
@@ -803,7 +945,7 @@ export default function HubPage() {
               className="text-sm uppercase tracking-[0.1em]"
               style={{ color: '#9d8d78' }}
             >
-              ✓ {siteFacts.reviewFraming}
+              ✓ 560+ villas served · 12,000+ happy guests · Same-day confirmation
             </p>
           </div>
 
@@ -944,8 +1086,8 @@ export default function HubPage() {
       </section>
 
       <TestimonialBlock
-        title="Guest moments worth repeating"
-        subtitle="Private dinners, wedding weekends and hosted events — the details guests remember most."
+        title="What Guests Say"
+        subtitle="Real guests, real villas — the moments that make a trip unforgettable."
         testimonials={FEATURED_TESTIMONIALS}
       />
 
@@ -954,8 +1096,8 @@ export default function HubPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label mb-4">Guest Words</p>
-            <h2 className="u-heading text-4xl md:text-5xl mb-3">Featured Guest Words</h2>
-            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Real guests. Real villas. {siteFacts.reviewFraming}.</p>
+            <h2 className="u-heading text-4xl md:text-5xl mb-3">What Guests Say</h2>
+            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>560+ villas served · 12,000+ happy guests · Dated, located reviews you can trust.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {REVIEWS.map((review, i) => (
@@ -975,8 +1117,8 @@ export default function HubPage() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
-              Read All Reviews <ArrowRight className="w-4 h-4" />
+            <Link to="/reviews" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
+              Read dated, located guest reviews <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -985,9 +1127,9 @@ export default function HubPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <p className="u-label mb-4">Where We Serve</p>
-            <h2 className="u-heading text-3xl md:text-5xl mb-4">Private Chef Across Bali</h2>
-            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
-              From Seminyak's beachfront villas to Ubud's jungle retreats — we know every kitchen, every market, every road.
+            <h2 className="u-heading text-3xl md:text-5xl mb-4">Where We Serve</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              Chefs based across the island — no travel games, no surprise fees.
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
@@ -1027,7 +1169,30 @@ export default function HubPage() {
               </Link>
             ))}
           </div>
-          <div className="text-center mt-10">
+          <p className="text-center mt-10 text-sm" style={{ color: 'var(--u-text-muted)' }}>
+            Hire a private chef in{' '}
+            {[
+              { name: 'Seminyak', slug: 'seminyak' },
+              { name: 'Canggu', slug: 'canggu' },
+              { name: 'Ubud', slug: 'ubud' },
+              { name: 'Uluwatu', slug: 'uluwatu' },
+              { name: 'Sanur', slug: 'sanur' },
+              { name: 'Nusa Dua', slug: 'nusa-dua' },
+              { name: 'Jimbaran', slug: 'jimbaran' },
+              { name: 'Berawa', slug: 'berawa' },
+              { name: 'Pererenan', slug: 'pererenan' },
+              { name: 'Bukit Peninsula', slug: 'bukit' },
+            ].map((city, idx, arr) => (
+              <span key={city.slug}>
+                <Link to={getLocationCanonical(city.slug)} className="hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+                  {city.name}
+                </Link>
+                {idx < arr.length - 1 ? ' · ' : ''}
+              </span>
+            ))}
+            {' '}· plus Jakarta for residences and corporate dining.
+          </p>
+          <div className="text-center mt-6">
             <Link to="/locations" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               View All Locations <ArrowRight className="w-4 h-4" />
             </Link>
@@ -1081,19 +1246,51 @@ export default function HubPage() {
         </div>
       </section>
 
+      {/* BOOKING WITH CONFIDENCE */}
+      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-14">
+            <p className="u-label mb-4">Guarantees</p>
+            <h2 className="u-heading text-4xl md:text-5xl mb-4">Booking With Confidence</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            {[
+              { title: 'Same-day confirmation', desc: 'Or your money back.' },
+              { title: 'Chef replacement guarantee', desc: 'If your chef can\'t make it, we send a replacement within 2 hours or refund 100%.' },
+              { title: 'Transparent terms', desc: '50% deposit to confirm, balance on the day; all prices quoted ++ (11% government tax + 10% service charge) with nothing hidden.' },
+            ].map((item) => (
+              <div key={item.title} className="p-8 rounded-2xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+                <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>{item.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link to="/why-mychef" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
+              Why 560+ villas choose myCHEF <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label mb-4">Questions</p>
             <h2 className="u-heading text-4xl md:text-5xl mb-3">Frequently Asked</h2>
-            <p className="mb-2" style={{ color: 'var(--u-text-muted)' }}>Still unsure? Message us on WhatsApp — we respond within the hour.</p>
+            <p className="mb-2" style={{ color: 'var(--u-text-muted)' }}>Still unsure? Message us on WhatsApp — we respond within 2 hours.</p>
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
             <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="homepage-faq-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
-              <MessageCircle className="w-4 h-4" /> Get a Free Quote on WhatsApp
+              <MessageCircle className="w-4 h-4" /> Get Your Private Chef Quote on WhatsApp
             </a>
+          </div>
+          <div className="text-center mt-4">
+            <Link to="/faq" className="text-sm font-semibold hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>
+              More questions answered →
+            </Link>
           </div>
         </div>
       </section>
@@ -1233,15 +1430,15 @@ export default function HubPage() {
             <span className="italic">One Message Away.</span>
           </h2>
           <p className="text-white/[70%] mb-10 max-w-xl mx-auto">
-            Most inquiries are answered within the hour. No deposit required to start planning.
+            Most enquiries are answered within 2 hours — no deposit required to start planning.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="homepage-final-cta" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
-              <Phone className="w-4 h-4" /> Get Your Private Chef Quote in 1 Hour <span aria-hidden="true">→</span>
+              <Phone className="w-4 h-4" /> Get Your Private Chef Quote on WhatsApp <span aria-hidden="true">→</span>
             </a>
-            <Link to="/contact" className="inline-block px-10 py-5 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
-              View All Contact Options
-            </Link>
+            <a href={`mailto:${siteFacts.email}`} className="inline-block px-10 py-5 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
+              Email {siteFacts.email}
+            </a>
           </div>
         </div>
       </section>

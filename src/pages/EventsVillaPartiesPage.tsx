@@ -502,12 +502,14 @@ export default function EventsVillaPartiesPage() {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <p className="text-sm uppercase tracking-widest text-[#C5A028] mb-3">Also available</p>
           <h2 className="text-2xl font-semibold text-[#1A1916] mb-8">Explore More myCHEF Services</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { to: '/events', label: 'All Events' },
-              { to: '/catering', label: 'Villa Catering' },
-              { to: '/in-villa-service/bartenders', label: 'Bartenders' },
-              { to: '/book', label: 'Book myCHEF' }
+              { to: '/experiences/private-cocktail-party', label: 'dedicated cocktail party experience' },
+              { to: '/villa-bbq-catering-bali', label: 'villa BBQ catering' },
+              { to: '/catering/bbq-catering', label: 'BBQ catering menus' },
+              { to: '/in-villa-service/bartenders', label: 'private bartender hire' },
+              { to: '/events/birthdays', label: 'birthday catering' },
+              { to: '/villa-event-packages', label: 'all-inclusive event packages' }
             ].map((link) => (
               <Link
                 key={link.to}

@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-07-24T08:21:12.088Z",
+  "results": [
+    {
+      "image_id": "img-002+img-009",
+      "page_name": [
+        "Private Experiences Bali | Culinary & Celebration Experiences",
+        "Bartender Hire Bali | Private Cocktail Party in Your Villa"
+      ],
+      "filename": "test-img-002-img-009.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success"
+    },
+    {
+      "image_id": "img-007+img-032",
+      "page_name": [
+        "Private Experiences Bali | Culinary & Celebration Experiences",
+        "Proposal Package Bali | Romantic Proposal Dinner"
+      ],
+      "filename": "test-img-007-img-032.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success"
+    },
+    {
+      "image_id": "img-016",
+      "page_name": "Sushi Making Class Bali | Private In-Villa Masterclass",
+      "filename": "test-img-016.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "896x1200",
+      "cost_usd": 0.041,
+      "status": "success"
+    },
+    {
+      "image_id": "img-025",
+      "page_name": "Kids Birthday Party Bali | Private Chef Party",
+      "filename": "test-img-025.png",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1200x896",
+      "cost_usd": 0.041,
+      "status": "success"
+    },
+    {
+      "image_id": "img-038+img-052",
+      "page_name": [
+        "Complete Villa Experience Bali | End-to-End Hospitality",
+        "VIP Transport Bali | Luxury Cars & Yachts"
+      ],
+      "filename": "test-img-038-img-052.png",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1920x1088",
+      "cost_usd": 0.165,
+      "status": "success"
+    }
+  ]
+}

@@ -81,7 +81,40 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         }
       : null
 
-  const landingServiceSchema = kind === 'landing' ? serviceSchema(entry.title, entry.description, canonical) : null
+  const isGroupVillaDinner = kind === 'landing' && entry.slug === 'group-villa-dinner-packages-bali'
+  const landingServiceSchema = kind === 'landing'
+    ? (
+        isGroupVillaDinner
+          ? {
+              '@context': 'https://schema.org',
+              '@type': 'Service',
+              name: 'Group Villa Dinner Packages Bali',
+              provider: {
+                '@type': 'Organization',
+                name: 'myCHEF.id',
+                url: SITE,
+                telephone: '+62 896-7407-2020',
+                email: 'bali@mychef.id',
+              },
+              areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+              description: 'All-inclusive villa dinner packages for groups of 10 to 150 in Bali: menu, chefs, service staff, equipment and cleanup at one fixed per-person price.',
+              offers: {
+                '@type': 'Offer',
+                priceCurrency: 'IDR',
+                price: '700000',
+                priceSpecification: {
+                  '@type': 'UnitPriceSpecification',
+                  price: '700000',
+                  priceCurrency: 'IDR',
+                  unitText: 'per person, before 11% government tax + 10% service charge',
+                },
+                description: 'Group villa dinner packages from IDR 700,000++/person for groups of 10-150',
+              },
+              url: canonical,
+            }
+          : serviceSchema(entry.title, entry.description, canonical)
+      )
+    : null
   const breadcrumbJsonLd = isArticle ? breadcrumbSchema(entry.title, canonical, hubLabel, `${SITE}${hubPath}`) : breadcrumbSchema(entry.title, canonical)
   const faqItems = isChefForHireIndonesia
     ? [
@@ -92,10 +125,21 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         { question: 'Can myCHEF find a full-time or live-in chef?', answer: 'Yes. Permanent roles use a placement process with a household brief, matched profiles, interviews, cooking trials, contract support, and ongoing follow-up.' },
         { question: 'Where in Indonesia can I hire a myCHEF chef?', answer: 'Regular service is available across Bali. Assignments in Lombok, on yachts, at remote estates, and in other Indonesian locations are assessed individually based on schedule and logistics.' },
       ]
-    : [
-        { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
-        { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond, covering 560+ villas across the island.' },
-      ]
+    : isGroupVillaDinner
+      ? [
+          { question: 'How much does a group villa dinner in Bali cost?', answer: 'Packages start from IDR 700,000++ per person for groups of 10-60 (larger events custom quoted), plus 11% government tax + 10% service charge, including menu, chefs, service staff, setup and cleanup.' },
+          { question: 'What group sizes can myCHEF handle for villa dinners?', answer: 'From 10 to 150 guests. Above 60 guests, temporary prep stations and a full brigade are set up; above 30, a second chef is added.' },
+          { question: 'Can kids be catered within a group dinner?', answer: "Yes — dedicated kids' menus from IDR 250,000 per child, served early and separately if preferred." },
+          { question: 'How are dietary needs handled across a large group?', answer: 'Requirements are collected in advance; vegetarian, vegan, halal-sensitive, gluten-free and allergy-managed guests are covered in the main menu with every dish labelled.' },
+          { question: 'Is a villa kitchen big enough for 20+ guests?', answer: 'Almost always. Kitchen capacity, power and serving space are assessed before the date and missing equipment is brought in.' },
+          { question: 'Do villas charge extra for large gatherings?', answer: 'Some villas charge function fees and some neighbourhoods require a banjar permit for events beyond sleeping capacity. myCHEF flags this early and coordinates with the villa manager.' },
+          { question: 'What deposit is required?', answer: 'A 50% deposit confirms the date and team; the balance is due before the event.' },
+          { question: 'How far ahead should a group dinner be booked?', answer: 'A few days to a week is usually enough; earlier in peak season. Travel fees may apply for remote areas and are quoted upfront.' },
+        ]
+      : [
+          { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },
+          { question: 'What areas in Bali does myCHEF serve?', answer: 'We serve all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond, covering 560+ villas across the island.' },
+        ]
   const jsonLdArr = [
     breadcrumbJsonLd,
     faqPageSchema(faqItems),

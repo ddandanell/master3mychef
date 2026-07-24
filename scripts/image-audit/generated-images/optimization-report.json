@@ -1,0 +1,285 @@
+{
+  "generated_at": "2026-07-24T10:23:54.169Z",
+  "images": [
+    {
+      "image_id": "img-001",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-001.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-experiences-hub-hero-bali-landscape.webp",
+      "original_size_kb": 2711,
+      "webp_size_kb": 162,
+      "dimensions": "1920x1088"
+    },
+    {
+      "image_id": "img-002+img-009",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-002-img-009.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp",
+      "original_size_kb": 2793,
+      "webp_size_kb": 165,
+      "dimensions": "1920x1088"
+    },
+    {
+      "image_id": "img-003+img-014",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-003-img-014.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-sushi-masterclass-chef-hands-bali-landscape.webp",
+      "original_size_kb": 2474,
+      "webp_size_kb": 98,
+      "dimensions": "1920x1088"
+    },
+    {
+      "image_id": "img-004+img-019",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-004-img-019.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp",
+      "original_size_kb": 3143,
+      "webp_size_kb": 240,
+      "dimensions": "1920x1088"
+    },
+    {
+      "image_id": "img-005+img-024",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-005-img-024.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-kids-party-children-cooking-bali-landscape.webp",
+      "original_size_kb": 2892,
+      "webp_size_kb": 196,
+      "dimensions": "1920x1088"
+    },
+    {
+      "image_id": "img-006+img-028",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-006-img-028.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-oyster-champagne-station-pour-bali-landscape.webp",
+      "original_size_kb": 2669,
+      "webp_size_kb": 170,
+      "dimensions": "1920x1088"
+    },
+    {
+      "image_id": "img-007+img-032",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-007-img-032.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-proposal-dinner-table-setting-bali-landscape.webp",
+      "original_size_kb": 2515,
+      "webp_size_kb": 146,
+      "dimensions": "1920x1088"
+    },
+    {
+      "image_id": "img-010",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-010.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-cocktail-party-cocktails-canapes-bali-landscape.webp",
+      "original_size_kb": 1504,
+      "webp_size_kb": 99,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-011",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-011.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-cocktail-party-bartenders-setup-bali-portrait.webp",
+      "original_size_kb": 1477,
+      "webp_size_kb": 100,
+      "dimensions": "896x1200"
+    },
+    {
+      "image_id": "img-012",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-012.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-cocktail-party-mobile-bar-detail-bali-landscape.webp",
+      "original_size_kb": 1241,
+      "webp_size_kb": 69,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-015",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-015.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-sushi-masterclass-instruction-bali-landscape.webp",
+      "original_size_kb": 1512,
+      "webp_size_kb": 90,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-016",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-016.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-sushi-masterclass-ingredients-bali-portrait.webp",
+      "original_size_kb": 1965,
+      "webp_size_kb": 182,
+      "dimensions": "896x1200"
+    },
+    {
+      "image_id": "img-017",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-017.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-sushi-masterclass-guests-dining-bali-landscape.webp",
+      "original_size_kb": 1289,
+      "webp_size_kb": 70,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-020",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-020.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-cooking-class-balinese-ingredients-bali-landscape.webp",
+      "original_size_kb": 1821,
+      "webp_size_kb": 155,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-021",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-021.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-cooking-class-market-produce-bali-portrait.webp",
+      "original_size_kb": 1537,
+      "webp_size_kb": 117,
+      "dimensions": "896x1200"
+    },
+    {
+      "image_id": "img-022",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-022.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-cooking-class-group-dining-bali-landscape.webp",
+      "original_size_kb": 1592,
+      "webp_size_kb": 118,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-025",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-025.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-kids-party-kids-hands-cooking-bali-landscape.webp",
+      "original_size_kb": 1796,
+      "webp_size_kb": 147,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-026",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-026.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-kids-party-family-table-bali-landscape.webp",
+      "original_size_kb": 1370,
+      "webp_size_kb": 82,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-029",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-029.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-oyster-champagne-seafood-station-bali-landscape.webp",
+      "original_size_kb": 1549,
+      "webp_size_kb": 130,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-030",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-030.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-oyster-champagne-champagne-pour-bali-portrait.webp",
+      "original_size_kb": 1408,
+      "webp_size_kb": 68,
+      "dimensions": "896x1200"
+    },
+    {
+      "image_id": "img-033+img-034",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-033-img-034.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-proposal-dinner-plated-dish-bali-portrait.webp",
+      "original_size_kb": 1305,
+      "webp_size_kb": 75,
+      "dimensions": "896x1200"
+    },
+    {
+      "image_id": "img-036",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-036.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-complete-villa-chef-kitchen-bali-landscape.webp",
+      "original_size_kb": 2879,
+      "webp_size_kb": 188,
+      "dimensions": "1920x1088"
+    },
+    {
+      "image_id": "img-037+img-045",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-037-img-045.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-villa-interior-pool-living-bali-landscape.webp",
+      "original_size_kb": 1993,
+      "webp_size_kb": 206,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-038+img-052",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-038-img-052.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-vip-transport-chauffeur-vehicle-bali-landscape.webp",
+      "original_size_kb": 3069,
+      "webp_size_kb": 219,
+      "dimensions": "1920x1088"
+    },
+    {
+      "image_id": "img-039",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-039.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-complete-villa-wedding-reception-bali-landscape.webp",
+      "original_size_kb": 1730,
+      "webp_size_kb": 180,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-040",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-040.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-villa-staff-waiters-service-bali-landscape.webp",
+      "original_size_kb": 1362,
+      "webp_size_kb": 89,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-041+img-046",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-041-img-046.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-villa-pool-infinity-pool-bali-landscape.webp",
+      "original_size_kb": 1613,
+      "webp_size_kb": 134,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-042+img-050",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-042-img-050.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-villa-tablescape-reset-table-bali-landscape.webp",
+      "original_size_kb": 1432,
+      "webp_size_kb": 84,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-044",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-044.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-villa-packages-banquet-lawn-bali-landscape.webp",
+      "original_size_kb": 3429,
+      "webp_size_kb": 364,
+      "dimensions": "1920x1088"
+    },
+    {
+      "image_id": "img-047",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-047.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-villa-packages-chef-dinner-table-bali-landscape.webp",
+      "original_size_kb": 1536,
+      "webp_size_kb": 129,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-048",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-048.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-villa-packages-packages-bartender-bali-landscape.webp",
+      "original_size_kb": 1404,
+      "webp_size_kb": 80,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-049",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-049.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-villa-packages-staff-setting-table-bali-landscape.webp",
+      "original_size_kb": 1625,
+      "webp_size_kb": 130,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-053",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-053.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-vip-transport-jimbaran-sunset-bali-landscape.webp",
+      "original_size_kb": 1279,
+      "webp_size_kb": 58,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-054",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-054.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-vip-transport-minibus-driver-bali-landscape.webp",
+      "original_size_kb": 1990,
+      "webp_size_kb": 215,
+      "dimensions": "1200x896"
+    },
+    {
+      "image_id": "img-055",
+      "source": "/Users/openclaw/Movies/LIve website/master3mychef/scripts/image-audit/generated-images/img-055.png",
+      "output": "/Users/openclaw/Movies/LIve website/master3mychef/public/generated/mychef-vip-transport-yacht-deck-bali-landscape.webp",
+      "original_size_kb": 1446,
+      "webp_size_kb": 99,
+      "dimensions": "1200x896"
+    }
+  ]
+}

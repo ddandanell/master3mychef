@@ -470,6 +470,26 @@ export default function EventsBirthdaysPage() {
 
       <PressStrip />
 
+      {/* Related Services */}
+      <section className="py-16 bg-[#F5F3EE]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-sm uppercase tracking-widest text-[#C5A028] mb-3">Also available</p>
+          <h2 className="text-2xl font-semibold text-[#1A1916] mb-6">Related Services</h2>
+          <p className="text-[#4A4745] leading-relaxed">
+            For milestone celebrations, see our{' '}
+            <Link to="/luxury-birthday-party-bali" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">milestone and luxury birthday production</Link>.
+            Entertain the{' '}
+            <Link to="/experiences/kids-birthday-chef-party" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">kids</Link>{' '}
+            with a party experience and{' '}
+            <Link to="/kids-menus" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">kids</Link>{' '}
+            menus. Add{' '}
+            <Link to="/villa-bbq-catering-bali" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa BBQ catering</Link>, a{' '}
+            <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">private bartender</Link>, or explore{' '}
+            <Link to="/events/villa-parties" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa party formats</Link>.
+          </p>
+        </div>
+      </section>
+
       {/* ═══════ RELATED EVENTS ═══════ */}
       <section className="py-16 px-6 bg-[#FAFAF8]">
         <div className="max-w-[960px] mx-auto">

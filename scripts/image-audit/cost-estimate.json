@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "project": "mychef.id-website-image-overhaul",
+    "assignment": "openai-model-pricing",
+    "date": "2026-07-24",
+    "currency": "USD",
+    "sources": [
+      "https://openai.com/api/pricing",
+      "https://developers.openai.com/api/docs/guides/image-generation",
+      "https://developers.openai.com/api/docs/models/gpt-image-2",
+      "https://developers.openai.com/api/docs/models/gpt-image-1",
+      "https://developers.openai.com/api/docs/models/gpt-image-1-mini",
+      "https://developers.openai.com/api/docs/models/dall-e-3",
+      "https://developers.openai.com/api/docs/models/dall-e-2"
+    ],
+    "notes": [
+      "All deprecated models should be avoided for production.",
+      "gpt-image-2 is the only active, non-deprecated OpenAI image generation model as of 2026-07-24.",
+      "Cost estimates use gpt-image-2 official calculator prices at legacy preset sizes.",
+      "Text-input and reference-image input costs are small and shown separately."
+    ]
+  },
+  "recommended_model": {
+    "model_id": "gpt-image-2",
+    "snapshot": "gpt-image-2-2026-04-21",
+    "status": "active",
+    "rationale": "State-of-the-art realism, prompt adherence, editing support, flexible resolutions up to 4K, and the only non-deprecated model in scope."
+  },
+  "models": {
+    "gpt-image-2": {
+      "api_model_id": "gpt-image-2",
+      "snapshot": "gpt-image-2-2026-04-21",
+      "status": "active",
+      "generation": true,
+      "editing": true,
+      "image_input": true,
+      "supported_dimensions": [
+        "1024x1024",
+        "1024x1536",
+        "1536x1024",
+        "2048x2048",
+        "2048x1152",
+        "3840x2160",
+        "2160x3840"
+      ],
+      "dimension_constraints": {
+        "max_edge_px": 3840,
+        "edge_multiple": 16,
+        "max_aspect_ratio": "3:1",
+        "min_total_pixels": 655360,
+        "max_total_pixels": 8294400,
+        "experimental_above": "2560x1440"
+      },
+      "quality_settings": ["low", "medium", "high", "auto"],
+      "pricing_mode": "token_based",
+      "token_pricing_per_1m": {
+        "image_input": 8.0,
+        "cached_image_input": 2.0,
+        "text_input": 5.0,
+        "cached_text_input": 1.25,
+        "image_output": 30.0
+      },
+      "per_image_estimate_usd": {
+        "low": {
+          "1024x1024": 0.006,
+          "1024x1536": 0.005,
+          "1536x1024": 0.005
+        },
+        "medium": {
+          "1024x1024": 0.053,
+          "1024x1536": 0.041,
+          "1536x1024": 0.041
+        },
+        "high": {
+          "1024x1024": 0.211,
+          "1024x1536": 0.165,
+          "1536x1024": 0.165
+        }
+      },
+      "transparent_background": false,
+      "realistic_photography_quality": "highest",
+      "prompt_following": "best",
+      "consistency": "good",
+      "suitability_for_premium_bali_hospitality": "excellent"
+    },
+    "gpt-image-1": {
+      "api_model_id": "gpt-image-1",
+      "status": "deprecated",
+      "generation": true,
+      "editing": true,
+      "image_input": true,
+      "supported_dimensions": ["1024x1024", "1024x1536", "1536x1024"],
+      "quality_settings": ["low", "medium", "high"],
+      "pricing_mode": "token_based_with_legacy_per_image_floor",
+      "token_pricing_per_1m": {
+        "text_input": 5.0,
+        "cached_text_input": 1.25,
+        "image_input": 10.0,
+        "cached_image_input": 2.5,
+        "image_output": 40.0
+      },
+      "per_image_estimate_usd": {
+        "low": { "1024x1024": 0.011, "1024x1536": 0.016, "1536x1024": 0.016 },
+        "medium": { "1024x1024": 0.042, "1024x1536": 0.063, "1536x1024": 0.063 },
+        "high": { "1024x1024": 0.167, "1024x1536": 0.25, "1536x1024": 0.25 }
+      },
+      "transparent_background": null,
+      "realistic_photography_quality": "high",
+      "prompt_following": "strong",
+      "consistency": "good",
+      "suitability_for_premium_bali_hospitality": "good_historically_but_deprecated"
+    },
+    "gpt-image-1-mini": {
+      "api_model_id": "gpt-image-1-mini",
+      "status": "deprecated",
+      "generation": true,
+      "editing": true,
+      "image_input": true,
+      "supported_dimensions": ["1024x1024", "1024x1536", "1536x1024"],
+      "quality_settings": ["low", "medium", "high"],
+      "pricing_mode": "token_based_with_legacy_per_image_floor",
+      "token_pricing_per_1m": {
+        "text_input": 2.0,
+        "cached_text_input": 0.2,
+        "image_input": 2.5,
+        "cached_image_input": 0.25,
+        "image_output": 8.0
+      },
+      "per_image_estimate_usd": {
+        "low": { "1024x1024": 0.005, "1024x1536": 0.006, "1536x1024": 0.006 },
+        "medium": { "1024x1024": 0.011, "1024x1536": 0.015, "1536x1024": 0.015 },
+        "high": { "1024x1024": 0.036, "1024x1536": 0.052, "1536x1024": 0.052 }
+      },
+      "transparent_background": null,
+      "realistic_photography_quality": "moderate",
+      "prompt_following": "moderate",
+      "consistency": "moderate",
+      "suitability_for_premium_bali_hospitality": "poor"
+    },
+    "dall-e-3": {
+      "api_model_id": "dall-e-3",
+      "status": "deprecated",
+      "generation": true,
+      "editing": false,
+      "image_input": false,
+      "supported_dimensions": ["1024x1024", "1024x1536", "1536x1024"],
+      "quality_settings": ["standard", "hd"],
+      "pricing_mode": "per_image",
+      "per_image_estimate_usd": {
+        "standard": { "1024x1024": 0.04, "1024x1536": 0.08, "1536x1024": 0.08 },
+        "hd": { "1024x1024": 0.08, "1024x1536": 0.12, "1536x1024": 0.12 }
+      },
+      "transparent_background": false,
+      "realistic_photography_quality": "high",
+      "prompt_following": "strong",
+      "consistency": "limited",
+      "suitability_for_premium_bali_hospitality": "not_recommended_deprecated"
+    },
+    "dall-e-2": {
+      "api_model_id": "dall-e-2",
+      "status": "deprecated",
+      "generation": true,
+      "editing": true,
+      "image_input": true,
+      "supported_dimensions": ["1024x1024", "1024x1536", "1536x1024"],
+      "quality_settings": ["standard"],
+      "pricing_mode": "per_image",
+      "per_image_estimate_usd": {
+        "standard": { "1024x1024": 0.016, "1024x1536": 0.018, "1536x1024": 0.02 }
+      },
+      "transparent_background": null,
+      "realistic_photography_quality": "low",
+      "prompt_following": "weaker",
+      "consistency": "poor",
+      "suitability_for_premium_bali_hospitality": "unsuitable"
+    }
+  },
+  "cost_estimates": {
+    "target_image_count": 50,
+    "recommended_mix": {
+      "medium_secondary_images": {
+        "count": 35,
+        "quality": "medium",
+        "size": "1536x1024",
+        "unit_cost_usd": 0.041
+      },
+      "high_hero_images": {
+        "count": 15,
+        "quality": "high",
+        "size": "1536x1024",
+        "unit_cost_usd": 0.165
+      }
+    },
+    "scenarios": {
+      "conservative_all_medium": {
+        "description": "All 50 images generated at medium quality (blend of square/landscape).",
+        "unit_cost_average_usd": 0.047,
+        "one_draft_total_usd": 2.35,
+        "two_variations_total_usd": 4.7
+      },
+      "balanced_recommended": {
+        "description": "35 medium secondary images + 15 high hero images.",
+        "line_items": [
+          { "item": "medium_secondary", "count": 35, "unit_cost_usd": 0.041, "subtotal_usd": 1.435 },
+          { "item": "high_hero", "count": 15, "unit_cost_usd": 0.165, "subtotal_usd": 2.475 },
+          { "item": "prompt_text_tokens", "count": 15000, "unit": "tokens", "rate_per_1m_usd": 5.0, "subtotal_usd": 0.075 }
+        ],
+        "one_draft_total_usd": 3.985,
+        "two_variations_total_usd": 7.97,
+        "rounded_budget_envelope_usd": {
+          "one_draft": "4.00",
+          "two_variations": "8.00"
+        }
+      },
+      "premium_all_high": {
+        "description": "All 50 images generated at high quality, landscape orientation.",
+        "unit_cost_average_usd": 0.165,
+        "one_draft_total_usd": 8.25,
+        "two_variations_total_usd": 16.5
+      }
+    },
+    "additional_costs": {
+      "prompt_text_tokens_per_image_estimate": {
+        "tokens": 300,
+        "cost_usd": 0.0015
+      },
+      "reference_image_input_per_image_estimate": {
+        "tokens": 5000,
+        "cost_usd": 0.04
+      },
+      "contingency_recommended_percent": 10
+    }
+  },
+  "production_guidance": {
+    "selected_model": "gpt-image-2",
+    "hero_image_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "unit_cost_usd": 0.165
+    },
+    "secondary_image_settings": {
+      "size": "1536x1024",
+      "quality": "medium",
+      "unit_cost_usd": 0.041
+    },
+    "thumbnail_image_settings": {
+      "size": "1024x1024",
+      "quality": "medium",
+      "unit_cost_usd": 0.053
+    },
+    "variations_per_image": 2,
+    "estimated_total_budget_usd": {
+      "min": 4.0,
+      "expected": 8.0,
+      "max": 17.0
+    }
+  }
+}

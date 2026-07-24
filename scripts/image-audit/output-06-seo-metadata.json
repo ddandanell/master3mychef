@@ -1,0 +1,419 @@
+{
+  "generatedAt": "2026-07-24T07:49:11.177Z",
+  "totalRecords": 35,
+  "images": [
+    {
+      "image_id": "img-001",
+      "filename": "mychef-experiences-hub-hero-bali-landscape.webp",
+      "alt_text": "Villa terrace at sunset with elegant table setting and staff service in Bali",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences",
+      "target_section": "hero",
+      "target_keyword": "private experiences Bali"
+    },
+    {
+      "image_id": "img-002+img-009",
+      "filename": "mychef-cocktail-party-bartender-pour-bali-landscape.webp",
+      "alt_text": "Bartender pouring a cocktail at a Bali villa poolside bar at sunset",
+      "title": null,
+      "caption": null,
+      "target_page": [
+        "/experiences",
+        "/experiences/private-cocktail-party"
+      ],
+      "target_section": [
+        "experience collection",
+        "hero"
+      ],
+      "target_keyword": "bartender hire Bali"
+    },
+    {
+      "image_id": "img-003+img-014",
+      "filename": "mychef-sushi-masterclass-chef-hands-bali-landscape.webp",
+      "alt_text": "Chef shaping nigiri at a clean Bali villa kitchen counter",
+      "title": null,
+      "caption": null,
+      "target_page": [
+        "/experiences",
+        "/experiences/sushi-masterclass"
+      ],
+      "target_section": [
+        "intro",
+        "hero"
+      ],
+      "target_keyword": "sushi making class Bali"
+    },
+    {
+      "image_id": "img-004+img-019",
+      "filename": "mychef-cooking-class-chef-teaching-bali-landscape.webp",
+      "alt_text": "Chef teaching Balinese spice paste preparation in a villa kitchen",
+      "title": null,
+      "caption": null,
+      "target_page": [
+        "/experiences",
+        "/experiences/private-cooking-class"
+      ],
+      "target_section": [
+        "intro",
+        "hero"
+      ],
+      "target_keyword": "private cooking class Bali"
+    },
+    {
+      "image_id": "img-005+img-024",
+      "filename": "mychef-kids-party-children-cooking-bali-landscape.webp",
+      "alt_text": "Children decorating pizzas at a shaded Bali villa poolside party",
+      "title": null,
+      "caption": null,
+      "target_page": [
+        "/experiences",
+        "/experiences/kids-birthday-chef-party"
+      ],
+      "target_section": [
+        "content section",
+        "hero"
+      ],
+      "target_keyword": "kids birthday party Bali"
+    },
+    {
+      "image_id": "img-006+img-028",
+      "filename": "mychef-oyster-champagne-station-pour-bali-landscape.webp",
+      "alt_text": "Server pouring champagne beside oysters on ice at a Bali villa terrace",
+      "title": null,
+      "caption": null,
+      "target_page": [
+        "/experiences",
+        "/experiences/champagne-oyster-experience"
+      ],
+      "target_section": [
+        "intro",
+        "hero"
+      ],
+      "target_keyword": "oyster bar Bali"
+    },
+    {
+      "image_id": "img-007+img-032",
+      "filename": "mychef-proposal-dinner-table-setting-bali-landscape.webp",
+      "alt_text": "Candlelit table for two on a Bali villa terrace at dusk",
+      "title": null,
+      "caption": null,
+      "target_page": [
+        "/experiences",
+        "/experiences/romantic-proposal-dinner"
+      ],
+      "target_section": [
+        "intro",
+        "hero"
+      ],
+      "target_keyword": "proposal package Bali"
+    },
+    {
+      "image_id": "img-010",
+      "filename": "mychef-cocktail-party-cocktails-canapes-bali-landscape.webp",
+      "alt_text": "Craft cocktails and canapés on a Bali villa poolside bar counter",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/private-cocktail-party",
+      "target_section": "intro",
+      "target_keyword": "bartender hire Bali"
+    },
+    {
+      "image_id": "img-011",
+      "filename": "mychef-cocktail-party-bartenders-setup-bali-portrait.webp",
+      "alt_text": "Two bartenders setting up a mobile bar at a Bali villa terrace",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/private-cocktail-party",
+      "target_section": "content section",
+      "target_keyword": "bartender hire Bali"
+    },
+    {
+      "image_id": "img-012",
+      "filename": "mychef-cocktail-party-mobile-bar-detail-bali-landscape.webp",
+      "alt_text": "Elegant mobile bar setup at a Bali villa in evening ambient light",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/private-cocktail-party",
+      "target_section": "pricing",
+      "target_keyword": "bartender hire Bali"
+    },
+    {
+      "image_id": "img-015",
+      "filename": "mychef-sushi-masterclass-instruction-bali-landscape.webp",
+      "alt_text": "Chef demonstrating sushi slicing to guests at a Bali villa counter",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/sushi-masterclass",
+      "target_section": "intro",
+      "target_keyword": "sushi making class Bali"
+    },
+    {
+      "image_id": "img-016",
+      "filename": "mychef-sushi-masterclass-ingredients-bali-portrait.webp",
+      "alt_text": "Fresh sushi ingredients arranged on a clean Bali villa kitchen counter",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/sushi-masterclass",
+      "target_section": "menu/curriculum",
+      "target_keyword": "sushi making class Bali"
+    },
+    {
+      "image_id": "img-017",
+      "filename": "mychef-sushi-masterclass-guests-dining-bali-landscape.webp",
+      "alt_text": "Guests enjoying sushi at a Bali villa dining table with garden view",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/sushi-masterclass",
+      "target_section": "settings",
+      "target_keyword": "sushi making class Bali"
+    },
+    {
+      "image_id": "img-020",
+      "filename": "mychef-cooking-class-balinese-ingredients-bali-landscape.webp",
+      "alt_text": "Balinese spice paste ingredients on a villa kitchen counter",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/private-cooking-class",
+      "target_section": "intro",
+      "target_keyword": "private cooking class Bali"
+    },
+    {
+      "image_id": "img-021",
+      "filename": "mychef-cooking-class-market-produce-bali-portrait.webp",
+      "alt_text": "Chef selecting fresh produce at a traditional Balinese morning market",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/private-cooking-class",
+      "target_section": "content section",
+      "target_keyword": "private cooking class Bali"
+    },
+    {
+      "image_id": "img-022",
+      "filename": "mychef-cooking-class-group-dining-bali-landscape.webp",
+      "alt_text": "Group sharing Balinese dishes at a villa dining table",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/private-cooking-class",
+      "target_section": "content section",
+      "target_keyword": "private cooking class Bali"
+    },
+    {
+      "image_id": "img-025",
+      "filename": "mychef-kids-party-kids-hands-cooking-bali-landscape.webp",
+      "alt_text": "Children's hands topping mini pizzas at a Bali villa birthday table",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/kids-birthday-chef-party",
+      "target_section": "menu/curriculum",
+      "target_keyword": "kids birthday party Bali"
+    },
+    {
+      "image_id": "img-026",
+      "filename": "mychef-kids-party-family-table-bali-landscape.webp",
+      "alt_text": "Family-friendly birthday table with fresh food at a Bali villa garden",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/kids-birthday-chef-party",
+      "target_section": "content section",
+      "target_keyword": "kids birthday party Bali"
+    },
+    {
+      "image_id": "img-029",
+      "filename": "mychef-oyster-champagne-seafood-station-bali-landscape.webp",
+      "alt_text": "Seafood and oyster station prepared on a Bali villa terrace",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/champagne-oyster-experience",
+      "target_section": "content section",
+      "target_keyword": "oyster bar Bali"
+    },
+    {
+      "image_id": "img-030",
+      "filename": "mychef-oyster-champagne-champagne-pour-bali-portrait.webp",
+      "alt_text": "Champagne being poured into a flute at an elegant Bali villa event",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/champagne-oyster-experience",
+      "target_section": "intro",
+      "target_keyword": "oyster bar Bali"
+    },
+    {
+      "image_id": "img-033+img-034",
+      "filename": "mychef-proposal-dinner-plated-dish-bali-portrait.webp",
+      "alt_text": "Elegant plated dish on a candlelit Bali villa dining table",
+      "title": null,
+      "caption": null,
+      "target_page": "/experiences/romantic-proposal-dinner",
+      "target_section": [
+        "intro",
+        "content section"
+      ],
+      "target_keyword": "proposal package Bali"
+    },
+    {
+      "image_id": "img-036",
+      "filename": "mychef-complete-villa-chef-kitchen-bali-landscape.webp",
+      "alt_text": "Private chef working in a modern Bali villa kitchen with pool view",
+      "title": null,
+      "caption": null,
+      "target_page": "/complete-villa-experience",
+      "target_section": "hero",
+      "target_keyword": "complete villa experience Bali"
+    },
+    {
+      "image_id": "img-037+img-045",
+      "filename": "mychef-villa-interior-pool-living-bali-landscape.webp",
+      "alt_text": "Open-plan living and pool area of a luxury Bali villa",
+      "title": null,
+      "caption": null,
+      "target_page": [
+        "/complete-villa-experience",
+        "/villa-event-packages"
+      ],
+      "target_section": [
+        "content section",
+        "content section"
+      ],
+      "target_keyword": "complete villa experience Bali"
+    },
+    {
+      "image_id": "img-038+img-052",
+      "filename": "mychef-vip-transport-chauffeur-vehicle-bali-landscape.webp",
+      "alt_text": "Uniformed chauffeur opening the door of a black luxury vehicle in Bali",
+      "title": null,
+      "caption": null,
+      "target_page": [
+        "/complete-villa-experience",
+        "/vip-transport-bali"
+      ],
+      "target_section": [
+        "content section",
+        "hero"
+      ],
+      "target_keyword": "VIP transport Bali"
+    },
+    {
+      "image_id": "img-039",
+      "filename": "mychef-complete-villa-wedding-reception-bali-landscape.webp",
+      "alt_text": "Long banquet table set for a wedding reception on a Bali villa lawn",
+      "title": null,
+      "caption": null,
+      "target_page": "/complete-villa-experience",
+      "target_section": "planning",
+      "target_keyword": "complete villa experience Bali"
+    },
+    {
+      "image_id": "img-040",
+      "filename": "mychef-villa-staff-waiters-service-bali-landscape.webp",
+      "alt_text": "Uniformed waiters providing polished service at a Bali villa dinner",
+      "title": null,
+      "caption": null,
+      "target_page": "/complete-villa-experience",
+      "target_section": "content section",
+      "target_keyword": "complete villa experience Bali"
+    },
+    {
+      "image_id": "img-041+img-046",
+      "filename": "mychef-villa-pool-infinity-pool-bali-landscape.webp",
+      "alt_text": "Infinity pool at a Bali villa overlooking the coast at sunset",
+      "title": null,
+      "caption": null,
+      "target_page": [
+        "/complete-villa-experience",
+        "/villa-event-packages"
+      ],
+      "target_section": [
+        "yachts",
+        "arrival"
+      ],
+      "target_keyword": "Bali villa event packages"
+    },
+    {
+      "image_id": "img-042+img-050",
+      "filename": "mychef-villa-tablescape-reset-table-bali-landscape.webp",
+      "alt_text": "Immaculately reset dining table on a Bali villa terrace after an event",
+      "title": null,
+      "caption": null,
+      "target_page": [
+        "/complete-villa-experience",
+        "/villa-event-packages"
+      ],
+      "target_section": [
+        "departure",
+        "content section"
+      ],
+      "target_keyword": "Bali villa event packages"
+    },
+    {
+      "image_id": "img-044",
+      "filename": "mychef-villa-packages-banquet-lawn-bali-landscape.webp",
+      "alt_text": "Long banquet table with floral runners on a Bali villa lawn at dusk",
+      "title": null,
+      "caption": null,
+      "target_page": "/villa-event-packages",
+      "target_section": "hero",
+      "target_keyword": "Bali villa event packages"
+    },
+    {
+      "image_id": "img-047",
+      "filename": "mychef-villa-packages-chef-dinner-table-bali-landscape.webp",
+      "alt_text": "Candlelit private chef dinner table inside a Bali villa",
+      "title": null,
+      "caption": null,
+      "target_page": "/villa-event-packages",
+      "target_section": "intro",
+      "target_keyword": "Bali villa event packages"
+    },
+    {
+      "image_id": "img-048",
+      "filename": "mychef-villa-packages-packages-bartender-bali-landscape.webp",
+      "alt_text": "Mixologist preparing craft cocktails at a Bali villa bar",
+      "title": null,
+      "caption": null,
+      "target_page": "/villa-event-packages",
+      "target_section": "content section",
+      "target_keyword": "Bali villa event packages"
+    },
+    {
+      "image_id": "img-049",
+      "filename": "mychef-villa-packages-staff-setting-table-bali-landscape.webp",
+      "alt_text": "Service team setting a long dinner table at a Bali villa event",
+      "title": null,
+      "caption": null,
+      "target_page": "/villa-event-packages",
+      "target_section": "intro",
+      "target_keyword": "Bali villa event packages"
+    },
+    {
+      "image_id": "img-053",
+      "filename": "mychef-vip-transport-jimbaran-sunset-bali-landscape.webp",
+      "alt_text": "Luxury vehicle at a Jimbaran Bay sunset viewpoint in Bali",
+      "title": null,
+      "caption": null,
+      "target_page": "/vip-transport-bali",
+      "target_section": "car fleet",
+      "target_keyword": "VIP transport Bali"
+    },
+    {
+      "image_id": "img-054",
+      "filename": "mychef-vip-transport-minibus-driver-bali-landscape.webp",
+      "alt_text": "Uniformed driver beside a white air-conditioned minibus at a Bali villa",
+      "title": null,
+      "caption": null,
+      "target_page": "/vip-transport-bali",
+      "target_section": "group transport",
+      "target_keyword": "VIP transport Bali"
+    },
+    {
+      "image_id": "img-055",
+      "filename": "mychef-vip-transport-yacht-deck-bali-landscape.webp",
+      "alt_text": "Champagne and canapés on a charter yacht deck off the Bali coast",
+      "title": null,
+      "caption": null,
+      "target_page": "/vip-transport-bali",
+      "target_section": "yachts",
+      "target_keyword": "VIP transport Bali"
+    }
+  ]
+}

@@ -2,15 +2,13 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import {
-  MessageCircle, Calendar, Monitor,
-  Bus, Building2, Globe, FileText, Shield,
+  MessageCircle, Calendar,
   Users,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
-import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
@@ -22,7 +20,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = buildWhatsAppUrl({ serviceName: 'a corporate event in Bali', intent: 'help with catering, staff, and setup' })
+const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20corporate%20event%20proposal.%20Format%3A%20%20Date%3A%20%20Guests%3A%20%20Venue%20type%3A%20'
 const SITE = 'https://mychef.id'
 const ACCENT = '#2C5F7C'
 
@@ -31,107 +29,41 @@ const FORMATS = [
     title: 'Corporate Day Event',
     price: <AllInPrice price={1200000} />,
     guestRange: '20–100 guests',
-    description: 'Breakfast + 2 coffee breaks + lunch + afternoon snack. AV, coordinator, dietary management included.',
-    features: ['Full-day food', 'AV setup (projector, screen, sound)', 'Day coordinator', 'Dietary management', 'Name badges + signage', 'Tax invoice'],
+    description: 'Breakfast, two coffee breaks, lunch and afternoon snack — plus AV setup (projector, screen, sound), a day coordinator, dietary management, name badges, signage and tax invoice. Conferences, training days and one-day offsites, end to end.',
+    features: ['Breakfast + 2 coffee breaks + lunch + snack', 'AV setup (projector, screen, sound)', 'Day coordinator', 'Dietary management', 'Name badges + signage', 'Tax invoice'],
   },
   {
-    title: 'Multi-Day Retreat',
+    title: 'Multi-Day Retreat Production',
     price: <AllInPrice price={2500000} suffix="/person/day" />,
     guestRange: '10–50 guests',
-    description: '3 meals + 2 snacks daily. Retreat coordinator, team-building activities, dietary management.',
-    features: ['3 meals + 2 snacks/day', 'Retreat coordinator', 'Dietary management', 'Team-building activities', 'Daily fresh sourcing', 'Tax invoice'],
+    description: 'Three meals and two snacks daily with a retreat coordinator, team-building activity support and full dietary management across the programme. (For catering-only multi-day pricing, see corporate retreat catering.)',
+    features: ['3 meals + 2 snacks/day', 'Retreat coordinator', 'Team-building activity support', 'Full dietary management', 'Daily fresh sourcing', 'Tax invoice'],
     highlighted: true,
   },
   {
     title: 'Product Launch / Brand Activation',
-    price: 'Quote on request',
+    price: 'Custom quoted',
     guestRange: '50–300 guests',
-    description: 'Catering + AV + lighting + decor + brand staging + full coordination. Partner venues available.',
+    description: 'Catering plus AV, lighting, decor, brand staging and full coordination, with live-streaming, photography and a partner venue network available. NDA-friendly for embargoed launches.',
     features: ['Catering + AV + lighting', 'Brand staging + decor', 'Event coordinator', 'Live-streaming option', 'Photography + video', 'Partner venue network'],
   },
 ]
 
 const CAPACITY_OVERVIEW = [
   { type: 'Day Events', range: '20 – 100 guests', desc: 'Conferences, offsites, training days. Full AV + coordination.' },
-  { type: 'Multi-Day Retreats', range: '10 – 50 guests', desc: 'Wellness, team-building, executive retreats. On-site chef daily.' },
+  { type: 'Multi-Day Retreats', range: '10 – 50 guests', desc: 'Wellness, team-building, executive retreats. On-site coordinator daily.' },
   { type: 'Product Launches', range: '50 – 300 guests', desc: 'Brand activations, gala dinners, press events. Full production.' },
 ]
 
-const B2B_TRUST = [
-  { icon: FileText, title: 'Tax Invoice', desc: 'NPWP-registered. Faktur pajak issued on request.' },
-  { icon: Shield, title: 'Liability Insurance', desc: 'Public + product liability coverage. Certificate on request.' },
-  { icon: Globe, title: 'Bilingual Team', desc: 'English + Bahasa. Mandarin available on request.' },
-  { icon: Building2, title: 'Net-30 Terms', desc: 'Available with credit check for repeat corporate buyers.' },
-]
-
-const B2B_EXTENDED = [
-  { icon: FileText, title: 'Invoicing & NPWP', desc: 'Full tax invoices with NPWP. Faktur pajak on request. Standard 11% PPN.' },
-  { icon: Shield, title: 'Contracts & Insurance', desc: 'Standard event contract included. Public liability + product liability certificates provided.' },
-  { icon: Users, title: 'Security & Privacy', desc: 'NDA-friendly for product launches. Secure guest list handling. VIP protocols available.' },
-]
-
-const SAMPLE_AGENDA_DAY = [
-  { time: '08:00', activity: 'Breakfast + Registration' },
-  { time: '09:00', activity: 'Opening Session' },
-  { time: '10:30', activity: 'Coffee Break' },
-  { time: '12:00', activity: 'Lunch' },
-  { time: '14:00', activity: 'Workshops' },
-  { time: '15:30', activity: 'Afternoon Snack' },
-  { time: '17:00', activity: 'Closing + Networking' },
-]
-
-const SAMPLE_AGENDA_RETREAT = [
-  { day: 'Day 1', activity: 'Arrival lunch · Welcome dinner · Ice-breaker' },
-  { day: 'Day 2', activity: 'Breakfast · Morning session · Lunch · Team-building · Sunset dinner' },
-  { day: 'Day 3', activity: 'Breakfast · Closing session · Farewell lunch · Departure' },
-]
-
-const PROPOSAL_INCLUDED = [
-  'Line-item food and service budget',
-  'Staffing ratios by event moment',
-  'Venue, kitchen, and AV assumptions',
-  'Dietary handling plan and labels',
-  'Deposit, invoice, and payment schedule',
-  'Named coordinator and response path',
-]
-
-const APPROVAL_CHECKS = [
-  {
-    title: 'Budget structure',
-    desc: 'The first proposal separates food, staffing, rentals, and optional production so finance teams can compare like-for-like without guessing what is bundled.',
-  },
-  {
-    title: 'Venue fit',
-    desc: 'We call out whether the plan assumes a villa, resort function room, private venue, or temporary build so ops teams can flag access issues early.',
-  },
-  {
-    title: 'Dietary handling',
-    desc: 'The proposal states how guest dietary data is collected, labelled, and briefed to service so legal, HR, and event leads are not left inferring the process.',
-  },
-  {
-    title: 'Contingency notes',
-    desc: 'We outline the operational assumptions that matter most: weather backup, agenda drift, late arrivals, supplier timing, and what changes the cost.',
-  },
-]
-
-const ADDONS = [
-  { icon: Monitor, title: 'LED Wall + Pro Sound', price: '+IDR 25M – 60M' },
-  { icon: Globe, title: 'Simultaneous Translation', price: '+IDR 8M (2 languages)' },
-  { icon: Bus, title: 'Guest Transport', price: '+IDR 3M – 8M (50 guests)' },
-  { icon: Building2, title: 'Team-Building Activity', price: '+IDR 1.5M/pp' },
-]
-
 const FAQS = [
-  { q: 'Can you issue a tax invoice (faktur pajak)?', a: 'Yes — we are NPWP-registered. Tax invoice issued upon 50% deposit. Standard rate 11% PPN.' },
-  { q: 'What are your B2B payment terms?', a: '30% deposit at booking. 50% before event. 20% at delivery. Net-30 invoicing available with credit check for repeat corporate buyers.' },
-  { q: 'Do you have liability insurance?', a: 'Yes — public liability + product liability covered. Insurance certificate provided on request.' },
-  { q: 'Can you handle Bahasa + English speakers?', a: 'Yes — all coordinators bilingual. Mandarin available on request.' },
-  { q: 'How do you manage dietary restrictions for large groups?', a: 'Pre-event dietary form sent 14 days before. We label every dish at the buffet / plate. Halal / vegan / GF / nut allergy / shellfish allergy all handled.' },
-  { q: 'What does the first proposal include?', a: 'The first proposal covers menu structure, staffing assumptions, timing, venue/kitchen assumptions, invoice terms, and any optional rentals or AV line items so internal approval does not depend on a second explanation call.' },
-  { q: 'Can you work inside resorts or function rooms, or only villas?', a: 'Yes — we can scope for villas, resorts, private venues, and temporary event builds. The important part is access, kitchen setup, service route, and venue rules, which is why we ask for venue type in the first brief.' },
-  { q: 'Can you organize the whole offsite?', a: 'Yes — through our villa management + activity partners. We become your single coordinator.' },
-  { q: 'Lead time for corporate events?', a: 'Day events: 2 weeks. Multi-day retreats: 4–6 weeks. Product launches with custom build: 6–12 weeks.' },
-  { q: 'Can you handle global executives?', a: 'Yes — VIP handling is standard. Private dietary preferences, security coordination, and personalised meal service all available.' },
+  { q: 'What does corporate event catering in Bali cost?', a: 'Day events run IDR 1,200,000++ per person including food, AV and coordination; multi-day retreat production runs IDR 2,500,000++ per person per day. Launches are custom quoted. All prices are subject to 11% government tax + 10% service charge.' },
+  { q: 'What are your B2B payment terms?', a: '30% deposit at booking, 50% before the event and 20% on delivery. Net-30 invoicing is available with a credit check for repeat corporate buyers.' },
+  { q: 'Can you issue a tax invoice (faktur pajak)?', a: 'Yes — we are NPWP-registered and issue faktur pajak on request at the standard 11% PPN.' },
+  { q: 'Do you carry liability insurance?', a: 'Yes — public and product liability, with certificates provided on request.' },
+  { q: 'How do you manage dietary restrictions for large groups?', a: 'A pre-event dietary form goes out 14 days before. Every dish is labelled, and halal, vegan, gluten-free, nut and shellfish allergies are briefed to the service team against the real guest list.' },
+  { q: 'Can you work in villas, resorts and temporary builds?', a: 'Yes — villas, resort function rooms, private venues and temporary structures. The proposal states venue, kitchen, power and access assumptions explicitly so your ops team can flag issues early.' },
+  { q: 'What lead times do you need?', a: 'Day events: two weeks. Multi-day retreats: four to six weeks. Product launches with custom builds: six to twelve weeks.' },
+  { q: 'Can you handle confidential launches and VIPs?', a: 'Yes — NDA-friendly processes, secure guest-list handling, and VIP protocols including personalised meal service and security coordination.' },
 ]
 
 export default function EventsCorporatePage() {
@@ -154,32 +86,40 @@ export default function EventsCorporatePage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Corporate Events Bali | Offsites, Dinners & Launches — myCHEF"
-        description="Corporate event catering in Bali for offsites, conferences & client dinners. Structured menus, staffing & on-site coordination. WhatsApp for a proposal."
+        title="Corporate Event Catering Bali | Full-Service Production"
+        description="Corporate event catering in Bali: offsites, launches, boardroom dinners with full production, NPWP-ready invoicing & executive service. WhatsApp myCHEF."
         canonical={`${SITE}/events/corporate-events`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-corporate.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Corporate Events Bali',
-            description: 'myCHEF.id delivers corporate event catering in Bali for conferences, offsites, launches, and executive dinners. We coordinate food, staffing, setup, and service so your event runs smoothly from arrival to final cleanup.',
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'Corporate Event Catering & Production Bali',
+            provider: {
+              '@type': 'Organization',
+              name: 'myCHEF.id',
+              url: 'https://mychef.id',
+              telephone: '+62 896-7407-2020',
+              email: 'bali@mychef.id',
+            },
+            areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+            description: 'Full-production corporate events in Bali: offsites, conferences, product launches and gala dinners with catering, AV, staging, coordination, NPWP invoicing and liability insurance.',
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'IDR',
+              price: '1200000',
+              priceSpecification: {
+                '@type': 'UnitPriceSpecification',
+                price: '1200000',
+                priceCurrency: 'IDR',
+                unitText: 'per guest, before 11% government tax + 10% service charge',
+              },
+              description: 'Corporate day events from IDR 1,200,000++/guest; multi-day retreat production IDR 2,500,000++/person/day; launches custom quoted',
+            },
             url: `${SITE}/events/corporate-events`,
-            lowPrice: '1200000',
-            highPrice: '2500000',
-            unitText: 'per person per day',
-          }),
+          },
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Book Corporate Event Catering in Bali',
-            description: 'Book professional corporate event catering for your Bali team or clients in 4 easy steps.',
-            totalTime: 'PT20M',
-            steps: [
-              { name: 'Share your event brief', text: 'Send your event type, dates, venue, headcount, and budget via WhatsApp.' },
-              { name: 'Receive custom proposal', text: 'We create a tailored menu with dietary options, service style, and staffing plan within 1 hour.' },
-              { name: 'Confirm and contract', text: 'Approve the proposal, sign the agreement, and pay the 50% deposit to lock your date.' },
-              { name: 'Focus on your event', text: 'We handle setup, service, and breakdown. You focus on your team and guests.' },
-            ],
-          }),
-          breadcrumbSchema('Corporate Events Bali', `${SITE}/events/corporate-events`, 'Events', `${SITE}/events`),
+          breadcrumbSchema('Corporate Events', `${SITE}/events/corporate-events`, 'Events', `${SITE}/events`),
         ]}
       />
 
@@ -197,24 +137,24 @@ export default function EventsCorporatePage() {
         <div className="relative z-10 px-6 md:px-8 py-12 md:py-20 max-w-2xl mx-auto md:mx-0 md:ml-auto md:mr-auto md:flex md:flex-col md:justify-center h-full w-full">
           <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Corporate Events' }]} theme="dark" className="mb-8" />
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Chapter 1 — Corporate Events
+            Full-Service Corporate Event Production
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Corporate Events in Bali — Catering & Venue Support
+            Corporate Event Catering in Bali — Full Production, One Team
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
-            Full F&amp;B operation for offsites, conferences, launches, and gala nights — menus, coffee breaks, staffing, AV coordination, and cleanup managed under one proposal.
+            Corporate events in Bali, fully produced: menus, coffee breaks, service staff, AV coordination, staging and cleanup managed under one proposal and one invoice. For offsites, conferences, product launches and gala nights from 10 to 300 guests.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Calendar className="w-4 h-4" /> Request Corporate Quote
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-corporate-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <MessageCircle className="w-4 h-4" /> Request Corporate Event Proposal
             </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
+            <a href="/corporate-case-studies" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <Calendar className="w-4 h-4" /> See Case Studies
             </a>
           </div>
           <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left">
-            From IDR 1.2M++/guest · NPWP invoicing and venue coordination available
+            From IDR 1,200,000++/guest · NPWP-registered invoicing · Liability insured · Villas, resorts, function rooms & temporary builds
           </p>
         </div>
       </section>
@@ -226,16 +166,16 @@ export default function EventsCorporatePage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Corporate Catering, Operationally Built
+                One team for food, floor and production
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                myCHEF handles the food operation and the venue reality at the same time
+                One team for food, floor and production
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Corporate hosts usually need one supplier who can think beyond a lunch menu. We cover breakfast service, coffee stations, plated or buffet lunches, networking drinks, dietary mapping, floor staff, and the practical realities of running hospitality inside a villa, private venue, or temporary conference setup. That matters because timing is not driven by diners — it is driven by agenda blocks, speakers, registration, workshops, and transport windows.
+                Corporate hosts usually need one supplier who thinks beyond the lunch menu. We cover breakfast service, coffee stations, plated or buffet lunches, networking drinks, dietary mapping, floor staff, AV, staging and the practical realities of running hospitality inside a villa, private venue or temporary conference setup. Timing is driven by agenda blocks, speakers, registration and transport windows — not by diners — and the whole operation is planned that way.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                We are particularly useful when the event needs to feel polished without becoming hotel-heavy. You get a service team that understands guest movement, a proposal that can sit next to procurement requirements, and menus that can flex between healthy conference food and more celebratory evening service. If you need a narrower food-only brief, our <a href="/catering/corporate-catering" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">corporate catering page</a> covers that too.
+                If your brief is narrower — food and service only, no production — our <Link to="/catering/corporate-catering" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">catering-only corporate service</Link> is the right page. For a multi-day program where every meal is covered across several days, see <Link to="/corporate-retreat-catering-bali" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">multi-day corporate retreat catering</Link>.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -247,10 +187,10 @@ export default function EventsCorporatePage() {
 
       <section className="py-20 md:py-28 bg-[#FAFAF8] corporate-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 2 — Formats" title="Event Formats" subtitle="Structured around real corporate use cases: one-day events, multi-day retreats, and higher-production launches." />
+          <SectionHeader eyebrow="Formats & pricing" title="Event formats & pricing" subtitle="Prices per guest, subject to 11% government tax + 10% service charge (++)." />
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
-            These packages give teams an operational starting point. Day events cover the full meeting rhythm from breakfast through networking. Retreats layer meals across several days with more dietary planning and kitchen logistics. Launches and gala-style events need a more custom quote because staging, guest flow, and venue production can change dramatically by brief. To see how these formats play out in practice, browse our{' '}
-            <Link to="/corporate-case-studies" className="text-[#2C5F7C] underline underline-offset-2 hover:text-[#C5A028] transition-colors">corporate case studies</Link>{' '}
+            Day events cover the full meeting rhythm from breakfast through networking. Retreats layer meals across several days with more dietary planning and kitchen logistics. Launches and gala-style events need a custom quote because staging, guest flow, and venue production can change dramatically by brief. To see how these formats play out in practice, browse our{' '}
+            <Link to="/corporate-case-studies" className="text-[#2C5F7C] underline underline-offset-2 hover:text-[#C5A028] transition-colors">corporate event case studies</Link>{' '}
             for real budgets, headcounts, and outcomes.
           </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
@@ -278,20 +218,17 @@ export default function EventsCorporatePage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Corporate Menu Standards
+                Production capability
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Menus designed for long working days, international guests, and labelled dietary confidence
+                AV, staging, coordination
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Corporate food needs to do more than taste good. It has to support attention span, avoid heavy mid-day crashes, and still feel generous enough that guests do not disappear off-site looking for a better meal. We usually recommend lighter breakfast spreads, well-paced coffee breaks, and lunches that feel substantial without killing the room for the next session. For evening events, we can shift into more celebratory buffets, plated service, or passed canapés depending on the brief.
-              </p>
-              <p className="text-[#4A4745] leading-relaxed">
-                Halal-friendly menus, vegetarian lines, vegan dishes, gluten-free plates, allergy protocols, and labelled buffet cards are standard rather than exceptional. We brief the entire kitchen against the dietary map and make sure service staff know what each guest can and cannot be served, which matters far more than putting labels on the table five minutes before lunch starts.
+                The difference between a catered event and a produced one is everything around the food. Our production scope includes projector, screen and sound for conferences; LED wall and pro sound for launches; stage, lighting and decor for gala formats; registration flows, name badges and signage; and a named coordinator running the floor so your agenda holds. Add-ons are quoted as line items — LED wall and pro sound from IDR 25M–60M, simultaneous translation from IDR 8M (two languages), guest transport from IDR 3M–8M for 50 guests, team-building activities from IDR 1.5M per person.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-events-bali-corporate-plated.webp" alt="Elegant plated corporate dinner service by myCHEF in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-corporate-plated.webp" alt="Corporate event production setup with AV and staging in Bali" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -301,67 +238,18 @@ export default function EventsCorporatePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/mychef-events-bali-hero-corporate.webp" alt="Professional corporate service team at a Bali villa event" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-events-bali-corporate-villa.webp" alt="Bali villa venue set up for a corporate day event" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Staffing & Service
+                Villa and venue logistics
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Professional staff, clear uniforms, and one service manager holding the floor
+                Villa and venue production logistics
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                Corporate guests notice service more than they comment on it. Coffee never running dry, registration snacks arriving on time, plates cleared before the next speaker, and the evening drinks setup appearing without chaos — that is the level we plan for. We assign a service manager to the floor, brief staff on the agenda, and coordinate with venue management or villa teams so the hospitality side stays in step with the wider programme.
+                We scope villas, resort function rooms, private venues and temporary event builds. The first proposal states the venue assumptions that matter: kitchen setup, power, service routes, weather plan B, access and loading, and house rules. A villa can absolutely host a 100-person conference — if the production plan respects the property. Need extra hands? Our <Link to="/in-villa-service" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">event staff, waiters and bartenders</Link> scale with the brief, and <Link to="/bar-services" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">bar programs for corporate events</Link> cover everything from coffee stations to cocktail receptions.
               </p>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {B2B_TRUST.map((item) => (
-                  <div key={item.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-4">
-                    <h3 className="text-sm font-semibold text-[#1A1A1A] mb-1">{item.title}</h3>
-                    <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-white corporate-reveal">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            <div>
-              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Full-Day Operations
-              </p>
-              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                We feed people all day without breaking the rhythm of the programme
-              </h2>
-              <p className="text-[#4A4745] leading-relaxed mb-6">
-                A strong corporate food plan is mostly about timing discipline. Breakfast must be ready before arrivals. Coffee breaks need to reset fast enough that nobody misses the next session. Lunch has to land with enough substance to satisfy guests, but without making the afternoon impossible. When the programme includes networking drinks, we reposition the service from work mode to hospitality mode without the event feeling like it is starting over.
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] overflow-hidden">
-                  <div className="px-5 py-4 border-b border-[#E8E6E3] text-sm font-semibold text-[#1A1A1A]">Single-Day Conference Flow</div>
-                  {SAMPLE_AGENDA_DAY.map((item) => (
-                    <div key={`${item.time}-${item.activity}`} className="flex items-center gap-4 px-5 py-4 border-t border-[#E8E6E3] first:border-t-0">
-                      <span className="text-sm font-semibold text-[#2C5F7C] w-16 shrink-0">{item.time}</span>
-                      <span className="text-sm text-[#4A4745]">{item.activity}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] overflow-hidden">
-                  <div className="px-5 py-4 border-b border-[#E8E6E3] text-sm font-semibold text-[#1A1A1A]">Multi-Day Retreat Rhythm</div>
-                  {SAMPLE_AGENDA_RETREAT.map((item) => (
-                    <div key={`${item.day}-${item.activity}`} className="flex items-start gap-4 px-5 py-4 border-t border-[#E8E6E3] first:border-t-0">
-                      <span className="text-sm font-semibold text-[#2C5F7C] w-16 shrink-0">{item.day}</span>
-                      <span className="text-sm text-[#4A4745] leading-relaxed">{item.activity}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/mychef-events-bali-corporate-networking.webp" alt="Corporate networking drinks reception at a Bali villa" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -371,22 +259,32 @@ export default function EventsCorporatePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
-              <SectionHeader eyebrow="Chapter 3 — Built for Business" title="Procurement-friendly from proposal to invoice" subtitle="We understand the practical requirements around sign-off, compliance, and executive expectations." dark />
-              <div className="grid sm:grid-cols-3 gap-4 mt-8">
-                {B2B_EXTENDED.map((item) => (
-                  <div key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
-                    <item.icon className="w-6 h-6 text-[#2C5F7C] mx-auto mb-3" />
-                    <h3 className="text-sm font-semibold text-white mb-2">{item.title}</h3>
-                    <p className="text-sm text-white/[70%] leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 flex flex-wrap gap-3">
-                {PROPOSAL_INCLUDED.map((item) => (
-                  <span key={item} className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-white/[80%]">
-                    {item}
-                  </span>
-                ))}
+              <SectionHeader eyebrow="Procurement & invoicing" title="Procurement, invoicing and insurance" subtitle="B2B-ready documentation, liability cover and payment terms your finance team can approve." dark />
+              <div className="grid sm:grid-cols-2 gap-4 mt-8">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <h3 className="text-sm font-semibold text-white mb-2">NPWP-registered</h3>
+                  <p className="text-sm text-white/[70%] leading-relaxed">Full tax invoices; faktur pajak issued on request (standard 11% PPN).</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <h3 className="text-sm font-semibold text-white mb-2">Itemised proposals</h3>
+                  <p className="text-sm text-white/[70%] leading-relaxed">Food, staffing, rentals and production separated so finance teams can compare like-for-like.</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <h3 className="text-sm font-semibold text-white mb-2">Liability insurance</h3>
+                  <p className="text-sm text-white/[70%] leading-relaxed">Public and product liability, certificate on request.</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <h3 className="text-sm font-semibold text-white mb-2">B2B payment schedule</h3>
+                  <p className="text-sm text-white/[70%] leading-relaxed">30% deposit at booking, 50% before the event, 20% on delivery; net-30 invoicing available with credit check for repeat corporate buyers.</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <h3 className="text-sm font-semibold text-white mb-2">Bilingual team</h3>
+                  <p className="text-sm text-white/[70%] leading-relaxed">English and Bahasa Indonesia; Mandarin available on request.</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <h3 className="text-sm font-semibold text-white mb-2">NDA-friendly</h3>
+                  <p className="text-sm text-white/[70%] leading-relaxed">Secure guest-list handling and VIP protocols for launches and executive visits.</p>
+                </div>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -398,9 +296,9 @@ export default function EventsCorporatePage() {
 
       <section className="py-20 md:py-28 bg-white corporate-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 4 — Real Corporate Events" title="Recent Corporate Setups" subtitle="From gala-format evenings to working sessions and networking receptions." />
+          <SectionHeader eyebrow="Track record" title="Corporate events we've produced" subtitle="180+ corporate events delivered, 98% client satisfaction." />
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
-            The gallery below reflects the breadth of work corporate teams typically ask us to cover in Bali: formal dinners, team lunches, day sessions, and standing receptions. The common thread is that every format needs a food plan, a staffing plan, and a realistic understanding of the venue footprint before the first guest arrives.
+            Recent work includes a 34-person three-day leadership offsite in Uluwatu with zero dietary incidents across nine services; a five-course partner dinner for a European venture fund that landed on budget to the rupiah; a 52-guest, five-day agency retreat with fifteen distinct menus; and a 120-delegate conference dinner served inside a 45-minute window. Full parameters in our <Link to="/corporate-case-studies" className="text-[#2C5F7C] underline underline-offset-2 hover:text-[#C5A028] transition-colors">corporate event case studies</Link>.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -422,56 +320,6 @@ export default function EventsCorporatePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-[#FAFAF8] corporate-reveal">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            <div>
-              <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Add-Ons
-              </p>
-              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Scale the production once the hospitality core is locked
-              </h2>
-              <p className="text-[#4A4745] leading-relaxed mb-6">
-                Corporate events get expensive fastest when production is added before the service flow is solved. We prefer to lock food timing, staffing, and venue logistics first, then add LED walls, translation, transport, or activities according to what the programme genuinely needs. That keeps budgets defendable and reduces expensive last-minute changes once stakeholders start asking for extras.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {ADDONS.map((addon) => (
-                  <div key={addon.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-5 flex items-start gap-4">
-                    <div className="rounded-xl bg-[#2C5F7C]/10 p-2.5 shrink-0"><addon.icon className="w-5 h-5 text-[#2C5F7C]" /></div>
-                    <div>
-                      <h3 className="text-sm font-semibold text-[#1A1A1A]">{addon.title}</h3>
-                      <p className="text-sm font-semibold text-[#2C5F7C]">{addon.price}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3] sticky top-24">
-              <img src="/generated/mychef-events-bali-corporate-villa.webp" alt="Bali villa venue set up for a corporate day event" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-[#FAFAF8] corporate-reveal">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader
-            eyebrow="Chapter 5 — Approval"
-            title="What decision-makers need before they approve the deposit"
-            subtitle="Instead of generic social proof, this page should help internal teams see exactly how the brief gets translated into an approvable event plan."
-          />
-          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-10">
-            {APPROVAL_CHECKS.map((item) => (
-              <div key={item.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-6">
-                <h3 className="text-lg mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-                <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-10 bg-[#0a0a0a]">
         <div className="max-w-3xl mx-auto px-6">
           <EmailCaptureBar />
@@ -480,7 +328,7 @@ export default function EventsCorporatePage() {
 
       <section className="py-20 md:py-28 bg-white corporate-reveal">
         <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader eyebrow="Questions" title="Corporate FAQ" subtitle="B2B-focused answers for procurement and event teams." />
+          <SectionHeader eyebrow="Questions" title="Corporate events FAQ" subtitle="B2B-focused answers for procurement and event teams." />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
@@ -512,9 +360,9 @@ export default function EventsCorporatePage() {
       <section className="py-20 md:py-28 bg-[#FAFAF8] corporate-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
-            title="Request Corporate Quote"
-            subtitle="Share your dates, headcount, and event objectives. We will reply with a format recommendation and detailed proposal."
-            packageOptions={['Corporate Day Event', 'Multi-Day Retreat', 'Product Launch / Brand Activation']}
+            title="Request a corporate event proposal"
+            subtitle="Share your format, dates, headcount, venue type and objectives. We reply on WhatsApp within the hour and deliver a detailed, itemised proposal your approvers can sign off."
+            packageOptions={['Corporate Day Event', 'Multi-Day Retreat Production', 'Product Launch / Brand Activation']}
             fields={[
               { name: 'format', label: 'Event Format', type: 'select', required: true },
               { name: 'company', label: 'Company Name', type: 'text', required: true },

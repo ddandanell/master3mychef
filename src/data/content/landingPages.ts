@@ -40,8 +40,8 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "group-villa-dinner-packages-bali",
-    "title": "Group Villa Dinner Packages Bali | Easy Booking for 10-150 Guests",
-    "description": "All-inclusive villa dinner packages for large groups in Bali. Perfect for family reunions and social gatherings.",
+    "title": "Group Villa Dinner Packages Bali | 10–150 Guests | myCHEF",
+    "description": "All-inclusive villa dinner packages for groups of 10-150 in Bali — tiered per-person pricing for reunions & gatherings. WhatsApp myCHEF.",
     "date": "2026-05-17"
   },
   {

@@ -1,0 +1,216 @@
+[
+  {
+    "imageUrl": "https://mychef.id/generated/bartender-hire-bali-cocktail-party.webp",
+    "filename": "bartender-hire-bali-cocktail-party.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/experiences",
+        "section": "py-16 md:py-24 bg-[#FAFAF8] bg-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/private-cocktail-party",
+        "section": "relative flex items-center overflow-hidden"
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/sushi-making-class-bali-masterclass.webp",
+    "filename": "sushi-making-class-bali-masterclass.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/experiences",
+        "section": "py-16 md:py-24 bg-[#FAFAF8] bg-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/sushi-masterclass",
+        "section": "relative flex items-center overflow-hidden"
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/private-cooking-class-bali-villa.webp",
+    "filename": "private-cooking-class-bali-villa.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/experiences",
+        "section": "py-16 md:py-24 bg-[#FAFAF8] bg-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/private-cooking-class",
+        "section": "relative flex items-center overflow-hidden"
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/kids-birthday-party-bali-chef.webp",
+    "filename": "kids-birthday-party-bali-chef.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/experiences",
+        "section": "py-16 md:py-24 bg-[#FAFAF8] bg-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/kids-birthday-chef-party",
+        "section": "relative flex items-center overflow-hidden"
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/oyster-bar-bali-champagne.webp",
+    "filename": "oyster-bar-bali-champagne.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/experiences",
+        "section": "py-16 md:py-24 bg-[#FAFAF8] bg-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/champagne-oyster-experience",
+        "section": "relative flex items-center overflow-hidden"
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/proposal-package-bali-dinner.webp",
+    "filename": "proposal-package-bali-dinner.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/experiences",
+        "section": "py-16 md:py-24 bg-[#FAFAF8] bg-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/romantic-proposal-dinner",
+        "section": "relative flex items-center overflow-hidden"
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/mychef-misc-bali-avatar-ai.webp",
+    "filename": "mychef-misc-bali-avatar-ai.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/experiences",
+        "section": "py-16 md:py-24 bg-[#0A0A0A] text-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/private-cocktail-party",
+        "section": "py-16 md:py-24 bg-[#0A0A0A] text-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/sushi-masterclass",
+        "section": "py-16 md:py-24 bg-[#0A0A0A] text-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/private-cooking-class",
+        "section": "py-16 md:py-24 bg-[#0A0A0A] text-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/kids-birthday-chef-party",
+        "section": "py-16 md:py-24 bg-[#0A0A0A] text-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/champagne-oyster-experience",
+        "section": "py-16 md:py-24 bg-[#0A0A0A] text-white"
+      },
+      {
+        "page": "https://mychef.id/experiences/romantic-proposal-dinner",
+        "section": "py-16 md:py-24 bg-[#0A0A0A] text-white"
+      },
+      {
+        "page": "https://mychef.id/complete-villa-experience",
+        "section": "py-20 md:py-28 bg-[#0A0A0A] cve-reveal"
+      },
+      {
+        "page": "https://mychef.id/villa-event-packages",
+        "section": "py-20 md:py-28 bg-[#0A0A0A] villa-reveal"
+      },
+      {
+        "page": "https://mychef.id/vip-transport-bali",
+        "section": "py-20 md:py-28 bg-[#0A0A0A] transport-reveal"
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/luna-ingredients.webp",
+    "filename": "luna-ingredients.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/experiences/sushi-masterclass",
+        "section": "py-16 md:py-24 bg-[#FAFAF8] "
+      },
+      {
+        "page": "https://mychef.id/experiences/private-cooking-class",
+        "section": "py-16 md:py-24 bg-[#FAFAF8] "
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/mychef-experience-bali-luna-table.webp",
+    "filename": "mychef-experience-bali-luna-table.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/experiences/sushi-masterclass",
+        "section": "py-16 md:py-24 bg-[#FAFAF8] "
+      },
+      {
+        "page": "https://mychef.id/experiences/private-cooking-class",
+        "section": "py-16 md:py-24 bg-[#FAFAF8] "
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/hub-villa.webp",
+    "filename": "hub-villa.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/complete-villa-experience",
+        "section": "py-20 md:py-28 bg-white cve-content cve-reveal"
+      },
+      {
+        "page": "https://mychef.id/villa-event-packages",
+        "section": "py-20 md:py-28 bg-white villa-content villa-reveal"
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/mychef-vip-transport-bali-hero.webp",
+    "filename": "mychef-vip-transport-bali-hero.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/complete-villa-experience",
+        "section": "py-20 md:py-28 bg-white cve-reveal"
+      },
+      {
+        "page": "https://mychef.id/vip-transport-bali",
+        "section": "relative min-h-[90vh] flex items-center overflow-hidden"
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/bali-hub-hero.webp",
+    "filename": "bali-hub-hero.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/complete-villa-experience",
+        "section": "py-20 md:py-28 bg-white cve-reveal"
+      },
+      {
+        "page": "https://mychef.id/villa-event-packages",
+        "section": "py-20 md:py-28 bg-white villa-reveal"
+      }
+    ]
+  },
+  {
+    "imageUrl": "https://mychef.id/generated/mychef-experience-bali-aura-tablescape.webp",
+    "filename": "mychef-experience-bali-aura-tablescape.webp",
+    "occurrences": [
+      {
+        "page": "https://mychef.id/complete-villa-experience",
+        "section": "py-20 md:py-28 bg-[#FAFAF8] cve-reveal"
+      },
+      {
+        "page": "https://mychef.id/villa-event-packages",
+        "section": "py-20 md:py-28 bg-[#FAFAF8] villa-reveal"
+      }
+    ]
+  }
+]

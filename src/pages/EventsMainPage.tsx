@@ -5,7 +5,7 @@ import {
   Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music,
   Globe2, ClipboardCheck, ArrowRight, Check,
 } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -50,20 +50,28 @@ const EVENT_TYPES: EventType[] = [
     slug: 'weddings',
     eyebrow: 'Your Villa Wedding',
     title: 'Villa Weddings',
-    fromPrice: <CardPrice price={600000} />,
-    description:
-      'Ceremony to reception, entirely in your villa. We handle vendors, timeline, styling, food, staff. You walk down the aisle.',
+    fromPrice: <CardPrice price={700000} />,
+    description: 'Villa ceremonies & receptions, 10–250 guests.',
     icon: Heart,
     image: '/generated/aura-wedding.webp',
     href: '/events/weddings',
+  },
+  {
+    slug: 'wedding-packages',
+    eyebrow: 'Compare Packages',
+    title: 'Wedding Packages & Prices',
+    fromPrice: <span className="text-[#C5A028] font-semibold">From IDR 1.5M–3M+</span>,
+    description: 'Comparing reception budgets.',
+    icon: Sparkles,
+    image: '/generated/aura-wedding.webp',
+    href: '/bali-wedding-catering-packages',
   },
   {
     slug: 'birthdays',
     eyebrow: 'The Celebration',
     title: 'Birthday Parties',
     fromPrice: <CardPrice price={850000} />,
-    description:
-      'Cake, setup, themed decor, and a full team. Your guests arrive, you celebrate. We handle everything else.',
+    description: 'Milestone dinners & villa parties.',
     icon: Cake,
     image: '/generated/party-birthday.webp',
     href: '/events/birthdays',
@@ -73,8 +81,7 @@ const EVENT_TYPES: EventType[] = [
     eyebrow: 'Your Story, Celebrated',
     title: 'Anniversary Dinners',
     fromPrice: <CardPrice price={1200000} />,
-    description:
-      'Private candlelit dinner built around your history. Wine pairing available. Service polished. The opposite of generic.',
+    description: 'Couples, vow renewals.',
     icon: Wine,
     image: '/generated/aura-toast.webp',
     href: '/events/anniversaries',
@@ -84,8 +91,7 @@ const EVENT_TYPES: EventType[] = [
     eyebrow: 'Executive Hospitality',
     title: 'Corporate Events',
     fromPrice: <CardPrice price={1200000} />,
-    description:
-      'Offsites, dinners, retreats, launches. Full hospitality production. Invoice-ready. NPWP-issued. Lower-stress for hosts.',
+    description: 'Offsites, launches, exec dinners.',
     icon: Briefcase,
     image: '/generated/mychef-events-bali-corp-executive.webp',
     href: '/events/corporate-events',
@@ -95,33 +101,30 @@ const EVENT_TYPES: EventType[] = [
     eyebrow: 'Multi-Day Hospitality',
     title: 'Wellness & Yoga Retreats',
     fromPrice: <CardPrice price={1500000} suffix="/pp/day" />,
-    description:
-      'Plant-forward, gluten-free, raw, vegan—dietary planning handled at scale. Three meals daily. On schedule.',
+    description: 'Multi-day, dietary-led programmes.',
     icon: Leaf,
     image: '/generated/party-medi.webp',
     href: '/events/retreats',
-  },
-  {
-    slug: 'baby-showers',
-    eyebrow: 'The Celebration',
-    title: 'Baby Showers',
-    fromPrice: <CardPrice price={750000} />,
-    description:
-      'Brunch, high tea, themed decor, mocktail bar. Styled to photograph beautifully. You just show up.',
-    icon: Baby,
-    image: '/generated/party-white.webp',
-    href: '/events/baby-showers',
   },
   {
     slug: 'villa-parties',
     eyebrow: 'The Celebration',
     title: 'Villa Parties',
     fromPrice: <CardPrice price={650000} />,
-    description:
-      'Cocktail receptions, sundowner BBQs, hens & bucks weekends. Bar staff, music, decor. We run it. You host it.',
+    description: 'Sundowners, hens, cocktail nights.',
     icon: Music,
     image: '/generated/party-ultimate.webp',
     href: '/events/villa-parties',
+  },
+  {
+    slug: 'baby-showers',
+    eyebrow: 'The Celebration',
+    title: 'Baby Showers',
+    fromPrice: <CardPrice price={750000} />,
+    description: 'Brunches, high teas, reveals.',
+    icon: Baby,
+    image: '/generated/party-white.webp',
+    href: '/events/baby-showers',
   },
 ]
 
@@ -135,20 +138,20 @@ interface HowStep {
 const HOW_WE_RUN: HowStep[] = [
   {
     step: '01',
-    title: 'Message Us',
-    body: 'Date, guest count, villa, event type. Sofia typically replies within a few hours with availability and pricing.',
+    title: 'Message us',
+    body: 'Date, guest count, villa, event type. Sofia typically replies the same day with availability and an indicative price.',
     icon: MessageCircle,
   },
   {
     step: '02',
-    title: 'Proposal',
-    body: 'One document covers food, drinks, staff, styling, timing, all-in cost. You review. We adjust until you sign off.',
+    title: 'Approve one proposal',
+    body: 'One document covers food, drinks, staff, styling, timing and the all-in cost. We adjust it until you sign off.',
     icon: ClipboardCheck,
   },
   {
     step: '03',
-    title: 'Event Day',
-    body: 'Our team arrives early, builds setup, runs service, clears down. You host. We execute.',
+    title: 'Host',
+    body: 'The team arrives hours early, builds the setup, runs service, and clears down. A 50% deposit confirms your date; the balance is due before the event.',
     icon: Calendar,
   },
 ]
@@ -162,18 +165,18 @@ interface WhyItem {
 const WHY: WhyItem[] = [
   {
     icon: Users,
-    title: 'One team, one bill, one contact',
-    body: 'Food, drinks, staff, styling, coordination — handled in-house. No supplier merry-go-round. One WhatsApp thread, one proposal, one invoice.',
+    title: 'Production, not just catering',
+    body: 'One brigade owns the night — chefs in the kitchen, waiters on the floor, bartenders on the bar, a coordinator on the timeline. Hot food on time, full glasses, and a host who never looks at a watch.',
   },
   {
     icon: Globe2,
-    title: 'Built for villa hospitality',
-    body: 'Most Bali events happen in private villas, not hotel ballrooms. Our entire operation is mobile — generator, prep stations, glassware, cold chain, the lot.',
+    title: 'Price honesty in a "contact us" market',
+    body: 'Most Bali caterers hide pricing behind enquiry forms. We publish from-prices and show the all-in number in every proposal — groceries at cost, no markups, no surprise add-ons.',
   },
   {
     icon: Sparkles,
-    title: 'International-standard execution',
-    body: 'Plated service, dietary mapping at scale, multi-course timing, allergy-line discipline. The fine-dining playbook applied to your living room.',
+    title: 'Built for villas, not ballrooms',
+    body: 'Most Bali events happen in private villas. Our entire operation — generator, prep stations, cold chain, glassware, linen — travels to you. No hotel curfews, no generic banquet menus.',
   },
 ]
 
@@ -185,27 +188,27 @@ const WHY_COMPETITIVE = [
 
 const RELATED_SERVICES = [
   {
-    title: 'Fine Dining in Your Villa',
-    desc: 'Michelin-trained chefs for private tasting evenings.',
-    href: '/fine-dining',
+    title: 'Villa Catering Services',
+    desc: 'Buffet, plated, BBQ and grazing-table catering for Bali villas and events.',
+    href: '/catering',
   },
   {
-    title: 'Daily Villa Chef',
-    desc: 'Breakfast, lunch, and dinner for longer stays.',
-    href: '/villa-chef',
+    title: 'In-Villa Service Teams',
+    desc: 'Waiters, bartenders, butlers and event staff for hire.',
+    href: '/in-villa-service',
   },
   {
-    title: 'Villa Hospitality Services',
-    desc: 'Butlers, bartenders, and service teams beyond the kitchen.',
-    href: '/services',
+    title: 'Wedding Catering Packages',
+    desc: 'Compare reception budgets and package options for Bali villa weddings.',
+    href: '/bali-wedding-catering-packages',
   },
 ]
 
 const PRICING_TRANSPARENCY = [
   { label: 'Per-person base', desc: 'Covers chef, ingredients, service staff, and basic setup. Varies by event type and menu.' },
   { label: 'Add-ons', desc: 'Photography, custom cake, live music, premium bar, extended decor — all itemised in the proposal.' },
-  { label: 'Tax & service', desc: '10% government service charge + 11% VAT added at proposal. No surprise add-ons.' },
-  { label: 'Deposit', desc: '50% to confirm the date. Balance due the week of the event. Net-30 for repeat corporate clients.' },
+  { label: 'Tax & service', desc: '11% government tax + 10% service charge added at proposal. No surprise add-ons.' },
+  { label: 'Deposit', desc: '50% to confirm the date. Balance due before the event. Net-30 for repeat corporate clients.' },
 ]
 
 interface PricingRow {
@@ -216,14 +219,14 @@ interface PricingRow {
 }
 
 const PRICING_TABLE: PricingRow[] = [
-  { type: 'Villa Weddings (Intimate)', from: <AllInPrice price={600000} />, minGuests: '10+', goodFor: 'Elopements, micro-weddings' },
-  { type: 'Villa Weddings (Luxury)', from: <AllInPrice price={1500000} />, minGuests: '40+', goodFor: 'Full receptions, multi-day' },
-  { type: 'Birthday Parties', from: <AllInPrice price={850000} />, minGuests: '15+', goodFor: 'Milestone dinners, villa parties' },
-  { type: 'Anniversary Dinners', from: <AllInPrice price={1200000} />, minGuests: '2+', goodFor: 'Couples, vow renewals' },
-  { type: 'Corporate Events', from: <AllInPrice price={1200000} />, minGuests: '10+', goodFor: 'Conferences, exec dinners' },
-  { type: 'Wellness Retreats', from: <AllInPrice price={1500000} suffix="/person/day" />, minGuests: '8+', goodFor: 'Yoga, wellness, dietary-led' },
-  { type: 'Baby Showers', from: <AllInPrice price={750000} />, minGuests: '10+', goodFor: 'Brunch, high tea, gender reveal' },
-  { type: 'Villa Parties', from: <AllInPrice price={650000} />, minGuests: '20+', goodFor: 'Sundowners, hens, cocktail' },
+  { type: 'Weddings', from: <AllInPrice price={700000} />, minGuests: '10+', goodFor: 'Villa ceremonies & receptions, 10–250 guests' },
+  { type: 'Wedding packages & prices', from: <span className="text-[#1A1A1A] font-semibold">IDR 1.5M–3M+</span>, minGuests: '40+', goodFor: 'Comparing reception budgets' },
+  { type: 'Birthdays', from: <AllInPrice price={850000} />, minGuests: '15+', goodFor: 'Milestone dinners & villa parties' },
+  { type: 'Anniversaries', from: <AllInPrice price={1200000} />, minGuests: '2+', goodFor: 'Couples, vow renewals' },
+  { type: 'Corporate events', from: <AllInPrice price={1200000} />, minGuests: '10+', goodFor: 'Offsites, launches, exec dinners' },
+  { type: 'Wellness retreats', from: <AllInPrice price={1500000} suffix="/person/day" />, minGuests: '8+', goodFor: 'Multi-day, dietary-led programmes' },
+  { type: 'Villa parties', from: <AllInPrice price={650000} />, minGuests: '20+', goodFor: 'Sundowners, hens, cocktail nights' },
+  { type: 'Baby showers', from: <AllInPrice price={750000} />, minGuests: '10+', goodFor: 'Brunches, high teas, reveals' },
 ]
 
 const AREAS_COVERED = [
@@ -278,12 +281,12 @@ const POPULAR_EVENT_TYPES: PopularEventType[] = [
 ]
 
 const WHATS_INCLUDED = [
-  'Head chef and sous chef for events of 20 or more guests',
-  'All cooking equipment, prep stations, and servingware brought to the villa',
-  'Customised menu design built around your brief and cuisine preferences',
-  'Full event staffing — waiters, bartenders, and kitchen team as required',
-  'Setup, service throughout the event, and complete post-event cleanup',
-  'Dietary accommodations handled as standard: halal, vegan, gluten-free, nut-free, and kids portions available',
+  'A head chef and brigade sized to your event — sous chef added from 20 guests, dedicated kitchen team above 60',
+  'Full mobile kitchen — prep stations, cooking equipment, cold storage and servingware brought to your villa, so no villa kitchen is required',
+  'Service staff — professional waiters at a standard 1 per 10 guests, with bartenders and sommeliers from IDR 250K–350K/hour',
+  'Custom menu design — built around your brief, with halal, vegan, gluten-free, nut-free and kids\' options handled as standard',
+  'Setup, service and complete cleanup — we pack up and leave; the villa is handed back the way we found it',
+  'One point of contact — your coordinator, Sofia, from first WhatsApp message to final guest departure',
 ]
 
 const EVENTS_TESTIMONIALS = [
@@ -312,56 +315,36 @@ const EVENTS_TESTIMONIALS = [
 
 const FAQS = [
   {
-    q: 'How far in advance do we need to book?',
-    a: 'Weddings and large retreats: 3–6 months for high season (July–August, December–January). Smaller events and corporate: 4–6 weeks is comfortable. Last-minute is possible — we have run a 30-guest dinner with 72 hours notice. WhatsApp Sofia and we will tell you what is still open.',
+    q: 'How much does event catering in Bali cost per guest?',
+    a: 'Most myCHEF events run from IDR 650K–1.5M++ per person depending on format; full wedding receptions typically range IDR 1.5M–3M++ per person. "++" means 11% government tax and 10% service charge are added — we always quote the all-in total upfront.',
   },
   {
-    q: 'Is the price per person all-in or does tax come on top?',
-    a: 'Listed prices are ++ (before 10% government service charge and 11% VAT). We always show the all-in number in the proposal so you know the total — no surprises. Groceries are billed at cost with no markup.',
+    q: 'What is the minimum guest count?',
+    a: 'Intimate dinners start from 2 guests. Buffet formats typically require 30+, BBQ packages 10+, and grazing tables serve 10–15. Tell us your headcount and we will recommend the right format.',
   },
   {
-    q: 'Do you handle dietary requirements at scale?',
-    a: 'Yes — this is one of the things we do best. Vegan, halal, gluten-free, raw, kosher-style, nut allergy, shellfish allergy, kids portions. We label every dish, run separate prep lines for allergies, and have done full halal weddings and dietary-led retreats for hundreds.',
+    q: 'Do we need a villa with a big kitchen?',
+    a: 'No. We are a mobile hospitality team — we bring prep equipment, cold storage, glassware and a generator where needed. A small kitchen, or none at all, is not a problem.',
   },
   {
-    q: 'Can you work at any villa in Bali?',
-    a: 'Yes. We are mobile hospitality — full kitchen, glassware, linens, generator, cold chain, the lot. We have worked across villas in Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Pererenan, Berawa, and the Bukit peninsula. If your villa is in Bali, we can run an event there.',
+    q: 'Can you handle dietary requirements at scale?',
+    a: 'Yes — halal-friendly, vegan, gluten-free, raw, nut-free, shellfish allergies and kids\' portions, with labelled dishes and separate prep lines for allergies.',
   },
   {
-    q: 'Do we pay a deposit, and what happens if we cancel?',
-    a: '50% deposit to confirm the date, balance due the week of the event. Cancellation policy is in your proposal — full refund up to 30 days out, 50% inside 30 days, no refund inside 14 days. Force-majeure clauses are standard.',
+    q: 'How far in advance should we book?',
+    a: 'Weddings and large retreats: 3–6 months for peak season (July–September, December–January). Smaller events: 3–6 weeks is comfortable. We have also run 30-guest dinners on 72 hours\' notice — ask us what is still open.',
   },
   {
-    q: 'Who is our point of contact?',
-    a: 'Sofia handles events end-to-end — the same person from first WhatsApp to the day-of coordination on site. No handoffs, no losing context. For corporate accounts she works alongside Olivia for invoicing and NPWP paperwork.',
+    q: 'What deposit is required, and what is the cancellation policy?',
+    a: 'A 50% deposit confirms your date, with the balance due before the event. Cancellation terms are written into every proposal, with force-majeure clauses as standard.',
   },
   {
-    q: 'Can we customise the menu?',
-    a: 'Every menu is built around the brief. Cuisine, courses, signature dishes, kids menu, dietary-specific lines, branded courses for corporate. Send the spec and we tailor it — and you taste the menu before you sign off when there is time.',
+    q: 'Are there extra fees for villa events — banjar fees, permits?',
+    a: 'Many Bali villages (banjar) charge a function fee for events — across Bali this commonly runs around USD 300, and some villas add their own event fee or require outside-vendor permission. We flag every known fee in your proposal so nothing surprises you.',
   },
   {
-    q: 'Do you provide staff, bartenders, and coordinators?',
-    a: 'Yes — chefs, waiters (1 per 10 guests is our standard), bartenders, kitchen team, runners, and an on-site event coordinator are part of every package. For corporate and weddings we add a dedicated coordinator who manages timing, suppliers, and the run-sheet.',
-  },
-  {
-    q: 'How many guests can myCHEF cater for at a villa event?',
-    a: 'We have catered events from 2 guests (intimate anniversary dinners) up to 250+ guests (full villa weddings and corporate retreats). For events of 20 or more we bring a sous chef alongside the head chef. Above 60 guests we add a dedicated kitchen team and expand staffing accordingly. There is no hard upper limit — just tell us the headcount and we size the team.',
-  },
-  {
-    q: 'How far in advance should I book event catering in Bali?',
-    a: 'For smaller events (under 30 guests), 3 to 6 weeks is comfortable. For birthdays, bachelorette parties, and anniversary dinners, 2 to 4 weeks is usually fine. Weddings and large retreats during high season (July, August, December, January) should ideally be booked 3 to 6 months out. That said, we have pulled together 30-guest dinners with 72 hours notice — WhatsApp Sofia and we will tell you exactly what is available.',
-  },
-  {
-    q: 'Can you set up a themed dinner or surprise party?',
-    a: 'Yes. Themed setups — tropical, Balinese, Mediterranean, black-tie, bohemian garden — are something we do regularly. For surprise parties we coordinate directly with whoever is organising it, keep the setup quiet until the guest of honour arrives, and cue the reveal. Florals, candles, signage, and personalised menus can all be arranged through us or with your preferred decor supplier.',
-  },
-  {
-    q: 'What types of cuisine are available for events?',
-    a: 'Our chefs cover a wide range: modern European, Italian, Japanese, South-East Asian, Middle Eastern, BBQ and grill, plant-based and vegan, raw food, and traditional Balinese (including whole roast suckling pig). For large events we can run two cuisine lines in parallel — for example, a halal Indonesian buffet alongside a Western plated service. Share your brief and we match the chef and menu to it.',
-  },
-  {
-    q: 'Do you provide waitstaff for villa events?',
-    a: 'Yes — professional waitstaff are included in every event package. Our standard ratio is 1 waiter per 10 guests for seated service, adjusted for cocktail-style and buffet events. Staff arrive early for briefing, are uniformed, trained in plated and silver service, and stay through cleanup. Bartenders, sommeliers, and butler-style service can be added depending on the event format.',
+    q: 'What happens if it rains?',
+    a: 'Every outdoor event carries a wet-weather plan — marquee rental and indoor relocation are arranged in advance for events in the wet season (roughly November–March).',
   },
 ]
 
@@ -409,38 +392,36 @@ export default function EventsMainPage() {
   return (
     <div ref={heroRef} className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title={getPageMeta('events').title}
-        description={getPageMeta('events').description}
+        title="Event Catering Bali | One Team for Your Entire Event"
+        description="Bali event catering for weddings, birthdays, corporate retreats & villa parties — one team for food, staff, bar & coordination. WhatsApp myCHEF."
         canonical={getPageMeta('events').canonical}
         ogImage={getPageMeta('events').ogImage}
         jsonLd={[
           breadcrumbSchema('Events', `${SITE}/events`),
-          serviceWithAggregateOfferSchema({
-            name: 'Bali Event Catering & Coordination',
-            description: 'Villa weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties in Bali. One team, one bill.',
-            url: `${SITE}/events`,
-            lowPrice: '600000',
-            highPrice: '1500000',
-            unitText: 'per person',
-          }),
-          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Book an Event in Bali with myCHEF',
-            description: 'Plan your Bali villa event — wedding, birthday, corporate retreat — in 3 simple steps.',
-            totalTime: 'PT20M',
-            steps: HOW_WE_RUN.map(s => ({ name: s.title, text: s.body })),
-          }),
           {
             '@context': 'https://schema.org',
-            '@type': 'ItemList',
-            name: 'Bali Event Services by myCHEF',
-            itemListElement: EVENT_TYPES.map((e, i) => ({
-              '@type': 'ListItem',
-              position: i + 1,
-              url: `${SITE}${e.href}`,
-              name: e.title,
-            })),
+            '@type': 'Service',
+            name: 'Event Catering Bali',
+            provider: {
+              '@type': 'LocalBusiness',
+              name: 'myCHEF',
+              url: 'https://mychef.id',
+              telephone: '+62 896-7407-2020',
+              areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+            },
+            serviceType: 'Event catering',
+            description:
+              'Full-service event catering for Bali villa weddings, birthdays, anniversaries, corporate retreats and villa parties — chefs, service staff, bar and coordination from one team.',
+            offers: {
+              '@type': 'AggregateOffer',
+              priceCurrency: 'IDR',
+              lowPrice: '650000',
+              highPrice: '3000000',
+              offerCount: '8',
+            },
+            url: `${SITE}/events`,
           },
+          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
         ]}
       />
 
@@ -474,14 +455,12 @@ export default function EventsMainPage() {
           <h1
             className="hero-fade font-playfair text-5xl md:text-7xl lg:text-8xl leading-[1.05] max-w-2xl mb-8"
           >
-            Events in Bali, run by one team.<br />
-            <span className="font-cormorant italic text-white/[85%]">
-              You just host.
-            </span>
+            Event Catering in Bali — One Team, Your Villa, Zero Stress
           </h1>
           <p className="hero-fade text-base md:text-xl max-w-lg leading-relaxed text-white/[80%] mb-8">
-            Villa weddings, birthdays, anniversaries, corporate events, retreats, baby showers, and villa parties.
-            Food, drinks, staff, styling, and coordination — handled by one team, in your villa, anywhere in Bali.
+            Weddings, birthdays, anniversaries, corporate retreats, villa parties — every great Bali event runs on the
+            same engine: food worth remembering, staff who know the rhythm of a villa, and one person accountable for
+            the whole night.
           </p>
           <div className="hero-fade flex flex-wrap gap-3">
             <a
@@ -501,7 +480,7 @@ export default function EventsMainPage() {
             </a>
           </div>
           <p className="hero-fade mt-4 text-sm text-white/[60%]">
-            From IDR 700K++/guest · Free consultation · Typical same-day WhatsApp reply · Transparent proposal before deposit
+            Free consultation · Typical same-day reply · Transparent proposal before any deposit
           </p>
         </div>
       </section>
@@ -515,18 +494,24 @@ export default function EventsMainPage() {
       {/* ═══════ INTRO ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-[#0F0F0F] text-white">
         <div className="max-w-3xl mx-auto text-center">
-          <p
-            className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5"
-          >
-            Production, not catering
+          <p className="text-lg leading-relaxed text-white/[75%] mb-8">
+            One team for menu, chefs, waiters, bar, setup and cleanup, anywhere in Bali, for 2 to 250+ guests. You tell
+            us the date, the villa and the headcount. We send one itemised proposal, arrive early, and hand the villa
+            back spotless. You just host.
           </p>
-          <h2 className="font-playfair text-3xl md:text-5xl leading-[1.1] mb-8">
-            We approach events the way a fine-dining kitchen approaches service.
-          </h2>
-          <p className="text-lg leading-relaxed text-white/[75%]">
-            One brigade owns the night — chefs in the kitchen, waiters on the floor, bartenders on the bar, a coordinator
-            on the timeline. Whether it is a six-person anniversary or a hundred-and-fifty-guest wedding, the standard
-            is the same: hot food on time, full glasses, clean plates, and a host who never had to look at a watch.
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-source="events-intro"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-[#1A1A1A] text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              <MessageCircle className="w-4 h-4" /> Plan Your Event on WhatsApp
+            </a>
+          </div>
+          <p className="text-sm text-white/[60%]">
+            Free consultation · Typical same-day reply · Transparent proposal before any deposit
           </p>
         </div>
       </section>
@@ -536,8 +521,8 @@ export default function EventsMainPage() {
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Chapter 2 — All Events We Cover"
-            title="Four of the formats we run most often"
-            subtitle="Weddings, birthdays, corporate events, and retreats each ask for a different service rhythm — but the same operational discipline."
+            title="Event formats we run most often"
+            subtitle="Weddings, birthdays, corporate events and retreats each ask for a different service rhythm — but the same operational discipline."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
             {EVENT_TYPES.filter((event) => ['weddings', 'birthdays', 'corporate-events', 'retreats'].includes(event.slug)).map((event) => (
@@ -566,9 +551,9 @@ export default function EventsMainPage() {
       <section id="event-types" className="events-grid py-24 md:py-32 px-6 scroll-mt-24">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 3 — Seven Kinds of Evening"
-            title="Choose the kind of event you are hosting"
-            subtitle="Each pillar has its own page with full pricing, menus, and a tailored inquiry form."
+            eyebrow="Chapter 3 — Event Types"
+            title="Every Kind of Bali Event, One Team"
+            subtitle="Each event format has its own page with full pricing, menus and a tailored inquiry form."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {EVENT_TYPES.map((e) => (
@@ -613,16 +598,64 @@ export default function EventsMainPage() {
               </Link>
             ))}
           </div>
+          <p className="text-[#4A4745] text-sm text-center mt-10 max-w-3xl mx-auto">
+            Explore each format:{' '}
+            <Link to="/events/weddings" className="text-[#C5A028] hover:underline">
+              wedding catering in Bali
+            </Link>
+            ,{' '}
+            <Link to="/events/birthdays" className="text-[#C5A028] hover:underline">
+              birthday catering
+            </Link>
+            ,{' '}
+            <Link to="/events/anniversaries" className="text-[#C5A028] hover:underline">
+              anniversary dinners
+            </Link>
+            ,{' '}
+            <Link to="/events/corporate-events" className="text-[#C5A028] hover:underline">
+              corporate event catering
+            </Link>
+            ,{' '}
+            <Link to="/events/retreats" className="text-[#C5A028] hover:underline">
+              wellness retreat catering
+            </Link>
+            ,{' '}
+            <Link to="/events/villa-parties" className="text-[#C5A028] hover:underline">
+              villa party catering
+            </Link>
+            , and{' '}
+            <Link to="/events/baby-showers" className="text-[#C5A028] hover:underline">
+              baby shower catering
+            </Link>
+            . See{' '}
+            <Link to="/bali-wedding-catering-packages" className="text-[#C5A028] hover:underline">
+              wedding catering packages & prices
+            </Link>
+            , our{' '}
+            <Link to="/catering" className="text-[#C5A028] hover:underline">
+              villa catering services
+            </Link>
+            ,{' '}
+            <Link to="/in-villa-service" className="text-[#C5A028] hover:underline">
+              event staff hire
+            </Link>
+            , and the{' '}
+            <Link to="/pricing" className="text-[#C5A028] hover:underline">
+              full pricing guide
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
       {/* MID-PAGE CTA: After event types */}
       <section className="py-16 md:py-20 px-6 bg-white">
         <div className="max-w-[800px] mx-auto text-center">
-          <p className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4">Not Sure What You Need?</p>
-          <h3 className="font-playfair text-2xl md:text-3xl mb-4 text-[#1A1A1A]">We Will Match the Right Event Format to Your Celebration</h3>
+          <p className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4">Plan Your Event</p>
+          <h3 className="font-playfair text-2xl md:text-3xl mb-4 text-[#1A1A1A]">Not Sure What You Need?</h3>
           <p className="text-[#4A4745] max-w-xl mx-auto mb-6">
-            Wedding, birthday, corporate retreat, or anniversary? Tell us your guest count, villa, and date. We will recommend the right format and send a clear proposal — reply within the hour.
+            Wedding, birthday, corporate retreat, or anniversary? Tell us your guest count, villa, and date. We will
+            recommend the right format and send a clear proposal — reply within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-mid-cta" className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-[#1A1A1A] text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white">
@@ -685,11 +718,11 @@ export default function EventsMainPage() {
                 What You Get
               </p>
               <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] leading-[1.1] mb-6">
-                What is included in villa event catering
+                What Event Catering with myCHEF Includes
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-8">
-                Every myCHEF event package is designed so the host arrives and enjoys — not manages. Here is what comes
-                standard with every booking.
+                Every event package — from a six-person anniversary to a 200-guest wedding — comes with the same
+                operational backbone.
               </p>
               <ul className="space-y-4">
                 {WHATS_INCLUDED.map((item) => (
@@ -707,12 +740,12 @@ export default function EventsMainPage() {
                 Good to know
               </p>
               <h3 className="font-playfair text-2xl text-[#1A1A1A] mb-5">
-                Fully mobile. No villa kitchen required.
+                Fully mobile across Bali
               </h3>
               <p className="text-sm text-[#4A4745] leading-relaxed mb-6">
-                myCHEF operates as a mobile hospitality team. We bring everything the event needs — prep equipment,
-                glassware, linen, cold storage, and the full kitchen setup. If your villa has a small kitchen or no
-                kitchen at all, that is not a problem.
+                We are fully mobile across Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Pererenan,
+                the Bukit and beyond — with full liability insurance for events up to 200 guests and NPWP invoicing for
+                corporate clients.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 p-3 bg-white rounded-xl border border-[#E8E6E3]">
@@ -748,12 +781,12 @@ export default function EventsMainPage() {
             <p
               className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
             >
-              Chapter 4 — How It Works
+              Chapter 4 — How Booking Works
             </p>
             <h2
               className="font-playfair text-3xl md:text-5xl leading-[1.05]"
             >
-              Three clear steps from first message to event day.
+              How Booking Works
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -783,8 +816,8 @@ export default function EventsMainPage() {
       <section className="py-24 md:py-32 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 4 — Why myCHEF"
-            title="The three reasons hosts hand us the whole evening"
+            eyebrow="Chapter 5 — Why myCHEF"
+            title="Why Hosts Choose myCHEF for Bali Events"
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {WHY.map((w) => (
@@ -811,7 +844,7 @@ export default function EventsMainPage() {
       <section className="py-24 md:py-32 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1100px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 5 — Competitive Edge"
+            eyebrow="Chapter 6 — Competitive Edge"
             title="Why myCHEF for events"
             subtitle="How we compare to the alternatives you are probably researching."
           />
@@ -835,8 +868,8 @@ export default function EventsMainPage() {
       <section className="py-24 md:py-32 px-6 bg-white">
         <div className="max-w-[1100px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 6 — Pricing"
-            title="What an event actually costs"
+            eyebrow="Chapter 7 — Pricing"
+            title="Event Catering Bali — Transparent Per-Guest Pricing"
             subtitle="Every price below is per guest, before tax and service. The proposal Sofia sends includes the all-in total — no surprises."
           />
           <div className="overflow-hidden rounded-2xl border border-[#E8E6E3] bg-white shadow-sm">
@@ -873,8 +906,7 @@ export default function EventsMainPage() {
             ))}
           </div>
           <p className="mt-6 text-center text-xs text-[#4A4745]/80">
-            All prices ++ (10% government service charge and 11% VAT added at proposal). Groceries billed at cost — no
-            markup. 50% deposit to confirm.
+            All prices ++ (11% government tax + 10% service charge). Your proposal always shows the all-in total.
           </p>
         </div>
       </section>
@@ -885,7 +917,7 @@ export default function EventsMainPage() {
           <p
             className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-5"
           >
-            Chapter 7 — Your Coordinator
+            Chapter 8 — Your Coordinator
           </p>
           <div className="w-24 h-24 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-6">
             <Heart className="w-10 h-10 text-[#C5A028]" />
@@ -922,7 +954,7 @@ export default function EventsMainPage() {
           <p
             className="font-cormorant text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-4"
           >
-            Chapter 8 — Where We Work
+            Chapter 9 — Where We Work
           </p>
           <h2
             className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mb-5"
@@ -1078,21 +1110,21 @@ export default function EventsMainPage() {
       <section className="py-24 md:py-32 px-6 bg-[#FAFAF8]">
         <div className="max-w-3xl mx-auto">
           <SectionHeader
-            eyebrow="Chapter 9 — Questions"
-            title="Event catering FAQs"
-            subtitle="Common questions about booking villa event catering in Bali — from guest counts and lead times to cuisine types and what is included."
+            eyebrow="Chapter 10 — Questions"
+            title="Event Catering Bali — FAQ"
+            subtitle="Common questions about booking villa event catering in Bali — from cost per guest and minimums to villa fees and wet-weather plans."
           />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
       {/* ═══════ FORM ═══════ */}
-      <section className="py-24 md:py-32 px-6 bg-white">
+      <section id="event-inquiry" className="py-24 md:py-32 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 10 — Inquire"
-            title="Tell Sofia about your event"
-            subtitle="One message. Same-day reply. A proposal in your inbox within 24 hours when details are clear."
+            eyebrow="Chapter 11 — Inquire"
+            title="Plan Your Event"
+            subtitle="Tell Sofia your date, villa and guest count, and receive an itemised, all-in proposal — typically within 24 hours once details are clear."
           />
           <BookingFormCatering
             title="Event Inquiry"
@@ -1160,11 +1192,11 @@ export default function EventsMainPage() {
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <Sparkles className="w-7 h-7 text-[#C5A028] mx-auto mb-5" />
           <h2 className="font-playfair text-4xl md:text-6xl leading-[1.05] mb-6">
-            One message and we&rsquo;re running.
+            Plan Your Event
           </h2>
           <p className="max-w-xl mx-auto text-base md:text-lg text-white/[75%] mb-10">
-            Sofia replies quickly. The proposal typically lands within a day once details are clear. The team arrives on the date — built,
-            briefed, and ready.
+            Tell Sofia your date, villa and guest count, and receive an itemised, all-in proposal — typically within 24
+            hours once details are clear.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a
@@ -1174,15 +1206,31 @@ export default function EventsMainPage() {
               data-source="events-cta"
               className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A028] text-[#1A1A1A] text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <MessageCircle className="w-4 h-4" /> Plan Your Event — Reply in 1 Hour
+              <MessageCircle className="w-4 h-4" /> Plan Your Event — WhatsApp +62 896-7407-2020
             </a>
             <a
-              href="tel:+6289674072020"
+              href="#event-inquiry"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/30 text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <Phone className="w-4 h-4" /> Call +62 896-7407-2020
+              <ClipboardCheck className="w-4 h-4" /> Open the Event Inquiry Form
             </a>
           </div>
+          <p className="mt-8 text-sm text-white/[60%] max-w-2xl mx-auto">
+            Planning a wedding? Start with our{' '}
+            <Link to="/events/weddings" className="text-[#C5A028] hover:underline">
+              wedding catering service
+            </Link>{' '}
+            or go straight to{' '}
+            <Link to="/bali-wedding-catering-packages" className="text-[#C5A028] hover:underline">
+              wedding catering packages & prices
+            </Link>. Need staff only? See{' '}
+            <Link to="/in-villa-service" className="text-[#C5A028] hover:underline">
+              in-villa service teams
+            </Link>. Full menus and rates:{' '}
+            <Link to="/pricing" className="text-[#C5A028] hover:underline">
+              pricing guide
+            </Link>.
+          </p>
         </div>
       </section>
 

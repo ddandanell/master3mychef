@@ -1,0 +1,297 @@
+{
+  "brand": {
+    "exact_name": "myCHEF.id",
+    "alternate_renderings": ["myCHEF", "my CHEF"],
+    "tagline": "Your Villa. Our Kitchen.",
+    "legal_group": "Part of Global Catering · Bali, Indonesia",
+    "sister_brand": "mychef.ae (Dubai, UAE)",
+    "founded_year": 2018,
+    "origin_story": "Founded by Adriano after arriving in Bali in 2018; built to connect world-class villas with restaurant-level private dining and local sourcing.",
+    "office_address": "Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Bali 80226"
+  },
+  "contact": {
+    "whatsapp": "+62 896-7407-2020",
+    "email": "bali@mychef.id",
+    "phone_hours": "08:00 – 22:00 WITA daily",
+    "response_promise": "WhatsApp reply within 1 hour"
+  },
+  "services": {
+    "primary": [
+      {
+        "name": "Private Fine Dining",
+        "description": "24 set menus, multi-course tasting experiences, Chef's Table, romantic dinners in private Bali villas.",
+        "starting_price_idr": "1,250,000 per guest",
+        "minimum_guests": 6
+      },
+      {
+        "name": "Catering",
+        "description": "BBQ, buffet, plated set menus, drop-off, Babi Guling, grazing tables, floating breakfast, villa and corporate catering.",
+        "formats": ["BBQ Catering", "Buffet Catering", "Plated Set Menus", "Drop-Off Catering", "Babi Guling", "Grazing Tables", "Villa Catering", "Corporate Catering", "Retreat Catering", "Floating Breakfast"]
+      },
+      {
+        "name": "Events",
+        "description": "End-to-end villa events: weddings, birthdays, anniversaries, corporate events, wellness retreats, baby showers, villa parties.",
+        "starting_prices_idr": {
+          "villa_weddings": "600,000++ per person",
+          "birthday_parties": "850,000++ per person",
+          "anniversary_dinners": "1,200,000++ per person",
+          "corporate_events": "1,200,000++ per person",
+          "wellness_retreats": "1,500,000++ per person per day",
+          "baby_showers": "750,000++ per person",
+          "villa_parties": "650,000++ per person"
+        }
+      },
+      {
+        "name": "Private Experiences",
+        "description": "Six curated in-villa experiences.",
+        "experiences": [
+          { "name": "Private Cocktail Party", "starting_price_idr": "2,500,000 for 3-hour intimate package" },
+          { "name": "Sushi Masterclass", "starting_price_idr": "850,000 per person" },
+          { "name": "Private Cooking Class", "starting_price_idr": "700,000 per person" },
+          { "name": "Kids Birthday Chef Party", "starting_price_idr": "250,000 per child", "age_range": "3–12" },
+          { "name": "Champagne & Oyster Experience", "starting_price_idr": "950,000 per person" },
+          { "name": "Romantic Proposal Dinner", "starting_price_idr": "2,200,000 per person (minimum 2)" }
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "In-Villa Service",
+        "roles": ["Waiters", "Butlers", "Bartenders", "Mixologists", "Sommeliers", "Hosts/Hostesses"]
+      },
+      {
+        "name": "Staffing & Placement",
+        "description": "Long-term private chef placement, live-in villa chefs, villa and household staff.",
+        "starting_prices_idr": {
+          "private_chef_placement": "5,500,000/month",
+          "live_in_villa_chef": "8,000,000/month"
+        },
+        "guarantees": ["48-hour placement guarantee", "30-day replacement guarantee", "90-day replacement guarantee"]
+      },
+      {
+        "name": "VIP Transport",
+        "description": "Luxury cars, minibuses, buses, yacht charters, landing boats to Nusa Penida/Lembongan.",
+        "coverage": ["Seminyak", "Canggu", "Ubud", "Uluwatu", "Jimbaran", "Nusa Dua", "Sanur", "Bukit Peninsula", "Nusa Penida", "Nusa Lembongan"]
+      },
+      {
+        "name": "Bar Services for Venues",
+        "description": "B2B bar consulting, staffing, management and flagship performance programmes for hotels, villas, beach clubs, restaurants and events."
+      },
+      {
+        "name": "Complete Villa Experience / Villa Event Packages",
+        "description": "All-inclusive bundles: airport transfers, villa preparation, daily private chef, events, bar service, staffing, concierge and cleanup/handback."
+      }
+    ]
+  },
+  "geographic_coverage": {
+    "primary": "Bali island-wide",
+    "areas_named": ["Seminyak", "Canggu", "Berawa", "Pererenan", "Ubud", "Uluwatu", "Bukit", "Bingin", "Jimbaran", "Nusa Dua", "Sanur", "Tabanan"],
+    "inter_island": ["Nusa Penida", "Nusa Lembongan"],
+    "secondary": "Dubai via mychef.ae"
+  },
+  "target_customers": {
+    "b2c": [
+      "Couples (proposals, anniversaries, honeymoons)",
+      "Families and multi-generational groups",
+      "Friends on villa holidays",
+      "HNW travellers"
+    ],
+    "b2b": [
+      "Villa owners and managers",
+      "Airbnb hosts",
+      "Hotels, resorts, beach clubs, restaurants",
+      "Corporate retreat planners"
+    ]
+  },
+  "occasions": [
+    "Proposals",
+    "Weddings",
+    "Birthdays",
+    "Kids' parties",
+    "Anniversaries",
+    "Baby showers",
+    "Bachelorette/hen parties",
+    "Corporate retreats and off-sites",
+    "Wellness/yoga retreats",
+    "Villa welcome parties",
+    "Executive dinners",
+    "Milestone celebrations",
+    "Fully managed multi-day villa stays"
+  ],
+  "pricing_position": {
+    "tier": "Premium / luxury",
+    "structure": "Bespoke quotes based on guest count, menu, staffing and logistics; estimates shown exclude 10% service charge and 11% VAT.",
+    "deposit": "50% to confirm; balance due before or on event day",
+    "groceries_policy": "At cost with transparent receipts for villa-chef catering; included in fine-dining and event quotes"
+  },
+  "service_promises": [
+    "Same-day confirmation or money back",
+    "Chef replacement within 2 hours or 100% refund",
+    "WhatsApp reply within 1 hour",
+    "50% deposit only to confirm",
+    "1 waiter per 10 guests",
+    "Full cleanup after every service",
+    "Background-checked team",
+    "HACCP Food Safety Certified operations",
+    "Full liability insurance for events up to 200 guests",
+    "NPWP-issued corporate invoices"
+  ],
+  "trust_signals": {
+    "metrics": {
+      "events_served": "560+",
+      "guests_served": "12,000+",
+      "villa_bookings": "500+",
+      "professionals": "50+",
+      "satisfaction": "98%",
+      "years_in_bali": "8+"
+    },
+    "credentials": [
+      "HACCP Food Safety Certified",
+      "Michelin-trained culinary leadership by Adriano",
+      "Full liability insurance for events up to 200 guests"
+    ],
+    "caution": "An image on /staffing carries alt text 'Awarded Best Partner 2026 — myCHEF Private Villa Dining'; no awarding body is named on the site."
+  },
+  "team": {
+    "leadership": [
+      {
+        "name": "Adriano",
+        "role": "Founder & Head Chef",
+        "background": "Trained under a Michelin-starred chef (site also states 'Michelin-level standards in Modena'); 12 years in European fine-dining kitchens; leads signature tasting menus La Riviera and L'Odyssée.",
+        "availability": "Chef's Table Fridays and Saturdays only, maximum 6 guests",
+        "signature_dish": "Handmade tagliolini with Bali lemon and bottarga",
+        "caution": "Site contains inconsistent phrasing about Milan vs. Modena; do not invent a specific restaurant name or star count."
+      }
+    ],
+    "chefs": [
+      {
+        "name": "I Made Surya",
+        "style": "Indonesian-Mediterranean fusion",
+        "background": "15 years in Bali hospitality; trained at IHTI",
+        "signature_dish": "Balinese bebek betutu reimagined for fine-dining plating",
+        "available_for": ["Villa dinners", "Events", "Corporate bookings", "Groups up to 30"]
+      },
+      {
+        "name": "Bayu Pranata",
+        "style": "Pastry & dessert precision",
+        "background": "Trained under a French-trained Indonesian chef; moved to Bali in 2020",
+        "signature_dish": "Pandan crème brûlée with coconut tuile and mango gel",
+        "available_for": ["Full villa dinners", "Pastry consultation", "Events with dessert stations"]
+      },
+      {
+        "name": "Ni Putu Asri",
+        "style": "Plant-forward Balinese",
+        "background": "Born in Ubud; trained across Indonesia and Singapore",
+        "signature_dish": "Jackfruit rendang with tempeh crust and sambal matah",
+        "available_for": ["Villa dinners", "Retreats", "Plant-forward events"]
+      }
+    ],
+    "concierge": [
+      { "name": "Sofia", "role": "Fine Dining Concierge" },
+      { "name": "Daniel", "role": "Villa Chef Coordinator" },
+      { "name": "Olivia", "role": "Events Manager" },
+      { "name": "Marco", "role": "Partnerships & Staffing / Staffing Director" }
+    ],
+    "size": "50+ Indonesian hospitality professionals"
+  },
+  "culinary_positioning": {
+    "ethos": "Italian fine-dining discipline meets Balinese sourcing and terroir.",
+    "core_menus": ["La Riviera", "L'Odyssée"],
+    "cuisine_families": ["Mediterranean", "Italian", "French", "Japanese fusion", "Indonesian", "Balinese", "Healthy/Plant-forward"],
+    "technique_highlights": ["Handmade pasta", "Live-fire protein", "Wine pairing", "Sushi and sashimi", "Spice pastes (base gede, base wangi)", "Sambals", "Charcoal grilling"],
+    "dietary_accommodation": ["Gluten-free", "Vegan", "Vegetarian", "Halal", "Nut-free", "Shellfish allergy", "Kosher-style", "Kids portions", "Pregnancy-friendly"]
+  },
+  "brand_vocabulary": [
+    "Your Villa. Our Kitchen.",
+    "One team, one bill, one contact",
+    "A kitchen that travels",
+    "Invisible service",
+    "Done-for-you",
+    "Restaurant-level dining without leaving your villa",
+    "Extraordinary food should not require leaving your villa",
+    "We shop, we cook, we serve, we clean. You just enjoy."
+  ],
+  "brand_personality": [
+    "Premium",
+    "Warm",
+    "Precise",
+    "Discreet",
+    "Professional",
+    "Bali-savvy",
+    "International-standard",
+    "Local in soul"
+  ],
+  "existing_visual_patterns": {
+    "hero_aspect_ratio": "16:9",
+    "hero_dimensions": ["1920×1080", "1440×800"],
+    "card_aspect_ratios": ["3:4", "4:5", "4:3"],
+    "portrait_aspect_ratio": "4:5",
+    "square_thumb": "1024×1024",
+    "format": "WebP",
+    "path": "/generated/",
+    "naming_convention": "mychef-[service]-bali-[scene]-[orientation].webp",
+    "loading": "Hero eager; others lazy",
+    "alt_text_style": "Descriptive of visible content; minimal keyword stuffing",
+    "common_motifs": [
+      "Golden-hour/sunset lighting",
+      "Candlelit dinner tables",
+      "Villa pools and terraces",
+      "Tropical greenery and jungle pavilions",
+      "Clifftop ocean views",
+      "Staff in white service attire",
+      "Open villa kitchens",
+      "Long banquet tables",
+      "Intimate tables for two"
+    ]
+  },
+  "claims_not_to_misrepresent": [
+    "Do not invent a specific Michelin-starred restaurant where Adriano trained; the site itself uses inconsistent phrasing (Milan vs. Modena).",
+    "Do not inflate or invent awards; 'Best Partner 2026' appears only as image alt text with no named awarding body.",
+    "Do not show Adriano available for every booking; he is limited to Fri/Sat Chef's Table and select tasting menus.",
+    "Do not show branded vehicles, uniforms, or logos beyond what the current site already depicts.",
+    "Do not invent historical dates, partnership names, or specific villa properties.",
+    "Avoid placing website text, prices, or logos inside generated photographs.",
+    "Keep published metrics aligned: 560+ events, 12,000+ guests, 500+ villa bookings, 50+ staff, 8+ years in Bali."
+  ],
+  "image_generation_implications": {
+    "settings_to_show": [
+      "Balinese villa pools and terraces",
+      "Jungle pavilions",
+      "Clifftop terraces at sunset",
+      "Garden bales with tropical planting",
+      "Open-plan villa kitchens"
+    ],
+    "lighting_family": ["Golden hour", "Candlelight", "Soft natural daylight", "Warm interior"],
+    "staff_wardrobe": "Clean, neutral/white service attire; no invented uniforms or logos",
+    "food_styling": [
+      "Handmade pasta",
+      "Fresh seafood and sushi",
+      "Local tropical produce",
+      "Elegant fine-dining plating",
+      "BBQ and grilled proteins",
+      "Cocktails and champagne service",
+      "Oysters on ice"
+    ],
+    "people": [
+      "Couples",
+      "Families with children",
+      "Small groups of friends",
+      "Corporate groups",
+      "Professional chefs, waiters, bartenders, butlers"
+    ],
+    "service_moments": [
+      "Waiter pouring wine",
+      "Chef plating at villa counter",
+      "Bartender shaking cocktails",
+      "Table being reset",
+      "Staff arriving with ingredients"
+    ],
+    "avoid": [
+      "Text, logos, prices, or awards in photographs",
+      "Specific vehicles with unknown branding",
+      "Non-Bali architecture",
+      "Staged marketing poses",
+      "Adriano shown as cooking every meal"
+    ]
+  }
+}

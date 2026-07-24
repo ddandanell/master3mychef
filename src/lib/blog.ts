@@ -7,6 +7,9 @@ export interface ContentEntry {
   description: string
   date?: string
   content?: string
+  /** Optional per-entry H1 override. When provided, LandingPage uses this for
+   *  the page H1 while keeping `title` for the document title tag. */
+  h1?: string
   /** Optional per-entry JSON-LD schemas. When provided, LandingPage uses these
    *  instead of its auto-generated breadcrumb/FAQ/service schemas. */
   jsonLd?: Record<string, unknown>[]

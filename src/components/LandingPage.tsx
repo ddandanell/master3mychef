@@ -440,7 +440,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                 </>
               )}
             </div>
-            <h1 className="mb-8 font-playfair text-4xl leading-[1.1] md:text-6xl">{entry.title}</h1>
+            <h1 className="mb-8 font-playfair text-4xl leading-[1.1] md:text-6xl">{entry.h1 ?? entry.title}</h1>
             <p className="mb-8 max-w-[640px] text-lg leading-relaxed text-white/85 md:text-xl">{entry.description}</p>
 
             {articleEntry && shareLinks && (

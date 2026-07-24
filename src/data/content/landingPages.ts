@@ -65,6 +65,7 @@ export const LANDING_PAGES: ContentEntry[] = [
   {
     "slug": "villa-staff-bali-agency",
     "title": "Villa Staff Placement Has Moved",
+    "h1": "Looking for a Villa Staff Agency in Bali?",
     "description": "Our villa staff agency services now live on one page: vetted long-term villa staff placement in Bali — managers, housekeepers, chefs. See myCHEF.",
     "date": "2026-05-17",
     "jsonLd": [

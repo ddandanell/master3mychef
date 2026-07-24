@@ -2,7 +2,7 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
 <div class="[&>section]:mt-16 [&>section:first-child]:mt-0 [&>section>h2]:mb-6 [&>section>h2]:font-playfair [&>section>h2]:text-3xl [&>section>h2]:leading-tight [&>section>h2]:text-[#1A1A1A] md:[&>section>h2]:text-4xl [&>section>h3]:mb-4 [&>section>h3]:mt-10 [&>section>h3]:font-playfair [&>section>h3]:text-2xl [&>section>h3]:text-[#1A1A1A] [&>section>p]:mb-6 [&>section>p]:text-lg [&>section>p]:leading-relaxed [&>section>ul]:mb-8 [&>section>ul]:list-disc [&>section>ul]:space-y-3 [&>section>ul]:pl-6 [&>section>ul>li]:text-lg [&>section>ul>li]:leading-relaxed [&>section>p>a]:font-medium [&>section>p>a]:text-[#7E6410] [&>section>p>a]:underline-offset-4 hover:[&>section>p>a]:underline">
 
 <section aria-labelledby="chef-hire-intro">
-  <p>Hiring a chef in Indonesia can mean one unforgettable dinner — or a permanent member of your household. Those are completely different arrangements, and choosing the right one is the only decision you need to make first. myCHEF provides vetted, professional chefs across all four formats, with our strongest active coverage in Bali and Jakarta.</p>
+  <p>Hiring a chef in Indonesia can mean one unforgettable dinner — or a permanent member of your household. Those are completely different arrangements, and choosing the right one is the only decision you need to make first. myCHEF provides vetted, professional chefs across all four formats, with our strongest active coverage in Bali.</p>
   <div class="not-prose mt-8 flex flex-col gap-4 sm:flex-row">
     <a href="https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20hire%20a%20chef.%20Please%20help%20me%20choose%20the%20right%20format." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-[#C5A028] px-8 py-4 text-sm font-bold uppercase tracking-[2px] text-black transition hover:bg-[#D4B43A]">Tell Us What You Need on WhatsApp</a>
     <a href="/pricing" class="inline-flex items-center justify-center rounded-full border border-black/10 px-8 py-4 text-sm font-bold uppercase tracking-[2px] text-[#1A1A1A] transition hover:bg-black/5">current pricing</a>
@@ -92,7 +92,7 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
 
 <section aria-labelledby="coverage">
   <h2 id="coverage">Where We Serve</h2>
-  <p><strong>Bali</strong> — Seminyak, Canggu, Pererenan, Ubud, Sanur, Uluwatu, Jimbaran, Nusa Dua, Denpasar and surrounding villa areas. <strong>Jakarta</strong> — residences, executive households and events across Menteng, SCBD, Kemang, Pondok Indah and central districts; see our <a href="/locations/jakarta">chef for hire in Jakarta</a> page. <strong>Beyond</strong> — Lombok, yachts and other Indonesian destinations are confirmed individually once travel, accommodation and sourcing are planned. Quality of the evening matters more to us than claiming a map.</p>
+  <p><strong>Bali-wide coverage</strong> — Seminyak, Canggu, Pererenan, Ubud, Sanur, Uluwatu, Jimbaran, Nusa Dua, Denpasar and surrounding villa areas. <strong>Beyond Bali</strong> — Lombok, yachts and other Indonesian destinations are confirmed individually once travel, accommodation and sourcing are planned. Quality of the evening matters more to us than claiming a map.</p>
 </section>
 
 <section aria-labelledby="faq">
@@ -104,7 +104,7 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
     </details>
     <details class="group rounded-3xl border border-black/5 bg-white p-6 shadow-sm">
       <summary class="cursor-pointer list-none font-playfair text-xl text-[#1A1A1A]">Can you travel between islands or to remote villas?</summary>
-      <p class="mt-4 leading-relaxed text-[#4A4745]">Within Bali and Jakarta, travel is routine. Remote and inter-island assignments (Lombok, yachts, estates) are confirmed individually with transport, accommodation and ingredient planning built into the quote.</p>
+      <p class="mt-4 leading-relaxed text-[#4A4745]">Within Bali, travel is routine. Remote and inter-island assignments (Lombok, yachts, estates) are confirmed individually with transport, accommodation and ingredient planning built into the quote.</p>
     </details>
     <details class="group rounded-3xl border border-black/5 bg-white p-6 shadow-sm">
       <summary class="cursor-pointer list-none font-playfair text-xl text-[#1A1A1A]">Are groceries included in the price?</summary>

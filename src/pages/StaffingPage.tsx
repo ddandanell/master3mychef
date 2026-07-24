@@ -150,7 +150,7 @@ const FAQS = [
   },
   {
     q: 'Which areas do you cover?',
-    a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions — plus Jakarta. We have also placed chefs in Lombok and on private yachts; international placements are available on request.',
+    a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.',
   },
 ]
 
@@ -169,8 +169,8 @@ const STAFFING_JSON_LD = {
         url: 'https://mychef.id',
         telephone: '+62 896-7407-2020',
       },
-      areaServed: ['Bali', 'Jakarta'],
-      description: 'Long-term placement of private chefs, live-in chefs, villa managers, butlers, housekeepers and hospitality teams for villas, hotels and private households in Bali and Jakarta. 48-hour average placement, 30-day replacement guarantee.',
+      areaServed: ['Bali'],
+      description: 'Long-term placement of private chefs, live-in chefs, villa managers, butlers, housekeepers and hospitality teams for villas, hotels and private households in Bali. 48-hour average placement, 30-day replacement guarantee.',
       offers: {
         '@type': 'Offer',
         priceCurrency: 'IDR',
@@ -232,7 +232,7 @@ const STAFFING_JSON_LD = {
           name: 'Which areas do you cover?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions — plus Jakarta. We have also placed chefs in Lombok and on private yachts; international placements on request.',
+            text: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.',
           },
         },
       ],
@@ -317,7 +317,7 @@ export default function StaffingPage() {
             Hire Vetted Hospitality Staff for Your Villa, Hotel or Home
           </h1>
           <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[620px] leading-relaxed">
-            Long-term villa staff placement in Bali and Jakarta — private chefs, live-in chefs, villa managers, butlers, housekeepers and full household teams. Every candidate is background-checked, English-speaking and personally known to our team. Most chef placements are confirmed within 48 hours of your brief, and every placement carries a 30-day replacement guarantee.
+            Long-term villa staff placement in Bali — private chefs, live-in chefs, villa managers, butlers, housekeepers and full household teams. Every candidate is background-checked, English-speaking and personally known to our team. Most chef placements are confirmed within 48 hours of your brief, and every placement carries a 30-day replacement guarantee.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">

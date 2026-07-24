@@ -73,7 +73,6 @@ const FAQS = [
   { q: 'What cuisines can your chefs cook?', a: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal and kosher — matched to your preference before shortlisting.' },
   { q: 'Can the chef cook for events as well?', a: 'Yes. Full-time and executive placements include event cooking. Part-time chefs can be booked for events at additional rates.' },
   { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
-  { q: 'Do you place chefs outside Bali?', a: 'Yes. We have placed chefs in Jakarta, Lombok and on private yachts. International placements are available on request.' },
 ]
 
 const briefJsonLd = {
@@ -90,7 +89,7 @@ const briefJsonLd = {
         url: 'https://mychef.id',
         telephone: '+62 896-7407-2020',
       },
-      areaServed: ['Bali', 'Jakarta', 'Lombok'],
+      areaServed: ['Bali'],
       description: 'Permanent and seasonal private chef placement for Bali villas and residences. Vetting, cooking trials, contracts and payroll guidance included; 30-day replacement guarantee.',
       offers: {
         '@type': 'AggregateOffer',
@@ -141,14 +140,6 @@ const briefJsonLd = {
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal and kosher — matched to your preference before shortlisting.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do you place chefs outside Bali?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. We have placed chefs in Jakarta, Lombok and on private yachts. International placements are available on request.',
           },
         },
       ],

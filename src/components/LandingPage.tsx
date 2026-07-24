@@ -150,7 +150,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
     if (entry.slug === 'wedding-catering-indonesia') {
       const schema = serviceWithAggregateOfferSchema({
         name: 'Wedding Catering Indonesia',
-        description: 'Premium wedding catering across Indonesia with confirmed teams in Bali and Jakarta: villa and private-estate weddings, custom menus, full service brigades and coordination, from IDR 700K–3M++/person.',
+        description: 'Premium wedding catering across Bali: villa and private-estate weddings, custom menus, full service brigades and coordination, from IDR 700K–3M++/person.',
         url: canonical,
         lowPrice: '700000',
         highPrice: '3000000',
@@ -163,7 +163,6 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       }
       schema.areaServed = [
         { '@type': 'Place', name: 'Bali, Indonesia' },
-        { '@type': 'Place', name: 'Jakarta, Indonesia' },
       ]
       return schema
     }
@@ -198,7 +197,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
     if (entry.slug === 'private-chef-for-events') {
       const schema = serviceWithAggregateOfferSchema({
         name: 'Private Chef for Events Bali',
-        description: 'One-off event chef hire in Bali and Jakarta: a professional chef (with optional service staff) who designs the menu, sources ingredients, cooks at your venue and cleans up — for villa parties, birthdays, seated dinners and cocktail receptions.',
+        description: 'One-off event chef hire in Bali: a professional chef (with optional service staff) who designs the menu, sources ingredients, cooks at your venue and cleans up — for villa parties, birthdays, seated dinners and cocktail receptions.',
         url: canonical,
         lowPrice: '600000',
         highPrice: '1500000',
@@ -212,7 +211,6 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       }
       schema.areaServed = [
         { '@type': 'Place', name: 'Bali, Indonesia' },
-        { '@type': 'Place', name: 'Jakarta, Indonesia' },
       ]
       return schema
     }
@@ -262,7 +260,6 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       }
       schema.areaServed = [
         { '@type': 'Place', name: 'Bali' },
-        { '@type': 'Place', name: 'Jakarta' },
       ]
       return schema
     }
@@ -306,7 +303,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
               { question: 'What is the difference between hiring an event chef and booking catering?', answer: 'Chef hire puts a professional chef (and optional staff) inside your event with a menu built for you. Catering lines are structured service formats for scale, and the events team adds full production — same company, different scope.' },
               { question: 'Do you handle drinks and styling too?', answer: 'Yes — bar service and table styling can be added alongside the food. Bartenders and sommeliers are available from IDR 250K per hour.' },
               { question: 'How far ahead should I book?', answer: 'Single dinners: two to three weeks is usually comfortable. Peak-season dates and large events should be booked earlier. Availability is usually confirmed within 2 hours on WhatsApp.' },
-              { question: 'Which areas do you cover?', answer: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua and beyond — plus Jakarta. Any travel fee is confirmed upfront.' },
+              { question: 'Which areas do you cover?', answer: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua and beyond. Any travel fee is confirmed upfront.' },
             ]
           : entry.slug === 'villa-bbq-catering-bali'
       ? [
@@ -341,12 +338,12 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         ]
       : entry.slug === 'wedding-catering-indonesia'
         ? [
-            { question: 'Which cities do you cover?', answer: 'Bali and Jakarta are confirmed service regions with local teams. Weddings elsewhere in Indonesia are reviewed case by case.' },
-            { question: 'Is pricing different outside Bali?', answer: 'Jakarta follows the same structure — IDR 1.5M–3M++ per person for receptions, intimate dinners from IDR 700K++. Other regions add travel and logistics as transparent line items.' },
+            { question: 'Which cities do you cover?', answer: 'Bali is our confirmed service region with a local team. Weddings elsewhere in Indonesia are reviewed case by case.' },
+            { question: 'Is pricing different outside Bali?', answer: 'Outside Bali, pricing follows the same structure — IDR 1.5M–3M++ per person for receptions, intimate dinners from IDR 700K++. Other regions add travel and logistics as transparent line items.' },
             { question: 'Can you cater large Indonesian weddings?', answer: 'Yes — from 10 to 250+ guests, with buffet and live-station formats and multi-event programmes quoted in one proposal.' },
             { question: 'Do you offer halal wedding catering?', answer: 'Yes — halal-friendly menus with separate preparation are standard; full halal certification requirements can be discussed at the consult.' },
             { question: 'How do tastings work if we are planning remotely?', answer: 'Tastings are scheduled around your travel in the weeks before the wedding; menu development happens remotely by WhatsApp and video call.' },
-            { question: 'How far ahead should we book?', answer: 'Peak-season Bali dates: 3–10 months. Jakarta and off-peak: 1–3 months. Large multi-event weddings should start earlier.' },
+            { question: 'How far ahead should we book?', answer: 'Peak-season Bali dates: 3–10 months. Off-peak Bali dates: 1–3 months. Large multi-event weddings should start earlier.' },
             { question: 'What deposit is required?', answer: 'A deposit confirms the date (deposit level pending business confirmation), with the balance due before the event and written cancellation tiers.' },
           ]
         : entry.slug === 'luxury-birthday-party-bali'

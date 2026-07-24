@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
-  MessageCircle, Check, Car, Bus, Ship, UtensilsCrossed, Phone, Mail, Clock, MapPin,
+  MessageCircle, Check, Car, UtensilsCrossed, Phone, Mail, Clock,
 } from 'lucide-react'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, detailedServiceSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -18,44 +18,11 @@ gsap.registerPlugin(ScrollTrigger)
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'VIP transport in Bali', intent: 'a tailored quotation' })
 const SITE = 'https://mychef.id'
 
-const CAR_POINTS = [
-  'Premium SUVs, luxury sedans and executive vehicles suited to Bali’s terrain — from Seminyak’s streets to the Bukit Peninsula cliffs.',
-  'A professional, English-speaking driver who knows the island’s roads and villa locations, with every booking.',
-  'Door-to-door service, chilled refreshments and flexible scheduling — your journey is never an afterthought.',
-  'Perfect for airport collections, fine dining evenings and executive meetings.',
-]
-
-const BUS_POINTS = [
-  'Bali minibus hire for reunions, retreats, wedding guest transport Bali and corporate roadshows.',
-  'Every vehicle air-conditioned, fully insured, and driven by a uniformed, English-speaking chauffeur.',
-  'Multi-villa pickups, timed shuttles and full-day charters, coordinated for you.',
-  'A dedicated transport manager for large events — no guest left waiting.',
-]
-
-const YACHT_POINTS = [
-  'Sunset cruises, snorkelling excursions and inter-island transfers.',
-  'Luxury yacht charters departing Benoa Harbour, with embarkation times coordinated for you.',
-  'Bali landing boat service for a seamless Nusa Penida transfer to Nusa Lembongan.',
-  'Onboard catering and service staff arranged — your party can focus on the horizon.',
-]
-
-const LOGISTICS_POINTS = [
-  'Your vehicle can arrive stocked with welcome cocktails or canapés.',
-  'Wedding guest transport Bali shuttles synchronised with reception timelines.',
-  'Airport collections, daily transfers and dining coordinated under one plan for retreats.',
-  'One WhatsApp thread. One team. Zero stress.',
-]
-
-const AREAS = ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Jimbaran', 'Nusa Dua', 'Sanur', 'Bukit Peninsula', 'Nusa Penida', 'Nusa Lembongan']
-
 const FAQS = [
-  { q: 'Which areas of Bali do you cover?', a: 'We provide VIP transport Bali across Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur, and the Bukit Peninsula. We arrange inter-island transfers to Nusa Penida and Nusa Lembongan via landing boat.' },
-  { q: 'How far in advance should I book?', a: 'For luxury car hire Bali, 48–72 hours is usually sufficient. For weddings, events, and Bali yacht charter, we recommend 2–3 weeks. Last-minute requests are often possible — message us on WhatsApp.' },
-  { q: 'What is your cancellation policy?', a: 'Cancellations more than 48 hours before service receive a full refund. Cancellations within 24–48 hours incur a 50% charge. Same-day cancellations are charged in full. Yacht and landing boat charters require 72 hours’ notice.' },
-  { q: 'What group sizes can you accommodate?', a: 'Our car fleet serves up to six guests. Minibuses accommodate 8–16, and full-size buses up to 40. For larger groups, we deploy multiple vehicles with a dedicated coordinator. Yacht capacity ranges from 6-guest cruisers to 30-guest party boats.' },
-  { q: 'Is there space for luggage?', a: 'Yes. Our SUVs and minibuses offer generous luggage capacity, ideal for airport collections. For equipment or decorator items, supplementary vehicles are available on request.' },
-  { q: 'Do you provide child seats?', a: 'Absolutely. Child and infant safety seats are available at no extra charge. Please specify your child’s age and weight when booking so we install the correct seat before arrival.' },
-  { q: 'What is the maximum yacht capacity?', a: 'Our Bali yacht charter fleet ranges from 6-berth cruisers to 30-guest vessels. For larger celebrations, we arrange a flotilla. Landing boats for Nusa Penida transfer typically accommodate up to 40 passengers per crossing.' },
+  { q: 'Which areas do you cover?', a: 'Airport transfers and private drivers across Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur and the Bukit Peninsula. Other routes on request.' },
+  { q: 'What group sizes can you handle?', a: 'From couples to groups of 40+, with multiple vehicles and a dedicated coordinator for weddings and events.' },
+  { q: 'Do you provide child seats?', a: 'Yes — child and infant seats at no extra charge. Tell us ages and weights at booking so the correct seat is installed before arrival.' },
+  { q: 'How far ahead should I book, and what if plans change?', a: '48–72 hours is usually enough; allow 2–3 weeks for weddings and large events. A 50% deposit confirms your vehicle and driver (aligned to live page figure; sitewide unification pending business decision). Cancellation: full refund more than 48 hours before service; 50% charge within 24–48 hours; same-day cancellations charged in full.' },
 ]
 
 export default function VipTransportBaliPage() {
@@ -78,14 +45,46 @@ export default function VipTransportBaliPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="VIP Transport Bali | Luxury Cars & Yachts — myCHEF"
+        title="VIP Transport Bali | Arrival Transfers, Arranged"
         description="VIP transport in Bali: luxury car hire, minibuses, yacht charters & event logistics with English-speaking drivers. Enquire via WhatsApp."
         canonical={`${SITE}/vip-transport-bali`}
         ogImage={`${SITE}/generated/mychef-vip-transport-bali-hero.webp`}
         jsonLd={[
-          detailedServiceSchema('VIP Transport Bali', 'myCHEF.id provides VIP transport in Bali: luxury car hire, minibuses and buses, yacht charters and landing boats, plus integrated catering and event logistics — with English-speaking drivers and coordination with our culinary teams.', `${SITE}/vip-transport-bali`),
-          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          breadcrumbSchema('VIP Transport Bali', `${SITE}/vip-transport-bali`),
+          {
+            '@context': 'https://schema.org',
+            '@graph': [
+              {
+                '@type': 'BreadcrumbList',
+                'itemListElement': [
+                  {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://mychef.id/'},
+                  {'@type': 'ListItem', 'position': 2, 'name': 'VIP Transport Bali', 'item': 'https://mychef.id/vip-transport-bali'}
+                ]
+              },
+              {
+                '@type': 'Service',
+                'name': 'VIP Transport Bali — Arrival Transfers Arranged',
+                'serviceType': 'Private transfer arrangement (concierge add-on)',
+                'provider': {
+                  '@type': 'LocalBusiness',
+                  'name': 'myCHEF.id',
+                  'url': 'https://mychef.id/',
+                  'telephone': '+62 896-7407-2020',
+                  'address': {'@type': 'PostalAddress', 'streetAddress': 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan', 'addressLocality': 'Denpasar', 'addressRegion': 'Bali', 'postalCode': '80226', 'addressCountry': 'ID'}
+                },
+                'areaServed': 'Bali, Indonesia',
+                'description': 'Airport pickups, group shuttles and event transport arranged through a vetted partner driver network as an add-on to myCHEF chef, event and villa-stay bookings.'
+              },
+              {
+                '@type': 'FAQPage',
+                'mainEntity': [
+                  {'@type': 'Question', 'name': 'Which areas do you cover?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'Airport transfers and private drivers across Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur and the Bukit Peninsula. Other routes on request.'}},
+                  {'@type': 'Question', 'name': 'What group sizes can you handle?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'From couples to groups of 40+, with multiple vehicles and a dedicated coordinator for weddings and events.'}},
+                  {'@type': 'Question', 'name': 'Do you provide child seats?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'Yes — child and infant seats at no extra charge; ages and weights are taken at booking so the correct seat is installed.'}},
+                  {'@type': 'Question', 'name': 'How far ahead should I book, and what if plans change?', 'acceptedAnswer': {'@type': 'Answer', 'text': '48–72 hours is usually enough; 2–3 weeks for weddings and large events. A 50% deposit confirms the vehicle and driver. Cancellation: full refund more than 48 hours before service; 50% charge within 24–48 hours; same-day charged in full.'}}
+                ]
+              }
+            ]
+          }
         ]}
       />
 
@@ -114,21 +113,21 @@ export default function VipTransportBaliPage() {
             Your Journey. Our Detail.
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-            VIP Transport Bali — Luxury Cars, Yachts & Private Transfers
+            VIP Transport in Bali — Arrival, Arranged
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
-            From airport arrival to island departure, every kilometre of your Bali experience is as considered as the cuisine on your table. English-speaking drivers, immaculate vehicles and seamless coordination with our catering teams come as standard.
+            The first and last hour of a Bali trip sets the tone for everything between. myCHEF arranges private transfers for our chef and event clients — airport pickups, group shuttles, day drivers and event-night transport — coordinated through our trusted partner driver network and folded into the same WhatsApp thread as your booking.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="vip-transport-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <MessageCircle className="w-4 h-4" /> Arrange Your Transfer
+              <MessageCircle className="w-4 h-4" /> Add a Transfer to Your Booking
             </a>
             <Link to="/villa-event-packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               Bundle with a Villa Package
             </Link>
           </div>
           <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left">
-            Tailored quotations · Replies within 1 hour
+            Replies within the hour, 08:00–22:00 WITA
           </p>
         </div>
       </section>
@@ -138,16 +137,16 @@ export default function VipTransportBaliPage() {
       <section className="py-20 md:py-28 bg-white transport-content transport-reveal">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Private Transfer Bali
+            How It Works
           </p>
           <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            One team for the road, the water and the table
+            Culinary team first, transport arranged through partners we trust
           </h2>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            Our private transfer Bali fleet — luxury vehicles and yachts — moves guests, wedding parties and corporate groups with the same precision we bring to your villa. Whether you need luxury car hire Bali for dinner in Uluwatu or a fleet for a 200-guest wedding, we handle the logistics so you focus on the moment.
+            We are a culinary and events team, not a transport company — and we think that's exactly why this works. You tell us your flight, villa and group size; we book the right vehicle from vetted partner drivers we've worked with for years; and your transfer appears on the same plan as your chef service, with nothing left to chance between providers.
           </p>
           <p className="text-[#4A4745] leading-relaxed">
-            Every journey is quoted around your route, your schedule and your group — tailored proposals rather than fixed rates, with the same care we bring to every event we cater.
+            Every journey is quoted around your route, schedule and group — tailored proposals rather than a rate card.
           </p>
         </div>
       </section>
@@ -157,21 +156,27 @@ export default function VipTransportBaliPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                <Car className="inline w-4 h-4 mr-2 -mt-0.5" />The Fleet
+                <Car className="inline w-4 h-4 mr-2 -mt-0.5" />The Arrival
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                VIP Car Fleet — Luxury Car Hire Bali
+                The Arrival, Choreographed
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                Our executive fleet features premium SUVs, luxury sedans and executive vehicles suited to Bali’s terrain. Every VIP transport Bali booking is part of the experience — never an afterthought.
+                Your driver tracks your flight and is waiting at Ngurah Rai arrivals with a name board and chilled towels, briefed on the exact villa entrance. Vehicles suit couples through to groups of 40+, with multi-vehicle coordination and a dedicated transport contact for weddings and large events.
               </p>
               <div className="space-y-3">
-                {CAR_POINTS.map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
-                    <p className="text-[#4A4745] leading-relaxed">{item}</p>
-                  </div>
-                ))}
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed">Child and infant seats provided at no extra charge — share ages and weights when booking.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed">Welcome drinks or canapés can be stocked in the vehicle for a proper arrival.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed">Coverage across Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur and the Bukit Peninsula.</p>
+                </div>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -189,89 +194,30 @@ export default function VipTransportBaliPage() {
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                <Bus className="inline w-4 h-4 mr-2 -mt-0.5" />Groups & Events
+                <UtensilsCrossed className="inline w-4 h-4 mr-2 -mt-0.5" />Bundle
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Minibuses & Buses — Bali Minibus Hire
+                The Arrival Dinner Bundle
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                When your group is larger than a car but still deserves premium service, our minibuses and coaches deliver. From intimate minibuses for eight to full-size buses for forty — and multiple vehicles with a dedicated coordinator beyond that.
+                Our most-booked combination: airport pickup, straight to a villa where the fridge is stocked and a private chef is preparing your first-night dinner. No restaurant hunt after a long flight, no decisions — you swim, you shower, you sit down to a cooked meal.
               </p>
-              <div className="space-y-3">
-                {BUS_POINTS.map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
-                    <p className="text-[#4A4745] leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-[#FAFAF8] transport-reveal">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
-              <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                <Ship className="inline w-4 h-4 mr-2 -mt-0.5" />On the Water
-              </p>
-              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Yachts & Landing Boats — Bali Yacht Charter
-              </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                Some of Bali’s finest moments happen on the water. Our Bali yacht charter and landing boat services open up sunset cruises, snorkelling excursions, and inter-island transfers — extending the myCHEF experience beyond the shore.
+                Arrival dinners start from IDR 700K++ per person (plus 11% government tax + 10% service charge), and the whole first evening arrives on one quote. It's the natural first chapter of a <Link to="/complete-villa-experience" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">complete villa stay</Link> or a <Link to="/villa-event-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">villa event weekend</Link>.
               </p>
               <div className="space-y-3">
-                {YACHT_POINTS.map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
-                    <p className="text-[#4A4745] leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-bali-yacht-charter.webp" alt="Champagne and canapés on the deck of a myCHEF charter yacht off the Nusa Penida cliffs, Bali" width={1024} height={1024} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-white transport-reveal">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
-              <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                <UtensilsCrossed className="inline w-4 h-4 mr-2 -mt-0.5" />One Timeline
-              </p>
-              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Integrated Catering & Event Logistics
-              </h2>
-              <p className="text-[#4A4745] leading-relaxed mb-5">
-                Transport is the first and last impression of your event. Our logistics team aligns every arrival with the culinary schedule — and for full villa stays, our <Link to="/villa-event-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Bali villa event packages</Link> bundle transport together with your chef, staffing and bar service under one plan.
-              </p>
-              <div className="space-y-3">
-                {LOGISTICS_POINTS.map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
-                    <p className="text-[#4A4745] leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-6 md:p-8">
-              <h3 className="text-lg mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Where We Operate</h3>
-              <p className="text-[#4A4745] leading-relaxed text-sm mb-5">
-                VIP transport across Bali’s principal regions, with inter-island transfers to Nusa Penida and Nusa Lembongan via landing boat.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {AREAS.map((area) => (
-                  <span key={area} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-[#E8E6E3] text-xs text-[#4A4745]">
-                    <MapPin className="w-3 h-3 text-[#C5A028]" />{area}
-                  </span>
-                ))}
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed">One WhatsApp thread for the road and the table.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed">From couples to groups of 40+ with coordinated shuttles.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed">Tailored proposals rather than fixed rate cards.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -318,17 +264,17 @@ export default function VipTransportBaliPage() {
       <section className="py-20 md:py-28 bg-[#0A0A0A] transport-reveal">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Book Your Transport with Catering
+            Add Transport to Your Booking
           </p>
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Ready to move through Bali with the same ease you dine?
+            One thread for the road and the table
           </h2>
           <p className="text-white/[70%] leading-relaxed mb-10 max-w-2xl mx-auto">
-            Message us on WhatsApp to arrange your private transfer Bali, luxury car hire Bali, or Bali yacht charter — and ask how we can bundle it with private chef dining or event catering. Every transfer is quoted around your route and schedule.
+            Transport is available as an add-on to chef, event and stay bookings — <Link to="/contact" className="text-[#C5A028] underline underline-offset-4">contact the team</Link> with your flight details, or simply mention it when you book your chef. Planning guest logistics for a wedding? See how we coordinate arrivals on our <Link to="/events/weddings" className="text-[#C5A028] underline underline-offset-4">wedding catering</Link> page.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="vip-transport-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <MessageCircle className="w-4 h-4" /> WhatsApp — Replies within 1 Hour
+              <MessageCircle className="w-4 h-4" /> Arrange Your Arrival — WhatsApp
             </a>
             <a href="mailto:bali@mychef.id" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Mail className="w-4 h-4" /> bali@mychef.id
@@ -338,7 +284,7 @@ export default function VipTransportBaliPage() {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <MessageCircle className="w-5 h-5 text-[#C5A028] mb-3" />
               <p className="text-white text-sm font-semibold mb-1">WhatsApp</p>
-              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="text-white/[65%] text-sm hover:text-white transition-colors">Message us now — replies within 1 hour</a>
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="text-white/[65%] text-sm hover:text-white transition-colors">Message us now — replies within the hour</a>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <Phone className="w-5 h-5 text-[#C5A028] mb-3" />
@@ -352,7 +298,7 @@ export default function VipTransportBaliPage() {
             </div>
           </div>
           <p className="text-white/40 text-xs tracking-wide uppercase">
-            Every journey deserves the same care as the destination — let myCHEF handle the road, the water, and the table
+            Every arrival sets the tone — let myCHEF arrange yours
           </p>
         </div>
       </section>

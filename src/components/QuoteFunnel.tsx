@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Check, ChevronLeft, MessageCircle, Minus, Plus } from 'lucide-react'
 import SeoHead, { breadcrumbSchema } from './SeoHead'
 import { trackEvent } from '@/lib/analytics'
+import { siteFacts } from '@/data/siteFacts'
 
 // 9-step quote funnel ported from production mychef.id/quote.
 // Each step writes into a single `form` state. Step 9 builds a WhatsApp
@@ -173,6 +174,25 @@ export default function QuoteFunnel() {
         canonical="https://mychef.id/quote"
         ogImage="https://mychef.id/mychef-misc-bali-og-image.webp"
         jsonLd={[breadcrumbSchema('Quote', 'https://mychef.id/quote')]}
+      />
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<div class="px-8 pt-24 pb-8 max-w-[800px] mx-auto">
+          <h1 class="font-playfair text-3xl md:text-4xl mb-4">Get a Custom Quote</h1>
+          <p class="text-[#4A4745] mb-6">JavaScript is required to use the interactive quote funnel. You can still reach us directly:</p>
+          <form action="https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like a quote. Please contact me.')}" method="get" class="space-y-4">
+            <label class="block"><span class="block text-sm font-medium mb-1">Name</span><input type="text" name="name" placeholder="Your name" class="w-full bg-white border-2 border-[#E5E3E0] rounded-xl p-3 text-sm focus:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]" /></label>
+            <label class="block"><span class="block text-sm font-medium mb-1">WhatsApp / Phone</span><input type="tel" name="phone" placeholder="+62..." class="w-full bg-white border-2 border-[#E5E3E0] rounded-xl p-3 text-sm focus:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]" /></label>
+            <label class="block"><span class="block text-sm font-medium mb-1">Event details</span><textarea name="details" rows="4" placeholder="Date, villa area, guest count, occasion..." class="w-full bg-white border-2 border-[#E5E3E0] rounded-xl p-3 text-sm focus:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"></textarea></label>
+            <button type="submit" class="inline-flex items-center justify-center gap-2 w-full bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Send Request via WhatsApp</button>
+          </form>
+          <div class="mt-6 text-sm text-[#4A4745] space-y-1">
+            <p>WhatsApp: <a href="https://wa.me/${WA}" class="text-[#C5A028] hover:underline">+62 896-7407-2020</a></p>
+            <p>Email: <a href="mailto:bali@mychef.id" class="text-[#C5A028] hover:underline">bali@mychef.id</a></p>
+            <p>Phone: <a href="tel:+6289674072020" class="text-[#C5A028] hover:underline">+62 896-7407-2020</a></p>
+          </div>
+        </div>`,
+        }}
       />
       <section className="px-8 pt-24 pb-16 max-w-[800px] mx-auto">
         {/* Progress strip */}
@@ -388,10 +408,10 @@ export default function QuoteFunnel() {
             <div className="bg-[#F5F3EF] border border-[#E5E3E0] rounded-2xl p-5 text-sm">
               <p className="font-medium text-[#1A1A1A] mb-2">Deposit & cancellation</p>
               <ul className="space-y-1 text-[#4A4745]">
-                <li>• 50% deposit confirms the booking and locks the chef.</li>
+                <li>• {siteFacts.depositPercent}% deposit confirms the booking and locks the chef.</li>
                 <li>• Bookings within 24 hours require 100% payment upfront.</li>
-                <li>• Full refund 14+ days before. 50% refund 7–13 days. No refund under 7 days.</li>
-                <li>• Remaining 50% paid when the chef arrives at your villa, before service begins.</li>
+                <li>• {siteFacts.cancellationPolicyShort}</li>
+                <li>• Remaining {100 - siteFacts.depositPercent}% paid {siteFacts.balanceTiming}.</li>
               </ul>
               <p className="text-xs text-[#8A8785] mt-3">
                 <Link to="/cancellation" className="underline hover:text-[#1A1A1A]">Read the full cancellation policy →</Link>

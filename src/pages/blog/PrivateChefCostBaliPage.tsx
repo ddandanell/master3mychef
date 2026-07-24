@@ -10,8 +10,8 @@ const PRICING_TABLE = [
   {
     service: 'Daily Villa Chef Hire',
     guests: '2–10 guests',
-    priceRange: 'IDR 600,000 – 1,500,000 / day',
-    includes: 'Chef, equipment, service. Groceries billed separately.',
+    priceRange: 'IDR 2,500,000 / day',
+    includes: 'Chef + assistant working as a pair, equipment, service. Groceries billed separately.',
   },
   {
     service: 'Private Dinner Experience',
@@ -63,7 +63,7 @@ const WHAT_AFFECTS_PRICE = [
 const FAQS = [
   {
     q: 'How much does a private chef cost in Bali per day?',
-    a: 'Daily villa chef hire in Bali ranges from IDR 600,000 to IDR 1,500,000 per day depending on the chef, service level, and type of meals covered. This typically includes the chef, equipment, and service but not groceries, which are usually billed separately at cost.',
+    a: 'Daily villa chef hire in Bali is IDR 2,500,000 per day. Every chef comes with a dedicated assistant, so service is always delivered as a pair. This fee covers the chef, assistant, equipment, and service, but not groceries, which are billed separately at cost.',
   },
   {
     q: 'What does a private dinner experience with a chef cost in Bali?',
@@ -98,7 +98,7 @@ export default function PrivateChefCostBaliPageBlog() {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: 'How Much Does a Private Chef in Bali Cost? [2026 Guide]',
-    description: 'Private chef costs in Bali range from IDR 600k/day for villa dining to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book.',
+    description: 'Private chef costs in Bali start from IDR 2.5M/day for a villa chef and assistant pair to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book.',
     author: {
       '@type': 'Organization',
       name: 'myCHEF.id',
@@ -130,7 +130,7 @@ export default function PrivateChefCostBaliPageBlog() {
     <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="How Much Does a Private Chef in Bali Cost? [2026 Guide] — myCHEF"
-        description="Private chef costs in Bali range from IDR 600k/day for villa dining to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book."
+        description="Private chef costs in Bali start from IDR 2.5M/day for a villa chef and assistant pair to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book."
         canonical={CANONICAL}
         ogType="article"
         ogImage="/og-image.webp"
@@ -161,7 +161,7 @@ export default function PrivateChefCostBaliPageBlog() {
             How Much Does a Private Chef in Bali Cost?
           </h1>
           <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
-            Real 2026 pricing from IDR 600,000 per day for a daily villa chef to IDR 20,000,000+ for large events and weddings. What is included, what affects the price, and how to get your quote.
+            Real 2026 pricing from IDR 2,500,000 per day for a daily villa chef to IDR 20,000,000+ for large events and weddings. What is included, what affects the price, and how to get your quote.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -190,8 +190,8 @@ export default function PrivateChefCostBaliPageBlog() {
           <h2 className="text-xl font-semibold mb-4">2026 Private Chef Cost Summary — Bali</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white/10 rounded p-4">
-              <div className="text-xl font-bold">IDR 600K – 1.5M</div>
-              <div className="text-white/80 text-sm mt-1">Daily villa chef hire</div>
+              <div className="text-xl font-bold">IDR 2.5M</div>
+              <div className="text-white/80 text-sm mt-1">Daily villa chef + assistant pair</div>
             </div>
             <div className="bg-white/10 rounded p-4">
               <div className="text-xl font-bold">IDR 1.5M – 5M</div>
@@ -271,7 +271,7 @@ export default function PrivateChefCostBaliPageBlog() {
               </h3>
               <ul className="space-y-3">
                 {[
-                  'The chef and any required kitchen team',
+                  'The chef and a dedicated assistant (always working as a pair)',
                   'All cooking equipment and serving ware',
                   'Full kitchen setup on arrival',
                   'Service staff (waiters included for dinners and events)',

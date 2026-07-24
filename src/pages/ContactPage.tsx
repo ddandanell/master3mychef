@@ -6,6 +6,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import { ContactRiskReversal } from '@/components/shared'
 import { trackWhatsAppClick } from '@/lib/analytics'
+import { siteFacts } from '@/data/siteFacts'
 
 const WA = 6289674072020
 
@@ -273,7 +274,7 @@ export default function ContactPage() {
           <ContactItem icon={MessageCircle} label="WhatsApp" value="+62 896-7407-2020" href={`https://wa.me/${WA}`} hint="Fastest — typically within minutes" dataSource="contact-info-whatsapp" />
           <ContactItem icon={Mail} label="Email" value="bali@mychef.id" href="mailto:bali@mychef.id" hint="For detailed proposals" />
           <ContactItem icon={Phone} label="Phone" value="+62 896-7407-2020" href="tel:+6289674072020" hint="08:00 – 22:00 WITA, daily" />
-          <ContactItem icon={MapPin} label="Office" value="Jl. Tukad Barito Timur III No.16, Denpasar Selatan, Bali" hint="Serving all of Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur" />
+          <ContactItem icon={MapPin} label="Office" value="Jl. Tukad Barito Timur III No.16, Denpasar Selatan, Bali" href={siteFacts.googleBusinessProfileUrl} hint="View on Google Business — serving all of Bali" />
         </div>
       </section>
 

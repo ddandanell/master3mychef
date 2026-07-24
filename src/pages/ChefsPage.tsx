@@ -1,6 +1,7 @@
 import { ChefHat, Flame, Fish, Sparkles } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, personSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 
 const SITE = 'https://mychef.id'
 
@@ -10,7 +11,7 @@ const CHEFS = [
     slug: 'adriano',
     role: 'Executive Chef & Founder',
     specialty: 'Mediterranean Fine Dining',
-    badge: 'Milan-born · Michelin-trained in Modena · Founder since 2016',
+    badge: `Fine-dining-trained in ${siteFacts.founderTrainingCity} · Founder since ${siteFacts.foundingYear}`,
     image: '/generated/chef-adriano-portrait.webp',
     bio: 'Adriano built myCHEF after years in Michelin-level kitchens in northern Italy and a formative stretch in Tokyo. He still leads menu development, chef training, and every signature tasting experience we serve in Bali villas.',
     achievements: ['Michelin-trained in Modena', 'Leads chef training for every new hire', 'Trusted for proposals, anniversaries, and VIP dinners'],
@@ -326,12 +327,12 @@ export default function ChefsPage() {
     <PremiumPage
       slug="chefs"
       title="Our Chefs"
-      description="Meet Adriano and the lead chefs behind myCHEF — Michelin-trained leadership, villa-tested specialists, and a 50+ person team trusted across Bali."
-      seoTitle="Michelin-Trained Private Chefs Bali | Meet the Team — myCHEF"
-      seoDescription="Meet the myCHEF private chef team in Bali. Michelin-trained leadership, 50+ villa-tested chefs for fine dining, BBQs, retreats & events. Book via WhatsApp."
+      description={`Meet Adriano and the lead chefs behind myCHEF — fine-dining-trained leadership, villa-tested specialists, and a 50+ person team trusted across Bali.`}
+      seoTitle="Fine-Dining Private Chefs Bali | Meet the Team — myCHEF"
+      seoDescription={`Meet the myCHEF private chef team in Bali. Fine-dining-trained leadership, 50+ villa-tested chefs for fine dining, BBQs, retreats & events. Book via WhatsApp.`}
       canonicalUrl="https://mychef.id/chefs"
       h1="Meet the Chefs Behind Every myCHEF Experience"
-      subtitle="From Adriano's Michelin-trained leadership to our Bali-based specialists in Mediterranean, Indonesian, and BBQ dining."
+      subtitle={`From Adriano's fine-dining-trained leadership to our Bali-based specialists in Mediterranean, Indonesian, and BBQ dining.`}
       heroImage="/generated/mychef-finedining-bali-chefs-hero.webp"
       heroImageAlt="myCHEF culinary team in Bali"
       ogImage="https://mychef.id/generated/mychef-finedining-bali-chefs-hero.webp"

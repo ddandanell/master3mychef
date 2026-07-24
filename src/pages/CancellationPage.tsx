@@ -3,6 +3,7 @@ import { ArrowLeft, MessageCircle, Shield, AlertTriangle, CheckCircle2, XCircle,
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
+import { siteFacts } from '@/data/siteFacts'
 
 const CLIENT_POLICY = [
   {
@@ -42,13 +43,13 @@ const CHEF_POLICY = [
 ]
 
 const FAQS = [
-  { q: 'What is the myCHEF cancellation policy?', a: 'You can cancel your booking at any time. Cancellations made 14 or more days before the event receive a full refund. Cancellations between 7–13 days before receive a 50% refund. Cancellations less than 7 days before are non-refundable.' },
+  { q: 'What is the myCHEF cancellation policy?', a: siteFacts.cancellationPolicy },
   { q: 'Can I get a full refund if I cancel my booking?', a: 'Yes — if you cancel 14 or more days before your scheduled booking, you receive a 100% full refund of all payments made, no questions asked.' },
   { q: 'What happens if I cancel less than 7 days before?', a: 'Unfortunately, no refund is provided for cancellations made less than 7 days before the event. By this point, all ingredients have been purchased and the chef has blocked their calendar exclusively for your booking.' },
   { q: 'Can I reschedule instead of cancelling?', a: 'Yes, you may request a reschedule instead of a cancellation. All change requests must be submitted directly to MyChef no later than 72 hours before the booking starts. Later requests may be treated as a cancellation.' },
   { q: 'What if myCHEF cancels my booking?', a: 'If MyChef or the assigned chef cancels or fails to deliver the service, you will receive a full refund of all payments made. If service begins but cannot be completed for reasons caused by MyChef, a fair refund will be issued based on time worked.' },
   { q: 'How long does a refund take?', a: 'Once your cancellation is confirmed and approved, refunds are typically processed within 5–10 business days, depending on your bank or payment provider.' },
-  { q: 'Is the deposit refundable?', a: 'The deposit follows the same cancellation tiers: 100% refundable if cancelled 14+ days before, 50% refundable within 7–13 days, and non-refundable if cancelled less than 7 days before.' },
+  { q: 'Is the deposit refundable?', a: `The deposit follows the same cancellation tiers: 100% refundable if cancelled 14+ days before, 50% refundable within 7–13 days, and non-refundable if cancelled less than 7 days before.` },
   { q: 'What if there is an emergency and I need to cancel?', a: 'We understand emergencies happen. Please contact us directly via WhatsApp as soon as possible. While our policy is firm due to perishable ingredients and chef scheduling, we review emergency requests on a case-by-case basis.' },
   { q: 'What happens if the chef cannot access the property or kitchen?', a: 'If the chef cannot perform because access to the property, kitchen, or guests is not provided at the agreed time, it is treated as a same-day cancellation and no refund applies. Please make sure access, power, water, and workspace are ready before the agreed start time.' },
   { q: 'What about outdoor events and bad weather?', a: 'For outdoor events, the client is responsible for a viable sheltered backup space. Where severe weather beyond either party\'s control prevents service, we work in good faith to reschedule, and any refund is issued net of unrecoverable costs already incurred (such as perishable groceries already purchased).' },

@@ -9,6 +9,7 @@ import SeoHead, {
   localBusinessSchema,
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
+import { siteFacts } from '@/data/siteFacts'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { RiskReversal } from '@/components/shared'
@@ -80,12 +81,12 @@ const HOW_IT_WORKS = [
 ]
 
 const DIFFERENTIATORS = [
-  { icon: ChefHat, title: 'Michelin-Trained Leadership', desc: 'Adriano trained under a Michelin-starred chef. His standards are the minimum for every dish.' },
+  { icon: ChefHat, title: 'Fine-Dining-Trained Leadership', desc: `Adriano trained under Michelin-level standards in ${siteFacts.founderTrainingCity}. His standards are the minimum for every dish.` },
   { icon: Users, title: '50+ Professional Staff', desc: 'Chefs, servers, bartenders, mixologists. All trained in-house. All hospitality focused.' },
   { icon: Shield, title: 'We Handle Everything', desc: 'Groceries, cooking, service, cleanup. You lift nothing. Not even a planning call.' },
-  { icon: MapPin, title: 'We Know Bali', desc: '8 years serving villas across Seminyak, Canggu, Ubud, Uluwatu, Sanur. We know the kitchens and the markets.' },
+  { icon: MapPin, title: 'We Know Bali', desc: `Since ${siteFacts.foundingYear} serving villas across Seminyak, Canggu, Ubud, Uluwatu, Sanur. We know the kitchens and the markets.` },
   { icon: Clock, title: 'Same-Day Response', desc: 'Inquiries confirmed within one hour. Proposals delivered within 24 hours. No delays.' },
-  { icon: Star, title: '12,000+ Happy Guests', desc: 'Families, couples, CEOs, wedding parties. Loved across 560+ villa experiences.' }
+  { icon: Star, title: siteFacts.guestsServed, desc: `Families, couples, CEOs, wedding parties. ${siteFacts.reviewFraming}.` }
 ]
 
 const FAQS = [
@@ -94,8 +95,8 @@ const FAQS = [
   { q: 'What about dietary restrictions?', a: 'Every menu is tailored. Gluten-free, vegan, halal, nut allergies, pregnancy-friendly — just tell us. We have done it all.' },
   { q: 'Are groceries included in the price?', a: 'For fine dining and events, ingredients are included. For villa chef catering, groceries are billed at cost with no markup — you see every receipt.' },
   { q: 'How many staff will come to my villa?', a: 'Fine dining: 6–10 staff (chef, sous chef, servers, sommelier). Villa chef: 1–2 chefs. Events: depends on scale, quoted in your proposal.' },
-  { q: 'What is the cancellation policy?', a: 'Full refund 14+ days before. 50% refund 7–13 days before. No refund less than 7 days. See our full cancellation policy for details.' },
-  { q: 'How does payment work?', a: 'A 50% deposit confirms your booking and locks your chef. Bookings within 24 hours require 100% payment upfront. The remaining 50% is paid when the chef arrives at your villa, before service begins.' },
+  { q: 'What is the cancellation policy?', a: siteFacts.cancellationPolicy },
+  { q: 'How does payment work?', a: `A ${siteFacts.depositPercent}% deposit confirms your booking and locks your chef. Bookings within 24 hours require 100% payment upfront. The remaining ${100 - siteFacts.depositPercent}% is paid ${siteFacts.balanceTiming}.` },
 ]
 
 
@@ -142,7 +143,7 @@ const REVIEWS = [
   { name: 'Yuki & Kenji', location: 'Osaka', dept: 'Events', text: 'Traditional Japanese wedding ceremony followed by a Western-style reception. The team respected every ritual while delivering world-class cuisine.' },
 ]
 
-const HERO_STATS = ['560+ Villas Served', '12,000+ Happy Guests', 'Guest-Loved Service', '8+ Years in Bali']
+const HERO_STATS = [siteFacts.eventsServed, siteFacts.guestsServed, siteFacts.villaBookings, `Since ${siteFacts.foundingYear}`]
 
 const FEATURED_TESTIMONIALS = [
   {
@@ -363,7 +364,7 @@ export default function HubPage() {
         <div className="mx-auto max-w-[1280px] px-5 sm:px-6">
           <div className="mb-8 md:mb-12">
             <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-relaxed sm:text-[15px] md:text-base" style={{ color: 'var(--u-text-muted)' }}>
-              Founded by Adriano — trained under a Michelin-starred chef in Milan — myCHEF.id delivers restaurant-level dining to Bali&apos;s finest villas. From intimate fine dining for 6 to catering for 200, our 50+ person hospitality team handles every detail.
+              Founded by Adriano — trained under Michelin-level standards in {siteFacts.founderTrainingCity} — myCHEF.id delivers restaurant-level dining to Bali&apos;s finest villas. From intimate fine dining for 6 to catering for 200, our 50+ person hospitality team handles every detail.
             </p>
 
             <div className="mx-auto mb-8 max-w-2xl">
@@ -640,7 +641,7 @@ export default function HubPage() {
               <h2 className="u-heading text-4xl md:text-5xl mb-6">A Team Built on Passion, Not Pitch Decks</h2>
               <div className="gold-arc mb-8" />
               <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
-                myCHEF.id was born when Adriano — trained under a Michelin-starred chef in Milan — arrived in Bali and saw a gap. 
+                myCHEF.id was born when Adriano — trained under Michelin-level standards in {siteFacts.founderTrainingCity} — arrived in Bali in {siteFacts.foundingYear} and saw a gap.
                 The island had world-class villas. It had incredible ingredients. But the connection between them was missing.
               </p>
               <p className="mb-6 leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
@@ -652,7 +653,7 @@ export default function HubPage() {
                 We are not a marketplace. We are not an app. We are a kitchen that travels — and we take that seriously.
               </p>
               <div className="flex flex-wrap gap-4">
-                {['Michelin-trained leadership', '50+ staff', '560+ villas served', '12,000+ guests'].map((item) => (
+                {[siteFacts.eventsServed, siteFacts.guestsServed, siteFacts.villaBookings, '50+ staff'].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <Check className="w-4 h-4" style={{ color: 'var(--u-accent)' }} />
                     <span className="text-sm font-medium" style={{ color: 'var(--u-text)' }}>{item}</span>
@@ -748,7 +749,7 @@ export default function HubPage() {
                   className="text-xs leading-relaxed"
                   style={{ color: '#7d7470' }}
                 >
-                  Leadership by Adriano, trained under Michelin-starred chefs in Milan.
+                  Leadership by Adriano, trained under Michelin-level standards in {siteFacts.founderTrainingCity}.
                 </p>
               </div>
 
@@ -802,7 +803,7 @@ export default function HubPage() {
               className="text-sm uppercase tracking-[0.1em]"
               style={{ color: '#9d8d78' }}
             >
-              ✓ 560+ villas served  ✓ 12,000+ happy guests  ✓ Guest-loved service
+              ✓ {siteFacts.reviewFraming}
             </p>
           </div>
 
@@ -953,8 +954,8 @@ export default function HubPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label mb-4">Guest Words</p>
-            <h2 className="u-heading text-4xl md:text-5xl mb-3">25 Reviews. One Truth.</h2>
-            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Real guests. Real villas. Real experiences.</p>
+            <h2 className="u-heading text-4xl md:text-5xl mb-3">Featured Guest Words</h2>
+            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Real guests. Real villas. {siteFacts.reviewFraming}.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {REVIEWS.map((review, i) => (

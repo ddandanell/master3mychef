@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CalendarDays, MessageCircle, Star } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
+import { siteFacts } from '@/data/siteFacts'
 
 type ReviewCategory = 'All' | 'Weddings' | 'Private Dinners' | 'Catering' | 'Retreats'
 
@@ -21,9 +22,9 @@ const WHATSAPP_URL = 'https://wa.me/6289674072020'
 
 
 const STATS = [
-  '560+ events',
-  '12,000+ guests',
-  '98% repeat bookings',
+  siteFacts.eventsServed,
+  siteFacts.guestsServed,
+  siteFacts.villaBookings,
 ]
 
 const FILTERS: ReviewCategory[] = ['All', 'Weddings', 'Private Dinners', 'Catering', 'Retreats']
@@ -158,9 +159,9 @@ const REVIEWS_SCHEMAS = [
 ]
 
 const SOCIAL_PROOF = [
-  { name: 'Guest Feedback', detail: 'Verified villa & event reviews' },
-  { name: 'TripAdvisor', detail: 'Villa dining and event feedback' },
-  { name: 'Airbnb Experiences', detail: 'Guest-loved private chef moments' },
+  { name: 'Guest Feedback', detail: 'Featured reviews from villa dinners & events' },
+  { name: 'Bali-Wide Service', detail: 'Seminyak, Canggu, Ubud, Uluwatu & beyond' },
+  { name: 'Operational Stats', detail: siteFacts.reviewFraming },
 ]
 
 export default function ReviewsPage() {
@@ -177,7 +178,7 @@ export default function ReviewsPage() {
     <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="myCHEF Bali Reviews | Private Chef & Catering Feedback"
-        description="Read guest reviews from myCHEF Bali villa dinners, weddings, retreats & events. Real hosts, real outcomes — see why 560+ villas keep coming back."
+        description={`Read guest reviews from myCHEF Bali villa dinners, weddings, retreats & events. Real hosts, real outcomes — ${siteFacts.reviewFraming}.`}
         canonical={canonical}
         ogImage={`${SITE}/dining-table.webp`}
         jsonLd={REVIEWS_SCHEMAS}
@@ -188,17 +189,9 @@ export default function ReviewsPage() {
             <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028] font-semibold mb-4">Guest reviews</p>
             <h1 className="mb-5 font-playfair text-3xl leading-tight sm:text-4xl md:text-6xl">What Our Guests Say</h1>
             <p className="text-lg md:text-xl text-[#4A4745] max-w-3xl leading-relaxed">
-              Featured feedback from 560+ villa dinners, catering events and private chef bookings in Bali.
+              Featured feedback from {siteFacts.reviewFraming}.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#E4D7A8] bg-white px-5 py-3 shadow-sm">
-                <div className="flex items-center gap-1" aria-label="Five star rating">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <Star key={index} className="h-4 w-4 fill-[#C5A028] text-[#C5A028]" />
-                  ))}
-                </div>
-                <span className="text-sm font-semibold text-[#1A1A1A]">4.9 / 5 guest rating</span>
-              </div>
               <a
                 href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-source="reviews-cta" 
                 className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B43A] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
@@ -221,16 +214,16 @@ export default function ReviewsPage() {
               <div className="space-y-5">
                 <div className="rounded-2xl bg-[#FAFAF8] p-5 border border-[#EFE7D1]">
                   <p className="text-3xl font-playfair text-[#1A1A1A] mb-1">560+</p>
-                  <p className="text-sm text-[#4A4745]">Private dinners, celebrations and chef bookings delivered in Bali villas.</p>
+                  <p className="text-sm text-[#4A4745]">Events, dinners, celebrations and chef bookings delivered in Bali villas.</p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="rounded-2xl bg-[#FAFAF8] p-5 border border-[#EFE7D1]">
                     <p className="text-2xl font-playfair mb-1">12,000+</p>
-                    <p className="text-sm text-[#4A4745]">Guests served by Adriano and the myCHEF team.</p>
+                    <p className="text-sm text-[#4A4745]">Guests served across private dining, catering and events.</p>
                   </div>
                   <div className="rounded-2xl bg-[#FAFAF8] p-5 border border-[#EFE7D1]">
-                    <p className="text-2xl font-playfair mb-1">98%</p>
-                    <p className="text-sm text-[#4A4745]">Repeat or referred bookings from villas, retreats and event hosts.</p>
+                    <p className="text-2xl font-playfair mb-1">500+</p>
+                    <p className="text-sm text-[#4A4745]">Villa bookings and long-stay chef arrangements.</p>
                   </div>
                 </div>
               </div>
@@ -330,9 +323,9 @@ export default function ReviewsPage() {
       <section className="px-6 py-20 bg-white border-y border-[#ECE5D5]">
         <div className="max-w-[1100px] mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028] font-semibold mb-4">Social proof</p>
-          <h2 className="text-3xl md:text-4xl font-playfair mb-4">Seen where guests already search and share</h2>
+          <h2 className="text-3xl md:text-4xl font-playfair mb-4">Trusted across Bali villas and events</h2>
           <p className="max-w-2xl mx-auto text-[#4A4745] leading-relaxed">
-            Review-platform badges prepared for Google, TripAdvisor, and Airbnb Experiences proof points.
+            {siteFacts.reviewFraming}. We collect feedback after every event and share featured guest moments here.
           </p>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {SOCIAL_PROOF.map((badge) => (

@@ -444,7 +444,6 @@ for (const entry of SITEMAP) {
 // (they're in noindexPaths), and they're excluded from sitemap.xml (see generate-sitemap).
 const EXTRA_NOINDEX_PAGES = [
   { path: '/book', title: 'Book myCHEF | Private Chef & Catering Bali', description: 'Book your private chef, villa catering, or event in Bali. Send your date, villa, and guest count for a fast quote.' },
-  { path: '/quote', title: 'Get a Quote | myCHEF Private Chef Bali', description: 'Get a fast, itemised quote for private chef, villa catering, or event staffing in Bali. No obligation.' },
 ]
 for (const p of EXTRA_NOINDEX_PAGES) {
   try {

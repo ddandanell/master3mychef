@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Clock3, MapPin, MessageCircle, PartyPopper, Users, UtensilsCrossed, Wallet } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
+import { siteFacts } from '@/data/siteFacts'
 
 interface FAQItem {
   q: string
@@ -48,7 +49,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'What happens if I need to cancel?',
-        a: 'Cancellation is free up to 48 hours before service. Within 48 hours, the 50% deposit is retained because ingredients, staffing and scheduling have already been committed.',
+        a: siteFacts.cancellationPolicy,
       },
     ],
   },

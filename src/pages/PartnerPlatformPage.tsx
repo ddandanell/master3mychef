@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { getPageMeta } from '@/data/page-meta'
 import {
   Check,
   X,
@@ -91,6 +92,10 @@ const FAQS = [
 ]
 
 export default function PartnerPlatformPage() {
+  const location = useLocation()
+  const isCertified = location.pathname === '/certified-partner'
+  const meta = getPageMeta(isCertified ? 'certified-partner' : 'partner-platform')
+
   const waApply = `https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to apply for the Certified Partner Programme — interested in becoming a villa dining partner.')}`
   const waShowcase = `https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to request a partner showcase dinner for my villa group.')}`
 
@@ -120,9 +125,9 @@ export default function PartnerPlatformPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Certified Partner Programme Bali | myCHEF for Villas"
-        description="Become a myCHEF certified partner — preferred private chef and staffing services for Bali villas, with partner rates and priority booking."
-        canonical={`${SITE}/certified-partner`}
+        title={meta.title}
+        description={meta.description}
+        canonical={meta.canonical}
         ogImage={`${SITE}/generated/mychef-misc-bali-partner-platform-hero.webp`}
         jsonLd={jsonLd}
       />
@@ -145,7 +150,7 @@ export default function PartnerPlatformPage() {
             myCHEF Certified Partner Programme
           </p>
           <h1 className="text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] mb-7 max-w-[1000px]" style={{ fontFamily: "'Playfair Display', serif" }}>
-            {"Partner Platform"}
+            {meta.h1}
           </h1>
           <p className="text-base md:text-xl text-white/[80%] mb-10 max-w-[720px] leading-relaxed">
             Most villas compete on view, pool, bedrooms and location. Very few compete on what guests actually remember. The Certified Partner Programme turns your villa — or your whole portfolio — into a Michelin-level private dining destination, without building a restaurant operation.

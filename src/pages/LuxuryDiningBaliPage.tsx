@@ -140,7 +140,7 @@ export default function LuxuryDiningBaliPage() {
       seoTitle="Luxury Private Dining Bali -- Ultra-Premium In-Villa Chef Experience"
       description="Luxury private dining in Bali delivered by executive chefs with Michelin and international fine dining credentials."
       seoDescription="Luxury private dining Bali. Executive chefs with Michelin and fine dining backgrounds, bespoke menus, premium sourcing, sommelier and full table service."
-      h1="Luxury Private Dining in Bali -- Ultra-Premium In-Villa Chef Experiences"
+      h1="Luxury Private Dining in Bali"
       subtitle="Executive chefs. Bespoke menus. Restaurant-grade service in Bali's finest villas."
       heroImage="/images/blog/luxury-dining-bali.jpg"
       heroImageAlt="Beautifully plated luxury fine dining course prepared by an executive private chef in an Uluwatu clifftop villa"

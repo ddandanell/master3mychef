@@ -126,7 +126,7 @@ export default function TastingMenuBaliPage() {
       seoTitle="Private Tasting Menu Bali -- Multi-Course Chef\'s Dinner at Your Villa"
       description="Private tasting menus delivered to Bali villas by executive chefs. 7 to 11 progressive courses with market-fresh Balinese ingredients."
       seoDescription="Private tasting menu in Bali. 7--11 progressive courses by an executive chef in your villa. Market-led menus, dietary adaptation and wine pairing."
-      h1="Private Tasting Menu in Bali -- Multi-Course Chef's Dinner at Your Villa"
+      h1="Private Tasting Menus in Bali — What to Expect"
       subtitle="Seven to eleven courses. Market-fresh ingredients. A complete evening built around your group."
       heroImage="/images/blog/tasting-menu-bali.jpg"
       heroImageAlt="Elegantly plated multi-course tasting menu dish prepared by a private chef in a Bali villa dining room"

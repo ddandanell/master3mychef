@@ -140,7 +140,7 @@ export default function HolidayChefBaliPage() {
       seoTitle="Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF"
       description="Holiday chef service in Bali for Christmas, New Year, and the festive season. Traditional roast, seafood feast, Balinese spread, or bespoke."
       seoDescription="Holiday chef Bali. Private chef for Christmas dinner, New Year's Eve and festive season catering. Traditional roast, seafood, Balinese feasts. Book early."
-      h1="Holiday Chef Bali -- Christmas, New Year & Festive Season | myCHEF"
+      h1="Holiday Chef Bali -- Christmas, New Year & Festive Season  myCHEF"
       subtitle="Festive dinners. Christmas roasts. New Year's Eve countdowns. All at your villa."
       heroImage="/images/blog/holiday-chef-bali.jpg"
       heroImageAlt="Indonesian private chef preparing a festive Christmas dinner spread in a Bali villa kitchen"

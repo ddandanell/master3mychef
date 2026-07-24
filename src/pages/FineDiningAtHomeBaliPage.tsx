@@ -137,7 +137,7 @@ export default function FineDiningAtHomeBaliPage() {
       seoTitle="Fine Dining at Home Bali -- Restaurant Quality Delivered to Your Villa"
       description="Fine dining at home in Bali -- restaurant-quality menus, plating, and service delivered to your villa by professional private chefs. All areas covered."
       seoDescription="Fine dining at home in Bali. Restaurant-quality menus, chef service and table setup delivered to your villa. 3-course to 11-course tasting menus."
-      h1="Fine Dining at Home in Bali -- Restaurant Quality Delivered to Your Villa"
+      h1="Fine Dining at Home in Bali — What to Expect"
       subtitle="Restaurant-quality food. Your villa. Your menu. No other tables."
       heroImage="/images/blog/fine-dining-at-home-bali.jpg"
       heroImageAlt="Private chef plating a beautifully composed fine dining course at a luxury villa in Bali"

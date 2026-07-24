@@ -134,7 +134,7 @@ export default function DropOffCateringBaliPage() {
       seoTitle="Drop-Off Catering Bali -- Fresh Villa Food Delivered Ready to Serve"
       description="Drop-off catering for Bali villas. Professional kitchen preparation, delivered to your villa ready to serve. Indonesian feasts, Western comfort, grazing."
       seoDescription="Drop-off catering in Bali for villa stays. Fresh food prepared and delivered ready to serve. From IDR 700K/person. All areas: Canggu, Seminyak, Ubud, Uluwatu."
-      h1="Drop-Off Catering in Bali -- Ready-to-Serve Villa Food Delivered"
+      h1="Drop-Off Catering in Bali: What to Know Before You Order"
       subtitle="Professional food prepared fresh and delivered to your villa. No chef on-site required."
       heroImage="/images/blog/drop-off-catering-bali.jpg"
       heroImageAlt="Fresh Indonesian catering spread delivered to a Bali villa ready to serve by the pool"

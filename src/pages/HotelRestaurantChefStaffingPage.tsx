@@ -137,7 +137,7 @@ export default function HotelRestaurantChefStaffingPage() {
       seoTitle="Hotel and Restaurant Chef Staffing Bali -- F&B Culinary Recruitment"
       description="Chef staffing for hotels, resorts, and restaurants in Bali. Executive chefs, sous chefs, pastry chefs, line cooks."
       seoDescription="Hotel restaurant chef staffing Bali. Culinary recruitment for F&B operations. Executive chefs, sous chefs, pastry chefs, specialist cuisine talent."
-      h1="Hotel and Restaurant Chef Staffing Bali -- F&B Culinary Recruitment"
+      h1="Hotel & Restaurant Chef Staffing Bali — F&B Hiring Guide"
       subtitle="Executive chefs to line cooks. Temporary coverage to permanent placement. Bali's hospitality staffing specialists."
       heroImage="/images/blog/hotel-restaurant-chef-staffing.jpg"
       heroImageAlt="Professional Indonesian chef in uniform overseeing a hotel restaurant kitchen brigade in Bali"

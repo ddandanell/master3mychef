@@ -28,7 +28,7 @@ export const SITE = {
   whatsapp: PHONE.digits,
 }
 
-export type PillarSlug = 'fine-dining' | 'catering' | 'events' | 'in-villa-service' | 'staffing'
+export type PillarSlug = 'fine-dining' | 'catering' | 'events' | 'in-villa-service' | 'staffing' | 'experiences'
 
 export interface SubPage {
   slug: string
@@ -165,6 +165,20 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       { slug: 'for-villa-managers', label: 'For Villa Managers', h1: 'Partner Program for Villa Managers', title: 'Villa Manager Partnership Bali | myCHEF Affiliate — myCHEF', description: 'Earn commission by offering on-demand private dining to your guests. We provide the menus, team, and logistics.' },
       { slug: 'for-hotels-restaurants', label: 'For Hotels', h1: 'Hotel Culinary Staffing Support', title: 'Hotel Staffing Bali | Kitchen & Service Support — myCHEF', description: 'Temporary or permanent culinary staffing solutions for Bali hotels and restaurants. Vetted, high-standard professionals.' },
     ],
+  },
+  experiences: {
+    slug: 'experiences',
+    label: 'Experiences',
+    url: '/experiences',
+    h1: 'Private Experiences in Bali',
+    description: 'Curated private experiences in Bali: cocktail parties, sushi classes, cooking classes, kids parties, oyster bars and proposal dinners at your villa.',
+    title: 'Private Experiences Bali | Culinary & Celebration Experiences | myCHEF',
+    intro: 'Curated private experiences brought directly to your Bali villa. Chefs, bartenders, teachers and event specialists turn any occasion into something memorable.',
+    navLabel: 'Experiences',
+    ctaPrimary: 'Plan Your Experience',
+    accent: '#C5A028',
+    relatedPillars: ['fine-dining', 'catering', 'events'],
+    subPages: [],
   },
 }
 
@@ -475,6 +489,7 @@ export const PRIMARY_NAV: Array<{ label: string; href: string }> = [
   { label: 'Fine Dining', href: '/fine-dining' },
   { label: 'Catering', href: '/catering' },
   { label: 'Events', href: '/events' },
+  { label: 'Experiences', href: '/experiences' },
   { label: 'In-Villa Service', href: '/in-villa-service' },
   { label: 'Staffing', href: '/staffing' },
   { label: 'Locations', href: '/locations' },
